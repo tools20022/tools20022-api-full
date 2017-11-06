@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Payment information and processes required to transfer cash end to end from
@@ -44,781 +45,83 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#PaymentObligation
- * Payment.PaymentObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#CurrencyOfTransfer
- * Payment.CurrencyOfTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#CreditMethod
- * Payment.CreditMethod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#Type Payment.Type}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
- * Payment.InstructedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#Priority
- * Payment.Priority}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#ValueDate
- * Payment.ValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#PaymentStatus
- * Payment.PaymentStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#PartyRole
- * Payment.PartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#TaxOnPayment
- * Payment.TaxOnPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#PaymentExecution
- * Payment.PaymentExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#PoolingAdjustmentDate
- * Payment.PoolingAdjustmentDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#EquivalentAmount
- * Payment.EquivalentAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#CurrencyExchange
- * Payment.CurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#InstructionForCreditorAgent
- * Payment.InstructionForCreditorAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#InstructionForDebtorAgent
- * Payment.InstructionForDebtorAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#PaymentRelatedIdentifications
- * Payment.PaymentRelatedIdentifications}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#RelatedInvestigationCase
- * Payment.RelatedInvestigationCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#SettlementTimeRequest
- * Payment.SettlementTimeRequest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#Amount
- * Payment.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#TradeSettlement
- * Payment.TradeSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#StandardSettlementInstructions
- * Payment.StandardSettlementInstructions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#RelatedDebitAuthorisation
- * Payment.RelatedDebitAuthorisation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#RelatedInvestigationCaseResolution
- * Payment.RelatedInvestigationCaseResolution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#OriginalPayment
- * Payment.OriginalPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#ReturnPayment
- * Payment.ReturnPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#RelatedSecuritiesSettlement
- * Payment.RelatedSecuritiesSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#InvoiceReconciliation
- * Payment.InvoiceReconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#PaymentInstrument
- * Payment.PaymentInstrument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#Account
- * Payment.Account}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#Adjustments
- * Payment.Adjustments}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#ContractRegistration
- * Payment.ContractRegistration}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashAccount#Payment
- * CashAccount.Payment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#RelatedPaymentSettlement
- * Tax.RelatedPaymentSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Adjustment#Payment
- * Adjustment.Payment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentOffset
- * PaymentObligation.PaymentOffset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#OriginalPayment
- * Payment.OriginalPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#ReturnPayment
- * Payment.ReturnPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CreditInstrument#RelatedPayment
- * CreditInstrument.RelatedPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentExecution#Payment
- * PaymentExecution.Payment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentIdentification#Payment
- * PaymentIdentification.Payment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentPartyRole#Payment
- * PaymentPartyRole.Payment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentStatus#Payment
- * PaymentStatus.Payment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#Payment
- * SecuritiesSettlement.Payment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyExchange#RelatedPayment
- * CurrencyExchange.RelatedPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#Payment
- * Invoice.Payment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#UnderlyingPayment
- * PaymentInvestigationCase.UnderlyingPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#Payment
- * SettlementTimeRequest.Payment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#AuthorisedReturn
- * DebitAuthorisation.AuthorisedReturn}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#PaymentCorrection
- * PaymentInvestigationCaseResolution.PaymentCorrection}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#Payment
- * CommercialTradeSettlement.Payment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegisteredContract#RelatedPayment
- * RegisteredContract.RelatedPayment}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1#SubscriptionPaymentInstrument
- * InvestmentFundCashSettlementInformation1.SubscriptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1#RedemptionPaymentInstrument
- * InvestmentFundCashSettlementInformation1.RedemptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1#DividendPaymentInstrument
- * InvestmentFundCashSettlementInformation1.DividendPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1#SavingsPlanPaymentInstrument
- * InvestmentFundCashSettlementInformation1.SavingsPlanPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3#SubscriptionPaymentInstrument
- * InvestmentFundCashSettlementInformation3.SubscriptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3#RedemptionPaymentInstrument
- * InvestmentFundCashSettlementInformation3.RedemptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3#DividendPaymentInstrument
- * InvestmentFundCashSettlementInformation3.DividendPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3#SavingsPlanPaymentInstrument
- * InvestmentFundCashSettlementInformation3.SavingsPlanPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5#SubscriptionPaymentInstrument
- * InvestmentFundCashSettlementInformation5.SubscriptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5#RedemptionPaymentInstrument
- * InvestmentFundCashSettlementInformation5.RedemptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5#DividendPaymentInstrument
- * InvestmentFundCashSettlementInformation5.DividendPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5#SavingsPlanPaymentInstrument
- * InvestmentFundCashSettlementInformation5.SavingsPlanPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5#InterestPaymentInstrument
- * InvestmentFundCashSettlementInformation5.InterestPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2#SubscriptionPaymentInstrument
- * InvestmentFundCashSettlementInformation2.SubscriptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2#RedemptionPaymentInstrument
- * InvestmentFundCashSettlementInformation2.RedemptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2#DividendPaymentInstrument
- * InvestmentFundCashSettlementInformation2.DividendPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2#SavingsPlanPaymentInstrument
- * InvestmentFundCashSettlementInformation2.SavingsPlanPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4#SubscriptionPaymentInstrument
- * InvestmentFundCashSettlementInformation4.SubscriptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4#RedemptionPaymentInstrument
- * InvestmentFundCashSettlementInformation4.RedemptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4#DividendPaymentInstrument
- * InvestmentFundCashSettlementInformation4.DividendPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4#SavingsPlanPaymentInstrument
- * InvestmentFundCashSettlementInformation4.SavingsPlanPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#SubscriptionPaymentInstrument
- * InvestmentFundCashSettlementInformation6.SubscriptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#RedemptionPaymentInstrument
- * InvestmentFundCashSettlementInformation6.RedemptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#DividendPaymentInstrument
- * InvestmentFundCashSettlementInformation6.DividendPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#SavingsPlanPaymentInstrument
- * InvestmentFundCashSettlementInformation6.SavingsPlanPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#InterestPaymentInstrument
- * InvestmentFundCashSettlementInformation6.InterestPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportDetails3#Transaction
- * TransactionReportDetails3.Transaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportDetails4#Transaction
- * TransactionReportDetails4.Transaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#Transaction
- * TransactionReportDetails5.Transaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation3#OriginalTransactionReference
- * PaymentTransactionInformation3.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation30#OriginalTransactionReference
- * PaymentTransactionInformation30.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#OriginalGroupInformation
- * OriginalPaymentInformation4.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#TransactionInformation
- * OriginalPaymentInformation4.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction37#OriginalTransactionReference
- * PaymentTransaction37.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction4#OriginalGroupInformation
- * OriginalPaymentInstruction4.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction4#TransactionInformation
- * OriginalPaymentInstruction4.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction47#OriginalTransactionReference
- * PaymentTransaction47.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction8#OriginalGroupInformation
- * OriginalPaymentInstruction8.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction8#TransactionInformation
- * OriginalPaymentInstruction8.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation4#OriginalTransactionReference
- * PaymentTransactionInformation4.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#OriginalTransactionReference
- * PaymentTransactionInformation28.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation2#TransactionInformation
- * OriginalPaymentInformation2.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction35#OriginalTransactionReference
- * PaymentTransaction35.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction2#TransactionInformation
- * OriginalPaymentInstruction2.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction42#OriginalTransactionReference
- * PaymentTransaction42.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction7#TransactionInformation
- * OriginalPaymentInstruction7.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation1#OriginalTransactionReference
- * PaymentTransactionInformation1.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation25#OriginalTransactionReference
- * PaymentTransactionInformation25.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation1#TransactionInformationAndStatus
- * OriginalPaymentInformation1.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction32#OriginalTransactionReference
- * PaymentTransaction32.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction1#TransactionInformationAndStatus
- * OriginalPaymentInstruction1.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction46#OriginalTransactionReference
- * PaymentTransaction46.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction6#TransactionInformationAndStatus
- * OriginalPaymentInstruction6.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation31#OriginalTransactionReference
- * PaymentTransactionInformation31.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction38#OriginalTransactionReference
- * PaymentTransaction38.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction48#OriginalTransactionReference
- * PaymentTransaction48.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation5#OriginalTransactionReference
- * PaymentTransactionInformation5.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation29#OriginalTransactionReference
- * PaymentTransactionInformation29.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction36#OriginalTransactionReference
- * PaymentTransaction36.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction45#OriginalTransactionReference
- * PaymentTransaction45.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation26#OriginalTransactionReference
- * PaymentTransactionInformation26.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction33#OriginalTransactionReference
- * PaymentTransaction33.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction43#OriginalTransactionReference
- * PaymentTransaction43.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#OriginalTransactionReference
- * PaymentTransactionInformation2.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#OriginalTransactionReference
- * PaymentTransactionInformation27.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction34#OriginalTransactionReference
- * PaymentTransaction34.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction44#OriginalTransactionReference
- * PaymentTransaction44.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation34#OriginalTransactionReference
- * PaymentTransactionInformation34.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation5#TransactionInformationAndStatus
- * OriginalPaymentInformation5.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction41#OriginalTransactionReference
- * PaymentTransaction41.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction5#TransactionInformationAndStatus
- * OriginalPaymentInstruction5.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction49#OriginalTransactionReference
- * PaymentTransaction49.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction9#TransactionInformationAndStatus
- * OriginalPaymentInstruction9.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction18#PaymentInstrument
- * PaymentTransaction18.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction15#PaymentInstrument
- * PaymentTransaction15.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction21#PaymentInstrument
- * PaymentTransaction21.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction22#PaymentInstrument
- * PaymentTransaction22.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction17#PaymentInstrument
- * PaymentTransaction17.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction19#PaymentInstrument
- * PaymentTransaction19.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction23#PaymentInstrument
- * PaymentTransaction23.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction16#PaymentInstrument
- * PaymentTransaction16.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction13#PaymentInstrument
- * PaymentTransaction13.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction24#PaymentInstrument
- * PaymentTransaction24.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut4Choice#CashInPaymentInstrument
- * CashInOrOut4Choice.CashInPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut4Choice#CashOutPaymentInstrument
- * CashInOrOut4Choice.CashOutPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction20#CashInOrOut
- * PaymentTransaction20.CashInOrOut}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut5Choice#CashInPaymentInstrument
- * CashInOrOut5Choice.CashInPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut5Choice#CashOutPaymentInstrument
- * CashInOrOut5Choice.CashOutPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction25#CashInOrOut
- * PaymentTransaction25.CashInOrOut}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut3Choice#CashInPaymentInstrument
- * CashInOrOut3Choice.CashInPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut3Choice#CashOutPaymentInstrument
- * CashInOrOut3Choice.CashOutPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction14#CashInOrOutChoice
- * PaymentTransaction14.CashInOrOutChoice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut6Choice#CashInPaymentInstrument
- * CashInOrOut6Choice.CashInPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut6Choice#CashOutPaymentInstrument
- * CashInOrOut6Choice.CashOutPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction26#CashInOrOut
- * PaymentTransaction26.CashInOrOut}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference14#OriginalTransaction
- * OriginalTransactionReference14.OriginalTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference18#OriginalTransaction
- * OriginalTransactionReference18.OriginalTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItem2#OriginalItemReference
- * OriginalItem2.OriginalItemReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus2#OriginalItemReference
- * OriginalItemAndStatus2.OriginalItemReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice#Interbank
- * UnderlyingTransaction1Choice.Interbank}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation32#OriginalTransactionReference
- * PaymentTransactionInformation32.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation3#OriginalGroupInformation
- * OriginalPaymentInformation3.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation3#TransactionInformationAndStatus
- * OriginalPaymentInformation3.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation33#OriginalTransactionReference
- * PaymentTransactionInformation33.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction1Choice#Interbank
- * CorrectiveTransaction1Choice.Interbank}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction2Choice#Interbank
- * UnderlyingTransaction2Choice.Interbank}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#OriginalTransactionReference
- * PaymentTransaction39.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction3#OriginalGroupInformation
- * OriginalPaymentInstruction3.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction3#TransactionInformationAndStatus
- * OriginalPaymentInstruction3.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction40#OriginalTransactionReference
- * PaymentTransaction40.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItem3#OriginalItemReference
- * OriginalItem3.OriginalItemReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus3#OriginalItemReference
- * OriginalItemAndStatus3.OriginalItemReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation13#OriginalTransactionReference
- * PaymentTransactionInformation13.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation18#OriginalTransactionReference
- * PaymentTransactionInformation18.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation15#OriginalTransactionReference
- * PaymentTransactionInformation15.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation22#OriginalTransactionReference
- * PaymentTransactionInformation22.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation12#OriginalTransactionReference
- * PaymentTransactionInformation12.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation19#OriginalTransactionReference
- * PaymentTransactionInformation19.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation14#OriginalTransactionReference
- * PaymentTransactionInformation14.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation20#OriginalTransactionReference
- * PaymentTransactionInformation20.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#OriginalTransactionReference
- * PaymentTransactionInformation16.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#OriginalTransactionReference
- * PaymentTransactionInformation23.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation17#OriginalTransactionReference
- * PaymentTransactionInformation17.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation24#OriginalTransactionReference
- * PaymentTransactionInformation24.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#OriginalTransactionReference
- * PaymentTransactionInformation21.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction30#PaymentInstrument
- * PaymentTransaction30.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction28#PaymentInstrument
- * PaymentTransaction28.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction31#PaymentInstrument
- * PaymentTransaction31.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7#SubscriptionPaymentInstrument
- * InvestmentFundCashSettlementInformation7.SubscriptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7#RedemptionPaymentInstrument
- * InvestmentFundCashSettlementInformation7.RedemptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7#DividendPaymentInstrument
- * InvestmentFundCashSettlementInformation7.DividendPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7#SavingsPlanPaymentInstrument
- * InvestmentFundCashSettlementInformation7.SavingsPlanPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7#InterestPaymentInstrument
- * InvestmentFundCashSettlementInformation7.InterestPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#SubscriptionPaymentInstrument
- * InvestmentFundCashSettlementInformation8.SubscriptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#RedemptionPaymentInstrument
- * InvestmentFundCashSettlementInformation8.RedemptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#DividendPaymentInstrument
- * InvestmentFundCashSettlementInformation8.DividendPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#SavingsPlanPaymentInstrument
- * InvestmentFundCashSettlementInformation8.SavingsPlanPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#InterestPaymentInstrument
- * InvestmentFundCashSettlementInformation8.InterestPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther1Choice#PaymentCode
- * PaymentCodeOrOther1Choice.PaymentCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation6#Amount
- * OriginalPaymentInformation6.Amount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction50#OriginalTransactionReference
- * PaymentTransaction50.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction12#TransactionInformationAndStatus
- * OriginalPaymentInstruction12.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction11#TransactionInformation
- * OriginalPaymentInstruction11.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction52#OriginalTransactionReference
- * PaymentTransaction52.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction51#OriginalTransactionReference
- * PaymentTransaction51.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItem4#OriginalItemReference
- * OriginalItem4.OriginalItemReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction13#OriginalGroupInformation
- * OriginalPaymentInstruction13.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction13#TransactionInformation
- * OriginalPaymentInstruction13.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction58#OriginalTransactionReference
- * PaymentTransaction58.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction10#OriginalGroupInformation
- * OriginalPaymentInstruction10.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction10#TransactionInformationAndStatus
- * OriginalPaymentInstruction10.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#OriginalTransactionReference
- * PaymentTransaction54.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus4#OriginalItemReference
- * OriginalItemAndStatus4.OriginalItemReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction53#OriginalTransactionReference
- * PaymentTransaction53.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction57#OriginalTransactionReference
- * PaymentTransaction57.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction56#OriginalTransactionReference
- * PaymentTransaction56.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction55#OriginalTransactionReference
- * PaymentTransaction55.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#TransactionInformationAndStatus
- * OriginalPaymentInstruction14.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction59#OriginalTransactionReference
- * PaymentTransaction59.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ContractRegistrationStatement1#TransactionJournal
- * ContractRegistrationStatement1.TransactionJournal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificateRecord1#Transaction
- * TransactionCertificateRecord1.Transaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction16#TransactionInformation
- * OriginalPaymentInstruction16.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction18#TransactionInformationAndStatus
- * OriginalPaymentInstruction18.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction65#OriginalTransactionReference
- * PaymentTransaction65.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction63#OriginalTransactionReference
- * PaymentTransaction63.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction60#OriginalTransactionReference
- * PaymentTransaction60.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction68#OriginalTransactionReference
- * PaymentTransaction68.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction61#OriginalTransactionReference
- * PaymentTransaction61.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction15#OriginalGroupInformation
- * OriginalPaymentInstruction15.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction15#TransactionInformation
- * OriginalPaymentInstruction15.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItem5#OriginalItemReference
- * OriginalItem5.OriginalItemReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus5#OriginalItemReference
- * OriginalItemAndStatus5.OriginalItemReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#OriginalTransactionReference
- * PaymentTransaction66.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction67#OriginalTransactionReference
- * PaymentTransaction67.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction62#OriginalTransactionReference
- * PaymentTransaction62.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction64#OriginalTransactionReference
- * PaymentTransaction64.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction17#OriginalGroupInformation
- * OriginalPaymentInstruction17.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction17#TransactionInformationAndStatus
- * OriginalPaymentInstruction17.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CashSettlement1#OtherCashSettlementDetails
- * CashSettlement1.OtherCashSettlementDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CashSettlement2#OtherCashSettlementDetails
- * CashSettlement2.OtherCashSettlementDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument13#SubscriptionPaymentInstrument
- * PaymentInstrument13.SubscriptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument13#RedemptionPaymentInstrument
- * PaymentInstrument13.RedemptionPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument13#DividendPaymentInstrument
- * PaymentInstrument13.DividendPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument13#SavingsPlanPaymentInstrument
- * PaymentInstrument13.SavingsPlanPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument13#InterestPaymentInstrument
- * PaymentInstrument13.InterestPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#TransactionInformationAndStatus
- * OriginalPaymentInstruction19.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction69#OriginalTransactionReference
- * PaymentTransaction69.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction72#PaymentInstrument
- * PaymentTransaction72.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction70#PaymentInstrument
- * PaymentTransaction70.PaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction71#CashInOrOut
- * PaymentTransaction71.CashInOrOut}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut7Choice#CashInPaymentInstrument
- * CashInOrOut7Choice.CashInPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CashInOrOut7Choice#CashOutPaymentInstrument
- * CashInOrOut7Choice.CashOutPaymentInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction3Choice#Interbank
- * UnderlyingTransaction3Choice.Interbank}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction80#OriginalTransactionReference
- * PaymentTransaction80.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction81#OriginalTransactionReference
- * PaymentTransaction81.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction23#TransactionInformationAndStatus
- * OriginalPaymentInstruction23.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction21#TransactionInformation
- * OriginalPaymentInstruction21.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#TransactionInformationAndStatus
- * OriginalPaymentInstruction24.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#OriginalTransactionReference
- * PaymentTransaction76.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction2Choice#Interbank
- * CorrectiveTransaction2Choice.Interbank}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction22#OriginalGroupInformation
- * OriginalPaymentInstruction22.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction22#TransactionInformationAndStatus
- * OriginalPaymentInstruction22.TransactionInformationAndStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#OriginalTransactionReference
- * PaymentTransaction78.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction20#OriginalGroupInformation
- * OriginalPaymentInstruction20.OriginalGroupInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction20#TransactionInformation
- * OriginalPaymentInstruction20.TransactionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction74#OriginalTransactionReference
- * PaymentTransaction74.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation7#Amount
- * OriginalPaymentInformation7.Amount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction83#OriginalTransactionReference
- * PaymentTransaction83.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction77#OriginalTransactionReference
- * PaymentTransaction77.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction75#OriginalTransactionReference
- * PaymentTransaction75.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction82#OriginalTransactionReference
- * PaymentTransaction82.OriginalTransactionReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#OriginalTransactionReference
- * PaymentTransaction79.OriginalTransactionReference}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentObligation
+ * Payment.mmPaymentObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyOfTransfer
+ * Payment.mmCurrencyOfTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
+ * Payment.mmCreditMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmType
+ * Payment.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+ * Payment.mmInstructedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPriority
+ * Payment.mmPriority}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+ * Payment.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentStatus
+ * Payment.mmPaymentStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPartyRole
+ * Payment.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmTaxOnPayment
+ * Payment.mmTaxOnPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentExecution
+ * Payment.mmPaymentExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmPoolingAdjustmentDate
+ * Payment.mmPoolingAdjustmentDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmEquivalentAmount
+ * Payment.mmEquivalentAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCurrencyExchange
+ * Payment.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmInstructionForCreditorAgent
+ * Payment.mmInstructionForCreditorAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmInstructionForDebtorAgent
+ * Payment.mmInstructionForDebtorAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentRelatedIdentifications
+ * Payment.mmPaymentRelatedIdentifications}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedInvestigationCase
+ * Payment.mmRelatedInvestigationCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmSettlementTimeRequest
+ * Payment.mmSettlementTimeRequest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmAmount
+ * Payment.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmTradeSettlement
+ * Payment.mmTradeSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmStandardSettlementInstructions
+ * Payment.mmStandardSettlementInstructions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedDebitAuthorisation
+ * Payment.mmRelatedDebitAuthorisation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedInvestigationCaseResolution
+ * Payment.mmRelatedInvestigationCaseResolution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmOriginalPayment
+ * Payment.mmOriginalPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmReturnPayment
+ * Payment.mmReturnPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedSecuritiesSettlement
+ * Payment.mmRelatedSecuritiesSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmInvoiceReconciliation
+ * Payment.mmInvoiceReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentInstrument
+ * Payment.mmPaymentInstrument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmAccount
+ * Payment.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmAdjustments
+ * Payment.mmAdjustments}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmContractRegistration
+ * Payment.mmContractRegistration}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -827,6 +130,706 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.IndividualPayment
  * IndividualPayment}</li>
  * <li>{@linkplain com.tools20022.repository.entity.BulkPayment BulkPayment}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAccount#mmPayment
+ * CashAccount.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedPaymentSettlement
+ * Tax.mmRelatedPaymentSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Adjustment#mmPayment
+ * Adjustment.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentOffset
+ * PaymentObligation.mmPaymentOffset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmOriginalPayment
+ * Payment.mmOriginalPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmReturnPayment
+ * Payment.mmReturnPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CreditInstrument#mmRelatedPayment
+ * CreditInstrument.mmRelatedPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentExecution#mmPayment
+ * PaymentExecution.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmPayment
+ * PaymentIdentification.mmPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmPayment
+ * PaymentPartyRole.mmPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentStatus#mmPayment
+ * PaymentStatus.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPayment
+ * SecuritiesSettlement.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmRelatedPayment
+ * CurrencyExchange.mmRelatedPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmPayment
+ * Invoice.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmUnderlyingPayment
+ * PaymentInvestigationCase.mmUnderlyingPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmPayment
+ * SettlementTimeRequest.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#mmAuthorisedReturn
+ * DebitAuthorisation.mmAuthorisedReturn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmPaymentCorrection
+ * PaymentInvestigationCaseResolution.mmPaymentCorrection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmPayment
+ * CommercialTradeSettlement.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmRelatedPayment
+ * RegisteredContract.mmRelatedPayment}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1#mmSubscriptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation1.mmSubscriptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1#mmRedemptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation1.mmRedemptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1#mmDividendPaymentInstrument
+ * InvestmentFundCashSettlementInformation1.mmDividendPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1#mmSavingsPlanPaymentInstrument
+ * InvestmentFundCashSettlementInformation1.mmSavingsPlanPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3#mmSubscriptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation3.mmSubscriptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3#mmRedemptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation3.mmRedemptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3#mmDividendPaymentInstrument
+ * InvestmentFundCashSettlementInformation3.mmDividendPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3#mmSavingsPlanPaymentInstrument
+ * InvestmentFundCashSettlementInformation3.mmSavingsPlanPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5#mmSubscriptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation5.mmSubscriptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5#mmRedemptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation5.mmRedemptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5#mmDividendPaymentInstrument
+ * InvestmentFundCashSettlementInformation5.mmDividendPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5#mmSavingsPlanPaymentInstrument
+ * InvestmentFundCashSettlementInformation5.mmSavingsPlanPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5#mmInterestPaymentInstrument
+ * InvestmentFundCashSettlementInformation5.mmInterestPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2#mmSubscriptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation2.mmSubscriptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2#mmRedemptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation2.mmRedemptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2#mmDividendPaymentInstrument
+ * InvestmentFundCashSettlementInformation2.mmDividendPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2#mmSavingsPlanPaymentInstrument
+ * InvestmentFundCashSettlementInformation2.mmSavingsPlanPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4#mmSubscriptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation4.mmSubscriptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4#mmRedemptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation4.mmRedemptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4#mmDividendPaymentInstrument
+ * InvestmentFundCashSettlementInformation4.mmDividendPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4#mmSavingsPlanPaymentInstrument
+ * InvestmentFundCashSettlementInformation4.mmSavingsPlanPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmSubscriptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation6.mmSubscriptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmRedemptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation6.mmRedemptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmDividendPaymentInstrument
+ * InvestmentFundCashSettlementInformation6.mmDividendPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmSavingsPlanPaymentInstrument
+ * InvestmentFundCashSettlementInformation6.mmSavingsPlanPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmInterestPaymentInstrument
+ * InvestmentFundCashSettlementInformation6.mmInterestPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportDetails3#mmTransaction
+ * TransactionReportDetails3.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportDetails4#mmTransaction
+ * TransactionReportDetails4.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#mmTransaction
+ * TransactionReportDetails5.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation3#mmOriginalTransactionReference
+ * PaymentTransactionInformation3.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation30#mmOriginalTransactionReference
+ * PaymentTransactionInformation30.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmOriginalGroupInformation
+ * OriginalPaymentInformation4.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmTransactionInformation
+ * OriginalPaymentInformation4.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction37#mmOriginalTransactionReference
+ * PaymentTransaction37.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction4#mmOriginalGroupInformation
+ * OriginalPaymentInstruction4.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction4#mmTransactionInformation
+ * OriginalPaymentInstruction4.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction47#mmOriginalTransactionReference
+ * PaymentTransaction47.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction8#mmOriginalGroupInformation
+ * OriginalPaymentInstruction8.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction8#mmTransactionInformation
+ * OriginalPaymentInstruction8.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation4#mmOriginalTransactionReference
+ * PaymentTransactionInformation4.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmOriginalTransactionReference
+ * PaymentTransactionInformation28.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation2#mmTransactionInformation
+ * OriginalPaymentInformation2.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction35#mmOriginalTransactionReference
+ * PaymentTransaction35.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction2#mmTransactionInformation
+ * OriginalPaymentInstruction2.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction42#mmOriginalTransactionReference
+ * PaymentTransaction42.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction7#mmTransactionInformation
+ * OriginalPaymentInstruction7.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation1#mmOriginalTransactionReference
+ * PaymentTransactionInformation1.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation25#mmOriginalTransactionReference
+ * PaymentTransactionInformation25.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation1#mmTransactionInformationAndStatus
+ * OriginalPaymentInformation1.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction32#mmOriginalTransactionReference
+ * PaymentTransaction32.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction1#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction1.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction46#mmOriginalTransactionReference
+ * PaymentTransaction46.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction6#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction6.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation31#mmOriginalTransactionReference
+ * PaymentTransactionInformation31.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction38#mmOriginalTransactionReference
+ * PaymentTransaction38.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction48#mmOriginalTransactionReference
+ * PaymentTransaction48.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation5#mmOriginalTransactionReference
+ * PaymentTransactionInformation5.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation29#mmOriginalTransactionReference
+ * PaymentTransactionInformation29.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction36#mmOriginalTransactionReference
+ * PaymentTransaction36.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction45#mmOriginalTransactionReference
+ * PaymentTransaction45.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation26#mmOriginalTransactionReference
+ * PaymentTransactionInformation26.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction33#mmOriginalTransactionReference
+ * PaymentTransaction33.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction43#mmOriginalTransactionReference
+ * PaymentTransaction43.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#mmOriginalTransactionReference
+ * PaymentTransactionInformation2.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#mmOriginalTransactionReference
+ * PaymentTransactionInformation27.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction34#mmOriginalTransactionReference
+ * PaymentTransaction34.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction44#mmOriginalTransactionReference
+ * PaymentTransaction44.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation34#mmOriginalTransactionReference
+ * PaymentTransactionInformation34.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation5#mmTransactionInformationAndStatus
+ * OriginalPaymentInformation5.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction41#mmOriginalTransactionReference
+ * PaymentTransaction41.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction5#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction5.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction49#mmOriginalTransactionReference
+ * PaymentTransaction49.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction9#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction9.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction18#mmPaymentInstrument
+ * PaymentTransaction18.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction15#mmPaymentInstrument
+ * PaymentTransaction15.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction21#mmPaymentInstrument
+ * PaymentTransaction21.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction22#mmPaymentInstrument
+ * PaymentTransaction22.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction17#mmPaymentInstrument
+ * PaymentTransaction17.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction19#mmPaymentInstrument
+ * PaymentTransaction19.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction23#mmPaymentInstrument
+ * PaymentTransaction23.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction16#mmPaymentInstrument
+ * PaymentTransaction16.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction13#mmPaymentInstrument
+ * PaymentTransaction13.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction24#mmPaymentInstrument
+ * PaymentTransaction24.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut4Choice#mmCashInPaymentInstrument
+ * CashInOrOut4Choice.mmCashInPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut4Choice#mmCashOutPaymentInstrument
+ * CashInOrOut4Choice.mmCashOutPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction20#mmCashInOrOut
+ * PaymentTransaction20.mmCashInOrOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut5Choice#mmCashInPaymentInstrument
+ * CashInOrOut5Choice.mmCashInPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut5Choice#mmCashOutPaymentInstrument
+ * CashInOrOut5Choice.mmCashOutPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction25#mmCashInOrOut
+ * PaymentTransaction25.mmCashInOrOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut3Choice#mmCashInPaymentInstrument
+ * CashInOrOut3Choice.mmCashInPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut3Choice#mmCashOutPaymentInstrument
+ * CashInOrOut3Choice.mmCashOutPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction14#mmCashInOrOutChoice
+ * PaymentTransaction14.mmCashInOrOutChoice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut6Choice#mmCashInPaymentInstrument
+ * CashInOrOut6Choice.mmCashInPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut6Choice#mmCashOutPaymentInstrument
+ * CashInOrOut6Choice.mmCashOutPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction26#mmCashInOrOut
+ * PaymentTransaction26.mmCashInOrOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference14#mmOriginalTransaction
+ * OriginalTransactionReference14.mmOriginalTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference18#mmOriginalTransaction
+ * OriginalTransactionReference18.mmOriginalTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItem2#mmOriginalItemReference
+ * OriginalItem2.mmOriginalItemReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus2#mmOriginalItemReference
+ * OriginalItemAndStatus2.mmOriginalItemReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice#mmInterbank
+ * UnderlyingTransaction1Choice.mmInterbank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation32#mmOriginalTransactionReference
+ * PaymentTransactionInformation32.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation3#mmOriginalGroupInformation
+ * OriginalPaymentInformation3.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation3#mmTransactionInformationAndStatus
+ * OriginalPaymentInformation3.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation33#mmOriginalTransactionReference
+ * PaymentTransactionInformation33.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction1Choice#mmInterbank
+ * CorrectiveTransaction1Choice.mmInterbank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction2Choice#mmInterbank
+ * UnderlyingTransaction2Choice.mmInterbank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#mmOriginalTransactionReference
+ * PaymentTransaction39.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction3#mmOriginalGroupInformation
+ * OriginalPaymentInstruction3.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction3#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction3.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction40#mmOriginalTransactionReference
+ * PaymentTransaction40.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItem3#mmOriginalItemReference
+ * OriginalItem3.mmOriginalItemReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus3#mmOriginalItemReference
+ * OriginalItemAndStatus3.mmOriginalItemReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation13#mmOriginalTransactionReference
+ * PaymentTransactionInformation13.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation18#mmOriginalTransactionReference
+ * PaymentTransactionInformation18.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation15#mmOriginalTransactionReference
+ * PaymentTransactionInformation15.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation22#mmOriginalTransactionReference
+ * PaymentTransactionInformation22.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation12#mmOriginalTransactionReference
+ * PaymentTransactionInformation12.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation19#mmOriginalTransactionReference
+ * PaymentTransactionInformation19.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation14#mmOriginalTransactionReference
+ * PaymentTransactionInformation14.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation20#mmOriginalTransactionReference
+ * PaymentTransactionInformation20.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#mmOriginalTransactionReference
+ * PaymentTransactionInformation16.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#mmOriginalTransactionReference
+ * PaymentTransactionInformation23.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation17#mmOriginalTransactionReference
+ * PaymentTransactionInformation17.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation24#mmOriginalTransactionReference
+ * PaymentTransactionInformation24.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#mmOriginalTransactionReference
+ * PaymentTransactionInformation21.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction30#mmPaymentInstrument
+ * PaymentTransaction30.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction28#mmPaymentInstrument
+ * PaymentTransaction28.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction31#mmPaymentInstrument
+ * PaymentTransaction31.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7#mmSubscriptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation7.mmSubscriptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7#mmRedemptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation7.mmRedemptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7#mmDividendPaymentInstrument
+ * InvestmentFundCashSettlementInformation7.mmDividendPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7#mmSavingsPlanPaymentInstrument
+ * InvestmentFundCashSettlementInformation7.mmSavingsPlanPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7#mmInterestPaymentInstrument
+ * InvestmentFundCashSettlementInformation7.mmInterestPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmSubscriptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation8.mmSubscriptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmRedemptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation8.mmRedemptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmDividendPaymentInstrument
+ * InvestmentFundCashSettlementInformation8.mmDividendPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmSavingsPlanPaymentInstrument
+ * InvestmentFundCashSettlementInformation8.mmSavingsPlanPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmInterestPaymentInstrument
+ * InvestmentFundCashSettlementInformation8.mmInterestPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther1Choice#mmPaymentCode
+ * PaymentCodeOrOther1Choice.mmPaymentCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation6#mmAmount
+ * OriginalPaymentInformation6.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction50#mmOriginalTransactionReference
+ * PaymentTransaction50.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction12#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction12.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction11#mmTransactionInformation
+ * OriginalPaymentInstruction11.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction52#mmOriginalTransactionReference
+ * PaymentTransaction52.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction51#mmOriginalTransactionReference
+ * PaymentTransaction51.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItem4#mmOriginalItemReference
+ * OriginalItem4.mmOriginalItemReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction13#mmOriginalGroupInformation
+ * OriginalPaymentInstruction13.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction13#mmTransactionInformation
+ * OriginalPaymentInstruction13.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction58#mmOriginalTransactionReference
+ * PaymentTransaction58.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction10#mmOriginalGroupInformation
+ * OriginalPaymentInstruction10.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction10#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction10.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#mmOriginalTransactionReference
+ * PaymentTransaction54.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus4#mmOriginalItemReference
+ * OriginalItemAndStatus4.mmOriginalItemReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction53#mmOriginalTransactionReference
+ * PaymentTransaction53.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction57#mmOriginalTransactionReference
+ * PaymentTransaction57.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction56#mmOriginalTransactionReference
+ * PaymentTransaction56.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction55#mmOriginalTransactionReference
+ * PaymentTransaction55.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction14.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction59#mmOriginalTransactionReference
+ * PaymentTransaction59.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ContractRegistrationStatement1#mmTransactionJournal
+ * ContractRegistrationStatement1.mmTransactionJournal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificateRecord1#mmTransaction
+ * TransactionCertificateRecord1.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction16#mmTransactionInformation
+ * OriginalPaymentInstruction16.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction18#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction18.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction65#mmOriginalTransactionReference
+ * PaymentTransaction65.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction63#mmOriginalTransactionReference
+ * PaymentTransaction63.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction60#mmOriginalTransactionReference
+ * PaymentTransaction60.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction68#mmOriginalTransactionReference
+ * PaymentTransaction68.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction61#mmOriginalTransactionReference
+ * PaymentTransaction61.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction15#mmOriginalGroupInformation
+ * OriginalPaymentInstruction15.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction15#mmTransactionInformation
+ * OriginalPaymentInstruction15.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItem5#mmOriginalItemReference
+ * OriginalItem5.mmOriginalItemReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus5#mmOriginalItemReference
+ * OriginalItemAndStatus5.mmOriginalItemReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#mmOriginalTransactionReference
+ * PaymentTransaction66.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction67#mmOriginalTransactionReference
+ * PaymentTransaction67.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction62#mmOriginalTransactionReference
+ * PaymentTransaction62.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction64#mmOriginalTransactionReference
+ * PaymentTransaction64.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction17#mmOriginalGroupInformation
+ * OriginalPaymentInstruction17.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction17#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction17.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashSettlement1#mmOtherCashSettlementDetails
+ * CashSettlement1.mmOtherCashSettlementDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashSettlement2#mmOtherCashSettlementDetails
+ * CashSettlement2.mmOtherCashSettlementDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument13#mmSubscriptionPaymentInstrument
+ * PaymentInstrument13.mmSubscriptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument13#mmRedemptionPaymentInstrument
+ * PaymentInstrument13.mmRedemptionPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument13#mmDividendPaymentInstrument
+ * PaymentInstrument13.mmDividendPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument13#mmSavingsPlanPaymentInstrument
+ * PaymentInstrument13.mmSavingsPlanPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument13#mmInterestPaymentInstrument
+ * PaymentInstrument13.mmInterestPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction19.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction69#mmOriginalTransactionReference
+ * PaymentTransaction69.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction72#mmPaymentInstrument
+ * PaymentTransaction72.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction70#mmPaymentInstrument
+ * PaymentTransaction70.mmPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction71#mmCashInOrOut
+ * PaymentTransaction71.mmCashInOrOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut7Choice#mmCashInPaymentInstrument
+ * CashInOrOut7Choice.mmCashInPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashInOrOut7Choice#mmCashOutPaymentInstrument
+ * CashInOrOut7Choice.mmCashOutPaymentInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction3Choice#mmInterbank
+ * UnderlyingTransaction3Choice.mmInterbank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction80#mmOriginalTransactionReference
+ * PaymentTransaction80.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction81#mmOriginalTransactionReference
+ * PaymentTransaction81.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction23#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction23.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction21#mmTransactionInformation
+ * OriginalPaymentInstruction21.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction24.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#mmOriginalTransactionReference
+ * PaymentTransaction76.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction2Choice#mmInterbank
+ * CorrectiveTransaction2Choice.mmInterbank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction22#mmOriginalGroupInformation
+ * OriginalPaymentInstruction22.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction22#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction22.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#mmOriginalTransactionReference
+ * PaymentTransaction78.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction20#mmOriginalGroupInformation
+ * OriginalPaymentInstruction20.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction20#mmTransactionInformation
+ * OriginalPaymentInstruction20.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction74#mmOriginalTransactionReference
+ * PaymentTransaction74.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation7#mmAmount
+ * OriginalPaymentInformation7.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction83#mmOriginalTransactionReference
+ * PaymentTransaction83.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction77#mmOriginalTransactionReference
+ * PaymentTransaction77.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction75#mmOriginalTransactionReference
+ * PaymentTransaction75.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction82#mmOriginalTransactionReference
+ * PaymentTransaction82.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#mmOriginalTransactionReference
+ * PaymentTransaction79.mmOriginalTransactionReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -1475,8 +1478,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -1492,6 +1495,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Payment extends ObligationFulfilment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.PaymentObligation> paymentObligation;
 	/**
 	 * Specifies the obligation which created the payment.
 	 * <p>
@@ -1500,8 +1504,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentOffset
-	 * PaymentObligation.PaymentOffset}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentOffset
+	 * PaymentObligation.mmPaymentOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1509,18 +1513,18 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
 	 * PaymentObligation}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#PaymentTerms
-	 * TradeSettlement1.PaymentTerms}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#mmPaymentTerms
+	 * TradeSettlement1.mmPaymentTerms}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1532,20 +1536,21 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Specifies the obligation which created the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PaymentObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.PaymentTerms);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmPaymentTerms);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
 			definition = "Specifies the obligation which created the payment.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentOffset;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
+	protected CurrencyCode currencyOfTransfer;
 	/**
 	 * Specifies the currency of the amount to be transferred which may be
 	 * different from the currency of the debtor's account.
@@ -1556,192 +1561,192 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument7#SettlementCurrency
-	 * PaymentInstrument7.SettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument6#SettlementCurrency
-	 * PaymentInstrument6.SettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#SettlementCurrency
-	 * PaymentInstrument8.SettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument9#SettlementCurrency
-	 * PaymentInstrument9.SettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument11#SettlementCurrency
-	 * PaymentInstrument11.SettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument10#SettlementCurrency
-	 * PaymentInstrument10.SettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EquivalentAmount#CurrencyOfTransfer
-	 * EquivalentAmount.CurrencyOfTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EquivalentAmount2#CurrencyOfTransfer
-	 * EquivalentAmount2.CurrencyOfTransfer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CommonData1#Currency
-	 * CommonData1.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails4#Currency
-	 * CardPaymentTransactionDetails4.Currency}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CommonData2#Currency
-	 * CommonData2.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails7#Currency
-	 * CardPaymentTransactionDetails7.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails9#Currency
-	 * CardPaymentTransactionDetails9.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails1#Currency
-	 * CardPaymentTransactionDetails1.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails10#Currency
-	 * CardPaymentTransactionDetails10.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails2#Currency
-	 * CardPaymentTransactionDetails2.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails11#Currency
-	 * CardPaymentTransactionDetails11.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction9#Currency
-	 * CardPaymentTransaction9.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction18#Currency
-	 * CardPaymentTransaction18.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails5#Currency
-	 * CardPaymentTransactionDetails5.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails6#Currency
-	 * CardPaymentTransactionDetails6.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails3#Currency
-	 * CardPaymentTransactionDetails3.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument12#SettlementCurrency
-	 * PaymentInstrument12.SettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails12#Currency
-	 * CardPaymentTransactionDetails12.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails13#Currency
-	 * CardPaymentTransactionDetails13.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails18#Currency
-	 * CardPaymentTransactionDetails18.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails16#Currency
-	 * CardPaymentTransactionDetails16.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails14#Currency
-	 * CardPaymentTransactionDetails14.Currency}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CommonData3#Currency
-	 * CommonData3.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails15#Currency
-	 * CardPaymentTransactionDetails15.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails17#Currency
-	 * CardPaymentTransactionDetails17.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails20#Currency
-	 * CardPaymentTransactionDetails20.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails25#Currency
-	 * CardPaymentTransactionDetails25.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#Currency
-	 * CardPaymentTransactionDetails23.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails21#Currency
-	 * CardPaymentTransactionDetails21.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails26#Currency
-	 * CardPaymentTransactionDetails26.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails19#Currency
-	 * CardPaymentTransactionDetails19.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails24#Currency
-	 * CardPaymentTransactionDetails24.Currency}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CommonData4#Currency
-	 * CommonData4.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails22#Currency
-	 * CardPaymentTransactionDetails22.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#BaseCurrency
-	 * AutomatedTellerMachine4.BaseCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PremiumAmount3#PremiumCurrency
-	 * PremiumAmount3.PremiumCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails32#Currency
-	 * CardPaymentTransactionDetails32.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails33#Currency
-	 * CardPaymentTransactionDetails33.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails28#Currency
-	 * CardPaymentTransactionDetails28.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails29#Currency
-	 * CardPaymentTransactionDetails29.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#Currency
-	 * CardPaymentTransactionDetails30.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails27#Currency
-	 * CardPaymentTransactionDetails27.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails31#Currency
-	 * CardPaymentTransactionDetails31.Currency}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CommonData5#Currency
-	 * CommonData5.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails35#Currency
-	 * CardPaymentTransactionDetails35.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails34#Currency
-	 * CardPaymentTransactionDetails34.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine10#BaseCurrency
-	 * AutomatedTellerMachine10.BaseCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails39#Currency
-	 * CardPaymentTransactionDetails39.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#Currency
-	 * CardPaymentTransactionDetails38.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails41#Currency
-	 * CardPaymentTransactionDetails41.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37#Currency
-	 * CardPaymentTransactionDetails37.Currency}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CommonData6#Currency
-	 * CommonData6.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails40#Currency
-	 * CardPaymentTransactionDetails40.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails42#Currency
-	 * CardPaymentTransactionDetails42.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails43#Currency
-	 * CardPaymentTransactionDetails43.Currency}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument7#mmSettlementCurrency
+	 * PaymentInstrument7.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument6#mmSettlementCurrency
+	 * PaymentInstrument6.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmSettlementCurrency
+	 * PaymentInstrument8.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument9#mmSettlementCurrency
+	 * PaymentInstrument9.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument11#mmSettlementCurrency
+	 * PaymentInstrument11.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument10#mmSettlementCurrency
+	 * PaymentInstrument10.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EquivalentAmount#mmCurrencyOfTransfer
+	 * EquivalentAmount.mmCurrencyOfTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EquivalentAmount2#mmCurrencyOfTransfer
+	 * EquivalentAmount2.mmCurrencyOfTransfer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData1#mmCurrency
+	 * CommonData1.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails4#mmCurrency
+	 * CardPaymentTransactionDetails4.mmCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData2#mmCurrency
+	 * CommonData2.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails7#mmCurrency
+	 * CardPaymentTransactionDetails7.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails9#mmCurrency
+	 * CardPaymentTransactionDetails9.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails1#mmCurrency
+	 * CardPaymentTransactionDetails1.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails10#mmCurrency
+	 * CardPaymentTransactionDetails10.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails2#mmCurrency
+	 * CardPaymentTransactionDetails2.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails11#mmCurrency
+	 * CardPaymentTransactionDetails11.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction9#mmCurrency
+	 * CardPaymentTransaction9.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction18#mmCurrency
+	 * CardPaymentTransaction18.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails5#mmCurrency
+	 * CardPaymentTransactionDetails5.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails6#mmCurrency
+	 * CardPaymentTransactionDetails6.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails3#mmCurrency
+	 * CardPaymentTransactionDetails3.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument12#mmSettlementCurrency
+	 * PaymentInstrument12.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails12#mmCurrency
+	 * CardPaymentTransactionDetails12.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails13#mmCurrency
+	 * CardPaymentTransactionDetails13.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails18#mmCurrency
+	 * CardPaymentTransactionDetails18.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails16#mmCurrency
+	 * CardPaymentTransactionDetails16.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails14#mmCurrency
+	 * CardPaymentTransactionDetails14.mmCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData3#mmCurrency
+	 * CommonData3.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails15#mmCurrency
+	 * CardPaymentTransactionDetails15.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails17#mmCurrency
+	 * CardPaymentTransactionDetails17.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails20#mmCurrency
+	 * CardPaymentTransactionDetails20.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails25#mmCurrency
+	 * CardPaymentTransactionDetails25.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmCurrency
+	 * CardPaymentTransactionDetails23.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails21#mmCurrency
+	 * CardPaymentTransactionDetails21.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails26#mmCurrency
+	 * CardPaymentTransactionDetails26.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails19#mmCurrency
+	 * CardPaymentTransactionDetails19.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails24#mmCurrency
+	 * CardPaymentTransactionDetails24.mmCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData4#mmCurrency
+	 * CommonData4.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails22#mmCurrency
+	 * CardPaymentTransactionDetails22.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4#mmBaseCurrency
+	 * AutomatedTellerMachine4.mmBaseCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PremiumAmount3#mmPremiumCurrency
+	 * PremiumAmount3.mmPremiumCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails32#mmCurrency
+	 * CardPaymentTransactionDetails32.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails33#mmCurrency
+	 * CardPaymentTransactionDetails33.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails28#mmCurrency
+	 * CardPaymentTransactionDetails28.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails29#mmCurrency
+	 * CardPaymentTransactionDetails29.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmCurrency
+	 * CardPaymentTransactionDetails30.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails27#mmCurrency
+	 * CardPaymentTransactionDetails27.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails31#mmCurrency
+	 * CardPaymentTransactionDetails31.mmCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData5#mmCurrency
+	 * CommonData5.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails35#mmCurrency
+	 * CardPaymentTransactionDetails35.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails34#mmCurrency
+	 * CardPaymentTransactionDetails34.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AutomatedTellerMachine10#mmBaseCurrency
+	 * AutomatedTellerMachine10.mmBaseCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails39#mmCurrency
+	 * CardPaymentTransactionDetails39.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmCurrency
+	 * CardPaymentTransactionDetails38.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails41#mmCurrency
+	 * CardPaymentTransactionDetails41.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37#mmCurrency
+	 * CardPaymentTransactionDetails37.mmCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData6#mmCurrency
+	 * CommonData6.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails40#mmCurrency
+	 * CardPaymentTransactionDetails40.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails42#mmCurrency
+	 * CardPaymentTransactionDetails42.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails43#mmCurrency
+	 * CardPaymentTransactionDetails43.mmCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1755,39 +1760,43 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CurrencyOfTransfer = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCurrencyOfTransfer = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument7.SettlementCurrency, com.tools20022.repository.msg.PaymentInstrument6.SettlementCurrency,
-					com.tools20022.repository.msg.PaymentInstrument8.SettlementCurrency, com.tools20022.repository.msg.PaymentInstrument9.SettlementCurrency, com.tools20022.repository.msg.PaymentInstrument11.SettlementCurrency,
-					com.tools20022.repository.msg.PaymentInstrument10.SettlementCurrency, com.tools20022.repository.msg.EquivalentAmount.CurrencyOfTransfer, com.tools20022.repository.msg.EquivalentAmount2.CurrencyOfTransfer,
-					com.tools20022.repository.msg.CommonData1.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails4.Currency, com.tools20022.repository.msg.CommonData2.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails7.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails9.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails1.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails10.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails2.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails11.Currency,
-					com.tools20022.repository.msg.CardPaymentTransaction9.Currency, com.tools20022.repository.msg.CardPaymentTransaction18.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails5.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails6.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails3.Currency, com.tools20022.repository.msg.PaymentInstrument12.SettlementCurrency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails12.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails13.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails18.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails16.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails14.Currency, com.tools20022.repository.msg.CommonData3.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails15.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails17.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails20.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails25.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails23.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails21.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails26.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails19.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails24.Currency,
-					com.tools20022.repository.msg.CommonData4.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails22.Currency, com.tools20022.repository.msg.AutomatedTellerMachine4.BaseCurrency,
-					com.tools20022.repository.msg.PremiumAmount3.PremiumCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails32.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails33.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails28.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails29.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails30.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails27.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails31.Currency, com.tools20022.repository.msg.CommonData5.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails35.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails34.Currency, com.tools20022.repository.msg.AutomatedTellerMachine10.BaseCurrency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails39.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails38.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails41.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails37.Currency, com.tools20022.repository.msg.CommonData6.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails40.Currency,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails42.Currency, com.tools20022.repository.msg.CardPaymentTransactionDetails43.Currency);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument7.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument6.mmSettlementCurrency,
+					com.tools20022.repository.msg.PaymentInstrument8.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument9.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument11.mmSettlementCurrency,
+					com.tools20022.repository.msg.PaymentInstrument10.mmSettlementCurrency, com.tools20022.repository.msg.EquivalentAmount.mmCurrencyOfTransfer, com.tools20022.repository.msg.EquivalentAmount2.mmCurrencyOfTransfer,
+					com.tools20022.repository.msg.CommonData1.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails4.mmCurrency, com.tools20022.repository.msg.CommonData2.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails7.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails9.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails10.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails2.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails11.mmCurrency, com.tools20022.repository.msg.CardPaymentTransaction9.mmCurrency, com.tools20022.repository.msg.CardPaymentTransaction18.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails5.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails6.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails3.mmCurrency,
+					com.tools20022.repository.msg.PaymentInstrument12.mmSettlementCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails12.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails18.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails16.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails14.mmCurrency, com.tools20022.repository.msg.CommonData3.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails15.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails17.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails20.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails25.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails21.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails26.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails19.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails24.mmCurrency, com.tools20022.repository.msg.CommonData4.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails22.mmCurrency, com.tools20022.repository.msg.AutomatedTellerMachine4.mmBaseCurrency, com.tools20022.repository.msg.PremiumAmount3.mmPremiumCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails32.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails33.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails28.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails29.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails27.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails31.mmCurrency, com.tools20022.repository.msg.CommonData5.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails35.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails34.mmCurrency, com.tools20022.repository.msg.AutomatedTellerMachine10.mmBaseCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails39.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails41.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails37.mmCurrency, com.tools20022.repository.msg.CommonData6.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails40.mmCurrency,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails42.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails43.mmCurrency);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CurrencyOfTransfer";
 			definition = "Specifies the currency of the amount to be transferred which may be different from the currency of the debtor's account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CreditInstrument> creditMethod;
 	/**
 	 * Specifies the transfer method to be used for the credit.
 	 * <p>
@@ -1796,8 +1805,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CreditInstrument#RelatedPayment
-	 * CreditInstrument.RelatedPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.CreditInstrument#mmRelatedPayment
+	 * CreditInstrument.mmRelatedPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1805,42 +1814,42 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CreditInstrument
 	 * CreditInstrument}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument11#PaymentInstrument
-	 * PaymentInstrument11.PaymentInstrument}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument10#PaymentInstrument
-	 * PaymentInstrument10.PaymentInstrument}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentSearch2#PaymentMethod
-	 * PaymentSearch2.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentSearch3#PaymentMethod
-	 * PaymentSearch3.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference19#PaymentMethod
-	 * OriginalTransactionReference19.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument12#PaymentInstrument
-	 * PaymentInstrument12.PaymentInstrument}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference21#PaymentMethod
-	 * OriginalTransactionReference21.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference23#PaymentMethod
-	 * OriginalTransactionReference23.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference26#PaymentMethod
-	 * OriginalTransactionReference26.PaymentMethod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument11#mmPaymentInstrument
+	 * PaymentInstrument11.mmPaymentInstrument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument10#mmPaymentInstrument
+	 * PaymentInstrument10.mmPaymentInstrument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch2#mmPaymentMethod
+	 * PaymentSearch2.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmPaymentMethod
+	 * PaymentSearch3.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference19#mmPaymentMethod
+	 * OriginalTransactionReference19.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument12#mmPaymentInstrument
+	 * PaymentInstrument12.mmPaymentInstrument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference21#mmPaymentMethod
+	 * OriginalTransactionReference21.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference23#mmPaymentMethod
+	 * OriginalTransactionReference23.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference26#mmPaymentMethod
+	 * OriginalTransactionReference26.mmPaymentMethod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1852,23 +1861,24 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Specifies the transfer method to be used for the credit."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CreditMethod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCreditMethod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument11.PaymentInstrument, com.tools20022.repository.msg.PaymentInstrument10.PaymentInstrument,
-					com.tools20022.repository.msg.PaymentSearch2.PaymentMethod, com.tools20022.repository.msg.PaymentSearch3.PaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference19.PaymentMethod,
-					com.tools20022.repository.msg.PaymentInstrument12.PaymentInstrument, com.tools20022.repository.msg.OriginalTransactionReference21.PaymentMethod,
-					com.tools20022.repository.msg.OriginalTransactionReference23.PaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference26.PaymentMethod);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument11.mmPaymentInstrument, com.tools20022.repository.msg.PaymentInstrument10.mmPaymentInstrument,
+					com.tools20022.repository.msg.PaymentSearch2.mmPaymentMethod, com.tools20022.repository.msg.PaymentSearch3.mmPaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference19.mmPaymentMethod,
+					com.tools20022.repository.msg.PaymentInstrument12.mmPaymentInstrument, com.tools20022.repository.msg.OriginalTransactionReference21.mmPaymentMethod,
+					com.tools20022.repository.msg.OriginalTransactionReference23.mmPaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference26.mmPaymentMethod);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditMethod";
 			definition = "Specifies the transfer method to be used for the credit.";
 			minOccurs = 1;
-			type_lazy = () -> CreditInstrument.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CreditInstrument.RelatedPayment;
+			opposite_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmRelatedPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmObject();
 		}
 	};
+	protected PaymentTypeCode type;
 	/**
 	 * Type, or nature, of the payment, eg, express payment.
 	 * <p>
@@ -1879,72 +1889,76 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode
 	 * PaymentTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentType2Choice#PaymentType
-	 * PaymentType2Choice.PaymentType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentType2Choice#ProprietaryPaymentType
-	 * PaymentType2Choice.ProprietaryPaymentType}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.PaymentType3Choice#Code
-	 * PaymentType3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentType3Choice#Proprietary
-	 * PaymentType3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction3#PaymentType
-	 * PaymentInstruction3.PaymentType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails2#PaymentType
-	 * PaymentDetails2.PaymentType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails4#PaymentType
-	 * PaymentDetails4.PaymentType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentInstruction2#Type
-	 * PaymentInstruction2.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails5#PaymentType
-	 * PaymentDetails5.PaymentType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails6#PaymentType
-	 * PaymentDetails6.PaymentType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails7#PaymentType
-	 * PaymentDetails7.PaymentType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentInstruction1#Type
-	 * PaymentInstruction1.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardAggregated1#TransactionCategory
-	 * CardAggregated1.TransactionCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardIndividualTransaction1#TransactionCategory
-	 * CardIndividualTransaction1.TransactionCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction13#PaymentType
-	 * PaymentInstruction13.PaymentType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentInstruction12#Type
-	 * PaymentInstruction12.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.PaymentType4Choice#Code
-	 * PaymentType4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentType4Choice#Proprietary
-	 * PaymentType4Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentInstruction14#Type
-	 * PaymentInstruction14.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardIndividualTransaction2#TransactionCategory
-	 * CardIndividualTransaction2.TransactionCategory}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#PaymentInstrument
-	 * FinancingAgreementItem1.PaymentInstrument}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentType2Choice#mmPaymentType
+	 * PaymentType2Choice.mmPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentType2Choice#mmProprietaryPaymentType
+	 * PaymentType2Choice.mmProprietaryPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentType3Choice#mmCode
+	 * PaymentType3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentType3Choice#mmProprietary
+	 * PaymentType3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction3#mmPaymentType
+	 * PaymentInstruction3.mmPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails2#mmPaymentType
+	 * PaymentDetails2.mmPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails4#mmPaymentType
+	 * PaymentDetails4.mmPaymentType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentInstruction2#mmType
+	 * PaymentInstruction2.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails5#mmPaymentType
+	 * PaymentDetails5.mmPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails6#mmPaymentType
+	 * PaymentDetails6.mmPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails7#mmPaymentType
+	 * PaymentDetails7.mmPaymentType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentInstruction1#mmType
+	 * PaymentInstruction1.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAggregated1#mmTransactionCategory
+	 * CardAggregated1.mmTransactionCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardIndividualTransaction1#mmTransactionCategory
+	 * CardIndividualTransaction1.mmTransactionCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction13#mmPaymentType
+	 * PaymentInstruction13.mmPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction12#mmType
+	 * PaymentInstruction12.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentType4Choice#mmCode
+	 * PaymentType4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentType4Choice#mmProprietary
+	 * PaymentType4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#mmType
+	 * PaymentInstruction14.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardIndividualTransaction2#mmTransactionCategory
+	 * CardIndividualTransaction2.mmTransactionCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmPaymentInstrument
+	 * FinancingAgreementItem1.mmPaymentInstrument}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1956,26 +1970,27 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Type, or nature, of the payment, eg, express payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Type = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentType2Choice.PaymentType, com.tools20022.repository.choice.PaymentType2Choice.ProprietaryPaymentType,
-					com.tools20022.repository.choice.PaymentType3Choice.Code, com.tools20022.repository.choice.PaymentType3Choice.Proprietary, com.tools20022.repository.msg.PaymentInstruction3.PaymentType,
-					com.tools20022.repository.msg.PaymentDetails2.PaymentType, com.tools20022.repository.msg.PaymentDetails4.PaymentType, com.tools20022.repository.msg.PaymentInstruction2.Type,
-					com.tools20022.repository.msg.PaymentDetails5.PaymentType, com.tools20022.repository.msg.PaymentDetails6.PaymentType, com.tools20022.repository.msg.PaymentDetails7.PaymentType,
-					com.tools20022.repository.msg.PaymentInstruction1.Type, com.tools20022.repository.msg.CardAggregated1.TransactionCategory, com.tools20022.repository.msg.CardIndividualTransaction1.TransactionCategory,
-					com.tools20022.repository.msg.PaymentInstruction13.PaymentType, com.tools20022.repository.msg.PaymentInstruction12.Type, com.tools20022.repository.choice.PaymentType4Choice.Code,
-					com.tools20022.repository.choice.PaymentType4Choice.Proprietary, com.tools20022.repository.msg.PaymentInstruction14.Type, com.tools20022.repository.msg.CardIndividualTransaction2.TransactionCategory,
-					com.tools20022.repository.msg.FinancingAgreementItem1.PaymentInstrument);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentType2Choice.mmPaymentType, com.tools20022.repository.choice.PaymentType2Choice.mmProprietaryPaymentType,
+					com.tools20022.repository.choice.PaymentType3Choice.mmCode, com.tools20022.repository.choice.PaymentType3Choice.mmProprietary, com.tools20022.repository.msg.PaymentInstruction3.mmPaymentType,
+					com.tools20022.repository.msg.PaymentDetails2.mmPaymentType, com.tools20022.repository.msg.PaymentDetails4.mmPaymentType, com.tools20022.repository.msg.PaymentInstruction2.mmType,
+					com.tools20022.repository.msg.PaymentDetails5.mmPaymentType, com.tools20022.repository.msg.PaymentDetails6.mmPaymentType, com.tools20022.repository.msg.PaymentDetails7.mmPaymentType,
+					com.tools20022.repository.msg.PaymentInstruction1.mmType, com.tools20022.repository.msg.CardAggregated1.mmTransactionCategory, com.tools20022.repository.msg.CardIndividualTransaction1.mmTransactionCategory,
+					com.tools20022.repository.msg.PaymentInstruction13.mmPaymentType, com.tools20022.repository.msg.PaymentInstruction12.mmType, com.tools20022.repository.choice.PaymentType4Choice.mmCode,
+					com.tools20022.repository.choice.PaymentType4Choice.mmProprietary, com.tools20022.repository.msg.PaymentInstruction14.mmType, com.tools20022.repository.msg.CardIndividualTransaction2.mmTransactionCategory,
+					com.tools20022.repository.msg.FinancingAgreementItem1.mmPaymentInstrument);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type, or nature, of the payment, eg, express payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentTypeCode.mmObject();
 		}
 	};
+	protected CurrencyAndAmount instructedAmount;
 	/**
 	 * Amount of money to be moved between the debtor and creditor, before
 	 * deduction of charges, expressed in the currency as ordered by the
@@ -1988,681 +2003,681 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentSearch2#InstructedAmount
-	 * PaymentSearch2.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentSearch3#InstructedAmount
-	 * PaymentSearch3.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentSearch4#InstructedAmount
-	 * PaymentSearch4.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails5#InstructedAmount
-	 * PaymentDetails5.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails6#InstructedAmount
-	 * PaymentDetails6.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails7#InstructedAmount
-	 * PaymentDetails7.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction1#InstructedAmount
-	 * PaymentInstruction1.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchange2#InstructedAmount
-	 * AmountAndCurrencyExchange2.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchange3#InstructedAmount
-	 * AmountAndCurrencyExchange3.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AmountType1Choice#InstructedAmount
-	 * AmountType1Choice.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AmountType2Choice#InstructedAmount
-	 * AmountType2Choice.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#Amount
-	 * CreditTransferTransactionInformation1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AmountType3Choice#InstructedAmount
-	 * AmountType3Choice.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#Amount
-	 * CreditTransferTransactionInformation10.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#Amount
-	 * CreditTransferTransaction1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#Amount
-	 * CreditTransferTransaction6.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#InstructedAmount
-	 * DirectDebitTransactionInformation1.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#InstructedAmount
-	 * DirectDebitTransactionInformation9.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#InstructedAmount
-	 * DirectDebitTransactionInformation11.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#InstructedAmount
-	 * DirectDebitTransactionInformation13.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference1#Amount
-	 * OriginalTransactionReference1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation3#OriginalInstructedAmount
-	 * PaymentTransactionInformation3.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference13#Amount
-	 * OriginalTransactionReference13.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation30#OriginalInstructedAmount
-	 * PaymentTransactionInformation30.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference16#Amount
-	 * OriginalTransactionReference16.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction37#OriginalInstructedAmount
-	 * PaymentTransaction37.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction47#OriginalInstructedAmount
-	 * PaymentTransaction47.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation4#OriginalInstructedAmount
-	 * PaymentTransactionInformation4.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation4#ReversedInstructedAmount
-	 * PaymentTransactionInformation4.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#OriginalInstructedAmount
-	 * PaymentTransactionInformation28.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#ReversedInstructedAmount
-	 * PaymentTransactionInformation28.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction35#OriginalInstructedAmount
-	 * PaymentTransaction35.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction35#ReversedInstructedAmount
-	 * PaymentTransaction35.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction42#OriginalInstructedAmount
-	 * PaymentTransaction42.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction42#ReversedInstructedAmount
-	 * PaymentTransaction42.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#InstructedAmount
-	 * CreditTransferTransactionInformation2.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#InstructedAmount
-	 * CreditTransferTransactionInformation11.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#InstructedAmount
-	 * CreditTransferTransaction2.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#InstructedAmount
-	 * CreditTransferTransaction7.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#InstructedAmount
-	 * DirectDebitTransactionInformation2.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#InstructedAmount
-	 * DirectDebitTransactionInformation10.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#InstructedAmount
-	 * DirectDebitTransactionInformation12.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#InstructedAmount
-	 * DirectDebitTransactionInformation14.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation5#ReversedInstructedAmount
-	 * PaymentTransactionInformation5.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation29#ReversedInstructedAmount
-	 * PaymentTransactionInformation29.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction36#ReversedInstructedAmount
-	 * PaymentTransaction36.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction45#ReversedInstructedAmount
-	 * PaymentTransaction45.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation12#InstructedAmount
-	 * CreditTransferTransactionInformation12.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction3#InstructedAmount
-	 * CreditTransferTransaction3.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#ReturnedInstructedAmount
-	 * PaymentTransactionInformation2.ReturnedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#ReturnedInstructedAmount
-	 * PaymentTransactionInformation27.ReturnedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction34#ReturnedInstructedAmount
-	 * PaymentTransaction34.ReturnedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction44#ReturnedInstructedAmount
-	 * PaymentTransaction44.ReturnedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference15#Amount
-	 * OriginalTransactionReference15.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference17#Amount
-	 * OriginalTransactionReference17.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation14#Amount
-	 * CreditTransferTransactionInformation14.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction5#Amount
-	 * CreditTransferTransaction5.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction10#Amount
-	 * CreditTransferTransaction10.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails4#TotalAmount
-	 * CardPaymentTransactionDetails4.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails7#TotalAmount
-	 * CardPaymentTransactionDetails7.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails9#TotalAmount
-	 * CardPaymentTransactionDetails9.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails1#TotalAmount
-	 * CardPaymentTransactionDetails1.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails10#TotalAmount
-	 * CardPaymentTransactionDetails10.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails2#TotalAmount
-	 * CardPaymentTransactionDetails2.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails11#TotalAmount
-	 * CardPaymentTransactionDetails11.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails5#TotalAmount
-	 * CardPaymentTransactionDetails5.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails6#TotalAmount
-	 * CardPaymentTransactionDetails6.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails3#TotalAmount
-	 * CardPaymentTransactionDetails3.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData1#SettlementAmount
-	 * FundOrderData1.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData2#SettlementAmount
-	 * FundOrderData2.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction18#SettlementAmount
-	 * PaymentTransaction18.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction15#SettlementAmount
-	 * PaymentTransaction15.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3#TotalSettlementAmount
-	 * RedemptionBulkOrder3.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#SettlementAmount
-	 * RedemptionExecution5.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3#TotalSettlementAmount
-	 * RedemptionBulkExecution3.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4#TotalSettlementAmount
-	 * RedemptionBulkOrder4.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#TotalSettlementAmount
-	 * RedemptionMultipleOrder3.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#SettlementAmount
-	 * RedemptionExecution6.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3#TotalSettlementAmount
-	 * RedemptionMultipleExecution3.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4#TotalSettlementAmount
-	 * RedemptionMultipleOrder4.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction2#GrossSettlementAmount
-	 * InvestmentFundTransaction2.GrossSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction17#SettlementAmount
-	 * PaymentTransaction17.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction19#SettlementAmount
-	 * PaymentTransaction19.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3#TotalSettlementAmount
-	 * SubscriptionBulkOrder3.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction16#SettlementAmount
-	 * PaymentTransaction16.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction13#SettlementAmount
-	 * PaymentTransaction13.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3#TotalSettlementAmount
-	 * SubscriptionBulkExecution3.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4#TotalSettlementAmount
-	 * SubscriptionBulkOrder4.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3#TotalSettlementAmount
-	 * SubscriptionMultipleOrder3.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3#TotalSettlementAmount
-	 * SubscriptionMultipleExecution3.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4#TotalSettlementAmount
-	 * SubscriptionMultipleOrder4.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction20#SettlementAmount
-	 * PaymentTransaction20.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction14#SettlementAmount
-	 * PaymentTransaction14.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#CurrencyAmount
-	 * PaymentInstructionExtract.CurrencyAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract2#InstructedAmount
-	 * PaymentInstructionExtract2.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation#Amount
-	 * PaymentComplementaryInformation.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#InstructedAmount
-	 * CorrectivePaymentInstructionExtract.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction1#OriginalInstructedAmount
-	 * UnderlyingPaymentInstruction1.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#Amount
-	 * RequestedModification2.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation2#Amount
-	 * PaymentComplementaryInformation2.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation32#OriginalInstructedAmount
-	 * PaymentTransactionInformation32.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation1#InstructedAmount
-	 * CorrectivePaymentInitiation1.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData1#SettlementAmount
-	 * SettlementData1.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData2#SettlementAmount
-	 * SettlementData2.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData2#SettledAmount
-	 * SettlementData2.SettledAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstalmentFinancingInformation1#InstalmentTotalAmount
-	 * InstalmentFinancingInformation1.InstalmentTotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction2#OriginalInstructedAmount
-	 * UnderlyingPaymentInstruction2.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation3#Amount
-	 * PaymentComplementaryInformation3.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#OriginalInstructedAmount
-	 * PaymentTransaction39.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#Amount
-	 * RequestedModification3.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OriginalItem3#Amount
-	 * OriginalItem3.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference9#Amount
-	 * OriginalTransactionReference9.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference12#Amount
-	 * OriginalTransactionReference12.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference11#Amount
-	 * OriginalTransactionReference11.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#ReturnedInstructedAmount
-	 * PaymentTransactionInformation16.ReturnedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#ReturnedInstructedAmount
-	 * PaymentTransactionInformation23.ReturnedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation17#ReversedInstructedAmount
-	 * PaymentTransactionInformation17.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation24#ReversedInstructedAmount
-	 * PaymentTransactionInformation24.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#ReturnedInstructedAmount
-	 * PaymentTransactionInformation21.ReturnedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#InstructedAmount
-	 * CreditTransferTransactionInformation7.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#InstructedAmount
-	 * CreditTransferTransactionInformation9.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#InstructedAmount
-	 * DirectDebitTransactionInformation6.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#InstructedAmount
-	 * DirectDebitTransactionInformation8.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution12#SettlementAmount
-	 * RedemptionExecution12.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentSearch5#InstructedAmount
-	 * PaymentSearch5.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#InstructedAmount
-	 * PaymentInstruction14.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails12#TotalAmount
-	 * CardPaymentTransactionDetails12.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails13#TotalAmount
-	 * CardPaymentTransactionDetails13.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails18#TotalAmount
-	 * CardPaymentTransactionDetails18.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails16#TotalAmount
-	 * CardPaymentTransactionDetails16.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails14#TotalAmount
-	 * CardPaymentTransactionDetails14.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails15#TotalAmount
-	 * CardPaymentTransactionDetails15.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails17#TotalAmount
-	 * CardPaymentTransactionDetails17.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation4#Amount
-	 * PaymentComplementaryInformation4.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction50#ReturnedInstructedAmount
-	 * PaymentTransaction50.ReturnedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#InstructedAmount
-	 * CreditTransferTransaction19.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#InstructedAmount
-	 * DirectDebitTransactionInformation17.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction51#ReversedInstructedAmount
-	 * PaymentTransaction51.ReversedInstructedAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OriginalItem4#Amount
-	 * OriginalItem4.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#Amount
-	 * RequestedModification4.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction58#OriginalInstructedAmount
-	 * PaymentTransaction58.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#OriginalInstructedAmount
-	 * PaymentTransaction54.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference20#Amount
-	 * OriginalTransactionReference20.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction18#InstructedAmount
-	 * CreditTransferTransaction18.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction56#OriginalInstructedAmount
-	 * PaymentTransaction56.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction56#ReversedInstructedAmount
-	 * PaymentTransaction56.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#InstructedAmount
-	 * DirectDebitTransactionInformation18.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#Amount
-	 * CreditTransferTransaction20.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AmountType4Choice#InstructedAmount
-	 * AmountType4Choice.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction21#Amount
-	 * CreditTransferTransaction21.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails20#TotalAmount
-	 * CardPaymentTransactionDetails20.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails25#TotalAmount
-	 * CardPaymentTransactionDetails25.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#TotalAmount
-	 * CardPaymentTransactionDetails23.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails21#TotalAmount
-	 * CardPaymentTransactionDetails21.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails26#TotalAmount
-	 * CardPaymentTransactionDetails26.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails19#TotalAmount
-	 * CardPaymentTransactionDetails19.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails24#TotalAmount
-	 * CardPaymentTransactionDetails24.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails22#TotalAmount
-	 * CardPaymentTransactionDetails22.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail5#TransactionAmounts
-	 * CardTransactionDetail5.TransactionAmounts}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail1#TransactionAmounts
-	 * CardTransactionDetail1.TransactionAmounts}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail6#TransactionAmounts
-	 * CardTransactionDetail6.TransactionAmounts}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#TransactionAmounts
-	 * CardTransactionDetail3.TransactionAmounts}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SpecialCondition1#IncomingAmount
-	 * SpecialCondition1.IncomingAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SpecialCondition1#OutgoingAmount
-	 * SpecialCondition1.OutgoingAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SpecialCondition1#IncomingAmountToOtherAccount
-	 * SpecialCondition1.IncomingAmountToOtherAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SpecialCondition1#PaymentFromOtherAccount
-	 * SpecialCondition1.PaymentFromOtherAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#Amount
-	 * RequestedModification5.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#InstructedAmount
-	 * CreditTransferTransaction25.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction65#ReturnedInstructedAmount
-	 * PaymentTransaction65.ReturnedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation5#Amount
-	 * PaymentComplementaryInformation5.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#InstructedAmount
-	 * DirectDebitTransactionInformation20.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction60#ReversedInstructedAmount
-	 * PaymentTransaction60.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction61#OriginalInstructedAmount
-	 * PaymentTransaction61.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference22#Amount
-	 * OriginalTransactionReference22.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction24#InstructedAmount
-	 * CreditTransferTransaction24.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#Amount
-	 * CreditTransferTransaction26.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OriginalItem5#Amount
-	 * OriginalItem5.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#InstructedAmount
-	 * DirectDebitTransactionInformation19.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#OriginalInstructedAmount
-	 * PaymentTransaction66.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#Amount
-	 * CreditTransferTransaction22.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction64#OriginalInstructedAmount
-	 * PaymentTransaction64.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction64#ReversedInstructedAmount
-	 * PaymentTransaction64.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails32#TotalAmount
-	 * CardPaymentTransactionDetails32.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails33#TotalAmount
-	 * CardPaymentTransactionDetails33.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails28#TotalAmount
-	 * CardPaymentTransactionDetails28.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails29#TotalAmount
-	 * CardPaymentTransactionDetails29.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#TotalAmount
-	 * CardPaymentTransactionDetails30.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails27#TotalAmount
-	 * CardPaymentTransactionDetails27.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails31#TotalAmount
-	 * CardPaymentTransactionDetails31.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails35#TotalAmount
-	 * CardPaymentTransactionDetails35.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails34#TotalAmount
-	 * CardPaymentTransactionDetails34.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5#TotalSettlementAmount
-	 * SubscriptionBulkOrder5.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5#TotalSettlementAmount
-	 * RedemptionBulkExecution5.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5#TotalSettlementAmount
-	 * RedemptionMultipleExecution5.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6#TotalSettlementAmount
-	 * RedemptionMultipleOrder6.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6#TotalSettlementAmount
-	 * SubscriptionMultipleOrder6.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution4#TotalSettlementAmount
-	 * SubscriptionBulkExecution4.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder6#TotalSettlementAmount
-	 * RedemptionBulkOrder6.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution5#TotalSettlementAmount
-	 * SubscriptionMultipleExecution5.TotalSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData5#SettlementAmount
-	 * FundOrderData5.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#SettlementAmount
-	 * RedemptionExecution16.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData6#SettlementAmount
-	 * FundOrderData6.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#SettlementAmount
-	 * RedemptionExecution15.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#InstructedAmount
-	 * DirectDebitTransactionInformation21.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction81#ReversedInstructedAmount
-	 * PaymentTransaction81.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#Amount
-	 * RequestedModification6.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#ReturnedInstructedAmount
-	 * PaymentTransaction76.ReturnedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#OriginalInstructedAmount
-	 * PaymentTransaction78.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference24#Amount
-	 * OriginalTransactionReference24.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction74#OriginalInstructedAmount
-	 * PaymentTransaction74.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction77#OriginalInstructedAmount
-	 * PaymentTransaction77.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction77#ReversedInstructedAmount
-	 * PaymentTransaction77.ReversedInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#InstructedAmount
-	 * DirectDebitTransactionInformation22.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation2#InstructedAmount
-	 * CorrectivePaymentInitiation2.InstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction3#OriginalInstructedAmount
-	 * UnderlyingPaymentInstruction3.OriginalInstructedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#Amount
-	 * PaymentComplementaryInformation6.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails39#TotalAmount
-	 * CardPaymentTransactionDetails39.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#TotalAmount
-	 * CardPaymentTransactionDetails38.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails41#TotalAmount
-	 * CardPaymentTransactionDetails41.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37#TotalAmount
-	 * CardPaymentTransactionDetails37.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails40#TotalAmount
-	 * CardPaymentTransactionDetails40.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails42#TotalAmount
-	 * CardPaymentTransactionDetails42.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails43#TotalAmount
-	 * CardPaymentTransactionDetails43.TotalAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch2#mmInstructedAmount
+	 * PaymentSearch2.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch3#mmInstructedAmount
+	 * PaymentSearch3.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch4#mmInstructedAmount
+	 * PaymentSearch4.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails5#mmInstructedAmount
+	 * PaymentDetails5.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails6#mmInstructedAmount
+	 * PaymentDetails6.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails7#mmInstructedAmount
+	 * PaymentDetails7.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction1#mmInstructedAmount
+	 * PaymentInstruction1.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchange2#mmInstructedAmount
+	 * AmountAndCurrencyExchange2.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchange3#mmInstructedAmount
+	 * AmountAndCurrencyExchange3.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AmountType1Choice#mmInstructedAmount
+	 * AmountType1Choice.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AmountType2Choice#mmInstructedAmount
+	 * AmountType2Choice.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#mmAmount
+	 * CreditTransferTransactionInformation1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AmountType3Choice#mmInstructedAmount
+	 * AmountType3Choice.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#mmAmount
+	 * CreditTransferTransactionInformation10.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#mmAmount
+	 * CreditTransferTransaction1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#mmAmount
+	 * CreditTransferTransaction6.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#mmInstructedAmount
+	 * DirectDebitTransactionInformation1.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#mmInstructedAmount
+	 * DirectDebitTransactionInformation9.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmInstructedAmount
+	 * DirectDebitTransactionInformation11.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#mmInstructedAmount
+	 * DirectDebitTransactionInformation13.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference1#mmAmount
+	 * OriginalTransactionReference1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation3#mmOriginalInstructedAmount
+	 * PaymentTransactionInformation3.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference13#mmAmount
+	 * OriginalTransactionReference13.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation30#mmOriginalInstructedAmount
+	 * PaymentTransactionInformation30.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference16#mmAmount
+	 * OriginalTransactionReference16.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction37#mmOriginalInstructedAmount
+	 * PaymentTransaction37.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction47#mmOriginalInstructedAmount
+	 * PaymentTransaction47.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation4#mmOriginalInstructedAmount
+	 * PaymentTransactionInformation4.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation4#mmReversedInstructedAmount
+	 * PaymentTransactionInformation4.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmOriginalInstructedAmount
+	 * PaymentTransactionInformation28.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmReversedInstructedAmount
+	 * PaymentTransactionInformation28.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction35#mmOriginalInstructedAmount
+	 * PaymentTransaction35.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction35#mmReversedInstructedAmount
+	 * PaymentTransaction35.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction42#mmOriginalInstructedAmount
+	 * PaymentTransaction42.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction42#mmReversedInstructedAmount
+	 * PaymentTransaction42.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#mmInstructedAmount
+	 * CreditTransferTransactionInformation2.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#mmInstructedAmount
+	 * CreditTransferTransactionInformation11.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#mmInstructedAmount
+	 * CreditTransferTransaction2.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#mmInstructedAmount
+	 * CreditTransferTransaction7.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#mmInstructedAmount
+	 * DirectDebitTransactionInformation2.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#mmInstructedAmount
+	 * DirectDebitTransactionInformation10.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#mmInstructedAmount
+	 * DirectDebitTransactionInformation12.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#mmInstructedAmount
+	 * DirectDebitTransactionInformation14.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation5#mmReversedInstructedAmount
+	 * PaymentTransactionInformation5.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation29#mmReversedInstructedAmount
+	 * PaymentTransactionInformation29.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction36#mmReversedInstructedAmount
+	 * PaymentTransaction36.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction45#mmReversedInstructedAmount
+	 * PaymentTransaction45.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation12#mmInstructedAmount
+	 * CreditTransferTransactionInformation12.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction3#mmInstructedAmount
+	 * CreditTransferTransaction3.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#mmReturnedInstructedAmount
+	 * PaymentTransactionInformation2.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#mmReturnedInstructedAmount
+	 * PaymentTransactionInformation27.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction34#mmReturnedInstructedAmount
+	 * PaymentTransaction34.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction44#mmReturnedInstructedAmount
+	 * PaymentTransaction44.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference15#mmAmount
+	 * OriginalTransactionReference15.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference17#mmAmount
+	 * OriginalTransactionReference17.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation14#mmAmount
+	 * CreditTransferTransactionInformation14.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction5#mmAmount
+	 * CreditTransferTransaction5.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction10#mmAmount
+	 * CreditTransferTransaction10.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails4#mmTotalAmount
+	 * CardPaymentTransactionDetails4.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails7#mmTotalAmount
+	 * CardPaymentTransactionDetails7.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails9#mmTotalAmount
+	 * CardPaymentTransactionDetails9.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails1#mmTotalAmount
+	 * CardPaymentTransactionDetails1.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails10#mmTotalAmount
+	 * CardPaymentTransactionDetails10.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails2#mmTotalAmount
+	 * CardPaymentTransactionDetails2.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails11#mmTotalAmount
+	 * CardPaymentTransactionDetails11.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails5#mmTotalAmount
+	 * CardPaymentTransactionDetails5.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails6#mmTotalAmount
+	 * CardPaymentTransactionDetails6.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails3#mmTotalAmount
+	 * CardPaymentTransactionDetails3.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData1#mmSettlementAmount
+	 * FundOrderData1.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData2#mmSettlementAmount
+	 * FundOrderData2.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction18#mmSettlementAmount
+	 * PaymentTransaction18.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction15#mmSettlementAmount
+	 * PaymentTransaction15.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3#mmTotalSettlementAmount
+	 * RedemptionBulkOrder3.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#mmSettlementAmount
+	 * RedemptionExecution5.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3#mmTotalSettlementAmount
+	 * RedemptionBulkExecution3.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4#mmTotalSettlementAmount
+	 * RedemptionBulkOrder4.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#mmTotalSettlementAmount
+	 * RedemptionMultipleOrder3.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#mmSettlementAmount
+	 * RedemptionExecution6.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3#mmTotalSettlementAmount
+	 * RedemptionMultipleExecution3.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4#mmTotalSettlementAmount
+	 * RedemptionMultipleOrder4.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction2#mmGrossSettlementAmount
+	 * InvestmentFundTransaction2.mmGrossSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction17#mmSettlementAmount
+	 * PaymentTransaction17.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction19#mmSettlementAmount
+	 * PaymentTransaction19.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3#mmTotalSettlementAmount
+	 * SubscriptionBulkOrder3.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction16#mmSettlementAmount
+	 * PaymentTransaction16.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction13#mmSettlementAmount
+	 * PaymentTransaction13.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3#mmTotalSettlementAmount
+	 * SubscriptionBulkExecution3.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4#mmTotalSettlementAmount
+	 * SubscriptionBulkOrder4.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3#mmTotalSettlementAmount
+	 * SubscriptionMultipleOrder3.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3#mmTotalSettlementAmount
+	 * SubscriptionMultipleExecution3.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4#mmTotalSettlementAmount
+	 * SubscriptionMultipleOrder4.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction20#mmSettlementAmount
+	 * PaymentTransaction20.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction14#mmSettlementAmount
+	 * PaymentTransaction14.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#mmCurrencyAmount
+	 * PaymentInstructionExtract.mmCurrencyAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract2#mmInstructedAmount
+	 * PaymentInstructionExtract2.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation#mmAmount
+	 * PaymentComplementaryInformation.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmInstructedAmount
+	 * CorrectivePaymentInstructionExtract.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction1#mmOriginalInstructedAmount
+	 * UnderlyingPaymentInstruction1.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#mmAmount
+	 * RequestedModification2.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation2#mmAmount
+	 * PaymentComplementaryInformation2.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation32#mmOriginalInstructedAmount
+	 * PaymentTransactionInformation32.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation1#mmInstructedAmount
+	 * CorrectivePaymentInitiation1.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettlementAmount
+	 * SettlementData1.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData2#mmSettlementAmount
+	 * SettlementData2.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData2#mmSettledAmount
+	 * SettlementData2.mmSettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstalmentFinancingInformation1#mmInstalmentTotalAmount
+	 * InstalmentFinancingInformation1.mmInstalmentTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction2#mmOriginalInstructedAmount
+	 * UnderlyingPaymentInstruction2.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation3#mmAmount
+	 * PaymentComplementaryInformation3.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#mmOriginalInstructedAmount
+	 * PaymentTransaction39.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmAmount
+	 * RequestedModification3.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OriginalItem3#mmAmount
+	 * OriginalItem3.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference9#mmAmount
+	 * OriginalTransactionReference9.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference12#mmAmount
+	 * OriginalTransactionReference12.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference11#mmAmount
+	 * OriginalTransactionReference11.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#mmReturnedInstructedAmount
+	 * PaymentTransactionInformation16.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#mmReturnedInstructedAmount
+	 * PaymentTransactionInformation23.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation17#mmReversedInstructedAmount
+	 * PaymentTransactionInformation17.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation24#mmReversedInstructedAmount
+	 * PaymentTransactionInformation24.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#mmReturnedInstructedAmount
+	 * PaymentTransactionInformation21.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#mmInstructedAmount
+	 * CreditTransferTransactionInformation7.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#mmInstructedAmount
+	 * CreditTransferTransactionInformation9.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#mmInstructedAmount
+	 * DirectDebitTransactionInformation6.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#mmInstructedAmount
+	 * DirectDebitTransactionInformation8.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution12#mmSettlementAmount
+	 * RedemptionExecution12.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch5#mmInstructedAmount
+	 * PaymentSearch5.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#mmInstructedAmount
+	 * PaymentInstruction14.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails12#mmTotalAmount
+	 * CardPaymentTransactionDetails12.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails13#mmTotalAmount
+	 * CardPaymentTransactionDetails13.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails18#mmTotalAmount
+	 * CardPaymentTransactionDetails18.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails16#mmTotalAmount
+	 * CardPaymentTransactionDetails16.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails14#mmTotalAmount
+	 * CardPaymentTransactionDetails14.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails15#mmTotalAmount
+	 * CardPaymentTransactionDetails15.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails17#mmTotalAmount
+	 * CardPaymentTransactionDetails17.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation4#mmAmount
+	 * PaymentComplementaryInformation4.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction50#mmReturnedInstructedAmount
+	 * PaymentTransaction50.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#mmInstructedAmount
+	 * CreditTransferTransaction19.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#mmInstructedAmount
+	 * DirectDebitTransactionInformation17.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction51#mmReversedInstructedAmount
+	 * PaymentTransaction51.mmReversedInstructedAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OriginalItem4#mmAmount
+	 * OriginalItem4.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmAmount
+	 * RequestedModification4.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction58#mmOriginalInstructedAmount
+	 * PaymentTransaction58.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#mmOriginalInstructedAmount
+	 * PaymentTransaction54.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference20#mmAmount
+	 * OriginalTransactionReference20.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction18#mmInstructedAmount
+	 * CreditTransferTransaction18.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction56#mmOriginalInstructedAmount
+	 * PaymentTransaction56.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction56#mmReversedInstructedAmount
+	 * PaymentTransaction56.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#mmInstructedAmount
+	 * DirectDebitTransactionInformation18.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#mmAmount
+	 * CreditTransferTransaction20.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AmountType4Choice#mmInstructedAmount
+	 * AmountType4Choice.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction21#mmAmount
+	 * CreditTransferTransaction21.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails20#mmTotalAmount
+	 * CardPaymentTransactionDetails20.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails25#mmTotalAmount
+	 * CardPaymentTransactionDetails25.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmTotalAmount
+	 * CardPaymentTransactionDetails23.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails21#mmTotalAmount
+	 * CardPaymentTransactionDetails21.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails26#mmTotalAmount
+	 * CardPaymentTransactionDetails26.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails19#mmTotalAmount
+	 * CardPaymentTransactionDetails19.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails24#mmTotalAmount
+	 * CardPaymentTransactionDetails24.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails22#mmTotalAmount
+	 * CardPaymentTransactionDetails22.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail5#mmTransactionAmounts
+	 * CardTransactionDetail5.mmTransactionAmounts}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail1#mmTransactionAmounts
+	 * CardTransactionDetail1.mmTransactionAmounts}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail6#mmTransactionAmounts
+	 * CardTransactionDetail6.mmTransactionAmounts}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#mmTransactionAmounts
+	 * CardTransactionDetail3.mmTransactionAmounts}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SpecialCondition1#mmIncomingAmount
+	 * SpecialCondition1.mmIncomingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SpecialCondition1#mmOutgoingAmount
+	 * SpecialCondition1.mmOutgoingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SpecialCondition1#mmIncomingAmountToOtherAccount
+	 * SpecialCondition1.mmIncomingAmountToOtherAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SpecialCondition1#mmPaymentFromOtherAccount
+	 * SpecialCondition1.mmPaymentFromOtherAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmAmount
+	 * RequestedModification5.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#mmInstructedAmount
+	 * CreditTransferTransaction25.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction65#mmReturnedInstructedAmount
+	 * PaymentTransaction65.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation5#mmAmount
+	 * PaymentComplementaryInformation5.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#mmInstructedAmount
+	 * DirectDebitTransactionInformation20.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction60#mmReversedInstructedAmount
+	 * PaymentTransaction60.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction61#mmOriginalInstructedAmount
+	 * PaymentTransaction61.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference22#mmAmount
+	 * OriginalTransactionReference22.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction24#mmInstructedAmount
+	 * CreditTransferTransaction24.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#mmAmount
+	 * CreditTransferTransaction26.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OriginalItem5#mmAmount
+	 * OriginalItem5.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#mmInstructedAmount
+	 * DirectDebitTransactionInformation19.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#mmOriginalInstructedAmount
+	 * PaymentTransaction66.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#mmAmount
+	 * CreditTransferTransaction22.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction64#mmOriginalInstructedAmount
+	 * PaymentTransaction64.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction64#mmReversedInstructedAmount
+	 * PaymentTransaction64.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails32#mmTotalAmount
+	 * CardPaymentTransactionDetails32.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails33#mmTotalAmount
+	 * CardPaymentTransactionDetails33.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails28#mmTotalAmount
+	 * CardPaymentTransactionDetails28.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails29#mmTotalAmount
+	 * CardPaymentTransactionDetails29.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmTotalAmount
+	 * CardPaymentTransactionDetails30.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails27#mmTotalAmount
+	 * CardPaymentTransactionDetails27.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails31#mmTotalAmount
+	 * CardPaymentTransactionDetails31.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails35#mmTotalAmount
+	 * CardPaymentTransactionDetails35.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails34#mmTotalAmount
+	 * CardPaymentTransactionDetails34.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5#mmTotalSettlementAmount
+	 * SubscriptionBulkOrder5.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5#mmTotalSettlementAmount
+	 * RedemptionBulkExecution5.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5#mmTotalSettlementAmount
+	 * RedemptionMultipleExecution5.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6#mmTotalSettlementAmount
+	 * RedemptionMultipleOrder6.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6#mmTotalSettlementAmount
+	 * SubscriptionMultipleOrder6.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution4#mmTotalSettlementAmount
+	 * SubscriptionBulkExecution4.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder6#mmTotalSettlementAmount
+	 * RedemptionBulkOrder6.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution5#mmTotalSettlementAmount
+	 * SubscriptionMultipleExecution5.mmTotalSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData5#mmSettlementAmount
+	 * FundOrderData5.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#mmSettlementAmount
+	 * RedemptionExecution16.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData6#mmSettlementAmount
+	 * FundOrderData6.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmSettlementAmount
+	 * RedemptionExecution15.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#mmInstructedAmount
+	 * DirectDebitTransactionInformation21.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction81#mmReversedInstructedAmount
+	 * PaymentTransaction81.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmAmount
+	 * RequestedModification6.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#mmReturnedInstructedAmount
+	 * PaymentTransaction76.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#mmOriginalInstructedAmount
+	 * PaymentTransaction78.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference24#mmAmount
+	 * OriginalTransactionReference24.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction74#mmOriginalInstructedAmount
+	 * PaymentTransaction74.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction77#mmOriginalInstructedAmount
+	 * PaymentTransaction77.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction77#mmReversedInstructedAmount
+	 * PaymentTransaction77.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#mmInstructedAmount
+	 * DirectDebitTransactionInformation22.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation2#mmInstructedAmount
+	 * CorrectivePaymentInitiation2.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction3#mmOriginalInstructedAmount
+	 * UnderlyingPaymentInstruction3.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmAmount
+	 * PaymentComplementaryInformation6.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails39#mmTotalAmount
+	 * CardPaymentTransactionDetails39.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmTotalAmount
+	 * CardPaymentTransactionDetails38.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails41#mmTotalAmount
+	 * CardPaymentTransactionDetails41.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37#mmTotalAmount
+	 * CardPaymentTransactionDetails37.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails40#mmTotalAmount
+	 * CardPaymentTransactionDetails40.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails42#mmTotalAmount
+	 * CardPaymentTransactionDetails42.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails43#mmTotalAmount
+	 * CardPaymentTransactionDetails43.mmTotalAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2676,114 +2691,121 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InstructedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInstructedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentSearch2.InstructedAmount, com.tools20022.repository.msg.PaymentSearch3.InstructedAmount, com.tools20022.repository.msg.PaymentSearch4.InstructedAmount,
-					com.tools20022.repository.msg.PaymentDetails5.InstructedAmount, com.tools20022.repository.msg.PaymentDetails6.InstructedAmount, com.tools20022.repository.msg.PaymentDetails7.InstructedAmount,
-					com.tools20022.repository.msg.PaymentInstruction1.InstructedAmount, com.tools20022.repository.msg.AmountAndCurrencyExchange2.InstructedAmount, com.tools20022.repository.msg.AmountAndCurrencyExchange3.InstructedAmount,
-					com.tools20022.repository.choice.AmountType1Choice.InstructedAmount, com.tools20022.repository.choice.AmountType2Choice.InstructedAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation1.Amount,
-					com.tools20022.repository.choice.AmountType3Choice.InstructedAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation10.Amount, com.tools20022.repository.msg.CreditTransferTransaction1.Amount,
-					com.tools20022.repository.msg.CreditTransferTransaction6.Amount, com.tools20022.repository.msg.DirectDebitTransactionInformation1.InstructedAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation9.InstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation11.InstructedAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation13.InstructedAmount, com.tools20022.repository.msg.OriginalTransactionReference1.Amount,
-					com.tools20022.repository.msg.PaymentTransactionInformation3.OriginalInstructedAmount, com.tools20022.repository.msg.OriginalTransactionReference13.Amount,
-					com.tools20022.repository.msg.PaymentTransactionInformation30.OriginalInstructedAmount, com.tools20022.repository.msg.OriginalTransactionReference16.Amount,
-					com.tools20022.repository.msg.PaymentTransaction37.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransaction47.OriginalInstructedAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation4.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation4.ReversedInstructedAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation28.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation28.ReversedInstructedAmount,
-					com.tools20022.repository.msg.PaymentTransaction35.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransaction35.ReversedInstructedAmount,
-					com.tools20022.repository.msg.PaymentTransaction42.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransaction42.ReversedInstructedAmount,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation2.InstructedAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation11.InstructedAmount,
-					com.tools20022.repository.msg.CreditTransferTransaction2.InstructedAmount, com.tools20022.repository.msg.CreditTransferTransaction7.InstructedAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation2.InstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation10.InstructedAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation12.InstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation14.InstructedAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation5.ReversedInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation29.ReversedInstructedAmount,
-					com.tools20022.repository.msg.PaymentTransaction36.ReversedInstructedAmount, com.tools20022.repository.msg.PaymentTransaction45.ReversedInstructedAmount,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation12.InstructedAmount, com.tools20022.repository.msg.CreditTransferTransaction3.InstructedAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation2.ReturnedInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation27.ReturnedInstructedAmount,
-					com.tools20022.repository.msg.PaymentTransaction34.ReturnedInstructedAmount, com.tools20022.repository.msg.PaymentTransaction44.ReturnedInstructedAmount,
-					com.tools20022.repository.msg.OriginalTransactionReference15.Amount, com.tools20022.repository.msg.OriginalTransactionReference17.Amount, com.tools20022.repository.msg.CreditTransferTransactionInformation14.Amount,
-					com.tools20022.repository.msg.CreditTransferTransaction5.Amount, com.tools20022.repository.msg.CreditTransferTransaction10.Amount, com.tools20022.repository.msg.CardPaymentTransactionDetails4.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails7.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails9.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails1.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails10.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails2.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails11.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails5.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails6.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails3.TotalAmount, com.tools20022.repository.msg.FundOrderData1.SettlementAmount, com.tools20022.repository.msg.FundOrderData2.SettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction18.SettlementAmount, com.tools20022.repository.msg.PaymentTransaction15.SettlementAmount, com.tools20022.repository.msg.RedemptionBulkOrder3.TotalSettlementAmount,
-					com.tools20022.repository.msg.RedemptionExecution5.SettlementAmount, com.tools20022.repository.msg.RedemptionBulkExecution3.TotalSettlementAmount,
-					com.tools20022.repository.msg.RedemptionBulkOrder4.TotalSettlementAmount, com.tools20022.repository.msg.RedemptionMultipleOrder3.TotalSettlementAmount,
-					com.tools20022.repository.msg.RedemptionExecution6.SettlementAmount, com.tools20022.repository.msg.RedemptionMultipleExecution3.TotalSettlementAmount,
-					com.tools20022.repository.msg.RedemptionMultipleOrder4.TotalSettlementAmount, com.tools20022.repository.msg.InvestmentFundTransaction2.GrossSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction17.SettlementAmount, com.tools20022.repository.msg.PaymentTransaction19.SettlementAmount, com.tools20022.repository.msg.SubscriptionBulkOrder3.TotalSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction16.SettlementAmount, com.tools20022.repository.msg.PaymentTransaction13.SettlementAmount, com.tools20022.repository.msg.SubscriptionBulkExecution3.TotalSettlementAmount,
-					com.tools20022.repository.msg.SubscriptionBulkOrder4.TotalSettlementAmount, com.tools20022.repository.msg.SubscriptionMultipleOrder3.TotalSettlementAmount,
-					com.tools20022.repository.msg.SubscriptionMultipleExecution3.TotalSettlementAmount, com.tools20022.repository.msg.SubscriptionMultipleOrder4.TotalSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction20.SettlementAmount, com.tools20022.repository.msg.PaymentTransaction14.SettlementAmount, com.tools20022.repository.msg.PaymentInstructionExtract.CurrencyAmount,
-					com.tools20022.repository.msg.PaymentInstructionExtract2.InstructedAmount, com.tools20022.repository.msg.PaymentComplementaryInformation.Amount,
-					com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.InstructedAmount, com.tools20022.repository.msg.UnderlyingPaymentInstruction1.OriginalInstructedAmount,
-					com.tools20022.repository.msg.RequestedModification2.Amount, com.tools20022.repository.msg.PaymentComplementaryInformation2.Amount, com.tools20022.repository.msg.PaymentTransactionInformation32.OriginalInstructedAmount,
-					com.tools20022.repository.msg.CorrectivePaymentInitiation1.InstructedAmount, com.tools20022.repository.msg.SettlementData1.SettlementAmount, com.tools20022.repository.msg.SettlementData2.SettlementAmount,
-					com.tools20022.repository.msg.SettlementData2.SettledAmount, com.tools20022.repository.msg.InstalmentFinancingInformation1.InstalmentTotalAmount,
-					com.tools20022.repository.msg.UnderlyingPaymentInstruction2.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentComplementaryInformation3.Amount,
-					com.tools20022.repository.msg.PaymentTransaction39.OriginalInstructedAmount, com.tools20022.repository.msg.RequestedModification3.Amount, com.tools20022.repository.msg.OriginalItem3.Amount,
-					com.tools20022.repository.msg.OriginalTransactionReference9.Amount, com.tools20022.repository.msg.OriginalTransactionReference12.Amount, com.tools20022.repository.msg.OriginalTransactionReference11.Amount,
-					com.tools20022.repository.msg.PaymentTransactionInformation16.ReturnedInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation23.ReturnedInstructedAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation17.ReversedInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation24.ReversedInstructedAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation21.ReturnedInstructedAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation7.InstructedAmount,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation9.InstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation6.InstructedAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation8.InstructedAmount, com.tools20022.repository.msg.RedemptionExecution12.SettlementAmount, com.tools20022.repository.msg.PaymentSearch5.InstructedAmount,
-					com.tools20022.repository.msg.PaymentInstruction14.InstructedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails12.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails13.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails18.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails16.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails14.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails15.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails17.TotalAmount, com.tools20022.repository.msg.PaymentComplementaryInformation4.Amount,
-					com.tools20022.repository.msg.PaymentTransaction50.ReturnedInstructedAmount, com.tools20022.repository.msg.CreditTransferTransaction19.InstructedAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation17.InstructedAmount, com.tools20022.repository.msg.PaymentTransaction51.ReversedInstructedAmount, com.tools20022.repository.msg.OriginalItem4.Amount,
-					com.tools20022.repository.msg.RequestedModification4.Amount, com.tools20022.repository.msg.PaymentTransaction58.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransaction54.OriginalInstructedAmount,
-					com.tools20022.repository.msg.OriginalTransactionReference20.Amount, com.tools20022.repository.msg.CreditTransferTransaction18.InstructedAmount,
-					com.tools20022.repository.msg.PaymentTransaction56.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransaction56.ReversedInstructedAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation18.InstructedAmount, com.tools20022.repository.msg.CreditTransferTransaction20.Amount, com.tools20022.repository.choice.AmountType4Choice.InstructedAmount,
-					com.tools20022.repository.msg.CreditTransferTransaction21.Amount, com.tools20022.repository.msg.CardPaymentTransactionDetails20.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails25.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails23.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails21.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails26.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails19.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails24.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails22.TotalAmount,
-					com.tools20022.repository.msg.CardTransactionDetail5.TransactionAmounts, com.tools20022.repository.msg.CardTransactionDetail1.TransactionAmounts, com.tools20022.repository.msg.CardTransactionDetail6.TransactionAmounts,
-					com.tools20022.repository.msg.CardTransactionDetail3.TransactionAmounts, com.tools20022.repository.msg.SpecialCondition1.IncomingAmount, com.tools20022.repository.msg.SpecialCondition1.OutgoingAmount,
-					com.tools20022.repository.msg.SpecialCondition1.IncomingAmountToOtherAccount, com.tools20022.repository.msg.SpecialCondition1.PaymentFromOtherAccount, com.tools20022.repository.msg.RequestedModification5.Amount,
-					com.tools20022.repository.msg.CreditTransferTransaction25.InstructedAmount, com.tools20022.repository.msg.PaymentTransaction65.ReturnedInstructedAmount,
-					com.tools20022.repository.msg.PaymentComplementaryInformation5.Amount, com.tools20022.repository.msg.DirectDebitTransactionInformation20.InstructedAmount,
-					com.tools20022.repository.msg.PaymentTransaction60.ReversedInstructedAmount, com.tools20022.repository.msg.PaymentTransaction61.OriginalInstructedAmount,
-					com.tools20022.repository.msg.OriginalTransactionReference22.Amount, com.tools20022.repository.msg.CreditTransferTransaction24.InstructedAmount, com.tools20022.repository.msg.CreditTransferTransaction26.Amount,
-					com.tools20022.repository.msg.OriginalItem5.Amount, com.tools20022.repository.msg.DirectDebitTransactionInformation19.InstructedAmount, com.tools20022.repository.msg.PaymentTransaction66.OriginalInstructedAmount,
-					com.tools20022.repository.msg.CreditTransferTransaction22.Amount, com.tools20022.repository.msg.PaymentTransaction64.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransaction64.ReversedInstructedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails32.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails33.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails28.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails29.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails30.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails27.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails31.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails35.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails34.TotalAmount, com.tools20022.repository.msg.SubscriptionBulkOrder5.TotalSettlementAmount,
-					com.tools20022.repository.msg.RedemptionBulkExecution5.TotalSettlementAmount, com.tools20022.repository.msg.RedemptionMultipleExecution5.TotalSettlementAmount,
-					com.tools20022.repository.msg.RedemptionMultipleOrder6.TotalSettlementAmount, com.tools20022.repository.msg.SubscriptionMultipleOrder6.TotalSettlementAmount,
-					com.tools20022.repository.msg.SubscriptionBulkExecution4.TotalSettlementAmount, com.tools20022.repository.msg.RedemptionBulkOrder6.TotalSettlementAmount,
-					com.tools20022.repository.msg.SubscriptionMultipleExecution5.TotalSettlementAmount, com.tools20022.repository.msg.FundOrderData5.SettlementAmount, com.tools20022.repository.msg.RedemptionExecution16.SettlementAmount,
-					com.tools20022.repository.msg.FundOrderData6.SettlementAmount, com.tools20022.repository.msg.RedemptionExecution15.SettlementAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation21.InstructedAmount,
-					com.tools20022.repository.msg.PaymentTransaction81.ReversedInstructedAmount, com.tools20022.repository.msg.RequestedModification6.Amount, com.tools20022.repository.msg.PaymentTransaction76.ReturnedInstructedAmount,
-					com.tools20022.repository.msg.PaymentTransaction78.OriginalInstructedAmount, com.tools20022.repository.msg.OriginalTransactionReference24.Amount,
-					com.tools20022.repository.msg.PaymentTransaction74.OriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransaction77.OriginalInstructedAmount,
-					com.tools20022.repository.msg.PaymentTransaction77.ReversedInstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation22.InstructedAmount,
-					com.tools20022.repository.msg.CorrectivePaymentInitiation2.InstructedAmount, com.tools20022.repository.msg.UnderlyingPaymentInstruction3.OriginalInstructedAmount,
-					com.tools20022.repository.msg.PaymentComplementaryInformation6.Amount, com.tools20022.repository.msg.CardPaymentTransactionDetails39.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails38.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails41.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails37.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails40.TotalAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails42.TotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails43.TotalAmount);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentSearch2.mmInstructedAmount, com.tools20022.repository.msg.PaymentSearch3.mmInstructedAmount,
+					com.tools20022.repository.msg.PaymentSearch4.mmInstructedAmount, com.tools20022.repository.msg.PaymentDetails5.mmInstructedAmount, com.tools20022.repository.msg.PaymentDetails6.mmInstructedAmount,
+					com.tools20022.repository.msg.PaymentDetails7.mmInstructedAmount, com.tools20022.repository.msg.PaymentInstruction1.mmInstructedAmount, com.tools20022.repository.msg.AmountAndCurrencyExchange2.mmInstructedAmount,
+					com.tools20022.repository.msg.AmountAndCurrencyExchange3.mmInstructedAmount, com.tools20022.repository.choice.AmountType1Choice.mmInstructedAmount, com.tools20022.repository.choice.AmountType2Choice.mmInstructedAmount,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation1.mmAmount, com.tools20022.repository.choice.AmountType3Choice.mmInstructedAmount,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation10.mmAmount, com.tools20022.repository.msg.CreditTransferTransaction1.mmAmount, com.tools20022.repository.msg.CreditTransferTransaction6.mmAmount,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation1.mmInstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation9.mmInstructedAmount,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmInstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation13.mmInstructedAmount,
+					com.tools20022.repository.msg.OriginalTransactionReference1.mmAmount, com.tools20022.repository.msg.PaymentTransactionInformation3.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.OriginalTransactionReference13.mmAmount, com.tools20022.repository.msg.PaymentTransactionInformation30.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.OriginalTransactionReference16.mmAmount, com.tools20022.repository.msg.PaymentTransaction37.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction47.mmOriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation4.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransactionInformation4.mmReversedInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation28.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransactionInformation28.mmReversedInstructedAmount, com.tools20022.repository.msg.PaymentTransaction35.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction35.mmReversedInstructedAmount, com.tools20022.repository.msg.PaymentTransaction42.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction42.mmReversedInstructedAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmInstructedAmount,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmInstructedAmount, com.tools20022.repository.msg.CreditTransferTransaction2.mmInstructedAmount,
+					com.tools20022.repository.msg.CreditTransferTransaction7.mmInstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmInstructedAmount,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmInstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmInstructedAmount,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation5.mmReversedInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransactionInformation29.mmReversedInstructedAmount, com.tools20022.repository.msg.PaymentTransaction36.mmReversedInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction45.mmReversedInstructedAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation12.mmInstructedAmount,
+					com.tools20022.repository.msg.CreditTransferTransaction3.mmInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation2.mmReturnedInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransactionInformation27.mmReturnedInstructedAmount, com.tools20022.repository.msg.PaymentTransaction34.mmReturnedInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction44.mmReturnedInstructedAmount, com.tools20022.repository.msg.OriginalTransactionReference15.mmAmount,
+					com.tools20022.repository.msg.OriginalTransactionReference17.mmAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation14.mmAmount, com.tools20022.repository.msg.CreditTransferTransaction5.mmAmount,
+					com.tools20022.repository.msg.CreditTransferTransaction10.mmAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails4.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails7.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails9.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails10.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails2.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails11.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails5.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails6.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails3.mmTotalAmount, com.tools20022.repository.msg.FundOrderData1.mmSettlementAmount,
+					com.tools20022.repository.msg.FundOrderData2.mmSettlementAmount, com.tools20022.repository.msg.PaymentTransaction18.mmSettlementAmount, com.tools20022.repository.msg.PaymentTransaction15.mmSettlementAmount,
+					com.tools20022.repository.msg.RedemptionBulkOrder3.mmTotalSettlementAmount, com.tools20022.repository.msg.RedemptionExecution5.mmSettlementAmount,
+					com.tools20022.repository.msg.RedemptionBulkExecution3.mmTotalSettlementAmount, com.tools20022.repository.msg.RedemptionBulkOrder4.mmTotalSettlementAmount,
+					com.tools20022.repository.msg.RedemptionMultipleOrder3.mmTotalSettlementAmount, com.tools20022.repository.msg.RedemptionExecution6.mmSettlementAmount,
+					com.tools20022.repository.msg.RedemptionMultipleExecution3.mmTotalSettlementAmount, com.tools20022.repository.msg.RedemptionMultipleOrder4.mmTotalSettlementAmount,
+					com.tools20022.repository.msg.InvestmentFundTransaction2.mmGrossSettlementAmount, com.tools20022.repository.msg.PaymentTransaction17.mmSettlementAmount,
+					com.tools20022.repository.msg.PaymentTransaction19.mmSettlementAmount, com.tools20022.repository.msg.SubscriptionBulkOrder3.mmTotalSettlementAmount, com.tools20022.repository.msg.PaymentTransaction16.mmSettlementAmount,
+					com.tools20022.repository.msg.PaymentTransaction13.mmSettlementAmount, com.tools20022.repository.msg.SubscriptionBulkExecution3.mmTotalSettlementAmount,
+					com.tools20022.repository.msg.SubscriptionBulkOrder4.mmTotalSettlementAmount, com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmTotalSettlementAmount,
+					com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmTotalSettlementAmount, com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmTotalSettlementAmount,
+					com.tools20022.repository.msg.PaymentTransaction20.mmSettlementAmount, com.tools20022.repository.msg.PaymentTransaction14.mmSettlementAmount, com.tools20022.repository.msg.PaymentInstructionExtract.mmCurrencyAmount,
+					com.tools20022.repository.msg.PaymentInstructionExtract2.mmInstructedAmount, com.tools20022.repository.msg.PaymentComplementaryInformation.mmAmount,
+					com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInstructedAmount, com.tools20022.repository.msg.UnderlyingPaymentInstruction1.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.RequestedModification2.mmAmount, com.tools20022.repository.msg.PaymentComplementaryInformation2.mmAmount,
+					com.tools20022.repository.msg.PaymentTransactionInformation32.mmOriginalInstructedAmount, com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmInstructedAmount,
+					com.tools20022.repository.msg.SettlementData1.mmSettlementAmount, com.tools20022.repository.msg.SettlementData2.mmSettlementAmount, com.tools20022.repository.msg.SettlementData2.mmSettledAmount,
+					com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentTotalAmount, com.tools20022.repository.msg.UnderlyingPaymentInstruction2.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.PaymentComplementaryInformation3.mmAmount, com.tools20022.repository.msg.PaymentTransaction39.mmOriginalInstructedAmount, com.tools20022.repository.msg.RequestedModification3.mmAmount,
+					com.tools20022.repository.msg.OriginalItem3.mmAmount, com.tools20022.repository.msg.OriginalTransactionReference9.mmAmount, com.tools20022.repository.msg.OriginalTransactionReference12.mmAmount,
+					com.tools20022.repository.msg.OriginalTransactionReference11.mmAmount, com.tools20022.repository.msg.PaymentTransactionInformation16.mmReturnedInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransactionInformation23.mmReturnedInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation17.mmReversedInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransactionInformation24.mmReversedInstructedAmount, com.tools20022.repository.msg.PaymentTransactionInformation21.mmReturnedInstructedAmount,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmInstructedAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation9.mmInstructedAmount,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmInstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation8.mmInstructedAmount,
+					com.tools20022.repository.msg.RedemptionExecution12.mmSettlementAmount, com.tools20022.repository.msg.PaymentSearch5.mmInstructedAmount, com.tools20022.repository.msg.PaymentInstruction14.mmInstructedAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails12.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails18.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails16.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails14.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails15.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails17.mmTotalAmount, com.tools20022.repository.msg.PaymentComplementaryInformation4.mmAmount,
+					com.tools20022.repository.msg.PaymentTransaction50.mmReturnedInstructedAmount, com.tools20022.repository.msg.CreditTransferTransaction19.mmInstructedAmount,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmInstructedAmount, com.tools20022.repository.msg.PaymentTransaction51.mmReversedInstructedAmount, com.tools20022.repository.msg.OriginalItem4.mmAmount,
+					com.tools20022.repository.msg.RequestedModification4.mmAmount, com.tools20022.repository.msg.PaymentTransaction58.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction54.mmOriginalInstructedAmount, com.tools20022.repository.msg.OriginalTransactionReference20.mmAmount,
+					com.tools20022.repository.msg.CreditTransferTransaction18.mmInstructedAmount, com.tools20022.repository.msg.PaymentTransaction56.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction56.mmReversedInstructedAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmInstructedAmount,
+					com.tools20022.repository.msg.CreditTransferTransaction20.mmAmount, com.tools20022.repository.choice.AmountType4Choice.mmInstructedAmount, com.tools20022.repository.msg.CreditTransferTransaction21.mmAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails20.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails25.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails21.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails26.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails19.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails24.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails22.mmTotalAmount,
+					com.tools20022.repository.msg.CardTransactionDetail5.mmTransactionAmounts, com.tools20022.repository.msg.CardTransactionDetail1.mmTransactionAmounts,
+					com.tools20022.repository.msg.CardTransactionDetail6.mmTransactionAmounts, com.tools20022.repository.msg.CardTransactionDetail3.mmTransactionAmounts, com.tools20022.repository.msg.SpecialCondition1.mmIncomingAmount,
+					com.tools20022.repository.msg.SpecialCondition1.mmOutgoingAmount, com.tools20022.repository.msg.SpecialCondition1.mmIncomingAmountToOtherAccount,
+					com.tools20022.repository.msg.SpecialCondition1.mmPaymentFromOtherAccount, com.tools20022.repository.msg.RequestedModification5.mmAmount, com.tools20022.repository.msg.CreditTransferTransaction25.mmInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction65.mmReturnedInstructedAmount, com.tools20022.repository.msg.PaymentComplementaryInformation5.mmAmount,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmInstructedAmount, com.tools20022.repository.msg.PaymentTransaction60.mmReversedInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction61.mmOriginalInstructedAmount, com.tools20022.repository.msg.OriginalTransactionReference22.mmAmount,
+					com.tools20022.repository.msg.CreditTransferTransaction24.mmInstructedAmount, com.tools20022.repository.msg.CreditTransferTransaction26.mmAmount, com.tools20022.repository.msg.OriginalItem5.mmAmount,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmInstructedAmount, com.tools20022.repository.msg.PaymentTransaction66.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.CreditTransferTransaction22.mmAmount, com.tools20022.repository.msg.PaymentTransaction64.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction64.mmReversedInstructedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails32.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails33.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails28.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails29.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails27.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails31.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails35.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails34.mmTotalAmount,
+					com.tools20022.repository.msg.SubscriptionBulkOrder5.mmTotalSettlementAmount, com.tools20022.repository.msg.RedemptionBulkExecution5.mmTotalSettlementAmount,
+					com.tools20022.repository.msg.RedemptionMultipleExecution5.mmTotalSettlementAmount, com.tools20022.repository.msg.RedemptionMultipleOrder6.mmTotalSettlementAmount,
+					com.tools20022.repository.msg.SubscriptionMultipleOrder6.mmTotalSettlementAmount, com.tools20022.repository.msg.SubscriptionBulkExecution4.mmTotalSettlementAmount,
+					com.tools20022.repository.msg.RedemptionBulkOrder6.mmTotalSettlementAmount, com.tools20022.repository.msg.SubscriptionMultipleExecution5.mmTotalSettlementAmount,
+					com.tools20022.repository.msg.FundOrderData5.mmSettlementAmount, com.tools20022.repository.msg.RedemptionExecution16.mmSettlementAmount, com.tools20022.repository.msg.FundOrderData6.mmSettlementAmount,
+					com.tools20022.repository.msg.RedemptionExecution15.mmSettlementAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction81.mmReversedInstructedAmount, com.tools20022.repository.msg.RequestedModification6.mmAmount,
+					com.tools20022.repository.msg.PaymentTransaction76.mmReturnedInstructedAmount, com.tools20022.repository.msg.PaymentTransaction78.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.OriginalTransactionReference24.mmAmount, com.tools20022.repository.msg.PaymentTransaction74.mmOriginalInstructedAmount,
+					com.tools20022.repository.msg.PaymentTransaction77.mmOriginalInstructedAmount, com.tools20022.repository.msg.PaymentTransaction77.mmReversedInstructedAmount,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmInstructedAmount, com.tools20022.repository.msg.CorrectivePaymentInitiation2.mmInstructedAmount,
+					com.tools20022.repository.msg.UnderlyingPaymentInstruction3.mmOriginalInstructedAmount, com.tools20022.repository.msg.PaymentComplementaryInformation6.mmAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails39.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails41.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails37.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails40.mmTotalAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails42.mmTotalAmount,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails43.mmTotalAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InstructedAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PriorityCode priority;
 	/**
 	 * Urgency or order of importance that the originator would like the
 	 * recipient of the payment to apply to its processing.
@@ -2794,60 +2816,61 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.PriorityCode
 	 * PriorityCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.PriorityCodeChoice#Code
-	 * PriorityCodeChoice.Code}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch2#Priority
-	 * PaymentSearch2.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch3#Priority
-	 * PaymentSearch3.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriorityCode2Choice#Code
-	 * PriorityCode2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriorityCode2Choice#Proprietary
-	 * PriorityCode2Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch4#Priority
-	 * PaymentSearch4.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction2#Priority
-	 * PaymentInstruction2.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction1#Priority
-	 * PaymentInstruction1.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Cheque5#InstructionPriority
-	 * Cheque5.InstructionPriority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Cheque6#InstructionPriority
-	 * Cheque6.InstructionPriority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Cheque7#InstructionPriority
-	 * Cheque7.InstructionPriority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IntraBalance1#Priority
-	 * IntraBalance1.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction12#Priority
-	 * PaymentInstruction12.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch5#Priority
-	 * PaymentSearch5.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriorityCode3Choice#Code
-	 * PriorityCode3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriorityCode3Choice#Proprietary
-	 * PriorityCode3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#Priority
-	 * PaymentInstruction14.Priority}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityCodeChoice#mmCode
+	 * PriorityCodeChoice.mmCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch2#mmPriority
+	 * PaymentSearch2.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch3#mmPriority
+	 * PaymentSearch3.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityCode2Choice#mmCode
+	 * PriorityCode2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityCode2Choice#mmProprietary
+	 * PriorityCode2Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch4#mmPriority
+	 * PaymentSearch4.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction2#mmPriority
+	 * PaymentInstruction2.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction1#mmPriority
+	 * PaymentInstruction1.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Cheque5#mmInstructionPriority
+	 * Cheque5.mmInstructionPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Cheque6#mmInstructionPriority
+	 * Cheque6.mmInstructionPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Cheque7#mmInstructionPriority
+	 * Cheque7.mmInstructionPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IntraBalance1#mmPriority
+	 * IntraBalance1.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction12#mmPriority
+	 * PaymentInstruction12.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch5#mmPriority
+	 * PaymentSearch5.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityCode3Choice#mmCode
+	 * PriorityCode3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityCode3Choice#mmProprietary
+	 * PriorityCode3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#mmPriority
+	 * PaymentInstruction14.mmPriority}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2861,24 +2884,25 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Priority = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPriority = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityCodeChoice.Code, com.tools20022.repository.msg.PaymentSearch2.Priority, com.tools20022.repository.msg.PaymentSearch3.Priority,
-					com.tools20022.repository.choice.PriorityCode2Choice.Code, com.tools20022.repository.choice.PriorityCode2Choice.Proprietary, com.tools20022.repository.msg.PaymentSearch4.Priority,
-					com.tools20022.repository.msg.PaymentInstruction2.Priority, com.tools20022.repository.msg.PaymentInstruction1.Priority, com.tools20022.repository.msg.Cheque5.InstructionPriority,
-					com.tools20022.repository.msg.Cheque6.InstructionPriority, com.tools20022.repository.msg.Cheque7.InstructionPriority, com.tools20022.repository.msg.IntraBalance1.Priority,
-					com.tools20022.repository.msg.PaymentInstruction12.Priority, com.tools20022.repository.msg.PaymentSearch5.Priority, com.tools20022.repository.choice.PriorityCode3Choice.Code,
-					com.tools20022.repository.choice.PriorityCode3Choice.Proprietary, com.tools20022.repository.msg.PaymentInstruction14.Priority);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityCodeChoice.mmCode, com.tools20022.repository.msg.PaymentSearch2.mmPriority, com.tools20022.repository.msg.PaymentSearch3.mmPriority,
+					com.tools20022.repository.choice.PriorityCode2Choice.mmCode, com.tools20022.repository.choice.PriorityCode2Choice.mmProprietary, com.tools20022.repository.msg.PaymentSearch4.mmPriority,
+					com.tools20022.repository.msg.PaymentInstruction2.mmPriority, com.tools20022.repository.msg.PaymentInstruction1.mmPriority, com.tools20022.repository.msg.Cheque5.mmInstructionPriority,
+					com.tools20022.repository.msg.Cheque6.mmInstructionPriority, com.tools20022.repository.msg.Cheque7.mmInstructionPriority, com.tools20022.repository.msg.IntraBalance1.mmPriority,
+					com.tools20022.repository.msg.PaymentInstruction12.mmPriority, com.tools20022.repository.msg.PaymentSearch5.mmPriority, com.tools20022.repository.choice.PriorityCode3Choice.mmCode,
+					com.tools20022.repository.choice.PriorityCode3Choice.mmProprietary, com.tools20022.repository.msg.PaymentInstruction14.mmPriority);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Priority";
 			definition = "Urgency or order of importance that the originator would like the recipient of the payment  to apply to its processing.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriorityCode.mmObject();
 		}
 	};
+	protected ISODate valueDate;
 	/**
 	 * Date on which a payment must be executed
 	 * <p>
@@ -2888,497 +2912,497 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails5#TransferValueDate
-	 * PaymentDetails5.TransferValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection32#ValueDate
-	 * AmountAndDirection32.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection33#ValueDate
-	 * AmountAndDirection33.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection2#ValueDate
-	 * AmountAndDirection2.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection16#ValueDate
-	 * AmountAndDirection16.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#ExpectedValueDate
-	 * TransactionDetails5.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#ExpectedValueDate
-	 * TransactionDetails9.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#ExpectedValueDate
-	 * TransactionDetails22.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#ExpectedValueDate
-	 * TransactionDetails23.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#ExpectedValueDate
-	 * TransactionDetails36.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#ExpectedValueDate
-	 * TransactionDetails47.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#ExpectedValueDate
-	 * TransactionDetails53.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#ExpectedValueDate
-	 * TransactionDetails58.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#ExpectedValueDate
-	 * TransactionDetails7.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8#ExpectedValueDate
-	 * TransactionDetails8.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#ExpectedValueDate
-	 * TransactionDetails16.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17#ExpectedValueDate
-	 * TransactionDetails17.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#ExpectedValueDate
-	 * TransactionDetails26.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25#ExpectedValueDate
-	 * TransactionDetails25.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#ExpectedValueDate
-	 * TransactionDetails27.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33#ExpectedValueDate
-	 * TransactionDetails33.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#ExpectedValueDate
-	 * TransactionDetails39.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#ExpectedValueDate
-	 * TransactionDetails50.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#ExpectedValueDate
-	 * TransactionDetails56.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#ExpectedValueDate
-	 * TransactionDetails59.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection28#ValueDate
-	 * AmountAndDirection28.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetCashForecast1#SettlementDate
-	 * NetCashForecast1.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetCashForecast2#CashSettlementDate
-	 * NetCashForecast2.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction18#SettlementDate
-	 * PaymentTransaction18.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction15#SettlementDate
-	 * PaymentTransaction15.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder5#CashSettlementDate
-	 * RedemptionOrder5.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3#CashSettlementDate
-	 * RedemptionBulkOrder3.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#CashSettlementDate
-	 * RedemptionExecution5.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3#CashSettlementDate
-	 * RedemptionBulkExecution3.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#CashSettlementDate
-	 * RedemptionOrder7.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4#CashSettlementDate
-	 * RedemptionBulkOrder4.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder6#CashSettlementDate
-	 * RedemptionOrder6.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#CashSettlementDate
-	 * RedemptionMultipleOrder3.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#CashSettlementDate
-	 * RedemptionExecution6.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3#CashSettlementDate
-	 * RedemptionMultipleExecution3.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8#CashSettlementDate
-	 * RedemptionOrder8.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4#CashSettlementDate
-	 * RedemptionMultipleOrder4.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction17#SettlementDate
-	 * PaymentTransaction17.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction19#SettlementDate
-	 * PaymentTransaction19.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder5#CashSettlementDate
-	 * SubscriptionOrder5.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3#CashSettlementDate
-	 * SubscriptionBulkOrder3.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction16#SettlementDate
-	 * PaymentTransaction16.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction13#SettlementDate
-	 * PaymentTransaction13.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution5#CashSettlementDate
-	 * SubscriptionExecution5.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3#CashSettlementDate
-	 * SubscriptionBulkExecution3.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder7#CashSettlementDate
-	 * SubscriptionOrder7.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4#CashSettlementDate
-	 * SubscriptionBulkOrder4.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder6#CashSettlementDate
-	 * SubscriptionOrder6.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3#CashSettlementDate
-	 * SubscriptionMultipleOrder3.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#CashSettlementDate
-	 * SubscriptionExecution6.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3#CashSettlementDate
-	 * SubscriptionMultipleExecution3.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder8#CashSettlementDate
-	 * SubscriptionOrder8.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4#CashSettlementDate
-	 * SubscriptionMultipleOrder4.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction20#SettlementDate
-	 * PaymentTransaction20.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3#CashSettlementDate
-	 * SwitchOrder3.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction14#SettlementDate
-	 * PaymentTransaction14.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchExecution4#CashSettlementDate
-	 * SwitchExecution4.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#CashSettlementDate
-	 * SwitchOrder4.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#ValueDate
-	 * PaymentInstructionExtract.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification#ValueDate
-	 * RequestedModification.ValueDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashMovement3#ValueDate
-	 * CashMovement3.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails2.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails8.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection22#ValueDate
-	 * AmountAndDirection22.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NotificationEntry2#ExpectedValueDate
-	 * NotificationEntry2.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NotificationItem3#ExpectedValueDate
-	 * NotificationItem3.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountNotification4#ExpectedValueDate
-	 * AccountNotification4.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItem1#ExpectedValueDate
-	 * OriginalItem1.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItem2#ExpectedValueDate
-	 * OriginalItem2.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference1#ExpectedValueDate
-	 * OriginalNotificationReference1.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#ExpectedValueDate
-	 * OriginalItemAndStatus1.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus2#ExpectedValueDate
-	 * OriginalItemAndStatus2.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#ExpectedValueDate
-	 * OriginalNotificationReference2.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData1#SettlementDate
-	 * SettlementData1.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData2#SettlementDate
-	 * SettlementData2.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails6.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails10.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails17.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails18.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection25#ValueDate
-	 * AmountAndDirection25.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NotificationItem4#ExpectedValueDate
-	 * NotificationItem4.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountNotification6#ExpectedValueDate
-	 * AccountNotification6.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItem3#ExpectedValueDate
-	 * OriginalItem3.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference4#ExpectedValueDate
-	 * OriginalNotificationReference4.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus3#ExpectedValueDate
-	 * OriginalItemAndStatus3.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference3#ExpectedValueDate
-	 * OriginalNotificationReference3.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCompensation1#ValueDate
-	 * CashCompensation1.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10#CashSettlementDate
-	 * RedemptionExecution10.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder9#CashSettlementDate
-	 * RedemptionOrder9.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution7#CashSettlementDate
-	 * SubscriptionExecution7.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder9#CashSettlementDate
-	 * SubscriptionOrder9.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution12#CashSettlementDate
-	 * RedemptionExecution12.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution9#CashSettlementDate
-	 * SubscriptionExecution9.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#ExpectedValueDate
-	 * TransactionDetails61.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#ValueDate
-	 * AmountAndDirection36.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails21.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#ExpectedValueDate
-	 * TransactionDetails62.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection37#ValueDate
-	 * AmountAndDirection37.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection38#ValueDate
-	 * AmountAndDirection38.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails22.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#ExpectedValueDate
-	 * TransactionDetails66.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#ExpectedValueDate
-	 * TransactionDetails67.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection40#ValueDate
-	 * AmountAndDirection40.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregationTransaction1#FirstPaymentDateTime
-	 * AggregationTransaction1.FirstPaymentDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregationTransaction1#LastPaymentDateTime
-	 * AggregationTransaction1.LastPaymentDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetCashForecast4#CashSettlementDate
-	 * NetCashForecast4.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountNotification10#ExpectedValueDate
-	 * AccountNotification10.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference6#ExpectedValueDate
-	 * OriginalNotificationReference6.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItem4#ExpectedValueDate
-	 * OriginalItem4.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus4#ExpectedValueDate
-	 * OriginalItemAndStatus4.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference5#ExpectedValueDate
-	 * OriginalNotificationReference5.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NotificationItem5#ExpectedValueDate
-	 * NotificationItem5.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails24.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#ExpectedValueDate
-	 * TransactionDetails70.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#ExpectedValueDate
-	 * TransactionDetails69.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetCashForecast5#CashSettlementDate
-	 * NetCashForecast5.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#ExpectedValueDate
-	 * TransactionDetails71.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails25.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#ExpectedValueDate
-	 * TransactionDetails72.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMAccountStatement2#ValueDate
-	 * ATMAccountStatement2.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails26.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#ExpectedValueDate
-	 * TransactionDetails79.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#ExpectedValueDate
-	 * TransactionDetails75.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#ValueDate
-	 * AmountAndDirection46.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection48#ValueDate
-	 * AmountAndDirection48.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection45#ValueDate
-	 * AmountAndDirection45.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountNotification13#ExpectedValueDate
-	 * AccountNotification13.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference8#ExpectedValueDate
-	 * OriginalNotificationReference8.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItem5#ExpectedValueDate
-	 * OriginalItem5.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus5#ExpectedValueDate
-	 * OriginalItemAndStatus5.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference7#ExpectedValueDate
-	 * OriginalNotificationReference7.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NotificationItem6#ExpectedValueDate
-	 * NotificationItem6.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails33.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection60#ValueDate
-	 * AmountAndDirection60.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#ExpectedValueDate
-	 * TransactionDetails87.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection71#ValueDate
-	 * AmountAndDirection71.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection85#ValueDate
-	 * AmountAndDirection85.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#ExpectedValueDate
-	 * TransactionDetails90.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregationTransaction2#FirstPaymentDateTime
-	 * AggregationTransaction2.FirstPaymentDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregationTransaction2#LastPaymentDateTime
-	 * AggregationTransaction2.LastPaymentDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchExecution7#CashSettlementDate
-	 * SwitchExecution7.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder7#CashSettlementDate
-	 * SwitchOrder7.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#CashSettlementDate
-	 * RedemptionOrder14.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#CashSettlementDate
-	 * SubscriptionExecution13.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#CashSettlementDate
-	 * SubscriptionExecution12.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#CashSettlementDate
-	 * SubscriptionOrder15.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#CashSettlementDate
-	 * RedemptionOrder15.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#CashSettlementDate
-	 * RedemptionExecution16.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#CashSettlementDate
-	 * SubscriptionOrder14.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#CashSettlementDate
-	 * RedemptionExecution15.CashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#ExpectedValueDate
-	 * TransactionDetails97.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails35.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#ExpectedValueDate
-	 * TransactionDetails96.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#ExpectedValueDate
-	 * SecuritiesFinancingTransactionDetails36.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#ExpectedValueDate
-	 * TransactionDetails100.ExpectedValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#ExpectedValueDate
-	 * TransactionDetails99.ExpectedValueDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails5#mmTransferValueDate
+	 * PaymentDetails5.mmTransferValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection32#mmValueDate
+	 * AmountAndDirection32.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection33#mmValueDate
+	 * AmountAndDirection33.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection2#mmValueDate
+	 * AmountAndDirection2.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection16#mmValueDate
+	 * AmountAndDirection16.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#mmExpectedValueDate
+	 * TransactionDetails5.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#mmExpectedValueDate
+	 * TransactionDetails9.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#mmExpectedValueDate
+	 * TransactionDetails22.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#mmExpectedValueDate
+	 * TransactionDetails23.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#mmExpectedValueDate
+	 * TransactionDetails36.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#mmExpectedValueDate
+	 * TransactionDetails47.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#mmExpectedValueDate
+	 * TransactionDetails53.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#mmExpectedValueDate
+	 * TransactionDetails58.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#mmExpectedValueDate
+	 * TransactionDetails7.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8#mmExpectedValueDate
+	 * TransactionDetails8.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#mmExpectedValueDate
+	 * TransactionDetails16.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17#mmExpectedValueDate
+	 * TransactionDetails17.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#mmExpectedValueDate
+	 * TransactionDetails26.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25#mmExpectedValueDate
+	 * TransactionDetails25.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#mmExpectedValueDate
+	 * TransactionDetails27.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33#mmExpectedValueDate
+	 * TransactionDetails33.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#mmExpectedValueDate
+	 * TransactionDetails39.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#mmExpectedValueDate
+	 * TransactionDetails50.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#mmExpectedValueDate
+	 * TransactionDetails56.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#mmExpectedValueDate
+	 * TransactionDetails59.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection28#mmValueDate
+	 * AmountAndDirection28.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetCashForecast1#mmSettlementDate
+	 * NetCashForecast1.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetCashForecast2#mmCashSettlementDate
+	 * NetCashForecast2.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction18#mmSettlementDate
+	 * PaymentTransaction18.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction15#mmSettlementDate
+	 * PaymentTransaction15.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder5#mmCashSettlementDate
+	 * RedemptionOrder5.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3#mmCashSettlementDate
+	 * RedemptionBulkOrder3.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#mmCashSettlementDate
+	 * RedemptionExecution5.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3#mmCashSettlementDate
+	 * RedemptionBulkExecution3.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmCashSettlementDate
+	 * RedemptionOrder7.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4#mmCashSettlementDate
+	 * RedemptionBulkOrder4.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder6#mmCashSettlementDate
+	 * RedemptionOrder6.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#mmCashSettlementDate
+	 * RedemptionMultipleOrder3.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#mmCashSettlementDate
+	 * RedemptionExecution6.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3#mmCashSettlementDate
+	 * RedemptionMultipleExecution3.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8#mmCashSettlementDate
+	 * RedemptionOrder8.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4#mmCashSettlementDate
+	 * RedemptionMultipleOrder4.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction17#mmSettlementDate
+	 * PaymentTransaction17.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction19#mmSettlementDate
+	 * PaymentTransaction19.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder5#mmCashSettlementDate
+	 * SubscriptionOrder5.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3#mmCashSettlementDate
+	 * SubscriptionBulkOrder3.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction16#mmSettlementDate
+	 * PaymentTransaction16.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction13#mmSettlementDate
+	 * PaymentTransaction13.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution5#mmCashSettlementDate
+	 * SubscriptionExecution5.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3#mmCashSettlementDate
+	 * SubscriptionBulkExecution3.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder7#mmCashSettlementDate
+	 * SubscriptionOrder7.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4#mmCashSettlementDate
+	 * SubscriptionBulkOrder4.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder6#mmCashSettlementDate
+	 * SubscriptionOrder6.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3#mmCashSettlementDate
+	 * SubscriptionMultipleOrder3.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmCashSettlementDate
+	 * SubscriptionExecution6.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3#mmCashSettlementDate
+	 * SubscriptionMultipleExecution3.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder8#mmCashSettlementDate
+	 * SubscriptionOrder8.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4#mmCashSettlementDate
+	 * SubscriptionMultipleOrder4.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction20#mmSettlementDate
+	 * PaymentTransaction20.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3#mmCashSettlementDate
+	 * SwitchOrder3.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction14#mmSettlementDate
+	 * PaymentTransaction14.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchExecution4#mmCashSettlementDate
+	 * SwitchExecution4.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmCashSettlementDate
+	 * SwitchOrder4.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract#mmValueDate
+	 * PaymentInstructionExtract.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification#mmValueDate
+	 * RequestedModification.mmValueDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashMovement3#mmValueDate
+	 * CashMovement3.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails2.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails8.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection22#mmValueDate
+	 * AmountAndDirection22.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationEntry2#mmExpectedValueDate
+	 * NotificationEntry2.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationItem3#mmExpectedValueDate
+	 * NotificationItem3.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification4#mmExpectedValueDate
+	 * AccountNotification4.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItem1#mmExpectedValueDate
+	 * OriginalItem1.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItem2#mmExpectedValueDate
+	 * OriginalItem2.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference1#mmExpectedValueDate
+	 * OriginalNotificationReference1.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#mmExpectedValueDate
+	 * OriginalItemAndStatus1.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus2#mmExpectedValueDate
+	 * OriginalItemAndStatus2.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmExpectedValueDate
+	 * OriginalNotificationReference2.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettlementDate
+	 * SettlementData1.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData2#mmSettlementDate
+	 * SettlementData2.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails6.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails10.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails17.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails18.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection25#mmValueDate
+	 * AmountAndDirection25.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationItem4#mmExpectedValueDate
+	 * NotificationItem4.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification6#mmExpectedValueDate
+	 * AccountNotification6.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItem3#mmExpectedValueDate
+	 * OriginalItem3.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference4#mmExpectedValueDate
+	 * OriginalNotificationReference4.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus3#mmExpectedValueDate
+	 * OriginalItemAndStatus3.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference3#mmExpectedValueDate
+	 * OriginalNotificationReference3.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCompensation1#mmValueDate
+	 * CashCompensation1.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10#mmCashSettlementDate
+	 * RedemptionExecution10.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder9#mmCashSettlementDate
+	 * RedemptionOrder9.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution7#mmCashSettlementDate
+	 * SubscriptionExecution7.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder9#mmCashSettlementDate
+	 * SubscriptionOrder9.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution12#mmCashSettlementDate
+	 * RedemptionExecution12.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution9#mmCashSettlementDate
+	 * SubscriptionExecution9.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#mmExpectedValueDate
+	 * TransactionDetails61.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection36#mmValueDate
+	 * AmountAndDirection36.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails21.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#mmExpectedValueDate
+	 * TransactionDetails62.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection37#mmValueDate
+	 * AmountAndDirection37.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection38#mmValueDate
+	 * AmountAndDirection38.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails22.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#mmExpectedValueDate
+	 * TransactionDetails66.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#mmExpectedValueDate
+	 * TransactionDetails67.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection40#mmValueDate
+	 * AmountAndDirection40.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregationTransaction1#mmFirstPaymentDateTime
+	 * AggregationTransaction1.mmFirstPaymentDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregationTransaction1#mmLastPaymentDateTime
+	 * AggregationTransaction1.mmLastPaymentDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetCashForecast4#mmCashSettlementDate
+	 * NetCashForecast4.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification10#mmExpectedValueDate
+	 * AccountNotification10.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference6#mmExpectedValueDate
+	 * OriginalNotificationReference6.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItem4#mmExpectedValueDate
+	 * OriginalItem4.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus4#mmExpectedValueDate
+	 * OriginalItemAndStatus4.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference5#mmExpectedValueDate
+	 * OriginalNotificationReference5.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationItem5#mmExpectedValueDate
+	 * NotificationItem5.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails24.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#mmExpectedValueDate
+	 * TransactionDetails70.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#mmExpectedValueDate
+	 * TransactionDetails69.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetCashForecast5#mmCashSettlementDate
+	 * NetCashForecast5.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#mmExpectedValueDate
+	 * TransactionDetails71.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails25.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#mmExpectedValueDate
+	 * TransactionDetails72.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMAccountStatement2#mmValueDate
+	 * ATMAccountStatement2.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails26.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#mmExpectedValueDate
+	 * TransactionDetails79.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#mmExpectedValueDate
+	 * TransactionDetails75.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection46#mmValueDate
+	 * AmountAndDirection46.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection48#mmValueDate
+	 * AmountAndDirection48.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection45#mmValueDate
+	 * AmountAndDirection45.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification13#mmExpectedValueDate
+	 * AccountNotification13.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference8#mmExpectedValueDate
+	 * OriginalNotificationReference8.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItem5#mmExpectedValueDate
+	 * OriginalItem5.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus5#mmExpectedValueDate
+	 * OriginalItemAndStatus5.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference7#mmExpectedValueDate
+	 * OriginalNotificationReference7.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationItem6#mmExpectedValueDate
+	 * NotificationItem6.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails33.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection60#mmValueDate
+	 * AmountAndDirection60.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#mmExpectedValueDate
+	 * TransactionDetails87.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection71#mmValueDate
+	 * AmountAndDirection71.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection85#mmValueDate
+	 * AmountAndDirection85.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#mmExpectedValueDate
+	 * TransactionDetails90.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregationTransaction2#mmFirstPaymentDateTime
+	 * AggregationTransaction2.mmFirstPaymentDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregationTransaction2#mmLastPaymentDateTime
+	 * AggregationTransaction2.mmLastPaymentDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchExecution7#mmCashSettlementDate
+	 * SwitchExecution7.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmCashSettlementDate
+	 * SwitchOrder7.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#mmCashSettlementDate
+	 * RedemptionOrder14.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmCashSettlementDate
+	 * SubscriptionExecution13.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#mmCashSettlementDate
+	 * SubscriptionExecution12.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#mmCashSettlementDate
+	 * SubscriptionOrder15.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmCashSettlementDate
+	 * RedemptionOrder15.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#mmCashSettlementDate
+	 * RedemptionExecution16.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#mmCashSettlementDate
+	 * SubscriptionOrder14.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmCashSettlementDate
+	 * RedemptionExecution15.mmCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#mmExpectedValueDate
+	 * TransactionDetails97.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails35.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#mmExpectedValueDate
+	 * TransactionDetails96.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmExpectedValueDate
+	 * SecuritiesFinancingTransactionDetails36.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#mmExpectedValueDate
+	 * TransactionDetails100.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#mmExpectedValueDate
+	 * TransactionDetails99.mmExpectedValueDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3390,78 +3414,83 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Date on which a payment must be executed"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ValueDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentDetails5.TransferValueDate, com.tools20022.repository.msg.AmountAndDirection32.ValueDate, com.tools20022.repository.msg.AmountAndDirection33.ValueDate,
-					com.tools20022.repository.msg.AmountAndDirection2.ValueDate, com.tools20022.repository.msg.AmountAndDirection16.ValueDate, com.tools20022.repository.msg.TransactionDetails5.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails9.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails22.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails23.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails36.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails47.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails53.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails58.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails7.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails8.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails16.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails17.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails26.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails25.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails27.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails33.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails39.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails50.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails56.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails59.ExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection28.ValueDate, com.tools20022.repository.msg.NetCashForecast1.SettlementDate,
-					com.tools20022.repository.msg.NetCashForecast2.CashSettlementDate, com.tools20022.repository.msg.PaymentTransaction18.SettlementDate, com.tools20022.repository.msg.PaymentTransaction15.SettlementDate,
-					com.tools20022.repository.msg.RedemptionOrder5.CashSettlementDate, com.tools20022.repository.msg.RedemptionBulkOrder3.CashSettlementDate, com.tools20022.repository.msg.RedemptionExecution5.CashSettlementDate,
-					com.tools20022.repository.msg.RedemptionBulkExecution3.CashSettlementDate, com.tools20022.repository.msg.RedemptionOrder7.CashSettlementDate, com.tools20022.repository.msg.RedemptionBulkOrder4.CashSettlementDate,
-					com.tools20022.repository.msg.RedemptionOrder6.CashSettlementDate, com.tools20022.repository.msg.RedemptionMultipleOrder3.CashSettlementDate, com.tools20022.repository.msg.RedemptionExecution6.CashSettlementDate,
-					com.tools20022.repository.msg.RedemptionMultipleExecution3.CashSettlementDate, com.tools20022.repository.msg.RedemptionOrder8.CashSettlementDate,
-					com.tools20022.repository.msg.RedemptionMultipleOrder4.CashSettlementDate, com.tools20022.repository.msg.PaymentTransaction17.SettlementDate, com.tools20022.repository.msg.PaymentTransaction19.SettlementDate,
-					com.tools20022.repository.msg.SubscriptionOrder5.CashSettlementDate, com.tools20022.repository.msg.SubscriptionBulkOrder3.CashSettlementDate, com.tools20022.repository.msg.PaymentTransaction16.SettlementDate,
-					com.tools20022.repository.msg.PaymentTransaction13.SettlementDate, com.tools20022.repository.msg.SubscriptionExecution5.CashSettlementDate, com.tools20022.repository.msg.SubscriptionBulkExecution3.CashSettlementDate,
-					com.tools20022.repository.msg.SubscriptionOrder7.CashSettlementDate, com.tools20022.repository.msg.SubscriptionBulkOrder4.CashSettlementDate, com.tools20022.repository.msg.SubscriptionOrder6.CashSettlementDate,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder3.CashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution6.CashSettlementDate,
-					com.tools20022.repository.msg.SubscriptionMultipleExecution3.CashSettlementDate, com.tools20022.repository.msg.SubscriptionOrder8.CashSettlementDate,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder4.CashSettlementDate, com.tools20022.repository.msg.PaymentTransaction20.SettlementDate, com.tools20022.repository.msg.SwitchOrder3.CashSettlementDate,
-					com.tools20022.repository.msg.PaymentTransaction14.SettlementDate, com.tools20022.repository.msg.SwitchExecution4.CashSettlementDate, com.tools20022.repository.msg.SwitchOrder4.CashSettlementDate,
-					com.tools20022.repository.msg.PaymentInstructionExtract.ValueDate, com.tools20022.repository.msg.RequestedModification.ValueDate, com.tools20022.repository.msg.CashMovement3.ValueDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.ExpectedValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.ExpectedValueDate,
-					com.tools20022.repository.msg.AmountAndDirection22.ValueDate, com.tools20022.repository.msg.NotificationEntry2.ExpectedValueDate, com.tools20022.repository.msg.NotificationItem3.ExpectedValueDate,
-					com.tools20022.repository.msg.AccountNotification4.ExpectedValueDate, com.tools20022.repository.msg.OriginalItem1.ExpectedValueDate, com.tools20022.repository.msg.OriginalItem2.ExpectedValueDate,
-					com.tools20022.repository.msg.OriginalNotificationReference1.ExpectedValueDate, com.tools20022.repository.msg.OriginalItemAndStatus1.ExpectedValueDate,
-					com.tools20022.repository.msg.OriginalItemAndStatus2.ExpectedValueDate, com.tools20022.repository.msg.OriginalNotificationReference2.ExpectedValueDate, com.tools20022.repository.msg.SettlementData1.SettlementDate,
-					com.tools20022.repository.msg.SettlementData2.SettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.ExpectedValueDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.ExpectedValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.ExpectedValueDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.ExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection25.ValueDate, com.tools20022.repository.msg.NotificationItem4.ExpectedValueDate,
-					com.tools20022.repository.msg.AccountNotification6.ExpectedValueDate, com.tools20022.repository.msg.OriginalItem3.ExpectedValueDate, com.tools20022.repository.msg.OriginalNotificationReference4.ExpectedValueDate,
-					com.tools20022.repository.msg.OriginalItemAndStatus3.ExpectedValueDate, com.tools20022.repository.msg.OriginalNotificationReference3.ExpectedValueDate, com.tools20022.repository.msg.CashCompensation1.ValueDate,
-					com.tools20022.repository.msg.RedemptionExecution10.CashSettlementDate, com.tools20022.repository.msg.RedemptionOrder9.CashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution7.CashSettlementDate,
-					com.tools20022.repository.msg.SubscriptionOrder9.CashSettlementDate, com.tools20022.repository.msg.RedemptionExecution12.CashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution9.CashSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails61.ExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection36.ValueDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails62.ExpectedValueDate,
-					com.tools20022.repository.msg.AmountAndDirection37.ValueDate, com.tools20022.repository.msg.AmountAndDirection38.ValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails66.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails67.ExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection40.ValueDate,
-					com.tools20022.repository.msg.AggregationTransaction1.FirstPaymentDateTime, com.tools20022.repository.msg.AggregationTransaction1.LastPaymentDateTime, com.tools20022.repository.msg.NetCashForecast4.CashSettlementDate,
-					com.tools20022.repository.msg.AccountNotification10.ExpectedValueDate, com.tools20022.repository.msg.OriginalNotificationReference6.ExpectedValueDate, com.tools20022.repository.msg.OriginalItem4.ExpectedValueDate,
-					com.tools20022.repository.msg.OriginalItemAndStatus4.ExpectedValueDate, com.tools20022.repository.msg.OriginalNotificationReference5.ExpectedValueDate, com.tools20022.repository.msg.NotificationItem5.ExpectedValueDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails70.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails69.ExpectedValueDate, com.tools20022.repository.msg.NetCashForecast5.CashSettlementDate, com.tools20022.repository.msg.TransactionDetails71.ExpectedValueDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails72.ExpectedValueDate,
-					com.tools20022.repository.msg.ATMAccountStatement2.ValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails79.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails75.ExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection46.ValueDate,
-					com.tools20022.repository.msg.AmountAndDirection48.ValueDate, com.tools20022.repository.msg.AmountAndDirection45.ValueDate, com.tools20022.repository.msg.AccountNotification13.ExpectedValueDate,
-					com.tools20022.repository.msg.OriginalNotificationReference8.ExpectedValueDate, com.tools20022.repository.msg.OriginalItem5.ExpectedValueDate, com.tools20022.repository.msg.OriginalItemAndStatus5.ExpectedValueDate,
-					com.tools20022.repository.msg.OriginalNotificationReference7.ExpectedValueDate, com.tools20022.repository.msg.NotificationItem6.ExpectedValueDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.ExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection60.ValueDate,
-					com.tools20022.repository.msg.TransactionDetails87.ExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection71.ValueDate, com.tools20022.repository.msg.AmountAndDirection85.ValueDate,
-					com.tools20022.repository.msg.TransactionDetails90.ExpectedValueDate, com.tools20022.repository.msg.AggregationTransaction2.FirstPaymentDateTime,
-					com.tools20022.repository.msg.AggregationTransaction2.LastPaymentDateTime, com.tools20022.repository.msg.SwitchExecution7.CashSettlementDate, com.tools20022.repository.msg.SwitchOrder7.CashSettlementDate,
-					com.tools20022.repository.msg.RedemptionOrder14.CashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution13.CashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution12.CashSettlementDate,
-					com.tools20022.repository.msg.SubscriptionOrder15.CashSettlementDate, com.tools20022.repository.msg.RedemptionOrder15.CashSettlementDate, com.tools20022.repository.msg.RedemptionExecution16.CashSettlementDate,
-					com.tools20022.repository.msg.SubscriptionOrder14.CashSettlementDate, com.tools20022.repository.msg.RedemptionExecution15.CashSettlementDate, com.tools20022.repository.msg.TransactionDetails97.ExpectedValueDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails96.ExpectedValueDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.ExpectedValueDate, com.tools20022.repository.msg.TransactionDetails100.ExpectedValueDate,
-					com.tools20022.repository.msg.TransactionDetails99.ExpectedValueDate);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentDetails5.mmTransferValueDate, com.tools20022.repository.msg.AmountAndDirection32.mmValueDate,
+					com.tools20022.repository.msg.AmountAndDirection33.mmValueDate, com.tools20022.repository.msg.AmountAndDirection2.mmValueDate, com.tools20022.repository.msg.AmountAndDirection16.mmValueDate,
+					com.tools20022.repository.msg.TransactionDetails5.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails9.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails22.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails23.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails36.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails47.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails53.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails58.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails7.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails8.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails16.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails17.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails26.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails25.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails27.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails33.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails39.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails50.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails56.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails59.mmExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection28.mmValueDate,
+					com.tools20022.repository.msg.NetCashForecast1.mmSettlementDate, com.tools20022.repository.msg.NetCashForecast2.mmCashSettlementDate, com.tools20022.repository.msg.PaymentTransaction18.mmSettlementDate,
+					com.tools20022.repository.msg.PaymentTransaction15.mmSettlementDate, com.tools20022.repository.msg.RedemptionOrder5.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionBulkOrder3.mmCashSettlementDate,
+					com.tools20022.repository.msg.RedemptionExecution5.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionBulkExecution3.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionOrder7.mmCashSettlementDate,
+					com.tools20022.repository.msg.RedemptionBulkOrder4.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionOrder6.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmCashSettlementDate,
+					com.tools20022.repository.msg.RedemptionExecution6.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionMultipleExecution3.mmCashSettlementDate,
+					com.tools20022.repository.msg.RedemptionOrder8.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionMultipleOrder4.mmCashSettlementDate, com.tools20022.repository.msg.PaymentTransaction17.mmSettlementDate,
+					com.tools20022.repository.msg.PaymentTransaction19.mmSettlementDate, com.tools20022.repository.msg.SubscriptionOrder5.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionBulkOrder3.mmCashSettlementDate,
+					com.tools20022.repository.msg.PaymentTransaction16.mmSettlementDate, com.tools20022.repository.msg.PaymentTransaction13.mmSettlementDate, com.tools20022.repository.msg.SubscriptionExecution5.mmCashSettlementDate,
+					com.tools20022.repository.msg.SubscriptionBulkExecution3.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionOrder7.mmCashSettlementDate,
+					com.tools20022.repository.msg.SubscriptionBulkOrder4.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionOrder6.mmCashSettlementDate,
+					com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution6.mmCashSettlementDate,
+					com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionOrder8.mmCashSettlementDate,
+					com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmCashSettlementDate, com.tools20022.repository.msg.PaymentTransaction20.mmSettlementDate, com.tools20022.repository.msg.SwitchOrder3.mmCashSettlementDate,
+					com.tools20022.repository.msg.PaymentTransaction14.mmSettlementDate, com.tools20022.repository.msg.SwitchExecution4.mmCashSettlementDate, com.tools20022.repository.msg.SwitchOrder4.mmCashSettlementDate,
+					com.tools20022.repository.msg.PaymentInstructionExtract.mmValueDate, com.tools20022.repository.msg.RequestedModification.mmValueDate, com.tools20022.repository.msg.CashMovement3.mmValueDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmExpectedValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmExpectedValueDate,
+					com.tools20022.repository.msg.AmountAndDirection22.mmValueDate, com.tools20022.repository.msg.NotificationEntry2.mmExpectedValueDate, com.tools20022.repository.msg.NotificationItem3.mmExpectedValueDate,
+					com.tools20022.repository.msg.AccountNotification4.mmExpectedValueDate, com.tools20022.repository.msg.OriginalItem1.mmExpectedValueDate, com.tools20022.repository.msg.OriginalItem2.mmExpectedValueDate,
+					com.tools20022.repository.msg.OriginalNotificationReference1.mmExpectedValueDate, com.tools20022.repository.msg.OriginalItemAndStatus1.mmExpectedValueDate,
+					com.tools20022.repository.msg.OriginalItemAndStatus2.mmExpectedValueDate, com.tools20022.repository.msg.OriginalNotificationReference2.mmExpectedValueDate, com.tools20022.repository.msg.SettlementData1.mmSettlementDate,
+					com.tools20022.repository.msg.SettlementData2.mmSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmExpectedValueDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmExpectedValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmExpectedValueDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection25.mmValueDate,
+					com.tools20022.repository.msg.NotificationItem4.mmExpectedValueDate, com.tools20022.repository.msg.AccountNotification6.mmExpectedValueDate, com.tools20022.repository.msg.OriginalItem3.mmExpectedValueDate,
+					com.tools20022.repository.msg.OriginalNotificationReference4.mmExpectedValueDate, com.tools20022.repository.msg.OriginalItemAndStatus3.mmExpectedValueDate,
+					com.tools20022.repository.msg.OriginalNotificationReference3.mmExpectedValueDate, com.tools20022.repository.msg.CashCompensation1.mmValueDate, com.tools20022.repository.msg.RedemptionExecution10.mmCashSettlementDate,
+					com.tools20022.repository.msg.RedemptionOrder9.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution7.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionOrder9.mmCashSettlementDate,
+					com.tools20022.repository.msg.RedemptionExecution12.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution9.mmCashSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails61.mmExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection36.mmValueDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails62.mmExpectedValueDate,
+					com.tools20022.repository.msg.AmountAndDirection37.mmValueDate, com.tools20022.repository.msg.AmountAndDirection38.mmValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails66.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails67.mmExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection40.mmValueDate,
+					com.tools20022.repository.msg.AggregationTransaction1.mmFirstPaymentDateTime, com.tools20022.repository.msg.AggregationTransaction1.mmLastPaymentDateTime,
+					com.tools20022.repository.msg.NetCashForecast4.mmCashSettlementDate, com.tools20022.repository.msg.AccountNotification10.mmExpectedValueDate,
+					com.tools20022.repository.msg.OriginalNotificationReference6.mmExpectedValueDate, com.tools20022.repository.msg.OriginalItem4.mmExpectedValueDate,
+					com.tools20022.repository.msg.OriginalItemAndStatus4.mmExpectedValueDate, com.tools20022.repository.msg.OriginalNotificationReference5.mmExpectedValueDate,
+					com.tools20022.repository.msg.NotificationItem5.mmExpectedValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails70.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails69.mmExpectedValueDate, com.tools20022.repository.msg.NetCashForecast5.mmCashSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails71.mmExpectedValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails72.mmExpectedValueDate, com.tools20022.repository.msg.ATMAccountStatement2.mmValueDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails79.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails75.mmExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection46.mmValueDate, com.tools20022.repository.msg.AmountAndDirection48.mmValueDate,
+					com.tools20022.repository.msg.AmountAndDirection45.mmValueDate, com.tools20022.repository.msg.AccountNotification13.mmExpectedValueDate, com.tools20022.repository.msg.OriginalNotificationReference8.mmExpectedValueDate,
+					com.tools20022.repository.msg.OriginalItem5.mmExpectedValueDate, com.tools20022.repository.msg.OriginalItemAndStatus5.mmExpectedValueDate,
+					com.tools20022.repository.msg.OriginalNotificationReference7.mmExpectedValueDate, com.tools20022.repository.msg.NotificationItem6.mmExpectedValueDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection60.mmValueDate,
+					com.tools20022.repository.msg.TransactionDetails87.mmExpectedValueDate, com.tools20022.repository.msg.AmountAndDirection71.mmValueDate, com.tools20022.repository.msg.AmountAndDirection85.mmValueDate,
+					com.tools20022.repository.msg.TransactionDetails90.mmExpectedValueDate, com.tools20022.repository.msg.AggregationTransaction2.mmFirstPaymentDateTime,
+					com.tools20022.repository.msg.AggregationTransaction2.mmLastPaymentDateTime, com.tools20022.repository.msg.SwitchExecution7.mmCashSettlementDate, com.tools20022.repository.msg.SwitchOrder7.mmCashSettlementDate,
+					com.tools20022.repository.msg.RedemptionOrder14.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionExecution13.mmCashSettlementDate,
+					com.tools20022.repository.msg.SubscriptionExecution12.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionOrder15.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionOrder15.mmCashSettlementDate,
+					com.tools20022.repository.msg.RedemptionExecution16.mmCashSettlementDate, com.tools20022.repository.msg.SubscriptionOrder14.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionExecution15.mmCashSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails97.mmExpectedValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails96.mmExpectedValueDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmExpectedValueDate,
+					com.tools20022.repository.msg.TransactionDetails100.mmExpectedValueDate, com.tools20022.repository.msg.TransactionDetails99.mmExpectedValueDate);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
 			definition = "Date on which a payment must be executed";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PaymentStatus> paymentStatus;
 	/**
 	 * Specifies the status of a payment at a specified time.
 	 * <p>
@@ -3470,8 +3499,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#Payment
-	 * PaymentStatus.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmPayment
+	 * PaymentStatus.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3479,200 +3508,201 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentStatus
 	 * PaymentStatus}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCommonDetails2#PaymentInstructionStatus
-	 * PaymentCommonDetails2.PaymentInstructionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails5#InstructionStatus
-	 * PaymentDetails5.InstructionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCommonDetails3#PaymentInstructionStatus
-	 * PaymentCommonDetails3.PaymentInstructionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails6#InstructionStatus
-	 * PaymentDetails6.InstructionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCommonDetails4#CommonInstructionStatus
-	 * PaymentCommonDetails4.CommonInstructionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails7#InstructionStatus
-	 * PaymentDetails7.InstructionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCommon1#CommonStatus
-	 * PaymentCommon1.CommonStatus}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentInstruction1#Status
-	 * PaymentInstruction1.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5#ReturnReason
-	 * ReturnReasonInformation5.ReturnReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#ReturnInformation
-	 * EntryTransaction1.ReturnInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#ReturnInformation
-	 * EntryTransaction2.ReturnInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#ReturnInformation
-	 * EntryTransaction3.ReturnInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#ReturnInformation
-	 * EntryTransaction4.ReturnInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#CancellationReasonInformation
-	 * OriginalPaymentInformation4.CancellationReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation4#ReversalReasonInformation
-	 * PaymentTransactionInformation4.ReversalReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#ReversalReasonInformation
-	 * PaymentTransactionInformation28.ReversalReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader3#ReversalReasonInformation
-	 * OriginalGroupHeader3.ReversalReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction32#TransactionStatus
-	 * PaymentTransaction32.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction46#TransactionStatus
-	 * PaymentTransaction46.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation5#ReversalReasonInformation
-	 * PaymentTransactionInformation5.ReversalReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation29#ReversalReasonInformation
-	 * PaymentTransactionInformation29.ReversalReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction33#TransactionStatus
-	 * PaymentTransaction33.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction43#TransactionStatus
-	 * PaymentTransaction43.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#ReturnReasonInformation
-	 * PaymentTransactionInformation2.ReturnReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#ReturnReasonInformation
-	 * PaymentTransactionInformation27.ReturnReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction41#TransactionStatus
-	 * PaymentTransaction41.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction49#TransactionStatus
-	 * PaymentTransaction49.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation3#CancellationStatusReasonInformation
-	 * OriginalPaymentInformation3.CancellationStatusReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#TransactionCancellationStatus
-	 * PaymentTransaction39.TransactionCancellationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction40#TransactionCancellationStatus
-	 * PaymentTransaction40.TransactionCancellationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation13#ReturnReasonInformation
-	 * PaymentTransactionInformation13.ReturnReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation18#ReturnReasonInformation
-	 * PaymentTransactionInformation18.ReturnReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation14#ReversalReasonInformation
-	 * PaymentTransactionInformation14.ReversalReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation20#ReversalReasonInformation
-	 * PaymentTransactionInformation20.ReversalReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#ReturnReasonInformation
-	 * PaymentTransactionInformation16.ReturnReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#ReturnReasonInformation
-	 * PaymentTransactionInformation23.ReturnReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation17#ReversalReasonInformation
-	 * PaymentTransactionInformation17.ReversalReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation24#ReversalReasonInformation
-	 * PaymentTransactionInformation24.ReversalReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#ReturnReasonInformation
-	 * PaymentTransactionInformation21.ReturnReasonInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement1#StatusAndReason
-	 * IntraBalanceMovement1.StatusAndReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovements1#StatusAndReason
-	 * IntraBalanceMovements1.StatusAndReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalancePending2#StatusAndReason
-	 * IntraBalancePending2.StatusAndReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalancePending1#StatusAndReason
-	 * IntraBalancePending1.StatusAndReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#CommonStatus
-	 * PaymentCommon2.CommonStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#Status
-	 * PaymentInstruction14.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction52#TransactionStatus
-	 * PaymentTransaction52.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#TransactionCancellationStatus
-	 * PaymentTransaction54.TransactionCancellationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction53#TransactionCancellationStatus
-	 * PaymentTransaction53.TransactionCancellationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction57#TransactionStatus
-	 * PaymentTransaction57.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#ReturnInformation
-	 * EntryTransaction7.ReturnInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction59#TransactionStatus
-	 * PaymentTransaction59.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction63#TransactionStatus
-	 * PaymentTransaction63.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction68#TransactionStatus
-	 * PaymentTransaction68.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#TransactionCancellationStatus
-	 * PaymentTransaction66.TransactionCancellationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction67#TransactionCancellationStatus
-	 * PaymentTransaction67.TransactionCancellationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#ReturnInformation
-	 * EntryTransaction8.ReturnInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction69#TransactionStatus
-	 * PaymentTransaction69.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction80#TransactionStatus
-	 * PaymentTransaction80.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#TransactionCancellationStatus
-	 * PaymentTransaction78.TransactionCancellationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction83#TransactionStatus
-	 * PaymentTransaction83.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction82#TransactionStatus
-	 * PaymentTransaction82.TransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#TransactionCancellationStatus
-	 * PaymentTransaction79.TransactionCancellationStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommonDetails2#mmPaymentInstructionStatus
+	 * PaymentCommonDetails2.mmPaymentInstructionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails5#mmInstructionStatus
+	 * PaymentDetails5.mmInstructionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommonDetails3#mmPaymentInstructionStatus
+	 * PaymentCommonDetails3.mmPaymentInstructionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails6#mmInstructionStatus
+	 * PaymentDetails6.mmInstructionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommonDetails4#mmCommonInstructionStatus
+	 * PaymentCommonDetails4.mmCommonInstructionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails7#mmInstructionStatus
+	 * PaymentDetails7.mmInstructionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon1#mmCommonStatus
+	 * PaymentCommon1.mmCommonStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction1#mmStatus
+	 * PaymentInstruction1.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5#mmReturnReason
+	 * ReturnReasonInformation5.mmReturnReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#mmReturnInformation
+	 * EntryTransaction1.mmReturnInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#mmReturnInformation
+	 * EntryTransaction2.mmReturnInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#mmReturnInformation
+	 * EntryTransaction3.mmReturnInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#mmReturnInformation
+	 * EntryTransaction4.mmReturnInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmCancellationReasonInformation
+	 * OriginalPaymentInformation4.mmCancellationReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation4#mmReversalReasonInformation
+	 * PaymentTransactionInformation4.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmReversalReasonInformation
+	 * PaymentTransactionInformation28.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader3#mmReversalReasonInformation
+	 * OriginalGroupHeader3.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction32#mmTransactionStatus
+	 * PaymentTransaction32.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction46#mmTransactionStatus
+	 * PaymentTransaction46.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation5#mmReversalReasonInformation
+	 * PaymentTransactionInformation5.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation29#mmReversalReasonInformation
+	 * PaymentTransactionInformation29.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction33#mmTransactionStatus
+	 * PaymentTransaction33.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction43#mmTransactionStatus
+	 * PaymentTransaction43.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#mmReturnReasonInformation
+	 * PaymentTransactionInformation2.mmReturnReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#mmReturnReasonInformation
+	 * PaymentTransactionInformation27.mmReturnReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction41#mmTransactionStatus
+	 * PaymentTransaction41.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction49#mmTransactionStatus
+	 * PaymentTransaction49.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation3#mmCancellationStatusReasonInformation
+	 * OriginalPaymentInformation3.mmCancellationStatusReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#mmTransactionCancellationStatus
+	 * PaymentTransaction39.mmTransactionCancellationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction40#mmTransactionCancellationStatus
+	 * PaymentTransaction40.mmTransactionCancellationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation13#mmReturnReasonInformation
+	 * PaymentTransactionInformation13.mmReturnReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation18#mmReturnReasonInformation
+	 * PaymentTransactionInformation18.mmReturnReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation14#mmReversalReasonInformation
+	 * PaymentTransactionInformation14.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation20#mmReversalReasonInformation
+	 * PaymentTransactionInformation20.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#mmReturnReasonInformation
+	 * PaymentTransactionInformation16.mmReturnReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#mmReturnReasonInformation
+	 * PaymentTransactionInformation23.mmReturnReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation17#mmReversalReasonInformation
+	 * PaymentTransactionInformation17.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation24#mmReversalReasonInformation
+	 * PaymentTransactionInformation24.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#mmReturnReasonInformation
+	 * PaymentTransactionInformation21.mmReturnReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement1#mmStatusAndReason
+	 * IntraBalanceMovement1.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovements1#mmStatusAndReason
+	 * IntraBalanceMovements1.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalancePending2#mmStatusAndReason
+	 * IntraBalancePending2.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalancePending1#mmStatusAndReason
+	 * IntraBalancePending1.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon2#mmCommonStatus
+	 * PaymentCommon2.mmCommonStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#mmStatus
+	 * PaymentInstruction14.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction52#mmTransactionStatus
+	 * PaymentTransaction52.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#mmTransactionCancellationStatus
+	 * PaymentTransaction54.mmTransactionCancellationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction53#mmTransactionCancellationStatus
+	 * PaymentTransaction53.mmTransactionCancellationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction57#mmTransactionStatus
+	 * PaymentTransaction57.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#mmReturnInformation
+	 * EntryTransaction7.mmReturnInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction59#mmTransactionStatus
+	 * PaymentTransaction59.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction63#mmTransactionStatus
+	 * PaymentTransaction63.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction68#mmTransactionStatus
+	 * PaymentTransaction68.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#mmTransactionCancellationStatus
+	 * PaymentTransaction66.mmTransactionCancellationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction67#mmTransactionCancellationStatus
+	 * PaymentTransaction67.mmTransactionCancellationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmReturnInformation
+	 * EntryTransaction8.mmReturnInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction69#mmTransactionStatus
+	 * PaymentTransaction69.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction80#mmTransactionStatus
+	 * PaymentTransaction80.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#mmTransactionCancellationStatus
+	 * PaymentTransaction78.mmTransactionCancellationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction83#mmTransactionStatus
+	 * PaymentTransaction83.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction82#mmTransactionStatus
+	 * PaymentTransaction82.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#mmTransactionCancellationStatus
+	 * PaymentTransaction79.mmTransactionCancellationStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3684,46 +3714,48 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Specifies the status of a payment at a specified time."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PaymentStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPaymentStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommonDetails2.PaymentInstructionStatus, com.tools20022.repository.msg.PaymentDetails5.InstructionStatus,
-					com.tools20022.repository.msg.PaymentCommonDetails3.PaymentInstructionStatus, com.tools20022.repository.msg.PaymentDetails6.InstructionStatus, com.tools20022.repository.msg.PaymentCommonDetails4.CommonInstructionStatus,
-					com.tools20022.repository.msg.PaymentDetails7.InstructionStatus, com.tools20022.repository.msg.PaymentCommon1.CommonStatus, com.tools20022.repository.msg.PaymentInstruction1.Status,
-					com.tools20022.repository.msg.ReturnReasonInformation5.ReturnReason, com.tools20022.repository.msg.EntryTransaction1.ReturnInformation, com.tools20022.repository.msg.EntryTransaction2.ReturnInformation,
-					com.tools20022.repository.msg.EntryTransaction3.ReturnInformation, com.tools20022.repository.msg.EntryTransaction4.ReturnInformation,
-					com.tools20022.repository.msg.OriginalPaymentInformation4.CancellationReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation4.ReversalReasonInformation,
-					com.tools20022.repository.msg.PaymentTransactionInformation28.ReversalReasonInformation, com.tools20022.repository.msg.OriginalGroupHeader3.ReversalReasonInformation,
-					com.tools20022.repository.msg.PaymentTransaction32.TransactionStatus, com.tools20022.repository.msg.PaymentTransaction46.TransactionStatus,
-					com.tools20022.repository.msg.PaymentTransactionInformation5.ReversalReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation29.ReversalReasonInformation,
-					com.tools20022.repository.msg.PaymentTransaction33.TransactionStatus, com.tools20022.repository.msg.PaymentTransaction43.TransactionStatus,
-					com.tools20022.repository.msg.PaymentTransactionInformation2.ReturnReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation27.ReturnReasonInformation,
-					com.tools20022.repository.msg.PaymentTransaction41.TransactionStatus, com.tools20022.repository.msg.PaymentTransaction49.TransactionStatus,
-					com.tools20022.repository.msg.OriginalPaymentInformation3.CancellationStatusReasonInformation, com.tools20022.repository.msg.PaymentTransaction39.TransactionCancellationStatus,
-					com.tools20022.repository.msg.PaymentTransaction40.TransactionCancellationStatus, com.tools20022.repository.msg.PaymentTransactionInformation13.ReturnReasonInformation,
-					com.tools20022.repository.msg.PaymentTransactionInformation18.ReturnReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation14.ReversalReasonInformation,
-					com.tools20022.repository.msg.PaymentTransactionInformation20.ReversalReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation16.ReturnReasonInformation,
-					com.tools20022.repository.msg.PaymentTransactionInformation23.ReturnReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation17.ReversalReasonInformation,
-					com.tools20022.repository.msg.PaymentTransactionInformation24.ReversalReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation21.ReturnReasonInformation,
-					com.tools20022.repository.msg.IntraBalanceMovement1.StatusAndReason, com.tools20022.repository.msg.IntraBalanceMovements1.StatusAndReason, com.tools20022.repository.msg.IntraBalancePending2.StatusAndReason,
-					com.tools20022.repository.msg.IntraBalancePending1.StatusAndReason, com.tools20022.repository.msg.PaymentCommon2.CommonStatus, com.tools20022.repository.msg.PaymentInstruction14.Status,
-					com.tools20022.repository.msg.PaymentTransaction52.TransactionStatus, com.tools20022.repository.msg.PaymentTransaction54.TransactionCancellationStatus,
-					com.tools20022.repository.msg.PaymentTransaction53.TransactionCancellationStatus, com.tools20022.repository.msg.PaymentTransaction57.TransactionStatus, com.tools20022.repository.msg.EntryTransaction7.ReturnInformation,
-					com.tools20022.repository.msg.PaymentTransaction59.TransactionStatus, com.tools20022.repository.msg.PaymentTransaction63.TransactionStatus, com.tools20022.repository.msg.PaymentTransaction68.TransactionStatus,
-					com.tools20022.repository.msg.PaymentTransaction66.TransactionCancellationStatus, com.tools20022.repository.msg.PaymentTransaction67.TransactionCancellationStatus,
-					com.tools20022.repository.msg.EntryTransaction8.ReturnInformation, com.tools20022.repository.msg.PaymentTransaction69.TransactionStatus, com.tools20022.repository.msg.PaymentTransaction80.TransactionStatus,
-					com.tools20022.repository.msg.PaymentTransaction78.TransactionCancellationStatus, com.tools20022.repository.msg.PaymentTransaction83.TransactionStatus,
-					com.tools20022.repository.msg.PaymentTransaction82.TransactionStatus, com.tools20022.repository.msg.PaymentTransaction79.TransactionCancellationStatus);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommonDetails2.mmPaymentInstructionStatus, com.tools20022.repository.msg.PaymentDetails5.mmInstructionStatus,
+					com.tools20022.repository.msg.PaymentCommonDetails3.mmPaymentInstructionStatus, com.tools20022.repository.msg.PaymentDetails6.mmInstructionStatus,
+					com.tools20022.repository.msg.PaymentCommonDetails4.mmCommonInstructionStatus, com.tools20022.repository.msg.PaymentDetails7.mmInstructionStatus, com.tools20022.repository.msg.PaymentCommon1.mmCommonStatus,
+					com.tools20022.repository.msg.PaymentInstruction1.mmStatus, com.tools20022.repository.msg.ReturnReasonInformation5.mmReturnReason, com.tools20022.repository.msg.EntryTransaction1.mmReturnInformation,
+					com.tools20022.repository.msg.EntryTransaction2.mmReturnInformation, com.tools20022.repository.msg.EntryTransaction3.mmReturnInformation, com.tools20022.repository.msg.EntryTransaction4.mmReturnInformation,
+					com.tools20022.repository.msg.OriginalPaymentInformation4.mmCancellationReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation4.mmReversalReasonInformation,
+					com.tools20022.repository.msg.PaymentTransactionInformation28.mmReversalReasonInformation, com.tools20022.repository.msg.OriginalGroupHeader3.mmReversalReasonInformation,
+					com.tools20022.repository.msg.PaymentTransaction32.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransaction46.mmTransactionStatus,
+					com.tools20022.repository.msg.PaymentTransactionInformation5.mmReversalReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation29.mmReversalReasonInformation,
+					com.tools20022.repository.msg.PaymentTransaction33.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransaction43.mmTransactionStatus,
+					com.tools20022.repository.msg.PaymentTransactionInformation2.mmReturnReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation27.mmReturnReasonInformation,
+					com.tools20022.repository.msg.PaymentTransaction41.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransaction49.mmTransactionStatus,
+					com.tools20022.repository.msg.OriginalPaymentInformation3.mmCancellationStatusReasonInformation, com.tools20022.repository.msg.PaymentTransaction39.mmTransactionCancellationStatus,
+					com.tools20022.repository.msg.PaymentTransaction40.mmTransactionCancellationStatus, com.tools20022.repository.msg.PaymentTransactionInformation13.mmReturnReasonInformation,
+					com.tools20022.repository.msg.PaymentTransactionInformation18.mmReturnReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation14.mmReversalReasonInformation,
+					com.tools20022.repository.msg.PaymentTransactionInformation20.mmReversalReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation16.mmReturnReasonInformation,
+					com.tools20022.repository.msg.PaymentTransactionInformation23.mmReturnReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation17.mmReversalReasonInformation,
+					com.tools20022.repository.msg.PaymentTransactionInformation24.mmReversalReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation21.mmReturnReasonInformation,
+					com.tools20022.repository.msg.IntraBalanceMovement1.mmStatusAndReason, com.tools20022.repository.msg.IntraBalanceMovements1.mmStatusAndReason, com.tools20022.repository.msg.IntraBalancePending2.mmStatusAndReason,
+					com.tools20022.repository.msg.IntraBalancePending1.mmStatusAndReason, com.tools20022.repository.msg.PaymentCommon2.mmCommonStatus, com.tools20022.repository.msg.PaymentInstruction14.mmStatus,
+					com.tools20022.repository.msg.PaymentTransaction52.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransaction54.mmTransactionCancellationStatus,
+					com.tools20022.repository.msg.PaymentTransaction53.mmTransactionCancellationStatus, com.tools20022.repository.msg.PaymentTransaction57.mmTransactionStatus,
+					com.tools20022.repository.msg.EntryTransaction7.mmReturnInformation, com.tools20022.repository.msg.PaymentTransaction59.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransaction63.mmTransactionStatus,
+					com.tools20022.repository.msg.PaymentTransaction68.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransaction66.mmTransactionCancellationStatus,
+					com.tools20022.repository.msg.PaymentTransaction67.mmTransactionCancellationStatus, com.tools20022.repository.msg.EntryTransaction8.mmReturnInformation,
+					com.tools20022.repository.msg.PaymentTransaction69.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransaction80.mmTransactionStatus,
+					com.tools20022.repository.msg.PaymentTransaction78.mmTransactionCancellationStatus, com.tools20022.repository.msg.PaymentTransaction83.mmTransactionStatus,
+					com.tools20022.repository.msg.PaymentTransaction82.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransaction79.mmTransactionCancellationStatus);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentStatus";
 			definition = "Specifies the status of a payment at a specified time.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentStatus.Payment;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PaymentPartyRole> partyRole;
 	/**
 	 * Specifies each role linked to a payment and played by a party at that
 	 * step in a payment flow.
@@ -3733,8 +3765,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#Payment
-	 * PaymentPartyRole.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmPayment
+	 * PaymentPartyRole.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3742,204 +3774,204 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
 	 * PaymentPartyRole}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails5#PaymentTransactionParty
-	 * PaymentDetails5.PaymentTransactionParty}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails6#PaymentTransactionParty
-	 * PaymentDetails6.PaymentTransactionParty}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentDetails7#PaymentTransactionParty
-	 * PaymentDetails7.PaymentTransactionParty}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction1#Parties
-	 * PaymentInstruction1.Parties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3#CashParties
-	 * SecuritiesSettlementTransactionDetails3.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4#CashParties
-	 * SecuritiesSettlementTransactionDetails4.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2#CashParties
-	 * SecuritiesSettlementTransactionDetails2.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5#CashParties
-	 * SecuritiesSettlementTransactionDetails5.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6#CashParties
-	 * SecuritiesSettlementTransactionDetails6.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7#CashParties
-	 * SecuritiesSettlementTransactionDetails7.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption2#CashParties
-	 * CashOption2.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption9#CashParties
-	 * CashOption9.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption12#CashParties
-	 * CashOption12.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption13#CashParties
-	 * CashOption13.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption18#CashParties
-	 * CashOption18.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption22#CashParties
-	 * CashOption22.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption26#CashParties
-	 * CashOption26.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption27#CashParties
-	 * CashOption27.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8#CashParties
-	 * SecuritiesSettlementTransactionDetails8.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9#CashParties
-	 * SecuritiesSettlementTransactionDetails9.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10#CashParties
-	 * SecuritiesSettlementTransactionDetails10.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11#CashParties
-	 * SecuritiesSettlementTransactionDetails11.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12#CashParties
-	 * SecuritiesSettlementTransactionDetails12.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13#CashParties
-	 * SecuritiesSettlementTransactionDetails13.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order3#CashParties
-	 * Order3.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#RelatedParties
-	 * EntryTransaction1.RelatedParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#RelatedAgents
-	 * EntryTransaction1.RelatedAgents}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#RelatedParties
-	 * EntryTransaction2.RelatedParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#RelatedAgents
-	 * EntryTransaction2.RelatedAgents}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#RelatedParties
-	 * EntryTransaction3.RelatedParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#RelatedAgents
-	 * EntryTransaction3.RelatedAgents}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#RelatedParties
-	 * EntryTransaction4.RelatedParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#RelatedAgents
-	 * EntryTransaction4.RelatedAgents}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason5#CashParties
-	 * OrderStatusAndReason5.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order9#CashParties
-	 * Order9.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#CashParties
-	 * MassQuote1.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#CashParties
-	 * IndicationOfInterest1.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order6#CashParties
-	 * Order6.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order11#CashParties
-	 * Order11.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#Parties
-	 * PaymentInstruction14.Parties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16#CashParties
-	 * SecuritiesSettlementTransactionDetails16.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14#CashParties
-	 * SecuritiesSettlementTransactionDetails14.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15#CashParties
-	 * SecuritiesSettlementTransactionDetails15.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption30#CashParties
-	 * CashOption30.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption38#CashParties
-	 * CashOption38.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17#CashParties
-	 * SecuritiesSettlementTransactionDetails17.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18#CashParties
-	 * SecuritiesSettlementTransactionDetails18.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19#CashParties
-	 * SecuritiesSettlementTransactionDetails19.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#RelatedParties
-	 * EntryTransaction7.RelatedParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#RelatedAgents
-	 * EntryTransaction7.RelatedAgents}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption39#CashParties
-	 * CashOption39.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption41#CashParties
-	 * CashOption41.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21#CashParties
-	 * SecuritiesSettlementTransactionDetails21.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22#CashParties
-	 * SecuritiesSettlementTransactionDetails22.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20#CashParties
-	 * SecuritiesSettlementTransactionDetails20.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#RelatedParties
-	 * EntryTransaction8.RelatedParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#RelatedAgents
-	 * EntryTransaction8.RelatedAgents}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption44#CashParties
-	 * CashOption44.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption46#CashParties
-	 * CashOption46.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23#CashParties
-	 * SecuritiesSettlementTransactionDetails23.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25#CashParties
-	 * SecuritiesSettlementTransactionDetails25.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24#CashParties
-	 * SecuritiesSettlementTransactionDetails24.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#CashParties
-	 * CashOption52.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27#CashParties
-	 * SecuritiesSettlementTransactionDetails27.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28#CashParties
-	 * SecuritiesSettlementTransactionDetails28.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26#CashParties
-	 * SecuritiesSettlementTransactionDetails26.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30#CashParties
-	 * SecuritiesSettlementTransactionDetails30.CashParties}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption55#CashParties
-	 * CashOption55.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29#CashParties
-	 * SecuritiesSettlementTransactionDetails29.CashParties}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#CashParties
-	 * SecuritiesSettlementTransactionDetails31.CashParties}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails5#mmPaymentTransactionParty
+	 * PaymentDetails5.mmPaymentTransactionParty}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails6#mmPaymentTransactionParty
+	 * PaymentDetails6.mmPaymentTransactionParty}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentDetails7#mmPaymentTransactionParty
+	 * PaymentDetails7.mmPaymentTransactionParty}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction1#mmParties
+	 * PaymentInstruction1.mmParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3#mmCashParties
+	 * SecuritiesSettlementTransactionDetails3.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4#mmCashParties
+	 * SecuritiesSettlementTransactionDetails4.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2#mmCashParties
+	 * SecuritiesSettlementTransactionDetails2.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5#mmCashParties
+	 * SecuritiesSettlementTransactionDetails5.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6#mmCashParties
+	 * SecuritiesSettlementTransactionDetails6.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7#mmCashParties
+	 * SecuritiesSettlementTransactionDetails7.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption2#mmCashParties
+	 * CashOption2.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption9#mmCashParties
+	 * CashOption9.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption12#mmCashParties
+	 * CashOption12.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption13#mmCashParties
+	 * CashOption13.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption18#mmCashParties
+	 * CashOption18.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption22#mmCashParties
+	 * CashOption22.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption26#mmCashParties
+	 * CashOption26.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption27#mmCashParties
+	 * CashOption27.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8#mmCashParties
+	 * SecuritiesSettlementTransactionDetails8.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9#mmCashParties
+	 * SecuritiesSettlementTransactionDetails9.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10#mmCashParties
+	 * SecuritiesSettlementTransactionDetails10.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11#mmCashParties
+	 * SecuritiesSettlementTransactionDetails11.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12#mmCashParties
+	 * SecuritiesSettlementTransactionDetails12.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13#mmCashParties
+	 * SecuritiesSettlementTransactionDetails13.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order3#mmCashParties
+	 * Order3.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#mmRelatedParties
+	 * EntryTransaction1.mmRelatedParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#mmRelatedAgents
+	 * EntryTransaction1.mmRelatedAgents}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#mmRelatedParties
+	 * EntryTransaction2.mmRelatedParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#mmRelatedAgents
+	 * EntryTransaction2.mmRelatedAgents}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#mmRelatedParties
+	 * EntryTransaction3.mmRelatedParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#mmRelatedAgents
+	 * EntryTransaction3.mmRelatedAgents}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#mmRelatedParties
+	 * EntryTransaction4.mmRelatedParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#mmRelatedAgents
+	 * EntryTransaction4.mmRelatedAgents}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason5#mmCashParties
+	 * OrderStatusAndReason5.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order9#mmCashParties
+	 * Order9.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#mmCashParties
+	 * MassQuote1.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndicationOfInterest1#mmCashParties
+	 * IndicationOfInterest1.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order6#mmCashParties
+	 * Order6.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order11#mmCashParties
+	 * Order11.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#mmParties
+	 * PaymentInstruction14.mmParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16#mmCashParties
+	 * SecuritiesSettlementTransactionDetails16.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14#mmCashParties
+	 * SecuritiesSettlementTransactionDetails14.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15#mmCashParties
+	 * SecuritiesSettlementTransactionDetails15.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption30#mmCashParties
+	 * CashOption30.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption38#mmCashParties
+	 * CashOption38.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17#mmCashParties
+	 * SecuritiesSettlementTransactionDetails17.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18#mmCashParties
+	 * SecuritiesSettlementTransactionDetails18.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19#mmCashParties
+	 * SecuritiesSettlementTransactionDetails19.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#mmRelatedParties
+	 * EntryTransaction7.mmRelatedParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#mmRelatedAgents
+	 * EntryTransaction7.mmRelatedAgents}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption39#mmCashParties
+	 * CashOption39.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption41#mmCashParties
+	 * CashOption41.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21#mmCashParties
+	 * SecuritiesSettlementTransactionDetails21.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22#mmCashParties
+	 * SecuritiesSettlementTransactionDetails22.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20#mmCashParties
+	 * SecuritiesSettlementTransactionDetails20.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmRelatedParties
+	 * EntryTransaction8.mmRelatedParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmRelatedAgents
+	 * EntryTransaction8.mmRelatedAgents}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption44#mmCashParties
+	 * CashOption44.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption46#mmCashParties
+	 * CashOption46.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23#mmCashParties
+	 * SecuritiesSettlementTransactionDetails23.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25#mmCashParties
+	 * SecuritiesSettlementTransactionDetails25.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24#mmCashParties
+	 * SecuritiesSettlementTransactionDetails24.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#mmCashParties
+	 * CashOption52.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27#mmCashParties
+	 * SecuritiesSettlementTransactionDetails27.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28#mmCashParties
+	 * SecuritiesSettlementTransactionDetails28.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26#mmCashParties
+	 * SecuritiesSettlementTransactionDetails26.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30#mmCashParties
+	 * SecuritiesSettlementTransactionDetails30.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption55#mmCashParties
+	 * CashOption55.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29#mmCashParties
+	 * SecuritiesSettlementTransactionDetails29.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#mmCashParties
+	 * SecuritiesSettlementTransactionDetails31.mmCashParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3953,47 +3985,49 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentDetails5.PaymentTransactionParty, com.tools20022.repository.msg.PaymentDetails6.PaymentTransactionParty,
-					com.tools20022.repository.msg.PaymentDetails7.PaymentTransactionParty, com.tools20022.repository.msg.PaymentInstruction1.Parties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.CashParties, com.tools20022.repository.msg.CashOption2.CashParties, com.tools20022.repository.msg.CashOption9.CashParties,
-					com.tools20022.repository.msg.CashOption12.CashParties, com.tools20022.repository.msg.CashOption13.CashParties, com.tools20022.repository.msg.CashOption18.CashParties,
-					com.tools20022.repository.msg.CashOption22.CashParties, com.tools20022.repository.msg.CashOption26.CashParties, com.tools20022.repository.msg.CashOption27.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.CashParties, com.tools20022.repository.msg.Order3.CashParties,
-					com.tools20022.repository.msg.EntryTransaction1.RelatedParties, com.tools20022.repository.msg.EntryTransaction1.RelatedAgents, com.tools20022.repository.msg.EntryTransaction2.RelatedParties,
-					com.tools20022.repository.msg.EntryTransaction2.RelatedAgents, com.tools20022.repository.msg.EntryTransaction3.RelatedParties, com.tools20022.repository.msg.EntryTransaction3.RelatedAgents,
-					com.tools20022.repository.msg.EntryTransaction4.RelatedParties, com.tools20022.repository.msg.EntryTransaction4.RelatedAgents, com.tools20022.repository.msg.OrderStatusAndReason5.CashParties,
-					com.tools20022.repository.msg.Order9.CashParties, com.tools20022.repository.msg.MassQuote1.CashParties, com.tools20022.repository.msg.IndicationOfInterest1.CashParties, com.tools20022.repository.msg.Order6.CashParties,
-					com.tools20022.repository.msg.Order11.CashParties, com.tools20022.repository.msg.PaymentInstruction14.Parties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.CashParties,
-					com.tools20022.repository.msg.CashOption30.CashParties, com.tools20022.repository.msg.CashOption38.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.CashParties,
-					com.tools20022.repository.msg.EntryTransaction7.RelatedParties, com.tools20022.repository.msg.EntryTransaction7.RelatedAgents, com.tools20022.repository.msg.CashOption39.CashParties,
-					com.tools20022.repository.msg.CashOption41.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.CashParties,
-					com.tools20022.repository.msg.EntryTransaction8.RelatedParties, com.tools20022.repository.msg.EntryTransaction8.RelatedAgents, com.tools20022.repository.msg.CashOption44.CashParties,
-					com.tools20022.repository.msg.CashOption46.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.CashParties,
-					com.tools20022.repository.msg.CashOption52.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.CashParties, com.tools20022.repository.msg.CashOption55.CashParties,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.CashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.CashParties);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentDetails5.mmPaymentTransactionParty, com.tools20022.repository.msg.PaymentDetails6.mmPaymentTransactionParty,
+					com.tools20022.repository.msg.PaymentDetails7.mmPaymentTransactionParty, com.tools20022.repository.msg.PaymentInstruction1.mmParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.mmCashParties, com.tools20022.repository.msg.CashOption2.mmCashParties, com.tools20022.repository.msg.CashOption9.mmCashParties,
+					com.tools20022.repository.msg.CashOption12.mmCashParties, com.tools20022.repository.msg.CashOption13.mmCashParties, com.tools20022.repository.msg.CashOption18.mmCashParties,
+					com.tools20022.repository.msg.CashOption22.mmCashParties, com.tools20022.repository.msg.CashOption26.mmCashParties, com.tools20022.repository.msg.CashOption27.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.mmCashParties,
+					com.tools20022.repository.msg.Order3.mmCashParties, com.tools20022.repository.msg.EntryTransaction1.mmRelatedParties, com.tools20022.repository.msg.EntryTransaction1.mmRelatedAgents,
+					com.tools20022.repository.msg.EntryTransaction2.mmRelatedParties, com.tools20022.repository.msg.EntryTransaction2.mmRelatedAgents, com.tools20022.repository.msg.EntryTransaction3.mmRelatedParties,
+					com.tools20022.repository.msg.EntryTransaction3.mmRelatedAgents, com.tools20022.repository.msg.EntryTransaction4.mmRelatedParties, com.tools20022.repository.msg.EntryTransaction4.mmRelatedAgents,
+					com.tools20022.repository.msg.OrderStatusAndReason5.mmCashParties, com.tools20022.repository.msg.Order9.mmCashParties, com.tools20022.repository.msg.MassQuote1.mmCashParties,
+					com.tools20022.repository.msg.IndicationOfInterest1.mmCashParties, com.tools20022.repository.msg.Order6.mmCashParties, com.tools20022.repository.msg.Order11.mmCashParties,
+					com.tools20022.repository.msg.PaymentInstruction14.mmParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.mmCashParties,
+					com.tools20022.repository.msg.CashOption30.mmCashParties, com.tools20022.repository.msg.CashOption38.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.mmCashParties,
+					com.tools20022.repository.msg.EntryTransaction7.mmRelatedParties, com.tools20022.repository.msg.EntryTransaction7.mmRelatedAgents, com.tools20022.repository.msg.CashOption39.mmCashParties,
+					com.tools20022.repository.msg.CashOption41.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.mmCashParties,
+					com.tools20022.repository.msg.EntryTransaction8.mmRelatedParties, com.tools20022.repository.msg.EntryTransaction8.mmRelatedAgents, com.tools20022.repository.msg.CashOption44.mmCashParties,
+					com.tools20022.repository.msg.CashOption46.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.mmCashParties,
+					com.tools20022.repository.msg.CashOption52.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.mmCashParties, com.tools20022.repository.msg.CashOption55.mmCashParties,
+					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmCashParties);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Specifies each role linked to a payment and played by a party at that step in a payment flow.";
 			minOccurs = 1;
-			type_lazy = () -> PaymentPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.Payment;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Tax> taxOnPayment;
 	/**
 	 * Payment levy tax.
 	 * <p>
@@ -4002,110 +4036,110 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#RelatedPaymentSettlement
-	 * Tax.RelatedPaymentSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedPaymentSettlement
+	 * Tax.mmRelatedPaymentSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction1#Tax
-	 * EntryTransaction1.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction2#Tax
-	 * EntryTransaction2.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction3#Tax
-	 * EntryTransaction3.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction4#Tax
-	 * EntryTransaction4.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#Tax
-	 * CreditTransferTransactionInformation1.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#Tax
-	 * CreditTransferTransactionInformation10.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#Tax
-	 * CreditTransferTransaction1.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#Tax
-	 * CreditTransferTransaction6.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#Tax
-	 * DirectDebitTransactionInformation1.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#Tax
-	 * DirectDebitTransactionInformation9.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#Tax
-	 * DirectDebitTransactionInformation11.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#Tax
-	 * DirectDebitTransactionInformation13.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation14#Tax
-	 * CreditTransferTransactionInformation14.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction5#Tax
-	 * CreditTransferTransaction5.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction10#Tax
-	 * CreditTransferTransaction10.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation10#TaxRemittance
-	 * StructuredRemittanceInformation10.TaxRemittance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#Tax
-	 * CreditTransferTransaction19.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#TaxRemittance
-	 * StructuredRemittanceInformation12.TaxRemittance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction18#Tax
-	 * CreditTransferTransaction18.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#Tax
-	 * DirectDebitTransactionInformation18.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#Tax
-	 * CreditTransferTransaction20.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction7#Tax
-	 * EntryTransaction7.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction21#Tax
-	 * CreditTransferTransaction21.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#Tax
-	 * CreditTransferTransaction25.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction24#Tax
-	 * CreditTransferTransaction24.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#Tax
-	 * CreditTransferTransaction26.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation13#TaxRemittance
-	 * StructuredRemittanceInformation13.TaxRemittance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#Tax
-	 * DirectDebitTransactionInformation19.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#Tax
-	 * CreditTransferTransaction22.Tax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction8#Tax
-	 * EntryTransaction8.Tax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#Tax
-	 * DirectDebitTransactionInformation22.Tax}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction1#mmTax
+	 * EntryTransaction1.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction2#mmTax
+	 * EntryTransaction2.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction3#mmTax
+	 * EntryTransaction3.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction4#mmTax
+	 * EntryTransaction4.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#mmTax
+	 * CreditTransferTransactionInformation1.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#mmTax
+	 * CreditTransferTransactionInformation10.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#mmTax
+	 * CreditTransferTransaction1.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#mmTax
+	 * CreditTransferTransaction6.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#mmTax
+	 * DirectDebitTransactionInformation1.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#mmTax
+	 * DirectDebitTransactionInformation9.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmTax
+	 * DirectDebitTransactionInformation11.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#mmTax
+	 * DirectDebitTransactionInformation13.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation14#mmTax
+	 * CreditTransferTransactionInformation14.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction5#mmTax
+	 * CreditTransferTransaction5.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction10#mmTax
+	 * CreditTransferTransaction10.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation10#mmTaxRemittance
+	 * StructuredRemittanceInformation10.mmTaxRemittance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#mmTax
+	 * CreditTransferTransaction19.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmTaxRemittance
+	 * StructuredRemittanceInformation12.mmTaxRemittance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction18#mmTax
+	 * CreditTransferTransaction18.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#mmTax
+	 * DirectDebitTransactionInformation18.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#mmTax
+	 * CreditTransferTransaction20.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction7#mmTax
+	 * EntryTransaction7.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction21#mmTax
+	 * CreditTransferTransaction21.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#mmTax
+	 * CreditTransferTransaction25.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction24#mmTax
+	 * CreditTransferTransaction24.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#mmTax
+	 * CreditTransferTransaction26.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation13#mmTaxRemittance
+	 * StructuredRemittanceInformation13.mmTaxRemittance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#mmTax
+	 * DirectDebitTransactionInformation19.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#mmTax
+	 * CreditTransferTransaction22.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction8#mmTax
+	 * EntryTransaction8.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#mmTax
+	 * DirectDebitTransactionInformation22.mmTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4117,30 +4151,31 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Payment levy tax."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TaxOnPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTaxOnPayment = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryTransaction1.Tax, com.tools20022.repository.msg.EntryTransaction2.Tax, com.tools20022.repository.msg.EntryTransaction3.Tax,
-					com.tools20022.repository.msg.EntryTransaction4.Tax, com.tools20022.repository.msg.CreditTransferTransactionInformation1.Tax, com.tools20022.repository.msg.CreditTransferTransactionInformation10.Tax,
-					com.tools20022.repository.msg.CreditTransferTransaction1.Tax, com.tools20022.repository.msg.CreditTransferTransaction6.Tax, com.tools20022.repository.msg.DirectDebitTransactionInformation1.Tax,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation9.Tax, com.tools20022.repository.msg.DirectDebitTransactionInformation11.Tax, com.tools20022.repository.msg.DirectDebitTransactionInformation13.Tax,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation14.Tax, com.tools20022.repository.msg.CreditTransferTransaction5.Tax, com.tools20022.repository.msg.CreditTransferTransaction10.Tax,
-					com.tools20022.repository.msg.StructuredRemittanceInformation10.TaxRemittance, com.tools20022.repository.msg.CreditTransferTransaction19.Tax,
-					com.tools20022.repository.msg.StructuredRemittanceInformation12.TaxRemittance, com.tools20022.repository.msg.CreditTransferTransaction18.Tax, com.tools20022.repository.msg.DirectDebitTransactionInformation18.Tax,
-					com.tools20022.repository.msg.CreditTransferTransaction20.Tax, com.tools20022.repository.msg.EntryTransaction7.Tax, com.tools20022.repository.msg.CreditTransferTransaction21.Tax,
-					com.tools20022.repository.msg.CreditTransferTransaction25.Tax, com.tools20022.repository.msg.CreditTransferTransaction24.Tax, com.tools20022.repository.msg.CreditTransferTransaction26.Tax,
-					com.tools20022.repository.msg.StructuredRemittanceInformation13.TaxRemittance, com.tools20022.repository.msg.DirectDebitTransactionInformation19.Tax, com.tools20022.repository.msg.CreditTransferTransaction22.Tax,
-					com.tools20022.repository.msg.EntryTransaction8.Tax, com.tools20022.repository.msg.DirectDebitTransactionInformation22.Tax);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryTransaction1.mmTax, com.tools20022.repository.msg.EntryTransaction2.mmTax, com.tools20022.repository.msg.EntryTransaction3.mmTax,
+					com.tools20022.repository.msg.EntryTransaction4.mmTax, com.tools20022.repository.msg.CreditTransferTransactionInformation1.mmTax, com.tools20022.repository.msg.CreditTransferTransactionInformation10.mmTax,
+					com.tools20022.repository.msg.CreditTransferTransaction1.mmTax, com.tools20022.repository.msg.CreditTransferTransaction6.mmTax, com.tools20022.repository.msg.DirectDebitTransactionInformation1.mmTax,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation9.mmTax, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmTax, com.tools20022.repository.msg.DirectDebitTransactionInformation13.mmTax,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation14.mmTax, com.tools20022.repository.msg.CreditTransferTransaction5.mmTax, com.tools20022.repository.msg.CreditTransferTransaction10.mmTax,
+					com.tools20022.repository.msg.StructuredRemittanceInformation10.mmTaxRemittance, com.tools20022.repository.msg.CreditTransferTransaction19.mmTax,
+					com.tools20022.repository.msg.StructuredRemittanceInformation12.mmTaxRemittance, com.tools20022.repository.msg.CreditTransferTransaction18.mmTax, com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmTax,
+					com.tools20022.repository.msg.CreditTransferTransaction20.mmTax, com.tools20022.repository.msg.EntryTransaction7.mmTax, com.tools20022.repository.msg.CreditTransferTransaction21.mmTax,
+					com.tools20022.repository.msg.CreditTransferTransaction25.mmTax, com.tools20022.repository.msg.CreditTransferTransaction24.mmTax, com.tools20022.repository.msg.CreditTransferTransaction26.mmTax,
+					com.tools20022.repository.msg.StructuredRemittanceInformation13.mmTaxRemittance, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmTax, com.tools20022.repository.msg.CreditTransferTransaction22.mmTax,
+					com.tools20022.repository.msg.EntryTransaction8.mmTax, com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmTax);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxOnPayment";
 			definition = "Payment levy tax.";
 			minOccurs = 0;
-			type_lazy = () -> Tax.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Tax.RelatedPaymentSettlement;
+			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmRelatedPaymentSettlement;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PaymentExecution> paymentExecution;
 	/**
 	 * Describes the processes necessary to execute a payment.
 	 * <p>
@@ -4149,8 +4184,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#Payment
-	 * PaymentExecution.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmPayment
+	 * PaymentExecution.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -4158,180 +4193,180 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentExecution
 	 * PaymentExecution}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#RelatedDates
-	 * EntryTransaction1.RelatedDates}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#RelatedDates
-	 * EntryTransaction2.RelatedDates}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#RelatedDates
-	 * EntryTransaction3.RelatedDates}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#RelatedDates
-	 * EntryTransaction4.RelatedDates}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#PaymentTypeInformation
-	 * DirectDebitTransactionInformation1.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#PaymentTypeInformation
-	 * DirectDebitTransactionInformation9.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#PaymentTypeInformation
-	 * DirectDebitTransactionInformation11.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#PaymentTypeInformation
-	 * DirectDebitTransactionInformation13.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#PaymentTypeInformation
-	 * DirectDebitTransactionInformation2.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#PaymentTypeInformation
-	 * DirectDebitTransactionInformation10.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#PaymentTypeInformation
-	 * DirectDebitTransactionInformation12.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#PaymentTypeInformation
-	 * DirectDebitTransactionInformation14.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation31#OriginalGroupInformation
-	 * PaymentTransactionInformation31.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction38#OriginalGroupInformation
-	 * PaymentTransaction38.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction48#OriginalGroupInformation
-	 * PaymentTransaction48.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#OriginalGroupInformation
-	 * PaymentTransactionInformation2.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#OriginalGroupInformation
-	 * PaymentTransactionInformation27.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction34#OriginalGroupInformation
-	 * PaymentTransaction34.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction44#OriginalGroupInformation
-	 * PaymentTransaction44.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#PaymentTypeInformation
-	 * RequestedModification2.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation33#OriginalGroupInformation
-	 * PaymentTransactionInformation33.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction1Choice#Initiation
-	 * CorrectiveTransaction1Choice.Initiation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction40#OriginalGroupInformation
-	 * PaymentTransaction40.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation15#PaymentTypeInformation
-	 * DirectDebitTransactionInformation15.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation13#OriginalGroupInformation
-	 * PaymentTransactionInformation13.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation18#OriginalGroupInformation
-	 * PaymentTransactionInformation18.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#OriginalGroupInformation
-	 * PaymentTransactionInformation16.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#OriginalGroupInformation
-	 * PaymentTransactionInformation23.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#OriginalGroupInformation
-	 * PaymentTransactionInformation21.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation5#PaymentTypeInformation
-	 * DirectDebitTransactionInformation5.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation7#PaymentTypeInformation
-	 * DirectDebitTransactionInformation7.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#PaymentTypeInformation
-	 * DirectDebitTransactionInformation6.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#PaymentTypeInformation
-	 * DirectDebitTransactionInformation8.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction50#OriginalGroupInformation
-	 * PaymentTransaction50.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#PaymentTypeInformation
-	 * DirectDebitTransactionInformation17.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction51#OriginalGroupInformation
-	 * PaymentTransaction51.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction53#OriginalGroupInformation
-	 * PaymentTransaction53.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#PaymentTypeInformation
-	 * DirectDebitTransactionInformation18.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction55#OriginalGroupInformation
-	 * PaymentTransaction55.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#RelatedDates
-	 * EntryTransaction7.RelatedDates}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#OriginalReferences
-	 * CurrencyControlGroupStatus1.OriginalReferences}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction65#OriginalGroupInformation
-	 * PaymentTransaction65.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#PaymentTypeInformation
-	 * DirectDebitTransactionInformation20.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction60#OriginalGroupInformation
-	 * PaymentTransaction60.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#PaymentTypeInformation
-	 * DirectDebitTransactionInformation19.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction67#OriginalGroupInformation
-	 * PaymentTransaction67.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction62#OriginalGroupInformation
-	 * PaymentTransaction62.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#RelatedDates
-	 * EntryTransaction8.RelatedDates}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#PaymentTypeInformation
-	 * DirectDebitTransactionInformation21.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction81#OriginalGroupInformation
-	 * PaymentTransaction81.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#OriginalGroupInformation
-	 * PaymentTransaction76.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction2Choice#Initiation
-	 * CorrectiveTransaction2Choice.Initiation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#PaymentTypeInformation
-	 * DirectDebitTransactionInformation22.PaymentTypeInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction75#OriginalGroupInformation
-	 * PaymentTransaction75.OriginalGroupInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#OriginalGroupInformation
-	 * PaymentTransaction79.OriginalGroupInformation}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#mmRelatedDates
+	 * EntryTransaction1.mmRelatedDates}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#mmRelatedDates
+	 * EntryTransaction2.mmRelatedDates}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#mmRelatedDates
+	 * EntryTransaction3.mmRelatedDates}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#mmRelatedDates
+	 * EntryTransaction4.mmRelatedDates}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation1.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation9.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation11.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation13.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation2.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation10.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation12.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation14.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation31#mmOriginalGroupInformation
+	 * PaymentTransactionInformation31.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction38#mmOriginalGroupInformation
+	 * PaymentTransaction38.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction48#mmOriginalGroupInformation
+	 * PaymentTransaction48.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#mmOriginalGroupInformation
+	 * PaymentTransactionInformation2.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#mmOriginalGroupInformation
+	 * PaymentTransactionInformation27.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction34#mmOriginalGroupInformation
+	 * PaymentTransaction34.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction44#mmOriginalGroupInformation
+	 * PaymentTransaction44.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#mmPaymentTypeInformation
+	 * RequestedModification2.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation33#mmOriginalGroupInformation
+	 * PaymentTransactionInformation33.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction1Choice#mmInitiation
+	 * CorrectiveTransaction1Choice.mmInitiation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction40#mmOriginalGroupInformation
+	 * PaymentTransaction40.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation15#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation15.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation13#mmOriginalGroupInformation
+	 * PaymentTransactionInformation13.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation18#mmOriginalGroupInformation
+	 * PaymentTransactionInformation18.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#mmOriginalGroupInformation
+	 * PaymentTransactionInformation16.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#mmOriginalGroupInformation
+	 * PaymentTransactionInformation23.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#mmOriginalGroupInformation
+	 * PaymentTransactionInformation21.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation5#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation5.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation7#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation7.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation6.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation8.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction50#mmOriginalGroupInformation
+	 * PaymentTransaction50.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation17.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction51#mmOriginalGroupInformation
+	 * PaymentTransaction51.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction53#mmOriginalGroupInformation
+	 * PaymentTransaction53.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation18.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction55#mmOriginalGroupInformation
+	 * PaymentTransaction55.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#mmRelatedDates
+	 * EntryTransaction7.mmRelatedDates}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#mmOriginalReferences
+	 * CurrencyControlGroupStatus1.mmOriginalReferences}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction65#mmOriginalGroupInformation
+	 * PaymentTransaction65.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation20.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction60#mmOriginalGroupInformation
+	 * PaymentTransaction60.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation19.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction67#mmOriginalGroupInformation
+	 * PaymentTransaction67.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction62#mmOriginalGroupInformation
+	 * PaymentTransaction62.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmRelatedDates
+	 * EntryTransaction8.mmRelatedDates}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation21.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction81#mmOriginalGroupInformation
+	 * PaymentTransaction81.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#mmOriginalGroupInformation
+	 * PaymentTransaction76.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction2Choice#mmInitiation
+	 * CorrectiveTransaction2Choice.mmInitiation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#mmPaymentTypeInformation
+	 * DirectDebitTransactionInformation22.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction75#mmOriginalGroupInformation
+	 * PaymentTransaction75.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#mmOriginalGroupInformation
+	 * PaymentTransaction79.mmOriginalGroupInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4343,46 +4378,47 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Describes the processes necessary to execute a payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PaymentExecution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPaymentExecution = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryTransaction1.RelatedDates, com.tools20022.repository.msg.EntryTransaction2.RelatedDates, com.tools20022.repository.msg.EntryTransaction3.RelatedDates,
-					com.tools20022.repository.msg.EntryTransaction4.RelatedDates, com.tools20022.repository.msg.DirectDebitTransactionInformation1.PaymentTypeInformation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation9.PaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation11.PaymentTypeInformation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation13.PaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation2.PaymentTypeInformation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation10.PaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation12.PaymentTypeInformation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation14.PaymentTypeInformation, com.tools20022.repository.msg.PaymentTransactionInformation31.OriginalGroupInformation,
-					com.tools20022.repository.msg.PaymentTransaction38.OriginalGroupInformation, com.tools20022.repository.msg.PaymentTransaction48.OriginalGroupInformation,
-					com.tools20022.repository.msg.PaymentTransactionInformation2.OriginalGroupInformation, com.tools20022.repository.msg.PaymentTransactionInformation27.OriginalGroupInformation,
-					com.tools20022.repository.msg.PaymentTransaction34.OriginalGroupInformation, com.tools20022.repository.msg.PaymentTransaction44.OriginalGroupInformation,
-					com.tools20022.repository.msg.RequestedModification2.PaymentTypeInformation, com.tools20022.repository.msg.PaymentTransactionInformation33.OriginalGroupInformation,
-					com.tools20022.repository.choice.CorrectiveTransaction1Choice.Initiation, com.tools20022.repository.msg.PaymentTransaction40.OriginalGroupInformation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation15.PaymentTypeInformation, com.tools20022.repository.msg.PaymentTransactionInformation13.OriginalGroupInformation,
-					com.tools20022.repository.msg.PaymentTransactionInformation18.OriginalGroupInformation, com.tools20022.repository.msg.PaymentTransactionInformation16.OriginalGroupInformation,
-					com.tools20022.repository.msg.PaymentTransactionInformation23.OriginalGroupInformation, com.tools20022.repository.msg.PaymentTransactionInformation21.OriginalGroupInformation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation5.PaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation7.PaymentTypeInformation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation6.PaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation8.PaymentTypeInformation,
-					com.tools20022.repository.msg.PaymentTransaction50.OriginalGroupInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation17.PaymentTypeInformation,
-					com.tools20022.repository.msg.PaymentTransaction51.OriginalGroupInformation, com.tools20022.repository.msg.PaymentTransaction53.OriginalGroupInformation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation18.PaymentTypeInformation, com.tools20022.repository.msg.PaymentTransaction55.OriginalGroupInformation,
-					com.tools20022.repository.msg.EntryTransaction7.RelatedDates, com.tools20022.repository.msg.CurrencyControlGroupStatus1.OriginalReferences, com.tools20022.repository.msg.PaymentTransaction65.OriginalGroupInformation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation20.PaymentTypeInformation, com.tools20022.repository.msg.PaymentTransaction60.OriginalGroupInformation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation19.PaymentTypeInformation, com.tools20022.repository.msg.PaymentTransaction67.OriginalGroupInformation,
-					com.tools20022.repository.msg.PaymentTransaction62.OriginalGroupInformation, com.tools20022.repository.msg.EntryTransaction8.RelatedDates,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation21.PaymentTypeInformation, com.tools20022.repository.msg.PaymentTransaction81.OriginalGroupInformation,
-					com.tools20022.repository.msg.PaymentTransaction76.OriginalGroupInformation, com.tools20022.repository.choice.CorrectiveTransaction2Choice.Initiation,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation22.PaymentTypeInformation, com.tools20022.repository.msg.PaymentTransaction75.OriginalGroupInformation,
-					com.tools20022.repository.msg.PaymentTransaction79.OriginalGroupInformation);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryTransaction1.mmRelatedDates, com.tools20022.repository.msg.EntryTransaction2.mmRelatedDates,
+					com.tools20022.repository.msg.EntryTransaction3.mmRelatedDates, com.tools20022.repository.msg.EntryTransaction4.mmRelatedDates, com.tools20022.repository.msg.DirectDebitTransactionInformation1.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation9.mmPaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation13.mmPaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmPaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmPaymentTypeInformation, com.tools20022.repository.msg.PaymentTransactionInformation31.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.PaymentTransaction38.mmOriginalGroupInformation, com.tools20022.repository.msg.PaymentTransaction48.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.PaymentTransactionInformation2.mmOriginalGroupInformation, com.tools20022.repository.msg.PaymentTransactionInformation27.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.PaymentTransaction34.mmOriginalGroupInformation, com.tools20022.repository.msg.PaymentTransaction44.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.RequestedModification2.mmPaymentTypeInformation, com.tools20022.repository.msg.PaymentTransactionInformation33.mmOriginalGroupInformation,
+					com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmInitiation, com.tools20022.repository.msg.PaymentTransaction40.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation15.mmPaymentTypeInformation, com.tools20022.repository.msg.PaymentTransactionInformation13.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.PaymentTransactionInformation18.mmOriginalGroupInformation, com.tools20022.repository.msg.PaymentTransactionInformation16.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.PaymentTransactionInformation23.mmOriginalGroupInformation, com.tools20022.repository.msg.PaymentTransactionInformation21.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation5.mmPaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation7.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmPaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation8.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.PaymentTransaction50.mmOriginalGroupInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.PaymentTransaction51.mmOriginalGroupInformation, com.tools20022.repository.msg.PaymentTransaction53.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmPaymentTypeInformation, com.tools20022.repository.msg.PaymentTransaction55.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.EntryTransaction7.mmRelatedDates, com.tools20022.repository.msg.CurrencyControlGroupStatus1.mmOriginalReferences,
+					com.tools20022.repository.msg.PaymentTransaction65.mmOriginalGroupInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.PaymentTransaction60.mmOriginalGroupInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.PaymentTransaction67.mmOriginalGroupInformation, com.tools20022.repository.msg.PaymentTransaction62.mmOriginalGroupInformation,
+					com.tools20022.repository.msg.EntryTransaction8.mmRelatedDates, com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.PaymentTransaction81.mmOriginalGroupInformation, com.tools20022.repository.msg.PaymentTransaction76.mmOriginalGroupInformation,
+					com.tools20022.repository.choice.CorrectiveTransaction2Choice.mmInitiation, com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmPaymentTypeInformation,
+					com.tools20022.repository.msg.PaymentTransaction75.mmOriginalGroupInformation, com.tools20022.repository.msg.PaymentTransaction79.mmOriginalGroupInformation);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentExecution";
 			definition = "Describes the processes necessary to execute a payment.";
 			minOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentExecution.Payment;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmObject();
 		}
 	};
+	protected ISODate poolingAdjustmentDate;
 	/**
 	 * Date used for the correction of the value date of a cash pool movement
 	 * that has been posted with a different value date.
@@ -4393,60 +4429,60 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1#PoolingAdjustmentDate
-	 * PaymentInstructionInformation1.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation3#PoolingAdjustmentDate
-	 * PaymentInstructionInformation3.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#PoolingAdjustmentDate
-	 * PaymentInstruction6.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#PoolingAdjustmentDate
-	 * PaymentInstruction9.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#PoolingAdjustmentDate
-	 * CreditTransferTransactionInformation2.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#PoolingAdjustmentDate
-	 * CreditTransferTransactionInformation11.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#PoolingAdjustmentDate
-	 * CreditTransferTransaction2.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#PoolingAdjustmentDate
-	 * CreditTransferTransaction7.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#PoolingAdjustmentDate
-	 * CreditTransferTransactionInformation7.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#PoolingAdjustmentDate
-	 * CreditTransferTransactionInformation9.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#PoolingAdjustmentDate
-	 * PaymentInstruction16.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#PoolingAdjustmentDate
-	 * CreditTransferTransaction19.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#PoolingAdjustmentDate
-	 * CreditTransferTransaction25.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#PoolingAdjustmentDate
-	 * PaymentInstruction20.PoolingAdjustmentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#PoolingAdjustmentDate
-	 * PaymentInstruction22.PoolingAdjustmentDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1#mmPoolingAdjustmentDate
+	 * PaymentInstructionInformation1.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation3#mmPoolingAdjustmentDate
+	 * PaymentInstructionInformation3.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#mmPoolingAdjustmentDate
+	 * PaymentInstruction6.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#mmPoolingAdjustmentDate
+	 * PaymentInstruction9.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#mmPoolingAdjustmentDate
+	 * CreditTransferTransactionInformation2.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#mmPoolingAdjustmentDate
+	 * CreditTransferTransactionInformation11.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#mmPoolingAdjustmentDate
+	 * CreditTransferTransaction2.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#mmPoolingAdjustmentDate
+	 * CreditTransferTransaction7.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#mmPoolingAdjustmentDate
+	 * CreditTransferTransactionInformation7.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#mmPoolingAdjustmentDate
+	 * CreditTransferTransactionInformation9.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#mmPoolingAdjustmentDate
+	 * PaymentInstruction16.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#mmPoolingAdjustmentDate
+	 * CreditTransferTransaction19.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#mmPoolingAdjustmentDate
+	 * CreditTransferTransaction25.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#mmPoolingAdjustmentDate
+	 * PaymentInstruction20.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmPoolingAdjustmentDate
+	 * PaymentInstruction22.mmPoolingAdjustmentDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4460,26 +4496,27 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PoolingAdjustmentDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPoolingAdjustmentDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionInformation1.PoolingAdjustmentDate, com.tools20022.repository.msg.PaymentInstructionInformation3.PoolingAdjustmentDate,
-					com.tools20022.repository.msg.PaymentInstruction6.PoolingAdjustmentDate, com.tools20022.repository.msg.PaymentInstruction9.PoolingAdjustmentDate,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation2.PoolingAdjustmentDate, com.tools20022.repository.msg.CreditTransferTransactionInformation11.PoolingAdjustmentDate,
-					com.tools20022.repository.msg.CreditTransferTransaction2.PoolingAdjustmentDate, com.tools20022.repository.msg.CreditTransferTransaction7.PoolingAdjustmentDate,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation7.PoolingAdjustmentDate, com.tools20022.repository.msg.CreditTransferTransactionInformation9.PoolingAdjustmentDate,
-					com.tools20022.repository.msg.PaymentInstruction16.PoolingAdjustmentDate, com.tools20022.repository.msg.CreditTransferTransaction19.PoolingAdjustmentDate,
-					com.tools20022.repository.msg.CreditTransferTransaction25.PoolingAdjustmentDate, com.tools20022.repository.msg.PaymentInstruction20.PoolingAdjustmentDate,
-					com.tools20022.repository.msg.PaymentInstruction22.PoolingAdjustmentDate);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionInformation1.mmPoolingAdjustmentDate, com.tools20022.repository.msg.PaymentInstructionInformation3.mmPoolingAdjustmentDate,
+					com.tools20022.repository.msg.PaymentInstruction6.mmPoolingAdjustmentDate, com.tools20022.repository.msg.PaymentInstruction9.mmPoolingAdjustmentDate,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmPoolingAdjustmentDate, com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmPoolingAdjustmentDate,
+					com.tools20022.repository.msg.CreditTransferTransaction2.mmPoolingAdjustmentDate, com.tools20022.repository.msg.CreditTransferTransaction7.mmPoolingAdjustmentDate,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmPoolingAdjustmentDate, com.tools20022.repository.msg.CreditTransferTransactionInformation9.mmPoolingAdjustmentDate,
+					com.tools20022.repository.msg.PaymentInstruction16.mmPoolingAdjustmentDate, com.tools20022.repository.msg.CreditTransferTransaction19.mmPoolingAdjustmentDate,
+					com.tools20022.repository.msg.CreditTransferTransaction25.mmPoolingAdjustmentDate, com.tools20022.repository.msg.PaymentInstruction20.mmPoolingAdjustmentDate,
+					com.tools20022.repository.msg.PaymentInstruction22.mmPoolingAdjustmentDate);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PoolingAdjustmentDate";
 			definition = "Date used for the correction of the value date of a cash pool movement that has been posted with a different value date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount equivalentAmount;
 	/**
 	 * Amount of money to be transferred between debtor and creditor, before
 	 * deduction of charges, expressed in the currency of the debtor's account,
@@ -4492,31 +4529,31 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ImpliedCurrencyAndAmount
 	 * ImpliedCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.EquivalentAmount#Amount
-	 * EquivalentAmount.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AmountType1Choice#EquivalentAmount
-	 * AmountType1Choice.EquivalentAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AmountType2Choice#EquivalentAmount
-	 * AmountType2Choice.EquivalentAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EquivalentAmount2#Amount
-	 * EquivalentAmount2.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AmountType3Choice#EquivalentAmount
-	 * AmountType3Choice.EquivalentAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AmountType4Choice#EquivalentAmount
-	 * AmountType4Choice.EquivalentAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.EquivalentAmount#mmAmount
+	 * EquivalentAmount.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AmountType1Choice#mmEquivalentAmount
+	 * AmountType1Choice.mmEquivalentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AmountType2Choice#mmEquivalentAmount
+	 * AmountType2Choice.mmEquivalentAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EquivalentAmount2#mmAmount
+	 * EquivalentAmount2.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AmountType3Choice#mmEquivalentAmount
+	 * AmountType3Choice.mmEquivalentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AmountType4Choice#mmEquivalentAmount
+	 * AmountType4Choice.mmEquivalentAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4530,21 +4567,22 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EquivalentAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEquivalentAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EquivalentAmount.Amount, com.tools20022.repository.choice.AmountType1Choice.EquivalentAmount,
-					com.tools20022.repository.choice.AmountType2Choice.EquivalentAmount, com.tools20022.repository.msg.EquivalentAmount2.Amount, com.tools20022.repository.choice.AmountType3Choice.EquivalentAmount,
-					com.tools20022.repository.choice.AmountType4Choice.EquivalentAmount);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EquivalentAmount.mmAmount, com.tools20022.repository.choice.AmountType1Choice.mmEquivalentAmount,
+					com.tools20022.repository.choice.AmountType2Choice.mmEquivalentAmount, com.tools20022.repository.msg.EquivalentAmount2.mmAmount, com.tools20022.repository.choice.AmountType3Choice.mmEquivalentAmount,
+					com.tools20022.repository.choice.AmountType4Choice.mmEquivalentAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EquivalentAmount";
 			definition = "Amount of money to be transferred between debtor and creditor, before deduction of charges, expressed in the currency of the debtor's account, and to be transferred in a different currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange;
 	/**
 	 * Information on the exchange rate and amounts used in the payment
 	 * <p>
@@ -4553,8 +4591,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#RelatedPayment
-	 * CurrencyExchange.RelatedPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmRelatedPayment
+	 * CurrencyExchange.mmRelatedPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -4562,186 +4600,191 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#ExchangeRateInformation
-	 * CreditTransferTransactionInformation1.ExchangeRateInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#ExchangeRateInformation
-	 * CreditTransferTransactionInformation10.ExchangeRateInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#ExchangeRateInformation
-	 * CreditTransferTransaction1.ExchangeRateInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#ExchangeRateInformation
-	 * CreditTransferTransaction6.ExchangeRateInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#ExchangeRate
-	 * CreditTransferTransactionInformation2.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#ExchangeRate
-	 * CreditTransferTransactionInformation11.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#ExchangeRate
-	 * CreditTransferTransaction7.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#PaymentCurrencyExchange
-	 * TradeSettlement1.PaymentCurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#ExchangeRate
-	 * CreditTransferTransactionInformation7.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#ExchangeRate
-	 * CreditTransferTransactionInformation9.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation6#ExchangeRateInformation
-	 * OriginalPaymentInformation6.ExchangeRateInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1#CurrencyConversion
-	 * AcceptorCurrencyConversionResponse1.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails12#CurrencyConversion
-	 * CardPaymentTransactionDetails12.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction24#CurrencyConversion
-	 * CardPaymentTransaction24.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails14#CurrencyConversion
-	 * CardPaymentTransactionDetails14.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction33#CurrencyConversion
-	 * CardPaymentTransaction33.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails15#CurrencyConversion
-	 * CardPaymentTransactionDetails15.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#ExchangeRate
-	 * CreditTransferTransaction19.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#ExchangeRateInformation
-	 * CreditTransferTransaction20.ExchangeRateInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2#CurrencyConversion
-	 * AcceptorCurrencyConversionResponse2.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction39#CurrencyConversion
-	 * CardPaymentTransaction39.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction50#CurrencyConversion
-	 * CardPaymentTransaction50.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#CurrencyConversion
-	 * CardPaymentTransactionDetails23.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails21#CurrencyConversion
-	 * CardPaymentTransactionDetails21.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails19#CurrencyConversion
-	 * CardPaymentTransactionDetails19.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMAccountStatement2#Currency
-	 * ATMAccountStatement2.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#CurrencyConversion
-	 * ATMTransaction1.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrency1#Currency
-	 * AmountAndCurrency1.Currency}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount12#Currency
-	 * DetailedAmount12.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction2#CurrencyConversion
-	 * ATMTransaction2.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction7#CurrencyConversion
-	 * ATMTransaction7.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction7#CurrencyExchange
-	 * ATMTransaction7.CurrencyExchange}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#Currency
-	 * ATMTransaction8.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction3#CurrencyConversion
-	 * ATMTransaction3.CurrencyConversion}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount13#Currency
-	 * DetailedAmount13.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#ExchangeRate
-	 * CreditTransferTransaction25.ExchangeRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#ExchangeRateInformation
-	 * CreditTransferTransaction26.ExchangeRateInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3#CurrencyConversionResult
-	 * AcceptorCurrencyConversionResponse3.CurrencyConversionResult}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65#CurrencyConversion
-	 * CardPaymentTransaction65.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails29#CurrencyConversionResult
-	 * CardPaymentTransactionDetails29.CurrencyConversionResult}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#CurrencyConversionResult
-	 * CardPaymentTransactionDetails30.CurrencyConversionResult}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails27#CurrencyConversionResult
-	 * CardPaymentTransactionDetails27.CurrencyConversionResult}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction54#CurrencyConversionEligibility
-	 * CardPaymentTransaction54.CurrencyConversionEligibility}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction14#CurrencyConversionEligibility
-	 * ATMTransaction14.CurrencyConversionEligibility}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction17#CurrencyConversionResult
-	 * ATMTransaction17.CurrencyConversionResult}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount18#Currency
-	 * DetailedAmount18.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#CurrencyConversionResult
-	 * ATMTransaction13.CurrencyConversionResult}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount16#Currency
-	 * DetailedAmount16.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction21#CurrencyConversion
-	 * ATMTransaction21.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction21#CurrencyExchange
-	 * ATMTransaction21.CurrencyExchange}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount17#Currency
-	 * DetailedAmount17.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation7#ExchangeRateInformation
-	 * OriginalPaymentInformation7.ExchangeRateInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse4#CurrencyConversionResult
-	 * AcceptorCurrencyConversionResponse4.CurrencyConversionResult}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#CurrencyConversionResult
-	 * CardPaymentTransactionDetails38.CurrencyConversionResult}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails41#CurrencyConversionResult
-	 * CardPaymentTransactionDetails41.CurrencyConversionResult}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction67#CurrencyConversionEligibility
-	 * CardPaymentTransaction67.CurrencyConversionEligibility}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#CurrencyConversion
-	 * CardPaymentTransaction73.CurrencyConversion}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37#CurrencyConversionResult
-	 * CardPaymentTransactionDetails37.CurrencyConversionResult}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice1#CurrencyConversionResult
-	 * AcceptorCurrencyConversionAdvice1.CurrencyConversionResult}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#mmExchangeRateInformation
+	 * CreditTransferTransactionInformation1.mmExchangeRateInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#mmExchangeRateInformation
+	 * CreditTransferTransactionInformation10.mmExchangeRateInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#mmExchangeRateInformation
+	 * CreditTransferTransaction1.mmExchangeRateInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#mmExchangeRateInformation
+	 * CreditTransferTransaction6.mmExchangeRateInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#mmExchangeRate
+	 * CreditTransferTransactionInformation2.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#mmExchangeRate
+	 * CreditTransferTransactionInformation11.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#mmExchangeRate
+	 * CreditTransferTransaction7.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#mmPaymentCurrencyExchange
+	 * TradeSettlement1.mmPaymentCurrencyExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#mmExchangeRate
+	 * CreditTransferTransactionInformation7.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#mmExchangeRate
+	 * CreditTransferTransactionInformation9.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation6#mmExchangeRateInformation
+	 * OriginalPaymentInformation6.mmExchangeRateInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1#mmCurrencyConversion
+	 * AcceptorCurrencyConversionResponse1.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails12#mmCurrencyConversion
+	 * CardPaymentTransactionDetails12.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction24#mmCurrencyConversion
+	 * CardPaymentTransaction24.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails14#mmCurrencyConversion
+	 * CardPaymentTransactionDetails14.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction33#mmCurrencyConversion
+	 * CardPaymentTransaction33.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails15#mmCurrencyConversion
+	 * CardPaymentTransactionDetails15.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#mmExchangeRate
+	 * CreditTransferTransaction19.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#mmExchangeRateInformation
+	 * CreditTransferTransaction20.mmExchangeRateInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2#mmCurrencyConversion
+	 * AcceptorCurrencyConversionResponse2.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction39#mmCurrencyConversion
+	 * CardPaymentTransaction39.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction50#mmCurrencyConversion
+	 * CardPaymentTransaction50.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmCurrencyConversion
+	 * CardPaymentTransactionDetails23.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails21#mmCurrencyConversion
+	 * CardPaymentTransactionDetails21.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails19#mmCurrencyConversion
+	 * CardPaymentTransactionDetails19.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMAccountStatement2#mmCurrency
+	 * ATMAccountStatement2.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#mmCurrencyConversion
+	 * ATMTransaction1.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrency1#mmCurrency
+	 * AmountAndCurrency1.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#mmCurrency
+	 * DetailedAmount12.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction2#mmCurrencyConversion
+	 * ATMTransaction2.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction7#mmCurrencyConversion
+	 * ATMTransaction7.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction7#mmCurrencyExchange
+	 * ATMTransaction7.mmCurrencyExchange}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#mmCurrency
+	 * ATMTransaction8.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction3#mmCurrencyConversion
+	 * ATMTransaction3.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount13#mmCurrency
+	 * DetailedAmount13.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#mmExchangeRate
+	 * CreditTransferTransaction25.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#mmExchangeRateInformation
+	 * CreditTransferTransaction26.mmExchangeRateInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3#mmCurrencyConversionResult
+	 * AcceptorCurrencyConversionResponse3.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65#mmCurrencyConversion
+	 * CardPaymentTransaction65.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails29#mmCurrencyConversionResult
+	 * CardPaymentTransactionDetails29.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmCurrencyConversionResult
+	 * CardPaymentTransactionDetails30.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails27#mmCurrencyConversionResult
+	 * CardPaymentTransactionDetails27.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction54#mmCurrencyConversionEligibility
+	 * CardPaymentTransaction54.mmCurrencyConversionEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction14#mmCurrencyConversionEligibility
+	 * ATMTransaction14.mmCurrencyConversionEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction17#mmCurrencyConversionResult
+	 * ATMTransaction17.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount18#mmCurrency
+	 * DetailedAmount18.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmCurrencyConversionResult
+	 * ATMTransaction13.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount16#mmCurrency
+	 * DetailedAmount16.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction21#mmCurrencyConversion
+	 * ATMTransaction21.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction21#mmCurrencyExchange
+	 * ATMTransaction21.mmCurrencyExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount17#mmCurrency
+	 * DetailedAmount17.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation7#mmExchangeRateInformation
+	 * OriginalPaymentInformation7.mmExchangeRateInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse4#mmCurrencyConversionResult
+	 * AcceptorCurrencyConversionResponse4.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmCurrencyConversionResult
+	 * CardPaymentTransactionDetails38.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails41#mmCurrencyConversionResult
+	 * CardPaymentTransactionDetails41.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction67#mmCurrencyConversionEligibility
+	 * CardPaymentTransaction67.mmCurrencyConversionEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#mmCurrencyConversion
+	 * CardPaymentTransaction73.mmCurrencyConversion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37#mmCurrencyConversionResult
+	 * CardPaymentTransactionDetails37.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice1#mmCurrencyConversionResult
+	 * AcceptorCurrencyConversionAdvice1.mmCurrencyConversionResult}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4754,46 +4797,47 @@ public class Payment extends ObligationFulfilment {
 	 * "Information on the exchange rate and amounts used in the payment"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CurrencyExchange = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransferTransactionInformation1.ExchangeRateInformation, com.tools20022.repository.msg.CreditTransferTransactionInformation10.ExchangeRateInformation,
-					com.tools20022.repository.msg.CreditTransferTransaction1.ExchangeRateInformation, com.tools20022.repository.msg.CreditTransferTransaction6.ExchangeRateInformation,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation2.ExchangeRate, com.tools20022.repository.msg.CreditTransferTransactionInformation11.ExchangeRate,
-					com.tools20022.repository.msg.CreditTransferTransaction7.ExchangeRate, com.tools20022.repository.msg.TradeSettlement1.PaymentCurrencyExchange,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation7.ExchangeRate, com.tools20022.repository.msg.CreditTransferTransactionInformation9.ExchangeRate,
-					com.tools20022.repository.msg.OriginalPaymentInformation6.ExchangeRateInformation, com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.CurrencyConversion,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails12.CurrencyConversion, com.tools20022.repository.msg.CardPaymentTransaction24.CurrencyConversion,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails14.CurrencyConversion, com.tools20022.repository.msg.CardPaymentTransaction33.CurrencyConversion,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails15.CurrencyConversion, com.tools20022.repository.msg.CreditTransferTransaction19.ExchangeRate,
-					com.tools20022.repository.msg.CreditTransferTransaction20.ExchangeRateInformation, com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2.CurrencyConversion,
-					com.tools20022.repository.msg.CardPaymentTransaction39.CurrencyConversion, com.tools20022.repository.msg.CardPaymentTransaction50.CurrencyConversion,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails23.CurrencyConversion, com.tools20022.repository.msg.CardPaymentTransactionDetails21.CurrencyConversion,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails19.CurrencyConversion, com.tools20022.repository.msg.ATMAccountStatement2.Currency, com.tools20022.repository.msg.ATMTransaction1.CurrencyConversion,
-					com.tools20022.repository.msg.AmountAndCurrency1.Currency, com.tools20022.repository.msg.DetailedAmount12.Currency, com.tools20022.repository.msg.ATMTransaction2.CurrencyConversion,
-					com.tools20022.repository.msg.ATMTransaction7.CurrencyConversion, com.tools20022.repository.msg.ATMTransaction7.CurrencyExchange, com.tools20022.repository.msg.ATMTransaction8.Currency,
-					com.tools20022.repository.msg.ATMTransaction3.CurrencyConversion, com.tools20022.repository.msg.DetailedAmount13.Currency, com.tools20022.repository.msg.CreditTransferTransaction25.ExchangeRate,
-					com.tools20022.repository.msg.CreditTransferTransaction26.ExchangeRateInformation, com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3.CurrencyConversionResult,
-					com.tools20022.repository.msg.CardPaymentTransaction65.CurrencyConversion, com.tools20022.repository.msg.CardPaymentTransactionDetails29.CurrencyConversionResult,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails30.CurrencyConversionResult, com.tools20022.repository.msg.CardPaymentTransactionDetails27.CurrencyConversionResult,
-					com.tools20022.repository.msg.CardPaymentTransaction54.CurrencyConversionEligibility, com.tools20022.repository.msg.ATMTransaction14.CurrencyConversionEligibility,
-					com.tools20022.repository.msg.ATMTransaction17.CurrencyConversionResult, com.tools20022.repository.msg.DetailedAmount18.Currency, com.tools20022.repository.msg.ATMTransaction13.CurrencyConversionResult,
-					com.tools20022.repository.msg.DetailedAmount16.Currency, com.tools20022.repository.msg.ATMTransaction21.CurrencyConversion, com.tools20022.repository.msg.ATMTransaction21.CurrencyExchange,
-					com.tools20022.repository.msg.DetailedAmount17.Currency, com.tools20022.repository.msg.OriginalPaymentInformation7.ExchangeRateInformation,
-					com.tools20022.repository.msg.AcceptorCurrencyConversionResponse4.CurrencyConversionResult, com.tools20022.repository.msg.CardPaymentTransactionDetails38.CurrencyConversionResult,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails41.CurrencyConversionResult, com.tools20022.repository.msg.CardPaymentTransaction67.CurrencyConversionEligibility,
-					com.tools20022.repository.msg.CardPaymentTransaction73.CurrencyConversion, com.tools20022.repository.msg.CardPaymentTransactionDetails37.CurrencyConversionResult,
-					com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice1.CurrencyConversionResult);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransferTransactionInformation1.mmExchangeRateInformation,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation10.mmExchangeRateInformation, com.tools20022.repository.msg.CreditTransferTransaction1.mmExchangeRateInformation,
+					com.tools20022.repository.msg.CreditTransferTransaction6.mmExchangeRateInformation, com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmExchangeRate,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmExchangeRate, com.tools20022.repository.msg.CreditTransferTransaction7.mmExchangeRate,
+					com.tools20022.repository.msg.TradeSettlement1.mmPaymentCurrencyExchange, com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmExchangeRate,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation9.mmExchangeRate, com.tools20022.repository.msg.OriginalPaymentInformation6.mmExchangeRateInformation,
+					com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.mmCurrencyConversion, com.tools20022.repository.msg.CardPaymentTransactionDetails12.mmCurrencyConversion,
+					com.tools20022.repository.msg.CardPaymentTransaction24.mmCurrencyConversion, com.tools20022.repository.msg.CardPaymentTransactionDetails14.mmCurrencyConversion,
+					com.tools20022.repository.msg.CardPaymentTransaction33.mmCurrencyConversion, com.tools20022.repository.msg.CardPaymentTransactionDetails15.mmCurrencyConversion,
+					com.tools20022.repository.msg.CreditTransferTransaction19.mmExchangeRate, com.tools20022.repository.msg.CreditTransferTransaction20.mmExchangeRateInformation,
+					com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2.mmCurrencyConversion, com.tools20022.repository.msg.CardPaymentTransaction39.mmCurrencyConversion,
+					com.tools20022.repository.msg.CardPaymentTransaction50.mmCurrencyConversion, com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmCurrencyConversion,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails21.mmCurrencyConversion, com.tools20022.repository.msg.CardPaymentTransactionDetails19.mmCurrencyConversion,
+					com.tools20022.repository.msg.ATMAccountStatement2.mmCurrency, com.tools20022.repository.msg.ATMTransaction1.mmCurrencyConversion, com.tools20022.repository.msg.AmountAndCurrency1.mmCurrency,
+					com.tools20022.repository.msg.DetailedAmount12.mmCurrency, com.tools20022.repository.msg.ATMTransaction2.mmCurrencyConversion, com.tools20022.repository.msg.ATMTransaction7.mmCurrencyConversion,
+					com.tools20022.repository.msg.ATMTransaction7.mmCurrencyExchange, com.tools20022.repository.msg.ATMTransaction8.mmCurrency, com.tools20022.repository.msg.ATMTransaction3.mmCurrencyConversion,
+					com.tools20022.repository.msg.DetailedAmount13.mmCurrency, com.tools20022.repository.msg.CreditTransferTransaction25.mmExchangeRate, com.tools20022.repository.msg.CreditTransferTransaction26.mmExchangeRateInformation,
+					com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3.mmCurrencyConversionResult, com.tools20022.repository.msg.CardPaymentTransaction65.mmCurrencyConversion,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails29.mmCurrencyConversionResult, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmCurrencyConversionResult,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails27.mmCurrencyConversionResult, com.tools20022.repository.msg.CardPaymentTransaction54.mmCurrencyConversionEligibility,
+					com.tools20022.repository.msg.ATMTransaction14.mmCurrencyConversionEligibility, com.tools20022.repository.msg.ATMTransaction17.mmCurrencyConversionResult, com.tools20022.repository.msg.DetailedAmount18.mmCurrency,
+					com.tools20022.repository.msg.ATMTransaction13.mmCurrencyConversionResult, com.tools20022.repository.msg.DetailedAmount16.mmCurrency, com.tools20022.repository.msg.ATMTransaction21.mmCurrencyConversion,
+					com.tools20022.repository.msg.ATMTransaction21.mmCurrencyExchange, com.tools20022.repository.msg.DetailedAmount17.mmCurrency, com.tools20022.repository.msg.OriginalPaymentInformation7.mmExchangeRateInformation,
+					com.tools20022.repository.msg.AcceptorCurrencyConversionResponse4.mmCurrencyConversionResult, com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmCurrencyConversionResult,
+					com.tools20022.repository.msg.CardPaymentTransactionDetails41.mmCurrencyConversionResult, com.tools20022.repository.msg.CardPaymentTransaction67.mmCurrencyConversionEligibility,
+					com.tools20022.repository.msg.CardPaymentTransaction73.mmCurrencyConversion, com.tools20022.repository.msg.CardPaymentTransactionDetails37.mmCurrencyConversionResult,
+					com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice1.mmCurrencyConversionResult);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Information on the exchange rate and amounts used in the payment";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.RelatedPayment;
+			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmRelatedPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
+	protected InstructionCode instructionForCreditorAgent;
 	/**
 	 * Further information related to the processing of the payment instruction
 	 * that may need to be acted upon by the creditor agent. Usage: The
@@ -4808,165 +4852,165 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionCode
 	 * InstructionCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructionForCreditorAgent1#Code
-	 * InstructionForCreditorAgent1.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#InstructionForCreditorAgent
-	 * CreditTransferTransactionInformation1.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#InstructionForCreditorAgent
-	 * CreditTransferTransactionInformation10.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#InstructionForCreditorAgent
-	 * CreditTransferTransaction1.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#InstructionForCreditorAgent
-	 * CreditTransferTransaction6.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#InstructionForCreditorAgent
-	 * DirectDebitTransactionInformation1.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#InstructionForCreditorAgent
-	 * DirectDebitTransactionInformation9.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#InstructionForCreditorAgent
-	 * DirectDebitTransactionInformation11.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#InstructionForCreditorAgent
-	 * DirectDebitTransactionInformation13.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#InstructionForCreditorAgent
-	 * CreditTransferTransactionInformation2.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#InstructionForCreditorAgent
-	 * CreditTransferTransactionInformation11.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#InstructionForCreditorAgent
-	 * CreditTransferTransaction2.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#InstructionForCreditorAgent
-	 * CreditTransferTransaction7.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructionForCreditorAgent2#Code
-	 * InstructionForCreditorAgent2.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#InstructionForCreditorAgent
-	 * CreditTransferTransactionInformation3.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation13#InstructionForCreditorAgent
-	 * CreditTransferTransactionInformation13.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction4#InstructionForCreditorAgent
-	 * CreditTransferTransaction4.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction8#InstructionForCreditorAgent
-	 * CreditTransferTransaction8.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation14#InstructionForCreditorAgent
-	 * CreditTransferTransactionInformation14.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction5#InstructionForCreditorAgent
-	 * CreditTransferTransaction5.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction10#InstructionForCreditorAgent
-	 * CreditTransferTransaction10.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructionForFinalAgent#Code
-	 * InstructionForFinalAgent.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructionForFinalAgent#Proprietary
-	 * InstructionForFinalAgent.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification#InstructionForFinalAgent
-	 * RequestedModification.InstructionForFinalAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#InstructionForCreditorAgent
-	 * RequestedModification2.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation2#InstructionForCreditorAgent
-	 * PaymentComplementaryInformation2.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation3#InstructionForCreditorAgent
-	 * PaymentComplementaryInformation3.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#InstructionForCreditorAgent
-	 * RequestedModification3.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction9#InstructionForCreditorAgent
-	 * CreditTransferTransaction9.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#InstructionForCreditorAgent
-	 * CreditTransferTransactionInformation7.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#InstructionForCreditorAgent
-	 * CreditTransferTransactionInformation9.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation4#InstructionForCreditorAgent
-	 * PaymentComplementaryInformation4.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction17#InstructionForCreditorAgent
-	 * CreditTransferTransaction17.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#InstructionForCreditorAgent
-	 * CreditTransferTransaction19.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#InstructionForCreditorAgent
-	 * RequestedModification4.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction18#InstructionForCreditorAgent
-	 * CreditTransferTransaction18.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#InstructionForCreditorAgent
-	 * DirectDebitTransactionInformation18.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#InstructionForCreditorAgent
-	 * CreditTransferTransaction20.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction21#InstructionForCreditorAgent
-	 * CreditTransferTransaction21.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction23#InstructionForCreditorAgent
-	 * CreditTransferTransaction23.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#InstructionForCreditorAgent
-	 * RequestedModification5.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#InstructionForCreditorAgent
-	 * CreditTransferTransaction25.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation5#InstructionForCreditorAgent
-	 * PaymentComplementaryInformation5.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction24#InstructionForCreditorAgent
-	 * CreditTransferTransaction24.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#InstructionForCreditorAgent
-	 * CreditTransferTransaction26.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#InstructionForCreditorAgent
-	 * DirectDebitTransactionInformation19.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#InstructionForCreditorAgent
-	 * CreditTransferTransaction22.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#InstructionForCreditorAgent
-	 * RequestedModification6.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#InstructionForCreditorAgent
-	 * DirectDebitTransactionInformation22.InstructionForCreditorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#InstructionForCreditorAgent
-	 * PaymentComplementaryInformation6.InstructionForCreditorAgent}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionForCreditorAgent1#mmCode
+	 * InstructionForCreditorAgent1.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#mmInstructionForCreditorAgent
+	 * CreditTransferTransactionInformation1.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#mmInstructionForCreditorAgent
+	 * CreditTransferTransactionInformation10.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction1.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction6.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#mmInstructionForCreditorAgent
+	 * DirectDebitTransactionInformation1.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#mmInstructionForCreditorAgent
+	 * DirectDebitTransactionInformation9.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmInstructionForCreditorAgent
+	 * DirectDebitTransactionInformation11.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#mmInstructionForCreditorAgent
+	 * DirectDebitTransactionInformation13.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#mmInstructionForCreditorAgent
+	 * CreditTransferTransactionInformation2.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#mmInstructionForCreditorAgent
+	 * CreditTransferTransactionInformation11.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction2.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction7.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionForCreditorAgent2#mmCode
+	 * InstructionForCreditorAgent2.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmInstructionForCreditorAgent
+	 * CreditTransferTransactionInformation3.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation13#mmInstructionForCreditorAgent
+	 * CreditTransferTransactionInformation13.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction4#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction4.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction8#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction8.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation14#mmInstructionForCreditorAgent
+	 * CreditTransferTransactionInformation14.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction5#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction5.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction10#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction10.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionForFinalAgent#mmCode
+	 * InstructionForFinalAgent.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionForFinalAgent#mmProprietary
+	 * InstructionForFinalAgent.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification#mmInstructionForFinalAgent
+	 * RequestedModification.mmInstructionForFinalAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#mmInstructionForCreditorAgent
+	 * RequestedModification2.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation2#mmInstructionForCreditorAgent
+	 * PaymentComplementaryInformation2.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation3#mmInstructionForCreditorAgent
+	 * PaymentComplementaryInformation3.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmInstructionForCreditorAgent
+	 * RequestedModification3.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction9#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction9.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#mmInstructionForCreditorAgent
+	 * CreditTransferTransactionInformation7.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#mmInstructionForCreditorAgent
+	 * CreditTransferTransactionInformation9.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation4#mmInstructionForCreditorAgent
+	 * PaymentComplementaryInformation4.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction17#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction17.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction19.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmInstructionForCreditorAgent
+	 * RequestedModification4.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction18#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction18.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#mmInstructionForCreditorAgent
+	 * DirectDebitTransactionInformation18.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction20.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction21#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction21.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction23#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction23.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmInstructionForCreditorAgent
+	 * RequestedModification5.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction25.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation5#mmInstructionForCreditorAgent
+	 * PaymentComplementaryInformation5.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction24#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction24.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction26.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#mmInstructionForCreditorAgent
+	 * DirectDebitTransactionInformation19.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction22.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmInstructionForCreditorAgent
+	 * RequestedModification6.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#mmInstructionForCreditorAgent
+	 * DirectDebitTransactionInformation22.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmInstructionForCreditorAgent
+	 * PaymentComplementaryInformation6.mmInstructionForCreditorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4980,43 +5024,44 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InstructionForCreditorAgent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInstructionForCreditorAgent = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionForCreditorAgent1.Code, com.tools20022.repository.msg.CreditTransferTransactionInformation1.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation10.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction1.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransaction6.InstructionForCreditorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation1.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation9.InstructionForCreditorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation11.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation13.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation2.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation11.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction2.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransaction7.InstructionForCreditorAgent, com.tools20022.repository.msg.InstructionForCreditorAgent2.Code,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation3.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation13.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransaction4.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction8.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation14.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction5.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransaction10.InstructionForCreditorAgent, com.tools20022.repository.msg.InstructionForFinalAgent.Code, com.tools20022.repository.msg.InstructionForFinalAgent.Proprietary,
-					com.tools20022.repository.msg.RequestedModification.InstructionForFinalAgent, com.tools20022.repository.msg.RequestedModification2.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.PaymentComplementaryInformation2.InstructionForCreditorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation3.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.RequestedModification3.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction9.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation7.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation9.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.PaymentComplementaryInformation4.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction17.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransaction19.InstructionForCreditorAgent, com.tools20022.repository.msg.RequestedModification4.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransaction18.InstructionForCreditorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation18.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransaction20.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction21.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransaction23.InstructionForCreditorAgent, com.tools20022.repository.msg.RequestedModification5.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransaction25.InstructionForCreditorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation5.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.CreditTransferTransaction24.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction26.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation19.InstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction22.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.RequestedModification6.InstructionForCreditorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation22.InstructionForCreditorAgent,
-					com.tools20022.repository.msg.PaymentComplementaryInformation6.InstructionForCreditorAgent);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionForCreditorAgent1.mmCode, com.tools20022.repository.msg.CreditTransferTransactionInformation1.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation10.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction1.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransaction6.mmInstructionForCreditorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation1.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation9.mmInstructionForCreditorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation13.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction2.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransaction7.mmInstructionForCreditorAgent, com.tools20022.repository.msg.InstructionForCreditorAgent2.mmCode,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation13.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransaction4.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction8.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation14.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction5.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransaction10.mmInstructionForCreditorAgent, com.tools20022.repository.msg.InstructionForFinalAgent.mmCode,
+					com.tools20022.repository.msg.InstructionForFinalAgent.mmProprietary, com.tools20022.repository.msg.RequestedModification.mmInstructionForFinalAgent,
+					com.tools20022.repository.msg.RequestedModification2.mmInstructionForCreditorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation2.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.PaymentComplementaryInformation3.mmInstructionForCreditorAgent, com.tools20022.repository.msg.RequestedModification3.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransaction9.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation9.mmInstructionForCreditorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation4.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransaction17.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction19.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.RequestedModification4.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction18.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction20.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransaction21.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction23.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.RequestedModification5.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction25.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.PaymentComplementaryInformation5.mmInstructionForCreditorAgent, com.tools20022.repository.msg.CreditTransferTransaction24.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransaction26.mmInstructionForCreditorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.CreditTransferTransaction22.mmInstructionForCreditorAgent, com.tools20022.repository.msg.RequestedModification6.mmInstructionForCreditorAgent,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmInstructionForCreditorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation6.mmInstructionForCreditorAgent);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InstructionForCreditorAgent";
 			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the creditor agent. \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the creditor's agent, or can be information required by the creditor's agent to process the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InstructionCode.mmObject();
 		}
 	};
+	protected InstructionCode instructionForDebtorAgent;
 	/**
 	 * Further information related to the processing of the payment instruction
 	 * that may need to be acted upon by the debtor's agent. Usage: The
@@ -5031,81 +5076,81 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InstructionCode
 	 * InstructionCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#InstructionForDebtorAgent
-	 * CreditTransferTransactionInformation1.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#InstructionForDebtorAgent
-	 * CreditTransferTransactionInformation10.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#InstructionForDebtorAgent
-	 * CreditTransferTransaction1.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#InstructionForDebtorAgent
-	 * PaymentInstruction6.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#InstructionForDebtorAgent
-	 * CreditTransferTransaction6.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#InstructionForDebtorAgent
-	 * PaymentInstruction9.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#InstructionForDebtorAgent
-	 * RequestedModification2.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation2#InstructionForDebtorAgent
-	 * PaymentComplementaryInformation2.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation3#InstructionForDebtorAgent
-	 * PaymentComplementaryInformation3.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#InstructionForDebtorAgent
-	 * RequestedModification3.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation15#InstructionForDebtorAgent
-	 * DirectDebitTransactionInformation15.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#InstructionForDebtorAgent
-	 * PaymentInstruction16.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation4#InstructionForDebtorAgent
-	 * PaymentComplementaryInformation4.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#InstructionForDebtorAgent
-	 * RequestedModification4.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#InstructionForDebtorAgent
-	 * CreditTransferTransaction20.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#InstructionForDebtorAgent
-	 * RequestedModification5.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation5#InstructionForDebtorAgent
-	 * PaymentComplementaryInformation5.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#InstructionForDebtorAgent
-	 * PaymentInstruction20.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#InstructionForDebtorAgent
-	 * CreditTransferTransaction26.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#InstructionForDebtorAgent
-	 * RequestedModification6.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#InstructionForDebtorAgent
-	 * PaymentInstruction22.InstructionForDebtorAgent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#InstructionForDebtorAgent
-	 * PaymentComplementaryInformation6.InstructionForDebtorAgent}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#mmInstructionForDebtorAgent
+	 * CreditTransferTransactionInformation1.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#mmInstructionForDebtorAgent
+	 * CreditTransferTransactionInformation10.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#mmInstructionForDebtorAgent
+	 * CreditTransferTransaction1.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#mmInstructionForDebtorAgent
+	 * PaymentInstruction6.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#mmInstructionForDebtorAgent
+	 * CreditTransferTransaction6.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#mmInstructionForDebtorAgent
+	 * PaymentInstruction9.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#mmInstructionForDebtorAgent
+	 * RequestedModification2.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation2#mmInstructionForDebtorAgent
+	 * PaymentComplementaryInformation2.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation3#mmInstructionForDebtorAgent
+	 * PaymentComplementaryInformation3.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmInstructionForDebtorAgent
+	 * RequestedModification3.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation15#mmInstructionForDebtorAgent
+	 * DirectDebitTransactionInformation15.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#mmInstructionForDebtorAgent
+	 * PaymentInstruction16.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation4#mmInstructionForDebtorAgent
+	 * PaymentComplementaryInformation4.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmInstructionForDebtorAgent
+	 * RequestedModification4.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#mmInstructionForDebtorAgent
+	 * CreditTransferTransaction20.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmInstructionForDebtorAgent
+	 * RequestedModification5.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation5#mmInstructionForDebtorAgent
+	 * PaymentComplementaryInformation5.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#mmInstructionForDebtorAgent
+	 * PaymentInstruction20.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#mmInstructionForDebtorAgent
+	 * CreditTransferTransaction26.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmInstructionForDebtorAgent
+	 * RequestedModification6.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmInstructionForDebtorAgent
+	 * PaymentInstruction22.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmInstructionForDebtorAgent
+	 * PaymentComplementaryInformation6.mmInstructionForDebtorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5119,30 +5164,31 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InstructionForDebtorAgent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInstructionForDebtorAgent = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransferTransactionInformation1.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation10.InstructionForDebtorAgent, com.tools20022.repository.msg.CreditTransferTransaction1.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.PaymentInstruction6.InstructionForDebtorAgent, com.tools20022.repository.msg.CreditTransferTransaction6.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.PaymentInstruction9.InstructionForDebtorAgent, com.tools20022.repository.msg.RequestedModification2.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.PaymentComplementaryInformation2.InstructionForDebtorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation3.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.RequestedModification3.InstructionForDebtorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation15.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.PaymentInstruction16.InstructionForDebtorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation4.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.RequestedModification4.InstructionForDebtorAgent, com.tools20022.repository.msg.CreditTransferTransaction20.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.RequestedModification5.InstructionForDebtorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation5.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.PaymentInstruction20.InstructionForDebtorAgent, com.tools20022.repository.msg.CreditTransferTransaction26.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.RequestedModification6.InstructionForDebtorAgent, com.tools20022.repository.msg.PaymentInstruction22.InstructionForDebtorAgent,
-					com.tools20022.repository.msg.PaymentComplementaryInformation6.InstructionForDebtorAgent);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransferTransactionInformation1.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation10.mmInstructionForDebtorAgent, com.tools20022.repository.msg.CreditTransferTransaction1.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.PaymentInstruction6.mmInstructionForDebtorAgent, com.tools20022.repository.msg.CreditTransferTransaction6.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.PaymentInstruction9.mmInstructionForDebtorAgent, com.tools20022.repository.msg.RequestedModification2.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.PaymentComplementaryInformation2.mmInstructionForDebtorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation3.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.RequestedModification3.mmInstructionForDebtorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation15.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.PaymentInstruction16.mmInstructionForDebtorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation4.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.RequestedModification4.mmInstructionForDebtorAgent, com.tools20022.repository.msg.CreditTransferTransaction20.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.RequestedModification5.mmInstructionForDebtorAgent, com.tools20022.repository.msg.PaymentComplementaryInformation5.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.PaymentInstruction20.mmInstructionForDebtorAgent, com.tools20022.repository.msg.CreditTransferTransaction26.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.RequestedModification6.mmInstructionForDebtorAgent, com.tools20022.repository.msg.PaymentInstruction22.mmInstructionForDebtorAgent,
+					com.tools20022.repository.msg.PaymentComplementaryInformation6.mmInstructionForDebtorAgent);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InstructionForDebtorAgent";
 			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the debtor's agent.  \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the debtor's agent, or can be information required by the debtor's agent to process the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InstructionCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PaymentIdentification> paymentRelatedIdentifications;
 	/**
 	 * Identifications provided to identify a payment at different processing
 	 * levels.
@@ -5152,8 +5198,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#Payment
-	 * PaymentIdentification.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmPayment
+	 * PaymentIdentification.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -5162,174 +5208,174 @@ public class Payment extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification
 	 * PaymentIdentification}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionReportDetails3#InstructionReference
-	 * TransactionReportDetails3.InstructionReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionReportDetails4#InstructionReference
-	 * TransactionReportDetails4.InstructionReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#InstructionReference
-	 * TransactionReportDetails5.InstructionReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#PaymentIdentification
-	 * CreditTransferTransactionInformation1.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#PaymentIdentification
-	 * CreditTransferTransactionInformation10.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#PaymentIdentification
-	 * CreditTransferTransaction1.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#PaymentIdentification
-	 * CreditTransferTransaction6.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#PaymentIdentification
-	 * DirectDebitTransactionInformation1.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#PaymentIdentification
-	 * DirectDebitTransactionInformation9.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#PaymentIdentification
-	 * DirectDebitTransactionInformation11.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#PaymentIdentification
-	 * DirectDebitTransactionInformation13.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#PaymentIdentification
-	 * CreditTransferTransactionInformation2.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#PaymentIdentification
-	 * CreditTransferTransactionInformation11.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#PaymentIdentification
-	 * CreditTransferTransaction2.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#PaymentIdentification
-	 * CreditTransferTransaction7.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#PaymentIdentification
-	 * DirectDebitTransactionInformation2.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#PaymentIdentification
-	 * DirectDebitTransactionInformation10.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#PaymentIdentification
-	 * DirectDebitTransactionInformation12.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#PaymentIdentification
-	 * DirectDebitTransactionInformation14.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#PaymentIdentification
-	 * CreditTransferTransactionInformation3.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation13#PaymentIdentification
-	 * CreditTransferTransactionInformation13.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction4#PaymentIdentification
-	 * CreditTransferTransaction4.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction8#PaymentIdentification
-	 * CreditTransferTransaction8.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation14#PaymentIdentification
-	 * CreditTransferTransactionInformation14.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction5#PaymentIdentification
-	 * CreditTransferTransaction5.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction10#PaymentIdentification
-	 * CreditTransferTransaction10.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation15#PaymentIdentification
-	 * DirectDebitTransactionInformation15.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation6#PaymentIdentification
-	 * CreditTransferTransactionInformation6.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation8#PaymentIdentification
-	 * CreditTransferTransactionInformation8.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#PaymentIdentification
-	 * CreditTransferTransactionInformation7.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#PaymentIdentification
-	 * CreditTransferTransactionInformation9.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation5#PaymentIdentification
-	 * DirectDebitTransactionInformation5.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation7#PaymentIdentification
-	 * DirectDebitTransactionInformation7.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#PaymentIdentification
-	 * DirectDebitTransactionInformation6.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#PaymentIdentification
-	 * DirectDebitTransactionInformation8.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation6#References
-	 * OriginalPaymentInformation6.References}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceLocation3#References
-	 * RemittanceLocation3.References}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction17#PaymentIdentification
-	 * CreditTransferTransaction17.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#PaymentIdentification
-	 * CreditTransferTransaction19.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#PaymentIdentification
-	 * DirectDebitTransactionInformation17.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#PaymentIdentification
-	 * DirectDebitTransactionInformation18.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#PaymentIdentification
-	 * CreditTransferTransaction20.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction21#PaymentIdentification
-	 * CreditTransferTransaction21.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReconciliationList1#PaymentReference
-	 * ReconciliationList1.PaymentReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction23#PaymentIdentification
-	 * CreditTransferTransaction23.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#PaymentIdentification
-	 * CreditTransferTransaction25.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#PaymentIdentification
-	 * DirectDebitTransactionInformation20.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#PaymentIdentification
-	 * CreditTransferTransaction26.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#PaymentIdentification
-	 * DirectDebitTransactionInformation19.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#PaymentIdentification
-	 * CreditTransferTransaction22.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#PaymentIdentification
-	 * DirectDebitTransactionInformation21.PaymentIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation7#References
-	 * OriginalPaymentInformation7.References}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#PaymentIdentification
-	 * DirectDebitTransactionInformation22.PaymentIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReportDetails3#mmInstructionReference
+	 * TransactionReportDetails3.mmInstructionReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReportDetails4#mmInstructionReference
+	 * TransactionReportDetails4.mmInstructionReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#mmInstructionReference
+	 * TransactionReportDetails5.mmInstructionReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#mmPaymentIdentification
+	 * CreditTransferTransactionInformation1.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#mmPaymentIdentification
+	 * CreditTransferTransactionInformation10.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#mmPaymentIdentification
+	 * CreditTransferTransaction1.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#mmPaymentIdentification
+	 * CreditTransferTransaction6.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#mmPaymentIdentification
+	 * DirectDebitTransactionInformation1.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#mmPaymentIdentification
+	 * DirectDebitTransactionInformation9.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmPaymentIdentification
+	 * DirectDebitTransactionInformation11.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#mmPaymentIdentification
+	 * DirectDebitTransactionInformation13.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#mmPaymentIdentification
+	 * CreditTransferTransactionInformation2.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#mmPaymentIdentification
+	 * CreditTransferTransactionInformation11.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#mmPaymentIdentification
+	 * CreditTransferTransaction2.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#mmPaymentIdentification
+	 * CreditTransferTransaction7.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#mmPaymentIdentification
+	 * DirectDebitTransactionInformation2.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#mmPaymentIdentification
+	 * DirectDebitTransactionInformation10.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#mmPaymentIdentification
+	 * DirectDebitTransactionInformation12.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#mmPaymentIdentification
+	 * DirectDebitTransactionInformation14.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmPaymentIdentification
+	 * CreditTransferTransactionInformation3.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation13#mmPaymentIdentification
+	 * CreditTransferTransactionInformation13.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction4#mmPaymentIdentification
+	 * CreditTransferTransaction4.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction8#mmPaymentIdentification
+	 * CreditTransferTransaction8.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation14#mmPaymentIdentification
+	 * CreditTransferTransactionInformation14.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction5#mmPaymentIdentification
+	 * CreditTransferTransaction5.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction10#mmPaymentIdentification
+	 * CreditTransferTransaction10.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation15#mmPaymentIdentification
+	 * DirectDebitTransactionInformation15.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation6#mmPaymentIdentification
+	 * CreditTransferTransactionInformation6.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation8#mmPaymentIdentification
+	 * CreditTransferTransactionInformation8.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#mmPaymentIdentification
+	 * CreditTransferTransactionInformation7.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#mmPaymentIdentification
+	 * CreditTransferTransactionInformation9.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation5#mmPaymentIdentification
+	 * DirectDebitTransactionInformation5.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation7#mmPaymentIdentification
+	 * DirectDebitTransactionInformation7.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#mmPaymentIdentification
+	 * DirectDebitTransactionInformation6.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#mmPaymentIdentification
+	 * DirectDebitTransactionInformation8.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation6#mmReferences
+	 * OriginalPaymentInformation6.mmReferences}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceLocation3#mmReferences
+	 * RemittanceLocation3.mmReferences}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction17#mmPaymentIdentification
+	 * CreditTransferTransaction17.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#mmPaymentIdentification
+	 * CreditTransferTransaction19.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#mmPaymentIdentification
+	 * DirectDebitTransactionInformation17.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#mmPaymentIdentification
+	 * DirectDebitTransactionInformation18.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#mmPaymentIdentification
+	 * CreditTransferTransaction20.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction21#mmPaymentIdentification
+	 * CreditTransferTransaction21.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmPaymentReference
+	 * ReconciliationList1.mmPaymentReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction23#mmPaymentIdentification
+	 * CreditTransferTransaction23.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#mmPaymentIdentification
+	 * CreditTransferTransaction25.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#mmPaymentIdentification
+	 * DirectDebitTransactionInformation20.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#mmPaymentIdentification
+	 * CreditTransferTransaction26.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#mmPaymentIdentification
+	 * DirectDebitTransactionInformation19.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#mmPaymentIdentification
+	 * CreditTransferTransaction22.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#mmPaymentIdentification
+	 * DirectDebitTransactionInformation21.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation7#mmReferences
+	 * OriginalPaymentInformation7.mmReferences}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#mmPaymentIdentification
+	 * DirectDebitTransactionInformation22.mmPaymentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5343,45 +5389,47 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PaymentRelatedIdentifications = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPaymentRelatedIdentifications = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportDetails3.InstructionReference, com.tools20022.repository.msg.TransactionReportDetails4.InstructionReference,
-					com.tools20022.repository.msg.TransactionReportDetails5.InstructionReference, com.tools20022.repository.msg.CreditTransferTransactionInformation1.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation10.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction1.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransaction6.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation1.PaymentIdentification,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation9.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation11.PaymentIdentification,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation13.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransactionInformation2.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation11.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction2.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransaction7.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation2.PaymentIdentification,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation10.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation12.PaymentIdentification,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation14.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransactionInformation3.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation13.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction4.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransaction8.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransactionInformation14.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransaction5.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction10.PaymentIdentification,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation15.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransactionInformation6.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation8.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransactionInformation7.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation9.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation5.PaymentIdentification,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation7.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation6.PaymentIdentification,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation8.PaymentIdentification, com.tools20022.repository.msg.OriginalPaymentInformation6.References, com.tools20022.repository.msg.RemittanceLocation3.References,
-					com.tools20022.repository.msg.CreditTransferTransaction17.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction19.PaymentIdentification,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation17.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation18.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransaction20.PaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction21.PaymentIdentification,
-					com.tools20022.repository.msg.ReconciliationList1.PaymentReference, com.tools20022.repository.msg.CreditTransferTransaction23.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransaction25.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation20.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransaction26.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation19.PaymentIdentification,
-					com.tools20022.repository.msg.CreditTransferTransaction22.PaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation21.PaymentIdentification,
-					com.tools20022.repository.msg.OriginalPaymentInformation7.References, com.tools20022.repository.msg.DirectDebitTransactionInformation22.PaymentIdentification);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportDetails3.mmInstructionReference, com.tools20022.repository.msg.TransactionReportDetails4.mmInstructionReference,
+					com.tools20022.repository.msg.TransactionReportDetails5.mmInstructionReference, com.tools20022.repository.msg.CreditTransferTransactionInformation1.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation10.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction1.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransaction6.mmPaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation1.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation9.mmPaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation13.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction2.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransaction7.mmPaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmPaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation13.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction4.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransaction8.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransactionInformation14.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransaction5.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction10.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation15.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransactionInformation6.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation8.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation9.mmPaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation5.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation7.mmPaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation8.mmPaymentIdentification, com.tools20022.repository.msg.OriginalPaymentInformation6.mmReferences,
+					com.tools20022.repository.msg.RemittanceLocation3.mmReferences, com.tools20022.repository.msg.CreditTransferTransaction17.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransaction19.mmPaymentIdentification, com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction20.mmPaymentIdentification,
+					com.tools20022.repository.msg.CreditTransferTransaction21.mmPaymentIdentification, com.tools20022.repository.msg.ReconciliationList1.mmPaymentReference,
+					com.tools20022.repository.msg.CreditTransferTransaction23.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction25.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction26.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmPaymentIdentification, com.tools20022.repository.msg.CreditTransferTransaction22.mmPaymentIdentification,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmPaymentIdentification, com.tools20022.repository.msg.OriginalPaymentInformation7.mmReferences,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmPaymentIdentification);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentRelatedIdentifications";
 			definition = "Identifications provided to identify a payment at different processing levels.";
 			minOccurs = 0;
-			type_lazy = () -> PaymentIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.Payment;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 		}
 	};
+	protected PaymentInvestigationCase relatedInvestigationCase;
 	/**
 	 * Investigation case assigned to the payment.
 	 * <p>
@@ -5390,8 +5438,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#UnderlyingPayment
-	 * PaymentInvestigationCase.UnderlyingPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmUnderlyingPayment
+	 * PaymentInvestigationCase.mmUnderlyingPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -5400,77 +5448,87 @@ public class Payment extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase
 	 * PaymentInvestigationCase}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation30#Case
-	 * PaymentTransactionInformation30.Case}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#Case
-	 * OriginalPaymentInformation4.Case}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction37#Case
-	 * PaymentTransaction37.Case}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction47#Case
-	 * PaymentTransaction47.Case}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation31#Case
-	 * PaymentTransactionInformation31.Case}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction38#Case
-	 * PaymentTransaction38.Case}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction48#Case
-	 * PaymentTransaction48.Case}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation32#ResolvedCase
-	 * PaymentTransactionInformation32.ResolvedCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation3#ResolvedCase
-	 * OriginalPaymentInformation3.ResolvedCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation33#ResolvedCase
-	 * PaymentTransactionInformation33.ResolvedCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#ResolvedCase
-	 * PaymentTransaction39.ResolvedCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction40#ResolvedCase
-	 * PaymentTransaction40.ResolvedCase}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction58#Case
-	 * PaymentTransaction58.Case}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#ResolvedCase
-	 * PaymentTransaction54.ResolvedCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction53#ResolvedCase
-	 * PaymentTransaction53.ResolvedCase}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction55#Case
-	 * PaymentTransaction55.Case}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction61#Case
-	 * PaymentTransaction61.Case}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#ResolvedCase
-	 * PaymentTransaction66.ResolvedCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction67#ResolvedCase
-	 * PaymentTransaction67.ResolvedCase}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction62#Case
-	 * PaymentTransaction62.Case}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#ResolvedCase
-	 * PaymentTransaction78.ResolvedCase}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction74#Case
-	 * PaymentTransaction74.Case}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction75#Case
-	 * PaymentTransaction75.Case}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#ResolvedCase
-	 * PaymentTransaction79.ResolvedCase}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation30#mmCase
+	 * PaymentTransactionInformation30.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation4#mmCase
+	 * OriginalPaymentInformation4.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction37#mmCase
+	 * PaymentTransaction37.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction47#mmCase
+	 * PaymentTransaction47.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation31#mmCase
+	 * PaymentTransactionInformation31.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction38#mmCase
+	 * PaymentTransaction38.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction48#mmCase
+	 * PaymentTransaction48.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation32#mmResolvedCase
+	 * PaymentTransactionInformation32.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation3#mmResolvedCase
+	 * OriginalPaymentInformation3.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation33#mmResolvedCase
+	 * PaymentTransactionInformation33.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#mmResolvedCase
+	 * PaymentTransaction39.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction40#mmResolvedCase
+	 * PaymentTransaction40.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction58#mmCase
+	 * PaymentTransaction58.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#mmResolvedCase
+	 * PaymentTransaction54.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction53#mmResolvedCase
+	 * PaymentTransaction53.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction55#mmCase
+	 * PaymentTransaction55.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction61#mmCase
+	 * PaymentTransaction61.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#mmResolvedCase
+	 * PaymentTransaction66.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction67#mmResolvedCase
+	 * PaymentTransaction67.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction62#mmCase
+	 * PaymentTransaction62.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#mmResolvedCase
+	 * PaymentTransaction78.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction74#mmCase
+	 * PaymentTransaction74.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction75#mmCase
+	 * PaymentTransaction75.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#mmResolvedCase
+	 * PaymentTransaction79.mmResolvedCase}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5482,28 +5540,30 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Investigation case assigned to the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedInvestigationCase = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedInvestigationCase = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionInformation30.Case, com.tools20022.repository.msg.OriginalPaymentInformation4.Case, com.tools20022.repository.msg.PaymentTransaction37.Case,
-					com.tools20022.repository.msg.PaymentTransaction47.Case, com.tools20022.repository.msg.PaymentTransactionInformation31.Case, com.tools20022.repository.msg.PaymentTransaction38.Case,
-					com.tools20022.repository.msg.PaymentTransaction48.Case, com.tools20022.repository.msg.PaymentTransactionInformation32.ResolvedCase, com.tools20022.repository.msg.OriginalPaymentInformation3.ResolvedCase,
-					com.tools20022.repository.msg.PaymentTransactionInformation33.ResolvedCase, com.tools20022.repository.msg.PaymentTransaction39.ResolvedCase, com.tools20022.repository.msg.PaymentTransaction40.ResolvedCase,
-					com.tools20022.repository.msg.PaymentTransaction58.Case, com.tools20022.repository.msg.PaymentTransaction54.ResolvedCase, com.tools20022.repository.msg.PaymentTransaction53.ResolvedCase,
-					com.tools20022.repository.msg.PaymentTransaction55.Case, com.tools20022.repository.msg.PaymentTransaction61.Case, com.tools20022.repository.msg.PaymentTransaction66.ResolvedCase,
-					com.tools20022.repository.msg.PaymentTransaction67.ResolvedCase, com.tools20022.repository.msg.PaymentTransaction62.Case, com.tools20022.repository.msg.PaymentTransaction78.ResolvedCase,
-					com.tools20022.repository.msg.PaymentTransaction74.Case, com.tools20022.repository.msg.PaymentTransaction75.Case, com.tools20022.repository.msg.PaymentTransaction79.ResolvedCase);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionInformation30.mmCase, com.tools20022.repository.msg.OriginalPaymentInformation4.mmCase,
+					com.tools20022.repository.msg.PaymentTransaction37.mmCase, com.tools20022.repository.msg.PaymentTransaction47.mmCase, com.tools20022.repository.msg.PaymentTransactionInformation31.mmCase,
+					com.tools20022.repository.msg.PaymentTransaction38.mmCase, com.tools20022.repository.msg.PaymentTransaction48.mmCase, com.tools20022.repository.msg.PaymentTransactionInformation32.mmResolvedCase,
+					com.tools20022.repository.msg.OriginalPaymentInformation3.mmResolvedCase, com.tools20022.repository.msg.PaymentTransactionInformation33.mmResolvedCase, com.tools20022.repository.msg.PaymentTransaction39.mmResolvedCase,
+					com.tools20022.repository.msg.PaymentTransaction40.mmResolvedCase, com.tools20022.repository.msg.PaymentTransaction58.mmCase, com.tools20022.repository.msg.PaymentTransaction54.mmResolvedCase,
+					com.tools20022.repository.msg.PaymentTransaction53.mmResolvedCase, com.tools20022.repository.msg.PaymentTransaction55.mmCase, com.tools20022.repository.msg.PaymentTransaction61.mmCase,
+					com.tools20022.repository.msg.PaymentTransaction66.mmResolvedCase, com.tools20022.repository.msg.PaymentTransaction67.mmResolvedCase, com.tools20022.repository.msg.PaymentTransaction62.mmCase,
+					com.tools20022.repository.msg.PaymentTransaction78.mmResolvedCase, com.tools20022.repository.msg.PaymentTransaction74.mmCase, com.tools20022.repository.msg.PaymentTransaction75.mmCase,
+					com.tools20022.repository.msg.PaymentTransaction79.mmResolvedCase);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCase";
 			definition = "Investigation case assigned to the payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInvestigationCase.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.UnderlyingPayment;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmUnderlyingPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmObject();
 		}
 	};
+	protected SettlementTimeRequest settlementTimeRequest;
 	/**
 	 * Information on the requested settlement time of the instruction.
 	 * <p>
@@ -5512,8 +5572,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#Payment
-	 * SettlementTimeRequest.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmPayment
+	 * SettlementTimeRequest.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -5522,60 +5582,60 @@ public class Payment extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest
 	 * SettlementTimeRequest}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#SettlementTimeRequest
-	 * CreditTransferTransactionInformation2.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#SettlementTimeRequest
-	 * CreditTransferTransactionInformation11.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#SettlementTimeRequest
-	 * CreditTransferTransaction2.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#SettlementTimeRequest
-	 * CreditTransferTransaction7.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#SettlementTimeRequest
-	 * CreditTransferTransactionInformation3.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation13#SettlementTimeRequest
-	 * CreditTransferTransactionInformation13.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction4#SettlementTimeRequest
-	 * CreditTransferTransaction4.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction8#SettlementTimeRequest
-	 * CreditTransferTransaction8.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation15#SettlementTimeRequest
-	 * DirectDebitTransactionInformation15.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#SettlementTimeRequest
-	 * CreditTransferTransactionInformation7.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#SettlementTimeRequest
-	 * CreditTransferTransactionInformation9.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction17#SettlementTimeRequest
-	 * CreditTransferTransaction17.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#SettlementTimeRequest
-	 * CreditTransferTransaction19.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction23#SettlementTimeRequest
-	 * CreditTransferTransaction23.SettlementTimeRequest}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#SettlementTimeRequest
-	 * CreditTransferTransaction25.SettlementTimeRequest}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#mmSettlementTimeRequest
+	 * CreditTransferTransactionInformation2.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#mmSettlementTimeRequest
+	 * CreditTransferTransactionInformation11.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#mmSettlementTimeRequest
+	 * CreditTransferTransaction2.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#mmSettlementTimeRequest
+	 * CreditTransferTransaction7.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmSettlementTimeRequest
+	 * CreditTransferTransactionInformation3.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation13#mmSettlementTimeRequest
+	 * CreditTransferTransactionInformation13.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction4#mmSettlementTimeRequest
+	 * CreditTransferTransaction4.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction8#mmSettlementTimeRequest
+	 * CreditTransferTransaction8.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation15#mmSettlementTimeRequest
+	 * DirectDebitTransactionInformation15.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#mmSettlementTimeRequest
+	 * CreditTransferTransactionInformation7.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#mmSettlementTimeRequest
+	 * CreditTransferTransactionInformation9.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction17#mmSettlementTimeRequest
+	 * CreditTransferTransaction17.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#mmSettlementTimeRequest
+	 * CreditTransferTransaction19.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction23#mmSettlementTimeRequest
+	 * CreditTransferTransaction23.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#mmSettlementTimeRequest
+	 * CreditTransferTransaction25.mmSettlementTimeRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5588,28 +5648,29 @@ public class Payment extends ObligationFulfilment {
 	 * "Information on the requested settlement time of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SettlementTimeRequest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSettlementTimeRequest = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransferTransactionInformation2.SettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransactionInformation11.SettlementTimeRequest,
-					com.tools20022.repository.msg.CreditTransferTransaction2.SettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransaction7.SettlementTimeRequest,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation3.SettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransactionInformation13.SettlementTimeRequest,
-					com.tools20022.repository.msg.CreditTransferTransaction4.SettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransaction8.SettlementTimeRequest,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation15.SettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransactionInformation7.SettlementTimeRequest,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation9.SettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransaction17.SettlementTimeRequest,
-					com.tools20022.repository.msg.CreditTransferTransaction19.SettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransaction23.SettlementTimeRequest,
-					com.tools20022.repository.msg.CreditTransferTransaction25.SettlementTimeRequest);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmSettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmSettlementTimeRequest,
+					com.tools20022.repository.msg.CreditTransferTransaction2.mmSettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransaction7.mmSettlementTimeRequest,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmSettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransactionInformation13.mmSettlementTimeRequest,
+					com.tools20022.repository.msg.CreditTransferTransaction4.mmSettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransaction8.mmSettlementTimeRequest,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation15.mmSettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmSettlementTimeRequest,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation9.mmSettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransaction17.mmSettlementTimeRequest,
+					com.tools20022.repository.msg.CreditTransferTransaction19.mmSettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransaction23.mmSettlementTimeRequest,
+					com.tools20022.repository.msg.CreditTransferTransaction25.mmSettlementTimeRequest);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SettlementTimeRequest";
 			definition = "Information on the requested settlement time of the instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.Payment;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount of the payment.
 	 * <p>
@@ -5620,206 +5681,207 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1#Amount
-	 * CardAmountAndCurrencyExchange1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference19#Amount
-	 * OriginalTransactionReference19.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashMovement1#Amount
-	 * CashMovement1.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashMovement2#Amount
-	 * CashMovement2.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashProceeds1#PostingAmount
-	 * CashProceeds1.PostingAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashMovement3#PostingAmount
-	 * CashMovement3.PostingAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem3#Amount
-	 * NotificationItem3.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OriginalItem1#Amount
-	 * OriginalItem1.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OriginalItem2#Amount
-	 * OriginalItem2.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#Amount
-	 * OriginalItemAndStatus1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus2#Amount
-	 * OriginalItemAndStatus2.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem4#Amount
-	 * NotificationItem4.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus3#Amount
-	 * OriginalItemAndStatus3.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount6#Amount
-	 * DetailedAmount6.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount4#Amount
-	 * DetailedAmount4.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus4#Amount
-	 * OriginalItemAndStatus4.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem5#Amount
-	 * NotificationItem5.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference21#Amount
-	 * OriginalTransactionReference21.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReconciliationList1#PaymentAmount
-	 * ReconciliationList1.PaymentAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMAccountStatement2#Amount
-	 * ATMAccountStatement2.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#TotalRequestedAmount
-	 * ATMTransaction1.TotalRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#DetailedRequestedAmount
-	 * ATMTransaction1.DetailedRequestedAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.AmountAndCurrency1#Amount
-	 * AmountAndCurrency1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#AmountToDispense
-	 * DetailedAmount12.AmountToDispense}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#Amount
-	 * ATMTransaction8.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction3#BundlePresentedAmount
-	 * ATMTransaction3.BundlePresentedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction3#TotalPresentedAmount
-	 * ATMTransaction3.TotalPresentedAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount13#Amount
-	 * DetailedAmount13.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction6#TotalRequestedAmount
-	 * ATMTransaction6.TotalRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction6#DetailedRequestedAmount
-	 * ATMTransaction6.DetailedRequestedAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount11#Amount
-	 * DetailedAmount11.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount11#OriginalAmount
-	 * DetailedAmount11.OriginalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount10#Amount
-	 * DetailedAmount10.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount9#Amount
-	 * DetailedAmount9.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#AmountNetReconciliation
-	 * CardTransaction10.AmountNetReconciliation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionAmount2#TotalAmount
-	 * CardTransactionAmount2.TotalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8#Amount
-	 * DetailedAmount8.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionAmount1#TotalAmount
-	 * CardTransactionAmount1.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction9#AmountNetReconciliation
-	 * CardTransaction9.AmountNetReconciliation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail5#TransactionFees
-	 * CardTransactionDetail5.TransactionFees}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail2#TransactionAmounts
-	 * CardTransactionDetail2.TransactionAmounts}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail4#TransactionAmounts
-	 * CardTransactionDetail4.TransactionAmounts}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail6#TransactionFees
-	 * CardTransactionDetail6.TransactionFees}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionAmount5#TotalAmount
-	 * CardTransactionAmount5.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionAmount3#TotalAmount
-	 * CardTransactionAmount3.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionAmount4#TotalAmount
-	 * CardTransactionAmount4.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#TransactionFees
-	 * CardTransactionDetail3.TransactionFees}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#Amount
-	 * TransactionCertificate2.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus5#Amount
-	 * OriginalItemAndStatus5.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem6#Amount
-	 * NotificationItem6.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference23#Amount
-	 * OriginalTransactionReference23.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14#Amount
-	 * DetailedAmount14.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction17#BundlePresentedAmount
-	 * ATMTransaction17.BundlePresentedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction17#TotalPresentedAmount
-	 * ATMTransaction17.TotalPresentedAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount18#Amount
-	 * DetailedAmount18.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#TotalRequestedAmount
-	 * ATMTransaction13.TotalRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#DetailedRequestedAmount
-	 * ATMTransaction13.DetailedRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#TotalAuthorisedAmount
-	 * ATMTransaction16.TotalAuthorisedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#DetailedRequestedAmount
-	 * ATMTransaction16.DetailedRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction19#TotalAuthorisedAmount
-	 * ATMTransaction19.TotalAuthorisedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction19#DetailedRequestedAmount
-	 * ATMTransaction19.DetailedRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount16#AmountToDeposit
-	 * DetailedAmount16.AmountToDeposit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction15#TotalAmount
-	 * ATMTransaction15.TotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction15#DetailedRequestedAmount
-	 * ATMTransaction15.DetailedRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction24#DetailedRequestedAmount
-	 * ATMTransaction24.DetailedRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount17#AmountToTransfer
-	 * DetailedAmount17.AmountToTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction23#DetailedRequestedAmount
-	 * ATMTransaction23.DetailedRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction29#TotalRequestedAmount
-	 * ATMTransaction29.TotalRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction29#DetailedRequestedAmount
-	 * ATMTransaction29.DetailedRequestedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference26#Amount
-	 * OriginalTransactionReference26.Amount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1#mmAmount
+	 * CardAmountAndCurrencyExchange1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference19#mmAmount
+	 * OriginalTransactionReference19.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashMovement1#mmAmount
+	 * CashMovement1.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashMovement2#mmAmount
+	 * CashMovement2.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashProceeds1#mmPostingAmount
+	 * CashProceeds1.mmPostingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashMovement3#mmPostingAmount
+	 * CashMovement3.mmPostingAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem3#mmAmount
+	 * NotificationItem3.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OriginalItem1#mmAmount
+	 * OriginalItem1.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OriginalItem2#mmAmount
+	 * OriginalItem2.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus1#mmAmount
+	 * OriginalItemAndStatus1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus2#mmAmount
+	 * OriginalItemAndStatus2.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem4#mmAmount
+	 * NotificationItem4.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus3#mmAmount
+	 * OriginalItemAndStatus3.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount6#mmAmount
+	 * DetailedAmount6.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount4#mmAmount
+	 * DetailedAmount4.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus4#mmAmount
+	 * OriginalItemAndStatus4.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem5#mmAmount
+	 * NotificationItem5.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference21#mmAmount
+	 * OriginalTransactionReference21.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmPaymentAmount
+	 * ReconciliationList1.mmPaymentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMAccountStatement2#mmAmount
+	 * ATMAccountStatement2.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#mmTotalRequestedAmount
+	 * ATMTransaction1.mmTotalRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#mmDetailedRequestedAmount
+	 * ATMTransaction1.mmDetailedRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrency1#mmAmount
+	 * AmountAndCurrency1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#mmAmountToDispense
+	 * DetailedAmount12.mmAmountToDispense}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8#mmAmount
+	 * ATMTransaction8.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction3#mmBundlePresentedAmount
+	 * ATMTransaction3.mmBundlePresentedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction3#mmTotalPresentedAmount
+	 * ATMTransaction3.mmTotalPresentedAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount13#mmAmount
+	 * DetailedAmount13.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction6#mmTotalRequestedAmount
+	 * ATMTransaction6.mmTotalRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction6#mmDetailedRequestedAmount
+	 * ATMTransaction6.mmDetailedRequestedAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount11#mmAmount
+	 * DetailedAmount11.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount11#mmOriginalAmount
+	 * DetailedAmount11.mmOriginalAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount10#mmAmount
+	 * DetailedAmount10.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount9#mmAmount
+	 * DetailedAmount9.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#mmAmountNetReconciliation
+	 * CardTransaction10.mmAmountNetReconciliation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionAmount2#mmTotalAmount
+	 * CardTransactionAmount2.mmTotalAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8#mmAmount
+	 * DetailedAmount8.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionAmount1#mmTotalAmount
+	 * CardTransactionAmount1.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmAmountNetReconciliation
+	 * CardTransaction9.mmAmountNetReconciliation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail5#mmTransactionFees
+	 * CardTransactionDetail5.mmTransactionFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail2#mmTransactionAmounts
+	 * CardTransactionDetail2.mmTransactionAmounts}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail4#mmTransactionAmounts
+	 * CardTransactionDetail4.mmTransactionAmounts}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail6#mmTransactionFees
+	 * CardTransactionDetail6.mmTransactionFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionAmount5#mmTotalAmount
+	 * CardTransactionAmount5.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionAmount3#mmTotalAmount
+	 * CardTransactionAmount3.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionAmount4#mmTotalAmount
+	 * CardTransactionAmount4.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#mmTransactionFees
+	 * CardTransactionDetail3.mmTransactionFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#mmAmount
+	 * TransactionCertificate2.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemAndStatus5#mmAmount
+	 * OriginalItemAndStatus5.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem6#mmAmount
+	 * NotificationItem6.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference23#mmAmount
+	 * OriginalTransactionReference23.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14#mmAmount
+	 * DetailedAmount14.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction17#mmBundlePresentedAmount
+	 * ATMTransaction17.mmBundlePresentedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction17#mmTotalPresentedAmount
+	 * ATMTransaction17.mmTotalPresentedAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount18#mmAmount
+	 * DetailedAmount18.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmTotalRequestedAmount
+	 * ATMTransaction13.mmTotalRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmDetailedRequestedAmount
+	 * ATMTransaction13.mmDetailedRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#mmTotalAuthorisedAmount
+	 * ATMTransaction16.mmTotalAuthorisedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#mmDetailedRequestedAmount
+	 * ATMTransaction16.mmDetailedRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction19#mmTotalAuthorisedAmount
+	 * ATMTransaction19.mmTotalAuthorisedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction19#mmDetailedRequestedAmount
+	 * ATMTransaction19.mmDetailedRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount16#mmAmountToDeposit
+	 * DetailedAmount16.mmAmountToDeposit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction15#mmTotalAmount
+	 * ATMTransaction15.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction15#mmDetailedRequestedAmount
+	 * ATMTransaction15.mmDetailedRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction24#mmDetailedRequestedAmount
+	 * ATMTransaction24.mmDetailedRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount17#mmAmountToTransfer
+	 * DetailedAmount17.mmAmountToTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction23#mmDetailedRequestedAmount
+	 * ATMTransaction23.mmDetailedRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction29#mmTotalRequestedAmount
+	 * ATMTransaction29.mmTotalRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction29#mmDetailedRequestedAmount
+	 * ATMTransaction29.mmDetailedRequestedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference26#mmAmount
+	 * OriginalTransactionReference26.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5831,42 +5893,44 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Amount of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Amount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.Amount, com.tools20022.repository.msg.OriginalTransactionReference19.Amount, com.tools20022.repository.msg.CashMovement1.Amount,
-					com.tools20022.repository.msg.CashMovement2.Amount, com.tools20022.repository.msg.CashProceeds1.PostingAmount, com.tools20022.repository.msg.CashMovement3.PostingAmount,
-					com.tools20022.repository.msg.NotificationItem3.Amount, com.tools20022.repository.msg.OriginalItem1.Amount, com.tools20022.repository.msg.OriginalItem2.Amount,
-					com.tools20022.repository.msg.OriginalItemAndStatus1.Amount, com.tools20022.repository.msg.OriginalItemAndStatus2.Amount, com.tools20022.repository.msg.NotificationItem4.Amount,
-					com.tools20022.repository.msg.OriginalItemAndStatus3.Amount, com.tools20022.repository.msg.DetailedAmount6.Amount, com.tools20022.repository.msg.DetailedAmount4.Amount,
-					com.tools20022.repository.msg.OriginalItemAndStatus4.Amount, com.tools20022.repository.msg.NotificationItem5.Amount, com.tools20022.repository.msg.OriginalTransactionReference21.Amount,
-					com.tools20022.repository.msg.ReconciliationList1.PaymentAmount, com.tools20022.repository.msg.ATMAccountStatement2.Amount, com.tools20022.repository.msg.ATMTransaction1.TotalRequestedAmount,
-					com.tools20022.repository.msg.ATMTransaction1.DetailedRequestedAmount, com.tools20022.repository.msg.AmountAndCurrency1.Amount, com.tools20022.repository.msg.DetailedAmount12.AmountToDispense,
-					com.tools20022.repository.msg.ATMTransaction8.Amount, com.tools20022.repository.msg.ATMTransaction3.BundlePresentedAmount, com.tools20022.repository.msg.ATMTransaction3.TotalPresentedAmount,
-					com.tools20022.repository.msg.DetailedAmount13.Amount, com.tools20022.repository.msg.ATMTransaction6.TotalRequestedAmount, com.tools20022.repository.msg.ATMTransaction6.DetailedRequestedAmount,
-					com.tools20022.repository.msg.DetailedAmount11.Amount, com.tools20022.repository.msg.DetailedAmount11.OriginalAmount, com.tools20022.repository.msg.DetailedAmount10.Amount,
-					com.tools20022.repository.msg.DetailedAmount9.Amount, com.tools20022.repository.msg.CardTransaction10.AmountNetReconciliation, com.tools20022.repository.msg.CardTransactionAmount2.TotalAmount,
-					com.tools20022.repository.msg.DetailedAmount8.Amount, com.tools20022.repository.msg.CardTransactionAmount1.TotalAmount, com.tools20022.repository.msg.CardTransaction9.AmountNetReconciliation,
-					com.tools20022.repository.msg.CardTransactionDetail5.TransactionFees, com.tools20022.repository.msg.CardTransactionDetail2.TransactionAmounts, com.tools20022.repository.msg.CardTransactionDetail4.TransactionAmounts,
-					com.tools20022.repository.msg.CardTransactionDetail6.TransactionFees, com.tools20022.repository.msg.CardTransactionAmount5.TotalAmount, com.tools20022.repository.msg.CardTransactionAmount3.TotalAmount,
-					com.tools20022.repository.msg.CardTransactionAmount4.TotalAmount, com.tools20022.repository.msg.CardTransactionDetail3.TransactionFees, com.tools20022.repository.msg.TransactionCertificate2.Amount,
-					com.tools20022.repository.msg.OriginalItemAndStatus5.Amount, com.tools20022.repository.msg.NotificationItem6.Amount, com.tools20022.repository.msg.OriginalTransactionReference23.Amount,
-					com.tools20022.repository.msg.DetailedAmount14.Amount, com.tools20022.repository.msg.ATMTransaction17.BundlePresentedAmount, com.tools20022.repository.msg.ATMTransaction17.TotalPresentedAmount,
-					com.tools20022.repository.msg.DetailedAmount18.Amount, com.tools20022.repository.msg.ATMTransaction13.TotalRequestedAmount, com.tools20022.repository.msg.ATMTransaction13.DetailedRequestedAmount,
-					com.tools20022.repository.msg.ATMTransaction16.TotalAuthorisedAmount, com.tools20022.repository.msg.ATMTransaction16.DetailedRequestedAmount, com.tools20022.repository.msg.ATMTransaction19.TotalAuthorisedAmount,
-					com.tools20022.repository.msg.ATMTransaction19.DetailedRequestedAmount, com.tools20022.repository.msg.DetailedAmount16.AmountToDeposit, com.tools20022.repository.msg.ATMTransaction15.TotalAmount,
-					com.tools20022.repository.msg.ATMTransaction15.DetailedRequestedAmount, com.tools20022.repository.msg.ATMTransaction24.DetailedRequestedAmount, com.tools20022.repository.msg.DetailedAmount17.AmountToTransfer,
-					com.tools20022.repository.msg.ATMTransaction23.DetailedRequestedAmount, com.tools20022.repository.msg.ATMTransaction29.TotalRequestedAmount, com.tools20022.repository.msg.ATMTransaction29.DetailedRequestedAmount,
-					com.tools20022.repository.msg.OriginalTransactionReference26.Amount);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmAmount, com.tools20022.repository.msg.OriginalTransactionReference19.mmAmount,
+					com.tools20022.repository.msg.CashMovement1.mmAmount, com.tools20022.repository.msg.CashMovement2.mmAmount, com.tools20022.repository.msg.CashProceeds1.mmPostingAmount,
+					com.tools20022.repository.msg.CashMovement3.mmPostingAmount, com.tools20022.repository.msg.NotificationItem3.mmAmount, com.tools20022.repository.msg.OriginalItem1.mmAmount,
+					com.tools20022.repository.msg.OriginalItem2.mmAmount, com.tools20022.repository.msg.OriginalItemAndStatus1.mmAmount, com.tools20022.repository.msg.OriginalItemAndStatus2.mmAmount,
+					com.tools20022.repository.msg.NotificationItem4.mmAmount, com.tools20022.repository.msg.OriginalItemAndStatus3.mmAmount, com.tools20022.repository.msg.DetailedAmount6.mmAmount,
+					com.tools20022.repository.msg.DetailedAmount4.mmAmount, com.tools20022.repository.msg.OriginalItemAndStatus4.mmAmount, com.tools20022.repository.msg.NotificationItem5.mmAmount,
+					com.tools20022.repository.msg.OriginalTransactionReference21.mmAmount, com.tools20022.repository.msg.ReconciliationList1.mmPaymentAmount, com.tools20022.repository.msg.ATMAccountStatement2.mmAmount,
+					com.tools20022.repository.msg.ATMTransaction1.mmTotalRequestedAmount, com.tools20022.repository.msg.ATMTransaction1.mmDetailedRequestedAmount, com.tools20022.repository.msg.AmountAndCurrency1.mmAmount,
+					com.tools20022.repository.msg.DetailedAmount12.mmAmountToDispense, com.tools20022.repository.msg.ATMTransaction8.mmAmount, com.tools20022.repository.msg.ATMTransaction3.mmBundlePresentedAmount,
+					com.tools20022.repository.msg.ATMTransaction3.mmTotalPresentedAmount, com.tools20022.repository.msg.DetailedAmount13.mmAmount, com.tools20022.repository.msg.ATMTransaction6.mmTotalRequestedAmount,
+					com.tools20022.repository.msg.ATMTransaction6.mmDetailedRequestedAmount, com.tools20022.repository.msg.DetailedAmount11.mmAmount, com.tools20022.repository.msg.DetailedAmount11.mmOriginalAmount,
+					com.tools20022.repository.msg.DetailedAmount10.mmAmount, com.tools20022.repository.msg.DetailedAmount9.mmAmount, com.tools20022.repository.msg.CardTransaction10.mmAmountNetReconciliation,
+					com.tools20022.repository.msg.CardTransactionAmount2.mmTotalAmount, com.tools20022.repository.msg.DetailedAmount8.mmAmount, com.tools20022.repository.msg.CardTransactionAmount1.mmTotalAmount,
+					com.tools20022.repository.msg.CardTransaction9.mmAmountNetReconciliation, com.tools20022.repository.msg.CardTransactionDetail5.mmTransactionFees,
+					com.tools20022.repository.msg.CardTransactionDetail2.mmTransactionAmounts, com.tools20022.repository.msg.CardTransactionDetail4.mmTransactionAmounts,
+					com.tools20022.repository.msg.CardTransactionDetail6.mmTransactionFees, com.tools20022.repository.msg.CardTransactionAmount5.mmTotalAmount, com.tools20022.repository.msg.CardTransactionAmount3.mmTotalAmount,
+					com.tools20022.repository.msg.CardTransactionAmount4.mmTotalAmount, com.tools20022.repository.msg.CardTransactionDetail3.mmTransactionFees, com.tools20022.repository.msg.TransactionCertificate2.mmAmount,
+					com.tools20022.repository.msg.OriginalItemAndStatus5.mmAmount, com.tools20022.repository.msg.NotificationItem6.mmAmount, com.tools20022.repository.msg.OriginalTransactionReference23.mmAmount,
+					com.tools20022.repository.msg.DetailedAmount14.mmAmount, com.tools20022.repository.msg.ATMTransaction17.mmBundlePresentedAmount, com.tools20022.repository.msg.ATMTransaction17.mmTotalPresentedAmount,
+					com.tools20022.repository.msg.DetailedAmount18.mmAmount, com.tools20022.repository.msg.ATMTransaction13.mmTotalRequestedAmount, com.tools20022.repository.msg.ATMTransaction13.mmDetailedRequestedAmount,
+					com.tools20022.repository.msg.ATMTransaction16.mmTotalAuthorisedAmount, com.tools20022.repository.msg.ATMTransaction16.mmDetailedRequestedAmount, com.tools20022.repository.msg.ATMTransaction19.mmTotalAuthorisedAmount,
+					com.tools20022.repository.msg.ATMTransaction19.mmDetailedRequestedAmount, com.tools20022.repository.msg.DetailedAmount16.mmAmountToDeposit, com.tools20022.repository.msg.ATMTransaction15.mmTotalAmount,
+					com.tools20022.repository.msg.ATMTransaction15.mmDetailedRequestedAmount, com.tools20022.repository.msg.ATMTransaction24.mmDetailedRequestedAmount, com.tools20022.repository.msg.DetailedAmount17.mmAmountToTransfer,
+					com.tools20022.repository.msg.ATMTransaction23.mmDetailedRequestedAmount, com.tools20022.repository.msg.ATMTransaction29.mmTotalRequestedAmount, com.tools20022.repository.msg.ATMTransaction29.mmDetailedRequestedAmount,
+					com.tools20022.repository.msg.OriginalTransactionReference26.mmAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of the payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement;
 	/**
 	 * Specifies the settlement operation which originates the payment.
 	 * <p>
@@ -5875,8 +5939,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#Payment
-	 * CommercialTradeSettlement.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmPayment
+	 * CommercialTradeSettlement.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -5885,18 +5949,18 @@ public class Payment extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
 	 * CommercialTradeSettlement}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EarlyPayment1#EarlyPaymentTaxSpecification
-	 * EarlyPayment1.EarlyPaymentTaxSpecification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EarlyPayment1#mmEarlyPaymentTaxSpecification
+	 * EarlyPayment1.mmEarlyPaymentTaxSpecification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -5909,20 +5973,21 @@ public class Payment extends ObligationFulfilment {
 	 * "Specifies the settlement operation which originates the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TradeSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTradeSettlement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EarlyPayment1.EarlyPaymentTaxSpecification);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EarlyPayment1.mmEarlyPaymentTaxSpecification);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradeSettlement";
 			definition = "Specifies the settlement operation which originates the payment.";
 			minOccurs = 0;
-			type_lazy = () -> CommercialTradeSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.Payment;
+			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
 		}
 	};
+	protected Max140Text standardSettlementInstructions;
 	/**
 	 * Identifies the standard settlement instructions.
 	 * <p>
@@ -5947,18 +6012,19 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Identifies the standard settlement instructions."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute StandardSettlementInstructions = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStandardSettlementInstructions = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Payment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StandardSettlementInstructions";
 			definition = "Identifies the standard settlement instructions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected DebitAuthorisation relatedDebitAuthorisation;
 	/**
 	 * Payment which is the result of the debit authorisation
 	 * <p>
@@ -5967,8 +6033,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#AuthorisedReturn
-	 * DebitAuthorisation.AuthorisedReturn}</li>
+	 * {@linkplain com.tools20022.repository.entity.DebitAuthorisation#mmAuthorisedReturn
+	 * DebitAuthorisation.mmAuthorisedReturn}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -5991,20 +6057,21 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Payment which is the result of the debit authorisation"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedDebitAuthorisation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedDebitAuthorisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Payment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedDebitAuthorisation";
 			definition = "Payment which is the result of the debit authorisation";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DebitAuthorisation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.AuthorisedReturn;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmAuthorisedReturn;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 		}
 	};
+	protected PaymentInvestigationCaseResolution relatedInvestigationCaseResolution;
 	/**
 	 * Case resolution related to a specific payment.
 	 * <p>
@@ -6013,8 +6080,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#PaymentCorrection
-	 * PaymentInvestigationCaseResolution.PaymentCorrection}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmPaymentCorrection
+	 * PaymentInvestigationCaseResolution.mmPaymentCorrection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -6038,20 +6105,21 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Case resolution related to a specific payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedInvestigationCaseResolution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedInvestigationCaseResolution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Payment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCaseResolution";
 			definition = "Case resolution related to a specific payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.PaymentCorrection;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmPaymentCorrection;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 		}
 	};
+	protected Payment originalPayment;
 	/**
 	 * Original payment which is returned.
 	 * <p>
@@ -6060,8 +6128,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ReturnPayment
-	 * Payment.ReturnPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmReturnPayment
+	 * Payment.mmReturnPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -6083,20 +6151,21 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Original payment which is returned."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OriginalPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOriginalPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Payment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OriginalPayment";
 			definition = "Original payment which is returned.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Payment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Payment.ReturnPayment;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmReturnPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Payment> returnPayment;
 	/**
 	 * Payment which offsets an original payment.
 	 * <p>
@@ -6105,8 +6174,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#OriginalPayment
-	 * Payment.OriginalPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmOriginalPayment
+	 * Payment.mmOriginalPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -6128,19 +6197,20 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Payment which offsets an original payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ReturnPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmReturnPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Payment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReturnPayment";
 			definition = "Payment which offsets an original payment.";
 			minOccurs = 0;
-			type_lazy = () -> Payment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Payment.OriginalPayment;
+			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmOriginalPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
+	protected SecuritiesSettlement relatedSecuritiesSettlement;
 	/**
 	 * Securities settlement process which is the source of the payment.
 	 * <p>
@@ -6149,8 +6219,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#Payment
-	 * SecuritiesSettlement.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPayment
+	 * SecuritiesSettlement.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -6175,20 +6245,21 @@ public class Payment extends ObligationFulfilment {
 	 * "Securities settlement process which is the source of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedSecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Payment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesSettlement";
 			definition = "Securities settlement process which is the source of the payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.Payment;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Invoice> invoiceReconciliation;
 	/**
 	 * Reconciliation of the amounts of an invoice with the amounts included in
 	 * one or more payments.
@@ -6197,8 +6268,9 @@ public class Payment extends ObligationFulfilment {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
-	 * opposite} = {@linkplain com.tools20022.repository.entity.Invoice#Payment
-	 * Invoice.Payment}</li>
+	 * opposite} =
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmPayment
+	 * Invoice.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -6222,19 +6294,20 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvoiceReconciliation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvoiceReconciliation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Payment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvoiceReconciliation";
 			definition = "Reconciliation of the amounts of an invoice with the amounts included in one or more payments.";
 			minOccurs = 0;
-			type_lazy = () -> Invoice.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.Payment;
+			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 		}
 	};
+	protected PaymentInstrumentCode paymentInstrument;
 	/**
 	 * Payment type at the origin of the cash entry eg, a cheque.
 	 * <p>
@@ -6245,30 +6318,30 @@ public class Payment extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode
 	 * PaymentInstrumentCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentOrigin1Choice#Instrument
-	 * PaymentOrigin1Choice.Instrument}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails3#PaymentMethod
-	 * PaymentInstructionReferenceDetails3.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#PaymentMethod
-	 * PaymentInstructionReferenceDetails4.PaymentMethod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#TransactionType
-	 * TransactionCertificate2.TransactionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#LocalInstrument
-	 * TransactionCertificate2.LocalInstrument}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentOrigin1Choice#mmInstrument
+	 * PaymentOrigin1Choice.mmInstrument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails3#mmPaymentMethod
+	 * PaymentInstructionReferenceDetails3.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionReferenceDetails4#mmPaymentMethod
+	 * PaymentInstructionReferenceDetails4.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#mmTransactionType
+	 * TransactionCertificate2.mmTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#mmLocalInstrument
+	 * TransactionCertificate2.mmLocalInstrument}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -6281,21 +6354,22 @@ public class Payment extends ObligationFulfilment {
 	 * "Payment type at the origin of the cash entry eg, a cheque."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PaymentInstrument = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPaymentInstrument = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentOrigin1Choice.Instrument, com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.PaymentMethod,
-					com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.PaymentMethod, com.tools20022.repository.msg.TransactionCertificate2.TransactionType,
-					com.tools20022.repository.msg.TransactionCertificate2.LocalInstrument);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentOrigin1Choice.mmInstrument, com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmPaymentMethod,
+					com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmPaymentMethod, com.tools20022.repository.msg.TransactionCertificate2.mmTransactionType,
+					com.tools20022.repository.msg.TransactionCertificate2.mmLocalInstrument);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Payment type at the origin of the cash entry eg, a cheque.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentInstrumentCode.mmObject();
 		}
 	};
+	protected CashAccount account;
 	/**
 	 * Account debited for the payment.
 	 * <p>
@@ -6304,8 +6378,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#Payment
-	 * CashAccount.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmPayment
+	 * CashAccount.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -6313,72 +6387,72 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#AccountData
-	 * ATMTransaction1.AccountData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction2#AccountData
-	 * ATMTransaction2.AccountData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction7#AccountInformation
-	 * ATMTransaction7.AccountInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction3#AccountData
-	 * ATMTransaction3.AccountData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction6#AccountData
-	 * ATMTransaction6.AccountData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail1#AccountFrom
-	 * CardTransactionDetail1.AccountFrom}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail1#AccountTo
-	 * CardTransactionDetail1.AccountTo}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#AccountFrom
-	 * CardTransactionDetail3.AccountFrom}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#AccountTo
-	 * CardTransactionDetail3.AccountTo}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction14#AccountData
-	 * ATMTransaction14.AccountData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction17#AccountData
-	 * ATMTransaction17.AccountData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#AccountData
-	 * ATMTransaction13.AccountData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#AccountData
-	 * ATMTransaction16.AccountData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction19#AccountData
-	 * ATMTransaction19.AccountData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction15#AccountData
-	 * ATMTransaction15.AccountData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction21#AccountInformation
-	 * ATMTransaction21.AccountInformation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction24#AccountFrom
-	 * ATMTransaction24.AccountFrom}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction23#AccountFrom
-	 * ATMTransaction23.AccountFrom}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction29#AccountData
-	 * ATMTransaction29.AccountData}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction1#mmAccountData
+	 * ATMTransaction1.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction2#mmAccountData
+	 * ATMTransaction2.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction7#mmAccountInformation
+	 * ATMTransaction7.mmAccountInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction3#mmAccountData
+	 * ATMTransaction3.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction6#mmAccountData
+	 * ATMTransaction6.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail1#mmAccountFrom
+	 * CardTransactionDetail1.mmAccountFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail1#mmAccountTo
+	 * CardTransactionDetail1.mmAccountTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#mmAccountFrom
+	 * CardTransactionDetail3.mmAccountFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#mmAccountTo
+	 * CardTransactionDetail3.mmAccountTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction14#mmAccountData
+	 * ATMTransaction14.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction17#mmAccountData
+	 * ATMTransaction17.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmAccountData
+	 * ATMTransaction13.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#mmAccountData
+	 * ATMTransaction16.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction19#mmAccountData
+	 * ATMTransaction19.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction15#mmAccountData
+	 * ATMTransaction15.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction21#mmAccountInformation
+	 * ATMTransaction21.mmAccountInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction24#mmAccountFrom
+	 * ATMTransaction24.mmAccountFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction23#mmAccountFrom
+	 * ATMTransaction23.mmAccountFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction29#mmAccountData
+	 * ATMTransaction29.mmAccountData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -6390,27 +6464,28 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Account debited for the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Account = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction1.AccountData, com.tools20022.repository.msg.ATMTransaction2.AccountData, com.tools20022.repository.msg.ATMTransaction7.AccountInformation,
-					com.tools20022.repository.msg.ATMTransaction3.AccountData, com.tools20022.repository.msg.ATMTransaction6.AccountData, com.tools20022.repository.msg.CardTransactionDetail1.AccountFrom,
-					com.tools20022.repository.msg.CardTransactionDetail1.AccountTo, com.tools20022.repository.msg.CardTransactionDetail3.AccountFrom, com.tools20022.repository.msg.CardTransactionDetail3.AccountTo,
-					com.tools20022.repository.msg.ATMTransaction14.AccountData, com.tools20022.repository.msg.ATMTransaction17.AccountData, com.tools20022.repository.msg.ATMTransaction13.AccountData,
-					com.tools20022.repository.msg.ATMTransaction16.AccountData, com.tools20022.repository.msg.ATMTransaction19.AccountData, com.tools20022.repository.msg.ATMTransaction15.AccountData,
-					com.tools20022.repository.msg.ATMTransaction21.AccountInformation, com.tools20022.repository.msg.ATMTransaction24.AccountFrom, com.tools20022.repository.msg.ATMTransaction23.AccountFrom,
-					com.tools20022.repository.msg.ATMTransaction29.AccountData);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction1.mmAccountData, com.tools20022.repository.msg.ATMTransaction2.mmAccountData, com.tools20022.repository.msg.ATMTransaction7.mmAccountInformation,
+					com.tools20022.repository.msg.ATMTransaction3.mmAccountData, com.tools20022.repository.msg.ATMTransaction6.mmAccountData, com.tools20022.repository.msg.CardTransactionDetail1.mmAccountFrom,
+					com.tools20022.repository.msg.CardTransactionDetail1.mmAccountTo, com.tools20022.repository.msg.CardTransactionDetail3.mmAccountFrom, com.tools20022.repository.msg.CardTransactionDetail3.mmAccountTo,
+					com.tools20022.repository.msg.ATMTransaction14.mmAccountData, com.tools20022.repository.msg.ATMTransaction17.mmAccountData, com.tools20022.repository.msg.ATMTransaction13.mmAccountData,
+					com.tools20022.repository.msg.ATMTransaction16.mmAccountData, com.tools20022.repository.msg.ATMTransaction19.mmAccountData, com.tools20022.repository.msg.ATMTransaction15.mmAccountData,
+					com.tools20022.repository.msg.ATMTransaction21.mmAccountInformation, com.tools20022.repository.msg.ATMTransaction24.mmAccountFrom, com.tools20022.repository.msg.ATMTransaction23.mmAccountFrom,
+					com.tools20022.repository.msg.ATMTransaction29.mmAccountData);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account debited for the payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.Payment;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
+	protected Adjustment adjustments;
 	/**
 	 * Specifies the charges or the allowance related to a payment.
 	 * <p>
@@ -6419,8 +6494,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Payment
-	 * Adjustment.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmPayment
+	 * Adjustment.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -6428,24 +6503,24 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Adjustment
 	 * Adjustment}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount1#AdjustmentAmountAndReason
-	 * RemittanceAmount1.AdjustmentAmountAndReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#AdjustmentAmountAndReason
-	 * RemittanceAmount2.AdjustmentAmountAndReason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction36#CompensationAmount
-	 * PaymentTransaction36.CompensationAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
 	 * Payment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount1#mmAdjustmentAmountAndReason
+	 * RemittanceAmount1.mmAdjustmentAmountAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#mmAdjustmentAmountAndReason
+	 * RemittanceAmount2.mmAdjustmentAmountAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction36#mmCompensationAmount
+	 * PaymentTransaction36.mmCompensationAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -6458,22 +6533,23 @@ public class Payment extends ObligationFulfilment {
 	 * "Specifies the charges or the allowance related to a payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Adjustments = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAdjustments = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount1.AdjustmentAmountAndReason, com.tools20022.repository.msg.RemittanceAmount2.AdjustmentAmountAndReason,
-					com.tools20022.repository.msg.PaymentTransaction36.CompensationAmount);
-			elementContext_lazy = () -> Payment.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount1.mmAdjustmentAmountAndReason, com.tools20022.repository.msg.RemittanceAmount2.mmAdjustmentAmountAndReason,
+					com.tools20022.repository.msg.PaymentTransaction36.mmCompensationAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Adjustments";
 			definition = "Specifies the charges or the allowance related to a payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Adjustment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Adjustment.Payment;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Adjustment.mmPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 		}
 	};
+	protected RegisteredContract contractRegistration;
 	/**
 	 * Provides the payment of the registered contract.
 	 * <p>
@@ -6482,8 +6558,8 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#RelatedPayment
-	 * RegisteredContract.RelatedPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmRelatedPayment
+	 * RegisteredContract.mmRelatedPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -6506,154 +6582,154 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Provides the payment of the registered contract."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ContractRegistration = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmContractRegistration = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Payment.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ContractRegistration";
 			definition = "Provides the payment of the registered contract.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RegisteredContract.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.RegisteredContract.RelatedPayment;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmRelatedPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Payment";
 				definition = "Payment information and processes required to transfer cash end to end from the debtor to the creditor.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.Payment, com.tools20022.repository.entity.Tax.RelatedPaymentSettlement, com.tools20022.repository.entity.Adjustment.Payment,
-						com.tools20022.repository.entity.PaymentObligation.PaymentOffset, com.tools20022.repository.entity.Payment.OriginalPayment, com.tools20022.repository.entity.Payment.ReturnPayment,
-						com.tools20022.repository.entity.CreditInstrument.RelatedPayment, com.tools20022.repository.entity.PaymentExecution.Payment, com.tools20022.repository.entity.PaymentIdentification.Payment,
-						com.tools20022.repository.entity.PaymentPartyRole.Payment, com.tools20022.repository.entity.PaymentStatus.Payment, com.tools20022.repository.entity.SecuritiesSettlement.Payment,
-						com.tools20022.repository.entity.CurrencyExchange.RelatedPayment, com.tools20022.repository.entity.Invoice.Payment, com.tools20022.repository.entity.PaymentInvestigationCase.UnderlyingPayment,
-						com.tools20022.repository.entity.SettlementTimeRequest.Payment, com.tools20022.repository.entity.DebitAuthorisation.AuthorisedReturn,
-						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.PaymentCorrection, com.tools20022.repository.entity.CommercialTradeSettlement.Payment,
-						com.tools20022.repository.entity.RegisteredContract.RelatedPayment);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1.SubscriptionPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1.RedemptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1.DividendPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1.SavingsPlanPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.SubscriptionPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.RedemptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.DividendPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.SavingsPlanPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.SubscriptionPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.RedemptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.DividendPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.SavingsPlanPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.InterestPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2.SubscriptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2.RedemptionPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2.DividendPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2.SavingsPlanPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4.SubscriptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4.RedemptionPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4.DividendPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4.SavingsPlanPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.SubscriptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.RedemptionPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.DividendPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.SavingsPlanPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.InterestPaymentInstrument, com.tools20022.repository.msg.TransactionReportDetails3.Transaction,
-						com.tools20022.repository.msg.TransactionReportDetails4.Transaction, com.tools20022.repository.msg.TransactionReportDetails5.Transaction,
-						com.tools20022.repository.msg.PaymentTransactionInformation3.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation30.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalPaymentInformation4.OriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInformation4.TransactionInformation,
-						com.tools20022.repository.msg.PaymentTransaction37.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction4.OriginalGroupInformation,
-						com.tools20022.repository.msg.OriginalPaymentInstruction4.TransactionInformation, com.tools20022.repository.msg.PaymentTransaction47.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalPaymentInstruction8.OriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInstruction8.TransactionInformation,
-						com.tools20022.repository.msg.PaymentTransactionInformation4.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation28.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalPaymentInformation2.TransactionInformation, com.tools20022.repository.msg.PaymentTransaction35.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalPaymentInstruction2.TransactionInformation, com.tools20022.repository.msg.PaymentTransaction42.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalPaymentInstruction7.TransactionInformation, com.tools20022.repository.msg.PaymentTransactionInformation1.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation25.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInformation1.TransactionInformationAndStatus,
-						com.tools20022.repository.msg.PaymentTransaction32.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction1.TransactionInformationAndStatus,
-						com.tools20022.repository.msg.PaymentTransaction46.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction6.TransactionInformationAndStatus,
-						com.tools20022.repository.msg.PaymentTransactionInformation31.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction38.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction48.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation5.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation29.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction36.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction45.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation26.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction33.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction43.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation2.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation27.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction34.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction44.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation34.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInformation5.TransactionInformationAndStatus,
-						com.tools20022.repository.msg.PaymentTransaction41.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction5.TransactionInformationAndStatus,
-						com.tools20022.repository.msg.PaymentTransaction49.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction9.TransactionInformationAndStatus,
-						com.tools20022.repository.msg.PaymentTransaction18.PaymentInstrument, com.tools20022.repository.msg.PaymentTransaction15.PaymentInstrument, com.tools20022.repository.msg.PaymentTransaction21.PaymentInstrument,
-						com.tools20022.repository.msg.PaymentTransaction22.PaymentInstrument, com.tools20022.repository.msg.PaymentTransaction17.PaymentInstrument, com.tools20022.repository.msg.PaymentTransaction19.PaymentInstrument,
-						com.tools20022.repository.msg.PaymentTransaction23.PaymentInstrument, com.tools20022.repository.msg.PaymentTransaction16.PaymentInstrument, com.tools20022.repository.msg.PaymentTransaction13.PaymentInstrument,
-						com.tools20022.repository.msg.PaymentTransaction24.PaymentInstrument, com.tools20022.repository.choice.CashInOrOut4Choice.CashInPaymentInstrument,
-						com.tools20022.repository.choice.CashInOrOut4Choice.CashOutPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction20.CashInOrOut,
-						com.tools20022.repository.choice.CashInOrOut5Choice.CashInPaymentInstrument, com.tools20022.repository.choice.CashInOrOut5Choice.CashOutPaymentInstrument,
-						com.tools20022.repository.msg.PaymentTransaction25.CashInOrOut, com.tools20022.repository.choice.CashInOrOut3Choice.CashInPaymentInstrument,
-						com.tools20022.repository.choice.CashInOrOut3Choice.CashOutPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction14.CashInOrOutChoice,
-						com.tools20022.repository.choice.CashInOrOut6Choice.CashInPaymentInstrument, com.tools20022.repository.choice.CashInOrOut6Choice.CashOutPaymentInstrument,
-						com.tools20022.repository.msg.PaymentTransaction26.CashInOrOut, com.tools20022.repository.msg.OriginalTransactionReference14.OriginalTransaction,
-						com.tools20022.repository.msg.OriginalTransactionReference18.OriginalTransaction, com.tools20022.repository.msg.OriginalItem2.OriginalItemReference,
-						com.tools20022.repository.msg.OriginalItemAndStatus2.OriginalItemReference, com.tools20022.repository.choice.UnderlyingTransaction1Choice.Interbank,
-						com.tools20022.repository.msg.PaymentTransactionInformation32.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInformation3.OriginalGroupInformation,
-						com.tools20022.repository.msg.OriginalPaymentInformation3.TransactionInformationAndStatus, com.tools20022.repository.msg.PaymentTransactionInformation33.OriginalTransactionReference,
-						com.tools20022.repository.choice.CorrectiveTransaction1Choice.Interbank, com.tools20022.repository.choice.UnderlyingTransaction2Choice.Interbank,
-						com.tools20022.repository.msg.PaymentTransaction39.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction3.OriginalGroupInformation,
-						com.tools20022.repository.msg.OriginalPaymentInstruction3.TransactionInformationAndStatus, com.tools20022.repository.msg.PaymentTransaction40.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalItem3.OriginalItemReference, com.tools20022.repository.msg.OriginalItemAndStatus3.OriginalItemReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation13.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation18.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation15.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation22.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation12.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation19.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation14.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation20.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation16.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation23.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation17.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation24.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransactionInformation21.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction30.PaymentInstrument,
-						com.tools20022.repository.msg.PaymentTransaction28.PaymentInstrument, com.tools20022.repository.msg.PaymentTransaction31.PaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7.SubscriptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7.RedemptionPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7.DividendPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7.SavingsPlanPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7.InterestPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.SubscriptionPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.RedemptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.DividendPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.SavingsPlanPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.InterestPaymentInstrument,
-						com.tools20022.repository.choice.PaymentCodeOrOther1Choice.PaymentCode, com.tools20022.repository.msg.OriginalPaymentInformation6.Amount,
-						com.tools20022.repository.msg.PaymentTransaction50.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction12.TransactionInformationAndStatus,
-						com.tools20022.repository.msg.OriginalPaymentInstruction11.TransactionInformation, com.tools20022.repository.msg.PaymentTransaction52.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction51.OriginalTransactionReference, com.tools20022.repository.msg.OriginalItem4.OriginalItemReference,
-						com.tools20022.repository.msg.OriginalPaymentInstruction13.OriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInstruction13.TransactionInformation,
-						com.tools20022.repository.msg.PaymentTransaction58.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction10.OriginalGroupInformation,
-						com.tools20022.repository.msg.OriginalPaymentInstruction10.TransactionInformationAndStatus, com.tools20022.repository.msg.PaymentTransaction54.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalItemAndStatus4.OriginalItemReference, com.tools20022.repository.msg.PaymentTransaction53.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction57.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction56.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction55.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction14.TransactionInformationAndStatus,
-						com.tools20022.repository.msg.PaymentTransaction59.OriginalTransactionReference, com.tools20022.repository.msg.ContractRegistrationStatement1.TransactionJournal,
-						com.tools20022.repository.msg.TransactionCertificateRecord1.Transaction, com.tools20022.repository.msg.OriginalPaymentInstruction16.TransactionInformation,
-						com.tools20022.repository.msg.OriginalPaymentInstruction18.TransactionInformationAndStatus, com.tools20022.repository.msg.PaymentTransaction65.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction63.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction60.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction68.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction61.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalPaymentInstruction15.OriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInstruction15.TransactionInformation,
-						com.tools20022.repository.msg.OriginalItem5.OriginalItemReference, com.tools20022.repository.msg.OriginalItemAndStatus5.OriginalItemReference,
-						com.tools20022.repository.msg.PaymentTransaction66.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction67.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction62.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction64.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalPaymentInstruction17.OriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInstruction17.TransactionInformationAndStatus,
-						com.tools20022.repository.msg.CashSettlement1.OtherCashSettlementDetails, com.tools20022.repository.msg.CashSettlement2.OtherCashSettlementDetails,
-						com.tools20022.repository.msg.PaymentInstrument13.SubscriptionPaymentInstrument, com.tools20022.repository.msg.PaymentInstrument13.RedemptionPaymentInstrument,
-						com.tools20022.repository.msg.PaymentInstrument13.DividendPaymentInstrument, com.tools20022.repository.msg.PaymentInstrument13.SavingsPlanPaymentInstrument,
-						com.tools20022.repository.msg.PaymentInstrument13.InterestPaymentInstrument, com.tools20022.repository.msg.OriginalPaymentInstruction19.TransactionInformationAndStatus,
-						com.tools20022.repository.msg.PaymentTransaction69.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction72.PaymentInstrument,
-						com.tools20022.repository.msg.PaymentTransaction70.PaymentInstrument, com.tools20022.repository.msg.PaymentTransaction71.CashInOrOut, com.tools20022.repository.choice.CashInOrOut7Choice.CashInPaymentInstrument,
-						com.tools20022.repository.choice.CashInOrOut7Choice.CashOutPaymentInstrument, com.tools20022.repository.choice.UnderlyingTransaction3Choice.Interbank,
-						com.tools20022.repository.msg.PaymentTransaction80.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction81.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalPaymentInstruction23.TransactionInformationAndStatus, com.tools20022.repository.msg.OriginalPaymentInstruction21.TransactionInformation,
-						com.tools20022.repository.msg.OriginalPaymentInstruction24.TransactionInformationAndStatus, com.tools20022.repository.msg.PaymentTransaction76.OriginalTransactionReference,
-						com.tools20022.repository.choice.CorrectiveTransaction2Choice.Interbank, com.tools20022.repository.msg.OriginalPaymentInstruction22.OriginalGroupInformation,
-						com.tools20022.repository.msg.OriginalPaymentInstruction22.TransactionInformationAndStatus, com.tools20022.repository.msg.PaymentTransaction78.OriginalTransactionReference,
-						com.tools20022.repository.msg.OriginalPaymentInstruction20.OriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInstruction20.TransactionInformation,
-						com.tools20022.repository.msg.PaymentTransaction74.OriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInformation7.Amount,
-						com.tools20022.repository.msg.PaymentTransaction83.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction77.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction75.OriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction82.OriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction79.OriginalTransactionReference);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmPayment, com.tools20022.repository.entity.Tax.mmRelatedPaymentSettlement, com.tools20022.repository.entity.Adjustment.mmPayment,
+						com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset, com.tools20022.repository.entity.Payment.mmOriginalPayment, com.tools20022.repository.entity.Payment.mmReturnPayment,
+						com.tools20022.repository.entity.CreditInstrument.mmRelatedPayment, com.tools20022.repository.entity.PaymentExecution.mmPayment, com.tools20022.repository.entity.PaymentIdentification.mmPayment,
+						com.tools20022.repository.entity.PaymentPartyRole.mmPayment, com.tools20022.repository.entity.PaymentStatus.mmPayment, com.tools20022.repository.entity.SecuritiesSettlement.mmPayment,
+						com.tools20022.repository.entity.CurrencyExchange.mmRelatedPayment, com.tools20022.repository.entity.Invoice.mmPayment, com.tools20022.repository.entity.PaymentInvestigationCase.mmUnderlyingPayment,
+						com.tools20022.repository.entity.SettlementTimeRequest.mmPayment, com.tools20022.repository.entity.DebitAuthorisation.mmAuthorisedReturn,
+						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmPaymentCorrection, com.tools20022.repository.entity.CommercialTradeSettlement.mmPayment,
+						com.tools20022.repository.entity.RegisteredContract.mmRelatedPayment);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1.mmSubscriptionPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1.mmRedemptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1.mmDividendPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation1.mmSavingsPlanPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.mmSubscriptionPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.mmRedemptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.mmDividendPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.mmSavingsPlanPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmSubscriptionPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmRedemptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmDividendPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmSavingsPlanPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmInterestPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2.mmSubscriptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2.mmRedemptionPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2.mmDividendPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation2.mmSavingsPlanPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4.mmSubscriptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4.mmRedemptionPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4.mmDividendPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation4.mmSavingsPlanPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmSubscriptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmRedemptionPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmDividendPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmSavingsPlanPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmInterestPaymentInstrument, com.tools20022.repository.msg.TransactionReportDetails3.mmTransaction,
+						com.tools20022.repository.msg.TransactionReportDetails4.mmTransaction, com.tools20022.repository.msg.TransactionReportDetails5.mmTransaction,
+						com.tools20022.repository.msg.PaymentTransactionInformation3.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation30.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.OriginalPaymentInformation4.mmOriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInformation4.mmTransactionInformation,
+						com.tools20022.repository.msg.PaymentTransaction37.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction4.mmOriginalGroupInformation,
+						com.tools20022.repository.msg.OriginalPaymentInstruction4.mmTransactionInformation, com.tools20022.repository.msg.PaymentTransaction47.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.OriginalPaymentInstruction8.mmOriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInstruction8.mmTransactionInformation,
+						com.tools20022.repository.msg.PaymentTransactionInformation4.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation28.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.OriginalPaymentInformation2.mmTransactionInformation, com.tools20022.repository.msg.PaymentTransaction35.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.OriginalPaymentInstruction2.mmTransactionInformation, com.tools20022.repository.msg.PaymentTransaction42.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.OriginalPaymentInstruction7.mmTransactionInformation, com.tools20022.repository.msg.PaymentTransactionInformation1.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation25.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInformation1.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.PaymentTransaction32.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction1.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.PaymentTransaction46.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction6.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.PaymentTransactionInformation31.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction38.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction48.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation5.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation29.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction36.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction45.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation26.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction33.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction43.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation2.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation27.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction34.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction44.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation34.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInformation5.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.PaymentTransaction41.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction5.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.PaymentTransaction49.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction9.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.PaymentTransaction18.mmPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction15.mmPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction21.mmPaymentInstrument,
+						com.tools20022.repository.msg.PaymentTransaction22.mmPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction17.mmPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction19.mmPaymentInstrument,
+						com.tools20022.repository.msg.PaymentTransaction23.mmPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction16.mmPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction13.mmPaymentInstrument,
+						com.tools20022.repository.msg.PaymentTransaction24.mmPaymentInstrument, com.tools20022.repository.choice.CashInOrOut4Choice.mmCashInPaymentInstrument,
+						com.tools20022.repository.choice.CashInOrOut4Choice.mmCashOutPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction20.mmCashInOrOut,
+						com.tools20022.repository.choice.CashInOrOut5Choice.mmCashInPaymentInstrument, com.tools20022.repository.choice.CashInOrOut5Choice.mmCashOutPaymentInstrument,
+						com.tools20022.repository.msg.PaymentTransaction25.mmCashInOrOut, com.tools20022.repository.choice.CashInOrOut3Choice.mmCashInPaymentInstrument,
+						com.tools20022.repository.choice.CashInOrOut3Choice.mmCashOutPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction14.mmCashInOrOutChoice,
+						com.tools20022.repository.choice.CashInOrOut6Choice.mmCashInPaymentInstrument, com.tools20022.repository.choice.CashInOrOut6Choice.mmCashOutPaymentInstrument,
+						com.tools20022.repository.msg.PaymentTransaction26.mmCashInOrOut, com.tools20022.repository.msg.OriginalTransactionReference14.mmOriginalTransaction,
+						com.tools20022.repository.msg.OriginalTransactionReference18.mmOriginalTransaction, com.tools20022.repository.msg.OriginalItem2.mmOriginalItemReference,
+						com.tools20022.repository.msg.OriginalItemAndStatus2.mmOriginalItemReference, com.tools20022.repository.choice.UnderlyingTransaction1Choice.mmInterbank,
+						com.tools20022.repository.msg.PaymentTransactionInformation32.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInformation3.mmOriginalGroupInformation,
+						com.tools20022.repository.msg.OriginalPaymentInformation3.mmTransactionInformationAndStatus, com.tools20022.repository.msg.PaymentTransactionInformation33.mmOriginalTransactionReference,
+						com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmInterbank, com.tools20022.repository.choice.UnderlyingTransaction2Choice.mmInterbank,
+						com.tools20022.repository.msg.PaymentTransaction39.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction3.mmOriginalGroupInformation,
+						com.tools20022.repository.msg.OriginalPaymentInstruction3.mmTransactionInformationAndStatus, com.tools20022.repository.msg.PaymentTransaction40.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.OriginalItem3.mmOriginalItemReference, com.tools20022.repository.msg.OriginalItemAndStatus3.mmOriginalItemReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation13.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation18.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation15.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation22.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation12.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation19.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation14.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation20.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation16.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation23.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation17.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransactionInformation24.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransactionInformation21.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction30.mmPaymentInstrument,
+						com.tools20022.repository.msg.PaymentTransaction28.mmPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction31.mmPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7.mmSubscriptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7.mmRedemptionPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7.mmDividendPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7.mmSavingsPlanPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation7.mmInterestPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmSubscriptionPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmRedemptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmDividendPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmSavingsPlanPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmInterestPaymentInstrument,
+						com.tools20022.repository.choice.PaymentCodeOrOther1Choice.mmPaymentCode, com.tools20022.repository.msg.OriginalPaymentInformation6.mmAmount,
+						com.tools20022.repository.msg.PaymentTransaction50.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction12.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.OriginalPaymentInstruction11.mmTransactionInformation, com.tools20022.repository.msg.PaymentTransaction52.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction51.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalItem4.mmOriginalItemReference,
+						com.tools20022.repository.msg.OriginalPaymentInstruction13.mmOriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInstruction13.mmTransactionInformation,
+						com.tools20022.repository.msg.PaymentTransaction58.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction10.mmOriginalGroupInformation,
+						com.tools20022.repository.msg.OriginalPaymentInstruction10.mmTransactionInformationAndStatus, com.tools20022.repository.msg.PaymentTransaction54.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.OriginalItemAndStatus4.mmOriginalItemReference, com.tools20022.repository.msg.PaymentTransaction53.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction57.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction56.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction55.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction14.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.PaymentTransaction59.mmOriginalTransactionReference, com.tools20022.repository.msg.ContractRegistrationStatement1.mmTransactionJournal,
+						com.tools20022.repository.msg.TransactionCertificateRecord1.mmTransaction, com.tools20022.repository.msg.OriginalPaymentInstruction16.mmTransactionInformation,
+						com.tools20022.repository.msg.OriginalPaymentInstruction18.mmTransactionInformationAndStatus, com.tools20022.repository.msg.PaymentTransaction65.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction63.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction60.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction68.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction61.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.OriginalPaymentInstruction15.mmOriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInstruction15.mmTransactionInformation,
+						com.tools20022.repository.msg.OriginalItem5.mmOriginalItemReference, com.tools20022.repository.msg.OriginalItemAndStatus5.mmOriginalItemReference,
+						com.tools20022.repository.msg.PaymentTransaction66.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction67.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction62.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction64.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.OriginalPaymentInstruction17.mmOriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInstruction17.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.CashSettlement1.mmOtherCashSettlementDetails, com.tools20022.repository.msg.CashSettlement2.mmOtherCashSettlementDetails,
+						com.tools20022.repository.msg.PaymentInstrument13.mmSubscriptionPaymentInstrument, com.tools20022.repository.msg.PaymentInstrument13.mmRedemptionPaymentInstrument,
+						com.tools20022.repository.msg.PaymentInstrument13.mmDividendPaymentInstrument, com.tools20022.repository.msg.PaymentInstrument13.mmSavingsPlanPaymentInstrument,
+						com.tools20022.repository.msg.PaymentInstrument13.mmInterestPaymentInstrument, com.tools20022.repository.msg.OriginalPaymentInstruction19.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.PaymentTransaction69.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction72.mmPaymentInstrument,
+						com.tools20022.repository.msg.PaymentTransaction70.mmPaymentInstrument, com.tools20022.repository.msg.PaymentTransaction71.mmCashInOrOut,
+						com.tools20022.repository.choice.CashInOrOut7Choice.mmCashInPaymentInstrument, com.tools20022.repository.choice.CashInOrOut7Choice.mmCashOutPaymentInstrument,
+						com.tools20022.repository.choice.UnderlyingTransaction3Choice.mmInterbank, com.tools20022.repository.msg.PaymentTransaction80.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction81.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction23.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.OriginalPaymentInstruction21.mmTransactionInformation, com.tools20022.repository.msg.OriginalPaymentInstruction24.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.PaymentTransaction76.mmOriginalTransactionReference, com.tools20022.repository.choice.CorrectiveTransaction2Choice.mmInterbank,
+						com.tools20022.repository.msg.OriginalPaymentInstruction22.mmOriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInstruction22.mmTransactionInformationAndStatus,
+						com.tools20022.repository.msg.PaymentTransaction78.mmOriginalTransactionReference, com.tools20022.repository.msg.OriginalPaymentInstruction20.mmOriginalGroupInformation,
+						com.tools20022.repository.msg.OriginalPaymentInstruction20.mmTransactionInformation, com.tools20022.repository.msg.PaymentTransaction74.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.OriginalPaymentInformation7.mmAmount, com.tools20022.repository.msg.PaymentTransaction83.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction77.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction75.mmOriginalTransactionReference,
+						com.tools20022.repository.msg.PaymentTransaction82.mmOriginalTransactionReference, com.tools20022.repository.msg.PaymentTransaction79.mmOriginalTransactionReference);
 				subType_lazy = () -> Arrays.asList(IndividualPayment.mmObject(), BulkPayment.mmObject());
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.PaymentObligation, com.tools20022.repository.entity.Payment.CurrencyOfTransfer, com.tools20022.repository.entity.Payment.CreditMethod,
-						com.tools20022.repository.entity.Payment.Type, com.tools20022.repository.entity.Payment.InstructedAmount, com.tools20022.repository.entity.Payment.Priority, com.tools20022.repository.entity.Payment.ValueDate,
-						com.tools20022.repository.entity.Payment.PaymentStatus, com.tools20022.repository.entity.Payment.PartyRole, com.tools20022.repository.entity.Payment.TaxOnPayment,
-						com.tools20022.repository.entity.Payment.PaymentExecution, com.tools20022.repository.entity.Payment.PoolingAdjustmentDate, com.tools20022.repository.entity.Payment.EquivalentAmount,
-						com.tools20022.repository.entity.Payment.CurrencyExchange, com.tools20022.repository.entity.Payment.InstructionForCreditorAgent, com.tools20022.repository.entity.Payment.InstructionForDebtorAgent,
-						com.tools20022.repository.entity.Payment.PaymentRelatedIdentifications, com.tools20022.repository.entity.Payment.RelatedInvestigationCase, com.tools20022.repository.entity.Payment.SettlementTimeRequest,
-						com.tools20022.repository.entity.Payment.Amount, com.tools20022.repository.entity.Payment.TradeSettlement, com.tools20022.repository.entity.Payment.StandardSettlementInstructions,
-						com.tools20022.repository.entity.Payment.RelatedDebitAuthorisation, com.tools20022.repository.entity.Payment.RelatedInvestigationCaseResolution, com.tools20022.repository.entity.Payment.OriginalPayment,
-						com.tools20022.repository.entity.Payment.ReturnPayment, com.tools20022.repository.entity.Payment.RelatedSecuritiesSettlement, com.tools20022.repository.entity.Payment.InvoiceReconciliation,
-						com.tools20022.repository.entity.Payment.PaymentInstrument, com.tools20022.repository.entity.Payment.Account, com.tools20022.repository.entity.Payment.Adjustments,
-						com.tools20022.repository.entity.Payment.ContractRegistration);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmPaymentObligation, com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer, com.tools20022.repository.entity.Payment.mmCreditMethod,
+						com.tools20022.repository.entity.Payment.mmType, com.tools20022.repository.entity.Payment.mmInstructedAmount, com.tools20022.repository.entity.Payment.mmPriority,
+						com.tools20022.repository.entity.Payment.mmValueDate, com.tools20022.repository.entity.Payment.mmPaymentStatus, com.tools20022.repository.entity.Payment.mmPartyRole,
+						com.tools20022.repository.entity.Payment.mmTaxOnPayment, com.tools20022.repository.entity.Payment.mmPaymentExecution, com.tools20022.repository.entity.Payment.mmPoolingAdjustmentDate,
+						com.tools20022.repository.entity.Payment.mmEquivalentAmount, com.tools20022.repository.entity.Payment.mmCurrencyExchange, com.tools20022.repository.entity.Payment.mmInstructionForCreditorAgent,
+						com.tools20022.repository.entity.Payment.mmInstructionForDebtorAgent, com.tools20022.repository.entity.Payment.mmPaymentRelatedIdentifications, com.tools20022.repository.entity.Payment.mmRelatedInvestigationCase,
+						com.tools20022.repository.entity.Payment.mmSettlementTimeRequest, com.tools20022.repository.entity.Payment.mmAmount, com.tools20022.repository.entity.Payment.mmTradeSettlement,
+						com.tools20022.repository.entity.Payment.mmStandardSettlementInstructions, com.tools20022.repository.entity.Payment.mmRelatedDebitAuthorisation,
+						com.tools20022.repository.entity.Payment.mmRelatedInvestigationCaseResolution, com.tools20022.repository.entity.Payment.mmOriginalPayment, com.tools20022.repository.entity.Payment.mmReturnPayment,
+						com.tools20022.repository.entity.Payment.mmRelatedSecuritiesSettlement, com.tools20022.repository.entity.Payment.mmInvoiceReconciliation, com.tools20022.repository.entity.Payment.mmPaymentInstrument,
+						com.tools20022.repository.entity.Payment.mmAccount, com.tools20022.repository.entity.Payment.mmAdjustments, com.tools20022.repository.entity.Payment.mmContractRegistration);
 				derivationComponent_lazy = () -> Arrays.asList(PaymentInstrument7.mmObject(), PaymentInstrument6.mmObject(), InvestmentFundCashSettlementInformation1.mmObject(), PaymentInstrument8.mmObject(), PaymentInstrument9.mmObject(),
 						InvestmentFundCashSettlementInformation3.mmObject(), PaymentInstrument17Choice.mmObject(), PaymentInstrument11.mmObject(), PaymentInstrument16Choice.mmObject(), PaymentInstrument10.mmObject(),
 						InvestmentFundCashSettlementInformation5.mmObject(), InvestmentFundCashSettlementInformation2.mmObject(), InvestmentFundCashSettlementInformation4.mmObject(), InvestmentFundCashSettlementInformation6.mmObject(),
@@ -6717,5 +6793,261 @@ public class Payment extends ObligationFulfilment {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PaymentObligation> getPaymentObligation() {
+		return paymentObligation;
+	}
+
+	public void setPaymentObligation(List<com.tools20022.repository.entity.PaymentObligation> paymentObligation) {
+		this.paymentObligation = paymentObligation;
+	}
+
+	public CurrencyCode getCurrencyOfTransfer() {
+		return currencyOfTransfer;
+	}
+
+	public void setCurrencyOfTransfer(CurrencyCode currencyOfTransfer) {
+		this.currencyOfTransfer = currencyOfTransfer;
+	}
+
+	public List<CreditInstrument> getCreditMethod() {
+		return creditMethod;
+	}
+
+	public void setCreditMethod(List<com.tools20022.repository.entity.CreditInstrument> creditMethod) {
+		this.creditMethod = creditMethod;
+	}
+
+	public PaymentTypeCode getType() {
+		return type;
+	}
+
+	public void setType(PaymentTypeCode type) {
+		this.type = type;
+	}
+
+	public CurrencyAndAmount getInstructedAmount() {
+		return instructedAmount;
+	}
+
+	public void setInstructedAmount(CurrencyAndAmount instructedAmount) {
+		this.instructedAmount = instructedAmount;
+	}
+
+	public PriorityCode getPriority() {
+		return priority;
+	}
+
+	public void setPriority(PriorityCode priority) {
+		this.priority = priority;
+	}
+
+	public ISODate getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODate valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public List<PaymentStatus> getPaymentStatus() {
+		return paymentStatus;
+	}
+
+	public void setPaymentStatus(List<com.tools20022.repository.entity.PaymentStatus> paymentStatus) {
+		this.paymentStatus = paymentStatus;
+	}
+
+	public List<PaymentPartyRole> getPartyRole() {
+		return partyRole;
+	}
+
+	public void setPartyRole(List<com.tools20022.repository.entity.PaymentPartyRole> partyRole) {
+		this.partyRole = partyRole;
+	}
+
+	public List<Tax> getTaxOnPayment() {
+		return taxOnPayment;
+	}
+
+	public void setTaxOnPayment(List<com.tools20022.repository.entity.Tax> taxOnPayment) {
+		this.taxOnPayment = taxOnPayment;
+	}
+
+	public List<PaymentExecution> getPaymentExecution() {
+		return paymentExecution;
+	}
+
+	public void setPaymentExecution(List<com.tools20022.repository.entity.PaymentExecution> paymentExecution) {
+		this.paymentExecution = paymentExecution;
+	}
+
+	public ISODate getPoolingAdjustmentDate() {
+		return poolingAdjustmentDate;
+	}
+
+	public void setPoolingAdjustmentDate(ISODate poolingAdjustmentDate) {
+		this.poolingAdjustmentDate = poolingAdjustmentDate;
+	}
+
+	public ImpliedCurrencyAndAmount getEquivalentAmount() {
+		return equivalentAmount;
+	}
+
+	public void setEquivalentAmount(ImpliedCurrencyAndAmount equivalentAmount) {
+		this.equivalentAmount = equivalentAmount;
+	}
+
+	public List<CurrencyExchange> getCurrencyExchange() {
+		return currencyExchange;
+	}
+
+	public void setCurrencyExchange(List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange) {
+		this.currencyExchange = currencyExchange;
+	}
+
+	public InstructionCode getInstructionForCreditorAgent() {
+		return instructionForCreditorAgent;
+	}
+
+	public void setInstructionForCreditorAgent(InstructionCode instructionForCreditorAgent) {
+		this.instructionForCreditorAgent = instructionForCreditorAgent;
+	}
+
+	public InstructionCode getInstructionForDebtorAgent() {
+		return instructionForDebtorAgent;
+	}
+
+	public void setInstructionForDebtorAgent(InstructionCode instructionForDebtorAgent) {
+		this.instructionForDebtorAgent = instructionForDebtorAgent;
+	}
+
+	public List<PaymentIdentification> getPaymentRelatedIdentifications() {
+		return paymentRelatedIdentifications;
+	}
+
+	public void setPaymentRelatedIdentifications(List<com.tools20022.repository.entity.PaymentIdentification> paymentRelatedIdentifications) {
+		this.paymentRelatedIdentifications = paymentRelatedIdentifications;
+	}
+
+	public PaymentInvestigationCase getRelatedInvestigationCase() {
+		return relatedInvestigationCase;
+	}
+
+	public void setRelatedInvestigationCase(com.tools20022.repository.entity.PaymentInvestigationCase relatedInvestigationCase) {
+		this.relatedInvestigationCase = relatedInvestigationCase;
+	}
+
+	public SettlementTimeRequest getSettlementTimeRequest() {
+		return settlementTimeRequest;
+	}
+
+	public void setSettlementTimeRequest(com.tools20022.repository.entity.SettlementTimeRequest settlementTimeRequest) {
+		this.settlementTimeRequest = settlementTimeRequest;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public List<CommercialTradeSettlement> getTradeSettlement() {
+		return tradeSettlement;
+	}
+
+	public void setTradeSettlement(List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement) {
+		this.tradeSettlement = tradeSettlement;
+	}
+
+	public Max140Text getStandardSettlementInstructions() {
+		return standardSettlementInstructions;
+	}
+
+	public void setStandardSettlementInstructions(Max140Text standardSettlementInstructions) {
+		this.standardSettlementInstructions = standardSettlementInstructions;
+	}
+
+	public DebitAuthorisation getRelatedDebitAuthorisation() {
+		return relatedDebitAuthorisation;
+	}
+
+	public void setRelatedDebitAuthorisation(com.tools20022.repository.entity.DebitAuthorisation relatedDebitAuthorisation) {
+		this.relatedDebitAuthorisation = relatedDebitAuthorisation;
+	}
+
+	public PaymentInvestigationCaseResolution getRelatedInvestigationCaseResolution() {
+		return relatedInvestigationCaseResolution;
+	}
+
+	public void setRelatedInvestigationCaseResolution(com.tools20022.repository.entity.PaymentInvestigationCaseResolution relatedInvestigationCaseResolution) {
+		this.relatedInvestigationCaseResolution = relatedInvestigationCaseResolution;
+	}
+
+	public Payment getOriginalPayment() {
+		return originalPayment;
+	}
+
+	public void setOriginalPayment(com.tools20022.repository.entity.Payment originalPayment) {
+		this.originalPayment = originalPayment;
+	}
+
+	public List<Payment> getReturnPayment() {
+		return returnPayment;
+	}
+
+	public void setReturnPayment(List<com.tools20022.repository.entity.Payment> returnPayment) {
+		this.returnPayment = returnPayment;
+	}
+
+	public SecuritiesSettlement getRelatedSecuritiesSettlement() {
+		return relatedSecuritiesSettlement;
+	}
+
+	public void setRelatedSecuritiesSettlement(com.tools20022.repository.entity.SecuritiesSettlement relatedSecuritiesSettlement) {
+		this.relatedSecuritiesSettlement = relatedSecuritiesSettlement;
+	}
+
+	public List<Invoice> getInvoiceReconciliation() {
+		return invoiceReconciliation;
+	}
+
+	public void setInvoiceReconciliation(List<com.tools20022.repository.entity.Invoice> invoiceReconciliation) {
+		this.invoiceReconciliation = invoiceReconciliation;
+	}
+
+	public PaymentInstrumentCode getPaymentInstrument() {
+		return paymentInstrument;
+	}
+
+	public void setPaymentInstrument(PaymentInstrumentCode paymentInstrument) {
+		this.paymentInstrument = paymentInstrument;
+	}
+
+	public CashAccount getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.entity.CashAccount account) {
+		this.account = account;
+	}
+
+	public Adjustment getAdjustments() {
+		return adjustments;
+	}
+
+	public void setAdjustments(com.tools20022.repository.entity.Adjustment adjustments) {
+		this.adjustments = adjustments;
+	}
+
+	public RegisteredContract getContractRegistration() {
+		return contractRegistration;
+	}
+
+	public void setContractRegistration(com.tools20022.repository.entity.RegisteredContract contractRegistration) {
+		this.contractRegistration = contractRegistration;
 	}
 }

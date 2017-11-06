@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementOrIntraPosition1Choice#IntraPositionMovement
- * SettlementOrIntraPosition1Choice.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementOrIntraPosition1Choice#mmIntraPositionMovement
+ * SettlementOrIntraPosition1Choice.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementOrIntraPosition1Choice#SettlementTransaction
- * SettlementOrIntraPosition1Choice.SettlementTransaction}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementOrIntraPosition1Choice#mmSettlementTransaction
+ * SettlementOrIntraPosition1Choice.mmSettlementTransaction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementOrIntraPosition1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected IntraPosition4 intraPositionMovement;
 	/**
 	 * Specifies the requested intra-position movement details.
 	 * <p>
@@ -86,7 +87,7 @@ public class SettlementOrIntraPosition1Choice {
 	 * definition} = "Specifies the requested intra-position movement details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntraPositionMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntraPositionMovement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementOrIntraPosition1Choice.mmObject();
 			isDerived = false;
@@ -94,12 +95,13 @@ public class SettlementOrIntraPosition1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovement";
 			definition = "Specifies the requested intra-position movement details.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IntraPosition4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IntraPosition4.mmObject();
 		}
 	};
+	protected TransactionDetails52 settlementTransaction;
 	/**
 	 * Specifies the requested settlement transaction details.
 	 * <p>
@@ -126,7 +128,7 @@ public class SettlementOrIntraPosition1Choice {
 	 * definition} = "Specifies the requested settlement transaction details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SettlementOrIntraPosition1Choice.mmObject();
 			isDerived = false;
@@ -134,23 +136,39 @@ public class SettlementOrIntraPosition1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
 			definition = "Specifies the requested settlement transaction details.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionDetails52.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TransactionDetails52.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.IntraPositionMovement, com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.SettlementTransaction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.mmIntraPositionMovement, com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.mmSettlementTransaction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementOrIntraPosition1Choice";
 				definition = "Choice between the intra-position movement or the settlement transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IntraPosition4 getIntraPositionMovement() {
+		return intraPositionMovement;
+	}
+
+	public void setIntraPositionMovement(IntraPosition4 intraPositionMovement) {
+		this.intraPositionMovement = intraPositionMovement;
+	}
+
+	public TransactionDetails52 getSettlementTransaction() {
+		return settlementTransaction;
+	}
+
+	public void setSettlementTransaction(TransactionDetails52 settlementTransaction) {
+		this.settlementTransaction = settlementTransaction;
 	}
 }

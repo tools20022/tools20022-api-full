@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardholderAuthentication2#AuthenticationMethod
- * CardholderAuthentication2.AuthenticationMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.CardholderAuthentication2#mmAuthenticationMethod
+ * CardholderAuthentication2.mmAuthenticationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardholderAuthentication2#AuthenticationEntity
- * CardholderAuthentication2.AuthenticationEntity}</li>
+ * {@linkplain com.tools20022.repository.msg.CardholderAuthentication2#mmAuthenticationEntity
+ * CardholderAuthentication2.mmAuthenticationEntity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardholderAuthentication2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AuthenticationMethod1Code authenticationMethod;
 	/**
 	 * Method used to authenticate the cardholder.
 	 * <p>
@@ -83,8 +84,8 @@ public class CardholderAuthentication2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Authentication#AuthenticationMethod
-	 * Authentication.AuthenticationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationMethod
+	 * Authentication.mmAuthenticationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class CardholderAuthentication2 {
 	 * definition} = "Method used to authenticate the cardholder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthenticationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthenticationMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationMethod;
 			componentContext_lazy = () -> CardholderAuthentication2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.AuthenticationMethod;
 			isDerived = false;
 			xmlTag = "AuthntcnMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationMethod";
 			definition = "Method used to authenticate the cardholder.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
 	};
+	protected AuthenticationEntity1Code authenticationEntity;
 	/**
 	 * Entity or object in charge of verifying the cardholder authenticity.
 	 * <p>
@@ -130,8 +132,8 @@ public class CardholderAuthentication2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Authentication#AuthenticationEntity
-	 * Authentication.AuthenticationEntity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationEntity
+	 * Authentication.mmAuthenticationEntity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,17 +153,17 @@ public class CardholderAuthentication2 {
 	 * "Entity or object in charge of verifying the cardholder authenticity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthenticationEntity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthenticationEntity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationEntity;
 			componentContext_lazy = () -> CardholderAuthentication2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.AuthenticationEntity;
 			isDerived = false;
 			xmlTag = "AuthntcnNtty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationEntity";
 			definition = "Entity or object in charge of verifying the cardholder authenticity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationEntity1Code.mmObject();
 		}
 	};
@@ -169,9 +171,9 @@ public class CardholderAuthentication2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication2.AuthenticationMethod, com.tools20022.repository.msg.CardholderAuthentication2.AuthenticationEntity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication2.mmAuthenticationMethod, com.tools20022.repository.msg.CardholderAuthentication2.mmAuthenticationEntity);
 				trace_lazy = () -> Authentication.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardholderAuthentication2";
 				definition = "Data related to the authentication of the cardholder.";
@@ -179,5 +181,21 @@ public class CardholderAuthentication2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AuthenticationMethod1Code getAuthenticationMethod() {
+		return authenticationMethod;
+	}
+
+	public void setAuthenticationMethod(AuthenticationMethod1Code authenticationMethod) {
+		this.authenticationMethod = authenticationMethod;
+	}
+
+	public AuthenticationEntity1Code getAuthenticationEntity() {
+		return authenticationEntity;
+	}
+
+	public void setAuthenticationEntity(AuthenticationEntity1Code authenticationEntity) {
+		this.authenticationEntity = authenticationEntity;
 	}
 }

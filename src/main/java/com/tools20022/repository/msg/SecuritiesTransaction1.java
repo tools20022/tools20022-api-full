@@ -41,37 +41,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#TradeDate
- * SecuritiesTransaction1.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmTradeDate
+ * SecuritiesTransaction1.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#TradingCapacity
- * SecuritiesTransaction1.TradingCapacity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmTradingCapacity
+ * SecuritiesTransaction1.mmTradingCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#Quantity
- * SecuritiesTransaction1.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmQuantity
+ * SecuritiesTransaction1.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#DerivativeNotionalChange
- * SecuritiesTransaction1.DerivativeNotionalChange}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#Price
- * SecuritiesTransaction1.Price}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmDerivativeNotionalChange
+ * SecuritiesTransaction1.mmDerivativeNotionalChange}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmPrice
+ * SecuritiesTransaction1.mmPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#NetAmount
- * SecuritiesTransaction1.NetAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmNetAmount
+ * SecuritiesTransaction1.mmNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#TradeVenue
- * SecuritiesTransaction1.TradeVenue}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmTradeVenue
+ * SecuritiesTransaction1.mmTradeVenue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#CountryOfBranch
- * SecuritiesTransaction1.CountryOfBranch}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmCountryOfBranch
+ * SecuritiesTransaction1.mmCountryOfBranch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#UpFrontPayment
- * SecuritiesTransaction1.UpFrontPayment}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmUpFrontPayment
+ * SecuritiesTransaction1.mmUpFrontPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#TradePlaceMatchingIdentification
- * SecuritiesTransaction1.TradePlaceMatchingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmTradePlaceMatchingIdentification
+ * SecuritiesTransaction1.mmTradePlaceMatchingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#ComplexTradeComponentIdentification
- * SecuritiesTransaction1.ComplexTradeComponentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmComplexTradeComponentIdentification
+ * SecuritiesTransaction1.mmComplexTradeComponentIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -80,8 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime tradeDate;
 	/**
 	 * Specifies the date/time on which the trade was executed.
 	 * <p>
@@ -107,8 +108,8 @@ public class SecuritiesTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -127,20 +128,21 @@ public class SecuritiesTransaction1 {
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected RegulatoryTradingCapacity1Code tradingCapacity;
 	/**
 	 * Indication of whether the transaction results from the reporting firm
 	 * carrying out matched principal trading or dealing on own account under
@@ -159,8 +161,8 @@ public class SecuritiesTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#TradingPartyCapacity
-	 * TradePartyRole.TradingPartyCapacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmTradingPartyCapacity
+	 * TradePartyRole.mmTradingPartyCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,20 +183,21 @@ public class SecuritiesTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.TradingPartyCapacity;
 			isDerived = false;
 			xmlTag = "TradgCpcty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingCapacity";
 			definition = "Indication of whether the transaction results from the reporting firm carrying out matched principal trading or dealing on own account under the local regulation, or where the transaction does not result from the reporting firm carrying out matched principal trading or dealing on own account, the field shall indicate that the transaction was carried out under any other capacity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RegulatoryTradingCapacity1Code.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity25Choice quantity;
 	/**
 	 * Number of units of the financial instrument, or the number of derivative
 	 * contracts in the transaction.
@@ -208,8 +211,8 @@ public class SecuritiesTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesQuantity
-	 * Security.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -230,21 +233,22 @@ public class SecuritiesTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Number of units of the financial instrument, or the number of derivative contracts in the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity25Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity25Choice.mmObject();
 		}
 	};
+	protected VariationType1Code derivativeNotionalChange;
 	/**
 	 * Indicates as to whether an increase or a decrease of notional of
 	 * derivative contracts has taken place.
@@ -259,8 +263,8 @@ public class SecuritiesTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TransactionType
-	 * SecuritiesTrade.TransactionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTransactionType
+	 * SecuritiesTrade.mmTransactionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -281,20 +285,21 @@ public class SecuritiesTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DerivativeNotionalChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDerivativeNotionalChange = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TransactionType;
 			isDerived = false;
 			xmlTag = "DerivNtnlChng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeNotionalChange";
 			definition = "Indicates as to whether an increase or a decrease of notional of derivative contracts has taken place.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> VariationType1Code.mmObject();
 		}
 	};
+	protected SecuritiesTransactionPrice4Choice price;
 	/**
 	 * Traded price of the transaction excluding, where applicable, commission
 	 * and accrued interest.<br>
@@ -318,8 +323,8 @@ public class SecuritiesTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradePrice
-	 * SecuritiesTrade.TradePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradePrice
+	 * SecuritiesTrade.mmTradePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -340,21 +345,22 @@ public class SecuritiesTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Price = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradePrice;
 			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradePrice;
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Traded price of the transaction excluding, where applicable, commission and accrued interest.\r\nIn the case of option contracts, it is the premium of the derivative contract per underlying security or index point.\r\nIn the case of spread bets it should be the reference price of the direct underlying instrument.\r\nWhere price is currently not available but pending, the value should be ’PNDG’.\r\nFor CDS it should be the coupon in basis points. \r\nWhere price reported in monetary terms, it shall be provided in the major currency unit.\r\nWhere price is not applicable the field should be left blank.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount netAmount;
 	/**
 	 * Net amount of the transaction means the cash amount which is paid by the
 	 * buyer of the debt instrument upon the settlement of the transaction.
@@ -369,8 +375,8 @@ public class SecuritiesTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradeAmount
-	 * SecuritiesTrade.TradeAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeAmount
+	 * SecuritiesTrade.mmTradeAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -391,20 +397,21 @@ public class SecuritiesTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeAmount;
 			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradeAmount;
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Net amount of the transaction means the cash amount which is paid by the buyer of the debt instrument upon the settlement of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected MICIdentifier tradeVenue;
 	/**
 	 * Identification of the venue where the transaction was executed.<br>
 	 * <br>
@@ -458,20 +465,21 @@ public class SecuritiesTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeVenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeVenue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
+			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TradVn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeVenue";
 			definition = "Identification of the venue where the transaction was executed.\r\n\r\nUsage: \r\nUse the ISO 10383 segment MIC (4 characters) for financial instruments executed on a MiFID trading venue, System Internaliser (SI) or non-EU organised trading platform. Where the segment MIC does not exist, use the operating MIC. \r\n\r\nUse MIC code ‘XOFF’ for financial instruments admitted to trading or traded on a trading venue, where the transaction on that financial instrument is not executed on a MiFID trading venue, SI or non-EU organised trading platform, or where an investment firm does not know it is trading with another investment firm acting as an SI.\r\n\r\nUse MIC code ‘XXXX’ for financial instruments that are not admitted to trading or traded on a trading venue or for which no request for admission has been made and that are not traded on an non-EU organised trading platform but where the underlying is admitted to trading or traded on a trading venue.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected CountryCode countryOfBranch;
 	/**
 	 * Country of the branch of the investment firm whose market membership was
 	 * used to execute the transaction.<br>
@@ -487,8 +495,8 @@ public class SecuritiesTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#Country
-	 * PostalAddress.Country}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
+	 * PostalAddress.mmCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -509,20 +517,21 @@ public class SecuritiesTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfBranch = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
 			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.Country;
 			isDerived = false;
 			xmlTag = "CtryOfBrnch";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfBranch";
 			definition = "Country of the branch of the investment firm whose market membership was used to execute the transaction.\r\n\r\nTBC with item 46.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected AmountAndDirection53 upFrontPayment;
 	/**
 	 * Monetary value of any up-front payment in basis points of notional
 	 * received or paid by the seller.<br>
@@ -541,8 +550,8 @@ public class SecuritiesTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementAmount
-	 * CashSettlement.InterbankSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+	 * CashSettlement.mmInterbankSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -563,21 +572,22 @@ public class SecuritiesTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UpFrontPayment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUpFrontPayment = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementAmount;
 			isDerived = false;
 			xmlTag = "UpFrntPmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpFrontPayment";
 			definition = "Monetary value of any up-front payment in basis points of notional received or paid by the seller.\r\nWhere the seller receives the up-front payment, the value populated is positive. Where the seller pays the up-front payment, the value populated is negative.\r\nFor increase or decrease in notional derivative contracts, the number shall reflect the absolute value of the change and shall be expressed as a positive number.\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection53.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection53.mmObject();
 		}
 	};
+	protected Max52Text tradePlaceMatchingIdentification;
 	/**
 	 * Common matching identification when executed on a trade place.<br>
 	 * <br>
@@ -592,8 +602,8 @@ public class SecuritiesTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CommonIdentification
-	 * TradeIdentification.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
+	 * TradeIdentification.mmCommonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -614,20 +624,21 @@ public class SecuritiesTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradePlaceMatchingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradePlaceMatchingIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CommonIdentification;
 			isDerived = false;
 			xmlTag = "TradPlcMtchgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradePlaceMatchingIdentification";
 			definition = "Common matching identification when executed on a trade place.\r\n\r\nUsage: Must be present when a trade venue has been provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max52Text.mmObject();
 		}
 	};
+	protected Max35Text complexTradeComponentIdentification;
 	/**
 	 * Identification, internal to the reporting party to identify all the
 	 * reports related to the same execution of a combination of financial
@@ -646,8 +657,8 @@ public class SecuritiesTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CommonIdentification
-	 * TradeIdentification.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
+	 * TradeIdentification.mmCommonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -668,17 +679,17 @@ public class SecuritiesTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ComplexTradeComponentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmComplexTradeComponentIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CommonIdentification;
 			isDerived = false;
 			xmlTag = "CmplxTradCmpntId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ComplexTradeComponentIdentification";
 			definition = "Identification, internal to the reporting party to identify all the reports related to the same execution of a combination of financial instruments. The code must be unique for the reporting party for the group of reports for the execution.\r\n\r\nUsage:\r\nField only applies when the instrument is complex.\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -686,18 +697,106 @@ public class SecuritiesTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransaction1.TradeDate, com.tools20022.repository.msg.SecuritiesTransaction1.TradingCapacity,
-						com.tools20022.repository.msg.SecuritiesTransaction1.Quantity, com.tools20022.repository.msg.SecuritiesTransaction1.DerivativeNotionalChange, com.tools20022.repository.msg.SecuritiesTransaction1.Price,
-						com.tools20022.repository.msg.SecuritiesTransaction1.NetAmount, com.tools20022.repository.msg.SecuritiesTransaction1.TradeVenue, com.tools20022.repository.msg.SecuritiesTransaction1.CountryOfBranch,
-						com.tools20022.repository.msg.SecuritiesTransaction1.UpFrontPayment, com.tools20022.repository.msg.SecuritiesTransaction1.TradePlaceMatchingIdentification,
-						com.tools20022.repository.msg.SecuritiesTransaction1.ComplexTradeComponentIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransaction1.mmTradeDate, com.tools20022.repository.msg.SecuritiesTransaction1.mmTradingCapacity,
+						com.tools20022.repository.msg.SecuritiesTransaction1.mmQuantity, com.tools20022.repository.msg.SecuritiesTransaction1.mmDerivativeNotionalChange, com.tools20022.repository.msg.SecuritiesTransaction1.mmPrice,
+						com.tools20022.repository.msg.SecuritiesTransaction1.mmNetAmount, com.tools20022.repository.msg.SecuritiesTransaction1.mmTradeVenue, com.tools20022.repository.msg.SecuritiesTransaction1.mmCountryOfBranch,
+						com.tools20022.repository.msg.SecuritiesTransaction1.mmUpFrontPayment, com.tools20022.repository.msg.SecuritiesTransaction1.mmTradePlaceMatchingIdentification,
+						com.tools20022.repository.msg.SecuritiesTransaction1.mmComplexTradeComponentIdentification);
 				trace_lazy = () -> SecuritiesTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransaction1";
 				definition = "Provides the details of the reported transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(ISODateTime tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public RegulatoryTradingCapacity1Code getTradingCapacity() {
+		return tradingCapacity;
+	}
+
+	public void setTradingCapacity(RegulatoryTradingCapacity1Code tradingCapacity) {
+		this.tradingCapacity = tradingCapacity;
+	}
+
+	public FinancialInstrumentQuantity25Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(FinancialInstrumentQuantity25Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public VariationType1Code getDerivativeNotionalChange() {
+		return derivativeNotionalChange;
+	}
+
+	public void setDerivativeNotionalChange(VariationType1Code derivativeNotionalChange) {
+		this.derivativeNotionalChange = derivativeNotionalChange;
+	}
+
+	public SecuritiesTransactionPrice4Choice getPrice() {
+		return price;
+	}
+
+	public void setPrice(SecuritiesTransactionPrice4Choice price) {
+		this.price = price;
+	}
+
+	public ImpliedCurrencyAndAmount getNetAmount() {
+		return netAmount;
+	}
+
+	public void setNetAmount(ImpliedCurrencyAndAmount netAmount) {
+		this.netAmount = netAmount;
+	}
+
+	public MICIdentifier getTradeVenue() {
+		return tradeVenue;
+	}
+
+	public void setTradeVenue(MICIdentifier tradeVenue) {
+		this.tradeVenue = tradeVenue;
+	}
+
+	public CountryCode getCountryOfBranch() {
+		return countryOfBranch;
+	}
+
+	public void setCountryOfBranch(CountryCode countryOfBranch) {
+		this.countryOfBranch = countryOfBranch;
+	}
+
+	public AmountAndDirection53 getUpFrontPayment() {
+		return upFrontPayment;
+	}
+
+	public void setUpFrontPayment(com.tools20022.repository.msg.AmountAndDirection53 upFrontPayment) {
+		this.upFrontPayment = upFrontPayment;
+	}
+
+	public Max52Text getTradePlaceMatchingIdentification() {
+		return tradePlaceMatchingIdentification;
+	}
+
+	public void setTradePlaceMatchingIdentification(Max52Text tradePlaceMatchingIdentification) {
+		this.tradePlaceMatchingIdentification = tradePlaceMatchingIdentification;
+	}
+
+	public Max35Text getComplexTradeComponentIdentification() {
+		return complexTradeComponentIdentification;
+	}
+
+	public void setComplexTradeComponentIdentification(Max35Text complexTradeComponentIdentification) {
+		this.complexTradeComponentIdentification = complexTradeComponentIdentification;
 	}
 }

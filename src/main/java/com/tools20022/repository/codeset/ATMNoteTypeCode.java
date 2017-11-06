@@ -29,31 +29,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#All
- * ATMNoteTypeCode.All}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#mmAll
+ * ATMNoteTypeCode.mmAll}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#Counterfeit
- * ATMNoteTypeCode.Counterfeit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#Individual
- * ATMNoteTypeCode.Individual}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#mmCounterfeit
+ * ATMNoteTypeCode.mmCounterfeit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#SuspectedCounterfeit
- * ATMNoteTypeCode.SuspectedCounterfeit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#Unfit
- * ATMNoteTypeCode.Unfit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#Fit
- * ATMNoteTypeCode.Fit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#mmIndividual
+ * ATMNoteTypeCode.mmIndividual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#FitAndUnfit
- * ATMNoteTypeCode.FitAndUnfit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#mmSuspectedCounterfeit
+ * ATMNoteTypeCode.mmSuspectedCounterfeit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#mmUnfit
+ * ATMNoteTypeCode.mmUnfit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#mmFit
+ * ATMNoteTypeCode.mmFit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#Neutralised
- * ATMNoteTypeCode.Neutralised}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#Suspect
- * ATMNoteTypeCode.Suspect}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#mmFitAndUnfit
+ * ATMNoteTypeCode.mmFitAndUnfit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#Unrecognised
- * ATMNoteTypeCode.Unrecognised}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#mmNeutralised
+ * ATMNoteTypeCode.mmNeutralised}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#mmSuspect
+ * ATMNoteTypeCode.mmSuspect}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMNoteTypeCode#mmUnrecognised
+ * ATMNoteTypeCode.mmUnrecognised}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -68,8 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,7 +105,7 @@ public class ATMNoteTypeCode {
 	 * definition} = "All fit bank note types."</li>
 	 * </ul>
 	 */
-	public static final MMCode All = new MMCode() {
+	public static final MMCode mmAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
@@ -134,7 +135,7 @@ public class ATMNoteTypeCode {
 	 * definition} = "Detected counterfeit notes."</li>
 	 * </ul>
 	 */
-	public static final MMCode Counterfeit = new MMCode() {
+	public static final MMCode mmCounterfeit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterfeit";
@@ -165,7 +166,7 @@ public class ATMNoteTypeCode {
 	 * "All types of fit bank notes specified in an individual list."</li>
 	 * </ul>
 	 */
-	public static final MMCode Individual = new MMCode() {
+	public static final MMCode mmIndividual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Individual";
@@ -195,7 +196,7 @@ public class ATMNoteTypeCode {
 	 * definition} = "Suspected counterfeit notes."</li>
 	 * </ul>
 	 */
-	public static final MMCode SuspectedCounterfeit = new MMCode() {
+	public static final MMCode mmSuspectedCounterfeit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedCounterfeit";
@@ -225,7 +226,7 @@ public class ATMNoteTypeCode {
 	 * definition} = "Unfit bank notes (unacceptable quality)."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unfit = new MMCode() {
+	public static final MMCode mmUnfit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfit";
@@ -255,7 +256,7 @@ public class ATMNoteTypeCode {
 	 * definition} = "Fit bank notes."</li>
 	 * </ul>
 	 */
-	public static final MMCode Fit = new MMCode() {
+	public static final MMCode mmFit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fit";
@@ -286,7 +287,7 @@ public class ATMNoteTypeCode {
 	 * "Fit and unfit bank notes, if fitness cannot be determined."</li>
 	 * </ul>
 	 */
-	public static final MMCode FitAndUnfit = new MMCode() {
+	public static final MMCode mmFitAndUnfit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FitAndUnfit";
@@ -316,7 +317,7 @@ public class ATMNoteTypeCode {
 	 * definition} = "Notes stained by dye pack."</li>
 	 * </ul>
 	 */
-	public static final MMCode Neutralised = new MMCode() {
+	public static final MMCode mmNeutralised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Neutralised";
@@ -346,7 +347,7 @@ public class ATMNoteTypeCode {
 	 * definition} = "Suspect notes."</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspect = new MMCode() {
+	public static final MMCode mmSuspect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspect";
@@ -376,7 +377,7 @@ public class ATMNoteTypeCode {
 	 * definition} = "Unrecognised notes."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unrecognised = new MMCode() {
+	public static final MMCode mmUnrecognised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unrecognised";
@@ -389,14 +390,14 @@ public class ATMNoteTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMNoteTypeCode";
 				definition = "Type of items the cash-in cassette.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMNoteTypeCode.All, com.tools20022.repository.codeset.ATMNoteTypeCode.Counterfeit, com.tools20022.repository.codeset.ATMNoteTypeCode.Individual,
-						com.tools20022.repository.codeset.ATMNoteTypeCode.SuspectedCounterfeit, com.tools20022.repository.codeset.ATMNoteTypeCode.Unfit, com.tools20022.repository.codeset.ATMNoteTypeCode.Fit,
-						com.tools20022.repository.codeset.ATMNoteTypeCode.FitAndUnfit, com.tools20022.repository.codeset.ATMNoteTypeCode.Neutralised, com.tools20022.repository.codeset.ATMNoteTypeCode.Suspect,
-						com.tools20022.repository.codeset.ATMNoteTypeCode.Unrecognised);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMNoteTypeCode.mmAll, com.tools20022.repository.codeset.ATMNoteTypeCode.mmCounterfeit, com.tools20022.repository.codeset.ATMNoteTypeCode.mmIndividual,
+						com.tools20022.repository.codeset.ATMNoteTypeCode.mmSuspectedCounterfeit, com.tools20022.repository.codeset.ATMNoteTypeCode.mmUnfit, com.tools20022.repository.codeset.ATMNoteTypeCode.mmFit,
+						com.tools20022.repository.codeset.ATMNoteTypeCode.mmFitAndUnfit, com.tools20022.repository.codeset.ATMNoteTypeCode.mmNeutralised, com.tools20022.repository.codeset.ATMNoteTypeCode.mmSuspect,
+						com.tools20022.repository.codeset.ATMNoteTypeCode.mmUnrecognised);
 				derivation_lazy = () -> Arrays.asList(ATMNoteType1Code.mmObject(), ATMNoteType2Code.mmObject());
 			}
 		});

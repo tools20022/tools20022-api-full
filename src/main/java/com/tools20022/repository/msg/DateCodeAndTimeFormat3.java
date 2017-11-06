@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat3#DateCode
- * DateCodeAndTimeFormat3.DateCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat3#Time
- * DateCodeAndTimeFormat3.Time}</li>
+ * {@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat3#mmDateCode
+ * DateCodeAndTimeFormat3.mmDateCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat3#mmTime
+ * DateCodeAndTimeFormat3.mmTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateCodeAndTimeFormat3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateCode21Choice dateCode;
 	/**
 	 * Specifies the type of date.
 	 * <p>
@@ -90,11 +91,11 @@ public class DateCodeAndTimeFormat3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat1#DateCode
-	 * DateCodeAndTimeFormat1.DateCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat1#mmDateCode
+	 * DateCodeAndTimeFormat1.mmDateCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DateCodeAndTimeFormat3.mmObject();
 			isDerived = false;
@@ -102,13 +103,14 @@ public class DateCodeAndTimeFormat3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DateCodeAndTimeFormat1.DateCode;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DateCodeAndTimeFormat1.mmDateCode;
 			maxOccurs = 1;
-			type_lazy = () -> DateCode21Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateCode21Choice.mmObject();
 		}
 	};
+	protected ISOTime time;
 	/**
 	 * Specifies the time.
 	 * <p>
@@ -137,11 +139,11 @@ public class DateCodeAndTimeFormat3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat1#Time
-	 * DateCodeAndTimeFormat1.Time}</li>
+	 * {@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat1#mmTime
+	 * DateCodeAndTimeFormat1.mmTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Time = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateCodeAndTimeFormat3.mmObject();
 			isDerived = false;
@@ -149,9 +151,9 @@ public class DateCodeAndTimeFormat3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Time";
 			definition = "Specifies the time.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DateCodeAndTimeFormat1.Time;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DateCodeAndTimeFormat1.mmTime;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
@@ -159,8 +161,8 @@ public class DateCodeAndTimeFormat3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateCodeAndTimeFormat3.DateCode, com.tools20022.repository.msg.DateCodeAndTimeFormat3.Time);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateCodeAndTimeFormat3.mmDateCode, com.tools20022.repository.msg.DateCodeAndTimeFormat3.mmTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateCodeAndTimeFormat3";
 				definition = "Specifies  a date code and a time.";
@@ -168,5 +170,21 @@ public class DateCodeAndTimeFormat3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateCode21Choice getDateCode() {
+		return dateCode;
+	}
+
+	public void setDateCode(DateCode21Choice dateCode) {
+		this.dateCode = dateCode;
+	}
+
+	public ISOTime getTime() {
+		return time;
+	}
+
+	public void setTime(ISOTime time) {
+		this.time = time;
 	}
 }

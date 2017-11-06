@@ -32,15 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Parameter5#DigestAlgorithm
- * Parameter5.DigestAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter5#mmDigestAlgorithm
+ * Parameter5.mmDigestAlgorithm}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Parameter5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm11Code digestAlgorithm;
 	/**
 	 * Digest algorithm used in the mask generator function.
 	 * <p>
@@ -86,11 +87,11 @@ public class Parameter5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Parameter3#DigestAlgorithm
-	 * Parameter3.DigestAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter3#mmDigestAlgorithm
+	 * Parameter3.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter5.mmObject();
 			isDerived = false;
@@ -98,9 +99,9 @@ public class Parameter5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Digest algorithm used in the mask generator function.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter3.DigestAlgorithm;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter3.mmDigestAlgorithm;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
 		}
 	};
@@ -108,8 +109,8 @@ public class Parameter5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter5.DigestAlgorithm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter5.mmDigestAlgorithm);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Parameter5";
 				definition = "Parameters associated to a mask generator cryptographic function.";
@@ -117,5 +118,13 @@ public class Parameter5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm11Code getDigestAlgorithm() {
+		return digestAlgorithm;
+	}
+
+	public void setDigestAlgorithm(Algorithm11Code digestAlgorithm) {
+		this.digestAlgorithm = digestAlgorithm;
 	}
 }

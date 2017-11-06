@@ -31,14 +31,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#Restricted
- * SecuritiesExitReasonCode.Restricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#mmRestricted
+ * SecuritiesExitReasonCode.mmRestricted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#NonTransferable
- * SecuritiesExitReasonCode.NonTransferable}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#mmNonTransferable
+ * SecuritiesExitReasonCode.mmNonTransferable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#Other
- * SecuritiesExitReasonCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#mmOther
+ * SecuritiesExitReasonCode.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class SecuritiesExitReasonCode {
 	 * definition} = "Shares are restricted."</li>
 	 * </ul>
 	 */
-	public static final MMCode Restricted = new MMCode() {
+	public static final MMCode mmRestricted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
@@ -125,7 +125,7 @@ public class SecuritiesExitReasonCode {
 	 * definition} = "Shares are non transferable."</li>
 	 * </ul>
 	 */
-	public static final MMCode NonTransferable = new MMCode() {
+	public static final MMCode mmNonTransferable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonTransferable";
@@ -155,7 +155,7 @@ public class SecuritiesExitReasonCode {
 	 * definition} = "Other reason."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -168,13 +168,13 @@ public class SecuritiesExitReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesExitReasonCode";
 				definition = "Specifies the reason for DTC (The Depository Trust Company) to exit the shares. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesExitReasonCode.Restricted, com.tools20022.repository.codeset.SecuritiesExitReasonCode.NonTransferable,
-						com.tools20022.repository.codeset.SecuritiesExitReasonCode.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesExitReasonCode.mmRestricted, com.tools20022.repository.codeset.SecuritiesExitReasonCode.mmNonTransferable,
+						com.tools20022.repository.codeset.SecuritiesExitReasonCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(SecuritiesExitReason1Code.mmObject());
 			}
 		});

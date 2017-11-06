@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The Netting Cut Off Reference Data Update Request message is sent to a
@@ -60,21 +61,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01#RequestData
- * NettingCutOffReferenceDataUpdateRequestV01.RequestData}</li>
+ * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01#mmRequestData
+ * NettingCutOffReferenceDataUpdateRequestV01.mmRequestData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01#NettingCutOffRequest
- * NettingCutOffReferenceDataUpdateRequestV01.NettingCutOffRequest}</li>
+ * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01#mmNettingCutOffRequest
+ * NettingCutOffReferenceDataUpdateRequestV01.mmNettingCutOffRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01#SupplementaryData
- * NettingCutOffReferenceDataUpdateRequestV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01#mmSupplementaryData
+ * NettingCutOffReferenceDataUpdateRequestV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01#identifier
- * NettingCutOffReferenceDataUpdateRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code reda.060.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NettingCutOffReferenceDataUpdateRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected RequestData1 requestData;
 	/**
 	 * Specifies the meta data for the netting cut off update request.
 	 * <p>
@@ -113,17 +113,18 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 	 * "Specifies the meta data for the netting cut off update request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestData";
 			definition = "Specifies the meta data for the netting cut off update request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RequestData1.mmObject();
 		}
 	};
+	protected List<NettingCutOff1> nettingCutOffRequest;
 	/**
 	 * Specifies the information regarding the changes to the netting cut off.
 	 * <p>
@@ -148,7 +149,7 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NettingCutOffRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNettingCutOffRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NetgCutOffReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,6 +159,7 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 			complexType_lazy = () -> NettingCutOff1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -184,7 +186,7 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,33 +194,6 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "reda"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "060"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "reda";
-			messageFunctionality = "060";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -232,11 +207,42 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 				rootElement = "Document";
 				xmlTag = "NetgCutOffRefDataUpdReq";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.RequestData,
-						com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.NettingCutOffRequest, com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.mmRequestData,
+						com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.mmNettingCutOffRequest, com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "reda";
+						messageFunctionality = "060";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestData1 getRequestData() {
+		return requestData;
+	}
+
+	public void setRequestData(RequestData1 requestData) {
+		this.requestData = requestData;
+	}
+
+	public List<NettingCutOff1> getNettingCutOffRequest() {
+		return nettingCutOffRequest;
+	}
+
+	public void setNettingCutOffRequest(List<NettingCutOff1> nettingCutOffRequest) {
+		this.nettingCutOffRequest = nettingCutOffRequest;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

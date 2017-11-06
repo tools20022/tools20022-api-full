@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailReport1#SecuritiesAuditTrailOrError
- * SecuritiesAuditTrailReport1.SecuritiesAuditTrailOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailReport1#mmSecuritiesAuditTrailOrError
+ * SecuritiesAuditTrailReport1.mmSecuritiesAuditTrailOrError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailReport1#DatePeriod
- * SecuritiesAuditTrailReport1.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailReport1#mmDatePeriod
+ * SecuritiesAuditTrailReport1.mmDatePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailReport1#FinancialInstrumentIdentification
- * SecuritiesAuditTrailReport1.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailReport1#mmFinancialInstrumentIdentification
+ * SecuritiesAuditTrailReport1.mmFinancialInstrumentIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAuditTrailReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AuditTrailOrBusinessError1Choice securitiesAuditTrailOrError;
 	/**
 	 * Identifies the returned securities reference data or error information.
 	 * <p>
@@ -92,7 +93,7 @@ public class SecuritiesAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesAuditTrailOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesAuditTrailOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -100,12 +101,13 @@ public class SecuritiesAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAuditTrailOrError";
 			definition = "Identifies the returned securities reference data or error information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 		}
 	};
+	protected DateSearchChoice datePeriod;
 	/**
 	 * Period in dates for which the audit trail is provided.
 	 * <p>
@@ -134,7 +136,7 @@ public class SecuritiesAuditTrailReport1 {
 	 * definition} = "Period in dates for which the audit trail is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class SecuritiesAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Period in dates for which the audit trail is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Identifies the securities for which the audit trail is provided.
 	 * <p>
@@ -176,7 +179,7 @@ public class SecuritiesAuditTrailReport1 {
 	 * "Identifies the securities for which the audit trail is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -184,23 +187,47 @@ public class SecuritiesAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the securities for which the audit trail is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAuditTrailReport1.SecuritiesAuditTrailOrError, com.tools20022.repository.msg.SecuritiesAuditTrailReport1.DatePeriod,
-						com.tools20022.repository.msg.SecuritiesAuditTrailReport1.FinancialInstrumentIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmSecuritiesAuditTrailOrError, com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmDatePeriod,
+						com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmFinancialInstrumentIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAuditTrailReport1";
 				definition = "Report information about securities reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AuditTrailOrBusinessError1Choice getSecuritiesAuditTrailOrError() {
+		return securitiesAuditTrailOrError;
+	}
+
+	public void setSecuritiesAuditTrailOrError(AuditTrailOrBusinessError1Choice securitiesAuditTrailOrError) {
+		this.securitiesAuditTrailOrError = securitiesAuditTrailOrError;
+	}
+
+	public DateSearchChoice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(DateSearchChoice datePeriod) {
+		this.datePeriod = datePeriod;
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 }

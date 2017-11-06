@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details about praticipant's liquidity.
@@ -34,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#Account
- * AccountLiquidityReport1.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#mmAccount
+ * AccountLiquidityReport1.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#AccountOverdueIndicator
- * AccountLiquidityReport1.AccountOverdueIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#mmAccountOverdueIndicator
+ * AccountLiquidityReport1.mmAccountOverdueIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#LimitInformation
- * AccountLiquidityReport1.LimitInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#mmLimitInformation
+ * AccountLiquidityReport1.mmLimitInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#LiquidityInformation
- * AccountLiquidityReport1.LiquidityInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#mmLiquidityInformation
+ * AccountLiquidityReport1.mmLiquidityInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#ArrestInformation
- * AccountLiquidityReport1.ArrestInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#mmArrestInformation
+ * AccountLiquidityReport1.mmArrestInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#DebitQueuedTransactions
- * AccountLiquidityReport1.DebitQueuedTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#mmDebitQueuedTransactions
+ * AccountLiquidityReport1.mmDebitQueuedTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#CreditQueuedTransactions
- * AccountLiquidityReport1.CreditQueuedTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLiquidityReport1#mmCreditQueuedTransactions
+ * AccountLiquidityReport1.mmCreditQueuedTransactions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountLiquidityReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccount25 account;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -103,7 +105,7 @@ public class AccountLiquidityReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -111,12 +113,13 @@ public class AccountLiquidityReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	protected YesNoIndicator accountOverdueIndicator;
 	/**
 	 * Indicates overdue FTI queue on the account.
 	 * <p>
@@ -145,7 +148,7 @@ public class AccountLiquidityReport1 {
 	 * definition} = "Indicates overdue FTI queue on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOverdueIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOverdueIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -153,11 +156,12 @@ public class AccountLiquidityReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOverdueIndicator";
 			definition = "Indicates overdue FTI queue on the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AccountLimits1> limitInformation;
 	/**
 	 * Information about funds limits set on the account.
 	 * <p>
@@ -184,7 +188,7 @@ public class AccountLiquidityReport1 {
 	 * definition} = "Information about funds limits set on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LimitInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimitInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -193,10 +197,11 @@ public class AccountLiquidityReport1 {
 			name = "LimitInformation";
 			definition = "Information about funds limits set on the account.";
 			minOccurs = 0;
-			type_lazy = () -> AccountLimits1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 		}
 	};
+	protected LiquidityDetails1 liquidityInformation;
 	/**
 	 * Information about liquidity of the funds of the account.
 	 * <p>
@@ -223,7 +228,7 @@ public class AccountLiquidityReport1 {
 	 * definition} = "Information about liquidity of the funds of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LiquidityInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLiquidityInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -231,12 +236,13 @@ public class AccountLiquidityReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityInformation";
 			definition = "Information about liquidity of the funds of the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> LiquidityDetails1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
 		}
 	};
+	protected ArrestedFunds1 arrestInformation;
 	/**
 	 * Information about restricted (arrested) funds on the account.
 	 * <p>
@@ -264,7 +270,7 @@ public class AccountLiquidityReport1 {
 	 * "Information about restricted (arrested) funds on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ArrestInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmArrestInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -272,12 +278,13 @@ public class AccountLiquidityReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ArrestInformation";
 			definition = "Information about restricted (arrested) funds on the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ArrestedFunds1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QueuedTransactionsReport1> debitQueuedTransactions;
 	/**
 	 * Information about queued debit transactions.
 	 * <p>
@@ -305,7 +312,7 @@ public class AccountLiquidityReport1 {
 	 * definition} = "Information about queued debit transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebitQueuedTransactions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebitQueuedTransactions = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -313,12 +320,13 @@ public class AccountLiquidityReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitQueuedTransactions";
 			definition = "Information about queued debit transactions.";
-			minOccurs = 0;
 			maxOccurs = 5;
-			type_lazy = () -> QueuedTransactionsReport1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QueuedTransactionsReport1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QueuedTransactionsReport1> creditQueuedTransactions;
 	/**
 	 * Information about queued credit transactions
 	 * <p>
@@ -346,7 +354,7 @@ public class AccountLiquidityReport1 {
 	 * definition} = "Information about queued credit transactions"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditQueuedTransactions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditQueuedTransactions = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -354,26 +362,82 @@ public class AccountLiquidityReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditQueuedTransactions";
 			definition = "Information about queued credit transactions";
-			minOccurs = 0;
 			maxOccurs = 2;
-			type_lazy = () -> QueuedTransactionsReport1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QueuedTransactionsReport1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLiquidityReport1.Account, com.tools20022.repository.msg.AccountLiquidityReport1.AccountOverdueIndicator,
-						com.tools20022.repository.msg.AccountLiquidityReport1.LimitInformation, com.tools20022.repository.msg.AccountLiquidityReport1.LiquidityInformation,
-						com.tools20022.repository.msg.AccountLiquidityReport1.ArrestInformation, com.tools20022.repository.msg.AccountLiquidityReport1.DebitQueuedTransactions,
-						com.tools20022.repository.msg.AccountLiquidityReport1.CreditQueuedTransactions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLiquidityReport1.mmAccount, com.tools20022.repository.msg.AccountLiquidityReport1.mmAccountOverdueIndicator,
+						com.tools20022.repository.msg.AccountLiquidityReport1.mmLimitInformation, com.tools20022.repository.msg.AccountLiquidityReport1.mmLiquidityInformation,
+						com.tools20022.repository.msg.AccountLiquidityReport1.mmArrestInformation, com.tools20022.repository.msg.AccountLiquidityReport1.mmDebitQueuedTransactions,
+						com.tools20022.repository.msg.AccountLiquidityReport1.mmCreditQueuedTransactions);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLiquidityReport1";
 				definition = "Details about praticipant's liquidity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccount25 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = account;
+	}
+
+	public YesNoIndicator getAccountOverdueIndicator() {
+		return accountOverdueIndicator;
+	}
+
+	public void setAccountOverdueIndicator(YesNoIndicator accountOverdueIndicator) {
+		this.accountOverdueIndicator = accountOverdueIndicator;
+	}
+
+	public List<AccountLimits1> getLimitInformation() {
+		return limitInformation;
+	}
+
+	public void setLimitInformation(List<com.tools20022.repository.msg.AccountLimits1> limitInformation) {
+		this.limitInformation = limitInformation;
+	}
+
+	public LiquidityDetails1 getLiquidityInformation() {
+		return liquidityInformation;
+	}
+
+	public void setLiquidityInformation(com.tools20022.repository.msg.LiquidityDetails1 liquidityInformation) {
+		this.liquidityInformation = liquidityInformation;
+	}
+
+	public ArrestedFunds1 getArrestInformation() {
+		return arrestInformation;
+	}
+
+	public void setArrestInformation(com.tools20022.repository.msg.ArrestedFunds1 arrestInformation) {
+		this.arrestInformation = arrestInformation;
+	}
+
+	public List<QueuedTransactionsReport1> getDebitQueuedTransactions() {
+		return debitQueuedTransactions;
+	}
+
+	public void setDebitQueuedTransactions(List<com.tools20022.repository.msg.QueuedTransactionsReport1> debitQueuedTransactions) {
+		this.debitQueuedTransactions = debitQueuedTransactions;
+	}
+
+	public List<QueuedTransactionsReport1> getCreditQueuedTransactions() {
+		return creditQueuedTransactions;
+	}
+
+	public void setCreditQueuedTransactions(List<com.tools20022.repository.msg.QueuedTransactionsReport1> creditQueuedTransactions) {
+		this.creditQueuedTransactions = creditQueuedTransactions;
 	}
 }

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Calculation of the current situation of a baseline as a result of the
@@ -34,32 +35,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem14#LineItemDetails
- * LineItem14.LineItemDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem14#mmLineItemDetails
+ * LineItem14.mmLineItemDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem14#OrderedLineItemsTotalAmount
- * LineItem14.OrderedLineItemsTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem14#mmOrderedLineItemsTotalAmount
+ * LineItem14.mmOrderedLineItemsTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem14#AcceptedLineItemsTotalAmount
- * LineItem14.AcceptedLineItemsTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem14#mmAcceptedLineItemsTotalAmount
+ * LineItem14.mmAcceptedLineItemsTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem14#OutstandingLineItemsTotalAmount
- * LineItem14.OutstandingLineItemsTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem14#mmOutstandingLineItemsTotalAmount
+ * LineItem14.mmOutstandingLineItemsTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem14#PendingLineItemsTotalAmount
- * LineItem14.PendingLineItemsTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem14#mmPendingLineItemsTotalAmount
+ * LineItem14.mmPendingLineItemsTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem14#OrderedTotalNetAmount
- * LineItem14.OrderedTotalNetAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem14#mmOrderedTotalNetAmount
+ * LineItem14.mmOrderedTotalNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem14#AcceptedTotalNetAmount
- * LineItem14.AcceptedTotalNetAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem14#mmAcceptedTotalNetAmount
+ * LineItem14.mmAcceptedTotalNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem14#OutstandingTotalNetAmount
- * LineItem14.OutstandingTotalNetAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem14#mmOutstandingTotalNetAmount
+ * LineItem14.mmOutstandingTotalNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem14#PendingTotalNetAmount
- * LineItem14.PendingTotalNetAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem14#mmPendingTotalNetAmount
+ * LineItem14.mmPendingTotalNetAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -67,15 +68,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#ReportedLineItem
- * BaselineReportV04.ReportedLineItem}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmReportedLineItem
+ * BaselineReportV04.mmReportedLineItem}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LineItem14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.LineItemDetails12> lineItemDetails;
 	/**
 	 * Calculated information about the goods of the underlying transaction.
 	 * <p>
@@ -105,8 +107,8 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#LineItem
-	 * Invoice.LineItem}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmLineItem
+	 * Invoice.mmLineItem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem14
@@ -126,25 +128,26 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#LineItemDetails
-	 * LineItem8.LineItemDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmLineItemDetails
+	 * LineItem8.mmLineItemDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LineItemDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLineItemDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmLineItem;
 			componentContext_lazy = () -> LineItem14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.LineItem;
 			isDerived = false;
 			xmlTag = "LineItmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItemDetails";
 			definition = "Calculated information about the goods of the underlying transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.LineItemDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.mmLineItemDetails;
 			minOccurs = 1;
-			type_lazy = () -> LineItemDetails12.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LineItemDetails12.mmObject();
 		}
 	};
+	protected CurrencyAndAmount orderedLineItemsTotalAmount;
 	/**
 	 * Line items total amount as indicated in the baseline.
 	 * <p>
@@ -158,8 +161,8 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PurchaseOrder#TotalAmount
-	 * PurchaseOrder.TotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PurchaseOrder#mmTotalAmount
+	 * PurchaseOrder.mmTotalAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem14
@@ -178,25 +181,26 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#OrderedLineItemsTotalAmount
-	 * LineItem8.OrderedLineItemsTotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmOrderedLineItemsTotalAmount
+	 * LineItem8.mmOrderedLineItemsTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderedLineItemsTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderedLineItemsTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmTotalAmount;
 			componentContext_lazy = () -> LineItem14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.TotalAmount;
 			isDerived = false;
 			xmlTag = "OrdrdLineItmsTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedLineItemsTotalAmount";
 			definition = "Line items total amount as indicated in the baseline.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.OrderedLineItemsTotalAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.mmOrderedLineItemsTotalAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount acceptedLineItemsTotalAmount;
 	/**
 	 * Line items total amount accepted by a data set submission(s).
 	 * <p>
@@ -210,8 +214,8 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#TotalAcceptedAmount
-	 * CommercialTrade.TotalAcceptedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTotalAcceptedAmount
+	 * CommercialTrade.mmTotalAcceptedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem14
@@ -231,25 +235,26 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#AcceptedLineItemsTotalAmount
-	 * LineItem8.AcceptedLineItemsTotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmAcceptedLineItemsTotalAmount
+	 * LineItem8.mmAcceptedLineItemsTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AcceptedLineItemsTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAcceptedLineItemsTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmTotalAcceptedAmount;
 			componentContext_lazy = () -> LineItem14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.TotalAcceptedAmount;
 			isDerived = false;
 			xmlTag = "AccptdLineItmsTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedLineItemsTotalAmount";
 			definition = "Line items total amount accepted by a data set submission(s).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.AcceptedLineItemsTotalAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.mmAcceptedLineItemsTotalAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount outstandingLineItemsTotalAmount;
 	/**
 	 * Difference between the ordered and the accepted line items total amount.
 	 * <p>
@@ -280,11 +285,11 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#OutstandingLineItemsTotalAmount
-	 * LineItem8.OutstandingLineItemsTotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmOutstandingLineItemsTotalAmount
+	 * LineItem8.mmOutstandingLineItemsTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OutstandingLineItemsTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOutstandingLineItemsTotalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LineItem14.mmObject();
 			isDerived = false;
@@ -292,12 +297,13 @@ public class LineItem14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutstandingLineItemsTotalAmount";
 			definition = "Difference between the ordered and the accepted line items total amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.OutstandingLineItemsTotalAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.mmOutstandingLineItemsTotalAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount pendingLineItemsTotalAmount;
 	/**
 	 * Line item total amount for which a mismatched data set has been submitted
 	 * and has not yet been accepted or rejected.
@@ -329,11 +335,11 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#PendingLineItemsTotalAmount
-	 * LineItem8.PendingLineItemsTotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmPendingLineItemsTotalAmount
+	 * LineItem8.mmPendingLineItemsTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PendingLineItemsTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPendingLineItemsTotalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LineItem14.mmObject();
 			isDerived = false;
@@ -341,12 +347,13 @@ public class LineItem14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingLineItemsTotalAmount";
 			definition = "Line item total amount for which a mismatched data set has been submitted and has not yet been accepted or rejected.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.PendingLineItemsTotalAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.mmPendingLineItemsTotalAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount orderedTotalNetAmount;
 	/**
 	 * Total net amount as indicated in the baseline.
 	 * <p>
@@ -360,8 +367,8 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#TotalNetAmount
-	 * Invoice.TotalNetAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalNetAmount
+	 * Invoice.mmTotalNetAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem14
@@ -380,25 +387,26 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#OrderedTotalNetAmount
-	 * LineItem8.OrderedTotalNetAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmOrderedTotalNetAmount
+	 * LineItem8.mmOrderedTotalNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderedTotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderedTotalNetAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalNetAmount;
 			componentContext_lazy = () -> LineItem14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.TotalNetAmount;
 			isDerived = false;
 			xmlTag = "OrdrdTtlNetAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedTotalNetAmount";
 			definition = "Total net amount as indicated in the baseline.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.OrderedTotalNetAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.mmOrderedTotalNetAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount acceptedTotalNetAmount;
 	/**
 	 * Total net amount accepted by a data set submission.
 	 * <p>
@@ -412,8 +420,8 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#TotalInvoiceAmount
-	 * Invoice.TotalInvoiceAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalInvoiceAmount
+	 * Invoice.mmTotalInvoiceAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem14
@@ -432,25 +440,26 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#AcceptedTotalNetAmount
-	 * LineItem8.AcceptedTotalNetAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmAcceptedTotalNetAmount
+	 * LineItem8.mmAcceptedTotalNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AcceptedTotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAcceptedTotalNetAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> LineItem14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.TotalInvoiceAmount;
 			isDerived = false;
 			xmlTag = "AccptdTtlNetAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTotalNetAmount";
 			definition = "Total net amount accepted by a data set submission.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.AcceptedTotalNetAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.mmAcceptedTotalNetAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount outstandingTotalNetAmount;
 	/**
 	 * Total net amount for which a mismatched data set has been submitted and
 	 * has not yet been accepted or rejected.
@@ -482,11 +491,11 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#OutstandingTotalNetAmount
-	 * LineItem8.OutstandingTotalNetAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmOutstandingTotalNetAmount
+	 * LineItem8.mmOutstandingTotalNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OutstandingTotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOutstandingTotalNetAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LineItem14.mmObject();
 			isDerived = false;
@@ -494,12 +503,13 @@ public class LineItem14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutstandingTotalNetAmount";
 			definition = "Total net amount for which a mismatched data set has been submitted and has not yet been accepted or rejected.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.OutstandingTotalNetAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.mmOutstandingTotalNetAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount pendingTotalNetAmount;
 	/**
 	 * Difference between the ordered and the accepted total net amount.
 	 * <p>
@@ -529,11 +539,11 @@ public class LineItem14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#PendingTotalNetAmount
-	 * LineItem8.PendingTotalNetAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmPendingTotalNetAmount
+	 * LineItem8.mmPendingTotalNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PendingTotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPendingTotalNetAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LineItem14.mmObject();
 			isDerived = false;
@@ -541,9 +551,9 @@ public class LineItem14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingTotalNetAmount";
 			definition = "Difference between the ordered and the accepted total net amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.PendingTotalNetAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem8.mmPendingTotalNetAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -551,12 +561,12 @@ public class LineItem14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.LineItemDetails, com.tools20022.repository.msg.LineItem14.OrderedLineItemsTotalAmount,
-						com.tools20022.repository.msg.LineItem14.AcceptedLineItemsTotalAmount, com.tools20022.repository.msg.LineItem14.OutstandingLineItemsTotalAmount, com.tools20022.repository.msg.LineItem14.PendingLineItemsTotalAmount,
-						com.tools20022.repository.msg.LineItem14.OrderedTotalNetAmount, com.tools20022.repository.msg.LineItem14.AcceptedTotalNetAmount, com.tools20022.repository.msg.LineItem14.OutstandingTotalNetAmount,
-						com.tools20022.repository.msg.LineItem14.PendingTotalNetAmount);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV04.ReportedLineItem);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.mmLineItemDetails, com.tools20022.repository.msg.LineItem14.mmOrderedLineItemsTotalAmount,
+						com.tools20022.repository.msg.LineItem14.mmAcceptedLineItemsTotalAmount, com.tools20022.repository.msg.LineItem14.mmOutstandingLineItemsTotalAmount,
+						com.tools20022.repository.msg.LineItem14.mmPendingLineItemsTotalAmount, com.tools20022.repository.msg.LineItem14.mmOrderedTotalNetAmount, com.tools20022.repository.msg.LineItem14.mmAcceptedTotalNetAmount,
+						com.tools20022.repository.msg.LineItem14.mmOutstandingTotalNetAmount, com.tools20022.repository.msg.LineItem14.mmPendingTotalNetAmount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportedLineItem);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LineItem14";
 				definition = "Calculation of the current situation of a baseline as a result of the submission of a commercial data set.";
@@ -564,5 +574,77 @@ public class LineItem14 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<LineItemDetails12> getLineItemDetails() {
+		return lineItemDetails;
+	}
+
+	public void setLineItemDetails(List<com.tools20022.repository.msg.LineItemDetails12> lineItemDetails) {
+		this.lineItemDetails = lineItemDetails;
+	}
+
+	public CurrencyAndAmount getOrderedLineItemsTotalAmount() {
+		return orderedLineItemsTotalAmount;
+	}
+
+	public void setOrderedLineItemsTotalAmount(CurrencyAndAmount orderedLineItemsTotalAmount) {
+		this.orderedLineItemsTotalAmount = orderedLineItemsTotalAmount;
+	}
+
+	public CurrencyAndAmount getAcceptedLineItemsTotalAmount() {
+		return acceptedLineItemsTotalAmount;
+	}
+
+	public void setAcceptedLineItemsTotalAmount(CurrencyAndAmount acceptedLineItemsTotalAmount) {
+		this.acceptedLineItemsTotalAmount = acceptedLineItemsTotalAmount;
+	}
+
+	public CurrencyAndAmount getOutstandingLineItemsTotalAmount() {
+		return outstandingLineItemsTotalAmount;
+	}
+
+	public void setOutstandingLineItemsTotalAmount(CurrencyAndAmount outstandingLineItemsTotalAmount) {
+		this.outstandingLineItemsTotalAmount = outstandingLineItemsTotalAmount;
+	}
+
+	public CurrencyAndAmount getPendingLineItemsTotalAmount() {
+		return pendingLineItemsTotalAmount;
+	}
+
+	public void setPendingLineItemsTotalAmount(CurrencyAndAmount pendingLineItemsTotalAmount) {
+		this.pendingLineItemsTotalAmount = pendingLineItemsTotalAmount;
+	}
+
+	public CurrencyAndAmount getOrderedTotalNetAmount() {
+		return orderedTotalNetAmount;
+	}
+
+	public void setOrderedTotalNetAmount(CurrencyAndAmount orderedTotalNetAmount) {
+		this.orderedTotalNetAmount = orderedTotalNetAmount;
+	}
+
+	public CurrencyAndAmount getAcceptedTotalNetAmount() {
+		return acceptedTotalNetAmount;
+	}
+
+	public void setAcceptedTotalNetAmount(CurrencyAndAmount acceptedTotalNetAmount) {
+		this.acceptedTotalNetAmount = acceptedTotalNetAmount;
+	}
+
+	public CurrencyAndAmount getOutstandingTotalNetAmount() {
+		return outstandingTotalNetAmount;
+	}
+
+	public void setOutstandingTotalNetAmount(CurrencyAndAmount outstandingTotalNetAmount) {
+		this.outstandingTotalNetAmount = outstandingTotalNetAmount;
+	}
+
+	public CurrencyAndAmount getPendingTotalNetAmount() {
+		return pendingTotalNetAmount;
+	}
+
+	public void setPendingTotalNetAmount(CurrencyAndAmount pendingTotalNetAmount) {
+		this.pendingTotalNetAmount = pendingTotalNetAmount;
 	}
 }

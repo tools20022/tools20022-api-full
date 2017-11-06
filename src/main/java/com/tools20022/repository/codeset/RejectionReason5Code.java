@@ -35,99 +35,99 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#ClosedExchange
- * RejectionReason5Code.ClosedExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmClosedExchange
+ * RejectionReason5Code.mmClosedExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#UnknownSymbol
- * RejectionReason5Code.UnknownSymbol}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmUnknownSymbol
+ * RejectionReason5Code.mmUnknownSymbol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#ExceedsLimit
- * RejectionReason5Code.ExceedsLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmExceedsLimit
+ * RejectionReason5Code.mmExceedsLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#TooLate
- * RejectionReason5Code.TooLate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmTooLate
+ * RejectionReason5Code.mmTooLate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#InvalidPrice
- * RejectionReason5Code.InvalidPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmInvalidPrice
+ * RejectionReason5Code.mmInvalidPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#QuantityRejection
- * RejectionReason5Code.QuantityRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmQuantityRejection
+ * RejectionReason5Code.mmQuantityRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#AgreementStartDate
- * RejectionReason5Code.AgreementStartDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmAgreementStartDate
+ * RejectionReason5Code.mmAgreementStartDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#TransactionCallDelay
- * RejectionReason5Code.TransactionCallDelay}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmTransactionCallDelay
+ * RejectionReason5Code.mmTransactionCallDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#CashAccount
- * RejectionReason5Code.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmCashAccount
+ * RejectionReason5Code.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#DealPrice
- * RejectionReason5Code.DealPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmDealPrice
+ * RejectionReason5Code.mmDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#ForfeitAmount
- * RejectionReason5Code.ForfeitAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmForfeitAmount
+ * RejectionReason5Code.mmForfeitAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#DeliveringCustodian
- * RejectionReason5Code.DeliveringCustodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmDeliveringCustodian
+ * RejectionReason5Code.mmDeliveringCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#ReceivingCustodian
- * RejectionReason5Code.ReceivingCustodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmReceivingCustodian
+ * RejectionReason5Code.mmReceivingCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#NotFoundRejection
- * RejectionReason5Code.NotFoundRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmNotFoundRejection
+ * RejectionReason5Code.mmNotFoundRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#QuantityUnitType
- * RejectionReason5Code.QuantityUnitType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmQuantityUnitType
+ * RejectionReason5Code.mmQuantityUnitType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#TerminationTransactionAmount
- * RejectionReason5Code.TerminationTransactionAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmTerminationTransactionAmount
+ * RejectionReason5Code.mmTerminationTransactionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#RepurchaseRate
- * RejectionReason5Code.RepurchaseRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmRepurchaseRate
+ * RejectionReason5Code.mmRepurchaseRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#PremiumAmount
- * RejectionReason5Code.PremiumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmPremiumAmount
+ * RejectionReason5Code.mmPremiumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#RepurchaseRateType
- * RejectionReason5Code.RepurchaseRateType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmRepurchaseRateType
+ * RejectionReason5Code.mmRepurchaseRateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#SpreadRate
- * RejectionReason5Code.SpreadRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmSpreadRate
+ * RejectionReason5Code.mmSpreadRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#TradeDate
- * RejectionReason5Code.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmTradeDate
+ * RejectionReason5Code.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#ReceivingAgent
- * RejectionReason5Code.ReceivingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmReceivingAgent
+ * RejectionReason5Code.mmReceivingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#Intermediary
- * RejectionReason5Code.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmIntermediary
+ * RejectionReason5Code.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#DeliveringAgent
- * RejectionReason5Code.DeliveringAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmDeliveringAgent
+ * RejectionReason5Code.mmDeliveringAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#PlaceOfTrade
- * RejectionReason5Code.PlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmPlaceOfTrade
+ * RejectionReason5Code.mmPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#InvestorNameAddressUnknown
- * RejectionReason5Code.InvestorNameAddressUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmInvestorNameAddressUnknown
+ * RejectionReason5Code.mmInvestorNameAddressUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#RejectedSinceAlreadyCancelled
- * RejectionReason5Code.RejectedSinceAlreadyCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmRejectedSinceAlreadyCancelled
+ * RejectionReason5Code.mmRejectedSinceAlreadyCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#RejectedSinceInProgress
- * RejectionReason5Code.RejectedSinceInProgress}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmRejectedSinceInProgress
+ * RejectionReason5Code.mmRejectedSinceInProgress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#InvalidReference
- * RejectionReason5Code.InvalidReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason5Code#mmInvalidReference
+ * RejectionReason5Code.mmInvalidReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -165,7 +165,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "ClosedExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClosedExchange = new MMCode() {
+	public static final MMCode mmClosedExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedExchange";
@@ -188,7 +188,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "UnknownSymbol"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnknownSymbol = new MMCode() {
+	public static final MMCode mmUnknownSymbol = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownSymbol";
@@ -211,7 +211,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "ExceedsLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExceedsLimit = new MMCode() {
+	public static final MMCode mmExceedsLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceedsLimit";
@@ -234,7 +234,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "TooLate"</li>
 	 * </ul>
 	 */
-	public static final MMCode TooLate = new MMCode() {
+	public static final MMCode mmTooLate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLate";
@@ -257,7 +257,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "InvalidPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidPrice = new MMCode() {
+	public static final MMCode mmInvalidPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidPrice";
@@ -280,7 +280,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "QuantityRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityRejection = new MMCode() {
+	public static final MMCode mmQuantityRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
@@ -303,7 +303,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "AgreementStartDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode AgreementStartDate = new MMCode() {
+	public static final MMCode mmAgreementStartDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementStartDate";
@@ -326,7 +326,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "TransactionCallDelay"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionCallDelay = new MMCode() {
+	public static final MMCode mmTransactionCallDelay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCallDelay";
@@ -349,7 +349,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "CashAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashAccount = new MMCode() {
+	public static final MMCode mmCashAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
@@ -372,7 +372,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "DealPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode DealPrice = new MMCode() {
+	public static final MMCode mmDealPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
@@ -395,7 +395,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "ForfeitAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForfeitAmount = new MMCode() {
+	public static final MMCode mmForfeitAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForfeitAmount";
@@ -418,7 +418,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "DeliveringCustodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveringCustodian = new MMCode() {
+	public static final MMCode mmDeliveringCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringCustodian";
@@ -441,7 +441,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "ReceivingCustodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingCustodian = new MMCode() {
+	public static final MMCode mmReceivingCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingCustodian";
@@ -464,7 +464,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "NotFoundRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotFoundRejection = new MMCode() {
+	public static final MMCode mmNotFoundRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotFoundRejection";
@@ -487,7 +487,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "QuantityUnitType"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityUnitType = new MMCode() {
+	public static final MMCode mmQuantityUnitType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityUnitType";
@@ -510,7 +510,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "TerminationTransactionAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode TerminationTransactionAmount = new MMCode() {
+	public static final MMCode mmTerminationTransactionAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationTransactionAmount";
@@ -533,7 +533,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "RepurchaseRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseRate = new MMCode() {
+	public static final MMCode mmRepurchaseRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRate";
@@ -556,7 +556,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "PremiumAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode PremiumAmount = new MMCode() {
+	public static final MMCode mmPremiumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumAmount";
@@ -579,7 +579,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "RepurchaseRateType"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseRateType = new MMCode() {
+	public static final MMCode mmRepurchaseRateType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRateType";
@@ -602,7 +602,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "SpreadRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpreadRate = new MMCode() {
+	public static final MMCode mmSpreadRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadRate";
@@ -625,7 +625,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "TradeDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradeDate = new MMCode() {
+	public static final MMCode mmTradeDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
@@ -648,7 +648,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "ReceivingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingAgent = new MMCode() {
+	public static final MMCode mmReceivingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgent";
@@ -671,7 +671,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "Intermediary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Intermediary = new MMCode() {
+	public static final MMCode mmIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
@@ -694,7 +694,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "DeliveringAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveringAgent = new MMCode() {
+	public static final MMCode mmDeliveringAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgent";
@@ -717,7 +717,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "PlaceOfTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfTrade = new MMCode() {
+	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
@@ -740,7 +740,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "InvestorNameAddressUnknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestorNameAddressUnknown = new MMCode() {
+	public static final MMCode mmInvestorNameAddressUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorNameAddressUnknown";
@@ -763,7 +763,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "RejectedSinceAlreadyCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedSinceAlreadyCancelled = new MMCode() {
+	public static final MMCode mmRejectedSinceAlreadyCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceAlreadyCancelled";
@@ -786,7 +786,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "RejectedSinceInProgress"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedSinceInProgress = new MMCode() {
+	public static final MMCode mmRejectedSinceInProgress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceInProgress";
@@ -809,7 +809,7 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	 * name} = "InvalidReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidReference = new MMCode() {
+	public static final MMCode mmInvalidReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidReference";
@@ -820,23 +820,24 @@ public class RejectionReason5Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXCL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason5Code";
 				definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason5Code.ClosedExchange, com.tools20022.repository.codeset.RejectionReason5Code.UnknownSymbol,
-						com.tools20022.repository.codeset.RejectionReason5Code.ExceedsLimit, com.tools20022.repository.codeset.RejectionReason5Code.TooLate, com.tools20022.repository.codeset.RejectionReason5Code.InvalidPrice,
-						com.tools20022.repository.codeset.RejectionReason5Code.QuantityRejection, com.tools20022.repository.codeset.RejectionReason5Code.AgreementStartDate,
-						com.tools20022.repository.codeset.RejectionReason5Code.TransactionCallDelay, com.tools20022.repository.codeset.RejectionReason5Code.CashAccount, com.tools20022.repository.codeset.RejectionReason5Code.DealPrice,
-						com.tools20022.repository.codeset.RejectionReason5Code.ForfeitAmount, com.tools20022.repository.codeset.RejectionReason5Code.DeliveringCustodian,
-						com.tools20022.repository.codeset.RejectionReason5Code.ReceivingCustodian, com.tools20022.repository.codeset.RejectionReason5Code.NotFoundRejection,
-						com.tools20022.repository.codeset.RejectionReason5Code.QuantityUnitType, com.tools20022.repository.codeset.RejectionReason5Code.TerminationTransactionAmount,
-						com.tools20022.repository.codeset.RejectionReason5Code.RepurchaseRate, com.tools20022.repository.codeset.RejectionReason5Code.PremiumAmount, com.tools20022.repository.codeset.RejectionReason5Code.RepurchaseRateType,
-						com.tools20022.repository.codeset.RejectionReason5Code.SpreadRate, com.tools20022.repository.codeset.RejectionReason5Code.TradeDate, com.tools20022.repository.codeset.RejectionReason5Code.ReceivingAgent,
-						com.tools20022.repository.codeset.RejectionReason5Code.Intermediary, com.tools20022.repository.codeset.RejectionReason5Code.DeliveringAgent, com.tools20022.repository.codeset.RejectionReason5Code.PlaceOfTrade,
-						com.tools20022.repository.codeset.RejectionReason5Code.InvestorNameAddressUnknown, com.tools20022.repository.codeset.RejectionReason5Code.RejectedSinceAlreadyCancelled,
-						com.tools20022.repository.codeset.RejectionReason5Code.RejectedSinceInProgress, com.tools20022.repository.codeset.RejectionReason5Code.InvalidReference);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason5Code.mmClosedExchange, com.tools20022.repository.codeset.RejectionReason5Code.mmUnknownSymbol,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmExceedsLimit, com.tools20022.repository.codeset.RejectionReason5Code.mmTooLate, com.tools20022.repository.codeset.RejectionReason5Code.mmInvalidPrice,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmQuantityRejection, com.tools20022.repository.codeset.RejectionReason5Code.mmAgreementStartDate,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmTransactionCallDelay, com.tools20022.repository.codeset.RejectionReason5Code.mmCashAccount,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmDealPrice, com.tools20022.repository.codeset.RejectionReason5Code.mmForfeitAmount,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmDeliveringCustodian, com.tools20022.repository.codeset.RejectionReason5Code.mmReceivingCustodian,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmNotFoundRejection, com.tools20022.repository.codeset.RejectionReason5Code.mmQuantityUnitType,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmTerminationTransactionAmount, com.tools20022.repository.codeset.RejectionReason5Code.mmRepurchaseRate,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmPremiumAmount, com.tools20022.repository.codeset.RejectionReason5Code.mmRepurchaseRateType,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmSpreadRate, com.tools20022.repository.codeset.RejectionReason5Code.mmTradeDate, com.tools20022.repository.codeset.RejectionReason5Code.mmReceivingAgent,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmIntermediary, com.tools20022.repository.codeset.RejectionReason5Code.mmDeliveringAgent, com.tools20022.repository.codeset.RejectionReason5Code.mmPlaceOfTrade,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmInvestorNameAddressUnknown, com.tools20022.repository.codeset.RejectionReason5Code.mmRejectedSinceAlreadyCancelled,
+						com.tools20022.repository.codeset.RejectionReason5Code.mmRejectedSinceInProgress, com.tools20022.repository.codeset.RejectionReason5Code.mmInvalidReference);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

@@ -37,8 +37,8 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction26#CashInOrOut
- * PaymentTransaction26.CashInOrOut}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction26#mmCashInOrOut
+ * PaymentTransaction26.mmCashInOrOut}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -64,6 +64,7 @@ import java.util.function.Supplier;
 public class PaymentTransaction26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashInOrOut6Choice cashInOrOut;
 	/**
 	 * Choice between cash-in or cash-out.
 	 * <p>
@@ -94,28 +95,28 @@ public class PaymentTransaction26 {
 	 * definition} = "Choice between cash-in or cash-out."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashInOrOut = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashInOrOut = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentTransaction26.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> PaymentTransaction26.mmObject();
 			isDerived = false;
 			xmlTag = "CshInOrOut";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInOrOut";
 			definition = "Choice between cash-in or cash-out.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashInOrOut6Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CashInOrOut6Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction26.CashInOrOut);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction26.mmCashInOrOut);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -129,5 +130,13 @@ public class PaymentTransaction26 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashInOrOut6Choice getCashInOrOut() {
+		return cashInOrOut;
+	}
+
+	public void setCashInOrOut(CashInOrOut6Choice cashInOrOut) {
+		this.cashInOrOut = cashInOrOut;
 	}
 }

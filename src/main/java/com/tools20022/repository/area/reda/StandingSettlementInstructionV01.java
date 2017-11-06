@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.SSIforSecuritiesPaymentsandForeignExchange;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -78,33 +79,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#MessageReferenceIdentification
- * StandingSettlementInstructionV01.MessageReferenceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmMessageReferenceIdentification
+ * StandingSettlementInstructionV01.mmMessageReferenceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#EffectiveDateDetails
- * StandingSettlementInstructionV01.EffectiveDateDetails}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmEffectiveDateDetails
+ * StandingSettlementInstructionV01.mmEffectiveDateDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#AccountIdentification
- * StandingSettlementInstructionV01.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmAccountIdentification
+ * StandingSettlementInstructionV01.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#MarketIdentification
- * StandingSettlementInstructionV01.MarketIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmMarketIdentification
+ * StandingSettlementInstructionV01.mmMarketIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#SettlementCurrency
- * StandingSettlementInstructionV01.SettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmSettlementCurrency
+ * StandingSettlementInstructionV01.mmSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#SettlementDetails
- * StandingSettlementInstructionV01.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmSettlementDetails
+ * StandingSettlementInstructionV01.mmSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#SupplementaryData
- * StandingSettlementInstructionV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmSupplementaryData
+ * StandingSettlementInstructionV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#identifier
- * StandingSettlementInstructionV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code reda.056.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,6 +119,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StandingSettlementInstructionV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageReferenceIdentification;
 	/**
 	 * Reference of this message.
 	 * <p>
@@ -142,17 +142,18 @@ public class StandingSettlementInstructionV01 {
 	 * definition} = "Reference of this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageReferenceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageReferenceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRefId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReferenceIdentification";
 			definition = "Reference of this message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected EffectiveDate1 effectiveDateDetails;
 	/**
 	 * Date on which the SSI is effective.
 	 * <p>
@@ -175,17 +176,18 @@ public class StandingSettlementInstructionV01 {
 	 * definition} = "Date on which the SSI is effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EffectiveDateDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEffectiveDateDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FctvDtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDateDetails";
 			definition = "Date on which the SSI is effective.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> EffectiveDate1.mmObject();
 		}
 	};
+	protected List<AccountIdentification26> accountIdentification;
 	/**
 	 * Unique and unambiguous master identification known to the sender (or its
 	 * authorised agent) and receiver (or its authorised agent), below which the
@@ -214,7 +216,7 @@ public class StandingSettlementInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,6 +226,7 @@ public class StandingSettlementInstructionV01 {
 			complexType_lazy = () -> AccountIdentification26.mmObject();
 		}
 	};
+	protected MarketIdentificationOrCashPurpose1Choice marketIdentification;
 	/**
 	 * Identifies the market for the standing settlement instruction.
 	 * <p>
@@ -248,17 +251,18 @@ public class StandingSettlementInstructionV01 {
 	 * "Identifies the market for the standing settlement instruction. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentification";
 			definition = "Identifies the market for the standing settlement instruction. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode settlementCurrency;
 	/**
 	 * Currency for which the SSI is specified.
 	 * <p>
@@ -282,17 +286,18 @@ public class StandingSettlementInstructionV01 {
 	 * definition} = "Currency for which the SSI is specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementCurrency = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementCurrency = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency for which the SSI is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected SecuritiesOrCash1Choice settlementDetails;
 	/**
 	 * Settlement chain parties, accounts and other details.
 	 * <p>
@@ -316,17 +321,18 @@ public class StandingSettlementInstructionV01 {
 	 * definition} = "Settlement chain parties, accounts and other details. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Settlement chain parties, accounts and other details. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesOrCash1Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -353,7 +359,7 @@ public class StandingSettlementInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -361,33 +367,6 @@ public class StandingSettlementInstructionV01 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "reda"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "056"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "reda";
-			messageFunctionality = "056";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -401,13 +380,76 @@ public class StandingSettlementInstructionV01 {
 				rootElement = "Document";
 				xmlTag = "StgSttlmInstr";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.MessageReferenceIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionV01.EffectiveDateDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionV01.AccountIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionV01.MarketIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionV01.SettlementCurrency,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionV01.SettlementDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.reda.StandingSettlementInstructionV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmMessageReferenceIdentification,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmEffectiveDateDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmAccountIdentification,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmMarketIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmSettlementCurrency,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmSettlementDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "reda";
+						messageFunctionality = "056";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageReferenceIdentification() {
+		return messageReferenceIdentification;
+	}
+
+	public void setMessageReferenceIdentification(Max35Text messageReferenceIdentification) {
+		this.messageReferenceIdentification = messageReferenceIdentification;
+	}
+
+	public EffectiveDate1 getEffectiveDateDetails() {
+		return effectiveDateDetails;
+	}
+
+	public void setEffectiveDateDetails(EffectiveDate1 effectiveDateDetails) {
+		this.effectiveDateDetails = effectiveDateDetails;
+	}
+
+	public List<AccountIdentification26> getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(List<AccountIdentification26> accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public MarketIdentificationOrCashPurpose1Choice getMarketIdentification() {
+		return marketIdentification;
+	}
+
+	public void setMarketIdentification(MarketIdentificationOrCashPurpose1Choice marketIdentification) {
+		this.marketIdentification = marketIdentification;
+	}
+
+	public ActiveCurrencyCode getSettlementCurrency() {
+		return settlementCurrency;
+	}
+
+	public void setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
+		this.settlementCurrency = settlementCurrency;
+	}
+
+	public SecuritiesOrCash1Choice getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(SecuritiesOrCash1Choice settlementDetails) {
+		this.settlementDetails = settlementDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

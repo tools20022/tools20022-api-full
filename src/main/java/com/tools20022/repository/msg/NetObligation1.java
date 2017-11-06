@@ -43,28 +43,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetObligation1#ObligationIdentification
- * NetObligation1.ObligationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetObligation1#Amount
- * NetObligation1.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.NetObligation1#mmObligationIdentification
+ * NetObligation1.mmObligationIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetObligation1#mmAmount
+ * NetObligation1.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetObligation1#ParticipantNettingIdentification
- * NetObligation1.ParticipantNettingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NetObligation1#mmParticipantNettingIdentification
+ * NetObligation1.mmParticipantNettingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetObligation1#ObligationDirection
- * NetObligation1.ObligationDirection}</li>
+ * {@linkplain com.tools20022.repository.msg.NetObligation1#mmObligationDirection
+ * NetObligation1.mmObligationDirection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetObligation1#CounterpartyNettingIdentification
- * NetObligation1.CounterpartyNettingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NetObligation1#mmCounterpartyNettingIdentification
+ * NetObligation1.mmCounterpartyNettingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetObligation1#NetServiceCounterpartyIdentification
- * NetObligation1.NetServiceCounterpartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NetObligation1#mmNetServiceCounterpartyIdentification
+ * NetObligation1.mmNetServiceCounterpartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetObligation1#CounterpartySettlementInstructions
- * NetObligation1.CounterpartySettlementInstructions}</li>
+ * {@linkplain com.tools20022.repository.msg.NetObligation1#mmCounterpartySettlementInstructions
+ * NetObligation1.mmCounterpartySettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetObligation1#TransactionsNumber
- * NetObligation1.TransactionsNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.NetObligation1#mmTransactionsNumber
+ * NetObligation1.mmTransactionsNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -74,15 +74,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NetReportV01#NetObligation
- * NetReportV01.NetObligation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NetReportV01#mmNetObligation
+ * NetReportV01.mmNetObligation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetObligation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text obligationIdentification;
 	/**
 	 * Unique identification for the obligation.
 	 * <p>
@@ -128,20 +129,21 @@ public class NetObligation1 {
 	 * definition} = "Unique identification for the obligation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ObligationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmObligationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NetObligation1.mmObject();
 			businessComponentTrace_lazy = () -> Obligation.mmObject();
+			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "OblgtnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligationIdentification";
 			definition = "Unique identification for the obligation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount and currency of the obligation
 	 * <p>
@@ -155,8 +157,8 @@ public class NetObligation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementAmount
-	 * Obligation.RequestedSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementAmount
+	 * Obligation.mmRequestedSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -174,20 +176,21 @@ public class NetObligation1 {
 	 * definition} = "Amount and currency of the obligation"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementAmount;
 			componentContext_lazy = () -> NetObligation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount and currency of the obligation";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected NettingIdentification1Choice participantNettingIdentification;
 	/**
 	 * Describes the party or netting group (of the participant receiving the
 	 * report) involved in the calculation of the obligation.
@@ -217,7 +220,7 @@ public class NetObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantNettingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantNettingIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
@@ -225,12 +228,13 @@ public class NetObligation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantNettingIdentification";
 			definition = "Describes the party or netting group (of the participant receiving the report) involved in the calculation of the obligation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NettingIdentification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NettingIdentification1Choice.mmObject();
 		}
 	};
+	protected PaymentReceipt1Code obligationDirection;
 	/**
 	 * Specifies the direction of the obligation.
 	 * <p>
@@ -244,8 +248,8 @@ public class NetObligation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Netting#AmountDirection
-	 * Netting.AmountDirection}</li>
+	 * {@linkplain com.tools20022.repository.entity.Netting#mmAmountDirection
+	 * Netting.mmAmountDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -263,20 +267,21 @@ public class NetObligation1 {
 	 * definition} = "Specifies the direction of the obligation. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ObligationDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmObligationDirection = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Netting.mmAmountDirection;
 			componentContext_lazy = () -> NetObligation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Netting.AmountDirection;
 			isDerived = false;
 			xmlTag = "OblgtnDrctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligationDirection";
 			definition = "Specifies the direction of the obligation. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentReceipt1Code.mmObject();
 		}
 	};
+	protected NettingIdentification1Choice counterpartyNettingIdentification;
 	/**
 	 * Describes the party or netting group (of the counterparty in the
 	 * obligation) involved in the calculation of the obligation.
@@ -290,8 +295,8 @@ public class NetObligation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeRelatedIdentifications
-	 * Trade.TradeRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeRelatedIdentifications
+	 * Trade.mmTradeRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,21 +316,22 @@ public class NetObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CounterpartyNettingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCounterpartyNettingIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> NetObligation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "CtrPtyNetgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyNettingIdentification";
 			definition = "Describes the party or netting group (of the counterparty in the obligation) involved in the calculation of the obligation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NettingIdentification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NettingIdentification1Choice.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice netServiceCounterpartyIdentification;
 	/**
 	 * Describes the counterparty participant involved in the obligation.
 	 * <p>
@@ -358,21 +364,22 @@ public class NetObligation1 {
 	 * "Describes the counterparty participant involved in the obligation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetServiceCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetServiceCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NetObligation1.mmObject();
 			businessComponentTrace_lazy = () -> ClearingMemberRole.mmObject();
+			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "NetSvcCtrPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceCounterpartyIdentification";
 			definition = "Describes the counterparty participant involved in the obligation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected SettlementParties29 counterpartySettlementInstructions;
 	/**
 	 * Specifies the standard settlement instructions used to issue payment to
 	 * the counterparty in order to settle the obligation.
@@ -385,8 +392,8 @@ public class NetObligation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Settlement#SettlementPartyRole
-	 * Settlement.SettlementPartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Settlement#mmSettlementPartyRole
+	 * Settlement.mmSettlementPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -406,21 +413,22 @@ public class NetObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CounterpartySettlementInstructions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCounterpartySettlementInstructions = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.mmSettlementPartyRole;
 			componentContext_lazy = () -> NetObligation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.SettlementPartyRole;
 			isDerived = false;
 			xmlTag = "CtrPtySttlmInstrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySettlementInstructions";
 			definition = "Specifies the standard settlement instructions used to issue payment to the counterparty in order to settle the obligation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties29.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties29.mmObject();
 		}
 	};
+	protected Max10NumericText transactionsNumber;
 	/**
 	 * Number of transactions used to calculate the obligation. This is used in
 	 * reconciliation between the net report obligation and the previously
@@ -452,7 +460,7 @@ public class NetObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionsNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
@@ -460,8 +468,8 @@ public class NetObligation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsNumber";
 			definition = "Number of transactions used to calculate the obligation. This is used in reconciliation between the net report obligation and the previously provided transaction status updates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10NumericText.mmObject();
 		}
 	};
@@ -469,18 +477,82 @@ public class NetObligation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetObligation1.ObligationIdentification, com.tools20022.repository.msg.NetObligation1.Amount,
-						com.tools20022.repository.msg.NetObligation1.ParticipantNettingIdentification, com.tools20022.repository.msg.NetObligation1.ObligationDirection,
-						com.tools20022.repository.msg.NetObligation1.CounterpartyNettingIdentification, com.tools20022.repository.msg.NetObligation1.NetServiceCounterpartyIdentification,
-						com.tools20022.repository.msg.NetObligation1.CounterpartySettlementInstructions, com.tools20022.repository.msg.NetObligation1.TransactionsNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetObligation1.mmObligationIdentification, com.tools20022.repository.msg.NetObligation1.mmAmount,
+						com.tools20022.repository.msg.NetObligation1.mmParticipantNettingIdentification, com.tools20022.repository.msg.NetObligation1.mmObligationDirection,
+						com.tools20022.repository.msg.NetObligation1.mmCounterpartyNettingIdentification, com.tools20022.repository.msg.NetObligation1.mmNetServiceCounterpartyIdentification,
+						com.tools20022.repository.msg.NetObligation1.mmCounterpartySettlementInstructions, com.tools20022.repository.msg.NetObligation1.mmTransactionsNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NetReportV01.mmNetObligation);
 				trace_lazy = () -> Obligation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NetReportV01.NetObligation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetObligation1";
 				definition = "Describes the amount, direction and parties involved in a payment obligation between two participants (and their netting group or trading party) of a netting service.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getObligationIdentification() {
+		return obligationIdentification;
+	}
+
+	public void setObligationIdentification(Max35Text obligationIdentification) {
+		this.obligationIdentification = obligationIdentification;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public NettingIdentification1Choice getParticipantNettingIdentification() {
+		return participantNettingIdentification;
+	}
+
+	public void setParticipantNettingIdentification(NettingIdentification1Choice participantNettingIdentification) {
+		this.participantNettingIdentification = participantNettingIdentification;
+	}
+
+	public PaymentReceipt1Code getObligationDirection() {
+		return obligationDirection;
+	}
+
+	public void setObligationDirection(PaymentReceipt1Code obligationDirection) {
+		this.obligationDirection = obligationDirection;
+	}
+
+	public NettingIdentification1Choice getCounterpartyNettingIdentification() {
+		return counterpartyNettingIdentification;
+	}
+
+	public void setCounterpartyNettingIdentification(NettingIdentification1Choice counterpartyNettingIdentification) {
+		this.counterpartyNettingIdentification = counterpartyNettingIdentification;
+	}
+
+	public PartyIdentification73Choice getNetServiceCounterpartyIdentification() {
+		return netServiceCounterpartyIdentification;
+	}
+
+	public void setNetServiceCounterpartyIdentification(PartyIdentification73Choice netServiceCounterpartyIdentification) {
+		this.netServiceCounterpartyIdentification = netServiceCounterpartyIdentification;
+	}
+
+	public SettlementParties29 getCounterpartySettlementInstructions() {
+		return counterpartySettlementInstructions;
+	}
+
+	public void setCounterpartySettlementInstructions(com.tools20022.repository.msg.SettlementParties29 counterpartySettlementInstructions) {
+		this.counterpartySettlementInstructions = counterpartySettlementInstructions;
+	}
+
+	public Max10NumericText getTransactionsNumber() {
+		return transactionsNumber;
+	}
+
+	public void setTransactionsNumber(Max10NumericText transactionsNumber) {
+		this.transactionsNumber = transactionsNumber;
 	}
 }

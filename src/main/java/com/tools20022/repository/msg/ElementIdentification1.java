@@ -36,24 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElementIdentification1#DocumentIndex
- * ElementIdentification1.DocumentIndex}</li>
+ * {@linkplain com.tools20022.repository.msg.ElementIdentification1#mmDocumentIndex
+ * ElementIdentification1.mmDocumentIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElementIdentification1#ElementPath
- * ElementIdentification1.ElementPath}</li>
+ * {@linkplain com.tools20022.repository.msg.ElementIdentification1#mmElementPath
+ * ElementIdentification1.mmElementPath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElementIdentification1#ElementName
- * ElementIdentification1.ElementName}</li>
+ * {@linkplain com.tools20022.repository.msg.ElementIdentification1#mmElementName
+ * ElementIdentification1.mmElementName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ElementIdentification1#ElementValue
- * ElementIdentification1.ElementValue}</li>
+ * {@linkplain com.tools20022.repository.msg.ElementIdentification1#mmElementValue
+ * ElementIdentification1.mmElementValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ElementIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max3NumericText documentIndex;
 	/**
 	 * Refers to the identification number of the document in which the mismatch
 	 * was found
@@ -98,7 +99,7 @@ public class ElementIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentIndex = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElementIdentification1.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class ElementIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentIndex";
 			definition = "Refers to the identification number of  the document in which the mismatch was found";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected Max350Text elementPath;
 	/**
 	 * Specifies from the root of the message the complete path of the element
 	 * that violated a rule.
@@ -141,7 +143,7 @@ public class ElementIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElementPath = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElementPath = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElementIdentification1.mmObject();
 			isDerived = false;
@@ -149,11 +151,12 @@ public class ElementIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementPath";
 			definition = "Specifies from the root of the message the complete path of the element that violated a rule.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text elementName;
 	/**
 	 * Name of the element.
 	 * <p>
@@ -181,7 +184,7 @@ public class ElementIdentification1 {
 	 * definition} = "Name of the element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElementName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElementName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElementIdentification1.mmObject();
 			isDerived = false;
@@ -189,11 +192,12 @@ public class ElementIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementName";
 			definition = "Name of the element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max140Text elementValue;
 	/**
 	 * Content of the element
 	 * <p>
@@ -221,7 +225,7 @@ public class ElementIdentification1 {
 	 * definition} = "Content of the element"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElementValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElementValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ElementIdentification1.mmObject();
 			isDerived = false;
@@ -229,8 +233,8 @@ public class ElementIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementValue";
 			definition = "Content of the element";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -238,14 +242,46 @@ public class ElementIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElementIdentification1.DocumentIndex, com.tools20022.repository.msg.ElementIdentification1.ElementPath,
-						com.tools20022.repository.msg.ElementIdentification1.ElementName, com.tools20022.repository.msg.ElementIdentification1.ElementValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElementIdentification1.mmDocumentIndex, com.tools20022.repository.msg.ElementIdentification1.mmElementPath,
+						com.tools20022.repository.msg.ElementIdentification1.mmElementName, com.tools20022.repository.msg.ElementIdentification1.mmElementValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ElementIdentification1";
 				definition = "Description of the element that creates the mismatch.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max3NumericText getDocumentIndex() {
+		return documentIndex;
+	}
+
+	public void setDocumentIndex(Max3NumericText documentIndex) {
+		this.documentIndex = documentIndex;
+	}
+
+	public Max350Text getElementPath() {
+		return elementPath;
+	}
+
+	public void setElementPath(Max350Text elementPath) {
+		this.elementPath = elementPath;
+	}
+
+	public Max35Text getElementName() {
+		return elementName;
+	}
+
+	public void setElementName(Max35Text elementName) {
+		this.elementName = elementName;
+	}
+
+	public Max140Text getElementValue() {
+		return elementValue;
+	}
+
+	public void setElementValue(Max140Text elementValue) {
+		this.elementValue = elementValue;
 	}
 }

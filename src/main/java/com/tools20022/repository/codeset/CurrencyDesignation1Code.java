@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyDesignation1Code#Onshore
- * CurrencyDesignation1Code.Onshore}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyDesignation1Code#mmOnshore
+ * CurrencyDesignation1Code.mmOnshore}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyDesignation1Code#Offshore
- * CurrencyDesignation1Code.Offshore}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyDesignation1Code#mmOffshore
+ * CurrencyDesignation1Code.mmOffshore}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class CurrencyDesignation1Code extends CurrencyDesignationCode {
 	 * name} = "Onshore"</li>
 	 * </ul>
 	 */
-	public static final MMCode Onshore = new MMCode() {
+	public static final MMCode mmOnshore = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Onshore";
@@ -98,7 +98,7 @@ public class CurrencyDesignation1Code extends CurrencyDesignationCode {
 	 * name} = "Offshore"</li>
 	 * </ul>
 	 */
-	public static final MMCode Offshore = new MMCode() {
+	public static final MMCode mmOffshore = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offshore";
@@ -109,11 +109,11 @@ public class CurrencyDesignation1Code extends CurrencyDesignationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDesignation1Code";
 				definition = "Specifies whether a currency is settled offshore or onshore.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CurrencyDesignation1Code.Onshore, com.tools20022.repository.codeset.CurrencyDesignation1Code.Offshore);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CurrencyDesignation1Code.mmOnshore, com.tools20022.repository.codeset.CurrencyDesignation1Code.mmOffshore);
 				trace_lazy = () -> CurrencyDesignationCode.mmObject();
 			}
 		});

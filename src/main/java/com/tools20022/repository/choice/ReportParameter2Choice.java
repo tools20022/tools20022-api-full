@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportParameter2Choice#Party
- * ReportParameter2Choice.Party}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportParameter2Choice#mmParty
+ * ReportParameter2Choice.mmParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportParameter2Choice#Country
- * ReportParameter2Choice.Country}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportParameter2Choice#mmCountry
+ * ReportParameter2Choice.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportParameter2Choice#Currency
- * ReportParameter2Choice.Currency}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportParameter2Choice#mmCurrency
+ * ReportParameter2Choice.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportParameter2Choice#UserDefined
- * ReportParameter2Choice.UserDefined}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportParameter2Choice#mmUserDefined
+ * ReportParameter2Choice.mmUserDefined}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportParameter2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification2Choice party;
 	/**
 	 * Party for which the estimated cash flow is being reported.
 	 * <p>
@@ -94,7 +95,7 @@ public class ReportParameter2Choice {
 	 * "Party for which the estimated cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Party = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class ReportParameter2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Party for which the estimated cash flow is being reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Country for which the estimated cash flow is being reported.
 	 * <p>
@@ -135,7 +137,7 @@ public class ReportParameter2Choice {
 	 * "Country for which the estimated cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class ReportParameter2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country for which the estimated cash flow is being reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode currency;
 	/**
 	 * Currency for which the estimated cash flow is being reported.
 	 * <p>
@@ -177,7 +180,7 @@ public class ReportParameter2Choice {
 	 * "Currency for which the estimated cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
 			isDerived = false;
@@ -185,11 +188,12 @@ public class ReportParameter2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency for which the estimated cash flow is being reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected DataFormat2Choice userDefined;
 	/**
 	 * Parameter for which the estimated cash flow is being reported.
 	 * <p>
@@ -219,7 +223,7 @@ public class ReportParameter2Choice {
 	 * "Parameter for which the estimated cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UserDefined = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
 			isDerived = false;
@@ -227,23 +231,55 @@ public class ReportParameter2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
 			definition = "Parameter for which the estimated cash flow is being reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DataFormat2Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DataFormat2Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportParameter2Choice.Party, com.tools20022.repository.choice.ReportParameter2Choice.Country,
-						com.tools20022.repository.choice.ReportParameter2Choice.Currency, com.tools20022.repository.choice.ReportParameter2Choice.UserDefined);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportParameter2Choice.mmParty, com.tools20022.repository.choice.ReportParameter2Choice.mmCountry,
+						com.tools20022.repository.choice.ReportParameter2Choice.mmCurrency, com.tools20022.repository.choice.ReportParameter2Choice.mmUserDefined);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportParameter2Choice";
 				definition = "Choice between types of reporting parameter.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification2Choice getParty() {
+		return party;
+	}
+
+	public void setParty(com.tools20022.repository.choice.PartyIdentification2Choice party) {
+		this.party = party;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public ActiveOrHistoricCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public DataFormat2Choice getUserDefined() {
+		return userDefined;
+	}
+
+	public void setUserDefined(com.tools20022.repository.choice.DataFormat2Choice userDefined) {
+		this.userDefined = userDefined;
 	}
 }

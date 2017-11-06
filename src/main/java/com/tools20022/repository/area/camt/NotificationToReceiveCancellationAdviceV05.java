@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.NotificationtoReceiveISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -63,21 +64,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05#GroupHeader
- * NotificationToReceiveCancellationAdviceV05.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05#mmGroupHeader
+ * NotificationToReceiveCancellationAdviceV05.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05#OriginalNotification
- * NotificationToReceiveCancellationAdviceV05.OriginalNotification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05#mmOriginalNotification
+ * NotificationToReceiveCancellationAdviceV05.mmOriginalNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05#SupplementaryData
- * NotificationToReceiveCancellationAdviceV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05#mmSupplementaryData
+ * NotificationToReceiveCancellationAdviceV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05#identifier
- * NotificationToReceiveCancellationAdviceV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.058.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationToReceiveCancellationAdviceV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader59 groupHeader;
 	/**
 	 * Set of elements used to provide further details on the message.
 	 * <p>
@@ -121,22 +121,23 @@ public class NotificationToReceiveCancellationAdviceV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04#GroupHeader
-	 * NotificationToReceiveCancellationAdviceV04.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04#mmGroupHeader
+	 * NotificationToReceiveCancellationAdviceV04.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of elements used to provide further details on the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04.GroupHeader;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader59.mmObject();
 		}
 	};
+	protected OriginalNotification10 originalNotification;
 	/**
 	 * Set of elements used to identify the original notification, to which the
 	 * cancellation advice refers.
@@ -164,22 +165,23 @@ public class NotificationToReceiveCancellationAdviceV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04#OriginalNotification
-	 * NotificationToReceiveCancellationAdviceV04.OriginalNotification}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04#mmOriginalNotification
+	 * NotificationToReceiveCancellationAdviceV04.mmOriginalNotification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalNotification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalNotification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlNtfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotification";
 			definition = "Set of elements used to identify the original notification, to which the cancellation advice refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04.OriginalNotification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04.mmOriginalNotification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OriginalNotification10.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -207,46 +209,19 @@ public class NotificationToReceiveCancellationAdviceV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04#SupplementaryData
-	 * NotificationToReceiveCancellationAdviceV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04#mmSupplementaryData
+	 * NotificationToReceiveCancellationAdviceV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "058"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "058";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -261,11 +236,42 @@ public class NotificationToReceiveCancellationAdviceV05 {
 				rootElement = "Document";
 				xmlTag = "NtfctnToRcvCxlAdvc";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05.GroupHeader,
-						com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05.OriginalNotification, com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05.mmGroupHeader,
+						com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05.mmOriginalNotification, com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "058";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader59 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader59 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public OriginalNotification10 getOriginalNotification() {
+		return originalNotification;
+	}
+
+	public void setOriginalNotification(OriginalNotification10 originalNotification) {
+		this.originalNotification = originalNotification;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

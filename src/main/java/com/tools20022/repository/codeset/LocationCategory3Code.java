@@ -35,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#Indoor
- * LocationCategory3Code.Indoor}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#mmIndoor
+ * LocationCategory3Code.mmIndoor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#InsidePump
- * LocationCategory3Code.InsidePump}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#mmInsidePump
+ * LocationCategory3Code.mmInsidePump}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#MultiplePOITerminal
- * LocationCategory3Code.MultiplePOITerminal}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#mmMultiplePOITerminal
+ * LocationCategory3Code.mmMultiplePOITerminal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#MultiplePump
- * LocationCategory3Code.MultiplePump}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#mmMultiplePump
+ * LocationCategory3Code.mmMultiplePump}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#MultipleSaleTerminal
- * LocationCategory3Code.MultipleSaleTerminal}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#mmMultipleSaleTerminal
+ * LocationCategory3Code.mmMultipleSaleTerminal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#SingleSaleTerminal
- * LocationCategory3Code.SingleSaleTerminal}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#mmSingleSaleTerminal
+ * LocationCategory3Code.mmSingleSaleTerminal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#VendingMachine
- * LocationCategory3Code.VendingMachine}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory3Code#mmVendingMachine
+ * LocationCategory3Code.mmVendingMachine}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,7 +93,7 @@ public class LocationCategory3Code extends LocationCategoryCode {
 	 * name} = "Indoor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Indoor = new MMCode() {
+	public static final MMCode mmIndoor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indoor";
@@ -116,7 +116,7 @@ public class LocationCategory3Code extends LocationCategoryCode {
 	 * name} = "InsidePump"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsidePump = new MMCode() {
+	public static final MMCode mmInsidePump = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsidePump";
@@ -139,7 +139,7 @@ public class LocationCategory3Code extends LocationCategoryCode {
 	 * name} = "MultiplePOITerminal"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultiplePOITerminal = new MMCode() {
+	public static final MMCode mmMultiplePOITerminal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplePOITerminal";
@@ -162,7 +162,7 @@ public class LocationCategory3Code extends LocationCategoryCode {
 	 * name} = "MultiplePump"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultiplePump = new MMCode() {
+	public static final MMCode mmMultiplePump = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplePump";
@@ -185,7 +185,7 @@ public class LocationCategory3Code extends LocationCategoryCode {
 	 * name} = "MultipleSaleTerminal"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultipleSaleTerminal = new MMCode() {
+	public static final MMCode mmMultipleSaleTerminal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSaleTerminal";
@@ -208,7 +208,7 @@ public class LocationCategory3Code extends LocationCategoryCode {
 	 * name} = "SingleSaleTerminal"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingleSaleTerminal = new MMCode() {
+	public static final MMCode mmSingleSaleTerminal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleSaleTerminal";
@@ -231,7 +231,7 @@ public class LocationCategory3Code extends LocationCategoryCode {
 	 * name} = "VendingMachine"</li>
 	 * </ul>
 	 */
-	public static final MMCode VendingMachine = new MMCode() {
+	public static final MMCode mmVendingMachine = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendingMachine";
@@ -242,14 +242,14 @@ public class LocationCategory3Code extends LocationCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LocationCategory3Code";
 				definition = "Indicates the type of integration of the POI terminal in the sale environment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LocationCategory3Code.Indoor, com.tools20022.repository.codeset.LocationCategory3Code.InsidePump,
-						com.tools20022.repository.codeset.LocationCategory3Code.MultiplePOITerminal, com.tools20022.repository.codeset.LocationCategory3Code.MultiplePump,
-						com.tools20022.repository.codeset.LocationCategory3Code.MultipleSaleTerminal, com.tools20022.repository.codeset.LocationCategory3Code.SingleSaleTerminal,
-						com.tools20022.repository.codeset.LocationCategory3Code.VendingMachine);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LocationCategory3Code.mmIndoor, com.tools20022.repository.codeset.LocationCategory3Code.mmInsidePump,
+						com.tools20022.repository.codeset.LocationCategory3Code.mmMultiplePOITerminal, com.tools20022.repository.codeset.LocationCategory3Code.mmMultiplePump,
+						com.tools20022.repository.codeset.LocationCategory3Code.mmMultipleSaleTerminal, com.tools20022.repository.codeset.LocationCategory3Code.mmSingleSaleTerminal,
+						com.tools20022.repository.codeset.LocationCategory3Code.mmVendingMachine);
 				trace_lazy = () -> LocationCategoryCode.mmObject();
 			}
 		});

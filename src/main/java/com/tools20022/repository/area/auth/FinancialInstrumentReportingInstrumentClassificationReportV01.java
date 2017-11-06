@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The FinancialInstrumentReportingInstrumentClassificationReport message is
@@ -57,20 +58,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01#InstrumentClassification
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01#mmInstrumentClassification
  * FinancialInstrumentReportingInstrumentClassificationReportV01.
- * InstrumentClassification}</li>
+ * mmInstrumentClassification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01#SupplementaryData
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01#mmSupplementaryData
  * FinancialInstrumentReportingInstrumentClassificationReportV01.
- * SupplementaryData}</li>
+ * mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01#identifier
- * FinancialInstrumentReportingInstrumentClassificationReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.050.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentReportingInstrumentClassificationReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected List<SecuritiesInstrumentClassification2> instrumentClassification;
 	/**
 	 * Report detailing all classification for financial instruments (CFI) code.
 	 * <p>
@@ -111,7 +111,7 @@ public class FinancialInstrumentReportingInstrumentClassificationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstrumentClassification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstrumentClassification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrmClssfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,6 +121,7 @@ public class FinancialInstrumentReportingInstrumentClassificationReportV01 {
 			complexType_lazy = () -> SecuritiesInstrumentClassification2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -147,7 +148,7 @@ public class FinancialInstrumentReportingInstrumentClassificationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,33 +156,6 @@ public class FinancialInstrumentReportingInstrumentClassificationReportV01 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "050"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "050";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -195,11 +169,34 @@ public class FinancialInstrumentReportingInstrumentClassificationReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgInstrmClssfctnRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01.InstrumentClassification,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01.mmInstrumentClassification,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "050";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecuritiesInstrumentClassification2> getInstrumentClassification() {
+		return instrumentClassification;
+	}
+
+	public void setInstrumentClassification(List<SecuritiesInstrumentClassification2> instrumentClassification) {
+		this.instrumentClassification = instrumentClassification;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

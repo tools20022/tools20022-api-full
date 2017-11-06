@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationReason2Choice#Code
- * ModificationReason2Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.ModificationReason2Choice#mmCode
+ * ModificationReason2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationReason2Choice#Proprietary
- * ModificationReason2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ModificationReason2Choice#mmProprietary
+ * ModificationReason2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationReason2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ModifiedStatusReason1Code code;
 	/**
 	 * Specifies the reason why the related instruction is modified, or the
 	 * related modification request is executed.
@@ -85,8 +86,8 @@ public class ModificationReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#ModifiedStatusReason
-	 * SecuritiesTradeStatusReason.ModifiedStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmModifiedStatusReason
+	 * SecuritiesTradeStatusReason.mmModifiedStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,27 +110,28 @@ public class ModificationReason2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ModificationReason4Choice#Code
-	 * ModificationReason4Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.ModificationReason4Choice#mmCode
+	 * ModificationReason4Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmModifiedStatusReason;
 			componentContext_lazy = () -> ModificationReason2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.ModifiedStatusReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the related instruction is modified, or the related modification request is executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationReason4Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationReason4Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ModifiedStatusReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Specifies the reason why the related instruction is modified, or the
 	 * related modification request is executed.
@@ -144,8 +146,8 @@ public class ModificationReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#ModifiedStatusReason
-	 * SecuritiesTradeStatusReason.ModifiedStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmModifiedStatusReason
+	 * SecuritiesTradeStatusReason.mmModifiedStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,24 +170,24 @@ public class ModificationReason2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ModificationReason4Choice#Proprietary
-	 * ModificationReason4Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.ModificationReason4Choice#mmProprietary
+	 * ModificationReason4Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmModifiedStatusReason;
 			componentContext_lazy = () -> ModificationReason2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.ModifiedStatusReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the reason why the related instruction is modified, or the related modification request is executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationReason4Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationReason4Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -193,9 +195,9 @@ public class ModificationReason2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationReason2Choice.Code, com.tools20022.repository.choice.ModificationReason2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationReason2Choice.mmCode, com.tools20022.repository.choice.ModificationReason2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationReason2Choice";
 				definition = "Choice of format for the Modification reason.";
@@ -203,5 +205,21 @@ public class ModificationReason2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ModifiedStatusReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ModifiedStatusReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

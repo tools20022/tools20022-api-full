@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -60,31 +61,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#InstructionCancellationIdentification
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#mmInstructionCancellationIdentification
  * MeetingInstructionCancellationRequestV02.
- * InstructionCancellationIdentification}</li>
+ * mmInstructionCancellationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#PreviousReference
- * MeetingInstructionCancellationRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#mmPreviousReference
+ * MeetingInstructionCancellationRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#MeetingReference
- * MeetingInstructionCancellationRequestV02.MeetingReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#mmMeetingReference
+ * MeetingInstructionCancellationRequestV02.mmMeetingReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#RequestingParty
- * MeetingInstructionCancellationRequestV02.RequestingParty}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#mmRequestingParty
+ * MeetingInstructionCancellationRequestV02.mmRequestingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#SecurityIdentification
- * MeetingInstructionCancellationRequestV02.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#mmSecurityIdentification
+ * MeetingInstructionCancellationRequestV02.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#InstructedPosition
- * MeetingInstructionCancellationRequestV02.InstructedPosition}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#mmInstructedPosition
+ * MeetingInstructionCancellationRequestV02.mmInstructedPosition}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#identifier
- * MeetingInstructionCancellationRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.005.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingInstructionCancellationRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 instructionCancellationIdentification;
 	/**
 	 * Uniquely identifies the cancellation request.
 	 * <p>
@@ -131,17 +131,18 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * definition} = "Uniquely identifies the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionCancellationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionCancellationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrCxlId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationIdentification";
 			definition = "Uniquely identifies the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected MessageIdentification previousReference;
 	/**
 	 * Identifies the instruction to be cancelled.
 	 * <p>
@@ -165,17 +166,18 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * definition} = "Identifies the instruction to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Identifies the instruction to be cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification.mmObject();
 		}
 	};
+	protected MeetingReference3 meetingReference;
 	/**
 	 * Series of elements which allow to identify a meeting.
 	 * <p>
@@ -199,17 +201,18 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * definition} = "Series of elements which allow to identify a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MeetingReference3.mmObject();
 		}
 	};
+	protected PartyIdentification9Choice requestingParty;
 	/**
 	 * Party requesting the cancellation.
 	 * <p>
@@ -233,17 +236,18 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * definition} = "Party requesting the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RqstngPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestingParty";
 			definition = "Party requesting the cancellation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	protected SecurityIdentification3 securityIdentification;
 	/**
 	 * Identifies the security for which the meeting is organised.
 	 * <p>
@@ -268,17 +272,18 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * "Identifies the security for which the meeting is organised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the security for which the meeting is organised.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecurityIdentification3.mmObject();
 		}
 	};
+	protected List<SafekeepingAccount3> instructedPosition;
 	/**
 	 * Identifies the account and instructed positions for which the instruction
 	 * cancellation request applies.
@@ -305,7 +310,7 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructedPosition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructedPosition = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstdPos";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -313,33 +318,6 @@ public class MeetingInstructionCancellationRequestV02 {
 			definition = "Identifies the account and instructed positions for which the instruction cancellation request applies.";
 			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingAccount3.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "005";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -354,13 +332,68 @@ public class MeetingInstructionCancellationRequestV02 {
 				rootElement = "Document";
 				xmlTag = "MtgInstrCxlReq";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.InstructionCancellationIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.PreviousReference, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.MeetingReference,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.RequestingParty, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.SecurityIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.InstructedPosition);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmInstructionCancellationIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmPreviousReference, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmMeetingReference,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmRequestingParty, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmSecurityIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmInstructedPosition);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "005";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getInstructionCancellationIdentification() {
+		return instructionCancellationIdentification;
+	}
+
+	public void setInstructionCancellationIdentification(MessageIdentification1 instructionCancellationIdentification) {
+		this.instructionCancellationIdentification = instructionCancellationIdentification;
+	}
+
+	public MessageIdentification getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(MessageIdentification previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public MeetingReference3 getMeetingReference() {
+		return meetingReference;
+	}
+
+	public void setMeetingReference(MeetingReference3 meetingReference) {
+		this.meetingReference = meetingReference;
+	}
+
+	public PartyIdentification9Choice getRequestingParty() {
+		return requestingParty;
+	}
+
+	public void setRequestingParty(PartyIdentification9Choice requestingParty) {
+		this.requestingParty = requestingParty;
+	}
+
+	public SecurityIdentification3 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(SecurityIdentification3 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public List<SafekeepingAccount3> getInstructedPosition() {
+		return instructedPosition;
+	}
+
+	public void setInstructedPosition(List<SafekeepingAccount3> instructedPosition) {
+		this.instructedPosition = instructedPosition;
 	}
 }

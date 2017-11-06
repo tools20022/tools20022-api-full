@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.CreditTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements providing information specific to the individual
@@ -37,92 +38,92 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#PaymentIdentification
- * CreditTransferTransactionInformation3.PaymentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmPaymentIdentification
+ * CreditTransferTransactionInformation3.mmPaymentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#PaymentTypeInformation
- * CreditTransferTransactionInformation3.PaymentTypeInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmPaymentTypeInformation
+ * CreditTransferTransactionInformation3.mmPaymentTypeInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#InterbankSettlementAmount
- * CreditTransferTransactionInformation3.InterbankSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmInterbankSettlementAmount
+ * CreditTransferTransactionInformation3.mmInterbankSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#InterbankSettlementDate
- * CreditTransferTransactionInformation3.InterbankSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmInterbankSettlementDate
+ * CreditTransferTransactionInformation3.mmInterbankSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#SettlementTimeIndication
- * CreditTransferTransactionInformation3.SettlementTimeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmSettlementTimeIndication
+ * CreditTransferTransactionInformation3.mmSettlementTimeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#SettlementTimeRequest
- * CreditTransferTransactionInformation3.SettlementTimeRequest}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmSettlementTimeRequest
+ * CreditTransferTransactionInformation3.mmSettlementTimeRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#PreviousInstructingAgent
- * CreditTransferTransactionInformation3.PreviousInstructingAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmPreviousInstructingAgent
+ * CreditTransferTransactionInformation3.mmPreviousInstructingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#PreviousInstructingAgentAccount
- * CreditTransferTransactionInformation3.PreviousInstructingAgentAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmPreviousInstructingAgentAccount
+ * CreditTransferTransactionInformation3.mmPreviousInstructingAgentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#InstructingAgent
- * CreditTransferTransactionInformation3.InstructingAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmInstructingAgent
+ * CreditTransferTransactionInformation3.mmInstructingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#InstructedAgent
- * CreditTransferTransactionInformation3.InstructedAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmInstructedAgent
+ * CreditTransferTransactionInformation3.mmInstructedAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#IntermediaryAgent1
- * CreditTransferTransactionInformation3.IntermediaryAgent1}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmIntermediaryAgent1
+ * CreditTransferTransactionInformation3.mmIntermediaryAgent1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#IntermediaryAgent1Account
- * CreditTransferTransactionInformation3.IntermediaryAgent1Account}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmIntermediaryAgent1Account
+ * CreditTransferTransactionInformation3.mmIntermediaryAgent1Account}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#IntermediaryAgent2
- * CreditTransferTransactionInformation3.IntermediaryAgent2}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmIntermediaryAgent2
+ * CreditTransferTransactionInformation3.mmIntermediaryAgent2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#IntermediaryAgent2Account
- * CreditTransferTransactionInformation3.IntermediaryAgent2Account}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmIntermediaryAgent2Account
+ * CreditTransferTransactionInformation3.mmIntermediaryAgent2Account}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#IntermediaryAgent3
- * CreditTransferTransactionInformation3.IntermediaryAgent3}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmIntermediaryAgent3
+ * CreditTransferTransactionInformation3.mmIntermediaryAgent3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#IntermediaryAgent3Account
- * CreditTransferTransactionInformation3.IntermediaryAgent3Account}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmIntermediaryAgent3Account
+ * CreditTransferTransactionInformation3.mmIntermediaryAgent3Account}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#UltimateDebtor
- * CreditTransferTransactionInformation3.UltimateDebtor}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmUltimateDebtor
+ * CreditTransferTransactionInformation3.mmUltimateDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#Debtor
- * CreditTransferTransactionInformation3.Debtor}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmDebtor
+ * CreditTransferTransactionInformation3.mmDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#DebtorAccount
- * CreditTransferTransactionInformation3.DebtorAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmDebtorAccount
+ * CreditTransferTransactionInformation3.mmDebtorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#DebtorAgent
- * CreditTransferTransactionInformation3.DebtorAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmDebtorAgent
+ * CreditTransferTransactionInformation3.mmDebtorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#DebtorAgentAccount
- * CreditTransferTransactionInformation3.DebtorAgentAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmDebtorAgentAccount
+ * CreditTransferTransactionInformation3.mmDebtorAgentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#CreditorAgent
- * CreditTransferTransactionInformation3.CreditorAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmCreditorAgent
+ * CreditTransferTransactionInformation3.mmCreditorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#CreditorAgentAccount
- * CreditTransferTransactionInformation3.CreditorAgentAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmCreditorAgentAccount
+ * CreditTransferTransactionInformation3.mmCreditorAgentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#Creditor
- * CreditTransferTransactionInformation3.Creditor}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmCreditor
+ * CreditTransferTransactionInformation3.mmCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#CreditorAccount
- * CreditTransferTransactionInformation3.CreditorAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmCreditorAccount
+ * CreditTransferTransactionInformation3.mmCreditorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#UltimateCreditor
- * CreditTransferTransactionInformation3.UltimateCreditor}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmUltimateCreditor
+ * CreditTransferTransactionInformation3.mmUltimateCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#InstructionForCreditorAgent
- * CreditTransferTransactionInformation3.InstructionForCreditorAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmInstructionForCreditorAgent
+ * CreditTransferTransactionInformation3.mmInstructionForCreditorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#InstructionForNextAgent
- * CreditTransferTransactionInformation3.InstructionForNextAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmInstructionForNextAgent
+ * CreditTransferTransactionInformation3.mmInstructionForNextAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#RemittanceInformation
- * CreditTransferTransactionInformation3.RemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation3#mmRemittanceInformation
+ * CreditTransferTransactionInformation3.mmRemittanceInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -133,15 +134,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV01#CreditTransferTransactionInformation
- * FinancialInstitutionCreditTransferV01.CreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV01#mmCreditTransferTransactionInformation
+ * FinancialInstitutionCreditTransferV01.mmCreditTransferTransactionInformation}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -157,6 +159,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditTransferTransactionInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentIdentification2 paymentIdentification;
 	/**
 	 * Set of elements to reference a payment instruction.
 	 * <p>
@@ -168,8 +171,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentRelatedIdentifications
-	 * Payment.PaymentRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentRelatedIdentifications
+	 * Payment.mmPaymentRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,21 +191,22 @@ public class CreditTransferTransactionInformation3 {
 	 * definition} = "Set of elements to reference a payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentRelatedIdentifications;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "PmtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
 			definition = "Set of elements to reference a payment instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentIdentification2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentIdentification2.mmObject();
 		}
 	};
+	protected PaymentTypeInformation5 paymentTypeInformation;
 	/**
 	 * Set of elements used to further specify the type of transaction.
 	 * <p>
@@ -215,8 +219,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#ProcessingInstructions
-	 * PaymentExecution.ProcessingInstructions}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmProcessingInstructions
+	 * PaymentExecution.mmProcessingInstructions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -236,21 +240,22 @@ public class CreditTransferTransactionInformation3 {
 	 * "Set of elements used to further specify the type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentTypeInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentTypeInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmProcessingInstructions;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.ProcessingInstructions;
 			isDerived = false;
 			xmlTag = "PmtTpInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTypeInformation";
 			definition = "Set of elements used to further specify the type of transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentTypeInformation5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation5.mmObject();
 		}
 	};
+	protected CurrencyAndAmount interbankSettlementAmount;
 	/**
 	 * Amount of money moved between the instructing agent and the instructed
 	 * agent.
@@ -265,8 +270,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementAmount
-	 * CashSettlement.InterbankSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+	 * CashSettlement.mmInterbankSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -287,20 +292,21 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementAmount;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate interbankSettlementDate;
 	/**
 	 * Date on which the amount of money ceases to be available to the agent
 	 * that owes it and when the amount of money becomes available to the agent
@@ -315,8 +321,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementDate
-	 * CashSettlement.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+	 * CashSettlement.mmInterbankSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -337,20 +343,21 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementDate;
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected SettlementDateTimeIndication1 settlementTimeIndication;
 	/**
 	 * Provides information on the occurred settlement time(s) of the payment
 	 * transaction.
@@ -364,8 +371,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#SettlementInstruction
-	 * PaymentInstruction.SettlementInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmSettlementInstruction
+	 * PaymentInstruction.mmSettlementInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -386,21 +393,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementTimeIndication = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementTimeIndication = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.SettlementInstruction;
 			isDerived = false;
 			xmlTag = "SttlmTmIndctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTimeIndication";
 			definition = "Provides information on the occurred settlement time(s) of the payment transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementDateTimeIndication1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementDateTimeIndication1.mmObject();
 		}
 	};
+	protected SettlementTimeRequest1 settlementTimeRequest;
 	/**
 	 * Provides information on the requested settlement time of the payment
 	 * instruction.
@@ -413,8 +421,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#SettlementTimeRequest
-	 * Payment.SettlementTimeRequest}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmSettlementTimeRequest
+	 * Payment.mmSettlementTimeRequest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -435,21 +443,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementTimeRequest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementTimeRequest = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmSettlementTimeRequest;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.SettlementTimeRequest;
 			isDerived = false;
 			xmlTag = "SttlmTmReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTimeRequest";
 			definition = "Provides information on the requested settlement time of the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementTimeRequest1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementTimeRequest1.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 previousInstructingAgent;
 	/**
 	 * Agent immediately prior to the instructing agent.
 	 * <p>
@@ -462,8 +471,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -482,21 +491,22 @@ public class CreditTransferTransactionInformation3 {
 	 * definition} = "Agent immediately prior to the instructing agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviousInstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviousInstructingAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "PrvsInstgAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgent";
 			definition = "Agent immediately prior to the instructing agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected CashAccount7 previousInstructingAgentAccount;
 	/**
 	 * Unambiguous identification of the account of the previous instructing
 	 * agent at its servicing agent in the payment chain.
@@ -509,8 +519,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -531,21 +541,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviousInstructingAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviousInstructingAgentAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "PrvsInstgAgtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccount";
 			definition = "Unambiguous identification of the account of the previous instructing agent at its servicing agent in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 instructingAgent;
 	/**
 	 * Agent that instructs the next party in the chain to carry out the (set
 	 * of) instruction(s).
@@ -559,8 +570,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -581,21 +592,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "InstgAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
 			definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 instructedAgent;
 	/**
 	 * Agent that is instructed by the previous party in the chain to carry out
 	 * the (set of) instruction(s).
@@ -609,8 +621,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -631,21 +643,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructedAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "InstdAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
 			definition = "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 intermediaryAgent1;
 	/**
 	 * Agent between the debtor agent and creditor agent.
 	 * 
@@ -662,8 +675,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -684,21 +697,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryAgent1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryAgent1 = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "IntrmyAgt1";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent1";
 			definition = "Agent between the debtor agent and creditor agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the debtor agent and the intermediary agent 2.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected CashAccount7 intermediaryAgent1Account;
 	/**
 	 * Unambiguous identification of the account of the intermediary agent 1 at
 	 * its servicing agent in the payment chain.
@@ -711,8 +725,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -733,21 +747,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryAgent1Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryAgent1Account = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "IntrmyAgt1Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent1Account";
 			definition = "Unambiguous identification of the account of the intermediary agent 1 at its servicing agent in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 intermediaryAgent2;
 	/**
 	 * Agent between the debtor agent and creditor agent.
 	 * 
@@ -764,8 +779,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -786,21 +801,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryAgent2 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryAgent2 = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "IntrmyAgt2";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent2";
 			definition = "Agent between the debtor agent and creditor agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent2 identifies the agent between the intermediary agent 1 and the intermediary agent 3.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected CashAccount7 intermediaryAgent2Account;
 	/**
 	 * Unambiguous identification of the account of the intermediary agent 2 at
 	 * its servicing agent in the payment chain.
@@ -813,8 +829,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -835,21 +851,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryAgent2Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryAgent2Account = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "IntrmyAgt2Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent2Account";
 			definition = "Unambiguous identification of the account of the intermediary agent 2 at its servicing agent in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 intermediaryAgent3;
 	/**
 	 * Agent between the debtor agent and creditor agent.
 	 * 
@@ -866,8 +883,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -888,21 +905,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryAgent3 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryAgent3 = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "IntrmyAgt3";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent3";
 			definition = "Agent between the debtor agent and creditor agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent3 identifies the agent between the  intermediary agent 2 and the creditor agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected CashAccount7 intermediaryAgent3Account;
 	/**
 	 * Unambiguous identification of the account of the intermediary agent 3 at
 	 * its servicing agent in the payment chain.
@@ -915,8 +933,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -937,21 +955,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryAgent3Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryAgent3Account = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "IntrmyAgt3Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent3Account";
 			definition = "Unambiguous identification of the account of the intermediary agent 3 at its servicing agent in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 ultimateDebtor;
 	/**
 	 * Ultimate financial institution that owes an amount of money to the
 	 * (ultimate) institutional creditor.
@@ -965,8 +984,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -987,21 +1006,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UltimateDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "UltmtDbtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate financial institution that owes an amount of money to the (ultimate) institutional creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 debtor;
 	/**
 	 * Financial institution that owes an amount of money to the (ultimate)
 	 * financial institutional creditor.
@@ -1015,8 +1035,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1037,21 +1057,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Debtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Financial institution that owes an amount of money to the (ultimate) financial institutional creditor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected CashAccount7 debtorAccount;
 	/**
 	 * Unambiguous identification of the account of the debtor to which a debit
 	 * entry will be made as a result of the transaction.
@@ -1064,8 +1085,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1086,21 +1107,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "DbtrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 debtorAgent;
 	/**
 	 * Financial institution servicing an account for the debtor.
 	 * <p>
@@ -1113,8 +1135,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1134,21 +1156,22 @@ public class CreditTransferTransactionInformation3 {
 	 * "Financial institution servicing an account for the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected CashAccount7 debtorAgentAccount;
 	/**
 	 * Unambiguous identification of the account of the debtor agent at its
 	 * servicing agent in the payment chain.
@@ -1161,8 +1184,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1183,21 +1206,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebtorAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtorAgentAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "DbtrAgtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentAccount";
 			definition = "Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 creditorAgent;
 	/**
 	 * Financial institution servicing an account for the creditor.
 	 * <p>
@@ -1210,8 +1234,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1231,21 +1255,22 @@ public class CreditTransferTransactionInformation3 {
 	 * "Financial institution servicing an account for the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "CdtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected CashAccount7 creditorAgentAccount;
 	/**
 	 * Unambiguous identification of the account of the creditor agent at its
 	 * servicing agent to which a credit entry will be made as a result of the
@@ -1259,8 +1284,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1281,21 +1306,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditorAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditorAgentAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "CdtrAgtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentAccount";
 			definition = "Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 creditor;
 	/**
 	 * Financial institution that receives an amount of money from the financial
 	 * institutional debtor.
@@ -1309,8 +1335,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1331,21 +1357,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Creditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Financial institution that receives an amount of money from the financial institutional debtor.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected CashAccount7 creditorAccount;
 	/**
 	 * Unambiguous identification of the account of the creditor to which a
 	 * credit entry will be posted as a result of the payment transaction.
@@ -1358,8 +1385,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1380,21 +1407,22 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "CdtrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification3 ultimateCreditor;
 	/**
 	 * Ultimate financial institution to which an amount of money is due.
 	 * <p>
@@ -1407,8 +1435,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1428,21 +1456,22 @@ public class CreditTransferTransactionInformation3 {
 	 * "Ultimate financial institution to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UltimateCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "UltmtCdtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditor";
 			definition = "Ultimate financial institution to which an amount of money is due.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InstructionForCreditorAgent2> instructionForCreditorAgent;
 	/**
 	 * Further information related to the processing of the payment instruction
 	 * that may need to be acted upon by the creditor agent.
@@ -1460,8 +1489,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructionForCreditorAgent
-	 * Payment.InstructionForCreditorAgent}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructionForCreditorAgent
+	 * Payment.mmInstructionForCreditorAgent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1482,20 +1511,21 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionForCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionForCreditorAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructionForCreditorAgent;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructionForCreditorAgent;
 			isDerived = false;
 			xmlTag = "InstrForCdtrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgent";
 			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the creditor agent. \n\nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the creditor's agent, or can be information required by the creditor's agent to process the instruction.";
 			minOccurs = 0;
-			type_lazy = () -> InstructionForCreditorAgent2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InstructionForCreditorAgent2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InstructionForNextAgent1> instructionForNextAgent;
 	/**
 	 * Further information related to the processing of the payment instruction
 	 * that may need to be acted upon by the next agent.
@@ -1513,8 +1543,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#InstructionForNextAgent
-	 * PaymentInstruction.InstructionForNextAgent}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmInstructionForNextAgent
+	 * PaymentInstruction.mmInstructionForNextAgent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1535,20 +1565,21 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionForNextAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionForNextAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.InstructionForNextAgent;
 			isDerived = false;
 			xmlTag = "InstrForNxtAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForNextAgent";
 			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. \n\nUsage: The next agent may not be the creditor agent.\nThe instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent.";
 			minOccurs = 0;
-			type_lazy = () -> InstructionForNextAgent1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InstructionForNextAgent1.mmObject();
 		}
 	};
+	protected RemittanceInformation2 remittanceInformation;
 	/**
 	 * Information supplied to enable the matching of an entry with the items
 	 * that the transfer is intended to settle.
@@ -1561,8 +1592,8 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#AssociatedDocument
-	 * PaymentObligation.AssociatedDocument}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAssociatedDocument
+	 * PaymentObligation.mmAssociatedDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1583,48 +1614,280 @@ public class CreditTransferTransactionInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RemittanceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRemittanceInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAssociatedDocument;
 			componentContext_lazy = () -> CreditTransferTransactionInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.AssociatedDocument;
 			isDerived = false;
 			xmlTag = "RmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RemittanceInformation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RemittanceInformation2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransferTransactionInformation3.PaymentIdentification,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.PaymentTypeInformation, com.tools20022.repository.msg.CreditTransferTransactionInformation3.InterbankSettlementAmount,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.InterbankSettlementDate, com.tools20022.repository.msg.CreditTransferTransactionInformation3.SettlementTimeIndication,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.SettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransactionInformation3.PreviousInstructingAgent,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.PreviousInstructingAgentAccount, com.tools20022.repository.msg.CreditTransferTransactionInformation3.InstructingAgent,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.InstructedAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation3.IntermediaryAgent1,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.IntermediaryAgent1Account, com.tools20022.repository.msg.CreditTransferTransactionInformation3.IntermediaryAgent2,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.IntermediaryAgent2Account, com.tools20022.repository.msg.CreditTransferTransactionInformation3.IntermediaryAgent3,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.IntermediaryAgent3Account, com.tools20022.repository.msg.CreditTransferTransactionInformation3.UltimateDebtor,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.Debtor, com.tools20022.repository.msg.CreditTransferTransactionInformation3.DebtorAccount,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.DebtorAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation3.DebtorAgentAccount,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.CreditorAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation3.CreditorAgentAccount,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.Creditor, com.tools20022.repository.msg.CreditTransferTransactionInformation3.CreditorAccount,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.UltimateCreditor, com.tools20022.repository.msg.CreditTransferTransactionInformation3.InstructionForCreditorAgent,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation3.InstructionForNextAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation3.RemittanceInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmPaymentIdentification,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmPaymentTypeInformation, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmInterbankSettlementAmount,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmInterbankSettlementDate, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmSettlementTimeIndication,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmSettlementTimeRequest, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmPreviousInstructingAgent,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmPreviousInstructingAgentAccount, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmInstructingAgent,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmInstructedAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmIntermediaryAgent1,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmIntermediaryAgent1Account, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmIntermediaryAgent2,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmIntermediaryAgent2Account, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmIntermediaryAgent3,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmIntermediaryAgent3Account, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmUltimateDebtor,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmDebtor, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmDebtorAccount,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmDebtorAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmDebtorAgentAccount,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmCreditorAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmCreditorAgentAccount,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmCreditor, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmCreditorAccount,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmUltimateCreditor, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmInstructionForCreditorAgent,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmInstructionForNextAgent, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmRemittanceInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV01.mmCreditTransferTransactionInformation);
 				trace_lazy = () -> CreditTransfer.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV01.CreditTransferTransactionInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CreditTransferTransactionInformation3";
 				definition = "Set of elements providing information specific to the individual transaction(s) included in the message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentIdentification2 getPaymentIdentification() {
+		return paymentIdentification;
+	}
+
+	public void setPaymentIdentification(com.tools20022.repository.msg.PaymentIdentification2 paymentIdentification) {
+		this.paymentIdentification = paymentIdentification;
+	}
+
+	public PaymentTypeInformation5 getPaymentTypeInformation() {
+		return paymentTypeInformation;
+	}
+
+	public void setPaymentTypeInformation(com.tools20022.repository.msg.PaymentTypeInformation5 paymentTypeInformation) {
+		this.paymentTypeInformation = paymentTypeInformation;
+	}
+
+	public CurrencyAndAmount getInterbankSettlementAmount() {
+		return interbankSettlementAmount;
+	}
+
+	public void setInterbankSettlementAmount(CurrencyAndAmount interbankSettlementAmount) {
+		this.interbankSettlementAmount = interbankSettlementAmount;
+	}
+
+	public ISODate getInterbankSettlementDate() {
+		return interbankSettlementDate;
+	}
+
+	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
+		this.interbankSettlementDate = interbankSettlementDate;
+	}
+
+	public SettlementDateTimeIndication1 getSettlementTimeIndication() {
+		return settlementTimeIndication;
+	}
+
+	public void setSettlementTimeIndication(com.tools20022.repository.msg.SettlementDateTimeIndication1 settlementTimeIndication) {
+		this.settlementTimeIndication = settlementTimeIndication;
+	}
+
+	public SettlementTimeRequest1 getSettlementTimeRequest() {
+		return settlementTimeRequest;
+	}
+
+	public void setSettlementTimeRequest(com.tools20022.repository.msg.SettlementTimeRequest1 settlementTimeRequest) {
+		this.settlementTimeRequest = settlementTimeRequest;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getPreviousInstructingAgent() {
+		return previousInstructingAgent;
+	}
+
+	public void setPreviousInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 previousInstructingAgent) {
+		this.previousInstructingAgent = previousInstructingAgent;
+	}
+
+	public CashAccount7 getPreviousInstructingAgentAccount() {
+		return previousInstructingAgentAccount;
+	}
+
+	public void setPreviousInstructingAgentAccount(com.tools20022.repository.msg.CashAccount7 previousInstructingAgentAccount) {
+		this.previousInstructingAgentAccount = previousInstructingAgentAccount;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getInstructingAgent() {
+		return instructingAgent;
+	}
+
+	public void setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 instructingAgent) {
+		this.instructingAgent = instructingAgent;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getInstructedAgent() {
+		return instructedAgent;
+	}
+
+	public void setInstructedAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 instructedAgent) {
+		this.instructedAgent = instructedAgent;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getIntermediaryAgent1() {
+		return intermediaryAgent1;
+	}
+
+	public void setIntermediaryAgent1(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 intermediaryAgent1) {
+		this.intermediaryAgent1 = intermediaryAgent1;
+	}
+
+	public CashAccount7 getIntermediaryAgent1Account() {
+		return intermediaryAgent1Account;
+	}
+
+	public void setIntermediaryAgent1Account(com.tools20022.repository.msg.CashAccount7 intermediaryAgent1Account) {
+		this.intermediaryAgent1Account = intermediaryAgent1Account;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getIntermediaryAgent2() {
+		return intermediaryAgent2;
+	}
+
+	public void setIntermediaryAgent2(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 intermediaryAgent2) {
+		this.intermediaryAgent2 = intermediaryAgent2;
+	}
+
+	public CashAccount7 getIntermediaryAgent2Account() {
+		return intermediaryAgent2Account;
+	}
+
+	public void setIntermediaryAgent2Account(com.tools20022.repository.msg.CashAccount7 intermediaryAgent2Account) {
+		this.intermediaryAgent2Account = intermediaryAgent2Account;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getIntermediaryAgent3() {
+		return intermediaryAgent3;
+	}
+
+	public void setIntermediaryAgent3(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 intermediaryAgent3) {
+		this.intermediaryAgent3 = intermediaryAgent3;
+	}
+
+	public CashAccount7 getIntermediaryAgent3Account() {
+		return intermediaryAgent3Account;
+	}
+
+	public void setIntermediaryAgent3Account(com.tools20022.repository.msg.CashAccount7 intermediaryAgent3Account) {
+		this.intermediaryAgent3Account = intermediaryAgent3Account;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getUltimateDebtor() {
+		return ultimateDebtor;
+	}
+
+	public void setUltimateDebtor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 ultimateDebtor) {
+		this.ultimateDebtor = ultimateDebtor;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getDebtor() {
+		return debtor;
+	}
+
+	public void setDebtor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 debtor) {
+		this.debtor = debtor;
+	}
+
+	public CashAccount7 getDebtorAccount() {
+		return debtorAccount;
+	}
+
+	public void setDebtorAccount(com.tools20022.repository.msg.CashAccount7 debtorAccount) {
+		this.debtorAccount = debtorAccount;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getDebtorAgent() {
+		return debtorAgent;
+	}
+
+	public void setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 debtorAgent) {
+		this.debtorAgent = debtorAgent;
+	}
+
+	public CashAccount7 getDebtorAgentAccount() {
+		return debtorAgentAccount;
+	}
+
+	public void setDebtorAgentAccount(com.tools20022.repository.msg.CashAccount7 debtorAgentAccount) {
+		this.debtorAgentAccount = debtorAgentAccount;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getCreditorAgent() {
+		return creditorAgent;
+	}
+
+	public void setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 creditorAgent) {
+		this.creditorAgent = creditorAgent;
+	}
+
+	public CashAccount7 getCreditorAgentAccount() {
+		return creditorAgentAccount;
+	}
+
+	public void setCreditorAgentAccount(com.tools20022.repository.msg.CashAccount7 creditorAgentAccount) {
+		this.creditorAgentAccount = creditorAgentAccount;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getCreditor() {
+		return creditor;
+	}
+
+	public void setCreditor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 creditor) {
+		this.creditor = creditor;
+	}
+
+	public CashAccount7 getCreditorAccount() {
+		return creditorAccount;
+	}
+
+	public void setCreditorAccount(com.tools20022.repository.msg.CashAccount7 creditorAccount) {
+		this.creditorAccount = creditorAccount;
+	}
+
+	public BranchAndFinancialInstitutionIdentification3 getUltimateCreditor() {
+		return ultimateCreditor;
+	}
+
+	public void setUltimateCreditor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 ultimateCreditor) {
+		this.ultimateCreditor = ultimateCreditor;
+	}
+
+	public List<InstructionForCreditorAgent2> getInstructionForCreditorAgent() {
+		return instructionForCreditorAgent;
+	}
+
+	public void setInstructionForCreditorAgent(List<com.tools20022.repository.msg.InstructionForCreditorAgent2> instructionForCreditorAgent) {
+		this.instructionForCreditorAgent = instructionForCreditorAgent;
+	}
+
+	public List<InstructionForNextAgent1> getInstructionForNextAgent() {
+		return instructionForNextAgent;
+	}
+
+	public void setInstructionForNextAgent(List<com.tools20022.repository.msg.InstructionForNextAgent1> instructionForNextAgent) {
+		this.instructionForNextAgent = instructionForNextAgent;
+	}
+
+	public RemittanceInformation2 getRemittanceInformation() {
+		return remittanceInformation;
+	}
+
+	public void setRemittanceInformation(com.tools20022.repository.msg.RemittanceInformation2 remittanceInformation) {
+		this.remittanceInformation = remittanceInformation;
 	}
 }

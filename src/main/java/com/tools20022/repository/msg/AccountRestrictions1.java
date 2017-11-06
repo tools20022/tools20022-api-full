@@ -37,22 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountRestrictions1#Limitation
- * AccountRestrictions1.Limitation}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountRestrictions1#mmLimitation
+ * AccountRestrictions1.mmLimitation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountRestrictions1#AdditionalInformation
- * AccountRestrictions1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountRestrictions1#mmAdditionalInformation
+ * AccountRestrictions1.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountRestrictions1#AccountValidation
- * AccountRestrictions1.AccountValidation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountRestrictions1#Type
- * AccountRestrictions1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountRestrictions1#Regulator
- * AccountRestrictions1.Regulator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountRestrictions1#Status
- * AccountRestrictions1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountRestrictions1#Period
- * AccountRestrictions1.Period}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountRestrictions1#mmAccountValidation
+ * AccountRestrictions1.mmAccountValidation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountRestrictions1#mmType
+ * AccountRestrictions1.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountRestrictions1#mmRegulator
+ * AccountRestrictions1.mmRegulator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountRestrictions1#mmStatus
+ * AccountRestrictions1.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountRestrictions1#mmPeriod
+ * AccountRestrictions1.mmPeriod}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,18 +61,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#AdditionalInformation
- * AccountOpeningInstructionV06.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmAdditionalInformation
+ * AccountOpeningInstructionV06.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06#AdditionalInformation
- * AccountDetailsConfirmationV06.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06#mmAdditionalInformation
+ * AccountDetailsConfirmationV06.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountRestrictions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text limitation;
 	/**
 	 * Restrictions and/or limitations on the account or account party.
 	 * <p>
@@ -123,13 +125,13 @@ public class AccountRestrictions1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#Limitation
-	 * AdditiononalInformation12.Limitation}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#mmLimitation
+	 * AdditiononalInformation12.mmLimitation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Limitation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -137,12 +139,13 @@ public class AccountRestrictions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limitation";
 			definition = "Restrictions and/or limitations on the account or account party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.Limitation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.mmLimitation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information.
 	 * <p>
@@ -172,13 +175,13 @@ public class AccountRestrictions1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#AdditionalInformation
-	 * AdditiononalInformation12.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#mmAdditionalInformation
+	 * AdditiononalInformation12.mmAdditionalInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -186,12 +189,13 @@ public class AccountRestrictions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.AdditionalInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.mmAdditionalInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text accountValidation;
 	/**
 	 * Information or instructions for the by-passing of validations in the
 	 * account registration process.
@@ -224,13 +228,13 @@ public class AccountRestrictions1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#AccountValidation
-	 * AdditiononalInformation12.AccountValidation}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#mmAccountValidation
+	 * AdditiononalInformation12.mmAccountValidation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountValidation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountValidation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -238,12 +242,13 @@ public class AccountRestrictions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountValidation";
 			definition = "Information or instructions for the by-passing of validations in the account registration process.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.AccountValidation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.mmAccountValidation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text type;
 	/**
 	 * Type or identification of the restriction
 	 * <p>
@@ -273,13 +278,13 @@ public class AccountRestrictions1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#Type
-	 * AdditiononalInformation12.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#mmType
+	 * AdditiononalInformation12.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -287,12 +292,13 @@ public class AccountRestrictions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type or identification of the restriction";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.Type);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.mmType);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification70Choice regulator;
 	/**
 	 * Regulator that may have to be informed about restrictions or limitations
 	 * on the account or account party.
@@ -325,13 +331,13 @@ public class AccountRestrictions1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#Regulator
-	 * AdditiononalInformation12.Regulator}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#mmRegulator
+	 * AdditiononalInformation12.mmRegulator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Regulator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRegulator = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -339,13 +345,14 @@ public class AccountRestrictions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regulator";
 			definition = "Regulator that may have to be informed about restrictions or limitations on the account or account party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.Regulator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.mmRegulator);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification70Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	protected RestrictionStatus1Choice status;
 	/**
 	 * Status of the restriction.
 	 * <p>
@@ -375,13 +382,13 @@ public class AccountRestrictions1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#Status
-	 * AdditiononalInformation12.Status}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#mmStatus
+	 * AdditiononalInformation12.mmStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Status = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -389,13 +396,14 @@ public class AccountRestrictions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the restriction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.Status);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.mmStatus);
 			maxOccurs = 1;
-			type_lazy = () -> RestrictionStatus1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RestrictionStatus1Choice.mmObject();
 		}
 	};
+	protected DateTimePeriodDetails1 period;
 	/**
 	 * Period of the restriction.
 	 * <p>
@@ -424,13 +432,13 @@ public class AccountRestrictions1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#Period
-	 * AdditiononalInformation12.Period}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditiononalInformation12#mmPeriod
+	 * AdditiononalInformation12.mmPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Period = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -438,23 +446,23 @@ public class AccountRestrictions1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Period of the restriction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.Period);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.mmPeriod);
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriodDetails1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountRestrictions1.Limitation, com.tools20022.repository.msg.AccountRestrictions1.AdditionalInformation,
-						com.tools20022.repository.msg.AccountRestrictions1.AccountValidation, com.tools20022.repository.msg.AccountRestrictions1.Type, com.tools20022.repository.msg.AccountRestrictions1.Regulator,
-						com.tools20022.repository.msg.AccountRestrictions1.Status, com.tools20022.repository.msg.AccountRestrictions1.Period);
-				messageBuildingBlock_lazy = () -> Arrays
-						.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.AdditionalInformation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountRestrictions1.mmLimitation, com.tools20022.repository.msg.AccountRestrictions1.mmAdditionalInformation,
+						com.tools20022.repository.msg.AccountRestrictions1.mmAccountValidation, com.tools20022.repository.msg.AccountRestrictions1.mmType, com.tools20022.repository.msg.AccountRestrictions1.mmRegulator,
+						com.tools20022.repository.msg.AccountRestrictions1.mmStatus, com.tools20022.repository.msg.AccountRestrictions1.mmPeriod);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmAdditionalInformation,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountRestrictions1";
 				definition = "Restrictions that may be applied to an account or investment plan.";
@@ -462,5 +470,61 @@ public class AccountRestrictions1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getLimitation() {
+		return limitation;
+	}
+
+	public void setLimitation(Max350Text limitation) {
+		this.limitation = limitation;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public Max350Text getAccountValidation() {
+		return accountValidation;
+	}
+
+	public void setAccountValidation(Max350Text accountValidation) {
+		this.accountValidation = accountValidation;
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public PartyIdentification70Choice getRegulator() {
+		return regulator;
+	}
+
+	public void setRegulator(PartyIdentification70Choice regulator) {
+		this.regulator = regulator;
+	}
+
+	public RestrictionStatus1Choice getStatus() {
+		return status;
+	}
+
+	public void setStatus(RestrictionStatus1Choice status) {
+		this.status = status;
+	}
+
+	public DateTimePeriodDetails1 getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 period) {
+		this.period = period;
 	}
 }

@@ -37,30 +37,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#Count
- * ATMDepositedMedia2.Count}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#UnitValue
- * ATMDepositedMedia2.UnitValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#Currency
- * ATMDepositedMedia2.Currency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#mmCount
+ * ATMDepositedMedia2.mmCount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#mmUnitValue
+ * ATMDepositedMedia2.mmUnitValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#mmCurrency
+ * ATMDepositedMedia2.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#CodeLineFormat
- * ATMDepositedMedia2.CodeLineFormat}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#CodeLine
- * ATMDepositedMedia2.CodeLine}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#mmCodeLineFormat
+ * ATMDepositedMedia2.mmCodeLineFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#mmCodeLine
+ * ATMDepositedMedia2.mmCodeLine}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#ScannedValue
- * ATMDepositedMedia2.ScannedValue}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#mmScannedValue
+ * ATMDepositedMedia2.mmScannedValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#ConfidenceLevel
- * ATMDepositedMedia2.ConfidenceLevel}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia2#mmConfidenceLevel
+ * ATMDepositedMedia2.mmConfidenceLevel}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDepositedMedia2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number count;
 	/**
 	 * Number of deposit media.
 	 * <p>
@@ -101,7 +102,7 @@ public class ATMDepositedMedia2 {
 	 * definition} = "Number of deposit media."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Count = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -109,11 +110,12 @@ public class ATMDepositedMedia2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Count";
 			definition = "Number of deposit media.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount unitValue;
 	/**
 	 * Amount or denomination of one media item, if the media type is valued or
 	 * entered by the customer.
@@ -145,7 +147,7 @@ public class ATMDepositedMedia2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class ATMDepositedMedia2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitValue";
 			definition = "Amount or denomination of one media item, if the media type is valued or entered by the customer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode currency;
 	/**
 	 * Currency of media items, if valued and different from base currency.
 	 * <p>
@@ -187,7 +190,7 @@ public class ATMDepositedMedia2 {
 	 * "Currency of media items, if valued and different from base currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class ATMDepositedMedia2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of media items, if valued and different from base currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected CheckCodeLine1Code codeLineFormat;
 	/**
 	 * Format of the check code line.
 	 * <p>
@@ -228,7 +232,7 @@ public class ATMDepositedMedia2 {
 	 * definition} = "Format of the check code line."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CodeLineFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCodeLineFormat = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -236,11 +240,12 @@ public class ATMDepositedMedia2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeLineFormat";
 			definition = "Format of the check code line.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CheckCodeLine1Code.mmObject();
 		}
 	};
+	protected Max70Text codeLine;
 	/**
 	 * Check code line.
 	 * <p>
@@ -268,7 +273,7 @@ public class ATMDepositedMedia2 {
 	 * definition} = "Check code line."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CodeLine = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCodeLine = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -276,11 +281,12 @@ public class ATMDepositedMedia2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeLine";
 			definition = "Check code line.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount scannedValue;
 	/**
 	 * Check amount scanned by the check reader.
 	 * <p>
@@ -309,7 +315,7 @@ public class ATMDepositedMedia2 {
 	 * definition} = "Check amount scanned by the check reader."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ScannedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmScannedValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -317,11 +323,12 @@ public class ATMDepositedMedia2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScannedValue";
 			definition = "Check amount scanned by the check reader.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Percentage confidenceLevel;
 	/**
 	 * Percentage of the confidence in the check amount.
 	 * <p>
@@ -349,7 +356,7 @@ public class ATMDepositedMedia2 {
 	 * definition} = "Percentage of the confidence in the check amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfidenceLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfidenceLevel = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -357,8 +364,8 @@ public class ATMDepositedMedia2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfidenceLevel";
 			definition = "Percentage of the confidence in the check amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Percentage.mmObject();
 		}
 	};
@@ -366,15 +373,71 @@ public class ATMDepositedMedia2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositedMedia2.Count, com.tools20022.repository.msg.ATMDepositedMedia2.UnitValue, com.tools20022.repository.msg.ATMDepositedMedia2.Currency,
-						com.tools20022.repository.msg.ATMDepositedMedia2.CodeLineFormat, com.tools20022.repository.msg.ATMDepositedMedia2.CodeLine, com.tools20022.repository.msg.ATMDepositedMedia2.ScannedValue,
-						com.tools20022.repository.msg.ATMDepositedMedia2.ConfidenceLevel);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositedMedia2.mmCount, com.tools20022.repository.msg.ATMDepositedMedia2.mmUnitValue, com.tools20022.repository.msg.ATMDepositedMedia2.mmCurrency,
+						com.tools20022.repository.msg.ATMDepositedMedia2.mmCodeLineFormat, com.tools20022.repository.msg.ATMDepositedMedia2.mmCodeLine, com.tools20022.repository.msg.ATMDepositedMedia2.mmScannedValue,
+						com.tools20022.repository.msg.ATMDepositedMedia2.mmConfidenceLevel);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositedMedia2";
 				definition = "Media item that are deposited.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getCount() {
+		return count;
+	}
+
+	public void setCount(Number count) {
+		this.count = count;
+	}
+
+	public ImpliedCurrencyAndAmount getUnitValue() {
+		return unitValue;
+	}
+
+	public void setUnitValue(ImpliedCurrencyAndAmount unitValue) {
+		this.unitValue = unitValue;
+	}
+
+	public ActiveCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public CheckCodeLine1Code getCodeLineFormat() {
+		return codeLineFormat;
+	}
+
+	public void setCodeLineFormat(CheckCodeLine1Code codeLineFormat) {
+		this.codeLineFormat = codeLineFormat;
+	}
+
+	public Max70Text getCodeLine() {
+		return codeLine;
+	}
+
+	public void setCodeLine(Max70Text codeLine) {
+		this.codeLine = codeLine;
+	}
+
+	public ImpliedCurrencyAndAmount getScannedValue() {
+		return scannedValue;
+	}
+
+	public void setScannedValue(ImpliedCurrencyAndAmount scannedValue) {
+		this.scannedValue = scannedValue;
+	}
+
+	public Percentage getConfidenceLevel() {
+		return confidenceLevel;
+	}
+
+	public void setConfidenceLevel(Percentage confidenceLevel) {
+		this.confidenceLevel = confidenceLevel;
 	}
 }

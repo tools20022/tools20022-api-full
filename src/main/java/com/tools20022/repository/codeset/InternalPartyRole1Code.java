@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InternalPartyRole1Code#Internal
- * InternalPartyRole1Code.Internal}</li>
+ * {@linkplain com.tools20022.repository.codeset.InternalPartyRole1Code#mmInternal
+ * InternalPartyRole1Code.mmInternal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,7 +71,7 @@ public class InternalPartyRole1Code extends PartyRoleCode {
 	 * name} = "Internal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Internal = new MMCode() {
+	public static final MMCode mmInternal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Internal";
@@ -82,11 +82,11 @@ public class InternalPartyRole1Code extends PartyRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InternalPartyRole1Code";
 				definition = "Specifies the role as an internal party in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InternalPartyRole1Code.Internal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InternalPartyRole1Code.mmInternal);
 				trace_lazy = () -> PartyRoleCode.mmObject();
 			}
 		});

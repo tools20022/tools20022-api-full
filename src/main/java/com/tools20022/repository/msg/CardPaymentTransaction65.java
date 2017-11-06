@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65#SaleReferenceIdentification
- * CardPaymentTransaction65.SaleReferenceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65#mmSaleReferenceIdentification
+ * CardPaymentTransaction65.mmSaleReferenceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65#TransactionIdentification
- * CardPaymentTransaction65.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65#mmTransactionIdentification
+ * CardPaymentTransaction65.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65#POIIdentification
- * CardPaymentTransaction65.POIIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65#mmPOIIdentification
+ * CardPaymentTransaction65.mmPOIIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65#CurrencyConversion
- * CardPaymentTransaction65.CurrencyConversion}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65#mmCurrencyConversion
+ * CardPaymentTransaction65.mmCurrencyConversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentTransaction65 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text saleReferenceIdentification;
 	/**
 	 * Global reference of the sale transaction for the sale system.
 	 * <p>
@@ -110,18 +111,18 @@ public class CardPaymentTransaction65 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#SaleReferenceIdentification
-	 * CardPaymentTransaction73.SaleReferenceIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#mmSaleReferenceIdentification
+	 * CardPaymentTransaction73.mmSaleReferenceIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction50#SaleReferenceIdentification
-	 * CardPaymentTransaction50.SaleReferenceIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction50#mmSaleReferenceIdentification
+	 * CardPaymentTransaction50.mmSaleReferenceIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SaleReferenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSaleReferenceIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentTransaction65.mmObject();
 			isDerived = false;
@@ -129,13 +130,14 @@ public class CardPaymentTransaction65 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleReferenceIdentification";
 			definition = "Global reference of the sale transaction for the sale system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction50.SaleReferenceIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction73.SaleReferenceIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction73.mmSaleReferenceIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction50.mmSaleReferenceIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TransactionIdentifier1 transactionIdentification;
 	/**
 	 * Unique identification of the transaction assigned by the POI (Point Of
 	 * Interaction).
@@ -148,8 +150,8 @@ public class CardPaymentTransaction65 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#TransactionIdentification
-	 * CardPaymentAcquiring.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionIdentification
+	 * CardPaymentAcquiring.mmTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -172,34 +174,35 @@ public class CardPaymentTransaction65 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#TransactionIdentification
-	 * CardPaymentTransaction73.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#mmTransactionIdentification
+	 * CardPaymentTransaction73.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction50#TransactionIdentification
-	 * CardPaymentTransaction50.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction50#mmTransactionIdentification
+	 * CardPaymentTransaction50.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionIdentification;
 			componentContext_lazy = () -> CardPaymentTransaction65.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.TransactionIdentification;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification of the transaction assigned by the POI (Point Of Interaction).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction50.TransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction73.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction73.mmTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction50.mmTransactionIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionIdentifier1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
 		}
 	};
+	protected GenericIdentification32 pOIIdentification;
 	/**
 	 * Identification of the POI (Point Of Interaction) performing the
 	 * transaction.
@@ -213,8 +216,8 @@ public class CardPaymentTransaction65 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification#Identification
-	 * SystemIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentification
+	 * SystemIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -237,34 +240,35 @@ public class CardPaymentTransaction65 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#POIIdentification
-	 * CardPaymentTransaction73.POIIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#mmPOIIdentification
+	 * CardPaymentTransaction73.mmPOIIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction50#POIIdentification
-	 * CardPaymentTransaction50.POIIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction50#mmPOIIdentification
+	 * CardPaymentTransaction50.mmPOIIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd POIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmIdentification;
 			componentContext_lazy = () -> CardPaymentTransaction65.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.Identification;
 			isDerived = false;
 			xmlTag = "POIId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the POI (Point Of Interaction) performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction50.POIIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction73.POIIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction73.mmPOIIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction50.mmPOIIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected CurrencyConversion7 currencyConversion;
 	/**
 	 * Link to a previous currency conversion.
 	 * <p>
@@ -276,8 +280,8 @@ public class CardPaymentTransaction65 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyExchange
-	 * Payment.CurrencyExchange}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyExchange
+	 * Payment.mmCurrencyExchange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -298,49 +302,81 @@ public class CardPaymentTransaction65 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#CurrencyConversion
-	 * CardPaymentTransaction73.CurrencyConversion}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#mmCurrencyConversion
+	 * CardPaymentTransaction73.mmCurrencyConversion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction50#CurrencyConversion
-	 * CardPaymentTransaction50.CurrencyConversion}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction50#mmCurrencyConversion
+	 * CardPaymentTransaction50.mmCurrencyConversion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyConversion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyConversion = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> CardPaymentTransaction65.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyExchange;
 			isDerived = false;
 			xmlTag = "CcyConvs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversion";
 			definition = "Link to a previous currency conversion.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction50.CurrencyConversion;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction73.CurrencyConversion);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction73.mmCurrencyConversion);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction50.mmCurrencyConversion;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyConversion7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction65.SaleReferenceIdentification, com.tools20022.repository.msg.CardPaymentTransaction65.TransactionIdentification,
-						com.tools20022.repository.msg.CardPaymentTransaction65.POIIdentification, com.tools20022.repository.msg.CardPaymentTransaction65.CurrencyConversion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction65.mmSaleReferenceIdentification, com.tools20022.repository.msg.CardPaymentTransaction65.mmTransactionIdentification,
+						com.tools20022.repository.msg.CardPaymentTransaction65.mmPOIIdentification, com.tools20022.repository.msg.CardPaymentTransaction65.mmCurrencyConversion);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction65";
 				definition = "Identification of the original transaction.";
-				previousVersion_lazy = () -> CardPaymentTransaction50.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction73.mmObject());
+				previousVersion_lazy = () -> CardPaymentTransaction50.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSaleReferenceIdentification() {
+		return saleReferenceIdentification;
+	}
+
+	public void setSaleReferenceIdentification(Max35Text saleReferenceIdentification) {
+		this.saleReferenceIdentification = saleReferenceIdentification;
+	}
+
+	public TransactionIdentifier1 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public GenericIdentification32 getPOIIdentification() {
+		return pOIIdentification;
+	}
+
+	public void setPOIIdentification(com.tools20022.repository.msg.GenericIdentification32 pOIIdentification) {
+		this.pOIIdentification = pOIIdentification;
+	}
+
+	public CurrencyConversion7 getCurrencyConversion() {
+		return currencyConversion;
+	}
+
+	public void setCurrencyConversion(com.tools20022.repository.msg.CurrencyConversion7 currencyConversion) {
+		this.currencyConversion = currencyConversion;
 	}
 }

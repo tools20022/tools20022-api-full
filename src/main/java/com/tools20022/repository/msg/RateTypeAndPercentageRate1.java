@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate1#RateType
- * RateTypeAndPercentageRate1.RateType}</li>
+ * {@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate1#mmRateType
+ * RateTypeAndPercentageRate1.mmRateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate1#Rate
- * RateTypeAndPercentageRate1.Rate}</li>
+ * {@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate1#mmRate
+ * RateTypeAndPercentageRate1.mmRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateTypeAndPercentageRate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateType28Choice rateType;
 	/**
 	 * Value expressed as a rate type.
 	 * <p>
@@ -82,8 +83,8 @@ public class RateTypeAndPercentageRate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#WithholdingTaxType
-	 * Tax.WithholdingTaxType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmWithholdingTaxType
+	 * Tax.mmWithholdingTaxType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,28 +105,29 @@ public class RateTypeAndPercentageRate1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate8#RateType
-	 * RateTypeAndPercentageRate8.RateType}</li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate8#mmRateType
+	 * RateTypeAndPercentageRate8.mmRateType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmWithholdingTaxType;
 			componentContext_lazy = () -> RateTypeAndPercentageRate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.WithholdingTaxType;
 			isDerived = false;
 			xmlTag = "RateTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateType";
 			definition = "Value expressed as a rate type.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndPercentageRate8.RateType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndPercentageRate8.mmRateType);
 			maxOccurs = 1;
-			type_lazy = () -> RateType28Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RateType28Choice.mmObject();
 		}
 	};
+	protected PercentageRate rate;
 	/**
 	 * Value expressed as a rate.
 	 * <p>
@@ -139,7 +141,7 @@ public class RateTypeAndPercentageRate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Rate Tax.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,24 +162,24 @@ public class RateTypeAndPercentageRate1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate8#Rate
-	 * RateTypeAndPercentageRate8.Rate}</li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate8#mmRate
+	 * RateTypeAndPercentageRate8.mmRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
 			componentContext_lazy = () -> RateTypeAndPercentageRate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value expressed as a rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndPercentageRate8.Rate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndPercentageRate8.mmRate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -185,9 +187,9 @@ public class RateTypeAndPercentageRate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndPercentageRate1.RateType, com.tools20022.repository.msg.RateTypeAndPercentageRate1.Rate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndPercentageRate1.mmRateType, com.tools20022.repository.msg.RateTypeAndPercentageRate1.mmRate);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateTypeAndPercentageRate1";
 				definition = "Specifies the value expressed as a rate type and a percentage rate.";
@@ -195,5 +197,21 @@ public class RateTypeAndPercentageRate1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateType28Choice getRateType() {
+		return rateType;
+	}
+
+	public void setRateType(RateType28Choice rateType) {
+		this.rateType = rateType;
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
 	}
 }

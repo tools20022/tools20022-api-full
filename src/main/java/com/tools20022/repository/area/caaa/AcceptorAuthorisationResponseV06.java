@@ -56,21 +56,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06#Header
- * AcceptorAuthorisationResponseV06.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06#mmHeader
+ * AcceptorAuthorisationResponseV06.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06#AuthorisationResponse
- * AcceptorAuthorisationResponseV06.AuthorisationResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06#mmAuthorisationResponse
+ * AcceptorAuthorisationResponseV06.mmAuthorisationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06#SecurityTrailer
- * AcceptorAuthorisationResponseV06.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06#mmSecurityTrailer
+ * AcceptorAuthorisationResponseV06.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06#identifier
- * AcceptorAuthorisationResponseV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caaa.002.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorAuthorisationResponseV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header30 header;
 	/**
 	 * Authorisation response message management information.
 	 * <p>
@@ -113,22 +112,23 @@ public class AcceptorAuthorisationResponseV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05#Header
-	 * AcceptorAuthorisationResponseV05.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05#mmHeader
+	 * AcceptorAuthorisationResponseV05.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Authorisation response message management information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05.Header;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05.mmHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header30.mmObject();
 		}
 	};
+	protected AcceptorAuthorisationResponse6 authorisationResponse;
 	/**
 	 * Information related to the response of the authorisation.
 	 * <p>
@@ -154,22 +154,23 @@ public class AcceptorAuthorisationResponseV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05#AuthorisationResponse
-	 * AcceptorAuthorisationResponseV05.AuthorisationResponse}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05#mmAuthorisationResponse
+	 * AcceptorAuthorisationResponseV05.mmAuthorisationResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AuthorisationResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAuthorisationResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AuthstnRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResponse";
 			definition = "Information related to the response of the authorisation.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05.AuthorisationResponse;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05.mmAuthorisationResponse;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorAuthorisationResponse6.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -194,47 +195,20 @@ public class AcceptorAuthorisationResponseV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05#SecurityTrailer
-	 * AcceptorAuthorisationResponseV05.SecurityTrailer}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05#mmSecurityTrailer
+	 * AcceptorAuthorisationResponseV05.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05.SecurityTrailer;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05.mmSecurityTrailer;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caaa"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caaa";
-			messageFunctionality = "002";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -249,11 +223,42 @@ public class AcceptorAuthorisationResponseV06 {
 				rootElement = "Document";
 				xmlTag = "AccptrAuthstnRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.Header, com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.AuthorisationResponse,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.mmHeader, com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.mmAuthorisationResponse,
+						com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caaa";
+						messageFunctionality = "002";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header30 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header30 header) {
+		this.header = header;
+	}
+
+	public AcceptorAuthorisationResponse6 getAuthorisationResponse() {
+		return authorisationResponse;
+	}
+
+	public void setAuthorisationResponse(AcceptorAuthorisationResponse6 authorisationResponse) {
+		this.authorisationResponse = authorisationResponse;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

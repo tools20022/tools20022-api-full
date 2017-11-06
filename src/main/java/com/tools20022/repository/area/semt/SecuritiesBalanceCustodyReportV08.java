@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope An account servicer sends a SecuritiesBalanceCustodyReport to an
@@ -89,39 +90,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#Pagination
- * SecuritiesBalanceCustodyReportV08.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#mmPagination
+ * SecuritiesBalanceCustodyReportV08.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#StatementGeneralDetails
- * SecuritiesBalanceCustodyReportV08.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#mmStatementGeneralDetails
+ * SecuritiesBalanceCustodyReportV08.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#AccountOwner
- * SecuritiesBalanceCustodyReportV08.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#mmAccountOwner
+ * SecuritiesBalanceCustodyReportV08.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#AccountServicer
- * SecuritiesBalanceCustodyReportV08.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#mmAccountServicer
+ * SecuritiesBalanceCustodyReportV08.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#SafekeepingAccount
- * SecuritiesBalanceCustodyReportV08.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#mmSafekeepingAccount
+ * SecuritiesBalanceCustodyReportV08.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#IntermediaryInformation
- * SecuritiesBalanceCustodyReportV08.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#mmIntermediaryInformation
+ * SecuritiesBalanceCustodyReportV08.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#BalanceForAccount
- * SecuritiesBalanceCustodyReportV08.BalanceForAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#mmBalanceForAccount
+ * SecuritiesBalanceCustodyReportV08.mmBalanceForAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#SubAccountDetails
- * SecuritiesBalanceCustodyReportV08.SubAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#mmSubAccountDetails
+ * SecuritiesBalanceCustodyReportV08.mmSubAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#AccountBaseCurrencyTotalAmounts
- * SecuritiesBalanceCustodyReportV08.AccountBaseCurrencyTotalAmounts}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#mmAccountBaseCurrencyTotalAmounts
+ * SecuritiesBalanceCustodyReportV08.mmAccountBaseCurrencyTotalAmounts}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08#identifier
- * SecuritiesBalanceCustodyReportV08.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.002.001.08}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -149,6 +148,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesBalanceCustodyReportV08 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a statement) and continuation
 	 * indicator to indicate that the statement is to continue or that the
@@ -177,30 +177,31 @@ public class SecuritiesBalanceCustodyReportV08 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#Pagination
-	 * SecuritiesBalanceCustodyReportV09.Pagination}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmPagination
+	 * SecuritiesBalanceCustodyReportV09.mmPagination}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#Pagination
-	 * SecuritiesBalanceCustodyReportV07.Pagination}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#mmPagination
+	 * SecuritiesBalanceCustodyReportV07.mmPagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.Pagination;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.Pagination);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmPagination);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmPagination;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Statement33 statementGeneralDetails;
 	/**
 	 * Provides general information on the report.
 	 * <p>
@@ -225,30 +226,31 @@ public class SecuritiesBalanceCustodyReportV08 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#StatementGeneralDetails
-	 * SecuritiesBalanceCustodyReportV09.StatementGeneralDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmStatementGeneralDetails
+	 * SecuritiesBalanceCustodyReportV09.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#StatementGeneralDetails
-	 * SecuritiesBalanceCustodyReportV07.StatementGeneralDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#mmStatementGeneralDetails
+	 * SecuritiesBalanceCustodyReportV07.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "Provides general information on the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.StatementGeneralDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.StatementGeneralDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmStatementGeneralDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmStatementGeneralDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Statement33.mmObject();
 		}
 	};
+	protected PartyIdentification36Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -274,30 +276,31 @@ public class SecuritiesBalanceCustodyReportV08 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#AccountOwner
-	 * SecuritiesBalanceCustodyReportV09.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmAccountOwner
+	 * SecuritiesBalanceCustodyReportV09.mmAccountOwner}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#AccountOwner
-	 * SecuritiesBalanceCustodyReportV07.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#mmAccountOwner
+	 * SecuritiesBalanceCustodyReportV07.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.AccountOwner;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.AccountOwner);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmAccountOwner);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmAccountOwner;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
 	};
+	protected PartyIdentification49Choice accountServicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -328,30 +331,31 @@ public class SecuritiesBalanceCustodyReportV08 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#AccountServicer
-	 * SecuritiesBalanceCustodyReportV09.AccountServicer}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmAccountServicer
+	 * SecuritiesBalanceCustodyReportV09.mmAccountServicer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#AccountServicer
-	 * SecuritiesBalanceCustodyReportV07.AccountServicer}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#mmAccountServicer
+	 * SecuritiesBalanceCustodyReportV07.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountServicer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountServicer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.AccountServicer;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.AccountServicer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmAccountServicer);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmAccountServicer;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification49Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount11 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -377,30 +381,31 @@ public class SecuritiesBalanceCustodyReportV08 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#SafekeepingAccount
-	 * SecuritiesBalanceCustodyReportV09.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmSafekeepingAccount
+	 * SecuritiesBalanceCustodyReportV09.mmSafekeepingAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#SafekeepingAccount
-	 * SecuritiesBalanceCustodyReportV07.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#mmSafekeepingAccount
+	 * SecuritiesBalanceCustodyReportV07.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.SafekeepingAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.SafekeepingAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmSafekeepingAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmSafekeepingAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount11.mmObject();
 		}
 	};
+	protected List<Intermediary23> intermediaryInformation;
 	/**
 	 * Information about the party that provides services relating to financial
 	 * products to investors, for example, advice on products and placement of
@@ -429,30 +434,31 @@ public class SecuritiesBalanceCustodyReportV08 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#IntermediaryInformation
-	 * SecuritiesBalanceCustodyReportV09.IntermediaryInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmIntermediaryInformation
+	 * SecuritiesBalanceCustodyReportV09.mmIntermediaryInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#IntermediaryInformation
-	 * SecuritiesBalanceCustodyReportV07.IntermediaryInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#mmIntermediaryInformation
+	 * SecuritiesBalanceCustodyReportV07.mmIntermediaryInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IntermediaryInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIntermediaryInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntrmyInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryInformation";
 			definition = "Information about the party that provides services relating to financial products to investors, for example, advice on products and placement of orders for the investment fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.IntermediaryInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.IntermediaryInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmIntermediaryInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmIntermediaryInformation;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> Intermediary23.mmObject();
 		}
 	};
+	protected List<AggregateBalanceInformation25> balanceForAccount;
 	/**
 	 * Net position of a segregated holding, in a single security, within the
 	 * overall position held in a securities account.
@@ -481,29 +487,30 @@ public class SecuritiesBalanceCustodyReportV08 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#BalanceForAccount
-	 * SecuritiesBalanceCustodyReportV09.BalanceForAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmBalanceForAccount
+	 * SecuritiesBalanceCustodyReportV09.mmBalanceForAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#BalanceForAccount
-	 * SecuritiesBalanceCustodyReportV07.BalanceForAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#mmBalanceForAccount
+	 * SecuritiesBalanceCustodyReportV07.mmBalanceForAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BalanceForAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBalanceForAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BalForAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccount";
 			definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.BalanceForAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.BalanceForAccount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmBalanceForAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmBalanceForAccount;
 			minOccurs = 0;
 			complexType_lazy = () -> AggregateBalanceInformation25.mmObject();
 		}
 	};
+	protected List<SubAccountIdentification37> subAccountDetails;
 	/**
 	 * Sub-account of the safekeeping or investment account.
 	 * <p>
@@ -529,29 +536,30 @@ public class SecuritiesBalanceCustodyReportV08 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#SubAccountDetails
-	 * SecuritiesBalanceCustodyReportV09.SubAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmSubAccountDetails
+	 * SecuritiesBalanceCustodyReportV09.mmSubAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#SubAccountDetails
-	 * SecuritiesBalanceCustodyReportV07.SubAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#mmSubAccountDetails
+	 * SecuritiesBalanceCustodyReportV07.mmSubAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Sub-account of the safekeeping or investment account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.SubAccountDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.SubAccountDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmSubAccountDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmSubAccountDetails;
 			minOccurs = 0;
 			complexType_lazy = () -> SubAccountIdentification37.mmObject();
 		}
 	};
+	protected TotalValueInPageAndStatement1 accountBaseCurrencyTotalAmounts;
 	/**
 	 * Total valuation amounts provided in the base currency of the account.
 	 * <p>
@@ -578,55 +586,28 @@ public class SecuritiesBalanceCustodyReportV08 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#AccountBaseCurrencyTotalAmounts
-	 * SecuritiesBalanceCustodyReportV09.AccountBaseCurrencyTotalAmounts}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmAccountBaseCurrencyTotalAmounts
+	 * SecuritiesBalanceCustodyReportV09.mmAccountBaseCurrencyTotalAmounts}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#AccountBaseCurrencyTotalAmounts
-	 * SecuritiesBalanceCustodyReportV07.AccountBaseCurrencyTotalAmounts}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07#mmAccountBaseCurrencyTotalAmounts
+	 * SecuritiesBalanceCustodyReportV07.mmAccountBaseCurrencyTotalAmounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountBaseCurrencyTotalAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountBaseCurrencyTotalAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctBaseCcyTtlAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBaseCurrencyTotalAmounts";
 			definition = "Total valuation amounts provided in the base currency of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.AccountBaseCurrencyTotalAmounts;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.AccountBaseCurrencyTotalAmounts);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmAccountBaseCurrencyTotalAmounts);
+			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmAccountBaseCurrencyTotalAmounts;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TotalValueInPageAndStatement1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "08"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "002";
-			version = "08";
-			flavour = "001";
 		}
 	};
 
@@ -636,20 +617,99 @@ public class SecuritiesBalanceCustodyReportV08 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceCustodyReportV08";
 				definition = "Scope\nAn account servicer sends a SecuritiesBalanceCustodyReport to an account owner to provide, at a moment in time, the quantity and identification of the financial instruments that the account servicer holds for the account owner.\n\nThe account servicer/owner relationship may be:\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants, or\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or \n- a custodian acting on behalf of an investment management institution or a broker/dealer, or\n- a transfer agent acting on behalf of a fund manager or an account owner's designated agent.\n\nUsage\nThe message can also include availability and the location of holdings to facilitate trading and minimise settlement issues. The message reports all information per financial instrument, that is, when a financial instrument is held at multiple places of safekeeping, the total holdings for all locations can be provided. \nThe message should be sent at a frequency agreed bi-laterally between the account servicer and the account owner. The message may be provided on a trade date, contractual or settlement date basis. \nThere may be one or more intermediary parties, for example, an intermediary or a concentrator between the account owner and account servicer.\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
-				previousVersion_lazy = () -> SecuritiesBalanceCustodyReportV07.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesBalanceCustodyReportV09.mmObject());
+				previousVersion_lazy = () -> SecuritiesBalanceCustodyReportV07.mmObject();
 				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesBalCtdyRpt";
 				businessArea_lazy = () -> SecuritiesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.StatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.AccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.SafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.IntermediaryInformation, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.BalanceForAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.SubAccountDetails, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.AccountBaseCurrencyTotalAmounts);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmAccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmIntermediaryInformation, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmBalanceForAccount,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmSubAccountDetails, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmAccountBaseCurrencyTotalAmounts);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "002";
+						version = "08";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public Statement33 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(Statement33 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public PartyIdentification36Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public PartyIdentification49Choice getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(PartyIdentification49Choice accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public SecuritiesAccount11 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount11 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<Intermediary23> getIntermediaryInformation() {
+		return intermediaryInformation;
+	}
+
+	public void setIntermediaryInformation(List<Intermediary23> intermediaryInformation) {
+		this.intermediaryInformation = intermediaryInformation;
+	}
+
+	public List<AggregateBalanceInformation25> getBalanceForAccount() {
+		return balanceForAccount;
+	}
+
+	public void setBalanceForAccount(List<AggregateBalanceInformation25> balanceForAccount) {
+		this.balanceForAccount = balanceForAccount;
+	}
+
+	public List<SubAccountIdentification37> getSubAccountDetails() {
+		return subAccountDetails;
+	}
+
+	public void setSubAccountDetails(List<SubAccountIdentification37> subAccountDetails) {
+		this.subAccountDetails = subAccountDetails;
+	}
+
+	public TotalValueInPageAndStatement1 getAccountBaseCurrencyTotalAmounts() {
+		return accountBaseCurrencyTotalAmounts;
+	}
+
+	public void setAccountBaseCurrencyTotalAmounts(TotalValueInPageAndStatement1 accountBaseCurrencyTotalAmounts) {
+		this.accountBaseCurrencyTotalAmounts = accountBaseCurrencyTotalAmounts;
 	}
 }

@@ -34,14 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AdditionalReferences#Reference
- * AdditionalReferences.Reference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalReferences#MessageName
- * AdditionalReferences.MessageName}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReferences#mmReference
+ * AdditionalReferences.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalReferences#ReferenceIssuer
- * AdditionalReferences.ReferenceIssuer}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReferences#mmMessageName
+ * AdditionalReferences.mmMessageName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReferences#mmReferenceIssuer
+ * AdditionalReferences.mmReferenceIssuer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalReferences {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reference;
 	/**
 	 * Unambiguous reference to a previous message having a business relevance
 	 * with this message.
@@ -80,8 +82,8 @@ public class AdditionalReferences {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +104,21 @@ public class AdditionalReferences {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalReferences.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Unambiguous reference to a previous message having a business relevance with this message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text messageName;
 	/**
 	 * Name of the message which contained the given additional reference as its
 	 * message reference.
@@ -146,7 +149,7 @@ public class AdditionalReferences {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalReferences.mmObject();
 			isDerived = false;
@@ -154,11 +157,12 @@ public class AdditionalReferences {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of the message which contained the given additional reference as its message reference.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification referenceIssuer;
 	/**
 	 * Party that initially assigned the given additional reference.
 	 * <p>
@@ -172,8 +176,8 @@ public class AdditionalReferences {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,33 +197,57 @@ public class AdditionalReferences {
 	 * "Party that initially assigned the given additional reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalReferences.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RefIssr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceIssuer";
 			definition = "Party that initially assigned the given additional reference.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReferences.Reference, com.tools20022.repository.msg.AdditionalReferences.MessageName,
-						com.tools20022.repository.msg.AdditionalReferences.ReferenceIssuer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReferences.mmReference, com.tools20022.repository.msg.AdditionalReferences.mmMessageName,
+						com.tools20022.repository.msg.AdditionalReferences.mmReferenceIssuer);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReferences";
 				definition = "Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReference() {
+		return reference;
+	}
+
+	public void setReference(Max35Text reference) {
+		this.reference = reference;
+	}
+
+	public Max35Text getMessageName() {
+		return messageName;
+	}
+
+	public void setMessageName(Max35Text messageName) {
+		this.messageName = messageName;
+	}
+
+	public PartyIdentification getReferenceIssuer() {
+		return referenceIssuer;
+	}
+
+	public void setReferenceIssuer(com.tools20022.repository.msg.PartyIdentification referenceIssuer) {
+		this.referenceIssuer = referenceIssuer;
 	}
 }

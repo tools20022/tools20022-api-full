@@ -36,8 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyPrivate1#PrivateIdentification
- * PartyPrivate1.PrivateIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyPrivate1#mmPrivateIdentification
+ * PartyPrivate1.mmPrivateIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyPrivate1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PersonIdentification4 privateIdentification;
 	/**
 	 * Unique and unambiguous identification of a person, eg, passport.
 	 * <p>
@@ -96,33 +97,41 @@ public class PartyPrivate1 {
 	 * "Unique and unambiguous identification of a person, eg, passport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrivateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyPrivate1.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> PartyPrivate1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateIdentification";
 			definition = "Unique and unambiguous identification of a person, eg, passport.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PersonIdentification4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PersonIdentification4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyPrivate1.PrivateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyPrivate1.mmPrivateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyPrivate1";
 				definition = "Choice between the identification of a person and the identification of a non-financial institution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PersonIdentification4 getPrivateIdentification() {
+		return privateIdentification;
+	}
+
+	public void setPrivateIdentification(PersonIdentification4 privateIdentification) {
+		this.privateIdentification = privateIdentification;
 	}
 }

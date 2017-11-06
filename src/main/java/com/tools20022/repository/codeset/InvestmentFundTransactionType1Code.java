@@ -34,78 +34,78 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#All
- * InvestmentFundTransactionType1Code.All}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmAll
+ * InvestmentFundTransactionType1Code.mmAll}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#SecuritiesSale
- * InvestmentFundTransactionType1Code.SecuritiesSale}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmSecuritiesSale
+ * InvestmentFundTransactionType1Code.mmSecuritiesSale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#SecuritiesPurchase
- * InvestmentFundTransactionType1Code.SecuritiesPurchase}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmSecuritiesPurchase
+ * InvestmentFundTransactionType1Code.mmSecuritiesPurchase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#SwitchOut
- * InvestmentFundTransactionType1Code.SwitchOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmSwitchOut
+ * InvestmentFundTransactionType1Code.mmSwitchOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#TransferIn
- * InvestmentFundTransactionType1Code.TransferIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmTransferIn
+ * InvestmentFundTransactionType1Code.mmTransferIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#TransferOut
- * InvestmentFundTransactionType1Code.TransferOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmTransferOut
+ * InvestmentFundTransactionType1Code.mmTransferOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#Subscription
- * InvestmentFundTransactionType1Code.Subscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmSubscription
+ * InvestmentFundTransactionType1Code.mmSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#Redemption
- * InvestmentFundTransactionType1Code.Redemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmRedemption
+ * InvestmentFundTransactionType1Code.mmRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#CashDeposit
- * InvestmentFundTransactionType1Code.CashDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmCashDeposit
+ * InvestmentFundTransactionType1Code.mmCashDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#CashWithdrawal
- * InvestmentFundTransactionType1Code.CashWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmCashWithdrawal
+ * InvestmentFundTransactionType1Code.mmCashWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#DividendPayment
- * InvestmentFundTransactionType1Code.DividendPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmDividendPayment
+ * InvestmentFundTransactionType1Code.mmDividendPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#CorporationActionEvent
- * InvestmentFundTransactionType1Code.CorporationActionEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmCorporationActionEvent
+ * InvestmentFundTransactionType1Code.mmCorporationActionEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#CrossIn
- * InvestmentFundTransactionType1Code.CrossIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmCrossIn
+ * InvestmentFundTransactionType1Code.mmCrossIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#CrossOut
- * InvestmentFundTransactionType1Code.CrossOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmCrossOut
+ * InvestmentFundTransactionType1Code.mmCrossOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#Dividend
- * InvestmentFundTransactionType1Code.Dividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmDividend
+ * InvestmentFundTransactionType1Code.mmDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#InSpecie
- * InvestmentFundTransactionType1Code.InSpecie}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmInSpecie
+ * InvestmentFundTransactionType1Code.mmInSpecie}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#Other
- * InvestmentFundTransactionType1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmOther
+ * InvestmentFundTransactionType1Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#RedemptionAssetAllocation
- * InvestmentFundTransactionType1Code.RedemptionAssetAllocation}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmRedemptionAssetAllocation
+ * InvestmentFundTransactionType1Code.mmRedemptionAssetAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#RedemptionWithdrawingPlan
- * InvestmentFundTransactionType1Code.RedemptionWithdrawingPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmRedemptionWithdrawingPlan
+ * InvestmentFundTransactionType1Code.mmRedemptionWithdrawingPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#ReinvestmentOfDividend
- * InvestmentFundTransactionType1Code.ReinvestmentOfDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmReinvestmentOfDividend
+ * InvestmentFundTransactionType1Code.mmReinvestmentOfDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#SubscriptionSavingsPlan
- * InvestmentFundTransactionType1Code.SubscriptionSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmSubscriptionSavingsPlan
+ * InvestmentFundTransactionType1Code.mmSubscriptionSavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#SubscriptionAssetAllocation
- * InvestmentFundTransactionType1Code.SubscriptionAssetAllocation}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionType1Code#mmSubscriptionAssetAllocation
+ * InvestmentFundTransactionType1Code.mmSubscriptionAssetAllocation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -135,7 +135,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "All"</li>
 	 * </ul>
 	 */
-	public static final MMCode All = new MMCode() {
+	public static final MMCode mmAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
@@ -158,7 +158,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "SecuritiesSale"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesSale = new MMCode() {
+	public static final MMCode mmSecuritiesSale = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSale";
@@ -181,7 +181,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "SecuritiesPurchase"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesPurchase = new MMCode() {
+	public static final MMCode mmSecuritiesPurchase = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPurchase";
@@ -204,7 +204,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "SwitchOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwitchOut = new MMCode() {
+	public static final MMCode mmSwitchOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOut";
@@ -227,7 +227,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "TransferIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferIn = new MMCode() {
+	public static final MMCode mmTransferIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIn";
@@ -250,7 +250,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "TransferOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferOut = new MMCode() {
+	public static final MMCode mmTransferOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOut";
@@ -273,7 +273,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "Subscription"</li>
 	 * </ul>
 	 */
-	public static final MMCode Subscription = new MMCode() {
+	public static final MMCode mmSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
@@ -296,7 +296,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode Redemption = new MMCode() {
+	public static final MMCode mmRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
@@ -319,7 +319,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "CashDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDeposit = new MMCode() {
+	public static final MMCode mmCashDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDeposit";
@@ -342,7 +342,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "CashWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashWithdrawal = new MMCode() {
+	public static final MMCode mmCashWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashWithdrawal";
@@ -365,7 +365,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "DividendPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendPayment = new MMCode() {
+	public static final MMCode mmDividendPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPayment";
@@ -388,7 +388,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "CorporationActionEvent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporationActionEvent = new MMCode() {
+	public static final MMCode mmCorporationActionEvent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporationActionEvent";
@@ -411,7 +411,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "CrossIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode CrossIn = new MMCode() {
+	public static final MMCode mmCrossIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossIn";
@@ -434,7 +434,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "CrossOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode CrossOut = new MMCode() {
+	public static final MMCode mmCrossOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossOut";
@@ -457,7 +457,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "Dividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode Dividend = new MMCode() {
+	public static final MMCode mmDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
@@ -480,7 +480,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "InSpecie"</li>
 	 * </ul>
 	 */
-	public static final MMCode InSpecie = new MMCode() {
+	public static final MMCode mmInSpecie = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InSpecie";
@@ -503,7 +503,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -526,7 +526,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "RedemptionAssetAllocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode RedemptionAssetAllocation = new MMCode() {
+	public static final MMCode mmRedemptionAssetAllocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionAssetAllocation";
@@ -549,7 +549,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "RedemptionWithdrawingPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode RedemptionWithdrawingPlan = new MMCode() {
+	public static final MMCode mmRedemptionWithdrawingPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionWithdrawingPlan";
@@ -572,7 +572,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "ReinvestmentOfDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReinvestmentOfDividend = new MMCode() {
+	public static final MMCode mmReinvestmentOfDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentOfDividend";
@@ -595,7 +595,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "SubscriptionSavingsPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode SubscriptionSavingsPlan = new MMCode() {
+	public static final MMCode mmSubscriptionSavingsPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionSavingsPlan";
@@ -618,7 +618,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 * name} = "SubscriptionAssetAllocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode SubscriptionAssetAllocation = new MMCode() {
+	public static final MMCode mmSubscriptionAssetAllocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionAssetAllocation";
@@ -629,21 +629,21 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionType1Code";
 				definition = "Specifies the type of transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.All, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.SecuritiesSale,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.SecuritiesPurchase, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.SwitchOut,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.TransferIn, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.TransferOut,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.Subscription, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.Redemption,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.CashDeposit, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.CashWithdrawal,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.DividendPayment, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.CorporationActionEvent,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.CrossIn, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.CrossOut,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.Dividend, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.InSpecie,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.Other, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.RedemptionAssetAllocation,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.RedemptionWithdrawingPlan, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.ReinvestmentOfDividend,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.SubscriptionSavingsPlan, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.SubscriptionAssetAllocation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmAll, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSecuritiesSale,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSecuritiesPurchase, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSwitchOut,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmTransferIn, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmTransferOut,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSubscription, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmRedemption,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmCashDeposit, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmCashWithdrawal,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmDividendPayment, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmCorporationActionEvent,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmCrossIn, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmCrossOut,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmDividend, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmInSpecie,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmOther, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmRedemptionAssetAllocation,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmRedemptionWithdrawingPlan, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmReinvestmentOfDividend,
+						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSubscriptionSavingsPlan, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSubscriptionAssetAllocation);
 				trace_lazy = () -> InvestmentFundTransactionTypeCode.mmObject();
 			}
 		});

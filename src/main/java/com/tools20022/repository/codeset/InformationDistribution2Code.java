@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationDistribution2Code#Electronic
- * InformationDistribution2Code.Electronic}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationDistribution2Code#mmElectronic
+ * InformationDistribution2Code.mmElectronic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationDistribution2Code#NoDistribution
- * InformationDistribution2Code.NoDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationDistribution2Code#mmNoDistribution
+ * InformationDistribution2Code.mmNoDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationDistribution2Code#Paper
- * InformationDistribution2Code.Paper}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationDistribution2Code#mmPaper
+ * InformationDistribution2Code.mmPaper}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class InformationDistribution2Code extends InformationDistributionCode {
 	 * name} = "Electronic"</li>
 	 * </ul>
 	 */
-	public static final MMCode Electronic = new MMCode() {
+	public static final MMCode mmElectronic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
@@ -101,7 +101,7 @@ public class InformationDistribution2Code extends InformationDistributionCode {
 	 * name} = "NoDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoDistribution = new MMCode() {
+	public static final MMCode mmNoDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoDistribution";
@@ -124,7 +124,7 @@ public class InformationDistribution2Code extends InformationDistributionCode {
 	 * name} = "Paper"</li>
 	 * </ul>
 	 */
-	public static final MMCode Paper = new MMCode() {
+	public static final MMCode mmPaper = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paper";
@@ -135,12 +135,12 @@ public class InformationDistribution2Code extends InformationDistributionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InformationDistribution2Code";
 				definition = "Specifies how information is to be distributed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationDistribution2Code.Electronic, com.tools20022.repository.codeset.InformationDistribution2Code.NoDistribution,
-						com.tools20022.repository.codeset.InformationDistribution2Code.Paper);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationDistribution2Code.mmElectronic, com.tools20022.repository.codeset.InformationDistribution2Code.mmNoDistribution,
+						com.tools20022.repository.codeset.InformationDistribution2Code.mmPaper);
 				trace_lazy = () -> InformationDistributionCode.mmObject();
 			}
 		});

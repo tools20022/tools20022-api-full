@@ -29,16 +29,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProfileTypeCode#Treasury
- * ProfileTypeCode.Treasury}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProfileTypeCode#mmTreasury
+ * ProfileTypeCode.mmTreasury}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProfileTypeCode#HighFrequencyTrader
- * ProfileTypeCode.HighFrequencyTrader}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProfileTypeCode#mmHighFrequencyTrader
+ * ProfileTypeCode.mmHighFrequencyTrader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProfileTypeCode#MarketMaker
- * ProfileTypeCode.MarketMaker}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProfileTypeCode#Hedge
- * ProfileTypeCode.Hedge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProfileTypeCode#mmMarketMaker
+ * ProfileTypeCode.mmMarketMaker}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProfileTypeCode#mmHedge
+ * ProfileTypeCode.mmHedge}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,7 +90,7 @@ public class ProfileTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Treasury = new MMCode() {
+	public static final MMCode mmTreasury = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Treasury";
@@ -126,7 +126,7 @@ public class ProfileTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HighFrequencyTrader = new MMCode() {
+	public static final MMCode mmHighFrequencyTrader = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighFrequencyTrader";
@@ -162,7 +162,7 @@ public class ProfileTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MarketMaker = new MMCode() {
+	public static final MMCode mmMarketMaker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
@@ -195,7 +195,7 @@ public class ProfileTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Hedge = new MMCode() {
+	public static final MMCode mmHedge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hedge";
@@ -208,12 +208,12 @@ public class ProfileTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProfileTypeCode";
 				definition = "Specifies the type of profile.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProfileTypeCode.Treasury, com.tools20022.repository.codeset.ProfileTypeCode.HighFrequencyTrader,
-						com.tools20022.repository.codeset.ProfileTypeCode.MarketMaker, com.tools20022.repository.codeset.ProfileTypeCode.Hedge);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProfileTypeCode.mmTreasury, com.tools20022.repository.codeset.ProfileTypeCode.mmHighFrequencyTrader,
+						com.tools20022.repository.codeset.ProfileTypeCode.mmMarketMaker, com.tools20022.repository.codeset.ProfileTypeCode.mmHedge);
 				derivation_lazy = () -> Arrays.asList(ProfileType1Code.mmObject());
 			}
 		});

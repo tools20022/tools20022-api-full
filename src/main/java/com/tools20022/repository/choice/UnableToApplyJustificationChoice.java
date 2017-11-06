@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.msg.MissingOrIncorrectInformation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnableToApplyJustificationChoice#AnyInformation
- * UnableToApplyJustificationChoice.AnyInformation}</li>
+ * {@linkplain com.tools20022.repository.choice.UnableToApplyJustificationChoice#mmAnyInformation
+ * UnableToApplyJustificationChoice.mmAnyInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnableToApplyJustificationChoice#MissingOrIncorrectInformation
- * UnableToApplyJustificationChoice.MissingOrIncorrectInformation}</li>
+ * {@linkplain com.tools20022.repository.choice.UnableToApplyJustificationChoice#mmMissingOrIncorrectInformation
+ * UnableToApplyJustificationChoice.mmMissingOrIncorrectInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,15 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.UnableToApply#Justification
- * UnableToApply.Justification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.UnableToApply#mmJustification
+ * UnableToApply.mmJustification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnableToApplyJustificationChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator anyInformation;
 	/**
 	 * When set to yes, indicates that all available information about the
 	 * underlying payment instruction shall be sent.
@@ -102,7 +104,7 @@ public class UnableToApplyJustificationChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AnyInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAnyInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnableToApplyJustificationChoice.mmObject();
 			isDerived = false;
@@ -110,11 +112,12 @@ public class UnableToApplyJustificationChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyInformation";
 			definition = "When set to yes, indicates that all available information about the underlying payment instruction shall be sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected MissingOrIncorrectInformation missingOrIncorrectInformation;
 	/**
 	 * Missing or incorrect information.
 	 * <p>
@@ -142,7 +145,7 @@ public class UnableToApplyJustificationChoice {
 	 * definition} = "Missing or incorrect information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MissingOrIncorrectInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMissingOrIncorrectInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UnableToApplyJustificationChoice.mmObject();
 			isDerived = false;
@@ -150,24 +153,41 @@ public class UnableToApplyJustificationChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingOrIncorrectInformation";
 			definition = "Missing or incorrect information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.MissingOrIncorrectInformation.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MissingOrIncorrectInformation.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnableToApplyJustificationChoice.AnyInformation, com.tools20022.repository.choice.UnableToApplyJustificationChoice.MissingOrIncorrectInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.UnableToApply.Justification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.choice.UnableToApplyJustificationChoice.mmAnyInformation, com.tools20022.repository.choice.UnableToApplyJustificationChoice.mmMissingOrIncorrectInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.UnableToApply.mmJustification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyJustificationChoice";
 				definition = "Choice between details of missing information or the complete set of available information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getAnyInformation() {
+		return anyInformation;
+	}
+
+	public void setAnyInformation(YesNoIndicator anyInformation) {
+		this.anyInformation = anyInformation;
+	}
+
+	public MissingOrIncorrectInformation getMissingOrIncorrectInformation() {
+		return missingOrIncorrectInformation;
+	}
+
+	public void setMissingOrIncorrectInformation(MissingOrIncorrectInformation missingOrIncorrectInformation) {
+		this.missingOrIncorrectInformation = missingOrIncorrectInformation;
 	}
 }

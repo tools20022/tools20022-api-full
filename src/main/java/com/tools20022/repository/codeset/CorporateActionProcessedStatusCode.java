@@ -30,26 +30,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#Received
- * CorporateActionProcessedStatusCode.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#mmReceived
+ * CorporateActionProcessedStatusCode.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#Accepted
- * CorporateActionProcessedStatusCode.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#mmAccepted
+ * CorporateActionProcessedStatusCode.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#Pending
- * CorporateActionProcessedStatusCode.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#mmPending
+ * CorporateActionProcessedStatusCode.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#Completed
- * CorporateActionProcessedStatusCode.Completed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#mmCompleted
+ * CorporateActionProcessedStatusCode.mmCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#WaitingDeactivationDate
- * CorporateActionProcessedStatusCode.WaitingDeactivationDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#mmWaitingDeactivationDate
+ * CorporateActionProcessedStatusCode.mmWaitingDeactivationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#SentToMarket
- * CorporateActionProcessedStatusCode.SentToMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#mmSentToMarket
+ * CorporateActionProcessedStatusCode.mmSentToMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#AcceptedWithWarning
- * CorporateActionProcessedStatusCode.AcceptedWithWarning}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode#mmAcceptedWithWarning
+ * CorporateActionProcessedStatusCode.mmAcceptedWithWarning}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -72,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -115,7 +115,7 @@ public class CorporateActionProcessedStatusCode {
 	 * definition} = "The instruction/request has been received."</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Received";
@@ -145,7 +145,7 @@ public class CorporateActionProcessedStatusCode {
 	 * definition} = "The request is accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Accepted";
@@ -175,7 +175,7 @@ public class CorporateActionProcessedStatusCode {
 	 * definition} = "The processing of the request is pending."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Pending";
@@ -205,7 +205,7 @@ public class CorporateActionProcessedStatusCode {
 	 * definition} = "The request has been completed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Completed = new MMCode() {
+	public static final MMCode mmCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Completed";
@@ -235,7 +235,7 @@ public class CorporateActionProcessedStatusCode {
 	 * definition} = "Awaiting the deactivation date."</li>
 	 * </ul>
 	 */
-	public static final MMCode WaitingDeactivationDate = new MMCode() {
+	public static final MMCode mmWaitingDeactivationDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WaitingDeactivationDate";
@@ -265,7 +265,7 @@ public class CorporateActionProcessedStatusCode {
 	 * definition} = "The advice has been sent to the market."</li>
 	 * </ul>
 	 */
-	public static final MMCode SentToMarket = new MMCode() {
+	public static final MMCode mmSentToMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SentToMarket";
@@ -298,7 +298,7 @@ public class CorporateActionProcessedStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedWithWarning = new MMCode() {
+	public static final MMCode mmAcceptedWithWarning = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AcceptedWithWarning";
@@ -311,15 +311,15 @@ public class CorporateActionProcessedStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionProcessedStatusCode";
 				definition = "Specifies the processing status of a corporate action transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.Received, com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.Accepted,
-						com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.Pending, com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.Completed,
-						com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.WaitingDeactivationDate, com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.SentToMarket,
-						com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.AcceptedWithWarning);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.mmReceived, com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.mmAccepted,
+						com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.mmPending, com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.mmCompleted,
+						com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.mmWaitingDeactivationDate, com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.mmSentToMarket,
+						com.tools20022.repository.codeset.CorporateActionProcessedStatusCode.mmAcceptedWithWarning);
 				derivation_lazy = () -> Arrays.asList(ProcessedStatus2Code.mmObject(), ProcessedStatus1Code.mmObject(), ProcessedStatus3Code.mmObject(), ProcessedStatus5Code.mmObject(), ProcessedStatus4Code.mmObject(),
 						ProcessedStatus6Code.mmObject());
 			}

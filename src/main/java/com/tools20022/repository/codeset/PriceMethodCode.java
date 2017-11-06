@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceMethodCode#ForwardPrice
- * PriceMethodCode.ForwardPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceMethodCode#mmForwardPrice
+ * PriceMethodCode.mmForwardPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceMethodCode#HistoricalPrice
- * PriceMethodCode.HistoricalPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceMethodCode#mmHistoricalPrice
+ * PriceMethodCode.mmHistoricalPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class PriceMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ForwardPrice = new MMCode() {
+	public static final MMCode mmForwardPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ForwardPrice";
@@ -125,7 +125,7 @@ public class PriceMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HistoricalPrice = new MMCode() {
+	public static final MMCode mmHistoricalPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HistoricalPrice";
@@ -138,12 +138,12 @@ public class PriceMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FORW");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceMethodCode";
 				definition = "Specifies the type of pricing calculation method.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceMethodCode.ForwardPrice, com.tools20022.repository.codeset.PriceMethodCode.HistoricalPrice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceMethodCode.mmForwardPrice, com.tools20022.repository.codeset.PriceMethodCode.mmHistoricalPrice);
 				derivation_lazy = () -> Arrays.asList(PriceMethod1Code.mmObject());
 			}
 		});

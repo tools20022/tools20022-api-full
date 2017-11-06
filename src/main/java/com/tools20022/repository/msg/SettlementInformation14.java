@@ -38,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInformation14#SettlementMethod
- * SettlementInformation14.SettlementMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInformation14#mmSettlementMethod
+ * SettlementInformation14.mmSettlementMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInformation14#SettlementAccount
- * SettlementInformation14.SettlementAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInformation14#mmSettlementAccount
+ * SettlementInformation14.mmSettlementAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementInformation14#ClearingSystem
- * SettlementInformation14.ClearingSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInformation14#mmClearingSystem
+ * SettlementInformation14.mmClearingSystem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementInformation14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlementMethod2Code settlementMethod;
 	/**
 	 * Method used to settle the (batch of) payment instructions.
 	 * <p>
@@ -84,8 +85,8 @@ public class SettlementInformation14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#SettlementMethod
-	 * CashSettlement.SettlementMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementMethod
+	 * CashSettlement.mmSettlementMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +106,21 @@ public class SettlementInformation14 {
 	 * "Method used to settle the (batch of) payment instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmSettlementMethod;
 			componentContext_lazy = () -> SettlementInformation14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.SettlementMethod;
 			isDerived = false;
 			xmlTag = "SttlmMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod";
 			definition = "Method used to settle the (batch of) payment instructions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementMethod2Code.mmObject();
 		}
 	};
+	protected CashAccount16 settlementAccount;
 	/**
 	 * A specific purpose account used to post debit and credit entries as a
 	 * result of the transaction.
@@ -131,8 +133,8 @@ public class SettlementInformation14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#SettlementAccount
-	 * CashSettlement.SettlementAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementAccount
+	 * CashSettlement.mmSettlementAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,21 +155,22 @@ public class SettlementInformation14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmSettlementAccount;
 			componentContext_lazy = () -> SettlementInformation14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.SettlementAccount;
 			isDerived = false;
 			xmlTag = "SttlmAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAccount";
 			definition = "A specific purpose account used to post debit and credit entries as a result of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount16.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	protected ClearingSystemIdentification3Choice clearingSystem;
 	/**
 	 * Specification of a pre-agreed offering between clearing agents or the
 	 * channel through which the payment instruction is processed.
@@ -203,34 +206,58 @@ public class SettlementInformation14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClearingSystem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClearingSystem = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInformation14.mmObject();
 			businessComponentTrace_lazy = () -> CashClearingSystem.mmObject();
+			componentContext_lazy = () -> SettlementInformation14.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSys";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystem";
 			definition = "Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is processed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ClearingSystemIdentification3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ClearingSystemIdentification3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInformation14.SettlementMethod, com.tools20022.repository.msg.SettlementInformation14.SettlementAccount,
-						com.tools20022.repository.msg.SettlementInformation14.ClearingSystem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInformation14.mmSettlementMethod, com.tools20022.repository.msg.SettlementInformation14.mmSettlementAccount,
+						com.tools20022.repository.msg.SettlementInformation14.mmClearingSystem);
 				trace_lazy = () -> CashSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementInformation14";
 				definition = "Set of elements used to provide information on the settlement of the instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlementMethod2Code getSettlementMethod() {
+		return settlementMethod;
+	}
+
+	public void setSettlementMethod(SettlementMethod2Code settlementMethod) {
+		this.settlementMethod = settlementMethod;
+	}
+
+	public CashAccount16 getSettlementAccount() {
+		return settlementAccount;
+	}
+
+	public void setSettlementAccount(com.tools20022.repository.msg.CashAccount16 settlementAccount) {
+		this.settlementAccount = settlementAccount;
+	}
+
+	public ClearingSystemIdentification3Choice getClearingSystem() {
+		return clearingSystem;
+	}
+
+	public void setClearingSystem(ClearingSystemIdentification3Choice clearingSystem) {
+		this.clearingSystem = clearingSystem;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MarketIdentification3Choice#MarketIdentifierCode
- * MarketIdentification3Choice.MarketIdentifierCode}</li>
+ * {@linkplain com.tools20022.repository.choice.MarketIdentification3Choice#mmMarketIdentifierCode
+ * MarketIdentification3Choice.mmMarketIdentifierCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MarketIdentification3Choice#Description
- * MarketIdentification3Choice.Description}</li>
+ * {@linkplain com.tools20022.repository.choice.MarketIdentification3Choice#mmDescription
+ * MarketIdentification3Choice.mmDescription}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarketIdentification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected MICIdentifier marketIdentifierCode;
 	/**
 	 * Market Identifier Code. Identification of a financial market, as
 	 * stipulated in the norm ISO 10383
@@ -85,8 +86,8 @@ public class MarketIdentification3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
-	 * OrganisationIdentification.MIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+	 * OrganisationIdentification.mmMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +108,21 @@ public class MarketIdentification3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketIdentifierCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketIdentifierCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> MarketIdentification3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.MIC;
 			isDerived = false;
 			xmlTag = "MktIdrCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentifierCode";
 			definition = "Market Identifier Code. Identification of a financial market, as stipulated in the norm ISO 10383 \"Codes for exchanges and market identifications\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected Max35Text description;
 	/**
 	 * Description of the market when no Market Identifier Code is available.
 	 * <p>
@@ -133,8 +135,8 @@ public class MarketIdentification3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
-	 * OrganisationIdentification.MIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+	 * OrganisationIdentification.mmMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,17 +156,17 @@ public class MarketIdentification3Choice {
 	 * "Description of the market when no Market Identifier Code is available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> MarketIdentification3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.MIC;
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the market when no Market Identifier Code is available.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -172,9 +174,9 @@ public class MarketIdentification3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketIdentification3Choice.MarketIdentifierCode, com.tools20022.repository.choice.MarketIdentification3Choice.Description);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketIdentification3Choice.mmMarketIdentifierCode, com.tools20022.repository.choice.MarketIdentification3Choice.mmDescription);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentification3Choice";
 				definition = "Choice of market identification.";
@@ -182,5 +184,21 @@ public class MarketIdentification3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MICIdentifier getMarketIdentifierCode() {
+		return marketIdentifierCode;
+	}
+
+	public void setMarketIdentifierCode(MICIdentifier marketIdentifierCode) {
+		this.marketIdentifierCode = marketIdentifierCode;
+	}
+
+	public Max35Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max35Text description) {
+		this.description = description;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.CollateralValuation3;
 import com.tools20022.repository.msg.CollateralValuation4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the collateral details for the secured markets.
@@ -35,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuredCollateral1Choice#SingleCollateral
- * SecuredCollateral1Choice.SingleCollateral}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuredCollateral1Choice#mmSingleCollateral
+ * SecuredCollateral1Choice.mmSingleCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuredCollateral1Choice#MultipleCollateral
- * SecuredCollateral1Choice.MultipleCollateral}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuredCollateral1Choice#mmMultipleCollateral
+ * SecuredCollateral1Choice.mmMultipleCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuredCollateral1Choice#PoolCollateral
- * SecuredCollateral1Choice.PoolCollateral}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuredCollateral1Choice#mmPoolCollateral
+ * SecuredCollateral1Choice.mmPoolCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuredCollateral1Choice#OtherCollateral
- * SecuredCollateral1Choice.OtherCollateral}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuredCollateral1Choice#mmOtherCollateral
+ * SecuredCollateral1Choice.mmOtherCollateral}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuredCollateral1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CollateralValuation3 singleCollateral;
 	/**
 	 * Identifies the security pledged via a single ISIN.
 	 * <p>
@@ -109,28 +111,29 @@ public class SecuredCollateral1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecuredCollateral2Choice#SingleCollateral
-	 * SecuredCollateral2Choice.SingleCollateral}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecuredCollateral2Choice#mmSingleCollateral
+	 * SecuredCollateral2Choice.mmSingleCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SingleCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSingleCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
+			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleCollateral";
 			definition = "Identifies the security pledged via a single ISIN.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral2Choice.SingleCollateral);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral2Choice.mmSingleCollateral);
 			maxOccurs = 1;
-			type_lazy = () -> CollateralValuation3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CollateralValuation3.mmObject();
 		}
 	};
+	protected List<CollateralValuation3> multipleCollateral;
 	/**
 	 * Identifies all securities pledged when the transaction is collateralised
 	 * with more than one security. <br>
@@ -170,27 +173,28 @@ public class SecuredCollateral1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecuredCollateral2Choice#MultipleCollateral
-	 * SecuredCollateral2Choice.MultipleCollateral}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecuredCollateral2Choice#mmMultipleCollateral
+	 * SecuredCollateral2Choice.mmMultipleCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MultipleCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMultipleCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
+			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MltplColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleCollateral";
 			definition = "Identifies all securities pledged when the transaction is collateralised with more than one security. \r\nUsage:\r\nIn case of multi-collateral repo, the nominal amount of each collateralised security must be provided.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral2Choice.MultipleCollateral);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral2Choice.mmMultipleCollateral);
 			minOccurs = 1;
-			type_lazy = () -> CollateralValuation3.mmObject();
 			isComposite = true;
+			type_lazy = () -> CollateralValuation3.mmObject();
 		}
 	};
+	protected CollateralValuation3 poolCollateral;
 	/**
 	 * Identifies the pooling of repos in which the collateral basket is
 	 * identified by an ISIN. <br>
@@ -230,28 +234,29 @@ public class SecuredCollateral1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecuredCollateral2Choice#PoolCollateral
-	 * SecuredCollateral2Choice.PoolCollateral}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecuredCollateral2Choice#mmPoolCollateral
+	 * SecuredCollateral2Choice.mmPoolCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PoolCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPoolCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
+			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PoolColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolCollateral";
 			definition = "Identifies the pooling of repos in which the collateral basket is identified by an ISIN. \r\n\r\nUsage: When the collateral basket is identified by an ISIN, the basket ISIN shall be reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral2Choice.PoolCollateral);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral2Choice.mmPoolCollateral);
 			maxOccurs = 1;
-			type_lazy = () -> CollateralValuation3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CollateralValuation3.mmObject();
 		}
 	};
+	protected List<CollateralValuation4> otherCollateral;
 	/**
 	 * Identifies the collateral when the asset class pledged as collateral does
 	 * not correspond to an ISIN.
@@ -288,35 +293,35 @@ public class SecuredCollateral1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecuredCollateral2Choice#OtherCollateral
-	 * SecuredCollateral2Choice.OtherCollateral}</li>
+	 * {@linkplain com.tools20022.repository.choice.SecuredCollateral2Choice#mmOtherCollateral
+	 * SecuredCollateral2Choice.mmOtherCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
+			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCollateral";
 			definition = "Identifies the collateral when the asset class pledged as collateral does not correspond to an ISIN.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral2Choice.OtherCollateral);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral2Choice.mmOtherCollateral);
 			minOccurs = 1;
-			type_lazy = () -> CollateralValuation4.mmObject();
 			isComposite = true;
+			type_lazy = () -> CollateralValuation4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral1Choice.SingleCollateral, com.tools20022.repository.choice.SecuredCollateral1Choice.MultipleCollateral,
-						com.tools20022.repository.choice.SecuredCollateral1Choice.PoolCollateral, com.tools20022.repository.choice.SecuredCollateral1Choice.OtherCollateral);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral1Choice.mmSingleCollateral, com.tools20022.repository.choice.SecuredCollateral1Choice.mmMultipleCollateral,
+						com.tools20022.repository.choice.SecuredCollateral1Choice.mmPoolCollateral, com.tools20022.repository.choice.SecuredCollateral1Choice.mmOtherCollateral);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuredCollateral1Choice";
 				definition = "Provides the collateral details for the secured markets.";
@@ -324,5 +329,37 @@ public class SecuredCollateral1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CollateralValuation3 getSingleCollateral() {
+		return singleCollateral;
+	}
+
+	public void setSingleCollateral(CollateralValuation3 singleCollateral) {
+		this.singleCollateral = singleCollateral;
+	}
+
+	public List<CollateralValuation3> getMultipleCollateral() {
+		return multipleCollateral;
+	}
+
+	public void setMultipleCollateral(List<CollateralValuation3> multipleCollateral) {
+		this.multipleCollateral = multipleCollateral;
+	}
+
+	public CollateralValuation3 getPoolCollateral() {
+		return poolCollateral;
+	}
+
+	public void setPoolCollateral(CollateralValuation3 poolCollateral) {
+		this.poolCollateral = poolCollateral;
+	}
+
+	public List<CollateralValuation4> getOtherCollateral() {
+		return otherCollateral;
+	}
+
+	public void setOtherCollateral(List<CollateralValuation4> otherCollateral) {
+		this.otherCollateral = otherCollateral;
 	}
 }

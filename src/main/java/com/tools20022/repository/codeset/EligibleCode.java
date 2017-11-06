@@ -29,10 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EligibleCode#Eligible
- * EligibleCode.Eligible}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EligibleCode#NotEligible
- * EligibleCode.NotEligible}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EligibleCode#mmEligible
+ * EligibleCode.mmEligible}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EligibleCode#mmNotEligible
+ * EligibleCode.mmNotEligible}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,7 +80,7 @@ public class EligibleCode {
 	 * definition} = "Item is eligible."</li>
 	 * </ul>
 	 */
-	public static final MMCode Eligible = new MMCode() {
+	public static final MMCode mmEligible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Eligible";
@@ -109,7 +109,7 @@ public class EligibleCode {
 	 * definition} = "Item is not eligible."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotEligible = new MMCode() {
+	public static final MMCode mmNotEligible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEligible";
@@ -122,11 +122,11 @@ public class EligibleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EligibleCode";
 				definition = "Specifies whether the item is eligible or not eligible.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EligibleCode.Eligible, com.tools20022.repository.codeset.EligibleCode.NotEligible);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EligibleCode.mmEligible, com.tools20022.repository.codeset.EligibleCode.mmNotEligible);
 				derivation_lazy = () -> Arrays.asList(Eligible1Code.mmObject());
 			}
 		});

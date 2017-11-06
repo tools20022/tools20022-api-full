@@ -57,24 +57,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#Header
- * ATMDiagnosticResponseV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#mmHeader
+ * ATMDiagnosticResponseV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#ProtectedATMDiagnosticResponse
- * ATMDiagnosticResponseV02.ProtectedATMDiagnosticResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#mmProtectedATMDiagnosticResponse
+ * ATMDiagnosticResponseV02.mmProtectedATMDiagnosticResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#ATMDiagnosticResponse
- * ATMDiagnosticResponseV02.ATMDiagnosticResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#mmATMDiagnosticResponse
+ * ATMDiagnosticResponseV02.mmATMDiagnosticResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#SecurityTrailer
- * ATMDiagnosticResponseV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#mmSecurityTrailer
+ * ATMDiagnosticResponseV02.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02#identifier
- * ATMDiagnosticResponseV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caam.006.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDiagnosticResponseV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header31 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -119,17 +118,18 @@ public class ATMDiagnosticResponseV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header31.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedATMDiagnosticResponse;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -153,17 +153,18 @@ public class ATMDiagnosticResponseV02 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedATMDiagnosticResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedATMDiagnosticResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMDgnstcRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMDiagnosticResponse";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected ATMDiagnosticResponse2 aTMDiagnosticResponse;
 	/**
 	 * Information related to the response of a diagnostic from an ATM manager.
 	 * <p>
@@ -189,17 +190,18 @@ public class ATMDiagnosticResponseV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMDiagnosticResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMDiagnosticResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMDgnstcRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDiagnosticResponse";
 			definition = "Information related to the response of a diagnostic from an ATM manager.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ATMDiagnosticResponse2.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -223,42 +225,15 @@ public class ATMDiagnosticResponseV02 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caam"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "006"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caam";
-			messageFunctionality = "006";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -273,11 +248,50 @@ public class ATMDiagnosticResponseV02 {
 				rootElement = "Document";
 				xmlTag = "ATMDgnstcRspn";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.Header, com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.ProtectedATMDiagnosticResponse,
-						com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.ATMDiagnosticResponse, com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.mmHeader, com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.mmProtectedATMDiagnosticResponse,
+						com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.mmATMDiagnosticResponse, com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caam";
+						messageFunctionality = "006";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header31 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header31 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedATMDiagnosticResponse() {
+		return protectedATMDiagnosticResponse;
+	}
+
+	public void setProtectedATMDiagnosticResponse(ContentInformationType10 protectedATMDiagnosticResponse) {
+		this.protectedATMDiagnosticResponse = protectedATMDiagnosticResponse;
+	}
+
+	public ATMDiagnosticResponse2 getATMDiagnosticResponse() {
+		return aTMDiagnosticResponse;
+	}
+
+	public void setATMDiagnosticResponse(ATMDiagnosticResponse2 aTMDiagnosticResponse) {
+		this.aTMDiagnosticResponse = aTMDiagnosticResponse;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

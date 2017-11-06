@@ -38,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CutOff1#CutOffUpdateIdentification
- * CutOff1.CutOffUpdateIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CutOff1#Currency
- * CutOff1.Currency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CutOff1#CutOffTime
- * CutOff1.CutOffTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CutOff1#ValueDateOffset
- * CutOff1.ValueDateOffset}</li>
+ * {@linkplain com.tools20022.repository.msg.CutOff1#mmCutOffUpdateIdentification
+ * CutOff1.mmCutOffUpdateIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CutOff1#mmCurrency
+ * CutOff1.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CutOff1#mmCutOffTime
+ * CutOff1.mmCutOffTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CutOff1#mmValueDateOffset
+ * CutOff1.mmValueDateOffset}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CutOff1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text cutOffUpdateIdentification;
 	/**
 	 * Identification for the updated netting cut off.
 	 * <p>
@@ -101,20 +102,21 @@ public class CutOff1 {
 	 * definition} = "Identification for the updated netting cut off."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CutOffUpdateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCutOffUpdateIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CutOff1.mmObject();
 			businessComponentTrace_lazy = () -> SystemEventInformation.mmObject();
+			componentContext_lazy = () -> CutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "CutOffUpdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffUpdateIdentification";
 			definition = "Identification for the updated netting cut off.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode currency;
 	/**
 	 * Currency linked to the netting cut off.
 	 * <p>
@@ -128,8 +130,8 @@ public class CutOff1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#BaseCurrency
-	 * Account.BaseCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmBaseCurrency
+	 * Account.mmBaseCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.CutOff1
@@ -147,20 +149,21 @@ public class CutOff1 {
 	 * definition} = "Currency linked to the netting cut off."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
 			componentContext_lazy = () -> CutOff1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.BaseCurrency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency linked to the netting cut off.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ISOTime cutOffTime;
 	/**
 	 * Cut off time value for the netting cut off.
 	 * <p>
@@ -173,8 +176,8 @@ public class CutOff1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#Time
-	 * SystemEventInformation.Time}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmTime
+	 * SystemEventInformation.mmTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.CutOff1
@@ -192,20 +195,21 @@ public class CutOff1 {
 	 * definition} = "Cut off time value for the netting cut off."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CutOffTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCutOffTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmTime;
 			componentContext_lazy = () -> CutOff1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.Time;
 			isDerived = false;
 			xmlTag = "CutOffTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffTime";
 			definition = "Cut off time value for the netting cut off.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	protected DateOffsetText valueDateOffset;
 	/**
 	 * Specifies the offset in business days from the value date from which the
 	 * netting cut off is to be applied.
@@ -236,7 +240,7 @@ public class CutOff1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDateOffset = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDateOffset = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CutOff1.mmObject();
 			isDerived = false;
@@ -244,8 +248,8 @@ public class CutOff1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDateOffset";
 			definition = "Specifies the offset in business days from the value date from which the netting cut off is to be applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DateOffsetText.mmObject();
 		}
 	};
@@ -253,15 +257,47 @@ public class CutOff1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CutOff1.CutOffUpdateIdentification, com.tools20022.repository.msg.CutOff1.Currency, com.tools20022.repository.msg.CutOff1.CutOffTime,
-						com.tools20022.repository.msg.CutOff1.ValueDateOffset);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CutOff1.mmCutOffUpdateIdentification, com.tools20022.repository.msg.CutOff1.mmCurrency, com.tools20022.repository.msg.CutOff1.mmCutOffTime,
+						com.tools20022.repository.msg.CutOff1.mmValueDateOffset);
 				trace_lazy = () -> SystemAvailability.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CutOff1";
 				definition = "Information that describes a netting cut off held at a central system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCutOffUpdateIdentification() {
+		return cutOffUpdateIdentification;
+	}
+
+	public void setCutOffUpdateIdentification(Max35Text cutOffUpdateIdentification) {
+		this.cutOffUpdateIdentification = cutOffUpdateIdentification;
+	}
+
+	public ActiveCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public ISOTime getCutOffTime() {
+		return cutOffTime;
+	}
+
+	public void setCutOffTime(ISOTime cutOffTime) {
+		this.cutOffTime = cutOffTime;
+	}
+
+	public DateOffsetText getValueDateOffset() {
+		return valueDateOffset;
+	}
+
+	public void setValueDateOffset(DateOffsetText valueDateOffset) {
+		this.valueDateOffset = valueDateOffset;
 	}
 }

@@ -30,29 +30,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#ReconcileCollateral
- * DisputeResolutionTypeCode.ReconcileCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#mmReconcileCollateral
+ * DisputeResolutionTypeCode.mmReconcileCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#ReconcileExposure
- * DisputeResolutionTypeCode.ReconcileExposure}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#mmReconcileExposure
+ * DisputeResolutionTypeCode.mmReconcileExposure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#ReconcileThreshold
- * DisputeResolutionTypeCode.ReconcileThreshold}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#mmReconcileThreshold
+ * DisputeResolutionTypeCode.mmReconcileThreshold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#ReconcileMinimumTransferAmount
- * DisputeResolutionTypeCode.ReconcileMinimumTransferAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#mmReconcileMinimumTransferAmount
+ * DisputeResolutionTypeCode.mmReconcileMinimumTransferAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#ReconcileRounding
- * DisputeResolutionTypeCode.ReconcileRounding}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#mmReconcileRounding
+ * DisputeResolutionTypeCode.mmReconcileRounding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#ReconcileValuationFrequency
- * DisputeResolutionTypeCode.ReconcileValuationFrequency}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#mmReconcileValuationFrequency
+ * DisputeResolutionTypeCode.mmReconcileValuationFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#ReconcileNettedIndependentAmount
- * DisputeResolutionTypeCode.ReconcileNettedIndependentAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#mmReconcileNettedIndependentAmount
+ * DisputeResolutionTypeCode.mmReconcileNettedIndependentAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#ReconcileSegregatedIndependentAmount
- * DisputeResolutionTypeCode.ReconcileSegregatedIndependentAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisputeResolutionTypeCode#mmReconcileSegregatedIndependentAmount
+ * DisputeResolutionTypeCode.mmReconcileSegregatedIndependentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -67,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -112,7 +112,7 @@ public class DisputeResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReconcileCollateral = new MMCode() {
+	public static final MMCode mmReconcileCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconcileCollateral";
@@ -145,7 +145,7 @@ public class DisputeResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReconcileExposure = new MMCode() {
+	public static final MMCode mmReconcileExposure = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconcileExposure";
@@ -178,7 +178,7 @@ public class DisputeResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReconcileThreshold = new MMCode() {
+	public static final MMCode mmReconcileThreshold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconcileThreshold";
@@ -211,7 +211,7 @@ public class DisputeResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReconcileMinimumTransferAmount = new MMCode() {
+	public static final MMCode mmReconcileMinimumTransferAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconcileMinimumTransferAmount";
@@ -244,7 +244,7 @@ public class DisputeResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReconcileRounding = new MMCode() {
+	public static final MMCode mmReconcileRounding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconcileRounding";
@@ -277,7 +277,7 @@ public class DisputeResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReconcileValuationFrequency = new MMCode() {
+	public static final MMCode mmReconcileValuationFrequency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconcileValuationFrequency";
@@ -310,7 +310,7 @@ public class DisputeResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReconcileNettedIndependentAmount = new MMCode() {
+	public static final MMCode mmReconcileNettedIndependentAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconcileNettedIndependentAmount";
@@ -343,7 +343,7 @@ public class DisputeResolutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReconcileSegregatedIndependentAmount = new MMCode() {
+	public static final MMCode mmReconcileSegregatedIndependentAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconcileSegregatedIndependentAmount";
@@ -356,15 +356,15 @@ public class DisputeResolutionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DisputeResolutionTypeCode";
 				definition = "Specifies the nature of the disputed collateral amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisputeResolutionTypeCode.ReconcileCollateral, com.tools20022.repository.codeset.DisputeResolutionTypeCode.ReconcileExposure,
-						com.tools20022.repository.codeset.DisputeResolutionTypeCode.ReconcileThreshold, com.tools20022.repository.codeset.DisputeResolutionTypeCode.ReconcileMinimumTransferAmount,
-						com.tools20022.repository.codeset.DisputeResolutionTypeCode.ReconcileRounding, com.tools20022.repository.codeset.DisputeResolutionTypeCode.ReconcileValuationFrequency,
-						com.tools20022.repository.codeset.DisputeResolutionTypeCode.ReconcileNettedIndependentAmount, com.tools20022.repository.codeset.DisputeResolutionTypeCode.ReconcileSegregatedIndependentAmount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisputeResolutionTypeCode.mmReconcileCollateral, com.tools20022.repository.codeset.DisputeResolutionTypeCode.mmReconcileExposure,
+						com.tools20022.repository.codeset.DisputeResolutionTypeCode.mmReconcileThreshold, com.tools20022.repository.codeset.DisputeResolutionTypeCode.mmReconcileMinimumTransferAmount,
+						com.tools20022.repository.codeset.DisputeResolutionTypeCode.mmReconcileRounding, com.tools20022.repository.codeset.DisputeResolutionTypeCode.mmReconcileValuationFrequency,
+						com.tools20022.repository.codeset.DisputeResolutionTypeCode.mmReconcileNettedIndependentAmount, com.tools20022.repository.codeset.DisputeResolutionTypeCode.mmReconcileSegregatedIndependentAmount);
 				derivation_lazy = () -> Arrays.asList(DisputeResolutionType2Code.mmObject(), DisputeResolutionType1Code.mmObject());
 			}
 		});

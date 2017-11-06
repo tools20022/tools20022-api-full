@@ -34,46 +34,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#ATMCommissionFee
- * TypeOfAmount6Code.ATMCommissionFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmATMCommissionFee
+ * TypeOfAmount6Code.mmATMCommissionFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#AuthorisedAmount
- * TypeOfAmount6Code.AuthorisedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmAuthorisedAmount
+ * TypeOfAmount6Code.mmAuthorisedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#CardRemainingBalance
- * TypeOfAmount6Code.CardRemainingBalance}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#Discount
- * TypeOfAmount6Code.Discount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#Fees
- * TypeOfAmount6Code.Fees}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmCardRemainingBalance
+ * TypeOfAmount6Code.mmCardRemainingBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#MaximumAllowedAmount
- * TypeOfAmount6Code.MaximumAllowedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmDiscount
+ * TypeOfAmount6Code.mmDiscount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmFees
+ * TypeOfAmount6Code.mmFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#MinimumAllowedAmount
- * TypeOfAmount6Code.MinimumAllowedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmMaximumAllowedAmount
+ * TypeOfAmount6Code.mmMaximumAllowedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#RequestedAmount
- * TypeOfAmount6Code.RequestedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmMinimumAllowedAmount
+ * TypeOfAmount6Code.mmMinimumAllowedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#Surcharge
- * TypeOfAmount6Code.Surcharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmRequestedAmount
+ * TypeOfAmount6Code.mmRequestedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#ValueAddedTax
- * TypeOfAmount6Code.ValueAddedTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmSurcharge
+ * TypeOfAmount6Code.mmSurcharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#IssuerCommission
- * TypeOfAmount6Code.IssuerCommission}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmValueAddedTax
+ * TypeOfAmount6Code.mmValueAddedTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#IssuerFees
- * TypeOfAmount6Code.IssuerFees}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmIssuerCommission
+ * TypeOfAmount6Code.mmIssuerCommission}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmIssuerFees
+ * TypeOfAmount6Code.mmIssuerFees}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,7 +104,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "ATMCommissionFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMCommissionFee = new MMCode() {
+	public static final MMCode mmATMCommissionFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCommissionFee";
@@ -126,7 +127,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "AuthorisedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode AuthorisedAmount = new MMCode() {
+	public static final MMCode mmAuthorisedAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedAmount";
@@ -149,7 +150,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "CardRemainingBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardRemainingBalance = new MMCode() {
+	public static final MMCode mmCardRemainingBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRemainingBalance";
@@ -172,7 +173,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discount = new MMCode() {
+	public static final MMCode mmDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
@@ -195,7 +196,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "Fees"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fees = new MMCode() {
+	public static final MMCode mmFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
@@ -218,7 +219,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "MaximumAllowedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MaximumAllowedAmount = new MMCode() {
+	public static final MMCode mmMaximumAllowedAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAllowedAmount";
@@ -241,7 +242,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "MinimumAllowedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MinimumAllowedAmount = new MMCode() {
+	public static final MMCode mmMinimumAllowedAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAllowedAmount";
@@ -264,7 +265,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "RequestedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode RequestedAmount = new MMCode() {
+	public static final MMCode mmRequestedAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedAmount";
@@ -287,7 +288,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "Surcharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode Surcharge = new MMCode() {
+	public static final MMCode mmSurcharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Surcharge";
@@ -310,7 +311,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTax = new MMCode() {
+	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
@@ -333,7 +334,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "IssuerCommission"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerCommission = new MMCode() {
+	public static final MMCode mmIssuerCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCommission";
@@ -356,7 +357,7 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "IssuerFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerFees = new MMCode() {
+	public static final MMCode mmIssuerFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerFees";
@@ -367,15 +368,15 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount6Code";
 				definition = "Type or class of amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount6Code.ATMCommissionFee, com.tools20022.repository.codeset.TypeOfAmount6Code.AuthorisedAmount,
-						com.tools20022.repository.codeset.TypeOfAmount6Code.CardRemainingBalance, com.tools20022.repository.codeset.TypeOfAmount6Code.Discount, com.tools20022.repository.codeset.TypeOfAmount6Code.Fees,
-						com.tools20022.repository.codeset.TypeOfAmount6Code.MaximumAllowedAmount, com.tools20022.repository.codeset.TypeOfAmount6Code.MinimumAllowedAmount,
-						com.tools20022.repository.codeset.TypeOfAmount6Code.RequestedAmount, com.tools20022.repository.codeset.TypeOfAmount6Code.Surcharge, com.tools20022.repository.codeset.TypeOfAmount6Code.ValueAddedTax,
-						com.tools20022.repository.codeset.TypeOfAmount6Code.IssuerCommission, com.tools20022.repository.codeset.TypeOfAmount6Code.IssuerFees);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount6Code.mmATMCommissionFee, com.tools20022.repository.codeset.TypeOfAmount6Code.mmAuthorisedAmount,
+						com.tools20022.repository.codeset.TypeOfAmount6Code.mmCardRemainingBalance, com.tools20022.repository.codeset.TypeOfAmount6Code.mmDiscount, com.tools20022.repository.codeset.TypeOfAmount6Code.mmFees,
+						com.tools20022.repository.codeset.TypeOfAmount6Code.mmMaximumAllowedAmount, com.tools20022.repository.codeset.TypeOfAmount6Code.mmMinimumAllowedAmount,
+						com.tools20022.repository.codeset.TypeOfAmount6Code.mmRequestedAmount, com.tools20022.repository.codeset.TypeOfAmount6Code.mmSurcharge, com.tools20022.repository.codeset.TypeOfAmount6Code.mmValueAddedTax,
+						com.tools20022.repository.codeset.TypeOfAmount6Code.mmIssuerCommission, com.tools20022.repository.codeset.TypeOfAmount6Code.mmIssuerFees);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
 			}
 		});

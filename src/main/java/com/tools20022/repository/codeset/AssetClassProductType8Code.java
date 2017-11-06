@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType8Code#Paper
- * AssetClassProductType8Code.Paper}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType8Code#mmPaper
+ * AssetClassProductType8Code.mmPaper}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class AssetClassProductType8Code extends AssetClassProductTypeCode {
 	 * name} = "Paper"</li>
 	 * </ul>
 	 */
-	public static final MMCode Paper = new MMCode() {
+	public static final MMCode mmPaper = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paper";
@@ -83,11 +83,11 @@ public class AssetClassProductType8Code extends AssetClassProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType8Code";
 				definition = "Commodity derivative base product code list for Paper.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType8Code.Paper);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType8Code.mmPaper);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
 			}
 		});

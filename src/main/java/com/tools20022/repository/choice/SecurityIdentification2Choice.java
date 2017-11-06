@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification2Choice#ISIN
- * SecurityIdentification2Choice.ISIN}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification2Choice#mmISIN
+ * SecurityIdentification2Choice.mmISIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification2Choice#Sedol
- * SecurityIdentification2Choice.Sedol}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification2Choice#mmSedol
+ * SecurityIdentification2Choice.mmSedol}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINIdentifier iSIN;
 	/**
 	 * International Securities Identification Number (ISIN). A numbering system
 	 * designed by the United Nation's International Organisation for
@@ -84,8 +85,8 @@ public class SecurityIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +107,21 @@ public class SecurityIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> SecurityIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	protected SEDOLIdentifier sedol;
 	/**
 	 * Stock Exchange Daily Official List (SEDOL) number. A code used by the
 	 * London Stock Exchange to identify foreign stocks, especially those that
@@ -135,8 +137,8 @@ public class SecurityIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SEDOL
-	 * SecuritiesIdentification.SEDOL}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSEDOL
+	 * SecuritiesIdentification.mmSEDOL}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,17 +159,17 @@ public class SecurityIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sedol = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSedol = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSEDOL;
 			componentContext_lazy = () -> SecurityIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SEDOL;
 			isDerived = false;
 			xmlTag = "Sdl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sedol";
 			definition = "Stock Exchange Daily Official List (SEDOL) number.  A code used by the London Stock Exchange to identify foreign stocks, especially those that aren't actively traded in the US and don't have a CUSIP number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SEDOLIdentifier.mmObject();
 		}
 	};
@@ -175,14 +177,30 @@ public class SecurityIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification2Choice.ISIN, com.tools20022.repository.choice.SecurityIdentification2Choice.Sedol);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification2Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification2Choice.mmSedol);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityIdentification2Choice";
 				definition = "Choice between formats for the identification of a financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINIdentifier getISIN() {
+		return iSIN;
+	}
+
+	public void setISIN(ISINIdentifier iSIN) {
+		this.iSIN = iSIN;
+	}
+
+	public SEDOLIdentifier getSedol() {
+		return sedol;
+	}
+
+	public void setSedol(SEDOLIdentifier sedol) {
+		this.sedol = sedol;
 	}
 }

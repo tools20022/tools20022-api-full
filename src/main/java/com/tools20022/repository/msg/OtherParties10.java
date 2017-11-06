@@ -34,12 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties10#Investor
- * OtherParties10.Investor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties10#StockExchange
- * OtherParties10.StockExchange}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherParties10#TradeRegulator
- * OtherParties10.TradeRegulator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherParties10#mmInvestor
+ * OtherParties10.mmInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherParties10#mmStockExchange
+ * OtherParties10.mmStockExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherParties10#mmTradeRegulator
+ * OtherParties10.mmTradeRegulator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherParties10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification37Choice investor;
 	/**
 	 * Party, either an individual or organisation, whose assets are being
 	 * invested.
@@ -81,8 +83,8 @@ public class OtherParties10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,28 +105,29 @@ public class OtherParties10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherParties26#Investor
-	 * OtherParties26.Investor}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherParties26#mmInvestor
+	 * OtherParties26.mmInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Investor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Invstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Party, either an individual or organisation, whose assets are being invested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties26.Investor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties26.mmInvestor);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification37Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification37Choice.mmObject();
 		}
 	};
+	protected PartyIdentification49Choice stockExchange;
 	/**
 	 * Identification of the stock exchange to which transaction reporting will
 	 * be done.
@@ -138,8 +141,8 @@ public class OtherParties10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,28 +164,29 @@ public class OtherParties10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherParties26#StockExchange
-	 * OtherParties26.StockExchange}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherParties26#mmStockExchange
+	 * OtherParties26.mmStockExchange}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StockExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStockExchange = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "StockXchg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
 			definition = "Identification of the stock exchange to which transaction reporting will be done.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties26.StockExchange);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties26.mmStockExchange);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification49Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification49Choice.mmObject();
 		}
 	};
+	protected PartyIdentification49Choice tradeRegulator;
 	/**
 	 * Institution to which a trade must be reported.
 	 * <p>
@@ -195,8 +199,8 @@ public class OtherParties10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -216,35 +220,35 @@ public class OtherParties10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherParties26#TradeRegulator
-	 * OtherParties26.TradeRegulator}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherParties26#mmTradeRegulator
+	 * OtherParties26.mmTradeRegulator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeRegulator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeRegulator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "TradRgltr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulator";
 			definition = "Institution to which a trade must be reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties26.TradeRegulator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties26.mmTradeRegulator);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification49Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification49Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties10.Investor, com.tools20022.repository.msg.OtherParties10.StockExchange, com.tools20022.repository.msg.OtherParties10.TradeRegulator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties10.mmInvestor, com.tools20022.repository.msg.OtherParties10.mmStockExchange, com.tools20022.repository.msg.OtherParties10.mmTradeRegulator);
 				trace_lazy = () -> Role.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OtherParties10";
 				definition = "Other parties information.";
@@ -252,5 +256,29 @@ public class OtherParties10 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification37Choice getInvestor() {
+		return investor;
+	}
+
+	public void setInvestor(PartyIdentification37Choice investor) {
+		this.investor = investor;
+	}
+
+	public PartyIdentification49Choice getStockExchange() {
+		return stockExchange;
+	}
+
+	public void setStockExchange(PartyIdentification49Choice stockExchange) {
+		this.stockExchange = stockExchange;
+	}
+
+	public PartyIdentification49Choice getTradeRegulator() {
+		return tradeRegulator;
+	}
+
+	public void setTradeRegulator(PartyIdentification49Choice tradeRegulator) {
+		this.tradeRegulator = tradeRegulator;
 	}
 }

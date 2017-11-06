@@ -34,22 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationType1Code#Overnight
- * TerminationType1Code.Overnight}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TerminationType1Code#Term
- * TerminationType1Code.Term}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationType1Code#mmOvernight
+ * TerminationType1Code.mmOvernight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationType1Code#Flexible
- * TerminationType1Code.Flexible}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TerminationType1Code#Open
- * TerminationType1Code.Open}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationType1Code#mmTerm
+ * TerminationType1Code.mmTerm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationType1Code#mmFlexible
+ * TerminationType1Code.mmFlexible}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationType1Code#mmOpen
+ * TerminationType1Code.mmOpen}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +88,7 @@ public class TerminationType1Code extends TerminationTypeCode {
 	 * name} = "Overnight"</li>
 	 * </ul>
 	 */
-	public static final MMCode Overnight = new MMCode() {
+	public static final MMCode mmOvernight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Overnight";
@@ -109,7 +111,7 @@ public class TerminationType1Code extends TerminationTypeCode {
 	 * name} = "Term"</li>
 	 * </ul>
 	 */
-	public static final MMCode Term = new MMCode() {
+	public static final MMCode mmTerm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Term";
@@ -132,7 +134,7 @@ public class TerminationType1Code extends TerminationTypeCode {
 	 * name} = "Flexible"</li>
 	 * </ul>
 	 */
-	public static final MMCode Flexible = new MMCode() {
+	public static final MMCode mmFlexible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Flexible";
@@ -155,7 +157,7 @@ public class TerminationType1Code extends TerminationTypeCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode Open = new MMCode() {
+	public static final MMCode mmOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
@@ -166,13 +168,13 @@ public class TerminationType1Code extends TerminationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OVER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminationType1Code";
 				definition = "Specifies the timing or method for terminating the agreement - for repos.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminationType1Code.Overnight, com.tools20022.repository.codeset.TerminationType1Code.Term, com.tools20022.repository.codeset.TerminationType1Code.Flexible,
-						com.tools20022.repository.codeset.TerminationType1Code.Open);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminationType1Code.mmOvernight, com.tools20022.repository.codeset.TerminationType1Code.mmTerm,
+						com.tools20022.repository.codeset.TerminationType1Code.mmFlexible, com.tools20022.repository.codeset.TerminationType1Code.mmOpen);
 				trace_lazy = () -> TerminationTypeCode.mmObject();
 			}
 		});

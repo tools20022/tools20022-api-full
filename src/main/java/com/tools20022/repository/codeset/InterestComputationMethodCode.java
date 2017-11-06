@@ -31,50 +31,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#IC30360ISDAor30360AmericanBasicRule
- * InterestComputationMethodCode.IC30360ISDAor30360AmericanBasicRule}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmIC30360ISDAor30360AmericanBasicRule
+ * InterestComputationMethodCode.mmIC30360ISDAor30360AmericanBasicRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#IC30365
- * InterestComputationMethodCode.IC30365}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmIC30365
+ * InterestComputationMethodCode.mmIC30365}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#IC30Actual
- * InterestComputationMethodCode.IC30Actual}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmIC30Actual
+ * InterestComputationMethodCode.mmIC30Actual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#Actual360
- * InterestComputationMethodCode.Actual360}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmActual360
+ * InterestComputationMethodCode.mmActual360}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#Actual365Fixed
- * InterestComputationMethodCode.Actual365Fixed}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmActual365Fixed
+ * InterestComputationMethodCode.mmActual365Fixed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#ActualActualICMA
- * InterestComputationMethodCode.ActualActualICMA}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmActualActualICMA
+ * InterestComputationMethodCode.mmActualActualICMA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#IC30E360orEuroBondBasismodel1
- * InterestComputationMethodCode.IC30E360orEuroBondBasismodel1}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmIC30E360orEuroBondBasismodel1
+ * InterestComputationMethodCode.mmIC30E360orEuroBondBasismodel1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#ActualActualISDA
- * InterestComputationMethodCode.ActualActualISDA}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmActualActualISDA
+ * InterestComputationMethodCode.mmActualActualISDA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#Actual365LorActuActubasisRule
- * InterestComputationMethodCode.Actual365LorActuActubasisRule}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmActual365LorActuActubasisRule
+ * InterestComputationMethodCode.mmActual365LorActuActubasisRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#ActualActualAFB
- * InterestComputationMethodCode.ActualActualAFB}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmActualActualAFB
+ * InterestComputationMethodCode.mmActualActualAFB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#IC30360ICMAor30360basicrule
- * InterestComputationMethodCode.IC30360ICMAor30360basicrule}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmIC30360ICMAor30360basicrule
+ * InterestComputationMethodCode.mmIC30360ICMAor30360basicrule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#IC30E2360orEurobondbasismodel2
- * InterestComputationMethodCode.IC30E2360orEurobondbasismodel2}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmIC30E2360orEurobondbasismodel2
+ * InterestComputationMethodCode.mmIC30E2360orEurobondbasismodel2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#IC30E3360orEurobondbasismodel3
- * InterestComputationMethodCode.IC30E3360orEurobondbasismodel3}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmIC30E3360orEurobondbasismodel3
+ * InterestComputationMethodCode.mmIC30E3360orEurobondbasismodel3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#Actual365NL
- * InterestComputationMethodCode.Actual365NL}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmActual365NL
+ * InterestComputationMethodCode.mmActual365NL}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#Narrative
- * InterestComputationMethodCode.Narrative}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#mmNarrative
+ * InterestComputationMethodCode.mmNarrative}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -91,8 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -144,7 +144,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IC30360ISDAor30360AmericanBasicRule = new MMCode() {
+	public static final MMCode mmIC30360ISDAor30360AmericanBasicRule = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IC30360ISDAor30360AmericanBasicRule";
@@ -181,7 +181,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IC30365 = new MMCode() {
+	public static final MMCode mmIC30365 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IC30365";
@@ -221,7 +221,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IC30Actual = new MMCode() {
+	public static final MMCode mmIC30Actual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IC30Actual";
@@ -254,7 +254,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Actual360 = new MMCode() {
+	public static final MMCode mmActual360 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Actual360";
@@ -287,7 +287,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Actual365Fixed = new MMCode() {
+	public static final MMCode mmActual365Fixed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Actual365Fixed";
@@ -326,7 +326,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ActualActualICMA = new MMCode() {
+	public static final MMCode mmActualActualICMA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ActualActualICMA";
@@ -367,7 +367,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IC30E360orEuroBondBasismodel1 = new MMCode() {
+	public static final MMCode mmIC30E360orEuroBondBasismodel1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IC30E360orEuroBondBasismodel1";
@@ -402,7 +402,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ActualActualISDA = new MMCode() {
+	public static final MMCode mmActualActualISDA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ActualActualISDA";
@@ -437,7 +437,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Actual365LorActuActubasisRule = new MMCode() {
+	public static final MMCode mmActual365LorActuActubasisRule = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Actual365LorActuActubasisRule";
@@ -478,7 +478,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ActualActualAFB = new MMCode() {
+	public static final MMCode mmActualActualAFB = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ActualActualAFB";
@@ -516,7 +516,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IC30360ICMAor30360basicrule = new MMCode() {
+	public static final MMCode mmIC30360ICMAor30360basicrule = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IC30360ICMAor30360basicrule";
@@ -565,7 +565,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IC30E2360orEurobondbasismodel2 = new MMCode() {
+	public static final MMCode mmIC30E2360orEurobondbasismodel2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IC30E2360orEurobondbasismodel2";
@@ -604,7 +604,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IC30E3360orEurobondbasismodel3 = new MMCode() {
+	public static final MMCode mmIC30E3360orEurobondbasismodel3 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IC30E3360orEurobondbasismodel3";
@@ -638,7 +638,7 @@ public class InterestComputationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Actual365NL = new MMCode() {
+	public static final MMCode mmActual365NL = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Actual365NL";
@@ -668,7 +668,7 @@ public class InterestComputationMethodCode {
 	 * definition} = "Other method than A001-A014. See Narrative."</li>
 	 * </ul>
 	 */
-	public static final MMCode Narrative = new MMCode() {
+	public static final MMCode mmNarrative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Narrative";
@@ -681,19 +681,19 @@ public class InterestComputationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("A001");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestComputationMethodCode";
 				definition = "Specifies the method used to compute accruing interest of a financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestComputationMethodCode.IC30360ISDAor30360AmericanBasicRule, com.tools20022.repository.codeset.InterestComputationMethodCode.IC30365,
-						com.tools20022.repository.codeset.InterestComputationMethodCode.IC30Actual, com.tools20022.repository.codeset.InterestComputationMethodCode.Actual360,
-						com.tools20022.repository.codeset.InterestComputationMethodCode.Actual365Fixed, com.tools20022.repository.codeset.InterestComputationMethodCode.ActualActualICMA,
-						com.tools20022.repository.codeset.InterestComputationMethodCode.IC30E360orEuroBondBasismodel1, com.tools20022.repository.codeset.InterestComputationMethodCode.ActualActualISDA,
-						com.tools20022.repository.codeset.InterestComputationMethodCode.Actual365LorActuActubasisRule, com.tools20022.repository.codeset.InterestComputationMethodCode.ActualActualAFB,
-						com.tools20022.repository.codeset.InterestComputationMethodCode.IC30360ICMAor30360basicrule, com.tools20022.repository.codeset.InterestComputationMethodCode.IC30E2360orEurobondbasismodel2,
-						com.tools20022.repository.codeset.InterestComputationMethodCode.IC30E3360orEurobondbasismodel3, com.tools20022.repository.codeset.InterestComputationMethodCode.Actual365NL,
-						com.tools20022.repository.codeset.InterestComputationMethodCode.Narrative);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestComputationMethodCode.mmIC30360ISDAor30360AmericanBasicRule, com.tools20022.repository.codeset.InterestComputationMethodCode.mmIC30365,
+						com.tools20022.repository.codeset.InterestComputationMethodCode.mmIC30Actual, com.tools20022.repository.codeset.InterestComputationMethodCode.mmActual360,
+						com.tools20022.repository.codeset.InterestComputationMethodCode.mmActual365Fixed, com.tools20022.repository.codeset.InterestComputationMethodCode.mmActualActualICMA,
+						com.tools20022.repository.codeset.InterestComputationMethodCode.mmIC30E360orEuroBondBasismodel1, com.tools20022.repository.codeset.InterestComputationMethodCode.mmActualActualISDA,
+						com.tools20022.repository.codeset.InterestComputationMethodCode.mmActual365LorActuActubasisRule, com.tools20022.repository.codeset.InterestComputationMethodCode.mmActualActualAFB,
+						com.tools20022.repository.codeset.InterestComputationMethodCode.mmIC30360ICMAor30360basicrule, com.tools20022.repository.codeset.InterestComputationMethodCode.mmIC30E2360orEurobondbasismodel2,
+						com.tools20022.repository.codeset.InterestComputationMethodCode.mmIC30E3360orEurobondbasismodel3, com.tools20022.repository.codeset.InterestComputationMethodCode.mmActual365NL,
+						com.tools20022.repository.codeset.InterestComputationMethodCode.mmNarrative);
 				derivation_lazy = () -> Arrays.asList(InterestComputationMethod2Code.mmObject(), InterestComputationMethod1Code.mmObject());
 			}
 		});

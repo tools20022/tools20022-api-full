@@ -30,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#RoundDownToTheNearestCent
- * DTCCashRoundingTypeCode.RoundDownToTheNearestCent}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#mmRoundDownToTheNearestCent
+ * DTCCashRoundingTypeCode.mmRoundDownToTheNearestCent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#RoundDownToTheNearestDollar
- * DTCCashRoundingTypeCode.RoundDownToTheNearestDollar}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#mmRoundDownToTheNearestDollar
+ * DTCCashRoundingTypeCode.mmRoundDownToTheNearestDollar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#RoundUpToTheNearestCent
- * DTCCashRoundingTypeCode.RoundUpToTheNearestCent}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#mmRoundUpToTheNearestCent
+ * DTCCashRoundingTypeCode.mmRoundUpToTheNearestCent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#RoundUpToTheNearestDollar
- * DTCCashRoundingTypeCode.RoundUpToTheNearestDollar}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#mmRoundUpToTheNearestDollar
+ * DTCCashRoundingTypeCode.mmRoundUpToTheNearestDollar}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class DTCCashRoundingTypeCode {
 	 * definition} = "Round down to the nearest cent."</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundDownToTheNearestCent = new MMCode() {
+	public static final MMCode mmRoundDownToTheNearestCent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDownToTheNearestCent";
@@ -125,7 +125,7 @@ public class DTCCashRoundingTypeCode {
 	 * definition} = "Round down to the nearest dollar."</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundDownToTheNearestDollar = new MMCode() {
+	public static final MMCode mmRoundDownToTheNearestDollar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDownToTheNearestDollar";
@@ -155,7 +155,7 @@ public class DTCCashRoundingTypeCode {
 	 * definition} = "Round up to the nearest cent."</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundUpToTheNearestCent = new MMCode() {
+	public static final MMCode mmRoundUpToTheNearestCent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUpToTheNearestCent";
@@ -185,7 +185,7 @@ public class DTCCashRoundingTypeCode {
 	 * definition} = "Round up to the nearest dollar."</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundUpToTheNearestDollar = new MMCode() {
+	public static final MMCode mmRoundUpToTheNearestDollar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUpToTheNearestDollar";
@@ -198,13 +198,13 @@ public class DTCCashRoundingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RDNC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCCashRoundingTypeCode";
 				definition = "Specifies types of cash rounding.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCashRoundingTypeCode.RoundDownToTheNearestCent, com.tools20022.repository.codeset.DTCCashRoundingTypeCode.RoundDownToTheNearestDollar,
-						com.tools20022.repository.codeset.DTCCashRoundingTypeCode.RoundUpToTheNearestCent, com.tools20022.repository.codeset.DTCCashRoundingTypeCode.RoundUpToTheNearestDollar);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCashRoundingTypeCode.mmRoundDownToTheNearestCent, com.tools20022.repository.codeset.DTCCashRoundingTypeCode.mmRoundDownToTheNearestDollar,
+						com.tools20022.repository.codeset.DTCCashRoundingTypeCode.mmRoundUpToTheNearestCent, com.tools20022.repository.codeset.DTCCashRoundingTypeCode.mmRoundUpToTheNearestDollar);
 				derivation_lazy = () -> Arrays.asList(DTCCashRoundingType1Code.mmObject());
 			}
 		});

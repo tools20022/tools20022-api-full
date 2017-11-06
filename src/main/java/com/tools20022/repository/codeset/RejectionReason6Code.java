@@ -34,75 +34,75 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#FailedValidation
- * RejectionReason6Code.FailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmFailedValidation
+ * RejectionReason6Code.mmFailedValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#MissingOption
- * RejectionReason6Code.MissingOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmMissingOption
+ * RejectionReason6Code.mmMissingOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#NotDefinedAgent
- * RejectionReason6Code.NotDefinedAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmNotDefinedAgent
+ * RejectionReason6Code.mmNotDefinedAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#MissingPeriodEndDate
- * RejectionReason6Code.MissingPeriodEndDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmMissingPeriodEndDate
+ * RejectionReason6Code.mmMissingPeriodEndDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#MissingPeriodStartDate
- * RejectionReason6Code.MissingPeriodStartDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmMissingPeriodStartDate
+ * RejectionReason6Code.mmMissingPeriodStartDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#MissingResultingAmount
- * RejectionReason6Code.MissingResultingAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmMissingResultingAmount
+ * RejectionReason6Code.mmMissingResultingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#WrongSecurityType
- * RejectionReason6Code.WrongSecurityType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmWrongSecurityType
+ * RejectionReason6Code.mmWrongSecurityType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#NotEligibleDisperseSecurity
- * RejectionReason6Code.NotEligibleDisperseSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmNotEligibleDisperseSecurity
+ * RejectionReason6Code.mmNotEligibleDisperseSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#NonEligibleSecurity
- * RejectionReason6Code.NonEligibleSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmNonEligibleSecurity
+ * RejectionReason6Code.mmNonEligibleSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#MissingExchangeRate
- * RejectionReason6Code.MissingExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmMissingExchangeRate
+ * RejectionReason6Code.mmMissingExchangeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#ValueDateBeforePaymentDate
- * RejectionReason6Code.ValueDateBeforePaymentDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmValueDateBeforePaymentDate
+ * RejectionReason6Code.mmValueDateBeforePaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#UnexpectedAccruedInterest
- * RejectionReason6Code.UnexpectedAccruedInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmUnexpectedAccruedInterest
+ * RejectionReason6Code.mmUnexpectedAccruedInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#NoAccessToService
- * RejectionReason6Code.NoAccessToService}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmNoAccessToService
+ * RejectionReason6Code.mmNoAccessToService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#MissingCertification
- * RejectionReason6Code.MissingCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmMissingCertification
+ * RejectionReason6Code.mmMissingCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#NotBusinessDay
- * RejectionReason6Code.NotBusinessDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmNotBusinessDay
+ * RejectionReason6Code.mmNotBusinessDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#EffectiveDayAfterPaymentDate
- * RejectionReason6Code.EffectiveDayAfterPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmEffectiveDayAfterPaymentDate
+ * RejectionReason6Code.mmEffectiveDayAfterPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#GrossAmountLessThanNetAmount
- * RejectionReason6Code.GrossAmountLessThanNetAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmGrossAmountLessThanNetAmount
+ * RejectionReason6Code.mmGrossAmountLessThanNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#MissingDefaultOption
- * RejectionReason6Code.MissingDefaultOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmMissingDefaultOption
+ * RejectionReason6Code.mmMissingDefaultOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#NonActiveParty
- * RejectionReason6Code.NonActiveParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmNonActiveParty
+ * RejectionReason6Code.mmNonActiveParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#PeriodEndDateBeforeStartDate
- * RejectionReason6Code.PeriodEndDateBeforeStartDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmPeriodEndDateBeforeStartDate
+ * RejectionReason6Code.mmPeriodEndDateBeforeStartDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#RecordDateAfterPaymentDate
- * RejectionReason6Code.RecordDateAfterPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason6Code#mmRecordDateAfterPaymentDate
+ * RejectionReason6Code.mmRecordDateAfterPaymentDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -139,7 +139,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode FailedValidation = new MMCode() {
+	public static final MMCode mmFailedValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
@@ -162,7 +162,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "MissingOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingOption = new MMCode() {
+	public static final MMCode mmMissingOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingOption";
@@ -185,7 +185,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "NotDefinedAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotDefinedAgent = new MMCode() {
+	public static final MMCode mmNotDefinedAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDefinedAgent";
@@ -208,7 +208,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "MissingPeriodEndDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingPeriodEndDate = new MMCode() {
+	public static final MMCode mmMissingPeriodEndDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingPeriodEndDate";
@@ -231,7 +231,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "MissingPeriodStartDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingPeriodStartDate = new MMCode() {
+	public static final MMCode mmMissingPeriodStartDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingPeriodStartDate";
@@ -254,7 +254,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "MissingResultingAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingResultingAmount = new MMCode() {
+	public static final MMCode mmMissingResultingAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingResultingAmount";
@@ -277,7 +277,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "WrongSecurityType"</li>
 	 * </ul>
 	 */
-	public static final MMCode WrongSecurityType = new MMCode() {
+	public static final MMCode mmWrongSecurityType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongSecurityType";
@@ -300,7 +300,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "NotEligibleDisperseSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotEligibleDisperseSecurity = new MMCode() {
+	public static final MMCode mmNotEligibleDisperseSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEligibleDisperseSecurity";
@@ -323,7 +323,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "NonEligibleSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonEligibleSecurity = new MMCode() {
+	public static final MMCode mmNonEligibleSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleSecurity";
@@ -346,7 +346,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "MissingExchangeRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingExchangeRate = new MMCode() {
+	public static final MMCode mmMissingExchangeRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingExchangeRate";
@@ -369,7 +369,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "ValueDateBeforePaymentDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueDateBeforePaymentDate = new MMCode() {
+	public static final MMCode mmValueDateBeforePaymentDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDateBeforePaymentDate";
@@ -392,7 +392,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "UnexpectedAccruedInterest"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnexpectedAccruedInterest = new MMCode() {
+	public static final MMCode mmUnexpectedAccruedInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnexpectedAccruedInterest";
@@ -415,7 +415,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "NoAccessToService"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAccessToService = new MMCode() {
+	public static final MMCode mmNoAccessToService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccessToService";
@@ -438,7 +438,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "MissingCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingCertification = new MMCode() {
+	public static final MMCode mmMissingCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCertification";
@@ -461,7 +461,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "NotBusinessDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotBusinessDay = new MMCode() {
+	public static final MMCode mmNotBusinessDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotBusinessDay";
@@ -484,7 +484,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "EffectiveDayAfterPaymentDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode EffectiveDayAfterPaymentDate = new MMCode() {
+	public static final MMCode mmEffectiveDayAfterPaymentDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDayAfterPaymentDate";
@@ -507,7 +507,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "GrossAmountLessThanNetAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode GrossAmountLessThanNetAmount = new MMCode() {
+	public static final MMCode mmGrossAmountLessThanNetAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmountLessThanNetAmount";
@@ -530,7 +530,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "MissingDefaultOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingDefaultOption = new MMCode() {
+	public static final MMCode mmMissingDefaultOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingDefaultOption";
@@ -553,7 +553,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "NonActiveParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonActiveParty = new MMCode() {
+	public static final MMCode mmNonActiveParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonActiveParty";
@@ -576,7 +576,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "PeriodEndDateBeforeStartDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode PeriodEndDateBeforeStartDate = new MMCode() {
+	public static final MMCode mmPeriodEndDateBeforeStartDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodEndDateBeforeStartDate";
@@ -599,7 +599,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 * name} = "RecordDateAfterPaymentDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode RecordDateAfterPaymentDate = new MMCode() {
+	public static final MMCode mmRecordDateAfterPaymentDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDateAfterPaymentDate";
@@ -610,22 +610,22 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason6Code";
 				definition = "Specifies the reason of a rejection of the notification advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason6Code.FailedValidation, com.tools20022.repository.codeset.RejectionReason6Code.MissingOption,
-						com.tools20022.repository.codeset.RejectionReason6Code.NotDefinedAgent, com.tools20022.repository.codeset.RejectionReason6Code.MissingPeriodEndDate,
-						com.tools20022.repository.codeset.RejectionReason6Code.MissingPeriodStartDate, com.tools20022.repository.codeset.RejectionReason6Code.MissingResultingAmount,
-						com.tools20022.repository.codeset.RejectionReason6Code.WrongSecurityType, com.tools20022.repository.codeset.RejectionReason6Code.NotEligibleDisperseSecurity,
-						com.tools20022.repository.codeset.RejectionReason6Code.NonEligibleSecurity, com.tools20022.repository.codeset.RejectionReason6Code.MissingExchangeRate,
-						com.tools20022.repository.codeset.RejectionReason6Code.ValueDateBeforePaymentDate, com.tools20022.repository.codeset.RejectionReason6Code.UnexpectedAccruedInterest,
-						com.tools20022.repository.codeset.RejectionReason6Code.NoAccessToService, com.tools20022.repository.codeset.RejectionReason6Code.MissingCertification,
-						com.tools20022.repository.codeset.RejectionReason6Code.NotBusinessDay, com.tools20022.repository.codeset.RejectionReason6Code.EffectiveDayAfterPaymentDate,
-						com.tools20022.repository.codeset.RejectionReason6Code.GrossAmountLessThanNetAmount, com.tools20022.repository.codeset.RejectionReason6Code.MissingDefaultOption,
-						com.tools20022.repository.codeset.RejectionReason6Code.NonActiveParty, com.tools20022.repository.codeset.RejectionReason6Code.PeriodEndDateBeforeStartDate,
-						com.tools20022.repository.codeset.RejectionReason6Code.RecordDateAfterPaymentDate);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason6Code.mmFailedValidation, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingOption,
+						com.tools20022.repository.codeset.RejectionReason6Code.mmNotDefinedAgent, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingPeriodEndDate,
+						com.tools20022.repository.codeset.RejectionReason6Code.mmMissingPeriodStartDate, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingResultingAmount,
+						com.tools20022.repository.codeset.RejectionReason6Code.mmWrongSecurityType, com.tools20022.repository.codeset.RejectionReason6Code.mmNotEligibleDisperseSecurity,
+						com.tools20022.repository.codeset.RejectionReason6Code.mmNonEligibleSecurity, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingExchangeRate,
+						com.tools20022.repository.codeset.RejectionReason6Code.mmValueDateBeforePaymentDate, com.tools20022.repository.codeset.RejectionReason6Code.mmUnexpectedAccruedInterest,
+						com.tools20022.repository.codeset.RejectionReason6Code.mmNoAccessToService, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingCertification,
+						com.tools20022.repository.codeset.RejectionReason6Code.mmNotBusinessDay, com.tools20022.repository.codeset.RejectionReason6Code.mmEffectiveDayAfterPaymentDate,
+						com.tools20022.repository.codeset.RejectionReason6Code.mmGrossAmountLessThanNetAmount, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingDefaultOption,
+						com.tools20022.repository.codeset.RejectionReason6Code.mmNonActiveParty, com.tools20022.repository.codeset.RejectionReason6Code.mmPeriodEndDateBeforeStartDate,
+						com.tools20022.repository.codeset.RejectionReason6Code.mmRecordDateAfterPaymentDate);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

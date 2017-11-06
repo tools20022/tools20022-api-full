@@ -36,23 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSD9#PlaceAndName
- * CorporateActionSD9.PlaceAndName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionSD9#RecordDate
- * CorporateActionSD9.RecordDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionSD9#PaymentDate
- * CorporateActionSD9.PaymentDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionSD9#LotteryDate
- * CorporateActionSD9.LotteryDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionSD9#LotteryType
- * CorporateActionSD9.LotteryType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD9#mmPlaceAndName
+ * CorporateActionSD9.mmPlaceAndName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD9#mmRecordDate
+ * CorporateActionSD9.mmRecordDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD9#mmPaymentDate
+ * CorporateActionSD9.mmPaymentDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD9#mmLotteryDate
+ * CorporateActionSD9.mmLotteryDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD9#mmLotteryType
+ * CorporateActionSD9.mmLotteryType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionSD9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -94,7 +99,7 @@ public class CorporateActionSD9 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSD9.mmObject();
 			isDerived = false;
@@ -102,11 +107,12 @@ public class CorporateActionSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODate recordDate;
 	/**
 	 * Date at which positions are stuck at the end of the day to note which
 	 * parties will receive the relevant amount of entitlement, due to be
@@ -139,7 +145,7 @@ public class CorporateActionSD9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSD9.mmObject();
 			isDerived = false;
@@ -147,11 +153,12 @@ public class CorporateActionSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date at which positions are stuck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date. DTC  (The Depository Trust Corporation) and its Participants may use this as a reference ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DateFormat28Choice paymentDate;
 	/**
 	 * Date/time at which the movement was due to take place (cash and/or
 	 * securities).
@@ -183,7 +190,7 @@ public class CorporateActionSD9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSD9.mmObject();
 			isDerived = false;
@@ -191,11 +198,12 @@ public class CorporateActionSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement was due to take place (cash and/or securities).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat28Choice.mmObject();
 		}
 	};
+	protected ISODate lotteryDate;
 	/**
 	 * Date/time on which the lottery is run and applied to the holder's
 	 * positions. This is also applicable to partial calls.
@@ -209,8 +217,8 @@ public class CorporateActionSD9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Lottery#LotteryDate
-	 * Lottery.LotteryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Lottery#mmLotteryDate
+	 * Lottery.mmLotteryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -231,20 +239,21 @@ public class CorporateActionSD9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LotteryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLotteryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryDate;
 			componentContext_lazy = () -> CorporateActionSD9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.LotteryDate;
 			isDerived = false;
 			xmlTag = "LtryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected LotteryType1Code lotteryType;
 	/**
 	 * Specifies the type of lottery announced.
 	 * <p>
@@ -273,7 +282,7 @@ public class CorporateActionSD9 {
 	 * definition} = "Specifies the type of lottery announced."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LotteryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLotteryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSD9.mmObject();
 			isDerived = false;
@@ -281,8 +290,8 @@ public class CorporateActionSD9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LotteryType1Code.mmObject();
 		}
 	};
@@ -290,14 +299,54 @@ public class CorporateActionSD9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD9.PlaceAndName, com.tools20022.repository.msg.CorporateActionSD9.RecordDate,
-						com.tools20022.repository.msg.CorporateActionSD9.PaymentDate, com.tools20022.repository.msg.CorporateActionSD9.LotteryDate, com.tools20022.repository.msg.CorporateActionSD9.LotteryType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD9.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionSD9.mmRecordDate,
+						com.tools20022.repository.msg.CorporateActionSD9.mmPaymentDate, com.tools20022.repository.msg.CorporateActionSD9.mmLotteryDate, com.tools20022.repository.msg.CorporateActionSD9.mmLotteryType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD9";
 				definition = "Provides additional information regarding corporate action details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ISODate getRecordDate() {
+		return recordDate;
+	}
+
+	public void setRecordDate(ISODate recordDate) {
+		this.recordDate = recordDate;
+	}
+
+	public DateFormat28Choice getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(DateFormat28Choice paymentDate) {
+		this.paymentDate = paymentDate;
+	}
+
+	public ISODate getLotteryDate() {
+		return lotteryDate;
+	}
+
+	public void setLotteryDate(ISODate lotteryDate) {
+		this.lotteryDate = lotteryDate;
+	}
+
+	public LotteryType1Code getLotteryType() {
+		return lotteryType;
+	}
+
+	public void setLotteryType(LotteryType1Code lotteryType) {
+		this.lotteryType = lotteryType;
 	}
 }

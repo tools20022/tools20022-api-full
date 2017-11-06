@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code;
 import com.tools20022.repository.datatype.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Account to or from which a securities entry is made.<br>
@@ -40,44 +41,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#AccountOwner
- * SystemSecuritiesAccount1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmAccountOwner
+ * SystemSecuritiesAccount1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#Identification
- * SystemSecuritiesAccount1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#Type
- * SystemSecuritiesAccount1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmIdentification
+ * SystemSecuritiesAccount1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#OpeningDate
- * SystemSecuritiesAccount1.OpeningDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmType
+ * SystemSecuritiesAccount1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#ClosingDate
- * SystemSecuritiesAccount1.ClosingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmOpeningDate
+ * SystemSecuritiesAccount1.mmOpeningDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#HoldIndicator
- * SystemSecuritiesAccount1.HoldIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmClosingDate
+ * SystemSecuritiesAccount1.mmClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#NegativePosition
- * SystemSecuritiesAccount1.NegativePosition}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmHoldIndicator
+ * SystemSecuritiesAccount1.mmHoldIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#MarketSpecificAttribute
- * SystemSecuritiesAccount1.MarketSpecificAttribute}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmNegativePosition
+ * SystemSecuritiesAccount1.mmNegativePosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#Restriction
- * SystemSecuritiesAccount1.Restriction}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmMarketSpecificAttribute
+ * SystemSecuritiesAccount1.mmMarketSpecificAttribute}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#EndInvestorFlag
- * SystemSecuritiesAccount1.EndInvestorFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmRestriction
+ * SystemSecuritiesAccount1.mmRestriction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#PricingScheme
- * SystemSecuritiesAccount1.PricingScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmEndInvestorFlag
+ * SystemSecuritiesAccount1.mmEndInvestorFlag}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SystemSecuritiesAccount1#mmPricingScheme
+ * SystemSecuritiesAccount1.mmPricingScheme}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemSecuritiesAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemPartyIdentification3 accountOwner;
 	/**
 	 * Account to or from which a securities entry is made.<br>
 	 * It holds information such as opening and closing date and whether it can
@@ -128,7 +131,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -136,12 +139,13 @@ public class SystemSecuritiesAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Account to or from which a securities entry is made.\r\nIt holds information such as opening and closing date and whether it can hold negative positions.\r\nDefinition of the entity includes the default setting for holding of settlement instructions involving positions related to the account.\r\nSet of MarketSpecificAttributes define specific properties for the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -172,7 +176,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -180,11 +184,12 @@ public class SystemSecuritiesAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SystemSecuritiesAccountType1Code type;
 	/**
 	 * Specifies the type of the securities account.
 	 * <p>
@@ -213,7 +218,7 @@ public class SystemSecuritiesAccount1 {
 	 * definition} = "Specifies the type of the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -221,11 +226,12 @@ public class SystemSecuritiesAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of the securities account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
 		}
 	};
+	protected ISODate openingDate;
 	/**
 	 * Legal opening date for the securities account.
 	 * <p>
@@ -253,7 +259,7 @@ public class SystemSecuritiesAccount1 {
 	 * definition} = "Legal opening date for the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -261,11 +267,12 @@ public class SystemSecuritiesAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Legal opening date for the securities account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate closingDate;
 	/**
 	 * Legal closing date for the securities account.
 	 * <p>
@@ -293,7 +300,7 @@ public class SystemSecuritiesAccount1 {
 	 * definition} = "Legal closing date for the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -301,11 +308,12 @@ public class SystemSecuritiesAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Legal closing date for the securities account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected TrueFalseIndicator holdIndicator;
 	/**
 	 * Meaning when true : Account is in Hold status.<br>
 	 * Meaning when false : Account is in Release status.
@@ -337,7 +345,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -345,11 +353,12 @@ public class SystemSecuritiesAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
 			definition = "Meaning when true : Account is in Hold status.\r\nMeaning when false : Account is in Release status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator negativePosition;
 	/**
 	 * Specifies whether the securities account can hold a negative position in
 	 * a security.
@@ -381,7 +390,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NegativePosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNegativePosition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -389,11 +398,12 @@ public class SystemSecuritiesAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegativePosition";
 			definition = "Specifies whether the securities account can hold a negative position in a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.MarketSpecificAttribute1> marketSpecificAttribute;
 	/**
 	 * Additional attributes defined by a central security depositary for a
 	 * party.
@@ -424,7 +434,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarketSpecificAttribute = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarketSpecificAttribute = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -433,10 +443,11 @@ public class SystemSecuritiesAccount1 {
 			name = "MarketSpecificAttribute";
 			definition = "Additional attributes defined by a central security depositary for a party.";
 			minOccurs = 0;
-			type_lazy = () -> MarketSpecificAttribute1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MarketSpecificAttribute1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemRestriction1> restriction;
 	/**
 	 * Defines the specific processing characteristics for a securities account
 	 * to ensure configurability of specific requirements, as prescribed by
@@ -467,7 +478,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Restriction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRestriction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -476,10 +487,11 @@ public class SystemSecuritiesAccount1 {
 			name = "Restriction";
 			definition = "Defines the specific processing characteristics for a securities account  to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.";
 			minOccurs = 0;
-			type_lazy = () -> SystemRestriction1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemRestriction1.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText endInvestorFlag;
 	/**
 	 * Specifies information to identify securities accounts where allocation
 	 * instructions are posted.
@@ -511,7 +523,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndInvestorFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndInvestorFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -519,11 +531,12 @@ public class SystemSecuritiesAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndInvestorFlag";
 			definition = "Specifies information to identify securities accounts where allocation instructions are posted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText pricingScheme;
 	/**
 	 * Defines how the price is applied to the securities account.
 	 * <p>
@@ -553,7 +566,7 @@ public class SystemSecuritiesAccount1 {
 	 * "Defines how the price is applied to the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PricingScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPricingScheme = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -561,8 +574,8 @@ public class SystemSecuritiesAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingScheme";
 			definition = "Defines how the price is applied to the securities account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
@@ -570,17 +583,105 @@ public class SystemSecuritiesAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemSecuritiesAccount1.AccountOwner, com.tools20022.repository.msg.SystemSecuritiesAccount1.Identification,
-						com.tools20022.repository.msg.SystemSecuritiesAccount1.Type, com.tools20022.repository.msg.SystemSecuritiesAccount1.OpeningDate, com.tools20022.repository.msg.SystemSecuritiesAccount1.ClosingDate,
-						com.tools20022.repository.msg.SystemSecuritiesAccount1.HoldIndicator, com.tools20022.repository.msg.SystemSecuritiesAccount1.NegativePosition,
-						com.tools20022.repository.msg.SystemSecuritiesAccount1.MarketSpecificAttribute, com.tools20022.repository.msg.SystemSecuritiesAccount1.Restriction,
-						com.tools20022.repository.msg.SystemSecuritiesAccount1.EndInvestorFlag, com.tools20022.repository.msg.SystemSecuritiesAccount1.PricingScheme);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemSecuritiesAccount1.mmAccountOwner, com.tools20022.repository.msg.SystemSecuritiesAccount1.mmIdentification,
+						com.tools20022.repository.msg.SystemSecuritiesAccount1.mmType, com.tools20022.repository.msg.SystemSecuritiesAccount1.mmOpeningDate, com.tools20022.repository.msg.SystemSecuritiesAccount1.mmClosingDate,
+						com.tools20022.repository.msg.SystemSecuritiesAccount1.mmHoldIndicator, com.tools20022.repository.msg.SystemSecuritiesAccount1.mmNegativePosition,
+						com.tools20022.repository.msg.SystemSecuritiesAccount1.mmMarketSpecificAttribute, com.tools20022.repository.msg.SystemSecuritiesAccount1.mmRestriction,
+						com.tools20022.repository.msg.SystemSecuritiesAccount1.mmEndInvestorFlag, com.tools20022.repository.msg.SystemSecuritiesAccount1.mmPricingScheme);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemSecuritiesAccount1";
 				definition = "Account to or from which a securities entry is made.\r\nIt holds information such as opening and closing date and whether it can hold negative positions.\r\nDefinition of the entity includes the default setting for holding of settlement instructions involving positions related to the account.\r\nSet of MarketSpecificAttributes define specific properties for the account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemPartyIdentification3 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification3 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public SystemSecuritiesAccountType1Code getType() {
+		return type;
+	}
+
+	public void setType(SystemSecuritiesAccountType1Code type) {
+		this.type = type;
+	}
+
+	public ISODate getOpeningDate() {
+		return openingDate;
+	}
+
+	public void setOpeningDate(ISODate openingDate) {
+		this.openingDate = openingDate;
+	}
+
+	public ISODate getClosingDate() {
+		return closingDate;
+	}
+
+	public void setClosingDate(ISODate closingDate) {
+		this.closingDate = closingDate;
+	}
+
+	public TrueFalseIndicator getHoldIndicator() {
+		return holdIndicator;
+	}
+
+	public void setHoldIndicator(TrueFalseIndicator holdIndicator) {
+		this.holdIndicator = holdIndicator;
+	}
+
+	public YesNoIndicator getNegativePosition() {
+		return negativePosition;
+	}
+
+	public void setNegativePosition(YesNoIndicator negativePosition) {
+		this.negativePosition = negativePosition;
+	}
+
+	public List<MarketSpecificAttribute1> getMarketSpecificAttribute() {
+		return marketSpecificAttribute;
+	}
+
+	public void setMarketSpecificAttribute(List<com.tools20022.repository.msg.MarketSpecificAttribute1> marketSpecificAttribute) {
+		this.marketSpecificAttribute = marketSpecificAttribute;
+	}
+
+	public List<SystemRestriction1> getRestriction() {
+		return restriction;
+	}
+
+	public void setRestriction(List<com.tools20022.repository.msg.SystemRestriction1> restriction) {
+		this.restriction = restriction;
+	}
+
+	public Exact4AlphaNumericText getEndInvestorFlag() {
+		return endInvestorFlag;
+	}
+
+	public void setEndInvestorFlag(Exact4AlphaNumericText endInvestorFlag) {
+		this.endInvestorFlag = endInvestorFlag;
+	}
+
+	public Exact4AlphaNumericText getPricingScheme() {
+		return pricingScheme;
+	}
+
+	public void setPricingScheme(Exact4AlphaNumericText pricingScheme) {
+		this.pricingScheme = pricingScheme;
 	}
 }

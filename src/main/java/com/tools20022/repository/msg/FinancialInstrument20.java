@@ -39,41 +39,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#PhysicalBearerSecurities
- * FinancialInstrument20.PhysicalBearerSecurities}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmPhysicalBearerSecurities
+ * FinancialInstrument20.mmPhysicalBearerSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#DematerialisedBearerSecurities
- * FinancialInstrument20.DematerialisedBearerSecurities}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmDematerialisedBearerSecurities
+ * FinancialInstrument20.mmDematerialisedBearerSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#PhysicalRegisteredSecurities
- * FinancialInstrument20.PhysicalRegisteredSecurities}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmPhysicalRegisteredSecurities
+ * FinancialInstrument20.mmPhysicalRegisteredSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#DematerialisedRegisteredSecurities
- * FinancialInstrument20.DematerialisedRegisteredSecurities}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmDematerialisedRegisteredSecurities
+ * FinancialInstrument20.mmDematerialisedRegisteredSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#DistributionPolicy
- * FinancialInstrument20.DistributionPolicy}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmDistributionPolicy
+ * FinancialInstrument20.mmDistributionPolicy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#DividendPolicy
- * FinancialInstrument20.DividendPolicy}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmDividendPolicy
+ * FinancialInstrument20.mmDividendPolicy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#DividendFrequency
- * FinancialInstrument20.DividendFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmDividendFrequency
+ * FinancialInstrument20.mmDividendFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#ReinvestmentFrequency
- * FinancialInstrument20.ReinvestmentFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmReinvestmentFrequency
+ * FinancialInstrument20.mmReinvestmentFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#FrontEndLoad
- * FinancialInstrument20.FrontEndLoad}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmFrontEndLoad
+ * FinancialInstrument20.mmFrontEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#BackEndLoad
- * FinancialInstrument20.BackEndLoad}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmBackEndLoad
+ * FinancialInstrument20.mmBackEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#SwitchFee
- * FinancialInstrument20.SwitchFee}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmSwitchFee
+ * FinancialInstrument20.mmSwitchFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#EUSavingsDirective
- * FinancialInstrument20.EUSavingsDirective}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument20#mmEUSavingsDirective
+ * FinancialInstrument20.mmEUSavingsDirective}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -82,8 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrument20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator physicalBearerSecurities;
 	/**
 	 * Indicate whether or note it is possible to hold bearer units/shares in
 	 * this class in certified form
@@ -113,8 +114,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#PhysicalBearerSecurities
-	 * InvestmentFundClass.PhysicalBearerSecurities}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmPhysicalBearerSecurities
+	 * InvestmentFundClass.mmPhysicalBearerSecurities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,20 +136,21 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhysicalBearerSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhysicalBearerSecurities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmPhysicalBearerSecurities;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.PhysicalBearerSecurities;
 			isDerived = false;
 			xmlTag = "PhysBrScties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalBearerSecurities";
 			definition = "Indicate whether or note it is possible to hold bearer units/shares in this class in certified form";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator dematerialisedBearerSecurities;
 	/**
 	 * Indicate whether or not it is possible to hold bearer units/shares in
 	 * paperless form
@@ -163,8 +165,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#DematerialisedBearerSecurities
-	 * InvestmentFundClass.DematerialisedBearerSecurities}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDematerialisedBearerSecurities
+	 * InvestmentFundClass.mmDematerialisedBearerSecurities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,20 +187,21 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DematerialisedBearerSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDematerialisedBearerSecurities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDematerialisedBearerSecurities;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.DematerialisedBearerSecurities;
 			isDerived = false;
 			xmlTag = "DmtrlsdBrScties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DematerialisedBearerSecurities";
 			definition = "Indicate whether or not it is possible to hold bearer units/shares in paperless form";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator physicalRegisteredSecurities;
 	/**
 	 * Indicate whether or not it is possible to hold registered units/shares in
 	 * this class in paperless form
@@ -213,8 +216,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#PhysicalRegisteredSecurities
-	 * InvestmentFundClass.PhysicalRegisteredSecurities}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmPhysicalRegisteredSecurities
+	 * InvestmentFundClass.mmPhysicalRegisteredSecurities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -235,20 +238,21 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhysicalRegisteredSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhysicalRegisteredSecurities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmPhysicalRegisteredSecurities;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.PhysicalRegisteredSecurities;
 			isDerived = false;
 			xmlTag = "PhysRegdScties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalRegisteredSecurities";
 			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator dematerialisedRegisteredSecurities;
 	/**
 	 * Indicate whether or not it is possible to hold registered units/shares in
 	 * this class in paperless form
@@ -263,8 +267,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#DematerialisedRegisteredSecurities
-	 * InvestmentFundClass.DematerialisedRegisteredSecurities}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDematerialisedRegisteredSecurities
+	 * InvestmentFundClass.mmDematerialisedRegisteredSecurities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -285,20 +289,21 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DematerialisedRegisteredSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDematerialisedRegisteredSecurities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDematerialisedRegisteredSecurities;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.DematerialisedRegisteredSecurities;
 			isDerived = false;
 			xmlTag = "DmtrlsdRegdScties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DematerialisedRegisteredSecurities";
 			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected DistributionPolicy1Code distributionPolicy;
 	/**
 	 * Income policy relating to a class type, ie, if income is paid out or
 	 * retained in the fund.
@@ -313,8 +318,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#DistributionPolicy
-	 * InvestmentFundClass.DistributionPolicy}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDistributionPolicy
+	 * InvestmentFundClass.mmDistributionPolicy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -335,20 +340,21 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DistributionPolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDistributionPolicy = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDistributionPolicy;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.DistributionPolicy;
 			isDerived = false;
 			xmlTag = "DstrbtnPlcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionPolicy";
 			definition = "Income policy relating to a class type, ie, if income is paid out or retained in the fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DistributionPolicy1Code.mmObject();
 		}
 	};
+	protected DividendPolicy1Code dividendPolicy;
 	/**
 	 * Dividend policy of the fund, eg, cash, units.
 	 * <p>
@@ -362,8 +368,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#DividendPolicy
-	 * InvestmentFundClass.DividendPolicy}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDividendPolicy
+	 * InvestmentFundClass.mmDividendPolicy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -382,20 +388,21 @@ public class FinancialInstrument20 {
 	 * definition} = "Dividend policy of the fund, eg, cash, units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DividendPolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDividendPolicy = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDividendPolicy;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.DividendPolicy;
 			isDerived = false;
 			xmlTag = "DvddPlcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPolicy";
 			definition = "Dividend policy of the fund, eg, cash, units.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DividendPolicy1Code.mmObject();
 		}
 	};
+	protected EventFrequency5Code dividendFrequency;
 	/**
 	 * Frequency with which the income is allocated to investors.
 	 * <p>
@@ -409,8 +416,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#DividendFrequency
-	 * Dividend.DividendFrequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmDividendFrequency
+	 * Dividend.mmDividendFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -430,20 +437,21 @@ public class FinancialInstrument20 {
 	 * "Frequency with which the income is allocated to investors."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DividendFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDividendFrequency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmDividendFrequency;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.DividendFrequency;
 			isDerived = false;
 			xmlTag = "DvddFrqcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendFrequency";
 			definition = "Frequency with which the income is allocated to investors.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EventFrequency5Code.mmObject();
 		}
 	};
+	protected EventFrequency5Code reinvestmentFrequency;
 	/**
 	 * Frequency with which the reinvestment takes place, This is the same or
 	 * less than the dividend frequency,
@@ -458,8 +466,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#ReinvestmentFrequency
-	 * InvestmentFundClassProcessingCharacteristics.ReinvestmentFrequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmReinvestmentFrequency
+	 * InvestmentFundClassProcessingCharacteristics.mmReinvestmentFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -480,20 +488,21 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReinvestmentFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReinvestmentFrequency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmReinvestmentFrequency;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.ReinvestmentFrequency;
 			isDerived = false;
 			xmlTag = "RinvstmtFrqcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentFrequency";
 			definition = "Frequency with which the reinvestment takes place,  This is the same or less than the dividend frequency,";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EventFrequency5Code.mmObject();
 		}
 	};
+	protected YesNoIndicator frontEndLoad;
 	/**
 	 * Front end charge on subscription orders for this class can be applied.
 	 * <p>
@@ -507,8 +516,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#FrontEndLoadIndicator
-	 * InvestmentFundClassProcessingCharacteristics.FrontEndLoadIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmFrontEndLoadIndicator
+	 * InvestmentFundClassProcessingCharacteristics.mmFrontEndLoadIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -528,20 +537,21 @@ public class FinancialInstrument20 {
 	 * "Front end charge on subscription orders for this class can be applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FrontEndLoad = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrontEndLoad = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmFrontEndLoadIndicator;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.FrontEndLoadIndicator;
 			isDerived = false;
 			xmlTag = "FrntEndLd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
 			definition = "Front end charge on subscription orders for this class can be applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator backEndLoad;
 	/**
 	 * Exit charge (eg. CDSC) on redemption orders for this class can be
 	 * applied.
@@ -556,8 +566,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#BackEndLoadIndicator
-	 * InvestmentFundClassProcessingCharacteristics.BackEndLoadIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmBackEndLoadIndicator
+	 * InvestmentFundClassProcessingCharacteristics.mmBackEndLoadIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -578,20 +588,21 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BackEndLoad = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBackEndLoad = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmBackEndLoadIndicator;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.BackEndLoadIndicator;
 			isDerived = false;
 			xmlTag = "BckEndLd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
 			definition = "Exit charge (eg. CDSC) on redemption orders for this class can be applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator switchFee;
 	/**
 	 * If a separate fee for switching between sub-funds of the same umbrella
 	 * can be applied
@@ -606,8 +617,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#SwitchingFeeIndicator
-	 * InvestmentFundClassProcessingCharacteristics.SwitchingFeeIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmSwitchingFeeIndicator
+	 * InvestmentFundClassProcessingCharacteristics.mmSwitchingFeeIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -628,20 +639,21 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SwitchFee = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSwitchFee = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSwitchingFeeIndicator;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.SwitchingFeeIndicator;
 			isDerived = false;
 			xmlTag = "SwtchFee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchFee";
 			definition = "If a separate fee for switching between sub-funds of the same umbrella can be applied";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected EUSavingsDirective1Code eUSavingsDirective;
 	/**
 	 * Indicates whether the investment fund class is subject to the European
 	 * Union Saving Directive.
@@ -656,8 +668,8 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#EUSavingsDirective
-	 * Security.EUSavingsDirective}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmEUSavingsDirective
+	 * Security.mmEUSavingsDirective}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -678,17 +690,17 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EUSavingsDirective = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEUSavingsDirective = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmEUSavingsDirective;
 			componentContext_lazy = () -> FinancialInstrument20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.EUSavingsDirective;
 			isDerived = false;
 			xmlTag = "EUSvgsDrctv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsDirective";
 			definition = "Indicates whether the investment fund class is subject to the European Union Saving Directive.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EUSavingsDirective1Code.mmObject();
 		}
 	};
@@ -696,18 +708,115 @@ public class FinancialInstrument20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument20.PhysicalBearerSecurities, com.tools20022.repository.msg.FinancialInstrument20.DematerialisedBearerSecurities,
-						com.tools20022.repository.msg.FinancialInstrument20.PhysicalRegisteredSecurities, com.tools20022.repository.msg.FinancialInstrument20.DematerialisedRegisteredSecurities,
-						com.tools20022.repository.msg.FinancialInstrument20.DistributionPolicy, com.tools20022.repository.msg.FinancialInstrument20.DividendPolicy, com.tools20022.repository.msg.FinancialInstrument20.DividendFrequency,
-						com.tools20022.repository.msg.FinancialInstrument20.ReinvestmentFrequency, com.tools20022.repository.msg.FinancialInstrument20.FrontEndLoad, com.tools20022.repository.msg.FinancialInstrument20.BackEndLoad,
-						com.tools20022.repository.msg.FinancialInstrument20.SwitchFee, com.tools20022.repository.msg.FinancialInstrument20.EUSavingsDirective);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument20.mmPhysicalBearerSecurities, com.tools20022.repository.msg.FinancialInstrument20.mmDematerialisedBearerSecurities,
+						com.tools20022.repository.msg.FinancialInstrument20.mmPhysicalRegisteredSecurities, com.tools20022.repository.msg.FinancialInstrument20.mmDematerialisedRegisteredSecurities,
+						com.tools20022.repository.msg.FinancialInstrument20.mmDistributionPolicy, com.tools20022.repository.msg.FinancialInstrument20.mmDividendPolicy,
+						com.tools20022.repository.msg.FinancialInstrument20.mmDividendFrequency, com.tools20022.repository.msg.FinancialInstrument20.mmReinvestmentFrequency,
+						com.tools20022.repository.msg.FinancialInstrument20.mmFrontEndLoad, com.tools20022.repository.msg.FinancialInstrument20.mmBackEndLoad, com.tools20022.repository.msg.FinancialInstrument20.mmSwitchFee,
+						com.tools20022.repository.msg.FinancialInstrument20.mmEUSavingsDirective);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument20";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getPhysicalBearerSecurities() {
+		return physicalBearerSecurities;
+	}
+
+	public void setPhysicalBearerSecurities(YesNoIndicator physicalBearerSecurities) {
+		this.physicalBearerSecurities = physicalBearerSecurities;
+	}
+
+	public YesNoIndicator getDematerialisedBearerSecurities() {
+		return dematerialisedBearerSecurities;
+	}
+
+	public void setDematerialisedBearerSecurities(YesNoIndicator dematerialisedBearerSecurities) {
+		this.dematerialisedBearerSecurities = dematerialisedBearerSecurities;
+	}
+
+	public YesNoIndicator getPhysicalRegisteredSecurities() {
+		return physicalRegisteredSecurities;
+	}
+
+	public void setPhysicalRegisteredSecurities(YesNoIndicator physicalRegisteredSecurities) {
+		this.physicalRegisteredSecurities = physicalRegisteredSecurities;
+	}
+
+	public YesNoIndicator getDematerialisedRegisteredSecurities() {
+		return dematerialisedRegisteredSecurities;
+	}
+
+	public void setDematerialisedRegisteredSecurities(YesNoIndicator dematerialisedRegisteredSecurities) {
+		this.dematerialisedRegisteredSecurities = dematerialisedRegisteredSecurities;
+	}
+
+	public DistributionPolicy1Code getDistributionPolicy() {
+		return distributionPolicy;
+	}
+
+	public void setDistributionPolicy(DistributionPolicy1Code distributionPolicy) {
+		this.distributionPolicy = distributionPolicy;
+	}
+
+	public DividendPolicy1Code getDividendPolicy() {
+		return dividendPolicy;
+	}
+
+	public void setDividendPolicy(DividendPolicy1Code dividendPolicy) {
+		this.dividendPolicy = dividendPolicy;
+	}
+
+	public EventFrequency5Code getDividendFrequency() {
+		return dividendFrequency;
+	}
+
+	public void setDividendFrequency(EventFrequency5Code dividendFrequency) {
+		this.dividendFrequency = dividendFrequency;
+	}
+
+	public EventFrequency5Code getReinvestmentFrequency() {
+		return reinvestmentFrequency;
+	}
+
+	public void setReinvestmentFrequency(EventFrequency5Code reinvestmentFrequency) {
+		this.reinvestmentFrequency = reinvestmentFrequency;
+	}
+
+	public YesNoIndicator getFrontEndLoad() {
+		return frontEndLoad;
+	}
+
+	public void setFrontEndLoad(YesNoIndicator frontEndLoad) {
+		this.frontEndLoad = frontEndLoad;
+	}
+
+	public YesNoIndicator getBackEndLoad() {
+		return backEndLoad;
+	}
+
+	public void setBackEndLoad(YesNoIndicator backEndLoad) {
+		this.backEndLoad = backEndLoad;
+	}
+
+	public YesNoIndicator getSwitchFee() {
+		return switchFee;
+	}
+
+	public void setSwitchFee(YesNoIndicator switchFee) {
+		this.switchFee = switchFee;
+	}
+
+	public EUSavingsDirective1Code getEUSavingsDirective() {
+		return eUSavingsDirective;
+	}
+
+	public void setEUSavingsDirective(EUSavingsDirective1Code eUSavingsDirective) {
+		this.eUSavingsDirective = eUSavingsDirective;
 	}
 }

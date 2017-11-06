@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Min5Max16Binary;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identification of a key encryption key (KEK), using previously distributed
@@ -38,26 +39,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.KEKIdentifier5#KeyIdentification
- * KEKIdentifier5.KeyIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.KEKIdentifier5#KeyVersion
- * KEKIdentifier5.KeyVersion}</li>
- * <li>{@linkplain com.tools20022.repository.msg.KEKIdentifier5#SequenceNumber
- * KEKIdentifier5.SequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.KEKIdentifier5#mmKeyIdentification
+ * KEKIdentifier5.mmKeyIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.KEKIdentifier5#mmKeyVersion
+ * KEKIdentifier5.mmKeyVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.KEKIdentifier5#DerivationIdentification
- * KEKIdentifier5.DerivationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.KEKIdentifier5#Type
- * KEKIdentifier5.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.KEKIdentifier5#Function
- * KEKIdentifier5.Function}</li>
+ * {@linkplain com.tools20022.repository.msg.KEKIdentifier5#mmSequenceNumber
+ * KEKIdentifier5.mmSequenceNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.KEKIdentifier5#mmDerivationIdentification
+ * KEKIdentifier5.mmDerivationIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.KEKIdentifier5#mmType
+ * KEKIdentifier5.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.KEKIdentifier5#mmFunction
+ * KEKIdentifier5.mmFunction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class KEKIdentifier5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text keyIdentification;
 	/**
 	 * Identification of the cryptographic key.
 	 * <p>
@@ -103,11 +106,11 @@ public class KEKIdentifier5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.KEKIdentifier2#KeyIdentification
-	 * KEKIdentifier2.KeyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.KEKIdentifier2#mmKeyIdentification
+	 * KEKIdentifier2.mmKeyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute KeyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKeyIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> KEKIdentifier5.mmObject();
 			isDerived = false;
@@ -115,12 +118,13 @@ public class KEKIdentifier5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentification";
 			definition = "Identification of the cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.KeyIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmKeyIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max140Text keyVersion;
 	/**
 	 * Version of the cryptographic key.
 	 * <p>
@@ -148,11 +152,11 @@ public class KEKIdentifier5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.KEKIdentifier2#KeyVersion
-	 * KEKIdentifier2.KeyVersion}</li>
+	 * {@linkplain com.tools20022.repository.msg.KEKIdentifier2#mmKeyVersion
+	 * KEKIdentifier2.mmKeyVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute KeyVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKeyVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> KEKIdentifier5.mmObject();
 			isDerived = false;
@@ -160,12 +164,13 @@ public class KEKIdentifier5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyVersion";
 			definition = "Version of the cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.KeyVersion;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmKeyVersion;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Number sequenceNumber;
 	/**
 	 * Number of usages of the cryptographic key.
 	 * <p>
@@ -193,11 +198,11 @@ public class KEKIdentifier5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.KEKIdentifier2#SequenceNumber
-	 * KEKIdentifier2.SequenceNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.KEKIdentifier2#mmSequenceNumber
+	 * KEKIdentifier2.mmSequenceNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> KEKIdentifier5.mmObject();
 			isDerived = false;
@@ -205,12 +210,13 @@ public class KEKIdentifier5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Number of usages of the cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.SequenceNumber;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmSequenceNumber;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Min5Max16Binary derivationIdentification;
 	/**
 	 * Identification used for derivation of a unique key from a master key
 	 * provided for the data protection.
@@ -242,11 +248,11 @@ public class KEKIdentifier5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.KEKIdentifier2#DerivationIdentification
-	 * KEKIdentifier2.DerivationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.KEKIdentifier2#mmDerivationIdentification
+	 * KEKIdentifier2.mmDerivationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DerivationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDerivationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> KEKIdentifier5.mmObject();
 			isDerived = false;
@@ -254,12 +260,13 @@ public class KEKIdentifier5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivationIdentification";
 			definition = "Identification used for derivation of a unique key from a master key provided for the data protection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.DerivationIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmDerivationIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Min5Max16Binary.mmObject();
 		}
 	};
+	protected CryptographicKeyType3Code type;
 	/**
 	 * Type of algorithm used by the cryptographic key.
 	 * <p>
@@ -287,7 +294,7 @@ public class KEKIdentifier5 {
 	 * definition} = "Type of algorithm used by the cryptographic key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> KEKIdentifier5.mmObject();
 			isDerived = false;
@@ -295,11 +302,12 @@ public class KEKIdentifier5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of algorithm used by the cryptographic key.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CryptographicKeyType3Code.mmObject();
 		}
 	};
+	protected List<KeyUsage1Code> function;
 	/**
 	 * Allowed usage of the key.
 	 * <p>
@@ -327,7 +335,7 @@ public class KEKIdentifier5 {
 	 * definition} = "Allowed usage of the key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Function = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFunction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> KEKIdentifier5.mmObject();
 			isDerived = false;
@@ -343,9 +351,10 @@ public class KEKIdentifier5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier5.KeyIdentification, com.tools20022.repository.msg.KEKIdentifier5.KeyVersion, com.tools20022.repository.msg.KEKIdentifier5.SequenceNumber,
-						com.tools20022.repository.msg.KEKIdentifier5.DerivationIdentification, com.tools20022.repository.msg.KEKIdentifier5.Type, com.tools20022.repository.msg.KEKIdentifier5.Function);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier5.mmKeyIdentification, com.tools20022.repository.msg.KEKIdentifier5.mmKeyVersion,
+						com.tools20022.repository.msg.KEKIdentifier5.mmSequenceNumber, com.tools20022.repository.msg.KEKIdentifier5.mmDerivationIdentification, com.tools20022.repository.msg.KEKIdentifier5.mmType,
+						com.tools20022.repository.msg.KEKIdentifier5.mmFunction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "KEKIdentifier5";
 				definition = "Identification of a key encryption key (KEK), using previously distributed symmetric key.";
@@ -353,5 +362,53 @@ public class KEKIdentifier5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getKeyIdentification() {
+		return keyIdentification;
+	}
+
+	public void setKeyIdentification(Max140Text keyIdentification) {
+		this.keyIdentification = keyIdentification;
+	}
+
+	public Max140Text getKeyVersion() {
+		return keyVersion;
+	}
+
+	public void setKeyVersion(Max140Text keyVersion) {
+		this.keyVersion = keyVersion;
+	}
+
+	public Number getSequenceNumber() {
+		return sequenceNumber;
+	}
+
+	public void setSequenceNumber(Number sequenceNumber) {
+		this.sequenceNumber = sequenceNumber;
+	}
+
+	public Min5Max16Binary getDerivationIdentification() {
+		return derivationIdentification;
+	}
+
+	public void setDerivationIdentification(Min5Max16Binary derivationIdentification) {
+		this.derivationIdentification = derivationIdentification;
+	}
+
+	public CryptographicKeyType3Code getType() {
+		return type;
+	}
+
+	public void setType(CryptographicKeyType3Code type) {
+		this.type = type;
+	}
+
+	public List<KeyUsage1Code> getFunction() {
+		return function;
+	}
+
+	public void setFunction(List<KeyUsage1Code> function) {
+		this.function = function;
 	}
 }

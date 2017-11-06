@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Deposit service provided by the ATM inside the session.
@@ -34,30 +35,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService13#ServiceReference
- * ATMService13.ServiceReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService13#ATMServiceCode
- * ATMService13.ATMServiceCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService13#HostServiceCode
- * ATMService13.HostServiceCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService13#ServiceType
- * ATMService13.ServiceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMService13#ServiceVariantIdentification
- * ATMService13.ServiceVariantIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService13#CashBack
- * ATMService13.CashBack}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService13#MultiAccount
- * ATMService13.MultiAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService13#PartialDeposit
- * ATMService13.PartialDeposit}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMService13#mmServiceReference
+ * ATMService13.mmServiceReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService13#mmATMServiceCode
+ * ATMService13.mmATMServiceCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService13#mmHostServiceCode
+ * ATMService13.mmHostServiceCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService13#mmServiceType
+ * ATMService13.mmServiceType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMService13#mmServiceVariantIdentification
+ * ATMService13.mmServiceVariantIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService13#mmCashBack
+ * ATMService13.mmCashBack}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService13#mmMultiAccount
+ * ATMService13.mmMultiAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService13#mmPartialDeposit
+ * ATMService13.mmPartialDeposit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMService13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text serviceReference;
 	/**
 	 * Unique identification of the deposit service provided by the ATM inside
 	 * the session.
@@ -104,11 +107,11 @@ public class ATMService13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService12#ServiceReference
-	 * ATMService12.ServiceReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService12#mmServiceReference
+	 * ATMService12.mmServiceReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService13.mmObject();
 			isDerived = false;
@@ -116,12 +119,13 @@ public class ATMService13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceReference";
 			definition = "Unique identification of the deposit service provided by the ATM inside the session.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.ServiceReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.mmServiceReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text aTMServiceCode;
 	/**
 	 * Codification of the type of service for the ATM.
 	 * <p>
@@ -149,11 +153,11 @@ public class ATMService13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService12#ATMServiceCode
-	 * ATMService12.ATMServiceCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService12#mmATMServiceCode
+	 * ATMService12.mmATMServiceCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ATMServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmATMServiceCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService13.mmObject();
 			isDerived = false;
@@ -161,12 +165,13 @@ public class ATMService13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMServiceCode";
 			definition = "Codification of the type of service for the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.ATMServiceCode;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.mmATMServiceCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text hostServiceCode;
 	/**
 	 * Codification of the type of service for the host.
 	 * <p>
@@ -194,11 +199,11 @@ public class ATMService13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService12#HostServiceCode
-	 * ATMService12.HostServiceCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService12#mmHostServiceCode
+	 * ATMService12.mmHostServiceCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostServiceCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService13.mmObject();
 			isDerived = false;
@@ -206,12 +211,13 @@ public class ATMService13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostServiceCode";
 			definition = "Codification of the type of service for the host.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.HostServiceCode;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.mmHostServiceCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ATMServiceType6Code serviceType;
 	/**
 	 * Describes the type of deposit service selected by the customer.
 	 * <p>
@@ -241,11 +247,11 @@ public class ATMService13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService12#ServiceType
-	 * ATMService12.ServiceType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService12#mmServiceType
+	 * ATMService12.mmServiceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService13.mmObject();
 			isDerived = false;
@@ -253,12 +259,13 @@ public class ATMService13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceType";
 			definition = "Describes the type of deposit service selected by the customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.ServiceType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.mmServiceType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType6Code.mmObject();
 		}
 	};
+	protected List<Max35Text> serviceVariantIdentification;
 	/**
 	 * Identification of the variant of the service.
 	 * <p>
@@ -286,11 +293,11 @@ public class ATMService13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService12#ServiceVariantIdentification
-	 * ATMService12.ServiceVariantIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService12#mmServiceVariantIdentification
+	 * ATMService12.mmServiceVariantIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceVariantIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceVariantIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService13.mmObject();
 			isDerived = false;
@@ -298,11 +305,12 @@ public class ATMService13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceVariantIdentification";
 			definition = "Identification of the variant of the service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.ServiceVariantIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.mmServiceVariantIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TrueFalseIndicator cashBack;
 	/**
 	 * True if deposit with cash back transaction.
 	 * <p>
@@ -331,11 +339,11 @@ public class ATMService13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService12#CashBack
-	 * ATMService12.CashBack}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService12#mmCashBack
+	 * ATMService12.mmCashBack}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashBack = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashBack = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService13.mmObject();
 			isDerived = false;
@@ -343,12 +351,13 @@ public class ATMService13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashBack";
 			definition = "True if deposit with cash back transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.CashBack;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.mmCashBack;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator multiAccount;
 	/**
 	 * True if the deposit transaction is split in multiple accounts.
 	 * <p>
@@ -378,11 +387,11 @@ public class ATMService13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService12#MultiAccount
-	 * ATMService12.MultiAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService12#mmMultiAccount
+	 * ATMService12.mmMultiAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MultiAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMultiAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService13.mmObject();
 			isDerived = false;
@@ -390,12 +399,13 @@ public class ATMService13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiAccount";
 			definition = "True if the deposit transaction is split in multiple accounts.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.MultiAccount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService12.mmMultiAccount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator partialDeposit;
 	/**
 	 * True if this is not the final deposit.
 	 * <p>
@@ -423,7 +433,7 @@ public class ATMService13 {
 	 * definition} = "True if this is not the final deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartialDeposit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartialDeposit = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService13.mmObject();
 			isDerived = false;
@@ -431,8 +441,8 @@ public class ATMService13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDeposit";
 			definition = "True if this is not the final deposit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
@@ -440,10 +450,10 @@ public class ATMService13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService13.ServiceReference, com.tools20022.repository.msg.ATMService13.ATMServiceCode, com.tools20022.repository.msg.ATMService13.HostServiceCode,
-						com.tools20022.repository.msg.ATMService13.ServiceType, com.tools20022.repository.msg.ATMService13.ServiceVariantIdentification, com.tools20022.repository.msg.ATMService13.CashBack,
-						com.tools20022.repository.msg.ATMService13.MultiAccount, com.tools20022.repository.msg.ATMService13.PartialDeposit);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService13.mmServiceReference, com.tools20022.repository.msg.ATMService13.mmATMServiceCode,
+						com.tools20022.repository.msg.ATMService13.mmHostServiceCode, com.tools20022.repository.msg.ATMService13.mmServiceType, com.tools20022.repository.msg.ATMService13.mmServiceVariantIdentification,
+						com.tools20022.repository.msg.ATMService13.mmCashBack, com.tools20022.repository.msg.ATMService13.mmMultiAccount, com.tools20022.repository.msg.ATMService13.mmPartialDeposit);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMService13";
 				definition = "Deposit service provided by the ATM inside the session.";
@@ -451,5 +461,69 @@ public class ATMService13 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getServiceReference() {
+		return serviceReference;
+	}
+
+	public void setServiceReference(Max35Text serviceReference) {
+		this.serviceReference = serviceReference;
+	}
+
+	public Max35Text getATMServiceCode() {
+		return aTMServiceCode;
+	}
+
+	public void setATMServiceCode(Max35Text aTMServiceCode) {
+		this.aTMServiceCode = aTMServiceCode;
+	}
+
+	public Max35Text getHostServiceCode() {
+		return hostServiceCode;
+	}
+
+	public void setHostServiceCode(Max35Text hostServiceCode) {
+		this.hostServiceCode = hostServiceCode;
+	}
+
+	public ATMServiceType6Code getServiceType() {
+		return serviceType;
+	}
+
+	public void setServiceType(ATMServiceType6Code serviceType) {
+		this.serviceType = serviceType;
+	}
+
+	public List<Max35Text> getServiceVariantIdentification() {
+		return serviceVariantIdentification;
+	}
+
+	public void setServiceVariantIdentification(List<Max35Text> serviceVariantIdentification) {
+		this.serviceVariantIdentification = serviceVariantIdentification;
+	}
+
+	public TrueFalseIndicator getCashBack() {
+		return cashBack;
+	}
+
+	public void setCashBack(TrueFalseIndicator cashBack) {
+		this.cashBack = cashBack;
+	}
+
+	public TrueFalseIndicator getMultiAccount() {
+		return multiAccount;
+	}
+
+	public void setMultiAccount(TrueFalseIndicator multiAccount) {
+		this.multiAccount = multiAccount;
+	}
+
+	public TrueFalseIndicator getPartialDeposit() {
+		return partialDeposit;
+	}
+
+	public void setPartialDeposit(TrueFalseIndicator partialDeposit) {
+		this.partialDeposit = partialDeposit;
 	}
 }

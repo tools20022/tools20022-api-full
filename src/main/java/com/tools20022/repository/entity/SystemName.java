@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SystemName#Name
- * SystemName.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemName#mmName
+ * SystemName.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemName#SystemIdentification
- * SystemName.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemName#mmSystemIdentification
+ * SystemName.mmSystemIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,15 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#SystemName
- * SystemIdentification.SystemName}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
+ * SystemIdentification.mmSystemName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemName {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text name;
 	/**
 	 * Name of a system for instance the common name assigned by the acquirer to
 	 * the POI system.
@@ -80,33 +81,33 @@ public class SystemName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction1#SystemName
-	 * PointOfInteraction1.SystemName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction2#SystemName
-	 * PointOfInteraction2.SystemName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction3#SystemName
-	 * PointOfInteraction3.SystemName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction4#SystemName
-	 * PointOfInteraction4.SystemName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#SystemName
-	 * PointOfInteraction5.SystemName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#SystemName
-	 * PointOfInteraction7.SystemName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemName SystemName}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction1#mmSystemName
+	 * PointOfInteraction1.mmSystemName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction2#mmSystemName
+	 * PointOfInteraction2.mmSystemName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction3#mmSystemName
+	 * PointOfInteraction3.mmSystemName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction4#mmSystemName
+	 * PointOfInteraction4.mmSystemName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#mmSystemName
+	 * PointOfInteraction5.mmSystemName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#mmSystemName
+	 * PointOfInteraction7.mmSystemName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -120,20 +121,22 @@ public class SystemName {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Name = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction1.SystemName, com.tools20022.repository.msg.PointOfInteraction2.SystemName, com.tools20022.repository.msg.PointOfInteraction3.SystemName,
-					com.tools20022.repository.msg.PointOfInteraction4.SystemName, com.tools20022.repository.msg.PointOfInteraction5.SystemName, com.tools20022.repository.msg.PointOfInteraction7.SystemName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction1.mmSystemName, com.tools20022.repository.msg.PointOfInteraction2.mmSystemName,
+					com.tools20022.repository.msg.PointOfInteraction3.mmSystemName, com.tools20022.repository.msg.PointOfInteraction4.mmSystemName, com.tools20022.repository.msg.PointOfInteraction5.mmSystemName,
+					com.tools20022.repository.msg.PointOfInteraction7.mmSystemName);
 			elementContext_lazy = () -> SystemName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name of a system for instance the common name assigned by the acquirer to the POI system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected SystemIdentification systemIdentification;
 	/**
 	 * System identification which contains a name.
 	 * <p>
@@ -142,8 +145,8 @@ public class SystemName {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SystemIdentification#SystemName
-	 * SystemIdentification.SystemName}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
+	 * SystemIdentification.mmSystemName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -167,32 +170,48 @@ public class SystemName {
 	 * definition} = "System identification which contains a name."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SystemIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSystemIdentification = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SystemName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SystemIdentification";
 			definition = "System identification which contains a name.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SystemIdentification.SystemName;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmSystemName;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemName";
 				definition = "Name of a system.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemIdentification.SystemName);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemName.Name, com.tools20022.repository.entity.SystemName.SystemIdentification);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemIdentification.mmSystemName);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemName.mmName, com.tools20022.repository.entity.SystemName.mmSystemIdentification);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
+	}
+
+	public SystemIdentification getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(com.tools20022.repository.entity.SystemIdentification systemIdentification) {
+		this.systemIdentification = systemIdentification;
 	}
 }

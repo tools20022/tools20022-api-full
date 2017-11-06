@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LegIdentification1Choice#RedemptionLegIdentification
- * LegIdentification1Choice.RedemptionLegIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.LegIdentification1Choice#mmRedemptionLegIdentification
+ * LegIdentification1Choice.mmRedemptionLegIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LegIdentification1Choice#SubscriptionLegIdentification
- * LegIdentification1Choice.SubscriptionLegIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.LegIdentification1Choice#mmSubscriptionLegIdentification
+ * LegIdentification1Choice.mmSubscriptionLegIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LegIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text redemptionLegIdentification;
 	/**
 	 * Unique technical identifier for the instance of the leg within a switch.
 	 * <p>
@@ -70,8 +71,8 @@ public class LegIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,20 +93,21 @@ public class LegIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RedemptionLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRedemptionLegIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> LegIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "RedLegId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionLegIdentification";
 			definition = "Unique technical identifier for the instance of the leg within a switch.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text subscriptionLegIdentification;
 	/**
 	 * Unique technical identifier for the instance of the leg within a switch.
 	 * <p>
@@ -118,8 +120,8 @@ public class LegIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,17 +142,17 @@ public class LegIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubscriptionLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubscriptionLegIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> LegIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "SbcptLegId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionLegIdentification";
 			definition = "Unique technical identifier for the instance of the leg within a switch.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -158,13 +160,29 @@ public class LegIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LegIdentification1Choice.RedemptionLegIdentification, com.tools20022.repository.choice.LegIdentification1Choice.SubscriptionLegIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LegIdentification1Choice.mmRedemptionLegIdentification, com.tools20022.repository.choice.LegIdentification1Choice.mmSubscriptionLegIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LegIdentification1Choice";
 				definition = "Choice of leg.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getRedemptionLegIdentification() {
+		return redemptionLegIdentification;
+	}
+
+	public void setRedemptionLegIdentification(Max35Text redemptionLegIdentification) {
+		this.redemptionLegIdentification = redemptionLegIdentification;
+	}
+
+	public Max35Text getSubscriptionLegIdentification() {
+		return subscriptionLegIdentification;
+	}
+
+	public void setSubscriptionLegIdentification(Max35Text subscriptionLegIdentification) {
+		this.subscriptionLegIdentification = subscriptionLegIdentification;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the cash-in and cash-out flows by a user defined parameter/s.
@@ -36,33 +37,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#Party
- * BreakdownByUserDefinedParameter3.Party}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#mmParty
+ * BreakdownByUserDefinedParameter3.mmParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#Country
- * BreakdownByUserDefinedParameter3.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#mmCountry
+ * BreakdownByUserDefinedParameter3.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#Currency
- * BreakdownByUserDefinedParameter3.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#mmCurrency
+ * BreakdownByUserDefinedParameter3.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#UserDefined
- * BreakdownByUserDefinedParameter3.UserDefined}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#mmUserDefined
+ * BreakdownByUserDefinedParameter3.mmUserDefined}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#CashInForecast
- * BreakdownByUserDefinedParameter3.CashInForecast}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#mmCashInForecast
+ * BreakdownByUserDefinedParameter3.mmCashInForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#CashOutForecast
- * BreakdownByUserDefinedParameter3.CashOutForecast}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#mmCashOutForecast
+ * BreakdownByUserDefinedParameter3.mmCashOutForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#NetCashForecast
- * BreakdownByUserDefinedParameter3.NetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter3#mmNetCashForecast
+ * BreakdownByUserDefinedParameter3.mmNetCashForecast}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BreakdownByUserDefinedParameter3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestmentAccount42 party;
 	/**
 	 * Party for which the cash flow is being reported.
 	 * <p>
@@ -110,11 +112,11 @@ public class BreakdownByUserDefinedParameter3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#Party
-	 * BreakdownByUserDefinedParameter1.Party}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#mmParty
+	 * BreakdownByUserDefinedParameter1.mmParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Party = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -122,12 +124,13 @@ public class BreakdownByUserDefinedParameter3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Party for which the cash flow is being reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.Party;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmParty;
 			maxOccurs = 1;
-			complexType_lazy = () -> InvestmentAccount42.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.InvestmentAccount42.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Country for which the cash flow is being reported.
 	 * <p>
@@ -156,11 +159,11 @@ public class BreakdownByUserDefinedParameter3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#Country
-	 * BreakdownByUserDefinedParameter1.Country}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#mmCountry
+	 * BreakdownByUserDefinedParameter1.mmCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -168,12 +171,13 @@ public class BreakdownByUserDefinedParameter3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country for which the cash flow is being reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.Country;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmCountry;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode currency;
 	/**
 	 * Currency for which the cash flow is being reported.
 	 * <p>
@@ -203,11 +207,11 @@ public class BreakdownByUserDefinedParameter3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#Currency
-	 * BreakdownByUserDefinedParameter1.Currency}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#mmCurrency
+	 * BreakdownByUserDefinedParameter1.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -215,12 +219,13 @@ public class BreakdownByUserDefinedParameter3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency for which the cash flow is being reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.Currency;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmCurrency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected DataFormat2Choice userDefined;
 	/**
 	 * Parameter for which the cash flow is being reported.
 	 * <p>
@@ -250,11 +255,11 @@ public class BreakdownByUserDefinedParameter3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#UserDefined
-	 * BreakdownByUserDefinedParameter1.UserDefined}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#mmUserDefined
+	 * BreakdownByUserDefinedParameter1.mmUserDefined}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UserDefined = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -262,12 +267,13 @@ public class BreakdownByUserDefinedParameter3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
 			definition = "Parameter for which the cash flow is being reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.UserDefined;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmUserDefined;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DataFormat2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashInForecast5> cashInForecast;
 	/**
 	 * Cash movement into the fund as a result of transactions in shares in an
 	 * investment fund, for example, subscriptions or switch-ins.
@@ -298,11 +304,11 @@ public class BreakdownByUserDefinedParameter3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#CashInForecast
-	 * BreakdownByUserDefinedParameter1.CashInForecast}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#mmCashInForecast
+	 * BreakdownByUserDefinedParameter1.mmCashInForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashInForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashInForecast = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -310,12 +316,13 @@ public class BreakdownByUserDefinedParameter3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInForecast";
 			definition = "Cash movement into the fund as a result of transactions in shares in an investment fund, for example, subscriptions or switch-ins.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.CashInForecast;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmCashInForecast;
 			minOccurs = 0;
-			type_lazy = () -> CashInForecast5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast;
 	/**
 	 * Cash movement out of the fund as a result of transactions in shares in an
 	 * investment fund, for example, redemptions or switch-outs.
@@ -346,11 +353,11 @@ public class BreakdownByUserDefinedParameter3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#CashOutForecast
-	 * BreakdownByUserDefinedParameter1.CashOutForecast}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#mmCashOutForecast
+	 * BreakdownByUserDefinedParameter1.mmCashOutForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashOutForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashOutForecast = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -358,12 +365,13 @@ public class BreakdownByUserDefinedParameter3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutForecast";
 			definition = "Cash movement out of the fund as a result of transactions in shares in an investment fund, for example, redemptions or switch-outs.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.CashOutForecast;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmCashOutForecast;
 			minOccurs = 0;
-			type_lazy = () -> CashOutForecast5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast;
 	/**
 	 * Net cash as a result of the cash-in and cash-out flows specified for the
 	 * user defined parameter.
@@ -394,11 +402,11 @@ public class BreakdownByUserDefinedParameter3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#NetCashForecast
-	 * BreakdownByUserDefinedParameter1.NetCashForecast}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByUserDefinedParameter1#mmNetCashForecast
+	 * BreakdownByUserDefinedParameter1.mmNetCashForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetCashForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetCashForecast = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -406,21 +414,21 @@ public class BreakdownByUserDefinedParameter3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashForecast";
 			definition = "Net cash as a result of the cash-in and cash-out flows specified for the user defined parameter.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.NetCashForecast;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmNetCashForecast;
 			minOccurs = 0;
-			type_lazy = () -> NetCashForecast4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.Party, com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.Country,
-						com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.Currency, com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.UserDefined,
-						com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.CashInForecast, com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.CashOutForecast,
-						com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.NetCashForecast);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmParty, com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCountry,
+						com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCurrency, com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmUserDefined,
+						com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCashInForecast, com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCashOutForecast,
+						com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmNetCashForecast);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BreakdownByUserDefinedParameter3";
 				definition = "Specifies the cash-in and cash-out flows by a user defined parameter/s.";
@@ -428,5 +436,61 @@ public class BreakdownByUserDefinedParameter3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestmentAccount42 getParty() {
+		return party;
+	}
+
+	public void setParty(com.tools20022.repository.msg.InvestmentAccount42 party) {
+		this.party = party;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public ActiveOrHistoricCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public DataFormat2Choice getUserDefined() {
+		return userDefined;
+	}
+
+	public void setUserDefined(DataFormat2Choice userDefined) {
+		this.userDefined = userDefined;
+	}
+
+	public List<CashInForecast5> getCashInForecast() {
+		return cashInForecast;
+	}
+
+	public void setCashInForecast(List<com.tools20022.repository.msg.CashInForecast5> cashInForecast) {
+		this.cashInForecast = cashInForecast;
+	}
+
+	public List<CashOutForecast5> getCashOutForecast() {
+		return cashOutForecast;
+	}
+
+	public void setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast) {
+		this.cashOutForecast = cashOutForecast;
+	}
+
+	public List<NetCashForecast4> getNetCashForecast() {
+		return netCashForecast;
+	}
+
+	public void setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast) {
+		this.netCashForecast = netCashForecast;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reference of a transfer instruction cancellation.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferReference3#MasterReference
- * TransferReference3.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferReference3#mmMasterReference
+ * TransferReference3.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferReference3#TransferReferences
- * TransferReference3.TransferReferences}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferReference3#mmTransferReferences
+ * TransferReference3.mmTransferReferences}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,18 +51,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#CancellationByReference
- * PEPOrISAOrPortfolioTransferCancellationRequestV02.CancellationByReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#mmCancellationByReference
+ * PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#CancellationByReference
- * PortfolioTransferCancellationRequestV03.CancellationByReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#mmCancellationByReference
+ * PortfolioTransferCancellationRequestV03.mmCancellationByReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferReference3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text masterReference;
 	/**
 	 * Unique and unambiguous identifier for a group of individual transfers as
 	 * assigned by the instructing party. This identifier links the individual
@@ -96,8 +98,8 @@ public class TransferReference3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Order#MasterIdentification
-	 * Order.MasterIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+	 * Order.mmMasterIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -120,27 +122,28 @@ public class TransferReference3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference7#MasterReference
-	 * TransferReference7.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference7#mmMasterReference
+	 * TransferReference7.mmMasterReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
 			componentContext_lazy = () -> TransferReference3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.MasterIdentification;
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference7.MasterReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference7.mmMasterReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransferReference4> transferReferences;
 	/**
 	 * Transfer and cancellation reference.
 	 * <p>
@@ -169,13 +172,13 @@ public class TransferReference3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference7#TransferReferences
-	 * TransferReference7.TransferReferences}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference7#mmTransferReferences
+	 * TransferReference7.mmTransferReferences}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransferReferences = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferReferences = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransferReference3.mmObject();
 			isDerived = false;
@@ -183,21 +186,21 @@ public class TransferReference3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReferences";
 			definition = "Transfer and cancellation reference.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference7.TransferReferences);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference7.mmTransferReferences);
 			minOccurs = 1;
-			type_lazy = () -> TransferReference4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransferReference4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference3.MasterReference, com.tools20022.repository.msg.TransferReference3.TransferReferences);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference3.mmMasterReference, com.tools20022.repository.msg.TransferReference3.mmTransferReferences);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmCancellationByReference);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.CancellationByReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.CancellationByReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferReference3";
 				definition = "Reference of a transfer instruction cancellation.";
@@ -205,5 +208,21 @@ public class TransferReference3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public List<TransferReference4> getTransferReferences() {
+		return transferReferences;
+	}
+
+	public void setTransferReferences(List<com.tools20022.repository.msg.TransferReference4> transferReferences) {
+		this.transferReferences = transferReferences;
 	}
 }

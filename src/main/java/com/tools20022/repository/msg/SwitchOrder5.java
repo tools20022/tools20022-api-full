@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SwitchOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Extract of trade data for a switch order.
@@ -33,12 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder5#InvestmentAccountDetails
- * SwitchOrder5.InvestmentAccountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder5#RedemptionLeg
- * SwitchOrder5.RedemptionLeg}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder5#SubscriptionLeg
- * SwitchOrder5.SubscriptionLeg}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder5#mmInvestmentAccountDetails
+ * SwitchOrder5.mmInvestmentAccountDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder5#mmRedemptionLeg
+ * SwitchOrder5.mmRedemptionLeg}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder5#mmSubscriptionLeg
+ * SwitchOrder5.mmSubscriptionLeg}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SwitchOrder5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestmentAccount30 investmentAccountDetails;
 	/**
 	 * Account information of the order instruction for which the cancellation
 	 * is requested.
@@ -74,8 +76,8 @@ public class SwitchOrder5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#InvestmentAccount
-	 * InvestmentFundTransaction.InvestmentAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentAccount
+	 * InvestmentFundTransaction.mmInvestmentAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,21 +97,22 @@ public class SwitchOrder5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> SwitchOrder5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.InvestmentAccount;
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account information of the order instruction for which the cancellation is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount30.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SwitchRedemptionLegOrder4> redemptionLeg;
 	/**
 	 * Redemption leg information of the order instruction which the
 	 * cancellation is requested.
@@ -123,8 +126,8 @@ public class SwitchOrder5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#RedemptionLeg
-	 * SwitchOrder.RedemptionLeg}</li>
+	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmRedemptionLeg
+	 * SwitchOrder.mmRedemptionLeg}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,20 +147,21 @@ public class SwitchOrder5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RedemptionLeg = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRedemptionLeg = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmRedemptionLeg;
 			componentContext_lazy = () -> SwitchOrder5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.RedemptionLeg;
 			isDerived = false;
 			xmlTag = "RedLeg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionLeg";
 			definition = "Redemption leg information of the order instruction which the cancellation is requested.";
 			minOccurs = 1;
-			type_lazy = () -> SwitchRedemptionLegOrder4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder4> subscriptionLeg;
 	/**
 	 * Subscription leg information of the order instruction which the
 	 * cancellation is requested.
@@ -171,8 +175,8 @@ public class SwitchOrder5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#SubscriptionLeg
-	 * SwitchOrder.SubscriptionLeg}</li>
+	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmSubscriptionLeg
+	 * SwitchOrder.mmSubscriptionLeg}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,33 +196,57 @@ public class SwitchOrder5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubscriptionLeg = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubscriptionLeg = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmSubscriptionLeg;
 			componentContext_lazy = () -> SwitchOrder5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.SubscriptionLeg;
 			isDerived = false;
 			xmlTag = "SbcptLeg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionLeg";
 			definition = "Subscription leg information of the order instruction which the cancellation is requested.";
 			minOccurs = 1;
-			type_lazy = () -> SwitchSubscriptionLegOrder4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder5.InvestmentAccountDetails, com.tools20022.repository.msg.SwitchOrder5.RedemptionLeg,
-						com.tools20022.repository.msg.SwitchOrder5.SubscriptionLeg);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder5.mmInvestmentAccountDetails, com.tools20022.repository.msg.SwitchOrder5.mmRedemptionLeg,
+						com.tools20022.repository.msg.SwitchOrder5.mmSubscriptionLeg);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SwitchOrder5";
 				definition = "Extract of trade data for a switch order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestmentAccount30 getInvestmentAccountDetails() {
+		return investmentAccountDetails;
+	}
+
+	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+		this.investmentAccountDetails = investmentAccountDetails;
+	}
+
+	public List<SwitchRedemptionLegOrder4> getRedemptionLeg() {
+		return redemptionLeg;
+	}
+
+	public void setRedemptionLeg(List<com.tools20022.repository.msg.SwitchRedemptionLegOrder4> redemptionLeg) {
+		this.redemptionLeg = redemptionLeg;
+	}
+
+	public List<SwitchSubscriptionLegOrder4> getSubscriptionLeg() {
+		return subscriptionLeg;
+	}
+
+	public void setSubscriptionLeg(List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder4> subscriptionLeg) {
+		this.subscriptionLeg = subscriptionLeg;
 	}
 }

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.ATMServiceType4Code;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Services allowed for the customer's profile.
@@ -33,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService7#ServiceType
- * ATMService7.ServiceType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMService7#Limits
- * ATMService7.Limits}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService7#mmServiceType
+ * ATMService7.mmServiceType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMService7#mmLimits
+ * ATMService7.mmLimits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMService7#PreferredWithdrawal
- * ATMService7.PreferredWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMService7#mmPreferredWithdrawal
+ * ATMService7.mmPreferredWithdrawal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMService7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMServiceType4Code serviceType;
 	/**
 	 * Describes the type of inquiry selected by the customer or the ATM.
 	 * <p>
@@ -92,11 +94,11 @@ public class ATMService7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMService5#ServiceType
-	 * ATMService5.ServiceType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMService5#mmServiceType
+	 * ATMService5.mmServiceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMService7.mmObject();
 			isDerived = false;
@@ -104,12 +106,13 @@ public class ATMService7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceType";
 			definition = "Describes the type of inquiry selected by the customer or the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService5.ServiceType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService5.mmServiceType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType4Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMTransactionAmounts3> limits;
 	/**
 	 * Limits of amounts.
 	 * <p>
@@ -135,7 +138,7 @@ public class ATMService7 {
 	 * definition} = "Limits of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Limits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimits = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMService7.mmObject();
 			isDerived = false;
@@ -144,10 +147,11 @@ public class ATMService7 {
 			name = "Limits";
 			definition = "Limits of amounts.";
 			minOccurs = 0;
-			type_lazy = () -> ATMTransactionAmounts3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts3.mmObject();
 		}
 	};
+	protected ATMTransaction8 preferredWithdrawal;
 	/**
 	 * Preferred withdrawal transaction chosen by the customer.
 	 * <p>
@@ -173,7 +177,7 @@ public class ATMService7 {
 	 * definition} = "Preferred withdrawal transaction chosen by the customer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreferredWithdrawal = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreferredWithdrawal = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMService7.mmObject();
 			isDerived = false;
@@ -181,18 +185,18 @@ public class ATMService7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferredWithdrawal";
 			definition = "Preferred withdrawal transaction chosen by the customer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService7.ServiceType, com.tools20022.repository.msg.ATMService7.Limits, com.tools20022.repository.msg.ATMService7.PreferredWithdrawal);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService7.mmServiceType, com.tools20022.repository.msg.ATMService7.mmLimits, com.tools20022.repository.msg.ATMService7.mmPreferredWithdrawal);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMService7";
 				definition = "Services allowed for the customer's profile.";
@@ -200,5 +204,29 @@ public class ATMService7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMServiceType4Code getServiceType() {
+		return serviceType;
+	}
+
+	public void setServiceType(ATMServiceType4Code serviceType) {
+		this.serviceType = serviceType;
+	}
+
+	public List<ATMTransactionAmounts3> getLimits() {
+		return limits;
+	}
+
+	public void setLimits(List<com.tools20022.repository.msg.ATMTransactionAmounts3> limits) {
+		this.limits = limits;
+	}
+
+	public ATMTransaction8 getPreferredWithdrawal() {
+		return preferredWithdrawal;
+	}
+
+	public void setPreferredWithdrawal(com.tools20022.repository.msg.ATMTransaction8 preferredWithdrawal) {
+		this.preferredWithdrawal = preferredWithdrawal;
 	}
 }

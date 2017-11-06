@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Percentage1#Rate
- * Percentage1.Rate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Percentage1#RelativeTo
- * Percentage1.RelativeTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Percentage1#mmRate
+ * Percentage1.mmRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Percentage1#mmRelativeTo
+ * Percentage1.mmRelativeTo}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Percentage1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate rate;
 	/**
 	 * Percentage of an amount.
 	 * <p>
@@ -87,7 +88,7 @@ public class Percentage1 {
 	 * definition} = "Percentage of an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Percentage1.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class Percentage1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Percentage of an amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ExternalRelativeTo1Code relativeTo;
 	/**
 	 * Indication of what the percentage is relative to.
 	 * <p>
@@ -127,7 +129,7 @@ public class Percentage1 {
 	 * definition} = "Indication of what the percentage is relative to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelativeTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelativeTo = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Percentage1.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class Percentage1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelativeTo";
 			definition = "Indication of what the percentage is relative to.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalRelativeTo1Code.mmObject();
 		}
 	};
@@ -144,14 +146,30 @@ public class Percentage1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Percentage1.Rate, com.tools20022.repository.msg.Percentage1.RelativeTo);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Percentage1.mmRate, com.tools20022.repository.msg.Percentage1.mmRelativeTo);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Percentage1";
 				definition = "Rate information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public ExternalRelativeTo1Code getRelativeTo() {
+		return relativeTo;
+	}
+
+	public void setRelativeTo(ExternalRelativeTo1Code relativeTo) {
+		this.relativeTo = relativeTo;
 	}
 }

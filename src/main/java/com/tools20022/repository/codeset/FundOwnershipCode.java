@@ -29,11 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOwnershipCode#AllOwned
- * FundOwnershipCode.AllOwned}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOwnershipCode#NotAllOwned
- * FundOwnershipCode.NotAllOwned}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOwnershipCode#mmAllOwned
+ * FundOwnershipCode.mmAllOwned}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundOwnershipCode#mmNotAllOwned
+ * FundOwnershipCode.mmNotAllOwned}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,7 +84,7 @@ public class FundOwnershipCode {
 	 * definition} = "All shares owned."</li>
 	 * </ul>
 	 */
-	public static final MMCode AllOwned = new MMCode() {
+	public static final MMCode mmAllOwned = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOwned";
@@ -113,7 +114,7 @@ public class FundOwnershipCode {
 	 * definition} = "Not all shares owned."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAllOwned = new MMCode() {
+	public static final MMCode mmNotAllOwned = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAllOwned";
@@ -126,11 +127,11 @@ public class FundOwnershipCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundOwnershipCode";
 				definition = "Specifies if all the shares are owned exclusively by the fund company.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOwnershipCode.AllOwned, com.tools20022.repository.codeset.FundOwnershipCode.NotAllOwned);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOwnershipCode.mmAllOwned, com.tools20022.repository.codeset.FundOwnershipCode.mmNotAllOwned);
 				derivation_lazy = () -> Arrays.asList(FundOwnership1Code.mmObject());
 			}
 		});

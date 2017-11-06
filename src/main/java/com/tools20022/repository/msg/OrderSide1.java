@@ -35,10 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OrderSide1#Side
- * OrderSide1.Side}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderSide1#AllOrdersIndicator
- * OrderSide1.AllOrdersIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderSide1#mmSide
+ * OrderSide1.mmSide}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OrderSide1#mmAllOrdersIndicator
+ * OrderSide1.mmAllOrdersIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrderSide1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Side1Code side;
 	/**
 	 * Coded list to specify the side of the order.
 	 * <p>
@@ -76,8 +78,8 @@ public class OrderSide1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.OrderSide1
@@ -95,20 +97,21 @@ public class OrderSide1 {
 	 * definition} = "Coded list to specify the side of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Side = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> OrderSide1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Coded list to specify the side of the order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator allOrdersIndicator;
 	/**
 	 * Indicates whether the status request is applicable for all orders. Yes =
 	 * all orders No = status for orders matching certain criteria further
@@ -140,7 +143,7 @@ public class OrderSide1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllOrdersIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllOrdersIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OrderSide1.mmObject();
 			isDerived = false;
@@ -148,8 +151,8 @@ public class OrderSide1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrdersIndicator";
 			definition = "Indicates whether the status request is applicable for all orders.\nYes = all orders\nNo = status for orders matching certain criteria further specified in this message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -157,14 +160,30 @@ public class OrderSide1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderSide1.Side, com.tools20022.repository.msg.OrderSide1.AllOrdersIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderSide1.mmSide, com.tools20022.repository.msg.OrderSide1.mmAllOrdersIndicator);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderSide1";
 				definition = "Indicates in which direction the intention is to transfer the ownership of a financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Side1Code getSide() {
+		return side;
+	}
+
+	public void setSide(Side1Code side) {
+		this.side = side;
+	}
+
+	public YesNoIndicator getAllOrdersIndicator() {
+		return allOrdersIndicator;
+	}
+
+	public void setAllOrdersIndicator(YesNoIndicator allOrdersIndicator) {
+		this.allOrdersIndicator = allOrdersIndicator;
 	}
 }

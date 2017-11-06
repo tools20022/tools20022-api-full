@@ -30,276 +30,282 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#SalaryPayment
- * PaymentPurposeCode.SalaryPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmSalaryPayment
+ * PaymentPurposeCode.mmSalaryPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#TreasuryPayment
- * PaymentPurposeCode.TreasuryPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmTreasuryPayment
+ * PaymentPurposeCode.mmTreasuryPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#AdvancePayment
- * PaymentPurposeCode.AdvancePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmAdvancePayment
+ * PaymentPurposeCode.mmAdvancePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#AgriculturalTransfer
- * PaymentPurposeCode.AgriculturalTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmAgriculturalTransfer
+ * PaymentPurposeCode.mmAgriculturalTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#AlimonyPayment
- * PaymentPurposeCode.AlimonyPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmAlimonyPayment
+ * PaymentPurposeCode.mmAlimonyPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#ChildBenefit
- * PaymentPurposeCode.ChildBenefit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmChildBenefit
+ * PaymentPurposeCode.mmChildBenefit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#UnemploymentDisabilityBenefit
- * PaymentPurposeCode.UnemploymentDisabilityBenefit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmUnemploymentDisabilityBenefit
+ * PaymentPurposeCode.mmUnemploymentDisabilityBenefit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#BonusPayment
- * PaymentPurposeCode.BonusPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmBonusPayment
+ * PaymentPurposeCode.mmBonusPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CashManagementTransfer
- * PaymentPurposeCode.CashManagementTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCashManagementTransfer
+ * PaymentPurposeCode.mmCashManagementTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CapitalBuilding
- * PaymentPurposeCode.CapitalBuilding}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCapitalBuilding
+ * PaymentPurposeCode.mmCapitalBuilding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CharityPayment
- * PaymentPurposeCode.CharityPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCharityPayment
+ * PaymentPurposeCode.mmCharityPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CollectionPayment
- * PaymentPurposeCode.CollectionPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCollectionPayment
+ * PaymentPurposeCode.mmCollectionPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CommodityTransfer
- * PaymentPurposeCode.CommodityTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCommodityTransfer
+ * PaymentPurposeCode.mmCommodityTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CommercialPayment
- * PaymentPurposeCode.CommercialPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCommercialPayment
+ * PaymentPurposeCode.mmCommercialPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Commission
- * PaymentPurposeCode.Commission}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Costs
- * PaymentPurposeCode.Costs}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCommission
+ * PaymentPurposeCode.mmCommission}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCosts
+ * PaymentPurposeCode.mmCosts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Copyright
- * PaymentPurposeCode.Copyright}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCopyright
+ * PaymentPurposeCode.mmCopyright}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Dividend
- * PaymentPurposeCode.Dividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmDividend
+ * PaymentPurposeCode.mmDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#ForeignExchange
- * PaymentPurposeCode.ForeignExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmForeignExchange
+ * PaymentPurposeCode.mmForeignExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#PurchaseSaleOfGoods
- * PaymentPurposeCode.PurchaseSaleOfGoods}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmPurchaseSaleOfGoods
+ * PaymentPurposeCode.mmPurchaseSaleOfGoods}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#GovernmentPayment
- * PaymentPurposeCode.GovernmentPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmGovernmentPayment
+ * PaymentPurposeCode.mmGovernmentPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#InstalmentHirePurchaseAgreement
- * PaymentPurposeCode.InstalmentHirePurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmInstalmentHirePurchaseAgreement
+ * PaymentPurposeCode.mmInstalmentHirePurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#IntraCompanyPayment
- * PaymentPurposeCode.IntraCompanyPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmIntraCompanyPayment
+ * PaymentPurposeCode.mmIntraCompanyPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#InsurancePremium
- * PaymentPurposeCode.InsurancePremium}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmInsurancePremium
+ * PaymentPurposeCode.mmInsurancePremium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Interest
- * PaymentPurposeCode.Interest}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmInterest
+ * PaymentPurposeCode.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#LicenseFee
- * PaymentPurposeCode.LicenseFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Loan
- * PaymentPurposeCode.Loan}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmLicenseFee
+ * PaymentPurposeCode.mmLicenseFee}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmLoan
+ * PaymentPurposeCode.mmLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#LoanRepayment
- * PaymentPurposeCode.LoanRepayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Netting
- * PaymentPurposeCode.Netting}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Payroll
- * PaymentPurposeCode.Payroll}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmLoanRepayment
+ * PaymentPurposeCode.mmLoanRepayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#PensionPayment
- * PaymentPurposeCode.PensionPayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Refund
- * PaymentPurposeCode.Refund}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Rent
- * PaymentPurposeCode.Rent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmNetting
+ * PaymentPurposeCode.mmNetting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Royalties
- * PaymentPurposeCode.Royalties}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmPayroll
+ * PaymentPurposeCode.mmPayroll}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#PurchaseSaleOfServices
- * PaymentPurposeCode.PurchaseSaleOfServices}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmPensionPayment
+ * PaymentPurposeCode.mmPensionPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Securities
- * PaymentPurposeCode.Securities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmRefund
+ * PaymentPurposeCode.mmRefund}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmRent
+ * PaymentPurposeCode.mmRent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#SocialSecurityBenefit
- * PaymentPurposeCode.SocialSecurityBenefit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmRoyalties
+ * PaymentPurposeCode.mmRoyalties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Subscription
- * PaymentPurposeCode.Subscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmPurchaseSaleOfServices
+ * PaymentPurposeCode.mmPurchaseSaleOfServices}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#TaxPayment
- * PaymentPurposeCode.TaxPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmSecurities
+ * PaymentPurposeCode.mmSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#ValueAddedTaxPayment
- * PaymentPurposeCode.ValueAddedTaxPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmSocialSecurityBenefit
+ * PaymentPurposeCode.mmSocialSecurityBenefit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#ConsumerThirdPartyConsolidatedPayment
- * PaymentPurposeCode.ConsumerThirdPartyConsolidatedPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmSubscription
+ * PaymentPurposeCode.mmSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#DebitCollectionPayment
- * PaymentPurposeCode.DebitCollectionPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmTaxPayment
+ * PaymentPurposeCode.mmTaxPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#SupplierPayment
- * PaymentPurposeCode.SupplierPayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Hedging
- * PaymentPurposeCode.Hedging}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmValueAddedTaxPayment
+ * PaymentPurposeCode.mmValueAddedTaxPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#MultipleServiceTypes
- * PaymentPurposeCode.MultipleServiceTypes}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmConsumerThirdPartyConsolidatedPayment
+ * PaymentPurposeCode.mmConsumerThirdPartyConsolidatedPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#NotOtherwiseSpecified
- * PaymentPurposeCode.NotOtherwiseSpecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmDebitCollectionPayment
+ * PaymentPurposeCode.mmDebitCollectionPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CardPayment
- * PaymentPurposeCode.CardPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmSupplierPayment
+ * PaymentPurposeCode.mmSupplierPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CreditCardBill
- * PaymentPurposeCode.CreditCardBill}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Ferry
- * PaymentPurposeCode.Ferry}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Air
- * PaymentPurposeCode.Air}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Bus
- * PaymentPurposeCode.Bus}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Railway
- * PaymentPurposeCode.Railway}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmHedging
+ * PaymentPurposeCode.mmHedging}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#ConvalescentCareFacility
- * PaymentPurposeCode.ConvalescentCareFacility}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmMultipleServiceTypes
+ * PaymentPurposeCode.mmMultipleServiceTypes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#DentalServices
- * PaymentPurposeCode.DentalServices}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmNotOtherwiseSpecified
+ * PaymentPurposeCode.mmNotOtherwiseSpecified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#AnesthesiaServices
- * PaymentPurposeCode.AnesthesiaServices}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCardPayment
+ * PaymentPurposeCode.mmCardPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#HomeHealthCare
- * PaymentPurposeCode.HomeHealthCare}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCreditCardBill
+ * PaymentPurposeCode.mmCreditCardBill}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmFerry
+ * PaymentPurposeCode.mmFerry}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmAir
+ * PaymentPurposeCode.mmAir}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmBus
+ * PaymentPurposeCode.mmBus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#HospitalCare
- * PaymentPurposeCode.HospitalCare}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmRailway
+ * PaymentPurposeCode.mmRailway}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#IntermediateCareFacility
- * PaymentPurposeCode.IntermediateCareFacility}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmConvalescentCareFacility
+ * PaymentPurposeCode.mmConvalescentCareFacility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#LongTermCareFacility
- * PaymentPurposeCode.LongTermCareFacility}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmDentalServices
+ * PaymentPurposeCode.mmDentalServices}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#MedicalServices
- * PaymentPurposeCode.MedicalServices}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmAnesthesiaServices
+ * PaymentPurposeCode.mmAnesthesiaServices}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#VisionCare
- * PaymentPurposeCode.VisionCare}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmHomeHealthCare
+ * PaymentPurposeCode.mmHomeHealthCare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#DurableMedicaleEquipment
- * PaymentPurposeCode.DurableMedicaleEquipment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmHospitalCare
+ * PaymentPurposeCode.mmHospitalCare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CableTVBill
- * PaymentPurposeCode.CableTVBill}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmIntermediateCareFacility
+ * PaymentPurposeCode.mmIntermediateCareFacility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#ElectricityBill
- * PaymentPurposeCode.ElectricityBill}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#GasBill
- * PaymentPurposeCode.GasBill}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmLongTermCareFacility
+ * PaymentPurposeCode.mmLongTermCareFacility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#TelephoneBill
- * PaymentPurposeCode.TelephoneBill}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmMedicalServices
+ * PaymentPurposeCode.mmMedicalServices}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#OtherTelecomRelatedBill
- * PaymentPurposeCode.OtherTelecomRelatedBill}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmVisionCare
+ * PaymentPurposeCode.mmVisionCare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#WaterBill
- * PaymentPurposeCode.WaterBill}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Study
- * PaymentPurposeCode.Study}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmDurableMedicaleEquipment
+ * PaymentPurposeCode.mmDurableMedicaleEquipment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#PricePayment
- * PaymentPurposeCode.PricePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCableTVBill
+ * PaymentPurposeCode.mmCableTVBill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Installment
- * PaymentPurposeCode.Installment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmElectricityBill
+ * PaymentPurposeCode.mmElectricityBill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#RecurringInstallmentPayment
- * PaymentPurposeCode.RecurringInstallmentPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmGasBill
+ * PaymentPurposeCode.mmGasBill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#OpeningFee
- * PaymentPurposeCode.OpeningFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmTelephoneBill
+ * PaymentPurposeCode.mmTelephoneBill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CancellationFee
- * PaymentPurposeCode.CancellationFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmOtherTelecomRelatedBill
+ * PaymentPurposeCode.mmOtherTelecomRelatedBill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#GovernmentInsurance
- * PaymentPurposeCode.GovernmentInsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmWaterBill
+ * PaymentPurposeCode.mmWaterBill}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmStudy
+ * PaymentPurposeCode.mmStudy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#InsurancePremiumCar
- * PaymentPurposeCode.InsurancePremiumCar}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmPricePayment
+ * PaymentPurposeCode.mmPricePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#LaborInsurance
- * PaymentPurposeCode.LaborInsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmInstallment
+ * PaymentPurposeCode.mmInstallment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#LifeInsurance
- * PaymentPurposeCode.LifeInsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmRecurringInstallmentPayment
+ * PaymentPurposeCode.mmRecurringInstallmentPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#PropertyInsurance
- * PaymentPurposeCode.PropertyInsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmOpeningFee
+ * PaymentPurposeCode.mmOpeningFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#HealthInsurance
- * PaymentPurposeCode.HealthInsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCancellationFee
+ * PaymentPurposeCode.mmCancellationFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CarLoanPrincipalRepayment
- * PaymentPurposeCode.CarLoanPrincipalRepayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmGovernmentInsurance
+ * PaymentPurposeCode.mmGovernmentInsurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#HousingLoanRepayment
- * PaymentPurposeCode.HousingLoanRepayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmInsurancePremiumCar
+ * PaymentPurposeCode.mmInsurancePremiumCar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#CompanySocialLoanPaymentToBank
- * PaymentPurposeCode.CompanySocialLoanPaymentToBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmLaborInsurance
+ * PaymentPurposeCode.mmLaborInsurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#EstateTax
- * PaymentPurposeCode.EstateTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmLifeInsurance
+ * PaymentPurposeCode.mmLifeInsurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#HousingTax
- * PaymentPurposeCode.HousingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmPropertyInsurance
+ * PaymentPurposeCode.mmPropertyInsurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#IncomeTax
- * PaymentPurposeCode.IncomeTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmHealthInsurance
+ * PaymentPurposeCode.mmHealthInsurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#NetIncomeTax
- * PaymentPurposeCode.NetIncomeTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCarLoanPrincipalRepayment
+ * PaymentPurposeCode.mmCarLoanPrincipalRepayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#BusinessExpenses
- * PaymentPurposeCode.BusinessExpenses}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmHousingLoanRepayment
+ * PaymentPurposeCode.mmHousingLoanRepayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#TrustFund
- * PaymentPurposeCode.TrustFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmCompanySocialLoanPaymentToBank
+ * PaymentPurposeCode.mmCompanySocialLoanPaymentToBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#NetworkCharge
- * PaymentPurposeCode.NetworkCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmEstateTax
+ * PaymentPurposeCode.mmEstateTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#NetworkCommunication
- * PaymentPurposeCode.NetworkCommunication}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmHousingTax
+ * PaymentPurposeCode.mmHousingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#ReceiptPayment
- * PaymentPurposeCode.ReceiptPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmIncomeTax
+ * PaymentPurposeCode.mmIncomeTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#PaymentTerms
- * PaymentPurposeCode.PaymentTerms}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#Other
- * PaymentPurposeCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmNetIncomeTax
+ * PaymentPurposeCode.mmNetIncomeTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#WithHolding
- * PaymentPurposeCode.WithHolding}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmBusinessExpenses
+ * PaymentPurposeCode.mmBusinessExpenses}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmTrustFund
+ * PaymentPurposeCode.mmTrustFund}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmNetworkCharge
+ * PaymentPurposeCode.mmNetworkCharge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmNetworkCommunication
+ * PaymentPurposeCode.mmNetworkCommunication}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmReceiptPayment
+ * PaymentPurposeCode.mmReceiptPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmPaymentTerms
+ * PaymentPurposeCode.mmPaymentTerms}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmOther
+ * PaymentPurposeCode.mmOther}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentPurposeCode#mmWithHolding
+ * PaymentPurposeCode.mmWithHolding}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -312,8 +318,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -355,7 +361,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is the payment of salaries."</li>
 	 * </ul>
 	 */
-	public static final MMCode SalaryPayment = new MMCode() {
+	public static final MMCode mmSalaryPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SalaryPayment";
@@ -385,7 +391,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to treasury operations."</li>
 	 * </ul>
 	 */
-	public static final MMCode TreasuryPayment = new MMCode() {
+	public static final MMCode mmTreasuryPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TreasuryPayment";
@@ -415,7 +421,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is an advance payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode AdvancePayment = new MMCode() {
+	public static final MMCode mmAdvancePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AdvancePayment";
@@ -445,7 +451,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to the agricultural domain."</li>
 	 * </ul>
 	 */
-	public static final MMCode AgriculturalTransfer = new MMCode() {
+	public static final MMCode mmAgriculturalTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AgriculturalTransfer";
@@ -475,7 +481,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is the payment of alimony."</li>
 	 * </ul>
 	 */
-	public static final MMCode AlimonyPayment = new MMCode() {
+	public static final MMCode mmAlimonyPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AlimonyPayment";
@@ -508,7 +514,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ChildBenefit = new MMCode() {
+	public static final MMCode mmChildBenefit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChildBenefit";
@@ -541,7 +547,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UnemploymentDisabilityBenefit = new MMCode() {
+	public static final MMCode mmUnemploymentDisabilityBenefit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnemploymentDisabilityBenefit";
@@ -571,7 +577,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to payment of a bonus."</li>
 	 * </ul>
 	 */
-	public static final MMCode BonusPayment = new MMCode() {
+	public static final MMCode mmBonusPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BonusPayment";
@@ -601,7 +607,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a general cash management instruction."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashManagementTransfer = new MMCode() {
+	public static final MMCode mmCashManagementTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashManagementTransfer";
@@ -634,7 +640,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalBuilding = new MMCode() {
+	public static final MMCode mmCapitalBuilding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CapitalBuilding";
@@ -664,7 +670,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment for charity reasons."</li>
 	 * </ul>
 	 */
-	public static final MMCode CharityPayment = new MMCode() {
+	public static final MMCode mmCharityPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CharityPayment";
@@ -697,7 +703,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CollectionPayment = new MMCode() {
+	public static final MMCode mmCollectionPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CollectionPayment";
@@ -727,7 +733,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is payment of commodities."</li>
 	 * </ul>
 	 */
-	public static final MMCode CommodityTransfer = new MMCode() {
+	public static final MMCode mmCommodityTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CommodityTransfer";
@@ -760,7 +766,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialPayment = new MMCode() {
+	public static final MMCode mmCommercialPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CommercialPayment";
@@ -790,7 +796,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is payment of commission."</li>
 	 * </ul>
 	 */
-	public static final MMCode Commission = new MMCode() {
+	public static final MMCode mmCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Commission";
@@ -820,7 +826,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to payment of costs."</li>
 	 * </ul>
 	 */
-	public static final MMCode Costs = new MMCode() {
+	public static final MMCode mmCosts = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Costs";
@@ -850,7 +856,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is payment of copyright."</li>
 	 * </ul>
 	 */
-	public static final MMCode Copyright = new MMCode() {
+	public static final MMCode mmCopyright = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Copyright";
@@ -880,7 +886,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is payment of dividends."</li>
 	 * </ul>
 	 */
-	public static final MMCode Dividend = new MMCode() {
+	public static final MMCode mmDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Dividend";
@@ -910,7 +916,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a foreign exchange operation."</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignExchange = new MMCode() {
+	public static final MMCode mmForeignExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ForeignExchange";
@@ -940,7 +946,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to purchase and sale of goods."</li>
 	 * </ul>
 	 */
-	public static final MMCode PurchaseSaleOfGoods = new MMCode() {
+	public static final MMCode mmPurchaseSaleOfGoods = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PurchaseSaleOfGoods";
@@ -971,7 +977,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is a payment to or from a government department."</li>
 	 * </ul>
 	 */
-	public static final MMCode GovernmentPayment = new MMCode() {
+	public static final MMCode mmGovernmentPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GovernmentPayment";
@@ -1002,7 +1008,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is payment for an installment/hire-purchase agreement."</li>
 	 * </ul>
 	 */
-	public static final MMCode InstalmentHirePurchaseAgreement = new MMCode() {
+	public static final MMCode mmInstalmentHirePurchaseAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InstalmentHirePurchaseAgreement";
@@ -1035,7 +1041,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IntraCompanyPayment = new MMCode() {
+	public static final MMCode mmIntraCompanyPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IntraCompanyPayment";
@@ -1065,7 +1071,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is payment of an insurance premium."</li>
 	 * </ul>
 	 */
-	public static final MMCode InsurancePremium = new MMCode() {
+	public static final MMCode mmInsurancePremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InsurancePremium";
@@ -1095,7 +1101,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is payment of interest."</li>
 	 * </ul>
 	 */
-	public static final MMCode Interest = new MMCode() {
+	public static final MMCode mmInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -1125,7 +1131,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is payment of a license fee."</li>
 	 * </ul>
 	 */
-	public static final MMCode LicenseFee = new MMCode() {
+	public static final MMCode mmLicenseFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LicenseFee";
@@ -1155,7 +1161,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to transfer of loan to borrower."</li>
 	 * </ul>
 	 */
-	public static final MMCode Loan = new MMCode() {
+	public static final MMCode mmLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Loan";
@@ -1185,7 +1191,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to repayment of loan to lender."</li>
 	 * </ul>
 	 */
-	public static final MMCode LoanRepayment = new MMCode() {
+	public static final MMCode mmLoanRepayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LoanRepayment";
@@ -1215,7 +1221,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a netting operation."</li>
 	 * </ul>
 	 */
-	public static final MMCode Netting = new MMCode() {
+	public static final MMCode mmNetting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Netting";
@@ -1245,7 +1251,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to the payment of payroll."</li>
 	 * </ul>
 	 */
-	public static final MMCode Payroll = new MMCode() {
+	public static final MMCode mmPayroll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Payroll";
@@ -1275,7 +1281,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is the payment of pension."</li>
 	 * </ul>
 	 */
-	public static final MMCode PensionPayment = new MMCode() {
+	public static final MMCode mmPensionPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PensionPayment";
@@ -1305,7 +1311,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is the payment of a refund."</li>
 	 * </ul>
 	 */
-	public static final MMCode Refund = new MMCode() {
+	public static final MMCode mmRefund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Refund";
@@ -1335,7 +1341,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is the payment of rent."</li>
 	 * </ul>
 	 */
-	public static final MMCode Rent = new MMCode() {
+	public static final MMCode mmRent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Rent";
@@ -1365,7 +1371,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is the payment of royalties."</li>
 	 * </ul>
 	 */
-	public static final MMCode Royalties = new MMCode() {
+	public static final MMCode mmRoyalties = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Royalties";
@@ -1395,7 +1401,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to purchase and sale of services."</li>
 	 * </ul>
 	 */
-	public static final MMCode PurchaseSaleOfServices = new MMCode() {
+	public static final MMCode mmPurchaseSaleOfServices = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PurchaseSaleOfServices";
@@ -1425,7 +1431,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is the payment of securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode Securities = new MMCode() {
+	public static final MMCode mmSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Securities";
@@ -1458,7 +1464,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SocialSecurityBenefit = new MMCode() {
+	public static final MMCode mmSocialSecurityBenefit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SocialSecurityBenefit";
@@ -1491,7 +1497,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Subscription = new MMCode() {
+	public static final MMCode mmSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Subscription";
@@ -1521,7 +1527,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is the payment of taxes."</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxPayment = new MMCode() {
+	public static final MMCode mmTaxPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxPayment";
@@ -1551,7 +1557,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is the payment of value added tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTaxPayment = new MMCode() {
+	public static final MMCode mmValueAddedTaxPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValueAddedTaxPayment";
@@ -1585,7 +1591,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConsumerThirdPartyConsolidatedPayment = new MMCode() {
+	public static final MMCode mmConsumerThirdPartyConsolidatedPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConsumerThirdPartyConsolidatedPayment";
@@ -1615,7 +1621,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Collection of funds initiated via a debit transfer."</li>
 	 * </ul>
 	 */
-	public static final MMCode DebitCollectionPayment = new MMCode() {
+	public static final MMCode mmDebitCollectionPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DebitCollectionPayment";
@@ -1645,7 +1651,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment to a supplier."</li>
 	 * </ul>
 	 */
-	public static final MMCode SupplierPayment = new MMCode() {
+	public static final MMCode mmSupplierPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SupplierPayment";
@@ -1675,7 +1681,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a hedging operation."</li>
 	 * </ul>
 	 */
-	public static final MMCode Hedging = new MMCode() {
+	public static final MMCode mmHedging = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Hedging";
@@ -1706,7 +1712,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is related to a payment for multiple service types."</li>
 	 * </ul>
 	 */
-	public static final MMCode MultipleServiceTypes = new MMCode() {
+	public static final MMCode mmMultipleServiceTypes = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MultipleServiceTypes";
@@ -1739,7 +1745,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NotOtherwiseSpecified = new MMCode() {
+	public static final MMCode mmNotOtherwiseSpecified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NotOtherwiseSpecified";
@@ -1770,7 +1776,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is related to a payment of credit card account."</li>
 	 * </ul>
 	 */
-	public static final MMCode CardPayment = new MMCode() {
+	public static final MMCode mmCardPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CardPayment";
@@ -1800,7 +1806,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of credit card bill."</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditCardBill = new MMCode() {
+	public static final MMCode mmCreditCardBill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditCardBill";
@@ -1830,7 +1836,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment for ferry related business."</li>
 	 * </ul>
 	 */
-	public static final MMCode Ferry = new MMCode() {
+	public static final MMCode mmFerry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Ferry";
@@ -1861,7 +1867,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is a payment for air transport related business."</li>
 	 * </ul>
 	 */
-	public static final MMCode Air = new MMCode() {
+	public static final MMCode mmAir = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Air";
@@ -1892,7 +1898,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is a payment for bus transport related business."</li>
 	 * </ul>
 	 */
-	public static final MMCode Bus = new MMCode() {
+	public static final MMCode mmBus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Bus";
@@ -1923,7 +1929,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is a payment for railway transport related business."</li>
 	 * </ul>
 	 */
-	public static final MMCode Railway = new MMCode() {
+	public static final MMCode mmRailway = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Railway";
@@ -1954,7 +1960,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is a payment for convalescence care facility services."</li>
 	 * </ul>
 	 */
-	public static final MMCode ConvalescentCareFacility = new MMCode() {
+	public static final MMCode mmConvalescentCareFacility = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConvalescentCareFacility";
@@ -1984,7 +1990,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment for dental services."</li>
 	 * </ul>
 	 */
-	public static final MMCode DentalServices = new MMCode() {
+	public static final MMCode mmDentalServices = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DentalServices";
@@ -2014,7 +2020,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment for anesthesia services."</li>
 	 * </ul>
 	 */
-	public static final MMCode AnesthesiaServices = new MMCode() {
+	public static final MMCode mmAnesthesiaServices = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AnesthesiaServices";
@@ -2044,7 +2050,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment for home health care services."</li>
 	 * </ul>
 	 */
-	public static final MMCode HomeHealthCare = new MMCode() {
+	public static final MMCode mmHomeHealthCare = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HomeHealthCare";
@@ -2074,7 +2080,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment for hospital care services."</li>
 	 * </ul>
 	 */
-	public static final MMCode HospitalCare = new MMCode() {
+	public static final MMCode mmHospitalCare = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HospitalCare";
@@ -2105,7 +2111,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is a payment for intermediate care facility services."</li>
 	 * </ul>
 	 */
-	public static final MMCode IntermediateCareFacility = new MMCode() {
+	public static final MMCode mmIntermediateCareFacility = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IntermediateCareFacility";
@@ -2136,7 +2142,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is a payment for long-term care facility services."</li>
 	 * </ul>
 	 */
-	public static final MMCode LongTermCareFacility = new MMCode() {
+	public static final MMCode mmLongTermCareFacility = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LongTermCareFacility";
@@ -2166,7 +2172,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment for medical care services."</li>
 	 * </ul>
 	 */
-	public static final MMCode MedicalServices = new MMCode() {
+	public static final MMCode mmMedicalServices = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MedicalServices";
@@ -2196,7 +2202,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment for vision care services."</li>
 	 * </ul>
 	 */
-	public static final MMCode VisionCare = new MMCode() {
+	public static final MMCode mmVisionCare = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "VisionCare";
@@ -2227,7 +2233,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is a payment is for use of durable medical equipment."</li>
 	 * </ul>
 	 */
-	public static final MMCode DurableMedicaleEquipment = new MMCode() {
+	public static final MMCode mmDurableMedicaleEquipment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DurableMedicaleEquipment";
@@ -2257,7 +2263,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of cable TV bill."</li>
 	 * </ul>
 	 */
-	public static final MMCode CableTVBill = new MMCode() {
+	public static final MMCode mmCableTVBill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CableTVBill";
@@ -2287,7 +2293,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of electricity bill."</li>
 	 * </ul>
 	 */
-	public static final MMCode ElectricityBill = new MMCode() {
+	public static final MMCode mmElectricityBill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ElectricityBill";
@@ -2317,7 +2323,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of gas bill."</li>
 	 * </ul>
 	 */
-	public static final MMCode GasBill = new MMCode() {
+	public static final MMCode mmGasBill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GasBill";
@@ -2347,7 +2353,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of telephone bill."</li>
 	 * </ul>
 	 */
-	public static final MMCode TelephoneBill = new MMCode() {
+	public static final MMCode mmTelephoneBill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TelephoneBill";
@@ -2378,7 +2384,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is related to a payment of other telecom related bill."</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherTelecomRelatedBill = new MMCode() {
+	public static final MMCode mmOtherTelecomRelatedBill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OtherTelecomRelatedBill";
@@ -2408,7 +2414,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of water bill."</li>
 	 * </ul>
 	 */
-	public static final MMCode WaterBill = new MMCode() {
+	public static final MMCode mmWaterBill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WaterBill";
@@ -2439,7 +2445,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is related to a payment of study/tuition costs."</li>
 	 * </ul>
 	 */
-	public static final MMCode Study = new MMCode() {
+	public static final MMCode mmStudy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Study";
@@ -2469,7 +2475,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of a price."</li>
 	 * </ul>
 	 */
-	public static final MMCode PricePayment = new MMCode() {
+	public static final MMCode mmPricePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PricePayment";
@@ -2499,7 +2505,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of an installment."</li>
 	 * </ul>
 	 */
-	public static final MMCode Installment = new MMCode() {
+	public static final MMCode mmInstallment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Installment";
@@ -2532,7 +2538,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RecurringInstallmentPayment = new MMCode() {
+	public static final MMCode mmRecurringInstallmentPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RecurringInstallmentPayment";
@@ -2562,7 +2568,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of opening fee."</li>
 	 * </ul>
 	 */
-	public static final MMCode OpeningFee = new MMCode() {
+	public static final MMCode mmOpeningFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OpeningFee";
@@ -2592,7 +2598,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of cancellation fee."</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationFee = new MMCode() {
+	public static final MMCode mmCancellationFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationFee";
@@ -2623,7 +2629,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is related to a payment of government insurance."</li>
 	 * </ul>
 	 */
-	public static final MMCode GovernmentInsurance = new MMCode() {
+	public static final MMCode mmGovernmentInsurance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GovernmentInsurance";
@@ -2653,7 +2659,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment of car insurance premium."</li>
 	 * </ul>
 	 */
-	public static final MMCode InsurancePremiumCar = new MMCode() {
+	public static final MMCode mmInsurancePremiumCar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InsurancePremiumCar";
@@ -2683,7 +2689,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment of labor insurance."</li>
 	 * </ul>
 	 */
-	public static final MMCode LaborInsurance = new MMCode() {
+	public static final MMCode mmLaborInsurance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LaborInsurance";
@@ -2713,7 +2719,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment of life insurance."</li>
 	 * </ul>
 	 */
-	public static final MMCode LifeInsurance = new MMCode() {
+	public static final MMCode mmLifeInsurance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LifeInsurance";
@@ -2743,7 +2749,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment of property insurance."</li>
 	 * </ul>
 	 */
-	public static final MMCode PropertyInsurance = new MMCode() {
+	public static final MMCode mmPropertyInsurance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PropertyInsurance";
@@ -2773,7 +2779,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment of health insurance."</li>
 	 * </ul>
 	 */
-	public static final MMCode HealthInsurance = new MMCode() {
+	public static final MMCode mmHealthInsurance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HealthInsurance";
@@ -2803,7 +2809,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is a payment of car loan principal payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode CarLoanPrincipalRepayment = new MMCode() {
+	public static final MMCode mmCarLoanPrincipalRepayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CarLoanPrincipalRepayment";
@@ -2833,7 +2839,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of housing loan."</li>
 	 * </ul>
 	 */
-	public static final MMCode HousingLoanRepayment = new MMCode() {
+	public static final MMCode mmHousingLoanRepayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HousingLoanRepayment";
@@ -2866,7 +2872,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CompanySocialLoanPaymentToBank = new MMCode() {
+	public static final MMCode mmCompanySocialLoanPaymentToBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CompanySocialLoanPaymentToBank";
@@ -2896,7 +2902,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of estate tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode EstateTax = new MMCode() {
+	public static final MMCode mmEstateTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EstateTax";
@@ -2926,7 +2932,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of housing tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode HousingTax = new MMCode() {
+	public static final MMCode mmHousingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HousingTax";
@@ -2956,7 +2962,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of income tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncomeTax = new MMCode() {
+	public static final MMCode mmIncomeTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IncomeTax";
@@ -2986,7 +2992,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of net income tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode NetIncomeTax = new MMCode() {
+	public static final MMCode mmNetIncomeTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NetIncomeTax";
@@ -3017,7 +3023,7 @@ public class PaymentPurposeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BusinessExpenses = new MMCode() {
+	public static final MMCode mmBusinessExpenses = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BusinessExpenses";
@@ -3047,7 +3053,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of a trust fund."</li>
 	 * </ul>
 	 */
-	public static final MMCode TrustFund = new MMCode() {
+	public static final MMCode mmTrustFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TrustFund";
@@ -3077,7 +3083,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of network charges."</li>
 	 * </ul>
 	 */
-	public static final MMCode NetworkCharge = new MMCode() {
+	public static final MMCode mmNetworkCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NetworkCharge";
@@ -3108,7 +3114,7 @@ public class PaymentPurposeCode {
 	 * "Transaction is related to a payment of network communication."</li>
 	 * </ul>
 	 */
-	public static final MMCode NetworkCommunication = new MMCode() {
+	public static final MMCode mmNetworkCommunication = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NetworkCommunication";
@@ -3138,7 +3144,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of receipt."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceiptPayment = new MMCode() {
+	public static final MMCode mmReceiptPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReceiptPayment";
@@ -3168,7 +3174,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to payment terms specifications"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentTerms = new MMCode() {
+	public static final MMCode mmPaymentTerms = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentTerms";
@@ -3198,7 +3204,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Other payment purpose."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -3228,7 +3234,7 @@ public class PaymentPurposeCode {
 	 * definition} = "Transaction is related to a payment of withholding tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode WithHolding = new MMCode() {
+	public static final MMCode mmWithHolding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WithHolding";
@@ -3241,47 +3247,50 @@ public class PaymentPurposeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SALA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentPurposeCode";
 				definition = "Specifies the type of transaction that resulted in a payment initiation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentPurposeCode.SalaryPayment, com.tools20022.repository.codeset.PaymentPurposeCode.TreasuryPayment,
-						com.tools20022.repository.codeset.PaymentPurposeCode.AdvancePayment, com.tools20022.repository.codeset.PaymentPurposeCode.AgriculturalTransfer, com.tools20022.repository.codeset.PaymentPurposeCode.AlimonyPayment,
-						com.tools20022.repository.codeset.PaymentPurposeCode.ChildBenefit, com.tools20022.repository.codeset.PaymentPurposeCode.UnemploymentDisabilityBenefit,
-						com.tools20022.repository.codeset.PaymentPurposeCode.BonusPayment, com.tools20022.repository.codeset.PaymentPurposeCode.CashManagementTransfer, com.tools20022.repository.codeset.PaymentPurposeCode.CapitalBuilding,
-						com.tools20022.repository.codeset.PaymentPurposeCode.CharityPayment, com.tools20022.repository.codeset.PaymentPurposeCode.CollectionPayment, com.tools20022.repository.codeset.PaymentPurposeCode.CommodityTransfer,
-						com.tools20022.repository.codeset.PaymentPurposeCode.CommercialPayment, com.tools20022.repository.codeset.PaymentPurposeCode.Commission, com.tools20022.repository.codeset.PaymentPurposeCode.Costs,
-						com.tools20022.repository.codeset.PaymentPurposeCode.Copyright, com.tools20022.repository.codeset.PaymentPurposeCode.Dividend, com.tools20022.repository.codeset.PaymentPurposeCode.ForeignExchange,
-						com.tools20022.repository.codeset.PaymentPurposeCode.PurchaseSaleOfGoods, com.tools20022.repository.codeset.PaymentPurposeCode.GovernmentPayment,
-						com.tools20022.repository.codeset.PaymentPurposeCode.InstalmentHirePurchaseAgreement, com.tools20022.repository.codeset.PaymentPurposeCode.IntraCompanyPayment,
-						com.tools20022.repository.codeset.PaymentPurposeCode.InsurancePremium, com.tools20022.repository.codeset.PaymentPurposeCode.Interest, com.tools20022.repository.codeset.PaymentPurposeCode.LicenseFee,
-						com.tools20022.repository.codeset.PaymentPurposeCode.Loan, com.tools20022.repository.codeset.PaymentPurposeCode.LoanRepayment, com.tools20022.repository.codeset.PaymentPurposeCode.Netting,
-						com.tools20022.repository.codeset.PaymentPurposeCode.Payroll, com.tools20022.repository.codeset.PaymentPurposeCode.PensionPayment, com.tools20022.repository.codeset.PaymentPurposeCode.Refund,
-						com.tools20022.repository.codeset.PaymentPurposeCode.Rent, com.tools20022.repository.codeset.PaymentPurposeCode.Royalties, com.tools20022.repository.codeset.PaymentPurposeCode.PurchaseSaleOfServices,
-						com.tools20022.repository.codeset.PaymentPurposeCode.Securities, com.tools20022.repository.codeset.PaymentPurposeCode.SocialSecurityBenefit, com.tools20022.repository.codeset.PaymentPurposeCode.Subscription,
-						com.tools20022.repository.codeset.PaymentPurposeCode.TaxPayment, com.tools20022.repository.codeset.PaymentPurposeCode.ValueAddedTaxPayment,
-						com.tools20022.repository.codeset.PaymentPurposeCode.ConsumerThirdPartyConsolidatedPayment, com.tools20022.repository.codeset.PaymentPurposeCode.DebitCollectionPayment,
-						com.tools20022.repository.codeset.PaymentPurposeCode.SupplierPayment, com.tools20022.repository.codeset.PaymentPurposeCode.Hedging, com.tools20022.repository.codeset.PaymentPurposeCode.MultipleServiceTypes,
-						com.tools20022.repository.codeset.PaymentPurposeCode.NotOtherwiseSpecified, com.tools20022.repository.codeset.PaymentPurposeCode.CardPayment, com.tools20022.repository.codeset.PaymentPurposeCode.CreditCardBill,
-						com.tools20022.repository.codeset.PaymentPurposeCode.Ferry, com.tools20022.repository.codeset.PaymentPurposeCode.Air, com.tools20022.repository.codeset.PaymentPurposeCode.Bus,
-						com.tools20022.repository.codeset.PaymentPurposeCode.Railway, com.tools20022.repository.codeset.PaymentPurposeCode.ConvalescentCareFacility, com.tools20022.repository.codeset.PaymentPurposeCode.DentalServices,
-						com.tools20022.repository.codeset.PaymentPurposeCode.AnesthesiaServices, com.tools20022.repository.codeset.PaymentPurposeCode.HomeHealthCare, com.tools20022.repository.codeset.PaymentPurposeCode.HospitalCare,
-						com.tools20022.repository.codeset.PaymentPurposeCode.IntermediateCareFacility, com.tools20022.repository.codeset.PaymentPurposeCode.LongTermCareFacility,
-						com.tools20022.repository.codeset.PaymentPurposeCode.MedicalServices, com.tools20022.repository.codeset.PaymentPurposeCode.VisionCare, com.tools20022.repository.codeset.PaymentPurposeCode.DurableMedicaleEquipment,
-						com.tools20022.repository.codeset.PaymentPurposeCode.CableTVBill, com.tools20022.repository.codeset.PaymentPurposeCode.ElectricityBill, com.tools20022.repository.codeset.PaymentPurposeCode.GasBill,
-						com.tools20022.repository.codeset.PaymentPurposeCode.TelephoneBill, com.tools20022.repository.codeset.PaymentPurposeCode.OtherTelecomRelatedBill, com.tools20022.repository.codeset.PaymentPurposeCode.WaterBill,
-						com.tools20022.repository.codeset.PaymentPurposeCode.Study, com.tools20022.repository.codeset.PaymentPurposeCode.PricePayment, com.tools20022.repository.codeset.PaymentPurposeCode.Installment,
-						com.tools20022.repository.codeset.PaymentPurposeCode.RecurringInstallmentPayment, com.tools20022.repository.codeset.PaymentPurposeCode.OpeningFee,
-						com.tools20022.repository.codeset.PaymentPurposeCode.CancellationFee, com.tools20022.repository.codeset.PaymentPurposeCode.GovernmentInsurance,
-						com.tools20022.repository.codeset.PaymentPurposeCode.InsurancePremiumCar, com.tools20022.repository.codeset.PaymentPurposeCode.LaborInsurance, com.tools20022.repository.codeset.PaymentPurposeCode.LifeInsurance,
-						com.tools20022.repository.codeset.PaymentPurposeCode.PropertyInsurance, com.tools20022.repository.codeset.PaymentPurposeCode.HealthInsurance,
-						com.tools20022.repository.codeset.PaymentPurposeCode.CarLoanPrincipalRepayment, com.tools20022.repository.codeset.PaymentPurposeCode.HousingLoanRepayment,
-						com.tools20022.repository.codeset.PaymentPurposeCode.CompanySocialLoanPaymentToBank, com.tools20022.repository.codeset.PaymentPurposeCode.EstateTax, com.tools20022.repository.codeset.PaymentPurposeCode.HousingTax,
-						com.tools20022.repository.codeset.PaymentPurposeCode.IncomeTax, com.tools20022.repository.codeset.PaymentPurposeCode.NetIncomeTax, com.tools20022.repository.codeset.PaymentPurposeCode.BusinessExpenses,
-						com.tools20022.repository.codeset.PaymentPurposeCode.TrustFund, com.tools20022.repository.codeset.PaymentPurposeCode.NetworkCharge, com.tools20022.repository.codeset.PaymentPurposeCode.NetworkCommunication,
-						com.tools20022.repository.codeset.PaymentPurposeCode.ReceiptPayment, com.tools20022.repository.codeset.PaymentPurposeCode.PaymentTerms, com.tools20022.repository.codeset.PaymentPurposeCode.Other,
-						com.tools20022.repository.codeset.PaymentPurposeCode.WithHolding);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentPurposeCode.mmSalaryPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmTreasuryPayment,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmAdvancePayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmAgriculturalTransfer,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmAlimonyPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmChildBenefit,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmUnemploymentDisabilityBenefit, com.tools20022.repository.codeset.PaymentPurposeCode.mmBonusPayment,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmCashManagementTransfer, com.tools20022.repository.codeset.PaymentPurposeCode.mmCapitalBuilding,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmCharityPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmCollectionPayment,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmCommodityTransfer, com.tools20022.repository.codeset.PaymentPurposeCode.mmCommercialPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmCommission,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmCosts, com.tools20022.repository.codeset.PaymentPurposeCode.mmCopyright, com.tools20022.repository.codeset.PaymentPurposeCode.mmDividend,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmForeignExchange, com.tools20022.repository.codeset.PaymentPurposeCode.mmPurchaseSaleOfGoods,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmGovernmentPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmInstalmentHirePurchaseAgreement,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmIntraCompanyPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmInsurancePremium, com.tools20022.repository.codeset.PaymentPurposeCode.mmInterest,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmLicenseFee, com.tools20022.repository.codeset.PaymentPurposeCode.mmLoan, com.tools20022.repository.codeset.PaymentPurposeCode.mmLoanRepayment,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmNetting, com.tools20022.repository.codeset.PaymentPurposeCode.mmPayroll, com.tools20022.repository.codeset.PaymentPurposeCode.mmPensionPayment,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmRefund, com.tools20022.repository.codeset.PaymentPurposeCode.mmRent, com.tools20022.repository.codeset.PaymentPurposeCode.mmRoyalties,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmPurchaseSaleOfServices, com.tools20022.repository.codeset.PaymentPurposeCode.mmSecurities,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmSocialSecurityBenefit, com.tools20022.repository.codeset.PaymentPurposeCode.mmSubscription, com.tools20022.repository.codeset.PaymentPurposeCode.mmTaxPayment,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmValueAddedTaxPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmConsumerThirdPartyConsolidatedPayment,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmDebitCollectionPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmSupplierPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmHedging,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmMultipleServiceTypes, com.tools20022.repository.codeset.PaymentPurposeCode.mmNotOtherwiseSpecified,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmCardPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmCreditCardBill, com.tools20022.repository.codeset.PaymentPurposeCode.mmFerry,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmAir, com.tools20022.repository.codeset.PaymentPurposeCode.mmBus, com.tools20022.repository.codeset.PaymentPurposeCode.mmRailway,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmConvalescentCareFacility, com.tools20022.repository.codeset.PaymentPurposeCode.mmDentalServices,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmAnesthesiaServices, com.tools20022.repository.codeset.PaymentPurposeCode.mmHomeHealthCare, com.tools20022.repository.codeset.PaymentPurposeCode.mmHospitalCare,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmIntermediateCareFacility, com.tools20022.repository.codeset.PaymentPurposeCode.mmLongTermCareFacility,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmMedicalServices, com.tools20022.repository.codeset.PaymentPurposeCode.mmVisionCare,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmDurableMedicaleEquipment, com.tools20022.repository.codeset.PaymentPurposeCode.mmCableTVBill,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmElectricityBill, com.tools20022.repository.codeset.PaymentPurposeCode.mmGasBill, com.tools20022.repository.codeset.PaymentPurposeCode.mmTelephoneBill,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmOtherTelecomRelatedBill, com.tools20022.repository.codeset.PaymentPurposeCode.mmWaterBill, com.tools20022.repository.codeset.PaymentPurposeCode.mmStudy,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmPricePayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmInstallment,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmRecurringInstallmentPayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmOpeningFee,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmCancellationFee, com.tools20022.repository.codeset.PaymentPurposeCode.mmGovernmentInsurance,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmInsurancePremiumCar, com.tools20022.repository.codeset.PaymentPurposeCode.mmLaborInsurance,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmLifeInsurance, com.tools20022.repository.codeset.PaymentPurposeCode.mmPropertyInsurance, com.tools20022.repository.codeset.PaymentPurposeCode.mmHealthInsurance,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmCarLoanPrincipalRepayment, com.tools20022.repository.codeset.PaymentPurposeCode.mmHousingLoanRepayment,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmCompanySocialLoanPaymentToBank, com.tools20022.repository.codeset.PaymentPurposeCode.mmEstateTax,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmHousingTax, com.tools20022.repository.codeset.PaymentPurposeCode.mmIncomeTax, com.tools20022.repository.codeset.PaymentPurposeCode.mmNetIncomeTax,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmBusinessExpenses, com.tools20022.repository.codeset.PaymentPurposeCode.mmTrustFund, com.tools20022.repository.codeset.PaymentPurposeCode.mmNetworkCharge,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmNetworkCommunication, com.tools20022.repository.codeset.PaymentPurposeCode.mmReceiptPayment,
+						com.tools20022.repository.codeset.PaymentPurposeCode.mmPaymentTerms, com.tools20022.repository.codeset.PaymentPurposeCode.mmOther, com.tools20022.repository.codeset.PaymentPurposeCode.mmWithHolding);
 				derivation_lazy = () -> Arrays.asList(PaymentPurpose1Code.mmObject());
 			}
 		});

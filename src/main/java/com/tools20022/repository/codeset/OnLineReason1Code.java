@@ -34,51 +34,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#RandomSelection
- * OnLineReason1Code.RandomSelection}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmRandomSelection
+ * OnLineReason1Code.mmRandomSelection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#ICCForced
- * OnLineReason1Code.ICCForced}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmICCForced
+ * OnLineReason1Code.mmICCForced}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#MerchantForced
- * OnLineReason1Code.MerchantForced}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmMerchantForced
+ * OnLineReason1Code.mmMerchantForced}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#TerminalForced
- * OnLineReason1Code.TerminalForced}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmTerminalForced
+ * OnLineReason1Code.mmTerminalForced}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#IssuerForced
- * OnLineReason1Code.IssuerForced}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmIssuerForced
+ * OnLineReason1Code.mmIssuerForced}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#FloorLimit
- * OnLineReason1Code.FloorLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmFloorLimit
+ * OnLineReason1Code.mmFloorLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#ExceptionFile
- * OnLineReason1Code.ExceptionFile}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmExceptionFile
+ * OnLineReason1Code.mmExceptionFile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#TotalAmount
- * OnLineReason1Code.TotalAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmTotalAmount
+ * OnLineReason1Code.mmTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#ControlledBIN
- * OnLineReason1Code.ControlledBIN}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmControlledBIN
+ * OnLineReason1Code.mmControlledBIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#UnknownBIN
- * OnLineReason1Code.UnknownBIN}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmUnknownBIN
+ * OnLineReason1Code.mmUnknownBIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#ControlledPAN
- * OnLineReason1Code.ControlledPAN}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmControlledPAN
+ * OnLineReason1Code.mmControlledPAN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#FlowControl
- * OnLineReason1Code.FlowControl}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmFlowControl
+ * OnLineReason1Code.mmFlowControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#UnavailableCurrency
- * OnLineReason1Code.UnavailableCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.OnLineReason1Code#mmUnavailableCurrency
+ * OnLineReason1Code.mmUnavailableCurrency}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -114,7 +114,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "RandomSelection"</li>
 	 * </ul>
 	 */
-	public static final MMCode RandomSelection = new MMCode() {
+	public static final MMCode mmRandomSelection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RandomSelection";
@@ -137,7 +137,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "ICCForced"</li>
 	 * </ul>
 	 */
-	public static final MMCode ICCForced = new MMCode() {
+	public static final MMCode mmICCForced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCForced";
@@ -160,7 +160,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "MerchantForced"</li>
 	 * </ul>
 	 */
-	public static final MMCode MerchantForced = new MMCode() {
+	public static final MMCode mmMerchantForced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantForced";
@@ -183,7 +183,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "TerminalForced"</li>
 	 * </ul>
 	 */
-	public static final MMCode TerminalForced = new MMCode() {
+	public static final MMCode mmTerminalForced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalForced";
@@ -206,7 +206,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "IssuerForced"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerForced = new MMCode() {
+	public static final MMCode mmIssuerForced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerForced";
@@ -229,7 +229,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "FloorLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode FloorLimit = new MMCode() {
+	public static final MMCode mmFloorLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloorLimit";
@@ -252,7 +252,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "ExceptionFile"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExceptionFile = new MMCode() {
+	public static final MMCode mmExceptionFile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionFile";
@@ -275,7 +275,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "TotalAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalAmount = new MMCode() {
+	public static final MMCode mmTotalAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
@@ -298,7 +298,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "ControlledBIN"</li>
 	 * </ul>
 	 */
-	public static final MMCode ControlledBIN = new MMCode() {
+	public static final MMCode mmControlledBIN = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlledBIN";
@@ -321,7 +321,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "UnknownBIN"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnknownBIN = new MMCode() {
+	public static final MMCode mmUnknownBIN = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownBIN";
@@ -344,7 +344,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "ControlledPAN"</li>
 	 * </ul>
 	 */
-	public static final MMCode ControlledPAN = new MMCode() {
+	public static final MMCode mmControlledPAN = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlledPAN";
@@ -367,7 +367,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "FlowControl"</li>
 	 * </ul>
 	 */
-	public static final MMCode FlowControl = new MMCode() {
+	public static final MMCode mmFlowControl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlowControl";
@@ -390,7 +390,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 * name} = "UnavailableCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnavailableCurrency = new MMCode() {
+	public static final MMCode mmUnavailableCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnavailableCurrency";
@@ -401,16 +401,16 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RNDM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OnLineReason1Code";
 				definition = "Reason to process an online authorisation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OnLineReason1Code.RandomSelection, com.tools20022.repository.codeset.OnLineReason1Code.ICCForced,
-						com.tools20022.repository.codeset.OnLineReason1Code.MerchantForced, com.tools20022.repository.codeset.OnLineReason1Code.TerminalForced, com.tools20022.repository.codeset.OnLineReason1Code.IssuerForced,
-						com.tools20022.repository.codeset.OnLineReason1Code.FloorLimit, com.tools20022.repository.codeset.OnLineReason1Code.ExceptionFile, com.tools20022.repository.codeset.OnLineReason1Code.TotalAmount,
-						com.tools20022.repository.codeset.OnLineReason1Code.ControlledBIN, com.tools20022.repository.codeset.OnLineReason1Code.UnknownBIN, com.tools20022.repository.codeset.OnLineReason1Code.ControlledPAN,
-						com.tools20022.repository.codeset.OnLineReason1Code.FlowControl, com.tools20022.repository.codeset.OnLineReason1Code.UnavailableCurrency);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OnLineReason1Code.mmRandomSelection, com.tools20022.repository.codeset.OnLineReason1Code.mmICCForced,
+						com.tools20022.repository.codeset.OnLineReason1Code.mmMerchantForced, com.tools20022.repository.codeset.OnLineReason1Code.mmTerminalForced, com.tools20022.repository.codeset.OnLineReason1Code.mmIssuerForced,
+						com.tools20022.repository.codeset.OnLineReason1Code.mmFloorLimit, com.tools20022.repository.codeset.OnLineReason1Code.mmExceptionFile, com.tools20022.repository.codeset.OnLineReason1Code.mmTotalAmount,
+						com.tools20022.repository.codeset.OnLineReason1Code.mmControlledBIN, com.tools20022.repository.codeset.OnLineReason1Code.mmUnknownBIN, com.tools20022.repository.codeset.OnLineReason1Code.mmControlledPAN,
+						com.tools20022.repository.codeset.OnLineReason1Code.mmFlowControl, com.tools20022.repository.codeset.OnLineReason1Code.mmUnavailableCurrency);
 				trace_lazy = () -> OnLineReasonCode.mmObject();
 			}
 		});

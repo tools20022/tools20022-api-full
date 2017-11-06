@@ -33,34 +33,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfAmountCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#Cashback
- * TypeOfAmount5Code.Cashback}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#Discount
- * TypeOfAmount5Code.Discount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#Fees
- * TypeOfAmount5Code.Fees}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#Gratuity
- * TypeOfAmount5Code.Gratuity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#Surcharge
- * TypeOfAmount5Code.Surcharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#mmCashback
+ * TypeOfAmount5Code.mmCashback}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#ValueAddedTax
- * TypeOfAmount5Code.ValueAddedTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#mmDiscount
+ * TypeOfAmount5Code.mmDiscount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#mmFees
+ * TypeOfAmount5Code.mmFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#Commission
- * TypeOfAmount5Code.Commission}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#Donation
- * TypeOfAmount5Code.Donation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#Tax
- * TypeOfAmount5Code.Tax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#mmGratuity
+ * TypeOfAmount5Code.mmGratuity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#mmSurcharge
+ * TypeOfAmount5Code.mmSurcharge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#mmValueAddedTax
+ * TypeOfAmount5Code.mmValueAddedTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#mmCommission
+ * TypeOfAmount5Code.mmCommission}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#mmDonation
+ * TypeOfAmount5Code.mmDonation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code#mmTax
+ * TypeOfAmount5Code.mmTax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,7 +94,7 @@ public class TypeOfAmount5Code extends TypeOfAmountCode {
 	 * name} = "Cashback"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cashback = new MMCode() {
+	public static final MMCode mmCashback = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cashback";
@@ -113,7 +117,7 @@ public class TypeOfAmount5Code extends TypeOfAmountCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discount = new MMCode() {
+	public static final MMCode mmDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
@@ -136,7 +140,7 @@ public class TypeOfAmount5Code extends TypeOfAmountCode {
 	 * name} = "Fees"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fees = new MMCode() {
+	public static final MMCode mmFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
@@ -159,7 +163,7 @@ public class TypeOfAmount5Code extends TypeOfAmountCode {
 	 * name} = "Gratuity"</li>
 	 * </ul>
 	 */
-	public static final MMCode Gratuity = new MMCode() {
+	public static final MMCode mmGratuity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gratuity";
@@ -182,7 +186,7 @@ public class TypeOfAmount5Code extends TypeOfAmountCode {
 	 * name} = "Surcharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode Surcharge = new MMCode() {
+	public static final MMCode mmSurcharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Surcharge";
@@ -205,7 +209,7 @@ public class TypeOfAmount5Code extends TypeOfAmountCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTax = new MMCode() {
+	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
@@ -228,7 +232,7 @@ public class TypeOfAmount5Code extends TypeOfAmountCode {
 	 * name} = "Commission"</li>
 	 * </ul>
 	 */
-	public static final MMCode Commission = new MMCode() {
+	public static final MMCode mmCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
@@ -251,7 +255,7 @@ public class TypeOfAmount5Code extends TypeOfAmountCode {
 	 * name} = "Donation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Donation = new MMCode() {
+	public static final MMCode mmDonation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Donation";
@@ -274,7 +278,7 @@ public class TypeOfAmount5Code extends TypeOfAmountCode {
 	 * name} = "Tax"</li>
 	 * </ul>
 	 */
-	public static final MMCode Tax = new MMCode() {
+	public static final MMCode mmTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
@@ -285,13 +289,13 @@ public class TypeOfAmount5Code extends TypeOfAmountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount5Code";
 				definition = "Type or class of amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount5Code.Cashback, com.tools20022.repository.codeset.TypeOfAmount5Code.Discount, com.tools20022.repository.codeset.TypeOfAmount5Code.Fees,
-						com.tools20022.repository.codeset.TypeOfAmount5Code.Gratuity, com.tools20022.repository.codeset.TypeOfAmount5Code.Surcharge, com.tools20022.repository.codeset.TypeOfAmount5Code.ValueAddedTax,
-						com.tools20022.repository.codeset.TypeOfAmount5Code.Commission, com.tools20022.repository.codeset.TypeOfAmount5Code.Donation, com.tools20022.repository.codeset.TypeOfAmount5Code.Tax);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount5Code.mmCashback, com.tools20022.repository.codeset.TypeOfAmount5Code.mmDiscount, com.tools20022.repository.codeset.TypeOfAmount5Code.mmFees,
+						com.tools20022.repository.codeset.TypeOfAmount5Code.mmGratuity, com.tools20022.repository.codeset.TypeOfAmount5Code.mmSurcharge, com.tools20022.repository.codeset.TypeOfAmount5Code.mmValueAddedTax,
+						com.tools20022.repository.codeset.TypeOfAmount5Code.mmCommission, com.tools20022.repository.codeset.TypeOfAmount5Code.mmDonation, com.tools20022.repository.codeset.TypeOfAmount5Code.mmTax);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
 			}
 		});

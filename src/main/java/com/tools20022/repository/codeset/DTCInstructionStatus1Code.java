@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus1Code#Recycle
- * DTCInstructionStatus1Code.Recycle}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus1Code#mmRecycle
+ * DTCInstructionStatus1Code.mmRecycle}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus1Code#Made
- * DTCInstructionStatus1Code.Made}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus1Code#mmMade
+ * DTCInstructionStatus1Code.mmMade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus1Code#Dropped
- * DTCInstructionStatus1Code.Dropped}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus1Code#mmDropped
+ * DTCInstructionStatus1Code.mmDropped}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus1Code#EditReject
- * DTCInstructionStatus1Code.EditReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatus1Code#mmEditReject
+ * DTCInstructionStatus1Code.mmEditReject}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class DTCInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "Recycle"</li>
 	 * </ul>
 	 */
-	public static final MMCode Recycle = new MMCode() {
+	public static final MMCode mmRecycle = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recycle";
@@ -111,7 +111,7 @@ public class DTCInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "Made"</li>
 	 * </ul>
 	 */
-	public static final MMCode Made = new MMCode() {
+	public static final MMCode mmMade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Made";
@@ -134,7 +134,7 @@ public class DTCInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "Dropped"</li>
 	 * </ul>
 	 */
-	public static final MMCode Dropped = new MMCode() {
+	public static final MMCode mmDropped = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dropped";
@@ -157,7 +157,7 @@ public class DTCInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "EditReject"</li>
 	 * </ul>
 	 */
-	public static final MMCode EditReject = new MMCode() {
+	public static final MMCode mmEditReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EditReject";
@@ -168,13 +168,13 @@ public class DTCInstructionStatus1Code extends DTCInstructionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCInstructionStatus1Code";
 				definition = "DTC (The Depository Trust Company) system status code of instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCInstructionStatus1Code.Recycle, com.tools20022.repository.codeset.DTCInstructionStatus1Code.Made,
-						com.tools20022.repository.codeset.DTCInstructionStatus1Code.Dropped, com.tools20022.repository.codeset.DTCInstructionStatus1Code.EditReject);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCInstructionStatus1Code.mmRecycle, com.tools20022.repository.codeset.DTCInstructionStatus1Code.mmMade,
+						com.tools20022.repository.codeset.DTCInstructionStatus1Code.mmDropped, com.tools20022.repository.codeset.DTCInstructionStatus1Code.mmEditReject);
 				trace_lazy = () -> DTCInstructionStatusCode.mmObject();
 			}
 		});

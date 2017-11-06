@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max5000Binary;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Cryptographic Key.
@@ -38,38 +39,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6#Name
- * CryptographicKey6.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6#mmName
+ * CryptographicKey6.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CryptographicKey6#Identification
- * CryptographicKey6.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6#Version
- * CryptographicKey6.Version}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6#Type
- * CryptographicKey6.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6#Function
- * CryptographicKey6.Function}</li>
+ * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmIdentification
+ * CryptographicKey6.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6#mmVersion
+ * CryptographicKey6.mmVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6#mmType
+ * CryptographicKey6.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6#mmFunction
+ * CryptographicKey6.mmFunction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CryptographicKey6#ActivationDate
- * CryptographicKey6.ActivationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmActivationDate
+ * CryptographicKey6.mmActivationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CryptographicKey6#DeactivationDate
- * CryptographicKey6.DeactivationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmDeactivationDate
+ * CryptographicKey6.mmDeactivationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CryptographicKey6#EncryptedKeyValue
- * CryptographicKey6.EncryptedKeyValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6#Certificate
- * CryptographicKey6.Certificate}</li>
+ * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmEncryptedKeyValue
+ * CryptographicKey6.mmEncryptedKeyValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CryptographicKey6#ICCRelatedData
- * CryptographicKey6.ICCRelatedData}</li>
+ * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmCertificate
+ * CryptographicKey6.mmCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmICCRelatedData
+ * CryptographicKey6.mmICCRelatedData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CryptographicKey6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text name;
 	/**
 	 * Name or label of the key.
 	 * <p>
@@ -122,13 +125,13 @@ public class CryptographicKey6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey7#Name
-	 * CryptographicKey7.Name}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey7#mmName
+	 * CryptographicKey7.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CryptographicKey6.mmObject();
 			isDerived = false;
@@ -136,12 +139,13 @@ public class CryptographicKey6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name or label of the key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.Name);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.mmName);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max140Text identification;
 	/**
 	 * Name of the cryptographic key.
 	 * <p>
@@ -171,18 +175,18 @@ public class CryptographicKey6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CryptographicKey7#Identification
-	 * CryptographicKey7.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey7#mmIdentification
+	 * CryptographicKey7.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#Identification
-	 * CryptographicKey5.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#mmIdentification
+	 * CryptographicKey5.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CryptographicKey6.mmObject();
 			isDerived = false;
@@ -190,13 +194,14 @@ public class CryptographicKey6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Name of the cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.Identification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.mmIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max256Text version;
 	/**
 	 * Version of the cryptographic key.
 	 * <p>
@@ -225,18 +230,19 @@ public class CryptographicKey6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey7#Version
-	 * CryptographicKey7.Version}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey7#mmVersion
+	 * CryptographicKey7.mmVersion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#Version
-	 * CryptographicKey5.Version}</li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#mmVersion
+	 * CryptographicKey5.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CryptographicKey6.mmObject();
 			isDerived = false;
@@ -244,13 +250,14 @@ public class CryptographicKey6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.Version;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.Version);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.mmVersion);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected CryptographicKeyType3Code type;
 	/**
 	 * Type of algorithm used by the cryptographic key.
 	 * <p>
@@ -280,18 +287,18 @@ public class CryptographicKey6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey7#Type
-	 * CryptographicKey7.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey7#mmType
+	 * CryptographicKey7.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#Type
-	 * CryptographicKey5.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#mmType
+	 * CryptographicKey5.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CryptographicKey6.mmObject();
 			isDerived = false;
@@ -299,13 +306,14 @@ public class CryptographicKey6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of algorithm used by the cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.Type;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.mmType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CryptographicKeyType3Code.mmObject();
 		}
 	};
+	protected List<KeyUsage1Code> function;
 	/**
 	 * Allowed usage of the key.
 	 * <p>
@@ -335,18 +343,19 @@ public class CryptographicKey6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey7#Function
-	 * CryptographicKey7.Function}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey7#mmFunction
+	 * CryptographicKey7.mmFunction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#Function
-	 * CryptographicKey5.Function}</li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#mmFunction
+	 * CryptographicKey5.mmFunction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Function = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFunction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CryptographicKey6.mmObject();
 			isDerived = false;
@@ -354,12 +363,13 @@ public class CryptographicKey6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Function";
 			definition = "Allowed usage of the key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.Function;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.Function);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.mmFunction);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmFunction;
 			minOccurs = 1;
 			simpleType_lazy = () -> KeyUsage1Code.mmObject();
 		}
 	};
+	protected ISODateTime activationDate;
 	/**
 	 * Date and time on which the key must be activated.
 	 * <p>
@@ -389,18 +399,18 @@ public class CryptographicKey6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CryptographicKey7#ActivationDate
-	 * CryptographicKey7.ActivationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey7#mmActivationDate
+	 * CryptographicKey7.mmActivationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#ActivationDate
-	 * CryptographicKey5.ActivationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#mmActivationDate
+	 * CryptographicKey5.mmActivationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CryptographicKey6.mmObject();
 			isDerived = false;
@@ -408,13 +418,14 @@ public class CryptographicKey6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivationDate";
 			definition = "Date and time on which the key must be activated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.ActivationDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.ActivationDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.mmActivationDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmActivationDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime deactivationDate;
 	/**
 	 * Date and time on which the key must be deactivated.
 	 * <p>
@@ -444,18 +455,18 @@ public class CryptographicKey6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CryptographicKey7#DeactivationDate
-	 * CryptographicKey7.DeactivationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey7#mmDeactivationDate
+	 * CryptographicKey7.mmDeactivationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#DeactivationDate
-	 * CryptographicKey5.DeactivationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey5#mmDeactivationDate
+	 * CryptographicKey5.mmDeactivationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeactivationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeactivationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CryptographicKey6.mmObject();
 			isDerived = false;
@@ -463,13 +474,14 @@ public class CryptographicKey6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationDate";
 			definition = "Date and time on which the key must be deactivated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.DeactivationDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.DeactivationDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.mmDeactivationDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmDeactivationDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ContentInformationType10 encryptedKeyValue;
 	/**
 	 * Encrypted value of the key present as CMS structure EnvelopedData.
 	 * <p>
@@ -498,7 +510,7 @@ public class CryptographicKey6 {
 	 * "Encrypted value of the key present as CMS structure EnvelopedData."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EncryptedKeyValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEncryptedKeyValue = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CryptographicKey6.mmObject();
 			isDerived = false;
@@ -506,12 +518,13 @@ public class CryptographicKey6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedKeyValue";
 			definition = "Encrypted value of the key present as CMS structure EnvelopedData.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ContentInformationType10.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 		}
 	};
+	protected List<Max5000Binary> certificate;
 	/**
 	 * Certificate to protect the key.
 	 * <p>
@@ -540,7 +553,7 @@ public class CryptographicKey6 {
 	 * definition} = "Certificate to protect the key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Certificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CryptographicKey6.mmObject();
 			isDerived = false;
@@ -552,6 +565,7 @@ public class CryptographicKey6 {
 			simpleType_lazy = () -> Max5000Binary.mmObject();
 		}
 	};
+	protected Max5000Binary iCCRelatedData;
 	/**
 	 * Chip card protection of the key.
 	 * <p>
@@ -580,7 +594,7 @@ public class CryptographicKey6 {
 	 * definition} = "Chip card protection of the key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CryptographicKey6.mmObject();
 			isDerived = false;
@@ -588,8 +602,8 @@ public class CryptographicKey6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Chip card protection of the key.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
 		}
 	};
@@ -597,18 +611,98 @@ public class CryptographicKey6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey6.Name, com.tools20022.repository.msg.CryptographicKey6.Identification, com.tools20022.repository.msg.CryptographicKey6.Version,
-						com.tools20022.repository.msg.CryptographicKey6.Type, com.tools20022.repository.msg.CryptographicKey6.Function, com.tools20022.repository.msg.CryptographicKey6.ActivationDate,
-						com.tools20022.repository.msg.CryptographicKey6.DeactivationDate, com.tools20022.repository.msg.CryptographicKey6.EncryptedKeyValue, com.tools20022.repository.msg.CryptographicKey6.Certificate,
-						com.tools20022.repository.msg.CryptographicKey6.ICCRelatedData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey6.mmName, com.tools20022.repository.msg.CryptographicKey6.mmIdentification, com.tools20022.repository.msg.CryptographicKey6.mmVersion,
+						com.tools20022.repository.msg.CryptographicKey6.mmType, com.tools20022.repository.msg.CryptographicKey6.mmFunction, com.tools20022.repository.msg.CryptographicKey6.mmActivationDate,
+						com.tools20022.repository.msg.CryptographicKey6.mmDeactivationDate, com.tools20022.repository.msg.CryptographicKey6.mmEncryptedKeyValue, com.tools20022.repository.msg.CryptographicKey6.mmCertificate,
+						com.tools20022.repository.msg.CryptographicKey6.mmICCRelatedData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKey6";
 				definition = "Cryptographic Key.";
-				previousVersion_lazy = () -> CryptographicKey5.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CryptographicKey7.mmObject());
+				previousVersion_lazy = () -> CryptographicKey5.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getName() {
+		return name;
+	}
+
+	public void setName(Max140Text name) {
+		this.name = name;
+	}
+
+	public Max140Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max140Text identification) {
+		this.identification = identification;
+	}
+
+	public Max256Text getVersion() {
+		return version;
+	}
+
+	public void setVersion(Max256Text version) {
+		this.version = version;
+	}
+
+	public CryptographicKeyType3Code getType() {
+		return type;
+	}
+
+	public void setType(CryptographicKeyType3Code type) {
+		this.type = type;
+	}
+
+	public List<KeyUsage1Code> getFunction() {
+		return function;
+	}
+
+	public void setFunction(List<KeyUsage1Code> function) {
+		this.function = function;
+	}
+
+	public ISODateTime getActivationDate() {
+		return activationDate;
+	}
+
+	public void setActivationDate(ISODateTime activationDate) {
+		this.activationDate = activationDate;
+	}
+
+	public ISODateTime getDeactivationDate() {
+		return deactivationDate;
+	}
+
+	public void setDeactivationDate(ISODateTime deactivationDate) {
+		this.deactivationDate = deactivationDate;
+	}
+
+	public ContentInformationType10 getEncryptedKeyValue() {
+		return encryptedKeyValue;
+	}
+
+	public void setEncryptedKeyValue(com.tools20022.repository.msg.ContentInformationType10 encryptedKeyValue) {
+		this.encryptedKeyValue = encryptedKeyValue;
+	}
+
+	public List<Max5000Binary> getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(List<Max5000Binary> certificate) {
+		this.certificate = certificate;
+	}
+
+	public Max5000Binary getICCRelatedData() {
+		return iCCRelatedData;
+	}
+
+	public void setICCRelatedData(Max5000Binary iCCRelatedData) {
+		this.iCCRelatedData = iCCRelatedData;
 	}
 }

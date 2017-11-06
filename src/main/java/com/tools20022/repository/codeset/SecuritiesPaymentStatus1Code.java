@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#FullyPaid
- * SecuritiesPaymentStatus1Code.FullyPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#mmFullyPaid
+ * SecuritiesPaymentStatus1Code.mmFullyPaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#NillPaid
- * SecuritiesPaymentStatus1Code.NillPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#mmNillPaid
+ * SecuritiesPaymentStatus1Code.mmNillPaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#PartiallyPaid
- * SecuritiesPaymentStatus1Code.PartiallyPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#mmPartiallyPaid
+ * SecuritiesPaymentStatus1Code.mmPartiallyPaid}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	 * name} = "FullyPaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode FullyPaid = new MMCode() {
+	public static final MMCode mmFullyPaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyPaid";
@@ -108,7 +108,7 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	 * name} = "NillPaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode NillPaid = new MMCode() {
+	public static final MMCode mmNillPaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NillPaid";
@@ -131,7 +131,7 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	 * name} = "PartiallyPaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyPaid = new MMCode() {
+	public static final MMCode mmPartiallyPaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyPaid";
@@ -142,13 +142,13 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FULL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesPaymentStatus1Code";
 				definition = "Specifies the state of payment of a security at a particular time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.FullyPaid, com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.NillPaid,
-						com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.PartiallyPaid);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.mmFullyPaid, com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.mmNillPaid,
+						com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.mmPartiallyPaid);
 				trace_lazy = () -> SecuritiesPaymentStatusCode.mmObject();
 			}
 		});

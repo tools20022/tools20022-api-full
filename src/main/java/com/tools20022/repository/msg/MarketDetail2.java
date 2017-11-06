@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MarketDetail2#Identification
- * MarketDetail2.Identification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketDetail2#mmIdentification
+ * MarketDetail2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketDetail2#AverageDailyNumberOfTransactions
- * MarketDetail2.AverageDailyNumberOfTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketDetail2#mmAverageDailyNumberOfTransactions
+ * MarketDetail2.mmAverageDailyNumberOfTransactions}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarketDetail2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MICIdentifier identification;
 	/**
 	 * Most relevant market in terms of liquidity as defined in the local
 	 * regulation.
@@ -79,8 +80,8 @@ public class MarketDetail2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
-	 * OrganisationIdentification.MIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+	 * OrganisationIdentification.mmMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class MarketDetail2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> MarketDetail2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.MIC;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Most relevant market in terms of liquidity as defined in the local regulation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected DecimalNumber averageDailyNumberOfTransactions;
 	/**
 	 * Average daily number of transactions that have been performed on the most
 	 * relevant market in terms of liquidity.
@@ -144,7 +146,7 @@ public class MarketDetail2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AverageDailyNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAverageDailyNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketDetail2.mmObject();
 			isDerived = false;
@@ -152,8 +154,8 @@ public class MarketDetail2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageDailyNumberOfTransactions";
 			definition = "Average daily number of transactions that have been performed on the most relevant market in terms of liquidity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class MarketDetail2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketDetail2.Identification, com.tools20022.repository.msg.MarketDetail2.AverageDailyNumberOfTransactions);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketDetail2.mmIdentification, com.tools20022.repository.msg.MarketDetail2.mmAverageDailyNumberOfTransactions);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketDetail2";
 				definition = "Details specific to a market including which market identification and average number of transactions on the venue.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MICIdentifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(MICIdentifier identification) {
+		this.identification = identification;
+	}
+
+	public DecimalNumber getAverageDailyNumberOfTransactions() {
+		return averageDailyNumberOfTransactions;
+	}
+
+	public void setAverageDailyNumberOfTransactions(DecimalNumber averageDailyNumberOfTransactions) {
+		this.averageDailyNumberOfTransactions = averageDailyNumberOfTransactions;
 	}
 }

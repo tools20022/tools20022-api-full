@@ -29,14 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#Years
- * RateBasisCode.Years}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#Months
- * RateBasisCode.Months}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#Weeks
- * RateBasisCode.Weeks}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#Days
- * RateBasisCode.Days}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#mmYears
+ * RateBasisCode.mmYears}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#mmMonths
+ * RateBasisCode.mmMonths}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#mmWeeks
+ * RateBasisCode.mmWeeks}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#mmDays
+ * RateBasisCode.mmDays}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class RateBasisCode {
 	 * definition} = "Rate is reported in years."</li>
 	 * </ul>
 	 */
-	public static final MMCode Years = new MMCode() {
+	public static final MMCode mmYears = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Years";
@@ -121,7 +121,7 @@ public class RateBasisCode {
 	 * definition} = "Rate is reported in months."</li>
 	 * </ul>
 	 */
-	public static final MMCode Months = new MMCode() {
+	public static final MMCode mmMonths = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Months";
@@ -151,7 +151,7 @@ public class RateBasisCode {
 	 * definition} = "Rate is reported in weeks."</li>
 	 * </ul>
 	 */
-	public static final MMCode Weeks = new MMCode() {
+	public static final MMCode mmWeeks = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weeks";
@@ -181,7 +181,7 @@ public class RateBasisCode {
 	 * definition} = "Rate is reported in days."</li>
 	 * </ul>
 	 */
-	public static final MMCode Days = new MMCode() {
+	public static final MMCode mmDays = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Days";
@@ -194,13 +194,13 @@ public class RateBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("YEAR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateBasisCode";
 				definition = "Specifies the rate basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateBasisCode.Years, com.tools20022.repository.codeset.RateBasisCode.Months, com.tools20022.repository.codeset.RateBasisCode.Weeks,
-						com.tools20022.repository.codeset.RateBasisCode.Days);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateBasisCode.mmYears, com.tools20022.repository.codeset.RateBasisCode.mmMonths, com.tools20022.repository.codeset.RateBasisCode.mmWeeks,
+						com.tools20022.repository.codeset.RateBasisCode.mmDays);
 				derivation_lazy = () -> Arrays.asList(RateBasis1Code.mmObject());
 			}
 		});

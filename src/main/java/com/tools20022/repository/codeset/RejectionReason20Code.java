@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason20Code#FailedValidation
- * RejectionReason20Code.FailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason20Code#mmFailedValidation
+ * RejectionReason20Code.mmFailedValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason20Code#NotIdentifiedCashAccount
- * RejectionReason20Code.NotIdentifiedCashAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason20Code#mmNotIdentifiedCashAccount
+ * RejectionReason20Code.mmNotIdentifiedCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason20Code#NotIdentifiedCorrespondentBank
- * RejectionReason20Code.NotIdentifiedCorrespondentBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason20Code#mmNotIdentifiedCorrespondentBank
+ * RejectionReason20Code.mmNotIdentifiedCorrespondentBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason20Code#InvalidStandingInstructionType
- * RejectionReason20Code.InvalidStandingInstructionType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason20Code#mmInvalidStandingInstructionType
+ * RejectionReason20Code.mmInvalidStandingInstructionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason20Code#NoHolding
- * RejectionReason20Code.NoHolding}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason20Code#mmNoHolding
+ * RejectionReason20Code.mmNoHolding}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode FailedValidation = new MMCode() {
+	public static final MMCode mmFailedValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
@@ -114,7 +114,7 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	 * name} = "NotIdentifiedCashAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotIdentifiedCashAccount = new MMCode() {
+	public static final MMCode mmNotIdentifiedCashAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotIdentifiedCashAccount";
@@ -137,7 +137,7 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	 * name} = "NotIdentifiedCorrespondentBank"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotIdentifiedCorrespondentBank = new MMCode() {
+	public static final MMCode mmNotIdentifiedCorrespondentBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotIdentifiedCorrespondentBank";
@@ -160,7 +160,7 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	 * name} = "InvalidStandingInstructionType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidStandingInstructionType = new MMCode() {
+	public static final MMCode mmInvalidStandingInstructionType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidStandingInstructionType";
@@ -183,7 +183,7 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	 * name} = "NoHolding"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoHolding = new MMCode() {
+	public static final MMCode mmNoHolding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoHolding";
@@ -194,14 +194,14 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason20Code";
 				definition = "Specifies the reason of a rejection of the standing instruction request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason20Code.FailedValidation, com.tools20022.repository.codeset.RejectionReason20Code.NotIdentifiedCashAccount,
-						com.tools20022.repository.codeset.RejectionReason20Code.NotIdentifiedCorrespondentBank, com.tools20022.repository.codeset.RejectionReason20Code.InvalidStandingInstructionType,
-						com.tools20022.repository.codeset.RejectionReason20Code.NoHolding);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason20Code.mmFailedValidation, com.tools20022.repository.codeset.RejectionReason20Code.mmNotIdentifiedCashAccount,
+						com.tools20022.repository.codeset.RejectionReason20Code.mmNotIdentifiedCorrespondentBank, com.tools20022.repository.codeset.RejectionReason20Code.mmInvalidStandingInstructionType,
+						com.tools20022.repository.codeset.RejectionReason20Code.mmNoHolding);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

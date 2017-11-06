@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.msg.EnabledStatusReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of formats for an enabled status reason.
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#NoSpecifiedReason
- * EnabledStatusReason1Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#mmNoSpecifiedReason
+ * EnabledStatusReason1Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#Reason
- * EnabledStatusReason1Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.EnabledStatusReason1Choice#mmReason
+ * EnabledStatusReason1Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EnabledStatusReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * There is no reason available or to report for the enabled account status.
 	 * <p>
@@ -103,19 +105,19 @@ public class EnabledStatusReason1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProformaStatusReason1Choice#NoSpecifiedReason
-	 * ProformaStatusReason1Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProformaStatusReason1Choice#mmNoSpecifiedReason
+	 * ProformaStatusReason1Choice.mmNoSpecifiedReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DisabledStatusReason1Choice#NoSpecifiedReason
-	 * DisabledStatusReason1Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.DisabledStatusReason1Choice#mmNoSpecifiedReason
+	 * DisabledStatusReason1Choice.mmNoSpecifiedReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice#NoSpecifiedReason
-	 * AccountStatusUpdateInstructionReason1Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice#mmNoSpecifiedReason
+	 * AccountStatusUpdateInstructionReason1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EnabledStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -123,13 +125,14 @@ public class EnabledStatusReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "There is no reason available or to report for the enabled account status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProformaStatusReason1Choice.NoSpecifiedReason, com.tools20022.repository.choice.DisabledStatusReason1Choice.NoSpecifiedReason,
-					com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.NoSpecifiedReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProformaStatusReason1Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.DisabledStatusReason1Choice.mmNoSpecifiedReason,
+					com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<EnabledStatusReason1> reason;
 	/**
 	 * Reason for the enabled account status.
 	 * <p>
@@ -158,19 +161,19 @@ public class EnabledStatusReason1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProformaStatusReason1Choice#Reason
-	 * ProformaStatusReason1Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProformaStatusReason1Choice#mmReason
+	 * ProformaStatusReason1Choice.mmReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DisabledStatusReason1Choice#Reason
-	 * DisabledStatusReason1Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.DisabledStatusReason1Choice#mmReason
+	 * DisabledStatusReason1Choice.mmReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice#Reason
-	 * AccountStatusUpdateInstructionReason1Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice#mmReason
+	 * AccountStatusUpdateInstructionReason1Choice.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> EnabledStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -178,19 +181,19 @@ public class EnabledStatusReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the enabled account status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProformaStatusReason1Choice.Reason, com.tools20022.repository.choice.DisabledStatusReason1Choice.Reason,
-					com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.Reason);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProformaStatusReason1Choice.mmReason, com.tools20022.repository.choice.DisabledStatusReason1Choice.mmReason,
+					com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.mmReason);
 			minOccurs = 1;
-			type_lazy = () -> EnabledStatusReason1.mmObject();
 			isComposite = true;
+			type_lazy = () -> EnabledStatusReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EnabledStatusReason1Choice.NoSpecifiedReason, com.tools20022.repository.choice.EnabledStatusReason1Choice.Reason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EnabledStatusReason1Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.EnabledStatusReason1Choice.mmReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EnabledStatusReason1Choice";
 				definition = "Choice of formats for an enabled status reason.";
@@ -198,5 +201,21 @@ public class EnabledStatusReason1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<EnabledStatusReason1> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<EnabledStatusReason1> reason) {
+		this.reason = reason;
 	}
 }

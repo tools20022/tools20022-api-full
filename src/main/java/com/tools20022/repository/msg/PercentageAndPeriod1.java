@@ -36,19 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PercentageAndPeriod1#Percentage
- * PercentageAndPeriod1.Percentage}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PercentageAndPeriod1#StartDate
- * PercentageAndPeriod1.StartDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PercentageAndPeriod1#EndDate
- * PercentageAndPeriod1.EndDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PercentageAndPeriod1#mmPercentage
+ * PercentageAndPeriod1.mmPercentage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PercentageAndPeriod1#mmStartDate
+ * PercentageAndPeriod1.mmStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PercentageAndPeriod1#mmEndDate
+ * PercentageAndPeriod1.mmEndDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PercentageAndPeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageBoundedRate percentage;
 	/**
 	 * Covered percentage (max 100%).
 	 * <p>
@@ -92,7 +94,7 @@ public class PercentageAndPeriod1 {
 	 * definition} = "Covered percentage (max 100%)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Percentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PercentageAndPeriod1.mmObject();
 			isDerived = false;
@@ -100,11 +102,12 @@ public class PercentageAndPeriod1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Covered percentage (max 100%).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageBoundedRate.mmObject();
 		}
 	};
+	protected ISODate startDate;
 	/**
 	 * Start of period or immediate if not specified.
 	 * <p>
@@ -117,8 +120,8 @@ public class PercentageAndPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,20 +140,21 @@ public class PercentageAndPeriod1 {
 	 * definition} = "Start of period or immediate if not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> PercentageAndPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start of period or immediate if not specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate endDate;
 	/**
 	 * End of period or indefinite if not specified.
 	 * <p>
@@ -163,8 +167,8 @@ public class PercentageAndPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,17 +187,17 @@ public class PercentageAndPeriod1 {
 	 * definition} = "End of period or indefinite if not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> PercentageAndPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "EndDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "End of period or indefinite if not specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -201,14 +205,38 @@ public class PercentageAndPeriod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageAndPeriod1.Percentage, com.tools20022.repository.msg.PercentageAndPeriod1.StartDate,
-						com.tools20022.repository.msg.PercentageAndPeriod1.EndDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageAndPeriod1.mmPercentage, com.tools20022.repository.msg.PercentageAndPeriod1.mmStartDate,
+						com.tools20022.repository.msg.PercentageAndPeriod1.mmEndDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PercentageAndPeriod1";
 				definition = "Specifies a percentage together with a period of time. For overlapping periods, the maximum of all applicable elements at a given date is the result.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageBoundedRate getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(PercentageBoundedRate percentage) {
+		this.percentage = percentage;
+	}
+
+	public ISODate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(ISODate startDate) {
+		this.startDate = startDate;
+	}
+
+	public ISODate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(ISODate endDate) {
+		this.endDate = endDate;
 	}
 }

@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#CashPayment
- * CashAccountType3Code.CashPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#mmCashPayment
+ * CashAccountType3Code.mmCashPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#Charges
- * CashAccountType3Code.Charges}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#mmCharges
+ * CashAccountType3Code.mmCharges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#Settlement
- * CashAccountType3Code.Settlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#mmSettlement
+ * CashAccountType3Code.mmSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#Current
- * CashAccountType3Code.Current}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#mmCurrent
+ * CashAccountType3Code.mmCurrent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#Savings
- * CashAccountType3Code.Savings}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#mmSavings
+ * CashAccountType3Code.mmSavings}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	 * name} = "CashPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashPayment = new MMCode() {
+	public static final MMCode mmCashPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPayment";
@@ -113,7 +113,7 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	 * name} = "Charges"</li>
 	 * </ul>
 	 */
-	public static final MMCode Charges = new MMCode() {
+	public static final MMCode mmCharges = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
@@ -136,7 +136,7 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	 * name} = "Settlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settlement = new MMCode() {
+	public static final MMCode mmSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
@@ -159,7 +159,7 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	 * name} = "Current"</li>
 	 * </ul>
 	 */
-	public static final MMCode Current = new MMCode() {
+	public static final MMCode mmCurrent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
@@ -182,7 +182,7 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	 * name} = "Savings"</li>
 	 * </ul>
 	 */
-	public static final MMCode Savings = new MMCode() {
+	public static final MMCode mmSavings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
@@ -193,13 +193,13 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccountType3Code";
 				definition = "Specifies the nature, or use, of the cash account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType3Code.CashPayment, com.tools20022.repository.codeset.CashAccountType3Code.Charges,
-						com.tools20022.repository.codeset.CashAccountType3Code.Settlement, com.tools20022.repository.codeset.CashAccountType3Code.Current, com.tools20022.repository.codeset.CashAccountType3Code.Savings);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType3Code.mmCashPayment, com.tools20022.repository.codeset.CashAccountType3Code.mmCharges,
+						com.tools20022.repository.codeset.CashAccountType3Code.mmSettlement, com.tools20022.repository.codeset.CashAccountType3Code.mmCurrent, com.tools20022.repository.codeset.CashAccountType3Code.mmSavings);
 				trace_lazy = () -> CashAccountTypeCode.mmObject();
 			}
 		});

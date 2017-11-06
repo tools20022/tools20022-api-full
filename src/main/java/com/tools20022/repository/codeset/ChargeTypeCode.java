@@ -30,127 +30,134 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#BrokerageFee
- * ChargeTypeCode.BrokerageFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#Commission
- * ChargeTypeCode.Commission}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#BackEndLoad
- * ChargeTypeCode.BackEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmBrokerageFee
+ * ChargeTypeCode.mmBrokerageFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#FrontEndLoad
- * ChargeTypeCode.FrontEndLoad}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#Switch
- * ChargeTypeCode.Switch}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmCommission
+ * ChargeTypeCode.mmCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#DilutionLevy
- * ChargeTypeCode.DilutionLevy}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#Discount
- * ChargeTypeCode.Discount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmBackEndLoad
+ * ChargeTypeCode.mmBackEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#ManagementFee
- * ChargeTypeCode.ManagementFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#TransferFee
- * ChargeTypeCode.TransferFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmFrontEndLoad
+ * ChargeTypeCode.mmFrontEndLoad}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmSwitch
+ * ChargeTypeCode.mmSwitch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#MatchingFees
- * ChargeTypeCode.MatchingFees}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmDilutionLevy
+ * ChargeTypeCode.mmDilutionLevy}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmDiscount
+ * ChargeTypeCode.mmDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#PostageCharge
- * ChargeTypeCode.PostageCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmManagementFee
+ * ChargeTypeCode.mmManagementFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#RegulatoryFee
- * ChargeTypeCode.RegulatoryFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmTransferFee
+ * ChargeTypeCode.mmTransferFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#ShippingCharge
- * ChargeTypeCode.ShippingCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmMatchingFees
+ * ChargeTypeCode.mmMatchingFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#ServiceProvisionFee
- * ChargeTypeCode.ServiceProvisionFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmPostageCharge
+ * ChargeTypeCode.mmPostageCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#SpecialConcessions
- * ChargeTypeCode.SpecialConcessions}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#PartAcquis
- * ChargeTypeCode.PartAcquis}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#Penalty
- * ChargeTypeCode.Penalty}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmRegulatoryFee
+ * ChargeTypeCode.mmRegulatoryFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#ContingencyDeferredSalesCharge
- * ChargeTypeCode.ContingencyDeferredSalesCharge}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#Other
- * ChargeTypeCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmShippingCharge
+ * ChargeTypeCode.mmShippingCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#Equalisation
- * ChargeTypeCode.Equalisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmServiceProvisionFee
+ * ChargeTypeCode.mmServiceProvisionFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#CorrespondentBankCharge
- * ChargeTypeCode.CorrespondentBankCharge}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#Premium
- * ChargeTypeCode.Premium}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#Initial
- * ChargeTypeCode.Initial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#AdvisoryFee
- * ChargeTypeCode.AdvisoryFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#CustodyFee
- * ChargeTypeCode.CustodyFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmSpecialConcessions
+ * ChargeTypeCode.mmSpecialConcessions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#PublicationFee
- * ChargeTypeCode.PublicationFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmPartAcquis
+ * ChargeTypeCode.mmPartAcquis}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmPenalty
+ * ChargeTypeCode.mmPenalty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#AccountingFee
- * ChargeTypeCode.AccountingFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmContingencyDeferredSalesCharge
+ * ChargeTypeCode.mmContingencyDeferredSalesCharge}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmOther
+ * ChargeTypeCode.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#SignatureService
- * ChargeTypeCode.SignatureService}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmEqualisation
+ * ChargeTypeCode.mmEqualisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#StorageAtDestination
- * ChargeTypeCode.StorageAtDestination}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmCorrespondentBankCharge
+ * ChargeTypeCode.mmCorrespondentBankCharge}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmPremium
+ * ChargeTypeCode.mmPremium}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmInitial
+ * ChargeTypeCode.mmInitial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#StorageAtOrigin
- * ChargeTypeCode.StorageAtOrigin}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#Packaging
- * ChargeTypeCode.Packaging}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#PickUp
- * ChargeTypeCode.PickUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmAdvisoryFee
+ * ChargeTypeCode.mmAdvisoryFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#DangerousGoodsFee
- * ChargeTypeCode.DangerousGoodsFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmCustodyFee
+ * ChargeTypeCode.mmCustodyFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#SecurityCharge
- * ChargeTypeCode.SecurityCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmPublicationFee
+ * ChargeTypeCode.mmPublicationFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#InsurancePremium
- * ChargeTypeCode.InsurancePremium}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmAccountingFee
+ * ChargeTypeCode.mmAccountingFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#CollectFreight
- * ChargeTypeCode.CollectFreight}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmSignatureService
+ * ChargeTypeCode.mmSignatureService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#ClearanceAndHandlingAtOrigin
- * ChargeTypeCode.ClearanceAndHandlingAtOrigin}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmStorageAtDestination
+ * ChargeTypeCode.mmStorageAtDestination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#ClearanceAndHandlingAtDestination
- * ChargeTypeCode.ClearanceAndHandlingAtDestination}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmStorageAtOrigin
+ * ChargeTypeCode.mmStorageAtOrigin}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmPackaging
+ * ChargeTypeCode.mmPackaging}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmPickUp
+ * ChargeTypeCode.mmPickUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#AirWayBillFee
- * ChargeTypeCode.AirWayBillFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmDangerousGoodsFee
+ * ChargeTypeCode.mmDangerousGoodsFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#TransportCharges
- * ChargeTypeCode.TransportCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmSecurityCharge
+ * ChargeTypeCode.mmSecurityCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#UCITSCommission
- * ChargeTypeCode.UCITSCommission}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmInsurancePremium
+ * ChargeTypeCode.mmInsurancePremium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#SpeciallyAgreedFrontEndLoad
- * ChargeTypeCode.SpeciallyAgreedFrontEndLoad}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#ADRFee
- * ChargeTypeCode.ADRFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmCollectFreight
+ * ChargeTypeCode.mmCollectFreight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#IssuanceCancellationFee
- * ChargeTypeCode.IssuanceCancellationFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmClearanceAndHandlingAtOrigin
+ * ChargeTypeCode.mmClearanceAndHandlingAtOrigin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#MiscellaneousFee
- * ChargeTypeCode.MiscellaneousFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#IssuanceFee
- * ChargeTypeCode.IssuanceFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmClearanceAndHandlingAtDestination
+ * ChargeTypeCode.mmClearanceAndHandlingAtDestination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmAirWayBillFee
+ * ChargeTypeCode.mmAirWayBillFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmTransportCharges
+ * ChargeTypeCode.mmTransportCharges}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmUCITSCommission
+ * ChargeTypeCode.mmUCITSCommission}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmSpeciallyAgreedFrontEndLoad
+ * ChargeTypeCode.mmSpeciallyAgreedFrontEndLoad}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmADRFee
+ * ChargeTypeCode.mmADRFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmIssuanceCancellationFee
+ * ChargeTypeCode.mmIssuanceCancellationFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmMiscellaneousFee
+ * ChargeTypeCode.mmMiscellaneousFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode#mmIssuanceFee
+ * ChargeTypeCode.mmIssuanceFee}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -189,8 +196,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -231,7 +238,7 @@ public class ChargeTypeCode {
 	 * definition} = "Fee paid to a broker for services provided."</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokerageFee = new MMCode() {
+	public static final MMCode mmBrokerageFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BrokerageFee";
@@ -261,7 +268,7 @@ public class ChargeTypeCode {
 	 * definition} = "Fee paid for services provided."</li>
 	 * </ul>
 	 */
-	public static final MMCode Commission = new MMCode() {
+	public static final MMCode mmCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Commission";
@@ -294,7 +301,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BackEndLoad = new MMCode() {
+	public static final MMCode mmBackEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BackEndLoad";
@@ -327,7 +334,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FrontEndLoad = new MMCode() {
+	public static final MMCode mmFrontEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FrontEndLoad";
@@ -358,7 +365,7 @@ public class ChargeTypeCode {
 	 * "In investment funds, charge related to a switch transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode Switch = new MMCode() {
+	public static final MMCode mmSwitch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Switch";
@@ -392,7 +399,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DilutionLevy = new MMCode() {
+	public static final MMCode mmDilutionLevy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DilutionLevy";
@@ -426,7 +433,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Discount = new MMCode() {
+	public static final MMCode mmDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Discount";
@@ -461,7 +468,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ManagementFee = new MMCode() {
+	public static final MMCode mmManagementFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ManagementFee";
@@ -494,7 +501,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TransferFee = new MMCode() {
+	public static final MMCode mmTransferFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferFee";
@@ -524,7 +531,7 @@ public class ChargeTypeCode {
 	 * definition} = "Fee charged for matching and/or confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMCode MatchingFees = new MMCode() {
+	public static final MMCode mmMatchingFees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MatchingFees";
@@ -554,7 +561,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge paid for the postage."</li>
 	 * </ul>
 	 */
-	public static final MMCode PostageCharge = new MMCode() {
+	public static final MMCode mmPostageCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PostageCharge";
@@ -586,7 +593,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RegulatoryFee = new MMCode() {
+	public static final MMCode mmRegulatoryFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryFee";
@@ -617,7 +624,7 @@ public class ChargeTypeCode {
 	 * "Charge for shipping, including the insurance of securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode ShippingCharge = new MMCode() {
+	public static final MMCode mmShippingCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ShippingCharge";
@@ -647,7 +654,7 @@ public class ChargeTypeCode {
 	 * definition} = "Fee paid for the provision of financial services."</li>
 	 * </ul>
 	 */
-	public static final MMCode ServiceProvisionFee = new MMCode() {
+	public static final MMCode mmServiceProvisionFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ServiceProvisionFee";
@@ -680,7 +687,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialConcessions = new MMCode() {
+	public static final MMCode mmSpecialConcessions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpecialConcessions";
@@ -713,7 +720,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PartAcquis = new MMCode() {
+	public static final MMCode mmPartAcquis = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartAcquis";
@@ -744,7 +751,7 @@ public class ChargeTypeCode {
 	 * "Fee charged to the investor for early redemption of the fund."</li>
 	 * </ul>
 	 */
-	public static final MMCode Penalty = new MMCode() {
+	public static final MMCode mmPenalty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Penalty";
@@ -774,7 +781,7 @@ public class ChargeTypeCode {
 	 * definition} = "Deferred sales charge."</li>
 	 * </ul>
 	 */
-	public static final MMCode ContingencyDeferredSalesCharge = new MMCode() {
+	public static final MMCode mmContingencyDeferredSalesCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ContingencyDeferredSalesCharge";
@@ -804,7 +811,7 @@ public class ChargeTypeCode {
 	 * definition} = "Another type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -837,7 +844,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Equalisation = new MMCode() {
+	public static final MMCode mmEqualisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Equalisation";
@@ -870,7 +877,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CorrespondentBankCharge = new MMCode() {
+	public static final MMCode mmCorrespondentBankCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CorrespondentBankCharge";
@@ -903,7 +910,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Premium = new MMCode() {
+	public static final MMCode mmPremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Premium";
@@ -933,7 +940,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge paid at the time of the first subscription."</li>
 	 * </ul>
 	 */
-	public static final MMCode Initial = new MMCode() {
+	public static final MMCode mmInitial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Initial";
@@ -963,7 +970,7 @@ public class ChargeTypeCode {
 	 * definition} = "Fee paid for advisory services rendered."</li>
 	 * </ul>
 	 */
-	public static final MMCode AdvisoryFee = new MMCode() {
+	public static final MMCode mmAdvisoryFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AdvisoryFee";
@@ -994,7 +1001,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CustodyFee = new MMCode() {
+	public static final MMCode mmCustodyFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CustodyFee";
@@ -1024,7 +1031,7 @@ public class ChargeTypeCode {
 	 * definition} = "Fee paid in respect of publications made."</li>
 	 * </ul>
 	 */
-	public static final MMCode PublicationFee = new MMCode() {
+	public static final MMCode mmPublicationFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PublicationFee";
@@ -1054,7 +1061,7 @@ public class ChargeTypeCode {
 	 * definition} = "Fee paid for accounting services rendered."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountingFee = new MMCode() {
+	public static final MMCode mmAccountingFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AccountingFee";
@@ -1084,7 +1091,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is for signature services."</li>
 	 * </ul>
 	 */
-	public static final MMCode SignatureService = new MMCode() {
+	public static final MMCode mmSignatureService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SignatureService";
@@ -1114,7 +1121,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is for storage of goods at destination."</li>
 	 * </ul>
 	 */
-	public static final MMCode StorageAtDestination = new MMCode() {
+	public static final MMCode mmStorageAtDestination = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StorageAtDestination";
@@ -1144,7 +1151,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is for storage of goods at origin."</li>
 	 * </ul>
 	 */
-	public static final MMCode StorageAtOrigin = new MMCode() {
+	public static final MMCode mmStorageAtOrigin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StorageAtOrigin";
@@ -1174,7 +1181,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is for packaging of goods."</li>
 	 * </ul>
 	 */
-	public static final MMCode Packaging = new MMCode() {
+	public static final MMCode mmPackaging = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Packaging";
@@ -1204,7 +1211,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is for pick-up of goods."</li>
 	 * </ul>
 	 */
-	public static final MMCode PickUp = new MMCode() {
+	public static final MMCode mmPickUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PickUp";
@@ -1234,7 +1241,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is for dangerous goods."</li>
 	 * </ul>
 	 */
-	public static final MMCode DangerousGoodsFee = new MMCode() {
+	public static final MMCode mmDangerousGoodsFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DangerousGoodsFee";
@@ -1264,7 +1271,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is for security."</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityCharge = new MMCode() {
+	public static final MMCode mmSecurityCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecurityCharge";
@@ -1294,7 +1301,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is a premium for insurance."</li>
 	 * </ul>
 	 */
-	public static final MMCode InsurancePremium = new MMCode() {
+	public static final MMCode mmInsurancePremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InsurancePremium";
@@ -1324,7 +1331,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is for the collection of the freight."</li>
 	 * </ul>
 	 */
-	public static final MMCode CollectFreight = new MMCode() {
+	public static final MMCode mmCollectFreight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CollectFreight";
@@ -1354,7 +1361,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is for clearance and handling of goods at origin."</li>
 	 * </ul>
 	 */
-	public static final MMCode ClearanceAndHandlingAtOrigin = new MMCode() {
+	public static final MMCode mmClearanceAndHandlingAtOrigin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ClearanceAndHandlingAtOrigin";
@@ -1385,7 +1392,7 @@ public class ChargeTypeCode {
 	 * "Charge is for clearance and handling of goods at destination."</li>
 	 * </ul>
 	 */
-	public static final MMCode ClearanceAndHandlingAtDestination = new MMCode() {
+	public static final MMCode mmClearanceAndHandlingAtDestination = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ClearanceAndHandlingAtDestination";
@@ -1415,7 +1422,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is an airway bill fee."</li>
 	 * </ul>
 	 */
-	public static final MMCode AirWayBillFee = new MMCode() {
+	public static final MMCode mmAirWayBillFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AirWayBillFee";
@@ -1445,7 +1452,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge is for transport."</li>
 	 * </ul>
 	 */
-	public static final MMCode TransportCharges = new MMCode() {
+	public static final MMCode mmTransportCharges = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransportCharges";
@@ -1478,7 +1485,7 @@ public class ChargeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UCITSCommission = new MMCode() {
+	public static final MMCode mmUCITSCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UCITSCommission";
@@ -1508,7 +1515,7 @@ public class ChargeTypeCode {
 	 * definition} = "Specially agreed front-end load."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpeciallyAgreedFrontEndLoad = new MMCode() {
+	public static final MMCode mmSpeciallyAgreedFrontEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SpeciallyAgreedFrontEndLoad";
@@ -1538,7 +1545,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge linked to an ADR (American Depositary Receipt)."</li>
 	 * </ul>
 	 */
-	public static final MMCode ADRFee = new MMCode() {
+	public static final MMCode mmADRFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ADRFee";
@@ -1568,7 +1575,7 @@ public class ChargeTypeCode {
 	 * definition} = "Fee linked to the cancellation of an issuance."</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuanceCancellationFee = new MMCode() {
+	public static final MMCode mmIssuanceCancellationFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IssuanceCancellationFee";
@@ -1598,7 +1605,7 @@ public class ChargeTypeCode {
 	 * definition} = "Miscellaneous fee."</li>
 	 * </ul>
 	 */
-	public static final MMCode MiscellaneousFee = new MMCode() {
+	public static final MMCode mmMiscellaneousFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MiscellaneousFee";
@@ -1628,7 +1635,7 @@ public class ChargeTypeCode {
 	 * definition} = "Charge linked to the issuance of security."</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuanceFee = new MMCode() {
+	public static final MMCode mmIssuanceFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IssuanceFee";
@@ -1641,27 +1648,27 @@ public class ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BRKF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeTypeCode";
 				definition = "Type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeTypeCode.BrokerageFee, com.tools20022.repository.codeset.ChargeTypeCode.Commission, com.tools20022.repository.codeset.ChargeTypeCode.BackEndLoad,
-						com.tools20022.repository.codeset.ChargeTypeCode.FrontEndLoad, com.tools20022.repository.codeset.ChargeTypeCode.Switch, com.tools20022.repository.codeset.ChargeTypeCode.DilutionLevy,
-						com.tools20022.repository.codeset.ChargeTypeCode.Discount, com.tools20022.repository.codeset.ChargeTypeCode.ManagementFee, com.tools20022.repository.codeset.ChargeTypeCode.TransferFee,
-						com.tools20022.repository.codeset.ChargeTypeCode.MatchingFees, com.tools20022.repository.codeset.ChargeTypeCode.PostageCharge, com.tools20022.repository.codeset.ChargeTypeCode.RegulatoryFee,
-						com.tools20022.repository.codeset.ChargeTypeCode.ShippingCharge, com.tools20022.repository.codeset.ChargeTypeCode.ServiceProvisionFee, com.tools20022.repository.codeset.ChargeTypeCode.SpecialConcessions,
-						com.tools20022.repository.codeset.ChargeTypeCode.PartAcquis, com.tools20022.repository.codeset.ChargeTypeCode.Penalty, com.tools20022.repository.codeset.ChargeTypeCode.ContingencyDeferredSalesCharge,
-						com.tools20022.repository.codeset.ChargeTypeCode.Other, com.tools20022.repository.codeset.ChargeTypeCode.Equalisation, com.tools20022.repository.codeset.ChargeTypeCode.CorrespondentBankCharge,
-						com.tools20022.repository.codeset.ChargeTypeCode.Premium, com.tools20022.repository.codeset.ChargeTypeCode.Initial, com.tools20022.repository.codeset.ChargeTypeCode.AdvisoryFee,
-						com.tools20022.repository.codeset.ChargeTypeCode.CustodyFee, com.tools20022.repository.codeset.ChargeTypeCode.PublicationFee, com.tools20022.repository.codeset.ChargeTypeCode.AccountingFee,
-						com.tools20022.repository.codeset.ChargeTypeCode.SignatureService, com.tools20022.repository.codeset.ChargeTypeCode.StorageAtDestination, com.tools20022.repository.codeset.ChargeTypeCode.StorageAtOrigin,
-						com.tools20022.repository.codeset.ChargeTypeCode.Packaging, com.tools20022.repository.codeset.ChargeTypeCode.PickUp, com.tools20022.repository.codeset.ChargeTypeCode.DangerousGoodsFee,
-						com.tools20022.repository.codeset.ChargeTypeCode.SecurityCharge, com.tools20022.repository.codeset.ChargeTypeCode.InsurancePremium, com.tools20022.repository.codeset.ChargeTypeCode.CollectFreight,
-						com.tools20022.repository.codeset.ChargeTypeCode.ClearanceAndHandlingAtOrigin, com.tools20022.repository.codeset.ChargeTypeCode.ClearanceAndHandlingAtDestination,
-						com.tools20022.repository.codeset.ChargeTypeCode.AirWayBillFee, com.tools20022.repository.codeset.ChargeTypeCode.TransportCharges, com.tools20022.repository.codeset.ChargeTypeCode.UCITSCommission,
-						com.tools20022.repository.codeset.ChargeTypeCode.SpeciallyAgreedFrontEndLoad, com.tools20022.repository.codeset.ChargeTypeCode.ADRFee, com.tools20022.repository.codeset.ChargeTypeCode.IssuanceCancellationFee,
-						com.tools20022.repository.codeset.ChargeTypeCode.MiscellaneousFee, com.tools20022.repository.codeset.ChargeTypeCode.IssuanceFee);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeTypeCode.mmBrokerageFee, com.tools20022.repository.codeset.ChargeTypeCode.mmCommission, com.tools20022.repository.codeset.ChargeTypeCode.mmBackEndLoad,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmFrontEndLoad, com.tools20022.repository.codeset.ChargeTypeCode.mmSwitch, com.tools20022.repository.codeset.ChargeTypeCode.mmDilutionLevy,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmDiscount, com.tools20022.repository.codeset.ChargeTypeCode.mmManagementFee, com.tools20022.repository.codeset.ChargeTypeCode.mmTransferFee,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmMatchingFees, com.tools20022.repository.codeset.ChargeTypeCode.mmPostageCharge, com.tools20022.repository.codeset.ChargeTypeCode.mmRegulatoryFee,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmShippingCharge, com.tools20022.repository.codeset.ChargeTypeCode.mmServiceProvisionFee, com.tools20022.repository.codeset.ChargeTypeCode.mmSpecialConcessions,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmPartAcquis, com.tools20022.repository.codeset.ChargeTypeCode.mmPenalty, com.tools20022.repository.codeset.ChargeTypeCode.mmContingencyDeferredSalesCharge,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmOther, com.tools20022.repository.codeset.ChargeTypeCode.mmEqualisation, com.tools20022.repository.codeset.ChargeTypeCode.mmCorrespondentBankCharge,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmPremium, com.tools20022.repository.codeset.ChargeTypeCode.mmInitial, com.tools20022.repository.codeset.ChargeTypeCode.mmAdvisoryFee,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmCustodyFee, com.tools20022.repository.codeset.ChargeTypeCode.mmPublicationFee, com.tools20022.repository.codeset.ChargeTypeCode.mmAccountingFee,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmSignatureService, com.tools20022.repository.codeset.ChargeTypeCode.mmStorageAtDestination, com.tools20022.repository.codeset.ChargeTypeCode.mmStorageAtOrigin,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmPackaging, com.tools20022.repository.codeset.ChargeTypeCode.mmPickUp, com.tools20022.repository.codeset.ChargeTypeCode.mmDangerousGoodsFee,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmSecurityCharge, com.tools20022.repository.codeset.ChargeTypeCode.mmInsurancePremium, com.tools20022.repository.codeset.ChargeTypeCode.mmCollectFreight,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmClearanceAndHandlingAtOrigin, com.tools20022.repository.codeset.ChargeTypeCode.mmClearanceAndHandlingAtDestination,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmAirWayBillFee, com.tools20022.repository.codeset.ChargeTypeCode.mmTransportCharges, com.tools20022.repository.codeset.ChargeTypeCode.mmUCITSCommission,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmSpeciallyAgreedFrontEndLoad, com.tools20022.repository.codeset.ChargeTypeCode.mmADRFee, com.tools20022.repository.codeset.ChargeTypeCode.mmIssuanceCancellationFee,
+						com.tools20022.repository.codeset.ChargeTypeCode.mmMiscellaneousFee, com.tools20022.repository.codeset.ChargeTypeCode.mmIssuanceFee);
 				derivation_lazy = () -> Arrays.asList(ChargeType7Code.mmObject(), ChargeType9Code.mmObject(), ChargeType4Code.mmObject(), ChargeType12Code.mmObject(), ChargeType1Code.mmObject(), ChargeType10Code.mmObject(),
 						ChargeType6Code.mmObject(), ChargeType11Code.mmObject(), ChargeType14Code.mmObject(), ChargeType17Code.mmObject(), ChargeType8Code.mmObject(), ChargeType13Code.mmObject(), ChargeType16Code.mmObject(),
 						ChargeType15Code.mmObject());

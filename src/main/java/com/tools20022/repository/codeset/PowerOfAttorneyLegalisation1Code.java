@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#Notary
- * PowerOfAttorneyLegalisation1Code.Notary}</li>
+ * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#mmNotary
+ * PowerOfAttorneyLegalisation1Code.mmNotary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#LocalAuthority
- * PowerOfAttorneyLegalisation1Code.LocalAuthority}</li>
+ * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#mmLocalAuthority
+ * PowerOfAttorneyLegalisation1Code.mmLocalAuthority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#Apostilled
- * PowerOfAttorneyLegalisation1Code.Apostilled}</li>
+ * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#mmApostilled
+ * PowerOfAttorneyLegalisation1Code.mmApostilled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#Consularized
- * PowerOfAttorneyLegalisation1Code.Consularized}</li>
+ * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#mmConsularized
+ * PowerOfAttorneyLegalisation1Code.mmConsularized}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class PowerOfAttorneyLegalisation1Code extends PowerOfAttorneyLegalisatio
 	 * name} = "Notary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Notary = new MMCode() {
+	public static final MMCode mmNotary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notary";
@@ -110,7 +110,7 @@ public class PowerOfAttorneyLegalisation1Code extends PowerOfAttorneyLegalisatio
 	 * name} = "LocalAuthority"</li>
 	 * </ul>
 	 */
-	public static final MMCode LocalAuthority = new MMCode() {
+	public static final MMCode mmLocalAuthority = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalAuthority";
@@ -133,7 +133,7 @@ public class PowerOfAttorneyLegalisation1Code extends PowerOfAttorneyLegalisatio
 	 * name} = "Apostilled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Apostilled = new MMCode() {
+	public static final MMCode mmApostilled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Apostilled";
@@ -156,7 +156,7 @@ public class PowerOfAttorneyLegalisation1Code extends PowerOfAttorneyLegalisatio
 	 * name} = "Consularized"</li>
 	 * </ul>
 	 */
-	public static final MMCode Consularized = new MMCode() {
+	public static final MMCode mmConsularized = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consularized";
@@ -167,13 +167,13 @@ public class PowerOfAttorneyLegalisation1Code extends PowerOfAttorneyLegalisatio
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NOTA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PowerOfAttorneyLegalisation1Code";
 				definition = "Indicates the legal constraint on the Power of Attorney.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.Notary, com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.LocalAuthority,
-						com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.Apostilled, com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.Consularized);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.mmNotary, com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.mmLocalAuthority,
+						com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.mmApostilled, com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.mmConsularized);
 				trace_lazy = () -> PowerOfAttorneyLegalisationCode.mmObject();
 			}
 		});

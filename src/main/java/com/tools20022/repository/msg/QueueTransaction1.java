@@ -35,22 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.QueueTransaction1#AccountOwner
- * QueueTransaction1.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QueueTransaction1#Account
- * QueueTransaction1.Account}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QueueTransaction1#NumberOfTransactions
- * QueueTransaction1.NumberOfTransactions}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QueueTransaction1#TotalAmount
- * QueueTransaction1.TotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.QueueTransaction1#mmAccountOwner
+ * QueueTransaction1.mmAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QueueTransaction1#mmAccount
+ * QueueTransaction1.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QueueTransaction1#mmNumberOfTransactions
+ * QueueTransaction1.mmNumberOfTransactions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QueueTransaction1#mmTotalAmount
+ * QueueTransaction1.mmTotalAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QueueTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstitutionIdentification8 accountOwner;
 	/**
 	 * Account owner identification such as BIC.
 	 * <p>
@@ -91,7 +94,7 @@ public class QueueTransaction1 {
 	 * definition} = "Account owner identification such as BIC. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> QueueTransaction1.mmObject();
 			isDerived = false;
@@ -99,12 +102,13 @@ public class QueueTransaction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Account owner identification such as BIC. ";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification8.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmObject();
 		}
 	};
+	protected AccountIdentification4Choice account;
 	/**
 	 * Identification of the account such as IBAN or local identifier.
 	 * <p>
@@ -133,7 +137,7 @@ public class QueueTransaction1 {
 	 * "Identification of the account such as IBAN or local identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> QueueTransaction1.mmObject();
 			isDerived = false;
@@ -141,12 +145,13 @@ public class QueueTransaction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Identification of the account such as IBAN or local identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	protected Number numberOfTransactions;
 	/**
 	 * Number of transaction per counterparty.
 	 * <p>
@@ -174,7 +179,7 @@ public class QueueTransaction1 {
 	 * definition} = "Number of transaction per counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QueueTransaction1.mmObject();
 			isDerived = false;
@@ -182,11 +187,12 @@ public class QueueTransaction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of transaction per counterparty.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalAmount;
 	/**
 	 * Aggregated amount of the transactions per counterparty.
 	 * <p>
@@ -215,7 +221,7 @@ public class QueueTransaction1 {
 	 * definition} = "Aggregated amount of the transactions per counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QueueTransaction1.mmObject();
 			isDerived = false;
@@ -223,8 +229,8 @@ public class QueueTransaction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Aggregated amount of the transactions per counterparty.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -232,14 +238,46 @@ public class QueueTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueueTransaction1.AccountOwner, com.tools20022.repository.msg.QueueTransaction1.Account,
-						com.tools20022.repository.msg.QueueTransaction1.NumberOfTransactions, com.tools20022.repository.msg.QueueTransaction1.TotalAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueueTransaction1.mmAccountOwner, com.tools20022.repository.msg.QueueTransaction1.mmAccount,
+						com.tools20022.repository.msg.QueueTransaction1.mmNumberOfTransactions, com.tools20022.repository.msg.QueueTransaction1.mmTotalAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QueueTransaction1";
 				definition = "Transaction summmary details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstitutionIdentification8 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification8 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public AccountIdentification4Choice getAccount() {
+		return account;
+	}
+
+	public void setAccount(AccountIdentification4Choice account) {
+		this.account = account;
+	}
+
+	public Number getNumberOfTransactions() {
+		return numberOfTransactions;
+	}
+
+	public void setNumberOfTransactions(Number numberOfTransactions) {
+		this.numberOfTransactions = numberOfTransactions;
+	}
+
+	public ActiveCurrencyAndAmount getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(ActiveCurrencyAndAmount totalAmount) {
+		this.totalAmount = totalAmount;
 	}
 }

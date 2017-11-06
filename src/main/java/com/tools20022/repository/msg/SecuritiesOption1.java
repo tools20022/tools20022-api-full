@@ -38,26 +38,26 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#MaximumExercisableQuantity
- * SecuritiesOption1.MaximumExercisableQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#mmMaximumExercisableQuantity
+ * SecuritiesOption1.mmMaximumExercisableQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#MinimumExercisableQuantity
- * SecuritiesOption1.MinimumExercisableQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#mmMinimumExercisableQuantity
+ * SecuritiesOption1.mmMinimumExercisableQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#MinimumExercisableMultipleQuantity
- * SecuritiesOption1.MinimumExercisableMultipleQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#mmMinimumExercisableMultipleQuantity
+ * SecuritiesOption1.mmMinimumExercisableMultipleQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#NewBoardLotQuantity
- * SecuritiesOption1.NewBoardLotQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#mmNewBoardLotQuantity
+ * SecuritiesOption1.mmNewBoardLotQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#NewDenominationQuantity
- * SecuritiesOption1.NewDenominationQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#mmNewDenominationQuantity
+ * SecuritiesOption1.mmNewDenominationQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#FrontEndOddLotQuantity
- * SecuritiesOption1.FrontEndOddLotQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#mmFrontEndOddLotQuantity
+ * SecuritiesOption1.mmFrontEndOddLotQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#BackEndOddLotQuantity
- * SecuritiesOption1.BackEndOddLotQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#mmBackEndOddLotQuantity
+ * SecuritiesOption1.mmBackEndOddLotQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +66,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,6 +82,7 @@ import java.util.function.Supplier;
 public class SecuritiesOption1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1Choice maximumExercisableQuantity;
 	/**
 	 * Maximum quantity (or lot) of financial instrument that must be exercised
 	 * or tendered.
@@ -96,8 +97,8 @@ public class SecuritiesOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#MaximumExercisableQuantity
-	 * SecuritiesConversion.MaximumExercisableQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmMaximumExercisableQuantity
+	 * SecuritiesConversion.mmMaximumExercisableQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,20 +119,21 @@ public class SecuritiesOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumExercisableQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumExercisableQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMaximumExercisableQuantity;
 			componentContext_lazy = () -> SecuritiesOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.MaximumExercisableQuantity;
 			isDerived = false;
 			xmlTag = "MaxExrcblQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumExercisableQuantity";
 			definition = "Maximum quantity (or lot) of financial instrument that must be exercised or tendered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice minimumExercisableQuantity;
 	/**
 	 * Minimum quantity (or lot) of financial instrument that must be exercised
 	 * or tendered.
@@ -146,8 +148,8 @@ public class SecuritiesOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#MinimumExercisableQuantity
-	 * SecuritiesConversion.MinimumExercisableQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmMinimumExercisableQuantity
+	 * SecuritiesConversion.mmMinimumExercisableQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,20 +170,21 @@ public class SecuritiesOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumExercisableQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumExercisableQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableQuantity;
 			componentContext_lazy = () -> SecuritiesOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.MinimumExercisableQuantity;
 			isDerived = false;
 			xmlTag = "MinExrcblQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableQuantity";
 			definition = "Minimum quantity (or lot) of financial instrument that must be exercised or tendered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice minimumExercisableMultipleQuantity;
 	/**
 	 * Minimum multiple quantity (or lot) of financial instrument that must be
 	 * exercised or tendered.
@@ -196,8 +199,8 @@ public class SecuritiesOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#MinimumExercisableMultipleQuantity
-	 * SecuritiesConversion.MinimumExercisableMultipleQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmMinimumExercisableMultipleQuantity
+	 * SecuritiesConversion.mmMinimumExercisableMultipleQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -218,20 +221,21 @@ public class SecuritiesOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumExercisableMultipleQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumExercisableMultipleQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
 			componentContext_lazy = () -> SecuritiesOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.MinimumExercisableMultipleQuantity;
 			isDerived = false;
 			xmlTag = "MinExrcblMltplQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableMultipleQuantity";
 			definition = "Minimum multiple quantity (or lot) of financial  instrument that must be exercised or tendered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice newBoardLotQuantity;
 	/**
 	 * Quantity of equity that makes up the new board lot.
 	 * <p>
@@ -245,8 +249,8 @@ public class SecuritiesOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#BoardLotSecuritiesQuantity
-	 * SecuritiesProceedsDefinition.BoardLotSecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmBoardLotSecuritiesQuantity
+	 * SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -265,20 +269,21 @@ public class SecuritiesOption1 {
 	 * definition} = "Quantity of equity that makes up the new board lot."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewBoardLotQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewBoardLotQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
 			componentContext_lazy = () -> SecuritiesOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.BoardLotSecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "NewBrdLotQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewBoardLotQuantity";
 			definition = "Quantity of equity that makes up the new board lot.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice newDenominationQuantity;
 	/**
 	 * New denomination of the equity following, for example, an increase or
 	 * decrease in nominal value.
@@ -293,8 +298,8 @@ public class SecuritiesOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#NewDenominationSecuritiesQuantity
-	 * SecuritiesProceedsDefinition.NewDenominationSecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmNewDenominationSecuritiesQuantity
+	 * SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -315,20 +320,21 @@ public class SecuritiesOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewDenominationQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewDenominationQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
 			componentContext_lazy = () -> SecuritiesOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.NewDenominationSecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "NewDnmtnQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewDenominationQuantity";
 			definition = "New denomination of the equity following, for example, an increase or decrease in nominal value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity2Choice frontEndOddLotQuantity;
 	/**
 	 * Specifies that if an order is prorated holders of odd lots who tender
 	 * their full position will not have tendered position prorated but rather
@@ -344,8 +350,8 @@ public class SecuritiesOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#FrontEndOddLotQuantity
-	 * BiddingConditions.FrontEndOddLotQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmFrontEndOddLotQuantity
+	 * BiddingConditions.mmFrontEndOddLotQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -366,20 +372,21 @@ public class SecuritiesOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FrontEndOddLotQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrontEndOddLotQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmFrontEndOddLotQuantity;
 			componentContext_lazy = () -> SecuritiesOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.FrontEndOddLotQuantity;
 			isDerived = false;
 			xmlTag = "FrntEndOddLotQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndOddLotQuantity";
 			definition = "Specifies that if an order is prorated holders of odd lots who tender their full position will not have tendered position prorated but rather accepted in full.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity2Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity2Choice backEndOddLotQuantity;
 	/**
 	 * Represents the presence of a back end odd lot provision and the quantity
 	 * of equity required after proration to be eligible for this privilege.
@@ -394,8 +401,8 @@ public class SecuritiesOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#BackEndOddLotQuantity
-	 * BiddingConditions.BackEndOddLotQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmBackEndOddLotQuantity
+	 * BiddingConditions.mmBackEndOddLotQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -416,17 +423,17 @@ public class SecuritiesOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BackEndOddLotQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBackEndOddLotQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmBackEndOddLotQuantity;
 			componentContext_lazy = () -> SecuritiesOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.BackEndOddLotQuantity;
 			isDerived = false;
 			xmlTag = "BckEndOddLotQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndOddLotQuantity";
 			definition = "Represents the presence of a back end odd lot provision and the quantity of equity required after proration to be eligible for this privilege.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity2Choice.mmObject();
 		}
 	};
@@ -434,11 +441,12 @@ public class SecuritiesOption1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption1.MaximumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption1.MinimumExercisableQuantity,
-						com.tools20022.repository.msg.SecuritiesOption1.MinimumExercisableMultipleQuantity, com.tools20022.repository.msg.SecuritiesOption1.NewBoardLotQuantity,
-						com.tools20022.repository.msg.SecuritiesOption1.NewDenominationQuantity, com.tools20022.repository.msg.SecuritiesOption1.FrontEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption1.BackEndOddLotQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption1.mmMaximumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption1.mmMinimumExercisableQuantity,
+						com.tools20022.repository.msg.SecuritiesOption1.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.SecuritiesOption1.mmNewBoardLotQuantity,
+						com.tools20022.repository.msg.SecuritiesOption1.mmNewDenominationQuantity, com.tools20022.repository.msg.SecuritiesOption1.mmFrontEndOddLotQuantity,
+						com.tools20022.repository.msg.SecuritiesOption1.mmBackEndOddLotQuantity);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -452,5 +460,61 @@ public class SecuritiesOption1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1Choice getMaximumExercisableQuantity() {
+		return maximumExercisableQuantity;
+	}
+
+	public void setMaximumExercisableQuantity(FinancialInstrumentQuantity1Choice maximumExercisableQuantity) {
+		this.maximumExercisableQuantity = maximumExercisableQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getMinimumExercisableQuantity() {
+		return minimumExercisableQuantity;
+	}
+
+	public void setMinimumExercisableQuantity(FinancialInstrumentQuantity1Choice minimumExercisableQuantity) {
+		this.minimumExercisableQuantity = minimumExercisableQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getMinimumExercisableMultipleQuantity() {
+		return minimumExercisableMultipleQuantity;
+	}
+
+	public void setMinimumExercisableMultipleQuantity(FinancialInstrumentQuantity1Choice minimumExercisableMultipleQuantity) {
+		this.minimumExercisableMultipleQuantity = minimumExercisableMultipleQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getNewBoardLotQuantity() {
+		return newBoardLotQuantity;
+	}
+
+	public void setNewBoardLotQuantity(FinancialInstrumentQuantity1Choice newBoardLotQuantity) {
+		this.newBoardLotQuantity = newBoardLotQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getNewDenominationQuantity() {
+		return newDenominationQuantity;
+	}
+
+	public void setNewDenominationQuantity(FinancialInstrumentQuantity1Choice newDenominationQuantity) {
+		this.newDenominationQuantity = newDenominationQuantity;
+	}
+
+	public FinancialInstrumentQuantity2Choice getFrontEndOddLotQuantity() {
+		return frontEndOddLotQuantity;
+	}
+
+	public void setFrontEndOddLotQuantity(FinancialInstrumentQuantity2Choice frontEndOddLotQuantity) {
+		this.frontEndOddLotQuantity = frontEndOddLotQuantity;
+	}
+
+	public FinancialInstrumentQuantity2Choice getBackEndOddLotQuantity() {
+		return backEndOddLotQuantity;
+	}
+
+	public void setBackEndOddLotQuantity(FinancialInstrumentQuantity2Choice backEndOddLotQuantity) {
+		this.backEndOddLotQuantity = backEndOddLotQuantity;
 	}
 }

@@ -37,8 +37,8 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction24#PaymentInstrument
- * PaymentTransaction24.PaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction24#mmPaymentInstrument
+ * PaymentTransaction24.mmPaymentInstrument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -64,6 +64,7 @@ import java.util.function.Supplier;
 public class PaymentTransaction24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentInstrument12Choice paymentInstrument;
 	/**
 	 * Choice between types of payment instrument, ie, cheque, credit transfer,
 	 * direct debit, investment account or payment card.
@@ -98,28 +99,28 @@ public class PaymentTransaction24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentTransaction24.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> PaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Choice between types of payment instrument, ie, cheque, credit transfer, direct debit, investment account or payment card.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInstrument12Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PaymentInstrument12Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction24.PaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction24.mmPaymentInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -133,5 +134,13 @@ public class PaymentTransaction24 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentInstrument12Choice getPaymentInstrument() {
+		return paymentInstrument;
+	}
+
+	public void setPaymentInstrument(PaymentInstrument12Choice paymentInstrument) {
+		this.paymentInstrument = paymentInstrument;
 	}
 }

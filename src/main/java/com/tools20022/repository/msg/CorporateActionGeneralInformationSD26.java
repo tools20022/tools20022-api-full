@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional information regarding corporate action general
@@ -36,24 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD26#PlaceAndName
- * CorporateActionGeneralInformationSD26.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD26#mmPlaceAndName
+ * CorporateActionGeneralInformationSD26.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD26#SecurityIdentification
- * CorporateActionGeneralInformationSD26.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD26#mmSecurityIdentification
+ * CorporateActionGeneralInformationSD26.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD26#SafekeepingAccount
- * CorporateActionGeneralInformationSD26.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD26#mmSafekeepingAccount
+ * CorporateActionGeneralInformationSD26.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD26#UnallocatedDetails
- * CorporateActionGeneralInformationSD26.UnallocatedDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD26#mmUnallocatedDetails
+ * CorporateActionGeneralInformationSD26.mmUnallocatedDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionGeneralInformationSD26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -101,11 +103,11 @@ public class CorporateActionGeneralInformationSD26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD20#PlaceAndName
-	 * CorporateActionGeneralInformationSD20.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD20#mmPlaceAndName
+	 * CorporateActionGeneralInformationSD20.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD26.mmObject();
 			isDerived = false;
@@ -113,12 +115,13 @@ public class CorporateActionGeneralInformationSD26 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD20.PlaceAndName;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD20.mmPlaceAndName;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected SecurityIdentification15 securityIdentification;
 	/**
 	 * Identifies the financial instrument.
 	 * <p>
@@ -148,11 +151,11 @@ public class CorporateActionGeneralInformationSD26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD20#SecurityIdentification
-	 * CorporateActionGeneralInformationSD20.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD20#mmSecurityIdentification
+	 * CorporateActionGeneralInformationSD20.mmSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD26.mmObject();
 			isDerived = false;
@@ -160,12 +163,13 @@ public class CorporateActionGeneralInformationSD26 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD20.SecurityIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD20.mmSecurityIdentification;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification15.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	protected RestrictedFINXMax35Text safekeepingAccount;
 	/**
 	 * Account where financial instruments are maintained.
 	 * <p>
@@ -195,11 +199,11 @@ public class CorporateActionGeneralInformationSD26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD20#SafekeepingAccount
-	 * CorporateActionGeneralInformationSD20.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD20#mmSafekeepingAccount
+	 * CorporateActionGeneralInformationSD20.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD26.mmObject();
 			isDerived = false;
@@ -207,12 +211,13 @@ public class CorporateActionGeneralInformationSD26 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD20.SafekeepingAccount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD20.mmSafekeepingAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5> unallocatedDetails;
 	/**
 	 * Additional information about the corporate action event.
 	 * <p>
@@ -241,11 +246,11 @@ public class CorporateActionGeneralInformationSD26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD20#UnallocatedDetails
-	 * CorporateActionGeneralInformationSD20.UnallocatedDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD20#mmUnallocatedDetails
+	 * CorporateActionGeneralInformationSD20.mmUnallocatedDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnallocatedDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnallocatedDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD26.mmObject();
 			isDerived = false;
@@ -253,19 +258,19 @@ public class CorporateActionGeneralInformationSD26 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDetails";
 			definition = "Additional information about the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD20.UnallocatedDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD20.mmUnallocatedDetails;
 			minOccurs = 0;
-			type_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD26.PlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD26.SecurityIdentification,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD26.SafekeepingAccount, com.tools20022.repository.msg.CorporateActionGeneralInformationSD26.UnallocatedDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD26.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD26.mmSecurityIdentification,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD26.mmSafekeepingAccount, com.tools20022.repository.msg.CorporateActionGeneralInformationSD26.mmUnallocatedDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD26";
 				definition = "Provides additional information regarding corporate action general information.";
@@ -273,5 +278,37 @@ public class CorporateActionGeneralInformationSD26 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public SecurityIdentification15 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public RestrictedFINXMax35Text getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(RestrictedFINXMax35Text safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<CorporateActionUnallocatedDetailsSD5> getUnallocatedDetails() {
+		return unallocatedDetails;
+	}
+
+	public void setUnallocatedDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5> unallocatedDetails) {
+		this.unallocatedDetails = unallocatedDetails;
 	}
 }

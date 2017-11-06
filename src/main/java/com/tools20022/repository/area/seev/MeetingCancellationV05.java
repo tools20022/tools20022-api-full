@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -67,24 +68,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV05#MeetingReference
- * MeetingCancellationV05.MeetingReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV05#mmMeetingReference
+ * MeetingCancellationV05.mmMeetingReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV05#Security
- * MeetingCancellationV05.Security}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV05#mmSecurity
+ * MeetingCancellationV05.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV05#Reason
- * MeetingCancellationV05.Reason}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV05#mmReason
+ * MeetingCancellationV05.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV05#SupplementaryData
- * MeetingCancellationV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV05#mmSupplementaryData
+ * MeetingCancellationV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV05#identifier
- * MeetingCancellationV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.002.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingCancellationV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MeetingReference6 meetingReference;
 	/**
 	 * Series of elements which allow to identify a meeting.
 	 * <p>
@@ -128,22 +128,23 @@ public class MeetingCancellationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#MeetingReference
-	 * MeetingCancellationV04.MeetingReference}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#mmMeetingReference
+	 * MeetingCancellationV04.mmMeetingReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingCancellationV04.MeetingReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingCancellationV04.mmMeetingReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference6.mmObject();
 		}
 	};
+	protected List<SecurityPosition8> security;
 	/**
 	 * Identifies the security for which the meeting was organised.
 	 * <p>
@@ -169,22 +170,23 @@ public class MeetingCancellationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#Security
-	 * MeetingCancellationV04.Security}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#mmSecurity
+	 * MeetingCancellationV04.mmSecurity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Security = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Scty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			definition = "Identifies the security for which the meeting was organised.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingCancellationV04.Security;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingCancellationV04.mmSecurity;
 			maxOccurs = 200;
+			minOccurs = 0;
 			complexType_lazy = () -> SecurityPosition8.mmObject();
 		}
 	};
+	protected MeetingCancellationReason2 reason;
 	/**
 	 * Defines the justification for the cancellation.
 	 * <p>
@@ -209,22 +211,23 @@ public class MeetingCancellationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#Reason
-	 * MeetingCancellationV04.Reason}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#mmReason
+	 * MeetingCancellationV04.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Defines the justification for the cancellation.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingCancellationV04.Reason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingCancellationV04.mmReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MeetingCancellationReason2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -251,7 +254,7 @@ public class MeetingCancellationV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,33 +262,6 @@ public class MeetingCancellationV05 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "002";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -300,11 +276,50 @@ public class MeetingCancellationV05 {
 				rootElement = "Document";
 				xmlTag = "MtgCxl";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingCancellationV05.MeetingReference, com.tools20022.repository.area.seev.MeetingCancellationV05.Security,
-						com.tools20022.repository.area.seev.MeetingCancellationV05.Reason, com.tools20022.repository.area.seev.MeetingCancellationV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.MeetingCancellationV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingCancellationV05.mmMeetingReference, com.tools20022.repository.area.seev.MeetingCancellationV05.mmSecurity,
+						com.tools20022.repository.area.seev.MeetingCancellationV05.mmReason, com.tools20022.repository.area.seev.MeetingCancellationV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "002";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MeetingReference6 getMeetingReference() {
+		return meetingReference;
+	}
+
+	public void setMeetingReference(MeetingReference6 meetingReference) {
+		this.meetingReference = meetingReference;
+	}
+
+	public List<SecurityPosition8> getSecurity() {
+		return security;
+	}
+
+	public void setSecurity(List<SecurityPosition8> security) {
+		this.security = security;
+	}
+
+	public MeetingCancellationReason2 getReason() {
+		return reason;
+	}
+
+	public void setReason(MeetingCancellationReason2 reason) {
+		this.reason = reason;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

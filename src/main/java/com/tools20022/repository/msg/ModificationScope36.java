@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope36#ModificationScopeIndication
- * ModificationScope36.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope36#mmModificationScopeIndication
+ * ModificationScope36.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope36#FinancialInstrumentDetails
- * ModificationScope36.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope36#mmFinancialInstrumentDetails
+ * ModificationScope36.mmFinancialInstrumentDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope36 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification2Code modificationScopeIndication;
 	/**
 	 * Type of modification to be applied.
 	 * <p>
@@ -94,11 +95,11 @@ public class ModificationScope36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope29#ModificationScopeIndication
-	 * ModificationScope29.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope29#mmModificationScopeIndication
+	 * ModificationScope29.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope36.mmObject();
 			isDerived = false;
@@ -106,12 +107,13 @@ public class ModificationScope36 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Type of modification to be applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope29.ModificationScopeIndication;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope29.mmModificationScopeIndication;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	protected FinancialInstrument56 financialInstrumentDetails;
 	/**
 	 * Detailed information about the investment fund or security associated to
 	 * the account.
@@ -142,11 +144,11 @@ public class ModificationScope36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope29#FinancialInstrumentDetails
-	 * ModificationScope29.FinancialInstrumentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope29#mmFinancialInstrumentDetails
+	 * ModificationScope29.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope36.mmObject();
 			isDerived = false;
@@ -154,19 +156,19 @@ public class ModificationScope36 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Detailed information about the investment fund or security associated to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope29.FinancialInstrumentDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope29.mmFinancialInstrumentDetails;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument56.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument56.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope36.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope36.FinancialInstrumentDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope36.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope36.mmFinancialInstrumentDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope36";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -174,5 +176,21 @@ public class ModificationScope36 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification2Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public FinancialInstrument56 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument56 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
 	}
 }

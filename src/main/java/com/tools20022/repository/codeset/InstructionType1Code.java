@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * InstructionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InstructionType1Code#Lodge
- * InstructionType1Code.Lodge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionType1Code#FullPushThrough
- * InstructionType1Code.FullPushThrough}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionType1Code#mmLodge
+ * InstructionType1Code.mmLodge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionType1Code#mmFullPushThrough
+ * InstructionType1Code.mmFullPushThrough}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +81,7 @@ public class InstructionType1Code extends InstructionTypeCode {
 	 * name} = "Lodge"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lodge = new MMCode() {
+	public static final MMCode mmLodge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lodge";
@@ -103,7 +104,7 @@ public class InstructionType1Code extends InstructionTypeCode {
 	 * name} = "FullPushThrough"</li>
 	 * </ul>
 	 */
-	public static final MMCode FullPushThrough = new MMCode() {
+	public static final MMCode mmFullPushThrough = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPushThrough";
@@ -114,12 +115,12 @@ public class InstructionType1Code extends InstructionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LODG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionType1Code";
 				definition = "Specifies the action that the TSU must take on a baseline.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionType1Code.Lodge, com.tools20022.repository.codeset.InstructionType1Code.FullPushThrough);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionType1Code.mmLodge, com.tools20022.repository.codeset.InstructionType1Code.mmFullPushThrough);
 				trace_lazy = () -> InstructionTypeCode.mmObject();
 			}
 		});

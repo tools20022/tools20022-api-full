@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters4#NetworkType
- * NetworkParameters4.NetworkType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NetworkParameters4#AddressValue
- * NetworkParameters4.AddressValue}</li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters4#mmNetworkType
+ * NetworkParameters4.mmNetworkType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters4#mmAddressValue
+ * NetworkParameters4.mmAddressValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetworkParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NetworkType1Code networkType;
 	/**
 	 * Type of communication network.
 	 * <p>
@@ -90,7 +92,7 @@ public class NetworkParameters4 {
 	 * definition} = "Type of communication network."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetworkType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetworkType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetworkParameters4.mmObject();
 			isDerived = false;
@@ -98,11 +100,12 @@ public class NetworkParameters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkType";
 			definition = "Type of communication network.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NetworkType1Code.mmObject();
 		}
 	};
+	protected Max70Text addressValue;
 	/**
 	 * Value of the address. The value of an internet protocol address contains
 	 * the IP address or the DNS (Domain Name Server) address, followed by the
@@ -136,7 +139,7 @@ public class NetworkParameters4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AddressValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAddressValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetworkParameters4.mmObject();
 			isDerived = false;
@@ -144,8 +147,8 @@ public class NetworkParameters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressValue";
 			definition = "Value of the address. The value of an internet protocol address contains the IP address or the DNS (Domain Name Server) address, followed by the character ':' and the port number if the default port is not used. The value of a public telephone address contains the phone number with possible prefix and extensions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -153,8 +156,8 @@ public class NetworkParameters4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters4.NetworkType, com.tools20022.repository.msg.NetworkParameters4.AddressValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters4.mmNetworkType, com.tools20022.repository.msg.NetworkParameters4.mmAddressValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters4";
 				definition = "Parameters to communicate with a host.";
@@ -162,5 +165,21 @@ public class NetworkParameters4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NetworkType1Code getNetworkType() {
+		return networkType;
+	}
+
+	public void setNetworkType(NetworkType1Code networkType) {
+		this.networkType = networkType;
+	}
+
+	public Max70Text getAddressValue() {
+		return addressValue;
+	}
+
+	public void setAddressValue(Max70Text addressValue) {
+		this.addressValue = addressValue;
 	}
 }

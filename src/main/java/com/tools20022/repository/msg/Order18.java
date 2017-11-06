@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Intention to transfer an ownership of a financial instrument.
@@ -36,102 +37,103 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#BusinessProcessType
- * Order18.BusinessProcessType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#OrderIdentification
- * Order18.OrderIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmBusinessProcessType
+ * Order18.mmBusinessProcessType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmOrderIdentification
+ * Order18.mmOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Order18#ClientOrderIdentification
- * Order18.ClientOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Order18#mmClientOrderIdentification
+ * Order18.mmClientOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Order18#SecondaryClientOrderIdentification
- * Order18.SecondaryClientOrderIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#ListIdentification
- * Order18.ListIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Order18#mmSecondaryClientOrderIdentification
+ * Order18.mmSecondaryClientOrderIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmListIdentification
+ * Order18.mmListIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Order18#FinancialInstrumentIdentification
- * Order18.FinancialInstrumentIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#Side Order18.Side}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#Payment
- * Order18.Payment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#TradeTransactionType
- * Order18.TradeTransactionType}</li>
+ * {@linkplain com.tools20022.repository.msg.Order18#mmFinancialInstrumentIdentification
+ * Order18.mmFinancialInstrumentIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmSide Order18.mmSide}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmPayment
+ * Order18.mmPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmTradeTransactionType
+ * Order18.mmTradeTransactionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Order18#TradeTransactionCondition
- * Order18.TradeTransactionCondition}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#PreAdvice
- * Order18.PreAdvice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#PlaceOfTrade
- * Order18.PlaceOfTrade}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#OrderBookingDate
- * Order18.OrderBookingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#TradeOriginationDate
- * Order18.TradeOriginationDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#TradeDate
- * Order18.TradeDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#ProcessingDate
- * Order18.ProcessingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#SettlementDate
- * Order18.SettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#NAVDate
- * Order18.NAVDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#PartialFillDetails
- * Order18.PartialFillDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#ConfirmationQuantity
- * Order18.ConfirmationQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#QuantityBreakdown
- * Order18.QuantityBreakdown}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#GrossTradeAmount
- * Order18.GrossTradeAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#DealPrice
- * Order18.DealPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#TypeOfPrice
- * Order18.TypeOfPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#CashMargin
- * Order18.CashMargin}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#Commission
- * Order18.Commission}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#NumberOfDaysAccrued
- * Order18.NumberOfDaysAccrued}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#GiveUpNumberOfDays
- * Order18.GiveUpNumberOfDays}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#InterestType
- * Order18.InterestType}</li>
+ * {@linkplain com.tools20022.repository.msg.Order18#mmTradeTransactionCondition
+ * Order18.mmTradeTransactionCondition}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmPreAdvice
+ * Order18.mmPreAdvice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmPlaceOfTrade
+ * Order18.mmPlaceOfTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmOrderBookingDate
+ * Order18.mmOrderBookingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmTradeOriginationDate
+ * Order18.mmTradeOriginationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmTradeDate
+ * Order18.mmTradeDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmProcessingDate
+ * Order18.mmProcessingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmSettlementDate
+ * Order18.mmSettlementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmNAVDate
+ * Order18.mmNAVDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmPartialFillDetails
+ * Order18.mmPartialFillDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmConfirmationQuantity
+ * Order18.mmConfirmationQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmQuantityBreakdown
+ * Order18.mmQuantityBreakdown}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmGrossTradeAmount
+ * Order18.mmGrossTradeAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmDealPrice
+ * Order18.mmDealPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmTypeOfPrice
+ * Order18.mmTypeOfPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmCashMargin
+ * Order18.mmCashMargin}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmCommission
+ * Order18.mmCommission}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmNumberOfDaysAccrued
+ * Order18.mmNumberOfDaysAccrued}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmGiveUpNumberOfDays
+ * Order18.mmGiveUpNumberOfDays}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmInterestType
+ * Order18.mmInterestType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Order18#AccruedInterestPercentage
- * Order18.AccruedInterestPercentage}</li>
+ * {@linkplain com.tools20022.repository.msg.Order18#mmAccruedInterestPercentage
+ * Order18.mmAccruedInterestPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Order18#TradeRegulatoryConditionsType
- * Order18.TradeRegulatoryConditionsType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#CurrencyToBuyOrSell
- * Order18.CurrencyToBuyOrSell}</li>
+ * {@linkplain com.tools20022.repository.msg.Order18#mmTradeRegulatoryConditionsType
+ * Order18.mmTradeRegulatoryConditionsType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmCurrencyToBuyOrSell
+ * Order18.mmCurrencyToBuyOrSell}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Order18#OrderOriginatorEligibility
- * Order18.OrderOriginatorEligibility}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#PositionEffect
- * Order18.PositionEffect}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#DerivativeCovered
- * Order18.DerivativeCovered}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#ChargeTaxBasisType
- * Order18.ChargeTaxBasisType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#CapitalGainType
- * Order18.CapitalGainType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#MatchStatus
- * Order18.MatchStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#CallInType
- * Order18.CallInType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#YieldType
- * Order18.YieldType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#Reporting
- * Order18.Reporting}</li>
+ * {@linkplain com.tools20022.repository.msg.Order18#mmOrderOriginatorEligibility
+ * Order18.mmOrderOriginatorEligibility}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmPositionEffect
+ * Order18.mmPositionEffect}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmDerivativeCovered
+ * Order18.mmDerivativeCovered}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmChargeTaxBasisType
+ * Order18.mmChargeTaxBasisType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmCapitalGainType
+ * Order18.mmCapitalGainType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmMatchStatus
+ * Order18.mmMatchStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmCallInType
+ * Order18.mmCallInType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmYieldType
+ * Order18.mmYieldType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18#mmReporting
+ * Order18.mmReporting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Order18#AdditionalPhysicalOrRegistrationDetails
- * Order18.AdditionalPhysicalOrRegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Order18#mmAdditionalPhysicalOrRegistrationDetails
+ * Order18.mmAdditionalPhysicalOrRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Order18#AdditionalTradeInstructionProcessingInformation
- * Order18.AdditionalTradeInstructionProcessingInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18#AccruedInterestAmount
- * Order18.AccruedInterestAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.Order18#mmAdditionalTradeInstructionProcessingInformation
+ * Order18.mmAdditionalTradeInstructionProcessingInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Order18#mmAccruedInterestAmount
+ * Order18.mmAccruedInterestAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -142,18 +144,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#PartyTradingDetails
- * SecuritiesTradeConfirmationStatusAdviceV02.PartyTradingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmPartyTradingDetails
+ * SecuritiesTradeConfirmationStatusAdviceV02.mmPartyTradingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#CounterpartyTradingDetails
- * SecuritiesTradeConfirmationStatusAdviceV02.CounterpartyTradingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmCounterpartyTradingDetails
+ * SecuritiesTradeConfirmationStatusAdviceV02.mmCounterpartyTradingDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -171,6 +173,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Order18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BusinessProcessType1Choice businessProcessType;
 	/**
 	 * Specifies the type of business process.
 	 * <p>
@@ -204,25 +207,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#BusinessProcessType
-	 * Order16.BusinessProcessType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmBusinessProcessType
+	 * Order16.mmBusinessProcessType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BusinessProcessType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBusinessProcessType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Order18.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
+			componentContext_lazy = () -> Order18.mmObject();
 			isDerived = false;
 			xmlTag = "BizPrcTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessProcessType";
 			definition = "Specifies the type of business process.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.BusinessProcessType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmBusinessProcessType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> BusinessProcessType1Choice.mmObject();
 		}
 	};
+	protected List<Max35Text> orderIdentification;
 	/**
 	 * Unique identifier for Order as assigned by sell-side.
 	 * <p>
@@ -235,8 +239,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -255,24 +259,25 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#OrderIdentification
-	 * Order16.OrderIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmOrderIdentification
+	 * Order16.mmOrderIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderIdentification";
 			definition = "Unique identifier for Order as assigned by sell-side.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.OrderIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmOrderIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> clientOrderIdentification;
 	/**
 	 * Unique identifier for the order as assigned by the buy-side. Uniqueness
 	 * must be guaranteed within a single trading day. Firms, particularly those
@@ -289,8 +294,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#ClientOrderIdentification
-	 * SecuritiesOrder.ClientOrderIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmClientOrderIdentification
+	 * SecuritiesOrder.mmClientOrderIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -311,24 +316,25 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#ClientOrderIdentification
-	 * Order16.ClientOrderIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmClientOrderIdentification
+	 * Order16.mmClientOrderIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.ClientOrderIdentification;
 			isDerived = false;
 			xmlTag = "ClntOrdrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.ClientOrderIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmClientOrderIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> secondaryClientOrderIdentification;
 	/**
 	 * Assigned by the party that originates the order. Can be used to provide
 	 * the ClientOrderIdentification used by an exchange or executing system.
@@ -342,8 +348,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#ClientOrderIdentification
-	 * SecuritiesOrder.ClientOrderIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmClientOrderIdentification
+	 * SecuritiesOrder.mmClientOrderIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -364,24 +370,25 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#SecondaryClientOrderIdentification
-	 * Order16.SecondaryClientOrderIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmSecondaryClientOrderIdentification
+	 * Order16.mmSecondaryClientOrderIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondaryClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.ClientOrderIdentification;
 			isDerived = false;
 			xmlTag = "ScndryClntOrdrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryClientOrderIdentification";
 			definition = "Assigned by the party that originates the order. Can be used to provide the ClientOrderIdentification used by an exchange or executing system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.SecondaryClientOrderIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmSecondaryClientOrderIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> listIdentification;
 	/**
 	 * Unique identifier for a list, as assigned by the trading party. The
 	 * identifier must be unique within a single trading day.
@@ -395,8 +402,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#ListIdentification
-	 * ListTrading.ListIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmListIdentification
+	 * ListTrading.mmListIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -417,24 +424,25 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#ListIdentification
-	 * Order16.ListIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmListIdentification
+	 * Order16.mmListIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListIdentification;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.ListIdentification;
 			isDerived = false;
 			xmlTag = "ListId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.ListIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmListIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Unique and unambiguous identifier of a financial instrument, assigned
 	 * under a formal or proprietary identification scheme.
@@ -448,8 +456,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -470,26 +478,27 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#FinancialInstrumentIdentification
-	 * Order16.FinancialInstrumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmFinancialInstrumentIdentification
+	 * Order16.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Unique and unambiguous identifier of a financial instrument, assigned under a formal or proprietary identification scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.FinancialInstrumentIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected Side3Code side;
 	/**
 	 * Coded list to specify the side of the order.
 	 * <p>
@@ -502,8 +511,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -522,24 +531,25 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#Side Order16.Side}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmSide Order16.mmSide}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Side = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Coded list to specify the side of the order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.Side;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmSide;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Side3Code.mmObject();
 		}
 	};
+	protected DeliveryReceiptType2Code payment;
 	/**
 	 * Specifies how the transaction is to be settled, for example, against
 	 * payment.
@@ -554,8 +564,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementType
-	 * SecuritiesSettlement.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+	 * SecuritiesSettlement.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -576,25 +586,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#Payment
-	 * Order16.Payment}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmPayment
+	 * Order16.mmPayment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Payment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementType;
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.Payment;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmPayment;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected TradeType3Choice tradeTransactionType;
 	/**
 	 * Specifies the type of transaction of which the order is a component.
 	 * <p>
@@ -608,8 +619,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TransactionType
-	 * SecuritiesTrade.TransactionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTransactionType
+	 * SecuritiesTrade.mmTransactionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -629,25 +640,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#TradeTransactionType
-	 * Order16.TradeTransactionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmTradeTransactionType
+	 * Order16.mmTradeTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeTransactionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TransactionType;
 			isDerived = false;
 			xmlTag = "TradTxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeTransactionType";
 			definition = "Specifies the type of transaction of which the order is a component.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.TradeTransactionType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmTradeTransactionType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TradeType3Choice.mmObject();
 		}
 	};
+	protected List<TradeTransactionCondition4Choice> tradeTransactionCondition;
 	/**
 	 * Indicates the conditions under which the order/trade is to be/was
 	 * executed.
@@ -662,8 +674,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradeTransactionCondition
-	 * SecuritiesTrade.TradeTransactionCondition}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeTransactionCondition
+	 * SecuritiesTrade.mmTradeTransactionCondition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -684,24 +696,25 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#TradeTransactionCondition
-	 * Order16.TradeTransactionCondition}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmTradeTransactionCondition
+	 * Order16.mmTradeTransactionCondition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeTransactionCondition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeTransactionCondition = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradeTransactionCondition;
 			isDerived = false;
 			xmlTag = "TradTxCond";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeTransactionCondition";
 			definition = "Indicates the conditions under which the order/trade is to be/was executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.TradeTransactionCondition;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmTradeTransactionCondition;
 			minOccurs = 0;
 			complexType_lazy = () -> TradeTransactionCondition4Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator preAdvice;
 	/**
 	 * Transaction is a pre-advice, that is, for matching purposes only.
 	 * <p>
@@ -731,11 +744,11 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#PreAdvice
-	 * Order16.PreAdvice}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmPreAdvice
+	 * Order16.mmPreAdvice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreAdvice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreAdvice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Order18.mmObject();
 			isDerived = false;
@@ -743,12 +756,13 @@ public class Order18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAdvice";
 			definition = "Transaction is a pre-advice, that is, for matching purposes only.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.PreAdvice;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmPreAdvice;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected MarketIdentification79 placeOfTrade;
 	/**
 	 * Market in which a trade transaction is to be or has been executed.
 	 * <p>
@@ -762,8 +776,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#PlaceOfTrade
-	 * SecuritiesOrder.PlaceOfTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmPlaceOfTrade
+	 * SecuritiesOrder.mmPlaceOfTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -783,25 +797,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#PlaceOfTrade
-	 * Order16.PlaceOfTrade}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmPlaceOfTrade
+	 * Order16.mmPlaceOfTrade}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmPlaceOfTrade;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.PlaceOfTrade;
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which a trade transaction is to be or has been executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.PlaceOfTrade;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmPlaceOfTrade;
 			maxOccurs = 1;
-			complexType_lazy = () -> MarketIdentification79.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification79.mmObject();
 		}
 	};
+	protected ISODate orderBookingDate;
 	/**
 	 * Date and time when an entry is posted to an account on the account
 	 * servicer's books.
@@ -815,8 +830,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderDate
-	 * SecuritiesOrder.OrderDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderDate
+	 * SecuritiesOrder.mmOrderDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -837,25 +852,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#OrderBookingDate
-	 * Order16.OrderBookingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmOrderBookingDate
+	 * Order16.mmOrderBookingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderBookingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderBookingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderDate;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderDate;
 			isDerived = false;
 			xmlTag = "OrdrBookgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderBookingDate";
 			definition = "Date and time when an entry is posted to an account on the account servicer's books.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.OrderBookingDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmOrderBookingDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODateTime tradeOriginationDate;
 	/**
 	 * Indicates the date and time of the agreement in principal between
 	 * counter-parties prior to actual trade date. Used with fixed income for
@@ -870,8 +886,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradeOriginationDate
-	 * SecuritiesTrade.TradeOriginationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeOriginationDate
+	 * SecuritiesTrade.mmTradeOriginationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -892,25 +908,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#TradeOriginationDate
-	 * Order16.TradeOriginationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmTradeOriginationDate
+	 * Order16.mmTradeOriginationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeOriginationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeOriginationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeOriginationDate;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradeOriginationDate;
 			isDerived = false;
 			xmlTag = "TradOrgtnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeOriginationDate";
 			definition = "Indicates the date and time of the agreement in principal between counter-parties prior to actual trade date.\nUsed with fixed income for municipal new issue markets.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.TradeOriginationDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmTradeOriginationDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected TradeDate4Choice tradeDate;
 	/**
 	 * Specifies the date/time on which the trade was executed.
 	 * <p>
@@ -924,8 +941,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -944,25 +961,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#TradeDate
-	 * Order16.TradeDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmTradeDate
+	 * Order16.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.TradeDate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmTradeDate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
 		}
 	};
+	protected TradeDate4Choice processingDate;
 	/**
 	 * Processing date of the trading session.
 	 * <p>
@@ -976,8 +994,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#StartDate
-	 * Trade.StartDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmStartDate
+	 * Trade.mmStartDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -996,25 +1014,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#ProcessingDate
-	 * Order16.ProcessingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmProcessingDate
+	 * Order16.mmProcessingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmStartDate;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.StartDate;
 			isDerived = false;
 			xmlTag = "PrcgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingDate";
 			definition = "Processing date of the trading session.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.ProcessingDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmProcessingDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
 		}
 	};
+	protected SettlementDate8Choice settlementDate;
 	/**
 	 * Date and time at which the securities are to be delivered or received.
 	 * <p>
@@ -1028,8 +1047,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
-	 * Obligation.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+	 * Obligation.mmRequestedSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1049,25 +1068,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#SettlementDate
-	 * Order16.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmSettlementDate
+	 * Order16.mmSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementDate;
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.SettlementDate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmSettlementDate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SettlementDate8Choice.mmObject();
 		}
 	};
+	protected DateAndDateTime1Choice nAVDate;
 	/**
 	 * Valuation point, or valuation date of the portfolio (underlying assets).
 	 * This is also known as price date.
@@ -1082,8 +1102,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#ValuationDateTime
-	 * NetAssetValueCalculation.ValuationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmValuationDateTime
+	 * NetAssetValueCalculation.mmValuationDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1104,25 +1124,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#NAVDate
-	 * Order16.NAVDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmNAVDate
+	 * Order16.mmNAVDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NAVDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNAVDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.ValuationDateTime;
 			isDerived = false;
 			xmlTag = "NAVDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NAVDate";
 			definition = "Valuation point, or valuation date of the portfolio (underlying assets). This is also known as price date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.NAVDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmNAVDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartialFill2> partialFillDetails;
 	/**
 	 * Quantity of financial instrument bought or sold which is less than the
 	 * quantity of financial instrument ordered.
@@ -1157,25 +1178,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#PartialFillDetails
-	 * Order16.PartialFillDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmPartialFillDetails
+	 * Order16.mmPartialFillDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartialFillDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartialFillDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Order18.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
+			componentContext_lazy = () -> Order18.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlFillDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialFillDetails";
 			definition = "Quantity of financial instrument bought or sold which is less than the quantity of financial instrument ordered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.PartialFillDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmPartialFillDetails;
 			minOccurs = 0;
-			type_lazy = () -> PartialFill2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartialFill2.mmObject();
 		}
 	};
+	protected Quantity6Choice confirmationQuantity;
 	/**
 	 * Quantity of financial instrument that is being confirmed for the
 	 * account.The quantity of the security to be settled.
@@ -1190,8 +1212,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1212,25 +1234,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#ConfirmationQuantity
-	 * Order16.ConfirmationQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmConfirmationQuantity
+	 * Order16.mmConfirmationQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmationQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmationQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "ConfQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationQuantity";
 			definition = "Quantity of financial instrument that is being confirmed for the account.The quantity of the security to be settled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.ConfirmationQuantity;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmConfirmationQuantity;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Quantity6Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QuantityBreakdown11> quantityBreakdown;
 	/**
 	 * Breakdown of a quantity into lots such as tax lots, instrument series,
 	 * etc.
@@ -1245,8 +1268,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#LotBreakdown
-	 * SecuritiesQuantity.LotBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLotBreakdown
+	 * SecuritiesQuantity.mmLotBreakdown}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1267,24 +1290,25 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#QuantityBreakdown
-	 * Order16.QuantityBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmQuantityBreakdown
+	 * Order16.mmQuantityBreakdown}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuantityBreakdown = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantityBreakdown = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.LotBreakdown;
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series, etc.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.QuantityBreakdown;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmQuantityBreakdown;
 			minOccurs = 0;
-			complexType_lazy = () -> QuantityBreakdown11.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
 		}
 	};
+	protected AmountAndDirection29 grossTradeAmount;
 	/**
 	 * Principal amount of a trade (price multiplied by quantity).
 	 * <p>
@@ -1298,8 +1322,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedAmount
-	 * SecuritiesOrder.OrderedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedAmount
+	 * SecuritiesOrder.mmOrderedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1319,25 +1343,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#GrossTradeAmount
-	 * Order16.GrossTradeAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmGrossTradeAmount
+	 * Order16.mmGrossTradeAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GrossTradeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGrossTradeAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedAmount;
 			isDerived = false;
 			xmlTag = "GrssTradAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossTradeAmount";
 			definition = "Principal amount of a trade (price multiplied by quantity).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.GrossTradeAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmGrossTradeAmount;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection29.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
 		}
 	};
+	protected Price4 dealPrice;
 	/**
 	 * Amount of money for which goods or services are offered, sold, or bought.
 	 * <p>
@@ -1349,8 +1374,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1371,25 +1396,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#DealPrice
-	 * Order16.DealPrice}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmDealPrice
+	 * Order16.mmDealPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "DealPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.DealPrice;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmDealPrice;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price4.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	protected TypeOfPrice10Choice typeOfPrice;
 	/**
 	 * Specifies the type of transaction price.
 	 * <p>
@@ -1403,8 +1429,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceType
-	 * SecuritiesPricing.PriceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceType
+	 * SecuritiesPricing.mmPriceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1423,25 +1449,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#TypeOfPrice
-	 * Order16.TypeOfPrice}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmTypeOfPrice
+	 * Order16.mmTypeOfPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TypeOfPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTypeOfPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceType;
 			isDerived = false;
 			xmlTag = "TpOfPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfPrice";
 			definition = "Specifies the type of transaction price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.TypeOfPrice;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmTypeOfPrice;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TypeOfPrice10Choice.mmObject();
 		}
 	};
+	protected CashMarginOrder1Code cashMargin;
 	/**
 	 * Identifies whether an order is a margin order or a non-margin order. This
 	 * is primarily used when sending orders to Japanese exchanges to indicate
@@ -1460,8 +1487,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#CashMargin
-	 * SecuritiesOrder.CashMargin}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmCashMargin
+	 * SecuritiesOrder.mmCashMargin}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1482,25 +1509,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#CashMargin
-	 * Order16.CashMargin}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmCashMargin
+	 * Order16.mmCashMargin}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashMargin = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashMargin = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmCashMargin;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.CashMargin;
 			isDerived = false;
 			xmlTag = "CshMrgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMargin";
 			definition = "Identifies whether an order is a margin order or a non-margin order. This is primarily used when sending orders to Japanese exchanges to indicate sell margin or buy to cover. The same tag could be assigned also by buy-side to indicate the intent to sell or buy margin and the sell-side to accept or reject (base on some validation criteria) the margin request.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.CashMargin;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmCashMargin;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CashMarginOrder1Code.mmObject();
 		}
 	};
+	protected Commission16 commission;
 	/**
 	 * Amount of money due to a party as compensation for a service.
 	 * <p>
@@ -1512,8 +1540,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeCommission
-	 * Trade.TradeCommission}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeCommission
+	 * Trade.mmTradeCommission}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1533,26 +1561,27 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#Commission
-	 * Order16.Commission}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmCommission
+	 * Order16.mmCommission}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Commission = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommission = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeCommission;
 			isDerived = false;
 			xmlTag = "Comssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Amount of money due to a party as compensation for a service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.Commission;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmCommission;
 			maxOccurs = 1;
-			type_lazy = () -> Commission16.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Commission16.mmObject();
 		}
 	};
+	protected Max3Number numberOfDaysAccrued;
 	/**
 	 * Number of days on which the interest rate accrues (daily accrual note).
 	 * <p>
@@ -1565,8 +1594,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#NumberOfDays
-	 * DateTimePeriod.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmNumberOfDays
+	 * DateTimePeriod.mmNumberOfDays}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1587,25 +1616,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#NumberOfDaysAccrued
-	 * Order16.NumberOfDaysAccrued}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmNumberOfDaysAccrued
+	 * Order16.mmNumberOfDaysAccrued}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.NumberOfDays;
 			isDerived = false;
 			xmlTag = "NbOfDaysAcrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Number of days on which the interest rate accrues (daily accrual note).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.NumberOfDaysAccrued;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmNumberOfDaysAccrued;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3Number.mmObject();
 		}
 	};
+	protected Max3Number giveUpNumberOfDays;
 	/**
 	 * Specifies the number of days from trade date that the counterparty on the
 	 * other side of the trade should be "given up" or divulged.
@@ -1619,8 +1649,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#GiveUpNumberOfDays
-	 * SecuritiesOrder.GiveUpNumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmGiveUpNumberOfDays
+	 * SecuritiesOrder.mmGiveUpNumberOfDays}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1641,25 +1671,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#GiveUpNumberOfDays
-	 * Order16.GiveUpNumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmGiveUpNumberOfDays
+	 * Order16.mmGiveUpNumberOfDays}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GiveUpNumberOfDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGiveUpNumberOfDays = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmGiveUpNumberOfDays;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.GiveUpNumberOfDays;
 			isDerived = false;
 			xmlTag = "GvUpNbOfDays";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GiveUpNumberOfDays";
 			definition = "Specifies the number of days from trade date that the counterparty on the other side of the trade should be \"given up\" or divulged.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.GiveUpNumberOfDays;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmGiveUpNumberOfDays;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3Number.mmObject();
 		}
 	};
+	protected InterestType2Code interestType;
 	/**
 	 * Indicates whether the trade is cum interest or ex interest.
 	 * <p>
@@ -1673,8 +1704,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#TypeOfInterest
-	 * Interest.TypeOfInterest}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmTypeOfInterest
+	 * Interest.mmTypeOfInterest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1694,25 +1725,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#InterestType
-	 * Order16.InterestType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmInterestType
+	 * Order16.mmInterestType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmTypeOfInterest;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.TypeOfInterest;
 			isDerived = false;
 			xmlTag = "IntrstTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestType";
 			definition = "Indicates whether the trade is cum interest or ex interest.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.InterestType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmInterestType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> InterestType2Code.mmObject();
 		}
 	};
+	protected PercentageRate accruedInterestPercentage;
 	/**
 	 * Interest rate that has been accrued in between coupon payment periods.
 	 * <p>
@@ -1726,8 +1758,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1747,25 +1779,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#AccruedInterestPercentage
-	 * Order16.AccruedInterestPercentage}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmAccruedInterestPercentage
+	 * Order16.mmAccruedInterestPercentage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccruedInterestPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccruedInterestPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "AcrdIntrstPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestPercentage";
 			definition = "Interest rate that has been accrued in between coupon payment periods.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.AccruedInterestPercentage;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmAccruedInterestPercentage;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected TradeRegulatoryConditions1Code tradeRegulatoryConditionsType;
 	/**
 	 * Specifies the regulatory conditions type of the trade.
 	 * <p>
@@ -1779,8 +1812,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#TradeRegulatoryConditionsType
-	 * SecuritiesOrder.TradeRegulatoryConditionsType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmTradeRegulatoryConditionsType
+	 * SecuritiesOrder.mmTradeRegulatoryConditionsType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1799,25 +1832,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#TradeRegulatoryConditionsType
-	 * Order16.TradeRegulatoryConditionsType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmTradeRegulatoryConditionsType
+	 * Order16.mmTradeRegulatoryConditionsType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeRegulatoryConditionsType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeRegulatoryConditionsType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmTradeRegulatoryConditionsType;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.TradeRegulatoryConditionsType;
 			isDerived = false;
 			xmlTag = "TradRgltryCondsTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulatoryConditionsType";
 			definition = "Specifies the regulatory conditions type of the trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.TradeRegulatoryConditionsType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmTradeRegulatoryConditionsType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TradeRegulatoryConditions1Code.mmObject();
 		}
 	};
+	protected CurrencyToBuyOrSell1Choice currencyToBuyOrSell;
 	/**
 	 * Account servicer is instructed to buy the indicated currency after the
 	 * receipt of cash proceeds or to sell the indicated currency in order to
@@ -1833,8 +1867,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#SecuritiesSettlement
-	 * SecuritiesTradeExecution.SecuritiesSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesSettlement
+	 * SecuritiesTradeExecution.mmSecuritiesSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1855,25 +1889,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#CurrencyToBuyOrSell
-	 * Order16.CurrencyToBuyOrSell}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmCurrencyToBuyOrSell
+	 * Order16.mmCurrencyToBuyOrSell}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyToBuyOrSell = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyToBuyOrSell = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.SecuritiesSettlement;
 			isDerived = false;
 			xmlTag = "CcyToBuyOrSell";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToBuyOrSell";
 			definition = "Account servicer is instructed to buy the indicated currency after the receipt of cash proceeds or to sell the indicated currency in order to obtain the necessary currency to fund the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.CurrencyToBuyOrSell;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmCurrencyToBuyOrSell;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CurrencyToBuyOrSell1Choice.mmObject();
 		}
 	};
+	protected Eligibility1Code orderOriginatorEligibility;
 	/**
 	 * Counterparties eligibility as defined by article 24 of the EU MiFID
 	 * Directive applicable to transactions executed by investment firms for
@@ -1889,8 +1924,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderOriginatorEligibility
-	 * SecuritiesOrder.OrderOriginatorEligibility}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderOriginatorEligibility
+	 * SecuritiesOrder.mmOrderOriginatorEligibility}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1911,25 +1946,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#OrderOriginatorEligibility
-	 * Order16.OrderOriginatorEligibility}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmOrderOriginatorEligibility
+	 * Order16.mmOrderOriginatorEligibility}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderOriginatorEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderOriginatorEligibility = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderOriginatorEligibility;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderOriginatorEligibility;
 			isDerived = false;
 			xmlTag = "OrdrOrgtrElgblty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility";
 			definition = "Counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.OrderOriginatorEligibility;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmOrderOriginatorEligibility;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Eligibility1Code.mmObject();
 		}
 	};
+	protected PositionEffect2Code positionEffect;
 	/**
 	 * Indicates whether the resulting position after a trade should be an
 	 * opening position or closing position. Used for omnibus accounting - where
@@ -1945,8 +1981,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#PositionEffect
-	 * SecuritiesOrder.PositionEffect}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmPositionEffect
+	 * SecuritiesOrder.mmPositionEffect}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -1967,25 +2003,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#PositionEffect
-	 * Order16.PositionEffect}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmPositionEffect
+	 * Order16.mmPositionEffect}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PositionEffect = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPositionEffect = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmPositionEffect;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.PositionEffect;
 			isDerived = false;
 			xmlTag = "PosFct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionEffect";
 			definition = "Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.PositionEffect;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmPositionEffect;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PositionEffect2Code.mmObject();
 		}
 	};
+	protected YesNoIndicator derivativeCovered;
 	/**
 	 * Indicates whether the derivative product is covered or not by an
 	 * underlying financial instrument position.
@@ -2000,8 +2037,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#DerivativeCovered
-	 * Derivative.DerivativeCovered}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmDerivativeCovered
+	 * Derivative.mmDerivativeCovered}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -2022,25 +2059,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#DerivativeCovered
-	 * Order16.DerivativeCovered}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmDerivativeCovered
+	 * Order16.mmDerivativeCovered}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DerivativeCovered = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDerivativeCovered = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmDerivativeCovered;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.DerivativeCovered;
 			isDerived = false;
 			xmlTag = "DerivCvrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeCovered";
 			definition = "Indicates whether the derivative product is covered or not by an underlying financial instrument position.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.DerivativeCovered;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmDerivativeCovered;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ChargeTaxBasisType1Choice chargeTaxBasisType;
 	/**
 	 * Type of charge/tax basis.
 	 * <p>
@@ -2053,7 +2091,7 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Basis Tax.Basis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -2072,26 +2110,27 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#ChargeTaxBasisType
-	 * Order16.ChargeTaxBasisType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmChargeTaxBasisType
+	 * Order16.mmChargeTaxBasisType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargeTaxBasisType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargeTaxBasisType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Basis;
 			isDerived = false;
 			xmlTag = "ChrgTaxBsisTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeTaxBasisType";
 			definition = "Type of charge/tax basis.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.ChargeTaxBasisType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmChargeTaxBasisType;
 			maxOccurs = 1;
-			type_lazy = () -> ChargeTaxBasisType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ChargeTaxBasisType1Choice.mmObject();
 		}
 	};
+	protected EUCapitalGainType2Choice capitalGainType;
 	/**
 	 * Specifies the type of capital gain.
 	 * <p>
@@ -2105,8 +2144,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUCapitalGain
-	 * SecuritiesTax.EUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
+	 * SecuritiesTax.mmEUCapitalGain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -2125,25 +2164,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#CapitalGainType
-	 * Order16.CapitalGainType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmCapitalGainType
+	 * Order16.mmCapitalGainType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CapitalGainType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCapitalGainType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUCapitalGain;
 			isDerived = false;
 			xmlTag = "CptlGnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainType";
 			definition = "Specifies the type of capital gain.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.CapitalGainType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmCapitalGainType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> EUCapitalGainType2Choice.mmObject();
 		}
 	};
+	protected MatchingStatus8Choice matchStatus;
 	/**
 	 * Provides the matching status of the trade confirmation.
 	 * <p>
@@ -2157,8 +2197,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
-	 * SecuritiesTradeStatus.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+	 * SecuritiesTradeStatus.mmMatchingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -2177,25 +2217,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#MatchStatus
-	 * Order16.MatchStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmMatchStatus
+	 * Order16.mmMatchStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus;
 			isDerived = false;
 			xmlTag = "MtchSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchStatus";
 			definition = "Provides the matching status of the trade confirmation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.MatchStatus;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmMatchStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus8Choice.mmObject();
 		}
 	};
+	protected CallIn1Code callInType;
 	/**
 	 * Specifies the type of pay-in call report.
 	 * <p>
@@ -2208,8 +2249,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashManagementService#CallInType
-	 * CashManagementService.CallInType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashManagementService#mmCallInType
+	 * CashManagementService.mmCallInType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -2228,25 +2269,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#CallInType
-	 * Order16.CallInType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmCallInType
+	 * Order16.mmCallInType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CallInType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCallInType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmCallInType;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashManagementService.CallInType;
 			isDerived = false;
 			xmlTag = "CallInTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallInType";
 			definition = "Specifies the type of pay-in call report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.CallInType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmCallInType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CallIn1Code.mmObject();
 		}
 	};
+	protected YieldCalculation2 yieldType;
 	/**
 	 * Type of yield at which the transaction was effected.
 	 * <p>
@@ -2260,8 +2302,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#CalculationType
-	 * YieldCalculation.CalculationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmCalculationType
+	 * YieldCalculation.mmCalculationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -2280,25 +2322,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#YieldType
-	 * Order16.YieldType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmYieldType
+	 * Order16.mmYieldType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute YieldType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmYieldType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmCalculationType;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.CalculationType;
 			isDerived = false;
 			xmlTag = "YldTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldType";
 			definition = "Type of yield at which the transaction was effected.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.YieldType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmYieldType;
 			maxOccurs = 1;
-			complexType_lazy = () -> YieldCalculation2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.YieldCalculation2.mmObject();
 		}
 	};
+	protected List<Reporting5Choice> reporting;
 	/**
 	 * Specifies that a trade is to be reported to a third party.
 	 * <p>
@@ -2312,8 +2355,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#ReportingType
-	 * SecuritiesTradeExecution.ReportingType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmReportingType
+	 * SecuritiesTradeExecution.mmReportingType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -2333,24 +2376,25 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#Reporting
-	 * Order16.Reporting}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmReporting
+	 * Order16.mmReporting}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reporting = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReporting = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmReportingType;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.ReportingType;
 			isDerived = false;
 			xmlTag = "Rptg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reporting";
 			definition = "Specifies that a trade is to be reported to a third party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.Reporting;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmReporting;
 			minOccurs = 0;
 			complexType_lazy = () -> Reporting5Choice.mmObject();
 		}
 	};
+	protected RegistrationParameters3 additionalPhysicalOrRegistrationDetails;
 	/**
 	 * Provides information required for the registration or physical
 	 * settlement.
@@ -2365,8 +2409,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Registration
-	 * Security.Registration}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRegistration
+	 * Security.mmRegistration}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -2387,25 +2431,26 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#AdditionalPhysicalOrRegistrationDetails
-	 * Order16.AdditionalPhysicalOrRegistrationDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmAdditionalPhysicalOrRegistrationDetails
+	 * Order16.mmAdditionalPhysicalOrRegistrationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalPhysicalOrRegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalPhysicalOrRegistrationDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistration;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Registration;
 			isDerived = false;
 			xmlTag = "AddtlPhysOrRegnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalPhysicalOrRegistrationDetails";
 			definition = "Provides information required for the registration or physical settlement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.AdditionalPhysicalOrRegistrationDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmAdditionalPhysicalOrRegistrationDetails;
 			maxOccurs = 1;
-			complexType_lazy = () -> RegistrationParameters3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.RegistrationParameters3.mmObject();
 		}
 	};
+	protected Max350Text additionalTradeInstructionProcessingInformation;
 	/**
 	 * Provides additional details of the trade process not included within
 	 * structured fields of this message.
@@ -2436,11 +2481,11 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#AdditionalTradeInstructionProcessingInformation
-	 * Order16.AdditionalTradeInstructionProcessingInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmAdditionalTradeInstructionProcessingInformation
+	 * Order16.mmAdditionalTradeInstructionProcessingInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalTradeInstructionProcessingInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalTradeInstructionProcessingInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Order18.mmObject();
 			isDerived = false;
@@ -2448,12 +2493,13 @@ public class Order18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTradeInstructionProcessingInformation";
 			definition = "Provides additional details of the trade process not included within structured fields of this message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.AdditionalTradeInstructionProcessingInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmAdditionalTradeInstructionProcessingInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected AmountAndDirection29 accruedInterestAmount;
 	/**
 	 * Interest amount that has accrued in between two periods, for example, in
 	 * between interest payment periods.
@@ -2468,8 +2514,8 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#AccruedInterestAmount
-	 * Interest.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+	 * Interest.mmAccruedInterestAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order18
@@ -2490,48 +2536,48 @@ public class Order18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Order16#AccruedInterestAmount
-	 * Order16.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.Order16#mmAccruedInterestAmount
+	 * Order16.mmAccruedInterestAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> Order18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.AccruedInterestAmount;
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between two periods, for example, in between interest payment periods.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.AccruedInterestAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Order16.mmAccruedInterestAmount;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection29.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order18.BusinessProcessType, com.tools20022.repository.msg.Order18.OrderIdentification,
-						com.tools20022.repository.msg.Order18.ClientOrderIdentification, com.tools20022.repository.msg.Order18.SecondaryClientOrderIdentification, com.tools20022.repository.msg.Order18.ListIdentification,
-						com.tools20022.repository.msg.Order18.FinancialInstrumentIdentification, com.tools20022.repository.msg.Order18.Side, com.tools20022.repository.msg.Order18.Payment,
-						com.tools20022.repository.msg.Order18.TradeTransactionType, com.tools20022.repository.msg.Order18.TradeTransactionCondition, com.tools20022.repository.msg.Order18.PreAdvice,
-						com.tools20022.repository.msg.Order18.PlaceOfTrade, com.tools20022.repository.msg.Order18.OrderBookingDate, com.tools20022.repository.msg.Order18.TradeOriginationDate,
-						com.tools20022.repository.msg.Order18.TradeDate, com.tools20022.repository.msg.Order18.ProcessingDate, com.tools20022.repository.msg.Order18.SettlementDate, com.tools20022.repository.msg.Order18.NAVDate,
-						com.tools20022.repository.msg.Order18.PartialFillDetails, com.tools20022.repository.msg.Order18.ConfirmationQuantity, com.tools20022.repository.msg.Order18.QuantityBreakdown,
-						com.tools20022.repository.msg.Order18.GrossTradeAmount, com.tools20022.repository.msg.Order18.DealPrice, com.tools20022.repository.msg.Order18.TypeOfPrice, com.tools20022.repository.msg.Order18.CashMargin,
-						com.tools20022.repository.msg.Order18.Commission, com.tools20022.repository.msg.Order18.NumberOfDaysAccrued, com.tools20022.repository.msg.Order18.GiveUpNumberOfDays,
-						com.tools20022.repository.msg.Order18.InterestType, com.tools20022.repository.msg.Order18.AccruedInterestPercentage, com.tools20022.repository.msg.Order18.TradeRegulatoryConditionsType,
-						com.tools20022.repository.msg.Order18.CurrencyToBuyOrSell, com.tools20022.repository.msg.Order18.OrderOriginatorEligibility, com.tools20022.repository.msg.Order18.PositionEffect,
-						com.tools20022.repository.msg.Order18.DerivativeCovered, com.tools20022.repository.msg.Order18.ChargeTaxBasisType, com.tools20022.repository.msg.Order18.CapitalGainType,
-						com.tools20022.repository.msg.Order18.MatchStatus, com.tools20022.repository.msg.Order18.CallInType, com.tools20022.repository.msg.Order18.YieldType, com.tools20022.repository.msg.Order18.Reporting,
-						com.tools20022.repository.msg.Order18.AdditionalPhysicalOrRegistrationDetails, com.tools20022.repository.msg.Order18.AdditionalTradeInstructionProcessingInformation,
-						com.tools20022.repository.msg.Order18.AccruedInterestAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order18.mmBusinessProcessType, com.tools20022.repository.msg.Order18.mmOrderIdentification,
+						com.tools20022.repository.msg.Order18.mmClientOrderIdentification, com.tools20022.repository.msg.Order18.mmSecondaryClientOrderIdentification, com.tools20022.repository.msg.Order18.mmListIdentification,
+						com.tools20022.repository.msg.Order18.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.Order18.mmSide, com.tools20022.repository.msg.Order18.mmPayment,
+						com.tools20022.repository.msg.Order18.mmTradeTransactionType, com.tools20022.repository.msg.Order18.mmTradeTransactionCondition, com.tools20022.repository.msg.Order18.mmPreAdvice,
+						com.tools20022.repository.msg.Order18.mmPlaceOfTrade, com.tools20022.repository.msg.Order18.mmOrderBookingDate, com.tools20022.repository.msg.Order18.mmTradeOriginationDate,
+						com.tools20022.repository.msg.Order18.mmTradeDate, com.tools20022.repository.msg.Order18.mmProcessingDate, com.tools20022.repository.msg.Order18.mmSettlementDate, com.tools20022.repository.msg.Order18.mmNAVDate,
+						com.tools20022.repository.msg.Order18.mmPartialFillDetails, com.tools20022.repository.msg.Order18.mmConfirmationQuantity, com.tools20022.repository.msg.Order18.mmQuantityBreakdown,
+						com.tools20022.repository.msg.Order18.mmGrossTradeAmount, com.tools20022.repository.msg.Order18.mmDealPrice, com.tools20022.repository.msg.Order18.mmTypeOfPrice, com.tools20022.repository.msg.Order18.mmCashMargin,
+						com.tools20022.repository.msg.Order18.mmCommission, com.tools20022.repository.msg.Order18.mmNumberOfDaysAccrued, com.tools20022.repository.msg.Order18.mmGiveUpNumberOfDays,
+						com.tools20022.repository.msg.Order18.mmInterestType, com.tools20022.repository.msg.Order18.mmAccruedInterestPercentage, com.tools20022.repository.msg.Order18.mmTradeRegulatoryConditionsType,
+						com.tools20022.repository.msg.Order18.mmCurrencyToBuyOrSell, com.tools20022.repository.msg.Order18.mmOrderOriginatorEligibility, com.tools20022.repository.msg.Order18.mmPositionEffect,
+						com.tools20022.repository.msg.Order18.mmDerivativeCovered, com.tools20022.repository.msg.Order18.mmChargeTaxBasisType, com.tools20022.repository.msg.Order18.mmCapitalGainType,
+						com.tools20022.repository.msg.Order18.mmMatchStatus, com.tools20022.repository.msg.Order18.mmCallInType, com.tools20022.repository.msg.Order18.mmYieldType, com.tools20022.repository.msg.Order18.mmReporting,
+						com.tools20022.repository.msg.Order18.mmAdditionalPhysicalOrRegistrationDetails, com.tools20022.repository.msg.Order18.mmAdditionalTradeInstructionProcessingInformation,
+						com.tools20022.repository.msg.Order18.mmAccruedInterestAmount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmPartyTradingDetails,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmCounterpartyTradingDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.PartyTradingDetails,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.CounterpartyTradingDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Order18";
 				definition = "Intention to transfer an ownership of a financial instrument.";
@@ -2539,5 +2585,357 @@ public class Order18 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BusinessProcessType1Choice getBusinessProcessType() {
+		return businessProcessType;
+	}
+
+	public void setBusinessProcessType(BusinessProcessType1Choice businessProcessType) {
+		this.businessProcessType = businessProcessType;
+	}
+
+	public List<Max35Text> getOrderIdentification() {
+		return orderIdentification;
+	}
+
+	public void setOrderIdentification(List<Max35Text> orderIdentification) {
+		this.orderIdentification = orderIdentification;
+	}
+
+	public List<Max35Text> getClientOrderIdentification() {
+		return clientOrderIdentification;
+	}
+
+	public void setClientOrderIdentification(List<Max35Text> clientOrderIdentification) {
+		this.clientOrderIdentification = clientOrderIdentification;
+	}
+
+	public List<Max35Text> getSecondaryClientOrderIdentification() {
+		return secondaryClientOrderIdentification;
+	}
+
+	public void setSecondaryClientOrderIdentification(List<Max35Text> secondaryClientOrderIdentification) {
+		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
+	}
+
+	public List<Max35Text> getListIdentification() {
+		return listIdentification;
+	}
+
+	public void setListIdentification(List<Max35Text> listIdentification) {
+		this.listIdentification = listIdentification;
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public Side3Code getSide() {
+		return side;
+	}
+
+	public void setSide(Side3Code side) {
+		this.side = side;
+	}
+
+	public DeliveryReceiptType2Code getPayment() {
+		return payment;
+	}
+
+	public void setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = payment;
+	}
+
+	public TradeType3Choice getTradeTransactionType() {
+		return tradeTransactionType;
+	}
+
+	public void setTradeTransactionType(TradeType3Choice tradeTransactionType) {
+		this.tradeTransactionType = tradeTransactionType;
+	}
+
+	public List<TradeTransactionCondition4Choice> getTradeTransactionCondition() {
+		return tradeTransactionCondition;
+	}
+
+	public void setTradeTransactionCondition(List<TradeTransactionCondition4Choice> tradeTransactionCondition) {
+		this.tradeTransactionCondition = tradeTransactionCondition;
+	}
+
+	public YesNoIndicator getPreAdvice() {
+		return preAdvice;
+	}
+
+	public void setPreAdvice(YesNoIndicator preAdvice) {
+		this.preAdvice = preAdvice;
+	}
+
+	public MarketIdentification79 getPlaceOfTrade() {
+		return placeOfTrade;
+	}
+
+	public void setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification79 placeOfTrade) {
+		this.placeOfTrade = placeOfTrade;
+	}
+
+	public ISODate getOrderBookingDate() {
+		return orderBookingDate;
+	}
+
+	public void setOrderBookingDate(ISODate orderBookingDate) {
+		this.orderBookingDate = orderBookingDate;
+	}
+
+	public ISODateTime getTradeOriginationDate() {
+		return tradeOriginationDate;
+	}
+
+	public void setTradeOriginationDate(ISODateTime tradeOriginationDate) {
+		this.tradeOriginationDate = tradeOriginationDate;
+	}
+
+	public TradeDate4Choice getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(TradeDate4Choice tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public TradeDate4Choice getProcessingDate() {
+		return processingDate;
+	}
+
+	public void setProcessingDate(TradeDate4Choice processingDate) {
+		this.processingDate = processingDate;
+	}
+
+	public SettlementDate8Choice getSettlementDate() {
+		return settlementDate;
+	}
+
+	public void setSettlementDate(SettlementDate8Choice settlementDate) {
+		this.settlementDate = settlementDate;
+	}
+
+	public DateAndDateTime1Choice getNAVDate() {
+		return nAVDate;
+	}
+
+	public void setNAVDate(DateAndDateTime1Choice nAVDate) {
+		this.nAVDate = nAVDate;
+	}
+
+	public List<PartialFill2> getPartialFillDetails() {
+		return partialFillDetails;
+	}
+
+	public void setPartialFillDetails(List<com.tools20022.repository.msg.PartialFill2> partialFillDetails) {
+		this.partialFillDetails = partialFillDetails;
+	}
+
+	public Quantity6Choice getConfirmationQuantity() {
+		return confirmationQuantity;
+	}
+
+	public void setConfirmationQuantity(Quantity6Choice confirmationQuantity) {
+		this.confirmationQuantity = confirmationQuantity;
+	}
+
+	public List<QuantityBreakdown11> getQuantityBreakdown() {
+		return quantityBreakdown;
+	}
+
+	public void setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown11> quantityBreakdown) {
+		this.quantityBreakdown = quantityBreakdown;
+	}
+
+	public AmountAndDirection29 getGrossTradeAmount() {
+		return grossTradeAmount;
+	}
+
+	public void setGrossTradeAmount(com.tools20022.repository.msg.AmountAndDirection29 grossTradeAmount) {
+		this.grossTradeAmount = grossTradeAmount;
+	}
+
+	public Price4 getDealPrice() {
+		return dealPrice;
+	}
+
+	public void setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
+		this.dealPrice = dealPrice;
+	}
+
+	public TypeOfPrice10Choice getTypeOfPrice() {
+		return typeOfPrice;
+	}
+
+	public void setTypeOfPrice(TypeOfPrice10Choice typeOfPrice) {
+		this.typeOfPrice = typeOfPrice;
+	}
+
+	public CashMarginOrder1Code getCashMargin() {
+		return cashMargin;
+	}
+
+	public void setCashMargin(CashMarginOrder1Code cashMargin) {
+		this.cashMargin = cashMargin;
+	}
+
+	public Commission16 getCommission() {
+		return commission;
+	}
+
+	public void setCommission(com.tools20022.repository.msg.Commission16 commission) {
+		this.commission = commission;
+	}
+
+	public Max3Number getNumberOfDaysAccrued() {
+		return numberOfDaysAccrued;
+	}
+
+	public void setNumberOfDaysAccrued(Max3Number numberOfDaysAccrued) {
+		this.numberOfDaysAccrued = numberOfDaysAccrued;
+	}
+
+	public Max3Number getGiveUpNumberOfDays() {
+		return giveUpNumberOfDays;
+	}
+
+	public void setGiveUpNumberOfDays(Max3Number giveUpNumberOfDays) {
+		this.giveUpNumberOfDays = giveUpNumberOfDays;
+	}
+
+	public InterestType2Code getInterestType() {
+		return interestType;
+	}
+
+	public void setInterestType(InterestType2Code interestType) {
+		this.interestType = interestType;
+	}
+
+	public PercentageRate getAccruedInterestPercentage() {
+		return accruedInterestPercentage;
+	}
+
+	public void setAccruedInterestPercentage(PercentageRate accruedInterestPercentage) {
+		this.accruedInterestPercentage = accruedInterestPercentage;
+	}
+
+	public TradeRegulatoryConditions1Code getTradeRegulatoryConditionsType() {
+		return tradeRegulatoryConditionsType;
+	}
+
+	public void setTradeRegulatoryConditionsType(TradeRegulatoryConditions1Code tradeRegulatoryConditionsType) {
+		this.tradeRegulatoryConditionsType = tradeRegulatoryConditionsType;
+	}
+
+	public CurrencyToBuyOrSell1Choice getCurrencyToBuyOrSell() {
+		return currencyToBuyOrSell;
+	}
+
+	public void setCurrencyToBuyOrSell(CurrencyToBuyOrSell1Choice currencyToBuyOrSell) {
+		this.currencyToBuyOrSell = currencyToBuyOrSell;
+	}
+
+	public Eligibility1Code getOrderOriginatorEligibility() {
+		return orderOriginatorEligibility;
+	}
+
+	public void setOrderOriginatorEligibility(Eligibility1Code orderOriginatorEligibility) {
+		this.orderOriginatorEligibility = orderOriginatorEligibility;
+	}
+
+	public PositionEffect2Code getPositionEffect() {
+		return positionEffect;
+	}
+
+	public void setPositionEffect(PositionEffect2Code positionEffect) {
+		this.positionEffect = positionEffect;
+	}
+
+	public YesNoIndicator getDerivativeCovered() {
+		return derivativeCovered;
+	}
+
+	public void setDerivativeCovered(YesNoIndicator derivativeCovered) {
+		this.derivativeCovered = derivativeCovered;
+	}
+
+	public ChargeTaxBasisType1Choice getChargeTaxBasisType() {
+		return chargeTaxBasisType;
+	}
+
+	public void setChargeTaxBasisType(ChargeTaxBasisType1Choice chargeTaxBasisType) {
+		this.chargeTaxBasisType = chargeTaxBasisType;
+	}
+
+	public EUCapitalGainType2Choice getCapitalGainType() {
+		return capitalGainType;
+	}
+
+	public void setCapitalGainType(EUCapitalGainType2Choice capitalGainType) {
+		this.capitalGainType = capitalGainType;
+	}
+
+	public MatchingStatus8Choice getMatchStatus() {
+		return matchStatus;
+	}
+
+	public void setMatchStatus(MatchingStatus8Choice matchStatus) {
+		this.matchStatus = matchStatus;
+	}
+
+	public CallIn1Code getCallInType() {
+		return callInType;
+	}
+
+	public void setCallInType(CallIn1Code callInType) {
+		this.callInType = callInType;
+	}
+
+	public YieldCalculation2 getYieldType() {
+		return yieldType;
+	}
+
+	public void setYieldType(com.tools20022.repository.msg.YieldCalculation2 yieldType) {
+		this.yieldType = yieldType;
+	}
+
+	public List<Reporting5Choice> getReporting() {
+		return reporting;
+	}
+
+	public void setReporting(List<Reporting5Choice> reporting) {
+		this.reporting = reporting;
+	}
+
+	public RegistrationParameters3 getAdditionalPhysicalOrRegistrationDetails() {
+		return additionalPhysicalOrRegistrationDetails;
+	}
+
+	public void setAdditionalPhysicalOrRegistrationDetails(com.tools20022.repository.msg.RegistrationParameters3 additionalPhysicalOrRegistrationDetails) {
+		this.additionalPhysicalOrRegistrationDetails = additionalPhysicalOrRegistrationDetails;
+	}
+
+	public Max350Text getAdditionalTradeInstructionProcessingInformation() {
+		return additionalTradeInstructionProcessingInformation;
+	}
+
+	public void setAdditionalTradeInstructionProcessingInformation(Max350Text additionalTradeInstructionProcessingInformation) {
+		this.additionalTradeInstructionProcessingInformation = additionalTradeInstructionProcessingInformation;
+	}
+
+	public AmountAndDirection29 getAccruedInterestAmount() {
+		return accruedInterestAmount;
+	}
+
+	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection29 accruedInterestAmount) {
+		this.accruedInterestAmount = accruedInterestAmount;
 	}
 }

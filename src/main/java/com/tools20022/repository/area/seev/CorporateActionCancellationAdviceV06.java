@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CorporateActionsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -70,54 +71,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#CancellationAdviceGeneralInformation
- * CorporateActionCancellationAdviceV06.CancellationAdviceGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmCancellationAdviceGeneralInformation
+ * CorporateActionCancellationAdviceV06.mmCancellationAdviceGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#CorporateActionGeneralInformation
- * CorporateActionCancellationAdviceV06.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmCorporateActionGeneralInformation
+ * CorporateActionCancellationAdviceV06.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#AccountsDetails
- * CorporateActionCancellationAdviceV06.AccountsDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmAccountsDetails
+ * CorporateActionCancellationAdviceV06.mmAccountsDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#CorporateActionDetails
- * CorporateActionCancellationAdviceV06.CorporateActionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmCorporateActionDetails
+ * CorporateActionCancellationAdviceV06.mmCorporateActionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#IssuerAgent
- * CorporateActionCancellationAdviceV06.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmIssuerAgent
+ * CorporateActionCancellationAdviceV06.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#PayingAgent
- * CorporateActionCancellationAdviceV06.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmPayingAgent
+ * CorporateActionCancellationAdviceV06.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#SubPayingAgent
- * CorporateActionCancellationAdviceV06.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmSubPayingAgent
+ * CorporateActionCancellationAdviceV06.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#Registrar
- * CorporateActionCancellationAdviceV06.Registrar}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmRegistrar
+ * CorporateActionCancellationAdviceV06.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#ResellingAgent
- * CorporateActionCancellationAdviceV06.ResellingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmResellingAgent
+ * CorporateActionCancellationAdviceV06.mmResellingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#PhysicalSecuritiesAgent
- * CorporateActionCancellationAdviceV06.PhysicalSecuritiesAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmPhysicalSecuritiesAgent
+ * CorporateActionCancellationAdviceV06.mmPhysicalSecuritiesAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#DropAgent
- * CorporateActionCancellationAdviceV06.DropAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmDropAgent
+ * CorporateActionCancellationAdviceV06.mmDropAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#SolicitationAgent
- * CorporateActionCancellationAdviceV06.SolicitationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmSolicitationAgent
+ * CorporateActionCancellationAdviceV06.mmSolicitationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#InformationAgent
- * CorporateActionCancellationAdviceV06.InformationAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmInformationAgent
+ * CorporateActionCancellationAdviceV06.mmInformationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#SupplementaryData
- * CorporateActionCancellationAdviceV06.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#mmSupplementaryData
+ * CorporateActionCancellationAdviceV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06#identifier
- * CorporateActionCancellationAdviceV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.039.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -145,6 +144,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionCancellationAdviceV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionCancellation3 cancellationAdviceGeneralInformation;
 	/**
 	 * General information about the event cancellation status and cancellation
 	 * reason.
@@ -173,32 +173,33 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#CancellationAdviceGeneralInformation
-	 * CorporateActionCancellationAdviceV07.CancellationAdviceGeneralInformation
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmCancellationAdviceGeneralInformation
+	 * CorporateActionCancellationAdviceV07.
+	 * mmCancellationAdviceGeneralInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#CancellationAdviceGeneralInformation
-	 * CorporateActionCancellationAdviceV05.CancellationAdviceGeneralInformation
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmCancellationAdviceGeneralInformation
+	 * CorporateActionCancellationAdviceV05.
+	 * mmCancellationAdviceGeneralInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationAdviceGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationAdviceGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlAdvcGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAdviceGeneralInformation";
 			definition = "General information about the event cancellation status and cancellation reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.CancellationAdviceGeneralInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.CancellationAdviceGeneralInformation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmCancellationAdviceGeneralInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmCancellationAdviceGeneralInformation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionCancellation3.mmObject();
 		}
 	};
+	protected CorporateActionGeneralInformation86 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -224,30 +225,33 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#CorporateActionGeneralInformation
-	 * CorporateActionCancellationAdviceV07.CorporateActionGeneralInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmCorporateActionGeneralInformation
+	 * CorporateActionCancellationAdviceV07.mmCorporateActionGeneralInformation}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#CorporateActionGeneralInformation
-	 * CorporateActionCancellationAdviceV05.CorporateActionGeneralInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmCorporateActionGeneralInformation
+	 * CorporateActionCancellationAdviceV05.mmCorporateActionGeneralInformation}
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.CorporateActionGeneralInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.CorporateActionGeneralInformation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmCorporateActionGeneralInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmCorporateActionGeneralInformation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation86.mmObject();
 		}
 	};
+	protected AccountIdentification29Choice accountsDetails;
 	/**
 	 * General information about the safekeeping account and the account owner.
 	 * <p>
@@ -275,30 +279,31 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#AccountsDetails
-	 * CorporateActionCancellationAdviceV07.AccountsDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmAccountsDetails
+	 * CorporateActionCancellationAdviceV07.mmAccountsDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#AccountsDetails
-	 * CorporateActionCancellationAdviceV05.AccountsDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmAccountsDetails
+	 * CorporateActionCancellationAdviceV05.mmAccountsDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountsDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountsDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctsDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountsDetails";
 			definition = "General information about the safekeeping account and the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.AccountsDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.AccountsDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmAccountsDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmAccountsDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification29Choice.mmObject();
 		}
 	};
+	protected CorporateAction34 corporateActionDetails;
 	/**
 	 * Information about the corporate action event.
 	 * <p>
@@ -324,30 +329,31 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#CorporateActionDetails
-	 * CorporateActionCancellationAdviceV07.CorporateActionDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmCorporateActionDetails
+	 * CorporateActionCancellationAdviceV07.mmCorporateActionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#CorporateActionDetails
-	 * CorporateActionCancellationAdviceV05.CorporateActionDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmCorporateActionDetails
+	 * CorporateActionCancellationAdviceV05.mmCorporateActionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionDetails";
 			definition = "Information about the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.CorporateActionDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.CorporateActionDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmCorporateActionDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmCorporateActionDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateAction34.mmObject();
 		}
 	};
+	protected List<PartyIdentification71Choice> issuerAgent;
 	/**
 	 * Party appointed to administer the event on behalf of the issuer
 	 * company/offeror. The party may be contacted for more information about
@@ -377,29 +383,30 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#IssuerAgent
-	 * CorporateActionCancellationAdviceV07.IssuerAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmIssuerAgent
+	 * CorporateActionCancellationAdviceV07.mmIssuerAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#IssuerAgent
-	 * CorporateActionCancellationAdviceV05.IssuerAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmIssuerAgent
+	 * CorporateActionCancellationAdviceV05.mmIssuerAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IssuerAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIssuerAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IssrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAgent";
 			definition = "Party appointed to administer the event on behalf of the issuer company/offeror. The party may be contacted for more information about the event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.IssuerAgent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.IssuerAgent);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmIssuerAgent);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmIssuerAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected List<PartyIdentification71Choice> payingAgent;
 	/**
 	 * Agent (principal or fiscal paying agent) appointed to execute the payment
 	 * for the corporate action event on behalf of the issuer company/offeror.
@@ -428,29 +435,30 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#PayingAgent
-	 * CorporateActionCancellationAdviceV07.PayingAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmPayingAgent
+	 * CorporateActionCancellationAdviceV07.mmPayingAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#PayingAgent
-	 * CorporateActionCancellationAdviceV05.PayingAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmPayingAgent
+	 * CorporateActionCancellationAdviceV05.mmPayingAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PayingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPayingAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PngAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
 			definition = "Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.PayingAgent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.PayingAgent);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmPayingAgent);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmPayingAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected List<PartyIdentification71Choice> subPayingAgent;
 	/**
 	 * Sub-agent appointed to execute the payment for the corporate action event
 	 * on behalf of the issuer company/offeror.
@@ -479,29 +487,30 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#SubPayingAgent
-	 * CorporateActionCancellationAdviceV07.SubPayingAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmSubPayingAgent
+	 * CorporateActionCancellationAdviceV07.mmSubPayingAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#SubPayingAgent
-	 * CorporateActionCancellationAdviceV05.SubPayingAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmSubPayingAgent
+	 * CorporateActionCancellationAdviceV05.mmSubPayingAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubPayingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubPayingAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubPngAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubPayingAgent";
 			definition = "Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.SubPayingAgent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.SubPayingAgent);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmSubPayingAgent);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmSubPayingAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice registrar;
 	/**
 	 * Party/agent responsible for maintaining the register of a security.
 	 * <p>
@@ -528,30 +537,31 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#Registrar
-	 * CorporateActionCancellationAdviceV07.Registrar}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmRegistrar
+	 * CorporateActionCancellationAdviceV07.mmRegistrar}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#Registrar
-	 * CorporateActionCancellationAdviceV05.Registrar}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmRegistrar
+	 * CorporateActionCancellationAdviceV05.mmRegistrar}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Registrar = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRegistrar = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Regar";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registrar";
 			definition = "Party/agent responsible for maintaining the register of a security.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.Registrar;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.Registrar);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmRegistrar);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmRegistrar;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected List<PartyIdentification71Choice> resellingAgent;
 	/**
 	 * A broker-dealer responsible for reselling to new investors securities
 	 * (usually bonds) that have been tendered for purchase by their owner.
@@ -580,29 +590,30 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#ResellingAgent
-	 * CorporateActionCancellationAdviceV07.ResellingAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmResellingAgent
+	 * CorporateActionCancellationAdviceV07.mmResellingAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#ResellingAgent
-	 * CorporateActionCancellationAdviceV05.ResellingAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmResellingAgent
+	 * CorporateActionCancellationAdviceV05.mmResellingAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ResellingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmResellingAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RsellngAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResellingAgent";
 			definition = "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.ResellingAgent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.ResellingAgent);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmResellingAgent);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmResellingAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice physicalSecuritiesAgent;
 	/**
 	 * A trust company, bank or similar financial institution assigned by an
 	 * issuer to accept presentations of instruments, usually bonds, for
@@ -632,30 +643,31 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#PhysicalSecuritiesAgent
-	 * CorporateActionCancellationAdviceV07.PhysicalSecuritiesAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmPhysicalSecuritiesAgent
+	 * CorporateActionCancellationAdviceV07.mmPhysicalSecuritiesAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#PhysicalSecuritiesAgent
-	 * CorporateActionCancellationAdviceV05.PhysicalSecuritiesAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmPhysicalSecuritiesAgent
+	 * CorporateActionCancellationAdviceV05.mmPhysicalSecuritiesAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PhysicalSecuritiesAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPhysicalSecuritiesAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PhysSctiesAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSecuritiesAgent";
 			definition = "A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.PhysicalSecuritiesAgent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.PhysicalSecuritiesAgent);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmPhysicalSecuritiesAgent);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmPhysicalSecuritiesAgent;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice dropAgent;
 	/**
 	 * A trust company, bank or similar financial institution who acts on behalf
 	 * of an out of town agent or event agent where securities can be delivered
@@ -685,30 +697,31 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#DropAgent
-	 * CorporateActionCancellationAdviceV07.DropAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmDropAgent
+	 * CorporateActionCancellationAdviceV07.mmDropAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#DropAgent
-	 * CorporateActionCancellationAdviceV05.DropAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmDropAgent
+	 * CorporateActionCancellationAdviceV05.mmDropAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DropAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDropAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DrpAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DropAgent";
 			definition = "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.DropAgent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.DropAgent);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmDropAgent);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmDropAgent;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected List<PartyIdentification71Choice> solicitationAgent;
 	/**
 	 * A trust company, bank or similar financial institution assigned by an
 	 * issuer to maintain records of investors and account balances and
@@ -738,29 +751,30 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#SolicitationAgent
-	 * CorporateActionCancellationAdviceV07.SolicitationAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmSolicitationAgent
+	 * CorporateActionCancellationAdviceV07.mmSolicitationAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#SolicitationAgent
-	 * CorporateActionCancellationAdviceV05.SolicitationAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmSolicitationAgent
+	 * CorporateActionCancellationAdviceV05.mmSolicitationAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SolicitationAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSolicitationAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SlctnAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitationAgent";
 			definition = "A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.SolicitationAgent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.SolicitationAgent);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmSolicitationAgent);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmSolicitationAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice informationAgent;
 	/**
 	 * A trust company, bank or similar financial institution assigned by an
 	 * Issuer to provide information and copies of the offering documentation.
@@ -789,30 +803,31 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#InformationAgent
-	 * CorporateActionCancellationAdviceV07.InformationAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmInformationAgent
+	 * CorporateActionCancellationAdviceV07.mmInformationAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#InformationAgent
-	 * CorporateActionCancellationAdviceV05.InformationAgent}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmInformationAgent
+	 * CorporateActionCancellationAdviceV05.mmInformationAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InformationAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInformationAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InfAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationAgent";
 			definition = "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.InformationAgent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.InformationAgent);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmInformationAgent);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmInformationAgent;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -841,54 +856,27 @@ public class CorporateActionCancellationAdviceV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#SupplementaryData
-	 * CorporateActionCancellationAdviceV07.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmSupplementaryData
+	 * CorporateActionCancellationAdviceV07.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#SupplementaryData
-	 * CorporateActionCancellationAdviceV05.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmSupplementaryData
+	 * CorporateActionCancellationAdviceV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "039"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "039";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -898,23 +886,142 @@ public class CorporateActionCancellationAdviceV06 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCancellationAdviceV06";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionCancellationAdvice message to an account owner or its designated agent to cancel a previously announced corporate action event in case of error from the account servicer or in case of withdrawal by the issuer.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
-				previousVersion_lazy = () -> CorporateActionCancellationAdviceV05.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV07.mmObject());
+				previousVersion_lazy = () -> CorporateActionCancellationAdviceV05.mmObject();
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnCxlAdvc";
 				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.CancellationAdviceGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.CorporateActionGeneralInformation, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.AccountsDetails,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.CorporateActionDetails, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.IssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.PayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.SubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.Registrar, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.ResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.PhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.DropAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.SolicitationAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.InformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmCancellationAdviceGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmAccountsDetails,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmCorporateActionDetails, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmResellingAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmDropAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmInformationAgent,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "039";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionCancellation3 getCancellationAdviceGeneralInformation() {
+		return cancellationAdviceGeneralInformation;
+	}
+
+	public void setCancellationAdviceGeneralInformation(CorporateActionCancellation3 cancellationAdviceGeneralInformation) {
+		this.cancellationAdviceGeneralInformation = cancellationAdviceGeneralInformation;
+	}
+
+	public CorporateActionGeneralInformation86 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation86 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public AccountIdentification29Choice getAccountsDetails() {
+		return accountsDetails;
+	}
+
+	public void setAccountsDetails(AccountIdentification29Choice accountsDetails) {
+		this.accountsDetails = accountsDetails;
+	}
+
+	public CorporateAction34 getCorporateActionDetails() {
+		return corporateActionDetails;
+	}
+
+	public void setCorporateActionDetails(CorporateAction34 corporateActionDetails) {
+		this.corporateActionDetails = corporateActionDetails;
+	}
+
+	public List<PartyIdentification71Choice> getIssuerAgent() {
+		return issuerAgent;
+	}
+
+	public void setIssuerAgent(List<PartyIdentification71Choice> issuerAgent) {
+		this.issuerAgent = issuerAgent;
+	}
+
+	public List<PartyIdentification71Choice> getPayingAgent() {
+		return payingAgent;
+	}
+
+	public void setPayingAgent(List<PartyIdentification71Choice> payingAgent) {
+		this.payingAgent = payingAgent;
+	}
+
+	public List<PartyIdentification71Choice> getSubPayingAgent() {
+		return subPayingAgent;
+	}
+
+	public void setSubPayingAgent(List<PartyIdentification71Choice> subPayingAgent) {
+		this.subPayingAgent = subPayingAgent;
+	}
+
+	public PartyIdentification71Choice getRegistrar() {
+		return registrar;
+	}
+
+	public void setRegistrar(PartyIdentification71Choice registrar) {
+		this.registrar = registrar;
+	}
+
+	public List<PartyIdentification71Choice> getResellingAgent() {
+		return resellingAgent;
+	}
+
+	public void setResellingAgent(List<PartyIdentification71Choice> resellingAgent) {
+		this.resellingAgent = resellingAgent;
+	}
+
+	public PartyIdentification71Choice getPhysicalSecuritiesAgent() {
+		return physicalSecuritiesAgent;
+	}
+
+	public void setPhysicalSecuritiesAgent(PartyIdentification71Choice physicalSecuritiesAgent) {
+		this.physicalSecuritiesAgent = physicalSecuritiesAgent;
+	}
+
+	public PartyIdentification71Choice getDropAgent() {
+		return dropAgent;
+	}
+
+	public void setDropAgent(PartyIdentification71Choice dropAgent) {
+		this.dropAgent = dropAgent;
+	}
+
+	public List<PartyIdentification71Choice> getSolicitationAgent() {
+		return solicitationAgent;
+	}
+
+	public void setSolicitationAgent(List<PartyIdentification71Choice> solicitationAgent) {
+		this.solicitationAgent = solicitationAgent;
+	}
+
+	public PartyIdentification71Choice getInformationAgent() {
+		return informationAgent;
+	}
+
+	public void setInformationAgent(PartyIdentification71Choice informationAgent) {
+		this.informationAgent = informationAgent;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

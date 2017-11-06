@@ -34,21 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * PositionEffectCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PositionEffect1Code#Open
- * PositionEffect1Code.Open}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PositionEffect1Code#Close
- * PositionEffect1Code.Close}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PositionEffect1Code#Rolled
- * PositionEffect1Code.Rolled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PositionEffect1Code#Fifo
- * PositionEffect1Code.Fifo}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PositionEffect1Code#mmOpen
+ * PositionEffect1Code.mmOpen}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PositionEffect1Code#mmClose
+ * PositionEffect1Code.mmClose}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PositionEffect1Code#mmRolled
+ * PositionEffect1Code.mmRolled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PositionEffect1Code#mmFifo
+ * PositionEffect1Code.mmFifo}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +88,7 @@ public class PositionEffect1Code extends PositionEffectCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode Open = new MMCode() {
+	public static final MMCode mmOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
@@ -109,7 +111,7 @@ public class PositionEffect1Code extends PositionEffectCode {
 	 * name} = "Close"</li>
 	 * </ul>
 	 */
-	public static final MMCode Close = new MMCode() {
+	public static final MMCode mmClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Close";
@@ -132,7 +134,7 @@ public class PositionEffect1Code extends PositionEffectCode {
 	 * name} = "Rolled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rolled = new MMCode() {
+	public static final MMCode mmRolled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rolled";
@@ -155,7 +157,7 @@ public class PositionEffect1Code extends PositionEffectCode {
 	 * name} = "Fifo"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fifo = new MMCode() {
+	public static final MMCode mmFifo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fifo";
@@ -166,13 +168,13 @@ public class PositionEffect1Code extends PositionEffectCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PositionEffect1Code";
 				definition = "Indicates whether the resulting position after a  trade should be an opening position or closing position.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PositionEffect1Code.Open, com.tools20022.repository.codeset.PositionEffect1Code.Close, com.tools20022.repository.codeset.PositionEffect1Code.Rolled,
-						com.tools20022.repository.codeset.PositionEffect1Code.Fifo);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PositionEffect1Code.mmOpen, com.tools20022.repository.codeset.PositionEffect1Code.mmClose, com.tools20022.repository.codeset.PositionEffect1Code.mmRolled,
+						com.tools20022.repository.codeset.PositionEffect1Code.mmFifo);
 				trace_lazy = () -> PositionEffectCode.mmObject();
 			}
 		});

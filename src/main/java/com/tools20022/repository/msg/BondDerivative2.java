@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BondDerivative2#Issuer
- * BondDerivative2.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BondDerivative2#MaturityDate
- * BondDerivative2.MaturityDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BondDerivative2#IssuanceDate
- * BondDerivative2.IssuanceDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BondDerivative2#mmIssuer
+ * BondDerivative2.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BondDerivative2#mmMaturityDate
+ * BondDerivative2.mmMaturityDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BondDerivative2#mmIssuanceDate
+ * BondDerivative2.mmIssuanceDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BondDerivative2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected LEIIdentifier issuer;
 	/**
 	 * Legal Entity Identifer (LEI) code of the issuer of the direct or ultimate
 	 * underlying bond.
@@ -99,20 +100,21 @@ public class BondDerivative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BondDerivative2.mmObject();
 			businessComponentTrace_lazy = () -> IssuerRole.mmObject();
+			componentContext_lazy = () -> BondDerivative2.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Legal Entity Identifer (LEI) code of the issuer of the direct or ultimate underlying bond.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected ISODate maturityDate;
 	/**
 	 * Date of maturity of the underlying bond. This field applies to debt
 	 * instruments with defined maturity.
@@ -126,8 +128,8 @@ public class BondDerivative2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +150,21 @@ public class BondDerivative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> BondDerivative2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Date of maturity of the underlying bond. This field applies to debt instruments with defined maturity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate issuanceDate;
 	/**
 	 * Populated with the issuance date of the underlying bond.
 	 * <p>
@@ -189,7 +192,7 @@ public class BondDerivative2 {
 	 * definition} = "Populated with the issuance date of the underlying bond."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuanceDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuanceDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BondDerivative2.mmObject();
 			isDerived = false;
@@ -197,8 +200,8 @@ public class BondDerivative2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceDate";
 			definition = "Populated with the issuance date of the underlying bond.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -206,14 +209,38 @@ public class BondDerivative2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BondDerivative2.Issuer, com.tools20022.repository.msg.BondDerivative2.MaturityDate, com.tools20022.repository.msg.BondDerivative2.IssuanceDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BondDerivative2.mmIssuer, com.tools20022.repository.msg.BondDerivative2.mmMaturityDate, com.tools20022.repository.msg.BondDerivative2.mmIssuanceDate);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BondDerivative2";
 				definition = "Transparency calculation specific details on a bond derivative.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LEIIdentifier getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(LEIIdentifier issuer) {
+		this.issuer = issuer;
+	}
+
+	public ISODate getMaturityDate() {
+		return maturityDate;
+	}
+
+	public void setMaturityDate(ISODate maturityDate) {
+		this.maturityDate = maturityDate;
+	}
+
+	public ISODate getIssuanceDate() {
+		return issuanceDate;
+	}
+
+	public void setIssuanceDate(ISODate issuanceDate) {
+		this.issuanceDate = issuanceDate;
 	}
 }

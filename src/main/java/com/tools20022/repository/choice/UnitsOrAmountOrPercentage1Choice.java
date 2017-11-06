@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice#Amount
- * UnitsOrAmountOrPercentage1Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice#mmAmount
+ * UnitsOrAmountOrPercentage1Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice#Unit
- * UnitsOrAmountOrPercentage1Choice.Unit}</li>
+ * {@linkplain com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice#mmUnit
+ * UnitsOrAmountOrPercentage1Choice.mmUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice#Percentage
- * UnitsOrAmountOrPercentage1Choice.Percentage}</li>
+ * {@linkplain com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice#mmPercentage
+ * UnitsOrAmountOrPercentage1Choice.mmPercentage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnitsOrAmountOrPercentage1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Cash amount.
 	 * <p>
@@ -91,7 +92,7 @@ public class UnitsOrAmountOrPercentage1Choice {
 	 * definition} = "Cash amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnitsOrAmountOrPercentage1Choice.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class UnitsOrAmountOrPercentage1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cash amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DecimalNumber unit;
 	/**
 	 * Number of units.
 	 * <p>
@@ -132,7 +134,7 @@ public class UnitsOrAmountOrPercentage1Choice {
 	 * definition} = "Number of units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnitsOrAmountOrPercentage1Choice.mmObject();
 			isDerived = false;
@@ -140,11 +142,12 @@ public class UnitsOrAmountOrPercentage1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Number of units.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected PercentageRate percentage;
 	/**
 	 * Percentage of cash amount.
 	 * <p>
@@ -173,7 +176,7 @@ public class UnitsOrAmountOrPercentage1Choice {
 	 * definition} = "Percentage of cash amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Percentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnitsOrAmountOrPercentage1Choice.mmObject();
 			isDerived = false;
@@ -181,8 +184,8 @@ public class UnitsOrAmountOrPercentage1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Percentage of cash amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -190,14 +193,38 @@ public class UnitsOrAmountOrPercentage1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.Amount, com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.Unit,
-						com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.Percentage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.mmAmount, com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.mmUnit,
+						com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.mmPercentage);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnitsOrAmountOrPercentage1Choice";
 				definition = "Choice between an amount or number of units or percentage.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public DecimalNumber getUnit() {
+		return unit;
+	}
+
+	public void setUnit(DecimalNumber unit) {
+		this.unit = unit;
+	}
+
+	public PercentageRate getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(PercentageRate percentage) {
+		this.percentage = percentage;
 	}
 }

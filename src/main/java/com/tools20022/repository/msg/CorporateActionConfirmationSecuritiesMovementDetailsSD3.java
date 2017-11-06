@@ -37,51 +37,53 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#PlaceAndName
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmPlaceAndName
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#CreditDebitIndicator
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.CreditDebitIndicator}
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmCreditDebitIndicator
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.
+ * mmCreditDebitIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmPayoutType
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPayoutType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmTransactionQuantity
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmTransactionQuantity
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmReasonCode
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmReasonCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmSubReasonCode
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmSubReasonCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmContraParticipantNumber
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.
+ * mmContraParticipantNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmMaturityDate
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmMaturityDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmPostingDate
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPostingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmTaxAdjustmentRate
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmTaxAdjustmentRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmNewSecuritiesIssuanceIndicator
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.
+ * mmNewSecuritiesIssuanceIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#mmRDPReferenceNumber
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmRDPReferenceNumber}
  * </li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#PayoutType
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.PayoutType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#TransactionQuantity
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.TransactionQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#ReasonCode
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.ReasonCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#SubReasonCode
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.SubReasonCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#ContraParticipantNumber
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.
- * ContraParticipantNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#MaturityDate
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.MaturityDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#PostingDate
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.PostingDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#TaxAdjustmentRate
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.TaxAdjustmentRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#NewSecuritiesIssuanceIndicator
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.
- * NewSecuritiesIssuanceIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3#RDPReferenceNumber
- * CorporateActionConfirmationSecuritiesMovementDetailsSD3.RDPReferenceNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -138,18 +141,18 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#PlaceAndName
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmPlaceAndName
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmPlaceAndName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#PlaceAndName
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#mmPlaceAndName
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -157,13 +160,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.PlaceAndName;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.PlaceAndName);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmPlaceAndName);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmPlaceAndName;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the value is a debit or a credit.
 	 * <p>
@@ -194,20 +198,20 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#CreditDebitIndicator
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmCreditDebitIndicator
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.
-	 * CreditDebitIndicator}</li>
+	 * mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#CreditDebitIndicator
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#mmCreditDebitIndicator
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.
-	 * CreditDebitIndicator}</li>
+	 * mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -215,13 +219,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.CreditDebitIndicator;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.CreditDebitIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmCreditDebitIndicator);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmCreditDebitIndicator;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected DTCCPayoutType4Code payoutType;
 	/**
 	 * Specifies the type of payout associated with the event (for example:
 	 * principal, long term capital gain).
@@ -255,13 +260,13 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#PayoutType
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.PayoutType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmPayoutType
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmPayoutType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayoutType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayoutType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -269,12 +274,13 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutType";
 			definition = "Specifies the type of payout associated with the event (for example:  principal, long term capital gain).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.PayoutType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmPayoutType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DTCCPayoutType4Code.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice transactionQuantity;
 	/**
 	 * Resulting quantity of securities concerned in this transaction.
 	 * <p>
@@ -306,20 +312,20 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#TransactionQuantity
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmTransactionQuantity
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.
-	 * TransactionQuantity}</li>
+	 * mmTransactionQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#TransactionQuantity
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#mmTransactionQuantity
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.
-	 * TransactionQuantity}</li>
+	 * mmTransactionQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -327,13 +333,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionQuantity";
 			definition = "Resulting quantity of securities concerned in this transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.TransactionQuantity;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.TransactionQuantity);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmTransactionQuantity);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmTransactionQuantity;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected DTCAdjustmentPaymentType2Code reasonCode;
 	/**
 	 * Transaction reason.
 	 * <p>
@@ -364,18 +371,18 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#ReasonCode
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.ReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmReasonCode
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmReasonCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#ReasonCode
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.ReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#mmReasonCode
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -383,13 +390,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Transaction reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.ReasonCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.ReasonCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmReasonCode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmReasonCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
 	};
+	protected DTCAdjustmentPaymentSubReason1Code subReasonCode;
 	/**
 	 * Transaction sub reason.
 	 * <p>
@@ -420,18 +428,18 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#SubReasonCode
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.SubReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmSubReasonCode
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmSubReasonCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#SubReasonCode
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.SubReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#mmSubReasonCode
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmSubReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubReasonCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -439,13 +447,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubReasonCode";
 			definition = "Transaction sub reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.SubReasonCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.SubReasonCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmSubReasonCode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmSubReasonCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
 	};
+	protected Max8Text contraParticipantNumber;
 	/**
 	 * Transaction contra participant identification when shares are distributed
 	 * / delivered to / from another participant.
@@ -478,20 +487,20 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#ContraParticipantNumber
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmContraParticipantNumber
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.
-	 * ContraParticipantNumber}</li>
+	 * mmContraParticipantNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#ContraParticipantNumber
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#mmContraParticipantNumber
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.
-	 * ContraParticipantNumber}</li>
+	 * mmContraParticipantNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -499,13 +508,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification when shares are distributed / delivered to / from another participant.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.ContraParticipantNumber;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.ContraParticipantNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmContraParticipantNumber);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmContraParticipantNumber;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	protected ISODate maturityDate;
 	/**
 	 * Date on which a financial instrument becomes due and assets are to be
 	 * repaid.
@@ -519,8 +529,8 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -543,33 +553,34 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#MaturityDate
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmMaturityDate
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmMaturityDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#MaturityDate
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#mmMaturityDate
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmMaturityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Date on which a financial instrument becomes due and assets are to be repaid.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.MaturityDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.MaturityDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmMaturityDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmMaturityDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DateFormat28Choice postingDate;
 	/**
 	 * Date/Time on which the posting /draft of the securities took place.
 	 * <p>
@@ -601,18 +612,18 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#PostingDate
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.PostingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmPostingDate
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmPostingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#PostingDate
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.PostingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#mmPostingDate
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmPostingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -620,13 +631,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date/Time on which the posting /draft of the securities took place.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.PostingDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.PostingDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmPostingDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmPostingDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat28Choice.mmObject();
 		}
 	};
+	protected PercentageRate taxAdjustmentRate;
 	/**
 	 * Set of the DTC legacy sub reason codes representing tax rate. Used with
 	 * reason codes ‘TJXD’ ‘TJXF’ ‘TJXI’ ‘TJXL’ ‘TJXR’ ‘TJXT’ ‘TJXU’ to identify
@@ -661,20 +673,20 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#TaxAdjustmentRate
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.TaxAdjustmentRate
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmTaxAdjustmentRate
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.
+	 * mmTaxAdjustmentRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#TaxAdjustmentRate
-	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.TaxAdjustmentRate
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2#mmTaxAdjustmentRate
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD2.
+	 * mmTaxAdjustmentRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxAdjustmentRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxAdjustmentRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -682,13 +694,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAdjustmentRate";
 			definition = "Set of the DTC legacy sub reason codes representing tax rate. Used with reason codes ‘TJXD’ ‘TJXF’ ‘TJXI’ ‘TJXL’ ‘TJXR’ ‘TJXT’ ‘TJXU’ to identify the correct tax rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.TaxAdjustmentRate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.TaxAdjustmentRate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmTaxAdjustmentRate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmTaxAdjustmentRate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected NewSecuritiesIssuanceType4Code newSecuritiesIssuanceIndicator;
 	/**
 	 * Indicates whether the securities are newly issued or not.
 	 * <p>
@@ -718,7 +731,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewSecuritiesIssuanceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewSecuritiesIssuanceIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -726,11 +739,12 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewSecuritiesIssuanceIndicator";
 			definition = "Indicates whether the securities are newly issued or not.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NewSecuritiesIssuanceType4Code.mmObject();
 		}
 	};
+	protected Exact32AlphaNumericText rDPReferenceNumber;
 	/**
 	 * Unique DTCC legacy reference used for matching and reconciling legacy CCF
 	 * records. The element will be populated to all levels of the message
@@ -772,14 +786,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#RDPReferenceNumber
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4#mmRDPReferenceNumber
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD4.
-	 * RDPReferenceNumber}</li>
+	 * mmRDPReferenceNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RDPReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRDPReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -787,9 +801,9 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RDPReferenceNumber";
 			definition = "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files.  For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option.  Also, usage rules will specify the different layouts of the   RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).  ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.RDPReferenceNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmRDPReferenceNumber);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact32AlphaNumericText.mmObject();
 		}
 	};
@@ -797,22 +811,118 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.PlaceAndName,
-						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.CreditDebitIndicator, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.PayoutType,
-						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.TransactionQuantity, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.ReasonCode,
-						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.SubReasonCode, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.ContraParticipantNumber,
-						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.MaturityDate, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.PostingDate,
-						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.TaxAdjustmentRate,
-						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.NewSecuritiesIssuanceIndicator,
-						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.RDPReferenceNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmCreditDebitIndicator, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPayoutType,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmTransactionQuantity, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmReasonCode,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmSubReasonCode, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmContraParticipantNumber,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmMaturityDate, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPostingDate,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmTaxAdjustmentRate,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmNewSecuritiesIssuanceIndicator,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmRDPReferenceNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionConfirmationSecuritiesMovementDetailsSD3";
 				definition = "Provides additional information regarding corporate action confirmation securities movement details.";
-				previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmObject());
+				previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public DTCCPayoutType4Code getPayoutType() {
+		return payoutType;
+	}
+
+	public void setPayoutType(DTCCPayoutType4Code payoutType) {
+		this.payoutType = payoutType;
+	}
+
+	public FinancialInstrumentQuantity15Choice getTransactionQuantity() {
+		return transactionQuantity;
+	}
+
+	public void setTransactionQuantity(FinancialInstrumentQuantity15Choice transactionQuantity) {
+		this.transactionQuantity = transactionQuantity;
+	}
+
+	public DTCAdjustmentPaymentType2Code getReasonCode() {
+		return reasonCode;
+	}
+
+	public void setReasonCode(DTCAdjustmentPaymentType2Code reasonCode) {
+		this.reasonCode = reasonCode;
+	}
+
+	public DTCAdjustmentPaymentSubReason1Code getSubReasonCode() {
+		return subReasonCode;
+	}
+
+	public void setSubReasonCode(DTCAdjustmentPaymentSubReason1Code subReasonCode) {
+		this.subReasonCode = subReasonCode;
+	}
+
+	public Max8Text getContraParticipantNumber() {
+		return contraParticipantNumber;
+	}
+
+	public void setContraParticipantNumber(Max8Text contraParticipantNumber) {
+		this.contraParticipantNumber = contraParticipantNumber;
+	}
+
+	public ISODate getMaturityDate() {
+		return maturityDate;
+	}
+
+	public void setMaturityDate(ISODate maturityDate) {
+		this.maturityDate = maturityDate;
+	}
+
+	public DateFormat28Choice getPostingDate() {
+		return postingDate;
+	}
+
+	public void setPostingDate(DateFormat28Choice postingDate) {
+		this.postingDate = postingDate;
+	}
+
+	public PercentageRate getTaxAdjustmentRate() {
+		return taxAdjustmentRate;
+	}
+
+	public void setTaxAdjustmentRate(PercentageRate taxAdjustmentRate) {
+		this.taxAdjustmentRate = taxAdjustmentRate;
+	}
+
+	public NewSecuritiesIssuanceType4Code getNewSecuritiesIssuanceIndicator() {
+		return newSecuritiesIssuanceIndicator;
+	}
+
+	public void setNewSecuritiesIssuanceIndicator(NewSecuritiesIssuanceType4Code newSecuritiesIssuanceIndicator) {
+		this.newSecuritiesIssuanceIndicator = newSecuritiesIssuanceIndicator;
+	}
+
+	public Exact32AlphaNumericText getRDPReferenceNumber() {
+		return rDPReferenceNumber;
+	}
+
+	public void setRDPReferenceNumber(Exact32AlphaNumericText rDPReferenceNumber) {
+		this.rDPReferenceNumber = rDPReferenceNumber;
 	}
 }

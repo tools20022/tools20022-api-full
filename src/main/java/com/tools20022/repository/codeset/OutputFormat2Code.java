@@ -34,23 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OutputFormat2Code#MessageReference
- * OutputFormat2Code.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.OutputFormat2Code#mmMessageReference
+ * OutputFormat2Code.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OutputFormat2Code#ScreenReference
- * OutputFormat2Code.ScreenReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.OutputFormat2Code#mmScreenReference
+ * OutputFormat2Code.mmScreenReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OutputFormat2Code#SimpleText
- * OutputFormat2Code.SimpleText}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OutputFormat2Code#XHTML
- * OutputFormat2Code.XHTML}</li>
+ * {@linkplain com.tools20022.repository.codeset.OutputFormat2Code#mmSimpleText
+ * OutputFormat2Code.mmSimpleText}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OutputFormat2Code#mmXHTML
+ * OutputFormat2Code.mmXHTML}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,7 +80,7 @@ public class OutputFormat2Code extends OutputFormatCode {
 	 * name} = "MessageReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode MessageReference = new MMCode() {
+	public static final MMCode mmMessageReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
@@ -103,7 +103,7 @@ public class OutputFormat2Code extends OutputFormatCode {
 	 * name} = "ScreenReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode ScreenReference = new MMCode() {
+	public static final MMCode mmScreenReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScreenReference";
@@ -126,7 +126,7 @@ public class OutputFormat2Code extends OutputFormatCode {
 	 * name} = "SimpleText"</li>
 	 * </ul>
 	 */
-	public static final MMCode SimpleText = new MMCode() {
+	public static final MMCode mmSimpleText = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SimpleText";
@@ -149,7 +149,7 @@ public class OutputFormat2Code extends OutputFormatCode {
 	 * name} = "XHTML"</li>
 	 * </ul>
 	 */
-	public static final MMCode XHTML = new MMCode() {
+	public static final MMCode mmXHTML = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "XHTML";
@@ -160,12 +160,12 @@ public class OutputFormat2Code extends OutputFormatCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OutputFormat2Code";
 				definition = "Information format.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OutputFormat2Code.MessageReference, com.tools20022.repository.codeset.OutputFormat2Code.ScreenReference,
-						com.tools20022.repository.codeset.OutputFormat2Code.SimpleText, com.tools20022.repository.codeset.OutputFormat2Code.XHTML);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OutputFormat2Code.mmMessageReference, com.tools20022.repository.codeset.OutputFormat2Code.mmScreenReference,
+						com.tools20022.repository.codeset.OutputFormat2Code.mmSimpleText, com.tools20022.repository.codeset.OutputFormat2Code.mmXHTML);
 				trace_lazy = () -> OutputFormatCode.mmObject();
 			}
 		});

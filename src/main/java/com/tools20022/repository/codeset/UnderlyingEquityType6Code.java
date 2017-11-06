@@ -34,36 +34,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#Basket
- * UnderlyingEquityType6Code.Basket}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmBasket
+ * UnderlyingEquityType6Code.mmBasket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#DividendIndex
- * UnderlyingEquityType6Code.DividendIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmDividendIndex
+ * UnderlyingEquityType6Code.mmDividendIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#ExchangeTradedFund
- * UnderlyingEquityType6Code.ExchangeTradedFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmExchangeTradedFund
+ * UnderlyingEquityType6Code.mmExchangeTradedFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#Other
- * UnderlyingEquityType6Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmOther
+ * UnderlyingEquityType6Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#Share
- * UnderlyingEquityType6Code.Share}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmShare
+ * UnderlyingEquityType6Code.mmShare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#StockDividend
- * UnderlyingEquityType6Code.StockDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmStockDividend
+ * UnderlyingEquityType6Code.mmStockDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#StockIndex
- * UnderlyingEquityType6Code.StockIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmStockIndex
+ * UnderlyingEquityType6Code.mmStockIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#VolatilityIndex
- * UnderlyingEquityType6Code.VolatilityIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmVolatilityIndex
+ * UnderlyingEquityType6Code.mmVolatilityIndex}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,7 +93,7 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "Basket"</li>
 	 * </ul>
 	 */
-	public static final MMCode Basket = new MMCode() {
+	public static final MMCode mmBasket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basket";
@@ -116,7 +116,7 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "DividendIndex"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendIndex = new MMCode() {
+	public static final MMCode mmDividendIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendIndex";
@@ -139,7 +139,7 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "ExchangeTradedFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExchangeTradedFund = new MMCode() {
+	public static final MMCode mmExchangeTradedFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedFund";
@@ -162,7 +162,7 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -185,7 +185,7 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "Share"</li>
 	 * </ul>
 	 */
-	public static final MMCode Share = new MMCode() {
+	public static final MMCode mmShare = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Share";
@@ -208,7 +208,7 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "StockDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockDividend = new MMCode() {
+	public static final MMCode mmStockDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
@@ -231,7 +231,7 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "StockIndex"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockIndex = new MMCode() {
+	public static final MMCode mmStockIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockIndex";
@@ -254,7 +254,7 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "VolatilityIndex"</li>
 	 * </ul>
 	 */
-	public static final MMCode VolatilityIndex = new MMCode() {
+	public static final MMCode mmVolatilityIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolatilityIndex";
@@ -265,14 +265,14 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingEquityType6Code";
 				definition = "Specifies the type for a contract for equity derivatives.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingEquityType6Code.Basket, com.tools20022.repository.codeset.UnderlyingEquityType6Code.DividendIndex,
-						com.tools20022.repository.codeset.UnderlyingEquityType6Code.ExchangeTradedFund, com.tools20022.repository.codeset.UnderlyingEquityType6Code.Other, com.tools20022.repository.codeset.UnderlyingEquityType6Code.Share,
-						com.tools20022.repository.codeset.UnderlyingEquityType6Code.StockDividend, com.tools20022.repository.codeset.UnderlyingEquityType6Code.StockIndex,
-						com.tools20022.repository.codeset.UnderlyingEquityType6Code.VolatilityIndex);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmBasket, com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmDividendIndex,
+						com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmExchangeTradedFund, com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmOther,
+						com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmShare, com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmStockDividend,
+						com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmStockIndex, com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmVolatilityIndex);
 				trace_lazy = () -> UnderlyingTypeV3Code.mmObject();
 			}
 		});

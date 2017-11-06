@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternateIdentification2#Identification
- * AlternateIdentification2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternateIdentification2#mmIdentification
+ * AlternateIdentification2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternateIdentification2#IdentificationSource
- * AlternateIdentification2.IdentificationSource}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternateIdentification2#mmIdentificationSource
+ * AlternateIdentification2.mmIdentificationSource}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AlternateIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax31Text identification;
 	/**
 	 * Unique and unambiguous identifier of a security.
 	 * <p>
@@ -78,8 +79,8 @@ public class AlternateIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class AlternateIdentification2 {
 	 * definition} = "Unique and unambiguous identifier of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AlternateIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax31Text.mmObject();
 		}
 	};
+	protected IdentificationSource2Choice identificationSource;
 	/**
 	 * Source of the security identification.
 	 * <p>
@@ -144,33 +146,49 @@ public class AlternateIdentification2 {
 	 * definition} = "Source of the security identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IdentificationSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentificationSource = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AlternateIdentification2.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> AlternateIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "IdSrc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationSource";
 			definition = "Source of the security identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IdentificationSource2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IdentificationSource2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification2.Identification, com.tools20022.repository.msg.AlternateIdentification2.IdentificationSource);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification2.mmIdentification, com.tools20022.repository.msg.AlternateIdentification2.mmIdentificationSource);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AlternateIdentification2";
 				definition = "Alternate identification of a security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax31Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(RestrictedFINXMax31Text identification) {
+		this.identification = identification;
+	}
+
+	public IdentificationSource2Choice getIdentificationSource() {
+		return identificationSource;
+	}
+
+	public void setIdentificationSource(IdentificationSource2Choice identificationSource) {
+		this.identificationSource = identificationSource;
 	}
 }

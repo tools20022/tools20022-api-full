@@ -41,24 +41,24 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat20Choice#Rate
- * RateAndAmountFormat20Choice.Rate}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat20Choice#mmRate
+ * RateAndAmountFormat20Choice.mmRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat20Choice#NotSpecifiedRate
- * RateAndAmountFormat20Choice.NotSpecifiedRate}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat20Choice#mmNotSpecifiedRate
+ * RateAndAmountFormat20Choice.mmNotSpecifiedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat20Choice#Amount
- * RateAndAmountFormat20Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat20Choice#mmAmount
+ * RateAndAmountFormat20Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat20Choice#RateTypeAndRate
- * RateAndAmountFormat20Choice.RateTypeAndRate}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat20Choice#mmRateTypeAndRate
+ * RateAndAmountFormat20Choice.mmRateTypeAndRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,6 +82,7 @@ import java.util.function.Supplier;
 public class RateAndAmountFormat20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate rate;
 	/**
 	 * Value expressed as a rate.
 	 * <p>
@@ -112,13 +113,13 @@ public class RateAndAmountFormat20Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat41Choice#Rate
-	 * RateAndAmountFormat41Choice.Rate}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat41Choice#mmRate
+	 * RateAndAmountFormat41Choice.mmRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateAndAmountFormat20Choice.mmObject();
 			isDerived = false;
@@ -126,12 +127,13 @@ public class RateAndAmountFormat20Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value expressed as a rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.Rate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmRate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected RateValueType7Code notSpecifiedRate;
 	/**
 	 * Value of the rate not specified.
 	 * <p>
@@ -162,13 +164,13 @@ public class RateAndAmountFormat20Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat41Choice#NotSpecifiedRate
-	 * RateAndAmountFormat41Choice.NotSpecifiedRate}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat41Choice#mmNotSpecifiedRate
+	 * RateAndAmountFormat41Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateAndAmountFormat20Choice.mmObject();
 			isDerived = false;
@@ -176,12 +178,13 @@ public class RateAndAmountFormat20Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.NotSpecifiedRate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmNotSpecifiedRate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Value is expressed as a currency and amount.
 	 * <p>
@@ -212,13 +215,13 @@ public class RateAndAmountFormat20Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat41Choice#Amount
-	 * RateAndAmountFormat41Choice.Amount}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat41Choice#mmAmount
+	 * RateAndAmountFormat41Choice.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateAndAmountFormat20Choice.mmObject();
 			isDerived = false;
@@ -226,12 +229,13 @@ public class RateAndAmountFormat20Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value is expressed as a currency and amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.Amount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected RateTypeAndPercentageRate1 rateTypeAndRate;
 	/**
 	 * Value is expressed as a rate type and a percentage rate.
 	 * <p>
@@ -261,13 +265,13 @@ public class RateAndAmountFormat20Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat41Choice#RateTypeAndRate
-	 * RateAndAmountFormat41Choice.RateTypeAndRate}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat41Choice#mmRateTypeAndRate
+	 * RateAndAmountFormat41Choice.mmRateTypeAndRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateTypeAndRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateTypeAndRate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RateAndAmountFormat20Choice.mmObject();
 			isDerived = false;
@@ -275,20 +279,20 @@ public class RateAndAmountFormat20Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndRate";
 			definition = "Value is expressed as a rate type and a percentage rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.RateTypeAndRate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmRateTypeAndRate);
 			maxOccurs = 1;
-			type_lazy = () -> RateTypeAndPercentageRate1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RateTypeAndPercentageRate1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat20Choice.Rate, com.tools20022.repository.choice.RateAndAmountFormat20Choice.NotSpecifiedRate,
-						com.tools20022.repository.choice.RateAndAmountFormat20Choice.Amount, com.tools20022.repository.choice.RateAndAmountFormat20Choice.RateTypeAndRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat20Choice.mmRate, com.tools20022.repository.choice.RateAndAmountFormat20Choice.mmNotSpecifiedRate,
+						com.tools20022.repository.choice.RateAndAmountFormat20Choice.mmAmount, com.tools20022.repository.choice.RateAndAmountFormat20Choice.mmRateTypeAndRate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -303,5 +307,37 @@ public class RateAndAmountFormat20Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public RateValueType7Code getNotSpecifiedRate() {
+		return notSpecifiedRate;
+	}
+
+	public void setNotSpecifiedRate(RateValueType7Code notSpecifiedRate) {
+		this.notSpecifiedRate = notSpecifiedRate;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public RateTypeAndPercentageRate1 getRateTypeAndRate() {
+		return rateTypeAndRate;
+	}
+
+	public void setRateTypeAndRate(RateTypeAndPercentageRate1 rateTypeAndRate) {
+		this.rateTypeAndRate = rateTypeAndRate;
 	}
 }

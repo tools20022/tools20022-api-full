@@ -30,24 +30,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code#AwaitingMoney
- * ConditionallyAcceptedStatusReason1Code.AwaitingMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code#mmAwaitingMoney
+ * ConditionallyAcceptedStatusReason1Code.mmAwaitingMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code#AwaitingFunds
- * ConditionallyAcceptedStatusReason1Code.AwaitingFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code#mmAwaitingFunds
+ * ConditionallyAcceptedStatusReason1Code.mmAwaitingFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code#AwaitingDocuments
- * ConditionallyAcceptedStatusReason1Code.AwaitingDocuments}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code#mmAwaitingDocuments
+ * ConditionallyAcceptedStatusReason1Code.mmAwaitingDocuments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code#Other
- * ConditionallyAcceptedStatusReason1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code#mmOther
+ * ConditionallyAcceptedStatusReason1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class ConditionallyAcceptedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingMoney = new MMCode() {
+	public static final MMCode mmAwaitingMoney = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AwaitingMoney";
@@ -126,7 +126,7 @@ public class ConditionallyAcceptedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingFunds = new MMCode() {
+	public static final MMCode mmAwaitingFunds = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AwaitingFunds";
@@ -160,7 +160,7 @@ public class ConditionallyAcceptedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingDocuments = new MMCode() {
+	public static final MMCode mmAwaitingDocuments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AwaitingDocuments";
@@ -190,7 +190,7 @@ public class ConditionallyAcceptedStatusReason1Code {
 	 * definition} = "Another reason for the status conditionally accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -203,13 +203,13 @@ public class ConditionallyAcceptedStatusReason1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AWMO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConditionallyAcceptedStatusReason1Code";
 				definition = "Specifies the reason for a conditionally accepted status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.AwaitingMoney, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.AwaitingFunds,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.AwaitingDocuments, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmAwaitingMoney, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmAwaitingFunds,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmAwaitingDocuments, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmOther);
 			}
 		});
 		return mmObject_lazy.get();

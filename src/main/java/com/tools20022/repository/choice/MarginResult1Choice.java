@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MarginResult1Choice#ExcessAmount
- * MarginResult1Choice.ExcessAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.MarginResult1Choice#mmExcessAmount
+ * MarginResult1Choice.mmExcessAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MarginResult1Choice#DeficitAmount
- * MarginResult1Choice.DeficitAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.MarginResult1Choice#mmDeficitAmount
+ * MarginResult1Choice.mmDeficitAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginResult1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount excessAmount;
 	/**
 	 * Excess amount that the central counterparty may restitute to the Clearing
 	 * member.
@@ -98,20 +99,21 @@ public class MarginResult1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExcessAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExcessAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MarginResult1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CollateralMovement.mmObject();
+			componentContext_lazy = () -> MarginResult1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XcssAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExcessAmount";
 			definition = "Excess amount that the central counterparty may restitute to the Clearing member.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount deficitAmount;
 	/**
 	 * Deficit amount that the central counterparty will provide to the clearing
 	 * member.
@@ -148,17 +150,17 @@ public class MarginResult1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeficitAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeficitAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MarginResult1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CollateralMovement.mmObject();
+			componentContext_lazy = () -> MarginResult1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DfcitAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeficitAmount";
 			definition = "Deficit amount that the central counterparty will provide to the clearing member.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class MarginResult1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginResult1Choice.ExcessAmount, com.tools20022.repository.choice.MarginResult1Choice.DeficitAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginResult1Choice.mmExcessAmount, com.tools20022.repository.choice.MarginResult1Choice.mmDeficitAmount);
 				trace_lazy = () -> CollateralMovement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarginResult1Choice";
 				definition = "Provides details on the margin result.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getExcessAmount() {
+		return excessAmount;
+	}
+
+	public void setExcessAmount(ActiveCurrencyAndAmount excessAmount) {
+		this.excessAmount = excessAmount;
+	}
+
+	public ActiveCurrencyAndAmount getDeficitAmount() {
+		return deficitAmount;
+	}
+
+	public void setDeficitAmount(ActiveCurrencyAndAmount deficitAmount) {
+		this.deficitAmount = deficitAmount;
 	}
 }

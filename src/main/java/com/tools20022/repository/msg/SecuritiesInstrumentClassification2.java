@@ -38,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesInstrumentClassification2#Identifier
- * SecuritiesInstrumentClassification2.Identifier}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesInstrumentClassification2#mmIdentifier
+ * SecuritiesInstrumentClassification2.mmIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesInstrumentClassification2#Modification
- * SecuritiesInstrumentClassification2.Modification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesInstrumentClassification2#mmModification
+ * SecuritiesInstrumentClassification2.mmModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesInstrumentClassification2#ValidityPeriod
- * SecuritiesInstrumentClassification2.ValidityPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesInstrumentClassification2#mmValidityPeriod
+ * SecuritiesInstrumentClassification2.mmValidityPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesInstrumentClassification2#LastUpdated
- * SecuritiesInstrumentClassification2.LastUpdated}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesInstrumentClassification2#mmLastUpdated
+ * SecuritiesInstrumentClassification2.mmLastUpdated}</li>
  * </ul>
  * </li>
  * <li>
@@ -56,16 +56,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01#InstrumentClassification
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01#mmInstrumentClassification
  * FinancialInstrumentReportingInstrumentClassificationReportV01.
- * InstrumentClassification}</li>
+ * mmInstrumentClassification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesInstrumentClassification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CFIOct2015Identifier identifier;
 	/**
 	 * Identifier of the financial instrument classification type code.
 	 * <p>
@@ -110,7 +111,7 @@ public class SecuritiesInstrumentClassification2 {
 	 * "Identifier of the financial instrument classification type code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
@@ -118,11 +119,12 @@ public class SecuritiesInstrumentClassification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identifier";
 			definition = "Identifier of the financial instrument classification type code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
 		}
 	};
+	protected Modification1Code modification;
 	/**
 	 * Modification status for the record compared to the previous report.
 	 * <p>
@@ -152,7 +154,7 @@ public class SecuritiesInstrumentClassification2 {
 	 * "Modification status for the record compared to the previous report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Modification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
@@ -160,11 +162,12 @@ public class SecuritiesInstrumentClassification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Modification status for the record compared to the previous report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
 		}
 	};
+	protected Period4Choice validityPeriod;
 	/**
 	 * Details the validity of the specific record.<br>
 	 * <br>
@@ -197,7 +200,7 @@ public class SecuritiesInstrumentClassification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
@@ -205,12 +208,13 @@ public class SecuritiesInstrumentClassification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Details the validity of the specific record.\r\n\r\nUsage:\r\nWithin MiFIR, the FromDate is populated while the instrument is valid.  From Date To Date is only populated when the record is being invalidated.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Period4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	protected ISODate lastUpdated;
 	/**
 	 * Date when this record was last modified.
 	 * <p>
@@ -238,7 +242,7 @@ public class SecuritiesInstrumentClassification2 {
 	 * definition} = "Date when this record was last modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastUpdated = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastUpdated = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
@@ -246,8 +250,8 @@ public class SecuritiesInstrumentClassification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastUpdated";
 			definition = "Date when this record was last modified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -255,15 +259,47 @@ public class SecuritiesInstrumentClassification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesInstrumentClassification2.Identifier, com.tools20022.repository.msg.SecuritiesInstrumentClassification2.Modification,
-						com.tools20022.repository.msg.SecuritiesInstrumentClassification2.ValidityPeriod, com.tools20022.repository.msg.SecuritiesInstrumentClassification2.LastUpdated);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01.InstrumentClassification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmIdentifier, com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmModification,
+						com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmValidityPeriod, com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmLastUpdated);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01.mmInstrumentClassification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesInstrumentClassification2";
 				definition = "Details an individuation of the classification type of the financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CFIOct2015Identifier getIdentifier() {
+		return identifier;
+	}
+
+	public void setIdentifier(CFIOct2015Identifier identifier) {
+		this.identifier = identifier;
+	}
+
+	public Modification1Code getModification() {
+		return modification;
+	}
+
+	public void setModification(Modification1Code modification) {
+		this.modification = modification;
+	}
+
+	public Period4Choice getValidityPeriod() {
+		return validityPeriod;
+	}
+
+	public void setValidityPeriod(Period4Choice validityPeriod) {
+		this.validityPeriod = validityPeriod;
+	}
+
+	public ISODate getLastUpdated() {
+		return lastUpdated;
+	}
+
+	public void setLastUpdated(ISODate lastUpdated) {
+		this.lastUpdated = lastUpdated;
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestve
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -86,21 +87,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06#GroupHeader
- * FIToFICustomerCreditTransferV06.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06#mmGroupHeader
+ * FIToFICustomerCreditTransferV06.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06#CreditTransferTransactionInformation
- * FIToFICustomerCreditTransferV06.CreditTransferTransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06#mmCreditTransferTransactionInformation
+ * FIToFICustomerCreditTransferV06.mmCreditTransferTransactionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06#SupplementaryData
- * FIToFICustomerCreditTransferV06.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06#mmSupplementaryData
+ * FIToFICustomerCreditTransferV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06#identifier
- * FIToFICustomerCreditTransferV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pacs.008.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,6 +119,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FIToFICustomerCreditTransferV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader70 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -146,22 +146,23 @@ public class FIToFICustomerCreditTransferV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05#GroupHeader
-	 * FIToFICustomerCreditTransferV05.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05#mmGroupHeader
+	 * FIToFICustomerCreditTransferV05.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05.GroupHeader;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader70.mmObject();
 		}
 	};
+	protected List<CreditTransferTransaction25> creditTransferTransactionInformation;
 	/**
 	 * Set of elements providing information specific to the individual credit
 	 * transfer(s).
@@ -189,21 +190,22 @@ public class FIToFICustomerCreditTransferV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05#CreditTransferTransactionInformation
-	 * FIToFICustomerCreditTransferV05.CreditTransferTransactionInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05#mmCreditTransferTransactionInformation
+	 * FIToFICustomerCreditTransferV05.mmCreditTransferTransactionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CreditTransferTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCreditTransferTransactionInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CdtTrfTxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransferTransactionInformation";
 			definition = "Set of elements providing information specific to the individual credit transfer(s).";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05.CreditTransferTransactionInformation;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05.mmCreditTransferTransactionInformation;
 			minOccurs = 1;
 			complexType_lazy = () -> CreditTransferTransaction25.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -231,46 +233,19 @@ public class FIToFICustomerCreditTransferV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05#SupplementaryData
-	 * FIToFICustomerCreditTransferV05.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05#mmSupplementaryData
+	 * FIToFICustomerCreditTransferV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pacs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pacs";
-			messageFunctionality = "008";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -285,11 +260,42 @@ public class FIToFICustomerCreditTransferV06 {
 				rootElement = "Document";
 				xmlTag = "FIToFICstmrCdtTrf";
 				businessArea_lazy = () -> PaymentsClearingandSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06.GroupHeader,
-						com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06.CreditTransferTransactionInformation, com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06.mmGroupHeader,
+						com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06.mmCreditTransferTransactionInformation, com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pacs";
+						messageFunctionality = "008";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader70 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader70 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<CreditTransferTransaction25> getCreditTransferTransactionInformation() {
+		return creditTransferTransactionInformation;
+	}
+
+	public void setCreditTransferTransactionInformation(List<CreditTransferTransaction25> creditTransferTransactionInformation) {
+		this.creditTransferTransactionInformation = creditTransferTransactionInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

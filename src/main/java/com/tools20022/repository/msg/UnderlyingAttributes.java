@@ -40,41 +40,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#AllocationPercent
- * UnderlyingAttributes.AllocationPercent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingAttributes#Quantity
- * UnderlyingAttributes.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmAllocationPercent
+ * UnderlyingAttributes.mmAllocationPercent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#SettlementType
- * UnderlyingAttributes.SettlementType}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmQuantity
+ * UnderlyingAttributes.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#CashAmount
- * UnderlyingAttributes.CashAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingAttributes#CashType
- * UnderlyingAttributes.CashType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingAttributes#Price
- * UnderlyingAttributes.Price}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmSettlementType
+ * UnderlyingAttributes.mmSettlementType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#DirtyPrice
- * UnderlyingAttributes.DirtyPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingAttributes#EndPrice
- * UnderlyingAttributes.EndPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmCashAmount
+ * UnderlyingAttributes.mmCashAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#StartValue
- * UnderlyingAttributes.StartValue}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmCashType
+ * UnderlyingAttributes.mmCashType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmPrice
+ * UnderlyingAttributes.mmPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#CurrentValue
- * UnderlyingAttributes.CurrentValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingAttributes#EndValue
- * UnderlyingAttributes.EndValue}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmDirtyPrice
+ * UnderlyingAttributes.mmDirtyPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#AdjustedQuantity
- * UnderlyingAttributes.AdjustedQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmEndPrice
+ * UnderlyingAttributes.mmEndPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#ExchangeRate
- * UnderlyingAttributes.ExchangeRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingAttributes#CapValue
- * UnderlyingAttributes.CapValue}</li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmStartValue
+ * UnderlyingAttributes.mmStartValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmCurrentValue
+ * UnderlyingAttributes.mmCurrentValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmEndValue
+ * UnderlyingAttributes.mmEndValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmAdjustedQuantity
+ * UnderlyingAttributes.mmAdjustedQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmExchangeRate
+ * UnderlyingAttributes.mmExchangeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmCapValue
+ * UnderlyingAttributes.mmCapValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -82,8 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +104,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnderlyingAttributes {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate allocationPercent;
 	/**
 	 * Percent of the Strike Price that this underlying represents.
 	 * <p>
@@ -112,8 +118,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Allocation#Percentage
-	 * Allocation.Percentage}</li>
+	 * {@linkplain com.tools20022.repository.entity.Allocation#mmPercentage
+	 * Allocation.mmPercentage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -133,20 +139,21 @@ public class UnderlyingAttributes {
 	 * "Percent of the Strike Price that this underlying represents."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllocationPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllocationPercent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.mmPercentage;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.Percentage;
 			isDerived = false;
 			xmlTag = "AllcnPct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationPercent";
 			definition = "Percent of the Strike Price that this underlying represents.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected UnitOrFaceAmountChoice quantity;
 	/**
 	 * Unit amount of the underlying security.
 	 * <p>
@@ -159,8 +166,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesQuantity
-	 * Security.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,21 +186,22 @@ public class UnderlyingAttributes {
 	 * definition} = "Unit amount of the underlying security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Unit amount of the underlying security.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> UnitOrFaceAmountChoice.mmObject();
 		}
 	};
+	protected SettlementType1Code settlementType;
 	/**
 	 * Indicates order settlement period for the underlying instrument.
 	 * Represents the number of days until settlement; e.g., 2 means T+1
@@ -209,8 +217,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#SettlementType
-	 * Option.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmSettlementType
+	 * Option.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -231,20 +239,21 @@ public class UnderlyingAttributes {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmSettlementType;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.SettlementType;
 			isDerived = false;
 			xmlTag = "SttlmTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementType";
 			definition = "Indicates order settlement period for the underlying instrument. Represents the number of days until settlement; e.g., 2 means T+1 settlement, 4 means T+3 settlement, 5 means T+4 settlement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> SettlementType1Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount cashAmount;
 	/**
 	 * Cash amount associated with the underlying component. Necessary for
 	 * derivatives that deliver into more than one underlying instrument and one
@@ -260,8 +269,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#NotionalCurrencyAndAmount
-	 * Derivative.NotionalCurrencyAndAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrencyAndAmount
+	 * Derivative.mmNotionalCurrencyAndAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -282,20 +291,21 @@ public class UnderlyingAttributes {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrencyAndAmount;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.NotionalCurrencyAndAmount;
 			isDerived = false;
 			xmlTag = "CshAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmount";
 			definition = "Cash amount associated with the underlying component. Necessary for derivatives that deliver into more than one underlying instrument and one of the underlying's is a fixed cash value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max35Text cashType;
 	/**
 	 * Represents how the cash will be calculated. Indicates that the cash is
 	 * either fixed or a difference value (difference between strike and current
@@ -327,7 +337,7 @@ public class UnderlyingAttributes {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
 			isDerived = false;
@@ -335,11 +345,12 @@ public class UnderlyingAttributes {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashType";
 			definition = "Represents how the cash will be calculated. Indicates that the cash is either fixed or a difference value (difference between strike and current underlying price).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Price1 price;
 	/**
 	 * In a financing deal, clean price (percent-of-par or per unit) of the
 	 * underlying security or basket.
@@ -352,8 +363,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Pricing
-	 * Security.Pricing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPricing
+	 * Security.mmPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -374,20 +385,21 @@ public class UnderlyingAttributes {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Price = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Pricing;
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "In a financing deal, clean price (percent-of-par or per unit) of the underlying security or basket.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected Price1 dirtyPrice;
 	/**
 	 * In a financing deal, price (percent-of-par or per unit) of the underlying
 	 * security or basket. "Dirty" means it includes accrued interest.
@@ -400,8 +412,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#DirtyPrice
-	 * Debt.DirtyPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmDirtyPrice
+	 * Debt.mmDirtyPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -422,20 +434,21 @@ public class UnderlyingAttributes {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DirtyPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDirtyPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmDirtyPrice;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.DirtyPrice;
 			isDerived = false;
 			xmlTag = "DrtyPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirtyPrice";
 			definition = "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket. \"Dirty\" means it includes accrued interest.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected Price1 endPrice;
 	/**
 	 * In a financing deal, price (percent-of-par or per unit) of the underlying
 	 * security or basket at the end of the agreement.
@@ -448,8 +461,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Pricing
-	 * Security.Pricing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPricing
+	 * Security.mmPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -470,20 +483,21 @@ public class UnderlyingAttributes {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Pricing;
 			isDerived = false;
 			xmlTag = "EndPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndPrice";
 			definition = "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket at the end of the agreement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount startValue;
 	/**
 	 * Currency value attributed to this collateral at the start of the
 	 * agreement.
@@ -498,8 +512,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#Valuation
-	 * Collateral.Valuation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmValuation
+	 * Collateral.mmValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -520,20 +534,21 @@ public class UnderlyingAttributes {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmValuation;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.Valuation;
 			isDerived = false;
 			xmlTag = "StartVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartValue";
 			definition = "Currency value attributed to this collateral at the start of the agreement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount currentValue;
 	/**
 	 * Currency value currently attributed to this collateral.
 	 * <p>
@@ -547,8 +562,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#Valuation
-	 * Collateral.Valuation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmValuation
+	 * Collateral.mmValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -567,20 +582,21 @@ public class UnderlyingAttributes {
 	 * definition} = "Currency value currently attributed to this collateral."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmValuation;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.Valuation;
 			isDerived = false;
 			xmlTag = "CurVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentValue";
 			definition = "Currency value currently attributed to this collateral.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount endValue;
 	/**
 	 * Currency value attributed to this collateral at the end of the agreement.
 	 * <p>
@@ -594,8 +610,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#Valuation
-	 * Collateral.Valuation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmValuation
+	 * Collateral.mmValuation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -616,20 +632,21 @@ public class UnderlyingAttributes {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmValuation;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.Valuation;
 			isDerived = false;
 			xmlTag = "EndVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndValue";
 			definition = "Currency value attributed to this collateral at the end of the agreement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected UnitOrFaceAmountChoice adjustedQuantity;
 	/**
 	 * Unit amount of the underlying security (shares) adjusted for pending
 	 * corporate action not yet allocated.
@@ -643,8 +660,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesQuantity
-	 * Security.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -665,21 +682,22 @@ public class UnderlyingAttributes {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdjustedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdjustedQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "AdjstdQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedQuantity";
 			definition = "Unit amount of the underlying security (shares) adjusted for pending corporate action not yet allocated.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> UnitOrFaceAmountChoice.mmObject();
 		}
 	};
+	protected PercentageRate exchangeRate;
 	/**
 	 * Foreign exchange rate used to compute the current value.
 	 * <p>
@@ -693,8 +711,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#ExchangeRate
-	 * AssetHolding.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmExchangeRate
+	 * AssetHolding.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -713,20 +731,21 @@ public class UnderlyingAttributes {
 	 * definition} = "Foreign exchange rate used to compute the current value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.ExchangeRate;
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Foreign exchange rate used to compute the current value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount capValue;
 	/**
 	 * Maximum notional value for a capped financial instrument.
 	 * <p>
@@ -740,8 +759,8 @@ public class UnderlyingAttributes {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#CapValue
-	 * AssetHolding.CapValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmCapValue
+	 * AssetHolding.mmCapValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -761,17 +780,17 @@ public class UnderlyingAttributes {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CapValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCapValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmCapValue;
 			componentContext_lazy = () -> UnderlyingAttributes.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.CapValue;
 			isDerived = false;
 			xmlTag = "CapVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapValue";
 			definition = "Maximum notional value for a capped financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -779,18 +798,130 @@ public class UnderlyingAttributes {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes.AllocationPercent, com.tools20022.repository.msg.UnderlyingAttributes.Quantity,
-						com.tools20022.repository.msg.UnderlyingAttributes.SettlementType, com.tools20022.repository.msg.UnderlyingAttributes.CashAmount, com.tools20022.repository.msg.UnderlyingAttributes.CashType,
-						com.tools20022.repository.msg.UnderlyingAttributes.Price, com.tools20022.repository.msg.UnderlyingAttributes.DirtyPrice, com.tools20022.repository.msg.UnderlyingAttributes.EndPrice,
-						com.tools20022.repository.msg.UnderlyingAttributes.StartValue, com.tools20022.repository.msg.UnderlyingAttributes.CurrentValue, com.tools20022.repository.msg.UnderlyingAttributes.EndValue,
-						com.tools20022.repository.msg.UnderlyingAttributes.AdjustedQuantity, com.tools20022.repository.msg.UnderlyingAttributes.ExchangeRate, com.tools20022.repository.msg.UnderlyingAttributes.CapValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes.mmAllocationPercent, com.tools20022.repository.msg.UnderlyingAttributes.mmQuantity,
+						com.tools20022.repository.msg.UnderlyingAttributes.mmSettlementType, com.tools20022.repository.msg.UnderlyingAttributes.mmCashAmount, com.tools20022.repository.msg.UnderlyingAttributes.mmCashType,
+						com.tools20022.repository.msg.UnderlyingAttributes.mmPrice, com.tools20022.repository.msg.UnderlyingAttributes.mmDirtyPrice, com.tools20022.repository.msg.UnderlyingAttributes.mmEndPrice,
+						com.tools20022.repository.msg.UnderlyingAttributes.mmStartValue, com.tools20022.repository.msg.UnderlyingAttributes.mmCurrentValue, com.tools20022.repository.msg.UnderlyingAttributes.mmEndValue,
+						com.tools20022.repository.msg.UnderlyingAttributes.mmAdjustedQuantity, com.tools20022.repository.msg.UnderlyingAttributes.mmExchangeRate, com.tools20022.repository.msg.UnderlyingAttributes.mmCapValue);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnderlyingAttributes";
 				definition = "Provides additional details on the underlying. In securities financing deals, it is used to identify and provide information on the collateral.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getAllocationPercent() {
+		return allocationPercent;
+	}
+
+	public void setAllocationPercent(PercentageRate allocationPercent) {
+		this.allocationPercent = allocationPercent;
+	}
+
+	public UnitOrFaceAmountChoice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(UnitOrFaceAmountChoice quantity) {
+		this.quantity = quantity;
+	}
+
+	public SettlementType1Code getSettlementType() {
+		return settlementType;
+	}
+
+	public void setSettlementType(SettlementType1Code settlementType) {
+		this.settlementType = settlementType;
+	}
+
+	public ActiveCurrencyAndAmount getCashAmount() {
+		return cashAmount;
+	}
+
+	public void setCashAmount(ActiveCurrencyAndAmount cashAmount) {
+		this.cashAmount = cashAmount;
+	}
+
+	public Max35Text getCashType() {
+		return cashType;
+	}
+
+	public void setCashType(Max35Text cashType) {
+		this.cashType = cashType;
+	}
+
+	public Price1 getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+		this.price = price;
+	}
+
+	public Price1 getDirtyPrice() {
+		return dirtyPrice;
+	}
+
+	public void setDirtyPrice(com.tools20022.repository.msg.Price1 dirtyPrice) {
+		this.dirtyPrice = dirtyPrice;
+	}
+
+	public Price1 getEndPrice() {
+		return endPrice;
+	}
+
+	public void setEndPrice(com.tools20022.repository.msg.Price1 endPrice) {
+		this.endPrice = endPrice;
+	}
+
+	public ActiveCurrencyAndAmount getStartValue() {
+		return startValue;
+	}
+
+	public void setStartValue(ActiveCurrencyAndAmount startValue) {
+		this.startValue = startValue;
+	}
+
+	public ActiveCurrencyAndAmount getCurrentValue() {
+		return currentValue;
+	}
+
+	public void setCurrentValue(ActiveCurrencyAndAmount currentValue) {
+		this.currentValue = currentValue;
+	}
+
+	public ActiveCurrencyAndAmount getEndValue() {
+		return endValue;
+	}
+
+	public void setEndValue(ActiveCurrencyAndAmount endValue) {
+		this.endValue = endValue;
+	}
+
+	public UnitOrFaceAmountChoice getAdjustedQuantity() {
+		return adjustedQuantity;
+	}
+
+	public void setAdjustedQuantity(UnitOrFaceAmountChoice adjustedQuantity) {
+		this.adjustedQuantity = adjustedQuantity;
+	}
+
+	public PercentageRate getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(PercentageRate exchangeRate) {
+		this.exchangeRate = exchangeRate;
+	}
+
+	public ActiveCurrencyAndAmount getCapValue() {
+		return capValue;
+	}
+
+	public void setCapValue(ActiveCurrencyAndAmount capValue) {
+		this.capValue = capValue;
 	}
 }

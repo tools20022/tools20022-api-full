@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonExemptExemptionStatus1#AcknowledgementOfNonExemptIndicator
- * NonExemptExemptionStatus1.AcknowledgementOfNonExemptIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.NonExemptExemptionStatus1#mmAcknowledgementOfNonExemptIndicator
+ * NonExemptExemptionStatus1.mmAcknowledgementOfNonExemptIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NonExemptExemptionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator acknowledgementOfNonExemptIndicator;
 	/**
 	 * Acknowledgement of the status on non exempt on interest penalties.
 	 * <p>
@@ -84,7 +85,7 @@ public class NonExemptExemptionStatus1 {
 	 * "Acknowledgement of the status on non exempt on interest penalties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AcknowledgementOfNonExemptIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAcknowledgementOfNonExemptIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NonExemptExemptionStatus1.mmObject();
 			isDerived = false;
@@ -92,8 +93,8 @@ public class NonExemptExemptionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementOfNonExemptIndicator";
 			definition = "Acknowledgement of the status on non exempt on interest penalties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -101,13 +102,21 @@ public class NonExemptExemptionStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonExemptExemptionStatus1.AcknowledgementOfNonExemptIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonExemptExemptionStatus1.mmAcknowledgementOfNonExemptIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NonExemptExemptionStatus1";
 				definition = "Non-exempt beneficial owner exemption information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getAcknowledgementOfNonExemptIndicator() {
+		return acknowledgementOfNonExemptIndicator;
+	}
+
+	public void setAcknowledgementOfNonExemptIndicator(YesNoIndicator acknowledgementOfNonExemptIndicator) {
+		this.acknowledgementOfNonExemptIndicator = acknowledgementOfNonExemptIndicator;
 	}
 }

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * List of centralised branch identifiers.
@@ -32,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentificationList1#List
- * FinancialInstitutionIdentificationList1.List}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentificationList1#mmList
+ * FinancialInstitutionIdentificationList1.mmList}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstitutionIdentificationList1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.FinancialInstitutionIdentification9> list;
 	/**
 	 * Repeated identifiers.
 	 * <p>
@@ -81,7 +83,7 @@ public class FinancialInstitutionIdentificationList1 {
 	 * definition} = "Repeated identifiers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd List = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmList = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FinancialInstitutionIdentificationList1.mmObject();
 			isDerived = false;
@@ -90,21 +92,29 @@ public class FinancialInstitutionIdentificationList1 {
 			name = "List";
 			definition = "Repeated identifiers.";
 			minOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstitutionIdentificationList1.List);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstitutionIdentificationList1.mmList);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstitutionIdentificationList1";
 				definition = "List of centralised branch identifiers.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<FinancialInstitutionIdentification9> getList() {
+		return list;
+	}
+
+	public void setList(List<com.tools20022.repository.msg.FinancialInstitutionIdentification9> list) {
+		this.list = list;
 	}
 }

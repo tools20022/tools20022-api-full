@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * DemandStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus1Code#Extend
- * DemandStatus1Code.Extend}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus1Code#PAY
- * DemandStatus1Code.PAY}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus1Code#mmExtend
+ * DemandStatus1Code.mmExtend}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus1Code#mmPAY
+ * DemandStatus1Code.mmPAY}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class DemandStatus1Code extends DemandStatusCode {
 	 * name} = "Extend"</li>
 	 * </ul>
 	 */
-	public static final MMCode Extend = new MMCode() {
+	public static final MMCode mmExtend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extend";
@@ -102,7 +102,7 @@ public class DemandStatus1Code extends DemandStatusCode {
 	 * name} = "PAY"</li>
 	 * </ul>
 	 */
-	public static final MMCode PAY = new MMCode() {
+	public static final MMCode mmPAY = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PAY";
@@ -113,12 +113,12 @@ public class DemandStatus1Code extends DemandStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXTD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DemandStatus1Code";
 				definition = "Specifies the status of the demand for payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandStatus1Code.Extend, com.tools20022.repository.codeset.DemandStatus1Code.PAY);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandStatus1Code.mmExtend, com.tools20022.repository.codeset.DemandStatus1Code.mmPAY);
 				trace_lazy = () -> DemandStatusCode.mmObject();
 			}
 		});

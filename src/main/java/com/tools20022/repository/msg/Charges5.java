@@ -39,15 +39,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Charges5#ChargesPayer
- * Charges5.ChargesPayer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges5#ChargesPayee
- * Charges5.ChargesPayee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges5#Amount
- * Charges5.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges5#Percentage
- * Charges5.Percentage}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges5#Type Charges5.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges5#mmChargesPayer
+ * Charges5.mmChargesPayer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges5#mmChargesPayee
+ * Charges5.mmChargesPayee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges5#mmAmount
+ * Charges5.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges5#mmPercentage
+ * Charges5.mmPercentage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges5#mmType
+ * Charges5.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Charges5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BankRole1Code chargesPayer;
 	/**
 	 * Bank which will pay the charges.
 	 * <p>
@@ -107,20 +109,21 @@ public class Charges5 {
 	 * definition} = "Bank which will pay the charges."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargesPayer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargesPayer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Charges5.mmObject();
 			businessComponentTrace_lazy = () -> ChargeBearer.mmObject();
+			componentContext_lazy = () -> Charges5.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsPyer";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesPayer";
 			definition = "Bank which will pay the charges.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BankRole1Code.mmObject();
 		}
 	};
+	protected BankRole1Code chargesPayee;
 	/**
 	 * Bank which will receive the charges.
 	 * <p>
@@ -153,20 +156,21 @@ public class Charges5 {
 	 * definition} = "Bank which will receive the charges."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargesPayee = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargesPayee = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Charges5.mmObject();
 			businessComponentTrace_lazy = () -> ChargeRecipient.mmObject();
+			componentContext_lazy = () -> Charges5.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsPyee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesPayee";
 			definition = "Bank which will receive the charges.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BankRole1Code.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount of the charges taken by the payer.
 	 * <p>
@@ -180,8 +184,8 @@ public class Charges5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Charges5
@@ -199,20 +203,21 @@ public class Charges5 {
 	 * definition} = "Amount of the charges taken by the payer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Charges5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of the charges taken by the payer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate percentage;
 	/**
 	 * Amount of the charges expressed as a percentage of the amount paid by the
 	 * obligor bank.
@@ -227,8 +232,8 @@ public class Charges5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargeRate
-	 * Adjustment.ChargeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+	 * Adjustment.mmChargeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Charges5
@@ -248,20 +253,21 @@ public class Charges5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Percentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
 			componentContext_lazy = () -> Charges5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargeRate;
 			isDerived = false;
 			xmlTag = "Pctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Amount of the charges expressed as a percentage of the amount paid by the obligor bank.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Max35Text type;
 	/**
 	 * Type of charges. For example: transaction charges, financing charges,
 	 * deferred payment, interests.
@@ -275,8 +281,8 @@ public class Charges5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Charges5
@@ -296,17 +302,17 @@ public class Charges5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> Charges5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of charges. For example: transaction charges, financing charges, deferred payment, interests.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -314,10 +320,10 @@ public class Charges5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charges5.ChargesPayer, com.tools20022.repository.msg.Charges5.ChargesPayee, com.tools20022.repository.msg.Charges5.Amount,
-						com.tools20022.repository.msg.Charges5.Percentage, com.tools20022.repository.msg.Charges5.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charges5.mmChargesPayer, com.tools20022.repository.msg.Charges5.mmChargesPayee, com.tools20022.repository.msg.Charges5.mmAmount,
+						com.tools20022.repository.msg.Charges5.mmPercentage, com.tools20022.repository.msg.Charges5.mmType);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Charges5";
 				definition = "Charges related to a payment obligation contracted between two financial institutions related to the financing of a commercial transaction.";
@@ -325,5 +331,45 @@ public class Charges5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BankRole1Code getChargesPayer() {
+		return chargesPayer;
+	}
+
+	public void setChargesPayer(BankRole1Code chargesPayer) {
+		this.chargesPayer = chargesPayer;
+	}
+
+	public BankRole1Code getChargesPayee() {
+		return chargesPayee;
+	}
+
+	public void setChargesPayee(BankRole1Code chargesPayee) {
+		this.chargesPayee = chargesPayee;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PercentageRate getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(PercentageRate percentage) {
+		this.percentage = percentage;
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
 	}
 }

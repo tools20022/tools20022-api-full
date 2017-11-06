@@ -35,32 +35,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties5#Settler
- * AccountParties5.Settler}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties6#Settler
- * AccountParties6.Settler}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties4#Settler
- * AccountParties4.Settler}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties7#Settler
- * AccountParties7.Settler}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties9#Settler
- * AccountParties9.Settler}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties8#Settler
- * AccountParties8.Settler}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties11#Settlor
- * AccountParties11.Settlor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties10#Settlor
- * AccountParties10.Settlor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties12#Settlor
- * AccountParties12.Settlor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties13#Settlor
- * AccountParties13.Settlor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties14#Settlor
- * AccountParties14.Settlor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties15#Settlor
- * AccountParties15.Settlor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties16#Settlor
- * AccountParties16.Settlor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties5#mmSettler
+ * AccountParties5.mmSettler}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties6#mmSettler
+ * AccountParties6.mmSettler}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties4#mmSettler
+ * AccountParties4.mmSettler}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties7#mmSettler
+ * AccountParties7.mmSettler}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties9#mmSettler
+ * AccountParties9.mmSettler}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties8#mmSettler
+ * AccountParties8.mmSettler}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties11#mmSettlor
+ * AccountParties11.mmSettlor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties10#mmSettlor
+ * AccountParties10.mmSettlor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties12#mmSettlor
+ * AccountParties12.mmSettlor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties13#mmSettlor
+ * AccountParties13.mmSettlor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties14#mmSettlor
+ * AccountParties14.mmSettlor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties15#mmSettlor
+ * AccountParties15.mmSettlor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties16#mmSettlor
+ * AccountParties16.mmSettlor}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -70,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,15 +90,15 @@ public class Settlor extends InvestmentFundPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Settlor";
 				definition = "Entity that creates a trust or contributes assets to the trust.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties5.Settler, com.tools20022.repository.msg.AccountParties6.Settler, com.tools20022.repository.msg.AccountParties4.Settler,
-						com.tools20022.repository.msg.AccountParties7.Settler, com.tools20022.repository.msg.AccountParties9.Settler, com.tools20022.repository.msg.AccountParties8.Settler,
-						com.tools20022.repository.msg.AccountParties11.Settlor, com.tools20022.repository.msg.AccountParties10.Settlor, com.tools20022.repository.msg.AccountParties12.Settlor,
-						com.tools20022.repository.msg.AccountParties13.Settlor, com.tools20022.repository.msg.AccountParties14.Settlor, com.tools20022.repository.msg.AccountParties15.Settlor,
-						com.tools20022.repository.msg.AccountParties16.Settlor);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties5.mmSettler, com.tools20022.repository.msg.AccountParties6.mmSettler, com.tools20022.repository.msg.AccountParties4.mmSettler,
+						com.tools20022.repository.msg.AccountParties7.mmSettler, com.tools20022.repository.msg.AccountParties9.mmSettler, com.tools20022.repository.msg.AccountParties8.mmSettler,
+						com.tools20022.repository.msg.AccountParties11.mmSettlor, com.tools20022.repository.msg.AccountParties10.mmSettlor, com.tools20022.repository.msg.AccountParties12.mmSettlor,
+						com.tools20022.repository.msg.AccountParties13.mmSettlor, com.tools20022.repository.msg.AccountParties14.mmSettlor, com.tools20022.repository.msg.AccountParties15.mmSettlor,
+						com.tools20022.repository.msg.AccountParties16.mmSettlor);
 				superType_lazy = () -> InvestmentFundPartyRole.mmObject();
 			}
 		});

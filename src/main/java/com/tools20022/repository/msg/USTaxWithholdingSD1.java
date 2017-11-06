@@ -36,22 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.USTaxWithholdingSD1#PlaceAndName
- * USTaxWithholdingSD1.PlaceAndName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.USTaxWithholdingSD1#NRATaxCode
- * USTaxWithholdingSD1.NRATaxCode}</li>
+ * {@linkplain com.tools20022.repository.msg.USTaxWithholdingSD1#mmPlaceAndName
+ * USTaxWithholdingSD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.USTaxWithholdingSD1#WithholdingTaxRate
- * USTaxWithholdingSD1.WithholdingTaxRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.USTaxWithholdingSD1#Quantity
- * USTaxWithholdingSD1.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.USTaxWithholdingSD1#mmNRATaxCode
+ * USTaxWithholdingSD1.mmNRATaxCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.USTaxWithholdingSD1#mmWithholdingTaxRate
+ * USTaxWithholdingSD1.mmWithholdingTaxRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.USTaxWithholdingSD1#mmQuantity
+ * USTaxWithholdingSD1.mmQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class USTaxWithholdingSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -92,7 +94,7 @@ public class USTaxWithholdingSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> USTaxWithholdingSD1.mmObject();
 			isDerived = false;
@@ -100,11 +102,12 @@ public class USTaxWithholdingSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected NRATax1Code nRATaxCode;
 	/**
 	 * Non resident alien (NRA) tax code. Each U.S. tax withholding eligible
 	 * distribution must have a determination of the tax liability. This code is
@@ -138,7 +141,7 @@ public class USTaxWithholdingSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NRATaxCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNRATaxCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> USTaxWithholdingSD1.mmObject();
 			isDerived = false;
@@ -146,11 +149,12 @@ public class USTaxWithholdingSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NRATaxCode";
 			definition = "Non resident alien (NRA) tax code. Each U.S. tax withholding eligible distribution must have a determination of the tax liability. This code is relevant to tax withholding and U.S. IRS reporting. Foreign securities also have an applicable tax code, but all foreign issues have one standard code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NRATax1Code.mmObject();
 		}
 	};
+	protected RateFormat6Choice withholdingTaxRate;
 	/**
 	 * Percentage of a cash distribution that will be withheld by a tax
 	 * authority.
@@ -182,7 +186,7 @@ public class USTaxWithholdingSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WithholdingTaxRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWithholdingTaxRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> USTaxWithholdingSD1.mmObject();
 			isDerived = false;
@@ -190,11 +194,12 @@ public class USTaxWithholdingSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate";
 			definition = "Percentage of a cash distribution that will be withheld by a tax authority.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RateFormat6Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice quantity;
 	/**
 	 * Elected quantity per NRA tax code.
 	 * <p>
@@ -223,7 +228,7 @@ public class USTaxWithholdingSD1 {
 	 * definition} = "Elected quantity per NRA tax code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> USTaxWithholdingSD1.mmObject();
 			isDerived = false;
@@ -231,8 +236,8 @@ public class USTaxWithholdingSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Elected quantity per NRA tax code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
@@ -240,14 +245,46 @@ public class USTaxWithholdingSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.USTaxWithholdingSD1.PlaceAndName, com.tools20022.repository.msg.USTaxWithholdingSD1.NRATaxCode,
-						com.tools20022.repository.msg.USTaxWithholdingSD1.WithholdingTaxRate, com.tools20022.repository.msg.USTaxWithholdingSD1.Quantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.USTaxWithholdingSD1.mmPlaceAndName, com.tools20022.repository.msg.USTaxWithholdingSD1.mmNRATaxCode,
+						com.tools20022.repository.msg.USTaxWithholdingSD1.mmWithholdingTaxRate, com.tools20022.repository.msg.USTaxWithholdingSD1.mmQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "USTaxWithholdingSD1";
 				definition = "US tax withholding election details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public NRATax1Code getNRATaxCode() {
+		return nRATaxCode;
+	}
+
+	public void setNRATaxCode(NRATax1Code nRATaxCode) {
+		this.nRATaxCode = nRATaxCode;
+	}
+
+	public RateFormat6Choice getWithholdingTaxRate() {
+		return withholdingTaxRate;
+	}
+
+	public void setWithholdingTaxRate(RateFormat6Choice withholdingTaxRate) {
+		this.withholdingTaxRate = withholdingTaxRate;
+	}
+
+	public FinancialInstrumentQuantity15Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(FinancialInstrumentQuantity15Choice quantity) {
+		this.quantity = quantity;
 	}
 }

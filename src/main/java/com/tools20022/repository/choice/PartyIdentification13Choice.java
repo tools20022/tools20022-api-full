@@ -38,11 +38,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification13Choice#BICOrBEI
- * PartyIdentification13Choice.BICOrBEI}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification13Choice#mmBICOrBEI
+ * PartyIdentification13Choice.mmBICOrBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification13Choice#ProprietaryIdentification
- * PartyIdentification13Choice.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification13Choice#mmProprietaryIdentification
+ * PartyIdentification13Choice.mmProprietaryIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,54 +54,54 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#AccountOwner
- * IntraPositionMovementConfirmationV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmAccountOwner
+ * IntraPositionMovementConfirmationV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01#AccountOwner
- * IntraPositionMovementPostingReportV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01#mmAccountOwner
+ * IntraPositionMovementPostingReportV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03#AccountOwner
- * SecuritiesBalanceAccountingReportV03.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03#mmAccountOwner
+ * SecuritiesBalanceAccountingReportV03.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03#AccountOwner
- * SecuritiesBalanceCustodyReportV03.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03#mmAccountOwner
+ * SecuritiesBalanceCustodyReportV03.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#AccountOwner
- * SecuritiesSettlementConditionModificationStatusAdviceV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#mmAccountOwner
+ * SecuritiesSettlementConditionModificationStatusAdviceV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01#AccountOwner
- * SecuritiesSettlementConditionsModificationRequestV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01#mmAccountOwner
+ * SecuritiesSettlementConditionsModificationRequestV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01#AccountOwner
- * SecuritiesTransactionPendingReportV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01#mmAccountOwner
+ * SecuritiesTransactionPendingReportV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01#AccountOwner
- * SecuritiesTransactionPostingReportV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01#mmAccountOwner
+ * SecuritiesTransactionPostingReportV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#AccountOwner
- * IntraPositionMovementInstructionV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#mmAccountOwner
+ * IntraPositionMovementInstructionV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#AccountOwner
- * PortfolioTransferNotificationV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV01#mmAccountOwner
+ * PortfolioTransferNotificationV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01#AccountOwner
- * SecuritiesSettlementTransactionAllegementReportV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01#mmAccountOwner
+ * SecuritiesSettlementTransactionAllegementReportV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#AccountOwner
- * SecuritiesStatementQueryV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmAccountOwner
+ * SecuritiesStatementQueryV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#AccountOwner
- * SecuritiesStatusOrStatementQueryStatusAdviceV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#mmAccountOwner
+ * SecuritiesStatusOrStatementQueryStatusAdviceV01.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01#AccountOwner
- * SecuritiesTransactionStatusQueryV01.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01#mmAccountOwner
+ * SecuritiesTransactionStatusQueryV01.mmAccountOwner}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -116,6 +116,7 @@ import java.util.function.Supplier;
 public class PartyIdentification13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier bICOrBEI;
 	/**
 	 * Code allocated to a financial or non-financial institution by the ISO
 	 * 9362 Registration Authority, as described in ISO 9362
@@ -132,8 +133,8 @@ public class PartyIdentification13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +155,21 @@ public class PartyIdentification13Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification13Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected GenericIdentification19 proprietaryIdentification;
 	/**
 	 * Unique and unambiguous identifier, as assigned to a financial institution
 	 * using a proprietary identification scheme.
@@ -182,8 +184,8 @@ public class PartyIdentification13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,17 +206,17 @@ public class PartyIdentification13Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification13Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification19.mmObject();
 		}
 	};
@@ -222,16 +224,17 @@ public class PartyIdentification13Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification13Choice.BICOrBEI, com.tools20022.repository.choice.PartyIdentification13Choice.ProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification13Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification13Choice.mmProprietaryIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmAccountOwner,
+						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.mmAccountOwner, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmAccountOwner,
+						com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.mmAccountOwner,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.AccountOwner, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.AccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.AccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.AccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.AccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.AccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.AccountOwner, com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.AccountOwner, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.AccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.AccountOwner, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.AccountOwner);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -245,5 +248,21 @@ public class PartyIdentification13Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getBICOrBEI() {
+		return bICOrBEI;
+	}
+
+	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = bICOrBEI;
+	}
+
+	public GenericIdentification19 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(GenericIdentification19 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
 	}
 }

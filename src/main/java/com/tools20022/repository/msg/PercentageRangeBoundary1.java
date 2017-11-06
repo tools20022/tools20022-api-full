@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PercentageRangeBoundary1#BoundaryRate
- * PercentageRangeBoundary1.BoundaryRate}</li>
+ * {@linkplain com.tools20022.repository.msg.PercentageRangeBoundary1#mmBoundaryRate
+ * PercentageRangeBoundary1.mmBoundaryRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PercentageRangeBoundary1#Included
- * PercentageRangeBoundary1.Included}</li>
+ * {@linkplain com.tools20022.repository.msg.PercentageRangeBoundary1#mmIncluded
+ * PercentageRangeBoundary1.mmIncluded}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PercentageRangeBoundary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate boundaryRate;
 	/**
 	 * Percentage rate of the range limit.
 	 * <p>
@@ -87,7 +88,7 @@ public class PercentageRangeBoundary1 {
 	 * definition} = "Percentage rate of the range limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BoundaryRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBoundaryRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PercentageRangeBoundary1.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class PercentageRangeBoundary1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoundaryRate";
 			definition = "Percentage rate of the range limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected YesNoIndicator included;
 	/**
 	 * Indicates whether the boundary percentage rate is included in the range
 	 * of percentage rates.
@@ -131,7 +133,7 @@ public class PercentageRangeBoundary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Included = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PercentageRangeBoundary1.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class PercentageRangeBoundary1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Included";
 			definition = "Indicates whether the boundary percentage rate is included in the range of percentage rates. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class PercentageRangeBoundary1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageRangeBoundary1.BoundaryRate, com.tools20022.repository.msg.PercentageRangeBoundary1.Included);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageRangeBoundary1.mmBoundaryRate, com.tools20022.repository.msg.PercentageRangeBoundary1.mmIncluded);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PercentageRangeBoundary1";
 				definition = "Limit for a percentage rate range.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getBoundaryRate() {
+		return boundaryRate;
+	}
+
+	public void setBoundaryRate(PercentageRate boundaryRate) {
+		this.boundaryRate = boundaryRate;
+	}
+
+	public YesNoIndicator getIncluded() {
+		return included;
+	}
+
+	public void setIncluded(YesNoIndicator included) {
+		this.included = included;
 	}
 }

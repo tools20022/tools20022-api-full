@@ -34,26 +34,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData5#MatchingSystemUniqueReference
- * TradeData5.MatchingSystemUniqueReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData5#mmMatchingSystemUniqueReference
+ * TradeData5.mmMatchingSystemUniqueReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData5#NotificationIdentification
- * TradeData5.NotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData5#mmNotificationIdentification
+ * TradeData5.mmNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData5#MatchingSystemMatchingReference
- * TradeData5.MatchingSystemMatchingReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData5#mmMatchingSystemMatchingReference
+ * TradeData5.mmMatchingSystemMatchingReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradeData5#CurrentStatusDateTime
- * TradeData5.CurrentStatusDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeData5#ProductType
- * TradeData5.ProductType}</li>
+ * {@linkplain com.tools20022.repository.msg.TradeData5#mmCurrentStatusDateTime
+ * TradeData5.mmCurrentStatusDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeData5#mmProductType
+ * TradeData5.mmProductType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeData5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text matchingSystemUniqueReference;
 	/**
 	 * Reference to the unique system identification assigned to the trade by
 	 * the central matching system.
@@ -102,7 +103,7 @@ public class TradeData5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchingSystemUniqueReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchingSystemUniqueReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeData5.mmObject();
 			isDerived = false;
@@ -110,11 +111,12 @@ public class TradeData5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
 			definition = "Reference to the unique system identification assigned to the trade  by the central matching system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text notificationIdentification;
 	/**
 	 * Reference to the identification of the notification for which the status
 	 * is given, as assigned by the participant that submitted the foreign
@@ -145,7 +147,7 @@ public class TradeData5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeData5.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class TradeData5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Reference to the identification of the notification for which the status is given, as assigned by the participant that submitted the foreign exchange trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text matchingSystemMatchingReference;
 	/**
 	 * Reference to the unique matching identification assigned to the trade and
 	 * to the matching trade from the counterparty by the central matching
@@ -188,7 +191,7 @@ public class TradeData5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchingSystemMatchingReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchingSystemMatchingReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeData5.mmObject();
 			isDerived = false;
@@ -196,11 +199,12 @@ public class TradeData5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemMatchingReference";
 			definition = "Reference to the unique matching identification assigned to the trade and to the matching trade from the counterparty by the central matching system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime currentStatusDateTime;
 	/**
 	 * Specifies the date and time at which the current status was assigned to
 	 * the individual trade.
@@ -230,7 +234,7 @@ public class TradeData5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentStatusDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentStatusDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradeData5.mmObject();
 			isDerived = false;
@@ -238,11 +242,12 @@ public class TradeData5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentStatusDateTime";
 			definition = "Specifies the date and time at which the current status was assigned to the individual trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text productType;
 	/**
 	 * Product type of the individual trade.
 	 * <p>
@@ -255,8 +260,8 @@ public class TradeData5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Product#ProductCategory
-	 * Product.ProductCategory}</li>
+	 * {@linkplain com.tools20022.repository.entity.Product#mmProductCategory
+	 * Product.mmProductCategory}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TradeData5
@@ -274,17 +279,17 @@ public class TradeData5 {
 	 * definition} = "Product type of the individual trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProductType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProductType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmProductCategory;
 			componentContext_lazy = () -> TradeData5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.ProductCategory;
 			isDerived = false;
 			xmlTag = "PdctTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductType";
 			definition = "Product type of the individual trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -292,9 +297,9 @@ public class TradeData5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData5.MatchingSystemUniqueReference, com.tools20022.repository.msg.TradeData5.NotificationIdentification,
-						com.tools20022.repository.msg.TradeData5.MatchingSystemMatchingReference, com.tools20022.repository.msg.TradeData5.CurrentStatusDateTime, com.tools20022.repository.msg.TradeData5.ProductType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData5.mmMatchingSystemUniqueReference, com.tools20022.repository.msg.TradeData5.mmNotificationIdentification,
+						com.tools20022.repository.msg.TradeData5.mmMatchingSystemMatchingReference, com.tools20022.repository.msg.TradeData5.mmCurrentStatusDateTime, com.tools20022.repository.msg.TradeData5.mmProductType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeData5";
 				definition = "Provides information on the status of a trade.";
@@ -302,5 +307,45 @@ public class TradeData5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMatchingSystemUniqueReference() {
+		return matchingSystemUniqueReference;
+	}
+
+	public void setMatchingSystemUniqueReference(Max35Text matchingSystemUniqueReference) {
+		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
+	}
+
+	public Max35Text getNotificationIdentification() {
+		return notificationIdentification;
+	}
+
+	public void setNotificationIdentification(Max35Text notificationIdentification) {
+		this.notificationIdentification = notificationIdentification;
+	}
+
+	public Max35Text getMatchingSystemMatchingReference() {
+		return matchingSystemMatchingReference;
+	}
+
+	public void setMatchingSystemMatchingReference(Max35Text matchingSystemMatchingReference) {
+		this.matchingSystemMatchingReference = matchingSystemMatchingReference;
+	}
+
+	public ISODateTime getCurrentStatusDateTime() {
+		return currentStatusDateTime;
+	}
+
+	public void setCurrentStatusDateTime(ISODateTime currentStatusDateTime) {
+		this.currentStatusDateTime = currentStatusDateTime;
+	}
+
+	public Max35Text getProductType() {
+		return productType;
+	}
+
+	public void setProductType(Max35Text productType) {
+		this.productType = productType;
 	}
 }

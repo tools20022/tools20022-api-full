@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaginationBalance2#OpeningBalance
- * PaginationBalance2.OpeningBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.PaginationBalance2#mmOpeningBalance
+ * PaginationBalance2.mmOpeningBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaginationBalance2#ClosingBalance
- * PaginationBalance2.ClosingBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.PaginationBalance2#mmClosingBalance
+ * PaginationBalance2.mmClosingBalance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaginationBalance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OpeningBalance3Choice openingBalance;
 	/**
 	 * Opening balance of the financial instrument in the statement or of the
 	 * intermediary opening balance of the page of the statement.
@@ -94,7 +95,7 @@ public class PaginationBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OpeningBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOpeningBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaginationBalance2.mmObject();
 			isDerived = false;
@@ -102,12 +103,13 @@ public class PaginationBalance2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningBalance";
 			definition = "Opening balance of the financial instrument in the statement or of the intermediary opening balance of the page of the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OpeningBalance3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> OpeningBalance3Choice.mmObject();
 		}
 	};
+	protected ClosingBalance3Choice closingBalance;
 	/**
 	 * Closing balance of the financial instrument in the statement or of the
 	 * intermediary closing balance of the page of the statement
@@ -138,7 +140,7 @@ public class PaginationBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClosingBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClosingBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaginationBalance2.mmObject();
 			isDerived = false;
@@ -146,18 +148,18 @@ public class PaginationBalance2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingBalance";
 			definition = "Closing balance of the financial instrument in the statement or of the intermediary closing balance of the page of the statement";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ClosingBalance3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ClosingBalance3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance2.OpeningBalance, com.tools20022.repository.msg.PaginationBalance2.ClosingBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance2.mmOpeningBalance, com.tools20022.repository.msg.PaginationBalance2.mmClosingBalance);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaginationBalance2";
 				definition = "Balance of a financial instrument for a specific statement page.";
@@ -165,5 +167,21 @@ public class PaginationBalance2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OpeningBalance3Choice getOpeningBalance() {
+		return openingBalance;
+	}
+
+	public void setOpeningBalance(OpeningBalance3Choice openingBalance) {
+		this.openingBalance = openingBalance;
+	}
+
+	public ClosingBalance3Choice getClosingBalance() {
+		return closingBalance;
+	}
+
+	public void setClosingBalance(ClosingBalance3Choice closingBalance) {
+		this.closingBalance = closingBalance;
 	}
 }

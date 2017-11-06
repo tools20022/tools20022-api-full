@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.DefaultFund;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information such as the default fund account identification or the
@@ -37,16 +38,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DefaultFund1#DefaultFundAccount
- * DefaultFund1.DefaultFundAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.DefaultFund1#mmDefaultFundAccount
+ * DefaultFund1.mmDefaultFundAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DefaultFund1#TotalDefaultFundAmount
- * DefaultFund1.TotalDefaultFundAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DefaultFund1#Contribution
- * DefaultFund1.Contribution}</li>
+ * {@linkplain com.tools20022.repository.msg.DefaultFund1#mmTotalDefaultFundAmount
+ * DefaultFund1.mmTotalDefaultFundAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DefaultFund1#mmContribution
+ * DefaultFund1.mmContribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DefaultFund1#IncreaseCoverageAmount
- * DefaultFund1.IncreaseCoverageAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.DefaultFund1#mmIncreaseCoverageAmount
+ * DefaultFund1.mmIncreaseCoverageAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DefaultFund1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification4Choice defaultFundAccount;
 	/**
 	 * Specifies the account identification of the clearing member at the ICSD
 	 * (International Central Securities Depository) or at the central bank.
@@ -86,8 +88,8 @@ public class DefaultFund1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +109,21 @@ public class DefaultFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DefaultFundAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDefaultFundAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> DefaultFund1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "DfltFndAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultFundAccount";
 			definition = "Specifies the account identification of the clearing member at the ICSD (International Central Securities Depository) or at the central bank.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalDefaultFundAmount;
 	/**
 	 * Total amount required by the clearing member to participate to the
 	 * default fund.
@@ -135,8 +138,8 @@ public class DefaultFund1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DefaultFund#TotalAmount
-	 * DefaultFund.TotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.DefaultFund#mmTotalAmount
+	 * DefaultFund.mmTotalAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,20 +159,21 @@ public class DefaultFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalDefaultFundAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalDefaultFundAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmTotalAmount;
 			componentContext_lazy = () -> DefaultFund1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFund.TotalAmount;
 			isDerived = false;
 			xmlTag = "TtlDfltFndAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDefaultFundAmount";
 			definition = "Total amount required by the clearing member to participate to the default fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Contribution1> contribution;
 	/**
 	 * Provides details about the contribution to the default fund by trading
 	 * venues/products.
@@ -182,8 +186,8 @@ public class DefaultFund1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DefaultFund#Contribution
-	 * DefaultFund.Contribution}</li>
+	 * {@linkplain com.tools20022.repository.entity.DefaultFund#mmContribution
+	 * DefaultFund.mmContribution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,20 +207,21 @@ public class DefaultFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Contribution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContribution = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmContribution;
 			componentContext_lazy = () -> DefaultFund1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFund.Contribution;
 			isDerived = false;
 			xmlTag = "Cntrbtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contribution";
 			definition = "Provides details about the contribution to the default fund by trading venues/products.";
 			minOccurs = 0;
-			type_lazy = () -> Contribution1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Contribution1.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount increaseCoverageAmount;
 	/**
 	 * Additional amount that the clearing member will have to provide to cover
 	 * a risk increase. This results from a risk management decision depending
@@ -232,8 +237,8 @@ public class DefaultFund1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#ExcessOrDeficitAmount
-	 * DefaultFundContribution.ExcessOrDeficitAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#mmExcessOrDeficitAmount
+	 * DefaultFundContribution.mmExcessOrDeficitAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,17 +258,17 @@ public class DefaultFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncreaseCoverageAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncreaseCoverageAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmExcessOrDeficitAmount;
 			componentContext_lazy = () -> DefaultFund1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.ExcessOrDeficitAmount;
 			isDerived = false;
 			xmlTag = "IncrCvrgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseCoverageAmount";
 			definition = "Additional amount that the clearing member will have to provide to cover a risk increase. This results from a risk management decision depending on central counterparty specific criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -271,15 +276,47 @@ public class DefaultFund1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultFund1.DefaultFundAccount, com.tools20022.repository.msg.DefaultFund1.TotalDefaultFundAmount,
-						com.tools20022.repository.msg.DefaultFund1.Contribution, com.tools20022.repository.msg.DefaultFund1.IncreaseCoverageAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultFund1.mmDefaultFundAccount, com.tools20022.repository.msg.DefaultFund1.mmTotalDefaultFundAmount,
+						com.tools20022.repository.msg.DefaultFund1.mmContribution, com.tools20022.repository.msg.DefaultFund1.mmIncreaseCoverageAmount);
 				trace_lazy = () -> DefaultFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DefaultFund1";
 				definition = "Provides information such as the default fund account identification or the default fund amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification4Choice getDefaultFundAccount() {
+		return defaultFundAccount;
+	}
+
+	public void setDefaultFundAccount(AccountIdentification4Choice defaultFundAccount) {
+		this.defaultFundAccount = defaultFundAccount;
+	}
+
+	public ActiveCurrencyAndAmount getTotalDefaultFundAmount() {
+		return totalDefaultFundAmount;
+	}
+
+	public void setTotalDefaultFundAmount(ActiveCurrencyAndAmount totalDefaultFundAmount) {
+		this.totalDefaultFundAmount = totalDefaultFundAmount;
+	}
+
+	public List<Contribution1> getContribution() {
+		return contribution;
+	}
+
+	public void setContribution(List<com.tools20022.repository.msg.Contribution1> contribution) {
+		this.contribution = contribution;
+	}
+
+	public ActiveCurrencyAndAmount getIncreaseCoverageAmount() {
+		return increaseCoverageAmount;
+	}
+
+	public void setIncreaseCoverageAmount(ActiveCurrencyAndAmount increaseCoverageAmount) {
+		this.increaseCoverageAmount = increaseCoverageAmount;
 	}
 }

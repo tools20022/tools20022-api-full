@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.CardPayment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Amounts of the deposit transaction.
@@ -37,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedAmount16#AccountSequenceNumber
- * DetailedAmount16.AccountSequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedAmount16#mmAccountSequenceNumber
+ * DetailedAmount16.mmAccountSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedAmount16#AmountToDeposit
- * DetailedAmount16.AmountToDeposit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount16#Currency
- * DetailedAmount16.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedAmount16#mmAmountToDeposit
+ * DetailedAmount16.mmAmountToDeposit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount16#mmCurrency
+ * DetailedAmount16.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedAmount16#CashBackAmount
- * DetailedAmount16.CashBackAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount16#Fees
- * DetailedAmount16.Fees}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount16#Donation
- * DetailedAmount16.Donation}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedAmount16#mmCashBackAmount
+ * DetailedAmount16.mmCashBackAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount16#mmFees
+ * DetailedAmount16.mmFees}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount16#mmDonation
+ * DetailedAmount16.mmDonation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DetailedAmount16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number accountSequenceNumber;
 	/**
 	 * Link to the account for multi-account deposit.
 	 * <p>
@@ -111,7 +113,7 @@ public class DetailedAmount16 {
 	 * definition} = "Link to the account for multi-account deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DetailedAmount16.mmObject();
 			isDerived = false;
@@ -119,11 +121,12 @@ public class DetailedAmount16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSequenceNumber";
 			definition = "Link to the account for multi-account deposit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount amountToDeposit;
 	/**
 	 * Amount of the deposit to be made on the ATM after the approval of the
 	 * deposit transaction.
@@ -138,8 +141,8 @@ public class DetailedAmount16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,33 +165,34 @@ public class DetailedAmount16 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount17#AmountToTransfer
-	 * DetailedAmount17.AmountToTransfer}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount17#mmAmountToTransfer
+	 * DetailedAmount17.mmAmountToTransfer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#AmountToDispense
-	 * DetailedAmount12.AmountToDispense}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#mmAmountToDispense
+	 * DetailedAmount12.mmAmountToDispense}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountToDeposit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountToDeposit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> DetailedAmount16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "AmtToDpst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToDeposit";
 			definition = "Amount of the deposit to be made on the ATM after the approval of the deposit transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount12.AmountToDispense;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount17.AmountToTransfer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount17.mmAmountToTransfer);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount12.mmAmountToDispense;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode currency;
 	/**
 	 * Currency of the amount to deposit when different from the base currency
 	 * of the ATM.
@@ -203,8 +207,8 @@ public class DetailedAmount16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyExchange
-	 * Payment.CurrencyExchange}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyExchange
+	 * Payment.mmCurrencyExchange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,33 +230,35 @@ public class DetailedAmount16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount17#Currency
-	 * DetailedAmount17.Currency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount17#mmCurrency
+	 * DetailedAmount17.mmCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#Currency
-	 * DetailedAmount12.Currency}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#mmCurrency
+	 * DetailedAmount12.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> DetailedAmount16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyExchange;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the amount to deposit when different from the base currency of the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount12.Currency;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount17.Currency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount17.mmCurrency);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount12.mmCurrency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount cashBackAmount;
 	/**
 	 * Cashback amount value.
 	 * <p>
@@ -281,7 +287,7 @@ public class DetailedAmount16 {
 	 * definition} = "Cashback amount value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashBackAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashBackAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DetailedAmount16.mmObject();
 			isDerived = false;
@@ -289,11 +295,12 @@ public class DetailedAmount16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashBackAmount";
 			definition = "Cashback amount value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DetailedAmount13> fees;
 	/**
 	 * Deposit fees, accepted by the customer.
 	 * <p>
@@ -325,33 +332,34 @@ public class DetailedAmount16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount17#Fees
-	 * DetailedAmount17.Fees}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount17#mmFees
+	 * DetailedAmount17.mmFees}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#Fees
-	 * DetailedAmount12.Fees}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#mmFees
+	 * DetailedAmount12.mmFees}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Fees = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DetailedAmount16.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> DetailedAmount16.mmObject();
 			isDerived = false;
 			xmlTag = "Fees";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
 			definition = "Deposit fees, accepted by the customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount12.Fees;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount17.Fees);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount17.mmFees);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount12.mmFees;
 			minOccurs = 0;
-			type_lazy = () -> DetailedAmount13.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount13.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DetailedAmount13> donation;
 	/**
 	 * Amount of the donation.
 	 * <p>
@@ -383,49 +391,98 @@ public class DetailedAmount16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount17#Donation
-	 * DetailedAmount17.Donation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount17#mmDonation
+	 * DetailedAmount17.mmDonation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#Donation
-	 * DetailedAmount12.Donation}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount12#mmDonation
+	 * DetailedAmount12.mmDonation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Donation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDonation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DetailedAmount16.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> DetailedAmount16.mmObject();
 			isDerived = false;
 			xmlTag = "Dontn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Donation";
 			definition = "Amount of the donation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount12.Donation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount17.Donation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount17.mmDonation);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount12.mmDonation;
 			minOccurs = 0;
-			type_lazy = () -> DetailedAmount13.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount13.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount16.AccountSequenceNumber, com.tools20022.repository.msg.DetailedAmount16.AmountToDeposit,
-						com.tools20022.repository.msg.DetailedAmount16.Currency, com.tools20022.repository.msg.DetailedAmount16.CashBackAmount, com.tools20022.repository.msg.DetailedAmount16.Fees,
-						com.tools20022.repository.msg.DetailedAmount16.Donation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount16.mmAccountSequenceNumber, com.tools20022.repository.msg.DetailedAmount16.mmAmountToDeposit,
+						com.tools20022.repository.msg.DetailedAmount16.mmCurrency, com.tools20022.repository.msg.DetailedAmount16.mmCashBackAmount, com.tools20022.repository.msg.DetailedAmount16.mmFees,
+						com.tools20022.repository.msg.DetailedAmount16.mmDonation);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount16";
 				definition = "Amounts of the deposit transaction.";
-				previousVersion_lazy = () -> DetailedAmount12.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(DetailedAmount17.mmObject());
+				previousVersion_lazy = () -> DetailedAmount12.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getAccountSequenceNumber() {
+		return accountSequenceNumber;
+	}
+
+	public void setAccountSequenceNumber(Number accountSequenceNumber) {
+		this.accountSequenceNumber = accountSequenceNumber;
+	}
+
+	public ImpliedCurrencyAndAmount getAmountToDeposit() {
+		return amountToDeposit;
+	}
+
+	public void setAmountToDeposit(ImpliedCurrencyAndAmount amountToDeposit) {
+		this.amountToDeposit = amountToDeposit;
+	}
+
+	public ActiveCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public ImpliedCurrencyAndAmount getCashBackAmount() {
+		return cashBackAmount;
+	}
+
+	public void setCashBackAmount(ImpliedCurrencyAndAmount cashBackAmount) {
+		this.cashBackAmount = cashBackAmount;
+	}
+
+	public List<DetailedAmount13> getFees() {
+		return fees;
+	}
+
+	public void setFees(List<com.tools20022.repository.msg.DetailedAmount13> fees) {
+		this.fees = fees;
+	}
+
+	public List<DetailedAmount13> getDonation() {
+		return donation;
+	}
+
+	public void setDonation(List<com.tools20022.repository.msg.DetailedAmount13> donation) {
+		this.donation = donation;
 	}
 }

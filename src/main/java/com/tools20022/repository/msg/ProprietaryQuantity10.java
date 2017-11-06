@@ -36,25 +36,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity10#ShortLongPosition
- * ProprietaryQuantity10.ShortLongPosition}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryQuantity10#Quantity
- * ProprietaryQuantity10.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity10#mmShortLongPosition
+ * ProprietaryQuantity10.mmShortLongPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity10#QuantityType
- * ProprietaryQuantity10.QuantityType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryQuantity10#Issuer
- * ProprietaryQuantity10.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity10#mmQuantity
+ * ProprietaryQuantity10.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity10#SchemeName
- * ProprietaryQuantity10.SchemeName}</li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity10#mmQuantityType
+ * ProprietaryQuantity10.mmQuantityType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryQuantity10#mmIssuer
+ * ProprietaryQuantity10.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity10#mmSchemeName
+ * ProprietaryQuantity10.mmSchemeName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryQuantity10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ShortLong1Code shortLongPosition;
 	/**
 	 * Sign of the quantity of security.
 	 * <p>
@@ -96,7 +98,7 @@ public class ProprietaryQuantity10 {
 	 * definition} = "Sign of the quantity of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryQuantity10.mmObject();
 			isDerived = false;
@@ -104,11 +106,12 @@ public class ProprietaryQuantity10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongPosition";
 			definition = "Sign of the quantity of security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	protected RestrictedFINDecimalNumber quantity;
 	/**
 	 * Provides the proprietary quantity with a decimal number.
 	 * <p>
@@ -137,7 +140,7 @@ public class ProprietaryQuantity10 {
 	 * definition} = "Provides the proprietary quantity with a decimal number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryQuantity10.mmObject();
 			isDerived = false;
@@ -145,11 +148,12 @@ public class ProprietaryQuantity10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Provides the proprietary quantity with a decimal number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText quantityType;
 	/**
 	 * Identifies the type of proprietary quantity reported.
 	 * <p>
@@ -178,7 +182,7 @@ public class ProprietaryQuantity10 {
 	 * definition} = "Identifies the type of proprietary quantity reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantityType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryQuantity10.mmObject();
 			isDerived = false;
@@ -186,11 +190,12 @@ public class ProprietaryQuantity10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityType";
 			definition = "Identifies the type of proprietary quantity reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText issuer;
 	/**
 	 * Provides information related to issuer in free format.
 	 * <p>
@@ -204,8 +209,8 @@ public class ProprietaryQuantity10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#PartyRole
-	 * GenericIdentification.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmPartyRole
+	 * GenericIdentification.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -224,20 +229,21 @@ public class ProprietaryQuantity10 {
 	 * definition} = "Provides information related to issuer in free format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmPartyRole;
 			componentContext_lazy = () -> ProprietaryQuantity10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.PartyRole;
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Provides information related to issuer in free format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText schemeName;
 	/**
 	 * Name of the identification scheme.
 	 * <p>
@@ -251,8 +257,8 @@ public class ProprietaryQuantity10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Scheme#NameShort
-	 * Scheme.NameShort}</li>
+	 * {@linkplain com.tools20022.repository.entity.Scheme#mmNameShort
+	 * Scheme.mmNameShort}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -271,17 +277,17 @@ public class ProprietaryQuantity10 {
 	 * definition} = "Name of the identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SchemeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmNameShort;
 			componentContext_lazy = () -> ProprietaryQuantity10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.NameShort;
 			isDerived = false;
 			xmlTag = "SchmeNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeName";
 			definition = "Name of the identification scheme.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
@@ -289,14 +295,54 @@ public class ProprietaryQuantity10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryQuantity10.ShortLongPosition, com.tools20022.repository.msg.ProprietaryQuantity10.Quantity,
-						com.tools20022.repository.msg.ProprietaryQuantity10.QuantityType, com.tools20022.repository.msg.ProprietaryQuantity10.Issuer, com.tools20022.repository.msg.ProprietaryQuantity10.SchemeName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryQuantity10.mmShortLongPosition, com.tools20022.repository.msg.ProprietaryQuantity10.mmQuantity,
+						com.tools20022.repository.msg.ProprietaryQuantity10.mmQuantityType, com.tools20022.repository.msg.ProprietaryQuantity10.mmIssuer, com.tools20022.repository.msg.ProprietaryQuantity10.mmSchemeName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryQuantity10";
 				definition = "Proprietary quantity format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ShortLong1Code getShortLongPosition() {
+		return shortLongPosition;
+	}
+
+	public void setShortLongPosition(ShortLong1Code shortLongPosition) {
+		this.shortLongPosition = shortLongPosition;
+	}
+
+	public RestrictedFINDecimalNumber getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(RestrictedFINDecimalNumber quantity) {
+		this.quantity = quantity;
+	}
+
+	public Exact4AlphaNumericText getQuantityType() {
+		return quantityType;
+	}
+
+	public void setQuantityType(Exact4AlphaNumericText quantityType) {
+		this.quantityType = quantityType;
+	}
+
+	public Max4AlphaNumericText getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(Max4AlphaNumericText issuer) {
+		this.issuer = issuer;
+	}
+
+	public Max4AlphaNumericText getSchemeName() {
+		return schemeName;
+	}
+
+	public void setSchemeName(Max4AlphaNumericText schemeName) {
+		this.schemeName = schemeName;
 	}
 }

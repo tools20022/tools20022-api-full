@@ -34,13 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2#Identification
- * TaxVoucher2.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2#BargainDate
- * TaxVoucher2.BargainDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2#mmIdentification
+ * TaxVoucher2.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2#mmBargainDate
+ * TaxVoucher2.mmBargainDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxVoucher2#BargainSettlementDate
- * TaxVoucher2.BargainSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxVoucher2#mmBargainSettlementDate
+ * TaxVoucher2.mmBargainSettlementDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxVoucher2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique reference for the tax voucher required by the relevant tax
 	 * authorities to ensure that any claim relating to this particular tax
@@ -78,8 +79,8 @@ public class TaxVoucher2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#Identification
-	 * TaxVoucher.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmIdentification
+	 * TaxVoucher.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class TaxVoucher2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmIdentification;
 			componentContext_lazy = () -> TaxVoucher2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique reference for the tax voucher required by the relevant tax authorities to ensure that any claim relating to this particular tax voucher cannot be duplicated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice bargainDate;
 	/**
 	 * Date on which a dividend reinvestment purchase was completed. If there is
 	 * only one bargain involved, the time it was struck needs to be included.
@@ -127,8 +129,8 @@ public class TaxVoucher2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#BargainDate
-	 * TaxVoucher.BargainDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmBargainDate
+	 * TaxVoucher.mmBargainDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +150,21 @@ public class TaxVoucher2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BargainDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBargainDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmBargainDate;
 			componentContext_lazy = () -> TaxVoucher2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.BargainDate;
 			isDerived = false;
 			xmlTag = "BrgnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BargainDate";
 			definition = "Date on which a dividend reinvestment purchase was completed. If there is only one bargain involved, the time it was struck needs to be included.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice bargainSettlementDate;
 	/**
 	 * Settlement date of the dividend reinvestment purchase transaction.
 	 * <p>
@@ -175,8 +178,8 @@ public class TaxVoucher2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#BargainSettlementDate
-	 * TaxVoucher.BargainSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmBargainSettlementDate
+	 * TaxVoucher.mmBargainSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,17 +198,17 @@ public class TaxVoucher2 {
 	 * "Settlement date of the dividend reinvestment purchase transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BargainSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBargainSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmBargainSettlementDate;
 			componentContext_lazy = () -> TaxVoucher2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.BargainSettlementDate;
 			isDerived = false;
 			xmlTag = "BrgnSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BargainSettlementDate";
 			definition = "Settlement date of the dividend reinvestment purchase transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -213,14 +216,39 @@ public class TaxVoucher2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.Identification, com.tools20022.repository.msg.TaxVoucher2.BargainDate, com.tools20022.repository.msg.TaxVoucher2.BargainSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.mmIdentification, com.tools20022.repository.msg.TaxVoucher2.mmBargainDate,
+						com.tools20022.repository.msg.TaxVoucher2.mmBargainSettlementDate);
 				trace_lazy = () -> TaxVoucher.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxVoucher2";
 				definition = "Specifies tax vouchers in the framework of a corporate action event.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public DateAndDateTimeChoice getBargainDate() {
+		return bargainDate;
+	}
+
+	public void setBargainDate(DateAndDateTimeChoice bargainDate) {
+		this.bargainDate = bargainDate;
+	}
+
+	public DateAndDateTimeChoice getBargainSettlementDate() {
+		return bargainSettlementDate;
+	}
+
+	public void setBargainSettlementDate(DateAndDateTimeChoice bargainSettlementDate) {
+		this.bargainSettlementDate = bargainSettlementDate;
 	}
 }

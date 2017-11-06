@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Transaction for which the exception is sent.
@@ -37,26 +38,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction27#TransactionIdentification
- * ATMTransaction27.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction27#mmTransactionIdentification
+ * ATMTransaction27.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction27#ReconciliationIdentification
- * ATMTransaction27.ReconciliationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction27#Exception
- * ATMTransaction27.Exception}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction27#mmReconciliationIdentification
+ * ATMTransaction27.mmReconciliationIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction27#mmException
+ * ATMTransaction27.mmException}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction27#ExceptionDetail
- * ATMTransaction27.ExceptionDetail}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction27#mmExceptionDetail
+ * ATMTransaction27.mmExceptionDetail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction27#ElectronicPurseBalance
- * ATMTransaction27.ElectronicPurseBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction27#mmElectronicPurseBalance
+ * ATMTransaction27.mmElectronicPurseBalance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMTransaction27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionIdentifier1 transactionIdentification;
 	/**
 	 * Identification of the transaction.
 	 * <p>
@@ -100,11 +102,11 @@ public class ATMTransaction27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction25#TransactionIdentification
-	 * ATMTransaction25.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction25#mmTransactionIdentification
+	 * ATMTransaction25.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction27.mmObject();
 			isDerived = false;
@@ -112,13 +114,14 @@ public class ATMTransaction27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction25.TransactionIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction25.mmTransactionIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionIdentifier1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
 		}
 	};
+	protected Max35Text reconciliationIdentification;
 	/**
 	 * Identification of the reconciliation period.
 	 * <p>
@@ -147,11 +150,11 @@ public class ATMTransaction27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction25#ReconciliationIdentification
-	 * ATMTransaction25.ReconciliationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction25#mmReconciliationIdentification
+	 * ATMTransaction25.mmReconciliationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction27.mmObject();
 			isDerived = false;
@@ -159,12 +162,13 @@ public class ATMTransaction27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Identification of the reconciliation period.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction25.ReconciliationIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction25.mmReconciliationIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<FailureReason8Code> exception;
 	/**
 	 * Exception occurring outside the service.
 	 * <p>
@@ -193,7 +197,7 @@ public class ATMTransaction27 {
 	 * definition} = "Exception occurring outside the service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Exception = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmException = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction27.mmObject();
 			isDerived = false;
@@ -205,6 +209,7 @@ public class ATMTransaction27 {
 			simpleType_lazy = () -> FailureReason8Code.mmObject();
 		}
 	};
+	protected List<Max70Text> exceptionDetail;
 	/**
 	 * Explanation of the exception.
 	 * <p>
@@ -232,7 +237,7 @@ public class ATMTransaction27 {
 	 * definition} = "Explanation of the exception."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExceptionDetail = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExceptionDetail = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction27.mmObject();
 			isDerived = false;
@@ -244,6 +249,7 @@ public class ATMTransaction27 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CurrencyAndAmount electronicPurseBalance;
 	/**
 	 * Balance of the captured card or epurse if available.
 	 * <p>
@@ -272,7 +278,7 @@ public class ATMTransaction27 {
 	 * definition} = "Balance of the captured card or epurse if available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElectronicPurseBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElectronicPurseBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction27.mmObject();
 			isDerived = false;
@@ -280,8 +286,8 @@ public class ATMTransaction27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicPurseBalance";
 			definition = "Balance of the captured card or epurse if available.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -289,9 +295,9 @@ public class ATMTransaction27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction27.TransactionIdentification, com.tools20022.repository.msg.ATMTransaction27.ReconciliationIdentification,
-						com.tools20022.repository.msg.ATMTransaction27.Exception, com.tools20022.repository.msg.ATMTransaction27.ExceptionDetail, com.tools20022.repository.msg.ATMTransaction27.ElectronicPurseBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction27.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction27.mmReconciliationIdentification,
+						com.tools20022.repository.msg.ATMTransaction27.mmException, com.tools20022.repository.msg.ATMTransaction27.mmExceptionDetail, com.tools20022.repository.msg.ATMTransaction27.mmElectronicPurseBalance);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction27";
 				definition = "Transaction for which the exception is sent.";
@@ -299,5 +305,45 @@ public class ATMTransaction27 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionIdentifier1 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Max35Text getReconciliationIdentification() {
+		return reconciliationIdentification;
+	}
+
+	public void setReconciliationIdentification(Max35Text reconciliationIdentification) {
+		this.reconciliationIdentification = reconciliationIdentification;
+	}
+
+	public List<FailureReason8Code> getException() {
+		return exception;
+	}
+
+	public void setException(List<FailureReason8Code> exception) {
+		this.exception = exception;
+	}
+
+	public List<Max70Text> getExceptionDetail() {
+		return exceptionDetail;
+	}
+
+	public void setExceptionDetail(List<Max70Text> exceptionDetail) {
+		this.exceptionDetail = exceptionDetail;
+	}
+
+	public CurrencyAndAmount getElectronicPurseBalance() {
+		return electronicPurseBalance;
+	}
+
+	public void setElectronicPurseBalance(CurrencyAndAmount electronicPurseBalance) {
+		this.electronicPurseBalance = electronicPurseBalance;
 	}
 }

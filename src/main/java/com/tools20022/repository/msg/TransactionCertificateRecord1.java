@@ -21,10 +21,12 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Contract;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.RegisteredContract;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Certificate record in which all currency control transactions are registered.
@@ -36,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificateRecord1#CertificateRecordIdentification
- * TransactionCertificateRecord1.CertificateRecordIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificateRecord1#mmCertificateRecordIdentification
+ * TransactionCertificateRecord1.mmCertificateRecordIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificateRecord1#Transaction
- * TransactionCertificateRecord1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificateRecord1#mmTransaction
+ * TransactionCertificateRecord1.mmTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificateRecord1#Contract
- * TransactionCertificateRecord1.Contract}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificateRecord1#mmContract
+ * TransactionCertificateRecord1.mmContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificateRecord1#Attachment
- * TransactionCertificateRecord1.Attachment}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificateRecord1#mmAttachment
+ * TransactionCertificateRecord1.mmAttachment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionCertificateRecord1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text certificateRecordIdentification;
 	/**
 	 * Unique and unambiguous identification of the certificate record.
 	 * <p>
@@ -84,8 +87,8 @@ public class TransactionCertificateRecord1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +108,21 @@ public class TransactionCertificateRecord1 {
 	 * "Unique and unambiguous identification of the certificate record."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificateRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificateRecordIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> TransactionCertificateRecord1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "CertRcrdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateRecordIdentification";
 			definition = "Unique and unambiguous identification of the certificate record.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TransactionCertificate2 transaction;
 	/**
 	 * Details of the transaction for which the record has been generated.
 	 * <p>
@@ -151,21 +155,22 @@ public class TransactionCertificateRecord1 {
 	 * "Details of the transaction for which the record has been generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionCertificateRecord1.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> TransactionCertificateRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Details of the transaction for which the record has been generated.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionCertificate2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionCertificate2.mmObject();
 		}
 	};
+	protected TransactionCertificateContract1 contract;
 	/**
 	 * Contract registration details related to the certificate record.
 	 * <p>
@@ -198,21 +203,22 @@ public class TransactionCertificateRecord1 {
 	 * "Contract registration details related to the certificate record."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Contract = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContract = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Contract.mmObject();
 			componentContext_lazy = () -> TransactionCertificateRecord1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Contract.mmObject();
 			isDerived = false;
 			xmlTag = "Ctrct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contract";
 			definition = "Contract registration details related to the certificate record.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionCertificateContract1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionCertificateContract1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DocumentGeneralInformation3> attachment;
 	/**
 	 * Documents provided as attachments to the registered contract.
 	 * <p>
@@ -225,8 +231,8 @@ public class TransactionCertificateRecord1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#Attachment
-	 * RegisteredContract.Attachment}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmAttachment
+	 * RegisteredContract.mmAttachment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -246,33 +252,65 @@ public class TransactionCertificateRecord1 {
 	 * "Documents provided as attachments to the registered contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Attachment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAttachment = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmAttachment;
 			componentContext_lazy = () -> TransactionCertificateRecord1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.Attachment;
 			isDerived = false;
 			xmlTag = "Attchmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attachment";
 			definition = "Documents provided as attachments to the registered contract.";
 			minOccurs = 0;
-			type_lazy = () -> DocumentGeneralInformation3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificateRecord1.CertificateRecordIdentification, com.tools20022.repository.msg.TransactionCertificateRecord1.Transaction,
-						com.tools20022.repository.msg.TransactionCertificateRecord1.Contract, com.tools20022.repository.msg.TransactionCertificateRecord1.Attachment);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificateRecord1.mmCertificateRecordIdentification, com.tools20022.repository.msg.TransactionCertificateRecord1.mmTransaction,
+						com.tools20022.repository.msg.TransactionCertificateRecord1.mmContract, com.tools20022.repository.msg.TransactionCertificateRecord1.mmAttachment);
 				trace_lazy = () -> RegisteredContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionCertificateRecord1";
 				definition = "Certificate record in which all currency control transactions are registered.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCertificateRecordIdentification() {
+		return certificateRecordIdentification;
+	}
+
+	public void setCertificateRecordIdentification(Max35Text certificateRecordIdentification) {
+		this.certificateRecordIdentification = certificateRecordIdentification;
+	}
+
+	public TransactionCertificate2 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.TransactionCertificate2 transaction) {
+		this.transaction = transaction;
+	}
+
+	public TransactionCertificateContract1 getContract() {
+		return contract;
+	}
+
+	public void setContract(com.tools20022.repository.msg.TransactionCertificateContract1 contract) {
+		this.contract = contract;
+	}
+
+	public List<DocumentGeneralInformation3> getAttachment() {
+		return attachment;
+	}
+
+	public void setAttachment(List<com.tools20022.repository.msg.DocumentGeneralInformation3> attachment) {
+		this.attachment = attachment;
 	}
 }

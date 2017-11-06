@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementStructureCode#Statuses
- * StatementStructureCode.Statuses}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementStructureCode#mmStatuses
+ * StatementStructureCode.mmStatuses}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementStructureCode#Transactions
- * StatementStructureCode.Transactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementStructureCode#mmTransactions
+ * StatementStructureCode.mmTransactions}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class StatementStructureCode {
 	 * definition} = "Statement is sorted by status."</li>
 	 * </ul>
 	 */
-	public static final MMCode Statuses = new MMCode() {
+	public static final MMCode mmStatuses = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statuses";
@@ -120,7 +120,7 @@ public class StatementStructureCode {
 	 * definition} = "Statement is sorted by transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode Transactions = new MMCode() {
+	public static final MMCode mmTransactions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transactions";
@@ -133,12 +133,12 @@ public class StatementStructureCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementStructureCode";
 				definition = "Specifies the type of balances on which the statement is prepared.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementStructureCode.Statuses, com.tools20022.repository.codeset.StatementStructureCode.Transactions);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementStructureCode.mmStatuses, com.tools20022.repository.codeset.StatementStructureCode.mmTransactions);
 				derivation_lazy = () -> Arrays.asList(StatementStructure1Code.mmObject());
 			}
 		});

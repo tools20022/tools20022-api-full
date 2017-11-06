@@ -33,29 +33,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType12Code#InterimProfitTax
- * TaxType12Code.InterimProfitTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType12Code#mmInterimProfitTax
+ * TaxType12Code.mmInterimProfitTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType12Code#EUTaxRetention
- * TaxType12Code.EUTaxRetention}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType12Code#mmEUTaxRetention
+ * TaxType12Code.mmEUTaxRetention}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType12Code#Aktiengewinn1
- * TaxType12Code.Aktiengewinn1}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType12Code#mmAktiengewinn1
+ * TaxType12Code.mmAktiengewinn1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType12Code#Aktiengewinn2
- * TaxType12Code.Aktiengewinn2}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType12Code#mmAktiengewinn2
+ * TaxType12Code.mmAktiengewinn2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType12Code#Zwischengewinn
- * TaxType12Code.Zwischengewinn}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType12Code#Mietgewinn
- * TaxType12Code.Mietgewinn}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType12Code#mmZwischengewinn
+ * TaxType12Code.mmZwischengewinn}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType12Code#mmMietgewinn
+ * TaxType12Code.mmMietgewinn}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class TaxType12Code extends TaxTypeCode {
 	 * name} = "InterimProfitTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterimProfitTax = new MMCode() {
+	public static final MMCode mmInterimProfitTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimProfitTax";
@@ -114,7 +114,7 @@ public class TaxType12Code extends TaxTypeCode {
 	 * name} = "EUTaxRetention"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUTaxRetention = new MMCode() {
+	public static final MMCode mmEUTaxRetention = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
@@ -137,7 +137,7 @@ public class TaxType12Code extends TaxTypeCode {
 	 * name} = "Aktiengewinn1"</li>
 	 * </ul>
 	 */
-	public static final MMCode Aktiengewinn1 = new MMCode() {
+	public static final MMCode mmAktiengewinn1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aktiengewinn1";
@@ -160,7 +160,7 @@ public class TaxType12Code extends TaxTypeCode {
 	 * name} = "Aktiengewinn2"</li>
 	 * </ul>
 	 */
-	public static final MMCode Aktiengewinn2 = new MMCode() {
+	public static final MMCode mmAktiengewinn2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aktiengewinn2";
@@ -183,7 +183,7 @@ public class TaxType12Code extends TaxTypeCode {
 	 * name} = "Zwischengewinn"</li>
 	 * </ul>
 	 */
-	public static final MMCode Zwischengewinn = new MMCode() {
+	public static final MMCode mmZwischengewinn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zwischengewinn";
@@ -206,7 +206,7 @@ public class TaxType12Code extends TaxTypeCode {
 	 * name} = "Mietgewinn"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mietgewinn = new MMCode() {
+	public static final MMCode mmMietgewinn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mietgewinn";
@@ -217,14 +217,14 @@ public class TaxType12Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INPO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxType12Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType12Code.InterimProfitTax, com.tools20022.repository.codeset.TaxType12Code.EUTaxRetention,
-						com.tools20022.repository.codeset.TaxType12Code.Aktiengewinn1, com.tools20022.repository.codeset.TaxType12Code.Aktiengewinn2, com.tools20022.repository.codeset.TaxType12Code.Zwischengewinn,
-						com.tools20022.repository.codeset.TaxType12Code.Mietgewinn);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType12Code.mmInterimProfitTax, com.tools20022.repository.codeset.TaxType12Code.mmEUTaxRetention,
+						com.tools20022.repository.codeset.TaxType12Code.mmAktiengewinn1, com.tools20022.repository.codeset.TaxType12Code.mmAktiengewinn2, com.tools20022.repository.codeset.TaxType12Code.mmZwischengewinn,
+						com.tools20022.repository.codeset.TaxType12Code.mmMietgewinn);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

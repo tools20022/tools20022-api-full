@@ -33,20 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Parameter4#EncryptionFormat
- * Parameter4.EncryptionFormat}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Parameter4#DigestAlgorithm
- * Parameter4.DigestAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter4#mmEncryptionFormat
+ * Parameter4.mmEncryptionFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter4#mmDigestAlgorithm
+ * Parameter4.mmDigestAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Parameter4#MaskGeneratorAlgorithm
- * Parameter4.MaskGeneratorAlgorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.Parameter4#mmMaskGeneratorAlgorithm
+ * Parameter4.mmMaskGeneratorAlgorithm}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Parameter4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EncryptionFormat1Code encryptionFormat;
 	/**
 	 * Format of data before encryption, if the format is not plaintext or
 	 * implicit.
@@ -99,7 +100,7 @@ public class Parameter4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EncryptionFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEncryptionFormat = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter4.mmObject();
 			isDerived = false;
@@ -107,11 +108,12 @@ public class Parameter4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptionFormat";
 			definition = "Format of data before encryption, if the format is not plaintext or implicit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EncryptionFormat1Code.mmObject();
 		}
 	};
+	protected Algorithm11Code digestAlgorithm;
 	/**
 	 * Identification of the digest algorithm.
 	 * <p>
@@ -140,18 +142,19 @@ public class Parameter4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Parameter8#DigestAlgorithm
-	 * Parameter8.DigestAlgorithm}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter8#mmDigestAlgorithm
+	 * Parameter8.mmDigestAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Parameter2#DigestAlgorithm
-	 * Parameter2.DigestAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter2#mmDigestAlgorithm
+	 * Parameter2.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter4.mmObject();
 			isDerived = false;
@@ -159,13 +162,14 @@ public class Parameter4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Identification of the digest algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter2.DigestAlgorithm;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter8.DigestAlgorithm);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter8.mmDigestAlgorithm);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter2.mmDigestAlgorithm;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
 		}
 	};
+	protected AlgorithmIdentification12 maskGeneratorAlgorithm;
 	/**
 	 * Mask generator function cryptographic algorithm and parameters.
 	 * <p>
@@ -196,18 +200,18 @@ public class Parameter4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Parameter8#MaskGeneratorAlgorithm
-	 * Parameter8.MaskGeneratorAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter8#mmMaskGeneratorAlgorithm
+	 * Parameter8.mmMaskGeneratorAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Parameter2#MaskGeneratorAlgorithm
-	 * Parameter2.MaskGeneratorAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter2#mmMaskGeneratorAlgorithm
+	 * Parameter2.mmMaskGeneratorAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaskGeneratorAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaskGeneratorAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter4.mmObject();
 			isDerived = false;
@@ -215,26 +219,51 @@ public class Parameter4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaskGeneratorAlgorithm";
 			definition = "Mask generator function cryptographic algorithm and parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter2.MaskGeneratorAlgorithm;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter8.MaskGeneratorAlgorithm);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter8.mmMaskGeneratorAlgorithm);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter2.mmMaskGeneratorAlgorithm;
 			maxOccurs = 1;
-			complexType_lazy = () -> AlgorithmIdentification12.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification12.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter4.EncryptionFormat, com.tools20022.repository.msg.Parameter4.DigestAlgorithm, com.tools20022.repository.msg.Parameter4.MaskGeneratorAlgorithm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter4.mmEncryptionFormat, com.tools20022.repository.msg.Parameter4.mmDigestAlgorithm,
+						com.tools20022.repository.msg.Parameter4.mmMaskGeneratorAlgorithm);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Parameter4";
 				definition = "Parameters of the asymmetric encryption algorithm.";
-				previousVersion_lazy = () -> Parameter2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Parameter8.mmObject());
+				previousVersion_lazy = () -> Parameter2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EncryptionFormat1Code getEncryptionFormat() {
+		return encryptionFormat;
+	}
+
+	public void setEncryptionFormat(EncryptionFormat1Code encryptionFormat) {
+		this.encryptionFormat = encryptionFormat;
+	}
+
+	public Algorithm11Code getDigestAlgorithm() {
+		return digestAlgorithm;
+	}
+
+	public void setDigestAlgorithm(Algorithm11Code digestAlgorithm) {
+		this.digestAlgorithm = digestAlgorithm;
+	}
+
+	public AlgorithmIdentification12 getMaskGeneratorAlgorithm() {
+		return maskGeneratorAlgorithm;
+	}
+
+	public void setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification12 maskGeneratorAlgorithm) {
+		this.maskGeneratorAlgorithm = maskGeneratorAlgorithm;
 	}
 }

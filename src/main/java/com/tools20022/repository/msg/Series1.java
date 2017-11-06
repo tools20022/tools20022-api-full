@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Series1#SeriesDate
- * Series1.SeriesDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Series1#SeriesName
- * Series1.SeriesName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Series1#mmSeriesDate
+ * Series1.mmSeriesDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Series1#mmSeriesName
+ * Series1.mmSeriesName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Series1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateFormat42Choice seriesDate;
 	/**
 	 * Issue date of the fund series. It is typically applicable to a redemption
 	 * order, subscription order confirmation or redemption order confirmation,
@@ -75,8 +76,8 @@ public class Series1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#SeriesIssueIdentificationDate
-	 * InvestmentFundClass.SeriesIssueIdentificationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmSeriesIssueIdentificationDate
+	 * InvestmentFundClass.mmSeriesIssueIdentificationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Series1
@@ -96,21 +97,22 @@ public class Series1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SeriesDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSeriesDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmSeriesIssueIdentificationDate;
 			componentContext_lazy = () -> Series1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.SeriesIssueIdentificationDate;
 			isDerived = false;
 			xmlTag = "SrsDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeriesDate";
 			definition = "Issue date of the fund series. It is typically applicable to a redemption order, subscription order confirmation or redemption order confirmation, but may be specified in the subscription order, if known.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat42Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat42Choice.mmObject();
 		}
 	};
+	protected Max35Text seriesName;
 	/**
 	 * Name of the fund series. It is typically applicable to a redemption
 	 * order, subscription order confirmation or redemption order confirmation,
@@ -125,8 +127,8 @@ public class Series1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#SeriesName
-	 * InvestmentFundClass.SeriesName}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmSeriesName
+	 * InvestmentFundClass.mmSeriesName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Series1
@@ -146,17 +148,17 @@ public class Series1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SeriesName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSeriesName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmSeriesName;
 			componentContext_lazy = () -> Series1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.SeriesName;
 			isDerived = false;
 			xmlTag = "SrsNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeriesName";
 			definition = "Name of the fund series. It is typically applicable to a redemption order, subscription order confirmation or redemption order confirmation, but may be specified in the subscription, if known.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class Series1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Series1.SeriesDate, com.tools20022.repository.msg.Series1.SeriesName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Series1.mmSeriesDate, com.tools20022.repository.msg.Series1.mmSeriesName);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Series1";
 				definition = "Identification of a series.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateFormat42Choice getSeriesDate() {
+		return seriesDate;
+	}
+
+	public void setSeriesDate(DateFormat42Choice seriesDate) {
+		this.seriesDate = seriesDate;
+	}
+
+	public Max35Text getSeriesName() {
+		return seriesName;
+	}
+
+	public void setSeriesName(Max35Text seriesName) {
+		this.seriesName = seriesName;
 	}
 }

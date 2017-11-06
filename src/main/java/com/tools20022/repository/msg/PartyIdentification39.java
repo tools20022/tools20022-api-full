@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification39#Identification
- * PartyIdentification39.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification39#mmIdentification
+ * PartyIdentification39.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification39#AdditionalIdentificationInformation
- * PartyIdentification39.AdditionalIdentificationInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification39#mmAdditionalIdentificationInformation
+ * PartyIdentification39.mmAdditionalIdentificationInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification39 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification9Choice identification;
 	/**
 	 * Unique identification of the party.
 	 * <p>
@@ -106,28 +107,29 @@ public class PartyIdentification39 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification71#Identification
-	 * PartyIdentification71.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification71#mmIdentification
+	 * PartyIdentification71.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification39.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification39.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification71.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification71.mmIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	protected PartyAdditionalIdentification2Choice additionalIdentificationInformation;
 	/**
 	 * Ancillary identification information about the party.
 	 * <p>
@@ -157,13 +159,13 @@ public class PartyIdentification39 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification71#AdditionalIdentificationInformation
-	 * PartyIdentification71.AdditionalIdentificationInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification71#mmAdditionalIdentificationInformation
+	 * PartyIdentification71.mmAdditionalIdentificationInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalIdentificationInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalIdentificationInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentification39.mmObject();
 			isDerived = false;
@@ -171,20 +173,20 @@ public class PartyIdentification39 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentificationInformation";
 			definition = "Ancillary identification information about the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification71.AdditionalIdentificationInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification71.mmAdditionalIdentificationInformation);
 			maxOccurs = 1;
-			type_lazy = () -> PartyAdditionalIdentification2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyAdditionalIdentification2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification39.Identification, com.tools20022.repository.msg.PartyIdentification39.AdditionalIdentificationInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification39.mmIdentification, com.tools20022.repository.msg.PartyIdentification39.mmAdditionalIdentificationInformation);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification39";
 				definition = "Identification and additional identification Information on the party.";
@@ -192,5 +194,21 @@ public class PartyIdentification39 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification9Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification9Choice identification) {
+		this.identification = identification;
+	}
+
+	public PartyAdditionalIdentification2Choice getAdditionalIdentificationInformation() {
+		return additionalIdentificationInformation;
+	}
+
+	public void setAdditionalIdentificationInformation(PartyAdditionalIdentification2Choice additionalIdentificationInformation) {
+		this.additionalIdentificationInformation = additionalIdentificationInformation;
 	}
 }

@@ -36,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IssuerInformation1#Identification
- * IssuerInformation1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IssuerInformation1#URLAddress
- * IssuerInformation1.URLAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.IssuerInformation1#mmIdentification
+ * IssuerInformation1.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IssuerInformation1#mmURLAddress
+ * IssuerInformation1.mmURLAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,18 +52,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#Issuer
- * MeetingNotificationV03.Issuer}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#mmIssuer
+ * MeetingNotificationV03.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#Issuer
- * MeetingNotificationV04.Issuer}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#mmIssuer
+ * MeetingNotificationV04.mmIssuer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IssuerInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification9Choice identification;
 	/**
 	 * Unique and unambiguous way to identify an organisation.
 	 * <p>
@@ -117,28 +119,29 @@ public class IssuerInformation1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IssuerInformation2#Identification
-	 * IssuerInformation2.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.IssuerInformation2#mmIdentification
+	 * IssuerInformation2.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IssuerInformation1.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> IssuerInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous way to identify an organisation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerInformation2.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerInformation2.mmIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	protected Max256Text uRLAddress;
 	/**
 	 * Address for the Universal Resource Locator (URL), eg, used over the www
 	 * (HTTP) service.
@@ -152,8 +155,8 @@ public class IssuerInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#URLAddress
-	 * ElectronicAddress.URLAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmURLAddress
+	 * ElectronicAddress.mmURLAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,24 +179,24 @@ public class IssuerInformation1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IssuerInformation2#URLAddress
-	 * IssuerInformation2.URLAddress}</li>
+	 * {@linkplain com.tools20022.repository.msg.IssuerInformation2#mmURLAddress
+	 * IssuerInformation2.mmURLAddress}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute URLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> IssuerInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.URLAddress;
 			isDerived = false;
 			xmlTag = "URLAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerInformation2.URLAddress);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerInformation2.mmURLAddress);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -201,10 +204,10 @@ public class IssuerInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerInformation1.Identification, com.tools20022.repository.msg.IssuerInformation1.URLAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerInformation1.mmIdentification, com.tools20022.repository.msg.IssuerInformation1.mmURLAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV03.mmIssuer, com.tools20022.repository.area.seev.MeetingNotificationV04.mmIssuer);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV03.Issuer, com.tools20022.repository.area.seev.MeetingNotificationV04.Issuer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IssuerInformation1";
 				definition = "Unique and unambiguous way to identify an organisation.";
@@ -212,5 +215,21 @@ public class IssuerInformation1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification9Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification9Choice identification) {
+		this.identification = identification;
+	}
+
+	public Max256Text getURLAddress() {
+		return uRLAddress;
+	}
+
+	public void setURLAddress(Max256Text uRLAddress) {
+		this.uRLAddress = uRLAddress;
 	}
 }

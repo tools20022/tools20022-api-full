@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Amount1Choice#IncreaseAmount
- * Amount1Choice.IncreaseAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.Amount1Choice#mmIncreaseAmount
+ * Amount1Choice.mmIncreaseAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Amount1Choice#DecreaseAmount
- * Amount1Choice.DecreaseAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.Amount1Choice#mmDecreaseAmount
+ * Amount1Choice.mmDecreaseAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Amount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount increaseAmount;
 	/**
 	 * Amount of increase, and currency.
 	 * <p>
@@ -75,8 +76,8 @@ public class Amount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#ChangeOfAmount
-	 * AmendmentOfUndertaking.ChangeOfAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#mmChangeOfAmount
+	 * AmendmentOfUndertaking.mmChangeOfAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class Amount1Choice {
 	 * definition} = "Amount of increase, and currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncreaseAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncreaseAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmChangeOfAmount;
 			componentContext_lazy = () -> Amount1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.ChangeOfAmount;
 			isDerived = false;
 			xmlTag = "IncrAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseAmount";
 			definition = "Amount of increase, and currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount decreaseAmount;
 	/**
 	 * Amount of decrease, and currency.
 	 * <p>
@@ -122,8 +124,8 @@ public class Amount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#ChangeOfAmount
-	 * AmendmentOfUndertaking.ChangeOfAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#mmChangeOfAmount
+	 * AmendmentOfUndertaking.mmChangeOfAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,17 +144,17 @@ public class Amount1Choice {
 	 * definition} = "Amount of decrease, and currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DecreaseAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDecreaseAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmChangeOfAmount;
 			componentContext_lazy = () -> Amount1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.ChangeOfAmount;
 			isDerived = false;
 			xmlTag = "DcrAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecreaseAmount";
 			definition = "Amount of decrease, and currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -160,14 +162,30 @@ public class Amount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Amount1Choice.IncreaseAmount, com.tools20022.repository.choice.Amount1Choice.DecreaseAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Amount1Choice.mmIncreaseAmount, com.tools20022.repository.choice.Amount1Choice.mmDecreaseAmount);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Amount1Choice";
 				definition = "Choice of amounts.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getIncreaseAmount() {
+		return increaseAmount;
+	}
+
+	public void setIncreaseAmount(ActiveCurrencyAndAmount increaseAmount) {
+		this.increaseAmount = increaseAmount;
+	}
+
+	public ActiveCurrencyAndAmount getDecreaseAmount() {
+		return decreaseAmount;
+	}
+
+	public void setDecreaseAmount(ActiveCurrencyAndAmount decreaseAmount) {
+		this.decreaseAmount = decreaseAmount;
 	}
 }

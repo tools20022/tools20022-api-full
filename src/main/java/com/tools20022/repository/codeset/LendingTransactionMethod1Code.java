@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethod1Code#OnDemandTrade
- * LendingTransactionMethod1Code.OnDemandTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethod1Code#mmOnDemandTrade
+ * LendingTransactionMethod1Code.mmOnDemandTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethod1Code#ExclusiveTrade
- * LendingTransactionMethod1Code.ExclusiveTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethod1Code#mmExclusiveTrade
+ * LendingTransactionMethod1Code.mmExclusiveTrade}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class LendingTransactionMethod1Code extends LendingTransactionMethodCode 
 	 * name} = "OnDemandTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode OnDemandTrade = new MMCode() {
+	public static final MMCode mmOnDemandTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemandTrade";
@@ -104,7 +104,7 @@ public class LendingTransactionMethod1Code extends LendingTransactionMethodCode 
 	 * name} = "ExclusiveTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExclusiveTrade = new MMCode() {
+	public static final MMCode mmExclusiveTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusiveTrade";
@@ -115,12 +115,12 @@ public class LendingTransactionMethod1Code extends LendingTransactionMethodCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ODTR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LendingTransactionMethod1Code";
 				definition = "Lending method applied to the securities financing contract.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LendingTransactionMethod1Code.OnDemandTrade, com.tools20022.repository.codeset.LendingTransactionMethod1Code.ExclusiveTrade);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LendingTransactionMethod1Code.mmOnDemandTrade, com.tools20022.repository.codeset.LendingTransactionMethod1Code.mmExclusiveTrade);
 				trace_lazy = () -> LendingTransactionMethodCode.mmObject();
 			}
 		});

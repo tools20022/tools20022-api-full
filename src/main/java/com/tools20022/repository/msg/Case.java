@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Case#Identification
- * Case.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Case#Creator Case.Creator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Case#ReopenCaseIndication
- * Case.ReopenCaseIndication}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Case#mmIdentification
+ * Case.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Case#mmCreator Case.mmCreator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Case#mmReopenCaseIndication
+ * Case.mmReopenCaseIndication}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,51 +50,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#Case
- * RequestToModifyPayment.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#mmCase
+ * RequestToModifyPayment.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#Case
- * RequestToCancelPayment.Case}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApply#Case
- * UnableToApply.Case}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#Case
- * ClaimNonReceipt.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToCancelPayment#mmCase
+ * RequestToCancelPayment.mmCase}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApply#mmCase
+ * UnableToApply.mmCase}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceipt#mmCase
+ * ClaimNonReceipt.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#Case
- * AdditionalPaymentInformation.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformation#mmCase
+ * AdditionalPaymentInformation.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#ResolvedCase
- * ResolutionOfInvestigation.ResolvedCase}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigation#mmResolvedCase
+ * ResolutionOfInvestigation.mmResolvedCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#Case
- * NotificationOfCaseAssignment.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#mmCase
+ * NotificationOfCaseAssignment.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectCaseAssignment#Case
- * RejectCaseAssignment.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectCaseAssignment#mmCase
+ * RejectCaseAssignment.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestForDuplicateInstruction#Case
- * RequestForDuplicateInstruction.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestForDuplicateInstruction#mmCase
+ * RequestForDuplicateInstruction.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponse#Case
- * DebitAuthorisationResponse.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponse#mmCase
+ * DebitAuthorisationResponse.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#Case
- * DebitAuthorisationRequest.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequest#mmCase
+ * DebitAuthorisationRequest.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequest#Case
- * CaseStatusReportRequest.Case}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.CaseStatusReport#Case
- * CaseStatusReport.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequest#mmCase
+ * CaseStatusReportRequest.mmCase}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.CaseStatusReport#mmCase
+ * CaseStatusReport.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignment#Case
- * CancelCaseAssignment.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignment#mmCase
+ * CancelCaseAssignment.mmCase}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +108,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Case {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique id assigned by the case creator.
 	 * <p>
@@ -120,8 +121,8 @@ public class Case {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#Identification
-	 * InvestigationCase.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmIdentification
+	 * InvestigationCase.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Case Case}</li>
@@ -138,20 +139,21 @@ public class Case {
 	 * definition} = "Unique id assigned by the case creator."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmIdentification;
 			componentContext_lazy = () -> Case.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique id assigned by the case creator.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AnyBICIdentifier creator;
 	/**
 	 * Party that created the case.
 	 * <p>
@@ -165,8 +167,8 @@ public class Case {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Case Case}</li>
@@ -183,20 +185,21 @@ public class Case {
 	 * definition} = "Party that created the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Creator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> Case.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "Cretr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creator";
 			definition = "Party that created the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected YesNoIndicator reopenCaseIndication;
 	/**
 	 * Set to yes if the case was closed and needs to be re-opened.
 	 * <p>
@@ -224,7 +227,7 @@ public class Case {
 	 * "Set to yes if the case was closed and needs to be re-opened."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReopenCaseIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReopenCaseIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Case.mmObject();
 			isDerived = false;
@@ -232,8 +235,8 @@ public class Case {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReopenCaseIndication";
 			definition = "Set to yes if the case was closed and needs to be re-opened.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -241,19 +244,43 @@ public class Case {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Case.Identification, com.tools20022.repository.msg.Case.Creator, com.tools20022.repository.msg.Case.ReopenCaseIndication);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Case.mmIdentification, com.tools20022.repository.msg.Case.mmCreator, com.tools20022.repository.msg.Case.mmReopenCaseIndication);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.mmCase, com.tools20022.repository.area.camt.RequestToCancelPayment.mmCase,
+						com.tools20022.repository.area.camt.UnableToApply.mmCase, com.tools20022.repository.area.camt.ClaimNonReceipt.mmCase, com.tools20022.repository.area.camt.AdditionalPaymentInformation.mmCase,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmResolvedCase, com.tools20022.repository.area.camt.NotificationOfCaseAssignment.mmCase, com.tools20022.repository.area.camt.RejectCaseAssignment.mmCase,
+						com.tools20022.repository.area.camt.RequestForDuplicateInstruction.mmCase, com.tools20022.repository.area.camt.DebitAuthorisationResponse.mmCase, com.tools20022.repository.area.camt.DebitAuthorisationRequest.mmCase,
+						com.tools20022.repository.area.camt.CaseStatusReportRequest.mmCase, com.tools20022.repository.area.camt.CaseStatusReport.mmCase, com.tools20022.repository.area.camt.CancelCaseAssignment.mmCase);
 				trace_lazy = () -> InvestigationCase.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.Case, com.tools20022.repository.area.camt.RequestToCancelPayment.Case,
-						com.tools20022.repository.area.camt.UnableToApply.Case, com.tools20022.repository.area.camt.ClaimNonReceipt.Case, com.tools20022.repository.area.camt.AdditionalPaymentInformation.Case,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigation.ResolvedCase, com.tools20022.repository.area.camt.NotificationOfCaseAssignment.Case, com.tools20022.repository.area.camt.RejectCaseAssignment.Case,
-						com.tools20022.repository.area.camt.RequestForDuplicateInstruction.Case, com.tools20022.repository.area.camt.DebitAuthorisationResponse.Case, com.tools20022.repository.area.camt.DebitAuthorisationRequest.Case,
-						com.tools20022.repository.area.camt.CaseStatusReportRequest.Case, com.tools20022.repository.area.camt.CaseStatusReport.Case, com.tools20022.repository.area.camt.CancelCaseAssignment.Case);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Case";
 				definition = "Information identifying a case.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public AnyBICIdentifier getCreator() {
+		return creator;
+	}
+
+	public void setCreator(AnyBICIdentifier creator) {
+		this.creator = creator;
+	}
+
+	public YesNoIndicator getReopenCaseIndication() {
+		return reopenCaseIndication;
+	}
+
+	public void setReopenCaseIndication(YesNoIndicator reopenCaseIndication) {
+		this.reopenCaseIndication = reopenCaseIndication;
 	}
 }

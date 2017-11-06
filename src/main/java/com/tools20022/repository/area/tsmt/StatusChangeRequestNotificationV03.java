@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -66,39 +67,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#NotificationIdentification
- * StatusChangeRequestNotificationV03.NotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmNotificationIdentification
+ * StatusChangeRequestNotificationV03.mmNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#TransactionIdentification
- * StatusChangeRequestNotificationV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmTransactionIdentification
+ * StatusChangeRequestNotificationV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#EstablishedBaselineIdentification
- * StatusChangeRequestNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmEstablishedBaselineIdentification
+ * StatusChangeRequestNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#TransactionStatus
- * StatusChangeRequestNotificationV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmTransactionStatus
+ * StatusChangeRequestNotificationV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#UserTransactionReference
- * StatusChangeRequestNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmUserTransactionReference
+ * StatusChangeRequestNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#ProposedStatusChange
- * StatusChangeRequestNotificationV03.ProposedStatusChange}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmProposedStatusChange
+ * StatusChangeRequestNotificationV03.mmProposedStatusChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#RequestReason
- * StatusChangeRequestNotificationV03.RequestReason}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmRequestReason
+ * StatusChangeRequestNotificationV03.mmRequestReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#Initiator
- * StatusChangeRequestNotificationV03.Initiator}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmInitiator
+ * StatusChangeRequestNotificationV03.mmInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#RequestForAction
- * StatusChangeRequestNotificationV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmRequestForAction
+ * StatusChangeRequestNotificationV03.mmRequestForAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#identifier
- * StatusChangeRequestNotificationV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.028.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,6 +113,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusChangeRequestNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 notificationIdentification;
 	/**
 	 * Identifies the notification message.
 	 * <p>
@@ -137,17 +137,18 @@ public class StatusChangeRequestNotificationV03 {
 	 * definition} = "Identifies the notification message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotificationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identifies the notification message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -175,17 +176,18 @@ public class StatusChangeRequestNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * baseline when it is established.
@@ -212,17 +214,18 @@ public class StatusChangeRequestNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 	};
+	protected TransactionStatus4 transactionStatus;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -247,17 +250,18 @@ public class StatusChangeRequestNotificationV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 	};
+	protected List<DocumentIdentification5> userTransactionReference;
 	/**
 	 * Reference to the transaction for each financial institution which is a
 	 * party to the transaction.
@@ -284,17 +288,18 @@ public class StatusChangeRequestNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
-			minOccurs = 0;
 			maxOccurs = 2;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 	};
+	protected TransactionStatus3 proposedStatusChange;
 	/**
 	 * Specifies the status that is proposed by the other party.
 	 * <p>
@@ -319,17 +324,18 @@ public class StatusChangeRequestNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProposedStatusChange = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProposedStatusChange = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PropsdStsChng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedStatusChange";
 			definition = "Specifies the status that is proposed by the other party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus3.mmObject();
 		}
 	};
+	protected Reason2 requestReason;
 	/**
 	 * Specifies the reason for the request to change status.
 	 * <p>
@@ -352,17 +358,18 @@ public class StatusChangeRequestNotificationV03 {
 	 * definition} = "Specifies the reason for the request to change status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestReason";
 			definition = "Specifies the reason for the request to change status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Reason2.mmObject();
 		}
 	};
+	protected BICIdentification1 initiator;
 	/**
 	 * Party that has requested the status change.
 	 * <p>
@@ -386,17 +393,18 @@ public class StatusChangeRequestNotificationV03 {
 	 * definition} = "Party that has requested the status change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Initiator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInitiator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Initr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initiator";
 			definition = "Party that has requested the status change.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected PendingActivity2 requestForAction;
 	/**
 	 * Information on the next processing step required.
 	 * <p>
@@ -420,42 +428,15 @@ public class StatusChangeRequestNotificationV03 {
 	 * definition} = "Information on the next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "028"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "028";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -469,14 +450,93 @@ public class StatusChangeRequestNotificationV03 {
 				rootElement = "Document";
 				xmlTag = "StsChngReqNtfctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.TransactionIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.TransactionStatus, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.ProposedStatusChange, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.RequestReason,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.Initiator, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.RequestForAction);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmNotificationIdentification,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmProposedStatusChange, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmRequestReason,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmInitiator, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmRequestForAction);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "028";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getNotificationIdentification() {
+		return notificationIdentification;
+	}
+
+	public void setNotificationIdentification(MessageIdentification1 notificationIdentification) {
+		this.notificationIdentification = notificationIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DocumentIdentification3 getEstablishedBaselineIdentification() {
+		return establishedBaselineIdentification;
+	}
+
+	public void setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
+		this.establishedBaselineIdentification = establishedBaselineIdentification;
+	}
+
+	public TransactionStatus4 getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(TransactionStatus4 transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public List<DocumentIdentification5> getUserTransactionReference() {
+		return userTransactionReference;
+	}
+
+	public void setUserTransactionReference(List<DocumentIdentification5> userTransactionReference) {
+		this.userTransactionReference = userTransactionReference;
+	}
+
+	public TransactionStatus3 getProposedStatusChange() {
+		return proposedStatusChange;
+	}
+
+	public void setProposedStatusChange(TransactionStatus3 proposedStatusChange) {
+		this.proposedStatusChange = proposedStatusChange;
+	}
+
+	public Reason2 getRequestReason() {
+		return requestReason;
+	}
+
+	public void setRequestReason(Reason2 requestReason) {
+		this.requestReason = requestReason;
+	}
+
+	public BICIdentification1 getInitiator() {
+		return initiator;
+	}
+
+	public void setInitiator(BICIdentification1 initiator) {
+		this.initiator = initiator;
+	}
+
+	public PendingActivity2 getRequestForAction() {
+		return requestForAction;
+	}
+
+	public void setRequestForAction(PendingActivity2 requestForAction) {
+		this.requestForAction = requestForAction;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.msg.AcknowledgementReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies whether the status is provided with a reason or not.
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice#NoSpecifiedReason
- * AcknowledgedAcceptedStatus12Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice#mmNoSpecifiedReason
+ * AcknowledgedAcceptedStatus12Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice#Reason
- * AcknowledgedAcceptedStatus12Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice#mmReason
+ * AcknowledgedAcceptedStatus12Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcknowledgedAcceptedStatus12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -90,8 +92,8 @@ public class AcknowledgedAcceptedStatus12Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,27 +115,28 @@ public class AcknowledgedAcceptedStatus12Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AcknowledgedAcceptedStatus24Choice#NoSpecifiedReason
-	 * AcknowledgedAcceptedStatus24Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.AcknowledgedAcceptedStatus24Choice#mmNoSpecifiedReason
+	 * AcknowledgedAcceptedStatus24Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> AcknowledgedAcceptedStatus12Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcknowledgedAcceptedStatus24Choice.NoSpecifiedReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcknowledgedAcceptedStatus24Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<AcknowledgementReason1> reason;
 	/**
 	 * Specifies the reason of the AcknowledgedAcceptedStatus.
 	 * <p>
@@ -145,8 +148,8 @@ public class AcknowledgedAcceptedStatus12Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#AcknowledgedAcceptedReason
-	 * StatusReason.AcknowledgedAcceptedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmAcknowledgedAcceptedReason
+	 * StatusReason.mmAcknowledgedAcceptedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,41 +170,57 @@ public class AcknowledgedAcceptedStatus12Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AcknowledgedAcceptedStatus24Choice#Reason
-	 * AcknowledgedAcceptedStatus24Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.AcknowledgedAcceptedStatus24Choice#mmReason
+	 * AcknowledgedAcceptedStatus24Choice.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> AcknowledgedAcceptedStatus12Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.AcknowledgedAcceptedReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the AcknowledgedAcceptedStatus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcknowledgedAcceptedStatus24Choice.Reason);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcknowledgedAcceptedStatus24Choice.mmReason);
 			minOccurs = 1;
-			type_lazy = () -> AcknowledgementReason1.mmObject();
 			isComposite = true;
+			type_lazy = () -> AcknowledgementReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice.NoSpecifiedReason, com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgedAcceptedStatus12Choice";
 				definition = "Specifies whether the status is provided with a reason or not.";
-				previousVersion_lazy = () -> AcknowledgedAcceptedStatus1Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcknowledgedAcceptedStatus24Choice.mmObject());
+				previousVersion_lazy = () -> AcknowledgedAcceptedStatus1Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<AcknowledgementReason1> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<AcknowledgementReason1> reason) {
+		this.reason = reason;
 	}
 }

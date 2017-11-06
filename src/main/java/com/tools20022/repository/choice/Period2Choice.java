@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Period2Choice#FromDateTimeToDateTime
- * Period2Choice.FromDateTimeToDateTime}</li>
+ * {@linkplain com.tools20022.repository.choice.Period2Choice#mmFromDateTimeToDateTime
+ * Period2Choice.mmFromDateTimeToDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Period2Choice#FromDateToDate
- * Period2Choice.FromDateToDate}</li>
+ * {@linkplain com.tools20022.repository.choice.Period2Choice#mmFromDateToDate
+ * Period2Choice.mmFromDateToDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Period2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateTimePeriodDetails fromDateTimeToDateTime;
 	/**
 	 * Time span defined by a start date and time, and an end date and time.
 	 * <p>
@@ -96,21 +97,22 @@ public class Period2Choice {
 	 * "Time span defined by a start date and time, and an end date and time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FromDateTimeToDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFromDateTimeToDateTime = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Period2Choice.mmObject();
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
+			componentContext_lazy = () -> Period2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtTmToDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateTimeToDateTime";
 			definition = "Time span defined by a start date and time, and an end date and time.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriodDetails.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateTimePeriodDetails.mmObject();
 		}
 	};
+	protected Period2 fromDateToDate;
 	/**
 	 * Time span defined by a start date and time, and an end date and time.
 	 * <p>
@@ -142,33 +144,49 @@ public class Period2Choice {
 	 * "Time span defined by a start date and time, and an end date and time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FromDateToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFromDateToDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Period2Choice.mmObject();
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
+			componentContext_lazy = () -> Period2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtToDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateToDate";
 			definition = "Time span defined by a start date and time, and an end date and time.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Period2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Period2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Period2Choice.FromDateTimeToDateTime, com.tools20022.repository.choice.Period2Choice.FromDateToDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Period2Choice.mmFromDateTimeToDateTime, com.tools20022.repository.choice.Period2Choice.mmFromDateToDate);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Period2Choice";
 				definition = "Choice between date and date-time for the specification of a period.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateTimePeriodDetails getFromDateTimeToDateTime() {
+		return fromDateTimeToDateTime;
+	}
+
+	public void setFromDateTimeToDateTime(DateTimePeriodDetails fromDateTimeToDateTime) {
+		this.fromDateTimeToDateTime = fromDateTimeToDateTime;
+	}
+
+	public Period2 getFromDateToDate() {
+		return fromDateToDate;
+	}
+
+	public void setFromDateToDate(Period2 fromDateToDate) {
+		this.fromDateToDate = fromDateToDate;
 	}
 }

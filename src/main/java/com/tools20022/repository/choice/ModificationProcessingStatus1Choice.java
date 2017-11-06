@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus1Choice#Code
- * ModificationProcessingStatus1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus1Choice#mmCode
+ * ModificationProcessingStatus1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus1Choice#Proprietary
- * ModificationProcessingStatus1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus1Choice#mmProprietary
+ * ModificationProcessingStatus1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationProcessingStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ModificationProcessingStatus1Code code;
 	/**
 	 * Provides the status of a modification request.
 	 * <p>
@@ -75,8 +76,8 @@ public class ModificationProcessingStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#ModificationProcessingStatus
-	 * Status.ModificationProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmModificationProcessingStatus
+	 * Status.mmModificationProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class ModificationProcessingStatus1Choice {
 	 * definition} = "Provides the status of a modification request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmModificationProcessingStatus;
 			componentContext_lazy = () -> ModificationProcessingStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.ModificationProcessingStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of a modification request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ModificationProcessingStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Provides the status of a modification request.
 	 * <p>
@@ -122,8 +124,8 @@ public class ModificationProcessingStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#ModificationProcessingStatus
-	 * Status.ModificationProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmModificationProcessingStatus
+	 * Status.mmModificationProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,17 +144,17 @@ public class ModificationProcessingStatus1Choice {
 	 * definition} = "Provides the status of a modification request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmModificationProcessingStatus;
 			componentContext_lazy = () -> ModificationProcessingStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.ModificationProcessingStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of a modification request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -160,14 +162,30 @@ public class ModificationProcessingStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationProcessingStatus1Choice.Code, com.tools20022.repository.choice.ModificationProcessingStatus1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationProcessingStatus1Choice.mmCode, com.tools20022.repository.choice.ModificationProcessingStatus1Choice.mmProprietary);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ModificationProcessingStatus1Choice";
 				definition = "Choice of modification processing status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ModificationProcessingStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ModificationProcessingStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

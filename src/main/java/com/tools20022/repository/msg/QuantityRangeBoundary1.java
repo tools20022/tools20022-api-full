@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityRangeBoundary1#Boundary
- * QuantityRangeBoundary1.Boundary}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityRangeBoundary1#mmBoundary
+ * QuantityRangeBoundary1.mmBoundary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityRangeBoundary1#Included
- * QuantityRangeBoundary1.Included}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityRangeBoundary1#mmIncluded
+ * QuantityRangeBoundary1.mmIncluded}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuantityRangeBoundary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber boundary;
 	/**
 	 * Quantity value of the range limit.
 	 * <p>
@@ -87,7 +88,7 @@ public class QuantityRangeBoundary1 {
 	 * definition} = "Quantity value of the range limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Boundary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBoundary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuantityRangeBoundary1.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class QuantityRangeBoundary1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Boundary";
 			definition = "Quantity value of the range limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected YesNoIndicator included;
 	/**
 	 * Indicates whether the boundary quantity is included in the range of
 	 * quantity values.
@@ -131,7 +133,7 @@ public class QuantityRangeBoundary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Included = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QuantityRangeBoundary1.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class QuantityRangeBoundary1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Included";
 			definition = "Indicates whether the boundary quantity is included in the range of quantity values. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class QuantityRangeBoundary1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityRangeBoundary1.Boundary, com.tools20022.repository.msg.QuantityRangeBoundary1.Included);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityRangeBoundary1.mmBoundary, com.tools20022.repository.msg.QuantityRangeBoundary1.mmIncluded);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuantityRangeBoundary1";
 				definition = "Limit for a quantity range.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getBoundary() {
+		return boundary;
+	}
+
+	public void setBoundary(DecimalNumber boundary) {
+		this.boundary = boundary;
+	}
+
+	public YesNoIndicator getIncluded() {
+		return included;
+	}
+
+	public void setIncluded(YesNoIndicator included) {
+		this.included = included;
 	}
 }

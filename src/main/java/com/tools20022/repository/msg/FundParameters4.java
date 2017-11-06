@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.InvestmentFund;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Parameters required to request a Fund Processing Passport (FPP).
@@ -37,19 +38,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundParameters4#FinancialInstrumentDetails
- * FundParameters4.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundParameters4#mmFinancialInstrumentDetails
+ * FundParameters4.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundParameters4#FundManagementCompany
- * FundParameters4.FundManagementCompany}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundParameters4#DateFrom
- * FundParameters4.DateFrom}</li>
+ * {@linkplain com.tools20022.repository.msg.FundParameters4#mmFundManagementCompany
+ * FundParameters4.mmFundManagementCompany}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundParameters4#mmDateFrom
+ * FundParameters4.mmDateFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundParameters4#CountryOfDomicile
- * FundParameters4.CountryOfDomicile}</li>
+ * {@linkplain com.tools20022.repository.msg.FundParameters4#mmCountryOfDomicile
+ * FundParameters4.mmCountryOfDomicile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundParameters4#RegisteredDistributionCountry
- * FundParameters4.RegisteredDistributionCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.FundParameters4#mmRegisteredDistributionCountry
+ * FundParameters4.mmRegisteredDistributionCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails;
 	/**
 	 * Financial instrument for which the fund processing passport report report
 	 * is requested.
@@ -86,8 +88,8 @@ public class FundParameters4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#InvestmentFundClass
-	 * InvestmentFund.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmInvestmentFundClass
+	 * InvestmentFund.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +110,21 @@ public class FundParameters4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> FundParameters4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument for which the fund processing passport report report is requested.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrument17.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
 		}
 	};
+	protected List<PartyIdentification2Choice> fundManagementCompany;
 	/**
 	 * Fund management company for which the report is requested.
 	 * <p>
@@ -135,8 +138,8 @@ public class FundParameters4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,10 +159,10 @@ public class FundParameters4 {
 	 * "Fund management company for which the report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FundManagementCompany = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFundManagementCompany = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> FundParameters4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "FndMgmtCpny";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,6 +172,7 @@ public class FundParameters4 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected ISODate dateFrom;
 	/**
 	 * Specifies the date on or after which the information required will have
 	 * been last updated. Only the most recent versions of the data is required.
@@ -199,7 +203,7 @@ public class FundParameters4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateFrom = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FundParameters4.mmObject();
 			isDerived = false;
@@ -207,11 +211,12 @@ public class FundParameters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateFrom";
 			definition = "Specifies the date on or after which the information required will have been last updated. Only the most recent versions of the data is required.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected CountryCode countryOfDomicile;
 	/**
 	 * Country where the fund has legal domicile as reflected in the ISIN
 	 * classification.
@@ -225,8 +230,8 @@ public class FundParameters4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#DomicileCountry
-	 * InvestmentFund.DomicileCountry}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmDomicileCountry
+	 * InvestmentFund.mmDomicileCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,20 +252,21 @@ public class FundParameters4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfDomicile = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfDomicile = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmDomicileCountry;
 			componentContext_lazy = () -> FundParameters4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.DomicileCountry;
 			isDerived = false;
 			xmlTag = "CtryOfDmcl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfDomicile";
 			definition = "Country where the fund has legal domicile as reflected in the ISIN classification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CountryCode registeredDistributionCountry;
 	/**
 	 * Countries where the fund is registered for distribution.
 	 * <p>
@@ -288,7 +294,7 @@ public class FundParameters4 {
 	 * definition} = "Countries where the fund is registered for distribution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegisteredDistributionCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegisteredDistributionCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FundParameters4.mmObject();
 			isDerived = false;
@@ -296,8 +302,8 @@ public class FundParameters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredDistributionCountry";
 			definition = "Countries where the fund is registered for distribution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -305,15 +311,55 @@ public class FundParameters4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundParameters4.FinancialInstrumentDetails, com.tools20022.repository.msg.FundParameters4.FundManagementCompany,
-						com.tools20022.repository.msg.FundParameters4.DateFrom, com.tools20022.repository.msg.FundParameters4.CountryOfDomicile, com.tools20022.repository.msg.FundParameters4.RegisteredDistributionCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundParameters4.mmFinancialInstrumentDetails, com.tools20022.repository.msg.FundParameters4.mmFundManagementCompany,
+						com.tools20022.repository.msg.FundParameters4.mmDateFrom, com.tools20022.repository.msg.FundParameters4.mmCountryOfDomicile, com.tools20022.repository.msg.FundParameters4.mmRegisteredDistributionCountry);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundParameters4";
 				definition = "Parameters required to request a Fund Processing Passport (FPP).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<FinancialInstrument17> getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public List<PartyIdentification2Choice> getFundManagementCompany() {
+		return fundManagementCompany;
+	}
+
+	public void setFundManagementCompany(List<PartyIdentification2Choice> fundManagementCompany) {
+		this.fundManagementCompany = fundManagementCompany;
+	}
+
+	public ISODate getDateFrom() {
+		return dateFrom;
+	}
+
+	public void setDateFrom(ISODate dateFrom) {
+		this.dateFrom = dateFrom;
+	}
+
+	public CountryCode getCountryOfDomicile() {
+		return countryOfDomicile;
+	}
+
+	public void setCountryOfDomicile(CountryCode countryOfDomicile) {
+		this.countryOfDomicile = countryOfDomicile;
+	}
+
+	public CountryCode getRegisteredDistributionCountry() {
+		return registeredDistributionCountry;
+	}
+
+	public void setRegisteredDistributionCountry(CountryCode registeredDistributionCountry) {
+		this.registeredDistributionCountry = registeredDistributionCountry;
 	}
 }

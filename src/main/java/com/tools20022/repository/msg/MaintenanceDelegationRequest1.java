@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to the the request of maintenance delegations.
@@ -32,14 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest1#TMIdentification
- * MaintenanceDelegationRequest1.TMIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest1#mmTMIdentification
+ * MaintenanceDelegationRequest1.mmTMIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest1#MasterTMIdentification
- * MaintenanceDelegationRequest1.MasterTMIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest1#mmMasterTMIdentification
+ * MaintenanceDelegationRequest1.mmMasterTMIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest1#RequestedDelegation
- * MaintenanceDelegationRequest1.RequestedDelegation}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest1#mmRequestedDelegation
+ * MaintenanceDelegationRequest1.mmRequestedDelegation}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,15 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#MaintenanceDelegationRequest
- * MaintenanceDelegationRequestV01.MaintenanceDelegationRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01#mmMaintenanceDelegationRequest
+ * MaintenanceDelegationRequestV01.mmMaintenanceDelegationRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MaintenanceDelegationRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification72 tMIdentification;
 	/**
 	 * Terminal manager identification.
 	 * <p>
@@ -106,13 +108,13 @@ public class MaintenanceDelegationRequest1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest2#TMIdentification
-	 * MaintenanceDelegationRequest2.TMIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest2#mmTMIdentification
+	 * MaintenanceDelegationRequest2.mmTMIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TMIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTMIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegationRequest1.mmObject();
 			isDerived = false;
@@ -120,13 +122,14 @@ public class MaintenanceDelegationRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMIdentification";
 			definition = "Terminal manager identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegationRequest2.TMIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegationRequest2.mmTMIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification72.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
 		}
 	};
+	protected GenericIdentification72 masterTMIdentification;
 	/**
 	 * Master terminal manager identification.
 	 * <p>
@@ -156,13 +159,13 @@ public class MaintenanceDelegationRequest1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest2#MasterTMIdentification
-	 * MaintenanceDelegationRequest2.MasterTMIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest2#mmMasterTMIdentification
+	 * MaintenanceDelegationRequest2.mmMasterTMIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MasterTMIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMasterTMIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegationRequest1.mmObject();
 			isDerived = false;
@@ -170,13 +173,14 @@ public class MaintenanceDelegationRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterTMIdentification";
 			definition = "Master terminal manager identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegationRequest2.MasterTMIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegationRequest2.mmMasterTMIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification72.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.MaintenanceDelegation1> requestedDelegation;
 	/**
 	 * Information on the delegation of a maintenance action.
 	 * <p>
@@ -205,13 +209,13 @@ public class MaintenanceDelegationRequest1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest2#RequestedDelegation
-	 * MaintenanceDelegationRequest2.RequestedDelegation}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationRequest2#mmRequestedDelegation
+	 * MaintenanceDelegationRequest2.mmRequestedDelegation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestedDelegation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestedDelegation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegationRequest1.mmObject();
 			isDerived = false;
@@ -219,20 +223,20 @@ public class MaintenanceDelegationRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedDelegation";
 			definition = "Information on the delegation of a maintenance action.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegationRequest2.RequestedDelegation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegationRequest2.mmRequestedDelegation);
 			minOccurs = 1;
-			type_lazy = () -> MaintenanceDelegation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegationRequest1.TMIdentification, com.tools20022.repository.msg.MaintenanceDelegationRequest1.MasterTMIdentification,
-						com.tools20022.repository.msg.MaintenanceDelegationRequest1.RequestedDelegation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.MaintenanceDelegationRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegationRequest1.mmTMIdentification, com.tools20022.repository.msg.MaintenanceDelegationRequest1.mmMasterTMIdentification,
+						com.tools20022.repository.msg.MaintenanceDelegationRequest1.mmRequestedDelegation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.mmMaintenanceDelegationRequest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegationRequest1";
 				definition = "Information related to the the request of maintenance delegations.";
@@ -240,5 +244,29 @@ public class MaintenanceDelegationRequest1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification72 getTMIdentification() {
+		return tMIdentification;
+	}
+
+	public void setTMIdentification(com.tools20022.repository.msg.GenericIdentification72 tMIdentification) {
+		this.tMIdentification = tMIdentification;
+	}
+
+	public GenericIdentification72 getMasterTMIdentification() {
+		return masterTMIdentification;
+	}
+
+	public void setMasterTMIdentification(com.tools20022.repository.msg.GenericIdentification72 masterTMIdentification) {
+		this.masterTMIdentification = masterTMIdentification;
+	}
+
+	public List<MaintenanceDelegation1> getRequestedDelegation() {
+		return requestedDelegation;
+	}
+
+	public void setRequestedDelegation(List<com.tools20022.repository.msg.MaintenanceDelegation1> requestedDelegation) {
+		this.requestedDelegation = requestedDelegation;
 	}
 }

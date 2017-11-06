@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD6#PlaceAndName
- * CorporateActionOptionSD6.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD6#mmPlaceAndName
+ * CorporateActionOptionSD6.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD6#ExtendedOptionFeatures
- * CorporateActionOptionSD6.ExtendedOptionFeatures}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD6#mmExtendedOptionFeatures
+ * CorporateActionOptionSD6.mmExtendedOptionFeatures}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD6#DefaultOptionFlag
- * CorporateActionOptionSD6.DefaultOptionFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD6#mmDefaultOptionFlag
+ * CorporateActionOptionSD6.mmDefaultOptionFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD6#OptionalDividendSupplementaryDataRequiredFlag
- * CorporateActionOptionSD6.OptionalDividendSupplementaryDataRequiredFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD6#mmOptionalDividendSupplementaryDataRequiredFlag
+ * CorporateActionOptionSD6.mmOptionalDividendSupplementaryDataRequiredFlag}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOptionSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -107,13 +108,13 @@ public class CorporateActionOptionSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD8#PlaceAndName
-	 * CorporateActionOptionSD8.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD8#mmPlaceAndName
+	 * CorporateActionOptionSD8.mmPlaceAndName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD6.mmObject();
 			isDerived = false;
@@ -121,12 +122,13 @@ public class CorporateActionOptionSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD8.PlaceAndName);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD8.mmPlaceAndName);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ExtendedOptionFeature1Code extendedOptionFeatures;
 	/**
 	 * Used for options that have particular proprietary feature that cannot be
 	 * represented in standard ISO message.
@@ -160,13 +162,13 @@ public class CorporateActionOptionSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD8#ExtendedOptionFeatures
-	 * CorporateActionOptionSD8.ExtendedOptionFeatures}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD8#mmExtendedOptionFeatures
+	 * CorporateActionOptionSD8.mmExtendedOptionFeatures}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedOptionFeatures = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedOptionFeatures = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD6.mmObject();
 			isDerived = false;
@@ -174,12 +176,13 @@ public class CorporateActionOptionSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedOptionFeatures";
 			definition = "Used for options that have particular proprietary feature that cannot be represented in standard ISO message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD8.ExtendedOptionFeatures);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD8.mmExtendedOptionFeatures);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedOptionFeature1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator defaultOptionFlag;
 	/**
 	 * Identifies whether the option is declared as default by the issuer /
 	 * offeror, and will be treated as default by the issuer / offeror if no
@@ -214,13 +217,13 @@ public class CorporateActionOptionSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD8#DefaultOptionFlag
-	 * CorporateActionOptionSD8.DefaultOptionFlag}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD8#mmDefaultOptionFlag
+	 * CorporateActionOptionSD8.mmDefaultOptionFlag}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DefaultOptionFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDefaultOptionFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD6.mmObject();
 			isDerived = false;
@@ -228,12 +231,13 @@ public class CorporateActionOptionSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionFlag";
 			definition = "Identifies whether the option is declared as default by the issuer / offeror,  and will be treated as default by the issuer / offeror if no elections is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD8.DefaultOptionFlag);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD8.mmDefaultOptionFlag);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator optionalDividendSupplementaryDataRequiredFlag;
 	/**
 	 * Indicates whether optional dividend supplementary data are required in
 	 * the ISO 20022 CAIN instructions for this event.
@@ -267,13 +271,14 @@ public class CorporateActionOptionSD6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD8#OptionalDividendSupplementaryDataRequiredFlag
-	 * CorporateActionOptionSD8.OptionalDividendSupplementaryDataRequiredFlag}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD8#mmOptionalDividendSupplementaryDataRequiredFlag
+	 * CorporateActionOptionSD8.mmOptionalDividendSupplementaryDataRequiredFlag}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionalDividendSupplementaryDataRequiredFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionalDividendSupplementaryDataRequiredFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD6.mmObject();
 			isDerived = false;
@@ -281,9 +286,9 @@ public class CorporateActionOptionSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionalDividendSupplementaryDataRequiredFlag";
 			definition = "Indicates whether optional dividend supplementary data are required in the ISO 20022 CAIN instructions for this event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD8.OptionalDividendSupplementaryDataRequiredFlag);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD8.mmOptionalDividendSupplementaryDataRequiredFlag);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -291,16 +296,48 @@ public class CorporateActionOptionSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD6.PlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD6.ExtendedOptionFeatures,
-						com.tools20022.repository.msg.CorporateActionOptionSD6.DefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD6.OptionalDividendSupplementaryDataRequiredFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD6.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD6.mmExtendedOptionFeatures,
+						com.tools20022.repository.msg.CorporateActionOptionSD6.mmDefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD6.mmOptionalDividendSupplementaryDataRequiredFlag);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSD6";
 				definition = "Provides additional information regarding corporate action option details.";
-				previousVersion_lazy = () -> CorporateActionOptionSD2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionOptionSD8.mmObject());
+				previousVersion_lazy = () -> CorporateActionOptionSD2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ExtendedOptionFeature1Code getExtendedOptionFeatures() {
+		return extendedOptionFeatures;
+	}
+
+	public void setExtendedOptionFeatures(ExtendedOptionFeature1Code extendedOptionFeatures) {
+		this.extendedOptionFeatures = extendedOptionFeatures;
+	}
+
+	public YesNoIndicator getDefaultOptionFlag() {
+		return defaultOptionFlag;
+	}
+
+	public void setDefaultOptionFlag(YesNoIndicator defaultOptionFlag) {
+		this.defaultOptionFlag = defaultOptionFlag;
+	}
+
+	public YesNoIndicator getOptionalDividendSupplementaryDataRequiredFlag() {
+		return optionalDividendSupplementaryDataRequiredFlag;
+	}
+
+	public void setOptionalDividendSupplementaryDataRequiredFlag(YesNoIndicator optionalDividendSupplementaryDataRequiredFlag) {
+		this.optionalDividendSupplementaryDataRequiredFlag = optionalDividendSupplementaryDataRequiredFlag;
 	}
 }

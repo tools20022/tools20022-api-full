@@ -35,6 +35,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.PaymentInstruction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Contains the requested modifications.
@@ -46,59 +47,61 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#RelatedReference
- * RequestedModification.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmRelatedReference
+ * RequestedModification.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#BankOperationCode
- * RequestedModification.BankOperationCode}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmBankOperationCode
+ * RequestedModification.mmBankOperationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#InstructionCode
- * RequestedModification.InstructionCode}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmInstructionCode
+ * RequestedModification.mmInstructionCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#RequestedExecutionDate
- * RequestedModification.RequestedExecutionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmRequestedExecutionDate
+ * RequestedModification.mmRequestedExecutionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#ValueDate
- * RequestedModification.ValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmValueDate
+ * RequestedModification.mmValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#InterbankSettledAmount
- * RequestedModification.InterbankSettledAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestedModification#Debtor
- * RequestedModification.Debtor}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmInterbankSettledAmount
+ * RequestedModification.mmInterbankSettledAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestedModification#mmDebtor
+ * RequestedModification.mmDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#DebtorAccount
- * RequestedModification.DebtorAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmDebtorAccount
+ * RequestedModification.mmDebtorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#IntermediarySettlementAgent
- * RequestedModification.IntermediarySettlementAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmIntermediarySettlementAgent
+ * RequestedModification.mmIntermediarySettlementAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#LastSettlementAgent
- * RequestedModification.LastSettlementAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmLastSettlementAgent
+ * RequestedModification.mmLastSettlementAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#PaymentScheme
- * RequestedModification.PaymentScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmPaymentScheme
+ * RequestedModification.mmPaymentScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#BeneficiaryInstitutionAccount
- * RequestedModification.BeneficiaryInstitutionAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestedModification#Creditor
- * RequestedModification.Creditor}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmBeneficiaryInstitutionAccount
+ * RequestedModification.mmBeneficiaryInstitutionAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#CreditorAccount
- * RequestedModification.CreditorAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmCreditor
+ * RequestedModification.mmCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#RemittanceInformation
- * RequestedModification.RemittanceInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestedModification#Purpose
- * RequestedModification.Purpose}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmCreditorAccount
+ * RequestedModification.mmCreditorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#InstructionForFinalAgent
- * RequestedModification.InstructionForFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmRemittanceInformation
+ * RequestedModification.mmRemittanceInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#DetailsOfCharges
- * RequestedModification.DetailsOfCharges}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmPurpose
+ * RequestedModification.mmPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#SenderToReceiverInformation
- * RequestedModification.SenderToReceiverInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmInstructionForFinalAgent
+ * RequestedModification.mmInstructionForFinalAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmDetailsOfCharges
+ * RequestedModification.mmDetailsOfCharges}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmSenderToReceiverInformation
+ * RequestedModification.mmSenderToReceiverInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -109,15 +112,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#Modification
- * RequestToModifyPayment.Modification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPayment#mmModification
+ * RequestToModifyPayment.mmModification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,6 +134,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestedModification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text relatedReference;
 	/**
 	 * Reference relating to a linked payment instruction or agreement which is
 	 * meaningful to both parties (eg, the content of field 21 in a cover
@@ -162,7 +166,7 @@ public class RequestedModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
@@ -170,11 +174,12 @@ public class RequestedModification {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference relating to a linked payment instruction or agreement which is meaningful to both parties (eg, the content of field 21 in a cover instruction).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SWIFTServiceLevel2Code bankOperationCode;
 	/**
 	 * SWIFT defined service level applies to the payment instruction.
 	 * <p>
@@ -188,8 +193,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ServiceLevel#Other
-	 * ServiceLevel.Other}</li>
+	 * {@linkplain com.tools20022.repository.entity.ServiceLevel#mmOther
+	 * ServiceLevel.mmOther}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -209,20 +214,21 @@ public class RequestedModification {
 	 * "SWIFT defined service level applies to the payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankOperationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankOperationCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmOther;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ServiceLevel.Other;
 			isDerived = false;
 			xmlTag = "BkOprCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOperationCode";
 			definition = "SWIFT defined service level applies to the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> SWIFTServiceLevel2Code.mmObject();
 		}
 	};
+	protected Instruction1Code instructionCode;
 	/**
 	 * Further information related to the processing of the payment instruction.
 	 * The instruction can relate to a level of service between the bank and the
@@ -239,8 +245,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#InstructionForNextAgent
-	 * PaymentInstruction.InstructionForNextAgent}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmInstructionForNextAgent
+	 * PaymentInstruction.mmInstructionForNextAgent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -261,20 +267,21 @@ public class RequestedModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.InstructionForNextAgent;
 			isDerived = false;
 			xmlTag = "InstrCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCode";
 			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Instruction1Code.mmObject();
 		}
 	};
+	protected ISODate requestedExecutionDate;
 	/**
 	 * Date and time the debtor requests the clearing agent to process the
 	 * payment instruction.
@@ -288,8 +295,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
-	 * Obligation.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+	 * Obligation.mmRequestedSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -310,20 +317,21 @@ public class RequestedModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementDate;
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date and time the debtor requests the clearing agent to process the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate valueDate;
 	/**
 	 * Date on which the amount of money ceases to be available to the agent
 	 * that owes it and when the amount of money becomes available to the agent
@@ -338,8 +346,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -360,20 +368,21 @@ public class RequestedModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount interbankSettledAmount;
 	/**
 	 * Amount of money moved between the instructing agent and the instructed
 	 * agent.
@@ -388,8 +397,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementAmount
-	 * CashSettlement.InterbankSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+	 * CashSettlement.mmInterbankSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -410,20 +419,21 @@ public class RequestedModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterbankSettledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterbankSettledAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementAmount;
 			isDerived = false;
 			xmlTag = "IntrBkSttldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettledAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PartyIdentification1 debtor;
 	/**
 	 * Debtor or Ordering customer of the payment instruction.
 	 * <p>
@@ -435,8 +445,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -455,21 +465,22 @@ public class RequestedModification {
 	 * definition} = "Debtor or Ordering customer of the payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Debtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Debtor or Ordering customer of the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification1.mmObject();
 		}
 	};
+	protected CashAccount3 debtorAccount;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -481,8 +492,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -501,21 +512,22 @@ public class RequestedModification {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "DbtrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Account to or from which a cash entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount3.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification intermediarySettlementAgent;
 	/**
 	 * Party that executes a cash transfer received via a clearing agent or on
 	 * request of an agreement party.
@@ -529,8 +541,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -551,21 +563,22 @@ public class RequestedModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediarySettlementAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediarySettlementAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "IntrmySttlmAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediarySettlementAgent";
 			definition = "Party that executes a cash transfer received via a clearing agent or on request of an agreement party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification lastSettlementAgent;
 	/**
 	 * Party that executes a cash transfer received via a clearing agent or on
 	 * request of an agreement party.
@@ -579,8 +592,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -601,21 +614,22 @@ public class RequestedModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LastSettlementAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLastSettlementAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "LastSttlmAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastSettlementAgent";
 			definition = "Party that executes a cash transfer received via a clearing agent or on request of an agreement party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification.mmObject();
 		}
 	};
+	protected PaymentSchemeChoice paymentScheme;
 	/**
 	 * Specification of a pre-agreed offering between clearing agents, or the
 	 * channel through which the payment instruction is to be processed. This
@@ -652,21 +666,22 @@ public class RequestedModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentScheme = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestedModification.mmObject();
 			businessComponentTrace_lazy = () -> CashClearingSystem.mmObject();
+			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "PmtSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentScheme";
 			definition = "Specification of a pre-agreed offering between clearing agents, or the channel through which the payment instruction is to be processed. This payment scheme can point to a specific rulebook governing the rules of clearing and settlement between two parties.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentSchemeChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PaymentSchemeChoice.mmObject();
 		}
 	};
+	protected CashAccount3 beneficiaryInstitutionAccount;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -697,21 +712,22 @@ public class RequestedModification {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BeneficiaryInstitutionAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBeneficiaryInstitutionAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestedModification.mmObject();
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
+			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryInstnAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionAccount";
 			definition = "Account to or from which a cash entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount3.mmObject();
 		}
 	};
+	protected PartyIdentification1 creditor;
 	/**
 	 * Entity involved in an activity.
 	 * <p>
@@ -723,8 +739,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -743,21 +759,22 @@ public class RequestedModification {
 	 * definition} = "Entity involved in an activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Creditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Entity involved in an activity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification1.mmObject();
 		}
 	};
+	protected CashAccount3 creditorAccount;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -769,8 +786,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -789,21 +806,22 @@ public class RequestedModification {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "CdtrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Account to or from which a cash entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount3.mmObject();
 		}
 	};
+	protected RemittanceInformation3Choice remittanceInformation;
 	/**
 	 * Structured information that enables the matching, ie, reconciliation, of
 	 * a payment with the items that the payment is intended to settle, such as
@@ -839,21 +857,22 @@ public class RequestedModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RemittanceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRemittanceInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestedModification.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "RmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Structured information that enables the matching, ie, reconciliation, of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> RemittanceInformation3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RemittanceInformation3Choice.mmObject();
 		}
 	};
+	protected PurposeChoice purpose;
 	/**
 	 * Underlying reason for the payment transaction.
 	 * <p>
@@ -865,8 +884,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#Purpose
-	 * PaymentObligation.Purpose}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPurpose
+	 * PaymentObligation.mmPurpose}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -885,21 +904,22 @@ public class RequestedModification {
 	 * definition} = "Underlying reason for the payment transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Purpose = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.Purpose;
 			isDerived = false;
 			xmlTag = "Purp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Underlying reason for the payment transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PurposeChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PurposeChoice.mmObject();
 		}
 	};
+	protected InstructionForFinalAgent instructionForFinalAgent;
 	/**
 	 * Further information related to the processing of the payment instruction.
 	 * The instruction can relate to a level of service between the bank and the
@@ -915,8 +935,8 @@ public class RequestedModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructionForCreditorAgent
-	 * Payment.InstructionForCreditorAgent}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructionForCreditorAgent
+	 * Payment.mmInstructionForCreditorAgent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -937,21 +957,22 @@ public class RequestedModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionForFinalAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionForFinalAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructionForCreditorAgent;
 			componentContext_lazy = () -> RequestedModification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructionForCreditorAgent;
 			isDerived = false;
 			xmlTag = "InstrForFnlAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForFinalAgent";
 			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.InstructionForFinalAgent.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InstructionForFinalAgent.mmObject();
 		}
 	};
+	protected ChargeBearer1Code detailsOfCharges;
 	/**
 	 * Party(ies) liable for a charge associated with the transfer of cash.
 	 * <p>
@@ -981,7 +1002,7 @@ public class RequestedModification {
 	 * "Party(ies) liable for a charge associated with the transfer of cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DetailsOfCharges = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDetailsOfCharges = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
@@ -989,11 +1010,12 @@ public class RequestedModification {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailsOfCharges";
 			definition = "Party(ies) liable for a charge associated with the transfer of cash.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearer1Code.mmObject();
 		}
 	};
+	protected List<Max35Text> senderToReceiverInformation;
 	/**
 	 * Unformatted information from the sender to the receiver.
 	 * <p>
@@ -1021,7 +1043,7 @@ public class RequestedModification {
 	 * definition} = "Unformatted information from the sender to the receiver."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SenderToReceiverInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSenderToReceiverInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
@@ -1029,8 +1051,8 @@ public class RequestedModification {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderToReceiverInformation";
 			definition = "Unformatted information from the sender to the receiver.";
-			minOccurs = 0;
 			maxOccurs = 6;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -1038,22 +1060,174 @@ public class RequestedModification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedModification.RelatedReference, com.tools20022.repository.msg.RequestedModification.BankOperationCode,
-						com.tools20022.repository.msg.RequestedModification.InstructionCode, com.tools20022.repository.msg.RequestedModification.RequestedExecutionDate, com.tools20022.repository.msg.RequestedModification.ValueDate,
-						com.tools20022.repository.msg.RequestedModification.InterbankSettledAmount, com.tools20022.repository.msg.RequestedModification.Debtor, com.tools20022.repository.msg.RequestedModification.DebtorAccount,
-						com.tools20022.repository.msg.RequestedModification.IntermediarySettlementAgent, com.tools20022.repository.msg.RequestedModification.LastSettlementAgent,
-						com.tools20022.repository.msg.RequestedModification.PaymentScheme, com.tools20022.repository.msg.RequestedModification.BeneficiaryInstitutionAccount, com.tools20022.repository.msg.RequestedModification.Creditor,
-						com.tools20022.repository.msg.RequestedModification.CreditorAccount, com.tools20022.repository.msg.RequestedModification.RemittanceInformation, com.tools20022.repository.msg.RequestedModification.Purpose,
-						com.tools20022.repository.msg.RequestedModification.InstructionForFinalAgent, com.tools20022.repository.msg.RequestedModification.DetailsOfCharges,
-						com.tools20022.repository.msg.RequestedModification.SenderToReceiverInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedModification.mmRelatedReference, com.tools20022.repository.msg.RequestedModification.mmBankOperationCode,
+						com.tools20022.repository.msg.RequestedModification.mmInstructionCode, com.tools20022.repository.msg.RequestedModification.mmRequestedExecutionDate, com.tools20022.repository.msg.RequestedModification.mmValueDate,
+						com.tools20022.repository.msg.RequestedModification.mmInterbankSettledAmount, com.tools20022.repository.msg.RequestedModification.mmDebtor, com.tools20022.repository.msg.RequestedModification.mmDebtorAccount,
+						com.tools20022.repository.msg.RequestedModification.mmIntermediarySettlementAgent, com.tools20022.repository.msg.RequestedModification.mmLastSettlementAgent,
+						com.tools20022.repository.msg.RequestedModification.mmPaymentScheme, com.tools20022.repository.msg.RequestedModification.mmBeneficiaryInstitutionAccount,
+						com.tools20022.repository.msg.RequestedModification.mmCreditor, com.tools20022.repository.msg.RequestedModification.mmCreditorAccount, com.tools20022.repository.msg.RequestedModification.mmRemittanceInformation,
+						com.tools20022.repository.msg.RequestedModification.mmPurpose, com.tools20022.repository.msg.RequestedModification.mmInstructionForFinalAgent, com.tools20022.repository.msg.RequestedModification.mmDetailsOfCharges,
+						com.tools20022.repository.msg.RequestedModification.mmSenderToReceiverInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.mmModification);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.Modification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestedModification";
 				definition = "Contains the requested modifications.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(Max35Text relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public SWIFTServiceLevel2Code getBankOperationCode() {
+		return bankOperationCode;
+	}
+
+	public void setBankOperationCode(SWIFTServiceLevel2Code bankOperationCode) {
+		this.bankOperationCode = bankOperationCode;
+	}
+
+	public Instruction1Code getInstructionCode() {
+		return instructionCode;
+	}
+
+	public void setInstructionCode(Instruction1Code instructionCode) {
+		this.instructionCode = instructionCode;
+	}
+
+	public ISODate getRequestedExecutionDate() {
+		return requestedExecutionDate;
+	}
+
+	public void setRequestedExecutionDate(ISODate requestedExecutionDate) {
+		this.requestedExecutionDate = requestedExecutionDate;
+	}
+
+	public ISODate getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODate valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public CurrencyAndAmount getInterbankSettledAmount() {
+		return interbankSettledAmount;
+	}
+
+	public void setInterbankSettledAmount(CurrencyAndAmount interbankSettledAmount) {
+		this.interbankSettledAmount = interbankSettledAmount;
+	}
+
+	public PartyIdentification1 getDebtor() {
+		return debtor;
+	}
+
+	public void setDebtor(com.tools20022.repository.msg.PartyIdentification1 debtor) {
+		this.debtor = debtor;
+	}
+
+	public CashAccount3 getDebtorAccount() {
+		return debtorAccount;
+	}
+
+	public void setDebtorAccount(com.tools20022.repository.msg.CashAccount3 debtorAccount) {
+		this.debtorAccount = debtorAccount;
+	}
+
+	public BranchAndFinancialInstitutionIdentification getIntermediarySettlementAgent() {
+		return intermediarySettlementAgent;
+	}
+
+	public void setIntermediarySettlementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification intermediarySettlementAgent) {
+		this.intermediarySettlementAgent = intermediarySettlementAgent;
+	}
+
+	public BranchAndFinancialInstitutionIdentification getLastSettlementAgent() {
+		return lastSettlementAgent;
+	}
+
+	public void setLastSettlementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification lastSettlementAgent) {
+		this.lastSettlementAgent = lastSettlementAgent;
+	}
+
+	public PaymentSchemeChoice getPaymentScheme() {
+		return paymentScheme;
+	}
+
+	public void setPaymentScheme(PaymentSchemeChoice paymentScheme) {
+		this.paymentScheme = paymentScheme;
+	}
+
+	public CashAccount3 getBeneficiaryInstitutionAccount() {
+		return beneficiaryInstitutionAccount;
+	}
+
+	public void setBeneficiaryInstitutionAccount(com.tools20022.repository.msg.CashAccount3 beneficiaryInstitutionAccount) {
+		this.beneficiaryInstitutionAccount = beneficiaryInstitutionAccount;
+	}
+
+	public PartyIdentification1 getCreditor() {
+		return creditor;
+	}
+
+	public void setCreditor(com.tools20022.repository.msg.PartyIdentification1 creditor) {
+		this.creditor = creditor;
+	}
+
+	public CashAccount3 getCreditorAccount() {
+		return creditorAccount;
+	}
+
+	public void setCreditorAccount(com.tools20022.repository.msg.CashAccount3 creditorAccount) {
+		this.creditorAccount = creditorAccount;
+	}
+
+	public RemittanceInformation3Choice getRemittanceInformation() {
+		return remittanceInformation;
+	}
+
+	public void setRemittanceInformation(RemittanceInformation3Choice remittanceInformation) {
+		this.remittanceInformation = remittanceInformation;
+	}
+
+	public PurposeChoice getPurpose() {
+		return purpose;
+	}
+
+	public void setPurpose(PurposeChoice purpose) {
+		this.purpose = purpose;
+	}
+
+	public InstructionForFinalAgent getInstructionForFinalAgent() {
+		return instructionForFinalAgent;
+	}
+
+	public void setInstructionForFinalAgent(com.tools20022.repository.msg.InstructionForFinalAgent instructionForFinalAgent) {
+		this.instructionForFinalAgent = instructionForFinalAgent;
+	}
+
+	public ChargeBearer1Code getDetailsOfCharges() {
+		return detailsOfCharges;
+	}
+
+	public void setDetailsOfCharges(ChargeBearer1Code detailsOfCharges) {
+		this.detailsOfCharges = detailsOfCharges;
+	}
+
+	public List<Max35Text> getSenderToReceiverInformation() {
+		return senderToReceiverInformation;
+	}
+
+	public void setSenderToReceiverInformation(List<Max35Text> senderToReceiverInformation) {
+		this.senderToReceiverInformation = senderToReceiverInformation;
 	}
 }

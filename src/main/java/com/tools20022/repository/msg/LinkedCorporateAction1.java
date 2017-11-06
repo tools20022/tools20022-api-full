@@ -35,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LinkedCorporateAction1#NotificationType
- * LinkedCorporateAction1.NotificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.LinkedCorporateAction1#mmNotificationType
+ * LinkedCorporateAction1.mmNotificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LinkedCorporateAction1#LinkedAgentCANotificationAdviceIdentification
- * LinkedCorporateAction1.LinkedAgentCANotificationAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LinkedCorporateAction1#mmLinkedAgentCANotificationAdviceIdentification
+ * LinkedCorporateAction1.mmLinkedAgentCANotificationAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LinkedCorporateAction1#LinkageType
- * LinkedCorporateAction1.LinkageType}</li>
+ * {@linkplain com.tools20022.repository.msg.LinkedCorporateAction1#mmLinkageType
+ * LinkedCorporateAction1.mmLinkageType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LinkedCorporateAction1#LinkedIssuerCorporateActionIdentification
- * LinkedCorporateAction1.LinkedIssuerCorporateActionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LinkedCorporateAction1#mmLinkedIssuerCorporateActionIdentification
+ * LinkedCorporateAction1.mmLinkedIssuerCorporateActionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LinkedCorporateAction1#LinkedCorporateActionProcessingIdentification
- * LinkedCorporateAction1.LinkedCorporateActionProcessingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LinkedCorporateAction1#mmLinkedCorporateActionProcessingIdentification
+ * LinkedCorporateAction1.mmLinkedCorporateActionProcessingIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -56,15 +56,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#NotificationTypeAndLinkage
- * AgentCANotificationAdviceV01.NotificationTypeAndLinkage}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmNotificationTypeAndLinkage
+ * AgentCANotificationAdviceV01.mmNotificationTypeAndLinkage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LinkedCorporateAction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionNotificationType1Code notificationType;
 	/**
 	 * The function of the notification e.g. new notification.
 	 * <p>
@@ -106,7 +107,7 @@ public class LinkedCorporateAction1 {
 	 * definition} = "The function of the notification e.g. new notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LinkedCorporateAction1.mmObject();
 			isDerived = false;
@@ -114,11 +115,12 @@ public class LinkedCorporateAction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationType";
 			definition = "The function of the notification e.g. new notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNotificationType1Code.mmObject();
 		}
 	};
+	protected DocumentIdentification8 linkedAgentCANotificationAdviceIdentification;
 	/**
 	 * The identification of the linked notification advice.
 	 * <p>
@@ -147,7 +149,7 @@ public class LinkedCorporateAction1 {
 	 * definition} = "The identification of the linked notification advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkedAgentCANotificationAdviceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkedAgentCANotificationAdviceIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LinkedCorporateAction1.mmObject();
 			isDerived = false;
@@ -155,11 +157,12 @@ public class LinkedCorporateAction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedAgentCANotificationAdviceIdentification";
 			definition = "The identification of the linked notification advice.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> DocumentIdentification8.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
 		}
 	};
+	protected ProcessingPosition2FormatChoice linkageType;
 	/**
 	 * Specifies when the instruction is to be executed relative to a linked
 	 * instruction.
@@ -191,7 +194,7 @@ public class LinkedCorporateAction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkageType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LinkedCorporateAction1.mmObject();
 			isDerived = false;
@@ -199,11 +202,12 @@ public class LinkedCorporateAction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Specifies when the instruction is to be executed relative to a linked instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ProcessingPosition2FormatChoice.mmObject();
 		}
 	};
+	protected Max35Text linkedIssuerCorporateActionIdentification;
 	/**
 	 * Reference given to the linked event by the CA event issuer (agent).
 	 * <p>
@@ -232,7 +236,7 @@ public class LinkedCorporateAction1 {
 	 * "Reference given to the linked event by the CA event issuer (agent)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkedIssuerCorporateActionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkedIssuerCorporateActionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LinkedCorporateAction1.mmObject();
 			isDerived = false;
@@ -240,11 +244,12 @@ public class LinkedCorporateAction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedIssuerCorporateActionIdentification";
 			definition = "Reference given to the linked event by the CA event issuer (agent).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text linkedCorporateActionProcessingIdentification;
 	/**
 	 * Reference assigned by the CSD to the linked coporate avent.
 	 * <p>
@@ -273,7 +278,7 @@ public class LinkedCorporateAction1 {
 	 * "Reference assigned by the CSD to the linked coporate avent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkedCorporateActionProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkedCorporateActionProcessingIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LinkedCorporateAction1.mmObject();
 			isDerived = false;
@@ -281,8 +286,8 @@ public class LinkedCorporateAction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedCorporateActionProcessingIdentification";
 			definition = "Reference assigned by the CSD to the linked coporate avent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -290,16 +295,56 @@ public class LinkedCorporateAction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LinkedCorporateAction1.NotificationType, com.tools20022.repository.msg.LinkedCorporateAction1.LinkedAgentCANotificationAdviceIdentification,
-						com.tools20022.repository.msg.LinkedCorporateAction1.LinkageType, com.tools20022.repository.msg.LinkedCorporateAction1.LinkedIssuerCorporateActionIdentification,
-						com.tools20022.repository.msg.LinkedCorporateAction1.LinkedCorporateActionProcessingIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.NotificationTypeAndLinkage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LinkedCorporateAction1.mmNotificationType, com.tools20022.repository.msg.LinkedCorporateAction1.mmLinkedAgentCANotificationAdviceIdentification,
+						com.tools20022.repository.msg.LinkedCorporateAction1.mmLinkageType, com.tools20022.repository.msg.LinkedCorporateAction1.mmLinkedIssuerCorporateActionIdentification,
+						com.tools20022.repository.msg.LinkedCorporateAction1.mmLinkedCorporateActionProcessingIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmNotificationTypeAndLinkage);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LinkedCorporateAction1";
 				definition = "Specifies linkage information of a corporate action message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionNotificationType1Code getNotificationType() {
+		return notificationType;
+	}
+
+	public void setNotificationType(CorporateActionNotificationType1Code notificationType) {
+		this.notificationType = notificationType;
+	}
+
+	public DocumentIdentification8 getLinkedAgentCANotificationAdviceIdentification() {
+		return linkedAgentCANotificationAdviceIdentification;
+	}
+
+	public void setLinkedAgentCANotificationAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 linkedAgentCANotificationAdviceIdentification) {
+		this.linkedAgentCANotificationAdviceIdentification = linkedAgentCANotificationAdviceIdentification;
+	}
+
+	public ProcessingPosition2FormatChoice getLinkageType() {
+		return linkageType;
+	}
+
+	public void setLinkageType(ProcessingPosition2FormatChoice linkageType) {
+		this.linkageType = linkageType;
+	}
+
+	public Max35Text getLinkedIssuerCorporateActionIdentification() {
+		return linkedIssuerCorporateActionIdentification;
+	}
+
+	public void setLinkedIssuerCorporateActionIdentification(Max35Text linkedIssuerCorporateActionIdentification) {
+		this.linkedIssuerCorporateActionIdentification = linkedIssuerCorporateActionIdentification;
+	}
+
+	public Max35Text getLinkedCorporateActionProcessingIdentification() {
+		return linkedCorporateActionProcessingIdentification;
+	}
+
+	public void setLinkedCorporateActionProcessingIdentification(Max35Text linkedCorporateActionProcessingIdentification) {
+		this.linkedCorporateActionProcessingIdentification = linkedCorporateActionProcessingIdentification;
 	}
 }

@@ -39,21 +39,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification55#Identification
- * GenericIdentification55.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification55#Type
- * GenericIdentification55.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification55#Issuer
- * GenericIdentification55.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification55#mmIdentification
+ * GenericIdentification55.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification55#mmType
+ * GenericIdentification55.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification55#IssueDate
- * GenericIdentification55.IssueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification55#mmIssuer
+ * GenericIdentification55.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification55#ExpiryDate
- * GenericIdentification55.ExpiryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification55#mmIssueDate
+ * GenericIdentification55.mmIssueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification55#IssuerCountry
- * GenericIdentification55.IssuerCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification55#mmExpiryDate
+ * GenericIdentification55.mmExpiryDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification55#mmIssuerCountry
+ * GenericIdentification55.mmIssuerCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GenericIdentification55 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Name or number assigned by an entity to enable recognition of that
 	 * entity, for example, account identifier.
@@ -104,8 +106,8 @@ public class GenericIdentification55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -128,36 +130,37 @@ public class GenericIdentification55 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#Identification
-	 * AlternateIdentification4.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#mmIdentification
+	 * AlternateIdentification4.mmIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#Identification
-	 * GenericIdentification82.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#mmIdentification
+	 * GenericIdentification82.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification44#Identification
-	 * GenericIdentification44.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification44#mmIdentification
+	 * GenericIdentification44.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentification55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.Identification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.Identification, com.tools20022.repository.msg.GenericIdentification82.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.mmIdentification, com.tools20022.repository.msg.GenericIdentification82.mmIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected OtherIdentification2Choice type;
 	/**
 	 * Specifies the nature of the identification.
 	 * <p>
@@ -193,36 +196,37 @@ public class GenericIdentification55 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#Type
-	 * AlternateIdentification4.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#mmType
+	 * AlternateIdentification4.mmType}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#Type
-	 * GenericIdentification82.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#mmType
+	 * GenericIdentification82.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification44#Type
-	 * GenericIdentification44.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification44#mmType
+	 * GenericIdentification44.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification55.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> GenericIdentification55.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature of the identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.Type;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.Type, com.tools20022.repository.msg.GenericIdentification82.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.mmType, com.tools20022.repository.msg.GenericIdentification82.mmType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OtherIdentification2Choice.mmObject();
 		}
 	};
+	protected Max35Text issuer;
 	/**
 	 * Entity that assigns the identifier.
 	 * <p>
@@ -257,36 +261,37 @@ public class GenericIdentification55 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#Issuer
-	 * AlternateIdentification4.Issuer}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#mmIssuer
+	 * AlternateIdentification4.mmIssuer}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#Issuer
-	 * GenericIdentification82.Issuer}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#mmIssuer
+	 * GenericIdentification82.mmIssuer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification44#Issuer
-	 * GenericIdentification44.Issuer}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification44#mmIssuer
+	 * GenericIdentification44.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification55.mmObject();
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
+			componentContext_lazy = () -> GenericIdentification55.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identifier.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.Issuer;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.Issuer, com.tools20022.repository.msg.GenericIdentification82.Issuer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.mmIssuer, com.tools20022.repository.msg.GenericIdentification82.mmIssuer);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmIssuer;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate issueDate;
 	/**
 	 * Date at which the identification was issued.
 	 * <p>
@@ -299,8 +304,8 @@ public class GenericIdentification55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#IssueDate
-	 * GenericIdentification.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIssueDate
+	 * GenericIdentification.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -321,36 +326,37 @@ public class GenericIdentification55 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#IssueDate
-	 * AlternateIdentification4.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#mmIssueDate
+	 * AlternateIdentification4.mmIssueDate}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#IssueDate
-	 * GenericIdentification82.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#mmIssueDate
+	 * GenericIdentification82.mmIssueDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification44#IssueDate
-	 * GenericIdentification44.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification44#mmIssueDate
+	 * GenericIdentification44.mmIssueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIssueDate;
 			componentContext_lazy = () -> GenericIdentification55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.IssueDate;
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date at which the identification was issued.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.IssueDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.IssueDate, com.tools20022.repository.msg.GenericIdentification82.IssueDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.mmIssueDate, com.tools20022.repository.msg.GenericIdentification82.mmIssueDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmIssueDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate expiryDate;
 	/**
 	 * Date at which the identification expires.
 	 * <p>
@@ -363,8 +369,8 @@ public class GenericIdentification55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#ExpiryDate
-	 * GenericIdentification.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmExpiryDate
+	 * GenericIdentification.mmExpiryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -385,36 +391,37 @@ public class GenericIdentification55 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#ExpiryDate
-	 * AlternateIdentification4.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#mmExpiryDate
+	 * AlternateIdentification4.mmExpiryDate}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#ExpiryDate
-	 * GenericIdentification82.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#mmExpiryDate
+	 * GenericIdentification82.mmExpiryDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification44#ExpiryDate
-	 * GenericIdentification44.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification44#mmExpiryDate
+	 * GenericIdentification44.mmExpiryDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmExpiryDate;
 			componentContext_lazy = () -> GenericIdentification55.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.ExpiryDate;
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date at which the identification expires.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.ExpiryDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.ExpiryDate, com.tools20022.repository.msg.GenericIdentification82.ExpiryDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.mmExpiryDate, com.tools20022.repository.msg.GenericIdentification82.mmExpiryDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmExpiryDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected CountryCode issuerCountry;
 	/**
 	 * Country that issued the identification document.
 	 * <p>
@@ -449,27 +456,27 @@ public class GenericIdentification55 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#IssuerCountry
-	 * AlternateIdentification4.IssuerCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#mmIssuerCountry
+	 * AlternateIdentification4.mmIssuerCountry}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#IssuerCountry
-	 * GenericIdentification82.IssuerCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification82#mmIssuerCountry
+	 * GenericIdentification82.mmIssuerCountry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification55.mmObject();
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
+			componentContext_lazy = () -> GenericIdentification55.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCountry";
 			definition = "Country that issued the identification document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.IssuerCountry, com.tools20022.repository.msg.GenericIdentification82.IssuerCountry);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification4.mmIssuerCountry, com.tools20022.repository.msg.GenericIdentification82.mmIssuerCountry);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -477,18 +484,66 @@ public class GenericIdentification55 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification55.Identification, com.tools20022.repository.msg.GenericIdentification55.Type,
-						com.tools20022.repository.msg.GenericIdentification55.Issuer, com.tools20022.repository.msg.GenericIdentification55.IssueDate, com.tools20022.repository.msg.GenericIdentification55.ExpiryDate,
-						com.tools20022.repository.msg.GenericIdentification55.IssuerCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification55.mmIdentification, com.tools20022.repository.msg.GenericIdentification55.mmType,
+						com.tools20022.repository.msg.GenericIdentification55.mmIssuer, com.tools20022.repository.msg.GenericIdentification55.mmIssueDate, com.tools20022.repository.msg.GenericIdentification55.mmExpiryDate,
+						com.tools20022.repository.msg.GenericIdentification55.mmIssuerCountry);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GenericIdentification55";
 				definition = "Information related to the identification of an individual person.";
-				previousVersion_lazy = () -> GenericIdentification44.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AlternateIdentification4.mmObject(), GenericIdentification82.mmObject());
+				previousVersion_lazy = () -> GenericIdentification44.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public OtherIdentification2Choice getType() {
+		return type;
+	}
+
+	public void setType(OtherIdentification2Choice type) {
+		this.type = type;
+	}
+
+	public Max35Text getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(Max35Text issuer) {
+		this.issuer = issuer;
+	}
+
+	public ISODate getIssueDate() {
+		return issueDate;
+	}
+
+	public void setIssueDate(ISODate issueDate) {
+		this.issueDate = issueDate;
+	}
+
+	public ISODate getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(ISODate expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public CountryCode getIssuerCountry() {
+		return issuerCountry;
+	}
+
+	public void setIssuerCountry(CountryCode issuerCountry) {
+		this.issuerCountry = issuerCountry;
 	}
 }

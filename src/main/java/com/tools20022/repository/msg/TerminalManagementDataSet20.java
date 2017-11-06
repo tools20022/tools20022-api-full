@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Data set containing the acceptor parameters of a point of interaction (POI).
@@ -36,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet20#Identification
- * TerminalManagementDataSet20.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet20#mmIdentification
+ * TerminalManagementDataSet20.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet20#SequenceCounter
- * TerminalManagementDataSet20.SequenceCounter}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet20#mmSequenceCounter
+ * TerminalManagementDataSet20.mmSequenceCounter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet20#POIIdentification
- * TerminalManagementDataSet20.POIIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet20#mmPOIIdentification
+ * TerminalManagementDataSet20.mmPOIIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet20#ConfigurationScope
- * TerminalManagementDataSet20.ConfigurationScope}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet20#mmConfigurationScope
+ * TerminalManagementDataSet20.mmConfigurationScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet20#Content
- * TerminalManagementDataSet20.Content}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet20#mmContent
+ * TerminalManagementDataSet20.mmContent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TerminalManagementDataSet20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataSetIdentification6 identification;
 	/**
 	 * Identification of the data set transferred.
 	 * <p>
@@ -106,11 +108,11 @@ public class TerminalManagementDataSet20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet19#Identification
-	 * TerminalManagementDataSet19.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet19#mmIdentification
+	 * TerminalManagementDataSet19.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
 			isDerived = false;
@@ -118,13 +120,14 @@ public class TerminalManagementDataSet20 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the data set transferred.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> DataSetIdentification6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification6.mmObject();
 		}
 	};
+	protected Max9NumericText sequenceCounter;
 	/**
 	 * Counter to identify a single data set within the whole transfer.
 	 * <p>
@@ -155,11 +158,11 @@ public class TerminalManagementDataSet20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet19#SequenceCounter
-	 * TerminalManagementDataSet19.SequenceCounter}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet19#mmSequenceCounter
+	 * TerminalManagementDataSet19.mmSequenceCounter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
 			isDerived = false;
@@ -167,12 +170,13 @@ public class TerminalManagementDataSet20 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceCounter";
 			definition = "Counter to identify a single data set within the whole transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.SequenceCounter;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmSequenceCounter;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification71> pOIIdentification;
 	/**
 	 * Identification of the point of interactions involved by the configuration
 	 * data set.
@@ -204,11 +208,11 @@ public class TerminalManagementDataSet20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet19#POIIdentification
-	 * TerminalManagementDataSet19.POIIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet19#mmPOIIdentification
+	 * TerminalManagementDataSet19.mmPOIIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd POIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
 			isDerived = false;
@@ -216,12 +220,13 @@ public class TerminalManagementDataSet20 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the point of interactions involved by the configuration data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.POIIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmPOIIdentification;
 			minOccurs = 0;
-			type_lazy = () -> GenericIdentification71.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	protected PartyType15Code configurationScope;
 	/**
 	 * Scope of the configuration contained in the data set.
 	 * <p>
@@ -251,11 +256,11 @@ public class TerminalManagementDataSet20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet19#ConfigurationScope
-	 * TerminalManagementDataSet19.ConfigurationScope}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet19#mmConfigurationScope
+	 * TerminalManagementDataSet19.mmConfigurationScope}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfigurationScope = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfigurationScope = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
 			isDerived = false;
@@ -263,12 +268,13 @@ public class TerminalManagementDataSet20 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfigurationScope";
 			definition = "Scope of the configuration contained in the data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.ConfigurationScope;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmConfigurationScope;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PartyType15Code.mmObject();
 		}
 	};
+	protected AcceptorConfigurationContent6 content;
 	/**
 	 * Content of the acceptor parameters.
 	 * <p>
@@ -297,11 +303,11 @@ public class TerminalManagementDataSet20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet19#Content
-	 * TerminalManagementDataSet19.Content}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet19#mmContent
+	 * TerminalManagementDataSet19.mmContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Content = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
 			isDerived = false;
@@ -309,22 +315,22 @@ public class TerminalManagementDataSet20 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Content";
 			definition = "Content of the acceptor parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.Content;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmContent;
 			maxOccurs = 1;
-			type_lazy = () -> AcceptorConfigurationContent6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet20.Identification, com.tools20022.repository.msg.TerminalManagementDataSet20.SequenceCounter,
-						com.tools20022.repository.msg.TerminalManagementDataSet20.POIIdentification, com.tools20022.repository.msg.TerminalManagementDataSet20.ConfigurationScope,
-						com.tools20022.repository.msg.TerminalManagementDataSet20.Content);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet20.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet20.mmSequenceCounter,
+						com.tools20022.repository.msg.TerminalManagementDataSet20.mmPOIIdentification, com.tools20022.repository.msg.TerminalManagementDataSet20.mmConfigurationScope,
+						com.tools20022.repository.msg.TerminalManagementDataSet20.mmContent);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet20";
 				definition = "Data set containing the acceptor parameters of a point of interaction (POI).";
@@ -332,5 +338,45 @@ public class TerminalManagementDataSet20 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataSetIdentification6 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.DataSetIdentification6 identification) {
+		this.identification = identification;
+	}
+
+	public Max9NumericText getSequenceCounter() {
+		return sequenceCounter;
+	}
+
+	public void setSequenceCounter(Max9NumericText sequenceCounter) {
+		this.sequenceCounter = sequenceCounter;
+	}
+
+	public List<GenericIdentification71> getPOIIdentification() {
+		return pOIIdentification;
+	}
+
+	public void setPOIIdentification(List<com.tools20022.repository.msg.GenericIdentification71> pOIIdentification) {
+		this.pOIIdentification = pOIIdentification;
+	}
+
+	public PartyType15Code getConfigurationScope() {
+		return configurationScope;
+	}
+
+	public void setConfigurationScope(PartyType15Code configurationScope) {
+		this.configurationScope = configurationScope;
+	}
+
+	public AcceptorConfigurationContent6 getContent() {
+		return content;
+	}
+
+	public void setContent(com.tools20022.repository.msg.AcceptorConfigurationContent6 content) {
+		this.content = content;
 	}
 }

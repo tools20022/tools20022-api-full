@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice#Code
- * CorporateActionEventStatus3FormatChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice#mmCode
+ * CorporateActionEventStatus3FormatChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice#Proprietary
- * CorporateActionEventStatus3FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice#mmProprietary
+ * CorporateActionEventStatus3FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionEventStatus3FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionEventStatus3Code code;
 	/**
 	 * Standard code to specify the status of the CA event.
 	 * <p>
@@ -76,8 +77,8 @@ public class CorporateActionEventStatus3FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#EventStatus
-	 * CorporateActionStatus.EventStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmEventStatus
+	 * CorporateActionStatus.mmEventStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class CorporateActionEventStatus3FormatChoice {
 	 * definition} = "Standard code to  specify the status of the CA event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmEventStatus;
 			componentContext_lazy = () -> CorporateActionEventStatus3FormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.EventStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to  specify the status of the CA event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventStatus3Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code to express the status of the CA event.
 	 * <p>
@@ -123,8 +125,8 @@ public class CorporateActionEventStatus3FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#EventStatus
-	 * CorporateActionStatus.EventStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmEventStatus
+	 * CorporateActionStatus.mmEventStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class CorporateActionEventStatus3FormatChoice {
 	 * definition} = "Proprietary code to  express the status of the CA event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmEventStatus;
 			componentContext_lazy = () -> CorporateActionEventStatus3FormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.EventStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to  express the status of the CA event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class CorporateActionEventStatus3FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice.Code, com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice.mmCode, com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice.mmProprietary);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionEventStatus3FormatChoice";
 				definition = "Choice of formats to  express the status of the CA event.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionEventStatus3Code getCode() {
+		return code;
+	}
+
+	public void setCode(CorporateActionEventStatus3Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

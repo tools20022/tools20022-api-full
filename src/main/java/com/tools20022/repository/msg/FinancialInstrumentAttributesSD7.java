@@ -36,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD7#PlaceAndName
- * FinancialInstrumentAttributesSD7.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD7#mmPlaceAndName
+ * FinancialInstrumentAttributesSD7.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD7#IssuerDescription
- * FinancialInstrumentAttributesSD7.IssuerDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD7#mmIssuerDescription
+ * FinancialInstrumentAttributesSD7.mmIssuerDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD7#CountryOfIncorporation
- * FinancialInstrumentAttributesSD7.CountryOfIncorporation}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD7#mmCountryOfIncorporation
+ * FinancialInstrumentAttributesSD7.mmCountryOfIncorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD7#PrimaryExchangeFlag
- * FinancialInstrumentAttributesSD7.PrimaryExchangeFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD7#mmPrimaryExchangeFlag
+ * FinancialInstrumentAttributesSD7.mmPrimaryExchangeFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD7#SECRegisteredFlag
- * FinancialInstrumentAttributesSD7.SECRegisteredFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD7#mmSECRegisteredFlag
+ * FinancialInstrumentAttributesSD7.mmSECRegisteredFlag}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAttributesSD7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -98,7 +99,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class FinancialInstrumentAttributesSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max70Text issuerDescription;
 	/**
 	 * Name of the issuer.
 	 * <p>
@@ -138,7 +140,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 * definition} = "Name of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
@@ -146,11 +148,12 @@ public class FinancialInstrumentAttributesSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerDescription";
 			definition = "Name of the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CountryCode countryOfIncorporation;
 	/**
 	 * Country of incorporation of the issuer.
 	 * <p>
@@ -178,7 +181,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 * definition} = "Country of incorporation of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfIncorporation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfIncorporation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
@@ -186,11 +189,12 @@ public class FinancialInstrumentAttributesSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncorporation";
 			definition = "Country of incorporation of the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected YesNoIndicator primaryExchangeFlag;
 	/**
 	 * Indicates if the stock exchange associated to place of listing code is
 	 * primary.
@@ -222,7 +226,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PrimaryExchangeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrimaryExchangeFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
@@ -230,11 +234,12 @@ public class FinancialInstrumentAttributesSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryExchangeFlag";
 			definition = "Indicates if the stock exchange associated to place of listing code is primary.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator sECRegisteredFlag;
 	/**
 	 * Indicates whether the event has been registered with US Securities
 	 * Exchange Commission (SEC).
@@ -266,7 +271,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SECRegisteredFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSECRegisteredFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
@@ -274,8 +279,8 @@ public class FinancialInstrumentAttributesSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SECRegisteredFlag";
 			definition = "Indicates whether the event has been registered with US Securities Exchange Commission (SEC).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -283,15 +288,55 @@ public class FinancialInstrumentAttributesSD7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.PlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.IssuerDescription,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.CountryOfIncorporation, com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.PrimaryExchangeFlag,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.SECRegisteredFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmIssuerDescription,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmCountryOfIncorporation, com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmPrimaryExchangeFlag,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmSECRegisteredFlag);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD7";
 				definition = "Provides additional information regarding underlying security details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max70Text getIssuerDescription() {
+		return issuerDescription;
+	}
+
+	public void setIssuerDescription(Max70Text issuerDescription) {
+		this.issuerDescription = issuerDescription;
+	}
+
+	public CountryCode getCountryOfIncorporation() {
+		return countryOfIncorporation;
+	}
+
+	public void setCountryOfIncorporation(CountryCode countryOfIncorporation) {
+		this.countryOfIncorporation = countryOfIncorporation;
+	}
+
+	public YesNoIndicator getPrimaryExchangeFlag() {
+		return primaryExchangeFlag;
+	}
+
+	public void setPrimaryExchangeFlag(YesNoIndicator primaryExchangeFlag) {
+		this.primaryExchangeFlag = primaryExchangeFlag;
+	}
+
+	public YesNoIndicator getSECRegisteredFlag() {
+		return sECRegisteredFlag;
+	}
+
+	public void setSECRegisteredFlag(YesNoIndicator sECRegisteredFlag) {
+		this.sECRegisteredFlag = sECRegisteredFlag;
 	}
 }

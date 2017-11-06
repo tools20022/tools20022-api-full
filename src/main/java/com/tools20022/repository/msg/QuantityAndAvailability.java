@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAvailability#Quantity
- * QuantityAndAvailability.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAvailability#mmQuantity
+ * QuantityAndAvailability.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAvailability#AvailabilityIndicator
- * QuantityAndAvailability.AvailabilityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAvailability#mmAvailabilityIndicator
+ * QuantityAndAvailability.mmAvailabilityIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuantityAndAvailability {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantityChoice quantity;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -79,8 +80,8 @@ public class QuantityAndAvailability {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesQuantity
-	 * Security.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class QuantityAndAvailability {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> QuantityAndAvailability.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of securities in the sub-balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected YesNoIndicator availabilityIndicator;
 	/**
 	 * Indicates whether the quantity of securities on the sub-balance is
 	 * available.
@@ -127,8 +129,8 @@ public class QuantityAndAvailability {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#AvailabilityIndicator
-	 * SecuritiesBalance.AvailabilityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAvailabilityIndicator
+	 * SecuritiesBalance.mmAvailabilityIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,17 +151,17 @@ public class QuantityAndAvailability {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AvailabilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAvailabilityIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAvailabilityIndicator;
 			componentContext_lazy = () -> QuantityAndAvailability.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.AvailabilityIndicator;
 			isDerived = false;
 			xmlTag = "AvlbtyInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailabilityIndicator";
 			definition = "Indicates whether the quantity of securities on the sub-balance is available.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -167,14 +169,30 @@ public class QuantityAndAvailability {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAvailability.Quantity, com.tools20022.repository.msg.QuantityAndAvailability.AvailabilityIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAvailability.mmQuantity, com.tools20022.repository.msg.QuantityAndAvailability.mmAvailabilityIndicator);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QuantityAndAvailability";
 				definition = "Net position of a segregated holding of a single security within the overall position held in the securities account, eg, sub-balance per status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantityChoice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(FinancialInstrumentQuantityChoice quantity) {
+		this.quantity = quantity;
+	}
+
+	public YesNoIndicator getAvailabilityIndicator() {
+		return availabilityIndicator;
+	}
+
+	public void setAvailabilityIndicator(YesNoIndicator availabilityIndicator) {
+		this.availabilityIndicator = availabilityIndicator;
 	}
 }

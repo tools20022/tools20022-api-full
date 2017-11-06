@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#SettlementInstruction
- * InstructionQueryType1Code.SettlementInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#mmSettlementInstruction
+ * InstructionQueryType1Code.mmSettlementInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#IntraPositionMovement
- * InstructionQueryType1Code.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#mmIntraPositionMovement
+ * InstructionQueryType1Code.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#SettlementAndIntraPosition
- * InstructionQueryType1Code.SettlementAndIntraPosition}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#mmSettlementAndIntraPosition
+ * InstructionQueryType1Code.mmSettlementAndIntraPosition}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	 * name} = "SettlementInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementInstruction = new MMCode() {
+	public static final MMCode mmSettlementInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstruction";
@@ -107,7 +107,7 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	 * name} = "IntraPositionMovement"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntraPositionMovement = new MMCode() {
+	public static final MMCode mmIntraPositionMovement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovement";
@@ -130,7 +130,7 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	 * name} = "SettlementAndIntraPosition"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementAndIntraPosition = new MMCode() {
+	public static final MMCode mmSettlementAndIntraPosition = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAndIntraPosition";
@@ -141,13 +141,13 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SETT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionQueryType1Code";
 				definition = "Specifies the type of instruction queried.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionQueryType1Code.SettlementInstruction, com.tools20022.repository.codeset.InstructionQueryType1Code.IntraPositionMovement,
-						com.tools20022.repository.codeset.InstructionQueryType1Code.SettlementAndIntraPosition);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionQueryType1Code.mmSettlementInstruction, com.tools20022.repository.codeset.InstructionQueryType1Code.mmIntraPositionMovement,
+						com.tools20022.repository.codeset.InstructionQueryType1Code.mmSettlementAndIntraPosition);
 				trace_lazy = () -> InstructionQueryTypeCode.mmObject();
 			}
 		});

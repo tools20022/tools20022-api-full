@@ -37,13 +37,15 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCertificate2#Number
- * SecuritiesCertificate2.Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCertificate2#Issuer
- * SecuritiesCertificate2.Issuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate2#SchemeName
- * SecuritiesCertificate2.SchemeName}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate2#mmNumber
+ * SecuritiesCertificate2.mmNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate2#mmIssuer
+ * SecuritiesCertificate2.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate2#mmSchemeName
+ * SecuritiesCertificate2.mmSchemeName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +54,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -68,6 +70,7 @@ import java.util.function.Supplier;
 public class SecuritiesCertificate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax30Text number;
 	/**
 	 * Unique and unambiguous identifier of a certificate assigned by the
 	 * issuer.
@@ -82,8 +85,8 @@ public class SecuritiesCertificate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +107,21 @@ public class SecuritiesCertificate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SecuritiesCertificate2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Nb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax30Text.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText issuer;
 	/**
 	 * Financial instruments representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -132,8 +136,8 @@ public class SecuritiesCertificate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#EntityName
-	 * IdentificationIssuerRole.EntityName}</li>
+	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmEntityName
+	 * IdentificationIssuerRole.mmEntityName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +158,21 @@ public class SecuritiesCertificate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IdentificationIssuerRole.mmEntityName;
 			componentContext_lazy = () -> SecuritiesCertificate2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IdentificationIssuerRole.EntityName;
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText schemeName;
 	/**
 	 * Short textual description of the scheme.
 	 * <p>
@@ -181,8 +186,8 @@ public class SecuritiesCertificate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Scheme#NameShort
-	 * Scheme.NameShort}</li>
+	 * {@linkplain com.tools20022.repository.entity.Scheme#mmNameShort
+	 * Scheme.mmNameShort}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,17 +206,17 @@ public class SecuritiesCertificate2 {
 	 * definition} = "Short textual description of the scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SchemeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmNameShort;
 			componentContext_lazy = () -> SecuritiesCertificate2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.NameShort;
 			isDerived = false;
 			xmlTag = "SchmeNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeName";
 			definition = "Short textual description of the scheme.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
@@ -219,10 +224,10 @@ public class SecuritiesCertificate2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCertificate2.Number, com.tools20022.repository.msg.SecuritiesCertificate2.Issuer,
-						com.tools20022.repository.msg.SecuritiesCertificate2.SchemeName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCertificate2.mmNumber, com.tools20022.repository.msg.SecuritiesCertificate2.mmIssuer,
+						com.tools20022.repository.msg.SecuritiesCertificate2.mmSchemeName);
 				trace_lazy = () -> SecuritiesCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -236,5 +241,29 @@ public class SecuritiesCertificate2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax30Text getNumber() {
+		return number;
+	}
+
+	public void setNumber(RestrictedFINXMax30Text number) {
+		this.number = number;
+	}
+
+	public Max4AlphaNumericText getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(Max4AlphaNumericText issuer) {
+		this.issuer = issuer;
+	}
+
+	public Max4AlphaNumericText getSchemeName() {
+		return schemeName;
+	}
+
+	public void setSchemeName(Max4AlphaNumericText schemeName) {
+		this.schemeName = schemeName;
 	}
 }

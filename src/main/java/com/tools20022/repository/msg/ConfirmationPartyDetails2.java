@@ -38,23 +38,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#Identification
- * ConfirmationPartyDetails2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#mmIdentification
+ * ConfirmationPartyDetails2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#AlternateIdentification
- * ConfirmationPartyDetails2.AlternateIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#mmAlternateIdentification
+ * ConfirmationPartyDetails2.mmAlternateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#ProcessingIdentification
- * ConfirmationPartyDetails2.ProcessingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#mmProcessingIdentification
+ * ConfirmationPartyDetails2.mmProcessingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#AdditionalInformation
- * ConfirmationPartyDetails2.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#mmAdditionalInformation
+ * ConfirmationPartyDetails2.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#InvestorCapacity
- * ConfirmationPartyDetails2.InvestorCapacity}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#mmInvestorCapacity
+ * ConfirmationPartyDetails2.mmInvestorCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#TradingPartyCapacity
- * ConfirmationPartyDetails2.TradingPartyCapacity}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2#mmTradingPartyCapacity
+ * ConfirmationPartyDetails2.mmTradingPartyCapacity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ConfirmationPartyDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification32Choice identification;
 	/**
 	 * Unique and unambiguous identifier for an organisation that is allocated
 	 * by an institution, eg, Dun &amp; Bradstreet Identification.
@@ -94,8 +95,8 @@ public class ConfirmationPartyDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,20 +117,21 @@ public class ConfirmationPartyDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ConfirmationPartyDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun & Bradstreet Identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification32Choice.mmObject();
 		}
 	};
+	protected AlternatePartyIdentification5 alternateIdentification;
 	/**
 	 * Alternate identification for a party.
 	 * <p>
@@ -143,8 +145,8 @@ public class ConfirmationPartyDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,20 +165,21 @@ public class ConfirmationPartyDetails2 {
 	 * definition} = "Alternate identification for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AlternateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ConfirmationPartyDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AltrnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AlternatePartyIdentification5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification5.mmObject();
 		}
 	};
+	protected Max35Text processingIdentification;
 	/**
 	 * Unambiguous identification of the transaction for the party identified.
 	 * <p>
@@ -206,7 +209,7 @@ public class ConfirmationPartyDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ConfirmationPartyDetails2.mmObject();
 			isDerived = false;
@@ -214,11 +217,12 @@ public class ConfirmationPartyDetails2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingIdentification";
 			definition = "Unambiguous identification of the transaction for the party identified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyTextInformation5 additionalInformation;
 	/**
 	 * Provides additional information to a party identification.
 	 * <p>
@@ -232,8 +236,8 @@ public class ConfirmationPartyDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,20 +257,21 @@ public class ConfirmationPartyDetails2 {
 	 * "Provides additional information to a party identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ConfirmationPartyDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information to a party identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyTextInformation5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyTextInformation5.mmObject();
 		}
 	};
+	protected InvestorCapacity3Choice investorCapacity;
 	/**
 	 * Capacity of customer placing the order. Primarily used by futures
 	 * exchanges to indicate the CTI code (customer type indicator) as required
@@ -282,8 +287,8 @@ public class ConfirmationPartyDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestorRole#Capacity
-	 * InvestorRole.Capacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestorRole#mmCapacity
+	 * InvestorRole.mmCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -304,20 +309,21 @@ public class ConfirmationPartyDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvestorCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvestorCapacity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmCapacity;
 			componentContext_lazy = () -> ConfirmationPartyDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestorRole.Capacity;
 			isDerived = false;
 			xmlTag = "InvstrCpcty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCapacity";
 			definition = "Capacity of customer placing the order. Primarily used by futures exchanges to indicate the CTI code (customer type indicator) as required by the US CFTC (Commodity Futures Trading Commission).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestorCapacity3Choice.mmObject();
 		}
 	};
+	protected TradingPartyCapacity1Choice tradingPartyCapacity;
 	/**
 	 * Capacity of customer placing the order. Primarily used by futures
 	 * exchanges to indicate the CTI code (customer type indicator) as required
@@ -333,8 +339,8 @@ public class ConfirmationPartyDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#TradingPartyCapacity
-	 * TradePartyRole.TradingPartyCapacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmTradingPartyCapacity
+	 * TradePartyRole.mmTradingPartyCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -355,17 +361,17 @@ public class ConfirmationPartyDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingPartyCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingPartyCapacity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> ConfirmationPartyDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.TradingPartyCapacity;
 			isDerived = false;
 			xmlTag = "TradgPtyCpcty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingPartyCapacity";
 			definition = "Capacity of customer placing the order. Primarily used by futures exchanges to indicate the CTI code (customer type indicator) as required by the US CFTC (Commodity Futures Trading Commission).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TradingPartyCapacity1Choice.mmObject();
 		}
 	};
@@ -373,16 +379,64 @@ public class ConfirmationPartyDetails2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationPartyDetails2.Identification, com.tools20022.repository.msg.ConfirmationPartyDetails2.AlternateIdentification,
-						com.tools20022.repository.msg.ConfirmationPartyDetails2.ProcessingIdentification, com.tools20022.repository.msg.ConfirmationPartyDetails2.AdditionalInformation,
-						com.tools20022.repository.msg.ConfirmationPartyDetails2.InvestorCapacity, com.tools20022.repository.msg.ConfirmationPartyDetails2.TradingPartyCapacity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationPartyDetails2.mmIdentification, com.tools20022.repository.msg.ConfirmationPartyDetails2.mmAlternateIdentification,
+						com.tools20022.repository.msg.ConfirmationPartyDetails2.mmProcessingIdentification, com.tools20022.repository.msg.ConfirmationPartyDetails2.mmAdditionalInformation,
+						com.tools20022.repository.msg.ConfirmationPartyDetails2.mmInvestorCapacity, com.tools20022.repository.msg.ConfirmationPartyDetails2.mmTradingPartyCapacity);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationPartyDetails2";
 				definition = "Parties used for acting parties that apply either to the whole message or to individual sides.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification32Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification32Choice identification) {
+		this.identification = identification;
+	}
+
+	public AlternatePartyIdentification5 getAlternateIdentification() {
+		return alternateIdentification;
+	}
+
+	public void setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification5 alternateIdentification) {
+		this.alternateIdentification = alternateIdentification;
+	}
+
+	public Max35Text getProcessingIdentification() {
+		return processingIdentification;
+	}
+
+	public void setProcessingIdentification(Max35Text processingIdentification) {
+		this.processingIdentification = processingIdentification;
+	}
+
+	public PartyTextInformation5 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation5 additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public InvestorCapacity3Choice getInvestorCapacity() {
+		return investorCapacity;
+	}
+
+	public void setInvestorCapacity(InvestorCapacity3Choice investorCapacity) {
+		this.investorCapacity = investorCapacity;
+	}
+
+	public TradingPartyCapacity1Choice getTradingPartyCapacity() {
+		return tradingPartyCapacity;
+	}
+
+	public void setTradingPartyCapacity(TradingPartyCapacity1Choice tradingPartyCapacity) {
+		this.tradingPartyCapacity = tradingPartyCapacity;
 	}
 }

@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyAuditTrailReport1#PartyAuditTrailOrError
- * PartyAuditTrailReport1.PartyAuditTrailOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyAuditTrailReport1#mmPartyAuditTrailOrError
+ * PartyAuditTrailReport1.mmPartyAuditTrailOrError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyAuditTrailReport1#DatePeriod
- * PartyAuditTrailReport1.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyAuditTrailReport1#mmDatePeriod
+ * PartyAuditTrailReport1.mmDatePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyAuditTrailReport1#PartyIdentification
- * PartyAuditTrailReport1.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyAuditTrailReport1#mmPartyIdentification
+ * PartyAuditTrailReport1.mmPartyIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyAuditTrailReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AuditTrailOrBusinessError1Choice partyAuditTrailOrError;
 	/**
 	 * Identifies the returned party reference data or error information.
 	 * <p>
@@ -91,7 +92,7 @@ public class PartyAuditTrailReport1 {
 	 * "Identifies the returned party reference data or error information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyAuditTrailOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyAuditTrailOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -99,12 +100,13 @@ public class PartyAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyAuditTrailOrError";
 			definition = "Identifies the returned party reference data or error information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 		}
 	};
+	protected DateSearchChoice datePeriod;
 	/**
 	 * Period in dates for which the audit trail is provided.
 	 * <p>
@@ -133,7 +135,7 @@ public class PartyAuditTrailReport1 {
 	 * definition} = "Period in dates for which the audit trail is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -141,11 +143,12 @@ public class PartyAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Period in dates for which the audit trail is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	protected SystemPartyIdentification3 partyIdentification;
 	/**
 	 * Identifies the party for which the audit trail is provided.
 	 * <p>
@@ -174,7 +177,7 @@ public class PartyAuditTrailReport1 {
 	 * "Identifies the party for which the audit trail is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -182,24 +185,48 @@ public class PartyAuditTrailReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identifies the party for which the audit trail is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAuditTrailReport1.PartyAuditTrailOrError, com.tools20022.repository.msg.PartyAuditTrailReport1.DatePeriod,
-						com.tools20022.repository.msg.PartyAuditTrailReport1.PartyIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAuditTrailReport1.mmPartyAuditTrailOrError, com.tools20022.repository.msg.PartyAuditTrailReport1.mmDatePeriod,
+						com.tools20022.repository.msg.PartyAuditTrailReport1.mmPartyIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyAuditTrailReport1";
 				definition = "Report information about party reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AuditTrailOrBusinessError1Choice getPartyAuditTrailOrError() {
+		return partyAuditTrailOrError;
+	}
+
+	public void setPartyAuditTrailOrError(AuditTrailOrBusinessError1Choice partyAuditTrailOrError) {
+		this.partyAuditTrailOrError = partyAuditTrailOrError;
+	}
+
+	public DateSearchChoice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(DateSearchChoice datePeriod) {
+		this.datePeriod = datePeriod;
+	}
+
+	public SystemPartyIdentification3 getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+		this.partyIdentification = partyIdentification;
 	}
 }

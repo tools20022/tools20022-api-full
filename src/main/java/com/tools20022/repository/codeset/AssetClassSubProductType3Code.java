@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType3Code#OliveOil
- * AssetClassSubProductType3Code.OliveOil}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType3Code#mmOliveOil
+ * AssetClassSubProductType3Code.mmOliveOil}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class AssetClassSubProductType3Code extends AssetClassSubProductTypeCode 
 	 * name} = "OliveOil"</li>
 	 * </ul>
 	 */
-	public static final MMCode OliveOil = new MMCode() {
+	public static final MMCode mmOliveOil = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OliveOil";
@@ -83,11 +83,11 @@ public class AssetClassSubProductType3Code extends AssetClassSubProductTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType3Code";
 				definition = "Defines the sub-product of type Olive Oil.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType3Code.OliveOil);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType3Code.mmOliveOil);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.ElectronicSignature;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines a business letter containing identifications of involved entities and
@@ -50,59 +51,62 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#ApplicationContext
- * BusinessLetter1.ApplicationContext}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmApplicationContext
+ * BusinessLetter1.mmApplicationContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#LetterIdentifier
- * BusinessLetter1.LetterIdentifier}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#Date
- * BusinessLetter1.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#RelatedLetter
- * BusinessLetter1.RelatedLetter}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#RelatedMessage
- * BusinessLetter1.RelatedMessage}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmLetterIdentifier
+ * BusinessLetter1.mmLetterIdentifier}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#mmDate
+ * BusinessLetter1.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#ContentIdentifier
- * BusinessLetter1.ContentIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmRelatedLetter
+ * BusinessLetter1.mmRelatedLetter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#InstructionPriority
- * BusinessLetter1.InstructionPriority}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#Originator
- * BusinessLetter1.Originator}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmRelatedMessage
+ * BusinessLetter1.mmRelatedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#PrimaryRecipient
- * BusinessLetter1.PrimaryRecipient}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#Sender
- * BusinessLetter1.Sender}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmContentIdentifier
+ * BusinessLetter1.mmContentIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#AuthorisationUser
- * BusinessLetter1.AuthorisationUser}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmInstructionPriority
+ * BusinessLetter1.mmInstructionPriority}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#mmOriginator
+ * BusinessLetter1.mmOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#ResponseRecipient
- * BusinessLetter1.ResponseRecipient}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#CopyRecipient
- * BusinessLetter1.CopyRecipient}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#OtherParty
- * BusinessLetter1.OtherParty}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmPrimaryRecipient
+ * BusinessLetter1.mmPrimaryRecipient}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#mmSender
+ * BusinessLetter1.mmSender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#AssociatedDocument
- * BusinessLetter1.AssociatedDocument}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmAuthorisationUser
+ * BusinessLetter1.mmAuthorisationUser}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#GoverningContract
- * BusinessLetter1.GoverningContract}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#LegalContext
- * BusinessLetter1.LegalContext}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmResponseRecipient
+ * BusinessLetter1.mmResponseRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#AdditionalInformation
- * BusinessLetter1.AdditionalInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#Notice
- * BusinessLetter1.Notice}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmCopyRecipient
+ * BusinessLetter1.mmCopyRecipient}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#mmOtherParty
+ * BusinessLetter1.mmOtherParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#ValidationStatusInformation
- * BusinessLetter1.ValidationStatusInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmAssociatedDocument
+ * BusinessLetter1.mmAssociatedDocument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#DigitalSignature
- * BusinessLetter1.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmGoverningContract
+ * BusinessLetter1.mmGoverningContract}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#mmLegalContext
+ * BusinessLetter1.mmLegalContext}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmAdditionalInformation
+ * BusinessLetter1.mmAdditionalInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessLetter1#mmNotice
+ * BusinessLetter1.mmNotice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmValidationStatusInformation
+ * BusinessLetter1.mmValidationStatusInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmDigitalSignature
+ * BusinessLetter1.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -112,45 +116,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01#Header
- * InvoicePaymentReconciliationAdviceV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01#mmHeader
+ * InvoicePaymentReconciliationAdviceV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01#Header
- * InvoiceAssignmentRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01#mmHeader
+ * InvoiceAssignmentRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01#Header
- * PartyRegistrationAndGuaranteeAcknowledgementV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01#mmHeader
+ * PartyRegistrationAndGuaranteeAcknowledgementV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#Header
- * PartyEventAdviceV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.PartyEventAdviceV01#mmHeader
+ * PartyEventAdviceV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#Header
- * PartyRegistrationAndGuaranteeStatusV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01#mmHeader
+ * PartyRegistrationAndGuaranteeStatusV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#Header
- * PartyRegistrationAndGuaranteeNotificationV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#mmHeader
+ * PartyRegistrationAndGuaranteeNotificationV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01#Header
- * InvoiceAssignmentNotificationV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01#mmHeader
+ * InvoiceAssignmentNotificationV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01#Header
- * InvoiceAssignmentAcknowledgementV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01#mmHeader
+ * InvoiceAssignmentAcknowledgementV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01#Header
- * InvoiceAssignmentStatusV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01#mmHeader
+ * InvoiceAssignmentStatusV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01#Header
- * PartyRegistrationAndGuaranteeRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01#mmHeader
+ * PartyRegistrationAndGuaranteeRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#Header
- * InvoicePaymentReconciliationStatusV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#mmHeader
+ * InvoicePaymentReconciliationStatusV01.mmHeader}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -166,6 +170,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessLetter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text applicationContext;
 	/**
 	 * Application context defined by users. This is typically the name of a
 	 * product.
@@ -196,7 +201,7 @@ public class BusinessLetter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApplicationContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApplicationContext = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
@@ -204,11 +209,12 @@ public class BusinessLetter1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationContext";
 			definition = "Application context defined by users. This is typically the name of a product.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected QualifiedDocumentInformation1 letterIdentifier;
 	/**
 	 * Unambiguous identifier for this letter.
 	 * <p>
@@ -221,8 +227,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,21 +247,22 @@ public class BusinessLetter1 {
 	 * definition} = "Unambiguous identifier for this letter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LetterIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLetterIdentifier = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "LttrIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterIdentifier";
 			definition = "Unambiguous identifier for this letter.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Purported creation date of the document.
 	 * <p>
@@ -268,8 +275,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -288,20 +295,21 @@ public class BusinessLetter1 {
 	 * definition} = "Purported creation date of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Purported creation date of the document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedLetter;
 	/**
 	 * Identifier of a related letter.
 	 * <p>
@@ -333,20 +341,21 @@ public class BusinessLetter1 {
 	 * definition} = "Identifier of a related letter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedLetter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedLetter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdLttr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedLetter";
 			definition = "Identifier of a related letter.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedMessage;
 	/**
 	 * Identifier of a related message.
 	 * <p>
@@ -378,20 +387,21 @@ public class BusinessLetter1 {
 	 * definition} = "Identifier of a related message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedMessage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedMessage = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdMsg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMessage";
 			definition = "Identifier of a related message.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected List<Max35Text> contentIdentifier;
 	/**
 	 * Cross references the lists that are associated to this letter inside a
 	 * message. The identifiers are relative to the Originator.
@@ -422,7 +432,7 @@ public class BusinessLetter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContentIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContentIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
@@ -434,6 +444,7 @@ public class BusinessLetter1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Priority3Code instructionPriority;
 	/**
 	 * Urgency or order of importance that the originator would like the
 	 * recipient of the business letter to apply to the processing of the
@@ -466,7 +477,7 @@ public class BusinessLetter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionPriority = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
@@ -474,11 +485,12 @@ public class BusinessLetter1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionPriority";
 			definition = "Urgency or order of importance that the originator would like the recipient of the business letter to apply to the processing of the letter.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Priority3Code.mmObject();
 		}
 	};
+	protected QualifiedPartyIdentification1 originator;
 	/**
 	 * Identification of the originating party of this letter.
 	 * <p>
@@ -491,8 +503,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -511,21 +523,22 @@ public class BusinessLetter1 {
 	 * definition} = "Identification of the originating party of this letter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Originator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Orgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Identification of the originating party of this letter.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedPartyIdentification1> primaryRecipient;
 	/**
 	 * Primary recipient of the business letter. The exact meaning is given by
 	 * the users.
@@ -539,8 +552,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -561,20 +574,21 @@ public class BusinessLetter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrimaryRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrimaryRecipient = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "PmryRcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryRecipient";
 			definition = "Primary recipient of the business letter. The exact meaning is given by the users.";
 			minOccurs = 1;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedPartyIdentification1> sender;
 	/**
 	 * Sender of the business letter. The exact meaning is given by the users.
 	 * <p>
@@ -587,8 +601,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -609,20 +623,21 @@ public class BusinessLetter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Sender = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSender = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Sndr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sender";
 			definition = "Sender of the business letter. The exact meaning is given by the users.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedPartyIdentification1> authorisationUser;
 	/**
 	 * User who, either individually or in concert with others, authorises the
 	 * origination of a message.
@@ -636,8 +651,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -658,20 +673,21 @@ public class BusinessLetter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthorisationUser = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthorisationUser = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AuthstnUsr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationUser";
 			definition = "User who, either individually or in concert with others, authorises the origination of a message.";
 			minOccurs = 1;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedPartyIdentification1> responseRecipient;
 	/**
 	 * Party to receive a reply to this letter.
 	 * <p>
@@ -684,8 +700,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -704,20 +720,21 @@ public class BusinessLetter1 {
 	 * definition} = "Party to receive a reply to this letter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ResponseRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmResponseRecipient = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RspnRcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseRecipient";
 			definition = "Party to receive a reply to this letter.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedPartyIdentification1> copyRecipient;
 	/**
 	 * Party to receive a copy of the message.
 	 * <p>
@@ -730,8 +747,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -750,20 +767,21 @@ public class BusinessLetter1 {
 	 * definition} = "Party to receive a copy of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CopyRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCopyRecipient = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "CpyRcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyRecipient";
 			definition = "Party to receive a copy of the message.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedPartyIdentification1> otherParty;
 	/**
 	 * Other party involved. This element is usable as a target for IDREFs.
 	 * <p>
@@ -776,8 +794,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -797,20 +815,21 @@ public class BusinessLetter1 {
 	 * "Other party involved. This element is usable as a target for IDREFs."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "OthrPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParty";
 			definition = "Other party involved. This element is usable as a target for IDREFs.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument;
 	/**
 	 * Associated free form document.
 	 * <p>
@@ -842,20 +861,21 @@ public class BusinessLetter1 {
 	 * definition} = "Associated free form document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AssociatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssociatedDocument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdDoc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedDocument";
 			definition = "Associated free form document.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> governingContract;
 	/**
 	 * Governing contract.
 	 * <p>
@@ -868,8 +888,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Agreement
-	 * Document.Agreement}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmAgreement
+	 * Document.mmAgreement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -888,20 +908,21 @@ public class BusinessLetter1 {
 	 * definition} = "Governing contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GoverningContract = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGoverningContract = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAgreement;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Agreement;
 			isDerived = false;
 			xmlTag = "GovngCtrct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoverningContract";
 			definition = "Governing contract.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GovernanceRules2> legalContext;
 	/**
 	 * Rules and laws governing the letter.
 	 * <p>
@@ -913,8 +934,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Jurisdiction#GovernanceRules
-	 * Jurisdiction.GovernanceRules}</li>
+	 * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmGovernanceRules
+	 * Jurisdiction.mmGovernanceRules}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -933,20 +954,21 @@ public class BusinessLetter1 {
 	 * definition} = "Rules and laws governing the letter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegalContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegalContext = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmGovernanceRules;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Jurisdiction.GovernanceRules;
 			isDerived = false;
 			xmlTag = "LglCntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalContext";
 			definition = "Rules and laws governing the letter.";
 			minOccurs = 0;
-			type_lazy = () -> GovernanceRules2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GovernanceRules2.mmObject();
 		}
 	};
+	protected Max2000Text additionalInformation;
 	/**
 	 * Free form information about this message.
 	 * <p>
@@ -974,7 +996,7 @@ public class BusinessLetter1 {
 	 * definition} = "Free form information about this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
@@ -982,11 +1004,12 @@ public class BusinessLetter1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Free form information about this message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected Max350Text notice;
 	/**
 	 * Free form information unrelated to the message for example advertising or
 	 * a service notice.
@@ -1017,7 +1040,7 @@ public class BusinessLetter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Notice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
@@ -1025,11 +1048,12 @@ public class BusinessLetter1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notice";
 			definition = "Free form information unrelated to the message for example advertising or a service notice.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ValidationStatusInformation1 validationStatusInformation;
 	/**
 	 * Status of referenced messages or letters.
 	 * <p>
@@ -1042,8 +1066,8 @@ public class BusinessLetter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#InvoiceFinancingStatus
-	 * InvoiceFinancingAgreement.InvoiceFinancingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
+	 * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1062,21 +1086,22 @@ public class BusinessLetter1 {
 	 * definition} = "Status of referenced messages or letters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidationStatusInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.InvoiceFinancingStatus;
 			isDerived = false;
 			xmlTag = "VldtnStsInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationStatusInformation";
 			definition = "Status of referenced messages or letters.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ValidationStatusInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedPartyAndXMLSignature1> digitalSignature;
 	/**
 	 * Digital signatures and signing parties of this letter or parts of it.
 	 * <p>
@@ -1110,44 +1135,213 @@ public class BusinessLetter1 {
 	 * "Digital signatures and signing parties of this letter or parts of it."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			businessComponentTrace_lazy = () -> ElectronicSignature.mmObject();
+			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signatures and signing parties of this letter or parts of it.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedPartyAndXMLSignature1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyAndXMLSignature1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessLetter1.ApplicationContext, com.tools20022.repository.msg.BusinessLetter1.LetterIdentifier, com.tools20022.repository.msg.BusinessLetter1.Date,
-						com.tools20022.repository.msg.BusinessLetter1.RelatedLetter, com.tools20022.repository.msg.BusinessLetter1.RelatedMessage, com.tools20022.repository.msg.BusinessLetter1.ContentIdentifier,
-						com.tools20022.repository.msg.BusinessLetter1.InstructionPriority, com.tools20022.repository.msg.BusinessLetter1.Originator, com.tools20022.repository.msg.BusinessLetter1.PrimaryRecipient,
-						com.tools20022.repository.msg.BusinessLetter1.Sender, com.tools20022.repository.msg.BusinessLetter1.AuthorisationUser, com.tools20022.repository.msg.BusinessLetter1.ResponseRecipient,
-						com.tools20022.repository.msg.BusinessLetter1.CopyRecipient, com.tools20022.repository.msg.BusinessLetter1.OtherParty, com.tools20022.repository.msg.BusinessLetter1.AssociatedDocument,
-						com.tools20022.repository.msg.BusinessLetter1.GoverningContract, com.tools20022.repository.msg.BusinessLetter1.LegalContext, com.tools20022.repository.msg.BusinessLetter1.AdditionalInformation,
-						com.tools20022.repository.msg.BusinessLetter1.Notice, com.tools20022.repository.msg.BusinessLetter1.ValidationStatusInformation, com.tools20022.repository.msg.BusinessLetter1.DigitalSignature);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessLetter1.mmApplicationContext, com.tools20022.repository.msg.BusinessLetter1.mmLetterIdentifier,
+						com.tools20022.repository.msg.BusinessLetter1.mmDate, com.tools20022.repository.msg.BusinessLetter1.mmRelatedLetter, com.tools20022.repository.msg.BusinessLetter1.mmRelatedMessage,
+						com.tools20022.repository.msg.BusinessLetter1.mmContentIdentifier, com.tools20022.repository.msg.BusinessLetter1.mmInstructionPriority, com.tools20022.repository.msg.BusinessLetter1.mmOriginator,
+						com.tools20022.repository.msg.BusinessLetter1.mmPrimaryRecipient, com.tools20022.repository.msg.BusinessLetter1.mmSender, com.tools20022.repository.msg.BusinessLetter1.mmAuthorisationUser,
+						com.tools20022.repository.msg.BusinessLetter1.mmResponseRecipient, com.tools20022.repository.msg.BusinessLetter1.mmCopyRecipient, com.tools20022.repository.msg.BusinessLetter1.mmOtherParty,
+						com.tools20022.repository.msg.BusinessLetter1.mmAssociatedDocument, com.tools20022.repository.msg.BusinessLetter1.mmGoverningContract, com.tools20022.repository.msg.BusinessLetter1.mmLegalContext,
+						com.tools20022.repository.msg.BusinessLetter1.mmAdditionalInformation, com.tools20022.repository.msg.BusinessLetter1.mmNotice, com.tools20022.repository.msg.BusinessLetter1.mmValidationStatusInformation,
+						com.tools20022.repository.msg.BusinessLetter1.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmHeader, com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmHeader,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.mmHeader, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmHeader,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.mmHeader, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.mmHeader,
+						com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmHeader, com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01.mmHeader,
+						com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01.mmHeader, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.mmHeader,
+						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmHeader);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.Header, com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.Header,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.Header, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.Header,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.Header, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.Header,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.Header, com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01.Header,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01.Header, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.Header,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.Header);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BusinessLetter1";
 				definition = "Defines a business letter containing identifications of involved entities and their roles, references to documents, free form text and signatures.\r\nThe semantics of this information are defined by usual business practices for the exchange and tracing of business letters. The described references and party identifiers permit to establish a linked informal trace of sequences of letters.\r\nThis message component contains three types of elements that can be referenced using IDREF:\r\n(1) - all elements defining qualified parties,\r\n(2) - all elements defining qualified documents or references to them,\r\n(3) - the LegalContext element.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getApplicationContext() {
+		return applicationContext;
+	}
+
+	public void setApplicationContext(Max35Text applicationContext) {
+		this.applicationContext = applicationContext;
+	}
+
+	public QualifiedDocumentInformation1 getLetterIdentifier() {
+		return letterIdentifier;
+	}
+
+	public void setLetterIdentifier(com.tools20022.repository.msg.QualifiedDocumentInformation1 letterIdentifier) {
+		this.letterIdentifier = letterIdentifier;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public List<QualifiedDocumentInformation1> getRelatedLetter() {
+		return relatedLetter;
+	}
+
+	public void setRelatedLetter(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedLetter) {
+		this.relatedLetter = relatedLetter;
+	}
+
+	public List<QualifiedDocumentInformation1> getRelatedMessage() {
+		return relatedMessage;
+	}
+
+	public void setRelatedMessage(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedMessage) {
+		this.relatedMessage = relatedMessage;
+	}
+
+	public List<Max35Text> getContentIdentifier() {
+		return contentIdentifier;
+	}
+
+	public void setContentIdentifier(List<Max35Text> contentIdentifier) {
+		this.contentIdentifier = contentIdentifier;
+	}
+
+	public Priority3Code getInstructionPriority() {
+		return instructionPriority;
+	}
+
+	public void setInstructionPriority(Priority3Code instructionPriority) {
+		this.instructionPriority = instructionPriority;
+	}
+
+	public QualifiedPartyIdentification1 getOriginator() {
+		return originator;
+	}
+
+	public void setOriginator(com.tools20022.repository.msg.QualifiedPartyIdentification1 originator) {
+		this.originator = originator;
+	}
+
+	public List<QualifiedPartyIdentification1> getPrimaryRecipient() {
+		return primaryRecipient;
+	}
+
+	public void setPrimaryRecipient(List<com.tools20022.repository.msg.QualifiedPartyIdentification1> primaryRecipient) {
+		this.primaryRecipient = primaryRecipient;
+	}
+
+	public List<QualifiedPartyIdentification1> getSender() {
+		return sender;
+	}
+
+	public void setSender(List<com.tools20022.repository.msg.QualifiedPartyIdentification1> sender) {
+		this.sender = sender;
+	}
+
+	public List<QualifiedPartyIdentification1> getAuthorisationUser() {
+		return authorisationUser;
+	}
+
+	public void setAuthorisationUser(List<com.tools20022.repository.msg.QualifiedPartyIdentification1> authorisationUser) {
+		this.authorisationUser = authorisationUser;
+	}
+
+	public List<QualifiedPartyIdentification1> getResponseRecipient() {
+		return responseRecipient;
+	}
+
+	public void setResponseRecipient(List<com.tools20022.repository.msg.QualifiedPartyIdentification1> responseRecipient) {
+		this.responseRecipient = responseRecipient;
+	}
+
+	public List<QualifiedPartyIdentification1> getCopyRecipient() {
+		return copyRecipient;
+	}
+
+	public void setCopyRecipient(List<com.tools20022.repository.msg.QualifiedPartyIdentification1> copyRecipient) {
+		this.copyRecipient = copyRecipient;
+	}
+
+	public List<QualifiedPartyIdentification1> getOtherParty() {
+		return otherParty;
+	}
+
+	public void setOtherParty(List<com.tools20022.repository.msg.QualifiedPartyIdentification1> otherParty) {
+		this.otherParty = otherParty;
+	}
+
+	public List<QualifiedDocumentInformation1> getAssociatedDocument() {
+		return associatedDocument;
+	}
+
+	public void setAssociatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument) {
+		this.associatedDocument = associatedDocument;
+	}
+
+	public List<QualifiedDocumentInformation1> getGoverningContract() {
+		return governingContract;
+	}
+
+	public void setGoverningContract(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> governingContract) {
+		this.governingContract = governingContract;
+	}
+
+	public List<GovernanceRules2> getLegalContext() {
+		return legalContext;
+	}
+
+	public void setLegalContext(List<com.tools20022.repository.msg.GovernanceRules2> legalContext) {
+		this.legalContext = legalContext;
+	}
+
+	public Max2000Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max2000Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public Max350Text getNotice() {
+		return notice;
+	}
+
+	public void setNotice(Max350Text notice) {
+		this.notice = notice;
+	}
+
+	public ValidationStatusInformation1 getValidationStatusInformation() {
+		return validationStatusInformation;
+	}
+
+	public void setValidationStatusInformation(com.tools20022.repository.msg.ValidationStatusInformation1 validationStatusInformation) {
+		this.validationStatusInformation = validationStatusInformation;
+	}
+
+	public List<QualifiedPartyAndXMLSignature1> getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(List<com.tools20022.repository.msg.QualifiedPartyAndXMLSignature1> digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

@@ -33,23 +33,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * PriceSourceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceSource2Code#Fund
- * PriceSource2Code.Fund}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceSource2Code#mmFund
+ * PriceSource2Code.mmFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceSource2Code#Theoretical
- * PriceSource2Code.Theoretical}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceSource2Code#Vendor
- * PriceSource2Code.Vendor}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceSource2Code#mmTheoretical
+ * PriceSource2Code.mmTheoretical}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceSource2Code#mmVendor
+ * PriceSource2Code.mmVendor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceSource2Code#StockExchange
- * PriceSource2Code.StockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceSource2Code#mmStockExchange
+ * PriceSource2Code.mmStockExchange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,15 +90,15 @@ public class PriceSource2Code extends PriceSourceCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.PriceSource1Code#Fund
-	 * PriceSource1Code.Fund}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PriceSource1Code#mmFund
+	 * PriceSource1Code.mmFund}</li>
 	 * </ul>
 	 */
-	public static final MMCode Fund = new MMCode() {
+	public static final MMCode mmFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fund";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.PriceSource1Code.Fund;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.PriceSource1Code.mmFund;
 			owner_lazy = () -> PriceSource2Code.mmObject();
 		}
 	};
@@ -119,15 +119,15 @@ public class PriceSource2Code extends PriceSourceCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.PriceSource1Code#Theoretical
-	 * PriceSource1Code.Theoretical}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PriceSource1Code#mmTheoretical
+	 * PriceSource1Code.mmTheoretical}</li>
 	 * </ul>
 	 */
-	public static final MMCode Theoretical = new MMCode() {
+	public static final MMCode mmTheoretical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Theoretical";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.PriceSource1Code.Theoretical;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.PriceSource1Code.mmTheoretical;
 			owner_lazy = () -> PriceSource2Code.mmObject();
 		}
 	};
@@ -148,15 +148,15 @@ public class PriceSource2Code extends PriceSourceCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.PriceSource1Code#Vendor
-	 * PriceSource1Code.Vendor}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PriceSource1Code#mmVendor
+	 * PriceSource1Code.mmVendor}</li>
 	 * </ul>
 	 */
-	public static final MMCode Vendor = new MMCode() {
+	public static final MMCode mmVendor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vendor";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.PriceSource1Code.Vendor;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.PriceSource1Code.mmVendor;
 			owner_lazy = () -> PriceSource2Code.mmObject();
 		}
 	};
@@ -176,7 +176,7 @@ public class PriceSource2Code extends PriceSourceCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockExchange = new MMCode() {
+	public static final MMCode mmStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
@@ -187,14 +187,14 @@ public class PriceSource2Code extends PriceSourceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FUND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceSource2Code";
 				definition = "Specifies the source of a price quotation.";
 				previousVersion_lazy = () -> PriceSource1Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceSource2Code.Fund, com.tools20022.repository.codeset.PriceSource2Code.Theoretical, com.tools20022.repository.codeset.PriceSource2Code.Vendor,
-						com.tools20022.repository.codeset.PriceSource2Code.StockExchange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceSource2Code.mmFund, com.tools20022.repository.codeset.PriceSource2Code.mmTheoretical, com.tools20022.repository.codeset.PriceSource2Code.mmVendor,
+						com.tools20022.repository.codeset.PriceSource2Code.mmStockExchange);
 				trace_lazy = () -> PriceSourceCode.mmObject();
 			}
 		});

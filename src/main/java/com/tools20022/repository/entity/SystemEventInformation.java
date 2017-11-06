@@ -45,20 +45,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SystemEventInformation#Type
- * SystemEventInformation.Type}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemEventInformation#Time
- * SystemEventInformation.Time}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemEventInformation#System
- * SystemEventInformation.System}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmType
+ * SystemEventInformation.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmTime
+ * SystemEventInformation.mmTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmSystem
+ * SystemEventInformation.mmSystem}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.System#Event System.Event}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmEvent
+ * System.mmEvent}</li>
  * </ul>
  * </li>
  * <li>
@@ -66,14 +69,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#Event
- * SystemAvailabilityAndEventsDetails1.Event}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#mmEvent
+ * SystemAvailabilityAndEventsDetails1.mmEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents1#Event
- * SystemAvailabilityAndEvents1.Event}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents1#mmEvent
+ * SystemAvailabilityAndEvents1.mmEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CutOff1#CutOffUpdateIdentification
- * CutOff1.CutOffUpdateIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CutOff1#mmCutOffUpdateIdentification
+ * CutOff1.mmCutOffUpdateIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,8 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemEventInformation {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemEventTypeCode type;
 	/**
 	 * Nature of the event that has occurred.
 	 * <p>
@@ -118,32 +122,32 @@ public class SystemEventInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SystemEventTypeCode
 	 * SystemEventTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SystemEventType1Choice#Code
-	 * SystemEventType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SystemEventType2Choice#Code
-	 * SystemEventType2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SystemEventType2Choice#Proprietary
-	 * SystemEventType2Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent1#Type
-	 * SystemEvent1.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#Type
-	 * SystemEvent2.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ServiceAvailability1#AvailabilityStatus
-	 * ServiceAvailability1.AvailabilityStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation
 	 * SystemEventInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SystemEventType1Choice#mmCode
+	 * SystemEventType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SystemEventType2Choice#mmCode
+	 * SystemEventType2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SystemEventType2Choice#mmProprietary
+	 * SystemEventType2Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent1#mmType
+	 * SystemEvent1.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#mmType
+	 * SystemEvent2.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ServiceAvailability1#mmAvailabilityStatus
+	 * ServiceAvailability1.mmAvailabilityStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -155,21 +159,22 @@ public class SystemEventInformation {
 	 * definition} = "Nature of the event that has occurred."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Type = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemEventType1Choice.Code, com.tools20022.repository.choice.SystemEventType2Choice.Code,
-					com.tools20022.repository.choice.SystemEventType2Choice.Proprietary, com.tools20022.repository.msg.SystemEvent1.Type, com.tools20022.repository.msg.SystemEvent2.Type,
-					com.tools20022.repository.msg.ServiceAvailability1.AvailabilityStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemEventType1Choice.mmCode, com.tools20022.repository.choice.SystemEventType2Choice.mmCode,
+					com.tools20022.repository.choice.SystemEventType2Choice.mmProprietary, com.tools20022.repository.msg.SystemEvent1.mmType, com.tools20022.repository.msg.SystemEvent2.mmType,
+					com.tools20022.repository.msg.ServiceAvailability1.mmAvailabilityStatus);
 			elementContext_lazy = () -> SystemEventInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Nature of the event that has occurred.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SystemEventTypeCode.mmObject();
 		}
 	};
+	protected ISODateTime time;
 	/**
 	 * Date and time at which the event occurred.
 	 * <p>
@@ -179,36 +184,40 @@ public class SystemEventInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent1#ScheduledTime
-	 * SystemEvent1.ScheduledTime}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent1#EffectiveTime
-	 * SystemEvent1.EffectiveTime}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#ScheduledTime
-	 * SystemEvent2.ScheduledTime}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#EffectiveTime
-	 * SystemEvent2.EffectiveTime}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#StartTime
-	 * SystemEvent2.StartTime}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#EndTime
-	 * SystemEvent2.EndTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestorDetails1#DateTimeStamp
-	 * RequestorDetails1.DateTimeStamp}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ResponderDetails1#DateTimeStamp
-	 * ResponderDetails1.DateTimeStamp}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CutOff1#CutOffTime
-	 * CutOff1.CutOffTime}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemEventInformation
 	 * SystemEventInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemEvent1#mmScheduledTime
+	 * SystemEvent1.mmScheduledTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemEvent1#mmEffectiveTime
+	 * SystemEvent1.mmEffectiveTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemEvent2#mmScheduledTime
+	 * SystemEvent2.mmScheduledTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemEvent2#mmEffectiveTime
+	 * SystemEvent2.mmEffectiveTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#mmStartTime
+	 * SystemEvent2.mmStartTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2#mmEndTime
+	 * SystemEvent2.mmEndTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestorDetails1#mmDateTimeStamp
+	 * RequestorDetails1.mmDateTimeStamp}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ResponderDetails1#mmDateTimeStamp
+	 * ResponderDetails1.mmDateTimeStamp}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CutOff1#mmCutOffTime
+	 * CutOff1.mmCutOffTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -220,21 +229,22 @@ public class SystemEventInformation {
 	 * definition} = "Date and time at which the event occurred."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Time = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemEvent1.ScheduledTime, com.tools20022.repository.msg.SystemEvent1.EffectiveTime, com.tools20022.repository.msg.SystemEvent2.ScheduledTime,
-					com.tools20022.repository.msg.SystemEvent2.EffectiveTime, com.tools20022.repository.msg.SystemEvent2.StartTime, com.tools20022.repository.msg.SystemEvent2.EndTime,
-					com.tools20022.repository.msg.RequestorDetails1.DateTimeStamp, com.tools20022.repository.msg.ResponderDetails1.DateTimeStamp, com.tools20022.repository.msg.CutOff1.CutOffTime);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemEvent1.mmScheduledTime, com.tools20022.repository.msg.SystemEvent1.mmEffectiveTime, com.tools20022.repository.msg.SystemEvent2.mmScheduledTime,
+					com.tools20022.repository.msg.SystemEvent2.mmEffectiveTime, com.tools20022.repository.msg.SystemEvent2.mmStartTime, com.tools20022.repository.msg.SystemEvent2.mmEndTime,
+					com.tools20022.repository.msg.RequestorDetails1.mmDateTimeStamp, com.tools20022.repository.msg.ResponderDetails1.mmDateTimeStamp, com.tools20022.repository.msg.CutOff1.mmCutOffTime);
 			elementContext_lazy = () -> SystemEventInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Time";
 			definition = "Date and time at which the event occurred.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected System system;
 	/**
 	 * System for which event information is provided.
 	 * <p>
@@ -242,8 +252,8 @@ public class SystemEventInformation {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
-	 * opposite} = {@linkplain com.tools20022.repository.entity.System#Event
-	 * System.Event}</li>
+	 * opposite} = {@linkplain com.tools20022.repository.entity.System#mmEvent
+	 * System.mmEvent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -266,35 +276,60 @@ public class SystemEventInformation {
 	 * definition} = "System for which event information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd System = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SystemEventInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "System for which event information is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.System.Event;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.System.mmEvent;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemEventInformation";
 				definition = "Detailed information about an event occurring on a system, whether planned, for example, cut-off time for a specific type of eligible transfer, or unplanned, for example, an unsolicited failure, as stipulated in the specifications of the system.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.Event);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.Event, com.tools20022.repository.msg.SystemAvailabilityAndEvents1.Event,
-						com.tools20022.repository.msg.CutOff1.CutOffUpdateIdentification);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemEventInformation.Type, com.tools20022.repository.entity.SystemEventInformation.Time, com.tools20022.repository.entity.SystemEventInformation.System);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmEvent);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmEvent, com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmEvent,
+						com.tools20022.repository.msg.CutOff1.mmCutOffUpdateIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemEventInformation.mmType, com.tools20022.repository.entity.SystemEventInformation.mmTime,
+						com.tools20022.repository.entity.SystemEventInformation.mmSystem);
 				derivationComponent_lazy = () -> Arrays.asList(SystemEvent1.mmObject(), SystemEvent2.mmObject(), ParticipantAndStatus1.mmObject(), ServiceAvailability1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemEventTypeCode getType() {
+		return type;
+	}
+
+	public void setType(SystemEventTypeCode type) {
+		this.type = type;
+	}
+
+	public ISODateTime getTime() {
+		return time;
+	}
+
+	public void setTime(ISODateTime time) {
+		this.time = time;
+	}
+
+	public System getSystem() {
+		return system;
+	}
+
+	public void setSystem(com.tools20022.repository.entity.System system) {
+		this.system = system;
 	}
 }

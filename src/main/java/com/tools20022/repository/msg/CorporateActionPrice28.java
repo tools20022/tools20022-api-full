@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice28#CashInLieuOfSharePrice
- * CorporateActionPrice28.CashInLieuOfSharePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice28#mmCashInLieuOfSharePrice
+ * CorporateActionPrice28.mmCashInLieuOfSharePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice28#OverSubscriptionDepositPrice
- * CorporateActionPrice28.OverSubscriptionDepositPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice28#mmOverSubscriptionDepositPrice
+ * CorporateActionPrice28.mmOverSubscriptionDepositPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPrice28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceFormat19Choice cashInLieuOfSharePrice;
 	/**
 	 * Cash disbursement in lieu of equities; usually in lieu of fractional
 	 * quantity.
@@ -85,8 +86,8 @@ public class CorporateActionPrice28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#CashInLieuOfSharePrice
-	 * CorporateActionPrice.CashInLieuOfSharePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashInLieuOfSharePrice
+	 * CorporateActionPrice.mmCashInLieuOfSharePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,28 +110,29 @@ public class CorporateActionPrice28 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice58#CashInLieuOfSharePrice
-	 * CorporateActionPrice58.CashInLieuOfSharePrice}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice58#mmCashInLieuOfSharePrice
+	 * CorporateActionPrice58.mmCashInLieuOfSharePrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashInLieuOfSharePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> CorporateActionPrice28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.CashInLieuOfSharePrice;
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice58.CashInLieuOfSharePrice);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice58.mmCashInLieuOfSharePrice);
 			maxOccurs = 1;
-			type_lazy = () -> PriceFormat19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PriceFormat19Choice.mmObject();
 		}
 	};
+	protected PriceFormat19Choice overSubscriptionDepositPrice;
 	/**
 	 * Amount of money required per over-subscribed equity as defined by the
 	 * issuer.
@@ -143,8 +145,8 @@ public class CorporateActionPrice28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#OverSubscriptionDepositPrice
-	 * CorporateActionPrice.OverSubscriptionDepositPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmOverSubscriptionDepositPrice
+	 * CorporateActionPrice.mmOverSubscriptionDepositPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,42 +169,58 @@ public class CorporateActionPrice28 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice58#OverSubscriptionDepositPrice
-	 * CorporateActionPrice58.OverSubscriptionDepositPrice}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice58#mmOverSubscriptionDepositPrice
+	 * CorporateActionPrice58.mmOverSubscriptionDepositPrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OverSubscriptionDepositPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmOverSubscriptionDepositPrice;
 			componentContext_lazy = () -> CorporateActionPrice28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.OverSubscriptionDepositPrice;
 			isDerived = false;
 			xmlTag = "OverSbcptDpstPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverSubscriptionDepositPrice";
 			definition = "Amount of money required per over-subscribed equity as defined by the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice58.OverSubscriptionDepositPrice);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice58.mmOverSubscriptionDepositPrice);
 			maxOccurs = 1;
-			type_lazy = () -> PriceFormat19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PriceFormat19Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice28.CashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice28.OverSubscriptionDepositPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice28.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice28.mmOverSubscriptionDepositPrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice28";
 				definition = "Specifies prices related to a corporate action option.";
-				previousVersion_lazy = () -> CorporateActionPrice16.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionPrice58.mmObject());
+				previousVersion_lazy = () -> CorporateActionPrice16.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceFormat19Choice getCashInLieuOfSharePrice() {
+		return cashInLieuOfSharePrice;
+	}
+
+	public void setCashInLieuOfSharePrice(PriceFormat19Choice cashInLieuOfSharePrice) {
+		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
+	}
+
+	public PriceFormat19Choice getOverSubscriptionDepositPrice() {
+		return overSubscriptionDepositPrice;
+	}
+
+	public void setOverSubscriptionDepositPrice(PriceFormat19Choice overSubscriptionDepositPrice) {
+		this.overSubscriptionDepositPrice = overSubscriptionDepositPrice;
 	}
 }

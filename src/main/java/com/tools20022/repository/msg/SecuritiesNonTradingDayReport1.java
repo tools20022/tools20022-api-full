@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.TradingVenueIdentification1Choice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details the non-working days of an entity.
@@ -33,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesNonTradingDayReport1#Identification
- * SecuritiesNonTradingDayReport1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesNonTradingDayReport1#mmIdentification
+ * SecuritiesNonTradingDayReport1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesNonTradingDayReport1#NonWorkingDay
- * SecuritiesNonTradingDayReport1.NonWorkingDay}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesNonTradingDayReport1#mmNonWorkingDay
+ * SecuritiesNonTradingDayReport1.mmNonWorkingDay}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01#NonWorkingDay
- * FinancialInstrumentReportingNonWorkingDayReportV01.NonWorkingDay}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01#mmNonWorkingDay
+ * FinancialInstrumentReportingNonWorkingDayReportV01.mmNonWorkingDay}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesNonTradingDayReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradingVenueIdentification1Choice identification;
 	/**
 	 * Identification of the specific venue this relates to - operating MIC,
 	 * segment MIC, NCA<br>
@@ -97,7 +99,7 @@ public class SecuritiesNonTradingDayReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesNonTradingDayReport1.mmObject();
 			isDerived = false;
@@ -105,12 +107,13 @@ public class SecuritiesNonTradingDayReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the specific venue this relates to - operating MIC, segment MIC, NCA\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TradingVenueIdentification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TradingVenueIdentification1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesNonTradingDay1> nonWorkingDay;
 	/**
 	 * Provides the non working days of the identified venue. Details on why it
 	 * is a non working day are also captured.
@@ -141,7 +144,7 @@ public class SecuritiesNonTradingDayReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonWorkingDay = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonWorkingDay = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesNonTradingDayReport1.mmObject();
 			isDerived = false;
@@ -150,22 +153,38 @@ public class SecuritiesNonTradingDayReport1 {
 			name = "NonWorkingDay";
 			definition = "Provides the non working days of the identified venue. Details on why it is a non working day are also captured.";
 			minOccurs = 1;
-			type_lazy = () -> SecuritiesNonTradingDay1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesNonTradingDayReport1.Identification, com.tools20022.repository.msg.SecuritiesNonTradingDayReport1.NonWorkingDay);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01.NonWorkingDay);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesNonTradingDayReport1.mmIdentification, com.tools20022.repository.msg.SecuritiesNonTradingDayReport1.mmNonWorkingDay);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01.mmNonWorkingDay);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesNonTradingDayReport1";
 				definition = "Details the non-working days of an entity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradingVenueIdentification1Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(TradingVenueIdentification1Choice identification) {
+		this.identification = identification;
+	}
+
+	public List<SecuritiesNonTradingDay1> getNonWorkingDay() {
+		return nonWorkingDay;
+	}
+
+	public void setNonWorkingDay(List<com.tools20022.repository.msg.SecuritiesNonTradingDay1> nonWorkingDay) {
+		this.nonWorkingDay = nonWorkingDay;
 	}
 }

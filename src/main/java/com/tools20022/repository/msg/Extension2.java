@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Extension2#PlaceAndName
- * Extension2.PlaceAndName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Extension2#ExtensionEnvelope
- * Extension2.ExtensionEnvelope}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Extension2#mmPlaceAndName
+ * Extension2.mmPlaceAndName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Extension2#mmExtensionEnvelope
+ * Extension2.mmExtensionEnvelope}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,141 +45,141 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#Extension
- * CorporateActionCancellationAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01#mmExtension
+ * CorporateActionCancellationAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01#Extension
- * CorporateActionEventProcessingStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01#mmExtension
+ * CorporateActionEventProcessingStatusAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01#Extension
- * CorporateActionInstructionV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01#mmExtension
+ * CorporateActionInstructionV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01#Extension
- * CorporateActionInstructionCancellationRequestV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01#mmExtension
+ * CorporateActionInstructionCancellationRequestV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#Extension
- * CorporateActionInstructionCancellationRequestStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmExtension
+ * CorporateActionInstructionCancellationRequestStatusAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01#Extension
- * CorporateActionInstructionStatementReportV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01#mmExtension
+ * CorporateActionInstructionStatementReportV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01#Extension
- * CorporateActionInstructionStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01#mmExtension
+ * CorporateActionInstructionStatusAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#Extension
- * CorporateActionMovementConfirmationV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01#mmExtension
+ * CorporateActionMovementConfirmationV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#Extension
- * CorporateActionMovementPreliminaryAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmExtension
+ * CorporateActionMovementPreliminaryAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#Extension
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01#mmExtension
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#Extension
- * CorporateActionMovementReversalAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01#mmExtension
+ * CorporateActionMovementReversalAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#Extension
- * CorporateActionNotificationV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV01#mmExtension
+ * CorporateActionNotificationV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#Extension
- * IntraPositionMovementConfirmationV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01#mmExtension
+ * IntraPositionMovementConfirmationV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01#Extension
- * SecuritiesFinancingConfirmationV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01#mmExtension
+ * SecuritiesFinancingConfirmationV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01#Extension
- * SecuritiesFinancingInstructionV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01#mmExtension
+ * SecuritiesFinancingInstructionV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01#Extension
- * SecuritiesMessageCancellationAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01#mmExtension
+ * SecuritiesMessageCancellationAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#Extension
- * SecuritiesSettlementConditionModificationStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01#mmExtension
+ * SecuritiesSettlementConditionModificationStatusAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01#Extension
- * SecuritiesSettlementConditionsModificationRequestV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01#mmExtension
+ * SecuritiesSettlementConditionsModificationRequestV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01#Extension
- * SecuritiesSettlementTransactionConfirmationV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01#mmExtension
+ * SecuritiesSettlementTransactionConfirmationV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01#Extension
- * SecuritiesSettlementTransactionGenerationNotificationV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01#mmExtension
+ * SecuritiesSettlementTransactionGenerationNotificationV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01#Extension
- * SecuritiesSettlementTransactionInstructionV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01#mmExtension
+ * SecuritiesSettlementTransactionInstructionV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01#Extension
- * SecuritiesSettlementTransactionStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01#mmExtension
+ * SecuritiesSettlementTransactionStatusAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#Extension
- * MeetingNotificationV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#mmExtension
+ * MeetingNotificationV04.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#Extension
- * MeetingCancellationV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#mmExtension
+ * MeetingCancellationV04.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04#Extension
- * MeetingEntitlementNotificationV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04#mmExtension
+ * MeetingEntitlementNotificationV04.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#Extension
- * MeetingInstructionV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#mmExtension
+ * MeetingInstructionV04.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#Extension
- * MeetingInstructionCancellationRequestV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#mmExtension
+ * MeetingInstructionCancellationRequestV04.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV04#Extension
- * MeetingInstructionStatusV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV04#mmExtension
+ * MeetingInstructionStatusV04.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#Extension
- * MeetingVoteExecutionConfirmationV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#mmExtension
+ * MeetingVoteExecutionConfirmationV04.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#Extension
- * MeetingResultDisseminationV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmExtension
+ * MeetingResultDisseminationV04.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#Extension
- * IntraPositionMovementInstructionV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01#mmExtension
+ * IntraPositionMovementInstructionV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01#Extension
- * IntraPositionMovementStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01#mmExtension
+ * IntraPositionMovementStatusAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01#Extension
- * SecuritiesFinancingModificationInstructionV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01#mmExtension
+ * SecuritiesFinancingModificationInstructionV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01#Extension
- * SecuritiesFinancingStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01#mmExtension
+ * SecuritiesFinancingStatusAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01#Extension
- * SecuritiesSettlementAllegementRemovalAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01#mmExtension
+ * SecuritiesSettlementAllegementRemovalAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01#Extension
- * SecuritiesSettlementTransactionAllegementNotificationV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01#mmExtension
+ * SecuritiesSettlementTransactionAllegementNotificationV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01#Extension
- * SecuritiesSettlementTransactionReversalAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01#mmExtension
+ * SecuritiesSettlementTransactionReversalAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#Extension
- * SecuritiesStatementQueryV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmExtension
+ * SecuritiesStatementQueryV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#Extension
- * SecuritiesStatusOrStatementQueryStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01#mmExtension
+ * SecuritiesStatusOrStatementQueryStatusAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#Extension
- * SecuritiesTransactionCancellationRequestStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmExtension
+ * SecuritiesTransactionCancellationRequestStatusAdviceV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01#Extension
- * SecuritiesTransactionCancellationRequestV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01#mmExtension
+ * SecuritiesTransactionCancellationRequestV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01#Extension
- * SecuritiesTransactionStatusQueryV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01#mmExtension
+ * SecuritiesTransactionStatusQueryV01.mmExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV01#Extension
- * CorporateActionNarrativeV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV01#mmExtension
+ * CorporateActionNarrativeV01.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -195,6 +195,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Extension2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Name qualifying the information provided in the Text field, and place
 	 * where this information should be inserted.
@@ -224,7 +225,7 @@ public class Extension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Extension2.mmObject();
 			isDerived = false;
@@ -232,11 +233,12 @@ public class Extension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Name qualifying the information provided in the Text field, and place where this information should be inserted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ExtensionEnvelope1 extensionEnvelope;
 	/**
 	 * Technical element wrapping the extension.
 	 * <p>
@@ -262,7 +264,7 @@ public class Extension2 {
 	 * definition} = "Technical element wrapping the extension."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExtensionEnvelope = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtensionEnvelope = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Extension2.mmObject();
 			isDerived = false;
@@ -270,45 +272,61 @@ public class Extension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtensionEnvelope";
 			definition = "Technical element wrapping the extension.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ExtensionEnvelope1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ExtensionEnvelope1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Extension2.PlaceAndName, com.tools20022.repository.msg.Extension2.ExtensionEnvelope);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.Extension,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.Extension, com.tools20022.repository.area.seev.CorporateActionInstructionV01.Extension,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.Extension, com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.Extension,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.Extension, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.Extension,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.Extension, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.Extension,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.Extension, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.Extension,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.Extension, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.Extension,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.Extension, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.Extension,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.Extension, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.Extension,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.Extension, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.Extension,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.Extension, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.Extension,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01.Extension, com.tools20022.repository.area.seev.MeetingNotificationV04.Extension,
-						com.tools20022.repository.area.seev.MeetingCancellationV04.Extension, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.Extension,
-						com.tools20022.repository.area.seev.MeetingInstructionV04.Extension, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.Extension,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV04.Extension, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.Extension,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV04.Extension, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.Extension,
-						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.Extension, com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.Extension,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.Extension, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.Extension,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.Extension, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.Extension,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.Extension, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.Extension,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.Extension, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01.Extension,
-						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.Extension, com.tools20022.repository.area.seev.CorporateActionNarrativeV01.Extension);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Extension2.mmPlaceAndName, com.tools20022.repository.msg.Extension2.mmExtensionEnvelope);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmExtension,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmExtension,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmExtension,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmExtension,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmExtension,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmExtension,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmExtension, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmExtension,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmExtension,
+						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmExtension,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmExtension,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmExtension,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01.mmExtension, com.tools20022.repository.area.seev.MeetingNotificationV04.mmExtension,
+						com.tools20022.repository.area.seev.MeetingCancellationV04.mmExtension, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmExtension,
+						com.tools20022.repository.area.seev.MeetingInstructionV04.mmExtension, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmExtension,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmExtension, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmExtension,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmExtension, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmExtension,
+						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.mmExtension,
+						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmExtension,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmExtension,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmExtension,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01.mmExtension,
+						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionNarrativeV01.mmExtension);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Extension2";
 				definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ExtensionEnvelope1 getExtensionEnvelope() {
+		return extensionEnvelope;
+	}
+
+	public void setExtensionEnvelope(com.tools20022.repository.msg.ExtensionEnvelope1 extensionEnvelope) {
+		this.extensionEnvelope = extensionEnvelope;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.GenericIdentification36;
 import com.tools20022.repository.msg.ProprietaryReason3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Proprietary identification of the reason related to a status.
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProprietaryReason1Choice#NoSpecifiedReason
- * ProprietaryReason1Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.ProprietaryReason1Choice#mmNoSpecifiedReason
+ * ProprietaryReason1Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProprietaryReason1Choice#Reason
- * ProprietaryReason1Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.ProprietaryReason1Choice#mmReason
+ * ProprietaryReason1Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -82,8 +84,8 @@ public class ProprietaryReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +105,21 @@ public class ProprietaryReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> ProprietaryReason1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<GenericIdentification36> reason;
 	/**
 	 * Proprietary identification of the reason for the status.
 	 * <p>
@@ -146,11 +149,11 @@ public class ProprietaryReason1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProprietaryReason3#Reason
-	 * ProprietaryReason3.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProprietaryReason3#mmReason
+	 * ProprietaryReason3.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryReason1Choice.mmObject();
 			isDerived = false;
@@ -158,7 +161,7 @@ public class ProprietaryReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Proprietary identification of the reason for the status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProprietaryReason3.Reason;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProprietaryReason3.mmReason;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
 		}
@@ -167,9 +170,9 @@ public class ProprietaryReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProprietaryReason1Choice.NoSpecifiedReason, com.tools20022.repository.choice.ProprietaryReason1Choice.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProprietaryReason1Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.ProprietaryReason1Choice.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryReason1Choice";
 				definition = "Proprietary identification of the reason related to a status.";
@@ -177,5 +180,21 @@ public class ProprietaryReason1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<GenericIdentification36> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<GenericIdentification36> reason) {
+		this.reason = reason;
 	}
 }

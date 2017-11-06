@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionContext3#TransactionContext
- * CardTransactionContext3.TransactionContext}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionContext3#mmTransactionContext
+ * CardTransactionContext3.mmTransactionContext}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardTransactionContext3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardTransactionContext4 transactionContext;
 	/**
 	 * Context of the card transaction.
 	 * <p>
@@ -95,33 +96,33 @@ public class CardTransactionContext3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionContext1#TransactionContext
-	 * CardTransactionContext1.TransactionContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionContext1#mmTransactionContext
+	 * CardTransactionContext1.mmTransactionContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionContext = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransactionContext3.mmObject();
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
+			componentContext_lazy = () -> CardTransactionContext3.mmObject();
 			isDerived = false;
 			xmlTag = "TxCntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionContext";
 			definition = "Context of the card transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionContext1.TransactionContext;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionContext1.mmTransactionContext;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransactionContext4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransactionContext4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionContext3.TransactionContext);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionContext3.mmTransactionContext);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionContext3";
 				definition = "Context in which the card transaction is performed.";
@@ -129,5 +130,13 @@ public class CardTransactionContext3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardTransactionContext4 getTransactionContext() {
+		return transactionContext;
+	}
+
+	public void setTransactionContext(com.tools20022.repository.msg.CardTransactionContext4 transactionContext) {
+		this.transactionContext = transactionContext;
 	}
 }

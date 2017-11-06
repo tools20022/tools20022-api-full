@@ -56,18 +56,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01#ExtendOrPayResponseDetails
- * ExtendOrPayResponseV01.ExtendOrPayResponseDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01#mmExtendOrPayResponseDetails
+ * ExtendOrPayResponseV01.mmExtendOrPayResponseDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01#DigitalSignature
- * ExtendOrPayResponseV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01#mmDigitalSignature
+ * ExtendOrPayResponseV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01#identifier
- * ExtendOrPayResponseV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsrv.015.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExtendOrPayResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ExtendOrPayQuery2 extendOrPayResponseDetails;
 	/**
 	 * Details of the extend or pay response.
 	 * <p>
@@ -106,17 +105,18 @@ public class ExtendOrPayResponseV01 {
 	 * definition} = "Details of the extend or pay response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ExtendOrPayResponseDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtendOrPayResponseDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "XtndOrPayRspnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendOrPayResponseDetails";
 			definition = "Details of the extend or pay response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ExtendOrPayQuery2.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the response.
 	 * <p>
@@ -140,42 +140,15 @@ public class ExtendOrPayResponseV01 {
 	 * definition} = "Digital signature of the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the response.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "015"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsrv";
-			messageFunctionality = "015";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -189,10 +162,33 @@ public class ExtendOrPayResponseV01 {
 				rootElement = "Document";
 				xmlTag = "XtndOrPayRspn";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.ExtendOrPayResponseDetails, com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.mmExtendOrPayResponseDetails, com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsrv";
+						messageFunctionality = "015";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExtendOrPayQuery2 getExtendOrPayResponseDetails() {
+		return extendOrPayResponseDetails;
+	}
+
+	public void setExtendOrPayResponseDetails(ExtendOrPayQuery2 extendOrPayResponseDetails) {
+		this.extendOrPayResponseDetails = extendOrPayResponseDetails;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

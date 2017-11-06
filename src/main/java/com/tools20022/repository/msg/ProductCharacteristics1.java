@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProductCharacteristics1#Type
- * ProductCharacteristics1.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProductCharacteristics1#mmType
+ * ProductCharacteristics1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProductCharacteristics1#Characteristics
- * ProductCharacteristics1.Characteristics}</li>
+ * {@linkplain com.tools20022.repository.msg.ProductCharacteristics1#mmCharacteristics
+ * ProductCharacteristics1.mmCharacteristics}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProductCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProductCharacteristics1Code type;
 	/**
 	 * Specifies the type of product characteristic by means of a code.
 	 * <p>
@@ -75,8 +76,8 @@ public class ProductCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#Type
-	 * ProductCharacteristics.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmType
+	 * ProductCharacteristics.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class ProductCharacteristics1 {
 	 * "Specifies the type of product characteristic by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmType;
 			componentContext_lazy = () -> ProductCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of product characteristic by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
 	};
+	protected Max35Text characteristics;
 	/**
 	 * Specifies the characteristic of a product.
 	 * <p>
@@ -122,8 +124,8 @@ public class ProductCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#Characteristics
-	 * ProductCharacteristics.Characteristics}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductCharacteristics#mmCharacteristics
+	 * ProductCharacteristics.mmCharacteristics}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,17 +144,17 @@ public class ProductCharacteristics1 {
 	 * definition} = "Specifies the characteristic of a product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Characteristics = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCharacteristics = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmCharacteristics;
 			componentContext_lazy = () -> ProductCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.Characteristics;
 			isDerived = false;
 			xmlTag = "Chrtcs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Characteristics";
 			definition = "Specifies the characteristic of a product.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -160,14 +162,30 @@ public class ProductCharacteristics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics1.Type, com.tools20022.repository.msg.ProductCharacteristics1.Characteristics);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics1.mmType, com.tools20022.repository.msg.ProductCharacteristics1.mmCharacteristics);
 				trace_lazy = () -> ProductCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics1";
 				definition = "Identifies the characteristic of a product.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProductCharacteristics1Code getType() {
+		return type;
+	}
+
+	public void setType(ProductCharacteristics1Code type) {
+		this.type = type;
+	}
+
+	public Max35Text getCharacteristics() {
+		return characteristics;
+	}
+
+	public void setCharacteristics(Max35Text characteristics) {
+		this.characteristics = characteristics;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QueueTransactionIdentificationDetails#QueueIdentification
- * QueueTransactionIdentificationDetails.QueueIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.QueueTransactionIdentificationDetails#mmQueueIdentification
+ * QueueTransactionIdentificationDetails.mmQueueIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QueueTransactionIdentificationDetails#PositionInQueue
- * QueueTransactionIdentificationDetails.PositionInQueue}</li>
+ * {@linkplain com.tools20022.repository.msg.QueueTransactionIdentificationDetails#mmPositionInQueue
+ * QueueTransactionIdentificationDetails.mmPositionInQueue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QueueTransactionIdentificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max16Text queueIdentification;
 	/**
 	 * Identification of the payment queue where the payment instruction
 	 * resides.
@@ -91,7 +92,7 @@ public class QueueTransactionIdentificationDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueueIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueueIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class QueueTransactionIdentificationDetails {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueIdentification";
 			definition = "Identification of the payment queue where the payment instruction resides.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Max16Text positionInQueue;
 	/**
 	 * Position of the payment instruction within the identified queue.
 	 * <p>
@@ -132,7 +134,7 @@ public class QueueTransactionIdentificationDetails {
 	 * "Position of the payment instruction within the identified queue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PositionInQueue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPositionInQueue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
 			isDerived = false;
@@ -140,8 +142,8 @@ public class QueueTransactionIdentificationDetails {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionInQueue";
 			definition = "Position of the payment instruction within the identified queue.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
@@ -149,13 +151,29 @@ public class QueueTransactionIdentificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueueTransactionIdentificationDetails.QueueIdentification, com.tools20022.repository.msg.QueueTransactionIdentificationDetails.PositionInQueue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueueTransactionIdentificationDetails.mmQueueIdentification, com.tools20022.repository.msg.QueueTransactionIdentificationDetails.mmPositionInQueue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QueueTransactionIdentificationDetails";
 				definition = "Identification of a payment instruction by its relative position in a queue of payment transactions managed by the clearing agent.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max16Text getQueueIdentification() {
+		return queueIdentification;
+	}
+
+	public void setQueueIdentification(Max16Text queueIdentification) {
+		this.queueIdentification = queueIdentification;
+	}
+
+	public Max16Text getPositionInQueue() {
+		return positionInQueue;
+	}
+
+	public void setPositionInQueue(Max16Text positionInQueue) {
+		this.positionInQueue = positionInQueue;
 	}
 }

@@ -31,11 +31,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementSystemMethodCode#Default
- * SettlementSystemMethodCode.Default}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementSystemMethodCode#mmDefault
+ * SettlementSystemMethodCode.mmDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementSystemMethodCode#Alternative
- * SettlementSystemMethodCode.Alternative}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementSystemMethodCode#mmAlternative
+ * SettlementSystemMethodCode.mmAlternative}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +98,7 @@ public class SettlementSystemMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Default = new MMCode() {
+	public static final MMCode mmDefault = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Default";
@@ -133,7 +133,7 @@ public class SettlementSystemMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Alternative = new MMCode() {
+	public static final MMCode mmAlternative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Alternative";
@@ -146,12 +146,12 @@ public class SettlementSystemMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NSET");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementSystemMethodCode";
 				definition = "Specifies whether the settlement instruction is to be settled through the default or the alternate settlement system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementSystemMethodCode.Default, com.tools20022.repository.codeset.SettlementSystemMethodCode.Alternative);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementSystemMethodCode.mmDefault, com.tools20022.repository.codeset.SettlementSystemMethodCode.mmAlternative);
 				derivation_lazy = () -> Arrays.asList(SettlementSystemMethod1Code.mmObject());
 			}
 		});

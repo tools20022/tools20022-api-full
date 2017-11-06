@@ -32,6 +32,6 @@ public class DeriveMMMessageAssociationEnd_xmlMemberType implements Function<MMM
 	 */
 	@Override
 	public MMLogicalType apply(MMMessageAssociationEnd mmBean) {
-		throw new RuntimeException("Not implemented!");
+		return mmBean.getType();
 	}
 }

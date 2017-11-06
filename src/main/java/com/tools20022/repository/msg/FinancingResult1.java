@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.InvoiceFinancingStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The final result of a single invoice financing request.
@@ -38,16 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingResult1#FinancingRequestStatus
- * FinancingResult1.FinancingRequestStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingResult1#StatusReason
- * FinancingResult1.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingResult1#mmFinancingRequestStatus
+ * FinancingResult1.mmFinancingRequestStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingResult1#AdditionalStatusReasonInformation
- * FinancingResult1.AdditionalStatusReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingResult1#mmStatusReason
+ * FinancingResult1.mmStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingResult1#FinancedAmount
- * FinancingResult1.FinancedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingResult1#mmAdditionalStatusReasonInformation
+ * FinancingResult1.mmAdditionalStatusReasonInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancingResult1#mmFinancedAmount
+ * FinancingResult1.mmFinancedAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancingResult1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestStatus1Code financingRequestStatus;
 	/**
 	 * Specifies the status of the financing request (e.g. financed. not
 	 * financed).
@@ -85,8 +88,8 @@ public class FinancingResult1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#FinancingTransactionStatus
-	 * InvoiceFinancingStatus.FinancingTransactionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#mmFinancingTransactionStatus
+	 * InvoiceFinancingStatus.mmFinancingTransactionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +110,21 @@ public class FinancingResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancingRequestStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancingRequestStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmFinancingTransactionStatus;
 			componentContext_lazy = () -> FinancingResult1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.FinancingTransactionStatus;
 			isDerived = false;
 			xmlTag = "FincgReqSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingRequestStatus";
 			definition = "Specifies the status of the financing request (e.g. financed. not financed).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RequestStatus1Code.mmObject();
 		}
 	};
+	protected StatusReason4Choice statusReason;
 	/**
 	 * Indicates the reasons that have determined the result of the single
 	 * request.
@@ -133,8 +137,8 @@ public class FinancingResult1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#FinancingStatusReason
-	 * InvoiceFinancingStatus.FinancingStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingStatus#mmFinancingStatusReason
+	 * InvoiceFinancingStatus.mmFinancingStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,21 +159,22 @@ public class FinancingResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmFinancingStatusReason;
 			componentContext_lazy = () -> FinancingResult1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.FinancingStatusReason;
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Indicates the reasons that have determined the result of the single request.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> StatusReason4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> StatusReason4Choice.mmObject();
 		}
 	};
+	protected List<Max105Text> additionalStatusReasonInformation;
 	/**
 	 * Further details on the status reason.
 	 * <p>
@@ -182,8 +187,8 @@ public class FinancingResult1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,10 +207,10 @@ public class FinancingResult1 {
 	 * definition} = "Further details on the status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalStatusReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> FinancingResult1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlStsRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,6 +220,7 @@ public class FinancingResult1 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected FinancingRateOrAmountChoice financedAmount;
 	/**
 	 * Indicates amount financed related to the request.
 	 * <p>
@@ -228,8 +234,8 @@ public class FinancingResult1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#RequestedAmount
-	 * InvoiceFinancingAgreement.RequestedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmRequestedAmount
+	 * InvoiceFinancingAgreement.mmRequestedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -248,17 +254,17 @@ public class FinancingResult1 {
 	 * definition} = "Indicates amount financed related to the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmRequestedAmount;
 			componentContext_lazy = () -> FinancingResult1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.RequestedAmount;
 			isDerived = false;
 			xmlTag = "FincdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancedAmount";
 			definition = "Indicates amount financed related to the request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancingRateOrAmountChoice.mmObject();
 		}
 	};
@@ -266,15 +272,47 @@ public class FinancingResult1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingResult1.FinancingRequestStatus, com.tools20022.repository.msg.FinancingResult1.StatusReason,
-						com.tools20022.repository.msg.FinancingResult1.AdditionalStatusReasonInformation, com.tools20022.repository.msg.FinancingResult1.FinancedAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingResult1.mmFinancingRequestStatus, com.tools20022.repository.msg.FinancingResult1.mmStatusReason,
+						com.tools20022.repository.msg.FinancingResult1.mmAdditionalStatusReasonInformation, com.tools20022.repository.msg.FinancingResult1.mmFinancedAmount);
 				trace_lazy = () -> InvoiceFinancingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancingResult1";
 				definition = "The final result of a single invoice financing request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestStatus1Code getFinancingRequestStatus() {
+		return financingRequestStatus;
+	}
+
+	public void setFinancingRequestStatus(RequestStatus1Code financingRequestStatus) {
+		this.financingRequestStatus = financingRequestStatus;
+	}
+
+	public StatusReason4Choice getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(StatusReason4Choice statusReason) {
+		this.statusReason = statusReason;
+	}
+
+	public List<Max105Text> getAdditionalStatusReasonInformation() {
+		return additionalStatusReasonInformation;
+	}
+
+	public void setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
+		this.additionalStatusReasonInformation = additionalStatusReasonInformation;
+	}
+
+	public FinancingRateOrAmountChoice getFinancedAmount() {
+		return financedAmount;
+	}
+
+	public void setFinancedAmount(FinancingRateOrAmountChoice financedAmount) {
+		this.financedAmount = financedAmount;
 	}
 }

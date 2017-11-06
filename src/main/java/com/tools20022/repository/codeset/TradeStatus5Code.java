@@ -33,46 +33,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#Invalid
- * TradeStatus5Code.Invalid}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#Matched
- * TradeStatus5Code.Matched}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#Amended
- * TradeStatus5Code.Amended}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmInvalid
+ * TradeStatus5Code.mmInvalid}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmMatched
+ * TradeStatus5Code.mmMatched}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmAmended
+ * TradeStatus5Code.mmAmended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#SettlementMaturePending
- * TradeStatus5Code.SettlementMaturePending}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmSettlementMaturePending
+ * TradeStatus5Code.mmSettlementMaturePending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#NotAuthorised
- * TradeStatus5Code.NotAuthorised}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#Rejected
- * TradeStatus5Code.Rejected}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#Rescinded
- * TradeStatus5Code.Rescinded}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#Settled
- * TradeStatus5Code.Settled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmNotAuthorised
+ * TradeStatus5Code.mmNotAuthorised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#SettlementMemberAuthorised
- * TradeStatus5Code.SettlementMemberAuthorised}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmRejected
+ * TradeStatus5Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#SettlementMemberNotAuthorised
- * TradeStatus5Code.SettlementMemberNotAuthorised}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#Split
- * TradeStatus5Code.Split}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#Suspended
- * TradeStatus5Code.Suspended}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#Unmatched
- * TradeStatus5Code.Unmatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmRescinded
+ * TradeStatus5Code.mmRescinded}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmSettled
+ * TradeStatus5Code.mmSettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#SettlementMature
- * TradeStatus5Code.SettlementMature}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmSettlementMemberAuthorised
+ * TradeStatus5Code.mmSettlementMemberAuthorised}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmSettlementMemberNotAuthorised
+ * TradeStatus5Code.mmSettlementMemberNotAuthorised}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmSplit
+ * TradeStatus5Code.mmSplit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmSuspended
+ * TradeStatus5Code.mmSuspended}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmUnmatched
+ * TradeStatus5Code.mmUnmatched}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus5Code#mmSettlementMature
+ * TradeStatus5Code.mmSettlementMature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -119,17 +123,17 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#Invalid
-	 * TradeStatus6Code.Invalid}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#mmInvalid
+	 * TradeStatus6Code.mmInvalid}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Invalid = new MMCode() {
+	public static final MMCode mmInvalid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.Invalid);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.mmInvalid);
 			owner_lazy = () -> TradeStatus5Code.mmObject();
 		}
 	};
@@ -151,17 +155,17 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#Matched
-	 * TradeStatus6Code.Matched}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#mmMatched
+	 * TradeStatus6Code.mmMatched}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Matched = new MMCode() {
+	public static final MMCode mmMatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.Matched);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.mmMatched);
 			owner_lazy = () -> TradeStatus5Code.mmObject();
 		}
 	};
@@ -181,7 +185,7 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * name} = "Amended"</li>
 	 * </ul>
 	 */
-	public static final MMCode Amended = new MMCode() {
+	public static final MMCode mmAmended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amended";
@@ -206,17 +210,17 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#SettlementMaturePending
-	 * TradeStatus6Code.SettlementMaturePending}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#mmSettlementMaturePending
+	 * TradeStatus6Code.mmSettlementMaturePending}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementMaturePending = new MMCode() {
+	public static final MMCode mmSettlementMaturePending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMaturePending";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.SettlementMaturePending);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.mmSettlementMaturePending);
 			owner_lazy = () -> TradeStatus5Code.mmObject();
 		}
 	};
@@ -236,7 +240,7 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * name} = "NotAuthorised"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAuthorised = new MMCode() {
+	public static final MMCode mmNotAuthorised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAuthorised";
@@ -261,17 +265,17 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#Rejected
-	 * TradeStatus6Code.Rejected}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#mmRejected
+	 * TradeStatus6Code.mmRejected}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.Rejected);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.mmRejected);
 			owner_lazy = () -> TradeStatus5Code.mmObject();
 		}
 	};
@@ -293,17 +297,17 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#Rescinded
-	 * TradeStatus6Code.Rescinded}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#mmRescinded
+	 * TradeStatus6Code.mmRescinded}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Rescinded = new MMCode() {
+	public static final MMCode mmRescinded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rescinded";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.Rescinded);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.mmRescinded);
 			owner_lazy = () -> TradeStatus5Code.mmObject();
 		}
 	};
@@ -325,17 +329,17 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#Settled
-	 * TradeStatus6Code.Settled}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#mmSettled
+	 * TradeStatus6Code.mmSettled}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Settled = new MMCode() {
+	public static final MMCode mmSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.Settled);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.mmSettled);
 			owner_lazy = () -> TradeStatus5Code.mmObject();
 		}
 	};
@@ -355,7 +359,7 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * name} = "SettlementMemberAuthorised"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementMemberAuthorised = new MMCode() {
+	public static final MMCode mmSettlementMemberAuthorised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMemberAuthorised";
@@ -378,7 +382,7 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * name} = "SettlementMemberNotAuthorised"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementMemberNotAuthorised = new MMCode() {
+	public static final MMCode mmSettlementMemberNotAuthorised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMemberNotAuthorised";
@@ -402,17 +406,18 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus6Code#Split
-	 * TradeStatus6Code.Split}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#mmSplit
+	 * TradeStatus6Code.mmSplit}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Split = new MMCode() {
+	public static final MMCode mmSplit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Split";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.Split);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.mmSplit);
 			owner_lazy = () -> TradeStatus5Code.mmObject();
 		}
 	};
@@ -432,7 +437,7 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspended = new MMCode() {
+	public static final MMCode mmSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
@@ -457,17 +462,17 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#Unmatched
-	 * TradeStatus6Code.Unmatched}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#mmUnmatched
+	 * TradeStatus6Code.mmUnmatched}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Unmatched = new MMCode() {
+	public static final MMCode mmUnmatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.Unmatched);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.mmUnmatched);
 			owner_lazy = () -> TradeStatus5Code.mmObject();
 		}
 	};
@@ -489,17 +494,17 @@ public class TradeStatus5Code extends TradeStatusCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#SettlementMature
-	 * TradeStatus6Code.SettlementMature}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus6Code#mmSettlementMature
+	 * TradeStatus6Code.mmSettlementMature}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementMature = new MMCode() {
+	public static final MMCode mmSettlementMature = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMature";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.SettlementMature);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus6Code.mmSettlementMature);
 			owner_lazy = () -> TradeStatus5Code.mmObject();
 		}
 	};
@@ -507,17 +512,17 @@ public class TradeStatus5Code extends TradeStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INVA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeStatus5Code";
 				definition = "Specifies the status of a trade in a central matching and settlement system.";
 				nextVersions_lazy = () -> Arrays.asList(TradeStatus6Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus5Code.Invalid, com.tools20022.repository.codeset.TradeStatus5Code.Matched, com.tools20022.repository.codeset.TradeStatus5Code.Amended,
-						com.tools20022.repository.codeset.TradeStatus5Code.SettlementMaturePending, com.tools20022.repository.codeset.TradeStatus5Code.NotAuthorised, com.tools20022.repository.codeset.TradeStatus5Code.Rejected,
-						com.tools20022.repository.codeset.TradeStatus5Code.Rescinded, com.tools20022.repository.codeset.TradeStatus5Code.Settled, com.tools20022.repository.codeset.TradeStatus5Code.SettlementMemberAuthorised,
-						com.tools20022.repository.codeset.TradeStatus5Code.SettlementMemberNotAuthorised, com.tools20022.repository.codeset.TradeStatus5Code.Split, com.tools20022.repository.codeset.TradeStatus5Code.Suspended,
-						com.tools20022.repository.codeset.TradeStatus5Code.Unmatched, com.tools20022.repository.codeset.TradeStatus5Code.SettlementMature);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus5Code.mmInvalid, com.tools20022.repository.codeset.TradeStatus5Code.mmMatched, com.tools20022.repository.codeset.TradeStatus5Code.mmAmended,
+						com.tools20022.repository.codeset.TradeStatus5Code.mmSettlementMaturePending, com.tools20022.repository.codeset.TradeStatus5Code.mmNotAuthorised, com.tools20022.repository.codeset.TradeStatus5Code.mmRejected,
+						com.tools20022.repository.codeset.TradeStatus5Code.mmRescinded, com.tools20022.repository.codeset.TradeStatus5Code.mmSettled, com.tools20022.repository.codeset.TradeStatus5Code.mmSettlementMemberAuthorised,
+						com.tools20022.repository.codeset.TradeStatus5Code.mmSettlementMemberNotAuthorised, com.tools20022.repository.codeset.TradeStatus5Code.mmSplit, com.tools20022.repository.codeset.TradeStatus5Code.mmSuspended,
+						com.tools20022.repository.codeset.TradeStatus5Code.mmUnmatched, com.tools20022.repository.codeset.TradeStatus5Code.mmSettlementMature);
 				trace_lazy = () -> TradeStatusCode.mmObject();
 			}
 		});

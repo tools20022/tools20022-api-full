@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BalanceFormat5Choice#Balance
- * BalanceFormat5Choice.Balance}</li>
+ * {@linkplain com.tools20022.repository.choice.BalanceFormat5Choice#mmBalance
+ * BalanceFormat5Choice.mmBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BalanceFormat5Choice#EligibleBalance
- * BalanceFormat5Choice.EligibleBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.BalanceFormat5Choice#mmEligibleBalance
+ * BalanceFormat5Choice.mmEligibleBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BalanceFormat5Choice#NotEligibleBalance
- * BalanceFormat5Choice.NotEligibleBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.BalanceFormat5Choice#mmNotEligibleBalance
+ * BalanceFormat5Choice.mmNotEligibleBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BalanceFormat5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SignedQuantityFormat7 balance;
 	/**
 	 * Provides information about balance related to a corporate action.
 	 * <p>
@@ -104,26 +105,27 @@ public class BalanceFormat5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.BalanceFormat1Choice#Balance
-	 * BalanceFormat1Choice.Balance}</li>
+	 * {@linkplain com.tools20022.repository.choice.BalanceFormat1Choice#mmBalance
+	 * BalanceFormat1Choice.mmBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Balance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BalanceFormat5Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> BalanceFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about balance related to a corporate action.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BalanceFormat1Choice.Balance;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.BalanceFormat1Choice.mmBalance;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SignedQuantityFormat7.mmObject();
 		}
 	};
+	protected SignedQuantityFormat6 eligibleBalance;
 	/**
 	 * Provide eligible balance information in different formats.
 	 * <p>
@@ -157,26 +159,27 @@ public class BalanceFormat5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.BalanceFormat1Choice#EligibleBalance
-	 * BalanceFormat1Choice.EligibleBalance}</li>
+	 * {@linkplain com.tools20022.repository.choice.BalanceFormat1Choice#mmEligibleBalance
+	 * BalanceFormat1Choice.mmEligibleBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EligibleBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEligibleBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BalanceFormat5Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> BalanceFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ElgblBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleBalance";
 			definition = "Provide eligible balance information in different formats.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BalanceFormat1Choice.EligibleBalance;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.BalanceFormat1Choice.mmEligibleBalance;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SignedQuantityFormat6.mmObject();
 		}
 	};
+	protected SignedQuantityFormat6 notEligibleBalance;
 	/**
 	 * Provide not eligible balance information in different formats.
 	 * <p>
@@ -210,34 +213,34 @@ public class BalanceFormat5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.BalanceFormat1Choice#NotEligibleBalance
-	 * BalanceFormat1Choice.NotEligibleBalance}</li>
+	 * {@linkplain com.tools20022.repository.choice.BalanceFormat1Choice#mmNotEligibleBalance
+	 * BalanceFormat1Choice.mmNotEligibleBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NotEligibleBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNotEligibleBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BalanceFormat5Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> BalanceFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotElgblBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEligibleBalance";
 			definition = "Provide not eligible balance information in different formats.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BalanceFormat1Choice.NotEligibleBalance;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.BalanceFormat1Choice.mmNotEligibleBalance;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SignedQuantityFormat6.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BalanceFormat5Choice.Balance, com.tools20022.repository.choice.BalanceFormat5Choice.EligibleBalance,
-						com.tools20022.repository.choice.BalanceFormat5Choice.NotEligibleBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BalanceFormat5Choice.mmBalance, com.tools20022.repository.choice.BalanceFormat5Choice.mmEligibleBalance,
+						com.tools20022.repository.choice.BalanceFormat5Choice.mmNotEligibleBalance);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BalanceFormat5Choice";
 				definition = "Choice between balance, eligible balance and not eligible balance formats.";
@@ -245,5 +248,29 @@ public class BalanceFormat5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SignedQuantityFormat7 getBalance() {
+		return balance;
+	}
+
+	public void setBalance(SignedQuantityFormat7 balance) {
+		this.balance = balance;
+	}
+
+	public SignedQuantityFormat6 getEligibleBalance() {
+		return eligibleBalance;
+	}
+
+	public void setEligibleBalance(SignedQuantityFormat6 eligibleBalance) {
+		this.eligibleBalance = eligibleBalance;
+	}
+
+	public SignedQuantityFormat6 getNotEligibleBalance() {
+		return notEligibleBalance;
+	}
+
+	public void setNotEligibleBalance(SignedQuantityFormat6 notEligibleBalance) {
+		this.notEligibleBalance = notEligibleBalance;
 	}
 }

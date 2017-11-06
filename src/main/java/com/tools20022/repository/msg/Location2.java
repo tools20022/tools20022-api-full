@@ -35,11 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Location2#Country
- * Location2.Country}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Location2#CountrySubDivision
- * Location2.CountrySubDivision}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Location2#Text Location2.Text}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Location2#mmCountry
+ * Location2.mmCountry}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Location2#mmCountrySubDivision
+ * Location2.mmCountrySubDivision}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Location2#mmText
+ * Location2.mmText}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Location2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Country of jurisdiction.
 	 * <p>
@@ -77,7 +79,8 @@ public class Location2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Location2
@@ -96,25 +99,26 @@ public class Location2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Location1#Country
-	 * Location1.Country}</li>
+	 * {@linkplain com.tools20022.repository.msg.Location1#mmCountry
+	 * Location1.mmCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> Location2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country of jurisdiction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Location1.Country;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Location1.mmCountry;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CountrySubdivision1Choice countrySubDivision;
 	/**
 	 * Codified representation of the jurisdiction as published in ISO 3166-2.
 	 * <p>
@@ -128,8 +132,8 @@ public class Location2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#CountyIdentification
-	 * PostalAddress.CountyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountyIdentification
+	 * PostalAddress.mmCountyIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Location2
@@ -150,25 +154,26 @@ public class Location2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Location1#CountrySubDivision
-	 * Location1.CountrySubDivision}</li>
+	 * {@linkplain com.tools20022.repository.msg.Location1#mmCountrySubDivision
+	 * Location1.mmCountrySubDivision}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountrySubDivision = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountrySubDivision = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountyIdentification;
 			componentContext_lazy = () -> Location2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.CountyIdentification;
 			isDerived = false;
 			xmlTag = "CtrySubDvsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountrySubDivision";
 			definition = "Codified representation of the jurisdiction as published in ISO 3166-2.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Location1.CountrySubDivision;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Location1.mmCountrySubDivision;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CountrySubdivision1Choice.mmObject();
 		}
 	};
+	protected Max35Text text;
 	/**
 	 * Name of jurisdiction, for example, Frankfurt.
 	 * <p>
@@ -196,10 +201,11 @@ public class Location2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Location1#Text Location1.Text}</li>
+	 * {@linkplain com.tools20022.repository.msg.Location1#mmText
+	 * Location1.mmText}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Text = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Location2.mmObject();
 			isDerived = false;
@@ -207,9 +213,9 @@ public class Location2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Text";
 			definition = "Name of jurisdiction, for example, Frankfurt.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Location1.Text;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Location1.mmText;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -217,9 +223,9 @@ public class Location2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Location2.Country, com.tools20022.repository.msg.Location2.CountrySubDivision, com.tools20022.repository.msg.Location2.Text);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Location2.mmCountry, com.tools20022.repository.msg.Location2.mmCountrySubDivision, com.tools20022.repository.msg.Location2.mmText);
 				trace_lazy = () -> Location.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Location2";
 				definition = "Location information.";
@@ -227,5 +233,29 @@ public class Location2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public CountrySubdivision1Choice getCountrySubDivision() {
+		return countrySubDivision;
+	}
+
+	public void setCountrySubDivision(CountrySubdivision1Choice countrySubDivision) {
+		this.countrySubDivision = countrySubDivision;
+	}
+
+	public Max35Text getText() {
+		return text;
+	}
+
+	public void setText(Max35Text text) {
+		this.text = text;
 	}
 }

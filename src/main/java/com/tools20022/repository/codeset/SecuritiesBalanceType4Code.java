@@ -34,36 +34,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#TaxExempt
- * SecuritiesBalanceType4Code.TaxExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmTaxExempt
+ * SecuritiesBalanceType4Code.mmTaxExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#NonTaxExempt
- * SecuritiesBalanceType4Code.NonTaxExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmNonTaxExempt
+ * SecuritiesBalanceType4Code.mmNonTaxExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#Registered
- * SecuritiesBalanceType4Code.Registered}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmRegistered
+ * SecuritiesBalanceType4Code.mmRegistered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#Unclassified
- * SecuritiesBalanceType4Code.Unclassified}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmUnclassified
+ * SecuritiesBalanceType4Code.mmUnclassified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#StreetPosition
- * SecuritiesBalanceType4Code.StreetPosition}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmStreetPosition
+ * SecuritiesBalanceType4Code.mmStreetPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#Unregistered
- * SecuritiesBalanceType4Code.Unregistered}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmUnregistered
+ * SecuritiesBalanceType4Code.mmUnregistered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#SidePocketComponent
- * SecuritiesBalanceType4Code.SidePocketComponent}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmSidePocketComponent
+ * SecuritiesBalanceType4Code.mmSidePocketComponent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#Holdback
- * SecuritiesBalanceType4Code.Holdback}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmHoldback
+ * SecuritiesBalanceType4Code.mmHoldback}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -100,7 +100,7 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "TaxExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxExempt = new MMCode() {
+	public static final MMCode mmTaxExempt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExempt";
@@ -123,7 +123,7 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "NonTaxExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonTaxExempt = new MMCode() {
+	public static final MMCode mmNonTaxExempt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonTaxExempt";
@@ -146,7 +146,7 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Registered"</li>
 	 * </ul>
 	 */
-	public static final MMCode Registered = new MMCode() {
+	public static final MMCode mmRegistered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registered";
@@ -169,7 +169,7 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Unclassified"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unclassified = new MMCode() {
+	public static final MMCode mmUnclassified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unclassified";
@@ -192,7 +192,7 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "StreetPosition"</li>
 	 * </ul>
 	 */
-	public static final MMCode StreetPosition = new MMCode() {
+	public static final MMCode mmStreetPosition = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetPosition";
@@ -215,7 +215,7 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Unregistered"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unregistered = new MMCode() {
+	public static final MMCode mmUnregistered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unregistered";
@@ -238,7 +238,7 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "SidePocketComponent"</li>
 	 * </ul>
 	 */
-	public static final MMCode SidePocketComponent = new MMCode() {
+	public static final MMCode mmSidePocketComponent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketComponent";
@@ -261,7 +261,7 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Holdback"</li>
 	 * </ul>
 	 */
-	public static final MMCode Holdback = new MMCode() {
+	public static final MMCode mmHoldback = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Holdback";
@@ -272,15 +272,15 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLEN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType4Code";
 				definition = "Specifies the nature of the securities or investment fund balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType4Code.TaxExempt, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.NonTaxExempt,
-						com.tools20022.repository.codeset.SecuritiesBalanceType4Code.Registered, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.Unclassified,
-						com.tools20022.repository.codeset.SecuritiesBalanceType4Code.StreetPosition, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.Unregistered,
-						com.tools20022.repository.codeset.SecuritiesBalanceType4Code.SidePocketComponent, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.Holdback);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmTaxExempt, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmNonTaxExempt,
+						com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmRegistered, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmUnclassified,
+						com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmStreetPosition, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmUnregistered,
+						com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmSidePocketComponent, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmHoldback);
 				trace_lazy = () -> SecuritiesBalanceTypeCode.mmObject();
 			}
 		});

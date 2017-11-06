@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code#Complete
- * CorporateActionEventProcessingStatus1Code.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code#mmComplete
+ * CorporateActionEventProcessingStatus1Code.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code#Pending
- * CorporateActionEventProcessingStatus1Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code#mmPending
+ * CorporateActionEventProcessingStatus1Code.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code#Reconciled
- * CorporateActionEventProcessingStatus1Code.Reconciled}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code#mmReconciled
+ * CorporateActionEventProcessingStatus1Code.mmReconciled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class CorporateActionEventProcessingStatus1Code extends CorporateActionEv
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
@@ -108,7 +108,7 @@ public class CorporateActionEventProcessingStatus1Code extends CorporateActionEv
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -131,7 +131,7 @@ public class CorporateActionEventProcessingStatus1Code extends CorporateActionEv
 	 * name} = "Reconciled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reconciled = new MMCode() {
+	public static final MMCode mmReconciled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciled";
@@ -142,13 +142,13 @@ public class CorporateActionEventProcessingStatus1Code extends CorporateActionEv
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventProcessingStatus1Code";
 				definition = "Specifies the stage in the corporate action event life cycle.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code.Complete, com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code.Pending,
-						com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code.Reconciled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code.mmComplete, com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code.mmPending,
+						com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code.mmReconciled);
 				trace_lazy = () -> CorporateActionEventProcessingStatusCode.mmObject();
 			}
 		});

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategory1Code#MandateAccount
- * InvestmentAccountCategory1Code.MandateAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategory1Code#mmMandateAccount
+ * InvestmentAccountCategory1Code.mmMandateAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategory1Code#RetailAccount
- * InvestmentAccountCategory1Code.RetailAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategory1Code#mmRetailAccount
+ * InvestmentAccountCategory1Code.mmRetailAccount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class InvestmentAccountCategory1Code extends InvestmentAccountCategoryCod
 	 * name} = "MandateAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MandateAccount = new MMCode() {
+	public static final MMCode mmMandateAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateAccount";
@@ -98,7 +98,7 @@ public class InvestmentAccountCategory1Code extends InvestmentAccountCategoryCod
 	 * name} = "RetailAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode RetailAccount = new MMCode() {
+	public static final MMCode mmRetailAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailAccount";
@@ -109,11 +109,11 @@ public class InvestmentAccountCategory1Code extends InvestmentAccountCategoryCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountCategory1Code";
 				definition = "Specifies the investment account category.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentAccountCategory1Code.MandateAccount, com.tools20022.repository.codeset.InvestmentAccountCategory1Code.RetailAccount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentAccountCategory1Code.mmMandateAccount, com.tools20022.repository.codeset.InvestmentAccountCategory1Code.mmRetailAccount);
 				trace_lazy = () -> InvestmentAccountCategoryCode.mmObject();
 			}
 		});

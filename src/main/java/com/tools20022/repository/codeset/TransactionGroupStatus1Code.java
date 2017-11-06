@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#AcceptedTechnicalValidation
- * TransactionGroupStatus1Code.AcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#mmAcceptedTechnicalValidation
+ * TransactionGroupStatus1Code.mmAcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#Received
- * TransactionGroupStatus1Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#mmReceived
+ * TransactionGroupStatus1Code.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#PartiallyAccepted
- * TransactionGroupStatus1Code.PartiallyAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#mmPartiallyAccepted
+ * TransactionGroupStatus1Code.mmPartiallyAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#Rejected
- * TransactionGroupStatus1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#mmRejected
+ * TransactionGroupStatus1Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#Pending
- * TransactionGroupStatus1Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#mmPending
+ * TransactionGroupStatus1Code.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#AcceptedCustomerProfile
- * TransactionGroupStatus1Code.AcceptedCustomerProfile}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#mmAcceptedCustomerProfile
+ * TransactionGroupStatus1Code.mmAcceptedCustomerProfile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#AcceptedSettlementInProcess
- * TransactionGroupStatus1Code.AcceptedSettlementInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#mmAcceptedSettlementInProcess
+ * TransactionGroupStatus1Code.mmAcceptedSettlementInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#AcceptedSettlementCompleted
- * TransactionGroupStatus1Code.AcceptedSettlementCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#mmAcceptedSettlementCompleted
+ * TransactionGroupStatus1Code.mmAcceptedSettlementCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#AcceptedCancellationRequest
- * TransactionGroupStatus1Code.AcceptedCancellationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#mmAcceptedCancellationRequest
+ * TransactionGroupStatus1Code.mmAcceptedCancellationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#AcceptedWithChange
- * TransactionGroupStatus1Code.AcceptedWithChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus1Code#mmAcceptedWithChange
+ * TransactionGroupStatus1Code.mmAcceptedWithChange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedTechnicalValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedTechnicalValidation = new MMCode() {
+	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
@@ -128,7 +128,7 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -151,7 +151,7 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "PartiallyAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyAccepted = new MMCode() {
+	public static final MMCode mmPartiallyAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAccepted";
@@ -174,7 +174,7 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -197,7 +197,7 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -220,7 +220,7 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedCustomerProfile"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedCustomerProfile = new MMCode() {
+	public static final MMCode mmAcceptedCustomerProfile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCustomerProfile";
@@ -243,7 +243,7 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedSettlementInProcess = new MMCode() {
+	public static final MMCode mmAcceptedSettlementInProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementInProcess";
@@ -266,7 +266,7 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementCompleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedSettlementCompleted = new MMCode() {
+	public static final MMCode mmAcceptedSettlementCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementCompleted";
@@ -289,7 +289,7 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedCancellationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedCancellationRequest = new MMCode() {
+	public static final MMCode mmAcceptedCancellationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCancellationRequest";
@@ -312,7 +312,7 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	 * name} = "AcceptedWithChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedWithChange = new MMCode() {
+	public static final MMCode mmAcceptedWithChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithChange";
@@ -323,16 +323,16 @@ public class TransactionGroupStatus1Code extends PaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionGroupStatus1Code";
 				definition = "Specifies the status of a group of payment transactions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionGroupStatus1Code.AcceptedTechnicalValidation, com.tools20022.repository.codeset.TransactionGroupStatus1Code.Received,
-						com.tools20022.repository.codeset.TransactionGroupStatus1Code.PartiallyAccepted, com.tools20022.repository.codeset.TransactionGroupStatus1Code.Rejected,
-						com.tools20022.repository.codeset.TransactionGroupStatus1Code.Pending, com.tools20022.repository.codeset.TransactionGroupStatus1Code.AcceptedCustomerProfile,
-						com.tools20022.repository.codeset.TransactionGroupStatus1Code.AcceptedSettlementInProcess, com.tools20022.repository.codeset.TransactionGroupStatus1Code.AcceptedSettlementCompleted,
-						com.tools20022.repository.codeset.TransactionGroupStatus1Code.AcceptedCancellationRequest, com.tools20022.repository.codeset.TransactionGroupStatus1Code.AcceptedWithChange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionGroupStatus1Code.mmAcceptedTechnicalValidation, com.tools20022.repository.codeset.TransactionGroupStatus1Code.mmReceived,
+						com.tools20022.repository.codeset.TransactionGroupStatus1Code.mmPartiallyAccepted, com.tools20022.repository.codeset.TransactionGroupStatus1Code.mmRejected,
+						com.tools20022.repository.codeset.TransactionGroupStatus1Code.mmPending, com.tools20022.repository.codeset.TransactionGroupStatus1Code.mmAcceptedCustomerProfile,
+						com.tools20022.repository.codeset.TransactionGroupStatus1Code.mmAcceptedSettlementInProcess, com.tools20022.repository.codeset.TransactionGroupStatus1Code.mmAcceptedSettlementCompleted,
+						com.tools20022.repository.codeset.TransactionGroupStatus1Code.mmAcceptedCancellationRequest, com.tools20022.repository.codeset.TransactionGroupStatus1Code.mmAcceptedWithChange);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
 			}
 		});

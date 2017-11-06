@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.ReconciliationList1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The message InvoicePaymentReconciliationStatus is sent from a payee to a
@@ -64,30 +65,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#Header
- * InvoicePaymentReconciliationStatusV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#mmHeader
+ * InvoicePaymentReconciliationStatusV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#ReconciliationList
- * InvoicePaymentReconciliationStatusV01.ReconciliationList}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#mmReconciliationList
+ * InvoicePaymentReconciliationStatusV01.mmReconciliationList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#ReconciliationCount
- * InvoicePaymentReconciliationStatusV01.ReconciliationCount}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#mmReconciliationCount
+ * InvoicePaymentReconciliationStatusV01.mmReconciliationCount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#ItemCount
- * InvoicePaymentReconciliationStatusV01.ItemCount}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#mmItemCount
+ * InvoicePaymentReconciliationStatusV01.mmItemCount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#ControlSum
- * InvoicePaymentReconciliationStatusV01.ControlSum}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#mmControlSum
+ * InvoicePaymentReconciliationStatusV01.mmControlSum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#AttachedMessage
- * InvoicePaymentReconciliationStatusV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#mmAttachedMessage
+ * InvoicePaymentReconciliationStatusV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01#identifier
- * InvoicePaymentReconciliationStatusV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.054.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoicePaymentReconciliationStatusV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected BusinessLetter1 header;
 	/**
 	 * Specifies a set of characteristics that unambiguously identify the
 	 * status, common parameters, documents and identifications.
@@ -128,17 +128,18 @@ public class InvoicePaymentReconciliationStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Specifies a set of characteristics that unambiguously identify the status, common parameters, documents and identifications.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BusinessLetter1.mmObject();
 		}
 	};
+	protected List<ReconciliationList1> reconciliationList;
 	/**
 	 * List of payment reconciliation information.
 	 * <p>
@@ -162,7 +163,7 @@ public class InvoicePaymentReconciliationStatusV01 {
 	 * definition} = "List of payment reconciliation information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReconciliationList = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReconciliationList = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcncltnList";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,6 +173,7 @@ public class InvoicePaymentReconciliationStatusV01 {
 			complexType_lazy = () -> ReconciliationList1.mmObject();
 		}
 	};
+	protected Max15NumericText reconciliationCount;
 	/**
 	 * Specifies the number of reconciliation lists.
 	 * <p>
@@ -195,17 +197,18 @@ public class InvoicePaymentReconciliationStatusV01 {
 	 * definition} = "Specifies the number of reconciliation lists."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReconciliationCount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReconciliationCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcncltnCnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationCount";
 			definition = "Specifies the number of reconciliation lists.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected Max15NumericText itemCount;
 	/**
 	 * Total number of individual items in all lists.
 	 * <p>
@@ -229,17 +232,18 @@ public class InvoicePaymentReconciliationStatusV01 {
 	 * definition} = "Total number of individual items in all lists."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ItemCount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmItemCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ItmCnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemCount";
 			definition = "Total number of individual items in all lists.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber controlSum;
 	/**
 	 * Total of all individual amounts included in all lists, irrespective of
 	 * currencies or direction.
@@ -266,17 +270,18 @@ public class InvoicePaymentReconciliationStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ControlSum = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmControlSum = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrlSum";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in all lists, irrespective of currencies or direction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected List<EncapsulatedBusinessMessage1> attachedMessage;
 	/**
 	 * Referenced or related business message.
 	 * <p>
@@ -300,7 +305,7 @@ public class InvoicePaymentReconciliationStatusV01 {
 	 * definition} = "Referenced or related business message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AttachedMessage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAttachedMessage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AttchdMsg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,33 +313,6 @@ public class InvoicePaymentReconciliationStatusV01 {
 			definition = "Referenced or related business message.";
 			minOccurs = 0;
 			complexType_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "054"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "054";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -348,12 +326,68 @@ public class InvoicePaymentReconciliationStatusV01 {
 				rootElement = "Document";
 				xmlTag = "InvcPmtRcncltnSts";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.Header, com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.ReconciliationList,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.ReconciliationCount, com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.ItemCount,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.ControlSum, com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.AttachedMessage);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmHeader,
+						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmReconciliationList, com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmReconciliationCount,
+						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmItemCount, com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmControlSum,
+						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmAttachedMessage);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "054";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BusinessLetter1 getHeader() {
+		return header;
+	}
+
+	public void setHeader(BusinessLetter1 header) {
+		this.header = header;
+	}
+
+	public List<ReconciliationList1> getReconciliationList() {
+		return reconciliationList;
+	}
+
+	public void setReconciliationList(List<ReconciliationList1> reconciliationList) {
+		this.reconciliationList = reconciliationList;
+	}
+
+	public Max15NumericText getReconciliationCount() {
+		return reconciliationCount;
+	}
+
+	public void setReconciliationCount(Max15NumericText reconciliationCount) {
+		this.reconciliationCount = reconciliationCount;
+	}
+
+	public Max15NumericText getItemCount() {
+		return itemCount;
+	}
+
+	public void setItemCount(Max15NumericText itemCount) {
+		this.itemCount = itemCount;
+	}
+
+	public DecimalNumber getControlSum() {
+		return controlSum;
+	}
+
+	public void setControlSum(DecimalNumber controlSum) {
+		this.controlSum = controlSum;
+	}
+
+	public List<EncapsulatedBusinessMessage1> getAttachedMessage() {
+		return attachedMessage;
+	}
+
+	public void setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
+		this.attachedMessage = attachedMessage;
 	}
 }

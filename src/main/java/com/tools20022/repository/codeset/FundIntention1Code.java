@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundIntention1Code#Qualified
- * FundIntention1Code.Qualified}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundIntention1Code#mmQualified
+ * FundIntention1Code.mmQualified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundIntention1Code#NotQualified
- * FundIntention1Code.NotQualified}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundIntention1Code#mmNotQualified
+ * FundIntention1Code.mmNotQualified}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class FundIntention1Code extends FundIntentionCode {
 	 * name} = "Qualified"</li>
 	 * </ul>
 	 */
-	public static final MMCode Qualified = new MMCode() {
+	public static final MMCode mmQualified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualified";
@@ -98,7 +98,7 @@ public class FundIntention1Code extends FundIntentionCode {
 	 * name} = "NotQualified"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotQualified = new MMCode() {
+	public static final MMCode mmNotQualified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotQualified";
@@ -109,11 +109,11 @@ public class FundIntention1Code extends FundIntentionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundIntention1Code";
 				definition = "Specifies if the fund is intended for qualified investors.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundIntention1Code.Qualified, com.tools20022.repository.codeset.FundIntention1Code.NotQualified);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundIntention1Code.mmQualified, com.tools20022.repository.codeset.FundIntention1Code.mmNotQualified);
 				trace_lazy = () -> FundIntentionCode.mmObject();
 			}
 		});

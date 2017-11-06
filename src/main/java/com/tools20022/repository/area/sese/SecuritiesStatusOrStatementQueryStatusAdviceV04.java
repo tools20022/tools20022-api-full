@@ -31,6 +31,7 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestvers
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -78,30 +79,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#QueryDetails
- * SecuritiesStatusOrStatementQueryStatusAdviceV04.QueryDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#mmQueryDetails
+ * SecuritiesStatusOrStatementQueryStatusAdviceV04.mmQueryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#AccountOwner
- * SecuritiesStatusOrStatementQueryStatusAdviceV04.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#mmAccountOwner
+ * SecuritiesStatusOrStatementQueryStatusAdviceV04.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#SafekeepingAccount
- * SecuritiesStatusOrStatementQueryStatusAdviceV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#mmSafekeepingAccount
+ * SecuritiesStatusOrStatementQueryStatusAdviceV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#StatusOrStatementRequested
- * SecuritiesStatusOrStatementQueryStatusAdviceV04.StatusOrStatementRequested}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#mmStatusOrStatementRequested
+ * SecuritiesStatusOrStatementQueryStatusAdviceV04.mmStatusOrStatementRequested}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#ProcessingStatus
- * SecuritiesStatusOrStatementQueryStatusAdviceV04.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#mmProcessingStatus
+ * SecuritiesStatusOrStatementQueryStatusAdviceV04.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#SupplementaryData
- * SecuritiesStatusOrStatementQueryStatusAdviceV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#mmSupplementaryData
+ * SecuritiesStatusOrStatementQueryStatusAdviceV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#identifier
- * SecuritiesStatusOrStatementQueryStatusAdviceV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.022.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,6 +121,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesStatusOrStatementQueryStatusAdviceV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification30 queryDetails;
 	/**
 	 * Unambiguous identification of the query as per the account owner.
 	 * <p>
@@ -146,22 +147,23 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#QueryDetails
-	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.QueryDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#mmQueryDetails
+	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.mmQueryDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock QueryDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmQueryDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "QryDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryDetails";
 			definition = "Unambiguous identification of the query as per the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.QueryDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.mmQueryDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification30.mmObject();
 		}
 	};
+	protected PartyIdentification98 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -186,22 +188,23 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#AccountOwner
-	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#mmAccountOwner
+	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.AccountOwner;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.mmAccountOwner;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification98.mmObject();
 		}
 	};
+	protected SecuritiesAccount19 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -226,22 +229,23 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#SafekeepingAccount
-	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#mmSafekeepingAccount
+	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.SafekeepingAccount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.mmSafekeepingAccount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
 	};
+	protected StatusOrStatement7Choice statusOrStatementRequested;
 	/**
 	 * Details of the request.
 	 * <p>
@@ -266,23 +270,24 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#StatusOrStatementRequested
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#mmStatusOrStatementRequested
 	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.
-	 * StatusOrStatementRequested}</li>
+	 * mmStatusOrStatementRequested}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusOrStatementRequested = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusOrStatementRequested = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsOrStmtReqd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOrStatementRequested";
 			definition = "Details of the request.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.StatusOrStatementRequested;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.mmStatusOrStatementRequested;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatusOrStatement7Choice.mmObject();
 		}
 	};
+	protected ProcessingStatus55Choice processingStatus;
 	/**
 	 * Provides details on the processing status of the request.
 	 * <p>
@@ -308,22 +313,23 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#ProcessingStatus
-	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#mmProcessingStatus
+	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the request.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.ProcessingStatus;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.mmProcessingStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProcessingStatus55Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -351,46 +357,19 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#SupplementaryData
-	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03#mmSupplementaryData
+	 * SecuritiesStatusOrStatementQueryStatusAdviceV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "022"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "022";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -405,13 +384,68 @@ public class SecuritiesStatusOrStatementQueryStatusAdviceV04 {
 				rootElement = "Document";
 				xmlTag = "SctiesStsOrStmtQryStsAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.QueryDetails,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.AccountOwner, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.StatusOrStatementRequested, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.ProcessingStatus,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.mmQueryDetails,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.mmStatusOrStatementRequested,
+						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.mmProcessingStatus, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "022";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification30 getQueryDetails() {
+		return queryDetails;
+	}
+
+	public void setQueryDetails(DocumentIdentification30 queryDetails) {
+		this.queryDetails = queryDetails;
+	}
+
+	public PartyIdentification98 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification98 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount19 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount19 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public StatusOrStatement7Choice getStatusOrStatementRequested() {
+		return statusOrStatementRequested;
+	}
+
+	public void setStatusOrStatementRequested(StatusOrStatement7Choice statusOrStatementRequested) {
+		this.statusOrStatementRequested = statusOrStatementRequested;
+	}
+
+	public ProcessingStatus55Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatus55Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

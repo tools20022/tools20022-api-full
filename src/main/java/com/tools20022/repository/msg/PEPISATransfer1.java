@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Describes the type of account and the assets to be transferred.
@@ -35,8 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#PepOrIsaRule
- * PEPISATransfer1.PepOrIsaRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#mmPepOrIsaRule
+ * PEPISATransfer1.mmPepOrIsaRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,14 +45,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISATransfer1#TransferIdentification
- * PEPISATransfer1.TransferIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#ISA
- * PEPISATransfer1.ISA}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#PEP
- * PEPISATransfer1.PEP}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#Assets
- * PEPISATransfer1.Assets}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISATransfer1#mmTransferIdentification
+ * PEPISATransfer1.mmTransferIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#mmISA
+ * PEPISATransfer1.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#mmPEP
+ * PEPISATransfer1.mmPEP}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#mmAssets
+ * PEPISATransfer1.mmAssets}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PEPISATransfer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transferIdentification;
 	/**
 	 * Identification assigned by the new plan manager to each transfer of
 	 * asset.
@@ -106,7 +108,7 @@ public class PEPISATransfer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PEPISATransfer1.mmObject();
 			isDerived = false;
@@ -114,11 +116,12 @@ public class PEPISATransfer1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIdentification";
 			definition = "Identification assigned by the new plan manager to each transfer of asset. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISAYearsOfIssue iSA;
 	/**
 	 * UK government schemes to encourage individuals to invest in securities
 	 * based unit and investment trusts, offering certain tax benefits. These
@@ -158,21 +161,22 @@ public class PEPISATransfer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ISA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmISA = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPISATransfer1.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> PEPISATransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "ISA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISA";
 			definition = "UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. \nThe Personal Equity Plan (PEP) and the Individual Savings Account (ISA) are provided only by UK based financial institutions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ISAYearsOfIssue.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue.mmObject();
 		}
 	};
+	protected PreviousYearChoice pEP;
 	/**
 	 * UK government schemes to encourage individuals to invest in securities
 	 * based unit and investment trusts, offering certain tax benefits. These
@@ -212,21 +216,22 @@ public class PEPISATransfer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PEP = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPEP = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPISATransfer1.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> PEPISATransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "PEP";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEP";
 			definition = "UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. \nThe Personal Equity Plan (PEP) and the Individual Savings Account (ISA) are provided only by UK based financial institutions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PreviousYearChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PreviousYearChoice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrument7> assets;
 	/**
 	 * Specifies the underlying assets for the PEP or ISA.
 	 * <p>
@@ -258,18 +263,18 @@ public class PEPISATransfer1 {
 	 * definition} = "Specifies the underlying assets for the PEP or ISA."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Assets = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssets = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPISATransfer1.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
+			componentContext_lazy = () -> PEPISATransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "Assts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assets";
 			definition = "Specifies the underlying assets for the PEP or ISA.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrument7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument7.mmObject();
 		}
 	};
 	/**
@@ -280,10 +285,10 @@ public class PEPISATransfer1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#ISA
-	 * PEPISATransfer1.ISA}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#PEP
-	 * PEPISATransfer1.PEP}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#mmISA
+	 * PEPISATransfer1.mmISA}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer1#mmPEP
+	 * PEPISATransfer1.mmPEP}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -298,28 +303,60 @@ public class PEPISATransfer1 {
 	 * name} = "PepOrIsaRule"</li>
 	 * </ul>
 	 */
-	public static final MMXor PepOrIsaRule = new MMXor() {
+	public static final MMXor mmPepOrIsaRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PepOrIsaRule";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer1.ISA, com.tools20022.repository.msg.PEPISATransfer1.PEP);
 			messageComponent_lazy = () -> PEPISATransfer1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer1.mmISA, com.tools20022.repository.msg.PEPISATransfer1.mmPEP);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer1.TransferIdentification, com.tools20022.repository.msg.PEPISATransfer1.ISA, com.tools20022.repository.msg.PEPISATransfer1.PEP,
-						com.tools20022.repository.msg.PEPISATransfer1.Assets);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer1.mmTransferIdentification, com.tools20022.repository.msg.PEPISATransfer1.mmISA, com.tools20022.repository.msg.PEPISATransfer1.mmPEP,
+						com.tools20022.repository.msg.PEPISATransfer1.mmAssets);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PEPISATransfer1";
 				definition = "Describes the type of account and the assets to be transferred.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer1.PepOrIsaRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer1.mmPepOrIsaRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransferIdentification() {
+		return transferIdentification;
+	}
+
+	public void setTransferIdentification(Max35Text transferIdentification) {
+		this.transferIdentification = transferIdentification;
+	}
+
+	public ISAYearsOfIssue getISA() {
+		return iSA;
+	}
+
+	public void setISA(com.tools20022.repository.msg.ISAYearsOfIssue iSA) {
+		this.iSA = iSA;
+	}
+
+	public PreviousYearChoice getPEP() {
+		return pEP;
+	}
+
+	public void setPEP(PreviousYearChoice pEP) {
+		this.pEP = pEP;
+	}
+
+	public List<FinancialInstrument7> getAssets() {
+		return assets;
+	}
+
+	public void setAssets(List<com.tools20022.repository.msg.FinancialInstrument7> assets) {
+		this.assets = assets;
 	}
 }

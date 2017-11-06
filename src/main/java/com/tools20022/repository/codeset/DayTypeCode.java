@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DayTypeCode#ElapsedCalendarDays
- * DayTypeCode.ElapsedCalendarDays}</li>
+ * {@linkplain com.tools20022.repository.codeset.DayTypeCode#mmElapsedCalendarDays
+ * DayTypeCode.mmElapsedCalendarDays}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DayTypeCode#ElapsedBusinessDays
- * DayTypeCode.ElapsedBusinessDays}</li>
+ * {@linkplain com.tools20022.repository.codeset.DayTypeCode#mmElapsedBusinessDays
+ * DayTypeCode.mmElapsedBusinessDays}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class DayTypeCode {
 	 * definition} = "Elapsed calendar days."</li>
 	 * </ul>
 	 */
-	public static final MMCode ElapsedCalendarDays = new MMCode() {
+	public static final MMCode mmElapsedCalendarDays = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ElapsedCalendarDays";
@@ -116,7 +116,7 @@ public class DayTypeCode {
 	 * definition} = "Elapsed business days."</li>
 	 * </ul>
 	 */
-	public static final MMCode ElapsedBusinessDays = new MMCode() {
+	public static final MMCode mmElapsedBusinessDays = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ElapsedBusinessDays";
@@ -129,12 +129,12 @@ public class DayTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DayTypeCode";
 				definition = "Specifies the type of day.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DayTypeCode.ElapsedCalendarDays, com.tools20022.repository.codeset.DayTypeCode.ElapsedBusinessDays);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DayTypeCode.mmElapsedCalendarDays, com.tools20022.repository.codeset.DayTypeCode.mmElapsedBusinessDays);
 				derivation_lazy = () -> Arrays.asList(DayType1Code.mmObject());
 			}
 		});

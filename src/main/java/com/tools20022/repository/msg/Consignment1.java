@@ -32,12 +32,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Consignment1#TotalQuantity
- * Consignment1.TotalQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Consignment1#TotalVolume
- * Consignment1.TotalVolume}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Consignment1#TotalWeight
- * Consignment1.TotalWeight}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment1#mmTotalQuantity
+ * Consignment1.mmTotalQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment1#mmTotalVolume
+ * Consignment1.mmTotalVolume}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment1#mmTotalWeight
+ * Consignment1.mmTotalWeight}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Consignment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Quantity3 totalQuantity;
 	/**
 	 * Total quantity of packaging units, eg number of boxes, containers,
 	 * pallets, etc
@@ -79,8 +80,8 @@ public class Consignment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Packaging#TotalConsignmentQuantity
-	 * Packaging.TotalConsignmentQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Packaging#mmTotalConsignmentQuantity
+	 * Packaging.mmTotalConsignmentQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,27 +102,29 @@ public class Consignment1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Consignment3#TotalQuantity
-	 * Consignment3.TotalQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Consignment3#mmTotalQuantity
+	 * Consignment3.mmTotalQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.mmTotalConsignmentQuantity;
 			componentContext_lazy = () -> Consignment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.TotalConsignmentQuantity;
 			isDerived = false;
 			xmlTag = "TtlQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalQuantity";
 			definition = "Total quantity of packaging units, eg number of boxes, containers, pallets, etc";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment3.TotalQuantity);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment3.mmTotalQuantity);
 			maxOccurs = 1;
-			complexType_lazy = () -> Quantity3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
 		}
 	};
+	protected Quantity3 totalVolume;
 	/**
 	 * Total volume of goods shipped, eg number of cubic meters.
 	 * <p>
@@ -134,8 +137,8 @@ public class Consignment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Packaging#TotalVolume
-	 * Packaging.TotalVolume}</li>
+	 * {@linkplain com.tools20022.repository.entity.Packaging#mmTotalVolume
+	 * Packaging.mmTotalVolume}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,27 +158,28 @@ public class Consignment1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Consignment3#TotalVolume
-	 * Consignment3.TotalVolume}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Consignment3#mmTotalVolume
+	 * Consignment3.mmTotalVolume}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalVolume = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalVolume = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.mmTotalVolume;
 			componentContext_lazy = () -> Consignment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.TotalVolume;
 			isDerived = false;
 			xmlTag = "TtlVol";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalVolume";
 			definition = "Total volume of goods shipped, eg number of cubic meters.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment3.TotalVolume);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment3.mmTotalVolume);
 			maxOccurs = 1;
-			complexType_lazy = () -> Quantity3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
 		}
 	};
+	protected Quantity3 totalWeight;
 	/**
 	 * Total weight of goods shipped, eg number of kg, tons.
 	 * <p>
@@ -188,8 +192,8 @@ public class Consignment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Packaging#TotalWeight
-	 * Packaging.TotalWeight}</li>
+	 * {@linkplain com.tools20022.repository.entity.Packaging#mmTotalWeight
+	 * Packaging.mmTotalWeight}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -208,34 +212,34 @@ public class Consignment1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Consignment3#TotalWeight
-	 * Consignment3.TotalWeight}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Consignment3#mmTotalWeight
+	 * Consignment3.mmTotalWeight}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalWeight = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalWeight = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.mmTotalWeight;
 			componentContext_lazy = () -> Consignment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.TotalWeight;
 			isDerived = false;
 			xmlTag = "TtlWght";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalWeight";
 			definition = "Total weight of goods shipped, eg number of kg, tons.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment3.TotalWeight);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment3.mmTotalWeight);
 			maxOccurs = 1;
-			complexType_lazy = () -> Quantity3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment1.TotalQuantity, com.tools20022.repository.msg.Consignment1.TotalVolume, com.tools20022.repository.msg.Consignment1.TotalWeight);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment1.mmTotalQuantity, com.tools20022.repository.msg.Consignment1.mmTotalVolume, com.tools20022.repository.msg.Consignment1.mmTotalWeight);
 				trace_lazy = () -> Packaging.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Consignment1";
 				definition = "Physical packaging of goods for transport.";
@@ -243,5 +247,29 @@ public class Consignment1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Quantity3 getTotalQuantity() {
+		return totalQuantity;
+	}
+
+	public void setTotalQuantity(com.tools20022.repository.msg.Quantity3 totalQuantity) {
+		this.totalQuantity = totalQuantity;
+	}
+
+	public Quantity3 getTotalVolume() {
+		return totalVolume;
+	}
+
+	public void setTotalVolume(com.tools20022.repository.msg.Quantity3 totalVolume) {
+		this.totalVolume = totalVolume;
+	}
+
+	public Quantity3 getTotalWeight() {
+		return totalWeight;
+	}
+
+	public void setTotalWeight(com.tools20022.repository.msg.Quantity3 totalWeight) {
+		this.totalWeight = totalWeight;
 	}
 }

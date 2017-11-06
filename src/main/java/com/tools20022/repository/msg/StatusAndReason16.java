@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.Status9Choice;
 import com.tools20022.repository.entity.Status;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status and reason of an instructed order.
@@ -34,10 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason16#StatusAndReason
- * StatusAndReason16.StatusAndReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusAndReason16#Transaction
- * StatusAndReason16.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason16#mmStatusAndReason
+ * StatusAndReason16.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason16#mmTransaction
+ * StatusAndReason16.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04#Status
- * SecuritiesTransactionPendingReportV04.Status}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04#mmStatus
+ * SecuritiesTransactionPendingReportV04.mmStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusAndReason16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status9Choice statusAndReason;
 	/**
 	 * Status and reason for the transaction.
 	 * <p>
@@ -111,28 +114,29 @@ public class StatusAndReason16 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason18#StatusAndReason
-	 * StatusAndReason18.StatusAndReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason18#mmStatusAndReason
+	 * StatusAndReason18.mmStatusAndReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusAndReason16.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> StatusAndReason16.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and reason for the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason18.StatusAndReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason18.mmStatusAndReason);
 			maxOccurs = 1;
-			type_lazy = () -> Status9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Status9Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Transaction28> transaction;
 	/**
 	 * Details of the transactions reported.
 	 * <p>
@@ -161,13 +165,13 @@ public class StatusAndReason16 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatusAndReason18#Transaction
-	 * StatusAndReason18.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason18#mmTransaction
+	 * StatusAndReason18.mmTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusAndReason16.mmObject();
 			isDerived = false;
@@ -175,27 +179,43 @@ public class StatusAndReason16 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Details of the transactions reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason18.Transaction);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason18.mmTransaction);
 			minOccurs = 0;
-			type_lazy = () -> Transaction28.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Transaction28.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason16.StatusAndReason, com.tools20022.repository.msg.StatusAndReason16.Transaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason16.mmStatusAndReason, com.tools20022.repository.msg.StatusAndReason16.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04.mmStatus);
 				trace_lazy = () -> Status.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04.Status);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason16";
 				definition = "Status and reason of an instructed order.";
-				previousVersion_lazy = () -> StatusAndReason9.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(StatusAndReason18.mmObject());
+				previousVersion_lazy = () -> StatusAndReason9.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status9Choice getStatusAndReason() {
+		return statusAndReason;
+	}
+
+	public void setStatusAndReason(Status9Choice statusAndReason) {
+		this.statusAndReason = statusAndReason;
+	}
+
+	public List<Transaction28> getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(List<com.tools20022.repository.msg.Transaction28> transaction) {
+		this.transaction = transaction;
 	}
 }

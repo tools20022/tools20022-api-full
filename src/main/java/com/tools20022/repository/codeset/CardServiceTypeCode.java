@@ -30,36 +30,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#CheckPoint
- * CardServiceTypeCode.CheckPoint}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#Final
- * CardServiceTypeCode.Final}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmCheckPoint
+ * CardServiceTypeCode.mmCheckPoint}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#TotalInquiry
- * CardServiceTypeCode.TotalInquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmFinal
+ * CardServiceTypeCode.mmFinal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#DisableStoreForward
- * CardServiceTypeCode.DisableStoreForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmTotalInquiry
+ * CardServiceTypeCode.mmTotalInquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#EchoTest
- * CardServiceTypeCode.EchoTest}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmDisableStoreForward
+ * CardServiceTypeCode.mmDisableStoreForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#EnableStoreForward
- * CardServiceTypeCode.EnableStoreForward}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#SignOn
- * CardServiceTypeCode.SignOn}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmEchoTest
+ * CardServiceTypeCode.mmEchoTest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#SignOff
- * CardServiceTypeCode.SignOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmEnableStoreForward
+ * CardServiceTypeCode.mmEnableStoreForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#KeyChange
- * CardServiceTypeCode.KeyChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmSignOn
+ * CardServiceTypeCode.mmSignOn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#DeliverKey
- * CardServiceTypeCode.DeliverKey}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmSignOff
+ * CardServiceTypeCode.mmSignOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#KeyVerification
- * CardServiceTypeCode.KeyVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmKeyChange
+ * CardServiceTypeCode.mmKeyChange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmDeliverKey
+ * CardServiceTypeCode.mmDeliverKey}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmKeyVerification
+ * CardServiceTypeCode.mmKeyVerification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -76,8 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,7 +114,7 @@ public class CardServiceTypeCode {
 	 * definition} = "Partial reconciliation of the day."</li>
 	 * </ul>
 	 */
-	public static final MMCode CheckPoint = new MMCode() {
+	public static final MMCode mmCheckPoint = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckPoint";
@@ -142,7 +144,7 @@ public class CardServiceTypeCode {
 	 * definition} = "Final reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
@@ -172,7 +174,7 @@ public class CardServiceTypeCode {
 	 * definition} = "Request for totals of a previous reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalInquiry = new MMCode() {
+	public static final MMCode mmTotalInquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInquiry";
@@ -205,7 +207,7 @@ public class CardServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DisableStoreForward = new MMCode() {
+	public static final MMCode mmDisableStoreForward = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisableStoreForward";
@@ -236,7 +238,7 @@ public class CardServiceTypeCode {
 	 * "Detection whether communication at application level is still active."</li>
 	 * </ul>
 	 */
-	public static final MMCode EchoTest = new MMCode() {
+	public static final MMCode mmEchoTest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EchoTest";
@@ -269,7 +271,7 @@ public class CardServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode EnableStoreForward = new MMCode() {
+	public static final MMCode mmEnableStoreForward = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnableStoreForward";
@@ -299,7 +301,7 @@ public class CardServiceTypeCode {
 	 * definition} = "Establish communication at application level."</li>
 	 * </ul>
 	 */
-	public static final MMCode SignOn = new MMCode() {
+	public static final MMCode mmSignOn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignOn";
@@ -329,7 +331,7 @@ public class CardServiceTypeCode {
 	 * definition} = "Terminate communication at application level."</li>
 	 * </ul>
 	 */
-	public static final MMCode SignOff = new MMCode() {
+	public static final MMCode mmSignOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignOff";
@@ -360,7 +362,7 @@ public class CardServiceTypeCode {
 	 * "Request the keys that the receiver must send in the response."</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyChange = new MMCode() {
+	public static final MMCode mmKeyChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyChange";
@@ -390,7 +392,7 @@ public class CardServiceTypeCode {
 	 * definition} = "Deliver the key to be change by the receiver."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliverKey = new MMCode() {
+	public static final MMCode mmDeliverKey = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverKey";
@@ -420,7 +422,7 @@ public class CardServiceTypeCode {
 	 * definition} = "Request the receiver to verify the key check value."</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyVerification = new MMCode() {
+	public static final MMCode mmKeyVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyVerification";
@@ -433,14 +435,14 @@ public class CardServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardServiceTypeCode";
 				definition = "Type of administrative service.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceTypeCode.CheckPoint, com.tools20022.repository.codeset.CardServiceTypeCode.Final,
-						com.tools20022.repository.codeset.CardServiceTypeCode.TotalInquiry, com.tools20022.repository.codeset.CardServiceTypeCode.DisableStoreForward, com.tools20022.repository.codeset.CardServiceTypeCode.EchoTest,
-						com.tools20022.repository.codeset.CardServiceTypeCode.EnableStoreForward, com.tools20022.repository.codeset.CardServiceTypeCode.SignOn, com.tools20022.repository.codeset.CardServiceTypeCode.SignOff,
-						com.tools20022.repository.codeset.CardServiceTypeCode.KeyChange, com.tools20022.repository.codeset.CardServiceTypeCode.DeliverKey, com.tools20022.repository.codeset.CardServiceTypeCode.KeyVerification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceTypeCode.mmCheckPoint, com.tools20022.repository.codeset.CardServiceTypeCode.mmFinal,
+						com.tools20022.repository.codeset.CardServiceTypeCode.mmTotalInquiry, com.tools20022.repository.codeset.CardServiceTypeCode.mmDisableStoreForward, com.tools20022.repository.codeset.CardServiceTypeCode.mmEchoTest,
+						com.tools20022.repository.codeset.CardServiceTypeCode.mmEnableStoreForward, com.tools20022.repository.codeset.CardServiceTypeCode.mmSignOn, com.tools20022.repository.codeset.CardServiceTypeCode.mmSignOff,
+						com.tools20022.repository.codeset.CardServiceTypeCode.mmKeyChange, com.tools20022.repository.codeset.CardServiceTypeCode.mmDeliverKey, com.tools20022.repository.codeset.CardServiceTypeCode.mmKeyVerification);
 				derivation_lazy = () -> Arrays.asList(CardServiceType2Code.mmObject(), CardServiceType1Code.mmObject(), CardServiceType3Code.mmObject());
 			}
 		});

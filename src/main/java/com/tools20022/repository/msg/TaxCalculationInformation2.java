@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation2#EUCapitalGain
- * TaxCalculationInformation2.EUCapitalGain}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation2#mmEUCapitalGain
+ * TaxCalculationInformation2.mmEUCapitalGain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation2#PercentageOfDebtClaim
- * TaxCalculationInformation2.PercentageOfDebtClaim}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation2#mmPercentageOfDebtClaim
+ * TaxCalculationInformation2.mmPercentageOfDebtClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation2#PercentageGrandfatheredDebt
- * TaxCalculationInformation2.PercentageGrandfatheredDebt}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation2#mmPercentageGrandfatheredDebt
+ * TaxCalculationInformation2.mmPercentageGrandfatheredDebt}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxCalculationInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EUCapitalGain1 eUCapitalGain;
 	/**
 	 * Specifies whether capital gain is in the scope of the European directive
 	 * on taxation of savings income in the form of interest payments (Council
@@ -80,8 +81,8 @@ public class TaxCalculationInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#EUCapitalGain
-	 * SecuritiesTax.EUCapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
+	 * SecuritiesTax.mmEUCapitalGain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class TaxCalculationInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EUCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> TaxCalculationInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.EUCapitalGain;
 			isDerived = false;
 			xmlTag = "EUCptlGn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUCapitalGain";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> EUCapitalGain1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.EUCapitalGain1.mmObject();
 		}
 	};
+	protected PercentageRate percentageOfDebtClaim;
 	/**
 	 * Percentage of the underlying assets of the funds that represents a debt
 	 * and is in the scope of the European directive on taxation of savings
@@ -132,8 +134,8 @@ public class TaxCalculationInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#PercentageOfDebtClaim
-	 * InvestmentFundTax.PercentageOfDebtClaim}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmPercentageOfDebtClaim
+	 * InvestmentFundTax.mmPercentageOfDebtClaim}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +156,21 @@ public class TaxCalculationInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentageOfDebtClaim = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmPercentageOfDebtClaim;
 			componentContext_lazy = () -> TaxCalculationInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.PercentageOfDebtClaim;
 			isDerived = false;
 			xmlTag = "PctgOfDebtClm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfDebtClaim";
 			definition = "Percentage of the underlying assets of the funds that represents a debt and is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate percentageGrandfatheredDebt;
 	/**
 	 * Percentage of grandfathered debt claim.
 	 * <p>
@@ -181,8 +184,8 @@ public class TaxCalculationInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#PercentageGrandfatheredDebt
-	 * InvestmentFundTax.PercentageGrandfatheredDebt}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmPercentageGrandfatheredDebt
+	 * InvestmentFundTax.mmPercentageGrandfatheredDebt}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,17 +204,17 @@ public class TaxCalculationInformation2 {
 	 * definition} = "Percentage of grandfathered debt claim."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentageGrandfatheredDebt = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentageGrandfatheredDebt = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmPercentageGrandfatheredDebt;
 			componentContext_lazy = () -> TaxCalculationInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.PercentageGrandfatheredDebt;
 			isDerived = false;
 			xmlTag = "PctgGrdfthdDebt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageGrandfatheredDebt";
 			definition = "Percentage of grandfathered debt claim.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -219,15 +222,39 @@ public class TaxCalculationInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation2.EUCapitalGain, com.tools20022.repository.msg.TaxCalculationInformation2.PercentageOfDebtClaim,
-						com.tools20022.repository.msg.TaxCalculationInformation2.PercentageGrandfatheredDebt);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation2.mmEUCapitalGain, com.tools20022.repository.msg.TaxCalculationInformation2.mmPercentageOfDebtClaim,
+						com.tools20022.repository.msg.TaxCalculationInformation2.mmPercentageGrandfatheredDebt);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxCalculationInformation2";
 				definition = "Information used to calculate the tax.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EUCapitalGain1 getEUCapitalGain() {
+		return eUCapitalGain;
+	}
+
+	public void setEUCapitalGain(com.tools20022.repository.msg.EUCapitalGain1 eUCapitalGain) {
+		this.eUCapitalGain = eUCapitalGain;
+	}
+
+	public PercentageRate getPercentageOfDebtClaim() {
+		return percentageOfDebtClaim;
+	}
+
+	public void setPercentageOfDebtClaim(PercentageRate percentageOfDebtClaim) {
+		this.percentageOfDebtClaim = percentageOfDebtClaim;
+	}
+
+	public PercentageRate getPercentageGrandfatheredDebt() {
+		return percentageGrandfatheredDebt;
+	}
+
+	public void setPercentageGrandfatheredDebt(PercentageRate percentageGrandfatheredDebt) {
+		this.percentageGrandfatheredDebt = percentageGrandfatheredDebt;
 	}
 }

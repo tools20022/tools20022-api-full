@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1#Type
- * CorporateActionPreliminaryAdviceType1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1#mmType
+ * CorporateActionPreliminaryAdviceType1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1#ProcessingStatus
- * CorporateActionPreliminaryAdviceType1.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1#mmProcessingStatus
+ * CorporateActionPreliminaryAdviceType1.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1#EligibilityIndicator
- * CorporateActionPreliminaryAdviceType1.EligibilityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1#mmEligibilityIndicator
+ * CorporateActionPreliminaryAdviceType1.mmEligibilityIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,28 +56,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#MovementPreliminaryAdviceGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01#mmMovementPreliminaryAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdviceV01.
- * MovementPreliminaryAdviceGeneralInformation}</li>
+ * mmMovementPreliminaryAdviceGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02#MovementPreliminaryAdviceGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02#mmMovementPreliminaryAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdviceV02.
- * MovementPreliminaryAdviceGeneralInformation}</li>
+ * mmMovementPreliminaryAdviceGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03#MovementPreliminaryAdviceGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03#mmMovementPreliminaryAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdviceV03.
- * MovementPreliminaryAdviceGeneralInformation}</li>
+ * mmMovementPreliminaryAdviceGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04#MovementPreliminaryAdviceGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04#mmMovementPreliminaryAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdviceV04.
- * MovementPreliminaryAdviceGeneralInformation}</li>
+ * mmMovementPreliminaryAdviceGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPreliminaryAdviceType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionPreliminaryAdviceType1Code type;
 	/**
 	 * Type of movement preliminary advice ie. new or replacement.
 	 * <p>
@@ -112,8 +113,8 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionNotification#NotificationType
-	 * CorporateActionNotification.NotificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionNotification#mmNotificationType
+	 * CorporateActionNotification.mmNotificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,27 +136,28 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2#Type
-	 * CorporateActionPreliminaryAdviceType2.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2#mmType
+	 * CorporateActionPreliminaryAdviceType2.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmNotificationType;
 			componentContext_lazy = () -> CorporateActionPreliminaryAdviceType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.NotificationType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of movement preliminary advice ie. new or replacement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionPreliminaryAdviceType1Code.mmObject();
 		}
 	};
+	protected CorporateActionProcessingStatus1Choice processingStatus;
 	/**
 	 * Specifies the status of the details of the event.
 	 * <p>
@@ -168,8 +170,8 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#ProcessingStatus
-	 * CorporateActionStatus.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmProcessingStatus
+	 * CorporateActionStatus.mmProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,21 +190,22 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> CorporateActionPreliminaryAdviceType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.ProcessingStatus;
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Specifies the status of the details of the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator eligibilityIndicator;
 	/**
 	 * Indicates whether the movement preliminary advice is sent after
 	 * entitlement date.<br>
@@ -238,13 +241,13 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2#EligibilityIndicator
-	 * CorporateActionPreliminaryAdviceType2.EligibilityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2#mmEligibilityIndicator
+	 * CorporateActionPreliminaryAdviceType2.mmEligibilityIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EligibilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEligibilityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionPreliminaryAdviceType1.mmObject();
 			isDerived = false;
@@ -252,9 +255,9 @@ public class CorporateActionPreliminaryAdviceType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibilityIndicator";
 			definition = "Indicates whether the movement preliminary advice is sent after entitlement date.\r\nValue is Yes (true) if sent after entitlement date and No (false) if sent before entitlement date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2.EligibilityIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2.mmEligibilityIndicator);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -262,14 +265,14 @@ public class CorporateActionPreliminaryAdviceType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.Type, com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.ProcessingStatus,
-						com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.EligibilityIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmType, com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmProcessingStatus,
+						com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmEligibilityIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmMovementPreliminaryAdviceGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02.mmMovementPreliminaryAdviceGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmMovementPreliminaryAdviceGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.mmMovementPreliminaryAdviceGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.MovementPreliminaryAdviceGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02.MovementPreliminaryAdviceGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.MovementPreliminaryAdviceGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.MovementPreliminaryAdviceGeneralInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPreliminaryAdviceType1";
 				definition = "Type of movement preliminary advice document.";
@@ -277,5 +280,29 @@ public class CorporateActionPreliminaryAdviceType1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionPreliminaryAdviceType1Code getType() {
+		return type;
+	}
+
+	public void setType(CorporateActionPreliminaryAdviceType1Code type) {
+		this.type = type;
+	}
+
+	public CorporateActionProcessingStatus1Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(CorporateActionProcessingStatus1Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public YesNoIndicator getEligibilityIndicator() {
+		return eligibilityIndicator;
+	}
+
+	public void setEligibilityIndicator(YesNoIndicator eligibilityIndicator) {
+		this.eligibilityIndicator = eligibilityIndicator;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -81,18 +82,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.FundProcessingPassportReportV02#MessageIdentification
- * FundProcessingPassportReportV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.FundProcessingPassportReportV02#mmMessageIdentification
+ * FundProcessingPassportReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.FundProcessingPassportReportV02#FundProcessingPassport
- * FundProcessingPassportReportV02.FundProcessingPassport}</li>
+ * {@linkplain com.tools20022.repository.area.reda.FundProcessingPassportReportV02#mmFundProcessingPassport
+ * FundProcessingPassportReportV02.mmFundProcessingPassport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.reda.FundProcessingPassportReportV02#identifier
- * FundProcessingPassportReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code reda.004.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundProcessingPassportReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -134,17 +134,18 @@ public class FundProcessingPassportReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<FundProcessingPassport1> fundProcessingPassport;
 	/**
 	 * Fund Processing Passsport (FPP) is a fully harmonised document with all
 	 * key operational information that fund promoters<br>
@@ -173,7 +174,7 @@ public class FundProcessingPassportReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FundProcessingPassport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFundProcessingPassport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FPP";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,33 +182,6 @@ public class FundProcessingPassportReportV02 {
 			definition = "    Fund Processing Passsport (FPP) is a fully harmonised document with all key operational information that fund promoters\r\n    should provide on their investment funds in order to facilitate their trading. ";
 			minOccurs = 1;
 			complexType_lazy = () -> FundProcessingPassport1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "reda"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "reda";
-			messageFunctionality = "004";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -221,11 +195,34 @@ public class FundProcessingPassportReportV02 {
 				rootElement = "Document";
 				xmlTag = "FndPrcgPsptRpt";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.FundProcessingPassportReportV02.MessageIdentification,
-						com.tools20022.repository.area.reda.FundProcessingPassportReportV02.FundProcessingPassport);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.reda.FundProcessingPassportReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.FundProcessingPassportReportV02.mmMessageIdentification,
+						com.tools20022.repository.area.reda.FundProcessingPassportReportV02.mmFundProcessingPassport);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "reda";
+						messageFunctionality = "004";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public List<FundProcessingPassport1> getFundProcessingPassport() {
+		return fundProcessingPassport;
+	}
+
+	public void setFundProcessingPassport(List<FundProcessingPassport1> fundProcessingPassport) {
+		this.fundProcessingPassport = fundProcessingPassport;
 	}
 }

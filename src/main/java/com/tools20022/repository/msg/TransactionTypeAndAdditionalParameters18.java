@@ -39,17 +39,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18#SecuritiesFinancingTransactionType
- * TransactionTypeAndAdditionalParameters18.SecuritiesFinancingTransactionType}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18#mmSecuritiesFinancingTransactionType
+ * TransactionTypeAndAdditionalParameters18.mmSecuritiesFinancingTransactionType
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18#Payment
- * TransactionTypeAndAdditionalParameters18.Payment}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18#mmPayment
+ * TransactionTypeAndAdditionalParameters18.mmPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18#CommonIdentification
- * TransactionTypeAndAdditionalParameters18.CommonIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18#mmCommonIdentification
+ * TransactionTypeAndAdditionalParameters18.mmCommonIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18#ReconciliationIndicator
- * TransactionTypeAndAdditionalParameters18.ReconciliationIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18#mmReconciliationIndicator
+ * TransactionTypeAndAdditionalParameters18.mmReconciliationIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,15 +61,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07#TransactionTypeAndAdditionalParameters
- * SecuritiesFinancingInstruction002V07.TransactionTypeAndAdditionalParameters}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07#mmTransactionTypeAndAdditionalParameters
+ * SecuritiesFinancingInstruction002V07.mmTransactionTypeAndAdditionalParameters
+ * }</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionTypeAndAdditionalParameters18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesFinancingTransactionType2Code securitiesFinancingTransactionType;
 	/**
 	 * Specifies the type of securities financing transaction, that is,
 	 * repurchase agreement, reverse repurchase agreement, securities lending or
@@ -99,8 +102,8 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesTransactionType
-	 * SecuritiesTrade.SecuritiesTransactionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTransactionType
+	 * SecuritiesTrade.mmSecuritiesTransactionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -121,20 +124,21 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesFinancingTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesFinancingTransactionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesTransactionType;
 			isDerived = false;
 			xmlTag = "SctiesFincgTxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTransactionType";
 			definition = "Specifies the type of securities financing transaction, that is, repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesFinancingTransactionType2Code.mmObject();
 		}
 	};
+	protected DeliveryReceiptType2Code payment;
 	/**
 	 * Specifies how the transaction is to be settled, for example, against
 	 * payment.
@@ -149,8 +153,8 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementType
-	 * SecuritiesSettlement.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+	 * SecuritiesSettlement.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,20 +175,21 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Payment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementType;
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected RestrictedFINXMax16Text commonIdentification;
 	/**
 	 * Unique reference agreed upon by the two trade counterparties to identify
 	 * the trade.
@@ -199,8 +204,8 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CommonIdentification
-	 * TradeIdentification.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
+	 * TradeIdentification.mmCommonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -221,20 +226,21 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters18.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CommonIdentification;
 			isDerived = false;
 			xmlTag = "CmonId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected YesNoIndicator reconciliationIndicator;
 	/**
 	 * Settlement transaction has already been sent on the market. It is sent by
 	 * an account owner to an account servicer for reconciliation purposes.
@@ -266,7 +272,7 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters18.mmObject();
 			isDerived = false;
@@ -274,8 +280,8 @@ public class TransactionTypeAndAdditionalParameters18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIndicator";
 			definition = "Settlement transaction has already been sent on the market. It is sent by an account owner to an account servicer for reconciliation purposes.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -283,17 +289,49 @@ public class TransactionTypeAndAdditionalParameters18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.SecuritiesFinancingTransactionType,
-						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.Payment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.CommonIdentification,
-						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.ReconciliationIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmSecuritiesFinancingTransactionType,
+						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmCommonIdentification,
+						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmReconciliationIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07.mmTransactionTypeAndAdditionalParameters);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07.TransactionTypeAndAdditionalParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionTypeAndAdditionalParameters18";
 				definition = "Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing) and other parameters.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesFinancingTransactionType2Code getSecuritiesFinancingTransactionType() {
+		return securitiesFinancingTransactionType;
+	}
+
+	public void setSecuritiesFinancingTransactionType(SecuritiesFinancingTransactionType2Code securitiesFinancingTransactionType) {
+		this.securitiesFinancingTransactionType = securitiesFinancingTransactionType;
+	}
+
+	public DeliveryReceiptType2Code getPayment() {
+		return payment;
+	}
+
+	public void setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = payment;
+	}
+
+	public RestrictedFINXMax16Text getCommonIdentification() {
+		return commonIdentification;
+	}
+
+	public void setCommonIdentification(RestrictedFINXMax16Text commonIdentification) {
+		this.commonIdentification = commonIdentification;
+	}
+
+	public YesNoIndicator getReconciliationIndicator() {
+		return reconciliationIndicator;
+	}
+
+	public void setReconciliationIndicator(YesNoIndicator reconciliationIndicator) {
+		this.reconciliationIndicator = reconciliationIndicator;
 	}
 }

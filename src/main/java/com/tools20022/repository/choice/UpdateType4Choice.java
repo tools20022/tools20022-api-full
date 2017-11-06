@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.UpdateType4Choice#Code
- * UpdateType4Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UpdateType4Choice#mmCode
+ * UpdateType4Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UpdateType4Choice#Proprietary
- * UpdateType4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.UpdateType4Choice#mmProprietary
+ * UpdateType4Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdateType4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected StatementUpdateType1Code code;
 	/**
 	 * Update type expressed in coded form.
 	 * <p>
@@ -86,7 +87,7 @@ public class UpdateType4Choice {
 	 * definition} = "Update type expressed in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdateType4Choice.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class UpdateType4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Update type expressed in coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Update type expressed as a proprietary code.
 	 * <p>
@@ -127,7 +129,7 @@ public class UpdateType4Choice {
 	 * definition} = "Update type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdateType4Choice.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class UpdateType4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Update type expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class UpdateType4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType4Choice.Code, com.tools20022.repository.choice.UpdateType4Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType4Choice.mmCode, com.tools20022.repository.choice.UpdateType4Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UpdateType4Choice";
 				definition = "Choice of format for the update information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StatementUpdateType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(StatementUpdateType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

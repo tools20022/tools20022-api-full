@@ -19,6 +19,7 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.repository.entity.Portfolio;
 import com.tools20022.repository.msg.ISAYearsOfIssue4;
 import com.tools20022.repository.msg.Portfolio1;
 import java.util.Arrays;
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio1Choice#ISA
- * ISAPortfolio1Choice.ISA}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio1Choice#mmISA
+ * ISAPortfolio1Choice.mmISA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ISAPortfolio1Choice#Portfolio
- * ISAPortfolio1Choice.Portfolio}</li>
+ * {@linkplain com.tools20022.repository.choice.ISAPortfolio1Choice#mmPortfolio
+ * ISAPortfolio1Choice.mmPortfolio}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ISAPortfolio1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISAYearsOfIssue4 iSA;
 	/**
 	 * UK government schemes to encourage individuals to invest in securities
 	 * based unit and investment trusts, offering certain tax benefits. These
@@ -81,8 +83,8 @@ public class ISAPortfolio1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Portfolio#Transfer
-	 * Portfolio.Transfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Portfolio#mmTransfer
+	 * Portfolio.mmTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,21 +105,22 @@ public class ISAPortfolio1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ISA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmISA = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Portfolio.mmTransfer;
 			componentContext_lazy = () -> ISAPortfolio1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Portfolio.Transfer;
 			isDerived = false;
 			xmlTag = "ISA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISA";
 			definition = "UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. \r\nThe Individual Savings Account (ISA) is provided only by UK based financial institutions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ISAYearsOfIssue4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ISAYearsOfIssue4.mmObject();
 		}
 	};
+	protected Portfolio1 portfolio;
 	/**
 	 * Wrapper for a specific product or a specific sub-product owned by a set
 	 * of beneficial owners.
@@ -150,33 +153,49 @@ public class ISAPortfolio1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Portfolio = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPortfolio = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Portfolio.mmObject();
 			componentContext_lazy = () -> ISAPortfolio1Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
 			xmlTag = "Prtfl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Portfolio";
 			definition = "Wrapper for a specific product or a specific sub-product owned by a set of beneficial owners.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Portfolio1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Portfolio1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ISAPortfolio1Choice.ISA, com.tools20022.repository.choice.ISAPortfolio1Choice.Portfolio);
-				trace_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ISAPortfolio1Choice.mmISA, com.tools20022.repository.choice.ISAPortfolio1Choice.mmPortfolio);
+				trace_lazy = () -> Portfolio.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ISAPortfolio1Choice";
 				definition = "Choice to provide additional portfolio information or individual savings account information (UK government scheme provided by UK based financial institutions only).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISAYearsOfIssue4 getISA() {
+		return iSA;
+	}
+
+	public void setISA(ISAYearsOfIssue4 iSA) {
+		this.iSA = iSA;
+	}
+
+	public Portfolio1 getPortfolio() {
+		return portfolio;
+	}
+
+	public void setPortfolio(Portfolio1 portfolio) {
+		this.portfolio = portfolio;
 	}
 }

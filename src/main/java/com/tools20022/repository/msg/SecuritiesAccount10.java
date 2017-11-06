@@ -39,23 +39,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#CreditDebitIndicator
- * SecuritiesAccount10.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#mmCreditDebitIndicator
+ * SecuritiesAccount10.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#AccountOwnerIdentification
- * SecuritiesAccount10.AccountOwnerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#mmAccountOwnerIdentification
+ * SecuritiesAccount10.mmAccountOwnerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#AccountOwnerNationality
- * SecuritiesAccount10.AccountOwnerNationality}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#mmAccountOwnerNationality
+ * SecuritiesAccount10.mmAccountOwnerNationality}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#AccountIdentification
- * SecuritiesAccount10.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#mmAccountIdentification
+ * SecuritiesAccount10.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#BalanceType
- * SecuritiesAccount10.BalanceType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#mmBalanceType
+ * SecuritiesAccount10.mmBalanceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#SecurityHoldingForm
- * SecuritiesAccount10.SecurityHoldingForm}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccount10#mmSecurityHoldingForm
+ * SecuritiesAccount10.mmSecurityHoldingForm}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccount10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Specifies whether the value is a debit or credit.
 	 * <p>
@@ -92,8 +93,8 @@ public class SecuritiesAccount10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#CreditDebitIndicator
-	 * Balance.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmCreditDebitIndicator
+	 * Balance.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,20 +113,21 @@ public class SecuritiesAccount10 {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> SecuritiesAccount10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice accountOwnerIdentification;
 	/**
 	 * Identification of the party that owns the account.
 	 * <p>
@@ -139,8 +141,8 @@ public class SecuritiesAccount10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,20 +161,21 @@ public class SecuritiesAccount10 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the party that owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected NationalityCode accountOwnerNationality;
 	/**
 	 * Nationality of the account owner.
 	 * <p>
@@ -186,8 +189,8 @@ public class SecuritiesAccount10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#Nationality
-	 * Person.Nationality}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmNationality
+	 * Person.mmNationality}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,20 +209,21 @@ public class SecuritiesAccount10 {
 	 * definition} = "Nationality of the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerNationality = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerNationality = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmNationality;
 			componentContext_lazy = () -> SecuritiesAccount10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.Nationality;
 			isDerived = false;
 			xmlTag = "AcctOwnrNtlty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerNationality";
 			definition = "Nationality of the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NationalityCode.mmObject();
 		}
 	};
+	protected Max35Text accountIdentification;
 	/**
 	 * Idenfitication of the account.
 	 * <p>
@@ -232,8 +236,8 @@ public class SecuritiesAccount10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,20 +256,21 @@ public class SecuritiesAccount10 {
 	 * definition} = "Idenfitication of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Idenfitication of the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SecuritiesBalanceType9FormatChoice balanceType;
 	/**
 	 * Type of balance.
 	 * <p>
@@ -279,8 +284,8 @@ public class SecuritiesAccount10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesBalanceType
-	 * SecuritiesBalance.SecuritiesBalanceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesBalanceType
+	 * SecuritiesBalance.mmSecuritiesBalanceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -299,20 +304,21 @@ public class SecuritiesAccount10 {
 	 * definition} = "Type of balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> SecuritiesAccount10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesBalanceType;
 			isDerived = false;
 			xmlTag = "BalTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceType";
 			definition = "Type of balance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesBalanceType9FormatChoice.mmObject();
 		}
 	};
+	protected FormOfSecurity1Code securityHoldingForm;
 	/**
 	 * Specifies the form of the financial instrument.
 	 * <p>
@@ -326,8 +332,8 @@ public class SecuritiesAccount10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#RegistrationForm
-	 * Security.RegistrationForm}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRegistrationForm
+	 * Security.mmRegistrationForm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -346,17 +352,17 @@ public class SecuritiesAccount10 {
 	 * definition} = "Specifies the form of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityHoldingForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityHoldingForm = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistrationForm;
 			componentContext_lazy = () -> SecuritiesAccount10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.RegistrationForm;
 			isDerived = false;
 			xmlTag = "SctyHldgForm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityHoldingForm";
 			definition = "Specifies the form of the financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
 		}
 	};
@@ -364,16 +370,64 @@ public class SecuritiesAccount10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount10.CreditDebitIndicator, com.tools20022.repository.msg.SecuritiesAccount10.AccountOwnerIdentification,
-						com.tools20022.repository.msg.SecuritiesAccount10.AccountOwnerNationality, com.tools20022.repository.msg.SecuritiesAccount10.AccountIdentification, com.tools20022.repository.msg.SecuritiesAccount10.BalanceType,
-						com.tools20022.repository.msg.SecuritiesAccount10.SecurityHoldingForm);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount10.mmCreditDebitIndicator, com.tools20022.repository.msg.SecuritiesAccount10.mmAccountOwnerIdentification,
+						com.tools20022.repository.msg.SecuritiesAccount10.mmAccountOwnerNationality, com.tools20022.repository.msg.SecuritiesAccount10.mmAccountIdentification,
+						com.tools20022.repository.msg.SecuritiesAccount10.mmBalanceType, com.tools20022.repository.msg.SecuritiesAccount10.mmSecurityHoldingForm);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount10";
 				definition = "Provides information about the securities account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public PartyIdentification2Choice getAccountOwnerIdentification() {
+		return accountOwnerIdentification;
+	}
+
+	public void setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
+		this.accountOwnerIdentification = accountOwnerIdentification;
+	}
+
+	public NationalityCode getAccountOwnerNationality() {
+		return accountOwnerNationality;
+	}
+
+	public void setAccountOwnerNationality(NationalityCode accountOwnerNationality) {
+		this.accountOwnerNationality = accountOwnerNationality;
+	}
+
+	public Max35Text getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public SecuritiesBalanceType9FormatChoice getBalanceType() {
+		return balanceType;
+	}
+
+	public void setBalanceType(SecuritiesBalanceType9FormatChoice balanceType) {
+		this.balanceType = balanceType;
+	}
+
+	public FormOfSecurity1Code getSecurityHoldingForm() {
+		return securityHoldingForm;
+	}
+
+	public void setSecurityHoldingForm(FormOfSecurity1Code securityHoldingForm) {
+		this.securityHoldingForm = securityHoldingForm;
 	}
 }

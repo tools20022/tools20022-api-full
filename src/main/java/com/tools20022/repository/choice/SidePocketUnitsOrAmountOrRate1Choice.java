@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice#UnitsNumber
- * SidePocketUnitsOrAmountOrRate1Choice.UnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice#mmUnitsNumber
+ * SidePocketUnitsOrAmountOrRate1Choice.mmUnitsNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice#OrderedAmount
- * SidePocketUnitsOrAmountOrRate1Choice.OrderedAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice#mmOrderedAmount
+ * SidePocketUnitsOrAmountOrRate1Choice.mmOrderedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice#HoldingsRate
- * SidePocketUnitsOrAmountOrRate1Choice.HoldingsRate}</li>
+ * {@linkplain com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice#mmHoldingsRate
+ * SidePocketUnitsOrAmountOrRate1Choice.mmHoldingsRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SidePocketUnitsOrAmountOrRate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
 	 * Total quantity of units to be subscribed or redeemed in the side pocket.
 	 * <p>
@@ -80,8 +81,8 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#UnitsNumber
-	 * InvestmentFundOrderExecution.UnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmUnitsNumber
+	 * InvestmentFundOrderExecution.mmUnitsNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.UnitsNumber;
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Total quantity of units to be subscribed or redeemed in the side pocket.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount orderedAmount;
 	/**
 	 * Amount of money to be invested or redeemed into the side pocket.
 	 * <p>
@@ -129,8 +131,8 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedAmount
-	 * SecuritiesOrder.OrderedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedAmount
+	 * SecuritiesOrder.mmOrderedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +152,21 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * "Amount of money to be invested or redeemed into the side pocket."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedAmount;
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedAmount";
 			definition = "Amount of money to be invested or redeemed into the side pocket.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate holdingsRate;
 	/**
 	 * Percentage of the financial instrument quantity to be invested or
 	 * redeemed in the side pocket or lot.
@@ -178,8 +181,8 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#HoldingsRate
-	 * InvestmentFundOrder.HoldingsRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmHoldingsRate
+	 * InvestmentFundOrder.mmHoldingsRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,17 +203,17 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldingsRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmHoldingsRate;
 			componentContext_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.HoldingsRate;
 			isDerived = false;
 			xmlTag = "HldgsRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRate";
 			definition = "Percentage of the financial instrument quantity to be invested or redeemed in the side pocket or lot.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -218,15 +221,39 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.UnitsNumber, com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.OrderedAmount,
-						com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.HoldingsRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmUnitsNumber, com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmOrderedAmount,
+						com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmHoldingsRate);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SidePocketUnitsOrAmountOrRate1Choice";
 				definition = "Choice of side pocket units, or amount, or rate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1 getUnitsNumber() {
+		return unitsNumber;
+	}
+
+	public void setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = unitsNumber;
+	}
+
+	public ActiveCurrencyAndAmount getOrderedAmount() {
+		return orderedAmount;
+	}
+
+	public void setOrderedAmount(ActiveCurrencyAndAmount orderedAmount) {
+		this.orderedAmount = orderedAmount;
+	}
+
+	public PercentageRate getHoldingsRate() {
+		return holdingsRate;
+	}
+
+	public void setHoldingsRate(PercentageRate holdingsRate) {
+		this.holdingsRate = holdingsRate;
 	}
 }

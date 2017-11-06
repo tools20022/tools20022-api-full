@@ -33,23 +33,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus4Code#Enabled
- * AccountStatus4Code.Enabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatus4Code#Disabled
- * AccountStatus4Code.Disabled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus4Code#Pending
- * AccountStatus4Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatus4Code#mmEnabled
+ * AccountStatus4Code.mmEnabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatus4Code#ProForma
- * AccountStatus4Code.ProForma}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatus4Code#mmDisabled
+ * AccountStatus4Code.mmDisabled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatus4Code#mmPending
+ * AccountStatus4Code.mmPending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatus4Code#mmProForma
+ * AccountStatus4Code.mmProForma}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,7 +81,7 @@ public class AccountStatus4Code extends AccountStatusCode {
 	 * name} = "Enabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Enabled = new MMCode() {
+	public static final MMCode mmEnabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
@@ -102,7 +104,7 @@ public class AccountStatus4Code extends AccountStatusCode {
 	 * name} = "Disabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Disabled = new MMCode() {
+	public static final MMCode mmDisabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
@@ -125,7 +127,7 @@ public class AccountStatus4Code extends AccountStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -148,7 +150,7 @@ public class AccountStatus4Code extends AccountStatusCode {
 	 * name} = "ProForma"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProForma = new MMCode() {
+	public static final MMCode mmProForma = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProForma";
@@ -159,12 +161,12 @@ public class AccountStatus4Code extends AccountStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatus4Code";
 				definition = "Specifies the status of an account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatus4Code.Enabled, com.tools20022.repository.codeset.AccountStatus4Code.Disabled, com.tools20022.repository.codeset.AccountStatus4Code.Pending,
-						com.tools20022.repository.codeset.AccountStatus4Code.ProForma);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatus4Code.mmEnabled, com.tools20022.repository.codeset.AccountStatus4Code.mmDisabled,
+						com.tools20022.repository.codeset.AccountStatus4Code.mmPending, com.tools20022.repository.codeset.AccountStatus4Code.mmProForma);
 				trace_lazy = () -> AccountStatusCode.mmObject();
 			}
 		});

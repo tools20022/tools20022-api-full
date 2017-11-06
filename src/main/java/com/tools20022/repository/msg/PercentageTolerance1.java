@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PercentageTolerance1#PlusPercent
- * PercentageTolerance1.PlusPercent}</li>
+ * {@linkplain com.tools20022.repository.msg.PercentageTolerance1#mmPlusPercent
+ * PercentageTolerance1.mmPlusPercent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PercentageTolerance1#MinusPercent
- * PercentageTolerance1.MinusPercent}</li>
+ * {@linkplain com.tools20022.repository.msg.PercentageTolerance1#mmMinusPercent
+ * PercentageTolerance1.mmMinusPercent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PercentageTolerance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate plusPercent;
 	/**
 	 * Variance in percentage allowed over the agreed dimension. For example,
 	 * plus 10 percent.
@@ -75,8 +76,8 @@ public class PercentageTolerance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tolerance#PlusPercent
-	 * Tolerance.PlusPercent}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tolerance#mmPlusPercent
+	 * Tolerance.mmPlusPercent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class PercentageTolerance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlusPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlusPercent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tolerance.mmPlusPercent;
 			componentContext_lazy = () -> PercentageTolerance1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tolerance.PlusPercent;
 			isDerived = false;
 			xmlTag = "PlusPct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlusPercent";
 			definition = "Variance in percentage allowed over the agreed dimension. For example, plus 10 percent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate minusPercent;
 	/**
 	 * Variance in percentage allowed below the agreed dimension. For example,
 	 * minus 10 percent.
@@ -125,8 +127,8 @@ public class PercentageTolerance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tolerance#MinusPercent
-	 * Tolerance.MinusPercent}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tolerance#mmMinusPercent
+	 * Tolerance.mmMinusPercent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,17 +149,17 @@ public class PercentageTolerance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinusPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinusPercent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tolerance.mmMinusPercent;
 			componentContext_lazy = () -> PercentageTolerance1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tolerance.MinusPercent;
 			isDerived = false;
 			xmlTag = "MnsPct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinusPercent";
 			definition = "Variance in percentage allowed below the agreed dimension. For example, minus 10 percent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -165,14 +167,30 @@ public class PercentageTolerance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageTolerance1.PlusPercent, com.tools20022.repository.msg.PercentageTolerance1.MinusPercent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageTolerance1.mmPlusPercent, com.tools20022.repository.msg.PercentageTolerance1.mmMinusPercent);
 				trace_lazy = () -> Tolerance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PercentageTolerance1";
 				definition = "Variance allowed on a quantity or on a price.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getPlusPercent() {
+		return plusPercent;
+	}
+
+	public void setPlusPercent(PercentageRate plusPercent) {
+		this.plusPercent = plusPercent;
+	}
+
+	public PercentageRate getMinusPercent() {
+		return minusPercent;
+	}
+
+	public void setMinusPercent(PercentageRate minusPercent) {
+		this.minusPercent = minusPercent;
 	}
 }

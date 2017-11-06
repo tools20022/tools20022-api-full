@@ -36,20 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageHeader2#MessageIdentification
- * MessageHeader2.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageHeader2#mmMessageIdentification
+ * MessageHeader2.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageHeader2#CreationDateTime
- * MessageHeader2.CreationDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MessageHeader2#RequestType
- * MessageHeader2.RequestType}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageHeader2#mmCreationDateTime
+ * MessageHeader2.mmCreationDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageHeader2#mmRequestType
+ * MessageHeader2.mmRequestType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MessageHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference, as assigned by the sender,, to unambiguously
 	 * identify the message. Usage: The sender has to make sure that
@@ -95,7 +96,7 @@ public class MessageHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageHeader2.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class MessageHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the sender,, to unambiguously identify the message.\nUsage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the message was created.
 	 * <p>
@@ -134,7 +136,7 @@ public class MessageHeader2 {
 	 * definition} = "Date and time at which the message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageHeader2.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class MessageHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected RequestType2Choice requestType;
 	/**
 	 * Specific actions to be executed through the request.
 	 * <p>
@@ -174,7 +177,7 @@ public class MessageHeader2 {
 	 * definition} = "Specific actions to be executed through the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageHeader2.mmObject();
 			isDerived = false;
@@ -182,8 +185,8 @@ public class MessageHeader2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestType";
 			definition = "Specific actions to be executed through the request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RequestType2Choice.mmObject();
 		}
 	};
@@ -191,14 +194,38 @@ public class MessageHeader2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageHeader2.MessageIdentification, com.tools20022.repository.msg.MessageHeader2.CreationDateTime,
-						com.tools20022.repository.msg.MessageHeader2.RequestType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageHeader2.mmMessageIdentification, com.tools20022.repository.msg.MessageHeader2.mmCreationDateTime,
+						com.tools20022.repository.msg.MessageHeader2.mmRequestType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageHeader2";
 				definition = "Set of characteristics, such as the identification or the creation date and time, specific to the message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public RequestType2Choice getRequestType() {
+		return requestType;
+	}
+
+	public void setRequestType(RequestType2Choice requestType) {
+		this.requestType = requestType;
 	}
 }

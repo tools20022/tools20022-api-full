@@ -30,35 +30,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#AccountServicerDeadlineMissed
- * AcknowledgementReasonCode.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmAccountServicerDeadlineMissed
+ * AcknowledgementReasonCode.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#MarketPracticeRuleDiscrepency
- * AcknowledgementReasonCode.MarketPracticeRuleDiscrepency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmMarketPracticeRuleDiscrepency
+ * AcknowledgementReasonCode.mmMarketPracticeRuleDiscrepency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#MarketDeadlineMissed
- * AcknowledgementReasonCode.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmMarketDeadlineMissed
+ * AcknowledgementReasonCode.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#NotStraightThroughProcessing
- * AcknowledgementReasonCode.NotStraightThroughProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmNotStraightThroughProcessing
+ * AcknowledgementReasonCode.mmNotStraightThroughProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#AcceptedWithoutVotingRights
- * AcknowledgementReasonCode.AcceptedWithoutVotingRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmAcceptedWithoutVotingRights
+ * AcknowledgementReasonCode.mmAcceptedWithoutVotingRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#Other
- * AcknowledgementReasonCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmOther
+ * AcknowledgementReasonCode.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#ConditionalCurrency
- * AcknowledgementReasonCode.ConditionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmConditionalCurrency
+ * AcknowledgementReasonCode.mmConditionalCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#ConditionalRegistrar
- * AcknowledgementReasonCode.ConditionalRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmConditionalRegistrar
+ * AcknowledgementReasonCode.mmConditionalRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#ConditionalRealignement
- * AcknowledgementReasonCode.ConditionalRealignement}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmConditionalRealignement
+ * AcknowledgementReasonCode.mmConditionalRealignement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#NarrativeReason
- * AcknowledgementReasonCode.NarrativeReason}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode#mmNarrativeReason
+ * AcknowledgementReasonCode.mmNarrativeReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -85,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -131,7 +131,7 @@ public class AcknowledgementReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -164,7 +164,7 @@ public class AcknowledgementReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MarketPracticeRuleDiscrepency = new MMCode() {
+	public static final MMCode mmMarketPracticeRuleDiscrepency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeRuleDiscrepency";
@@ -194,7 +194,7 @@ public class AcknowledgementReasonCode {
 	 * definition} = "Instruction was received after market deadline."</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -227,7 +227,7 @@ public class AcknowledgementReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NotStraightThroughProcessing = new MMCode() {
+	public static final MMCode mmNotStraightThroughProcessing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotStraightThroughProcessing";
@@ -260,7 +260,7 @@ public class AcknowledgementReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedWithoutVotingRights = new MMCode() {
+	public static final MMCode mmAcceptedWithoutVotingRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithoutVotingRights";
@@ -290,7 +290,7 @@ public class AcknowledgementReasonCode {
 	 * definition} = "Other. See Narrative."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -323,7 +323,7 @@ public class AcknowledgementReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalCurrency = new MMCode() {
+	public static final MMCode mmConditionalCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalCurrency";
@@ -355,7 +355,7 @@ public class AcknowledgementReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalRegistrar = new MMCode() {
+	public static final MMCode mmConditionalRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRegistrar";
@@ -388,7 +388,7 @@ public class AcknowledgementReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalRealignement = new MMCode() {
+	public static final MMCode mmConditionalRealignement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRealignement";
@@ -418,7 +418,7 @@ public class AcknowledgementReasonCode {
 	 * definition} = "See narrative field for reason."</li>
 	 * </ul>
 	 */
-	public static final MMCode NarrativeReason = new MMCode() {
+	public static final MMCode mmNarrativeReason = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeReason";
@@ -431,16 +431,16 @@ public class AcknowledgementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReasonCode";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReasonCode.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReasonCode.MarketPracticeRuleDiscrepency,
-						com.tools20022.repository.codeset.AcknowledgementReasonCode.MarketDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReasonCode.NotStraightThroughProcessing,
-						com.tools20022.repository.codeset.AcknowledgementReasonCode.AcceptedWithoutVotingRights, com.tools20022.repository.codeset.AcknowledgementReasonCode.Other,
-						com.tools20022.repository.codeset.AcknowledgementReasonCode.ConditionalCurrency, com.tools20022.repository.codeset.AcknowledgementReasonCode.ConditionalRegistrar,
-						com.tools20022.repository.codeset.AcknowledgementReasonCode.ConditionalRealignement, com.tools20022.repository.codeset.AcknowledgementReasonCode.NarrativeReason);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReasonCode.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReasonCode.mmMarketPracticeRuleDiscrepency,
+						com.tools20022.repository.codeset.AcknowledgementReasonCode.mmMarketDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReasonCode.mmNotStraightThroughProcessing,
+						com.tools20022.repository.codeset.AcknowledgementReasonCode.mmAcceptedWithoutVotingRights, com.tools20022.repository.codeset.AcknowledgementReasonCode.mmOther,
+						com.tools20022.repository.codeset.AcknowledgementReasonCode.mmConditionalCurrency, com.tools20022.repository.codeset.AcknowledgementReasonCode.mmConditionalRegistrar,
+						com.tools20022.repository.codeset.AcknowledgementReasonCode.mmConditionalRealignement, com.tools20022.repository.codeset.AcknowledgementReasonCode.mmNarrativeReason);
 				derivation_lazy = () -> Arrays.asList(AcknowledgementReason5Code.mmObject(), AcknowledgementReason6Code.mmObject(), AcknowledgementReason3Code.mmObject(), AcknowledgementReason4Code.mmObject(),
 						AcknowledgementReason1Code.mmObject(), AcknowledgementReason2Code.mmObject(), AcknowledgementReason7Code.mmObject(), AcknowledgementReason8Code.mmObject());
 			}

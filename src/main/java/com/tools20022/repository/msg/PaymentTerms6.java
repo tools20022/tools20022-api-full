@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.PaymentObligation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the payment terms of the underlying transaction.
@@ -34,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#DueDate
- * PaymentTerms6.DueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#PaymentPeriod
- * PaymentTerms6.PaymentPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#Description
- * PaymentTerms6.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#mmDueDate
+ * PaymentTerms6.mmDueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#mmPaymentPeriod
+ * PaymentTerms6.mmPaymentPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#mmDescription
+ * PaymentTerms6.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerms6#PartialPaymentPercent
- * PaymentTerms6.PartialPaymentPercent}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerms6#mmPartialPaymentPercent
+ * PaymentTerms6.mmPartialPaymentPercent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerms6#DirectDebitMandateIdentification
- * PaymentTerms6.DirectDebitMandateIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#BasisAmount
- * PaymentTerms6.BasisAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#DiscountAmount
- * PaymentTerms6.DiscountAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerms6#mmDirectDebitMandateIdentification
+ * PaymentTerms6.mmDirectDebitMandateIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#mmBasisAmount
+ * PaymentTerms6.mmBasisAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#mmDiscountAmount
+ * PaymentTerms6.mmDiscountAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerms6#DiscountPercentRate
- * PaymentTerms6.DiscountPercentRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#PenaltyAmount
- * PaymentTerms6.PenaltyAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerms6#mmDiscountPercentRate
+ * PaymentTerms6.mmDiscountPercentRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6#mmPenaltyAmount
+ * PaymentTerms6.mmPenaltyAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerms6#PenaltyPercentRate
- * PaymentTerms6.PenaltyPercentRate}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerms6#mmPenaltyPercentRate
+ * PaymentTerms6.mmPenaltyPercentRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTerms6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate dueDate;
 	/**
 	 * Due date specified for the payment terms.
 	 * <p>
@@ -93,8 +95,8 @@ public class PaymentTerms6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAvailability#Date
-	 * CashAvailability.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAvailability#mmDate
+	 * CashAvailability.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,20 +114,21 @@ public class PaymentTerms6 {
 	 * definition} = "Due date specified for the payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmDate;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.Date;
 			isDerived = false;
 			xmlTag = "DueDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueDate";
 			definition = "Due date specified for the payment terms.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PaymentPeriod1 paymentPeriod;
 	/**
 	 * Payment period specified for these payment terms.
 	 * <p>
@@ -151,7 +154,7 @@ public class PaymentTerms6 {
 	 * definition} = "Payment period specified for these payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
@@ -159,12 +162,13 @@ public class PaymentTerms6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentPeriod";
 			definition = "Payment period specified for these payment terms.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentPeriod1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentPeriod1.mmObject();
 		}
 	};
+	protected List<Max140Text> description;
 	/**
 	 * Textual description of these payment terms.
 	 * <p>
@@ -191,7 +195,7 @@ public class PaymentTerms6 {
 	 * definition} = "Textual description of these payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
@@ -203,6 +207,7 @@ public class PaymentTerms6 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PercentageRate partialPaymentPercent;
 	/**
 	 * Partial payment, expressed as a percentage, for the payment terms.
 	 * <p>
@@ -231,7 +236,7 @@ public class PaymentTerms6 {
 	 * "Partial payment, expressed as a percentage, for the payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartialPaymentPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartialPaymentPercent = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
@@ -239,11 +244,12 @@ public class PaymentTerms6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialPaymentPercent";
 			definition = "Partial payment, expressed as a percentage, for the payment terms.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected List<Max35Text> directDebitMandateIdentification;
 	/**
 	 * Direct debit mandate identification specified for these payment terms.
 	 * <p>
@@ -256,8 +262,8 @@ public class PaymentTerms6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebit#DirectDebitMandate
-	 * DirectDebit.DirectDebitMandate}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebit#mmDirectDebitMandate
+	 * DirectDebit.mmDirectDebitMandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -276,10 +282,10 @@ public class PaymentTerms6 {
 	 * "Direct debit mandate identification specified for these payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DirectDebitMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDirectDebitMandateIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmDirectDebitMandate;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.DirectDebitMandate;
 			isDerived = false;
 			xmlTag = "DrctDbtMndtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,6 +295,7 @@ public class PaymentTerms6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CurrencyAndAmount basisAmount;
 	/**
 	 * Amount used as a basis to calculate the discount amount for these payment
 	 * terms.
@@ -303,8 +310,8 @@ public class PaymentTerms6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Discount#DiscountBasisAmount
-	 * Discount.DiscountBasisAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Discount#mmDiscountBasisAmount
+	 * Discount.mmDiscountBasisAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -324,20 +331,21 @@ public class PaymentTerms6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BasisAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasisAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountBasisAmount;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.DiscountBasisAmount;
 			isDerived = false;
 			xmlTag = "BsisAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisAmount";
 			definition = "Amount used as a basis to calculate the discount amount for these payment terms.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount discountAmount;
 	/**
 	 * Amount of money that results from the application of an agreed discount
 	 * percentage to the basis amount and payable to the creditor.
@@ -352,8 +360,8 @@ public class PaymentTerms6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Discount#DiscountAppliedAmount
-	 * Discount.DiscountAppliedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Discount#mmDiscountAppliedAmount
+	 * Discount.mmDiscountAppliedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -373,20 +381,21 @@ public class PaymentTerms6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DiscountAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDiscountAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.DiscountAppliedAmount;
 			isDerived = false;
 			xmlTag = "DscntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountAmount";
 			definition = "Amount of money that results from the application of an agreed discount percentage to the basis amount and payable to the creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate discountPercentRate;
 	/**
 	 * Percent rate used to calculate the discount for these payment terms.
 	 * <p>
@@ -400,8 +409,8 @@ public class PaymentTerms6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargeRate
-	 * Adjustment.ChargeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+	 * Adjustment.mmChargeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -420,20 +429,21 @@ public class PaymentTerms6 {
 	 * "Percent rate used to calculate the discount for these payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DiscountPercentRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDiscountPercentRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargeRate;
 			isDerived = false;
 			xmlTag = "DscntPctRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountPercentRate";
 			definition = "Percent rate used to calculate the discount for these payment terms.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount penaltyAmount;
 	/**
 	 * Amount of money that results from the application of an agreed penalty
 	 * percentage to the basis amount and payable by the creditor.
@@ -448,8 +458,8 @@ public class PaymentTerms6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -469,20 +479,21 @@ public class PaymentTerms6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PenaltyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPenaltyAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "PnltyAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PenaltyAmount";
 			definition = "Amount of money that results from the application of an agreed penalty percentage to the basis amount and payable by the creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate penaltyPercentRate;
 	/**
 	 * Percent rate used to calculate the penalty for these payment terms.
 	 * <p>
@@ -496,8 +507,8 @@ public class PaymentTerms6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargeRate
-	 * Adjustment.ChargeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+	 * Adjustment.mmChargeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -516,17 +527,17 @@ public class PaymentTerms6 {
 	 * "Percent rate used to calculate the penalty for these payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PenaltyPercentRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPenaltyPercentRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargeRate;
 			isDerived = false;
 			xmlTag = "PnltyPctRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PenaltyPercentRate";
 			definition = "Percent rate used to calculate the penalty for these payment terms.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -534,17 +545,97 @@ public class PaymentTerms6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms6.DueDate, com.tools20022.repository.msg.PaymentTerms6.PaymentPeriod, com.tools20022.repository.msg.PaymentTerms6.Description,
-						com.tools20022.repository.msg.PaymentTerms6.PartialPaymentPercent, com.tools20022.repository.msg.PaymentTerms6.DirectDebitMandateIdentification, com.tools20022.repository.msg.PaymentTerms6.BasisAmount,
-						com.tools20022.repository.msg.PaymentTerms6.DiscountAmount, com.tools20022.repository.msg.PaymentTerms6.DiscountPercentRate, com.tools20022.repository.msg.PaymentTerms6.PenaltyAmount,
-						com.tools20022.repository.msg.PaymentTerms6.PenaltyPercentRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms6.mmDueDate, com.tools20022.repository.msg.PaymentTerms6.mmPaymentPeriod, com.tools20022.repository.msg.PaymentTerms6.mmDescription,
+						com.tools20022.repository.msg.PaymentTerms6.mmPartialPaymentPercent, com.tools20022.repository.msg.PaymentTerms6.mmDirectDebitMandateIdentification, com.tools20022.repository.msg.PaymentTerms6.mmBasisAmount,
+						com.tools20022.repository.msg.PaymentTerms6.mmDiscountAmount, com.tools20022.repository.msg.PaymentTerms6.mmDiscountPercentRate, com.tools20022.repository.msg.PaymentTerms6.mmPenaltyAmount,
+						com.tools20022.repository.msg.PaymentTerms6.mmPenaltyPercentRate);
 				trace_lazy = () -> PaymentObligation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTerms6";
 				definition = "Specifies the payment terms of the underlying transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDueDate() {
+		return dueDate;
+	}
+
+	public void setDueDate(ISODate dueDate) {
+		this.dueDate = dueDate;
+	}
+
+	public PaymentPeriod1 getPaymentPeriod() {
+		return paymentPeriod;
+	}
+
+	public void setPaymentPeriod(com.tools20022.repository.msg.PaymentPeriod1 paymentPeriod) {
+		this.paymentPeriod = paymentPeriod;
+	}
+
+	public List<Max140Text> getDescription() {
+		return description;
+	}
+
+	public void setDescription(List<Max140Text> description) {
+		this.description = description;
+	}
+
+	public PercentageRate getPartialPaymentPercent() {
+		return partialPaymentPercent;
+	}
+
+	public void setPartialPaymentPercent(PercentageRate partialPaymentPercent) {
+		this.partialPaymentPercent = partialPaymentPercent;
+	}
+
+	public List<Max35Text> getDirectDebitMandateIdentification() {
+		return directDebitMandateIdentification;
+	}
+
+	public void setDirectDebitMandateIdentification(List<Max35Text> directDebitMandateIdentification) {
+		this.directDebitMandateIdentification = directDebitMandateIdentification;
+	}
+
+	public CurrencyAndAmount getBasisAmount() {
+		return basisAmount;
+	}
+
+	public void setBasisAmount(CurrencyAndAmount basisAmount) {
+		this.basisAmount = basisAmount;
+	}
+
+	public CurrencyAndAmount getDiscountAmount() {
+		return discountAmount;
+	}
+
+	public void setDiscountAmount(CurrencyAndAmount discountAmount) {
+		this.discountAmount = discountAmount;
+	}
+
+	public PercentageRate getDiscountPercentRate() {
+		return discountPercentRate;
+	}
+
+	public void setDiscountPercentRate(PercentageRate discountPercentRate) {
+		this.discountPercentRate = discountPercentRate;
+	}
+
+	public CurrencyAndAmount getPenaltyAmount() {
+		return penaltyAmount;
+	}
+
+	public void setPenaltyAmount(CurrencyAndAmount penaltyAmount) {
+		this.penaltyAmount = penaltyAmount;
+	}
+
+	public PercentageRate getPenaltyPercentRate() {
+		return penaltyPercentRate;
+	}
+
+	public void setPenaltyPercentRate(PercentageRate penaltyPercentRate) {
+		this.penaltyPercentRate = penaltyPercentRate;
 	}
 }

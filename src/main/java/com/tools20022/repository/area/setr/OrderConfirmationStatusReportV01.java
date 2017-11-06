@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -87,8 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#RelatedReferenceOrOtherReferenceRule
- * OrderConfirmationStatusReportV01.RelatedReferenceOrOtherReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmRelatedReferenceOrOtherReferenceRule
+ * OrderConfirmationStatusReportV01.mmRelatedReferenceOrOtherReferenceRule}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -98,27 +99,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#MessageIdentification
- * OrderConfirmationStatusReportV01.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmMessageIdentification
+ * OrderConfirmationStatusReportV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#OtherReference
- * OrderConfirmationStatusReportV01.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmOtherReference
+ * OrderConfirmationStatusReportV01.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#RelatedReference
- * OrderConfirmationStatusReportV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmRelatedReference
+ * OrderConfirmationStatusReportV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#IndividualOrderConfirmationDetailsReport
- * OrderConfirmationStatusReportV01.IndividualOrderConfirmationDetailsReport}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmIndividualOrderConfirmationDetailsReport
+ * OrderConfirmationStatusReportV01.mmIndividualOrderConfirmationDetailsReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#Extension
- * OrderConfirmationStatusReportV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmExtension
+ * OrderConfirmationStatusReportV01.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#identifier
- * OrderConfirmationStatusReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.057.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -153,11 +152,11 @@ public class OrderConfirmationStatusReportV01 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#OtherReference
-	 * OrderConfirmationStatusReportV01.OtherReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmOtherReference
+	 * OrderConfirmationStatusReportV01.mmOtherReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#RelatedReference
-	 * OrderConfirmationStatusReportV01.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmRelatedReference
+	 * OrderConfirmationStatusReportV01.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -177,16 +176,17 @@ public class OrderConfirmationStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor RelatedReferenceOrOtherReferenceRule = new MMXor() {
+	public static final MMXor mmRelatedReferenceOrOtherReferenceRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
 			definition = "Occurrences of either RelatedReference or OtherReference may be present, but not occurrences of both.";
 			messageDefinition_lazy = () -> OrderConfirmationStatusReportV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays
-					.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.OtherReference, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.RelatedReference);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmOtherReference,
+					com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmRelatedReference);
 		}
 	};
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -215,24 +215,25 @@ public class OrderConfirmationStatusReportV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02#MessageIdentification
-	 * OrderConfirmationStatusReportV02.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02#mmMessageIdentification
+	 * OrderConfirmationStatusReportV02.mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.mmMessageIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> otherReference;
 	/**
 	 * Reference to a linked message sent in a proprietary way or reference of a
 	 * system.
@@ -259,17 +260,18 @@ public class OrderConfirmationStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to a linked message sent in a proprietary way or reference of a system.";
-			minOccurs = 0;
 			maxOccurs = 2;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -294,17 +296,18 @@ public class OrderConfirmationStatusReportV01 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 0;
 			maxOccurs = 2;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<IndividualOrderConfirmationStatusAndReason1> individualOrderConfirmationDetailsReport;
 	/**
 	 * Status report details of an individual order confirmation.
 	 * <p>
@@ -331,24 +334,25 @@ public class OrderConfirmationStatusReportV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02#IndividualOrderConfirmationDetailsReport
-	 * OrderConfirmationStatusReportV02.IndividualOrderConfirmationDetailsReport
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02#mmIndividualOrderConfirmationDetailsReport
+	 * OrderConfirmationStatusReportV02.
+	 * mmIndividualOrderConfirmationDetailsReport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IndividualOrderConfirmationDetailsReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIndividualOrderConfirmationDetailsReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IndvOrdrConfDtlsRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualOrderConfirmationDetailsReport";
 			definition = "Status report details of an individual order confirmation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.IndividualOrderConfirmationDetailsReport);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.mmIndividualOrderConfirmationDetailsReport);
 			minOccurs = 1;
 			complexType_lazy = () -> IndividualOrderConfirmationStatusAndReason1.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -376,48 +380,21 @@ public class OrderConfirmationStatusReportV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02#Extension
-	 * OrderConfirmationStatusReportV02.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02#mmExtension
+	 * OrderConfirmationStatusReportV02.mmExtension}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.Extension);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.mmExtension);
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "057"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "057";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -429,16 +406,63 @@ public class OrderConfirmationStatusReportV01 {
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the OrderConfirmationStatusReport message to the executing party, for example, a transfer agent, to report the status of an order confirmation or an order confirmation amendment.\r\nUsage\r\nThe OrderConfirmationStatusReport message is used to report on the status of one or more individual:\r\n- subscription confirmations,\r\n- subscription confirmation amendments,\r\n- redemption confirmations,\r\n- redemption confirmation amendments,\r\n- switch order confirmations,\r\n- switch order confirmation amendments.\r\nOne of the following statuses can be reported:\r\n- confirmation rejected, or,\r\n- amendment rejected, or,\r\n- sent to next party, or,\r\n- communication problem with next party, or,\r\n- confirmation accepted, or,\r\n- confirmation received.\r\nIt is likely that the OrderConfirmationStatusReport is only sent by the order instructing party to the order executing party to reject an order confirmation or to reject an order confirmation amendment, although if an intermediary party is used, the statuses sent to next party and communication problem with next party are also likely be used. The statuses confirmation accepted and confirmation received would only be used in the event the order executing party sends a RequestForOrderConfirmationStatusReport message and one of the other statuses does not apply.\r\nIf the status being reported is either confirmation rejected or amendment rejected, then a reason for the rejection must be given.\r\nThe individual order confirmation or confirmation amendment for which the status is given is identified with its order reference. The message identification of the message in which the individual order confirmation or confirmation amendment was conveyed may also be quoted in RelatedReference, but this is not recommended.";
 				nextVersions_lazy = () -> Arrays.asList(OrderConfirmationStatusReportV02.mmObject());
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.RelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmRelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "OrdrConfStsRptV01";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.MessageIdentification,
-						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.OtherReference, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.RelatedReference,
-						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.IndividualOrderConfirmationDetailsReport, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmMessageIdentification,
+						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmOtherReference, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmRelatedReference,
+						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmIndividualOrderConfirmationDetailsReport, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "057";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public List<AdditionalReference3> getOtherReference() {
+		return otherReference;
+	}
+
+	public void setOtherReference(List<AdditionalReference3> otherReference) {
+		this.otherReference = otherReference;
+	}
+
+	public List<AdditionalReference3> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public List<IndividualOrderConfirmationStatusAndReason1> getIndividualOrderConfirmationDetailsReport() {
+		return individualOrderConfirmationDetailsReport;
+	}
+
+	public void setIndividualOrderConfirmationDetailsReport(List<IndividualOrderConfirmationStatusAndReason1> individualOrderConfirmationDetailsReport) {
+		this.individualOrderConfirmationDetailsReport = individualOrderConfirmationDetailsReport;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

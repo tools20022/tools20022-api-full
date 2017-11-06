@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashBalanceType1Code#Available
- * CashBalanceType1Code.Available}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashBalanceType1Code#mmAvailable
+ * CashBalanceType1Code.mmAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashBalanceType1Code#Restricted
- * CashBalanceType1Code.Restricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashBalanceType1Code#mmRestricted
+ * CashBalanceType1Code.mmRestricted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class CashBalanceType1Code extends BalanceTypeCode {
 	 * name} = "Available"</li>
 	 * </ul>
 	 */
-	public static final MMCode Available = new MMCode() {
+	public static final MMCode mmAvailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
@@ -104,7 +104,7 @@ public class CashBalanceType1Code extends BalanceTypeCode {
 	 * name} = "Restricted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Restricted = new MMCode() {
+	public static final MMCode mmRestricted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
@@ -115,12 +115,12 @@ public class CashBalanceType1Code extends BalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVLB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashBalanceType1Code";
 				definition = "Specifies the type of cash balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashBalanceType1Code.Available, com.tools20022.repository.codeset.CashBalanceType1Code.Restricted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashBalanceType1Code.mmAvailable, com.tools20022.repository.codeset.CashBalanceType1Code.mmRestricted);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
 			}
 		});

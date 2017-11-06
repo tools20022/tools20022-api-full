@@ -30,24 +30,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignExchangeSettlementCode#CLS
- * ForeignExchangeSettlementCode.CLS}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignExchangeSettlementCode#mmCLS
+ * ForeignExchangeSettlementCode.mmCLS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignExchangeSettlementCode#Net
- * ForeignExchangeSettlementCode.Net}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignExchangeSettlementCode#mmNet
+ * ForeignExchangeSettlementCode.mmNet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignExchangeSettlementCode#Gross
- * ForeignExchangeSettlementCode.Gross}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignExchangeSettlementCode#mmGross
+ * ForeignExchangeSettlementCode.mmGross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignExchangeSettlementCode#Split
- * ForeignExchangeSettlementCode.Split}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignExchangeSettlementCode#mmSplit
+ * ForeignExchangeSettlementCode.mmSplit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class ForeignExchangeSettlementCode {
 	 * "Settlement is done through the Continuous Link Settlement (CLS) Bank."</li>
 	 * </ul>
 	 */
-	public static final MMCode CLS = new MMCode() {
+	public static final MMCode mmCLS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "CLS";
@@ -122,7 +122,7 @@ public class ForeignExchangeSettlementCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Net = new MMCode() {
+	public static final MMCode mmNet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Net";
@@ -155,7 +155,7 @@ public class ForeignExchangeSettlementCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Gross = new MMCode() {
+	public static final MMCode mmGross = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Gross";
@@ -188,7 +188,7 @@ public class ForeignExchangeSettlementCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Split = new MMCode() {
+	public static final MMCode mmSplit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Split";
@@ -201,13 +201,13 @@ public class ForeignExchangeSettlementCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLSB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "ForeignExchangeSettlementCode";
 				definition = "Specifies the method to be used to settle a foreign exchange trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignExchangeSettlementCode.CLS, com.tools20022.repository.codeset.ForeignExchangeSettlementCode.Net,
-						com.tools20022.repository.codeset.ForeignExchangeSettlementCode.Gross, com.tools20022.repository.codeset.ForeignExchangeSettlementCode.Split);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignExchangeSettlementCode.mmCLS, com.tools20022.repository.codeset.ForeignExchangeSettlementCode.mmNet,
+						com.tools20022.repository.codeset.ForeignExchangeSettlementCode.mmGross, com.tools20022.repository.codeset.ForeignExchangeSettlementCode.mmSplit);
 			}
 		});
 		return mmObject_lazy.get();

@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionTransmission2#TransmissionIndicator
- * SecuritiesTransactionTransmission2.TransmissionIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionTransmission2#mmTransmissionIndicator
+ * SecuritiesTransactionTransmission2.mmTransmissionIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionTransmission2#TransmittingBuyer
- * SecuritiesTransactionTransmission2.TransmittingBuyer}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionTransmission2#mmTransmittingBuyer
+ * SecuritiesTransactionTransmission2.mmTransmittingBuyer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionTransmission2#TransmittingSeller
- * SecuritiesTransactionTransmission2.TransmittingSeller}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionTransmission2#mmTransmittingSeller
+ * SecuritiesTransactionTransmission2.mmTransmittingSeller}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransactionTransmission2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator transmissionIndicator;
 	/**
 	 * Indication as to whether the transaction results from an order
 	 * transmitted by the reporting of a client to a third party.<br>
@@ -101,7 +102,7 @@ public class SecuritiesTransactionTransmission2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransmissionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransmissionIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionTransmission2.mmObject();
 			isDerived = false;
@@ -109,11 +110,12 @@ public class SecuritiesTransactionTransmission2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransmissionIndicator";
 			definition = "Indication as to whether the transaction results from an order  transmitted by the reporting of a client to a third party.\r\n\r\nUsage: Only applicable when the conditions for transmission are not satisfied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected LEIIdentifier transmittingBuyer;
 	/**
 	 * Identifies the buyer transmitting the order to the reporting firm. <br>
 	 * <br>
@@ -130,8 +132,8 @@ public class SecuritiesTransactionTransmission2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#LEI
-	 * PartyIdentificationInformation.LEI}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,20 +154,21 @@ public class SecuritiesTransactionTransmission2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransmittingBuyer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransmittingBuyer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> SecuritiesTransactionTransmission2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.LEI;
 			isDerived = false;
 			xmlTag = "TrnsmttgBuyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransmittingBuyer";
 			definition = "Identifies the buyer transmitting the order to the reporting firm. \r\n\r\nUsage: Only required for reporting firms reporting transactions on behalf of order transmitting firm. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected LEIIdentifier transmittingSeller;
 	/**
 	 * Identifies the seller transmitting the order to the reporting firm. <br>
 	 * <br>
@@ -182,8 +185,8 @@ public class SecuritiesTransactionTransmission2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#LEI
-	 * PartyIdentificationInformation.LEI}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,17 +207,17 @@ public class SecuritiesTransactionTransmission2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransmittingSeller = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransmittingSeller = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> SecuritiesTransactionTransmission2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.LEI;
 			isDerived = false;
 			xmlTag = "TrnsmttgSellr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransmittingSeller";
 			definition = "Identifies the seller transmitting the order to the reporting firm. \r\n\r\nUsage: Only required for reporting firms reporting transactions on behalf of order transmitting firm. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -222,15 +225,39 @@ public class SecuritiesTransactionTransmission2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionTransmission2.TransmissionIndicator, com.tools20022.repository.msg.SecuritiesTransactionTransmission2.TransmittingBuyer,
-						com.tools20022.repository.msg.SecuritiesTransactionTransmission2.TransmittingSeller);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmTransmissionIndicator, com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmTransmittingBuyer,
+						com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmTransmittingSeller);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionTransmission2";
 				definition = "Specifies the securities order transmission attributes.\r\n";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getTransmissionIndicator() {
+		return transmissionIndicator;
+	}
+
+	public void setTransmissionIndicator(TrueFalseIndicator transmissionIndicator) {
+		this.transmissionIndicator = transmissionIndicator;
+	}
+
+	public LEIIdentifier getTransmittingBuyer() {
+		return transmittingBuyer;
+	}
+
+	public void setTransmittingBuyer(LEIIdentifier transmittingBuyer) {
+		this.transmittingBuyer = transmittingBuyer;
+	}
+
+	public LEIIdentifier getTransmittingSeller() {
+		return transmittingSeller;
+	}
+
+	public void setTransmittingSeller(LEIIdentifier transmittingSeller) {
+		this.transmittingSeller = transmittingSeller;
 	}
 }

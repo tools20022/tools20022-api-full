@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionStatus1Code#Active
- * RestrictionStatus1Code.Active}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionStatus1Code#mmActive
+ * RestrictionStatus1Code.mmActive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionStatus1Code#Inactive
- * RestrictionStatus1Code.Inactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionStatus1Code#mmInactive
+ * RestrictionStatus1Code.mmInactive}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class RestrictionStatus1Code extends RestrictionStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode Active = new MMCode() {
+	public static final MMCode mmActive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
@@ -98,7 +98,7 @@ public class RestrictionStatus1Code extends RestrictionStatusCode {
 	 * name} = "Inactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode Inactive = new MMCode() {
+	public static final MMCode mmInactive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
@@ -109,11 +109,11 @@ public class RestrictionStatus1Code extends RestrictionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RestrictionStatus1Code";
 				definition = "Specifies the status of a restriction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RestrictionStatus1Code.Active, com.tools20022.repository.codeset.RestrictionStatus1Code.Inactive);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RestrictionStatus1Code.mmActive, com.tools20022.repository.codeset.RestrictionStatus1Code.mmInactive);
 				trace_lazy = () -> RestrictionStatusCode.mmObject();
 			}
 		});

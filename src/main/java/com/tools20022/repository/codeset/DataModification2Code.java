@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataModification2Code#InsertNewDataSet
- * DataModification2Code.InsertNewDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataModification2Code#mmInsertNewDataSet
+ * DataModification2Code.mmInsertNewDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataModification2Code#DeleteDataSet
- * DataModification2Code.DeleteDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataModification2Code#mmDeleteDataSet
+ * DataModification2Code.mmDeleteDataSet}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class DataModification2Code extends DataModificationCode {
 	 * name} = "InsertNewDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsertNewDataSet = new MMCode() {
+	public static final MMCode mmInsertNewDataSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsertNewDataSet";
@@ -105,7 +105,7 @@ public class DataModification2Code extends DataModificationCode {
 	 * name} = "DeleteDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeleteDataSet = new MMCode() {
+	public static final MMCode mmDeleteDataSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeleteDataSet";
@@ -116,12 +116,12 @@ public class DataModification2Code extends DataModificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INSE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataModification2Code";
 				definition = "Specified the type of modification to be applied on a data set.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataModification2Code.InsertNewDataSet, com.tools20022.repository.codeset.DataModification2Code.DeleteDataSet);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataModification2Code.mmInsertNewDataSet, com.tools20022.repository.codeset.DataModification2Code.mmDeleteDataSet);
 				trace_lazy = () -> DataModificationCode.mmObject();
 			}
 		});

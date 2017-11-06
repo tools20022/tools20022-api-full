@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#AgentRole
- * CorporateActionAgent.AgentRole}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#mmAgentRole
+ * CorporateActionAgent.mmAgentRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#CorporateActionOtherAgentDetails
- * CorporateActionOption1.CorporateActionOtherAgentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmCorporateActionOtherAgentDetails
+ * CorporateActionOption1.mmCorporateActionOtherAgentDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -75,8 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionAgent extends CorporateActionPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected AgentRoleCode agentRole;
 	/**
 	 * Specifies the agent role played by a party in a corporate action process.
 	 * <p>
@@ -102,29 +103,29 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.AgentRoleCode
 	 * AgentRoleCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent1#Role
-	 * IssuerAgent1.Role}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AgentRole1FormatChoice#Code
-	 * AgentRole1FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AgentRole1FormatChoice#Proprietary
-	 * AgentRole1FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAgent1#AgentRole
-	 * CorporateActionAgent1.AgentRole}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent2#Role
-	 * IssuerAgent2.Role}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionAgent
 	 * CorporateActionAgent}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent1#mmRole
+	 * IssuerAgent1.mmRole}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AgentRole1FormatChoice#mmCode
+	 * AgentRole1FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AgentRole1FormatChoice#mmProprietary
+	 * AgentRole1FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAgent1#mmAgentRole
+	 * CorporateActionAgent1.mmAgentRole}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent2#mmRole
+	 * IssuerAgent2.mmRole}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -138,17 +139,17 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AgentRole = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAgentRole = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent1.Role, com.tools20022.repository.choice.AgentRole1FormatChoice.Code, com.tools20022.repository.choice.AgentRole1FormatChoice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionAgent1.AgentRole, com.tools20022.repository.msg.IssuerAgent2.Role);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent1.mmRole, com.tools20022.repository.choice.AgentRole1FormatChoice.mmCode, com.tools20022.repository.choice.AgentRole1FormatChoice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionAgent1.mmAgentRole, com.tools20022.repository.msg.IssuerAgent2.mmRole);
 			elementContext_lazy = () -> CorporateActionAgent.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AgentRole";
 			definition = "Specifies the agent role played by a party in a corporate action process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AgentRoleCode.mmObject();
 		}
 	};
@@ -156,16 +157,24 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAgent";
 				definition = "A firm authorised to act as an intermediary between issuer and shareholders. It takes care of the needs of the shareholders such as reporting, inquiries and regulatory compliance.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption1.CorporateActionOtherAgentDetails);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption1.mmCorporateActionOtherAgentDetails);
 				superType_lazy = () -> CorporateActionPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionAgent.AgentRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionAgent.mmAgentRole);
 				derivationComponent_lazy = () -> Arrays.asList(IssuerAgent1.mmObject(), AgentRole1FormatChoice.mmObject(), CorporateActionAgent1.mmObject(), IssuerAgent2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AgentRoleCode getAgentRole() {
+		return agentRole;
+	}
+
+	public void setAgentRole(AgentRoleCode agentRole) {
+		this.agentRole = agentRole;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The FinancialInstrumentReportingMarket IdentificationCodeReport provides the
@@ -57,20 +58,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01#MarketIdentification
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01#mmMarketIdentification
  * FinancialInstrumentReportingMarketIdentificationCodeReportV01.
- * MarketIdentification}</li>
+ * mmMarketIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01#SupplementaryData
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01#mmSupplementaryData
  * FinancialInstrumentReportingMarketIdentificationCodeReportV01.
- * SupplementaryData}</li>
+ * mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01#identifier
- * FinancialInstrumentReportingMarketIdentificationCodeReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.049.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentReportingMarketIdentificationCodeReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected List<MarketIdentification92> marketIdentification;
 	/**
 	 * Report of the market and associate descriptive details.
 	 * <p>
@@ -109,7 +109,7 @@ public class FinancialInstrumentReportingMarketIdentificationCodeReportV01 {
 	 * definition} = "Report of the market and associate descriptive details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,6 +119,7 @@ public class FinancialInstrumentReportingMarketIdentificationCodeReportV01 {
 			complexType_lazy = () -> MarketIdentification92.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -145,7 +146,7 @@ public class FinancialInstrumentReportingMarketIdentificationCodeReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,33 +154,6 @@ public class FinancialInstrumentReportingMarketIdentificationCodeReportV01 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "049"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "049";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -193,11 +167,34 @@ public class FinancialInstrumentReportingMarketIdentificationCodeReportV01 {
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgMktIdCdRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01.MarketIdentification,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01.mmMarketIdentification,
+						com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "049";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<MarketIdentification92> getMarketIdentification() {
+		return marketIdentification;
+	}
+
+	public void setMarketIdentification(List<MarketIdentification92> marketIdentification) {
+		this.marketIdentification = marketIdentification;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

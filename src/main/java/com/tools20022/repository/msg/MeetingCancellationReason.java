@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingCancellationReason#Code
- * MeetingCancellationReason.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingCancellationReason#CancellationReason
- * MeetingCancellationReason.CancellationReason}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingCancellationReason#mmCode
+ * MeetingCancellationReason.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingCancellationReason#mmCancellationReason
+ * MeetingCancellationReason.mmCancellationReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingCancellationReason {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MeetingCancellationReason1Code code;
 	/**
 	 * Specifies the reason for cancelling a meeting in coded form.
 	 * <p>
@@ -75,8 +77,8 @@ public class MeetingCancellationReason {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatusReason#MeetingCancellationReason
-	 * MeetingStatusReason.MeetingCancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatusReason#mmMeetingCancellationReason
+	 * MeetingStatusReason.mmMeetingCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +98,21 @@ public class MeetingCancellationReason {
 	 * "Specifies the reason for cancelling a meeting in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatusReason.mmMeetingCancellationReason;
 			componentContext_lazy = () -> MeetingCancellationReason.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatusReason.MeetingCancellationReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason for cancelling a meeting in coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MeetingCancellationReason1Code.mmObject();
 		}
 	};
+	protected Max140Text cancellationReason;
 	/**
 	 * Specifies the reason for cancelling a meeting in free format form.
 	 * <p>
@@ -122,8 +125,8 @@ public class MeetingCancellationReason {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +146,17 @@ public class MeetingCancellationReason {
 	 * "Specifies the reason for cancelling a meeting in free format form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> MeetingCancellationReason.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "CxlRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Specifies the reason for cancelling a meeting in free format form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -161,14 +164,30 @@ public class MeetingCancellationReason {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingCancellationReason.Code, com.tools20022.repository.msg.MeetingCancellationReason.CancellationReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingCancellationReason.mmCode, com.tools20022.repository.msg.MeetingCancellationReason.mmCancellationReason);
 				trace_lazy = () -> MeetingStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MeetingCancellationReason";
 				definition = "Specifies the reason for cancelling a meeting.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MeetingCancellationReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(MeetingCancellationReason1Code code) {
+		this.code = code;
+	}
+
+	public Max140Text getCancellationReason() {
+		return cancellationReason;
+	}
+
+	public void setCancellationReason(Max140Text cancellationReason) {
+		this.cancellationReason = cancellationReason;
 	}
 }

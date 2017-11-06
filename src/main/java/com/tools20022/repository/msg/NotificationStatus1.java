@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NotificationStatus1#Status
- * NotificationStatus1.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NotificationStatus1#mmStatus
+ * NotificationStatus1.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,21 +46,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#NotificationStatus
- * MeetingNotificationV02.NotificationStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmNotificationStatus
+ * MeetingNotificationV02.mmNotificationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#NotificationStatus
- * MeetingNotificationV03.NotificationStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#mmNotificationStatus
+ * MeetingNotificationV03.mmNotificationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#NotificationStatus
- * MeetingNotificationV04.NotificationStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#mmNotificationStatus
+ * MeetingNotificationV04.mmNotificationStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NotificationStatus2Code status;
 	/**
 	 * Status to define if the occurrence of the event contained in the
 	 * notification is confirmed or unconfirmed.
@@ -97,8 +98,8 @@ public class NotificationStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatus#NotificationStatus
-	 * MeetingStatus.NotificationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmNotificationStatus
+	 * MeetingStatus.mmNotificationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -120,24 +121,25 @@ public class NotificationStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationStatus2#Status
-	 * NotificationStatus2.Status}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationStatus2#mmStatus
+	 * NotificationStatus2.mmStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmNotificationStatus;
 			componentContext_lazy = () -> NotificationStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.NotificationStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status to define if the occurrence of the event contained in the notification is confirmed or unconfirmed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus2.Status);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus2.mmStatus);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NotificationStatus2Code.mmObject();
 		}
 	};
@@ -145,11 +147,11 @@ public class NotificationStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus1.Status);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus1.mmStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmNotificationStatus, com.tools20022.repository.area.seev.MeetingNotificationV03.mmNotificationStatus,
+						com.tools20022.repository.area.seev.MeetingNotificationV04.mmNotificationStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.NotificationStatus, com.tools20022.repository.area.seev.MeetingNotificationV03.NotificationStatus,
-						com.tools20022.repository.area.seev.MeetingNotificationV04.NotificationStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationStatus1";
 				definition = "Specifies if the occurrence of the event contained in the notification is confirmed or unconfirmed. Details of the event can be complete or incomplete.";
@@ -157,5 +159,13 @@ public class NotificationStatus1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NotificationStatus2Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(NotificationStatus2Code status) {
+		this.status = status;
 	}
 }

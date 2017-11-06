@@ -35,29 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BillingTaxRegion1#RegionNumber
- * BillingTaxRegion1.RegionNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingTaxRegion1#RegionName
- * BillingTaxRegion1.RegionName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#CustomerTaxIdentification
- * BillingTaxRegion1.CustomerTaxIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingTaxRegion1#PointDate
- * BillingTaxRegion1.PointDate}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#mmRegionNumber
+ * BillingTaxRegion1.mmRegionNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingTaxRegion1#mmRegionName
+ * BillingTaxRegion1.mmRegionName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#SendingFinancialInstitution
- * BillingTaxRegion1.SendingFinancialInstitution}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#mmCustomerTaxIdentification
+ * BillingTaxRegion1.mmCustomerTaxIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingTaxRegion1#mmPointDate
+ * BillingTaxRegion1.mmPointDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#InvoiceNumber
- * BillingTaxRegion1.InvoiceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingTaxRegion1#MethodC
- * BillingTaxRegion1.MethodC}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#mmSendingFinancialInstitution
+ * BillingTaxRegion1.mmSendingFinancialInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#SettlementAmount
- * BillingTaxRegion1.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#mmInvoiceNumber
+ * BillingTaxRegion1.mmInvoiceNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingTaxRegion1#mmMethodC
+ * BillingTaxRegion1.mmMethodC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#TaxDueToRegion
- * BillingTaxRegion1.TaxDueToRegion}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#mmSettlementAmount
+ * BillingTaxRegion1.mmSettlementAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#mmTaxDueToRegion
+ * BillingTaxRegion1.mmTaxDueToRegion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BillingTaxRegion1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max40Text regionNumber;
 	/**
 	 * Specifies a particular unique zone of taxes assigned by taxing
 	 * authorities. A tax region number is unique. Every account is considered
@@ -112,7 +114,7 @@ public class BillingTaxRegion1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegionNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BillingTaxRegion1.mmObject();
 			isDerived = false;
@@ -120,11 +122,12 @@ public class BillingTaxRegion1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegionNumber";
 			definition = "Specifies a particular unique zone of taxes assigned by taxing authorities.  A tax region number is unique.  Every account is considered to reside within a tax region, although some tax regions may not charge taxes on services.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max40Text.mmObject();
 		}
 	};
+	protected Max40Text regionName;
 	/**
 	 * Name associated with a specific tax region number.
 	 * <p>
@@ -137,8 +140,8 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#AdministrationZone
-	 * Tax.AdministrationZone}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAdministrationZone
+	 * Tax.mmAdministrationZone}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,20 +160,21 @@ public class BillingTaxRegion1 {
 	 * definition} = "Name associated with a specific tax region number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegionName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegionName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAdministrationZone;
 			componentContext_lazy = () -> BillingTaxRegion1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.AdministrationZone;
 			isDerived = false;
 			xmlTag = "RgnNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegionName";
 			definition = "Name associated with a specific tax region number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max40Text.mmObject();
 		}
 	};
+	protected Max40Text customerTaxIdentification;
 	/**
 	 * Specifies the financial institution’s customer tax identification number.
 	 * 
@@ -188,8 +192,8 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TaxIdentificationNumber
-	 * PartyIdentificationInformation.TaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTaxIdentificationNumber
+	 * PartyIdentificationInformation.mmTaxIdentificationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +214,21 @@ public class BillingTaxRegion1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerTaxIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerTaxIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> BillingTaxRegion1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.TaxIdentificationNumber;
 			isDerived = false;
 			xmlTag = "CstmrTaxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerTaxIdentification";
 			definition = "Specifies the financial institution’s customer tax identification number.  \n\nUsage:\nThis is the number passed from the financial institution to the taxing authority to indicate the specific customer tied to the taxes calculated for this tax region and group of delivered services.  It is typically the tax identification tied to a customer’s account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max40Text.mmObject();
 		}
 	};
+	protected ISODate pointDate;
 	/**
 	 * Date on which the tax calculation was performed.
 	 * 
@@ -239,7 +244,8 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxDate Tax.TaxDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxDate Tax.mmTaxDate}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -260,20 +266,21 @@ public class BillingTaxRegion1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PointDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPointDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxDate;
 			componentContext_lazy = () -> BillingTaxRegion1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxDate;
 			isDerived = false;
 			xmlTag = "PtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PointDate";
 			definition = "Date on which the tax calculation was performed. \n\nUsage:\nThis date can be used to verify the tax rate value on the calculation date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected BillingTaxIdentification1 sendingFinancialInstitution;
 	/**
 	 * Tax information that relates to the sending financial institution.
 	 * <p>
@@ -286,8 +293,8 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#PartyRole Tax.PartyRole}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmPartyRole
+	 * Tax.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -307,21 +314,22 @@ public class BillingTaxRegion1 {
 	 * "Tax information that relates to the sending financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SendingFinancialInstitution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSendingFinancialInstitution = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmPartyRole;
 			componentContext_lazy = () -> BillingTaxRegion1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.PartyRole;
 			isDerived = false;
 			xmlTag = "SndgFI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendingFinancialInstitution";
 			definition = "Tax information that relates to the sending financial institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BillingTaxIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BillingTaxIdentification1.mmObject();
 		}
 	};
+	protected Max40Text invoiceNumber;
 	/**
 	 * Unique number to be used by the customer to cross-reference between the
 	 * tax region information and a tax invoice or notice.
@@ -335,8 +343,8 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -357,20 +365,21 @@ public class BillingTaxRegion1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvoiceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvoiceNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> BillingTaxRegion1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "InvcNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceNumber";
 			definition = "Unique number to be used by the customer to cross-reference between the tax region information and a tax invoice or notice.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max40Text.mmObject();
 		}
 	};
+	protected BillingMethod4 methodC;
 	/**
 	 * Tax values are based on tax calculation method C.
 	 * <p>
@@ -401,21 +410,22 @@ public class BillingTaxRegion1 {
 	 * definition} = "Tax values are based on tax calculation method C."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MethodC = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMethodC = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BillingTaxRegion1.mmObject();
 			businessComponentTrace_lazy = () -> Tax.mmObject();
+			componentContext_lazy = () -> BillingTaxRegion1.mmObject();
 			isDerived = false;
 			xmlTag = "MtdC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodC";
 			definition = "Tax values are based on tax calculation method C.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BillingMethod4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BillingMethod4.mmObject();
 		}
 	};
+	protected AmountAndDirection34 settlementAmount;
 	/**
 	 * Total tax amount expressed in the account’s settlement (or charging)
 	 * currency.
@@ -433,7 +443,7 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -454,21 +464,22 @@ public class BillingTaxRegion1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> BillingTaxRegion1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total tax amount expressed in the account’s settlement (or charging) currency.  \n\nUsage: This total sums the individual service level taxes as calculated for each service by methods A, B and D. The sum of these amounts across all tax regions for the statement is displayed as the tax total sum in the compensation section.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection34.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection34.mmObject();
 		}
 	};
+	protected AmountAndDirection34 taxDueToRegion;
 	/**
 	 * Total amount of all taxes for a specific customer within the tax region
 	 * expressed in the tax region’s host currency.
@@ -484,7 +495,7 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -505,36 +516,108 @@ public class BillingTaxRegion1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxDueToRegion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxDueToRegion = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> BillingTaxRegion1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TaxDueToRgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDueToRegion";
 			definition = "Total amount of all taxes for a specific customer within the tax region expressed in the tax region’s host currency. \n\nUsage: It is the same value as total tax amount and is included for the specific use of tax calculation methods A , B and D.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection34.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection34.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingTaxRegion1.RegionNumber, com.tools20022.repository.msg.BillingTaxRegion1.RegionName,
-						com.tools20022.repository.msg.BillingTaxRegion1.CustomerTaxIdentification, com.tools20022.repository.msg.BillingTaxRegion1.PointDate, com.tools20022.repository.msg.BillingTaxRegion1.SendingFinancialInstitution,
-						com.tools20022.repository.msg.BillingTaxRegion1.InvoiceNumber, com.tools20022.repository.msg.BillingTaxRegion1.MethodC, com.tools20022.repository.msg.BillingTaxRegion1.SettlementAmount,
-						com.tools20022.repository.msg.BillingTaxRegion1.TaxDueToRegion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingTaxRegion1.mmRegionNumber, com.tools20022.repository.msg.BillingTaxRegion1.mmRegionName,
+						com.tools20022.repository.msg.BillingTaxRegion1.mmCustomerTaxIdentification, com.tools20022.repository.msg.BillingTaxRegion1.mmPointDate,
+						com.tools20022.repository.msg.BillingTaxRegion1.mmSendingFinancialInstitution, com.tools20022.repository.msg.BillingTaxRegion1.mmInvoiceNumber, com.tools20022.repository.msg.BillingTaxRegion1.mmMethodC,
+						com.tools20022.repository.msg.BillingTaxRegion1.mmSettlementAmount, com.tools20022.repository.msg.BillingTaxRegion1.mmTaxDueToRegion);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BillingTaxRegion1";
 				definition = "Tax region that levies a tax on the services in a statement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max40Text getRegionNumber() {
+		return regionNumber;
+	}
+
+	public void setRegionNumber(Max40Text regionNumber) {
+		this.regionNumber = regionNumber;
+	}
+
+	public Max40Text getRegionName() {
+		return regionName;
+	}
+
+	public void setRegionName(Max40Text regionName) {
+		this.regionName = regionName;
+	}
+
+	public Max40Text getCustomerTaxIdentification() {
+		return customerTaxIdentification;
+	}
+
+	public void setCustomerTaxIdentification(Max40Text customerTaxIdentification) {
+		this.customerTaxIdentification = customerTaxIdentification;
+	}
+
+	public ISODate getPointDate() {
+		return pointDate;
+	}
+
+	public void setPointDate(ISODate pointDate) {
+		this.pointDate = pointDate;
+	}
+
+	public BillingTaxIdentification1 getSendingFinancialInstitution() {
+		return sendingFinancialInstitution;
+	}
+
+	public void setSendingFinancialInstitution(com.tools20022.repository.msg.BillingTaxIdentification1 sendingFinancialInstitution) {
+		this.sendingFinancialInstitution = sendingFinancialInstitution;
+	}
+
+	public Max40Text getInvoiceNumber() {
+		return invoiceNumber;
+	}
+
+	public void setInvoiceNumber(Max40Text invoiceNumber) {
+		this.invoiceNumber = invoiceNumber;
+	}
+
+	public BillingMethod4 getMethodC() {
+		return methodC;
+	}
+
+	public void setMethodC(com.tools20022.repository.msg.BillingMethod4 methodC) {
+		this.methodC = methodC;
+	}
+
+	public AmountAndDirection34 getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection34 settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public AmountAndDirection34 getTaxDueToRegion() {
+		return taxDueToRegion;
+	}
+
+	public void setTaxDueToRegion(com.tools20022.repository.msg.AmountAndDirection34 taxDueToRegion) {
+		this.taxDueToRegion = taxDueToRegion;
 	}
 }

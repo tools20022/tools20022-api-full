@@ -29,10 +29,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.GateHoldBackCode#HoldBack
- * GateHoldBackCode.HoldBack}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GateHoldBackCode#Gating
- * GateHoldBackCode.Gating}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.GateHoldBackCode#mmHoldBack
+ * GateHoldBackCode.mmHoldBack}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GateHoldBackCode#mmGating
+ * GateHoldBackCode.mmGating}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +82,7 @@ public class GateHoldBackCode {
 	 * definition} = "Hold back of redemption proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode HoldBack = new MMCode() {
+	public static final MMCode mmHoldBack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBack";
@@ -111,7 +112,7 @@ public class GateHoldBackCode {
 	 * definition} = "Gating of redemption proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode Gating = new MMCode() {
+	public static final MMCode mmGating = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gating";
@@ -124,11 +125,11 @@ public class GateHoldBackCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GateHoldBackCode";
 				definition = "Specifies the type of hold back on redemption proceeds.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GateHoldBackCode.HoldBack, com.tools20022.repository.codeset.GateHoldBackCode.Gating);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GateHoldBackCode.mmHoldBack, com.tools20022.repository.codeset.GateHoldBackCode.mmGating);
 				derivation_lazy = () -> Arrays.asList(GateHoldBack1Code.mmObject());
 			}
 		});

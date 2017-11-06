@@ -36,20 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DatePeriod1Choice#Date
- * DatePeriod1Choice.Date}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DatePeriod1Choice#DateMonth
- * DatePeriod1Choice.DateMonth}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DatePeriod1Choice#mmDate
+ * DatePeriod1Choice.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DatePeriod1Choice#FromDateToDate
- * DatePeriod1Choice.FromDateToDate}</li>
+ * {@linkplain com.tools20022.repository.choice.DatePeriod1Choice#mmDateMonth
+ * DatePeriod1Choice.mmDateMonth}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DatePeriod1Choice#mmFromDateToDate
+ * DatePeriod1Choice.mmFromDateToDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DatePeriod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate date;
 	/**
 	 * Time span defined by a specific date.
 	 * <p>
@@ -92,7 +94,7 @@ public class DatePeriod1Choice {
 	 * definition} = "Time span defined by a specific date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DatePeriod1Choice.mmObject();
 			isDerived = false;
@@ -100,11 +102,12 @@ public class DatePeriod1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Time span defined by a specific date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISOYearMonth dateMonth;
 	/**
 	 * Time span defined by a month and a year.
 	 * <p>
@@ -133,7 +136,7 @@ public class DatePeriod1Choice {
 	 * definition} = "Time span defined by a month and a year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateMonth = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateMonth = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DatePeriod1Choice.mmObject();
 			isDerived = false;
@@ -141,11 +144,12 @@ public class DatePeriod1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateMonth";
 			definition = "Time span defined by a month and a year.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
 		}
 	};
+	protected Period2 fromDateToDate;
 	/**
 	 * Time span defined by a start date and an end date.
 	 * <p>
@@ -171,7 +175,7 @@ public class DatePeriod1Choice {
 	 * definition} = "Time span defined by a start date and an end date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FromDateToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFromDateToDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DatePeriod1Choice.mmObject();
 			isDerived = false;
@@ -179,24 +183,48 @@ public class DatePeriod1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateToDate";
 			definition = "Time span defined by a start date and an end date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Period2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Period2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DatePeriod1Choice.Date, com.tools20022.repository.choice.DatePeriod1Choice.DateMonth,
-						com.tools20022.repository.choice.DatePeriod1Choice.FromDateToDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DatePeriod1Choice.mmDate, com.tools20022.repository.choice.DatePeriod1Choice.mmDateMonth,
+						com.tools20022.repository.choice.DatePeriod1Choice.mmFromDateToDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DatePeriod1Choice";
 				definition = "Period as a date, a month or a date time span for which the statement is provided.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public ISOYearMonth getDateMonth() {
+		return dateMonth;
+	}
+
+	public void setDateMonth(ISOYearMonth dateMonth) {
+		this.dateMonth = dateMonth;
+	}
+
+	public Period2 getFromDateToDate() {
+		return fromDateToDate;
+	}
+
+	public void setFromDateToDate(Period2 fromDateToDate) {
+		this.fromDateToDate = fromDateToDate;
 	}
 }

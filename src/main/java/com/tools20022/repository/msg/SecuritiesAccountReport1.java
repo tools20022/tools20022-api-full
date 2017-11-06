@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReport1#SecuritiesAccountIdentification
- * SecuritiesAccountReport1.SecuritiesAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReport1#mmSecuritiesAccountIdentification
+ * SecuritiesAccountReport1.mmSecuritiesAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReport1#SecuritiesAccountOrError
- * SecuritiesAccountReport1.SecuritiesAccountOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReport1#mmSecuritiesAccountOrError
+ * SecuritiesAccountReport1.mmSecuritiesAccountOrError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccountReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccount13 securitiesAccountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -90,7 +91,7 @@ public class SecuritiesAccountReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReport1.mmObject();
 			isDerived = false;
@@ -98,12 +99,13 @@ public class SecuritiesAccountReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	protected SecuritiesAccountOrBusinessError1Choice securitiesAccountOrError;
 	/**
 	 * Identifies the returned securities account reference data or error
 	 * information.
@@ -134,7 +136,7 @@ public class SecuritiesAccountReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesAccountOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesAccountOrError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountReport1.mmObject();
 			isDerived = false;
@@ -142,23 +144,39 @@ public class SecuritiesAccountReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountOrError";
 			definition = "Identifies the returned securities account reference data or error information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccountOrBusinessError1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesAccountOrBusinessError1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountReport1.SecuritiesAccountIdentification, com.tools20022.repository.msg.SecuritiesAccountReport1.SecuritiesAccountOrError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountReport1.mmSecuritiesAccountIdentification, com.tools20022.repository.msg.SecuritiesAccountReport1.mmSecuritiesAccountOrError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountReport1";
 				definition = "Set of elements used to report information about securities account reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccount13 getSecuritiesAccountIdentification() {
+		return securitiesAccountIdentification;
+	}
+
+	public void setSecuritiesAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccountIdentification) {
+		this.securitiesAccountIdentification = securitiesAccountIdentification;
+	}
+
+	public SecuritiesAccountOrBusinessError1Choice getSecuritiesAccountOrError() {
+		return securitiesAccountOrError;
+	}
+
+	public void setSecuritiesAccountOrError(SecuritiesAccountOrBusinessError1Choice securitiesAccountOrError) {
+		this.securitiesAccountOrError = securitiesAccountOrError;
 	}
 }

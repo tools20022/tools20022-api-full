@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Undertaking;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Confirmation information for the issued undertaking.
@@ -37,16 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingConfirmation1#Confirmer
- * UndertakingConfirmation1.Confirmer}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingConfirmation1#mmConfirmer
+ * UndertakingConfirmation1.mmConfirmer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingConfirmation1#ReferenceNumber
- * UndertakingConfirmation1.ReferenceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UndertakingConfirmation1#Date
- * UndertakingConfirmation1.Date}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingConfirmation1#mmReferenceNumber
+ * UndertakingConfirmation1.mmReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingConfirmation1#Confirmation
- * UndertakingConfirmation1.Confirmation}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingConfirmation1#mmDate
+ * UndertakingConfirmation1.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingConfirmation1#mmConfirmation
+ * UndertakingConfirmation1.mmConfirmation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingConfirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification43 confirmer;
 	/**
 	 * Party that adds its undertaking to honour the undertaking or amendment of
 	 * the undertaking.
@@ -82,8 +85,8 @@ public class UndertakingConfirmation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,21 +107,22 @@ public class UndertakingConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Confirmer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConfirmer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Cnfrmr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmer";
 			definition = "Party that adds its undertaking to honour the undertaking or amendment of the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected Max35Text referenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the confirmer to the
 	 * undertaking.
@@ -149,7 +153,7 @@ public class UndertakingConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
 			isDerived = false;
@@ -157,11 +161,12 @@ public class UndertakingConfirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the confirmer to the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Date and time when the undertaking or amendment of the undertaking was
 	 * confirmed.
@@ -176,8 +181,8 @@ public class UndertakingConfirmation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#DateOfAdvice
-	 * Undertaking.DateOfAdvice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmDateOfAdvice
+	 * Undertaking.mmDateOfAdvice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,20 +203,21 @@ public class UndertakingConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmDateOfAdvice;
 			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.DateOfAdvice;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date and time when the undertaking or amendment of the undertaking was confirmed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected List<Max2000Text> confirmation;
 	/**
 	 * Confirmation of the undertaking or amendment of the confirmed
 	 * undertaking.
@@ -242,7 +248,7 @@ public class UndertakingConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Confirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
 			isDerived = false;
@@ -250,8 +256,8 @@ public class UndertakingConfirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			definition = "Confirmation of the undertaking or amendment of the confirmed undertaking.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -259,15 +265,47 @@ public class UndertakingConfirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingConfirmation1.Confirmer, com.tools20022.repository.msg.UndertakingConfirmation1.ReferenceNumber,
-						com.tools20022.repository.msg.UndertakingConfirmation1.Date, com.tools20022.repository.msg.UndertakingConfirmation1.Confirmation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingConfirmation1.mmConfirmer, com.tools20022.repository.msg.UndertakingConfirmation1.mmReferenceNumber,
+						com.tools20022.repository.msg.UndertakingConfirmation1.mmDate, com.tools20022.repository.msg.UndertakingConfirmation1.mmConfirmation);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingConfirmation1";
 				definition = "Confirmation information for the issued undertaking.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification43 getConfirmer() {
+		return confirmer;
+	}
+
+	public void setConfirmer(com.tools20022.repository.msg.PartyIdentification43 confirmer) {
+		this.confirmer = confirmer;
+	}
+
+	public Max35Text getReferenceNumber() {
+		return referenceNumber;
+	}
+
+	public void setReferenceNumber(Max35Text referenceNumber) {
+		this.referenceNumber = referenceNumber;
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(DateAndDateTimeChoice date) {
+		this.date = date;
+	}
+
+	public List<Max2000Text> getConfirmation() {
+		return confirmation;
+	}
+
+	public void setConfirmation(List<Max2000Text> confirmation) {
+		this.confirmation = confirmation;
 	}
 }

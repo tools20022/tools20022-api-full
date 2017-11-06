@@ -29,10 +29,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DataTypeCode#TradingData
- * DataTypeCode.TradingData}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataTypeCode#ExerciseData
- * DataTypeCode.ExerciseData}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataTypeCode#mmTradingData
+ * DataTypeCode.mmTradingData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DataTypeCode#mmExerciseData
+ * DataTypeCode.mmExerciseData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,7 +81,7 @@ public class DataTypeCode {
 	 * definition} = "Specified type of  data is trading data."</li>
 	 * </ul>
 	 */
-	public static final MMCode TradingData = new MMCode() {
+	public static final MMCode mmTradingData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingData";
@@ -109,7 +110,7 @@ public class DataTypeCode {
 	 * definition} = "Specified type of  data is exercise data."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExerciseData = new MMCode() {
+	public static final MMCode mmExerciseData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExerciseData";
@@ -122,11 +123,11 @@ public class DataTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataTypeCode";
 				definition = "Specifies the type of data.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataTypeCode.TradingData, com.tools20022.repository.codeset.DataTypeCode.ExerciseData);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataTypeCode.mmTradingData, com.tools20022.repository.codeset.DataTypeCode.mmExerciseData);
 				derivation_lazy = () -> Arrays.asList(DataType1Code.mmObject());
 			}
 		});

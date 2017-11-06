@@ -38,8 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ReportingPartyRole#RegulatoryReport
- * ReportingPartyRole.RegulatoryReport}</li>
+ * {@linkplain com.tools20022.repository.entity.ReportingPartyRole#mmRegulatoryReport
+ * ReportingPartyRole.mmRegulatoryReport}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReport#ReportingPartyRole
- * RegulatoryReport.ReportingPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmReportingPartyRole
+ * RegulatoryReport.mmReportingPartyRole}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -68,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportingPartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected RegulatoryReport regulatoryReport;
 	/**
 	 * Report provided by the reporting party.
 	 * <p>
@@ -91,8 +92,8 @@ public class ReportingPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport#ReportingPartyRole
-	 * RegulatoryReport.ReportingPartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmReportingPartyRole
+	 * RegulatoryReport.mmReportingPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -116,34 +117,42 @@ public class ReportingPartyRole extends Role {
 	 * definition} = "Report provided by the reporting party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RegulatoryReport = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRegulatoryReport = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ReportingPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryReport";
 			definition = "Report provided by the reporting party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.ReportingPartyRole;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmReportingPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportingPartyRole";
 				definition = "Party responsible for providing regulatory reports.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegulatoryReport.ReportingPartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegulatoryReport.mmReportingPartyRole);
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ReportingPartyRole.RegulatoryReport);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ReportingPartyRole.mmRegulatoryReport);
 				derivationComponent_lazy = () -> Arrays.asList(CounterpartySideTransactionReporting1.mmObject(), TradingSideTransactionReporting1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RegulatoryReport getRegulatoryReport() {
+		return regulatoryReport;
+	}
+
+	public void setRegulatoryReport(com.tools20022.repository.entity.RegulatoryReport regulatoryReport) {
+		this.regulatoryReport = regulatoryReport;
 	}
 }

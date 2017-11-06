@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.CorporateActionStatusReason;
 import com.tools20022.repository.msg.PendingCancellationStatusReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between a reason or no reason for the corporate action instruction
@@ -37,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PendingCancellationStatus2Choice#NotSpecifiedReason
- * PendingCancellationStatus2Choice.NotSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.PendingCancellationStatus2Choice#mmNotSpecifiedReason
+ * PendingCancellationStatus2Choice.mmNotSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PendingCancellationStatus2Choice#Reason
- * PendingCancellationStatus2Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.PendingCancellationStatus2Choice#mmReason
+ * PendingCancellationStatus2Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PendingCancellationStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode notSpecifiedReason;
 	/**
 	 * Reason not specified.
 	 * <p>
@@ -80,8 +82,8 @@ public class PendingCancellationStatus2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +102,21 @@ public class PendingCancellationStatus2Choice {
 	 * definition} = "Reason not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> PendingCancellationStatus2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NotSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedReason";
 			definition = "Reason not specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<PendingCancellationStatusReason2> reason;
 	/**
 	 * Reason for the pending cancellation status.
 	 * <p>
@@ -126,8 +129,8 @@ public class PendingCancellationStatus2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,32 +149,48 @@ public class PendingCancellationStatus2Choice {
 	 * definition} = "Reason for the pending cancellation status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> PendingCancellationStatus2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the pending cancellation status.";
 			minOccurs = 1;
-			type_lazy = () -> PendingCancellationStatusReason2.mmObject();
 			isComposite = true;
+			type_lazy = () -> PendingCancellationStatusReason2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingCancellationStatus2Choice.NotSpecifiedReason, com.tools20022.repository.choice.PendingCancellationStatus2Choice.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingCancellationStatus2Choice.mmNotSpecifiedReason, com.tools20022.repository.choice.PendingCancellationStatus2Choice.mmReason);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationStatus2Choice";
 				definition = "Choice between a reason or no reason for the corporate action instruction cancellation pending cancellation status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNotSpecifiedReason() {
+		return notSpecifiedReason;
+	}
+
+	public void setNotSpecifiedReason(NoReasonCode notSpecifiedReason) {
+		this.notSpecifiedReason = notSpecifiedReason;
+	}
+
+	public List<PendingCancellationStatusReason2> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<PendingCancellationStatusReason2> reason) {
+		this.reason = reason;
 	}
 }

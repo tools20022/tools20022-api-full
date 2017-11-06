@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Original and corrected price information of an investment fund.
@@ -32,13 +33,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceCorrection3#PreviouslySentPriceDetails
- * PriceCorrection3.PreviouslySentPriceDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceCorrection3#mmPreviouslySentPriceDetails
+ * PriceCorrection3.mmPreviouslySentPriceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceCorrection3#CorrectedPriceDetails
- * PriceCorrection3.CorrectedPriceDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceCorrection3#Extension
- * PriceCorrection3.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceCorrection3#mmCorrectedPriceDetails
+ * PriceCorrection3.mmCorrectedPriceDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceCorrection3#mmExtension
+ * PriceCorrection3.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#PriceCorrectionDetails
- * PriceReportCorrectionV03.PriceCorrectionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#mmPriceCorrectionDetails
+ * PriceReportCorrectionV03.mmPriceCorrectionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceCorrection3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceValuation3 previouslySentPriceDetails;
 	/**
 	 * Information related to the price valuation of a financial instrument sent
 	 * in a previous price report.
@@ -98,7 +100,7 @@ public class PriceCorrection3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviouslySentPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviouslySentPriceDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PriceCorrection3.mmObject();
 			isDerived = false;
@@ -106,12 +108,13 @@ public class PriceCorrection3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySentPriceDetails";
 			definition = "Information related to the price valuation of a financial instrument sent in a previous price report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PriceValuation3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 		}
 	};
+	protected PriceValuation3 correctedPriceDetails;
 	/**
 	 * Information related to the new price valuation of a financial instrument,
 	 * which overrides previously sent information.
@@ -141,7 +144,7 @@ public class PriceCorrection3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CorrectedPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCorrectedPriceDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PriceCorrection3.mmObject();
 			isDerived = false;
@@ -149,12 +152,13 @@ public class PriceCorrection3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrectedPriceDetails";
 			definition = "Information related to the new price valuation of a financial instrument, which overrides previously sent information.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PriceValuation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -183,7 +187,7 @@ public class PriceCorrection3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PriceCorrection3.mmObject();
 			isDerived = false;
@@ -192,23 +196,47 @@ public class PriceCorrection3 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceCorrection3.PreviouslySentPriceDetails, com.tools20022.repository.msg.PriceCorrection3.CorrectedPriceDetails,
-						com.tools20022.repository.msg.PriceCorrection3.Extension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCorrectionV03.PriceCorrectionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceCorrection3.mmPreviouslySentPriceDetails, com.tools20022.repository.msg.PriceCorrection3.mmCorrectedPriceDetails,
+						com.tools20022.repository.msg.PriceCorrection3.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmPriceCorrectionDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceCorrection3";
 				definition = "Original and corrected price information of an investment fund.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceValuation3 getPreviouslySentPriceDetails() {
+		return previouslySentPriceDetails;
+	}
+
+	public void setPreviouslySentPriceDetails(com.tools20022.repository.msg.PriceValuation3 previouslySentPriceDetails) {
+		this.previouslySentPriceDetails = previouslySentPriceDetails;
+	}
+
+	public PriceValuation3 getCorrectedPriceDetails() {
+		return correctedPriceDetails;
+	}
+
+	public void setCorrectedPriceDetails(com.tools20022.repository.msg.PriceValuation3 correctedPriceDetails) {
+		this.correctedPriceDetails = correctedPriceDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

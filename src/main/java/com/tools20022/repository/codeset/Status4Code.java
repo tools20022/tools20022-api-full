@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Status4Code#Rejected
- * Status4Code.Rejected}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status4Code#Accepted
- * Status4Code.Accepted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status4Code#mmRejected
+ * Status4Code.mmRejected}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status4Code#mmAccepted
+ * Status4Code.mmAccepted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +77,7 @@ public class Status4Code extends StatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -99,7 +99,7 @@ public class Status4Code extends StatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -110,12 +110,12 @@ public class Status4Code extends StatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REJT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Status4Code";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status4Code.Rejected, com.tools20022.repository.codeset.Status4Code.Accepted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status4Code.mmRejected, com.tools20022.repository.codeset.Status4Code.mmAccepted);
 				trace_lazy = () -> StatusCode.mmObject();
 			}
 		});

@@ -33,32 +33,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#RetailCBCMAC
- * Algorithm1Code.RetailCBCMAC}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmRetailCBCMAC
+ * Algorithm1Code.mmRetailCBCMAC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#RetailSHA256MAC
- * Algorithm1Code.RetailSHA256MAC}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#UKPT
- * Algorithm1Code.UKPT}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#DUKPT
- * Algorithm1Code.DUKPT}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#DES112CBC
- * Algorithm1Code.DES112CBC}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#SHA256
- * Algorithm1Code.SHA256}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmRetailSHA256MAC
+ * Algorithm1Code.mmRetailSHA256MAC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmUKPT
+ * Algorithm1Code.mmUKPT}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmDUKPT
+ * Algorithm1Code.mmDUKPT}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmDES112CBC
+ * Algorithm1Code.mmDES112CBC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmSHA256
+ * Algorithm1Code.mmSHA256}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#SHA256WithRSA
- * Algorithm1Code.SHA256WithRSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmSHA256WithRSA
+ * Algorithm1Code.mmSHA256WithRSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#RSAEncryption
- * Algorithm1Code.RSAEncryption}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmRSAEncryption
+ * Algorithm1Code.mmRSAEncryption}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +94,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "RetailCBCMAC"</li>
 	 * </ul>
 	 */
-	public static final MMCode RetailCBCMAC = new MMCode() {
+	public static final MMCode mmRetailCBCMAC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailCBCMAC";
@@ -117,7 +117,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "RetailSHA256MAC"</li>
 	 * </ul>
 	 */
-	public static final MMCode RetailSHA256MAC = new MMCode() {
+	public static final MMCode mmRetailSHA256MAC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailSHA256MAC";
@@ -140,7 +140,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "UKPT"</li>
 	 * </ul>
 	 */
-	public static final MMCode UKPT = new MMCode() {
+	public static final MMCode mmUKPT = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKPT";
@@ -163,7 +163,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "DUKPT"</li>
 	 * </ul>
 	 */
-	public static final MMCode DUKPT = new MMCode() {
+	public static final MMCode mmDUKPT = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUKPT";
@@ -186,7 +186,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "DES112CBC"</li>
 	 * </ul>
 	 */
-	public static final MMCode DES112CBC = new MMCode() {
+	public static final MMCode mmDES112CBC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112CBC";
@@ -209,7 +209,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "SHA256"</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA256 = new MMCode() {
+	public static final MMCode mmSHA256 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256";
@@ -232,7 +232,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "SHA256WithRSA"</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA256WithRSA = new MMCode() {
+	public static final MMCode mmSHA256WithRSA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256WithRSA";
@@ -255,7 +255,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "RSAEncryption"</li>
 	 * </ul>
 	 */
-	public static final MMCode RSAEncryption = new MMCode() {
+	public static final MMCode mmRSAEncryption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSAEncryption";
@@ -266,14 +266,14 @@ public class Algorithm1Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MACC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Algorithm1Code";
 				definition = "Identification of a cryptographic algorithm";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm1Code.RetailCBCMAC, com.tools20022.repository.codeset.Algorithm1Code.RetailSHA256MAC, com.tools20022.repository.codeset.Algorithm1Code.UKPT,
-						com.tools20022.repository.codeset.Algorithm1Code.DUKPT, com.tools20022.repository.codeset.Algorithm1Code.DES112CBC, com.tools20022.repository.codeset.Algorithm1Code.SHA256,
-						com.tools20022.repository.codeset.Algorithm1Code.SHA256WithRSA, com.tools20022.repository.codeset.Algorithm1Code.RSAEncryption);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm1Code.mmRetailCBCMAC, com.tools20022.repository.codeset.Algorithm1Code.mmRetailSHA256MAC, com.tools20022.repository.codeset.Algorithm1Code.mmUKPT,
+						com.tools20022.repository.codeset.Algorithm1Code.mmDUKPT, com.tools20022.repository.codeset.Algorithm1Code.mmDES112CBC, com.tools20022.repository.codeset.Algorithm1Code.mmSHA256,
+						com.tools20022.repository.codeset.Algorithm1Code.mmSHA256WithRSA, com.tools20022.repository.codeset.Algorithm1Code.mmRSAEncryption);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountInformationType#InvestmentAccount
- * InvestmentAccountInformationType.InvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountInformationType#mmInvestmentAccount
+ * InvestmentAccountInformationType.mmInvestmentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountInformationType#AccountParties
- * InvestmentAccountInformationType.AccountParties}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountInformationType#mmAccountParties
+ * InvestmentAccountInformationType.mmAccountParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountInformationType#Intermediaries
- * InvestmentAccountInformationType.Intermediaries}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountInformationType#mmIntermediaries
+ * InvestmentAccountInformationType.mmIntermediaries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountInformationType#InvestmentPlan
- * InvestmentAccountInformationType.InvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountInformationType#mmInvestmentPlan
+ * InvestmentAccountInformationType.mmInvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountInformationType#CashSettlement
- * InvestmentAccountInformationType.CashSettlement}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountInformationType#mmCashSettlement
+ * InvestmentAccountInformationType.mmCashSettlement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentAccountInformationType {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator investmentAccount;
 	/**
 	 * Indicates if the core investment account information must be selected.
 	 * <p>
@@ -99,7 +100,7 @@ public class InvestmentAccountInformationType {
 	 * "Indicates if the core investment account information must be selected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvestmentAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvestmentAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
 			isDerived = false;
@@ -107,11 +108,12 @@ public class InvestmentAccountInformationType {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Indicates if the core investment account information must be selected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator accountParties;
 	/**
 	 * Indicates if the information about account parties must be selected.
 	 * <p>
@@ -141,7 +143,7 @@ public class InvestmentAccountInformationType {
 	 * "Indicates if the information about account parties must be selected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountParties = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountParties = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
 			isDerived = false;
@@ -149,11 +151,12 @@ public class InvestmentAccountInformationType {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountParties";
 			definition = "Indicates if the information about account parties must be selected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator intermediaries;
 	/**
 	 * Indicates if the information about the intermediaries must be selected.
 	 * <p>
@@ -184,7 +187,7 @@ public class InvestmentAccountInformationType {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Intermediaries = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntermediaries = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
 			isDerived = false;
@@ -192,11 +195,12 @@ public class InvestmentAccountInformationType {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediaries";
 			definition = "Indicates if the information about the intermediaries must be selected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator investmentPlan;
 	/**
 	 * Indicates if the information about the investment plan(s) must be
 	 * selected.
@@ -228,7 +232,7 @@ public class InvestmentAccountInformationType {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvestmentPlan = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvestmentPlan = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
 			isDerived = false;
@@ -236,11 +240,12 @@ public class InvestmentAccountInformationType {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Indicates if the information about the investment plan(s) must be selected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator cashSettlement;
 	/**
 	 * Indicates if the cash settlement information must be selected.
 	 * <p>
@@ -270,7 +275,7 @@ public class InvestmentAccountInformationType {
 	 * "Indicates if the cash settlement information must be selected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashSettlement = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
 			isDerived = false;
@@ -278,8 +283,8 @@ public class InvestmentAccountInformationType {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
 			definition = "Indicates if the cash settlement information must be selected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -287,15 +292,55 @@ public class InvestmentAccountInformationType {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountInformationType.InvestmentAccount, com.tools20022.repository.msg.InvestmentAccountInformationType.AccountParties,
-						com.tools20022.repository.msg.InvestmentAccountInformationType.Intermediaries, com.tools20022.repository.msg.InvestmentAccountInformationType.InvestmentPlan,
-						com.tools20022.repository.msg.InvestmentAccountInformationType.CashSettlement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountInformationType.mmInvestmentAccount, com.tools20022.repository.msg.InvestmentAccountInformationType.mmAccountParties,
+						com.tools20022.repository.msg.InvestmentAccountInformationType.mmIntermediaries, com.tools20022.repository.msg.InvestmentAccountInformationType.mmInvestmentPlan,
+						com.tools20022.repository.msg.InvestmentAccountInformationType.mmCashSettlement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccountInformationType";
 				definition = "Select the type(s) of information to be retrieved about a registered investment account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getInvestmentAccount() {
+		return investmentAccount;
+	}
+
+	public void setInvestmentAccount(YesNoIndicator investmentAccount) {
+		this.investmentAccount = investmentAccount;
+	}
+
+	public YesNoIndicator getAccountParties() {
+		return accountParties;
+	}
+
+	public void setAccountParties(YesNoIndicator accountParties) {
+		this.accountParties = accountParties;
+	}
+
+	public YesNoIndicator getIntermediaries() {
+		return intermediaries;
+	}
+
+	public void setIntermediaries(YesNoIndicator intermediaries) {
+		this.intermediaries = intermediaries;
+	}
+
+	public YesNoIndicator getInvestmentPlan() {
+		return investmentPlan;
+	}
+
+	public void setInvestmentPlan(YesNoIndicator investmentPlan) {
+		this.investmentPlan = investmentPlan;
+	}
+
+	public YesNoIndicator getCashSettlement() {
+		return cashSettlement;
+	}
+
+	public void setCashSettlement(YesNoIndicator cashSettlement) {
+		this.cashSettlement = cashSettlement;
 	}
 }

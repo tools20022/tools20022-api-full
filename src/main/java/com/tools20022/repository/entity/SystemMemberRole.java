@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the members of a system.
@@ -43,33 +44,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemMemberRole#CashBalance
- * SystemMemberRole.CashBalance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#Type
- * SystemMemberRole.Type}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemMemberRole#mmCashBalance
+ * SystemMemberRole.mmCashBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#mmType
+ * SystemMemberRole.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemMemberRole#MemberStatus
- * SystemMemberRole.MemberStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#Limit
- * SystemMemberRole.Limit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#Account
- * SystemMemberRole.Account}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemMemberRole#mmMemberStatus
+ * SystemMemberRole.mmMemberStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#mmLimit
+ * SystemMemberRole.mmLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole#mmAccount
+ * SystemMemberRole.mmAccount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.DirectMember DirectMember}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Account#SystemMember
- * Account.SystemMember}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmSystemMember
+ * Account.mmSystemMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#Counterparty
- * RiskManagementLimit.Counterparty}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashBalance#Counterparty
- * CashBalance.Counterparty}</li>
+ * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCounterparty
+ * RiskManagementLimit.mmCounterparty}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashBalance#mmCounterparty
+ * CashBalance.mmCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemStatus#SystemMemberRole
- * SystemStatus.SystemMemberRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemStatus#mmSystemMemberRole
+ * SystemStatus.mmSystemMemberRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -77,39 +84,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria#Identification
- * MemberSearchCriteria.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria#mmIdentification
+ * MemberSearchCriteria.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReport#MemberIdentification
- * MemberReport.MemberIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MemberReport#MemberInformation
- * MemberReport.MemberInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReport#mmMemberIdentification
+ * MemberReport.mmMemberIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReport2#MemberIdentification
- * MemberReport2.MemberIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReport#mmMemberInformation
+ * MemberReport.mmMemberInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReport2#MemberInformation
- * MemberReport2.MemberInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReport2#mmMemberIdentification
+ * MemberReport2.mmMemberIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria2#Identification
- * MemberSearchCriteria2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReport2#mmMemberInformation
+ * MemberReport2.mmMemberInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MemberReportOrError2Choice#Member
- * MemberReportOrError2Choice.Member}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria2#mmIdentification
+ * MemberSearchCriteria2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReport3#MemberIdentification
- * MemberReport3.MemberIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MemberReport3#MemberOrError
- * MemberReport3.MemberOrError}</li>
+ * {@linkplain com.tools20022.repository.choice.MemberReportOrError2Choice#mmMember
+ * MemberReportOrError2Choice.mmMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MemberReportOrError1Choice#Report
- * MemberReportOrError1Choice.Report}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DirectMember DirectMember}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReport3#mmMemberIdentification
+ * MemberReport3.mmMemberIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MemberReport3#mmMemberOrError
+ * MemberReport3.mmMemberOrError}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.MemberReportOrError1Choice#mmReport
+ * MemberReportOrError1Choice.mmReport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -144,8 +146,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -159,6 +161,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemMemberRole extends SystemPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.CashBalance> cashBalance;
 	/**
 	 * Cash balance for which a counterparty is specified.
 	 * <p>
@@ -167,8 +170,8 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#Counterparty
-	 * CashBalance.Counterparty}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCounterparty
+	 * CashBalance.mmCounterparty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -192,7 +195,7 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * definition} = "Cash balance for which a counterparty is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashBalance = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SystemMemberRole.mmObject();
 			isDerived = false;
@@ -200,11 +203,12 @@ public class SystemMemberRole extends SystemPartyRole {
 			name = "CashBalance";
 			definition = "Cash balance for which a counterparty is specified.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashBalance.Counterparty;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCounterparty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 		}
 	};
+	protected MemberTypeCode type;
 	/**
 	 * Nature of the relationship a member has with a system.
 	 * <p>
@@ -215,23 +219,26 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.MemberTypeCode
 	 * MemberTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.MemberSearchCriteria#Type
-	 * MemberSearchCriteria.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.MemberDetails#Type
-	 * MemberDetails.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.MemberSearchCriteria2#Type
-	 * MemberSearchCriteria2.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Member1#Type Member1.Type}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole
 	 * SystemMemberRole}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria#mmType
+	 * MemberSearchCriteria.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.MemberDetails#mmType
+	 * MemberDetails.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria2#mmType
+	 * MemberSearchCriteria2.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Member1#mmType
+	 * Member1.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -243,20 +250,21 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * definition} = "Nature of the relationship a member has with a system."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Type = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberSearchCriteria.Type, com.tools20022.repository.msg.MemberDetails.Type, com.tools20022.repository.msg.MemberSearchCriteria2.Type,
-					com.tools20022.repository.msg.Member1.Type);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberSearchCriteria.mmType, com.tools20022.repository.msg.MemberDetails.mmType, com.tools20022.repository.msg.MemberSearchCriteria2.mmType,
+					com.tools20022.repository.msg.Member1.mmType);
 			elementContext_lazy = () -> SystemMemberRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Nature of the relationship a member has with a system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MemberTypeCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SystemStatus> memberStatus;
 	/**
 	 * Specifies the status of a member.
 	 * <p>
@@ -265,8 +273,8 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SystemStatus#SystemMemberRole
-	 * SystemStatus.SystemMemberRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemStatus#mmSystemMemberRole
+	 * SystemStatus.mmSystemMemberRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -274,22 +282,22 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SystemStatus
 	 * SystemStatus}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria#Status
-	 * MemberSearchCriteria.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria2#Status
-	 * MemberSearchCriteria2.Status}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemMemberRole
 	 * SystemMemberRole}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria#mmStatus
+	 * MemberSearchCriteria.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MemberSearchCriteria2#mmStatus
+	 * MemberSearchCriteria2.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -301,20 +309,21 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * definition} = "Specifies the status of a member."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MemberStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMemberStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberSearchCriteria.Status, com.tools20022.repository.msg.MemberSearchCriteria2.Status);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberSearchCriteria.mmStatus, com.tools20022.repository.msg.MemberSearchCriteria2.mmStatus);
 			elementContext_lazy = () -> SystemMemberRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MemberStatus";
 			definition = "Specifies the status of a member.";
 			minOccurs = 0;
-			type_lazy = () -> SystemStatus.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SystemStatus.SystemMemberRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmSystemMemberRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmObject();
 		}
 	};
+	protected RiskManagementLimit limit;
 	/**
 	 * Cash management feature limiting the maximum risk a party accepts to take
 	 * with respect to a counterparty or a set of counterparties. A risk
@@ -330,8 +339,8 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#Counterparty
-	 * RiskManagementLimit.Counterparty}</li>
+	 * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCounterparty
+	 * RiskManagementLimit.mmCounterparty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -357,20 +366,21 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Limit = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmLimit = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SystemMemberRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "Cash management feature limiting the maximum risk a party accepts to take with respect to a counterparty or a set of counterparties. A risk management limit is either bilateral, ie, for a counterparty, or multilateral, ie, for a set of counterparties or all other members in a system.The limit may also apply to sponsored members, ie, indirect members. In principle, a risk management limit is calculated on the net position between two members and is expressed as a credit or debit limit, from the point of view of the party setting the limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RiskManagementLimit.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.Counterparty;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmCounterparty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmObject();
 		}
 	};
+	protected Account account;
 	/**
 	 * Account owned by the member of a system with the system.<br>
 	 * <br>
@@ -396,8 +406,8 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Account#SystemMember
-	 * Account.SystemMember}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmSystemMember
+	 * Account.mmSystemMember}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -422,43 +432,83 @@ public class SystemMemberRole extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Account = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SystemMemberRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account owned by the member of a system with the system.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.SystemMember;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmSystemMember;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemMemberRole";
 				definition = "Information about the members of a system.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.SystemMember, com.tools20022.repository.entity.RiskManagementLimit.Counterparty,
-						com.tools20022.repository.entity.CashBalance.Counterparty, com.tools20022.repository.entity.SystemStatus.SystemMemberRole);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberSearchCriteria.Identification, com.tools20022.repository.msg.MemberReport.MemberIdentification,
-						com.tools20022.repository.msg.MemberReport.MemberInformation, com.tools20022.repository.msg.MemberReport2.MemberIdentification, com.tools20022.repository.msg.MemberReport2.MemberInformation,
-						com.tools20022.repository.msg.MemberSearchCriteria2.Identification, com.tools20022.repository.choice.MemberReportOrError2Choice.Member, com.tools20022.repository.msg.MemberReport3.MemberIdentification,
-						com.tools20022.repository.msg.MemberReport3.MemberOrError, com.tools20022.repository.choice.MemberReportOrError1Choice.Report);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmSystemMember, com.tools20022.repository.entity.RiskManagementLimit.mmCounterparty,
+						com.tools20022.repository.entity.CashBalance.mmCounterparty, com.tools20022.repository.entity.SystemStatus.mmSystemMemberRole);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberSearchCriteria.mmIdentification, com.tools20022.repository.msg.MemberReport.mmMemberIdentification,
+						com.tools20022.repository.msg.MemberReport.mmMemberInformation, com.tools20022.repository.msg.MemberReport2.mmMemberIdentification, com.tools20022.repository.msg.MemberReport2.mmMemberInformation,
+						com.tools20022.repository.msg.MemberSearchCriteria2.mmIdentification, com.tools20022.repository.choice.MemberReportOrError2Choice.mmMember, com.tools20022.repository.msg.MemberReport3.mmMemberIdentification,
+						com.tools20022.repository.msg.MemberReport3.mmMemberOrError, com.tools20022.repository.choice.MemberReportOrError1Choice.mmReport);
 				subType_lazy = () -> Arrays.asList(DirectMember.mmObject());
 				superType_lazy = () -> SystemPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemMemberRole.CashBalance, com.tools20022.repository.entity.SystemMemberRole.Type, com.tools20022.repository.entity.SystemMemberRole.MemberStatus,
-						com.tools20022.repository.entity.SystemMemberRole.Limit, com.tools20022.repository.entity.SystemMemberRole.Account);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemMemberRole.mmCashBalance, com.tools20022.repository.entity.SystemMemberRole.mmType, com.tools20022.repository.entity.SystemMemberRole.mmMemberStatus,
+						com.tools20022.repository.entity.SystemMemberRole.mmLimit, com.tools20022.repository.entity.SystemMemberRole.mmAccount);
 				derivationComponent_lazy = () -> Arrays.asList(MemberIdentificationChoice.mmObject(), MemberIdentification2Choice.mmObject(), SystemMember2.mmObject(), MemberSearchCriteria.mmObject(), MemberDetails.mmObject(),
 						MemberReport.mmObject(), MemberReport2.mmObject(), MemberDetails1.mmObject(), MemberSearchCriteria2.mmObject(), Member1.mmObject(), MemberReportOrError2Choice.mmObject(), MemberReport3.mmObject(),
 						MemberReportOrError1Choice.mmObject(), Member2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CashBalance> getCashBalance() {
+		return cashBalance;
+	}
+
+	public void setCashBalance(List<com.tools20022.repository.entity.CashBalance> cashBalance) {
+		this.cashBalance = cashBalance;
+	}
+
+	public MemberTypeCode getType() {
+		return type;
+	}
+
+	public void setType(MemberTypeCode type) {
+		this.type = type;
+	}
+
+	public List<SystemStatus> getMemberStatus() {
+		return memberStatus;
+	}
+
+	public void setMemberStatus(List<com.tools20022.repository.entity.SystemStatus> memberStatus) {
+		this.memberStatus = memberStatus;
+	}
+
+	public RiskManagementLimit getLimit() {
+		return limit;
+	}
+
+	public void setLimit(com.tools20022.repository.entity.RiskManagementLimit limit) {
+		this.limit = limit;
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.entity.Account account) {
+		this.account = account;
 	}
 }

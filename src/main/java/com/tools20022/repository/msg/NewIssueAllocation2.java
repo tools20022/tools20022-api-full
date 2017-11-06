@@ -37,13 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NewIssueAllocation2#Restricted
- * NewIssueAllocation2.Restricted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NewIssueAllocation2#ExemptPersonReason
- * NewIssueAllocation2.ExemptPersonReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NewIssueAllocation2#DeMinimus
- * NewIssueAllocation2.DeMinimus}</li>
+ * {@linkplain com.tools20022.repository.msg.NewIssueAllocation2#mmRestricted
+ * NewIssueAllocation2.mmRestricted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NewIssueAllocation2#mmExemptPersonReason
+ * NewIssueAllocation2.mmExemptPersonReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NewIssueAllocation2#mmDeMinimus
+ * NewIssueAllocation2.mmDeMinimus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,30 +55,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#NewIssueAllocation
- * AccountOpeningInstructionV05.NewIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmNewIssueAllocation
+ * AccountOpeningInstructionV05.mmNewIssueAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05#NewIssueAllocation
- * AccountDetailsConfirmationV05.NewIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05#mmNewIssueAllocation
+ * AccountDetailsConfirmationV05.mmNewIssueAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#NewIssueAllocation
- * AccountOpeningInstructionV06.NewIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmNewIssueAllocation
+ * AccountOpeningInstructionV06.mmNewIssueAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06#NewIssueAllocation
- * AccountDetailsConfirmationV06.NewIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06#mmNewIssueAllocation
+ * AccountDetailsConfirmationV06.mmNewIssueAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07#NewIssueAllocation
- * AccountDetailsConfirmationV07.NewIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07#mmNewIssueAllocation
+ * AccountDetailsConfirmationV07.mmNewIssueAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#NewIssueAllocation
- * AccountOpeningInstructionV07.NewIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmNewIssueAllocation
+ * AccountOpeningInstructionV07.mmNewIssueAllocation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NewIssueAllocation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator restricted;
 	/**
 	 * Indicates whether the investor is eligible to participate in the profits
 	 * and losses from a new issue.
@@ -110,8 +113,8 @@ public class NewIssueAllocation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Investor#Restricted
-	 * Investor.Restricted}</li>
+	 * {@linkplain com.tools20022.repository.entity.Investor#mmRestricted
+	 * Investor.mmRestricted}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -133,25 +136,26 @@ public class NewIssueAllocation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.NewIssueAllocation1#Restricted
-	 * NewIssueAllocation1.Restricted}</li>
+	 * {@linkplain com.tools20022.repository.msg.NewIssueAllocation1#mmRestricted
+	 * NewIssueAllocation1.mmRestricted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Restricted = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestricted = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmRestricted;
 			componentContext_lazy = () -> NewIssueAllocation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.Restricted;
 			isDerived = false;
 			xmlTag = "Rstrctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
 			definition = "Indicates whether the investor is eligible to participate in the profits and losses from a new issue.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.Restricted;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmRestricted;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max350Text exemptPersonReason;
 	/**
 	 * Reason for exemption.
 	 * <p>
@@ -180,11 +184,11 @@ public class NewIssueAllocation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.NewIssueAllocation1#ExemptPersonReason
-	 * NewIssueAllocation1.ExemptPersonReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.NewIssueAllocation1#mmExemptPersonReason
+	 * NewIssueAllocation1.mmExemptPersonReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExemptPersonReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExemptPersonReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NewIssueAllocation2.mmObject();
 			isDerived = false;
@@ -192,12 +196,13 @@ public class NewIssueAllocation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptPersonReason";
 			definition = "Reason for exemption.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.ExemptPersonReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmExemptPersonReason;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DeMinimus1Choice deMinimus;
 	/**
 	 * Conditions applicable when the investor is covered by the "de minimis"
 	 * exemption.
@@ -227,7 +232,7 @@ public class NewIssueAllocation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeMinimus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeMinimus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NewIssueAllocation2.mmObject();
 			isDerived = false;
@@ -235,23 +240,23 @@ public class NewIssueAllocation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeMinimus";
 			definition = "Conditions applicable when the investor is covered by the \"de minimis\" exemption.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DeMinimus1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DeMinimus1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation2.Restricted, com.tools20022.repository.msg.NewIssueAllocation2.ExemptPersonReason,
-						com.tools20022.repository.msg.NewIssueAllocation2.DeMinimus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation2.mmRestricted, com.tools20022.repository.msg.NewIssueAllocation2.mmExemptPersonReason,
+						com.tools20022.repository.msg.NewIssueAllocation2.mmDeMinimus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmNewIssueAllocation,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmNewIssueAllocation,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmNewIssueAllocation);
 				trace_lazy = () -> Investor.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.NewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.NewIssueAllocation,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.NewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.NewIssueAllocation,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.NewIssueAllocation, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.NewIssueAllocation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NewIssueAllocation2";
 				definition = "Information about the investment account ownership with respect to new issue allocation for a hedge fund.";
@@ -259,5 +264,29 @@ public class NewIssueAllocation2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getRestricted() {
+		return restricted;
+	}
+
+	public void setRestricted(YesNoIndicator restricted) {
+		this.restricted = restricted;
+	}
+
+	public Max350Text getExemptPersonReason() {
+		return exemptPersonReason;
+	}
+
+	public void setExemptPersonReason(Max350Text exemptPersonReason) {
+		this.exemptPersonReason = exemptPersonReason;
+	}
+
+	public DeMinimus1Choice getDeMinimus() {
+		return deMinimus;
+	}
+
+	public void setDeMinimus(DeMinimus1Choice deMinimus) {
+		this.deMinimus = deMinimus;
 	}
 }

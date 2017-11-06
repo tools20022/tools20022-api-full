@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.NotificationtoReceiveISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,21 +66,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV04#GroupHeader
- * NotificationToReceiveV04.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV04#mmGroupHeader
+ * NotificationToReceiveV04.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV04#Notification
- * NotificationToReceiveV04.Notification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV04#mmNotification
+ * NotificationToReceiveV04.mmNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV04#SupplementaryData
- * NotificationToReceiveV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV04#mmSupplementaryData
+ * NotificationToReceiveV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV04#identifier
- * NotificationToReceiveV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.057.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationToReceiveV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader59 groupHeader;
 	/**
 	 * Set of elements used to provide further details on the message.
 	 * <p>
@@ -131,30 +131,31 @@ public class NotificationToReceiveV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV05#GroupHeader
-	 * NotificationToReceiveV05.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV05#mmGroupHeader
+	 * NotificationToReceiveV05.mmGroupHeader}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV03#GroupHeader
-	 * NotificationToReceiveV03.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV03#mmGroupHeader
+	 * NotificationToReceiveV03.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of elements used to provide further details on the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveV03.GroupHeader;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveV05.GroupHeader);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveV05.mmGroupHeader);
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveV03.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader59.mmObject();
 		}
 	};
+	protected AccountNotification10 notification;
 	/**
 	 * Set of elements used to provide further details on the account
 	 * notification.
@@ -183,30 +184,31 @@ public class NotificationToReceiveV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV05#Notification
-	 * NotificationToReceiveV05.Notification}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV05#mmNotification
+	 * NotificationToReceiveV05.mmNotification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV03#Notification
-	 * NotificationToReceiveV03.Notification}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV03#mmNotification
+	 * NotificationToReceiveV03.mmNotification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Notification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Ntfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notification";
 			definition = "Set of elements used to provide further details on the account notification.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveV03.Notification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveV05.Notification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveV05.mmNotification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveV03.mmNotification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountNotification10.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -235,54 +237,27 @@ public class NotificationToReceiveV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV05#SupplementaryData
-	 * NotificationToReceiveV05.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV05#mmSupplementaryData
+	 * NotificationToReceiveV05.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV03#SupplementaryData
-	 * NotificationToReceiveV03.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV03#mmSupplementaryData
+	 * NotificationToReceiveV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveV03.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveV05.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveV05.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "057"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "057";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -292,17 +267,48 @@ public class NotificationToReceiveV04 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationToReceiveV04";
 				definition = "Scope\r\nThe NotificationToReceive message is sent by an account owner or by a party acting on the account owner's behalf to one of the account owner's account servicing institutions. It is an advance notice that the account servicing institution will receive funds to be credited to the account of the account owner.\r\nUsage\r\nThe NotificationToReceive message is used to advise the account servicing institution of funds that the account owner expects to have credited to its account. The message can be used in either a direct or a relay scenario.";
-				previousVersion_lazy = () -> NotificationToReceiveV03.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(NotificationToReceiveV05.mmObject());
+				previousVersion_lazy = () -> NotificationToReceiveV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(NotificationtoReceiveISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "NtfctnToRcv";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveV04.GroupHeader, com.tools20022.repository.area.camt.NotificationToReceiveV04.Notification,
-						com.tools20022.repository.area.camt.NotificationToReceiveV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.NotificationToReceiveV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveV04.mmGroupHeader, com.tools20022.repository.area.camt.NotificationToReceiveV04.mmNotification,
+						com.tools20022.repository.area.camt.NotificationToReceiveV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "057";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader59 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader59 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public AccountNotification10 getNotification() {
+		return notification;
+	}
+
+	public void setNotification(AccountNotification10 notification) {
+		this.notification = notification;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

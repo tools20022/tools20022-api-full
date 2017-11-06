@@ -35,72 +35,72 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#AccountServicerDeadlineMissed
- * RejectionReason17Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmAccountServicerDeadlineMissed
+ * RejectionReason17Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#OptionCancelled
- * RejectionReason17Code.OptionCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmOptionCancelled
+ * RejectionReason17Code.mmOptionCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#RejectedSinceAlreadyCancelled
- * RejectionReason17Code.RejectedSinceAlreadyCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmRejectedSinceAlreadyCancelled
+ * RejectionReason17Code.mmRejectedSinceAlreadyCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#RejectedSinceInProgress
- * RejectionReason17Code.RejectedSinceInProgress}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmRejectedSinceInProgress
+ * RejectionReason17Code.mmRejectedSinceInProgress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#QuantityRejection
- * RejectionReason17Code.QuantityRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmQuantityRejection
+ * RejectionReason17Code.mmQuantityRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#InvalidSecurity
- * RejectionReason17Code.InvalidSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmInvalidSecurity
+ * RejectionReason17Code.mmInvalidSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#UnrecognizedIdentification
- * RejectionReason17Code.UnrecognizedIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmUnrecognizedIdentification
+ * RejectionReason17Code.mmUnrecognizedIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#InstructionIrrevocable
- * RejectionReason17Code.InstructionIrrevocable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmInstructionIrrevocable
+ * RejectionReason17Code.mmInstructionIrrevocable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#OptionInactive
- * RejectionReason17Code.OptionInactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmOptionInactive
+ * RejectionReason17Code.mmOptionInactive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#InvalidForTaxAuthorities
- * RejectionReason17Code.InvalidForTaxAuthorities}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmInvalidForTaxAuthorities
+ * RejectionReason17Code.mmInvalidForTaxAuthorities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#LackofSecurities
- * RejectionReason17Code.LackofSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmLackofSecurities
+ * RejectionReason17Code.mmLackofSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#MarketDeadlineMissed
- * RejectionReason17Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmMarketDeadlineMissed
+ * RejectionReason17Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#Other
- * RejectionReason17Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmOther
+ * RejectionReason17Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#Mismatch
- * RejectionReason17Code.Mismatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmMismatch
+ * RejectionReason17Code.mmMismatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#OptionNumberRejection
- * RejectionReason17Code.OptionNumberRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmOptionNumberRejection
+ * RejectionReason17Code.mmOptionNumberRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#InvalidOptionType
- * RejectionReason17Code.InvalidOptionType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmInvalidOptionType
+ * RejectionReason17Code.mmInvalidOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#RefusedByTaxAuthorities
- * RejectionReason17Code.RefusedByTaxAuthorities}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmRefusedByTaxAuthorities
+ * RejectionReason17Code.mmRefusedByTaxAuthorities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#SafekeepingAccountRejection
- * RejectionReason17Code.SafekeepingAccountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmSafekeepingAccountRejection
+ * RejectionReason17Code.mmSafekeepingAccountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#InvalidReference
- * RejectionReason17Code.InvalidReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmInvalidReference
+ * RejectionReason17Code.mmInvalidReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#IncorrectCertification
- * RejectionReason17Code.IncorrectCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason17Code#mmIncorrectCertification
+ * RejectionReason17Code.mmIncorrectCertification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -138,7 +138,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -161,7 +161,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "OptionCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionCancelled = new MMCode() {
+	public static final MMCode mmOptionCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionCancelled";
@@ -184,7 +184,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "RejectedSinceAlreadyCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedSinceAlreadyCancelled = new MMCode() {
+	public static final MMCode mmRejectedSinceAlreadyCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceAlreadyCancelled";
@@ -207,7 +207,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "RejectedSinceInProgress"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedSinceInProgress = new MMCode() {
+	public static final MMCode mmRejectedSinceInProgress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceInProgress";
@@ -230,7 +230,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "QuantityRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityRejection = new MMCode() {
+	public static final MMCode mmQuantityRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
@@ -253,7 +253,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "InvalidSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidSecurity = new MMCode() {
+	public static final MMCode mmInvalidSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurity";
@@ -276,7 +276,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "UnrecognizedIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnrecognizedIdentification = new MMCode() {
+	public static final MMCode mmUnrecognizedIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognizedIdentification";
@@ -299,7 +299,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "InstructionIrrevocable"</li>
 	 * </ul>
 	 */
-	public static final MMCode InstructionIrrevocable = new MMCode() {
+	public static final MMCode mmInstructionIrrevocable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIrrevocable";
@@ -322,7 +322,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "OptionInactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionInactive = new MMCode() {
+	public static final MMCode mmOptionInactive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionInactive";
@@ -345,7 +345,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "InvalidForTaxAuthorities"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidForTaxAuthorities = new MMCode() {
+	public static final MMCode mmInvalidForTaxAuthorities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidForTaxAuthorities";
@@ -368,7 +368,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "LackofSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode LackofSecurities = new MMCode() {
+	public static final MMCode mmLackofSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackofSecurities";
@@ -391,7 +391,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -414,7 +414,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -437,7 +437,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "Mismatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mismatch = new MMCode() {
+	public static final MMCode mmMismatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mismatch";
@@ -460,7 +460,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "OptionNumberRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionNumberRejection = new MMCode() {
+	public static final MMCode mmOptionNumberRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRejection";
@@ -483,7 +483,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "InvalidOptionType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidOptionType = new MMCode() {
+	public static final MMCode mmInvalidOptionType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOptionType";
@@ -506,7 +506,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "RefusedByTaxAuthorities"</li>
 	 * </ul>
 	 */
-	public static final MMCode RefusedByTaxAuthorities = new MMCode() {
+	public static final MMCode mmRefusedByTaxAuthorities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefusedByTaxAuthorities";
@@ -529,7 +529,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "SafekeepingAccountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SafekeepingAccountRejection = new MMCode() {
+	public static final MMCode mmSafekeepingAccountRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRejection";
@@ -552,7 +552,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "InvalidReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidReference = new MMCode() {
+	public static final MMCode mmInvalidReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidReference";
@@ -575,7 +575,7 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	 * name} = "IncorrectCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectCertification = new MMCode() {
+	public static final MMCode mmIncorrectCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCertification";
@@ -586,21 +586,21 @@ public class RejectionReason17Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason17Code";
 				definition = "Standard code to specify  the reason why the instruction/cancellation request has a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason17Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason17Code.OptionCancelled,
-						com.tools20022.repository.codeset.RejectionReason17Code.RejectedSinceAlreadyCancelled, com.tools20022.repository.codeset.RejectionReason17Code.RejectedSinceInProgress,
-						com.tools20022.repository.codeset.RejectionReason17Code.QuantityRejection, com.tools20022.repository.codeset.RejectionReason17Code.InvalidSecurity,
-						com.tools20022.repository.codeset.RejectionReason17Code.UnrecognizedIdentification, com.tools20022.repository.codeset.RejectionReason17Code.InstructionIrrevocable,
-						com.tools20022.repository.codeset.RejectionReason17Code.OptionInactive, com.tools20022.repository.codeset.RejectionReason17Code.InvalidForTaxAuthorities,
-						com.tools20022.repository.codeset.RejectionReason17Code.LackofSecurities, com.tools20022.repository.codeset.RejectionReason17Code.MarketDeadlineMissed, com.tools20022.repository.codeset.RejectionReason17Code.Other,
-						com.tools20022.repository.codeset.RejectionReason17Code.Mismatch, com.tools20022.repository.codeset.RejectionReason17Code.OptionNumberRejection,
-						com.tools20022.repository.codeset.RejectionReason17Code.InvalidOptionType, com.tools20022.repository.codeset.RejectionReason17Code.RefusedByTaxAuthorities,
-						com.tools20022.repository.codeset.RejectionReason17Code.SafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason17Code.InvalidReference,
-						com.tools20022.repository.codeset.RejectionReason17Code.IncorrectCertification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason17Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason17Code.mmOptionCancelled,
+						com.tools20022.repository.codeset.RejectionReason17Code.mmRejectedSinceAlreadyCancelled, com.tools20022.repository.codeset.RejectionReason17Code.mmRejectedSinceInProgress,
+						com.tools20022.repository.codeset.RejectionReason17Code.mmQuantityRejection, com.tools20022.repository.codeset.RejectionReason17Code.mmInvalidSecurity,
+						com.tools20022.repository.codeset.RejectionReason17Code.mmUnrecognizedIdentification, com.tools20022.repository.codeset.RejectionReason17Code.mmInstructionIrrevocable,
+						com.tools20022.repository.codeset.RejectionReason17Code.mmOptionInactive, com.tools20022.repository.codeset.RejectionReason17Code.mmInvalidForTaxAuthorities,
+						com.tools20022.repository.codeset.RejectionReason17Code.mmLackofSecurities, com.tools20022.repository.codeset.RejectionReason17Code.mmMarketDeadlineMissed,
+						com.tools20022.repository.codeset.RejectionReason17Code.mmOther, com.tools20022.repository.codeset.RejectionReason17Code.mmMismatch, com.tools20022.repository.codeset.RejectionReason17Code.mmOptionNumberRejection,
+						com.tools20022.repository.codeset.RejectionReason17Code.mmInvalidOptionType, com.tools20022.repository.codeset.RejectionReason17Code.mmRefusedByTaxAuthorities,
+						com.tools20022.repository.codeset.RejectionReason17Code.mmSafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason17Code.mmInvalidReference,
+						com.tools20022.repository.codeset.RejectionReason17Code.mmIncorrectCertification);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

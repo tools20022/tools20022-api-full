@@ -33,23 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * TaxationBasisCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis4Code#Flat
- * TaxationBasis4Code.Flat}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis4Code#PerUnit
- * TaxationBasis4Code.PerUnit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis4Code#mmFlat
+ * TaxationBasis4Code.mmFlat}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasis4Code#GrossAmount
- * TaxationBasis4Code.GrossAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasis4Code#mmPerUnit
+ * TaxationBasis4Code.mmPerUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasis4Code#NetAmount
- * TaxationBasis4Code.NetAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasis4Code#mmGrossAmount
+ * TaxationBasis4Code.mmGrossAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasis4Code#mmNetAmount
+ * TaxationBasis4Code.mmNetAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +86,7 @@ public class TaxationBasis4Code extends TaxationBasisCode {
 	 * name} = "Flat"</li>
 	 * </ul>
 	 */
-	public static final MMCode Flat = new MMCode() {
+	public static final MMCode mmFlat = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Flat";
@@ -108,7 +109,7 @@ public class TaxationBasis4Code extends TaxationBasisCode {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode PerUnit = new MMCode() {
+	public static final MMCode mmPerUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
@@ -131,7 +132,7 @@ public class TaxationBasis4Code extends TaxationBasisCode {
 	 * name} = "GrossAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode GrossAmount = new MMCode() {
+	public static final MMCode mmGrossAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
@@ -154,7 +155,7 @@ public class TaxationBasis4Code extends TaxationBasisCode {
 	 * name} = "NetAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetAmount = new MMCode() {
+	public static final MMCode mmNetAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
@@ -165,13 +166,13 @@ public class TaxationBasis4Code extends TaxationBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FLAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxationBasis4Code";
 				definition = "Specifies the tax basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasis4Code.Flat, com.tools20022.repository.codeset.TaxationBasis4Code.PerUnit, com.tools20022.repository.codeset.TaxationBasis4Code.GrossAmount,
-						com.tools20022.repository.codeset.TaxationBasis4Code.NetAmount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasis4Code.mmFlat, com.tools20022.repository.codeset.TaxationBasis4Code.mmPerUnit,
+						com.tools20022.repository.codeset.TaxationBasis4Code.mmGrossAmount, com.tools20022.repository.codeset.TaxationBasis4Code.mmNetAmount);
 				trace_lazy = () -> TaxationBasisCode.mmObject();
 			}
 		});

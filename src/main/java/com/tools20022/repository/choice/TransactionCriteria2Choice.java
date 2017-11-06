@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionCriteria2Choice#QueryName
- * TransactionCriteria2Choice.QueryName}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionCriteria2Choice#mmQueryName
+ * TransactionCriteria2Choice.mmQueryName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionCriteria2Choice#NewCriteria
- * TransactionCriteria2Choice.NewCriteria}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionCriteria2Choice#mmNewCriteria
+ * TransactionCriteria2Choice.mmNewCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionCriteria2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text queryName;
 	/**
 	 * Recalls the criteria (search and return criteria) defined in a preceding
 	 * query.
@@ -98,11 +99,11 @@ public class TransactionCriteria2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TransactionCriteria1Choice#QueryName
-	 * TransactionCriteria1Choice.QueryName}</li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionCriteria1Choice#mmQueryName
+	 * TransactionCriteria1Choice.mmQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionCriteria2Choice.mmObject();
 			isDerived = false;
@@ -110,12 +111,13 @@ public class TransactionCriteria2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransactionCriteria1Choice.QueryName;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TransactionCriteria1Choice.mmQueryName;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TransactionCriteria5 newCriteria;
 	/**
 	 * Explicitly defines the query criteria.
 	 * <p>
@@ -143,11 +145,11 @@ public class TransactionCriteria2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TransactionCriteria1Choice#NewCriteria
-	 * TransactionCriteria1Choice.NewCriteria}</li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionCriteria1Choice#mmNewCriteria
+	 * TransactionCriteria1Choice.mmNewCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionCriteria2Choice.mmObject();
 			isDerived = false;
@@ -155,19 +157,19 @@ public class TransactionCriteria2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Explicitly defines the query criteria.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransactionCriteria1Choice.NewCriteria;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TransactionCriteria1Choice.mmNewCriteria;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionCriteria5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TransactionCriteria5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionCriteria2Choice.QueryName, com.tools20022.repository.choice.TransactionCriteria2Choice.NewCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionCriteria2Choice.mmQueryName, com.tools20022.repository.choice.TransactionCriteria2Choice.mmNewCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionCriteria2Choice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
@@ -175,5 +177,21 @@ public class TransactionCriteria2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQueryName() {
+		return queryName;
+	}
+
+	public void setQueryName(Max35Text queryName) {
+		this.queryName = queryName;
+	}
+
+	public TransactionCriteria5 getNewCriteria() {
+		return newCriteria;
+	}
+
+	public void setNewCriteria(TransactionCriteria5 newCriteria) {
+		this.newCriteria = newCriteria;
 	}
 }

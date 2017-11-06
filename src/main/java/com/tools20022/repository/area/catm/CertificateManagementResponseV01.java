@@ -64,21 +64,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV01#Header
- * CertificateManagementResponseV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV01#mmHeader
+ * CertificateManagementResponseV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV01#CertificateManagementResponse
- * CertificateManagementResponseV01.CertificateManagementResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV01#mmCertificateManagementResponse
+ * CertificateManagementResponseV01.mmCertificateManagementResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV01#SecurityTrailer
- * CertificateManagementResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV01#mmSecurityTrailer
+ * CertificateManagementResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV01#identifier
- * CertificateManagementResponseV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catm.008.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CertificateManagementResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header29 header;
 	/**
 	 * Information related to the protocol management.
 	 * <p>
@@ -116,17 +115,18 @@ public class CertificateManagementResponseV01 {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header29.mmObject();
 		}
 	};
+	protected CertificateManagementResponse1 certificateManagementResponse;
 	/**
 	 * Information related to the result of the certificate management request.
 	 * <p>
@@ -152,17 +152,18 @@ public class CertificateManagementResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CertificateManagementResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCertificateManagementResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CertMgmtRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateManagementResponse";
 			definition = "Information related to the result of the certificate management request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CertificateManagementResponse1.mmObject();
 		}
 	};
+	protected ContentInformationType13 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC or a digital signature.
 	 * <p>
@@ -187,42 +188,15 @@ public class CertificateManagementResponseV01 {
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType13.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catm"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catm";
-			messageFunctionality = "008";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -236,11 +210,42 @@ public class CertificateManagementResponseV01 {
 				rootElement = "Document";
 				xmlTag = "CertMgmtRspn";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.CertificateManagementResponseV01.Header,
-						com.tools20022.repository.area.catm.CertificateManagementResponseV01.CertificateManagementResponse, com.tools20022.repository.area.catm.CertificateManagementResponseV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catm.CertificateManagementResponseV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmHeader,
+						com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmCertificateManagementResponse, com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catm";
+						messageFunctionality = "008";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header29 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header29 header) {
+		this.header = header;
+	}
+
+	public CertificateManagementResponse1 getCertificateManagementResponse() {
+		return certificateManagementResponse;
+	}
+
+	public void setCertificateManagementResponse(CertificateManagementResponse1 certificateManagementResponse) {
+		this.certificateManagementResponse = certificateManagementResponse;
+	}
+
+	public ContentInformationType13 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType13 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

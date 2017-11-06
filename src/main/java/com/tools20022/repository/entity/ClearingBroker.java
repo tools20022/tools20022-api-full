@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#ClearingFirm
- * ConfirmationParties4.ClearingFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmClearingFirm
+ * ConfirmationParties4.mmClearingFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties2#ClearingFirm
- * ConfirmationParties2.ClearingFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties2#mmClearingFirm
+ * ConfirmationParties2.mmClearingFirm}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,11 +69,11 @@ public class ClearingBroker extends Broker {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClearingBroker";
 				definition = "Party which acts as a liaison between an investor and a clearing corporation.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.ClearingFirm, com.tools20022.repository.msg.ConfirmationParties2.ClearingFirm);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.mmClearingFirm, com.tools20022.repository.msg.ConfirmationParties2.mmClearingFirm);
 				superType_lazy = () -> Broker.mmObject();
 			}
 		});

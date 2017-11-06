@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice#CurrencyToBuy
- * CurrencyToBuyOrSell1Choice.CurrencyToBuy}</li>
+ * {@linkplain com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice#mmCurrencyToBuy
+ * CurrencyToBuyOrSell1Choice.mmCurrencyToBuy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice#CurrencyToSell
- * CurrencyToBuyOrSell1Choice.CurrencyToSell}</li>
+ * {@linkplain com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice#mmCurrencyToSell
+ * CurrencyToBuyOrSell1Choice.mmCurrencyToSell}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyToBuyOrSell1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyCode currencyToBuy;
 	/**
 	 * Account servicer is instructed to buy the indicated currency after the
 	 * receipt of cash proceeds.
@@ -76,8 +77,8 @@ public class CurrencyToBuyOrSell1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#CurrencyToBuy
-	 * SecuritiesSettlement.CurrencyToBuy}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmCurrencyToBuy
+	 * SecuritiesSettlement.mmCurrencyToBuy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class CurrencyToBuyOrSell1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyToBuy = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyToBuy = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmCurrencyToBuy;
 			componentContext_lazy = () -> CurrencyToBuyOrSell1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.CurrencyToBuy;
 			isDerived = false;
 			xmlTag = "CcyToBuy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToBuy";
 			definition = "Account servicer is instructed to buy the indicated currency after the receipt of cash proceeds.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode currencyToSell;
 	/**
 	 * Account servicer is instructed to sell the indicated currency in order to
 	 * obtain the necessary currency to fund the transaction.
@@ -126,8 +128,8 @@ public class CurrencyToBuyOrSell1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#CurrencyToSell
-	 * SecuritiesSettlement.CurrencyToSell}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmCurrencyToSell
+	 * SecuritiesSettlement.mmCurrencyToSell}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class CurrencyToBuyOrSell1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyToSell = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyToSell = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmCurrencyToSell;
 			componentContext_lazy = () -> CurrencyToBuyOrSell1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.CurrencyToSell;
 			isDerived = false;
 			xmlTag = "CcyToSell";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSell";
 			definition = "Account servicer is instructed to sell the indicated currency in order to obtain the necessary currency to fund the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class CurrencyToBuyOrSell1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.CurrencyToBuy, com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.CurrencyToSell);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmCurrencyToBuy, com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmCurrencyToSell);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CurrencyToBuyOrSell1Choice";
 				definition = "Choice of counterparty type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyCode getCurrencyToBuy() {
+		return currencyToBuy;
+	}
+
+	public void setCurrencyToBuy(ActiveCurrencyCode currencyToBuy) {
+		this.currencyToBuy = currencyToBuy;
+	}
+
+	public ActiveCurrencyCode getCurrencyToSell() {
+		return currencyToSell;
+	}
+
+	public void setCurrencyToSell(ActiveCurrencyCode currencyToSell) {
+		this.currencyToSell = currencyToSell;
 	}
 }

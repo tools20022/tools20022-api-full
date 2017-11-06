@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1#SafekeepingPlaceType
- * SafekeepingPlaceTypeAndAnyBICIdentifier1.SafekeepingPlaceType}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1#mmSafekeepingPlaceType
+ * SafekeepingPlaceTypeAndAnyBICIdentifier1.mmSafekeepingPlaceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1#Identification
- * SafekeepingPlaceTypeAndAnyBICIdentifier1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1#mmIdentification
+ * SafekeepingPlaceTypeAndAnyBICIdentifier1.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SafekeepingPlace1Code safekeepingPlaceType;
 	/**
 	 * Place of safekeeping as a code.
 	 * <p>
@@ -79,8 +80,8 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#SafekeepingPlaceType
-	 * SafekeepingPlace.SafekeepingPlaceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#mmSafekeepingPlaceType
+	 * SafekeepingPlace.mmSafekeepingPlaceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 	 * definition} = "Place of safekeeping as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SafekeepingPlaceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSafekeepingPlaceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmSafekeepingPlaceType;
 			componentContext_lazy = () -> SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.SafekeepingPlaceType;
 			isDerived = false;
 			xmlTag = "SfkpgPlcTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceType";
 			definition = "Place of safekeeping as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SafekeepingPlace1Code.mmObject();
 		}
 	};
+	protected AnyBICIdentifier identification;
 	/**
 	 * Place of safekeeping.
 	 * <p>
@@ -126,8 +128,8 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#AnyBIC
-	 * OrganisationIdentification.AnyBIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmAnyBIC
+	 * OrganisationIdentification.mmAnyBIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,17 +148,17 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 	 * definition} = "Place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.AnyBIC;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Place of safekeeping.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
@@ -164,14 +166,31 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.SafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.Identification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.mmSafekeepingPlaceType,
+						com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.mmIdentification);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlaceTypeAndAnyBICIdentifier1";
 				definition = "Place identification of the place of safekeeping expressed as a code and a BIC.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SafekeepingPlace1Code getSafekeepingPlaceType() {
+		return safekeepingPlaceType;
+	}
+
+	public void setSafekeepingPlaceType(SafekeepingPlace1Code safekeepingPlaceType) {
+		this.safekeepingPlaceType = safekeepingPlaceType;
+	}
+
+	public AnyBICIdentifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(AnyBICIdentifier identification) {
+		this.identification = identification;
 	}
 }

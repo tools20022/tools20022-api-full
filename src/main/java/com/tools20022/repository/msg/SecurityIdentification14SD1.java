@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification14SD1#PlaceAndName
- * SecurityIdentification14SD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification14SD1#mmPlaceAndName
+ * SecurityIdentification14SD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification14SD1#AbbreviatedLocalLanguageSecurityName
- * SecurityIdentification14SD1.AbbreviatedLocalLanguageSecurityName}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification14SD1#mmAbbreviatedLocalLanguageSecurityName
+ * SecurityIdentification14SD1.mmAbbreviatedLocalLanguageSecurityName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityIdentification14SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -99,7 +100,7 @@ public class SecurityIdentification14SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityIdentification14SD1.mmObject();
 			isDerived = false;
@@ -107,11 +108,12 @@ public class SecurityIdentification14SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max240Text abbreviatedLocalLanguageSecurityName;
 	/**
 	 * Abbreviated name of the underlying securities in the local language.<br>
 	 * Note that in case of non-listed securities, it will be a full local
@@ -144,7 +146,7 @@ public class SecurityIdentification14SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityIdentification14SD1.mmObject();
 			isDerived = false;
@@ -152,8 +154,8 @@ public class SecurityIdentification14SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbbreviatedLocalLanguageSecurityName";
 			definition = "Abbreviated name of the underlying securities in the local language.\r\nNote that in case of non-listed securities, it will be a full local language securities name.\r\n銘柄名（銘柄略称）";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max240Text.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class SecurityIdentification14SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification14SD1.PlaceAndName, com.tools20022.repository.msg.SecurityIdentification14SD1.AbbreviatedLocalLanguageSecurityName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification14SD1.mmPlaceAndName, com.tools20022.repository.msg.SecurityIdentification14SD1.mmAbbreviatedLocalLanguageSecurityName);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityIdentification14SD1";
 				definition = "Extension to identify a security by proprietary or domestic identification scheme.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max240Text getAbbreviatedLocalLanguageSecurityName() {
+		return abbreviatedLocalLanguageSecurityName;
+	}
+
+	public void setAbbreviatedLocalLanguageSecurityName(Max240Text abbreviatedLocalLanguageSecurityName) {
+		this.abbreviatedLocalLanguageSecurityName = abbreviatedLocalLanguageSecurityName;
 	}
 }

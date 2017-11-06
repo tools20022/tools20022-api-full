@@ -35,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,12 +54,12 @@ public class GroupCancellationIndicator {
 	final static public MMIndicator mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMIndicator() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GroupCancellationIndicator";
 				definition = "Indicates whether or not it is a group cancellation.";
-				meaningWhenFalse = "Indicates that the cancellation applies to individual items within the group.";
 				meaningWhenTrue = "Indicates that the cancellation applies to the complete group.";
+				meaningWhenFalse = "Indicates that the cancellation applies to individual items within the group.";
 			}
 		});
 		return mmObject_lazy.get();

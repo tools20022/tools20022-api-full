@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EncapsulatedContent2#ContentType
- * EncapsulatedContent2.ContentType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EncapsulatedContent2#Content
- * EncapsulatedContent2.Content}</li>
+ * {@linkplain com.tools20022.repository.msg.EncapsulatedContent2#mmContentType
+ * EncapsulatedContent2.mmContentType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EncapsulatedContent2#mmContent
+ * EncapsulatedContent2.mmContent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EncapsulatedContent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContentType1Code contentType;
 	/**
 	 * Type of data which have been authenticated.
 	 * <p>
@@ -99,18 +100,18 @@ public class EncapsulatedContent2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent3#ContentType
-	 * EncapsulatedContent3.ContentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent3#mmContentType
+	 * EncapsulatedContent3.mmContentType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent1#ContentType
-	 * EncapsulatedContent1.ContentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent1#mmContentType
+	 * EncapsulatedContent1.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EncapsulatedContent2.mmObject();
 			isDerived = false;
@@ -118,13 +119,14 @@ public class EncapsulatedContent2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data which have been authenticated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent1.ContentType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent3.ContentType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent3.mmContentType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent1.mmContentType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ContentType1Code.mmObject();
 		}
 	};
+	protected Max100KBinary content;
 	/**
 	 * Actual data to authenticate.
 	 * <p>
@@ -155,18 +157,18 @@ public class EncapsulatedContent2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent3#Content
-	 * EncapsulatedContent3.Content}</li>
+	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent3#mmContent
+	 * EncapsulatedContent3.mmContent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent1#Content
-	 * EncapsulatedContent1.Content}</li>
+	 * {@linkplain com.tools20022.repository.msg.EncapsulatedContent1#mmContent
+	 * EncapsulatedContent1.mmContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Content = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContent = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EncapsulatedContent2.mmObject();
 			isDerived = false;
@@ -174,10 +176,10 @@ public class EncapsulatedContent2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Content";
 			definition = "Actual data to authenticate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent1.Content;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent3.Content);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent3.mmContent);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent1.mmContent;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
 		}
 	};
@@ -185,15 +187,31 @@ public class EncapsulatedContent2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent2.ContentType, com.tools20022.repository.msg.EncapsulatedContent2.Content);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent2.mmContentType, com.tools20022.repository.msg.EncapsulatedContent2.mmContent);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EncapsulatedContent2";
 				definition = "Data to authenticate.";
-				previousVersion_lazy = () -> EncapsulatedContent1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(EncapsulatedContent3.mmObject());
+				previousVersion_lazy = () -> EncapsulatedContent1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContentType1Code getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(ContentType1Code contentType) {
+		this.contentType = contentType;
+	}
+
+	public Max100KBinary getContent() {
+		return content;
+	}
+
+	public void setContent(Max100KBinary content) {
+		this.content = content;
 	}
 }

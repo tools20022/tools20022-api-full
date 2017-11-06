@@ -41,23 +41,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3#PremiumQuote
- * PremiumAmount3.PremiumQuote}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3#PremiumCurrency
- * PremiumAmount3.PremiumCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3#Amount
- * PremiumAmount3.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3#DecimalPlaces
- * PremiumAmount3.DecimalPlaces}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3#mmPremiumQuote
+ * PremiumAmount3.mmPremiumQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PremiumAmount3#PremiumSettlementDate
- * PremiumAmount3.PremiumSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PremiumAmount3#mmPremiumCurrency
+ * PremiumAmount3.mmPremiumCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3#mmAmount
+ * PremiumAmount3.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3#mmDecimalPlaces
+ * PremiumAmount3.mmDecimalPlaces}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PremiumAmount3#PayerPartyReference
- * PremiumAmount3.PayerPartyReference}</li>
+ * {@linkplain com.tools20022.repository.msg.PremiumAmount3#mmPremiumSettlementDate
+ * PremiumAmount3.mmPremiumSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PremiumAmount3#ReceiverPartyReference
- * PremiumAmount3.ReceiverPartyReference}</li>
+ * {@linkplain com.tools20022.repository.msg.PremiumAmount3#mmPayerPartyReference
+ * PremiumAmount3.mmPayerPartyReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PremiumAmount3#mmReceiverPartyReference
+ * PremiumAmount3.mmReceiverPartyReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PremiumAmount3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PremiumQuote1Choice premiumQuote;
 	/**
 	 * Specifies the calculation method of the premium amount.
 	 * <p>
@@ -112,11 +114,11 @@ public class PremiumAmount3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PremiumAmount2#PremiumQuote
-	 * PremiumAmount2.PremiumQuote}</li>
+	 * {@linkplain com.tools20022.repository.msg.PremiumAmount2#mmPremiumQuote
+	 * PremiumAmount2.mmPremiumQuote}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PremiumQuote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPremiumQuote = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
@@ -124,13 +126,14 @@ public class PremiumAmount3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumQuote";
 			definition = "Specifies the calculation method of the premium amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.PremiumQuote;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.mmPremiumQuote;
 			maxOccurs = 1;
-			type_lazy = () -> PremiumQuote1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PremiumQuote1Choice.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode premiumCurrency;
 	/**
 	 * Identification of the premium currency in which the option is held. <br>
 	 * <p>
@@ -144,8 +147,8 @@ public class PremiumAmount3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyOfTransfer
-	 * Payment.CurrencyOfTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyOfTransfer
+	 * Payment.mmCurrencyOfTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,20 +168,21 @@ public class PremiumAmount3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PremiumCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPremiumCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyOfTransfer;
 			isDerived = false;
 			xmlTag = "PrmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumCurrency";
 			definition = "Identification of the premium currency in which the option is held. \r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Result of the calculation of the premium amount on the basis of the
 	 * premium quote and one of the amounts of the underlying foreign exchange
@@ -211,11 +215,11 @@ public class PremiumAmount3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PremiumAmount2#Amount
-	 * PremiumAmount2.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.PremiumAmount2#mmAmount
+	 * PremiumAmount2.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
@@ -223,12 +227,13 @@ public class PremiumAmount3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Result of the calculation of the premium amount on the basis of the premium quote and one of the amounts of the underlying foreign exchange trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.Amount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Number decimalPlaces;
 	/**
 	 * Number of decimal places to which quantities of units/shares are rounded.
 	 * <p>
@@ -257,7 +262,7 @@ public class PremiumAmount3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DecimalPlaces = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDecimalPlaces = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
@@ -265,11 +270,12 @@ public class PremiumAmount3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecimalPlaces";
 			definition = "Number of decimal places to which quantities of units/shares are rounded.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ISODate premiumSettlementDate;
 	/**
 	 * Date on which the premium must be settled.
 	 * <p>
@@ -296,7 +302,7 @@ public class PremiumAmount3 {
 	 * definition} = "Date on which the premium must be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PremiumSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPremiumSettlementDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
@@ -304,11 +310,12 @@ public class PremiumAmount3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumSettlementDate";
 			definition = "Date on which the premium must be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text payerPartyReference;
 	/**
 	 * Premium fee payer related information
 	 * <p>
@@ -335,7 +342,7 @@ public class PremiumAmount3 {
 	 * definition} = "Premium fee payer related information"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayerPartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayerPartyReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
@@ -343,11 +350,12 @@ public class PremiumAmount3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayerPartyReference";
 			definition = "Premium fee payer related information";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text receiverPartyReference;
 	/**
 	 * Premium fee receiver related information
 	 * <p>
@@ -374,7 +382,7 @@ public class PremiumAmount3 {
 	 * definition} = "Premium fee receiver related information"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceiverPartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceiverPartyReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
@@ -382,8 +390,8 @@ public class PremiumAmount3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverPartyReference";
 			definition = "Premium fee receiver related information";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -391,11 +399,11 @@ public class PremiumAmount3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount3.PremiumQuote, com.tools20022.repository.msg.PremiumAmount3.PremiumCurrency, com.tools20022.repository.msg.PremiumAmount3.Amount,
-						com.tools20022.repository.msg.PremiumAmount3.DecimalPlaces, com.tools20022.repository.msg.PremiumAmount3.PremiumSettlementDate, com.tools20022.repository.msg.PremiumAmount3.PayerPartyReference,
-						com.tools20022.repository.msg.PremiumAmount3.ReceiverPartyReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount3.mmPremiumQuote, com.tools20022.repository.msg.PremiumAmount3.mmPremiumCurrency, com.tools20022.repository.msg.PremiumAmount3.mmAmount,
+						com.tools20022.repository.msg.PremiumAmount3.mmDecimalPlaces, com.tools20022.repository.msg.PremiumAmount3.mmPremiumSettlementDate, com.tools20022.repository.msg.PremiumAmount3.mmPayerPartyReference,
+						com.tools20022.repository.msg.PremiumAmount3.mmReceiverPartyReference);
 				trace_lazy = () -> PremiumCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PremiumAmount3";
 				definition = "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, for example, the method of the payment";
@@ -403,5 +411,61 @@ public class PremiumAmount3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PremiumQuote1Choice getPremiumQuote() {
+		return premiumQuote;
+	}
+
+	public void setPremiumQuote(PremiumQuote1Choice premiumQuote) {
+		this.premiumQuote = premiumQuote;
+	}
+
+	public ActiveOrHistoricCurrencyCode getPremiumCurrency() {
+		return premiumCurrency;
+	}
+
+	public void setPremiumCurrency(ActiveOrHistoricCurrencyCode premiumCurrency) {
+		this.premiumCurrency = premiumCurrency;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public Number getDecimalPlaces() {
+		return decimalPlaces;
+	}
+
+	public void setDecimalPlaces(Number decimalPlaces) {
+		this.decimalPlaces = decimalPlaces;
+	}
+
+	public ISODate getPremiumSettlementDate() {
+		return premiumSettlementDate;
+	}
+
+	public void setPremiumSettlementDate(ISODate premiumSettlementDate) {
+		this.premiumSettlementDate = premiumSettlementDate;
+	}
+
+	public Max35Text getPayerPartyReference() {
+		return payerPartyReference;
+	}
+
+	public void setPayerPartyReference(Max35Text payerPartyReference) {
+		this.payerPartyReference = payerPartyReference;
+	}
+
+	public Max35Text getReceiverPartyReference() {
+		return receiverPartyReference;
+	}
+
+	public void setReceiverPartyReference(Max35Text receiverPartyReference) {
+		this.receiverPartyReference = receiverPartyReference;
 	}
 }

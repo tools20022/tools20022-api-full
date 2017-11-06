@@ -31,11 +31,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionTypeCode#AgainstVariationMargin
- * CollateralSubstitutionTypeCode.AgainstVariationMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionTypeCode#mmAgainstVariationMargin
+ * CollateralSubstitutionTypeCode.mmAgainstVariationMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionTypeCode#AgainstSegregatedIndependentAmount
- * CollateralSubstitutionTypeCode.AgainstSegregatedIndependentAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionTypeCode#mmAgainstSegregatedIndependentAmount
+ * CollateralSubstitutionTypeCode.mmAgainstSegregatedIndependentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class CollateralSubstitutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AgainstVariationMargin = new MMCode() {
+	public static final MMCode mmAgainstVariationMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstVariationMargin";
@@ -129,7 +129,7 @@ public class CollateralSubstitutionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AgainstSegregatedIndependentAmount = new MMCode() {
+	public static final MMCode mmAgainstSegregatedIndependentAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstSegregatedIndependentAmount";
@@ -142,12 +142,13 @@ public class CollateralSubstitutionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVMG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitutionTypeCode";
 				definition = "Specifies if the collateral that is substituted was posted against the variation margin or the independent amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionTypeCode.AgainstVariationMargin, com.tools20022.repository.codeset.CollateralSubstitutionTypeCode.AgainstSegregatedIndependentAmount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionTypeCode.mmAgainstVariationMargin,
+						com.tools20022.repository.codeset.CollateralSubstitutionTypeCode.mmAgainstSegregatedIndependentAmount);
 				derivation_lazy = () -> Arrays.asList(CollateralSubstitutionType1Code.mmObject());
 			}
 		});

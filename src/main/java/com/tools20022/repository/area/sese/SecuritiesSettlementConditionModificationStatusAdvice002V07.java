@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022Varia
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -84,34 +85,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#RequestReference
- * SecuritiesSettlementConditionModificationStatusAdvice002V07.RequestReference}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#AccountOwner
- * SecuritiesSettlementConditionModificationStatusAdvice002V07.AccountOwner}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#SafekeepingAccount
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#mmRequestReference
  * SecuritiesSettlementConditionModificationStatusAdvice002V07.
- * SafekeepingAccount}</li>
+ * mmRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#RequestDetails
- * SecuritiesSettlementConditionModificationStatusAdvice002V07.RequestDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#mmAccountOwner
+ * SecuritiesSettlementConditionModificationStatusAdvice002V07.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#ProcessingStatus
- * SecuritiesSettlementConditionModificationStatusAdvice002V07.ProcessingStatus}
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#mmSafekeepingAccount
+ * SecuritiesSettlementConditionModificationStatusAdvice002V07.
+ * mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#mmRequestDetails
+ * SecuritiesSettlementConditionModificationStatusAdvice002V07.mmRequestDetails}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#SupplementaryData
- * SecuritiesSettlementConditionModificationStatusAdvice002V07.SupplementaryData
- * }</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#mmProcessingStatus
+ * SecuritiesSettlementConditionModificationStatusAdvice002V07.
+ * mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#mmSupplementaryData
+ * SecuritiesSettlementConditionModificationStatusAdvice002V07.
+ * mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07#identifier
- * SecuritiesSettlementConditionModificationStatusAdvice002V07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.031.002.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -127,6 +127,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementConditionModificationStatusAdvice002V07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Identification16 requestReference;
 	/**
 	 * Identification of the SecuritiesSettlementConditionsModificationRequest.
 	 * <p>
@@ -152,17 +153,18 @@ public class SecuritiesSettlementConditionModificationStatusAdvice002V07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestReference";
 			definition = "Identification of the SecuritiesSettlementConditionsModificationRequest.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Identification16.mmObject();
 		}
 	};
+	protected PartyIdentification109 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -186,17 +188,18 @@ public class SecuritiesSettlementConditionModificationStatusAdvice002V07 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification109.mmObject();
 		}
 	};
+	protected SecuritiesAccount30 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -220,17 +223,18 @@ public class SecuritiesSettlementConditionModificationStatusAdvice002V07 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesAccount30.mmObject();
 		}
 	};
+	protected RequestDetails16 requestDetails;
 	/**
 	 * Details of the request.
 	 * <p>
@@ -254,17 +258,18 @@ public class SecuritiesSettlementConditionModificationStatusAdvice002V07 {
 	 * definition} = "Details of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestDetails";
 			definition = "Details of the request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RequestDetails16.mmObject();
 		}
 	};
+	protected ProcessingStatus58Choice processingStatus;
 	/**
 	 * Provides details on the processing status of the request.
 	 * <p>
@@ -289,17 +294,18 @@ public class SecuritiesSettlementConditionModificationStatusAdvice002V07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProcessingStatus58Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -326,7 +332,7 @@ public class SecuritiesSettlementConditionModificationStatusAdvice002V07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,33 +340,6 @@ public class SecuritiesSettlementConditionModificationStatusAdvice002V07 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "031"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "002"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "031";
-			version = "07";
-			flavour = "002";
 		}
 	};
 
@@ -375,15 +354,70 @@ public class SecuritiesSettlementConditionModificationStatusAdvice002V07 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmCondModStsAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.RequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.AccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.SafekeepingAccount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.RequestDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.ProcessingStatus,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.mmRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.mmAccountOwner,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.mmSafekeepingAccount,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.mmRequestDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.mmProcessingStatus,
+						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "031";
+						version = "07";
+						flavour = "002";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Identification16 getRequestReference() {
+		return requestReference;
+	}
+
+	public void setRequestReference(Identification16 requestReference) {
+		this.requestReference = requestReference;
+	}
+
+	public PartyIdentification109 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification109 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount30 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount30 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public RequestDetails16 getRequestDetails() {
+		return requestDetails;
+	}
+
+	public void setRequestDetails(RequestDetails16 requestDetails) {
+		this.requestDetails = requestDetails;
+	}
+
+	public ProcessingStatus58Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatus58Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -36,11 +36,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice#InstructedQuantity
- * InstructedOrQuantityToReceive2Choice.InstructedQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice#mmInstructedQuantity
+ * InstructedOrQuantityToReceive2Choice.mmInstructedQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice#QuantityToReceive
- * InstructedOrQuantityToReceive2Choice.QuantityToReceive}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice#mmQuantityToReceive
+ * InstructedOrQuantityToReceive2Choice.mmQuantityToReceive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -66,6 +66,7 @@ import java.util.function.Supplier;
 public class InstructedOrQuantityToReceive2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Quantity11Choice instructedQuantity;
 	/**
 	 * Quantity of underlying securities to which this instruction applies.
 	 * <p>
@@ -77,8 +78,8 @@ public class InstructedOrQuantityToReceive2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#InstructedBalance
-	 * CorporateActionEntitlement.InstructedBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmInstructedBalance
+	 * CorporateActionEntitlement.mmInstructedBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +99,22 @@ public class InstructedOrQuantityToReceive2Choice {
 	 * "Quantity of underlying securities to which this instruction applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructedQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> InstructedOrQuantityToReceive2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.InstructedBalance;
 			isDerived = false;
 			xmlTag = "InstdQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedQuantity";
 			definition = "Quantity of underlying securities to which this instruction applies.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity11Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.Quantity11Choice.mmObject();
 		}
 	};
+	protected Quantity11Choice quantityToReceive;
 	/**
 	 * Quantity of the benefits that the account owner wants to receive, for
 	 * example, as a result of dividend reinvestment.
@@ -125,8 +127,8 @@ public class InstructedOrQuantityToReceive2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#QuantityToReceive
-	 * SecuritiesProceedsDefinition.QuantityToReceive}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmQuantityToReceive
+	 * SecuritiesProceedsDefinition.mmQuantityToReceive}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,28 +149,29 @@ public class InstructedOrQuantityToReceive2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityToReceive = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityToReceive = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmQuantityToReceive;
 			componentContext_lazy = () -> InstructedOrQuantityToReceive2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.QuantityToReceive;
 			isDerived = false;
 			xmlTag = "QtyToRcv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToReceive";
 			definition = "Quantity of the benefits that the account owner wants to receive, for example, as a result of dividend reinvestment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity11Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.Quantity11Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice.InstructedQuantity, com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice.QuantityToReceive);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice.mmInstructedQuantity, com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice.mmQuantityToReceive);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -182,5 +185,21 @@ public class InstructedOrQuantityToReceive2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Quantity11Choice getInstructedQuantity() {
+		return instructedQuantity;
+	}
+
+	public void setInstructedQuantity(com.tools20022.repository.choice.Quantity11Choice instructedQuantity) {
+		this.instructedQuantity = instructedQuantity;
+	}
+
+	public Quantity11Choice getQuantityToReceive() {
+		return quantityToReceive;
+	}
+
+	public void setQuantityToReceive(com.tools20022.repository.choice.Quantity11Choice quantityToReceive) {
+		this.quantityToReceive = quantityToReceive;
 	}
 }

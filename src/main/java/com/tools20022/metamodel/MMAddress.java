@@ -18,7 +18,6 @@
 package com.tools20022.metamodel;
 
 import com.tools20022.core.metamodel.GeneratedMetamodelBean;
-import com.tools20022.core.metamodel.Metamodel.MetamodelAttribute;
 import com.tools20022.core.metamodel.Metamodel.MetamodelType;
 import com.tools20022.core.metamodel.Opposite;
 import com.tools20022.core.metamodel.OrphanMetamodelType;
@@ -26,9 +25,6 @@ import com.tools20022.metamodel.MMBroadcastList;
 import com.tools20022.metamodel.MMMessagingEndpoint;
 import com.tools20022.metamodel.MMModelEntity;
 import com.tools20022.metamodel.StandardMetamodel2013;
-
-import static com.tools20022.core.metamodel.StaticMemembersBuilder.newAttribute;
-
 import java.util.Collections;
 import java.util.function.Supplier;
 import java.util.List;

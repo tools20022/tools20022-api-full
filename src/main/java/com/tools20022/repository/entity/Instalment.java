@@ -46,36 +46,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#InitialNumberOfInstalment
- * Instalment.InitialNumberOfInstalment}</li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmInitialNumberOfInstalment
+ * Instalment.mmInitialNumberOfInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#TotalNumberOfInstalment
- * Instalment.TotalNumberOfInstalment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Instalment#PeriodUnit
- * Instalment.PeriodUnit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Instalment#NumberOfUnits
- * Instalment.NumberOfUnits}</li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmTotalNumberOfInstalment
+ * Instalment.mmTotalNumberOfInstalment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Instalment#mmPeriodUnit
+ * Instalment.mmPeriodUnit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Instalment#mmNumberOfUnits
+ * Instalment.mmNumberOfUnits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#SequenceIdentification
- * Instalment.SequenceIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Instalment#InvestmentPlan
- * Instalment.InvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmSequenceIdentification
+ * Instalment.mmSequenceIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Instalment#mmInvestmentPlan
+ * Instalment.mmInvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#InstalmentPlanType
- * Instalment.InstalmentPlanType}</li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmInstalmentPlanType
+ * Instalment.mmInstalmentPlanType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Instalment#FirstPaymentAmount
- * Instalment.FirstPaymentAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Instalment#FirstPaymentDate
- * Instalment.FirstPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmFirstPaymentAmount
+ * Instalment.mmFirstPaymentAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Instalment#mmFirstPaymentDate
+ * Instalment.mmFirstPaymentDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#Instalment
- * InvestmentPlan.Instalment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInstalment
+ * InvestmentPlan.mmInstalment}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,83 +84,83 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails4#RecurringTransaction
- * CardPaymentTransactionDetails4.RecurringTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails4#mmRecurringTransaction
+ * CardPaymentTransactionDetails4.mmRecurringTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails1#RecurringTransaction
- * CardPaymentTransactionDetails1.RecurringTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails1#mmRecurringTransaction
+ * CardPaymentTransactionDetails1.mmRecurringTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails10#RecurringTransaction
- * CardPaymentTransactionDetails10.RecurringTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails10#mmRecurringTransaction
+ * CardPaymentTransactionDetails10.mmRecurringTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails3#RecurringTransaction
- * CardPaymentTransactionDetails3.RecurringTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails3#mmRecurringTransaction
+ * CardPaymentTransactionDetails3.mmRecurringTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#InstalmentInformation
- * InvoiceRequestInformation1.InstalmentInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmInstalmentInformation
+ * InvoiceRequestInformation1.mmInstalmentInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceFinancingDetails1#InstalmentFinancingInformation
- * InvoiceFinancingDetails1.InstalmentFinancingInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceFinancingDetails1#mmInstalmentFinancingInformation
+ * InvoiceFinancingDetails1.mmInstalmentFinancingInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails12#Instalment
- * CardPaymentTransactionDetails12.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails12#mmInstalment
+ * CardPaymentTransactionDetails12.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails16#Instalment
- * CardPaymentTransactionDetails16.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails16#mmInstalment
+ * CardPaymentTransactionDetails16.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails14#Instalment
- * CardPaymentTransactionDetails14.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails14#mmInstalment
+ * CardPaymentTransactionDetails14.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails15#Instalment
- * CardPaymentTransactionDetails15.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails15#mmInstalment
+ * CardPaymentTransactionDetails15.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#Instalment
- * CardPaymentTransactionDetails23.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23#mmInstalment
+ * CardPaymentTransactionDetails23.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails21#Instalment
- * CardPaymentTransactionDetails21.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails21#mmInstalment
+ * CardPaymentTransactionDetails21.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails19#Instalment
- * CardPaymentTransactionDetails19.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails19#mmInstalment
+ * CardPaymentTransactionDetails19.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails24#Instalment
- * CardPaymentTransactionDetails24.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails24#mmInstalment
+ * CardPaymentTransactionDetails24.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#FinancingInstalment
- * FinancingItemList1.FinancingInstalment}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmFinancingInstalment
+ * FinancingItemList1.mmFinancingInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialItem1#InstalmentInformation
- * FinancialItem1.InstalmentInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialItem1#mmInstalmentInformation
+ * FinancialItem1.mmInstalmentInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionDetail1#Instalment
- * CardTransactionDetail1.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionDetail1#mmInstalment
+ * CardTransactionDetail1.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#Instalment
- * CardTransactionDetail3.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#mmInstalment
+ * CardTransactionDetail3.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails29#Instalment
- * CardPaymentTransactionDetails29.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails29#mmInstalment
+ * CardPaymentTransactionDetails29.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#Instalment
- * CardPaymentTransactionDetails30.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30#mmInstalment
+ * CardPaymentTransactionDetails30.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails27#Instalment
- * CardPaymentTransactionDetails27.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails27#mmInstalment
+ * CardPaymentTransactionDetails27.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails31#Instalment
- * CardPaymentTransactionDetails31.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails31#mmInstalment
+ * CardPaymentTransactionDetails31.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails39#Instalment
- * CardPaymentTransactionDetails39.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails39#mmInstalment
+ * CardPaymentTransactionDetails39.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#Instalment
- * CardPaymentTransactionDetails38.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38#mmInstalment
+ * CardPaymentTransactionDetails38.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails41#Instalment
- * CardPaymentTransactionDetails41.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails41#mmInstalment
+ * CardPaymentTransactionDetails41.mmInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37#Instalment
- * CardPaymentTransactionDetails37.Instalment}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37#mmInstalment
+ * CardPaymentTransactionDetails37.mmInstalment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -184,8 +185,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -201,6 +202,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Instalment extends PaymentObligation {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number initialNumberOfInstalment;
 	/**
 	 * Number of pre-paid instalment periods at the time an investment plan is
 	 * created.
@@ -211,48 +213,48 @@ public class Instalment extends PaymentObligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan2#InitialNumberOfInstalment
-	 * InvestmentPlan2.InitialNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan4#InitialNumberOfInstalment
-	 * InvestmentPlan4.InitialNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan6#InitialNumberOfInstalment
-	 * InvestmentPlan6.InitialNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan5#InitialNumberOfInstalment
-	 * InvestmentPlan5.InitialNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan3#InitialNumberOfInstalment
-	 * InvestmentPlan3.InitialNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan7#InitialNumberOfInstalment
-	 * InvestmentPlan7.InitialNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan9#InitialNumberOfInstalments
-	 * InvestmentPlan9.InitialNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan8#InitialNumberOfInstalments
-	 * InvestmentPlan8.InitialNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan10#InitialNumberOfInstalments
-	 * InvestmentPlan10.InitialNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan11#InitialNumberOfInstalments
-	 * InvestmentPlan11.InitialNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InitialAmount1Choice#InitialNumberOfInstalments
-	 * InitialAmount1Choice.InitialNumberOfInstalments}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan2#mmInitialNumberOfInstalment
+	 * InvestmentPlan2.mmInitialNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan4#mmInitialNumberOfInstalment
+	 * InvestmentPlan4.mmInitialNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan6#mmInitialNumberOfInstalment
+	 * InvestmentPlan6.mmInitialNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan5#mmInitialNumberOfInstalment
+	 * InvestmentPlan5.mmInitialNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan3#mmInitialNumberOfInstalment
+	 * InvestmentPlan3.mmInitialNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan7#mmInitialNumberOfInstalment
+	 * InvestmentPlan7.mmInitialNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan9#mmInitialNumberOfInstalments
+	 * InvestmentPlan9.mmInitialNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan8#mmInitialNumberOfInstalments
+	 * InvestmentPlan8.mmInitialNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan10#mmInitialNumberOfInstalments
+	 * InvestmentPlan10.mmInitialNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan11#mmInitialNumberOfInstalments
+	 * InvestmentPlan11.mmInitialNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InitialAmount1Choice#mmInitialNumberOfInstalments
+	 * InitialAmount1Choice.mmInitialNumberOfInstalments}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -266,23 +268,25 @@ public class Instalment extends PaymentObligation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InitialNumberOfInstalment = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInitialNumberOfInstalment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan2.InitialNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan4.InitialNumberOfInstalment,
-					com.tools20022.repository.msg.InvestmentPlan6.InitialNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan5.InitialNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan3.InitialNumberOfInstalment,
-					com.tools20022.repository.msg.InvestmentPlan7.InitialNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan9.InitialNumberOfInstalments,
-					com.tools20022.repository.msg.InvestmentPlan8.InitialNumberOfInstalments, com.tools20022.repository.msg.InvestmentPlan10.InitialNumberOfInstalments,
-					com.tools20022.repository.msg.InvestmentPlan11.InitialNumberOfInstalments, com.tools20022.repository.choice.InitialAmount1Choice.InitialNumberOfInstalments);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan2.mmInitialNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan4.mmInitialNumberOfInstalment,
+					com.tools20022.repository.msg.InvestmentPlan6.mmInitialNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan5.mmInitialNumberOfInstalment,
+					com.tools20022.repository.msg.InvestmentPlan3.mmInitialNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan7.mmInitialNumberOfInstalment,
+					com.tools20022.repository.msg.InvestmentPlan9.mmInitialNumberOfInstalments, com.tools20022.repository.msg.InvestmentPlan8.mmInitialNumberOfInstalments,
+					com.tools20022.repository.msg.InvestmentPlan10.mmInitialNumberOfInstalments, com.tools20022.repository.msg.InvestmentPlan11.mmInitialNumberOfInstalments,
+					com.tools20022.repository.choice.InitialAmount1Choice.mmInitialNumberOfInstalments);
 			elementContext_lazy = () -> Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InitialNumberOfInstalment";
 			definition = "Number of pre-paid instalment periods at the time an investment plan is created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number totalNumberOfInstalment;
 	/**
 	 * Total number of times the amount must be invested at the predefined
 	 * frequency as of the start date of the investment plan.
@@ -293,66 +297,66 @@ public class Instalment extends PaymentObligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan2#TotalNumberOfInstalment
-	 * InvestmentPlan2.TotalNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan4#TotalNumberOfInstalment
-	 * InvestmentPlan4.TotalNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan6#TotalNumberOfInstalment
-	 * InvestmentPlan6.TotalNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan5#TotalNumberOfInstalment
-	 * InvestmentPlan5.TotalNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan3#TotalNumberOfInstalment
-	 * InvestmentPlan3.TotalNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan7#TotalNumberOfInstalment
-	 * InvestmentPlan7.TotalNumberOfInstalment}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#TotalNumberOfPayments
-	 * RecurringTransaction1.TotalNumberOfPayments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan9#TotalNumberOfInstalments
-	 * InvestmentPlan9.TotalNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan8#TotalNumberOfInstalments
-	 * InvestmentPlan8.TotalNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#TotalNumberOfPayments
-	 * RecurringTransaction2.TotalNumberOfPayments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan10#TotalNumberOfInstalments
-	 * InvestmentPlan10.TotalNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan11#TotalNumberOfInstalments
-	 * InvestmentPlan11.TotalNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan12#TotalNumberOfInstalments
-	 * InvestmentPlan12.TotalNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan13#TotalNumberOfInstalments
-	 * InvestmentPlan13.TotalNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#NumberOfOccurrences
-	 * RecurringTransaction3.NumberOfOccurrences}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan14#TotalNumberOfInstalments
-	 * InvestmentPlan14.TotalNumberOfInstalments}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan15#TotalNumberOfInstalments
-	 * InvestmentPlan15.TotalNumberOfInstalments}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan2#mmTotalNumberOfInstalment
+	 * InvestmentPlan2.mmTotalNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan4#mmTotalNumberOfInstalment
+	 * InvestmentPlan4.mmTotalNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan6#mmTotalNumberOfInstalment
+	 * InvestmentPlan6.mmTotalNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan5#mmTotalNumberOfInstalment
+	 * InvestmentPlan5.mmTotalNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan3#mmTotalNumberOfInstalment
+	 * InvestmentPlan3.mmTotalNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan7#mmTotalNumberOfInstalment
+	 * InvestmentPlan7.mmTotalNumberOfInstalment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#mmTotalNumberOfPayments
+	 * RecurringTransaction1.mmTotalNumberOfPayments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan9#mmTotalNumberOfInstalments
+	 * InvestmentPlan9.mmTotalNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan8#mmTotalNumberOfInstalments
+	 * InvestmentPlan8.mmTotalNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmTotalNumberOfPayments
+	 * RecurringTransaction2.mmTotalNumberOfPayments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan10#mmTotalNumberOfInstalments
+	 * InvestmentPlan10.mmTotalNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan11#mmTotalNumberOfInstalments
+	 * InvestmentPlan11.mmTotalNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan12#mmTotalNumberOfInstalments
+	 * InvestmentPlan12.mmTotalNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan13#mmTotalNumberOfInstalments
+	 * InvestmentPlan13.mmTotalNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#mmNumberOfOccurrences
+	 * RecurringTransaction3.mmNumberOfOccurrences}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan14#mmTotalNumberOfInstalments
+	 * InvestmentPlan14.mmTotalNumberOfInstalments}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan15#mmTotalNumberOfInstalments
+	 * InvestmentPlan15.mmTotalNumberOfInstalments}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -366,24 +370,27 @@ public class Instalment extends PaymentObligation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TotalNumberOfInstalment = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTotalNumberOfInstalment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan2.TotalNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan4.TotalNumberOfInstalment,
-					com.tools20022.repository.msg.InvestmentPlan6.TotalNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan5.TotalNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan3.TotalNumberOfInstalment,
-					com.tools20022.repository.msg.InvestmentPlan7.TotalNumberOfInstalment, com.tools20022.repository.msg.RecurringTransaction1.TotalNumberOfPayments, com.tools20022.repository.msg.InvestmentPlan9.TotalNumberOfInstalments,
-					com.tools20022.repository.msg.InvestmentPlan8.TotalNumberOfInstalments, com.tools20022.repository.msg.RecurringTransaction2.TotalNumberOfPayments, com.tools20022.repository.msg.InvestmentPlan10.TotalNumberOfInstalments,
-					com.tools20022.repository.msg.InvestmentPlan11.TotalNumberOfInstalments, com.tools20022.repository.msg.InvestmentPlan12.TotalNumberOfInstalments, com.tools20022.repository.msg.InvestmentPlan13.TotalNumberOfInstalments,
-					com.tools20022.repository.msg.RecurringTransaction3.NumberOfOccurrences, com.tools20022.repository.msg.InvestmentPlan14.TotalNumberOfInstalments, com.tools20022.repository.msg.InvestmentPlan15.TotalNumberOfInstalments);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan2.mmTotalNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan4.mmTotalNumberOfInstalment,
+					com.tools20022.repository.msg.InvestmentPlan6.mmTotalNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan5.mmTotalNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan3.mmTotalNumberOfInstalment,
+					com.tools20022.repository.msg.InvestmentPlan7.mmTotalNumberOfInstalment, com.tools20022.repository.msg.RecurringTransaction1.mmTotalNumberOfPayments,
+					com.tools20022.repository.msg.InvestmentPlan9.mmTotalNumberOfInstalments, com.tools20022.repository.msg.InvestmentPlan8.mmTotalNumberOfInstalments,
+					com.tools20022.repository.msg.RecurringTransaction2.mmTotalNumberOfPayments, com.tools20022.repository.msg.InvestmentPlan10.mmTotalNumberOfInstalments,
+					com.tools20022.repository.msg.InvestmentPlan11.mmTotalNumberOfInstalments, com.tools20022.repository.msg.InvestmentPlan12.mmTotalNumberOfInstalments,
+					com.tools20022.repository.msg.InvestmentPlan13.mmTotalNumberOfInstalments, com.tools20022.repository.msg.RecurringTransaction3.mmNumberOfOccurrences,
+					com.tools20022.repository.msg.InvestmentPlan14.mmTotalNumberOfInstalments, com.tools20022.repository.msg.InvestmentPlan15.mmTotalNumberOfInstalments);
 			elementContext_lazy = () -> Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalNumberOfInstalment";
 			definition = "Total number of times the amount must be invested at the predefined frequency as of the start date of the investment plan.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected FrequencyCode periodUnit;
 	/**
 	 * Period unit between consecutive payments (for example day, month, year).
 	 * <p>
@@ -394,24 +401,24 @@ public class Instalment extends PaymentObligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FrequencyCode
 	 * FrequencyCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#PeriodUnit
-	 * RecurringTransaction1.PeriodUnit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#PeriodUnit
-	 * RecurringTransaction2.PeriodUnit}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#PeriodUnit
-	 * RecurringTransaction3.PeriodUnit}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#mmPeriodUnit
+	 * RecurringTransaction1.mmPeriodUnit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmPeriodUnit
+	 * RecurringTransaction2.mmPeriodUnit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#mmPeriodUnit
+	 * RecurringTransaction3.mmPeriodUnit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -425,20 +432,21 @@ public class Instalment extends PaymentObligation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PeriodUnit = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPeriodUnit = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction1.PeriodUnit, com.tools20022.repository.msg.RecurringTransaction2.PeriodUnit,
-					com.tools20022.repository.msg.RecurringTransaction3.PeriodUnit);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction1.mmPeriodUnit, com.tools20022.repository.msg.RecurringTransaction2.mmPeriodUnit,
+					com.tools20022.repository.msg.RecurringTransaction3.mmPeriodUnit);
 			elementContext_lazy = () -> Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PeriodUnit";
 			definition = "Period unit between consecutive payments (for example day, month, year).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FrequencyCode.mmObject();
 		}
 	};
+	protected Number numberOfUnits;
 	/**
 	 * Number of period units between consecutive payments.
 	 * <p>
@@ -448,24 +456,24 @@ public class Instalment extends PaymentObligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#InstalmentPeriod
-	 * RecurringTransaction1.InstalmentPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#InstalmentPeriod
-	 * RecurringTransaction2.InstalmentPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#IntervalDay
-	 * RecurringTransaction3.IntervalDay}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#mmInstalmentPeriod
+	 * RecurringTransaction1.mmInstalmentPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmInstalmentPeriod
+	 * RecurringTransaction2.mmInstalmentPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#mmIntervalDay
+	 * RecurringTransaction3.mmIntervalDay}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -477,20 +485,21 @@ public class Instalment extends PaymentObligation {
 	 * definition} = "Number of period units between consecutive payments."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NumberOfUnits = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNumberOfUnits = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction1.InstalmentPeriod, com.tools20022.repository.msg.RecurringTransaction2.InstalmentPeriod,
-					com.tools20022.repository.msg.RecurringTransaction3.IntervalDay);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction1.mmInstalmentPeriod, com.tools20022.repository.msg.RecurringTransaction2.mmInstalmentPeriod,
+					com.tools20022.repository.msg.RecurringTransaction3.mmIntervalDay);
 			elementContext_lazy = () -> Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NumberOfUnits";
 			definition = "Number of period units between consecutive payments.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max70Text sequenceIdentification;
 	/**
 	 * Specifies the progressive number of a single instalment.
 	 * <p>
@@ -500,21 +509,21 @@ public class Instalment extends PaymentObligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Instalment1#SequenceIdentification
-	 * Instalment1.SequenceIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Instalment2#SequenceIdentification
-	 * Instalment2.SequenceIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Instalment1#mmSequenceIdentification
+	 * Instalment1.mmSequenceIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Instalment2#mmSequenceIdentification
+	 * Instalment2.mmSequenceIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -526,19 +535,20 @@ public class Instalment extends PaymentObligation {
 	 * definition} = "Specifies the progressive number of a single instalment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SequenceIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSequenceIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instalment1.SequenceIdentification, com.tools20022.repository.msg.Instalment2.SequenceIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instalment1.mmSequenceIdentification, com.tools20022.repository.msg.Instalment2.mmSequenceIdentification);
 			elementContext_lazy = () -> Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SequenceIdentification";
 			definition = "Specifies the progressive number of a single instalment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected InvestmentPlan investmentPlan;
 	/**
 	 * Investment plan for which instalment information is provided.
 	 * <p>
@@ -547,8 +557,8 @@ public class Instalment extends PaymentObligation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan#Instalment
-	 * InvestmentPlan.Instalment}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInstalment
+	 * InvestmentPlan.mmInstalment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -572,20 +582,21 @@ public class Instalment extends PaymentObligation {
 	 * "Investment plan for which instalment information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestmentPlan = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestmentPlan = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Investment plan for which instalment information is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.Instalment;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmInstalment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 		}
 	};
+	protected InstalmentPlanCode instalmentPlanType;
 	/**
 	 * Type of instalment plan.
 	 * <p>
@@ -596,18 +607,18 @@ public class Instalment extends PaymentObligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.InstalmentPlanCode
 	 * InstalmentPlanCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#InstalmentPlan
-	 * RecurringTransaction2.InstalmentPlan}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmInstalmentPlan
+	 * RecurringTransaction2.mmInstalmentPlan}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -619,19 +630,20 @@ public class Instalment extends PaymentObligation {
 	 * definition} = "Type of instalment plan."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InstalmentPlanType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInstalmentPlanType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.InstalmentPlan);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmInstalmentPlan);
 			elementContext_lazy = () -> Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InstalmentPlanType";
 			definition = "Type of instalment plan.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InstalmentPlanCode.mmObject();
 		}
 	};
+	protected CurrencyAndAmount firstPaymentAmount;
 	/**
 	 * Amount of the first payment.
 	 * <p>
@@ -642,18 +654,18 @@ public class Instalment extends PaymentObligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#FirstAmount
-	 * RecurringTransaction2.FirstAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmFirstAmount
+	 * RecurringTransaction2.mmFirstAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -665,19 +677,20 @@ public class Instalment extends PaymentObligation {
 	 * definition} = "Amount of the first payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FirstPaymentAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFirstPaymentAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.FirstAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmFirstAmount);
 			elementContext_lazy = () -> Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FirstPaymentAmount";
 			definition = "Amount of the first payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODateTime firstPaymentDate;
 	/**
 	 * Date of the first payment.
 	 * <p>
@@ -687,21 +700,21 @@ public class Instalment extends PaymentObligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#FirstPaymentDate
-	 * RecurringTransaction2.FirstPaymentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#StartDate
-	 * RecurringTransaction3.StartDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Instalment Instalment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmFirstPaymentDate
+	 * RecurringTransaction2.mmFirstPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction3#mmStartDate
+	 * RecurringTransaction3.mmStartDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -713,16 +726,16 @@ public class Instalment extends PaymentObligation {
 	 * definition} = "Date of the first payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FirstPaymentDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFirstPaymentDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.FirstPaymentDate, com.tools20022.repository.msg.RecurringTransaction3.StartDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmFirstPaymentDate, com.tools20022.repository.msg.RecurringTransaction3.mmStartDate);
 			elementContext_lazy = () -> Instalment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FirstPaymentDate";
 			definition = "Date of the first payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -730,32 +743,105 @@ public class Instalment extends PaymentObligation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Instalment";
 				definition = "Specifies the details of each successive payment in settlement of a debt or in an investment plan.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentPlan.Instalment);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails4.RecurringTransaction, com.tools20022.repository.msg.CardPaymentTransactionDetails1.RecurringTransaction,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails10.RecurringTransaction, com.tools20022.repository.msg.CardPaymentTransactionDetails3.RecurringTransaction,
-						com.tools20022.repository.msg.InvoiceRequestInformation1.InstalmentInformation, com.tools20022.repository.msg.InvoiceFinancingDetails1.InstalmentFinancingInformation,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails12.Instalment, com.tools20022.repository.msg.CardPaymentTransactionDetails16.Instalment,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails14.Instalment, com.tools20022.repository.msg.CardPaymentTransactionDetails15.Instalment,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails23.Instalment, com.tools20022.repository.msg.CardPaymentTransactionDetails21.Instalment,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails19.Instalment, com.tools20022.repository.msg.CardPaymentTransactionDetails24.Instalment,
-						com.tools20022.repository.msg.FinancingItemList1.FinancingInstalment, com.tools20022.repository.msg.FinancialItem1.InstalmentInformation, com.tools20022.repository.msg.CardTransactionDetail1.Instalment,
-						com.tools20022.repository.msg.CardTransactionDetail3.Instalment, com.tools20022.repository.msg.CardPaymentTransactionDetails29.Instalment, com.tools20022.repository.msg.CardPaymentTransactionDetails30.Instalment,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails27.Instalment, com.tools20022.repository.msg.CardPaymentTransactionDetails31.Instalment,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails39.Instalment, com.tools20022.repository.msg.CardPaymentTransactionDetails38.Instalment,
-						com.tools20022.repository.msg.CardPaymentTransactionDetails41.Instalment, com.tools20022.repository.msg.CardPaymentTransactionDetails37.Instalment);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentPlan.mmInstalment);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails4.mmRecurringTransaction, com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmRecurringTransaction,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails10.mmRecurringTransaction, com.tools20022.repository.msg.CardPaymentTransactionDetails3.mmRecurringTransaction,
+						com.tools20022.repository.msg.InvoiceRequestInformation1.mmInstalmentInformation, com.tools20022.repository.msg.InvoiceFinancingDetails1.mmInstalmentFinancingInformation,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails12.mmInstalment, com.tools20022.repository.msg.CardPaymentTransactionDetails16.mmInstalment,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails14.mmInstalment, com.tools20022.repository.msg.CardPaymentTransactionDetails15.mmInstalment,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmInstalment, com.tools20022.repository.msg.CardPaymentTransactionDetails21.mmInstalment,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails19.mmInstalment, com.tools20022.repository.msg.CardPaymentTransactionDetails24.mmInstalment,
+						com.tools20022.repository.msg.FinancingItemList1.mmFinancingInstalment, com.tools20022.repository.msg.FinancialItem1.mmInstalmentInformation, com.tools20022.repository.msg.CardTransactionDetail1.mmInstalment,
+						com.tools20022.repository.msg.CardTransactionDetail3.mmInstalment, com.tools20022.repository.msg.CardPaymentTransactionDetails29.mmInstalment,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmInstalment, com.tools20022.repository.msg.CardPaymentTransactionDetails27.mmInstalment,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails31.mmInstalment, com.tools20022.repository.msg.CardPaymentTransactionDetails39.mmInstalment,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmInstalment, com.tools20022.repository.msg.CardPaymentTransactionDetails41.mmInstalment,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails37.mmInstalment);
 				superType_lazy = () -> PaymentObligation.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Instalment.InitialNumberOfInstalment, com.tools20022.repository.entity.Instalment.TotalNumberOfInstalment,
-						com.tools20022.repository.entity.Instalment.PeriodUnit, com.tools20022.repository.entity.Instalment.NumberOfUnits, com.tools20022.repository.entity.Instalment.SequenceIdentification,
-						com.tools20022.repository.entity.Instalment.InvestmentPlan, com.tools20022.repository.entity.Instalment.InstalmentPlanType, com.tools20022.repository.entity.Instalment.FirstPaymentAmount,
-						com.tools20022.repository.entity.Instalment.FirstPaymentDate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Instalment.mmInitialNumberOfInstalment, com.tools20022.repository.entity.Instalment.mmTotalNumberOfInstalment,
+						com.tools20022.repository.entity.Instalment.mmPeriodUnit, com.tools20022.repository.entity.Instalment.mmNumberOfUnits, com.tools20022.repository.entity.Instalment.mmSequenceIdentification,
+						com.tools20022.repository.entity.Instalment.mmInvestmentPlan, com.tools20022.repository.entity.Instalment.mmInstalmentPlanType, com.tools20022.repository.entity.Instalment.mmFirstPaymentAmount,
+						com.tools20022.repository.entity.Instalment.mmFirstPaymentDate);
 				derivationComponent_lazy = () -> Arrays.asList(RecurringTransaction1.mmObject(), Instalment1.mmObject(), RecurringTransaction2.mmObject(), Instalment2.mmObject(), InitialAmount1Choice.mmObject(),
 						RecurringTransaction3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getInitialNumberOfInstalment() {
+		return initialNumberOfInstalment;
+	}
+
+	public void setInitialNumberOfInstalment(Number initialNumberOfInstalment) {
+		this.initialNumberOfInstalment = initialNumberOfInstalment;
+	}
+
+	public Number getTotalNumberOfInstalment() {
+		return totalNumberOfInstalment;
+	}
+
+	public void setTotalNumberOfInstalment(Number totalNumberOfInstalment) {
+		this.totalNumberOfInstalment = totalNumberOfInstalment;
+	}
+
+	public FrequencyCode getPeriodUnit() {
+		return periodUnit;
+	}
+
+	public void setPeriodUnit(FrequencyCode periodUnit) {
+		this.periodUnit = periodUnit;
+	}
+
+	public Number getNumberOfUnits() {
+		return numberOfUnits;
+	}
+
+	public void setNumberOfUnits(Number numberOfUnits) {
+		this.numberOfUnits = numberOfUnits;
+	}
+
+	public Max70Text getSequenceIdentification() {
+		return sequenceIdentification;
+	}
+
+	public void setSequenceIdentification(Max70Text sequenceIdentification) {
+		this.sequenceIdentification = sequenceIdentification;
+	}
+
+	public InvestmentPlan getInvestmentPlan() {
+		return investmentPlan;
+	}
+
+	public void setInvestmentPlan(com.tools20022.repository.entity.InvestmentPlan investmentPlan) {
+		this.investmentPlan = investmentPlan;
+	}
+
+	public InstalmentPlanCode getInstalmentPlanType() {
+		return instalmentPlanType;
+	}
+
+	public void setInstalmentPlanType(InstalmentPlanCode instalmentPlanType) {
+		this.instalmentPlanType = instalmentPlanType;
+	}
+
+	public CurrencyAndAmount getFirstPaymentAmount() {
+		return firstPaymentAmount;
+	}
+
+	public void setFirstPaymentAmount(CurrencyAndAmount firstPaymentAmount) {
+		this.firstPaymentAmount = firstPaymentAmount;
+	}
+
+	public ISODateTime getFirstPaymentDate() {
+		return firstPaymentDate;
+	}
+
+	public void setFirstPaymentDate(ISODateTime firstPaymentDate) {
+		this.firstPaymentDate = firstPaymentDate;
 	}
 }

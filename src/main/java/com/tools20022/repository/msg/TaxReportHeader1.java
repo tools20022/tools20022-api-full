@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines message level identification, number of individual tax reports and
@@ -35,13 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxReportHeader1#MessageIdentification
- * TaxReportHeader1.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxReportHeader1#mmMessageIdentification
+ * TaxReportHeader1.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxReportHeader1#NumberOfTaxReports
- * TaxReportHeader1.NumberOfTaxReports}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReportHeader1#TaxAuthority
- * TaxReportHeader1.TaxAuthority}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxReportHeader1#mmNumberOfTaxReports
+ * TaxReportHeader1.mmNumberOfTaxReports}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TaxReportHeader1#mmTaxAuthority
+ * TaxReportHeader1.mmTaxAuthority}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportV01#InvoiceTaxReportHeader
- * InvoiceTaxReportV01.InvoiceTaxReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportV01#mmInvoiceTaxReportHeader
+ * InvoiceTaxReportV01.mmInvoiceTaxReportHeader}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxReportHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Unique message identification.
 	 * <p>
@@ -102,7 +105,7 @@ public class TaxReportHeader1 {
 	 * definition} = "Unique message identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TaxReportHeader1.mmObject();
 			isDerived = false;
@@ -110,12 +113,13 @@ public class TaxReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique message identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MessageIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification1.mmObject();
 		}
 	};
+	protected Number numberOfTaxReports;
 	/**
 	 * Number of TaxReports in this message. Seller can send all TaxReports in
 	 * the same file.
@@ -146,7 +150,7 @@ public class TaxReportHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfTaxReports = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfTaxReports = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxReportHeader1.mmObject();
 			isDerived = false;
@@ -154,11 +158,12 @@ public class TaxReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTaxReports";
 			definition = "Number of TaxReports in this message. Seller can send all TaxReports in the same file.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TaxOrganisationIdentification1> taxAuthority;
 	/**
 	 * Party to which the TaxReport is delivered. This message block contains
 	 * party details for a specific tax authority.
@@ -189,7 +194,7 @@ public class TaxReportHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxAuthority = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxAuthority = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TaxReportHeader1.mmObject();
 			isDerived = false;
@@ -198,18 +203,18 @@ public class TaxReportHeader1 {
 			name = "TaxAuthority";
 			definition = "Party to which the TaxReport is delivered. This message block contains party details for a specific tax authority.";
 			minOccurs = 0;
-			type_lazy = () -> TaxOrganisationIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TaxOrganisationIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReportHeader1.MessageIdentification, com.tools20022.repository.msg.TaxReportHeader1.NumberOfTaxReports,
-						com.tools20022.repository.msg.TaxReportHeader1.TaxAuthority);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportV01.InvoiceTaxReportHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReportHeader1.mmMessageIdentification, com.tools20022.repository.msg.TaxReportHeader1.mmNumberOfTaxReports,
+						com.tools20022.repository.msg.TaxReportHeader1.mmTaxAuthority);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportV01.mmInvoiceTaxReportHeader);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxReportHeader1";
 				definition = "Defines message level identification, number of individual tax reports and tax authority.";
@@ -217,5 +222,29 @@ public class TaxReportHeader1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(com.tools20022.repository.msg.MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Number getNumberOfTaxReports() {
+		return numberOfTaxReports;
+	}
+
+	public void setNumberOfTaxReports(Number numberOfTaxReports) {
+		this.numberOfTaxReports = numberOfTaxReports;
+	}
+
+	public List<TaxOrganisationIdentification1> getTaxAuthority() {
+		return taxAuthority;
+	}
+
+	public void setTaxAuthority(List<com.tools20022.repository.msg.TaxOrganisationIdentification1> taxAuthority) {
+		this.taxAuthority = taxAuthority;
 	}
 }

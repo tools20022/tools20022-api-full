@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountRole1#Party
- * AccountRole1.Party}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountRole1#OwnerType
- * AccountRole1.OwnerType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountRole1#StartDate
- * AccountRole1.StartDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountRole1#EndDate
- * AccountRole1.EndDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountRole1#mmParty
+ * AccountRole1.mmParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountRole1#mmOwnerType
+ * AccountRole1.mmOwnerType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountRole1#mmStartDate
+ * AccountRole1.mmStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountRole1#mmEndDate
+ * AccountRole1.mmEndDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountRole1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification41 party;
 	/**
 	 * Account owner/user identification and contact information.
 	 * <p>
@@ -76,8 +77,8 @@ public class AccountRole1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,21 +97,22 @@ public class AccountRole1 {
 	 * "Account owner/user identification and contact information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Party = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AccountRole1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Account owner/user identification and contact information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification41.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification41.mmObject();
 		}
 	};
+	protected OwnerType1 ownerType;
 	/**
 	 * Defines account owners/users relation to the account.
 	 * <p>
@@ -121,8 +123,8 @@ public class AccountRole1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#PartyRole
-	 * Role.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmPartyRole
+	 * Role.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,21 +142,22 @@ public class AccountRole1 {
 	 * definition} = "Defines account owners/users relation to the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OwnerType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOwnerType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmPartyRole;
 			componentContext_lazy = () -> AccountRole1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.PartyRole;
 			isDerived = false;
 			xmlTag = "OwnrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnerType";
 			definition = "Defines account owners/users relation to the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OwnerType1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OwnerType1.mmObject();
 		}
 	};
+	protected ISODate startDate;
 	/**
 	 * Start date related to the role.
 	 * <p>
@@ -181,7 +184,7 @@ public class AccountRole1 {
 	 * definition} = "Start date related to the role."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountRole1.mmObject();
 			isDerived = false;
@@ -189,11 +192,12 @@ public class AccountRole1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date related to the role.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate endDate;
 	/**
 	 * End date related to the role.
 	 * <p>
@@ -220,7 +224,7 @@ public class AccountRole1 {
 	 * definition} = "End date related to the role."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountRole1.mmObject();
 			isDerived = false;
@@ -228,8 +232,8 @@ public class AccountRole1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "End date related to the role.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -237,15 +241,47 @@ public class AccountRole1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountRole1.Party, com.tools20022.repository.msg.AccountRole1.OwnerType, com.tools20022.repository.msg.AccountRole1.StartDate,
-						com.tools20022.repository.msg.AccountRole1.EndDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountRole1.mmParty, com.tools20022.repository.msg.AccountRole1.mmOwnerType, com.tools20022.repository.msg.AccountRole1.mmStartDate,
+						com.tools20022.repository.msg.AccountRole1.mmEndDate);
 				trace_lazy = () -> AccountOwnerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountRole1";
 				definition = "Specifies the party and owner type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification41 getParty() {
+		return party;
+	}
+
+	public void setParty(com.tools20022.repository.msg.PartyIdentification41 party) {
+		this.party = party;
+	}
+
+	public OwnerType1 getOwnerType() {
+		return ownerType;
+	}
+
+	public void setOwnerType(com.tools20022.repository.msg.OwnerType1 ownerType) {
+		this.ownerType = ownerType;
+	}
+
+	public ISODate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(ISODate startDate) {
+		this.startDate = startDate;
+	}
+
+	public ISODate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(ISODate endDate) {
+		this.endDate = endDate;
 	}
 }

@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailSearchCriteria1#FinancialInstrumentIdentification
- * SecuritiesAuditTrailSearchCriteria1.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailSearchCriteria1#mmFinancialInstrumentIdentification
+ * SecuritiesAuditTrailSearchCriteria1.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailSearchCriteria1#DatePeriod
- * SecuritiesAuditTrailSearchCriteria1.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailSearchCriteria1#mmDatePeriod
+ * SecuritiesAuditTrailSearchCriteria1.mmDatePeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAuditTrailSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Describes security to be queried.
 	 * <p>
@@ -86,7 +87,7 @@ public class SecuritiesAuditTrailSearchCriteria1 {
 	 * definition} = "Describes security to be queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class SecuritiesAuditTrailSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Describes security to be queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected DateSearchChoice datePeriod;
 	/**
 	 * Describes date period for querying information.
 	 * <p>
@@ -127,7 +129,7 @@ public class SecuritiesAuditTrailSearchCriteria1 {
 	 * definition} = "Describes date period for querying information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class SecuritiesAuditTrailSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Describes date period for querying information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
@@ -144,13 +146,30 @@ public class SecuritiesAuditTrailSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAuditTrailSearchCriteria1.FinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesAuditTrailSearchCriteria1.DatePeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.SecuritiesAuditTrailSearchCriteria1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesAuditTrailSearchCriteria1.mmDatePeriod);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAuditTrailSearchCriteria1";
 				definition = "Describes search criteria for securities audit trail query.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public DateSearchChoice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(DateSearchChoice datePeriod) {
+		this.datePeriod = datePeriod;
 	}
 }

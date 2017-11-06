@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingInstructionStatus1Choice#ProcessedStatus
- * StandingInstructionStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingInstructionStatus1Choice#mmProcessedStatus
+ * StandingInstructionStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingInstructionStatus1Choice#RejectedStatus
- * StandingInstructionStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingInstructionStatus1Choice#mmRejectedStatus
+ * StandingInstructionStatus1Choice.mmRejectedStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,15 +50,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#StandingInstructionRequestStatus
- * AgentCAStandingInstructionStatusAdviceV01.StandingInstructionRequestStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmStandingInstructionRequestStatus
+ * AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatus}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StandingInstructionStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionStandingInstructionProcessingStatus1 processedStatus;
 	/**
 	 * Provides information about the processing status of the request.
 	 * <p>
@@ -105,21 +107,22 @@ public class StandingInstructionStatus1Choice {
 	 * "Provides information about the processing status of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingInstructionStatus1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
+			componentContext_lazy = () -> StandingInstructionStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionStandingInstructionProcessingStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorporateActionStandingInstructionProcessingStatus1.mmObject();
 		}
 	};
+	protected CorporateActionStandingInstructionRejectionStatus1 rejectedStatus;
 	/**
 	 * Provides information about the rejection status.
 	 * <p>
@@ -152,34 +155,50 @@ public class StandingInstructionStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingInstructionStatus1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
+			componentContext_lazy = () -> StandingInstructionStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionStandingInstructionRejectionStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorporateActionStandingInstructionRejectionStatus1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingInstructionStatus1Choice.ProcessedStatus, com.tools20022.repository.choice.StandingInstructionStatus1Choice.RejectedStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingInstructionStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.StandingInstructionStatus1Choice.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.StandingInstructionRequestStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StandingInstructionStatus1Choice";
 				definition = "Choice between various statuses.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionStandingInstructionProcessingStatus1 getProcessedStatus() {
+		return processedStatus;
+	}
+
+	public void setProcessedStatus(CorporateActionStandingInstructionProcessingStatus1 processedStatus) {
+		this.processedStatus = processedStatus;
+	}
+
+	public CorporateActionStandingInstructionRejectionStatus1 getRejectedStatus() {
+		return rejectedStatus;
+	}
+
+	public void setRejectedStatus(CorporateActionStandingInstructionRejectionStatus1 rejectedStatus) {
+		this.rejectedStatus = rejectedStatus;
 	}
 }

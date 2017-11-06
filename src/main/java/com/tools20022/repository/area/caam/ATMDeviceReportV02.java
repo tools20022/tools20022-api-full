@@ -59,24 +59,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#Header
- * ATMDeviceReportV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#mmHeader
+ * ATMDeviceReportV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#ProtectedATMDeviceReport
- * ATMDeviceReportV02.ProtectedATMDeviceReport}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#mmProtectedATMDeviceReport
+ * ATMDeviceReportV02.mmProtectedATMDeviceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#ATMDeviceReport
- * ATMDeviceReportV02.ATMDeviceReport}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#mmATMDeviceReport
+ * ATMDeviceReportV02.mmATMDeviceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#SecurityTrailer
- * ATMDeviceReportV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#mmSecurityTrailer
+ * ATMDeviceReportV02.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02#identifier
- * ATMDeviceReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caam.001.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDeviceReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header31 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -121,17 +120,18 @@ public class ATMDeviceReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header31.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedATMDeviceReport;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -155,17 +155,18 @@ public class ATMDeviceReportV02 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedATMDeviceReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedATMDeviceReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMDvcRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMDeviceReport";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected ATMDeviceReport1 aTMDeviceReport;
 	/**
 	 * Information related to the status report from an ATM device.
 	 * <p>
@@ -190,17 +191,18 @@ public class ATMDeviceReportV02 {
 	 * "Information related to the status report from an ATM device."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMDeviceReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMDeviceReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMDvcRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDeviceReport";
 			definition = "Information related to the status report from an ATM device.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ATMDeviceReport1.mmObject();
 		}
 	};
+	protected ContentInformationType13 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC or a digital signature.
 	 * <p>
@@ -225,42 +227,15 @@ public class ATMDeviceReportV02 {
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType13.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caam"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caam";
-			messageFunctionality = "001";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -275,11 +250,50 @@ public class ATMDeviceReportV02 {
 				rootElement = "Document";
 				xmlTag = "ATMDvcRpt";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDeviceReportV02.Header, com.tools20022.repository.area.caam.ATMDeviceReportV02.ProtectedATMDeviceReport,
-						com.tools20022.repository.area.caam.ATMDeviceReportV02.ATMDeviceReport, com.tools20022.repository.area.caam.ATMDeviceReportV02.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caam.ATMDeviceReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDeviceReportV02.mmHeader, com.tools20022.repository.area.caam.ATMDeviceReportV02.mmProtectedATMDeviceReport,
+						com.tools20022.repository.area.caam.ATMDeviceReportV02.mmATMDeviceReport, com.tools20022.repository.area.caam.ATMDeviceReportV02.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caam";
+						messageFunctionality = "001";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header31 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header31 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedATMDeviceReport() {
+		return protectedATMDeviceReport;
+	}
+
+	public void setProtectedATMDeviceReport(ContentInformationType10 protectedATMDeviceReport) {
+		this.protectedATMDeviceReport = protectedATMDeviceReport;
+	}
+
+	public ATMDeviceReport1 getATMDeviceReport() {
+		return aTMDeviceReport;
+	}
+
+	public void setATMDeviceReport(ATMDeviceReport1 aTMDeviceReport) {
+		this.aTMDeviceReport = aTMDeviceReport;
+	}
+
+	public ContentInformationType13 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType13 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

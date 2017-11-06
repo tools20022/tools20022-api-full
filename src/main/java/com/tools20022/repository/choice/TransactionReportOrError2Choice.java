@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.ErrorHandling4;
 import com.tools20022.repository.msg.Transactions6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between transactions and booked entries held at the transaction
@@ -36,18 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionReportOrError2Choice#BusinessReport
- * TransactionReportOrError2Choice.BusinessReport}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionReportOrError2Choice#mmBusinessReport
+ * TransactionReportOrError2Choice.mmBusinessReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionReportOrError2Choice#OperationalError
- * TransactionReportOrError2Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionReportOrError2Choice#mmOperationalError
+ * TransactionReportOrError2Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Transactions6 businessReport;
 	/**
 	 * Reports on payment transactions.
 	 * <p>
@@ -94,11 +96,11 @@ public class TransactionReportOrError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TransactionReportOrError1Choice#BusinessReport
-	 * TransactionReportOrError1Choice.BusinessReport}</li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionReportOrError1Choice#mmBusinessReport
+	 * TransactionReportOrError1Choice.mmBusinessReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -106,13 +108,14 @@ public class TransactionReportOrError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports on payment transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransactionReportOrError1Choice.BusinessReport;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TransactionReportOrError1Choice.mmBusinessReport;
 			maxOccurs = 1;
-			type_lazy = () -> Transactions6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Transactions6.mmObject();
 		}
 	};
+	protected List<ErrorHandling4> operationalError;
 	/**
 	 * Indicates that an operational error has been issued during the processing
 	 * of the related request.
@@ -143,11 +146,11 @@ public class TransactionReportOrError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TransactionReportOrError1Choice#OperationalError
-	 * TransactionReportOrError1Choice.OperationalError}</li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionReportOrError1Choice#mmOperationalError
+	 * TransactionReportOrError1Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -155,18 +158,18 @@ public class TransactionReportOrError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransactionReportOrError1Choice.OperationalError;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TransactionReportOrError1Choice.mmOperationalError;
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling4.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionReportOrError2Choice.BusinessReport, com.tools20022.repository.choice.TransactionReportOrError2Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionReportOrError2Choice.mmBusinessReport, com.tools20022.repository.choice.TransactionReportOrError2Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionReportOrError2Choice";
 				definition = "Choice between transactions and booked entries held at the transaction administrator or an operational error when the requested data cannot be retrieved.";
@@ -174,5 +177,21 @@ public class TransactionReportOrError2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Transactions6 getBusinessReport() {
+		return businessReport;
+	}
+
+	public void setBusinessReport(Transactions6 businessReport) {
+		this.businessReport = businessReport;
+	}
+
+	public List<ErrorHandling4> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling4> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

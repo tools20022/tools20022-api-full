@@ -40,25 +40,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#Account
- * AccountIdentification.Account}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountIdentification#IBAN
- * AccountIdentification.IBAN}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountIdentification#BBAN
- * AccountIdentification.BBAN}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountIdentification#UPIC
- * AccountIdentification.UPIC}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmAccount
+ * AccountIdentification.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#ProprietaryIdentification
- * AccountIdentification.ProprietaryIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountIdentification#Name
- * AccountIdentification.Name}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmIBAN
+ * AccountIdentification.mmIBAN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#CostReferencePattern
- * AccountIdentification.CostReferencePattern}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmBBAN
+ * AccountIdentification.mmBBAN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#Number
- * AccountIdentification.Number}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmUPIC
+ * AccountIdentification.mmUPIC}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmProprietaryIdentification
+ * AccountIdentification.mmProprietaryIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+ * AccountIdentification.mmName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmCostReferencePattern
+ * AccountIdentification.mmCostReferencePattern}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmNumber
+ * AccountIdentification.mmNumber}</li>
  * </ul>
  * </li>
  * <li>
@@ -66,13 +70,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#IdentificationForAccount
- * GenericIdentification.IdentificationForAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccount
+ * GenericIdentification.mmIdentificationForAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#IdentificationForAccountCostReferencePattern
- * GenericIdentification.IdentificationForAccountCostReferencePattern}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#Identification
- * Account.Identification}</li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccountCostReferencePattern
+ * GenericIdentification.mmIdentificationForAccountCostReferencePattern}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmIdentification
+ * Account.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -80,191 +84,191 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndPurpose#Identification
- * AccountIdentificationAndPurpose.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndPurpose#mmIdentification
+ * AccountIdentificationAndPurpose.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification3#Identification
- * AccountIdentification3.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification3#mmIdentification
+ * AccountIdentification3.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#SimpleIdentification
- * AccountIdentificationFormatChoice.SimpleIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#mmSimpleIdentification
+ * AccountIdentificationFormatChoice.mmSimpleIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#IdentificationAndPurpose
- * AccountIdentificationFormatChoice.IdentificationAndPurpose}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#mmIdentificationAndPurpose
+ * AccountIdentificationFormatChoice.mmIdentificationAndPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#IdentificationAsDSS
- * AccountIdentificationFormatChoice.IdentificationAsDSS}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationFormatChoice#mmIdentificationAsDSS
+ * AccountIdentificationFormatChoice.mmIdentificationAsDSS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName3#Identification
- * AccountIdentificationAndName3.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName3#mmIdentification
+ * AccountIdentificationAndName3.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationDetails#Identification
- * AccountIdentificationDetails.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationDetails#mmIdentification
+ * AccountIdentificationDetails.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification10#IdentificationCode
- * AccountIdentification10.IdentificationCode}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification10#mmIdentificationCode
+ * AccountIdentification10.mmIdentificationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification6Choice#ForAllAccounts
- * AccountIdentification6Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification6Choice#mmForAllAccounts
+ * AccountIdentification6Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification6Choice#AccountsList
- * AccountIdentification6Choice.AccountsList}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification6Choice#mmAccountsList
+ * AccountIdentification6Choice.mmAccountsList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification11Choice#ForAllAccounts
- * AccountIdentification11Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification11Choice#mmForAllAccounts
+ * AccountIdentification11Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification11Choice#AccountsList
- * AccountIdentification11Choice.AccountsList}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification11Choice#mmAccountsList
+ * AccountIdentification11Choice.mmAccountsList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification13Choice#ForAllAccounts
- * AccountIdentification13Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification13Choice#mmForAllAccounts
+ * AccountIdentification13Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification13Choice#AccountsList
- * AccountIdentification13Choice.AccountsList}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification13Choice#mmAccountsList
+ * AccountIdentification13Choice.mmAccountsList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification17Choice#ForAllAccounts
- * AccountIdentification17Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification17Choice#mmForAllAccounts
+ * AccountIdentification17Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification17Choice#AccountsList
- * AccountIdentification17Choice.AccountsList}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification17Choice#mmAccountsList
+ * AccountIdentification17Choice.mmAccountsList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification7Choice#ForAllAccounts
- * AccountIdentification7Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification7Choice#mmForAllAccounts
+ * AccountIdentification7Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification8Choice#ForAllAccounts
- * AccountIdentification8Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification8Choice#mmForAllAccounts
+ * AccountIdentification8Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification12Choice#ForAllAccounts
- * AccountIdentification12Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification12Choice#mmForAllAccounts
+ * AccountIdentification12Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification15Choice#ForAllAccounts
- * AccountIdentification15Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification15Choice#mmForAllAccounts
+ * AccountIdentification15Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification18Choice#ForAllAccounts
- * AccountIdentification18Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification18Choice#mmForAllAccounts
+ * AccountIdentification18Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification19Choice#ForAllAccounts
- * AccountIdentification19Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification19Choice#mmForAllAccounts
+ * AccountIdentification19Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification21Choice#ForAllAccounts
- * AccountIdentification21Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification21Choice#mmForAllAccounts
+ * AccountIdentification21Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification22Choice#ForAllAccounts
- * AccountIdentification22Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification22Choice#mmForAllAccounts
+ * AccountIdentification22Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification2#Identification
- * SubAccountIdentification2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification2#mmIdentification
+ * SubAccountIdentification2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification3#Identification
- * SubAccountIdentification3.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification3#mmIdentification
+ * SubAccountIdentification3.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification1#Identification
- * SubAccountIdentification1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification1#mmIdentification
+ * SubAccountIdentification1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification5#Identification
- * SubAccountIdentification5.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification5#mmIdentification
+ * SubAccountIdentification5.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification4#Identification
- * SubAccountIdentification4.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification4#mmIdentification
+ * SubAccountIdentification4.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification6#Identification
- * SubAccountIdentification6.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification6#mmIdentification
+ * SubAccountIdentification6.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName2#Identification
- * AccountIdentificationAndName2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName2#mmIdentification
+ * AccountIdentificationAndName2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#Identification
- * AccountIdentificationOrNameChoice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#mmIdentification
+ * AccountIdentificationOrNameChoice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#NameAndIdentification
- * AccountIdentificationOrNameChoice.NameAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#mmNameAndIdentification
+ * AccountIdentificationOrNameChoice.mmNameAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification9Choice#ForAllAccounts
- * AccountIdentification9Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification9Choice#mmForAllAccounts
+ * AccountIdentification9Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification9Choice#AccountsListAndBalanceDetails
- * AccountIdentification9Choice.AccountsListAndBalanceDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification9Choice#mmAccountsListAndBalanceDetails
+ * AccountIdentification9Choice.mmAccountsListAndBalanceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification10Choice#ForAllAccounts
- * AccountIdentification10Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification10Choice#mmForAllAccounts
+ * AccountIdentification10Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification10Choice#AccountsListAndBalanceDetails
- * AccountIdentification10Choice.AccountsListAndBalanceDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification10Choice#mmAccountsListAndBalanceDetails
+ * AccountIdentification10Choice.mmAccountsListAndBalanceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification14Choice#ForAllAccounts
- * AccountIdentification14Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification14Choice#mmForAllAccounts
+ * AccountIdentification14Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification14Choice#AccountsListAndBalanceDetails
- * AccountIdentification14Choice.AccountsListAndBalanceDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification14Choice#mmAccountsListAndBalanceDetails
+ * AccountIdentification14Choice.mmAccountsListAndBalanceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification16Choice#ForAllAccounts
- * AccountIdentification16Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification16Choice#mmForAllAccounts
+ * AccountIdentification16Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification16Choice#AccountsListAndBalanceDetails
- * AccountIdentification16Choice.AccountsListAndBalanceDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification16Choice#mmAccountsListAndBalanceDetails
+ * AccountIdentification16Choice.mmAccountsListAndBalanceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName#AccountIdentification
- * AccountIdentificationAndName.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName#mmAccountIdentification
+ * AccountIdentificationAndName.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName4#Identification
- * AccountIdentificationAndName4.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName4#mmIdentification
+ * AccountIdentificationAndName4.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification20Choice#CashAccountIdentification
- * AccountIdentification20Choice.CashAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification20Choice#mmCashAccountIdentification
+ * AccountIdentification20Choice.mmCashAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification23Choice#ForAllAccounts
- * AccountIdentification23Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification23Choice#mmForAllAccounts
+ * AccountIdentification23Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification26Choice#ForAllAccounts
- * AccountIdentification26Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification26Choice#mmForAllAccounts
+ * AccountIdentification26Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubAccountIdentification36#Identification
- * SubAccountIdentification36.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification36#mmIdentification
+ * SubAccountIdentification36.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#Card
- * AccountIdentification30Choice.Card}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmCard
+ * AccountIdentification30Choice.mmCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#MSISDN
- * AccountIdentification30Choice.MSISDN}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmMSISDN
+ * AccountIdentification30Choice.mmMSISDN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#EMail
- * AccountIdentification30Choice.EMail}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmEMail
+ * AccountIdentification30Choice.mmEMail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#Domestic
- * AccountIdentification30Choice.Domestic}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmDomestic
+ * AccountIdentification30Choice.mmDomestic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification33Choice#ForAllAccounts
- * AccountIdentification33Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification33Choice#mmForAllAccounts
+ * AccountIdentification33Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification33Choice#AccountsListAndBalanceDetails
- * AccountIdentification33Choice.AccountsListAndBalanceDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification33Choice#mmAccountsListAndBalanceDetails
+ * AccountIdentification33Choice.mmAccountsListAndBalanceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification29Choice#ForAllAccounts
- * AccountIdentification29Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification29Choice#mmForAllAccounts
+ * AccountIdentification29Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification29Choice#AccountsList
- * AccountIdentification29Choice.AccountsList}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification29Choice#mmAccountsList
+ * AccountIdentification29Choice.mmAccountsList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification32Choice#ForAllAccounts
- * AccountIdentification32Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification32Choice#mmForAllAccounts
+ * AccountIdentification32Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName5#Identification
- * AccountIdentificationAndName5.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName5#mmIdentification
+ * AccountIdentificationAndName5.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification34Choice#ForAllAccounts
- * AccountIdentification34Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification34Choice#mmForAllAccounts
+ * AccountIdentification34Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification34Choice#AccountsList
- * AccountIdentification34Choice.AccountsList}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification34Choice#mmAccountsList
+ * AccountIdentification34Choice.mmAccountsList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification36Choice#ForAllAccounts
- * AccountIdentification36Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification36Choice#mmForAllAccounts
+ * AccountIdentification36Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification37Choice#ForAllAccounts
- * AccountIdentification37Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification37Choice#mmForAllAccounts
+ * AccountIdentification37Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification37Choice#AccountsListAndBalanceDetails
- * AccountIdentification37Choice.AccountsListAndBalanceDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification37Choice#mmAccountsListAndBalanceDetails
+ * AccountIdentification37Choice.mmAccountsListAndBalanceDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -539,8 +543,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -555,6 +559,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentification {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Account account;
 	/**
 	 * Account for which an identification is provided.
 	 * <p>
@@ -563,8 +568,8 @@ public class AccountIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -587,20 +592,21 @@ public class AccountIdentification {
 	 * definition} = "Account for which an identification is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Account = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account for which an identification is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.Identification;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
+	protected IBAN2007Identifier iBAN;
 	/**
 	 * International Bank Account Number (IBAN) - identifier used
 	 * internationally by financial institutions to uniquely identify the
@@ -616,52 +622,52 @@ public class AccountIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.IBAN2007Identifier
 	 * IBAN2007Identifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#IBAN
-	 * AccountIdentification1Choice.IBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification5Choice#IBAN
-	 * AccountIdentification5Choice.IBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification1Choice#IBAN
-	 * CashAccountIdentification1Choice.IBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification3Choice#IBAN
-	 * AccountIdentification3Choice.IBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification4Choice#IBAN
-	 * AccountIdentification4Choice.IBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification4Choice#Other
-	 * AccountIdentification4Choice.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification5Choice#IBAN
-	 * CashAccountIdentification5Choice.IBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification2Choice#IBAN
-	 * CashAccountIdentification2Choice.IBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification6Choice#IBAN
-	 * CashAccountIdentification6Choice.IBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentification2#IBAN
-	 * AccountIdentification2.IBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#IBAN
-	 * AccountIdentification30Choice.IBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#IBAN
-	 * AccountIdentification31Choice.IBAN}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmIBAN
+	 * AccountIdentification1Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification5Choice#mmIBAN
+	 * AccountIdentification5Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification1Choice#mmIBAN
+	 * CashAccountIdentification1Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification3Choice#mmIBAN
+	 * AccountIdentification3Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification4Choice#mmIBAN
+	 * AccountIdentification4Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification4Choice#mmOther
+	 * AccountIdentification4Choice.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification5Choice#mmIBAN
+	 * CashAccountIdentification5Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification2Choice#mmIBAN
+	 * CashAccountIdentification2Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification6Choice#mmIBAN
+	 * CashAccountIdentification6Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentification2#mmIBAN
+	 * AccountIdentification2.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmIBAN
+	 * AccountIdentification30Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmIBAN
+	 * AccountIdentification31Choice.mmIBAN}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -675,23 +681,24 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute IBAN = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIBAN = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification1Choice.IBAN, com.tools20022.repository.choice.AccountIdentification5Choice.IBAN,
-					com.tools20022.repository.choice.CashAccountIdentification1Choice.IBAN, com.tools20022.repository.choice.AccountIdentification3Choice.IBAN, com.tools20022.repository.choice.AccountIdentification4Choice.IBAN,
-					com.tools20022.repository.choice.AccountIdentification4Choice.Other, com.tools20022.repository.choice.CashAccountIdentification5Choice.IBAN, com.tools20022.repository.choice.CashAccountIdentification2Choice.IBAN,
-					com.tools20022.repository.choice.CashAccountIdentification6Choice.IBAN, com.tools20022.repository.msg.AccountIdentification2.IBAN, com.tools20022.repository.choice.AccountIdentification30Choice.IBAN,
-					com.tools20022.repository.choice.AccountIdentification31Choice.IBAN);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification1Choice.mmIBAN, com.tools20022.repository.choice.AccountIdentification5Choice.mmIBAN,
+					com.tools20022.repository.choice.CashAccountIdentification1Choice.mmIBAN, com.tools20022.repository.choice.AccountIdentification3Choice.mmIBAN, com.tools20022.repository.choice.AccountIdentification4Choice.mmIBAN,
+					com.tools20022.repository.choice.AccountIdentification4Choice.mmOther, com.tools20022.repository.choice.CashAccountIdentification5Choice.mmIBAN, com.tools20022.repository.choice.CashAccountIdentification2Choice.mmIBAN,
+					com.tools20022.repository.choice.CashAccountIdentification6Choice.mmIBAN, com.tools20022.repository.msg.AccountIdentification2.mmIBAN, com.tools20022.repository.choice.AccountIdentification30Choice.mmIBAN,
+					com.tools20022.repository.choice.AccountIdentification31Choice.mmIBAN);
 			elementContext_lazy = () -> AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IBAN";
 			definition = "International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 \"Banking and related financial services - International Bank Account Number (IBAN)\" version 1997-10-01, or later revisions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> IBAN2007Identifier.mmObject();
 		}
 	};
+	protected BBANIdentifier bBAN;
 	/**
 	 * Basic Bank Account Number (BBAN) - identifier used nationally by
 	 * financial institutions, ie, in individual countries, generally as part of
@@ -705,34 +712,34 @@ public class AccountIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.BBANIdentifier
 	 * BBANIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#BBAN
-	 * AccountIdentification1Choice.BBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification5Choice#BBAN
-	 * AccountIdentification5Choice.BBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification1Choice#BBAN
-	 * CashAccountIdentification1Choice.BBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification3Choice#BBAN
-	 * AccountIdentification3Choice.BBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#BBAN
-	 * AccountIdentification30Choice.BBAN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#BBAN
-	 * AccountIdentification31Choice.BBAN}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmBBAN
+	 * AccountIdentification1Choice.mmBBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification5Choice#mmBBAN
+	 * AccountIdentification5Choice.mmBBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification1Choice#mmBBAN
+	 * CashAccountIdentification1Choice.mmBBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification3Choice#mmBBAN
+	 * AccountIdentification3Choice.mmBBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmBBAN
+	 * AccountIdentification30Choice.mmBBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmBBAN
+	 * AccountIdentification31Choice.mmBBAN}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -746,21 +753,22 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BBAN = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBBAN = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification1Choice.BBAN, com.tools20022.repository.choice.AccountIdentification5Choice.BBAN,
-					com.tools20022.repository.choice.CashAccountIdentification1Choice.BBAN, com.tools20022.repository.choice.AccountIdentification3Choice.BBAN, com.tools20022.repository.choice.AccountIdentification30Choice.BBAN,
-					com.tools20022.repository.choice.AccountIdentification31Choice.BBAN);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification1Choice.mmBBAN, com.tools20022.repository.choice.AccountIdentification5Choice.mmBBAN,
+					com.tools20022.repository.choice.CashAccountIdentification1Choice.mmBBAN, com.tools20022.repository.choice.AccountIdentification3Choice.mmBBAN, com.tools20022.repository.choice.AccountIdentification30Choice.mmBBAN,
+					com.tools20022.repository.choice.AccountIdentification31Choice.mmBBAN);
 			elementContext_lazy = () -> AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BBAN";
 			definition = "Basic Bank Account Number (BBAN) - identifier used nationally by financial institutions, ie, in individual countries, generally as part of a National Account Numbering Scheme(s), to uniquely identify the account of a customer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
 		}
 	};
+	protected UPICIdentifier uPIC;
 	/**
 	 * Universal Payment Identification Code (UPIC) - identifier used by the New
 	 * York Clearing House to mask confidential data, such as bank accounts and
@@ -774,31 +782,31 @@ public class AccountIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.UPICIdentifier
 	 * UPICIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#UPIC
-	 * AccountIdentification1Choice.UPIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification1Choice#UPIC
-	 * CashAccountIdentification1Choice.UPIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification3Choice#UPIC
-	 * AccountIdentification3Choice.UPIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#UPIC
-	 * AccountIdentification30Choice.UPIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#UPIC
-	 * AccountIdentification31Choice.UPIC}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmUPIC
+	 * AccountIdentification1Choice.mmUPIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification1Choice#mmUPIC
+	 * CashAccountIdentification1Choice.mmUPIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification3Choice#mmUPIC
+	 * AccountIdentification3Choice.mmUPIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmUPIC
+	 * AccountIdentification30Choice.mmUPIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmUPIC
+	 * AccountIdentification31Choice.mmUPIC}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -812,20 +820,21 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute UPIC = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmUPIC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification1Choice.UPIC, com.tools20022.repository.choice.CashAccountIdentification1Choice.UPIC,
-					com.tools20022.repository.choice.AccountIdentification3Choice.UPIC, com.tools20022.repository.choice.AccountIdentification30Choice.UPIC, com.tools20022.repository.choice.AccountIdentification31Choice.UPIC);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification1Choice.mmUPIC, com.tools20022.repository.choice.CashAccountIdentification1Choice.mmUPIC,
+					com.tools20022.repository.choice.AccountIdentification3Choice.mmUPIC, com.tools20022.repository.choice.AccountIdentification30Choice.mmUPIC, com.tools20022.repository.choice.AccountIdentification31Choice.mmUPIC);
 			elementContext_lazy = () -> AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UPIC";
 			definition = "Universal Payment Identification Code (UPIC) - identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
 		}
 	};
+	protected GenericIdentification proprietaryIdentification;
 	/**
 	 * Unique identifier for an account. It is assigned by the account servicer
 	 * using a proprietary identification scheme.
@@ -835,8 +844,8 @@ public class AccountIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#IdentificationForAccount
-	 * GenericIdentification.IdentificationForAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccount
+	 * GenericIdentification.mmIdentificationForAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -845,64 +854,64 @@ public class AccountIdentification {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#DomesticAccount
-	 * AccountIdentification1Choice.DomesticAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification5Choice#DomesticAccount
-	 * AccountIdentification5Choice.DomesticAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification5Choice#DepositoryAccount
-	 * AccountIdentification5Choice.DepositoryAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentification1#Proprietary
-	 * AccountIdentification1.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification1Choice#DomesticAccount
-	 * CashAccountIdentification1Choice.DomesticAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification3Choice#ProprietaryAccount
-	 * AccountIdentification3Choice.ProprietaryAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification5Choice#Proprietary
-	 * CashAccountIdentification5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification2Choice#Proprietary
-	 * CashAccountIdentification2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification6Choice#Proprietary
-	 * CashAccountIdentification6Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentification26#Proprietary
-	 * AccountIdentification26.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentification4#Proprietary
-	 * AccountIdentification4.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountIdentification1#DomesticAccount
-	 * CashAccountIdentification1.DomesticAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#Proprietary
-	 * CustomerAccount2.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#Other
-	 * AccountIdentification30Choice.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#DomesticAccount
-	 * AccountIdentification31Choice.DomesticAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountDesignation1Choice#Proprietary
-	 * AccountDesignation1Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmDomesticAccount
+	 * AccountIdentification1Choice.mmDomesticAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification5Choice#mmDomesticAccount
+	 * AccountIdentification5Choice.mmDomesticAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification5Choice#mmDepositoryAccount
+	 * AccountIdentification5Choice.mmDepositoryAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentification1#mmProprietary
+	 * AccountIdentification1.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification1Choice#mmDomesticAccount
+	 * CashAccountIdentification1Choice.mmDomesticAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification3Choice#mmProprietaryAccount
+	 * AccountIdentification3Choice.mmProprietaryAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification5Choice#mmProprietary
+	 * CashAccountIdentification5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification2Choice#mmProprietary
+	 * CashAccountIdentification2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification6Choice#mmProprietary
+	 * CashAccountIdentification6Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentification26#mmProprietary
+	 * AccountIdentification26.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentification4#mmProprietary
+	 * AccountIdentification4.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountIdentification1#mmDomesticAccount
+	 * CashAccountIdentification1.mmDomesticAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#mmProprietary
+	 * CustomerAccount2.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification30Choice#mmOther
+	 * AccountIdentification30Choice.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmDomesticAccount
+	 * AccountIdentification31Choice.mmDomesticAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountDesignation1Choice#mmProprietary
+	 * AccountDesignation1Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -916,27 +925,28 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ProprietaryIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmProprietaryIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification1Choice.DomesticAccount, com.tools20022.repository.choice.AccountIdentification5Choice.DomesticAccount,
-					com.tools20022.repository.choice.AccountIdentification5Choice.DepositoryAccount, com.tools20022.repository.msg.AccountIdentification1.Proprietary,
-					com.tools20022.repository.choice.CashAccountIdentification1Choice.DomesticAccount, com.tools20022.repository.choice.AccountIdentification3Choice.ProprietaryAccount,
-					com.tools20022.repository.choice.CashAccountIdentification5Choice.Proprietary, com.tools20022.repository.choice.CashAccountIdentification2Choice.Proprietary,
-					com.tools20022.repository.choice.CashAccountIdentification6Choice.Proprietary, com.tools20022.repository.msg.AccountIdentification26.Proprietary, com.tools20022.repository.msg.AccountIdentification4.Proprietary,
-					com.tools20022.repository.msg.CashAccountIdentification1.DomesticAccount, com.tools20022.repository.msg.CustomerAccount2.Proprietary, com.tools20022.repository.choice.AccountIdentification30Choice.Other,
-					com.tools20022.repository.choice.AccountIdentification31Choice.DomesticAccount, com.tools20022.repository.choice.AccountDesignation1Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification1Choice.mmDomesticAccount, com.tools20022.repository.choice.AccountIdentification5Choice.mmDomesticAccount,
+					com.tools20022.repository.choice.AccountIdentification5Choice.mmDepositoryAccount, com.tools20022.repository.msg.AccountIdentification1.mmProprietary,
+					com.tools20022.repository.choice.CashAccountIdentification1Choice.mmDomesticAccount, com.tools20022.repository.choice.AccountIdentification3Choice.mmProprietaryAccount,
+					com.tools20022.repository.choice.CashAccountIdentification5Choice.mmProprietary, com.tools20022.repository.choice.CashAccountIdentification2Choice.mmProprietary,
+					com.tools20022.repository.choice.CashAccountIdentification6Choice.mmProprietary, com.tools20022.repository.msg.AccountIdentification26.mmProprietary, com.tools20022.repository.msg.AccountIdentification4.mmProprietary,
+					com.tools20022.repository.msg.CashAccountIdentification1.mmDomesticAccount, com.tools20022.repository.msg.CustomerAccount2.mmProprietary, com.tools20022.repository.choice.AccountIdentification30Choice.mmOther,
+					com.tools20022.repository.choice.AccountIdentification31Choice.mmDomesticAccount, com.tools20022.repository.choice.AccountDesignation1Choice.mmProprietary);
 			elementContext_lazy = () -> AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.IdentificationForAccount;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccount;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
+	protected Max70Text name;
 	/**
 	 * Name of the account. It provides an additional means of identification,
 	 * and is designated by the account servicer in agreement with the account
@@ -948,276 +958,280 @@ public class AccountIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max70Text
 	 * Max70Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount5#Name
-	 * CashAccount5.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount1#Name
-	 * SecuritiesAccount1.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount17#Name
-	 * InvestmentAccount17.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName3#Name
-	 * AccountIdentificationAndName3.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount12#Name
-	 * CashAccount12.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount4#Name
-	 * SecuritiesAccount4.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount27#Name
-	 * InvestmentAccount27.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount35#Name
-	 * InvestmentAccount35.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount19#Name
-	 * InvestmentAccount19.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount18#Name
-	 * InvestmentAccount18.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount29#Name
-	 * InvestmentAccount29.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount28#Name
-	 * InvestmentAccount28.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount36#Name
-	 * InvestmentAccount36.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount16#Name
-	 * InvestmentAccount16.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount26#Name
-	 * InvestmentAccount26.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount34#Name
-	 * InvestmentAccount34.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount7#Name
-	 * CashAccount7.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount16#Name
-	 * CashAccount16.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount24#Name
-	 * CashAccount24.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccountDetails1#Name
-	 * CashAccountDetails1.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccountDetails3#Name
-	 * CashAccountDetails3.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccountDetails4#Name
-	 * CashAccountDetails4.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#Name
-	 * CashAccount23.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount13#Name
-	 * CashAccount13.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount20#Name
-	 * CashAccount20.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount25#Name
-	 * CashAccount25.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount10#AccountName
-	 * InvestmentAccount10.AccountName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount11#AccountName
-	 * InvestmentAccount11.AccountName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount22#AccountName
-	 * InvestmentAccount22.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SubAccount1#Name
-	 * SubAccount1.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount24#AccountName
-	 * InvestmentAccount24.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount13#Name
-	 * SecuritiesAccount13.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount17#Name
-	 * SecuritiesAccount17.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount11#Name
-	 * SecuritiesAccount11.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount2#Name
-	 * SecuritiesAccount2.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount14#Name
-	 * SecuritiesAccount14.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount15#Name
-	 * SecuritiesAccount15.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount16#Name
-	 * SecuritiesAccount16.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount1#Name
-	 * SafekeepingAccount1.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount2#Name
-	 * SafekeepingAccount2.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount20#Name
-	 * SecuritiesAccount20.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount3#Name
-	 * SecuritiesAccount3.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.AccountForAction2#Name
-	 * AccountForAction2.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount1#Name
-	 * CustomerAccount1.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount5#Name
-	 * CustomerAccount5.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccountModification1#Name
-	 * CustomerAccountModification1.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount4#Name
-	 * CustomerAccount4.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount28#Name
-	 * CashAccount28.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount27#Name
-	 * CashAccount27.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount13#AccountName
-	 * InvestmentAccount13.AccountName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount21#AccountName
-	 * InvestmentAccount21.AccountName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount14#AccountName
-	 * InvestmentAccount14.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount12#Name
-	 * InvestmentAccount12.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount25#Name
-	 * InvestmentAccount25.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount3#Name
-	 * CashAccount3.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName2#Name
-	 * AccountIdentificationAndName2.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#Name
-	 * AccountIdentificationOrNameChoice.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CollateralAccount1#Name
-	 * CollateralAccount1.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName#AccountName
-	 * AccountIdentificationAndName.AccountName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentification5#Name
-	 * AccountIdentification5.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount19#Name
-	 * SecuritiesAccount19.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount18#Name
-	 * SecuritiesAccount18.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount5#Name
-	 * SecuritiesAccount5.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SubAccount3#Name
-	 * SubAccount3.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount2#Name
-	 * CustomerAccount2.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount3#Name
-	 * CustomerAccount3.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount38#Name
-	 * InvestmentAccount38.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount37#Name
-	 * InvestmentAccount37.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount39#Name
-	 * InvestmentAccount39.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount40#AccountName
-	 * InvestmentAccount40.AccountName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount41#AccountName
-	 * InvestmentAccount41.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount22#Name
-	 * SecuritiesAccount22.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount43#Name
-	 * InvestmentAccount43.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount44#Name
-	 * InvestmentAccount44.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount45#AccountName
-	 * InvestmentAccount45.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount46#Name
-	 * InvestmentAccount46.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount47#Name
-	 * InvestmentAccount47.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SubAccount4#Name
-	 * SubAccount4.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMAccountStatement1#AccountName
-	 * ATMAccountStatement1.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount3#AccountName
-	 * CardAccount3.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount1#AccountName
-	 * CardAccount1.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount6#AccountName
-	 * CardAccount6.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount4#AccountName
-	 * CardAccount4.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount5#AccountName
-	 * CardAccount5.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount2#AccountName
-	 * CardAccount2.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24#Name
-	 * SecuritiesAccount24.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount26#Name
-	 * SecuritiesAccount26.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount25#Name
-	 * SecuritiesAccount25.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount49#Name
-	 * InvestmentAccount49.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount54#AccountName
-	 * InvestmentAccount54.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount51#Name
-	 * InvestmentAccount51.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount50#Name
-	 * InvestmentAccount50.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount56#AccountName
-	 * InvestmentAccount56.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount52#Name
-	 * InvestmentAccount52.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SubAccount5#Name
-	 * SubAccount5.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount55#AccountName
-	 * InvestmentAccount55.AccountName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName5#Name
-	 * AccountIdentificationAndName5.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount53#AccountName
-	 * InvestmentAccount53.AccountName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount57#AccountName
-	 * InvestmentAccount57.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CollateralAccount2#Name
-	 * CollateralAccount2.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount33#Name
-	 * SecuritiesAccount33.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount27#Name
-	 * SecuritiesAccount27.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount30#Name
-	 * SecuritiesAccount30.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount34#Name
-	 * SecuritiesAccount34.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount10#AccountName
-	 * CardAccount10.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount9#AccountName
-	 * CardAccount9.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount8#AccountName
-	 * CardAccount8.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount11#AccountName
-	 * CardAccount11.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount13#AccountName
-	 * CardAccount13.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount7#AccountName
-	 * CardAccount7.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount12#AccountName
-	 * CardAccount12.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount61#Name
-	 * InvestmentAccount61.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount63#Name
-	 * InvestmentAccount63.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount62#Name
-	 * InvestmentAccount62.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount58#AccountName
-	 * InvestmentAccount58.AccountName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SubAccount6#Name
-	 * SubAccount6.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount64#Name
-	 * InvestmentAccount64.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CollateralAccount3#Name
-	 * CollateralAccount3.Name}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount5#mmName
+	 * CashAccount5.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount1#mmName
+	 * SecuritiesAccount1.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount17#mmName
+	 * InvestmentAccount17.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName3#mmName
+	 * AccountIdentificationAndName3.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount12#mmName
+	 * CashAccount12.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount4#mmName
+	 * SecuritiesAccount4.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount27#mmName
+	 * InvestmentAccount27.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount35#mmName
+	 * InvestmentAccount35.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount19#mmName
+	 * InvestmentAccount19.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount18#mmName
+	 * InvestmentAccount18.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount29#mmName
+	 * InvestmentAccount29.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount28#mmName
+	 * InvestmentAccount28.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount36#mmName
+	 * InvestmentAccount36.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount16#mmName
+	 * InvestmentAccount16.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount26#mmName
+	 * InvestmentAccount26.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount34#mmName
+	 * InvestmentAccount34.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount7#mmName
+	 * CashAccount7.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount16#mmName
+	 * CashAccount16.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount24#mmName
+	 * CashAccount24.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccountDetails1#mmName
+	 * CashAccountDetails1.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccountDetails3#mmName
+	 * CashAccountDetails3.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccountDetails4#mmName
+	 * CashAccountDetails4.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#mmName
+	 * CashAccount23.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount13#mmName
+	 * CashAccount13.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount20#mmName
+	 * CashAccount20.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount25#mmName
+	 * CashAccount25.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount10#mmAccountName
+	 * InvestmentAccount10.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount11#mmAccountName
+	 * InvestmentAccount11.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount22#mmAccountName
+	 * InvestmentAccount22.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SubAccount1#mmName
+	 * SubAccount1.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount24#mmAccountName
+	 * InvestmentAccount24.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount13#mmName
+	 * SecuritiesAccount13.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount17#mmName
+	 * SecuritiesAccount17.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount11#mmName
+	 * SecuritiesAccount11.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount2#mmName
+	 * SecuritiesAccount2.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount14#mmName
+	 * SecuritiesAccount14.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount15#mmName
+	 * SecuritiesAccount15.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount16#mmName
+	 * SecuritiesAccount16.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount1#mmName
+	 * SafekeepingAccount1.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount2#mmName
+	 * SafekeepingAccount2.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount20#mmName
+	 * SecuritiesAccount20.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount3#mmName
+	 * SecuritiesAccount3.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountForAction2#mmName
+	 * AccountForAction2.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount1#mmName
+	 * CustomerAccount1.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount5#mmName
+	 * CustomerAccount5.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccountModification1#mmName
+	 * CustomerAccountModification1.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount4#mmName
+	 * CustomerAccount4.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount28#mmName
+	 * CashAccount28.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount27#mmName
+	 * CashAccount27.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount13#mmAccountName
+	 * InvestmentAccount13.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount21#mmAccountName
+	 * InvestmentAccount21.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount14#mmAccountName
+	 * InvestmentAccount14.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount12#mmName
+	 * InvestmentAccount12.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount25#mmName
+	 * InvestmentAccount25.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount3#mmName
+	 * CashAccount3.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName2#mmName
+	 * AccountIdentificationAndName2.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#mmName
+	 * AccountIdentificationOrNameChoice.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CollateralAccount1#mmName
+	 * CollateralAccount1.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName#mmAccountName
+	 * AccountIdentificationAndName.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentification5#mmName
+	 * AccountIdentification5.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount19#mmName
+	 * SecuritiesAccount19.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount18#mmName
+	 * SecuritiesAccount18.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount5#mmName
+	 * SecuritiesAccount5.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SubAccount3#mmName
+	 * SubAccount3.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount2#mmName
+	 * CustomerAccount2.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount3#mmName
+	 * CustomerAccount3.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount38#mmName
+	 * InvestmentAccount38.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount37#mmName
+	 * InvestmentAccount37.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmName
+	 * InvestmentAccount39.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount40#mmAccountName
+	 * InvestmentAccount40.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount41#mmAccountName
+	 * InvestmentAccount41.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount22#mmName
+	 * SecuritiesAccount22.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount43#mmName
+	 * InvestmentAccount43.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount44#mmName
+	 * InvestmentAccount44.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount45#mmAccountName
+	 * InvestmentAccount45.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount46#mmName
+	 * InvestmentAccount46.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmName
+	 * InvestmentAccount47.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SubAccount4#mmName
+	 * SubAccount4.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMAccountStatement1#mmAccountName
+	 * ATMAccountStatement1.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount3#mmAccountName
+	 * CardAccount3.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount1#mmAccountName
+	 * CardAccount1.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount6#mmAccountName
+	 * CardAccount6.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount4#mmAccountName
+	 * CardAccount4.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount5#mmAccountName
+	 * CardAccount5.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount2#mmAccountName
+	 * CardAccount2.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24#mmName
+	 * SecuritiesAccount24.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount26#mmName
+	 * SecuritiesAccount26.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount25#mmName
+	 * SecuritiesAccount25.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount49#mmName
+	 * InvestmentAccount49.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount54#mmAccountName
+	 * InvestmentAccount54.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmName
+	 * InvestmentAccount51.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount50#mmName
+	 * InvestmentAccount50.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount56#mmAccountName
+	 * InvestmentAccount56.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount52#mmName
+	 * InvestmentAccount52.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SubAccount5#mmName
+	 * SubAccount5.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount55#mmAccountName
+	 * InvestmentAccount55.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentificationAndName5#mmName
+	 * AccountIdentificationAndName5.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount53#mmAccountName
+	 * InvestmentAccount53.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount57#mmAccountName
+	 * InvestmentAccount57.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CollateralAccount2#mmName
+	 * CollateralAccount2.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount33#mmName
+	 * SecuritiesAccount33.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount27#mmName
+	 * SecuritiesAccount27.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount30#mmName
+	 * SecuritiesAccount30.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount34#mmName
+	 * SecuritiesAccount34.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount10#mmAccountName
+	 * CardAccount10.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount9#mmAccountName
+	 * CardAccount9.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount8#mmAccountName
+	 * CardAccount8.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount11#mmAccountName
+	 * CardAccount11.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount13#mmAccountName
+	 * CardAccount13.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount7#mmAccountName
+	 * CardAccount7.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount12#mmAccountName
+	 * CardAccount12.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount61#mmName
+	 * InvestmentAccount61.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount63#mmName
+	 * InvestmentAccount63.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount62#mmName
+	 * InvestmentAccount62.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount58#mmAccountName
+	 * InvestmentAccount58.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SubAccount6#mmName
+	 * SubAccount6.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount64#mmName
+	 * InvestmentAccount64.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CollateralAccount3#mmName
+	 * CollateralAccount3.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1231,56 +1245,58 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Name = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount5.Name, com.tools20022.repository.msg.SecuritiesAccount1.Name, com.tools20022.repository.msg.InvestmentAccount17.Name,
-					com.tools20022.repository.msg.AccountIdentificationAndName3.Name, com.tools20022.repository.msg.CashAccount12.Name, com.tools20022.repository.msg.SecuritiesAccount4.Name,
-					com.tools20022.repository.msg.InvestmentAccount27.Name, com.tools20022.repository.msg.InvestmentAccount35.Name, com.tools20022.repository.msg.InvestmentAccount19.Name,
-					com.tools20022.repository.msg.InvestmentAccount18.Name, com.tools20022.repository.msg.InvestmentAccount29.Name, com.tools20022.repository.msg.InvestmentAccount28.Name,
-					com.tools20022.repository.msg.InvestmentAccount36.Name, com.tools20022.repository.msg.InvestmentAccount16.Name, com.tools20022.repository.msg.InvestmentAccount26.Name,
-					com.tools20022.repository.msg.InvestmentAccount34.Name, com.tools20022.repository.msg.CashAccount7.Name, com.tools20022.repository.msg.CashAccount16.Name, com.tools20022.repository.msg.CashAccount24.Name,
-					com.tools20022.repository.msg.CashAccountDetails1.Name, com.tools20022.repository.msg.CashAccountDetails3.Name, com.tools20022.repository.msg.CashAccountDetails4.Name, com.tools20022.repository.msg.CashAccount23.Name,
-					com.tools20022.repository.msg.CashAccount13.Name, com.tools20022.repository.msg.CashAccount20.Name, com.tools20022.repository.msg.CashAccount25.Name, com.tools20022.repository.msg.InvestmentAccount10.AccountName,
-					com.tools20022.repository.msg.InvestmentAccount11.AccountName, com.tools20022.repository.msg.InvestmentAccount22.AccountName, com.tools20022.repository.msg.SubAccount1.Name,
-					com.tools20022.repository.msg.InvestmentAccount24.AccountName, com.tools20022.repository.msg.SecuritiesAccount13.Name, com.tools20022.repository.msg.SecuritiesAccount17.Name,
-					com.tools20022.repository.msg.SecuritiesAccount11.Name, com.tools20022.repository.msg.SecuritiesAccount2.Name, com.tools20022.repository.msg.SecuritiesAccount14.Name,
-					com.tools20022.repository.msg.SecuritiesAccount15.Name, com.tools20022.repository.msg.SecuritiesAccount16.Name, com.tools20022.repository.msg.SafekeepingAccount1.Name,
-					com.tools20022.repository.msg.SafekeepingAccount2.Name, com.tools20022.repository.msg.SecuritiesAccount20.Name, com.tools20022.repository.msg.SecuritiesAccount3.Name,
-					com.tools20022.repository.msg.AccountForAction2.Name, com.tools20022.repository.msg.CustomerAccount1.Name, com.tools20022.repository.msg.CustomerAccount5.Name,
-					com.tools20022.repository.msg.CustomerAccountModification1.Name, com.tools20022.repository.msg.CustomerAccount4.Name, com.tools20022.repository.msg.CashAccount28.Name, com.tools20022.repository.msg.CashAccount27.Name,
-					com.tools20022.repository.msg.InvestmentAccount13.AccountName, com.tools20022.repository.msg.InvestmentAccount21.AccountName, com.tools20022.repository.msg.InvestmentAccount14.AccountName,
-					com.tools20022.repository.msg.InvestmentAccount12.Name, com.tools20022.repository.msg.InvestmentAccount25.Name, com.tools20022.repository.msg.CashAccount3.Name,
-					com.tools20022.repository.msg.AccountIdentificationAndName2.Name, com.tools20022.repository.choice.AccountIdentificationOrNameChoice.Name, com.tools20022.repository.msg.CollateralAccount1.Name,
-					com.tools20022.repository.msg.AccountIdentificationAndName.AccountName, com.tools20022.repository.msg.AccountIdentification5.Name, com.tools20022.repository.msg.SecuritiesAccount19.Name,
-					com.tools20022.repository.msg.SecuritiesAccount18.Name, com.tools20022.repository.msg.SecuritiesAccount5.Name, com.tools20022.repository.msg.SubAccount3.Name, com.tools20022.repository.msg.CustomerAccount2.Name,
-					com.tools20022.repository.msg.CustomerAccount3.Name, com.tools20022.repository.msg.InvestmentAccount38.Name, com.tools20022.repository.msg.InvestmentAccount37.Name,
-					com.tools20022.repository.msg.InvestmentAccount39.Name, com.tools20022.repository.msg.InvestmentAccount40.AccountName, com.tools20022.repository.msg.InvestmentAccount41.AccountName,
-					com.tools20022.repository.msg.SecuritiesAccount22.Name, com.tools20022.repository.msg.InvestmentAccount43.Name, com.tools20022.repository.msg.InvestmentAccount44.Name,
-					com.tools20022.repository.msg.InvestmentAccount45.AccountName, com.tools20022.repository.msg.InvestmentAccount46.Name, com.tools20022.repository.msg.InvestmentAccount47.Name,
-					com.tools20022.repository.msg.SubAccount4.Name, com.tools20022.repository.msg.ATMAccountStatement1.AccountName, com.tools20022.repository.msg.CardAccount3.AccountName,
-					com.tools20022.repository.msg.CardAccount1.AccountName, com.tools20022.repository.msg.CardAccount6.AccountName, com.tools20022.repository.msg.CardAccount4.AccountName,
-					com.tools20022.repository.msg.CardAccount5.AccountName, com.tools20022.repository.msg.CardAccount2.AccountName, com.tools20022.repository.msg.SecuritiesAccount24.Name,
-					com.tools20022.repository.msg.SecuritiesAccount26.Name, com.tools20022.repository.msg.SecuritiesAccount25.Name, com.tools20022.repository.msg.InvestmentAccount49.Name,
-					com.tools20022.repository.msg.InvestmentAccount54.AccountName, com.tools20022.repository.msg.InvestmentAccount51.Name, com.tools20022.repository.msg.InvestmentAccount50.Name,
-					com.tools20022.repository.msg.InvestmentAccount56.AccountName, com.tools20022.repository.msg.InvestmentAccount52.Name, com.tools20022.repository.msg.SubAccount5.Name,
-					com.tools20022.repository.msg.InvestmentAccount55.AccountName, com.tools20022.repository.msg.AccountIdentificationAndName5.Name, com.tools20022.repository.msg.InvestmentAccount53.AccountName,
-					com.tools20022.repository.msg.InvestmentAccount57.AccountName, com.tools20022.repository.msg.CollateralAccount2.Name, com.tools20022.repository.msg.SecuritiesAccount33.Name,
-					com.tools20022.repository.msg.SecuritiesAccount27.Name, com.tools20022.repository.msg.SecuritiesAccount30.Name, com.tools20022.repository.msg.SecuritiesAccount34.Name,
-					com.tools20022.repository.msg.CardAccount10.AccountName, com.tools20022.repository.msg.CardAccount9.AccountName, com.tools20022.repository.msg.CardAccount8.AccountName,
-					com.tools20022.repository.msg.CardAccount11.AccountName, com.tools20022.repository.msg.CardAccount13.AccountName, com.tools20022.repository.msg.CardAccount7.AccountName,
-					com.tools20022.repository.msg.CardAccount12.AccountName, com.tools20022.repository.msg.InvestmentAccount61.Name, com.tools20022.repository.msg.InvestmentAccount63.Name,
-					com.tools20022.repository.msg.InvestmentAccount62.Name, com.tools20022.repository.msg.InvestmentAccount58.AccountName, com.tools20022.repository.msg.SubAccount6.Name,
-					com.tools20022.repository.msg.InvestmentAccount64.Name, com.tools20022.repository.msg.CollateralAccount3.Name);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount5.mmName, com.tools20022.repository.msg.SecuritiesAccount1.mmName, com.tools20022.repository.msg.InvestmentAccount17.mmName,
+					com.tools20022.repository.msg.AccountIdentificationAndName3.mmName, com.tools20022.repository.msg.CashAccount12.mmName, com.tools20022.repository.msg.SecuritiesAccount4.mmName,
+					com.tools20022.repository.msg.InvestmentAccount27.mmName, com.tools20022.repository.msg.InvestmentAccount35.mmName, com.tools20022.repository.msg.InvestmentAccount19.mmName,
+					com.tools20022.repository.msg.InvestmentAccount18.mmName, com.tools20022.repository.msg.InvestmentAccount29.mmName, com.tools20022.repository.msg.InvestmentAccount28.mmName,
+					com.tools20022.repository.msg.InvestmentAccount36.mmName, com.tools20022.repository.msg.InvestmentAccount16.mmName, com.tools20022.repository.msg.InvestmentAccount26.mmName,
+					com.tools20022.repository.msg.InvestmentAccount34.mmName, com.tools20022.repository.msg.CashAccount7.mmName, com.tools20022.repository.msg.CashAccount16.mmName, com.tools20022.repository.msg.CashAccount24.mmName,
+					com.tools20022.repository.msg.CashAccountDetails1.mmName, com.tools20022.repository.msg.CashAccountDetails3.mmName, com.tools20022.repository.msg.CashAccountDetails4.mmName,
+					com.tools20022.repository.msg.CashAccount23.mmName, com.tools20022.repository.msg.CashAccount13.mmName, com.tools20022.repository.msg.CashAccount20.mmName, com.tools20022.repository.msg.CashAccount25.mmName,
+					com.tools20022.repository.msg.InvestmentAccount10.mmAccountName, com.tools20022.repository.msg.InvestmentAccount11.mmAccountName, com.tools20022.repository.msg.InvestmentAccount22.mmAccountName,
+					com.tools20022.repository.msg.SubAccount1.mmName, com.tools20022.repository.msg.InvestmentAccount24.mmAccountName, com.tools20022.repository.msg.SecuritiesAccount13.mmName,
+					com.tools20022.repository.msg.SecuritiesAccount17.mmName, com.tools20022.repository.msg.SecuritiesAccount11.mmName, com.tools20022.repository.msg.SecuritiesAccount2.mmName,
+					com.tools20022.repository.msg.SecuritiesAccount14.mmName, com.tools20022.repository.msg.SecuritiesAccount15.mmName, com.tools20022.repository.msg.SecuritiesAccount16.mmName,
+					com.tools20022.repository.msg.SafekeepingAccount1.mmName, com.tools20022.repository.msg.SafekeepingAccount2.mmName, com.tools20022.repository.msg.SecuritiesAccount20.mmName,
+					com.tools20022.repository.msg.SecuritiesAccount3.mmName, com.tools20022.repository.msg.AccountForAction2.mmName, com.tools20022.repository.msg.CustomerAccount1.mmName,
+					com.tools20022.repository.msg.CustomerAccount5.mmName, com.tools20022.repository.msg.CustomerAccountModification1.mmName, com.tools20022.repository.msg.CustomerAccount4.mmName,
+					com.tools20022.repository.msg.CashAccount28.mmName, com.tools20022.repository.msg.CashAccount27.mmName, com.tools20022.repository.msg.InvestmentAccount13.mmAccountName,
+					com.tools20022.repository.msg.InvestmentAccount21.mmAccountName, com.tools20022.repository.msg.InvestmentAccount14.mmAccountName, com.tools20022.repository.msg.InvestmentAccount12.mmName,
+					com.tools20022.repository.msg.InvestmentAccount25.mmName, com.tools20022.repository.msg.CashAccount3.mmName, com.tools20022.repository.msg.AccountIdentificationAndName2.mmName,
+					com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmName, com.tools20022.repository.msg.CollateralAccount1.mmName, com.tools20022.repository.msg.AccountIdentificationAndName.mmAccountName,
+					com.tools20022.repository.msg.AccountIdentification5.mmName, com.tools20022.repository.msg.SecuritiesAccount19.mmName, com.tools20022.repository.msg.SecuritiesAccount18.mmName,
+					com.tools20022.repository.msg.SecuritiesAccount5.mmName, com.tools20022.repository.msg.SubAccount3.mmName, com.tools20022.repository.msg.CustomerAccount2.mmName, com.tools20022.repository.msg.CustomerAccount3.mmName,
+					com.tools20022.repository.msg.InvestmentAccount38.mmName, com.tools20022.repository.msg.InvestmentAccount37.mmName, com.tools20022.repository.msg.InvestmentAccount39.mmName,
+					com.tools20022.repository.msg.InvestmentAccount40.mmAccountName, com.tools20022.repository.msg.InvestmentAccount41.mmAccountName, com.tools20022.repository.msg.SecuritiesAccount22.mmName,
+					com.tools20022.repository.msg.InvestmentAccount43.mmName, com.tools20022.repository.msg.InvestmentAccount44.mmName, com.tools20022.repository.msg.InvestmentAccount45.mmAccountName,
+					com.tools20022.repository.msg.InvestmentAccount46.mmName, com.tools20022.repository.msg.InvestmentAccount47.mmName, com.tools20022.repository.msg.SubAccount4.mmName,
+					com.tools20022.repository.msg.ATMAccountStatement1.mmAccountName, com.tools20022.repository.msg.CardAccount3.mmAccountName, com.tools20022.repository.msg.CardAccount1.mmAccountName,
+					com.tools20022.repository.msg.CardAccount6.mmAccountName, com.tools20022.repository.msg.CardAccount4.mmAccountName, com.tools20022.repository.msg.CardAccount5.mmAccountName,
+					com.tools20022.repository.msg.CardAccount2.mmAccountName, com.tools20022.repository.msg.SecuritiesAccount24.mmName, com.tools20022.repository.msg.SecuritiesAccount26.mmName,
+					com.tools20022.repository.msg.SecuritiesAccount25.mmName, com.tools20022.repository.msg.InvestmentAccount49.mmName, com.tools20022.repository.msg.InvestmentAccount54.mmAccountName,
+					com.tools20022.repository.msg.InvestmentAccount51.mmName, com.tools20022.repository.msg.InvestmentAccount50.mmName, com.tools20022.repository.msg.InvestmentAccount56.mmAccountName,
+					com.tools20022.repository.msg.InvestmentAccount52.mmName, com.tools20022.repository.msg.SubAccount5.mmName, com.tools20022.repository.msg.InvestmentAccount55.mmAccountName,
+					com.tools20022.repository.msg.AccountIdentificationAndName5.mmName, com.tools20022.repository.msg.InvestmentAccount53.mmAccountName, com.tools20022.repository.msg.InvestmentAccount57.mmAccountName,
+					com.tools20022.repository.msg.CollateralAccount2.mmName, com.tools20022.repository.msg.SecuritiesAccount33.mmName, com.tools20022.repository.msg.SecuritiesAccount27.mmName,
+					com.tools20022.repository.msg.SecuritiesAccount30.mmName, com.tools20022.repository.msg.SecuritiesAccount34.mmName, com.tools20022.repository.msg.CardAccount10.mmAccountName,
+					com.tools20022.repository.msg.CardAccount9.mmAccountName, com.tools20022.repository.msg.CardAccount8.mmAccountName, com.tools20022.repository.msg.CardAccount11.mmAccountName,
+					com.tools20022.repository.msg.CardAccount13.mmAccountName, com.tools20022.repository.msg.CardAccount7.mmAccountName, com.tools20022.repository.msg.CardAccount12.mmAccountName,
+					com.tools20022.repository.msg.InvestmentAccount61.mmName, com.tools20022.repository.msg.InvestmentAccount63.mmName, com.tools20022.repository.msg.InvestmentAccount62.mmName,
+					com.tools20022.repository.msg.InvestmentAccount58.mmAccountName, com.tools20022.repository.msg.SubAccount6.mmName, com.tools20022.repository.msg.InvestmentAccount64.mmName,
+					com.tools20022.repository.msg.CollateralAccount3.mmName);
 			elementContext_lazy = () -> AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected GenericIdentification costReferencePattern;
 	/**
 	 * Template describing the mask of the structure for the format of the
 	 * accounting account identifier; for example "AABBBBCC" where AA represents
@@ -1291,8 +1307,8 @@ public class AccountIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#IdentificationForAccountCostReferencePattern
-	 * GenericIdentification.IdentificationForAccountCostReferencePattern}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccountCostReferencePattern
+	 * GenericIdentification.mmIdentificationForAccountCostReferencePattern}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1301,19 +1317,19 @@ public class AccountIdentification {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountingAccount1#CostReferencePattern
-	 * AccountingAccount1.CostReferencePattern}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountingAccount1#mmCostReferencePattern
+	 * AccountingAccount1.mmCostReferencePattern}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1327,21 +1343,22 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CostReferencePattern = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCostReferencePattern = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountingAccount1.CostReferencePattern);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountingAccount1.mmCostReferencePattern);
 			elementContext_lazy = () -> AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CostReferencePattern";
 			definition = "Template describing the mask of the structure for the format of the accounting account identifier; for example \"AABBBBCC\" where AA represents the country, BBBB the service classification, CC the sales area.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.IdentificationForAccountCostReferencePattern;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccountCostReferencePattern;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
+	protected Max35Text number;
 	/**
 	 * String of characters (mainly numbers) used to identify an account.
 	 * <p>
@@ -1351,31 +1368,31 @@ public class AccountIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#AccountIdentification
-	 * DetailedInstructionStatus8.AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#SubAccountIdentification
-	 * DetailedInstructionStatus8.SubAccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Entitlement1#AccountIdentification
-	 * Entitlement1.AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#AccountIdentification
-	 * DetailedInstructionStatus11.AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#SubAccountIdentification
-	 * DetailedInstructionStatus11.SubAccountIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountIdentification
 	 * AccountIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#mmAccountIdentification
+	 * DetailedInstructionStatus8.mmAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus8#mmSubAccountIdentification
+	 * DetailedInstructionStatus8.mmSubAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Entitlement1#mmAccountIdentification
+	 * Entitlement1.mmAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#mmAccountIdentification
+	 * DetailedInstructionStatus11.mmAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedInstructionStatus11#mmSubAccountIdentification
+	 * DetailedInstructionStatus11.mmSubAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1388,18 +1405,18 @@ public class AccountIdentification {
 	 * "String of characters (mainly numbers) used to identify an account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Number = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus8.AccountIdentification, com.tools20022.repository.msg.DetailedInstructionStatus8.SubAccountIdentification,
-					com.tools20022.repository.msg.Entitlement1.AccountIdentification, com.tools20022.repository.msg.DetailedInstructionStatus11.AccountIdentification,
-					com.tools20022.repository.msg.DetailedInstructionStatus11.SubAccountIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus8.mmAccountIdentification, com.tools20022.repository.msg.DetailedInstructionStatus8.mmSubAccountIdentification,
+					com.tools20022.repository.msg.Entitlement1.mmAccountIdentification, com.tools20022.repository.msg.DetailedInstructionStatus11.mmAccountIdentification,
+					com.tools20022.repository.msg.DetailedInstructionStatus11.mmSubAccountIdentification);
 			elementContext_lazy = () -> AccountIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Number";
 			definition = "String of characters (mainly numbers) used to identify an account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -1407,45 +1424,46 @@ public class AccountIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification";
 				definition = "Unique identifier of an account, as assigned by the account servicer.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.IdentificationForAccount,
-						com.tools20022.repository.entity.GenericIdentification.IdentificationForAccountCostReferencePattern, com.tools20022.repository.entity.Account.Identification);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndPurpose.Identification, com.tools20022.repository.msg.AccountIdentification3.Identification,
-						com.tools20022.repository.choice.AccountIdentificationFormatChoice.SimpleIdentification, com.tools20022.repository.choice.AccountIdentificationFormatChoice.IdentificationAndPurpose,
-						com.tools20022.repository.choice.AccountIdentificationFormatChoice.IdentificationAsDSS, com.tools20022.repository.msg.AccountIdentificationAndName3.Identification,
-						com.tools20022.repository.msg.AccountIdentificationDetails.Identification, com.tools20022.repository.msg.AccountIdentification10.IdentificationCode,
-						com.tools20022.repository.choice.AccountIdentification6Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification6Choice.AccountsList,
-						com.tools20022.repository.choice.AccountIdentification11Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification11Choice.AccountsList,
-						com.tools20022.repository.choice.AccountIdentification13Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification13Choice.AccountsList,
-						com.tools20022.repository.choice.AccountIdentification17Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification17Choice.AccountsList,
-						com.tools20022.repository.choice.AccountIdentification7Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification8Choice.ForAllAccounts,
-						com.tools20022.repository.choice.AccountIdentification12Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification15Choice.ForAllAccounts,
-						com.tools20022.repository.choice.AccountIdentification18Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification19Choice.ForAllAccounts,
-						com.tools20022.repository.choice.AccountIdentification21Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification22Choice.ForAllAccounts,
-						com.tools20022.repository.msg.SubAccountIdentification2.Identification, com.tools20022.repository.msg.SubAccountIdentification3.Identification, com.tools20022.repository.msg.SubAccountIdentification1.Identification,
-						com.tools20022.repository.msg.SubAccountIdentification5.Identification, com.tools20022.repository.msg.SubAccountIdentification4.Identification, com.tools20022.repository.msg.SubAccountIdentification6.Identification,
-						com.tools20022.repository.msg.AccountIdentificationAndName2.Identification, com.tools20022.repository.choice.AccountIdentificationOrNameChoice.Identification,
-						com.tools20022.repository.choice.AccountIdentificationOrNameChoice.NameAndIdentification, com.tools20022.repository.choice.AccountIdentification9Choice.ForAllAccounts,
-						com.tools20022.repository.choice.AccountIdentification9Choice.AccountsListAndBalanceDetails, com.tools20022.repository.choice.AccountIdentification10Choice.ForAllAccounts,
-						com.tools20022.repository.choice.AccountIdentification10Choice.AccountsListAndBalanceDetails, com.tools20022.repository.choice.AccountIdentification14Choice.ForAllAccounts,
-						com.tools20022.repository.choice.AccountIdentification14Choice.AccountsListAndBalanceDetails, com.tools20022.repository.choice.AccountIdentification16Choice.ForAllAccounts,
-						com.tools20022.repository.choice.AccountIdentification16Choice.AccountsListAndBalanceDetails, com.tools20022.repository.msg.AccountIdentificationAndName.AccountIdentification,
-						com.tools20022.repository.msg.AccountIdentificationAndName4.Identification, com.tools20022.repository.choice.AccountIdentification20Choice.CashAccountIdentification,
-						com.tools20022.repository.choice.AccountIdentification23Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification26Choice.ForAllAccounts,
-						com.tools20022.repository.msg.SubAccountIdentification36.Identification, com.tools20022.repository.choice.AccountIdentification30Choice.Card, com.tools20022.repository.choice.AccountIdentification30Choice.MSISDN,
-						com.tools20022.repository.choice.AccountIdentification30Choice.EMail, com.tools20022.repository.choice.AccountIdentification30Choice.Domestic,
-						com.tools20022.repository.choice.AccountIdentification33Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification33Choice.AccountsListAndBalanceDetails,
-						com.tools20022.repository.choice.AccountIdentification29Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification29Choice.AccountsList,
-						com.tools20022.repository.choice.AccountIdentification32Choice.ForAllAccounts, com.tools20022.repository.msg.AccountIdentificationAndName5.Identification,
-						com.tools20022.repository.choice.AccountIdentification34Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification34Choice.AccountsList,
-						com.tools20022.repository.choice.AccountIdentification36Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification37Choice.ForAllAccounts,
-						com.tools20022.repository.choice.AccountIdentification37Choice.AccountsListAndBalanceDetails);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountIdentification.Account, com.tools20022.repository.entity.AccountIdentification.IBAN, com.tools20022.repository.entity.AccountIdentification.BBAN,
-						com.tools20022.repository.entity.AccountIdentification.UPIC, com.tools20022.repository.entity.AccountIdentification.ProprietaryIdentification, com.tools20022.repository.entity.AccountIdentification.Name,
-						com.tools20022.repository.entity.AccountIdentification.CostReferencePattern, com.tools20022.repository.entity.AccountIdentification.Number);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccount,
+						com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccountCostReferencePattern, com.tools20022.repository.entity.Account.mmIdentification);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndPurpose.mmIdentification, com.tools20022.repository.msg.AccountIdentification3.mmIdentification,
+						com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmSimpleIdentification, com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmIdentificationAndPurpose,
+						com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmIdentificationAsDSS, com.tools20022.repository.msg.AccountIdentificationAndName3.mmIdentification,
+						com.tools20022.repository.msg.AccountIdentificationDetails.mmIdentification, com.tools20022.repository.msg.AccountIdentification10.mmIdentificationCode,
+						com.tools20022.repository.choice.AccountIdentification6Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification6Choice.mmAccountsList,
+						com.tools20022.repository.choice.AccountIdentification11Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification11Choice.mmAccountsList,
+						com.tools20022.repository.choice.AccountIdentification13Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification13Choice.mmAccountsList,
+						com.tools20022.repository.choice.AccountIdentification17Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification17Choice.mmAccountsList,
+						com.tools20022.repository.choice.AccountIdentification7Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification8Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification12Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification15Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification18Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification19Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification21Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification22Choice.mmForAllAccounts,
+						com.tools20022.repository.msg.SubAccountIdentification2.mmIdentification, com.tools20022.repository.msg.SubAccountIdentification3.mmIdentification,
+						com.tools20022.repository.msg.SubAccountIdentification1.mmIdentification, com.tools20022.repository.msg.SubAccountIdentification5.mmIdentification,
+						com.tools20022.repository.msg.SubAccountIdentification4.mmIdentification, com.tools20022.repository.msg.SubAccountIdentification6.mmIdentification,
+						com.tools20022.repository.msg.AccountIdentificationAndName2.mmIdentification, com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmIdentification,
+						com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmNameAndIdentification, com.tools20022.repository.choice.AccountIdentification9Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification9Choice.mmAccountsListAndBalanceDetails, com.tools20022.repository.choice.AccountIdentification10Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification10Choice.mmAccountsListAndBalanceDetails, com.tools20022.repository.choice.AccountIdentification14Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification14Choice.mmAccountsListAndBalanceDetails, com.tools20022.repository.choice.AccountIdentification16Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification16Choice.mmAccountsListAndBalanceDetails, com.tools20022.repository.msg.AccountIdentificationAndName.mmAccountIdentification,
+						com.tools20022.repository.msg.AccountIdentificationAndName4.mmIdentification, com.tools20022.repository.choice.AccountIdentification20Choice.mmCashAccountIdentification,
+						com.tools20022.repository.choice.AccountIdentification23Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification26Choice.mmForAllAccounts,
+						com.tools20022.repository.msg.SubAccountIdentification36.mmIdentification, com.tools20022.repository.choice.AccountIdentification30Choice.mmCard,
+						com.tools20022.repository.choice.AccountIdentification30Choice.mmMSISDN, com.tools20022.repository.choice.AccountIdentification30Choice.mmEMail,
+						com.tools20022.repository.choice.AccountIdentification30Choice.mmDomestic, com.tools20022.repository.choice.AccountIdentification33Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification33Choice.mmAccountsListAndBalanceDetails, com.tools20022.repository.choice.AccountIdentification29Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification29Choice.mmAccountsList, com.tools20022.repository.choice.AccountIdentification32Choice.mmForAllAccounts,
+						com.tools20022.repository.msg.AccountIdentificationAndName5.mmIdentification, com.tools20022.repository.choice.AccountIdentification34Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification34Choice.mmAccountsList, com.tools20022.repository.choice.AccountIdentification36Choice.mmForAllAccounts,
+						com.tools20022.repository.choice.AccountIdentification37Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification37Choice.mmAccountsListAndBalanceDetails);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountIdentification.mmAccount, com.tools20022.repository.entity.AccountIdentification.mmIBAN,
+						com.tools20022.repository.entity.AccountIdentification.mmBBAN, com.tools20022.repository.entity.AccountIdentification.mmUPIC, com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification,
+						com.tools20022.repository.entity.AccountIdentification.mmName, com.tools20022.repository.entity.AccountIdentification.mmCostReferencePattern, com.tools20022.repository.entity.AccountIdentification.mmNumber);
 				derivationComponent_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmObject(), AccountIdentification5Choice.mmObject(), AccountIdentification1.mmObject(), AccountIdentificationAndPurpose.mmObject(),
 						AccountIdentification3.mmObject(), AccountIdentificationFormatChoice.mmObject(), CashAccountIdentification1Choice.mmObject(), AccountIdentificationAndName3.mmObject(), AccountIdentification3Choice.mmObject(),
 						GenericAccountIdentification1.mmObject(), AccountIdentification4Choice.mmObject(), AccountIdentificationDetails.mmObject(), CashAccountIdentification5Choice.mmObject(), CashAccountIdentification2Choice.mmObject(),
@@ -1472,5 +1490,69 @@ public class AccountIdentification {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.entity.Account account) {
+		this.account = account;
+	}
+
+	public IBAN2007Identifier getIBAN() {
+		return iBAN;
+	}
+
+	public void setIBAN(IBAN2007Identifier iBAN) {
+		this.iBAN = iBAN;
+	}
+
+	public BBANIdentifier getBBAN() {
+		return bBAN;
+	}
+
+	public void setBBAN(BBANIdentifier bBAN) {
+		this.bBAN = bBAN;
+	}
+
+	public UPICIdentifier getUPIC() {
+		return uPIC;
+	}
+
+	public void setUPIC(UPICIdentifier uPIC) {
+		this.uPIC = uPIC;
+	}
+
+	public GenericIdentification getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(com.tools20022.repository.entity.GenericIdentification proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
+	}
+
+	public GenericIdentification getCostReferencePattern() {
+		return costReferencePattern;
+	}
+
+	public void setCostReferencePattern(com.tools20022.repository.entity.GenericIdentification costReferencePattern) {
+		this.costReferencePattern = costReferencePattern;
+	}
+
+	public Max35Text getNumber() {
+		return number;
+	}
+
+	public void setNumber(Max35Text number) {
+		this.number = number;
 	}
 }

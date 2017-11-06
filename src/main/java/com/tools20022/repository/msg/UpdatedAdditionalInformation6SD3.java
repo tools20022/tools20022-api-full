@@ -33,27 +33,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3#PlaceAndName
- * UpdatedAdditionalInformation6SD3.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3#mmPlaceAndName
+ * UpdatedAdditionalInformation6SD3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3#SecuritiesCreditAccountIdentification
- * UpdatedAdditionalInformation6SD3.SecuritiesCreditAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3#mmSecuritiesCreditAccountIdentification
+ * UpdatedAdditionalInformation6SD3.mmSecuritiesCreditAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3#OfferorShare
- * UpdatedAdditionalInformation6SD3.OfferorShare}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3#mmOfferorShare
+ * UpdatedAdditionalInformation6SD3.mmOfferorShare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3#OfferorShareLocalCode
- * UpdatedAdditionalInformation6SD3.OfferorShareLocalCode}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3#mmOfferorShareLocalCode
+ * UpdatedAdditionalInformation6SD3.mmOfferorShareLocalCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3#LocalLanguageName
- * UpdatedAdditionalInformation6SD3.LocalLanguageName}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3#mmLocalLanguageName
+ * UpdatedAdditionalInformation6SD3.mmLocalLanguageName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdatedAdditionalInformation6SD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -99,7 +100,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
@@ -107,11 +108,12 @@ public class UpdatedAdditionalInformation6SD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max50Text securitiesCreditAccountIdentification;
 	/**
 	 * Specifies the securities account to be credited.<br>
 	 * 会社法制の見直し要綱の、22ページ第３－１－①をご参照ください。
@@ -142,7 +144,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesCreditAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesCreditAccountIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
@@ -150,11 +152,12 @@ public class UpdatedAdditionalInformation6SD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCreditAccountIdentification";
 			definition = "Specifies the securities account to be credited.\r\n会社法制の見直し要綱の、22ページ第３－１－①をご参照ください。";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max50Text.mmObject();
 		}
 	};
+	protected ISINIdentifier offerorShare;
 	/**
 	 * ISIN of Offeror's share when the corporate action event type code is
 	 * TEND.
@@ -186,7 +189,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OfferorShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOfferorShare = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
@@ -194,11 +197,12 @@ public class UpdatedAdditionalInformation6SD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferorShare";
 			definition = "ISIN of Offeror's share when the corporate action event type code is TEND.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	protected Max5AlphaNumericText offerorShareLocalCode;
 	/**
 	 * Local code of Offeror's share when the corporate action event type code
 	 * is TEND.<br>
@@ -231,7 +235,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OfferorShareLocalCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOfferorShareLocalCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
@@ -239,11 +243,12 @@ public class UpdatedAdditionalInformation6SD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferorShareLocalCode";
 			definition = "Local code of Offeror's share when the corporate action event type code is TEND.\r\n買付者 銘柄コード";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max5AlphaNumericText.mmObject();
 		}
 	};
+	protected Max240Text localLanguageName;
 	/**
 	 * Name in the local language by which a party is known and which is usually
 	 * used to identify that party.
@@ -274,7 +279,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocalLanguageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocalLanguageName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
@@ -282,8 +287,8 @@ public class UpdatedAdditionalInformation6SD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalLanguageName";
 			definition = "Name in the local language by which a party is known and which is usually used to identify that party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max240Text.mmObject();
 		}
 	};
@@ -291,15 +296,55 @@ public class UpdatedAdditionalInformation6SD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.PlaceAndName, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.SecuritiesCreditAccountIdentification,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.OfferorShare, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.OfferorShareLocalCode,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.LocalLanguageName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmPlaceAndName,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmSecuritiesCreditAccountIdentification, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmOfferorShare,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmOfferorShareLocalCode, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmLocalLanguageName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UpdatedAdditionalInformation6SD3";
 				definition = "Extension for additional information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max50Text getSecuritiesCreditAccountIdentification() {
+		return securitiesCreditAccountIdentification;
+	}
+
+	public void setSecuritiesCreditAccountIdentification(Max50Text securitiesCreditAccountIdentification) {
+		this.securitiesCreditAccountIdentification = securitiesCreditAccountIdentification;
+	}
+
+	public ISINIdentifier getOfferorShare() {
+		return offerorShare;
+	}
+
+	public void setOfferorShare(ISINIdentifier offerorShare) {
+		this.offerorShare = offerorShare;
+	}
+
+	public Max5AlphaNumericText getOfferorShareLocalCode() {
+		return offerorShareLocalCode;
+	}
+
+	public void setOfferorShareLocalCode(Max5AlphaNumericText offerorShareLocalCode) {
+		this.offerorShareLocalCode = offerorShareLocalCode;
+	}
+
+	public Max240Text getLocalLanguageName() {
+		return localLanguageName;
+	}
+
+	public void setLocalLanguageName(Max240Text localLanguageName) {
+		this.localLanguageName = localLanguageName;
 	}
 }

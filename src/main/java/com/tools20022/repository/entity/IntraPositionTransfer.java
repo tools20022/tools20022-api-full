@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Transfer of securities from one sub-balance to another or from one balance
@@ -41,14 +42,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#Reservation
- * IntraPositionTransfer.Reservation}</li>
+ * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmReservation
+ * IntraPositionTransfer.mmReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#CollateralAmount
- * IntraPositionTransfer.CollateralAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmCollateralAmount
+ * IntraPositionTransfer.mmCollateralAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#SecuritiesBalance
- * IntraPositionTransfer.SecuritiesBalance}</li>
+ * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer#mmSecuritiesBalance
+ * IntraPositionTransfer.mmSecuritiesBalance}</li>
  * </ul>
  * </li>
  * <li>
@@ -56,11 +57,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Reservation#RelatedIntraPositionTransfer
- * Reservation.RelatedIntraPositionTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmRelatedIntraPositionTransfer
+ * Reservation.mmRelatedIntraPositionTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#RelatedIntraPositionTransfer
- * SecuritiesBalance.RelatedIntraPositionTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmRelatedIntraPositionTransfer
+ * SecuritiesBalance.mmRelatedIntraPositionTransfer}</li>
  * </ul>
  * </li>
  * <li>
@@ -68,65 +69,65 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails3#IntraPositionMovement
- * IntraPositionDetails3.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails3#mmIntraPositionMovement
+ * IntraPositionDetails3.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails6#IntraPositionMovement
- * IntraPositionDetails6.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails6#mmIntraPositionMovement
+ * IntraPositionDetails6.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails17#IntraPositionMovement
- * IntraPositionDetails17.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails17#mmIntraPositionMovement
+ * IntraPositionDetails17.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails18#IntraPositionMovement
- * IntraPositionDetails18.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails18#mmIntraPositionMovement
+ * IntraPositionDetails18.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails20#IntraPositionMovement
- * IntraPositionDetails20.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails20#mmIntraPositionMovement
+ * IntraPositionDetails20.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails24#IntraPositionMovement
- * IntraPositionDetails24.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails24#mmIntraPositionMovement
+ * IntraPositionDetails24.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails28#IntraPositionMovement
- * IntraPositionDetails28.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails28#mmIntraPositionMovement
+ * IntraPositionDetails28.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails30#IntraPositionMovement
- * IntraPositionDetails30.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails30#mmIntraPositionMovement
+ * IntraPositionDetails30.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails10#IntraPositionMovement
- * IntraPositionDetails10.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails10#mmIntraPositionMovement
+ * IntraPositionDetails10.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails14#IntraPositionMovement
- * IntraPositionDetails14.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails14#mmIntraPositionMovement
+ * IntraPositionDetails14.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition2#SearchCriteria
- * IntraBalanceQueryDefinition2.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition2#mmSearchCriteria
+ * IntraBalanceQueryDefinition2.mmSearchCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovements1#Movement
- * IntraPositionMovements1.Movement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovements1#mmMovement
+ * IntraPositionMovements1.mmMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition1#SearchCriteria
- * IntraBalanceQueryDefinition1.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition1#mmSearchCriteria
+ * IntraBalanceQueryDefinition1.mmSearchCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition3#SearchCriteria
- * IntraBalanceQueryDefinition3.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition3#mmSearchCriteria
+ * IntraBalanceQueryDefinition3.mmSearchCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionModification1#Modification
- * IntraPositionModification1.Modification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionModification1#mmModification
+ * IntraPositionModification1.mmModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation1#Cancellation
- * IntraPositionCancellation1.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation1#mmCancellation
+ * IntraPositionCancellation1.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails32#IntraPositionMovement
- * IntraPositionDetails32.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails32#mmIntraPositionMovement
+ * IntraPositionDetails32.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails37#IntraPositionMovement
- * IntraPositionDetails37.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails37#mmIntraPositionMovement
+ * IntraPositionDetails37.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails40#IntraPositionMovement
- * IntraPositionDetails40.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails40#mmIntraPositionMovement
+ * IntraPositionDetails40.mmIntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails44#IntraPositionMovement
- * IntraPositionDetails44.IntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails44#mmIntraPositionMovement
+ * IntraPositionDetails44.mmIntraPositionMovement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -282,8 +283,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -299,6 +300,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionTransfer extends SecuritiesTransfer {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Reservation> reservation;
 	/**
 	 * Quantity of securities set aside by a party for specific purpose.
 	 * <p>
@@ -307,8 +309,8 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Reservation#RelatedIntraPositionTransfer
-	 * Reservation.RelatedIntraPositionTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Reservation#mmRelatedIntraPositionTransfer
+	 * Reservation.mmRelatedIntraPositionTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -333,7 +335,7 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * "Quantity of securities set aside by a party for specific purpose."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Reservation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmReservation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> IntraPositionTransfer.mmObject();
 			isDerived = false;
@@ -341,11 +343,12 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 			name = "Reservation";
 			definition = "Quantity of securities set aside by a party for specific purpose.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Reservation.RelatedIntraPositionTransfer;
+			opposite_lazy = () -> com.tools20022.repository.entity.Reservation.mmRelatedIntraPositionTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
 		}
 	};
+	protected CurrencyAndAmount collateralAmount;
 	/**
 	 * Value of the collateral available for the delivery settlement process.
 	 * <p>
@@ -356,82 +359,82 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails12#CollateralMonitorAmount
-	 * IntraPositionDetails12.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails13#CollateralMonitorAmount
-	 * IntraPositionDetails13.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails22#CollateralMonitorAmount
-	 * IntraPositionDetails22.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails26#CollateralMonitorAmount
-	 * IntraPositionDetails26.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails27#CollateralMonitorAmount
-	 * IntraPositionDetails27.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails29#CollateralMonitorAmount
-	 * IntraPositionDetails29.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails5#CollateralMonitorAmount
-	 * IntraPositionMovementDetails5.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails6#CollateralMonitorAmount
-	 * IntraPositionMovementDetails6.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails7#CollateralMonitorAmount
-	 * IntraPositionMovementDetails7.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails8#CollateralMonitorAmount
-	 * IntraPositionMovementDetails8.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails9#CollateralMonitorAmount
-	 * IntraPositionMovementDetails9.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails10#CollateralMonitorAmount
-	 * IntraPositionMovementDetails10.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails3#CollateralMonitorAmount
-	 * IntraPositionMovementDetails3.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails4#CollateralMonitorAmount
-	 * IntraPositionMovementDetails4.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails34#CollateralMonitorAmount
-	 * IntraPositionDetails34.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails11#CollateralMonitorAmount
-	 * IntraPositionMovementDetails11.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails35#CollateralMonitorAmount
-	 * IntraPositionDetails35.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails12#CollateralMonitorAmount
-	 * IntraPositionMovementDetails12.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails41#CollateralMonitorAmount
-	 * IntraPositionDetails41.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails13#CollateralMonitorAmount
-	 * IntraPositionMovementDetails13.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails43#CollateralMonitorAmount
-	 * IntraPositionDetails43.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#CollateralMonitorAmount
-	 * IntraPositionMovementDetails14.CollateralMonitorAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer
 	 * IntraPositionTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails12#mmCollateralMonitorAmount
+	 * IntraPositionDetails12.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails13#mmCollateralMonitorAmount
+	 * IntraPositionDetails13.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails22#mmCollateralMonitorAmount
+	 * IntraPositionDetails22.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails26#mmCollateralMonitorAmount
+	 * IntraPositionDetails26.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails27#mmCollateralMonitorAmount
+	 * IntraPositionDetails27.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails29#mmCollateralMonitorAmount
+	 * IntraPositionDetails29.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails5#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails5.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails6#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails6.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails7#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails7.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails8#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails8.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails9#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails9.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails10#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails10.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails3#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails3.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails4#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails4.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails34#mmCollateralMonitorAmount
+	 * IntraPositionDetails34.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails11#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails11.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails35#mmCollateralMonitorAmount
+	 * IntraPositionDetails35.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails12#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails12.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails41#mmCollateralMonitorAmount
+	 * IntraPositionDetails41.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails13#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails13.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails43#mmCollateralMonitorAmount
+	 * IntraPositionDetails43.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails14.mmCollateralMonitorAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -444,29 +447,30 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * "Value of the collateral available for the delivery settlement process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CollateralAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCollateralAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionDetails12.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionDetails13.CollateralMonitorAmount,
-					com.tools20022.repository.msg.IntraPositionDetails22.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionDetails26.CollateralMonitorAmount,
-					com.tools20022.repository.msg.IntraPositionDetails27.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionDetails29.CollateralMonitorAmount,
-					com.tools20022.repository.msg.IntraPositionMovementDetails5.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails6.CollateralMonitorAmount,
-					com.tools20022.repository.msg.IntraPositionMovementDetails7.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails8.CollateralMonitorAmount,
-					com.tools20022.repository.msg.IntraPositionMovementDetails9.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails10.CollateralMonitorAmount,
-					com.tools20022.repository.msg.IntraPositionMovementDetails3.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails4.CollateralMonitorAmount,
-					com.tools20022.repository.msg.IntraPositionDetails34.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails11.CollateralMonitorAmount,
-					com.tools20022.repository.msg.IntraPositionDetails35.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails12.CollateralMonitorAmount,
-					com.tools20022.repository.msg.IntraPositionDetails41.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails13.CollateralMonitorAmount,
-					com.tools20022.repository.msg.IntraPositionDetails43.CollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails14.CollateralMonitorAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionDetails12.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionDetails13.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.IntraPositionDetails22.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionDetails26.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.IntraPositionDetails27.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionDetails29.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.IntraPositionMovementDetails5.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails6.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.IntraPositionMovementDetails7.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails8.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.IntraPositionMovementDetails9.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails10.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.IntraPositionMovementDetails3.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails4.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.IntraPositionDetails34.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.IntraPositionDetails35.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails12.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.IntraPositionDetails41.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails13.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.IntraPositionDetails43.mmCollateralMonitorAmount, com.tools20022.repository.msg.IntraPositionMovementDetails14.mmCollateralMonitorAmount);
 			elementContext_lazy = () -> IntraPositionTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CollateralAmount";
 			definition = "Value of the collateral available for the delivery settlement process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected SecuritiesBalance securitiesBalance;
 	/**
 	 * Specifies the securities balance or sub-balance from/to which the
 	 * securities are transferred.
@@ -476,8 +480,8 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#RelatedIntraPositionTransfer
-	 * SecuritiesBalance.RelatedIntraPositionTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmRelatedIntraPositionTransfer
+	 * SecuritiesBalance.mmRelatedIntraPositionTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -485,23 +489,24 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesBalance
 	 * SecuritiesBalance}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#BalanceType
-	 * IntraPositionQueryCriteria1.BalanceType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IntraPosition4#BalanceFrom
-	 * IntraPosition4.BalanceFrom}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IntraPosition4#BalanceTo
-	 * IntraPosition4.BalanceTo}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IntraPositionTransfer
 	 * IntraPositionTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#mmBalanceType
+	 * IntraPositionQueryCriteria1.mmBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPosition4#mmBalanceFrom
+	 * IntraPosition4.mmBalanceFrom}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IntraPosition4#mmBalanceTo
+	 * IntraPosition4.mmBalanceTo}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -515,43 +520,44 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesBalance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryCriteria1.BalanceType, com.tools20022.repository.msg.IntraPosition4.BalanceFrom, com.tools20022.repository.msg.IntraPosition4.BalanceTo);
+			derivation_lazy = () -> Arrays
+					.asList(com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmBalanceType, com.tools20022.repository.msg.IntraPosition4.mmBalanceFrom, com.tools20022.repository.msg.IntraPosition4.mmBalanceTo);
 			elementContext_lazy = () -> IntraPositionTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBalance";
 			definition = "Specifies the securities balance or sub-balance from/to which the securities are transferred.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.RelatedIntraPositionTransfer;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmRelatedIntraPositionTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionTransfer";
 				definition = "Transfer of securities from one sub-balance to another or from one balance status to another.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reservation.RelatedIntraPositionTransfer, com.tools20022.repository.entity.SecuritiesBalance.RelatedIntraPositionTransfer);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionDetails3.IntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails6.IntraPositionMovement,
-						com.tools20022.repository.msg.IntraPositionDetails17.IntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails18.IntraPositionMovement,
-						com.tools20022.repository.msg.IntraPositionDetails20.IntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails24.IntraPositionMovement,
-						com.tools20022.repository.msg.IntraPositionDetails28.IntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails30.IntraPositionMovement,
-						com.tools20022.repository.msg.IntraPositionDetails10.IntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails14.IntraPositionMovement,
-						com.tools20022.repository.msg.IntraBalanceQueryDefinition2.SearchCriteria, com.tools20022.repository.msg.IntraPositionMovements1.Movement, com.tools20022.repository.msg.IntraBalanceQueryDefinition1.SearchCriteria,
-						com.tools20022.repository.msg.IntraBalanceQueryDefinition3.SearchCriteria, com.tools20022.repository.msg.IntraPositionModification1.Modification,
-						com.tools20022.repository.msg.IntraPositionCancellation1.Cancellation, com.tools20022.repository.msg.IntraPositionDetails32.IntraPositionMovement,
-						com.tools20022.repository.msg.IntraPositionDetails37.IntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails40.IntraPositionMovement,
-						com.tools20022.repository.msg.IntraPositionDetails44.IntraPositionMovement);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reservation.mmRelatedIntraPositionTransfer, com.tools20022.repository.entity.SecuritiesBalance.mmRelatedIntraPositionTransfer);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionDetails3.mmIntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails6.mmIntraPositionMovement,
+						com.tools20022.repository.msg.IntraPositionDetails17.mmIntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails18.mmIntraPositionMovement,
+						com.tools20022.repository.msg.IntraPositionDetails20.mmIntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails24.mmIntraPositionMovement,
+						com.tools20022.repository.msg.IntraPositionDetails28.mmIntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails30.mmIntraPositionMovement,
+						com.tools20022.repository.msg.IntraPositionDetails10.mmIntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails14.mmIntraPositionMovement,
+						com.tools20022.repository.msg.IntraBalanceQueryDefinition2.mmSearchCriteria, com.tools20022.repository.msg.IntraPositionMovements1.mmMovement,
+						com.tools20022.repository.msg.IntraBalanceQueryDefinition1.mmSearchCriteria, com.tools20022.repository.msg.IntraBalanceQueryDefinition3.mmSearchCriteria,
+						com.tools20022.repository.msg.IntraPositionModification1.mmModification, com.tools20022.repository.msg.IntraPositionCancellation1.mmCancellation,
+						com.tools20022.repository.msg.IntraPositionDetails32.mmIntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails37.mmIntraPositionMovement,
+						com.tools20022.repository.msg.IntraPositionDetails40.mmIntraPositionMovement, com.tools20022.repository.msg.IntraPositionDetails44.mmIntraPositionMovement);
 				superType_lazy = () -> SecuritiesTransfer.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IntraPositionTransfer.Reservation, com.tools20022.repository.entity.IntraPositionTransfer.CollateralAmount,
-						com.tools20022.repository.entity.IntraPositionTransfer.SecuritiesBalance);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IntraPositionTransfer.mmReservation, com.tools20022.repository.entity.IntraPositionTransfer.mmCollateralAmount,
+						com.tools20022.repository.entity.IntraPositionTransfer.mmSecuritiesBalance);
 				derivationComponent_lazy = () -> Arrays.asList(IntraPositionDetails2.mmObject(), IntraPositionDetails8.mmObject(), IntraPositionDetails12.mmObject(), IntraPositionDetails13.mmObject(), IntraPositionDetails22.mmObject(),
 						IntraPositionDetails26.mmObject(), IntraPositionDetails27.mmObject(), IntraPositionDetails29.mmObject(), IntraPositionMovementDetails1.mmObject(), IntraPositionDetails3.mmObject(),
 						IntraPositionMovementDetails2.mmObject(), IntraPositionDetails6.mmObject(), IntraPositionMovementDetails5.mmObject(), IntraPositionDetails17.mmObject(), IntraPositionMovementDetails6.mmObject(),
@@ -569,5 +575,29 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Reservation> getReservation() {
+		return reservation;
+	}
+
+	public void setReservation(List<com.tools20022.repository.entity.Reservation> reservation) {
+		this.reservation = reservation;
+	}
+
+	public CurrencyAndAmount getCollateralAmount() {
+		return collateralAmount;
+	}
+
+	public void setCollateralAmount(CurrencyAndAmount collateralAmount) {
+		this.collateralAmount = collateralAmount;
+	}
+
+	public SecuritiesBalance getSecuritiesBalance() {
+		return securitiesBalance;
+	}
+
+	public void setSecuritiesBalance(com.tools20022.repository.entity.SecuritiesBalance securitiesBalance) {
+		this.securitiesBalance = securitiesBalance;
 	}
 }

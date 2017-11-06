@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RegisteredShareholderName1Choice#IndividualPerson
- * RegisteredShareholderName1Choice.IndividualPerson}</li>
+ * {@linkplain com.tools20022.repository.choice.RegisteredShareholderName1Choice#mmIndividualPerson
+ * RegisteredShareholderName1Choice.mmIndividualPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RegisteredShareholderName1Choice#Organisation
- * RegisteredShareholderName1Choice.Organisation}</li>
+ * {@linkplain com.tools20022.repository.choice.RegisteredShareholderName1Choice#mmOrganisation
+ * RegisteredShareholderName1Choice.mmOrganisation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegisteredShareholderName1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected IndividualPerson29 individualPerson;
 	/**
 	 * Human entity, as distinguished from a corporate entity (which is
 	 * sometimes referred to as an 'artificial person').
@@ -88,7 +89,7 @@ public class RegisteredShareholderName1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndividualPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividualPerson = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RegisteredShareholderName1Choice.mmObject();
 			isDerived = false;
@@ -96,12 +97,13 @@ public class RegisteredShareholderName1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualPerson";
 			definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson29.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IndividualPerson29.mmObject();
 		}
 	};
+	protected Organisation23 organisation;
 	/**
 	 * Organised structure that is set up for a particular purpose, for example,
 	 * a business, government body, department, charity, or financial
@@ -132,7 +134,7 @@ public class RegisteredShareholderName1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Organisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrganisation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RegisteredShareholderName1Choice.mmObject();
 			isDerived = false;
@@ -140,23 +142,39 @@ public class RegisteredShareholderName1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Organisation";
 			definition = "Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation23.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Organisation23.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegisteredShareholderName1Choice.IndividualPerson, com.tools20022.repository.choice.RegisteredShareholderName1Choice.Organisation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegisteredShareholderName1Choice.mmIndividualPerson, com.tools20022.repository.choice.RegisteredShareholderName1Choice.mmOrganisation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegisteredShareholderName1Choice";
 				definition = "Choice of individual or organisation name and address.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IndividualPerson29 getIndividualPerson() {
+		return individualPerson;
+	}
+
+	public void setIndividualPerson(IndividualPerson29 individualPerson) {
+		this.individualPerson = individualPerson;
+	}
+
+	public Organisation23 getOrganisation() {
+		return organisation;
+	}
+
+	public void setOrganisation(Organisation23 organisation) {
+		this.organisation = organisation;
 	}
 }

@@ -38,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CollateralBalance1Choice#TotalCollateral
- * CollateralBalance1Choice.TotalCollateral}</li>
+ * {@linkplain com.tools20022.repository.choice.CollateralBalance1Choice#mmTotalCollateral
+ * CollateralBalance1Choice.mmTotalCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CollateralBalance1Choice#CollateralDetails
- * CollateralBalance1Choice.CollateralDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.CollateralBalance1Choice#mmCollateralDetails
+ * CollateralBalance1Choice.mmCollateralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CollateralBalance1Choice#SegregatedIndependentAmount
- * CollateralBalance1Choice.SegregatedIndependentAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.CollateralBalance1Choice#mmSegregatedIndependentAmount
+ * CollateralBalance1Choice.mmSegregatedIndependentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralBalance1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount totalCollateral;
 	/**
 	 * Collateral currently received (+)/delivered (-) in the base currency.
 	 * This amount is after the haircut has been applied.
@@ -107,20 +108,21 @@ public class CollateralBalance1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalCollateral = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
 			businessComponentTrace_lazy = () -> ExposureCalculation.mmObject();
+			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TtlColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCollateral";
 			definition = "Collateral currently received (+)/delivered (-) in the base currency. This amount is after the haircut has been applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Collateral1 collateralDetails;
 	/**
 	 * Provides details about the collateral held, in transit or that still
 	 * needs to be agreed by both parties, for the variation margin and
@@ -156,21 +158,22 @@ public class CollateralBalance1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CollateralDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCollateralDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
 			businessComponentTrace_lazy = () -> ExposureCalculation.mmObject();
+			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralDetails";
 			definition = "Provides details about the collateral held, in transit or that still needs to be agreed by both parties, for the variation margin and optionally the segregated independent amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Collateral1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Collateral1.mmObject();
 		}
 	};
+	protected MarginCollateral1 segregatedIndependentAmount;
 	/**
 	 * Provides details about the collateral held, in transit or that still
 	 * needs to be agreed by both parties, against the segregated independent
@@ -184,8 +187,8 @@ public class CollateralBalance1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#CurrentSegregatedIndependentAmount
-	 * ExposureCalculation.CurrentSegregatedIndependentAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCurrentSegregatedIndependentAmount
+	 * ExposureCalculation.mmCurrentSegregatedIndependentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -206,34 +209,58 @@ public class CollateralBalance1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmCurrentSegregatedIndependentAmount;
 			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.CurrentSegregatedIndependentAmount;
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides details about the collateral held, in transit or that still needs to be agreed by both parties, against the segregated independent amount only.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MarginCollateral1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MarginCollateral1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralBalance1Choice.TotalCollateral, com.tools20022.repository.choice.CollateralBalance1Choice.CollateralDetails,
-						com.tools20022.repository.choice.CollateralBalance1Choice.SegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralBalance1Choice.mmTotalCollateral, com.tools20022.repository.choice.CollateralBalance1Choice.mmCollateralDetails,
+						com.tools20022.repository.choice.CollateralBalance1Choice.mmSegregatedIndependentAmount);
 				trace_lazy = () -> ExposureCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralBalance1Choice";
 				definition = "Choice to provide the collateral balance for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getTotalCollateral() {
+		return totalCollateral;
+	}
+
+	public void setTotalCollateral(ActiveCurrencyAndAmount totalCollateral) {
+		this.totalCollateral = totalCollateral;
+	}
+
+	public Collateral1 getCollateralDetails() {
+		return collateralDetails;
+	}
+
+	public void setCollateralDetails(Collateral1 collateralDetails) {
+		this.collateralDetails = collateralDetails;
+	}
+
+	public MarginCollateral1 getSegregatedIndependentAmount() {
+		return segregatedIndependentAmount;
+	}
+
+	public void setSegregatedIndependentAmount(MarginCollateral1 segregatedIndependentAmount) {
+		this.segregatedIndependentAmount = segregatedIndependentAmount;
 	}
 }

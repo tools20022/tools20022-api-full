@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Response;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ResponseType4#ResponderIdentification
- * ResponseType4.ResponderIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ResponseType4#Codification
- * ResponseType4.Codification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ResponseType4#Response
- * ResponseType4.Response}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ResponseType4#ResponseReason
- * ResponseType4.ResponseReason}</li>
+ * {@linkplain com.tools20022.repository.msg.ResponseType4#mmResponderIdentification
+ * ResponseType4.mmResponderIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ResponseType4#mmCodification
+ * ResponseType4.mmCodification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ResponseType4#mmResponse
+ * ResponseType4.mmResponse}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ResponseType4#mmResponseReason
+ * ResponseType4.mmResponseReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ResponseType4#AdditionalResponseInformation
- * ResponseType4.AdditionalResponseInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ResponseType4#mmAdditionalResponseInformation
+ * ResponseType4.mmAdditionalResponseInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ResponseType4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text responderIdentification;
 	/**
 	 * Identification of the responder.
 	 * <p>
@@ -93,7 +95,7 @@ public class ResponseType4 {
 	 * definition} = "Identification of the responder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ResponseType4.mmObject();
 			isDerived = false;
@@ -101,11 +103,12 @@ public class ResponseType4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponderIdentification";
 			definition = "Identification of the responder.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text codification;
 	/**
 	 * Codification of the response (for instance ISO 8583, IFX).
 	 * <p>
@@ -133,7 +136,7 @@ public class ResponseType4 {
 	 * "Codification of the response (for instance ISO 8583, IFX)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Codification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCodification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ResponseType4.mmObject();
 			isDerived = false;
@@ -141,11 +144,12 @@ public class ResponseType4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Codification";
 			definition = "Codification of the response (for instance ISO 8583, IFX).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text response;
 	/**
 	 * Result of the request withdrawal message.
 	 * <p>
@@ -176,20 +180,21 @@ public class ResponseType4 {
 	 * definition} = "Result of the request withdrawal message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Response = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> Response.mmObject();
 			componentContext_lazy = () -> ResponseType4.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Response.mmObject();
 			isDerived = false;
 			xmlTag = "Rspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Result of the request withdrawal message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text responseReason;
 	/**
 	 * Detail of the response.
 	 * <p>
@@ -202,8 +207,8 @@ public class ResponseType4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Response#ResponseReason
-	 * Response.ResponseReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Response#mmResponseReason
+	 * Response.mmResponseReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -221,20 +226,21 @@ public class ResponseType4 {
 	 * definition} = "Detail of the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Response.mmResponseReason;
 			componentContext_lazy = () -> ResponseType4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Response.ResponseReason;
 			isDerived = false;
 			xmlTag = "RspnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseReason";
 			definition = "Detail of the response.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text additionalResponseInformation;
 	/**
 	 * Additional information to be logged for further examination.
 	 * <p>
@@ -262,7 +268,7 @@ public class ResponseType4 {
 	 * "Additional information to be logged for further examination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalResponseInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalResponseInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ResponseType4.mmObject();
 			isDerived = false;
@@ -270,8 +276,8 @@ public class ResponseType4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalResponseInformation";
 			definition = "Additional information to be logged for further examination.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -279,15 +285,55 @@ public class ResponseType4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType4.ResponderIdentification, com.tools20022.repository.msg.ResponseType4.Codification, com.tools20022.repository.msg.ResponseType4.Response,
-						com.tools20022.repository.msg.ResponseType4.ResponseReason, com.tools20022.repository.msg.ResponseType4.AdditionalResponseInformation);
-				trace_lazy = () -> com.tools20022.repository.entity.Response.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType4.mmResponderIdentification, com.tools20022.repository.msg.ResponseType4.mmCodification,
+						com.tools20022.repository.msg.ResponseType4.mmResponse, com.tools20022.repository.msg.ResponseType4.mmResponseReason, com.tools20022.repository.msg.ResponseType4.mmAdditionalResponseInformation);
+				trace_lazy = () -> Response.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResponseType4";
 				definition = "Trace of response by the entities in the path from the issuer to the ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getResponderIdentification() {
+		return responderIdentification;
+	}
+
+	public void setResponderIdentification(Max35Text responderIdentification) {
+		this.responderIdentification = responderIdentification;
+	}
+
+	public Max35Text getCodification() {
+		return codification;
+	}
+
+	public void setCodification(Max35Text codification) {
+		this.codification = codification;
+	}
+
+	public Max35Text getResponse() {
+		return response;
+	}
+
+	public void setResponse(Max35Text response) {
+		this.response = response;
+	}
+
+	public Max35Text getResponseReason() {
+		return responseReason;
+	}
+
+	public void setResponseReason(Max35Text responseReason) {
+		this.responseReason = responseReason;
+	}
+
+	public Max35Text getAdditionalResponseInformation() {
+		return additionalResponseInformation;
+	}
+
+	public void setAdditionalResponseInformation(Max35Text additionalResponseInformation) {
+		this.additionalResponseInformation = additionalResponseInformation;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.CashEntry;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the elements of an entry in the report.
@@ -37,48 +38,49 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#Amount
- * StatementEntry1.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#mmAmount
+ * StatementEntry1.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementEntry1#CreditDebitIndicator
- * StatementEntry1.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmCreditDebitIndicator
+ * StatementEntry1.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementEntry1#ReversalIndicator
- * StatementEntry1.ReversalIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#Status
- * StatementEntry1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#BookingDate
- * StatementEntry1.BookingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#ValueDate
- * StatementEntry1.ValueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmReversalIndicator
+ * StatementEntry1.mmReversalIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#mmStatus
+ * StatementEntry1.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#mmBookingDate
+ * StatementEntry1.mmBookingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#mmValueDate
+ * StatementEntry1.mmValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementEntry1#AccountServicerReference
- * StatementEntry1.AccountServicerReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#Availability
- * StatementEntry1.Availability}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmAccountServicerReference
+ * StatementEntry1.mmAccountServicerReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#mmAvailability
+ * StatementEntry1.mmAvailability}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementEntry1#BankTransactionCode
- * StatementEntry1.BankTransactionCode}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmBankTransactionCode
+ * StatementEntry1.mmBankTransactionCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementEntry1#CommissionWaiverIndicator
- * StatementEntry1.CommissionWaiverIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmCommissionWaiverIndicator
+ * StatementEntry1.mmCommissionWaiverIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementEntry1#AdditionalInformationIndicator
- * StatementEntry1.AdditionalInformationIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#Batch
- * StatementEntry1.Batch}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#AmountDetails
- * StatementEntry1.AmountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#Charges
- * StatementEntry1.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#Interest
- * StatementEntry1.Interest}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmAdditionalInformationIndicator
+ * StatementEntry1.mmAdditionalInformationIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#mmBatch
+ * StatementEntry1.mmBatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementEntry1#TransactionDetails
- * StatementEntry1.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmAmountDetails
+ * StatementEntry1.mmAmountDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#mmCharges
+ * StatementEntry1.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#mmInterest
+ * StatementEntry1.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementEntry1#AdditionalEntryInformation
- * StatementEntry1.AdditionalEntryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmTransactionDetails
+ * StatementEntry1.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmAdditionalEntryInformation
+ * StatementEntry1.mmAdditionalEntryInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -86,8 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount of money in the cash entry.
 	 * <p>
@@ -114,8 +117,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Amount
-	 * CashEntry.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+	 * CashEntry.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -134,20 +137,21 @@ public class StatementEntry1 {
 	 * definition} = "Amount of money in the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Specifies if an entry is a credit or a debit.
 	 * <p>
@@ -161,8 +165,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#CreditDebitIndicator
-	 * Entry.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmCreditDebitIndicator
+	 * Entry.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,20 +185,21 @@ public class StatementEntry1 {
 	 * definition} = "Specifies if an entry is a credit or a debit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies if an entry is a credit or a debit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected TrueFalseIndicator reversalIndicator;
 	/**
 	 * Indicates whether the entry is the result of a reversal operation.
 	 * 
@@ -214,8 +219,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#ReversalIndicator
-	 * Entry.ReversalIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmReversalIndicator
+	 * Entry.mmReversalIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -236,20 +241,21 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReversalIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReversalIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmReversalIndicator;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.ReversalIndicator;
 			isDerived = false;
 			xmlTag = "RvslInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalIndicator";
 			definition = "Indicates whether the entry is the result of a reversal operation.\n\nUsage : this element should only be present if the entry is the result of a reversal operation.\nIf the CreditDebitIndicator is CRDT and ReversalIndicator is Yes, the original operation was a debit entry.\nIf the CreditDebitIndicator is DBIT and ReversalIndicator is Yes, the original operation was a credit entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected EntryStatus3Code status;
 	/**
 	 * Status of an entry on the books of the account servicer.
 	 * <p>
@@ -263,8 +269,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus#EntryStatus
-	 * AccountStatus.EntryStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus#mmEntryStatus
+	 * AccountStatus.mmEntryStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -283,20 +289,21 @@ public class StatementEntry1 {
 	 * definition} = "Status of an entry on the books of the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.EntryStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of an entry on the books of the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EntryStatus3Code.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice bookingDate;
 	/**
 	 * Date and time when an entry is posted to an account on the account
 	 * servicer's books.
@@ -310,8 +317,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#EntryDate
-	 * Entry.EntryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmEntryDate
+	 * Entry.mmEntryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -332,21 +339,22 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BookingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBookingDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.EntryDate;
 			isDerived = false;
 			xmlTag = "BookgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingDate";
 			definition = "Date and time when an entry is posted to an account on the account servicer's books.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice valueDate;
 	/**
 	 * Date and time assets become available to the account owner (in a credit
 	 * entry), or cease to be available to the account owner (in a debit entry).
@@ -364,8 +372,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#ValueDate
-	 * Entry.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmValueDate
+	 * Entry.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -386,21 +394,22 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValueDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValueDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmValueDate;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).\n\nUsage : For entries which are subject to availability/float (and for which availability information is present), value date must not be used, as the availability component identifies the number of availability days.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected Max35Text accountServicerReference;
 	/**
 	 * Account servicing institution's reference for the underlying transaction.
 	 * <p>
@@ -413,8 +422,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#AccountServicerTransactionIdentification
-	 * Entry.AccountServicerTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmAccountServicerTransactionIdentification
+	 * Entry.mmAccountServicerTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -435,20 +444,21 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.AccountServicerTransactionIdentification;
 			isDerived = false;
 			xmlTag = "AcctSvcrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Account servicing institution's reference for the underlying transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashBalanceAvailability1> availability;
 	/**
 	 * Set of elements used to indicate when the booked funds will become
 	 * available, ie can be accessed and start generating interest.
@@ -468,8 +478,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#Availability
-	 * CashBalance.Availability}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmAvailability
+	 * CashBalance.mmAvailability}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -490,20 +500,21 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Availability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAvailability;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.Availability;
 			isDerived = false;
 			xmlTag = "Avlbty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
 			definition = "Set of elements used to indicate when the booked funds will become available, ie can be accessed and start generating interest. \n\nUsage : this type of info is eg used in US, and is linked to particular instruments, such as cheques.\nExample : When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations).";
 			minOccurs = 0;
-			type_lazy = () -> CashBalanceAvailability1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability1.mmObject();
 		}
 	};
+	protected BankTransactionCodeStructure1 bankTransactionCode;
 	/**
 	 * Set of elements to fully identify the type of underlying transaction
 	 * resulting in an entry.
@@ -517,8 +528,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#BankTransactionCode
-	 * Entry.BankTransactionCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmBankTransactionCode
+	 * Entry.mmBankTransactionCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -539,21 +550,22 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BankTransactionCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBankTransactionCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmBankTransactionCode;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.BankTransactionCode;
 			isDerived = false;
 			xmlTag = "BkTxCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankTransactionCode";
 			definition = "Set of elements to fully identify the type of underlying transaction resulting in an entry.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BankTransactionCodeStructure1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure1.mmObject();
 		}
 	};
+	protected YesNoIndicator commissionWaiverIndicator;
 	/**
 	 * Indicates whether the transaction is exempt from commission.
 	 * <p>
@@ -567,8 +579,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#CommissionWaiverIndicator
-	 * Entry.CommissionWaiverIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmCommissionWaiverIndicator
+	 * Entry.mmCommissionWaiverIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -588,20 +600,21 @@ public class StatementEntry1 {
 	 * "Indicates whether the transaction is exempt from commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommissionWaiverIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommissionWaiverIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCommissionWaiverIndicator;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.CommissionWaiverIndicator;
 			isDerived = false;
 			xmlTag = "ComssnWvrInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionWaiverIndicator";
 			definition = "Indicates whether the transaction is exempt from commission.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected MessageIdentification2 additionalInformationIndicator;
 	/**
 	 * Indicates whether the underlying transaction details are provided through
 	 * a separate message, eg in case of aggregate bookings.
@@ -631,7 +644,7 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalInformationIndicator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalInformationIndicator = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatementEntry1.mmObject();
 			isDerived = false;
@@ -639,12 +652,13 @@ public class StatementEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationIndicator";
 			definition = "Indicates whether the underlying transaction details are provided through a separate message, eg in case of aggregate bookings.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MessageIdentification2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BatchInformation1> batch;
 	/**
 	 * Set of elements providing details on batched transactions.
 	 * 
@@ -677,7 +691,7 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Batch = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBatch = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatementEntry1.mmObject();
 			isDerived = false;
@@ -686,10 +700,11 @@ public class StatementEntry1 {
 			name = "Batch";
 			definition = "Set of elements providing details on batched transactions.\n\nUsage : this element can be repeated in case more than one batch is included in the entry, eg, in lockbox scenarios, to specify the ID and number of transactions included in each of the batches.";
 			minOccurs = 0;
-			type_lazy = () -> BatchInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BatchInformation1.mmObject();
 		}
 	};
+	protected AmountAndCurrencyExchange2 amountDetails;
 	/**
 	 * Set of elements providing information on the original amount.
 	 * 
@@ -728,21 +743,22 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatementEntry1.mmObject();
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
+			componentContext_lazy = () -> StatementEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDetails";
 			definition = "Set of elements providing information on the original amount.\n\nUsage : This component (on entry level) should be used when a total original batch or aggregate amount has to be provided.  (If required, the original amounts for each individual transaction can be included in the same component on transaction details level.)";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndCurrencyExchange2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndCurrencyExchange2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ChargesInformation3> charges;
 	/**
 	 * Provides information on the charges included in the entry amount.
 	 * 
@@ -756,8 +772,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Charges
-	 * CashEntry.Charges}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCharges
+	 * CashEntry.mmCharges}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -778,20 +794,21 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Charges = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCharges;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.Charges;
 			isDerived = false;
 			xmlTag = "Chrgs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
 			definition = "Provides information on the charges included in the entry amount.\n\nUsage : this component is used in case of batch or aggregate bookings.";
 			minOccurs = 0;
-			type_lazy = () -> ChargesInformation3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ChargesInformation3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransactionInterest1> interest;
 	/**
 	 * Set of elements providing details on the interest amount included in the
 	 * entry amount.
@@ -806,8 +823,8 @@ public class StatementEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#InterestCalculation
-	 * Interest.InterestCalculation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmInterestCalculation
+	 * Interest.mmInterestCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -828,20 +845,21 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Interest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestCalculation;
 			componentContext_lazy = () -> StatementEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.InterestCalculation;
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Set of elements providing details on the interest amount included in the entry amount.\n\nUsage : it is used in case of batch or aggregate bookings.";
 			minOccurs = 0;
-			type_lazy = () -> TransactionInterest1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionInterest1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.EntryTransaction1> transactionDetails;
 	/**
 	 * Set of elements providing information on the underlying transaction (s).
 	 * <p>
@@ -874,20 +892,21 @@ public class StatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatementEntry1.mmObject();
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
+			componentContext_lazy = () -> StatementEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Set of elements providing information on the underlying transaction (s).";
 			minOccurs = 0;
-			type_lazy = () -> EntryTransaction1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EntryTransaction1.mmObject();
 		}
 	};
+	protected Max500Text additionalEntryInformation;
 	/**
 	 * Further details on the entry details.
 	 * <p>
@@ -915,7 +934,7 @@ public class StatementEntry1 {
 	 * definition} = "Further details on the entry details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalEntryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalEntryInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementEntry1.mmObject();
 			isDerived = false;
@@ -923,8 +942,8 @@ public class StatementEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalEntryInformation";
 			definition = "Further details on the entry details.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
@@ -932,20 +951,156 @@ public class StatementEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementEntry1.Amount, com.tools20022.repository.msg.StatementEntry1.CreditDebitIndicator,
-						com.tools20022.repository.msg.StatementEntry1.ReversalIndicator, com.tools20022.repository.msg.StatementEntry1.Status, com.tools20022.repository.msg.StatementEntry1.BookingDate,
-						com.tools20022.repository.msg.StatementEntry1.ValueDate, com.tools20022.repository.msg.StatementEntry1.AccountServicerReference, com.tools20022.repository.msg.StatementEntry1.Availability,
-						com.tools20022.repository.msg.StatementEntry1.BankTransactionCode, com.tools20022.repository.msg.StatementEntry1.CommissionWaiverIndicator,
-						com.tools20022.repository.msg.StatementEntry1.AdditionalInformationIndicator, com.tools20022.repository.msg.StatementEntry1.Batch, com.tools20022.repository.msg.StatementEntry1.AmountDetails,
-						com.tools20022.repository.msg.StatementEntry1.Charges, com.tools20022.repository.msg.StatementEntry1.Interest, com.tools20022.repository.msg.StatementEntry1.TransactionDetails,
-						com.tools20022.repository.msg.StatementEntry1.AdditionalEntryInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementEntry1.mmAmount, com.tools20022.repository.msg.StatementEntry1.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.StatementEntry1.mmReversalIndicator, com.tools20022.repository.msg.StatementEntry1.mmStatus, com.tools20022.repository.msg.StatementEntry1.mmBookingDate,
+						com.tools20022.repository.msg.StatementEntry1.mmValueDate, com.tools20022.repository.msg.StatementEntry1.mmAccountServicerReference, com.tools20022.repository.msg.StatementEntry1.mmAvailability,
+						com.tools20022.repository.msg.StatementEntry1.mmBankTransactionCode, com.tools20022.repository.msg.StatementEntry1.mmCommissionWaiverIndicator,
+						com.tools20022.repository.msg.StatementEntry1.mmAdditionalInformationIndicator, com.tools20022.repository.msg.StatementEntry1.mmBatch, com.tools20022.repository.msg.StatementEntry1.mmAmountDetails,
+						com.tools20022.repository.msg.StatementEntry1.mmCharges, com.tools20022.repository.msg.StatementEntry1.mmInterest, com.tools20022.repository.msg.StatementEntry1.mmTransactionDetails,
+						com.tools20022.repository.msg.StatementEntry1.mmAdditionalEntryInformation);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementEntry1";
 				definition = "Specifies the elements of an entry in the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public TrueFalseIndicator getReversalIndicator() {
+		return reversalIndicator;
+	}
+
+	public void setReversalIndicator(TrueFalseIndicator reversalIndicator) {
+		this.reversalIndicator = reversalIndicator;
+	}
+
+	public EntryStatus3Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(EntryStatus3Code status) {
+		this.status = status;
+	}
+
+	public DateAndDateTimeChoice getBookingDate() {
+		return bookingDate;
+	}
+
+	public void setBookingDate(DateAndDateTimeChoice bookingDate) {
+		this.bookingDate = bookingDate;
+	}
+
+	public DateAndDateTimeChoice getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(DateAndDateTimeChoice valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public Max35Text getAccountServicerReference() {
+		return accountServicerReference;
+	}
+
+	public void setAccountServicerReference(Max35Text accountServicerReference) {
+		this.accountServicerReference = accountServicerReference;
+	}
+
+	public List<CashBalanceAvailability1> getAvailability() {
+		return availability;
+	}
+
+	public void setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability1> availability) {
+		this.availability = availability;
+	}
+
+	public BankTransactionCodeStructure1 getBankTransactionCode() {
+		return bankTransactionCode;
+	}
+
+	public void setBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure1 bankTransactionCode) {
+		this.bankTransactionCode = bankTransactionCode;
+	}
+
+	public YesNoIndicator getCommissionWaiverIndicator() {
+		return commissionWaiverIndicator;
+	}
+
+	public void setCommissionWaiverIndicator(YesNoIndicator commissionWaiverIndicator) {
+		this.commissionWaiverIndicator = commissionWaiverIndicator;
+	}
+
+	public MessageIdentification2 getAdditionalInformationIndicator() {
+		return additionalInformationIndicator;
+	}
+
+	public void setAdditionalInformationIndicator(com.tools20022.repository.msg.MessageIdentification2 additionalInformationIndicator) {
+		this.additionalInformationIndicator = additionalInformationIndicator;
+	}
+
+	public List<BatchInformation1> getBatch() {
+		return batch;
+	}
+
+	public void setBatch(List<com.tools20022.repository.msg.BatchInformation1> batch) {
+		this.batch = batch;
+	}
+
+	public AmountAndCurrencyExchange2 getAmountDetails() {
+		return amountDetails;
+	}
+
+	public void setAmountDetails(com.tools20022.repository.msg.AmountAndCurrencyExchange2 amountDetails) {
+		this.amountDetails = amountDetails;
+	}
+
+	public List<ChargesInformation3> getCharges() {
+		return charges;
+	}
+
+	public void setCharges(List<com.tools20022.repository.msg.ChargesInformation3> charges) {
+		this.charges = charges;
+	}
+
+	public List<TransactionInterest1> getInterest() {
+		return interest;
+	}
+
+	public void setInterest(List<com.tools20022.repository.msg.TransactionInterest1> interest) {
+		this.interest = interest;
+	}
+
+	public List<EntryTransaction1> getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(List<com.tools20022.repository.msg.EntryTransaction1> transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public Max500Text getAdditionalEntryInformation() {
+		return additionalEntryInformation;
+	}
+
+	public void setAdditionalEntryInformation(Max500Text additionalEntryInformation) {
+		this.additionalEntryInformation = additionalEntryInformation;
 	}
 }

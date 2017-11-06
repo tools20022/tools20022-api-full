@@ -40,9 +40,9 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#NetOrGrossOrCashDistributionDetailsOrSecuritiesDistributionDetailsRule
+ * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#mmNetOrGrossOrCashDistributionDetailsOrSecuritiesDistributionDetailsRule
  * CorporateActionStandingInstruction1.
- * NetOrGrossOrCashDistributionDetailsOrSecuritiesDistributionDetailsRule}</li>
+ * mmNetOrGrossOrCashDistributionDetailsOrSecuritiesDistributionDetailsRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,17 +50,17 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#NetOrGross
- * CorporateActionStandingInstruction1.NetOrGross}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#mmNetOrGross
+ * CorporateActionStandingInstruction1.mmNetOrGross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#CashDistributionDetails
- * CorporateActionStandingInstruction1.CashDistributionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#mmCashDistributionDetails
+ * CorporateActionStandingInstruction1.mmCashDistributionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#SecuritiesDistributionDetails
- * CorporateActionStandingInstruction1.SecuritiesDistributionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#mmSecuritiesDistributionDetails
+ * CorporateActionStandingInstruction1.mmSecuritiesDistributionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#AdditionalInformation
- * CorporateActionStandingInstruction1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#mmAdditionalInformation
+ * CorporateActionStandingInstruction1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -72,18 +72,19 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01#StandingInstructionDetails
- * AgentCAStandingInstructionRequestV01.StandingInstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01#mmStandingInstructionDetails
+ * AgentCAStandingInstructionRequestV01.mmStandingInstructionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01#StandingInstructionDetails
- * AgentCAStandingInstructionCancellationRequestV01.StandingInstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01#mmStandingInstructionDetails
+ * AgentCAStandingInstructionCancellationRequestV01.mmStandingInstructionDetails
+ * }</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -98,6 +99,7 @@ import java.util.function.Supplier;
 public class CorporateActionStandingInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected StandingInstructionGrossNet1Code netOrGross;
 	/**
 	 * Identifies whether the account Holders want their income to be paid net
 	 * or gross of income tax (default is gross).
@@ -112,8 +114,8 @@ public class CorporateActionStandingInstruction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#GrossOrNetIndicator
-	 * AgentCorporateActionStandingInstruction.GrossOrNetIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmGrossOrNetIndicator
+	 * AgentCorporateActionStandingInstruction.mmGrossOrNetIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -134,20 +136,21 @@ public class CorporateActionStandingInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetOrGross = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetOrGross = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmGrossOrNetIndicator;
 			componentContext_lazy = () -> CorporateActionStandingInstruction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.GrossOrNetIndicator;
 			isDerived = false;
 			xmlTag = "NetOrGrss";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetOrGross";
 			definition = "Identifies whether the account Holders want their income to be paid net or gross of income tax (default is gross).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StandingInstructionGrossNet1Code.mmObject();
 		}
 	};
+	protected CashAccount17 cashDistributionDetails;
 	/**
 	 * Provides information about the cash distribution standing instruction.
 	 * <p>
@@ -179,21 +182,22 @@ public class CorporateActionStandingInstruction1 {
 	 * "Provides information about the cash distribution standing instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashDistributionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashDistributionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionStandingInstruction1.mmObject();
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
+			componentContext_lazy = () -> CorporateActionStandingInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "CshDstrbtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDistributionDetails";
 			definition = "Provides information about the cash distribution standing instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount17.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount17.mmObject();
 		}
 	};
+	protected SecuritiesAccount6 securitiesDistributionDetails;
 	/**
 	 * Provides information about the securities distribution standing
 	 * instruction.
@@ -228,21 +232,22 @@ public class CorporateActionStandingInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesDistributionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesDistributionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionStandingInstruction1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> CorporateActionStandingInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesDstrbtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesDistributionDetails";
 			definition = "Provides information about the securities distribution standing instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the standing instruction.
 	 * <p>
@@ -270,7 +275,7 @@ public class CorporateActionStandingInstruction1 {
 	 * definition} = "Additional information about the standing instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionStandingInstruction1.mmObject();
 			isDerived = false;
@@ -278,8 +283,8 @@ public class CorporateActionStandingInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the standing instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -293,14 +298,14 @@ public class CorporateActionStandingInstruction1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#NetOrGross
-	 * CorporateActionStandingInstruction1.NetOrGross}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#mmNetOrGross
+	 * CorporateActionStandingInstruction1.mmNetOrGross}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#CashDistributionDetails
-	 * CorporateActionStandingInstruction1.CashDistributionDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#mmCashDistributionDetails
+	 * CorporateActionStandingInstruction1.mmCashDistributionDetails}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#SecuritiesDistributionDetails
-	 * CorporateActionStandingInstruction1.SecuritiesDistributionDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#mmSecuritiesDistributionDetails
+	 * CorporateActionStandingInstruction1.mmSecuritiesDistributionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -321,26 +326,26 @@ public class CorporateActionStandingInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor NetOrGrossOrCashDistributionDetailsOrSecuritiesDistributionDetailsRule = new MMXor() {
+	public static final MMXor mmNetOrGrossOrCashDistributionDetailsOrSecuritiesDistributionDetailsRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetOrGrossOrCashDistributionDetailsOrSecuritiesDistributionDetailsRule";
 			definition = "Either NetOrGross, CashDistributionDetails or SecuritiesDistributionDetails must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstruction1.NetOrGross, com.tools20022.repository.msg.CorporateActionStandingInstruction1.CashDistributionDetails,
-					com.tools20022.repository.msg.CorporateActionStandingInstruction1.SecuritiesDistributionDetails);
 			messageComponent_lazy = () -> CorporateActionStandingInstruction1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmNetOrGross, com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmCashDistributionDetails,
+					com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmSecuritiesDistributionDetails);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstruction1.NetOrGross, com.tools20022.repository.msg.CorporateActionStandingInstruction1.CashDistributionDetails,
-						com.tools20022.repository.msg.CorporateActionStandingInstruction1.SecuritiesDistributionDetails, com.tools20022.repository.msg.CorporateActionStandingInstruction1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmNetOrGross, com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmCashDistributionDetails,
+						com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmSecuritiesDistributionDetails, com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01.mmStandingInstructionDetails,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01.mmStandingInstructionDetails);
 				trace_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01.StandingInstructionDetails,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01.StandingInstructionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -351,9 +356,41 @@ public class CorporateActionStandingInstruction1 {
 				})).get();
 				name = "CorporateActionStandingInstruction1";
 				definition = "Provides information about the standing instruction.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstruction1.NetOrGrossOrCashDistributionDetailsOrSecuritiesDistributionDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmNetOrGrossOrCashDistributionDetailsOrSecuritiesDistributionDetailsRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StandingInstructionGrossNet1Code getNetOrGross() {
+		return netOrGross;
+	}
+
+	public void setNetOrGross(StandingInstructionGrossNet1Code netOrGross) {
+		this.netOrGross = netOrGross;
+	}
+
+	public CashAccount17 getCashDistributionDetails() {
+		return cashDistributionDetails;
+	}
+
+	public void setCashDistributionDetails(com.tools20022.repository.msg.CashAccount17 cashDistributionDetails) {
+		this.cashDistributionDetails = cashDistributionDetails;
+	}
+
+	public SecuritiesAccount6 getSecuritiesDistributionDetails() {
+		return securitiesDistributionDetails;
+	}
+
+	public void setSecuritiesDistributionDetails(com.tools20022.repository.msg.SecuritiesAccount6 securitiesDistributionDetails) {
+		this.securitiesDistributionDetails = securitiesDistributionDetails;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

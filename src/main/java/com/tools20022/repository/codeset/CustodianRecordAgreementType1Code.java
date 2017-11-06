@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementType1Code#Agree
- * CustodianRecordAgreementType1Code.Agree}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementType1Code#mmAgree
+ * CustodianRecordAgreementType1Code.mmAgree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementType1Code#Disagree
- * CustodianRecordAgreementType1Code.Disagree}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementType1Code#mmDisagree
+ * CustodianRecordAgreementType1Code.mmDisagree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementType1Code#NoComposite
- * CustodianRecordAgreementType1Code.NoComposite}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementType1Code#mmNoComposite
+ * CustodianRecordAgreementType1Code.mmNoComposite}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CustodianRecordAgreementType1Code extends CustodianRecordAgreementT
 	 * name} = "Agree"</li>
 	 * </ul>
 	 */
-	public static final MMCode Agree = new MMCode() {
+	public static final MMCode mmAgree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agree";
@@ -110,7 +110,7 @@ public class CustodianRecordAgreementType1Code extends CustodianRecordAgreementT
 	 * name} = "Disagree"</li>
 	 * </ul>
 	 */
-	public static final MMCode Disagree = new MMCode() {
+	public static final MMCode mmDisagree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disagree";
@@ -133,7 +133,7 @@ public class CustodianRecordAgreementType1Code extends CustodianRecordAgreementT
 	 * name} = "NoComposite"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoComposite = new MMCode() {
+	public static final MMCode mmNoComposite = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoComposite";
@@ -144,13 +144,13 @@ public class CustodianRecordAgreementType1Code extends CustodianRecordAgreementT
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGRE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CustodianRecordAgreementType1Code";
 				definition = "Specifies the state of the agreement of the custodian record when compared to composite record.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianRecordAgreementType1Code.Agree, com.tools20022.repository.codeset.CustodianRecordAgreementType1Code.Disagree,
-						com.tools20022.repository.codeset.CustodianRecordAgreementType1Code.NoComposite);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianRecordAgreementType1Code.mmAgree, com.tools20022.repository.codeset.CustodianRecordAgreementType1Code.mmDisagree,
+						com.tools20022.repository.codeset.CustodianRecordAgreementType1Code.mmNoComposite);
 				trace_lazy = () -> CustodianRecordAgreementTypeCode.mmObject();
 			}
 		});

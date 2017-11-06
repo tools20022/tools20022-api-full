@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CardPayment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Data associated with the transaction to authorise.
@@ -41,41 +42,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#TransactionCapture
- * CardPaymentTransaction62.TransactionCapture}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmTransactionCapture
+ * CardPaymentTransaction62.mmTransactionCapture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#TransactionType
- * CardPaymentTransaction62.TransactionType}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmTransactionType
+ * CardPaymentTransaction62.mmTransactionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#AdditionalService
- * CardPaymentTransaction62.AdditionalService}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmAdditionalService
+ * CardPaymentTransaction62.mmAdditionalService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#ServiceAttribute
- * CardPaymentTransaction62.ServiceAttribute}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmServiceAttribute
+ * CardPaymentTransaction62.mmServiceAttribute}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#MerchantCategoryCode
- * CardPaymentTransaction62.MerchantCategoryCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmMerchantCategoryCode
+ * CardPaymentTransaction62.mmMerchantCategoryCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#SaleReferenceIdentification
- * CardPaymentTransaction62.SaleReferenceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmSaleReferenceIdentification
+ * CardPaymentTransaction62.mmSaleReferenceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#TransactionIdentification
- * CardPaymentTransaction62.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmTransactionIdentification
+ * CardPaymentTransaction62.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#OriginalTransaction
- * CardPaymentTransaction62.OriginalTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmOriginalTransaction
+ * CardPaymentTransaction62.mmOriginalTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#InitiatorTransactionIdentification
- * CardPaymentTransaction62.InitiatorTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmInitiatorTransactionIdentification
+ * CardPaymentTransaction62.mmInitiatorTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#ReconciliationIdentification
- * CardPaymentTransaction62.ReconciliationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmReconciliationIdentification
+ * CardPaymentTransaction62.mmReconciliationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#TransactionDetails
- * CardPaymentTransaction62.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmTransactionDetails
+ * CardPaymentTransaction62.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#AdditionalTransactionData
- * CardPaymentTransaction62.AdditionalTransactionData}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction62#mmAdditionalTransactionData
+ * CardPaymentTransaction62.mmAdditionalTransactionData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -84,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentTransaction62 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator transactionCapture;
 	/**
 	 * Flag indicating whether the transaction data must be captured or not in
 	 * addition to the message process.
@@ -143,18 +145,18 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#TransactionCapture
-	 * CardPaymentTransaction71.TransactionCapture}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmTransactionCapture
+	 * CardPaymentTransaction71.mmTransactionCapture}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#TransactionCapture
-	 * CardPaymentTransaction47.TransactionCapture}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmTransactionCapture
+	 * CardPaymentTransaction47.mmTransactionCapture}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionCapture = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionCapture = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
 			isDerived = false;
@@ -162,13 +164,14 @@ public class CardPaymentTransaction62 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCapture";
 			definition = "Flag indicating whether the transaction data must be captured or not in addition to the message process.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.TransactionCapture;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.TransactionCapture);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmTransactionCapture);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmTransactionCapture;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected CardPaymentServiceType5Code transactionType;
 	/**
 	 * Type of transaction being undertaken for the main service.
 	 * <p>
@@ -182,8 +185,8 @@ public class CardPaymentTransaction62 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#CardPaymentService
-	 * CardPaymentAcquiring.CardPaymentService}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardPaymentService
+	 * CardPaymentAcquiring.mmCardPaymentService}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,33 +208,34 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#TransactionType
-	 * CardPaymentTransaction71.TransactionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmTransactionType
+	 * CardPaymentTransaction71.mmTransactionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#TransactionType
-	 * CardPaymentTransaction47.TransactionType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmTransactionType
+	 * CardPaymentTransaction47.mmTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.CardPaymentService;
 			isDerived = false;
 			xmlTag = "TxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Type of transaction being undertaken for the main service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.TransactionType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.TransactionType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmTransactionType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmTransactionType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType5Code.mmObject();
 		}
 	};
+	protected List<CardPaymentServiceType9Code> additionalService;
 	/**
 	 * Service in addition to the main service.
 	 * <p>
@@ -245,8 +249,8 @@ public class CardPaymentTransaction62 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#CardPaymentService
-	 * CardPaymentAcquiring.CardPaymentService}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardPaymentService
+	 * CardPaymentAcquiring.mmCardPaymentService}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -267,32 +271,33 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#AdditionalService
-	 * CardPaymentTransaction71.AdditionalService}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmAdditionalService
+	 * CardPaymentTransaction71.mmAdditionalService}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#AdditionalService
-	 * CardPaymentTransaction47.AdditionalService}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmAdditionalService
+	 * CardPaymentTransaction47.mmAdditionalService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalService = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalService = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.CardPaymentService;
 			isDerived = false;
 			xmlTag = "AddtlSvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalService";
 			definition = "Service in addition to the main service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.AdditionalService;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.AdditionalService);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmAdditionalService);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmAdditionalService;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType9Code.mmObject();
 		}
 	};
+	protected CardPaymentServiceType3Code serviceAttribute;
 	/**
 	 * Additional attribute of the service type.
 	 * <p>
@@ -306,8 +311,8 @@ public class CardPaymentTransaction62 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#CardPaymentService
-	 * CardPaymentAcquiring.CardPaymentService}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardPaymentService
+	 * CardPaymentAcquiring.mmCardPaymentService}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -328,33 +333,34 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#ServiceAttribute
-	 * CardPaymentTransaction71.ServiceAttribute}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmServiceAttribute
+	 * CardPaymentTransaction71.mmServiceAttribute}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#ServiceAttribute
-	 * CardPaymentTransaction47.ServiceAttribute}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmServiceAttribute
+	 * CardPaymentTransaction47.mmServiceAttribute}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceAttribute = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceAttribute = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.CardPaymentService;
 			isDerived = false;
 			xmlTag = "SvcAttr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceAttribute";
 			definition = "Additional attribute of the service type.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.ServiceAttribute;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.ServiceAttribute);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmServiceAttribute);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmServiceAttribute;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType3Code.mmObject();
 		}
 	};
+	protected Min3Max4Text merchantCategoryCode;
 	/**
 	 * Category code conform to ISO 18245, related to the type of services or
 	 * goods the merchant provides for the transaction.
@@ -369,8 +375,8 @@ public class CardPaymentTransaction62 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MerchantRole#MerchantCategoryCode
-	 * MerchantRole.MerchantCategoryCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.MerchantRole#mmMerchantCategoryCode
+	 * MerchantRole.mmMerchantCategoryCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -393,33 +399,34 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#MerchantCategoryCode
-	 * CardPaymentTransaction71.MerchantCategoryCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmMerchantCategoryCode
+	 * CardPaymentTransaction71.mmMerchantCategoryCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#MerchantCategoryCode
-	 * CardPaymentTransaction47.MerchantCategoryCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmMerchantCategoryCode
+	 * CardPaymentTransaction47.mmMerchantCategoryCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MerchantCategoryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMerchantCategoryCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MerchantRole.mmMerchantCategoryCode;
 			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MerchantRole.MerchantCategoryCode;
 			isDerived = false;
 			xmlTag = "MrchntCtgyCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantCategoryCode";
 			definition = "Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.MerchantCategoryCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.MerchantCategoryCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmMerchantCategoryCode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmMerchantCategoryCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Min3Max4Text.mmObject();
 		}
 	};
+	protected Max35Text saleReferenceIdentification;
 	/**
 	 * Global reference of the sale transaction for the sale system.
 	 * <p>
@@ -450,18 +457,18 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#SaleReferenceIdentification
-	 * CardPaymentTransaction71.SaleReferenceIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmSaleReferenceIdentification
+	 * CardPaymentTransaction71.mmSaleReferenceIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#SaleReferenceIdentification
-	 * CardPaymentTransaction47.SaleReferenceIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmSaleReferenceIdentification
+	 * CardPaymentTransaction47.mmSaleReferenceIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SaleReferenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSaleReferenceIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
 			isDerived = false;
@@ -469,13 +476,14 @@ public class CardPaymentTransaction62 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleReferenceIdentification";
 			definition = "Global reference of the sale transaction for the sale system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.SaleReferenceIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.SaleReferenceIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmSaleReferenceIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmSaleReferenceIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TransactionIdentifier1 transactionIdentification;
 	/**
 	 * Identification of the transaction assigned by the POI (Point Of
 	 * Interaction).
@@ -488,8 +496,8 @@ public class CardPaymentTransaction62 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#TransactionIdentification
-	 * CardPaymentAcquiring.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionIdentification
+	 * CardPaymentAcquiring.mmTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -512,34 +520,35 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#TransactionIdentification
-	 * CardPaymentTransaction71.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmTransactionIdentification
+	 * CardPaymentTransaction71.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#TransactionIdentification
-	 * CardPaymentTransaction47.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmTransactionIdentification
+	 * CardPaymentTransaction47.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionIdentification;
 			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.TransactionIdentification;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction assigned by the POI (Point Of Interaction).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.TransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmTransactionIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionIdentifier1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
 		}
 	};
+	protected CardPaymentTransaction52 originalTransaction;
 	/**
 	 * Identification of the original transaction.
 	 * <p>
@@ -573,34 +582,35 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#OriginalTransaction
-	 * CardPaymentTransaction71.OriginalTransaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmOriginalTransaction
+	 * CardPaymentTransaction71.mmOriginalTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#OriginalTransaction
-	 * CardPaymentTransaction47.OriginalTransaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmOriginalTransaction
+	 * CardPaymentTransaction47.mmOriginalTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransaction";
 			definition = "Identification of the original transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.OriginalTransaction;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.OriginalTransaction);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmOriginalTransaction);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmOriginalTransaction;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentTransaction52.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction52.mmObject();
 		}
 	};
+	protected Max35Text initiatorTransactionIdentification;
 	/**
 	 * Identification of the transaction assigned by the initiating party for
 	 * the recipient party.
@@ -614,8 +624,8 @@ public class CardPaymentTransaction62 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#InitiatorTransactionIdentifier
-	 * CardPaymentAcquiring.InitiatorTransactionIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmInitiatorTransactionIdentifier
+	 * CardPaymentAcquiring.mmInitiatorTransactionIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -638,33 +648,34 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#InitiatorTransactionIdentification
-	 * CardPaymentTransaction71.InitiatorTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmInitiatorTransactionIdentification
+	 * CardPaymentTransaction71.mmInitiatorTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#InitiatorTransactionIdentification
-	 * CardPaymentTransaction47.InitiatorTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmInitiatorTransactionIdentification
+	 * CardPaymentTransaction47.mmInitiatorTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitiatorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitiatorTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmInitiatorTransactionIdentifier;
 			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.InitiatorTransactionIdentifier;
 			isDerived = false;
 			xmlTag = "InitrTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatorTransactionIdentification";
 			definition = "Identification of the transaction assigned by the initiating party for the recipient party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.InitiatorTransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.InitiatorTransactionIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmInitiatorTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmInitiatorTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text reconciliationIdentification;
 	/**
 	 * Unique identification of the reconciliation period between the acceptor
 	 * and the acquirer. This identification might be linked to the
@@ -680,8 +691,8 @@ public class CardPaymentTransaction62 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#ReconciliationIdentification
-	 * ReconciliationTransaction.ReconciliationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmReconciliationIdentification
+	 * ReconciliationTransaction.mmReconciliationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -704,33 +715,34 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#ReconciliationIdentification
-	 * CardPaymentTransaction71.ReconciliationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmReconciliationIdentification
+	 * CardPaymentTransaction71.mmReconciliationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#ReconciliationIdentification
-	 * CardPaymentTransaction47.ReconciliationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmReconciliationIdentification
+	 * CardPaymentTransaction47.mmReconciliationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmReconciliationIdentification;
 			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.ReconciliationIdentification;
 			isDerived = false;
 			xmlTag = "RcncltnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.ReconciliationIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.ReconciliationIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmReconciliationIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmReconciliationIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CardPaymentTransactionDetails31 transactionDetails;
 	/**
 	 * Details of the transaction.
 	 * <p>
@@ -764,34 +776,35 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#TransactionDetails
-	 * CardPaymentTransaction71.TransactionDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmTransactionDetails
+	 * CardPaymentTransaction71.mmTransactionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#TransactionDetails
-	 * CardPaymentTransaction47.TransactionDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmTransactionDetails
+	 * CardPaymentTransaction47.mmTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Details of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.TransactionDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.TransactionDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmTransactionDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmTransactionDetails;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentTransactionDetails31.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails31.mmObject();
 		}
 	};
+	protected List<Max70Text> additionalTransactionData;
 	/**
 	 * Additional information related to the transaction.
 	 * <p>
@@ -821,18 +834,18 @@ public class CardPaymentTransaction62 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#AdditionalTransactionData
-	 * CardPaymentTransaction71.AdditionalTransactionData}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction71#mmAdditionalTransactionData
+	 * CardPaymentTransaction71.mmAdditionalTransactionData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#AdditionalTransactionData
-	 * CardPaymentTransaction47.AdditionalTransactionData}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction47#mmAdditionalTransactionData
+	 * CardPaymentTransaction47.mmAdditionalTransactionData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalTransactionData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalTransactionData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentTransaction62.mmObject();
 			isDerived = false;
@@ -840,8 +853,8 @@ public class CardPaymentTransaction62 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTransactionData";
 			definition = "Additional information related to the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.AdditionalTransactionData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.AdditionalTransactionData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction71.mmAdditionalTransactionData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction47.mmAdditionalTransactionData;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
@@ -850,21 +863,117 @@ public class CardPaymentTransaction62 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction62.TransactionCapture, com.tools20022.repository.msg.CardPaymentTransaction62.TransactionType,
-						com.tools20022.repository.msg.CardPaymentTransaction62.AdditionalService, com.tools20022.repository.msg.CardPaymentTransaction62.ServiceAttribute,
-						com.tools20022.repository.msg.CardPaymentTransaction62.MerchantCategoryCode, com.tools20022.repository.msg.CardPaymentTransaction62.SaleReferenceIdentification,
-						com.tools20022.repository.msg.CardPaymentTransaction62.TransactionIdentification, com.tools20022.repository.msg.CardPaymentTransaction62.OriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction62.InitiatorTransactionIdentification, com.tools20022.repository.msg.CardPaymentTransaction62.ReconciliationIdentification,
-						com.tools20022.repository.msg.CardPaymentTransaction62.TransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction62.AdditionalTransactionData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction62.mmTransactionCapture, com.tools20022.repository.msg.CardPaymentTransaction62.mmTransactionType,
+						com.tools20022.repository.msg.CardPaymentTransaction62.mmAdditionalService, com.tools20022.repository.msg.CardPaymentTransaction62.mmServiceAttribute,
+						com.tools20022.repository.msg.CardPaymentTransaction62.mmMerchantCategoryCode, com.tools20022.repository.msg.CardPaymentTransaction62.mmSaleReferenceIdentification,
+						com.tools20022.repository.msg.CardPaymentTransaction62.mmTransactionIdentification, com.tools20022.repository.msg.CardPaymentTransaction62.mmOriginalTransaction,
+						com.tools20022.repository.msg.CardPaymentTransaction62.mmInitiatorTransactionIdentification, com.tools20022.repository.msg.CardPaymentTransaction62.mmReconciliationIdentification,
+						com.tools20022.repository.msg.CardPaymentTransaction62.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction62.mmAdditionalTransactionData);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction62";
 				definition = "Data associated with the transaction to authorise.";
-				previousVersion_lazy = () -> CardPaymentTransaction47.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction71.mmObject());
+				previousVersion_lazy = () -> CardPaymentTransaction47.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getTransactionCapture() {
+		return transactionCapture;
+	}
+
+	public void setTransactionCapture(TrueFalseIndicator transactionCapture) {
+		this.transactionCapture = transactionCapture;
+	}
+
+	public CardPaymentServiceType5Code getTransactionType() {
+		return transactionType;
+	}
+
+	public void setTransactionType(CardPaymentServiceType5Code transactionType) {
+		this.transactionType = transactionType;
+	}
+
+	public List<CardPaymentServiceType9Code> getAdditionalService() {
+		return additionalService;
+	}
+
+	public void setAdditionalService(List<CardPaymentServiceType9Code> additionalService) {
+		this.additionalService = additionalService;
+	}
+
+	public CardPaymentServiceType3Code getServiceAttribute() {
+		return serviceAttribute;
+	}
+
+	public void setServiceAttribute(CardPaymentServiceType3Code serviceAttribute) {
+		this.serviceAttribute = serviceAttribute;
+	}
+
+	public Min3Max4Text getMerchantCategoryCode() {
+		return merchantCategoryCode;
+	}
+
+	public void setMerchantCategoryCode(Min3Max4Text merchantCategoryCode) {
+		this.merchantCategoryCode = merchantCategoryCode;
+	}
+
+	public Max35Text getSaleReferenceIdentification() {
+		return saleReferenceIdentification;
+	}
+
+	public void setSaleReferenceIdentification(Max35Text saleReferenceIdentification) {
+		this.saleReferenceIdentification = saleReferenceIdentification;
+	}
+
+	public TransactionIdentifier1 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public CardPaymentTransaction52 getOriginalTransaction() {
+		return originalTransaction;
+	}
+
+	public void setOriginalTransaction(com.tools20022.repository.msg.CardPaymentTransaction52 originalTransaction) {
+		this.originalTransaction = originalTransaction;
+	}
+
+	public Max35Text getInitiatorTransactionIdentification() {
+		return initiatorTransactionIdentification;
+	}
+
+	public void setInitiatorTransactionIdentification(Max35Text initiatorTransactionIdentification) {
+		this.initiatorTransactionIdentification = initiatorTransactionIdentification;
+	}
+
+	public Max35Text getReconciliationIdentification() {
+		return reconciliationIdentification;
+	}
+
+	public void setReconciliationIdentification(Max35Text reconciliationIdentification) {
+		this.reconciliationIdentification = reconciliationIdentification;
+	}
+
+	public CardPaymentTransactionDetails31 getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(com.tools20022.repository.msg.CardPaymentTransactionDetails31 transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public List<Max70Text> getAdditionalTransactionData() {
+		return additionalTransactionData;
+	}
+
+	public void setAdditionalTransactionData(List<Max70Text> additionalTransactionData) {
+		this.additionalTransactionData = additionalTransactionData;
 	}
 }

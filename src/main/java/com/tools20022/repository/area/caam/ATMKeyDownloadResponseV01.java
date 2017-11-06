@@ -57,24 +57,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#Header
- * ATMKeyDownloadResponseV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#mmHeader
+ * ATMKeyDownloadResponseV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#ProtectedATMKeyDownloadResponse
- * ATMKeyDownloadResponseV01.ProtectedATMKeyDownloadResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#mmProtectedATMKeyDownloadResponse
+ * ATMKeyDownloadResponseV01.mmProtectedATMKeyDownloadResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#ATMKeyDownloadResponse
- * ATMKeyDownloadResponseV01.ATMKeyDownloadResponse}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#mmATMKeyDownloadResponse
+ * ATMKeyDownloadResponseV01.mmATMKeyDownloadResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#SecurityTrailer
- * ATMKeyDownloadResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#mmSecurityTrailer
+ * ATMKeyDownloadResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01#identifier
- * ATMKeyDownloadResponseV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caam.004.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMKeyDownloadResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header20 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -123,17 +122,18 @@ public class ATMKeyDownloadResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header20.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedATMKeyDownloadResponse;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -157,17 +157,18 @@ public class ATMKeyDownloadResponseV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedATMKeyDownloadResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedATMKeyDownloadResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMKeyDwnldRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMKeyDownloadResponse";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected ATMKeyDownloadResponse1 aTMKeyDownloadResponse;
 	/**
 	 * Information related to the response of an ATM key download from an ATM
 	 * manager.
@@ -194,17 +195,18 @@ public class ATMKeyDownloadResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMKeyDownloadResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMKeyDownloadResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMKeyDwnldRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMKeyDownloadResponse";
 			definition = "Information related to the response of an ATM key download from an ATM manager.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ATMKeyDownloadResponse1.mmObject();
 		}
 	};
+	protected ContentInformationType13 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC or a digital signature.
 	 * <p>
@@ -229,42 +231,15 @@ public class ATMKeyDownloadResponseV01 {
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType13.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caam"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caam";
-			messageFunctionality = "004";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -279,11 +254,50 @@ public class ATMKeyDownloadResponseV01 {
 				rootElement = "Document";
 				xmlTag = "ATMKeyDwnldRspn";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.Header, com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.ProtectedATMKeyDownloadResponse,
-						com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.ATMKeyDownloadResponse, com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.mmHeader, com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.mmProtectedATMKeyDownloadResponse,
+						com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.mmATMKeyDownloadResponse, com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caam";
+						messageFunctionality = "004";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header20 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header20 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedATMKeyDownloadResponse() {
+		return protectedATMKeyDownloadResponse;
+	}
+
+	public void setProtectedATMKeyDownloadResponse(ContentInformationType10 protectedATMKeyDownloadResponse) {
+		this.protectedATMKeyDownloadResponse = protectedATMKeyDownloadResponse;
+	}
+
+	public ATMKeyDownloadResponse1 getATMKeyDownloadResponse() {
+		return aTMKeyDownloadResponse;
+	}
+
+	public void setATMKeyDownloadResponse(ATMKeyDownloadResponse1 aTMKeyDownloadResponse) {
+		this.aTMKeyDownloadResponse = aTMKeyDownloadResponse;
+	}
+
+	public ContentInformationType13 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType13 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

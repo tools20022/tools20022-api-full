@@ -30,8 +30,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalFrameworkCode#PensionLivree
- * LegalFrameworkCode.PensionLivree}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalFrameworkCode#mmPensionLivree
+ * LegalFrameworkCode.mmPensionLivree}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class LegalFrameworkCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PensionLivree = new MMCode() {
+	public static final MMCode mmPensionLivree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PensionLivree";
@@ -102,12 +102,12 @@ public class LegalFrameworkCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FRAN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LegalFrameworkCode";
 				definition = "Identifies the legal framework of the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalFrameworkCode.PensionLivree);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalFrameworkCode.mmPensionLivree);
 				derivation_lazy = () -> Arrays.asList(LegalFramework1Code.mmObject());
 			}
 		});

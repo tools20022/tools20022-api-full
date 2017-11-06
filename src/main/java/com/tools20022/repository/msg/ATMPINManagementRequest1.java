@@ -32,14 +32,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMPINManagementRequest1#Environment
- * ATMPINManagementRequest1.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMPINManagementRequest1#mmEnvironment
+ * ATMPINManagementRequest1.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMPINManagementRequest1#Context
- * ATMPINManagementRequest1.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMPINManagementRequest1#mmContext
+ * ATMPINManagementRequest1.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMPINManagementRequest1#Transaction
- * ATMPINManagementRequest1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMPINManagementRequest1#mmTransaction
+ * ATMPINManagementRequest1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#ATMPINManagementRequest
- * ATMPINManagementRequestV01.ATMPINManagementRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#mmATMPINManagementRequest
+ * ATMPINManagementRequestV01.mmATMPINManagementRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMPINManagementRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment1 environment;
 	/**
 	 * Environment in which the transaction is performed.
 	 * <p>
@@ -96,7 +97,7 @@ public class ATMPINManagementRequest1 {
 	 * definition} = "Environment in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMPINManagementRequest1.mmObject();
 			isDerived = false;
@@ -104,12 +105,13 @@ public class ATMPINManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment in which the transaction is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment1.mmObject();
 		}
 	};
+	protected ATMContext7 context;
 	/**
 	 * Context in which the transaction is performed.
 	 * <p>
@@ -136,7 +138,7 @@ public class ATMPINManagementRequest1 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMPINManagementRequest1.mmObject();
 			isDerived = false;
@@ -144,12 +146,13 @@ public class ATMPINManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMContext7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMContext7.mmObject();
 		}
 	};
+	protected ATMTransaction9 transaction;
 	/**
 	 * Transaction for which the service is requested.
 	 * <p>
@@ -176,7 +179,7 @@ public class ATMPINManagementRequest1 {
 	 * definition} = "Transaction for which the service is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMPINManagementRequest1.mmObject();
 			isDerived = false;
@@ -184,25 +187,49 @@ public class ATMPINManagementRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transaction for which the service is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMPINManagementRequest1.Environment, com.tools20022.repository.msg.ATMPINManagementRequest1.Context,
-						com.tools20022.repository.msg.ATMPINManagementRequest1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMPINManagementRequestV01.ATMPINManagementRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMPINManagementRequest1.mmEnvironment, com.tools20022.repository.msg.ATMPINManagementRequest1.mmContext,
+						com.tools20022.repository.msg.ATMPINManagementRequest1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmATMPINManagementRequest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMPINManagementRequest1";
 				definition = "Information related to the request of a PIN management from an ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment1 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment1 environment) {
+		this.environment = environment;
+	}
+
+	public ATMContext7 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.ATMContext7 context) {
+		this.context = context;
+	}
+
+	public ATMTransaction9 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction9 transaction) {
+		this.transaction = transaction;
 	}
 }

@@ -30,26 +30,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#BankOfKoreaWire
- * CashSettlementSystemCode.BankOfKoreaWire}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#mmBankOfKoreaWire
+ * CashSettlementSystemCode.mmBankOfKoreaWire}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#Cheque
- * CashSettlementSystemCode.Cheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#mmCheque
+ * CashSettlementSystemCode.mmCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#UKDomestic
- * CashSettlementSystemCode.UKDomestic}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#mmUKDomestic
+ * CashSettlementSystemCode.mmUKDomestic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#GrossSettlementSystem
- * CashSettlementSystemCode.GrossSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#mmGrossSettlementSystem
+ * CashSettlementSystemCode.mmGrossSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#NetSettlementSystem
- * CashSettlementSystemCode.NetSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#mmNetSettlementSystem
+ * CashSettlementSystemCode.mmNetSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#USChips
- * CashSettlementSystemCode.USChips}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#mmUSChips
+ * CashSettlementSystemCode.mmUSChips}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#FedWireUS
- * CashSettlementSystemCode.FedWireUS}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#mmFedWireUS
+ * CashSettlementSystemCode.mmFedWireUS}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -64,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -106,7 +106,7 @@ public class CashSettlementSystemCode {
 	 * definition} = "Settle money through Bank of Korea Wire."</li>
 	 * </ul>
 	 */
-	public static final MMCode BankOfKoreaWire = new MMCode() {
+	public static final MMCode mmBankOfKoreaWire = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOfKoreaWire";
@@ -136,7 +136,7 @@ public class CashSettlementSystemCode {
 	 * definition} = "Settle money through cheque."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cheque = new MMCode() {
+	public static final MMCode mmCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cheque";
@@ -166,7 +166,7 @@ public class CashSettlementSystemCode {
 	 * definition} = "Settle money through UK domestic."</li>
 	 * </ul>
 	 */
-	public static final MMCode UKDomestic = new MMCode() {
+	public static final MMCode mmUKDomestic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKDomestic";
@@ -196,7 +196,7 @@ public class CashSettlementSystemCode {
 	 * definition} = "Settle money through gross settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMCode GrossSettlementSystem = new MMCode() {
+	public static final MMCode mmGrossSettlementSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossSettlementSystem";
@@ -226,7 +226,7 @@ public class CashSettlementSystemCode {
 	 * definition} = "Settle money through net settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMCode NetSettlementSystem = new MMCode() {
+	public static final MMCode mmNetSettlementSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSettlementSystem";
@@ -256,7 +256,7 @@ public class CashSettlementSystemCode {
 	 * definition} = "Settle money through CHIPS (US)."</li>
 	 * </ul>
 	 */
-	public static final MMCode USChips = new MMCode() {
+	public static final MMCode mmUSChips = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USChips";
@@ -286,7 +286,7 @@ public class CashSettlementSystemCode {
 	 * definition} = "Settle money through Fedwire (US)."</li>
 	 * </ul>
 	 */
-	public static final MMCode FedWireUS = new MMCode() {
+	public static final MMCode mmFedWireUS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FedWireUS";
@@ -299,15 +299,15 @@ public class CashSettlementSystemCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOKW");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashSettlementSystemCode";
 				definition = "Specifies the cash settlement system used.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashSettlementSystemCode.BankOfKoreaWire, com.tools20022.repository.codeset.CashSettlementSystemCode.Cheque,
-						com.tools20022.repository.codeset.CashSettlementSystemCode.UKDomestic, com.tools20022.repository.codeset.CashSettlementSystemCode.GrossSettlementSystem,
-						com.tools20022.repository.codeset.CashSettlementSystemCode.NetSettlementSystem, com.tools20022.repository.codeset.CashSettlementSystemCode.USChips,
-						com.tools20022.repository.codeset.CashSettlementSystemCode.FedWireUS);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashSettlementSystemCode.mmBankOfKoreaWire, com.tools20022.repository.codeset.CashSettlementSystemCode.mmCheque,
+						com.tools20022.repository.codeset.CashSettlementSystemCode.mmUKDomestic, com.tools20022.repository.codeset.CashSettlementSystemCode.mmGrossSettlementSystem,
+						com.tools20022.repository.codeset.CashSettlementSystemCode.mmNetSettlementSystem, com.tools20022.repository.codeset.CashSettlementSystemCode.mmUSChips,
+						com.tools20022.repository.codeset.CashSettlementSystemCode.mmFedWireUS);
 				derivation_lazy = () -> Arrays.asList(CashSettlementSystem2Code.mmObject(), CashSettlementSystem1Code.mmObject());
 			}
 		});

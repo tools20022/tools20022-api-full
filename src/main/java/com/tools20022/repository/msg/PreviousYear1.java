@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Choice between selected investment plans issued during previous years or the
@@ -39,22 +40,23 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PreviousYear1#AllPreviousYearsOrSpecificPreviousYearsRule
- * PreviousYear1.AllPreviousYearsOrSpecificPreviousYearsRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PreviousYear1#mmAllPreviousYearsOrSpecificPreviousYearsRule
+ * PreviousYear1.mmAllPreviousYearsOrSpecificPreviousYearsRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PreviousYear1#AllPreviousYears
- * PreviousYear1.AllPreviousYears}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PreviousYear1#SpecificPreviousYears
- * PreviousYear1.SpecificPreviousYears}</li>
+ * {@linkplain com.tools20022.repository.msg.PreviousYear1#mmAllPreviousYears
+ * PreviousYear1.mmAllPreviousYears}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PreviousYear1#CashComponentIndicator
- * PreviousYear1.CashComponentIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.PreviousYear1#mmSpecificPreviousYears
+ * PreviousYear1.mmSpecificPreviousYears}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PreviousYear1#mmCashComponentIndicator
+ * PreviousYear1.mmCashComponentIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +65,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,6 +83,7 @@ import java.util.function.Supplier;
 public class PreviousYear1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PreviousAll allPreviousYears;
 	/**
 	 * Selection ot the entirety of the investment plans.
 	 * <p>
@@ -112,20 +115,21 @@ public class PreviousYear1 {
 	 * definition} = "Selection ot the entirety of the investment plans."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllPreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllPreviousYears = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PreviousYear1.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> PreviousYear1.mmObject();
 			isDerived = false;
 			xmlTag = "AllPrvsYrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllPreviousYears";
 			definition = "Selection ot the entirety of the investment plans.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PreviousAll.mmObject();
 		}
 	};
+	protected List<ISOYear> specificPreviousYears;
 	/**
 	 * Selection of investment plans issued during previous years.
 	 * <p>
@@ -138,8 +142,8 @@ public class PreviousYear1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#TransferredYear
-	 * PortfolioTransfer.TransferredYear}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredYear
+	 * PortfolioTransfer.mmTransferredYear}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,10 +162,10 @@ public class PreviousYear1 {
 	 * "Selection of investment plans issued during previous years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SpecificPreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSpecificPreviousYears = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmTransferredYear;
 			componentContext_lazy = () -> PreviousYear1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.TransferredYear;
 			isDerived = false;
 			xmlTag = "SpcfcPrvsYrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,6 +175,7 @@ public class PreviousYear1 {
 			simpleType_lazy = () -> ISOYear.mmObject();
 		}
 	};
+	protected YesNoIndicator cashComponentIndicator;
 	/**
 	 * Indicates whether the ISA contains a cash component asset for transfer.
 	 * <p>
@@ -184,8 +189,8 @@ public class PreviousYear1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#CashComponentIndicator
-	 * PortfolioTransfer.CashComponentIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCashComponentIndicator
+	 * PortfolioTransfer.mmCashComponentIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,17 +210,17 @@ public class PreviousYear1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashComponentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashComponentIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmCashComponentIndicator;
 			componentContext_lazy = () -> PreviousYear1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.CashComponentIndicator;
 			isDerived = false;
 			xmlTag = "CshCmpntInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashComponentIndicator";
 			definition = "Indicates whether the ISA contains a cash component asset for transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -229,11 +234,11 @@ public class PreviousYear1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PreviousYear1#AllPreviousYears
-	 * PreviousYear1.AllPreviousYears}</li>
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear1#mmAllPreviousYears
+	 * PreviousYear1.mmAllPreviousYears}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PreviousYear1#SpecificPreviousYears
-	 * PreviousYear1.SpecificPreviousYears}</li>
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear1#mmSpecificPreviousYears
+	 * PreviousYear1.mmSpecificPreviousYears}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -252,23 +257,23 @@ public class PreviousYear1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor AllPreviousYearsOrSpecificPreviousYearsRule = new MMXor() {
+	public static final MMXor mmAllPreviousYearsOrSpecificPreviousYearsRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllPreviousYearsOrSpecificPreviousYearsRule";
 			definition = "Either AllPreviousYears or one or more occurrences of SpecificPreviousYears must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.AllPreviousYears, com.tools20022.repository.msg.PreviousYear1.SpecificPreviousYears);
 			messageComponent_lazy = () -> PreviousYear1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.mmAllPreviousYears, com.tools20022.repository.msg.PreviousYear1.mmSpecificPreviousYears);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.AllPreviousYears, com.tools20022.repository.msg.PreviousYear1.SpecificPreviousYears,
-						com.tools20022.repository.msg.PreviousYear1.CashComponentIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.mmAllPreviousYears, com.tools20022.repository.msg.PreviousYear1.mmSpecificPreviousYears,
+						com.tools20022.repository.msg.PreviousYear1.mmCashComponentIndicator);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -279,9 +284,33 @@ public class PreviousYear1 {
 				})).get();
 				name = "PreviousYear1";
 				definition = "Choice between selected investment plans issued during previous years or the entirety of the investment plans.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.AllPreviousYearsOrSpecificPreviousYearsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.mmAllPreviousYearsOrSpecificPreviousYearsRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PreviousAll getAllPreviousYears() {
+		return allPreviousYears;
+	}
+
+	public void setAllPreviousYears(PreviousAll allPreviousYears) {
+		this.allPreviousYears = allPreviousYears;
+	}
+
+	public List<ISOYear> getSpecificPreviousYears() {
+		return specificPreviousYears;
+	}
+
+	public void setSpecificPreviousYears(List<ISOYear> specificPreviousYears) {
+		this.specificPreviousYears = specificPreviousYears;
+	}
+
+	public YesNoIndicator getCashComponentIndicator() {
+		return cashComponentIndicator;
+	}
+
+	public void setCashComponentIndicator(YesNoIndicator cashComponentIndicator) {
+		this.cashComponentIndicator = cashComponentIndicator;
 	}
 }

@@ -62,9 +62,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#CancellationByReferenceOrByTransferInDetailsRule
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmCancellationByReferenceOrByTransferInDetailsRule
  * TransferInCancellationRequestV02.
- * CancellationByReferenceOrByTransferInDetailsRule}</li>
+ * mmCancellationByReferenceOrByTransferInDetailsRule}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -74,33 +74,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#MessageIdentification
- * TransferInCancellationRequestV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmMessageIdentification
+ * TransferInCancellationRequestV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#PreviousReference
- * TransferInCancellationRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmPreviousReference
+ * TransferInCancellationRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#PoolReference
- * TransferInCancellationRequestV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmPoolReference
+ * TransferInCancellationRequestV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#RelatedReference
- * TransferInCancellationRequestV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmRelatedReference
+ * TransferInCancellationRequestV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#CancellationByReference
- * TransferInCancellationRequestV02.CancellationByReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmCancellationByReference
+ * TransferInCancellationRequestV02.mmCancellationByReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#CancellationByTransferInDetails
- * TransferInCancellationRequestV02.CancellationByTransferInDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmCancellationByTransferInDetails
+ * TransferInCancellationRequestV02.mmCancellationByTransferInDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#CopyDetails
- * TransferInCancellationRequestV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmCopyDetails
+ * TransferInCancellationRequestV02.mmCopyDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#identifier
- * TransferInCancellationRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.006.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -139,11 +137,11 @@ public class TransferInCancellationRequestV02 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#CancellationByReference
-	 * TransferInCancellationRequestV02.CancellationByReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmCancellationByReference
+	 * TransferInCancellationRequestV02.mmCancellationByReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#CancellationByTransferInDetails
-	 * TransferInCancellationRequestV02.CancellationByTransferInDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmCancellationByTransferInDetails
+	 * TransferInCancellationRequestV02.mmCancellationByTransferInDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -163,16 +161,17 @@ public class TransferInCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor CancellationByReferenceOrByTransferInDetailsRule = new MMXor() {
+	public static final MMXor mmCancellationByReferenceOrByTransferInDetailsRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByTransferInDetailsRule";
 			definition = "Either CancellationByTransferInDetails or CancellationByReference may be present, but not both.";
 			messageDefinition_lazy = () -> TransferInCancellationRequestV02.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV02.CancellationByReference,
-					com.tools20022.repository.area.sese.TransferInCancellationRequestV02.CancellationByTransferInDetails);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmCancellationByReference,
+					com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmCancellationByTransferInDetails);
 		}
 	};
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -199,17 +198,18 @@ public class TransferInCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference2 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -233,17 +233,18 @@ public class TransferInCancellationRequestV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -267,17 +268,18 @@ public class TransferInCancellationRequestV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -302,17 +304,18 @@ public class TransferInCancellationRequestV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected TransferReference1 cancellationByReference;
 	/**
 	 * Reference of the transfer to be cancelled.
 	 * <p>
@@ -336,17 +339,18 @@ public class TransferInCancellationRequestV02 {
 	 * definition} = "Reference of the transfer to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationByReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationByReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlByRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReference";
 			definition = "Reference of the transfer to be cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransferReference1.mmObject();
 		}
 	};
+	protected TransferIn3 cancellationByTransferInDetails;
 	/**
 	 * The transfer in request message to cancel.
 	 * <p>
@@ -369,17 +373,18 @@ public class TransferInCancellationRequestV02 {
 	 * definition} = "The transfer in request message to cancel."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationByTransferInDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationByTransferInDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlByTrfInDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByTransferInDetails";
 			definition = "The transfer in request message to cancel.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransferIn3.mmObject();
 		}
 	};
+	protected CopyInformation2 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -404,42 +409,15 @@ public class TransferInCancellationRequestV02 {
 	 * "Information provided when the message is a copy of a previous message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "006"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "006";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -449,20 +427,83 @@ public class TransferInCancellationRequestV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferInCancellationRequestV02";
 				definition = "Scope\r\nAn instructing party, eg, a transfer agent, sends the TransferInCancellationRequest message to the executing party, eg, a transfer agent, to request the cancellation of a previously sent TransferInInstruction.\r\nUsage\r\nThe TransferInCancellationRequest message is used to request cancellation of a previously sent TransferInInstruction.\r\nThere are two ways to specify the transfer cancellation request. Either:\r\n- the transfer reference of the original transfer is quoted, or,\r\n- all the details of the original transfer (this includes TransferReference) are quoted but this is not recommended.\r\nThe message identification of the TransferInInstruction message in which the transfer was conveyed may also be quoted in PreviousReference. It is also possible to request the cancellation of a TransferInInstruction message by quoting its message identification in PreviousReference.";
-				previousVersion_lazy = () -> TransferInCancellationInstruction.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransferInCancellationRequestV03.mmObject());
+				previousVersion_lazy = () -> TransferInCancellationInstruction.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV02.CancellationByReferenceOrByTransferInDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmCancellationByReferenceOrByTransferInDetailsRule);
 				rootElement = "Document";
 				xmlTag = "TrfInCxlReqV02";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV02.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV02.PreviousReference, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.PoolReference,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV02.RelatedReference, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.CancellationByReference,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV02.CancellationByTransferInDetails, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.CopyDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.TransferInCancellationRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmPreviousReference, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmRelatedReference, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmCancellationByReference,
+						com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmCancellationByTransferInDetails, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmCopyDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "006";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference2 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference2 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference2 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference2 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference2 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public TransferReference1 getCancellationByReference() {
+		return cancellationByReference;
+	}
+
+	public void setCancellationByReference(TransferReference1 cancellationByReference) {
+		this.cancellationByReference = cancellationByReference;
+	}
+
+	public TransferIn3 getCancellationByTransferInDetails() {
+		return cancellationByTransferInDetails;
+	}
+
+	public void setCancellationByTransferInDetails(TransferIn3 cancellationByTransferInDetails) {
+		this.cancellationByTransferInDetails = cancellationByTransferInDetails;
+	}
+
+	public CopyInformation2 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation2 copyDetails) {
+		this.copyDetails = copyDetails;
 	}
 }

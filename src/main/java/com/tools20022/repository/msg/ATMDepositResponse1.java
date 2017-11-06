@@ -32,13 +32,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDepositResponse1#Environment
- * ATMDepositResponse1.Environment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMDepositResponse1#Context
- * ATMDepositResponse1.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDepositResponse1#mmEnvironment
+ * ATMDepositResponse1.mmEnvironment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMDepositResponse1#mmContext
+ * ATMDepositResponse1.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDepositResponse1#Transaction
- * ATMDepositResponse1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDepositResponse1#mmTransaction
+ * ATMDepositResponse1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositResponseV01#ATMDepositResponse
- * ATMDepositResponseV01.ATMDepositResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositResponseV01#mmATMDepositResponse
+ * ATMDepositResponseV01.mmATMDepositResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDepositResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment12 environment;
 	/**
 	 * Environment of the deposit transaction.
 	 * <p>
@@ -94,7 +95,7 @@ public class ATMDepositResponse1 {
 	 * definition} = "Environment of the deposit transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDepositResponse1.mmObject();
 			isDerived = false;
@@ -102,12 +103,13 @@ public class ATMDepositResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the deposit transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment12.mmObject();
 		}
 	};
+	protected ATMContext11 context;
 	/**
 	 * Context in which the transaction is performed.
 	 * <p>
@@ -134,7 +136,7 @@ public class ATMDepositResponse1 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDepositResponse1.mmObject();
 			isDerived = false;
@@ -142,12 +144,13 @@ public class ATMDepositResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMContext11.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMContext11.mmObject();
 		}
 	};
+	protected ATMTransaction16 transaction;
 	/**
 	 * Response to the deposit request.
 	 * <p>
@@ -174,7 +177,7 @@ public class ATMDepositResponse1 {
 	 * definition} = "Response to the deposit request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDepositResponse1.mmObject();
 			isDerived = false;
@@ -182,25 +185,49 @@ public class ATMDepositResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Response to the deposit request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction16.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction16.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositResponse1.Environment, com.tools20022.repository.msg.ATMDepositResponse1.Context,
-						com.tools20022.repository.msg.ATMDepositResponse1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMDepositResponseV01.ATMDepositResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositResponse1.mmEnvironment, com.tools20022.repository.msg.ATMDepositResponse1.mmContext,
+						com.tools20022.repository.msg.ATMDepositResponse1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMDepositResponseV01.mmATMDepositResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositResponse1";
 				definition = "Response to a deposit request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment12 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment12 environment) {
+		this.environment = environment;
+	}
+
+	public ATMContext11 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.ATMContext11 context) {
+		this.context = context;
+	}
+
+	public ATMTransaction16 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction16 transaction) {
+		this.transaction = transaction;
 	}
 }

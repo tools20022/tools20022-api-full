@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType1Code#Final
- * CorporateActionFrequencyType1Code.Final}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType1Code#mmFinal
+ * CorporateActionFrequencyType1Code.mmFinal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType1Code#Interim
- * CorporateActionFrequencyType1Code.Interim}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType1Code#mmInterim
+ * CorporateActionFrequencyType1Code.mmInterim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType1Code#Regular
- * CorporateActionFrequencyType1Code.Regular}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType1Code#mmRegular
+ * CorporateActionFrequencyType1Code.mmRegular}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType1Code#Special
- * CorporateActionFrequencyType1Code.Special}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType1Code#mmSpecial
+ * CorporateActionFrequencyType1Code.mmSpecial}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CorporateActionFrequencyType1Code extends CorporateActionFrequencyT
 	 * name} = "Final"</li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
@@ -110,7 +110,7 @@ public class CorporateActionFrequencyType1Code extends CorporateActionFrequencyT
 	 * name} = "Interim"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interim = new MMCode() {
+	public static final MMCode mmInterim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
@@ -133,7 +133,7 @@ public class CorporateActionFrequencyType1Code extends CorporateActionFrequencyT
 	 * name} = "Regular"</li>
 	 * </ul>
 	 */
-	public static final MMCode Regular = new MMCode() {
+	public static final MMCode mmRegular = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
@@ -156,7 +156,7 @@ public class CorporateActionFrequencyType1Code extends CorporateActionFrequencyT
 	 * name} = "Special"</li>
 	 * </ul>
 	 */
-	public static final MMCode Special = new MMCode() {
+	public static final MMCode mmSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
@@ -167,13 +167,13 @@ public class CorporateActionFrequencyType1Code extends CorporateActionFrequencyT
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FINL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionFrequencyType1Code";
 				definition = "Specifies the frequency of a CA event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionFrequencyType1Code.Final, com.tools20022.repository.codeset.CorporateActionFrequencyType1Code.Interim,
-						com.tools20022.repository.codeset.CorporateActionFrequencyType1Code.Regular, com.tools20022.repository.codeset.CorporateActionFrequencyType1Code.Special);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionFrequencyType1Code.mmFinal, com.tools20022.repository.codeset.CorporateActionFrequencyType1Code.mmInterim,
+						com.tools20022.repository.codeset.CorporateActionFrequencyType1Code.mmRegular, com.tools20022.repository.codeset.CorporateActionFrequencyType1Code.mmSpecial);
 				trace_lazy = () -> CorporateActionFrequencyTypeCode.mmObject();
 			}
 		});

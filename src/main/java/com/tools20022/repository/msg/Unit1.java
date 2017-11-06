@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the units to settle.
@@ -36,16 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Unit1#UnitsNumber
- * Unit1.UnitsNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit1#AcquisitionDate
- * Unit1.AcquisitionDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit1#CertificateNumber
- * Unit1.CertificateNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit1#Group1Or2Units
- * Unit1.Group1Or2Units}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit1#PriceDetails
- * Unit1.PriceDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit1#mmUnitsNumber
+ * Unit1.mmUnitsNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit1#mmAcquisitionDate
+ * Unit1.mmAcquisitionDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit1#mmCertificateNumber
+ * Unit1.mmCertificateNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit1#mmGroup1Or2Units
+ * Unit1.mmGroup1Or2Units}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit1#mmPriceDetails
+ * Unit1.mmPriceDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Unit1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
 	 * Total quantity of securities to be settled.
 	 * <p>
@@ -82,8 +84,8 @@ public class Unit1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Unit1
@@ -101,20 +103,21 @@ public class Unit1 {
 	 * definition} = "Total quantity of securities to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> Unit1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Total quantity of securities to be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected ISODate acquisitionDate;
 	/**
 	 * Date upon which the investor purchased the financial instrument.
 	 * <p>
@@ -127,8 +130,8 @@ public class Unit1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#AcquisitionDate
-	 * SecuritiesEntry.AcquisitionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmAcquisitionDate
+	 * SecuritiesEntry.mmAcquisitionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Unit1
@@ -147,20 +150,21 @@ public class Unit1 {
 	 * "Date upon which the investor purchased the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AcquisitionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAcquisitionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmAcquisitionDate;
 			componentContext_lazy = () -> Unit1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.AcquisitionDate;
 			isDerived = false;
 			xmlTag = "AcqstnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquisitionDate";
 			definition = "Date upon which the investor purchased the financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<Max35Text> certificateNumber;
 	/**
 	 * Certificate representing the security that is delivered.
 	 * <p>
@@ -173,8 +177,8 @@ public class Unit1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#Number
-	 * SecuritiesCertificate.Number}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmNumber
+	 * SecuritiesCertificate.mmNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Unit1
@@ -192,10 +196,10 @@ public class Unit1 {
 	 * definition} = "Certificate representing the security that is delivered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificateNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificateNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> Unit1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.Number;
 			isDerived = false;
 			xmlTag = "CertNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,6 +209,7 @@ public class Unit1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected UKTaxGroupUnitCode group1Or2Units;
 	/**
 	 * Tax group to which the purchased investment fund units belong. The
 	 * investor indicates to the intermediary operating pooled nominees, which
@@ -220,8 +225,8 @@ public class Unit1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Group1Or2Units
-	 * SecuritiesQuantity.Group1Or2Units}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmGroup1Or2Units
+	 * SecuritiesQuantity.mmGroup1Or2Units}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Unit1
@@ -241,20 +246,21 @@ public class Unit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Group1Or2Units = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmGroup1Or2Units;
 			componentContext_lazy = () -> Unit1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Group1Or2Units;
 			isDerived = false;
 			xmlTag = "Grp1Or2Units";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1Or2Units";
 			definition = "Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> UKTaxGroupUnitCode.mmObject();
 		}
 	};
+	protected UnitPrice3 priceDetails;
 	/**
 	 * Information related to the price of the transferred units.
 	 * <p>
@@ -265,8 +271,8 @@ public class Unit1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Pricing
-	 * Security.Pricing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPricing
+	 * Security.mmPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Unit1
@@ -285,34 +291,74 @@ public class Unit1 {
 	 * "Information related to the price of the transferred units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
 			componentContext_lazy = () -> Unit1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Pricing;
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Information related to the price of the transferred units.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> UnitPrice3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UnitPrice3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit1.UnitsNumber, com.tools20022.repository.msg.Unit1.AcquisitionDate, com.tools20022.repository.msg.Unit1.CertificateNumber,
-						com.tools20022.repository.msg.Unit1.Group1Or2Units, com.tools20022.repository.msg.Unit1.PriceDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit1.mmUnitsNumber, com.tools20022.repository.msg.Unit1.mmAcquisitionDate, com.tools20022.repository.msg.Unit1.mmCertificateNumber,
+						com.tools20022.repository.msg.Unit1.mmGroup1Or2Units, com.tools20022.repository.msg.Unit1.mmPriceDetails);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Unit1";
 				definition = "Information about the units to settle.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1 getUnitsNumber() {
+		return unitsNumber;
+	}
+
+	public void setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = unitsNumber;
+	}
+
+	public ISODate getAcquisitionDate() {
+		return acquisitionDate;
+	}
+
+	public void setAcquisitionDate(ISODate acquisitionDate) {
+		this.acquisitionDate = acquisitionDate;
+	}
+
+	public List<Max35Text> getCertificateNumber() {
+		return certificateNumber;
+	}
+
+	public void setCertificateNumber(List<Max35Text> certificateNumber) {
+		this.certificateNumber = certificateNumber;
+	}
+
+	public UKTaxGroupUnitCode getGroup1Or2Units() {
+		return group1Or2Units;
+	}
+
+	public void setGroup1Or2Units(UKTaxGroupUnitCode group1Or2Units) {
+		this.group1Or2Units = group1Or2Units;
+	}
+
+	public UnitPrice3 getPriceDetails() {
+		return priceDetails;
+	}
+
+	public void setPriceDetails(com.tools20022.repository.msg.UnitPrice3 priceDetails) {
+		this.priceDetails = priceDetails;
 	}
 }

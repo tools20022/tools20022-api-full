@@ -39,26 +39,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#Currency
- * SecuritiesCurrencyIdentification2.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#mmCurrency
+ * SecuritiesCurrencyIdentification2.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#FractionalDigit
- * SecuritiesCurrencyIdentification2.FractionalDigit}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#mmFractionalDigit
+ * SecuritiesCurrencyIdentification2.mmFractionalDigit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#CountryDetails
- * SecuritiesCurrencyIdentification2.CountryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#mmCountryDetails
+ * SecuritiesCurrencyIdentification2.mmCountryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#PreEuro
- * SecuritiesCurrencyIdentification2.PreEuro}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#mmPreEuro
+ * SecuritiesCurrencyIdentification2.mmPreEuro}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#Modification
- * SecuritiesCurrencyIdentification2.Modification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#mmModification
+ * SecuritiesCurrencyIdentification2.mmModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#ValidityPeriod
- * SecuritiesCurrencyIdentification2.ValidityPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#mmValidityPeriod
+ * SecuritiesCurrencyIdentification2.mmValidityPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#LastUpdated
- * SecuritiesCurrencyIdentification2.LastUpdated}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCurrencyIdentification2#mmLastUpdated
+ * SecuritiesCurrencyIdentification2.mmLastUpdated}</li>
  * </ul>
  * </li>
  * <li>
@@ -66,15 +66,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01#CurrencyData
- * FinancialInstrumentReportingCurrencyCodeReportV01.CurrencyData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01#mmCurrencyData
+ * FinancialInstrumentReportingCurrencyCodeReportV01.mmCurrencyData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesCurrencyIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyCodeAndName1 currency;
 	/**
 	 * Details the currency name and ISO 4217 currency code.<br>
 	 * <p>
@@ -117,7 +118,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Currency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrency = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -125,12 +126,13 @@ public class SecuritiesCurrencyIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Details the currency name and ISO 4217 currency code.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyCodeAndName1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencyCodeAndName1.mmObject();
 		}
 	};
+	protected Max1Number fractionalDigit;
 	/**
 	 * Fractional digit for the currency, that is, the number of decimals to
 	 * use.
@@ -161,7 +163,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FractionalDigit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFractionalDigit = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -169,11 +171,12 @@ public class SecuritiesCurrencyIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionalDigit";
 			definition = "Fractional digit for the currency, that is, the number of decimals to use.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max1Number.mmObject();
 		}
 	};
+	protected CountryCodeAndName3 countryDetails;
 	/**
 	 * Details the country name and ISO 3166 country code.
 	 * <p>
@@ -200,7 +203,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * definition} = "Details the country name and ISO 3166 country code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CountryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCountryDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -208,12 +211,13 @@ public class SecuritiesCurrencyIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryDetails";
 			definition = "Details the country name and ISO 3166 country code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CountryCodeAndName3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CountryCodeAndName3.mmObject();
 		}
 	};
+	protected TrueFalseIndicator preEuro;
 	/**
 	 * Specifies if a currency is a pre Euro currency or not.
 	 * <p>
@@ -242,7 +246,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * definition} = "Specifies if a currency is a pre Euro currency or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreEuro = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreEuro = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -250,11 +254,12 @@ public class SecuritiesCurrencyIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreEuro";
 			definition = "Specifies if a currency is a pre Euro currency or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Modification1Code modification;
 	/**
 	 * Modification status for the record compared to the previous report.
 	 * <p>
@@ -284,7 +289,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * "Modification status for the record compared to the previous report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Modification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -292,11 +297,12 @@ public class SecuritiesCurrencyIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Modification status for the record compared to the previous report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
 		}
 	};
+	protected Period4Choice validityPeriod;
 	/**
 	 * Details the validity of the specific record.
 	 * <p>
@@ -323,7 +329,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * definition} = "Details the validity of the specific record."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -331,12 +337,13 @@ public class SecuritiesCurrencyIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Details the validity of the specific record.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Period4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	protected ISODate lastUpdated;
 	/**
 	 * Date when this record was last modified.
 	 * <p>
@@ -364,7 +371,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * definition} = "Date when this record was last modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastUpdated = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastUpdated = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -372,8 +379,8 @@ public class SecuritiesCurrencyIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastUpdated";
 			definition = "Date when this record was last modified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -381,17 +388,73 @@ public class SecuritiesCurrencyIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.Currency, com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.FractionalDigit,
-						com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.CountryDetails, com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.PreEuro,
-						com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.Modification, com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.ValidityPeriod,
-						com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.LastUpdated);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01.CurrencyData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmCurrency, com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmFractionalDigit,
+						com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmCountryDetails, com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmPreEuro,
+						com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmModification, com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmValidityPeriod,
+						com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmLastUpdated);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01.mmCurrencyData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCurrencyIdentification2";
 				definition = "Details an individual currency including details on which country trades the currency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyCodeAndName1 getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(com.tools20022.repository.msg.CurrencyCodeAndName1 currency) {
+		this.currency = currency;
+	}
+
+	public Max1Number getFractionalDigit() {
+		return fractionalDigit;
+	}
+
+	public void setFractionalDigit(Max1Number fractionalDigit) {
+		this.fractionalDigit = fractionalDigit;
+	}
+
+	public CountryCodeAndName3 getCountryDetails() {
+		return countryDetails;
+	}
+
+	public void setCountryDetails(com.tools20022.repository.msg.CountryCodeAndName3 countryDetails) {
+		this.countryDetails = countryDetails;
+	}
+
+	public TrueFalseIndicator getPreEuro() {
+		return preEuro;
+	}
+
+	public void setPreEuro(TrueFalseIndicator preEuro) {
+		this.preEuro = preEuro;
+	}
+
+	public Modification1Code getModification() {
+		return modification;
+	}
+
+	public void setModification(Modification1Code modification) {
+		this.modification = modification;
+	}
+
+	public Period4Choice getValidityPeriod() {
+		return validityPeriod;
+	}
+
+	public void setValidityPeriod(Period4Choice validityPeriod) {
+		this.validityPeriod = validityPeriod;
+	}
+
+	public ISODate getLastUpdated() {
+		return lastUpdated;
+	}
+
+	public void setLastUpdated(ISODate lastUpdated) {
+		this.lastUpdated = lastUpdated;
 	}
 }

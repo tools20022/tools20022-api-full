@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -74,39 +75,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#RequestIdentification
- * BaselineAmendmentRequestV03.RequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#mmRequestIdentification
+ * BaselineAmendmentRequestV03.mmRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#TransactionIdentification
- * BaselineAmendmentRequestV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#mmTransactionIdentification
+ * BaselineAmendmentRequestV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#SubmitterTransactionReference
- * BaselineAmendmentRequestV03.SubmitterTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#mmSubmitterTransactionReference
+ * BaselineAmendmentRequestV03.mmSubmitterTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#Baseline
- * BaselineAmendmentRequestV03.Baseline}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#mmBaseline
+ * BaselineAmendmentRequestV03.mmBaseline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#BuyerContactPerson
- * BaselineAmendmentRequestV03.BuyerContactPerson}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#mmBuyerContactPerson
+ * BaselineAmendmentRequestV03.mmBuyerContactPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#SellerContactPerson
- * BaselineAmendmentRequestV03.SellerContactPerson}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#mmSellerContactPerson
+ * BaselineAmendmentRequestV03.mmSellerContactPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#BuyerBankContactPerson
- * BaselineAmendmentRequestV03.BuyerBankContactPerson}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#mmBuyerBankContactPerson
+ * BaselineAmendmentRequestV03.mmBuyerBankContactPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#SellerBankContactPerson
- * BaselineAmendmentRequestV03.SellerBankContactPerson}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#mmSellerBankContactPerson
+ * BaselineAmendmentRequestV03.mmSellerBankContactPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#OtherBankContactPerson
- * BaselineAmendmentRequestV03.OtherBankContactPerson}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#mmOtherBankContactPerson
+ * BaselineAmendmentRequestV03.mmOtherBankContactPerson}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#identifier
- * BaselineAmendmentRequestV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.009.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,6 +129,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BaselineAmendmentRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 requestIdentification;
 	/**
 	 * Identifies the request message.
 	 * <p>
@@ -155,24 +155,25 @@ public class BaselineAmendmentRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#RequestIdentification
-	 * BaselineAmendmentRequestV04.RequestIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#mmRequestIdentification
+	 * BaselineAmendmentRequestV04.mmRequestIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestIdentification";
 			definition = "Identifies the request message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.RequestIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmRequestIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -202,24 +203,25 @@ public class BaselineAmendmentRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#TransactionIdentification
-	 * BaselineAmendmentRequestV04.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#mmTransactionIdentification
+	 * BaselineAmendmentRequestV04.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmTransactionIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
 	 * Reference to the transaction for the requesting financial institution.
 	 * <p>
@@ -246,24 +248,25 @@ public class BaselineAmendmentRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#SubmitterTransactionReference
-	 * BaselineAmendmentRequestV04.SubmitterTransactionReference}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#mmSubmitterTransactionReference
+	 * BaselineAmendmentRequestV04.mmSubmitterTransactionReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.SubmitterTransactionReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmSubmitterTransactionReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected Baseline3 baseline;
 	/**
 	 * Specifies the commercial details of the underlying transaction.
 	 * <p>
@@ -289,24 +292,25 @@ public class BaselineAmendmentRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#Baseline
-	 * BaselineAmendmentRequestV04.Baseline}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#mmBaseline
+	 * BaselineAmendmentRequestV04.mmBaseline}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Baseline = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBaseline = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Baseln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Baseline";
 			definition = "Specifies the commercial details of the underlying transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.Baseline);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmBaseline);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Baseline3.mmObject();
 		}
 	};
+	protected List<ContactIdentification1> buyerContactPerson;
 	/**
 	 * Person to be contacted in the organisation of the buyer.
 	 * <p>
@@ -332,23 +336,24 @@ public class BaselineAmendmentRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#BuyerContactPerson
-	 * BaselineAmendmentRequestV04.BuyerContactPerson}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#mmBuyerContactPerson
+	 * BaselineAmendmentRequestV04.mmBuyerContactPerson}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BuyerContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyerContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrCtctPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerContactPerson";
 			definition = "Person to be contacted in the organisation of the buyer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.BuyerContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmBuyerContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
 	};
+	protected List<ContactIdentification1> sellerContactPerson;
 	/**
 	 * Person to be contacted in the organisation of the seller.
 	 * <p>
@@ -375,23 +380,24 @@ public class BaselineAmendmentRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#SellerContactPerson
-	 * BaselineAmendmentRequestV04.SellerContactPerson}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#mmSellerContactPerson
+	 * BaselineAmendmentRequestV04.mmSellerContactPerson}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SellerContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSellerContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrCtctPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerContactPerson";
 			definition = "Person to be contacted in the organisation of the seller.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.SellerContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmSellerContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
 	};
+	protected List<ContactIdentification1> buyerBankContactPerson;
 	/**
 	 * Person to be contacted in the buyer's bank.
 	 * <p>
@@ -417,23 +423,24 @@ public class BaselineAmendmentRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#BuyerBankContactPerson
-	 * BaselineAmendmentRequestV04.BuyerBankContactPerson}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#mmBuyerBankContactPerson
+	 * BaselineAmendmentRequestV04.mmBuyerBankContactPerson}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BuyerBankContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyerBankContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBkCtctPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBankContactPerson";
 			definition = "Person to be contacted in the buyer's bank.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.BuyerBankContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmBuyerBankContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
 	};
+	protected List<ContactIdentification1> sellerBankContactPerson;
 	/**
 	 * Person to be contacted in the seller's bank.
 	 * <p>
@@ -459,23 +466,24 @@ public class BaselineAmendmentRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#SellerBankContactPerson
-	 * BaselineAmendmentRequestV04.SellerBankContactPerson}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#mmSellerBankContactPerson
+	 * BaselineAmendmentRequestV04.mmSellerBankContactPerson}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SellerBankContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSellerBankContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBkCtctPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBankContactPerson";
 			definition = "Person to be contacted in the seller's bank.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.SellerBankContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmSellerBankContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
 	};
+	protected List<ContactIdentification3> otherBankContactPerson;
 	/**
 	 * Person to be contacted in another bank than the seller or buyer's bank.
 	 * <p>
@@ -503,48 +511,21 @@ public class BaselineAmendmentRequestV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#OtherBankContactPerson
-	 * BaselineAmendmentRequestV04.OtherBankContactPerson}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#mmOtherBankContactPerson
+	 * BaselineAmendmentRequestV04.mmOtherBankContactPerson}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherBankContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherBankContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrBkCtctPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBankContactPerson";
 			definition = "Person to be contacted in another bank than the seller or buyer's bank.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.OtherBankContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmOtherBankContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification3.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "009"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "009";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -559,14 +540,93 @@ public class BaselineAmendmentRequestV03 {
 				rootElement = "Document";
 				xmlTag = "BaselnAmdmntReq";
 				businessArea_lazy = () -> TradeServicesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.RequestIdentification,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.TransactionIdentification, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.SubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.Baseline, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.BuyerContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.SellerContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.BuyerBankContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.SellerBankContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.OtherBankContactPerson);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmRequestIdentification,
+						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmSubmitterTransactionReference,
+						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmBaseline, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmBuyerContactPerson,
+						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmSellerContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmBuyerBankContactPerson,
+						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmSellerBankContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmOtherBankContactPerson);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "009";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getRequestIdentification() {
+		return requestIdentification;
+	}
+
+	public void setRequestIdentification(MessageIdentification1 requestIdentification) {
+		this.requestIdentification = requestIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public SimpleIdentificationInformation getSubmitterTransactionReference() {
+		return submitterTransactionReference;
+	}
+
+	public void setSubmitterTransactionReference(SimpleIdentificationInformation submitterTransactionReference) {
+		this.submitterTransactionReference = submitterTransactionReference;
+	}
+
+	public Baseline3 getBaseline() {
+		return baseline;
+	}
+
+	public void setBaseline(Baseline3 baseline) {
+		this.baseline = baseline;
+	}
+
+	public List<ContactIdentification1> getBuyerContactPerson() {
+		return buyerContactPerson;
+	}
+
+	public void setBuyerContactPerson(List<ContactIdentification1> buyerContactPerson) {
+		this.buyerContactPerson = buyerContactPerson;
+	}
+
+	public List<ContactIdentification1> getSellerContactPerson() {
+		return sellerContactPerson;
+	}
+
+	public void setSellerContactPerson(List<ContactIdentification1> sellerContactPerson) {
+		this.sellerContactPerson = sellerContactPerson;
+	}
+
+	public List<ContactIdentification1> getBuyerBankContactPerson() {
+		return buyerBankContactPerson;
+	}
+
+	public void setBuyerBankContactPerson(List<ContactIdentification1> buyerBankContactPerson) {
+		this.buyerBankContactPerson = buyerBankContactPerson;
+	}
+
+	public List<ContactIdentification1> getSellerBankContactPerson() {
+		return sellerBankContactPerson;
+	}
+
+	public void setSellerBankContactPerson(List<ContactIdentification1> sellerBankContactPerson) {
+		this.sellerBankContactPerson = sellerBankContactPerson;
+	}
+
+	public List<ContactIdentification3> getOtherBankContactPerson() {
+		return otherBankContactPerson;
+	}
+
+	public void setOtherBankContactPerson(List<ContactIdentification3> otherBankContactPerson) {
+		this.otherBankContactPerson = otherBankContactPerson;
 	}
 }

@@ -33,24 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration2#MaximumSymmetricKey
- * ATMSecurityConfiguration2.MaximumSymmetricKey}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration2#mmMaximumSymmetricKey
+ * ATMSecurityConfiguration2.mmMaximumSymmetricKey}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration2#MaximumAsymmetricKey
- * ATMSecurityConfiguration2.MaximumAsymmetricKey}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration2#mmMaximumAsymmetricKey
+ * ATMSecurityConfiguration2.mmMaximumAsymmetricKey}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration2#MaximumRSAKeyLength
- * ATMSecurityConfiguration2.MaximumRSAKeyLength}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration2#mmMaximumRSAKeyLength
+ * ATMSecurityConfiguration2.mmMaximumRSAKeyLength}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration2#MaximumRootKeyLength
- * ATMSecurityConfiguration2.MaximumRootKeyLength}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration2#mmMaximumRootKeyLength
+ * ATMSecurityConfiguration2.mmMaximumRootKeyLength}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMSecurityConfiguration2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number maximumSymmetricKey;
 	/**
 	 * Maximum number of symmetric keys the security module is able to manage.
 	 * <p>
@@ -104,7 +105,7 @@ public class ATMSecurityConfiguration2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumSymmetricKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumSymmetricKey = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
@@ -112,11 +113,12 @@ public class ATMSecurityConfiguration2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumSymmetricKey";
 			definition = "Maximum number of symmetric keys the security module is able to manage.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number maximumAsymmetricKey;
 	/**
 	 * Maximum number of asymmetric keys the security module is able to manage.
 	 * <p>
@@ -146,7 +148,7 @@ public class ATMSecurityConfiguration2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumAsymmetricKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumAsymmetricKey = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
@@ -154,11 +156,12 @@ public class ATMSecurityConfiguration2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAsymmetricKey";
 			definition = "Maximum number of asymmetric keys the security module is able to manage.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number maximumRSAKeyLength;
 	/**
 	 * Maximum RSA key length (in number of bytes), the security module is able
 	 * to manage.
@@ -189,7 +192,7 @@ public class ATMSecurityConfiguration2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumRSAKeyLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumRSAKeyLength = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
@@ -197,11 +200,12 @@ public class ATMSecurityConfiguration2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumRSAKeyLength";
 			definition = "Maximum RSA key length (in number of bytes), the security module is able to manage.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number maximumRootKeyLength;
 	/**
 	 * Maximum RSA root key length (in number of bytes), the security module is
 	 * able to manage, if different from the maximum RSA key length.
@@ -232,7 +236,7 @@ public class ATMSecurityConfiguration2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumRootKeyLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumRootKeyLength = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
@@ -240,8 +244,8 @@ public class ATMSecurityConfiguration2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumRootKeyLength";
 			definition = "Maximum RSA root key length (in number of bytes), the security module is able to manage, if different from the maximum RSA key length.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -249,16 +253,48 @@ public class ATMSecurityConfiguration2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration2.MaximumSymmetricKey, com.tools20022.repository.msg.ATMSecurityConfiguration2.MaximumAsymmetricKey,
-						com.tools20022.repository.msg.ATMSecurityConfiguration2.MaximumRSAKeyLength, com.tools20022.repository.msg.ATMSecurityConfiguration2.MaximumRootKeyLength);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration2.mmMaximumSymmetricKey, com.tools20022.repository.msg.ATMSecurityConfiguration2.mmMaximumAsymmetricKey,
+						com.tools20022.repository.msg.ATMSecurityConfiguration2.mmMaximumRSAKeyLength, com.tools20022.repository.msg.ATMSecurityConfiguration2.mmMaximumRootKeyLength);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration2";
 				definition = "Configuration of the cryptographic keys.";
-				previousVersion_lazy = () -> ATMSecurityConfiguration1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ATMSecurityConfiguration3.mmObject());
+				previousVersion_lazy = () -> ATMSecurityConfiguration1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getMaximumSymmetricKey() {
+		return maximumSymmetricKey;
+	}
+
+	public void setMaximumSymmetricKey(Number maximumSymmetricKey) {
+		this.maximumSymmetricKey = maximumSymmetricKey;
+	}
+
+	public Number getMaximumAsymmetricKey() {
+		return maximumAsymmetricKey;
+	}
+
+	public void setMaximumAsymmetricKey(Number maximumAsymmetricKey) {
+		this.maximumAsymmetricKey = maximumAsymmetricKey;
+	}
+
+	public Number getMaximumRSAKeyLength() {
+		return maximumRSAKeyLength;
+	}
+
+	public void setMaximumRSAKeyLength(Number maximumRSAKeyLength) {
+		this.maximumRSAKeyLength = maximumRSAKeyLength;
+	}
+
+	public Number getMaximumRootKeyLength() {
+		return maximumRootKeyLength;
+	}
+
+	public void setMaximumRootKeyLength(Number maximumRootKeyLength) {
+		this.maximumRootKeyLength = maximumRootKeyLength;
 	}
 }

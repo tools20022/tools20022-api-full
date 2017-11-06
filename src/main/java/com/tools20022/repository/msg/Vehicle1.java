@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to a vehicle used during a transaction.
@@ -37,40 +38,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#VehicleNumber
- * Vehicle1.VehicleNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#TrailerNumber
- * Vehicle1.TrailerNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#VehicleTag
- * Vehicle1.VehicleTag}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#VehicleTagEntryMode
- * Vehicle1.VehicleTagEntryMode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#UnitNumber
- * Vehicle1.UnitNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#ReplacementCar
- * Vehicle1.ReplacementCar}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#Odometer
- * Vehicle1.Odometer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#Hubometer
- * Vehicle1.Hubometer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#TrailerHours
- * Vehicle1.TrailerHours}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#ReferHours
- * Vehicle1.ReferHours}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmVehicleNumber
+ * Vehicle1.mmVehicleNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmTrailerNumber
+ * Vehicle1.mmTrailerNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmVehicleTag
+ * Vehicle1.mmVehicleTag}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmVehicleTagEntryMode
+ * Vehicle1.mmVehicleTagEntryMode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmUnitNumber
+ * Vehicle1.mmUnitNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmReplacementCar
+ * Vehicle1.mmReplacementCar}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmOdometer
+ * Vehicle1.mmOdometer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmHubometer
+ * Vehicle1.mmHubometer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmTrailerHours
+ * Vehicle1.mmTrailerHours}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmReferHours
+ * Vehicle1.mmReferHours}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Vehicle1#MaintenanceIdentification
- * Vehicle1.MaintenanceIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#DriverOrVehicleCard
- * Vehicle1.DriverOrVehicleCard}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#AdditionalVehicleData
- * Vehicle1.AdditionalVehicleData}</li>
+ * {@linkplain com.tools20022.repository.msg.Vehicle1#mmMaintenanceIdentification
+ * Vehicle1.mmMaintenanceIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vehicle1#mmDriverOrVehicleCard
+ * Vehicle1.mmDriverOrVehicleCard}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Vehicle1#mmAdditionalVehicleData
+ * Vehicle1.mmAdditionalVehicleData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Vehicle1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35NumericText vehicleNumber;
 	/**
 	 * Number assigned to the vehicle for identification.
 	 * <p>
@@ -117,7 +120,7 @@ public class Vehicle1 {
 	 * definition} = "Number assigned to the vehicle for identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VehicleNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVehicleNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -125,11 +128,12 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VehicleNumber";
 			definition = "Number assigned to the vehicle for identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	protected Max35NumericText trailerNumber;
 	/**
 	 * Number assigned to the vehicle trailer for identification.
 	 * <p>
@@ -158,7 +162,7 @@ public class Vehicle1 {
 	 * "Number assigned to the vehicle trailer for identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TrailerNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTrailerNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -166,11 +170,12 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrailerNumber";
 			definition = "Number assigned to the vehicle trailer for identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	protected Max35Text vehicleTag;
 	/**
 	 * Registration tag of the vehicle.
 	 * <p>
@@ -197,7 +202,7 @@ public class Vehicle1 {
 	 * definition} = "Registration tag of the vehicle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VehicleTag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVehicleTag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -205,11 +210,12 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VehicleTag";
 			definition = "Registration tag of the vehicle.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CardDataReading5Code vehicleTagEntryMode;
 	/**
 	 * Entry mode of the registration tag.
 	 * <p>
@@ -238,13 +244,13 @@ public class Vehicle1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Vehicle2#EntryMode
-	 * Vehicle2.EntryMode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Vehicle2#mmEntryMode
+	 * Vehicle2.mmEntryMode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VehicleTagEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVehicleTagEntryMode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -252,12 +258,13 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VehicleTagEntryMode";
 			definition = "Entry mode of the registration tag.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.EntryMode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmEntryMode);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading5Code.mmObject();
 		}
 	};
+	protected Max35NumericText unitNumber;
 	/**
 	 * Identification of the vehicle in the fleet.
 	 * <p>
@@ -285,7 +292,7 @@ public class Vehicle1 {
 	 * definition} = "Identification of the vehicle in the fleet."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -293,11 +300,12 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitNumber";
 			definition = "Identification of the vehicle in the fleet.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	protected TrueFalseIndicator replacementCar;
 	/**
 	 * True if the car is a replacement car.
 	 * <p>
@@ -325,7 +333,7 @@ public class Vehicle1 {
 	 * definition} = "True if the car is a replacement car."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReplacementCar = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReplacementCar = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -333,11 +341,12 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacementCar";
 			definition = "True if the car is a replacement car.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected DecimalNumber odometer;
 	/**
 	 * Odometer reading value indicating the distance travelled by the vehicle.
 	 * <p>
@@ -367,7 +376,7 @@ public class Vehicle1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Odometer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOdometer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -375,11 +384,12 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Odometer";
 			definition = "Odometer reading value indicating the distance travelled by the vehicle.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber hubometer;
 	/**
 	 * Hubometer reading value indicating the distance travelled by the trailer.
 	 * <p>
@@ -409,7 +419,7 @@ public class Vehicle1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Hubometer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHubometer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -417,11 +427,12 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hubometer";
 			definition = "Hubometer reading value indicating the distance travelled by the trailer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected Max35Text trailerHours;
 	/**
 	 * Number of hours the trailer has been in operation.
 	 * <p>
@@ -448,7 +459,7 @@ public class Vehicle1 {
 	 * definition} = "Number of hours the trailer has been in operation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TrailerHours = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTrailerHours = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -456,11 +467,12 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrailerHours";
 			definition = "Number of hours the trailer has been in operation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text referHours;
 	/**
 	 * Number of hours the refer unit has been in operation.
 	 * <p>
@@ -487,7 +499,7 @@ public class Vehicle1 {
 	 * definition} = "Number of hours the refer unit has been in operation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferHours = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferHours = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -495,11 +507,12 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferHours";
 			definition = "Number of hours the refer unit has been in operation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text maintenanceIdentification;
 	/**
 	 * Identification assigned to the vehicle related to maintenance.
 	 * <p>
@@ -527,7 +540,7 @@ public class Vehicle1 {
 	 * "Identification assigned to the vehicle related to maintenance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaintenanceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaintenanceIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -535,11 +548,12 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceIdentification";
 			definition = "Identification assigned to the vehicle related to maintenance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PlainCardData17 driverOrVehicleCard;
 	/**
 	 * Second card presented for the payment transaction.
 	 * <p>
@@ -565,7 +579,7 @@ public class Vehicle1 {
 	 * definition} = "Second card presented for the payment transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DriverOrVehicleCard = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDriverOrVehicleCard = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -573,12 +587,13 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriverOrVehicleCard";
 			definition = "Second card presented for the payment transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PlainCardData17.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PlainCardData17.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Vehicle2> additionalVehicleData;
 	/**
 	 * Additional information related to the vehicle.
 	 * <p>
@@ -604,13 +619,13 @@ public class Vehicle1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Vehicle2#Data
-	 * Vehicle2.Data}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Vehicle2#mmData
+	 * Vehicle2.mmData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalVehicleData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalVehicleData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
@@ -618,27 +633,131 @@ public class Vehicle1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalVehicleData";
 			definition = "Additional information related to the vehicle.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.Data);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmData);
 			minOccurs = 0;
-			type_lazy = () -> Vehicle2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Vehicle2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle1.VehicleNumber, com.tools20022.repository.msg.Vehicle1.TrailerNumber, com.tools20022.repository.msg.Vehicle1.VehicleTag,
-						com.tools20022.repository.msg.Vehicle1.VehicleTagEntryMode, com.tools20022.repository.msg.Vehicle1.UnitNumber, com.tools20022.repository.msg.Vehicle1.ReplacementCar, com.tools20022.repository.msg.Vehicle1.Odometer,
-						com.tools20022.repository.msg.Vehicle1.Hubometer, com.tools20022.repository.msg.Vehicle1.TrailerHours, com.tools20022.repository.msg.Vehicle1.ReferHours,
-						com.tools20022.repository.msg.Vehicle1.MaintenanceIdentification, com.tools20022.repository.msg.Vehicle1.DriverOrVehicleCard, com.tools20022.repository.msg.Vehicle1.AdditionalVehicleData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle1.mmVehicleNumber, com.tools20022.repository.msg.Vehicle1.mmTrailerNumber, com.tools20022.repository.msg.Vehicle1.mmVehicleTag,
+						com.tools20022.repository.msg.Vehicle1.mmVehicleTagEntryMode, com.tools20022.repository.msg.Vehicle1.mmUnitNumber, com.tools20022.repository.msg.Vehicle1.mmReplacementCar,
+						com.tools20022.repository.msg.Vehicle1.mmOdometer, com.tools20022.repository.msg.Vehicle1.mmHubometer, com.tools20022.repository.msg.Vehicle1.mmTrailerHours, com.tools20022.repository.msg.Vehicle1.mmReferHours,
+						com.tools20022.repository.msg.Vehicle1.mmMaintenanceIdentification, com.tools20022.repository.msg.Vehicle1.mmDriverOrVehicleCard, com.tools20022.repository.msg.Vehicle1.mmAdditionalVehicleData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Vehicle1";
 				definition = "Information related to a vehicle used during a transaction.";
-				nextVersions_lazy = () -> Arrays.asList(Vehicle2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35NumericText getVehicleNumber() {
+		return vehicleNumber;
+	}
+
+	public void setVehicleNumber(Max35NumericText vehicleNumber) {
+		this.vehicleNumber = vehicleNumber;
+	}
+
+	public Max35NumericText getTrailerNumber() {
+		return trailerNumber;
+	}
+
+	public void setTrailerNumber(Max35NumericText trailerNumber) {
+		this.trailerNumber = trailerNumber;
+	}
+
+	public Max35Text getVehicleTag() {
+		return vehicleTag;
+	}
+
+	public void setVehicleTag(Max35Text vehicleTag) {
+		this.vehicleTag = vehicleTag;
+	}
+
+	public CardDataReading5Code getVehicleTagEntryMode() {
+		return vehicleTagEntryMode;
+	}
+
+	public void setVehicleTagEntryMode(CardDataReading5Code vehicleTagEntryMode) {
+		this.vehicleTagEntryMode = vehicleTagEntryMode;
+	}
+
+	public Max35NumericText getUnitNumber() {
+		return unitNumber;
+	}
+
+	public void setUnitNumber(Max35NumericText unitNumber) {
+		this.unitNumber = unitNumber;
+	}
+
+	public TrueFalseIndicator getReplacementCar() {
+		return replacementCar;
+	}
+
+	public void setReplacementCar(TrueFalseIndicator replacementCar) {
+		this.replacementCar = replacementCar;
+	}
+
+	public DecimalNumber getOdometer() {
+		return odometer;
+	}
+
+	public void setOdometer(DecimalNumber odometer) {
+		this.odometer = odometer;
+	}
+
+	public DecimalNumber getHubometer() {
+		return hubometer;
+	}
+
+	public void setHubometer(DecimalNumber hubometer) {
+		this.hubometer = hubometer;
+	}
+
+	public Max35Text getTrailerHours() {
+		return trailerHours;
+	}
+
+	public void setTrailerHours(Max35Text trailerHours) {
+		this.trailerHours = trailerHours;
+	}
+
+	public Max35Text getReferHours() {
+		return referHours;
+	}
+
+	public void setReferHours(Max35Text referHours) {
+		this.referHours = referHours;
+	}
+
+	public Max35Text getMaintenanceIdentification() {
+		return maintenanceIdentification;
+	}
+
+	public void setMaintenanceIdentification(Max35Text maintenanceIdentification) {
+		this.maintenanceIdentification = maintenanceIdentification;
+	}
+
+	public PlainCardData17 getDriverOrVehicleCard() {
+		return driverOrVehicleCard;
+	}
+
+	public void setDriverOrVehicleCard(com.tools20022.repository.msg.PlainCardData17 driverOrVehicleCard) {
+		this.driverOrVehicleCard = driverOrVehicleCard;
+	}
+
+	public List<Vehicle2> getAdditionalVehicleData() {
+		return additionalVehicleData;
+	}
+
+	public void setAdditionalVehicleData(List<com.tools20022.repository.msg.Vehicle2> additionalVehicleData) {
+		this.additionalVehicleData = additionalVehicleData;
 	}
 }

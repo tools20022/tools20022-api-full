@@ -40,20 +40,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#MonthlyPaymentValue
- * AccountReportedMovement.MonthlyPaymentValue}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#mmMonthlyPaymentValue
+ * AccountReportedMovement.mmMonthlyPaymentValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#MonthlyReceivedValue
- * AccountReportedMovement.MonthlyReceivedValue}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#mmMonthlyReceivedValue
+ * AccountReportedMovement.mmMonthlyReceivedValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#MonthlyTransactionNumber
- * AccountReportedMovement.MonthlyTransactionNumber}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#mmMonthlyTransactionNumber
+ * AccountReportedMovement.mmMonthlyTransactionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#AverageBalance
- * AccountReportedMovement.AverageBalance}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#mmAverageBalance
+ * AccountReportedMovement.mmAverageBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#ReportedCashAccount
- * AccountReportedMovement.ReportedCashAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.AccountReportedMovement#mmReportedCashAccount
+ * AccountReportedMovement.mmReportedCashAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -61,15 +61,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#ReportedMovements
- * CashAccount.ReportedMovements}</li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmReportedMovements
+ * CashAccount.mmReportedMovements}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountReportedMovement {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount monthlyPaymentValue;
 	/**
 	 * Monthly average of the payment amounts (that is, payments going out) over
 	 * a year.
@@ -96,37 +97,37 @@ public class AccountReportedMovement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount1#MonthlyPaymentValue
-	 * CustomerAccount1.MonthlyPaymentValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount5#MonthlyPaymentValue
-	 * CustomerAccount5.MonthlyPaymentValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccountModification1#MonthlyPaymentValue
-	 * CustomerAccountModification1.MonthlyPaymentValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount4#MonthlyPaymentValue
-	 * CustomerAccount4.MonthlyPaymentValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#MinimumMonthlyPaymentValue
-	 * CustomerAccount2.MinimumMonthlyPaymentValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#MaximumMonthlyPaymentValue
-	 * CustomerAccount2.MaximumMonthlyPaymentValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#MonthlyPaymentValue
-	 * CustomerAccount3.MonthlyPaymentValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
 	 * AccountReportedMovement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount1#mmMonthlyPaymentValue
+	 * CustomerAccount1.mmMonthlyPaymentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount5#mmMonthlyPaymentValue
+	 * CustomerAccount5.mmMonthlyPaymentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccountModification1#mmMonthlyPaymentValue
+	 * CustomerAccountModification1.mmMonthlyPaymentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount4#mmMonthlyPaymentValue
+	 * CustomerAccount4.mmMonthlyPaymentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#mmMinimumMonthlyPaymentValue
+	 * CustomerAccount2.mmMinimumMonthlyPaymentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#mmMaximumMonthlyPaymentValue
+	 * CustomerAccount2.mmMaximumMonthlyPaymentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#mmMonthlyPaymentValue
+	 * CustomerAccount3.mmMonthlyPaymentValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -140,21 +141,23 @@ public class AccountReportedMovement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MonthlyPaymentValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMonthlyPaymentValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccount1.MonthlyPaymentValue, com.tools20022.repository.msg.CustomerAccount5.MonthlyPaymentValue,
-					com.tools20022.repository.msg.CustomerAccountModification1.MonthlyPaymentValue, com.tools20022.repository.msg.CustomerAccount4.MonthlyPaymentValue,
-					com.tools20022.repository.msg.CustomerAccount2.MinimumMonthlyPaymentValue, com.tools20022.repository.msg.CustomerAccount2.MaximumMonthlyPaymentValue, com.tools20022.repository.msg.CustomerAccount3.MonthlyPaymentValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccount1.mmMonthlyPaymentValue, com.tools20022.repository.msg.CustomerAccount5.mmMonthlyPaymentValue,
+					com.tools20022.repository.msg.CustomerAccountModification1.mmMonthlyPaymentValue, com.tools20022.repository.msg.CustomerAccount4.mmMonthlyPaymentValue,
+					com.tools20022.repository.msg.CustomerAccount2.mmMinimumMonthlyPaymentValue, com.tools20022.repository.msg.CustomerAccount2.mmMaximumMonthlyPaymentValue,
+					com.tools20022.repository.msg.CustomerAccount3.mmMonthlyPaymentValue);
 			elementContext_lazy = () -> AccountReportedMovement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MonthlyPaymentValue";
 			definition = "Monthly average of the payment amounts (that is, payments going out) over a year.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount monthlyReceivedValue;
 	/**
 	 * Monthly average of the received amounts over a year (that is, payments
 	 * coming in).
@@ -166,37 +169,37 @@ public class AccountReportedMovement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount1#MonthlyReceivedValue
-	 * CustomerAccount1.MonthlyReceivedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount5#MonthlyReceivedValue
-	 * CustomerAccount5.MonthlyReceivedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccountModification1#MonthlyReceivedValue
-	 * CustomerAccountModification1.MonthlyReceivedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount4#MonthlyReceivedValue
-	 * CustomerAccount4.MonthlyReceivedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#MinimumMonthlyReceivedValue
-	 * CustomerAccount2.MinimumMonthlyReceivedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#MaximumMonthlyReceivedValue
-	 * CustomerAccount2.MaximumMonthlyReceivedValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#MonthlyReceivedValue
-	 * CustomerAccount3.MonthlyReceivedValue}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
 	 * AccountReportedMovement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount1#mmMonthlyReceivedValue
+	 * CustomerAccount1.mmMonthlyReceivedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount5#mmMonthlyReceivedValue
+	 * CustomerAccount5.mmMonthlyReceivedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccountModification1#mmMonthlyReceivedValue
+	 * CustomerAccountModification1.mmMonthlyReceivedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount4#mmMonthlyReceivedValue
+	 * CustomerAccount4.mmMonthlyReceivedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#mmMinimumMonthlyReceivedValue
+	 * CustomerAccount2.mmMinimumMonthlyReceivedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#mmMaximumMonthlyReceivedValue
+	 * CustomerAccount2.mmMaximumMonthlyReceivedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#mmMonthlyReceivedValue
+	 * CustomerAccount3.mmMonthlyReceivedValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -210,23 +213,23 @@ public class AccountReportedMovement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MonthlyReceivedValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMonthlyReceivedValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays
-					.asList(com.tools20022.repository.msg.CustomerAccount1.MonthlyReceivedValue, com.tools20022.repository.msg.CustomerAccount5.MonthlyReceivedValue,
-							com.tools20022.repository.msg.CustomerAccountModification1.MonthlyReceivedValue, com.tools20022.repository.msg.CustomerAccount4.MonthlyReceivedValue,
-							com.tools20022.repository.msg.CustomerAccount2.MinimumMonthlyReceivedValue, com.tools20022.repository.msg.CustomerAccount2.MaximumMonthlyReceivedValue,
-							com.tools20022.repository.msg.CustomerAccount3.MonthlyReceivedValue);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccount1.mmMonthlyReceivedValue, com.tools20022.repository.msg.CustomerAccount5.mmMonthlyReceivedValue,
+					com.tools20022.repository.msg.CustomerAccountModification1.mmMonthlyReceivedValue, com.tools20022.repository.msg.CustomerAccount4.mmMonthlyReceivedValue,
+					com.tools20022.repository.msg.CustomerAccount2.mmMinimumMonthlyReceivedValue, com.tools20022.repository.msg.CustomerAccount2.mmMaximumMonthlyReceivedValue,
+					com.tools20022.repository.msg.CustomerAccount3.mmMonthlyReceivedValue);
 			elementContext_lazy = () -> AccountReportedMovement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MonthlyReceivedValue";
 			definition = "Monthly average of the received amounts over a year (that is, payments coming in).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max35Text monthlyTransactionNumber;
 	/**
 	 * Monthly average of the number of payments (coming in and going out) over
 	 * a year.
@@ -237,37 +240,37 @@ public class AccountReportedMovement {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount1#MonthlyTransactionNumber
-	 * CustomerAccount1.MonthlyTransactionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount5#MonthlyTransactionNumber
-	 * CustomerAccount5.MonthlyTransactionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccountModification1#MonthlyTransactionNumber
-	 * CustomerAccountModification1.MonthlyTransactionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount4#MonthlyTransactionNumber
-	 * CustomerAccount4.MonthlyTransactionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#MinimumMonthlyTransactionNumber
-	 * CustomerAccount2.MinimumMonthlyTransactionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#MaximumMonthlyTransactionNumber
-	 * CustomerAccount2.MaximumMonthlyTransactionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#MonthlyTransactionNumber
-	 * CustomerAccount3.MonthlyTransactionNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
 	 * AccountReportedMovement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount1#mmMonthlyTransactionNumber
+	 * CustomerAccount1.mmMonthlyTransactionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount5#mmMonthlyTransactionNumber
+	 * CustomerAccount5.mmMonthlyTransactionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccountModification1#mmMonthlyTransactionNumber
+	 * CustomerAccountModification1.mmMonthlyTransactionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount4#mmMonthlyTransactionNumber
+	 * CustomerAccount4.mmMonthlyTransactionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#mmMinimumMonthlyTransactionNumber
+	 * CustomerAccount2.mmMinimumMonthlyTransactionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#mmMaximumMonthlyTransactionNumber
+	 * CustomerAccount2.mmMaximumMonthlyTransactionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#mmMonthlyTransactionNumber
+	 * CustomerAccount3.mmMonthlyTransactionNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -281,22 +284,23 @@ public class AccountReportedMovement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MonthlyTransactionNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMonthlyTransactionNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccount1.MonthlyTransactionNumber, com.tools20022.repository.msg.CustomerAccount5.MonthlyTransactionNumber,
-					com.tools20022.repository.msg.CustomerAccountModification1.MonthlyTransactionNumber, com.tools20022.repository.msg.CustomerAccount4.MonthlyTransactionNumber,
-					com.tools20022.repository.msg.CustomerAccount2.MinimumMonthlyTransactionNumber, com.tools20022.repository.msg.CustomerAccount2.MaximumMonthlyTransactionNumber,
-					com.tools20022.repository.msg.CustomerAccount3.MonthlyTransactionNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccount1.mmMonthlyTransactionNumber, com.tools20022.repository.msg.CustomerAccount5.mmMonthlyTransactionNumber,
+					com.tools20022.repository.msg.CustomerAccountModification1.mmMonthlyTransactionNumber, com.tools20022.repository.msg.CustomerAccount4.mmMonthlyTransactionNumber,
+					com.tools20022.repository.msg.CustomerAccount2.mmMinimumMonthlyTransactionNumber, com.tools20022.repository.msg.CustomerAccount2.mmMaximumMonthlyTransactionNumber,
+					com.tools20022.repository.msg.CustomerAccount3.mmMonthlyTransactionNumber);
 			elementContext_lazy = () -> AccountReportedMovement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MonthlyTransactionNumber";
 			definition = "Monthly average of the number of payments (coming in and going out) over a year.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CurrencyAndAmount averageBalance;
 	/**
 	 * Sum of the end of day balances over a month divided by the number of
 	 * business days in the month.
@@ -308,37 +312,37 @@ public class AccountReportedMovement {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount1#AverageBalance
-	 * CustomerAccount1.AverageBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount5#AverageBalance
-	 * CustomerAccount5.AverageBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccountModification1#AverageBalance
-	 * CustomerAccountModification1.AverageBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount4#AverageBalance
-	 * CustomerAccount4.AverageBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#MinimumAverageBalance
-	 * CustomerAccount2.MinimumAverageBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#MaximumAverageBalance
-	 * CustomerAccount2.MaximumAverageBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#AverageBalance
-	 * CustomerAccount3.AverageBalance}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountReportedMovement
 	 * AccountReportedMovement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount1#mmAverageBalance
+	 * CustomerAccount1.mmAverageBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount5#mmAverageBalance
+	 * CustomerAccount5.mmAverageBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccountModification1#mmAverageBalance
+	 * CustomerAccountModification1.mmAverageBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount4#mmAverageBalance
+	 * CustomerAccount4.mmAverageBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#mmMinimumAverageBalance
+	 * CustomerAccount2.mmMinimumAverageBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount2#mmMaximumAverageBalance
+	 * CustomerAccount2.mmMaximumAverageBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#mmAverageBalance
+	 * CustomerAccount3.mmAverageBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -352,21 +356,22 @@ public class AccountReportedMovement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AverageBalance = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAverageBalance = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccount1.AverageBalance, com.tools20022.repository.msg.CustomerAccount5.AverageBalance,
-					com.tools20022.repository.msg.CustomerAccountModification1.AverageBalance, com.tools20022.repository.msg.CustomerAccount4.AverageBalance, com.tools20022.repository.msg.CustomerAccount2.MinimumAverageBalance,
-					com.tools20022.repository.msg.CustomerAccount2.MaximumAverageBalance, com.tools20022.repository.msg.CustomerAccount3.AverageBalance);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccount1.mmAverageBalance, com.tools20022.repository.msg.CustomerAccount5.mmAverageBalance,
+					com.tools20022.repository.msg.CustomerAccountModification1.mmAverageBalance, com.tools20022.repository.msg.CustomerAccount4.mmAverageBalance, com.tools20022.repository.msg.CustomerAccount2.mmMinimumAverageBalance,
+					com.tools20022.repository.msg.CustomerAccount2.mmMaximumAverageBalance, com.tools20022.repository.msg.CustomerAccount3.mmAverageBalance);
 			elementContext_lazy = () -> AccountReportedMovement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AverageBalance";
 			definition = "Sum of the end of day balances over a month divided by the number of business days in the month.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CashAccount reportedCashAccount;
 	/**
 	 * Cash account for which reported movements are calculated.
 	 * <p>
@@ -375,8 +380,8 @@ public class AccountReportedMovement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#ReportedMovements
-	 * CashAccount.ReportedMovements}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmReportedMovements
+	 * CashAccount.mmReportedMovements}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -401,34 +406,74 @@ public class AccountReportedMovement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ReportedCashAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmReportedCashAccount = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AccountReportedMovement.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReportedCashAccount";
 			definition = "Cash account for which reported movements are calculated.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.ReportedMovements;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmReportedMovements;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountReportedMovement";
 				definition = "Provides statistical information on the number of movements and their value for a particular account.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.ReportedMovements);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountReportedMovement.MonthlyPaymentValue, com.tools20022.repository.entity.AccountReportedMovement.MonthlyReceivedValue,
-						com.tools20022.repository.entity.AccountReportedMovement.MonthlyTransactionNumber, com.tools20022.repository.entity.AccountReportedMovement.AverageBalance,
-						com.tools20022.repository.entity.AccountReportedMovement.ReportedCashAccount);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmReportedMovements);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountReportedMovement.mmMonthlyPaymentValue, com.tools20022.repository.entity.AccountReportedMovement.mmMonthlyReceivedValue,
+						com.tools20022.repository.entity.AccountReportedMovement.mmMonthlyTransactionNumber, com.tools20022.repository.entity.AccountReportedMovement.mmAverageBalance,
+						com.tools20022.repository.entity.AccountReportedMovement.mmReportedCashAccount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getMonthlyPaymentValue() {
+		return monthlyPaymentValue;
+	}
+
+	public void setMonthlyPaymentValue(CurrencyAndAmount monthlyPaymentValue) {
+		this.monthlyPaymentValue = monthlyPaymentValue;
+	}
+
+	public CurrencyAndAmount getMonthlyReceivedValue() {
+		return monthlyReceivedValue;
+	}
+
+	public void setMonthlyReceivedValue(CurrencyAndAmount monthlyReceivedValue) {
+		this.monthlyReceivedValue = monthlyReceivedValue;
+	}
+
+	public Max35Text getMonthlyTransactionNumber() {
+		return monthlyTransactionNumber;
+	}
+
+	public void setMonthlyTransactionNumber(Max35Text monthlyTransactionNumber) {
+		this.monthlyTransactionNumber = monthlyTransactionNumber;
+	}
+
+	public CurrencyAndAmount getAverageBalance() {
+		return averageBalance;
+	}
+
+	public void setAverageBalance(CurrencyAndAmount averageBalance) {
+		this.averageBalance = averageBalance;
+	}
+
+	public CashAccount getReportedCashAccount() {
+		return reportedCashAccount;
+	}
+
+	public void setReportedCashAccount(com.tools20022.repository.entity.CashAccount reportedCashAccount) {
+		this.reportedCashAccount = reportedCashAccount;
 	}
 }

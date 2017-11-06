@@ -31,14 +31,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#CardInformation
- * ATMCustomerProfileCode.CardInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#mmCardInformation
+ * ATMCustomerProfileCode.mmCardInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#ProfileRequest
- * ATMCustomerProfileCode.ProfileRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#mmProfileRequest
+ * ATMCustomerProfileCode.mmProfileRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#OtherRequest
- * ATMCustomerProfileCode.OtherRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#mmOtherRequest
+ * ATMCustomerProfileCode.mmOtherRequest}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,7 +92,7 @@ public class ATMCustomerProfileCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CardInformation = new MMCode() {
+	public static final MMCode mmCardInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardInformation";
@@ -123,7 +123,7 @@ public class ATMCustomerProfileCode {
 	 * "Customer profile is built via a specific profile message exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode ProfileRequest = new MMCode() {
+	public static final MMCode mmProfileRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileRequest";
@@ -154,7 +154,7 @@ public class ATMCustomerProfileCode {
 	 * "Customer profile is sent via an account enquiry selecting an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherRequest = new MMCode() {
+	public static final MMCode mmOtherRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRequest";
@@ -167,12 +167,12 @@ public class ATMCustomerProfileCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfileCode";
 				definition = "Describes the main way customer information was collected to build up the customer menu and the withdrawal request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCustomerProfileCode.CardInformation, com.tools20022.repository.codeset.ATMCustomerProfileCode.ProfileRequest,
-						com.tools20022.repository.codeset.ATMCustomerProfileCode.OtherRequest);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCustomerProfileCode.mmCardInformation, com.tools20022.repository.codeset.ATMCustomerProfileCode.mmProfileRequest,
+						com.tools20022.repository.codeset.ATMCustomerProfileCode.mmOtherRequest);
 				derivation_lazy = () -> Arrays.asList(ATMCustomerProfile1Code.mmObject());
 			}
 		});

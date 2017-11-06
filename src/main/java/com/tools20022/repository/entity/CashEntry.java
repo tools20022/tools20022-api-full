@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Posting of an item to a cash account, in the context of a cash transaction,
@@ -40,74 +41,77 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#CashAccount
- * CashEntry.CashAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#Amount
- * CashEntry.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#RelatedBookEntry
- * CashEntry.RelatedBookEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#CashBalance
- * CashEntry.CashBalance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#CurrencyExchange
- * CashEntry.CurrencyExchange}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#Charges
- * CashEntry.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#Availability
- * CashEntry.Availability}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#Interest
- * CashEntry.Interest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashEntry#mmCashAccount
+ * CashEntry.mmCashAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+ * CashEntry.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashEntry#DebitRelatedBookEntry
- * CashEntry.DebitRelatedBookEntry}</li>
+ * {@linkplain com.tools20022.repository.entity.CashEntry#mmRelatedBookEntry
+ * CashEntry.mmRelatedBookEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashEntry#mmCashBalance
+ * CashEntry.mmCashBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashEntry#CreditRelatedBookEntry
- * CashEntry.CreditRelatedBookEntry}</li>
+ * {@linkplain com.tools20022.repository.entity.CashEntry#mmCurrencyExchange
+ * CashEntry.mmCurrencyExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashEntry#mmCharges
+ * CashEntry.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashEntry#mmAvailability
+ * CashEntry.mmAvailability}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashEntry#mmInterest
+ * CashEntry.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashEntry#RelatedInvoiceFinancingTransaction
- * CashEntry.RelatedInvoiceFinancingTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.CashEntry#mmDebitRelatedBookEntry
+ * CashEntry.mmDebitRelatedBookEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashEntry#RelatedInvestigationCase
- * CashEntry.RelatedInvestigationCase}</li>
+ * {@linkplain com.tools20022.repository.entity.CashEntry#mmCreditRelatedBookEntry
+ * CashEntry.mmCreditRelatedBookEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashEntry#RelatedInvestigationCaseResolution
- * CashEntry.RelatedInvestigationCaseResolution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#ChargesIncluded
- * CashEntry.ChargesIncluded}</li>
+ * {@linkplain com.tools20022.repository.entity.CashEntry#mmRelatedInvoiceFinancingTransaction
+ * CashEntry.mmRelatedInvoiceFinancingTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashEntry#mmRelatedInvestigationCase
+ * CashEntry.mmRelatedInvestigationCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashEntry#mmRelatedInvestigationCaseResolution
+ * CashEntry.mmRelatedInvestigationCaseResolution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashEntry#mmChargesIncluded
+ * CashEntry.mmChargesIncluded}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashAccount#CashEntry
- * CashAccount.CashEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAccount#mmCashEntry
+ * CashAccount.mmCashEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashBalance#CashBalanceEntry
- * CashBalance.CashBalanceEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#CashEntry
- * Charges.CashEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BookEntry#CashEntry
- * BookEntry.CashEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BookEntry#DebitEntry
- * BookEntry.DebitEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BookEntry#CreditEntry
- * BookEntry.CreditEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#CashEntry
- * Interest.CashEntry}</li>
+ * {@linkplain com.tools20022.repository.entity.CashBalance#mmCashBalanceEntry
+ * CashBalance.mmCashBalanceEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmCashEntry
+ * Charges.mmCashEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmCashEntry
+ * BookEntry.mmCashEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmDebitEntry
+ * BookEntry.mmDebitEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BookEntry#mmCreditEntry
+ * BookEntry.mmCreditEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmCashEntry
+ * Interest.mmCashEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyExchange#CurrencyExchangeForCashEntry
- * CurrencyExchange.CurrencyExchangeForCashEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashAvailability#CashEntry
- * CashAvailability.CashEntry}</li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForCashEntry
+ * CurrencyExchange.mmCurrencyExchangeForCashEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#UnderlyingCashEntry
- * PaymentInvestigationCase.UnderlyingCashEntry}</li>
+ * {@linkplain com.tools20022.repository.entity.CashAvailability#mmCashEntry
+ * CashAvailability.mmCashEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#EntryCorrection
- * PaymentInvestigationCaseResolution.EntryCorrection}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmUnderlyingCashEntry
+ * PaymentInvestigationCase.mmUnderlyingCashEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#ResultingCashEntry
- * InvoiceFinancingAgreement.ResultingCashEntry}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmEntryCorrection
+ * PaymentInvestigationCaseResolution.mmEntryCorrection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmResultingCashEntry
+ * InvoiceFinancingAgreement.mmResultingCashEntry}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,79 +119,80 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchange2#ProprietaryAmount
- * AmountAndCurrencyExchange2.ProprietaryAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchange2#mmProprietaryAmount
+ * AmountAndCurrencyExchange2.mmProprietaryAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryTransaction1#AmountDetails
- * EntryTransaction1.AmountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryTransaction1#mmAmountDetails
+ * EntryTransaction1.mmAmountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportEntry1#TransactionDetails
- * ReportEntry1.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportEntry1#mmTransactionDetails
+ * ReportEntry1.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchange3#ProprietaryAmount
- * AmountAndCurrencyExchange3.ProprietaryAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchange3#mmProprietaryAmount
+ * AmountAndCurrencyExchange3.mmProprietaryAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryTransaction2#AmountDetails
- * EntryTransaction2.AmountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryTransaction2#mmAmountDetails
+ * EntryTransaction2.mmAmountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryDetails1#TransactionDetails
- * EntryDetails1.TransactionDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportEntry2#EntryDetails
- * ReportEntry2.EntryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryDetails1#mmTransactionDetails
+ * EntryDetails1.mmTransactionDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportEntry2#mmEntryDetails
+ * ReportEntry2.mmEntryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryTransaction3#AmountDetails
- * EntryTransaction3.AmountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryTransaction3#mmAmountDetails
+ * EntryTransaction3.mmAmountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryDetails2#TransactionDetails
- * EntryDetails2.TransactionDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportEntry3#EntryDetails
- * ReportEntry3.EntryDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection35#Amount
- * AmountAndDirection35.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryDetails2#mmTransactionDetails
+ * EntryDetails2.mmTransactionDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportEntry3#mmEntryDetails
+ * ReportEntry3.mmEntryDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection35#mmAmount
+ * AmountAndDirection35.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryTransaction4#AmountDetails
- * EntryTransaction4.AmountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryTransaction4#mmAmountDetails
+ * EntryTransaction4.mmAmountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryDetails3#TransactionDetails
- * EntryDetails3.TransactionDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportEntry4#EntryDetails
- * ReportEntry4.EntryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryDetails3#mmTransactionDetails
+ * EntryDetails3.mmTransactionDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportEntry4#mmEntryDetails
+ * ReportEntry4.mmEntryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationEntry1#AmountDetails
- * NotificationEntry1.AmountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationEntry1#mmAmountDetails
+ * NotificationEntry1.mmAmountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationEntry1#TransactionDetails
- * NotificationEntry1.TransactionDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#AmountDetails
- * StatementEntry1.AmountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationEntry1#mmTransactionDetails
+ * NotificationEntry1.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementEntry1#TransactionDetails
- * StatementEntry1.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmAmountDetails
+ * StatementEntry1.mmAmountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice#StatementEntry
- * UnderlyingTransaction1Choice.StatementEntry}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementEntry1#mmTransactionDetails
+ * StatementEntry1.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction2Choice#StatementEntry
- * UnderlyingTransaction2Choice.StatementEntry}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportEntry7#EntryDetails
- * ReportEntry7.EntryDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction1Choice#mmStatementEntry
+ * UnderlyingTransaction1Choice.mmStatementEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryDetails6#TransactionDetails
- * EntryDetails6.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction2Choice#mmStatementEntry
+ * UnderlyingTransaction2Choice.mmStatementEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportEntry7#mmEntryDetails
+ * ReportEntry7.mmEntryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryTransaction7#AmountDetails
- * EntryTransaction7.AmountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportEntry8#EntryDetails
- * ReportEntry8.EntryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryDetails6#mmTransactionDetails
+ * EntryDetails6.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryTransaction8#AmountDetails
- * EntryTransaction8.AmountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryTransaction7#mmAmountDetails
+ * EntryTransaction7.mmAmountDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportEntry8#mmEntryDetails
+ * ReportEntry8.mmEntryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryDetails7#TransactionDetails
- * EntryDetails7.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmAmountDetails
+ * EntryTransaction8.mmAmountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction3Choice#StatementEntry
- * UnderlyingTransaction3Choice.StatementEntry}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryDetails7#mmTransactionDetails
+ * EntryDetails7.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction3Choice#mmStatementEntry
+ * UnderlyingTransaction3Choice.mmStatementEntry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -265,8 +270,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -282,6 +287,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashEntry extends Entry {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.CashAccount> cashAccount;
 	/**
 	 * Cash account on which the amount of the entry is debited or credited. It
 	 * is derived from the association between Entry and Account.
@@ -291,8 +297,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#CashEntry
-	 * CashAccount.CashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashEntry
+	 * CashAccount.mmCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -300,137 +306,141 @@ public class CashEntry extends Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument7#CashAccount
-	 * PaymentInstrument7.CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument6#CashAccount
-	 * PaymentInstrument6.CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#CashAccountDetails
-	 * PaymentInstrument8.CashAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument9#CashAccountDetails
-	 * PaymentInstrument9.CashAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentInstrument16Choice#CashAccountDetails
-	 * PaymentInstrument16Choice.CashAccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#AccountIdentification
-	 * CashAccountEntrySearch3.AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#SafekeepingAccount
-	 * EntryTransaction1.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#SafekeepingAccount
-	 * EntryTransaction2.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#SafekeepingAccount
-	 * EntryTransaction3.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#SafekeepingAccount
-	 * EntryTransaction4.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionCashMovements2#AccountDetails
-	 * CorporateActionCashMovements2.AccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashMovement1#AccountDetails
-	 * CashMovement1.AccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashMovement2#AccountDetails
-	 * CashMovement2.AccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashMovement3#AccountDetails
-	 * CashMovement3.AccountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem3#Account
-	 * NotificationItem3.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification1#Account
-	 * OriginalNotification1.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemReference1#Account
-	 * OriginalItemReference1.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference1#Account
-	 * OriginalNotificationReference1.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotification2#Account
-	 * OriginalNotification2.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#Account
-	 * OriginalNotificationReference2.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem4#Account
-	 * NotificationItem4.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemReference2#Account
-	 * OriginalItemReference2.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference4#Account
-	 * OriginalNotificationReference4.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference3#Account
-	 * OriginalNotificationReference3.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#CashAccount
-	 * IntraBalanceCancellation2.CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation1#CashAccount
-	 * IntraBalanceCancellation1.CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement1#CashAccount
-	 * IntraBalanceMovement1.CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovements1#CashAccount
-	 * IntraBalanceMovements1.CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification2#CashAccount
-	 * IntraBalanceModification2.CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification1#CashAccount
-	 * IntraBalanceModification1.CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#CashAccount
-	 * IntraBalanceQueryCriteria3.CashAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#AccountIdentification
-	 * CashAccountEntrySearch4.AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference6#Account
-	 * OriginalNotificationReference6.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemReference3#Account
-	 * OriginalItemReference3.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference5#Account
-	 * OriginalNotificationReference5.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem5#Account
-	 * NotificationItem5.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#SafekeepingAccount
-	 * EntryTransaction7.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference8#Account
-	 * OriginalNotificationReference8.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalItemReference4#Account
-	 * OriginalItemReference4.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference7#Account
-	 * OriginalNotificationReference7.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#SafekeepingAccount
-	 * EntryTransaction8.SafekeepingAccount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationItem6#Account
-	 * NotificationItem6.Account}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.CashEntry
 	 * CashEntry}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument7#mmCashAccount
+	 * PaymentInstrument7.mmCashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument6#mmCashAccount
+	 * PaymentInstrument6.mmCashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmCashAccountDetails
+	 * PaymentInstrument8.mmCashAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument9#mmCashAccountDetails
+	 * PaymentInstrument9.mmCashAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentInstrument16Choice#mmCashAccountDetails
+	 * PaymentInstrument16Choice.mmCashAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#mmAccountIdentification
+	 * CashAccountEntrySearch3.mmAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#mmSafekeepingAccount
+	 * EntryTransaction1.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#mmSafekeepingAccount
+	 * EntryTransaction2.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#mmSafekeepingAccount
+	 * EntryTransaction3.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#mmSafekeepingAccount
+	 * EntryTransaction4.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionCashMovements2#mmAccountDetails
+	 * CorporateActionCashMovements2.mmAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashMovement1#mmAccountDetails
+	 * CashMovement1.mmAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashMovement2#mmAccountDetails
+	 * CashMovement2.mmAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashMovement3#mmAccountDetails
+	 * CashMovement3.mmAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationItem3#mmAccount
+	 * NotificationItem3.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification1#mmAccount
+	 * OriginalNotification1.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemReference1#mmAccount
+	 * OriginalItemReference1.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference1#mmAccount
+	 * OriginalNotificationReference1.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotification2#mmAccount
+	 * OriginalNotification2.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference2#mmAccount
+	 * OriginalNotificationReference2.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationItem4#mmAccount
+	 * NotificationItem4.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemReference2#mmAccount
+	 * OriginalItemReference2.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference4#mmAccount
+	 * OriginalNotificationReference4.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference3#mmAccount
+	 * OriginalNotificationReference3.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#mmCashAccount
+	 * IntraBalanceCancellation2.mmCashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation1#mmCashAccount
+	 * IntraBalanceCancellation1.mmCashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement1#mmCashAccount
+	 * IntraBalanceMovement1.mmCashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovements1#mmCashAccount
+	 * IntraBalanceMovements1.mmCashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification2#mmCashAccount
+	 * IntraBalanceModification2.mmCashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification1#mmCashAccount
+	 * IntraBalanceModification1.mmCashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3#mmCashAccount
+	 * IntraBalanceQueryCriteria3.mmCashAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#mmAccountIdentification
+	 * CashAccountEntrySearch4.mmAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference6#mmAccount
+	 * OriginalNotificationReference6.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemReference3#mmAccount
+	 * OriginalItemReference3.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference5#mmAccount
+	 * OriginalNotificationReference5.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationItem5#mmAccount
+	 * NotificationItem5.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#mmSafekeepingAccount
+	 * EntryTransaction7.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference8#mmAccount
+	 * OriginalNotificationReference8.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalItemReference4#mmAccount
+	 * OriginalItemReference4.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalNotificationReference7#mmAccount
+	 * OriginalNotificationReference7.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmSafekeepingAccount
+	 * EntryTransaction8.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationItem6#mmAccount
+	 * NotificationItem6.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -444,34 +454,36 @@ public class CashEntry extends Entry {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument7.CashAccount, com.tools20022.repository.msg.PaymentInstrument6.CashAccount,
-					com.tools20022.repository.msg.PaymentInstrument8.CashAccountDetails, com.tools20022.repository.msg.PaymentInstrument9.CashAccountDetails, com.tools20022.repository.choice.PaymentInstrument16Choice.CashAccountDetails,
-					com.tools20022.repository.msg.CashAccountEntrySearch3.AccountIdentification, com.tools20022.repository.msg.EntryTransaction1.SafekeepingAccount, com.tools20022.repository.msg.EntryTransaction2.SafekeepingAccount,
-					com.tools20022.repository.msg.EntryTransaction3.SafekeepingAccount, com.tools20022.repository.msg.EntryTransaction4.SafekeepingAccount, com.tools20022.repository.msg.CorporateActionCashMovements2.AccountDetails,
-					com.tools20022.repository.msg.CashMovement1.AccountDetails, com.tools20022.repository.msg.CashMovement2.AccountDetails, com.tools20022.repository.msg.CashMovement3.AccountDetails,
-					com.tools20022.repository.msg.NotificationItem3.Account, com.tools20022.repository.msg.OriginalNotification1.Account, com.tools20022.repository.msg.OriginalItemReference1.Account,
-					com.tools20022.repository.msg.OriginalNotificationReference1.Account, com.tools20022.repository.msg.OriginalNotification2.Account, com.tools20022.repository.msg.OriginalNotificationReference2.Account,
-					com.tools20022.repository.msg.NotificationItem4.Account, com.tools20022.repository.msg.OriginalItemReference2.Account, com.tools20022.repository.msg.OriginalNotificationReference4.Account,
-					com.tools20022.repository.msg.OriginalNotificationReference3.Account, com.tools20022.repository.msg.IntraBalanceCancellation2.CashAccount, com.tools20022.repository.msg.IntraBalanceCancellation1.CashAccount,
-					com.tools20022.repository.msg.IntraBalanceMovement1.CashAccount, com.tools20022.repository.msg.IntraBalanceMovements1.CashAccount, com.tools20022.repository.msg.IntraBalanceModification2.CashAccount,
-					com.tools20022.repository.msg.IntraBalanceModification1.CashAccount, com.tools20022.repository.msg.IntraBalanceQueryCriteria3.CashAccount, com.tools20022.repository.msg.CashAccountEntrySearch4.AccountIdentification,
-					com.tools20022.repository.msg.OriginalNotificationReference6.Account, com.tools20022.repository.msg.OriginalItemReference3.Account, com.tools20022.repository.msg.OriginalNotificationReference5.Account,
-					com.tools20022.repository.msg.NotificationItem5.Account, com.tools20022.repository.msg.EntryTransaction7.SafekeepingAccount, com.tools20022.repository.msg.OriginalNotificationReference8.Account,
-					com.tools20022.repository.msg.OriginalItemReference4.Account, com.tools20022.repository.msg.OriginalNotificationReference7.Account, com.tools20022.repository.msg.EntryTransaction8.SafekeepingAccount,
-					com.tools20022.repository.msg.NotificationItem6.Account);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument7.mmCashAccount, com.tools20022.repository.msg.PaymentInstrument6.mmCashAccount,
+					com.tools20022.repository.msg.PaymentInstrument8.mmCashAccountDetails, com.tools20022.repository.msg.PaymentInstrument9.mmCashAccountDetails,
+					com.tools20022.repository.choice.PaymentInstrument16Choice.mmCashAccountDetails, com.tools20022.repository.msg.CashAccountEntrySearch3.mmAccountIdentification,
+					com.tools20022.repository.msg.EntryTransaction1.mmSafekeepingAccount, com.tools20022.repository.msg.EntryTransaction2.mmSafekeepingAccount, com.tools20022.repository.msg.EntryTransaction3.mmSafekeepingAccount,
+					com.tools20022.repository.msg.EntryTransaction4.mmSafekeepingAccount, com.tools20022.repository.msg.CorporateActionCashMovements2.mmAccountDetails, com.tools20022.repository.msg.CashMovement1.mmAccountDetails,
+					com.tools20022.repository.msg.CashMovement2.mmAccountDetails, com.tools20022.repository.msg.CashMovement3.mmAccountDetails, com.tools20022.repository.msg.NotificationItem3.mmAccount,
+					com.tools20022.repository.msg.OriginalNotification1.mmAccount, com.tools20022.repository.msg.OriginalItemReference1.mmAccount, com.tools20022.repository.msg.OriginalNotificationReference1.mmAccount,
+					com.tools20022.repository.msg.OriginalNotification2.mmAccount, com.tools20022.repository.msg.OriginalNotificationReference2.mmAccount, com.tools20022.repository.msg.NotificationItem4.mmAccount,
+					com.tools20022.repository.msg.OriginalItemReference2.mmAccount, com.tools20022.repository.msg.OriginalNotificationReference4.mmAccount, com.tools20022.repository.msg.OriginalNotificationReference3.mmAccount,
+					com.tools20022.repository.msg.IntraBalanceCancellation2.mmCashAccount, com.tools20022.repository.msg.IntraBalanceCancellation1.mmCashAccount, com.tools20022.repository.msg.IntraBalanceMovement1.mmCashAccount,
+					com.tools20022.repository.msg.IntraBalanceMovements1.mmCashAccount, com.tools20022.repository.msg.IntraBalanceModification2.mmCashAccount, com.tools20022.repository.msg.IntraBalanceModification1.mmCashAccount,
+					com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmCashAccount, com.tools20022.repository.msg.CashAccountEntrySearch4.mmAccountIdentification,
+					com.tools20022.repository.msg.OriginalNotificationReference6.mmAccount, com.tools20022.repository.msg.OriginalItemReference3.mmAccount, com.tools20022.repository.msg.OriginalNotificationReference5.mmAccount,
+					com.tools20022.repository.msg.NotificationItem5.mmAccount, com.tools20022.repository.msg.EntryTransaction7.mmSafekeepingAccount, com.tools20022.repository.msg.OriginalNotificationReference8.mmAccount,
+					com.tools20022.repository.msg.OriginalItemReference4.mmAccount, com.tools20022.repository.msg.OriginalNotificationReference7.mmAccount, com.tools20022.repository.msg.EntryTransaction8.mmSafekeepingAccount,
+					com.tools20022.repository.msg.NotificationItem6.mmAccount);
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
 			definition = "Cash account on which the amount of the entry is debited or credited. It is derived from the association between Entry and Account.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.CashEntry;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount of money in the cash entry.
 	 * <p>
@@ -482,127 +494,137 @@ public class CashEntry extends Entry {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#EntryAmount
-	 * AccountCashEntrySearch2.EntryAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#EntryAmount
-	 * CashAccountEntrySearch3.EntryAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountCashEntryDetails3#EntryAmount
-	 * AccountCashEntryDetails3.EntryAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashEntry1#Amount
-	 * CashEntry1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1#Amount
-	 * AmountAndCurrencyExchangeDetails1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2#Amount
-	 * AmountAndCurrencyExchangeDetails2.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry1#Amount
-	 * ReportEntry1.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry1#AmountDetails
-	 * ReportEntry1.AmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails3#Amount
-	 * AmountAndCurrencyExchangeDetails3.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails4#Amount
-	 * AmountAndCurrencyExchangeDetails4.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry2#Amount
-	 * ReportEntry2.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry2#AmountDetails
-	 * ReportEntry2.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction3#Amount
-	 * EntryTransaction3.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry3#Amount
-	 * ReportEntry3.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry3#AmountDetails
-	 * ReportEntry3.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction4#Amount
-	 * EntryTransaction4.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry4#Amount
-	 * ReportEntry4.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry4#AmountDetails
-	 * ReportEntry4.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationEntry1#Amount
-	 * NotificationEntry1.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#Amount
-	 * StatementEntry1.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Value#BaseCurrencyItem
-	 * Value.BaseCurrencyItem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReportData5#PayInCallAmount
-	 * ReportData5.PayInCallAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PayInScheduleItems#Amount
-	 * PayInScheduleItems.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PayInScheduleItems1#Amount
-	 * PayInScheduleItems1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionCashMovements2#PostingAmount
-	 * CorporateActionCashMovements2.PostingAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationEntry2#Amount
-	 * NotificationEntry2.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry1#CorrectedAmount
-	 * StatementResolutionEntry1.CorrectedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry2#CorrectedAmount
-	 * StatementResolutionEntry2.CorrectedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection34#Amount
-	 * AmountAndDirection34.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalance2#SettledAmount
-	 * IntraBalance2.SettledAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalance2#PreviouslySettledAmount
-	 * IntraBalance2.PreviouslySettledAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalance2#RemainingSettlementAmount
-	 * IntraBalance2.RemainingSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalance1#SettlementAmount
-	 * IntraBalance1.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#SettledAmount
-	 * IntraBalanceMovement2.SettledAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#PreviouslySettledAmount
-	 * IntraBalanceMovement2.PreviouslySettledAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#RemainingSettlementAmount
-	 * IntraBalanceMovement2.RemainingSettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#EntryAmount
-	 * CashAccountEntrySearch4.EntryAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry7#Amount
-	 * ReportEntry7.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry7#AmountDetails
-	 * ReportEntry7.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction7#Amount
-	 * EntryTransaction7.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry8#Amount
-	 * ReportEntry8.Amount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry8#AmountDetails
-	 * ReportEntry8.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction8#Amount
-	 * EntryTransaction8.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection53#Amount
-	 * AmountAndDirection53.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection61#Amount
-	 * AmountAndDirection61.Amount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.CashEntry
 	 * CashEntry}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountCashEntrySearch2#mmEntryAmount
+	 * AccountCashEntrySearch2.mmEntryAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#mmEntryAmount
+	 * CashAccountEntrySearch3.mmEntryAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountCashEntryDetails3#mmEntryAmount
+	 * AccountCashEntryDetails3.mmEntryAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashEntry1#mmAmount
+	 * CashEntry1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1#mmAmount
+	 * AmountAndCurrencyExchangeDetails1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2#mmAmount
+	 * AmountAndCurrencyExchangeDetails2.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry1#mmAmount
+	 * ReportEntry1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportEntry1#mmAmountDetails
+	 * ReportEntry1.mmAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails3#mmAmount
+	 * AmountAndCurrencyExchangeDetails3.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails4#mmAmount
+	 * AmountAndCurrencyExchangeDetails4.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry2#mmAmount
+	 * ReportEntry2.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportEntry2#mmAmountDetails
+	 * ReportEntry2.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction3#mmAmount
+	 * EntryTransaction3.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry3#mmAmount
+	 * ReportEntry3.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportEntry3#mmAmountDetails
+	 * ReportEntry3.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction4#mmAmount
+	 * EntryTransaction4.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry4#mmAmount
+	 * ReportEntry4.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportEntry4#mmAmountDetails
+	 * ReportEntry4.mmAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationEntry1#mmAmount
+	 * NotificationEntry1.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#mmAmount
+	 * StatementEntry1.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Value#mmBaseCurrencyItem
+	 * Value.mmBaseCurrencyItem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportData5#mmPayInCallAmount
+	 * ReportData5.mmPayInCallAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PayInScheduleItems#mmAmount
+	 * PayInScheduleItems.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PayInScheduleItems1#mmAmount
+	 * PayInScheduleItems1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionCashMovements2#mmPostingAmount
+	 * CorporateActionCashMovements2.mmPostingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationEntry2#mmAmount
+	 * NotificationEntry2.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry1#mmCorrectedAmount
+	 * StatementResolutionEntry1.mmCorrectedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry2#mmCorrectedAmount
+	 * StatementResolutionEntry2.mmCorrectedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection34#mmAmount
+	 * AmountAndDirection34.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalance2#mmSettledAmount
+	 * IntraBalance2.mmSettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalance2#mmPreviouslySettledAmount
+	 * IntraBalance2.mmPreviouslySettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalance2#mmRemainingSettlementAmount
+	 * IntraBalance2.mmRemainingSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalance1#mmSettlementAmount
+	 * IntraBalance1.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#mmSettledAmount
+	 * IntraBalanceMovement2.mmSettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#mmPreviouslySettledAmount
+	 * IntraBalanceMovement2.mmPreviouslySettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#mmRemainingSettlementAmount
+	 * IntraBalanceMovement2.mmRemainingSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#mmEntryAmount
+	 * CashAccountEntrySearch4.mmEntryAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry7#mmAmount
+	 * ReportEntry7.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportEntry7#mmAmountDetails
+	 * ReportEntry7.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction7#mmAmount
+	 * EntryTransaction7.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry8#mmAmount
+	 * ReportEntry8.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportEntry8#mmAmountDetails
+	 * ReportEntry8.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction8#mmAmount
+	 * EntryTransaction8.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection53#mmAmount
+	 * AmountAndDirection53.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection61#mmAmount
+	 * AmountAndDirection61.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -614,34 +636,35 @@ public class CashEntry extends Entry {
 	 * definition} = "Amount of money in the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Amount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountCashEntrySearch2.EntryAmount, com.tools20022.repository.msg.CashAccountEntrySearch3.EntryAmount,
-					com.tools20022.repository.msg.AccountCashEntryDetails3.EntryAmount, com.tools20022.repository.msg.CashEntry1.Amount, com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1.Amount,
-					com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2.Amount, com.tools20022.repository.msg.ReportEntry1.Amount, com.tools20022.repository.msg.ReportEntry1.AmountDetails,
-					com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails3.Amount, com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails4.Amount, com.tools20022.repository.msg.ReportEntry2.Amount,
-					com.tools20022.repository.msg.ReportEntry2.AmountDetails, com.tools20022.repository.msg.EntryTransaction3.Amount, com.tools20022.repository.msg.ReportEntry3.Amount,
-					com.tools20022.repository.msg.ReportEntry3.AmountDetails, com.tools20022.repository.msg.EntryTransaction4.Amount, com.tools20022.repository.msg.ReportEntry4.Amount,
-					com.tools20022.repository.msg.ReportEntry4.AmountDetails, com.tools20022.repository.msg.NotificationEntry1.Amount, com.tools20022.repository.msg.StatementEntry1.Amount,
-					com.tools20022.repository.msg.Value.BaseCurrencyItem, com.tools20022.repository.msg.ReportData5.PayInCallAmount, com.tools20022.repository.msg.PayInScheduleItems.Amount,
-					com.tools20022.repository.msg.PayInScheduleItems1.Amount, com.tools20022.repository.msg.CorporateActionCashMovements2.PostingAmount, com.tools20022.repository.msg.NotificationEntry2.Amount,
-					com.tools20022.repository.msg.StatementResolutionEntry1.CorrectedAmount, com.tools20022.repository.msg.StatementResolutionEntry2.CorrectedAmount, com.tools20022.repository.msg.AmountAndDirection34.Amount,
-					com.tools20022.repository.msg.IntraBalance2.SettledAmount, com.tools20022.repository.msg.IntraBalance2.PreviouslySettledAmount, com.tools20022.repository.msg.IntraBalance2.RemainingSettlementAmount,
-					com.tools20022.repository.msg.IntraBalance1.SettlementAmount, com.tools20022.repository.msg.IntraBalanceMovement2.SettledAmount, com.tools20022.repository.msg.IntraBalanceMovement2.PreviouslySettledAmount,
-					com.tools20022.repository.msg.IntraBalanceMovement2.RemainingSettlementAmount, com.tools20022.repository.msg.CashAccountEntrySearch4.EntryAmount, com.tools20022.repository.msg.ReportEntry7.Amount,
-					com.tools20022.repository.msg.ReportEntry7.AmountDetails, com.tools20022.repository.msg.EntryTransaction7.Amount, com.tools20022.repository.msg.ReportEntry8.Amount,
-					com.tools20022.repository.msg.ReportEntry8.AmountDetails, com.tools20022.repository.msg.EntryTransaction8.Amount, com.tools20022.repository.msg.AmountAndDirection53.Amount,
-					com.tools20022.repository.msg.AmountAndDirection61.Amount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountCashEntrySearch2.mmEntryAmount, com.tools20022.repository.msg.CashAccountEntrySearch3.mmEntryAmount,
+					com.tools20022.repository.msg.AccountCashEntryDetails3.mmEntryAmount, com.tools20022.repository.msg.CashEntry1.mmAmount, com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1.mmAmount,
+					com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2.mmAmount, com.tools20022.repository.msg.ReportEntry1.mmAmount, com.tools20022.repository.msg.ReportEntry1.mmAmountDetails,
+					com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails3.mmAmount, com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails4.mmAmount, com.tools20022.repository.msg.ReportEntry2.mmAmount,
+					com.tools20022.repository.msg.ReportEntry2.mmAmountDetails, com.tools20022.repository.msg.EntryTransaction3.mmAmount, com.tools20022.repository.msg.ReportEntry3.mmAmount,
+					com.tools20022.repository.msg.ReportEntry3.mmAmountDetails, com.tools20022.repository.msg.EntryTransaction4.mmAmount, com.tools20022.repository.msg.ReportEntry4.mmAmount,
+					com.tools20022.repository.msg.ReportEntry4.mmAmountDetails, com.tools20022.repository.msg.NotificationEntry1.mmAmount, com.tools20022.repository.msg.StatementEntry1.mmAmount,
+					com.tools20022.repository.msg.Value.mmBaseCurrencyItem, com.tools20022.repository.msg.ReportData5.mmPayInCallAmount, com.tools20022.repository.msg.PayInScheduleItems.mmAmount,
+					com.tools20022.repository.msg.PayInScheduleItems1.mmAmount, com.tools20022.repository.msg.CorporateActionCashMovements2.mmPostingAmount, com.tools20022.repository.msg.NotificationEntry2.mmAmount,
+					com.tools20022.repository.msg.StatementResolutionEntry1.mmCorrectedAmount, com.tools20022.repository.msg.StatementResolutionEntry2.mmCorrectedAmount, com.tools20022.repository.msg.AmountAndDirection34.mmAmount,
+					com.tools20022.repository.msg.IntraBalance2.mmSettledAmount, com.tools20022.repository.msg.IntraBalance2.mmPreviouslySettledAmount, com.tools20022.repository.msg.IntraBalance2.mmRemainingSettlementAmount,
+					com.tools20022.repository.msg.IntraBalance1.mmSettlementAmount, com.tools20022.repository.msg.IntraBalanceMovement2.mmSettledAmount, com.tools20022.repository.msg.IntraBalanceMovement2.mmPreviouslySettledAmount,
+					com.tools20022.repository.msg.IntraBalanceMovement2.mmRemainingSettlementAmount, com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryAmount, com.tools20022.repository.msg.ReportEntry7.mmAmount,
+					com.tools20022.repository.msg.ReportEntry7.mmAmountDetails, com.tools20022.repository.msg.EntryTransaction7.mmAmount, com.tools20022.repository.msg.ReportEntry8.mmAmount,
+					com.tools20022.repository.msg.ReportEntry8.mmAmountDetails, com.tools20022.repository.msg.EntryTransaction8.mmAmount, com.tools20022.repository.msg.AmountAndDirection53.mmAmount,
+					com.tools20022.repository.msg.AmountAndDirection61.mmAmount);
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected BookEntry relatedBookEntry;
 	/**
 	 * Account entry for which one or more cash entries are specified.
 	 * <p>
@@ -650,8 +673,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.BookEntry#CashEntry
-	 * BookEntry.CashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.BookEntry#mmCashEntry
+	 * BookEntry.mmCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -675,20 +698,21 @@ public class CashEntry extends Entry {
 	 * "Account entry for which one or more cash entries are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedBookEntry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedBookEntry = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedBookEntry";
 			definition = "Account entry for which one or more cash entries are specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BookEntry.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.BookEntry.CashEntry;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.BookEntry.mmCashEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CashBalance> cashBalance;
 	/**
 	 * Cash amount that is the result of the sum of the cash entries from or to
 	 * a cash account.
@@ -698,8 +722,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#CashBalanceEntry
-	 * CashBalance.CashBalanceEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmCashBalanceEntry
+	 * CashBalance.mmCashBalanceEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -707,35 +731,37 @@ public class CashEntry extends Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashBalance
 	 * CashBalance}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#BalanceFrom
-	 * IntraBalance2.BalanceFrom}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#BalanceTo
-	 * IntraBalance2.BalanceTo}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IntraBalance1#BalanceFrom
-	 * IntraBalance1.BalanceFrom}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IntraBalance1#BalanceTo
-	 * IntraBalance1.BalanceTo}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#BalanceFrom
-	 * IntraBalanceMovement2.BalanceFrom}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#BalanceTo
-	 * IntraBalanceMovement2.BalanceTo}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceType1#BalanceFrom
-	 * IntraBalanceType1.BalanceFrom}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceType1#BalanceTo
-	 * IntraBalanceType1.BalanceTo}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.CashEntry
 	 * CashEntry}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalance2#mmBalanceFrom
+	 * IntraBalance2.mmBalanceFrom}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#mmBalanceTo
+	 * IntraBalance2.mmBalanceTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalance1#mmBalanceFrom
+	 * IntraBalance1.mmBalanceFrom}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IntraBalance1#mmBalanceTo
+	 * IntraBalance1.mmBalanceTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#mmBalanceFrom
+	 * IntraBalanceMovement2.mmBalanceFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#mmBalanceTo
+	 * IntraBalanceMovement2.mmBalanceTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceType1#mmBalanceFrom
+	 * IntraBalanceType1.mmBalanceFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceType1#mmBalanceTo
+	 * IntraBalanceType1.mmBalanceTo}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -749,22 +775,23 @@ public class CashEntry extends Entry {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashBalance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalance2.BalanceFrom, com.tools20022.repository.msg.IntraBalance2.BalanceTo, com.tools20022.repository.msg.IntraBalance1.BalanceFrom,
-					com.tools20022.repository.msg.IntraBalance1.BalanceTo, com.tools20022.repository.msg.IntraBalanceMovement2.BalanceFrom, com.tools20022.repository.msg.IntraBalanceMovement2.BalanceTo,
-					com.tools20022.repository.msg.IntraBalanceType1.BalanceFrom, com.tools20022.repository.msg.IntraBalanceType1.BalanceTo);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalance2.mmBalanceFrom, com.tools20022.repository.msg.IntraBalance2.mmBalanceTo, com.tools20022.repository.msg.IntraBalance1.mmBalanceFrom,
+					com.tools20022.repository.msg.IntraBalance1.mmBalanceTo, com.tools20022.repository.msg.IntraBalanceMovement2.mmBalanceFrom, com.tools20022.repository.msg.IntraBalanceMovement2.mmBalanceTo,
+					com.tools20022.repository.msg.IntraBalanceType1.mmBalanceFrom, com.tools20022.repository.msg.IntraBalanceType1.mmBalanceTo);
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashBalance";
 			definition = "Cash amount that is the result of the sum of the cash entries from or to a cash account.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashBalance.CashBalanceEntry;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashBalanceEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 		}
 	};
+	protected CurrencyExchange currencyExchange;
 	/**
 	 * Entry details related to currency exchange information.
 	 * <p>
@@ -773,8 +800,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#CurrencyExchangeForCashEntry
-	 * CurrencyExchange.CurrencyExchangeForCashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForCashEntry
+	 * CurrencyExchange.mmCurrencyExchangeForCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -782,30 +809,30 @@ public class CashEntry extends Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1#CurrencyExchange
-	 * AmountAndCurrencyExchangeDetails1.CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2#CurrencyExchange
-	 * AmountAndCurrencyExchangeDetails2.CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails3#CurrencyExchange
-	 * AmountAndCurrencyExchangeDetails3.CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails4#CurrencyExchange
-	 * AmountAndCurrencyExchangeDetails4.CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1#CurrencyExchange
-	 * CardAmountAndCurrencyExchange1.CurrencyExchange}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.CashEntry
 	 * CashEntry}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1#mmCurrencyExchange
+	 * AmountAndCurrencyExchangeDetails1.mmCurrencyExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2#mmCurrencyExchange
+	 * AmountAndCurrencyExchangeDetails2.mmCurrencyExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails3#mmCurrencyExchange
+	 * AmountAndCurrencyExchangeDetails3.mmCurrencyExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails4#mmCurrencyExchange
+	 * AmountAndCurrencyExchangeDetails4.mmCurrencyExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1#mmCurrencyExchange
+	 * CardAmountAndCurrencyExchange1.mmCurrencyExchange}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -817,23 +844,24 @@ public class CashEntry extends Entry {
 	 * definition} = "Entry details related to currency exchange information."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CurrencyExchange = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1.CurrencyExchange, com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2.CurrencyExchange,
-					com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails3.CurrencyExchange, com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails4.CurrencyExchange,
-					com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.CurrencyExchange);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1.mmCurrencyExchange, com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2.mmCurrencyExchange,
+					com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails3.mmCurrencyExchange, com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails4.mmCurrencyExchange,
+					com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmCurrencyExchange);
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Entry details related to currency exchange information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.CurrencyExchangeForCashEntry;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForCashEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Charges> charges;
 	/**
 	 * Provides information on the charges included in the entry amount.
 	 * <p>
@@ -842,57 +870,64 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#CashEntry
-	 * Charges.CashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmCashEntry
+	 * Charges.mmCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction1#Charges
-	 * EntryTransaction1.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry1#Charges
-	 * ReportEntry1.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction2#Charges
-	 * EntryTransaction2.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry2#Charges
-	 * ReportEntry2.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction3#Charges
-	 * EntryTransaction3.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry3#Charges
-	 * ReportEntry3.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction4#Charges
-	 * EntryTransaction4.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry4#Charges
-	 * ReportEntry4.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NotificationEntry1#Charges
-	 * NotificationEntry1.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#Charges
-	 * StatementEntry1.Charges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry1#Charges
-	 * StatementResolutionEntry1.Charges}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry2#Charges
-	 * StatementResolutionEntry2.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry7#Charges
-	 * ReportEntry7.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction7#Charges
-	 * EntryTransaction7.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry8#Charges
-	 * ReportEntry8.Charges}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction8#Charges
-	 * EntryTransaction8.Charges}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.CashEntry
 	 * CashEntry}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#mmCharges
+	 * EntryTransaction1.mmCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry1#mmCharges
+	 * ReportEntry1.mmCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#mmCharges
+	 * EntryTransaction2.mmCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry2#mmCharges
+	 * ReportEntry2.mmCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#mmCharges
+	 * EntryTransaction3.mmCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry3#mmCharges
+	 * ReportEntry3.mmCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#mmCharges
+	 * EntryTransaction4.mmCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry4#mmCharges
+	 * ReportEntry4.mmCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationEntry1#mmCharges
+	 * NotificationEntry1.mmCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.StatementEntry1#mmCharges
+	 * StatementEntry1.mmCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry1#mmCharges
+	 * StatementResolutionEntry1.mmCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry2#mmCharges
+	 * StatementResolutionEntry2.mmCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry7#mmCharges
+	 * ReportEntry7.mmCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#mmCharges
+	 * EntryTransaction7.mmCharges}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry8#mmCharges
+	 * ReportEntry8.mmCharges}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmCharges
+	 * EntryTransaction8.mmCharges}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -905,24 +940,26 @@ public class CashEntry extends Entry {
 	 * "Provides information on the charges included in the entry amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Charges = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCharges = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryTransaction1.Charges, com.tools20022.repository.msg.ReportEntry1.Charges, com.tools20022.repository.msg.EntryTransaction2.Charges,
-					com.tools20022.repository.msg.ReportEntry2.Charges, com.tools20022.repository.msg.EntryTransaction3.Charges, com.tools20022.repository.msg.ReportEntry3.Charges, com.tools20022.repository.msg.EntryTransaction4.Charges,
-					com.tools20022.repository.msg.ReportEntry4.Charges, com.tools20022.repository.msg.NotificationEntry1.Charges, com.tools20022.repository.msg.StatementEntry1.Charges,
-					com.tools20022.repository.msg.StatementResolutionEntry1.Charges, com.tools20022.repository.msg.StatementResolutionEntry2.Charges, com.tools20022.repository.msg.ReportEntry7.Charges,
-					com.tools20022.repository.msg.EntryTransaction7.Charges, com.tools20022.repository.msg.ReportEntry8.Charges, com.tools20022.repository.msg.EntryTransaction8.Charges);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryTransaction1.mmCharges, com.tools20022.repository.msg.ReportEntry1.mmCharges, com.tools20022.repository.msg.EntryTransaction2.mmCharges,
+					com.tools20022.repository.msg.ReportEntry2.mmCharges, com.tools20022.repository.msg.EntryTransaction3.mmCharges, com.tools20022.repository.msg.ReportEntry3.mmCharges,
+					com.tools20022.repository.msg.EntryTransaction4.mmCharges, com.tools20022.repository.msg.ReportEntry4.mmCharges, com.tools20022.repository.msg.NotificationEntry1.mmCharges,
+					com.tools20022.repository.msg.StatementEntry1.mmCharges, com.tools20022.repository.msg.StatementResolutionEntry1.mmCharges, com.tools20022.repository.msg.StatementResolutionEntry2.mmCharges,
+					com.tools20022.repository.msg.ReportEntry7.mmCharges, com.tools20022.repository.msg.EntryTransaction7.mmCharges, com.tools20022.repository.msg.ReportEntry8.mmCharges,
+					com.tools20022.repository.msg.EntryTransaction8.mmCharges);
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Charges";
 			definition = "Provides information on the charges included in the entry amount.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Charges.CashEntry;
+			opposite_lazy = () -> com.tools20022.repository.entity.Charges.mmCashEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 		}
 	};
+	protected CashAvailability availability;
 	/**
 	 * Availability information on the entry.<br>
 	 * Elements used to indicate when the booked amount of money will become
@@ -933,8 +970,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashAvailability#CashEntry
-	 * CashAvailability.CashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAvailability#mmCashEntry
+	 * CashAvailability.mmCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -942,40 +979,42 @@ public class CashEntry extends Entry {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAvailability
 	 * CashAvailability}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#Availability
-	 * EntryTransaction1.Availability}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#Availability
-	 * EntryTransaction2.Availability}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry2#Availability
-	 * ReportEntry2.Availability}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#Availability
-	 * EntryTransaction3.Availability}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry3#Availability
-	 * ReportEntry3.Availability}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#Availability
-	 * EntryTransaction4.Availability}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NotificationEntry1#Availability
-	 * NotificationEntry1.Availability}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#Availability
-	 * EntryTransaction7.Availability}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#Availability
-	 * EntryTransaction8.Availability}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.CashEntry
 	 * CashEntry}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction1#mmAvailability
+	 * EntryTransaction1.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction2#mmAvailability
+	 * EntryTransaction2.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportEntry2#mmAvailability
+	 * ReportEntry2.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction3#mmAvailability
+	 * EntryTransaction3.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportEntry3#mmAvailability
+	 * ReportEntry3.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction4#mmAvailability
+	 * EntryTransaction4.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationEntry1#mmAvailability
+	 * NotificationEntry1.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction7#mmAvailability
+	 * EntryTransaction7.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmAvailability
+	 * EntryTransaction8.mmAvailability}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -989,23 +1028,24 @@ public class CashEntry extends Entry {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Availability = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAvailability = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryTransaction1.Availability, com.tools20022.repository.msg.EntryTransaction2.Availability, com.tools20022.repository.msg.ReportEntry2.Availability,
-					com.tools20022.repository.msg.EntryTransaction3.Availability, com.tools20022.repository.msg.ReportEntry3.Availability, com.tools20022.repository.msg.EntryTransaction4.Availability,
-					com.tools20022.repository.msg.NotificationEntry1.Availability, com.tools20022.repository.msg.EntryTransaction7.Availability, com.tools20022.repository.msg.EntryTransaction8.Availability);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryTransaction1.mmAvailability, com.tools20022.repository.msg.EntryTransaction2.mmAvailability, com.tools20022.repository.msg.ReportEntry2.mmAvailability,
+					com.tools20022.repository.msg.EntryTransaction3.mmAvailability, com.tools20022.repository.msg.ReportEntry3.mmAvailability, com.tools20022.repository.msg.EntryTransaction4.mmAvailability,
+					com.tools20022.repository.msg.NotificationEntry1.mmAvailability, com.tools20022.repository.msg.EntryTransaction7.mmAvailability, com.tools20022.repository.msg.EntryTransaction8.mmAvailability);
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Availability";
 			definition = "Availability information on the entry.\r\nElements used to indicate when the booked amount of money will become available, that is can be accessed and start generating interest.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAvailability.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashAvailability.CashEntry;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmCashEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmObject();
 		}
 	};
+	protected Interest interest;
 	/**
 	 * Interest amount included in the entry amount.
 	 * <p>
@@ -1014,8 +1054,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#CashEntry
-	 * Interest.CashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmCashEntry
+	 * Interest.mmCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1037,20 +1077,21 @@ public class CashEntry extends Entry {
 	 * definition} = "Interest amount included in the entry amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Interest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Interest amount included in the entry amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Interest.CashEntry;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmCashEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
+	protected BookEntry debitRelatedBookEntry;
 	/**
 	 * Book entry which is the source of the cash entry.
 	 * <p>
@@ -1059,8 +1100,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.BookEntry#DebitEntry
-	 * BookEntry.DebitEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.BookEntry#mmDebitEntry
+	 * BookEntry.mmDebitEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1083,20 +1124,21 @@ public class CashEntry extends Entry {
 	 * definition} = "Book entry which is the source of the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd DebitRelatedBookEntry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDebitRelatedBookEntry = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DebitRelatedBookEntry";
 			definition = "Book entry which is the source of the cash entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BookEntry.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.BookEntry.DebitEntry;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.BookEntry.mmDebitEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 		}
 	};
+	protected BookEntry creditRelatedBookEntry;
 	/**
 	 * Book entry which is the source of the cash entry.
 	 * <p>
@@ -1105,8 +1147,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.BookEntry#CreditEntry
-	 * BookEntry.CreditEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.BookEntry#mmCreditEntry
+	 * BookEntry.mmCreditEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1129,20 +1171,21 @@ public class CashEntry extends Entry {
 	 * definition} = "Book entry which is the source of the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CreditRelatedBookEntry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCreditRelatedBookEntry = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditRelatedBookEntry";
 			definition = "Book entry which is the source of the cash entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BookEntry.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.BookEntry.CreditEntry;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.BookEntry.mmCreditEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 		}
 	};
+	protected InvoiceFinancingAgreement relatedInvoiceFinancingTransaction;
 	/**
 	 * Specifies the invoice financing transaction which originates the entry.
 	 * <p>
@@ -1151,8 +1194,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#ResultingCashEntry
-	 * InvoiceFinancingAgreement.ResultingCashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmResultingCashEntry
+	 * InvoiceFinancingAgreement.mmResultingCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1178,20 +1221,21 @@ public class CashEntry extends Entry {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedInvoiceFinancingTransaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedInvoiceFinancingTransaction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvoiceFinancingTransaction";
 			definition = "Specifies the invoice financing transaction which originates the entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvoiceFinancingAgreement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.ResultingCashEntry;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmResultingCashEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmObject();
 		}
 	};
+	protected PaymentInvestigationCase relatedInvestigationCase;
 	/**
 	 * Case which is investigating a cash entry.
 	 * <p>
@@ -1200,8 +1244,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#UnderlyingCashEntry
-	 * PaymentInvestigationCase.UnderlyingCashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmUnderlyingCashEntry
+	 * PaymentInvestigationCase.mmUnderlyingCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1225,20 +1269,21 @@ public class CashEntry extends Entry {
 	 * definition} = "Case which is investigating a cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedInvestigationCase = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedInvestigationCase = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCase";
 			definition = "Case which is investigating a cash entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInvestigationCase.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.UnderlyingCashEntry;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmUnderlyingCashEntry;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmObject();
 		}
 	};
+	protected PaymentInvestigationCaseResolution relatedInvestigationCaseResolution;
 	/**
 	 * Payment investigation case resolution which created a correction
 	 * resulting in a cash entry.
@@ -1248,8 +1293,8 @@ public class CashEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#EntryCorrection
-	 * PaymentInvestigationCaseResolution.EntryCorrection}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmEntryCorrection
+	 * PaymentInvestigationCaseResolution.mmEntryCorrection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1275,20 +1320,21 @@ public class CashEntry extends Entry {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedInvestigationCaseResolution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedInvestigationCaseResolution = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCaseResolution";
 			definition = "Payment investigation case resolution which created a correction resulting in a cash entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.EntryCorrection;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmEntryCorrection;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 		}
 	};
+	protected ChargeIncludedIndicator chargesIncluded;
 	/**
 	 * Indicates whether charges have already been included in the entry amount.
 	 * <p>
@@ -1316,15 +1362,15 @@ public class CashEntry extends Entry {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ChargesIncluded = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmChargesIncluded = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CashEntry.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChargesIncluded";
 			definition = "Indicates whether charges have already been included in the entry amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ChargeIncludedIndicator.mmObject();
 		}
 	};
@@ -1332,31 +1378,31 @@ public class CashEntry extends Entry {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashEntry";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.CashEntry, com.tools20022.repository.entity.CashBalance.CashBalanceEntry, com.tools20022.repository.entity.Charges.CashEntry,
-						com.tools20022.repository.entity.BookEntry.CashEntry, com.tools20022.repository.entity.BookEntry.DebitEntry, com.tools20022.repository.entity.BookEntry.CreditEntry,
-						com.tools20022.repository.entity.Interest.CashEntry, com.tools20022.repository.entity.CurrencyExchange.CurrencyExchangeForCashEntry, com.tools20022.repository.entity.CashAvailability.CashEntry,
-						com.tools20022.repository.entity.PaymentInvestigationCase.UnderlyingCashEntry, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.EntryCorrection,
-						com.tools20022.repository.entity.InvoiceFinancingAgreement.ResultingCashEntry);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndCurrencyExchange2.ProprietaryAmount, com.tools20022.repository.msg.EntryTransaction1.AmountDetails,
-						com.tools20022.repository.msg.ReportEntry1.TransactionDetails, com.tools20022.repository.msg.AmountAndCurrencyExchange3.ProprietaryAmount, com.tools20022.repository.msg.EntryTransaction2.AmountDetails,
-						com.tools20022.repository.msg.EntryDetails1.TransactionDetails, com.tools20022.repository.msg.ReportEntry2.EntryDetails, com.tools20022.repository.msg.EntryTransaction3.AmountDetails,
-						com.tools20022.repository.msg.EntryDetails2.TransactionDetails, com.tools20022.repository.msg.ReportEntry3.EntryDetails, com.tools20022.repository.msg.AmountAndDirection35.Amount,
-						com.tools20022.repository.msg.EntryTransaction4.AmountDetails, com.tools20022.repository.msg.EntryDetails3.TransactionDetails, com.tools20022.repository.msg.ReportEntry4.EntryDetails,
-						com.tools20022.repository.msg.NotificationEntry1.AmountDetails, com.tools20022.repository.msg.NotificationEntry1.TransactionDetails, com.tools20022.repository.msg.StatementEntry1.AmountDetails,
-						com.tools20022.repository.msg.StatementEntry1.TransactionDetails, com.tools20022.repository.choice.UnderlyingTransaction1Choice.StatementEntry,
-						com.tools20022.repository.choice.UnderlyingTransaction2Choice.StatementEntry, com.tools20022.repository.msg.ReportEntry7.EntryDetails, com.tools20022.repository.msg.EntryDetails6.TransactionDetails,
-						com.tools20022.repository.msg.EntryTransaction7.AmountDetails, com.tools20022.repository.msg.ReportEntry8.EntryDetails, com.tools20022.repository.msg.EntryTransaction8.AmountDetails,
-						com.tools20022.repository.msg.EntryDetails7.TransactionDetails, com.tools20022.repository.choice.UnderlyingTransaction3Choice.StatementEntry);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmCashEntry, com.tools20022.repository.entity.CashBalance.mmCashBalanceEntry, com.tools20022.repository.entity.Charges.mmCashEntry,
+						com.tools20022.repository.entity.BookEntry.mmCashEntry, com.tools20022.repository.entity.BookEntry.mmDebitEntry, com.tools20022.repository.entity.BookEntry.mmCreditEntry,
+						com.tools20022.repository.entity.Interest.mmCashEntry, com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForCashEntry, com.tools20022.repository.entity.CashAvailability.mmCashEntry,
+						com.tools20022.repository.entity.PaymentInvestigationCase.mmUnderlyingCashEntry, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmEntryCorrection,
+						com.tools20022.repository.entity.InvoiceFinancingAgreement.mmResultingCashEntry);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndCurrencyExchange2.mmProprietaryAmount, com.tools20022.repository.msg.EntryTransaction1.mmAmountDetails,
+						com.tools20022.repository.msg.ReportEntry1.mmTransactionDetails, com.tools20022.repository.msg.AmountAndCurrencyExchange3.mmProprietaryAmount, com.tools20022.repository.msg.EntryTransaction2.mmAmountDetails,
+						com.tools20022.repository.msg.EntryDetails1.mmTransactionDetails, com.tools20022.repository.msg.ReportEntry2.mmEntryDetails, com.tools20022.repository.msg.EntryTransaction3.mmAmountDetails,
+						com.tools20022.repository.msg.EntryDetails2.mmTransactionDetails, com.tools20022.repository.msg.ReportEntry3.mmEntryDetails, com.tools20022.repository.msg.AmountAndDirection35.mmAmount,
+						com.tools20022.repository.msg.EntryTransaction4.mmAmountDetails, com.tools20022.repository.msg.EntryDetails3.mmTransactionDetails, com.tools20022.repository.msg.ReportEntry4.mmEntryDetails,
+						com.tools20022.repository.msg.NotificationEntry1.mmAmountDetails, com.tools20022.repository.msg.NotificationEntry1.mmTransactionDetails, com.tools20022.repository.msg.StatementEntry1.mmAmountDetails,
+						com.tools20022.repository.msg.StatementEntry1.mmTransactionDetails, com.tools20022.repository.choice.UnderlyingTransaction1Choice.mmStatementEntry,
+						com.tools20022.repository.choice.UnderlyingTransaction2Choice.mmStatementEntry, com.tools20022.repository.msg.ReportEntry7.mmEntryDetails, com.tools20022.repository.msg.EntryDetails6.mmTransactionDetails,
+						com.tools20022.repository.msg.EntryTransaction7.mmAmountDetails, com.tools20022.repository.msg.ReportEntry8.mmEntryDetails, com.tools20022.repository.msg.EntryTransaction8.mmAmountDetails,
+						com.tools20022.repository.msg.EntryDetails7.mmTransactionDetails, com.tools20022.repository.choice.UnderlyingTransaction3Choice.mmStatementEntry);
 				superType_lazy = () -> Entry.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashEntry.CashAccount, com.tools20022.repository.entity.CashEntry.Amount, com.tools20022.repository.entity.CashEntry.RelatedBookEntry,
-						com.tools20022.repository.entity.CashEntry.CashBalance, com.tools20022.repository.entity.CashEntry.CurrencyExchange, com.tools20022.repository.entity.CashEntry.Charges,
-						com.tools20022.repository.entity.CashEntry.Availability, com.tools20022.repository.entity.CashEntry.Interest, com.tools20022.repository.entity.CashEntry.DebitRelatedBookEntry,
-						com.tools20022.repository.entity.CashEntry.CreditRelatedBookEntry, com.tools20022.repository.entity.CashEntry.RelatedInvoiceFinancingTransaction, com.tools20022.repository.entity.CashEntry.RelatedInvestigationCase,
-						com.tools20022.repository.entity.CashEntry.RelatedInvestigationCaseResolution, com.tools20022.repository.entity.CashEntry.ChargesIncluded);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashEntry.mmCashAccount, com.tools20022.repository.entity.CashEntry.mmAmount, com.tools20022.repository.entity.CashEntry.mmRelatedBookEntry,
+						com.tools20022.repository.entity.CashEntry.mmCashBalance, com.tools20022.repository.entity.CashEntry.mmCurrencyExchange, com.tools20022.repository.entity.CashEntry.mmCharges,
+						com.tools20022.repository.entity.CashEntry.mmAvailability, com.tools20022.repository.entity.CashEntry.mmInterest, com.tools20022.repository.entity.CashEntry.mmDebitRelatedBookEntry,
+						com.tools20022.repository.entity.CashEntry.mmCreditRelatedBookEntry, com.tools20022.repository.entity.CashEntry.mmRelatedInvoiceFinancingTransaction,
+						com.tools20022.repository.entity.CashEntry.mmRelatedInvestigationCase, com.tools20022.repository.entity.CashEntry.mmRelatedInvestigationCaseResolution, com.tools20022.repository.entity.CashEntry.mmChargesIncluded);
 				derivationComponent_lazy = () -> Arrays.asList(AccountCashEntrySearch2.mmObject(), CashAccountEntrySearch3.mmObject(), AccountCashEntryDetails3.mmObject(), CashEntry1.mmObject(),
 						AmountAndCurrencyExchangeDetails1.mmObject(), AmountAndCurrencyExchangeDetails2.mmObject(), AmountAndCurrencyExchange2.mmObject(), ReportEntry1.mmObject(), AmountAndCurrencyExchangeDetails3.mmObject(),
 						AmountAndCurrencyExchangeDetails4.mmObject(), AmountAndCurrencyExchange3.mmObject(), EntryDetails1.mmObject(), ReportEntry2.mmObject(), EntryDetails2.mmObject(), ReportEntry3.mmObject(),
@@ -1367,5 +1413,117 @@ public class CashEntry extends Entry {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CashAccount> getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(List<com.tools20022.repository.entity.CashAccount> cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public BookEntry getRelatedBookEntry() {
+		return relatedBookEntry;
+	}
+
+	public void setRelatedBookEntry(com.tools20022.repository.entity.BookEntry relatedBookEntry) {
+		this.relatedBookEntry = relatedBookEntry;
+	}
+
+	public List<CashBalance> getCashBalance() {
+		return cashBalance;
+	}
+
+	public void setCashBalance(List<com.tools20022.repository.entity.CashBalance> cashBalance) {
+		this.cashBalance = cashBalance;
+	}
+
+	public CurrencyExchange getCurrencyExchange() {
+		return currencyExchange;
+	}
+
+	public void setCurrencyExchange(com.tools20022.repository.entity.CurrencyExchange currencyExchange) {
+		this.currencyExchange = currencyExchange;
+	}
+
+	public List<Charges> getCharges() {
+		return charges;
+	}
+
+	public void setCharges(List<com.tools20022.repository.entity.Charges> charges) {
+		this.charges = charges;
+	}
+
+	public CashAvailability getAvailability() {
+		return availability;
+	}
+
+	public void setAvailability(com.tools20022.repository.entity.CashAvailability availability) {
+		this.availability = availability;
+	}
+
+	public Interest getInterest() {
+		return interest;
+	}
+
+	public void setInterest(com.tools20022.repository.entity.Interest interest) {
+		this.interest = interest;
+	}
+
+	public BookEntry getDebitRelatedBookEntry() {
+		return debitRelatedBookEntry;
+	}
+
+	public void setDebitRelatedBookEntry(com.tools20022.repository.entity.BookEntry debitRelatedBookEntry) {
+		this.debitRelatedBookEntry = debitRelatedBookEntry;
+	}
+
+	public BookEntry getCreditRelatedBookEntry() {
+		return creditRelatedBookEntry;
+	}
+
+	public void setCreditRelatedBookEntry(com.tools20022.repository.entity.BookEntry creditRelatedBookEntry) {
+		this.creditRelatedBookEntry = creditRelatedBookEntry;
+	}
+
+	public InvoiceFinancingAgreement getRelatedInvoiceFinancingTransaction() {
+		return relatedInvoiceFinancingTransaction;
+	}
+
+	public void setRelatedInvoiceFinancingTransaction(com.tools20022.repository.entity.InvoiceFinancingAgreement relatedInvoiceFinancingTransaction) {
+		this.relatedInvoiceFinancingTransaction = relatedInvoiceFinancingTransaction;
+	}
+
+	public PaymentInvestigationCase getRelatedInvestigationCase() {
+		return relatedInvestigationCase;
+	}
+
+	public void setRelatedInvestigationCase(com.tools20022.repository.entity.PaymentInvestigationCase relatedInvestigationCase) {
+		this.relatedInvestigationCase = relatedInvestigationCase;
+	}
+
+	public PaymentInvestigationCaseResolution getRelatedInvestigationCaseResolution() {
+		return relatedInvestigationCaseResolution;
+	}
+
+	public void setRelatedInvestigationCaseResolution(com.tools20022.repository.entity.PaymentInvestigationCaseResolution relatedInvestigationCaseResolution) {
+		this.relatedInvestigationCaseResolution = relatedInvestigationCaseResolution;
+	}
+
+	public ChargeIncludedIndicator getChargesIncluded() {
+		return chargesIncluded;
+	}
+
+	public void setChargesIncluded(ChargeIncludedIndicator chargesIncluded) {
+		this.chargesIncluded = chargesIncluded;
 	}
 }

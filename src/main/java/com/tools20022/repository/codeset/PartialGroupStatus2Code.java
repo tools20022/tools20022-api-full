@@ -35,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedTechnicalValidation
- * PartialGroupStatus2Code.AcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedTechnicalValidation
+ * PartialGroupStatus2Code.mmAcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedCustomerProfile
- * PartialGroupStatus2Code.AcceptedCustomerProfile}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedCustomerProfile
+ * PartialGroupStatus2Code.mmAcceptedCustomerProfile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedSettlementInProcess
- * PartialGroupStatus2Code.AcceptedSettlementInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedSettlementInProcess
+ * PartialGroupStatus2Code.mmAcceptedSettlementInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedSettlementCompleted
- * PartialGroupStatus2Code.AcceptedSettlementCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedSettlementCompleted
+ * PartialGroupStatus2Code.mmAcceptedSettlementCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedCancellationRequest
- * PartialGroupStatus2Code.AcceptedCancellationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedCancellationRequest
+ * PartialGroupStatus2Code.mmAcceptedCancellationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedWithChange
- * PartialGroupStatus2Code.AcceptedWithChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedWithChange
+ * PartialGroupStatus2Code.mmAcceptedWithChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#Pending
- * PartialGroupStatus2Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmPending
+ * PartialGroupStatus2Code.mmPending}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +99,7 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedTechnicalValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedTechnicalValidation = new MMCode() {
+	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
@@ -122,7 +122,7 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedCustomerProfile"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedCustomerProfile = new MMCode() {
+	public static final MMCode mmAcceptedCustomerProfile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCustomerProfile";
@@ -145,7 +145,7 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedSettlementInProcess = new MMCode() {
+	public static final MMCode mmAcceptedSettlementInProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementInProcess";
@@ -168,7 +168,7 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementCompleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedSettlementCompleted = new MMCode() {
+	public static final MMCode mmAcceptedSettlementCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementCompleted";
@@ -191,7 +191,7 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedCancellationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedCancellationRequest = new MMCode() {
+	public static final MMCode mmAcceptedCancellationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCancellationRequest";
@@ -214,7 +214,7 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedWithChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedWithChange = new MMCode() {
+	public static final MMCode mmAcceptedWithChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithChange";
@@ -237,7 +237,7 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -248,15 +248,15 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartialGroupStatus2Code";
 				definition = "Indicates the status of a single payment transaction or of a group of payment transactions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedTechnicalValidation, com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedCustomerProfile,
-						com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedSettlementInProcess, com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedSettlementCompleted,
-						com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedCancellationRequest, com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedWithChange,
-						com.tools20022.repository.codeset.PartialGroupStatus2Code.Pending);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialGroupStatus2Code.mmAcceptedTechnicalValidation, com.tools20022.repository.codeset.PartialGroupStatus2Code.mmAcceptedCustomerProfile,
+						com.tools20022.repository.codeset.PartialGroupStatus2Code.mmAcceptedSettlementInProcess, com.tools20022.repository.codeset.PartialGroupStatus2Code.mmAcceptedSettlementCompleted,
+						com.tools20022.repository.codeset.PartialGroupStatus2Code.mmAcceptedCancellationRequest, com.tools20022.repository.codeset.PartialGroupStatus2Code.mmAcceptedWithChange,
+						com.tools20022.repository.codeset.PartialGroupStatus2Code.mmPending);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
 			}
 		});

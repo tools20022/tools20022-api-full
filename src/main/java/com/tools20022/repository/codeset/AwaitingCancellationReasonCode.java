@@ -30,8 +30,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AwaitingCancellationReasonCode#AwaitingCancellation
- * AwaitingCancellationReasonCode.AwaitingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AwaitingCancellationReasonCode#mmAwaitingCancellation
+ * AwaitingCancellationReasonCode.mmAwaitingCancellation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class AwaitingCancellationReasonCode {
 	 * definition} = "Cancellation has not been received yet."</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingCancellation = new MMCode() {
+	public static final MMCode mmAwaitingCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCancellation";
@@ -102,12 +102,12 @@ public class AwaitingCancellationReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WCAN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AwaitingCancellationReasonCode";
 				definition = "Specifies the reason why the instruction has a awaiting cancellation status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AwaitingCancellationReasonCode.AwaitingCancellation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AwaitingCancellationReasonCode.mmAwaitingCancellation);
 				derivation_lazy = () -> Arrays.asList(AwaitingCancellationReason1Code.mmObject());
 			}
 		});

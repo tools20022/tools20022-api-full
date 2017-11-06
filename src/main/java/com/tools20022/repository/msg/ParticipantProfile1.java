@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information from participant profile.
@@ -32,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantProfile1#ParticipantInformation
- * ParticipantProfile1.ParticipantInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantProfile1#mmParticipantInformation
+ * ParticipantProfile1.mmParticipantInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantProfile1#ParticipantAccountInformation
- * ParticipantProfile1.ParticipantAccountInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantProfile1#mmParticipantAccountInformation
+ * ParticipantProfile1.mmParticipantAccountInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ParticipantProfile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ParticipantInformation1 participantInformation;
 	/**
 	 * Participant information from participant profile.
 	 * <p>
@@ -84,7 +86,7 @@ public class ParticipantProfile1 {
 	 * definition} = "Participant information from participant profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantProfile1.mmObject();
 			isDerived = false;
@@ -92,12 +94,13 @@ public class ParticipantProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantInformation";
 			definition = "Participant information from participant profile.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ParticipantInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ParticipantAccount1> participantAccountInformation;
 	/**
 	 * Account information from participant.
 	 * <p>
@@ -124,7 +127,7 @@ public class ParticipantProfile1 {
 	 * definition} = "Account information from participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantAccountInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantAccountInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ParticipantProfile1.mmObject();
 			isDerived = false;
@@ -133,21 +136,37 @@ public class ParticipantProfile1 {
 			name = "ParticipantAccountInformation";
 			definition = "Account information from participant.";
 			minOccurs = 0;
-			type_lazy = () -> ParticipantAccount1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantProfile1.ParticipantInformation, com.tools20022.repository.msg.ParticipantProfile1.ParticipantAccountInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantProfile1.mmParticipantInformation, com.tools20022.repository.msg.ParticipantProfile1.mmParticipantAccountInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantProfile1";
 				definition = "Information from participant profile.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ParticipantInformation1 getParticipantInformation() {
+		return participantInformation;
+	}
+
+	public void setParticipantInformation(com.tools20022.repository.msg.ParticipantInformation1 participantInformation) {
+		this.participantInformation = participantInformation;
+	}
+
+	public List<ParticipantAccount1> getParticipantAccountInformation() {
+		return participantAccountInformation;
+	}
+
+	public void setParticipantAccountInformation(List<com.tools20022.repository.msg.ParticipantAccount1> participantAccountInformation) {
+		this.participantAccountInformation = participantAccountInformation;
 	}
 }

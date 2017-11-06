@@ -59,21 +59,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.ProcessingRequestV01#MessageIdentification
- * ProcessingRequestV01.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.admi.ProcessingRequestV01#mmMessageIdentification
+ * ProcessingRequestV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.ProcessingRequestV01#SettlementSessionIdentifier
- * ProcessingRequestV01.SettlementSessionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.area.admi.ProcessingRequestV01#mmSettlementSessionIdentifier
+ * ProcessingRequestV01.mmSettlementSessionIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.ProcessingRequestV01#Request
- * ProcessingRequestV01.Request}</li>
+ * {@linkplain com.tools20022.repository.area.admi.ProcessingRequestV01#mmRequest
+ * ProcessingRequestV01.mmRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.admi.ProcessingRequestV01#identifier
- * ProcessingRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code admi.017.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProcessingRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Unique and unambiguous identifier for the message, as assigned by the
 	 * sender.
@@ -114,17 +113,18 @@ public class ProcessingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for the message, as assigned by the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
 	 * Indicates the requested CLS Settlement Session that the related trade is
 	 * part of.
@@ -151,17 +151,18 @@ public class ProcessingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "Indicates the requested CLS Settlement Session that the related trade is part of.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected RequestDetails19 request;
 	/**
 	 * Contains the details of the processing request.
 	 * <p>
@@ -185,42 +186,15 @@ public class ProcessingRequestV01 {
 	 * definition} = "Contains the details of the processing request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Request = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Req";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Request";
 			definition = "Contains the details of the processing request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RequestDetails19.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "admi"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "017"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "admi";
-			messageFunctionality = "017";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -234,11 +208,42 @@ public class ProcessingRequestV01 {
 				rootElement = "Document";
 				xmlTag = "PrcgReq";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.ProcessingRequestV01.MessageIdentification, com.tools20022.repository.area.admi.ProcessingRequestV01.SettlementSessionIdentifier,
-						com.tools20022.repository.area.admi.ProcessingRequestV01.Request);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.admi.ProcessingRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.ProcessingRequestV01.mmMessageIdentification, com.tools20022.repository.area.admi.ProcessingRequestV01.mmSettlementSessionIdentifier,
+						com.tools20022.repository.area.admi.ProcessingRequestV01.mmRequest);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "admi";
+						messageFunctionality = "017";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier;
+	}
+
+	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+		this.settlementSessionIdentifier = settlementSessionIdentifier;
+	}
+
+	public RequestDetails19 getRequest() {
+		return request;
+	}
+
+	public void setRequest(RequestDetails19 request) {
+		this.request = request;
 	}
 }

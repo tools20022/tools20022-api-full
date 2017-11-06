@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.FinancingAgreementList1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The PartyRegistrationAndGuaranteeNotification message is sent by a factoring
@@ -64,30 +65,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#Header
- * PartyRegistrationAndGuaranteeNotificationV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#mmHeader
+ * PartyRegistrationAndGuaranteeNotificationV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#NotificationList
- * PartyRegistrationAndGuaranteeNotificationV01.NotificationList}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#mmNotificationList
+ * PartyRegistrationAndGuaranteeNotificationV01.mmNotificationList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#NotificationCount
- * PartyRegistrationAndGuaranteeNotificationV01.NotificationCount}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#mmNotificationCount
+ * PartyRegistrationAndGuaranteeNotificationV01.mmNotificationCount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#ItemCount
- * PartyRegistrationAndGuaranteeNotificationV01.ItemCount}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#mmItemCount
+ * PartyRegistrationAndGuaranteeNotificationV01.mmItemCount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#ControlSum
- * PartyRegistrationAndGuaranteeNotificationV01.ControlSum}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#mmControlSum
+ * PartyRegistrationAndGuaranteeNotificationV01.mmControlSum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#AttachedMessage
- * PartyRegistrationAndGuaranteeNotificationV01.AttachedMessage}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#mmAttachedMessage
+ * PartyRegistrationAndGuaranteeNotificationV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01#identifier
- * PartyRegistrationAndGuaranteeNotificationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsin.011.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyRegistrationAndGuaranteeNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected BusinessLetter1 header;
 	/**
 	 * Set of characteristics that unambiguously identify the notification,
 	 * common parameters, documents and identifications.
@@ -128,17 +128,18 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics that unambiguously identify the notification, common parameters, documents and identifications.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BusinessLetter1.mmObject();
 		}
 	};
+	protected List<FinancingAgreementList1> notificationList;
 	/**
 	 * List of otifications.
 	 * <p>
@@ -162,7 +163,7 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * definition} = "List of otifications."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotificationList = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotificationList = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnList";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,6 +173,7 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			complexType_lazy = () -> FinancingAgreementList1.mmObject();
 		}
 	};
+	protected Max15NumericText notificationCount;
 	/**
 	 * Number of notification lists as control value.
 	 * <p>
@@ -195,17 +197,18 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * definition} = "Number of notification lists as control value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotificationCount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotificationCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnCnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCount";
 			definition = "Number of notification lists as control value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected Max15NumericText itemCount;
 	/**
 	 * Total number of individual items in all lists.
 	 * <p>
@@ -229,17 +232,18 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * definition} = "Total number of individual items in all lists."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ItemCount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmItemCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ItmCnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemCount";
 			definition = "Total number of individual items in all lists.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber controlSum;
 	/**
 	 * Total of all individual amounts included in all lists, irrespective of
 	 * currencies or direction.
@@ -266,17 +270,18 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ControlSum = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmControlSum = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrlSum";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in all lists, irrespective of currencies or direction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected List<EncapsulatedBusinessMessage1> attachedMessage;
 	/**
 	 * Referenced or related business message.
 	 * <p>
@@ -300,7 +305,7 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * definition} = "Referenced or related business message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AttachedMessage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAttachedMessage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AttchdMsg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,33 +313,6 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			definition = "Referenced or related business message.";
 			minOccurs = 0;
 			complexType_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsin"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsin";
-			messageFunctionality = "011";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -348,13 +326,68 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "PtyRegnAndGrntNtfctn";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.Header,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.NotificationList, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.NotificationCount,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.ItemCount, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.ControlSum,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.AttachedMessage);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.mmHeader,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.mmNotificationList, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.mmNotificationCount,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.mmItemCount, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.mmControlSum,
+						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.mmAttachedMessage);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsin";
+						messageFunctionality = "011";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BusinessLetter1 getHeader() {
+		return header;
+	}
+
+	public void setHeader(BusinessLetter1 header) {
+		this.header = header;
+	}
+
+	public List<FinancingAgreementList1> getNotificationList() {
+		return notificationList;
+	}
+
+	public void setNotificationList(List<FinancingAgreementList1> notificationList) {
+		this.notificationList = notificationList;
+	}
+
+	public Max15NumericText getNotificationCount() {
+		return notificationCount;
+	}
+
+	public void setNotificationCount(Max15NumericText notificationCount) {
+		this.notificationCount = notificationCount;
+	}
+
+	public Max15NumericText getItemCount() {
+		return itemCount;
+	}
+
+	public void setItemCount(Max15NumericText itemCount) {
+		this.itemCount = itemCount;
+	}
+
+	public DecimalNumber getControlSum() {
+		return controlSum;
+	}
+
+	public void setControlSum(DecimalNumber controlSum) {
+		this.controlSum = controlSum;
+	}
+
+	public List<EncapsulatedBusinessMessage1> getAttachedMessage() {
+		return attachedMessage;
+	}
+
+	public void setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
+		this.attachedMessage = attachedMessage;
 	}
 }

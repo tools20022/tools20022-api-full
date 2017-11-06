@@ -22,7 +22,9 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.CorporateActionOption;
+import com.tools20022.repository.entity.SafekeepingPlace;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,32 +38,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#AccountOwner
- * CorporateActionOption8.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#mmAccountOwner
+ * CorporateActionOption8.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#SafekeepingAccount
- * CorporateActionOption8.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#mmSafekeepingAccount
+ * CorporateActionOption8.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#CashAccount
- * CorporateActionOption8.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#mmCashAccount
+ * CorporateActionOption8.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#SafekeepingPlace
- * CorporateActionOption8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#mmSafekeepingPlace
+ * CorporateActionOption8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#SecurityIdentification
- * CorporateActionOption8.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#mmSecurityIdentification
+ * CorporateActionOption8.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#TotalEligibleBalance
- * CorporateActionOption8.TotalEligibleBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#mmTotalEligibleBalance
+ * CorporateActionOption8.mmTotalEligibleBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#InstructedBalance
- * CorporateActionOption8.InstructedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#mmInstructedBalance
+ * CorporateActionOption8.mmInstructedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#UninstructedBalance
- * CorporateActionOption8.UninstructedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#mmUninstructedBalance
+ * CorporateActionOption8.mmUninstructedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#StatusQuantityOrQuantityToReceive
- * CorporateActionOption8.StatusQuantityOrQuantityToReceive}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#mmStatusQuantityOrQuantityToReceive
+ * CorporateActionOption8.mmStatusQuantityOrQuantityToReceive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -70,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOption8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification13Choice accountOwner;
 	/**
 	 * Party that owns the account.
 	 * <p>
@@ -98,8 +101,8 @@ public class CorporateActionOption8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,20 +121,21 @@ public class CorporateActionOption8 {
 	 * definition} = "Party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionOption8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification13Choice.mmObject();
 		}
 	};
+	protected Max35Text safekeepingAccount;
 	/**
 	 * Account where financial instruments are maintained.
 	 * <p>
@@ -144,8 +148,8 @@ public class CorporateActionOption8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#SecuritiesAccount
-	 * CorporateActionServicing.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmSecuritiesAccount
+	 * CorporateActionServicing.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,20 +168,21 @@ public class CorporateActionOption8 {
 	 * definition} = "Account where financial instruments are maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmSecuritiesAccount;
 			componentContext_lazy = () -> CorporateActionOption8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CashAccountIdentification5Choice cashAccount;
 	/**
 	 * Account where cash is maintained.
 	 * <p>
@@ -210,20 +215,21 @@ public class CorporateActionOption8 {
 	 * definition} = "Account where cash is maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> CorporateActionOption8.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account where cash is maintained.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CashAccountIdentification5Choice.mmObject();
 		}
 	};
+	protected SafekeepingPlaceFormat2Choice safekeepingPlace;
 	/**
 	 * Location where the financial instruments are/will be safekept.
 	 * <p>
@@ -258,20 +264,21 @@ public class CorporateActionOption8 {
 	 * "Location where the financial instruments are/will be safekept."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SafekeepingPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> CorporateActionOption8.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Location where the financial instruments are/will be safekept.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingPlaceFormat2Choice.mmObject();
 		}
 	};
+	protected SecurityIdentification11 securityIdentification;
 	/**
 	 * Identifies the financial instrument.
 	 * <p>
@@ -285,8 +292,8 @@ public class CorporateActionOption8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -305,20 +312,21 @@ public class CorporateActionOption8 {
 	 * definition} = "Identifies the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> CorporateActionOption8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification11.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
 		}
 	};
+	protected Quantity3Choice totalEligibleBalance;
 	/**
 	 * Total quantity of financial instruments of the balance.
 	 * <p>
@@ -332,8 +340,8 @@ public class CorporateActionOption8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#EligibleBalance
-	 * CorporateActionEntitlement.EligibleBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmEligibleBalance
+	 * CorporateActionEntitlement.mmEligibleBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -352,20 +360,21 @@ public class CorporateActionOption8 {
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalEligibleBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmEligibleBalance;
 			componentContext_lazy = () -> CorporateActionOption8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.EligibleBalance;
 			isDerived = false;
 			xmlTag = "TtlElgblBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Quantity3Choice.mmObject();
 		}
 	};
+	protected SignedQuantityFormat1 instructedBalance;
 	/**
 	 * Balance of instructed position.
 	 * <p>
@@ -379,8 +388,8 @@ public class CorporateActionOption8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#InstructedBalance
-	 * CorporateActionEntitlement.InstructedBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmInstructedBalance
+	 * CorporateActionEntitlement.mmInstructedBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -399,20 +408,21 @@ public class CorporateActionOption8 {
 	 * definition} = "Balance of instructed position."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedBalance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> CorporateActionOption8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.InstructedBalance;
 			isDerived = false;
 			xmlTag = "InstdBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedBalance";
 			definition = "Balance of instructed position.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SignedQuantityFormat1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat1.mmObject();
 		}
 	};
+	protected SignedQuantityFormat1 uninstructedBalance;
 	/**
 	 * Balance of uninstructed position.
 	 * <p>
@@ -426,8 +436,8 @@ public class CorporateActionOption8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#UninstructedBalance
-	 * CorporateActionEntitlement.UninstructedBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmUninstructedBalance
+	 * CorporateActionEntitlement.mmUninstructedBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -446,20 +456,21 @@ public class CorporateActionOption8 {
 	 * definition} = "Balance of uninstructed position."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UninstructedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUninstructedBalance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmUninstructedBalance;
 			componentContext_lazy = () -> CorporateActionOption8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.UninstructedBalance;
 			isDerived = false;
 			xmlTag = "UinstdBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninstructedBalance";
 			definition = "Balance of uninstructed position.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SignedQuantityFormat1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat1.mmObject();
 		}
 	};
+	protected StatusOrQuantityToReceive1Choice statusQuantityOrQuantityToReceive;
 	/**
 	 * Specifies whether the quantity of financial instrument is a status
 	 * quantity or a quantity to receive.
@@ -490,7 +501,7 @@ public class CorporateActionOption8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusQuantityOrQuantityToReceive = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusQuantityOrQuantityToReceive = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionOption8.mmObject();
 			isDerived = false;
@@ -498,27 +509,100 @@ public class CorporateActionOption8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusQuantityOrQuantityToReceive";
 			definition = "Specifies whether the quantity of financial instrument is a status quantity or a quantity to receive.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> StatusOrQuantityToReceive1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> StatusOrQuantityToReceive1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption8.AccountOwner, com.tools20022.repository.msg.CorporateActionOption8.SafekeepingAccount,
-						com.tools20022.repository.msg.CorporateActionOption8.CashAccount, com.tools20022.repository.msg.CorporateActionOption8.SafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption8.SecurityIdentification,
-						com.tools20022.repository.msg.CorporateActionOption8.TotalEligibleBalance, com.tools20022.repository.msg.CorporateActionOption8.InstructedBalance,
-						com.tools20022.repository.msg.CorporateActionOption8.UninstructedBalance, com.tools20022.repository.msg.CorporateActionOption8.StatusQuantityOrQuantityToReceive);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption8.mmAccountOwner, com.tools20022.repository.msg.CorporateActionOption8.mmSafekeepingAccount,
+						com.tools20022.repository.msg.CorporateActionOption8.mmCashAccount, com.tools20022.repository.msg.CorporateActionOption8.mmSafekeepingPlace,
+						com.tools20022.repository.msg.CorporateActionOption8.mmSecurityIdentification, com.tools20022.repository.msg.CorporateActionOption8.mmTotalEligibleBalance,
+						com.tools20022.repository.msg.CorporateActionOption8.mmInstructedBalance, com.tools20022.repository.msg.CorporateActionOption8.mmUninstructedBalance,
+						com.tools20022.repository.msg.CorporateActionOption8.mmStatusQuantityOrQuantityToReceive);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOption8";
 				definition = "Provides information about the corporate action option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification13Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification13Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public Max35Text getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(Max35Text safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public CashAccountIdentification5Choice getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(CashAccountIdentification5Choice cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public SafekeepingPlaceFormat2Choice getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(SafekeepingPlaceFormat2Choice safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
+	}
+
+	public SecurityIdentification11 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification11 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public Quantity3Choice getTotalEligibleBalance() {
+		return totalEligibleBalance;
+	}
+
+	public void setTotalEligibleBalance(Quantity3Choice totalEligibleBalance) {
+		this.totalEligibleBalance = totalEligibleBalance;
+	}
+
+	public SignedQuantityFormat1 getInstructedBalance() {
+		return instructedBalance;
+	}
+
+	public void setInstructedBalance(com.tools20022.repository.msg.SignedQuantityFormat1 instructedBalance) {
+		this.instructedBalance = instructedBalance;
+	}
+
+	public SignedQuantityFormat1 getUninstructedBalance() {
+		return uninstructedBalance;
+	}
+
+	public void setUninstructedBalance(com.tools20022.repository.msg.SignedQuantityFormat1 uninstructedBalance) {
+		this.uninstructedBalance = uninstructedBalance;
+	}
+
+	public StatusOrQuantityToReceive1Choice getStatusQuantityOrQuantityToReceive() {
+		return statusQuantityOrQuantityToReceive;
+	}
+
+	public void setStatusQuantityOrQuantityToReceive(StatusOrQuantityToReceive1Choice statusQuantityOrQuantityToReceive) {
+		this.statusQuantityOrQuantityToReceive = statusQuantityOrQuantityToReceive;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -74,36 +75,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#Identification
- * AgentCANotificationAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmIdentification
+ * AgentCANotificationAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#NotificationTypeAndLinkage
- * AgentCANotificationAdviceV01.NotificationTypeAndLinkage}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmNotificationTypeAndLinkage
+ * AgentCANotificationAdviceV01.mmNotificationTypeAndLinkage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#NotificationGeneralInformation
- * AgentCANotificationAdviceV01.NotificationGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmNotificationGeneralInformation
+ * AgentCANotificationAdviceV01.mmNotificationGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#CorporateActionGeneralInformation
- * AgentCANotificationAdviceV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmCorporateActionGeneralInformation
+ * AgentCANotificationAdviceV01.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#CorporateActionDetails
- * AgentCANotificationAdviceV01.CorporateActionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmCorporateActionDetails
+ * AgentCANotificationAdviceV01.mmCorporateActionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#CorporateActionOptionDetails
- * AgentCANotificationAdviceV01.CorporateActionOptionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmCorporateActionOptionDetails
+ * AgentCANotificationAdviceV01.mmCorporateActionOptionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#ContactDetails
- * AgentCANotificationAdviceV01.ContactDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmContactDetails
+ * AgentCANotificationAdviceV01.mmContactDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#AdditionalInformation
- * AgentCANotificationAdviceV01.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmAdditionalInformation
+ * AgentCANotificationAdviceV01.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#identifier
- * AgentCANotificationAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.009.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,6 +118,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentCANotificationAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * advice.
@@ -145,17 +145,18 @@ public class AgentCANotificationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected LinkedCorporateAction1 notificationTypeAndLinkage;
 	/**
 	 * Provides information about the type of notification advice and linked
 	 * message.
@@ -182,17 +183,18 @@ public class AgentCANotificationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotificationTypeAndLinkage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotificationTypeAndLinkage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnTpAndLkg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationTypeAndLinkage";
 			definition = "Provides information about the type of  notification advice and linked message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> LinkedCorporateAction1.mmObject();
 		}
 	};
+	protected CorporateActionNotification1 notificationGeneralInformation;
 	/**
 	 * Provides general information about the notification advice.
 	 * <p>
@@ -217,17 +219,18 @@ public class AgentCANotificationAdviceV01 {
 	 * "Provides general information about the notification advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotificationGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotificationGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationGeneralInformation";
 			definition = "Provides general information about the notification advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionNotification1.mmObject();
 		}
 	};
+	protected CorporateActionInformation2 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -251,17 +254,18 @@ public class AgentCANotificationAdviceV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation2.mmObject();
 		}
 	};
+	protected CorporateAction2 corporateActionDetails;
 	/**
 	 * Provides details information about the CA event.
 	 * <p>
@@ -285,17 +289,18 @@ public class AgentCANotificationAdviceV01 {
 	 * definition} = "Provides details information about the CA event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionDetails";
 			definition = "Provides details information about the CA event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateAction2.mmObject();
 		}
 	};
+	protected List<CorporateActionOption1> corporateActionOptionDetails;
 	/**
 	 * Provides detailed information about the option of the CA event.
 	 * <p>
@@ -320,7 +325,7 @@ public class AgentCANotificationAdviceV01 {
 	 * "Provides detailed information about the option of the CA event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionOptionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionOptionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnOptnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,6 +335,7 @@ public class AgentCANotificationAdviceV01 {
 			complexType_lazy = () -> CorporateActionOption1.mmObject();
 		}
 	};
+	protected List<ContactPerson1> contactDetails;
 	/**
 	 * Provides information about the contact responsible for the transaction
 	 * identified in the message.
@@ -355,7 +361,7 @@ public class AgentCANotificationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ContactDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmContactDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -365,6 +371,7 @@ public class AgentCANotificationAdviceV01 {
 			complexType_lazy = () -> ContactPerson1.mmObject();
 		}
 	};
+	protected CorporateActionNarrative2 additionalInformation;
 	/**
 	 * Provides additional information.
 	 * <p>
@@ -388,42 +395,15 @@ public class AgentCANotificationAdviceV01 {
 	 * definition} = "Provides additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "009"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "009";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -437,13 +417,85 @@ public class AgentCANotificationAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCANtfctnAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.Identification, com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.NotificationTypeAndLinkage,
-						com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.NotificationGeneralInformation, com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.CorporateActionDetails, com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.CorporateActionOptionDetails,
-						com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.ContactDetails, com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.AdditionalInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmNotificationTypeAndLinkage, com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmNotificationGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmCorporateActionDetails,
+						com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmCorporateActionOptionDetails, com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmContactDetails,
+						com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmAdditionalInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "009";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public LinkedCorporateAction1 getNotificationTypeAndLinkage() {
+		return notificationTypeAndLinkage;
+	}
+
+	public void setNotificationTypeAndLinkage(LinkedCorporateAction1 notificationTypeAndLinkage) {
+		this.notificationTypeAndLinkage = notificationTypeAndLinkage;
+	}
+
+	public CorporateActionNotification1 getNotificationGeneralInformation() {
+		return notificationGeneralInformation;
+	}
+
+	public void setNotificationGeneralInformation(CorporateActionNotification1 notificationGeneralInformation) {
+		this.notificationGeneralInformation = notificationGeneralInformation;
+	}
+
+	public CorporateActionInformation2 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionInformation2 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public CorporateAction2 getCorporateActionDetails() {
+		return corporateActionDetails;
+	}
+
+	public void setCorporateActionDetails(CorporateAction2 corporateActionDetails) {
+		this.corporateActionDetails = corporateActionDetails;
+	}
+
+	public List<CorporateActionOption1> getCorporateActionOptionDetails() {
+		return corporateActionOptionDetails;
+	}
+
+	public void setCorporateActionOptionDetails(List<CorporateActionOption1> corporateActionOptionDetails) {
+		this.corporateActionOptionDetails = corporateActionOptionDetails;
+	}
+
+	public List<ContactPerson1> getContactDetails() {
+		return contactDetails;
+	}
+
+	public void setContactDetails(List<ContactPerson1> contactDetails) {
+		this.contactDetails = contactDetails;
+	}
+
+	public CorporateActionNarrative2 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(CorporateActionNarrative2 additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

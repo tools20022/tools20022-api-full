@@ -34,26 +34,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType5Code#EmissionAllowance
- * ProductType5Code.EmissionAllowance}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductType5Code#mmEmissionAllowance
+ * ProductType5Code.mmEmissionAllowance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType5Code#InterestRate
- * ProductType5Code.InterestRate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#Equity
- * ProductType5Code.Equity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#Commodity
- * ProductType5Code.Commodity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#Credit
- * ProductType5Code.Credit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#Currency
- * ProductType5Code.Currency}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductType5Code#mmInterestRate
+ * ProductType5Code.mmInterestRate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#mmEquity
+ * ProductType5Code.mmEquity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ProductType5Code#mmCommodity
+ * ProductType5Code.mmCommodity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#mmCredit
+ * ProductType5Code.mmCredit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ProductType5Code#mmCurrency
+ * ProductType5Code.mmCurrency}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +86,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "EmissionAllowance"</li>
 	 * </ul>
 	 */
-	public static final MMCode EmissionAllowance = new MMCode() {
+	public static final MMCode mmEmissionAllowance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
@@ -107,7 +109,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "InterestRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestRate = new MMCode() {
+	public static final MMCode mmInterestRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
@@ -130,7 +132,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "Equity"</li>
 	 * </ul>
 	 */
-	public static final MMCode Equity = new MMCode() {
+	public static final MMCode mmEquity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
@@ -153,7 +155,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "Commodity"</li>
 	 * </ul>
 	 */
-	public static final MMCode Commodity = new MMCode() {
+	public static final MMCode mmCommodity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
@@ -176,7 +178,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "Credit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Credit = new MMCode() {
+	public static final MMCode mmCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
@@ -199,7 +201,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "Currency"</li>
 	 * </ul>
 	 */
-	public static final MMCode Currency = new MMCode() {
+	public static final MMCode mmCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
@@ -210,13 +212,13 @@ public class ProductType5Code extends ProductTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductType5Code";
 				definition = "Specifies the underlying type of product or financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductType5Code.EmissionAllowance, com.tools20022.repository.codeset.ProductType5Code.InterestRate,
-						com.tools20022.repository.codeset.ProductType5Code.Equity, com.tools20022.repository.codeset.ProductType5Code.Commodity, com.tools20022.repository.codeset.ProductType5Code.Credit,
-						com.tools20022.repository.codeset.ProductType5Code.Currency);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductType5Code.mmEmissionAllowance, com.tools20022.repository.codeset.ProductType5Code.mmInterestRate,
+						com.tools20022.repository.codeset.ProductType5Code.mmEquity, com.tools20022.repository.codeset.ProductType5Code.mmCommodity, com.tools20022.repository.codeset.ProductType5Code.mmCredit,
+						com.tools20022.repository.codeset.ProductType5Code.mmCurrency);
 				trace_lazy = () -> ProductTypeV2Code.mmObject();
 			}
 		});

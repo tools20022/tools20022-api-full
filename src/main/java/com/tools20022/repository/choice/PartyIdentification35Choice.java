@@ -39,11 +39,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification35Choice#BIC
- * PartyIdentification35Choice.BIC}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification35Choice#mmBIC
+ * PartyIdentification35Choice.mmBIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification35Choice#ProprietaryIdentification
- * PartyIdentification35Choice.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification35Choice#mmProprietaryIdentification
+ * PartyIdentification35Choice.mmProprietaryIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,45 +55,45 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#ClearingMember
- * MarginReportV02.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.MarginReportV02#mmClearingMember
+ * MarginReportV02.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#ClearingMember
- * DefaultFundContributionReportV02.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.DefaultFundContributionReportV02#mmClearingMember
+ * DefaultFundContributionReportV02.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#ClearingMember
- * TradeLegNotificationV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationV03#mmClearingMember
+ * TradeLegNotificationV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#ClearingMember
- * BuyInNotificationV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#mmClearingMember
+ * BuyInNotificationV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#ClearingMember
- * NetPositionV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#mmClearingMember
+ * NetPositionV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#ClearingSegment
- * NetPositionV03.ClearingSegment}</li>
+ * {@linkplain com.tools20022.repository.area.secl.NetPositionV03#mmClearingSegment
+ * NetPositionV03.mmClearingSegment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInConfirmationV03#ClearingMember
- * BuyInConfirmationV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInConfirmationV03#mmClearingMember
+ * BuyInConfirmationV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#ClearingMember
- * TradeLegStatementV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegStatementV03#mmClearingMember
+ * TradeLegStatementV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03#ClearingMember
- * TradeLegNotificationCancellationV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03#mmClearingMember
+ * TradeLegNotificationCancellationV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#ClearingMember
- * SettlementObligationReportV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmClearingMember
+ * SettlementObligationReportV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#ClearingSegment
- * SettlementObligationReportV03.ClearingSegment}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmClearingSegment
+ * SettlementObligationReportV03.mmClearingSegment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -110,6 +110,7 @@ import java.util.function.Supplier;
 public class PartyIdentification35Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AnyBICIdentifier bIC;
 	/**
 	 * Unique and unambiguous identifier for an organisation that is allocated
 	 * by an institution, eg, Dun &amp; Bradstreet Identification.
@@ -124,8 +125,8 @@ public class PartyIdentification35Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,20 +147,21 @@ public class PartyIdentification35Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> PartyIdentification35Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "BIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
 			definition = "Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun & Bradstreet Identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected GenericIdentification29 proprietaryIdentification;
 	/**
 	 * Unique and unambiguous identifier, as assigned to a financial institution
 	 * using a proprietary identification scheme.
@@ -174,8 +176,8 @@ public class PartyIdentification35Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,17 +198,17 @@ public class PartyIdentification35Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification35Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification29.mmObject();
 		}
 	};
@@ -214,14 +216,14 @@ public class PartyIdentification35Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification35Choice.BIC, com.tools20022.repository.choice.PartyIdentification35Choice.ProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification35Choice.mmBIC, com.tools20022.repository.choice.PartyIdentification35Choice.mmProprietaryIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.MarginReportV02.mmClearingMember, com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmClearingMember,
+						com.tools20022.repository.area.secl.TradeLegNotificationV03.mmClearingMember, com.tools20022.repository.area.secl.BuyInNotificationV03.mmClearingMember,
+						com.tools20022.repository.area.secl.NetPositionV03.mmClearingMember, com.tools20022.repository.area.secl.NetPositionV03.mmClearingSegment, com.tools20022.repository.area.secl.BuyInConfirmationV03.mmClearingMember,
+						com.tools20022.repository.area.secl.TradeLegStatementV03.mmClearingMember, com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmClearingMember,
+						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmClearingMember, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmClearingSegment);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.MarginReportV02.ClearingMember, com.tools20022.repository.area.secl.DefaultFundContributionReportV02.ClearingMember,
-						com.tools20022.repository.area.secl.TradeLegNotificationV03.ClearingMember, com.tools20022.repository.area.secl.BuyInNotificationV03.ClearingMember, com.tools20022.repository.area.secl.NetPositionV03.ClearingMember,
-						com.tools20022.repository.area.secl.NetPositionV03.ClearingSegment, com.tools20022.repository.area.secl.BuyInConfirmationV03.ClearingMember, com.tools20022.repository.area.secl.TradeLegStatementV03.ClearingMember,
-						com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.ClearingMember, com.tools20022.repository.area.secl.SettlementObligationReportV03.ClearingMember,
-						com.tools20022.repository.area.secl.SettlementObligationReportV03.ClearingSegment);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -235,5 +237,21 @@ public class PartyIdentification35Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier getBIC() {
+		return bIC;
+	}
+
+	public void setBIC(AnyBICIdentifier bIC) {
+		this.bIC = bIC;
+	}
+
+	public GenericIdentification29 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(GenericIdentification29 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
 	}
 }

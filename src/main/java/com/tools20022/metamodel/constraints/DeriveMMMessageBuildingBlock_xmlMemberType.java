@@ -19,10 +19,14 @@ package com.tools20022.metamodel.constraints;
 
 import com.tools20022.metamodel.MMLogicalType;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
+import com.tools20022.metamodel.struct.MMMessageBuildingBlock_;
+
 import java.util.function.Function;
 
 /**
  * Calculate derived attribute {@link MMMessageBuildingBlock#getXmlMemberType()}
+ * 
+ * @see MMMessageBuildingBlock_#checkMessageBuildingBlockHasExactlyOneType
  */
 public class DeriveMMMessageBuildingBlock_xmlMemberType implements Function<MMMessageBuildingBlock, MMLogicalType> {
 
@@ -31,6 +35,12 @@ public class DeriveMMMessageBuildingBlock_xmlMemberType implements Function<MMMe
 	 */
 	@Override
 	public MMLogicalType apply(MMMessageBuildingBlock mmBean) {
-		throw new RuntimeException("Not implemented!");
+		if (mmBean.getSimpleType().isPresent())
+			return mmBean.getSimpleType().get();
+		else if (mmBean.getComplexType().isPresent())
+			return mmBean.getComplexType().get();
+		else
+			throw new RuntimeException(
+					"A MessageBuildingBlock must have exactly one of the following: simpleType or complexType.");
 	}
 }

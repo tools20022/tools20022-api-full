@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradingVenueIdentification2#Identification
- * TradingVenueIdentification2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.TradingVenueIdentification2#mmIdentification
+ * TradingVenueIdentification2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradingVenueIdentification2#Type
- * TradingVenueIdentification2.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.TradingVenueIdentification2#mmType
+ * TradingVenueIdentification2.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradingVenueIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max50Text identification;
 	/**
 	 * Identification field of the submitting entity.
 	 * <p>
@@ -76,8 +77,8 @@ public class TradingVenueIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class TradingVenueIdentification2 {
 	 * definition} = "Identification field of the submitting entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> TradingVenueIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification field of the submitting entity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max50Text.mmObject();
 		}
 	};
+	protected TradingVenue2Code type;
 	/**
 	 * Code list of venues to populate free form text identification.
 	 * <p>
@@ -123,8 +125,8 @@ public class TradingVenueIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Scheme
-	 * GenericIdentification.Scheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmScheme
+	 * GenericIdentification.mmScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,17 +146,17 @@ public class TradingVenueIdentification2 {
 	 * "Code list of venues to populate free form text identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmScheme;
 			componentContext_lazy = () -> TradingVenueIdentification2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Scheme;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Code list of venues to populate free form text identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TradingVenue2Code.mmObject();
 		}
 	};
@@ -162,14 +164,30 @@ public class TradingVenueIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingVenueIdentification2.Identification, com.tools20022.repository.msg.TradingVenueIdentification2.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingVenueIdentification2.mmIdentification, com.tools20022.repository.msg.TradingVenueIdentification2.mmType);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingVenueIdentification2";
 				definition = "Trading venue related fields.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max50Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max50Text identification) {
+		this.identification = identification;
+	}
+
+	public TradingVenue2Code getType() {
+		return type;
+	}
+
+	public void setType(TradingVenue2Code type) {
+		this.type = type;
 	}
 }

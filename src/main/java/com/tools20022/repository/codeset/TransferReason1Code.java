@@ -34,43 +34,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#UndividedPossession
- * TransferReason1Code.UndividedPossession}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmUndividedPossession
+ * TransferReason1Code.mmUndividedPossession}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#TransferBetweenSpouses
- * TransferReason1Code.TransferBetweenSpouses}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TransferReason1Code#Trade
- * TransferReason1Code.Trade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmTransferBetweenSpouses
+ * TransferReason1Code.mmTransferBetweenSpouses}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#OrdinaryTransfer
- * TransferReason1Code.OrdinaryTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmTrade
+ * TransferReason1Code.mmTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#Heritage
- * TransferReason1Code.Heritage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TransferReason1Code#Gift
- * TransferReason1Code.Gift}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmOrdinaryTransfer
+ * TransferReason1Code.mmOrdinaryTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#PledgedAccountTransfer
- * TransferReason1Code.PledgedAccountTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmHeritage
+ * TransferReason1Code.mmHeritage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmGift
+ * TransferReason1Code.mmGift}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#TDTFrameworkTransfer
- * TransferReason1Code.TDTFrameworkTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmPledgedAccountTransfer
+ * TransferReason1Code.mmPledgedAccountTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#TransferBetweenDifferentBeneficiaries
- * TransferReason1Code.TransferBetweenDifferentBeneficiaries}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmTDTFrameworkTransfer
+ * TransferReason1Code.mmTDTFrameworkTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#Demerger
- * TransferReason1Code.Demerger}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmTransferBetweenDifferentBeneficiaries
+ * TransferReason1Code.mmTransferBetweenDifferentBeneficiaries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#BetweenOwnAccounts
- * TransferReason1Code.BetweenOwnAccounts}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmDemerger
+ * TransferReason1Code.mmDemerger}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransferReason1Code#mmBetweenOwnAccounts
+ * TransferReason1Code.mmBetweenOwnAccounts}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -106,7 +107,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "UndividedPossession"</li>
 	 * </ul>
 	 */
-	public static final MMCode UndividedPossession = new MMCode() {
+	public static final MMCode mmUndividedPossession = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndividedPossession";
@@ -129,7 +130,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "TransferBetweenSpouses"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferBetweenSpouses = new MMCode() {
+	public static final MMCode mmTransferBetweenSpouses = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferBetweenSpouses";
@@ -152,7 +153,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "Trade"</li>
 	 * </ul>
 	 */
-	public static final MMCode Trade = new MMCode() {
+	public static final MMCode mmTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
@@ -175,7 +176,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "OrdinaryTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode OrdinaryTransfer = new MMCode() {
+	public static final MMCode mmOrdinaryTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryTransfer";
@@ -198,7 +199,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "Heritage"</li>
 	 * </ul>
 	 */
-	public static final MMCode Heritage = new MMCode() {
+	public static final MMCode mmHeritage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Heritage";
@@ -221,7 +222,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "Gift"</li>
 	 * </ul>
 	 */
-	public static final MMCode Gift = new MMCode() {
+	public static final MMCode mmGift = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gift";
@@ -244,7 +245,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "PledgedAccountTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode PledgedAccountTransfer = new MMCode() {
+	public static final MMCode mmPledgedAccountTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgedAccountTransfer";
@@ -267,7 +268,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "TDTFrameworkTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode TDTFrameworkTransfer = new MMCode() {
+	public static final MMCode mmTDTFrameworkTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TDTFrameworkTransfer";
@@ -290,7 +291,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "TransferBetweenDifferentBeneficiaries"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferBetweenDifferentBeneficiaries = new MMCode() {
+	public static final MMCode mmTransferBetweenDifferentBeneficiaries = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferBetweenDifferentBeneficiaries";
@@ -313,7 +314,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "Demerger"</li>
 	 * </ul>
 	 */
-	public static final MMCode Demerger = new MMCode() {
+	public static final MMCode mmDemerger = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Demerger";
@@ -336,7 +337,7 @@ public class TransferReason1Code extends TransferReasonCode {
 	 * name} = "BetweenOwnAccounts"</li>
 	 * </ul>
 	 */
-	public static final MMCode BetweenOwnAccounts = new MMCode() {
+	public static final MMCode mmBetweenOwnAccounts = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BetweenOwnAccounts";
@@ -347,16 +348,16 @@ public class TransferReason1Code extends TransferReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRAU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferReason1Code";
 				definition = "Specifies the reason for the assets transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferReason1Code.UndividedPossession, com.tools20022.repository.codeset.TransferReason1Code.TransferBetweenSpouses,
-						com.tools20022.repository.codeset.TransferReason1Code.Trade, com.tools20022.repository.codeset.TransferReason1Code.OrdinaryTransfer, com.tools20022.repository.codeset.TransferReason1Code.Heritage,
-						com.tools20022.repository.codeset.TransferReason1Code.Gift, com.tools20022.repository.codeset.TransferReason1Code.PledgedAccountTransfer, com.tools20022.repository.codeset.TransferReason1Code.TDTFrameworkTransfer,
-						com.tools20022.repository.codeset.TransferReason1Code.TransferBetweenDifferentBeneficiaries, com.tools20022.repository.codeset.TransferReason1Code.Demerger,
-						com.tools20022.repository.codeset.TransferReason1Code.BetweenOwnAccounts);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferReason1Code.mmUndividedPossession, com.tools20022.repository.codeset.TransferReason1Code.mmTransferBetweenSpouses,
+						com.tools20022.repository.codeset.TransferReason1Code.mmTrade, com.tools20022.repository.codeset.TransferReason1Code.mmOrdinaryTransfer, com.tools20022.repository.codeset.TransferReason1Code.mmHeritage,
+						com.tools20022.repository.codeset.TransferReason1Code.mmGift, com.tools20022.repository.codeset.TransferReason1Code.mmPledgedAccountTransfer,
+						com.tools20022.repository.codeset.TransferReason1Code.mmTDTFrameworkTransfer, com.tools20022.repository.codeset.TransferReason1Code.mmTransferBetweenDifferentBeneficiaries,
+						com.tools20022.repository.codeset.TransferReason1Code.mmDemerger, com.tools20022.repository.codeset.TransferReason1Code.mmBetweenOwnAccounts);
 				trace_lazy = () -> TransferReasonCode.mmObject();
 			}
 		});

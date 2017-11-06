@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.PointOfInteraction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Capabilities of the ATM terminal.
@@ -37,26 +38,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#CardReadData
- * PointOfInteractionCapabilities5.CardReadData}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmCardReadData
+ * PointOfInteractionCapabilities5.mmCardReadData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#CardWriteData
- * PointOfInteractionCapabilities5.CardWriteData}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmCardWriteData
+ * PointOfInteractionCapabilities5.mmCardWriteData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#Authentication
- * PointOfInteractionCapabilities5.Authentication}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmAuthentication
+ * PointOfInteractionCapabilities5.mmAuthentication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#PINLengthCapabilities
- * PointOfInteractionCapabilities5.PINLengthCapabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmPINLengthCapabilities
+ * PointOfInteractionCapabilities5.mmPINLengthCapabilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#ApprovalCodeLength
- * PointOfInteractionCapabilities5.ApprovalCodeLength}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmApprovalCodeLength
+ * PointOfInteractionCapabilities5.mmApprovalCodeLength}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#MaxScriptLength
- * PointOfInteractionCapabilities5.MaxScriptLength}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmMaxScriptLength
+ * PointOfInteractionCapabilities5.mmMaxScriptLength}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#CardCaptureCapable
- * PointOfInteractionCapabilities5.CardCaptureCapable}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities5#mmCardCaptureCapable
+ * PointOfInteractionCapabilities5.mmCardCaptureCapable}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PointOfInteractionCapabilities5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CardDataReading4Code> cardReadData;
 	/**
 	 * Card reading capabilities of the ATM performing the transaction.
 	 * <p>
@@ -97,8 +99,8 @@ public class PointOfInteractionCapabilities5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#CardReadingCapabilities
-	 * PointOfInteraction.CardReadingCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardReadingCapabilities
+	 * PointOfInteraction.mmCardReadingCapabilities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,24 +121,25 @@ public class PointOfInteractionCapabilities5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#CardReadingCapabilities
-	 * PointOfInteractionCapabilities3.CardReadingCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmCardReadingCapabilities
+	 * PointOfInteractionCapabilities3.mmCardReadingCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardReadData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardReadData = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.CardReadingCapabilities;
 			isDerived = false;
 			xmlTag = "CardRdData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardReadData";
 			definition = "Card reading capabilities of the ATM performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.CardReadingCapabilities;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmCardReadingCapabilities;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading4Code.mmObject();
 		}
 	};
+	protected List<CardDataReading4Code> cardWriteData;
 	/**
 	 * Card writing capabilities of the terminal performing the transaction.
 	 * <p>
@@ -150,8 +153,8 @@ public class PointOfInteractionCapabilities5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#CardReadingCapabilities
-	 * PointOfInteraction.CardReadingCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardReadingCapabilities
+	 * PointOfInteraction.mmCardReadingCapabilities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,10 +174,10 @@ public class PointOfInteractionCapabilities5 {
 	 * "Card writing capabilities of the terminal performing the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardWriteData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardWriteData = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.CardReadingCapabilities;
 			isDerived = false;
 			xmlTag = "CardWrtData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,6 +187,7 @@ public class PointOfInteractionCapabilities5 {
 			simpleType_lazy = () -> CardDataReading4Code.mmObject();
 		}
 	};
+	protected List<CardholderVerificationCapability3Code> authentication;
 	/**
 	 * Customer and card authentication capabilities available at the ATM.
 	 * <p>
@@ -197,8 +201,8 @@ public class PointOfInteractionCapabilities5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#CardholderVerificationCapabilities
-	 * PointOfInteraction.CardholderVerificationCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardholderVerificationCapabilities
+	 * PointOfInteraction.mmCardholderVerificationCapabilities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -219,24 +223,25 @@ public class PointOfInteractionCapabilities5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#CardholderVerificationCapabilities
-	 * PointOfInteractionCapabilities3.CardholderVerificationCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmCardholderVerificationCapabilities
+	 * PointOfInteractionCapabilities3.mmCardholderVerificationCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Authentication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthentication = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardholderVerificationCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.CardholderVerificationCapabilities;
 			isDerived = false;
 			xmlTag = "Authntcn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authentication";
 			definition = "Customer and card authentication capabilities available at the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.CardholderVerificationCapabilities;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmCardholderVerificationCapabilities;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardholderVerificationCapability3Code.mmObject();
 		}
 	};
+	protected Number pINLengthCapabilities;
 	/**
 	 * Maximum number of digits the ATM is able to accept when the cardholder
 	 * enters its PIN.
@@ -268,11 +273,11 @@ public class PointOfInteractionCapabilities5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#PINLengthCapabilities
-	 * PointOfInteractionCapabilities3.PINLengthCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmPINLengthCapabilities
+	 * PointOfInteractionCapabilities3.mmPINLengthCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PINLengthCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPINLengthCapabilities = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
@@ -280,12 +285,13 @@ public class PointOfInteractionCapabilities5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLengthCapabilities";
 			definition = "Maximum number of digits the ATM is able to accept when the cardholder enters its PIN.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.PINLengthCapabilities;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmPINLengthCapabilities;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number approvalCodeLength;
 	/**
 	 * Maximum number of characters of the approval code the ATM is able to
 	 * manage.
@@ -317,11 +323,11 @@ public class PointOfInteractionCapabilities5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#ApprovalCodeLength
-	 * PointOfInteractionCapabilities3.ApprovalCodeLength}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmApprovalCodeLength
+	 * PointOfInteractionCapabilities3.mmApprovalCodeLength}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApprovalCodeLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApprovalCodeLength = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
@@ -329,12 +335,13 @@ public class PointOfInteractionCapabilities5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovalCodeLength";
 			definition = "Maximum number of characters of the approval code the ATM is able to manage.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.ApprovalCodeLength;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmApprovalCodeLength;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number maxScriptLength;
 	/**
 	 * Maximum data length in bytes that a card issuer can return to the ICC at
 	 * the terminal.
@@ -365,7 +372,7 @@ public class PointOfInteractionCapabilities5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaxScriptLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaxScriptLength = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
@@ -373,11 +380,12 @@ public class PointOfInteractionCapabilities5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaxScriptLength";
 			definition = "Maximum data length in bytes that a card issuer can return to the ICC at the terminal.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected TrueFalseIndicator cardCaptureCapable;
 	/**
 	 * True if the ATM is able to capture card.
 	 * <p>
@@ -407,11 +415,11 @@ public class PointOfInteractionCapabilities5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#CardCaptureCapable
-	 * PointOfInteractionCapabilities3.CardCaptureCapable}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionCapabilities3#mmCardCaptureCapable
+	 * PointOfInteractionCapabilities3.mmCardCaptureCapable}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardCaptureCapable = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardCaptureCapable = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
@@ -419,9 +427,9 @@ public class PointOfInteractionCapabilities5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCaptureCapable";
 			definition = "True if the ATM is able to capture card.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.CardCaptureCapable;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmCardCaptureCapable;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
@@ -429,12 +437,12 @@ public class PointOfInteractionCapabilities5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities5.CardReadData, com.tools20022.repository.msg.PointOfInteractionCapabilities5.CardWriteData,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities5.Authentication, com.tools20022.repository.msg.PointOfInteractionCapabilities5.PINLengthCapabilities,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities5.ApprovalCodeLength, com.tools20022.repository.msg.PointOfInteractionCapabilities5.MaxScriptLength,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities5.CardCaptureCapable);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmCardReadData, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmCardWriteData,
+						com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmAuthentication, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmPINLengthCapabilities,
+						com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmApprovalCodeLength, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmMaxScriptLength,
+						com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmCardCaptureCapable);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionCapabilities5";
 				definition = "Capabilities of the ATM terminal.";
@@ -442,5 +450,61 @@ public class PointOfInteractionCapabilities5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CardDataReading4Code> getCardReadData() {
+		return cardReadData;
+	}
+
+	public void setCardReadData(List<CardDataReading4Code> cardReadData) {
+		this.cardReadData = cardReadData;
+	}
+
+	public List<CardDataReading4Code> getCardWriteData() {
+		return cardWriteData;
+	}
+
+	public void setCardWriteData(List<CardDataReading4Code> cardWriteData) {
+		this.cardWriteData = cardWriteData;
+	}
+
+	public List<CardholderVerificationCapability3Code> getAuthentication() {
+		return authentication;
+	}
+
+	public void setAuthentication(List<CardholderVerificationCapability3Code> authentication) {
+		this.authentication = authentication;
+	}
+
+	public Number getPINLengthCapabilities() {
+		return pINLengthCapabilities;
+	}
+
+	public void setPINLengthCapabilities(Number pINLengthCapabilities) {
+		this.pINLengthCapabilities = pINLengthCapabilities;
+	}
+
+	public Number getApprovalCodeLength() {
+		return approvalCodeLength;
+	}
+
+	public void setApprovalCodeLength(Number approvalCodeLength) {
+		this.approvalCodeLength = approvalCodeLength;
+	}
+
+	public Number getMaxScriptLength() {
+		return maxScriptLength;
+	}
+
+	public void setMaxScriptLength(Number maxScriptLength) {
+		this.maxScriptLength = maxScriptLength;
+	}
+
+	public TrueFalseIndicator getCardCaptureCapable() {
+		return cardCaptureCapable;
+	}
+
+	public void setCardCaptureCapable(TrueFalseIndicator cardCaptureCapable) {
+		this.cardCaptureCapable = cardCaptureCapable;
 	}
 }

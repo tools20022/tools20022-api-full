@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageIdentification1#Identification
- * MessageIdentification1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageIdentification1#mmIdentification
+ * MessageIdentification1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageIdentification1#CreationDateTime
- * MessageIdentification1.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageIdentification1#mmCreationDateTime
+ * MessageIdentification1.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,954 +47,959 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.FundProcessingPassportReportV02#MessageIdentification
- * FundProcessingPassportReportV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.FundProcessingPassportReportV02#mmMessageIdentification
+ * FundProcessingPassportReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#MessageIdentification
- * InvestmentFundReportRequestV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#mmMessageIdentification
+ * InvestmentFundReportRequestV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#MessageIdentification
- * AccountDetailsConfirmationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmMessageIdentification
+ * AccountDetailsConfirmationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03#MessageIdentification
- * AccountDetailsConfirmationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03#mmMessageIdentification
+ * AccountDetailsConfirmationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#MessageReference
- * PEPOrISAOrPortfolioInformationV01.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#mmMessageReference
+ * PEPOrISAOrPortfolioInformationV01.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#MessageReference
- * AccountHoldingInformationV02.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#mmMessageReference
+ * AccountHoldingInformationV02.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#MessageReference
- * AccountHoldingInformationV03.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#mmMessageReference
+ * AccountHoldingInformationV03.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV02#MessageIdentification
- * AccountManagementStatusReportV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV02#mmMessageIdentification
+ * AccountManagementStatusReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#MessageIdentification
- * AccountManagementStatusReportV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#mmMessageIdentification
+ * AccountManagementStatusReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#MessageIdentification
- * AccountModificationInstructionV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmMessageIdentification
+ * AccountModificationInstructionV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#MessageIdentification
- * AccountModificationInstructionV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#mmMessageIdentification
+ * AccountModificationInstructionV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#MessageIdentification
- * AccountOpeningInstructionV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#mmMessageIdentification
+ * AccountOpeningInstructionV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#MessageIdentification
- * AccountOpeningInstructionV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#mmMessageIdentification
+ * AccountOpeningInstructionV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#MessageReference
- * PEPOrISAOrPortfolioTransferCancellationRequestV02.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#mmMessageReference
+ * PEPOrISAOrPortfolioTransferCancellationRequestV02.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#MessageReference
- * PortfolioTransferCancellationRequestV03.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#mmMessageReference
+ * PortfolioTransferCancellationRequestV03.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04#MessageReference
- * PortfolioTransferCancellationRequestV04.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04#mmMessageReference
+ * PortfolioTransferCancellationRequestV04.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#MessageReference
- * PEPOrISAOrPortfolioTransferConfirmationV02.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#mmMessageReference
+ * PEPOrISAOrPortfolioTransferConfirmationV02.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#MessageReference
- * PortfolioTransferConfirmationV03.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#mmMessageReference
+ * PortfolioTransferConfirmationV03.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#MessageReference
- * PortfolioTransferConfirmationV04.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#mmMessageReference
+ * PortfolioTransferConfirmationV04.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#MessageReference
- * PEPOrISAOrPortfolioTransferInstructionV02.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#mmMessageReference
+ * PEPOrISAOrPortfolioTransferInstructionV02.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#MessageReference
- * PortfolioTransferInstructionV03.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#mmMessageReference
+ * PortfolioTransferInstructionV03.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#MessageReference
- * PortfolioTransferInstructionV04.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#mmMessageReference
+ * PortfolioTransferInstructionV04.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV03#MessageIdentification
- * PriceReportCancellationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV03#mmMessageIdentification
+ * PriceReportCancellationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#MessageIdentification
- * PriceReportCancellationV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmMessageIdentification
+ * PriceReportCancellationV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV03#MessageIdentification
- * PriceReportV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV03#mmMessageIdentification
+ * PriceReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV04#MessageIdentification
- * PriceReportV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV04#mmMessageIdentification
+ * PriceReportV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02#MessageIdentification
- * ReversalOfTransferInConfirmationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02#mmMessageIdentification
+ * ReversalOfTransferInConfirmationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03#MessageIdentification
- * ReversalOfTransferInConfirmationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03#mmMessageIdentification
+ * ReversalOfTransferInConfirmationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV04#MessageIdentification
- * ReversalOfTransferInConfirmationV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV04#mmMessageIdentification
+ * ReversalOfTransferInConfirmationV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02#MessageIdentification
- * ReversalOfTransferOutConfirmationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02#mmMessageIdentification
+ * ReversalOfTransferOutConfirmationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03#MessageIdentification
- * ReversalOfTransferOutConfirmationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03#mmMessageIdentification
+ * ReversalOfTransferOutConfirmationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#MessageIdentification
- * ReversalOfTransferOutConfirmationV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04#mmMessageIdentification
+ * ReversalOfTransferOutConfirmationV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#MessageIdentification
- * TransferInCancellationRequestV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmMessageIdentification
+ * TransferInCancellationRequestV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV03#MessageIdentification
- * TransferInCancellationRequestV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV03#mmMessageIdentification
+ * TransferInCancellationRequestV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV04#MessageIdentification
- * TransferInCancellationRequestV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV04#mmMessageIdentification
+ * TransferInCancellationRequestV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV02#MessageIdentification
- * TransferInConfirmationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV02#mmMessageIdentification
+ * TransferInConfirmationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV03#MessageIdentification
- * TransferInConfirmationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV03#mmMessageIdentification
+ * TransferInConfirmationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV04#MessageIdentification
- * TransferInConfirmationV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV04#mmMessageIdentification
+ * TransferInConfirmationV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV02#MessageIdentification
- * TransferInInstructionV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV02#mmMessageIdentification
+ * TransferInInstructionV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV03#MessageIdentification
- * TransferInInstructionV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV03#mmMessageIdentification
+ * TransferInInstructionV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#MessageIdentification
- * TransferInInstructionV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmMessageIdentification
+ * TransferInInstructionV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#MessageIdentification
- * TransferOutCancellationRequestV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmMessageIdentification
+ * TransferOutCancellationRequestV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV03#MessageIdentification
- * TransferOutCancellationRequestV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV03#mmMessageIdentification
+ * TransferOutCancellationRequestV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV04#MessageIdentification
- * TransferOutCancellationRequestV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV04#mmMessageIdentification
+ * TransferOutCancellationRequestV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#MessageIdentification
- * TransferOutConfirmationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmMessageIdentification
+ * TransferOutConfirmationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV03#MessageIdentification
- * TransferOutConfirmationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV03#mmMessageIdentification
+ * TransferOutConfirmationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV04#MessageIdentification
- * TransferOutConfirmationV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV04#mmMessageIdentification
+ * TransferOutConfirmationV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV02#MessageIdentification
- * TransferOutInstructionV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV02#mmMessageIdentification
+ * TransferOutInstructionV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV03#MessageIdentification
- * TransferOutInstructionV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV03#mmMessageIdentification
+ * TransferOutInstructionV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#MessageIdentification
- * TransferOutInstructionV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#mmMessageIdentification
+ * TransferOutInstructionV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02#MessageIdentification
- * AccountingStatementOfHoldingsV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02#mmMessageIdentification
+ * AccountingStatementOfHoldingsV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02#MessageIdentification
- * CustodyStatementOfHoldingsV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02#mmMessageIdentification
+ * CustodyStatementOfHoldingsV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02#MessageIdentification
- * AccountingStatementOfHoldingsCancellationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02#mmMessageIdentification
+ * AccountingStatementOfHoldingsCancellationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#MessageIdentification
- * CustodyStatementOfHoldingsCancellationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#mmMessageIdentification
+ * CustodyStatementOfHoldingsCancellationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02#MessageIdentification
- * FundConfirmedCashForecastReportCancellationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02#mmMessageIdentification
+ * FundConfirmedCashForecastReportCancellationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#MessageIdentification
- * FundConfirmedCashForecastReportV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#mmMessageIdentification
+ * FundConfirmedCashForecastReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02#MessageIdentification
- * FundDetailedConfirmedCashForecastReportCancellationV02.MessageIdentification}
- * </li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02#mmMessageIdentification
+ * FundDetailedConfirmedCashForecastReportCancellationV02.
+ * mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#MessageIdentification
- * FundDetailedConfirmedCashForecastReportV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#mmMessageIdentification
+ * FundDetailedConfirmedCashForecastReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#MessageIdentification
- * FundDetailedEstimatedCashForecastReportV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#mmMessageIdentification
+ * FundDetailedEstimatedCashForecastReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#MessageIdentification
- * FundEstimatedCashForecastReportV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmMessageIdentification
+ * FundEstimatedCashForecastReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV03#MessageIdentification
- * OrderCancellationStatusReportV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV03#mmMessageIdentification
+ * OrderCancellationStatusReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#MessageIdentification
- * OrderConfirmationStatusReportV01.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmMessageIdentification
+ * OrderConfirmationStatusReportV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03#MessageIdentification
- * OrderInstructionStatusReportV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03#mmMessageIdentification
+ * OrderInstructionStatusReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#MessageIdentification
- * RedemptionBulkOrderCancellationRequestV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmMessageIdentification
+ * RedemptionBulkOrderCancellationRequestV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01#MessageIdentification
- * RedemptionBulkOrderConfirmationAmendmentV01.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01#mmMessageIdentification
+ * RedemptionBulkOrderConfirmationAmendmentV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01#MessageIdentification
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01#mmMessageIdentification
  * RedemptionBulkOrderConfirmationCancellationInstructionV01.
- * MessageIdentification}</li>
+ * mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03#MessageIdentification
- * RedemptionBulkOrderConfirmationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03#mmMessageIdentification
+ * RedemptionBulkOrderConfirmationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV03#MessageIdentification
- * RedemptionBulkOrderV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV03#mmMessageIdentification
+ * RedemptionBulkOrderV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03#MessageIdentification
- * RedemptionOrderCancellationRequestV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03#mmMessageIdentification
+ * RedemptionOrderCancellationRequestV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01#MessageIdentification
- * RedemptionOrderConfirmationAmendmentV01.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01#mmMessageIdentification
+ * RedemptionOrderConfirmationAmendmentV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01#MessageIdentification
- * RedemptionOrderConfirmationCancellationInstructionV01.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03#MessageIdentification
- * RedemptionOrderConfirmationV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV03#MessageIdentification
- * RedemptionOrderV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02#MessageIdentification
- * RequestForAccountManagementStatusReportV02.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01#MessageIdentification
- * RequestForOrderConfirmationStatusReportV01.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV03#MessageIdentification
- * RequestForOrderStatusReportV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#MessageIdentification
- * SecuritiesMessageRejectionV02.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02#MessageIdentification
- * StatementOfInvestmentFundTransactionsCancellationV02.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#MessageIdentification
- * StatementOfInvestmentFundTransactionsV02.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03#MessageIdentification
- * SubscriptionBulkOrderCancellationRequestV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01#MessageIdentification
- * SubscriptionBulkOrderConfirmationAmendmentV01.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01#MessageIdentification
- * SubscriptionBulkOrderConfirmationCancellationInstructionV01.
- * MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03#MessageIdentification
- * SubscriptionBulkOrderConfirmationV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV03#MessageIdentification
- * SubscriptionBulkOrderV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03#MessageIdentification
- * SubscriptionOrderCancellationRequestV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01#MessageIdentification
- * SubscriptionOrderConfirmationAmendmentV01.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#MessageIdentification
- * SubscriptionOrderConfirmationCancellationInstructionV01.MessageIdentification
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01#mmMessageIdentification
+ * RedemptionOrderConfirmationCancellationInstructionV01.mmMessageIdentification
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03#MessageIdentification
- * SubscriptionOrderConfirmationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03#mmMessageIdentification
+ * RedemptionOrderConfirmationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV03#MessageIdentification
- * SubscriptionOrderV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV03#mmMessageIdentification
+ * RedemptionOrderV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03#MessageIdentification
- * SwitchOrderCancellationRequestV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02#mmMessageIdentification
+ * RequestForAccountManagementStatusReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01#MessageIdentification
- * SwitchOrderConfirmationAmendmentV01.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01#mmMessageIdentification
+ * RequestForOrderConfirmationStatusReportV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#MessageIdentification
- * SwitchOrderConfirmationCancellationInstructionV01.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV03#mmMessageIdentification
+ * RequestForOrderStatusReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03#MessageIdentification
- * SwitchOrderConfirmationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#mmMessageIdentification
+ * SecuritiesMessageRejectionV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#MessageIdentification
- * SwitchOrderV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV02#MessageIdentification
- * RequestForTransferStatusReportV02.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV03#MessageIdentification
- * RequestForTransferStatusReportV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV02#MessageIdentification
- * TransferCancellationStatusReportV02.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03#MessageIdentification
- * TransferCancellationStatusReportV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV02#MessageIdentification
- * TransferInstructionStatusReportV02.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV03#MessageIdentification
- * TransferInstructionStatusReportV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#MessageReference
- * RequestForPEPOrISAOrPortfolioInformationV01.MessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#MessageReference
- * AccountHoldingInformationRequestV02.MessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#MeetingNotificationIdentification
- * MeetingNotificationV02.MeetingNotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#Identification
- * MeetingNotificationV03.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#Identification
- * MeetingNotificationV04.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV02#CancellationIdentification
- * MeetingCancellationV02.CancellationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV03#Identification
- * MeetingCancellationV03.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#Identification
- * MeetingCancellationV04.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02#EntitlementNotificationIdentification
- * MeetingEntitlementNotificationV02.EntitlementNotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#Identification
- * MeetingEntitlementNotificationV03.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04#Identification
- * MeetingEntitlementNotificationV04.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV02#MeetingInstructionIdentification
- * MeetingInstructionV02.MeetingInstructionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV03#Identification
- * MeetingInstructionV03.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#Identification
- * MeetingInstructionV04.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#InstructionCancellationIdentification
- * MeetingInstructionCancellationRequestV02.
- * InstructionCancellationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03#Identification
- * MeetingInstructionCancellationRequestV03.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#Identification
- * MeetingInstructionCancellationRequestV04.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02#MeetingInstructionStatusIdentification
- * MeetingInstructionStatusV02.MeetingInstructionStatusIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#Identification
- * MeetingInstructionStatusV03.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV04#Identification
- * MeetingInstructionStatusV04.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02#VoteExecutionConfirmationIdentification
- * MeetingVoteExecutionConfirmationV02.VoteExecutionConfirmationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03#Identification
- * MeetingVoteExecutionConfirmationV03.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#Identification
- * MeetingVoteExecutionConfirmationV04.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV02#MeetingResultDisseminationIdentification
- * MeetingResultDisseminationV02.MeetingResultDisseminationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV03#Identification
- * MeetingResultDisseminationV03.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#Identification
- * MeetingResultDisseminationV04.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#StatusIdentification
- * InvoiceFinancingRequestStatusV01.StatusIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01#CancellationRequestIdentification
- * InvoiceFinancingCancellationRequestV01.CancellationRequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#AcknowledgementIdentification
- * AcknowledgementV03.AcknowledgementIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#AcknowledgedMessageReference
- * AcknowledgementV03.AcknowledgedMessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportV03#ReportIdentification
- * ActivityReportV03.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportV03#RelatedMessageReference
- * ActivityReportV03.RelatedMessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#RequestIdentification
- * ActivityReportRequestV03.RequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02#RequestIdentification
- * ActivityReportSetUpRequestV02.RequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#AcceptanceIdentification
- * AmendmentAcceptanceV02.AcceptanceIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#DeltaReportReference
- * AmendmentAcceptanceV02.DeltaReportReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#NotificationIdentification
- * AmendmentAcceptanceNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#DeltaReportReference
- * AmendmentAcceptanceNotificationV03.DeltaReportReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionV02#RejectionIdentification
- * AmendmentRejectionV02.RejectionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionV02#DeltaReportReference
- * AmendmentRejectionV02.DeltaReportReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#NotificationIdentification
- * AmendmentRejectionNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#DeltaReportReference
- * AmendmentRejectionNotificationV03.DeltaReportReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#RequestIdentification
- * BaselineAmendmentRequestV03.RequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#ReportIdentification
- * BaselineMatchReportV03.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#ReportIdentification
- * BaselineReportV03.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#RelatedMessageReference
- * BaselineReportV03.RelatedMessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReSubmissionV03#SubmissionIdentification
- * BaselineReSubmissionV03.SubmissionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#ReportIdentification
- * DataSetMatchReportV03.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV03#SubmissionIdentification
- * DataSetSubmissionV03.SubmissionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#ReportIdentification
- * DeltaReportV03.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#ReportIdentification
- * ErrorReportV03.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#RejectedMessageReference
- * ErrorReportV03.RejectedMessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03#ReportIdentification
- * ForwardDataSetSubmissionReportV03.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#ReportIdentification
- * FullPushThroughReportV03.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03#SubmissionIdentification
- * InitialBaselineSubmissionV03.SubmissionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#AcceptanceIdentification
- * MisMatchAcceptanceV02.AcceptanceIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#DataSetMatchReportReference
- * MisMatchAcceptanceV02.DataSetMatchReportReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#NotificationIdentification
- * MisMatchAcceptanceNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#DataSetMatchReportReference
- * MisMatchAcceptanceNotificationV03.DataSetMatchReportReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#RejectionIdentification
- * MisMatchRejectionV02.RejectionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#DataSetMatchReportReference
- * MisMatchRejectionV02.DataSetMatchReportReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#NotificationIdentification
- * MisMatchRejectionNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#DataSetMatchReportReference
- * MisMatchRejectionNotificationV03.DataSetMatchReportReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#ReminderIdentification
- * ActionReminderV03.ReminderIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#MessageRequiringAction
- * ActionReminderV03.MessageRequiringAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeNotificationV03#NotificationIdentification
- * StatusChangeNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestV02#RequestIdentification
- * StatusChangeRequestV02.RequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02#AcceptanceIdentification
- * StatusChangeRequestAcceptanceV02.AcceptanceIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#NotificationIdentification
- * StatusChangeRequestNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#RejectionIdentification
- * StatusChangeRequestRejectionV02.RejectionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#NotificationIdentification
- * StatusChangeRequestRejectionNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#AcceptanceIdentification
- * StatusExtensionRequestAcceptanceV03.AcceptanceIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03#NotificationIdentification
- * StatusExtensionNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03#RejectionIdentification
- * StatusExtensionRequestRejectionV03.RejectionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#NotificationIdentification
- * StatusExtensionRejectionNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestV03#RequestIdentification
- * StatusExtensionRequestV03.RequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03#NotificationIdentification
- * StatusExtensionRequestNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusReportV03#ReportIdentification
- * StatusReportV03.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusReportV03#RelatedMessageReference
- * StatusReportV03.RelatedMessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusReportRequestV03#RequestIdentification
- * StatusReportRequestV03.RequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#NotificationIdentification
- * TimeOutNotificationV03.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportV03#ReportIdentification
- * TransactionReportV03.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportV03#RelatedMessageReference
- * TransactionReportV03.RelatedMessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportRequestV03#RequestIdentification
- * TransactionReportRequestV03.RequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#NotificationIdentification
- * IntentToPayNotificationV01.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#NotificationIdentification
- * ForwardIntentToPayNotificationV01.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayReportV01#ReportIdentification
- * IntentToPayReportV01.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#RequestIdentification
- * SpecialRequestV01.RequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#NotificationIdentification
- * SpecialNotificationV01.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#AcceptanceIdentification
- * RoleAndBaselineAcceptanceV01.AcceptanceIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#RelatedMessageReference
- * RoleAndBaselineAcceptanceV01.RelatedMessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01#RejectionIdentification
- * RoleAndBaselineRejectionV01.RejectionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01#RelatedMessageReference
- * RoleAndBaselineRejectionV01.RelatedMessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#NotificationIdentification
- * RoleAndBaselineAcceptanceNotificationV01.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#NotificationIdentification
- * RoleAndBaselineRejectionNotificationV01.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#MessageIdentification
- * PriceReportCorrectionV03.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04#MessageIdentification
- * AccountDetailsConfirmationV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV04#MessageIdentification
- * AccountModificationInstructionV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#MessageIdentification
- * AccountOpeningInstructionV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReSubmissionV04#SubmissionIdentification
- * BaselineReSubmissionV04.SubmissionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#SubmissionIdentification
- * DataSetSubmissionV04.SubmissionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#ReportIdentification
- * FullPushThroughReportV04.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#RequestIdentification
- * BaselineAmendmentRequestV04.RequestIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04#ReportIdentification
- * ForwardDataSetSubmissionReportV04.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportV04#ReportIdentification
- * ActivityReportV04.ReportIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportV04#RelatedMessageReference
- * ActivityReportV04.RelatedMessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04#SubmissionIdentification
- * InitialBaselineSubmissionV04.SubmissionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV05#MessageIdentification
- * ReversalOfTransferInConfirmationV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV05#MessageIdentification
- * TransferInConfirmationV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#MessageIdentification
- * TransferInstructionStatusReportV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#MessageReference
- * AccountHoldingInformationRequestV03.MessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#MessageIdentification
- * TransferOutInstructionV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04#MessageReference
- * AccountHoldingInformationV04.MessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05#MessageReference
- * PortfolioTransferCancellationRequestV05.MessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV04#MessageIdentification
- * TransferCancellationStatusReportV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05#MessageReference
- * PortfolioTransferInstructionV05.MessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#MessageIdentification
- * TransferInInstructionV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV05#MessageIdentification
- * TransferInCancellationRequestV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05#MessageReference
- * PortfolioTransferConfirmationV05.MessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05#MessageIdentification
- * TransferOutConfirmationV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV04#MessageIdentification
- * RequestForTransferStatusReportV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05#MessageIdentification
- * ReversalOfTransferOutConfirmationV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV05#MessageIdentification
- * TransferOutCancellationRequestV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#MessageIdentification
- * AccountManagementStatusReportV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#NotificationIdentification
- * IntentToPayNotificationV02.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#NotificationIdentification
- * ForwardIntentToPayNotificationV02.NotificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#MessageIdentification
- * FundDetailedEstimatedCashForecastReportV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#MessageIdentification
- * AccountOpeningInstructionV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#MessageIdentification
- * FundConfirmedCashForecastReportV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03#MessageIdentification
- * FundDetailedConfirmedCashForecastReportCancellationV03.MessageIdentification}
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02#mmMessageIdentification
+ * StatementOfInvestmentFundTransactionsCancellationV02.mmMessageIdentification}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#MessageIdentification
- * FundEstimatedCashForecastReportV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmMessageIdentification
+ * StatementOfInvestmentFundTransactionsV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#MessageIdentification
- * AccountModificationInstructionV05.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03#mmMessageIdentification
+ * SubscriptionBulkOrderCancellationRequestV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03#MessageIdentification
- * RequestForAccountManagementStatusReportV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01#mmMessageIdentification
+ * SubscriptionBulkOrderConfirmationAmendmentV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#MessageIdentification
- * StatementOfInvestmentFundTransactionsV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01#mmMessageIdentification
+ * SubscriptionBulkOrderConfirmationCancellationInstructionV01.
+ * mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#MessageIdentification
- * SecuritiesMessageRejectionV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03#mmMessageIdentification
+ * SubscriptionBulkOrderConfirmationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03#MessageIdentification
- * FundConfirmedCashForecastReportCancellationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV03#mmMessageIdentification
+ * SubscriptionBulkOrderV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03#MessageIdentification
- * StatementOfInvestmentFundTransactionsCancellationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03#mmMessageIdentification
+ * SubscriptionOrderCancellationRequestV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05#MessageIdentification
- * AccountDetailsConfirmationV05.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01#mmMessageIdentification
+ * SubscriptionOrderConfirmationAmendmentV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#MessageReference
- * PortfolioTransferCancellationRequestV06.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmMessageIdentification
+ * SubscriptionOrderConfirmationCancellationInstructionV01.
+ * mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#MessageIdentification
- * FundDetailedConfirmedCashForecastReportV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03#mmMessageIdentification
+ * SubscriptionOrderConfirmationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06#MessageReference
- * PortfolioTransferConfirmationV06.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV03#mmMessageIdentification
+ * SubscriptionOrderV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#MessageReference
- * PortfolioTransferInstructionV06.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03#mmMessageIdentification
+ * SwitchOrderCancellationRequestV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#ReportIdentification
- * BaselineReportV04.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01#mmMessageIdentification
+ * SwitchOrderConfirmationAmendmentV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#RelatedMessageReference
- * BaselineReportV04.RelatedMessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#mmMessageIdentification
+ * SwitchOrderConfirmationCancellationInstructionV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05#SubmissionIdentification
- * InitialBaselineSubmissionV05.SubmissionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03#mmMessageIdentification
+ * SwitchOrderConfirmationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV05#RequestIdentification
- * BaselineAmendmentRequestV05.RequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmMessageIdentification
+ * SwitchOrderV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#ReportIdentification
- * FullPushThroughReportV05.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV02#mmMessageIdentification
+ * RequestForTransferStatusReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#ReportIdentification
- * ForwardDataSetSubmissionReportV05.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV03#mmMessageIdentification
+ * RequestForTransferStatusReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#SubmissionIdentification
- * DataSetSubmissionV05.SubmissionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV02#mmMessageIdentification
+ * TransferCancellationStatusReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReSubmissionV05#SubmissionIdentification
- * BaselineReSubmissionV05.SubmissionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03#mmMessageIdentification
+ * TransferCancellationStatusReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV06#MessageIdentification
- * TransferInInstructionV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV02#mmMessageIdentification
+ * TransferInstructionStatusReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#MessageIdentification
- * TransferOutConfirmationV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV03#mmMessageIdentification
+ * TransferInstructionStatusReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#MessageIdentification
- * TransferOutInstructionV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#mmMessageReference
+ * RequestForPEPOrISAOrPortfolioInformationV01.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#MessageIdentification
- * TransferOutCancellationRequestV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmMessageReference
+ * AccountHoldingInformationRequestV02.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06#MessageIdentification
- * TransferInConfirmationV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmMeetingNotificationIdentification
+ * MeetingNotificationV02.mmMeetingNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV06#MessageIdentification
- * ReversalOfTransferOutConfirmationV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#mmIdentification
+ * MeetingNotificationV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV06#MessageIdentification
- * TransferInCancellationRequestV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#mmIdentification
+ * MeetingNotificationV04.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06#MessageIdentification
- * ReversalOfTransferInConfirmationV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV02#mmCancellationIdentification
+ * MeetingCancellationV02.mmCancellationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#MessageIdentification
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV03#mmIdentification
+ * MeetingCancellationV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#MessageReference
- * PortfolioTransferInstructionV07.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#mmIdentification
+ * MeetingCancellationV04.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07#MessageIdentification
- * ReversalOfTransferOutConfirmationV07.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02#mmEntitlementNotificationIdentification
+ * MeetingEntitlementNotificationV02.mmEntitlementNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#MessageIdentification
- * TransferOutCancellationRequestV07.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03#mmIdentification
+ * MeetingEntitlementNotificationV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV05#MessageReference
- * AccountHoldingInformationV05.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04#mmIdentification
+ * MeetingEntitlementNotificationV04.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#MessageReference
- * PortfolioTransferCancellationRequestV07.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV02#mmMeetingInstructionIdentification
+ * MeetingInstructionV02.mmMeetingInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#MessageIdentification
- * TransferInstructionStatusReportV05.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV03#mmIdentification
+ * MeetingInstructionV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV07#MessageIdentification
- * TransferInConfirmationV07.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV04#mmIdentification
+ * MeetingInstructionV04.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#MessageIdentification
- * AccountOpeningInstructionV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02#mmInstructionCancellationIdentification
+ * MeetingInstructionCancellationRequestV02.
+ * mmInstructionCancellationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#MessageIdentification
- * TransferOutConfirmationV07.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03#mmIdentification
+ * MeetingInstructionCancellationRequestV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV05#MessageIdentification
- * RequestForTransferStatusReportV05.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#mmIdentification
+ * MeetingInstructionCancellationRequestV04.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06#MessageIdentification
- * AccountDetailsConfirmationV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV02#mmMeetingInstructionStatusIdentification
+ * MeetingInstructionStatusV02.mmMeetingInstructionStatusIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04#MessageIdentification
- * RequestForAccountManagementStatusReportV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV03#mmIdentification
+ * MeetingInstructionStatusV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV07#MessageIdentification
- * TransferInCancellationRequestV07.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionStatusV04#mmIdentification
+ * MeetingInstructionStatusV04.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07#MessageReference
- * PortfolioTransferConfirmationV07.MessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV05#MessageIdentification
- * TransferCancellationStatusReportV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#MessageIdentification
- * TransferOutInstructionV07.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#MessageIdentification
- * AccountManagementStatusReportV05.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#MessageIdentification
- * AccountModificationInstructionV06.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV07#MessageIdentification
- * TransferInInstructionV07.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04#MessageReference
- * AccountHoldingInformationRequestV04.MessageReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07#MessageIdentification
- * ReversalOfTransferInConfirmationV07.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#MessageIdentification
- * SecuritiesBalanceTransparencyReportV02.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04#MessageIdentification
- * SubscriptionBulkOrderConfirmationV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV04#MessageIdentification
- * RedemptionBulkOrderV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04#MessageIdentification
- * SubscriptionBulkOrderCancellationRequestV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV04#MessageIdentification
- * RedemptionOrderV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04#MessageIdentification
- * SubscriptionOrderCancellationRequestV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02#MessageIdentification
- * RedemptionBulkOrderConfirmationCancellationInstructionV02.
- * MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04#MessageIdentification
- * RedemptionBulkOrderConfirmationV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#MessageIdentification
- * RedemptionBulkOrderCancellationRequestV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV04#MessageIdentification
- * SwitchOrderConfirmationV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV04#MessageIdentification
- * RequestForOrderStatusReportV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04#MessageIdentification
- * SubscriptionOrderConfirmationV04.MessageIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#MessageIdentification
- * SubscriptionOrderConfirmationCancellationInstructionV02.MessageIdentification
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02#mmVoteExecutionConfirmationIdentification
+ * MeetingVoteExecutionConfirmationV02.mmVoteExecutionConfirmationIdentification
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04#MessageIdentification
- * SwitchOrderCancellationRequestV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03#mmIdentification
+ * MeetingVoteExecutionConfirmationV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV04#MessageIdentification
- * OrderCancellationStatusReportV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#mmIdentification
+ * MeetingVoteExecutionConfirmationV04.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#MessageIdentification
- * SwitchOrderV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV02#mmMeetingResultDisseminationIdentification
+ * MeetingResultDisseminationV02.mmMeetingResultDisseminationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02#MessageIdentification
- * RedemptionOrderConfirmationCancellationInstructionV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV03#mmIdentification
+ * MeetingResultDisseminationV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04#MessageIdentification
- * RedemptionOrderConfirmationV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV04#mmIdentification
+ * MeetingResultDisseminationV04.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV04#MessageIdentification
- * OrderInstructionStatusReportV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#mmStatusIdentification
+ * InvoiceFinancingRequestStatusV01.mmStatusIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02#MessageIdentification
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01#mmCancellationRequestIdentification
+ * InvoiceFinancingCancellationRequestV01.mmCancellationRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmAcknowledgementIdentification
+ * AcknowledgementV03.mmAcknowledgementIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmAcknowledgedMessageReference
+ * AcknowledgementV03.mmAcknowledgedMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportV03#mmReportIdentification
+ * ActivityReportV03.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportV03#mmRelatedMessageReference
+ * ActivityReportV03.mmRelatedMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#mmRequestIdentification
+ * ActivityReportRequestV03.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02#mmRequestIdentification
+ * ActivityReportSetUpRequestV02.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#mmAcceptanceIdentification
+ * AmendmentAcceptanceV02.mmAcceptanceIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#mmDeltaReportReference
+ * AmendmentAcceptanceV02.mmDeltaReportReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#mmNotificationIdentification
+ * AmendmentAcceptanceNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#mmDeltaReportReference
+ * AmendmentAcceptanceNotificationV03.mmDeltaReportReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionV02#mmRejectionIdentification
+ * AmendmentRejectionV02.mmRejectionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionV02#mmDeltaReportReference
+ * AmendmentRejectionV02.mmDeltaReportReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#mmNotificationIdentification
+ * AmendmentRejectionNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#mmDeltaReportReference
+ * AmendmentRejectionNotificationV03.mmDeltaReportReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03#mmRequestIdentification
+ * BaselineAmendmentRequestV03.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmReportIdentification
+ * BaselineMatchReportV03.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmReportIdentification
+ * BaselineReportV03.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmRelatedMessageReference
+ * BaselineReportV03.mmRelatedMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReSubmissionV03#mmSubmissionIdentification
+ * BaselineReSubmissionV03.mmSubmissionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmReportIdentification
+ * DataSetMatchReportV03.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV03#mmSubmissionIdentification
+ * DataSetSubmissionV03.mmSubmissionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmReportIdentification
+ * DeltaReportV03.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmReportIdentification
+ * ErrorReportV03.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmRejectedMessageReference
+ * ErrorReportV03.mmRejectedMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03#mmReportIdentification
+ * ForwardDataSetSubmissionReportV03.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#mmReportIdentification
+ * FullPushThroughReportV03.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03#mmSubmissionIdentification
+ * InitialBaselineSubmissionV03.mmSubmissionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#mmAcceptanceIdentification
+ * MisMatchAcceptanceV02.mmAcceptanceIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02#mmDataSetMatchReportReference
+ * MisMatchAcceptanceV02.mmDataSetMatchReportReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#mmNotificationIdentification
+ * MisMatchAcceptanceNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#mmDataSetMatchReportReference
+ * MisMatchAcceptanceNotificationV03.mmDataSetMatchReportReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#mmRejectionIdentification
+ * MisMatchRejectionV02.mmRejectionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionV02#mmDataSetMatchReportReference
+ * MisMatchRejectionV02.mmDataSetMatchReportReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#mmNotificationIdentification
+ * MisMatchRejectionNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#mmDataSetMatchReportReference
+ * MisMatchRejectionNotificationV03.mmDataSetMatchReportReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmReminderIdentification
+ * ActionReminderV03.mmReminderIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmMessageRequiringAction
+ * ActionReminderV03.mmMessageRequiringAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeNotificationV03#mmNotificationIdentification
+ * StatusChangeNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestV02#mmRequestIdentification
+ * StatusChangeRequestV02.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02#mmAcceptanceIdentification
+ * StatusChangeRequestAcceptanceV02.mmAcceptanceIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmNotificationIdentification
+ * StatusChangeRequestNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#mmRejectionIdentification
+ * StatusChangeRequestRejectionV02.mmRejectionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#mmNotificationIdentification
+ * StatusChangeRequestRejectionNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#mmAcceptanceIdentification
+ * StatusExtensionRequestAcceptanceV03.mmAcceptanceIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03#mmNotificationIdentification
+ * StatusExtensionNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03#mmRejectionIdentification
+ * StatusExtensionRequestRejectionV03.mmRejectionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#mmNotificationIdentification
+ * StatusExtensionRejectionNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestV03#mmRequestIdentification
+ * StatusExtensionRequestV03.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03#mmNotificationIdentification
+ * StatusExtensionRequestNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusReportV03#mmReportIdentification
+ * StatusReportV03.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusReportV03#mmRelatedMessageReference
+ * StatusReportV03.mmRelatedMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusReportRequestV03#mmRequestIdentification
+ * StatusReportRequestV03.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#mmNotificationIdentification
+ * TimeOutNotificationV03.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportV03#mmReportIdentification
+ * TransactionReportV03.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportV03#mmRelatedMessageReference
+ * TransactionReportV03.mmRelatedMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TransactionReportRequestV03#mmRequestIdentification
+ * TransactionReportRequestV03.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#mmNotificationIdentification
+ * IntentToPayNotificationV01.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#mmNotificationIdentification
+ * ForwardIntentToPayNotificationV01.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayReportV01#mmReportIdentification
+ * IntentToPayReportV01.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialRequestV01#mmRequestIdentification
+ * SpecialRequestV01.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#mmNotificationIdentification
+ * SpecialNotificationV01.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#mmAcceptanceIdentification
+ * RoleAndBaselineAcceptanceV01.mmAcceptanceIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#mmRelatedMessageReference
+ * RoleAndBaselineAcceptanceV01.mmRelatedMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01#mmRejectionIdentification
+ * RoleAndBaselineRejectionV01.mmRejectionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01#mmRelatedMessageReference
+ * RoleAndBaselineRejectionV01.mmRelatedMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#mmNotificationIdentification
+ * RoleAndBaselineAcceptanceNotificationV01.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#mmNotificationIdentification
+ * RoleAndBaselineRejectionNotificationV01.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#mmMessageIdentification
+ * PriceReportCorrectionV03.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04#mmMessageIdentification
+ * AccountDetailsConfirmationV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV04#mmMessageIdentification
+ * AccountModificationInstructionV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#mmMessageIdentification
+ * AccountOpeningInstructionV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReSubmissionV04#mmSubmissionIdentification
+ * BaselineReSubmissionV04.mmSubmissionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmSubmissionIdentification
+ * DataSetSubmissionV04.mmSubmissionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#mmReportIdentification
+ * FullPushThroughReportV04.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04#mmRequestIdentification
+ * BaselineAmendmentRequestV04.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04#mmReportIdentification
+ * ForwardDataSetSubmissionReportV04.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportV04#mmReportIdentification
+ * ActivityReportV04.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportV04#mmRelatedMessageReference
+ * ActivityReportV04.mmRelatedMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04#mmSubmissionIdentification
+ * InitialBaselineSubmissionV04.mmSubmissionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV05#mmMessageIdentification
+ * ReversalOfTransferInConfirmationV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV05#mmMessageIdentification
+ * TransferInConfirmationV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#mmMessageIdentification
+ * TransferInstructionStatusReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmMessageReference
+ * AccountHoldingInformationRequestV03.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmMessageIdentification
+ * TransferOutInstructionV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04#mmMessageReference
+ * AccountHoldingInformationV04.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05#mmMessageReference
+ * PortfolioTransferCancellationRequestV05.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV04#mmMessageIdentification
+ * TransferCancellationStatusReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05#mmMessageReference
+ * PortfolioTransferInstructionV05.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmMessageIdentification
+ * TransferInInstructionV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV05#mmMessageIdentification
+ * TransferInCancellationRequestV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05#mmMessageReference
+ * PortfolioTransferConfirmationV05.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05#mmMessageIdentification
+ * TransferOutConfirmationV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV04#mmMessageIdentification
+ * RequestForTransferStatusReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05#mmMessageIdentification
+ * ReversalOfTransferOutConfirmationV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV05#mmMessageIdentification
+ * TransferOutCancellationRequestV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#mmMessageIdentification
+ * AccountManagementStatusReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#mmNotificationIdentification
+ * IntentToPayNotificationV02.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#mmNotificationIdentification
+ * ForwardIntentToPayNotificationV02.mmNotificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#mmMessageIdentification
+ * FundDetailedEstimatedCashForecastReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmMessageIdentification
+ * AccountOpeningInstructionV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#mmMessageIdentification
+ * FundConfirmedCashForecastReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03#mmMessageIdentification
+ * FundDetailedConfirmedCashForecastReportCancellationV03.
+ * mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmMessageIdentification
+ * FundEstimatedCashForecastReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#mmMessageIdentification
+ * AccountModificationInstructionV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03#mmMessageIdentification
+ * RequestForAccountManagementStatusReportV03.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmMessageIdentification
+ * StatementOfInvestmentFundTransactionsV03.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#mmMessageIdentification
+ * SecuritiesMessageRejectionV03.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03#mmMessageIdentification
+ * FundConfirmedCashForecastReportCancellationV03.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03#mmMessageIdentification
+ * StatementOfInvestmentFundTransactionsCancellationV03.mmMessageIdentification}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05#mmMessageIdentification
+ * AccountDetailsConfirmationV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#mmMessageReference
+ * PortfolioTransferCancellationRequestV06.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#mmMessageIdentification
+ * FundDetailedConfirmedCashForecastReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06#mmMessageReference
+ * PortfolioTransferConfirmationV06.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmMessageReference
+ * PortfolioTransferInstructionV06.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmReportIdentification
+ * BaselineReportV04.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmRelatedMessageReference
+ * BaselineReportV04.mmRelatedMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05#mmSubmissionIdentification
+ * InitialBaselineSubmissionV05.mmSubmissionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV05#mmRequestIdentification
+ * BaselineAmendmentRequestV05.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#mmReportIdentification
+ * FullPushThroughReportV05.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#mmReportIdentification
+ * ForwardDataSetSubmissionReportV05.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmSubmissionIdentification
+ * DataSetSubmissionV05.mmSubmissionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReSubmissionV05#mmSubmissionIdentification
+ * BaselineReSubmissionV05.mmSubmissionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV06#mmMessageIdentification
+ * TransferInInstructionV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmMessageIdentification
+ * TransferOutConfirmationV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmMessageIdentification
+ * TransferOutInstructionV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06#mmMessageIdentification
+ * TransferOutCancellationRequestV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06#mmMessageIdentification
+ * TransferInConfirmationV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV06#mmMessageIdentification
+ * ReversalOfTransferOutConfirmationV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV06#mmMessageIdentification
+ * TransferInCancellationRequestV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06#mmMessageIdentification
+ * ReversalOfTransferInConfirmationV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmMessageIdentification
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07#mmMessageReference
+ * PortfolioTransferInstructionV07.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07#mmMessageIdentification
+ * ReversalOfTransferOutConfirmationV07.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#mmMessageIdentification
+ * TransferOutCancellationRequestV07.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV05#mmMessageReference
+ * AccountHoldingInformationV05.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#mmMessageReference
+ * PortfolioTransferCancellationRequestV07.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#mmMessageIdentification
+ * TransferInstructionStatusReportV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV07#mmMessageIdentification
+ * TransferInConfirmationV07.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmMessageIdentification
+ * AccountOpeningInstructionV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmMessageIdentification
+ * TransferOutConfirmationV07.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV05#mmMessageIdentification
+ * RequestForTransferStatusReportV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06#mmMessageIdentification
+ * AccountDetailsConfirmationV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04#mmMessageIdentification
+ * RequestForAccountManagementStatusReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV07#mmMessageIdentification
+ * TransferInCancellationRequestV07.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07#mmMessageReference
+ * PortfolioTransferConfirmationV07.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV05#mmMessageIdentification
+ * TransferCancellationStatusReportV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmMessageIdentification
+ * TransferOutInstructionV07.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#mmMessageIdentification
+ * AccountManagementStatusReportV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#mmMessageIdentification
+ * AccountModificationInstructionV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV07#mmMessageIdentification
+ * TransferInInstructionV07.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04#mmMessageReference
+ * AccountHoldingInformationRequestV04.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07#mmMessageIdentification
+ * ReversalOfTransferInConfirmationV07.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmMessageIdentification
+ * SecuritiesBalanceTransparencyReportV02.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04#mmMessageIdentification
+ * SubscriptionBulkOrderConfirmationV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV04#mmMessageIdentification
+ * RedemptionBulkOrderV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04#mmMessageIdentification
+ * SubscriptionBulkOrderCancellationRequestV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV04#mmMessageIdentification
+ * RedemptionOrderV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04#mmMessageIdentification
+ * SubscriptionOrderCancellationRequestV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02#mmMessageIdentification
+ * RedemptionBulkOrderConfirmationCancellationInstructionV02.
+ * mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04#mmMessageIdentification
+ * RedemptionBulkOrderConfirmationV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#mmMessageIdentification
+ * RedemptionBulkOrderCancellationRequestV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV04#mmMessageIdentification
+ * SwitchOrderConfirmationV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV04#mmMessageIdentification
+ * RequestForOrderStatusReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04#mmMessageIdentification
+ * SubscriptionOrderConfirmationV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#mmMessageIdentification
+ * SubscriptionOrderConfirmationCancellationInstructionV02.
+ * mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04#mmMessageIdentification
+ * SwitchOrderCancellationRequestV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV04#mmMessageIdentification
+ * OrderCancellationStatusReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmMessageIdentification
+ * SwitchOrderV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02#mmMessageIdentification
+ * RedemptionOrderConfirmationCancellationInstructionV02.mmMessageIdentification
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04#mmMessageIdentification
+ * RedemptionOrderConfirmationV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV04#mmMessageIdentification
+ * OrderInstructionStatusReportV04.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02#mmMessageIdentification
  * SubscriptionBulkOrderConfirmationCancellationInstructionV02.
- * MessageIdentification}</li>
+ * mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04#MessageIdentification
- * RedemptionOrderCancellationRequestV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04#mmMessageIdentification
+ * RedemptionOrderCancellationRequestV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02#MessageIdentification
- * RequestForOrderConfirmationStatusReportV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02#mmMessageIdentification
+ * RequestForOrderConfirmationStatusReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV04#MessageIdentification
- * SubscriptionBulkOrderV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV04#mmMessageIdentification
+ * SubscriptionBulkOrderV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#MessageIdentification
- * SwitchOrderConfirmationCancellationInstructionV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmMessageIdentification
+ * SwitchOrderConfirmationCancellationInstructionV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02#MessageIdentification
- * OrderConfirmationStatusReportV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02#mmMessageIdentification
+ * OrderConfirmationStatusReportV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV04#MessageIdentification
- * SubscriptionOrderV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV04#mmMessageIdentification
+ * SubscriptionOrderV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07#MessageIdentification
- * AccountDetailsConfirmationV07.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07#mmMessageIdentification
+ * AccountDetailsConfirmationV07.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV07#MessageIdentification
- * AccountModificationInstructionV07.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV07#mmMessageIdentification
+ * AccountModificationInstructionV07.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#MessageIdentification
- * AccountOpeningInstructionV07.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmMessageIdentification
+ * AccountOpeningInstructionV07.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV06#MessageIdentification
- * AccountManagementStatusReportV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV06#mmMessageIdentification
+ * AccountManagementStatusReportV06.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV05#MessageIdentification
- * RequestForAccountManagementStatusReportV05.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV05#mmMessageIdentification
+ * RequestForAccountManagementStatusReportV05.mmMessageIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -1010,6 +1015,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MessageIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of the message.
 	 * <p>
@@ -1037,7 +1043,7 @@ public class MessageIdentification1 {
 	 * definition} = "Identification of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageIdentification1.mmObject();
 			isDerived = false;
@@ -1045,11 +1051,12 @@ public class MessageIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date of creation of the message.
 	 * <p>
@@ -1077,7 +1084,7 @@ public class MessageIdentification1 {
 	 * definition} = "Date of creation of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MessageIdentification1.mmObject();
 			isDerived = false;
@@ -1085,8 +1092,8 @@ public class MessageIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date of creation of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -1094,170 +1101,186 @@ public class MessageIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageIdentification1.Identification, com.tools20022.repository.msg.MessageIdentification1.CreationDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.FundProcessingPassportReportV02.MessageIdentification,
-						com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.MessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.MessageIdentification, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.MessageReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV02.MessageReference, com.tools20022.repository.area.sese.AccountHoldingInformationV03.MessageReference,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV02.MessageIdentification, com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.MessageIdentification, com.tools20022.repository.area.acmt.AccountModificationInstructionV03.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.MessageIdentification, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.MessageIdentification,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.MessageReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.MessageReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.MessageReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.MessageReference,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.MessageReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.MessageReference,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.MessageReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.MessageReference,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.MessageReference, com.tools20022.repository.area.reda.PriceReportCancellationV03.MessageIdentification,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.MessageIdentification, com.tools20022.repository.area.reda.PriceReportV03.MessageIdentification,
-						com.tools20022.repository.area.reda.PriceReportV04.MessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.MessageIdentification,
-						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03.MessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV04.MessageIdentification,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.MessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03.MessageIdentification,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.MessageIdentification, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV03.MessageIdentification, com.tools20022.repository.area.sese.TransferInCancellationRequestV04.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInConfirmationV02.MessageIdentification, com.tools20022.repository.area.sese.TransferInConfirmationV03.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInConfirmationV04.MessageIdentification, com.tools20022.repository.area.sese.TransferInInstructionV02.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInInstructionV03.MessageIdentification, com.tools20022.repository.area.sese.TransferInInstructionV04.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.MessageIdentification, com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferOutCancellationRequestV04.MessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV02.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV03.MessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV04.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferOutInstructionV02.MessageIdentification, com.tools20022.repository.area.sese.TransferOutInstructionV03.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferOutInstructionV04.MessageIdentification, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.MessageIdentification,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.MessageIdentification, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.MessageIdentification,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.MessageIdentification, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.MessageIdentification,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.MessageIdentification, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.MessageIdentification,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.MessageIdentification, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.MessageIdentification,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.MessageIdentification, com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.MessageIdentification,
-						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.MessageIdentification, com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.MessageIdentification, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01.MessageIdentification, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderV03.MessageIdentification, com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01.MessageIdentification, com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.MessageIdentification, com.tools20022.repository.area.setr.RedemptionOrderV03.MessageIdentification,
-						com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02.MessageIdentification, com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01.MessageIdentification,
-						com.tools20022.repository.area.setr.RequestForOrderStatusReportV03.MessageIdentification, com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.MessageIdentification,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02.MessageIdentification, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.MessageIdentification,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01.MessageIdentification,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.MessageIdentification,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03.MessageIdentification,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.MessageIdentification,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderV03.MessageIdentification,
-						com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.MessageIdentification, com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01.MessageIdentification,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.MessageIdentification, com.tools20022.repository.area.setr.SwitchOrderConfirmationV03.MessageIdentification,
-						com.tools20022.repository.area.setr.SwitchOrderV03.MessageIdentification, com.tools20022.repository.area.sese.RequestForTransferStatusReportV02.MessageIdentification,
-						com.tools20022.repository.area.sese.RequestForTransferStatusReportV03.MessageIdentification, com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.MessageIdentification, com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.MessageIdentification, com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.MessageReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.MessageReference, com.tools20022.repository.area.seev.MeetingNotificationV02.MeetingNotificationIdentification,
-						com.tools20022.repository.area.seev.MeetingNotificationV03.Identification, com.tools20022.repository.area.seev.MeetingNotificationV04.Identification,
-						com.tools20022.repository.area.seev.MeetingCancellationV02.CancellationIdentification, com.tools20022.repository.area.seev.MeetingCancellationV03.Identification,
-						com.tools20022.repository.area.seev.MeetingCancellationV04.Identification, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.EntitlementNotificationIdentification,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.Identification, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.Identification,
-						com.tools20022.repository.area.seev.MeetingInstructionV02.MeetingInstructionIdentification, com.tools20022.repository.area.seev.MeetingInstructionV03.Identification,
-						com.tools20022.repository.area.seev.MeetingInstructionV04.Identification, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.InstructionCancellationIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.Identification, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.Identification,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.MeetingInstructionStatusIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.Identification,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV04.Identification, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.VoteExecutionConfirmationIdentification,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03.Identification, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.Identification,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.MeetingResultDisseminationIdentification, com.tools20022.repository.area.seev.MeetingResultDisseminationV03.Identification,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV04.Identification, com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.StatusIdentification,
-						com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.CancellationRequestIdentification, com.tools20022.repository.area.tsmt.AcknowledgementV03.AcknowledgementIdentification,
-						com.tools20022.repository.area.tsmt.AcknowledgementV03.AcknowledgedMessageReference, com.tools20022.repository.area.tsmt.ActivityReportV03.ReportIdentification,
-						com.tools20022.repository.area.tsmt.ActivityReportV03.RelatedMessageReference, com.tools20022.repository.area.tsmt.ActivityReportRequestV03.RequestIdentification,
-						com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.RequestIdentification, com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.AcceptanceIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.DeltaReportReference, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.DeltaReportReference, com.tools20022.repository.area.tsmt.AmendmentRejectionV02.RejectionIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionV02.DeltaReportReference, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.DeltaReportReference, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.RequestIdentification,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.ReportIdentification, com.tools20022.repository.area.tsmt.BaselineReportV03.ReportIdentification,
-						com.tools20022.repository.area.tsmt.BaselineReportV03.RelatedMessageReference, com.tools20022.repository.area.tsmt.BaselineReSubmissionV03.SubmissionIdentification,
-						com.tools20022.repository.area.tsmt.DataSetMatchReportV03.ReportIdentification, com.tools20022.repository.area.tsmt.DataSetSubmissionV03.SubmissionIdentification,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.ReportIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.ReportIdentification,
-						com.tools20022.repository.area.tsmt.ErrorReportV03.RejectedMessageReference, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.ReportIdentification,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.ReportIdentification, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.SubmissionIdentification,
-						com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.AcceptanceIdentification, com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.DataSetMatchReportReference,
-						com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.NotificationIdentification, com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.DataSetMatchReportReference,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionV02.RejectionIdentification, com.tools20022.repository.area.tsmt.MisMatchRejectionV02.DataSetMatchReportReference,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.NotificationIdentification, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.DataSetMatchReportReference,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.ReminderIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.MessageRequiringAction,
-						com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.NotificationIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestV02.RequestIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.AcceptanceIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.RejectionIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.AcceptanceIdentification, com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.RejectionIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.RequestIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.StatusReportV03.ReportIdentification, com.tools20022.repository.area.tsmt.StatusReportV03.RelatedMessageReference,
-						com.tools20022.repository.area.tsmt.StatusReportRequestV03.RequestIdentification, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.TransactionReportV03.ReportIdentification, com.tools20022.repository.area.tsmt.TransactionReportV03.RelatedMessageReference,
-						com.tools20022.repository.area.tsmt.TransactionReportRequestV03.RequestIdentification, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.NotificationIdentification, com.tools20022.repository.area.tsmt.IntentToPayReportV01.ReportIdentification,
-						com.tools20022.repository.area.tsmt.SpecialRequestV01.RequestIdentification, com.tools20022.repository.area.tsmt.SpecialNotificationV01.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.AcceptanceIdentification, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.RelatedMessageReference,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.RejectionIdentification, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.RelatedMessageReference,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.NotificationIdentification, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.NotificationIdentification,
-						com.tools20022.repository.area.reda.PriceReportCorrectionV03.MessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV04.MessageIdentification, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.MessageIdentification,
-						com.tools20022.repository.area.tsmt.BaselineReSubmissionV04.SubmissionIdentification, com.tools20022.repository.area.tsmt.DataSetSubmissionV04.SubmissionIdentification,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.ReportIdentification, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.RequestIdentification,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.ReportIdentification, com.tools20022.repository.area.tsmt.ActivityReportV04.ReportIdentification,
-						com.tools20022.repository.area.tsmt.ActivityReportV04.RelatedMessageReference, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.SubmissionIdentification,
-						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV05.MessageIdentification, com.tools20022.repository.area.sese.TransferInConfirmationV05.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.MessageIdentification, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.MessageReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV05.MessageIdentification, com.tools20022.repository.area.sese.AccountHoldingInformationV04.MessageReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05.MessageReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV04.MessageIdentification,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.MessageReference, com.tools20022.repository.area.sese.TransferInInstructionV05.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV05.MessageIdentification, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.MessageReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV05.MessageIdentification, com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.MessageIdentification,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.MessageIdentification, com.tools20022.repository.area.sese.TransferOutCancellationRequestV05.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.MessageIdentification, com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.NotificationIdentification, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.MessageIdentification, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.MessageIdentification,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.MessageIdentification, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV05.MessageIdentification, com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03.MessageIdentification,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.MessageIdentification, com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.MessageIdentification,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.MessageIdentification,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03.MessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.MessageIdentification,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.MessageReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.MessageIdentification,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.MessageReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.MessageReference,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.ReportIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.RelatedMessageReference,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05.SubmissionIdentification, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV05.RequestIdentification,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.ReportIdentification, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.ReportIdentification,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.SubmissionIdentification, com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.SubmissionIdentification,
-						com.tools20022.repository.area.sese.TransferInInstructionV06.MessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV06.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferOutInstructionV06.MessageIdentification, com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInConfirmationV06.MessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV06.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV06.MessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06.MessageIdentification,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.MessageIdentification, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.MessageReference,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07.MessageIdentification, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.MessageIdentification,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV05.MessageReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.MessageReference,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.MessageIdentification, com.tools20022.repository.area.sese.TransferInConfirmationV07.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.MessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV07.MessageIdentification,
-						com.tools20022.repository.area.sese.RequestForTransferStatusReportV05.MessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.MessageIdentification,
-						com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04.MessageIdentification, com.tools20022.repository.area.sese.TransferInCancellationRequestV07.MessageIdentification,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.MessageReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV05.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferOutInstructionV07.MessageIdentification, com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.MessageIdentification, com.tools20022.repository.area.sese.TransferInInstructionV07.MessageIdentification,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.MessageReference, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.MessageIdentification,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderV04.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionOrderV04.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02.MessageIdentification, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.MessageIdentification, com.tools20022.repository.area.setr.SwitchOrderConfirmationV04.MessageIdentification,
-						com.tools20022.repository.area.setr.RequestForOrderStatusReportV04.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04.MessageIdentification,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.MessageIdentification, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04.MessageIdentification,
-						com.tools20022.repository.area.setr.OrderCancellationStatusReportV04.MessageIdentification, com.tools20022.repository.area.setr.SwitchOrderV04.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02.MessageIdentification, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04.MessageIdentification,
-						com.tools20022.repository.area.setr.OrderInstructionStatusReportV04.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02.MessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04.MessageIdentification, com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.MessageIdentification,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderV04.MessageIdentification, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.MessageIdentification,
-						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.MessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderV04.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.MessageIdentification, com.tools20022.repository.area.acmt.AccountModificationInstructionV07.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.MessageIdentification, com.tools20022.repository.area.acmt.AccountManagementStatusReportV06.MessageIdentification,
-						com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV05.MessageIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageIdentification1.mmIdentification, com.tools20022.repository.msg.MessageIdentification1.mmCreationDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.FundProcessingPassportReportV02.mmMessageIdentification,
+						com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmMessageIdentification, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmMessageReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmMessageReference, com.tools20022.repository.area.sese.AccountHoldingInformationV03.mmMessageReference,
+						com.tools20022.repository.area.acmt.AccountManagementStatusReportV02.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmMessageReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmMessageReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.mmMessageReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.mmMessageReference,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.mmMessageReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.mmMessageReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.mmMessageReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.mmMessageReference,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.mmMessageReference, com.tools20022.repository.area.reda.PriceReportCancellationV03.mmMessageIdentification,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmMessageIdentification, com.tools20022.repository.area.reda.PriceReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.reda.PriceReportV04.mmMessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.mmMessageIdentification,
+						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV03.mmMessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV04.mmMessageIdentification,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.mmMessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV04.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInCancellationRequestV03.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInCancellationRequestV04.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInConfirmationV02.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInConfirmationV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInConfirmationV04.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInInstructionV02.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInInstructionV03.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInInstructionV04.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV04.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV03.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV04.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutInstructionV02.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutInstructionV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutInstructionV04.mmMessageIdentification, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.mmMessageIdentification,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.mmMessageIdentification, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.mmMessageIdentification,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmMessageIdentification, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.mmMessageIdentification,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.mmMessageIdentification, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.mmMessageIdentification,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmMessageIdentification, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmMessageIdentification, com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmMessageIdentification, com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmMessageIdentification, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01.mmMessageIdentification, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderV03.mmMessageIdentification, com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01.mmMessageIdentification, com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmMessageIdentification, com.tools20022.repository.area.setr.RedemptionOrderV03.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02.mmMessageIdentification, com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RequestForOrderStatusReportV03.mmMessageIdentification, com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.mmMessageIdentification,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02.mmMessageIdentification, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionOrderV03.mmMessageIdentification, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01.mmMessageIdentification, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV03.mmMessageIdentification, com.tools20022.repository.area.setr.SwitchOrderV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.RequestForTransferStatusReportV02.mmMessageIdentification, com.tools20022.repository.area.sese.RequestForTransferStatusReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.mmMessageIdentification, com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.mmMessageReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmMessageReference,
+						com.tools20022.repository.area.seev.MeetingNotificationV02.mmMeetingNotificationIdentification, com.tools20022.repository.area.seev.MeetingNotificationV03.mmIdentification,
+						com.tools20022.repository.area.seev.MeetingNotificationV04.mmIdentification, com.tools20022.repository.area.seev.MeetingCancellationV02.mmCancellationIdentification,
+						com.tools20022.repository.area.seev.MeetingCancellationV03.mmIdentification, com.tools20022.repository.area.seev.MeetingCancellationV04.mmIdentification,
+						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.mmEntitlementNotificationIdentification, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmIdentification,
+						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmIdentification, com.tools20022.repository.area.seev.MeetingInstructionV02.mmMeetingInstructionIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionV03.mmIdentification, com.tools20022.repository.area.seev.MeetingInstructionV04.mmIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmInstructionCancellationIdentification, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmMeetingInstructionStatusIdentification,
+						com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmIdentification,
+						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmVoteExecutionConfirmationIdentification, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03.mmIdentification,
+						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmIdentification, com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmMeetingResultDisseminationIdentification,
+						com.tools20022.repository.area.seev.MeetingResultDisseminationV03.mmIdentification, com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmIdentification,
+						com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.mmStatusIdentification, com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01.mmCancellationRequestIdentification,
+						com.tools20022.repository.area.tsmt.AcknowledgementV03.mmAcknowledgementIdentification, com.tools20022.repository.area.tsmt.AcknowledgementV03.mmAcknowledgedMessageReference,
+						com.tools20022.repository.area.tsmt.ActivityReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.ActivityReportV03.mmRelatedMessageReference,
+						com.tools20022.repository.area.tsmt.ActivityReportRequestV03.mmRequestIdentification, com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.mmRequestIdentification,
+						com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmAcceptanceIdentification, com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmDeltaReportReference,
+						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmNotificationIdentification, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmDeltaReportReference,
+						com.tools20022.repository.area.tsmt.AmendmentRejectionV02.mmRejectionIdentification, com.tools20022.repository.area.tsmt.AmendmentRejectionV02.mmDeltaReportReference,
+						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmNotificationIdentification, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmDeltaReportReference,
+						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmRequestIdentification, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmReportIdentification,
+						com.tools20022.repository.area.tsmt.BaselineReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.BaselineReportV03.mmRelatedMessageReference,
+						com.tools20022.repository.area.tsmt.BaselineReSubmissionV03.mmSubmissionIdentification, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmReportIdentification,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmSubmissionIdentification, com.tools20022.repository.area.tsmt.DeltaReportV03.mmReportIdentification,
+						com.tools20022.repository.area.tsmt.ErrorReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.mmRejectedMessageReference,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmReportIdentification,
+						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmSubmissionIdentification, com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmAcceptanceIdentification,
+						com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmDataSetMatchReportReference, com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmNotificationIdentification,
+						com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmDataSetMatchReportReference, com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmRejectionIdentification,
+						com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmDataSetMatchReportReference, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmNotificationIdentification,
+						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmDataSetMatchReportReference, com.tools20022.repository.area.tsmt.ActionReminderV03.mmReminderIdentification,
+						com.tools20022.repository.area.tsmt.ActionReminderV03.mmMessageRequiringAction, com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.mmNotificationIdentification,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmRequestIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.mmAcceptanceIdentification,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmNotificationIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmRejectionIdentification,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmNotificationIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.mmAcceptanceIdentification,
+						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.mmNotificationIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmRejectionIdentification,
+						com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmNotificationIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmRequestIdentification,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.mmNotificationIdentification, com.tools20022.repository.area.tsmt.StatusReportV03.mmReportIdentification,
+						com.tools20022.repository.area.tsmt.StatusReportV03.mmRelatedMessageReference, com.tools20022.repository.area.tsmt.StatusReportRequestV03.mmRequestIdentification,
+						com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmNotificationIdentification, com.tools20022.repository.area.tsmt.TransactionReportV03.mmReportIdentification,
+						com.tools20022.repository.area.tsmt.TransactionReportV03.mmRelatedMessageReference, com.tools20022.repository.area.tsmt.TransactionReportRequestV03.mmRequestIdentification,
+						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmNotificationIdentification, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmNotificationIdentification,
+						com.tools20022.repository.area.tsmt.IntentToPayReportV01.mmReportIdentification, com.tools20022.repository.area.tsmt.SpecialRequestV01.mmRequestIdentification,
+						com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmNotificationIdentification, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.mmAcceptanceIdentification,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.mmRelatedMessageReference, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.mmRejectionIdentification,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.mmRelatedMessageReference, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmNotificationIdentification,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmNotificationIdentification, com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmMessageIdentification, com.tools20022.repository.area.tsmt.BaselineReSubmissionV04.mmSubmissionIdentification,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmSubmissionIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmReportIdentification,
+						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmRequestIdentification, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmReportIdentification,
+						com.tools20022.repository.area.tsmt.ActivityReportV04.mmReportIdentification, com.tools20022.repository.area.tsmt.ActivityReportV04.mmRelatedMessageReference,
+						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmSubmissionIdentification, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV05.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInConfirmationV05.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmMessageIdentification,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmMessageReference, com.tools20022.repository.area.sese.TransferOutInstructionV05.mmMessageIdentification,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmMessageReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05.mmMessageReference,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReportV04.mmMessageIdentification, com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.mmMessageReference,
+						com.tools20022.repository.area.sese.TransferInInstructionV05.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInCancellationRequestV05.mmMessageIdentification,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.mmMessageReference, com.tools20022.repository.area.sese.TransferOutConfirmationV05.mmMessageIdentification,
+						com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.mmMessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV05.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.mmMessageIdentification,
+						com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmNotificationIdentification, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmNotificationIdentification,
+						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmMessageIdentification,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.mmMessageIdentification, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.mmMessageIdentification,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03.mmMessageIdentification, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmMessageIdentification,
+						com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.mmMessageIdentification, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.mmMessageIdentification,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmMessageIdentification,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmMessageReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmMessageIdentification,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmMessageReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmMessageReference,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.mmRelatedMessageReference,
+						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05.mmSubmissionIdentification, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV05.mmRequestIdentification,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmReportIdentification, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmReportIdentification,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmSubmissionIdentification, com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmSubmissionIdentification,
+						com.tools20022.repository.area.sese.TransferInInstructionV06.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutInstructionV06.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmMessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV06.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInCancellationRequestV06.mmMessageIdentification, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06.mmMessageIdentification,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmMessageIdentification, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmMessageReference,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmMessageIdentification,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV05.mmMessageReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmMessageReference,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInConfirmationV07.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmMessageIdentification,
+						com.tools20022.repository.area.sese.RequestForTransferStatusReportV05.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInCancellationRequestV07.mmMessageIdentification,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmMessageReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV05.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferOutInstructionV07.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInInstructionV07.mmMessageIdentification,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmMessageReference, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.mmMessageIdentification,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderV04.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionOrderV04.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02.mmMessageIdentification, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.mmMessageIdentification, com.tools20022.repository.area.setr.SwitchOrderConfirmationV04.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RequestForOrderStatusReportV04.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmMessageIdentification, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04.mmMessageIdentification,
+						com.tools20022.repository.area.setr.OrderCancellationStatusReportV04.mmMessageIdentification, com.tools20022.repository.area.setr.SwitchOrderV04.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02.mmMessageIdentification, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04.mmMessageIdentification,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV04.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmMessageIdentification,
+						com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04.mmMessageIdentification, com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderV04.mmMessageIdentification, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmMessageIdentification,
+						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.mmMessageIdentification, com.tools20022.repository.area.setr.SubscriptionOrderV04.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountManagementStatusReportV06.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV05.mmMessageIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageIdentification1";
 				definition = "Identifies a message by a unique identifier and the date and time when the message was created by the sender.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

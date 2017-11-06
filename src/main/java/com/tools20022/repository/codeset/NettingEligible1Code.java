@@ -33,20 +33,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * NettingEligibleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.NettingEligible1Code#Gross
- * NettingEligible1Code.Gross}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NettingEligible1Code#Nett
- * NettingEligible1Code.Nett}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NettingEligible1Code#AggregationForSettlement
- * NettingEligible1Code.AggregationForSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.NettingEligible1Code#mmGross
+ * NettingEligible1Code.mmGross}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NettingEligible1Code#mmNett
+ * NettingEligible1Code.mmNett}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NettingEligible1Code#mmAggregationForSettlement
+ * NettingEligible1Code.mmAggregationForSettlement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +84,7 @@ public class NettingEligible1Code extends NettingEligibleCode {
 	 * name} = "Gross"</li>
 	 * </ul>
 	 */
-	public static final MMCode Gross = new MMCode() {
+	public static final MMCode mmGross = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
@@ -105,7 +107,7 @@ public class NettingEligible1Code extends NettingEligibleCode {
 	 * name} = "Nett"</li>
 	 * </ul>
 	 */
-	public static final MMCode Nett = new MMCode() {
+	public static final MMCode mmNett = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nett";
@@ -128,7 +130,7 @@ public class NettingEligible1Code extends NettingEligibleCode {
 	 * name} = "AggregationForSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode AggregationForSettlement = new MMCode() {
+	public static final MMCode mmAggregationForSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregationForSettlement";
@@ -139,13 +141,13 @@ public class NettingEligible1Code extends NettingEligibleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GROS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NettingEligible1Code";
 				definition = "Specifies whether the trade is eligible for netting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NettingEligible1Code.Gross, com.tools20022.repository.codeset.NettingEligible1Code.Nett,
-						com.tools20022.repository.codeset.NettingEligible1Code.AggregationForSettlement);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NettingEligible1Code.mmGross, com.tools20022.repository.codeset.NettingEligible1Code.mmNett,
+						com.tools20022.repository.codeset.NettingEligible1Code.mmAggregationForSettlement);
 				trace_lazy = () -> NettingEligibleCode.mmObject();
 			}
 		});

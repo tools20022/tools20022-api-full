@@ -37,16 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Order#Trade Order.Trade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Order#MasterIdentification
- * Order.MasterIdentification}</li>
- * </ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Order#mmTrade Order.mmTrade}
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#Order Trade.Order}</li>
+ * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+ * Order.mmMasterIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -59,10 +54,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmOrder Trade.mmOrder}
+ * </li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Order {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Trade trade;
 	/**
 	 * Agreement between two parties to buy and sell assets.
 	 * <p>
@@ -85,8 +89,8 @@ public class Order {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
-	 * opposite} = {@linkplain com.tools20022.repository.entity.Trade#Order
-	 * Trade.Order}</li>
+	 * opposite} = {@linkplain com.tools20022.repository.entity.Trade#mmOrder
+	 * Trade.mmOrder}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -108,20 +112,21 @@ public class Order {
 	 * definition} = "Agreement between two parties to buy and sell assets."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Trade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Order.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Agreement between two parties to buy and sell assets.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Trade.Order;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmOrder;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
+	protected Max35Text masterIdentification;
 	/**
 	 * Unique and unambiguous identifier for a group of individual orders, as
 	 * assigned by the instructing party. This identifier links the individual
@@ -133,366 +138,372 @@ public class Order {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder4#MasterReference
-	 * InvestmentFundOrder4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer6#MasterReference
-	 * PEPISATransfer6.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer4#MasterReference
-	 * ISATransfer4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer6#MasterReference
-	 * ISATransfer6.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer8#MasterReference
-	 * PEPISATransfer8.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference3#MasterReference
-	 * TransferReference3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer3#MasterReference
-	 * ISATransfer3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer8#MasterReference
-	 * ISATransfer8.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer4#MasterReference
-	 * PEPISATransfer4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer2#MasterReference
-	 * ISATransfer2.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer10#MasterReference
-	 * ISATransfer10.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer3#MasterReference
-	 * PEPISATransfer3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer1#MasterReference
-	 * ISATransfer1.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer7#MasterReference
-	 * ISATransfer7.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference2#MasterReference
-	 * TransferReference2.MasterReference}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer7#MasterReference
-	 * Transfer7.MasterReference}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer10#MasterReference
-	 * Transfer10.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference1#MasterReference
-	 * TransferReference1.MasterReference}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer6#MasterReference
-	 * Transfer6.MasterReference}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer9#MasterReference
-	 * Transfer9.MasterReference}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer5#MasterReference
-	 * Transfer5.MasterReference}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer8#MasterReference
-	 * Transfer8.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification2#MasterIdentification
-	 * Identification2.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason8#MasterReference
-	 * OrderStatusAndReason8.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason4#MasterReference
-	 * IndividualOrderStatusAndReason4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1#MasterReference
-	 * IndividualOrderConfirmationStatusAndReason1.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#MasterReference
-	 * OrderStatusAndReason7.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#MasterReference
-	 * IndividualOrderStatusAndReason2.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#MasterReference
-	 * SwitchOrderStatusAndReason1.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder1#MasterReference
-	 * InvestmentFundOrder1.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3#MasterReference
-	 * RedemptionBulkOrder3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3#MasterReference
-	 * RedemptionBulkExecution3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution1#MasterReference
-	 * InvestmentFundOrderExecution1.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4#MasterReference
-	 * RedemptionBulkOrder4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#MasterReference
-	 * RedemptionMultipleOrder3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3#MasterReference
-	 * RedemptionMultipleExecution3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4#MasterReference
-	 * RedemptionMultipleOrder4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder3#MasterReference
-	 * InvestmentFundOrder3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder2#MasterReference
-	 * InvestmentFundOrder2.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction2#MasterReference
-	 * InvestmentFundTransaction2.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction3#MasterReference
-	 * InvestmentFundTransaction3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3#MasterReference
-	 * SubscriptionBulkOrder3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3#MasterReference
-	 * SubscriptionBulkExecution3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4#MasterReference
-	 * SubscriptionBulkOrder4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3#MasterReference
-	 * SubscriptionMultipleOrder3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3#MasterReference
-	 * SubscriptionMultipleExecution3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4#MasterReference
-	 * SubscriptionMultipleOrder4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3#MasterReference
-	 * SwitchOrder3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchExecution4#MasterReference
-	 * SwitchExecution4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#MasterReference
-	 * SwitchOrder4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference6#MasterReference
-	 * MessageAndBusinessReference6.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#MasterReference
-	 * CancellationStatusAndReason2.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#MasterReference
-	 * TransferStatusAndReason2.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer5#MasterReference
-	 * PEPISATransfer5.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer5#MasterReference
-	 * ISATransfer5.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification7#MasterIdentification
-	 * Identification7.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification6#MasterIdentification
-	 * Identification6.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification5#MasterIdentification
-	 * Identification5.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification8#MasterIdentification
-	 * Identification8.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification11#MasterIdentification
-	 * Identification11.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification13#MasterIdentification
-	 * Identification13.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification9#MasterIdentification
-	 * Identification9.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason3#MasterReference
-	 * IndividualOrderStatusAndReason3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10#MasterReference
-	 * RedemptionExecution10.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder9#MasterReference
-	 * RedemptionOrder9.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution7#MasterReference
-	 * SubscriptionExecution7.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder9#MasterReference
-	 * SubscriptionOrder9.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution3#MasterReference
-	 * InvestmentFundOrderExecution3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder6#MasterReference
-	 * InvestmentFundOrder6.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason5#MasterReference
-	 * IndividualOrderStatusAndReason5.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder5#MasterReference
-	 * RedemptionMultipleOrder5.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution4#MasterReference
-	 * RedemptionMultipleExecution4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder5#MasterReference
-	 * SubscriptionMultipleOrder5.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution4#MasterReference
-	 * SubscriptionMultipleExecution4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification3#MasterIdentification
-	 * Identification3.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn10#MasterReference
-	 * TransferIn10.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn9#MasterReference
-	 * TransferIn9.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut11#MasterReference
-	 * TransferOut11.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut12#MasterReference
-	 * TransferOut12.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7#MasterReference
-	 * MessageAndBusinessReference7.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer16#MasterReference
-	 * ISATransfer16.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer13#MasterReference
-	 * ISATransfer13.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason3#MasterReference
-	 * TransferStatusAndReason3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference5#MasterReference
-	 * TransferReference5.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference6#MasterReference
-	 * TransferReference6.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference7#MasterReference
-	 * TransferReference7.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction4#MasterReference
-	 * InvestmentFundTransaction4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn13#MasterReference
-	 * TransferIn13.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut14#MasterReference
-	 * TransferOut14.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn12#MasterReference
-	 * TransferIn12.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut15#MasterReference
-	 * TransferOut15.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification15#MasterIdentification
-	 * Identification15.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#MasterReference
-	 * CancellationStatusAndReason3.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference8#MasterReference
-	 * MessageAndBusinessReference8.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason4#MasterReference
-	 * TransferStatusAndReason4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut17#MasterReference
-	 * TransferOut17.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference9#MasterReference
-	 * TransferReference9.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn14#MasterReference
-	 * TransferIn14.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference10#MasterReference
-	 * TransferReference10.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn15#MasterReference
-	 * TransferIn15.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut16#MasterReference
-	 * TransferOut16.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Identification24#MasterIdentification
-	 * Identification24.MasterIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2#MasterReference
-	 * IndividualOrderConfirmationStatusAndReason2.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchExecution7#MasterReference
-	 * SwitchExecution7.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5#MasterReference
-	 * SubscriptionBulkOrder5.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5#MasterReference
-	 * RedemptionBulkExecution5.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5#MasterReference
-	 * RedemptionMultipleExecution5.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6#MasterReference
-	 * RedemptionMultipleOrder6.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6#MasterReference
-	 * SubscriptionMultipleOrder6.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution4#MasterReference
-	 * SubscriptionBulkExecution4.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder7#MasterReference
-	 * SwitchOrder7.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder6#MasterReference
-	 * RedemptionBulkOrder6.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution5#MasterReference
-	 * SubscriptionMultipleExecution5.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#MasterReference
-	 * IndividualOrderStatusAndReason7.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#MasterReference
-	 * SwitchOrderStatusAndReason2.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason10#MasterReference
-	 * OrderStatusAndReason10.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason9#MasterReference
-	 * OrderStatusAndReason9.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason8#MasterReference
-	 * IndividualOrderStatusAndReason8.MasterReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder8#MasterReference
-	 * InvestmentFundOrder8.MasterReference}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Order
 	 * Order}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder4#mmMasterReference
+	 * InvestmentFundOrder4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer6#mmMasterReference
+	 * PEPISATransfer6.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer4#mmMasterReference
+	 * ISATransfer4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer6#mmMasterReference
+	 * ISATransfer6.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer8#mmMasterReference
+	 * PEPISATransfer8.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference3#mmMasterReference
+	 * TransferReference3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer3#mmMasterReference
+	 * ISATransfer3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer8#mmMasterReference
+	 * ISATransfer8.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer4#mmMasterReference
+	 * PEPISATransfer4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer2#mmMasterReference
+	 * ISATransfer2.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer10#mmMasterReference
+	 * ISATransfer10.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer3#mmMasterReference
+	 * PEPISATransfer3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer1#mmMasterReference
+	 * ISATransfer1.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer7#mmMasterReference
+	 * ISATransfer7.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference2#mmMasterReference
+	 * TransferReference2.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer7#mmMasterReference
+	 * Transfer7.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer10#mmMasterReference
+	 * Transfer10.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference1#mmMasterReference
+	 * TransferReference1.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer6#mmMasterReference
+	 * Transfer6.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer9#mmMasterReference
+	 * Transfer9.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer5#mmMasterReference
+	 * Transfer5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer8#mmMasterReference
+	 * Transfer8.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification2#mmMasterIdentification
+	 * Identification2.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason8#mmMasterReference
+	 * OrderStatusAndReason8.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason4#mmMasterReference
+	 * IndividualOrderStatusAndReason4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1#mmMasterReference
+	 * IndividualOrderConfirmationStatusAndReason1.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#mmMasterReference
+	 * OrderStatusAndReason7.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmMasterReference
+	 * IndividualOrderStatusAndReason2.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1#mmMasterReference
+	 * SwitchOrderStatusAndReason1.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder1#mmMasterReference
+	 * InvestmentFundOrder1.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3#mmMasterReference
+	 * RedemptionBulkOrder3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3#mmMasterReference
+	 * RedemptionBulkExecution3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution1#mmMasterReference
+	 * InvestmentFundOrderExecution1.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4#mmMasterReference
+	 * RedemptionBulkOrder4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#mmMasterReference
+	 * RedemptionMultipleOrder3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3#mmMasterReference
+	 * RedemptionMultipleExecution3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4#mmMasterReference
+	 * RedemptionMultipleOrder4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder3#mmMasterReference
+	 * InvestmentFundOrder3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder2#mmMasterReference
+	 * InvestmentFundOrder2.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction2#mmMasterReference
+	 * InvestmentFundTransaction2.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction3#mmMasterReference
+	 * InvestmentFundTransaction3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3#mmMasterReference
+	 * SubscriptionBulkOrder3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3#mmMasterReference
+	 * SubscriptionBulkExecution3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4#mmMasterReference
+	 * SubscriptionBulkOrder4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3#mmMasterReference
+	 * SubscriptionMultipleOrder3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3#mmMasterReference
+	 * SubscriptionMultipleExecution3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4#mmMasterReference
+	 * SubscriptionMultipleOrder4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder3#mmMasterReference
+	 * SwitchOrder3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchExecution4#mmMasterReference
+	 * SwitchExecution4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmMasterReference
+	 * SwitchOrder4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference6#mmMasterReference
+	 * MessageAndBusinessReference6.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmMasterReference
+	 * CancellationStatusAndReason2.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmMasterReference
+	 * TransferStatusAndReason2.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PEPISATransfer5#mmMasterReference
+	 * PEPISATransfer5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer5#mmMasterReference
+	 * ISATransfer5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification7#mmMasterIdentification
+	 * Identification7.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification6#mmMasterIdentification
+	 * Identification6.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification5#mmMasterIdentification
+	 * Identification5.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification8#mmMasterIdentification
+	 * Identification8.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification11#mmMasterIdentification
+	 * Identification11.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification13#mmMasterIdentification
+	 * Identification13.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification9#mmMasterIdentification
+	 * Identification9.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason3#mmMasterReference
+	 * IndividualOrderStatusAndReason3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution10#mmMasterReference
+	 * RedemptionExecution10.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder9#mmMasterReference
+	 * RedemptionOrder9.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution7#mmMasterReference
+	 * SubscriptionExecution7.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder9#mmMasterReference
+	 * SubscriptionOrder9.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution3#mmMasterReference
+	 * InvestmentFundOrderExecution3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder6#mmMasterReference
+	 * InvestmentFundOrder6.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason5#mmMasterReference
+	 * IndividualOrderStatusAndReason5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder5#mmMasterReference
+	 * RedemptionMultipleOrder5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution4#mmMasterReference
+	 * RedemptionMultipleExecution4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder5#mmMasterReference
+	 * SubscriptionMultipleOrder5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution4#mmMasterReference
+	 * SubscriptionMultipleExecution4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification3#mmMasterIdentification
+	 * Identification3.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn10#mmMasterReference
+	 * TransferIn10.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn9#mmMasterReference
+	 * TransferIn9.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut11#mmMasterReference
+	 * TransferOut11.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut12#mmMasterReference
+	 * TransferOut12.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7#mmMasterReference
+	 * MessageAndBusinessReference7.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer16#mmMasterReference
+	 * ISATransfer16.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer13#mmMasterReference
+	 * ISATransfer13.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason3#mmMasterReference
+	 * TransferStatusAndReason3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference5#mmMasterReference
+	 * TransferReference5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference6#mmMasterReference
+	 * TransferReference6.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference7#mmMasterReference
+	 * TransferReference7.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransaction4#mmMasterReference
+	 * InvestmentFundTransaction4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn13#mmMasterReference
+	 * TransferIn13.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut14#mmMasterReference
+	 * TransferOut14.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn12#mmMasterReference
+	 * TransferIn12.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut15#mmMasterReference
+	 * TransferOut15.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification15#mmMasterIdentification
+	 * Identification15.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#mmMasterReference
+	 * CancellationStatusAndReason3.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference8#mmMasterReference
+	 * MessageAndBusinessReference8.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason4#mmMasterReference
+	 * TransferStatusAndReason4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut17#mmMasterReference
+	 * TransferOut17.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference9#mmMasterReference
+	 * TransferReference9.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn14#mmMasterReference
+	 * TransferIn14.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference10#mmMasterReference
+	 * TransferReference10.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn15#mmMasterReference
+	 * TransferIn15.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut16#mmMasterReference
+	 * TransferOut16.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Identification24#mmMasterIdentification
+	 * Identification24.mmMasterIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2#mmMasterReference
+	 * IndividualOrderConfirmationStatusAndReason2.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchExecution7#mmMasterReference
+	 * SwitchExecution7.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5#mmMasterReference
+	 * SubscriptionBulkOrder5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5#mmMasterReference
+	 * RedemptionBulkExecution5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5#mmMasterReference
+	 * RedemptionMultipleExecution5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6#mmMasterReference
+	 * RedemptionMultipleOrder6.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6#mmMasterReference
+	 * SubscriptionMultipleOrder6.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution4#mmMasterReference
+	 * SubscriptionBulkExecution4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmMasterReference
+	 * SwitchOrder7.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder6#mmMasterReference
+	 * RedemptionBulkOrder6.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution5#mmMasterReference
+	 * SubscriptionMultipleExecution5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmMasterReference
+	 * IndividualOrderStatusAndReason7.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2#mmMasterReference
+	 * SwitchOrderStatusAndReason2.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason10#mmMasterReference
+	 * OrderStatusAndReason10.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason9#mmMasterReference
+	 * OrderStatusAndReason9.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason8#mmMasterReference
+	 * IndividualOrderStatusAndReason8.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder8#mmMasterReference
+	 * InvestmentFundOrder8.mmMasterReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -506,59 +517,61 @@ public class Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MasterIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMasterIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder4.MasterReference, com.tools20022.repository.msg.PEPISATransfer6.MasterReference,
-					com.tools20022.repository.msg.ISATransfer4.MasterReference, com.tools20022.repository.msg.ISATransfer6.MasterReference, com.tools20022.repository.msg.PEPISATransfer8.MasterReference,
-					com.tools20022.repository.msg.TransferReference3.MasterReference, com.tools20022.repository.msg.ISATransfer3.MasterReference, com.tools20022.repository.msg.ISATransfer8.MasterReference,
-					com.tools20022.repository.msg.PEPISATransfer4.MasterReference, com.tools20022.repository.msg.ISATransfer2.MasterReference, com.tools20022.repository.msg.ISATransfer10.MasterReference,
-					com.tools20022.repository.msg.PEPISATransfer3.MasterReference, com.tools20022.repository.msg.ISATransfer1.MasterReference, com.tools20022.repository.msg.ISATransfer7.MasterReference,
-					com.tools20022.repository.msg.TransferReference2.MasterReference, com.tools20022.repository.msg.Transfer7.MasterReference, com.tools20022.repository.msg.Transfer10.MasterReference,
-					com.tools20022.repository.msg.TransferReference1.MasterReference, com.tools20022.repository.msg.Transfer6.MasterReference, com.tools20022.repository.msg.Transfer9.MasterReference,
-					com.tools20022.repository.msg.Transfer5.MasterReference, com.tools20022.repository.msg.Transfer8.MasterReference, com.tools20022.repository.msg.Identification2.MasterIdentification,
-					com.tools20022.repository.msg.OrderStatusAndReason8.MasterReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason4.MasterReference,
-					com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.MasterReference, com.tools20022.repository.msg.OrderStatusAndReason7.MasterReference,
-					com.tools20022.repository.msg.IndividualOrderStatusAndReason2.MasterReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.MasterReference,
-					com.tools20022.repository.msg.InvestmentFundOrder1.MasterReference, com.tools20022.repository.msg.RedemptionBulkOrder3.MasterReference, com.tools20022.repository.msg.RedemptionBulkExecution3.MasterReference,
-					com.tools20022.repository.msg.InvestmentFundOrderExecution1.MasterReference, com.tools20022.repository.msg.RedemptionBulkOrder4.MasterReference, com.tools20022.repository.msg.RedemptionMultipleOrder3.MasterReference,
-					com.tools20022.repository.msg.RedemptionMultipleExecution3.MasterReference, com.tools20022.repository.msg.RedemptionMultipleOrder4.MasterReference, com.tools20022.repository.msg.InvestmentFundOrder3.MasterReference,
-					com.tools20022.repository.msg.InvestmentFundOrder2.MasterReference, com.tools20022.repository.msg.InvestmentFundTransaction2.MasterReference, com.tools20022.repository.msg.InvestmentFundTransaction3.MasterReference,
-					com.tools20022.repository.msg.SubscriptionBulkOrder3.MasterReference, com.tools20022.repository.msg.SubscriptionBulkExecution3.MasterReference, com.tools20022.repository.msg.SubscriptionBulkOrder4.MasterReference,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder3.MasterReference, com.tools20022.repository.msg.SubscriptionMultipleExecution3.MasterReference,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder4.MasterReference, com.tools20022.repository.msg.SwitchOrder3.MasterReference, com.tools20022.repository.msg.SwitchExecution4.MasterReference,
-					com.tools20022.repository.msg.SwitchOrder4.MasterReference, com.tools20022.repository.msg.MessageAndBusinessReference6.MasterReference, com.tools20022.repository.msg.CancellationStatusAndReason2.MasterReference,
-					com.tools20022.repository.msg.TransferStatusAndReason2.MasterReference, com.tools20022.repository.msg.PEPISATransfer5.MasterReference, com.tools20022.repository.msg.ISATransfer5.MasterReference,
-					com.tools20022.repository.msg.Identification7.MasterIdentification, com.tools20022.repository.msg.Identification6.MasterIdentification, com.tools20022.repository.msg.Identification5.MasterIdentification,
-					com.tools20022.repository.msg.Identification8.MasterIdentification, com.tools20022.repository.msg.Identification11.MasterIdentification, com.tools20022.repository.msg.Identification13.MasterIdentification,
-					com.tools20022.repository.msg.Identification9.MasterIdentification, com.tools20022.repository.msg.IndividualOrderStatusAndReason3.MasterReference, com.tools20022.repository.msg.RedemptionExecution10.MasterReference,
-					com.tools20022.repository.msg.RedemptionOrder9.MasterReference, com.tools20022.repository.msg.SubscriptionExecution7.MasterReference, com.tools20022.repository.msg.SubscriptionOrder9.MasterReference,
-					com.tools20022.repository.msg.InvestmentFundOrderExecution3.MasterReference, com.tools20022.repository.msg.InvestmentFundOrder6.MasterReference,
-					com.tools20022.repository.msg.IndividualOrderStatusAndReason5.MasterReference, com.tools20022.repository.msg.RedemptionMultipleOrder5.MasterReference,
-					com.tools20022.repository.msg.RedemptionMultipleExecution4.MasterReference, com.tools20022.repository.msg.SubscriptionMultipleOrder5.MasterReference,
-					com.tools20022.repository.msg.SubscriptionMultipleExecution4.MasterReference, com.tools20022.repository.msg.Identification3.MasterIdentification, com.tools20022.repository.msg.TransferIn10.MasterReference,
-					com.tools20022.repository.msg.TransferIn9.MasterReference, com.tools20022.repository.msg.TransferOut11.MasterReference, com.tools20022.repository.msg.TransferOut12.MasterReference,
-					com.tools20022.repository.msg.MessageAndBusinessReference7.MasterReference, com.tools20022.repository.msg.ISATransfer16.MasterReference, com.tools20022.repository.msg.ISATransfer13.MasterReference,
-					com.tools20022.repository.msg.TransferStatusAndReason3.MasterReference, com.tools20022.repository.msg.TransferReference5.MasterReference, com.tools20022.repository.msg.TransferReference6.MasterReference,
-					com.tools20022.repository.msg.TransferReference7.MasterReference, com.tools20022.repository.msg.InvestmentFundTransaction4.MasterReference, com.tools20022.repository.msg.TransferIn13.MasterReference,
-					com.tools20022.repository.msg.TransferOut14.MasterReference, com.tools20022.repository.msg.TransferIn12.MasterReference, com.tools20022.repository.msg.TransferOut15.MasterReference,
-					com.tools20022.repository.msg.Identification15.MasterIdentification, com.tools20022.repository.msg.CancellationStatusAndReason3.MasterReference,
-					com.tools20022.repository.msg.MessageAndBusinessReference8.MasterReference, com.tools20022.repository.msg.TransferStatusAndReason4.MasterReference, com.tools20022.repository.msg.TransferOut17.MasterReference,
-					com.tools20022.repository.msg.TransferReference9.MasterReference, com.tools20022.repository.msg.TransferIn14.MasterReference, com.tools20022.repository.msg.TransferReference10.MasterReference,
-					com.tools20022.repository.msg.TransferIn15.MasterReference, com.tools20022.repository.msg.TransferOut16.MasterReference, com.tools20022.repository.msg.Identification24.MasterIdentification,
-					com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.MasterReference, com.tools20022.repository.msg.SwitchExecution7.MasterReference,
-					com.tools20022.repository.msg.SubscriptionBulkOrder5.MasterReference, com.tools20022.repository.msg.RedemptionBulkExecution5.MasterReference, com.tools20022.repository.msg.RedemptionMultipleExecution5.MasterReference,
-					com.tools20022.repository.msg.RedemptionMultipleOrder6.MasterReference, com.tools20022.repository.msg.SubscriptionMultipleOrder6.MasterReference, com.tools20022.repository.msg.SubscriptionBulkExecution4.MasterReference,
-					com.tools20022.repository.msg.SwitchOrder7.MasterReference, com.tools20022.repository.msg.RedemptionBulkOrder6.MasterReference, com.tools20022.repository.msg.SubscriptionMultipleExecution5.MasterReference,
-					com.tools20022.repository.msg.IndividualOrderStatusAndReason7.MasterReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.MasterReference,
-					com.tools20022.repository.msg.OrderStatusAndReason10.MasterReference, com.tools20022.repository.msg.OrderStatusAndReason9.MasterReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason8.MasterReference,
-					com.tools20022.repository.msg.InvestmentFundOrder8.MasterReference);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder4.mmMasterReference, com.tools20022.repository.msg.PEPISATransfer6.mmMasterReference,
+					com.tools20022.repository.msg.ISATransfer4.mmMasterReference, com.tools20022.repository.msg.ISATransfer6.mmMasterReference, com.tools20022.repository.msg.PEPISATransfer8.mmMasterReference,
+					com.tools20022.repository.msg.TransferReference3.mmMasterReference, com.tools20022.repository.msg.ISATransfer3.mmMasterReference, com.tools20022.repository.msg.ISATransfer8.mmMasterReference,
+					com.tools20022.repository.msg.PEPISATransfer4.mmMasterReference, com.tools20022.repository.msg.ISATransfer2.mmMasterReference, com.tools20022.repository.msg.ISATransfer10.mmMasterReference,
+					com.tools20022.repository.msg.PEPISATransfer3.mmMasterReference, com.tools20022.repository.msg.ISATransfer1.mmMasterReference, com.tools20022.repository.msg.ISATransfer7.mmMasterReference,
+					com.tools20022.repository.msg.TransferReference2.mmMasterReference, com.tools20022.repository.msg.Transfer7.mmMasterReference, com.tools20022.repository.msg.Transfer10.mmMasterReference,
+					com.tools20022.repository.msg.TransferReference1.mmMasterReference, com.tools20022.repository.msg.Transfer6.mmMasterReference, com.tools20022.repository.msg.Transfer9.mmMasterReference,
+					com.tools20022.repository.msg.Transfer5.mmMasterReference, com.tools20022.repository.msg.Transfer8.mmMasterReference, com.tools20022.repository.msg.Identification2.mmMasterIdentification,
+					com.tools20022.repository.msg.OrderStatusAndReason8.mmMasterReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason4.mmMasterReference,
+					com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmMasterReference, com.tools20022.repository.msg.OrderStatusAndReason7.mmMasterReference,
+					com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmMasterReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmMasterReference,
+					com.tools20022.repository.msg.InvestmentFundOrder1.mmMasterReference, com.tools20022.repository.msg.RedemptionBulkOrder3.mmMasterReference, com.tools20022.repository.msg.RedemptionBulkExecution3.mmMasterReference,
+					com.tools20022.repository.msg.InvestmentFundOrderExecution1.mmMasterReference, com.tools20022.repository.msg.RedemptionBulkOrder4.mmMasterReference,
+					com.tools20022.repository.msg.RedemptionMultipleOrder3.mmMasterReference, com.tools20022.repository.msg.RedemptionMultipleExecution3.mmMasterReference,
+					com.tools20022.repository.msg.RedemptionMultipleOrder4.mmMasterReference, com.tools20022.repository.msg.InvestmentFundOrder3.mmMasterReference, com.tools20022.repository.msg.InvestmentFundOrder2.mmMasterReference,
+					com.tools20022.repository.msg.InvestmentFundTransaction2.mmMasterReference, com.tools20022.repository.msg.InvestmentFundTransaction3.mmMasterReference,
+					com.tools20022.repository.msg.SubscriptionBulkOrder3.mmMasterReference, com.tools20022.repository.msg.SubscriptionBulkExecution3.mmMasterReference, com.tools20022.repository.msg.SubscriptionBulkOrder4.mmMasterReference,
+					com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmMasterReference, com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmMasterReference,
+					com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmMasterReference, com.tools20022.repository.msg.SwitchOrder3.mmMasterReference, com.tools20022.repository.msg.SwitchExecution4.mmMasterReference,
+					com.tools20022.repository.msg.SwitchOrder4.mmMasterReference, com.tools20022.repository.msg.MessageAndBusinessReference6.mmMasterReference, com.tools20022.repository.msg.CancellationStatusAndReason2.mmMasterReference,
+					com.tools20022.repository.msg.TransferStatusAndReason2.mmMasterReference, com.tools20022.repository.msg.PEPISATransfer5.mmMasterReference, com.tools20022.repository.msg.ISATransfer5.mmMasterReference,
+					com.tools20022.repository.msg.Identification7.mmMasterIdentification, com.tools20022.repository.msg.Identification6.mmMasterIdentification, com.tools20022.repository.msg.Identification5.mmMasterIdentification,
+					com.tools20022.repository.msg.Identification8.mmMasterIdentification, com.tools20022.repository.msg.Identification11.mmMasterIdentification, com.tools20022.repository.msg.Identification13.mmMasterIdentification,
+					com.tools20022.repository.msg.Identification9.mmMasterIdentification, com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmMasterReference,
+					com.tools20022.repository.msg.RedemptionExecution10.mmMasterReference, com.tools20022.repository.msg.RedemptionOrder9.mmMasterReference, com.tools20022.repository.msg.SubscriptionExecution7.mmMasterReference,
+					com.tools20022.repository.msg.SubscriptionOrder9.mmMasterReference, com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmMasterReference, com.tools20022.repository.msg.InvestmentFundOrder6.mmMasterReference,
+					com.tools20022.repository.msg.IndividualOrderStatusAndReason5.mmMasterReference, com.tools20022.repository.msg.RedemptionMultipleOrder5.mmMasterReference,
+					com.tools20022.repository.msg.RedemptionMultipleExecution4.mmMasterReference, com.tools20022.repository.msg.SubscriptionMultipleOrder5.mmMasterReference,
+					com.tools20022.repository.msg.SubscriptionMultipleExecution4.mmMasterReference, com.tools20022.repository.msg.Identification3.mmMasterIdentification, com.tools20022.repository.msg.TransferIn10.mmMasterReference,
+					com.tools20022.repository.msg.TransferIn9.mmMasterReference, com.tools20022.repository.msg.TransferOut11.mmMasterReference, com.tools20022.repository.msg.TransferOut12.mmMasterReference,
+					com.tools20022.repository.msg.MessageAndBusinessReference7.mmMasterReference, com.tools20022.repository.msg.ISATransfer16.mmMasterReference, com.tools20022.repository.msg.ISATransfer13.mmMasterReference,
+					com.tools20022.repository.msg.TransferStatusAndReason3.mmMasterReference, com.tools20022.repository.msg.TransferReference5.mmMasterReference, com.tools20022.repository.msg.TransferReference6.mmMasterReference,
+					com.tools20022.repository.msg.TransferReference7.mmMasterReference, com.tools20022.repository.msg.InvestmentFundTransaction4.mmMasterReference, com.tools20022.repository.msg.TransferIn13.mmMasterReference,
+					com.tools20022.repository.msg.TransferOut14.mmMasterReference, com.tools20022.repository.msg.TransferIn12.mmMasterReference, com.tools20022.repository.msg.TransferOut15.mmMasterReference,
+					com.tools20022.repository.msg.Identification15.mmMasterIdentification, com.tools20022.repository.msg.CancellationStatusAndReason3.mmMasterReference,
+					com.tools20022.repository.msg.MessageAndBusinessReference8.mmMasterReference, com.tools20022.repository.msg.TransferStatusAndReason4.mmMasterReference, com.tools20022.repository.msg.TransferOut17.mmMasterReference,
+					com.tools20022.repository.msg.TransferReference9.mmMasterReference, com.tools20022.repository.msg.TransferIn14.mmMasterReference, com.tools20022.repository.msg.TransferReference10.mmMasterReference,
+					com.tools20022.repository.msg.TransferIn15.mmMasterReference, com.tools20022.repository.msg.TransferOut16.mmMasterReference, com.tools20022.repository.msg.Identification24.mmMasterIdentification,
+					com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmMasterReference, com.tools20022.repository.msg.SwitchExecution7.mmMasterReference,
+					com.tools20022.repository.msg.SubscriptionBulkOrder5.mmMasterReference, com.tools20022.repository.msg.RedemptionBulkExecution5.mmMasterReference,
+					com.tools20022.repository.msg.RedemptionMultipleExecution5.mmMasterReference, com.tools20022.repository.msg.RedemptionMultipleOrder6.mmMasterReference,
+					com.tools20022.repository.msg.SubscriptionMultipleOrder6.mmMasterReference, com.tools20022.repository.msg.SubscriptionBulkExecution4.mmMasterReference, com.tools20022.repository.msg.SwitchOrder7.mmMasterReference,
+					com.tools20022.repository.msg.RedemptionBulkOrder6.mmMasterReference, com.tools20022.repository.msg.SubscriptionMultipleExecution5.mmMasterReference,
+					com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmMasterReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmMasterReference,
+					com.tools20022.repository.msg.OrderStatusAndReason10.mmMasterReference, com.tools20022.repository.msg.OrderStatusAndReason9.mmMasterReference,
+					com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmMasterReference, com.tools20022.repository.msg.InvestmentFundOrder8.mmMasterReference);
 			elementContext_lazy = () -> Order.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MasterIdentification";
 			definition = "Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -566,15 +579,31 @@ public class Order {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Order";
 				definition = "Order placed by an investor to buy or sell an asset at a price specified or not.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.Order);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmOrder);
 				subType_lazy = () -> Arrays.asList(SecuritiesOrder.mmObject(), PurchaseOrder.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Order.Trade, com.tools20022.repository.entity.Order.MasterIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Order.mmTrade, com.tools20022.repository.entity.Order.mmMasterIdentification);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Trade getTrade() {
+		return trade;
+	}
+
+	public void setTrade(com.tools20022.repository.entity.Trade trade) {
+		this.trade = trade;
+	}
+
+	public Max35Text getMasterIdentification() {
+		return masterIdentification;
+	}
+
+	public void setMasterIdentification(Max35Text masterIdentification) {
+		this.masterIdentification = masterIdentification;
 	}
 }

@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#AccountServicerDeadlineMissed
- * PendingCancellationReason2Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#mmAccountServicerDeadlineMissed
+ * PendingCancellationReason2Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#ConfirmationOfPayment
- * PendingCancellationReason2Code.ConfirmationOfPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#mmConfirmationOfPayment
+ * PendingCancellationReason2Code.mmConfirmationOfPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#QuantityDisagreement
- * PendingCancellationReason2Code.QuantityDisagreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#mmQuantityDisagreement
+ * PendingCancellationReason2Code.mmQuantityDisagreement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class PendingCancellationReason2Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -110,7 +110,7 @@ public class PendingCancellationReason2Code extends PendingFailingReasonCode {
 	 * name} = "ConfirmationOfPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfirmationOfPayment = new MMCode() {
+	public static final MMCode mmConfirmationOfPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationOfPayment";
@@ -133,7 +133,7 @@ public class PendingCancellationReason2Code extends PendingFailingReasonCode {
 	 * name} = "QuantityDisagreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityDisagreement = new MMCode() {
+	public static final MMCode mmQuantityDisagreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDisagreement";
@@ -144,13 +144,13 @@ public class PendingCancellationReason2Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationReason2Code";
 				definition = "Specifies the reason why a cancellation request sent for the related instruction is pending.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason2Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason2Code.ConfirmationOfPayment,
-						com.tools20022.repository.codeset.PendingCancellationReason2Code.QuantityDisagreement);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason2Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason2Code.mmConfirmationOfPayment,
+						com.tools20022.repository.codeset.PendingCancellationReason2Code.mmQuantityDisagreement);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

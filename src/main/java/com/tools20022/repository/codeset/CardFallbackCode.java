@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#NoFallback
- * CardFallbackCode.NoFallback}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#mmNoFallback
+ * CardFallbackCode.mmNoFallback}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#FallbackAfterSuccess
- * CardFallbackCode.FallbackAfterSuccess}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#mmFallbackAfterSuccess
+ * CardFallbackCode.mmFallbackAfterSuccess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#FallbackAfterFailure
- * CardFallbackCode.FallbackAfterFailure}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#mmFallbackAfterFailure
+ * CardFallbackCode.mmFallbackAfterFailure}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,7 +86,7 @@ public class CardFallbackCode {
 	 * definition} = "No card fall-back during the transaction in progress."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoFallback = new MMCode() {
+	public static final MMCode mmNoFallback = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoFallback";
@@ -119,7 +119,7 @@ public class CardFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FallbackAfterSuccess = new MMCode() {
+	public static final MMCode mmFallbackAfterSuccess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackAfterSuccess";
@@ -152,7 +152,7 @@ public class CardFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FallbackAfterFailure = new MMCode() {
+	public static final MMCode mmFallbackAfterFailure = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackAfterFailure";
@@ -165,12 +165,12 @@ public class CardFallbackCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardFallbackCode";
 				definition = "Information about card entry mode fallback.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardFallbackCode.NoFallback, com.tools20022.repository.codeset.CardFallbackCode.FallbackAfterSuccess,
-						com.tools20022.repository.codeset.CardFallbackCode.FallbackAfterFailure);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardFallbackCode.mmNoFallback, com.tools20022.repository.codeset.CardFallbackCode.mmFallbackAfterSuccess,
+						com.tools20022.repository.codeset.CardFallbackCode.mmFallbackAfterFailure);
 				derivation_lazy = () -> Arrays.asList(CardFallback1Code.mmObject());
 			}
 		});

@@ -34,58 +34,59 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#CashPayment
- * CashAccountType4Code.CashPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmCashPayment
+ * CashAccountType4Code.mmCashPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#Charges
- * CashAccountType4Code.Charges}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmCharges
+ * CashAccountType4Code.mmCharges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#Commission
- * CashAccountType4Code.Commission}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType4Code#Tax
- * CashAccountType4Code.Tax}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmCommission
+ * CashAccountType4Code.mmCommission}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmTax
+ * CashAccountType4Code.mmTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#CashIncome
- * CashAccountType4Code.CashIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmCashIncome
+ * CashAccountType4Code.mmCashIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#CashTrading
- * CashAccountType4Code.CashTrading}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmCashTrading
+ * CashAccountType4Code.mmCashTrading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#Settlement
- * CashAccountType4Code.Settlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmSettlement
+ * CashAccountType4Code.mmSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#Current
- * CashAccountType4Code.Current}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmCurrent
+ * CashAccountType4Code.mmCurrent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#Savings
- * CashAccountType4Code.Savings}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmSavings
+ * CashAccountType4Code.mmSavings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#OverNightDeposit
- * CashAccountType4Code.OverNightDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmOverNightDeposit
+ * CashAccountType4Code.mmOverNightDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#MarginalLending
- * CashAccountType4Code.MarginalLending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmMarginalLending
+ * CashAccountType4Code.mmMarginalLending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#NonResidentExternal
- * CashAccountType4Code.NonResidentExternal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmNonResidentExternal
+ * CashAccountType4Code.mmNonResidentExternal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#MoneyMarket
- * CashAccountType4Code.MoneyMarket}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType4Code#Loan
- * CashAccountType4Code.Loan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmMoneyMarket
+ * CashAccountType4Code.mmMoneyMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#Salary
- * CashAccountType4Code.Salary}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmLoan
+ * CashAccountType4Code.mmLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#Overdraft
- * CashAccountType4Code.Overdraft}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmSalary
+ * CashAccountType4Code.mmSalary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType4Code#mmOverdraft
+ * CashAccountType4Code.mmOverdraft}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -121,7 +122,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "CashPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashPayment = new MMCode() {
+	public static final MMCode mmCashPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPayment";
@@ -144,7 +145,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "Charges"</li>
 	 * </ul>
 	 */
-	public static final MMCode Charges = new MMCode() {
+	public static final MMCode mmCharges = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
@@ -167,7 +168,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "Commission"</li>
 	 * </ul>
 	 */
-	public static final MMCode Commission = new MMCode() {
+	public static final MMCode mmCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
@@ -190,7 +191,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "Tax"</li>
 	 * </ul>
 	 */
-	public static final MMCode Tax = new MMCode() {
+	public static final MMCode mmTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
@@ -213,7 +214,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "CashIncome"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashIncome = new MMCode() {
+	public static final MMCode mmCashIncome = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashIncome";
@@ -236,7 +237,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "CashTrading"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashTrading = new MMCode() {
+	public static final MMCode mmCashTrading = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashTrading";
@@ -259,7 +260,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "Settlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settlement = new MMCode() {
+	public static final MMCode mmSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
@@ -282,7 +283,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "Current"</li>
 	 * </ul>
 	 */
-	public static final MMCode Current = new MMCode() {
+	public static final MMCode mmCurrent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
@@ -305,7 +306,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "Savings"</li>
 	 * </ul>
 	 */
-	public static final MMCode Savings = new MMCode() {
+	public static final MMCode mmSavings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
@@ -328,7 +329,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "OverNightDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode OverNightDeposit = new MMCode() {
+	public static final MMCode mmOverNightDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverNightDeposit";
@@ -351,7 +352,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "MarginalLending"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarginalLending = new MMCode() {
+	public static final MMCode mmMarginalLending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginalLending";
@@ -374,7 +375,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "NonResidentExternal"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonResidentExternal = new MMCode() {
+	public static final MMCode mmNonResidentExternal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonResidentExternal";
@@ -397,7 +398,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "MoneyMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode MoneyMarket = new MMCode() {
+	public static final MMCode mmMoneyMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyMarket";
@@ -420,7 +421,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "Loan"</li>
 	 * </ul>
 	 */
-	public static final MMCode Loan = new MMCode() {
+	public static final MMCode mmLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loan";
@@ -443,7 +444,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "Salary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Salary = new MMCode() {
+	public static final MMCode mmSalary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Salary";
@@ -466,7 +467,7 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	 * name} = "Overdraft"</li>
 	 * </ul>
 	 */
-	public static final MMCode Overdraft = new MMCode() {
+	public static final MMCode mmOverdraft = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Overdraft";
@@ -477,17 +478,17 @@ public class CashAccountType4Code extends CashAccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccountType4Code";
 				definition = "Specifies the nature, or use, of the cash account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType4Code.CashPayment, com.tools20022.repository.codeset.CashAccountType4Code.Charges,
-						com.tools20022.repository.codeset.CashAccountType4Code.Commission, com.tools20022.repository.codeset.CashAccountType4Code.Tax, com.tools20022.repository.codeset.CashAccountType4Code.CashIncome,
-						com.tools20022.repository.codeset.CashAccountType4Code.CashTrading, com.tools20022.repository.codeset.CashAccountType4Code.Settlement, com.tools20022.repository.codeset.CashAccountType4Code.Current,
-						com.tools20022.repository.codeset.CashAccountType4Code.Savings, com.tools20022.repository.codeset.CashAccountType4Code.OverNightDeposit, com.tools20022.repository.codeset.CashAccountType4Code.MarginalLending,
-						com.tools20022.repository.codeset.CashAccountType4Code.NonResidentExternal, com.tools20022.repository.codeset.CashAccountType4Code.MoneyMarket, com.tools20022.repository.codeset.CashAccountType4Code.Loan,
-						com.tools20022.repository.codeset.CashAccountType4Code.Salary, com.tools20022.repository.codeset.CashAccountType4Code.Overdraft);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType4Code.mmCashPayment, com.tools20022.repository.codeset.CashAccountType4Code.mmCharges,
+						com.tools20022.repository.codeset.CashAccountType4Code.mmCommission, com.tools20022.repository.codeset.CashAccountType4Code.mmTax, com.tools20022.repository.codeset.CashAccountType4Code.mmCashIncome,
+						com.tools20022.repository.codeset.CashAccountType4Code.mmCashTrading, com.tools20022.repository.codeset.CashAccountType4Code.mmSettlement, com.tools20022.repository.codeset.CashAccountType4Code.mmCurrent,
+						com.tools20022.repository.codeset.CashAccountType4Code.mmSavings, com.tools20022.repository.codeset.CashAccountType4Code.mmOverNightDeposit, com.tools20022.repository.codeset.CashAccountType4Code.mmMarginalLending,
+						com.tools20022.repository.codeset.CashAccountType4Code.mmNonResidentExternal, com.tools20022.repository.codeset.CashAccountType4Code.mmMoneyMarket, com.tools20022.repository.codeset.CashAccountType4Code.mmLoan,
+						com.tools20022.repository.codeset.CashAccountType4Code.mmSalary, com.tools20022.repository.codeset.CashAccountType4Code.mmOverdraft);
 				trace_lazy = () -> CashAccountTypeCode.mmObject();
 			}
 		});

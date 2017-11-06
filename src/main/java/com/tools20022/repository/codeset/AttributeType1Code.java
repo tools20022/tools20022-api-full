@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeType1Code#CommonName
- * AttributeType1Code.CommonName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeType1Code#mmCommonName
+ * AttributeType1Code.mmCommonName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeType1Code#Locality
- * AttributeType1Code.Locality}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeType1Code#mmLocality
+ * AttributeType1Code.mmLocality}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeType1Code#OrganisationName
- * AttributeType1Code.OrganisationName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeType1Code#mmOrganisationName
+ * AttributeType1Code.mmOrganisationName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeType1Code#OrganisationUnitName
- * AttributeType1Code.OrganisationUnitName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeType1Code#mmOrganisationUnitName
+ * AttributeType1Code.mmOrganisationUnitName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeType1Code#CountryName
- * AttributeType1Code.CountryName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeType1Code#mmCountryName
+ * AttributeType1Code.mmCountryName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class AttributeType1Code extends AttributeTypeCode {
 	 * name} = "CommonName"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommonName = new MMCode() {
+	public static final MMCode mmCommonName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonName";
@@ -113,7 +113,7 @@ public class AttributeType1Code extends AttributeTypeCode {
 	 * name} = "Locality"</li>
 	 * </ul>
 	 */
-	public static final MMCode Locality = new MMCode() {
+	public static final MMCode mmLocality = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Locality";
@@ -136,7 +136,7 @@ public class AttributeType1Code extends AttributeTypeCode {
 	 * name} = "OrganisationName"</li>
 	 * </ul>
 	 */
-	public static final MMCode OrganisationName = new MMCode() {
+	public static final MMCode mmOrganisationName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationName";
@@ -159,7 +159,7 @@ public class AttributeType1Code extends AttributeTypeCode {
 	 * name} = "OrganisationUnitName"</li>
 	 * </ul>
 	 */
-	public static final MMCode OrganisationUnitName = new MMCode() {
+	public static final MMCode mmOrganisationUnitName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationUnitName";
@@ -182,7 +182,7 @@ public class AttributeType1Code extends AttributeTypeCode {
 	 * name} = "CountryName"</li>
 	 * </ul>
 	 */
-	public static final MMCode CountryName = new MMCode() {
+	public static final MMCode mmCountryName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryName";
@@ -193,13 +193,14 @@ public class AttributeType1Code extends AttributeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CNAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AttributeType1Code";
 				definition = "Type of attribute of a distinguished name (DN).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeType1Code.CommonName, com.tools20022.repository.codeset.AttributeType1Code.Locality,
-						com.tools20022.repository.codeset.AttributeType1Code.OrganisationName, com.tools20022.repository.codeset.AttributeType1Code.OrganisationUnitName, com.tools20022.repository.codeset.AttributeType1Code.CountryName);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeType1Code.mmCommonName, com.tools20022.repository.codeset.AttributeType1Code.mmLocality,
+						com.tools20022.repository.codeset.AttributeType1Code.mmOrganisationName, com.tools20022.repository.codeset.AttributeType1Code.mmOrganisationUnitName,
+						com.tools20022.repository.codeset.AttributeType1Code.mmCountryName);
 				trace_lazy = () -> AttributeTypeCode.mmObject();
 			}
 		});

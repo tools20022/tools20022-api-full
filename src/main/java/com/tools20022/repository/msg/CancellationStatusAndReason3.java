@@ -38,23 +38,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#MasterReference
- * CancellationStatusAndReason3.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#mmMasterReference
+ * CancellationStatusAndReason3.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#TransferReference
- * CancellationStatusAndReason3.TransferReference}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#mmTransferReference
+ * CancellationStatusAndReason3.mmTransferReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#ClientReference
- * CancellationStatusAndReason3.ClientReference}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#mmClientReference
+ * CancellationStatusAndReason3.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#CancellationReference
- * CancellationStatusAndReason3.CancellationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#mmCancellationReference
+ * CancellationStatusAndReason3.mmCancellationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#Status
- * CancellationStatusAndReason3.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#mmStatus
+ * CancellationStatusAndReason3.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#StatusInitiator
- * CancellationStatusAndReason3.StatusInitiator}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#mmStatusInitiator
+ * CancellationStatusAndReason3.mmStatusInitiator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,15 +65,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV05#StatusReport
- * TransferCancellationStatusReportV05.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV05#mmStatusReport
+ * TransferCancellationStatusReportV05.mmStatusReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancellationStatusAndReason3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text masterReference;
 	/**
 	 * Unique and unambiguous identifier for a group of individual transfers as
 	 * assigned by the instructing party. This identifier links the individual
@@ -107,8 +108,8 @@ public class CancellationStatusAndReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Order#MasterIdentification
-	 * Order.MasterIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+	 * Order.mmMasterIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -130,25 +131,26 @@ public class CancellationStatusAndReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#MasterReference
-	 * CancellationStatusAndReason2.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmMasterReference
+	 * CancellationStatusAndReason2.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
 			componentContext_lazy = () -> CancellationStatusAndReason3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.MasterIdentification;
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason2.MasterReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason2.mmMasterReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text transferReference;
 	/**
 	 * Unique and unambiguous identification of a transfer, as assigned by the
 	 * instructing party.
@@ -162,8 +164,8 @@ public class CancellationStatusAndReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Identification
-	 * SecuritiesTransfer.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmIdentification
+	 * SecuritiesTransfer.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,25 +187,26 @@ public class CancellationStatusAndReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#TransferReference
-	 * CancellationStatusAndReason2.TransferReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmTransferReference
+	 * CancellationStatusAndReason2.mmTransferReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> CancellationStatusAndReason3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.Identification;
 			isDerived = false;
 			xmlTag = "TrfRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identification of a transfer, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason2.TransferReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason2.mmTransferReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AdditionalReference7 clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of a transfer. This
 	 * reference can typically be used in a hub scenario to give the reference
@@ -219,8 +222,8 @@ public class CancellationStatusAndReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -242,25 +245,26 @@ public class CancellationStatusAndReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#ClientReference
-	 * CancellationStatusAndReason2.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmClientReference
+	 * CancellationStatusAndReason2.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> CancellationStatusAndReason3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason2.ClientReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason2.mmClientReference;
 			maxOccurs = 1;
-			complexType_lazy = () -> AdditionalReference7.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference7.mmObject();
 		}
 	};
+	protected Max35Text cancellationReference;
 	/**
 	 * Unique and unambiguous identifier for a transfer cancellation, as
 	 * assigned by the instructing party.
@@ -292,11 +296,11 @@ public class CancellationStatusAndReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#CancellationReference
-	 * CancellationStatusAndReason2.CancellationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmCancellationReference
+	 * CancellationStatusAndReason2.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CancellationStatusAndReason3.mmObject();
 			isDerived = false;
@@ -304,12 +308,13 @@ public class CancellationStatusAndReason3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason2.CancellationReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason2.mmCancellationReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Status21Choice status;
 	/**
 	 * Status of the transfer cancellation.
 	 * <p>
@@ -340,21 +345,22 @@ public class CancellationStatusAndReason3 {
 	 * definition} = "Status of the transfer cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Status = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CancellationStatusAndReason3.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> CancellationStatusAndReason3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the transfer cancellation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Status21Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Status21Choice.mmObject();
 		}
 	};
+	protected PartyIdentification70Choice statusInitiator;
 	/**
 	 * Party that initiates the status.
 	 * <p>
@@ -367,8 +373,8 @@ public class CancellationStatusAndReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -388,36 +394,36 @@ public class CancellationStatusAndReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#StatusInitiator
-	 * CancellationStatusAndReason2.StatusInitiator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmStatusInitiator
+	 * CancellationStatusAndReason2.mmStatusInitiator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CancellationStatusAndReason3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason2.StatusInitiator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason2.mmStatusInitiator;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification70Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason3.MasterReference, com.tools20022.repository.msg.CancellationStatusAndReason3.TransferReference,
-						com.tools20022.repository.msg.CancellationStatusAndReason3.ClientReference, com.tools20022.repository.msg.CancellationStatusAndReason3.CancellationReference,
-						com.tools20022.repository.msg.CancellationStatusAndReason3.Status, com.tools20022.repository.msg.CancellationStatusAndReason3.StatusInitiator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason3.mmMasterReference, com.tools20022.repository.msg.CancellationStatusAndReason3.mmTransferReference,
+						com.tools20022.repository.msg.CancellationStatusAndReason3.mmClientReference, com.tools20022.repository.msg.CancellationStatusAndReason3.mmCancellationReference,
+						com.tools20022.repository.msg.CancellationStatusAndReason3.mmStatus, com.tools20022.repository.msg.CancellationStatusAndReason3.mmStatusInitiator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReportV05.mmStatusReport);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReportV05.StatusReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatusAndReason3";
 				definition = "Status of a transfer cancellation instruction and the reason for the status.";
@@ -425,5 +431,53 @@ public class CancellationStatusAndReason3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public Max35Text getTransferReference() {
+		return transferReference;
+	}
+
+	public void setTransferReference(Max35Text transferReference) {
+		this.transferReference = transferReference;
+	}
+
+	public AdditionalReference7 getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(com.tools20022.repository.msg.AdditionalReference7 clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public Max35Text getCancellationReference() {
+		return cancellationReference;
+	}
+
+	public void setCancellationReference(Max35Text cancellationReference) {
+		this.cancellationReference = cancellationReference;
+	}
+
+	public Status21Choice getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status21Choice status) {
+		this.status = status;
+	}
+
+	public PartyIdentification70Choice getStatusInitiator() {
+		return statusInitiator;
+	}
+
+	public void setStatusInitiator(PartyIdentification70Choice statusInitiator) {
+		this.statusInitiator = statusInitiator;
 	}
 }

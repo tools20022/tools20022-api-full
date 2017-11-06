@@ -33,21 +33,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * MemberStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberStatus1Code#Enabled
- * MemberStatus1Code.Enabled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberStatus1Code#Disabled
- * MemberStatus1Code.Disabled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberStatus1Code#Deleted
- * MemberStatus1Code.Deleted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberStatus1Code#Joining
- * MemberStatus1Code.Joining}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MemberStatus1Code#mmEnabled
+ * MemberStatus1Code.mmEnabled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MemberStatus1Code#mmDisabled
+ * MemberStatus1Code.mmDisabled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MemberStatus1Code#mmDeleted
+ * MemberStatus1Code.mmDeleted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MemberStatus1Code#mmJoining
+ * MemberStatus1Code.mmJoining}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +87,7 @@ public class MemberStatus1Code extends MemberStatusCode {
 	 * name} = "Enabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Enabled = new MMCode() {
+	public static final MMCode mmEnabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
@@ -106,7 +110,7 @@ public class MemberStatus1Code extends MemberStatusCode {
 	 * name} = "Disabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Disabled = new MMCode() {
+	public static final MMCode mmDisabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
@@ -129,7 +133,7 @@ public class MemberStatus1Code extends MemberStatusCode {
 	 * name} = "Deleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Deleted = new MMCode() {
+	public static final MMCode mmDeleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
@@ -152,7 +156,7 @@ public class MemberStatus1Code extends MemberStatusCode {
 	 * name} = "Joining"</li>
 	 * </ul>
 	 */
-	public static final MMCode Joining = new MMCode() {
+	public static final MMCode mmJoining = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Joining";
@@ -163,13 +167,13 @@ public class MemberStatus1Code extends MemberStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ENBL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MemberStatus1Code";
 				definition = "Specifies the live status of a member of a system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemberStatus1Code.Enabled, com.tools20022.repository.codeset.MemberStatus1Code.Disabled, com.tools20022.repository.codeset.MemberStatus1Code.Deleted,
-						com.tools20022.repository.codeset.MemberStatus1Code.Joining);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemberStatus1Code.mmEnabled, com.tools20022.repository.codeset.MemberStatus1Code.mmDisabled, com.tools20022.repository.codeset.MemberStatus1Code.mmDeleted,
+						com.tools20022.repository.codeset.MemberStatus1Code.mmJoining);
 				trace_lazy = () -> MemberStatusCode.mmObject();
 			}
 		});

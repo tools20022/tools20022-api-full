@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status of the corporate action process.
@@ -43,47 +44,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#AgentStandingInstructionStatus
- * CorporateActionStatus.AgentStandingInstructionStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmAgentStandingInstructionStatus
+ * CorporateActionStatus.mmAgentStandingInstructionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#ProcessingStatus
- * CorporateActionStatus.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmProcessingStatus
+ * CorporateActionStatus.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#EventProcessingStatus
- * CorporateActionStatus.EventProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmEventProcessingStatus
+ * CorporateActionStatus.mmEventProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#CorporateActionStatusReason
- * CorporateActionStatus.CorporateActionStatusReason}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmCorporateActionStatusReason
+ * CorporateActionStatus.mmCorporateActionStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#InstructionCancellationStatus
- * CorporateActionStatus.InstructionCancellationStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmInstructionCancellationStatus
+ * CorporateActionStatus.mmInstructionCancellationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#CorporateActionInstructionProcessingStatus
- * CorporateActionStatus.CorporateActionInstructionProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmCorporateActionInstructionProcessingStatus
+ * CorporateActionStatus.mmCorporateActionInstructionProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#RateStatus
- * CorporateActionStatus.RateStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmRateStatus
+ * CorporateActionStatus.mmRateStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#OptionAvailabilityStatus
- * CorporateActionStatus.OptionAvailabilityStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmOptionAvailabilityStatus
+ * CorporateActionStatus.mmOptionAvailabilityStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#CorporateActionEvent
- * CorporateActionStatus.CorporateActionEvent}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmCorporateActionEvent
+ * CorporateActionStatus.mmCorporateActionEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#EventStatus
- * CorporateActionStatus.EventStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmEventStatus
+ * CorporateActionStatus.mmEventStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#RelatedInstructionProcessedStatus
- * CorporateActionStatus.RelatedInstructionProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmRelatedInstructionProcessedStatus
+ * CorporateActionStatus.mmRelatedInstructionProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#DeactivationDateAndTime
- * CorporateActionStatus.DeactivationDateAndTime}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmDeactivationDateAndTime
+ * CorporateActionStatus.mmDeactivationDateAndTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#EventConfirmationStatus
- * CorporateActionStatus.EventConfirmationStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmEventConfirmationStatus
+ * CorporateActionStatus.mmEventConfirmationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#EventCompletenessStatus
- * CorporateActionStatus.EventCompletenessStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmEventCompletenessStatus
+ * CorporateActionStatus.mmEventCompletenessStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,11 +92,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#CorporateActionStatus
- * CorporateActionStatusReason.CorporateActionStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmCorporateActionStatus
+ * CorporateActionStatusReason.mmCorporateActionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#CorporateActionStatus
- * CorporateActionEvent.CorporateActionStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionStatus
+ * CorporateActionEvent.mmCorporateActionStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -103,209 +104,209 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation1#ProcessingStatus
- * CorporateActionCancellation1.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation1#mmProcessingStatus
+ * CorporateActionCancellation1.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation2#ProcessingStatus
- * CorporateActionCancellation2.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation2#mmProcessingStatus
+ * CorporateActionCancellation2.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus1Choice#Complete
- * EventProcessingStatus1Choice.Complete}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus1Choice#mmComplete
+ * EventProcessingStatus1Choice.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus1Choice#Reconciled
- * EventProcessingStatus1Choice.Reconciled}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus1Choice#mmReconciled
+ * EventProcessingStatus1Choice.mmReconciled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#Complete
- * EventProcessingStatus2Choice.Complete}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#mmComplete
+ * EventProcessingStatus2Choice.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#Reconciled
- * EventProcessingStatus2Choice.Reconciled}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus2Choice#mmReconciled
+ * EventProcessingStatus2Choice.mmReconciled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus1Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus1Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus1Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus1Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus2Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus2Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus2Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus2Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus3Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus3Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus3Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus3Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus4Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus4Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus4Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus4Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus5Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus5Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus5Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus5Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus6Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus6Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus6Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus6Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus1Choice#ProprietaryStatus
- * InstructionProcessingStatus1Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus1Choice#mmProprietaryStatus
+ * InstructionProcessingStatus1Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus4Choice#ProprietaryStatus
- * InstructionProcessingStatus4Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus4Choice#mmProprietaryStatus
+ * InstructionProcessingStatus4Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus7Choice#ProprietaryStatus
- * InstructionProcessingStatus7Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus7Choice#mmProprietaryStatus
+ * InstructionProcessingStatus7Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus8Choice#ProprietaryStatus
- * InstructionProcessingStatus8Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus8Choice#mmProprietaryStatus
+ * InstructionProcessingStatus8Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus12Choice#ProprietaryStatus
- * InstructionProcessingStatus12Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus12Choice#mmProprietaryStatus
+ * InstructionProcessingStatus12Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus13Choice#ProprietaryStatus
- * InstructionProcessingStatus13Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus13Choice#mmProprietaryStatus
+ * InstructionProcessingStatus13Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ElectionAdviceStatus1Choice#ProcessedStatus
- * ElectionAdviceStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ElectionAdviceStatus1Choice#mmProcessedStatus
+ * ElectionAdviceStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ElectionAdviceStatus1Choice#RejectedStatus
- * ElectionAdviceStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ElectionAdviceStatus1Choice#mmRejectedStatus
+ * ElectionAdviceStatus1Choice.mmRejectedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationProcessingStatus1#Status
- * CorporateActionCancellationProcessingStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationProcessingStatus1#mmStatus
+ * CorporateActionCancellationProcessingStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ElectionCancellationStatus1Choice#ProcessedStatus
- * ElectionCancellationStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ElectionCancellationStatus1Choice#mmProcessedStatus
+ * ElectionCancellationStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ElectionCancellationStatus1Choice#RejectedStatus
- * ElectionCancellationStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ElectionCancellationStatus1Choice#mmRejectedStatus
+ * ElectionCancellationStatus1Choice.mmRejectedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1#Status
- * CorporateActionAmendmentProcessingStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1#mmStatus
+ * CorporateActionAmendmentProcessingStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ElectionAmendmentStatus1Choice#ProcessedStatus
- * ElectionAmendmentStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ElectionAmendmentStatus1Choice#mmProcessedStatus
+ * ElectionAmendmentStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ElectionAmendmentStatus1Choice#RejectedStatus
- * ElectionAmendmentStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ElectionAmendmentStatus1Choice#mmRejectedStatus
+ * ElectionAmendmentStatus1Choice.mmRejectedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovementProcessingStatus1#Status
- * CorporateActionMovementProcessingStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovementProcessingStatus1#mmStatus
+ * CorporateActionMovementProcessingStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovementFailedStatus1#ResourceDetails
- * CorporateActionMovementFailedStatus1.ResourceDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovementFailedStatus1#mmResourceDetails
+ * CorporateActionMovementFailedStatus1.mmResourceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionMovementStatus1Choice#ProcessedStatus
- * CorporateActionMovementStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionMovementStatus1Choice#mmProcessedStatus
+ * CorporateActionMovementStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionMovementStatus1Choice#FailedStatus
- * CorporateActionMovementStatus1Choice.FailedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionMovementStatus1Choice#mmFailedStatus
+ * CorporateActionMovementStatus1Choice.mmFailedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionMovementStatus1Choice#RejectedStatus
- * CorporateActionMovementStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionMovementStatus1Choice#mmRejectedStatus
+ * CorporateActionMovementStatus1Choice.mmRejectedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporationActionMovementProcessingStatus2#Status
- * CorporationActionMovementProcessingStatus2.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporationActionMovementProcessingStatus2#mmStatus
+ * CorporationActionMovementProcessingStatus2.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateMovementStatus2#ProcessedStatus
- * CorporateMovementStatus2.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateMovementStatus2#mmProcessedStatus
+ * CorporateMovementStatus2.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateMovementStatus2#RejectedStatus
- * CorporateMovementStatus2.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateMovementStatus2#mmRejectedStatus
+ * CorporateMovementStatus2.mmRejectedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInformationProcessingStatus1#Status
- * CorporateActionInformationProcessingStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInformationProcessingStatus1#mmStatus
+ * CorporateActionInformationProcessingStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionInformationStatus1Choice#ProcessedStatus
- * CorporateActionInformationStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionInformationStatus1Choice#mmProcessedStatus
+ * CorporateActionInformationStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionInformationStatus1Choice#RejectedStatus
- * CorporateActionInformationStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionInformationStatus1Choice#mmRejectedStatus
+ * CorporateActionInformationStatus1Choice.mmRejectedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingInstructionStatus1Choice#ProcessedStatus
- * StandingInstructionStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingInstructionStatus1Choice#mmProcessedStatus
+ * StandingInstructionStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingInstructionStatus1Choice#RejectedStatus
- * StandingInstructionStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingInstructionStatus1Choice#mmRejectedStatus
+ * StandingInstructionStatus1Choice.mmRejectedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationProcessingStatus1#Status
- * CorporateActionStandingInstructionCancellationProcessingStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationProcessingStatus1#mmStatus
+ * CorporateActionStandingInstructionCancellationProcessingStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice#ProcessedStatus
- * StandingInstructionCancellationStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice#mmProcessedStatus
+ * StandingInstructionCancellationStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice#RejectedStatus
- * StandingInstructionCancellationStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice#mmRejectedStatus
+ * StandingInstructionCancellationStatus1Choice.mmRejectedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionProcessingStatus1#Status
- * CorporateActionDeactivationInstructionProcessingStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionProcessingStatus1#mmStatus
+ * CorporateActionDeactivationInstructionProcessingStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1#ProcessedStatus
- * CorporateActionDeactivationInstructionStatus1.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1#mmProcessedStatus
+ * CorporateActionDeactivationInstructionStatus1.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1#RejectedStatus
- * CorporateActionDeactivationInstructionStatus1.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1#mmRejectedStatus
+ * CorporateActionDeactivationInstructionStatus1.mmRejectedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationCancellationProcessingStatus1#Status
- * CorporateActionDeactivationCancellationProcessingStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationCancellationProcessingStatus1#mmStatus
+ * CorporateActionDeactivationCancellationProcessingStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice#ProcessedStatus
- * CorporateActionDeactivationCancellationStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice#mmProcessedStatus
+ * CorporateActionDeactivationCancellationStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice#RejectedStatus
- * CorporateActionDeactivationCancellationStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice#mmRejectedStatus
+ * CorporateActionDeactivationCancellationStatus1Choice.mmRejectedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation3#ProcessingStatus
- * CorporateActionCancellation3.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation3#mmProcessingStatus
+ * CorporateActionCancellation3.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus15Choice#ProprietaryStatus
- * InstructionProcessingStatus15Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus15Choice#mmProprietaryStatus
+ * InstructionProcessingStatus15Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#ProprietaryStatus
- * InstructionProcessingStatus16Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmProprietaryStatus
+ * InstructionProcessingStatus16Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation4#ProcessingStatus
- * CorporateActionCancellation4.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellation4#mmProcessingStatus
+ * CorporateActionCancellation4.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus20Choice#ProprietaryStatus
- * InstructionProcessingStatus20Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus20Choice#mmProprietaryStatus
+ * InstructionProcessingStatus20Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus7Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus7Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus7Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus7Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus21Choice#ProprietaryStatus
- * InstructionProcessingStatus21Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus21Choice#mmProprietaryStatus
+ * InstructionProcessingStatus21Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus8Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus8Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus8Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus8Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus3Choice#Complete
- * EventProcessingStatus3Choice.Complete}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus3Choice#mmComplete
+ * EventProcessingStatus3Choice.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus3Choice#Reconciled
- * EventProcessingStatus3Choice.Reconciled}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus3Choice#mmReconciled
+ * EventProcessingStatus3Choice.mmReconciled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus9Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus9Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus9Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus9Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus24Choice#ProprietaryStatus
- * InstructionProcessingStatus24Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus24Choice#mmProprietaryStatus
+ * InstructionProcessingStatus24Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus10Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus10Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus10Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus10Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus25Choice#ProprietaryStatus
- * InstructionProcessingStatus25Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus25Choice#mmProprietaryStatus
+ * InstructionProcessingStatus25Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus4Choice#Complete
- * EventProcessingStatus4Choice.Complete}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus4Choice#mmComplete
+ * EventProcessingStatus4Choice.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EventProcessingStatus4Choice#Reconciled
- * EventProcessingStatus4Choice.Reconciled}</li>
+ * {@linkplain com.tools20022.repository.choice.EventProcessingStatus4Choice#mmReconciled
+ * EventProcessingStatus4Choice.mmReconciled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus11Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus11Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus11Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus11Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus29Choice#ProprietaryStatus
- * InstructionProcessingStatus29Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus29Choice#mmProprietaryStatus
+ * InstructionProcessingStatus29Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus12Choice#ProprietaryStatus
- * InstructionCancellationRequestStatus12Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus12Choice#mmProprietaryStatus
+ * InstructionCancellationRequestStatus12Choice.mmProprietaryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus30Choice#ProprietaryStatus
- * InstructionProcessingStatus30Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus30Choice#mmProprietaryStatus
+ * InstructionProcessingStatus30Choice.mmProprietaryStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -524,8 +525,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -539,6 +540,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionStatus extends Status {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text agentStandingInstructionStatus;
 	/**
 	 * Specifies the state or the condition.
 	 * <p>
@@ -548,58 +550,58 @@ public class CorporateActionStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status2Choice#Proprietary
-	 * Status2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status4Choice#Proprietary
-	 * Status4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus1Choice#Proprietary
-	 * RegistrationProcessingStatus1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ResponseStatus1Choice#Proprietary
-	 * ResponseStatus1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus1Choice#Proprietary
-	 * ReplacementProcessingStatus1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus2Choice#Proprietary
-	 * RegistrationProcessingStatus2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ResponseStatus2Choice#Proprietary
-	 * ResponseStatus2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus2Choice#Proprietary
-	 * ReplacementProcessingStatus2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ResponseStatus5Choice#Proprietary
-	 * ResponseStatus5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus8Choice#Proprietary
-	 * ReplacementProcessingStatus8Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus3Choice#Proprietary
-	 * RegistrationProcessingStatus3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus4Choice#Proprietary
-	 * RegistrationProcessingStatus4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ResponseStatus7Choice#Proprietary
-	 * ResponseStatus7Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus9Choice#Proprietary
-	 * ReplacementProcessingStatus9Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus
 	 * CorporateActionStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status2Choice#mmProprietary
+	 * Status2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status4Choice#mmProprietary
+	 * Status4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus1Choice#mmProprietary
+	 * RegistrationProcessingStatus1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ResponseStatus1Choice#mmProprietary
+	 * ResponseStatus1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus1Choice#mmProprietary
+	 * ReplacementProcessingStatus1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus2Choice#mmProprietary
+	 * RegistrationProcessingStatus2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ResponseStatus2Choice#mmProprietary
+	 * ResponseStatus2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus2Choice#mmProprietary
+	 * ReplacementProcessingStatus2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ResponseStatus5Choice#mmProprietary
+	 * ResponseStatus5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus8Choice#mmProprietary
+	 * ReplacementProcessingStatus8Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus3Choice#mmProprietary
+	 * RegistrationProcessingStatus3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus4Choice#mmProprietary
+	 * RegistrationProcessingStatus4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ResponseStatus7Choice#mmProprietary
+	 * ResponseStatus7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus9Choice#mmProprietary
+	 * ReplacementProcessingStatus9Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -611,25 +613,26 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Specifies the state or the condition."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AgentStandingInstructionStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAgentStandingInstructionStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status2Choice.Proprietary, com.tools20022.repository.choice.Status4Choice.Proprietary,
-					com.tools20022.repository.choice.RegistrationProcessingStatus1Choice.Proprietary, com.tools20022.repository.choice.ResponseStatus1Choice.Proprietary,
-					com.tools20022.repository.choice.ReplacementProcessingStatus1Choice.Proprietary, com.tools20022.repository.choice.RegistrationProcessingStatus2Choice.Proprietary,
-					com.tools20022.repository.choice.ResponseStatus2Choice.Proprietary, com.tools20022.repository.choice.ReplacementProcessingStatus2Choice.Proprietary, com.tools20022.repository.choice.ResponseStatus5Choice.Proprietary,
-					com.tools20022.repository.choice.ReplacementProcessingStatus8Choice.Proprietary, com.tools20022.repository.choice.RegistrationProcessingStatus3Choice.Proprietary,
-					com.tools20022.repository.choice.RegistrationProcessingStatus4Choice.Proprietary, com.tools20022.repository.choice.ResponseStatus7Choice.Proprietary,
-					com.tools20022.repository.choice.ReplacementProcessingStatus9Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status2Choice.mmProprietary, com.tools20022.repository.choice.Status4Choice.mmProprietary,
+					com.tools20022.repository.choice.RegistrationProcessingStatus1Choice.mmProprietary, com.tools20022.repository.choice.ResponseStatus1Choice.mmProprietary,
+					com.tools20022.repository.choice.ReplacementProcessingStatus1Choice.mmProprietary, com.tools20022.repository.choice.RegistrationProcessingStatus2Choice.mmProprietary,
+					com.tools20022.repository.choice.ResponseStatus2Choice.mmProprietary, com.tools20022.repository.choice.ReplacementProcessingStatus2Choice.mmProprietary,
+					com.tools20022.repository.choice.ResponseStatus5Choice.mmProprietary, com.tools20022.repository.choice.ReplacementProcessingStatus8Choice.mmProprietary,
+					com.tools20022.repository.choice.RegistrationProcessingStatus3Choice.mmProprietary, com.tools20022.repository.choice.RegistrationProcessingStatus4Choice.mmProprietary,
+					com.tools20022.repository.choice.ResponseStatus7Choice.mmProprietary, com.tools20022.repository.choice.ReplacementProcessingStatus9Choice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AgentStandingInstructionStatus";
 			definition = "Specifies the state or the condition.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ProcessingStatusCode processingStatus;
 	/**
 	 * Specifies the status of the details of the event.
 	 * <p>
@@ -640,58 +643,58 @@ public class CorporateActionStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ProcessingStatusCode
 	 * ProcessingStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventStatus1#EventCompletenessStatus
-	 * CorporateActionEventStatus1.EventCompletenessStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventStatus1#EventConfirmationStatus
-	 * CorporateActionEventStatus1.EventConfirmationStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice#EventStatus
-	 * CorporateActionProcessingStatus1Choice.EventStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1#ProcessingStatus
-	 * CorporateActionPreliminaryAdviceType1.ProcessingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus2Choice#Code
-	 * CorporateActionProcessingStatus2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus2Choice#Proprietary
-	 * CorporateActionProcessingStatus2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice#Code
-	 * CorporateActionProcessingStatus3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice#Proprietary
-	 * CorporateActionProcessingStatus3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice#Code
-	 * CorporateActionProcessingStatus4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice#Proprietary
-	 * CorporateActionProcessingStatus4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice#Code
-	 * CorporateActionProcessingStatus5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice#Proprietary
-	 * CorporateActionProcessingStatus5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus6Choice#Code
-	 * CorporateActionProcessingStatus6Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus6Choice#Proprietary
-	 * CorporateActionProcessingStatus6Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus
 	 * CorporateActionStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventStatus1#mmEventCompletenessStatus
+	 * CorporateActionEventStatus1.mmEventCompletenessStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventStatus1#mmEventConfirmationStatus
+	 * CorporateActionEventStatus1.mmEventConfirmationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice#mmEventStatus
+	 * CorporateActionProcessingStatus1Choice.mmEventStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1#mmProcessingStatus
+	 * CorporateActionPreliminaryAdviceType1.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus2Choice#mmCode
+	 * CorporateActionProcessingStatus2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus2Choice#mmProprietary
+	 * CorporateActionProcessingStatus2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice#mmCode
+	 * CorporateActionProcessingStatus3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice#mmProprietary
+	 * CorporateActionProcessingStatus3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice#mmCode
+	 * CorporateActionProcessingStatus4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice#mmProprietary
+	 * CorporateActionProcessingStatus4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice#mmCode
+	 * CorporateActionProcessingStatus5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice#mmProprietary
+	 * CorporateActionProcessingStatus5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus6Choice#mmCode
+	 * CorporateActionProcessingStatus6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionProcessingStatus6Choice#mmProprietary
+	 * CorporateActionProcessingStatus6Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -703,25 +706,26 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProcessingStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventStatus1.EventCompletenessStatus, com.tools20022.repository.msg.CorporateActionEventStatus1.EventConfirmationStatus,
-					com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.EventStatus, com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.ProcessingStatus,
-					com.tools20022.repository.choice.CorporateActionProcessingStatus2Choice.Code, com.tools20022.repository.choice.CorporateActionProcessingStatus2Choice.Proprietary,
-					com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.Code, com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.Proprietary,
-					com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.Code, com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.Proprietary,
-					com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice.Code, com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice.Proprietary,
-					com.tools20022.repository.choice.CorporateActionProcessingStatus6Choice.Code, com.tools20022.repository.choice.CorporateActionProcessingStatus6Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventStatus1.mmEventCompletenessStatus, com.tools20022.repository.msg.CorporateActionEventStatus1.mmEventConfirmationStatus,
+					com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmEventStatus, com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmProcessingStatus,
+					com.tools20022.repository.choice.CorporateActionProcessingStatus2Choice.mmCode, com.tools20022.repository.choice.CorporateActionProcessingStatus2Choice.mmProprietary,
+					com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.mmCode, com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.mmProprietary,
+					com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.mmCode, com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.mmProprietary,
+					com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice.mmCode, com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice.mmProprietary,
+					com.tools20022.repository.choice.CorporateActionProcessingStatus6Choice.mmCode, com.tools20022.repository.choice.CorporateActionProcessingStatus6Choice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Specifies the status of the details of the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProcessingStatusCode.mmObject();
 		}
 	};
+	protected CorporateActionEventProcessingStatusCode eventProcessingStatus;
 	/**
 	 * Processing status of the corporate action event.
 	 * <p>
@@ -732,58 +736,58 @@ public class CorporateActionStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode
 	 * CorporateActionEventProcessingStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice#Code
-	 * CorporateActionEventProcessingStatus1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice#Proprietary
-	 * CorporateActionEventProcessingStatus1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status1Choice#CorporateActionEventProcessingStatus
-	 * Status1Choice.CorporateActionEventProcessingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status8Choice#CorporateActionEventProcessingStatus
-	 * Status8Choice.CorporateActionEventProcessingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus2Choice#Code
-	 * CorporateActionEventProcessingStatus2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus2Choice#Proprietary
-	 * CorporateActionEventProcessingStatus2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status3Choice#CorporateActionEventProcessingStatus
-	 * Status3Choice.CorporateActionEventProcessingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status10Choice#CorporateActionEventProcessingStatus
-	 * Status10Choice.CorporateActionEventProcessingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus3Choice#Code
-	 * CorporateActionEventProcessingStatus3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus3Choice#Proprietary
-	 * CorporateActionEventProcessingStatus3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status19Choice#CorporateActionEventProcessingStatus
-	 * Status19Choice.CorporateActionEventProcessingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Status22Choice#CorporateActionEventProcessingStatus
-	 * Status22Choice.CorporateActionEventProcessingStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice#Code
-	 * CorporateActionEventProcessingStatus4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice#Proprietary
-	 * CorporateActionEventProcessingStatus4Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus
 	 * CorporateActionStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice#mmCode
+	 * CorporateActionEventProcessingStatus1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice#mmProprietary
+	 * CorporateActionEventProcessingStatus1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status1Choice#mmCorporateActionEventProcessingStatus
+	 * Status1Choice.mmCorporateActionEventProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status8Choice#mmCorporateActionEventProcessingStatus
+	 * Status8Choice.mmCorporateActionEventProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus2Choice#mmCode
+	 * CorporateActionEventProcessingStatus2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus2Choice#mmProprietary
+	 * CorporateActionEventProcessingStatus2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status3Choice#mmCorporateActionEventProcessingStatus
+	 * Status3Choice.mmCorporateActionEventProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status10Choice#mmCorporateActionEventProcessingStatus
+	 * Status10Choice.mmCorporateActionEventProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus3Choice#mmCode
+	 * CorporateActionEventProcessingStatus3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus3Choice#mmProprietary
+	 * CorporateActionEventProcessingStatus3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status19Choice#mmCorporateActionEventProcessingStatus
+	 * Status19Choice.mmCorporateActionEventProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Status22Choice#mmCorporateActionEventProcessingStatus
+	 * Status22Choice.mmCorporateActionEventProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice#mmCode
+	 * CorporateActionEventProcessingStatus4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice#mmProprietary
+	 * CorporateActionEventProcessingStatus4Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -795,25 +799,26 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Processing status of the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EventProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEventProcessingStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice.Code, com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice.Proprietary,
-					com.tools20022.repository.choice.Status1Choice.CorporateActionEventProcessingStatus, com.tools20022.repository.choice.Status8Choice.CorporateActionEventProcessingStatus,
-					com.tools20022.repository.choice.CorporateActionEventProcessingStatus2Choice.Code, com.tools20022.repository.choice.CorporateActionEventProcessingStatus2Choice.Proprietary,
-					com.tools20022.repository.choice.Status3Choice.CorporateActionEventProcessingStatus, com.tools20022.repository.choice.Status10Choice.CorporateActionEventProcessingStatus,
-					com.tools20022.repository.choice.CorporateActionEventProcessingStatus3Choice.Code, com.tools20022.repository.choice.CorporateActionEventProcessingStatus3Choice.Proprietary,
-					com.tools20022.repository.choice.Status19Choice.CorporateActionEventProcessingStatus, com.tools20022.repository.choice.Status22Choice.CorporateActionEventProcessingStatus,
-					com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice.Code, com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice.mmProprietary,
+					com.tools20022.repository.choice.Status1Choice.mmCorporateActionEventProcessingStatus, com.tools20022.repository.choice.Status8Choice.mmCorporateActionEventProcessingStatus,
+					com.tools20022.repository.choice.CorporateActionEventProcessingStatus2Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventProcessingStatus2Choice.mmProprietary,
+					com.tools20022.repository.choice.Status3Choice.mmCorporateActionEventProcessingStatus, com.tools20022.repository.choice.Status10Choice.mmCorporateActionEventProcessingStatus,
+					com.tools20022.repository.choice.CorporateActionEventProcessingStatus3Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventProcessingStatus3Choice.mmProprietary,
+					com.tools20022.repository.choice.Status19Choice.mmCorporateActionEventProcessingStatus, com.tools20022.repository.choice.Status22Choice.mmCorporateActionEventProcessingStatus,
+					com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EventProcessingStatus";
 			definition = "Processing status of the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventProcessingStatusCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CorporateActionStatusReason> corporateActionStatusReason;
 	/**
 	 * Specifies the reasons for the status. It is derived from the relationship
 	 * between Status and Status Reason.
@@ -823,8 +828,8 @@ public class CorporateActionStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#CorporateActionStatus
-	 * CorporateActionStatusReason.CorporateActionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason#mmCorporateActionStatus
+	 * CorporateActionStatusReason.mmCorporateActionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -833,31 +838,31 @@ public class CorporateActionStatus extends Status {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatusReason
 	 * CorporateActionStatusReason}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus1Choice#CancellationCompleted
-	 * InstructionCancellationRequestStatus1Choice.CancellationCompleted}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus2Choice#CancellationCompleted
-	 * InstructionCancellationRequestStatus2Choice.CancellationCompleted}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationRejectionStatus1#Reason
-	 * CorporateActionCancellationRejectionStatus1.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionInformationRejectedStatus1#Reason
-	 * CorporateActionInformationRejectedStatus1.Reason}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationRejectionStatus1#Reason
-	 * CorporateActionStandingInstructionCancellationRejectionStatus1.Reason}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus
 	 * CorporateActionStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus1Choice#mmCancellationCompleted
+	 * InstructionCancellationRequestStatus1Choice.mmCancellationCompleted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InstructionCancellationRequestStatus2Choice#mmCancellationCompleted
+	 * InstructionCancellationRequestStatus2Choice.mmCancellationCompleted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationRejectionStatus1#mmReason
+	 * CorporateActionCancellationRejectionStatus1.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInformationRejectedStatus1#mmReason
+	 * CorporateActionInformationRejectedStatus1.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationRejectionStatus1#mmReason
+	 * CorporateActionStandingInstructionCancellationRejectionStatus1.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -871,22 +876,23 @@ public class CorporateActionStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CorporateActionStatusReason = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCorporateActionStatusReason = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionCancellationRequestStatus1Choice.CancellationCompleted,
-					com.tools20022.repository.choice.InstructionCancellationRequestStatus2Choice.CancellationCompleted, com.tools20022.repository.msg.CorporateActionCancellationRejectionStatus1.Reason,
-					com.tools20022.repository.msg.CorporateActionInformationRejectedStatus1.Reason, com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationRejectionStatus1.Reason);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionCancellationRequestStatus1Choice.mmCancellationCompleted,
+					com.tools20022.repository.choice.InstructionCancellationRequestStatus2Choice.mmCancellationCompleted, com.tools20022.repository.msg.CorporateActionCancellationRejectionStatus1.mmReason,
+					com.tools20022.repository.msg.CorporateActionInformationRejectedStatus1.mmReason, com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationRejectionStatus1.mmReason);
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionStatusReason";
 			definition = "Specifies the reasons for the status. It is derived from the relationship between Status and Status Reason.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.CorporateActionStatus;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmCorporateActionStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 		}
 	};
+	protected CorporateActionInstructionCancellationProcessingStatusCode instructionCancellationStatus;
 	/**
 	 * Status of the instruction cancellation process.
 	 * <p>
@@ -913,18 +919,19 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Status of the instruction cancellation process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InstructionCancellationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInstructionCancellationStatus = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InstructionCancellationStatus";
 			definition = "Status of the instruction cancellation process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionInstructionCancellationProcessingStatusCode.mmObject();
 		}
 	};
+	protected CorporateActionInstructionProcessingStatusCode corporateActionInstructionProcessingStatus;
 	/**
 	 * Status of the corporate action instruction process.
 	 * <p>
@@ -935,19 +942,19 @@ public class CorporateActionStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode
 	 * CorporateActionInstructionProcessingStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#Received
-	 * ProcessingStatus43Choice.Received}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus
 	 * CorporateActionStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#mmReceived
+	 * ProcessingStatus43Choice.mmReceived}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -959,19 +966,20 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Status of the corporate action instruction process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CorporateActionInstructionProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCorporateActionInstructionProcessingStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus43Choice.Received);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus43Choice.mmReceived);
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionInstructionProcessingStatus";
 			definition = "Status of the corporate action instruction process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionInstructionProcessingStatusCode.mmObject();
 		}
 	};
+	protected RateStatusCode rateStatus;
 	/**
 	 * Specifies whether the rate is indicative or actual.
 	 * <p>
@@ -982,121 +990,121 @@ public class CorporateActionStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RateStatusCode
 	 * RateStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus1#RateStatus
-	 * RateTypeAndAmountAndStatus1.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus3#RateStatus
-	 * RateTypeAndAmountAndStatus3.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus4#RateStatus
-	 * RateTypeAndAmountAndStatus4.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus5#RateStatus
-	 * RateTypeAndAmountAndStatus5.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus6#RateStatus
-	 * RateTypeAndAmountAndStatus6.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus2#RateStatus
-	 * RateTypeAndAmountAndStatus2.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus7#RateStatus
-	 * RateTypeAndAmountAndStatus7.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus8#RateStatus
-	 * RateTypeAndAmountAndStatus8.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus9#RateStatus
-	 * RateTypeAndAmountAndStatus9.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus10#RateStatus
-	 * RateTypeAndAmountAndStatus10.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus11#RateStatus
-	 * RateTypeAndAmountAndStatus11.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus12#RateStatus
-	 * RateTypeAndAmountAndStatus12.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus15#RateStatus
-	 * RateTypeAndAmountAndStatus15.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus16#RateStatus
-	 * RateTypeAndAmountAndStatus16.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus13#RateStatus
-	 * RateTypeAndAmountAndStatus13.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus14#RateStatus
-	 * RateTypeAndAmountAndStatus14.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus17#RateStatus
-	 * RateTypeAndAmountAndStatus17.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus18#RateStatus
-	 * RateTypeAndAmountAndStatus18.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus19#RateStatus
-	 * RateTypeAndAmountAndStatus19.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus20#RateStatus
-	 * RateTypeAndAmountAndStatus20.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus21#RateStatus
-	 * RateTypeAndAmountAndStatus21.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus24#RateStatus
-	 * RateTypeAndAmountAndStatus24.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus22#RateStatus
-	 * RateTypeAndAmountAndStatus22.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus25#RateStatus
-	 * RateTypeAndAmountAndStatus25.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus27#RateStatus
-	 * RateTypeAndAmountAndStatus27.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus26#RateStatus
-	 * RateTypeAndAmountAndStatus26.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus28#RateStatus
-	 * RateTypeAndAmountAndStatus28.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus29#RateStatus
-	 * RateTypeAndAmountAndStatus29.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus32#RateStatus
-	 * RateTypeAndAmountAndStatus32.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus31#RateStatus
-	 * RateTypeAndAmountAndStatus31.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus33#RateStatus
-	 * RateTypeAndAmountAndStatus33.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus36#RateStatus
-	 * RateTypeAndAmountAndStatus36.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus35#RateStatus
-	 * RateTypeAndAmountAndStatus35.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus30#RateStatus
-	 * RateTypeAndAmountAndStatus30.RateStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus34#RateStatus
-	 * RateTypeAndAmountAndStatus34.RateStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus
 	 * CorporateActionStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus1#mmRateStatus
+	 * RateTypeAndAmountAndStatus1.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus3#mmRateStatus
+	 * RateTypeAndAmountAndStatus3.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus4#mmRateStatus
+	 * RateTypeAndAmountAndStatus4.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus5#mmRateStatus
+	 * RateTypeAndAmountAndStatus5.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus6#mmRateStatus
+	 * RateTypeAndAmountAndStatus6.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus2#mmRateStatus
+	 * RateTypeAndAmountAndStatus2.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus7#mmRateStatus
+	 * RateTypeAndAmountAndStatus7.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus8#mmRateStatus
+	 * RateTypeAndAmountAndStatus8.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus9#mmRateStatus
+	 * RateTypeAndAmountAndStatus9.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus10#mmRateStatus
+	 * RateTypeAndAmountAndStatus10.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus11#mmRateStatus
+	 * RateTypeAndAmountAndStatus11.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus12#mmRateStatus
+	 * RateTypeAndAmountAndStatus12.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus15#mmRateStatus
+	 * RateTypeAndAmountAndStatus15.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus16#mmRateStatus
+	 * RateTypeAndAmountAndStatus16.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus13#mmRateStatus
+	 * RateTypeAndAmountAndStatus13.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus14#mmRateStatus
+	 * RateTypeAndAmountAndStatus14.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus17#mmRateStatus
+	 * RateTypeAndAmountAndStatus17.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus18#mmRateStatus
+	 * RateTypeAndAmountAndStatus18.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus19#mmRateStatus
+	 * RateTypeAndAmountAndStatus19.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus20#mmRateStatus
+	 * RateTypeAndAmountAndStatus20.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus21#mmRateStatus
+	 * RateTypeAndAmountAndStatus21.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus24#mmRateStatus
+	 * RateTypeAndAmountAndStatus24.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus22#mmRateStatus
+	 * RateTypeAndAmountAndStatus22.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus25#mmRateStatus
+	 * RateTypeAndAmountAndStatus25.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus27#mmRateStatus
+	 * RateTypeAndAmountAndStatus27.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus26#mmRateStatus
+	 * RateTypeAndAmountAndStatus26.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus28#mmRateStatus
+	 * RateTypeAndAmountAndStatus28.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus29#mmRateStatus
+	 * RateTypeAndAmountAndStatus29.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus32#mmRateStatus
+	 * RateTypeAndAmountAndStatus32.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus31#mmRateStatus
+	 * RateTypeAndAmountAndStatus31.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus33#mmRateStatus
+	 * RateTypeAndAmountAndStatus33.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus36#mmRateStatus
+	 * RateTypeAndAmountAndStatus36.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus35#mmRateStatus
+	 * RateTypeAndAmountAndStatus35.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus30#mmRateStatus
+	 * RateTypeAndAmountAndStatus30.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus34#mmRateStatus
+	 * RateTypeAndAmountAndStatus34.mmRateStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1108,30 +1116,31 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Specifies whether the rate is indicative or actual."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RateStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRateStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndAmountAndStatus1.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus3.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus4.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus5.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus6.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus2.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus7.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus8.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus9.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus10.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus11.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus12.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus15.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus16.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus13.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus14.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus17.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus18.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus19.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus20.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus21.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus24.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus22.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus25.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus27.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus26.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus28.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus29.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus32.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus31.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus33.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus36.RateStatus,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus35.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus30.RateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus34.RateStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndAmountAndStatus1.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus3.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus4.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus5.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus6.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus2.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus7.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus8.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus9.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus10.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus11.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus12.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus15.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus16.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus13.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus14.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus17.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus18.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus19.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus20.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus21.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus24.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus22.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus25.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus27.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus26.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus28.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus29.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus32.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus31.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus33.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus36.mmRateStatus,
+					com.tools20022.repository.msg.RateTypeAndAmountAndStatus35.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus30.mmRateStatus, com.tools20022.repository.msg.RateTypeAndAmountAndStatus34.mmRateStatus);
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RateStatus";
 			definition = "Specifies whether the rate is indicative or actual.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateStatusCode.mmObject();
 		}
 	};
+	protected OptionAvailabilityStatusCode optionAvailabilityStatus;
 	/**
 	 * Availability status of the option.
 	 * <p>
@@ -1142,103 +1151,103 @@ public class CorporateActionStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OptionAvailabilityStatusCode
 	 * OptionAvailabilityStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#OptionAvailabilityStatus
-	 * CorporateActionOption10.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#OptionAvailabilityStatus
-	 * CorporateActionOption15.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#OptionAvailabilityStatus
-	 * CorporateActionOption20.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#OptionAvailabilityStatus
-	 * CorporateActionOption32.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#OptionAvailabilityStatus
-	 * CorporateActionOption35.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#OptionAvailabilityStatus
-	 * CorporateActionOption44.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#OptionAvailabilityStatus
-	 * CorporateActionOption52.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#OptionAvailabilityStatus
-	 * CorporateActionOption55.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#OptionAvailabilityStatus
-	 * CorporateActionOption3.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#OptionAvailabilityStatus
-	 * CorporateActionOption17.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#OptionAvailabilityStatus
-	 * CorporateActionOption19.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#OptionAvailabilityStatus
-	 * CorporateActionOption34.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#OptionAvailabilityStatus
-	 * CorporateActionOption36.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#OptionAvailabilityStatus
-	 * CorporateActionOption45.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#OptionAvailabilityStatus
-	 * CorporateActionOption51.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#OptionAvailabilityStatus
-	 * CorporateActionOption56.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#OptionAvailabilityStatus
-	 * CorporateActionOption1.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#OptionAvailabilityStatus
-	 * CorporateActionOption100.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#OptionAvailabilityStatus
-	 * CorporateActionOption101.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#OptionAvailabilityStatus
-	 * CorporateActionOption108.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#OptionAvailabilityStatus
-	 * CorporateActionOption106.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#OptionAvailabilityStatus
-	 * CorporateActionOption115.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#OptionAvailabilityStatus
-	 * CorporateActionOption114.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#OptionAvailabilityStatus
-	 * CorporateActionOption125.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#OptionAvailabilityStatus
-	 * CorporateActionOption127.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#OptionAvailabilityStatus
-	 * CorporateActionOption130.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#OptionAvailabilityStatus
-	 * CorporateActionOption129.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#OptionAvailabilityStatus
-	 * CorporateActionOption135.OptionAvailabilityStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#OptionAvailabilityStatus
-	 * CorporateActionOption133.OptionAvailabilityStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus
 	 * CorporateActionStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmOptionAvailabilityStatus
+	 * CorporateActionOption10.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmOptionAvailabilityStatus
+	 * CorporateActionOption15.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmOptionAvailabilityStatus
+	 * CorporateActionOption20.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmOptionAvailabilityStatus
+	 * CorporateActionOption32.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmOptionAvailabilityStatus
+	 * CorporateActionOption35.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmOptionAvailabilityStatus
+	 * CorporateActionOption44.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmOptionAvailabilityStatus
+	 * CorporateActionOption52.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmOptionAvailabilityStatus
+	 * CorporateActionOption55.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmOptionAvailabilityStatus
+	 * CorporateActionOption3.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmOptionAvailabilityStatus
+	 * CorporateActionOption17.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmOptionAvailabilityStatus
+	 * CorporateActionOption19.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmOptionAvailabilityStatus
+	 * CorporateActionOption34.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmOptionAvailabilityStatus
+	 * CorporateActionOption36.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmOptionAvailabilityStatus
+	 * CorporateActionOption45.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmOptionAvailabilityStatus
+	 * CorporateActionOption51.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmOptionAvailabilityStatus
+	 * CorporateActionOption56.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmOptionAvailabilityStatus
+	 * CorporateActionOption1.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmOptionAvailabilityStatus
+	 * CorporateActionOption100.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmOptionAvailabilityStatus
+	 * CorporateActionOption101.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmOptionAvailabilityStatus
+	 * CorporateActionOption108.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmOptionAvailabilityStatus
+	 * CorporateActionOption106.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmOptionAvailabilityStatus
+	 * CorporateActionOption115.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmOptionAvailabilityStatus
+	 * CorporateActionOption114.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmOptionAvailabilityStatus
+	 * CorporateActionOption125.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmOptionAvailabilityStatus
+	 * CorporateActionOption127.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmOptionAvailabilityStatus
+	 * CorporateActionOption130.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmOptionAvailabilityStatus
+	 * CorporateActionOption129.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmOptionAvailabilityStatus
+	 * CorporateActionOption135.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmOptionAvailabilityStatus
+	 * CorporateActionOption133.mmOptionAvailabilityStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1250,33 +1259,34 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Availability status of the option."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OptionAvailabilityStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOptionAvailabilityStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption15.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption20.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption32.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption35.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption44.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption52.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption55.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption3.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption17.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption19.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption34.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption36.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption45.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption51.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption56.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption1.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption100.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption101.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption108.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption106.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption115.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption114.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption125.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption127.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption130.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption129.OptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption135.OptionAvailabilityStatus,
-					com.tools20022.repository.msg.CorporateActionOption133.OptionAvailabilityStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption15.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption20.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption32.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption35.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption44.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption52.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption55.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption3.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption17.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption19.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption34.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption36.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption45.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption51.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption56.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption1.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption100.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption101.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption108.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption106.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption115.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption114.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption125.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption127.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption130.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption129.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption135.mmOptionAvailabilityStatus,
+					com.tools20022.repository.msg.CorporateActionOption133.mmOptionAvailabilityStatus);
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OptionAvailabilityStatus";
 			definition = "Availability status of the option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OptionAvailabilityStatusCode.mmObject();
 		}
 	};
+	protected CorporateActionEvent corporateActionEvent;
 	/**
 	 * Corporate event for which a status is provided.
 	 * <p>
@@ -1285,8 +1295,8 @@ public class CorporateActionStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#CorporateActionStatus
-	 * CorporateActionEvent.CorporateActionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionStatus
+	 * CorporateActionEvent.mmCorporateActionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1311,20 +1321,21 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Corporate event for which a status is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CorporateActionEvent = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEvent";
 			definition = "Corporate event for which a status is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.CorporateActionStatus;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
+	protected CorporateActionEventStatusCode eventStatus;
 	/**
 	 * Status of the corporate action event.
 	 * <p>
@@ -1335,34 +1346,34 @@ public class CorporateActionStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatusCode
 	 * CorporateActionEventStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus2FormatChoice#Code
-	 * CorporateActionEventStatus2FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus2FormatChoice#Proprietary
-	 * CorporateActionEventStatus2FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus1FormatChoice#Code
-	 * CorporateActionEventStatus1FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus1FormatChoice#Proprietary
-	 * CorporateActionEventStatus1FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice#Code
-	 * CorporateActionEventStatus3FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice#Proprietary
-	 * CorporateActionEventStatus3FormatChoice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus
 	 * CorporateActionStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus2FormatChoice#mmCode
+	 * CorporateActionEventStatus2FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus2FormatChoice#mmProprietary
+	 * CorporateActionEventStatus2FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus1FormatChoice#mmCode
+	 * CorporateActionEventStatus1FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus1FormatChoice#mmProprietary
+	 * CorporateActionEventStatus1FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice#mmCode
+	 * CorporateActionEventStatus3FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice#mmProprietary
+	 * CorporateActionEventStatus3FormatChoice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1374,21 +1385,22 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Status of the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EventStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEventStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStatus2FormatChoice.Code, com.tools20022.repository.choice.CorporateActionEventStatus2FormatChoice.Proprietary,
-					com.tools20022.repository.choice.CorporateActionEventStatus1FormatChoice.Code, com.tools20022.repository.choice.CorporateActionEventStatus1FormatChoice.Proprietary,
-					com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice.Code, com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStatus2FormatChoice.mmCode, com.tools20022.repository.choice.CorporateActionEventStatus2FormatChoice.mmProprietary,
+					com.tools20022.repository.choice.CorporateActionEventStatus1FormatChoice.mmCode, com.tools20022.repository.choice.CorporateActionEventStatus1FormatChoice.mmProprietary,
+					com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice.mmCode, com.tools20022.repository.choice.CorporateActionEventStatus3FormatChoice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EventStatus";
 			definition = "Status of the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventStatusCode.mmObject();
 		}
 	};
+	protected CorporateActionProcessedStatusCode relatedInstructionProcessedStatus;
 	/**
 	 * Information on the status of the processing of an instruction related to
 	 * a corporate action.
@@ -1400,55 +1412,55 @@ public class CorporateActionStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode
 	 * CorporateActionProcessedStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus2FormatChoice#Code
-	 * ProcessedStatus2FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus2FormatChoice#Proprietary
-	 * ProcessedStatus2FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus1FormatChoice#Code
-	 * ProcessedStatus1FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus1FormatChoice#Proprietary
-	 * ProcessedStatus1FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus3FormatChoice#Code
-	 * ProcessedStatus3FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus3FormatChoice#Proprietary
-	 * ProcessedStatus3FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus5FormatChoice#Code
-	 * ProcessedStatus5FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus5FormatChoice#Proprietary
-	 * ProcessedStatus5FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstructionProcessingStatus1#Status
-	 * CorporateActionStandingInstructionProcessingStatus1.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus4FormatChoice#Code
-	 * ProcessedStatus4FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus4FormatChoice#Proprietary
-	 * ProcessedStatus4FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus6FormatChoice#Code
-	 * ProcessedStatus6FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus6FormatChoice#Proprietary
-	 * ProcessedStatus6FormatChoice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus
 	 * CorporateActionStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus2FormatChoice#mmCode
+	 * ProcessedStatus2FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus2FormatChoice#mmProprietary
+	 * ProcessedStatus2FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus1FormatChoice#mmCode
+	 * ProcessedStatus1FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus1FormatChoice#mmProprietary
+	 * ProcessedStatus1FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus3FormatChoice#mmCode
+	 * ProcessedStatus3FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus3FormatChoice#mmProprietary
+	 * ProcessedStatus3FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus5FormatChoice#mmCode
+	 * ProcessedStatus5FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus5FormatChoice#mmProprietary
+	 * ProcessedStatus5FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstructionProcessingStatus1#mmStatus
+	 * CorporateActionStandingInstructionProcessingStatus1.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus4FormatChoice#mmCode
+	 * ProcessedStatus4FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus4FormatChoice#mmProprietary
+	 * ProcessedStatus4FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus6FormatChoice#mmCode
+	 * ProcessedStatus6FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessedStatus6FormatChoice#mmProprietary
+	 * ProcessedStatus6FormatChoice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1462,23 +1474,25 @@ public class CorporateActionStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RelatedInstructionProcessedStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRelatedInstructionProcessedStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessedStatus2FormatChoice.Code, com.tools20022.repository.choice.ProcessedStatus2FormatChoice.Proprietary,
-					com.tools20022.repository.choice.ProcessedStatus1FormatChoice.Code, com.tools20022.repository.choice.ProcessedStatus1FormatChoice.Proprietary, com.tools20022.repository.choice.ProcessedStatus3FormatChoice.Code,
-					com.tools20022.repository.choice.ProcessedStatus3FormatChoice.Proprietary, com.tools20022.repository.choice.ProcessedStatus5FormatChoice.Code, com.tools20022.repository.choice.ProcessedStatus5FormatChoice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionStandingInstructionProcessingStatus1.Status, com.tools20022.repository.choice.ProcessedStatus4FormatChoice.Code,
-					com.tools20022.repository.choice.ProcessedStatus4FormatChoice.Proprietary, com.tools20022.repository.choice.ProcessedStatus6FormatChoice.Code, com.tools20022.repository.choice.ProcessedStatus6FormatChoice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessedStatus2FormatChoice.mmCode, com.tools20022.repository.choice.ProcessedStatus2FormatChoice.mmProprietary,
+					com.tools20022.repository.choice.ProcessedStatus1FormatChoice.mmCode, com.tools20022.repository.choice.ProcessedStatus1FormatChoice.mmProprietary, com.tools20022.repository.choice.ProcessedStatus3FormatChoice.mmCode,
+					com.tools20022.repository.choice.ProcessedStatus3FormatChoice.mmProprietary, com.tools20022.repository.choice.ProcessedStatus5FormatChoice.mmCode,
+					com.tools20022.repository.choice.ProcessedStatus5FormatChoice.mmProprietary, com.tools20022.repository.msg.CorporateActionStandingInstructionProcessingStatus1.mmStatus,
+					com.tools20022.repository.choice.ProcessedStatus4FormatChoice.mmCode, com.tools20022.repository.choice.ProcessedStatus4FormatChoice.mmProprietary, com.tools20022.repository.choice.ProcessedStatus6FormatChoice.mmCode,
+					com.tools20022.repository.choice.ProcessedStatus6FormatChoice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedInstructionProcessedStatus";
 			definition = "Information on the status of the processing of an instruction related to a corporate action.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionProcessedStatusCode.mmObject();
 		}
 	};
+	protected ISODateTime deactivationDateAndTime;
 	/**
 	 * Date and time at which the the corporate action event or the option is
 	 * deactivated.
@@ -1489,19 +1503,19 @@ public class CorporateActionStatus extends Status {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstruction1#DeactivationDateAndTime
-	 * CorporateActionDeactivationInstruction1.DeactivationDateAndTime}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus
 	 * CorporateActionStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstruction1#mmDeactivationDateAndTime
+	 * CorporateActionDeactivationInstruction1.mmDeactivationDateAndTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1515,19 +1529,20 @@ public class CorporateActionStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DeactivationDateAndTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDeactivationDateAndTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.DeactivationDateAndTime);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.mmDeactivationDateAndTime);
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeactivationDateAndTime";
 			definition = "Date and time at which the the corporate action event or the option is deactivated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected EventConfirmationStatusCode eventConfirmationStatus;
 	/**
 	 * Indicates the status of the occurrence of an event.
 	 * <p>
@@ -1554,18 +1569,19 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Indicates the status of the occurrence of an event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EventConfirmationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEventConfirmationStatus = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EventConfirmationStatus";
 			definition = "Indicates the status of the occurrence of an event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventConfirmationStatusCode.mmObject();
 		}
 	};
+	protected EventCompletenessStatusCode eventCompletenessStatus;
 	/**
 	 * Indicates whether the details provided about an event are complete or
 	 * incomplete.
@@ -1595,15 +1611,15 @@ public class CorporateActionStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EventCompletenessStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEventCompletenessStatus = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CorporateActionStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EventCompletenessStatus";
 			definition = "Indicates whether the details provided about an event are complete or incomplete.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventCompletenessStatusCode.mmObject();
 		}
 	};
@@ -1611,53 +1627,53 @@ public class CorporateActionStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionStatus";
 				definition = "Status of the corporate action process.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionStatusReason.CorporateActionStatus, com.tools20022.repository.entity.CorporateActionEvent.CorporateActionStatus);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellation1.ProcessingStatus, com.tools20022.repository.msg.CorporateActionCancellation2.ProcessingStatus,
-						com.tools20022.repository.choice.EventProcessingStatus1Choice.Complete, com.tools20022.repository.choice.EventProcessingStatus1Choice.Reconciled,
-						com.tools20022.repository.choice.EventProcessingStatus2Choice.Complete, com.tools20022.repository.choice.EventProcessingStatus2Choice.Reconciled,
-						com.tools20022.repository.choice.InstructionCancellationRequestStatus1Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionCancellationRequestStatus2Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.InstructionCancellationRequestStatus3Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionCancellationRequestStatus4Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.InstructionCancellationRequestStatus5Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionCancellationRequestStatus6Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.InstructionProcessingStatus1Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus4Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.InstructionProcessingStatus7Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus8Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.InstructionProcessingStatus12Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus13Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.ElectionAdviceStatus1Choice.ProcessedStatus, com.tools20022.repository.choice.ElectionAdviceStatus1Choice.RejectedStatus,
-						com.tools20022.repository.msg.CorporateActionCancellationProcessingStatus1.Status, com.tools20022.repository.choice.ElectionCancellationStatus1Choice.ProcessedStatus,
-						com.tools20022.repository.choice.ElectionCancellationStatus1Choice.RejectedStatus, com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1.Status,
-						com.tools20022.repository.choice.ElectionAmendmentStatus1Choice.ProcessedStatus, com.tools20022.repository.choice.ElectionAmendmentStatus1Choice.RejectedStatus,
-						com.tools20022.repository.msg.CorporateActionMovementProcessingStatus1.Status, com.tools20022.repository.msg.CorporateActionMovementFailedStatus1.ResourceDetails,
-						com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.ProcessedStatus, com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.FailedStatus,
-						com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.RejectedStatus, com.tools20022.repository.msg.CorporationActionMovementProcessingStatus2.Status,
-						com.tools20022.repository.msg.CorporateMovementStatus2.ProcessedStatus, com.tools20022.repository.msg.CorporateMovementStatus2.RejectedStatus,
-						com.tools20022.repository.msg.CorporateActionInformationProcessingStatus1.Status, com.tools20022.repository.choice.CorporateActionInformationStatus1Choice.ProcessedStatus,
-						com.tools20022.repository.choice.CorporateActionInformationStatus1Choice.RejectedStatus, com.tools20022.repository.choice.StandingInstructionStatus1Choice.ProcessedStatus,
-						com.tools20022.repository.choice.StandingInstructionStatus1Choice.RejectedStatus, com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationProcessingStatus1.Status,
-						com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice.ProcessedStatus, com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice.RejectedStatus,
-						com.tools20022.repository.msg.CorporateActionDeactivationInstructionProcessingStatus1.Status, com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.ProcessedStatus,
-						com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.RejectedStatus, com.tools20022.repository.msg.CorporateActionDeactivationCancellationProcessingStatus1.Status,
-						com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice.ProcessedStatus, com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice.RejectedStatus,
-						com.tools20022.repository.msg.CorporateActionCancellation3.ProcessingStatus, com.tools20022.repository.choice.InstructionProcessingStatus15Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.InstructionProcessingStatus16Choice.ProprietaryStatus, com.tools20022.repository.msg.CorporateActionCancellation4.ProcessingStatus,
-						com.tools20022.repository.choice.InstructionProcessingStatus20Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionCancellationRequestStatus7Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.InstructionProcessingStatus21Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionCancellationRequestStatus8Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.EventProcessingStatus3Choice.Complete, com.tools20022.repository.choice.EventProcessingStatus3Choice.Reconciled,
-						com.tools20022.repository.choice.InstructionCancellationRequestStatus9Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus24Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.InstructionCancellationRequestStatus10Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus25Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.EventProcessingStatus4Choice.Complete, com.tools20022.repository.choice.EventProcessingStatus4Choice.Reconciled,
-						com.tools20022.repository.choice.InstructionCancellationRequestStatus11Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus29Choice.ProprietaryStatus,
-						com.tools20022.repository.choice.InstructionCancellationRequestStatus12Choice.ProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus30Choice.ProprietaryStatus);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionStatusReason.mmCorporateActionStatus, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionStatus);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellation1.mmProcessingStatus, com.tools20022.repository.msg.CorporateActionCancellation2.mmProcessingStatus,
+						com.tools20022.repository.choice.EventProcessingStatus1Choice.mmComplete, com.tools20022.repository.choice.EventProcessingStatus1Choice.mmReconciled,
+						com.tools20022.repository.choice.EventProcessingStatus2Choice.mmComplete, com.tools20022.repository.choice.EventProcessingStatus2Choice.mmReconciled,
+						com.tools20022.repository.choice.InstructionCancellationRequestStatus1Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionCancellationRequestStatus2Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.InstructionCancellationRequestStatus3Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionCancellationRequestStatus4Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.InstructionCancellationRequestStatus5Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionCancellationRequestStatus6Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.InstructionProcessingStatus1Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus4Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.InstructionProcessingStatus7Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus8Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus13Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.ElectionAdviceStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.ElectionAdviceStatus1Choice.mmRejectedStatus,
+						com.tools20022.repository.msg.CorporateActionCancellationProcessingStatus1.mmStatus, com.tools20022.repository.choice.ElectionCancellationStatus1Choice.mmProcessedStatus,
+						com.tools20022.repository.choice.ElectionCancellationStatus1Choice.mmRejectedStatus, com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1.mmStatus,
+						com.tools20022.repository.choice.ElectionAmendmentStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.ElectionAmendmentStatus1Choice.mmRejectedStatus,
+						com.tools20022.repository.msg.CorporateActionMovementProcessingStatus1.mmStatus, com.tools20022.repository.msg.CorporateActionMovementFailedStatus1.mmResourceDetails,
+						com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmFailedStatus,
+						com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmRejectedStatus, com.tools20022.repository.msg.CorporationActionMovementProcessingStatus2.mmStatus,
+						com.tools20022.repository.msg.CorporateMovementStatus2.mmProcessedStatus, com.tools20022.repository.msg.CorporateMovementStatus2.mmRejectedStatus,
+						com.tools20022.repository.msg.CorporateActionInformationProcessingStatus1.mmStatus, com.tools20022.repository.choice.CorporateActionInformationStatus1Choice.mmProcessedStatus,
+						com.tools20022.repository.choice.CorporateActionInformationStatus1Choice.mmRejectedStatus, com.tools20022.repository.choice.StandingInstructionStatus1Choice.mmProcessedStatus,
+						com.tools20022.repository.choice.StandingInstructionStatus1Choice.mmRejectedStatus, com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationProcessingStatus1.mmStatus,
+						com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice.mmRejectedStatus,
+						com.tools20022.repository.msg.CorporateActionDeactivationInstructionProcessingStatus1.mmStatus, com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmProcessedStatus,
+						com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmRejectedStatus, com.tools20022.repository.msg.CorporateActionDeactivationCancellationProcessingStatus1.mmStatus,
+						com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice.mmRejectedStatus,
+						com.tools20022.repository.msg.CorporateActionCancellation3.mmProcessingStatus, com.tools20022.repository.choice.InstructionProcessingStatus15Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.InstructionProcessingStatus16Choice.mmProprietaryStatus, com.tools20022.repository.msg.CorporateActionCancellation4.mmProcessingStatus,
+						com.tools20022.repository.choice.InstructionProcessingStatus20Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionCancellationRequestStatus7Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.InstructionProcessingStatus21Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionCancellationRequestStatus8Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.EventProcessingStatus3Choice.mmComplete, com.tools20022.repository.choice.EventProcessingStatus3Choice.mmReconciled,
+						com.tools20022.repository.choice.InstructionCancellationRequestStatus9Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus24Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.InstructionCancellationRequestStatus10Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus25Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.EventProcessingStatus4Choice.mmComplete, com.tools20022.repository.choice.EventProcessingStatus4Choice.mmReconciled,
+						com.tools20022.repository.choice.InstructionCancellationRequestStatus11Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus29Choice.mmProprietaryStatus,
+						com.tools20022.repository.choice.InstructionCancellationRequestStatus12Choice.mmProprietaryStatus, com.tools20022.repository.choice.InstructionProcessingStatus30Choice.mmProprietaryStatus);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionStatus.AgentStandingInstructionStatus, com.tools20022.repository.entity.CorporateActionStatus.ProcessingStatus,
-						com.tools20022.repository.entity.CorporateActionStatus.EventProcessingStatus, com.tools20022.repository.entity.CorporateActionStatus.CorporateActionStatusReason,
-						com.tools20022.repository.entity.CorporateActionStatus.InstructionCancellationStatus, com.tools20022.repository.entity.CorporateActionStatus.CorporateActionInstructionProcessingStatus,
-						com.tools20022.repository.entity.CorporateActionStatus.RateStatus, com.tools20022.repository.entity.CorporateActionStatus.OptionAvailabilityStatus,
-						com.tools20022.repository.entity.CorporateActionStatus.CorporateActionEvent, com.tools20022.repository.entity.CorporateActionStatus.EventStatus,
-						com.tools20022.repository.entity.CorporateActionStatus.RelatedInstructionProcessedStatus, com.tools20022.repository.entity.CorporateActionStatus.DeactivationDateAndTime,
-						com.tools20022.repository.entity.CorporateActionStatus.EventConfirmationStatus, com.tools20022.repository.entity.CorporateActionStatus.EventCompletenessStatus);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionStatus.mmAgentStandingInstructionStatus, com.tools20022.repository.entity.CorporateActionStatus.mmProcessingStatus,
+						com.tools20022.repository.entity.CorporateActionStatus.mmEventProcessingStatus, com.tools20022.repository.entity.CorporateActionStatus.mmCorporateActionStatusReason,
+						com.tools20022.repository.entity.CorporateActionStatus.mmInstructionCancellationStatus, com.tools20022.repository.entity.CorporateActionStatus.mmCorporateActionInstructionProcessingStatus,
+						com.tools20022.repository.entity.CorporateActionStatus.mmRateStatus, com.tools20022.repository.entity.CorporateActionStatus.mmOptionAvailabilityStatus,
+						com.tools20022.repository.entity.CorporateActionStatus.mmCorporateActionEvent, com.tools20022.repository.entity.CorporateActionStatus.mmEventStatus,
+						com.tools20022.repository.entity.CorporateActionStatus.mmRelatedInstructionProcessedStatus, com.tools20022.repository.entity.CorporateActionStatus.mmDeactivationDateAndTime,
+						com.tools20022.repository.entity.CorporateActionStatus.mmEventConfirmationStatus, com.tools20022.repository.entity.CorporateActionStatus.mmEventCompletenessStatus);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionEventStatus1.mmObject(), CorporateActionProcessingStatus1Choice.mmObject(), EventProcessingStatus1Choice.mmObject(), EventProcessingStatus2Choice.mmObject(),
 						InstructionCancellationRequestStatus1Choice.mmObject(), InstructionCancellationRequestStatus2Choice.mmObject(), InstructionCancellationRequestStatus3Choice.mmObject(),
 						InstructionCancellationRequestStatus4Choice.mmObject(), InstructionCancellationRequestStatus5Choice.mmObject(), InstructionCancellationRequestStatus6Choice.mmObject(), RateStatus1Choice.mmObject(),
@@ -1681,5 +1697,117 @@ public class CorporateActionStatus extends Status {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getAgentStandingInstructionStatus() {
+		return agentStandingInstructionStatus;
+	}
+
+	public void setAgentStandingInstructionStatus(Max350Text agentStandingInstructionStatus) {
+		this.agentStandingInstructionStatus = agentStandingInstructionStatus;
+	}
+
+	public ProcessingStatusCode getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatusCode processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public CorporateActionEventProcessingStatusCode getEventProcessingStatus() {
+		return eventProcessingStatus;
+	}
+
+	public void setEventProcessingStatus(CorporateActionEventProcessingStatusCode eventProcessingStatus) {
+		this.eventProcessingStatus = eventProcessingStatus;
+	}
+
+	public List<CorporateActionStatusReason> getCorporateActionStatusReason() {
+		return corporateActionStatusReason;
+	}
+
+	public void setCorporateActionStatusReason(List<com.tools20022.repository.entity.CorporateActionStatusReason> corporateActionStatusReason) {
+		this.corporateActionStatusReason = corporateActionStatusReason;
+	}
+
+	public CorporateActionInstructionCancellationProcessingStatusCode getInstructionCancellationStatus() {
+		return instructionCancellationStatus;
+	}
+
+	public void setInstructionCancellationStatus(CorporateActionInstructionCancellationProcessingStatusCode instructionCancellationStatus) {
+		this.instructionCancellationStatus = instructionCancellationStatus;
+	}
+
+	public CorporateActionInstructionProcessingStatusCode getCorporateActionInstructionProcessingStatus() {
+		return corporateActionInstructionProcessingStatus;
+	}
+
+	public void setCorporateActionInstructionProcessingStatus(CorporateActionInstructionProcessingStatusCode corporateActionInstructionProcessingStatus) {
+		this.corporateActionInstructionProcessingStatus = corporateActionInstructionProcessingStatus;
+	}
+
+	public RateStatusCode getRateStatus() {
+		return rateStatus;
+	}
+
+	public void setRateStatus(RateStatusCode rateStatus) {
+		this.rateStatus = rateStatus;
+	}
+
+	public OptionAvailabilityStatusCode getOptionAvailabilityStatus() {
+		return optionAvailabilityStatus;
+	}
+
+	public void setOptionAvailabilityStatus(OptionAvailabilityStatusCode optionAvailabilityStatus) {
+		this.optionAvailabilityStatus = optionAvailabilityStatus;
+	}
+
+	public CorporateActionEvent getCorporateActionEvent() {
+		return corporateActionEvent;
+	}
+
+	public void setCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent corporateActionEvent) {
+		this.corporateActionEvent = corporateActionEvent;
+	}
+
+	public CorporateActionEventStatusCode getEventStatus() {
+		return eventStatus;
+	}
+
+	public void setEventStatus(CorporateActionEventStatusCode eventStatus) {
+		this.eventStatus = eventStatus;
+	}
+
+	public CorporateActionProcessedStatusCode getRelatedInstructionProcessedStatus() {
+		return relatedInstructionProcessedStatus;
+	}
+
+	public void setRelatedInstructionProcessedStatus(CorporateActionProcessedStatusCode relatedInstructionProcessedStatus) {
+		this.relatedInstructionProcessedStatus = relatedInstructionProcessedStatus;
+	}
+
+	public ISODateTime getDeactivationDateAndTime() {
+		return deactivationDateAndTime;
+	}
+
+	public void setDeactivationDateAndTime(ISODateTime deactivationDateAndTime) {
+		this.deactivationDateAndTime = deactivationDateAndTime;
+	}
+
+	public EventConfirmationStatusCode getEventConfirmationStatus() {
+		return eventConfirmationStatus;
+	}
+
+	public void setEventConfirmationStatus(EventConfirmationStatusCode eventConfirmationStatus) {
+		this.eventConfirmationStatus = eventConfirmationStatus;
+	}
+
+	public EventCompletenessStatusCode getEventCompletenessStatus() {
+		return eventCompletenessStatus;
+	}
+
+	public void setEventCompletenessStatus(EventCompletenessStatusCode eventCompletenessStatus) {
+		this.eventCompletenessStatus = eventCompletenessStatus;
 	}
 }

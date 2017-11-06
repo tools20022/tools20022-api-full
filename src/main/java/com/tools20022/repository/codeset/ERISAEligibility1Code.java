@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#ERISAEligible
- * ERISAEligibility1Code.ERISAEligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#mmERISAEligible
+ * ERISAEligibility1Code.mmERISAEligible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#NotERISAEligible
- * ERISAEligibility1Code.NotERISAEligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#mmNotERISAEligible
+ * ERISAEligibility1Code.mmNotERISAEligible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#ERISAEligibilityUnknown
- * ERISAEligibility1Code.ERISAEligibilityUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#mmERISAEligibilityUnknown
+ * ERISAEligibility1Code.mmERISAEligibilityUnknown}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	 * name} = "ERISAEligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode ERISAEligible = new MMCode() {
+	public static final MMCode mmERISAEligible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISAEligible";
@@ -110,7 +110,7 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	 * name} = "NotERISAEligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotERISAEligible = new MMCode() {
+	public static final MMCode mmNotERISAEligible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotERISAEligible";
@@ -133,7 +133,7 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	 * name} = "ERISAEligibilityUnknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode ERISAEligibilityUnknown = new MMCode() {
+	public static final MMCode mmERISAEligibilityUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISAEligibilityUnknown";
@@ -144,13 +144,13 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELIG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ERISAEligibility1Code";
 				definition = "Specifies information about ERISA (Eligibility to federal Employee Retirement Income Security Act) eligibility.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ERISAEligibility1Code.ERISAEligible, com.tools20022.repository.codeset.ERISAEligibility1Code.NotERISAEligible,
-						com.tools20022.repository.codeset.ERISAEligibility1Code.ERISAEligibilityUnknown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ERISAEligibility1Code.mmERISAEligible, com.tools20022.repository.codeset.ERISAEligibility1Code.mmNotERISAEligible,
+						com.tools20022.repository.codeset.ERISAEligibility1Code.mmERISAEligibilityUnknown);
 				trace_lazy = () -> ERISAEligibilityCode.mmObject();
 			}
 		});

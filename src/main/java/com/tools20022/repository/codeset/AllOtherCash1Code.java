@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllOtherCash1Code#LiquidatedTransferAsCash
- * AllOtherCash1Code.LiquidatedTransferAsCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllOtherCash1Code#mmLiquidatedTransferAsCash
+ * AllOtherCash1Code.mmLiquidatedTransferAsCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllOtherCash1Code#NotLiquidatedTransferAsCash
- * AllOtherCash1Code.NotLiquidatedTransferAsCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllOtherCash1Code#mmNotLiquidatedTransferAsCash
+ * AllOtherCash1Code.mmNotLiquidatedTransferAsCash}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class AllOtherCash1Code extends AllOtherCashCode {
 	 * name} = "LiquidatedTransferAsCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode LiquidatedTransferAsCash = new MMCode() {
+	public static final MMCode mmLiquidatedTransferAsCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidatedTransferAsCash";
@@ -98,7 +98,7 @@ public class AllOtherCash1Code extends AllOtherCashCode {
 	 * name} = "NotLiquidatedTransferAsCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotLiquidatedTransferAsCash = new MMCode() {
+	public static final MMCode mmNotLiquidatedTransferAsCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotLiquidatedTransferAsCash";
@@ -109,11 +109,11 @@ public class AllOtherCash1Code extends AllOtherCashCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AllOtherCash1Code";
 				definition = "Specifies if remaining assets are transferred as cash.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllOtherCash1Code.LiquidatedTransferAsCash, com.tools20022.repository.codeset.AllOtherCash1Code.NotLiquidatedTransferAsCash);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllOtherCash1Code.mmLiquidatedTransferAsCash, com.tools20022.repository.codeset.AllOtherCash1Code.mmNotLiquidatedTransferAsCash);
 				trace_lazy = () -> AllOtherCashCode.mmObject();
 			}
 		});

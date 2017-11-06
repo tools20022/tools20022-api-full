@@ -39,46 +39,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#SecurityIdentification
- * SecurityOption1.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmSecurityIdentification
+ * SecurityOption1.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#CreditDebitIndicator
- * SecurityOption1.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmCreditDebitIndicator
+ * SecurityOption1.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#SecuritiesQuantity
- * SecurityOption1.SecuritiesQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmSecuritiesQuantity
+ * SecurityOption1.mmSecuritiesQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#MinimumExercisableSecuritiesQuantity
- * SecurityOption1.MinimumExercisableSecuritiesQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmMinimumExercisableSecuritiesQuantity
+ * SecurityOption1.mmMinimumExercisableSecuritiesQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#MinimumExercisableMultipleSecuritiesQuantity
- * SecurityOption1.MinimumExercisableMultipleSecuritiesQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmMinimumExercisableMultipleSecuritiesQuantity
+ * SecurityOption1.mmMinimumExercisableMultipleSecuritiesQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#NewDenominationSecuritiesQuantity
- * SecurityOption1.NewDenominationSecuritiesQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmNewDenominationSecuritiesQuantity
+ * SecurityOption1.mmNewDenominationSecuritiesQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#NewBoardLotSecuritiesQuantity
- * SecurityOption1.NewBoardLotSecuritiesQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityOption1#ShareRanking
- * SecurityOption1.ShareRanking}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmNewBoardLotSecuritiesQuantity
+ * SecurityOption1.mmNewBoardLotSecuritiesQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityOption1#mmShareRanking
+ * SecurityOption1.mmShareRanking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#AdditionalQuantityForSubscribedResultantSecurities
- * SecurityOption1.AdditionalQuantityForSubscribedResultantSecurities}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityOption1#DateDetails
- * SecurityOption1.DateDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityOption1#PriceDetails
- * SecurityOption1.PriceDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityOption1#TradingPeriod
- * SecurityOption1.TradingPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmAdditionalQuantityForSubscribedResultantSecurities
+ * SecurityOption1.mmAdditionalQuantityForSubscribedResultantSecurities}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityOption1#mmDateDetails
+ * SecurityOption1.mmDateDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityOption1#mmPriceDetails
+ * SecurityOption1.mmPriceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#AdditionalQuantityForExistingSecurities
- * SecurityOption1.AdditionalQuantityForExistingSecurities}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmTradingPeriod
+ * SecurityOption1.mmTradingPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#TemporaryFinancialInstrumentIndicator
- * SecurityOption1.TemporaryFinancialInstrumentIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmAdditionalQuantityForExistingSecurities
+ * SecurityOption1.mmAdditionalQuantityForExistingSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityOption1#FractionDisposition
- * SecurityOption1.FractionDisposition}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmTemporaryFinancialInstrumentIndicator
+ * SecurityOption1.mmTemporaryFinancialInstrumentIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmFractionDisposition
+ * SecurityOption1.mmFractionDisposition}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -87,8 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityOption1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentDescription3 securityIdentification;
 	/**
 	 * Identification of the financial instrument.
 	 * <p>
@@ -115,8 +117,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,20 +137,21 @@ public class SecurityOption1 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentDescription3.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDescription3.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Specifies whether the value is a debit or credit.
 	 * <p>
@@ -162,8 +165,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#CreditDebitIndicator
-	 * ProceedsDefinition.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmCreditDebitIndicator
+	 * ProceedsDefinition.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -182,20 +185,21 @@ public class SecurityOption1 {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice securitiesQuantity;
 	/**
 	 * Quantity of financial instrument.
 	 * <p>
@@ -209,8 +213,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#SecuritiesQuantity
-	 * SecuritiesProceedsDefinition.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmSecuritiesQuantity
+	 * SecuritiesProceedsDefinition.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -229,20 +233,21 @@ public class SecurityOption1 {
 	 * definition} = "Quantity of financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmSecuritiesQuantity;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "SctiesQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantity";
 			definition = "Quantity of financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice minimumExercisableSecuritiesQuantity;
 	/**
 	 * Minimum quantity of financial instrument or lot of rights/warrants that
 	 * must be exercised.
@@ -257,8 +262,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#MinimumExercisableQuantity
-	 * SecuritiesConversion.MinimumExercisableQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmMinimumExercisableQuantity
+	 * SecuritiesConversion.mmMinimumExercisableQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -279,20 +284,21 @@ public class SecurityOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumExercisableSecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumExercisableSecuritiesQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableQuantity;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.MinimumExercisableQuantity;
 			isDerived = false;
 			xmlTag = "MinExrcblSctiesQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableSecuritiesQuantity";
 			definition = "Minimum quantity of financial instrument or lot of rights/warrants that must be exercised.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice minimumExercisableMultipleSecuritiesQuantity;
 	/**
 	 * Minimum multiple quantity of financial instrument or lot of
 	 * rights/warrants that must be exercised.
@@ -307,8 +313,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#MinimumExercisableMultipleQuantity
-	 * SecuritiesConversion.MinimumExercisableMultipleQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmMinimumExercisableMultipleQuantity
+	 * SecuritiesConversion.mmMinimumExercisableMultipleQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -329,20 +335,21 @@ public class SecurityOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumExercisableMultipleSecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumExercisableMultipleSecuritiesQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.MinimumExercisableMultipleQuantity;
 			isDerived = false;
 			xmlTag = "MinExrcblMltplSctiesQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableMultipleSecuritiesQuantity";
 			definition = "Minimum multiple quantity of financial instrument or lot of rights/warrants that must be exercised.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice newDenominationSecuritiesQuantity;
 	/**
 	 * New denomination of the financial instrument following, eg, an increase
 	 * or decrease in nominal value.
@@ -357,8 +364,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#NewDenominationSecuritiesQuantity
-	 * SecuritiesProceedsDefinition.NewDenominationSecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmNewDenominationSecuritiesQuantity
+	 * SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -379,20 +386,21 @@ public class SecurityOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewDenominationSecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewDenominationSecuritiesQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.NewDenominationSecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "NewDnmtnSctiesQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewDenominationSecuritiesQuantity";
 			definition = "New denomination of the financial instrument following, eg, an increase or decrease in nominal value.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice newBoardLotSecuritiesQuantity;
 	/**
 	 * Quantity of equity that makes up the new board lot.
 	 * <p>
@@ -406,8 +414,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#BoardLotSecuritiesQuantity
-	 * SecuritiesProceedsDefinition.BoardLotSecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmBoardLotSecuritiesQuantity
+	 * SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -426,20 +434,21 @@ public class SecurityOption1 {
 	 * definition} = "Quantity of equity that makes up the new board lot."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewBoardLotSecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewBoardLotSecuritiesQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.BoardLotSecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "NewBrdLotSctiesQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewBoardLotSecuritiesQuantity";
 			definition = "Quantity of equity that makes up the new board lot.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected ShareRanking1FormatChoice shareRanking;
 	/**
 	 * Specifies whether the shares are ranking for dividend or pari passu.
 	 * <p>
@@ -453,8 +462,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#ShareRanking
-	 * SecuritiesProceedsDefinition.ShareRanking}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmShareRanking
+	 * SecuritiesProceedsDefinition.mmShareRanking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -474,20 +483,21 @@ public class SecurityOption1 {
 	 * "Specifies whether the shares are ranking for dividend or pari passu."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShareRanking = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShareRanking = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmShareRanking;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.ShareRanking;
 			isDerived = false;
 			xmlTag = "ShrRnkg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareRanking";
 			definition = "Specifies whether the shares are ranking for dividend or pari passu.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ShareRanking1FormatChoice.mmObject();
 		}
 	};
+	protected QuantityToQuantityRatio1 additionalQuantityForSubscribedResultantSecurities;
 	/**
 	 * Quantity of additional intermediate securities/new equities awarded for a
 	 * given quantity of securities derived from subscription.
@@ -502,9 +512,9 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#AdditionalQuantityForSubscribedResultantSecurities
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmAdditionalQuantityForSubscribedResultantSecurities
 	 * SecuritiesProceedsDefinition.
-	 * AdditionalQuantityForSubscribedResultantSecurities}</li>
+	 * mmAdditionalQuantityForSubscribedResultantSecurities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -525,20 +535,21 @@ public class SecurityOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalQuantityForSubscribedResultantSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalQuantityForSubscribedResultantSecurities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmAdditionalQuantityForSubscribedResultantSecurities;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.AdditionalQuantityForSubscribedResultantSecurities;
 			isDerived = false;
 			xmlTag = "AddtlQtyForSbcbdRsltntScties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalQuantityForSubscribedResultantSecurities";
 			definition = "Quantity of additional intermediate securities/new equities awarded for a given quantity of securities derived from subscription.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> QuantityToQuantityRatio1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.QuantityToQuantityRatio1.mmObject();
 		}
 	};
+	protected CorporateActionDate3 dateDetails;
 	/**
 	 * Provides information about the dates related to a securities movement.
 	 * <p>
@@ -566,7 +577,7 @@ public class SecurityOption1 {
 	 * "Provides information about the dates related to a securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityOption1.mmObject();
 			isDerived = false;
@@ -574,12 +585,13 @@ public class SecurityOption1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a securities movement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionDate3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate3.mmObject();
 		}
 	};
+	protected CorporateActionPrice4 priceDetails;
 	/**
 	 * Provides information about the prices related to a securities movement.
 	 * <p>
@@ -591,8 +603,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#CorporateActionPrice
-	 * CorporateActionEvent.CorporateActionPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionPrice
+	 * CorporateActionEvent.mmCorporateActionPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -613,21 +625,22 @@ public class SecurityOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.CorporateActionPrice;
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Provides information about the prices related to a securities movement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionPrice4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice4.mmObject();
 		}
 	};
+	protected Period1 tradingPeriod;
 	/**
 	 * Period during which intermediate securities are tradable in a secondary
 	 * market.
@@ -641,8 +654,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#TradingPeriod
-	 * CorporateActionEvent.TradingPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmTradingPeriod
+	 * CorporateActionEvent.mmTradingPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -663,20 +676,21 @@ public class SecurityOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmTradingPeriod;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.TradingPeriod;
 			isDerived = false;
 			xmlTag = "TradgPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingPeriod";
 			definition = "Period during which intermediate securities are tradable in a secondary market.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
+	protected QuantityToQuantityRatio1 additionalQuantityForExistingSecurities;
 	/**
 	 * Quantity of additional securities for a given quantity of underlying
 	 * securities where underlying securities are not exchanged or debited, eg,
@@ -693,8 +707,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#AdditionalQuantityForExistingSecurities
-	 * SecuritiesProceedsDefinition.AdditionalQuantityForExistingSecurities}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmAdditionalQuantityForExistingSecurities
+	 * SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -715,20 +729,21 @@ public class SecurityOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalQuantityForExistingSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalQuantityForExistingSecurities = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.AdditionalQuantityForExistingSecurities;
 			isDerived = false;
 			xmlTag = "AddtlQtyForExstgScties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalQuantityForExistingSecurities";
 			definition = "Quantity of additional securities for a given quantity of underlying securities where underlying securities are not exchanged or debited, eg, 1 for 1: 1 new equity credited for every 1 underlying equity = 2 resulting equities.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> QuantityToQuantityRatio1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.QuantityToQuantityRatio1.mmObject();
 		}
 	};
+	protected YesNoIndicator temporaryFinancialInstrumentIndicator;
 	/**
 	 * Specifies that the security is a temporary security.
 	 * <p>
@@ -742,8 +757,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#TemporaryFinancialInstrumentIndicator
-	 * Security.TemporaryFinancialInstrumentIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmTemporaryFinancialInstrumentIndicator
+	 * Security.mmTemporaryFinancialInstrumentIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -762,20 +777,21 @@ public class SecurityOption1 {
 	 * definition} = "Specifies that the security is a temporary security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TemporaryFinancialInstrumentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTemporaryFinancialInstrumentIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.TemporaryFinancialInstrumentIndicator;
 			isDerived = false;
 			xmlTag = "TempFinInstrmInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TemporaryFinancialInstrumentIndicator";
 			definition = "Specifies that the security is a temporary security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected FractionDispositionType1FormatChoice fractionDisposition;
 	/**
 	 * Specifies how fractions resulting from derived securities will be
 	 * processed or how prorated decisions will be rounding, if provided with a
@@ -791,8 +807,8 @@ public class SecurityOption1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#FractionDisposition
-	 * CorporateActionOption.FractionDisposition}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmFractionDisposition
+	 * CorporateActionOption.mmFractionDisposition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -813,17 +829,17 @@ public class SecurityOption1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FractionDisposition = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFractionDisposition = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> SecurityOption1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.FractionDisposition;
 			isDerived = false;
 			xmlTag = "FrctnDspstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionDisposition";
 			definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FractionDispositionType1FormatChoice.mmObject();
 		}
 	};
@@ -831,20 +847,140 @@ public class SecurityOption1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityOption1.SecurityIdentification, com.tools20022.repository.msg.SecurityOption1.CreditDebitIndicator,
-						com.tools20022.repository.msg.SecurityOption1.SecuritiesQuantity, com.tools20022.repository.msg.SecurityOption1.MinimumExercisableSecuritiesQuantity,
-						com.tools20022.repository.msg.SecurityOption1.MinimumExercisableMultipleSecuritiesQuantity, com.tools20022.repository.msg.SecurityOption1.NewDenominationSecuritiesQuantity,
-						com.tools20022.repository.msg.SecurityOption1.NewBoardLotSecuritiesQuantity, com.tools20022.repository.msg.SecurityOption1.ShareRanking,
-						com.tools20022.repository.msg.SecurityOption1.AdditionalQuantityForSubscribedResultantSecurities, com.tools20022.repository.msg.SecurityOption1.DateDetails,
-						com.tools20022.repository.msg.SecurityOption1.PriceDetails, com.tools20022.repository.msg.SecurityOption1.TradingPeriod, com.tools20022.repository.msg.SecurityOption1.AdditionalQuantityForExistingSecurities,
-						com.tools20022.repository.msg.SecurityOption1.TemporaryFinancialInstrumentIndicator, com.tools20022.repository.msg.SecurityOption1.FractionDisposition);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityOption1.mmSecurityIdentification, com.tools20022.repository.msg.SecurityOption1.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.SecurityOption1.mmSecuritiesQuantity, com.tools20022.repository.msg.SecurityOption1.mmMinimumExercisableSecuritiesQuantity,
+						com.tools20022.repository.msg.SecurityOption1.mmMinimumExercisableMultipleSecuritiesQuantity, com.tools20022.repository.msg.SecurityOption1.mmNewDenominationSecuritiesQuantity,
+						com.tools20022.repository.msg.SecurityOption1.mmNewBoardLotSecuritiesQuantity, com.tools20022.repository.msg.SecurityOption1.mmShareRanking,
+						com.tools20022.repository.msg.SecurityOption1.mmAdditionalQuantityForSubscribedResultantSecurities, com.tools20022.repository.msg.SecurityOption1.mmDateDetails,
+						com.tools20022.repository.msg.SecurityOption1.mmPriceDetails, com.tools20022.repository.msg.SecurityOption1.mmTradingPeriod, com.tools20022.repository.msg.SecurityOption1.mmAdditionalQuantityForExistingSecurities,
+						com.tools20022.repository.msg.SecurityOption1.mmTemporaryFinancialInstrumentIndicator, com.tools20022.repository.msg.SecurityOption1.mmFractionDisposition);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityOption1";
 				definition = "Provides information about the CA security option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentDescription3 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.FinancialInstrumentDescription3 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public UnitOrFaceAmount1Choice getSecuritiesQuantity() {
+		return securitiesQuantity;
+	}
+
+	public void setSecuritiesQuantity(UnitOrFaceAmount1Choice securitiesQuantity) {
+		this.securitiesQuantity = securitiesQuantity;
+	}
+
+	public UnitOrFaceAmount1Choice getMinimumExercisableSecuritiesQuantity() {
+		return minimumExercisableSecuritiesQuantity;
+	}
+
+	public void setMinimumExercisableSecuritiesQuantity(UnitOrFaceAmount1Choice minimumExercisableSecuritiesQuantity) {
+		this.minimumExercisableSecuritiesQuantity = minimumExercisableSecuritiesQuantity;
+	}
+
+	public UnitOrFaceAmount1Choice getMinimumExercisableMultipleSecuritiesQuantity() {
+		return minimumExercisableMultipleSecuritiesQuantity;
+	}
+
+	public void setMinimumExercisableMultipleSecuritiesQuantity(UnitOrFaceAmount1Choice minimumExercisableMultipleSecuritiesQuantity) {
+		this.minimumExercisableMultipleSecuritiesQuantity = minimumExercisableMultipleSecuritiesQuantity;
+	}
+
+	public UnitOrFaceAmount1Choice getNewDenominationSecuritiesQuantity() {
+		return newDenominationSecuritiesQuantity;
+	}
+
+	public void setNewDenominationSecuritiesQuantity(UnitOrFaceAmount1Choice newDenominationSecuritiesQuantity) {
+		this.newDenominationSecuritiesQuantity = newDenominationSecuritiesQuantity;
+	}
+
+	public UnitOrFaceAmount1Choice getNewBoardLotSecuritiesQuantity() {
+		return newBoardLotSecuritiesQuantity;
+	}
+
+	public void setNewBoardLotSecuritiesQuantity(UnitOrFaceAmount1Choice newBoardLotSecuritiesQuantity) {
+		this.newBoardLotSecuritiesQuantity = newBoardLotSecuritiesQuantity;
+	}
+
+	public ShareRanking1FormatChoice getShareRanking() {
+		return shareRanking;
+	}
+
+	public void setShareRanking(ShareRanking1FormatChoice shareRanking) {
+		this.shareRanking = shareRanking;
+	}
+
+	public QuantityToQuantityRatio1 getAdditionalQuantityForSubscribedResultantSecurities() {
+		return additionalQuantityForSubscribedResultantSecurities;
+	}
+
+	public void setAdditionalQuantityForSubscribedResultantSecurities(com.tools20022.repository.msg.QuantityToQuantityRatio1 additionalQuantityForSubscribedResultantSecurities) {
+		this.additionalQuantityForSubscribedResultantSecurities = additionalQuantityForSubscribedResultantSecurities;
+	}
+
+	public CorporateActionDate3 getDateDetails() {
+		return dateDetails;
+	}
+
+	public void setDateDetails(com.tools20022.repository.msg.CorporateActionDate3 dateDetails) {
+		this.dateDetails = dateDetails;
+	}
+
+	public CorporateActionPrice4 getPriceDetails() {
+		return priceDetails;
+	}
+
+	public void setPriceDetails(com.tools20022.repository.msg.CorporateActionPrice4 priceDetails) {
+		this.priceDetails = priceDetails;
+	}
+
+	public Period1 getTradingPeriod() {
+		return tradingPeriod;
+	}
+
+	public void setTradingPeriod(com.tools20022.repository.msg.Period1 tradingPeriod) {
+		this.tradingPeriod = tradingPeriod;
+	}
+
+	public QuantityToQuantityRatio1 getAdditionalQuantityForExistingSecurities() {
+		return additionalQuantityForExistingSecurities;
+	}
+
+	public void setAdditionalQuantityForExistingSecurities(com.tools20022.repository.msg.QuantityToQuantityRatio1 additionalQuantityForExistingSecurities) {
+		this.additionalQuantityForExistingSecurities = additionalQuantityForExistingSecurities;
+	}
+
+	public YesNoIndicator getTemporaryFinancialInstrumentIndicator() {
+		return temporaryFinancialInstrumentIndicator;
+	}
+
+	public void setTemporaryFinancialInstrumentIndicator(YesNoIndicator temporaryFinancialInstrumentIndicator) {
+		this.temporaryFinancialInstrumentIndicator = temporaryFinancialInstrumentIndicator;
+	}
+
+	public FractionDispositionType1FormatChoice getFractionDisposition() {
+		return fractionDisposition;
+	}
+
+	public void setFractionDisposition(FractionDispositionType1FormatChoice fractionDisposition) {
+		this.fractionDisposition = fractionDisposition;
 	}
 }

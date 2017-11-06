@@ -44,41 +44,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#CollateralIdentification
- * CollateralValuation2.CollateralIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmCollateralIdentification
+ * CollateralValuation2.mmCollateralIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#CollateralType
- * CollateralValuation2.CollateralType}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmCollateralType
+ * CollateralValuation2.mmCollateralType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#SettlementStatus
- * CollateralValuation2.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmSettlementStatus
+ * CollateralValuation2.mmSettlementStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#NumberOfDaysAccrued
- * CollateralValuation2.NumberOfDaysAccrued}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmNumberOfDaysAccrued
+ * CollateralValuation2.mmNumberOfDaysAccrued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#ValuationAmounts
- * CollateralValuation2.ValuationAmounts}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmValuationAmounts
+ * CollateralValuation2.mmValuationAmounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#DayCountBasis
- * CollateralValuation2.DayCountBasis}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmDayCountBasis
+ * CollateralValuation2.mmDayCountBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#ExchangeRate
- * CollateralValuation2.ExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmExchangeRate
+ * CollateralValuation2.mmExchangeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#CurrencyHaircut
- * CollateralValuation2.CurrencyHaircut}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmCurrencyHaircut
+ * CollateralValuation2.mmCurrencyHaircut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#AdjustedRate
- * CollateralValuation2.AdjustedRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmAdjustedRate
+ * CollateralValuation2.mmAdjustedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#SecuritiesCollateral
- * CollateralValuation2.SecuritiesCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmSecuritiesCollateral
+ * CollateralValuation2.mmSecuritiesCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#CashCollateral
- * CollateralValuation2.CashCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmCashCollateral
+ * CollateralValuation2.mmCashCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#OtherCollateral
- * CollateralValuation2.OtherCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmOtherCollateral
+ * CollateralValuation2.mmOtherCollateral}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -87,8 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,6 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralValuation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text collateralIdentification;
 	/**
 	 * Provides the identification of the valued collateral.
 	 * <p>
@@ -144,18 +145,18 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#CollateralIdentification
-	 * CollateralValuation5.CollateralIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmCollateralIdentification
+	 * CollateralValuation5.mmCollateralIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#CollateralReference
-	 * CollateralValuation1.CollateralReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmCollateralReference
+	 * CollateralValuation1.mmCollateralReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralValuation2.mmObject();
 			isDerived = false;
@@ -163,13 +164,14 @@ public class CollateralValuation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIdentification";
 			definition = "Provides the identification of the valued collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.CollateralReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.CollateralIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmCollateralIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmCollateralReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CollateralType1Code collateralType;
 	/**
 	 * Specifies the type of collateral used.
 	 * <p>
@@ -183,8 +185,8 @@ public class CollateralValuation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#CollateralType
-	 * Collateral.CollateralType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralType
+	 * Collateral.mmCollateralType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,33 +207,34 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#CollateralType
-	 * CollateralValuation5.CollateralType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmCollateralType
+	 * CollateralValuation5.mmCollateralType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#CollateralType
-	 * CollateralValuation1.CollateralType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmCollateralType
+	 * CollateralValuation1.mmCollateralType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralType;
 			componentContext_lazy = () -> CollateralValuation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.CollateralType;
 			isDerived = false;
 			xmlTag = "CollTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralType";
 			definition = "Specifies the type of collateral used.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.CollateralType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.CollateralType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmCollateralType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmCollateralType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CollateralType1Code.mmObject();
 		}
 	};
+	protected SettlementStatus2Code settlementStatus;
 	/**
 	 * Provides the status of settlement of an instruction/financial instrument
 	 * movement.
@@ -246,8 +249,8 @@ public class CollateralValuation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#Settlement
-	 * CollateralStatus.Settlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmSettlement
+	 * CollateralStatus.mmSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -270,33 +273,34 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#SettlementStatus
-	 * CollateralValuation5.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmSettlementStatus
+	 * CollateralValuation5.mmSettlementStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#SettlementStatus
-	 * CollateralValuation1.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmSettlementStatus
+	 * CollateralValuation1.mmSettlementStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmSettlement;
 			componentContext_lazy = () -> CollateralValuation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.Settlement;
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of an instruction/financial instrument movement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.SettlementStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.SettlementStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmSettlementStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmSettlementStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementStatus2Code.mmObject();
 		}
 	};
+	protected Number numberOfDaysAccrued;
 	/**
 	 * Specifies the number of days used for interest calculation.
 	 * <p>
@@ -309,8 +313,8 @@ public class CollateralValuation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#NumberOfDays
-	 * DateTimePeriod.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmNumberOfDays
+	 * DateTimePeriod.mmNumberOfDays}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -332,33 +336,34 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#NumberOfDaysAccrued
-	 * CollateralValuation5.NumberOfDaysAccrued}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmNumberOfDaysAccrued
+	 * CollateralValuation5.mmNumberOfDaysAccrued}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#NumberOfDaysAccrued
-	 * CollateralValuation1.NumberOfDaysAccrued}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmNumberOfDaysAccrued
+	 * CollateralValuation1.mmNumberOfDaysAccrued}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> CollateralValuation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.NumberOfDays;
 			isDerived = false;
 			xmlTag = "NbOfDaysAcrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Specifies the number of days used for interest calculation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.NumberOfDaysAccrued;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.NumberOfDaysAccrued);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmNumberOfDaysAccrued);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmNumberOfDaysAccrued;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected CollateralAmount1 valuationAmounts;
 	/**
 	 * Provides details on the collateral valuation.
 	 * <p>
@@ -370,8 +375,8 @@ public class CollateralValuation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation#Collateral
-	 * CollateralValuation.Collateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmCollateral
+	 * CollateralValuation.mmCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -392,34 +397,35 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#ValuationAmounts
-	 * CollateralValuation5.ValuationAmounts}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmValuationAmounts
+	 * CollateralValuation5.mmValuationAmounts}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#AmountDetails
-	 * CollateralValuation1.AmountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmAmountDetails
+	 * CollateralValuation1.mmAmountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValuationAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValuationAmounts = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmCollateral;
 			componentContext_lazy = () -> CollateralValuation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.Collateral;
 			isDerived = false;
 			xmlTag = "ValtnAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationAmounts";
 			definition = "Provides details on the collateral valuation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.AmountDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.ValuationAmounts);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmValuationAmounts);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmAmountDetails;
 			maxOccurs = 1;
-			type_lazy = () -> CollateralAmount1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CollateralAmount1.mmObject();
 		}
 	};
+	protected InterestComputationMethod2Code dayCountBasis;
 	/**
 	 * Specifies the computation method of (accrued) interest of the security.
 	 * <p>
@@ -433,8 +439,8 @@ public class CollateralValuation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#DayCountBasis
-	 * InterestCalculation.DayCountBasis}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmDayCountBasis
+	 * InterestCalculation.mmDayCountBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -457,33 +463,34 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#DayCountBasis
-	 * CollateralValuation5.DayCountBasis}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmDayCountBasis
+	 * CollateralValuation5.mmDayCountBasis}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#DayCountBasis
-	 * CollateralValuation1.DayCountBasis}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmDayCountBasis
+	 * CollateralValuation1.mmDayCountBasis}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DayCountBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDayCountBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> CollateralValuation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.DayCountBasis;
 			isDerived = false;
 			xmlTag = "DayCntBsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayCountBasis";
 			definition = "Specifies the computation method of (accrued) interest of the security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.DayCountBasis;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.DayCountBasis);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmDayCountBasis);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmDayCountBasis;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InterestComputationMethod2Code.mmObject();
 		}
 	};
+	protected BaseOneRate exchangeRate;
 	/**
 	 * Specifies the exchange rate between the currency of the collateral and
 	 * the reporting currency.
@@ -497,8 +504,8 @@ public class CollateralValuation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ExchangeRate
-	 * CurrencyExchange.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmExchangeRate
+	 * CurrencyExchange.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -521,33 +528,34 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#ExchangeRate
-	 * CollateralValuation5.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmExchangeRate
+	 * CollateralValuation5.mmExchangeRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#ExchangeRate
-	 * CollateralValuation1.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmExchangeRate
+	 * CollateralValuation1.mmExchangeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> CollateralValuation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ExchangeRate;
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Specifies the exchange rate between the currency of the collateral and the reporting currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.ExchangeRate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.ExchangeRate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmExchangeRate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmExchangeRate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected BaseOneRate currencyHaircut;
 	/**
 	 * Specifies the haircut or valuation factor on the currency of the
 	 * collateral expressed as a percentage.
@@ -561,8 +569,8 @@ public class CollateralValuation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.HaircutValuation#Haircut
-	 * HaircutValuation.Haircut}</li>
+	 * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmHaircut
+	 * HaircutValuation.mmHaircut}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -585,33 +593,34 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#CurrencyHaircut
-	 * CollateralValuation5.CurrencyHaircut}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmCurrencyHaircut
+	 * CollateralValuation5.mmCurrencyHaircut}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#CurrencyHaircut
-	 * CollateralValuation1.CurrencyHaircut}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmCurrencyHaircut
+	 * CollateralValuation1.mmCurrencyHaircut}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyHaircut = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyHaircut = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> CollateralValuation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.Haircut;
 			isDerived = false;
 			xmlTag = "CcyHrcut";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyHaircut";
 			definition = "Specifies the haircut or valuation factor on the currency of the collateral expressed as a percentage.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.CurrencyHaircut;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.CurrencyHaircut);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmCurrencyHaircut);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmCurrencyHaircut;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected BaseOneRate adjustedRate;
 	/**
 	 * Percentage by which the collateral amount needs to be adjusted.
 	 * <p>
@@ -624,8 +633,8 @@ public class CollateralValuation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation#AdjustedRate
-	 * CollateralValuation.AdjustedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmAdjustedRate
+	 * CollateralValuation.mmAdjustedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -647,33 +656,34 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#AdjustedRate
-	 * CollateralValuation5.AdjustedRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmAdjustedRate
+	 * CollateralValuation5.mmAdjustedRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#AdjustedRate
-	 * CollateralValuation1.AdjustedRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmAdjustedRate
+	 * CollateralValuation1.mmAdjustedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdjustedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdjustedRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmAdjustedRate;
 			componentContext_lazy = () -> CollateralValuation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.AdjustedRate;
 			isDerived = false;
 			xmlTag = "AdjstdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedRate";
 			definition = "Percentage by which the collateral amount needs to be adjusted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.AdjustedRate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.AdjustedRate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmAdjustedRate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmAdjustedRate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected SecuritiesCollateral2 securitiesCollateral;
 	/**
 	 * Provides details on the securities collateral.
 	 * <p>
@@ -706,34 +716,35 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#SecuritiesCollateral
-	 * CollateralValuation5.SecuritiesCollateral}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmSecuritiesCollateral
+	 * CollateralValuation5.mmSecuritiesCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#SecuritiesCollateralDetails
-	 * CollateralValuation1.SecuritiesCollateralDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmSecuritiesCollateralDetails
+	 * CollateralValuation1.mmSecuritiesCollateralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValuation2.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> CollateralValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCollateral";
 			definition = "Provides details on the securities collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.SecuritiesCollateralDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.SecuritiesCollateral);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmSecuritiesCollateral);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmSecuritiesCollateralDetails;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesCollateral2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral2.mmObject();
 		}
 	};
+	protected CashCollateral4 cashCollateral;
 	/**
 	 * Provides details on the cash collateral valuation.
 	 * <p>
@@ -766,34 +777,35 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#CashCollateral
-	 * CollateralValuation5.CashCollateral}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmCashCollateral
+	 * CollateralValuation5.mmCashCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#CashCollateralDetails
-	 * CollateralValuation1.CashCollateralDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmCashCollateralDetails
+	 * CollateralValuation1.mmCashCollateralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValuation2.mmObject();
 			businessComponentTrace_lazy = () -> Money.mmObject();
+			componentContext_lazy = () -> CollateralValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "CshColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashCollateral";
 			definition = "Provides details on the cash collateral valuation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.CashCollateralDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.CashCollateral);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmCashCollateral);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmCashCollateralDetails;
 			maxOccurs = 1;
-			type_lazy = () -> CashCollateral4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashCollateral4.mmObject();
 		}
 	};
+	protected OtherCollateral3 otherCollateral;
 	/**
 	 * Provides details on other collateral valuation.
 	 * <p>
@@ -826,52 +838,148 @@ public class CollateralValuation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#OtherCollateral
-	 * CollateralValuation5.OtherCollateral}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmOtherCollateral
+	 * CollateralValuation5.mmOtherCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#OtherCollateralDetails
-	 * CollateralValuation1.OtherCollateralDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmOtherCollateralDetails
+	 * CollateralValuation1.mmOtherCollateralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherCollateral = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValuation2.mmObject();
 			businessComponentTrace_lazy = () -> Asset.mmObject();
+			componentContext_lazy = () -> CollateralValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrColl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCollateral";
 			definition = "Provides details on other collateral valuation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.OtherCollateralDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.OtherCollateral);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation5.mmOtherCollateral);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralValuation1.mmOtherCollateralDetails;
 			maxOccurs = 1;
-			type_lazy = () -> OtherCollateral3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OtherCollateral3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation2.CollateralIdentification, com.tools20022.repository.msg.CollateralValuation2.CollateralType,
-						com.tools20022.repository.msg.CollateralValuation2.SettlementStatus, com.tools20022.repository.msg.CollateralValuation2.NumberOfDaysAccrued, com.tools20022.repository.msg.CollateralValuation2.ValuationAmounts,
-						com.tools20022.repository.msg.CollateralValuation2.DayCountBasis, com.tools20022.repository.msg.CollateralValuation2.ExchangeRate, com.tools20022.repository.msg.CollateralValuation2.CurrencyHaircut,
-						com.tools20022.repository.msg.CollateralValuation2.AdjustedRate, com.tools20022.repository.msg.CollateralValuation2.SecuritiesCollateral, com.tools20022.repository.msg.CollateralValuation2.CashCollateral,
-						com.tools20022.repository.msg.CollateralValuation2.OtherCollateral);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation2.mmCollateralIdentification, com.tools20022.repository.msg.CollateralValuation2.mmCollateralType,
+						com.tools20022.repository.msg.CollateralValuation2.mmSettlementStatus, com.tools20022.repository.msg.CollateralValuation2.mmNumberOfDaysAccrued, com.tools20022.repository.msg.CollateralValuation2.mmValuationAmounts,
+						com.tools20022.repository.msg.CollateralValuation2.mmDayCountBasis, com.tools20022.repository.msg.CollateralValuation2.mmExchangeRate, com.tools20022.repository.msg.CollateralValuation2.mmCurrencyHaircut,
+						com.tools20022.repository.msg.CollateralValuation2.mmAdjustedRate, com.tools20022.repository.msg.CollateralValuation2.mmSecuritiesCollateral, com.tools20022.repository.msg.CollateralValuation2.mmCashCollateral,
+						com.tools20022.repository.msg.CollateralValuation2.mmOtherCollateral);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralValuation2";
 				definition = "Provides details about the valuation of each piece of collateral that is posted.";
-				previousVersion_lazy = () -> CollateralValuation1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CollateralValuation5.mmObject());
+				previousVersion_lazy = () -> CollateralValuation1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCollateralIdentification() {
+		return collateralIdentification;
+	}
+
+	public void setCollateralIdentification(Max35Text collateralIdentification) {
+		this.collateralIdentification = collateralIdentification;
+	}
+
+	public CollateralType1Code getCollateralType() {
+		return collateralType;
+	}
+
+	public void setCollateralType(CollateralType1Code collateralType) {
+		this.collateralType = collateralType;
+	}
+
+	public SettlementStatus2Code getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(SettlementStatus2Code settlementStatus) {
+		this.settlementStatus = settlementStatus;
+	}
+
+	public Number getNumberOfDaysAccrued() {
+		return numberOfDaysAccrued;
+	}
+
+	public void setNumberOfDaysAccrued(Number numberOfDaysAccrued) {
+		this.numberOfDaysAccrued = numberOfDaysAccrued;
+	}
+
+	public CollateralAmount1 getValuationAmounts() {
+		return valuationAmounts;
+	}
+
+	public void setValuationAmounts(com.tools20022.repository.msg.CollateralAmount1 valuationAmounts) {
+		this.valuationAmounts = valuationAmounts;
+	}
+
+	public InterestComputationMethod2Code getDayCountBasis() {
+		return dayCountBasis;
+	}
+
+	public void setDayCountBasis(InterestComputationMethod2Code dayCountBasis) {
+		this.dayCountBasis = dayCountBasis;
+	}
+
+	public BaseOneRate getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = exchangeRate;
+	}
+
+	public BaseOneRate getCurrencyHaircut() {
+		return currencyHaircut;
+	}
+
+	public void setCurrencyHaircut(BaseOneRate currencyHaircut) {
+		this.currencyHaircut = currencyHaircut;
+	}
+
+	public BaseOneRate getAdjustedRate() {
+		return adjustedRate;
+	}
+
+	public void setAdjustedRate(BaseOneRate adjustedRate) {
+		this.adjustedRate = adjustedRate;
+	}
+
+	public SecuritiesCollateral2 getSecuritiesCollateral() {
+		return securitiesCollateral;
+	}
+
+	public void setSecuritiesCollateral(com.tools20022.repository.msg.SecuritiesCollateral2 securitiesCollateral) {
+		this.securitiesCollateral = securitiesCollateral;
+	}
+
+	public CashCollateral4 getCashCollateral() {
+		return cashCollateral;
+	}
+
+	public void setCashCollateral(com.tools20022.repository.msg.CashCollateral4 cashCollateral) {
+		this.cashCollateral = cashCollateral;
+	}
+
+	public OtherCollateral3 getOtherCollateral() {
+		return otherCollateral;
+	}
+
+	public void setOtherCollateral(com.tools20022.repository.msg.OtherCollateral3 otherCollateral) {
+		this.otherCollateral = otherCollateral;
 	}
 }

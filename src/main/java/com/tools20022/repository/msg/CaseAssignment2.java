@@ -36,15 +36,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CaseAssignment2#Identification
- * CaseAssignment2.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CaseAssignment2#Assigner
- * CaseAssignment2.Assigner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CaseAssignment2#Assignee
- * CaseAssignment2.Assignee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CaseAssignment2#CreationDateTime
- * CaseAssignment2.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CaseAssignment2#mmIdentification
+ * CaseAssignment2.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CaseAssignment2#mmAssigner
+ * CaseAssignment2.mmAssigner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CaseAssignment2#mmAssignee
+ * CaseAssignment2.mmAssignee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CaseAssignment2#mmCreationDateTime
+ * CaseAssignment2.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,59 +56,60 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01#Assignment
- * CustomerPaymentCancellationRequestV01.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01#mmAssignment
+ * CustomerPaymentCancellationRequestV01.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01#Assignment
- * FIToFIPaymentCancellationRequestV01.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01#mmAssignment
+ * FIToFIPaymentCancellationRequestV01.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#Assignment
- * RequestToModifyPaymentV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03#mmAssignment
+ * RequestToModifyPaymentV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV03#Assignment
- * UnableToApplyV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV03#mmAssignment
+ * UnableToApplyV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV03#Assignment
- * ClaimNonReceiptV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV03#mmAssignment
+ * ClaimNonReceiptV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#Assignment
- * AdditionalPaymentInformationV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#mmAssignment
+ * AdditionalPaymentInformationV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#Assignment
- * ResolutionOfInvestigationV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#mmAssignment
+ * ResolutionOfInvestigationV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03#Assignment
- * NotificationOfCaseAssignmentV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03#mmAssignment
+ * NotificationOfCaseAssignmentV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#Assignment
- * RejectInvestigationV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#mmAssignment
+ * RejectInvestigationV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignmentV02#Assignment
- * CancelCaseAssignmentV02.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CancelCaseAssignmentV02#mmAssignment
+ * CancelCaseAssignmentV02.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestForDuplicateV03#Assignment
- * RequestForDuplicateV03.Assignment}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03#Assignment
- * DuplicateV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestForDuplicateV03#mmAssignment
+ * RequestForDuplicateV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#Assignment
- * ProprietaryFormatInvestigationV02.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DuplicateV03#mmAssignment
+ * DuplicateV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#Assignment
- * DebitAuthorisationResponseV02.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02#mmAssignment
+ * ProprietaryFormatInvestigationV02.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV03#Assignment
- * DebitAuthorisationRequestV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02#mmAssignment
+ * DebitAuthorisationResponseV02.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#NewAssignment
- * CaseStatusReportV03.NewAssignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV03#mmAssignment
+ * DebitAuthorisationRequestV03.mmAssignment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03#mmNewAssignment
+ * CaseStatusReportV03.mmNewAssignment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -122,6 +124,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CaseAssignment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Uniquely identifies the case assignment.
 	 * <p>
@@ -134,8 +137,8 @@ public class CaseAssignment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#AssignmentIdentification
-	 * InvestigationCase.AssignmentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmAssignmentIdentification
+	 * InvestigationCase.mmAssignmentIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +157,21 @@ public class CaseAssignment2 {
 	 * definition} = "Uniquely identifies the case assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmAssignmentIdentification;
 			componentContext_lazy = () -> CaseAssignment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.AssignmentIdentification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Uniquely identifies the case assignment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Party7Choice assigner;
 	/**
 	 * Party who assigns the case. Usage: This is also the sender of the
 	 * message.
@@ -180,8 +184,8 @@ public class CaseAssignment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,21 +206,22 @@ public class CaseAssignment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Assigner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssigner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CaseAssignment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Assgnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assigner";
 			definition = "Party who assigns the case. \nUsage: This is also the sender of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Party7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Party7Choice.mmObject();
 		}
 	};
+	protected Party7Choice assignee;
 	/**
 	 * Party to which the case is assigned. Usage: This is also the receiver of
 	 * the message.
@@ -229,8 +234,8 @@ public class CaseAssignment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -251,21 +256,22 @@ public class CaseAssignment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Assignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssignee = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CaseAssignment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Assgne";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignee";
 			definition = "Party to which the case is assigned.\nUsage: This is also the receiver of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Party7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Party7Choice.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the assignment was created.
 	 * <p>
@@ -278,8 +284,8 @@ public class CaseAssignment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#CreationDateTime
-	 * InvestigationCase.CreationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmCreationDateTime
+	 * InvestigationCase.mmCreationDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -298,17 +304,17 @@ public class CaseAssignment2 {
 	 * definition} = "Date and time at which the assignment was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmCreationDateTime;
 			componentContext_lazy = () -> CaseAssignment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.CreationDateTime;
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the assignment was created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -316,22 +322,54 @@ public class CaseAssignment2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseAssignment2.Identification, com.tools20022.repository.msg.CaseAssignment2.Assigner, com.tools20022.repository.msg.CaseAssignment2.Assignee,
-						com.tools20022.repository.msg.CaseAssignment2.CreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseAssignment2.mmIdentification, com.tools20022.repository.msg.CaseAssignment2.mmAssigner, com.tools20022.repository.msg.CaseAssignment2.mmAssignee,
+						com.tools20022.repository.msg.CaseAssignment2.mmCreationDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.mmAssignment, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01.mmAssignment,
+						com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmAssignment, com.tools20022.repository.area.camt.UnableToApplyV03.mmAssignment, com.tools20022.repository.area.camt.ClaimNonReceiptV03.mmAssignment,
+						com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.mmAssignment, com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmAssignment,
+						com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03.mmAssignment, com.tools20022.repository.area.camt.RejectInvestigationV03.mmAssignment,
+						com.tools20022.repository.area.camt.CancelCaseAssignmentV02.mmAssignment, com.tools20022.repository.area.camt.RequestForDuplicateV03.mmAssignment, com.tools20022.repository.area.camt.DuplicateV03.mmAssignment,
+						com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.mmAssignment, com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.mmAssignment,
+						com.tools20022.repository.area.camt.DebitAuthorisationRequestV03.mmAssignment, com.tools20022.repository.area.camt.CaseStatusReportV03.mmNewAssignment);
 				trace_lazy = () -> InvestigationCase.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.Assignment, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01.Assignment,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV03.Assignment, com.tools20022.repository.area.camt.UnableToApplyV03.Assignment, com.tools20022.repository.area.camt.ClaimNonReceiptV03.Assignment,
-						com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.Assignment, com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.Assignment,
-						com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03.Assignment, com.tools20022.repository.area.camt.RejectInvestigationV03.Assignment,
-						com.tools20022.repository.area.camt.CancelCaseAssignmentV02.Assignment, com.tools20022.repository.area.camt.RequestForDuplicateV03.Assignment, com.tools20022.repository.area.camt.DuplicateV03.Assignment,
-						com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02.Assignment, com.tools20022.repository.area.camt.DebitAuthorisationResponseV02.Assignment,
-						com.tools20022.repository.area.camt.DebitAuthorisationRequestV03.Assignment, com.tools20022.repository.area.camt.CaseStatusReportV03.NewAssignment);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CaseAssignment2";
 				definition = "Set of elements used to represent the assignment of a case to a party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Party7Choice getAssigner() {
+		return assigner;
+	}
+
+	public void setAssigner(Party7Choice assigner) {
+		this.assigner = assigner;
+	}
+
+	public Party7Choice getAssignee() {
+		return assignee;
+	}
+
+	public void setAssignee(Party7Choice assignee) {
+		this.assignee = assignee;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

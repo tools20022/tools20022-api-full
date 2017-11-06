@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.msg.NetObligation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the assets (quantity of securities, goods, services, and cash
@@ -43,57 +44,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
- * Obligation.RequestedSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+ * Obligation.mmRequestedSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementAmount
- * Obligation.RequestedSettlementAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#Priority
- * Obligation.Priority}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#Trade
- * Obligation.Trade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#TransactionRisk
- * Obligation.TransactionRisk}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#ParentObligation
- * Obligation.ParentObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#SubObligation
- * Obligation.SubObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#Offset
- * Obligation.Offset}</li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementAmount
+ * Obligation.mmRequestedSettlementAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmPriority
+ * Obligation.mmPriority}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmTrade
+ * Obligation.mmTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#OriginalObligationProcess
- * Obligation.OriginalObligationProcess}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#ExposureType
- * Obligation.ExposureType}</li>
- * </ul>
- * </li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmTransactionRisk
+ * Obligation.mmTransactionRisk}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#Obligation
- * Trade.Obligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#ParentObligation
- * Obligation.ParentObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#SubObligation
- * Obligation.SubObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmParentObligation
+ * Obligation.mmParentObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmSubObligation
+ * Obligation.mmSubObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmOffset
+ * Obligation.mmOffset}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#ObligationOffset
- * ObligationFulfilment.ObligationOffset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#ResultingObligation
- * ObligationFulfilment.ResultingObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransactionRisk#Obligation
- * TransactionRisk.Obligation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.NetObligation1#ObligationIdentification
- * NetObligation1.ObligationIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmOriginalObligationProcess
+ * Obligation.mmOriginalObligationProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmExposureType
+ * Obligation.mmExposureType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -109,6 +83,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmObligation
+ * Trade.mmObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmParentObligation
+ * Obligation.mmParentObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmSubObligation
+ * Obligation.mmSubObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmObligationOffset
+ * ObligationFulfilment.mmObligationOffset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmResultingObligation
+ * ObligationFulfilment.mmResultingObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransactionRisk#mmObligation
+ * TransactionRisk.mmObligation}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NetObligation1#mmObligationIdentification
+ * NetObligation1.mmObligationIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
@@ -120,8 +125,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -137,6 +142,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Obligation {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime requestedSettlementDate;
 	/**
 	 * Date and time at which a trade must be executed. For a direct debit, it
 	 * is the date and time at which the creditor requests that the amount of
@@ -151,1051 +157,1054 @@ public class Obligation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentSearch4#RequestedExecutionDate
-	 * PaymentSearch4.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument33#RequestedSettlementDate
-	 * FinancialInstrument33.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer24#RequestedSettlementDate
-	 * Transfer24.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation11#RequestedSettlementDate
-	 * ReceiveInformation11.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer25#RequestedSettlementDate
-	 * Transfer25.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation11#RequestedSettlementDate
-	 * DeliverInformation11.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementDate1Choice#DateCode
-	 * SettlementDate1Choice.DateCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails10#SettlementDate
-	 * TransactionDetails10.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails29#SettlementDate
-	 * TransactionDetails29.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#SettlementDate
-	 * SecuritiesTradeDetails26.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails28#SettlementDate
-	 * TransactionDetails28.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementDate4Choice#DateCode
-	 * SettlementDate4Choice.DateCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails31#SettlementDate
-	 * TransactionDetails31.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails44#SettlementDate
-	 * TransactionDetails44.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#SettlementDate
-	 * SecuritiesTradeDetails28.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer1#RequestedTransferDate
-	 * Transfer1.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer9#RequestedTransferDate
-	 * Transfer9.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut7#RequestedTransferDate
-	 * TransferOut7.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer20#RequestedSettlementDate
-	 * Transfer20.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation9#RequestedSettlementDate
-	 * ReceiveInformation9.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut9#RequestedTransferDate
-	 * TransferOut9.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer22#RequestedSettlementDate
-	 * Transfer22.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation9#RequestedSettlementDate
-	 * DeliverInformation9.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer26#RequestedSettlementDate
-	 * Transfer26.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer21#RequestedSettlementDate
-	 * Transfer21.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer23#RequestedSettlementDate
-	 * Transfer23.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer8#RequestedTransferDate
-	 * Transfer8.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer19#RequestedSettlementDate
-	 * Transfer19.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails1#SettlementDate
-	 * IntraPositionMovementDetails1.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails2#SettlementDate
-	 * IntraPositionMovementDetails2.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails5#SettlementDate
-	 * IntraPositionMovementDetails5.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails6#SettlementDate
-	 * IntraPositionMovementDetails6.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails7#SettlementDate
-	 * IntraPositionMovementDetails7.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails8#SettlementDate
-	 * IntraPositionMovementDetails8.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails9#SettlementDate
-	 * IntraPositionMovementDetails9.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails10#SettlementDate
-	 * IntraPositionMovementDetails10.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementDate3Choice#DateCode
-	 * SettlementDate3Choice.DateCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails6#SettlementDate
-	 * SecuritiesTradeDetails6.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementDate5Choice#DateCode
-	 * SettlementDate5Choice.DateCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails13#SettlementDate
-	 * SecuritiesTradeDetails13.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails2#SettlementDate
-	 * SecuritiesTradeDetails2.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails16#SettlementDate
-	 * SecuritiesTradeDetails16.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#SettlementDate
-	 * SecuritiesTradeDetails1.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#SettlementDate
-	 * SecuritiesTradeDetails15.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#ExpectedSettlementDate
-	 * TransactionDetails5.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#SettlementDate
-	 * TransactionDetails5.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#ExpectedSettlementDate
-	 * TransactionDetails9.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#SettlementDate
-	 * TransactionDetails9.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#ExpectedSettlementDate
-	 * TransactionDetails22.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#SettlementDate
-	 * TransactionDetails22.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#ExpectedSettlementDate
-	 * TransactionDetails23.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#SettlementDate
-	 * TransactionDetails23.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#ExpectedSettlementDate
-	 * TransactionDetails36.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#SettlementDate
-	 * TransactionDetails36.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#ExpectedSettlementDate
-	 * TransactionDetails47.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#SettlementDate
-	 * TransactionDetails47.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#ExpectedSettlementDate
-	 * TransactionDetails53.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#SettlementDate
-	 * TransactionDetails53.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#ExpectedSettlementDate
-	 * TransactionDetails58.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#SettlementDate
-	 * TransactionDetails58.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#ExpectedSettlementDate
-	 * TransactionDetails7.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#SettlementDate
-	 * TransactionDetails7.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8#ExpectedSettlementDate
-	 * TransactionDetails8.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8#SettlementDate
-	 * TransactionDetails8.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#ExpectedSettlementDate
-	 * TransactionDetails16.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#SettlementDate
-	 * TransactionDetails16.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17#ExpectedSettlementDate
-	 * TransactionDetails17.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17#SettlementDate
-	 * TransactionDetails17.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#ExpectedSettlementDate
-	 * TransactionDetails26.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#SettlementDate
-	 * TransactionDetails26.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25#ExpectedSettlementDate
-	 * TransactionDetails25.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25#SettlementDate
-	 * TransactionDetails25.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#ExpectedSettlementDate
-	 * TransactionDetails27.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#SettlementDate
-	 * TransactionDetails27.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33#ExpectedSettlementDate
-	 * TransactionDetails33.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33#SettlementDate
-	 * TransactionDetails33.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#ExpectedSettlementDate
-	 * TransactionDetails39.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#SettlementDate
-	 * TransactionDetails39.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#ExpectedSettlementDate
-	 * TransactionDetails50.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#SettlementDate
-	 * TransactionDetails50.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#ExpectedSettlementDate
-	 * TransactionDetails56.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#SettlementDate
-	 * TransactionDetails56.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#ExpectedSettlementDate
-	 * TransactionDetails59.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#SettlementDate
-	 * TransactionDetails59.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails6#SettlementDate
-	 * TransactionDetails6.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails18#SettlementDate
-	 * TransactionDetails18.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails24#SettlementDate
-	 * TransactionDetails24.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails34#SettlementDate
-	 * TransactionDetails34.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails37#SettlementDate
-	 * TransactionDetails37.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails48#SettlementDate
-	 * TransactionDetails48.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#SettlementDate
-	 * TransactionDetails57.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails60#SettlementDate
-	 * TransactionDetails60.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order16#SettlementDate
-	 * Order16.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order14#SettlementDate
-	 * Order14.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDates2#TradeActivityContractualSettlementDate
-	 * TransactionDates2.TradeActivityContractualSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference1#RequestedExecutionDate
-	 * OriginalTransactionReference1.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference1#RequestedCollectionDate
-	 * OriginalTransactionReference1.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference13#RequestedCollectionDate
-	 * OriginalTransactionReference13.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference13#RequestedExecutionDate
-	 * OriginalTransactionReference13.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference16#RequestedCollectionDate
-	 * OriginalTransactionReference16.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference16#RequestedExecutionDate
-	 * OriginalTransactionReference16.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction37#OriginalRequestedExecutionDate
-	 * PaymentTransaction37.OriginalRequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction37#OriginalRequestedCollectionDate
-	 * PaymentTransaction37.OriginalRequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction47#OriginalRequestedExecutionDate
-	 * PaymentTransaction47.OriginalRequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction47#OriginalRequestedCollectionDate
-	 * PaymentTransaction47.OriginalRequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#RequestedCollectionDate
-	 * DirectDebitTransactionInformation2.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#RequestedCollectionDate
-	 * DirectDebitTransactionInformation10.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#RequestedCollectionDate
-	 * DirectDebitTransactionInformation12.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#RequestedCollectionDate
-	 * DirectDebitTransactionInformation14.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference15#RequestedCollectionDate
-	 * OriginalTransactionReference15.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference15#RequestedExecutionDate
-	 * OriginalTransactionReference15.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference17#RequestedCollectionDate
-	 * OriginalTransactionReference17.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference17#RequestedExecutionDate
-	 * OriginalTransactionReference17.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference19#RequestedExecutionDate
-	 * OriginalTransactionReference19.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails1#ExpectedSettlementDate
-	 * ExpectedExecutionDetails1.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails2#ExpectedCashSettlementDate
-	 * ExpectedExecutionDetails2.ExpectedCashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification#RequestedExecutionDate
-	 * RequestedModification.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails1#SettlementDate
-	 * TransactionDetails1.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails3#SettlementDate
-	 * TransactionDetails3.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails7#SettlementDate
-	 * SecuritiesTradeDetails7.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails19#SettlementDate
-	 * SecuritiesTradeDetails19.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails2.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails8.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails8#SettlementDate
-	 * SecuritiesTradeDetails8.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails18#SettlementDate
-	 * SecuritiesTradeDetails18.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#SettlementDate
-	 * SecuritiesTradeDetails4.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#SettlementDate
-	 * SecuritiesTradeDetails17.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails4#SettlementDate
-	 * TransactionDetails4.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails30#SettlementDate
-	 * TransactionDetails30.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction1#RequestedCollectionDate
-	 * UnderlyingPaymentInstruction1.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#RequestedExecutionDate
-	 * RequestedModification2.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#RequestedCollectionDate
-	 * RequestedModification2.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation1#RequestedCollectionDate
-	 * CorrectivePaymentInitiation1.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Summary1#RequestedSettlementDate
-	 * Summary1.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails6.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails10.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails17.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails18.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails20#SettlementDate
-	 * TransactionDetails20.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails9#SettlementDate
-	 * SecuritiesTradeDetails9.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails21#SettlementDate
-	 * SecuritiesTradeDetails21.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#SettlementDate
-	 * SecuritiesTradeDetails10.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#SettlementDate
-	 * SecuritiesTradeDetails22.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#SettlementDate
-	 * SecuritiesTradeDetails23.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#SettlementDate
-	 * SecuritiesTradeDetails29.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails40#SettlementDate
-	 * TransactionDetails40.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails42#SettlementDate
-	 * TransactionDetails42.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails46#SettlementDate
-	 * TransactionDetails46.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails32#SettlementDate
-	 * TransactionDetails32.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails14#SettlementDate
-	 * TransactionDetails14.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails35#SettlementDate
-	 * TransactionDetails35.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails14#SettlementDate
-	 * SecuritiesTradeDetails14.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails20#SettlementDate
-	 * SecuritiesTradeDetails20.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails24#SettlementDate
-	 * SecuritiesTradeDetails24.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails30#SettlementDate
-	 * SecuritiesTradeDetails30.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails45#SettlementDate
-	 * TransactionDetails45.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction2#RequestedCollectionDate
-	 * UnderlyingPaymentInstruction2.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#OriginalRequestedExecutionDate
-	 * PaymentTransaction39.OriginalRequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#OriginalRequestedCollectionDate
-	 * PaymentTransaction39.OriginalRequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#RequestedExecutionDate
-	 * RequestedModification3.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#RequestedCollectionDate
-	 * RequestedModification3.RequestedCollectionDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg2#SettlementDate
-	 * TradeLeg2.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg5#SettlementDate
-	 * TradeLeg5.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg1#SettlementDate
-	 * TradeLeg1.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg3#SettlementDate
-	 * TradeLeg3.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg6#SettlementDate
-	 * TradeLeg6.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg4#SettlementDate
-	 * TradeLeg4.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg7#SettlementDate
-	 * TradeLeg7.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#ExpectedCashSettlementDate
-	 * ExpectedExecutionDetails3.ExpectedCashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference7#RequestedCollectionDate
-	 * OriginalTransactionReference7.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference10#RequestedCollectionDate
-	 * OriginalTransactionReference10.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference9#RequestedCollectionDate
-	 * OriginalTransactionReference9.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference12#RequestedExecutionDate
-	 * OriginalTransactionReference12.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference12#RequestedCollectionDate
-	 * OriginalTransactionReference12.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference8#RequestedCollectionDate
-	 * OriginalTransactionReference8.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference11#RequestedCollectionDate
-	 * OriginalTransactionReference11.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation5#RequestedCollectionDate
-	 * DirectDebitTransactionInformation5.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation7#RequestedCollectionDate
-	 * DirectDebitTransactionInformation7.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#RequestedCollectionDate
-	 * DirectDebitTransactionInformation6.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#RequestedCollectionDate
-	 * DirectDebitTransactionInformation8.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails3#SettlementDate
-	 * IntraPositionMovementDetails3.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails4#SettlementDate
-	 * IntraPositionMovementDetails4.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#Date
-	 * SecuritiesSettlement1.Date}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecuritiesSettlement2#Date
-	 * SecuritiesSettlement2.Date}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#IntendedSettlementDate
-	 * IntraBalanceMovement2.IntendedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails51#IntendedSettlementDate
-	 * TransactionDetails51.IntendedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#IntendedSettlementDate
-	 * IntraPositionQueryCriteria1.IntendedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails52#SettlementDate
-	 * TransactionDetails52.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#RequestedSettlementDate
-	 * ReceiveInformation13.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#RequestedSettlementDate
-	 * Transfer27.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer28#RequestedSettlementDate
-	 * Transfer28.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation12#RequestedSettlementDate
-	 * ReceiveInformation12.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer29#RequestedSettlementDate
-	 * Transfer29.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation12#RequestedSettlementDate
-	 * DeliverInformation12.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation13#RequestedSettlementDate
-	 * DeliverInformation13.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn10#RequestedTransferDate
-	 * TransferIn10.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut11#RequestedTransferDate
-	 * TransferOut11.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentSearch5#RequestedExecutionDate
-	 * PaymentSearch5.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument35#RequestedSettlementDate
-	 * FinancialInstrument35.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#ExpectedSettlementDate
-	 * TransactionDetails61.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#SettlementDate
-	 * TransactionDetails61.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation6#RequestedCollectionDate
-	 * OriginalPaymentInformation6.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails21.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#ExpectedSettlementDate
-	 * TransactionDetails62.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#SettlementDate
-	 * TransactionDetails62.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails63#SettlementDate
-	 * TransactionDetails63.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails31#SettlementDate
-	 * SecuritiesTradeDetails31.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#SettlementDate
-	 * SecuritiesTradeDetails33.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#SettlementDate
-	 * SecuritiesTradeDetails35.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails38#SettlementDate
-	 * SecuritiesTradeDetails38.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails36#SettlementDate
-	 * SecuritiesTradeDetails36.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#SettlementDate
-	 * SecuritiesTradeDetails34.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order17#SettlementDate
-	 * Order17.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order18#SettlementDate
-	 * Order18.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#SettlementDate
-	 * SecuritiesTradeDetails44.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails39#SettlementDate
-	 * SecuritiesTradeDetails39.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails43#SettlementDate
-	 * SecuritiesTradeDetails43.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails41#SettlementDate
-	 * SecuritiesTradeDetails41.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails22.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#ExpectedSettlementDate
-	 * TransactionDetails66.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#SettlementDate
-	 * TransactionDetails66.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#SettlementDate
-	 * SecuritiesTradeDetails42.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#ExpectedSettlementDate
-	 * TransactionDetails67.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#SettlementDate
-	 * TransactionDetails67.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails68#SettlementDate
-	 * TransactionDetails68.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#SettlementDate
-	 * SecuritiesTradeDetails47.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument40#RequestedSettlementDate
-	 * FinancialInstrument40.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#RequestedCollectionDate
-	 * DirectDebitTransactionInformation17.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#RequestedExecutionDate
-	 * RequestedModification4.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#RequestedCollectionDate
-	 * RequestedModification4.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction58#OriginalRequestedExecutionDate
-	 * PaymentTransaction58.OriginalRequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction58#OriginalRequestedCollectionDate
-	 * PaymentTransaction58.OriginalRequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#OriginalRequestedExecutionDate
-	 * PaymentTransaction54.OriginalRequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#OriginalRequestedCollectionDate
-	 * PaymentTransaction54.OriginalRequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference20#RequestedCollectionDate
-	 * OriginalTransactionReference20.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference20#RequestedExecutionDate
-	 * OriginalTransactionReference20.RequestedExecutionDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg8#SettlementDate
-	 * TradeLeg8.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation15#RequestedSettlementDate
-	 * DeliverInformation15.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation14#RequestedSettlementDate
-	 * DeliverInformation14.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#RequestedSettlementDate
-	 * ReceiveInformation15.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation14#RequestedSettlementDate
-	 * ReceiveInformation14.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn13#RequestedTransferDate
-	 * TransferIn13.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut15#RequestedTransferDate
-	 * TransferOut15.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails24.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#ExpectedSettlementDate
-	 * TransactionDetails70.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#SettlementDate
-	 * TransactionDetails70.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#ExpectedSettlementDate
-	 * TransactionDetails69.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#SettlementDate
-	 * TransactionDetails69.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg10#SettlementDate
-	 * TradeLeg10.SettlementDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg9#SettlementDate
-	 * TradeLeg9.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference21#RequestedExecutionDate
-	 * OriginalTransactionReference21.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#ExpectedSettlementDate
-	 * TransactionDetails71.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#SettlementDate
-	 * TransactionDetails71.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails25.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#ExpectedSettlementDate
-	 * TransactionDetails72.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#SettlementDate
-	 * TransactionDetails72.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails81#SettlementDate
-	 * TransactionDetails81.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails74#SettlementDate
-	 * TransactionDetails74.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#SettlementDate
-	 * SecuritiesTradeDetails49.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails82#SettlementDate
-	 * TransactionDetails82.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails26.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#ExpectedSettlementDate
-	 * TransactionDetails79.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#SettlementDate
-	 * TransactionDetails79.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails48#SettlementDate
-	 * SecuritiesTradeDetails48.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails80#SettlementDate
-	 * TransactionDetails80.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#ExpectedSettlementDate
-	 * TransactionDetails75.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#SettlementDate
-	 * TransactionDetails75.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#SettlementDate
-	 * TransactionDetails78.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InterestPaymentDateRange2#DueDate
-	 * InterestPaymentDateRange2.DueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#SettlementDate
-	 * SecuritiesTradeDetails51.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails53#SettlementDate
-	 * SecuritiesTradeDetails53.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails55#SettlementDate
-	 * SecuritiesTradeDetails55.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails54#SettlementDate
-	 * SecuritiesTradeDetails54.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementDate9Choice#DateCode
-	 * SettlementDate9Choice.DateCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementDate11Choice#DateCode
-	 * SettlementDate11Choice.DateCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#SettlementDate
-	 * SecuritiesTradeDetails52.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails11#SettlementDate
-	 * IntraPositionMovementDetails11.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#RequestedExecutionDate
-	 * RequestedModification5.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#RequestedCollectionDate
-	 * RequestedModification5.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#RequestedCollectionDate
-	 * DirectDebitTransactionInformation20.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction61#OriginalRequestedExecutionDate
-	 * PaymentTransaction61.OriginalRequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction61#OriginalRequestedCollectionDate
-	 * PaymentTransaction61.OriginalRequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference22#RequestedCollectionDate
-	 * OriginalTransactionReference22.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference22#RequestedExecutionDate
-	 * OriginalTransactionReference22.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#OriginalRequestedExecutionDate
-	 * PaymentTransaction66.OriginalRequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#OriginalRequestedCollectionDate
-	 * PaymentTransaction66.OriginalRequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation17#RequestedSettlementDate
-	 * ReceiveInformation17.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer31#RequestedSettlementDate
-	 * Transfer31.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer30#RequestedSettlementDate
-	 * Transfer30.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#RequestedSettlementDate
-	 * ReceiveInformation16.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation16#RequestedSettlementDate
-	 * DeliverInformation16.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer32#RequestedSettlementDate
-	 * Transfer32.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17#RequestedSettlementDate
-	 * DeliverInformation17.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer33#RequestedSettlementDate
-	 * Transfer33.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut17#RequestedTransferDate
-	 * TransferOut17.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn15#RequestedTransferDate
-	 * TransferIn15.RequestedTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#RequestedSettlementDate
-	 * FinancialInstrument48.RequestedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference23#RequestedExecutionDate
-	 * OriginalTransactionReference23.RequestedExecutionDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CollateralMovement9#Date
-	 * CollateralMovement9.Date}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails57#SettlementDate
-	 * SecuritiesTradeDetails57.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails33.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails88#SettlementDate
-	 * TransactionDetails88.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails58#SettlementDate
-	 * SecuritiesTradeDetails58.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#SettlementDate
-	 * SecuritiesTradeDetails61.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails92#SettlementDate
-	 * TransactionDetails92.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails84#SettlementDate
-	 * TransactionDetails84.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#SettlementDate
-	 * SecuritiesTradeDetails63.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails83#SettlementDate
-	 * TransactionDetails83.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails62#SettlementDate
-	 * SecuritiesTradeDetails62.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#ExpectedSettlementDate
-	 * TransactionDetails87.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#SettlementDate
-	 * TransactionDetails87.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails60#SettlementDate
-	 * SecuritiesTradeDetails60.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementDate12Choice#DateCode
-	 * SettlementDate12Choice.DateCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementDate14Choice#DateCode
-	 * SettlementDate14Choice.DateCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails91#SettlementDate
-	 * TransactionDetails91.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#ExpectedSettlementDate
-	 * TransactionDetails90.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#SettlementDate
-	 * TransactionDetails90.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails12#SettlementDate
-	 * IntraPositionMovementDetails12.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#SettlementDate
-	 * SecuritiesTradeDetails66.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails4#ExpectedCashSettlementDate
-	 * ExpectedExecutionDetails4.ExpectedCashSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#RequestedCollectionDate
-	 * DirectDebitTransactionInformation21.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#RequestedExecutionDate
-	 * RequestedModification6.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#RequestedCollectionDate
-	 * RequestedModification6.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#OriginalRequestedExecutionDate
-	 * PaymentTransaction78.OriginalRequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#OriginalRequestedCollectionDate
-	 * PaymentTransaction78.OriginalRequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference24#RequestedCollectionDate
-	 * OriginalTransactionReference24.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference24#RequestedExecutionDate
-	 * OriginalTransactionReference24.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction74#OriginalRequestedExecutionDate
-	 * PaymentTransaction74.OriginalRequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction74#OriginalRequestedCollectionDate
-	 * PaymentTransaction74.OriginalRequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation7#RequestedCollectionDate
-	 * OriginalPaymentInformation7.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference26#RequestedExecutionDate
-	 * OriginalTransactionReference26.RequestedExecutionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation2#RequestedCollectionDate
-	 * CorrectivePaymentInitiation2.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction3#RequestedCollectionDate
-	 * UnderlyingPaymentInstruction3.RequestedCollectionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#SettlementDate
-	 * SecuritiesTradeDetails67.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#SettlementDate
-	 * SecuritiesTradeDetails68.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#ExpectedSettlementDate
-	 * TransactionDetails97.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#SettlementDate
-	 * TransactionDetails97.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails35.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#ExpectedSettlementDate
-	 * TransactionDetails96.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#SettlementDate
-	 * TransactionDetails96.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails13#SettlementDate
-	 * IntraPositionMovementDetails13.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails95#SettlementDate
-	 * TransactionDetails95.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#SettlementDate
-	 * SecuritiesTradeDetails69.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#SettlementDate
-	 * SecuritiesTradeDetails70.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#ExpectedSettlementDate
-	 * SecuritiesFinancingTransactionDetails36.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#SettlementDate
-	 * IntraPositionMovementDetails14.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#ExpectedSettlementDate
-	 * TransactionDetails100.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#SettlementDate
-	 * TransactionDetails100.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#ExpectedSettlementDate
-	 * TransactionDetails99.ExpectedSettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#SettlementDate
-	 * TransactionDetails99.SettlementDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#SettlementDate
-	 * TransactionDetails98.SettlementDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch4#mmRequestedExecutionDate
+	 * PaymentSearch4.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument33#mmRequestedSettlementDate
+	 * FinancialInstrument33.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer24#mmRequestedSettlementDate
+	 * Transfer24.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation11#mmRequestedSettlementDate
+	 * ReceiveInformation11.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer25#mmRequestedSettlementDate
+	 * Transfer25.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation11#mmRequestedSettlementDate
+	 * DeliverInformation11.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate1Choice#mmDateCode
+	 * SettlementDate1Choice.mmDateCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails10#mmSettlementDate
+	 * TransactionDetails10.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails29#mmSettlementDate
+	 * TransactionDetails29.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#mmSettlementDate
+	 * SecuritiesTradeDetails26.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails28#mmSettlementDate
+	 * TransactionDetails28.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate4Choice#mmDateCode
+	 * SettlementDate4Choice.mmDateCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails31#mmSettlementDate
+	 * TransactionDetails31.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails44#mmSettlementDate
+	 * TransactionDetails44.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#mmSettlementDate
+	 * SecuritiesTradeDetails28.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer1#mmRequestedTransferDate
+	 * Transfer1.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer9#mmRequestedTransferDate
+	 * Transfer9.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut7#mmRequestedTransferDate
+	 * TransferOut7.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer20#mmRequestedSettlementDate
+	 * Transfer20.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation9#mmRequestedSettlementDate
+	 * ReceiveInformation9.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut9#mmRequestedTransferDate
+	 * TransferOut9.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer22#mmRequestedSettlementDate
+	 * Transfer22.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation9#mmRequestedSettlementDate
+	 * DeliverInformation9.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer26#mmRequestedSettlementDate
+	 * Transfer26.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer21#mmRequestedSettlementDate
+	 * Transfer21.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer23#mmRequestedSettlementDate
+	 * Transfer23.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer8#mmRequestedTransferDate
+	 * Transfer8.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer19#mmRequestedSettlementDate
+	 * Transfer19.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails1#mmSettlementDate
+	 * IntraPositionMovementDetails1.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails2#mmSettlementDate
+	 * IntraPositionMovementDetails2.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails5#mmSettlementDate
+	 * IntraPositionMovementDetails5.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails6#mmSettlementDate
+	 * IntraPositionMovementDetails6.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails7#mmSettlementDate
+	 * IntraPositionMovementDetails7.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails8#mmSettlementDate
+	 * IntraPositionMovementDetails8.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails9#mmSettlementDate
+	 * IntraPositionMovementDetails9.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails10#mmSettlementDate
+	 * IntraPositionMovementDetails10.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate3Choice#mmDateCode
+	 * SettlementDate3Choice.mmDateCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails6#mmSettlementDate
+	 * SecuritiesTradeDetails6.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate5Choice#mmDateCode
+	 * SettlementDate5Choice.mmDateCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails13#mmSettlementDate
+	 * SecuritiesTradeDetails13.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails2#mmSettlementDate
+	 * SecuritiesTradeDetails2.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails16#mmSettlementDate
+	 * SecuritiesTradeDetails16.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#mmSettlementDate
+	 * SecuritiesTradeDetails1.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#mmSettlementDate
+	 * SecuritiesTradeDetails15.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#mmExpectedSettlementDate
+	 * TransactionDetails5.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#mmSettlementDate
+	 * TransactionDetails5.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#mmExpectedSettlementDate
+	 * TransactionDetails9.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#mmSettlementDate
+	 * TransactionDetails9.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#mmExpectedSettlementDate
+	 * TransactionDetails22.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#mmSettlementDate
+	 * TransactionDetails22.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#mmExpectedSettlementDate
+	 * TransactionDetails23.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#mmSettlementDate
+	 * TransactionDetails23.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#mmExpectedSettlementDate
+	 * TransactionDetails36.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#mmSettlementDate
+	 * TransactionDetails36.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#mmExpectedSettlementDate
+	 * TransactionDetails47.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#mmSettlementDate
+	 * TransactionDetails47.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#mmExpectedSettlementDate
+	 * TransactionDetails53.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#mmSettlementDate
+	 * TransactionDetails53.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#mmExpectedSettlementDate
+	 * TransactionDetails58.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#mmSettlementDate
+	 * TransactionDetails58.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#mmExpectedSettlementDate
+	 * TransactionDetails7.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#mmSettlementDate
+	 * TransactionDetails7.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8#mmExpectedSettlementDate
+	 * TransactionDetails8.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8#mmSettlementDate
+	 * TransactionDetails8.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#mmExpectedSettlementDate
+	 * TransactionDetails16.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#mmSettlementDate
+	 * TransactionDetails16.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17#mmExpectedSettlementDate
+	 * TransactionDetails17.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17#mmSettlementDate
+	 * TransactionDetails17.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#mmExpectedSettlementDate
+	 * TransactionDetails26.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#mmSettlementDate
+	 * TransactionDetails26.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25#mmExpectedSettlementDate
+	 * TransactionDetails25.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25#mmSettlementDate
+	 * TransactionDetails25.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#mmExpectedSettlementDate
+	 * TransactionDetails27.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#mmSettlementDate
+	 * TransactionDetails27.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33#mmExpectedSettlementDate
+	 * TransactionDetails33.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33#mmSettlementDate
+	 * TransactionDetails33.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#mmExpectedSettlementDate
+	 * TransactionDetails39.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#mmSettlementDate
+	 * TransactionDetails39.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#mmExpectedSettlementDate
+	 * TransactionDetails50.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#mmSettlementDate
+	 * TransactionDetails50.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#mmExpectedSettlementDate
+	 * TransactionDetails56.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#mmSettlementDate
+	 * TransactionDetails56.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#mmExpectedSettlementDate
+	 * TransactionDetails59.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#mmSettlementDate
+	 * TransactionDetails59.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails6#mmSettlementDate
+	 * TransactionDetails6.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails18#mmSettlementDate
+	 * TransactionDetails18.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails24#mmSettlementDate
+	 * TransactionDetails24.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails34#mmSettlementDate
+	 * TransactionDetails34.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails37#mmSettlementDate
+	 * TransactionDetails37.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails48#mmSettlementDate
+	 * TransactionDetails48.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmSettlementDate
+	 * TransactionDetails57.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails60#mmSettlementDate
+	 * TransactionDetails60.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order16#mmSettlementDate
+	 * Order16.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order14#mmSettlementDate
+	 * Order14.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates2#mmTradeActivityContractualSettlementDate
+	 * TransactionDates2.mmTradeActivityContractualSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference1#mmRequestedExecutionDate
+	 * OriginalTransactionReference1.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference1#mmRequestedCollectionDate
+	 * OriginalTransactionReference1.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference13#mmRequestedCollectionDate
+	 * OriginalTransactionReference13.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference13#mmRequestedExecutionDate
+	 * OriginalTransactionReference13.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference16#mmRequestedCollectionDate
+	 * OriginalTransactionReference16.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference16#mmRequestedExecutionDate
+	 * OriginalTransactionReference16.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction37#mmOriginalRequestedExecutionDate
+	 * PaymentTransaction37.mmOriginalRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction37#mmOriginalRequestedCollectionDate
+	 * PaymentTransaction37.mmOriginalRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction47#mmOriginalRequestedExecutionDate
+	 * PaymentTransaction47.mmOriginalRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction47#mmOriginalRequestedCollectionDate
+	 * PaymentTransaction47.mmOriginalRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation2.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation10.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation12.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation14.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference15#mmRequestedCollectionDate
+	 * OriginalTransactionReference15.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference15#mmRequestedExecutionDate
+	 * OriginalTransactionReference15.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference17#mmRequestedCollectionDate
+	 * OriginalTransactionReference17.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference17#mmRequestedExecutionDate
+	 * OriginalTransactionReference17.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference19#mmRequestedExecutionDate
+	 * OriginalTransactionReference19.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails1#mmExpectedSettlementDate
+	 * ExpectedExecutionDetails1.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails2#mmExpectedCashSettlementDate
+	 * ExpectedExecutionDetails2.mmExpectedCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification#mmRequestedExecutionDate
+	 * RequestedModification.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails1#mmSettlementDate
+	 * TransactionDetails1.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails3#mmSettlementDate
+	 * TransactionDetails3.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails7#mmSettlementDate
+	 * SecuritiesTradeDetails7.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails19#mmSettlementDate
+	 * SecuritiesTradeDetails19.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails2.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails8.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails8#mmSettlementDate
+	 * SecuritiesTradeDetails8.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails18#mmSettlementDate
+	 * SecuritiesTradeDetails18.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#mmSettlementDate
+	 * SecuritiesTradeDetails4.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#mmSettlementDate
+	 * SecuritiesTradeDetails17.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails4#mmSettlementDate
+	 * TransactionDetails4.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails30#mmSettlementDate
+	 * TransactionDetails30.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction1#mmRequestedCollectionDate
+	 * UnderlyingPaymentInstruction1.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#mmRequestedExecutionDate
+	 * RequestedModification2.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#mmRequestedCollectionDate
+	 * RequestedModification2.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation1#mmRequestedCollectionDate
+	 * CorrectivePaymentInitiation1.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Summary1#mmRequestedSettlementDate
+	 * Summary1.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails6.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails10.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails17.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails18.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails20#mmSettlementDate
+	 * TransactionDetails20.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails9#mmSettlementDate
+	 * SecuritiesTradeDetails9.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails21#mmSettlementDate
+	 * SecuritiesTradeDetails21.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#mmSettlementDate
+	 * SecuritiesTradeDetails10.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#mmSettlementDate
+	 * SecuritiesTradeDetails22.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#mmSettlementDate
+	 * SecuritiesTradeDetails23.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#mmSettlementDate
+	 * SecuritiesTradeDetails29.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails40#mmSettlementDate
+	 * TransactionDetails40.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails42#mmSettlementDate
+	 * TransactionDetails42.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails46#mmSettlementDate
+	 * TransactionDetails46.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails32#mmSettlementDate
+	 * TransactionDetails32.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails14#mmSettlementDate
+	 * TransactionDetails14.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails35#mmSettlementDate
+	 * TransactionDetails35.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails14#mmSettlementDate
+	 * SecuritiesTradeDetails14.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails20#mmSettlementDate
+	 * SecuritiesTradeDetails20.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails24#mmSettlementDate
+	 * SecuritiesTradeDetails24.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails30#mmSettlementDate
+	 * SecuritiesTradeDetails30.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails45#mmSettlementDate
+	 * TransactionDetails45.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction2#mmRequestedCollectionDate
+	 * UnderlyingPaymentInstruction2.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#mmOriginalRequestedExecutionDate
+	 * PaymentTransaction39.mmOriginalRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction39#mmOriginalRequestedCollectionDate
+	 * PaymentTransaction39.mmOriginalRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmRequestedExecutionDate
+	 * RequestedModification3.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmRequestedCollectionDate
+	 * RequestedModification3.mmRequestedCollectionDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg2#mmSettlementDate
+	 * TradeLeg2.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg5#mmSettlementDate
+	 * TradeLeg5.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg1#mmSettlementDate
+	 * TradeLeg1.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg3#mmSettlementDate
+	 * TradeLeg3.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg6#mmSettlementDate
+	 * TradeLeg6.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg4#mmSettlementDate
+	 * TradeLeg4.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg7#mmSettlementDate
+	 * TradeLeg7.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmExpectedCashSettlementDate
+	 * ExpectedExecutionDetails3.mmExpectedCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference7#mmRequestedCollectionDate
+	 * OriginalTransactionReference7.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference10#mmRequestedCollectionDate
+	 * OriginalTransactionReference10.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference9#mmRequestedCollectionDate
+	 * OriginalTransactionReference9.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference12#mmRequestedExecutionDate
+	 * OriginalTransactionReference12.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference12#mmRequestedCollectionDate
+	 * OriginalTransactionReference12.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference8#mmRequestedCollectionDate
+	 * OriginalTransactionReference8.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference11#mmRequestedCollectionDate
+	 * OriginalTransactionReference11.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation5#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation5.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation7#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation7.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation6.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation8.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails3#mmSettlementDate
+	 * IntraPositionMovementDetails3.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails4#mmSettlementDate
+	 * IntraPositionMovementDetails4.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlement1#mmDate
+	 * SecuritiesSettlement1.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlement2#mmDate
+	 * SecuritiesSettlement2.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#mmIntendedSettlementDate
+	 * IntraBalanceMovement2.mmIntendedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails51#mmIntendedSettlementDate
+	 * TransactionDetails51.mmIntendedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#mmIntendedSettlementDate
+	 * IntraPositionQueryCriteria1.mmIntendedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails52#mmSettlementDate
+	 * TransactionDetails52.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmRequestedSettlementDate
+	 * ReceiveInformation13.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmRequestedSettlementDate
+	 * Transfer27.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer28#mmRequestedSettlementDate
+	 * Transfer28.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation12#mmRequestedSettlementDate
+	 * ReceiveInformation12.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer29#mmRequestedSettlementDate
+	 * Transfer29.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation12#mmRequestedSettlementDate
+	 * DeliverInformation12.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation13#mmRequestedSettlementDate
+	 * DeliverInformation13.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn10#mmRequestedTransferDate
+	 * TransferIn10.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut11#mmRequestedTransferDate
+	 * TransferOut11.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch5#mmRequestedExecutionDate
+	 * PaymentSearch5.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument35#mmRequestedSettlementDate
+	 * FinancialInstrument35.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#mmExpectedSettlementDate
+	 * TransactionDetails61.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#mmSettlementDate
+	 * TransactionDetails61.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation6#mmRequestedCollectionDate
+	 * OriginalPaymentInformation6.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails21.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#mmExpectedSettlementDate
+	 * TransactionDetails62.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#mmSettlementDate
+	 * TransactionDetails62.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmSettlementDate
+	 * TransactionDetails63.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails31#mmSettlementDate
+	 * SecuritiesTradeDetails31.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#mmSettlementDate
+	 * SecuritiesTradeDetails33.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#mmSettlementDate
+	 * SecuritiesTradeDetails35.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails38#mmSettlementDate
+	 * SecuritiesTradeDetails38.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails36#mmSettlementDate
+	 * SecuritiesTradeDetails36.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#mmSettlementDate
+	 * SecuritiesTradeDetails34.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order17#mmSettlementDate
+	 * Order17.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order18#mmSettlementDate
+	 * Order18.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#mmSettlementDate
+	 * SecuritiesTradeDetails44.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails39#mmSettlementDate
+	 * SecuritiesTradeDetails39.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails43#mmSettlementDate
+	 * SecuritiesTradeDetails43.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails41#mmSettlementDate
+	 * SecuritiesTradeDetails41.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails22.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#mmExpectedSettlementDate
+	 * TransactionDetails66.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#mmSettlementDate
+	 * TransactionDetails66.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#mmSettlementDate
+	 * SecuritiesTradeDetails42.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#mmExpectedSettlementDate
+	 * TransactionDetails67.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#mmSettlementDate
+	 * TransactionDetails67.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails68#mmSettlementDate
+	 * TransactionDetails68.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#mmSettlementDate
+	 * SecuritiesTradeDetails47.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument40#mmRequestedSettlementDate
+	 * FinancialInstrument40.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation17.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmRequestedExecutionDate
+	 * RequestedModification4.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmRequestedCollectionDate
+	 * RequestedModification4.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction58#mmOriginalRequestedExecutionDate
+	 * PaymentTransaction58.mmOriginalRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction58#mmOriginalRequestedCollectionDate
+	 * PaymentTransaction58.mmOriginalRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#mmOriginalRequestedExecutionDate
+	 * PaymentTransaction54.mmOriginalRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction54#mmOriginalRequestedCollectionDate
+	 * PaymentTransaction54.mmOriginalRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference20#mmRequestedCollectionDate
+	 * OriginalTransactionReference20.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference20#mmRequestedExecutionDate
+	 * OriginalTransactionReference20.mmRequestedExecutionDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg8#mmSettlementDate
+	 * TradeLeg8.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation15#mmRequestedSettlementDate
+	 * DeliverInformation15.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation14#mmRequestedSettlementDate
+	 * DeliverInformation14.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmRequestedSettlementDate
+	 * ReceiveInformation15.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation14#mmRequestedSettlementDate
+	 * ReceiveInformation14.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn13#mmRequestedTransferDate
+	 * TransferIn13.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut15#mmRequestedTransferDate
+	 * TransferOut15.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails24.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#mmExpectedSettlementDate
+	 * TransactionDetails70.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#mmSettlementDate
+	 * TransactionDetails70.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#mmExpectedSettlementDate
+	 * TransactionDetails69.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#mmSettlementDate
+	 * TransactionDetails69.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeLeg10#mmSettlementDate
+	 * TradeLeg10.mmSettlementDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg9#mmSettlementDate
+	 * TradeLeg9.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference21#mmRequestedExecutionDate
+	 * OriginalTransactionReference21.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#mmExpectedSettlementDate
+	 * TransactionDetails71.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#mmSettlementDate
+	 * TransactionDetails71.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails25.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#mmExpectedSettlementDate
+	 * TransactionDetails72.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#mmSettlementDate
+	 * TransactionDetails72.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails81#mmSettlementDate
+	 * TransactionDetails81.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails74#mmSettlementDate
+	 * TransactionDetails74.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#mmSettlementDate
+	 * SecuritiesTradeDetails49.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails82#mmSettlementDate
+	 * TransactionDetails82.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails26.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#mmExpectedSettlementDate
+	 * TransactionDetails79.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#mmSettlementDate
+	 * TransactionDetails79.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails48#mmSettlementDate
+	 * SecuritiesTradeDetails48.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails80#mmSettlementDate
+	 * TransactionDetails80.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#mmExpectedSettlementDate
+	 * TransactionDetails75.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#mmSettlementDate
+	 * TransactionDetails75.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmSettlementDate
+	 * TransactionDetails78.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestPaymentDateRange2#mmDueDate
+	 * InterestPaymentDateRange2.mmDueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#mmSettlementDate
+	 * SecuritiesTradeDetails51.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails53#mmSettlementDate
+	 * SecuritiesTradeDetails53.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails55#mmSettlementDate
+	 * SecuritiesTradeDetails55.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails54#mmSettlementDate
+	 * SecuritiesTradeDetails54.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate9Choice#mmDateCode
+	 * SettlementDate9Choice.mmDateCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate11Choice#mmDateCode
+	 * SettlementDate11Choice.mmDateCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#mmSettlementDate
+	 * SecuritiesTradeDetails52.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails11#mmSettlementDate
+	 * IntraPositionMovementDetails11.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmRequestedExecutionDate
+	 * RequestedModification5.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmRequestedCollectionDate
+	 * RequestedModification5.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation20.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction61#mmOriginalRequestedExecutionDate
+	 * PaymentTransaction61.mmOriginalRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction61#mmOriginalRequestedCollectionDate
+	 * PaymentTransaction61.mmOriginalRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference22#mmRequestedCollectionDate
+	 * OriginalTransactionReference22.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference22#mmRequestedExecutionDate
+	 * OriginalTransactionReference22.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#mmOriginalRequestedExecutionDate
+	 * PaymentTransaction66.mmOriginalRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction66#mmOriginalRequestedCollectionDate
+	 * PaymentTransaction66.mmOriginalRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation17#mmRequestedSettlementDate
+	 * ReceiveInformation17.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmRequestedSettlementDate
+	 * Transfer31.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer30#mmRequestedSettlementDate
+	 * Transfer30.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmRequestedSettlementDate
+	 * ReceiveInformation16.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation16#mmRequestedSettlementDate
+	 * DeliverInformation16.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer32#mmRequestedSettlementDate
+	 * Transfer32.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17#mmRequestedSettlementDate
+	 * DeliverInformation17.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmRequestedSettlementDate
+	 * Transfer33.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut17#mmRequestedTransferDate
+	 * TransferOut17.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn15#mmRequestedTransferDate
+	 * TransferIn15.mmRequestedTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#mmRequestedSettlementDate
+	 * FinancialInstrument48.mmRequestedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference23#mmRequestedExecutionDate
+	 * OriginalTransactionReference23.mmRequestedExecutionDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CollateralMovement9#mmDate
+	 * CollateralMovement9.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails57#mmSettlementDate
+	 * SecuritiesTradeDetails57.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails33.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails88#mmSettlementDate
+	 * TransactionDetails88.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails58#mmSettlementDate
+	 * SecuritiesTradeDetails58.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#mmSettlementDate
+	 * SecuritiesTradeDetails61.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails92#mmSettlementDate
+	 * TransactionDetails92.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails84#mmSettlementDate
+	 * TransactionDetails84.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#mmSettlementDate
+	 * SecuritiesTradeDetails63.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails83#mmSettlementDate
+	 * TransactionDetails83.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails62#mmSettlementDate
+	 * SecuritiesTradeDetails62.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#mmExpectedSettlementDate
+	 * TransactionDetails87.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#mmSettlementDate
+	 * TransactionDetails87.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails60#mmSettlementDate
+	 * SecuritiesTradeDetails60.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate12Choice#mmDateCode
+	 * SettlementDate12Choice.mmDateCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate14Choice#mmDateCode
+	 * SettlementDate14Choice.mmDateCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails91#mmSettlementDate
+	 * TransactionDetails91.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#mmExpectedSettlementDate
+	 * TransactionDetails90.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#mmSettlementDate
+	 * TransactionDetails90.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails12#mmSettlementDate
+	 * IntraPositionMovementDetails12.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#mmSettlementDate
+	 * SecuritiesTradeDetails66.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails4#mmExpectedCashSettlementDate
+	 * ExpectedExecutionDetails4.mmExpectedCashSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#mmRequestedCollectionDate
+	 * DirectDebitTransactionInformation21.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmRequestedExecutionDate
+	 * RequestedModification6.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmRequestedCollectionDate
+	 * RequestedModification6.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#mmOriginalRequestedExecutionDate
+	 * PaymentTransaction78.mmOriginalRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction78#mmOriginalRequestedCollectionDate
+	 * PaymentTransaction78.mmOriginalRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference24#mmRequestedCollectionDate
+	 * OriginalTransactionReference24.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference24#mmRequestedExecutionDate
+	 * OriginalTransactionReference24.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction74#mmOriginalRequestedExecutionDate
+	 * PaymentTransaction74.mmOriginalRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction74#mmOriginalRequestedCollectionDate
+	 * PaymentTransaction74.mmOriginalRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation7#mmRequestedCollectionDate
+	 * OriginalPaymentInformation7.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference26#mmRequestedExecutionDate
+	 * OriginalTransactionReference26.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation2#mmRequestedCollectionDate
+	 * CorrectivePaymentInitiation2.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction3#mmRequestedCollectionDate
+	 * UnderlyingPaymentInstruction3.mmRequestedCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#mmSettlementDate
+	 * SecuritiesTradeDetails67.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#mmSettlementDate
+	 * SecuritiesTradeDetails68.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#mmExpectedSettlementDate
+	 * TransactionDetails97.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#mmSettlementDate
+	 * TransactionDetails97.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails35.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#mmExpectedSettlementDate
+	 * TransactionDetails96.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#mmSettlementDate
+	 * TransactionDetails96.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails13#mmSettlementDate
+	 * IntraPositionMovementDetails13.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails95#mmSettlementDate
+	 * TransactionDetails95.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#mmSettlementDate
+	 * SecuritiesTradeDetails69.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmSettlementDate
+	 * SecuritiesTradeDetails70.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmExpectedSettlementDate
+	 * SecuritiesFinancingTransactionDetails36.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#mmSettlementDate
+	 * IntraPositionMovementDetails14.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#mmExpectedSettlementDate
+	 * TransactionDetails100.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#mmSettlementDate
+	 * TransactionDetails100.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#mmExpectedSettlementDate
+	 * TransactionDetails99.mmExpectedSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#mmSettlementDate
+	 * TransactionDetails99.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#mmSettlementDate
+	 * TransactionDetails98.mmSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1209,155 +1218,165 @@ public class Obligation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RequestedSettlementDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRequestedSettlementDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentSearch4.RequestedExecutionDate, com.tools20022.repository.msg.FinancialInstrument33.RequestedSettlementDate,
-					com.tools20022.repository.msg.Transfer24.RequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation11.RequestedSettlementDate, com.tools20022.repository.msg.Transfer25.RequestedSettlementDate,
-					com.tools20022.repository.msg.DeliverInformation11.RequestedSettlementDate, com.tools20022.repository.choice.SettlementDate1Choice.DateCode, com.tools20022.repository.msg.TransactionDetails10.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails29.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails26.SettlementDate, com.tools20022.repository.msg.TransactionDetails28.SettlementDate,
-					com.tools20022.repository.choice.SettlementDate4Choice.DateCode, com.tools20022.repository.msg.TransactionDetails31.SettlementDate, com.tools20022.repository.msg.TransactionDetails44.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails28.SettlementDate, com.tools20022.repository.msg.Transfer1.RequestedTransferDate, com.tools20022.repository.msg.Transfer9.RequestedTransferDate,
-					com.tools20022.repository.msg.TransferOut7.RequestedTransferDate, com.tools20022.repository.msg.Transfer20.RequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation9.RequestedSettlementDate,
-					com.tools20022.repository.msg.TransferOut9.RequestedTransferDate, com.tools20022.repository.msg.Transfer22.RequestedSettlementDate, com.tools20022.repository.msg.DeliverInformation9.RequestedSettlementDate,
-					com.tools20022.repository.msg.Transfer26.RequestedSettlementDate, com.tools20022.repository.msg.Transfer21.RequestedSettlementDate, com.tools20022.repository.msg.Transfer23.RequestedSettlementDate,
-					com.tools20022.repository.msg.Transfer8.RequestedTransferDate, com.tools20022.repository.msg.Transfer19.RequestedSettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails1.SettlementDate,
-					com.tools20022.repository.msg.IntraPositionMovementDetails2.SettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails5.SettlementDate,
-					com.tools20022.repository.msg.IntraPositionMovementDetails6.SettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails7.SettlementDate,
-					com.tools20022.repository.msg.IntraPositionMovementDetails8.SettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails9.SettlementDate,
-					com.tools20022.repository.msg.IntraPositionMovementDetails10.SettlementDate, com.tools20022.repository.choice.SettlementDate3Choice.DateCode, com.tools20022.repository.msg.SecuritiesTradeDetails6.SettlementDate,
-					com.tools20022.repository.choice.SettlementDate5Choice.DateCode, com.tools20022.repository.msg.SecuritiesTradeDetails13.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails2.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails16.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails1.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails15.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails5.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails5.SettlementDate, com.tools20022.repository.msg.TransactionDetails9.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails9.SettlementDate, com.tools20022.repository.msg.TransactionDetails22.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails22.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails23.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails23.SettlementDate, com.tools20022.repository.msg.TransactionDetails36.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails36.SettlementDate, com.tools20022.repository.msg.TransactionDetails47.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails47.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails53.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails53.SettlementDate, com.tools20022.repository.msg.TransactionDetails58.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails58.SettlementDate, com.tools20022.repository.msg.TransactionDetails7.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails7.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails8.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails8.SettlementDate, com.tools20022.repository.msg.TransactionDetails16.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails16.SettlementDate, com.tools20022.repository.msg.TransactionDetails17.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails17.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails26.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails26.SettlementDate, com.tools20022.repository.msg.TransactionDetails25.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails25.SettlementDate, com.tools20022.repository.msg.TransactionDetails27.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails27.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails33.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails33.SettlementDate, com.tools20022.repository.msg.TransactionDetails39.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails39.SettlementDate, com.tools20022.repository.msg.TransactionDetails50.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails50.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails56.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails56.SettlementDate, com.tools20022.repository.msg.TransactionDetails59.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails59.SettlementDate, com.tools20022.repository.msg.TransactionDetails6.SettlementDate, com.tools20022.repository.msg.TransactionDetails18.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails24.SettlementDate, com.tools20022.repository.msg.TransactionDetails34.SettlementDate, com.tools20022.repository.msg.TransactionDetails37.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails48.SettlementDate, com.tools20022.repository.msg.TransactionDetails57.SettlementDate, com.tools20022.repository.msg.TransactionDetails60.SettlementDate,
-					com.tools20022.repository.msg.Order16.SettlementDate, com.tools20022.repository.msg.Order14.SettlementDate, com.tools20022.repository.msg.TransactionDates2.TradeActivityContractualSettlementDate,
-					com.tools20022.repository.msg.OriginalTransactionReference1.RequestedExecutionDate, com.tools20022.repository.msg.OriginalTransactionReference1.RequestedCollectionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference13.RequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference13.RequestedExecutionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference16.RequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference16.RequestedExecutionDate,
-					com.tools20022.repository.msg.PaymentTransaction37.OriginalRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction37.OriginalRequestedCollectionDate,
-					com.tools20022.repository.msg.PaymentTransaction47.OriginalRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction47.OriginalRequestedCollectionDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation2.RequestedCollectionDate, com.tools20022.repository.msg.DirectDebitTransactionInformation10.RequestedCollectionDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation12.RequestedCollectionDate, com.tools20022.repository.msg.DirectDebitTransactionInformation14.RequestedCollectionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference15.RequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference15.RequestedExecutionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference17.RequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference17.RequestedExecutionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference19.RequestedExecutionDate, com.tools20022.repository.msg.ExpectedExecutionDetails1.ExpectedSettlementDate,
-					com.tools20022.repository.msg.ExpectedExecutionDetails2.ExpectedCashSettlementDate, com.tools20022.repository.msg.RequestedModification.RequestedExecutionDate,
-					com.tools20022.repository.msg.TransactionDetails1.SettlementDate, com.tools20022.repository.msg.TransactionDetails3.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails7.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails19.SettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.ExpectedSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.ExpectedSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails8.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails18.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails4.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails17.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails4.SettlementDate, com.tools20022.repository.msg.TransactionDetails30.SettlementDate, com.tools20022.repository.msg.UnderlyingPaymentInstruction1.RequestedCollectionDate,
-					com.tools20022.repository.msg.RequestedModification2.RequestedExecutionDate, com.tools20022.repository.msg.RequestedModification2.RequestedCollectionDate,
-					com.tools20022.repository.msg.CorrectivePaymentInitiation1.RequestedCollectionDate, com.tools20022.repository.msg.Summary1.RequestedSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.ExpectedSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.ExpectedSettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.ExpectedSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails20.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails9.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails21.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails10.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails22.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails23.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails29.SettlementDate, com.tools20022.repository.msg.TransactionDetails40.SettlementDate, com.tools20022.repository.msg.TransactionDetails42.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails46.SettlementDate, com.tools20022.repository.msg.TransactionDetails32.SettlementDate, com.tools20022.repository.msg.TransactionDetails14.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails35.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails14.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails20.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails24.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails30.SettlementDate, com.tools20022.repository.msg.TransactionDetails45.SettlementDate,
-					com.tools20022.repository.msg.UnderlyingPaymentInstruction2.RequestedCollectionDate, com.tools20022.repository.msg.PaymentTransaction39.OriginalRequestedExecutionDate,
-					com.tools20022.repository.msg.PaymentTransaction39.OriginalRequestedCollectionDate, com.tools20022.repository.msg.RequestedModification3.RequestedExecutionDate,
-					com.tools20022.repository.msg.RequestedModification3.RequestedCollectionDate, com.tools20022.repository.msg.TradeLeg2.SettlementDate, com.tools20022.repository.msg.TradeLeg5.SettlementDate,
-					com.tools20022.repository.msg.TradeLeg1.SettlementDate, com.tools20022.repository.msg.TradeLeg3.SettlementDate, com.tools20022.repository.msg.TradeLeg6.SettlementDate,
-					com.tools20022.repository.msg.TradeLeg4.SettlementDate, com.tools20022.repository.msg.TradeLeg7.SettlementDate, com.tools20022.repository.msg.ExpectedExecutionDetails3.ExpectedCashSettlementDate,
-					com.tools20022.repository.msg.OriginalTransactionReference7.RequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference10.RequestedCollectionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference9.RequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference12.RequestedExecutionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference12.RequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference8.RequestedCollectionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference11.RequestedCollectionDate, com.tools20022.repository.msg.DirectDebitTransactionInformation5.RequestedCollectionDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation7.RequestedCollectionDate, com.tools20022.repository.msg.DirectDebitTransactionInformation6.RequestedCollectionDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation8.RequestedCollectionDate, com.tools20022.repository.msg.IntraPositionMovementDetails3.SettlementDate,
-					com.tools20022.repository.msg.IntraPositionMovementDetails4.SettlementDate, com.tools20022.repository.msg.SecuritiesSettlement1.Date, com.tools20022.repository.msg.SecuritiesSettlement2.Date,
-					com.tools20022.repository.msg.IntraBalanceMovement2.IntendedSettlementDate, com.tools20022.repository.msg.TransactionDetails51.IntendedSettlementDate,
-					com.tools20022.repository.msg.IntraPositionQueryCriteria1.IntendedSettlementDate, com.tools20022.repository.msg.TransactionDetails52.SettlementDate,
-					com.tools20022.repository.msg.ReceiveInformation13.RequestedSettlementDate, com.tools20022.repository.msg.Transfer27.RequestedSettlementDate, com.tools20022.repository.msg.Transfer28.RequestedSettlementDate,
-					com.tools20022.repository.msg.ReceiveInformation12.RequestedSettlementDate, com.tools20022.repository.msg.Transfer29.RequestedSettlementDate, com.tools20022.repository.msg.DeliverInformation12.RequestedSettlementDate,
-					com.tools20022.repository.msg.DeliverInformation13.RequestedSettlementDate, com.tools20022.repository.msg.TransferIn10.RequestedTransferDate, com.tools20022.repository.msg.TransferOut11.RequestedTransferDate,
-					com.tools20022.repository.msg.PaymentSearch5.RequestedExecutionDate, com.tools20022.repository.msg.FinancialInstrument35.RequestedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails61.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails61.SettlementDate,
-					com.tools20022.repository.msg.OriginalPaymentInformation6.RequestedCollectionDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails62.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails62.SettlementDate, com.tools20022.repository.msg.TransactionDetails63.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails31.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails33.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails35.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails38.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails36.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails34.SettlementDate,
-					com.tools20022.repository.msg.Order17.SettlementDate, com.tools20022.repository.msg.Order18.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails44.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails39.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails43.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails41.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails66.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails66.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails42.SettlementDate, com.tools20022.repository.msg.TransactionDetails67.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails67.SettlementDate, com.tools20022.repository.msg.TransactionDetails68.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails47.SettlementDate,
-					com.tools20022.repository.msg.FinancialInstrument40.RequestedSettlementDate, com.tools20022.repository.msg.DirectDebitTransactionInformation17.RequestedCollectionDate,
-					com.tools20022.repository.msg.RequestedModification4.RequestedExecutionDate, com.tools20022.repository.msg.RequestedModification4.RequestedCollectionDate,
-					com.tools20022.repository.msg.PaymentTransaction58.OriginalRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction58.OriginalRequestedCollectionDate,
-					com.tools20022.repository.msg.PaymentTransaction54.OriginalRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction54.OriginalRequestedCollectionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference20.RequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference20.RequestedExecutionDate,
-					com.tools20022.repository.msg.TradeLeg8.SettlementDate, com.tools20022.repository.msg.DeliverInformation15.RequestedSettlementDate, com.tools20022.repository.msg.DeliverInformation14.RequestedSettlementDate,
-					com.tools20022.repository.msg.ReceiveInformation15.RequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation14.RequestedSettlementDate, com.tools20022.repository.msg.TransferIn13.RequestedTransferDate,
-					com.tools20022.repository.msg.TransferOut15.RequestedTransferDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails70.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails70.SettlementDate, com.tools20022.repository.msg.TransactionDetails69.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails69.SettlementDate, com.tools20022.repository.msg.TradeLeg10.SettlementDate, com.tools20022.repository.msg.TradeLeg9.SettlementDate,
-					com.tools20022.repository.msg.OriginalTransactionReference21.RequestedExecutionDate, com.tools20022.repository.msg.TransactionDetails71.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails71.SettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails72.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails72.SettlementDate, com.tools20022.repository.msg.TransactionDetails81.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails74.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails49.SettlementDate, com.tools20022.repository.msg.TransactionDetails82.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails79.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails79.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails48.SettlementDate, com.tools20022.repository.msg.TransactionDetails80.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails75.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails75.SettlementDate, com.tools20022.repository.msg.TransactionDetails78.SettlementDate,
-					com.tools20022.repository.msg.InterestPaymentDateRange2.DueDate, com.tools20022.repository.msg.SecuritiesTradeDetails51.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails53.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails55.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails54.SettlementDate, com.tools20022.repository.choice.SettlementDate9Choice.DateCode,
-					com.tools20022.repository.choice.SettlementDate11Choice.DateCode, com.tools20022.repository.msg.SecuritiesTradeDetails52.SettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails11.SettlementDate,
-					com.tools20022.repository.msg.RequestedModification5.RequestedExecutionDate, com.tools20022.repository.msg.RequestedModification5.RequestedCollectionDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation20.RequestedCollectionDate, com.tools20022.repository.msg.PaymentTransaction61.OriginalRequestedExecutionDate,
-					com.tools20022.repository.msg.PaymentTransaction61.OriginalRequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference22.RequestedCollectionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference22.RequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction66.OriginalRequestedExecutionDate,
-					com.tools20022.repository.msg.PaymentTransaction66.OriginalRequestedCollectionDate, com.tools20022.repository.msg.ReceiveInformation17.RequestedSettlementDate,
-					com.tools20022.repository.msg.Transfer31.RequestedSettlementDate, com.tools20022.repository.msg.Transfer30.RequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation16.RequestedSettlementDate,
-					com.tools20022.repository.msg.DeliverInformation16.RequestedSettlementDate, com.tools20022.repository.msg.Transfer32.RequestedSettlementDate, com.tools20022.repository.msg.DeliverInformation17.RequestedSettlementDate,
-					com.tools20022.repository.msg.Transfer33.RequestedSettlementDate, com.tools20022.repository.msg.TransferOut17.RequestedTransferDate, com.tools20022.repository.msg.TransferIn15.RequestedTransferDate,
-					com.tools20022.repository.msg.FinancialInstrument48.RequestedSettlementDate, com.tools20022.repository.msg.OriginalTransactionReference23.RequestedExecutionDate, com.tools20022.repository.msg.CollateralMovement9.Date,
-					com.tools20022.repository.msg.SecuritiesTradeDetails57.SettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails88.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails58.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails61.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails92.SettlementDate, com.tools20022.repository.msg.TransactionDetails84.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails63.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails83.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails62.SettlementDate, com.tools20022.repository.msg.TransactionDetails87.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails87.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails60.SettlementDate, com.tools20022.repository.choice.SettlementDate12Choice.DateCode,
-					com.tools20022.repository.choice.SettlementDate14Choice.DateCode, com.tools20022.repository.msg.TransactionDetails91.SettlementDate, com.tools20022.repository.msg.TransactionDetails90.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails90.SettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails12.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails66.SettlementDate,
-					com.tools20022.repository.msg.ExpectedExecutionDetails4.ExpectedCashSettlementDate, com.tools20022.repository.msg.DirectDebitTransactionInformation21.RequestedCollectionDate,
-					com.tools20022.repository.msg.RequestedModification6.RequestedExecutionDate, com.tools20022.repository.msg.RequestedModification6.RequestedCollectionDate,
-					com.tools20022.repository.msg.PaymentTransaction78.OriginalRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction78.OriginalRequestedCollectionDate,
-					com.tools20022.repository.msg.OriginalTransactionReference24.RequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference24.RequestedExecutionDate,
-					com.tools20022.repository.msg.PaymentTransaction74.OriginalRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction74.OriginalRequestedCollectionDate,
-					com.tools20022.repository.msg.OriginalPaymentInformation7.RequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference26.RequestedExecutionDate,
-					com.tools20022.repository.msg.CorrectivePaymentInitiation2.RequestedCollectionDate, com.tools20022.repository.msg.UnderlyingPaymentInstruction3.RequestedCollectionDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails67.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails68.SettlementDate, com.tools20022.repository.msg.TransactionDetails97.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails97.SettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails96.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails96.SettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails13.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails95.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails69.SettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails70.SettlementDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.ExpectedSettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails14.SettlementDate,
-					com.tools20022.repository.msg.TransactionDetails100.ExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails100.SettlementDate, com.tools20022.repository.msg.TransactionDetails99.ExpectedSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails99.SettlementDate, com.tools20022.repository.msg.TransactionDetails98.SettlementDate);
-			elementContext_lazy = () -> Obligation.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentSearch4.mmRequestedExecutionDate, com.tools20022.repository.msg.FinancialInstrument33.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.Transfer24.mmRequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation11.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer25.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.DeliverInformation11.mmRequestedSettlementDate, com.tools20022.repository.choice.SettlementDate1Choice.mmDateCode, com.tools20022.repository.msg.TransactionDetails10.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails29.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails28.mmSettlementDate,
+					com.tools20022.repository.choice.SettlementDate4Choice.mmDateCode, com.tools20022.repository.msg.TransactionDetails31.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails44.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails28.mmSettlementDate, com.tools20022.repository.msg.Transfer1.mmRequestedTransferDate, com.tools20022.repository.msg.Transfer9.mmRequestedTransferDate,
+					com.tools20022.repository.msg.TransferOut7.mmRequestedTransferDate, com.tools20022.repository.msg.Transfer20.mmRequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation9.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.TransferOut9.mmRequestedTransferDate, com.tools20022.repository.msg.Transfer22.mmRequestedSettlementDate, com.tools20022.repository.msg.DeliverInformation9.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.Transfer26.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer21.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer23.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.Transfer8.mmRequestedTransferDate, com.tools20022.repository.msg.Transfer19.mmRequestedSettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails1.mmSettlementDate,
+					com.tools20022.repository.msg.IntraPositionMovementDetails2.mmSettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails5.mmSettlementDate,
+					com.tools20022.repository.msg.IntraPositionMovementDetails6.mmSettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails7.mmSettlementDate,
+					com.tools20022.repository.msg.IntraPositionMovementDetails8.mmSettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails9.mmSettlementDate,
+					com.tools20022.repository.msg.IntraPositionMovementDetails10.mmSettlementDate, com.tools20022.repository.choice.SettlementDate3Choice.mmDateCode, com.tools20022.repository.msg.SecuritiesTradeDetails6.mmSettlementDate,
+					com.tools20022.repository.choice.SettlementDate5Choice.mmDateCode, com.tools20022.repository.msg.SecuritiesTradeDetails13.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails2.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails16.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails1.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails15.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails5.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails5.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails9.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails9.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails22.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails22.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails23.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails23.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails36.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails36.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails47.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails47.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails53.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails53.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails58.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails58.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails7.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails7.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails8.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails8.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails16.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails16.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails17.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails17.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails26.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails26.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails25.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails25.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails27.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails27.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails33.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails33.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails39.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails39.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails50.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails50.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails56.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails56.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails59.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails59.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails6.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails18.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails24.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails34.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails37.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails48.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails57.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails60.mmSettlementDate, com.tools20022.repository.msg.Order16.mmSettlementDate, com.tools20022.repository.msg.Order14.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDates2.mmTradeActivityContractualSettlementDate, com.tools20022.repository.msg.OriginalTransactionReference1.mmRequestedExecutionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference1.mmRequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference13.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference13.mmRequestedExecutionDate, com.tools20022.repository.msg.OriginalTransactionReference16.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference16.mmRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction37.mmOriginalRequestedExecutionDate,
+					com.tools20022.repository.msg.PaymentTransaction37.mmOriginalRequestedCollectionDate, com.tools20022.repository.msg.PaymentTransaction47.mmOriginalRequestedExecutionDate,
+					com.tools20022.repository.msg.PaymentTransaction47.mmOriginalRequestedCollectionDate, com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmRequestedCollectionDate, com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmRequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference15.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference15.mmRequestedExecutionDate, com.tools20022.repository.msg.OriginalTransactionReference17.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference17.mmRequestedExecutionDate, com.tools20022.repository.msg.OriginalTransactionReference19.mmRequestedExecutionDate,
+					com.tools20022.repository.msg.ExpectedExecutionDetails1.mmExpectedSettlementDate, com.tools20022.repository.msg.ExpectedExecutionDetails2.mmExpectedCashSettlementDate,
+					com.tools20022.repository.msg.RequestedModification.mmRequestedExecutionDate, com.tools20022.repository.msg.TransactionDetails1.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails3.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails7.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails19.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmExpectedSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails8.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails18.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails4.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails17.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails4.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails30.mmSettlementDate,
+					com.tools20022.repository.msg.UnderlyingPaymentInstruction1.mmRequestedCollectionDate, com.tools20022.repository.msg.RequestedModification2.mmRequestedExecutionDate,
+					com.tools20022.repository.msg.RequestedModification2.mmRequestedCollectionDate, com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.Summary1.mmRequestedSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmExpectedSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails20.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails9.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails21.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails10.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails22.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails23.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails29.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails40.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails42.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails46.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails32.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails14.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails35.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails14.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails20.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails24.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails30.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails45.mmSettlementDate,
+					com.tools20022.repository.msg.UnderlyingPaymentInstruction2.mmRequestedCollectionDate, com.tools20022.repository.msg.PaymentTransaction39.mmOriginalRequestedExecutionDate,
+					com.tools20022.repository.msg.PaymentTransaction39.mmOriginalRequestedCollectionDate, com.tools20022.repository.msg.RequestedModification3.mmRequestedExecutionDate,
+					com.tools20022.repository.msg.RequestedModification3.mmRequestedCollectionDate, com.tools20022.repository.msg.TradeLeg2.mmSettlementDate, com.tools20022.repository.msg.TradeLeg5.mmSettlementDate,
+					com.tools20022.repository.msg.TradeLeg1.mmSettlementDate, com.tools20022.repository.msg.TradeLeg3.mmSettlementDate, com.tools20022.repository.msg.TradeLeg6.mmSettlementDate,
+					com.tools20022.repository.msg.TradeLeg4.mmSettlementDate, com.tools20022.repository.msg.TradeLeg7.mmSettlementDate, com.tools20022.repository.msg.ExpectedExecutionDetails3.mmExpectedCashSettlementDate,
+					com.tools20022.repository.msg.OriginalTransactionReference7.mmRequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference10.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference9.mmRequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference12.mmRequestedExecutionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference12.mmRequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference8.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference11.mmRequestedCollectionDate, com.tools20022.repository.msg.DirectDebitTransactionInformation5.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation7.mmRequestedCollectionDate, com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation8.mmRequestedCollectionDate, com.tools20022.repository.msg.IntraPositionMovementDetails3.mmSettlementDate,
+					com.tools20022.repository.msg.IntraPositionMovementDetails4.mmSettlementDate, com.tools20022.repository.msg.SecuritiesSettlement1.mmDate, com.tools20022.repository.msg.SecuritiesSettlement2.mmDate,
+					com.tools20022.repository.msg.IntraBalanceMovement2.mmIntendedSettlementDate, com.tools20022.repository.msg.TransactionDetails51.mmIntendedSettlementDate,
+					com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmIntendedSettlementDate, com.tools20022.repository.msg.TransactionDetails52.mmSettlementDate,
+					com.tools20022.repository.msg.ReceiveInformation13.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer27.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer28.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.ReceiveInformation12.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer29.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.DeliverInformation12.mmRequestedSettlementDate, com.tools20022.repository.msg.DeliverInformation13.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.TransferIn10.mmRequestedTransferDate, com.tools20022.repository.msg.TransferOut11.mmRequestedTransferDate, com.tools20022.repository.msg.PaymentSearch5.mmRequestedExecutionDate,
+					com.tools20022.repository.msg.FinancialInstrument35.mmRequestedSettlementDate, com.tools20022.repository.msg.TransactionDetails61.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails61.mmSettlementDate, com.tools20022.repository.msg.OriginalPaymentInformation6.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails62.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails62.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails63.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails31.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails33.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails35.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails38.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails36.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails34.mmSettlementDate, com.tools20022.repository.msg.Order17.mmSettlementDate,
+					com.tools20022.repository.msg.Order18.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails44.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails39.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails43.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails41.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails66.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails66.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails42.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails67.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails67.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails68.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails47.mmSettlementDate,
+					com.tools20022.repository.msg.FinancialInstrument40.mmRequestedSettlementDate, com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.RequestedModification4.mmRequestedExecutionDate, com.tools20022.repository.msg.RequestedModification4.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.PaymentTransaction58.mmOriginalRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction58.mmOriginalRequestedCollectionDate,
+					com.tools20022.repository.msg.PaymentTransaction54.mmOriginalRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction54.mmOriginalRequestedCollectionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference20.mmRequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference20.mmRequestedExecutionDate,
+					com.tools20022.repository.msg.TradeLeg8.mmSettlementDate, com.tools20022.repository.msg.DeliverInformation15.mmRequestedSettlementDate, com.tools20022.repository.msg.DeliverInformation14.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.ReceiveInformation15.mmRequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation14.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.TransferIn13.mmRequestedTransferDate, com.tools20022.repository.msg.TransferOut15.mmRequestedTransferDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails70.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails70.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails69.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails69.mmSettlementDate,
+					com.tools20022.repository.msg.TradeLeg10.mmSettlementDate, com.tools20022.repository.msg.TradeLeg9.mmSettlementDate, com.tools20022.repository.msg.OriginalTransactionReference21.mmRequestedExecutionDate,
+					com.tools20022.repository.msg.TransactionDetails71.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails71.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails72.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails72.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails81.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails74.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails49.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails82.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails79.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails79.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails48.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails80.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails75.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails75.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails78.mmSettlementDate,
+					com.tools20022.repository.msg.InterestPaymentDateRange2.mmDueDate, com.tools20022.repository.msg.SecuritiesTradeDetails51.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails53.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails55.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails54.mmSettlementDate, com.tools20022.repository.choice.SettlementDate9Choice.mmDateCode,
+					com.tools20022.repository.choice.SettlementDate11Choice.mmDateCode, com.tools20022.repository.msg.SecuritiesTradeDetails52.mmSettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmSettlementDate,
+					com.tools20022.repository.msg.RequestedModification5.mmRequestedExecutionDate, com.tools20022.repository.msg.RequestedModification5.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmRequestedCollectionDate, com.tools20022.repository.msg.PaymentTransaction61.mmOriginalRequestedExecutionDate,
+					com.tools20022.repository.msg.PaymentTransaction61.mmOriginalRequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference22.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference22.mmRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction66.mmOriginalRequestedExecutionDate,
+					com.tools20022.repository.msg.PaymentTransaction66.mmOriginalRequestedCollectionDate, com.tools20022.repository.msg.ReceiveInformation17.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.Transfer31.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer30.mmRequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation16.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.DeliverInformation16.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer32.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.DeliverInformation17.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer33.mmRequestedSettlementDate, com.tools20022.repository.msg.TransferOut17.mmRequestedTransferDate,
+					com.tools20022.repository.msg.TransferIn15.mmRequestedTransferDate, com.tools20022.repository.msg.FinancialInstrument48.mmRequestedSettlementDate,
+					com.tools20022.repository.msg.OriginalTransactionReference23.mmRequestedExecutionDate, com.tools20022.repository.msg.CollateralMovement9.mmDate, com.tools20022.repository.msg.SecuritiesTradeDetails57.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails88.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails58.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails61.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails92.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails84.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails63.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails83.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails62.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails87.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails87.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails60.mmSettlementDate, com.tools20022.repository.choice.SettlementDate12Choice.mmDateCode, com.tools20022.repository.choice.SettlementDate14Choice.mmDateCode,
+					com.tools20022.repository.msg.TransactionDetails91.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails90.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails90.mmSettlementDate,
+					com.tools20022.repository.msg.IntraPositionMovementDetails12.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails66.mmSettlementDate,
+					com.tools20022.repository.msg.ExpectedExecutionDetails4.mmExpectedCashSettlementDate, com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.RequestedModification6.mmRequestedExecutionDate, com.tools20022.repository.msg.RequestedModification6.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.PaymentTransaction78.mmOriginalRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction78.mmOriginalRequestedCollectionDate,
+					com.tools20022.repository.msg.OriginalTransactionReference24.mmRequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference24.mmRequestedExecutionDate,
+					com.tools20022.repository.msg.PaymentTransaction74.mmOriginalRequestedExecutionDate, com.tools20022.repository.msg.PaymentTransaction74.mmOriginalRequestedCollectionDate,
+					com.tools20022.repository.msg.OriginalPaymentInformation7.mmRequestedCollectionDate, com.tools20022.repository.msg.OriginalTransactionReference26.mmRequestedExecutionDate,
+					com.tools20022.repository.msg.CorrectivePaymentInitiation2.mmRequestedCollectionDate, com.tools20022.repository.msg.UnderlyingPaymentInstruction3.mmRequestedCollectionDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails67.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails68.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails97.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails97.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails96.mmExpectedSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails96.mmSettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails13.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails95.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails69.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails70.mmSettlementDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmExpectedSettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails14.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails100.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails100.mmSettlementDate,
+					com.tools20022.repository.msg.TransactionDetails99.mmExpectedSettlementDate, com.tools20022.repository.msg.TransactionDetails99.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails98.mmSettlementDate);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RequestedSettlementDate";
 			definition = "Date and time at which a trade must be executed. For a direct debit, it is the date and time at which the creditor requests that the amount of money is to be collected from the debtor. For a credit transfer, it is the date and time at which the debtor requests the clearing agent to process the payment. For a securities trade, it is the date and time at which the securities are to be delivered or received.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CurrencyAndAmount requestedSettlementAmount;
 	/**
 	 * Total amount of money to be paid or received.
 	 * <p>
@@ -1368,86 +1387,86 @@ public class Obligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails7#SettlementAmount
-	 * SecuritiesTradeDetails7.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails19#SettlementAmount
-	 * SecuritiesTradeDetails19.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#SettlementAmount
-	 * SecuritiesTradeDetails4.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#SettlementAmount
-	 * SecuritiesTradeDetails17.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData1#SettledAmount
-	 * SettlementData1.SettledAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#SettlementAmount
-	 * SecuritiesTradeDetails10.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#SettlementAmount
-	 * SecuritiesTradeDetails22.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#SettlementAmount
-	 * SecuritiesTradeDetails23.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#SettlementAmount
-	 * SecuritiesTradeDetails29.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails14#SettlementAmount
-	 * SecuritiesTradeDetails14.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails20#SettlementAmount
-	 * SecuritiesTradeDetails20.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails24#SettlementAmount
-	 * SecuritiesTradeDetails24.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails30#SettlementAmount
-	 * SecuritiesTradeDetails30.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#ExpectedExecutedAmount
-	 * ExpectedExecutionDetails3.ExpectedExecutedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#SettlementAmount
-	 * IntraBalanceMovement2.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#SettlementAmount
-	 * SecuritiesTradeDetails35.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#SettlementAmount
-	 * SecuritiesTradeDetails42.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#SettlementAmount
-	 * SecuritiesTradeDetails49.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails48#SettlementAmount
-	 * SecuritiesTradeDetails48.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails57#SettlementAmount
-	 * SecuritiesTradeDetails57.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#SettlementAmount
-	 * SecuritiesTradeDetails61.SettlementAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NetObligation1#Amount
-	 * NetObligation1.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#SettlementAmount
-	 * SecuritiesTradeDetails68.SettlementAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#SettlementAmount
-	 * SecuritiesTradeDetails69.SettlementAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails7#mmSettlementAmount
+	 * SecuritiesTradeDetails7.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails19#mmSettlementAmount
+	 * SecuritiesTradeDetails19.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#mmSettlementAmount
+	 * SecuritiesTradeDetails4.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails17#mmSettlementAmount
+	 * SecuritiesTradeDetails17.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettledAmount
+	 * SettlementData1.mmSettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#mmSettlementAmount
+	 * SecuritiesTradeDetails10.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails22#mmSettlementAmount
+	 * SecuritiesTradeDetails22.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails23#mmSettlementAmount
+	 * SecuritiesTradeDetails23.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails29#mmSettlementAmount
+	 * SecuritiesTradeDetails29.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails14#mmSettlementAmount
+	 * SecuritiesTradeDetails14.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails20#mmSettlementAmount
+	 * SecuritiesTradeDetails20.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails24#mmSettlementAmount
+	 * SecuritiesTradeDetails24.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails30#mmSettlementAmount
+	 * SecuritiesTradeDetails30.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmExpectedExecutedAmount
+	 * ExpectedExecutionDetails3.mmExpectedExecutedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement2#mmSettlementAmount
+	 * IntraBalanceMovement2.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails35#mmSettlementAmount
+	 * SecuritiesTradeDetails35.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails42#mmSettlementAmount
+	 * SecuritiesTradeDetails42.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails49#mmSettlementAmount
+	 * SecuritiesTradeDetails49.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails48#mmSettlementAmount
+	 * SecuritiesTradeDetails48.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails57#mmSettlementAmount
+	 * SecuritiesTradeDetails57.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails61#mmSettlementAmount
+	 * SecuritiesTradeDetails61.mmSettlementAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.NetObligation1#mmAmount
+	 * NetObligation1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails68#mmSettlementAmount
+	 * SecuritiesTradeDetails68.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#mmSettlementAmount
+	 * SecuritiesTradeDetails69.mmSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1459,27 +1478,30 @@ public class Obligation {
 	 * definition} = "Total amount of money to be paid or received."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RequestedSettlementAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRequestedSettlementAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails7.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails19.SettlementAmount,
-					com.tools20022.repository.msg.SecuritiesTradeDetails4.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails17.SettlementAmount, com.tools20022.repository.msg.SettlementData1.SettledAmount,
-					com.tools20022.repository.msg.SecuritiesTradeDetails10.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails22.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails23.SettlementAmount,
-					com.tools20022.repository.msg.SecuritiesTradeDetails29.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails14.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails20.SettlementAmount,
-					com.tools20022.repository.msg.SecuritiesTradeDetails24.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails30.SettlementAmount,
-					com.tools20022.repository.msg.ExpectedExecutionDetails3.ExpectedExecutedAmount, com.tools20022.repository.msg.IntraBalanceMovement2.SettlementAmount,
-					com.tools20022.repository.msg.SecuritiesTradeDetails35.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails42.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails49.SettlementAmount,
-					com.tools20022.repository.msg.SecuritiesTradeDetails48.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails57.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails61.SettlementAmount,
-					com.tools20022.repository.msg.NetObligation1.Amount, com.tools20022.repository.msg.SecuritiesTradeDetails68.SettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails69.SettlementAmount);
-			elementContext_lazy = () -> Obligation.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails7.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails19.mmSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesTradeDetails4.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails17.mmSettlementAmount, com.tools20022.repository.msg.SettlementData1.mmSettledAmount,
+					com.tools20022.repository.msg.SecuritiesTradeDetails10.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails22.mmSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesTradeDetails23.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails29.mmSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesTradeDetails14.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails20.mmSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesTradeDetails24.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails30.mmSettlementAmount,
+					com.tools20022.repository.msg.ExpectedExecutionDetails3.mmExpectedExecutedAmount, com.tools20022.repository.msg.IntraBalanceMovement2.mmSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesTradeDetails35.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails42.mmSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesTradeDetails49.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails48.mmSettlementAmount,
+					com.tools20022.repository.msg.SecuritiesTradeDetails57.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails61.mmSettlementAmount, com.tools20022.repository.msg.NetObligation1.mmAmount,
+					com.tools20022.repository.msg.SecuritiesTradeDetails68.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesTradeDetails69.mmSettlementAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RequestedSettlementAmount";
 			definition = "Total amount of money to be paid or received.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText priority;
 	/**
 	 * Specifies whether the transaction is to be executed with a high priority.
 	 * <p>
@@ -1490,237 +1512,243 @@ public class Obligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max4AlphaNumericText
 	 * Max4AlphaNumericText}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails9#Priority
-	 * SettlementDetails9.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails17#Priority
-	 * SettlementDetails17.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails30#Priority
-	 * SettlementDetails30.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails32#Priority
-	 * SettlementDetails32.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails60#Priority
-	 * SettlementDetails60.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails64#Priority
-	 * SettlementDetails64.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails3#Priority
-	 * SettlementDetails3.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails16#Priority
-	 * SettlementDetails16.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails31#Priority
-	 * SettlementDetails31.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails40#Priority
-	 * SettlementDetails40.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails62#Priority
-	 * SettlementDetails62.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails63#Priority
-	 * SettlementDetails63.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails1#Priority
-	 * RequestDetails1.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#Priority
-	 * RequestDetails2.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails6#Priority
-	 * RequestDetails6.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails7#Priority
-	 * RequestDetails7.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails8#Priority
-	 * RequestDetails8.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails9#Priority
-	 * RequestDetails9.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails11#Priority
-	 * RequestDetails11.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails12#Priority
-	 * RequestDetails12.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#Priority
-	 * SettlementDetails6.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#Priority
-	 * SettlementDetails20.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#Priority
-	 * SettlementDetails24.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#Priority
-	 * SettlementDetails33.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#Priority
-	 * SettlementDetails45.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#Priority
-	 * SettlementDetails54.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#Priority
-	 * SettlementDetails1.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#Priority
-	 * SettlementDetails19.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#Priority
-	 * SettlementDetails22.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#Priority
-	 * SettlementDetails35.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#Priority
-	 * SettlementDetails42.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#Priority
-	 * SettlementDetails52.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriorityNumeric3Choice#Numeric
-	 * PriorityNumeric3Choice.Numeric}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriorityNumeric3Choice#Proprietary
-	 * PriorityNumeric3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#Priority
-	 * SettlementDetails43.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails1#Priority
-	 * IntraPositionDetails1.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails11#Priority
-	 * IntraPositionDetails11.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails5#Priority
-	 * SettlementDetails5.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#Priority
-	 * SettlementDetails26.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails65#Priority
-	 * SettlementDetails65.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails15#Priority
-	 * SettlementDetails15.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#Priority
-	 * SettlementDetails36.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails7#Priority
-	 * IntraPositionDetails7.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails16#Priority
-	 * IntraPositionDetails16.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails21#Priority
-	 * IntraPositionDetails21.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails25#Priority
-	 * IntraPositionDetails25.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#Priority
-	 * SettlementDetails67.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#Priority
-	 * SettlementDetails70.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails71#Priority
-	 * SettlementDetails71.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails72#Priority
-	 * SettlementDetails72.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails13#Priority
-	 * RequestDetails13.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#Priority
-	 * SettlementDetails81.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails76#Priority
-	 * SettlementDetails76.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#Priority
-	 * SettlementDetails80.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails78#Priority
-	 * SettlementDetails78.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails77#Priority
-	 * SettlementDetails77.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails14#Priority
-	 * RequestDetails14.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails33#Priority
-	 * IntraPositionDetails33.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#Priority
-	 * SettlementDetails93.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails15#Priority
-	 * RequestDetails15.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#Priority
-	 * SettlementDetails90.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails96#Priority
-	 * SettlementDetails96.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails97#Priority
-	 * SettlementDetails97.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#Priority
-	 * SettlementDetails101.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails105#Priority
-	 * SettlementDetails105.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails106#Priority
-	 * SettlementDetails106.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails104#Priority
-	 * SettlementDetails104.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#Priority
-	 * SettlementDetails111.Priority}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails16#Priority
-	 * RequestDetails16.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails36#Priority
-	 * IntraPositionDetails36.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#Priority
-	 * SettlementDetails112.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#Priority
-	 * SettlementDetails110.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#Priority
-	 * SettlementDetails128.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#Priority
-	 * SettlementDetails120.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#Priority
-	 * SettlementDetails119.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#Priority
-	 * SettlementDetails134.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#Priority
-	 * SettlementDetails137.Priority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#Priority
-	 * SettlementDetails132.Priority}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails9#mmPriority
+	 * SettlementDetails9.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails17#mmPriority
+	 * SettlementDetails17.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails30#mmPriority
+	 * SettlementDetails30.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails32#mmPriority
+	 * SettlementDetails32.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails60#mmPriority
+	 * SettlementDetails60.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails64#mmPriority
+	 * SettlementDetails64.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails3#mmPriority
+	 * SettlementDetails3.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails16#mmPriority
+	 * SettlementDetails16.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails31#mmPriority
+	 * SettlementDetails31.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails40#mmPriority
+	 * SettlementDetails40.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails62#mmPriority
+	 * SettlementDetails62.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails63#mmPriority
+	 * SettlementDetails63.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails1#mmPriority
+	 * RequestDetails1.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#mmPriority
+	 * RequestDetails2.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails6#mmPriority
+	 * RequestDetails6.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails7#mmPriority
+	 * RequestDetails7.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails8#mmPriority
+	 * RequestDetails8.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails9#mmPriority
+	 * RequestDetails9.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails11#mmPriority
+	 * RequestDetails11.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails12#mmPriority
+	 * RequestDetails12.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#mmPriority
+	 * SettlementDetails6.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#mmPriority
+	 * SettlementDetails20.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#mmPriority
+	 * SettlementDetails24.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#mmPriority
+	 * SettlementDetails33.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#mmPriority
+	 * SettlementDetails45.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#mmPriority
+	 * SettlementDetails54.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#mmPriority
+	 * SettlementDetails1.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#mmPriority
+	 * SettlementDetails19.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#mmPriority
+	 * SettlementDetails22.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#mmPriority
+	 * SettlementDetails35.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#mmPriority
+	 * SettlementDetails42.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#mmPriority
+	 * SettlementDetails52.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityNumeric3Choice#mmNumeric
+	 * PriorityNumeric3Choice.mmNumeric}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityNumeric3Choice#mmProprietary
+	 * PriorityNumeric3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#mmPriority
+	 * SettlementDetails43.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails1#mmPriority
+	 * IntraPositionDetails1.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails11#mmPriority
+	 * IntraPositionDetails11.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails5#mmPriority
+	 * SettlementDetails5.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#mmPriority
+	 * SettlementDetails26.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails65#mmPriority
+	 * SettlementDetails65.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails15#mmPriority
+	 * SettlementDetails15.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#mmPriority
+	 * SettlementDetails36.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails7#mmPriority
+	 * IntraPositionDetails7.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails16#mmPriority
+	 * IntraPositionDetails16.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails21#mmPriority
+	 * IntraPositionDetails21.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails25#mmPriority
+	 * IntraPositionDetails25.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#mmPriority
+	 * SettlementDetails67.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#mmPriority
+	 * SettlementDetails70.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails71#mmPriority
+	 * SettlementDetails71.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails72#mmPriority
+	 * SettlementDetails72.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails13#mmPriority
+	 * RequestDetails13.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#mmPriority
+	 * SettlementDetails81.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails76#mmPriority
+	 * SettlementDetails76.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#mmPriority
+	 * SettlementDetails80.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails78#mmPriority
+	 * SettlementDetails78.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails77#mmPriority
+	 * SettlementDetails77.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails14#mmPriority
+	 * RequestDetails14.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails33#mmPriority
+	 * IntraPositionDetails33.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#mmPriority
+	 * SettlementDetails93.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails15#mmPriority
+	 * RequestDetails15.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#mmPriority
+	 * SettlementDetails90.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails96#mmPriority
+	 * SettlementDetails96.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails97#mmPriority
+	 * SettlementDetails97.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#mmPriority
+	 * SettlementDetails101.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails105#mmPriority
+	 * SettlementDetails105.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails106#mmPriority
+	 * SettlementDetails106.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails104#mmPriority
+	 * SettlementDetails104.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#mmPriority
+	 * SettlementDetails111.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails16#mmPriority
+	 * RequestDetails16.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails36#mmPriority
+	 * IntraPositionDetails36.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#mmPriority
+	 * SettlementDetails112.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#mmPriority
+	 * SettlementDetails110.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#mmPriority
+	 * SettlementDetails128.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#mmPriority
+	 * SettlementDetails120.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#mmPriority
+	 * SettlementDetails119.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#mmPriority
+	 * SettlementDetails134.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#mmPriority
+	 * SettlementDetails137.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#mmPriority
+	 * SettlementDetails132.mmPriority}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1734,44 +1762,45 @@ public class Obligation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Priority = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPriority = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails9.Priority, com.tools20022.repository.msg.SettlementDetails17.Priority, com.tools20022.repository.msg.SettlementDetails30.Priority,
-					com.tools20022.repository.msg.SettlementDetails32.Priority, com.tools20022.repository.msg.SettlementDetails60.Priority, com.tools20022.repository.msg.SettlementDetails64.Priority,
-					com.tools20022.repository.msg.SettlementDetails3.Priority, com.tools20022.repository.msg.SettlementDetails16.Priority, com.tools20022.repository.msg.SettlementDetails31.Priority,
-					com.tools20022.repository.msg.SettlementDetails40.Priority, com.tools20022.repository.msg.SettlementDetails62.Priority, com.tools20022.repository.msg.SettlementDetails63.Priority,
-					com.tools20022.repository.msg.RequestDetails1.Priority, com.tools20022.repository.msg.RequestDetails2.Priority, com.tools20022.repository.msg.RequestDetails6.Priority,
-					com.tools20022.repository.msg.RequestDetails7.Priority, com.tools20022.repository.msg.RequestDetails8.Priority, com.tools20022.repository.msg.RequestDetails9.Priority,
-					com.tools20022.repository.msg.RequestDetails11.Priority, com.tools20022.repository.msg.RequestDetails12.Priority, com.tools20022.repository.msg.SettlementDetails6.Priority,
-					com.tools20022.repository.msg.SettlementDetails20.Priority, com.tools20022.repository.msg.SettlementDetails24.Priority, com.tools20022.repository.msg.SettlementDetails33.Priority,
-					com.tools20022.repository.msg.SettlementDetails45.Priority, com.tools20022.repository.msg.SettlementDetails54.Priority, com.tools20022.repository.msg.SettlementDetails1.Priority,
-					com.tools20022.repository.msg.SettlementDetails19.Priority, com.tools20022.repository.msg.SettlementDetails22.Priority, com.tools20022.repository.msg.SettlementDetails35.Priority,
-					com.tools20022.repository.msg.SettlementDetails42.Priority, com.tools20022.repository.msg.SettlementDetails52.Priority, com.tools20022.repository.choice.PriorityNumeric3Choice.Numeric,
-					com.tools20022.repository.choice.PriorityNumeric3Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails43.Priority, com.tools20022.repository.msg.IntraPositionDetails1.Priority,
-					com.tools20022.repository.msg.IntraPositionDetails11.Priority, com.tools20022.repository.msg.SettlementDetails5.Priority, com.tools20022.repository.msg.SettlementDetails26.Priority,
-					com.tools20022.repository.msg.SettlementDetails65.Priority, com.tools20022.repository.msg.SettlementDetails15.Priority, com.tools20022.repository.msg.SettlementDetails36.Priority,
-					com.tools20022.repository.msg.IntraPositionDetails7.Priority, com.tools20022.repository.msg.IntraPositionDetails16.Priority, com.tools20022.repository.msg.IntraPositionDetails21.Priority,
-					com.tools20022.repository.msg.IntraPositionDetails25.Priority, com.tools20022.repository.msg.SettlementDetails67.Priority, com.tools20022.repository.msg.SettlementDetails70.Priority,
-					com.tools20022.repository.msg.SettlementDetails71.Priority, com.tools20022.repository.msg.SettlementDetails72.Priority, com.tools20022.repository.msg.RequestDetails13.Priority,
-					com.tools20022.repository.msg.SettlementDetails81.Priority, com.tools20022.repository.msg.SettlementDetails76.Priority, com.tools20022.repository.msg.SettlementDetails80.Priority,
-					com.tools20022.repository.msg.SettlementDetails78.Priority, com.tools20022.repository.msg.SettlementDetails77.Priority, com.tools20022.repository.msg.RequestDetails14.Priority,
-					com.tools20022.repository.msg.IntraPositionDetails33.Priority, com.tools20022.repository.msg.SettlementDetails93.Priority, com.tools20022.repository.msg.RequestDetails15.Priority,
-					com.tools20022.repository.msg.SettlementDetails90.Priority, com.tools20022.repository.msg.SettlementDetails96.Priority, com.tools20022.repository.msg.SettlementDetails97.Priority,
-					com.tools20022.repository.msg.SettlementDetails101.Priority, com.tools20022.repository.msg.SettlementDetails105.Priority, com.tools20022.repository.msg.SettlementDetails106.Priority,
-					com.tools20022.repository.msg.SettlementDetails104.Priority, com.tools20022.repository.msg.SettlementDetails111.Priority, com.tools20022.repository.msg.RequestDetails16.Priority,
-					com.tools20022.repository.msg.IntraPositionDetails36.Priority, com.tools20022.repository.msg.SettlementDetails112.Priority, com.tools20022.repository.msg.SettlementDetails110.Priority,
-					com.tools20022.repository.msg.SettlementDetails128.Priority, com.tools20022.repository.msg.SettlementDetails120.Priority, com.tools20022.repository.msg.SettlementDetails119.Priority,
-					com.tools20022.repository.msg.SettlementDetails134.Priority, com.tools20022.repository.msg.SettlementDetails137.Priority, com.tools20022.repository.msg.SettlementDetails132.Priority);
-			elementContext_lazy = () -> Obligation.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails9.mmPriority, com.tools20022.repository.msg.SettlementDetails17.mmPriority, com.tools20022.repository.msg.SettlementDetails30.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails32.mmPriority, com.tools20022.repository.msg.SettlementDetails60.mmPriority, com.tools20022.repository.msg.SettlementDetails64.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails3.mmPriority, com.tools20022.repository.msg.SettlementDetails16.mmPriority, com.tools20022.repository.msg.SettlementDetails31.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails40.mmPriority, com.tools20022.repository.msg.SettlementDetails62.mmPriority, com.tools20022.repository.msg.SettlementDetails63.mmPriority,
+					com.tools20022.repository.msg.RequestDetails1.mmPriority, com.tools20022.repository.msg.RequestDetails2.mmPriority, com.tools20022.repository.msg.RequestDetails6.mmPriority,
+					com.tools20022.repository.msg.RequestDetails7.mmPriority, com.tools20022.repository.msg.RequestDetails8.mmPriority, com.tools20022.repository.msg.RequestDetails9.mmPriority,
+					com.tools20022.repository.msg.RequestDetails11.mmPriority, com.tools20022.repository.msg.RequestDetails12.mmPriority, com.tools20022.repository.msg.SettlementDetails6.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails20.mmPriority, com.tools20022.repository.msg.SettlementDetails24.mmPriority, com.tools20022.repository.msg.SettlementDetails33.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails45.mmPriority, com.tools20022.repository.msg.SettlementDetails54.mmPriority, com.tools20022.repository.msg.SettlementDetails1.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails19.mmPriority, com.tools20022.repository.msg.SettlementDetails22.mmPriority, com.tools20022.repository.msg.SettlementDetails35.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails42.mmPriority, com.tools20022.repository.msg.SettlementDetails52.mmPriority, com.tools20022.repository.choice.PriorityNumeric3Choice.mmNumeric,
+					com.tools20022.repository.choice.PriorityNumeric3Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails43.mmPriority, com.tools20022.repository.msg.IntraPositionDetails1.mmPriority,
+					com.tools20022.repository.msg.IntraPositionDetails11.mmPriority, com.tools20022.repository.msg.SettlementDetails5.mmPriority, com.tools20022.repository.msg.SettlementDetails26.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails65.mmPriority, com.tools20022.repository.msg.SettlementDetails15.mmPriority, com.tools20022.repository.msg.SettlementDetails36.mmPriority,
+					com.tools20022.repository.msg.IntraPositionDetails7.mmPriority, com.tools20022.repository.msg.IntraPositionDetails16.mmPriority, com.tools20022.repository.msg.IntraPositionDetails21.mmPriority,
+					com.tools20022.repository.msg.IntraPositionDetails25.mmPriority, com.tools20022.repository.msg.SettlementDetails67.mmPriority, com.tools20022.repository.msg.SettlementDetails70.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails71.mmPriority, com.tools20022.repository.msg.SettlementDetails72.mmPriority, com.tools20022.repository.msg.RequestDetails13.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails81.mmPriority, com.tools20022.repository.msg.SettlementDetails76.mmPriority, com.tools20022.repository.msg.SettlementDetails80.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails78.mmPriority, com.tools20022.repository.msg.SettlementDetails77.mmPriority, com.tools20022.repository.msg.RequestDetails14.mmPriority,
+					com.tools20022.repository.msg.IntraPositionDetails33.mmPriority, com.tools20022.repository.msg.SettlementDetails93.mmPriority, com.tools20022.repository.msg.RequestDetails15.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails90.mmPriority, com.tools20022.repository.msg.SettlementDetails96.mmPriority, com.tools20022.repository.msg.SettlementDetails97.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails101.mmPriority, com.tools20022.repository.msg.SettlementDetails105.mmPriority, com.tools20022.repository.msg.SettlementDetails106.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails104.mmPriority, com.tools20022.repository.msg.SettlementDetails111.mmPriority, com.tools20022.repository.msg.RequestDetails16.mmPriority,
+					com.tools20022.repository.msg.IntraPositionDetails36.mmPriority, com.tools20022.repository.msg.SettlementDetails112.mmPriority, com.tools20022.repository.msg.SettlementDetails110.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails128.mmPriority, com.tools20022.repository.msg.SettlementDetails120.mmPriority, com.tools20022.repository.msg.SettlementDetails119.mmPriority,
+					com.tools20022.repository.msg.SettlementDetails134.mmPriority, com.tools20022.repository.msg.SettlementDetails137.mmPriority, com.tools20022.repository.msg.SettlementDetails132.mmPriority);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Trade trade;
 	/**
 	 * Specifies the trade which originates the obligation to deliver a product,
 	 * cash or securities..
@@ -1781,8 +1810,8 @@ public class Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#Obligation
-	 * Trade.Obligation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmObligation
+	 * Trade.mmObligation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1806,20 +1835,21 @@ public class Obligation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Trade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Obligation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Specifies the trade which originates the obligation to deliver a product, cash or securities..";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Trade.Obligation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmObligation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
+	protected TransactionRisk transactionRisk;
 	/**
 	 * Transaction risk calculated per obligation type.
 	 * <p>
@@ -1828,8 +1858,8 @@ public class Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TransactionRisk#Obligation
-	 * TransactionRisk.Obligation}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransactionRisk#mmObligation
+	 * TransactionRisk.mmObligation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1852,20 +1882,21 @@ public class Obligation {
 	 * definition} = "Transaction risk calculated per obligation type."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TransactionRisk = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransactionRisk = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Obligation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionRisk";
 			definition = "Transaction risk calculated per obligation type.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.TransactionRisk.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TransactionRisk.Obligation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.TransactionRisk.mmObligation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TransactionRisk.mmObject();
 		}
 	};
+	protected Obligation parentObligation;
 	/**
 	 * Obligation which is divided into several sub-obligations.
 	 * <p>
@@ -1874,8 +1905,8 @@ public class Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#SubObligation
-	 * Obligation.SubObligation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmSubObligation
+	 * Obligation.mmSubObligation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1899,20 +1930,21 @@ public class Obligation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ParentObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmParentObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Obligation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ParentObligation";
 			definition = "Obligation which is divided into several sub-obligations.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Obligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.SubObligation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.mmSubObligation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Obligation> subObligation;
 	/**
 	 * Specifies an obligation resulting from another existing obligation, for
 	 * instance each leg of a financing agreement is a sub-obligation of the
@@ -1923,8 +1955,8 @@ public class Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#ParentObligation
-	 * Obligation.ParentObligation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmParentObligation
+	 * Obligation.mmParentObligation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1949,19 +1981,20 @@ public class Obligation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SubObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSubObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Obligation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SubObligation";
 			definition = "Specifies an obligation resulting from another existing obligation, for instance each leg of a financing agreement is a sub-obligation of the global financing obligation.";
 			minOccurs = 0;
-			type_lazy = () -> Obligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.ParentObligation;
+			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.mmParentObligation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 		}
 	};
+	protected ObligationFulfilment offset;
 	/**
 	 * Specifies the method used to settle a specific obligation.
 	 * <p>
@@ -1970,8 +2003,8 @@ public class Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#ObligationOffset
-	 * ObligationFulfilment.ObligationOffset}</li>
+	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmObligationOffset
+	 * ObligationFulfilment.mmObligationOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1996,20 +2029,21 @@ public class Obligation {
 	 * "Specifies the method used to settle a specific obligation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Offset = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOffset = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Obligation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Offset";
 			definition = "Specifies the method used to settle a specific obligation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ObligationFulfilment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.ObligationOffset;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmObligationOffset;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmObject();
 		}
 	};
+	protected ObligationFulfilment originalObligationProcess;
 	/**
 	 * Obligation fulfilment process which did not extinguish the obligation but
 	 * replaced it by a new one, for instance in case of netting.
@@ -2019,8 +2053,8 @@ public class Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#ResultingObligation
-	 * ObligationFulfilment.ResultingObligation}</li>
+	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmResultingObligation
+	 * ObligationFulfilment.mmResultingObligation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2046,20 +2080,21 @@ public class Obligation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OriginalObligationProcess = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOriginalObligationProcess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Obligation.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OriginalObligationProcess";
 			definition = "Obligation fulfilment process which did not extinguish the obligation but replaced it by a new one, for instance in case of netting.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ObligationFulfilment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.ResultingObligation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmResultingObligation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmObject();
 		}
 	};
+	protected ExposureTypeV2Code exposureType;
 	/**
 	 * Type of exposure related to this obligation.
 	 * <p>
@@ -2070,42 +2105,42 @@ public class Obligation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExposureTypeV2Code
 	 * ExposureTypeV2Code}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#ExposureType
-	 * SettlementDetails43.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#ExposureType
-	 * AggregateBalancePerSafekeepingPlace24.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25#ExposureType
-	 * AggregateBalancePerSafekeepingPlace25.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26#ExposureType
-	 * AggregateBalancePerSafekeepingPlace26.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27#ExposureType
-	 * AggregateBalancePerSafekeepingPlace27.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#ExposureType
-	 * AggregateBalancePerSafekeepingPlace28.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29#ExposureType
-	 * AggregateBalancePerSafekeepingPlace29.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31#ExposureType
-	 * AggregateBalancePerSafekeepingPlace31.ExposureType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30#ExposureType
-	 * AggregateBalancePerSafekeepingPlace30.ExposureType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#mmExposureType
+	 * SettlementDetails43.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmExposureType
+	 * AggregateBalancePerSafekeepingPlace24.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25#mmExposureType
+	 * AggregateBalancePerSafekeepingPlace25.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26#mmExposureType
+	 * AggregateBalancePerSafekeepingPlace26.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27#mmExposureType
+	 * AggregateBalancePerSafekeepingPlace27.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmExposureType
+	 * AggregateBalancePerSafekeepingPlace28.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29#mmExposureType
+	 * AggregateBalancePerSafekeepingPlace29.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31#mmExposureType
+	 * AggregateBalancePerSafekeepingPlace31.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30#mmExposureType
+	 * AggregateBalancePerSafekeepingPlace30.mmExposureType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2117,20 +2152,20 @@ public class Obligation {
 	 * definition} = "Type of exposure related to this obligation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ExposureType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmExposureType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails43.ExposureType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.ExposureType,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25.ExposureType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26.ExposureType,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27.ExposureType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.ExposureType,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29.ExposureType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31.ExposureType,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30.ExposureType);
-			elementContext_lazy = () -> Obligation.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails43.mmExposureType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmExposureType,
+					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25.mmExposureType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26.mmExposureType,
+					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27.mmExposureType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmExposureType,
+					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29.mmExposureType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31.mmExposureType,
+					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30.mmExposureType);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExposureType";
 			definition = "Type of exposure related to this obligation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExposureTypeV2Code.mmObject();
 		}
 	};
@@ -2138,21 +2173,101 @@ public class Obligation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Obligation";
 				definition = "Specifies the assets (quantity of securities, goods, services, and cash amounts) that have to be delivered.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.Obligation, com.tools20022.repository.entity.Obligation.ParentObligation, com.tools20022.repository.entity.Obligation.SubObligation,
-						com.tools20022.repository.entity.ObligationFulfilment.ObligationOffset, com.tools20022.repository.entity.ObligationFulfilment.ResultingObligation, com.tools20022.repository.entity.TransactionRisk.Obligation);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetObligation1.ObligationIdentification);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmObligation, com.tools20022.repository.entity.Obligation.mmParentObligation, com.tools20022.repository.entity.Obligation.mmSubObligation,
+						com.tools20022.repository.entity.ObligationFulfilment.mmObligationOffset, com.tools20022.repository.entity.ObligationFulfilment.mmResultingObligation, com.tools20022.repository.entity.TransactionRisk.mmObligation);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetObligation1.mmObligationIdentification);
 				subType_lazy = () -> Arrays.asList(PaymentObligation.mmObject(), SecuritiesDeliveryObligation.mmObject(), ProductDeliveryObligation.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Obligation.RequestedSettlementDate, com.tools20022.repository.entity.Obligation.RequestedSettlementAmount,
-						com.tools20022.repository.entity.Obligation.Priority, com.tools20022.repository.entity.Obligation.Trade, com.tools20022.repository.entity.Obligation.TransactionRisk,
-						com.tools20022.repository.entity.Obligation.ParentObligation, com.tools20022.repository.entity.Obligation.SubObligation, com.tools20022.repository.entity.Obligation.Offset,
-						com.tools20022.repository.entity.Obligation.OriginalObligationProcess, com.tools20022.repository.entity.Obligation.ExposureType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate, com.tools20022.repository.entity.Obligation.mmRequestedSettlementAmount,
+						com.tools20022.repository.entity.Obligation.mmPriority, com.tools20022.repository.entity.Obligation.mmTrade, com.tools20022.repository.entity.Obligation.mmTransactionRisk,
+						com.tools20022.repository.entity.Obligation.mmParentObligation, com.tools20022.repository.entity.Obligation.mmSubObligation, com.tools20022.repository.entity.Obligation.mmOffset,
+						com.tools20022.repository.entity.Obligation.mmOriginalObligationProcess, com.tools20022.repository.entity.Obligation.mmExposureType);
 				derivationComponent_lazy = () -> Arrays.asList(PriorityNumeric3Choice.mmObject(), NetObligation1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getRequestedSettlementDate() {
+		return requestedSettlementDate;
+	}
+
+	public void setRequestedSettlementDate(ISODateTime requestedSettlementDate) {
+		this.requestedSettlementDate = requestedSettlementDate;
+	}
+
+	public CurrencyAndAmount getRequestedSettlementAmount() {
+		return requestedSettlementAmount;
+	}
+
+	public void setRequestedSettlementAmount(CurrencyAndAmount requestedSettlementAmount) {
+		this.requestedSettlementAmount = requestedSettlementAmount;
+	}
+
+	public Max4AlphaNumericText getPriority() {
+		return priority;
+	}
+
+	public void setPriority(Max4AlphaNumericText priority) {
+		this.priority = priority;
+	}
+
+	public Trade getTrade() {
+		return trade;
+	}
+
+	public void setTrade(com.tools20022.repository.entity.Trade trade) {
+		this.trade = trade;
+	}
+
+	public TransactionRisk getTransactionRisk() {
+		return transactionRisk;
+	}
+
+	public void setTransactionRisk(com.tools20022.repository.entity.TransactionRisk transactionRisk) {
+		this.transactionRisk = transactionRisk;
+	}
+
+	public Obligation getParentObligation() {
+		return parentObligation;
+	}
+
+	public void setParentObligation(com.tools20022.repository.entity.Obligation parentObligation) {
+		this.parentObligation = parentObligation;
+	}
+
+	public List<Obligation> getSubObligation() {
+		return subObligation;
+	}
+
+	public void setSubObligation(List<com.tools20022.repository.entity.Obligation> subObligation) {
+		this.subObligation = subObligation;
+	}
+
+	public ObligationFulfilment getOffset() {
+		return offset;
+	}
+
+	public void setOffset(com.tools20022.repository.entity.ObligationFulfilment offset) {
+		this.offset = offset;
+	}
+
+	public ObligationFulfilment getOriginalObligationProcess() {
+		return originalObligationProcess;
+	}
+
+	public void setOriginalObligationProcess(com.tools20022.repository.entity.ObligationFulfilment originalObligationProcess) {
+		this.originalObligationProcess = originalObligationProcess;
+	}
+
+	public ExposureTypeV2Code getExposureType() {
+		return exposureType;
+	}
+
+	public void setExposureType(ExposureTypeV2Code exposureType) {
+		this.exposureType = exposureType;
 	}
 }

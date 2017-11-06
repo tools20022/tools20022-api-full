@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -68,39 +69,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#ReportIdentification
- * ErrorReportV03.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmReportIdentification
+ * ErrorReportV03.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#TransactionIdentification
- * ErrorReportV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmTransactionIdentification
+ * ErrorReportV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#EstablishedBaselineIdentification
- * ErrorReportV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmEstablishedBaselineIdentification
+ * ErrorReportV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#TransactionStatus
- * ErrorReportV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmTransactionStatus
+ * ErrorReportV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#UserTransactionReference
- * ErrorReportV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmUserTransactionReference
+ * ErrorReportV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#RejectedMessageReference
- * ErrorReportV03.RejectedMessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmRejectedMessageReference
+ * ErrorReportV03.mmRejectedMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#NumberOfErrors
- * ErrorReportV03.NumberOfErrors}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmNumberOfErrors
+ * ErrorReportV03.mmNumberOfErrors}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#ErrorDescription
- * ErrorReportV03.ErrorDescription}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmErrorDescription
+ * ErrorReportV03.mmErrorDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#RequestForAction
- * ErrorReportV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmRequestForAction
+ * ErrorReportV03.mmRequestForAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#identifier
- * ErrorReportV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.016.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,6 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ErrorReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 reportIdentification;
 	/**
 	 * Identifies the report.
 	 * <p>
@@ -139,17 +139,18 @@ public class ErrorReportV03 {
 	 * definition} = "Identifies the report. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Identifies the report. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -177,17 +178,18 @@ public class ErrorReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * baseline when it is established.
@@ -214,17 +216,18 @@ public class ErrorReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 	};
+	protected TransactionStatus4 transactionStatus;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -249,17 +252,18 @@ public class ErrorReportV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 	};
+	protected DocumentIdentification5 userTransactionReference;
 	/**
 	 * Reference to the transaction for the financial institution which is the
 	 * sender of the rejected message.
@@ -286,17 +290,18 @@ public class ErrorReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for the financial institution which is the sender of the rejected message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 	};
+	protected MessageIdentification1 rejectedMessageReference;
 	/**
 	 * Reference to the identification of the rejected message.
 	 * <p>
@@ -321,17 +326,18 @@ public class ErrorReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RejectedMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRejectedMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctdMsgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedMessageReference";
 			definition = "Reference to the identification of the rejected message. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected Count1 numberOfErrors;
 	/**
 	 * Specifies the total number of errors identified in the rejected message.
 	 * <p>
@@ -355,17 +361,18 @@ public class ErrorReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NumberOfErrors = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNumberOfErrors = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NbOfErrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfErrors";
 			definition = "Specifies the total number of errors identified in the rejected message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Count1.mmObject();
 		}
 	};
+	protected List<ValidationResult3> errorDescription;
 	/**
 	 * Describes the error that is the cause of the rejection.
 	 * <p>
@@ -389,7 +396,7 @@ public class ErrorReportV03 {
 	 * definition} = "Describes the error that is the cause of the rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ErrorDescription = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmErrorDescription = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ErrDesc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -399,6 +406,7 @@ public class ErrorReportV03 {
 			complexType_lazy = () -> ValidationResult3.mmObject();
 		}
 	};
+	protected PendingActivity2 requestForAction;
 	/**
 	 * Information on the next processing step required.
 	 * <p>
@@ -422,42 +430,15 @@ public class ErrorReportV03 {
 	 * definition} = "Information on the next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "016"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "016";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -471,13 +452,92 @@ public class ErrorReportV03 {
 				rootElement = "Document";
 				xmlTag = "ErrRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ErrorReportV03.ReportIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.TransactionIdentification,
-						com.tools20022.repository.area.tsmt.ErrorReportV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.ErrorReportV03.UserTransactionReference, com.tools20022.repository.area.tsmt.ErrorReportV03.RejectedMessageReference,
-						com.tools20022.repository.area.tsmt.ErrorReportV03.NumberOfErrors, com.tools20022.repository.area.tsmt.ErrorReportV03.ErrorDescription, com.tools20022.repository.area.tsmt.ErrorReportV03.RequestForAction);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.ErrorReportV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ErrorReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.ErrorReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.ErrorReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.ErrorReportV03.mmRejectedMessageReference,
+						com.tools20022.repository.area.tsmt.ErrorReportV03.mmNumberOfErrors, com.tools20022.repository.area.tsmt.ErrorReportV03.mmErrorDescription, com.tools20022.repository.area.tsmt.ErrorReportV03.mmRequestForAction);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "016";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(MessageIdentification1 reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DocumentIdentification3 getEstablishedBaselineIdentification() {
+		return establishedBaselineIdentification;
+	}
+
+	public void setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
+		this.establishedBaselineIdentification = establishedBaselineIdentification;
+	}
+
+	public TransactionStatus4 getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(TransactionStatus4 transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public DocumentIdentification5 getUserTransactionReference() {
+		return userTransactionReference;
+	}
+
+	public void setUserTransactionReference(DocumentIdentification5 userTransactionReference) {
+		this.userTransactionReference = userTransactionReference;
+	}
+
+	public MessageIdentification1 getRejectedMessageReference() {
+		return rejectedMessageReference;
+	}
+
+	public void setRejectedMessageReference(MessageIdentification1 rejectedMessageReference) {
+		this.rejectedMessageReference = rejectedMessageReference;
+	}
+
+	public Count1 getNumberOfErrors() {
+		return numberOfErrors;
+	}
+
+	public void setNumberOfErrors(Count1 numberOfErrors) {
+		this.numberOfErrors = numberOfErrors;
+	}
+
+	public List<ValidationResult3> getErrorDescription() {
+		return errorDescription;
+	}
+
+	public void setErrorDescription(List<ValidationResult3> errorDescription) {
+		this.errorDescription = errorDescription;
+	}
+
+	public PendingActivity2 getRequestForAction() {
+		return requestForAction;
+	}
+
+	public void setRequestForAction(PendingActivity2 requestForAction) {
+		this.requestForAction = requestForAction;
 	}
 }

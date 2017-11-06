@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -69,36 +70,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#MessageIdentification
- * SwitchOrderConfirmationCancellationInstructionV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmMessageIdentification
+ * SwitchOrderConfirmationCancellationInstructionV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#PoolReference
- * SwitchOrderConfirmationCancellationInstructionV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmPoolReference
+ * SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#PreviousReference
- * SwitchOrderConfirmationCancellationInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmPreviousReference
+ * SwitchOrderConfirmationCancellationInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#RelatedReference
- * SwitchOrderConfirmationCancellationInstructionV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmRelatedReference
+ * SwitchOrderConfirmationCancellationInstructionV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#AmendmentIndicator
- * SwitchOrderConfirmationCancellationInstructionV02.AmendmentIndicator}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmAmendmentIndicator
+ * SwitchOrderConfirmationCancellationInstructionV02.mmAmendmentIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#MasterReference
- * SwitchOrderConfirmationCancellationInstructionV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmMasterReference
+ * SwitchOrderConfirmationCancellationInstructionV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#OrderReferences
- * SwitchOrderConfirmationCancellationInstructionV02.OrderReferences}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmOrderReferences
+ * SwitchOrderConfirmationCancellationInstructionV02.mmOrderReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#CopyDetails
- * SwitchOrderConfirmationCancellationInstructionV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmCopyDetails
+ * SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#identifier
- * SwitchOrderConfirmationCancellationInstructionV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.055.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,6 +117,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SwitchOrderConfirmationCancellationInstructionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies the message from a business
 	 * application standpoint.
@@ -145,22 +145,24 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#MessageIdentification
-	 * SwitchOrderConfirmationCancellationInstructionV01.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#mmMessageIdentification
+	 * SwitchOrderConfirmationCancellationInstructionV01.mmMessageIdentification
+	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies the message from a business application standpoint. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.MessageIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference9 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -185,22 +187,23 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#PoolReference
-	 * SwitchOrderConfirmationCancellationInstructionV01.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#mmPoolReference
+	 * SwitchOrderConfirmationCancellationInstructionV01.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.PoolReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmPoolReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference9.mmObject();
 		}
 	};
+	protected List<AdditionalReference8> previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -225,21 +228,22 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#PreviousReference
-	 * SwitchOrderConfirmationCancellationInstructionV01.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#mmPreviousReference
+	 * SwitchOrderConfirmationCancellationInstructionV01.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.PreviousReference;
+			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmPreviousReference;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference8.mmObject();
 		}
 	};
+	protected AdditionalReference8 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -265,22 +269,23 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#RelatedReference
-	 * SwitchOrderConfirmationCancellationInstructionV01.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#mmRelatedReference
+	 * SwitchOrderConfirmationCancellationInstructionV01.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.RelatedReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmRelatedReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference8.mmObject();
 		}
 	};
+	protected YesNoIndicator amendmentIndicator;
 	/**
 	 * Indicates whether a confirmation amendment message will follow the
 	 * confirmation cancellation instruction or not.
@@ -307,17 +312,18 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AmendmentIndicator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAmendmentIndicator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AmdmntInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicator";
 			definition = "Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max35Text masterReference;
 	/**
 	 * Reference assigned to a set of orders or trades in order to link them
 	 * together.
@@ -343,17 +349,18 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<InvestmentFundOrder11> orderReferences;
 	/**
 	 * Identification of the individual order confirmation to be cancelled.
 	 * <p>
@@ -378,7 +385,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	 * "Identification of the individual order confirmation to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OrderReferences = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOrderReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrdrRefs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,6 +395,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 			complexType_lazy = () -> InvestmentFundOrder11.mmObject();
 		}
 	};
+	protected CopyInformation4 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -413,47 +421,20 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#CopyDetails
-	 * SwitchOrderConfirmationCancellationInstructionV01.CopyDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#mmCopyDetails
+	 * SwitchOrderConfirmationCancellationInstructionV01.mmCopyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.CopyDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmCopyDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation4.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "055"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "055";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -468,14 +449,85 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 				rootElement = "Document";
 				xmlTag = "SwtchOrdrConfCxlInstr";
 				businessArea_lazy = () -> SecuritiesTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.MessageIdentification,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.PoolReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.PreviousReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.RelatedReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.AmendmentIndicator,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.MasterReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.OrderReferences,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.CopyDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmRelatedReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmAmendmentIndicator,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmMasterReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmOrderReferences,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "055";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference9 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference9 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public List<AdditionalReference8> getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(List<AdditionalReference8> previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference8 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference8 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public YesNoIndicator getAmendmentIndicator() {
+		return amendmentIndicator;
+	}
+
+	public void setAmendmentIndicator(YesNoIndicator amendmentIndicator) {
+		this.amendmentIndicator = amendmentIndicator;
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public List<InvestmentFundOrder11> getOrderReferences() {
+		return orderReferences;
+	}
+
+	public void setOrderReferences(List<InvestmentFundOrder11> orderReferences) {
+		this.orderReferences = orderReferences;
+	}
+
+	public CopyInformation4 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation4 copyDetails) {
+		this.copyDetails = copyDetails;
 	}
 }

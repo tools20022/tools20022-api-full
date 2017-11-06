@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#SoftwareModule
- * DataSetCategory2Code.SoftwareModule}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#mmSoftwareModule
+ * DataSetCategory2Code.mmSoftwareModule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#VendorParameters
- * DataSetCategory2Code.VendorParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#mmVendorParameters
+ * DataSetCategory2Code.mmVendorParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#AcquirerParameters
- * DataSetCategory2Code.AcquirerParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#mmAcquirerParameters
+ * DataSetCategory2Code.mmAcquirerParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#ApplicationParameters
- * DataSetCategory2Code.ApplicationParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#mmApplicationParameters
+ * DataSetCategory2Code.mmApplicationParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#MerchantParameters
- * DataSetCategory2Code.MerchantParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#mmMerchantParameters
+ * DataSetCategory2Code.mmMerchantParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#BatchCapture
- * DataSetCategory2Code.BatchCapture}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#mmBatchCapture
+ * DataSetCategory2Code.mmBatchCapture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#CaptureResponse
- * DataSetCategory2Code.CaptureResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#mmCaptureResponse
+ * DataSetCategory2Code.mmCaptureResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#StatusReport
- * DataSetCategory2Code.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#mmStatusReport
+ * DataSetCategory2Code.mmStatusReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#DelegationData
- * DataSetCategory2Code.DelegationData}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#mmDelegationData
+ * DataSetCategory2Code.mmDelegationData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#ManagementPlan
- * DataSetCategory2Code.ManagementPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory2Code#mmManagementPlan
+ * DataSetCategory2Code.mmManagementPlan}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 * name} = "SoftwareModule"</li>
 	 * </ul>
 	 */
-	public static final MMCode SoftwareModule = new MMCode() {
+	public static final MMCode mmSoftwareModule = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftwareModule";
@@ -128,7 +128,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 * name} = "VendorParameters"</li>
 	 * </ul>
 	 */
-	public static final MMCode VendorParameters = new MMCode() {
+	public static final MMCode mmVendorParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorParameters";
@@ -151,7 +151,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 * name} = "AcquirerParameters"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcquirerParameters = new MMCode() {
+	public static final MMCode mmAcquirerParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerParameters";
@@ -174,7 +174,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 * name} = "ApplicationParameters"</li>
 	 * </ul>
 	 */
-	public static final MMCode ApplicationParameters = new MMCode() {
+	public static final MMCode mmApplicationParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParameters";
@@ -197,7 +197,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 * name} = "MerchantParameters"</li>
 	 * </ul>
 	 */
-	public static final MMCode MerchantParameters = new MMCode() {
+	public static final MMCode mmMerchantParameters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantParameters";
@@ -220,7 +220,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 * name} = "BatchCapture"</li>
 	 * </ul>
 	 */
-	public static final MMCode BatchCapture = new MMCode() {
+	public static final MMCode mmBatchCapture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchCapture";
@@ -243,7 +243,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 * name} = "CaptureResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode CaptureResponse = new MMCode() {
+	public static final MMCode mmCaptureResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureResponse";
@@ -266,7 +266,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 * name} = "StatusReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode StatusReport = new MMCode() {
+	public static final MMCode mmStatusReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReport";
@@ -289,7 +289,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 * name} = "DelegationData"</li>
 	 * </ul>
 	 */
-	public static final MMCode DelegationData = new MMCode() {
+	public static final MMCode mmDelegationData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationData";
@@ -312,7 +312,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 * name} = "ManagementPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode ManagementPlan = new MMCode() {
+	public static final MMCode mmManagementPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManagementPlan";
@@ -323,15 +323,16 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SWPK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataSetCategory2Code";
 				definition = "Category of data set to transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetCategory2Code.SoftwareModule, com.tools20022.repository.codeset.DataSetCategory2Code.VendorParameters,
-						com.tools20022.repository.codeset.DataSetCategory2Code.AcquirerParameters, com.tools20022.repository.codeset.DataSetCategory2Code.ApplicationParameters,
-						com.tools20022.repository.codeset.DataSetCategory2Code.MerchantParameters, com.tools20022.repository.codeset.DataSetCategory2Code.BatchCapture, com.tools20022.repository.codeset.DataSetCategory2Code.CaptureResponse,
-						com.tools20022.repository.codeset.DataSetCategory2Code.StatusReport, com.tools20022.repository.codeset.DataSetCategory2Code.DelegationData, com.tools20022.repository.codeset.DataSetCategory2Code.ManagementPlan);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetCategory2Code.mmSoftwareModule, com.tools20022.repository.codeset.DataSetCategory2Code.mmVendorParameters,
+						com.tools20022.repository.codeset.DataSetCategory2Code.mmAcquirerParameters, com.tools20022.repository.codeset.DataSetCategory2Code.mmApplicationParameters,
+						com.tools20022.repository.codeset.DataSetCategory2Code.mmMerchantParameters, com.tools20022.repository.codeset.DataSetCategory2Code.mmBatchCapture,
+						com.tools20022.repository.codeset.DataSetCategory2Code.mmCaptureResponse, com.tools20022.repository.codeset.DataSetCategory2Code.mmStatusReport,
+						com.tools20022.repository.codeset.DataSetCategory2Code.mmDelegationData, com.tools20022.repository.codeset.DataSetCategory2Code.mmManagementPlan);
 				trace_lazy = () -> DataSetCategoryCode.mmObject();
 			}
 		});

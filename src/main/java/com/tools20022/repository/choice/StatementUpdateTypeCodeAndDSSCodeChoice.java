@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice#StatementUpdateTypeAsCode
- * StatementUpdateTypeCodeAndDSSCodeChoice.StatementUpdateTypeAsCode}</li>
+ * {@linkplain com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice#mmStatementUpdateTypeAsCode
+ * StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice#StatementUpdateTypeAsDSS
- * StatementUpdateTypeCodeAndDSSCodeChoice.StatementUpdateTypeAsDSS}</li>
+ * {@linkplain com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice#mmStatementUpdateTypeAsDSS
+ * StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsDSS}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementUpdateTypeCodeAndDSSCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected StatementUpdateTypeCode statementUpdateTypeAsCode;
 	/**
 	 * Update type expressed as a code.
 	 * <p>
@@ -87,7 +88,7 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 	 * definition} = "Update type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementUpdateTypeAsCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementUpdateTypeAsCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementUpdateTypeAsCode";
 			definition = "Update type expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateTypeCode.mmObject();
 		}
 	};
+	protected GenericIdentification7 statementUpdateTypeAsDSS;
 	/**
 	 * Update type expressed as a data source scheme and a code used within the
 	 * data source scheme.
@@ -131,7 +133,7 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementUpdateTypeAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementUpdateTypeAsDSS = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementUpdateTypeAsDSS";
 			definition = "Update type expressed as a data source scheme and a code used within the data source scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification7.mmObject();
 		}
 	};
@@ -148,14 +150,30 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.StatementUpdateTypeAsCode,
-						com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.StatementUpdateTypeAsDSS);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsCode,
+						com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsDSS);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementUpdateTypeCodeAndDSSCodeChoice";
 				definition = "Choice between formats for the update type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StatementUpdateTypeCode getStatementUpdateTypeAsCode() {
+		return statementUpdateTypeAsCode;
+	}
+
+	public void setStatementUpdateTypeAsCode(StatementUpdateTypeCode statementUpdateTypeAsCode) {
+		this.statementUpdateTypeAsCode = statementUpdateTypeAsCode;
+	}
+
+	public GenericIdentification7 getStatementUpdateTypeAsDSS() {
+		return statementUpdateTypeAsDSS;
+	}
+
+	public void setStatementUpdateTypeAsDSS(GenericIdentification7 statementUpdateTypeAsDSS) {
+		this.statementUpdateTypeAsDSS = statementUpdateTypeAsDSS;
 	}
 }

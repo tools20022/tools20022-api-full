@@ -31,11 +31,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BrokeredDealCode#BrokeredTransaction
- * BrokeredDealCode.BrokeredTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.BrokeredDealCode#mmBrokeredTransaction
+ * BrokeredDealCode.mmBrokeredTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BrokeredDealCode#BilateralTransaction
- * BrokeredDealCode.BilateralTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.BrokeredDealCode#mmBilateralTransaction
+ * BrokeredDealCode.mmBilateralTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,7 +88,7 @@ public class BrokeredDealCode {
 	 * "Transaction was arranged by a third party broking agent.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokeredTransaction = new MMCode() {
+	public static final MMCode mmBrokeredTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokeredTransaction";
@@ -119,7 +119,7 @@ public class BrokeredDealCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BilateralTransaction = new MMCode() {
+	public static final MMCode mmBilateralTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralTransaction";
@@ -132,11 +132,11 @@ public class BrokeredDealCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BrokeredDealCode";
 				definition = "Specifies whether the transaction is arranged via a third party broker or not.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BrokeredDealCode.BrokeredTransaction, com.tools20022.repository.codeset.BrokeredDealCode.BilateralTransaction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BrokeredDealCode.mmBrokeredTransaction, com.tools20022.repository.codeset.BrokeredDealCode.mmBilateralTransaction);
 				derivation_lazy = () -> Arrays.asList(BrokeredDeal1Code.mmObject());
 			}
 		});

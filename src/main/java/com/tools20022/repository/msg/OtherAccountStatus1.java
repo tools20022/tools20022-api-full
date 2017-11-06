@@ -32,10 +32,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAccountStatus1#Status
- * OtherAccountStatus1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherAccountStatus1#Reason
- * OtherAccountStatus1.Reason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAccountStatus1#mmStatus
+ * OtherAccountStatus1.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAccountStatus1#mmReason
+ * OtherAccountStatus1.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherAccountStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification36 status;
 	/**
 	 * Status of the account.
 	 * <p>
@@ -71,8 +72,8 @@ public class OtherAccountStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus#Status
-	 * AccountStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus#mmStatus
+	 * AccountStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -91,21 +92,22 @@ public class OtherAccountStatus1 {
 	 * definition} = "Status of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Status = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmStatus;
 			componentContext_lazy = () -> OtherAccountStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.Status;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification36.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
 		}
 	};
+	protected GenericIdentification36 reason;
 	/**
 	 * Reason for the status of the account.
 	 * <p>
@@ -118,8 +120,8 @@ public class OtherAccountStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,33 +140,49 @@ public class OtherAccountStatus1 {
 	 * definition} = "Reason for the status of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> OtherAccountStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the status of the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification36.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAccountStatus1.Status, com.tools20022.repository.msg.OtherAccountStatus1.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAccountStatus1.mmStatus, com.tools20022.repository.msg.OtherAccountStatus1.mmReason);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OtherAccountStatus1";
 				definition = "Status of an account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification36 getStatus() {
+		return status;
+	}
+
+	public void setStatus(com.tools20022.repository.msg.GenericIdentification36 status) {
+		this.status = status;
+	}
+
+	public GenericIdentification36 getReason() {
+		return reason;
+	}
+
+	public void setReason(com.tools20022.repository.msg.GenericIdentification36 reason) {
+		this.reason = reason;
 	}
 }

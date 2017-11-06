@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CreditDebitAmount1#Amount
- * CreditDebitAmount1.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditDebitAmount1#mmAmount
+ * CreditDebitAmount1.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditDebitAmount1#CreditDebitIndicator
- * CreditDebitAmount1.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditDebitAmount1#mmCreditDebitIndicator
+ * CreditDebitAmount1.mmCreditDebitIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditDebitAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Amount2Choice amount;
 	/**
 	 * Amount of money expressed in an eligible currency.
 	 * <p>
@@ -86,7 +87,7 @@ public class CreditDebitAmount1 {
 	 * definition} = "Amount of money expressed in an eligible currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CreditDebitAmount1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class CreditDebitAmount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money expressed in an eligible currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Specifies whether the amount of money is a debit or a credit.
 	 * <p>
@@ -128,7 +130,7 @@ public class CreditDebitAmount1 {
 	 * "Specifies whether the amount of money is a debit or a credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CreditDebitAmount1.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class CreditDebitAmount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the amount of money is a debit or a credit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class CreditDebitAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditDebitAmount1.Amount, com.tools20022.repository.msg.CreditDebitAmount1.CreditDebitIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditDebitAmount1.mmAmount, com.tools20022.repository.msg.CreditDebitAmount1.mmCreditDebitIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CreditDebitAmount1";
 				definition = "Specifies an amount of money as a debit or credit amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Amount2Choice getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Amount2Choice amount) {
+		this.amount = amount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
 	}
 }

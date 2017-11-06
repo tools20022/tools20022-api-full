@@ -30,27 +30,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#AccountingHoldings
- * MessageTypeCode.AccountingHoldings}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmAccountingHoldings
+ * MessageTypeCode.mmAccountingHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#CustodyHoldings
- * MessageTypeCode.CustodyHoldings}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmCustodyHoldings
+ * MessageTypeCode.mmCustodyHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#InvestmentFundTransactions
- * MessageTypeCode.InvestmentFundTransactions}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageTypeCode#Estimated
- * MessageTypeCode.Estimated}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmInvestmentFundTransactions
+ * MessageTypeCode.mmInvestmentFundTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#EstimatedDetailed
- * MessageTypeCode.EstimatedDetailed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageTypeCode#Confirmed
- * MessageTypeCode.Confirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmEstimated
+ * MessageTypeCode.mmEstimated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#CornfirmedDetailed
- * MessageTypeCode.CornfirmedDetailed}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmEstimatedDetailed
+ * MessageTypeCode.mmEstimatedDetailed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#Transparency
- * MessageTypeCode.Transparency}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmConfirmed
+ * MessageTypeCode.mmConfirmed}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmCornfirmedDetailed
+ * MessageTypeCode.mmCornfirmedDetailed}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmTransparency
+ * MessageTypeCode.mmTransparency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -65,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -107,7 +109,7 @@ public class MessageTypeCode {
 	 * definition} = "Accounting Statement of Holdings (semt 003)."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountingHoldings = new MMCode() {
+	public static final MMCode mmAccountingHoldings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountingHoldings";
@@ -137,7 +139,7 @@ public class MessageTypeCode {
 	 * definition} = "Custody Statement of Holdings (semt 002)."</li>
 	 * </ul>
 	 */
-	public static final MMCode CustodyHoldings = new MMCode() {
+	public static final MMCode mmCustodyHoldings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyHoldings";
@@ -167,7 +169,7 @@ public class MessageTypeCode {
 	 * definition} = "Statement of Investment Fund Transactions (semt 006)."</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentFundTransactions = new MMCode() {
+	public static final MMCode mmInvestmentFundTransactions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundTransactions";
@@ -197,7 +199,7 @@ public class MessageTypeCode {
 	 * definition} = "Fund estimated cash forecast report (camt.040)."</li>
 	 * </ul>
 	 */
-	public static final MMCode Estimated = new MMCode() {
+	public static final MMCode mmEstimated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
@@ -227,7 +229,7 @@ public class MessageTypeCode {
 	 * definition} = "Fund detailed estimated cash forecast Report (042)"</li>
 	 * </ul>
 	 */
-	public static final MMCode EstimatedDetailed = new MMCode() {
+	public static final MMCode mmEstimatedDetailed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedDetailed";
@@ -257,7 +259,7 @@ public class MessageTypeCode {
 	 * definition} = "Fund confirmed cash forecast report (camt.041)."</li>
 	 * </ul>
 	 */
-	public static final MMCode Confirmed = new MMCode() {
+	public static final MMCode mmConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmed";
@@ -287,7 +289,7 @@ public class MessageTypeCode {
 	 * definition} = "Fund detailed confirmed cash forecast report (camt.043)"</li>
 	 * </ul>
 	 */
-	public static final MMCode CornfirmedDetailed = new MMCode() {
+	public static final MMCode mmCornfirmedDetailed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CornfirmedDetailed";
@@ -317,7 +319,7 @@ public class MessageTypeCode {
 	 * definition} = "Securities Balance Transparency (semt.041)."</li>
 	 * </ul>
 	 */
-	public static final MMCode Transparency = new MMCode() {
+	public static final MMCode mmTransparency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transparency";
@@ -330,14 +332,14 @@ public class MessageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ST03");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageTypeCode";
 				definition = "Specifies the message type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageTypeCode.AccountingHoldings, com.tools20022.repository.codeset.MessageTypeCode.CustodyHoldings,
-						com.tools20022.repository.codeset.MessageTypeCode.InvestmentFundTransactions, com.tools20022.repository.codeset.MessageTypeCode.Estimated, com.tools20022.repository.codeset.MessageTypeCode.EstimatedDetailed,
-						com.tools20022.repository.codeset.MessageTypeCode.Confirmed, com.tools20022.repository.codeset.MessageTypeCode.CornfirmedDetailed, com.tools20022.repository.codeset.MessageTypeCode.Transparency);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageTypeCode.mmAccountingHoldings, com.tools20022.repository.codeset.MessageTypeCode.mmCustodyHoldings,
+						com.tools20022.repository.codeset.MessageTypeCode.mmInvestmentFundTransactions, com.tools20022.repository.codeset.MessageTypeCode.mmEstimated, com.tools20022.repository.codeset.MessageTypeCode.mmEstimatedDetailed,
+						com.tools20022.repository.codeset.MessageTypeCode.mmConfirmed, com.tools20022.repository.codeset.MessageTypeCode.mmCornfirmedDetailed, com.tools20022.repository.codeset.MessageTypeCode.mmTransparency);
 				derivation_lazy = () -> Arrays.asList(CashForecastMessage1Code.mmObject(), StatementType1Code.mmObject());
 			}
 		});

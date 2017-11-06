@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.InvestmentFundOrderExecution3;
 import com.tools20022.repository.msg.Statement9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of a cancellation advice.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Advice1Choice#OrderConfirmationAdviceDetails
- * Advice1Choice.OrderConfirmationAdviceDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.Advice1Choice#mmOrderConfirmationAdviceDetails
+ * Advice1Choice.mmOrderConfirmationAdviceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Advice1Choice#StatementAdviceDetails
- * Advice1Choice.StatementAdviceDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.Advice1Choice#mmStatementAdviceDetails
+ * Advice1Choice.mmStatementAdviceDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Advice1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<InvestmentFundOrderExecution3> orderConfirmationAdviceDetails;
 	/**
 	 * Reference and transaction details of the order confirmation for which the
 	 * cancellation is given.
@@ -89,7 +91,7 @@ public class Advice1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderConfirmationAdviceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderConfirmationAdviceDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Advice1Choice.mmObject();
 			isDerived = false;
@@ -98,10 +100,11 @@ public class Advice1Choice {
 			name = "OrderConfirmationAdviceDetails";
 			definition = "Reference and transaction details of the order confirmation for which the cancellation is given.";
 			minOccurs = 1;
-			type_lazy = () -> InvestmentFundOrderExecution3.mmObject();
 			isComposite = true;
+			type_lazy = () -> InvestmentFundOrderExecution3.mmObject();
 		}
 	};
+	protected Statement9 statementAdviceDetails;
 	/**
 	 * Reference and transaction details of the statement for which the
 	 * cancellation is given.
@@ -130,7 +133,7 @@ public class Advice1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatementAdviceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatementAdviceDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Advice1Choice.mmObject();
 			isDerived = false;
@@ -138,23 +141,39 @@ public class Advice1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementAdviceDetails";
 			definition = "Reference and transaction details of the statement for which the cancellation is given.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Statement9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Statement9.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Advice1Choice.OrderConfirmationAdviceDetails, com.tools20022.repository.choice.Advice1Choice.StatementAdviceDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Advice1Choice.mmOrderConfirmationAdviceDetails, com.tools20022.repository.choice.Advice1Choice.mmStatementAdviceDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Advice1Choice";
 				definition = "Choice of a cancellation advice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<InvestmentFundOrderExecution3> getOrderConfirmationAdviceDetails() {
+		return orderConfirmationAdviceDetails;
+	}
+
+	public void setOrderConfirmationAdviceDetails(List<InvestmentFundOrderExecution3> orderConfirmationAdviceDetails) {
+		this.orderConfirmationAdviceDetails = orderConfirmationAdviceDetails;
+	}
+
+	public Statement9 getStatementAdviceDetails() {
+		return statementAdviceDetails;
+	}
+
+	public void setStatementAdviceDetails(Statement9 statementAdviceDetails) {
+		this.statementAdviceDetails = statementAdviceDetails;
 	}
 }

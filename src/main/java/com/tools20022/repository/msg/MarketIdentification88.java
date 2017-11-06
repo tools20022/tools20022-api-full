@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketIdentification88#Identification
- * MarketIdentification88.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification88#Type
- * MarketIdentification88.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketIdentification88#mmIdentification
+ * MarketIdentification88.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification88#mmType
+ * MarketIdentification88.mmType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarketIdentification88 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarketIdentification1Choice identification;
 	/**
 	 * Code allocated to places of trade, ie, stock exchanges, regulated
 	 * markets, for example, Electronic Trading Platforms (ECN), and unregulated
@@ -94,7 +95,7 @@ public class MarketIdentification88 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MarketIdentification88.mmObject();
 			isDerived = false;
@@ -102,12 +103,13 @@ public class MarketIdentification88 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Code allocated to places of trade, ie, stock exchanges, regulated markets, for example, Electronic Trading Platforms (ECN), and unregulated markets, for example, Automated Trading Systems (ATS), as sources of prices and related information, in order to facilitate automated processing.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MarketIdentification1Choice.mmObject();
 		}
 	};
+	protected MarketType13Choice type;
 	/**
 	 * Nature of a market in which transactions take place.
 	 * <p>
@@ -134,7 +136,7 @@ public class MarketIdentification88 {
 	 * definition} = "Nature of a market in which transactions take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MarketIdentification88.mmObject();
 			isDerived = false;
@@ -142,23 +144,39 @@ public class MarketIdentification88 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of a market in which transactions take place.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MarketType13Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MarketType13Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification88.Identification, com.tools20022.repository.msg.MarketIdentification88.Type);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification88.mmIdentification, com.tools20022.repository.msg.MarketIdentification88.mmType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentification88";
 				definition = "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarketIdentification1Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(MarketIdentification1Choice identification) {
+		this.identification = identification;
+	}
+
+	public MarketType13Choice getType() {
+		return type;
+	}
+
+	public void setType(MarketType13Choice type) {
+		this.type = type;
 	}
 }

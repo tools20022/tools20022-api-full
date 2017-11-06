@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CustomerHandlingInstructionChoice#Code
- * CustomerHandlingInstructionChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CustomerHandlingInstructionChoice#mmCode
+ * CustomerHandlingInstructionChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CustomerHandlingInstructionChoice#Proprietary
- * CustomerHandlingInstructionChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CustomerHandlingInstructionChoice#mmProprietary
+ * CustomerHandlingInstructionChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CustomerHandlingInstructionChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CustomerHandlingInstructions1Code code;
 	/**
 	 * Customer handling instruction is defined using a code.
 	 * <p>
@@ -76,8 +77,8 @@ public class CustomerHandlingInstructionChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#CustomerHandlingInstruction
-	 * SecuritiesOrderParameters.CustomerHandlingInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#mmCustomerHandlingInstruction
+	 * SecuritiesOrderParameters.mmCustomerHandlingInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class CustomerHandlingInstructionChoice {
 	 * definition} = "Customer handling instruction is defined using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmCustomerHandlingInstruction;
 			componentContext_lazy = () -> CustomerHandlingInstructionChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.CustomerHandlingInstruction;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Customer handling instruction is defined using a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Customer handling instruction is defined using a data source scheme.
 	 * <p>
@@ -122,8 +124,8 @@ public class CustomerHandlingInstructionChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#CustomerHandlingInstruction
-	 * SecuritiesOrderParameters.CustomerHandlingInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#mmCustomerHandlingInstruction
+	 * SecuritiesOrderParameters.mmCustomerHandlingInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,32 +145,48 @@ public class CustomerHandlingInstructionChoice {
 	 * "Customer handling instruction is defined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmCustomerHandlingInstruction;
 			componentContext_lazy = () -> CustomerHandlingInstructionChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.CustomerHandlingInstruction;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Customer handling instruction is defined using a data source scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CustomerHandlingInstructionChoice.Code, com.tools20022.repository.choice.CustomerHandlingInstructionChoice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CustomerHandlingInstructionChoice.mmCode, com.tools20022.repository.choice.CustomerHandlingInstructionChoice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CustomerHandlingInstructionChoice";
 				definition = "Choice between a code and a data source scheme to determine the customer handling instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CustomerHandlingInstructions1Code getCode() {
+		return code;
+	}
+
+	public void setCode(CustomerHandlingInstructions1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

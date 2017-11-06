@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CardTransaction1Choice#Aggregated
- * CardTransaction1Choice.Aggregated}</li>
+ * {@linkplain com.tools20022.repository.choice.CardTransaction1Choice#mmAggregated
+ * CardTransaction1Choice.mmAggregated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CardTransaction1Choice#Individual
- * CardTransaction1Choice.Individual}</li>
+ * {@linkplain com.tools20022.repository.choice.CardTransaction1Choice#mmIndividual
+ * CardTransaction1Choice.mmIndividual}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardTransaction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardAggregated1 aggregated;
 	/**
 	 * Card transaction details, based on card transaction aggregated data
 	 * performed by the card acquirer.
@@ -108,28 +109,29 @@ public class CardTransaction1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CardTransaction2Choice#Aggregated
-	 * CardTransaction2Choice.Aggregated}</li>
+	 * {@linkplain com.tools20022.repository.choice.CardTransaction2Choice#mmAggregated
+	 * CardTransaction2Choice.mmAggregated}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Aggregated = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAggregated = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransaction1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> CardTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Aggtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aggregated";
 			definition = "Card transaction details, based on card transaction aggregated data performed by the card acquirer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardTransaction2Choice.Aggregated);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardTransaction2Choice.mmAggregated);
 			maxOccurs = 1;
-			type_lazy = () -> CardAggregated1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CardAggregated1.mmObject();
 		}
 	};
+	protected CardIndividualTransaction1 individual;
 	/**
 	 * Card transaction details for the individual transaction, as recorded at
 	 * the POI (point of interaction).
@@ -166,35 +168,35 @@ public class CardTransaction1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CardTransaction2Choice#Individual
-	 * CardTransaction2Choice.Individual}</li>
+	 * {@linkplain com.tools20022.repository.choice.CardTransaction2Choice#mmIndividual
+	 * CardTransaction2Choice.mmIndividual}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Individual = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividual = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransaction1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> CardTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Indv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Individual";
 			definition = "Card transaction details for the individual transaction, as recorded at the POI (point of interaction).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardTransaction2Choice.Individual);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardTransaction2Choice.mmIndividual);
 			maxOccurs = 1;
-			type_lazy = () -> CardIndividualTransaction1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CardIndividualTransaction1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardTransaction1Choice.Aggregated, com.tools20022.repository.choice.CardTransaction1Choice.Individual);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardTransaction1Choice.mmAggregated, com.tools20022.repository.choice.CardTransaction1Choice.mmIndividual);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction1Choice";
 				definition = "Choice between a acquirer globalised card transaction or an individual card transaction.";
@@ -202,5 +204,21 @@ public class CardTransaction1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardAggregated1 getAggregated() {
+		return aggregated;
+	}
+
+	public void setAggregated(CardAggregated1 aggregated) {
+		this.aggregated = aggregated;
+	}
+
+	public CardIndividualTransaction1 getIndividual() {
+		return individual;
+	}
+
+	public void setIndividual(CardIndividualTransaction1 individual) {
+		this.individual = individual;
 	}
 }

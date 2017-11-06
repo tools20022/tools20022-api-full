@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#TypeAndIdentification
- * PledgeeFormat2Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#mmTypeAndIdentification
+ * PledgeeFormat2Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#Identification
- * PledgeeFormat2Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#mmIdentification
+ * PledgeeFormat2Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#Proprietary
- * PledgeeFormat2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#mmProprietary
+ * PledgeeFormat2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PledgeeFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PledgeeTypeAndAnyBICIdentifier1 typeAndIdentification;
 	/**
 	 * Identification of the entity to which the financial instruments are
 	 * pledged expressed as a code and a BIC.
@@ -103,21 +104,22 @@ public class PledgeeFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TypeAndIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTypeAndIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PledgeeFormat2Choice.mmObject();
 			businessComponentTrace_lazy = () -> Pledgee.mmObject();
+			componentContext_lazy = () -> PledgeeFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TpAndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAndIdentification";
 			definition = "Identification of the entity to which the financial instruments are pledged expressed as a code and a BIC.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PledgeeTypeAndAnyBICIdentifier1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PledgeeTypeAndAnyBICIdentifier1.mmObject();
 		}
 	};
+	protected PledgeeTypeAndText2 identification;
 	/**
 	 * Identification of the entity to which the financial instruments are
 	 * pledged expressed as a code and a narrative description.
@@ -151,21 +153,22 @@ public class PledgeeFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PledgeeFormat2Choice.mmObject();
 			businessComponentTrace_lazy = () -> Pledgee.mmObject();
+			componentContext_lazy = () -> PledgeeFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the entity to which the financial instruments are pledged expressed as a code and a narrative description.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PledgeeTypeAndText2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PledgeeTypeAndText2.mmObject();
 		}
 	};
+	protected GenericIdentification59 proprietary;
 	/**
 	 * Identification of the entity to which the financial instruments are
 	 * pledged expressed as a proprietary type and narrative description.
@@ -179,8 +182,8 @@ public class PledgeeFormat2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,34 +204,58 @@ public class PledgeeFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PledgeeFormat2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Identification of the entity to which the financial instruments are pledged expressed as a proprietary type and narrative description.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification59.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification59.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PledgeeFormat2Choice.TypeAndIdentification, com.tools20022.repository.choice.PledgeeFormat2Choice.Identification,
-						com.tools20022.repository.choice.PledgeeFormat2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PledgeeFormat2Choice.mmTypeAndIdentification, com.tools20022.repository.choice.PledgeeFormat2Choice.mmIdentification,
+						com.tools20022.repository.choice.PledgeeFormat2Choice.mmProprietary);
 				trace_lazy = () -> Pledgee.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PledgeeFormat2Choice";
 				definition = "Choice between formats for the entity to which the financial instruments are pledged.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PledgeeTypeAndAnyBICIdentifier1 getTypeAndIdentification() {
+		return typeAndIdentification;
+	}
+
+	public void setTypeAndIdentification(PledgeeTypeAndAnyBICIdentifier1 typeAndIdentification) {
+		this.typeAndIdentification = typeAndIdentification;
+	}
+
+	public PledgeeTypeAndText2 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PledgeeTypeAndText2 identification) {
+		this.identification = identification;
+	}
+
+	public GenericIdentification59 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification59 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

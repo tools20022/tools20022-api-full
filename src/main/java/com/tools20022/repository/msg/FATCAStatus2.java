@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus2#Type
- * FATCAStatus2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus2#Source
- * FATCAStatus2.Source}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus2#mmType
+ * FATCAStatus2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FATCAStatus2#mmSource
+ * FATCAStatus2.mmSource}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FATCAStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FATCAStatus2Choice type;
 	/**
 	 * Foreign Account Tax Compliance Act (FATCA) status.
 	 * <p>
@@ -76,8 +77,8 @@ public class FATCAStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FATCAStatus#FATCAStatus
-	 * FATCAStatus.FATCAStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCAStatus
+	 * FATCAStatus.mmFATCAStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,26 +97,27 @@ public class FATCAStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FATCAStatus1#Type
-	 * FATCAStatus1.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.FATCAStatus1#mmType
+	 * FATCAStatus1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmFATCAStatus;
 			componentContext_lazy = () -> FATCAStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FATCAStatus.FATCAStatus;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Foreign Account Tax Compliance Act (FATCA) status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FATCAStatus1.Type;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FATCAStatus1.mmType;
 			maxOccurs = 1;
-			type_lazy = () -> FATCAStatus2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FATCAStatus2Choice.mmObject();
 		}
 	};
+	protected FATCASource1Choice source;
 	/**
 	 * Source of the Foreign Account Tax Compliance Act (FATCA) status.
 	 * <p>
@@ -127,8 +129,8 @@ public class FATCAStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FATCAStatus#FATCASourceStatus
-	 * FATCAStatus.FATCASourceStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCASourceStatus
+	 * FATCAStatus.mmFATCASourceStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,33 +150,33 @@ public class FATCAStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FATCAStatus1#Source
-	 * FATCAStatus1.Source}</li>
+	 * {@linkplain com.tools20022.repository.msg.FATCAStatus1#mmSource
+	 * FATCAStatus1.mmSource}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Source = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSource = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmFATCASourceStatus;
 			componentContext_lazy = () -> FATCAStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FATCAStatus.FATCASourceStatus;
 			isDerived = false;
 			xmlTag = "Src";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Source";
 			definition = "Source of the Foreign Account Tax Compliance Act (FATCA) status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FATCAStatus1.Source;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FATCAStatus1.mmSource;
 			maxOccurs = 1;
-			type_lazy = () -> FATCASource1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FATCASource1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FATCAStatus2.Type, com.tools20022.repository.msg.FATCAStatus2.Source);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FATCAStatus2.mmType, com.tools20022.repository.msg.FATCAStatus2.mmSource);
 				trace_lazy = () -> FATCAStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FATCAStatus2";
 				definition = "Foreign Account Tax Compliance Act (FATCA) status information.";
@@ -182,5 +184,21 @@ public class FATCAStatus2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FATCAStatus2Choice getType() {
+		return type;
+	}
+
+	public void setType(FATCAStatus2Choice type) {
+		this.type = type;
+	}
+
+	public FATCASource1Choice getSource() {
+		return source;
+	}
+
+	public void setSource(FATCASource1Choice source) {
+		this.source = source;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationDistribution1Code#Electronic
- * InformationDistribution1Code.Electronic}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationDistribution1Code#mmElectronic
+ * InformationDistribution1Code.mmElectronic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationDistribution1Code#Paper
- * InformationDistribution1Code.Paper}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationDistribution1Code#mmPaper
+ * InformationDistribution1Code.mmPaper}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class InformationDistribution1Code extends InformationDistributionCode {
 	 * name} = "Electronic"</li>
 	 * </ul>
 	 */
-	public static final MMCode Electronic = new MMCode() {
+	public static final MMCode mmElectronic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
@@ -104,7 +104,7 @@ public class InformationDistribution1Code extends InformationDistributionCode {
 	 * name} = "Paper"</li>
 	 * </ul>
 	 */
-	public static final MMCode Paper = new MMCode() {
+	public static final MMCode mmPaper = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paper";
@@ -115,12 +115,12 @@ public class InformationDistribution1Code extends InformationDistributionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELEC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InformationDistribution1Code";
 				definition = "Specifies how information is to be distributed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationDistribution1Code.Electronic, com.tools20022.repository.codeset.InformationDistribution1Code.Paper);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationDistribution1Code.mmElectronic, com.tools20022.repository.codeset.InformationDistribution1Code.mmPaper);
 				trace_lazy = () -> InformationDistributionCode.mmObject();
 			}
 		});

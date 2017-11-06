@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#BearToRegistered
- * CorporateActionChangeType2Code.BearToRegistered}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#mmBearToRegistered
+ * CorporateActionChangeType2Code.mmBearToRegistered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#Certificates
- * CorporateActionChangeType2Code.Certificates}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#mmCertificates
+ * CorporateActionChangeType2Code.mmCertificates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#DematerialisedToPhysical
- * CorporateActionChangeType2Code.DematerialisedToPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#mmDematerialisedToPhysical
+ * CorporateActionChangeType2Code.mmDematerialisedToPhysical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#GlobalPermanentToPhysical
- * CorporateActionChangeType2Code.GlobalPermanentToPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#mmGlobalPermanentToPhysical
+ * CorporateActionChangeType2Code.mmGlobalPermanentToPhysical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#GlobalTemporaryToGlobalPermanent
- * CorporateActionChangeType2Code.GlobalTemporaryToGlobalPermanent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#mmGlobalTemporaryToGlobalPermanent
+ * CorporateActionChangeType2Code.mmGlobalTemporaryToGlobalPermanent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#GlobalTemporaryToPhysical
- * CorporateActionChangeType2Code.GlobalTemporaryToPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#mmGlobalTemporaryToPhysical
+ * CorporateActionChangeType2Code.mmGlobalTemporaryToPhysical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#Name
- * CorporateActionChangeType2Code.Name}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#mmName
+ * CorporateActionChangeType2Code.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#PhysicalToDematerialised
- * CorporateActionChangeType2Code.PhysicalToDematerialised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#mmPhysicalToDematerialised
+ * CorporateActionChangeType2Code.mmPhysicalToDematerialised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#RegisteredToBearer
- * CorporateActionChangeType2Code.RegisteredToBearer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#mmRegisteredToBearer
+ * CorporateActionChangeType2Code.mmRegisteredToBearer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#Terms
- * CorporateActionChangeType2Code.Terms}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeType2Code#mmTerms
+ * CorporateActionChangeType2Code.mmTerms}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 * name} = "BearToRegistered"</li>
 	 * </ul>
 	 */
-	public static final MMCode BearToRegistered = new MMCode() {
+	public static final MMCode mmBearToRegistered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BearToRegistered";
@@ -128,7 +128,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 * name} = "Certificates"</li>
 	 * </ul>
 	 */
-	public static final MMCode Certificates = new MMCode() {
+	public static final MMCode mmCertificates = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificates";
@@ -151,7 +151,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 * name} = "DematerialisedToPhysical"</li>
 	 * </ul>
 	 */
-	public static final MMCode DematerialisedToPhysical = new MMCode() {
+	public static final MMCode mmDematerialisedToPhysical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DematerialisedToPhysical";
@@ -174,7 +174,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 * name} = "GlobalPermanentToPhysical"</li>
 	 * </ul>
 	 */
-	public static final MMCode GlobalPermanentToPhysical = new MMCode() {
+	public static final MMCode mmGlobalPermanentToPhysical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalPermanentToPhysical";
@@ -197,7 +197,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 * name} = "GlobalTemporaryToGlobalPermanent"</li>
 	 * </ul>
 	 */
-	public static final MMCode GlobalTemporaryToGlobalPermanent = new MMCode() {
+	public static final MMCode mmGlobalTemporaryToGlobalPermanent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalTemporaryToGlobalPermanent";
@@ -220,7 +220,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 * name} = "GlobalTemporaryToPhysical"</li>
 	 * </ul>
 	 */
-	public static final MMCode GlobalTemporaryToPhysical = new MMCode() {
+	public static final MMCode mmGlobalTemporaryToPhysical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalTemporaryToPhysical";
@@ -243,7 +243,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 * name} = "Name"</li>
 	 * </ul>
 	 */
-	public static final MMCode Name = new MMCode() {
+	public static final MMCode mmName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
@@ -266,7 +266,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 * name} = "PhysicalToDematerialised"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalToDematerialised = new MMCode() {
+	public static final MMCode mmPhysicalToDematerialised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalToDematerialised";
@@ -289,7 +289,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 * name} = "RegisteredToBearer"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegisteredToBearer = new MMCode() {
+	public static final MMCode mmRegisteredToBearer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredToBearer";
@@ -312,7 +312,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 * name} = "Terms"</li>
 	 * </ul>
 	 */
-	public static final MMCode Terms = new MMCode() {
+	public static final MMCode mmTerms = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Terms";
@@ -323,16 +323,16 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BERE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionChangeType2Code";
 				definition = "Specifies the type of changes.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionChangeType2Code.BearToRegistered, com.tools20022.repository.codeset.CorporateActionChangeType2Code.Certificates,
-						com.tools20022.repository.codeset.CorporateActionChangeType2Code.DematerialisedToPhysical, com.tools20022.repository.codeset.CorporateActionChangeType2Code.GlobalPermanentToPhysical,
-						com.tools20022.repository.codeset.CorporateActionChangeType2Code.GlobalTemporaryToGlobalPermanent, com.tools20022.repository.codeset.CorporateActionChangeType2Code.GlobalTemporaryToPhysical,
-						com.tools20022.repository.codeset.CorporateActionChangeType2Code.Name, com.tools20022.repository.codeset.CorporateActionChangeType2Code.PhysicalToDematerialised,
-						com.tools20022.repository.codeset.CorporateActionChangeType2Code.RegisteredToBearer, com.tools20022.repository.codeset.CorporateActionChangeType2Code.Terms);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmBearToRegistered, com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmCertificates,
+						com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmDematerialisedToPhysical, com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmGlobalPermanentToPhysical,
+						com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmGlobalTemporaryToGlobalPermanent, com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmGlobalTemporaryToPhysical,
+						com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmName, com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmPhysicalToDematerialised,
+						com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmRegisteredToBearer, com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmTerms);
 				trace_lazy = () -> CorporateActionChangeTypeCode.mmObject();
 			}
 		});

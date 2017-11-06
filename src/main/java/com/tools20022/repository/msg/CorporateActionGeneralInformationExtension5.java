@@ -38,33 +38,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#PlaceAndName
- * CorporateActionGeneralInformationExtension5.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#mmPlaceAndName
+ * CorporateActionGeneralInformationExtension5.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#Reason
- * CorporateActionGeneralInformationExtension5.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#mmReason
+ * CorporateActionGeneralInformationExtension5.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#SubReasonCode
- * CorporateActionGeneralInformationExtension5.SubReasonCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#mmSubReasonCode
+ * CorporateActionGeneralInformationExtension5.mmSubReasonCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#EventType
- * CorporateActionGeneralInformationExtension5.EventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#mmEventType
+ * CorporateActionGeneralInformationExtension5.mmEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#SubEventType
- * CorporateActionGeneralInformationExtension5.SubEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#mmSubEventType
+ * CorporateActionGeneralInformationExtension5.mmSubEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#RecordDate
- * CorporateActionGeneralInformationExtension5.RecordDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#mmRecordDate
+ * CorporateActionGeneralInformationExtension5.mmRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#DeclaredPayableDate
- * CorporateActionGeneralInformationExtension5.DeclaredPayableDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5#mmDeclaredPayableDate
+ * CorporateActionGeneralInformationExtension5.mmDeclaredPayableDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionGeneralInformationExtension5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -107,7 +108,7 @@ public class CorporateActionGeneralInformationExtension5 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension5.mmObject();
 			isDerived = false;
@@ -115,11 +116,12 @@ public class CorporateActionGeneralInformationExtension5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText reason;
 	/**
 	 * Reason for the adjustment.
 	 * <p>
@@ -148,7 +150,7 @@ public class CorporateActionGeneralInformationExtension5 {
 	 * definition} = "Reason for the adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension5.mmObject();
 			isDerived = false;
@@ -156,11 +158,12 @@ public class CorporateActionGeneralInformationExtension5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the adjustment.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText subReasonCode;
 	/**
 	 * Sub-reason for the adjustment.
 	 * <p>
@@ -189,7 +192,7 @@ public class CorporateActionGeneralInformationExtension5 {
 	 * definition} = "Sub-reason for the adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubReasonCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension5.mmObject();
 			isDerived = false;
@@ -197,11 +200,12 @@ public class CorporateActionGeneralInformationExtension5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubReasonCode";
 			definition = "Sub-reason for the adjustment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected ExtendedEventType1Code eventType;
 	/**
 	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
 	 * action event type name. Used in place for the events that cannot be
@@ -238,7 +242,7 @@ public class CorporateActionGeneralInformationExtension5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension5.mmObject();
 			isDerived = false;
@@ -246,11 +250,12 @@ public class CorporateActionGeneralInformationExtension5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO Code and are marked as OTHR. Can be used in combination with DTCC sub event type (when provided) to identify the event. For an example: a distribution based on recapitalisation event will be presented as event type: OTHR in standard message. DTCC native event type would be Distribution (DIST) and DTCC sub event type would be Recapitalisation. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
 		}
 	};
+	protected DTCCSubEventType1Code subEventType;
 	/**
 	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
 	 * action sub event type name further defines the event type. For an
@@ -285,7 +290,7 @@ public class CorporateActionGeneralInformationExtension5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension5.mmObject();
 			isDerived = false;
@@ -293,11 +298,12 @@ public class CorporateActionGeneralInformationExtension5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. For an example: a cash dividend event with currency election will be noted as event type: Cash Dividend (DVCA) and DTCC sub event type: Currency Election(CURR).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType1Code.mmObject();
 		}
 	};
+	protected ISODate recordDate;
 	/**
 	 * Date at which positions are stuck at the end of the day to note which
 	 * parties will receive the relevant amount of entitlement, due to be
@@ -330,7 +336,7 @@ public class CorporateActionGeneralInformationExtension5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension5.mmObject();
 			isDerived = false;
@@ -338,11 +344,12 @@ public class CorporateActionGeneralInformationExtension5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date at which positions are stuck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date. DTC  (The Depository Trust Corporation) uses a reference match. This is why it is extended to general Information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate declaredPayableDate;
 	/**
 	 * Date at which the movement has been declared payable by the issuer to
 	 * take place (cash and/or securities).
@@ -373,7 +380,7 @@ public class CorporateActionGeneralInformationExtension5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeclaredPayableDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeclaredPayableDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension5.mmObject();
 			isDerived = false;
@@ -381,8 +388,8 @@ public class CorporateActionGeneralInformationExtension5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredPayableDate";
 			definition = "Date at which the movement has been declared payable by the issuer to take place (cash and/or securities).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -390,16 +397,72 @@ public class CorporateActionGeneralInformationExtension5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.PlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.Reason,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.SubReasonCode, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.EventType,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.SubEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.RecordDate,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.DeclaredPayableDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.mmReason,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.mmSubReasonCode, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.mmEventType,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.mmSubEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.mmRecordDate,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationExtension5.mmDeclaredPayableDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationExtension5";
 				definition = "Provides additional information regarding corporate action general information details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max4AlphaNumericText getReason() {
+		return reason;
+	}
+
+	public void setReason(Max4AlphaNumericText reason) {
+		this.reason = reason;
+	}
+
+	public Max4AlphaNumericText getSubReasonCode() {
+		return subReasonCode;
+	}
+
+	public void setSubReasonCode(Max4AlphaNumericText subReasonCode) {
+		this.subReasonCode = subReasonCode;
+	}
+
+	public ExtendedEventType1Code getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(ExtendedEventType1Code eventType) {
+		this.eventType = eventType;
+	}
+
+	public DTCCSubEventType1Code getSubEventType() {
+		return subEventType;
+	}
+
+	public void setSubEventType(DTCCSubEventType1Code subEventType) {
+		this.subEventType = subEventType;
+	}
+
+	public ISODate getRecordDate() {
+		return recordDate;
+	}
+
+	public void setRecordDate(ISODate recordDate) {
+		this.recordDate = recordDate;
+	}
+
+	public ISODate getDeclaredPayableDate() {
+		return declaredPayableDate;
+	}
+
+	public void setDeclaredPayableDate(ISODate declaredPayableDate) {
+		this.declaredPayableDate = declaredPayableDate;
 	}
 }

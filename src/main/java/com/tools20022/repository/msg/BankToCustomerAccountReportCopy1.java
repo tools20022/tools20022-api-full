@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the Bank To Customer Account Report message.
@@ -32,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BankToCustomerAccountReportCopy1#GroupHeader
- * BankToCustomerAccountReportCopy1.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.msg.BankToCustomerAccountReportCopy1#mmGroupHeader
+ * BankToCustomerAccountReportCopy1.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BankToCustomerAccountReportCopy1#Report
- * BankToCustomerAccountReportCopy1.Report}</li>
+ * {@linkplain com.tools20022.repository.msg.BankToCustomerAccountReportCopy1#mmReport
+ * BankToCustomerAccountReportCopy1.mmReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BankToCustomerAccountReportCopy1#SupplementaryData
- * BankToCustomerAccountReportCopy1.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.BankToCustomerAccountReportCopy1#mmSupplementaryData
+ * BankToCustomerAccountReportCopy1.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BankToCustomerAccountReportCopy1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader58 groupHeader;
 	/**
 	 * Common information for the message.
 	 * <p>
@@ -86,7 +88,7 @@ public class BankToCustomerAccountReportCopy1 {
 	 * definition} = "Common information for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GroupHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGroupHeader = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
@@ -94,12 +96,13 @@ public class BankToCustomerAccountReportCopy1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common information for the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GroupHeader58.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GroupHeader58.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AccountReport19> report;
 	/**
 	 * Reports on a cash account.
 	 * <p>
@@ -126,7 +129,7 @@ public class BankToCustomerAccountReportCopy1 {
 	 * definition} = "Reports on a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Report = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
@@ -135,10 +138,11 @@ public class BankToCustomerAccountReportCopy1 {
 			name = "Report";
 			definition = "Reports on a cash account.";
 			minOccurs = 1;
-			type_lazy = () -> AccountReport19.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountReport19.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -168,7 +172,7 @@ public class BankToCustomerAccountReportCopy1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
@@ -177,22 +181,46 @@ public class BankToCustomerAccountReportCopy1 {
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.GroupHeader, com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.Report,
-						com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.SupplementaryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmGroupHeader, com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmReport,
+						com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmSupplementaryData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BankToCustomerAccountReportCopy1";
 				definition = "Details of the Bank To Customer Account Report message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader58 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(com.tools20022.repository.msg.GroupHeader58 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<AccountReport19> getReport() {
+		return report;
+	}
+
+	public void setReport(List<com.tools20022.repository.msg.AccountReport19> report) {
+		this.report = report;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

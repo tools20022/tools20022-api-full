@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Amount2#OriginalCurrencyAmount
- * Amount2.OriginalCurrencyAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Amount2#ReportingAmount
- * Amount2.ReportingAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Amount2#mmOriginalCurrencyAmount
+ * Amount2.mmOriginalCurrencyAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Amount2#mmReportingAmount
+ * Amount2.mmReportingAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Amount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount originalCurrencyAmount;
 	/**
 	 * Amount expressed in the original currency.
 	 * <p>
@@ -87,7 +89,7 @@ public class Amount2 {
 	 * definition} = "Amount expressed in the original currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCurrencyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCurrencyAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Amount2.mmObject();
 			isDerived = false;
@@ -95,11 +97,12 @@ public class Amount2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrencyAmount";
 			definition = "Amount expressed in the original currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount reportingAmount;
 	/**
 	 * Amount expressed in the reporting currency.
 	 * <p>
@@ -127,7 +130,7 @@ public class Amount2 {
 	 * definition} = "Amount expressed in the reporting currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportingAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Amount2.mmObject();
 			isDerived = false;
@@ -135,8 +138,8 @@ public class Amount2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingAmount";
 			definition = "Amount expressed in the reporting currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -144,13 +147,29 @@ public class Amount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amount2.OriginalCurrencyAmount, com.tools20022.repository.msg.Amount2.ReportingAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amount2.mmOriginalCurrencyAmount, com.tools20022.repository.msg.Amount2.mmReportingAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Amount2";
 				definition = "Provides the amount in the reporting currency and optionally in the original currency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getOriginalCurrencyAmount() {
+		return originalCurrencyAmount;
+	}
+
+	public void setOriginalCurrencyAmount(ActiveCurrencyAndAmount originalCurrencyAmount) {
+		this.originalCurrencyAmount = originalCurrencyAmount;
+	}
+
+	public ImpliedCurrencyAndAmount getReportingAmount() {
+		return reportingAmount;
+	}
+
+	public void setReportingAmount(ImpliedCurrencyAndAmount reportingAmount) {
+		this.reportingAmount = reportingAmount;
 	}
 }

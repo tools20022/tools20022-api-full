@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.entity.CollateralStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Business status of the collateral data management request for processing in
@@ -35,10 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralStatusReason1#Status
- * CollateralStatusReason1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralStatusReason1#Reason
- * CollateralStatusReason1.Reason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralStatusReason1#mmStatus
+ * CollateralStatusReason1.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralStatusReason1#mmReason
+ * CollateralStatusReason1.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralStatusReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status6Code status;
 	/**
 	 * Status of the collateral data maintenance instruction.
 	 * <p>
@@ -76,8 +80,8 @@ public class CollateralStatusReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#InstructionProcessingStatus
-	 * Status.InstructionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmInstructionProcessingStatus
+	 * Status.mmInstructionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +100,21 @@ public class CollateralStatusReason1 {
 	 * definition} = "Status of the collateral data maintenance instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> CollateralStatusReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.InstructionProcessingStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the collateral data maintenance instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatusReasonInformation10> reason;
 	/**
 	 * Reason for the status of a collateral data maintenance instruction.
 	 * <p>
@@ -122,8 +127,8 @@ public class CollateralStatusReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,32 +148,48 @@ public class CollateralStatusReason1 {
 	 * "Reason for the status of a collateral data maintenance instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> CollateralStatusReason1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the status of a collateral data maintenance instruction.";
 			minOccurs = 0;
-			type_lazy = () -> StatusReasonInformation10.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralStatusReason1.Status, com.tools20022.repository.msg.CollateralStatusReason1.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralStatusReason1.mmStatus, com.tools20022.repository.msg.CollateralStatusReason1.mmReason);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralStatusReason1";
 				definition = "Business status of the collateral data management request for processing in the system. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status6Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status6Code status) {
+		this.status = status;
+	}
+
+	public List<StatusReasonInformation10> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<com.tools20022.repository.msg.StatusReasonInformation10> reason) {
+		this.reason = reason;
 	}
 }

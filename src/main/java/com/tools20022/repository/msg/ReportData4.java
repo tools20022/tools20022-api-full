@@ -40,19 +40,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportData4#MessageIdentification
- * ReportData4.MessageIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportData4#ValueDate
- * ReportData4.ValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportData4#DateAndTimeStamp
- * ReportData4.DateAndTimeStamp}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportData4#Type
- * ReportData4.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportData4#ScheduleType
- * ReportData4.ScheduleType}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportData4#mmMessageIdentification
+ * ReportData4.mmMessageIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportData4#mmValueDate
+ * ReportData4.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportData4#mmDateAndTimeStamp
+ * ReportData4.mmDateAndTimeStamp}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportData4#mmType
+ * ReportData4.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportData4#mmScheduleType
+ * ReportData4.mmScheduleType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportData4#SettlementSessionIdentifier
- * ReportData4.SettlementSessionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportData4#mmSettlementSessionIdentifier
+ * ReportData4.mmSettlementSessionIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,15 +63,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#ReportData
- * PayInScheduleV03.ReportData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInScheduleV03#mmReportData
+ * PayInScheduleV03.mmReportData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Identification of the report as assigned by the sender.
 	 * <p>
@@ -116,7 +117,7 @@ public class ReportData4 {
 	 * definition} = "Identification of the report as assigned by the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportData4.mmObject();
 			isDerived = false;
@@ -124,11 +125,12 @@ public class ReportData4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identification of the report as assigned by the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate valueDate;
 	/**
 	 * Value date for which the pay-in schedule is generated.
 	 * <p>
@@ -141,8 +143,8 @@ public class ReportData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#ValueDate
-	 * Balance.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmValueDate
+	 * Balance.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,20 +162,21 @@ public class ReportData4 {
 	 * definition} = "Value date for which the pay-in schedule is generated. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmValueDate;
 			componentContext_lazy = () -> ReportData4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Value date for which the pay-in schedule is generated. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODateTime dateAndTimeStamp;
 	/**
 	 * Date and time on which the report is generated. The offset with UTC may
 	 * also be specified.
@@ -187,8 +190,8 @@ public class ReportData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#CalculationDate
-	 * Balance.CalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmCalculationDate
+	 * Balance.mmCalculationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -208,20 +211,21 @@ public class ReportData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateAndTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateAndTimeStamp = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCalculationDate;
 			componentContext_lazy = () -> ReportData4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.CalculationDate;
 			isDerived = false;
 			xmlTag = "DtAndTmStmp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndTimeStamp";
 			definition = "Date and time on which the report is generated. The offset with UTC may also be specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Entry2Code type;
 	/**
 	 * Type of pay-in schedule.
 	 * <p>
@@ -234,7 +238,8 @@ public class ReportData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,20 +257,21 @@ public class ReportData4 {
 	 * definition} = "Type of pay-in schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> ReportData4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of pay-in schedule.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Entry2Code.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText scheduleType;
 	/**
 	 * Defines the schedule timing that is, whether it is an initial or a
 	 * revised schedule.
@@ -296,7 +302,7 @@ public class ReportData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ScheduleType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmScheduleType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportData4.mmObject();
 			isDerived = false;
@@ -304,11 +310,12 @@ public class ReportData4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduleType";
 			definition = "Defines the  schedule timing that is, whether it is an initial or a revised schedule.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
 	 * To indicate the requested CLS Settlement Session that the related trade
 	 * is part of.
@@ -339,7 +346,7 @@ public class ReportData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementSessionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementSessionIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportData4.mmObject();
 			isDerived = false;
@@ -347,8 +354,8 @@ public class ReportData4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "To indicate the requested CLS Settlement Session that the related trade is part of.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
@@ -356,11 +363,12 @@ public class ReportData4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportData4.MessageIdentification, com.tools20022.repository.msg.ReportData4.ValueDate, com.tools20022.repository.msg.ReportData4.DateAndTimeStamp,
-						com.tools20022.repository.msg.ReportData4.Type, com.tools20022.repository.msg.ReportData4.ScheduleType, com.tools20022.repository.msg.ReportData4.SettlementSessionIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportData4.mmMessageIdentification, com.tools20022.repository.msg.ReportData4.mmValueDate,
+						com.tools20022.repository.msg.ReportData4.mmDateAndTimeStamp, com.tools20022.repository.msg.ReportData4.mmType, com.tools20022.repository.msg.ReportData4.mmScheduleType,
+						com.tools20022.repository.msg.ReportData4.mmSettlementSessionIdentifier);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInScheduleV03.mmReportData);
 				trace_lazy = () -> CashBalance.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInScheduleV03.ReportData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportData4";
 				definition = "Numerical representation of the nett increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.";
@@ -368,5 +376,53 @@ public class ReportData4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public ISODate getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODate valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public ISODateTime getDateAndTimeStamp() {
+		return dateAndTimeStamp;
+	}
+
+	public void setDateAndTimeStamp(ISODateTime dateAndTimeStamp) {
+		this.dateAndTimeStamp = dateAndTimeStamp;
+	}
+
+	public Entry2Code getType() {
+		return type;
+	}
+
+	public void setType(Entry2Code type) {
+		this.type = type;
+	}
+
+	public Exact4AlphaNumericText getScheduleType() {
+		return scheduleType;
+	}
+
+	public void setScheduleType(Exact4AlphaNumericText scheduleType) {
+		this.scheduleType = scheduleType;
+	}
+
+	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier;
+	}
+
+	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+		this.settlementSessionIdentifier = settlementSessionIdentifier;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -85,49 +86,49 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#ReportIdentification
- * BaselineReportV04.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmReportIdentification
+ * BaselineReportV04.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#RelatedMessageReference
- * BaselineReportV04.RelatedMessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmRelatedMessageReference
+ * BaselineReportV04.mmRelatedMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#ReportType
- * BaselineReportV04.ReportType}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmReportType
+ * BaselineReportV04.mmReportType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#TransactionIdentification
- * BaselineReportV04.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmTransactionIdentification
+ * BaselineReportV04.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#EstablishedBaselineIdentification
- * BaselineReportV04.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmEstablishedBaselineIdentification
+ * BaselineReportV04.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#TransactionStatus
- * BaselineReportV04.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmTransactionStatus
+ * BaselineReportV04.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#UserTransactionReference
- * BaselineReportV04.UserTransactionReference}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#Buyer
- * BaselineReportV04.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#Seller
- * BaselineReportV04.Seller}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmUserTransactionReference
+ * BaselineReportV04.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#BuyerBank
- * BaselineReportV04.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmBuyer
+ * BaselineReportV04.mmBuyer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#SellerBank
- * BaselineReportV04.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmSeller
+ * BaselineReportV04.mmSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#ReportedLineItem
- * BaselineReportV04.ReportedLineItem}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmBuyerBank
+ * BaselineReportV04.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#RequestForAction
- * BaselineReportV04.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmSellerBank
+ * BaselineReportV04.mmSellerBank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmReportedLineItem
+ * BaselineReportV04.mmReportedLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmRequestForAction
+ * BaselineReportV04.mmRequestForAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#identifier
- * BaselineReportV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.011.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -147,6 +148,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BaselineReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 reportIdentification;
 	/**
 	 * Identifies the report.
 	 * <p>
@@ -171,22 +173,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#ReportIdentification
-	 * BaselineReportV03.ReportIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmReportIdentification
+	 * BaselineReportV03.mmReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Identifies the report. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.ReportIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmReportIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected MessageIdentification1 relatedMessageReference;
 	/**
 	 * Reference to the related message at the origin of the report or sent at
 	 * the same time than the report.
@@ -214,22 +217,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#RelatedMessageReference
-	 * BaselineReportV03.RelatedMessageReference}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmRelatedMessageReference
+	 * BaselineReportV03.mmRelatedMessageReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdMsgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMessageReference";
 			definition = "Reference to the related message at the origin of the report or sent at the same time than the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.RelatedMessageReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmRelatedMessageReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected ReportType2 reportType;
 	/**
 	 * Type of baseline report.
 	 * <p>
@@ -253,22 +257,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#ReportType
-	 * BaselineReportV03.ReportType}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmReportType
+	 * BaselineReportV03.mmReportType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportType = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportType";
 			definition = "Type of baseline report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.ReportType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmReportType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportType2.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -297,22 +302,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#TransactionIdentification
-	 * BaselineReportV03.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmTransactionIdentification
+	 * BaselineReportV03.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.TransactionIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected DocumentIdentification6 establishedBaselineIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * baseline when it is established.
@@ -340,22 +346,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#EstablishedBaselineIdentification
-	 * BaselineReportV03.EstablishedBaselineIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmEstablishedBaselineIdentification
+	 * BaselineReportV03.mmEstablishedBaselineIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established.  ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.EstablishedBaselineIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmEstablishedBaselineIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification6.mmObject();
 		}
 	};
+	protected TransactionStatus4 transactionStatus;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -381,22 +388,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#TransactionStatus
-	 * BaselineReportV03.TransactionStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmTransactionStatus
+	 * BaselineReportV03.mmTransactionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.TransactionStatus;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmTransactionStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 	};
+	protected List<DocumentIdentification5> userTransactionReference;
 	/**
 	 * Reference to the transaction for each financial institution which is a
 	 * party to the transaction.
@@ -424,22 +432,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#UserTransactionReference
-	 * BaselineReportV03.UserTransactionReference}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmUserTransactionReference
+	 * BaselineReportV03.mmUserTransactionReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.UserTransactionReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmUserTransactionReference;
 			maxOccurs = 2;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 	};
+	protected PartyIdentification26 buyer;
 	/**
 	 * Party that buys goods or services, or a financial instrument.
 	 * <p>
@@ -465,22 +474,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#Buyer
-	 * BaselineReportV03.Buyer}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmBuyer
+	 * BaselineReportV03.mmBuyer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Buyer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Buyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.Buyer;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmBuyer;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 	};
+	protected PartyIdentification26 seller;
 	/**
 	 * Party that sells goods or services, or a financial instrument.
 	 * <p>
@@ -506,22 +516,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#Seller
-	 * BaselineReportV03.Seller}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmSeller
+	 * BaselineReportV03.mmSeller}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Seller = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSeller = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sellr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.Seller;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmSeller;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 	};
+	protected BICIdentification1 buyerBank;
 	/**
 	 * The financial institution of the buyer, uniquely identified by its BIC.
 	 * <p>
@@ -548,22 +559,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#BuyerBank
-	 * BaselineReportV03.BuyerBank}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmBuyerBank
+	 * BaselineReportV03.mmBuyerBank}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.BuyerBank;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmBuyerBank;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected BICIdentification1 sellerBank;
 	/**
 	 * The financial institution of the seller, uniquely identified by its BIC.
 	 * <p>
@@ -590,22 +602,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#SellerBank
-	 * BaselineReportV03.SellerBank}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmSellerBank
+	 * BaselineReportV03.mmSellerBank}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.SellerBank;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmSellerBank;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected LineItem14 reportedLineItem;
 	/**
 	 * Information on the goods
 	 * <p>
@@ -629,22 +642,23 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#ReportedLineItem
-	 * BaselineReportV03.ReportedLineItem}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmReportedLineItem
+	 * BaselineReportV03.mmReportedLineItem}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportedLineItem = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportedLineItem = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptdLineItm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedLineItem";
 			definition = "Information on the goods";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.ReportedLineItem;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmReportedLineItem;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> LineItem14.mmObject();
 		}
 	};
+	protected PendingActivity2 requestForAction;
 	/**
 	 * Information on the next processing step required.
 	 * <p>
@@ -669,47 +683,20 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#RequestForAction
-	 * BaselineReportV03.RequestForAction}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmRequestForAction
+	 * BaselineReportV03.mmRequestForAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.RequestForAction;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmRequestForAction;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "011";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -724,15 +711,126 @@ public class BaselineReportV04 {
 				rootElement = "Document";
 				xmlTag = "BaselnRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV04.ReportIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.RelatedMessageReference,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.ReportType, com.tools20022.repository.area.tsmt.BaselineReportV04.TransactionIdentification,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.TransactionStatus,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.UserTransactionReference, com.tools20022.repository.area.tsmt.BaselineReportV04.Buyer, com.tools20022.repository.area.tsmt.BaselineReportV04.Seller,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.BuyerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.SellerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.ReportedLineItem,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.RequestForAction);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.mmRelatedMessageReference,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportType, com.tools20022.repository.area.tsmt.BaselineReportV04.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmUserTransactionReference, com.tools20022.repository.area.tsmt.BaselineReportV04.mmBuyer, com.tools20022.repository.area.tsmt.BaselineReportV04.mmSeller,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmBuyerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.mmSellerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportedLineItem,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmRequestForAction);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "011";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(MessageIdentification1 reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public MessageIdentification1 getRelatedMessageReference() {
+		return relatedMessageReference;
+	}
+
+	public void setRelatedMessageReference(MessageIdentification1 relatedMessageReference) {
+		this.relatedMessageReference = relatedMessageReference;
+	}
+
+	public ReportType2 getReportType() {
+		return reportType;
+	}
+
+	public void setReportType(ReportType2 reportType) {
+		this.reportType = reportType;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DocumentIdentification6 getEstablishedBaselineIdentification() {
+		return establishedBaselineIdentification;
+	}
+
+	public void setEstablishedBaselineIdentification(DocumentIdentification6 establishedBaselineIdentification) {
+		this.establishedBaselineIdentification = establishedBaselineIdentification;
+	}
+
+	public TransactionStatus4 getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(TransactionStatus4 transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public List<DocumentIdentification5> getUserTransactionReference() {
+		return userTransactionReference;
+	}
+
+	public void setUserTransactionReference(List<DocumentIdentification5> userTransactionReference) {
+		this.userTransactionReference = userTransactionReference;
+	}
+
+	public PartyIdentification26 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(PartyIdentification26 buyer) {
+		this.buyer = buyer;
+	}
+
+	public PartyIdentification26 getSeller() {
+		return seller;
+	}
+
+	public void setSeller(PartyIdentification26 seller) {
+		this.seller = seller;
+	}
+
+	public BICIdentification1 getBuyerBank() {
+		return buyerBank;
+	}
+
+	public void setBuyerBank(BICIdentification1 buyerBank) {
+		this.buyerBank = buyerBank;
+	}
+
+	public BICIdentification1 getSellerBank() {
+		return sellerBank;
+	}
+
+	public void setSellerBank(BICIdentification1 sellerBank) {
+		this.sellerBank = sellerBank;
+	}
+
+	public LineItem14 getReportedLineItem() {
+		return reportedLineItem;
+	}
+
+	public void setReportedLineItem(LineItem14 reportedLineItem) {
+		this.reportedLineItem = reportedLineItem;
+	}
+
+	public PendingActivity2 getRequestForAction() {
+		return requestForAction;
+	}
+
+	public void setRequestForAction(PendingActivity2 requestForAction) {
+		this.requestForAction = requestForAction;
 	}
 }

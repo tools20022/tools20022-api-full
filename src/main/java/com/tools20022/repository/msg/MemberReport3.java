@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReport3#MemberIdentification
- * MemberReport3.MemberIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MemberReport3#MemberOrError
- * MemberReport3.MemberOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReport3#mmMemberIdentification
+ * MemberReport3.mmMemberIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MemberReport3#mmMemberOrError
+ * MemberReport3.mmMemberOrError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MemberReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MemberIdentification2Choice memberIdentification;
 	/**
 	 * Unique and unambiguous identification of a member within a system,
 	 * assigned using the member identification scheme of the system.
@@ -98,20 +99,21 @@ public class MemberReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberReport3.mmObject();
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
+			componentContext_lazy = () -> MemberReport3.mmObject();
 			isDerived = false;
 			xmlTag = "MmbId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberIdentification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MemberIdentification2Choice.mmObject();
 		}
 	};
+	protected MemberReportOrError2Choice memberOrError;
 	/**
 	 * Reports either on a member or a business error.
 	 * <p>
@@ -143,33 +145,49 @@ public class MemberReport3 {
 	 * definition} = "Reports either on a member or a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MemberOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMemberOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MemberReport3.mmObject();
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
+			componentContext_lazy = () -> MemberReport3.mmObject();
 			isDerived = false;
 			xmlTag = "MmbOrErr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberOrError";
 			definition = "Reports either on a member or a business error.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MemberReportOrError2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MemberReportOrError2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReport3.MemberIdentification, com.tools20022.repository.msg.MemberReport3.MemberOrError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReport3.mmMemberIdentification, com.tools20022.repository.msg.MemberReport3.mmMemberOrError);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberReport3";
 				definition = "Reports either on a member or a business error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MemberIdentification2Choice getMemberIdentification() {
+		return memberIdentification;
+	}
+
+	public void setMemberIdentification(MemberIdentification2Choice memberIdentification) {
+		this.memberIdentification = memberIdentification;
+	}
+
+	public MemberReportOrError2Choice getMemberOrError() {
+		return memberOrError;
+	}
+
+	public void setMemberOrError(MemberReportOrError2Choice memberOrError) {
+		this.memberOrError = memberOrError;
 	}
 }

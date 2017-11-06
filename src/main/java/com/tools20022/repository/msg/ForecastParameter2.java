@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.ReportParameter2Choice;
 import com.tools20022.repository.entity.FundsCashFlow;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Parameters used to report cash movements,eg, country code, currency code, BIC
@@ -36,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForecastParameter2#ReportParameter
- * ForecastParameter2.ReportParameter}</li>
+ * {@linkplain com.tools20022.repository.msg.ForecastParameter2#mmReportParameter
+ * ForecastParameter2.mmReportParameter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForecastParameter2#CashInForecastDetails
- * ForecastParameter2.CashInForecastDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ForecastParameter2#mmCashInForecastDetails
+ * ForecastParameter2.mmCashInForecastDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForecastParameter2#CashOutForecastDetails
- * ForecastParameter2.CashOutForecastDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ForecastParameter2#mmCashOutForecastDetails
+ * ForecastParameter2.mmCashOutForecastDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForecastParameter2#NetCashForecastDetails
- * ForecastParameter2.NetCashForecastDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ForecastParameter2#mmNetCashForecastDetails
+ * ForecastParameter2.mmNetCashForecastDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForecastParameter2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportParameter2Choice reportParameter;
 	/**
 	 * Type of parameter used for grouping the information in a report, eg,
 	 * country code, currency code, BIC or a user defined parameter.
@@ -103,7 +105,7 @@ public class ForecastParameter2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportParameter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportParameter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ForecastParameter2.mmObject();
 			isDerived = false;
@@ -111,11 +113,12 @@ public class ForecastParameter2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameter";
 			definition = "Type of parameter used for grouping the information in a report, eg, country code, currency code, BIC or a user defined parameter.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportParameter2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashInForecast1> cashInForecastDetails;
 	/**
 	 * Cash movement in to of a fund as a result of investment funds
 	 * transactions, eg, subscriptions or switch-out.
@@ -150,20 +153,21 @@ public class ForecastParameter2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashInForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashInForecastDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ForecastParameter2.mmObject();
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
+			componentContext_lazy = () -> ForecastParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "CshInFcstDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInForecastDetails";
 			definition = "Cash movement in to of a fund as a result of investment funds transactions, eg, subscriptions or switch-out.";
 			minOccurs = 0;
-			type_lazy = () -> CashInForecast1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashInForecast1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashOutForecast1> cashOutForecastDetails;
 	/**
 	 * Cash movement out of a fund as a result of investment funds transactions,
 	 * eg, redemptions or switch-out.
@@ -198,20 +202,21 @@ public class ForecastParameter2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashOutForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashOutForecastDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ForecastParameter2.mmObject();
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
+			componentContext_lazy = () -> ForecastParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutFcstDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutForecastDetails";
 			definition = "Cash movement out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.";
 			minOccurs = 0;
-			type_lazy = () -> CashOutForecast1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NetCashForecast1> netCashForecastDetails;
 	/**
 	 * Net cash movements to a fund as a result of investment funds
 	 * transactions.
@@ -246,33 +251,65 @@ public class ForecastParameter2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetCashForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetCashForecastDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ForecastParameter2.mmObject();
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
+			componentContext_lazy = () -> ForecastParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "NetCshFcstDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashForecastDetails";
 			definition = "Net cash movements to a fund as a result of investment funds transactions.";
 			minOccurs = 0;
-			type_lazy = () -> NetCashForecast1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForecastParameter2.ReportParameter, com.tools20022.repository.msg.ForecastParameter2.CashInForecastDetails,
-						com.tools20022.repository.msg.ForecastParameter2.CashOutForecastDetails, com.tools20022.repository.msg.ForecastParameter2.NetCashForecastDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForecastParameter2.mmReportParameter, com.tools20022.repository.msg.ForecastParameter2.mmCashInForecastDetails,
+						com.tools20022.repository.msg.ForecastParameter2.mmCashOutForecastDetails, com.tools20022.repository.msg.ForecastParameter2.mmNetCashForecastDetails);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ForecastParameter2";
 				definition = "Parameters used to report cash movements,eg, country code, currency code, BIC or a user defined parameter.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportParameter2Choice getReportParameter() {
+		return reportParameter;
+	}
+
+	public void setReportParameter(ReportParameter2Choice reportParameter) {
+		this.reportParameter = reportParameter;
+	}
+
+	public List<CashInForecast1> getCashInForecastDetails() {
+		return cashInForecastDetails;
+	}
+
+	public void setCashInForecastDetails(List<com.tools20022.repository.msg.CashInForecast1> cashInForecastDetails) {
+		this.cashInForecastDetails = cashInForecastDetails;
+	}
+
+	public List<CashOutForecast1> getCashOutForecastDetails() {
+		return cashOutForecastDetails;
+	}
+
+	public void setCashOutForecastDetails(List<com.tools20022.repository.msg.CashOutForecast1> cashOutForecastDetails) {
+		this.cashOutForecastDetails = cashOutForecastDetails;
+	}
+
+	public List<NetCashForecast1> getNetCashForecastDetails() {
+		return netCashForecastDetails;
+	}
+
+	public void setNetCashForecastDetails(List<com.tools20022.repository.msg.NetCashForecast1> netCashForecastDetails) {
+		this.netCashForecastDetails = netCashForecastDetails;
 	}
 }

@@ -33,17 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.DataTypeCode DataTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DataType1Code#ExerciseData
- * DataType1Code.ExerciseData}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DataType1Code#TradingData
- * DataType1Code.TradingData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DataType1Code#mmExerciseData
+ * DataType1Code.mmExerciseData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DataType1Code#mmTradingData
+ * DataType1Code.mmTradingData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +77,7 @@ public class DataType1Code extends DataTypeCode {
 	 * name} = "ExerciseData"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExerciseData = new MMCode() {
+	public static final MMCode mmExerciseData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExerciseData";
@@ -98,7 +100,7 @@ public class DataType1Code extends DataTypeCode {
 	 * name} = "TradingData"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradingData = new MMCode() {
+	public static final MMCode mmTradingData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingData";
@@ -109,11 +111,11 @@ public class DataType1Code extends DataTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataType1Code";
 				definition = "Type of data to indicate whether a trade is an option or resulted by an option exercise.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataType1Code.ExerciseData, com.tools20022.repository.codeset.DataType1Code.TradingData);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataType1Code.mmExerciseData, com.tools20022.repository.codeset.DataType1Code.mmTradingData);
 				trace_lazy = () -> DataTypeCode.mmObject();
 			}
 		});

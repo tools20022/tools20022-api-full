@@ -37,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentStatusCode6Choice#Pending
- * PaymentStatusCode6Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentStatusCode6Choice#mmPending
+ * PaymentStatusCode6Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentStatusCode6Choice#Final
- * PaymentStatusCode6Choice.Final}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentStatusCode6Choice#mmFinal
+ * PaymentStatusCode6Choice.mmFinal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentStatusCode6Choice#RTGS
- * PaymentStatusCode6Choice.RTGS}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentStatusCode6Choice#mmRTGS
+ * PaymentStatusCode6Choice.mmRTGS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentStatusCode6Choice#Settlement
- * PaymentStatusCode6Choice.Settlement}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentStatusCode6Choice#mmSettlement
+ * PaymentStatusCode6Choice.mmSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentStatusCode6Choice#Proprietary
- * PaymentStatusCode6Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentStatusCode6Choice#mmProprietary
+ * PaymentStatusCode6Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentStatusCode6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PendingStatus4Code pending;
 	/**
 	 * Qualifies further the pending status.
 	 * <p>
@@ -91,8 +92,8 @@ public class PaymentStatusCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#InstructionStatus
-	 * PaymentStatus.InstructionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmInstructionStatus
+	 * PaymentStatus.mmInstructionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,25 +113,26 @@ public class PaymentStatusCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PaymentStatusCode5Choice#Pending
-	 * PaymentStatusCode5Choice.Pending}</li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusCode5Choice#mmPending
+	 * PaymentStatusCode5Choice.mmPending}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Pending = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPending = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> PaymentStatusCode6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.InstructionStatus;
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Qualifies further the pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.Pending;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmPending;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PendingStatus4Code.mmObject();
 		}
 	};
+	protected FinalStatus1Code final_;
 	/**
 	 * Qualifies further the final status.
 	 * <p>
@@ -144,8 +146,8 @@ public class PaymentStatusCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#InstructionStatus
-	 * PaymentStatus.InstructionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmInstructionStatus
+	 * PaymentStatus.mmInstructionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,25 +167,26 @@ public class PaymentStatusCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PaymentStatusCode5Choice#Final
-	 * PaymentStatusCode5Choice.Final}</li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusCode5Choice#mmFinal
+	 * PaymentStatusCode5Choice.mmFinal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Final = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinal = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> PaymentStatusCode6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.InstructionStatus;
 			isDerived = false;
 			xmlTag = "Fnl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			definition = "Qualifies further the final status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.Final;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmFinal;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FinalStatus1Code.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText rTGS;
 	/**
 	 * Qualifies further the RTGS status.
 	 * <p>
@@ -197,8 +200,8 @@ public class PaymentStatusCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#RTGS
-	 * CashSettlement.RTGS}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRTGS
+	 * CashSettlement.mmRTGS}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -218,25 +221,26 @@ public class PaymentStatusCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PaymentStatusCode5Choice#RTGS
-	 * PaymentStatusCode5Choice.RTGS}</li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusCode5Choice#mmRTGS
+	 * PaymentStatusCode5Choice.mmRTGS}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RTGS = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRTGS = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmRTGS;
 			componentContext_lazy = () -> PaymentStatusCode6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.RTGS;
 			isDerived = false;
 			xmlTag = "RTGS";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RTGS";
 			definition = "Qualifies further the RTGS status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.RTGS;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmRTGS;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText settlement;
 	/**
 	 * Qualifies further the settlement status.
 	 * <p>
@@ -250,8 +254,8 @@ public class PaymentStatusCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#SettlementInstruction
-	 * PaymentInstruction.SettlementInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmSettlementInstruction
+	 * PaymentInstruction.mmSettlementInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -271,25 +275,26 @@ public class PaymentStatusCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PaymentStatusCode5Choice#Settlement
-	 * PaymentStatusCode5Choice.Settlement}</li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusCode5Choice#mmSettlement
+	 * PaymentStatusCode5Choice.mmSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Settlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlement = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> PaymentStatusCode6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.SettlementInstruction;
 			isDerived = false;
 			xmlTag = "Sttlm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
 			definition = "Qualifies further the settlement status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.Settlement;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmSettlement;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Qualifies further the proprietary status.
 	 * <p>
@@ -302,8 +307,8 @@ public class PaymentStatusCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#InstructionStatus
-	 * PaymentStatus.InstructionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmInstructionStatus
+	 * PaymentStatus.mmInstructionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -323,22 +328,22 @@ public class PaymentStatusCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PaymentStatusCode5Choice#Proprietary
-	 * PaymentStatusCode5Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusCode5Choice#mmProprietary
+	 * PaymentStatusCode5Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> PaymentStatusCode6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.InstructionStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Qualifies further the proprietary status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -346,10 +351,10 @@ public class PaymentStatusCode6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusCode6Choice.Pending, com.tools20022.repository.choice.PaymentStatusCode6Choice.Final,
-						com.tools20022.repository.choice.PaymentStatusCode6Choice.RTGS, com.tools20022.repository.choice.PaymentStatusCode6Choice.Settlement, com.tools20022.repository.choice.PaymentStatusCode6Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusCode6Choice.mmPending, com.tools20022.repository.choice.PaymentStatusCode6Choice.mmFinal,
+						com.tools20022.repository.choice.PaymentStatusCode6Choice.mmRTGS, com.tools20022.repository.choice.PaymentStatusCode6Choice.mmSettlement, com.tools20022.repository.choice.PaymentStatusCode6Choice.mmProprietary);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentStatusCode6Choice";
 				definition = "Choice between a list of pending statuses or final statuses.";
@@ -357,5 +362,45 @@ public class PaymentStatusCode6Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PendingStatus4Code getPending() {
+		return pending;
+	}
+
+	public void setPending(PendingStatus4Code pending) {
+		this.pending = pending;
+	}
+
+	public FinalStatus1Code getFinal() {
+		return final_;
+	}
+
+	public void setFinal(FinalStatus1Code final_) {
+		this.final_ = final_;
+	}
+
+	public Max4AlphaNumericText getRTGS() {
+		return rTGS;
+	}
+
+	public void setRTGS(Max4AlphaNumericText rTGS) {
+		this.rTGS = rTGS;
+	}
+
+	public Max4AlphaNumericText getSettlement() {
+		return settlement;
+	}
+
+	public void setSettlement(Max4AlphaNumericText settlement) {
+		this.settlement = settlement;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

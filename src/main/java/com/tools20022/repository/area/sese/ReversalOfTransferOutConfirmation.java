@@ -63,24 +63,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#PreviousReference
- * ReversalOfTransferOutConfirmation.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#mmPreviousReference
+ * ReversalOfTransferOutConfirmation.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#PoolReference
- * ReversalOfTransferOutConfirmation.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#mmPoolReference
+ * ReversalOfTransferOutConfirmation.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#RelatedReference
- * ReversalOfTransferOutConfirmation.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#mmRelatedReference
+ * ReversalOfTransferOutConfirmation.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#TransferOutConfirmationToBeReversed
- * ReversalOfTransferOutConfirmation.TransferOutConfirmationToBeReversed}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#mmTransferOutConfirmationToBeReversed
+ * ReversalOfTransferOutConfirmation.mmTransferOutConfirmationToBeReversed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#identifier
- * ReversalOfTransferOutConfirmation.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.004.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReversalOfTransferOutConfirmation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalReference2 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -127,17 +126,18 @@ public class ReversalOfTransferOutConfirmation {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -161,17 +161,18 @@ public class ReversalOfTransferOutConfirmation {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -196,17 +197,18 @@ public class ReversalOfTransferOutConfirmation {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected TransferOut1 transferOutConfirmationToBeReversed;
 	/**
 	 * Copy of the transfer out confirmation to reverse.
 	 * <p>
@@ -229,42 +231,15 @@ public class ReversalOfTransferOutConfirmation {
 	 * definition} = "Copy of the transfer out confirmation to reverse."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransferOutConfirmationToBeReversed = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferOutConfirmationToBeReversed = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfOutConfToBeRvsd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOutConfirmationToBeReversed";
 			definition = "Copy of the transfer out confirmation to reverse.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransferOut1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "004";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -280,11 +255,51 @@ public class ReversalOfTransferOutConfirmation {
 				xmlTag = "sese.004.001.01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				xmlName = "sese.004.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.PreviousReference, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.PoolReference,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.RelatedReference, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.TransferOutConfirmationToBeReversed);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.mmPreviousReference,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.mmPoolReference, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.mmRelatedReference,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.mmTransferOutConfirmationToBeReversed);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "004";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalReference2 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference2 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference2 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference2 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference2 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public TransferOut1 getTransferOutConfirmationToBeReversed() {
+		return transferOutConfirmationToBeReversed;
+	}
+
+	public void setTransferOutConfirmationToBeReversed(TransferOut1 transferOutConfirmationToBeReversed) {
+		this.transferOutConfirmationToBeReversed = transferOutConfirmationToBeReversed;
 	}
 }

@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountReport7#AccountOrBusinessErrorRule
- * AccountReport7.AccountOrBusinessErrorRule}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport7#mmAccountOrBusinessErrorRule
+ * AccountReport7.mmAccountOrBusinessErrorRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -43,12 +43,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountReport7#AccountIdentification
- * AccountReport7.AccountIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountReport7#Account
- * AccountReport7.Account}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountReport7#BusinessError
- * AccountReport7.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport7#mmAccountIdentification
+ * AccountReport7.mmAccountIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport7#mmAccount
+ * AccountReport7.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport7#mmBusinessError
+ * AccountReport7.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountReport7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification1Choice accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -87,8 +88,8 @@ public class AccountReport7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +109,21 @@ public class AccountReport7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> AccountReport7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
 		}
 	};
+	protected CashAccountDetails1 account;
 	/**
 	 * Requested information on the account.
 	 * <p>
@@ -133,8 +135,8 @@ public class AccountReport7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccountContract#CashAccount
-	 * CashAccountContract.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmCashAccount
+	 * CashAccountContract.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,21 +154,22 @@ public class AccountReport7 {
 	 * definition} = "Requested information on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> AccountReport7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.CashAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Requested information on the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccountDetails1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccountDetails1.mmObject();
 		}
 	};
+	protected ErrorHandling2 businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -192,7 +195,7 @@ public class AccountReport7 {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountReport7.mmObject();
 			isDerived = false;
@@ -200,10 +203,10 @@ public class AccountReport7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ErrorHandling2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
 		}
 	};
 	/**
@@ -214,11 +217,11 @@ public class AccountReport7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport7#Account
-	 * AccountReport7.Account}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport7#mmAccount
+	 * AccountReport7.mmAccount}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountReport7#BusinessError
-	 * AccountReport7.BusinessError}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport7#mmBusinessError
+	 * AccountReport7.mmBusinessError}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -236,28 +239,53 @@ public class AccountReport7 {
 	 * "Either Account or BusinessError must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor AccountOrBusinessErrorRule = new MMXor() {
+	public static final MMXor mmAccountOrBusinessErrorRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOrBusinessErrorRule";
 			definition = "Either Account or BusinessError must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport7.Account, com.tools20022.repository.msg.AccountReport7.BusinessError);
 			messageComponent_lazy = () -> AccountReport7.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport7.mmAccount, com.tools20022.repository.msg.AccountReport7.mmBusinessError);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport7.AccountIdentification, com.tools20022.repository.msg.AccountReport7.Account, com.tools20022.repository.msg.AccountReport7.BusinessError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport7.mmAccountIdentification, com.tools20022.repository.msg.AccountReport7.mmAccount,
+						com.tools20022.repository.msg.AccountReport7.mmBusinessError);
 				trace_lazy = () -> CashAccountContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountReport7";
 				definition = "Reports either on the account information or on a business error.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport7.AccountOrBusinessErrorRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport7.mmAccountOrBusinessErrorRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification1Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification1Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public CashAccountDetails1 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccountDetails1 account) {
+		this.account = account;
+	}
+
+	public ErrorHandling2 getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
+		this.businessError = businessError;
 	}
 }

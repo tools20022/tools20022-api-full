@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -67,18 +68,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusReportRequestV03#RequestIdentification
- * StatusReportRequestV03.RequestIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusReportRequestV03#mmRequestIdentification
+ * StatusReportRequestV03.mmRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusReportRequestV03#EntitiesToBeReported
- * StatusReportRequestV03.EntitiesToBeReported}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusReportRequestV03#mmEntitiesToBeReported
+ * StatusReportRequestV03.mmEntitiesToBeReported}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.StatusReportRequestV03#identifier
- * StatusReportRequestV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.038.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReportRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 requestIdentification;
 	/**
 	 * Identifies the request message.
 	 * <p>
@@ -117,17 +117,18 @@ public class StatusReportRequestV03 {
 	 * definition} = "Identifies the request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestIdentification";
 			definition = "Identifies the request message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<BICIdentification1> entitiesToBeReported;
 	/**
 	 * Specifies the entities of the submitter for which the transactions have
 	 * to be reported.
@@ -154,7 +155,7 @@ public class StatusReportRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EntitiesToBeReported = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEntitiesToBeReported = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NttiesToBeRptd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,33 +163,6 @@ public class StatusReportRequestV03 {
 			definition = "Specifies the entities of the submitter for which the transactions have to be reported. ";
 			minOccurs = 0;
 			complexType_lazy = () -> BICIdentification1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "038"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "038";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -202,10 +176,33 @@ public class StatusReportRequestV03 {
 				rootElement = "Document";
 				xmlTag = "StsRptReq";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusReportRequestV03.RequestIdentification, com.tools20022.repository.area.tsmt.StatusReportRequestV03.EntitiesToBeReported);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.StatusReportRequestV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusReportRequestV03.mmRequestIdentification, com.tools20022.repository.area.tsmt.StatusReportRequestV03.mmEntitiesToBeReported);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "038";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getRequestIdentification() {
+		return requestIdentification;
+	}
+
+	public void setRequestIdentification(MessageIdentification1 requestIdentification) {
+		this.requestIdentification = requestIdentification;
+	}
+
+	public List<BICIdentification1> getEntitiesToBeReported() {
+		return entitiesToBeReported;
+	}
+
+	public void setEntitiesToBeReported(List<BICIdentification1> entitiesToBeReported) {
+		this.entitiesToBeReported = entitiesToBeReported;
 	}
 }

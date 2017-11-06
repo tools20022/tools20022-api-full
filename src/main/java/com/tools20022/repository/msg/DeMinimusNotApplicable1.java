@@ -35,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeMinimusNotApplicable1#RestrictedPersonReason
- * DeMinimusNotApplicable1.RestrictedPersonReason}</li>
+ * {@linkplain com.tools20022.repository.msg.DeMinimusNotApplicable1#mmRestrictedPersonReason
+ * DeMinimusNotApplicable1.mmRestrictedPersonReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeMinimusNotApplicable1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text restrictedPersonReason;
 	/**
 	 * Reason for the restricted person.
 	 * <p>
@@ -73,8 +74,8 @@ public class DeMinimusNotApplicable1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Investor#RestrictedPersonReason
-	 * Investor.RestrictedPersonReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Investor#mmRestrictedPersonReason
+	 * Investor.mmRestrictedPersonReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,17 +94,17 @@ public class DeMinimusNotApplicable1 {
 	 * definition} = "Reason for the restricted person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RestrictedPersonReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictedPersonReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmRestrictedPersonReason;
 			componentContext_lazy = () -> DeMinimusNotApplicable1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.RestrictedPersonReason;
 			isDerived = false;
 			xmlTag = "RstrctdPrsnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedPersonReason";
 			definition = "Reason for the restricted person.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -111,14 +112,22 @@ public class DeMinimusNotApplicable1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeMinimusNotApplicable1.RestrictedPersonReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeMinimusNotApplicable1.mmRestrictedPersonReason);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeMinimusNotApplicable1";
 				definition = "Conditions applicable when the investor is not covered by the \"de minimis\" exemption.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getRestrictedPersonReason() {
+		return restrictedPersonReason;
+	}
+
+	public void setRestrictedPersonReason(Max350Text restrictedPersonReason) {
+		this.restrictedPersonReason = restrictedPersonReason;
 	}
 }

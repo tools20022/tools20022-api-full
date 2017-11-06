@@ -35,19 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyName3#ValidFrom
- * PartyName3.ValidFrom}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyName3#Name
- * PartyName3.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyName3#ShortName
- * PartyName3.ShortName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyName3#mmValidFrom
+ * PartyName3.mmValidFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyName3#mmName
+ * PartyName3.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyName3#mmShortName
+ * PartyName3.mmShortName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyName3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate validFrom;
 	/**
 	 * Specifies the date from which the party name is valid.
 	 * <p>
@@ -89,7 +90,7 @@ public class PartyName3 {
 	 * definition} = "Specifies the date from which the party name is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyName3.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class PartyName3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Specifies the date from which the party name is valid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max350Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -131,7 +133,7 @@ public class PartyName3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyName3.mmObject();
 			isDerived = false;
@@ -139,11 +141,12 @@ public class PartyName3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text shortName;
 	/**
 	 * Specifies the short name of the organisation.
 	 * <p>
@@ -170,7 +173,7 @@ public class PartyName3 {
 	 * definition} = "Specifies the short name of the organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyName3.mmObject();
 			isDerived = false;
@@ -178,8 +181,8 @@ public class PartyName3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Specifies the short name of the organisation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -187,13 +190,37 @@ public class PartyName3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyName3.ValidFrom, com.tools20022.repository.msg.PartyName3.Name, com.tools20022.repository.msg.PartyName3.ShortName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyName3.mmValidFrom, com.tools20022.repository.msg.PartyName3.mmName, com.tools20022.repository.msg.PartyName3.mmShortName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyName3";
 				definition = "Specifies the party name entity through  the valid short and long names of the party within the system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getValidFrom() {
+		return validFrom;
+	}
+
+	public void setValidFrom(ISODate validFrom) {
+		this.validFrom = validFrom;
+	}
+
+	public Max350Text getName() {
+		return name;
+	}
+
+	public void setName(Max350Text name) {
+		this.name = name;
+	}
+
+	public Max35Text getShortName() {
+		return shortName;
+	}
+
+	public void setShortName(Max35Text shortName) {
+		this.shortName = shortName;
 	}
 }

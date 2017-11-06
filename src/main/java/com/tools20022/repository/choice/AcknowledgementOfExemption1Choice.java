@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AcknowledgementOfExemption1Choice#DocumentationWillBeSentIndicator
- * AcknowledgementOfExemption1Choice.DocumentationWillBeSentIndicator}</li>
+ * {@linkplain com.tools20022.repository.choice.AcknowledgementOfExemption1Choice#mmDocumentationWillBeSentIndicator
+ * AcknowledgementOfExemption1Choice.mmDocumentationWillBeSentIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AcknowledgementOfExemption1Choice#DocumentationWillNotBeSentIndicator
- * AcknowledgementOfExemption1Choice.DocumentationWillNotBeSentIndicator}</li>
+ * {@linkplain com.tools20022.repository.choice.AcknowledgementOfExemption1Choice#mmDocumentationWillNotBeSentIndicator
+ * AcknowledgementOfExemption1Choice.mmDocumentationWillNotBeSentIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcknowledgementOfExemption1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator documentationWillBeSentIndicator;
 	/**
 	 * Acknowledgement of exempt instruction specifying that the documentation
 	 * will be sent to DTC (The Depository Trust Corporation).
@@ -92,7 +93,7 @@ public class AcknowledgementOfExemption1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentationWillBeSentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentationWillBeSentIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcknowledgementOfExemption1Choice.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class AcknowledgementOfExemption1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentationWillBeSentIndicator";
 			definition = "Acknowledgement of exempt instruction specifying that the documentation will be sent to DTC  (The Depository Trust Corporation).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator documentationWillNotBeSentIndicator;
 	/**
 	 * Acknowledgement of exempt instruction specifying that the documentation
 	 * will not be sent to DTC (The Depository Trust Corporation).
@@ -136,7 +138,7 @@ public class AcknowledgementOfExemption1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentationWillNotBeSentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentationWillNotBeSentIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcknowledgementOfExemption1Choice.mmObject();
 			isDerived = false;
@@ -144,8 +146,8 @@ public class AcknowledgementOfExemption1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentationWillNotBeSentIndicator";
 			definition = "Acknowledgement of exempt instruction specifying that the documentation will not be sent to DTC (The Depository Trust Corporation).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -153,14 +155,30 @@ public class AcknowledgementOfExemption1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcknowledgementOfExemption1Choice.DocumentationWillBeSentIndicator,
-						com.tools20022.repository.choice.AcknowledgementOfExemption1Choice.DocumentationWillNotBeSentIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcknowledgementOfExemption1Choice.mmDocumentationWillBeSentIndicator,
+						com.tools20022.repository.choice.AcknowledgementOfExemption1Choice.mmDocumentationWillNotBeSentIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AcknowledgementOfExemption1Choice";
 				definition = "Acknowledgement of exempt instruction specifying whether the documentation will be sent to DTCC or not (not maintained by DTCC).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getDocumentationWillBeSentIndicator() {
+		return documentationWillBeSentIndicator;
+	}
+
+	public void setDocumentationWillBeSentIndicator(YesNoIndicator documentationWillBeSentIndicator) {
+		this.documentationWillBeSentIndicator = documentationWillBeSentIndicator;
+	}
+
+	public YesNoIndicator getDocumentationWillNotBeSentIndicator() {
+		return documentationWillNotBeSentIndicator;
+	}
+
+	public void setDocumentationWillNotBeSentIndicator(YesNoIndicator documentationWillNotBeSentIndicator) {
+		this.documentationWillNotBeSentIndicator = documentationWillNotBeSentIndicator;
 	}
 }

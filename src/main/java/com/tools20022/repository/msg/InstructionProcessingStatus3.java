@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus3#Status
- * InstructionProcessingStatus3.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus3#mmStatus
+ * InstructionProcessingStatus3.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus3#AdditionalInformation
- * InstructionProcessingStatus3.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus3#mmAdditionalInformation
+ * InstructionProcessingStatus3.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstructionProcessingStatus3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status7Code status;
 	/**
 	 * Status on the processing of the instructions.
 	 * <p>
@@ -79,8 +80,8 @@ public class InstructionProcessingStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#InstructionProcessingStatus
-	 * Status.InstructionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmInstructionProcessingStatus
+	 * Status.mmInstructionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,25 +101,26 @@ public class InstructionProcessingStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus1#Status
-	 * InstructionProcessingStatus1.Status}</li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus1#mmStatus
+	 * InstructionProcessingStatus1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> InstructionProcessingStatus3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.InstructionProcessingStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status on the processing of the instructions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus1.Status;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus1.mmStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status7Code.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the status.
 	 * <p>
@@ -147,11 +149,11 @@ public class InstructionProcessingStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus1#AdditionalInformation
-	 * InstructionProcessingStatus1.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus1#mmAdditionalInformation
+	 * InstructionProcessingStatus1.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstructionProcessingStatus3.mmObject();
 			isDerived = false;
@@ -159,9 +161,9 @@ public class InstructionProcessingStatus3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus1.AdditionalInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus1.mmAdditionalInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -169,9 +171,9 @@ public class InstructionProcessingStatus3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionProcessingStatus3.Status, com.tools20022.repository.msg.InstructionProcessingStatus3.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionProcessingStatus3.mmStatus, com.tools20022.repository.msg.InstructionProcessingStatus3.mmAdditionalInformation);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionProcessingStatus3";
 				definition = "Status advising on the processing of the instruction.";
@@ -179,5 +181,21 @@ public class InstructionProcessingStatus3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status7Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status7Code status) {
+		this.status = status;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

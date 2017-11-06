@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyQueryDefinition2#QueryType
- * CurrencyQueryDefinition2.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyQueryDefinition2#mmQueryType
+ * CurrencyQueryDefinition2.mmQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyQueryDefinition2#CurrencyCriteria
- * CurrencyQueryDefinition2.CurrencyCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyQueryDefinition2#mmCurrencyCriteria
+ * CurrencyQueryDefinition2.mmCurrencyCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyQueryDefinition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QueryType2Code queryType;
 	/**
 	 * Specifies the type of matching items to be returned in the response to
 	 * the query.
@@ -91,7 +92,7 @@ public class CurrencyQueryDefinition2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyQueryDefinition2.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class CurrencyQueryDefinition2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	protected CurrencyCriteriaDefinitionChoice currencyCriteria;
 	/**
 	 * Defines of the currency query criteria.
 	 * <p>
@@ -131,7 +133,7 @@ public class CurrencyQueryDefinition2 {
 	 * definition} = "Defines of the currency query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CurrencyQueryDefinition2.mmObject();
 			isDerived = false;
@@ -139,23 +141,39 @@ public class CurrencyQueryDefinition2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyCriteria";
 			definition = "Defines of the currency query criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyCriteriaDefinitionChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CurrencyCriteriaDefinitionChoice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyQueryDefinition2.QueryType, com.tools20022.repository.msg.CurrencyQueryDefinition2.CurrencyCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyQueryDefinition2.mmQueryType, com.tools20022.repository.msg.CurrencyQueryDefinition2.mmCurrencyCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrencyQueryDefinition2";
 				definition = "Defines the query criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QueryType2Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(QueryType2Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public CurrencyCriteriaDefinitionChoice getCurrencyCriteria() {
+		return currencyCriteria;
+	}
+
+	public void setCurrencyCriteria(CurrencyCriteriaDefinitionChoice currencyCriteria) {
+		this.currencyCriteria = currencyCriteria;
 	}
 }

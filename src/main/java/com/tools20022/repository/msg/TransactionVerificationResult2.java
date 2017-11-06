@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.datatype.Max70Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Result of the verifications performed by the issuer to deliver or decline the
@@ -37,24 +38,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult2#ElectronicCommerceAuthenticationResult
- * TransactionVerificationResult2.ElectronicCommerceAuthenticationResult}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult2#mmElectronicCommerceAuthenticationResult
+ * TransactionVerificationResult2.mmElectronicCommerceAuthenticationResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult2#CSCResult
- * TransactionVerificationResult2.CSCResult}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult2#mmCSCResult
+ * TransactionVerificationResult2.mmCSCResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult2#CardholderAddressVerificationResult
- * TransactionVerificationResult2.CardholderAddressVerificationResult}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult2#mmCardholderAddressVerificationResult
+ * TransactionVerificationResult2.mmCardholderAddressVerificationResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult2#DeclinedProductCode
- * TransactionVerificationResult2.DeclinedProductCode}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionVerificationResult2#mmDeclinedProductCode
+ * TransactionVerificationResult2.mmDeclinedProductCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionVerificationResult2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max500Text electronicCommerceAuthenticationResult;
 	/**
 	 * Result of an e-commerce authentication process.
 	 * <p>
@@ -108,7 +110,7 @@ public class TransactionVerificationResult2 {
 	 * definition} = "Result of an e-commerce authentication process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ElectronicCommerceAuthenticationResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmElectronicCommerceAuthenticationResult = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
 			isDerived = false;
@@ -116,11 +118,12 @@ public class TransactionVerificationResult2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicCommerceAuthenticationResult";
 			definition = "Result of an e-commerce authentication process.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
+	protected CSCResult1Code cSCResult;
 	/**
 	 * Result of the printed card security code (CSC) validation.
 	 * <p>
@@ -150,7 +153,7 @@ public class TransactionVerificationResult2 {
 	 * "Result of the printed card security code (CSC) validation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CSCResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCSCResult = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
 			isDerived = false;
@@ -158,11 +161,12 @@ public class TransactionVerificationResult2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCResult";
 			definition = "Result of the printed card security code (CSC) validation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CSCResult1Code.mmObject();
 		}
 	};
+	protected List<CardholderAddressVerificationResult1Code> cardholderAddressVerificationResult;
 	/**
 	 * Result of the cardholder verification address checks on the street number
 	 * and the postal code.
@@ -194,7 +198,7 @@ public class TransactionVerificationResult2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardholderAddressVerificationResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardholderAddressVerificationResult = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
 			isDerived = false;
@@ -206,6 +210,7 @@ public class TransactionVerificationResult2 {
 			simpleType_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
 	};
+	protected List<Max70Text> declinedProductCode;
 	/**
 	 * Product code for which the authorisation was declined.
 	 * <p>
@@ -233,7 +238,7 @@ public class TransactionVerificationResult2 {
 	 * definition} = "Product code for which the authorisation was declined."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeclinedProductCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeclinedProductCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
 			isDerived = false;
@@ -249,16 +254,48 @@ public class TransactionVerificationResult2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult2.ElectronicCommerceAuthenticationResult, com.tools20022.repository.msg.TransactionVerificationResult2.CSCResult,
-						com.tools20022.repository.msg.TransactionVerificationResult2.CardholderAddressVerificationResult, com.tools20022.repository.msg.TransactionVerificationResult2.DeclinedProductCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult2.mmElectronicCommerceAuthenticationResult, com.tools20022.repository.msg.TransactionVerificationResult2.mmCSCResult,
+						com.tools20022.repository.msg.TransactionVerificationResult2.mmCardholderAddressVerificationResult, com.tools20022.repository.msg.TransactionVerificationResult2.mmDeclinedProductCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionVerificationResult2";
 				definition = "Result of the verifications performed by the issuer to deliver or decline the authorisation.";
-				previousVersion_lazy = () -> TransactionVerificationResult1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransactionVerificationResult3.mmObject());
+				previousVersion_lazy = () -> TransactionVerificationResult1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max500Text getElectronicCommerceAuthenticationResult() {
+		return electronicCommerceAuthenticationResult;
+	}
+
+	public void setElectronicCommerceAuthenticationResult(Max500Text electronicCommerceAuthenticationResult) {
+		this.electronicCommerceAuthenticationResult = electronicCommerceAuthenticationResult;
+	}
+
+	public CSCResult1Code getCSCResult() {
+		return cSCResult;
+	}
+
+	public void setCSCResult(CSCResult1Code cSCResult) {
+		this.cSCResult = cSCResult;
+	}
+
+	public List<CardholderAddressVerificationResult1Code> getCardholderAddressVerificationResult() {
+		return cardholderAddressVerificationResult;
+	}
+
+	public void setCardholderAddressVerificationResult(List<CardholderAddressVerificationResult1Code> cardholderAddressVerificationResult) {
+		this.cardholderAddressVerificationResult = cardholderAddressVerificationResult;
+	}
+
+	public List<Max70Text> getDeclinedProductCode() {
+		return declinedProductCode;
+	}
+
+	public void setDeclinedProductCode(List<Max70Text> declinedProductCode) {
+		this.declinedProductCode = declinedProductCode;
 	}
 }

@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalEligibleBalanceFormat4#Balance
- * TotalEligibleBalanceFormat4.Balance}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalEligibleBalanceFormat4#mmBalance
+ * TotalEligibleBalanceFormat4.mmBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalEligibleBalanceFormat4#FullPeriodUnits
- * TotalEligibleBalanceFormat4.FullPeriodUnits}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalEligibleBalanceFormat4#mmFullPeriodUnits
+ * TotalEligibleBalanceFormat4.mmFullPeriodUnits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalEligibleBalanceFormat4#PartWayPeriodUnits
- * TotalEligibleBalanceFormat4.PartWayPeriodUnits}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalEligibleBalanceFormat4#mmPartWayPeriodUnits
+ * TotalEligibleBalanceFormat4.mmPartWayPeriodUnits}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalEligibleBalanceFormat4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Quantity15Choice balance;
 	/**
 	 * Provides information about balance related to a corporate action.
 	 * <p>
@@ -80,8 +81,8 @@ public class TotalEligibleBalanceFormat4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#AggregateQuantity
-	 * SecuritiesBalance.AggregateQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAggregateQuantity
+	 * SecuritiesBalance.mmAggregateQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,21 +102,22 @@ public class TotalEligibleBalanceFormat4 {
 	 * "Provides information about balance related to a corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Balance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> TotalEligibleBalanceFormat4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.AggregateQuantity;
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about balance related to a corporate action.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity15Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Quantity15Choice.mmObject();
 		}
 	};
+	protected SignedQuantityFormat5 fullPeriodUnits;
 	/**
 	 * Number of units of a fund that were purchased in a previous distribution
 	 * period and/or held at the beginning of a distribution period, for example
@@ -153,20 +155,21 @@ public class TotalEligibleBalanceFormat4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FullPeriodUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFullPeriodUnits = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalEligibleBalanceFormat4.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> TotalEligibleBalanceFormat4.mmObject();
 			isDerived = false;
 			xmlTag = "FullPrdUnits";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPeriodUnits";
 			definition = "Number of units of a fund that were purchased in a previous distribution period and/or held at the beginning of a distribution period, for example Group I Units in the UK.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SignedQuantityFormat5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat5.mmObject();
 		}
 	};
+	protected SignedQuantityFormat5 partWayPeriodUnits;
 	/**
 	 * Number of units of a fund that were purchased part way throughout a
 	 * distribution period, for example Group II Units in the U.K.
@@ -203,33 +206,57 @@ public class TotalEligibleBalanceFormat4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartWayPeriodUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartWayPeriodUnits = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalEligibleBalanceFormat4.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> TotalEligibleBalanceFormat4.mmObject();
 			isDerived = false;
 			xmlTag = "PartWayPrdUnits";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartWayPeriodUnits";
 			definition = "Number of units of a fund that were purchased part way throughout a distribution period, for example Group II Units in the U.K.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SignedQuantityFormat5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalEligibleBalanceFormat4.Balance, com.tools20022.repository.msg.TotalEligibleBalanceFormat4.FullPeriodUnits,
-						com.tools20022.repository.msg.TotalEligibleBalanceFormat4.PartWayPeriodUnits);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalEligibleBalanceFormat4.mmBalance, com.tools20022.repository.msg.TotalEligibleBalanceFormat4.mmFullPeriodUnits,
+						com.tools20022.repository.msg.TotalEligibleBalanceFormat4.mmPartWayPeriodUnits);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalEligibleBalanceFormat4";
 				definition = "Total eligible balance for the corporate action and full and part way period units. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Quantity15Choice getBalance() {
+		return balance;
+	}
+
+	public void setBalance(Quantity15Choice balance) {
+		this.balance = balance;
+	}
+
+	public SignedQuantityFormat5 getFullPeriodUnits() {
+		return fullPeriodUnits;
+	}
+
+	public void setFullPeriodUnits(com.tools20022.repository.msg.SignedQuantityFormat5 fullPeriodUnits) {
+		this.fullPeriodUnits = fullPeriodUnits;
+	}
+
+	public SignedQuantityFormat5 getPartWayPeriodUnits() {
+		return partWayPeriodUnits;
+	}
+
+	public void setPartWayPeriodUnits(com.tools20022.repository.msg.SignedQuantityFormat5 partWayPeriodUnits) {
+		this.partWayPeriodUnits = partWayPeriodUnits;
 	}
 }

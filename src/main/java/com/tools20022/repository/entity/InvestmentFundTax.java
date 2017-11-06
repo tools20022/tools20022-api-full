@@ -41,23 +41,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#FiscalExemption
- * InvestmentFundTax.FiscalExemption}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmFiscalExemption
+ * InvestmentFundTax.mmFiscalExemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#InvestmentAccount
- * InvestmentFundTax.InvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmInvestmentAccount
+ * InvestmentFundTax.mmInvestmentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#PercentageOfDebtClaim
- * InvestmentFundTax.PercentageOfDebtClaim}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmPercentageOfDebtClaim
+ * InvestmentFundTax.mmPercentageOfDebtClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#PercentageGrandfatheredDebt
- * InvestmentFundTax.PercentageGrandfatheredDebt}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmPercentageGrandfatheredDebt
+ * InvestmentFundTax.mmPercentageGrandfatheredDebt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#ExemptionIndicator
- * InvestmentFundTax.ExemptionIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmExemptionIndicator
+ * InvestmentFundTax.mmExemptionIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#Transaction
- * InvestmentFundTax.Transaction}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmTransaction
+ * InvestmentFundTax.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -65,186 +65,204 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccount#InvestmentFundTax
- * InvestmentAccount.InvestmentFundTax}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundTax
+ * InvestmentAccount.mmInvestmentFundTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#TransactionTax
- * InvestmentFundTransaction.TransactionTax}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmTransactionTax
+ * InvestmentFundTransaction.mmTransactionTax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Tax8#TaxCalculationDetails
- * Tax8.TaxCalculationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax17#TaxCalculationDetails
- * Tax17.TaxCalculationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DeliverInformation2#TaxDetails
- * DeliverInformation2.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DeliverInformation4#TaxDetails
- * DeliverInformation4.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DeliverInformation7#TaxDetails
- * DeliverInformation7.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation2#TaxDetails
- * ReceiveInformation2.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation4#TaxDetails
- * ReceiveInformation4.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation8#TaxDetails
- * ReceiveInformation8.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation6#TaxDetails
- * ReceiveInformation6.TaxDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax8#mmTaxCalculationDetails
+ * Tax8.mmTaxCalculationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax17#mmTaxCalculationDetails
+ * Tax17.mmTaxCalculationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation11#TaxDetails
- * ReceiveInformation11.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation2#mmTaxDetails
+ * DeliverInformation2.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliverInformation11#TaxDetails
- * DeliverInformation11.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DeliverInformation3#TaxDetails
- * DeliverInformation3.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DeliverInformation8#TaxDetails
- * DeliverInformation8.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation3#TaxDetails
- * ReceiveInformation3.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation7#TaxDetails
- * ReceiveInformation7.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation5#TaxDetails
- * ReceiveInformation5.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation9#TaxDetails
- * ReceiveInformation9.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DeliverInformation5#TaxDetails
- * DeliverInformation5.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DeliverInformation9#TaxDetails
- * DeliverInformation9.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DeliverInformation6#TaxDetails
- * DeliverInformation6.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax6#TaxCalculationDetails
- * Tax6.TaxCalculationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax16#TaxCalculationDetails
- * Tax16.TaxCalculationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax7#TaxCalculationDetails
- * Tax7.TaxCalculationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes2#TaxDetails
- * TotalTaxes2.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#TaxCalculationDetails
- * Tax14.TaxCalculationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes3#TaxDetails
- * TotalTaxes3.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax18#EUCapitalGainType
- * Tax18.EUCapitalGainType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax18#TaxCalculationDetails
- * Tax18.TaxCalculationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes4#TaxDetails
- * TotalTaxes4.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax19#EUCapitalGainType
- * Tax19.EUCapitalGainType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes5#TaxDetails
- * TotalTaxes5.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation4#mmTaxDetails
+ * DeliverInformation4.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#TaxDetails
- * ReceiveInformation13.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation7#mmTaxDetails
+ * DeliverInformation7.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation12#TaxDetails
- * ReceiveInformation12.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation2#mmTaxDetails
+ * ReceiveInformation2.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliverInformation12#TaxDetails
- * DeliverInformation12.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation4#mmTaxDetails
+ * ReceiveInformation4.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliverInformation13#TaxDetails
- * DeliverInformation13.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax21#TaxCalculationDetails
- * Tax21.TaxCalculationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation8#mmTaxDetails
+ * ReceiveInformation8.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliverInformation15#TaxDetails
- * DeliverInformation15.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation6#mmTaxDetails
+ * ReceiveInformation6.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliverInformation14#TaxDetails
- * DeliverInformation14.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation11#mmTaxDetails
+ * ReceiveInformation11.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#TaxDetails
- * ReceiveInformation15.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation11#mmTaxDetails
+ * DeliverInformation11.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation14#TaxDetails
- * ReceiveInformation14.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax25#TaxCalculationDetails
- * Tax25.TaxCalculationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation3#mmTaxDetails
+ * DeliverInformation3.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation17#TaxDetails
- * ReceiveInformation17.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation8#mmTaxDetails
+ * DeliverInformation8.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#TaxDetails
- * ReceiveInformation16.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation3#mmTaxDetails
+ * ReceiveInformation3.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliverInformation16#TaxDetails
- * DeliverInformation16.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation7#mmTaxDetails
+ * ReceiveInformation7.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliverInformation17#TaxDetails
- * DeliverInformation17.TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax28#TaxCalculationDetails
- * Tax28.TaxCalculationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation5#mmTaxDetails
+ * ReceiveInformation5.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#TaxExemption
- * InvestmentAccountOwnershipInformation12.TaxExemption}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation9#mmTaxDetails
+ * ReceiveInformation9.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#TaxExemption
- * InvestmentAccountOwnershipInformation13.TaxExemption}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation5#mmTaxDetails
+ * DeliverInformation5.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#TransactionOverhead
- * RedemptionOrder14.TransactionOverhead}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation9#mmTaxDetails
+ * DeliverInformation9.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder6#TransactionOverhead
- * SwitchSubscriptionLegOrder6.TransactionOverhead}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FeeAndTax1#IndividualTax
- * FeeAndTax1.IndividualTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InformativeTax1#IndividualTax
- * InformativeTax1.IndividualTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax32#TaxCalculationDetails
- * Tax32.TaxCalculationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation6#mmTaxDetails
+ * DeliverInformation6.mmTaxDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax6#mmTaxCalculationDetails
+ * Tax6.mmTaxCalculationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax16#mmTaxCalculationDetails
+ * Tax16.mmTaxCalculationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax7#mmTaxCalculationDetails
+ * Tax7.mmTaxCalculationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes2#mmTaxDetails
+ * TotalTaxes2.mmTaxDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmTaxCalculationDetails
+ * Tax14.mmTaxCalculationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes3#mmTaxDetails
+ * TotalTaxes3.mmTaxDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax18#mmEUCapitalGainType
+ * Tax18.mmEUCapitalGainType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax18#mmTaxCalculationDetails
+ * Tax18.mmTaxCalculationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes4#mmTaxDetails
+ * TotalTaxes4.mmTaxDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax19#mmEUCapitalGainType
+ * Tax19.mmEUCapitalGainType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTaxes5#mmTaxDetails
+ * TotalTaxes5.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#TransactionOverhead
- * SubscriptionExecution13.TransactionOverhead}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#TotalTaxes
- * TotalFeesAndTaxes40.TotalTaxes}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmTaxDetails
+ * ReceiveInformation13.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#IndividualTax
- * TotalFeesAndTaxes40.IndividualTax}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation12#mmTaxDetails
+ * ReceiveInformation12.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#TransactionOverhead
- * SubscriptionExecution12.TransactionOverhead}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation12#mmTaxDetails
+ * DeliverInformation12.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#TransactionOverhead
- * SubscriptionOrder15.TransactionOverhead}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation13#mmTaxDetails
+ * DeliverInformation13.mmTaxDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax21#mmTaxCalculationDetails
+ * Tax21.mmTaxCalculationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#TaxExemption
- * InvestmentAccountOwnershipInformation15.TaxExemption}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation15#mmTaxDetails
+ * DeliverInformation15.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder6#TransactionOverhead
- * SwitchRedemptionLegOrder6.TransactionOverhead}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation14#mmTaxDetails
+ * DeliverInformation14.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#TransactionOverhead
- * RedemptionOrder15.TransactionOverhead}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax30#TaxCalculationDetails
- * Tax30.TaxCalculationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax31#TaxCalculationDetails
- * Tax31.TaxCalculationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmTaxDetails
+ * ReceiveInformation15.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#TransactionOverhead
- * RedemptionExecution16.TransactionOverhead}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation14#mmTaxDetails
+ * ReceiveInformation14.mmTaxDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax25#mmTaxCalculationDetails
+ * Tax25.mmTaxCalculationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#TaxExemption
- * InvestmentAccountOwnershipInformation14.TaxExemption}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation17#mmTaxDetails
+ * ReceiveInformation17.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#TransactionOverhead
- * SubscriptionOrder14.TransactionOverhead}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmTaxDetails
+ * ReceiveInformation16.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution4#TransactionOverhead
- * SwitchSubscriptionLegExecution4.TransactionOverhead}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation16#mmTaxDetails
+ * DeliverInformation16.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#TransactionOverhead
- * RedemptionExecution15.TransactionOverhead}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation17#mmTaxDetails
+ * DeliverInformation17.mmTaxDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax28#mmTaxCalculationDetails
+ * Tax28.mmTaxCalculationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#TransactionOverhead
- * SwitchRedemptionLegExecution4.TransactionOverhead}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#mmTaxExemption
+ * InvestmentAccountOwnershipInformation12.mmTaxExemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#mmTaxExemption
+ * InvestmentAccountOwnershipInformation13.mmTaxExemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#mmTransactionOverhead
+ * RedemptionOrder14.mmTransactionOverhead}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder6#mmTransactionOverhead
+ * SwitchSubscriptionLegOrder6.mmTransactionOverhead}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FeeAndTax1#mmIndividualTax
+ * FeeAndTax1.mmIndividualTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InformativeTax1#mmIndividualTax
+ * InformativeTax1.mmIndividualTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax32#mmTaxCalculationDetails
+ * Tax32.mmTaxCalculationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmTransactionOverhead
+ * SubscriptionExecution13.mmTransactionOverhead}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#mmTotalTaxes
+ * TotalFeesAndTaxes40.mmTotalTaxes}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#mmIndividualTax
+ * TotalFeesAndTaxes40.mmIndividualTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#mmTransactionOverhead
+ * SubscriptionExecution12.mmTransactionOverhead}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#mmTransactionOverhead
+ * SubscriptionOrder15.mmTransactionOverhead}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#mmTaxExemption
+ * InvestmentAccountOwnershipInformation15.mmTaxExemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder6#mmTransactionOverhead
+ * SwitchRedemptionLegOrder6.mmTransactionOverhead}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmTransactionOverhead
+ * RedemptionOrder15.mmTransactionOverhead}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax30#mmTaxCalculationDetails
+ * Tax30.mmTaxCalculationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax31#mmTaxCalculationDetails
+ * Tax31.mmTaxCalculationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#mmTransactionOverhead
+ * RedemptionExecution16.mmTransactionOverhead}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#mmTaxExemption
+ * InvestmentAccountOwnershipInformation14.mmTaxExemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#mmTransactionOverhead
+ * SubscriptionOrder14.mmTransactionOverhead}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution4#mmTransactionOverhead
+ * SwitchSubscriptionLegExecution4.mmTransactionOverhead}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmTransactionOverhead
+ * RedemptionExecution15.mmTransactionOverhead}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#mmTransactionOverhead
+ * SwitchRedemptionLegExecution4.mmTransactionOverhead}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -305,8 +323,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -320,6 +338,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFundTax extends SecuritiesTax {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator fiscalExemption;
 	/**
 	 * Indicates whether an owner of an investment account may benefit from a
 	 * fiscal exemption or amnesty for instance for declaring overseas
@@ -332,58 +351,58 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5#FiscalExemption
-	 * InvestmentAccountOwnershipInformation5.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#FiscalExemption
-	 * InvestmentAccountOwnershipInformation2.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6#FiscalExemption
-	 * InvestmentAccountOwnershipInformation6.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3#FiscalExemption
-	 * InvestmentAccountOwnershipInformation3.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4#FiscalExemption
-	 * InvestmentAccountOwnershipInformation4.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7#FiscalExemption
-	 * InvestmentAccountOwnershipInformation7.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8#FiscalExemption
-	 * InvestmentAccountOwnershipInformation8.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9#FiscalExemption
-	 * InvestmentAccountOwnershipInformation9.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10#FiscalExemption
-	 * InvestmentAccountOwnershipInformation10.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11#FiscalExemption
-	 * InvestmentAccountOwnershipInformation11.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#FiscalExemption
-	 * InvestmentAccountOwnershipInformation12.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#FiscalExemption
-	 * InvestmentAccountOwnershipInformation13.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#FiscalExemption
-	 * InvestmentAccountOwnershipInformation15.FiscalExemption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#FiscalExemption
-	 * InvestmentAccountOwnershipInformation14.FiscalExemption}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
 	 * InvestmentFundTax}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation5.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation2.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation6.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation3.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation4.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation7.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation8.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation9.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation10.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation11.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation12.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation13.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation15.mmFiscalExemption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#mmFiscalExemption
+	 * InvestmentAccountOwnershipInformation14.mmFiscalExemption}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -397,25 +416,26 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FiscalExemption = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFiscalExemption = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5.FiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.FiscalExemption,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6.FiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.FiscalExemption,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4.FiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.FiscalExemption,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8.FiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.FiscalExemption,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.FiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11.FiscalExemption,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.FiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.FiscalExemption,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.FiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.FiscalExemption);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5.mmFiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmFiscalExemption,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6.mmFiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmFiscalExemption,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4.mmFiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.mmFiscalExemption,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8.mmFiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmFiscalExemption,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmFiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11.mmFiscalExemption,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmFiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmFiscalExemption,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmFiscalExemption, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmFiscalExemption);
 			elementContext_lazy = () -> InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FiscalExemption";
 			definition = "Indicates whether an owner of an investment account may benefit from a fiscal exemption or amnesty for instance for declaring overseas investments.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected InvestmentAccount investmentAccount;
 	/**
 	 * Investment account for which taxes are specified.
 	 * <p>
@@ -424,8 +444,8 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#InvestmentFundTax
-	 * InvestmentAccount.InvestmentFundTax}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundTax
+	 * InvestmentAccount.mmInvestmentFundTax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -449,20 +469,21 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * definition} = "Investment account for which taxes are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestmentAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestmentAccount = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Investment account for which taxes are specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.InvestmentFundTax;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundTax;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 		}
 	};
+	protected PercentageRate percentageOfDebtClaim;
 	/**
 	 * Percentage of the underlying assets of the funds that represents a debt
 	 * and is in the scope of the European directive on taxation of savings
@@ -476,34 +497,34 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation2#PercentageOfDebtClaim
-	 * TaxCalculationInformation2.PercentageOfDebtClaim}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation4#PercentageOfDebtClaim
-	 * TaxCalculationInformation4.PercentageOfDebtClaim}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TotalTaxes3#PercentageOfDebtClaim
-	 * TotalTaxes3.PercentageOfDebtClaim}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TotalTaxes4#PercentageOfDebtClaim
-	 * TotalTaxes4.PercentageOfDebtClaim}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TotalTaxes5#PercentageOfDebtClaim
-	 * TotalTaxes5.PercentageOfDebtClaim}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InformativeTax1#PercentageOfDebtClaim
-	 * InformativeTax1.PercentageOfDebtClaim}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
 	 * InvestmentFundTax}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation2#mmPercentageOfDebtClaim
+	 * TaxCalculationInformation2.mmPercentageOfDebtClaim}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation4#mmPercentageOfDebtClaim
+	 * TaxCalculationInformation4.mmPercentageOfDebtClaim}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmPercentageOfDebtClaim
+	 * TotalTaxes3.mmPercentageOfDebtClaim}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTaxes4#mmPercentageOfDebtClaim
+	 * TotalTaxes4.mmPercentageOfDebtClaim}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTaxes5#mmPercentageOfDebtClaim
+	 * TotalTaxes5.mmPercentageOfDebtClaim}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InformativeTax1#mmPercentageOfDebtClaim
+	 * InformativeTax1.mmPercentageOfDebtClaim}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -517,21 +538,22 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PercentageOfDebtClaim = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPercentageOfDebtClaim = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation2.PercentageOfDebtClaim, com.tools20022.repository.msg.TaxCalculationInformation4.PercentageOfDebtClaim,
-					com.tools20022.repository.msg.TotalTaxes3.PercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes4.PercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes5.PercentageOfDebtClaim,
-					com.tools20022.repository.msg.InformativeTax1.PercentageOfDebtClaim);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation2.mmPercentageOfDebtClaim, com.tools20022.repository.msg.TaxCalculationInformation4.mmPercentageOfDebtClaim,
+					com.tools20022.repository.msg.TotalTaxes3.mmPercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes4.mmPercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes5.mmPercentageOfDebtClaim,
+					com.tools20022.repository.msg.InformativeTax1.mmPercentageOfDebtClaim);
 			elementContext_lazy = () -> InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfDebtClaim";
 			definition = "Percentage of the underlying assets of the funds that represents a debt and is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate percentageGrandfatheredDebt;
 	/**
 	 * Percentage of grandfathered debt claim.
 	 * <p>
@@ -542,22 +564,22 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation2#PercentageGrandfatheredDebt
-	 * TaxCalculationInformation2.PercentageGrandfatheredDebt}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation4#PercentageGrandfatheredDebt
-	 * TaxCalculationInformation4.PercentageGrandfatheredDebt}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
 	 * InvestmentFundTax}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation2#mmPercentageGrandfatheredDebt
+	 * TaxCalculationInformation2.mmPercentageGrandfatheredDebt}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation4#mmPercentageGrandfatheredDebt
+	 * TaxCalculationInformation4.mmPercentageGrandfatheredDebt}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -569,19 +591,20 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * definition} = "Percentage of grandfathered debt claim."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PercentageGrandfatheredDebt = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPercentageGrandfatheredDebt = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation2.PercentageGrandfatheredDebt, com.tools20022.repository.msg.TaxCalculationInformation4.PercentageGrandfatheredDebt);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation2.mmPercentageGrandfatheredDebt, com.tools20022.repository.msg.TaxCalculationInformation4.mmPercentageGrandfatheredDebt);
 			elementContext_lazy = () -> InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PercentageGrandfatheredDebt";
 			definition = "Percentage of grandfathered debt claim.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected YesNoIndicator exemptionIndicator;
 	/**
 	 * Indicates whether a tax exemption applies.
 	 * <p>
@@ -592,44 +615,44 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax3#ExemptionIndicator
-	 * Tax3.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax15#ExemptionIndicator
-	 * Tax15.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax6#ExemptionIndicator
-	 * Tax6.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax16#ExemptionIndicator
-	 * Tax16.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax7#ExemptionIndicator
-	 * Tax7.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax14#ExemptionIndicator
-	 * Tax14.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax18#ExemptionIndicator
-	 * Tax18.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax19#ExemptionIndicator
-	 * Tax19.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax20#ExemptionIndicator
-	 * Tax20.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax21#ExemptionIndicator
-	 * Tax21.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax25#ExemptionIndicator
-	 * Tax25.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax28#ExemptionIndicator
-	 * Tax28.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax32#ExemptionIndicator
-	 * Tax32.ExemptionIndicator}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax30#ExemptionIndicator
-	 * Tax30.ExemptionIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax
 	 * InvestmentFundTax}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax3#mmExemptionIndicator
+	 * Tax3.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax15#mmExemptionIndicator
+	 * Tax15.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax6#mmExemptionIndicator
+	 * Tax6.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax16#mmExemptionIndicator
+	 * Tax16.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax7#mmExemptionIndicator
+	 * Tax7.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmExemptionIndicator
+	 * Tax14.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax18#mmExemptionIndicator
+	 * Tax18.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax19#mmExemptionIndicator
+	 * Tax19.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax20#mmExemptionIndicator
+	 * Tax20.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax21#mmExemptionIndicator
+	 * Tax21.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax25#mmExemptionIndicator
+	 * Tax25.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax28#mmExemptionIndicator
+	 * Tax28.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax32#mmExemptionIndicator
+	 * Tax32.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax30#mmExemptionIndicator
+	 * Tax30.mmExemptionIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -641,23 +664,24 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * definition} = "Indicates whether a tax exemption applies."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ExemptionIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmExemptionIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax3.ExemptionIndicator, com.tools20022.repository.msg.Tax15.ExemptionIndicator, com.tools20022.repository.msg.Tax6.ExemptionIndicator,
-					com.tools20022.repository.msg.Tax16.ExemptionIndicator, com.tools20022.repository.msg.Tax7.ExemptionIndicator, com.tools20022.repository.msg.Tax14.ExemptionIndicator,
-					com.tools20022.repository.msg.Tax18.ExemptionIndicator, com.tools20022.repository.msg.Tax19.ExemptionIndicator, com.tools20022.repository.msg.Tax20.ExemptionIndicator,
-					com.tools20022.repository.msg.Tax21.ExemptionIndicator, com.tools20022.repository.msg.Tax25.ExemptionIndicator, com.tools20022.repository.msg.Tax28.ExemptionIndicator,
-					com.tools20022.repository.msg.Tax32.ExemptionIndicator, com.tools20022.repository.msg.Tax30.ExemptionIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax3.mmExemptionIndicator, com.tools20022.repository.msg.Tax15.mmExemptionIndicator, com.tools20022.repository.msg.Tax6.mmExemptionIndicator,
+					com.tools20022.repository.msg.Tax16.mmExemptionIndicator, com.tools20022.repository.msg.Tax7.mmExemptionIndicator, com.tools20022.repository.msg.Tax14.mmExemptionIndicator,
+					com.tools20022.repository.msg.Tax18.mmExemptionIndicator, com.tools20022.repository.msg.Tax19.mmExemptionIndicator, com.tools20022.repository.msg.Tax20.mmExemptionIndicator,
+					com.tools20022.repository.msg.Tax21.mmExemptionIndicator, com.tools20022.repository.msg.Tax25.mmExemptionIndicator, com.tools20022.repository.msg.Tax28.mmExemptionIndicator,
+					com.tools20022.repository.msg.Tax32.mmExemptionIndicator, com.tools20022.repository.msg.Tax30.mmExemptionIndicator);
 			elementContext_lazy = () -> InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExemptionIndicator";
 			definition = "Indicates whether a tax exemption applies.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected InvestmentFundTransaction transaction;
 	/**
 	 * Transaction for which the tax is specified.
 	 * <p>
@@ -666,8 +690,8 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#TransactionTax
-	 * InvestmentFundTransaction.TransactionTax}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmTransactionTax
+	 * InvestmentFundTransaction.mmTransactionTax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -692,58 +716,59 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * definition} = "Transaction for which the tax is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Transaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransaction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestmentFundTax.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Transaction";
 			definition = "Transaction for which the tax is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentFundTransaction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.TransactionTax;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionTax;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTax";
 				definition = "Tax related to an investment fund order.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccount.InvestmentFundTax, com.tools20022.repository.entity.InvestmentFundTransaction.TransactionTax);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax8.TaxCalculationDetails, com.tools20022.repository.msg.Tax17.TaxCalculationDetails, com.tools20022.repository.msg.DeliverInformation2.TaxDetails,
-						com.tools20022.repository.msg.DeliverInformation4.TaxDetails, com.tools20022.repository.msg.DeliverInformation7.TaxDetails, com.tools20022.repository.msg.ReceiveInformation2.TaxDetails,
-						com.tools20022.repository.msg.ReceiveInformation4.TaxDetails, com.tools20022.repository.msg.ReceiveInformation8.TaxDetails, com.tools20022.repository.msg.ReceiveInformation6.TaxDetails,
-						com.tools20022.repository.msg.ReceiveInformation11.TaxDetails, com.tools20022.repository.msg.DeliverInformation11.TaxDetails, com.tools20022.repository.msg.DeliverInformation3.TaxDetails,
-						com.tools20022.repository.msg.DeliverInformation8.TaxDetails, com.tools20022.repository.msg.ReceiveInformation3.TaxDetails, com.tools20022.repository.msg.ReceiveInformation7.TaxDetails,
-						com.tools20022.repository.msg.ReceiveInformation5.TaxDetails, com.tools20022.repository.msg.ReceiveInformation9.TaxDetails, com.tools20022.repository.msg.DeliverInformation5.TaxDetails,
-						com.tools20022.repository.msg.DeliverInformation9.TaxDetails, com.tools20022.repository.msg.DeliverInformation6.TaxDetails, com.tools20022.repository.msg.Tax6.TaxCalculationDetails,
-						com.tools20022.repository.msg.Tax16.TaxCalculationDetails, com.tools20022.repository.msg.Tax7.TaxCalculationDetails, com.tools20022.repository.msg.TotalTaxes2.TaxDetails,
-						com.tools20022.repository.msg.Tax14.TaxCalculationDetails, com.tools20022.repository.msg.TotalTaxes3.TaxDetails, com.tools20022.repository.msg.Tax18.EUCapitalGainType,
-						com.tools20022.repository.msg.Tax18.TaxCalculationDetails, com.tools20022.repository.msg.TotalTaxes4.TaxDetails, com.tools20022.repository.msg.Tax19.EUCapitalGainType,
-						com.tools20022.repository.msg.TotalTaxes5.TaxDetails, com.tools20022.repository.msg.ReceiveInformation13.TaxDetails, com.tools20022.repository.msg.ReceiveInformation12.TaxDetails,
-						com.tools20022.repository.msg.DeliverInformation12.TaxDetails, com.tools20022.repository.msg.DeliverInformation13.TaxDetails, com.tools20022.repository.msg.Tax21.TaxCalculationDetails,
-						com.tools20022.repository.msg.DeliverInformation15.TaxDetails, com.tools20022.repository.msg.DeliverInformation14.TaxDetails, com.tools20022.repository.msg.ReceiveInformation15.TaxDetails,
-						com.tools20022.repository.msg.ReceiveInformation14.TaxDetails, com.tools20022.repository.msg.Tax25.TaxCalculationDetails, com.tools20022.repository.msg.ReceiveInformation17.TaxDetails,
-						com.tools20022.repository.msg.ReceiveInformation16.TaxDetails, com.tools20022.repository.msg.DeliverInformation16.TaxDetails, com.tools20022.repository.msg.DeliverInformation17.TaxDetails,
-						com.tools20022.repository.msg.Tax28.TaxCalculationDetails, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.TaxExemption,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.TaxExemption, com.tools20022.repository.msg.RedemptionOrder14.TransactionOverhead,
-						com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.TransactionOverhead, com.tools20022.repository.msg.FeeAndTax1.IndividualTax, com.tools20022.repository.msg.InformativeTax1.IndividualTax,
-						com.tools20022.repository.msg.Tax32.TaxCalculationDetails, com.tools20022.repository.msg.SubscriptionExecution13.TransactionOverhead, com.tools20022.repository.msg.TotalFeesAndTaxes40.TotalTaxes,
-						com.tools20022.repository.msg.TotalFeesAndTaxes40.IndividualTax, com.tools20022.repository.msg.SubscriptionExecution12.TransactionOverhead, com.tools20022.repository.msg.SubscriptionOrder15.TransactionOverhead,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.TaxExemption, com.tools20022.repository.msg.SwitchRedemptionLegOrder6.TransactionOverhead,
-						com.tools20022.repository.msg.RedemptionOrder15.TransactionOverhead, com.tools20022.repository.msg.Tax30.TaxCalculationDetails, com.tools20022.repository.msg.Tax31.TaxCalculationDetails,
-						com.tools20022.repository.msg.RedemptionExecution16.TransactionOverhead, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.TaxExemption,
-						com.tools20022.repository.msg.SubscriptionOrder14.TransactionOverhead, com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.TransactionOverhead,
-						com.tools20022.repository.msg.RedemptionExecution15.TransactionOverhead, com.tools20022.repository.msg.SwitchRedemptionLegExecution4.TransactionOverhead);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundTax, com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionTax);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax8.mmTaxCalculationDetails, com.tools20022.repository.msg.Tax17.mmTaxCalculationDetails,
+						com.tools20022.repository.msg.DeliverInformation2.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation4.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation7.mmTaxDetails,
+						com.tools20022.repository.msg.ReceiveInformation2.mmTaxDetails, com.tools20022.repository.msg.ReceiveInformation4.mmTaxDetails, com.tools20022.repository.msg.ReceiveInformation8.mmTaxDetails,
+						com.tools20022.repository.msg.ReceiveInformation6.mmTaxDetails, com.tools20022.repository.msg.ReceiveInformation11.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation11.mmTaxDetails,
+						com.tools20022.repository.msg.DeliverInformation3.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation8.mmTaxDetails, com.tools20022.repository.msg.ReceiveInformation3.mmTaxDetails,
+						com.tools20022.repository.msg.ReceiveInformation7.mmTaxDetails, com.tools20022.repository.msg.ReceiveInformation5.mmTaxDetails, com.tools20022.repository.msg.ReceiveInformation9.mmTaxDetails,
+						com.tools20022.repository.msg.DeliverInformation5.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation9.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation6.mmTaxDetails,
+						com.tools20022.repository.msg.Tax6.mmTaxCalculationDetails, com.tools20022.repository.msg.Tax16.mmTaxCalculationDetails, com.tools20022.repository.msg.Tax7.mmTaxCalculationDetails,
+						com.tools20022.repository.msg.TotalTaxes2.mmTaxDetails, com.tools20022.repository.msg.Tax14.mmTaxCalculationDetails, com.tools20022.repository.msg.TotalTaxes3.mmTaxDetails,
+						com.tools20022.repository.msg.Tax18.mmEUCapitalGainType, com.tools20022.repository.msg.Tax18.mmTaxCalculationDetails, com.tools20022.repository.msg.TotalTaxes4.mmTaxDetails,
+						com.tools20022.repository.msg.Tax19.mmEUCapitalGainType, com.tools20022.repository.msg.TotalTaxes5.mmTaxDetails, com.tools20022.repository.msg.ReceiveInformation13.mmTaxDetails,
+						com.tools20022.repository.msg.ReceiveInformation12.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation12.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation13.mmTaxDetails,
+						com.tools20022.repository.msg.Tax21.mmTaxCalculationDetails, com.tools20022.repository.msg.DeliverInformation15.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation14.mmTaxDetails,
+						com.tools20022.repository.msg.ReceiveInformation15.mmTaxDetails, com.tools20022.repository.msg.ReceiveInformation14.mmTaxDetails, com.tools20022.repository.msg.Tax25.mmTaxCalculationDetails,
+						com.tools20022.repository.msg.ReceiveInformation17.mmTaxDetails, com.tools20022.repository.msg.ReceiveInformation16.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation16.mmTaxDetails,
+						com.tools20022.repository.msg.DeliverInformation17.mmTaxDetails, com.tools20022.repository.msg.Tax28.mmTaxCalculationDetails, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmTaxExemption,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmTaxExemption, com.tools20022.repository.msg.RedemptionOrder14.mmTransactionOverhead,
+						com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.mmTransactionOverhead, com.tools20022.repository.msg.FeeAndTax1.mmIndividualTax, com.tools20022.repository.msg.InformativeTax1.mmIndividualTax,
+						com.tools20022.repository.msg.Tax32.mmTaxCalculationDetails, com.tools20022.repository.msg.SubscriptionExecution13.mmTransactionOverhead, com.tools20022.repository.msg.TotalFeesAndTaxes40.mmTotalTaxes,
+						com.tools20022.repository.msg.TotalFeesAndTaxes40.mmIndividualTax, com.tools20022.repository.msg.SubscriptionExecution12.mmTransactionOverhead,
+						com.tools20022.repository.msg.SubscriptionOrder15.mmTransactionOverhead, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmTaxExemption,
+						com.tools20022.repository.msg.SwitchRedemptionLegOrder6.mmTransactionOverhead, com.tools20022.repository.msg.RedemptionOrder15.mmTransactionOverhead, com.tools20022.repository.msg.Tax30.mmTaxCalculationDetails,
+						com.tools20022.repository.msg.Tax31.mmTaxCalculationDetails, com.tools20022.repository.msg.RedemptionExecution16.mmTransactionOverhead,
+						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmTaxExemption, com.tools20022.repository.msg.SubscriptionOrder14.mmTransactionOverhead,
+						com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmTransactionOverhead, com.tools20022.repository.msg.RedemptionExecution15.mmTransactionOverhead,
+						com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmTransactionOverhead);
 				superType_lazy = () -> SecuritiesTax.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundTax.FiscalExemption, com.tools20022.repository.entity.InvestmentFundTax.InvestmentAccount,
-						com.tools20022.repository.entity.InvestmentFundTax.PercentageOfDebtClaim, com.tools20022.repository.entity.InvestmentFundTax.PercentageGrandfatheredDebt,
-						com.tools20022.repository.entity.InvestmentFundTax.ExemptionIndicator, com.tools20022.repository.entity.InvestmentFundTax.Transaction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundTax.mmFiscalExemption, com.tools20022.repository.entity.InvestmentFundTax.mmInvestmentAccount,
+						com.tools20022.repository.entity.InvestmentFundTax.mmPercentageOfDebtClaim, com.tools20022.repository.entity.InvestmentFundTax.mmPercentageGrandfatheredDebt,
+						com.tools20022.repository.entity.InvestmentFundTax.mmExemptionIndicator, com.tools20022.repository.entity.InvestmentFundTax.mmTransaction);
 				derivationComponent_lazy = () -> Arrays.asList(TaxCalculationInformation2.mmObject(), Tax8.mmObject(), TaxCalculationInformation4.mmObject(), Tax17.mmObject(), Tax15.mmObject(), TaxCalculationInformation1.mmObject(),
 						Tax6.mmObject(), TaxCalculationInformation5.mmObject(), Tax16.mmObject(), TaxCalculationInformation3.mmObject(), Tax7.mmObject(), TotalTaxes2.mmObject(), TaxCalculationInformation6.mmObject(), Tax14.mmObject(),
 						TotalTaxes3.mmObject(), TaxCalculationBasisType1Choice.mmObject(), TaxCalculationInformation7.mmObject(), Tax18.mmObject(), TotalTaxes4.mmObject(), Tax19.mmObject(), Tax20.mmObject(), TotalTaxes5.mmObject(),
@@ -752,5 +777,53 @@ public class InvestmentFundTax extends SecuritiesTax {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getFiscalExemption() {
+		return fiscalExemption;
+	}
+
+	public void setFiscalExemption(YesNoIndicator fiscalExemption) {
+		this.fiscalExemption = fiscalExemption;
+	}
+
+	public InvestmentAccount getInvestmentAccount() {
+		return investmentAccount;
+	}
+
+	public void setInvestmentAccount(com.tools20022.repository.entity.InvestmentAccount investmentAccount) {
+		this.investmentAccount = investmentAccount;
+	}
+
+	public PercentageRate getPercentageOfDebtClaim() {
+		return percentageOfDebtClaim;
+	}
+
+	public void setPercentageOfDebtClaim(PercentageRate percentageOfDebtClaim) {
+		this.percentageOfDebtClaim = percentageOfDebtClaim;
+	}
+
+	public PercentageRate getPercentageGrandfatheredDebt() {
+		return percentageGrandfatheredDebt;
+	}
+
+	public void setPercentageGrandfatheredDebt(PercentageRate percentageGrandfatheredDebt) {
+		this.percentageGrandfatheredDebt = percentageGrandfatheredDebt;
+	}
+
+	public YesNoIndicator getExemptionIndicator() {
+		return exemptionIndicator;
+	}
+
+	public void setExemptionIndicator(YesNoIndicator exemptionIndicator) {
+		this.exemptionIndicator = exemptionIndicator;
+	}
+
+	public InvestmentFundTransaction getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.entity.InvestmentFundTransaction transaction) {
+		this.transaction = transaction;
 	}
 }

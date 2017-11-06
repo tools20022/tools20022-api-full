@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Unique and unambiguous identifier of a security, assigned under a formal or
@@ -41,99 +42,99 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#IdentifiedSecurity
- * SecuritiesIdentification.IdentifiedSecurity}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmIdentifiedSecurity
+ * SecuritiesIdentification.mmIdentifiedSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
- * SecuritiesIdentification.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+ * SecuritiesIdentification.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#RIC
- * SecuritiesIdentification.RIC}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmRIC
+ * SecuritiesIdentification.mmRIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#TickerSymbol
- * SecuritiesIdentification.TickerSymbol}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmTickerSymbol
+ * SecuritiesIdentification.mmTickerSymbol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Bloomberg
- * SecuritiesIdentification.Bloomberg}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmBloomberg
+ * SecuritiesIdentification.mmBloomberg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#CTA
- * SecuritiesIdentification.CTA}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCTA
+ * SecuritiesIdentification.mmCTA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Common
- * SecuritiesIdentification.Common}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCommon
+ * SecuritiesIdentification.mmCommon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Name
- * SecuritiesIdentification.Name}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmName
+ * SecuritiesIdentification.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SEDOL
- * SecuritiesIdentification.SEDOL}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSEDOL
+ * SecuritiesIdentification.mmSEDOL}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#CUSIP
- * SecuritiesIdentification.CUSIP}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmCUSIP
+ * SecuritiesIdentification.mmCUSIP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#QUICK
- * SecuritiesIdentification.QUICK}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmQUICK
+ * SecuritiesIdentification.mmQUICK}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Wertpapier
- * SecuritiesIdentification.Wertpapier}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmWertpapier
+ * SecuritiesIdentification.mmWertpapier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Dutch
- * SecuritiesIdentification.Dutch}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmDutch
+ * SecuritiesIdentification.mmDutch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Valoren
- * SecuritiesIdentification.Valoren}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmValoren
+ * SecuritiesIdentification.mmValoren}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Sicovam
- * SecuritiesIdentification.Sicovam}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSicovam
+ * SecuritiesIdentification.mmSicovam}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#Belgian
- * SecuritiesIdentification.Belgian}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmBelgian
+ * SecuritiesIdentification.mmBelgian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#IdentificationSuffix
- * SecuritiesIdentification.IdentificationSuffix}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmIdentificationSuffix
+ * SecuritiesIdentification.mmIdentificationSuffix}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#GenericIdentification
- * SecuritiesIdentification.GenericIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmGenericIdentification
+ * SecuritiesIdentification.mmGenericIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#ValidityPeriod
- * SecuritiesIdentification.ValidityPeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmValidityPeriod
+ * SecuritiesIdentification.mmValidityPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#ApplicableTradingMarket
- * SecuritiesIdentification.ApplicableTradingMarket}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmApplicableTradingMarket
+ * SecuritiesIdentification.mmApplicableTradingMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#PrimeIdentification
- * SecuritiesIdentification.PrimeIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmPrimeIdentification
+ * SecuritiesIdentification.mmPrimeIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#RelatedOtherIdentification
- * SecuritiesIdentification.RelatedOtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmRelatedOtherIdentification
+ * SecuritiesIdentification.mmRelatedOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#TradingIdentification
- * SecuritiesIdentification.TradingIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmTradingIdentification
+ * SecuritiesIdentification.mmTradingIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#Identification
- * Security.Identification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmIdentification
+ * Security.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#PrimeIdentification
- * SecuritiesIdentification.PrimeIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmPrimeIdentification
+ * SecuritiesIdentification.mmPrimeIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#RelatedOtherIdentification
- * SecuritiesIdentification.RelatedOtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmRelatedOtherIdentification
+ * SecuritiesIdentification.mmRelatedOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#RelatedSecuritiesIdentification
- * GenericIdentification.RelatedSecuritiesIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#RelatedSecurity
- * LocalName.RelatedSecurity}</li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedSecuritiesIdentification
+ * GenericIdentification.mmRelatedSecuritiesIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmRelatedSecurity
+ * LocalName.mmRelatedSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TradingMarket#ListedSecurityTradingIdentification
- * TradingMarket.ListedSecurityTradingIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmListedSecurityTradingIdentification
+ * TradingMarket.mmListedSecurityTradingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#RelatedSecuritiesIdentification
- * DateTimePeriod.RelatedSecuritiesIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedSecuritiesIdentification
+ * DateTimePeriod.mmRelatedSecuritiesIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -141,145 +142,147 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification7#OtherIdentification
- * SecurityIdentification7.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification7#mmOtherIdentification
+ * SecurityIdentification7.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification7#Description
- * SecurityIdentification7.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification7#mmDescription
+ * SecurityIdentification7.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#Identification
- * SecurityIdentification1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#mmIdentification
+ * SecurityIdentification1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#AlternateIdentification
- * SecurityIdentification1Choice.AlternateIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmAlternateIdentification
+ * SecurityIdentification1Choice.mmAlternateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#OtherProprietaryIdentification
- * SecurityIdentification3Choice.OtherProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmOtherProprietaryIdentification
+ * SecurityIdentification3Choice.mmOtherProprietaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternateIdentification1#IdentificationSource
- * AlternateIdentification1.IdentificationSource}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternateIdentification1#mmIdentificationSource
+ * AlternateIdentification1.mmIdentificationSource}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification11Choice#OtherIdentification
- * SecurityIdentification11Choice.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification11Choice#mmOtherIdentification
+ * SecurityIdentification11Choice.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification11#Identification
- * SecurityIdentification11.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification11#mmIdentification
+ * SecurityIdentification11.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification11#Description
- * SecurityIdentification11.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification11#mmDescription
+ * SecurityIdentification11.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification14#OtherIdentification
- * SecurityIdentification14.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification14#mmOtherIdentification
+ * SecurityIdentification14.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification14#Description
- * SecurityIdentification14.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification14#mmDescription
+ * SecurityIdentification14.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification15#OtherIdentification
- * SecurityIdentification15.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification15#mmOtherIdentification
+ * SecurityIdentification15.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification15#Description
- * SecurityIdentification15.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification15#mmDescription
+ * SecurityIdentification15.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternateIdentification2#IdentificationSource
- * AlternateIdentification2.IdentificationSource}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternateIdentification2#mmIdentificationSource
+ * AlternateIdentification2.mmIdentificationSource}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification12Choice#OtherIdentification
- * SecurityIdentification12Choice.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification12Choice#mmOtherIdentification
+ * SecurityIdentification12Choice.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification12#Identification
- * SecurityIdentification12.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification12#mmIdentification
+ * SecurityIdentification12.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification12#Description
- * SecurityIdentification12.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification12#mmDescription
+ * SecurityIdentification12.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification16#OtherIdentification
- * SecurityIdentification16.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification16#mmOtherIdentification
+ * SecurityIdentification16.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification16#Description
- * SecurityIdentification16.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification16#mmDescription
+ * SecurityIdentification16.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification2#Type
- * AlternateSecurityIdentification2.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification2#mmType
+ * AlternateSecurityIdentification2.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification4Choice#Proprietary
- * SecurityIdentification4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification4Choice#mmProprietary
+ * SecurityIdentification4Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#OtherIdentification
- * SecurityIdentification3.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#mmOtherIdentification
+ * SecurityIdentification3.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#OtherIdentification
- * SecurityIdentification5Choice.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#mmOtherIdentification
+ * SecurityIdentification5Choice.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification6Choice#OtherIdentification
- * SecurityIdentification6Choice.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification6Choice#mmOtherIdentification
+ * SecurityIdentification6Choice.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification10Choice#OtherIdentification
- * SecurityIdentification10Choice.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification10Choice#mmOtherIdentification
+ * SecurityIdentification10Choice.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification9#SecurityIdentification
- * SecurityIdentification9.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification9#mmSecurityIdentification
+ * SecurityIdentification9.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification9#Description
- * SecurityIdentification9.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification9#mmDescription
+ * SecurityIdentification9.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification7Choice#OtherProprietaryIdentification
- * SecurityIdentification7Choice.OtherProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification7Choice#mmOtherProprietaryIdentification
+ * SecurityIdentification7Choice.mmOtherProprietaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification8#SecurityIdentification
- * SecurityIdentification8.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification8#mmSecurityIdentification
+ * SecurityIdentification8.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification8#Description
- * SecurityIdentification8.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification8#mmDescription
+ * SecurityIdentification8.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity1#FinancialInstrumentIdentification
- * FinancialInstrumentIdentificationValidity1.FinancialInstrumentIdentification}
- * </li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity1#mmFinancialInstrumentIdentification
+ * FinancialInstrumentIdentificationValidity1.
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#TriggerSecurityDetails
- * TriggeringInstructions.TriggerSecurityDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmTriggerSecurityDetails
+ * TriggeringInstructions.mmTriggerSecurityDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportItem1#FinancialInstrumentIdentification
- * ReportItem1.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportItem1#mmFinancialInstrumentIdentification
+ * ReportItem1.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance1#FinancialInstrumentIdentification
- * AggregateHoldingBalance1.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance1#mmFinancialInstrumentIdentification
+ * AggregateHoldingBalance1.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#AlternateIdentification
- * SecurityIdentification22Choice.AlternateIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmAlternateIdentification
+ * SecurityIdentification22Choice.mmAlternateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#OtherProprietaryIdentification
- * SecurityIdentification23Choice.OtherProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmOtherProprietaryIdentification
+ * SecurityIdentification23Choice.mmOtherProprietaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification19#OtherIdentification
- * SecurityIdentification19.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification19#mmOtherIdentification
+ * SecurityIdentification19.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification19#Description
- * SecurityIdentification19.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification19#mmDescription
+ * SecurityIdentification19.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#OtherIdentification
- * SecurityIdentification20.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#mmOtherIdentification
+ * SecurityIdentification20.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#Description
- * SecurityIdentification20.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#mmDescription
+ * SecurityIdentification20.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification32#OtherIdentification
- * SecurityIdentification32.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification32#mmOtherIdentification
+ * SecurityIdentification32.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification32#Description
- * SecurityIdentification32.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification32#mmDescription
+ * SecurityIdentification32.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification21#OtherIdentification
- * SecurityIdentification21.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification21#mmOtherIdentification
+ * SecurityIdentification21.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification21#Description
- * SecurityIdentification21.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification21#mmDescription
+ * SecurityIdentification21.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#OtherProprietaryIdentification
- * SecurityIdentification25Choice.OtherProprietaryIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwapLegIdentification2#SwapIn
- * SwapLegIdentification2.SwapIn}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwapLegIdentification2#SwapOut
- * SwapLegIdentification2.SwapOut}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmOtherProprietaryIdentification
+ * SecurityIdentification25Choice.mmOtherProprietaryIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwapLegIdentification2#mmSwapIn
+ * SwapLegIdentification2.mmSwapIn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwapLegIdentification2#mmSwapOut
+ * SwapLegIdentification2.mmSwapOut}</li>
  * </ul>
  * </li>
  * <li>
@@ -406,8 +409,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -423,6 +426,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesIdentification {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Security> identifiedSecurity;
 	/**
 	 * Security for which an identification is provided.
 	 * <p>
@@ -431,45 +435,45 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#InstrumentDescription
-	 * SecurityIdentification5Choice.InstrumentDescription}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification6Choice#InstrumentDescription
-	 * SecurityIdentification6Choice.InstrumentDescription}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice#Index
-	 * FinancialInstrumentIdentification6Choice.Index}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice#Single
-	 * FinancialInstrumentIdentification7Choice.Single}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice#Basket
-	 * FinancialInstrumentIdentification7Choice.Basket}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice#Single
-	 * FinancialInstrumentIdentification5Choice.Single}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice#Basket
-	 * FinancialInstrumentIdentification5Choice.Basket}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#mmInstrumentDescription
+	 * SecurityIdentification5Choice.mmInstrumentDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification6Choice#mmInstrumentDescription
+	 * SecurityIdentification6Choice.mmInstrumentDescription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice#mmIndex
+	 * FinancialInstrumentIdentification6Choice.mmIndex}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice#mmSingle
+	 * FinancialInstrumentIdentification7Choice.mmSingle}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice#mmBasket
+	 * FinancialInstrumentIdentification7Choice.mmBasket}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice#mmSingle
+	 * FinancialInstrumentIdentification5Choice.mmSingle}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice#mmBasket
+	 * FinancialInstrumentIdentification5Choice.mmBasket}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -481,23 +485,24 @@ public class SecuritiesIdentification {
 	 * definition} = "Security for which an identification is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd IdentifiedSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmIdentifiedSecurity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification5Choice.InstrumentDescription, com.tools20022.repository.choice.SecurityIdentification6Choice.InstrumentDescription,
-					com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.Index, com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.Single,
-					com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.Basket, com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice.Single,
-					com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice.Basket);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification5Choice.mmInstrumentDescription, com.tools20022.repository.choice.SecurityIdentification6Choice.mmInstrumentDescription,
+					com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.mmIndex, com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.mmSingle,
+					com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.mmBasket, com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice.mmSingle,
+					com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice.mmBasket);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IdentifiedSecurity";
 			definition = "Security for which an identification is provided.";
 			minOccurs = 1;
-			type_lazy = () -> Security.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Security.Identification;
+			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
+	protected ISINOct2015Identifier securityIdentification;
 	/**
 	 * Identification of a security by an ISIN.
 	 * <p>
@@ -508,158 +513,162 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ISINOct2015Identifier
 	 * ISINOct2015Identifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification7#ISIN
-	 * SecurityIdentification7.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#ISIN
-	 * SecurityIdentification1Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#ISIN
-	 * SecurityIdentification3Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification2Choice#ISIN
-	 * SecurityIdentification2Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification11Choice#ISIN
-	 * SecurityIdentification11Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification14#ISIN
-	 * SecurityIdentification14.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification15#ISIN
-	 * SecurityIdentification15.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification12Choice#ISIN
-	 * SecurityIdentification12Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification16#ISIN
-	 * SecurityIdentification16.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification4Choice#ISIN
-	 * SecurityIdentification4Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund1#Identification
-	 * InvestmentFundTransactionsByFund1.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund2#Identification
-	 * InvestmentFundTransactionsByFund2.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#ISIN
-	 * SecurityIdentification3.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#ISIN
-	 * SecurityIdentification5Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification6Choice#ISIN
-	 * SecurityIdentification6Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification10Choice#ISIN
-	 * SecurityIdentification10Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification7Choice#ISIN
-	 * SecurityIdentification7Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#BenchmarkIdentification
-	 * BenchmarkCurve2.BenchmarkIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValue1#SecurityIdentification
-	 * CollateralValue1.SecurityIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve1#BenchmarkIdentification
-	 * BenchmarkCurve1.BenchmarkIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund3#Identification
-	 * InvestmentFundTransactionsByFund3.Identification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CollateralValuation3#ISIN
-	 * CollateralValuation3.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.InflationIndex1Choice#ISIN
-	 * InflationIndex1Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName4Choice#ISIN
-	 * BenchmarkCurveName4Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#ISIN
-	 * SecurityIdentification22Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#ISIN
-	 * SecurityIdentification23Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification19#ISIN
-	 * SecurityIdentification19.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#ISIN
-	 * SecurityIdentification20.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification32#ISIN
-	 * SecurityIdentification32.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification21#ISIN
-	 * SecurityIdentification21.ISIN}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CollateralValuation6#ISIN
-	 * CollateralValuation6.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#Identification
-	 * VolumeCapReport2.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrument46Choice#ISIN
-	 * FinancialInstrument46Choice.ISIN}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument53#ISIN
-	 * FinancialInstrument53.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName6Choice#ISIN
-	 * BenchmarkCurveName6Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#ISIN
-	 * SecurityIdentification25Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport11#Identification
-	 * TransparencyDataReport11.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#Identification
-	 * TransparencyDataReport13.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport12#Identification
-	 * TransparencyDataReport12.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#Identification
-	 * TransparencyDataReport15.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#Identification
-	 * TransparencyDataReport10.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport14#Identification
-	 * TransparencyDataReport14.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice#ISIN
-	 * FinancialInstrumentIdentification6Choice.ISIN}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument58#ISIN
-	 * FinancialInstrument58.ISIN}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BasketDescription3#ISIN
-	 * BasketDescription3.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice#ISIN
-	 * FinancialInstrument48Choice.ISIN}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapDerivative4#UnderlyingNameIdentification
-	 * CreditDefaultSwapDerivative4.UnderlyingNameIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapDerivative4#ObligationIdentification
-	 * CreditDefaultSwapDerivative4.ObligationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice#Identification
-	 * FinancialInstrumentAttributes3Choice.Identification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification7#mmISIN
+	 * SecurityIdentification7.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmISIN
+	 * SecurityIdentification1Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmISIN
+	 * SecurityIdentification3Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification2Choice#mmISIN
+	 * SecurityIdentification2Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification11Choice#mmISIN
+	 * SecurityIdentification11Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification14#mmISIN
+	 * SecurityIdentification14.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification15#mmISIN
+	 * SecurityIdentification15.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification12Choice#mmISIN
+	 * SecurityIdentification12Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification16#mmISIN
+	 * SecurityIdentification16.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification4Choice#mmISIN
+	 * SecurityIdentification4Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund1#mmIdentification
+	 * InvestmentFundTransactionsByFund1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund2#mmIdentification
+	 * InvestmentFundTransactionsByFund2.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#mmISIN
+	 * SecurityIdentification3.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#mmISIN
+	 * SecurityIdentification5Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification6Choice#mmISIN
+	 * SecurityIdentification6Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification10Choice#mmISIN
+	 * SecurityIdentification10Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification7Choice#mmISIN
+	 * SecurityIdentification7Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#mmBenchmarkIdentification
+	 * BenchmarkCurve2.mmBenchmarkIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValue1#mmSecurityIdentification
+	 * CollateralValue1.mmSecurityIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve1#mmBenchmarkIdentification
+	 * BenchmarkCurve1.mmBenchmarkIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund3#mmIdentification
+	 * InvestmentFundTransactionsByFund3.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation3#mmISIN
+	 * CollateralValuation3.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InflationIndex1Choice#mmISIN
+	 * InflationIndex1Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName4Choice#mmISIN
+	 * BenchmarkCurveName4Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmISIN
+	 * SecurityIdentification22Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmISIN
+	 * SecurityIdentification23Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification19#mmISIN
+	 * SecurityIdentification19.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#mmISIN
+	 * SecurityIdentification20.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification32#mmISIN
+	 * SecurityIdentification32.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification21#mmISIN
+	 * SecurityIdentification21.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation6#mmISIN
+	 * CollateralValuation6.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.VolumeCapReport2#mmIdentification
+	 * VolumeCapReport2.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrument46Choice#mmISIN
+	 * FinancialInstrument46Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument53#mmISIN
+	 * FinancialInstrument53.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName6Choice#mmISIN
+	 * BenchmarkCurveName6Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmISIN
+	 * SecurityIdentification25Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport11#mmIdentification
+	 * TransparencyDataReport11.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#mmIdentification
+	 * TransparencyDataReport13.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport12#mmIdentification
+	 * TransparencyDataReport12.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#mmIdentification
+	 * TransparencyDataReport15.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#mmIdentification
+	 * TransparencyDataReport10.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport14#mmIdentification
+	 * TransparencyDataReport14.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice#mmISIN
+	 * FinancialInstrumentIdentification6Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument58#mmISIN
+	 * FinancialInstrument58.mmISIN}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BasketDescription3#mmISIN
+	 * BasketDescription3.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice#mmISIN
+	 * FinancialInstrument48Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapDerivative4#mmUnderlyingNameIdentification
+	 * CreditDefaultSwapDerivative4.mmUnderlyingNameIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditDefaultSwapDerivative4#mmObligationIdentification
+	 * CreditDefaultSwapDerivative4.mmObligationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice#mmIdentification
+	 * FinancialInstrumentAttributes3Choice.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -671,35 +680,36 @@ public class SecuritiesIdentification {
 	 * definition} = "Identification of a security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SecurityIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSecurityIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification7.ISIN, com.tools20022.repository.choice.SecurityIdentification1Choice.ISIN,
-					com.tools20022.repository.choice.SecurityIdentification3Choice.ISIN, com.tools20022.repository.choice.SecurityIdentification2Choice.ISIN, com.tools20022.repository.choice.SecurityIdentification11Choice.ISIN,
-					com.tools20022.repository.msg.SecurityIdentification14.ISIN, com.tools20022.repository.msg.SecurityIdentification15.ISIN, com.tools20022.repository.choice.SecurityIdentification12Choice.ISIN,
-					com.tools20022.repository.msg.SecurityIdentification16.ISIN, com.tools20022.repository.choice.SecurityIdentification4Choice.ISIN, com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.Identification,
-					com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.Identification, com.tools20022.repository.msg.SecurityIdentification3.ISIN, com.tools20022.repository.choice.SecurityIdentification5Choice.ISIN,
-					com.tools20022.repository.choice.SecurityIdentification6Choice.ISIN, com.tools20022.repository.choice.SecurityIdentification10Choice.ISIN, com.tools20022.repository.choice.SecurityIdentification7Choice.ISIN,
-					com.tools20022.repository.msg.BenchmarkCurve2.BenchmarkIdentification, com.tools20022.repository.msg.CollateralValue1.SecurityIdentification, com.tools20022.repository.msg.BenchmarkCurve1.BenchmarkIdentification,
-					com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.Identification, com.tools20022.repository.msg.CollateralValuation3.ISIN, com.tools20022.repository.choice.InflationIndex1Choice.ISIN,
-					com.tools20022.repository.choice.BenchmarkCurveName4Choice.ISIN, com.tools20022.repository.choice.SecurityIdentification22Choice.ISIN, com.tools20022.repository.choice.SecurityIdentification23Choice.ISIN,
-					com.tools20022.repository.msg.SecurityIdentification19.ISIN, com.tools20022.repository.msg.SecurityIdentification20.ISIN, com.tools20022.repository.msg.SecurityIdentification32.ISIN,
-					com.tools20022.repository.msg.SecurityIdentification21.ISIN, com.tools20022.repository.msg.CollateralValuation6.ISIN, com.tools20022.repository.msg.VolumeCapReport2.Identification,
-					com.tools20022.repository.choice.FinancialInstrument46Choice.ISIN, com.tools20022.repository.msg.FinancialInstrument53.ISIN, com.tools20022.repository.choice.BenchmarkCurveName6Choice.ISIN,
-					com.tools20022.repository.choice.SecurityIdentification25Choice.ISIN, com.tools20022.repository.msg.TransparencyDataReport11.Identification, com.tools20022.repository.msg.TransparencyDataReport13.Identification,
-					com.tools20022.repository.msg.TransparencyDataReport12.Identification, com.tools20022.repository.msg.TransparencyDataReport15.Identification, com.tools20022.repository.msg.TransparencyDataReport10.Identification,
-					com.tools20022.repository.msg.TransparencyDataReport14.Identification, com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.ISIN, com.tools20022.repository.msg.FinancialInstrument58.ISIN,
-					com.tools20022.repository.msg.BasketDescription3.ISIN, com.tools20022.repository.choice.FinancialInstrument48Choice.ISIN, com.tools20022.repository.msg.CreditDefaultSwapDerivative4.UnderlyingNameIdentification,
-					com.tools20022.repository.msg.CreditDefaultSwapDerivative4.ObligationIdentification, com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.Identification);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification7.mmISIN, com.tools20022.repository.choice.SecurityIdentification1Choice.mmISIN,
+					com.tools20022.repository.choice.SecurityIdentification3Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification2Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification11Choice.mmISIN,
+					com.tools20022.repository.msg.SecurityIdentification14.mmISIN, com.tools20022.repository.msg.SecurityIdentification15.mmISIN, com.tools20022.repository.choice.SecurityIdentification12Choice.mmISIN,
+					com.tools20022.repository.msg.SecurityIdentification16.mmISIN, com.tools20022.repository.choice.SecurityIdentification4Choice.mmISIN, com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmIdentification,
+					com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmIdentification, com.tools20022.repository.msg.SecurityIdentification3.mmISIN, com.tools20022.repository.choice.SecurityIdentification5Choice.mmISIN,
+					com.tools20022.repository.choice.SecurityIdentification6Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification10Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification7Choice.mmISIN,
+					com.tools20022.repository.msg.BenchmarkCurve2.mmBenchmarkIdentification, com.tools20022.repository.msg.CollateralValue1.mmSecurityIdentification, com.tools20022.repository.msg.BenchmarkCurve1.mmBenchmarkIdentification,
+					com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmIdentification, com.tools20022.repository.msg.CollateralValuation3.mmISIN, com.tools20022.repository.choice.InflationIndex1Choice.mmISIN,
+					com.tools20022.repository.choice.BenchmarkCurveName4Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification22Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification23Choice.mmISIN,
+					com.tools20022.repository.msg.SecurityIdentification19.mmISIN, com.tools20022.repository.msg.SecurityIdentification20.mmISIN, com.tools20022.repository.msg.SecurityIdentification32.mmISIN,
+					com.tools20022.repository.msg.SecurityIdentification21.mmISIN, com.tools20022.repository.msg.CollateralValuation6.mmISIN, com.tools20022.repository.msg.VolumeCapReport2.mmIdentification,
+					com.tools20022.repository.choice.FinancialInstrument46Choice.mmISIN, com.tools20022.repository.msg.FinancialInstrument53.mmISIN, com.tools20022.repository.choice.BenchmarkCurveName6Choice.mmISIN,
+					com.tools20022.repository.choice.SecurityIdentification25Choice.mmISIN, com.tools20022.repository.msg.TransparencyDataReport11.mmIdentification, com.tools20022.repository.msg.TransparencyDataReport13.mmIdentification,
+					com.tools20022.repository.msg.TransparencyDataReport12.mmIdentification, com.tools20022.repository.msg.TransparencyDataReport15.mmIdentification, com.tools20022.repository.msg.TransparencyDataReport10.mmIdentification,
+					com.tools20022.repository.msg.TransparencyDataReport14.mmIdentification, com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.mmISIN, com.tools20022.repository.msg.FinancialInstrument58.mmISIN,
+					com.tools20022.repository.msg.BasketDescription3.mmISIN, com.tools20022.repository.choice.FinancialInstrument48Choice.mmISIN, com.tools20022.repository.msg.CreditDefaultSwapDerivative4.mmUnderlyingNameIdentification,
+					com.tools20022.repository.msg.CreditDefaultSwapDerivative4.mmObligationIdentification, com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.mmIdentification);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of a security by an ISIN.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected RICIdentifier rIC;
 	/**
 	 * Reuters Identification Code (RIC). A numbering system used within the
 	 * Reuters system to identify instruments worldwide. The RIC contains an
@@ -714,31 +724,31 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.RICIdentifier
 	 * RICIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#RIC
-	 * SecurityIdentification1Choice.RIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#RIC
-	 * SecurityIdentification3Choice.RIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#RIC
-	 * SecurityIdentification22Choice.RIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#RIC
-	 * SecurityIdentification23Choice.RIC}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#RIC
-	 * SecurityIdentification25Choice.RIC}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmRIC
+	 * SecurityIdentification1Choice.mmRIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmRIC
+	 * SecurityIdentification3Choice.mmRIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmRIC
+	 * SecurityIdentification22Choice.mmRIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmRIC
+	 * SecurityIdentification23Choice.mmRIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmRIC
+	 * SecurityIdentification25Choice.mmRIC}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -752,20 +762,21 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RIC = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRIC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification1Choice.RIC, com.tools20022.repository.choice.SecurityIdentification3Choice.RIC,
-					com.tools20022.repository.choice.SecurityIdentification22Choice.RIC, com.tools20022.repository.choice.SecurityIdentification23Choice.RIC, com.tools20022.repository.choice.SecurityIdentification25Choice.RIC);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification1Choice.mmRIC, com.tools20022.repository.choice.SecurityIdentification3Choice.mmRIC,
+					com.tools20022.repository.choice.SecurityIdentification22Choice.mmRIC, com.tools20022.repository.choice.SecurityIdentification23Choice.mmRIC, com.tools20022.repository.choice.SecurityIdentification25Choice.mmRIC);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RIC";
 			definition = "Reuters Identification Code (RIC). A numbering system used within the Reuters system to identify instruments worldwide. The RIC contains an X-character market specific code (can be the CUSIP or EPIC codes) followed by a full stop, then the two-digit ISO country code, eg, IBM in UK is IBM.UK.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RICIdentifier.mmObject();
 		}
 	};
+	protected TickerIdentifier tickerSymbol;
 	/**
 	 * Letters that identify a stock traded on a stock exchange. The Ticker
 	 * Symbol is a short and convenient way of identifying a stock, eg, RTR.L
@@ -778,34 +789,34 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TickerIdentifier
 	 * TickerIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#TickerSymbol
-	 * SecurityIdentification1Choice.TickerSymbol}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#TickerSymbol
-	 * SecurityIdentification3Choice.TickerSymbol}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#TickerSymbol
-	 * SecurityIdentification3.TickerSymbol}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#TickerSymbol
-	 * SecurityIdentification22Choice.TickerSymbol}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#TickerSymbol
-	 * SecurityIdentification23Choice.TickerSymbol}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#TickerSymbol
-	 * SecurityIdentification25Choice.TickerSymbol}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmTickerSymbol
+	 * SecurityIdentification1Choice.mmTickerSymbol}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmTickerSymbol
+	 * SecurityIdentification3Choice.mmTickerSymbol}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#mmTickerSymbol
+	 * SecurityIdentification3.mmTickerSymbol}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmTickerSymbol
+	 * SecurityIdentification22Choice.mmTickerSymbol}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmTickerSymbol
+	 * SecurityIdentification23Choice.mmTickerSymbol}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmTickerSymbol
+	 * SecurityIdentification25Choice.mmTickerSymbol}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -819,21 +830,22 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TickerSymbol = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTickerSymbol = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification1Choice.TickerSymbol, com.tools20022.repository.choice.SecurityIdentification3Choice.TickerSymbol,
-					com.tools20022.repository.msg.SecurityIdentification3.TickerSymbol, com.tools20022.repository.choice.SecurityIdentification22Choice.TickerSymbol,
-					com.tools20022.repository.choice.SecurityIdentification23Choice.TickerSymbol, com.tools20022.repository.choice.SecurityIdentification25Choice.TickerSymbol);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification1Choice.mmTickerSymbol, com.tools20022.repository.choice.SecurityIdentification3Choice.mmTickerSymbol,
+					com.tools20022.repository.msg.SecurityIdentification3.mmTickerSymbol, com.tools20022.repository.choice.SecurityIdentification22Choice.mmTickerSymbol,
+					com.tools20022.repository.choice.SecurityIdentification23Choice.mmTickerSymbol, com.tools20022.repository.choice.SecurityIdentification25Choice.mmTickerSymbol);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TickerSymbol";
 			definition = "Letters that identify a stock traded on a stock exchange. The Ticker Symbol is a short and convenient way of identifying a stock, eg, RTR.L for Reuters quoted in London.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TickerIdentifier.mmObject();
 		}
 	};
+	protected Bloomberg2Identifier bloomberg;
 	/**
 	 * Identifier of a security assigned by the Bloomberg organisation.
 	 * <p>
@@ -844,31 +856,31 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Bloomberg2Identifier
 	 * Bloomberg2Identifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#Bloomberg
-	 * SecurityIdentification1Choice.Bloomberg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#Bloomberg
-	 * SecurityIdentification3Choice.Bloomberg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#Bloomberg
-	 * SecurityIdentification22Choice.Bloomberg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#Bloomberg
-	 * SecurityIdentification23Choice.Bloomberg}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#Bloomberg
-	 * SecurityIdentification25Choice.Bloomberg}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmBloomberg
+	 * SecurityIdentification1Choice.mmBloomberg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmBloomberg
+	 * SecurityIdentification3Choice.mmBloomberg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmBloomberg
+	 * SecurityIdentification22Choice.mmBloomberg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmBloomberg
+	 * SecurityIdentification23Choice.mmBloomberg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmBloomberg
+	 * SecurityIdentification25Choice.mmBloomberg}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -881,21 +893,22 @@ public class SecuritiesIdentification {
 	 * "Identifier of a security assigned by the Bloomberg organisation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Bloomberg = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBloomberg = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification1Choice.Bloomberg, com.tools20022.repository.choice.SecurityIdentification3Choice.Bloomberg,
-					com.tools20022.repository.choice.SecurityIdentification22Choice.Bloomberg, com.tools20022.repository.choice.SecurityIdentification23Choice.Bloomberg,
-					com.tools20022.repository.choice.SecurityIdentification25Choice.Bloomberg);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification1Choice.mmBloomberg, com.tools20022.repository.choice.SecurityIdentification3Choice.mmBloomberg,
+					com.tools20022.repository.choice.SecurityIdentification22Choice.mmBloomberg, com.tools20022.repository.choice.SecurityIdentification23Choice.mmBloomberg,
+					com.tools20022.repository.choice.SecurityIdentification25Choice.mmBloomberg);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Bloomberg";
 			definition = "Identifier of a security assigned by the Bloomberg organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Bloomberg2Identifier.mmObject();
 		}
 	};
+	protected ConsolidatedTapeAssociationIdentifier cTA;
 	/**
 	 * Identifier of a security assigned by the Consolidated Tape Association.
 	 * <p>
@@ -906,31 +919,31 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ConsolidatedTapeAssociationIdentifier
 	 * ConsolidatedTapeAssociationIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#CTA
-	 * SecurityIdentification1Choice.CTA}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#CTA
-	 * SecurityIdentification3Choice.CTA}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#CTA
-	 * SecurityIdentification22Choice.CTA}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#CTA
-	 * SecurityIdentification23Choice.CTA}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#CTA
-	 * SecurityIdentification25Choice.CTA}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmCTA
+	 * SecurityIdentification1Choice.mmCTA}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmCTA
+	 * SecurityIdentification3Choice.mmCTA}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmCTA
+	 * SecurityIdentification22Choice.mmCTA}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmCTA
+	 * SecurityIdentification23Choice.mmCTA}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmCTA
+	 * SecurityIdentification25Choice.mmCTA}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -944,20 +957,21 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CTA = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCTA = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification1Choice.CTA, com.tools20022.repository.choice.SecurityIdentification3Choice.CTA,
-					com.tools20022.repository.choice.SecurityIdentification22Choice.CTA, com.tools20022.repository.choice.SecurityIdentification23Choice.CTA, com.tools20022.repository.choice.SecurityIdentification25Choice.CTA);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification1Choice.mmCTA, com.tools20022.repository.choice.SecurityIdentification3Choice.mmCTA,
+					com.tools20022.repository.choice.SecurityIdentification22Choice.mmCTA, com.tools20022.repository.choice.SecurityIdentification23Choice.mmCTA, com.tools20022.repository.choice.SecurityIdentification25Choice.mmCTA);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CTA";
 			definition = "Identifier of a security assigned by the Consolidated Tape Association.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ConsolidatedTapeAssociationIdentifier.mmObject();
 		}
 	};
+	protected EuroclearClearstreamIdentifier common;
 	/**
 	 * Identifier of securities issued in Luxembourg. The common code is a
 	 * 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.
@@ -969,31 +983,31 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.EuroclearClearstreamIdentifier
 	 * EuroclearClearstreamIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#Common
-	 * SecurityIdentification1Choice.Common}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#Common
-	 * SecurityIdentification3Choice.Common}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#Common
-	 * SecurityIdentification22Choice.Common}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#Common
-	 * SecurityIdentification23Choice.Common}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#Common
-	 * SecurityIdentification25Choice.Common}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification1Choice#mmCommon
+	 * SecurityIdentification1Choice.mmCommon}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmCommon
+	 * SecurityIdentification3Choice.mmCommon}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmCommon
+	 * SecurityIdentification22Choice.mmCommon}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmCommon
+	 * SecurityIdentification23Choice.mmCommon}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmCommon
+	 * SecurityIdentification25Choice.mmCommon}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1007,20 +1021,22 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Common = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCommon = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification1Choice.Common, com.tools20022.repository.choice.SecurityIdentification3Choice.Common,
-					com.tools20022.repository.choice.SecurityIdentification22Choice.Common, com.tools20022.repository.choice.SecurityIdentification23Choice.Common, com.tools20022.repository.choice.SecurityIdentification25Choice.Common);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification1Choice.mmCommon, com.tools20022.repository.choice.SecurityIdentification3Choice.mmCommon,
+					com.tools20022.repository.choice.SecurityIdentification22Choice.mmCommon, com.tools20022.repository.choice.SecurityIdentification23Choice.mmCommon,
+					com.tools20022.repository.choice.SecurityIdentification25Choice.mmCommon);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Common";
 			definition = "Identifier of securities issued in Luxembourg.  The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EuroclearClearstreamIdentifier.mmObject();
 		}
 	};
+	protected LocalName name;
 	/**
 	 * Name of the financial instrument in free format text.
 	 * <p>
@@ -1029,8 +1045,8 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#RelatedSecurity
-	 * LocalName.RelatedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmRelatedSecurity
+	 * LocalName.mmRelatedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1038,31 +1054,31 @@ public class SecuritiesIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.LocalName LocalName}
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount1#FinancialInstrumentName
-	 * SecuritiesAccount1.FinancialInstrumentName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount4#FinancialInstrumentName
-	 * SecuritiesAccount4.FinancialInstrumentName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund1#Name
-	 * InvestmentFundTransactionsByFund1.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund2#Name
-	 * InvestmentFundTransactionsByFund2.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund3#Name
-	 * InvestmentFundTransactionsByFund3.Name}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount1#mmFinancialInstrumentName
+	 * SecuritiesAccount1.mmFinancialInstrumentName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount4#mmFinancialInstrumentName
+	 * SecuritiesAccount4.mmFinancialInstrumentName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund1#mmName
+	 * InvestmentFundTransactionsByFund1.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund2#mmName
+	 * InvestmentFundTransactionsByFund2.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund3#mmName
+	 * InvestmentFundTransactionsByFund3.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1074,22 +1090,23 @@ public class SecuritiesIdentification {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Name = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmName = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount1.FinancialInstrumentName, com.tools20022.repository.msg.SecuritiesAccount4.FinancialInstrumentName,
-					com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.Name, com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.Name, com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.Name);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount1.mmFinancialInstrumentName, com.tools20022.repository.msg.SecuritiesAccount4.mmFinancialInstrumentName,
+					com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmName, com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmName, com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmName);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LocalName.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.LocalName.RelatedSecurity;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.LocalName.mmRelatedSecurity;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.LocalName.mmObject();
 		}
 	};
+	protected SEDOLIdentifier sEDOL;
 	/**
 	 * Stock Exchange Daily Official List (SEDOL) number. A code used by the
 	 * London Stock Exchange to identify foreign stocks, especially those that
@@ -1102,31 +1119,31 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.SEDOLIdentifier
 	 * SEDOLIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#SEDOL
-	 * SecurityIdentification3Choice.SEDOL}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification2Choice#Sedol
-	 * SecurityIdentification2Choice.Sedol}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#SEDOL
-	 * SecurityIdentification3.SEDOL}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#SEDOL
-	 * SecurityIdentification23Choice.SEDOL}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#SEDOL
-	 * SecurityIdentification25Choice.SEDOL}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmSEDOL
+	 * SecurityIdentification3Choice.mmSEDOL}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification2Choice#mmSedol
+	 * SecurityIdentification2Choice.mmSedol}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#mmSEDOL
+	 * SecurityIdentification3.mmSEDOL}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmSEDOL
+	 * SecurityIdentification23Choice.mmSEDOL}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmSEDOL
+	 * SecurityIdentification25Choice.mmSEDOL}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1140,20 +1157,21 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SEDOL = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSEDOL = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.SEDOL, com.tools20022.repository.choice.SecurityIdentification2Choice.Sedol,
-					com.tools20022.repository.msg.SecurityIdentification3.SEDOL, com.tools20022.repository.choice.SecurityIdentification23Choice.SEDOL, com.tools20022.repository.choice.SecurityIdentification25Choice.SEDOL);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.mmSEDOL, com.tools20022.repository.choice.SecurityIdentification2Choice.mmSedol,
+					com.tools20022.repository.msg.SecurityIdentification3.mmSEDOL, com.tools20022.repository.choice.SecurityIdentification23Choice.mmSEDOL, com.tools20022.repository.choice.SecurityIdentification25Choice.mmSEDOL);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SEDOL";
 			definition = "Stock Exchange Daily Official List (SEDOL) number.  A code used by the London Stock Exchange to identify foreign stocks, especially those that aren't actively traded in the US and don't have a CUSIP number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SEDOLIdentifier.mmObject();
 		}
 	};
+	protected CUSIPIdentifier cUSIP;
 	/**
 	 * Committee on Uniform Securities and Identification Procedures (CUSIP).
 	 * The standards body that created and maintains the securities
@@ -1168,28 +1186,28 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CUSIPIdentifier
 	 * CUSIPIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#CUSIP
-	 * SecurityIdentification3Choice.CUSIP}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#CUSIP
-	 * SecurityIdentification3.CUSIP}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#CUSIP
-	 * SecurityIdentification23Choice.CUSIP}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#CUSIP
-	 * SecurityIdentification25Choice.CUSIP}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmCUSIP
+	 * SecurityIdentification3Choice.mmCUSIP}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#mmCUSIP
+	 * SecurityIdentification3.mmCUSIP}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmCUSIP
+	 * SecurityIdentification23Choice.mmCUSIP}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmCUSIP
+	 * SecurityIdentification25Choice.mmCUSIP}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1203,20 +1221,21 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CUSIP = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCUSIP = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.CUSIP, com.tools20022.repository.msg.SecurityIdentification3.CUSIP,
-					com.tools20022.repository.choice.SecurityIdentification23Choice.CUSIP, com.tools20022.repository.choice.SecurityIdentification25Choice.CUSIP);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.mmCUSIP, com.tools20022.repository.msg.SecurityIdentification3.mmCUSIP,
+					com.tools20022.repository.choice.SecurityIdentification23Choice.mmCUSIP, com.tools20022.repository.choice.SecurityIdentification25Choice.mmCUSIP);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CUSIP";
 			definition = "Committee on Uniform Securities and Identification Procedures (CUSIP). The standards body that created and maintains the securities classification system in the US. The CUSIP is composed of a 9-character number that uniquely identifies a particular security.  Non-US securities have a similar number called the CINS number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CUSIPIdentifier.mmObject();
 		}
 	};
+	protected QUICKIdentifier qUICK;
 	/**
 	 * Identifier of a security assigned by the Japanese QUICK identification
 	 * scheme for financial instruments.
@@ -1228,28 +1247,28 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.QUICKIdentifier
 	 * QUICKIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#QUICK
-	 * SecurityIdentification3Choice.QUICK}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#QUICK
-	 * SecurityIdentification3.QUICK}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#QUICK
-	 * SecurityIdentification23Choice.QUICK}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#QUICK
-	 * SecurityIdentification25Choice.QUICK}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmQUICK
+	 * SecurityIdentification3Choice.mmQUICK}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification3#mmQUICK
+	 * SecurityIdentification3.mmQUICK}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmQUICK
+	 * SecurityIdentification23Choice.mmQUICK}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmQUICK
+	 * SecurityIdentification25Choice.mmQUICK}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1263,20 +1282,21 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute QUICK = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmQUICK = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.QUICK, com.tools20022.repository.msg.SecurityIdentification3.QUICK,
-					com.tools20022.repository.choice.SecurityIdentification23Choice.QUICK, com.tools20022.repository.choice.SecurityIdentification25Choice.QUICK);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.mmQUICK, com.tools20022.repository.msg.SecurityIdentification3.mmQUICK,
+					com.tools20022.repository.choice.SecurityIdentification23Choice.mmQUICK, com.tools20022.repository.choice.SecurityIdentification25Choice.mmQUICK);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "QUICK";
 			definition = "Identifier of a security assigned by the Japanese QUICK identification scheme for financial instruments.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> QUICKIdentifier.mmObject();
 		}
 	};
+	protected WertpapierIdentifier wertpapier;
 	/**
 	 * Wertpapier Kenn-nummer. A number issued in Germany by the Wertpapier
 	 * Mitteilungen. The Wertpapier Kenn-nummer, sometimes called WPK, contains
@@ -1290,25 +1310,25 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.WertpapierIdentifier
 	 * WertpapierIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#Wertpapier
-	 * SecurityIdentification3Choice.Wertpapier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#Wertpapier
-	 * SecurityIdentification23Choice.Wertpapier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#Wertpapier
-	 * SecurityIdentification25Choice.Wertpapier}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmWertpapier
+	 * SecurityIdentification3Choice.mmWertpapier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmWertpapier
+	 * SecurityIdentification23Choice.mmWertpapier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmWertpapier
+	 * SecurityIdentification25Choice.mmWertpapier}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1322,20 +1342,21 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Wertpapier = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmWertpapier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.Wertpapier, com.tools20022.repository.choice.SecurityIdentification23Choice.Wertpapier,
-					com.tools20022.repository.choice.SecurityIdentification25Choice.Wertpapier);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.mmWertpapier, com.tools20022.repository.choice.SecurityIdentification23Choice.mmWertpapier,
+					com.tools20022.repository.choice.SecurityIdentification25Choice.mmWertpapier);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Wertpapier";
 			definition = "Wertpapier Kenn-nummer.  A number issued in Germany by the Wertpapier Mitteilungen. The Wertpapier Kenn-nummer, sometimes called WPK, contains 6-digits, but no check digit. There are different ranges of numbers representing different classes of securities.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> WertpapierIdentifier.mmObject();
 		}
 	};
+	protected DutchIdentifier dutch;
 	/**
 	 * Identifier for Dutch securities.
 	 * <p>
@@ -1346,25 +1367,25 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.DutchIdentifier
 	 * DutchIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#Dutch
-	 * SecurityIdentification3Choice.Dutch}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#Dutch
-	 * SecurityIdentification23Choice.Dutch}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#Dutch
-	 * SecurityIdentification25Choice.Dutch}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmDutch
+	 * SecurityIdentification3Choice.mmDutch}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmDutch
+	 * SecurityIdentification23Choice.mmDutch}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmDutch
+	 * SecurityIdentification25Choice.mmDutch}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1376,20 +1397,21 @@ public class SecuritiesIdentification {
 	 * definition} = "Identifier for Dutch securities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Dutch = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDutch = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.Dutch, com.tools20022.repository.choice.SecurityIdentification23Choice.Dutch,
-					com.tools20022.repository.choice.SecurityIdentification25Choice.Dutch);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.mmDutch, com.tools20022.repository.choice.SecurityIdentification23Choice.mmDutch,
+					com.tools20022.repository.choice.SecurityIdentification25Choice.mmDutch);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Dutch";
 			definition = "Identifier for Dutch securities.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DutchIdentifier.mmObject();
 		}
 	};
+	protected ValorenIdentifier valoren;
 	/**
 	 * Identifier for Swiss securities assigned by Telekurs Financial, the Swiss
 	 * numbering agency.
@@ -1401,25 +1423,25 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ValorenIdentifier
 	 * ValorenIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#Valoren
-	 * SecurityIdentification3Choice.Valoren}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#Valoren
-	 * SecurityIdentification23Choice.Valoren}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#Valoren
-	 * SecurityIdentification25Choice.Valoren}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmValoren
+	 * SecurityIdentification3Choice.mmValoren}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmValoren
+	 * SecurityIdentification23Choice.mmValoren}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmValoren
+	 * SecurityIdentification25Choice.mmValoren}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1433,20 +1455,21 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Valoren = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmValoren = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.Valoren, com.tools20022.repository.choice.SecurityIdentification23Choice.Valoren,
-					com.tools20022.repository.choice.SecurityIdentification25Choice.Valoren);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.mmValoren, com.tools20022.repository.choice.SecurityIdentification23Choice.mmValoren,
+					com.tools20022.repository.choice.SecurityIdentification25Choice.mmValoren);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Valoren";
 			definition = "Identifier for Swiss securities assigned by Telekurs Financial, the Swiss numbering agency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ValorenIdentifier.mmObject();
 		}
 	};
+	protected SicovamIdentifier sicovam;
 	/**
 	 * Identifier for French securities assigned by the Societe
 	 * Interprofessionnelle Pour La Compensation des Valeurs Mobilieres in
@@ -1459,25 +1482,25 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.SicovamIdentifier
 	 * SicovamIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#Sicovam
-	 * SecurityIdentification3Choice.Sicovam}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#Sicovam
-	 * SecurityIdentification23Choice.Sicovam}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#Sicovam
-	 * SecurityIdentification25Choice.Sicovam}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmSicovam
+	 * SecurityIdentification3Choice.mmSicovam}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmSicovam
+	 * SecurityIdentification23Choice.mmSicovam}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmSicovam
+	 * SecurityIdentification25Choice.mmSicovam}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1491,20 +1514,21 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Sicovam = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSicovam = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.Sicovam, com.tools20022.repository.choice.SecurityIdentification23Choice.Sicovam,
-					com.tools20022.repository.choice.SecurityIdentification25Choice.Sicovam);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.mmSicovam, com.tools20022.repository.choice.SecurityIdentification23Choice.mmSicovam,
+					com.tools20022.repository.choice.SecurityIdentification25Choice.mmSicovam);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Sicovam";
 			definition = "Identifier for French securities assigned by the Societe Interprofessionnelle Pour La Compensation des Valeurs Mobilieres in France.  The Sicovam is composed of 5-digits.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SicovamIdentifier.mmObject();
 		}
 	};
+	protected BelgianIdentifier belgian;
 	/**
 	 * Identifier for Belgian securities.
 	 * <p>
@@ -1515,25 +1539,25 @@ public class SecuritiesIdentification {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.BelgianIdentifier
 	 * BelgianIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#Belgian
-	 * SecurityIdentification3Choice.Belgian}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#Belgian
-	 * SecurityIdentification23Choice.Belgian}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#Belgian
-	 * SecurityIdentification25Choice.Belgian}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification3Choice#mmBelgian
+	 * SecurityIdentification3Choice.mmBelgian}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification23Choice#mmBelgian
+	 * SecurityIdentification23Choice.mmBelgian}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmBelgian
+	 * SecurityIdentification25Choice.mmBelgian}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1545,20 +1569,21 @@ public class SecuritiesIdentification {
 	 * definition} = "Identifier for Belgian securities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Belgian = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBelgian = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.Belgian, com.tools20022.repository.choice.SecurityIdentification23Choice.Belgian,
-					com.tools20022.repository.choice.SecurityIdentification25Choice.Belgian);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.mmBelgian, com.tools20022.repository.choice.SecurityIdentification23Choice.mmBelgian,
+					com.tools20022.repository.choice.SecurityIdentification25Choice.mmBelgian);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Belgian";
 			definition = "Identifier for Belgian securities.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BelgianIdentifier.mmObject();
 		}
 	};
+	protected Max35Text identificationSuffix;
 	/**
 	 * Identifies the suffix of the security identification.
 	 * <p>
@@ -1568,25 +1593,25 @@ public class SecuritiesIdentification {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherIdentification1#Suffix
-	 * OtherIdentification1.Suffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherIdentification2#Suffix
-	 * OtherIdentification2.Suffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherIdentification3#Suffix
-	 * OtherIdentification3.Suffix}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherIdentification1#mmSuffix
+	 * OtherIdentification1.mmSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherIdentification2#mmSuffix
+	 * OtherIdentification2.mmSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherIdentification3#mmSuffix
+	 * OtherIdentification3.mmSuffix}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1598,19 +1623,20 @@ public class SecuritiesIdentification {
 	 * definition} = "Identifies the suffix of the security identification."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute IdentificationSuffix = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIdentificationSuffix = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification1.Suffix, com.tools20022.repository.msg.OtherIdentification2.Suffix, com.tools20022.repository.msg.OtherIdentification3.Suffix);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification1.mmSuffix, com.tools20022.repository.msg.OtherIdentification2.mmSuffix, com.tools20022.repository.msg.OtherIdentification3.mmSuffix);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IdentificationSuffix";
 			definition = "Identifies the suffix of the security identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GenericIdentification genericIdentification;
 	/**
 	 * Proprietary identification of a security assigned by an institution or
 	 * organisation.
@@ -1620,8 +1646,8 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#RelatedSecuritiesIdentification
-	 * GenericIdentification.RelatedSecuritiesIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedSecuritiesIdentification
+	 * GenericIdentification.mmRelatedSecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1630,22 +1656,22 @@ public class SecuritiesIdentification {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification7#IdentificationSource
-	 * AlternateSecurityIdentification7.IdentificationSource}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice#Other
-	 * FinancialInstrumentAttributes3Choice.Other}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification7#mmIdentificationSource
+	 * AlternateSecurityIdentification7.mmIdentificationSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice#mmOther
+	 * FinancialInstrumentAttributes3Choice.mmOther}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1659,21 +1685,22 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd GenericIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmGenericIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification7.IdentificationSource, com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.Other);
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification7.mmIdentificationSource, com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.mmOther);
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GenericIdentification";
 			definition = "Proprietary identification of a security assigned by an institution or organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.RelatedSecuritiesIdentification;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmRelatedSecuritiesIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod;
 	/**
 	 * Specifies the period during which an identification is valid.
 	 * <p>
@@ -1682,8 +1709,8 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#RelatedSecuritiesIdentification
-	 * DateTimePeriod.RelatedSecuritiesIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedSecuritiesIdentification
+	 * DateTimePeriod.mmRelatedSecuritiesIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1708,19 +1735,20 @@ public class SecuritiesIdentification {
 	 * "Specifies the period during which an identification is valid."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ValidityPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Specifies the period during which an identification is valid.";
 			minOccurs = 0;
-			type_lazy = () -> DateTimePeriod.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.RelatedSecuritiesIdentification;
+			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedSecuritiesIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.TradingMarket> applicableTradingMarket;
 	/**
 	 * Market(s) on which the trading identification is used.
 	 * <p>
@@ -1729,8 +1757,8 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket#ListedSecurityTradingIdentification
-	 * TradingMarket.ListedSecurityTradingIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket#mmListedSecurityTradingIdentification
+	 * TradingMarket.mmListedSecurityTradingIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1754,19 +1782,20 @@ public class SecuritiesIdentification {
 	 * definition} = "Market(s) on which the trading identification is used."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ApplicableTradingMarket = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmApplicableTradingMarket = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ApplicableTradingMarket";
 			definition = "Market(s) on which the trading identification is used.";
 			minOccurs = 0;
-			type_lazy = () -> TradingMarket.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.ListedSecurityTradingIdentification;
+			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmListedSecurityTradingIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 		}
 	};
+	protected SecuritiesIdentification primeIdentification;
 	/**
 	 * Specifies the main identification of a security.
 	 * <p>
@@ -1775,8 +1804,8 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#RelatedOtherIdentification
-	 * SecuritiesIdentification.RelatedOtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmRelatedOtherIdentification
+	 * SecuritiesIdentification.mmRelatedOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1801,20 +1830,21 @@ public class SecuritiesIdentification {
 	 * definition} = "Specifies the main identification of a security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PrimeIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPrimeIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PrimeIdentification";
 			definition = "Specifies the main identification of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.RelatedOtherIdentification;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmRelatedOtherIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesIdentification> relatedOtherIdentification;
 	/**
 	 * Alternate security identification(s) related to the security trading
 	 * identification.
@@ -1824,8 +1854,8 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#PrimeIdentification
-	 * SecuritiesIdentification.PrimeIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmPrimeIdentification
+	 * SecuritiesIdentification.mmPrimeIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1852,19 +1882,20 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedOtherIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedOtherIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedOtherIdentification";
 			definition = "Alternate security identification(s) related to the security trading identification.";
 			minOccurs = 1;
-			type_lazy = () -> SecuritiesIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.PrimeIdentification;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmPrimeIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 		}
 	};
+	protected Max70Text tradingIdentification;
 	/**
 	 * Security identifier specific to a trading market or markets, for example,
 	 * Ticker.
@@ -1893,15 +1924,15 @@ public class SecuritiesIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TradingIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTradingIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> SecuritiesIdentification.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradingIdentification";
 			definition = "Security identifier specific to a trading market or markets, for example, Ticker.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -1909,45 +1940,48 @@ public class SecuritiesIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesIdentification";
 				definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.Identification, com.tools20022.repository.entity.SecuritiesIdentification.PrimeIdentification,
-						com.tools20022.repository.entity.SecuritiesIdentification.RelatedOtherIdentification, com.tools20022.repository.entity.GenericIdentification.RelatedSecuritiesIdentification,
-						com.tools20022.repository.entity.LocalName.RelatedSecurity, com.tools20022.repository.entity.TradingMarket.ListedSecurityTradingIdentification,
-						com.tools20022.repository.entity.DateTimePeriod.RelatedSecuritiesIdentification);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification7.OtherIdentification, com.tools20022.repository.msg.SecurityIdentification7.Description,
-						com.tools20022.repository.msg.SecurityIdentification1.Identification, com.tools20022.repository.choice.SecurityIdentification1Choice.AlternateIdentification,
-						com.tools20022.repository.choice.SecurityIdentification3Choice.OtherProprietaryIdentification, com.tools20022.repository.msg.AlternateIdentification1.IdentificationSource,
-						com.tools20022.repository.choice.SecurityIdentification11Choice.OtherIdentification, com.tools20022.repository.msg.SecurityIdentification11.Identification,
-						com.tools20022.repository.msg.SecurityIdentification11.Description, com.tools20022.repository.msg.SecurityIdentification14.OtherIdentification, com.tools20022.repository.msg.SecurityIdentification14.Description,
-						com.tools20022.repository.msg.SecurityIdentification15.OtherIdentification, com.tools20022.repository.msg.SecurityIdentification15.Description,
-						com.tools20022.repository.msg.AlternateIdentification2.IdentificationSource, com.tools20022.repository.choice.SecurityIdentification12Choice.OtherIdentification,
-						com.tools20022.repository.msg.SecurityIdentification12.Identification, com.tools20022.repository.msg.SecurityIdentification12.Description, com.tools20022.repository.msg.SecurityIdentification16.OtherIdentification,
-						com.tools20022.repository.msg.SecurityIdentification16.Description, com.tools20022.repository.msg.AlternateSecurityIdentification2.Type, com.tools20022.repository.choice.SecurityIdentification4Choice.Proprietary,
-						com.tools20022.repository.msg.SecurityIdentification3.OtherIdentification, com.tools20022.repository.choice.SecurityIdentification5Choice.OtherIdentification,
-						com.tools20022.repository.choice.SecurityIdentification6Choice.OtherIdentification, com.tools20022.repository.choice.SecurityIdentification10Choice.OtherIdentification,
-						com.tools20022.repository.msg.SecurityIdentification9.SecurityIdentification, com.tools20022.repository.msg.SecurityIdentification9.Description,
-						com.tools20022.repository.choice.SecurityIdentification7Choice.OtherProprietaryIdentification, com.tools20022.repository.msg.SecurityIdentification8.SecurityIdentification,
-						com.tools20022.repository.msg.SecurityIdentification8.Description, com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity1.FinancialInstrumentIdentification,
-						com.tools20022.repository.msg.TriggeringInstructions.TriggerSecurityDetails, com.tools20022.repository.msg.ReportItem1.FinancialInstrumentIdentification,
-						com.tools20022.repository.msg.AggregateHoldingBalance1.FinancialInstrumentIdentification, com.tools20022.repository.choice.SecurityIdentification22Choice.AlternateIdentification,
-						com.tools20022.repository.choice.SecurityIdentification23Choice.OtherProprietaryIdentification, com.tools20022.repository.msg.SecurityIdentification19.OtherIdentification,
-						com.tools20022.repository.msg.SecurityIdentification19.Description, com.tools20022.repository.msg.SecurityIdentification20.OtherIdentification, com.tools20022.repository.msg.SecurityIdentification20.Description,
-						com.tools20022.repository.msg.SecurityIdentification32.OtherIdentification, com.tools20022.repository.msg.SecurityIdentification32.Description,
-						com.tools20022.repository.msg.SecurityIdentification21.OtherIdentification, com.tools20022.repository.msg.SecurityIdentification21.Description,
-						com.tools20022.repository.choice.SecurityIdentification25Choice.OtherProprietaryIdentification, com.tools20022.repository.msg.SwapLegIdentification2.SwapIn,
-						com.tools20022.repository.msg.SwapLegIdentification2.SwapOut);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesIdentification.IdentifiedSecurity, com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification,
-						com.tools20022.repository.entity.SecuritiesIdentification.RIC, com.tools20022.repository.entity.SecuritiesIdentification.TickerSymbol, com.tools20022.repository.entity.SecuritiesIdentification.Bloomberg,
-						com.tools20022.repository.entity.SecuritiesIdentification.CTA, com.tools20022.repository.entity.SecuritiesIdentification.Common, com.tools20022.repository.entity.SecuritiesIdentification.Name,
-						com.tools20022.repository.entity.SecuritiesIdentification.SEDOL, com.tools20022.repository.entity.SecuritiesIdentification.CUSIP, com.tools20022.repository.entity.SecuritiesIdentification.QUICK,
-						com.tools20022.repository.entity.SecuritiesIdentification.Wertpapier, com.tools20022.repository.entity.SecuritiesIdentification.Dutch, com.tools20022.repository.entity.SecuritiesIdentification.Valoren,
-						com.tools20022.repository.entity.SecuritiesIdentification.Sicovam, com.tools20022.repository.entity.SecuritiesIdentification.Belgian, com.tools20022.repository.entity.SecuritiesIdentification.IdentificationSuffix,
-						com.tools20022.repository.entity.SecuritiesIdentification.GenericIdentification, com.tools20022.repository.entity.SecuritiesIdentification.ValidityPeriod,
-						com.tools20022.repository.entity.SecuritiesIdentification.ApplicableTradingMarket, com.tools20022.repository.entity.SecuritiesIdentification.PrimeIdentification,
-						com.tools20022.repository.entity.SecuritiesIdentification.RelatedOtherIdentification, com.tools20022.repository.entity.SecuritiesIdentification.TradingIdentification);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmIdentification, com.tools20022.repository.entity.SecuritiesIdentification.mmPrimeIdentification,
+						com.tools20022.repository.entity.SecuritiesIdentification.mmRelatedOtherIdentification, com.tools20022.repository.entity.GenericIdentification.mmRelatedSecuritiesIdentification,
+						com.tools20022.repository.entity.LocalName.mmRelatedSecurity, com.tools20022.repository.entity.TradingMarket.mmListedSecurityTradingIdentification,
+						com.tools20022.repository.entity.DateTimePeriod.mmRelatedSecuritiesIdentification);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification7.mmOtherIdentification, com.tools20022.repository.msg.SecurityIdentification7.mmDescription,
+						com.tools20022.repository.msg.SecurityIdentification1.mmIdentification, com.tools20022.repository.choice.SecurityIdentification1Choice.mmAlternateIdentification,
+						com.tools20022.repository.choice.SecurityIdentification3Choice.mmOtherProprietaryIdentification, com.tools20022.repository.msg.AlternateIdentification1.mmIdentificationSource,
+						com.tools20022.repository.choice.SecurityIdentification11Choice.mmOtherIdentification, com.tools20022.repository.msg.SecurityIdentification11.mmIdentification,
+						com.tools20022.repository.msg.SecurityIdentification11.mmDescription, com.tools20022.repository.msg.SecurityIdentification14.mmOtherIdentification,
+						com.tools20022.repository.msg.SecurityIdentification14.mmDescription, com.tools20022.repository.msg.SecurityIdentification15.mmOtherIdentification,
+						com.tools20022.repository.msg.SecurityIdentification15.mmDescription, com.tools20022.repository.msg.AlternateIdentification2.mmIdentificationSource,
+						com.tools20022.repository.choice.SecurityIdentification12Choice.mmOtherIdentification, com.tools20022.repository.msg.SecurityIdentification12.mmIdentification,
+						com.tools20022.repository.msg.SecurityIdentification12.mmDescription, com.tools20022.repository.msg.SecurityIdentification16.mmOtherIdentification,
+						com.tools20022.repository.msg.SecurityIdentification16.mmDescription, com.tools20022.repository.msg.AlternateSecurityIdentification2.mmType,
+						com.tools20022.repository.choice.SecurityIdentification4Choice.mmProprietary, com.tools20022.repository.msg.SecurityIdentification3.mmOtherIdentification,
+						com.tools20022.repository.choice.SecurityIdentification5Choice.mmOtherIdentification, com.tools20022.repository.choice.SecurityIdentification6Choice.mmOtherIdentification,
+						com.tools20022.repository.choice.SecurityIdentification10Choice.mmOtherIdentification, com.tools20022.repository.msg.SecurityIdentification9.mmSecurityIdentification,
+						com.tools20022.repository.msg.SecurityIdentification9.mmDescription, com.tools20022.repository.choice.SecurityIdentification7Choice.mmOtherProprietaryIdentification,
+						com.tools20022.repository.msg.SecurityIdentification8.mmSecurityIdentification, com.tools20022.repository.msg.SecurityIdentification8.mmDescription,
+						com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.TriggeringInstructions.mmTriggerSecurityDetails,
+						com.tools20022.repository.msg.ReportItem1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.AggregateHoldingBalance1.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.choice.SecurityIdentification22Choice.mmAlternateIdentification, com.tools20022.repository.choice.SecurityIdentification23Choice.mmOtherProprietaryIdentification,
+						com.tools20022.repository.msg.SecurityIdentification19.mmOtherIdentification, com.tools20022.repository.msg.SecurityIdentification19.mmDescription,
+						com.tools20022.repository.msg.SecurityIdentification20.mmOtherIdentification, com.tools20022.repository.msg.SecurityIdentification20.mmDescription,
+						com.tools20022.repository.msg.SecurityIdentification32.mmOtherIdentification, com.tools20022.repository.msg.SecurityIdentification32.mmDescription,
+						com.tools20022.repository.msg.SecurityIdentification21.mmOtherIdentification, com.tools20022.repository.msg.SecurityIdentification21.mmDescription,
+						com.tools20022.repository.choice.SecurityIdentification25Choice.mmOtherProprietaryIdentification, com.tools20022.repository.msg.SwapLegIdentification2.mmSwapIn,
+						com.tools20022.repository.msg.SwapLegIdentification2.mmSwapOut);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesIdentification.mmIdentifiedSecurity, com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification,
+						com.tools20022.repository.entity.SecuritiesIdentification.mmRIC, com.tools20022.repository.entity.SecuritiesIdentification.mmTickerSymbol, com.tools20022.repository.entity.SecuritiesIdentification.mmBloomberg,
+						com.tools20022.repository.entity.SecuritiesIdentification.mmCTA, com.tools20022.repository.entity.SecuritiesIdentification.mmCommon, com.tools20022.repository.entity.SecuritiesIdentification.mmName,
+						com.tools20022.repository.entity.SecuritiesIdentification.mmSEDOL, com.tools20022.repository.entity.SecuritiesIdentification.mmCUSIP, com.tools20022.repository.entity.SecuritiesIdentification.mmQUICK,
+						com.tools20022.repository.entity.SecuritiesIdentification.mmWertpapier, com.tools20022.repository.entity.SecuritiesIdentification.mmDutch, com.tools20022.repository.entity.SecuritiesIdentification.mmValoren,
+						com.tools20022.repository.entity.SecuritiesIdentification.mmSicovam, com.tools20022.repository.entity.SecuritiesIdentification.mmBelgian,
+						com.tools20022.repository.entity.SecuritiesIdentification.mmIdentificationSuffix, com.tools20022.repository.entity.SecuritiesIdentification.mmGenericIdentification,
+						com.tools20022.repository.entity.SecuritiesIdentification.mmValidityPeriod, com.tools20022.repository.entity.SecuritiesIdentification.mmApplicableTradingMarket,
+						com.tools20022.repository.entity.SecuritiesIdentification.mmPrimeIdentification, com.tools20022.repository.entity.SecuritiesIdentification.mmRelatedOtherIdentification,
+						com.tools20022.repository.entity.SecuritiesIdentification.mmTradingIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmObject(), SecurityIdentification7.mmObject(), SecurityIdentification1.mmObject(), AlternateSecurityIdentification1.mmObject(),
 						SecurityIdentification1Choice.mmObject(), SecurityIdentification3Choice.mmObject(), SecurityIdentification2Choice.mmObject(), AlternateIdentification1.mmObject(), SecurityIdentification11Choice.mmObject(),
 						SecurityIdentification11.mmObject(), OtherIdentification1.mmObject(), SecurityIdentification14.mmObject(), OtherIdentification2.mmObject(), SecurityIdentification15.mmObject(), AlternateIdentification2.mmObject(),
@@ -1961,5 +1995,189 @@ public class SecuritiesIdentification {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Security> getIdentifiedSecurity() {
+		return identifiedSecurity;
+	}
+
+	public void setIdentifiedSecurity(List<com.tools20022.repository.entity.Security> identifiedSecurity) {
+		this.identifiedSecurity = identifiedSecurity;
+	}
+
+	public ISINOct2015Identifier getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(ISINOct2015Identifier securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public RICIdentifier getRIC() {
+		return rIC;
+	}
+
+	public void setRIC(RICIdentifier rIC) {
+		this.rIC = rIC;
+	}
+
+	public TickerIdentifier getTickerSymbol() {
+		return tickerSymbol;
+	}
+
+	public void setTickerSymbol(TickerIdentifier tickerSymbol) {
+		this.tickerSymbol = tickerSymbol;
+	}
+
+	public Bloomberg2Identifier getBloomberg() {
+		return bloomberg;
+	}
+
+	public void setBloomberg(Bloomberg2Identifier bloomberg) {
+		this.bloomberg = bloomberg;
+	}
+
+	public ConsolidatedTapeAssociationIdentifier getCTA() {
+		return cTA;
+	}
+
+	public void setCTA(ConsolidatedTapeAssociationIdentifier cTA) {
+		this.cTA = cTA;
+	}
+
+	public EuroclearClearstreamIdentifier getCommon() {
+		return common;
+	}
+
+	public void setCommon(EuroclearClearstreamIdentifier common) {
+		this.common = common;
+	}
+
+	public LocalName getName() {
+		return name;
+	}
+
+	public void setName(com.tools20022.repository.entity.LocalName name) {
+		this.name = name;
+	}
+
+	public SEDOLIdentifier getSEDOL() {
+		return sEDOL;
+	}
+
+	public void setSEDOL(SEDOLIdentifier sEDOL) {
+		this.sEDOL = sEDOL;
+	}
+
+	public CUSIPIdentifier getCUSIP() {
+		return cUSIP;
+	}
+
+	public void setCUSIP(CUSIPIdentifier cUSIP) {
+		this.cUSIP = cUSIP;
+	}
+
+	public QUICKIdentifier getQUICK() {
+		return qUICK;
+	}
+
+	public void setQUICK(QUICKIdentifier qUICK) {
+		this.qUICK = qUICK;
+	}
+
+	public WertpapierIdentifier getWertpapier() {
+		return wertpapier;
+	}
+
+	public void setWertpapier(WertpapierIdentifier wertpapier) {
+		this.wertpapier = wertpapier;
+	}
+
+	public DutchIdentifier getDutch() {
+		return dutch;
+	}
+
+	public void setDutch(DutchIdentifier dutch) {
+		this.dutch = dutch;
+	}
+
+	public ValorenIdentifier getValoren() {
+		return valoren;
+	}
+
+	public void setValoren(ValorenIdentifier valoren) {
+		this.valoren = valoren;
+	}
+
+	public SicovamIdentifier getSicovam() {
+		return sicovam;
+	}
+
+	public void setSicovam(SicovamIdentifier sicovam) {
+		this.sicovam = sicovam;
+	}
+
+	public BelgianIdentifier getBelgian() {
+		return belgian;
+	}
+
+	public void setBelgian(BelgianIdentifier belgian) {
+		this.belgian = belgian;
+	}
+
+	public Max35Text getIdentificationSuffix() {
+		return identificationSuffix;
+	}
+
+	public void setIdentificationSuffix(Max35Text identificationSuffix) {
+		this.identificationSuffix = identificationSuffix;
+	}
+
+	public GenericIdentification getGenericIdentification() {
+		return genericIdentification;
+	}
+
+	public void setGenericIdentification(com.tools20022.repository.entity.GenericIdentification genericIdentification) {
+		this.genericIdentification = genericIdentification;
+	}
+
+	public List<DateTimePeriod> getValidityPeriod() {
+		return validityPeriod;
+	}
+
+	public void setValidityPeriod(List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod) {
+		this.validityPeriod = validityPeriod;
+	}
+
+	public List<TradingMarket> getApplicableTradingMarket() {
+		return applicableTradingMarket;
+	}
+
+	public void setApplicableTradingMarket(List<com.tools20022.repository.entity.TradingMarket> applicableTradingMarket) {
+		this.applicableTradingMarket = applicableTradingMarket;
+	}
+
+	public SecuritiesIdentification getPrimeIdentification() {
+		return primeIdentification;
+	}
+
+	public void setPrimeIdentification(com.tools20022.repository.entity.SecuritiesIdentification primeIdentification) {
+		this.primeIdentification = primeIdentification;
+	}
+
+	public List<SecuritiesIdentification> getRelatedOtherIdentification() {
+		return relatedOtherIdentification;
+	}
+
+	public void setRelatedOtherIdentification(List<com.tools20022.repository.entity.SecuritiesIdentification> relatedOtherIdentification) {
+		this.relatedOtherIdentification = relatedOtherIdentification;
+	}
+
+	public Max70Text getTradingIdentification() {
+		return tradingIdentification;
+	}
+
+	public void setTradingIdentification(Max70Text tradingIdentification) {
+		this.tradingIdentification = tradingIdentification;
 	}
 }

@@ -33,28 +33,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * CompanyLinkCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CompanyLink1Code#Agent
- * CompanyLink1Code.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CompanyLink1Code#Broker
- * CompanyLink1Code.Broker}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CompanyLink1Code#mmAgent
+ * CompanyLink1Code.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CompanyLink1Code#mmBroker
+ * CompanyLink1Code.mmBroker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CompanyLink1Code#BrokeragePartner
- * CompanyLink1Code.BrokeragePartner}</li>
+ * {@linkplain com.tools20022.repository.codeset.CompanyLink1Code#mmBrokeragePartner
+ * CompanyLink1Code.mmBrokeragePartner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CompanyLink1Code#MemberBroker
- * CompanyLink1Code.MemberBroker}</li>
+ * {@linkplain com.tools20022.repository.codeset.CompanyLink1Code#mmMemberBroker
+ * CompanyLink1Code.mmMemberBroker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CompanyLink1Code#ParentCompany
- * CompanyLink1Code.ParentCompany}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CompanyLink1Code#Relative
- * CompanyLink1Code.Relative}</li>
+ * {@linkplain com.tools20022.repository.codeset.CompanyLink1Code#mmParentCompany
+ * CompanyLink1Code.mmParentCompany}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CompanyLink1Code#mmRelative
+ * CompanyLink1Code.mmRelative}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +85,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 * name} = "Agent"</li>
 	 * </ul>
 	 */
-	public static final MMCode Agent = new MMCode() {
+	public static final MMCode mmAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
@@ -107,7 +108,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 * name} = "Broker"</li>
 	 * </ul>
 	 */
-	public static final MMCode Broker = new MMCode() {
+	public static final MMCode mmBroker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Broker";
@@ -130,7 +131,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 * name} = "BrokeragePartner"</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokeragePartner = new MMCode() {
+	public static final MMCode mmBrokeragePartner = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokeragePartner";
@@ -153,7 +154,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 * name} = "MemberBroker"</li>
 	 * </ul>
 	 */
-	public static final MMCode MemberBroker = new MMCode() {
+	public static final MMCode mmMemberBroker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberBroker";
@@ -176,7 +177,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 * name} = "ParentCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode ParentCompany = new MMCode() {
+	public static final MMCode mmParentCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParentCompany";
@@ -199,7 +200,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 * name} = "Relative"</li>
 	 * </ul>
 	 */
-	public static final MMCode Relative = new MMCode() {
+	public static final MMCode mmRelative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Relative";
@@ -210,12 +211,12 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CompanyLink1Code";
 				definition = "Specifies the type of links to a company.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CompanyLink1Code.Agent, com.tools20022.repository.codeset.CompanyLink1Code.Broker, com.tools20022.repository.codeset.CompanyLink1Code.BrokeragePartner,
-						com.tools20022.repository.codeset.CompanyLink1Code.MemberBroker, com.tools20022.repository.codeset.CompanyLink1Code.ParentCompany, com.tools20022.repository.codeset.CompanyLink1Code.Relative);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CompanyLink1Code.mmAgent, com.tools20022.repository.codeset.CompanyLink1Code.mmBroker, com.tools20022.repository.codeset.CompanyLink1Code.mmBrokeragePartner,
+						com.tools20022.repository.codeset.CompanyLink1Code.mmMemberBroker, com.tools20022.repository.codeset.CompanyLink1Code.mmParentCompany, com.tools20022.repository.codeset.CompanyLink1Code.mmRelative);
 				trace_lazy = () -> CompanyLinkCode.mmObject();
 			}
 		});

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType12Code#RoundDown
- * FractionDispositionType12Code.RoundDown}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType12Code#mmRoundDown
+ * FractionDispositionType12Code.mmRoundDown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType12Code#RoundUp
- * FractionDispositionType12Code.RoundUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType12Code#mmRoundUp
+ * FractionDispositionType12Code.mmRoundUp}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +76,7 @@ public class FractionDispositionType12Code extends FractionDispositionTypeCode {
 	 * name} = "RoundDown"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundDown = new MMCode() {
+	public static final MMCode mmRoundDown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDown";
@@ -99,7 +99,7 @@ public class FractionDispositionType12Code extends FractionDispositionTypeCode {
 	 * name} = "RoundUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundUp = new MMCode() {
+	public static final MMCode mmRoundUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUp";
@@ -110,11 +110,11 @@ public class FractionDispositionType12Code extends FractionDispositionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FractionDispositionType12Code";
 				definition = "Indicates the processing to apply to fractions of securities.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType12Code.RoundDown, com.tools20022.repository.codeset.FractionDispositionType12Code.RoundUp);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType12Code.mmRoundDown, com.tools20022.repository.codeset.FractionDispositionType12Code.mmRoundUp);
 				trace_lazy = () -> FractionDispositionTypeCode.mmObject();
 			}
 		});

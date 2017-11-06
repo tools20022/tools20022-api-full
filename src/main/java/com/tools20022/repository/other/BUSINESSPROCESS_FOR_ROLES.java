@@ -31,327 +31,327 @@ import java.util.concurrent.atomic.AtomicReference;
  * businessRole} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#OrderGiver
- * BUSINESSPROCESS_FOR_ROLES.OrderGiver}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmOrderGiver
+ * BUSINESSPROCESS_FOR_ROLES.mmOrderGiver}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Trustee
- * BUSINESSPROCESS_FOR_ROLES.Trustee}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmTrustee
+ * BUSINESSPROCESS_FOR_ROLES.mmTrustee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#AffirmingParty
- * BUSINESSPROCESS_FOR_ROLES.AffirmingParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmAffirmingParty
+ * BUSINESSPROCESS_FOR_ROLES.mmAffirmingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#ExecutingBroker
- * BUSINESSPROCESS_FOR_ROLES.ExecutingBroker}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmExecutingBroker
+ * BUSINESSPROCESS_FOR_ROLES.mmExecutingBroker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#InstitutionalInvestor
- * BUSINESSPROCESS_FOR_ROLES.InstitutionalInvestor}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInstitutionalInvestor
+ * BUSINESSPROCESS_FOR_ROLES.mmInstitutionalInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#PrimeBroker
- * BUSINESSPROCESS_FOR_ROLES.PrimeBroker}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmPrimeBroker
+ * BUSINESSPROCESS_FOR_ROLES.mmPrimeBroker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Underwriter
- * BUSINESSPROCESS_FOR_ROLES.Underwriter}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmUnderwriter
+ * BUSINESSPROCESS_FOR_ROLES.mmUnderwriter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CentralMatchingUtility
- * BUSINESSPROCESS_FOR_ROLES.CentralMatchingUtility}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCentralMatchingUtility
+ * BUSINESSPROCESS_FOR_ROLES.mmCentralMatchingUtility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#NonClearingMember
- * BUSINESSPROCESS_FOR_ROLES.NonClearingMember}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmNonClearingMember
+ * BUSINESSPROCESS_FOR_ROLES.mmNonClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#ClearingMember
- * BUSINESSPROCESS_FOR_ROLES.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmClearingMember
+ * BUSINESSPROCESS_FOR_ROLES.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#MasterTerminalManager
- * BUSINESSPROCESS_FOR_ROLES.MasterTerminalManager}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmMasterTerminalManager
+ * BUSINESSPROCESS_FOR_ROLES.mmMasterTerminalManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#TerminalManager
- * BUSINESSPROCESS_FOR_ROLES.TerminalManager}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmTerminalManager
+ * BUSINESSPROCESS_FOR_ROLES.mmTerminalManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Buyer
- * BUSINESSPROCESS_FOR_ROLES.Buyer}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmBuyer
+ * BUSINESSPROCESS_FOR_ROLES.mmBuyer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#BuyersBank
- * BUSINESSPROCESS_FOR_ROLES.BuyersBank}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmBuyersBank
+ * BUSINESSPROCESS_FOR_ROLES.mmBuyersBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Seller
- * BUSINESSPROCESS_FOR_ROLES.Seller}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmSeller
+ * BUSINESSPROCESS_FOR_ROLES.mmSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#SellersBank
- * BUSINESSPROCESS_FOR_ROLES.SellersBank}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmSellersBank
+ * BUSINESSPROCESS_FOR_ROLES.mmSellersBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Acquirer
- * BUSINESSPROCESS_FOR_ROLES.Acquirer}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmAcquirer
+ * BUSINESSPROCESS_FOR_ROLES.mmAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CardAcceptor
- * BUSINESSPROCESS_FOR_ROLES.CardAcceptor}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCardAcceptor
+ * BUSINESSPROCESS_FOR_ROLES.mmCardAcceptor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Cardholder
- * BUSINESSPROCESS_FOR_ROLES.Cardholder}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCardholder
+ * BUSINESSPROCESS_FOR_ROLES.mmCardholder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Merchant
- * BUSINESSPROCESS_FOR_ROLES.Merchant}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmMerchant
+ * BUSINESSPROCESS_FOR_ROLES.mmMerchant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CreditorAgent
- * BUSINESSPROCESS_FOR_ROLES.CreditorAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCreditorAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmCreditorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CreditorSendingParty
- * BUSINESSPROCESS_FOR_ROLES.CreditorSendingParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCreditorSendingParty
+ * BUSINESSPROCESS_FOR_ROLES.mmCreditorSendingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#DebtorAgent
- * BUSINESSPROCESS_FOR_ROLES.DebtorAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmDebtorAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmDebtorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#DebtorReceivingParty
- * BUSINESSPROCESS_FOR_ROLES.DebtorReceivingParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmDebtorReceivingParty
+ * BUSINESSPROCESS_FOR_ROLES.mmDebtorReceivingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CollateralGiver
- * BUSINESSPROCESS_FOR_ROLES.CollateralGiver}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCollateralGiver
+ * BUSINESSPROCESS_FOR_ROLES.mmCollateralGiver}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CollateralTaker
- * BUSINESSPROCESS_FOR_ROLES.CollateralTaker}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCollateralTaker
+ * BUSINESSPROCESS_FOR_ROLES.mmCollateralTaker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CAAccountServicer
- * BUSINESSPROCESS_FOR_ROLES.CAAccountServicer}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCAAccountServicer
+ * BUSINESSPROCESS_FOR_ROLES.mmCAAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CAAccountOwner
- * BUSINESSPROCESS_FOR_ROLES.CAAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCAAccountOwner
+ * BUSINESSPROCESS_FOR_ROLES.mmCAAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#SettlementAgent
- * BUSINESSPROCESS_FOR_ROLES.SettlementAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmSettlementAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmSettlementAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#GlobalSettlementAgent
- * BUSINESSPROCESS_FOR_ROLES.GlobalSettlementAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmGlobalSettlementAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmGlobalSettlementAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#LocalSettlementAgent
- * BUSINESSPROCESS_FOR_ROLES.LocalSettlementAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmLocalSettlementAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmLocalSettlementAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#InterestedAgent
- * BUSINESSPROCESS_FOR_ROLES.InterestedAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInterestedAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmInterestedAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Regulator
- * BUSINESSPROCESS_FOR_ROLES.Regulator}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmRegulator
+ * BUSINESSPROCESS_FOR_ROLES.mmRegulator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Investor
- * BUSINESSPROCESS_FOR_ROLES.Investor}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInvestor
+ * BUSINESSPROCESS_FOR_ROLES.mmInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#MarketMaker
- * BUSINESSPROCESS_FOR_ROLES.MarketMaker}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmMarketMaker
+ * BUSINESSPROCESS_FOR_ROLES.mmMarketMaker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#TradingParty
- * BUSINESSPROCESS_FOR_ROLES.TradingParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmTradingParty
+ * BUSINESSPROCESS_FOR_ROLES.mmTradingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#InvestmentDecisionMaker
- * BUSINESSPROCESS_FOR_ROLES.InvestmentDecisionMaker}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInvestmentDecisionMaker
+ * BUSINESSPROCESS_FOR_ROLES.mmInvestmentDecisionMaker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#TradeInstructor
- * BUSINESSPROCESS_FOR_ROLES.TradeInstructor}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmTradeInstructor
+ * BUSINESSPROCESS_FOR_ROLES.mmTradeInstructor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#PostTradeAdministrator
- * BUSINESSPROCESS_FOR_ROLES.PostTradeAdministrator}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmPostTradeAdministrator
+ * BUSINESSPROCESS_FOR_ROLES.mmPostTradeAdministrator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Trader
- * BUSINESSPROCESS_FOR_ROLES.Trader}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmTrader
+ * BUSINESSPROCESS_FOR_ROLES.mmTrader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Infrastructure
- * BUSINESSPROCESS_FOR_ROLES.Infrastructure}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInfrastructure
+ * BUSINESSPROCESS_FOR_ROLES.mmInfrastructure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#ConfirmationParty
- * BUSINESSPROCESS_FOR_ROLES.ConfirmationParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmConfirmationParty
+ * BUSINESSPROCESS_FOR_ROLES.mmConfirmationParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CentralCounterparty
- * BUSINESSPROCESS_FOR_ROLES.CentralCounterparty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCentralCounterparty
+ * BUSINESSPROCESS_FOR_ROLES.mmCentralCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CentralSecuritiesDepository
- * BUSINESSPROCESS_FOR_ROLES.CentralSecuritiesDepository}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCentralSecuritiesDepository
+ * BUSINESSPROCESS_FOR_ROLES.mmCentralSecuritiesDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#SystemTransactionAdministrator
- * BUSINESSPROCESS_FOR_ROLES.SystemTransactionAdministrator}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmSystemTransactionAdministrator
+ * BUSINESSPROCESS_FOR_ROLES.mmSystemTransactionAdministrator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#ThirdParty
- * BUSINESSPROCESS_FOR_ROLES.ThirdParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmThirdParty
+ * BUSINESSPROCESS_FOR_ROLES.mmThirdParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#SystemMember
- * BUSINESSPROCESS_FOR_ROLES.SystemMember}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmSystemMember
+ * BUSINESSPROCESS_FOR_ROLES.mmSystemMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#SystemDirectMember
- * BUSINESSPROCESS_FOR_ROLES.SystemDirectMember}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmSystemDirectMember
+ * BUSINESSPROCESS_FOR_ROLES.mmSystemDirectMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#SystemIndirectMember
- * BUSINESSPROCESS_FOR_ROLES.SystemIndirectMember}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmSystemIndirectMember
+ * BUSINESSPROCESS_FOR_ROLES.mmSystemIndirectMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Agent
- * BUSINESSPROCESS_FOR_ROLES.Agent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#AgreementParty
- * BUSINESSPROCESS_FOR_ROLES.AgreementParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmAgreementParty
+ * BUSINESSPROCESS_FOR_ROLES.mmAgreementParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#InitiatingParty
- * BUSINESSPROCESS_FOR_ROLES.InitiatingParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInitiatingParty
+ * BUSINESSPROCESS_FOR_ROLES.mmInitiatingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#DebitParty
- * BUSINESSPROCESS_FOR_ROLES.DebitParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmDebitParty
+ * BUSINESSPROCESS_FOR_ROLES.mmDebitParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CreditParty
- * BUSINESSPROCESS_FOR_ROLES.CreditParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCreditParty
+ * BUSINESSPROCESS_FOR_ROLES.mmCreditParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#PaymentClearingAgent
- * BUSINESSPROCESS_FOR_ROLES.PaymentClearingAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmPaymentClearingAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmPaymentClearingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#PaymentSettlementAgent
- * BUSINESSPROCESS_FOR_ROLES.PaymentSettlementAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmPaymentSettlementAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmPaymentSettlementAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#FinalAgent
- * BUSINESSPROCESS_FOR_ROLES.FinalAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmFinalAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmFinalAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#FirstAgent
- * BUSINESSPROCESS_FOR_ROLES.FirstAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmFirstAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmFirstAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#ForwardingAgent
- * BUSINESSPROCESS_FOR_ROLES.ForwardingAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmForwardingAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmForwardingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Creditor
- * BUSINESSPROCESS_FOR_ROLES.Creditor}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCreditor
+ * BUSINESSPROCESS_FOR_ROLES.mmCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Debtor
- * BUSINESSPROCESS_FOR_ROLES.Debtor}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmDebtor
+ * BUSINESSPROCESS_FOR_ROLES.mmDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#FinalParty
- * BUSINESSPROCESS_FOR_ROLES.FinalParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmFinalParty
+ * BUSINESSPROCESS_FOR_ROLES.mmFinalParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#OriginatingParty
- * BUSINESSPROCESS_FOR_ROLES.OriginatingParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmOriginatingParty
+ * BUSINESSPROCESS_FOR_ROLES.mmOriginatingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#TransferAgent
- * BUSINESSPROCESS_FOR_ROLES.TransferAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmTransferAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmTransferAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Intermediary
- * BUSINESSPROCESS_FOR_ROLES.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmIntermediary
+ * BUSINESSPROCESS_FOR_ROLES.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Custodian
- * BUSINESSPROCESS_FOR_ROLES.Custodian}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCustodian
+ * BUSINESSPROCESS_FOR_ROLES.mmCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#PayingAgent
- * BUSINESSPROCESS_FOR_ROLES.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmPayingAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#FundAccountant
- * BUSINESSPROCESS_FOR_ROLES.FundAccountant}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmFundAccountant
+ * BUSINESSPROCESS_FOR_ROLES.mmFundAccountant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#InvestmentManager
- * BUSINESSPROCESS_FOR_ROLES.InvestmentManager}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInvestmentManager
+ * BUSINESSPROCESS_FOR_ROLES.mmInvestmentManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#FundManagementCompany
- * BUSINESSPROCESS_FOR_ROLES.FundManagementCompany}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmFundManagementCompany
+ * BUSINESSPROCESS_FOR_ROLES.mmFundManagementCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Registrar
- * BUSINESSPROCESS_FOR_ROLES.Registrar}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmRegistrar
+ * BUSINESSPROCESS_FOR_ROLES.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CashCorrespondent
- * BUSINESSPROCESS_FOR_ROLES.CashCorrespondent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCashCorrespondent
+ * BUSINESSPROCESS_FOR_ROLES.mmCashCorrespondent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#DataProvider
- * BUSINESSPROCESS_FOR_ROLES.DataProvider}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmDataProvider
+ * BUSINESSPROCESS_FOR_ROLES.mmDataProvider}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#TreasurySettlementParty
- * BUSINESSPROCESS_FOR_ROLES.TreasurySettlementParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmTreasurySettlementParty
+ * BUSINESSPROCESS_FOR_ROLES.mmTreasurySettlementParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#BuySideParty
- * BUSINESSPROCESS_FOR_ROLES.BuySideParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmBuySideParty
+ * BUSINESSPROCESS_FOR_ROLES.mmBuySideParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#RedistributorAgent
- * BUSINESSPROCESS_FOR_ROLES.RedistributorAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmRedistributorAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmRedistributorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#SellSideParty
- * BUSINESSPROCESS_FOR_ROLES.SellSideParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmSellSideParty
+ * BUSINESSPROCESS_FOR_ROLES.mmSellSideParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Invoicee
- * BUSINESSPROCESS_FOR_ROLES.Invoicee}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInvoicee
+ * BUSINESSPROCESS_FOR_ROLES.mmInvoicee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Invoicer
- * BUSINESSPROCESS_FOR_ROLES.Invoicer}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInvoicer
+ * BUSINESSPROCESS_FOR_ROLES.mmInvoicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#AccountOwner
- * BUSINESSPROCESS_FOR_ROLES.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmAccountOwner
+ * BUSINESSPROCESS_FOR_ROLES.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#AccountServicer
- * BUSINESSPROCESS_FOR_ROLES.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmAccountServicer
+ * BUSINESSPROCESS_FOR_ROLES.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CaseAssignee
- * BUSINESSPROCESS_FOR_ROLES.CaseAssignee}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCaseAssignee
+ * BUSINESSPROCESS_FOR_ROLES.mmCaseAssignee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CaseAssigner
- * BUSINESSPROCESS_FOR_ROLES.CaseAssigner}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCaseAssigner
+ * BUSINESSPROCESS_FOR_ROLES.mmCaseAssigner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#InvestigationManager
- * BUSINESSPROCESS_FOR_ROLES.InvestigationManager}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInvestigationManager
+ * BUSINESSPROCESS_FOR_ROLES.mmInvestigationManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Facilitator
- * BUSINESSPROCESS_FOR_ROLES.Facilitator}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmFacilitator
+ * BUSINESSPROCESS_FOR_ROLES.mmFacilitator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#ProxyVotingInitiator
- * BUSINESSPROCESS_FOR_ROLES.ProxyVotingInitiator}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmProxyVotingInitiator
+ * BUSINESSPROCESS_FOR_ROLES.mmProxyVotingInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#ProxyInformationProvider
- * BUSINESSPROCESS_FOR_ROLES.ProxyInformationProvider}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmProxyInformationProvider
+ * BUSINESSPROCESS_FOR_ROLES.mmProxyInformationProvider}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CustodyServiceProvider
- * BUSINESSPROCESS_FOR_ROLES.CustodyServiceProvider}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCustodyServiceProvider
+ * BUSINESSPROCESS_FOR_ROLES.mmCustodyServiceProvider}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#LocalMarketIntermediary
- * BUSINESSPROCESS_FOR_ROLES.LocalMarketIntermediary}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmLocalMarketIntermediary
+ * BUSINESSPROCESS_FOR_ROLES.mmLocalMarketIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#VotingParty
- * BUSINESSPROCESS_FOR_ROLES.VotingParty}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmVotingParty
+ * BUSINESSPROCESS_FOR_ROLES.mmVotingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Investigator
- * BUSINESSPROCESS_FOR_ROLES.Investigator}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInvestigator
+ * BUSINESSPROCESS_FOR_ROLES.mmInvestigator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CorporateInvestigator
- * BUSINESSPROCESS_FOR_ROLES.CorporateInvestigator}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCorporateInvestigator
+ * BUSINESSPROCESS_FOR_ROLES.mmCorporateInvestigator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#FinancialInvestigator
- * BUSINESSPROCESS_FOR_ROLES.FinancialInvestigator}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmFinancialInvestigator
+ * BUSINESSPROCESS_FOR_ROLES.mmFinancialInvestigator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CentralSettlementSystem
- * BUSINESSPROCESS_FOR_ROLES.CentralSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCentralSettlementSystem
+ * BUSINESSPROCESS_FOR_ROLES.mmCentralSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#SettlementMember
- * BUSINESSPROCESS_FOR_ROLES.SettlementMember}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmSettlementMember
+ * BUSINESSPROCESS_FOR_ROLES.mmSettlementMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#ReportingInstitution
- * BUSINESSPROCESS_FOR_ROLES.ReportingInstitution}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmReportingInstitution
+ * BUSINESSPROCESS_FOR_ROLES.mmReportingInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#FinancialInstitutionApplication
- * BUSINESSPROCESS_FOR_ROLES.FinancialInstitutionApplication}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmFinancialInstitutionApplication
+ * BUSINESSPROCESS_FOR_ROLES.mmFinancialInstitutionApplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#NonFinancialInstitutionApplication
- * BUSINESSPROCESS_FOR_ROLES.NonFinancialInstitutionApplication}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmNonFinancialInstitutionApplication
+ * BUSINESSPROCESS_FOR_ROLES.mmNonFinancialInstitutionApplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#SystemApplication
- * BUSINESSPROCESS_FOR_ROLES.SystemApplication}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmSystemApplication
+ * BUSINESSPROCESS_FOR_ROLES.mmSystemApplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#CSDParticipant
- * BUSINESSPROCESS_FOR_ROLES.CSDParticipant}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmCSDParticipant
+ * BUSINESSPROCESS_FOR_ROLES.mmCSDParticipant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#InternationalCentralSecuritiesDepository
- * BUSINESSPROCESS_FOR_ROLES.InternationalCentralSecuritiesDepository}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmInternationalCentralSecuritiesDepository
+ * BUSINESSPROCESS_FOR_ROLES.mmInternationalCentralSecuritiesDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#Issuer
- * BUSINESSPROCESS_FOR_ROLES.Issuer}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmIssuer
+ * BUSINESSPROCESS_FOR_ROLES.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#IssuerAgent
- * BUSINESSPROCESS_FOR_ROLES.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmIssuerAgent
+ * BUSINESSPROCESS_FOR_ROLES.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#NationalCentralBank
- * BUSINESSPROCESS_FOR_ROLES.NationalCentralBank}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmNationalCentralBank
+ * BUSINESSPROCESS_FOR_ROLES.mmNationalCentralBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#StockExchange
- * BUSINESSPROCESS_FOR_ROLES.StockExchange}</li>
+ * {@linkplain com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES#mmStockExchange
+ * BUSINESSPROCESS_FOR_ROLES.mmStockExchange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
- * GeneratedRepository.catalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
+ * GeneratedRepository.mmcatalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -387,7 +387,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole OrderGiver = new MMBusinessRole() {
+	public static final MMBusinessRole mmOrderGiver = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderGiver";
@@ -419,7 +419,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Trustee = new MMBusinessRole() {
+	public static final MMBusinessRole mmTrustee = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trustee";
@@ -448,7 +448,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * definition} = "Party which affirms the trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole AffirmingParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmAffirmingParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmingParty";
@@ -482,7 +482,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole ExecutingBroker = new MMBusinessRole() {
+	public static final MMBusinessRole mmExecutingBroker = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingBroker";
@@ -516,7 +516,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole InstitutionalInvestor = new MMBusinessRole() {
+	public static final MMBusinessRole mmInstitutionalInvestor = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstitutionalInvestor";
@@ -550,7 +550,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole PrimeBroker = new MMBusinessRole() {
+	public static final MMBusinessRole mmPrimeBroker = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimeBroker";
@@ -582,7 +582,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Underwriter = new MMBusinessRole() {
+	public static final MMBusinessRole mmUnderwriter = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underwriter";
@@ -617,7 +617,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CentralMatchingUtility = new MMBusinessRole() {
+	public static final MMBusinessRole mmCentralMatchingUtility = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralMatchingUtility";
@@ -651,7 +651,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole NonClearingMember = new MMBusinessRole() {
+	public static final MMBusinessRole mmNonClearingMember = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
@@ -689,7 +689,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole ClearingMember = new MMBusinessRole() {
+	public static final MMBusinessRole mmClearingMember = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
@@ -721,7 +721,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole MasterTerminalManager = new MMBusinessRole() {
+	public static final MMBusinessRole mmMasterTerminalManager = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MasterTerminalManager";
@@ -755,7 +755,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole TerminalManager = new MMBusinessRole() {
+	public static final MMBusinessRole mmTerminalManager = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TerminalManager";
@@ -788,7 +788,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Buyer = new MMBusinessRole() {
+	public static final MMBusinessRole mmBuyer = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
@@ -817,7 +817,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * definition} = "Financial institution that holds the buyer's account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole BuyersBank = new MMBusinessRole() {
+	public static final MMBusinessRole mmBuyersBank = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyersBank";
@@ -849,7 +849,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Seller = new MMBusinessRole() {
+	public static final MMBusinessRole mmSeller = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
@@ -878,7 +878,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * definition} = "Financial institution that holds the seller's account ."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole SellersBank = new MMBusinessRole() {
+	public static final MMBusinessRole mmSellersBank = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellersBank";
@@ -912,7 +912,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Acquirer = new MMBusinessRole() {
+	public static final MMBusinessRole mmAcquirer = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Acquirer";
@@ -943,7 +943,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CardAcceptor = new MMBusinessRole() {
+	public static final MMBusinessRole mmCardAcceptor = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CardAcceptor";
@@ -976,7 +976,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Cardholder = new MMBusinessRole() {
+	public static final MMBusinessRole mmCardholder = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Cardholder";
@@ -1008,7 +1008,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Merchant = new MMBusinessRole() {
+	public static final MMBusinessRole mmMerchant = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Merchant";
@@ -1038,7 +1038,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * "Financial institution servicing an account for the Creditor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CreditorAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmCreditorAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
@@ -1071,7 +1071,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CreditorSendingParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmCreditorSendingParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorSendingParty";
@@ -1101,7 +1101,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * "Financial institution servicing an account for the Debtor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole DebtorAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmDebtorAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
@@ -1133,7 +1133,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole DebtorReceivingParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmDebtorReceivingParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorReceivingParty";
@@ -1166,7 +1166,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CollateralGiver = new MMBusinessRole() {
+	public static final MMBusinessRole mmCollateralGiver = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralGiver";
@@ -1198,7 +1198,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CollateralTaker = new MMBusinessRole() {
+	public static final MMBusinessRole mmCollateralTaker = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralTaker";
@@ -1224,7 +1224,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * name} = "CAAccountServicer"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CAAccountServicer = new MMBusinessRole() {
+	public static final MMBusinessRole mmCAAccountServicer = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CAAccountServicer";
@@ -1249,7 +1249,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * name} = "CAAccountOwner"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CAAccountOwner = new MMBusinessRole() {
+	public static final MMBusinessRole mmCAAccountOwner = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CAAccountOwner";
@@ -1280,7 +1280,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole SettlementAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmSettlementAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SettlementAgent";
@@ -1316,7 +1316,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole GlobalSettlementAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmGlobalSettlementAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GlobalSettlementAgent";
@@ -1351,7 +1351,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole LocalSettlementAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmLocalSettlementAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LocalSettlementAgent";
@@ -1384,7 +1384,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole InterestedAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmInterestedAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InterestedAgent";
@@ -1417,7 +1417,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Regulator = new MMBusinessRole() {
+	public static final MMBusinessRole mmRegulator = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Regulator";
@@ -1449,7 +1449,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Investor = new MMBusinessRole() {
+	public static final MMBusinessRole mmInvestor = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Investor";
@@ -1489,7 +1489,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole MarketMaker = new MMBusinessRole() {
+	public static final MMBusinessRole mmMarketMaker = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarketMaker";
@@ -1526,7 +1526,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole TradingParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmTradingParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradingParty";
@@ -1560,7 +1560,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole InvestmentDecisionMaker = new MMBusinessRole() {
+	public static final MMBusinessRole mmInvestmentDecisionMaker = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentDecisionMaker";
@@ -1595,7 +1595,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole TradeInstructor = new MMBusinessRole() {
+	public static final MMBusinessRole mmTradeInstructor = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradeInstructor";
@@ -1628,7 +1628,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole PostTradeAdministrator = new MMBusinessRole() {
+	public static final MMBusinessRole mmPostTradeAdministrator = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PostTradeAdministrator";
@@ -1661,7 +1661,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Trader = new MMBusinessRole() {
+	public static final MMBusinessRole mmTrader = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Trader";
@@ -1694,7 +1694,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Infrastructure = new MMBusinessRole() {
+	public static final MMBusinessRole mmInfrastructure = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Infrastructure";
@@ -1728,7 +1728,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole ConfirmationParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmConfirmationParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConfirmationParty";
@@ -1762,7 +1762,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CentralCounterparty = new MMBusinessRole() {
+	public static final MMBusinessRole mmCentralCounterparty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CentralCounterparty";
@@ -1797,7 +1797,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CentralSecuritiesDepository = new MMBusinessRole() {
+	public static final MMBusinessRole mmCentralSecuritiesDepository = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CentralSecuritiesDepository";
@@ -1835,7 +1835,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole SystemTransactionAdministrator = new MMBusinessRole() {
+	public static final MMBusinessRole mmSystemTransactionAdministrator = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SystemTransactionAdministrator";
@@ -1868,7 +1868,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole ThirdParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmThirdParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ThirdParty";
@@ -1902,7 +1902,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole SystemMember = new MMBusinessRole() {
+	public static final MMBusinessRole mmSystemMember = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SystemMember";
@@ -1941,7 +1941,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole SystemDirectMember = new MMBusinessRole() {
+	public static final MMBusinessRole mmSystemDirectMember = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SystemDirectMember";
@@ -1977,7 +1977,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole SystemIndirectMember = new MMBusinessRole() {
+	public static final MMBusinessRole mmSystemIndirectMember = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SystemIndirectMember";
@@ -2007,7 +2007,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * "Party that acts on behalf, or upon request, of another party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Agent = new MMBusinessRole() {
+	public static final MMBusinessRole mmAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Agent";
@@ -2041,7 +2041,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole AgreementParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmAgreementParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AgreementParty";
@@ -2076,7 +2076,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole InitiatingParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmInitiatingParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InitiatingParty";
@@ -2110,7 +2110,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole DebitParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmDebitParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DebitParty";
@@ -2144,7 +2144,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CreditParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmCreditParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditParty";
@@ -2176,7 +2176,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole PaymentClearingAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmPaymentClearingAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentClearingAgent";
@@ -2208,7 +2208,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole PaymentSettlementAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmPaymentSettlementAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentSettlementAgent";
@@ -2240,7 +2240,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole FinalAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmFinalAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinalAgent";
@@ -2272,7 +2272,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole FirstAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmFirstAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FirstAgent";
@@ -2304,7 +2304,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole ForwardingAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmForwardingAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ForwardingAgent";
@@ -2336,7 +2336,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Creditor = new MMBusinessRole() {
+	public static final MMBusinessRole mmCreditor = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Creditor";
@@ -2368,7 +2368,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Debtor = new MMBusinessRole() {
+	public static final MMBusinessRole mmDebtor = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Debtor";
@@ -2401,7 +2401,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole FinalParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmFinalParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinalParty";
@@ -2434,7 +2434,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole OriginatingParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmOriginatingParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OriginatingParty";
@@ -2473,7 +2473,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole TransferAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmTransferAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferAgent";
@@ -2513,7 +2513,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Intermediary = new MMBusinessRole() {
+	public static final MMBusinessRole mmIntermediary = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Intermediary";
@@ -2543,7 +2543,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * "Party that safekeeps and administers assets on behalf of the owner."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Custodian = new MMBusinessRole() {
+	public static final MMBusinessRole mmCustodian = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Custodian";
@@ -2580,7 +2580,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole PayingAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmPayingAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PayingAgent";
@@ -2613,7 +2613,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole FundAccountant = new MMBusinessRole() {
+	public static final MMBusinessRole mmFundAccountant = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FundAccountant";
@@ -2647,7 +2647,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole InvestmentManager = new MMBusinessRole() {
+	public static final MMBusinessRole mmInvestmentManager = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentManager";
@@ -2680,7 +2680,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole FundManagementCompany = new MMBusinessRole() {
+	public static final MMBusinessRole mmFundManagementCompany = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FundManagementCompany";
@@ -2721,7 +2721,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Registrar = new MMBusinessRole() {
+	public static final MMBusinessRole mmRegistrar = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Registrar";
@@ -2753,7 +2753,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CashCorrespondent = new MMBusinessRole() {
+	public static final MMBusinessRole mmCashCorrespondent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashCorrespondent";
@@ -2787,7 +2787,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole DataProvider = new MMBusinessRole() {
+	public static final MMBusinessRole mmDataProvider = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DataProvider";
@@ -2819,7 +2819,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole TreasurySettlementParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmTreasurySettlementParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TreasurySettlementParty";
@@ -2851,7 +2851,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole BuySideParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmBuySideParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BuySideParty";
@@ -2888,7 +2888,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole RedistributorAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmRedistributorAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RedistributorAgent";
@@ -2920,7 +2920,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole SellSideParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmSellSideParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SellSideParty";
@@ -2950,7 +2950,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * "Party identified in a commercial invoice as the liable party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Invoicee = new MMBusinessRole() {
+	public static final MMBusinessRole mmInvoicee = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Invoicee";
@@ -2982,7 +2982,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Invoicer = new MMBusinessRole() {
+	public static final MMBusinessRole mmInvoicer = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Invoicer";
@@ -3011,7 +3011,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole AccountOwner = new MMBusinessRole() {
+	public static final MMBusinessRole mmAccountOwner = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AccountOwner";
@@ -3045,7 +3045,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole AccountServicer = new MMBusinessRole() {
+	public static final MMBusinessRole mmAccountServicer = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AccountServicer";
@@ -3074,7 +3074,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * definition} = "Party which is assigned an investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CaseAssignee = new MMBusinessRole() {
+	public static final MMBusinessRole mmCaseAssignee = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CaseAssignee";
@@ -3103,7 +3103,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * definition} = "Party assigning an investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CaseAssigner = new MMBusinessRole() {
+	public static final MMBusinessRole mmCaseAssigner = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CaseAssigner";
@@ -3132,7 +3132,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * definition} = "Party involved in investigations management."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole InvestigationManager = new MMBusinessRole() {
+	public static final MMBusinessRole mmInvestigationManager = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestigationManager";
@@ -3165,7 +3165,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Facilitator = new MMBusinessRole() {
+	public static final MMBusinessRole mmFacilitator = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Facilitator";
@@ -3198,7 +3198,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole ProxyVotingInitiator = new MMBusinessRole() {
+	public static final MMBusinessRole mmProxyVotingInitiator = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyVotingInitiator";
@@ -3231,7 +3231,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole ProxyInformationProvider = new MMBusinessRole() {
+	public static final MMBusinessRole mmProxyInformationProvider = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyInformationProvider";
@@ -3264,7 +3264,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CustodyServiceProvider = new MMBusinessRole() {
+	public static final MMBusinessRole mmCustodyServiceProvider = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyServiceProvider";
@@ -3300,7 +3300,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole LocalMarketIntermediary = new MMBusinessRole() {
+	public static final MMBusinessRole mmLocalMarketIntermediary = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalMarketIntermediary";
@@ -3335,7 +3335,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole VotingParty = new MMBusinessRole() {
+	public static final MMBusinessRole mmVotingParty = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VotingParty";
@@ -3367,7 +3367,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Investigator = new MMBusinessRole() {
+	public static final MMBusinessRole mmInvestigator = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investigator";
@@ -3399,7 +3399,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CorporateInvestigator = new MMBusinessRole() {
+	public static final MMBusinessRole mmCorporateInvestigator = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateInvestigator";
@@ -3431,7 +3431,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole FinancialInvestigator = new MMBusinessRole() {
+	public static final MMBusinessRole mmFinancialInvestigator = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInvestigator";
@@ -3463,7 +3463,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CentralSettlementSystem = new MMBusinessRole() {
+	public static final MMBusinessRole mmCentralSettlementSystem = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CentralSettlementSystem";
@@ -3495,7 +3495,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole SettlementMember = new MMBusinessRole() {
+	public static final MMBusinessRole mmSettlementMember = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SettlementMember";
@@ -3527,7 +3527,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole ReportingInstitution = new MMBusinessRole() {
+	public static final MMBusinessRole mmReportingInstitution = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingInstitution";
@@ -3556,7 +3556,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * definition} = "Messaging application used by a financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole FinancialInstitutionApplication = new MMBusinessRole() {
+	public static final MMBusinessRole mmFinancialInstitutionApplication = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstitutionApplication";
@@ -3582,7 +3582,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * name} = "NonFinancialInstitutionApplication"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole NonFinancialInstitutionApplication = new MMBusinessRole() {
+	public static final MMBusinessRole mmNonFinancialInstitutionApplication = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonFinancialInstitutionApplication";
@@ -3607,7 +3607,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * name} = "SystemApplication"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole SystemApplication = new MMBusinessRole() {
+	public static final MMBusinessRole mmSystemApplication = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemApplication";
@@ -3635,7 +3635,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * definition} = "Account holder in a Central Securities Depository."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole CSDParticipant = new MMBusinessRole() {
+	public static final MMBusinessRole mmCSDParticipant = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CSDParticipant";
@@ -3672,7 +3672,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole InternationalCentralSecuritiesDepository = new MMBusinessRole() {
+	public static final MMBusinessRole mmInternationalCentralSecuritiesDepository = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InternationalCentralSecuritiesDepository";
@@ -3707,7 +3707,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole Issuer = new MMBusinessRole() {
+	public static final MMBusinessRole mmIssuer = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Issuer";
@@ -3740,7 +3740,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole IssuerAgent = new MMBusinessRole() {
+	public static final MMBusinessRole mmIssuerAgent = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IssuerAgent";
@@ -3773,7 +3773,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole NationalCentralBank = new MMBusinessRole() {
+	public static final MMBusinessRole mmNationalCentralBank = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NationalCentralBank";
@@ -3809,7 +3809,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessRole StockExchange = new MMBusinessRole() {
+	public static final MMBusinessRole mmStockExchange = new MMBusinessRole() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StockExchange";
@@ -3821,58 +3821,59 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	final static public MMBusinessProcess mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessProcess() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.catalogue;
+				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BUSINESSPROCESS_FOR_ROLES";
-				businessRole_lazy = () -> Arrays.asList(com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.OrderGiver, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Trustee,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.AffirmingParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.ExecutingBroker,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.InstitutionalInvestor, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.PrimeBroker,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Underwriter, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CentralMatchingUtility,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.NonClearingMember, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.ClearingMember,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.MasterTerminalManager, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.TerminalManager,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Buyer, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.BuyersBank, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Seller,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.SellersBank, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Acquirer, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CardAcceptor,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Cardholder, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Merchant, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CreditorAgent,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CreditorSendingParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.DebtorAgent,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.DebtorReceivingParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CollateralGiver,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CollateralTaker, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CAAccountServicer,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CAAccountOwner, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.SettlementAgent,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.GlobalSettlementAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.LocalSettlementAgent,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.InterestedAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Regulator, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Investor,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.MarketMaker, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.TradingParty,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.InvestmentDecisionMaker, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.TradeInstructor,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.PostTradeAdministrator, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Trader,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Infrastructure, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.ConfirmationParty,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CentralCounterparty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CentralSecuritiesDepository,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.SystemTransactionAdministrator, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.ThirdParty,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.SystemMember, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.SystemDirectMember,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.SystemIndirectMember, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Agent,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.AgreementParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.InitiatingParty,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.DebitParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CreditParty,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.PaymentClearingAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.PaymentSettlementAgent,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.FinalAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.FirstAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.ForwardingAgent,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Creditor, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Debtor, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.FinalParty,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.OriginatingParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.TransferAgent,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Intermediary, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Custodian, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.PayingAgent,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.FundAccountant, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.InvestmentManager,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.FundManagementCompany, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Registrar,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CashCorrespondent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.DataProvider,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.TreasurySettlementParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.BuySideParty,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.RedistributorAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.SellSideParty,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Invoicee, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Invoicer, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.AccountOwner,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.AccountServicer, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CaseAssignee,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CaseAssigner, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.InvestigationManager,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Facilitator, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.ProxyVotingInitiator,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.ProxyInformationProvider, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CustodyServiceProvider,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.LocalMarketIntermediary, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.VotingParty,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Investigator, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CorporateInvestigator,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.FinancialInvestigator, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CentralSettlementSystem,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.SettlementMember, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.ReportingInstitution,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.FinancialInstitutionApplication, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.NonFinancialInstitutionApplication,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.SystemApplication, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.CSDParticipant,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.InternationalCentralSecuritiesDepository, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.Issuer,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.IssuerAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.NationalCentralBank,
-						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.StockExchange);
+				businessRole_lazy = () -> Arrays.asList(com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmOrderGiver, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmTrustee,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmAffirmingParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmExecutingBroker,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInstitutionalInvestor, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmPrimeBroker,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmUnderwriter, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCentralMatchingUtility,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmNonClearingMember, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmClearingMember,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmMasterTerminalManager, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmTerminalManager,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmBuyer, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmBuyersBank, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmSeller,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmSellersBank, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmAcquirer,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCardAcceptor, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCardholder, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmMerchant,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCreditorAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCreditorSendingParty,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmDebtorAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmDebtorReceivingParty,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCollateralGiver, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCollateralTaker,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCAAccountServicer, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCAAccountOwner,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmSettlementAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmGlobalSettlementAgent,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmLocalSettlementAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInterestedAgent,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmRegulator, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInvestor, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmMarketMaker,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmTradingParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInvestmentDecisionMaker,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmTradeInstructor, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmPostTradeAdministrator,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmTrader, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInfrastructure,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmConfirmationParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCentralCounterparty,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCentralSecuritiesDepository, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmSystemTransactionAdministrator,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmThirdParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmSystemMember,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmSystemDirectMember, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmSystemIndirectMember,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmAgreementParty,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInitiatingParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmDebitParty,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCreditParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmPaymentClearingAgent,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmPaymentSettlementAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmFinalAgent,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmFirstAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmForwardingAgent,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCreditor, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmDebtor, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmFinalParty,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmOriginatingParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmTransferAgent,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmIntermediary, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCustodian,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmPayingAgent, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmFundAccountant,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInvestmentManager, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmFundManagementCompany,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmRegistrar, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCashCorrespondent,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmDataProvider, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmTreasurySettlementParty,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmBuySideParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmRedistributorAgent,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmSellSideParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInvoicee, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInvoicer,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmAccountOwner, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmAccountServicer,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCaseAssignee, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCaseAssigner,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInvestigationManager, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmFacilitator,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmProxyVotingInitiator, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmProxyInformationProvider,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCustodyServiceProvider, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmLocalMarketIntermediary,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmVotingParty, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInvestigator,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCorporateInvestigator, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmFinancialInvestigator,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCentralSettlementSystem, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmSettlementMember,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmReportingInstitution, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmFinancialInstitutionApplication,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmNonFinancialInstitutionApplication, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmSystemApplication,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmCSDParticipant, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmInternationalCentralSecuritiesDepository,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmIssuer, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmIssuerAgent,
+						com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmNationalCentralBank, com.tools20022.repository.other.BUSINESSPROCESS_FOR_ROLES.mmStockExchange);
 			}
 		});
 		return mmObject_lazy.get();

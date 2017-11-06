@@ -34,6 +34,7 @@ import com.tools20022.repository.entity.FinancialProduct;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Distinct pool of financial instruments managed by a single investment policy.
@@ -50,48 +51,49 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFund#DomicileCountry
- * InvestmentFund.DomicileCountry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#OrderDesk
- * InvestmentFund.OrderDesk}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmDomicileCountry
+ * InvestmentFund.mmDomicileCountry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmOrderDesk
+ * InvestmentFund.mmOrderDesk}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFund#InvestmentFundClass
- * InvestmentFund.InvestmentFundClass}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#FundType
- * InvestmentFund.FundType}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmInvestmentFundClass
+ * InvestmentFund.mmInvestmentFundClass}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmFundType
+ * InvestmentFund.mmFundType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFund#TreasuryTradingParty
- * InvestmentFund.TreasuryTradingParty}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmTreasuryTradingParty
+ * InvestmentFund.mmTreasuryTradingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFund#Identification
- * InvestmentFund.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#Custodian
- * InvestmentFund.Custodian}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#PartyRole
- * InvestmentFund.PartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#Family
- * InvestmentFund.Family}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#Structure
- * InvestmentFund.Structure}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#LegalForm
- * InvestmentFund.LegalForm}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmIdentification
+ * InvestmentFund.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmCustodian
+ * InvestmentFund.mmCustodian}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmPartyRole
+ * InvestmentFund.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmFamily
+ * InvestmentFund.mmFamily}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmStructure
+ * InvestmentFund.mmStructure}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmLegalForm
+ * InvestmentFund.mmLegalForm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFund#SubFundIndicator
- * InvestmentFund.SubFundIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmSubFundIndicator
+ * InvestmentFund.mmSubFundIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFund#EndOfFiscalYear
- * InvestmentFund.EndOfFiscalYear}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmEndOfFiscalYear
+ * InvestmentFund.mmEndOfFiscalYear}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFund#AccountingYearEndDate
- * InvestmentFund.AccountingYearEndDate}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmAccountingYearEndDate
+ * InvestmentFund.mmAccountingYearEndDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFund#FirstAccountingYearEndDate
- * InvestmentFund.FirstAccountingYearEndDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#UmbrellaFund
- * InvestmentFund.UmbrellaFund}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmFirstAccountingYearEndDate
+ * InvestmentFund.mmFirstAccountingYearEndDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFund#AuthorisedCountry
- * InvestmentFund.AuthorisedCountry}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmUmbrellaFund
+ * InvestmentFund.mmUmbrellaFund}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmAuthorisedCountry
+ * InvestmentFund.mmAuthorisedCountry}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,27 +101,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#InvestmentFund
- * InvestmentFundClass.InvestmentFund}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UmbrellaFund#SubFund
- * UmbrellaFund.SubFund}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Country#DomiciledFunds
- * Country.DomiciledFunds}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentFund
+ * InvestmentFundClass.mmInvestmentFund}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UmbrellaFund#mmSubFund
+ * UmbrellaFund.mmSubFund}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Country#mmDomiciledFunds
+ * Country.mmDomiciledFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#RelatedInvestmentFund
- * ContactPoint.RelatedInvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedInvestmentFund
+ * ContactPoint.mmRelatedInvestmentFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#InvestmentFund
- * InvestmentFundFamily.InvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#mmInvestmentFund
+ * InvestmentFundFamily.mmInvestmentFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#InvestmentFund
- * InvestmentFundPartyRole.InvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmInvestmentFund
+ * InvestmentFundPartyRole.mmInvestmentFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#InvestmentFund
- * TreasuryTradingParty.InvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#mmInvestmentFund
+ * TreasuryTradingParty.mmInvestmentFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CustodianRole#InvestmentFund
- * CustodianRole.InvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.entity.CustodianRole#mmInvestmentFund
+ * CustodianRole.mmInvestmentFund}</li>
  * </ul>
  * </li>
  * <li>
@@ -127,11 +129,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceValuation2#FinancialInstrumentDetails
- * PriceValuation2.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceValuation2#mmFinancialInstrumentDetails
+ * PriceValuation2.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceValuation3#FinancialInstrumentDetails
- * PriceValuation3.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceValuation3#mmFinancialInstrumentDetails
+ * PriceValuation3.mmFinancialInstrumentDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -168,8 +170,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -185,6 +187,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFund extends FinancialProduct {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Country domicileCountry;
 	/**
 	 * Country in which the investment fund is domiciled.
 	 * <p>
@@ -193,42 +196,42 @@ public class InvestmentFund extends FinancialProduct {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Country#DomiciledFunds
-	 * Country.DomiciledFunds}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmDomiciledFunds
+	 * Country.mmDomiciledFunds}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument16#CountryOfDomicile
-	 * FinancialInstrument16.CountryOfDomicile}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#CountryOfDomicile
-	 * SecurityIdentification1.CountryOfDomicile}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundParameters2#CountryOfDomicile
-	 * FundParameters2.CountryOfDomicile}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundParameters4#CountryOfDomicile
-	 * FundParameters4.CountryOfDomicile}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument21#CountryOfDomicile
-	 * FinancialInstrument21.CountryOfDomicile}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument22#CountryOfDomicile
-	 * FinancialInstrument22.CountryOfDomicile}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFund
 	 * InvestmentFund}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument16#mmCountryOfDomicile
+	 * FinancialInstrument16.mmCountryOfDomicile}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#mmCountryOfDomicile
+	 * SecurityIdentification1.mmCountryOfDomicile}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundParameters2#mmCountryOfDomicile
+	 * FundParameters2.mmCountryOfDomicile}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundParameters4#mmCountryOfDomicile
+	 * FundParameters4.mmCountryOfDomicile}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument21#mmCountryOfDomicile
+	 * FinancialInstrument21.mmCountryOfDomicile}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument22#mmCountryOfDomicile
+	 * FinancialInstrument22.mmCountryOfDomicile}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -240,23 +243,24 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Country in which the investment fund is domiciled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd DomicileCountry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDomicileCountry = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument16.CountryOfDomicile, com.tools20022.repository.msg.SecurityIdentification1.CountryOfDomicile,
-					com.tools20022.repository.msg.FundParameters2.CountryOfDomicile, com.tools20022.repository.msg.FundParameters4.CountryOfDomicile, com.tools20022.repository.msg.FinancialInstrument21.CountryOfDomicile,
-					com.tools20022.repository.msg.FinancialInstrument22.CountryOfDomicile);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument16.mmCountryOfDomicile, com.tools20022.repository.msg.SecurityIdentification1.mmCountryOfDomicile,
+					com.tools20022.repository.msg.FundParameters2.mmCountryOfDomicile, com.tools20022.repository.msg.FundParameters4.mmCountryOfDomicile, com.tools20022.repository.msg.FinancialInstrument21.mmCountryOfDomicile,
+					com.tools20022.repository.msg.FinancialInstrument22.mmCountryOfDomicile);
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DomicileCountry";
 			definition = "Country in which the investment fund is domiciled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Country.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Country.DomiciledFunds;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmDomiciledFunds;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.ContactPoint> orderDesk;
 	/**
 	 * Entity appointed by the fund, to which orders should be submitted.
 	 * <p>
@@ -265,8 +269,8 @@ public class InvestmentFund extends FinancialProduct {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ContactPoint#RelatedInvestmentFund
-	 * ContactPoint.RelatedInvestmentFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedInvestmentFund
+	 * ContactPoint.mmRelatedInvestmentFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -274,19 +278,19 @@ public class InvestmentFund extends FinancialProduct {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.ContactPoint
 	 * ContactPoint}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#MainFundOrderDesk
-	 * FundProcessingPassport1.MainFundOrderDesk}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFund
 	 * InvestmentFund}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmMainFundOrderDesk
+	 * FundProcessingPassport1.mmMainFundOrderDesk}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -299,20 +303,21 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Entity appointed by the fund, to which orders should be submitted."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OrderDesk = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOrderDesk = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundProcessingPassport1.MainFundOrderDesk);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundProcessingPassport1.mmMainFundOrderDesk);
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OrderDesk";
 			definition = "Entity appointed by the fund, to which orders should be submitted.";
 			minOccurs = 0;
-			type_lazy = () -> ContactPoint.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ContactPoint.RelatedInvestmentFund;
+			opposite_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmRelatedInvestmentFund;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.InvestmentFundClass> investmentFundClass;
 	/**
 	 * Sub-set of an investment fund.
 	 * <p>
@@ -321,8 +326,8 @@ public class InvestmentFund extends FinancialProduct {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#InvestmentFund
-	 * InvestmentFundClass.InvestmentFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentFund
+	 * InvestmentFundClass.mmInvestmentFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -330,31 +335,31 @@ public class InvestmentFund extends FinancialProduct {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestmentFundClass
 	 * InvestmentFundClass}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#FundDetails
-	 * FundProcessingPassport1.FundDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#InvestmentRestrictions
-	 * FundProcessingPassport1.InvestmentRestrictions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundParameters2#FinancialInstrumentDetails
-	 * FundParameters2.FinancialInstrumentDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundParameters3#FinancialInstrumentDetails
-	 * FundParameters3.FinancialInstrumentDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundParameters4#FinancialInstrumentDetails
-	 * FundParameters4.FinancialInstrumentDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFund
 	 * InvestmentFund}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmFundDetails
+	 * FundProcessingPassport1.mmFundDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundProcessingPassport1#mmInvestmentRestrictions
+	 * FundProcessingPassport1.mmInvestmentRestrictions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundParameters2#mmFinancialInstrumentDetails
+	 * FundParameters2.mmFinancialInstrumentDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundParameters3#mmFinancialInstrumentDetails
+	 * FundParameters3.mmFinancialInstrumentDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundParameters4#mmFinancialInstrumentDetails
+	 * FundParameters4.mmFinancialInstrumentDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -366,22 +371,23 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Sub-set of an investment fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestmentFundClass = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestmentFundClass = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundProcessingPassport1.FundDetails, com.tools20022.repository.msg.FundProcessingPassport1.InvestmentRestrictions,
-					com.tools20022.repository.msg.FundParameters2.FinancialInstrumentDetails, com.tools20022.repository.msg.FundParameters3.FinancialInstrumentDetails,
-					com.tools20022.repository.msg.FundParameters4.FinancialInstrumentDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundProcessingPassport1.mmFundDetails, com.tools20022.repository.msg.FundProcessingPassport1.mmInvestmentRestrictions,
+					com.tools20022.repository.msg.FundParameters2.mmFinancialInstrumentDetails, com.tools20022.repository.msg.FundParameters3.mmFinancialInstrumentDetails,
+					com.tools20022.repository.msg.FundParameters4.mmFinancialInstrumentDetails);
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundClass";
 			definition = "Sub-set of an investment fund.";
 			minOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.InvestmentFund;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentFund;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 		}
 	};
+	protected Max35Text fundType;
 	/**
 	 * Legal form of the fund, eg, UCITS, SICAV, OEIC, Unit Trust, and FCP.
 	 * <p>
@@ -391,31 +397,31 @@ public class InvestmentFund extends FinancialProduct {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount19#FundType
-	 * InvestmentAccount19.FundType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount29#FundType
-	 * InvestmentAccount29.FundType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount44#FundType
-	 * InvestmentAccount44.FundType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount52#FundType
-	 * InvestmentAccount52.FundType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount64#FundType
-	 * InvestmentAccount64.FundType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFund
 	 * InvestmentFund}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount19#mmFundType
+	 * InvestmentAccount19.mmFundType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount29#mmFundType
+	 * InvestmentAccount29.mmFundType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount44#mmFundType
+	 * InvestmentAccount44.mmFundType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount52#mmFundType
+	 * InvestmentAccount52.mmFundType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount64#mmFundType
+	 * InvestmentAccount64.mmFundType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -428,20 +434,21 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Legal form of the fund, eg, UCITS, SICAV, OEIC, Unit Trust, and FCP."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FundType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFundType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount19.FundType, com.tools20022.repository.msg.InvestmentAccount29.FundType, com.tools20022.repository.msg.InvestmentAccount44.FundType,
-					com.tools20022.repository.msg.InvestmentAccount52.FundType, com.tools20022.repository.msg.InvestmentAccount64.FundType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount19.mmFundType, com.tools20022.repository.msg.InvestmentAccount29.mmFundType, com.tools20022.repository.msg.InvestmentAccount44.mmFundType,
+					com.tools20022.repository.msg.InvestmentAccount52.mmFundType, com.tools20022.repository.msg.InvestmentAccount64.mmFundType);
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FundType";
 			definition = "Legal form of the fund, eg, UCITS, SICAV, OEIC, Unit Trust, and FCP.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TreasuryTradingParty treasuryTradingParty;
 	/**
 	 * Party which executes a treasury trade on behalf of an investment fund.
 	 * <p>
@@ -450,8 +457,8 @@ public class InvestmentFund extends FinancialProduct {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#InvestmentFund
-	 * TreasuryTradingParty.InvestmentFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#mmInvestmentFund
+	 * TreasuryTradingParty.mmInvestmentFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -477,20 +484,21 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Party which executes a treasury trade on behalf of an investment fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TreasuryTradingParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTreasuryTradingParty = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TreasuryTradingParty";
 			definition = "Party which executes a treasury trade on behalf of an investment fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.InvestmentFund;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmObject();
 		}
 	};
+	protected BICNonFIIdentifier identification;
 	/**
 	 * Identification of the investment fund.
 	 * <p>
@@ -501,28 +509,28 @@ public class InvestmentFund extends FinancialProduct {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.BICNonFIIdentifier
 	 * BICNonFIIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundIdentification1#FundIdentification
-	 * FundIdentification1.FundIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundIdentification2#FundIdentification
-	 * FundIdentification2.FundIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundIdentification3#FundIdentification
-	 * FundIdentification3.FundIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundIdentification4#FundIdentification
-	 * FundIdentification4.FundIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFund
 	 * InvestmentFund}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundIdentification1#mmFundIdentification
+	 * FundIdentification1.mmFundIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundIdentification2#mmFundIdentification
+	 * FundIdentification2.mmFundIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundIdentification3#mmFundIdentification
+	 * FundIdentification3.mmFundIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundIdentification4#mmFundIdentification
+	 * FundIdentification4.mmFundIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -534,20 +542,21 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Identification of the investment fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Identification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundIdentification1.FundIdentification, com.tools20022.repository.msg.FundIdentification2.FundIdentification,
-					com.tools20022.repository.msg.FundIdentification3.FundIdentification, com.tools20022.repository.msg.FundIdentification4.FundIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundIdentification1.mmFundIdentification, com.tools20022.repository.msg.FundIdentification2.mmFundIdentification,
+					com.tools20022.repository.msg.FundIdentification3.mmFundIdentification, com.tools20022.repository.msg.FundIdentification4.mmFundIdentification);
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of the investment fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICNonFIIdentifier.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CustodianRole> custodian;
 	/**
 	 * Party which settles the trades for the account of the fund.
 	 * <p>
@@ -556,8 +565,8 @@ public class InvestmentFund extends FinancialProduct {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CustodianRole#InvestmentFund
-	 * CustodianRole.InvestmentFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.CustodianRole#mmInvestmentFund
+	 * CustodianRole.mmInvestmentFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -582,7 +591,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Party which settles the trades for the account of the fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Custodian = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCustodian = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
@@ -590,11 +599,12 @@ public class InvestmentFund extends FinancialProduct {
 			name = "Custodian";
 			definition = "Party which settles the trades for the account of the fund.";
 			minOccurs = 0;
-			type_lazy = () -> CustodianRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CustodianRole.InvestmentFund;
+			opposite_lazy = () -> com.tools20022.repository.entity.CustodianRole.mmInvestmentFund;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CustodianRole.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.InvestmentFundPartyRole> partyRole;
 	/**
 	 * Specifies each role linked to an investment fund and played by a party in
 	 * that context.
@@ -604,8 +614,8 @@ public class InvestmentFund extends FinancialProduct {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#InvestmentFund
-	 * InvestmentFundPartyRole.InvestmentFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmInvestmentFund
+	 * InvestmentFundPartyRole.mmInvestmentFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -632,7 +642,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
@@ -640,11 +650,12 @@ public class InvestmentFund extends FinancialProduct {
 			name = "PartyRole";
 			definition = "Specifies each role linked to an investment fund and played by a party in that context.";
 			minOccurs = 0;
-			type_lazy = () -> InvestmentFundPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.InvestmentFund;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmInvestmentFund;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmObject();
 		}
 	};
+	protected InvestmentFundFamily family;
 	/**
 	 * Family to which the investment fund belongs.
 	 * <p>
@@ -653,8 +664,8 @@ public class InvestmentFund extends FinancialProduct {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#InvestmentFund
-	 * InvestmentFundFamily.InvestmentFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#mmInvestmentFund
+	 * InvestmentFundFamily.mmInvestmentFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -679,20 +690,21 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Family to which the investment fund belongs."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Family = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmFamily = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Family";
 			definition = "Family to which the investment fund belongs.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentFundFamily.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.InvestmentFund;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.mmInvestmentFund;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.mmObject();
 		}
 	};
+	protected FundStructureCode structure;
 	/**
 	 * Structure of the subfund, eg, single fund, multi-class.
 	 * <p>
@@ -719,18 +731,19 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Structure of the subfund, eg, single fund, multi-class."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Structure = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStructure = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Structure";
 			definition = "Structure of the subfund, eg, single fund, multi-class.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FundStructureCode.mmObject();
 		}
 	};
+	protected FundLegalFormCode legalForm;
 	/**
 	 * Legal form of a fund, eg, corporation or trust.
 	 * <p>
@@ -757,18 +770,19 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Legal form of a fund, eg, corporation or trust."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute LegalForm = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmLegalForm = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LegalForm";
 			definition = "Legal form of a fund, eg, corporation or trust.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FundLegalFormCode.mmObject();
 		}
 	};
+	protected YesNoIndicator subFundIndicator;
 	/**
 	 * Indicates whether the investment fund is a subfund, when it is a
 	 * compartment of an umbrella fund. In this case, subfund is a synonym of
@@ -799,18 +813,19 @@ public class InvestmentFund extends FinancialProduct {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SubFundIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSubFundIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SubFundIndicator";
 			definition = "Indicates whether the investment fund is a subfund, when it is a compartment of an umbrella fund. In this case, subfund is a synonym of investment fund and therefore has the same attributes as investment fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ISODate endOfFiscalYear;
 	/**
 	 * Date at which the books are closed and profit and loss is determined.
 	 * <p>
@@ -837,18 +852,19 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Date at which the books are closed and profit and loss is determined."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EndOfFiscalYear = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEndOfFiscalYear = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EndOfFiscalYear";
 			definition = "Date at which the books are closed and profit and loss is determined.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate accountingYearEndDate;
 	/**
 	 * Last day of the accounting year for the fund.
 	 * <p>
@@ -874,18 +890,19 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Last day of the accounting year for the fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AccountingYearEndDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAccountingYearEndDate = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AccountingYearEndDate";
 			definition = "Last day of the accounting year for the fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate firstAccountingYearEndDate;
 	/**
 	 * Last day of the first accounting year for the fund.
 	 * <p>
@@ -911,18 +928,19 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Last day of the first accounting year for the fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FirstAccountingYearEndDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFirstAccountingYearEndDate = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FirstAccountingYearEndDate";
 			definition = "Last day of the first accounting year for the fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected UmbrellaFund umbrellaFund;
 	/**
 	 * Umbrella fund for which compartments are specified.
 	 * <p>
@@ -931,8 +949,8 @@ public class InvestmentFund extends FinancialProduct {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.UmbrellaFund#SubFund
-	 * UmbrellaFund.SubFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.UmbrellaFund#mmSubFund
+	 * UmbrellaFund.mmSubFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -956,20 +974,21 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Umbrella fund for which compartments are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd UmbrellaFund = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmUmbrellaFund = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UmbrellaFund";
 			definition = "Umbrella fund for which compartments are specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.SubFund;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmSubFund;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmObject();
 		}
 	};
+	protected CountryCode authorisedCountry;
 	/**
 	 * Country in which it is authorised to commercialise the fund.
 	 * <p>
@@ -979,19 +998,19 @@ public class InvestmentFund extends FinancialProduct {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CountryCode
 	 * CountryCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MainFundOrderDeskLocation1#Country
-	 * MainFundOrderDeskLocation1.Country}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFund
 	 * InvestmentFund}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MainFundOrderDeskLocation1#mmCountry
+	 * MainFundOrderDeskLocation1.mmCountry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1004,16 +1023,16 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Country in which it is authorised to commercialise the fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AuthorisedCountry = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAuthorisedCountry = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MainFundOrderDeskLocation1.Country);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MainFundOrderDeskLocation1.mmCountry);
 			elementContext_lazy = () -> InvestmentFund.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AuthorisedCountry";
 			definition = "Country in which it is authorised to commercialise the fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -1021,25 +1040,161 @@ public class InvestmentFund extends FinancialProduct {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFund";
 				definition = "Distinct pool of financial instruments managed by a single investment policy. May or not be part of an umbrella fund. The pool is issued in at least one investment fund class.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.InvestmentFund, com.tools20022.repository.entity.UmbrellaFund.SubFund,
-						com.tools20022.repository.entity.Country.DomiciledFunds, com.tools20022.repository.entity.ContactPoint.RelatedInvestmentFund, com.tools20022.repository.entity.InvestmentFundFamily.InvestmentFund,
-						com.tools20022.repository.entity.InvestmentFundPartyRole.InvestmentFund, com.tools20022.repository.entity.TreasuryTradingParty.InvestmentFund, com.tools20022.repository.entity.CustodianRole.InvestmentFund);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation2.FinancialInstrumentDetails, com.tools20022.repository.msg.PriceValuation3.FinancialInstrumentDetails);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentFund, com.tools20022.repository.entity.UmbrellaFund.mmSubFund,
+						com.tools20022.repository.entity.Country.mmDomiciledFunds, com.tools20022.repository.entity.ContactPoint.mmRelatedInvestmentFund, com.tools20022.repository.entity.InvestmentFundFamily.mmInvestmentFund,
+						com.tools20022.repository.entity.InvestmentFundPartyRole.mmInvestmentFund, com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund, com.tools20022.repository.entity.CustodianRole.mmInvestmentFund);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation2.mmFinancialInstrumentDetails, com.tools20022.repository.msg.PriceValuation3.mmFinancialInstrumentDetails);
 				superType_lazy = () -> FinancialProduct.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.DomicileCountry, com.tools20022.repository.entity.InvestmentFund.OrderDesk,
-						com.tools20022.repository.entity.InvestmentFund.InvestmentFundClass, com.tools20022.repository.entity.InvestmentFund.FundType, com.tools20022.repository.entity.InvestmentFund.TreasuryTradingParty,
-						com.tools20022.repository.entity.InvestmentFund.Identification, com.tools20022.repository.entity.InvestmentFund.Custodian, com.tools20022.repository.entity.InvestmentFund.PartyRole,
-						com.tools20022.repository.entity.InvestmentFund.Family, com.tools20022.repository.entity.InvestmentFund.Structure, com.tools20022.repository.entity.InvestmentFund.LegalForm,
-						com.tools20022.repository.entity.InvestmentFund.SubFundIndicator, com.tools20022.repository.entity.InvestmentFund.EndOfFiscalYear, com.tools20022.repository.entity.InvestmentFund.AccountingYearEndDate,
-						com.tools20022.repository.entity.InvestmentFund.FirstAccountingYearEndDate, com.tools20022.repository.entity.InvestmentFund.UmbrellaFund, com.tools20022.repository.entity.InvestmentFund.AuthorisedCountry);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.mmDomicileCountry, com.tools20022.repository.entity.InvestmentFund.mmOrderDesk,
+						com.tools20022.repository.entity.InvestmentFund.mmInvestmentFundClass, com.tools20022.repository.entity.InvestmentFund.mmFundType, com.tools20022.repository.entity.InvestmentFund.mmTreasuryTradingParty,
+						com.tools20022.repository.entity.InvestmentFund.mmIdentification, com.tools20022.repository.entity.InvestmentFund.mmCustodian, com.tools20022.repository.entity.InvestmentFund.mmPartyRole,
+						com.tools20022.repository.entity.InvestmentFund.mmFamily, com.tools20022.repository.entity.InvestmentFund.mmStructure, com.tools20022.repository.entity.InvestmentFund.mmLegalForm,
+						com.tools20022.repository.entity.InvestmentFund.mmSubFundIndicator, com.tools20022.repository.entity.InvestmentFund.mmEndOfFiscalYear, com.tools20022.repository.entity.InvestmentFund.mmAccountingYearEndDate,
+						com.tools20022.repository.entity.InvestmentFund.mmFirstAccountingYearEndDate, com.tools20022.repository.entity.InvestmentFund.mmUmbrellaFund, com.tools20022.repository.entity.InvestmentFund.mmAuthorisedCountry);
 				derivationComponent_lazy = () -> Arrays.asList(FundProcessingPassport1.mmObject(), FundParameters2.mmObject(), FundParameters1Choice.mmObject(), FundParameters3.mmObject(), FundParameters2Choice.mmObject(),
 						FundParameters4.mmObject(), FundParameters3Choice.mmObject(), FundIdentification1.mmObject(), FundIdentification2.mmObject(), FundIdentification3.mmObject(), FundIdentification4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Country getDomicileCountry() {
+		return domicileCountry;
+	}
+
+	public void setDomicileCountry(com.tools20022.repository.entity.Country domicileCountry) {
+		this.domicileCountry = domicileCountry;
+	}
+
+	public List<ContactPoint> getOrderDesk() {
+		return orderDesk;
+	}
+
+	public void setOrderDesk(List<com.tools20022.repository.entity.ContactPoint> orderDesk) {
+		this.orderDesk = orderDesk;
+	}
+
+	public List<InvestmentFundClass> getInvestmentFundClass() {
+		return investmentFundClass;
+	}
+
+	public void setInvestmentFundClass(List<com.tools20022.repository.entity.InvestmentFundClass> investmentFundClass) {
+		this.investmentFundClass = investmentFundClass;
+	}
+
+	public Max35Text getFundType() {
+		return fundType;
+	}
+
+	public void setFundType(Max35Text fundType) {
+		this.fundType = fundType;
+	}
+
+	public TreasuryTradingParty getTreasuryTradingParty() {
+		return treasuryTradingParty;
+	}
+
+	public void setTreasuryTradingParty(com.tools20022.repository.entity.TreasuryTradingParty treasuryTradingParty) {
+		this.treasuryTradingParty = treasuryTradingParty;
+	}
+
+	public BICNonFIIdentifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(BICNonFIIdentifier identification) {
+		this.identification = identification;
+	}
+
+	public List<CustodianRole> getCustodian() {
+		return custodian;
+	}
+
+	public void setCustodian(List<com.tools20022.repository.entity.CustodianRole> custodian) {
+		this.custodian = custodian;
+	}
+
+	public List<InvestmentFundPartyRole> getPartyRole() {
+		return partyRole;
+	}
+
+	public void setPartyRole(List<com.tools20022.repository.entity.InvestmentFundPartyRole> partyRole) {
+		this.partyRole = partyRole;
+	}
+
+	public InvestmentFundFamily getFamily() {
+		return family;
+	}
+
+	public void setFamily(com.tools20022.repository.entity.InvestmentFundFamily family) {
+		this.family = family;
+	}
+
+	public FundStructureCode getStructure() {
+		return structure;
+	}
+
+	public void setStructure(FundStructureCode structure) {
+		this.structure = structure;
+	}
+
+	public FundLegalFormCode getLegalForm() {
+		return legalForm;
+	}
+
+	public void setLegalForm(FundLegalFormCode legalForm) {
+		this.legalForm = legalForm;
+	}
+
+	public YesNoIndicator getSubFundIndicator() {
+		return subFundIndicator;
+	}
+
+	public void setSubFundIndicator(YesNoIndicator subFundIndicator) {
+		this.subFundIndicator = subFundIndicator;
+	}
+
+	public ISODate getEndOfFiscalYear() {
+		return endOfFiscalYear;
+	}
+
+	public void setEndOfFiscalYear(ISODate endOfFiscalYear) {
+		this.endOfFiscalYear = endOfFiscalYear;
+	}
+
+	public ISODate getAccountingYearEndDate() {
+		return accountingYearEndDate;
+	}
+
+	public void setAccountingYearEndDate(ISODate accountingYearEndDate) {
+		this.accountingYearEndDate = accountingYearEndDate;
+	}
+
+	public ISODate getFirstAccountingYearEndDate() {
+		return firstAccountingYearEndDate;
+	}
+
+	public void setFirstAccountingYearEndDate(ISODate firstAccountingYearEndDate) {
+		this.firstAccountingYearEndDate = firstAccountingYearEndDate;
+	}
+
+	public UmbrellaFund getUmbrellaFund() {
+		return umbrellaFund;
+	}
+
+	public void setUmbrellaFund(com.tools20022.repository.entity.UmbrellaFund umbrellaFund) {
+		this.umbrellaFund = umbrellaFund;
+	}
+
+	public CountryCode getAuthorisedCountry() {
+		return authorisedCountry;
+	}
+
+	public void setAuthorisedCountry(CountryCode authorisedCountry) {
+		this.authorisedCountry = authorisedCountry;
 	}
 }

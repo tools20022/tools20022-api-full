@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification2Choice#IdentificationNumber
- * IndividualPersonIdentification2Choice.IdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification2Choice#mmIdentificationNumber
+ * IndividualPersonIdentification2Choice.mmIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification2Choice#PersonName
- * IndividualPersonIdentification2Choice.PersonName}</li>
+ * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification2Choice#mmPersonName
+ * IndividualPersonIdentification2Choice.mmPersonName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IndividualPersonIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification81 identificationNumber;
 	/**
 	 * Identification of a party, such as a tax or social security identifier.
 	 * <p>
@@ -80,8 +81,8 @@ public class IndividualPersonIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,26 +104,27 @@ public class IndividualPersonIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentificationChoice#IdentificationNumber
-	 * IndividualPersonIdentificationChoice.IdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentificationChoice#mmIdentificationNumber
+	 * IndividualPersonIdentificationChoice.mmIdentificationNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IdentificationNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentificationNumber = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> IndividualPersonIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "IdNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationNumber";
 			definition = "Identification of a party, such as a tax or social security identifier.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentificationChoice.IdentificationNumber;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmIdentificationNumber;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification81.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification81.mmObject();
 		}
 	};
+	protected IndividualPerson30 personName;
 	/**
 	 * Human entity, as distinguished from a corporate entity (which is
 	 * sometimes referred to as an 'artificial person').
@@ -135,8 +137,8 @@ public class IndividualPersonIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#PersonName
-	 * PersonIdentification.PersonName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmPersonName
+	 * PersonIdentification.mmPersonName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,33 +160,33 @@ public class IndividualPersonIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentificationChoice#PersonName
-	 * IndividualPersonIdentificationChoice.PersonName}</li>
+	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentificationChoice#mmPersonName
+	 * IndividualPersonIdentificationChoice.mmPersonName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PersonName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPersonName = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPersonName;
 			componentContext_lazy = () -> IndividualPersonIdentification2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.PersonName;
 			isDerived = false;
 			xmlTag = "PrsnNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonName";
 			definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentificationChoice.PersonName;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmPersonName;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson30.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IndividualPerson30.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndividualPersonIdentification2Choice.IdentificationNumber, com.tools20022.repository.choice.IndividualPersonIdentification2Choice.PersonName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndividualPersonIdentification2Choice.mmIdentificationNumber, com.tools20022.repository.choice.IndividualPersonIdentification2Choice.mmPersonName);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IndividualPersonIdentification2Choice";
 				definition = "Choice of formats for the identification of an individual person.";
@@ -192,5 +194,21 @@ public class IndividualPersonIdentification2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification81 getIdentificationNumber() {
+		return identificationNumber;
+	}
+
+	public void setIdentificationNumber(GenericIdentification81 identificationNumber) {
+		this.identificationNumber = identificationNumber;
+	}
+
+	public IndividualPerson30 getPersonName() {
+		return personName;
+	}
+
+	public void setPersonName(IndividualPerson30 personName) {
+		this.personName = personName;
 	}
 }

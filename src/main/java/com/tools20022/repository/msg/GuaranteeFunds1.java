@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GuaranteeFunds1#GuaranteeFundsUsageType
- * GuaranteeFunds1.GuaranteeFundsUsageType}</li>
+ * {@linkplain com.tools20022.repository.msg.GuaranteeFunds1#mmGuaranteeFundsUsageType
+ * GuaranteeFunds1.mmGuaranteeFundsUsageType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GuaranteeFunds1#GuaranteeFundInformation
- * GuaranteeFunds1.GuaranteeFundInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.GuaranteeFunds1#mmGuaranteeFundInformation
+ * GuaranteeFunds1.mmGuaranteeFundInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GuaranteeFunds1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text guaranteeFundsUsageType;
 	/**
 	 * Type for the guarantee funds used.
 	 * <p>
@@ -86,7 +87,7 @@ public class GuaranteeFunds1 {
 	 * definition} = "Type for the guarantee funds used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GuaranteeFundsUsageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGuaranteeFundsUsageType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GuaranteeFunds1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class GuaranteeFunds1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeFundsUsageType";
 			definition = "Type for the guarantee funds used.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GuaranteeFundInformation1 guaranteeFundInformation;
 	/**
 	 * Owner and account number of the guarantee fund.
 	 * <p>
@@ -126,7 +128,7 @@ public class GuaranteeFunds1 {
 	 * definition} = "Owner and account number of the guarantee fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GuaranteeFundInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGuaranteeFundInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GuaranteeFunds1.mmObject();
 			isDerived = false;
@@ -134,23 +136,39 @@ public class GuaranteeFunds1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeFundInformation";
 			definition = "Owner and account number of the guarantee fund.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GuaranteeFundInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GuaranteeFundInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GuaranteeFunds1.GuaranteeFundsUsageType, com.tools20022.repository.msg.GuaranteeFunds1.GuaranteeFundInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GuaranteeFunds1.mmGuaranteeFundsUsageType, com.tools20022.repository.msg.GuaranteeFunds1.mmGuaranteeFundInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GuaranteeFunds1";
 				definition = "Guarantee funds details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getGuaranteeFundsUsageType() {
+		return guaranteeFundsUsageType;
+	}
+
+	public void setGuaranteeFundsUsageType(Max35Text guaranteeFundsUsageType) {
+		this.guaranteeFundsUsageType = guaranteeFundsUsageType;
+	}
+
+	public GuaranteeFundInformation1 getGuaranteeFundInformation() {
+		return guaranteeFundInformation;
+	}
+
+	public void setGuaranteeFundInformation(com.tools20022.repository.msg.GuaranteeFundInformation1 guaranteeFundInformation) {
+		this.guaranteeFundInformation = guaranteeFundInformation;
 	}
 }

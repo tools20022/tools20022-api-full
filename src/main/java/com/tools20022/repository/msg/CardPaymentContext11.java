@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentContext11#PaymentContext
- * CardPaymentContext11.PaymentContext}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentContext11#mmPaymentContext
+ * CardPaymentContext11.mmPaymentContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentContext11#SaleContext
- * CardPaymentContext11.SaleContext}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentContext11#mmSaleContext
+ * CardPaymentContext11.mmSaleContext}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentContext11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentContext11 paymentContext;
 	/**
 	 * Context of the card payment transaction.
 	 * <p>
@@ -106,34 +107,35 @@ public class CardPaymentContext11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentContext17#PaymentContext
-	 * CardPaymentContext17.PaymentContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentContext17#mmPaymentContext
+	 * CardPaymentContext17.mmPaymentContext}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentContext2#PaymentContext
-	 * CardPaymentContext2.PaymentContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentContext2#mmPaymentContext
+	 * CardPaymentContext2.mmPaymentContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentContext = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentContext11.mmObject();
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
+			componentContext_lazy = () -> CardPaymentContext11.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentContext";
 			definition = "Context of the card payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentContext2.PaymentContext;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentContext17.PaymentContext);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentContext17.mmPaymentContext);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentContext2.mmPaymentContext;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentContext11.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentContext11.mmObject();
 		}
 	};
+	protected SaleContext1 saleContext;
 	/**
 	 * Context of the sale involving the card payment transaction.
 	 * <p>
@@ -168,48 +170,64 @@ public class CardPaymentContext11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentContext17#SaleContext
-	 * CardPaymentContext17.SaleContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentContext17#mmSaleContext
+	 * CardPaymentContext17.mmSaleContext}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentContext2#SaleContext
-	 * CardPaymentContext2.SaleContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentContext2#mmSaleContext
+	 * CardPaymentContext2.mmSaleContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SaleContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSaleContext = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentContext11.mmObject();
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
+			componentContext_lazy = () -> CardPaymentContext11.mmObject();
 			isDerived = false;
 			xmlTag = "SaleCntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleContext";
 			definition = "Context of the sale involving the card payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentContext2.SaleContext;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentContext17.SaleContext);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentContext17.mmSaleContext);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentContext2.mmSaleContext;
 			maxOccurs = 1;
-			type_lazy = () -> SaleContext1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentContext11.PaymentContext, com.tools20022.repository.msg.CardPaymentContext11.SaleContext);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentContext11.mmPaymentContext, com.tools20022.repository.msg.CardPaymentContext11.mmSaleContext);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentContext11";
 				definition = "Context in which the transaction is performed (payment and sale).";
-				previousVersion_lazy = () -> CardPaymentContext2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentContext17.mmObject());
+				previousVersion_lazy = () -> CardPaymentContext2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentContext11 getPaymentContext() {
+		return paymentContext;
+	}
+
+	public void setPaymentContext(com.tools20022.repository.msg.PaymentContext11 paymentContext) {
+		this.paymentContext = paymentContext;
+	}
+
+	public SaleContext1 getSaleContext() {
+		return saleContext;
+	}
+
+	public void setSaleContext(com.tools20022.repository.msg.SaleContext1 saleContext) {
+		this.saleContext = saleContext;
 	}
 }

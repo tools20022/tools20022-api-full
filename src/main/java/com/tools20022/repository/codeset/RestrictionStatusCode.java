@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionStatusCode#Inactive
- * RestrictionStatusCode.Inactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionStatusCode#mmInactive
+ * RestrictionStatusCode.mmInactive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionStatusCode#Active
- * RestrictionStatusCode.Active}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionStatusCode#mmActive
+ * RestrictionStatusCode.mmActive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,7 +83,7 @@ public class RestrictionStatusCode {
 	 * definition} = "Status of the restriction is inactive."</li>
 	 * </ul>
 	 */
-	public static final MMCode Inactive = new MMCode() {
+	public static final MMCode mmInactive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
@@ -113,7 +113,7 @@ public class RestrictionStatusCode {
 	 * definition} = "Status of the restriction is active."</li>
 	 * </ul>
 	 */
-	public static final MMCode Active = new MMCode() {
+	public static final MMCode mmActive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
@@ -126,11 +126,11 @@ public class RestrictionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RestrictionStatusCode";
 				definition = "Specifies the status of a restriction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RestrictionStatusCode.Inactive, com.tools20022.repository.codeset.RestrictionStatusCode.Active);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RestrictionStatusCode.mmInactive, com.tools20022.repository.codeset.RestrictionStatusCode.mmActive);
 				derivation_lazy = () -> Arrays.asList(RestrictionStatus1Code.mmObject());
 			}
 		});

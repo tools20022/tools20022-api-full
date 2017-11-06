@@ -33,10 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AmountToAmountRatio2#Amount1
- * AmountToAmountRatio2.Amount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountToAmountRatio2#Amount2
- * AmountToAmountRatio2.Amount2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountToAmountRatio2#mmAmount1
+ * AmountToAmountRatio2.mmAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountToAmountRatio2#mmAmount2
+ * AmountToAmountRatio2.mmAmount2}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountToAmountRatio2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAnd13DecimalAmount amount1;
 	/**
 	 * Numerator of the quotient of amounts.
 	 * <p>
@@ -73,8 +74,8 @@ public class AmountToAmountRatio2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRatio#Amount1
-	 * AmountRatio.Amount1}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmountRatio#mmAmount1
+	 * AmountRatio.mmAmount1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +94,21 @@ public class AmountToAmountRatio2 {
 	 * definition} = "Numerator of the quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount1 = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRatio.mmAmount1;
 			componentContext_lazy = () -> AmountToAmountRatio2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRatio.Amount1;
 			isDerived = false;
 			xmlTag = "Amt1";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount1";
 			definition = "Numerator of the quotient of amounts.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount amount2;
 	/**
 	 * Denominator of the quotient of amounts
 	 * <p>
@@ -120,8 +122,8 @@ public class AmountToAmountRatio2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRatio#Amount2
-	 * AmountRatio.Amount2}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmountRatio#mmAmount2
+	 * AmountRatio.mmAmount2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,17 +142,17 @@ public class AmountToAmountRatio2 {
 	 * definition} = "Denominator of the quotient of amounts"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount2 = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRatio.mmAmount2;
 			componentContext_lazy = () -> AmountToAmountRatio2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRatio.Amount2;
 			isDerived = false;
 			xmlTag = "Amt2";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount2";
 			definition = "Denominator of the quotient of amounts";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
@@ -158,14 +160,30 @@ public class AmountToAmountRatio2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountToAmountRatio2.Amount1, com.tools20022.repository.msg.AmountToAmountRatio2.Amount2);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountToAmountRatio2.mmAmount1, com.tools20022.repository.msg.AmountToAmountRatio2.mmAmount2);
 				trace_lazy = () -> AmountRatio.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountToAmountRatio2";
 				definition = "Ratio expressed as a quotient of amounts.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount1() {
+		return amount1;
+	}
+
+	public void setAmount1(ActiveCurrencyAnd13DecimalAmount amount1) {
+		this.amount1 = amount1;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount2() {
+		return amount2;
+	}
+
+	public void setAmount2(ActiveCurrencyAnd13DecimalAmount amount2) {
+		this.amount2 = amount2;
 	}
 }

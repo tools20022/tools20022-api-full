@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountOrPercentage2Choice#Amount
- * AmountOrPercentage2Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountOrPercentage2Choice#mmAmount
+ * AmountOrPercentage2Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AmountOrPercentage2Choice#Percentage
- * AmountOrPercentage2Choice.Percentage}</li>
+ * {@linkplain com.tools20022.repository.choice.AmountOrPercentage2Choice#mmPercentage
+ * AmountOrPercentage2Choice.mmPercentage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountOrPercentage2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Specifies that the payment is for a fixed amount.
 	 * <p>
@@ -87,7 +88,7 @@ public class AmountOrPercentage2Choice {
 	 * definition} = "Specifies that the payment is for a fixed amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountOrPercentage2Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class AmountOrPercentage2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Specifies that the payment is for a fixed amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate percentage;
 	/**
 	 * Specifies that the payment conditions apply to a percentage of the amount
 	 * due.
@@ -131,7 +133,7 @@ public class AmountOrPercentage2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Percentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountOrPercentage2Choice.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class AmountOrPercentage2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Specifies that the payment conditions apply to a percentage of the amount due.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class AmountOrPercentage2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrPercentage2Choice.Amount, com.tools20022.repository.choice.AmountOrPercentage2Choice.Percentage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrPercentage2Choice.mmAmount, com.tools20022.repository.choice.AmountOrPercentage2Choice.mmPercentage);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountOrPercentage2Choice";
 				definition = "Choice between a set amount or a percentage.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PercentageRate getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(PercentageRate percentage) {
+		this.percentage = percentage;
 	}
 }

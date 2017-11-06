@@ -30,21 +30,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventClassificationCode#Mandatory
- * EventClassificationCode.Mandatory}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventClassificationCode#mmMandatory
+ * EventClassificationCode.mmMandatory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventClassificationCode#MandatoryWithOptions
- * EventClassificationCode.MandatoryWithOptions}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventClassificationCode#mmMandatoryWithOptions
+ * EventClassificationCode.mmMandatoryWithOptions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventClassificationCode#Voluntary
- * EventClassificationCode.Voluntary}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventClassificationCode#mmVoluntary
+ * EventClassificationCode.mmVoluntary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class EventClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Mandatory = new MMCode() {
+	public static final MMCode mmMandatory = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Mandatory";
@@ -122,7 +122,7 @@ public class EventClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MandatoryWithOptions = new MMCode() {
+	public static final MMCode mmMandatoryWithOptions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MandatoryWithOptions";
@@ -155,7 +155,7 @@ public class EventClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Voluntary = new MMCode() {
+	public static final MMCode mmVoluntary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Voluntary";
@@ -168,13 +168,13 @@ public class EventClassificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MAND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventClassificationCode";
 				definition = "Provides information about how the holder must participate in the event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventClassificationCode.Mandatory, com.tools20022.repository.codeset.EventClassificationCode.MandatoryWithOptions,
-						com.tools20022.repository.codeset.EventClassificationCode.Voluntary);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventClassificationCode.mmMandatory, com.tools20022.repository.codeset.EventClassificationCode.mmMandatoryWithOptions,
+						com.tools20022.repository.codeset.EventClassificationCode.mmVoluntary);
 			}
 		});
 		return mmObject_lazy.get();

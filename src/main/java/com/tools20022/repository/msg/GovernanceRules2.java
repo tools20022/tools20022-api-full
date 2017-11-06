@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ID;
 import com.tools20022.repository.entity.GovernanceRules;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies rules governing an undertaking such as a guarantee or standby
@@ -37,15 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GovernanceRules2#Identification
- * GovernanceRules2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.GovernanceRules2#mmIdentification
+ * GovernanceRules2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GovernanceRules2#RuleIdentification
- * GovernanceRules2.RuleIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GovernanceRules2#ApplicableLaw
- * GovernanceRules2.ApplicableLaw}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GovernanceRules2#Jurisdiction
- * GovernanceRules2.Jurisdiction}</li>
+ * {@linkplain com.tools20022.repository.msg.GovernanceRules2#mmRuleIdentification
+ * GovernanceRules2.mmRuleIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GovernanceRules2#mmApplicableLaw
+ * GovernanceRules2.mmApplicableLaw}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GovernanceRules2#mmJurisdiction
+ * GovernanceRules2.mmJurisdiction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GovernanceRules2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ID identification;
 	/**
 	 * Local identification to be used in IDREFs.
 	 * <p>
@@ -97,7 +101,7 @@ public class GovernanceRules2 {
 	 * definition} = "Local identification to be used in IDREFs."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GovernanceRules2.mmObject();
 			isDerived = false;
@@ -105,11 +109,12 @@ public class GovernanceRules2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Local identification to be used in IDREFs.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ID.mmObject();
 		}
 	};
+	protected GovernanceIdentification1Choice ruleIdentification;
 	/**
 	 * Identification of the governance rules.
 	 * <p>
@@ -122,8 +127,8 @@ public class GovernanceRules2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GovernanceRules#Identification
-	 * GovernanceRules.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GovernanceRules#mmIdentification
+	 * GovernanceRules.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,21 +147,22 @@ public class GovernanceRules2 {
 	 * definition} = "Identification of the governance rules."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RuleIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRuleIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.mmIdentification;
 			componentContext_lazy = () -> GovernanceRules2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.Identification;
 			isDerived = false;
 			xmlTag = "RuleId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RuleIdentification";
 			definition = "Identification of the governance rules.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GovernanceIdentification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GovernanceIdentification1Choice.mmObject();
 		}
 	};
+	protected Location1 applicableLaw;
 	/**
 	 * Law applicable to the undertaking.
 	 * <p>
@@ -167,8 +173,8 @@ public class GovernanceRules2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GovernanceRules#ApplicableLaw
-	 * GovernanceRules.ApplicableLaw}</li>
+	 * {@linkplain com.tools20022.repository.entity.GovernanceRules#mmApplicableLaw
+	 * GovernanceRules.mmApplicableLaw}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -187,21 +193,22 @@ public class GovernanceRules2 {
 	 * definition} = "Law applicable to the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ApplicableLaw = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmApplicableLaw = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.mmApplicableLaw;
 			componentContext_lazy = () -> GovernanceRules2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.ApplicableLaw;
 			isDerived = false;
 			xmlTag = "AplblLaw";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicableLaw";
 			definition = "Law applicable to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Location1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Location1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Location1> jurisdiction;
 	/**
 	 * Place at or system under which any dispute related to the undertaking is
 	 * to be resolved, such as court or arbitration. This is also known as
@@ -214,8 +221,8 @@ public class GovernanceRules2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GovernanceRules#Jurisdiction
-	 * GovernanceRules.Jurisdiction}</li>
+	 * {@linkplain com.tools20022.repository.entity.GovernanceRules#mmJurisdiction
+	 * GovernanceRules.mmJurisdiction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -236,33 +243,65 @@ public class GovernanceRules2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Jurisdiction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmJurisdiction = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.mmJurisdiction;
 			componentContext_lazy = () -> GovernanceRules2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.Jurisdiction;
 			isDerived = false;
 			xmlTag = "Jursdctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Jurisdiction";
 			definition = "Place at or system under which any dispute related to the undertaking is to be resolved, such as court or arbitration. This is also known as 'forum'.";
 			minOccurs = 0;
-			type_lazy = () -> Location1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Location1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GovernanceRules2.Identification, com.tools20022.repository.msg.GovernanceRules2.RuleIdentification,
-						com.tools20022.repository.msg.GovernanceRules2.ApplicableLaw, com.tools20022.repository.msg.GovernanceRules2.Jurisdiction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GovernanceRules2.mmIdentification, com.tools20022.repository.msg.GovernanceRules2.mmRuleIdentification,
+						com.tools20022.repository.msg.GovernanceRules2.mmApplicableLaw, com.tools20022.repository.msg.GovernanceRules2.mmJurisdiction);
 				trace_lazy = () -> GovernanceRules.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GovernanceRules2";
 				definition = "Specifies rules governing an undertaking such as a guarantee or standby letter of credit.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ID getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(ID identification) {
+		this.identification = identification;
+	}
+
+	public GovernanceIdentification1Choice getRuleIdentification() {
+		return ruleIdentification;
+	}
+
+	public void setRuleIdentification(GovernanceIdentification1Choice ruleIdentification) {
+		this.ruleIdentification = ruleIdentification;
+	}
+
+	public Location1 getApplicableLaw() {
+		return applicableLaw;
+	}
+
+	public void setApplicableLaw(com.tools20022.repository.msg.Location1 applicableLaw) {
+		this.applicableLaw = applicableLaw;
+	}
+
+	public List<Location1> getJurisdiction() {
+		return jurisdiction;
+	}
+
+	public void setJurisdiction(List<com.tools20022.repository.msg.Location1> jurisdiction) {
+		this.jurisdiction = jurisdiction;
 	}
 }

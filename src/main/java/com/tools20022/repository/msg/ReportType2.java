@@ -32,8 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReportType2#Type
- * ReportType2.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportType2#mmType
+ * ReportType2.mmType}</li>
  * </ul>
  * </li>
  * <li>
@@ -41,18 +41,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#ReportType
- * BaselineReportV03.ReportType}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmReportType
+ * BaselineReportV03.mmReportType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#ReportType
- * BaselineReportV04.ReportType}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmReportType
+ * BaselineReportV04.mmReportType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportType2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportType2Code type;
 	/**
 	 * Specifies whether the report is precalculated or current.
 	 * <p>
@@ -94,7 +95,7 @@ public class ReportType2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportType2.mmObject();
 			isDerived = false;
@@ -102,8 +103,8 @@ public class ReportType2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies whether the report is precalculated or current.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReportType2Code.mmObject();
 		}
 	};
@@ -111,14 +112,22 @@ public class ReportType2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportType2.Type);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV03.ReportType, com.tools20022.repository.area.tsmt.BaselineReportV04.ReportType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportType2.mmType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV03.mmReportType, com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportType2";
 				definition = "Specifies the type of report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportType2Code getType() {
+		return type;
+	}
+
+	public void setType(ReportType2Code type) {
+		this.type = type;
 	}
 }

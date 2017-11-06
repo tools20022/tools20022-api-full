@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalParameters24#PreConfirmation
- * AdditionalParameters24.PreConfirmation}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalParameters24#mmPreConfirmation
+ * AdditionalParameters24.mmPreConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalParameters24#PartialSettlement
- * AdditionalParameters24.PartialSettlement}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalParameters24#mmPartialSettlement
+ * AdditionalParameters24.mmPartialSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalParameters24#PreviousPartialConfirmationIdentification
- * AdditionalParameters24.PreviousPartialConfirmationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalParameters24#mmPreviousPartialConfirmationIdentification
+ * AdditionalParameters24.mmPreviousPartialConfirmationIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,18 +54,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06#AdditionalParameters
- * SecuritiesFinancingConfirmationV06.AdditionalParameters}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06#mmAdditionalParameters
+ * SecuritiesFinancingConfirmationV06.mmAdditionalParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07#AdditionalParameters
- * SecuritiesFinancingConfirmationV07.AdditionalParameters}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07#mmAdditionalParameters
+ * SecuritiesFinancingConfirmationV07.mmAdditionalParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalParameters24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PreConfirmation1Code preConfirmation;
 	/**
 	 * Specifies whether there exists a pre-confirmation.
 	 * <p>
@@ -97,8 +98,8 @@ public class AdditionalParameters24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PreConfirmation
-	 * SecuritiesSettlement.PreConfirmation}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPreConfirmation
+	 * SecuritiesSettlement.mmPreConfirmation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,25 +119,26 @@ public class AdditionalParameters24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters18#PreConfirmation
-	 * AdditionalParameters18.PreConfirmation}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters18#mmPreConfirmation
+	 * AdditionalParameters18.mmPreConfirmation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreConfirmation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPreConfirmation;
 			componentContext_lazy = () -> AdditionalParameters24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PreConfirmation;
 			isDerived = false;
 			xmlTag = "PreConf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreConfirmation";
 			definition = "Specifies whether there exists a pre-confirmation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters18.PreConfirmation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters18.mmPreConfirmation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PreConfirmation1Code.mmObject();
 		}
 	};
+	protected PartialSettlement2Code partialSettlement;
 	/**
 	 * Specifies partial settlement information.
 	 * <p>
@@ -150,8 +152,8 @@ public class AdditionalParameters24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PartialSettlementType
-	 * SecuritiesTransfer.PartialSettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPartialSettlementType
+	 * SecuritiesTransfer.mmPartialSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -171,25 +173,26 @@ public class AdditionalParameters24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters18#PartialSettlement
-	 * AdditionalParameters18.PartialSettlement}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters18#mmPartialSettlement
+	 * AdditionalParameters18.mmPartialSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartialSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartialSettlement = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPartialSettlementType;
 			componentContext_lazy = () -> AdditionalParameters24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.PartialSettlementType;
 			isDerived = false;
 			xmlTag = "PrtlSttlm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlement";
 			definition = "Specifies partial settlement information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters18.PartialSettlement;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters18.mmPartialSettlement;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PartialSettlement2Code.mmObject();
 		}
 	};
+	protected Max35Text previousPartialConfirmationIdentification;
 	/**
 	 * Identification of the confirmation previously sent to confirm the partial
 	 * settlement of a transaction.
@@ -203,8 +206,8 @@ public class AdditionalParameters24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,22 +229,22 @@ public class AdditionalParameters24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters18#PreviousPartialConfirmationIdentification
-	 * AdditionalParameters18.PreviousPartialConfirmationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters18#mmPreviousPartialConfirmationIdentification
+	 * AdditionalParameters18.mmPreviousPartialConfirmationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousPartialConfirmationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousPartialConfirmationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalParameters24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "PrvsPrtlConfId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousPartialConfirmationIdentification";
 			definition = "Identification of the confirmation previously sent to confirm the partial settlement of a transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters18.PreviousPartialConfirmationIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters18.mmPreviousPartialConfirmationIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -249,12 +252,12 @@ public class AdditionalParameters24 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters24.PreConfirmation, com.tools20022.repository.msg.AdditionalParameters24.PartialSettlement,
-						com.tools20022.repository.msg.AdditionalParameters24.PreviousPartialConfirmationIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters24.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters24.mmPartialSettlement,
+						com.tools20022.repository.msg.AdditionalParameters24.mmPreviousPartialConfirmationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06.mmAdditionalParameters,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07.mmAdditionalParameters);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06.AdditionalParameters,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07.AdditionalParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalParameters24";
 				definition = "Specifies additional parameters to the message or transaction.";
@@ -262,5 +265,29 @@ public class AdditionalParameters24 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PreConfirmation1Code getPreConfirmation() {
+		return preConfirmation;
+	}
+
+	public void setPreConfirmation(PreConfirmation1Code preConfirmation) {
+		this.preConfirmation = preConfirmation;
+	}
+
+	public PartialSettlement2Code getPartialSettlement() {
+		return partialSettlement;
+	}
+
+	public void setPartialSettlement(PartialSettlement2Code partialSettlement) {
+		this.partialSettlement = partialSettlement;
+	}
+
+	public Max35Text getPreviousPartialConfirmationIdentification() {
+		return previousPartialConfirmationIdentification;
+	}
+
+	public void setPreviousPartialConfirmationIdentification(Max35Text previousPartialConfirmationIdentification) {
+		this.previousPartialConfirmationIdentification = previousPartialConfirmationIdentification;
 	}
 }

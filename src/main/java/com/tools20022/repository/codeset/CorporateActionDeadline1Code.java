@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#MarketDeadline
- * CorporateActionDeadline1Code.MarketDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#mmMarketDeadline
+ * CorporateActionDeadline1Code.mmMarketDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#ResponseDeadline
- * CorporateActionDeadline1Code.ResponseDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#mmResponseDeadline
+ * CorporateActionDeadline1Code.mmResponseDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#EarlyResponseDeadline
- * CorporateActionDeadline1Code.EarlyResponseDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#mmEarlyResponseDeadline
+ * CorporateActionDeadline1Code.mmEarlyResponseDeadline}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	 * name} = "MarketDeadline"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadline = new MMCode() {
+	public static final MMCode mmMarketDeadline = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadline";
@@ -107,7 +107,7 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	 * name} = "ResponseDeadline"</li>
 	 * </ul>
 	 */
-	public static final MMCode ResponseDeadline = new MMCode() {
+	public static final MMCode mmResponseDeadline = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseDeadline";
@@ -130,7 +130,7 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	 * name} = "EarlyResponseDeadline"</li>
 	 * </ul>
 	 */
-	public static final MMCode EarlyResponseDeadline = new MMCode() {
+	public static final MMCode mmEarlyResponseDeadline = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyResponseDeadline";
@@ -141,13 +141,13 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MKDT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDeadline1Code";
 				definition = "Specifies the deadline reference of a corporate action.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionDeadline1Code.MarketDeadline, com.tools20022.repository.codeset.CorporateActionDeadline1Code.ResponseDeadline,
-						com.tools20022.repository.codeset.CorporateActionDeadline1Code.EarlyResponseDeadline);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionDeadline1Code.mmMarketDeadline, com.tools20022.repository.codeset.CorporateActionDeadline1Code.mmResponseDeadline,
+						com.tools20022.repository.codeset.CorporateActionDeadline1Code.mmEarlyResponseDeadline);
 				trace_lazy = () -> CorporateActionReferenceDateCode.mmObject();
 			}
 		});

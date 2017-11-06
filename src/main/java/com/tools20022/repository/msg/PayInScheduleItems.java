@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PayInScheduleItems#Amount
- * PayInScheduleItems.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PayInScheduleItems#Deadline
- * PayInScheduleItems.Deadline}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PayInScheduleItems#mmAmount
+ * PayInScheduleItems.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PayInScheduleItems#mmDeadline
+ * PayInScheduleItems.mmDeadline}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PayInScheduleItems {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Currency and amount to be paid in.
 	 * <p>
@@ -83,8 +84,8 @@ public class PayInScheduleItems {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Amount
-	 * CashEntry.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+	 * CashEntry.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class PayInScheduleItems {
 	 * definition} = "Currency and amount to be paid in."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
 			componentContext_lazy = () -> PayInScheduleItems.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Currency and amount to be paid in.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISOTime deadline;
 	/**
 	 * Time by which the amount must be paid in.
 	 * <p>
@@ -144,7 +146,7 @@ public class PayInScheduleItems {
 	 * definition} = "Time by which the amount must be paid in."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Deadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeadline = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PayInScheduleItems.mmObject();
 			isDerived = false;
@@ -152,8 +154,8 @@ public class PayInScheduleItems {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deadline";
 			definition = "Time by which the amount must be paid in.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
@@ -161,9 +163,9 @@ public class PayInScheduleItems {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayInScheduleItems.Amount, com.tools20022.repository.msg.PayInScheduleItems.Deadline);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayInScheduleItems.mmAmount, com.tools20022.repository.msg.PayInScheduleItems.mmDeadline);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PayInScheduleItems";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
@@ -171,5 +173,21 @@ public class PayInScheduleItems {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public ISOTime getDeadline() {
+		return deadline;
+	}
+
+	public void setDeadline(ISOTime deadline) {
+		this.deadline = deadline;
 	}
 }

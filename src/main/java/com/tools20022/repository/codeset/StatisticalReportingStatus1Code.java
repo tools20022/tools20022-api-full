@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#Accepted
- * StatisticalReportingStatus1Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#mmAccepted
+ * StatisticalReportingStatus1Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#AcceptedTechnicalValidation
- * StatisticalReportingStatus1Code.AcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#mmAcceptedTechnicalValidation
+ * StatisticalReportingStatus1Code.mmAcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#PartiallyAccepted
- * StatisticalReportingStatus1Code.PartiallyAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#mmPartiallyAccepted
+ * StatisticalReportingStatus1Code.mmPartiallyAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#Pending
- * StatisticalReportingStatus1Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#mmPending
+ * StatisticalReportingStatus1Code.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#Received
- * StatisticalReportingStatus1Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#mmReceived
+ * StatisticalReportingStatus1Code.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#Rejected
- * StatisticalReportingStatus1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#mmRejected
+ * StatisticalReportingStatus1Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#Reminder
- * StatisticalReportingStatus1Code.Reminder}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#mmReminder
+ * StatisticalReportingStatus1Code.mmReminder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#IncorrectFilename
- * StatisticalReportingStatus1Code.IncorrectFilename}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#mmIncorrectFilename
+ * StatisticalReportingStatus1Code.mmIncorrectFilename}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#CorruptedFile
- * StatisticalReportingStatus1Code.CorruptedFile}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code#mmCorruptedFile
+ * StatisticalReportingStatus1Code.mmCorruptedFile}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,17 +106,17 @@ public class StatisticalReportingStatus1Code extends StatisticalReportingStatusC
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code#Accepted
-	 * TaxReportingStatus1Code.Accepted}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code#mmAccepted
+	 * TaxReportingStatus1Code.mmAccepted}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus1Code.Accepted);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus1Code.mmAccepted);
 			owner_lazy = () -> StatisticalReportingStatus1Code.mmObject();
 		}
 	};
@@ -136,7 +136,7 @@ public class StatisticalReportingStatus1Code extends StatisticalReportingStatusC
 	 * name} = "AcceptedTechnicalValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedTechnicalValidation = new MMCode() {
+	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
@@ -159,7 +159,7 @@ public class StatisticalReportingStatus1Code extends StatisticalReportingStatusC
 	 * name} = "PartiallyAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyAccepted = new MMCode() {
+	public static final MMCode mmPartiallyAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAccepted";
@@ -182,7 +182,7 @@ public class StatisticalReportingStatus1Code extends StatisticalReportingStatusC
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -207,17 +207,17 @@ public class StatisticalReportingStatus1Code extends StatisticalReportingStatusC
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code#Received
-	 * TaxReportingStatus1Code.Received}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code#mmReceived
+	 * TaxReportingStatus1Code.mmReceived}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus1Code.Received);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus1Code.mmReceived);
 			owner_lazy = () -> StatisticalReportingStatus1Code.mmObject();
 		}
 	};
@@ -239,17 +239,17 @@ public class StatisticalReportingStatus1Code extends StatisticalReportingStatusC
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code#Rejected
-	 * TaxReportingStatus1Code.Rejected}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code#mmRejected
+	 * TaxReportingStatus1Code.mmRejected}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus1Code.Rejected);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus1Code.mmRejected);
 			owner_lazy = () -> StatisticalReportingStatus1Code.mmObject();
 		}
 	};
@@ -269,7 +269,7 @@ public class StatisticalReportingStatus1Code extends StatisticalReportingStatusC
 	 * name} = "Reminder"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reminder = new MMCode() {
+	public static final MMCode mmReminder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder";
@@ -294,17 +294,17 @@ public class StatisticalReportingStatus1Code extends StatisticalReportingStatusC
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code#IncorrectFilename
-	 * TaxReportingStatus1Code.IncorrectFilename}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code#mmIncorrectFilename
+	 * TaxReportingStatus1Code.mmIncorrectFilename}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectFilename = new MMCode() {
+	public static final MMCode mmIncorrectFilename = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFilename";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus1Code.IncorrectFilename);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus1Code.mmIncorrectFilename);
 			owner_lazy = () -> StatisticalReportingStatus1Code.mmObject();
 		}
 	};
@@ -326,17 +326,17 @@ public class StatisticalReportingStatus1Code extends StatisticalReportingStatusC
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code#CorruptedFile
-	 * TaxReportingStatus1Code.CorruptedFile}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code#mmCorruptedFile
+	 * TaxReportingStatus1Code.mmCorruptedFile}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CorruptedFile = new MMCode() {
+	public static final MMCode mmCorruptedFile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorruptedFile";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus1Code.CorruptedFile);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus1Code.mmCorruptedFile);
 			owner_lazy = () -> StatisticalReportingStatus1Code.mmObject();
 		}
 	};
@@ -344,16 +344,16 @@ public class StatisticalReportingStatus1Code extends StatisticalReportingStatusC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatisticalReportingStatus1Code";
 				definition = "Specifies the status of a group of statistical reporting transactions.";
 				nextVersions_lazy = () -> Arrays.asList(TaxReportingStatus1Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatisticalReportingStatus1Code.Accepted, com.tools20022.repository.codeset.StatisticalReportingStatus1Code.AcceptedTechnicalValidation,
-						com.tools20022.repository.codeset.StatisticalReportingStatus1Code.PartiallyAccepted, com.tools20022.repository.codeset.StatisticalReportingStatus1Code.Pending,
-						com.tools20022.repository.codeset.StatisticalReportingStatus1Code.Received, com.tools20022.repository.codeset.StatisticalReportingStatus1Code.Rejected,
-						com.tools20022.repository.codeset.StatisticalReportingStatus1Code.Reminder, com.tools20022.repository.codeset.StatisticalReportingStatus1Code.IncorrectFilename,
-						com.tools20022.repository.codeset.StatisticalReportingStatus1Code.CorruptedFile);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatisticalReportingStatus1Code.mmAccepted, com.tools20022.repository.codeset.StatisticalReportingStatus1Code.mmAcceptedTechnicalValidation,
+						com.tools20022.repository.codeset.StatisticalReportingStatus1Code.mmPartiallyAccepted, com.tools20022.repository.codeset.StatisticalReportingStatus1Code.mmPending,
+						com.tools20022.repository.codeset.StatisticalReportingStatus1Code.mmReceived, com.tools20022.repository.codeset.StatisticalReportingStatus1Code.mmRejected,
+						com.tools20022.repository.codeset.StatisticalReportingStatus1Code.mmReminder, com.tools20022.repository.codeset.StatisticalReportingStatus1Code.mmIncorrectFilename,
+						com.tools20022.repository.codeset.StatisticalReportingStatus1Code.mmCorruptedFile);
 				trace_lazy = () -> StatisticalReportingStatusCode.mmObject();
 			}
 		});

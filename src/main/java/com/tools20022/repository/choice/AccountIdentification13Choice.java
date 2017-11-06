@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.AccountIdentification10;
 import com.tools20022.repository.msg.AccountIdentification15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between all accounts (GENR - General in ISO 15022) or one or more
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification13Choice#ForAllAccounts
- * AccountIdentification13Choice.ForAllAccounts}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification13Choice#mmForAllAccounts
+ * AccountIdentification13Choice.mmForAllAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification13Choice#AccountsList
- * AccountIdentification13Choice.AccountsList}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification13Choice#mmAccountsList
+ * AccountIdentification13Choice.mmAccountsList}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,40 +52,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV02#AccountsDetails
- * CorporateActionCancellationAdviceV02.AccountsDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV02#mmAccountsDetails
+ * CorporateActionCancellationAdviceV02.mmAccountsDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV03#AccountsDetails
- * CorporateActionCancellationAdviceV03.AccountsDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV03#mmAccountsDetails
+ * CorporateActionCancellationAdviceV03.mmAccountsDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV04#AccountsDetails
- * CorporateActionCancellationAdviceV04.AccountsDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV04#mmAccountsDetails
+ * CorporateActionCancellationAdviceV04.mmAccountsDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02#AccountDetails
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.AccountDetails}
- * </li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02#mmAccountDetails
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.
+ * mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03#AccountDetails
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.AccountDetails}
- * </li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03#mmAccountDetails
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.
+ * mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04#AccountDetails
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.AccountDetails}
- * </li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04#mmAccountDetails
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.
+ * mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV05#AccountDetails
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV05.AccountDetails}
- * </li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV05#mmAccountDetails
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV05.
+ * mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#AccountsDetails
- * CorporateActionCancellationAdviceV05.AccountsDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05#mmAccountsDetails
+ * CorporateActionCancellationAdviceV05.mmAccountsDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentification13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification10 forAllAccounts;
 	/**
 	 * All safekeeping accounts that own underlying financial instrument.
 	 * <p>
@@ -143,28 +145,29 @@ public class AccountIdentification13Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification29Choice#ForAllAccounts
-	 * AccountIdentification29Choice.ForAllAccounts}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification29Choice#mmForAllAccounts
+	 * AccountIdentification29Choice.mmForAllAccounts}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForAllAccounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForAllAccounts = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountIdentification13Choice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentification13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ForAllAccts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForAllAccounts";
 			definition = "All safekeeping accounts that own underlying financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification29Choice.ForAllAccounts);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification29Choice.mmForAllAccounts);
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification10.mmObject();
 		}
 	};
+	protected List<AccountIdentification15> accountsList;
 	/**
 	 * Selected safekeeping accounts list to which the corporate action event
 	 * applies.
@@ -202,40 +205,40 @@ public class AccountIdentification13Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification29Choice#AccountsList
-	 * AccountIdentification29Choice.AccountsList}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification29Choice#mmAccountsList
+	 * AccountIdentification29Choice.mmAccountsList}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountsList = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountsList = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountIdentification13Choice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentification13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctsList";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountsList";
 			definition = "Selected safekeeping accounts list to which the corporate action event applies.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification29Choice.AccountsList);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification29Choice.mmAccountsList);
 			minOccurs = 1;
-			type_lazy = () -> AccountIdentification15.mmObject();
 			isComposite = true;
+			type_lazy = () -> AccountIdentification15.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification13Choice.ForAllAccounts, com.tools20022.repository.choice.AccountIdentification13Choice.AccountsList);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification13Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification13Choice.mmAccountsList);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV02.mmAccountsDetails,
+						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV03.mmAccountsDetails, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV04.mmAccountsDetails,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.mmAccountDetails,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.mmAccountDetails,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.mmAccountDetails,
+						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV05.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.mmAccountsDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV02.AccountsDetails,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV03.AccountsDetails, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV04.AccountsDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.AccountDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.AccountDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.AccountDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV05.AccountDetails, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05.AccountsDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification13Choice";
 				definition = "Choice between all accounts (GENR - General in ISO 15022) or one or more selected accounts.";
@@ -243,5 +246,21 @@ public class AccountIdentification13Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification10 getForAllAccounts() {
+		return forAllAccounts;
+	}
+
+	public void setForAllAccounts(AccountIdentification10 forAllAccounts) {
+		this.forAllAccounts = forAllAccounts;
+	}
+
+	public List<AccountIdentification15> getAccountsList() {
+		return accountsList;
+	}
+
+	public void setAccountsList(List<AccountIdentification15> accountsList) {
+		this.accountsList = accountsList;
 	}
 }

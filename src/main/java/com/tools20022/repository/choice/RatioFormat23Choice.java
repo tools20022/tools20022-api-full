@@ -38,21 +38,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat23Choice#QuantityToQuantity
- * RatioFormat23Choice.QuantityToQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat23Choice#mmQuantityToQuantity
+ * RatioFormat23Choice.mmQuantityToQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat23Choice#NotSpecifiedRate
- * RatioFormat23Choice.NotSpecifiedRate}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat23Choice#mmNotSpecifiedRate
+ * RatioFormat23Choice.mmNotSpecifiedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat23Choice#AmountToAmount
- * RatioFormat23Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat23Choice#mmAmountToAmount
+ * RatioFormat23Choice.mmAmountToAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RatioFormat23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuantityToQuantityRatio2 quantityToQuantity;
 	/**
 	 * Ratio expressed as a quotient of quantities.
 	 * <p>
@@ -98,21 +99,22 @@ public class RatioFormat23Choice {
 	 * definition} = "Ratio expressed as a quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityToQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RatioFormat23Choice.mmObject();
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
+			componentContext_lazy = () -> RatioFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToQuantity";
 			definition = "Ratio expressed as a quotient of quantities.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QuantityToQuantityRatio2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> QuantityToQuantityRatio2.mmObject();
 		}
 	};
+	protected RateValueType7Code notSpecifiedRate;
 	/**
 	 * Value of the ratio not specified.
 	 * <p>
@@ -141,7 +143,7 @@ public class RatioFormat23Choice {
 	 * definition} = "Value of the ratio not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RatioFormat23Choice.mmObject();
 			isDerived = false;
@@ -149,11 +151,12 @@ public class RatioFormat23Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the ratio not specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
 		}
 	};
+	protected AmountToAmountRatio3 amountToAmount;
 	/**
 	 * Ratio expressed as a quotient of amounts.
 	 * <p>
@@ -184,33 +187,57 @@ public class RatioFormat23Choice {
 	 * definition} = "Ratio expressed as a quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountToAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RatioFormat23Choice.mmObject();
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
+			componentContext_lazy = () -> RatioFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToAmount";
 			definition = "Ratio expressed as a quotient of amounts.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountToAmountRatio3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountToAmountRatio3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat23Choice.QuantityToQuantity, com.tools20022.repository.choice.RatioFormat23Choice.NotSpecifiedRate,
-						com.tools20022.repository.choice.RatioFormat23Choice.AmountToAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat23Choice.mmQuantityToQuantity, com.tools20022.repository.choice.RatioFormat23Choice.mmNotSpecifiedRate,
+						com.tools20022.repository.choice.RatioFormat23Choice.mmAmountToAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RatioFormat23Choice";
 				definition = "Choice of format to express a ratio.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuantityToQuantityRatio2 getQuantityToQuantity() {
+		return quantityToQuantity;
+	}
+
+	public void setQuantityToQuantity(QuantityToQuantityRatio2 quantityToQuantity) {
+		this.quantityToQuantity = quantityToQuantity;
+	}
+
+	public RateValueType7Code getNotSpecifiedRate() {
+		return notSpecifiedRate;
+	}
+
+	public void setNotSpecifiedRate(RateValueType7Code notSpecifiedRate) {
+		this.notSpecifiedRate = notSpecifiedRate;
+	}
+
+	public AmountToAmountRatio3 getAmountToAmount() {
+		return amountToAmount;
+	}
+
+	public void setAmountToAmount(AmountToAmountRatio3 amountToAmount) {
+		this.amountToAmount = amountToAmount;
 	}
 }

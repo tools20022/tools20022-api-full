@@ -36,20 +36,20 @@ import java.util.function.Supplier;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#CodeorOtherRule
- * Incoterms2.CodeorOtherRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#mmCodeorOtherRule
+ * Incoterms2.mmCodeorOtherRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#Code
- * Incoterms2.Code}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#Other
- * Incoterms2.Other}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#Location
- * Incoterms2.Location}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#mmCode
+ * Incoterms2.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#mmOther
+ * Incoterms2.mmOther}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#mmLocation
+ * Incoterms2.mmLocation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -73,6 +73,7 @@ import java.util.function.Supplier;
 public class Incoterms2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Incoterms1Code code;
 	/**
 	 * Specifies the applicable Incoterm by means of a code.
 	 * <p>
@@ -86,8 +87,8 @@ public class Incoterms2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Incoterms#Code
-	 * Incoterms.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Incoterms#mmCode
+	 * Incoterms.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Incoterms2
@@ -105,20 +106,21 @@ public class Incoterms2 {
 	 * definition} = "Specifies the applicable Incoterm by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.mmCode;
 			componentContext_lazy = () -> Incoterms2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.Code;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the applicable Incoterm by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Incoterms1Code.mmObject();
 		}
 	};
+	protected Max35Text other;
 	/**
 	 * Specifies Incoterm not present in code list.
 	 * <p>
@@ -131,8 +133,8 @@ public class Incoterms2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Incoterms#Code
-	 * Incoterms.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Incoterms#mmCode
+	 * Incoterms.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Incoterms2
@@ -150,20 +152,21 @@ public class Incoterms2 {
 	 * definition} = "Specifies Incoterm not present in code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Other = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.mmCode;
 			componentContext_lazy = () -> Incoterms2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.Code;
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Specifies Incoterm not present in code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text location;
 	/**
 	 * Location where the Incoterms are actioned.
 	 * <p>
@@ -176,8 +179,8 @@ public class Incoterms2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Incoterms#Location
-	 * Incoterms.Location}</li>
+	 * {@linkplain com.tools20022.repository.entity.Incoterms#mmLocation
+	 * Incoterms.mmLocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Incoterms2
@@ -195,17 +198,17 @@ public class Incoterms2 {
 	 * definition} = "Location where the Incoterms are actioned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Location = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.mmLocation;
 			componentContext_lazy = () -> Incoterms2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.Location;
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location where the Incoterms are actioned.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -218,10 +221,10 @@ public class Incoterms2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#Code
-	 * Incoterms2.Code}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#Other
-	 * Incoterms2.Other}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#mmCode
+	 * Incoterms2.mmCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Incoterms2#mmOther
+	 * Incoterms2.mmOther}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -240,22 +243,22 @@ public class Incoterms2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor CodeorOtherRule = new MMXor() {
+	public static final MMXor mmCodeorOtherRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeorOtherRule";
 			definition = "If Code is present, then Other is not allowed. If Code is not present, then Other is mandatory.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms2.Code, com.tools20022.repository.msg.Incoterms2.Other);
 			messageComponent_lazy = () -> Incoterms2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms2.mmCode, com.tools20022.repository.msg.Incoterms2.mmOther);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms2.Code, com.tools20022.repository.msg.Incoterms2.Other, com.tools20022.repository.msg.Incoterms2.Location);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms2.mmCode, com.tools20022.repository.msg.Incoterms2.mmOther, com.tools20022.repository.msg.Incoterms2.mmLocation);
 				trace_lazy = () -> Incoterms.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -266,9 +269,33 @@ public class Incoterms2 {
 				})).get();
 				name = "Incoterms2";
 				definition = "Specifies the applicable Incoterm and associated location.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms2.CodeorOtherRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms2.mmCodeorOtherRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Incoterms1Code getCode() {
+		return code;
+	}
+
+	public void setCode(Incoterms1Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getOther() {
+		return other;
+	}
+
+	public void setOther(Max35Text other) {
+		this.other = other;
+	}
+
+	public Max35Text getLocation() {
+		return location;
+	}
+
+	public void setLocation(Max35Text location) {
+		this.location = location;
 	}
 }

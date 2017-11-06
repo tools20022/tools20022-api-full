@@ -37,27 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyReferenceDataChange1#PartyIdentification
- * PartyReferenceDataChange1.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyReferenceDataChange1#mmPartyIdentification
+ * PartyReferenceDataChange1.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyReferenceDataChange1#FieldName
- * PartyReferenceDataChange1.FieldName}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyReferenceDataChange1#mmFieldName
+ * PartyReferenceDataChange1.mmFieldName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyReferenceDataChange1#OldFieldValue
- * PartyReferenceDataChange1.OldFieldValue}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyReferenceDataChange1#mmOldFieldValue
+ * PartyReferenceDataChange1.mmOldFieldValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyReferenceDataChange1#NewFieldValue
- * PartyReferenceDataChange1.NewFieldValue}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyReferenceDataChange1#mmNewFieldValue
+ * PartyReferenceDataChange1.mmNewFieldValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyReferenceDataChange1#OperationTimeStamp
- * PartyReferenceDataChange1.OperationTimeStamp}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyReferenceDataChange1#mmOperationTimeStamp
+ * PartyReferenceDataChange1.mmOperationTimeStamp}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyReferenceDataChange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemPartyIdentification3 partyIdentification;
 	/**
 	 * Identifies the party for which the changes are listed in the advice.
 	 * <p>
@@ -101,7 +102,7 @@ public class PartyReferenceDataChange1 {
 	 * "Identifies the party for which the changes are listed in the advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -109,12 +110,13 @@ public class PartyReferenceDataChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identifies the party for which the changes are listed in the advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
 		}
 	};
+	protected Max35Text fieldName;
 	/**
 	 * Name of the element, as specified in the short tag name for the field in
 	 * the message.
@@ -145,7 +147,7 @@ public class PartyReferenceDataChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FieldName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class PartyReferenceDataChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FieldName";
 			definition = "Name of the element, as specified in the short tag name for the field in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text oldFieldValue;
 	/**
 	 * Value of the related field before the change was applied.
 	 * <p>
@@ -186,7 +189,7 @@ public class PartyReferenceDataChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OldFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -194,11 +197,12 @@ public class PartyReferenceDataChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OldFieldValue";
 			definition = "Value of the related field before the change was applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text newFieldValue;
 	/**
 	 * Value of the related field after the change was applied.
 	 * <p>
@@ -226,7 +230,7 @@ public class PartyReferenceDataChange1 {
 	 * definition} = "Value of the related field after the change was applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -234,11 +238,12 @@ public class PartyReferenceDataChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewFieldValue";
 			definition = "Value of the related field after the change was applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODateTime operationTimeStamp;
 	/**
 	 * Specifies the timestamp of the operation.
 	 * <p>
@@ -266,7 +271,7 @@ public class PartyReferenceDataChange1 {
 	 * definition} = "Specifies the timestamp of the operation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OperationTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -274,8 +279,8 @@ public class PartyReferenceDataChange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationTimeStamp";
 			definition = "Specifies the timestamp of the operation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -283,15 +288,55 @@ public class PartyReferenceDataChange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyReferenceDataChange1.PartyIdentification, com.tools20022.repository.msg.PartyReferenceDataChange1.FieldName,
-						com.tools20022.repository.msg.PartyReferenceDataChange1.OldFieldValue, com.tools20022.repository.msg.PartyReferenceDataChange1.NewFieldValue,
-						com.tools20022.repository.msg.PartyReferenceDataChange1.OperationTimeStamp);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyReferenceDataChange1.mmPartyIdentification, com.tools20022.repository.msg.PartyReferenceDataChange1.mmFieldName,
+						com.tools20022.repository.msg.PartyReferenceDataChange1.mmOldFieldValue, com.tools20022.repository.msg.PartyReferenceDataChange1.mmNewFieldValue,
+						com.tools20022.repository.msg.PartyReferenceDataChange1.mmOperationTimeStamp);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyReferenceDataChange1";
 				definition = "Describes the comparison between the currently established baseline elements and the proposed ones.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemPartyIdentification3 getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public Max35Text getFieldName() {
+		return fieldName;
+	}
+
+	public void setFieldName(Max35Text fieldName) {
+		this.fieldName = fieldName;
+	}
+
+	public Max350Text getOldFieldValue() {
+		return oldFieldValue;
+	}
+
+	public void setOldFieldValue(Max350Text oldFieldValue) {
+		this.oldFieldValue = oldFieldValue;
+	}
+
+	public Max350Text getNewFieldValue() {
+		return newFieldValue;
+	}
+
+	public void setNewFieldValue(Max350Text newFieldValue) {
+		this.newFieldValue = newFieldValue;
+	}
+
+	public ISODateTime getOperationTimeStamp() {
+		return operationTimeStamp;
+	}
+
+	public void setOperationTimeStamp(ISODateTime operationTimeStamp) {
+		this.operationTimeStamp = operationTimeStamp;
 	}
 }

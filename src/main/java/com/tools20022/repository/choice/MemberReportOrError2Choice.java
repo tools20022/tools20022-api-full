@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MemberReportOrError2Choice#Member
- * MemberReportOrError2Choice.Member}</li>
+ * {@linkplain com.tools20022.repository.choice.MemberReportOrError2Choice#mmMember
+ * MemberReportOrError2Choice.mmMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MemberReportOrError2Choice#BusinessError
- * MemberReportOrError2Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.MemberReportOrError2Choice#mmBusinessError
+ * MemberReportOrError2Choice.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MemberReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Member1 member;
 	/**
 	 * Requested member data when found in the system.
 	 * <p>
@@ -93,21 +94,22 @@ public class MemberReportOrError2Choice {
 	 * definition} = "Requested member data when found in the system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Member = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMember = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MemberReportOrError2Choice.mmObject();
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
+			componentContext_lazy = () -> MemberReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Member";
 			definition = "Requested member data when found in the system.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Member1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Member1.mmObject();
 		}
 	};
+	protected ErrorHandling3 businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -134,7 +136,7 @@ public class MemberReportOrError2Choice {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MemberReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -142,24 +144,40 @@ public class MemberReportOrError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberReportOrError2Choice.Member, com.tools20022.repository.choice.MemberReportOrError2Choice.BusinessError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberReportOrError2Choice.mmMember, com.tools20022.repository.choice.MemberReportOrError2Choice.mmBusinessError);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberReportOrError2Choice";
 				definition = "Reports either on a member or a business error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Member1 getMember() {
+		return member;
+	}
+
+	public void setMember(Member1 member) {
+		this.member = member;
+	}
+
+	public ErrorHandling3 getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(ErrorHandling3 businessError) {
+		this.businessError = businessError;
 	}
 }

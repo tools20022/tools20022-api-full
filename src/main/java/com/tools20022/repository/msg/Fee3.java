@@ -37,25 +37,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Fee3#Type Fee3.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee3#RepairedStandardAmount
- * Fee3.RepairedStandardAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee3#RepairedStandardRate
- * Fee3.RepairedStandardRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee3#RepairedDiscountAmount
- * Fee3.RepairedDiscountAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee3#RepairedDiscountRate
- * Fee3.RepairedDiscountRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee3#RepairedRequestedAmount
- * Fee3.RepairedRequestedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee3#RepairedRequestedRate
- * Fee3.RepairedRequestedRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee3#mmType Fee3.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee3#mmRepairedStandardAmount
+ * Fee3.mmRepairedStandardAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee3#mmRepairedStandardRate
+ * Fee3.mmRepairedStandardRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee3#mmRepairedDiscountAmount
+ * Fee3.mmRepairedDiscountAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee3#mmRepairedDiscountRate
+ * Fee3.mmRepairedDiscountRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee3#mmRepairedRequestedAmount
+ * Fee3.mmRepairedRequestedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee3#mmRepairedRequestedRate
+ * Fee3.mmRepairedRequestedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Fee3#CommercialAgreementReference
- * Fee3.CommercialAgreementReference}</li>
+ * {@linkplain com.tools20022.repository.msg.Fee3#mmCommercialAgreementReference
+ * Fee3.mmCommercialAgreementReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Fee3#NewCommercialAgreementReferenceIndicator
- * Fee3.NewCommercialAgreementReferenceIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Fee3#mmNewCommercialAgreementReferenceIndicator
+ * Fee3.mmNewCommercialAgreementReferenceIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Fee3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ChargeType5Choice type;
 	/**
 	 * Type of fee (charge/commission).
 	 * <p>
@@ -94,8 +95,8 @@ public class Fee3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
@@ -112,20 +113,21 @@ public class Fee3 {
 	 * definition} = "Type of fee (charge/commission)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> Fee3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of fee (charge/commission).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ChargeType5Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount repairedStandardAmount;
 	/**
 	 * Modified value of the standard fee (charge/commission) amount applied on
 	 * the order (the standard fee (charge/commission) amount in the original
@@ -142,8 +144,8 @@ public class Fee3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
@@ -162,20 +164,21 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RepairedStandardAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRepairedStandardAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Fee3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "RprdStdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedStandardAmount";
 			definition = "Modified value of the standard fee (charge/commission) amount applied on the order (the standard fee (charge/commission) amount in the original individual order that has been repaired so that the order can be accepted).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate repairedStandardRate;
 	/**
 	 * Modified value of the standard fee (charge/commission) rate applied on
 	 * the order (the standard fee (charge/commission) rate in the original
@@ -192,8 +195,8 @@ public class Fee3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargeRate
-	 * Adjustment.ChargeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+	 * Adjustment.mmChargeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
@@ -212,20 +215,21 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RepairedStandardRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRepairedStandardRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
 			componentContext_lazy = () -> Fee3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargeRate;
 			isDerived = false;
 			xmlTag = "RprdStdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedStandardRate";
 			definition = "Modified value of the standard fee (charge/commission) rate applied on the order (the standard fee (charge/commission) rate in the original individual order that has been repaired so that the order can be accepted).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount repairedDiscountAmount;
 	/**
 	 * Modified value of the discount amount applied on the order (the discount
 	 * amount in the original individual order that has been repaired so that
@@ -241,8 +245,8 @@ public class Fee3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
@@ -261,20 +265,21 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RepairedDiscountAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRepairedDiscountAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Fee3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "RprdDscntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedDiscountAmount";
 			definition = "Modified value of the discount amount applied on the order (the discount amount in the original individual order that has been repaired so that the order can be accepted).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate repairedDiscountRate;
 	/**
 	 * Modified value of the discount rate applied on the order (the discount
 	 * rate in the original individual order that has been repaired so that the
@@ -290,8 +295,8 @@ public class Fee3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargeRate
-	 * Adjustment.ChargeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+	 * Adjustment.mmChargeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
@@ -310,20 +315,21 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RepairedDiscountRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRepairedDiscountRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
 			componentContext_lazy = () -> Fee3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargeRate;
 			isDerived = false;
 			xmlTag = "RprdDscntRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedDiscountRate";
 			definition = "Modified value of the discount rate applied on the order (the discount rate in the original individual order that has been repaired so that the order can be accepted).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount repairedRequestedAmount;
 	/**
 	 * Modified value of the requested fee (charge/commission) amount applied on
 	 * the order (the requested fee (charge/commission) amount in the original
@@ -340,8 +346,8 @@ public class Fee3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
@@ -360,20 +366,21 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RepairedRequestedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRepairedRequestedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Fee3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "RprdReqdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedRequestedAmount";
 			definition = "Modified value of the requested fee (charge/commission) amount applied on the order (the requested fee (charge/commission) amount in the original individual order that has been repaired so that the order can be accepted).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate repairedRequestedRate;
 	/**
 	 * Modified value of the requested fee (charge/commission) rate applied on
 	 * the order (the requested fee (charge/commission) rate in the original
@@ -390,8 +397,8 @@ public class Fee3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargeRate
-	 * Adjustment.ChargeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+	 * Adjustment.mmChargeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
@@ -410,20 +417,21 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RepairedRequestedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRepairedRequestedRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
 			componentContext_lazy = () -> Fee3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargeRate;
 			isDerived = false;
 			xmlTag = "RprdReqdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedRequestedRate";
 			definition = "Modified value of the requested  fee (charge/commission) rate applied on the order (the requested fee (charge/commission) rate in the original individual order that has been repaired so that the order can be accepted).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Max35Text commercialAgreementReference;
 	/**
 	 * Reference to the agreement established between the fund and another
 	 * party. This element, amongst others, defines the conditions of the
@@ -438,8 +446,8 @@ public class Fee3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommercialAgreementReference
-	 * Commission.CommercialAgreementReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommercialAgreementReference
+	 * Commission.mmCommercialAgreementReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
@@ -458,20 +466,21 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommercialAgreementReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> Fee3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommercialAgreementReference;
 			isDerived = false;
 			xmlTag = "ComrclAgrmtRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreementReference";
 			definition = "Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected YesNoIndicator newCommercialAgreementReferenceIndicator;
 	/**
 	 * Indicates if the CommercialAgreementReference is a new reference or not.
 	 * <p>
@@ -500,7 +509,7 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewCommercialAgreementReferenceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewCommercialAgreementReferenceIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Fee3.mmObject();
 			isDerived = false;
@@ -508,8 +517,8 @@ public class Fee3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCommercialAgreementReferenceIndicator";
 			definition = "Indicates if the CommercialAgreementReference is a new reference or not.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -517,11 +526,11 @@ public class Fee3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee3.Type, com.tools20022.repository.msg.Fee3.RepairedStandardAmount, com.tools20022.repository.msg.Fee3.RepairedStandardRate,
-						com.tools20022.repository.msg.Fee3.RepairedDiscountAmount, com.tools20022.repository.msg.Fee3.RepairedDiscountRate, com.tools20022.repository.msg.Fee3.RepairedRequestedAmount,
-						com.tools20022.repository.msg.Fee3.RepairedRequestedRate, com.tools20022.repository.msg.Fee3.CommercialAgreementReference, com.tools20022.repository.msg.Fee3.NewCommercialAgreementReferenceIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee3.mmType, com.tools20022.repository.msg.Fee3.mmRepairedStandardAmount, com.tools20022.repository.msg.Fee3.mmRepairedStandardRate,
+						com.tools20022.repository.msg.Fee3.mmRepairedDiscountAmount, com.tools20022.repository.msg.Fee3.mmRepairedDiscountRate, com.tools20022.repository.msg.Fee3.mmRepairedRequestedAmount,
+						com.tools20022.repository.msg.Fee3.mmRepairedRequestedRate, com.tools20022.repository.msg.Fee3.mmCommercialAgreementReference, com.tools20022.repository.msg.Fee3.mmNewCommercialAgreementReferenceIndicator);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Fee3";
 				definition = "Amount of money associated with a service.";
@@ -529,5 +538,77 @@ public class Fee3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ChargeType5Choice getType() {
+		return type;
+	}
+
+	public void setType(ChargeType5Choice type) {
+		this.type = type;
+	}
+
+	public ActiveCurrencyAndAmount getRepairedStandardAmount() {
+		return repairedStandardAmount;
+	}
+
+	public void setRepairedStandardAmount(ActiveCurrencyAndAmount repairedStandardAmount) {
+		this.repairedStandardAmount = repairedStandardAmount;
+	}
+
+	public PercentageRate getRepairedStandardRate() {
+		return repairedStandardRate;
+	}
+
+	public void setRepairedStandardRate(PercentageRate repairedStandardRate) {
+		this.repairedStandardRate = repairedStandardRate;
+	}
+
+	public ActiveCurrencyAndAmount getRepairedDiscountAmount() {
+		return repairedDiscountAmount;
+	}
+
+	public void setRepairedDiscountAmount(ActiveCurrencyAndAmount repairedDiscountAmount) {
+		this.repairedDiscountAmount = repairedDiscountAmount;
+	}
+
+	public PercentageRate getRepairedDiscountRate() {
+		return repairedDiscountRate;
+	}
+
+	public void setRepairedDiscountRate(PercentageRate repairedDiscountRate) {
+		this.repairedDiscountRate = repairedDiscountRate;
+	}
+
+	public ActiveCurrencyAndAmount getRepairedRequestedAmount() {
+		return repairedRequestedAmount;
+	}
+
+	public void setRepairedRequestedAmount(ActiveCurrencyAndAmount repairedRequestedAmount) {
+		this.repairedRequestedAmount = repairedRequestedAmount;
+	}
+
+	public PercentageRate getRepairedRequestedRate() {
+		return repairedRequestedRate;
+	}
+
+	public void setRepairedRequestedRate(PercentageRate repairedRequestedRate) {
+		this.repairedRequestedRate = repairedRequestedRate;
+	}
+
+	public Max35Text getCommercialAgreementReference() {
+		return commercialAgreementReference;
+	}
+
+	public void setCommercialAgreementReference(Max35Text commercialAgreementReference) {
+		this.commercialAgreementReference = commercialAgreementReference;
+	}
+
+	public YesNoIndicator getNewCommercialAgreementReferenceIndicator() {
+		return newCommercialAgreementReferenceIndicator;
+	}
+
+	public void setNewCommercialAgreementReferenceIndicator(YesNoIndicator newCommercialAgreementReferenceIndicator) {
+		this.newCommercialAgreementReferenceIndicator = newCommercialAgreementReferenceIndicator;
 	}
 }

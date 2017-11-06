@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.EncryptionFormat1Code;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Configuration of the encryption or digital envelope, if the security module
@@ -38,33 +39,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#AsymmetricEncryption
- * ATMSecurityConfiguration3.AsymmetricEncryption}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#mmAsymmetricEncryption
+ * ATMSecurityConfiguration3.mmAsymmetricEncryption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#AsymmetricKeyStandardIdentification
- * ATMSecurityConfiguration3.AsymmetricKeyStandardIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#mmAsymmetricKeyStandardIdentification
+ * ATMSecurityConfiguration3.mmAsymmetricKeyStandardIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#AsymmetricEncryptionAlgorithm
- * ATMSecurityConfiguration3.AsymmetricEncryptionAlgorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#mmAsymmetricEncryptionAlgorithm
+ * ATMSecurityConfiguration3.mmAsymmetricEncryptionAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#SymmetricTransportKey
- * ATMSecurityConfiguration3.SymmetricTransportKey}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#mmSymmetricTransportKey
+ * ATMSecurityConfiguration3.mmSymmetricTransportKey}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#SymmetricTransportKeyAlgorithm
- * ATMSecurityConfiguration3.SymmetricTransportKeyAlgorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#mmSymmetricTransportKeyAlgorithm
+ * ATMSecurityConfiguration3.mmSymmetricTransportKeyAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#SymmetricEncryptionAlgorithm
- * ATMSecurityConfiguration3.SymmetricEncryptionAlgorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#mmSymmetricEncryptionAlgorithm
+ * ATMSecurityConfiguration3.mmSymmetricEncryptionAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#EncryptionFormat
- * ATMSecurityConfiguration3.EncryptionFormat}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#mmEncryptionFormat
+ * ATMSecurityConfiguration3.mmEncryptionFormat}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMSecurityConfiguration3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator asymmetricEncryption;
 	/**
 	 * True if the security module is able to perform encryption with an
 	 * asymmetric key.
@@ -122,7 +124,7 @@ public class ATMSecurityConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AsymmetricEncryption = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAsymmetricEncryption = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -130,11 +132,12 @@ public class ATMSecurityConfiguration3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsymmetricEncryption";
 			definition = "True if the security module is able to perform encryption with an asymmetric key.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator asymmetricKeyStandardIdentification;
 	/**
 	 * True if the security module is able to identify an asymmetric key with
 	 * certificate issuer X.500 name and certificate serial number. False if a
@@ -167,7 +170,7 @@ public class ATMSecurityConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AsymmetricKeyStandardIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAsymmetricKeyStandardIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -175,11 +178,12 @@ public class ATMSecurityConfiguration3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsymmetricKeyStandardIdentification";
 			definition = "True if the security module is able to identify an asymmetric key with certificate issuer X.500 name and certificate serial number. False if a proprietary asymmetric key identifier is required.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected List<Algorithm7Code> asymmetricEncryptionAlgorithm;
 	/**
 	 * Asymmetric encryption algorithm the security module is able to manage.
 	 * <p>
@@ -209,7 +213,7 @@ public class ATMSecurityConfiguration3 {
 	 * "Asymmetric encryption algorithm the security module is able to manage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AsymmetricEncryptionAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAsymmetricEncryptionAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -221,6 +225,7 @@ public class ATMSecurityConfiguration3 {
 			simpleType_lazy = () -> Algorithm7Code.mmObject();
 		}
 	};
+	protected TrueFalseIndicator symmetricTransportKey;
 	/**
 	 * True if the security module is able to manage a symmetric transport
 	 * session key to protect cryptographic keys and data. False if only a
@@ -254,7 +259,7 @@ public class ATMSecurityConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SymmetricTransportKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSymmetricTransportKey = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -262,11 +267,12 @@ public class ATMSecurityConfiguration3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SymmetricTransportKey";
 			definition = "True if the security module is able to manage a symmetric transport session key to protect cryptographic keys and data. False if only a previously exchanged symmetric key must be used; a proprietary symmetric key identifier is then used.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected List<Algorithm13Code> symmetricTransportKeyAlgorithm;
 	/**
 	 * Symmetric transport session key algorithm the security module is able to
 	 * manage.
@@ -300,13 +306,13 @@ public class ATMSecurityConfiguration3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration4#DigitalSignatureAlgorithm
-	 * ATMSecurityConfiguration4.DigitalSignatureAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration4#mmDigitalSignatureAlgorithm
+	 * ATMSecurityConfiguration4.mmDigitalSignatureAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SymmetricTransportKeyAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSymmetricTransportKeyAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -314,11 +320,12 @@ public class ATMSecurityConfiguration3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SymmetricTransportKeyAlgorithm";
 			definition = "Symmetric transport session key algorithm the security module is able to manage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration4.DigitalSignatureAlgorithm);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration4.mmDigitalSignatureAlgorithm);
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm13Code.mmObject();
 		}
 	};
+	protected List<Algorithm15Code> symmetricEncryptionAlgorithm;
 	/**
 	 * Symmetric encryption algorithm the security module is able to manage.
 	 * <p>
@@ -348,7 +355,7 @@ public class ATMSecurityConfiguration3 {
 	 * "Symmetric encryption algorithm the security module is able to manage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SymmetricEncryptionAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSymmetricEncryptionAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -360,6 +367,7 @@ public class ATMSecurityConfiguration3 {
 			simpleType_lazy = () -> Algorithm15Code.mmObject();
 		}
 	};
+	protected List<EncryptionFormat1Code> encryptionFormat;
 	/**
 	 * Format of data before encryption, if the format is not plaintext or
 	 * implicit.
@@ -391,7 +399,7 @@ public class ATMSecurityConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EncryptionFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEncryptionFormat = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -407,18 +415,74 @@ public class ATMSecurityConfiguration3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration3.AsymmetricEncryption, com.tools20022.repository.msg.ATMSecurityConfiguration3.AsymmetricKeyStandardIdentification,
-						com.tools20022.repository.msg.ATMSecurityConfiguration3.AsymmetricEncryptionAlgorithm, com.tools20022.repository.msg.ATMSecurityConfiguration3.SymmetricTransportKey,
-						com.tools20022.repository.msg.ATMSecurityConfiguration3.SymmetricTransportKeyAlgorithm, com.tools20022.repository.msg.ATMSecurityConfiguration3.SymmetricEncryptionAlgorithm,
-						com.tools20022.repository.msg.ATMSecurityConfiguration3.EncryptionFormat);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration3.mmAsymmetricEncryption, com.tools20022.repository.msg.ATMSecurityConfiguration3.mmAsymmetricKeyStandardIdentification,
+						com.tools20022.repository.msg.ATMSecurityConfiguration3.mmAsymmetricEncryptionAlgorithm, com.tools20022.repository.msg.ATMSecurityConfiguration3.mmSymmetricTransportKey,
+						com.tools20022.repository.msg.ATMSecurityConfiguration3.mmSymmetricTransportKeyAlgorithm, com.tools20022.repository.msg.ATMSecurityConfiguration3.mmSymmetricEncryptionAlgorithm,
+						com.tools20022.repository.msg.ATMSecurityConfiguration3.mmEncryptionFormat);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration3";
 				definition = "Configuration of the encryption or digital envelope, if the security module is able to perform encryption.";
-				previousVersion_lazy = () -> ATMSecurityConfiguration2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ATMSecurityConfiguration4.mmObject());
+				previousVersion_lazy = () -> ATMSecurityConfiguration2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getAsymmetricEncryption() {
+		return asymmetricEncryption;
+	}
+
+	public void setAsymmetricEncryption(TrueFalseIndicator asymmetricEncryption) {
+		this.asymmetricEncryption = asymmetricEncryption;
+	}
+
+	public TrueFalseIndicator getAsymmetricKeyStandardIdentification() {
+		return asymmetricKeyStandardIdentification;
+	}
+
+	public void setAsymmetricKeyStandardIdentification(TrueFalseIndicator asymmetricKeyStandardIdentification) {
+		this.asymmetricKeyStandardIdentification = asymmetricKeyStandardIdentification;
+	}
+
+	public List<Algorithm7Code> getAsymmetricEncryptionAlgorithm() {
+		return asymmetricEncryptionAlgorithm;
+	}
+
+	public void setAsymmetricEncryptionAlgorithm(List<Algorithm7Code> asymmetricEncryptionAlgorithm) {
+		this.asymmetricEncryptionAlgorithm = asymmetricEncryptionAlgorithm;
+	}
+
+	public TrueFalseIndicator getSymmetricTransportKey() {
+		return symmetricTransportKey;
+	}
+
+	public void setSymmetricTransportKey(TrueFalseIndicator symmetricTransportKey) {
+		this.symmetricTransportKey = symmetricTransportKey;
+	}
+
+	public List<Algorithm13Code> getSymmetricTransportKeyAlgorithm() {
+		return symmetricTransportKeyAlgorithm;
+	}
+
+	public void setSymmetricTransportKeyAlgorithm(List<Algorithm13Code> symmetricTransportKeyAlgorithm) {
+		this.symmetricTransportKeyAlgorithm = symmetricTransportKeyAlgorithm;
+	}
+
+	public List<Algorithm15Code> getSymmetricEncryptionAlgorithm() {
+		return symmetricEncryptionAlgorithm;
+	}
+
+	public void setSymmetricEncryptionAlgorithm(List<Algorithm15Code> symmetricEncryptionAlgorithm) {
+		this.symmetricEncryptionAlgorithm = symmetricEncryptionAlgorithm;
+	}
+
+	public List<EncryptionFormat1Code> getEncryptionFormat() {
+		return encryptionFormat;
+	}
+
+	public void setEncryptionFormat(List<EncryptionFormat1Code> encryptionFormat) {
+		this.encryptionFormat = encryptionFormat;
 	}
 }

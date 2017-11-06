@@ -30,18 +30,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AddressTypeCode#Residential
- * AddressTypeCode.Residential}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AddressTypeCode#Business
- * AddressTypeCode.Business}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AddressTypeCode#Postal
- * AddressTypeCode.Postal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AddressTypeCode#POBox
- * AddressTypeCode.POBox}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AddressTypeCode#MailTo
- * AddressTypeCode.MailTo}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AddressTypeCode#DeliveryTo
- * AddressTypeCode.DeliveryTo}</li>
+ * {@linkplain com.tools20022.repository.codeset.AddressTypeCode#mmResidential
+ * AddressTypeCode.mmResidential}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AddressTypeCode#mmBusiness
+ * AddressTypeCode.mmBusiness}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AddressTypeCode#mmPostal
+ * AddressTypeCode.mmPostal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AddressTypeCode#mmPOBox
+ * AddressTypeCode.mmPOBox}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AddressTypeCode#mmMailTo
+ * AddressTypeCode.mmMailTo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AddressTypeCode#mmDeliveryTo
+ * AddressTypeCode.mmDeliveryTo}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +99,7 @@ public class AddressTypeCode {
 	 * definition} = "Address is the home address."</li>
 	 * </ul>
 	 */
-	public static final MMCode Residential = new MMCode() {
+	public static final MMCode mmResidential = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Residential";
@@ -128,7 +129,7 @@ public class AddressTypeCode {
 	 * definition} = "Address is the business address."</li>
 	 * </ul>
 	 */
-	public static final MMCode Business = new MMCode() {
+	public static final MMCode mmBusiness = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Business";
@@ -158,7 +159,7 @@ public class AddressTypeCode {
 	 * definition} = "Address is the complete postal address."</li>
 	 * </ul>
 	 */
-	public static final MMCode Postal = new MMCode() {
+	public static final MMCode mmPostal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Postal";
@@ -188,7 +189,7 @@ public class AddressTypeCode {
 	 * definition} = "Address is a postal office (PO) box."</li>
 	 * </ul>
 	 */
-	public static final MMCode POBox = new MMCode() {
+	public static final MMCode mmPOBox = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "POBox";
@@ -218,7 +219,7 @@ public class AddressTypeCode {
 	 * definition} = "Address is the address to which mail is sent."</li>
 	 * </ul>
 	 */
-	public static final MMCode MailTo = new MMCode() {
+	public static final MMCode mmMailTo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MailTo";
@@ -249,7 +250,7 @@ public class AddressTypeCode {
 	 * "Address is the address to which delivery is to take place."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveryTo = new MMCode() {
+	public static final MMCode mmDeliveryTo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeliveryTo";
@@ -262,13 +263,13 @@ public class AddressTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HOME");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AddressTypeCode";
 				definition = "Specifies the type of address.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AddressTypeCode.Residential, com.tools20022.repository.codeset.AddressTypeCode.Business, com.tools20022.repository.codeset.AddressTypeCode.Postal,
-						com.tools20022.repository.codeset.AddressTypeCode.POBox, com.tools20022.repository.codeset.AddressTypeCode.MailTo, com.tools20022.repository.codeset.AddressTypeCode.DeliveryTo);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AddressTypeCode.mmResidential, com.tools20022.repository.codeset.AddressTypeCode.mmBusiness, com.tools20022.repository.codeset.AddressTypeCode.mmPostal,
+						com.tools20022.repository.codeset.AddressTypeCode.mmPOBox, com.tools20022.repository.codeset.AddressTypeCode.mmMailTo, com.tools20022.repository.codeset.AddressTypeCode.mmDeliveryTo);
 				derivation_lazy = () -> Arrays.asList(AddressType2Code.mmObject(), AddressType1Code.mmObject());
 			}
 		});

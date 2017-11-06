@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GoodTillBookingInstruction1Code#BookOnExecutionDay
- * GoodTillBookingInstruction1Code.BookOnExecutionDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.GoodTillBookingInstruction1Code#mmBookOnExecutionDay
+ * GoodTillBookingInstruction1Code.mmBookOnExecutionDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GoodTillBookingInstruction1Code#AccumulateTillEnd
- * GoodTillBookingInstruction1Code.AccumulateTillEnd}</li>
+ * {@linkplain com.tools20022.repository.codeset.GoodTillBookingInstruction1Code#mmAccumulateTillEnd
+ * GoodTillBookingInstruction1Code.mmAccumulateTillEnd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GoodTillBookingInstruction1Code#AccumulateTillTold
- * GoodTillBookingInstruction1Code.AccumulateTillTold}</li>
+ * {@linkplain com.tools20022.repository.codeset.GoodTillBookingInstruction1Code#mmAccumulateTillTold
+ * GoodTillBookingInstruction1Code.mmAccumulateTillTold}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class GoodTillBookingInstruction1Code extends GoodTillBookingInstructionC
 	 * name} = "BookOnExecutionDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode BookOnExecutionDay = new MMCode() {
+	public static final MMCode mmBookOnExecutionDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookOnExecutionDay";
@@ -110,7 +110,7 @@ public class GoodTillBookingInstruction1Code extends GoodTillBookingInstructionC
 	 * name} = "AccumulateTillEnd"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccumulateTillEnd = new MMCode() {
+	public static final MMCode mmAccumulateTillEnd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulateTillEnd";
@@ -133,7 +133,7 @@ public class GoodTillBookingInstruction1Code extends GoodTillBookingInstructionC
 	 * name} = "AccumulateTillTold"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccumulateTillTold = new MMCode() {
+	public static final MMCode mmAccumulateTillTold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulateTillTold";
@@ -144,13 +144,13 @@ public class GoodTillBookingInstruction1Code extends GoodTillBookingInstructionC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOEX");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GoodTillBookingInstruction1Code";
 				definition = "States whether executions are booked out or accumulated on a partially filled good till order on the day of execution or to accumulate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GoodTillBookingInstruction1Code.BookOnExecutionDay, com.tools20022.repository.codeset.GoodTillBookingInstruction1Code.AccumulateTillEnd,
-						com.tools20022.repository.codeset.GoodTillBookingInstruction1Code.AccumulateTillTold);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GoodTillBookingInstruction1Code.mmBookOnExecutionDay, com.tools20022.repository.codeset.GoodTillBookingInstruction1Code.mmAccumulateTillEnd,
+						com.tools20022.repository.codeset.GoodTillBookingInstruction1Code.mmAccumulateTillTold);
 				trace_lazy = () -> GoodTillBookingInstructionCode.mmObject();
 			}
 		});

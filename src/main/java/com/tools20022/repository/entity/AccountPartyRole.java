@@ -23,6 +23,7 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.msg.AccountAndParties2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Role played by a party in the context of account operations.
@@ -36,16 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AccountPartyRole#Account
- * AccountPartyRole.Account}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Account#PartyRole
- * Account.PartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountPartyRole#mmAccount
+ * AccountPartyRole.mmAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -72,6 +65,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * RepresentativeOfficer}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmPartyRole
+ * Account.mmPartyRole}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
@@ -85,8 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountPartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Account> account;
 	/**
 	 * Identifies the account for which a party plays a role.
 	 * <p>
@@ -108,75 +110,75 @@ public class AccountPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Account#PartyRole
-	 * Account.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmPartyRole
+	 * Account.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary5#Account
-	 * Intermediary5.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary12#Account
-	 * Intermediary12.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary1#Account
-	 * Intermediary1.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary7#Account
-	 * Intermediary7.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary6#Account
-	 * Intermediary6.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary13#Account
-	 * Intermediary13.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary11#Account
-	 * Intermediary11.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary2#Account
-	 * Intermediary2.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary3#Account
-	 * Intermediary3.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary21#Account
-	 * Intermediary21.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary23#Account
-	 * Intermediary23.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary22#Account
-	 * Intermediary22.Account}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification59#AccountNumber
-	 * PartyIdentification59.AccountNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary17#Account
-	 * Intermediary17.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary18#Account
-	 * Intermediary18.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary24#Account
-	 * Intermediary24.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary26#Account
-	 * Intermediary26.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary25#Account
-	 * Intermediary25.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary27#Account
-	 * Intermediary27.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary32#Account
-	 * Intermediary32.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary36#Account
-	 * Intermediary36.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary34#Account
-	 * Intermediary34.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary33#Account
-	 * Intermediary33.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary35#Account
-	 * Intermediary35.Account}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary37#Account
-	 * Intermediary37.Account}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AccountPartyRole
 	 * AccountPartyRole}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary5#mmAccount
+	 * Intermediary5.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary12#mmAccount
+	 * Intermediary12.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary1#mmAccount
+	 * Intermediary1.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary7#mmAccount
+	 * Intermediary7.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary6#mmAccount
+	 * Intermediary6.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary13#mmAccount
+	 * Intermediary13.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary11#mmAccount
+	 * Intermediary11.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary2#mmAccount
+	 * Intermediary2.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary3#mmAccount
+	 * Intermediary3.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary21#mmAccount
+	 * Intermediary21.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary23#mmAccount
+	 * Intermediary23.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary22#mmAccount
+	 * Intermediary22.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification59#mmAccountNumber
+	 * PartyIdentification59.mmAccountNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary17#mmAccount
+	 * Intermediary17.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary18#mmAccount
+	 * Intermediary18.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary24#mmAccount
+	 * Intermediary24.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary26#mmAccount
+	 * Intermediary26.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary25#mmAccount
+	 * Intermediary25.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary27#mmAccount
+	 * Intermediary27.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary32#mmAccount
+	 * Intermediary32.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary36#mmAccount
+	 * Intermediary36.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary34#mmAccount
+	 * Intermediary34.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary33#mmAccount
+	 * Intermediary33.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary35#mmAccount
+	 * Intermediary35.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary37#mmAccount
+	 * Intermediary37.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -188,42 +190,52 @@ public class AccountPartyRole extends Role {
 	 * definition} = "Identifies the account for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Account = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary5.Account, com.tools20022.repository.msg.Intermediary12.Account, com.tools20022.repository.msg.Intermediary1.Account,
-					com.tools20022.repository.msg.Intermediary7.Account, com.tools20022.repository.msg.Intermediary6.Account, com.tools20022.repository.msg.Intermediary13.Account, com.tools20022.repository.msg.Intermediary11.Account,
-					com.tools20022.repository.msg.Intermediary2.Account, com.tools20022.repository.msg.Intermediary3.Account, com.tools20022.repository.msg.Intermediary21.Account, com.tools20022.repository.msg.Intermediary23.Account,
-					com.tools20022.repository.msg.Intermediary22.Account, com.tools20022.repository.msg.PartyIdentification59.AccountNumber, com.tools20022.repository.msg.Intermediary17.Account,
-					com.tools20022.repository.msg.Intermediary18.Account, com.tools20022.repository.msg.Intermediary24.Account, com.tools20022.repository.msg.Intermediary26.Account, com.tools20022.repository.msg.Intermediary25.Account,
-					com.tools20022.repository.msg.Intermediary27.Account, com.tools20022.repository.msg.Intermediary32.Account, com.tools20022.repository.msg.Intermediary36.Account, com.tools20022.repository.msg.Intermediary34.Account,
-					com.tools20022.repository.msg.Intermediary33.Account, com.tools20022.repository.msg.Intermediary35.Account, com.tools20022.repository.msg.Intermediary37.Account);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary5.mmAccount, com.tools20022.repository.msg.Intermediary12.mmAccount, com.tools20022.repository.msg.Intermediary1.mmAccount,
+					com.tools20022.repository.msg.Intermediary7.mmAccount, com.tools20022.repository.msg.Intermediary6.mmAccount, com.tools20022.repository.msg.Intermediary13.mmAccount,
+					com.tools20022.repository.msg.Intermediary11.mmAccount, com.tools20022.repository.msg.Intermediary2.mmAccount, com.tools20022.repository.msg.Intermediary3.mmAccount,
+					com.tools20022.repository.msg.Intermediary21.mmAccount, com.tools20022.repository.msg.Intermediary23.mmAccount, com.tools20022.repository.msg.Intermediary22.mmAccount,
+					com.tools20022.repository.msg.PartyIdentification59.mmAccountNumber, com.tools20022.repository.msg.Intermediary17.mmAccount, com.tools20022.repository.msg.Intermediary18.mmAccount,
+					com.tools20022.repository.msg.Intermediary24.mmAccount, com.tools20022.repository.msg.Intermediary26.mmAccount, com.tools20022.repository.msg.Intermediary25.mmAccount,
+					com.tools20022.repository.msg.Intermediary27.mmAccount, com.tools20022.repository.msg.Intermediary32.mmAccount, com.tools20022.repository.msg.Intermediary36.mmAccount,
+					com.tools20022.repository.msg.Intermediary34.mmAccount, com.tools20022.repository.msg.Intermediary33.mmAccount, com.tools20022.repository.msg.Intermediary35.mmAccount,
+					com.tools20022.repository.msg.Intermediary37.mmAccount);
 			elementContext_lazy = () -> AccountPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Identifies the account for which a party plays a role.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.PartyRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountPartyRole";
 				definition = "Role played by a party in the context of account operations.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.PartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmPartyRole);
 				subType_lazy = () -> Arrays.asList(AccountOwnerRole.mmObject(), InvestmentAccountPartyRole.mmObject(), IntermediaryRole.mmObject(), AccountServicerRole.mmObject(), AccountResponsiblePartyRole.mmObject(),
 						TreasuryManager.mmObject(), AccountInformationRecipientRole.mmObject(), AuthorisedAccountModifier.mmObject(), RepresentativeOfficer.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountPartyRole.Account);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountPartyRole.mmAccount);
 				derivationComponent_lazy = () -> Arrays.asList(AccountAndParties2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Account> getAccount() {
+		return account;
+	}
+
+	public void setAccount(List<com.tools20022.repository.entity.Account> account) {
+		this.account = account;
 	}
 }

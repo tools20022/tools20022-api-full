@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.CommercialTrade;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Commercial details of a trade transaction between a buyer and a seller.
@@ -35,27 +36,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem4#PurchaseOrderReference
- * LineItem4.PurchaseOrderReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem4#CommercialLineItems
- * LineItem4.CommercialLineItems}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem4#LineItemsTotalAmount
- * LineItem4.LineItemsTotalAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem4#Incoterms
- * LineItem4.Incoterms}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem4#Adjustment
- * LineItem4.Adjustment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem4#FreightCharges
- * LineItem4.FreightCharges}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem4#Tax LineItem4.Tax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem4#TotalNetAmount
- * LineItem4.TotalNetAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem4#mmPurchaseOrderReference
+ * LineItem4.mmPurchaseOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem4#BuyerDefinedInformation
- * LineItem4.BuyerDefinedInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem4#mmCommercialLineItems
+ * LineItem4.mmCommercialLineItems}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItem4#SellerDefinedInformation
- * LineItem4.SellerDefinedInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItem4#mmLineItemsTotalAmount
+ * LineItem4.mmLineItemsTotalAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem4#mmIncoterms
+ * LineItem4.mmIncoterms}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem4#mmAdjustment
+ * LineItem4.mmAdjustment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem4#mmFreightCharges
+ * LineItem4.mmFreightCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem4#mmTax
+ * LineItem4.mmTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem4#mmTotalNetAmount
+ * LineItem4.mmTotalNetAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.LineItem4#mmBuyerDefinedInformation
+ * LineItem4.mmBuyerDefinedInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.LineItem4#mmSellerDefinedInformation
+ * LineItem4.mmSellerDefinedInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LineItem4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification7 purchaseOrderReference;
 	/**
 	 * Reference to the purchase order of the underlying transaction.
 	 * <p>
@@ -92,8 +97,8 @@ public class LineItem4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PurchaseOrder#Identification
-	 * PurchaseOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PurchaseOrder#mmIdentification
+	 * PurchaseOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem4
@@ -112,21 +117,22 @@ public class LineItem4 {
 	 * "Reference to the purchase order of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PurchaseOrderReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPurchaseOrderReference = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmIdentification;
 			componentContext_lazy = () -> LineItem4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.Identification;
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Reference to the purchase order of the underlying transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.LineItemDetails6> commercialLineItems;
 	/**
 	 * Goods which are the subject of the invoice.
 	 * <p>
@@ -138,8 +144,8 @@ public class LineItem4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#LineItem
-	 * Invoice.LineItem}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmLineItem
+	 * Invoice.mmLineItem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem4
@@ -157,20 +163,21 @@ public class LineItem4 {
 	 * definition} = "Goods which are the subject of the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommercialLineItems = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommercialLineItems = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmLineItem;
 			componentContext_lazy = () -> LineItem4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.LineItem;
 			isDerived = false;
 			xmlTag = "ComrclLineItms";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialLineItems";
 			definition = "Goods which are the subject of the invoice.";
 			minOccurs = 1;
-			type_lazy = () -> LineItemDetails6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LineItemDetails6.mmObject();
 		}
 	};
+	protected CurrencyAndAmount lineItemsTotalAmount;
 	/**
 	 * Specifies the total amount of all line items (incl. their adjustments).
 	 * <p>
@@ -184,8 +191,8 @@ public class LineItem4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#TotalInvoiceAmount
-	 * Invoice.TotalInvoiceAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalInvoiceAmount
+	 * Invoice.mmTotalInvoiceAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem4
@@ -205,20 +212,21 @@ public class LineItem4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LineItemsTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLineItemsTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> LineItem4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.TotalInvoiceAmount;
 			isDerived = false;
 			xmlTag = "LineItmsTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItemsTotalAmount";
 			definition = "Specifies the total amount of all line items (incl. their adjustments).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected Incoterms2 incoterms;
 	/**
 	 * Specifies the applicable Incoterm and associated location.
 	 * <p>
@@ -229,8 +237,8 @@ public class LineItem4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#Incoterms
-	 * Transport.Incoterms}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmIncoterms
+	 * Transport.mmIncoterms}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem4
@@ -249,21 +257,22 @@ public class LineItem4 {
 	 * "Specifies the applicable Incoterm and associated location."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Incoterms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIncoterms = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmIncoterms;
 			componentContext_lazy = () -> LineItem4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.Incoterms;
 			isDerived = false;
 			xmlTag = "Incotrms";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incoterms";
 			definition = "Specifies the applicable Incoterm and associated location.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Incoterms2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Incoterms2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Adjustment4> adjustment;
 	/**
 	 * Variance on price for the goods.
 	 * <p>
@@ -275,8 +284,8 @@ public class LineItem4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#PriceAdjustment
-	 * Price.PriceAdjustment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmPriceAdjustment
+	 * Price.mmPriceAdjustment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem4
@@ -294,20 +303,21 @@ public class LineItem4 {
 	 * definition} = "Variance on price for the goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Adjustment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdjustment = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmPriceAdjustment;
 			componentContext_lazy = () -> LineItem4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.PriceAdjustment;
 			isDerived = false;
 			xmlTag = "Adjstmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
 			definition = "Variance on price for the goods.";
 			minOccurs = 0;
-			type_lazy = () -> Adjustment4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmObject();
 		}
 	};
+	protected Charge13 freightCharges;
 	/**
 	 * Charges related to the conveyance of goods.
 	 * <p>
@@ -318,8 +328,8 @@ public class LineItem4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#TransportCharges
-	 * Transport.TransportCharges}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmTransportCharges
+	 * Transport.mmTransportCharges}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem4
@@ -337,21 +347,22 @@ public class LineItem4 {
 	 * definition} = "Charges related to the conveyance of goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FreightCharges = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFreightCharges = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmTransportCharges;
 			componentContext_lazy = () -> LineItem4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.TransportCharges;
 			isDerived = false;
 			xmlTag = "FrghtChrgs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreightCharges";
 			definition = "Charges related to the conveyance of goods.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Charge13.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Charge13.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Tax12> tax;
 	/**
 	 * Amount of money due to the government or tax authority, according to
 	 * various pre-defined parameters linked to the value of the goods in a
@@ -364,7 +375,8 @@ public class LineItem4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Product#Tax Product.Tax}</li>
+	 * {@linkplain com.tools20022.repository.entity.Product#mmTax Product.mmTax}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem4
@@ -384,20 +396,21 @@ public class LineItem4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Tax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmTax;
 			componentContext_lazy = () -> LineItem4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.Tax;
 			isDerived = false;
 			xmlTag = "Tax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters linked to the value of the goods in a trade transaction.";
 			minOccurs = 0;
-			type_lazy = () -> Tax12.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Tax12.mmObject();
 		}
 	};
+	protected CurrencyAndAmount totalNetAmount;
 	/**
 	 * Total net amount of a trade transaction. Total amount resulting from the
 	 * gross amount plus freight charges, tax and plus/minus Adjustments.
@@ -412,8 +425,8 @@ public class LineItem4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#TotalInvoiceAmount
-	 * Invoice.TotalInvoiceAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalInvoiceAmount
+	 * Invoice.mmTotalInvoiceAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.LineItem4
@@ -433,20 +446,21 @@ public class LineItem4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNetAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> LineItem4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.TotalInvoiceAmount;
 			isDerived = false;
 			xmlTag = "TtlNetAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNetAmount";
 			definition = "Total net amount of a trade transaction. Total amount resulting from the gross amount plus freight charges, tax and plus/minus Adjustments.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.UserDefinedInformation1> buyerDefinedInformation;
 	/**
 	 * Information important for the users of the message/service, which cannot
 	 * be captured in any other message component/element. For example:
@@ -477,7 +491,7 @@ public class LineItem4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BuyerDefinedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBuyerDefinedInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LineItem4.mmObject();
 			isDerived = false;
@@ -486,10 +500,11 @@ public class LineItem4 {
 			name = "BuyerDefinedInformation";
 			definition = "Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.";
 			minOccurs = 0;
-			type_lazy = () -> UserDefinedInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.UserDefinedInformation1> sellerDefinedInformation;
 	/**
 	 * Information important for the users of the message/service, which cannot
 	 * be captured in any other message component/element. For example:
@@ -520,7 +535,7 @@ public class LineItem4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SellerDefinedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSellerDefinedInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LineItem4.mmObject();
 			isDerived = false;
@@ -529,25 +544,105 @@ public class LineItem4 {
 			name = "SellerDefinedInformation";
 			definition = "Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.";
 			minOccurs = 0;
-			type_lazy = () -> UserDefinedInformation1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem4.PurchaseOrderReference, com.tools20022.repository.msg.LineItem4.CommercialLineItems,
-						com.tools20022.repository.msg.LineItem4.LineItemsTotalAmount, com.tools20022.repository.msg.LineItem4.Incoterms, com.tools20022.repository.msg.LineItem4.Adjustment,
-						com.tools20022.repository.msg.LineItem4.FreightCharges, com.tools20022.repository.msg.LineItem4.Tax, com.tools20022.repository.msg.LineItem4.TotalNetAmount,
-						com.tools20022.repository.msg.LineItem4.BuyerDefinedInformation, com.tools20022.repository.msg.LineItem4.SellerDefinedInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem4.mmPurchaseOrderReference, com.tools20022.repository.msg.LineItem4.mmCommercialLineItems,
+						com.tools20022.repository.msg.LineItem4.mmLineItemsTotalAmount, com.tools20022.repository.msg.LineItem4.mmIncoterms, com.tools20022.repository.msg.LineItem4.mmAdjustment,
+						com.tools20022.repository.msg.LineItem4.mmFreightCharges, com.tools20022.repository.msg.LineItem4.mmTax, com.tools20022.repository.msg.LineItem4.mmTotalNetAmount,
+						com.tools20022.repository.msg.LineItem4.mmBuyerDefinedInformation, com.tools20022.repository.msg.LineItem4.mmSellerDefinedInformation);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LineItem4";
 				definition = "Commercial details of a trade transaction between a buyer and a seller.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification7 getPurchaseOrderReference() {
+		return purchaseOrderReference;
+	}
+
+	public void setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+		this.purchaseOrderReference = purchaseOrderReference;
+	}
+
+	public List<LineItemDetails6> getCommercialLineItems() {
+		return commercialLineItems;
+	}
+
+	public void setCommercialLineItems(List<com.tools20022.repository.msg.LineItemDetails6> commercialLineItems) {
+		this.commercialLineItems = commercialLineItems;
+	}
+
+	public CurrencyAndAmount getLineItemsTotalAmount() {
+		return lineItemsTotalAmount;
+	}
+
+	public void setLineItemsTotalAmount(CurrencyAndAmount lineItemsTotalAmount) {
+		this.lineItemsTotalAmount = lineItemsTotalAmount;
+	}
+
+	public Incoterms2 getIncoterms() {
+		return incoterms;
+	}
+
+	public void setIncoterms(com.tools20022.repository.msg.Incoterms2 incoterms) {
+		this.incoterms = incoterms;
+	}
+
+	public List<Adjustment4> getAdjustment() {
+		return adjustment;
+	}
+
+	public void setAdjustment(List<com.tools20022.repository.msg.Adjustment4> adjustment) {
+		this.adjustment = adjustment;
+	}
+
+	public Charge13 getFreightCharges() {
+		return freightCharges;
+	}
+
+	public void setFreightCharges(com.tools20022.repository.msg.Charge13 freightCharges) {
+		this.freightCharges = freightCharges;
+	}
+
+	public List<Tax12> getTax() {
+		return tax;
+	}
+
+	public void setTax(List<com.tools20022.repository.msg.Tax12> tax) {
+		this.tax = tax;
+	}
+
+	public CurrencyAndAmount getTotalNetAmount() {
+		return totalNetAmount;
+	}
+
+	public void setTotalNetAmount(CurrencyAndAmount totalNetAmount) {
+		this.totalNetAmount = totalNetAmount;
+	}
+
+	public List<UserDefinedInformation1> getBuyerDefinedInformation() {
+		return buyerDefinedInformation;
+	}
+
+	public void setBuyerDefinedInformation(List<com.tools20022.repository.msg.UserDefinedInformation1> buyerDefinedInformation) {
+		this.buyerDefinedInformation = buyerDefinedInformation;
+	}
+
+	public List<UserDefinedInformation1> getSellerDefinedInformation() {
+		return sellerDefinedInformation;
+	}
+
+	public void setSellerDefinedInformation(List<com.tools20022.repository.msg.UserDefinedInformation1> sellerDefinedInformation) {
+		this.sellerDefinedInformation = sellerDefinedInformation;
 	}
 }

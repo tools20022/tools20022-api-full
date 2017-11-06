@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification3#Algorithm
- * AlgorithmIdentification3.Algorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification3#mmAlgorithm
+ * AlgorithmIdentification3.mmAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification3#Parameter
- * AlgorithmIdentification3.Parameter}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification3#mmParameter
+ * AlgorithmIdentification3.mmParameter}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AlgorithmIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm3Code algorithm;
 	/**
 	 * Identification of the algorithm.
 	 * <p>
@@ -105,13 +106,13 @@ public class AlgorithmIdentification3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification10#Algorithm
-	 * AlgorithmIdentification10.Algorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification10#mmAlgorithm
+	 * AlgorithmIdentification10.mmAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification3.mmObject();
 			isDerived = false;
@@ -119,12 +120,13 @@ public class AlgorithmIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification10.Algorithm);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification10.mmAlgorithm);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm3Code.mmObject();
 		}
 	};
+	protected Parameter1 parameter;
 	/**
 	 * Parameters associated to the algorithm.
 	 * <p>
@@ -152,13 +154,13 @@ public class AlgorithmIdentification3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification10#Parameter
-	 * AlgorithmIdentification10.Parameter}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification10#mmParameter
+	 * AlgorithmIdentification10.mmParameter}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Parameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification3.mmObject();
 			isDerived = false;
@@ -166,26 +168,42 @@ public class AlgorithmIdentification3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters associated to the algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification10.Parameter);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification10.mmParameter);
 			maxOccurs = 1;
-			type_lazy = () -> Parameter1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Parameter1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification3.Algorithm, com.tools20022.repository.msg.AlgorithmIdentification3.Parameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification3.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification3.mmParameter);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification3";
 				definition = "Identification of a cryptographic algorithm and parameters for the MAC computation.";
-				previousVersion_lazy = () -> AlgorithmIdentification1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification4.mmObject(), AlgorithmIdentification10.mmObject());
+				previousVersion_lazy = () -> AlgorithmIdentification1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm3Code getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Algorithm3Code algorithm) {
+		this.algorithm = algorithm;
+	}
+
+	public Parameter1 getParameter() {
+		return parameter;
+	}
+
+	public void setParameter(com.tools20022.repository.msg.Parameter1 parameter) {
+		this.parameter = parameter;
 	}
 }

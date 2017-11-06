@@ -37,26 +37,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#SettledAmount
- * IntraBalance2.SettledAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#mmSettledAmount
+ * IntraBalance2.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalance2#PreviouslySettledAmount
- * IntraBalance2.PreviouslySettledAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalance2#mmPreviouslySettledAmount
+ * IntraBalance2.mmPreviouslySettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalance2#RemainingSettlementAmount
- * IntraBalance2.RemainingSettlementAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#SettlementDate
- * IntraBalance2.SettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#BalanceFrom
- * IntraBalance2.BalanceFrom}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#BalanceTo
- * IntraBalance2.BalanceTo}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalance2#mmRemainingSettlementAmount
+ * IntraBalance2.mmRemainingSettlementAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#mmSettlementDate
+ * IntraBalance2.mmSettlementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#mmBalanceFrom
+ * IntraBalance2.mmBalanceFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalance2#mmBalanceTo
+ * IntraBalance2.mmBalanceTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalance2#CashSubBalanceIdentification
- * IntraBalance2.CashSubBalanceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalance2#mmCashSubBalanceIdentification
+ * IntraBalance2.mmCashSubBalanceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalance2#InstructionProcessingAdditionalDetails
- * IntraBalance2.InstructionProcessingAdditionalDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalance2#mmInstructionProcessingAdditionalDetails
+ * IntraBalance2.mmInstructionProcessingAdditionalDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Amount2Choice settledAmount;
 	/**
 	 * Amount of money effectively settled and which will be credited to/debited
 	 * from the account owner's cash account. It may differ from the instructed
@@ -92,8 +93,8 @@ public class IntraBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Amount
-	 * CashEntry.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+	 * CashEntry.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,21 +114,22 @@ public class IntraBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettledAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettledAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
 			componentContext_lazy = () -> IntraBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.Amount;
 			isDerived = false;
 			xmlTag = "SttldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Amount of money effectively settled and which will be credited to/debited from the account owner's cash account. It may differ from the instructed settlement amount based on market tolerance level.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Amount2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	protected Amount2Choice previouslySettledAmount;
 	/**
 	 * Amount of money previously settled.
 	 * <p>
@@ -139,8 +141,8 @@ public class IntraBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Amount
-	 * CashEntry.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+	 * CashEntry.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,21 +160,22 @@ public class IntraBalance2 {
 	 * definition} = "Amount of money previously settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviouslySettledAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviouslySettledAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
 			componentContext_lazy = () -> IntraBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.Amount;
 			isDerived = false;
 			xmlTag = "PrevslySttldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySettledAmount";
 			definition = "Amount of money previously settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Amount2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	protected Amount2Choice remainingSettlementAmount;
 	/**
 	 * Amount of money remaining to be settled.
 	 * <p>
@@ -184,8 +187,8 @@ public class IntraBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Amount
-	 * CashEntry.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+	 * CashEntry.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,21 +206,22 @@ public class IntraBalance2 {
 	 * definition} = "Amount of money remaining to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RemainingSettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRemainingSettlementAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
 			componentContext_lazy = () -> IntraBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.Amount;
 			isDerived = false;
 			xmlTag = "RmngSttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingSettlementAmount";
 			definition = "Amount of money remaining to be settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Amount2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice settlementDate;
 	/**
 	 * Date and time at which the amount of money is moved.
 	 * <p>
@@ -231,8 +235,8 @@ public class IntraBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementDate
-	 * CashSettlement.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+	 * CashSettlement.mmInterbankSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -250,20 +254,21 @@ public class IntraBalance2 {
 	 * definition} = "Date and time at which the amount of money is moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> IntraBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementDate;
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which the amount of money is moved.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom;
 	/**
 	 * Balance from which the amount of money is moved.
 	 * <p>
@@ -276,8 +281,8 @@ public class IntraBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CashBalance
-	 * CashEntry.CashBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCashBalance
+	 * CashEntry.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -295,21 +300,22 @@ public class IntraBalance2 {
 	 * definition} = "Balance from which the amount of money is moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashBalance;
 			componentContext_lazy = () -> IntraBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CashBalance;
 			isDerived = false;
 			xmlTag = "BalFr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the amount of money is moved.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
 		}
 	};
+	protected CashSubBalanceTypeAndQuantityBreakdown1 balanceTo;
 	/**
 	 * Balance to which the amount of money is moved.
 	 * <p>
@@ -322,8 +328,8 @@ public class IntraBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CashBalance
-	 * CashEntry.CashBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCashBalance
+	 * CashEntry.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -341,21 +347,22 @@ public class IntraBalance2 {
 	 * definition} = "Balance to which the amount of money is moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashBalance;
 			componentContext_lazy = () -> IntraBalance2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CashBalance;
 			isDerived = false;
 			xmlTag = "BalTo";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the amount of money is moved.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
 		}
 	};
+	protected GenericIdentification37 cashSubBalanceIdentification;
 	/**
 	 * Number identifying a lot constituting the sub-balance.
 	 * <p>
@@ -386,21 +393,22 @@ public class IntraBalance2 {
 	 * definition} = "Number identifying a lot constituting the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashSubBalanceIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashSubBalanceIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalance2.mmObject();
 			businessComponentTrace_lazy = () -> CashBalance.mmObject();
+			componentContext_lazy = () -> IntraBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "CshSubBalId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSubBalanceIdentification";
 			definition = "Number identifying a lot constituting the sub-balance.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification37.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
 		}
 	};
+	protected Max350Text instructionProcessingAdditionalDetails;
 	/**
 	 * Provides additional settlement processing information which can not be
 	 * included within the structured fields of the message.
@@ -430,7 +438,7 @@ public class IntraBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionProcessingAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionProcessingAdditionalDetails = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalance2.mmObject();
 			isDerived = false;
@@ -438,8 +446,8 @@ public class IntraBalance2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingAdditionalDetails";
 			definition = "Provides additional settlement processing information which can not be included within the structured fields of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -447,16 +455,81 @@ public class IntraBalance2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalance2.SettledAmount, com.tools20022.repository.msg.IntraBalance2.PreviouslySettledAmount,
-						com.tools20022.repository.msg.IntraBalance2.RemainingSettlementAmount, com.tools20022.repository.msg.IntraBalance2.SettlementDate, com.tools20022.repository.msg.IntraBalance2.BalanceFrom,
-						com.tools20022.repository.msg.IntraBalance2.BalanceTo, com.tools20022.repository.msg.IntraBalance2.CashSubBalanceIdentification, com.tools20022.repository.msg.IntraBalance2.InstructionProcessingAdditionalDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalance2.mmSettledAmount, com.tools20022.repository.msg.IntraBalance2.mmPreviouslySettledAmount,
+						com.tools20022.repository.msg.IntraBalance2.mmRemainingSettlementAmount, com.tools20022.repository.msg.IntraBalance2.mmSettlementDate, com.tools20022.repository.msg.IntraBalance2.mmBalanceFrom,
+						com.tools20022.repository.msg.IntraBalance2.mmBalanceTo, com.tools20022.repository.msg.IntraBalance2.mmCashSubBalanceIdentification,
+						com.tools20022.repository.msg.IntraBalance2.mmInstructionProcessingAdditionalDetails);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalance2";
 				definition = "Details of the intra-balance movement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Amount2Choice getSettledAmount() {
+		return settledAmount;
+	}
+
+	public void setSettledAmount(Amount2Choice settledAmount) {
+		this.settledAmount = settledAmount;
+	}
+
+	public Amount2Choice getPreviouslySettledAmount() {
+		return previouslySettledAmount;
+	}
+
+	public void setPreviouslySettledAmount(Amount2Choice previouslySettledAmount) {
+		this.previouslySettledAmount = previouslySettledAmount;
+	}
+
+	public Amount2Choice getRemainingSettlementAmount() {
+		return remainingSettlementAmount;
+	}
+
+	public void setRemainingSettlementAmount(Amount2Choice remainingSettlementAmount) {
+		this.remainingSettlementAmount = remainingSettlementAmount;
+	}
+
+	public DateAndDateTimeChoice getSettlementDate() {
+		return settlementDate;
+	}
+
+	public void setSettlementDate(DateAndDateTimeChoice settlementDate) {
+		this.settlementDate = settlementDate;
+	}
+
+	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
+		return balanceFrom;
+	}
+
+	public void setBalanceFrom(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
+		this.balanceFrom = balanceFrom;
+	}
+
+	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
+		return balanceTo;
+	}
+
+	public void setBalanceTo(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1 balanceTo) {
+		this.balanceTo = balanceTo;
+	}
+
+	public GenericIdentification37 getCashSubBalanceIdentification() {
+		return cashSubBalanceIdentification;
+	}
+
+	public void setCashSubBalanceIdentification(com.tools20022.repository.msg.GenericIdentification37 cashSubBalanceIdentification) {
+		this.cashSubBalanceIdentification = cashSubBalanceIdentification;
+	}
+
+	public Max350Text getInstructionProcessingAdditionalDetails() {
+		return instructionProcessingAdditionalDetails;
+	}
+
+	public void setInstructionProcessingAdditionalDetails(Max350Text instructionProcessingAdditionalDetails) {
+		this.instructionProcessingAdditionalDetails = instructionProcessingAdditionalDetails;
 	}
 }

@@ -33,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Elements which allow to identify a meeting.
@@ -42,8 +43,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingReference2#ClassificationOrExtendedClassificationRule
- * MeetingReference2.ClassificationOrExtendedClassificationRule}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingReference2#mmClassificationOrExtendedClassificationRule
+ * MeetingReference2.mmClassificationOrExtendedClassificationRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -51,24 +52,24 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingReference2#MeetingIdentification
- * MeetingReference2.MeetingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingReference2#mmMeetingIdentification
+ * MeetingReference2.mmMeetingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingReference2#IssuerMeetingIdentification
- * MeetingReference2.IssuerMeetingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingReference2#mmIssuerMeetingIdentification
+ * MeetingReference2.mmIssuerMeetingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingReference2#MeetingDateAndTime
- * MeetingReference2.MeetingDateAndTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingReference2#Type
- * MeetingReference2.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingReference2#mmMeetingDateAndTime
+ * MeetingReference2.mmMeetingDateAndTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingReference2#mmType
+ * MeetingReference2.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingReference2#Classification
- * MeetingReference2.Classification}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingReference2#mmClassification
+ * MeetingReference2.mmClassification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingReference2#ExtendedClassification
- * MeetingReference2.ExtendedClassification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MeetingReference2#Location
- * MeetingReference2.Location}</li>
+ * {@linkplain com.tools20022.repository.msg.MeetingReference2#mmExtendedClassification
+ * MeetingReference2.mmExtendedClassification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MeetingReference2#mmLocation
+ * MeetingReference2.mmLocation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -78,15 +79,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV02#MeetingReference
- * MeetingCancellationV02.MeetingReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV02#mmMeetingReference
+ * MeetingCancellationV02.mmMeetingReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -101,6 +102,7 @@ import java.util.function.Supplier;
 public class MeetingReference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text meetingIdentification;
 	/**
 	 * Identification assigned to a general meeting by the party notifying the
 	 * meeting. It must be unique for the party notifying the meeting.
@@ -114,8 +116,8 @@ public class MeetingReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#Identification
-	 * Meeting.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmIdentification
+	 * Meeting.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -136,20 +138,21 @@ public class MeetingReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MeetingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMeetingIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmIdentification;
 			componentContext_lazy = () -> MeetingReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.Identification;
 			isDerived = false;
 			xmlTag = "MtgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingIdentification";
 			definition = "Identification assigned to a general meeting by the party notifying the meeting. It must be unique for the party notifying the meeting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text issuerMeetingIdentification;
 	/**
 	 * Identification assigned to a meeting by the issuer. It must be unique for
 	 * the issuer.
@@ -163,8 +166,8 @@ public class MeetingReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting#IssuerMeetingIdentification
-	 * IssuerMeeting.IssuerMeetingIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.IssuerMeeting#mmIssuerMeetingIdentification
+	 * IssuerMeeting.mmIssuerMeetingIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,20 +188,21 @@ public class MeetingReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerMeetingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerMeetingIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmIssuerMeetingIdentification;
 			componentContext_lazy = () -> MeetingReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.IssuerMeetingIdentification;
 			isDerived = false;
 			xmlTag = "IssrMtgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerMeetingIdentification";
 			definition = "Identification assigned to a meeting by the issuer. It must be unique for the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime meetingDateAndTime;
 	/**
 	 * Date and time at which the meeting will take place.
 	 * <p>
@@ -211,8 +215,8 @@ public class MeetingReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#DateAndTime
-	 * Meeting.DateAndTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmDateAndTime
+	 * Meeting.mmDateAndTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -231,20 +235,21 @@ public class MeetingReference2 {
 	 * definition} = "Date and time at which the meeting will take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MeetingDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMeetingDateAndTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmDateAndTime;
 			componentContext_lazy = () -> MeetingReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.DateAndTime;
 			isDerived = false;
 			xmlTag = "MtgDtAndTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingDateAndTime";
 			definition = "Date and time at which the meeting will take place.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected MeetingType2Code type;
 	/**
 	 * Specifies the type of meeting for which instructions are sent.
 	 * <p>
@@ -258,7 +263,8 @@ public class MeetingReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#Type Meeting.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmType
+	 * Meeting.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -278,20 +284,21 @@ public class MeetingReference2 {
 	 * "Specifies the type of meeting for which  instructions are sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmType;
 			componentContext_lazy = () -> MeetingReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of meeting for which  instructions are sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> MeetingType2Code.mmObject();
 		}
 	};
+	protected MeetingTypeClassification1Code classification;
 	/**
 	 * Classifies the type of meeting.
 	 * <p>
@@ -305,8 +312,8 @@ public class MeetingReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#MeetingEventClassification
-	 * Meeting.MeetingEventClassification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmMeetingEventClassification
+	 * Meeting.mmMeetingEventClassification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -325,20 +332,21 @@ public class MeetingReference2 {
 	 * definition} = "Classifies the type of meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Classification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmMeetingEventClassification;
 			componentContext_lazy = () -> MeetingReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.MeetingEventClassification;
 			isDerived = false;
 			xmlTag = "Clssfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Classification";
 			definition = "Classifies the type of meeting.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> MeetingTypeClassification1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedClassification;
 	/**
 	 * This code can be used in case another meeting classifications is
 	 * required.
@@ -353,8 +361,8 @@ public class MeetingReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#MeetingEventClassification
-	 * Meeting.MeetingEventClassification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmMeetingEventClassification
+	 * Meeting.mmMeetingEventClassification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -375,20 +383,21 @@ public class MeetingReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedClassification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmMeetingEventClassification;
 			componentContext_lazy = () -> MeetingReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.MeetingEventClassification;
 			isDerived = false;
 			xmlTag = "XtndedClssfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedClassification";
 			definition = "This code can be used in case another meeting classifications is required.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PostalAddress1> location;
 	/**
 	 * Place of the company meeting for the scheduled meeting date.
 	 * <p>
@@ -421,19 +430,19 @@ public class MeetingReference2 {
 	 * "Place of the company meeting for the scheduled meeting date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Location = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MeetingReference2.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> MeetingReference2.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Place of the company meeting for the scheduled meeting date.";
-			minOccurs = 0;
 			maxOccurs = 5;
-			type_lazy = () -> PostalAddress1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
 	/**
@@ -446,11 +455,11 @@ public class MeetingReference2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingReference2#Classification
-	 * MeetingReference2.Classification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingReference2#mmClassification
+	 * MeetingReference2.mmClassification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MeetingReference2#ExtendedClassification
-	 * MeetingReference2.ExtendedClassification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MeetingReference2#mmExtendedClassification
+	 * MeetingReference2.mmExtendedClassification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -470,25 +479,25 @@ public class MeetingReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ClassificationOrExtendedClassificationRule = new MMXor() {
+	public static final MMXor mmClassificationOrExtendedClassificationRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationOrExtendedClassificationRule";
 			definition = "Either Classification or ExtendedClassification may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingReference2.Classification, com.tools20022.repository.msg.MeetingReference2.ExtendedClassification);
 			messageComponent_lazy = () -> MeetingReference2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingReference2.mmClassification, com.tools20022.repository.msg.MeetingReference2.mmExtendedClassification);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingReference2.MeetingIdentification, com.tools20022.repository.msg.MeetingReference2.IssuerMeetingIdentification,
-						com.tools20022.repository.msg.MeetingReference2.MeetingDateAndTime, com.tools20022.repository.msg.MeetingReference2.Type, com.tools20022.repository.msg.MeetingReference2.Classification,
-						com.tools20022.repository.msg.MeetingReference2.ExtendedClassification, com.tools20022.repository.msg.MeetingReference2.Location);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingReference2.mmMeetingIdentification, com.tools20022.repository.msg.MeetingReference2.mmIssuerMeetingIdentification,
+						com.tools20022.repository.msg.MeetingReference2.mmMeetingDateAndTime, com.tools20022.repository.msg.MeetingReference2.mmType, com.tools20022.repository.msg.MeetingReference2.mmClassification,
+						com.tools20022.repository.msg.MeetingReference2.mmExtendedClassification, com.tools20022.repository.msg.MeetingReference2.mmLocation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingCancellationV02.mmMeetingReference);
 				trace_lazy = () -> Meeting.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingCancellationV02.MeetingReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -499,9 +508,65 @@ public class MeetingReference2 {
 				})).get();
 				name = "MeetingReference2";
 				definition = "Elements which allow to identify a meeting.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingReference2.ClassificationOrExtendedClassificationRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingReference2.mmClassificationOrExtendedClassificationRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMeetingIdentification() {
+		return meetingIdentification;
+	}
+
+	public void setMeetingIdentification(Max35Text meetingIdentification) {
+		this.meetingIdentification = meetingIdentification;
+	}
+
+	public Max35Text getIssuerMeetingIdentification() {
+		return issuerMeetingIdentification;
+	}
+
+	public void setIssuerMeetingIdentification(Max35Text issuerMeetingIdentification) {
+		this.issuerMeetingIdentification = issuerMeetingIdentification;
+	}
+
+	public ISODateTime getMeetingDateAndTime() {
+		return meetingDateAndTime;
+	}
+
+	public void setMeetingDateAndTime(ISODateTime meetingDateAndTime) {
+		this.meetingDateAndTime = meetingDateAndTime;
+	}
+
+	public MeetingType2Code getType() {
+		return type;
+	}
+
+	public void setType(MeetingType2Code type) {
+		this.type = type;
+	}
+
+	public MeetingTypeClassification1Code getClassification() {
+		return classification;
+	}
+
+	public void setClassification(MeetingTypeClassification1Code classification) {
+		this.classification = classification;
+	}
+
+	public Extended350Code getExtendedClassification() {
+		return extendedClassification;
+	}
+
+	public void setExtendedClassification(Extended350Code extendedClassification) {
+		this.extendedClassification = extendedClassification;
+	}
+
+	public List<PostalAddress1> getLocation() {
+		return location;
+	}
+
+	public void setLocation(List<com.tools20022.repository.msg.PostalAddress1> location) {
+		this.location = location;
 	}
 }

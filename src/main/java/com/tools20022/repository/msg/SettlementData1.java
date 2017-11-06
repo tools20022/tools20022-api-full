@@ -36,8 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementData1#SettlementStatusOrExtendedSettlementStatusRule
- * SettlementData1.SettlementStatusOrExtendedSettlementStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettlementStatusOrExtendedSettlementStatusRule
+ * SettlementData1.mmSettlementStatusOrExtendedSettlementStatusRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,37 +45,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementData1#CashFlowUniqueReference
- * SettlementData1.CashFlowUniqueReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmCashFlowUniqueReference
+ * SettlementData1.mmCashFlowUniqueReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementData1#SettlementSystemUniqueReference
- * SettlementData1.SettlementSystemUniqueReference}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettlementSystemUniqueReference
+ * SettlementData1.mmSettlementSystemUniqueReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementData1#SettlementAmount
- * SettlementData1.SettlementAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#SettledAmount
- * SettlementData1.SettledAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#RejectedAmount
- * SettlementData1.RejectedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#PayingParty
- * SettlementData1.PayingParty}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#ReceivingParty
- * SettlementData1.ReceivingParty}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#SettlementDate
- * SettlementData1.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettlementAmount
+ * SettlementData1.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementData1#SettlementStatus
- * SettlementData1.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettledAmount
+ * SettlementData1.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementData1#ExtendedSettlementStatus
- * SettlementData1.ExtendedSettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmRejectedAmount
+ * SettlementData1.mmRejectedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#mmPayingParty
+ * SettlementData1.mmPayingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementData1#SettlementStatusSubType
- * SettlementData1.SettlementStatusSubType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#Suspended
- * SettlementData1.Suspended}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#Pending
- * SettlementData1.Pending}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmReceivingParty
+ * SettlementData1.mmReceivingParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettlementDate
+ * SettlementData1.mmSettlementDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettlementStatus
+ * SettlementData1.mmSettlementStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmExtendedSettlementStatus
+ * SettlementData1.mmExtendedSettlementStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettlementStatusSubType
+ * SettlementData1.mmSettlementStatusSubType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#mmSuspended
+ * SettlementData1.mmSuspended}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementData1#mmPending
+ * SettlementData1.mmPending}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -84,8 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text cashFlowUniqueReference;
 	/**
 	 * Unique reference supplied by the trade processing system.
 	 * <p>
@@ -127,7 +132,7 @@ public class SettlementData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashFlowUniqueReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashFlowUniqueReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementData1.mmObject();
 			isDerived = false;
@@ -135,11 +140,12 @@ public class SettlementData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashFlowUniqueReference";
 			definition = "Unique reference supplied by the trade processing system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text settlementSystemUniqueReference;
 	/**
 	 * Unique reference assigned by a settlement system.
 	 * <p>
@@ -167,7 +173,7 @@ public class SettlementData1 {
 	 * definition} = "Unique reference assigned by a settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementSystemUniqueReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementSystemUniqueReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementData1.mmObject();
 			isDerived = false;
@@ -175,11 +181,12 @@ public class SettlementData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemUniqueReference";
 			definition = "Unique reference assigned by a settlement system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount settlementAmount;
 	/**
 	 * Original amount which should be settled. This information should be
 	 * provided when the trade is partially settled or when the settlement is
@@ -195,8 +202,8 @@ public class SettlementData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -217,20 +224,21 @@ public class SettlementData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> SettlementData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Original amount which should be settled. This information should be provided when the trade is partially settled or when the settlement is rejected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount settledAmount;
 	/**
 	 * Funds which the trading side is expected to receive.
 	 * <p>
@@ -244,8 +252,8 @@ public class SettlementData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementAmount
-	 * Obligation.RequestedSettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementAmount
+	 * Obligation.mmRequestedSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -264,20 +272,21 @@ public class SettlementData1 {
 	 * definition} = "Funds which the trading side is expected to receive."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettledAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementAmount;
 			componentContext_lazy = () -> SettlementData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementAmount;
 			isDerived = false;
 			xmlTag = "SttldAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Funds which the trading side is expected to receive.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount rejectedAmount;
 	/**
 	 * Amount that cannot be settled by a settlement system.
 	 * <p>
@@ -291,8 +300,8 @@ public class SettlementData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#RejectedAmount
-	 * TreasuryTradeSettlementStatus.RejectedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmRejectedAmount
+	 * TreasuryTradeSettlementStatus.mmRejectedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,20 +320,21 @@ public class SettlementData1 {
 	 * definition} = "Amount that cannot be settled by a settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmRejectedAmount;
 			componentContext_lazy = () -> SettlementData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.RejectedAmount;
 			isDerived = false;
 			xmlTag = "RjctdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedAmount";
 			definition = "Amount that cannot be settled by a settlement system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PartyIdentification7Choice payingParty;
 	/**
 	 * Specifies the party that pays the settlement amount.
 	 * <p>
@@ -337,8 +347,8 @@ public class SettlementData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -357,21 +367,22 @@ public class SettlementData1 {
 	 * definition} = "Specifies the party that pays the settlement amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PayingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPayingParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SettlementData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "PngPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingParty";
 			definition = "Specifies the party that pays the settlement amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification7Choice.mmObject();
 		}
 	};
+	protected PartyIdentification7Choice receivingParty;
 	/**
 	 * Specifies the party that receives the settlement amount.
 	 * <p>
@@ -384,8 +395,8 @@ public class SettlementData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -404,21 +415,22 @@ public class SettlementData1 {
 	 * definition} = "Specifies the party that receives the settlement amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SettlementData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcvgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingParty";
 			definition = "Specifies the party that receives the settlement amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification7Choice.mmObject();
 		}
 	};
+	protected ISODate settlementDate;
 	/**
 	 * Date on which the settlement is due to settle.
 	 * <p>
@@ -431,8 +443,8 @@ public class SettlementData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -451,20 +463,21 @@ public class SettlementData1 {
 	 * definition} = "Date on which the settlement is due to settle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> SettlementData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date on which the settlement is due to settle.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected SettlementStatus1Code settlementStatus;
 	/**
 	 * Specifies the status of a settlement eg rejected, settled or awaiting
 	 * authorisation.
@@ -479,8 +492,8 @@ public class SettlementData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#Settlement
-	 * TreasuryTradeSettlementStatus.Settlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmSettlement
+	 * TreasuryTradeSettlementStatus.mmSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -501,20 +514,21 @@ public class SettlementData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmSettlement;
 			componentContext_lazy = () -> SettlementData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.Settlement;
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Specifies the status of a settlement eg rejected, settled or awaiting authorisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementStatus1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedSettlementStatus;
 	/**
 	 * Description of the status of the settlement of a trade when no coded form
 	 * is available.
@@ -546,7 +560,7 @@ public class SettlementData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedSettlementStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedSettlementStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementData1.mmObject();
 			isDerived = false;
@@ -554,11 +568,12 @@ public class SettlementData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedSettlementStatus";
 			definition = "Description of the status of the settlement of a trade when no coded form is available.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected Max70Text settlementStatusSubType;
 	/**
 	 * Additional information about the cause of the rejection of a settlement.
 	 * <p>
@@ -588,7 +603,7 @@ public class SettlementData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementStatusSubType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementStatusSubType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementData1.mmObject();
 			isDerived = false;
@@ -596,11 +611,12 @@ public class SettlementData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusSubType";
 			definition = "Additional information about the cause of the rejection of a settlement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected YesNoIndicator suspended;
 	/**
 	 * Cash settlement is suspended.
 	 * <p>
@@ -614,8 +630,8 @@ public class SettlementData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#SettlementSuspended
-	 * TreasuryTradeSettlementStatus.SettlementSuspended}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmSettlementSuspended
+	 * TreasuryTradeSettlementStatus.mmSettlementSuspended}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -634,20 +650,21 @@ public class SettlementData1 {
 	 * definition} = "Cash settlement is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Suspended = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSuspended = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmSettlementSuspended;
 			componentContext_lazy = () -> SettlementData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.SettlementSuspended;
 			isDerived = false;
 			xmlTag = "Sspd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			definition = "Cash settlement is suspended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator pending;
 	/**
 	 * Cash settlement is pending.
 	 * <p>
@@ -661,8 +678,8 @@ public class SettlementData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#PendingSettlement
-	 * TreasuryTradeSettlementStatus.PendingSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradeSettlementStatus#mmPendingSettlement
+	 * TreasuryTradeSettlementStatus.mmPendingSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -681,17 +698,17 @@ public class SettlementData1 {
 	 * definition} = "Cash settlement is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Pending = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPending = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmPendingSettlement;
 			componentContext_lazy = () -> SettlementData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.PendingSettlement;
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Cash settlement is pending.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -704,11 +721,11 @@ public class SettlementData1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData1#SettlementStatus
-	 * SettlementData1.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData1#mmSettlementStatus
+	 * SettlementData1.mmSettlementStatus}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementData1#ExtendedSettlementStatus
-	 * SettlementData1.ExtendedSettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementData1#mmExtendedSettlementStatus
+	 * SettlementData1.mmExtendedSettlementStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -723,31 +740,135 @@ public class SettlementData1 {
 	 * name} = "SettlementStatusOrExtendedSettlementStatusRule"</li>
 	 * </ul>
 	 */
-	public static final MMXor SettlementStatusOrExtendedSettlementStatusRule = new MMXor() {
+	public static final MMXor mmSettlementStatusOrExtendedSettlementStatusRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusOrExtendedSettlementStatusRule";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.SettlementStatus, com.tools20022.repository.msg.SettlementData1.ExtendedSettlementStatus);
 			messageComponent_lazy = () -> SettlementData1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.mmSettlementStatus, com.tools20022.repository.msg.SettlementData1.mmExtendedSettlementStatus);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.CashFlowUniqueReference, com.tools20022.repository.msg.SettlementData1.SettlementSystemUniqueReference,
-						com.tools20022.repository.msg.SettlementData1.SettlementAmount, com.tools20022.repository.msg.SettlementData1.SettledAmount, com.tools20022.repository.msg.SettlementData1.RejectedAmount,
-						com.tools20022.repository.msg.SettlementData1.PayingParty, com.tools20022.repository.msg.SettlementData1.ReceivingParty, com.tools20022.repository.msg.SettlementData1.SettlementDate,
-						com.tools20022.repository.msg.SettlementData1.SettlementStatus, com.tools20022.repository.msg.SettlementData1.ExtendedSettlementStatus, com.tools20022.repository.msg.SettlementData1.SettlementStatusSubType,
-						com.tools20022.repository.msg.SettlementData1.Suspended, com.tools20022.repository.msg.SettlementData1.Pending);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.mmCashFlowUniqueReference, com.tools20022.repository.msg.SettlementData1.mmSettlementSystemUniqueReference,
+						com.tools20022.repository.msg.SettlementData1.mmSettlementAmount, com.tools20022.repository.msg.SettlementData1.mmSettledAmount, com.tools20022.repository.msg.SettlementData1.mmRejectedAmount,
+						com.tools20022.repository.msg.SettlementData1.mmPayingParty, com.tools20022.repository.msg.SettlementData1.mmReceivingParty, com.tools20022.repository.msg.SettlementData1.mmSettlementDate,
+						com.tools20022.repository.msg.SettlementData1.mmSettlementStatus, com.tools20022.repository.msg.SettlementData1.mmExtendedSettlementStatus, com.tools20022.repository.msg.SettlementData1.mmSettlementStatusSubType,
+						com.tools20022.repository.msg.SettlementData1.mmSuspended, com.tools20022.repository.msg.SettlementData1.mmPending);
 				trace_lazy = () -> PaymentObligation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementData1";
 				definition = "Provides information on the settlement of a treasury trade.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.SettlementStatusOrExtendedSettlementStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData1.mmSettlementStatusOrExtendedSettlementStatusRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCashFlowUniqueReference() {
+		return cashFlowUniqueReference;
+	}
+
+	public void setCashFlowUniqueReference(Max35Text cashFlowUniqueReference) {
+		this.cashFlowUniqueReference = cashFlowUniqueReference;
+	}
+
+	public Max35Text getSettlementSystemUniqueReference() {
+		return settlementSystemUniqueReference;
+	}
+
+	public void setSettlementSystemUniqueReference(Max35Text settlementSystemUniqueReference) {
+		this.settlementSystemUniqueReference = settlementSystemUniqueReference;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(ActiveOrHistoricCurrencyAndAmount settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getSettledAmount() {
+		return settledAmount;
+	}
+
+	public void setSettledAmount(ActiveOrHistoricCurrencyAndAmount settledAmount) {
+		this.settledAmount = settledAmount;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getRejectedAmount() {
+		return rejectedAmount;
+	}
+
+	public void setRejectedAmount(ActiveOrHistoricCurrencyAndAmount rejectedAmount) {
+		this.rejectedAmount = rejectedAmount;
+	}
+
+	public PartyIdentification7Choice getPayingParty() {
+		return payingParty;
+	}
+
+	public void setPayingParty(PartyIdentification7Choice payingParty) {
+		this.payingParty = payingParty;
+	}
+
+	public PartyIdentification7Choice getReceivingParty() {
+		return receivingParty;
+	}
+
+	public void setReceivingParty(PartyIdentification7Choice receivingParty) {
+		this.receivingParty = receivingParty;
+	}
+
+	public ISODate getSettlementDate() {
+		return settlementDate;
+	}
+
+	public void setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = settlementDate;
+	}
+
+	public SettlementStatus1Code getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(SettlementStatus1Code settlementStatus) {
+		this.settlementStatus = settlementStatus;
+	}
+
+	public Extended350Code getExtendedSettlementStatus() {
+		return extendedSettlementStatus;
+	}
+
+	public void setExtendedSettlementStatus(Extended350Code extendedSettlementStatus) {
+		this.extendedSettlementStatus = extendedSettlementStatus;
+	}
+
+	public Max70Text getSettlementStatusSubType() {
+		return settlementStatusSubType;
+	}
+
+	public void setSettlementStatusSubType(Max70Text settlementStatusSubType) {
+		this.settlementStatusSubType = settlementStatusSubType;
+	}
+
+	public YesNoIndicator getSuspended() {
+		return suspended;
+	}
+
+	public void setSuspended(YesNoIndicator suspended) {
+		this.suspended = suspended;
+	}
+
+	public YesNoIndicator getPending() {
+		return pending;
+	}
+
+	public void setPending(YesNoIndicator pending) {
+		this.pending = pending;
 	}
 }

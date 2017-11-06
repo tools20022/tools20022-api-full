@@ -36,18 +36,18 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice#StatusQuantity
- * StatusOrQuantityToReceive2Choice.StatusQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice#mmStatusQuantity
+ * StatusOrQuantityToReceive2Choice.mmStatusQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice#QuantityToReceive
- * StatusOrQuantityToReceive2Choice.QuantityToReceive}</li>
+ * {@linkplain com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice#mmQuantityToReceive
+ * StatusOrQuantityToReceive2Choice.mmQuantityToReceive}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -64,6 +64,7 @@ import java.util.function.Supplier;
 public class StatusOrQuantityToReceive2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Quantity10Choice statusQuantity;
 	/**
 	 * Quantity of securities that has been assigned the status indicated.
 	 * <p>
@@ -75,8 +76,8 @@ public class StatusOrQuantityToReceive2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#StatusQuantity
-	 * SecuritiesProceedsDefinition.StatusQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmStatusQuantity
+	 * SecuritiesProceedsDefinition.mmStatusQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,21 +97,22 @@ public class StatusOrQuantityToReceive2Choice {
 	 * "Quantity of securities that has been assigned the status indicated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmStatusQuantity;
 			componentContext_lazy = () -> StatusOrQuantityToReceive2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.StatusQuantity;
 			isDerived = false;
 			xmlTag = "StsQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusQuantity";
 			definition = "Quantity of securities that has been assigned the status indicated.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity10Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.Quantity10Choice.mmObject();
 		}
 	};
+	protected Quantity10Choice quantityToReceive;
 	/**
 	 * Quantity of the benefits that the account owner wants to receive, for
 	 * example, as a result of dividend reinvestment.
@@ -123,8 +125,8 @@ public class StatusOrQuantityToReceive2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#QuantityToReceive
-	 * SecuritiesProceedsDefinition.QuantityToReceive}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmQuantityToReceive
+	 * SecuritiesProceedsDefinition.mmQuantityToReceive}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,27 +147,27 @@ public class StatusOrQuantityToReceive2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityToReceive = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityToReceive = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmQuantityToReceive;
 			componentContext_lazy = () -> StatusOrQuantityToReceive2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.QuantityToReceive;
 			isDerived = false;
 			xmlTag = "QtyToRcv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToReceive";
 			definition = "Quantity of the benefits that the account owner wants to receive, for example, as a result of dividend reinvestment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Quantity10Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.Quantity10Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice.StatusQuantity, com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice.QuantityToReceive);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice.mmStatusQuantity, com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice.mmQuantityToReceive);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -179,5 +181,21 @@ public class StatusOrQuantityToReceive2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Quantity10Choice getStatusQuantity() {
+		return statusQuantity;
+	}
+
+	public void setStatusQuantity(com.tools20022.repository.choice.Quantity10Choice statusQuantity) {
+		this.statusQuantity = statusQuantity;
+	}
+
+	public Quantity10Choice getQuantityToReceive() {
+		return quantityToReceive;
+	}
+
+	public void setQuantityToReceive(com.tools20022.repository.choice.Quantity10Choice quantityToReceive) {
+		this.quantityToReceive = quantityToReceive;
 	}
 }

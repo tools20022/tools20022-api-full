@@ -34,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Parameter6#EncryptionFormat
- * Parameter6.EncryptionFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter6#mmEncryptionFormat
+ * Parameter6.mmEncryptionFormat}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Parameter6#InitialisationVector
- * Parameter6.InitialisationVector}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Parameter6#BytePadding
- * Parameter6.BytePadding}</li>
+ * {@linkplain com.tools20022.repository.msg.Parameter6#mmInitialisationVector
+ * Parameter6.mmInitialisationVector}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter6#mmBytePadding
+ * Parameter6.mmBytePadding}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Parameter6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EncryptionFormat1Code encryptionFormat;
 	/**
 	 * Format of data before encryption, if the format is not plaintext or
 	 * implicit.
@@ -95,7 +96,7 @@ public class Parameter6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EncryptionFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEncryptionFormat = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter6.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class Parameter6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptionFormat";
 			definition = "Format of data before encryption, if the format is not plaintext or implicit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EncryptionFormat1Code.mmObject();
 		}
 	};
+	protected Max500Binary initialisationVector;
 	/**
 	 * Initialisation vector of a cipher block chaining (CBC) mode encryption.
 	 * <p>
@@ -138,11 +140,11 @@ public class Parameter6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Parameter1#InitialisationVector
-	 * Parameter1.InitialisationVector}</li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter1#mmInitialisationVector
+	 * Parameter1.mmInitialisationVector}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitialisationVector = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitialisationVector = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter6.mmObject();
 			isDerived = false;
@@ -150,12 +152,13 @@ public class Parameter6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialisationVector";
 			definition = "Initialisation vector of a cipher block chaining (CBC) mode encryption.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter1.InitialisationVector;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter1.mmInitialisationVector;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max500Binary.mmObject();
 		}
 	};
+	protected BytePadding1Code bytePadding;
 	/**
 	 * Byte padding for a cypher block chaining mode encryption, if the padding
 	 * is not implicit.
@@ -186,7 +189,7 @@ public class Parameter6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BytePadding = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBytePadding = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter6.mmObject();
 			isDerived = false;
@@ -194,8 +197,8 @@ public class Parameter6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BytePadding";
 			definition = "Byte padding for a cypher block chaining mode encryption, if the padding is not implicit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BytePadding1Code.mmObject();
 		}
 	};
@@ -203,8 +206,8 @@ public class Parameter6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter6.EncryptionFormat, com.tools20022.repository.msg.Parameter6.InitialisationVector, com.tools20022.repository.msg.Parameter6.BytePadding);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter6.mmEncryptionFormat, com.tools20022.repository.msg.Parameter6.mmInitialisationVector, com.tools20022.repository.msg.Parameter6.mmBytePadding);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Parameter6";
 				definition = "Parameters associated to a cryptographic encryption algorithm.";
@@ -212,5 +215,29 @@ public class Parameter6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EncryptionFormat1Code getEncryptionFormat() {
+		return encryptionFormat;
+	}
+
+	public void setEncryptionFormat(EncryptionFormat1Code encryptionFormat) {
+		this.encryptionFormat = encryptionFormat;
+	}
+
+	public Max500Binary getInitialisationVector() {
+		return initialisationVector;
+	}
+
+	public void setInitialisationVector(Max500Binary initialisationVector) {
+		this.initialisationVector = initialisationVector;
+	}
+
+	public BytePadding1Code getBytePadding() {
+		return bytePadding;
+	}
+
+	public void setBytePadding(BytePadding1Code bytePadding) {
+		this.bytePadding = bytePadding;
 	}
 }

@@ -37,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem#SettlementParty
- * SecuritiesSettlementSystem.SettlementParty}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem#mmSettlementParty
+ * SecuritiesSettlementSystem.mmSettlementParty}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#SecuritiesSettlementSystem
- * SecuritiesSettlementPartyRole.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#mmSecuritiesSettlementSystem
+ * SecuritiesSettlementPartyRole.mmSecuritiesSettlementSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -55,59 +55,59 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount1#SecuritiesSettlementSystem
- * DeliveringPartiesAndAccount1.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount1#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount1.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount4#SecuritiesSettlementSystem
- * DeliveringPartiesAndAccount4.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount4#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount4.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount8#SecuritiesSettlementSystem
- * DeliveringPartiesAndAccount8.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount8#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount8.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount1#SecuritiesSettlementSystem
- * ReceivingPartiesAndAccount1.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount1#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount1.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount4#SecuritiesSettlementSystem
- * ReceivingPartiesAndAccount4.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount4#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount4.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount8#SecuritiesSettlementSystem
- * ReceivingPartiesAndAccount8.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount8#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount8.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount5#SecuritiesSettlementSystem
- * DeliveringPartiesAndAccount5.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount5#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount5.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount6#SecuritiesSettlementSystem
- * ReceivingPartiesAndAccount6.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount6#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount6.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount7#SecuritiesSettlementSystem
- * DeliveringPartiesAndAccount7.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount7#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount7.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount7#SecuritiesSettlementSystem
- * ReceivingPartiesAndAccount7.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount7#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount7.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount9#SecuritiesSettlementSystem
- * ReceivingPartiesAndAccount9.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount9#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount9.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount9#SecuritiesSettlementSystem
- * DeliveringPartiesAndAccount9.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount9#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount9.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount11#SecuritiesSettlementSystem
- * ReceivingPartiesAndAccount11.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount11#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount11.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount11#SecuritiesSettlementSystem
- * DeliveringPartiesAndAccount11.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount11#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount11.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount14#SecuritiesSettlementSystem
- * DeliveringPartiesAndAccount14.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount14#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount14.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount13#SecuritiesSettlementSystem
- * DeliveringPartiesAndAccount13.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount13#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount13.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount14#SecuritiesSettlementSystem
- * ReceivingPartiesAndAccount14.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount14#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount14.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount13#SecuritiesSettlementSystem
- * ReceivingPartiesAndAccount13.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount13#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount13.mmSecuritiesSettlementSystem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -115,8 +115,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,6 +130,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementSystem extends System {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesSettlementPartyRole settlementParty;
 	/**
 	 * Party which settles through a system.
 	 * <p>
@@ -138,8 +139,8 @@ public class SecuritiesSettlementSystem extends System {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#SecuritiesSettlementSystem
-	 * SecuritiesSettlementPartyRole.SecuritiesSettlementSystem}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#mmSecuritiesSettlementSystem
+	 * SecuritiesSettlementPartyRole.mmSecuritiesSettlementSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -164,42 +165,50 @@ public class SecuritiesSettlementSystem extends System {
 	 * definition} = "Party which settles through a system."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SettlementParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSettlementParty = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesSettlementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SettlementParty";
 			definition = "Party which settles through a system.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.SecuritiesSettlementSystem;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmSecuritiesSettlementSystem;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementSystem";
 				definition = "Specifies the system used in a settlement process.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlementPartyRole.SecuritiesSettlementSystem);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveringPartiesAndAccount1.SecuritiesSettlementSystem, com.tools20022.repository.msg.DeliveringPartiesAndAccount4.SecuritiesSettlementSystem,
-						com.tools20022.repository.msg.DeliveringPartiesAndAccount8.SecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount1.SecuritiesSettlementSystem,
-						com.tools20022.repository.msg.ReceivingPartiesAndAccount4.SecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount8.SecuritiesSettlementSystem,
-						com.tools20022.repository.msg.DeliveringPartiesAndAccount5.SecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount6.SecuritiesSettlementSystem,
-						com.tools20022.repository.msg.DeliveringPartiesAndAccount7.SecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount7.SecuritiesSettlementSystem,
-						com.tools20022.repository.msg.ReceivingPartiesAndAccount9.SecuritiesSettlementSystem, com.tools20022.repository.msg.DeliveringPartiesAndAccount9.SecuritiesSettlementSystem,
-						com.tools20022.repository.msg.ReceivingPartiesAndAccount11.SecuritiesSettlementSystem, com.tools20022.repository.msg.DeliveringPartiesAndAccount11.SecuritiesSettlementSystem,
-						com.tools20022.repository.msg.DeliveringPartiesAndAccount14.SecuritiesSettlementSystem, com.tools20022.repository.msg.DeliveringPartiesAndAccount13.SecuritiesSettlementSystem,
-						com.tools20022.repository.msg.ReceivingPartiesAndAccount14.SecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount13.SecuritiesSettlementSystem);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmSecuritiesSettlementSystem);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveringPartiesAndAccount1.mmSecuritiesSettlementSystem, com.tools20022.repository.msg.DeliveringPartiesAndAccount4.mmSecuritiesSettlementSystem,
+						com.tools20022.repository.msg.DeliveringPartiesAndAccount8.mmSecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount1.mmSecuritiesSettlementSystem,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount4.mmSecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmSecuritiesSettlementSystem,
+						com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmSecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount6.mmSecuritiesSettlementSystem,
+						com.tools20022.repository.msg.DeliveringPartiesAndAccount7.mmSecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmSecuritiesSettlementSystem,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount9.mmSecuritiesSettlementSystem, com.tools20022.repository.msg.DeliveringPartiesAndAccount9.mmSecuritiesSettlementSystem,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount11.mmSecuritiesSettlementSystem, com.tools20022.repository.msg.DeliveringPartiesAndAccount11.mmSecuritiesSettlementSystem,
+						com.tools20022.repository.msg.DeliveringPartiesAndAccount14.mmSecuritiesSettlementSystem, com.tools20022.repository.msg.DeliveringPartiesAndAccount13.mmSecuritiesSettlementSystem,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount14.mmSecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount13.mmSecuritiesSettlementSystem);
 				superType_lazy = () -> System.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlementSystem.SettlementParty);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlementSystem.mmSettlementParty);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesSettlementPartyRole getSettlementParty() {
+		return settlementParty;
+	}
+
+	public void setSettlementParty(com.tools20022.repository.entity.SecuritiesSettlementPartyRole settlementParty) {
+		this.settlementParty = settlementParty;
 	}
 }

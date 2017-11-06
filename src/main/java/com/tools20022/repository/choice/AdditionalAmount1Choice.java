@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AdditionalAmount1Choice#AdditionalCashIn
- * AdditionalAmount1Choice.AdditionalCashIn}</li>
+ * {@linkplain com.tools20022.repository.choice.AdditionalAmount1Choice#mmAdditionalCashIn
+ * AdditionalAmount1Choice.mmAdditionalCashIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AdditionalAmount1Choice#ResultingCashOut
- * AdditionalAmount1Choice.ResultingCashOut}</li>
+ * {@linkplain com.tools20022.repository.choice.AdditionalAmount1Choice#mmResultingCashOut
+ * AdditionalAmount1Choice.mmResultingCashOut}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount additionalCashIn;
 	/**
 	 * Additional amount of money paid by the investor in addition to the switch
 	 * redemption amount.
@@ -72,8 +73,8 @@ public class AdditionalAmount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#AdditionalCashIn
-	 * SwitchOrder.AdditionalCashIn}</li>
+	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmAdditionalCashIn
+	 * SwitchOrder.mmAdditionalCashIn}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,20 +95,21 @@ public class AdditionalAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalCashIn = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalCashIn = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmAdditionalCashIn;
 			componentContext_lazy = () -> AdditionalAmount1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.AdditionalCashIn;
 			isDerived = false;
 			xmlTag = "AddtlCshIn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalCashIn";
 			definition = "Additional amount of money paid by the investor in addition to the switch redemption amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount resultingCashOut;
 	/**
 	 * Amount of money that results from a switch-out, that is not reinvested in
 	 * another investment fund, and is repaid to the investor.
@@ -122,8 +124,8 @@ public class AdditionalAmount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#ResultingCashOut
-	 * SwitchOrder.ResultingCashOut}</li>
+	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmResultingCashOut
+	 * SwitchOrder.mmResultingCashOut}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,17 +146,17 @@ public class AdditionalAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResultingCashOut = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResultingCashOut = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmResultingCashOut;
 			componentContext_lazy = () -> AdditionalAmount1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.ResultingCashOut;
 			isDerived = false;
 			xmlTag = "RsltgCshOut";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultingCashOut";
 			definition = "Amount of money that results from a switch-out, that is not reinvested in another investment fund, and is repaid to the investor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
@@ -162,13 +164,29 @@ public class AdditionalAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalAmount1Choice.AdditionalCashIn, com.tools20022.repository.choice.AdditionalAmount1Choice.ResultingCashOut);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalAmount1Choice.mmAdditionalCashIn, com.tools20022.repository.choice.AdditionalAmount1Choice.mmResultingCashOut);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalAmount1Choice";
 				definition = "Choice between additional cash in or resulting cash out.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getAdditionalCashIn() {
+		return additionalCashIn;
+	}
+
+	public void setAdditionalCashIn(ActiveOrHistoricCurrencyAndAmount additionalCashIn) {
+		this.additionalCashIn = additionalCashIn;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getResultingCashOut() {
+		return resultingCashOut;
+	}
+
+	public void setResultingCashOut(ActiveOrHistoricCurrencyAndAmount resultingCashOut) {
+		this.resultingCashOut = resultingCashOut;
 	}
 }

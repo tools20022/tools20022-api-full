@@ -41,37 +41,37 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestCalculation3#CalculationDate
- * InterestCalculation3.CalculationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestCalculation3#mmCalculationDate
+ * InterestCalculation3.mmCalculationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestCalculation3#CollateralAccountIdentification
- * InterestCalculation3.CollateralAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestCalculation3#mmCollateralAccountIdentification
+ * InterestCalculation3.mmCollateralAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestCalculation3#EffectivePrincipalAmount
- * InterestCalculation3.EffectivePrincipalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestCalculation3#mmEffectivePrincipalAmount
+ * InterestCalculation3.mmEffectivePrincipalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestCalculation3#PrincipalAmount
- * InterestCalculation3.PrincipalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestCalculation3#mmPrincipalAmount
+ * InterestCalculation3.mmPrincipalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestCalculation3#MovementAmount
- * InterestCalculation3.MovementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestCalculation3#mmMovementAmount
+ * InterestCalculation3.mmMovementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestCalculation3#NumberOfDays
- * InterestCalculation3.NumberOfDays}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestCalculation3#mmNumberOfDays
+ * InterestCalculation3.mmNumberOfDays}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestCalculation3#EffectiveRate
- * InterestCalculation3.EffectiveRate}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestCalculation3#mmEffectiveRate
+ * InterestCalculation3.mmEffectiveRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestCalculation3#InterestRate
- * InterestCalculation3.InterestRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InterestCalculation3#Spread
- * InterestCalculation3.Spread}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestCalculation3#mmInterestRate
+ * InterestCalculation3.mmInterestRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InterestCalculation3#mmSpread
+ * InterestCalculation3.mmSpread}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestCalculation3#AccruedInterestAmount
- * InterestCalculation3.AccruedInterestAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestCalculation3#mmAccruedInterestAmount
+ * InterestCalculation3.mmAccruedInterestAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InterestCalculation3#AggregatedInterestAmount
- * InterestCalculation3.AggregatedInterestAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.InterestCalculation3#mmAggregatedInterestAmount
+ * InterestCalculation3.mmAggregatedInterestAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -80,8 +80,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -100,6 +100,7 @@ import java.util.function.Supplier;
 public class InterestCalculation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate calculationDate;
 	/**
 	 * Indicates the calculation date of the interest amount.
 	 * <p>
@@ -112,8 +113,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#CalculationDate
-	 * InterestCalculation.CalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmCalculationDate
+	 * InterestCalculation.mmCalculationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -133,25 +134,26 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#CalculationDate
-	 * InterestCalculation2.CalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmCalculationDate
+	 * InterestCalculation2.mmCalculationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmCalculationDate;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.CalculationDate;
 			isDerived = false;
 			xmlTag = "ClctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDate";
 			definition = "Indicates the calculation date of the interest amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.CalculationDate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmCalculationDate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected AccountIdentification26 collateralAccountIdentification;
 	/**
 	 * Provides the identification of the collateral account.
 	 * <p>
@@ -165,8 +167,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -186,25 +188,26 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#CollateralAccountIdentification
-	 * InterestCalculation2.CollateralAccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmCollateralAccountIdentification
+	 * InterestCalculation2.mmCollateralAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "CollAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralAccountIdentification";
 			definition = "Provides the identification of the collateral account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.CollateralAccountIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmCollateralAccountIdentification;
 			maxOccurs = 1;
-			complexType_lazy = () -> AccountIdentification26.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification26.mmObject();
 		}
 	};
+	protected AmountAndDirection20 effectivePrincipalAmount;
 	/**
 	 * Provides the collateral amount used to calculate the interest amount and
 	 * includes debit/short or credit/long positions.
@@ -217,8 +220,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#TotalCollateralCurrentValue
-	 * ExposureCalculation.TotalCollateralCurrentValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTotalCollateralCurrentValue
+	 * ExposureCalculation.mmTotalCollateralCurrentValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -240,26 +243,27 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#EffectivePrincipalAmount
-	 * InterestCalculation2.EffectivePrincipalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmEffectivePrincipalAmount
+	 * InterestCalculation2.mmEffectivePrincipalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EffectivePrincipalAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEffectivePrincipalAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.TotalCollateralCurrentValue;
 			isDerived = false;
 			xmlTag = "FctvPrncplAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectivePrincipalAmount";
 			definition = "Provides the collateral amount used to calculate the interest amount and includes debit/short or credit/long positions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.EffectivePrincipalAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmEffectivePrincipalAmount;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	protected AmountAndDirection20 principalAmount;
 	/**
 	 * Provides the collateral amount posted before taking into account the
 	 * collateral movement amount.
@@ -272,8 +276,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#HeldAmount
-	 * CollateralBalance.HeldAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmHeldAmount
+	 * CollateralBalance.mmHeldAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -295,26 +299,27 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#PrincipalAmount
-	 * InterestCalculation2.PrincipalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmPrincipalAmount
+	 * InterestCalculation2.mmPrincipalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrincipalAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrincipalAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.HeldAmount;
 			isDerived = false;
 			xmlTag = "PrncplAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalAmount";
 			definition = "Provides the collateral amount posted before taking into account the collateral movement amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.PrincipalAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmPrincipalAmount;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection20.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	protected AmountAndDirection20 movementAmount;
 	/**
 	 * Provides the additional amount of collateral posted between two
 	 * calculation dates.
@@ -327,8 +332,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#PriorAgreed
-	 * CollateralBalance.PriorAgreed}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmPriorAgreed
+	 * CollateralBalance.mmPriorAgreed}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -350,26 +355,27 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#MovementAmount
-	 * InterestCalculation2.MovementAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmMovementAmount
+	 * InterestCalculation2.mmMovementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MovementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMovementAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmPriorAgreed;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.PriorAgreed;
 			isDerived = false;
 			xmlTag = "MvmntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementAmount";
 			definition = "Provides the additional amount of collateral posted between two calculation dates.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.MovementAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmMovementAmount;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection20.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	protected Number numberOfDays;
 	/**
 	 * Indicates the number of days for the calculation of the interest.
 	 * <p>
@@ -382,8 +388,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#NumberOfDays
-	 * DateTimePeriod.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmNumberOfDays
+	 * DateTimePeriod.mmNumberOfDays}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -404,25 +410,26 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#NumberOfDays
-	 * InterestCalculation2.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmNumberOfDays
+	 * InterestCalculation2.mmNumberOfDays}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.NumberOfDays;
 			isDerived = false;
 			xmlTag = "NbOfDays";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDays";
 			definition = "Indicates the number of days for the calculation of the interest.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.NumberOfDays;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmNumberOfDays;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected PercentageRate effectiveRate;
 	/**
 	 * Specifies the percentage charged for the use of an amount of money,
 	 * usually expressed at an annual rate. The interest rate is the ratio of
@@ -439,8 +446,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -462,25 +469,26 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#EffectiveRate
-	 * InterestCalculation2.EffectiveRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmEffectiveRate
+	 * InterestCalculation2.mmEffectiveRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectiveRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectiveRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "FctvRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveRate";
 			definition = "Specifies the percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.EffectiveRate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmEffectiveRate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate interestRate;
 	/**
 	 * Specifies the percentage charged for the use of an amount of money,
 	 * usually expressed at an annual rate. The interest rate is the ratio of
@@ -497,8 +505,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#Rate
-	 * InterestCalculation.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmRate
+	 * InterestCalculation.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -520,25 +528,26 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#InterestRate
-	 * InterestCalculation2.InterestRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmInterestRate
+	 * InterestCalculation2.mmInterestRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.Rate;
 			isDerived = false;
 			xmlTag = "IntrstRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Specifies the percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.InterestRate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmInterestRate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate spread;
 	/**
 	 * Indicates the differences in interest rates.
 	 * <p>
@@ -552,8 +561,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Spread#SpreadRate
-	 * Spread.SpreadRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Spread#mmSpreadRate
+	 * Spread.mmSpreadRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -573,25 +582,26 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#Spread
-	 * InterestCalculation2.Spread}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmSpread
+	 * InterestCalculation2.mmSpread}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Spread = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSpread = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmSpreadRate;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.SpreadRate;
 			isDerived = false;
 			xmlTag = "Sprd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
 			definition = "Indicates the differences in interest rates.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.Spread;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmSpread;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected AmountAndDirection20 accruedInterestAmount;
 	/**
 	 * Specifies the amount of money representing an interest payment.
 	 * <p>
@@ -603,8 +613,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#AccruedInterestAmount
-	 * Interest.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+	 * Interest.mmAccruedInterestAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -625,26 +635,27 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#AccruedInterestAmount
-	 * InterestCalculation2.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmAccruedInterestAmount
+	 * InterestCalculation2.mmAccruedInterestAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccruedInterestAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccruedInterestAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.AccruedInterestAmount;
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Specifies the amount of money representing an interest payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.AccruedInterestAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmAccruedInterestAmount;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount aggregatedInterestAmount;
 	/**
 	 * Specifies the total amount of money representing an interest payment.
 	 * <p>
@@ -658,8 +669,8 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Amount
-	 * Interest.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAmount
+	 * Interest.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -680,22 +691,22 @@ public class InterestCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#AggregatedInterestAmount
-	 * InterestCalculation2.AggregatedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.InterestCalculation2#mmAggregatedInterestAmount
+	 * InterestCalculation2.mmAggregatedInterestAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AggregatedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAggregatedInterestAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAmount;
 			componentContext_lazy = () -> InterestCalculation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Amount;
 			isDerived = false;
 			xmlTag = "AggtdIntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregatedInterestAmount";
 			definition = "Specifies the total amount of money representing an interest payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.AggregatedInterestAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestCalculation2.mmAggregatedInterestAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -703,12 +714,13 @@ public class InterestCalculation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestCalculation3.CalculationDate, com.tools20022.repository.msg.InterestCalculation3.CollateralAccountIdentification,
-						com.tools20022.repository.msg.InterestCalculation3.EffectivePrincipalAmount, com.tools20022.repository.msg.InterestCalculation3.PrincipalAmount, com.tools20022.repository.msg.InterestCalculation3.MovementAmount,
-						com.tools20022.repository.msg.InterestCalculation3.NumberOfDays, com.tools20022.repository.msg.InterestCalculation3.EffectiveRate, com.tools20022.repository.msg.InterestCalculation3.InterestRate,
-						com.tools20022.repository.msg.InterestCalculation3.Spread, com.tools20022.repository.msg.InterestCalculation3.AccruedInterestAmount, com.tools20022.repository.msg.InterestCalculation3.AggregatedInterestAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestCalculation3.mmCalculationDate, com.tools20022.repository.msg.InterestCalculation3.mmCollateralAccountIdentification,
+						com.tools20022.repository.msg.InterestCalculation3.mmEffectivePrincipalAmount, com.tools20022.repository.msg.InterestCalculation3.mmPrincipalAmount,
+						com.tools20022.repository.msg.InterestCalculation3.mmMovementAmount, com.tools20022.repository.msg.InterestCalculation3.mmNumberOfDays, com.tools20022.repository.msg.InterestCalculation3.mmEffectiveRate,
+						com.tools20022.repository.msg.InterestCalculation3.mmInterestRate, com.tools20022.repository.msg.InterestCalculation3.mmSpread, com.tools20022.repository.msg.InterestCalculation3.mmAccruedInterestAmount,
+						com.tools20022.repository.msg.InterestCalculation3.mmAggregatedInterestAmount);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -723,5 +735,93 @@ public class InterestCalculation3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getCalculationDate() {
+		return calculationDate;
+	}
+
+	public void setCalculationDate(ISODate calculationDate) {
+		this.calculationDate = calculationDate;
+	}
+
+	public AccountIdentification26 getCollateralAccountIdentification() {
+		return collateralAccountIdentification;
+	}
+
+	public void setCollateralAccountIdentification(com.tools20022.repository.msg.AccountIdentification26 collateralAccountIdentification) {
+		this.collateralAccountIdentification = collateralAccountIdentification;
+	}
+
+	public AmountAndDirection20 getEffectivePrincipalAmount() {
+		return effectivePrincipalAmount;
+	}
+
+	public void setEffectivePrincipalAmount(com.tools20022.repository.msg.AmountAndDirection20 effectivePrincipalAmount) {
+		this.effectivePrincipalAmount = effectivePrincipalAmount;
+	}
+
+	public AmountAndDirection20 getPrincipalAmount() {
+		return principalAmount;
+	}
+
+	public void setPrincipalAmount(com.tools20022.repository.msg.AmountAndDirection20 principalAmount) {
+		this.principalAmount = principalAmount;
+	}
+
+	public AmountAndDirection20 getMovementAmount() {
+		return movementAmount;
+	}
+
+	public void setMovementAmount(com.tools20022.repository.msg.AmountAndDirection20 movementAmount) {
+		this.movementAmount = movementAmount;
+	}
+
+	public Number getNumberOfDays() {
+		return numberOfDays;
+	}
+
+	public void setNumberOfDays(Number numberOfDays) {
+		this.numberOfDays = numberOfDays;
+	}
+
+	public PercentageRate getEffectiveRate() {
+		return effectiveRate;
+	}
+
+	public void setEffectiveRate(PercentageRate effectiveRate) {
+		this.effectiveRate = effectiveRate;
+	}
+
+	public PercentageRate getInterestRate() {
+		return interestRate;
+	}
+
+	public void setInterestRate(PercentageRate interestRate) {
+		this.interestRate = interestRate;
+	}
+
+	public PercentageRate getSpread() {
+		return spread;
+	}
+
+	public void setSpread(PercentageRate spread) {
+		this.spread = spread;
+	}
+
+	public AmountAndDirection20 getAccruedInterestAmount() {
+		return accruedInterestAmount;
+	}
+
+	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection20 accruedInterestAmount) {
+		this.accruedInterestAmount = accruedInterestAmount;
+	}
+
+	public ActiveCurrencyAndAmount getAggregatedInterestAmount() {
+		return aggregatedInterestAmount;
+	}
+
+	public void setAggregatedInterestAmount(ActiveCurrencyAndAmount aggregatedInterestAmount) {
+		this.aggregatedInterestAmount = aggregatedInterestAmount;
 	}
 }

@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD4#PlaceAndName
- * CorporateActionRateSD4.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD4#mmPlaceAndName
+ * CorporateActionRateSD4.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD4#CSDSecurityRate
- * CorporateActionRateSD4.CSDSecurityRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD4#mmCSDSecurityRate
+ * CorporateActionRateSD4.mmCSDSecurityRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionRateSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -89,7 +90,7 @@ public class CorporateActionRateSD4 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionRateSD4.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class CorporateActionRateSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected RatioFormat13Choice cSDSecurityRate;
 	/**
 	 * Corresponding rate of the security disbursed by CSD (for an example in
 	 * US, DTC The Depository Trust Corporation).
@@ -133,7 +135,7 @@ public class CorporateActionRateSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CSDSecurityRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCSDSecurityRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionRateSD4.mmObject();
 			isDerived = false;
@@ -141,8 +143,8 @@ public class CorporateActionRateSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDSecurityRate";
 			definition = "Corresponding rate of the security disbursed by CSD (for an example in US, DTC The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> RatioFormat13Choice.mmObject();
 		}
 	};
@@ -150,13 +152,29 @@ public class CorporateActionRateSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD4.PlaceAndName, com.tools20022.repository.msg.CorporateActionRateSD4.CSDSecurityRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD4.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionRateSD4.mmCSDSecurityRate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionRateSD4";
 				definition = "Provides additional information regarding corporate action option securities movement rate details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public RatioFormat13Choice getCSDSecurityRate() {
+		return cSDSecurityRate;
+	}
+
+	public void setCSDSecurityRate(RatioFormat13Choice cSDSecurityRate) {
+		this.cSDSecurityRate = cSDSecurityRate;
 	}
 }

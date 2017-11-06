@@ -36,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction12#NetworkManagementType
- * CardTransaction12.NetworkManagementType}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction12#mmNetworkManagementType
+ * CardTransaction12.mmNetworkManagementType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction12#InitiatorDateTime
- * CardTransaction12.InitiatorDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction12#mmInitiatorDateTime
+ * CardTransaction12.mmInitiatorDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction12#NumberOfMessages
- * CardTransaction12.NumberOfMessages}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction12#mmNumberOfMessages
+ * CardTransaction12.mmNumberOfMessages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction12#MaximumNumberOfMessages
- * CardTransaction12.MaximumNumberOfMessages}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction12#mmMaximumNumberOfMessages
+ * CardTransaction12.mmMaximumNumberOfMessages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransaction12#TransactionResponse
- * CardTransaction12.TransactionResponse}</li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction12#mmTransactionResponse
+ * CardTransaction12.mmTransactionResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardTransaction12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardServiceType2Code networkManagementType;
 	/**
 	 * Type of network management service (correspond to the ISO 8583 field 24)
 	 * <p>
@@ -112,11 +113,11 @@ public class CardTransaction12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction11#NetworkManagementType
-	 * CardTransaction11.NetworkManagementType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction11#mmNetworkManagementType
+	 * CardTransaction11.mmNetworkManagementType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetworkManagementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetworkManagementType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransaction12.mmObject();
 			isDerived = false;
@@ -124,12 +125,13 @@ public class CardTransaction12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementType";
 			definition = "Type of network management service (correspond to the ISO 8583 field 24)";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction11.NetworkManagementType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction11.mmNetworkManagementType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CardServiceType2Code.mmObject();
 		}
 	};
+	protected ISODateTime initiatorDateTime;
 	/**
 	 * Date and time of the transaction.
 	 * <p>
@@ -157,7 +159,7 @@ public class CardTransaction12 {
 	 * definition} = "Date and time of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitiatorDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitiatorDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransaction12.mmObject();
 			isDerived = false;
@@ -165,11 +167,12 @@ public class CardTransaction12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatorDateTime";
 			definition = "Date and time of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Number numberOfMessages;
 	/**
 	 * Number of messages in the store and forward queue.
 	 * <p>
@@ -198,11 +201,11 @@ public class CardTransaction12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction11#NumberOfMessages
-	 * CardTransaction11.NumberOfMessages}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction11#mmNumberOfMessages
+	 * CardTransaction11.mmNumberOfMessages}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfMessages = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfMessages = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransaction12.mmObject();
 			isDerived = false;
@@ -210,12 +213,13 @@ public class CardTransaction12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfMessages";
 			definition = "Number of messages in the store and forward queue.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction11.NumberOfMessages;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction11.mmNumberOfMessages;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number maximumNumberOfMessages;
 	/**
 	 * Maximum number of messages in the store and forward queue.
 	 * <p>
@@ -245,11 +249,11 @@ public class CardTransaction12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction11#MaximumNumberOfMessages
-	 * CardTransaction11.MaximumNumberOfMessages}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction11#mmMaximumNumberOfMessages
+	 * CardTransaction11.mmMaximumNumberOfMessages}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumNumberOfMessages = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumNumberOfMessages = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardTransaction12.mmObject();
 			isDerived = false;
@@ -257,12 +261,13 @@ public class CardTransaction12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumNumberOfMessages";
 			definition = "Maximum number of messages in the store and forward queue.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction11.MaximumNumberOfMessages;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction11.mmMaximumNumberOfMessages;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ResponseType2 transactionResponse;
 	/**
 	 * Response to the network management request.
 	 * <p>
@@ -289,7 +294,7 @@ public class CardTransaction12 {
 	 * definition} = "Response to the network management request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardTransaction12.mmObject();
 			isDerived = false;
@@ -297,26 +302,66 @@ public class CardTransaction12 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to the network management request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ResponseType2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ResponseType2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction12.NetworkManagementType, com.tools20022.repository.msg.CardTransaction12.InitiatorDateTime,
-						com.tools20022.repository.msg.CardTransaction12.NumberOfMessages, com.tools20022.repository.msg.CardTransaction12.MaximumNumberOfMessages, com.tools20022.repository.msg.CardTransaction12.TransactionResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction12.mmNetworkManagementType, com.tools20022.repository.msg.CardTransaction12.mmInitiatorDateTime,
+						com.tools20022.repository.msg.CardTransaction12.mmNumberOfMessages, com.tools20022.repository.msg.CardTransaction12.mmMaximumNumberOfMessages, com.tools20022.repository.msg.CardTransaction12.mmTransactionResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction12";
 				definition = "Network management transaction.";
-				previousVersion_lazy = () -> CardTransaction11.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardTransaction13.mmObject());
+				previousVersion_lazy = () -> CardTransaction11.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardServiceType2Code getNetworkManagementType() {
+		return networkManagementType;
+	}
+
+	public void setNetworkManagementType(CardServiceType2Code networkManagementType) {
+		this.networkManagementType = networkManagementType;
+	}
+
+	public ISODateTime getInitiatorDateTime() {
+		return initiatorDateTime;
+	}
+
+	public void setInitiatorDateTime(ISODateTime initiatorDateTime) {
+		this.initiatorDateTime = initiatorDateTime;
+	}
+
+	public Number getNumberOfMessages() {
+		return numberOfMessages;
+	}
+
+	public void setNumberOfMessages(Number numberOfMessages) {
+		this.numberOfMessages = numberOfMessages;
+	}
+
+	public Number getMaximumNumberOfMessages() {
+		return maximumNumberOfMessages;
+	}
+
+	public void setMaximumNumberOfMessages(Number maximumNumberOfMessages) {
+		this.maximumNumberOfMessages = maximumNumberOfMessages;
+	}
+
+	public ResponseType2 getTransactionResponse() {
+		return transactionResponse;
+	}
+
+	public void setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
+		this.transactionResponse = transactionResponse;
 	}
 }

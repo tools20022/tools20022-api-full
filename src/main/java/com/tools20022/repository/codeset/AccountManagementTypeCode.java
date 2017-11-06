@@ -32,20 +32,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#AccountOpening
- * AccountManagementTypeCode.AccountOpening}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#mmAccountOpening
+ * AccountManagementTypeCode.mmAccountOpening}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#AccountModification
- * AccountManagementTypeCode.AccountModification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#mmAccountModification
+ * AccountManagementTypeCode.mmAccountModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#GetAccountDetails
- * AccountManagementTypeCode.GetAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#mmGetAccountDetails
+ * AccountManagementTypeCode.mmGetAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#AccountClosure
- * AccountManagementTypeCode.AccountClosure}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#mmAccountClosure
+ * AccountManagementTypeCode.mmAccountClosure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#AccountStatus
- * AccountManagementTypeCode.AccountStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#mmAccountStatus
+ * AccountManagementTypeCode.mmAccountStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -62,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -106,7 +106,7 @@ public class AccountManagementTypeCode {
 	 * definition} = "Refers to an account opening instruction message."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountOpening = new MMCode() {
+	public static final MMCode mmAccountOpening = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOpening";
@@ -136,7 +136,7 @@ public class AccountManagementTypeCode {
 	 * definition} = "Refers to an account modification instruction message."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountModification = new MMCode() {
+	public static final MMCode mmAccountModification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountModification";
@@ -166,7 +166,7 @@ public class AccountManagementTypeCode {
 	 * definition} = "Refers to a get account details message."</li>
 	 * </ul>
 	 */
-	public static final MMCode GetAccountDetails = new MMCode() {
+	public static final MMCode mmGetAccountDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GetAccountDetails";
@@ -196,7 +196,7 @@ public class AccountManagementTypeCode {
 	 * definition} = "Refers to an account closure instruction message."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountClosure = new MMCode() {
+	public static final MMCode mmAccountClosure = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosure";
@@ -226,7 +226,7 @@ public class AccountManagementTypeCode {
 	 * definition} = "Refers to the account status."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountStatus = new MMCode() {
+	public static final MMCode mmAccountStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatus";
@@ -239,14 +239,14 @@ public class AccountManagementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementTypeCode";
 				definition = "Refers to an account management instruction, that is, either an account opening instruction or an account modification instruction or a get account details message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementTypeCode.AccountOpening, com.tools20022.repository.codeset.AccountManagementTypeCode.AccountModification,
-						com.tools20022.repository.codeset.AccountManagementTypeCode.GetAccountDetails, com.tools20022.repository.codeset.AccountManagementTypeCode.AccountClosure,
-						com.tools20022.repository.codeset.AccountManagementTypeCode.AccountStatus);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementTypeCode.mmAccountOpening, com.tools20022.repository.codeset.AccountManagementTypeCode.mmAccountModification,
+						com.tools20022.repository.codeset.AccountManagementTypeCode.mmGetAccountDetails, com.tools20022.repository.codeset.AccountManagementTypeCode.mmAccountClosure,
+						com.tools20022.repository.codeset.AccountManagementTypeCode.mmAccountStatus);
 				derivation_lazy = () -> Arrays.asList(AccountManagementType2Code.mmObject(), AccountManagementType1Code.mmObject(), AccountManagementType3Code.mmObject());
 			}
 		});

@@ -38,13 +38,13 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Repartition2#Percentage
- * Repartition2.Percentage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Repartition2#mmPercentage
+ * Repartition2.mmPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Repartition2#FinancialInstrument
- * Repartition2.FinancialInstrument}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Repartition2#CurrencyOfPlan
- * Repartition2.CurrencyOfPlan}</li>
+ * {@linkplain com.tools20022.repository.msg.Repartition2#mmFinancialInstrument
+ * Repartition2.mmFinancialInstrument}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Repartition2#mmCurrencyOfPlan
+ * Repartition2.mmCurrencyOfPlan}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -80,6 +80,7 @@ import java.util.function.Supplier;
 public class Repartition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate percentage;
 	/**
 	 * Percentage of amount invested in a funds.
 	 * <p>
@@ -108,13 +109,13 @@ public class Repartition2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Repartition3#Quantity
-	 * Repartition3.Quantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Repartition3#mmQuantity
+	 * Repartition3.mmQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Percentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Repartition2.mmObject();
 			isDerived = false;
@@ -122,12 +123,13 @@ public class Repartition2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Percentage of amount invested in a funds.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition3.Quantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition3.mmQuantity);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected FinancialInstrument29 financialInstrument;
 	/**
 	 * Security that is a sub-set of an investment fund, and is governed by the
 	 * same investment fund policy, eg, dividend option or valuation currency.
@@ -163,28 +165,29 @@ public class Repartition2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Repartition3#FinancialInstrument
-	 * Repartition3.FinancialInstrument}</li>
+	 * {@linkplain com.tools20022.repository.msg.Repartition3#mmFinancialInstrument
+	 * Repartition3.mmFinancialInstrument}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Repartition2.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
+			componentContext_lazy = () -> Repartition2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition3.FinancialInstrument);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition3.mmFinancialInstrument);
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument29.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument29.mmObject();
 		}
 	};
+	protected CurrencyCode currencyOfPlan;
 	/**
 	 * When a fund has multiple currencies within same ISIN, this indicates the
 	 * currency of the savings or withdrawal plan.
@@ -216,13 +219,13 @@ public class Repartition2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Repartition3#CurrencyOfPlan
-	 * Repartition3.CurrencyOfPlan}</li>
+	 * {@linkplain com.tools20022.repository.msg.Repartition3#mmCurrencyOfPlan
+	 * Repartition3.mmCurrencyOfPlan}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrencyOfPlan = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrencyOfPlan = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Repartition2.mmObject();
 			isDerived = false;
@@ -230,9 +233,9 @@ public class Repartition2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyOfPlan";
 			definition = "When a fund has multiple currencies within same ISIN, this indicates the currency of the savings or withdrawal plan.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition3.CurrencyOfPlan);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition3.mmCurrencyOfPlan);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
@@ -240,9 +243,10 @@ public class Repartition2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition2.Percentage, com.tools20022.repository.msg.Repartition2.FinancialInstrument, com.tools20022.repository.msg.Repartition2.CurrencyOfPlan);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition2.mmPercentage, com.tools20022.repository.msg.Repartition2.mmFinancialInstrument,
+						com.tools20022.repository.msg.Repartition2.mmCurrencyOfPlan);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -253,10 +257,34 @@ public class Repartition2 {
 				})).get();
 				name = "Repartition2";
 				definition = "Indicates how the amount of the investment plan is split amongst the funds.";
-				previousVersion_lazy = () -> Repartition1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Repartition3.mmObject());
+				previousVersion_lazy = () -> Repartition1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(PercentageRate percentage) {
+		this.percentage = percentage;
+	}
+
+	public FinancialInstrument29 getFinancialInstrument() {
+		return financialInstrument;
+	}
+
+	public void setFinancialInstrument(com.tools20022.repository.msg.FinancialInstrument29 financialInstrument) {
+		this.financialInstrument = financialInstrument;
+	}
+
+	public CurrencyCode getCurrencyOfPlan() {
+		return currencyOfPlan;
+	}
+
+	public void setCurrencyOfPlan(CurrencyCode currencyOfPlan) {
+		this.currencyOfPlan = currencyOfPlan;
 	}
 }

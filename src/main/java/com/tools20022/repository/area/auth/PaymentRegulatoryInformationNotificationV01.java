@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The PaymentRegulatoryInformationNotification message is sent by the reporting
@@ -60,21 +61,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01#GroupHeader
- * PaymentRegulatoryInformationNotificationV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01#mmGroupHeader
+ * PaymentRegulatoryInformationNotificationV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01#TransactionNotification
- * PaymentRegulatoryInformationNotificationV01.TransactionNotification}</li>
+ * {@linkplain com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01#mmTransactionNotification
+ * PaymentRegulatoryInformationNotificationV01.mmTransactionNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01#SupplementaryData
- * PaymentRegulatoryInformationNotificationV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01#mmSupplementaryData
+ * PaymentRegulatoryInformationNotificationV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01#identifier
- * PaymentRegulatoryInformationNotificationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.024.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentRegulatoryInformationNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyControlHeader3 groupHeader;
 	/**
 	 * Characteristics shared by all individual items included in the message.
 	 * <p>
@@ -115,17 +115,18 @@ public class PaymentRegulatoryInformationNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Characteristics shared by all individual items included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CurrencyControlHeader3.mmObject();
 		}
 	};
+	protected List<RegulatoryReportingNotification1> transactionNotification;
 	/**
 	 * Notification of information related to a regulatory reporting on a
 	 * payment.
@@ -152,7 +153,7 @@ public class PaymentRegulatoryInformationNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionNotification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionNotification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxNtfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,6 +163,7 @@ public class PaymentRegulatoryInformationNotificationV01 {
 			complexType_lazy = () -> RegulatoryReportingNotification1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -188,7 +190,7 @@ public class PaymentRegulatoryInformationNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,33 +198,6 @@ public class PaymentRegulatoryInformationNotificationV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "024"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "024";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -236,11 +211,42 @@ public class PaymentRegulatoryInformationNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "PmtRgltryInfNtfctn";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.GroupHeader,
-						com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.TransactionNotification, com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.mmGroupHeader,
+						com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.mmTransactionNotification, com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "024";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyControlHeader3 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(CurrencyControlHeader3 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<RegulatoryReportingNotification1> getTransactionNotification() {
+		return transactionNotification;
+	}
+
+	public void setTransactionNotification(List<RegulatoryReportingNotification1> transactionNotification) {
+		this.transactionNotification = transactionNotification;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

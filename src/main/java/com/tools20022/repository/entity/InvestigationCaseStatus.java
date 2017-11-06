@@ -41,19 +41,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCaseStatus#CaseStatus
- * InvestigationCaseStatus.CaseStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCaseStatus#mmCaseStatus
+ * InvestigationCaseStatus.mmCaseStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCaseStatus#InvestigationCase
- * InvestigationCaseStatus.InvestigationCase}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCaseStatus#mmInvestigationCase
+ * InvestigationCaseStatus.mmInvestigationCase}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestigationCase#Status
- * InvestigationCase.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestigationCase#mmStatus
+ * InvestigationCase.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -71,8 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestigationCaseStatus extends Status {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CaseStatusCode caseStatus;
 	/**
 	 * Status of the case.
 	 * <p>
@@ -96,20 +97,20 @@ public class InvestigationCaseStatus extends Status {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CaseStatusCode
 	 * CaseStatusCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CaseStatus#CaseStatus
-	 * CaseStatus.CaseStatus}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CaseStatus2#CaseStatus
-	 * CaseStatus2.CaseStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestigationCaseStatus
 	 * InvestigationCaseStatus}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CaseStatus#mmCaseStatus
+	 * CaseStatus.mmCaseStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CaseStatus2#mmCaseStatus
+	 * CaseStatus2.mmCaseStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -121,19 +122,20 @@ public class InvestigationCaseStatus extends Status {
 	 * definition} = "Status of the case."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CaseStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCaseStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseStatus.CaseStatus, com.tools20022.repository.msg.CaseStatus2.CaseStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseStatus.mmCaseStatus, com.tools20022.repository.msg.CaseStatus2.mmCaseStatus);
 			elementContext_lazy = () -> InvestigationCaseStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CaseStatus";
 			definition = "Status of the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CaseStatusCode.mmObject();
 		}
 	};
+	protected InvestigationCase investigationCase;
 	/**
 	 * Case for which a status is reported.
 	 * <p>
@@ -142,8 +144,8 @@ public class InvestigationCaseStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#Status
-	 * InvestigationCase.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmStatus
+	 * InvestigationCase.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -167,34 +169,50 @@ public class InvestigationCaseStatus extends Status {
 	 * definition} = "Case for which a status is reported."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestigationCase = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestigationCase = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestigationCaseStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCase";
 			definition = "Case for which a status is reported.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCase.Status;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestigationCaseStatus";
 				definition = "Status of an investigation case.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCase.Status);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCase.mmStatus);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCaseStatus.CaseStatus, com.tools20022.repository.entity.InvestigationCaseStatus.InvestigationCase);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCaseStatus.mmCaseStatus, com.tools20022.repository.entity.InvestigationCaseStatus.mmInvestigationCase);
 				derivationComponent_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseStatus.mmObject(), CaseStatus2.mmObject(), CancellationStatusReason2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseStatusCode getCaseStatus() {
+		return caseStatus;
+	}
+
+	public void setCaseStatus(CaseStatusCode caseStatus) {
+		this.caseStatus = caseStatus;
+	}
+
+	public InvestigationCase getInvestigationCase() {
+		return investigationCase;
+	}
+
+	public void setInvestigationCase(com.tools20022.repository.entity.InvestigationCase investigationCase) {
+		this.investigationCase = investigationCase;
 	}
 }

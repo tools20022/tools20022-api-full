@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StampDutyType2Code#Applicable
- * StampDutyType2Code.Applicable}</li>
+ * {@linkplain com.tools20022.repository.codeset.StampDutyType2Code#mmApplicable
+ * StampDutyType2Code.mmApplicable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StampDutyType2Code#NotApplicable
- * StampDutyType2Code.NotApplicable}</li>
+ * {@linkplain com.tools20022.repository.codeset.StampDutyType2Code#mmNotApplicable
+ * StampDutyType2Code.mmNotApplicable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class StampDutyType2Code extends StampDutyTypeCode {
 	 * name} = "Applicable"</li>
 	 * </ul>
 	 */
-	public static final MMCode Applicable = new MMCode() {
+	public static final MMCode mmApplicable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicable";
@@ -104,7 +104,7 @@ public class StampDutyType2Code extends StampDutyTypeCode {
 	 * name} = "NotApplicable"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotApplicable = new MMCode() {
+	public static final MMCode mmNotApplicable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
@@ -115,12 +115,12 @@ public class StampDutyType2Code extends StampDutyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ASTD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StampDutyType2Code";
 				definition = "Specifies if the stamp duty is applicable.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StampDutyType2Code.Applicable, com.tools20022.repository.codeset.StampDutyType2Code.NotApplicable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StampDutyType2Code.mmApplicable, com.tools20022.repository.codeset.StampDutyType2Code.mmNotApplicable);
 				trace_lazy = () -> StampDutyTypeCode.mmObject();
 			}
 		});

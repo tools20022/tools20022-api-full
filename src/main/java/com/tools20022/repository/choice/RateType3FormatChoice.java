@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.RateType3FormatChoice#Code
- * RateType3FormatChoice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateType3FormatChoice#Proprietary
- * RateType3FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RateType3FormatChoice#mmCode
+ * RateType3FormatChoice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RateType3FormatChoice#mmProprietary
+ * RateType3FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateType3FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateType3Code code;
 	/**
 	 * Standard code to specify the type of tax rate.
 	 * <p>
@@ -86,7 +88,7 @@ public class RateType3FormatChoice {
 	 * definition} = "Standard code to specify the type of tax rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateType3FormatChoice.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class RateType3FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of tax rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateType3Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code to express the type of tax rate.
 	 * <p>
@@ -127,7 +130,7 @@ public class RateType3FormatChoice {
 	 * definition} = "Proprietary code to  express the type of tax rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateType3FormatChoice.mmObject();
 			isDerived = false;
@@ -135,8 +138,8 @@ public class RateType3FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to  express the type of tax rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -144,13 +147,29 @@ public class RateType3FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType3FormatChoice.Code, com.tools20022.repository.choice.RateType3FormatChoice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType3FormatChoice.mmCode, com.tools20022.repository.choice.RateType3FormatChoice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RateType3FormatChoice";
 				definition = "Choice of formats to  express the type of tax rate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateType3Code getCode() {
+		return code;
+	}
+
+	public void setCode(RateType3Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

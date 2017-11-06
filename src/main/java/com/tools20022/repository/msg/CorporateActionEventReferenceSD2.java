@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionEventReferenceSD2#PlaceAndName
- * CorporateActionEventReferenceSD2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventReferenceSD2#mmPlaceAndName
+ * CorporateActionEventReferenceSD2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionEventReferenceSD2#LinkageType
- * CorporateActionEventReferenceSD2.LinkageType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventReferenceSD2#mmLinkageType
+ * CorporateActionEventReferenceSD2.mmLinkageType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionEventReferenceSD2#LinkAddedDate
- * CorporateActionEventReferenceSD2.LinkAddedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventReferenceSD2#mmLinkAddedDate
+ * CorporateActionEventReferenceSD2.mmLinkAddedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionEventReferenceSD2#LinkModifiedDate
- * CorporateActionEventReferenceSD2.LinkModifiedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventReferenceSD2#mmLinkModifiedDate
+ * CorporateActionEventReferenceSD2.mmLinkModifiedDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionEventReferenceSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -93,7 +94,7 @@ public class CorporateActionEventReferenceSD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class CorporateActionEventReferenceSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DTCCLinkType1Code linkageType;
 	/**
 	 * Indicates the reason why two or more events are related.
 	 * <p>
@@ -134,7 +136,7 @@ public class CorporateActionEventReferenceSD2 {
 	 * definition} = "Indicates the reason why two or more events are related."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkageType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class CorporateActionEventReferenceSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Indicates the reason why two or more events are related.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DTCCLinkType1Code.mmObject();
 		}
 	};
+	protected ISODate linkAddedDate;
 	/**
 	 * Events can be linked together. This date represents the date on which the
 	 * link was established.
@@ -177,7 +180,7 @@ public class CorporateActionEventReferenceSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkAddedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkAddedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
@@ -185,11 +188,12 @@ public class CorporateActionEventReferenceSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkAddedDate";
 			definition = "Events can be linked together. This date represents the date on which the link was established.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate linkModifiedDate;
 	/**
 	 * Events can be linked together. This date represents the date on which the
 	 * link was modified.
@@ -220,7 +224,7 @@ public class CorporateActionEventReferenceSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkModifiedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkModifiedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
@@ -228,8 +232,8 @@ public class CorporateActionEventReferenceSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkModifiedDate";
 			definition = "Events can be linked together. This date represents the date on which the link was modified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -237,14 +241,46 @@ public class CorporateActionEventReferenceSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventReferenceSD2.PlaceAndName, com.tools20022.repository.msg.CorporateActionEventReferenceSD2.LinkageType,
-						com.tools20022.repository.msg.CorporateActionEventReferenceSD2.LinkAddedDate, com.tools20022.repository.msg.CorporateActionEventReferenceSD2.LinkModifiedDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmLinkageType,
+						com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmLinkAddedDate, com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmLinkModifiedDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionEventReferenceSD2";
 				definition = "Provides additional information regarding linkage details. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public DTCCLinkType1Code getLinkageType() {
+		return linkageType;
+	}
+
+	public void setLinkageType(DTCCLinkType1Code linkageType) {
+		this.linkageType = linkageType;
+	}
+
+	public ISODate getLinkAddedDate() {
+		return linkAddedDate;
+	}
+
+	public void setLinkAddedDate(ISODate linkAddedDate) {
+		this.linkAddedDate = linkAddedDate;
+	}
+
+	public ISODate getLinkModifiedDate() {
+		return linkModifiedDate;
+	}
+
+	public void setLinkModifiedDate(ISODate linkModifiedDate) {
+		this.linkModifiedDate = linkModifiedDate;
 	}
 }

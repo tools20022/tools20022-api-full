@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -40,39 +41,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#RequestedSettlementDate
- * ReceiveInformation15.RequestedSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmRequestedSettlementDate
+ * ReceiveInformation15.mmRequestedSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#SettlementAmount
- * ReceiveInformation15.SettlementAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation15#StampDuty
- * ReceiveInformation15.StampDuty}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation15#NetAmount
- * ReceiveInformation15.NetAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmSettlementAmount
+ * ReceiveInformation15.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#SettlementPartiesDetails
- * ReceiveInformation15.SettlementPartiesDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmStampDuty
+ * ReceiveInformation15.mmStampDuty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#ChargeDetails
- * ReceiveInformation15.ChargeDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmNetAmount
+ * ReceiveInformation15.mmNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#CommissionDetails
- * ReceiveInformation15.CommissionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmSettlementPartiesDetails
+ * ReceiveInformation15.mmSettlementPartiesDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#TaxDetails
- * ReceiveInformation15.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmChargeDetails
+ * ReceiveInformation15.mmChargeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#ForeignExchangeDetails
- * ReceiveInformation15.ForeignExchangeDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmCommissionDetails
+ * ReceiveInformation15.mmCommissionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#PhysicalTransfer
- * ReceiveInformation15.PhysicalTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmTaxDetails
+ * ReceiveInformation15.mmTaxDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#PhysicalTransferDetails
- * ReceiveInformation15.PhysicalTransferDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmForeignExchangeDetails
+ * ReceiveInformation15.mmForeignExchangeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#ClientReference
- * ReceiveInformation15.ClientReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmPhysicalTransfer
+ * ReceiveInformation15.mmPhysicalTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmPhysicalTransferDetails
+ * ReceiveInformation15.mmPhysicalTransferDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmClientReference
+ * ReceiveInformation15.mmClientReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -83,15 +86,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#SettlementDetails
- * TransferOutInstructionV06.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmSettlementDetails
+ * TransferOutInstructionV06.mmSettlementDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,6 +119,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReceiveInformation15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate requestedSettlementDate;
 	/**
 	 * Date and time at which the securities are to be exchanged at the
 	 * International Central Securities Depository (ICSD) or Central Securities
@@ -130,8 +134,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
-	 * Obligation.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+	 * Obligation.mmRequestedSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,33 +158,34 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#RequestedSettlementDate
-	 * ReceiveInformation16.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmRequestedSettlementDate
+	 * ReceiveInformation16.mmRequestedSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#RequestedSettlementDate
-	 * ReceiveInformation13.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmRequestedSettlementDate
+	 * ReceiveInformation13.mmRequestedSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementDate;
 			isDerived = false;
 			xmlTag = "ReqdSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementDate";
 			definition = "Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.RequestedSettlementDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.RequestedSettlementDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmRequestedSettlementDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmRequestedSettlementDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount settlementAmount;
 	/**
 	 * Total amount of money paid /to be paid or received in exchange for the
 	 * financial instrument in the individual order.
@@ -195,8 +200,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementAmount
-	 * SecuritiesSettlement.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+	 * SecuritiesSettlement.mmSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -219,33 +224,34 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#SettlementAmount
-	 * ReceiveInformation16.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmSettlementAmount
+	 * ReceiveInformation16.mmSettlementAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#SettlementAmount
-	 * ReceiveInformation13.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmSettlementAmount
+	 * ReceiveInformation13.mmSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementAmount;
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.SettlementAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.SettlementAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmSettlementAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmSettlementAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected StampDutyType2Code stampDuty;
 	/**
 	 * Indicates whether the settlement amount includes the stamp duty amount.
 	 * <p>
@@ -259,8 +265,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#StampDutyType
-	 * SecuritiesTax.StampDutyType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmStampDutyType
+	 * SecuritiesTax.mmStampDutyType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -283,33 +289,34 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#StampDuty
-	 * ReceiveInformation16.StampDuty}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmStampDuty
+	 * ReceiveInformation16.mmStampDuty}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#StampDuty
-	 * ReceiveInformation13.StampDuty}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmStampDuty
+	 * ReceiveInformation13.mmStampDuty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StampDuty = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmStampDutyType;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.StampDutyType;
 			isDerived = false;
 			xmlTag = "StmpDty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			definition = "Indicates whether the settlement amount includes the stamp duty amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.StampDuty;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.StampDuty);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmStampDuty);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmStampDuty;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> StampDutyType2Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount netAmount;
 	/**
 	 * Deal amount.
 	 * <p>
@@ -323,8 +330,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradeAmount
-	 * SecuritiesTrade.TradeAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeAmount
+	 * SecuritiesTrade.mmTradeAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -345,33 +352,34 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#NetAmount
-	 * ReceiveInformation16.NetAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmNetAmount
+	 * ReceiveInformation16.mmNetAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#NetAmount
-	 * ReceiveInformation13.NetAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmNetAmount
+	 * ReceiveInformation13.mmNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeAmount;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradeAmount;
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Deal amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.NetAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.NetAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmNetAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmNetAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ReceivingPartiesAndAccount9 settlementPartiesDetails;
 	/**
 	 * Chain of parties involved in the settlement of a transaction.
 	 * <p>
@@ -384,8 +392,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartyRole
-	 * SecuritiesSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+	 * SecuritiesSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -407,34 +415,35 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#SettlementPartiesDetails
-	 * ReceiveInformation16.SettlementPartiesDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmSettlementPartiesDetails
+	 * ReceiveInformation16.mmSettlementPartiesDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#SettlementPartiesDetails
-	 * ReceiveInformation13.SettlementPartiesDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmSettlementPartiesDetails
+	 * ReceiveInformation13.mmSettlementPartiesDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementPartiesDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartyRole;
 			isDerived = false;
 			xmlTag = "SttlmPtiesDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPartiesDetails";
 			definition = "Chain of parties involved in the settlement of a transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.SettlementPartiesDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.SettlementPartiesDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmSettlementPartiesDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmSettlementPartiesDetails;
 			maxOccurs = 1;
-			type_lazy = () -> ReceivingPartiesAndAccount9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount9.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Charge27> chargeDetails;
 	/**
 	 * Charge related to the transfer of a financial instrument.
 	 * <p>
@@ -445,8 +454,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Fees Security.Fees}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmFees
+	 * Security.mmFees}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -468,33 +477,34 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#ChargeDetails
-	 * ReceiveInformation16.ChargeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmChargeDetails
+	 * ReceiveInformation16.mmChargeDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#ChargeDetails
-	 * ReceiveInformation13.ChargeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmChargeDetails
+	 * ReceiveInformation13.mmChargeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmFees;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Fees;
 			isDerived = false;
 			xmlTag = "ChrgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeDetails";
 			definition = "Charge related to the transfer of a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.ChargeDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.ChargeDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmChargeDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmChargeDetails;
 			minOccurs = 0;
-			type_lazy = () -> Charge27.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Charge27.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Commission22> commissionDetails;
 	/**
 	 * Commission related to the transfer of a financial instrument.
 	 * <p>
@@ -506,8 +516,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeCommission
-	 * Trade.TradeCommission}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeCommission
+	 * Trade.mmTradeCommission}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -529,33 +539,34 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#CommissionDetails
-	 * ReceiveInformation16.CommissionDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmCommissionDetails
+	 * ReceiveInformation16.mmCommissionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#CommissionDetails
-	 * ReceiveInformation13.CommissionDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmCommissionDetails
+	 * ReceiveInformation13.mmCommissionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommissionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeCommission;
 			isDerived = false;
 			xmlTag = "ComssnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Commission related to the transfer of a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.CommissionDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.CommissionDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmCommissionDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmCommissionDetails;
 			minOccurs = 0;
-			type_lazy = () -> Commission22.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Commission22.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Tax25> taxDetails;
 	/**
 	 * Tax related to the transfer of a financial instrument.
 	 * <p>
@@ -588,33 +599,34 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#TaxDetails
-	 * ReceiveInformation16.TaxDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmTaxDetails
+	 * ReceiveInformation16.mmTaxDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#TaxDetails
-	 * ReceiveInformation13.TaxDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmTaxDetails
+	 * ReceiveInformation13.mmTaxDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReceiveInformation15.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
+			componentContext_lazy = () -> ReceiveInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Tax related to the transfer of a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.TaxDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.TaxDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmTaxDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmTaxDetails;
 			minOccurs = 0;
-			type_lazy = () -> Tax25.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Tax25.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ForeignExchangeTerms7> foreignExchangeDetails;
 	/**
 	 * Specifies foreign exchange details applied to the payment of charges,
 	 * taxes and commissions as a result of the transfer.
@@ -627,8 +639,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#AgreedRate
-	 * ForeignExchangeTrade.AgreedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+	 * ForeignExchangeTrade.mmAgreedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -651,33 +663,34 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#ForeignExchangeDetails
-	 * ReceiveInformation16.ForeignExchangeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmForeignExchangeDetails
+	 * ReceiveInformation16.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#ForeignExchangeDetails
-	 * ReceiveInformation13.ForeignExchangeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmForeignExchangeDetails
+	 * ReceiveInformation13.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.AgreedRate;
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Specifies foreign exchange details applied to the payment of charges, taxes and commissions as a result of the transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.ForeignExchangeDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.ForeignExchangeDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmForeignExchangeDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmForeignExchangeDetails;
 			minOccurs = 0;
-			type_lazy = () -> ForeignExchangeTerms7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms7.mmObject();
 		}
 	};
+	protected PhysicalTransferType1Code physicalTransfer;
 	/**
 	 * Indicates whether the financial instrument is to be physically delivered.
 	 * <p>
@@ -691,8 +704,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#Type
-	 * PhysicalDelivery.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmType
+	 * PhysicalDelivery.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -715,33 +728,34 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#PhysicalTransfer
-	 * ReceiveInformation16.PhysicalTransfer}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmPhysicalTransfer
+	 * ReceiveInformation16.mmPhysicalTransfer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#PhysicalTransfer
-	 * ReceiveInformation13.PhysicalTransfer}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmPhysicalTransfer
+	 * ReceiveInformation13.mmPhysicalTransfer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PhysicalTransfer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPhysicalTransfer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmType;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.Type;
 			isDerived = false;
 			xmlTag = "PhysTrf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransfer";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.PhysicalTransfer;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.PhysicalTransfer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmPhysicalTransfer);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmPhysicalTransfer;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PhysicalTransferType1Code.mmObject();
 		}
 	};
+	protected DeliveryParameters4 physicalTransferDetails;
 	/**
 	 * Parameters of a physical delivery.
 	 * <p>
@@ -753,8 +767,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PhysicalDelivery
-	 * SecuritiesTransfer.PhysicalDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
+	 * SecuritiesTransfer.mmPhysicalDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -775,34 +789,35 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#PhysicalTransferDetails
-	 * ReceiveInformation16.PhysicalTransferDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmPhysicalTransferDetails
+	 * ReceiveInformation16.mmPhysicalTransferDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#PhysicalTransferDetails
-	 * ReceiveInformation13.PhysicalTransferDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmPhysicalTransferDetails
+	 * ReceiveInformation13.mmPhysicalTransferDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PhysicalTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPhysicalTransferDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.PhysicalDelivery;
 			isDerived = false;
 			xmlTag = "PhysTrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetails";
 			definition = "Parameters of a physical delivery.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.PhysicalTransferDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.PhysicalTransferDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmPhysicalTransferDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmPhysicalTransferDetails;
 			maxOccurs = 1;
-			type_lazy = () -> DeliveryParameters4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DeliveryParameters4.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of a transfer. This
 	 * reference can typically be used in a hub scenario to give the reference
@@ -817,8 +832,8 @@ public class ReceiveInformation15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -841,30 +856,30 @@ public class ReceiveInformation15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#ClientReference
-	 * ReceiveInformation16.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmClientReference
+	 * ReceiveInformation16.mmClientReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#ClientReference
-	 * ReceiveInformation13.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmClientReference
+	 * ReceiveInformation13.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> ReceiveInformation15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.ClientReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.ClientReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation16.mmClientReference);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceiveInformation13.mmClientReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -872,21 +887,117 @@ public class ReceiveInformation15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation15.RequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation15.SettlementAmount,
-						com.tools20022.repository.msg.ReceiveInformation15.StampDuty, com.tools20022.repository.msg.ReceiveInformation15.NetAmount, com.tools20022.repository.msg.ReceiveInformation15.SettlementPartiesDetails,
-						com.tools20022.repository.msg.ReceiveInformation15.ChargeDetails, com.tools20022.repository.msg.ReceiveInformation15.CommissionDetails, com.tools20022.repository.msg.ReceiveInformation15.TaxDetails,
-						com.tools20022.repository.msg.ReceiveInformation15.ForeignExchangeDetails, com.tools20022.repository.msg.ReceiveInformation15.PhysicalTransfer,
-						com.tools20022.repository.msg.ReceiveInformation15.PhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation15.ClientReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation15.mmRequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation15.mmSettlementAmount,
+						com.tools20022.repository.msg.ReceiveInformation15.mmStampDuty, com.tools20022.repository.msg.ReceiveInformation15.mmNetAmount, com.tools20022.repository.msg.ReceiveInformation15.mmSettlementPartiesDetails,
+						com.tools20022.repository.msg.ReceiveInformation15.mmChargeDetails, com.tools20022.repository.msg.ReceiveInformation15.mmCommissionDetails, com.tools20022.repository.msg.ReceiveInformation15.mmTaxDetails,
+						com.tools20022.repository.msg.ReceiveInformation15.mmForeignExchangeDetails, com.tools20022.repository.msg.ReceiveInformation15.mmPhysicalTransfer,
+						com.tools20022.repository.msg.ReceiveInformation15.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation15.mmClientReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV06.mmSettlementDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV06.SettlementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReceiveInformation15";
 				definition = "Parameters applied to the settlement of a security transfer.";
-				previousVersion_lazy = () -> ReceiveInformation13.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ReceiveInformation16.mmObject());
+				previousVersion_lazy = () -> ReceiveInformation13.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getRequestedSettlementDate() {
+		return requestedSettlementDate;
+	}
+
+	public void setRequestedSettlementDate(ISODate requestedSettlementDate) {
+		this.requestedSettlementDate = requestedSettlementDate;
+	}
+
+	public ActiveCurrencyAndAmount getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public StampDutyType2Code getStampDuty() {
+		return stampDuty;
+	}
+
+	public void setStampDuty(StampDutyType2Code stampDuty) {
+		this.stampDuty = stampDuty;
+	}
+
+	public ActiveCurrencyAndAmount getNetAmount() {
+		return netAmount;
+	}
+
+	public void setNetAmount(ActiveCurrencyAndAmount netAmount) {
+		this.netAmount = netAmount;
+	}
+
+	public ReceivingPartiesAndAccount9 getSettlementPartiesDetails() {
+		return settlementPartiesDetails;
+	}
+
+	public void setSettlementPartiesDetails(com.tools20022.repository.msg.ReceivingPartiesAndAccount9 settlementPartiesDetails) {
+		this.settlementPartiesDetails = settlementPartiesDetails;
+	}
+
+	public List<Charge27> getChargeDetails() {
+		return chargeDetails;
+	}
+
+	public void setChargeDetails(List<com.tools20022.repository.msg.Charge27> chargeDetails) {
+		this.chargeDetails = chargeDetails;
+	}
+
+	public List<Commission22> getCommissionDetails() {
+		return commissionDetails;
+	}
+
+	public void setCommissionDetails(List<com.tools20022.repository.msg.Commission22> commissionDetails) {
+		this.commissionDetails = commissionDetails;
+	}
+
+	public List<Tax25> getTaxDetails() {
+		return taxDetails;
+	}
+
+	public void setTaxDetails(List<com.tools20022.repository.msg.Tax25> taxDetails) {
+		this.taxDetails = taxDetails;
+	}
+
+	public List<ForeignExchangeTerms7> getForeignExchangeDetails() {
+		return foreignExchangeDetails;
+	}
+
+	public void setForeignExchangeDetails(List<com.tools20022.repository.msg.ForeignExchangeTerms7> foreignExchangeDetails) {
+		this.foreignExchangeDetails = foreignExchangeDetails;
+	}
+
+	public PhysicalTransferType1Code getPhysicalTransfer() {
+		return physicalTransfer;
+	}
+
+	public void setPhysicalTransfer(PhysicalTransferType1Code physicalTransfer) {
+		this.physicalTransfer = physicalTransfer;
+	}
+
+	public DeliveryParameters4 getPhysicalTransferDetails() {
+		return physicalTransferDetails;
+	}
+
+	public void setPhysicalTransferDetails(com.tools20022.repository.msg.DeliveryParameters4 physicalTransferDetails) {
+		this.physicalTransferDetails = physicalTransferDetails;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
 	}
 }

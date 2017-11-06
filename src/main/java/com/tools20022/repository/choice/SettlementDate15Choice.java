@@ -31,18 +31,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.SettlementDate15Choice#Date
- * SettlementDate15Choice.Date}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementDate15Choice#DateCode
- * SettlementDate15Choice.DateCode}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementDate15Choice#mmDate
+ * SettlementDate15Choice.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementDate15Choice#mmDateCode
+ * SettlementDate15Choice.mmDateCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementDate15Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Date in ISO format.
 	 * <p>
@@ -84,7 +86,7 @@ public class SettlementDate15Choice {
 	 * definition} = "Date in ISO format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementDate15Choice.mmObject();
 			isDerived = false;
@@ -92,11 +94,12 @@ public class SettlementDate15Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected SettlementDateCode11Choice dateCode;
 	/**
 	 * Date and time at which the securities are to be delivered or received.
 	 * <p>
@@ -126,7 +129,7 @@ public class SettlementDate15Choice {
 	 * "Date and time at which the securities are to be delivered or received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementDate15Choice.mmObject();
 			isDerived = false;
@@ -134,22 +137,38 @@ public class SettlementDate15Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Date and time at which the securities are to be delivered or received.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SettlementDateCode11Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.SettlementDateCode11Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDate15Choice.Date, com.tools20022.repository.choice.SettlementDate15Choice.DateCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDate15Choice.mmDate, com.tools20022.repository.choice.SettlementDate15Choice.mmDateCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate15Choice";
 				definition = "Choice of format for the settlement date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+		this.date = date;
+	}
+
+	public SettlementDateCode11Choice getDateCode() {
+		return dateCode;
+	}
+
+	public void setDateCode(com.tools20022.repository.choice.SettlementDateCode11Choice dateCode) {
+		this.dateCode = dateCode;
 	}
 }

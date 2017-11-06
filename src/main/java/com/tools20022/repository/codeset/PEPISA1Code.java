@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PEPISACode PEPISACode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PEPISA1Code#PEP
- * PEPISA1Code.PEP}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PEPISA1Code#ISA
- * PEPISA1Code.ISA}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PEPISA1Code#mmPEP
+ * PEPISA1Code.mmPEP}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PEPISA1Code#mmISA
+ * PEPISA1Code.mmISA}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +77,7 @@ public class PEPISA1Code extends PEPISACode {
 	 * name} = "PEP"</li>
 	 * </ul>
 	 */
-	public static final MMCode PEP = new MMCode() {
+	public static final MMCode mmPEP = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEP";
@@ -99,7 +99,7 @@ public class PEPISA1Code extends PEPISACode {
 	 * name} = "ISA"</li>
 	 * </ul>
 	 */
-	public static final MMCode ISA = new MMCode() {
+	public static final MMCode mmISA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISA";
@@ -110,12 +110,12 @@ public class PEPISA1Code extends PEPISACode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PEPT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PEPISA1Code";
 				definition = "Specifies the type of Transfer, PEP or ISA.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PEPISA1Code.PEP, com.tools20022.repository.codeset.PEPISA1Code.ISA);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PEPISA1Code.mmPEP, com.tools20022.repository.codeset.PEPISA1Code.mmISA);
 				trace_lazy = () -> PEPISACode.mmObject();
 			}
 		});

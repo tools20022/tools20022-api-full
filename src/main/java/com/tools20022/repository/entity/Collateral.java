@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Assets pledged by a debtor to secure a loan or an exposure and subject to
@@ -44,49 +45,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Collateral#CollateralAmount
- * Collateral.CollateralAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Collateral#Valuation
- * Collateral.Valuation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Collateral#CollateralType
- * Collateral.CollateralType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#BaseCurrencyAmount
- * Collateral.BaseCurrencyAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralAmount
+ * Collateral.mmCollateralAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Collateral#mmValuation
+ * Collateral.mmValuation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Collateral#mmCollateralType
+ * Collateral.mmCollateralType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#CollateralPurpose
- * Collateral.CollateralPurpose}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmBaseCurrencyAmount
+ * Collateral.mmBaseCurrencyAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#CollateralBalance
- * Collateral.CollateralBalance}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralPurpose
+ * Collateral.mmCollateralPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#CollateralAccount
- * Collateral.CollateralAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralBalance
+ * Collateral.mmCollateralBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#CollateralManagement
- * Collateral.CollateralManagement}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralAccount
+ * Collateral.mmCollateralAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#CollateralPartyRole
- * Collateral.CollateralPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Collateral#Status
- * Collateral.Status}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Collateral#AssetHolding
- * Collateral.AssetHolding}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralManagement
+ * Collateral.mmCollateralManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#VariationMarginAssetHolding
- * Collateral.VariationMarginAssetHolding}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralPartyRole
+ * Collateral.mmCollateralPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Collateral#mmStatus
+ * Collateral.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Collateral#mmAssetHolding
+ * Collateral.mmAssetHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#SegregatedIndependentAmountAssetHolding
- * Collateral.SegregatedIndependentAmountAssetHolding}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmVariationMarginAssetHolding
+ * Collateral.mmVariationMarginAssetHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#CollateralAgreement
- * Collateral.CollateralAgreement}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmSegregatedIndependentAmountAssetHolding
+ * Collateral.mmSegregatedIndependentAmountAssetHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#CollateralOwnership
- * Collateral.CollateralOwnership}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralAgreement
+ * Collateral.mmCollateralAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Collateral#RelatedCollateralSubstitution
- * Collateral.RelatedCollateralSubstitution}</li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralOwnership
+ * Collateral.mmCollateralOwnership}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Collateral#mmRelatedCollateralSubstitution
+ * Collateral.mmRelatedCollateralSubstitution}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,36 +96,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Account#RelatedCollateralProcess
- * Account.RelatedCollateralProcess}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#Collateral
- * AssetHolding.Collateral}</li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmRelatedCollateralProcess
+ * Account.mmRelatedCollateralProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmCollateral
+ * AssetHolding.mmCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#VariationMarginCollateral
- * AssetHolding.VariationMarginCollateral}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmVariationMarginCollateral
+ * AssetHolding.mmVariationMarginCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AssetHolding#IndependentAmountCollateral
- * AssetHolding.IndependentAmountCollateral}</li>
+ * {@linkplain com.tools20022.repository.entity.AssetHolding#mmIndependentAmountCollateral
+ * AssetHolding.mmIndependentAmountCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralValuation#Collateral
- * CollateralValuation.Collateral}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CollateralStatus#Collateral
- * CollateralStatus.Collateral}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmCollateral
+ * CollateralValuation.mmCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralAgreement#Collateral
- * CollateralAgreement.Collateral}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCollateral
+ * CollateralStatus.mmCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralPartyRole#Collateral
- * CollateralPartyRole.Collateral}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmCollateral
+ * CollateralAgreement.mmCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralManagement#Collateral
- * CollateralManagement.Collateral}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralPartyRole#mmCollateral
+ * CollateralPartyRole.mmCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#NewCollateral
- * CollateralSubstitution.NewCollateral}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralManagement#mmCollateral
+ * CollateralManagement.mmCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralBalance#CollateralDescription
- * CollateralBalance.CollateralDescription}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmNewCollateral
+ * CollateralSubstitution.mmNewCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmCollateralDescription
+ * CollateralBalance.mmCollateralDescription}</li>
  * </ul>
  * </li>
  * <li>
@@ -131,8 +134,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContractCollateral1#CollateralDescription
- * ContractCollateral1.CollateralDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.ContractCollateral1#mmCollateralDescription
+ * ContractCollateral1.mmCollateralDescription}</li>
  * </ul>
  * </li>
  * <li>
@@ -170,8 +173,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -187,6 +190,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Collateral {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount collateralAmount;
 	/**
 	 * Value of the collateral as an amount.
 	 * <p>
@@ -197,95 +201,95 @@ public class Collateral {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts12#Margin
-	 * OtherAmounts12.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts14#Margin
-	 * OtherAmounts14.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts20#Margin
-	 * OtherAmounts20.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts4#Margin
-	 * OtherAmounts4.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts5#Margin
-	 * OtherAmounts5.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts17#Margin
-	 * OtherAmounts17.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts23#Margin
-	 * OtherAmounts23.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts3#Margin
-	 * OtherAmounts3.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts7#Margin
-	 * OtherAmounts7.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts9#Margin
-	 * OtherAmounts9.Margin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherAmounts9#CollateralMonitorAmount
-	 * OtherAmounts9.CollateralMonitorAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts10#Margin
-	 * OtherAmounts10.Margin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherAmounts10#CollateralMonitorAmount
-	 * OtherAmounts10.CollateralMonitorAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts18#Margin
-	 * OtherAmounts18.Margin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherAmounts18#CollateralMonitorAmount
-	 * OtherAmounts18.CollateralMonitorAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts24#Margin
-	 * OtherAmounts24.Margin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherAmounts24#CollateralMonitorAmount
-	 * OtherAmounts24.CollateralMonitorAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts13#Margin
-	 * OtherAmounts13.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#Margin
-	 * OtherAmounts1.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts16#Margin
-	 * OtherAmounts16.Margin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralAmount1#CollateralAmount
-	 * CollateralAmount1.CollateralAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation3#NominalAmount
-	 * CollateralValuation3.NominalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation4#NominalAmount
-	 * CollateralValuation4.NominalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContractCollateral1#TotalAmount
-	 * ContractCollateral1.TotalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts28#Margin
-	 * OtherAmounts28.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts30#Margin
-	 * OtherAmounts30.Margin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherAmounts30#CollateralMonitorAmount
-	 * OtherAmounts30.CollateralMonitorAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts31#Margin
-	 * OtherAmounts31.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts35#Margin
-	 * OtherAmounts35.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts34#Margin
-	 * OtherAmounts34.Margin}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts38#Margin
-	 * OtherAmounts38.Margin}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherAmounts38#CollateralMonitorAmount
-	 * OtherAmounts38.CollateralMonitorAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation7#NominalAmount
-	 * CollateralValuation7.NominalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation6#NominalAmount
-	 * CollateralValuation6.NominalAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Collateral Collateral}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts12#mmMargin
+	 * OtherAmounts12.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts14#mmMargin
+	 * OtherAmounts14.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts20#mmMargin
+	 * OtherAmounts20.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts4#mmMargin
+	 * OtherAmounts4.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts5#mmMargin
+	 * OtherAmounts5.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts17#mmMargin
+	 * OtherAmounts17.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts23#mmMargin
+	 * OtherAmounts23.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts3#mmMargin
+	 * OtherAmounts3.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts7#mmMargin
+	 * OtherAmounts7.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts9#mmMargin
+	 * OtherAmounts9.mmMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts9#mmCollateralMonitorAmount
+	 * OtherAmounts9.mmCollateralMonitorAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts10#mmMargin
+	 * OtherAmounts10.mmMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts10#mmCollateralMonitorAmount
+	 * OtherAmounts10.mmCollateralMonitorAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts18#mmMargin
+	 * OtherAmounts18.mmMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts18#mmCollateralMonitorAmount
+	 * OtherAmounts18.mmCollateralMonitorAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts24#mmMargin
+	 * OtherAmounts24.mmMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts24#mmCollateralMonitorAmount
+	 * OtherAmounts24.mmCollateralMonitorAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts13#mmMargin
+	 * OtherAmounts13.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#mmMargin
+	 * OtherAmounts1.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts16#mmMargin
+	 * OtherAmounts16.mmMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralAmount1#mmCollateralAmount
+	 * CollateralAmount1.mmCollateralAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation3#mmNominalAmount
+	 * CollateralValuation3.mmNominalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation4#mmNominalAmount
+	 * CollateralValuation4.mmNominalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractCollateral1#mmTotalAmount
+	 * ContractCollateral1.mmTotalAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts28#mmMargin
+	 * OtherAmounts28.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts30#mmMargin
+	 * OtherAmounts30.mmMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts30#mmCollateralMonitorAmount
+	 * OtherAmounts30.mmCollateralMonitorAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts31#mmMargin
+	 * OtherAmounts31.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts35#mmMargin
+	 * OtherAmounts35.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts34#mmMargin
+	 * OtherAmounts34.mmMargin}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts38#mmMargin
+	 * OtherAmounts38.mmMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts38#mmCollateralMonitorAmount
+	 * OtherAmounts38.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation7#mmNominalAmount
+	 * CollateralValuation7.mmNominalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation6#mmNominalAmount
+	 * CollateralValuation6.mmNominalAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -297,29 +301,30 @@ public class Collateral {
 	 * definition} = "Value of the collateral as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CollateralAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCollateralAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts12.Margin, com.tools20022.repository.msg.OtherAmounts14.Margin, com.tools20022.repository.msg.OtherAmounts20.Margin,
-					com.tools20022.repository.msg.OtherAmounts4.Margin, com.tools20022.repository.msg.OtherAmounts5.Margin, com.tools20022.repository.msg.OtherAmounts17.Margin, com.tools20022.repository.msg.OtherAmounts23.Margin,
-					com.tools20022.repository.msg.OtherAmounts3.Margin, com.tools20022.repository.msg.OtherAmounts7.Margin, com.tools20022.repository.msg.OtherAmounts9.Margin,
-					com.tools20022.repository.msg.OtherAmounts9.CollateralMonitorAmount, com.tools20022.repository.msg.OtherAmounts10.Margin, com.tools20022.repository.msg.OtherAmounts10.CollateralMonitorAmount,
-					com.tools20022.repository.msg.OtherAmounts18.Margin, com.tools20022.repository.msg.OtherAmounts18.CollateralMonitorAmount, com.tools20022.repository.msg.OtherAmounts24.Margin,
-					com.tools20022.repository.msg.OtherAmounts24.CollateralMonitorAmount, com.tools20022.repository.msg.OtherAmounts13.Margin, com.tools20022.repository.msg.OtherAmounts1.Margin,
-					com.tools20022.repository.msg.OtherAmounts16.Margin, com.tools20022.repository.msg.CollateralAmount1.CollateralAmount, com.tools20022.repository.msg.CollateralValuation3.NominalAmount,
-					com.tools20022.repository.msg.CollateralValuation4.NominalAmount, com.tools20022.repository.msg.ContractCollateral1.TotalAmount, com.tools20022.repository.msg.OtherAmounts28.Margin,
-					com.tools20022.repository.msg.OtherAmounts30.Margin, com.tools20022.repository.msg.OtherAmounts30.CollateralMonitorAmount, com.tools20022.repository.msg.OtherAmounts31.Margin,
-					com.tools20022.repository.msg.OtherAmounts35.Margin, com.tools20022.repository.msg.OtherAmounts34.Margin, com.tools20022.repository.msg.OtherAmounts38.Margin,
-					com.tools20022.repository.msg.OtherAmounts38.CollateralMonitorAmount, com.tools20022.repository.msg.CollateralValuation7.NominalAmount, com.tools20022.repository.msg.CollateralValuation6.NominalAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts12.mmMargin, com.tools20022.repository.msg.OtherAmounts14.mmMargin, com.tools20022.repository.msg.OtherAmounts20.mmMargin,
+					com.tools20022.repository.msg.OtherAmounts4.mmMargin, com.tools20022.repository.msg.OtherAmounts5.mmMargin, com.tools20022.repository.msg.OtherAmounts17.mmMargin, com.tools20022.repository.msg.OtherAmounts23.mmMargin,
+					com.tools20022.repository.msg.OtherAmounts3.mmMargin, com.tools20022.repository.msg.OtherAmounts7.mmMargin, com.tools20022.repository.msg.OtherAmounts9.mmMargin,
+					com.tools20022.repository.msg.OtherAmounts9.mmCollateralMonitorAmount, com.tools20022.repository.msg.OtherAmounts10.mmMargin, com.tools20022.repository.msg.OtherAmounts10.mmCollateralMonitorAmount,
+					com.tools20022.repository.msg.OtherAmounts18.mmMargin, com.tools20022.repository.msg.OtherAmounts18.mmCollateralMonitorAmount, com.tools20022.repository.msg.OtherAmounts24.mmMargin,
+					com.tools20022.repository.msg.OtherAmounts24.mmCollateralMonitorAmount, com.tools20022.repository.msg.OtherAmounts13.mmMargin, com.tools20022.repository.msg.OtherAmounts1.mmMargin,
+					com.tools20022.repository.msg.OtherAmounts16.mmMargin, com.tools20022.repository.msg.CollateralAmount1.mmCollateralAmount, com.tools20022.repository.msg.CollateralValuation3.mmNominalAmount,
+					com.tools20022.repository.msg.CollateralValuation4.mmNominalAmount, com.tools20022.repository.msg.ContractCollateral1.mmTotalAmount, com.tools20022.repository.msg.OtherAmounts28.mmMargin,
+					com.tools20022.repository.msg.OtherAmounts30.mmMargin, com.tools20022.repository.msg.OtherAmounts30.mmCollateralMonitorAmount, com.tools20022.repository.msg.OtherAmounts31.mmMargin,
+					com.tools20022.repository.msg.OtherAmounts35.mmMargin, com.tools20022.repository.msg.OtherAmounts34.mmMargin, com.tools20022.repository.msg.OtherAmounts38.mmMargin,
+					com.tools20022.repository.msg.OtherAmounts38.mmCollateralMonitorAmount, com.tools20022.repository.msg.CollateralValuation7.mmNominalAmount, com.tools20022.repository.msg.CollateralValuation6.mmNominalAmount);
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CollateralAmount";
 			definition = "Value of the collateral as an amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CollateralValuation> valuation;
 	/**
 	 * Valuation process of specific collateral elements.
 	 * <p>
@@ -328,8 +333,8 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralValuation#Collateral
-	 * CollateralValuation.Collateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralValuation#mmCollateral
+	 * CollateralValuation.mmCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -337,39 +342,39 @@ public class Collateral {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CollateralValuation
 	 * CollateralValuation}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#StartValue
-	 * UnderlyingAttributes.StartValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#CurrentValue
-	 * UnderlyingAttributes.CurrentValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#EndValue
-	 * UnderlyingAttributes.EndValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#StartValue
-	 * UnderlyingAttributes2.StartValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#CurrentValue
-	 * UnderlyingAttributes2.CurrentValue}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#EndValue
-	 * UnderlyingAttributes2.EndValue}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Collateral10#Valuation
-	 * Collateral10.Valuation}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Collateral14#Valuation
-	 * Collateral14.Valuation}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Collateral18#Valuation
-	 * Collateral18.Valuation}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Collateral Collateral}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmStartValue
+	 * UnderlyingAttributes.mmStartValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmCurrentValue
+	 * UnderlyingAttributes.mmCurrentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes#mmEndValue
+	 * UnderlyingAttributes.mmEndValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmStartValue
+	 * UnderlyingAttributes2.mmStartValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmCurrentValue
+	 * UnderlyingAttributes2.mmCurrentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmEndValue
+	 * UnderlyingAttributes2.mmEndValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Collateral10#mmValuation
+	 * Collateral10.mmValuation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Collateral14#mmValuation
+	 * Collateral14.mmValuation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Collateral18#mmValuation
+	 * Collateral18.mmValuation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -381,22 +386,24 @@ public class Collateral {
 	 * definition} = "Valuation process of specific collateral elements."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Valuation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmValuation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes.StartValue, com.tools20022.repository.msg.UnderlyingAttributes.CurrentValue, com.tools20022.repository.msg.UnderlyingAttributes.EndValue,
-					com.tools20022.repository.msg.UnderlyingAttributes2.StartValue, com.tools20022.repository.msg.UnderlyingAttributes2.CurrentValue, com.tools20022.repository.msg.UnderlyingAttributes2.EndValue,
-					com.tools20022.repository.msg.Collateral10.Valuation, com.tools20022.repository.msg.Collateral14.Valuation, com.tools20022.repository.msg.Collateral18.Valuation);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes.mmStartValue, com.tools20022.repository.msg.UnderlyingAttributes.mmCurrentValue,
+					com.tools20022.repository.msg.UnderlyingAttributes.mmEndValue, com.tools20022.repository.msg.UnderlyingAttributes2.mmStartValue, com.tools20022.repository.msg.UnderlyingAttributes2.mmCurrentValue,
+					com.tools20022.repository.msg.UnderlyingAttributes2.mmEndValue, com.tools20022.repository.msg.Collateral10.mmValuation, com.tools20022.repository.msg.Collateral14.mmValuation,
+					com.tools20022.repository.msg.Collateral18.mmValuation);
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Valuation";
 			definition = "Valuation process of specific collateral elements.";
 			minOccurs = 0;
-			type_lazy = () -> CollateralValuation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralValuation.Collateral;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmCollateral;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 		}
 	};
+	protected CollateralTypeCode collateralType;
 	/**
 	 * Specifies the type of collateral.
 	 * <p>
@@ -407,49 +414,51 @@ public class Collateral {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CollateralTypeCode
 	 * CollateralTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CollateralType1Choice#Code
-	 * CollateralType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CollateralType1Choice#Proprietary
-	 * CollateralType1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#CollateralType
-	 * SecuritiesFinancing10.CollateralType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#CollateralType
-	 * CollateralValuation1.CollateralType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Collateral3#CollateralType
-	 * Collateral3.CollateralType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Collateral6#CollateralType
-	 * Collateral6.CollateralType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation2#CollateralType
-	 * CollateralValuation2.CollateralType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral10#SpecialCollateralIndicator
-	 * Collateral10.SpecialCollateralIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#CollateralType
-	 * CollateralValuation5.CollateralType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralMovement9#CollateralType
-	 * CollateralMovement9.CollateralType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral14#SpecialCollateralIndicator
-	 * Collateral14.SpecialCollateralIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral18#SpecialCollateralIndicator
-	 * Collateral18.SpecialCollateralIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Collateral Collateral}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CollateralType1Choice#mmCode
+	 * CollateralType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CollateralType1Choice#mmProprietary
+	 * CollateralType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmCollateralType
+	 * SecuritiesFinancing10.mmCollateralType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmCollateralType
+	 * CollateralValuation1.mmCollateralType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral3#mmCollateralType
+	 * Collateral3.mmCollateralType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral6#mmCollateralType
+	 * Collateral6.mmCollateralType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmCollateralType
+	 * CollateralValuation2.mmCollateralType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral10#mmSpecialCollateralIndicator
+	 * Collateral10.mmSpecialCollateralIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmCollateralType
+	 * CollateralValuation5.mmCollateralType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralMovement9#mmCollateralType
+	 * CollateralMovement9.mmCollateralType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral14#mmSpecialCollateralIndicator
+	 * Collateral14.mmSpecialCollateralIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral18#mmSpecialCollateralIndicator
+	 * Collateral18.mmSpecialCollateralIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -461,23 +470,24 @@ public class Collateral {
 	 * definition} = "Specifies the type of collateral."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CollateralType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCollateralType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralType1Choice.Code, com.tools20022.repository.choice.CollateralType1Choice.Proprietary,
-					com.tools20022.repository.msg.SecuritiesFinancing10.CollateralType, com.tools20022.repository.msg.CollateralValuation1.CollateralType, com.tools20022.repository.msg.Collateral3.CollateralType,
-					com.tools20022.repository.msg.Collateral6.CollateralType, com.tools20022.repository.msg.CollateralValuation2.CollateralType, com.tools20022.repository.msg.Collateral10.SpecialCollateralIndicator,
-					com.tools20022.repository.msg.CollateralValuation5.CollateralType, com.tools20022.repository.msg.CollateralMovement9.CollateralType, com.tools20022.repository.msg.Collateral14.SpecialCollateralIndicator,
-					com.tools20022.repository.msg.Collateral18.SpecialCollateralIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralType1Choice.mmCode, com.tools20022.repository.choice.CollateralType1Choice.mmProprietary,
+					com.tools20022.repository.msg.SecuritiesFinancing10.mmCollateralType, com.tools20022.repository.msg.CollateralValuation1.mmCollateralType, com.tools20022.repository.msg.Collateral3.mmCollateralType,
+					com.tools20022.repository.msg.Collateral6.mmCollateralType, com.tools20022.repository.msg.CollateralValuation2.mmCollateralType, com.tools20022.repository.msg.Collateral10.mmSpecialCollateralIndicator,
+					com.tools20022.repository.msg.CollateralValuation5.mmCollateralType, com.tools20022.repository.msg.CollateralMovement9.mmCollateralType, com.tools20022.repository.msg.Collateral14.mmSpecialCollateralIndicator,
+					com.tools20022.repository.msg.Collateral18.mmSpecialCollateralIndicator);
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CollateralType";
 			definition = "Specifies the type of collateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CollateralTypeCode.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount baseCurrencyAmount;
 	/**
 	 * Value of the collateral in the currency used for reporting.
 	 * <p>
@@ -488,30 +498,30 @@ public class Collateral {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralSubstitution1#SubstitutionRequirement
-	 * CollateralSubstitution1.SubstitutionRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralSubstitution2#SubstitutionRequirement
-	 * CollateralSubstitution2.SubstitutionRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralSubstitution3#SubstitutionRequirement
-	 * CollateralSubstitution3.SubstitutionRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralSubstitution5#SubstitutionRequirement
-	 * CollateralSubstitution5.SubstitutionRequirement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralSubstitution4#SubstitutionRequirement
-	 * CollateralSubstitution4.SubstitutionRequirement}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Collateral Collateral}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralSubstitution1#mmSubstitutionRequirement
+	 * CollateralSubstitution1.mmSubstitutionRequirement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralSubstitution2#mmSubstitutionRequirement
+	 * CollateralSubstitution2.mmSubstitutionRequirement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralSubstitution3#mmSubstitutionRequirement
+	 * CollateralSubstitution3.mmSubstitutionRequirement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralSubstitution5#mmSubstitutionRequirement
+	 * CollateralSubstitution5.mmSubstitutionRequirement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralSubstitution4#mmSubstitutionRequirement
+	 * CollateralSubstitution4.mmSubstitutionRequirement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -524,21 +534,22 @@ public class Collateral {
 	 * "Value of the collateral in the currency used for reporting."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BaseCurrencyAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBaseCurrencyAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralSubstitution1.SubstitutionRequirement, com.tools20022.repository.msg.CollateralSubstitution2.SubstitutionRequirement,
-					com.tools20022.repository.msg.CollateralSubstitution3.SubstitutionRequirement, com.tools20022.repository.msg.CollateralSubstitution5.SubstitutionRequirement,
-					com.tools20022.repository.msg.CollateralSubstitution4.SubstitutionRequirement);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralSubstitution1.mmSubstitutionRequirement, com.tools20022.repository.msg.CollateralSubstitution2.mmSubstitutionRequirement,
+					com.tools20022.repository.msg.CollateralSubstitution3.mmSubstitutionRequirement, com.tools20022.repository.msg.CollateralSubstitution5.mmSubstitutionRequirement,
+					com.tools20022.repository.msg.CollateralSubstitution4.mmSubstitutionRequirement);
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BaseCurrencyAmount";
 			definition = "Value of the collateral in the currency used for reporting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CollateralPurposeCode collateralPurpose;
 	/**
 	 * Specifies whether the collateral has been posted against the variation
 	 * margin or the segregated independent amount.
@@ -550,27 +561,27 @@ public class Collateral {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CollateralPurposeCode
 	 * CollateralPurposeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CollateralPurpose1Choice#Code
-	 * CollateralPurpose1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CollateralPurpose1Choice#Proprietary
-	 * CollateralPurpose1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InterestAmount1#CollateralPurpose
-	 * InterestAmount1.CollateralPurpose}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InterestAmount2#CollateralPurpose
-	 * InterestAmount2.CollateralPurpose}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Collateral Collateral}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CollateralPurpose1Choice#mmCode
+	 * CollateralPurpose1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CollateralPurpose1Choice#mmProprietary
+	 * CollateralPurpose1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestAmount1#mmCollateralPurpose
+	 * InterestAmount1.mmCollateralPurpose}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestAmount2#mmCollateralPurpose
+	 * InterestAmount2.mmCollateralPurpose}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -584,20 +595,21 @@ public class Collateral {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CollateralPurpose = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCollateralPurpose = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralPurpose1Choice.Code, com.tools20022.repository.choice.CollateralPurpose1Choice.Proprietary,
-					com.tools20022.repository.msg.InterestAmount1.CollateralPurpose, com.tools20022.repository.msg.InterestAmount2.CollateralPurpose);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralPurpose1Choice.mmCode, com.tools20022.repository.choice.CollateralPurpose1Choice.mmProprietary,
+					com.tools20022.repository.msg.InterestAmount1.mmCollateralPurpose, com.tools20022.repository.msg.InterestAmount2.mmCollateralPurpose);
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CollateralPurpose";
 			definition = "Specifies whether the collateral has been posted against the variation margin or the segregated independent amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CollateralPurposeCode.mmObject();
 		}
 	};
+	protected CollateralBalance collateralBalance;
 	/**
 	 * Collateral balance which contain specific collateral elements.
 	 * <p>
@@ -606,8 +618,8 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#CollateralDescription
-	 * CollateralBalance.CollateralDescription}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmCollateralDescription
+	 * CollateralBalance.mmCollateralDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -615,27 +627,27 @@ public class Collateral {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CollateralBalance
 	 * CollateralBalance}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InterestAmount1#OpeningCollateralBalance
-	 * InterestAmount1.OpeningCollateralBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InterestAmount1#ClosingCollateralBalance
-	 * InterestAmount1.ClosingCollateralBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InterestAmount2#OpeningCollateralBalance
-	 * InterestAmount2.OpeningCollateralBalance}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InterestAmount2#ClosingCollateralBalance
-	 * InterestAmount2.ClosingCollateralBalance}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Collateral Collateral}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestAmount1#mmOpeningCollateralBalance
+	 * InterestAmount1.mmOpeningCollateralBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestAmount1#mmClosingCollateralBalance
+	 * InterestAmount1.mmClosingCollateralBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestAmount2#mmOpeningCollateralBalance
+	 * InterestAmount2.mmOpeningCollateralBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestAmount2#mmClosingCollateralBalance
+	 * InterestAmount2.mmClosingCollateralBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -648,22 +660,23 @@ public class Collateral {
 	 * "Collateral balance which contain specific collateral elements."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CollateralBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCollateralBalance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestAmount1.OpeningCollateralBalance, com.tools20022.repository.msg.InterestAmount1.ClosingCollateralBalance,
-					com.tools20022.repository.msg.InterestAmount2.OpeningCollateralBalance, com.tools20022.repository.msg.InterestAmount2.ClosingCollateralBalance);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestAmount1.mmOpeningCollateralBalance, com.tools20022.repository.msg.InterestAmount1.mmClosingCollateralBalance,
+					com.tools20022.repository.msg.InterestAmount2.mmOpeningCollateralBalance, com.tools20022.repository.msg.InterestAmount2.mmClosingCollateralBalance);
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralBalance";
 			definition = "Collateral balance which contain specific collateral elements.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralBalance.CollateralDescription;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmCollateralDescription;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Account> collateralAccount;
 	/**
 	 * Account from or to which collateral is delivered.
 	 * <p>
@@ -672,47 +685,47 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Account#RelatedCollateralProcess
-	 * Account.RelatedCollateralProcess}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmRelatedCollateralProcess
+	 * Account.mmRelatedCollateralProcess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Obligation2#CollateralAccountIdentification
-	 * Obligation2.CollateralAccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral5#AccountIdentification
-	 * Collateral5.AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Obligation3#CollateralAccountIdentification
-	 * Obligation3.CollateralAccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral9#AccountIdentification
-	 * Collateral9.AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Obligation4#CollateralAccountIdentification
-	 * Obligation4.CollateralAccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarginCall2#CollateralAccountIdentification
-	 * MarginCall2.CollateralAccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Collateral13#AccountIdentification
-	 * Collateral13.AccountIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Obligation5#CollateralAccountIdentification
-	 * Obligation5.CollateralAccountIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Collateral Collateral}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Obligation2#mmCollateralAccountIdentification
+	 * Obligation2.mmCollateralAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral5#mmAccountIdentification
+	 * Collateral5.mmAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Obligation3#mmCollateralAccountIdentification
+	 * Obligation3.mmCollateralAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral9#mmAccountIdentification
+	 * Collateral9.mmAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Obligation4#mmCollateralAccountIdentification
+	 * Obligation4.mmCollateralAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarginCall2#mmCollateralAccountIdentification
+	 * MarginCall2.mmCollateralAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Collateral13#mmAccountIdentification
+	 * Collateral13.mmAccountIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Obligation5#mmCollateralAccountIdentification
+	 * Obligation5.mmCollateralAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -724,22 +737,24 @@ public class Collateral {
 	 * definition} = "Account from or to which collateral is delivered."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CollateralAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCollateralAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Obligation2.CollateralAccountIdentification, com.tools20022.repository.msg.Collateral5.AccountIdentification,
-					com.tools20022.repository.msg.Obligation3.CollateralAccountIdentification, com.tools20022.repository.msg.Collateral9.AccountIdentification, com.tools20022.repository.msg.Obligation4.CollateralAccountIdentification,
-					com.tools20022.repository.msg.MarginCall2.CollateralAccountIdentification, com.tools20022.repository.msg.Collateral13.AccountIdentification, com.tools20022.repository.msg.Obligation5.CollateralAccountIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Obligation2.mmCollateralAccountIdentification, com.tools20022.repository.msg.Collateral5.mmAccountIdentification,
+					com.tools20022.repository.msg.Obligation3.mmCollateralAccountIdentification, com.tools20022.repository.msg.Collateral9.mmAccountIdentification,
+					com.tools20022.repository.msg.Obligation4.mmCollateralAccountIdentification, com.tools20022.repository.msg.MarginCall2.mmCollateralAccountIdentification,
+					com.tools20022.repository.msg.Collateral13.mmAccountIdentification, com.tools20022.repository.msg.Obligation5.mmCollateralAccountIdentification);
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CollateralAccount";
 			definition = "Account from or to which collateral is delivered.";
 			minOccurs = 0;
-			type_lazy = () -> Account.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.RelatedCollateralProcess;
+			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmRelatedCollateralProcess;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
+	protected CollateralManagement collateralManagement;
 	/**
 	 * Series of processes which are related to the collateral processes.
 	 * <p>
@@ -748,8 +763,8 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralManagement#Collateral
-	 * CollateralManagement.Collateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralManagement#mmCollateral
+	 * CollateralManagement.mmCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -774,20 +789,21 @@ public class Collateral {
 	 * "Series of processes which are related to the collateral processes."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CollateralManagement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCollateralManagement = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagement";
 			definition = "Series of processes which are related to the collateral processes.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralManagement.Collateral;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmCollateral;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CollateralPartyRole> collateralPartyRole;
 	/**
 	 * Specifies the roles played by a party in the context of collateral
 	 * processes.
@@ -797,8 +813,8 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralPartyRole#Collateral
-	 * CollateralPartyRole.Collateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralPartyRole#mmCollateral
+	 * CollateralPartyRole.mmCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -823,7 +839,7 @@ public class Collateral {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CollateralPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCollateralPartyRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
@@ -831,11 +847,12 @@ public class Collateral {
 			name = "CollateralPartyRole";
 			definition = "Specifies the roles played by a party in the context of collateral processes.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralPartyRole.Collateral;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralPartyRole.mmCollateral;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralPartyRole.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CollateralStatus> status;
 	/**
 	 * Specifies the status of the collateral or of an event related to
 	 * collateral.
@@ -845,8 +862,8 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#Collateral
-	 * CollateralStatus.Collateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmCollateral
+	 * CollateralStatus.mmCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -854,33 +871,33 @@ public class Collateral {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CollateralStatus
 	 * CollateralStatus}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralResponse1#SecuritiesCollateralResponse
-	 * CollateralResponse1.SecuritiesCollateralResponse}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralResponse1#CashCollateralResponse
-	 * CollateralResponse1.CashCollateralResponse}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralResponse1#OtherCollateralResponse
-	 * CollateralResponse1.OtherCollateralResponse}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralResponse2#SecuritiesCollateralResponse
-	 * CollateralResponse2.SecuritiesCollateralResponse}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralResponse2#CashCollateralResponse
-	 * CollateralResponse2.CashCollateralResponse}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralResponse2#OtherCollateralResponse
-	 * CollateralResponse2.OtherCollateralResponse}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Collateral Collateral}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralResponse1#mmSecuritiesCollateralResponse
+	 * CollateralResponse1.mmSecuritiesCollateralResponse}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralResponse1#mmCashCollateralResponse
+	 * CollateralResponse1.mmCashCollateralResponse}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralResponse1#mmOtherCollateralResponse
+	 * CollateralResponse1.mmOtherCollateralResponse}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralResponse2#mmSecuritiesCollateralResponse
+	 * CollateralResponse2.mmSecuritiesCollateralResponse}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralResponse2#mmCashCollateralResponse
+	 * CollateralResponse2.mmCashCollateralResponse}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralResponse2#mmOtherCollateralResponse
+	 * CollateralResponse2.mmOtherCollateralResponse}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -894,22 +911,23 @@ public class Collateral {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Status = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralResponse1.SecuritiesCollateralResponse, com.tools20022.repository.msg.CollateralResponse1.CashCollateralResponse,
-					com.tools20022.repository.msg.CollateralResponse1.OtherCollateralResponse, com.tools20022.repository.msg.CollateralResponse2.SecuritiesCollateralResponse,
-					com.tools20022.repository.msg.CollateralResponse2.CashCollateralResponse, com.tools20022.repository.msg.CollateralResponse2.OtherCollateralResponse);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralResponse1.mmSecuritiesCollateralResponse, com.tools20022.repository.msg.CollateralResponse1.mmCashCollateralResponse,
+					com.tools20022.repository.msg.CollateralResponse1.mmOtherCollateralResponse, com.tools20022.repository.msg.CollateralResponse2.mmSecuritiesCollateralResponse,
+					com.tools20022.repository.msg.CollateralResponse2.mmCashCollateralResponse, com.tools20022.repository.msg.CollateralResponse2.mmOtherCollateralResponse);
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Specifies the status of the collateral or of an event related to collateral.";
 			minOccurs = 0;
-			type_lazy = () -> CollateralStatus.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralStatus.Collateral;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmCollateral;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmObject();
 		}
 	};
+	protected AssetHolding assetHolding;
 	/**
 	 * Specifies the securities or physical entities given as collateral.
 	 * <p>
@@ -918,8 +936,8 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#Collateral
-	 * AssetHolding.Collateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmCollateral
+	 * AssetHolding.mmCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -943,20 +961,21 @@ public class Collateral {
 	 * "Specifies the securities or physical entities given as collateral."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd AssetHolding = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAssetHolding = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetHolding";
 			definition = "Specifies the securities or physical entities given as collateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.Collateral;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmCollateral;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.AssetHolding> variationMarginAssetHolding;
 	/**
 	 * Specifies in terms of value and quantity the assets held as collateral
 	 * against the variation margin.
@@ -966,8 +985,8 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#VariationMarginCollateral
-	 * AssetHolding.VariationMarginCollateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmVariationMarginCollateral
+	 * AssetHolding.mmVariationMarginCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -992,7 +1011,7 @@ public class Collateral {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd VariationMarginAssetHolding = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmVariationMarginAssetHolding = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
@@ -1000,11 +1019,12 @@ public class Collateral {
 			name = "VariationMarginAssetHolding";
 			definition = "Specifies in terms of value and quantity the assets held as collateral against the variation margin.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.VariationMarginCollateral;
+			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmVariationMarginCollateral;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.AssetHolding> segregatedIndependentAmountAssetHolding;
 	/**
 	 * Specifies in terms of value and quantity the assets held as collateral
 	 * against the segregated independent amount.
@@ -1014,8 +1034,8 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#IndependentAmountCollateral
-	 * AssetHolding.IndependentAmountCollateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmIndependentAmountCollateral
+	 * AssetHolding.mmIndependentAmountCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1040,7 +1060,7 @@ public class Collateral {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SegregatedIndependentAmountAssetHolding = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSegregatedIndependentAmountAssetHolding = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
@@ -1048,11 +1068,12 @@ public class Collateral {
 			name = "SegregatedIndependentAmountAssetHolding";
 			definition = "Specifies in terms of value and quantity the assets held as collateral against the segregated independent amount.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.IndependentAmountCollateral;
+			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmIndependentAmountCollateral;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 		}
 	};
+	protected CollateralAgreement collateralAgreement;
 	/**
 	 * Collateral agreement which governs the collateral.
 	 * <p>
@@ -1061,8 +1082,8 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#Collateral
-	 * CollateralAgreement.Collateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralAgreement#mmCollateral
+	 * CollateralAgreement.mmCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1085,20 +1106,21 @@ public class Collateral {
 	 * definition} = "Collateral agreement which governs the collateral."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CollateralAgreement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCollateralAgreement = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralAgreement";
 			definition = "Collateral agreement which governs the collateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.Collateral;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmCollateral;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 		}
 	};
+	protected Max35Text collateralOwnership;
 	/**
 	 * Specifies who is the owner of the collateral.
 	 * <p>
@@ -1108,36 +1130,36 @@ public class Collateral {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral2#CollateralOwnership
-	 * SecuritiesCollateral2.CollateralOwnership}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails88#CollateralOwnership
-	 * SettlementDetails88.CollateralOwnership}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral3#CollateralOwnership
-	 * OtherCollateral3.CollateralOwnership}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails102#CollateralOwnership
-	 * SettlementDetails102.CollateralOwnership}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherCollateral6#CollateralOwnership
-	 * OtherCollateral6.CollateralOwnership}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral6#CollateralOwnership
-	 * SecuritiesCollateral6.CollateralOwnership}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails118#CollateralOwnership
-	 * SettlementDetails118.CollateralOwnership}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Collateral Collateral}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral2#mmCollateralOwnership
+	 * SecuritiesCollateral2.mmCollateralOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails88#mmCollateralOwnership
+	 * SettlementDetails88.mmCollateralOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmCollateralOwnership
+	 * OtherCollateral3.mmCollateralOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails102#mmCollateralOwnership
+	 * SettlementDetails102.mmCollateralOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmCollateralOwnership
+	 * OtherCollateral6.mmCollateralOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral6#mmCollateralOwnership
+	 * SecuritiesCollateral6.mmCollateralOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails118#mmCollateralOwnership
+	 * SettlementDetails118.mmCollateralOwnership}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1149,21 +1171,22 @@ public class Collateral {
 	 * definition} = "Specifies who is the owner of the collateral."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CollateralOwnership = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCollateralOwnership = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral2.CollateralOwnership, com.tools20022.repository.msg.SettlementDetails88.CollateralOwnership,
-					com.tools20022.repository.msg.OtherCollateral3.CollateralOwnership, com.tools20022.repository.msg.SettlementDetails102.CollateralOwnership, com.tools20022.repository.msg.OtherCollateral6.CollateralOwnership,
-					com.tools20022.repository.msg.SecuritiesCollateral6.CollateralOwnership, com.tools20022.repository.msg.SettlementDetails118.CollateralOwnership);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral2.mmCollateralOwnership, com.tools20022.repository.msg.SettlementDetails88.mmCollateralOwnership,
+					com.tools20022.repository.msg.OtherCollateral3.mmCollateralOwnership, com.tools20022.repository.msg.SettlementDetails102.mmCollateralOwnership, com.tools20022.repository.msg.OtherCollateral6.mmCollateralOwnership,
+					com.tools20022.repository.msg.SecuritiesCollateral6.mmCollateralOwnership, com.tools20022.repository.msg.SettlementDetails118.mmCollateralOwnership);
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CollateralOwnership";
 			definition = "Specifies who is the owner of the collateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CollateralSubstitution relatedCollateralSubstitution;
 	/**
 	 * Collateral substitution for which new collateral is replacing the
 	 * returned one.
@@ -1173,8 +1196,8 @@ public class Collateral {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#NewCollateral
-	 * CollateralSubstitution.NewCollateral}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmNewCollateral
+	 * CollateralSubstitution.mmNewCollateral}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1200,44 +1223,173 @@ public class Collateral {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedCollateralSubstitution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedCollateralSubstitution = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Collateral.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCollateralSubstitution";
 			definition = "Collateral substitution for which new collateral is replacing the returned one.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CollateralSubstitution.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralSubstitution.NewCollateral;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CollateralSubstitution.mmNewCollateral;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CollateralSubstitution.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Collateral";
 				definition = "Assets pledged by a debtor to secure a loan or an exposure and subject to seizure in the event of default.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.RelatedCollateralProcess, com.tools20022.repository.entity.AssetHolding.Collateral,
-						com.tools20022.repository.entity.AssetHolding.VariationMarginCollateral, com.tools20022.repository.entity.AssetHolding.IndependentAmountCollateral, com.tools20022.repository.entity.CollateralValuation.Collateral,
-						com.tools20022.repository.entity.CollateralStatus.Collateral, com.tools20022.repository.entity.CollateralAgreement.Collateral, com.tools20022.repository.entity.CollateralPartyRole.Collateral,
-						com.tools20022.repository.entity.CollateralManagement.Collateral, com.tools20022.repository.entity.CollateralSubstitution.NewCollateral, com.tools20022.repository.entity.CollateralBalance.CollateralDescription);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContractCollateral1.CollateralDescription);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Collateral.CollateralAmount, com.tools20022.repository.entity.Collateral.Valuation, com.tools20022.repository.entity.Collateral.CollateralType,
-						com.tools20022.repository.entity.Collateral.BaseCurrencyAmount, com.tools20022.repository.entity.Collateral.CollateralPurpose, com.tools20022.repository.entity.Collateral.CollateralBalance,
-						com.tools20022.repository.entity.Collateral.CollateralAccount, com.tools20022.repository.entity.Collateral.CollateralManagement, com.tools20022.repository.entity.Collateral.CollateralPartyRole,
-						com.tools20022.repository.entity.Collateral.Status, com.tools20022.repository.entity.Collateral.AssetHolding, com.tools20022.repository.entity.Collateral.VariationMarginAssetHolding,
-						com.tools20022.repository.entity.Collateral.SegregatedIndependentAmountAssetHolding, com.tools20022.repository.entity.Collateral.CollateralAgreement, com.tools20022.repository.entity.Collateral.CollateralOwnership,
-						com.tools20022.repository.entity.Collateral.RelatedCollateralSubstitution);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmRelatedCollateralProcess, com.tools20022.repository.entity.AssetHolding.mmCollateral,
+						com.tools20022.repository.entity.AssetHolding.mmVariationMarginCollateral, com.tools20022.repository.entity.AssetHolding.mmIndependentAmountCollateral,
+						com.tools20022.repository.entity.CollateralValuation.mmCollateral, com.tools20022.repository.entity.CollateralStatus.mmCollateral, com.tools20022.repository.entity.CollateralAgreement.mmCollateral,
+						com.tools20022.repository.entity.CollateralPartyRole.mmCollateral, com.tools20022.repository.entity.CollateralManagement.mmCollateral, com.tools20022.repository.entity.CollateralSubstitution.mmNewCollateral,
+						com.tools20022.repository.entity.CollateralBalance.mmCollateralDescription);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContractCollateral1.mmCollateralDescription);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Collateral.mmCollateralAmount, com.tools20022.repository.entity.Collateral.mmValuation, com.tools20022.repository.entity.Collateral.mmCollateralType,
+						com.tools20022.repository.entity.Collateral.mmBaseCurrencyAmount, com.tools20022.repository.entity.Collateral.mmCollateralPurpose, com.tools20022.repository.entity.Collateral.mmCollateralBalance,
+						com.tools20022.repository.entity.Collateral.mmCollateralAccount, com.tools20022.repository.entity.Collateral.mmCollateralManagement, com.tools20022.repository.entity.Collateral.mmCollateralPartyRole,
+						com.tools20022.repository.entity.Collateral.mmStatus, com.tools20022.repository.entity.Collateral.mmAssetHolding, com.tools20022.repository.entity.Collateral.mmVariationMarginAssetHolding,
+						com.tools20022.repository.entity.Collateral.mmSegregatedIndependentAmountAssetHolding, com.tools20022.repository.entity.Collateral.mmCollateralAgreement,
+						com.tools20022.repository.entity.Collateral.mmCollateralOwnership, com.tools20022.repository.entity.Collateral.mmRelatedCollateralSubstitution);
 				derivationComponent_lazy = () -> Arrays.asList(CollateralType1Choice.mmObject(), Collateral2.mmObject(), Collateral4.mmObject(), CollateralPurpose1Choice.mmObject(), CollateralAmount1.mmObject(), Collateral5.mmObject(),
 						Collateral3.mmObject(), Collateral6.mmObject(), Collateral9.mmObject(), Collateral7.mmObject(), Collateral8.mmObject(), Collateral10.mmObject(), ContractCollateral1.mmObject(), Collateral13.mmObject(),
 						Collateral11.mmObject(), CollateralMovement9.mmObject(), Collateral12.mmObject(), Collateral14.mmObject(), Collateral16.mmObject(), Collateral17.mmObject(), Collateral18.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getCollateralAmount() {
+		return collateralAmount;
+	}
+
+	public void setCollateralAmount(CurrencyAndAmount collateralAmount) {
+		this.collateralAmount = collateralAmount;
+	}
+
+	public List<CollateralValuation> getValuation() {
+		return valuation;
+	}
+
+	public void setValuation(List<com.tools20022.repository.entity.CollateralValuation> valuation) {
+		this.valuation = valuation;
+	}
+
+	public CollateralTypeCode getCollateralType() {
+		return collateralType;
+	}
+
+	public void setCollateralType(CollateralTypeCode collateralType) {
+		this.collateralType = collateralType;
+	}
+
+	public ActiveCurrencyAndAmount getBaseCurrencyAmount() {
+		return baseCurrencyAmount;
+	}
+
+	public void setBaseCurrencyAmount(ActiveCurrencyAndAmount baseCurrencyAmount) {
+		this.baseCurrencyAmount = baseCurrencyAmount;
+	}
+
+	public CollateralPurposeCode getCollateralPurpose() {
+		return collateralPurpose;
+	}
+
+	public void setCollateralPurpose(CollateralPurposeCode collateralPurpose) {
+		this.collateralPurpose = collateralPurpose;
+	}
+
+	public CollateralBalance getCollateralBalance() {
+		return collateralBalance;
+	}
+
+	public void setCollateralBalance(com.tools20022.repository.entity.CollateralBalance collateralBalance) {
+		this.collateralBalance = collateralBalance;
+	}
+
+	public List<Account> getCollateralAccount() {
+		return collateralAccount;
+	}
+
+	public void setCollateralAccount(List<com.tools20022.repository.entity.Account> collateralAccount) {
+		this.collateralAccount = collateralAccount;
+	}
+
+	public CollateralManagement getCollateralManagement() {
+		return collateralManagement;
+	}
+
+	public void setCollateralManagement(com.tools20022.repository.entity.CollateralManagement collateralManagement) {
+		this.collateralManagement = collateralManagement;
+	}
+
+	public List<CollateralPartyRole> getCollateralPartyRole() {
+		return collateralPartyRole;
+	}
+
+	public void setCollateralPartyRole(List<com.tools20022.repository.entity.CollateralPartyRole> collateralPartyRole) {
+		this.collateralPartyRole = collateralPartyRole;
+	}
+
+	public List<CollateralStatus> getStatus() {
+		return status;
+	}
+
+	public void setStatus(List<com.tools20022.repository.entity.CollateralStatus> status) {
+		this.status = status;
+	}
+
+	public AssetHolding getAssetHolding() {
+		return assetHolding;
+	}
+
+	public void setAssetHolding(com.tools20022.repository.entity.AssetHolding assetHolding) {
+		this.assetHolding = assetHolding;
+	}
+
+	public List<AssetHolding> getVariationMarginAssetHolding() {
+		return variationMarginAssetHolding;
+	}
+
+	public void setVariationMarginAssetHolding(List<com.tools20022.repository.entity.AssetHolding> variationMarginAssetHolding) {
+		this.variationMarginAssetHolding = variationMarginAssetHolding;
+	}
+
+	public List<AssetHolding> getSegregatedIndependentAmountAssetHolding() {
+		return segregatedIndependentAmountAssetHolding;
+	}
+
+	public void setSegregatedIndependentAmountAssetHolding(List<com.tools20022.repository.entity.AssetHolding> segregatedIndependentAmountAssetHolding) {
+		this.segregatedIndependentAmountAssetHolding = segregatedIndependentAmountAssetHolding;
+	}
+
+	public CollateralAgreement getCollateralAgreement() {
+		return collateralAgreement;
+	}
+
+	public void setCollateralAgreement(com.tools20022.repository.entity.CollateralAgreement collateralAgreement) {
+		this.collateralAgreement = collateralAgreement;
+	}
+
+	public Max35Text getCollateralOwnership() {
+		return collateralOwnership;
+	}
+
+	public void setCollateralOwnership(Max35Text collateralOwnership) {
+		this.collateralOwnership = collateralOwnership;
+	}
+
+	public CollateralSubstitution getRelatedCollateralSubstitution() {
+		return relatedCollateralSubstitution;
+	}
+
+	public void setRelatedCollateralSubstitution(com.tools20022.repository.entity.CollateralSubstitution relatedCollateralSubstitution) {
+		this.relatedCollateralSubstitution = relatedCollateralSubstitution;
 	}
 }

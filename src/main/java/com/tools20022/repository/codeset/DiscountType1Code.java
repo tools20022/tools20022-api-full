@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DiscountType1Code#QuantityDiscount
- * DiscountType1Code.QuantityDiscount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DiscountType1Code#mmQuantityDiscount
+ * DiscountType1Code.mmQuantityDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DiscountType1Code#PromotionalDiscount
- * DiscountType1Code.PromotionalDiscount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DiscountType1Code#mmPromotionalDiscount
+ * DiscountType1Code.mmPromotionalDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DiscountType1Code#PricingDiscount
- * DiscountType1Code.PricingDiscount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DiscountType1Code#mmPricingDiscount
+ * DiscountType1Code.mmPricingDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DiscountType1Code#SpecialAgreementDiscount
- * DiscountType1Code.SpecialAgreementDiscount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DiscountType1Code#mmSpecialAgreementDiscount
+ * DiscountType1Code.mmSpecialAgreementDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DiscountType1Code#EndOfRangeDiscount
- * DiscountType1Code.EndOfRangeDiscount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DiscountType1Code#mmEndOfRangeDiscount
+ * DiscountType1Code.mmEndOfRangeDiscount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class DiscountType1Code extends DiscountTypeCode {
 	 * name} = "QuantityDiscount"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityDiscount = new MMCode() {
+	public static final MMCode mmQuantityDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDiscount";
@@ -116,7 +116,7 @@ public class DiscountType1Code extends DiscountTypeCode {
 	 * name} = "PromotionalDiscount"</li>
 	 * </ul>
 	 */
-	public static final MMCode PromotionalDiscount = new MMCode() {
+	public static final MMCode mmPromotionalDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PromotionalDiscount";
@@ -139,7 +139,7 @@ public class DiscountType1Code extends DiscountTypeCode {
 	 * name} = "PricingDiscount"</li>
 	 * </ul>
 	 */
-	public static final MMCode PricingDiscount = new MMCode() {
+	public static final MMCode mmPricingDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingDiscount";
@@ -162,7 +162,7 @@ public class DiscountType1Code extends DiscountTypeCode {
 	 * name} = "SpecialAgreementDiscount"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialAgreementDiscount = new MMCode() {
+	public static final MMCode mmSpecialAgreementDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialAgreementDiscount";
@@ -185,7 +185,7 @@ public class DiscountType1Code extends DiscountTypeCode {
 	 * name} = "EndOfRangeDiscount"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfRangeDiscount = new MMCode() {
+	public static final MMCode mmEndOfRangeDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfRangeDiscount";
@@ -196,14 +196,14 @@ public class DiscountType1Code extends DiscountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("QUAN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DiscountType1Code";
 				definition = "Specifies the type of discount, that is, the reason why a discount is granted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DiscountType1Code.QuantityDiscount, com.tools20022.repository.codeset.DiscountType1Code.PromotionalDiscount,
-						com.tools20022.repository.codeset.DiscountType1Code.PricingDiscount, com.tools20022.repository.codeset.DiscountType1Code.SpecialAgreementDiscount,
-						com.tools20022.repository.codeset.DiscountType1Code.EndOfRangeDiscount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DiscountType1Code.mmQuantityDiscount, com.tools20022.repository.codeset.DiscountType1Code.mmPromotionalDiscount,
+						com.tools20022.repository.codeset.DiscountType1Code.mmPricingDiscount, com.tools20022.repository.codeset.DiscountType1Code.mmSpecialAgreementDiscount,
+						com.tools20022.repository.codeset.DiscountType1Code.mmEndOfRangeDiscount);
 				trace_lazy = () -> DiscountTypeCode.mmObject();
 			}
 		});

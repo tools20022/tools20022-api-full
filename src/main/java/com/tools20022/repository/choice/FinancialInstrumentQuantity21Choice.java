@@ -36,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#Unit
- * FinancialInstrumentQuantity21Choice.Unit}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#mmUnit
+ * FinancialInstrumentQuantity21Choice.mmUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#FaceAmount
- * FinancialInstrumentQuantity21Choice.FaceAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#mmFaceAmount
+ * FinancialInstrumentQuantity21Choice.mmFaceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#AmortisedValue
- * FinancialInstrumentQuantity21Choice.AmortisedValue}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#mmAmortisedValue
+ * FinancialInstrumentQuantity21Choice.mmAmortisedValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#Code
- * FinancialInstrumentQuantity21Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice#mmCode
+ * FinancialInstrumentQuantity21Choice.mmCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentQuantity21Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINDecimalNumber unit;
 	/**
 	 * Quantity expressed as a number, for example, a number of shares.
 	 * <p>
@@ -83,8 +84,8 @@ public class FinancialInstrumentQuantity21Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +105,21 @@ public class FinancialInstrumentQuantity21Choice {
 	 * "Quantity expressed as a number, for example, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> FinancialInstrumentQuantity21Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "Unit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Quantity expressed as a number, for example, a number of shares.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
 		}
 	};
+	protected RestrictedFINImpliedCurrencyAndAmount faceAmount;
 	/**
 	 * Quantity expressed as an amount representing the face amount, that is,
 	 * the principal, of a debt instrument.
@@ -132,8 +134,8 @@ public class FinancialInstrumentQuantity21Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#FaceAmount
-	 * AssetHolding.FaceAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmFaceAmount
+	 * AssetHolding.mmFaceAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +156,21 @@ public class FinancialInstrumentQuantity21Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity21Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.FaceAmount;
 			isDerived = false;
 			xmlTag = "FaceAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
 			definition = "Quantity expressed as an amount representing the face amount, that is, the principal, of a debt instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected RestrictedFINImpliedCurrencyAndAmount amortisedValue;
 	/**
 	 * Quantity expressed as an amount representing the current amortised face
 	 * amount of a bond, for example, a periodic reduction/increase of a bond's
@@ -183,8 +186,8 @@ public class FinancialInstrumentQuantity21Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#AmortisedFaceValue
-	 * AssetHolding.AmortisedFaceValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmAmortisedFaceValue
+	 * AssetHolding.mmAmortisedFaceValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,20 +208,21 @@ public class FinancialInstrumentQuantity21Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> FinancialInstrumentQuantity21Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.AmortisedFaceValue;
 			isDerived = false;
 			xmlTag = "AmtsdVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmortisedValue";
 			definition = "Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Quantity4Code code;
 	/**
 	 * Quantity expressed as a code.
 	 * <p>
@@ -232,8 +236,8 @@ public class FinancialInstrumentQuantity21Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Code
-	 * SecuritiesQuantity.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCode
+	 * SecuritiesQuantity.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,17 +256,17 @@ public class FinancialInstrumentQuantity21Choice {
 	 * definition} = "Quantity expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmCode;
 			componentContext_lazy = () -> FinancialInstrumentQuantity21Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Code;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Quantity expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Quantity4Code.mmObject();
 		}
 	};
@@ -270,15 +274,47 @@ public class FinancialInstrumentQuantity21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.Unit, com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.FaceAmount,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.AmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.Code);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmUnit, com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmFaceAmount,
+						com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmAmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmCode);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentQuantity21Choice";
 				definition = "Choice between formats for the quantity of security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINDecimalNumber getUnit() {
+		return unit;
+	}
+
+	public void setUnit(RestrictedFINDecimalNumber unit) {
+		this.unit = unit;
+	}
+
+	public RestrictedFINImpliedCurrencyAndAmount getFaceAmount() {
+		return faceAmount;
+	}
+
+	public void setFaceAmount(RestrictedFINImpliedCurrencyAndAmount faceAmount) {
+		this.faceAmount = faceAmount;
+	}
+
+	public RestrictedFINImpliedCurrencyAndAmount getAmortisedValue() {
+		return amortisedValue;
+	}
+
+	public void setAmortisedValue(RestrictedFINImpliedCurrencyAndAmount amortisedValue) {
+		this.amortisedValue = amortisedValue;
+	}
+
+	public Quantity4Code getCode() {
+		return code;
+	}
+
+	public void setCode(Quantity4Code code) {
+		this.code = code;
 	}
 }

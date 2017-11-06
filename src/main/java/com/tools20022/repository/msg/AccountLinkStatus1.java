@@ -22,8 +22,10 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.entity.Status;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Business status of the party for processing in the system.
@@ -34,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountLinkStatus1#Status
- * AccountLinkStatus1.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLinkStatus1#mmStatus
+ * AccountLinkStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLinkStatus1#StatusReason
- * AccountLinkStatus1.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLinkStatus1#mmStatusReason
+ * AccountLinkStatus1.mmStatusReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountLinkStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status6Code status;
 	/**
 	 * Status of the account link instruction.
 	 * <p>
@@ -73,8 +76,8 @@ public class AccountLinkStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#InstructionProcessingStatus
-	 * Status.InstructionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmInstructionProcessingStatus
+	 * Status.mmInstructionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +96,21 @@ public class AccountLinkStatus1 {
 	 * definition} = "Status of the account link instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> AccountLinkStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.InstructionProcessingStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the account link instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
 	/**
 	 * Underlying reason related to the creation of a transaction.
 	 * <p>
@@ -140,32 +144,48 @@ public class AccountLinkStatus1 {
 	 * "Underlying reason related to the creation of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountLinkStatus1.mmObject();
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
+			componentContext_lazy = () -> AccountLinkStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Underlying reason related to the creation of a transaction.";
 			minOccurs = 0;
-			type_lazy = () -> StatusReasonInformation10.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLinkStatus1.Status, com.tools20022.repository.msg.AccountLinkStatus1.StatusReason);
-				trace_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLinkStatus1.mmStatus, com.tools20022.repository.msg.AccountLinkStatus1.mmStatusReason);
+				trace_lazy = () -> Status.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLinkStatus1";
 				definition = "Business status of the party for processing in the system. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status6Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status6Code status) {
+		this.status = status;
+	}
+
+	public List<StatusReasonInformation10> getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+		this.statusReason = statusReason;
 	}
 }

@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1#CustomerCount
- * ForeignCurrencyPaymentAccountQuantity1.CustomerCount}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1#mmCustomerCount
+ * ForeignCurrencyPaymentAccountQuantity1.mmCustomerCount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1#AccountQuantity
- * ForeignCurrencyPaymentAccountQuantity1.AccountQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1#mmAccountQuantity
+ * ForeignCurrencyPaymentAccountQuantity1.mmAccountQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForeignCurrencyPaymentAccountQuantity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number customerCount;
 	/**
 	 * Number of customers.
 	 * <p>
@@ -89,7 +90,7 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 	 * definition} = "Number of customers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerCount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerCount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ForeignCurrencyPaymentAccountQuantity1.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCount";
 			definition = "Number of customers.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice accountQuantity;
 	/**
 	 * Quantity to be paid.
 	 * <p>
@@ -130,7 +132,7 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 	 * definition} = "Quantity to be paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ForeignCurrencyPaymentAccountQuantity1.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountQuantity";
 			definition = "Quantity to be paid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
@@ -147,13 +149,29 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1.CustomerCount, com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1.AccountQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1.mmCustomerCount, com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1.mmAccountQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ForeignCurrencyPaymentAccountQuantity1";
 				definition = "DTC (The Depository Trust Company) Foreign Currency Payment service elections.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getCustomerCount() {
+		return customerCount;
+	}
+
+	public void setCustomerCount(Number customerCount) {
+		this.customerCount = customerCount;
+	}
+
+	public FinancialInstrumentQuantity15Choice getAccountQuantity() {
+		return accountQuantity;
+	}
+
+	public void setAccountQuantity(FinancialInstrumentQuantity15Choice accountQuantity) {
+		this.accountQuantity = accountQuantity;
 	}
 }

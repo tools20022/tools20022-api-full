@@ -33,50 +33,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfPriceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Bid
- * TypeOfPrice9Code.Bid}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Offer
- * TypeOfPrice9Code.Offer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmBid
+ * TypeOfPrice9Code.mmBid}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmOffer
+ * TypeOfPrice9Code.mmOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#NetAssetValue
- * TypeOfPrice9Code.NetAssetValue}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Creation
- * TypeOfPrice9Code.Creation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmNetAssetValue
+ * TypeOfPrice9Code.mmNetAssetValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Cancellation
- * TypeOfPrice9Code.Cancellation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Interim
- * TypeOfPrice9Code.Interim}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Swing
- * TypeOfPrice9Code.Swing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Mid
- * TypeOfPrice9Code.Mid}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmCreation
+ * TypeOfPrice9Code.mmCreation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Reinvestment
- * TypeOfPrice9Code.Reinvestment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Switch
- * TypeOfPrice9Code.Switch}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmCancellation
+ * TypeOfPrice9Code.mmCancellation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmInterim
+ * TypeOfPrice9Code.mmInterim}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmSwing
+ * TypeOfPrice9Code.mmSwing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmMid
+ * TypeOfPrice9Code.mmMid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#DailyDividendRate
- * TypeOfPrice9Code.DailyDividendRate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Actual
- * TypeOfPrice9Code.Actual}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmReinvestment
+ * TypeOfPrice9Code.mmReinvestment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmSwitch
+ * TypeOfPrice9Code.mmSwitch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#NonAdjustedUnpublished
- * TypeOfPrice9Code.NonAdjustedUnpublished}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmDailyDividendRate
+ * TypeOfPrice9Code.mmDailyDividendRate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmActual
+ * TypeOfPrice9Code.mmActual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#Guaranteed
- * TypeOfPrice9Code.Guaranteed}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmNonAdjustedUnpublished
+ * TypeOfPrice9Code.mmNonAdjustedUnpublished}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#EstimatedNAV
- * TypeOfPrice9Code.EstimatedNAV}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmGuaranteed
+ * TypeOfPrice9Code.mmGuaranteed}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code#mmEstimatedNAV
+ * TypeOfPrice9Code.mmEstimatedNAV}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -112,7 +113,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Bid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bid = new MMCode() {
+	public static final MMCode mmBid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
@@ -135,7 +136,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Offer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Offer = new MMCode() {
+	public static final MMCode mmOffer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
@@ -158,7 +159,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "NetAssetValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetAssetValue = new MMCode() {
+	public static final MMCode mmNetAssetValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValue";
@@ -181,7 +182,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Creation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Creation = new MMCode() {
+	public static final MMCode mmCreation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creation";
@@ -204,7 +205,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Cancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancellation = new MMCode() {
+	public static final MMCode mmCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
@@ -227,7 +228,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Interim"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interim = new MMCode() {
+	public static final MMCode mmInterim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
@@ -250,7 +251,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Swing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Swing = new MMCode() {
+	public static final MMCode mmSwing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swing";
@@ -273,7 +274,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Mid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mid = new MMCode() {
+	public static final MMCode mmMid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mid";
@@ -296,7 +297,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Reinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reinvestment = new MMCode() {
+	public static final MMCode mmReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinvestment";
@@ -319,7 +320,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Switch"</li>
 	 * </ul>
 	 */
-	public static final MMCode Switch = new MMCode() {
+	public static final MMCode mmSwitch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
@@ -342,7 +343,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "DailyDividendRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode DailyDividendRate = new MMCode() {
+	public static final MMCode mmDailyDividendRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DailyDividendRate";
@@ -365,7 +366,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Actual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Actual = new MMCode() {
+	public static final MMCode mmActual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
@@ -388,7 +389,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "NonAdjustedUnpublished"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonAdjustedUnpublished = new MMCode() {
+	public static final MMCode mmNonAdjustedUnpublished = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonAdjustedUnpublished";
@@ -411,7 +412,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "Guaranteed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Guaranteed = new MMCode() {
+	public static final MMCode mmGuaranteed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Guaranteed";
@@ -434,7 +435,7 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	 * name} = "EstimatedNAV"</li>
 	 * </ul>
 	 */
-	public static final MMCode EstimatedNAV = new MMCode() {
+	public static final MMCode mmEstimatedNAV = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedNAV";
@@ -445,16 +446,16 @@ public class TypeOfPrice9Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BIDE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice9Code";
 				definition = "Specifies the type of price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice9Code.Bid, com.tools20022.repository.codeset.TypeOfPrice9Code.Offer, com.tools20022.repository.codeset.TypeOfPrice9Code.NetAssetValue,
-						com.tools20022.repository.codeset.TypeOfPrice9Code.Creation, com.tools20022.repository.codeset.TypeOfPrice9Code.Cancellation, com.tools20022.repository.codeset.TypeOfPrice9Code.Interim,
-						com.tools20022.repository.codeset.TypeOfPrice9Code.Swing, com.tools20022.repository.codeset.TypeOfPrice9Code.Mid, com.tools20022.repository.codeset.TypeOfPrice9Code.Reinvestment,
-						com.tools20022.repository.codeset.TypeOfPrice9Code.Switch, com.tools20022.repository.codeset.TypeOfPrice9Code.DailyDividendRate, com.tools20022.repository.codeset.TypeOfPrice9Code.Actual,
-						com.tools20022.repository.codeset.TypeOfPrice9Code.NonAdjustedUnpublished, com.tools20022.repository.codeset.TypeOfPrice9Code.Guaranteed, com.tools20022.repository.codeset.TypeOfPrice9Code.EstimatedNAV);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice9Code.mmBid, com.tools20022.repository.codeset.TypeOfPrice9Code.mmOffer, com.tools20022.repository.codeset.TypeOfPrice9Code.mmNetAssetValue,
+						com.tools20022.repository.codeset.TypeOfPrice9Code.mmCreation, com.tools20022.repository.codeset.TypeOfPrice9Code.mmCancellation, com.tools20022.repository.codeset.TypeOfPrice9Code.mmInterim,
+						com.tools20022.repository.codeset.TypeOfPrice9Code.mmSwing, com.tools20022.repository.codeset.TypeOfPrice9Code.mmMid, com.tools20022.repository.codeset.TypeOfPrice9Code.mmReinvestment,
+						com.tools20022.repository.codeset.TypeOfPrice9Code.mmSwitch, com.tools20022.repository.codeset.TypeOfPrice9Code.mmDailyDividendRate, com.tools20022.repository.codeset.TypeOfPrice9Code.mmActual,
+						com.tools20022.repository.codeset.TypeOfPrice9Code.mmNonAdjustedUnpublished, com.tools20022.repository.codeset.TypeOfPrice9Code.mmGuaranteed, com.tools20022.repository.codeset.TypeOfPrice9Code.mmEstimatedNAV);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

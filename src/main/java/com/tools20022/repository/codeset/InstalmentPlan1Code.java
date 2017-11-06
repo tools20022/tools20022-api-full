@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstalmentPlan1Code#EqualPayment
- * InstalmentPlan1Code.EqualPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstalmentPlan1Code#mmEqualPayment
+ * InstalmentPlan1Code.mmEqualPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstalmentPlan1Code#InequalPayment
- * InstalmentPlan1Code.InequalPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstalmentPlan1Code#mmInequalPayment
+ * InstalmentPlan1Code.mmInequalPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstalmentPlan1Code#DeferredInstalment
- * InstalmentPlan1Code.DeferredInstalment}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstalmentPlan1Code#mmDeferredInstalment
+ * InstalmentPlan1Code.mmDeferredInstalment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class InstalmentPlan1Code extends InstalmentPlanCode {
 	 * name} = "EqualPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode EqualPayment = new MMCode() {
+	public static final MMCode mmEqualPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualPayment";
@@ -101,7 +101,7 @@ public class InstalmentPlan1Code extends InstalmentPlanCode {
 	 * name} = "InequalPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode InequalPayment = new MMCode() {
+	public static final MMCode mmInequalPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InequalPayment";
@@ -124,7 +124,7 @@ public class InstalmentPlan1Code extends InstalmentPlanCode {
 	 * name} = "DeferredInstalment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeferredInstalment = new MMCode() {
+	public static final MMCode mmDeferredInstalment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredInstalment";
@@ -135,12 +135,12 @@ public class InstalmentPlan1Code extends InstalmentPlanCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstalmentPlan1Code";
 				definition = "Type of instalment plan.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstalmentPlan1Code.EqualPayment, com.tools20022.repository.codeset.InstalmentPlan1Code.InequalPayment,
-						com.tools20022.repository.codeset.InstalmentPlan1Code.DeferredInstalment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstalmentPlan1Code.mmEqualPayment, com.tools20022.repository.codeset.InstalmentPlan1Code.mmInequalPayment,
+						com.tools20022.repository.codeset.InstalmentPlan1Code.mmDeferredInstalment);
 				trace_lazy = () -> InstalmentPlanCode.mmObject();
 			}
 		});

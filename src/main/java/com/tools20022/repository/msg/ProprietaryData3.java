@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData3#Any
- * ProprietaryData3.Any}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData3#mmAny
+ * ProprietaryData3.mmAny}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryData3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SkipProcessing any;
 	/**
 	 * Proprietary content.
 	 * <p>
@@ -85,7 +86,7 @@ public class ProprietaryData3 {
 	 * definition} = "Proprietary content."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Any = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAny = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryData3.mmObject();
 			isDerived = false;
@@ -93,8 +94,8 @@ public class ProprietaryData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Any";
 			definition = "Proprietary content.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SkipProcessing.mmObject();
 		}
 	};
@@ -102,13 +103,21 @@ public class ProprietaryData3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryData3.Any);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryData3.mmAny);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryData3";
 				definition = "Container for proprietary information. Business content of this element is not specified.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SkipProcessing getAny() {
+		return any;
+	}
+
+	public void setAny(SkipProcessing any) {
+		this.any = any;
 	}
 }

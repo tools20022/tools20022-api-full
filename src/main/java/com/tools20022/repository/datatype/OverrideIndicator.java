@@ -32,8 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -52,12 +52,12 @@ public class OverrideIndicator {
 	final static public MMIndicator mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMIndicator() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OverrideIndicator";
 				definition = "Indicates whether an arrangement has to be overridden or not.";
-				meaningWhenFalse = "Not override";
 				meaningWhenTrue = "Override";
+				meaningWhenFalse = "Not override";
 			}
 		});
 		return mmObject_lazy.get();

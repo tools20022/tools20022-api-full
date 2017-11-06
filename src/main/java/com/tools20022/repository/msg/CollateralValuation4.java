@@ -38,15 +38,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation4#PoolStatus
- * CollateralValuation4.PoolStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralValuation4#Type
- * CollateralValuation4.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralValuation4#Sector
- * CollateralValuation4.Sector}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation4#mmPoolStatus
+ * CollateralValuation4.mmPoolStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralValuation4#mmType
+ * CollateralValuation4.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralValuation4#mmSector
+ * CollateralValuation4.mmSector}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation4#NominalAmount
- * CollateralValuation4.NominalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation4#mmNominalAmount
+ * CollateralValuation4.mmNominalAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralValuation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CollateralPool1Code poolStatus;
 	/**
 	 * Specifies whether the collateral is a pool collateral or not.
 	 * <p>
@@ -110,13 +111,13 @@ public class CollateralValuation4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation7#PoolStatus
-	 * CollateralValuation7.PoolStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation7#mmPoolStatus
+	 * CollateralValuation7.mmPoolStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PoolStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPoolStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralValuation4.mmObject();
 			isDerived = false;
@@ -124,12 +125,13 @@ public class CollateralValuation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolStatus";
 			definition = "Specifies whether the collateral is a pool collateral or not.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.PoolStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.mmPoolStatus);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CollateralPool1Code.mmObject();
 		}
 	};
+	protected CFIIdentifier type;
 	/**
 	 * Identifies the asset class pledged as collateral, expressed as an ISO
 	 * 10962 Classification of Financial Instrument (CFI).
@@ -144,8 +146,8 @@ public class CollateralValuation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetClassification#ClassificationType
-	 * AssetClassification.ClassificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetClassification#mmClassificationType
+	 * AssetClassification.mmClassificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,27 +169,29 @@ public class CollateralValuation4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CollateralValuation7#Type
-	 * CollateralValuation7.Type}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation7#mmType
+	 * CollateralValuation7.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> CollateralValuation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.ClassificationType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies the asset class pledged as collateral, expressed as an ISO 10962 Classification of Financial Instrument (CFI).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
 		}
 	};
+	protected SNA2008SectorIdentifier sector;
 	/**
 	 * Provides the institutional sector, such as central government, central
 	 * bank, etc. of the issuer of collateral.
@@ -202,8 +206,8 @@ public class CollateralValuation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#Sector
-	 * Organisation.Sector}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmSector
+	 * Organisation.mmSector}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,27 +230,28 @@ public class CollateralValuation4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation7#Sector
-	 * CollateralValuation7.Sector}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation7#mmSector
+	 * CollateralValuation7.mmSector}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sector = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmSector;
 			componentContext_lazy = () -> CollateralValuation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.Sector;
 			isDerived = false;
 			xmlTag = "Sctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
 			definition = "Provides the institutional sector, such as central government, central bank, etc. of the issuer of collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.Sector);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.mmSector);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount nominalAmount;
 	/**
 	 * Nominal amount of money of the security pledged as collateral, when the
 	 * collateral cannot be identified through an individual or basket ISIN.
@@ -261,8 +266,8 @@ public class CollateralValuation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#CollateralAmount
-	 * Collateral.CollateralAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralAmount
+	 * Collateral.mmCollateralAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -285,24 +290,24 @@ public class CollateralValuation4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CollateralValuation7#NominalAmount
-	 * CollateralValuation7.NominalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuation7#mmNominalAmount
+	 * CollateralValuation7.mmNominalAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NominalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNominalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> CollateralValuation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.CollateralAmount;
 			isDerived = false;
 			xmlTag = "NmnlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NominalAmount";
 			definition = "Nominal amount of money of the security pledged as collateral, when the collateral cannot be identified through an individual or basket ISIN.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.NominalAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.mmNominalAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -310,10 +315,10 @@ public class CollateralValuation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation4.PoolStatus, com.tools20022.repository.msg.CollateralValuation4.Type, com.tools20022.repository.msg.CollateralValuation4.Sector,
-						com.tools20022.repository.msg.CollateralValuation4.NominalAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation4.mmPoolStatus, com.tools20022.repository.msg.CollateralValuation4.mmType,
+						com.tools20022.repository.msg.CollateralValuation4.mmSector, com.tools20022.repository.msg.CollateralValuation4.mmNominalAmount);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralValuation4";
 				definition = "Provides the specification of the valuation of a collateral, based on the sector and the asset classification.";
@@ -321,5 +326,37 @@ public class CollateralValuation4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CollateralPool1Code getPoolStatus() {
+		return poolStatus;
+	}
+
+	public void setPoolStatus(CollateralPool1Code poolStatus) {
+		this.poolStatus = poolStatus;
+	}
+
+	public CFIIdentifier getType() {
+		return type;
+	}
+
+	public void setType(CFIIdentifier type) {
+		this.type = type;
+	}
+
+	public SNA2008SectorIdentifier getSector() {
+		return sector;
+	}
+
+	public void setSector(SNA2008SectorIdentifier sector) {
+		this.sector = sector;
+	}
+
+	public ActiveCurrencyAndAmount getNominalAmount() {
+		return nominalAmount;
+	}
+
+	public void setNominalAmount(ActiveCurrencyAndAmount nominalAmount) {
+		this.nominalAmount = nominalAmount;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.OrderStatusAndReason10;
 import com.tools20022.repository.msg.SwitchOrderStatusAndReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of status.
@@ -35,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status24Choice#OrderDetailsReport
- * Status24Choice.OrderDetailsReport}</li>
+ * {@linkplain com.tools20022.repository.choice.Status24Choice#mmOrderDetailsReport
+ * Status24Choice.mmOrderDetailsReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status24Choice#IndividualOrderDetailsReport
- * Status24Choice.IndividualOrderDetailsReport}</li>
+ * {@linkplain com.tools20022.repository.choice.Status24Choice#mmIndividualOrderDetailsReport
+ * Status24Choice.mmIndividualOrderDetailsReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status24Choice#SwitchOrderDetailsReport
- * Status24Choice.SwitchOrderDetailsReport}</li>
+ * {@linkplain com.tools20022.repository.choice.Status24Choice#mmSwitchOrderDetailsReport
+ * Status24Choice.mmSwitchOrderDetailsReport}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV04#StatusReport
- * OrderInstructionStatusReportV04.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV04#mmStatusReport
+ * OrderInstructionStatusReportV04.mmStatusReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Status24Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrderStatusAndReason10 orderDetailsReport;
 	/**
 	 * Status report details of all the individual orders conveyed in a bulk or
 	 * multiple order message. Can be used if all the individual orders conveyed
@@ -102,7 +104,7 @@ public class Status24Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderDetailsReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderDetailsReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Status24Choice.mmObject();
 			isDerived = false;
@@ -110,12 +112,13 @@ public class Status24Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetailsReport";
 			definition = "Status report details of all the individual orders conveyed in a bulk or multiple order message. Can be used if all the individual orders conveyed in a bulk or multiple order message have the same status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrderStatusAndReason10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OrderStatusAndReason10.mmObject();
 		}
 	};
+	protected List<IndividualOrderStatusAndReason7> individualOrderDetailsReport;
 	/**
 	 * Status report details of an individual order.
 	 * <p>
@@ -143,7 +146,7 @@ public class Status24Choice {
 	 * definition} = "Status report details of an individual order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndividualOrderDetailsReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividualOrderDetailsReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Status24Choice.mmObject();
 			isDerived = false;
@@ -152,10 +155,11 @@ public class Status24Choice {
 			name = "IndividualOrderDetailsReport";
 			definition = "Status report details of an individual order.";
 			minOccurs = 1;
-			type_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
 			isComposite = true;
+			type_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
 		}
 	};
+	protected List<SwitchOrderStatusAndReason2> switchOrderDetailsReport;
 	/**
 	 * Status report details of a switch order.
 	 * <p>
@@ -183,7 +187,7 @@ public class Status24Choice {
 	 * definition} = "Status report details of a switch order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SwitchOrderDetailsReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSwitchOrderDetailsReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Status24Choice.mmObject();
 			isDerived = false;
@@ -192,23 +196,47 @@ public class Status24Choice {
 			name = "SwitchOrderDetailsReport";
 			definition = "Status report details of a switch order.";
 			minOccurs = 1;
-			type_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
 			isComposite = true;
+			type_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status24Choice.OrderDetailsReport, com.tools20022.repository.choice.Status24Choice.IndividualOrderDetailsReport,
-						com.tools20022.repository.choice.Status24Choice.SwitchOrderDetailsReport);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV04.StatusReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status24Choice.mmOrderDetailsReport, com.tools20022.repository.choice.Status24Choice.mmIndividualOrderDetailsReport,
+						com.tools20022.repository.choice.Status24Choice.mmSwitchOrderDetailsReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV04.mmStatusReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Status24Choice";
 				definition = "Choice of status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrderStatusAndReason10 getOrderDetailsReport() {
+		return orderDetailsReport;
+	}
+
+	public void setOrderDetailsReport(OrderStatusAndReason10 orderDetailsReport) {
+		this.orderDetailsReport = orderDetailsReport;
+	}
+
+	public List<IndividualOrderStatusAndReason7> getIndividualOrderDetailsReport() {
+		return individualOrderDetailsReport;
+	}
+
+	public void setIndividualOrderDetailsReport(List<IndividualOrderStatusAndReason7> individualOrderDetailsReport) {
+		this.individualOrderDetailsReport = individualOrderDetailsReport;
+	}
+
+	public List<SwitchOrderStatusAndReason2> getSwitchOrderDetailsReport() {
+		return switchOrderDetailsReport;
+	}
+
+	public void setSwitchOrderDetailsReport(List<SwitchOrderStatusAndReason2> switchOrderDetailsReport) {
+		this.switchOrderDetailsReport = switchOrderDetailsReport;
 	}
 }

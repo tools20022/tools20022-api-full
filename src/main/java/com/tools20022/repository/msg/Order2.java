@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Order2#Type Order2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order2#TradingCapacity
- * Order2.TradingCapacity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order2#TradeOriginationDate
- * Order2.TradeOriginationDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order2#CustomerCapacity
- * Order2.CustomerCapacity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order2#PlaceOfExecution
- * Order2.PlaceOfExecution}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order2#QuantityDetails
- * Order2.QuantityDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order2#mmType Order2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order2#mmTradingCapacity
+ * Order2.mmTradingCapacity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order2#mmTradeOriginationDate
+ * Order2.mmTradeOriginationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order2#mmCustomerCapacity
+ * Order2.mmCustomerCapacity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order2#mmPlaceOfExecution
+ * Order2.mmPlaceOfExecution}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order2#mmQuantityDetails
+ * Order2.mmQuantityDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Order2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrderType1Code type;
 	/**
 	 * Indicates the type of instruction to a broker or dealer to buy or sell a
 	 * financial instrument.
@@ -86,8 +87,8 @@ public class Order2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Type
-	 * SecuritiesOrder.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmType
+	 * SecuritiesOrder.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order2
@@ -107,20 +108,21 @@ public class Order2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmType;
 			componentContext_lazy = () -> Order2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OrderType1Code.mmObject();
 		}
 	};
+	protected TradingCapacity3Code tradingCapacity;
 	/**
 	 * Capacity of customer placing the order. Primarily used by futures
 	 * exchanges to indicate the CTI code (customer type indicator) as required
@@ -136,8 +138,8 @@ public class Order2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#CustomerCapacity
-	 * SecuritiesOrder.CustomerCapacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmCustomerCapacity
+	 * SecuritiesOrder.mmCustomerCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order2
@@ -157,20 +159,21 @@ public class Order2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmCustomerCapacity;
 			componentContext_lazy = () -> Order2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.CustomerCapacity;
 			isDerived = false;
 			xmlTag = "TradgCpcty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingCapacity";
 			definition = "Capacity of customer placing the order. Primarily used by futures exchanges to indicate the CTI code (customer type indicator) as required by the US CFTC (Commodity Futures Trading Commission).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TradingCapacity3Code.mmObject();
 		}
 	};
+	protected ISODateTime tradeOriginationDate;
 	/**
 	 * Indicates the date and time of the agreement in principal between
 	 * counter-parties prior to actual trade date. Used with fixed income for
@@ -185,8 +188,8 @@ public class Order2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#TradeOriginationDate
-	 * SecuritiesTrade.TradeOriginationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradeOriginationDate
+	 * SecuritiesTrade.mmTradeOriginationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order2
@@ -206,20 +209,21 @@ public class Order2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeOriginationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeOriginationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeOriginationDate;
 			componentContext_lazy = () -> Order2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.TradeOriginationDate;
 			isDerived = false;
 			xmlTag = "TradOrgtnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeOriginationDate";
 			definition = "Indicates the date and time of the agreement in principal between counter-parties prior to actual trade date.\nUsed with fixed income for municipal new issue markets.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CustomerOrderCapacity1Code customerCapacity;
 	/**
 	 * Capacity of customer placing the order. Primarily used by futures
 	 * exchanges to indicate the CTI code (customer type indicator) as required
@@ -235,8 +239,8 @@ public class Order2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#CustomerCapacity
-	 * SecuritiesOrder.CustomerCapacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmCustomerCapacity
+	 * SecuritiesOrder.mmCustomerCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order2
@@ -256,20 +260,21 @@ public class Order2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerCapacity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmCustomerCapacity;
 			componentContext_lazy = () -> Order2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.CustomerCapacity;
 			isDerived = false;
 			xmlTag = "CstmrCpcty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCapacity";
 			definition = "Capacity of customer placing the order. Primarily used by futures exchanges to indicate the CTI code (customer type indicator) as required by the US CFTC (Commodity Futures Trading Commission).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CustomerOrderCapacity1Code.mmObject();
 		}
 	};
+	protected MarketIdentification1 placeOfExecution;
 	/**
 	 * Unique and unambiguous way to identify an organisation.
 	 * <p>
@@ -281,8 +286,8 @@ public class Order2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#PlaceOfTrade
-	 * SecuritiesOrder.PlaceOfTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmPlaceOfTrade
+	 * SecuritiesOrder.mmPlaceOfTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order2
@@ -300,21 +305,22 @@ public class Order2 {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PlaceOfExecution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlaceOfExecution = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmPlaceOfTrade;
 			componentContext_lazy = () -> Order2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.PlaceOfTrade;
 			isDerived = false;
 			xmlTag = "PlcOfExctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfExecution";
 			definition = "Unique and unambiguous way to identify an organisation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification1.mmObject();
 		}
 	};
+	protected OrderQuantity1 quantityDetails;
 	/**
 	 * Quantity of financial instrument to be ordered.
 	 * <p>
@@ -326,8 +332,8 @@ public class Order2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order2
@@ -345,34 +351,82 @@ public class Order2 {
 	 * definition} = "Quantity of financial instrument to be ordered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> Order2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "QtyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDetails";
 			definition = "Quantity of financial instrument to be ordered.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OrderQuantity1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order2.Type, com.tools20022.repository.msg.Order2.TradingCapacity, com.tools20022.repository.msg.Order2.TradeOriginationDate,
-						com.tools20022.repository.msg.Order2.CustomerCapacity, com.tools20022.repository.msg.Order2.PlaceOfExecution, com.tools20022.repository.msg.Order2.QuantityDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order2.mmType, com.tools20022.repository.msg.Order2.mmTradingCapacity, com.tools20022.repository.msg.Order2.mmTradeOriginationDate,
+						com.tools20022.repository.msg.Order2.mmCustomerCapacity, com.tools20022.repository.msg.Order2.mmPlaceOfExecution, com.tools20022.repository.msg.Order2.mmQuantityDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Order2";
 				definition = "Intention to transfer an ownership of a financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrderType1Code getType() {
+		return type;
+	}
+
+	public void setType(OrderType1Code type) {
+		this.type = type;
+	}
+
+	public TradingCapacity3Code getTradingCapacity() {
+		return tradingCapacity;
+	}
+
+	public void setTradingCapacity(TradingCapacity3Code tradingCapacity) {
+		this.tradingCapacity = tradingCapacity;
+	}
+
+	public ISODateTime getTradeOriginationDate() {
+		return tradeOriginationDate;
+	}
+
+	public void setTradeOriginationDate(ISODateTime tradeOriginationDate) {
+		this.tradeOriginationDate = tradeOriginationDate;
+	}
+
+	public CustomerOrderCapacity1Code getCustomerCapacity() {
+		return customerCapacity;
+	}
+
+	public void setCustomerCapacity(CustomerOrderCapacity1Code customerCapacity) {
+		this.customerCapacity = customerCapacity;
+	}
+
+	public MarketIdentification1 getPlaceOfExecution() {
+		return placeOfExecution;
+	}
+
+	public void setPlaceOfExecution(com.tools20022.repository.msg.MarketIdentification1 placeOfExecution) {
+		this.placeOfExecution = placeOfExecution;
+	}
+
+	public OrderQuantity1 getQuantityDetails() {
+		return quantityDetails;
+	}
+
+	public void setQuantityDetails(com.tools20022.repository.msg.OrderQuantity1 quantityDetails) {
+		this.quantityDetails = quantityDetails;
 	}
 }

@@ -34,38 +34,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#CouponClippingDate
- * CorporateActionDate4.CouponClippingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmCouponClippingDate
+ * CorporateActionDate4.mmCouponClippingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#ConsentExpirationDate
- * CorporateActionDate4.ConsentExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmConsentExpirationDate
+ * CorporateActionDate4.mmConsentExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#ConsentRecordDate
- * CorporateActionDate4.ConsentRecordDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmConsentRecordDate
+ * CorporateActionDate4.mmConsentRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#PaymentDate
- * CorporateActionDate4.PaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmPaymentDate
+ * CorporateActionDate4.mmPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#EarliestPaymentDate
- * CorporateActionDate4.EarliestPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmEarliestPaymentDate
+ * CorporateActionDate4.mmEarliestPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#MarketDeadline
- * CorporateActionDate4.MarketDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmMarketDeadline
+ * CorporateActionDate4.mmMarketDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#ResponseDeadline
- * CorporateActionDate4.ResponseDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmResponseDeadline
+ * CorporateActionDate4.mmResponseDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#DeadlineToSplit
- * CorporateActionDate4.DeadlineToSplit}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmDeadlineToSplit
+ * CorporateActionDate4.mmDeadlineToSplit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#ExpiryDate
- * CorporateActionDate4.ExpiryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmExpiryDate
+ * CorporateActionDate4.mmExpiryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#QuotationSettingDate
- * CorporateActionDate4.QuotationSettingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmQuotationSettingDate
+ * CorporateActionDate4.mmQuotationSettingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#SubscriptionCostDebitDate
- * CorporateActionDate4.SubscriptionCostDebitDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmSubscriptionCostDebitDate
+ * CorporateActionDate4.mmSubscriptionCostDebitDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -74,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDate4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateFormat4Choice couponClippingDate;
 	/**
 	 * Date/time at which the coupons are to be/were submitted for payment of
 	 * interest.
@@ -103,8 +104,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CouponAttached#CouponClippingDate
-	 * CouponAttached.CouponClippingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CouponAttached#mmCouponClippingDate
+	 * CouponAttached.mmCouponClippingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -125,20 +126,21 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CouponClippingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCouponClippingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmCouponClippingDate;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.CouponClippingDate;
 			isDerived = false;
 			xmlTag = "CpnClpngDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponClippingDate";
 			definition = "Date/time at which the coupons are to be/were submitted for payment of interest.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice consentExpirationDate;
 	/**
 	 * Last date/time at which a holder can consent to the changes sought by the
 	 * corporation.
@@ -153,8 +155,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ConsentExpirationDate
-	 * CorporateActionDeadline.ConsentExpirationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmConsentExpirationDate
+	 * CorporateActionDeadline.mmConsentExpirationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -175,20 +177,21 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConsentExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConsentExpirationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmConsentExpirationDate;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.ConsentExpirationDate;
 			isDerived = false;
 			xmlTag = "CnsntXprtnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentExpirationDate";
 			definition = "Last date/time at which a holder can consent to the changes sought by the corporation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice consentRecordDate;
 	/**
 	 * Date/time used by the offeror to determine the beneficiary eligible to
 	 * participate in a consent based on the registered owner of the securities,
@@ -206,8 +209,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ConsentRecordDate
-	 * CorporateActionDeadline.ConsentRecordDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmConsentRecordDate
+	 * CorporateActionDeadline.mmConsentRecordDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -228,20 +231,21 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConsentRecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConsentRecordDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmConsentRecordDate;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.ConsentRecordDate;
 			isDerived = false;
 			xmlTag = "CnsntRcrdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentRecordDate";
 			definition = "Date/time used by the offeror to determine the beneficiary eligible to participate in a consent based on the registered owner of the securities, eg, beneficial owner of consent record. The consent record date qualifier is used to indicate that a record date only applies to a certain part of the offer, not the entire offer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice paymentDate;
 	/**
 	 * Date/time at which the distribution is due to take place (cash and/or
 	 * securities).
@@ -256,8 +260,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#MovementDate
-	 * CorporateActionDistribution.MovementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmMovementDate
+	 * CorporateActionDistribution.mmMovementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -278,20 +282,21 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.MovementDate;
 			isDerived = false;
 			xmlTag = "PmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the distribution is due to take place (cash and/or securities).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice earliestPaymentDate;
 	/**
 	 * Date/time at which a payment can be made, eg, if payment date is a
 	 * non-business day or to indicate the first payment date of an offer.
@@ -306,8 +311,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#EarliestPaymentDate
-	 * ProceedsDefinition.EarliestPaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmEarliestPaymentDate
+	 * ProceedsDefinition.mmEarliestPaymentDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -328,20 +333,21 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarliestPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarliestPaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmEarliestPaymentDate;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.EarliestPaymentDate;
 			isDerived = false;
 			xmlTag = "EarlstPmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/time at which a payment can be made, eg, if payment date is a non-business day or to indicate the first payment date of an offer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice marketDeadline;
 	/**
 	 * Issuer or issuer's agent deadline to respond, with an instruction, to an
 	 * outstanding offer or privilege.
@@ -356,8 +362,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#MarketDeadline
-	 * Deadline.MarketDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmMarketDeadline
+	 * Deadline.mmMarketDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -378,20 +384,21 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.MarketDeadline;
 			isDerived = false;
 			xmlTag = "MktDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadline";
 			definition = "Issuer or issuer's agent deadline to respond, with an instruction, to an outstanding offer or privilege.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice responseDeadline;
 	/**
 	 * Date/time at which the account servicer has set as the deadline to
 	 * respond, with instructions, to an outstanding event. This time is
@@ -408,8 +415,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ResponseDeadline
-	 * CorporateActionDeadline.ResponseDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmResponseDeadline
+	 * CorporateActionDeadline.mmResponseDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -430,20 +437,21 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmResponseDeadline;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.ResponseDeadline;
 			isDerived = false;
 			xmlTag = "RspnDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseDeadline";
 			definition = "Date/time at which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. This time is dependent on the reference time zone of the account servicer as specified in an SLA.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice deadlineToSplit;
 	/**
 	 * Deadline by which instructions must be received to split securities, eg,
 	 * of physical certificates.
@@ -458,8 +466,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#DeadlineToSplit
-	 * CorporateActionDeadline.DeadlineToSplit}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmDeadlineToSplit
+	 * CorporateActionDeadline.mmDeadlineToSplit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -480,20 +488,21 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeadlineToSplit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeadlineToSplit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmDeadlineToSplit;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.DeadlineToSplit;
 			isDerived = false;
 			xmlTag = "DdlnToSplt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeadlineToSplit";
 			definition = "Deadline by which instructions must be received to split securities, eg, of physical certificates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice expiryDate;
 	/**
 	 * Date/time at which an order expires or on which a privilege or offer
 	 * terminates.
@@ -508,8 +517,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ExpiryDate
-	 * CorporateActionDeadline.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmExpiryDate
+	 * CorporateActionDeadline.mmExpiryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -530,20 +539,21 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmExpiryDate;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.ExpiryDate;
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date/time at which an order expires or on which a privilege or offer terminates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice quotationSettingDate;
 	/**
 	 * Date/time at which the price of a security is determined.
 	 * <p>
@@ -557,8 +567,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#QuotationDate
-	 * SecuritiesPricing.QuotationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmQuotationDate
+	 * SecuritiesPricing.mmQuotationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -578,20 +588,21 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuotationSettingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuotationSettingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmQuotationDate;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.QuotationDate;
 			isDerived = false;
 			xmlTag = "QtnSetngDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationSettingDate";
 			definition = "Date/time at which the price of a security is determined.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice subscriptionCostDebitDate;
 	/**
 	 * Date/time by which cash must be in place in order to take part in the
 	 * event.
@@ -606,8 +617,8 @@ public class CorporateActionDate4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#SubscriptionCostDebitDate
-	 * BiddingConditions.SubscriptionCostDebitDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmSubscriptionCostDebitDate
+	 * BiddingConditions.mmSubscriptionCostDebitDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -628,17 +639,17 @@ public class CorporateActionDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubscriptionCostDebitDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubscriptionCostDebitDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmSubscriptionCostDebitDate;
 			componentContext_lazy = () -> CorporateActionDate4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.SubscriptionCostDebitDate;
 			isDerived = false;
 			xmlTag = "SbcptCostDbtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionCostDebitDate";
 			definition = "Date/time by which cash must be in place in order to take part in the event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
@@ -646,17 +657,106 @@ public class CorporateActionDate4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate4.CouponClippingDate, com.tools20022.repository.msg.CorporateActionDate4.ConsentExpirationDate,
-						com.tools20022.repository.msg.CorporateActionDate4.ConsentRecordDate, com.tools20022.repository.msg.CorporateActionDate4.PaymentDate, com.tools20022.repository.msg.CorporateActionDate4.EarliestPaymentDate,
-						com.tools20022.repository.msg.CorporateActionDate4.MarketDeadline, com.tools20022.repository.msg.CorporateActionDate4.ResponseDeadline, com.tools20022.repository.msg.CorporateActionDate4.DeadlineToSplit,
-						com.tools20022.repository.msg.CorporateActionDate4.ExpiryDate, com.tools20022.repository.msg.CorporateActionDate4.QuotationSettingDate, com.tools20022.repository.msg.CorporateActionDate4.SubscriptionCostDebitDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate4.mmCouponClippingDate, com.tools20022.repository.msg.CorporateActionDate4.mmConsentExpirationDate,
+						com.tools20022.repository.msg.CorporateActionDate4.mmConsentRecordDate, com.tools20022.repository.msg.CorporateActionDate4.mmPaymentDate, com.tools20022.repository.msg.CorporateActionDate4.mmEarliestPaymentDate,
+						com.tools20022.repository.msg.CorporateActionDate4.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate4.mmResponseDeadline, com.tools20022.repository.msg.CorporateActionDate4.mmDeadlineToSplit,
+						com.tools20022.repository.msg.CorporateActionDate4.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate4.mmQuotationSettingDate,
+						com.tools20022.repository.msg.CorporateActionDate4.mmSubscriptionCostDebitDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate4";
 				definition = "Specifies corporate action dates.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateFormat4Choice getCouponClippingDate() {
+		return couponClippingDate;
+	}
+
+	public void setCouponClippingDate(DateFormat4Choice couponClippingDate) {
+		this.couponClippingDate = couponClippingDate;
+	}
+
+	public DateFormat4Choice getConsentExpirationDate() {
+		return consentExpirationDate;
+	}
+
+	public void setConsentExpirationDate(DateFormat4Choice consentExpirationDate) {
+		this.consentExpirationDate = consentExpirationDate;
+	}
+
+	public DateFormat4Choice getConsentRecordDate() {
+		return consentRecordDate;
+	}
+
+	public void setConsentRecordDate(DateFormat4Choice consentRecordDate) {
+		this.consentRecordDate = consentRecordDate;
+	}
+
+	public DateFormat4Choice getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(DateFormat4Choice paymentDate) {
+		this.paymentDate = paymentDate;
+	}
+
+	public DateFormat4Choice getEarliestPaymentDate() {
+		return earliestPaymentDate;
+	}
+
+	public void setEarliestPaymentDate(DateFormat4Choice earliestPaymentDate) {
+		this.earliestPaymentDate = earliestPaymentDate;
+	}
+
+	public DateFormat4Choice getMarketDeadline() {
+		return marketDeadline;
+	}
+
+	public void setMarketDeadline(DateFormat4Choice marketDeadline) {
+		this.marketDeadline = marketDeadline;
+	}
+
+	public DateFormat4Choice getResponseDeadline() {
+		return responseDeadline;
+	}
+
+	public void setResponseDeadline(DateFormat4Choice responseDeadline) {
+		this.responseDeadline = responseDeadline;
+	}
+
+	public DateFormat4Choice getDeadlineToSplit() {
+		return deadlineToSplit;
+	}
+
+	public void setDeadlineToSplit(DateFormat4Choice deadlineToSplit) {
+		this.deadlineToSplit = deadlineToSplit;
+	}
+
+	public DateFormat4Choice getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(DateFormat4Choice expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public DateFormat4Choice getQuotationSettingDate() {
+		return quotationSettingDate;
+	}
+
+	public void setQuotationSettingDate(DateFormat4Choice quotationSettingDate) {
+		this.quotationSettingDate = quotationSettingDate;
+	}
+
+	public DateFormat4Choice getSubscriptionCostDebitDate() {
+		return subscriptionCostDebitDate;
+	}
+
+	public void setSubscriptionCostDebitDate(DateFormat4Choice subscriptionCostDebitDate) {
+		this.subscriptionCostDebitDate = subscriptionCostDebitDate;
 	}
 }

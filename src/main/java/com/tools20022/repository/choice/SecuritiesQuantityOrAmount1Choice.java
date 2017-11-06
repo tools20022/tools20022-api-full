@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesQuantityOrAmount1Choice#SecuritiesQuantity
- * SecuritiesQuantityOrAmount1Choice.SecuritiesQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesQuantityOrAmount1Choice#mmSecuritiesQuantity
+ * SecuritiesQuantityOrAmount1Choice.mmSecuritiesQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesQuantityOrAmount1Choice#InstructedAmount
- * SecuritiesQuantityOrAmount1Choice.InstructedAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesQuantityOrAmount1Choice#mmInstructedAmount
+ * SecuritiesQuantityOrAmount1Choice.mmInstructedAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesQuantityOrAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesOption54 securitiesQuantity;
 	/**
 	 * Provides information about securities quantity linked to a corporate
 	 * action option.
@@ -89,7 +90,7 @@ public class SecuritiesQuantityOrAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesQuantityOrAmount1Choice.mmObject();
 			isDerived = false;
@@ -97,12 +98,13 @@ public class SecuritiesQuantityOrAmount1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantity";
 			definition = "Provides information about securities quantity linked to a corporate action option.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesOption54.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesOption54.mmObject();
 		}
 	};
+	protected RestrictedFINActiveCurrencyAndAmount instructedAmount;
 	/**
 	 * Cash amount to be instructed.
 	 * <p>
@@ -131,7 +133,7 @@ public class SecuritiesQuantityOrAmount1Choice {
 	 * definition} = "Cash amount to be instructed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesQuantityOrAmount1Choice.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class SecuritiesQuantityOrAmount1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmount";
 			definition = "Cash amount to be instructed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class SecuritiesQuantityOrAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesQuantityOrAmount1Choice.SecuritiesQuantity, com.tools20022.repository.choice.SecuritiesQuantityOrAmount1Choice.InstructedAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesQuantityOrAmount1Choice.mmSecuritiesQuantity, com.tools20022.repository.choice.SecuritiesQuantityOrAmount1Choice.mmInstructedAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesQuantityOrAmount1Choice";
 				definition = "Choice between securities quantities or an amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesOption54 getSecuritiesQuantity() {
+		return securitiesQuantity;
+	}
+
+	public void setSecuritiesQuantity(SecuritiesOption54 securitiesQuantity) {
+		this.securitiesQuantity = securitiesQuantity;
+	}
+
+	public RestrictedFINActiveCurrencyAndAmount getInstructedAmount() {
+		return instructedAmount;
+	}
+
+	public void setInstructedAmount(RestrictedFINActiveCurrencyAndAmount instructedAmount) {
+		this.instructedAmount = instructedAmount;
 	}
 }

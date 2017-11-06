@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventCompletenessStatus1Code#Complete
- * EventCompletenessStatus1Code.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventCompletenessStatus1Code#mmComplete
+ * EventCompletenessStatus1Code.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventCompletenessStatus1Code#Incomplete
- * EventCompletenessStatus1Code.Incomplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventCompletenessStatus1Code#mmIncomplete
+ * EventCompletenessStatus1Code.mmIncomplete}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class EventCompletenessStatus1Code extends EventCompletenessStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
@@ -107,7 +107,7 @@ public class EventCompletenessStatus1Code extends EventCompletenessStatusCode {
 	 * name} = "Incomplete"</li>
 	 * </ul>
 	 */
-	public static final MMCode Incomplete = new MMCode() {
+	public static final MMCode mmIncomplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incomplete";
@@ -118,12 +118,12 @@ public class EventCompletenessStatus1Code extends EventCompletenessStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventCompletenessStatus1Code";
 				definition = "Indicates whether the details provided about an event are complete or incomplete.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventCompletenessStatus1Code.Complete, com.tools20022.repository.codeset.EventCompletenessStatus1Code.Incomplete);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventCompletenessStatus1Code.mmComplete, com.tools20022.repository.codeset.EventCompletenessStatus1Code.mmIncomplete);
 				trace_lazy = () -> EventCompletenessStatusCode.mmObject();
 			}
 		});

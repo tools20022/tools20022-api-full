@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides reference information to the original message.
@@ -35,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference18#MessageIdentification
- * OriginalTransactionReference18.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference18#mmMessageIdentification
+ * OriginalTransactionReference18.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference18#MessageNameIdentification
- * OriginalTransactionReference18.MessageNameIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference18#mmMessageNameIdentification
+ * OriginalTransactionReference18.mmMessageNameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference18#CreationDateTime
- * OriginalTransactionReference18.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference18#mmCreationDateTime
+ * OriginalTransactionReference18.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference18#OriginalTransaction
- * OriginalTransactionReference18.OriginalTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference18#mmOriginalTransaction
+ * OriginalTransactionReference18.mmOriginalTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,15 +56,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV02#OriginalTransactionReference
- * IdentificationModificationAdviceV02.OriginalTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV02#mmOriginalTransactionReference
+ * IdentificationModificationAdviceV02.mmOriginalTransactionReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalTransactionReference18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference, as assigned by the original instructing party,
 	 * to unambiguously identify the original message.
@@ -107,7 +109,7 @@ public class OriginalTransactionReference18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalTransactionReference18.mmObject();
 			isDerived = false;
@@ -115,11 +117,12 @@ public class OriginalTransactionReference18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text messageNameIdentification;
 	/**
 	 * Specifies the original message name identifier to which the message
 	 * refers.
@@ -150,7 +153,7 @@ public class OriginalTransactionReference18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageNameIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalTransactionReference18.mmObject();
 			isDerived = false;
@@ -158,11 +161,12 @@ public class OriginalTransactionReference18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the original message was created.
 	 * <p>
@@ -190,7 +194,7 @@ public class OriginalTransactionReference18 {
 	 * definition} = "Date and time at which the original message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalTransactionReference18.mmObject();
 			isDerived = false;
@@ -198,11 +202,12 @@ public class OriginalTransactionReference18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the original message was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PaymentIdentification4> originalTransaction;
 	/**
 	 * Provides reference information to the original transaction.
 	 * <p>
@@ -236,33 +241,65 @@ public class OriginalTransactionReference18 {
 	 * "Provides reference information to the original transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalTransaction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalTransactionReference18.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> OriginalTransactionReference18.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransaction";
 			definition = "Provides reference information to the original transaction.";
 			minOccurs = 0;
-			complexType_lazy = () -> PaymentIdentification4.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.PaymentIdentification4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalTransactionReference18.MessageIdentification, com.tools20022.repository.msg.OriginalTransactionReference18.MessageNameIdentification,
-						com.tools20022.repository.msg.OriginalTransactionReference18.CreationDateTime, com.tools20022.repository.msg.OriginalTransactionReference18.OriginalTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalTransactionReference18.mmMessageIdentification, com.tools20022.repository.msg.OriginalTransactionReference18.mmMessageNameIdentification,
+						com.tools20022.repository.msg.OriginalTransactionReference18.mmCreationDateTime, com.tools20022.repository.msg.OriginalTransactionReference18.mmOriginalTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationModificationAdviceV02.mmOriginalTransactionReference);
 				trace_lazy = () -> Payment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationModificationAdviceV02.OriginalTransactionReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalTransactionReference18";
 				definition = "Provides reference information to the original message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Max35Text getMessageNameIdentification() {
+		return messageNameIdentification;
+	}
+
+	public void setMessageNameIdentification(Max35Text messageNameIdentification) {
+		this.messageNameIdentification = messageNameIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public List<PaymentIdentification4> getOriginalTransaction() {
+		return originalTransaction;
+	}
+
+	public void setOriginalTransaction(List<com.tools20022.repository.msg.PaymentIdentification4> originalTransaction) {
+		this.originalTransaction = originalTransaction;
 	}
 }

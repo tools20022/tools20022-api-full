@@ -34,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType1Code#Discount
- * PriceValueType1Code.Discount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType1Code#mmDiscount
+ * PriceValueType1Code.mmDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType1Code#Premium
- * PriceValueType1Code.Premium}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType1Code#Par
- * PriceValueType1Code.Par}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType1Code#mmPremium
+ * PriceValueType1Code.mmPremium}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType1Code#mmPar
+ * PriceValueType1Code.mmPar}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class PriceValueType1Code extends PriceValueTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discount = new MMCode() {
+	public static final MMCode mmDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
@@ -106,7 +106,7 @@ public class PriceValueType1Code extends PriceValueTypeCode {
 	 * name} = "Premium"</li>
 	 * </ul>
 	 */
-	public static final MMCode Premium = new MMCode() {
+	public static final MMCode mmPremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
@@ -129,7 +129,7 @@ public class PriceValueType1Code extends PriceValueTypeCode {
 	 * name} = "Par"</li>
 	 * </ul>
 	 */
-	public static final MMCode Par = new MMCode() {
+	public static final MMCode mmPar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Par";
@@ -140,12 +140,12 @@ public class PriceValueType1Code extends PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DISC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType1Code";
 				definition = "Specifies a type of value of the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType1Code.Discount, com.tools20022.repository.codeset.PriceValueType1Code.Premium, com.tools20022.repository.codeset.PriceValueType1Code.Par);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType1Code.mmDiscount, com.tools20022.repository.codeset.PriceValueType1Code.mmPremium, com.tools20022.repository.codeset.PriceValueType1Code.mmPar);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 			}
 		});

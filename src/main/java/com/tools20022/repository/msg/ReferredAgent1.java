@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReferredAgent1#Referred
- * ReferredAgent1.Referred}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReferredAgent1#mmReferred
+ * ReferredAgent1.mmReferred}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredAgent1#ReferredPlacementAgent
- * ReferredAgent1.ReferredPlacementAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.ReferredAgent1#mmReferredPlacementAgent
+ * ReferredAgent1.mmReferredPlacementAgent}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,48 +47,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#Placement
- * AccountDetailsConfirmationV02.Placement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmPlacement
+ * AccountDetailsConfirmationV02.mmPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03#Placement
- * AccountDetailsConfirmationV03.Placement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03#mmPlacement
+ * AccountDetailsConfirmationV03.mmPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#ModifiedPlacement
- * AccountModificationInstructionV02.ModifiedPlacement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmModifiedPlacement
+ * AccountModificationInstructionV02.mmModifiedPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#ModifiedPlacement
- * AccountModificationInstructionV03.ModifiedPlacement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#mmModifiedPlacement
+ * AccountModificationInstructionV03.mmModifiedPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#Placement
- * AccountOpeningInstructionV02.Placement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#mmPlacement
+ * AccountOpeningInstructionV02.mmPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#Placement
- * AccountOpeningInstructionV03.Placement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#mmPlacement
+ * AccountOpeningInstructionV03.mmPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04#Placement
- * AccountDetailsConfirmationV04.Placement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04#mmPlacement
+ * AccountDetailsConfirmationV04.mmPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV04#ModifiedPlacement
- * AccountModificationInstructionV04.ModifiedPlacement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV04#mmModifiedPlacement
+ * AccountModificationInstructionV04.mmModifiedPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#Placement
- * AccountOpeningInstructionV04.Placement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#mmPlacement
+ * AccountOpeningInstructionV04.mmPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#Placement
- * AccountOpeningInstructionV05.Placement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmPlacement
+ * AccountOpeningInstructionV05.mmPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#ModifiedPlacement
- * AccountModificationInstructionV05.ModifiedPlacement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#mmModifiedPlacement
+ * AccountModificationInstructionV05.mmModifiedPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05#Placement
- * AccountDetailsConfirmationV05.Placement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05#mmPlacement
+ * AccountDetailsConfirmationV05.mmPlacement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReferredAgent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Referred1Code referred;
 	/**
 	 * Indicates if the investor was referred by a placement agent.
 	 * <p>
@@ -139,13 +140,13 @@ public class ReferredAgent1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ReferredAgent2#Referred
-	 * ReferredAgent2.Referred}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReferredAgent2#mmReferred
+	 * ReferredAgent2.mmReferred}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Referred = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferred = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReferredAgent1.mmObject();
 			isDerived = false;
@@ -153,12 +154,13 @@ public class ReferredAgent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referred";
 			definition = "Indicates if the investor was referred by a placement agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredAgent2.Referred);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredAgent2.mmReferred);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Referred1Code.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice referredPlacementAgent;
 	/**
 	 * Placement agent that referred the investor.
 	 * <p>
@@ -187,13 +189,13 @@ public class ReferredAgent1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReferredAgent2#ReferredPlacementAgent
-	 * ReferredAgent2.ReferredPlacementAgent}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReferredAgent2#mmReferredPlacementAgent
+	 * ReferredAgent2.mmReferredPlacementAgent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReferredPlacementAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReferredPlacementAgent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReferredAgent1.mmObject();
 			isDerived = false;
@@ -201,25 +203,25 @@ public class ReferredAgent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredPlacementAgent";
 			definition = "Placement agent that referred the investor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredAgent2.ReferredPlacementAgent);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredAgent2.mmReferredPlacementAgent);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredAgent1.Referred, com.tools20022.repository.msg.ReferredAgent1.ReferredPlacementAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.Placement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.Placement,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.ModifiedPlacement, com.tools20022.repository.area.acmt.AccountModificationInstructionV03.ModifiedPlacement,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.Placement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.Placement,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.Placement, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.ModifiedPlacement,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.Placement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.Placement,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV05.ModifiedPlacement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.Placement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredAgent1.mmReferred, com.tools20022.repository.msg.ReferredAgent1.mmReferredPlacementAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmPlacement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmPlacement,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedPlacement, com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedPlacement,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmPlacement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.mmPlacement,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmPlacement, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.mmModifiedPlacement,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmPlacement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmPlacement,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedPlacement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmPlacement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReferredAgent1";
 				definition = "Provides the placement agent identification for a hedge fund if the investor was referred by one.";
@@ -227,5 +229,21 @@ public class ReferredAgent1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Referred1Code getReferred() {
+		return referred;
+	}
+
+	public void setReferred(Referred1Code referred) {
+		this.referred = referred;
+	}
+
+	public PartyIdentification2Choice getReferredPlacementAgent() {
+		return referredPlacementAgent;
+	}
+
+	public void setReferredPlacementAgent(PartyIdentification2Choice referredPlacementAgent) {
+		this.referredPlacementAgent = referredPlacementAgent;
 	}
 }

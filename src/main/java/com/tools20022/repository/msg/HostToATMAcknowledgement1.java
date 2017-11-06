@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HostToATMAcknowledgement1#Environment
- * HostToATMAcknowledgement1.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.HostToATMAcknowledgement1#mmEnvironment
+ * HostToATMAcknowledgement1.mmEnvironment}</li>
  * </ul>
  * </li>
  * <li>
@@ -42,15 +42,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#HostToATMAcknowledgement
- * HostToATMAcknowledgementV01.HostToATMAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#mmHostToATMAcknowledgement
+ * HostToATMAcknowledgementV01.mmHostToATMAcknowledgement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HostToATMAcknowledgement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment9 environment;
 	/**
 	 * Environment of the ATM.
 	 * <p>
@@ -92,7 +93,7 @@ public class HostToATMAcknowledgement1 {
 	 * definition} = "Environment of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> HostToATMAcknowledgement1.mmObject();
 			isDerived = false;
@@ -100,24 +101,32 @@ public class HostToATMAcknowledgement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HostToATMAcknowledgement1.Environment);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.HostToATMAcknowledgement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HostToATMAcknowledgement1.mmEnvironment);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmHostToATMAcknowledgement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HostToATMAcknowledgement1";
 				definition = "Information related to the acknowledgement from an ATM to contact the ATM manager.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment9 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment9 environment) {
+		this.environment = environment;
 	}
 }

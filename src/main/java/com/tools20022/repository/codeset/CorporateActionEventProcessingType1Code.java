@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#General
- * CorporateActionEventProcessingType1Code.General}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#mmGeneral
+ * CorporateActionEventProcessingType1Code.mmGeneral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#Distribution
- * CorporateActionEventProcessingType1Code.Distribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#mmDistribution
+ * CorporateActionEventProcessingType1Code.mmDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#Reorganisation
- * CorporateActionEventProcessingType1Code.Reorganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#mmReorganisation
+ * CorporateActionEventProcessingType1Code.mmReorganisation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class CorporateActionEventProcessingType1Code extends CorporateActionEven
 	 * name} = "General"</li>
 	 * </ul>
 	 */
-	public static final MMCode General = new MMCode() {
+	public static final MMCode mmGeneral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "General";
@@ -107,7 +107,7 @@ public class CorporateActionEventProcessingType1Code extends CorporateActionEven
 	 * name} = "Distribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode Distribution = new MMCode() {
+	public static final MMCode mmDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distribution";
@@ -130,7 +130,7 @@ public class CorporateActionEventProcessingType1Code extends CorporateActionEven
 	 * name} = "Reorganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reorganisation = new MMCode() {
+	public static final MMCode mmReorganisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reorganisation";
@@ -141,13 +141,13 @@ public class CorporateActionEventProcessingType1Code extends CorporateActionEven
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GENL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventProcessingType1Code";
 				definition = "Specifies the type of event processing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.General, com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.Distribution,
-						com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.Reorganisation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.mmGeneral, com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.mmDistribution,
+						com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.mmReorganisation);
 				trace_lazy = () -> CorporateActionEventProcessingTypeCode.mmObject();
 			}
 		});

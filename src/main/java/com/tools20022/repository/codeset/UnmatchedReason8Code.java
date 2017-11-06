@@ -35,125 +35,126 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#NoMatch
- * UnmatchedReason8Code.NoMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmNoMatch
+ * UnmatchedReason8Code.mmNoMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#SettlementDate
- * UnmatchedReason8Code.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmSettlementDate
+ * UnmatchedReason8Code.mmSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#TransactionDirection
- * UnmatchedReason8Code.TransactionDirection}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmTransactionDirection
+ * UnmatchedReason8Code.mmTransactionDirection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#ReceivingDeliveringDepository
- * UnmatchedReason8Code.ReceivingDeliveringDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmReceivingDeliveringDepository
+ * UnmatchedReason8Code.mmReceivingDeliveringDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#SettlementAmount
- * UnmatchedReason8Code.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmSettlementAmount
+ * UnmatchedReason8Code.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#DealPrice
- * UnmatchedReason8Code.DealPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmDealPrice
+ * UnmatchedReason8Code.mmDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#FinancialInstrumentQuantity
- * UnmatchedReason8Code.FinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmFinancialInstrumentQuantity
+ * UnmatchedReason8Code.mmFinancialInstrumentQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#AccountServicerDeadlineMissed
- * UnmatchedReason8Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmAccountServicerDeadlineMissed
+ * UnmatchedReason8Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#SettlementTransaction
- * UnmatchedReason8Code.SettlementTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmSettlementTransaction
+ * UnmatchedReason8Code.mmSettlementTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#SettlementSystemMethod
- * UnmatchedReason8Code.SettlementSystemMethod}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmSettlementSystemMethod
+ * UnmatchedReason8Code.mmSettlementSystemMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#FinancialInstrument
- * UnmatchedReason8Code.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmFinancialInstrument
+ * UnmatchedReason8Code.mmFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#NotRecognised
- * UnmatchedReason8Code.NotRecognised}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmNotRecognised
+ * UnmatchedReason8Code.mmNotRecognised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#CounterpartyTooLateForMatching
- * UnmatchedReason8Code.CounterpartyTooLateForMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmCounterpartyTooLateForMatching
+ * UnmatchedReason8Code.mmCounterpartyTooLateForMatching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#PhysicalSettlement
- * UnmatchedReason8Code.PhysicalSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmPhysicalSettlement
+ * UnmatchedReason8Code.mmPhysicalSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#CommonReference
- * UnmatchedReason8Code.CommonReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmCommonReference
+ * UnmatchedReason8Code.mmCommonReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#PaymentCode
- * UnmatchedReason8Code.PaymentCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmPaymentCode
+ * UnmatchedReason8Code.mmPaymentCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#PlaceOfTrade
- * UnmatchedReason8Code.PlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmPlaceOfTrade
+ * UnmatchedReason8Code.mmPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#PossibleDuplicate
- * UnmatchedReason8Code.PossibleDuplicate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmPossibleDuplicate
+ * UnmatchedReason8Code.mmPossibleDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#RegistrationDetails
- * UnmatchedReason8Code.RegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmRegistrationDetails
+ * UnmatchedReason8Code.mmRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#RTGSSystem
- * UnmatchedReason8Code.RTGSSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmRTGSSystem
+ * UnmatchedReason8Code.mmRTGSSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#ReceivingDeliveringParty1
- * UnmatchedReason8Code.ReceivingDeliveringParty1}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmReceivingDeliveringParty1
+ * UnmatchedReason8Code.mmReceivingDeliveringParty1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#CounterpartyCancelled
- * UnmatchedReason8Code.CounterpartyCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmCounterpartyCancelled
+ * UnmatchedReason8Code.mmCounterpartyCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#ReceivingDeliveringParty3
- * UnmatchedReason8Code.ReceivingDeliveringParty3}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmReceivingDeliveringParty3
+ * UnmatchedReason8Code.mmReceivingDeliveringParty3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#CurrencySettlementAmount
- * UnmatchedReason8Code.CurrencySettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmCurrencySettlementAmount
+ * UnmatchedReason8Code.mmCurrencySettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#LetterOfGuarantee
- * UnmatchedReason8Code.LetterOfGuarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmLetterOfGuarantee
+ * UnmatchedReason8Code.mmLetterOfGuarantee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#NoMatchingStarted
- * UnmatchedReason8Code.NoMatchingStarted}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmNoMatchingStarted
+ * UnmatchedReason8Code.mmNoMatchingStarted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#SafekeepingAccount
- * UnmatchedReason8Code.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmSafekeepingAccount
+ * UnmatchedReason8Code.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#TradeDate
- * UnmatchedReason8Code.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmTradeDate
+ * UnmatchedReason8Code.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#MarketDeadlineMissed
- * UnmatchedReason8Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmMarketDeadlineMissed
+ * UnmatchedReason8Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#TaxStatus
- * UnmatchedReason8Code.TaxStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmTaxStatus
+ * UnmatchedReason8Code.mmTaxStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#ReceivingDeliveringParty2
- * UnmatchedReason8Code.ReceivingDeliveringParty2}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#Other
- * UnmatchedReason8Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmReceivingDeliveringParty2
+ * UnmatchedReason8Code.mmReceivingDeliveringParty2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#MissingMarketSide
- * UnmatchedReason8Code.MissingMarketSide}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmOther
+ * UnmatchedReason8Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#UnmatchedMarketSide
- * UnmatchedReason8Code.UnmatchedMarketSide}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmMissingMarketSide
+ * UnmatchedReason8Code.mmMissingMarketSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#PlaceOfSafekeeping
- * UnmatchedReason8Code.PlaceOfSafekeeping}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmUnmatchedMarketSide
+ * UnmatchedReason8Code.mmUnmatchedMarketSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#AccruedInterestAmount1
- * UnmatchedReason8Code.AccruedInterestAmount1}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmPlaceOfSafekeeping
+ * UnmatchedReason8Code.mmPlaceOfSafekeeping}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#InvestorParty
- * UnmatchedReason8Code.InvestorParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmAccruedInterestAmount1
+ * UnmatchedReason8Code.mmAccruedInterestAmount1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#PlaceOfListing
- * UnmatchedReason8Code.PlaceOfListing}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmInvestorParty
+ * UnmatchedReason8Code.mmInvestorParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason8Code#mmPlaceOfListing
+ * UnmatchedReason8Code.mmPlaceOfListing}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -196,15 +197,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#NoMatch
-	 * UnmatchedReason5Code.NoMatch}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmNoMatch
+	 * UnmatchedReason5Code.mmNoMatch}</li>
 	 * </ul>
 	 */
-	public static final MMCode NoMatch = new MMCode() {
+	public static final MMCode mmNoMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.NoMatch;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmNoMatch;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -225,15 +226,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#SettlementDate
-	 * UnmatchedReason5Code.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmSettlementDate
+	 * UnmatchedReason5Code.mmSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementDate = new MMCode() {
+	public static final MMCode mmSettlementDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.SettlementDate;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmSettlementDate;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -254,15 +255,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#TransactionDirection
-	 * UnmatchedReason5Code.TransactionDirection}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmTransactionDirection
+	 * UnmatchedReason5Code.mmTransactionDirection}</li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionDirection = new MMCode() {
+	public static final MMCode mmTransactionDirection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDirection";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.TransactionDirection;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmTransactionDirection;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -283,15 +284,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#ReceivingDeliveringDepository
-	 * UnmatchedReason5Code.ReceivingDeliveringDepository}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmReceivingDeliveringDepository
+	 * UnmatchedReason5Code.mmReceivingDeliveringDepository}</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringDepository = new MMCode() {
+	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.ReceivingDeliveringDepository;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmReceivingDeliveringDepository;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -312,15 +313,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#SettlementAmount
-	 * UnmatchedReason5Code.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmSettlementAmount
+	 * UnmatchedReason5Code.mmSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementAmount = new MMCode() {
+	public static final MMCode mmSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.SettlementAmount;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmSettlementAmount;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -341,15 +342,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#DealPrice
-	 * UnmatchedReason5Code.DealPrice}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmDealPrice
+	 * UnmatchedReason5Code.mmDealPrice}</li>
 	 * </ul>
 	 */
-	public static final MMCode DealPrice = new MMCode() {
+	public static final MMCode mmDealPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.DealPrice;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmDealPrice;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -370,15 +371,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#FinancialInstrumentQuantity
-	 * UnmatchedReason5Code.FinancialInstrumentQuantity}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmFinancialInstrumentQuantity
+	 * UnmatchedReason5Code.mmFinancialInstrumentQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrumentQuantity = new MMCode() {
+	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.FinancialInstrumentQuantity;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmFinancialInstrumentQuantity;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -399,15 +400,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#AccountServicerDeadlineMissed
-	 * UnmatchedReason5Code.AccountServicerDeadlineMissed}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmAccountServicerDeadlineMissed
+	 * UnmatchedReason5Code.mmAccountServicerDeadlineMissed}</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.AccountServicerDeadlineMissed;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmAccountServicerDeadlineMissed;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -428,15 +429,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#SettlementTransaction
-	 * UnmatchedReason5Code.SettlementTransaction}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmSettlementTransaction
+	 * UnmatchedReason5Code.mmSettlementTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementTransaction = new MMCode() {
+	public static final MMCode mmSettlementTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.SettlementTransaction;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmSettlementTransaction;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -457,15 +458,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#SettlementSystemMethod
-	 * UnmatchedReason5Code.SettlementSystemMethod}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmSettlementSystemMethod
+	 * UnmatchedReason5Code.mmSettlementSystemMethod}</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementSystemMethod = new MMCode() {
+	public static final MMCode mmSettlementSystemMethod = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethod";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.SettlementSystemMethod;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmSettlementSystemMethod;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -486,15 +487,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#FinancialInstrument
-	 * UnmatchedReason5Code.FinancialInstrument}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmFinancialInstrument
+	 * UnmatchedReason5Code.mmFinancialInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrument = new MMCode() {
+	public static final MMCode mmFinancialInstrument = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.FinancialInstrument;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmFinancialInstrument;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -515,15 +516,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#NotRecognised
-	 * UnmatchedReason5Code.NotRecognised}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmNotRecognised
+	 * UnmatchedReason5Code.mmNotRecognised}</li>
 	 * </ul>
 	 */
-	public static final MMCode NotRecognised = new MMCode() {
+	public static final MMCode mmNotRecognised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotRecognised";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.NotRecognised;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmNotRecognised;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -544,15 +545,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#CounterpartyTooLateForMatching
-	 * UnmatchedReason5Code.CounterpartyTooLateForMatching}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmCounterpartyTooLateForMatching
+	 * UnmatchedReason5Code.mmCounterpartyTooLateForMatching}</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyTooLateForMatching = new MMCode() {
+	public static final MMCode mmCounterpartyTooLateForMatching = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTooLateForMatching";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.CounterpartyTooLateForMatching;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmCounterpartyTooLateForMatching;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -573,15 +574,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#PhysicalSettlement
-	 * UnmatchedReason5Code.PhysicalSettlement}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmPhysicalSettlement
+	 * UnmatchedReason5Code.mmPhysicalSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalSettlement = new MMCode() {
+	public static final MMCode mmPhysicalSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.PhysicalSettlement;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmPhysicalSettlement;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -602,15 +603,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#CommonReference
-	 * UnmatchedReason5Code.CommonReference}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmCommonReference
+	 * UnmatchedReason5Code.mmCommonReference}</li>
 	 * </ul>
 	 */
-	public static final MMCode CommonReference = new MMCode() {
+	public static final MMCode mmCommonReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.CommonReference;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmCommonReference;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -631,15 +632,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#PaymentCode
-	 * UnmatchedReason5Code.PaymentCode}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmPaymentCode
+	 * UnmatchedReason5Code.mmPaymentCode}</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentCode = new MMCode() {
+	public static final MMCode mmPaymentCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCode";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.PaymentCode;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmPaymentCode;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -660,15 +661,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#PlaceOfTrade
-	 * UnmatchedReason5Code.PlaceOfTrade}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmPlaceOfTrade
+	 * UnmatchedReason5Code.mmPlaceOfTrade}</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfTrade = new MMCode() {
+	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.PlaceOfTrade;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmPlaceOfTrade;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -689,15 +690,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#PossibleDuplicate
-	 * UnmatchedReason5Code.PossibleDuplicate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmPossibleDuplicate
+	 * UnmatchedReason5Code.mmPossibleDuplicate}</li>
 	 * </ul>
 	 */
-	public static final MMCode PossibleDuplicate = new MMCode() {
+	public static final MMCode mmPossibleDuplicate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.PossibleDuplicate;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmPossibleDuplicate;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -718,15 +719,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#RegistrationDetails
-	 * UnmatchedReason5Code.RegistrationDetails}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmRegistrationDetails
+	 * UnmatchedReason5Code.mmRegistrationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMCode RegistrationDetails = new MMCode() {
+	public static final MMCode mmRegistrationDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.RegistrationDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmRegistrationDetails;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -747,15 +748,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#RTGSSystem
-	 * UnmatchedReason5Code.RTGSSystem}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmRTGSSystem
+	 * UnmatchedReason5Code.mmRTGSSystem}</li>
 	 * </ul>
 	 */
-	public static final MMCode RTGSSystem = new MMCode() {
+	public static final MMCode mmRTGSSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RTGSSystem";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.RTGSSystem;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmRTGSSystem;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -776,15 +777,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#ReceivingDeliveringParty1
-	 * UnmatchedReason5Code.ReceivingDeliveringParty1}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmReceivingDeliveringParty1
+	 * UnmatchedReason5Code.mmReceivingDeliveringParty1}</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty1 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty1";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.ReceivingDeliveringParty1;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmReceivingDeliveringParty1;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -805,15 +806,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#CounterpartyCancelled
-	 * UnmatchedReason5Code.CounterpartyCancelled}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmCounterpartyCancelled
+	 * UnmatchedReason5Code.mmCounterpartyCancelled}</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyCancelled = new MMCode() {
+	public static final MMCode mmCounterpartyCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyCancelled";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.CounterpartyCancelled;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmCounterpartyCancelled;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -834,15 +835,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#ReceivingDeliveringParty3
-	 * UnmatchedReason5Code.ReceivingDeliveringParty3}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmReceivingDeliveringParty3
+	 * UnmatchedReason5Code.mmReceivingDeliveringParty3}</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty3 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty3 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty3";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.ReceivingDeliveringParty3;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmReceivingDeliveringParty3;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -863,15 +864,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#CurrencySettlementAmount
-	 * UnmatchedReason5Code.CurrencySettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmCurrencySettlementAmount
+	 * UnmatchedReason5Code.mmCurrencySettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMCode CurrencySettlementAmount = new MMCode() {
+	public static final MMCode mmCurrencySettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencySettlementAmount";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.CurrencySettlementAmount;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmCurrencySettlementAmount;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -892,15 +893,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#LetterOfGuarantee
-	 * UnmatchedReason5Code.LetterOfGuarantee}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmLetterOfGuarantee
+	 * UnmatchedReason5Code.mmLetterOfGuarantee}</li>
 	 * </ul>
 	 */
-	public static final MMCode LetterOfGuarantee = new MMCode() {
+	public static final MMCode mmLetterOfGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfGuarantee";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.LetterOfGuarantee;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmLetterOfGuarantee;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -921,15 +922,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#NoMatchingStarted
-	 * UnmatchedReason5Code.NoMatchingStarted}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmNoMatchingStarted
+	 * UnmatchedReason5Code.mmNoMatchingStarted}</li>
 	 * </ul>
 	 */
-	public static final MMCode NoMatchingStarted = new MMCode() {
+	public static final MMCode mmNoMatchingStarted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchingStarted";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.NoMatchingStarted;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmNoMatchingStarted;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -950,15 +951,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#SafekeepingAccount
-	 * UnmatchedReason5Code.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmSafekeepingAccount
+	 * UnmatchedReason5Code.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMCode SafekeepingAccount = new MMCode() {
+	public static final MMCode mmSafekeepingAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.SafekeepingAccount;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmSafekeepingAccount;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -979,15 +980,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#TradeDate
-	 * UnmatchedReason5Code.TradeDate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmTradeDate
+	 * UnmatchedReason5Code.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMCode TradeDate = new MMCode() {
+	public static final MMCode mmTradeDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.TradeDate;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmTradeDate;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -1008,15 +1009,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#MarketDeadlineMissed
-	 * UnmatchedReason5Code.MarketDeadlineMissed}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmMarketDeadlineMissed
+	 * UnmatchedReason5Code.mmMarketDeadlineMissed}</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.MarketDeadlineMissed;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmMarketDeadlineMissed;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -1037,15 +1038,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#TaxStatus
-	 * UnmatchedReason5Code.TaxStatus}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmTaxStatus
+	 * UnmatchedReason5Code.mmTaxStatus}</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxStatus = new MMCode() {
+	public static final MMCode mmTaxStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxStatus";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.TaxStatus;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmTaxStatus;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -1066,15 +1067,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#ReceivingDeliveringParty2
-	 * UnmatchedReason5Code.ReceivingDeliveringParty2}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmReceivingDeliveringParty2
+	 * UnmatchedReason5Code.mmReceivingDeliveringParty2}</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty2 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty2";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.ReceivingDeliveringParty2;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmReceivingDeliveringParty2;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -1095,15 +1096,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#Other
-	 * UnmatchedReason5Code.Other}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmOther
+	 * UnmatchedReason5Code.mmOther}</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.Other;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmOther;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -1124,15 +1125,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#MissingMarketSide
-	 * UnmatchedReason5Code.MissingMarketSide}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmMissingMarketSide
+	 * UnmatchedReason5Code.mmMissingMarketSide}</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingMarketSide = new MMCode() {
+	public static final MMCode mmMissingMarketSide = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingMarketSide";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.MissingMarketSide;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmMissingMarketSide;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -1153,15 +1154,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#UnmatchedMarketSide
-	 * UnmatchedReason5Code.UnmatchedMarketSide}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmUnmatchedMarketSide
+	 * UnmatchedReason5Code.mmUnmatchedMarketSide}</li>
 	 * </ul>
 	 */
-	public static final MMCode UnmatchedMarketSide = new MMCode() {
+	public static final MMCode mmUnmatchedMarketSide = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnmatchedMarketSide";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.UnmatchedMarketSide;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmUnmatchedMarketSide;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -1182,15 +1183,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#PlaceOfSafekeeping
-	 * UnmatchedReason5Code.PlaceOfSafekeeping}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmPlaceOfSafekeeping
+	 * UnmatchedReason5Code.mmPlaceOfSafekeeping}</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfSafekeeping = new MMCode() {
+	public static final MMCode mmPlaceOfSafekeeping = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSafekeeping";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.PlaceOfSafekeeping;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmPlaceOfSafekeeping;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -1211,15 +1212,15 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#AccruedInterestAmount1
-	 * UnmatchedReason5Code.AccruedInterestAmount1}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason5Code#mmAccruedInterestAmount1
+	 * UnmatchedReason5Code.mmAccruedInterestAmount1}</li>
 	 * </ul>
 	 */
-	public static final MMCode AccruedInterestAmount1 = new MMCode() {
+	public static final MMCode mmAccruedInterestAmount1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount1";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.AccruedInterestAmount1;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.UnmatchedReason5Code.mmAccruedInterestAmount1;
 			owner_lazy = () -> UnmatchedReason8Code.mmObject();
 		}
 	};
@@ -1239,7 +1240,7 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * name} = "InvestorParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestorParty = new MMCode() {
+	public static final MMCode mmInvestorParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorParty";
@@ -1262,7 +1263,7 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	 * name} = "PlaceOfListing"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfListing = new MMCode() {
+	public static final MMCode mmPlaceOfListing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
@@ -1273,30 +1274,30 @@ public class UnmatchedReason8Code extends UnmatchedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CMIS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedReason8Code";
 				definition = "Specifies the reason the transaction, transfer or settlement instruction is unmatched.";
 				previousVersion_lazy = () -> UnmatchedReason5Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason8Code.NoMatch, com.tools20022.repository.codeset.UnmatchedReason8Code.SettlementDate,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.TransactionDirection, com.tools20022.repository.codeset.UnmatchedReason8Code.ReceivingDeliveringDepository,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.SettlementAmount, com.tools20022.repository.codeset.UnmatchedReason8Code.DealPrice,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.FinancialInstrumentQuantity, com.tools20022.repository.codeset.UnmatchedReason8Code.AccountServicerDeadlineMissed,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.SettlementTransaction, com.tools20022.repository.codeset.UnmatchedReason8Code.SettlementSystemMethod,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.FinancialInstrument, com.tools20022.repository.codeset.UnmatchedReason8Code.NotRecognised,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.CounterpartyTooLateForMatching, com.tools20022.repository.codeset.UnmatchedReason8Code.PhysicalSettlement,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.CommonReference, com.tools20022.repository.codeset.UnmatchedReason8Code.PaymentCode, com.tools20022.repository.codeset.UnmatchedReason8Code.PlaceOfTrade,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.PossibleDuplicate, com.tools20022.repository.codeset.UnmatchedReason8Code.RegistrationDetails,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.RTGSSystem, com.tools20022.repository.codeset.UnmatchedReason8Code.ReceivingDeliveringParty1,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.CounterpartyCancelled, com.tools20022.repository.codeset.UnmatchedReason8Code.ReceivingDeliveringParty3,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.CurrencySettlementAmount, com.tools20022.repository.codeset.UnmatchedReason8Code.LetterOfGuarantee,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.NoMatchingStarted, com.tools20022.repository.codeset.UnmatchedReason8Code.SafekeepingAccount, com.tools20022.repository.codeset.UnmatchedReason8Code.TradeDate,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.MarketDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason8Code.TaxStatus,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.ReceivingDeliveringParty2, com.tools20022.repository.codeset.UnmatchedReason8Code.Other,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.MissingMarketSide, com.tools20022.repository.codeset.UnmatchedReason8Code.UnmatchedMarketSide,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.PlaceOfSafekeeping, com.tools20022.repository.codeset.UnmatchedReason8Code.AccruedInterestAmount1,
-						com.tools20022.repository.codeset.UnmatchedReason8Code.InvestorParty, com.tools20022.repository.codeset.UnmatchedReason8Code.PlaceOfListing);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason8Code.mmNoMatch, com.tools20022.repository.codeset.UnmatchedReason8Code.mmSettlementDate,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmTransactionDirection, com.tools20022.repository.codeset.UnmatchedReason8Code.mmReceivingDeliveringDepository,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmSettlementAmount, com.tools20022.repository.codeset.UnmatchedReason8Code.mmDealPrice,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmFinancialInstrumentQuantity, com.tools20022.repository.codeset.UnmatchedReason8Code.mmAccountServicerDeadlineMissed,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmSettlementTransaction, com.tools20022.repository.codeset.UnmatchedReason8Code.mmSettlementSystemMethod,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmFinancialInstrument, com.tools20022.repository.codeset.UnmatchedReason8Code.mmNotRecognised,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmCounterpartyTooLateForMatching, com.tools20022.repository.codeset.UnmatchedReason8Code.mmPhysicalSettlement,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmCommonReference, com.tools20022.repository.codeset.UnmatchedReason8Code.mmPaymentCode, com.tools20022.repository.codeset.UnmatchedReason8Code.mmPlaceOfTrade,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmPossibleDuplicate, com.tools20022.repository.codeset.UnmatchedReason8Code.mmRegistrationDetails,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmRTGSSystem, com.tools20022.repository.codeset.UnmatchedReason8Code.mmReceivingDeliveringParty1,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmCounterpartyCancelled, com.tools20022.repository.codeset.UnmatchedReason8Code.mmReceivingDeliveringParty3,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmCurrencySettlementAmount, com.tools20022.repository.codeset.UnmatchedReason8Code.mmLetterOfGuarantee,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmNoMatchingStarted, com.tools20022.repository.codeset.UnmatchedReason8Code.mmSafekeepingAccount,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmTradeDate, com.tools20022.repository.codeset.UnmatchedReason8Code.mmMarketDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason8Code.mmTaxStatus,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmReceivingDeliveringParty2, com.tools20022.repository.codeset.UnmatchedReason8Code.mmOther,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmMissingMarketSide, com.tools20022.repository.codeset.UnmatchedReason8Code.mmUnmatchedMarketSide,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmPlaceOfSafekeeping, com.tools20022.repository.codeset.UnmatchedReason8Code.mmAccruedInterestAmount1,
+						com.tools20022.repository.codeset.UnmatchedReason8Code.mmInvestorParty, com.tools20022.repository.codeset.UnmatchedReason8Code.mmPlaceOfListing);
 				trace_lazy = () -> UnmatchedReasonCode.mmObject();
 			}
 		});

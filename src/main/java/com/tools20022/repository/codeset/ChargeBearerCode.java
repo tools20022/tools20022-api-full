@@ -31,18 +31,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#BorneByDebtor
- * ChargeBearerCode.BorneByDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmBorneByDebtor
+ * ChargeBearerCode.mmBorneByDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#BorneByCreditor
- * ChargeBearerCode.BorneByCreditor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeBearerCode#Shared
- * ChargeBearerCode.Shared}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeBearerCode#Investor
- * ChargeBearerCode.Investor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmBorneByCreditor
+ * ChargeBearerCode.mmBorneByCreditor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmShared
+ * ChargeBearerCode.mmShared}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#Intermediary
- * ChargeBearerCode.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmInvestor
+ * ChargeBearerCode.mmInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmIntermediary
+ * ChargeBearerCode.mmIntermediary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +100,7 @@ public class ChargeBearerCode {
 	 * definition} = "All transaction charges are to be borne by the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMCode BorneByDebtor = new MMCode() {
+	public static final MMCode mmBorneByDebtor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BorneByDebtor";
@@ -129,7 +130,7 @@ public class ChargeBearerCode {
 	 * definition} = "All transaction charges are to be borne by the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMCode BorneByCreditor = new MMCode() {
+	public static final MMCode mmBorneByCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BorneByCreditor";
@@ -163,7 +164,7 @@ public class ChargeBearerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Shared = new MMCode() {
+	public static final MMCode mmShared = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Shared";
@@ -193,7 +194,7 @@ public class ChargeBearerCode {
 	 * definition} = "All charges are to be borne by the investor."</li>
 	 * </ul>
 	 */
-	public static final MMCode Investor = new MMCode() {
+	public static final MMCode mmInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Investor";
@@ -223,7 +224,7 @@ public class ChargeBearerCode {
 	 * definition} = "All charges are to be borne by the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMCode Intermediary = new MMCode() {
+	public static final MMCode mmIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Intermediary";
@@ -236,13 +237,13 @@ public class ChargeBearerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OUR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeBearerCode";
 				definition = "Specifies which party(ies) will pay charges due for processing of the payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeBearerCode.BorneByDebtor, com.tools20022.repository.codeset.ChargeBearerCode.BorneByCreditor,
-						com.tools20022.repository.codeset.ChargeBearerCode.Shared, com.tools20022.repository.codeset.ChargeBearerCode.Investor, com.tools20022.repository.codeset.ChargeBearerCode.Intermediary);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeBearerCode.mmBorneByDebtor, com.tools20022.repository.codeset.ChargeBearerCode.mmBorneByCreditor,
+						com.tools20022.repository.codeset.ChargeBearerCode.mmShared, com.tools20022.repository.codeset.ChargeBearerCode.mmInvestor, com.tools20022.repository.codeset.ChargeBearerCode.mmIntermediary);
 				derivation_lazy = () -> Arrays.asList(ChargeBearer1Code.mmObject());
 			}
 		});

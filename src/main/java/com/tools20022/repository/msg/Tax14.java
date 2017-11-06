@@ -43,33 +43,36 @@ import java.util.function.Supplier;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#TypeOrExtendedTypeRule
- * Tax14.TypeOrExtendedTypeRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmTypeOrExtendedTypeRule
+ * Tax14.mmTypeOrExtendedTypeRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Tax14#ExemptionReasonOrExtendedExemptionReasonRule
- * Tax14.ExemptionReasonOrExtendedExemptionReasonRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Tax14#mmExemptionReasonOrExtendedExemptionReasonRule
+ * Tax14.mmExemptionReasonOrExtendedExemptionReasonRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#Type Tax14.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#ExtendedType
- * Tax14.ExtendedType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#Amount Tax14.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#Rate Tax14.Rate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#Country Tax14.Country}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#RecipientIdentification
- * Tax14.RecipientIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#ExemptionIndicator
- * Tax14.ExemptionIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#ExemptionReason
- * Tax14.ExemptionReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#ExtendedExemptionReason
- * Tax14.ExtendedExemptionReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax14#TaxCalculationDetails
- * Tax14.TaxCalculationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmType Tax14.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmExtendedType
+ * Tax14.mmExtendedType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmAmount Tax14.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmRate Tax14.mmRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmCountry
+ * Tax14.mmCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Tax14#mmRecipientIdentification
+ * Tax14.mmRecipientIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmExemptionIndicator
+ * Tax14.mmExemptionIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmExemptionReason
+ * Tax14.mmExemptionReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Tax14#mmExtendedExemptionReason
+ * Tax14.mmExtendedExemptionReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmTaxCalculationDetails
+ * Tax14.mmTaxCalculationDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -78,8 +81,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -100,6 +103,7 @@ import java.util.function.Supplier;
 public class Tax14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxType11Code type;
 	/**
 	 * Type of tax applied.
 	 * <p>
@@ -113,7 +117,7 @@ public class Tax14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Type Tax.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax14
@@ -132,26 +136,27 @@ public class Tax14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#Type Tax31.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#mmType Tax31.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
 			componentContext_lazy = () -> Tax14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of tax applied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxType11Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedType;
 	/**
 	 * Type of tax applied.
 	 * <p>
@@ -165,7 +170,7 @@ public class Tax14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Type Tax.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax14
@@ -183,20 +188,21 @@ public class Tax14 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
 			componentContext_lazy = () -> Tax14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Type;
 			isDerived = false;
 			xmlTag = "XtndedTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedType";
 			definition = "Type of tax applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Amount of money resulting from the calculation of the tax.
 	 * <p>
@@ -210,7 +216,7 @@ public class Tax14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax14
@@ -230,27 +236,28 @@ public class Tax14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#AppliedAmount
-	 * Tax31.AppliedAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#mmAppliedAmount
+	 * Tax31.mmAppliedAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> Tax14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money resulting from the calculation of the tax.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.AppliedAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.mmAppliedAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected PercentageRate rate;
 	/**
 	 * Rate used to calculate the tax.
 	 * <p>
@@ -264,7 +271,7 @@ public class Tax14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Rate Tax.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax14
@@ -283,27 +290,28 @@ public class Tax14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#AppliedRate
-	 * Tax31.AppliedRate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#mmAppliedRate
+	 * Tax31.mmAppliedRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
 			componentContext_lazy = () -> Tax14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Rate used to calculate the tax.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.AppliedRate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.mmAppliedRate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Country where the tax is due.
 	 * <p>
@@ -316,8 +324,8 @@ public class Tax14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#TaxationConditions
-	 * Party.TaxationConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmTaxationConditions
+	 * Party.mmTaxationConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax14
@@ -336,27 +344,28 @@ public class Tax14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#Country
-	 * Tax31.Country}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#mmCountry
+	 * Tax31.mmCountry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmTaxationConditions;
 			componentContext_lazy = () -> Tax14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.TaxationConditions;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country where the tax is due.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.Country);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.mmCountry);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice recipientIdentification;
 	/**
 	 * Party that receives the tax. The recipient of, and the party entitled to,
 	 * the tax may be two different parties.
@@ -389,13 +398,13 @@ public class Tax14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Tax31#RecipientIdentification
-	 * Tax31.RecipientIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Tax31#mmRecipientIdentification
+	 * Tax31.mmRecipientIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Tax14.mmObject();
 			isDerived = false;
@@ -403,12 +412,13 @@ public class Tax14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Party that receives the tax. The recipient of, and the party entitled to, the tax may be two different parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.RecipientIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.mmRecipientIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator exemptionIndicator;
 	/**
 	 * Indicates whether a tax exemption applies.
 	 * <p>
@@ -422,8 +432,8 @@ public class Tax14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#ExemptionIndicator
-	 * InvestmentFundTax.ExemptionIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTax#mmExemptionIndicator
+	 * InvestmentFundTax.mmExemptionIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax14
@@ -441,20 +451,21 @@ public class Tax14 {
 	 * definition} = "Indicates whether a tax exemption applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExemptionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExemptionIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmExemptionIndicator;
 			componentContext_lazy = () -> Tax14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.ExemptionIndicator;
 			isDerived = false;
 			xmlTag = "XmptnInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionIndicator";
 			definition = "Indicates whether a tax exemption applies.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected TaxExemptReason1Code exemptionReason;
 	/**
 	 * Reason for a tax exemption.
 	 * <p>
@@ -468,8 +479,8 @@ public class Tax14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#ExemptionReason
-	 * Tax.ExemptionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmExemptionReason
+	 * Tax.mmExemptionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax14
@@ -487,20 +498,21 @@ public class Tax14 {
 	 * definition} = "Reason for a tax exemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExemptionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExemptionReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmExemptionReason;
 			componentContext_lazy = () -> Tax14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.ExemptionReason;
 			isDerived = false;
 			xmlTag = "XmptnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReason";
 			definition = "Reason for a tax exemption.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TaxExemptReason1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedExemptionReason;
 	/**
 	 * Reason for a tax exemption.
 	 * <p>
@@ -514,8 +526,8 @@ public class Tax14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#ExemptionReason
-	 * Tax.ExemptionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmExemptionReason
+	 * Tax.mmExemptionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax14
@@ -533,20 +545,21 @@ public class Tax14 {
 	 * definition} = "Reason for a tax exemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedExemptionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedExemptionReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmExemptionReason;
 			componentContext_lazy = () -> Tax14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.ExemptionReason;
 			isDerived = false;
 			xmlTag = "XtndedXmptnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedExemptionReason";
 			definition = "Reason for a tax exemption.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected TaxCalculationInformation6 taxCalculationDetails;
 	/**
 	 * Information used to calculate the tax.
 	 * <p>
@@ -580,26 +593,26 @@ public class Tax14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Tax31#TaxCalculationDetails
-	 * Tax31.TaxCalculationDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Tax31#mmTaxCalculationDetails
+	 * Tax31.mmTaxCalculationDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxCalculationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxCalculationDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Tax14.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
+			componentContext_lazy = () -> Tax14.mmObject();
 			isDerived = false;
 			xmlTag = "TaxClctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCalculationDetails";
 			definition = "Information used to calculate the tax.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.TaxCalculationDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax31.mmTaxCalculationDetails);
 			maxOccurs = 1;
-			type_lazy = () -> TaxCalculationInformation6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation6.mmObject();
 		}
 	};
 	/**
@@ -610,9 +623,9 @@ public class Tax14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax14#Type Tax14.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax14#ExtendedType
-	 * Tax14.ExtendedType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmType Tax14.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmExtendedType
+	 * Tax14.mmExtendedType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -630,13 +643,13 @@ public class Tax14 {
 	 * "Either Type or ExtendedType must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor TypeOrExtendedTypeRule = new MMXor() {
+	public static final MMXor mmTypeOrExtendedTypeRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedTypeRule";
 			definition = "Either Type or ExtendedType must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax14.Type, com.tools20022.repository.msg.Tax14.ExtendedType);
 			messageComponent_lazy = () -> Tax14.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax14.mmType, com.tools20022.repository.msg.Tax14.mmExtendedType);
 		}
 	};
 	/**
@@ -648,11 +661,11 @@ public class Tax14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax14#ExemptionReason
-	 * Tax14.ExemptionReason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax14#mmExemptionReason
+	 * Tax14.mmExemptionReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Tax14#ExtendedExemptionReason
-	 * Tax14.ExtendedExemptionReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.Tax14#mmExtendedExemptionReason
+	 * Tax14.mmExtendedExemptionReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -671,24 +684,24 @@ public class Tax14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ExemptionReasonOrExtendedExemptionReasonRule = new MMXor() {
+	public static final MMXor mmExemptionReasonOrExtendedExemptionReasonRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReasonOrExtendedExemptionReasonRule";
 			definition = "Either ExemptionReason or ExtendedExemptionReason may be present but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax14.ExemptionReason, com.tools20022.repository.msg.Tax14.ExtendedExemptionReason);
 			messageComponent_lazy = () -> Tax14.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax14.mmExemptionReason, com.tools20022.repository.msg.Tax14.mmExtendedExemptionReason);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax14.Type, com.tools20022.repository.msg.Tax14.ExtendedType, com.tools20022.repository.msg.Tax14.Amount, com.tools20022.repository.msg.Tax14.Rate,
-						com.tools20022.repository.msg.Tax14.Country, com.tools20022.repository.msg.Tax14.RecipientIdentification, com.tools20022.repository.msg.Tax14.ExemptionIndicator, com.tools20022.repository.msg.Tax14.ExemptionReason,
-						com.tools20022.repository.msg.Tax14.ExtendedExemptionReason, com.tools20022.repository.msg.Tax14.TaxCalculationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax14.mmType, com.tools20022.repository.msg.Tax14.mmExtendedType, com.tools20022.repository.msg.Tax14.mmAmount,
+						com.tools20022.repository.msg.Tax14.mmRate, com.tools20022.repository.msg.Tax14.mmCountry, com.tools20022.repository.msg.Tax14.mmRecipientIdentification, com.tools20022.repository.msg.Tax14.mmExemptionIndicator,
+						com.tools20022.repository.msg.Tax14.mmExemptionReason, com.tools20022.repository.msg.Tax14.mmExtendedExemptionReason, com.tools20022.repository.msg.Tax14.mmTaxCalculationDetails);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -700,9 +713,89 @@ public class Tax14 {
 				name = "Tax14";
 				definition = "Tax related to an investment fund order.";
 				nextVersions_lazy = () -> Arrays.asList(Tax31.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax14.TypeOrExtendedTypeRule, com.tools20022.repository.msg.Tax14.ExemptionReasonOrExtendedExemptionReasonRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax14.mmTypeOrExtendedTypeRule, com.tools20022.repository.msg.Tax14.mmExemptionReasonOrExtendedExemptionReasonRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxType11Code getType() {
+		return type;
+	}
+
+	public void setType(TaxType11Code type) {
+		this.type = type;
+	}
+
+	public Extended350Code getExtendedType() {
+		return extendedType;
+	}
+
+	public void setExtendedType(Extended350Code extendedType) {
+		this.extendedType = extendedType;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public PartyIdentification2Choice getRecipientIdentification() {
+		return recipientIdentification;
+	}
+
+	public void setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
+		this.recipientIdentification = recipientIdentification;
+	}
+
+	public YesNoIndicator getExemptionIndicator() {
+		return exemptionIndicator;
+	}
+
+	public void setExemptionIndicator(YesNoIndicator exemptionIndicator) {
+		this.exemptionIndicator = exemptionIndicator;
+	}
+
+	public TaxExemptReason1Code getExemptionReason() {
+		return exemptionReason;
+	}
+
+	public void setExemptionReason(TaxExemptReason1Code exemptionReason) {
+		this.exemptionReason = exemptionReason;
+	}
+
+	public Extended350Code getExtendedExemptionReason() {
+		return extendedExemptionReason;
+	}
+
+	public void setExtendedExemptionReason(Extended350Code extendedExemptionReason) {
+		this.extendedExemptionReason = extendedExemptionReason;
+	}
+
+	public TaxCalculationInformation6 getTaxCalculationDetails() {
+		return taxCalculationDetails;
+	}
+
+	public void setTaxCalculationDetails(com.tools20022.repository.msg.TaxCalculationInformation6 taxCalculationDetails) {
+		this.taxCalculationDetails = taxCalculationDetails;
 	}
 }

@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText2#Identification
- * PledgeeTypeAndText2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText2#mmIdentification
+ * PledgeeTypeAndText2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText2#PledgeeType
- * PledgeeTypeAndText2.PledgeeType}</li>
+ * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText2#mmPledgeeType
+ * PledgeeTypeAndText2.mmPledgeeType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PledgeeTypeAndText2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINMax30Text identification;
 	/**
 	 * Additional information about the entity to which the financial
 	 * instruments are pledged.
@@ -100,20 +101,21 @@ public class PledgeeTypeAndText2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PledgeeTypeAndText2.mmObject();
 			businessComponentTrace_lazy = () -> Pledgee.mmObject();
+			componentContext_lazy = () -> PledgeeTypeAndText2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Additional information about the entity to which the financial instruments are pledged.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax30Text.mmObject();
 		}
 	};
+	protected PledgeeType1Code pledgeeType;
 	/**
 	 * Entity to which the financial instruments are pledged expressed as a
 	 * code.
@@ -128,8 +130,8 @@ public class PledgeeTypeAndText2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Pledgee#PledgeeType
-	 * Pledgee.PledgeeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Pledgee#mmPledgeeType
+	 * Pledgee.mmPledgeeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,17 +152,17 @@ public class PledgeeTypeAndText2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PledgeeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPledgeeType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Pledgee.mmPledgeeType;
 			componentContext_lazy = () -> PledgeeTypeAndText2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Pledgee.PledgeeType;
 			isDerived = false;
 			xmlTag = "PldgeeTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgeeType";
 			definition = "Entity to which the financial instruments are pledged expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PledgeeType1Code.mmObject();
 		}
 	};
@@ -168,14 +170,30 @@ public class PledgeeTypeAndText2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PledgeeTypeAndText2.Identification, com.tools20022.repository.msg.PledgeeTypeAndText2.PledgeeType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PledgeeTypeAndText2.mmIdentification, com.tools20022.repository.msg.PledgeeTypeAndText2.mmPledgeeType);
 				trace_lazy = () -> Pledgee.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PledgeeTypeAndText2";
 				definition = "Identification of the entity to which the financial instruments are pledged expressed as a code and a narrative description.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINMax30Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(RestrictedFINMax30Text identification) {
+		this.identification = identification;
+	}
+
+	public PledgeeType1Code getPledgeeType() {
+		return pledgeeType;
+	}
+
+	public void setPledgeeType(PledgeeType1Code pledgeeType) {
+		this.pledgeeType = pledgeeType;
 	}
 }

@@ -36,20 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BulkReportHeader#ReportIdentification
- * BulkReportHeader.ReportIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BulkReportHeader#TrancheNumber
- * BulkReportHeader.TrancheNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.BulkReportHeader#mmReportIdentification
+ * BulkReportHeader.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BulkReportHeader#LastTrancheIndicator
- * BulkReportHeader.LastTrancheIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BulkReportHeader#mmTrancheNumber
+ * BulkReportHeader.mmTrancheNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BulkReportHeader#mmLastTrancheIndicator
+ * BulkReportHeader.mmLastTrancheIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BulkReportHeader {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reportIdentification;
 	/**
 	 * Unique and unambiguous identification of the full report.
 	 * <p>
@@ -93,7 +95,7 @@ public class BulkReportHeader {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BulkReportHeader.mmObject();
 			isDerived = false;
@@ -101,11 +103,12 @@ public class BulkReportHeader {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique and unambiguous identification of the full report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number trancheNumber;
 	/**
 	 * Sequence number of the report tranche.
 	 * <p>
@@ -133,7 +136,7 @@ public class BulkReportHeader {
 	 * definition} = "Sequence number of the report tranche."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TrancheNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTrancheNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BulkReportHeader.mmObject();
 			isDerived = false;
@@ -141,11 +144,12 @@ public class BulkReportHeader {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrancheNumber";
 			definition = "Sequence number of the report tranche.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected YesNoIndicator lastTrancheIndicator;
 	/**
 	 * Indicates whether this tranche is the last tranche of the full report.
 	 * <p>
@@ -175,7 +179,7 @@ public class BulkReportHeader {
 	 * "Indicates whether this tranche is the last tranche of the full report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastTrancheIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastTrancheIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BulkReportHeader.mmObject();
 			isDerived = false;
@@ -183,8 +187,8 @@ public class BulkReportHeader {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTrancheIndicator";
 			definition = "Indicates whether this tranche is the last tranche of the full report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -192,14 +196,38 @@ public class BulkReportHeader {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BulkReportHeader.ReportIdentification, com.tools20022.repository.msg.BulkReportHeader.TrancheNumber,
-						com.tools20022.repository.msg.BulkReportHeader.LastTrancheIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BulkReportHeader.mmReportIdentification, com.tools20022.repository.msg.BulkReportHeader.mmTrancheNumber,
+						com.tools20022.repository.msg.BulkReportHeader.mmLastTrancheIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BulkReportHeader";
 				definition = "Identification of the report and information allowing a multi tranches report to be correctly reassembled.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public Number getTrancheNumber() {
+		return trancheNumber;
+	}
+
+	public void setTrancheNumber(Number trancheNumber) {
+		this.trancheNumber = trancheNumber;
+	}
+
+	public YesNoIndicator getLastTrancheIndicator() {
+		return lastTrancheIndicator;
+	}
+
+	public void setLastTrancheIndicator(YesNoIndicator lastTrancheIndicator) {
+		this.lastTrancheIndicator = lastTrancheIndicator;
 	}
 }

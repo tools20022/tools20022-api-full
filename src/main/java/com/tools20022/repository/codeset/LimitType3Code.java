@@ -33,54 +33,55 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#Multilateral
- * LimitType3Code.Multilateral}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType3Code#Bilateral
- * LimitType3Code.Bilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmMultilateral
+ * LimitType3Code.mmMultilateral}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType3Code#mmBilateral
+ * LimitType3Code.mmBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#MandatoryBilateral
- * LimitType3Code.MandatoryBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmMandatoryBilateral
+ * LimitType3Code.mmMandatoryBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#DiscretionaryBilateral
- * LimitType3Code.DiscretionaryBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmDiscretionaryBilateral
+ * LimitType3Code.mmDiscretionaryBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#NetBilateral
- * LimitType3Code.NetBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmNetBilateral
+ * LimitType3Code.mmNetBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#IndirectBilateral
- * LimitType3Code.IndirectBilateral}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType3Code#Global
- * LimitType3Code.Global}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType3Code#DirectDebit
- * LimitType3Code.DirectDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmIndirectBilateral
+ * LimitType3Code.mmIndirectBilateral}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType3Code#mmGlobal
+ * LimitType3Code.mmGlobal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#SingleCustomerDirectDebit
- * LimitType3Code.SingleCustomerDirectDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmDirectDebit
+ * LimitType3Code.mmDirectDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#SingleFinancialInstitutionDirectDebit
- * LimitType3Code.SingleFinancialInstitutionDirectDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmSingleCustomerDirectDebit
+ * LimitType3Code.mmSingleCustomerDirectDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#TotalDailyCustomerDirectDebit
- * LimitType3Code.TotalDailyCustomerDirectDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmSingleFinancialInstitutionDirectDebit
+ * LimitType3Code.mmSingleFinancialInstitutionDirectDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#TotalDailyFinancialInstitutionDirectDebit
- * LimitType3Code.TotalDailyFinancialInstitutionDirectDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmTotalDailyCustomerDirectDebit
+ * LimitType3Code.mmTotalDailyCustomerDirectDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#UnsecuredCredit
- * LimitType3Code.UnsecuredCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmTotalDailyFinancialInstitutionDirectDebit
+ * LimitType3Code.mmTotalDailyFinancialInstitutionDirectDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#AutoCollateralisation
- * LimitType3Code.AutoCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmUnsecuredCredit
+ * LimitType3Code.mmUnsecuredCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType3Code#ExternalGuarantee
- * LimitType3Code.ExternalGuarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmAutoCollateralisation
+ * LimitType3Code.mmAutoCollateralisation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType3Code#mmExternalGuarantee
+ * LimitType3Code.mmExternalGuarantee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -116,7 +117,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "Multilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode Multilateral = new MMCode() {
+	public static final MMCode mmMultilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multilateral";
@@ -139,7 +140,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "Bilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bilateral = new MMCode() {
+	public static final MMCode mmBilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
@@ -162,7 +163,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "MandatoryBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode MandatoryBilateral = new MMCode() {
+	public static final MMCode mmMandatoryBilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryBilateral";
@@ -185,7 +186,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "DiscretionaryBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode DiscretionaryBilateral = new MMCode() {
+	public static final MMCode mmDiscretionaryBilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscretionaryBilateral";
@@ -208,7 +209,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "NetBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode NetBilateral = new MMCode() {
+	public static final MMCode mmNetBilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetBilateral";
@@ -231,7 +232,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "IndirectBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode IndirectBilateral = new MMCode() {
+	public static final MMCode mmIndirectBilateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndirectBilateral";
@@ -254,7 +255,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "Global"</li>
 	 * </ul>
 	 */
-	public static final MMCode Global = new MMCode() {
+	public static final MMCode mmGlobal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
@@ -277,7 +278,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "DirectDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode DirectDebit = new MMCode() {
+	public static final MMCode mmDirectDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebit";
@@ -300,7 +301,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "SingleCustomerDirectDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingleCustomerDirectDebit = new MMCode() {
+	public static final MMCode mmSingleCustomerDirectDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleCustomerDirectDebit";
@@ -323,7 +324,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "SingleFinancialInstitutionDirectDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingleFinancialInstitutionDirectDebit = new MMCode() {
+	public static final MMCode mmSingleFinancialInstitutionDirectDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleFinancialInstitutionDirectDebit";
@@ -346,7 +347,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "TotalDailyCustomerDirectDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalDailyCustomerDirectDebit = new MMCode() {
+	public static final MMCode mmTotalDailyCustomerDirectDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDailyCustomerDirectDebit";
@@ -369,7 +370,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "TotalDailyFinancialInstitutionDirectDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalDailyFinancialInstitutionDirectDebit = new MMCode() {
+	public static final MMCode mmTotalDailyFinancialInstitutionDirectDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDailyFinancialInstitutionDirectDebit";
@@ -392,7 +393,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "UnsecuredCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnsecuredCredit = new MMCode() {
+	public static final MMCode mmUnsecuredCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnsecuredCredit";
@@ -415,7 +416,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "AutoCollateralisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AutoCollateralisation = new MMCode() {
+	public static final MMCode mmAutoCollateralisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoCollateralisation";
@@ -438,7 +439,7 @@ public class LimitType3Code extends LimitTypeCode {
 	 * name} = "ExternalGuarantee"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExternalGuarantee = new MMCode() {
+	public static final MMCode mmExternalGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalGuarantee";
@@ -449,17 +450,17 @@ public class LimitType3Code extends LimitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MULT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LimitType3Code";
 				definition = "Specifies the type of risk management limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitType3Code.Multilateral, com.tools20022.repository.codeset.LimitType3Code.Bilateral, com.tools20022.repository.codeset.LimitType3Code.MandatoryBilateral,
-						com.tools20022.repository.codeset.LimitType3Code.DiscretionaryBilateral, com.tools20022.repository.codeset.LimitType3Code.NetBilateral, com.tools20022.repository.codeset.LimitType3Code.IndirectBilateral,
-						com.tools20022.repository.codeset.LimitType3Code.Global, com.tools20022.repository.codeset.LimitType3Code.DirectDebit, com.tools20022.repository.codeset.LimitType3Code.SingleCustomerDirectDebit,
-						com.tools20022.repository.codeset.LimitType3Code.SingleFinancialInstitutionDirectDebit, com.tools20022.repository.codeset.LimitType3Code.TotalDailyCustomerDirectDebit,
-						com.tools20022.repository.codeset.LimitType3Code.TotalDailyFinancialInstitutionDirectDebit, com.tools20022.repository.codeset.LimitType3Code.UnsecuredCredit,
-						com.tools20022.repository.codeset.LimitType3Code.AutoCollateralisation, com.tools20022.repository.codeset.LimitType3Code.ExternalGuarantee);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitType3Code.mmMultilateral, com.tools20022.repository.codeset.LimitType3Code.mmBilateral,
+						com.tools20022.repository.codeset.LimitType3Code.mmMandatoryBilateral, com.tools20022.repository.codeset.LimitType3Code.mmDiscretionaryBilateral, com.tools20022.repository.codeset.LimitType3Code.mmNetBilateral,
+						com.tools20022.repository.codeset.LimitType3Code.mmIndirectBilateral, com.tools20022.repository.codeset.LimitType3Code.mmGlobal, com.tools20022.repository.codeset.LimitType3Code.mmDirectDebit,
+						com.tools20022.repository.codeset.LimitType3Code.mmSingleCustomerDirectDebit, com.tools20022.repository.codeset.LimitType3Code.mmSingleFinancialInstitutionDirectDebit,
+						com.tools20022.repository.codeset.LimitType3Code.mmTotalDailyCustomerDirectDebit, com.tools20022.repository.codeset.LimitType3Code.mmTotalDailyFinancialInstitutionDirectDebit,
+						com.tools20022.repository.codeset.LimitType3Code.mmUnsecuredCredit, com.tools20022.repository.codeset.LimitType3Code.mmAutoCollateralisation, com.tools20022.repository.codeset.LimitType3Code.mmExternalGuarantee);
 				trace_lazy = () -> LimitTypeCode.mmObject();
 			}
 		});

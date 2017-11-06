@@ -37,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice#FromAmount
- * ImpliedCurrencyAmountRangeChoice.FromAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice#mmFromAmount
+ * ImpliedCurrencyAmountRangeChoice.mmFromAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice#ToAmount
- * ImpliedCurrencyAmountRangeChoice.ToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice#mmToAmount
+ * ImpliedCurrencyAmountRangeChoice.mmToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice#FromToAmount
- * ImpliedCurrencyAmountRangeChoice.FromToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice#mmFromToAmount
+ * ImpliedCurrencyAmountRangeChoice.mmFromToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice#EqualAmount
- * ImpliedCurrencyAmountRangeChoice.EqualAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice#mmEqualAmount
+ * ImpliedCurrencyAmountRangeChoice.mmEqualAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice#NotEqualAmount
- * ImpliedCurrencyAmountRangeChoice.NotEqualAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice#mmNotEqualAmount
+ * ImpliedCurrencyAmountRangeChoice.mmNotEqualAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ImpliedCurrencyAmountRangeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountRangeBoundary1 fromAmount;
 	/**
 	 * Lower boundary of a range of amount values.
 	 * <p>
@@ -89,8 +90,8 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange#FromAmount
-	 * AmountRange.FromAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmountRange#mmFromAmount
+	 * AmountRange.mmFromAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,20 +110,21 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * definition} = "Lower boundary of a range of amount values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FromAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFromAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmFromAmount;
 			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.FromAmount;
 			isDerived = false;
 			xmlTag = "FrAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromAmount";
 			definition = "Lower boundary of a range of amount values.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AmountRangeBoundary1.mmObject();
 		}
 	};
+	protected AmountRangeBoundary1 toAmount;
 	/**
 	 * Upper boundary of a range of amount values.
 	 * <p>
@@ -136,8 +138,8 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange#ToAmount
-	 * AmountRange.ToAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmountRange#mmToAmount
+	 * AmountRange.mmToAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,20 +158,21 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * definition} = "Upper boundary of a range of amount values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ToAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmToAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmToAmount;
 			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.ToAmount;
 			isDerived = false;
 			xmlTag = "ToAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAmount";
 			definition = "Upper boundary of a range of amount values.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AmountRangeBoundary1.mmObject();
 		}
 	};
+	protected FromToAmountRange fromToAmount;
 	/**
 	 * Range of valid amount values.
 	 * <p>
@@ -202,20 +205,21 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * definition} = "Range of valid amount values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FromToAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFromToAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
+			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "FrToAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToAmount";
 			definition = "Range of valid amount values.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FromToAmountRange.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount equalAmount;
 	/**
 	 * Exact value an amount must match to be considered valid.
 	 * <p>
@@ -229,8 +233,8 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange#EqualAmount
-	 * AmountRange.EqualAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmountRange#mmEqualAmount
+	 * AmountRange.mmEqualAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -249,20 +253,21 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * definition} = "Exact value an amount must match to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EqualAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEqualAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmEqualAmount;
 			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.EqualAmount;
 			isDerived = false;
 			xmlTag = "EQAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualAmount";
 			definition = "Exact value an amount must match to be considered valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount notEqualAmount;
 	/**
 	 * Value that an amount must not match to be considered valid.
 	 * <p>
@@ -276,8 +281,8 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmountRange#NotEqualAmount
-	 * AmountRange.NotEqualAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmountRange#mmNotEqualAmount
+	 * AmountRange.mmNotEqualAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -297,17 +302,17 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * "Value that an amount must not match to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotEqualAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotEqualAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmNotEqualAmount;
 			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.NotEqualAmount;
 			isDerived = false;
 			xmlTag = "NEQAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqualAmount";
 			definition = "Value that an amount must not match to be considered valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -315,16 +320,56 @@ public class ImpliedCurrencyAmountRangeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.FromAmount, com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.ToAmount,
-						com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.FromToAmount, com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.EqualAmount,
-						com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.NotEqualAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmFromAmount, com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmToAmount,
+						com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmFromToAmount, com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmEqualAmount,
+						com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmNotEqualAmount);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ImpliedCurrencyAmountRangeChoice";
 				definition = "Choice between ranges of values in which an amount is considered valid or a specified amount value which has to be matched or unmatched to be valid.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountRangeBoundary1 getFromAmount() {
+		return fromAmount;
+	}
+
+	public void setFromAmount(AmountRangeBoundary1 fromAmount) {
+		this.fromAmount = fromAmount;
+	}
+
+	public AmountRangeBoundary1 getToAmount() {
+		return toAmount;
+	}
+
+	public void setToAmount(AmountRangeBoundary1 toAmount) {
+		this.toAmount = toAmount;
+	}
+
+	public FromToAmountRange getFromToAmount() {
+		return fromToAmount;
+	}
+
+	public void setFromToAmount(FromToAmountRange fromToAmount) {
+		this.fromToAmount = fromToAmount;
+	}
+
+	public ImpliedCurrencyAndAmount getEqualAmount() {
+		return equalAmount;
+	}
+
+	public void setEqualAmount(ImpliedCurrencyAndAmount equalAmount) {
+		this.equalAmount = equalAmount;
+	}
+
+	public ImpliedCurrencyAndAmount getNotEqualAmount() {
+		return notEqualAmount;
+	}
+
+	public void setNotEqualAmount(ImpliedCurrencyAndAmount notEqualAmount) {
+		this.notEqualAmount = notEqualAmount;
 	}
 }

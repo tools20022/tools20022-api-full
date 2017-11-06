@@ -34,20 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DisplayCapabilities2#DisplayType
- * DisplayCapabilities2.DisplayType}</li>
+ * {@linkplain com.tools20022.repository.msg.DisplayCapabilities2#mmDisplayType
+ * DisplayCapabilities2.mmDisplayType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DisplayCapabilities2#NumberOfLines
- * DisplayCapabilities2.NumberOfLines}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DisplayCapabilities2#LineWidth
- * DisplayCapabilities2.LineWidth}</li>
+ * {@linkplain com.tools20022.repository.msg.DisplayCapabilities2#mmNumberOfLines
+ * DisplayCapabilities2.mmNumberOfLines}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DisplayCapabilities2#mmLineWidth
+ * DisplayCapabilities2.mmLineWidth}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DisplayCapabilities2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UserInterface2Code displayType;
 	/**
 	 * Type of display (for example merchant or cardholder).
 	 * <p>
@@ -102,11 +104,11 @@ public class DisplayCapabilities2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DisplayCapabilities1#DisplayType
-	 * DisplayCapabilities1.DisplayType}</li>
+	 * {@linkplain com.tools20022.repository.msg.DisplayCapabilities1#mmDisplayType
+	 * DisplayCapabilities1.mmDisplayType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DisplayType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDisplayType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayCapabilities2.mmObject();
 			isDerived = false;
@@ -114,12 +116,13 @@ public class DisplayCapabilities2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayType";
 			definition = "Type of display (for example merchant or cardholder).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities1.DisplayType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities1.mmDisplayType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UserInterface2Code.mmObject();
 		}
 	};
+	protected Number numberOfLines;
 	/**
 	 * Number of lines of the display component.
 	 * <p>
@@ -149,18 +152,18 @@ public class DisplayCapabilities2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DisplayCapabilities3#NumberOfLines
-	 * DisplayCapabilities3.NumberOfLines}</li>
+	 * {@linkplain com.tools20022.repository.msg.DisplayCapabilities3#mmNumberOfLines
+	 * DisplayCapabilities3.mmNumberOfLines}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DisplayCapabilities1#NumberOfLines
-	 * DisplayCapabilities1.NumberOfLines}</li>
+	 * {@linkplain com.tools20022.repository.msg.DisplayCapabilities1#mmNumberOfLines
+	 * DisplayCapabilities1.mmNumberOfLines}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfLines = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfLines = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayCapabilities2.mmObject();
 			isDerived = false;
@@ -168,13 +171,14 @@ public class DisplayCapabilities2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfLines";
 			definition = "Number of lines of the display component.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities1.NumberOfLines;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities3.NumberOfLines);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities3.mmNumberOfLines);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities1.mmNumberOfLines;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number lineWidth;
 	/**
 	 * Number of columns of the display component.
 	 * <p>
@@ -204,18 +208,18 @@ public class DisplayCapabilities2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DisplayCapabilities3#LineWidth
-	 * DisplayCapabilities3.LineWidth}</li>
+	 * {@linkplain com.tools20022.repository.msg.DisplayCapabilities3#mmLineWidth
+	 * DisplayCapabilities3.mmLineWidth}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DisplayCapabilities1#LineWidth
-	 * DisplayCapabilities1.LineWidth}</li>
+	 * {@linkplain com.tools20022.repository.msg.DisplayCapabilities1#mmLineWidth
+	 * DisplayCapabilities1.mmLineWidth}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LineWidth = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLineWidth = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DisplayCapabilities2.mmObject();
 			isDerived = false;
@@ -223,10 +227,10 @@ public class DisplayCapabilities2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineWidth";
 			definition = "Number of columns of the display component.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities1.LineWidth;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities3.LineWidth);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities3.mmLineWidth);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities1.mmLineWidth;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -234,16 +238,40 @@ public class DisplayCapabilities2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities2.DisplayType, com.tools20022.repository.msg.DisplayCapabilities2.NumberOfLines,
-						com.tools20022.repository.msg.DisplayCapabilities2.LineWidth);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities2.mmDisplayType, com.tools20022.repository.msg.DisplayCapabilities2.mmNumberOfLines,
+						com.tools20022.repository.msg.DisplayCapabilities2.mmLineWidth);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DisplayCapabilities2";
 				definition = "The capabilities of the display components performing the transaction.";
-				previousVersion_lazy = () -> DisplayCapabilities1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(DisplayCapabilities3.mmObject());
+				previousVersion_lazy = () -> DisplayCapabilities1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UserInterface2Code getDisplayType() {
+		return displayType;
+	}
+
+	public void setDisplayType(UserInterface2Code displayType) {
+		this.displayType = displayType;
+	}
+
+	public Number getNumberOfLines() {
+		return numberOfLines;
+	}
+
+	public void setNumberOfLines(Number numberOfLines) {
+		this.numberOfLines = numberOfLines;
+	}
+
+	public Number getLineWidth() {
+		return lineWidth;
+	}
+
+	public void setLineWidth(Number lineWidth) {
+		this.lineWidth = lineWidth;
 	}
 }

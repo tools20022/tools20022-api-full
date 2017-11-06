@@ -33,23 +33,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestorTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestorType1Code#Retail
- * InvestorType1Code.Retail}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestorType1Code#mmRetail
+ * InvestorType1Code.mmRetail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorType1Code#Professional
- * InvestorType1Code.Professional}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestorType1Code#Staff
- * InvestorType1Code.Staff}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorType1Code#mmProfessional
+ * InvestorType1Code.mmProfessional}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestorType1Code#mmStaff
+ * InvestorType1Code.mmStaff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorType1Code#PhysicalPerson
- * InvestorType1Code.PhysicalPerson}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorType1Code#mmPhysicalPerson
+ * InvestorType1Code.mmPhysicalPerson}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class InvestorType1Code extends InvestorTypeCode {
 	 * name} = "Retail"</li>
 	 * </ul>
 	 */
-	public static final MMCode Retail = new MMCode() {
+	public static final MMCode mmRetail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retail";
@@ -108,7 +108,7 @@ public class InvestorType1Code extends InvestorTypeCode {
 	 * name} = "Professional"</li>
 	 * </ul>
 	 */
-	public static final MMCode Professional = new MMCode() {
+	public static final MMCode mmProfessional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Professional";
@@ -131,7 +131,7 @@ public class InvestorType1Code extends InvestorTypeCode {
 	 * name} = "Staff"</li>
 	 * </ul>
 	 */
-	public static final MMCode Staff = new MMCode() {
+	public static final MMCode mmStaff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Staff";
@@ -154,7 +154,7 @@ public class InvestorType1Code extends InvestorTypeCode {
 	 * name} = "PhysicalPerson"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalPerson = new MMCode() {
+	public static final MMCode mmPhysicalPerson = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalPerson";
@@ -165,13 +165,13 @@ public class InvestorType1Code extends InvestorTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RETL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestorType1Code";
 				definition = "Specifies the  type of investor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorType1Code.Retail, com.tools20022.repository.codeset.InvestorType1Code.Professional, com.tools20022.repository.codeset.InvestorType1Code.Staff,
-						com.tools20022.repository.codeset.InvestorType1Code.PhysicalPerson);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorType1Code.mmRetail, com.tools20022.repository.codeset.InvestorType1Code.mmProfessional, com.tools20022.repository.codeset.InvestorType1Code.mmStaff,
+						com.tools20022.repository.codeset.InvestorType1Code.mmPhysicalPerson);
 				trace_lazy = () -> InvestorTypeCode.mmObject();
 			}
 		});

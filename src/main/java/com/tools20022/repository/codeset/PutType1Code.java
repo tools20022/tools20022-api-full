@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PutTypeCode PutTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#Mandatory
- * PutType1Code.Mandatory}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#Optional
- * PutType1Code.Optional}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#Both
- * PutType1Code.Both}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#mmMandatory
+ * PutType1Code.mmMandatory}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#mmOptional
+ * PutType1Code.mmOptional}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#mmBoth
+ * PutType1Code.mmBoth}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class PutType1Code extends PutTypeCode {
 	 * name} = "Mandatory"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mandatory = new MMCode() {
+	public static final MMCode mmMandatory = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
@@ -101,7 +101,7 @@ public class PutType1Code extends PutTypeCode {
 	 * name} = "Optional"</li>
 	 * </ul>
 	 */
-	public static final MMCode Optional = new MMCode() {
+	public static final MMCode mmOptional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Optional";
@@ -123,7 +123,7 @@ public class PutType1Code extends PutTypeCode {
 	 * name} = "Both"</li>
 	 * </ul>
 	 */
-	public static final MMCode Both = new MMCode() {
+	public static final MMCode mmBoth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Both";
@@ -134,12 +134,12 @@ public class PutType1Code extends PutTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MAND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PutType1Code";
 				definition = "Defines the type of execution of the put feature.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PutType1Code.Mandatory, com.tools20022.repository.codeset.PutType1Code.Optional, com.tools20022.repository.codeset.PutType1Code.Both);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PutType1Code.mmMandatory, com.tools20022.repository.codeset.PutType1Code.mmOptional, com.tools20022.repository.codeset.PutType1Code.mmBoth);
 				trace_lazy = () -> PutTypeCode.mmObject();
 			}
 		});

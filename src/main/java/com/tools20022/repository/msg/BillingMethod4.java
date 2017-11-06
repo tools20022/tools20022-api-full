@@ -23,6 +23,7 @@ import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.entity.Tax;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the details for the tax calculation method C.
@@ -33,10 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BillingMethod4#ServiceDetail
- * BillingMethod4.ServiceDetail}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingMethod4#TaxCalculation
- * BillingMethod4.TaxCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingMethod4#mmServiceDetail
+ * BillingMethod4.mmServiceDetail}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BillingMethod4#mmTaxCalculation
+ * BillingMethod4.mmTaxCalculation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BillingMethod4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.BillingServiceParameters2> serviceDetail;
 	/**
 	 * Specifies the details of the taxable services using tax calculation
 	 * method C.
@@ -94,19 +97,20 @@ public class BillingMethod4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceDetail = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceDetail = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BillingMethod4.mmObject();
 			businessComponentTrace_lazy = () -> CashAccountService.mmObject();
+			componentContext_lazy = () -> BillingMethod4.mmObject();
 			isDerived = false;
 			xmlTag = "SvcDtl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceDetail";
 			definition = "Specifies the details of the taxable services using tax calculation method C.";
 			minOccurs = 1;
-			complexType_lazy = () -> BillingServiceParameters2.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.BillingServiceParameters2.mmObject();
 		}
 	};
+	protected TaxCalculation1 taxCalculation;
 	/**
 	 * Total amount of service charge to be taxed in the tax region’s host
 	 * currency along with the supporting tax calculations.
@@ -143,32 +147,48 @@ public class BillingMethod4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxCalculation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxCalculation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BillingMethod4.mmObject();
 			businessComponentTrace_lazy = () -> Tax.mmObject();
+			componentContext_lazy = () -> BillingMethod4.mmObject();
 			isDerived = false;
 			xmlTag = "TaxClctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCalculation";
 			definition = "Total amount of service charge to be taxed in the tax region’s host currency along with the supporting tax calculations. \n\nUsage: Used for tax calculation method C only, and only one per tax region may be specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> TaxCalculation1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.TaxCalculation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingMethod4.ServiceDetail, com.tools20022.repository.msg.BillingMethod4.TaxCalculation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingMethod4.mmServiceDetail, com.tools20022.repository.msg.BillingMethod4.mmTaxCalculation);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BillingMethod4";
 				definition = "Provides the details for the tax calculation method C.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<BillingServiceParameters2> getServiceDetail() {
+		return serviceDetail;
+	}
+
+	public void setServiceDetail(List<com.tools20022.repository.msg.BillingServiceParameters2> serviceDetail) {
+		this.serviceDetail = serviceDetail;
+	}
+
+	public TaxCalculation1 getTaxCalculation() {
+		return taxCalculation;
+	}
+
+	public void setTaxCalculation(com.tools20022.repository.msg.TaxCalculation1 taxCalculation) {
+		this.taxCalculation = taxCalculation;
 	}
 }

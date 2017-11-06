@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.FixingCondition;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the conditions for the NDF opening.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OpeningConditions1#SettlementCurrency
- * OpeningConditions1.SettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.OpeningConditions1#mmSettlementCurrency
+ * OpeningConditions1.mmSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OpeningConditions1#ValuationDate
- * OpeningConditions1.ValuationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.OpeningConditions1#mmValuationDate
+ * OpeningConditions1.mmValuationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OpeningConditions1#SettlementRateSource
- * OpeningConditions1.SettlementRateSource}</li>
+ * {@linkplain com.tools20022.repository.msg.OpeningConditions1#mmSettlementRateSource
+ * OpeningConditions1.mmSettlementRateSource}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OpeningConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyCode settlementCurrency;
 	/**
 	 * Specifies the settlement currency of the non deliverable trade.
 	 * <p>
@@ -80,8 +82,8 @@ public class OpeningConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#QuotedCurrency
-	 * CurrencyExchange.QuotedCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmQuotedCurrency
+	 * CurrencyExchange.mmQuotedCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +103,21 @@ public class OpeningConditions1 {
 	 * "Specifies the settlement currency of the non deliverable trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> OpeningConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.QuotedCurrency;
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Specifies the settlement currency of the non deliverable trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ISODate valuationDate;
 	/**
 	 * Specifies the valuation date for a non deliverable trade.
 	 * <p>
@@ -127,8 +130,8 @@ public class OpeningConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FixingCondition#FixingDateTime
-	 * FixingCondition.FixingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.FixingCondition#mmFixingDateTime
+	 * FixingCondition.mmFixingDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +151,21 @@ public class OpeningConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmFixingDateTime;
 			componentContext_lazy = () -> OpeningConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.FixingDateTime;
 			isDerived = false;
 			xmlTag = "ValtnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDate";
 			definition = "Specifies the valuation date for a non deliverable trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SettlementRateSource1> settlementRateSource;
 	/**
 	 * Specifies the rate source associated with the non deliverable trade.
 	 * <p>
@@ -173,8 +177,8 @@ public class OpeningConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FixingCondition#SettlementRateOption
-	 * FixingCondition.SettlementRateOption}</li>
+	 * {@linkplain com.tools20022.repository.entity.FixingCondition#mmSettlementRateOption
+	 * FixingCondition.mmSettlementRateOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,34 +198,58 @@ public class OpeningConditions1 {
 	 * "Specifies the rate source associated with the non deliverable trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementRateSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementRateSource = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmSettlementRateOption;
 			componentContext_lazy = () -> OpeningConditions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.SettlementRateOption;
 			isDerived = false;
 			xmlTag = "SttlmRateSrc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementRateSource";
 			definition = "Specifies the rate source associated with the non deliverable trade.";
-			minOccurs = 1;
 			maxOccurs = 2;
-			type_lazy = () -> SettlementRateSource1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementRateSource1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningConditions1.SettlementCurrency, com.tools20022.repository.msg.OpeningConditions1.ValuationDate,
-						com.tools20022.repository.msg.OpeningConditions1.SettlementRateSource);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningConditions1.mmSettlementCurrency, com.tools20022.repository.msg.OpeningConditions1.mmValuationDate,
+						com.tools20022.repository.msg.OpeningConditions1.mmSettlementRateSource);
 				trace_lazy = () -> FixingCondition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OpeningConditions1";
 				definition = "Specifies the conditions for the NDF opening.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyCode getSettlementCurrency() {
+		return settlementCurrency;
+	}
+
+	public void setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
+		this.settlementCurrency = settlementCurrency;
+	}
+
+	public ISODate getValuationDate() {
+		return valuationDate;
+	}
+
+	public void setValuationDate(ISODate valuationDate) {
+		this.valuationDate = valuationDate;
+	}
+
+	public List<SettlementRateSource1> getSettlementRateSource() {
+		return settlementRateSource;
+	}
+
+	public void setSettlementRateSource(List<com.tools20022.repository.msg.SettlementRateSource1> settlementRateSource) {
+		this.settlementRateSource = settlementRateSource;
 	}
 }

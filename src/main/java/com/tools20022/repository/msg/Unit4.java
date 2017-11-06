@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Quantity expressed as a number and its details.
@@ -32,10 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Unit4#TotalUnitsNumber
- * Unit4.TotalUnitsNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit4#UnitDetails
- * Unit4.UnitDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit4#mmTotalUnitsNumber
+ * Unit4.mmTotalUnitsNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit4#mmUnitDetails
+ * Unit4.mmUnitDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Unit4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1 totalUnitsNumber;
 	/**
 	 * Quantity expressed as a number, for example, a number of shares.
 	 * <p>
@@ -78,8 +80,8 @@ public class Unit4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#LotUnit
-	 * LotBreakdown.LotUnit}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotUnit
+	 * LotBreakdown.mmLotUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Unit4
@@ -98,20 +100,21 @@ public class Unit4 {
 	 * "Quantity expressed as a number, for example, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotUnit;
 			componentContext_lazy = () -> Unit4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.LotUnit;
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumber";
 			definition = "Quantity expressed as a number, for example, a number of shares.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Unit5> unitDetails;
 	/**
 	 * Information about the units to be transferred.
 	 * <p>
@@ -123,8 +126,8 @@ public class Unit4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#LotBreakdown
-	 * SecuritiesQuantity.LotBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLotBreakdown
+	 * SecuritiesQuantity.mmLotBreakdown}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Unit4
@@ -142,33 +145,49 @@ public class Unit4 {
 	 * definition} = "Information about the units to be transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> Unit4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.LotBreakdown;
 			isDerived = false;
 			xmlTag = "UnitDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitDetails";
 			definition = "Information about the units to be transferred.";
-			minOccurs = 0;
 			maxOccurs = 2;
-			complexType_lazy = () -> Unit5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Unit5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit4.TotalUnitsNumber, com.tools20022.repository.msg.Unit4.UnitDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit4.mmTotalUnitsNumber, com.tools20022.repository.msg.Unit4.mmUnitDetails);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Unit4";
 				definition = "Quantity expressed as a number and its details.";
-				nextVersions_lazy = () -> Arrays.asList(Unit5.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
+		return totalUnitsNumber;
+	}
+
+	public void setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+		this.totalUnitsNumber = totalUnitsNumber;
+	}
+
+	public List<Unit5> getUnitDetails() {
+		return unitDetails;
+	}
+
+	public void setUnitDetails(List<com.tools20022.repository.msg.Unit5> unitDetails) {
+		this.unitDetails = unitDetails;
 	}
 }

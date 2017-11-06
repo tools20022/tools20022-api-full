@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CardPayment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Deposit transaction for which the service is requested.
@@ -37,30 +38,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction15#TransactionIdentification
- * ATMTransaction15.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction15#mmTransactionIdentification
+ * ATMTransaction15.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction15#ReconciliationIdentification
- * ATMTransaction15.ReconciliationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction15#AccountData
- * ATMTransaction15.AccountData}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction15#mmReconciliationIdentification
+ * ATMTransaction15.mmReconciliationIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction15#mmAccountData
+ * ATMTransaction15.mmAccountData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction15#ProtectedAccountData
- * ATMTransaction15.ProtectedAccountData}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction15#TotalAmount
- * ATMTransaction15.TotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction15#mmProtectedAccountData
+ * ATMTransaction15.mmProtectedAccountData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction15#mmTotalAmount
+ * ATMTransaction15.mmTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction15#DetailedRequestedAmount
- * ATMTransaction15.DetailedRequestedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction15#mmDetailedRequestedAmount
+ * ATMTransaction15.mmDetailedRequestedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction15#DepositedMedia
- * ATMTransaction15.DepositedMedia}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction15#mmDepositedMedia
+ * ATMTransaction15.mmDepositedMedia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction15#RequestedReceipt
- * ATMTransaction15.RequestedReceipt}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction15#mmRequestedReceipt
+ * ATMTransaction15.mmRequestedReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransaction15#ICCRelatedData
- * ATMTransaction15.ICCRelatedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransaction15#mmICCRelatedData
+ * ATMTransaction15.mmICCRelatedData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -69,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMTransaction15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionIdentifier1 transactionIdentification;
 	/**
 	 * Identification of the transaction assigned by the ATM.
 	 * <p>
@@ -105,8 +107,8 @@ public class ATMTransaction15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#TransactionIdentification
-	 * CardPaymentAcquiring.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionIdentification
+	 * CardPaymentAcquiring.mmTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -127,34 +129,35 @@ public class ATMTransaction15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#TransactionIdentification
-	 * ATMTransaction16.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#mmTransactionIdentification
+	 * ATMTransaction16.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#TransactionIdentification
-	 * ATMTransaction13.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmTransactionIdentification
+	 * ATMTransaction13.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionIdentification;
 			componentContext_lazy = () -> ATMTransaction15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.TransactionIdentification;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction assigned by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.TransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.mmTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.mmTransactionIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionIdentifier1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
 		}
 	};
+	protected Max35Text reconciliationIdentification;
 	/**
 	 * Identification of the reconciliation period assigned by the ATM.
 	 * <p>
@@ -167,8 +170,8 @@ public class ATMTransaction15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#ReconciliationIdentification
-	 * ReconciliationTransaction.ReconciliationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmReconciliationIdentification
+	 * ReconciliationTransaction.mmReconciliationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -190,33 +193,34 @@ public class ATMTransaction15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#ReconciliationIdentification
-	 * ATMTransaction16.ReconciliationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#mmReconciliationIdentification
+	 * ATMTransaction16.mmReconciliationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#ReconciliationIdentification
-	 * ATMTransaction13.ReconciliationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmReconciliationIdentification
+	 * ATMTransaction13.mmReconciliationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmReconciliationIdentification;
 			componentContext_lazy = () -> ATMTransaction15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.ReconciliationIdentification;
 			isDerived = false;
 			xmlTag = "RcncltnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Identification of the reconciliation period assigned by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.ReconciliationIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.ReconciliationIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.mmReconciliationIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.mmReconciliationIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CardAccount9 accountData;
 	/**
 	 * Unprotected account information.
 	 * <p>
@@ -228,8 +232,8 @@ public class ATMTransaction15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Account
-	 * Payment.Account}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAccount
+	 * Payment.mmAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -250,34 +254,35 @@ public class ATMTransaction15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#AccountData
-	 * ATMTransaction16.AccountData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#mmAccountData
+	 * ATMTransaction16.mmAccountData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#AccountData
-	 * ATMTransaction13.AccountData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmAccountData
+	 * ATMTransaction13.mmAccountData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountData = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAccount;
 			componentContext_lazy = () -> ATMTransaction15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Account;
 			isDerived = false;
 			xmlTag = "AcctData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountData";
 			definition = "Unprotected account information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.AccountData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.AccountData);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.mmAccountData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.mmAccountData;
 			maxOccurs = 1;
-			type_lazy = () -> CardAccount9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardAccount9.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedAccountData;
 	/**
 	 * Encryption of account information.
 	 * <p>
@@ -307,18 +312,18 @@ public class ATMTransaction15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#ProtectedAccountData
-	 * ATMTransaction16.ProtectedAccountData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#mmProtectedAccountData
+	 * ATMTransaction16.mmProtectedAccountData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#ProtectedAccountData
-	 * ATMTransaction13.ProtectedAccountData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmProtectedAccountData
+	 * ATMTransaction13.mmProtectedAccountData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProtectedAccountData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProtectedAccountData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction15.mmObject();
 			isDerived = false;
@@ -326,14 +331,15 @@ public class ATMTransaction15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedAccountData";
 			definition = "Encryption of account information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.ProtectedAccountData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.ProtectedAccountData);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.mmProtectedAccountData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.mmProtectedAccountData;
 			maxOccurs = 1;
-			type_lazy = () -> ContentInformationType10.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 		}
 	};
+	protected AmountAndCurrency1 totalAmount;
 	/**
 	 * Total amount of the deposit transaction.
 	 * <p>
@@ -345,8 +351,8 @@ public class ATMTransaction15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -367,34 +373,35 @@ public class ATMTransaction15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#TotalAuthorisedAmount
-	 * ATMTransaction16.TotalAuthorisedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#mmTotalAuthorisedAmount
+	 * ATMTransaction16.mmTotalAuthorisedAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#TotalRequestedAmount
-	 * ATMTransaction13.TotalRequestedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmTotalRequestedAmount
+	 * ATMTransaction13.mmTotalRequestedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> ATMTransaction15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "TtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount of the deposit transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.TotalRequestedAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.TotalAuthorisedAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.mmTotalAuthorisedAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.mmTotalRequestedAmount;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndCurrency1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndCurrency1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DetailedAmount16> detailedRequestedAmount;
 	/**
 	 * Amounts of the deposit transaction.
 	 * <p>
@@ -406,8 +413,8 @@ public class ATMTransaction15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -428,33 +435,34 @@ public class ATMTransaction15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#DetailedRequestedAmount
-	 * ATMTransaction16.DetailedRequestedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#mmDetailedRequestedAmount
+	 * ATMTransaction16.mmDetailedRequestedAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#DetailedRequestedAmount
-	 * ATMTransaction13.DetailedRequestedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmDetailedRequestedAmount
+	 * ATMTransaction13.mmDetailedRequestedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DetailedRequestedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDetailedRequestedAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> ATMTransaction15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "DtldReqdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedRequestedAmount";
 			definition = "Amounts of the deposit transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.DetailedRequestedAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.DetailedRequestedAmount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.mmDetailedRequestedAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.mmDetailedRequestedAmount;
 			minOccurs = 0;
-			type_lazy = () -> DetailedAmount16.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMDepositedMedia1> depositedMedia;
 	/**
 	 * Deposited media put in the safe.
 	 * <p>
@@ -481,7 +489,7 @@ public class ATMTransaction15 {
 	 * definition} = "Deposited media put in the safe."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DepositedMedia = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDepositedMedia = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransaction15.mmObject();
 			isDerived = false;
@@ -490,10 +498,11 @@ public class ATMTransaction15 {
 			name = "DepositedMedia";
 			definition = "Deposited media put in the safe.";
 			minOccurs = 0;
-			type_lazy = () -> ATMDepositedMedia1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia1.mmObject();
 		}
 	};
+	protected TrueFalseIndicator requestedReceipt;
 	/**
 	 * True if a receipt has be requested by the customer.
 	 * <p>
@@ -523,11 +532,11 @@ public class ATMTransaction15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#RequestedReceipt
-	 * ATMTransaction13.RequestedReceipt}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmRequestedReceipt
+	 * ATMTransaction13.mmRequestedReceipt}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedReceipt = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedReceipt = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction15.mmObject();
 			isDerived = false;
@@ -535,12 +544,13 @@ public class ATMTransaction15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedReceipt";
 			definition = "True if a receipt has be requested by the customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.RequestedReceipt;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.mmRequestedReceipt;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Max10000Binary iCCRelatedData;
 	/**
 	 * Sequence of one or more TLV data elements from the ATM application, in
 	 * accordance with ISO 7816-6, not in a specific order. Present if the
@@ -575,18 +585,18 @@ public class ATMTransaction15 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#ICCRelatedData
-	 * ATMTransaction16.ICCRelatedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction16#mmICCRelatedData
+	 * ATMTransaction16.mmICCRelatedData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#ICCRelatedData
-	 * ATMTransaction13.ICCRelatedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMTransaction13#mmICCRelatedData
+	 * ATMTransaction13.mmICCRelatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMTransaction15.mmObject();
 			isDerived = false;
@@ -594,10 +604,10 @@ public class ATMTransaction15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.ICCRelatedData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.ICCRelatedData);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction16.mmICCRelatedData);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.mmICCRelatedData;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
@@ -605,19 +615,91 @@ public class ATMTransaction15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction15.TransactionIdentification, com.tools20022.repository.msg.ATMTransaction15.ReconciliationIdentification,
-						com.tools20022.repository.msg.ATMTransaction15.AccountData, com.tools20022.repository.msg.ATMTransaction15.ProtectedAccountData, com.tools20022.repository.msg.ATMTransaction15.TotalAmount,
-						com.tools20022.repository.msg.ATMTransaction15.DetailedRequestedAmount, com.tools20022.repository.msg.ATMTransaction15.DepositedMedia, com.tools20022.repository.msg.ATMTransaction15.RequestedReceipt,
-						com.tools20022.repository.msg.ATMTransaction15.ICCRelatedData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction15.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction15.mmReconciliationIdentification,
+						com.tools20022.repository.msg.ATMTransaction15.mmAccountData, com.tools20022.repository.msg.ATMTransaction15.mmProtectedAccountData, com.tools20022.repository.msg.ATMTransaction15.mmTotalAmount,
+						com.tools20022.repository.msg.ATMTransaction15.mmDetailedRequestedAmount, com.tools20022.repository.msg.ATMTransaction15.mmDepositedMedia, com.tools20022.repository.msg.ATMTransaction15.mmRequestedReceipt,
+						com.tools20022.repository.msg.ATMTransaction15.mmICCRelatedData);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction15";
 				definition = "Deposit transaction for which the service is requested.";
-				previousVersion_lazy = () -> ATMTransaction13.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ATMTransaction16.mmObject());
+				previousVersion_lazy = () -> ATMTransaction13.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionIdentifier1 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Max35Text getReconciliationIdentification() {
+		return reconciliationIdentification;
+	}
+
+	public void setReconciliationIdentification(Max35Text reconciliationIdentification) {
+		this.reconciliationIdentification = reconciliationIdentification;
+	}
+
+	public CardAccount9 getAccountData() {
+		return accountData;
+	}
+
+	public void setAccountData(com.tools20022.repository.msg.CardAccount9 accountData) {
+		this.accountData = accountData;
+	}
+
+	public ContentInformationType10 getProtectedAccountData() {
+		return protectedAccountData;
+	}
+
+	public void setProtectedAccountData(com.tools20022.repository.msg.ContentInformationType10 protectedAccountData) {
+		this.protectedAccountData = protectedAccountData;
+	}
+
+	public AmountAndCurrency1 getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(com.tools20022.repository.msg.AmountAndCurrency1 totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public List<DetailedAmount16> getDetailedRequestedAmount() {
+		return detailedRequestedAmount;
+	}
+
+	public void setDetailedRequestedAmount(List<com.tools20022.repository.msg.DetailedAmount16> detailedRequestedAmount) {
+		this.detailedRequestedAmount = detailedRequestedAmount;
+	}
+
+	public List<ATMDepositedMedia1> getDepositedMedia() {
+		return depositedMedia;
+	}
+
+	public void setDepositedMedia(List<com.tools20022.repository.msg.ATMDepositedMedia1> depositedMedia) {
+		this.depositedMedia = depositedMedia;
+	}
+
+	public TrueFalseIndicator getRequestedReceipt() {
+		return requestedReceipt;
+	}
+
+	public void setRequestedReceipt(TrueFalseIndicator requestedReceipt) {
+		this.requestedReceipt = requestedReceipt;
+	}
+
+	public Max10000Binary getICCRelatedData() {
+		return iCCRelatedData;
+	}
+
+	public void setICCRelatedData(Max10000Binary iCCRelatedData) {
+		this.iCCRelatedData = iCCRelatedData;
 	}
 }

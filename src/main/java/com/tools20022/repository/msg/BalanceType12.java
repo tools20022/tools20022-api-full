@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceType12#CodeOrProprietary
- * BalanceType12.CodeOrProprietary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceType12#SubType
- * BalanceType12.SubType}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceType12#mmCodeOrProprietary
+ * BalanceType12.mmCodeOrProprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceType12#mmSubType
+ * BalanceType12.mmSubType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BalanceType12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BalanceType5Choice codeOrProprietary;
 	/**
 	 * Coded or proprietary format balance type.
 	 * <p>
@@ -74,7 +75,8 @@ public class BalanceType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,21 +94,22 @@ public class BalanceType12 {
 	 * definition} = "Coded or proprietary format balance type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CodeOrProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCodeOrProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> BalanceType12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "CdOrPrtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeOrProprietary";
 			definition = "Coded or proprietary format balance type.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceType5Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> BalanceType5Choice.mmObject();
 		}
 	};
+	protected BalanceSubType1Choice subType;
 	/**
 	 * Specifies the balance sub-type.
 	 * <p>
@@ -119,7 +122,8 @@ public class BalanceType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,33 +141,49 @@ public class BalanceType12 {
 	 * definition} = "Specifies the balance sub-type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> BalanceType12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "SubTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubType";
 			definition = "Specifies the balance sub-type.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceSubType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> BalanceSubType1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceType12.CodeOrProprietary, com.tools20022.repository.msg.BalanceType12.SubType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceType12.mmCodeOrProprietary, com.tools20022.repository.msg.BalanceType12.mmSubType);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BalanceType12";
 				definition = "Set of elements used to define the balance type and sub-type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BalanceType5Choice getCodeOrProprietary() {
+		return codeOrProprietary;
+	}
+
+	public void setCodeOrProprietary(BalanceType5Choice codeOrProprietary) {
+		this.codeOrProprietary = codeOrProprietary;
+	}
+
+	public BalanceSubType1Choice getSubType() {
+		return subType;
+	}
+
+	public void setSubType(BalanceSubType1Choice subType) {
+		this.subType = subType;
 	}
 }

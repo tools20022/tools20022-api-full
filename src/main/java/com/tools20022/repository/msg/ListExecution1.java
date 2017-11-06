@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListExecution1#ListIdentification
- * ListExecution1.ListIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ListExecution1#mmListIdentification
+ * ListExecution1.mmListIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListExecution1#ClientBidIdentification
- * ListExecution1.ClientBidIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ListExecution1#mmClientBidIdentification
+ * ListExecution1.mmClientBidIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListExecution1#BidIdentification
- * ListExecution1.BidIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ListExecution1#mmBidIdentification
+ * ListExecution1.mmBidIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ListExecution1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text listIdentification;
 	/**
 	 * Unique identifier for a list, as assigned by the trading party. The
 	 * identifier must be unique within a single trading day.
@@ -78,8 +79,8 @@ public class ListExecution1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#ListIdentification
-	 * ListTrading.ListIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmListIdentification
+	 * ListTrading.mmListIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class ListExecution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListIdentification;
 			componentContext_lazy = () -> ListExecution1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.ListIdentification;
 			isDerived = false;
 			xmlTag = "ListId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientBidIdentification;
 	/**
 	 * Identifies a bid made by a client, to which the list is associated.
 	 * <p>
@@ -125,8 +127,8 @@ public class ListExecution1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Negotiation#NegotiationIdentification
-	 * Negotiation.NegotiationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Negotiation#mmNegotiationIdentification
+	 * Negotiation.mmNegotiationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,20 +147,21 @@ public class ListExecution1 {
 	 * "Identifies a bid made by a client, to which the list is associated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientBidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientBidIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Negotiation.mmNegotiationIdentification;
 			componentContext_lazy = () -> ListExecution1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Negotiation.NegotiationIdentification;
 			isDerived = false;
 			xmlTag = "ClntBidId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientBidIdentification";
 			definition = "Identifies a bid made by a client, to which the list is associated.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text bidIdentification;
 	/**
 	 * Name or number assigned by an entity to enable recognition of that
 	 * entity, eg, account identifier.
@@ -188,7 +191,7 @@ public class ListExecution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBidIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ListExecution1.mmObject();
 			isDerived = false;
@@ -196,8 +199,8 @@ public class ListExecution1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidIdentification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -205,15 +208,39 @@ public class ListExecution1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ListExecution1.ListIdentification, com.tools20022.repository.msg.ListExecution1.ClientBidIdentification,
-						com.tools20022.repository.msg.ListExecution1.BidIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ListExecution1.mmListIdentification, com.tools20022.repository.msg.ListExecution1.mmClientBidIdentification,
+						com.tools20022.repository.msg.ListExecution1.mmBidIdentification);
 				trace_lazy = () -> ListTrading.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ListExecution1";
 				definition = "Provides details about of a list that must be executed.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getListIdentification() {
+		return listIdentification;
+	}
+
+	public void setListIdentification(Max35Text listIdentification) {
+		this.listIdentification = listIdentification;
+	}
+
+	public Max35Text getClientBidIdentification() {
+		return clientBidIdentification;
+	}
+
+	public void setClientBidIdentification(Max35Text clientBidIdentification) {
+		this.clientBidIdentification = clientBidIdentification;
+	}
+
+	public Max35Text getBidIdentification() {
+		return bidIdentification;
+	}
+
+	public void setBidIdentification(Max35Text bidIdentification) {
+		this.bidIdentification = bidIdentification;
 	}
 }

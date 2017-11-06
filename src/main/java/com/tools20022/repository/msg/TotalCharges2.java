@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.Charges;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Total amount of charges.
@@ -35,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalCharges2#TotalAmountOfCharges
- * TotalCharges2.TotalAmountOfCharges}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalCharges2#ChargeDetails
- * TotalCharges2.ChargeDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalCharges2#mmTotalAmountOfCharges
+ * TotalCharges2.mmTotalAmountOfCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalCharges2#mmChargeDetails
+ * TotalCharges2.mmChargeDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalCharges2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAnd13DecimalAmount totalAmountOfCharges;
 	/**
 	 * Total value of the charges for a specific order.
 	 * <p>
@@ -74,8 +76,8 @@ public class TotalCharges2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +95,21 @@ public class TotalCharges2 {
 	 * definition} = "Total value of the charges for a specific order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmountOfCharges = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmountOfCharges = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> TotalCharges2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "TtlAmtOfChrgs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountOfCharges";
 			definition = "Total value of the charges for a specific order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Charge10> chargeDetails;
 	/**
 	 * Information related to a specific charge.
 	 * <p>
@@ -135,32 +138,48 @@ public class TotalCharges2 {
 	 * definition} = "Information related to a specific charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalCharges2.mmObject();
 			businessComponentTrace_lazy = () -> Charges.mmObject();
+			componentContext_lazy = () -> TotalCharges2.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeDetails";
 			definition = "Information related to a specific charge.";
 			minOccurs = 1;
-			type_lazy = () -> Charge10.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Charge10.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalCharges2.TotalAmountOfCharges, com.tools20022.repository.msg.TotalCharges2.ChargeDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalCharges2.mmTotalAmountOfCharges, com.tools20022.repository.msg.TotalCharges2.mmChargeDetails);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalCharges2";
 				definition = "Total amount of charges.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getTotalAmountOfCharges() {
+		return totalAmountOfCharges;
+	}
+
+	public void setTotalAmountOfCharges(ActiveCurrencyAnd13DecimalAmount totalAmountOfCharges) {
+		this.totalAmountOfCharges = totalAmountOfCharges;
+	}
+
+	public List<Charge10> getChargeDetails() {
+		return chargeDetails;
+	}
+
+	public void setChargeDetails(List<com.tools20022.repository.msg.Charge10> chargeDetails) {
+		this.chargeDetails = chargeDetails;
 	}
 }

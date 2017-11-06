@@ -34,60 +34,60 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#EventAlreadyDeactivated
- * RejectionReason12Code.EventAlreadyDeactivated}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmEventAlreadyDeactivated
+ * RejectionReason12Code.mmEventAlreadyDeactivated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#FailedValidation
- * RejectionReason12Code.FailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmFailedValidation
+ * RejectionReason12Code.mmFailedValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#SameCAIdentification
- * RejectionReason12Code.SameCAIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmSameCAIdentification
+ * RejectionReason12Code.mmSameCAIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#InvalidCAIdentification
- * RejectionReason12Code.InvalidCAIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmInvalidCAIdentification
+ * RejectionReason12Code.mmInvalidCAIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#InvalidAgent
- * RejectionReason12Code.InvalidAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmInvalidAgent
+ * RejectionReason12Code.mmInvalidAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#NotMainAgent
- * RejectionReason12Code.NotMainAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmNotMainAgent
+ * RejectionReason12Code.mmNotMainAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#InvalidOption
- * RejectionReason12Code.InvalidOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmInvalidOption
+ * RejectionReason12Code.mmInvalidOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#PendingDeactivation
- * RejectionReason12Code.PendingDeactivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmPendingDeactivation
+ * RejectionReason12Code.mmPendingDeactivation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#NoRemainingOption
- * RejectionReason12Code.NoRemainingOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmNoRemainingOption
+ * RejectionReason12Code.mmNoRemainingOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#InvalidEventType
- * RejectionReason12Code.InvalidEventType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmInvalidEventType
+ * RejectionReason12Code.mmInvalidEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#InvalidUnderlyingSecurity
- * RejectionReason12Code.InvalidUnderlyingSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmInvalidUnderlyingSecurity
+ * RejectionReason12Code.mmInvalidUnderlyingSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#InvalidEventProcessingType
- * RejectionReason12Code.InvalidEventProcessingType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmInvalidEventProcessingType
+ * RejectionReason12Code.mmInvalidEventProcessingType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#InvalidMandatoryVoluntaryEventType
- * RejectionReason12Code.InvalidMandatoryVoluntaryEventType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmInvalidMandatoryVoluntaryEventType
+ * RejectionReason12Code.mmInvalidMandatoryVoluntaryEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#SameIdentification
- * RejectionReason12Code.SameIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmSameIdentification
+ * RejectionReason12Code.mmSameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#MismatchedCAIdentification
- * RejectionReason12Code.MismatchedCAIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmMismatchedCAIdentification
+ * RejectionReason12Code.mmMismatchedCAIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#NotApplicable
- * RejectionReason12Code.NotApplicable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason12Code#mmNotApplicable
+ * RejectionReason12Code.mmNotApplicable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -124,7 +124,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "EventAlreadyDeactivated"</li>
 	 * </ul>
 	 */
-	public static final MMCode EventAlreadyDeactivated = new MMCode() {
+	public static final MMCode mmEventAlreadyDeactivated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventAlreadyDeactivated";
@@ -147,7 +147,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode FailedValidation = new MMCode() {
+	public static final MMCode mmFailedValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
@@ -170,7 +170,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "SameCAIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode SameCAIdentification = new MMCode() {
+	public static final MMCode mmSameCAIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SameCAIdentification";
@@ -193,7 +193,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "InvalidCAIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidCAIdentification = new MMCode() {
+	public static final MMCode mmInvalidCAIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCAIdentification";
@@ -216,7 +216,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "InvalidAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidAgent = new MMCode() {
+	public static final MMCode mmInvalidAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAgent";
@@ -239,7 +239,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "NotMainAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotMainAgent = new MMCode() {
+	public static final MMCode mmNotMainAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotMainAgent";
@@ -262,7 +262,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "InvalidOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidOption = new MMCode() {
+	public static final MMCode mmInvalidOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOption";
@@ -285,7 +285,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "PendingDeactivation"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingDeactivation = new MMCode() {
+	public static final MMCode mmPendingDeactivation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeactivation";
@@ -308,7 +308,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "NoRemainingOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoRemainingOption = new MMCode() {
+	public static final MMCode mmNoRemainingOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRemainingOption";
@@ -331,7 +331,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "InvalidEventType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidEventType = new MMCode() {
+	public static final MMCode mmInvalidEventType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidEventType";
@@ -354,7 +354,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "InvalidUnderlyingSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidUnderlyingSecurity = new MMCode() {
+	public static final MMCode mmInvalidUnderlyingSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidUnderlyingSecurity";
@@ -377,7 +377,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "InvalidEventProcessingType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidEventProcessingType = new MMCode() {
+	public static final MMCode mmInvalidEventProcessingType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidEventProcessingType";
@@ -400,7 +400,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "InvalidMandatoryVoluntaryEventType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidMandatoryVoluntaryEventType = new MMCode() {
+	public static final MMCode mmInvalidMandatoryVoluntaryEventType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidMandatoryVoluntaryEventType";
@@ -423,7 +423,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "SameIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode SameIdentification = new MMCode() {
+	public static final MMCode mmSameIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SameIdentification";
@@ -446,7 +446,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "MismatchedCAIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode MismatchedCAIdentification = new MMCode() {
+	public static final MMCode mmMismatchedCAIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchedCAIdentification";
@@ -469,7 +469,7 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	 * name} = "NotApplicable"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotApplicable = new MMCode() {
+	public static final MMCode mmNotApplicable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
@@ -480,19 +480,19 @@ public class RejectionReason12Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DEAC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason12Code";
 				definition = "Specifies the reason of a rejection of a deactivation instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason12Code.EventAlreadyDeactivated, com.tools20022.repository.codeset.RejectionReason12Code.FailedValidation,
-						com.tools20022.repository.codeset.RejectionReason12Code.SameCAIdentification, com.tools20022.repository.codeset.RejectionReason12Code.InvalidCAIdentification,
-						com.tools20022.repository.codeset.RejectionReason12Code.InvalidAgent, com.tools20022.repository.codeset.RejectionReason12Code.NotMainAgent, com.tools20022.repository.codeset.RejectionReason12Code.InvalidOption,
-						com.tools20022.repository.codeset.RejectionReason12Code.PendingDeactivation, com.tools20022.repository.codeset.RejectionReason12Code.NoRemainingOption,
-						com.tools20022.repository.codeset.RejectionReason12Code.InvalidEventType, com.tools20022.repository.codeset.RejectionReason12Code.InvalidUnderlyingSecurity,
-						com.tools20022.repository.codeset.RejectionReason12Code.InvalidEventProcessingType, com.tools20022.repository.codeset.RejectionReason12Code.InvalidMandatoryVoluntaryEventType,
-						com.tools20022.repository.codeset.RejectionReason12Code.SameIdentification, com.tools20022.repository.codeset.RejectionReason12Code.MismatchedCAIdentification,
-						com.tools20022.repository.codeset.RejectionReason12Code.NotApplicable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason12Code.mmEventAlreadyDeactivated, com.tools20022.repository.codeset.RejectionReason12Code.mmFailedValidation,
+						com.tools20022.repository.codeset.RejectionReason12Code.mmSameCAIdentification, com.tools20022.repository.codeset.RejectionReason12Code.mmInvalidCAIdentification,
+						com.tools20022.repository.codeset.RejectionReason12Code.mmInvalidAgent, com.tools20022.repository.codeset.RejectionReason12Code.mmNotMainAgent,
+						com.tools20022.repository.codeset.RejectionReason12Code.mmInvalidOption, com.tools20022.repository.codeset.RejectionReason12Code.mmPendingDeactivation,
+						com.tools20022.repository.codeset.RejectionReason12Code.mmNoRemainingOption, com.tools20022.repository.codeset.RejectionReason12Code.mmInvalidEventType,
+						com.tools20022.repository.codeset.RejectionReason12Code.mmInvalidUnderlyingSecurity, com.tools20022.repository.codeset.RejectionReason12Code.mmInvalidEventProcessingType,
+						com.tools20022.repository.codeset.RejectionReason12Code.mmInvalidMandatoryVoluntaryEventType, com.tools20022.repository.codeset.RejectionReason12Code.mmSameIdentification,
+						com.tools20022.repository.codeset.RejectionReason12Code.mmMismatchedCAIdentification, com.tools20022.repository.codeset.RejectionReason12Code.mmNotApplicable);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

@@ -38,10 +38,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace2#SafekeepingPlaceFormat
- * SafeKeepingPlace2.SafekeepingPlaceFormat}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafeKeepingPlace2#LEI
- * SafeKeepingPlace2.LEI}</li>
+ * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace2#mmSafekeepingPlaceFormat
+ * SafeKeepingPlace2.mmSafekeepingPlaceFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafeKeepingPlace2#mmLEI
+ * SafeKeepingPlace2.mmLEI}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SafeKeepingPlace2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SafekeepingPlaceFormat17Choice safekeepingPlaceFormat;
 	/**
 	 * Unique identification of the party.
 	 * <p>
@@ -101,26 +102,27 @@ public class SafeKeepingPlace2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace1#SafekeepingPlaceFormat
-	 * SafeKeepingPlace1.SafekeepingPlaceFormat}</li>
+	 * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace1#mmSafekeepingPlaceFormat
+	 * SafeKeepingPlace1.mmSafekeepingPlaceFormat}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingPlaceFormat = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingPlaceFormat = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SafeKeepingPlace2.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> SafeKeepingPlace2.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlcFrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceFormat";
 			definition = "Unique identification of the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.SafekeepingPlaceFormat;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmSafekeepingPlaceFormat;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingPlaceFormat17Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SafekeepingPlaceFormat17Choice.mmObject();
 		}
 	};
+	protected LEIIdentifier lEI;
 	/**
 	 * Legal entity identification as an alternate identification for a place of
 	 * safekeeping.
@@ -153,11 +155,11 @@ public class SafeKeepingPlace2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace1#LEI
-	 * SafeKeepingPlace1.LEI}</li>
+	 * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace1#mmLEI
+	 * SafeKeepingPlace1.mmLEI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SafeKeepingPlace2.mmObject();
 			isDerived = false;
@@ -165,9 +167,9 @@ public class SafeKeepingPlace2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a place of safekeeping.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.LEI;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmLEI;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -175,14 +177,30 @@ public class SafeKeepingPlace2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafeKeepingPlace2.SafekeepingPlaceFormat, com.tools20022.repository.msg.SafeKeepingPlace2.LEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafeKeepingPlace2.mmSafekeepingPlaceFormat, com.tools20022.repository.msg.SafeKeepingPlace2.mmLEI);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SafeKeepingPlace2";
 				definition = "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SafekeepingPlaceFormat17Choice getSafekeepingPlaceFormat() {
+		return safekeepingPlaceFormat;
+	}
+
+	public void setSafekeepingPlaceFormat(SafekeepingPlaceFormat17Choice safekeepingPlaceFormat) {
+		this.safekeepingPlaceFormat = safekeepingPlaceFormat;
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
 	}
 }

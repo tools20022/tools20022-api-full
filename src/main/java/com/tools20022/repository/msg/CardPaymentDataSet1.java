@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of transactions to capture, sharing common characteristics.
@@ -32,22 +33,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#DataSetIdentification
- * CardPaymentDataSet1.DataSetIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#mmDataSetIdentification
+ * CardPaymentDataSet1.mmDataSetIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#Traceability
- * CardPaymentDataSet1.Traceability}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#mmTraceability
+ * CardPaymentDataSet1.mmTraceability}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#DataSetInitiator
- * CardPaymentDataSet1.DataSetInitiator}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#mmDataSetInitiator
+ * CardPaymentDataSet1.mmDataSetInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#TransactionTotals
- * CardPaymentDataSet1.TransactionTotals}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#CommonData
- * CardPaymentDataSet1.CommonData}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#mmTransactionTotals
+ * CardPaymentDataSet1.mmTransactionTotals}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#TransactionToCapture
- * CardPaymentDataSet1.TransactionToCapture}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#mmCommonData
+ * CardPaymentDataSet1.mmCommonData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet1#mmTransactionToCapture
+ * CardPaymentDataSet1.mmTransactionToCapture}</li>
  * </ul>
  * </li>
  * <li>
@@ -55,15 +57,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#DataSet
- * AcceptorBatchTransferV01.DataSet}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#mmDataSet
+ * AcceptorBatchTransferV01.mmDataSet}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentDataSet1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataSetIdentification1 dataSetIdentification;
 	/**
 	 * Identification of the data set.
 	 * <p>
@@ -111,7 +114,7 @@ public class CardPaymentDataSet1 {
 	 * definition} = "Identification of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSet1.mmObject();
 			isDerived = false;
@@ -119,12 +122,13 @@ public class CardPaymentDataSet1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Identification of the data set.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DataSetIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Traceability1> traceability;
 	/**
 	 * Identification of partners involved in the data set building.
 	 * <p>
@@ -152,7 +156,7 @@ public class CardPaymentDataSet1 {
 	 * "Identification of partners involved in the data set building."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Traceability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTraceability = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSet1.mmObject();
 			isDerived = false;
@@ -161,10 +165,11 @@ public class CardPaymentDataSet1 {
 			name = "Traceability";
 			definition = "Identification of partners involved in the data set building.";
 			minOccurs = 0;
-			type_lazy = () -> Traceability1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Traceability1.mmObject();
 		}
 	};
+	protected GenericIdentification32 dataSetInitiator;
 	/**
 	 * Initiator of the data set.
 	 * <p>
@@ -192,7 +197,7 @@ public class CardPaymentDataSet1 {
 	 * definition} = "Initiator of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSetInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSetInitiator = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSet1.mmObject();
 			isDerived = false;
@@ -200,12 +205,13 @@ public class CardPaymentDataSet1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetInitiator";
 			definition = "Initiator of the data set.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransactionTotals1> transactionTotals;
 	/**
 	 * Transaction totals of the data set.
 	 * <p>
@@ -232,7 +238,7 @@ public class CardPaymentDataSet1 {
 	 * definition} = "Transaction totals of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionTotals = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSet1.mmObject();
 			isDerived = false;
@@ -241,10 +247,11 @@ public class CardPaymentDataSet1 {
 			name = "TransactionTotals";
 			definition = "Transaction totals of the data set.";
 			minOccurs = 1;
-			type_lazy = () -> TransactionTotals1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals1.mmObject();
 		}
 	};
+	protected CommonData1 commonData;
 	/**
 	 * Data common to all transactions of the data set.
 	 * <p>
@@ -271,7 +278,7 @@ public class CardPaymentDataSet1 {
 	 * definition} = "Data common to all transactions of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommonData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommonData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSet1.mmObject();
 			isDerived = false;
@@ -279,12 +286,13 @@ public class CardPaymentDataSet1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonData";
 			definition = "Data common to all transactions of the data set.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CommonData1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CommonData1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CardPaymentDataSetTransaction1> transactionToCapture;
 	/**
 	 * Set of transaction to capture.
 	 * <p>
@@ -312,7 +320,7 @@ public class CardPaymentDataSet1 {
 	 * definition} = "Set of transaction to capture."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionToCapture = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionToCapture = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CardPaymentDataSet1.mmObject();
 			isDerived = false;
@@ -321,19 +329,19 @@ public class CardPaymentDataSet1 {
 			name = "TransactionToCapture";
 			definition = "Set of transaction to capture.";
 			minOccurs = 0;
-			type_lazy = () -> CardPaymentDataSetTransaction1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentDataSet1.DataSetIdentification, com.tools20022.repository.msg.CardPaymentDataSet1.Traceability,
-						com.tools20022.repository.msg.CardPaymentDataSet1.DataSetInitiator, com.tools20022.repository.msg.CardPaymentDataSet1.TransactionTotals, com.tools20022.repository.msg.CardPaymentDataSet1.CommonData,
-						com.tools20022.repository.msg.CardPaymentDataSet1.TransactionToCapture);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.DataSet);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentDataSet1.mmDataSetIdentification, com.tools20022.repository.msg.CardPaymentDataSet1.mmTraceability,
+						com.tools20022.repository.msg.CardPaymentDataSet1.mmDataSetInitiator, com.tools20022.repository.msg.CardPaymentDataSet1.mmTransactionTotals, com.tools20022.repository.msg.CardPaymentDataSet1.mmCommonData,
+						com.tools20022.repository.msg.CardPaymentDataSet1.mmTransactionToCapture);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.mmDataSet);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSet1";
 				definition = "Set of transactions to capture, sharing common characteristics.";
@@ -341,5 +349,53 @@ public class CardPaymentDataSet1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataSetIdentification1 getDataSetIdentification() {
+		return dataSetIdentification;
+	}
+
+	public void setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification1 dataSetIdentification) {
+		this.dataSetIdentification = dataSetIdentification;
+	}
+
+	public List<Traceability1> getTraceability() {
+		return traceability;
+	}
+
+	public void setTraceability(List<com.tools20022.repository.msg.Traceability1> traceability) {
+		this.traceability = traceability;
+	}
+
+	public GenericIdentification32 getDataSetInitiator() {
+		return dataSetInitiator;
+	}
+
+	public void setDataSetInitiator(com.tools20022.repository.msg.GenericIdentification32 dataSetInitiator) {
+		this.dataSetInitiator = dataSetInitiator;
+	}
+
+	public List<TransactionTotals1> getTransactionTotals() {
+		return transactionTotals;
+	}
+
+	public void setTransactionTotals(List<com.tools20022.repository.msg.TransactionTotals1> transactionTotals) {
+		this.transactionTotals = transactionTotals;
+	}
+
+	public CommonData1 getCommonData() {
+		return commonData;
+	}
+
+	public void setCommonData(com.tools20022.repository.msg.CommonData1 commonData) {
+		this.commonData = commonData;
+	}
+
+	public List<CardPaymentDataSetTransaction1> getTransactionToCapture() {
+		return transactionToCapture;
+	}
+
+	public void setTransactionToCapture(List<com.tools20022.repository.msg.CardPaymentDataSetTransaction1> transactionToCapture) {
+		this.transactionToCapture = transactionToCapture;
 	}
 }

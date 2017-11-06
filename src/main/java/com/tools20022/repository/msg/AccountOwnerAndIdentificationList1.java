@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * List of account owner and identifiers.
@@ -32,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountOwnerAndIdentificationList1#List
- * AccountOwnerAndIdentificationList1.List}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountOwnerAndIdentificationList1#mmList
+ * AccountOwnerAndIdentificationList1.mmList}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountOwnerAndIdentificationList1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.AccountOwnerAndIdentification1> list;
 	/**
 	 * List of the identifier pairs.
 	 * <p>
@@ -81,7 +83,7 @@ public class AccountOwnerAndIdentificationList1 {
 	 * definition} = "List of the identifier pairs."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd List = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmList = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountOwnerAndIdentificationList1.mmObject();
 			isDerived = false;
@@ -90,21 +92,29 @@ public class AccountOwnerAndIdentificationList1 {
 			name = "List";
 			definition = "List of the identifier pairs.";
 			minOccurs = 1;
-			type_lazy = () -> AccountOwnerAndIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountOwnerAndIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountOwnerAndIdentificationList1.List);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountOwnerAndIdentificationList1.mmList);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountOwnerAndIdentificationList1";
 				definition = "List of account owner and identifiers.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AccountOwnerAndIdentification1> getList() {
+		return list;
+	}
+
+	public void setList(List<com.tools20022.repository.msg.AccountOwnerAndIdentification1> list) {
+		this.list = list;
 	}
 }

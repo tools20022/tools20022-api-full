@@ -38,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#ISIN
- * SecurityIdentification5Choice.ISIN}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#mmISIN
+ * SecurityIdentification5Choice.mmISIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#OtherIdentification
- * SecurityIdentification5Choice.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#mmOtherIdentification
+ * SecurityIdentification5Choice.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#InstrumentDescription
- * SecurityIdentification5Choice.InstrumentDescription}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification5Choice#mmInstrumentDescription
+ * SecurityIdentification5Choice.mmInstrumentDescription}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityIdentification5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINIdentifier iSIN;
 	/**
 	 * International Securities Identification Number (ISIN). A numbering system
 	 * designed by the United Nation's International Organisation for
@@ -91,8 +92,8 @@ public class SecurityIdentification5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,20 +114,21 @@ public class SecurityIdentification5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> SecurityIdentification5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	protected AlternateSecurityIdentification1 otherIdentification;
 	/**
 	 * Proprietary identification of a security assigned by an institution or
 	 * organisation.
@@ -163,20 +165,21 @@ public class SecurityIdentification5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityIdentification5Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> SecurityIdentification5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Proprietary identification of a security assigned by an institution or organisation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AlternateSecurityIdentification1.mmObject();
 		}
 	};
+	protected SecurityInstrumentDescription1 instrumentDescription;
 	/**
 	 * Provides the ability to describe the instrument through a description and
 	 * main characteristics.
@@ -190,8 +193,8 @@ public class SecurityIdentification5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#IdentifiedSecurity
-	 * SecuritiesIdentification.IdentifiedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmIdentifiedSecurity
+	 * SecuritiesIdentification.mmIdentifiedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -212,34 +215,58 @@ public class SecurityIdentification5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstrumentDescription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrumentDescription = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmIdentifiedSecurity;
 			componentContext_lazy = () -> SecurityIdentification5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.IdentifiedSecurity;
 			isDerived = false;
 			xmlTag = "InstrmDesc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentDescription";
 			definition = "Provides the ability to describe the instrument through a description and main characteristics. ";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityInstrumentDescription1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecurityInstrumentDescription1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification5Choice.ISIN, com.tools20022.repository.choice.SecurityIdentification5Choice.OtherIdentification,
-						com.tools20022.repository.choice.SecurityIdentification5Choice.InstrumentDescription);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification5Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification5Choice.mmOtherIdentification,
+						com.tools20022.repository.choice.SecurityIdentification5Choice.mmInstrumentDescription);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityIdentification5Choice";
 				definition = "Choice between ISIN and an alternative format for the identification of a financial instrument. ISIN is the preferred format.\n";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINIdentifier getISIN() {
+		return iSIN;
+	}
+
+	public void setISIN(ISINIdentifier iSIN) {
+		this.iSIN = iSIN;
+	}
+
+	public AlternateSecurityIdentification1 getOtherIdentification() {
+		return otherIdentification;
+	}
+
+	public void setOtherIdentification(AlternateSecurityIdentification1 otherIdentification) {
+		this.otherIdentification = otherIdentification;
+	}
+
+	public SecurityInstrumentDescription1 getInstrumentDescription() {
+		return instrumentDescription;
+	}
+
+	public void setInstrumentDescription(SecurityInstrumentDescription1 instrumentDescription) {
+		this.instrumentDescription = instrumentDescription;
 	}
 }

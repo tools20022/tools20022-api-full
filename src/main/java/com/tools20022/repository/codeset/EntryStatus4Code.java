@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * EntryStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus4Code#Booked
- * EntryStatus4Code.Booked}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus4Code#Pending
- * EntryStatus4Code.Pending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus4Code#mmBooked
+ * EntryStatus4Code.mmBooked}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus4Code#mmPending
+ * EntryStatus4Code.mmPending}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class EntryStatus4Code extends EntryStatusCode {
 	 * name} = "Booked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Booked = new MMCode() {
+	public static final MMCode mmBooked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Booked";
@@ -102,7 +102,7 @@ public class EntryStatus4Code extends EntryStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -113,12 +113,12 @@ public class EntryStatus4Code extends EntryStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOOK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EntryStatus4Code";
 				definition = "Specifies the status of an entry.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus4Code.Booked, com.tools20022.repository.codeset.EntryStatus4Code.Pending);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus4Code.mmBooked, com.tools20022.repository.codeset.EntryStatus4Code.mmPending);
 				trace_lazy = () -> EntryStatusCode.mmObject();
 			}
 		});

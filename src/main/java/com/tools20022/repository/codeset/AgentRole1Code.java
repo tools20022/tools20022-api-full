@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgentRole1Code#PrincipalAgent
- * AgentRole1Code.PrincipalAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRole1Code#SubAgent
- * AgentRole1Code.SubAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgentRole1Code#mmPrincipalAgent
+ * AgentRole1Code.mmPrincipalAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentRole1Code#mmSubAgent
+ * AgentRole1Code.mmSubAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class AgentRole1Code extends AgentRoleCode {
 	 * name} = "PrincipalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode PrincipalAgent = new MMCode() {
+	public static final MMCode mmPrincipalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalAgent";
@@ -102,7 +102,7 @@ public class AgentRole1Code extends AgentRoleCode {
 	 * name} = "SubAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode SubAgent = new MMCode() {
+	public static final MMCode mmSubAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAgent";
@@ -113,12 +113,12 @@ public class AgentRole1Code extends AgentRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AgentRole1Code";
 				definition = "Specifies the role of the Issuer agent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentRole1Code.PrincipalAgent, com.tools20022.repository.codeset.AgentRole1Code.SubAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentRole1Code.mmPrincipalAgent, com.tools20022.repository.codeset.AgentRole1Code.mmSubAgent);
 				trace_lazy = () -> AgentRoleCode.mmObject();
 			}
 		});

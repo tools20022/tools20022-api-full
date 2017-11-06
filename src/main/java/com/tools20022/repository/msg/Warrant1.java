@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Warrant1#ExpiryDate
- * Warrant1.ExpiryDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Warrant1#Multiplier
- * Warrant1.Multiplier}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Warrant1#SubscriptionPrice
- * Warrant1.SubscriptionPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Warrant1#mmExpiryDate
+ * Warrant1.mmExpiryDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Warrant1#mmMultiplier
+ * Warrant1.mmMultiplier}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Warrant1#mmSubscriptionPrice
+ * Warrant1.mmSubscriptionPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Warrant1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime expiryDate;
 	/**
 	 * Date on which the warrant expires.
 	 * <p>
@@ -77,8 +78,8 @@ public class Warrant1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#ExpiryDate
-	 * Asset.ExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmExpiryDate
+	 * Asset.mmExpiryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Warrant1
@@ -96,20 +97,21 @@ public class Warrant1 {
 	 * definition} = "Date on which the warrant expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmExpiryDate;
 			componentContext_lazy = () -> Warrant1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.ExpiryDate;
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which the warrant expires.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected BaseOneRate multiplier;
 	/**
 	 * Specifies the ratio or multiply factor used to convert from contracts to
 	 * shares.
@@ -123,8 +125,8 @@ public class Warrant1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Warrant#Multiplier
-	 * Warrant.Multiplier}</li>
+	 * {@linkplain com.tools20022.repository.entity.Warrant#mmMultiplier
+	 * Warrant.mmMultiplier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Warrant1
@@ -144,20 +146,21 @@ public class Warrant1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Multiplier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMultiplier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.mmMultiplier;
 			componentContext_lazy = () -> Warrant1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.Multiplier;
 			isDerived = false;
 			xmlTag = "Mltplr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multiplier";
 			definition = "Specifies the ratio or multiply factor used to convert from contracts to shares.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected Price1 subscriptionPrice;
 	/**
 	 * Pre-determined price at which the holder of a warrant is entitled to buy
 	 * the underlying instrument.
@@ -170,8 +173,8 @@ public class Warrant1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Warrant#SubscriptionPrice
-	 * Warrant.SubscriptionPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Warrant#mmSubscriptionPrice
+	 * Warrant.mmSubscriptionPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Warrant1
@@ -191,32 +194,56 @@ public class Warrant1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubscriptionPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubscriptionPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.mmSubscriptionPrice;
 			componentContext_lazy = () -> Warrant1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.SubscriptionPrice;
 			isDerived = false;
 			xmlTag = "SbcptPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionPrice";
 			definition = "Pre-determined price at which the holder of a warrant is entitled to buy the underlying instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Warrant1.ExpiryDate, com.tools20022.repository.msg.Warrant1.Multiplier, com.tools20022.repository.msg.Warrant1.SubscriptionPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Warrant1.mmExpiryDate, com.tools20022.repository.msg.Warrant1.mmMultiplier, com.tools20022.repository.msg.Warrant1.mmSubscriptionPrice);
 				trace_lazy = () -> Warrant.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Warrant1";
 				definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getExpiryDate() {
+		return expiryDate;
+	}
+
+	public void setExpiryDate(ISODateTime expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+
+	public BaseOneRate getMultiplier() {
+		return multiplier;
+	}
+
+	public void setMultiplier(BaseOneRate multiplier) {
+		this.multiplier = multiplier;
+	}
+
+	public Price1 getSubscriptionPrice() {
+		return subscriptionPrice;
+	}
+
+	public void setSubscriptionPrice(com.tools20022.repository.msg.Price1 subscriptionPrice) {
+		this.subscriptionPrice = subscriptionPrice;
 	}
 }

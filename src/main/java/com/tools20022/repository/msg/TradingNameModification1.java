@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradingNameModification1#ModificationCode
- * TradingNameModification1.ModificationCode}</li>
+ * {@linkplain com.tools20022.repository.msg.TradingNameModification1#mmModificationCode
+ * TradingNameModification1.mmModificationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradingNameModification1#TradingName
- * TradingNameModification1.TradingName}</li>
+ * {@linkplain com.tools20022.repository.msg.TradingNameModification1#mmTradingName
+ * TradingNameModification1.mmTradingName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradingNameModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Modification1Code modificationCode;
 	/**
 	 * Specifies the type of change.
 	 * <p>
@@ -91,7 +92,7 @@ public class TradingNameModification1 {
 	 * definition} = "Specifies the type of change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TradingNameModification1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class TradingNameModification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationCode";
 			definition = "Specifies the type of change.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
 		}
 	};
+	protected Max350Text tradingName;
 	/**
 	 * Name used by a business for commercial purposes, although its registered
 	 * legal name, used for contracts and other formal situations, may be
@@ -118,8 +120,8 @@ public class TradingNameModification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationName#TradingName
-	 * OrganisationName.TradingName}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationName#mmTradingName
+	 * OrganisationName.mmTradingName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,17 +142,17 @@ public class TradingNameModification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmTradingName;
 			componentContext_lazy = () -> TradingNameModification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.TradingName;
 			isDerived = false;
 			xmlTag = "TradgNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingName";
 			definition = "Name used by a business for commercial purposes, although its registered legal name, used for contracts and other formal situations, may be another.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -158,14 +160,30 @@ public class TradingNameModification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingNameModification1.ModificationCode, com.tools20022.repository.msg.TradingNameModification1.TradingName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingNameModification1.mmModificationCode, com.tools20022.repository.msg.TradingNameModification1.mmTradingName);
 				trace_lazy = () -> OrganisationName.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingNameModification1";
 				definition = "Specifies the type of change to the trading name.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Modification1Code getModificationCode() {
+		return modificationCode;
+	}
+
+	public void setModificationCode(Modification1Code modificationCode) {
+		this.modificationCode = modificationCode;
+	}
+
+	public Max350Text getTradingName() {
+		return tradingName;
+	}
+
+	public void setTradingName(Max350Text tradingName) {
+		this.tradingName = tradingName;
 	}
 }

@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OwnerType1#Type
- * OwnerType1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OwnerType1#MandateType
- * OwnerType1.MandateType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OwnerType1#Proprietary
- * OwnerType1.Proprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OwnerType1#mmType
+ * OwnerType1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OwnerType1#mmMandateType
+ * OwnerType1.mmMandateType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OwnerType1#mmProprietary
+ * OwnerType1.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OwnerType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountOwnerType1Code type;
 	/**
 	 * Type of ownership.
 	 * <p>
@@ -77,7 +78,8 @@ public class OwnerType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#Player Role.Player}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmPlayer Role.mmPlayer}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.OwnerType1
@@ -95,20 +97,21 @@ public class OwnerType1 {
 	 * definition} = "Type of ownership."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmPlayer;
 			componentContext_lazy = () -> OwnerType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.Player;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of ownership.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AccountOwnerType1Code.mmObject();
 		}
 	};
+	protected AccountPermissionType1Code mandateType;
 	/**
 	 * Type of mandate.
 	 * <p>
@@ -122,8 +125,8 @@ public class OwnerType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MandatePartyRole#Mandate
-	 * MandatePartyRole.Mandate}</li>
+	 * {@linkplain com.tools20022.repository.entity.MandatePartyRole#mmMandate
+	 * MandatePartyRole.mmMandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.OwnerType1
@@ -141,20 +144,21 @@ public class OwnerType1 {
 	 * definition} = "Type of mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MandateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMandateType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MandatePartyRole.mmMandate;
 			componentContext_lazy = () -> OwnerType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MandatePartyRole.Mandate;
 			isDerived = false;
 			xmlTag = "MndtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateType";
 			definition = "Type of mandate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AccountPermissionType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietary;
 	/**
 	 * Additional information about owner type or mandate type in proprietary
 	 * format.
@@ -167,8 +171,8 @@ public class OwnerType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.OwnerType1
@@ -188,33 +192,57 @@ public class OwnerType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> OwnerType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Additional information about owner type or mandate type in proprietary format.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OwnerType1.Type, com.tools20022.repository.msg.OwnerType1.MandateType, com.tools20022.repository.msg.OwnerType1.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OwnerType1.mmType, com.tools20022.repository.msg.OwnerType1.mmMandateType, com.tools20022.repository.msg.OwnerType1.mmProprietary);
 				trace_lazy = () -> AccountOwnerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OwnerType1";
 				definition = "Specifies the owner type and mandate type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountOwnerType1Code getType() {
+		return type;
+	}
+
+	public void setType(AccountOwnerType1Code type) {
+		this.type = type;
+	}
+
+	public AccountPermissionType1Code getMandateType() {
+		return mandateType;
+	}
+
+	public void setMandateType(AccountPermissionType1Code mandateType) {
+		this.mandateType = mandateType;
+	}
+
+	public GenericIdentification1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(com.tools20022.repository.msg.GenericIdentification1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

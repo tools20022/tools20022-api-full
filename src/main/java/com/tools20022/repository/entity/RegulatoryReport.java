@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information needed due to regulatory and statutory requirements.
@@ -39,33 +40,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReport#DebitCreditReportingIndicator
- * RegulatoryReport.DebitCreditReportingIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RegulatoryReport#Authority
- * RegulatoryReport.Authority}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RegulatoryReport#Code
- * RegulatoryReport.Code}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RegulatoryReport#Amount
- * RegulatoryReport.Amount}</li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmDebitCreditReportingIndicator
+ * RegulatoryReport.mmDebitCreditReportingIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReport#Description
- * RegulatoryReport.Description}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RegulatoryReport#Type
- * RegulatoryReport.Type}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RegulatoryReport#Date
- * RegulatoryReport.Date}</li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmAuthority
+ * RegulatoryReport.mmAuthority}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RegulatoryReport#mmCode
+ * RegulatoryReport.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RegulatoryReport#mmAmount
+ * RegulatoryReport.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReport#ReportedTransaction
- * RegulatoryReport.ReportedTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmDescription
+ * RegulatoryReport.mmDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RegulatoryReport#mmType
+ * RegulatoryReport.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RegulatoryReport#mmDate
+ * RegulatoryReport.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReport#UnderlyingProduct
- * RegulatoryReport.UnderlyingProduct}</li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmReportedTransaction
+ * RegulatoryReport.mmReportedTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReport#NonStandardFlag
- * RegulatoryReport.NonStandardFlag}</li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmUnderlyingProduct
+ * RegulatoryReport.mmUnderlyingProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReport#ReportingPartyRole
- * RegulatoryReport.ReportingPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmNonStandardFlag
+ * RegulatoryReport.mmNonStandardFlag}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmReportingPartyRole
+ * RegulatoryReport.mmReportingPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -73,14 +75,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#RegulatoryReport
- * RegulatoryAuthorityRole.RegulatoryReport}</li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#mmRegulatoryReport
+ * RegulatoryAuthorityRole.mmRegulatoryReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ReportingPartyRole#RegulatoryReport
- * ReportingPartyRole.RegulatoryReport}</li>
+ * {@linkplain com.tools20022.repository.entity.ReportingPartyRole#mmRegulatoryReport
+ * ReportingPartyRole.mmRegulatoryReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#RegulatoryReport
- * FinancialTransaction.RegulatoryReport}</li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmRegulatoryReport
+ * FinancialTransaction.mmRegulatoryReport}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,22 +90,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#RegulatoryDetails
- * RegulatoryReporting2.RegulatoryDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RegulatoryReporting3#Details
- * RegulatoryReporting3.Details}</li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#mmRegulatoryDetails
+ * RegulatoryReporting2.mmRegulatoryDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RegulatoryReporting3#mmDetails
+ * RegulatoryReporting3.mmDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegulatoryReporting4#TradingSideTransactionReporting
- * RegulatoryReporting4.TradingSideTransactionReporting}</li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryReporting4#mmTradingSideTransactionReporting
+ * RegulatoryReporting4.mmTradingSideTransactionReporting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegulatoryReporting4#CounterpartySideTransactionReporting
- * RegulatoryReporting4.CounterpartySideTransactionReporting}</li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryReporting4#mmCounterpartySideTransactionReporting
+ * RegulatoryReporting4.mmCounterpartySideTransactionReporting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegulatoryReporting6#TradingSideTransactionReporting
- * RegulatoryReporting6.TradingSideTransactionReporting}</li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryReporting6#mmTradingSideTransactionReporting
+ * RegulatoryReporting6.mmTradingSideTransactionReporting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegulatoryReporting6#CounterpartySideTransactionReporting
- * RegulatoryReporting6.CounterpartySideTransactionReporting}</li>
+ * {@linkplain com.tools20022.repository.msg.RegulatoryReporting6#mmCounterpartySideTransactionReporting
+ * RegulatoryReporting6.mmCounterpartySideTransactionReporting}</li>
  * </ul>
  * </li>
  * <li>
@@ -131,8 +133,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -147,6 +149,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegulatoryReport {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected RegulatoryReportingTypeCode debitCreditReportingIndicator;
 	/**
 	 * Identifies whether the regulatory reporting information applies to the
 	 * debit side, to the credit side or to both debit and credit sides of the
@@ -159,22 +162,22 @@ public class RegulatoryReport {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.RegulatoryReportingTypeCode
 	 * RegulatoryReportingTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#DebitCreditReportingIndicator
-	 * RegulatoryReporting2.DebitCreditReportingIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting3#DebitCreditReportingIndicator
-	 * RegulatoryReporting3.DebitCreditReportingIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport
 	 * RegulatoryReport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#mmDebitCreditReportingIndicator
+	 * RegulatoryReporting2.mmDebitCreditReportingIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting3#mmDebitCreditReportingIndicator
+	 * RegulatoryReporting3.mmDebitCreditReportingIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -188,19 +191,20 @@ public class RegulatoryReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DebitCreditReportingIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDebitCreditReportingIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting2.DebitCreditReportingIndicator, com.tools20022.repository.msg.RegulatoryReporting3.DebitCreditReportingIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting2.mmDebitCreditReportingIndicator, com.tools20022.repository.msg.RegulatoryReporting3.mmDebitCreditReportingIndicator);
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DebitCreditReportingIndicator";
 			definition = "Identifies whether the regulatory reporting information applies to the debit side, to the credit side or to both debit and credit sides of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RegulatoryReportingTypeCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.RegulatoryAuthorityRole> authority;
 	/**
 	 * Entity requiring the regulatory reporting information.
 	 * <p>
@@ -209,8 +213,8 @@ public class RegulatoryReport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#RegulatoryReport
-	 * RegulatoryAuthorityRole.RegulatoryReport}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#mmRegulatoryReport
+	 * RegulatoryAuthorityRole.mmRegulatoryReport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -219,22 +223,22 @@ public class RegulatoryReport {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole
 	 * RegulatoryAuthorityRole}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#Authority
-	 * RegulatoryReporting2.Authority}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting3#Authority
-	 * RegulatoryReporting3.Authority}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport
 	 * RegulatoryReport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting2#mmAuthority
+	 * RegulatoryReporting2.mmAuthority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting3#mmAuthority
+	 * RegulatoryReporting3.mmAuthority}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -246,20 +250,21 @@ public class RegulatoryReport {
 	 * definition} = "Entity requiring the regulatory reporting information."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Authority = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAuthority = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting2.Authority, com.tools20022.repository.msg.RegulatoryReporting3.Authority);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting2.mmAuthority, com.tools20022.repository.msg.RegulatoryReporting3.mmAuthority);
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Authority";
 			definition = "Entity requiring the regulatory reporting information.";
 			minOccurs = 1;
-			type_lazy = () -> RegulatoryAuthorityRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.RegulatoryAuthorityRole.RegulatoryReport;
+			opposite_lazy = () -> com.tools20022.repository.entity.RegulatoryAuthorityRole.mmRegulatoryReport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.RegulatoryAuthorityRole.mmObject();
 		}
 	};
+	protected Max10Text code;
 	/**
 	 * Specifies the nature, purpose, and reason for the transaction to be
 	 * reported for regulatory and statutory requirements in a coded form.
@@ -270,22 +275,22 @@ public class RegulatoryReport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max10Text
 	 * Max10Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting2#Code
-	 * StructuredRegulatoryReporting2.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting3#Code
-	 * StructuredRegulatoryReporting3.Code}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport
 	 * RegulatoryReport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting2#mmCode
+	 * StructuredRegulatoryReporting2.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting3#mmCode
+	 * StructuredRegulatoryReporting3.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -299,19 +304,20 @@ public class RegulatoryReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Code = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting2.Code, com.tools20022.repository.msg.StructuredRegulatoryReporting3.Code);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmCode, com.tools20022.repository.msg.StructuredRegulatoryReporting3.mmCode);
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Code";
 			definition = "Specifies the nature, purpose, and reason for the transaction to be reported for regulatory and statutory requirements in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max10Text.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount of money to be reported for regulatory and statutory requirements.
 	 * <p>
@@ -322,22 +328,22 @@ public class RegulatoryReport {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting2#Amount
-	 * StructuredRegulatoryReporting2.Amount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting3#Amount
-	 * StructuredRegulatoryReporting3.Amount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport
 	 * RegulatoryReport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting2#mmAmount
+	 * StructuredRegulatoryReporting2.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting3#mmAmount
+	 * StructuredRegulatoryReporting3.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -351,19 +357,20 @@ public class RegulatoryReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Amount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting2.Amount, com.tools20022.repository.msg.StructuredRegulatoryReporting3.Amount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmAmount, com.tools20022.repository.msg.StructuredRegulatoryReporting3.mmAmount);
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of money to be reported for regulatory and statutory requirements.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max35Text description;
 	/**
 	 * Additional details that may be necessary to cater for specific domestic
 	 * regulatory requirements.
@@ -374,22 +381,22 @@ public class RegulatoryReport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting2#Information
-	 * StructuredRegulatoryReporting2.Information}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting3#Information
-	 * StructuredRegulatoryReporting3.Information}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport
 	 * RegulatoryReport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting2#mmInformation
+	 * StructuredRegulatoryReporting2.mmInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting3#mmInformation
+	 * StructuredRegulatoryReporting3.mmInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -403,19 +410,20 @@ public class RegulatoryReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Description = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting2.Information, com.tools20022.repository.msg.StructuredRegulatoryReporting3.Information);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmInformation, com.tools20022.repository.msg.StructuredRegulatoryReporting3.mmInformation);
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Additional details that may be necessary to cater for specific domestic regulatory requirements.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text type;
 	/**
 	 * Specifies the type of the information supplied in the regulatory
 	 * reporting details.
@@ -426,28 +434,28 @@ public class RegulatoryReport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting3#Type
-	 * StructuredRegulatoryReporting3.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction1#ReportedTransactionStatus
-	 * ForeignExchangeSwapTransaction1.ReportedTransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction2#ReportedTransactionStatus
-	 * ForeignExchangeSwapTransaction2.ReportedTransactionStatus}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction3#ReportedTransactionStatus
-	 * ForeignExchangeSwapTransaction3.ReportedTransactionStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport
 	 * RegulatoryReport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting3#mmType
+	 * StructuredRegulatoryReporting3.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction1#mmReportedTransactionStatus
+	 * ForeignExchangeSwapTransaction1.mmReportedTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction2#mmReportedTransactionStatus
+	 * ForeignExchangeSwapTransaction2.mmReportedTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction3#mmReportedTransactionStatus
+	 * ForeignExchangeSwapTransaction3.mmReportedTransactionStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -461,20 +469,21 @@ public class RegulatoryReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Type = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting3.Type, com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.ReportedTransactionStatus,
-					com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.ReportedTransactionStatus, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.ReportedTransactionStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting3.mmType, com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmReportedTransactionStatus,
+					com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmReportedTransactionStatus, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmReportedTransactionStatus);
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of the information supplied in the regulatory reporting details.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Date related to the specified type of regulatory reporting details.
 	 * <p>
@@ -484,19 +493,19 @@ public class RegulatoryReport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting3#Date
-	 * StructuredRegulatoryReporting3.Date}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport
 	 * RegulatoryReport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRegulatoryReporting3#mmDate
+	 * StructuredRegulatoryReporting3.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -509,19 +518,20 @@ public class RegulatoryReport {
 	 * "Date related to the specified type of regulatory reporting details."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Date = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting3.Date);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting3.mmDate);
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Date";
 			definition = "Date related to the specified type of regulatory reporting details.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected FinancialTransaction reportedTransaction;
 	/**
 	 * Trade for which a regulatory report is provided.
 	 * <p>
@@ -530,8 +540,8 @@ public class RegulatoryReport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.FinancialTransaction#RegulatoryReport
-	 * FinancialTransaction.RegulatoryReport}</li>
+	 * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmRegulatoryReport
+	 * FinancialTransaction.mmRegulatoryReport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -556,20 +566,21 @@ public class RegulatoryReport {
 	 * definition} = "Trade for which a regulatory report is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ReportedTransaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmReportedTransaction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReportedTransaction";
 			definition = "Trade for which a regulatory report is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialTransaction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.RegulatoryReport;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmRegulatoryReport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
 		}
 	};
+	protected Max35Text underlyingProduct;
 	/**
 	 * Specifies the underlying product type.
 	 * <p>
@@ -579,25 +590,25 @@ public class RegulatoryReport {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting1#UnderlyingProductIdentifier
-	 * RegulatoryReporting1.UnderlyingProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting4#UnderlyingProductIdentifier
-	 * RegulatoryReporting4.UnderlyingProductIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting6#UnderlyingProductIdentifier
-	 * RegulatoryReporting6.UnderlyingProductIdentifier}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport
 	 * RegulatoryReport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting1#mmUnderlyingProductIdentifier
+	 * RegulatoryReporting1.mmUnderlyingProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting4#mmUnderlyingProductIdentifier
+	 * RegulatoryReporting4.mmUnderlyingProductIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting6#mmUnderlyingProductIdentifier
+	 * RegulatoryReporting6.mmUnderlyingProductIdentifier}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -609,20 +620,21 @@ public class RegulatoryReport {
 	 * definition} = "Specifies the underlying product type."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute UnderlyingProduct = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmUnderlyingProduct = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting1.UnderlyingProductIdentifier, com.tools20022.repository.msg.RegulatoryReporting4.UnderlyingProductIdentifier,
-					com.tools20022.repository.msg.RegulatoryReporting6.UnderlyingProductIdentifier);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting1.mmUnderlyingProductIdentifier, com.tools20022.repository.msg.RegulatoryReporting4.mmUnderlyingProductIdentifier,
+					com.tools20022.repository.msg.RegulatoryReporting6.mmUnderlyingProductIdentifier);
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingProduct";
 			definition = "Specifies the underlying product type.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected YesNoIndicator nonStandardFlag;
 	/**
 	 * Specifies whether the reportable transaction has one or more additional
 	 * terms or provisions, other than those listed in the required real-time
@@ -636,25 +648,25 @@ public class RegulatoryReport {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting1#NonStandardFlag
-	 * RegulatoryReporting1.NonStandardFlag}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting4#NonStandardFlag
-	 * RegulatoryReporting4.NonStandardFlag}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting6#NonStandardFlag
-	 * RegulatoryReporting6.NonStandardFlag}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RegulatoryReport
 	 * RegulatoryReport}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting1#mmNonStandardFlag
+	 * RegulatoryReporting1.mmNonStandardFlag}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting4#mmNonStandardFlag
+	 * RegulatoryReporting4.mmNonStandardFlag}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting6#mmNonStandardFlag
+	 * RegulatoryReporting6.mmNonStandardFlag}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -668,20 +680,21 @@ public class RegulatoryReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NonStandardFlag = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNonStandardFlag = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting1.NonStandardFlag, com.tools20022.repository.msg.RegulatoryReporting4.NonStandardFlag,
-					com.tools20022.repository.msg.RegulatoryReporting6.NonStandardFlag);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting1.mmNonStandardFlag, com.tools20022.repository.msg.RegulatoryReporting4.mmNonStandardFlag,
+					com.tools20022.repository.msg.RegulatoryReporting6.mmNonStandardFlag);
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NonStandardFlag";
 			definition = "Specifies whether the reportable transaction has one or more additional terms or provisions, other than those listed in the required real-time data fields, that materially affects the price of the reportable transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.ReportingPartyRole> reportingPartyRole;
 	/**
 	 * Party responsible for providing regulatory reports.
 	 * <p>
@@ -690,8 +703,8 @@ public class RegulatoryReport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ReportingPartyRole#RegulatoryReport
-	 * ReportingPartyRole.RegulatoryReport}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReportingPartyRole#mmRegulatoryReport
+	 * ReportingPartyRole.mmRegulatoryReport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -715,7 +728,7 @@ public class RegulatoryReport {
 	 * definition} = "Party responsible for providing regulatory reports."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ReportingPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmReportingPartyRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> RegulatoryReport.mmObject();
 			isDerived = false;
@@ -723,32 +736,120 @@ public class RegulatoryReport {
 			name = "ReportingPartyRole";
 			definition = "Party responsible for providing regulatory reports.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.ReportingPartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ReportingPartyRole.RegulatoryReport;
+			opposite_lazy = () -> com.tools20022.repository.entity.ReportingPartyRole.mmRegulatoryReport;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ReportingPartyRole.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryReport";
 				definition = "Information needed due to regulatory and statutory requirements.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegulatoryAuthorityRole.RegulatoryReport, com.tools20022.repository.entity.ReportingPartyRole.RegulatoryReport,
-						com.tools20022.repository.entity.FinancialTransaction.RegulatoryReport);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting2.RegulatoryDetails, com.tools20022.repository.msg.RegulatoryReporting3.Details,
-						com.tools20022.repository.msg.RegulatoryReporting4.TradingSideTransactionReporting, com.tools20022.repository.msg.RegulatoryReporting4.CounterpartySideTransactionReporting,
-						com.tools20022.repository.msg.RegulatoryReporting6.TradingSideTransactionReporting, com.tools20022.repository.msg.RegulatoryReporting6.CounterpartySideTransactionReporting);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegulatoryReport.DebitCreditReportingIndicator, com.tools20022.repository.entity.RegulatoryReport.Authority,
-						com.tools20022.repository.entity.RegulatoryReport.Code, com.tools20022.repository.entity.RegulatoryReport.Amount, com.tools20022.repository.entity.RegulatoryReport.Description,
-						com.tools20022.repository.entity.RegulatoryReport.Type, com.tools20022.repository.entity.RegulatoryReport.Date, com.tools20022.repository.entity.RegulatoryReport.ReportedTransaction,
-						com.tools20022.repository.entity.RegulatoryReport.UnderlyingProduct, com.tools20022.repository.entity.RegulatoryReport.NonStandardFlag, com.tools20022.repository.entity.RegulatoryReport.ReportingPartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegulatoryAuthorityRole.mmRegulatoryReport, com.tools20022.repository.entity.ReportingPartyRole.mmRegulatoryReport,
+						com.tools20022.repository.entity.FinancialTransaction.mmRegulatoryReport);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting2.mmRegulatoryDetails, com.tools20022.repository.msg.RegulatoryReporting3.mmDetails,
+						com.tools20022.repository.msg.RegulatoryReporting4.mmTradingSideTransactionReporting, com.tools20022.repository.msg.RegulatoryReporting4.mmCounterpartySideTransactionReporting,
+						com.tools20022.repository.msg.RegulatoryReporting6.mmTradingSideTransactionReporting, com.tools20022.repository.msg.RegulatoryReporting6.mmCounterpartySideTransactionReporting);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegulatoryReport.mmDebitCreditReportingIndicator, com.tools20022.repository.entity.RegulatoryReport.mmAuthority,
+						com.tools20022.repository.entity.RegulatoryReport.mmCode, com.tools20022.repository.entity.RegulatoryReport.mmAmount, com.tools20022.repository.entity.RegulatoryReport.mmDescription,
+						com.tools20022.repository.entity.RegulatoryReport.mmType, com.tools20022.repository.entity.RegulatoryReport.mmDate, com.tools20022.repository.entity.RegulatoryReport.mmReportedTransaction,
+						com.tools20022.repository.entity.RegulatoryReport.mmUnderlyingProduct, com.tools20022.repository.entity.RegulatoryReport.mmNonStandardFlag, com.tools20022.repository.entity.RegulatoryReport.mmReportingPartyRole);
 				derivationComponent_lazy = () -> Arrays.asList(RegulatoryStipulations1.mmObject(), StructuredRegulatoryReporting2.mmObject(), RegulatoryReporting2.mmObject(), StructuredRegulatoryReporting3.mmObject(),
 						RegulatoryReporting3.mmObject(), RegulatoryReporting1.mmObject(), RegulatoryReporting4.mmObject(), RegulatoryReporting6.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RegulatoryReportingTypeCode getDebitCreditReportingIndicator() {
+		return debitCreditReportingIndicator;
+	}
+
+	public void setDebitCreditReportingIndicator(RegulatoryReportingTypeCode debitCreditReportingIndicator) {
+		this.debitCreditReportingIndicator = debitCreditReportingIndicator;
+	}
+
+	public List<RegulatoryAuthorityRole> getAuthority() {
+		return authority;
+	}
+
+	public void setAuthority(List<com.tools20022.repository.entity.RegulatoryAuthorityRole> authority) {
+		this.authority = authority;
+	}
+
+	public Max10Text getCode() {
+		return code;
+	}
+
+	public void setCode(Max10Text code) {
+		this.code = code;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public Max35Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max35Text description) {
+		this.description = description;
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public FinancialTransaction getReportedTransaction() {
+		return reportedTransaction;
+	}
+
+	public void setReportedTransaction(com.tools20022.repository.entity.FinancialTransaction reportedTransaction) {
+		this.reportedTransaction = reportedTransaction;
+	}
+
+	public Max35Text getUnderlyingProduct() {
+		return underlyingProduct;
+	}
+
+	public void setUnderlyingProduct(Max35Text underlyingProduct) {
+		this.underlyingProduct = underlyingProduct;
+	}
+
+	public YesNoIndicator getNonStandardFlag() {
+		return nonStandardFlag;
+	}
+
+	public void setNonStandardFlag(YesNoIndicator nonStandardFlag) {
+		this.nonStandardFlag = nonStandardFlag;
+	}
+
+	public List<ReportingPartyRole> getReportingPartyRole() {
+		return reportingPartyRole;
+	}
+
+	public void setReportingPartyRole(List<com.tools20022.repository.entity.ReportingPartyRole> reportingPartyRole) {
+		this.reportingPartyRole = reportingPartyRole;
 	}
 }

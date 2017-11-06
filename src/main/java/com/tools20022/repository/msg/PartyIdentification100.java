@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification100#Identification
- * PartyIdentification100.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification100#LEI
- * PartyIdentification100.LEI}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification100#mmIdentification
+ * PartyIdentification100.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification100#mmLEI
+ * PartyIdentification100.mmLEI}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,30 +51,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#SenderIdentification
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.SenderIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmSenderIdentification
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmSenderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#ReceiverIdentification
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.ReceiverIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmReceiverIdentification
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmReceiverIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#AccountServicer
- * SecuritiesBalanceCustodyReportV09.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmAccountServicer
+ * SecuritiesBalanceCustodyReportV09.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#AccountServicer
- * SecuritiesBalanceAccountingReportV09.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmAccountServicer
+ * SecuritiesBalanceAccountingReportV09.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#SenderIdentification
- * SecuritiesBalanceTransparencyReportV02.SenderIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmSenderIdentification
+ * SecuritiesBalanceTransparencyReportV02.mmSenderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#ReceiverIdentification
- * SecuritiesBalanceTransparencyReportV02.ReceiverIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmReceiverIdentification
+ * SecuritiesBalanceTransparencyReportV02.mmReceiverIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification100 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification71Choice identification;
 	/**
 	 * Unique identification of the party.
 	 * <p>
@@ -122,28 +123,29 @@ public class PartyIdentification100 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification111#Identification
-	 * PartyIdentification111.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification111#mmIdentification
+	 * PartyIdentification111.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification100.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification100.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification111.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification111.mmIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification71Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected LEIIdentifier lEI;
 	/**
 	 * Legal entity identification as an alternate identification for a party.
 	 * <p>
@@ -175,13 +177,14 @@ public class PartyIdentification100 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification111#LEI
-	 * PartyIdentification111.LEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification111#mmLEI
+	 * PartyIdentification111.mmLEI}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentification100.mmObject();
 			isDerived = false;
@@ -189,9 +192,9 @@ public class PartyIdentification100 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification111.LEI);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification111.mmLEI);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -199,18 +202,34 @@ public class PartyIdentification100 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification100.Identification, com.tools20022.repository.msg.PartyIdentification100.LEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification100.mmIdentification, com.tools20022.repository.msg.PartyIdentification100.mmLEI);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmSenderIdentification,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmReceiverIdentification, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmAccountServicer,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmAccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmSenderIdentification,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmReceiverIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.SenderIdentification,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.ReceiverIdentification, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.AccountServicer,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.AccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.SenderIdentification,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.ReceiverIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification100";
 				definition = "Identification of the party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification71Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(PartyIdentification71Choice identification) {
+		this.identification = identification;
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
 	}
 }

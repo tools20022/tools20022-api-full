@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketIdentificationCode#Segment
- * MarketIdentificationCode.Segment}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketIdentificationCode#mmSegment
+ * MarketIdentificationCode.mmSegment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketIdentificationCode#Operating
- * MarketIdentificationCode.Operating}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketIdentificationCode#mmOperating
+ * MarketIdentificationCode.mmOperating}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +84,7 @@ public class MarketIdentificationCode {
 	 * definition} = "Market segment code."</li>
 	 * </ul>
 	 */
-	public static final MMCode Segment = new MMCode() {
+	public static final MMCode mmSegment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Segment";
@@ -114,7 +114,7 @@ public class MarketIdentificationCode {
 	 * definition} = "Market operating code."</li>
 	 * </ul>
 	 */
-	public static final MMCode Operating = new MMCode() {
+	public static final MMCode mmOperating = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operating";
@@ -127,11 +127,11 @@ public class MarketIdentificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentificationCode";
 				definition = "Specifies the type of market identification code which is being defined.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketIdentificationCode.Segment, com.tools20022.repository.codeset.MarketIdentificationCode.Operating);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketIdentificationCode.mmSegment, com.tools20022.repository.codeset.MarketIdentificationCode.mmOperating);
 				derivation_lazy = () -> Arrays.asList(MarketIdentification1Code.mmObject());
 			}
 		});

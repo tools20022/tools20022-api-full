@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest3#Environment
- * AcceptorReconciliationRequest3.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest3#mmEnvironment
+ * AcceptorReconciliationRequest3.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest3#Transaction
- * AcceptorReconciliationRequest3.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest3#mmTransaction
+ * AcceptorReconciliationRequest3.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03#ReconciliationRequest
- * AcceptorReconciliationRequestV03.ReconciliationRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03#mmReconciliationRequest
+ * AcceptorReconciliationRequestV03.mmReconciliationRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorReconciliationRequest3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardPaymentEnvironment25 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -94,8 +95,8 @@ public class AcceptorReconciliationRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#CardPaymentTotal
-	 * ReconciliationTransaction.CardPaymentTotal}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmCardPaymentTotal
+	 * ReconciliationTransaction.mmCardPaymentTotal}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,34 +117,35 @@ public class AcceptorReconciliationRequest3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest4#Environment
-	 * AcceptorReconciliationRequest4.Environment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest4#mmEnvironment
+	 * AcceptorReconciliationRequest4.mmEnvironment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest2#Environment
-	 * AcceptorReconciliationRequest2.Environment}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest2#mmEnvironment
+	 * AcceptorReconciliationRequest2.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmCardPaymentTotal;
 			componentContext_lazy = () -> AcceptorReconciliationRequest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.CardPaymentTotal;
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorReconciliationRequest2.Environment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorReconciliationRequest4.Environment);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorReconciliationRequest4.mmEnvironment);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorReconciliationRequest2.mmEnvironment;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentEnvironment25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment25.mmObject();
 		}
 	};
+	protected TransactionReconciliation2 transaction;
 	/**
 	 * Reconciliation transaction between an acceptor an acquirer.
 	 * <p>
@@ -179,49 +181,65 @@ public class AcceptorReconciliationRequest3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest4#Transaction
-	 * AcceptorReconciliationRequest4.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest4#mmTransaction
+	 * AcceptorReconciliationRequest4.mmTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest2#Transaction
-	 * AcceptorReconciliationRequest2.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest2#mmTransaction
+	 * AcceptorReconciliationRequest2.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcceptorReconciliationRequest3.mmObject();
 			businessComponentTrace_lazy = () -> ReconciliationTransaction.mmObject();
+			componentContext_lazy = () -> AcceptorReconciliationRequest3.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Reconciliation transaction between an acceptor an acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorReconciliationRequest2.Transaction;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorReconciliationRequest4.Transaction);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorReconciliationRequest4.mmTransaction);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorReconciliationRequest2.mmTransaction;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionReconciliation2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorReconciliationRequest3.Environment, com.tools20022.repository.msg.AcceptorReconciliationRequest3.Transaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorReconciliationRequest3.mmEnvironment, com.tools20022.repository.msg.AcceptorReconciliationRequest3.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03.mmReconciliationRequest);
 				trace_lazy = () -> ReconciliationTransaction.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03.ReconciliationRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorReconciliationRequest3";
 				definition = "Reconciliation request from an acceptor.";
-				previousVersion_lazy = () -> AcceptorReconciliationRequest2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationRequest4.mmObject());
+				previousVersion_lazy = () -> AcceptorReconciliationRequest2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardPaymentEnvironment25 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment25 environment) {
+		this.environment = environment;
+	}
+
+	public TransactionReconciliation2 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.TransactionReconciliation2 transaction) {
+		this.transaction = transaction;
 	}
 }

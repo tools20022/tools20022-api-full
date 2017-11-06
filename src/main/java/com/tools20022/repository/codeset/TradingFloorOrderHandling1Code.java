@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#AutomatedPrivate
- * TradingFloorOrderHandling1Code.AutomatedPrivate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#mmAutomatedPrivate
+ * TradingFloorOrderHandling1Code.mmAutomatedPrivate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#AutomatedPublic
- * TradingFloorOrderHandling1Code.AutomatedPublic}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#mmAutomatedPublic
+ * TradingFloorOrderHandling1Code.mmAutomatedPublic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#Manual
- * TradingFloorOrderHandling1Code.Manual}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#mmManual
+ * TradingFloorOrderHandling1Code.mmManual}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	 * name} = "AutomatedPrivate"</li>
 	 * </ul>
 	 */
-	public static final MMCode AutomatedPrivate = new MMCode() {
+	public static final MMCode mmAutomatedPrivate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomatedPrivate";
@@ -110,7 +110,7 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	 * name} = "AutomatedPublic"</li>
 	 * </ul>
 	 */
-	public static final MMCode AutomatedPublic = new MMCode() {
+	public static final MMCode mmAutomatedPublic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomatedPublic";
@@ -133,7 +133,7 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	 * name} = "Manual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Manual = new MMCode() {
+	public static final MMCode mmManual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manual";
@@ -144,13 +144,13 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ATPR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingFloorOrderHandling1Code";
 				definition = "Description of the parameters under which an order must be handled on the floor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.AutomatedPrivate, com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.AutomatedPublic,
-						com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.Manual);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.mmAutomatedPrivate, com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.mmAutomatedPublic,
+						com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.mmManual);
 				trace_lazy = () -> TradingFloorOrderHandlingCode.mmObject();
 			}
 		});

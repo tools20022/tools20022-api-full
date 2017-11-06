@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.LineItem;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Trade settlement monetary summation specified for this supply chain trade
@@ -35,23 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#LineTotalAmount
- * LineItemMonetarySummation1.LineTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#mmLineTotalAmount
+ * LineItemMonetarySummation1.mmLineTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#AllowanceTotalAmount
- * LineItemMonetarySummation1.AllowanceTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#mmAllowanceTotalAmount
+ * LineItemMonetarySummation1.mmAllowanceTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#ChargeTotalAmount
- * LineItemMonetarySummation1.ChargeTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#mmChargeTotalAmount
+ * LineItemMonetarySummation1.mmChargeTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#TaxTotalAmount
- * LineItemMonetarySummation1.TaxTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#mmTaxTotalAmount
+ * LineItemMonetarySummation1.mmTaxTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#TaxBasisTotalAmount
- * LineItemMonetarySummation1.TaxBasisTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#mmTaxBasisTotalAmount
+ * LineItemMonetarySummation1.mmTaxBasisTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#InformationAmount
- * LineItemMonetarySummation1.InformationAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1#mmInformationAmount
+ * LineItemMonetarySummation1.mmInformationAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LineItemMonetarySummation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CurrencyAndAmount> lineTotalAmount;
 	/**
 	 * Monetary value of the line amount total being reported in this trade
 	 * settlement monetary summation.
@@ -107,7 +109,7 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LineTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLineTotalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
 			isDerived = false;
@@ -119,6 +121,7 @@ public class LineItemMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<CurrencyAndAmount> allowanceTotalAmount;
 	/**
 	 * Monetary value of the total of all allowance amounts being reported in
 	 * this line item monetary summation.
@@ -133,8 +136,8 @@ public class LineItemMonetarySummation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Allowance#TotalAllowance
-	 * Allowance.TotalAllowance}</li>
+	 * {@linkplain com.tools20022.repository.entity.Allowance#mmTotalAllowance
+	 * Allowance.mmTotalAllowance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,10 +158,10 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllowanceTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllowanceTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allowance.mmTotalAllowance;
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allowance.TotalAllowance;
 			isDerived = false;
 			xmlTag = "AllwncTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,6 +171,7 @@ public class LineItemMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<CurrencyAndAmount> chargeTotalAmount;
 	/**
 	 * Monetary value of the total of all charge amounts being reported in this
 	 * line item monetary summation.
@@ -182,8 +186,8 @@ public class LineItemMonetarySummation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,10 +208,10 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargeTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargeTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "ChrgTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,6 +221,7 @@ public class LineItemMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<CurrencyAndAmount> taxTotalAmount;
 	/**
 	 * Monetary value of the total of all tax amounts being reported in this
 	 * line item monetary summation.
@@ -231,7 +236,7 @@ public class LineItemMonetarySummation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,10 +257,10 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TaxTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,6 +270,7 @@ public class LineItemMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<CurrencyAndAmount> taxBasisTotalAmount;
 	/**
 	 * Monetary value of the total of all tax basis amounts being reported in
 	 * this line item monetary summation.
@@ -279,8 +285,8 @@ public class LineItemMonetarySummation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxableBaseAmount
-	 * Tax.TaxableBaseAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxableBaseAmount
+	 * Tax.mmTaxableBaseAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -301,10 +307,10 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxBasisTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxBasisTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxableBaseAmount;
 			isDerived = false;
 			xmlTag = "TaxBsisTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,6 +320,7 @@ public class LineItemMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<CurrencyAndAmount> informationAmount;
 	/**
 	 * Monetary value of an amount being reported for information in this line
 	 * item monetary summation.
@@ -345,7 +352,7 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InformationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInformationAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
 			isDerived = false;
@@ -361,16 +368,64 @@ public class LineItemMonetarySummation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemMonetarySummation1.LineTotalAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.AllowanceTotalAmount,
-						com.tools20022.repository.msg.LineItemMonetarySummation1.ChargeTotalAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.TaxTotalAmount,
-						com.tools20022.repository.msg.LineItemMonetarySummation1.TaxBasisTotalAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.InformationAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemMonetarySummation1.mmLineTotalAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.mmAllowanceTotalAmount,
+						com.tools20022.repository.msg.LineItemMonetarySummation1.mmChargeTotalAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.mmTaxTotalAmount,
+						com.tools20022.repository.msg.LineItemMonetarySummation1.mmTaxBasisTotalAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.mmInformationAmount);
 				trace_lazy = () -> LineItem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LineItemMonetarySummation1";
 				definition = "Trade settlement monetary summation specified for this supply chain trade settlement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CurrencyAndAmount> getLineTotalAmount() {
+		return lineTotalAmount;
+	}
+
+	public void setLineTotalAmount(List<CurrencyAndAmount> lineTotalAmount) {
+		this.lineTotalAmount = lineTotalAmount;
+	}
+
+	public List<CurrencyAndAmount> getAllowanceTotalAmount() {
+		return allowanceTotalAmount;
+	}
+
+	public void setAllowanceTotalAmount(List<CurrencyAndAmount> allowanceTotalAmount) {
+		this.allowanceTotalAmount = allowanceTotalAmount;
+	}
+
+	public List<CurrencyAndAmount> getChargeTotalAmount() {
+		return chargeTotalAmount;
+	}
+
+	public void setChargeTotalAmount(List<CurrencyAndAmount> chargeTotalAmount) {
+		this.chargeTotalAmount = chargeTotalAmount;
+	}
+
+	public List<CurrencyAndAmount> getTaxTotalAmount() {
+		return taxTotalAmount;
+	}
+
+	public void setTaxTotalAmount(List<CurrencyAndAmount> taxTotalAmount) {
+		this.taxTotalAmount = taxTotalAmount;
+	}
+
+	public List<CurrencyAndAmount> getTaxBasisTotalAmount() {
+		return taxBasisTotalAmount;
+	}
+
+	public void setTaxBasisTotalAmount(List<CurrencyAndAmount> taxBasisTotalAmount) {
+		this.taxBasisTotalAmount = taxBasisTotalAmount;
+	}
+
+	public List<CurrencyAndAmount> getInformationAmount() {
+		return informationAmount;
+	}
+
+	public void setInformationAmount(List<CurrencyAndAmount> informationAmount) {
+		this.informationAmount = informationAmount;
 	}
 }

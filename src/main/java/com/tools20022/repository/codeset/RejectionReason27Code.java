@@ -35,39 +35,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#AccountServicerDeadlineMissed
- * RejectionReason27Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#mmAccountServicerDeadlineMissed
+ * RejectionReason27Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#MarketDeadlineMissed
- * RejectionReason27Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#mmMarketDeadlineMissed
+ * RejectionReason27Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#SafekeepingAccountRejection
- * RejectionReason27Code.SafekeepingAccountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#mmSafekeepingAccountRejection
+ * RejectionReason27Code.mmSafekeepingAccountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#NoMatch
- * RejectionReason27Code.NoMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#mmNoMatch
+ * RejectionReason27Code.mmNoMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#NotFoundRejection
- * RejectionReason27Code.NotFoundRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#mmNotFoundRejection
+ * RejectionReason27Code.mmNotFoundRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#Other
- * RejectionReason27Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#mmOther
+ * RejectionReason27Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#ReferenceRejection
- * RejectionReason27Code.ReferenceRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#mmReferenceRejection
+ * RejectionReason27Code.mmReferenceRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#InvalidModificationRequest
- * RejectionReason27Code.InvalidModificationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#mmInvalidModificationRequest
+ * RejectionReason27Code.mmInvalidModificationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#InvalidLink
- * RejectionReason27Code.InvalidLink}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason27Code#mmInvalidLink
+ * RejectionReason27Code.mmInvalidLink}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -109,7 +109,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -132,7 +132,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -155,7 +155,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 * name} = "SafekeepingAccountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SafekeepingAccountRejection = new MMCode() {
+	public static final MMCode mmSafekeepingAccountRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRejection";
@@ -178,7 +178,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 * name} = "NoMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoMatch = new MMCode() {
+	public static final MMCode mmNoMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
@@ -201,7 +201,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 * name} = "NotFoundRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotFoundRejection = new MMCode() {
+	public static final MMCode mmNotFoundRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotFoundRejection";
@@ -224,7 +224,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -247,7 +247,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 * name} = "ReferenceRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReferenceRejection = new MMCode() {
+	public static final MMCode mmReferenceRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRejection";
@@ -270,7 +270,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 * name} = "InvalidModificationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidModificationRequest = new MMCode() {
+	public static final MMCode mmInvalidModificationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidModificationRequest";
@@ -293,7 +293,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 * name} = "InvalidLink"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidLink = new MMCode() {
+	public static final MMCode mmInvalidLink = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidLink";
@@ -304,16 +304,17 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason27Code";
 				definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
 				previousVersion_lazy = () -> RejectionReason21Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason27Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason27Code.MarketDeadlineMissed,
-						com.tools20022.repository.codeset.RejectionReason27Code.SafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason27Code.NoMatch,
-						com.tools20022.repository.codeset.RejectionReason27Code.NotFoundRejection, com.tools20022.repository.codeset.RejectionReason27Code.Other, com.tools20022.repository.codeset.RejectionReason27Code.ReferenceRejection,
-						com.tools20022.repository.codeset.RejectionReason27Code.InvalidModificationRequest, com.tools20022.repository.codeset.RejectionReason27Code.InvalidLink);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason27Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason27Code.mmMarketDeadlineMissed,
+						com.tools20022.repository.codeset.RejectionReason27Code.mmSafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason27Code.mmNoMatch,
+						com.tools20022.repository.codeset.RejectionReason27Code.mmNotFoundRejection, com.tools20022.repository.codeset.RejectionReason27Code.mmOther,
+						com.tools20022.repository.codeset.RejectionReason27Code.mmReferenceRejection, com.tools20022.repository.codeset.RejectionReason27Code.mmInvalidModificationRequest,
+						com.tools20022.repository.codeset.RejectionReason27Code.mmInvalidLink);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
 			}
 		});

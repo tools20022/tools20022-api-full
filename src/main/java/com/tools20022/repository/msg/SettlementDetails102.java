@@ -38,14 +38,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementDetails102#TradeDate
- * SettlementDetails102.TradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails102#SettlementParties
- * SettlementDetails102.SettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails102#mmTradeDate
+ * SettlementDetails102.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementDetails102#CollateralOwnership
- * SettlementDetails102.CollateralOwnership}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails102#mmSettlementParties
+ * SettlementDetails102.mmSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementDetails102#mmCollateralOwnership
+ * SettlementDetails102.mmCollateralOwnership}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementDetails102 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime tradeDate;
 	/**
 	 * Indicates the date as known by the two parties to be used for matching
 	 * purposes when settlement of securities occurs.
@@ -95,8 +97,8 @@ public class SettlementDetails102 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,33 +121,34 @@ public class SettlementDetails102 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails118#TradeDate
-	 * SettlementDetails118.TradeDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails118#mmTradeDate
+	 * SettlementDetails118.mmTradeDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails88#TradeDate
-	 * SettlementDetails88.TradeDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails88#mmTradeDate
+	 * SettlementDetails88.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> SettlementDetails102.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Indicates the date as known by the two parties to be used for matching purposes when settlement of securities occurs.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.TradeDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails118.TradeDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails118.mmTradeDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.mmTradeDate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected SettlementParties5Choice settlementParties;
 	/**
 	 * Provides details on either the delivering or receiving settlement
 	 * parties.
@@ -159,8 +162,8 @@ public class SettlementDetails102 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartyRole
-	 * SecuritiesSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+	 * SecuritiesSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,34 +186,35 @@ public class SettlementDetails102 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails118#SettlementParties
-	 * SettlementDetails118.SettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails118#mmSettlementParties
+	 * SettlementDetails118.mmSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails88#SettlementParties
-	 * SettlementDetails88.SettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails88#mmSettlementParties
+	 * SettlementDetails88.mmSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementParties = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> SettlementDetails102.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartyRole;
 			isDerived = false;
 			xmlTag = "SttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParties";
 			definition = "Provides details on either the delivering or receiving settlement parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.SettlementParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails118.SettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails118.mmSettlementParties);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.mmSettlementParties;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties5Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SettlementParties5Choice.mmObject();
 		}
 	};
+	protected CollateralOwnership2 collateralOwnership;
 	/**
 	 * Indicates the collateral ownership.
 	 * <p>
@@ -222,8 +226,8 @@ public class SettlementDetails102 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#CollateralOwnership
-	 * Collateral.CollateralOwnership}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralOwnership
+	 * Collateral.mmCollateralOwnership}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -244,49 +248,73 @@ public class SettlementDetails102 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails118#CollateralOwnership
-	 * SettlementDetails118.CollateralOwnership}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails118#mmCollateralOwnership
+	 * SettlementDetails118.mmCollateralOwnership}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails88#CollateralOwnership
-	 * SettlementDetails88.CollateralOwnership}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails88#mmCollateralOwnership
+	 * SettlementDetails88.mmCollateralOwnership}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CollateralOwnership = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCollateralOwnership = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralOwnership;
 			componentContext_lazy = () -> SettlementDetails102.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.CollateralOwnership;
 			isDerived = false;
 			xmlTag = "CollOwnrsh";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOwnership";
 			definition = "Indicates the collateral ownership.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.CollateralOwnership;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails118.CollateralOwnership);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails118.mmCollateralOwnership);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.mmCollateralOwnership;
 			maxOccurs = 1;
-			type_lazy = () -> CollateralOwnership2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CollateralOwnership2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails102.TradeDate, com.tools20022.repository.msg.SettlementDetails102.SettlementParties,
-						com.tools20022.repository.msg.SettlementDetails102.CollateralOwnership);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails102.mmTradeDate, com.tools20022.repository.msg.SettlementDetails102.mmSettlementParties,
+						com.tools20022.repository.msg.SettlementDetails102.mmCollateralOwnership);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDetails102";
 				definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
-				previousVersion_lazy = () -> SettlementDetails88.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SettlementDetails118.mmObject());
+				previousVersion_lazy = () -> SettlementDetails88.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(ISODateTime tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public SettlementParties5Choice getSettlementParties() {
+		return settlementParties;
+	}
+
+	public void setSettlementParties(SettlementParties5Choice settlementParties) {
+		this.settlementParties = settlementParties;
+	}
+
+	public CollateralOwnership2 getCollateralOwnership() {
+		return collateralOwnership;
+	}
+
+	public void setCollateralOwnership(com.tools20022.repository.msg.CollateralOwnership2 collateralOwnership) {
+		this.collateralOwnership = collateralOwnership;
 	}
 }

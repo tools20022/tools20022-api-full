@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#AccountServicerDeadlineMissed
- * PendingCancellationReason5Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#mmAccountServicerDeadlineMissed
+ * PendingCancellationReason5Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#QuantityRejection
- * PendingCancellationReason5Code.QuantityRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#mmQuantityRejection
+ * PendingCancellationReason5Code.mmQuantityRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#AmountRejection
- * PendingCancellationReason5Code.AmountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#mmAmountRejection
+ * PendingCancellationReason5Code.mmAmountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#MarketDeadlineMissed
- * PendingCancellationReason5Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#mmMarketDeadlineMissed
+ * PendingCancellationReason5Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#Other
- * PendingCancellationReason5Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#mmOther
+ * PendingCancellationReason5Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +85,7 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -108,7 +108,7 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 * name} = "QuantityRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityRejection = new MMCode() {
+	public static final MMCode mmQuantityRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
@@ -131,7 +131,7 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 * name} = "AmountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode AmountRejection = new MMCode() {
+	public static final MMCode mmAmountRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRejection";
@@ -154,7 +154,7 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -177,7 +177,7 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -188,13 +188,13 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationReason5Code";
 				definition = "Specifies the reason why the cancellation request has a pending status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason5Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason5Code.QuantityRejection,
-						com.tools20022.repository.codeset.PendingCancellationReason5Code.AmountRejection, com.tools20022.repository.codeset.PendingCancellationReason5Code.MarketDeadlineMissed,
-						com.tools20022.repository.codeset.PendingCancellationReason5Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason5Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason5Code.mmQuantityRejection,
+						com.tools20022.repository.codeset.PendingCancellationReason5Code.mmAmountRejection, com.tools20022.repository.codeset.PendingCancellationReason5Code.mmMarketDeadlineMissed,
+						com.tools20022.repository.codeset.PendingCancellationReason5Code.mmOther);
 				trace_lazy = () -> RejectionReasonV3Code.mmObject();
 			}
 		});

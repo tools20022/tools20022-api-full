@@ -30,13 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialCaptureCode#Authorisation
- * FinancialCaptureCode.Authorisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialCaptureCode#mmAuthorisation
+ * FinancialCaptureCode.mmAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialCaptureCode#Completion
- * FinancialCaptureCode.Completion}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FinancialCaptureCode#Batch
- * FinancialCaptureCode.Batch}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialCaptureCode#mmCompletion
+ * FinancialCaptureCode.mmCompletion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialCaptureCode#mmBatch
+ * FinancialCaptureCode.mmBatch}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +96,7 @@ public class FinancialCaptureCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Authorisation = new MMCode() {
+	public static final MMCode mmAuthorisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Authorisation";
@@ -128,7 +129,7 @@ public class FinancialCaptureCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Completion = new MMCode() {
+	public static final MMCode mmCompletion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Completion";
@@ -161,7 +162,7 @@ public class FinancialCaptureCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Batch = new MMCode() {
+	public static final MMCode mmBatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Batch";
@@ -174,13 +175,13 @@ public class FinancialCaptureCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUTH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialCaptureCode";
 				definition = "Mode for the financial capture of the transaction by the acquirer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialCaptureCode.Authorisation, com.tools20022.repository.codeset.FinancialCaptureCode.Completion,
-						com.tools20022.repository.codeset.FinancialCaptureCode.Batch);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialCaptureCode.mmAuthorisation, com.tools20022.repository.codeset.FinancialCaptureCode.mmCompletion,
+						com.tools20022.repository.codeset.FinancialCaptureCode.mmBatch);
 				derivation_lazy = () -> Arrays.asList(FinancialCapture1Code.mmObject());
 			}
 		});

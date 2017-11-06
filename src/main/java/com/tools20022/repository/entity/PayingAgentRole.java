@@ -37,15 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PayingAgentRole#CommissionAmount
- * PayingAgentRole.CommissionAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.PayingAgentRole#mmCommissionAmount
+ * PayingAgentRole.mmCommissionAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PayingAgentRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount commissionAmount;
 	/**
 	 * Amount of paying/sub-paying agent commission.
 	 * <p>
@@ -87,15 +88,15 @@ public class PayingAgentRole {
 	 * definition} = "Amount of paying/sub-paying agent commission."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CommissionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCommissionAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PayingAgentRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CommissionAmount";
 			definition = "Amount of paying/sub-paying agent commission.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -103,13 +104,21 @@ public class PayingAgentRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PayingAgentRole";
 				definition = "Additional party appointed to distribute payment or securities on behalf of the issuer.";
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PayingAgentRole.CommissionAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PayingAgentRole.mmCommissionAmount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getCommissionAmount() {
+		return commissionAmount;
+	}
+
+	public void setCommissionAmount(CurrencyAndAmount commissionAmount) {
+		this.commissionAmount = commissionAmount;
 	}
 }

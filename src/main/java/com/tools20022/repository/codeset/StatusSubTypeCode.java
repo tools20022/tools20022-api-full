@@ -30,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatusSubTypeCode#NoFlagsSet
- * StatusSubTypeCode.NoFlagsSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatusSubTypeCode#mmNoFlagsSet
+ * StatusSubTypeCode.mmNoFlagsSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatusSubTypeCode#OnlySameDayFlagTrue
- * StatusSubTypeCode.OnlySameDayFlagTrue}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatusSubTypeCode#mmOnlySameDayFlagTrue
+ * StatusSubTypeCode.mmOnlySameDayFlagTrue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatusSubTypeCode#OnlyPendingFlagTrue
- * StatusSubTypeCode.OnlyPendingFlagTrue}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatusSubTypeCode#mmOnlyPendingFlagTrue
+ * StatusSubTypeCode.mmOnlyPendingFlagTrue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatusSubTypeCode#SameDayAndPendingFlagsTrue
- * StatusSubTypeCode.SameDayAndPendingFlagsTrue}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatusSubTypeCode#mmSameDayAndPendingFlagsTrue
+ * StatusSubTypeCode.mmSameDayAndPendingFlagsTrue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +98,7 @@ public class StatusSubTypeCode {
 	 * "No flag has been set for the sub status of the trade notification."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoFlagsSet = new MMCode() {
+	public static final MMCode mmNoFlagsSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoFlagsSet";
@@ -131,7 +131,7 @@ public class StatusSubTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OnlySameDayFlagTrue = new MMCode() {
+	public static final MMCode mmOnlySameDayFlagTrue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnlySameDayFlagTrue";
@@ -164,7 +164,7 @@ public class StatusSubTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OnlyPendingFlagTrue = new MMCode() {
+	public static final MMCode mmOnlyPendingFlagTrue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnlyPendingFlagTrue";
@@ -197,7 +197,7 @@ public class StatusSubTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SameDayAndPendingFlagsTrue = new MMCode() {
+	public static final MMCode mmSameDayAndPendingFlagsTrue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SameDayAndPendingFlagsTrue";
@@ -210,13 +210,13 @@ public class StatusSubTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NONE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusSubTypeCode";
 				definition = "Indicates the sub status of the trade notification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatusSubTypeCode.NoFlagsSet, com.tools20022.repository.codeset.StatusSubTypeCode.OnlySameDayFlagTrue,
-						com.tools20022.repository.codeset.StatusSubTypeCode.OnlyPendingFlagTrue, com.tools20022.repository.codeset.StatusSubTypeCode.SameDayAndPendingFlagsTrue);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatusSubTypeCode.mmNoFlagsSet, com.tools20022.repository.codeset.StatusSubTypeCode.mmOnlySameDayFlagTrue,
+						com.tools20022.repository.codeset.StatusSubTypeCode.mmOnlyPendingFlagTrue, com.tools20022.repository.codeset.StatusSubTypeCode.mmSameDayAndPendingFlagsTrue);
 				derivation_lazy = () -> Arrays.asList(StatusSubType1Code.mmObject(), StatusSubType2Code.mmObject());
 			}
 		});

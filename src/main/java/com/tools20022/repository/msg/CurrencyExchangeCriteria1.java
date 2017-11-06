@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for currency exchange information. A name
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyExchangeCriteria1#NewQueryName
- * CurrencyExchangeCriteria1.NewQueryName}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeCriteria1#mmNewQueryName
+ * CurrencyExchangeCriteria1.mmNewQueryName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyExchangeCriteria1#SearchCriteria
- * CurrencyExchangeCriteria1.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeCriteria1#mmSearchCriteria
+ * CurrencyExchangeCriteria1.mmSearchCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyExchangeCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text newQueryName;
 	/**
 	 * Name of the query defined by the search criteria and return criteria.
 	 * <p>
@@ -90,7 +92,7 @@ public class CurrencyExchangeCriteria1 {
 	 * "Name of the query defined by the search criteria and return criteria. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyExchangeCriteria1.mmObject();
 			isDerived = false;
@@ -98,11 +100,12 @@ public class CurrencyExchangeCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQueryName";
 			definition = "Name of the query defined by the search criteria and return criteria. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CurrencySourceTarget1> searchCriteria;
 	/**
 	 * Defines the criteria based on which the information is extracted.
 	 * <p>
@@ -130,7 +133,7 @@ public class CurrencyExchangeCriteria1 {
 	 * "Defines the criteria based on which the information is extracted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CurrencyExchangeCriteria1.mmObject();
 			isDerived = false;
@@ -139,21 +142,37 @@ public class CurrencyExchangeCriteria1 {
 			name = "SearchCriteria";
 			definition = "Defines the criteria based on which the information is extracted.";
 			minOccurs = 1;
-			type_lazy = () -> CurrencySourceTarget1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencySourceTarget1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeCriteria1.NewQueryName, com.tools20022.repository.msg.CurrencyExchangeCriteria1.SearchCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeCriteria1.mmNewQueryName, com.tools20022.repository.msg.CurrencyExchangeCriteria1.mmSearchCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrencyExchangeCriteria1";
 				definition = "Defines the criteria used to search for currency exchange information. A name may be given to the new query.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getNewQueryName() {
+		return newQueryName;
+	}
+
+	public void setNewQueryName(Max35Text newQueryName) {
+		this.newQueryName = newQueryName;
+	}
+
+	public List<CurrencySourceTarget1> getSearchCriteria() {
+		return searchCriteria;
+	}
+
+	public void setSearchCriteria(List<com.tools20022.repository.msg.CurrencySourceTarget1> searchCriteria) {
+		this.searchCriteria = searchCriteria;
 	}
 }

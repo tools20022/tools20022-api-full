@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,24 +66,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#TransactionIdentification
- * BuyInResponseV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#mmTransactionIdentification
+ * BuyInResponseV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#BuyInResponseDetails
- * BuyInResponseV03.BuyInResponseDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#mmBuyInResponseDetails
+ * BuyInResponseV03.mmBuyInResponseDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#OriginalSettlementObligationDetails
- * BuyInResponseV03.OriginalSettlementObligationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#mmOriginalSettlementObligationDetails
+ * BuyInResponseV03.mmOriginalSettlementObligationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#SupplementaryData
- * BuyInResponseV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#mmSupplementaryData
+ * BuyInResponseV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.secl.BuyInResponseV03#identifier
- * BuyInResponseV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code secl.008.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BuyInResponseV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as known by the instructing
 	 * party.
@@ -123,17 +123,18 @@ public class BuyInResponseV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the instructing party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected BuyIn3 buyInResponseDetails;
 	/**
 	 * Provides response details such as a request for delay and the number of
 	 * days associated to that request.
@@ -158,17 +159,18 @@ public class BuyInResponseV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BuyInResponseDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyInResponseDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyInRspnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyInResponseDetails";
 			definition = "Provides response details such as a request for delay and the number of days associated to that request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BuyIn3.mmObject();
 		}
 	};
+	protected SettlementObligation7 originalSettlementObligationDetails;
 	/**
 	 * Provides details about the original settlement obligation that did not
 	 * settle and for which the buy in process will be launched.
@@ -195,17 +197,18 @@ public class BuyInResponseV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalSettlementObligationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalSettlementObligationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlSttlmOblgtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalSettlementObligationDetails";
 			definition = "Provides details about the original settlement obligation that did not settle and for which the buy in process will be launched.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementObligation7.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -232,7 +235,7 @@ public class BuyInResponseV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,33 +243,6 @@ public class BuyInResponseV03 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "secl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "secl";
-			messageFunctionality = "008";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -280,11 +256,50 @@ public class BuyInResponseV03 {
 				rootElement = "Document";
 				xmlTag = "BuyInRspn";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInResponseV03.TransactionIdentification, com.tools20022.repository.area.secl.BuyInResponseV03.BuyInResponseDetails,
-						com.tools20022.repository.area.secl.BuyInResponseV03.OriginalSettlementObligationDetails, com.tools20022.repository.area.secl.BuyInResponseV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.secl.BuyInResponseV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInResponseV03.mmTransactionIdentification, com.tools20022.repository.area.secl.BuyInResponseV03.mmBuyInResponseDetails,
+						com.tools20022.repository.area.secl.BuyInResponseV03.mmOriginalSettlementObligationDetails, com.tools20022.repository.area.secl.BuyInResponseV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "secl";
+						messageFunctionality = "008";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public BuyIn3 getBuyInResponseDetails() {
+		return buyInResponseDetails;
+	}
+
+	public void setBuyInResponseDetails(BuyIn3 buyInResponseDetails) {
+		this.buyInResponseDetails = buyInResponseDetails;
+	}
+
+	public SettlementObligation7 getOriginalSettlementObligationDetails() {
+		return originalSettlementObligationDetails;
+	}
+
+	public void setOriginalSettlementObligationDetails(SettlementObligation7 originalSettlementObligationDetails) {
+		this.originalSettlementObligationDetails = originalSettlementObligationDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

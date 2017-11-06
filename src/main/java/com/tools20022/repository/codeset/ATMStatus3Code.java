@@ -32,20 +32,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ATMStatusCode ATMStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus3Code#InOperation
- * ATMStatus3Code.InOperation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus3Code#Stopped
- * ATMStatus3Code.Stopped}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMStatus3Code#WaitingActivation
- * ATMStatus3Code.WaitingActivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMStatus3Code#mmInOperation
+ * ATMStatus3Code.mmInOperation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus3Code#mmStopped
+ * ATMStatus3Code.mmStopped}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMStatus3Code#mmWaitingActivation
+ * ATMStatus3Code.mmWaitingActivation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +76,7 @@ public class ATMStatus3Code extends ATMStatusCode {
 	 * name} = "InOperation"</li>
 	 * </ul>
 	 */
-	public static final MMCode InOperation = new MMCode() {
+	public static final MMCode mmInOperation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InOperation";
@@ -98,7 +99,7 @@ public class ATMStatus3Code extends ATMStatusCode {
 	 * name} = "Stopped"</li>
 	 * </ul>
 	 */
-	public static final MMCode Stopped = new MMCode() {
+	public static final MMCode mmStopped = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stopped";
@@ -121,7 +122,7 @@ public class ATMStatus3Code extends ATMStatusCode {
 	 * name} = "WaitingActivation"</li>
 	 * </ul>
 	 */
-	public static final MMCode WaitingActivation = new MMCode() {
+	public static final MMCode mmWaitingActivation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingActivation";
@@ -132,11 +133,12 @@ public class ATMStatus3Code extends ATMStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMStatus3Code";
 				definition = "Current status of the key.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatus3Code.InOperation, com.tools20022.repository.codeset.ATMStatus3Code.Stopped, com.tools20022.repository.codeset.ATMStatus3Code.WaitingActivation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatus3Code.mmInOperation, com.tools20022.repository.codeset.ATMStatus3Code.mmStopped,
+						com.tools20022.repository.codeset.ATMStatus3Code.mmWaitingActivation);
 				trace_lazy = () -> ATMStatusCode.mmObject();
 			}
 		});

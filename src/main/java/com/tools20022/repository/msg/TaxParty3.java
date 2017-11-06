@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.TaxPartyRole;
 import com.tools20022.repository.entity.TaxPayer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details about the entity involved in the tax paid or to be paid.
@@ -36,15 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxParty3#TaxIdentification
- * TaxParty3.TaxIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxParty3#TaxType
- * TaxParty3.TaxType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxParty3#mmTaxIdentification
+ * TaxParty3.mmTaxIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxParty3#mmTaxType
+ * TaxParty3.mmTaxType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxParty3#RegistrationIdentification
- * TaxParty3.RegistrationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxParty3#TaxExemptionReason
- * TaxParty3.TaxExemptionReason}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxParty3#mmRegistrationIdentification
+ * TaxParty3.mmRegistrationIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxParty3#mmTaxExemptionReason
+ * TaxParty3.mmTaxExemptionReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxParty3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text taxIdentification;
 	/**
 	 * Number assigned by a tax authority to an entity.
 	 * <p>
@@ -81,8 +83,8 @@ public class TaxParty3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TaxIdentificationNumber
-	 * PartyIdentificationInformation.TaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTaxIdentificationNumber
+	 * PartyIdentificationInformation.mmTaxIdentificationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TaxParty3
@@ -100,20 +102,21 @@ public class TaxParty3 {
 	 * definition} = "Number assigned by a tax authority to an entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> TaxParty3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.TaxIdentificationNumber;
 			isDerived = false;
 			xmlTag = "TaxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentification";
 			definition = "Number assigned by a tax authority to an entity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text taxType;
 	/**
 	 * Type of tax payer.
 	 * <p>
@@ -144,20 +147,21 @@ public class TaxParty3 {
 	 * definition} = "Type of tax payer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxParty3.mmObject();
 			businessComponentTrace_lazy = () -> TaxPayer.mmObject();
+			componentContext_lazy = () -> TaxParty3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxType";
 			definition = "Type of tax payer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text registrationIdentification;
 	/**
 	 * Unique identification, as assigned by an organisation, to unambiguously
 	 * identify a party.
@@ -171,8 +175,8 @@ public class TaxParty3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TaxIdentificationNumber
-	 * PartyIdentificationInformation.TaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTaxIdentificationNumber
+	 * PartyIdentificationInformation.mmTaxIdentificationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.TaxParty3
@@ -192,20 +196,21 @@ public class TaxParty3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> TaxParty3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.TaxIdentificationNumber;
 			isDerived = false;
 			xmlTag = "RegnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationIdentification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<TaxExemptionReasonFormatChoice> taxExemptionReason;
 	/**
 	 * Specification of the tax exemption reason.
 	 * <p>
@@ -237,10 +242,10 @@ public class TaxParty3 {
 	 * definition} = "Specification of the tax exemption reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxExemptionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxExemptionReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxParty3.mmObject();
 			businessComponentTrace_lazy = () -> Tax.mmObject();
+			componentContext_lazy = () -> TaxParty3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxXmptnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,15 +259,47 @@ public class TaxParty3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxParty3.TaxIdentification, com.tools20022.repository.msg.TaxParty3.TaxType, com.tools20022.repository.msg.TaxParty3.RegistrationIdentification,
-						com.tools20022.repository.msg.TaxParty3.TaxExemptionReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxParty3.mmTaxIdentification, com.tools20022.repository.msg.TaxParty3.mmTaxType, com.tools20022.repository.msg.TaxParty3.mmRegistrationIdentification,
+						com.tools20022.repository.msg.TaxParty3.mmTaxExemptionReason);
 				trace_lazy = () -> TaxPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxParty3";
 				definition = "Details about the entity involved in the tax paid or to be paid.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTaxIdentification() {
+		return taxIdentification;
+	}
+
+	public void setTaxIdentification(Max35Text taxIdentification) {
+		this.taxIdentification = taxIdentification;
+	}
+
+	public Max35Text getTaxType() {
+		return taxType;
+	}
+
+	public void setTaxType(Max35Text taxType) {
+		this.taxType = taxType;
+	}
+
+	public Max35Text getRegistrationIdentification() {
+		return registrationIdentification;
+	}
+
+	public void setRegistrationIdentification(Max35Text registrationIdentification) {
+		this.registrationIdentification = registrationIdentification;
+	}
+
+	public List<TaxExemptionReasonFormatChoice> getTaxExemptionReason() {
+		return taxExemptionReason;
+	}
+
+	public void setTaxExemptionReason(List<TaxExemptionReasonFormatChoice> taxExemptionReason) {
+		this.taxExemptionReason = taxExemptionReason;
 	}
 }

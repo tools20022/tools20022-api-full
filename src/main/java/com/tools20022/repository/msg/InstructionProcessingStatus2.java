@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus2#PlaceAndName
- * InstructionProcessingStatus2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus2#mmPlaceAndName
+ * InstructionProcessingStatus2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus2#RejectCode
- * InstructionProcessingStatus2.RejectCode}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus2#mmRejectCode
+ * InstructionProcessingStatus2.mmRejectCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus2#OutputRejectIndicator
- * InstructionProcessingStatus2.OutputRejectIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionProcessingStatus2#mmOutputRejectIndicator
+ * InstructionProcessingStatus2.mmOutputRejectIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstructionProcessingStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -93,7 +94,7 @@ public class InstructionProcessingStatus2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstructionProcessingStatus2.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class InstructionProcessingStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max8Text rejectCode;
 	/**
 	 * ICM error code of the last error (if more than one) for the transaction.
 	 * <p>
@@ -135,7 +137,7 @@ public class InstructionProcessingStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstructionProcessingStatus2.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class InstructionProcessingStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectCode";
 			definition = "ICM error code of the last error (if more than one) for the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	protected Max1NumericText outputRejectIndicator;
 	/**
 	 * Indicates if the transaction has any errors.
 	 * <p>
@@ -176,7 +179,7 @@ public class InstructionProcessingStatus2 {
 	 * definition} = "Indicates if the transaction has any errors."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OutputRejectIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOutputRejectIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstructionProcessingStatus2.mmObject();
 			isDerived = false;
@@ -184,8 +187,8 @@ public class InstructionProcessingStatus2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutputRejectIndicator";
 			definition = "Indicates if the transaction has any errors.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max1NumericText.mmObject();
 		}
 	};
@@ -193,14 +196,38 @@ public class InstructionProcessingStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionProcessingStatus2.PlaceAndName, com.tools20022.repository.msg.InstructionProcessingStatus2.RejectCode,
-						com.tools20022.repository.msg.InstructionProcessingStatus2.OutputRejectIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionProcessingStatus2.mmPlaceAndName, com.tools20022.repository.msg.InstructionProcessingStatus2.mmRejectCode,
+						com.tools20022.repository.msg.InstructionProcessingStatus2.mmOutputRejectIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstructionProcessingStatus2";
 				definition = "Provides additional information regarding instruction processing status details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max8Text getRejectCode() {
+		return rejectCode;
+	}
+
+	public void setRejectCode(Max8Text rejectCode) {
+		this.rejectCode = rejectCode;
+	}
+
+	public Max1NumericText getOutputRejectIndicator() {
+		return outputRejectIndicator;
+	}
+
+	public void setOutputRejectIndicator(Max1NumericText outputRejectIndicator) {
+		this.outputRejectIndicator = outputRejectIndicator;
 	}
 }

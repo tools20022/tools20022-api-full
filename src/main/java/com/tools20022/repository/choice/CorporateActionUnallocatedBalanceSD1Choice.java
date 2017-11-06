@@ -33,33 +33,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#TotalEligibleBalance
- * CorporateActionUnallocatedBalanceSD1Choice.TotalEligibleBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#mmTotalEligibleBalance
+ * CorporateActionUnallocatedBalanceSD1Choice.mmTotalEligibleBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#BorrowedBalance
- * CorporateActionUnallocatedBalanceSD1Choice.BorrowedBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#mmBorrowedBalance
+ * CorporateActionUnallocatedBalanceSD1Choice.mmBorrowedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#CollateralInBalance
- * CorporateActionUnallocatedBalanceSD1Choice.CollateralInBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#mmCollateralInBalance
+ * CorporateActionUnallocatedBalanceSD1Choice.mmCollateralInBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#CollateralOutBalance
- * CorporateActionUnallocatedBalanceSD1Choice.CollateralOutBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#mmCollateralOutBalance
+ * CorporateActionUnallocatedBalanceSD1Choice.mmCollateralOutBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#OnLoanBalance
- * CorporateActionUnallocatedBalanceSD1Choice.OnLoanBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#mmOnLoanBalance
+ * CorporateActionUnallocatedBalanceSD1Choice.mmOnLoanBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#PendingDeliveryBalance
- * CorporateActionUnallocatedBalanceSD1Choice.PendingDeliveryBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#mmPendingDeliveryBalance
+ * CorporateActionUnallocatedBalanceSD1Choice.mmPendingDeliveryBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#PendingReceiptBalance
- * CorporateActionUnallocatedBalanceSD1Choice.PendingReceiptBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice#mmPendingReceiptBalance
+ * CorporateActionUnallocatedBalanceSD1Choice.mmPendingReceiptBalance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionUnallocatedBalanceSD1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SignedQuantityFormat4 totalEligibleBalance;
 	/**
 	 * Total quantity of financial instruments of the balance.
 	 * <p>
@@ -112,13 +113,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#TotalEligibleBalance
-	 * CorporateActionUnallocatedBalanceSD2Choice.TotalEligibleBalance}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#mmTotalEligibleBalance
+	 * CorporateActionUnallocatedBalanceSD2Choice.mmTotalEligibleBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalEligibleBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmObject();
 			isDerived = false;
@@ -126,12 +127,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.TotalEligibleBalance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmTotalEligibleBalance);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 borrowedBalance;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -162,13 +164,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#BorrowedBalance
-	 * CorporateActionUnallocatedBalanceSD2Choice.BorrowedBalance}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#mmBorrowedBalance
+	 * CorporateActionUnallocatedBalanceSD2Choice.mmBorrowedBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BorrowedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBorrowedBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmObject();
 			isDerived = false;
@@ -176,12 +178,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowedBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.BorrowedBalance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmBorrowedBalance);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 collateralInBalance;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -212,13 +215,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#CollateralInBalance
-	 * CorporateActionUnallocatedBalanceSD2Choice.CollateralInBalance}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#mmCollateralInBalance
+	 * CorporateActionUnallocatedBalanceSD2Choice.mmCollateralInBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralInBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralInBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmObject();
 			isDerived = false;
@@ -226,12 +229,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralInBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.CollateralInBalance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmCollateralInBalance);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 collateralOutBalance;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -262,13 +266,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#CollateralOutBalance
-	 * CorporateActionUnallocatedBalanceSD2Choice.CollateralOutBalance}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#mmCollateralOutBalance
+	 * CorporateActionUnallocatedBalanceSD2Choice.mmCollateralOutBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralOutBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralOutBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmObject();
 			isDerived = false;
@@ -276,12 +280,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOutBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.CollateralOutBalance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmCollateralOutBalance);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 onLoanBalance;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -312,13 +317,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#OnLoanBalance
-	 * CorporateActionUnallocatedBalanceSD2Choice.OnLoanBalance}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#mmOnLoanBalance
+	 * CorporateActionUnallocatedBalanceSD2Choice.mmOnLoanBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OnLoanBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOnLoanBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmObject();
 			isDerived = false;
@@ -326,12 +331,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoanBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.OnLoanBalance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmOnLoanBalance);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 pendingDeliveryBalance;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -362,13 +368,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#PendingDeliveryBalance
-	 * CorporateActionUnallocatedBalanceSD2Choice.PendingDeliveryBalance}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#mmPendingDeliveryBalance
+	 * CorporateActionUnallocatedBalanceSD2Choice.mmPendingDeliveryBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PendingDeliveryBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPendingDeliveryBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmObject();
 			isDerived = false;
@@ -376,12 +382,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.PendingDeliveryBalance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmPendingDeliveryBalance);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 pendingReceiptBalance;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -412,13 +419,13 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#PendingReceiptBalance
-	 * CorporateActionUnallocatedBalanceSD2Choice.PendingReceiptBalance}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice#mmPendingReceiptBalance
+	 * CorporateActionUnallocatedBalanceSD2Choice.mmPendingReceiptBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PendingReceiptBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPendingReceiptBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmObject();
 			isDerived = false;
@@ -426,9 +433,9 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.PendingReceiptBalance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmPendingReceiptBalance);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
@@ -436,11 +443,11 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.TotalEligibleBalance,
-						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.BorrowedBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.CollateralInBalance,
-						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.CollateralOutBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.OnLoanBalance,
-						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.PendingDeliveryBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.PendingReceiptBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmTotalEligibleBalance,
+						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmBorrowedBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmCollateralInBalance,
+						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmCollateralOutBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmOnLoanBalance,
+						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmPendingDeliveryBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmPendingReceiptBalance);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionUnallocatedBalanceSD1Choice";
 				definition = "Choice amongst various balance types related to unallocated payment.";
@@ -448,5 +455,61 @@ public class CorporateActionUnallocatedBalanceSD1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SignedQuantityFormat4 getTotalEligibleBalance() {
+		return totalEligibleBalance;
+	}
+
+	public void setTotalEligibleBalance(SignedQuantityFormat4 totalEligibleBalance) {
+		this.totalEligibleBalance = totalEligibleBalance;
+	}
+
+	public SignedQuantityFormat4 getBorrowedBalance() {
+		return borrowedBalance;
+	}
+
+	public void setBorrowedBalance(SignedQuantityFormat4 borrowedBalance) {
+		this.borrowedBalance = borrowedBalance;
+	}
+
+	public SignedQuantityFormat4 getCollateralInBalance() {
+		return collateralInBalance;
+	}
+
+	public void setCollateralInBalance(SignedQuantityFormat4 collateralInBalance) {
+		this.collateralInBalance = collateralInBalance;
+	}
+
+	public SignedQuantityFormat4 getCollateralOutBalance() {
+		return collateralOutBalance;
+	}
+
+	public void setCollateralOutBalance(SignedQuantityFormat4 collateralOutBalance) {
+		this.collateralOutBalance = collateralOutBalance;
+	}
+
+	public SignedQuantityFormat4 getOnLoanBalance() {
+		return onLoanBalance;
+	}
+
+	public void setOnLoanBalance(SignedQuantityFormat4 onLoanBalance) {
+		this.onLoanBalance = onLoanBalance;
+	}
+
+	public SignedQuantityFormat4 getPendingDeliveryBalance() {
+		return pendingDeliveryBalance;
+	}
+
+	public void setPendingDeliveryBalance(SignedQuantityFormat4 pendingDeliveryBalance) {
+		this.pendingDeliveryBalance = pendingDeliveryBalance;
+	}
+
+	public SignedQuantityFormat4 getPendingReceiptBalance() {
+		return pendingReceiptBalance;
+	}
+
+	public void setPendingReceiptBalance(SignedQuantityFormat4 pendingReceiptBalance) {
+		this.pendingReceiptBalance = pendingReceiptBalance;
 	}
 }

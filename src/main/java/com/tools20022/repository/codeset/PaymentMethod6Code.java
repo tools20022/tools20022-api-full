@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod6Code#Direct
- * PaymentMethod6Code.Direct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentMethod6Code#Classical
- * PaymentMethod6Code.Classical}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentMethod6Code#mmDirect
+ * PaymentMethod6Code.mmDirect}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentMethod6Code#mmClassical
+ * PaymentMethod6Code.mmClassical}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +81,7 @@ public class PaymentMethod6Code extends PaymentMethodCode {
 	 * name} = "Direct"</li>
 	 * </ul>
 	 */
-	public static final MMCode Direct = new MMCode() {
+	public static final MMCode mmDirect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direct";
@@ -103,7 +104,7 @@ public class PaymentMethod6Code extends PaymentMethodCode {
 	 * name} = "Classical"</li>
 	 * </ul>
 	 */
-	public static final MMCode Classical = new MMCode() {
+	public static final MMCode mmClassical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Classical";
@@ -114,12 +115,12 @@ public class PaymentMethod6Code extends PaymentMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DIRE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentMethod6Code";
 				definition = "Specifies the method of payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentMethod6Code.Direct, com.tools20022.repository.codeset.PaymentMethod6Code.Classical);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentMethod6Code.mmDirect, com.tools20022.repository.codeset.PaymentMethod6Code.mmClassical);
 				trace_lazy = () -> PaymentMethodCode.mmObject();
 			}
 		});

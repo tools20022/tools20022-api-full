@@ -38,17 +38,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DebtInstrument2#TotalIssuedNominalAmount
- * DebtInstrument2.TotalIssuedNominalAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument2#MaturityDate
- * DebtInstrument2.MaturityDate}</li>
+ * {@linkplain com.tools20022.repository.msg.DebtInstrument2#mmTotalIssuedNominalAmount
+ * DebtInstrument2.mmTotalIssuedNominalAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument2#mmMaturityDate
+ * DebtInstrument2.mmMaturityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DebtInstrument2#NominalValuePerUnit
- * DebtInstrument2.NominalValuePerUnit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument2#InterestRate
- * DebtInstrument2.InterestRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument2#DebtSeniority
- * DebtInstrument2.DebtSeniority}</li>
+ * {@linkplain com.tools20022.repository.msg.DebtInstrument2#mmNominalValuePerUnit
+ * DebtInstrument2.mmNominalValuePerUnit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument2#mmInterestRate
+ * DebtInstrument2.mmInterestRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DebtInstrument2#mmDebtSeniority
+ * DebtInstrument2.mmDebtSeniority}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DebtInstrument2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount totalIssuedNominalAmount;
 	/**
 	 * Total issued nominal amount in monetary value.
 	 * <p>
@@ -106,7 +108,7 @@ public class DebtInstrument2 {
 	 * definition} = "Total issued nominal amount in monetary value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalIssuedNominalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalIssuedNominalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DebtInstrument2.mmObject();
 			isDerived = false;
@@ -114,11 +116,12 @@ public class DebtInstrument2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalIssuedNominalAmount";
 			definition = "Total issued nominal amount in monetary value.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate maturityDate;
 	/**
 	 * Maturity date of the financial instrument.
 	 * <p>
@@ -131,8 +134,8 @@ public class DebtInstrument2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,27 +156,28 @@ public class DebtInstrument2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DebtInstrument4#MaturityDate
-	 * DebtInstrument4.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.DebtInstrument4#mmMaturityDate
+	 * DebtInstrument4.mmMaturityDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> DebtInstrument2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Maturity date of the financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument4.MaturityDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument4.mmMaturityDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount nominalValuePerUnit;
 	/**
 	 * Nominal value of each instrument. If not available, the minimum traded
 	 * value should be populated.
@@ -188,8 +192,8 @@ public class DebtInstrument2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#HoldingValue
-	 * AssetHolding.HoldingValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmHoldingValue
+	 * AssetHolding.mmHoldingValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +214,21 @@ public class DebtInstrument2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NominalValuePerUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNominalValuePerUnit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> DebtInstrument2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.HoldingValue;
 			isDerived = false;
 			xmlTag = "NmnlValPerUnit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NominalValuePerUnit";
 			definition = "Nominal value of each instrument. If not available, the minimum traded value should be populated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected InterestRate6Choice interestRate;
 	/**
 	 * Interest rate of the debt instrument.
 	 * <p>
@@ -235,8 +240,8 @@ public class DebtInstrument2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -255,21 +260,22 @@ public class DebtInstrument2 {
 	 * definition} = "Interest rate of the debt instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInterestRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> DebtInstrument2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "IntrstRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Interest rate of the debt instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InterestRate6Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> InterestRate6Choice.mmObject();
 		}
 	};
+	protected DebtInstrumentSeniorityType1Code debtSeniority;
 	/**
 	 * Seniority for a specific debt instrument.
 	 * <p>
@@ -298,7 +304,7 @@ public class DebtInstrument2 {
 	 * definition} = "Seniority for a specific debt instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DebtSeniority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebtSeniority = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DebtInstrument2.mmObject();
 			isDerived = false;
@@ -306,8 +312,8 @@ public class DebtInstrument2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtSeniority";
 			definition = "Seniority for a specific debt instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DebtInstrumentSeniorityType1Code.mmObject();
 		}
 	};
@@ -315,10 +321,10 @@ public class DebtInstrument2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument2.TotalIssuedNominalAmount, com.tools20022.repository.msg.DebtInstrument2.MaturityDate,
-						com.tools20022.repository.msg.DebtInstrument2.NominalValuePerUnit, com.tools20022.repository.msg.DebtInstrument2.InterestRate, com.tools20022.repository.msg.DebtInstrument2.DebtSeniority);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument2.mmTotalIssuedNominalAmount, com.tools20022.repository.msg.DebtInstrument2.mmMaturityDate,
+						com.tools20022.repository.msg.DebtInstrument2.mmNominalValuePerUnit, com.tools20022.repository.msg.DebtInstrument2.mmInterestRate, com.tools20022.repository.msg.DebtInstrument2.mmDebtSeniority);
 				trace_lazy = () -> Debt.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DebtInstrument2";
 				definition = "Specifies the debit instrument.";
@@ -326,5 +332,45 @@ public class DebtInstrument2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getTotalIssuedNominalAmount() {
+		return totalIssuedNominalAmount;
+	}
+
+	public void setTotalIssuedNominalAmount(ActiveOrHistoricCurrencyAndAmount totalIssuedNominalAmount) {
+		this.totalIssuedNominalAmount = totalIssuedNominalAmount;
+	}
+
+	public ISODate getMaturityDate() {
+		return maturityDate;
+	}
+
+	public void setMaturityDate(ISODate maturityDate) {
+		this.maturityDate = maturityDate;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getNominalValuePerUnit() {
+		return nominalValuePerUnit;
+	}
+
+	public void setNominalValuePerUnit(ActiveOrHistoricCurrencyAndAmount nominalValuePerUnit) {
+		this.nominalValuePerUnit = nominalValuePerUnit;
+	}
+
+	public InterestRate6Choice getInterestRate() {
+		return interestRate;
+	}
+
+	public void setInterestRate(InterestRate6Choice interestRate) {
+		this.interestRate = interestRate;
+	}
+
+	public DebtInstrumentSeniorityType1Code getDebtSeniority() {
+		return debtSeniority;
+	}
+
+	public void setDebtSeniority(DebtInstrumentSeniorityType1Code debtSeniority) {
+		this.debtSeniority = debtSeniority;
 	}
 }

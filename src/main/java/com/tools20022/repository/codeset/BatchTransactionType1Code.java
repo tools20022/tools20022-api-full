@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BatchTransactionType1Code#DebitCredit
- * BatchTransactionType1Code.DebitCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.BatchTransactionType1Code#mmDebitCredit
+ * BatchTransactionType1Code.mmDebitCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BatchTransactionType1Code#Cancellation
- * BatchTransactionType1Code.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.BatchTransactionType1Code#mmCancellation
+ * BatchTransactionType1Code.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BatchTransactionType1Code#Failed
- * BatchTransactionType1Code.Failed}</li>
+ * {@linkplain com.tools20022.repository.codeset.BatchTransactionType1Code#mmFailed
+ * BatchTransactionType1Code.mmFailed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BatchTransactionType1Code#Declined
- * BatchTransactionType1Code.Declined}</li>
+ * {@linkplain com.tools20022.repository.codeset.BatchTransactionType1Code#mmDeclined
+ * BatchTransactionType1Code.mmDeclined}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class BatchTransactionType1Code extends BatchTransactionTypeCode {
 	 * name} = "DebitCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode DebitCredit = new MMCode() {
+	public static final MMCode mmDebitCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitCredit";
@@ -110,7 +110,7 @@ public class BatchTransactionType1Code extends BatchTransactionTypeCode {
 	 * name} = "Cancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancellation = new MMCode() {
+	public static final MMCode mmCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
@@ -133,7 +133,7 @@ public class BatchTransactionType1Code extends BatchTransactionTypeCode {
 	 * name} = "Failed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Failed = new MMCode() {
+	public static final MMCode mmFailed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failed";
@@ -156,7 +156,7 @@ public class BatchTransactionType1Code extends BatchTransactionTypeCode {
 	 * name} = "Declined"</li>
 	 * </ul>
 	 */
-	public static final MMCode Declined = new MMCode() {
+	public static final MMCode mmDeclined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declined";
@@ -167,13 +167,13 @@ public class BatchTransactionType1Code extends BatchTransactionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DTCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BatchTransactionType1Code";
 				definition = "Type of transactions to include in a batch transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BatchTransactionType1Code.DebitCredit, com.tools20022.repository.codeset.BatchTransactionType1Code.Cancellation,
-						com.tools20022.repository.codeset.BatchTransactionType1Code.Failed, com.tools20022.repository.codeset.BatchTransactionType1Code.Declined);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BatchTransactionType1Code.mmDebitCredit, com.tools20022.repository.codeset.BatchTransactionType1Code.mmCancellation,
+						com.tools20022.repository.codeset.BatchTransactionType1Code.mmFailed, com.tools20022.repository.codeset.BatchTransactionType1Code.mmDeclined);
 				trace_lazy = () -> BatchTransactionTypeCode.mmObject();
 			}
 		});

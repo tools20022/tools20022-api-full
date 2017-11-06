@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndContactInformation1#PartyIdentification
- * PartyIdentificationAndContactInformation1.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndContactInformation1#mmPartyIdentification
+ * PartyIdentificationAndContactInformation1.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndContactInformation1#ContactInformation
- * PartyIdentificationAndContactInformation1.ContactInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndContactInformation1#mmContactInformation
+ * PartyIdentificationAndContactInformation1.mmContactInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentificationAndContactInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification8 partyIdentification;
 	/**
 	 * Identification of the party.
 	 * <p>
@@ -93,21 +94,22 @@ public class PartyIdentificationAndContactInformation1 {
 	 * definition} = "Identification of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentificationAndContactInformation1.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentificationAndContactInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identification of the party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification8.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	protected ContactIdentification1 contactInformation;
 	/**
 	 * Information needed to contact a physical person related to the party,
 	 * such as name, phone number, email address.
@@ -120,8 +122,8 @@ public class PartyIdentificationAndContactInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#ContactPersonRole
-	 * Person.ContactPersonRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmContactPersonRole
+	 * Person.mmContactPersonRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,34 +144,50 @@ public class PartyIdentificationAndContactInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmContactPersonRole;
 			componentContext_lazy = () -> PartyIdentificationAndContactInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.ContactPersonRole;
 			isDerived = false;
 			xmlTag = "CtctInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactInformation";
 			definition = "Information needed to contact a physical person related to the party, such as name, phone number, email address.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ContactIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.PartyIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.ContactInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmPartyIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmContactInformation);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndContactInformation1";
 				definition = "Identification of a person, or a non-financial institution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification8 getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(com.tools20022.repository.msg.PartyIdentification8 partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public ContactIdentification1 getContactInformation() {
+		return contactInformation;
+	}
+
+	public void setContactInformation(com.tools20022.repository.msg.ContactIdentification1 contactInformation) {
+		this.contactInformation = contactInformation;
 	}
 }

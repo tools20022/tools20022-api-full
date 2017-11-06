@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2#PlaceAndName
- * UpdatedAdditionalInformation6SD2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2#mmPlaceAndName
+ * UpdatedAdditionalInformation6SD2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2#FullLocalLanguageSecurityName
- * UpdatedAdditionalInformation6SD2.FullLocalLanguageSecurityName}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2#mmFullLocalLanguageSecurityName
+ * UpdatedAdditionalInformation6SD2.mmFullLocalLanguageSecurityName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2#AbbreviatedLocalLanguageSecurityName
- * UpdatedAdditionalInformation6SD2.AbbreviatedLocalLanguageSecurityName}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2#mmAbbreviatedLocalLanguageSecurityName
+ * UpdatedAdditionalInformation6SD2.mmAbbreviatedLocalLanguageSecurityName}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdatedAdditionalInformation6SD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -97,7 +98,7 @@ public class UpdatedAdditionalInformation6SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD2.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class UpdatedAdditionalInformation6SD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max240Text fullLocalLanguageSecurityName;
 	/**
 	 * Full and formal name of underlying securities in the local language.
 	 * <p>
@@ -122,8 +124,8 @@ public class UpdatedAdditionalInformation6SD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,20 +145,21 @@ public class UpdatedAdditionalInformation6SD2 {
 	 * "Full and formal name of underlying securities in the local language."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FullLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFullLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "FullLclLangSctyNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullLocalLanguageSecurityName";
 			definition = "Full and formal name of underlying securities in the local language.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max240Text.mmObject();
 		}
 	};
+	protected Max240Text abbreviatedLocalLanguageSecurityName;
 	/**
 	 * Abbreviated name of underlying securities in the local language. <br>
 	 * In case of non-listed securities, it will be a full local language
@@ -189,7 +192,7 @@ public class UpdatedAdditionalInformation6SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD2.mmObject();
 			isDerived = false;
@@ -197,8 +200,8 @@ public class UpdatedAdditionalInformation6SD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbbreviatedLocalLanguageSecurityName";
 			definition = "Abbreviated name of underlying securities in the local language. \r\nIn case of non-listed securities, it will be a full local language security name.\r\n銘柄名（銘柄略称";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max240Text.mmObject();
 		}
 	};
@@ -206,14 +209,38 @@ public class UpdatedAdditionalInformation6SD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.PlaceAndName, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.FullLocalLanguageSecurityName,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.AbbreviatedLocalLanguageSecurityName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmPlaceAndName, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmFullLocalLanguageSecurityName,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmAbbreviatedLocalLanguageSecurityName);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UpdatedAdditionalInformation6SD2";
 				definition = "Extension to provide the local language information of the new company name when the corporate action event type code is CHAN (name change).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max240Text getFullLocalLanguageSecurityName() {
+		return fullLocalLanguageSecurityName;
+	}
+
+	public void setFullLocalLanguageSecurityName(Max240Text fullLocalLanguageSecurityName) {
+		this.fullLocalLanguageSecurityName = fullLocalLanguageSecurityName;
+	}
+
+	public Max240Text getAbbreviatedLocalLanguageSecurityName() {
+		return abbreviatedLocalLanguageSecurityName;
+	}
+
+	public void setAbbreviatedLocalLanguageSecurityName(Max240Text abbreviatedLocalLanguageSecurityName) {
+		this.abbreviatedLocalLanguageSecurityName = abbreviatedLocalLanguageSecurityName;
 	}
 }

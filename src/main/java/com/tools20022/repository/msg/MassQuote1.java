@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Quote;
 import com.tools20022.repository.entity.ReceivingSettlementParty;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies elements related to a mass quote.
@@ -36,25 +37,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#DefaultBidSize
- * MassQuote1.DefaultBidSize}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#DefaultOfferSize
- * MassQuote1.DefaultOfferSize}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#QuoteSetDetails
- * MassQuote1.QuoteSetDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#TradingParties
- * MassQuote1.TradingParties}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#CashParties
- * MassQuote1.CashParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#mmDefaultBidSize
+ * MassQuote1.mmDefaultBidSize}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#mmDefaultOfferSize
+ * MassQuote1.mmDefaultOfferSize}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#mmQuoteSetDetails
+ * MassQuote1.mmQuoteSetDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#mmTradingParties
+ * MassQuote1.mmTradingParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MassQuote1#mmCashParties
+ * MassQuote1.mmCashParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MassQuote1#ReceivingSettlementParties
- * MassQuote1.ReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.MassQuote1#mmReceivingSettlementParties
+ * MassQuote1.mmReceivingSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MassQuote1#DeliveringSettlementParties
- * MassQuote1.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.MassQuote1#mmDeliveringSettlementParties
+ * MassQuote1.mmDeliveringSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MassQuote1#OtherBusinessParties
- * MassQuote1.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.msg.MassQuote1#mmOtherBusinessParties
+ * MassQuote1.mmOtherBusinessParties}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MassQuote1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantityChoice defaultBidSize;
 	/**
 	 * Default Bid Size for quote contained within this quote message - if not
 	 * explicitly provided.
@@ -91,8 +93,8 @@ public class MassQuote1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#Quantity
-	 * Quote.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmQuantity
+	 * Quote.mmQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.MassQuote1
@@ -112,20 +114,21 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DefaultBidSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDefaultBidSize = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmQuantity;
 			componentContext_lazy = () -> MassQuote1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.Quantity;
 			isDerived = false;
 			xmlTag = "DfltBidSz";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultBidSize";
 			definition = "Default Bid Size for quote contained within this quote message - if not explicitly provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice defaultOfferSize;
 	/**
 	 * Default Offer Size for quotes contained within this quote message - if
 	 * not explicitly provided.
@@ -140,8 +143,8 @@ public class MassQuote1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#Quantity
-	 * Quote.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmQuantity
+	 * Quote.mmQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.MassQuote1
@@ -161,20 +164,21 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DefaultOfferSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDefaultOfferSize = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmQuantity;
 			componentContext_lazy = () -> MassQuote1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.Quantity;
 			isDerived = false;
 			xmlTag = "DfltOfferSz";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOfferSize";
 			definition = "Default Offer Size for quotes contained within this quote message - if not explicitly provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QuoteSet1> quoteSetDetails;
 	/**
 	 * Provides details about a group of related quotes.
 	 * <p>
@@ -185,8 +189,8 @@ public class MassQuote1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#SecurityQuoteVariable
-	 * Quote.SecurityQuoteVariable}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmSecurityQuoteVariable
+	 * Quote.mmSecurityQuoteVariable}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.MassQuote1
@@ -204,20 +208,21 @@ public class MassQuote1 {
 	 * definition} = "Provides details about a group of related quotes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuoteSetDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuoteSetDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmSecurityQuoteVariable;
 			componentContext_lazy = () -> MassQuote1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.SecurityQuoteVariable;
 			isDerived = false;
 			xmlTag = "QtSetDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteSetDetails";
 			definition = "Provides details about a group of related quotes.";
 			minOccurs = 1;
-			type_lazy = () -> QuoteSet1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QuoteSet1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary14> tradingParties;
 	/**
 	 * Parties used for acting parties that applies either to the whole message
 	 * or to individual sides.
@@ -230,8 +235,8 @@ public class MassQuote1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradePartyRole
-	 * Trade.TradePartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradePartyRole
+	 * Trade.mmTradePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.MassQuote1
@@ -251,20 +256,21 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
 			componentContext_lazy = () -> MassQuote1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradePartyRole;
 			isDerived = false;
 			xmlTag = "TradgPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingParties";
 			definition = "Parties used for acting parties that applies either to the whole message or to individual sides.";
 			minOccurs = 0;
-			type_lazy = () -> Intermediary14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 		}
 	};
+	protected CashParties1 cashParties;
 	/**
 	 * Payment processes required to transfer cash from the debtor to the
 	 * creditor.
@@ -277,8 +283,8 @@ public class MassQuote1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PartyRole
-	 * Payment.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPartyRole
+	 * Payment.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.MassQuote1
@@ -298,21 +304,22 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPartyRole;
 			componentContext_lazy = () -> MassQuote1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PartyRole;
 			isDerived = false;
 			xmlTag = "CshPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Payment processes required to transfer cash from the debtor to the creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashParties1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashParties1.mmObject();
 		}
 	};
+	protected SettlementParties3 receivingSettlementParties;
 	/**
 	 * Chain of parties involved in the settlement of a transaction, including
 	 * receipts and deliveries, book transfers, treasury deals, or other
@@ -348,21 +355,22 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MassQuote1.mmObject();
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
+			componentContext_lazy = () -> MassQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	protected SettlementParties3 deliveringSettlementParties;
 	/**
 	 * Chain of parties involved in the settlement of a transaction, including
 	 * receipts and deliveries, book transfers, treasury deals, or other
@@ -398,21 +406,22 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MassQuote1.mmObject();
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
+			componentContext_lazy = () -> MassQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	protected OtherParties1 otherBusinessParties;
 	/**
 	 * Chain of parties involved in the settlement of a transaction, including
 	 * receipts and deliveries, book transfers, treasury deals, or other
@@ -443,7 +452,7 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherBusinessParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MassQuote1.mmObject();
 			isDerived = false;
@@ -451,26 +460,90 @@ public class MassQuote1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OtherParties1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OtherParties1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MassQuote1.DefaultBidSize, com.tools20022.repository.msg.MassQuote1.DefaultOfferSize, com.tools20022.repository.msg.MassQuote1.QuoteSetDetails,
-						com.tools20022.repository.msg.MassQuote1.TradingParties, com.tools20022.repository.msg.MassQuote1.CashParties, com.tools20022.repository.msg.MassQuote1.ReceivingSettlementParties,
-						com.tools20022.repository.msg.MassQuote1.DeliveringSettlementParties, com.tools20022.repository.msg.MassQuote1.OtherBusinessParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MassQuote1.mmDefaultBidSize, com.tools20022.repository.msg.MassQuote1.mmDefaultOfferSize, com.tools20022.repository.msg.MassQuote1.mmQuoteSetDetails,
+						com.tools20022.repository.msg.MassQuote1.mmTradingParties, com.tools20022.repository.msg.MassQuote1.mmCashParties, com.tools20022.repository.msg.MassQuote1.mmReceivingSettlementParties,
+						com.tools20022.repository.msg.MassQuote1.mmDeliveringSettlementParties, com.tools20022.repository.msg.MassQuote1.mmOtherBusinessParties);
 				trace_lazy = () -> Quote.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MassQuote1";
 				definition = "Identifies elements related to a mass quote.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantityChoice getDefaultBidSize() {
+		return defaultBidSize;
+	}
+
+	public void setDefaultBidSize(FinancialInstrumentQuantityChoice defaultBidSize) {
+		this.defaultBidSize = defaultBidSize;
+	}
+
+	public FinancialInstrumentQuantityChoice getDefaultOfferSize() {
+		return defaultOfferSize;
+	}
+
+	public void setDefaultOfferSize(FinancialInstrumentQuantityChoice defaultOfferSize) {
+		this.defaultOfferSize = defaultOfferSize;
+	}
+
+	public List<QuoteSet1> getQuoteSetDetails() {
+		return quoteSetDetails;
+	}
+
+	public void setQuoteSetDetails(List<com.tools20022.repository.msg.QuoteSet1> quoteSetDetails) {
+		this.quoteSetDetails = quoteSetDetails;
+	}
+
+	public List<Intermediary14> getTradingParties() {
+		return tradingParties;
+	}
+
+	public void setTradingParties(List<com.tools20022.repository.msg.Intermediary14> tradingParties) {
+		this.tradingParties = tradingParties;
+	}
+
+	public CashParties1 getCashParties() {
+		return cashParties;
+	}
+
+	public void setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
+		this.cashParties = cashParties;
+	}
+
+	public SettlementParties3 getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
+	}
+
+	public SettlementParties3 getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
+	}
+
+	public OtherParties1 getOtherBusinessParties() {
+		return otherBusinessParties;
+	}
+
+	public void setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
+		this.otherBusinessParties = otherBusinessParties;
 	}
 }

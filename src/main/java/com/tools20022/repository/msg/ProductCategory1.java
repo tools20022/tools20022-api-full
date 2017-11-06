@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProductCategory1#Type
- * ProductCategory1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProductCategory1#Category
- * ProductCategory1.Category}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProductCategory1#mmType
+ * ProductCategory1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProductCategory1#mmCategory
+ * ProductCategory1.mmCategory}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProductCategory1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProductCategory1Code type;
 	/**
 	 * Specifies the type of product category by means of a code.
 	 * <p>
@@ -74,8 +75,8 @@ public class ProductCategory1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductCategory#Type
-	 * ProductCategory.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductCategory#mmType
+	 * ProductCategory.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class ProductCategory1 {
 	 * "Specifies the type of product category by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCategory.mmType;
 			componentContext_lazy = () -> ProductCategory1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCategory.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of product category by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProductCategory1Code.mmObject();
 		}
 	};
+	protected Max35Text category;
 	/**
 	 * Specifies the category of a product.
 	 * <p>
@@ -121,8 +123,8 @@ public class ProductCategory1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductCategory#Category
-	 * ProductCategory.Category}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductCategory#mmCategory
+	 * ProductCategory.mmCategory}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,17 +143,17 @@ public class ProductCategory1 {
 	 * definition} = "Specifies the category of a product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Category = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCategory = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCategory.mmCategory;
 			componentContext_lazy = () -> ProductCategory1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCategory.Category;
 			isDerived = false;
 			xmlTag = "Ctgy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Category";
 			definition = "Specifies the category of a product.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -159,14 +161,30 @@ public class ProductCategory1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCategory1.Type, com.tools20022.repository.msg.ProductCategory1.Category);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCategory1.mmType, com.tools20022.repository.msg.ProductCategory1.mmCategory);
 				trace_lazy = () -> ProductCategory.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductCategory1";
 				definition = "Specifies the category of the product.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProductCategory1Code getType() {
+		return type;
+	}
+
+	public void setType(ProductCategory1Code type) {
+		this.type = type;
+	}
+
+	public Max35Text getCategory() {
+		return category;
+	}
+
+	public void setCategory(Max35Text category) {
+		this.category = category;
 	}
 }

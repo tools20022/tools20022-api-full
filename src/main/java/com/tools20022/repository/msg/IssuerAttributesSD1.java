@@ -34,29 +34,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#PlaceAndName
- * IssuerAttributesSD1.PlaceAndName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#Name
- * IssuerAttributesSD1.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#mmPlaceAndName
+ * IssuerAttributesSD1.mmPlaceAndName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#mmName
+ * IssuerAttributesSD1.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#RegisteredNumberType
- * IssuerAttributesSD1.RegisteredNumberType}</li>
+ * {@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#mmRegisteredNumberType
+ * IssuerAttributesSD1.mmRegisteredNumberType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#OtherRegisteredNumberType
- * IssuerAttributesSD1.OtherRegisteredNumberType}</li>
+ * {@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#mmOtherRegisteredNumberType
+ * IssuerAttributesSD1.mmOtherRegisteredNumberType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#RegistrationNumber
- * IssuerAttributesSD1.RegistrationNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#mmRegistrationNumber
+ * IssuerAttributesSD1.mmRegistrationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#IssuerIdentification
- * IssuerAttributesSD1.IssuerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IssuerAttributesSD1#mmIssuerIdentification
+ * IssuerAttributesSD1.mmIssuerIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IssuerAttributesSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance.
@@ -102,7 +103,7 @@ public class IssuerAttributesSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -110,11 +111,12 @@ public class IssuerAttributesSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \n\nIn the case of XML, this is expressed by a valid XPath.\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected RestrictedFINXMax140Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.<br>
@@ -146,7 +148,7 @@ public class IssuerAttributesSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -154,11 +156,12 @@ public class IssuerAttributesSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
 		}
 	};
+	protected RegisteredNumberType1Code registeredNumberType;
 	/**
 	 * Registered number type of the entity.
 	 * <p>
@@ -187,7 +190,7 @@ public class IssuerAttributesSD1 {
 	 * definition} = "Registered number type of the entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegisteredNumberType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegisteredNumberType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class IssuerAttributesSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredNumberType";
 			definition = "Registered number type of the entity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RegisteredNumberType1Code.mmObject();
 		}
 	};
+	protected Max35Text otherRegisteredNumberType;
 	/**
 	 * Other type of Registered Number.
 	 * <p>
@@ -227,7 +231,7 @@ public class IssuerAttributesSD1 {
 	 * definition} = "Other type of Registered Number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherRegisteredNumberType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherRegisteredNumberType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -235,11 +239,12 @@ public class IssuerAttributesSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRegisteredNumberType";
 			definition = "Other type of Registered Number.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max16Text registrationNumber;
 	/**
 	 * Equivalent, unique number of the entity for the Registered Number Type.
 	 * <p>
@@ -269,7 +274,7 @@ public class IssuerAttributesSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrationNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -277,11 +282,12 @@ public class IssuerAttributesSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationNumber";
 			definition = "Equivalent, unique number of the entity for the  Registered Number Type.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Exact3UpperCaseAlphaNumericText issuerIdentification;
 	/**
 	 * ASX Issuer Code.
 	 * <p>
@@ -310,7 +316,7 @@ public class IssuerAttributesSD1 {
 	 * definition} = "ASX  Issuer Code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -318,8 +324,8 @@ public class IssuerAttributesSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerIdentification";
 			definition = "ASX  Issuer Code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3UpperCaseAlphaNumericText.mmObject();
 		}
 	};
@@ -327,15 +333,63 @@ public class IssuerAttributesSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAttributesSD1.PlaceAndName, com.tools20022.repository.msg.IssuerAttributesSD1.Name,
-						com.tools20022.repository.msg.IssuerAttributesSD1.RegisteredNumberType, com.tools20022.repository.msg.IssuerAttributesSD1.OtherRegisteredNumberType,
-						com.tools20022.repository.msg.IssuerAttributesSD1.RegistrationNumber, com.tools20022.repository.msg.IssuerAttributesSD1.IssuerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAttributesSD1.mmPlaceAndName, com.tools20022.repository.msg.IssuerAttributesSD1.mmName,
+						com.tools20022.repository.msg.IssuerAttributesSD1.mmRegisteredNumberType, com.tools20022.repository.msg.IssuerAttributesSD1.mmOtherRegisteredNumberType,
+						com.tools20022.repository.msg.IssuerAttributesSD1.mmRegistrationNumber, com.tools20022.repository.msg.IssuerAttributesSD1.mmIssuerIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IssuerAttributesSD1";
 				definition = "Details of the issuer, as required by ASX.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public RestrictedFINXMax140Text getName() {
+		return name;
+	}
+
+	public void setName(RestrictedFINXMax140Text name) {
+		this.name = name;
+	}
+
+	public RegisteredNumberType1Code getRegisteredNumberType() {
+		return registeredNumberType;
+	}
+
+	public void setRegisteredNumberType(RegisteredNumberType1Code registeredNumberType) {
+		this.registeredNumberType = registeredNumberType;
+	}
+
+	public Max35Text getOtherRegisteredNumberType() {
+		return otherRegisteredNumberType;
+	}
+
+	public void setOtherRegisteredNumberType(Max35Text otherRegisteredNumberType) {
+		this.otherRegisteredNumberType = otherRegisteredNumberType;
+	}
+
+	public Max16Text getRegistrationNumber() {
+		return registrationNumber;
+	}
+
+	public void setRegistrationNumber(Max16Text registrationNumber) {
+		this.registrationNumber = registrationNumber;
+	}
+
+	public Exact3UpperCaseAlphaNumericText getIssuerIdentification() {
+		return issuerIdentification;
+	}
+
+	public void setIssuerIdentification(Exact3UpperCaseAlphaNumericText issuerIdentification) {
+		this.issuerIdentification = issuerIdentification;
 	}
 }

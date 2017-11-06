@@ -34,26 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ThirdPartyRights1#Type
- * ThirdPartyRights1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ThirdPartyRights1#DateTime
- * ThirdPartyRights1.DateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ThirdPartyRights1#Holder
- * ThirdPartyRights1.Holder}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ThirdPartyRights1#mmType
+ * ThirdPartyRights1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ThirdPartyRights1#mmDateTime
+ * ThirdPartyRights1.mmDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ThirdPartyRights1#mmHolder
+ * ThirdPartyRights1.mmHolder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ThirdPartyRights1#LegalEntityIdentifier
- * ThirdPartyRights1.LegalEntityIdentifier}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ThirdPartyRights1#Amount
- * ThirdPartyRights1.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ThirdPartyRights1#Description
- * ThirdPartyRights1.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.ThirdPartyRights1#mmLegalEntityIdentifier
+ * ThirdPartyRights1.mmLegalEntityIdentifier}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ThirdPartyRights1#mmAmount
+ * ThirdPartyRights1.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ThirdPartyRights1#mmDescription
+ * ThirdPartyRights1.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ThirdPartyRights1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Type of third party right.
 	 * <p>
@@ -94,7 +96,7 @@ public class ThirdPartyRights1 {
 	 * definition} = "Type of third party right."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
@@ -102,11 +104,12 @@ public class ThirdPartyRights1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of third party right.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime dateTime;
 	/**
 	 * Timestamp for the third party right.
 	 * <p>
@@ -134,7 +137,7 @@ public class ThirdPartyRights1 {
 	 * definition} = "Timestamp for the third party right."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
@@ -142,11 +145,12 @@ public class ThirdPartyRights1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Timestamp for the third party right.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected PartyIdentification70Choice holder;
 	/**
 	 * Party that holds the third party right.
 	 * <p>
@@ -174,7 +178,7 @@ public class ThirdPartyRights1 {
 	 * definition} = "Party that holds the third party right."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Holder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHolder = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
@@ -182,12 +186,13 @@ public class ThirdPartyRights1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Holder";
 			definition = "Party that holds the third party right.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification70Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	protected LEIIdentifier legalEntityIdentifier;
 	/**
 	 * Identification of the holder with a Legal Entity Identifier. This is a
 	 * code allocated to a party as described in ISO 17442
@@ -203,8 +208,8 @@ public class ThirdPartyRights1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#LEI
-	 * PartyIdentificationInformation.LEI}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -225,20 +230,21 @@ public class ThirdPartyRights1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegalEntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.LEI;
 			isDerived = false;
 			xmlTag = "LglNttyIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalEntityIdentifier";
 			definition = "Identification of the holder with a Legal Entity Identifier. This is a code allocated to a party as described in ISO 17442 \"Financial Services - Legal Entity Identifier (LEI)\".";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount of the third party right.
 	 * <p>
@@ -267,7 +273,7 @@ public class ThirdPartyRights1 {
 	 * definition} = "Amount of the third party right."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
@@ -275,11 +281,12 @@ public class ThirdPartyRights1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of the third party right.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max350Text description;
 	/**
 	 * Description of the third party right.
 	 * <p>
@@ -307,7 +314,7 @@ public class ThirdPartyRights1 {
 	 * definition} = "Description of the third party right."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
@@ -315,8 +322,8 @@ public class ThirdPartyRights1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the third party right.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -324,14 +331,62 @@ public class ThirdPartyRights1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ThirdPartyRights1.Type, com.tools20022.repository.msg.ThirdPartyRights1.DateTime, com.tools20022.repository.msg.ThirdPartyRights1.Holder,
-						com.tools20022.repository.msg.ThirdPartyRights1.LegalEntityIdentifier, com.tools20022.repository.msg.ThirdPartyRights1.Amount, com.tools20022.repository.msg.ThirdPartyRights1.Description);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ThirdPartyRights1.mmType, com.tools20022.repository.msg.ThirdPartyRights1.mmDateTime, com.tools20022.repository.msg.ThirdPartyRights1.mmHolder,
+						com.tools20022.repository.msg.ThirdPartyRights1.mmLegalEntityIdentifier, com.tools20022.repository.msg.ThirdPartyRights1.mmAmount, com.tools20022.repository.msg.ThirdPartyRights1.mmDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ThirdPartyRights1";
 				definition = "Information about third party rights.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public ISODateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(ISODateTime dateTime) {
+		this.dateTime = dateTime;
+	}
+
+	public PartyIdentification70Choice getHolder() {
+		return holder;
+	}
+
+	public void setHolder(PartyIdentification70Choice holder) {
+		this.holder = holder;
+	}
+
+	public LEIIdentifier getLegalEntityIdentifier() {
+		return legalEntityIdentifier;
+	}
+
+	public void setLegalEntityIdentifier(LEIIdentifier legalEntityIdentifier) {
+		this.legalEntityIdentifier = legalEntityIdentifier;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public Max350Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max350Text description) {
+		this.description = description;
 	}
 }

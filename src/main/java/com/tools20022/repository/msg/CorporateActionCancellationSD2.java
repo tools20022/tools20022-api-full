@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD2#PlaceAndName
- * CorporateActionCancellationSD2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD2#mmPlaceAndName
+ * CorporateActionCancellationSD2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD2#ExternalComments
- * CorporateActionCancellationSD2.ExternalComments}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD2#mmExternalComments
+ * CorporateActionCancellationSD2.mmExternalComments}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionCancellationSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -87,7 +88,7 @@ public class CorporateActionCancellationSD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionCancellationSD2.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class CorporateActionCancellationSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max8000Text externalComments;
 	/**
 	 * Additional textual information regarding the cancelled event.
 	 * <p>
@@ -128,7 +130,7 @@ public class CorporateActionCancellationSD2 {
 	 * "Additional textual information regarding the cancelled event. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExternalComments = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExternalComments = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionCancellationSD2.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class CorporateActionCancellationSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalComments";
 			definition = "Additional textual information regarding the cancelled event. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8000Text.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class CorporateActionCancellationSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellationSD2.PlaceAndName, com.tools20022.repository.msg.CorporateActionCancellationSD2.ExternalComments);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellationSD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionCancellationSD2.mmExternalComments);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCancellationSD2";
 				definition = "Provides additional information regarding additional comments.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max8000Text getExternalComments() {
+		return externalComments;
+	}
+
+	public void setExternalComments(Max8000Text externalComments) {
+		this.externalComments = externalComments;
 	}
 }

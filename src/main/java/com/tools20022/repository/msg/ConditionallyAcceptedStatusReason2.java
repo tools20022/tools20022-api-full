@@ -40,8 +40,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#ReasonOrExtendedReasonOrDSSRule
- * ConditionallyAcceptedStatusReason2.ReasonOrExtendedReasonOrDSSRule}</li>
+ * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#mmReasonOrExtendedReasonOrDSSRule
+ * ConditionallyAcceptedStatusReason2.mmReasonOrExtendedReasonOrDSSRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,17 +49,17 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#Reason
- * ConditionallyAcceptedStatusReason2.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#mmReason
+ * ConditionallyAcceptedStatusReason2.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#ExtendedReason
- * ConditionallyAcceptedStatusReason2.ExtendedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#mmExtendedReason
+ * ConditionallyAcceptedStatusReason2.mmExtendedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#DataSourceScheme
- * ConditionallyAcceptedStatusReason2.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#mmDataSourceScheme
+ * ConditionallyAcceptedStatusReason2.mmDataSourceScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#AdditionalInformation
- * ConditionallyAcceptedStatusReason2.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#mmAdditionalInformation
+ * ConditionallyAcceptedStatusReason2.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -68,8 +68,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -97,6 +97,7 @@ import java.util.function.Supplier;
 public class ConditionallyAcceptedStatusReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ConditionallyAcceptedStatusReason2Code reason;
 	/**
 	 * Reason for the conditionally accepted status.
 	 * <p>
@@ -110,8 +111,8 @@ public class ConditionallyAcceptedStatusReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ConditionallyAcceptedStatus
-	 * SecuritiesOrderStatus.ConditionallyAcceptedStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConditionallyAcceptedStatus
+	 * SecuritiesOrderStatus.mmConditionallyAcceptedStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -130,20 +131,21 @@ public class ConditionallyAcceptedStatusReason2 {
 	 * definition} = "Reason for the conditionally accepted status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> ConditionallyAcceptedStatusReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.ConditionallyAcceptedStatus;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the conditionally accepted status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedReason;
 	/**
 	 * Reason for the conditionally accepted status.
 	 * <p>
@@ -172,7 +174,7 @@ public class ConditionallyAcceptedStatusReason2 {
 	 * definition} = "Reason for the conditionally accepted status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ConditionallyAcceptedStatusReason2.mmObject();
 			isDerived = false;
@@ -180,11 +182,12 @@ public class ConditionallyAcceptedStatusReason2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the conditionally accepted status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the conditionally accepted
 	 * status.
@@ -197,8 +200,8 @@ public class ConditionallyAcceptedStatusReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#DataSourceScheme
-	 * StatusReason.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+	 * StatusReason.mmDataSourceScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -219,21 +222,22 @@ public class ConditionallyAcceptedStatusReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> ConditionallyAcceptedStatusReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.DataSourceScheme;
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the conditionally accepted status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the conditionally accepted status reason.
 	 * <p>
@@ -246,8 +250,8 @@ public class ConditionallyAcceptedStatusReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ConditionallyAcceptedStatus
-	 * SecuritiesOrderStatus.ConditionallyAcceptedStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConditionallyAcceptedStatus
+	 * SecuritiesOrderStatus.mmConditionallyAcceptedStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -267,17 +271,17 @@ public class ConditionallyAcceptedStatusReason2 {
 	 * "Additional information about the conditionally accepted status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> ConditionallyAcceptedStatusReason2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.ConditionallyAcceptedStatus;
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the conditionally accepted status reason.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -291,14 +295,14 @@ public class ConditionallyAcceptedStatusReason2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#Reason
-	 * ConditionallyAcceptedStatusReason2.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#mmReason
+	 * ConditionallyAcceptedStatusReason2.mmReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#ExtendedReason
-	 * ConditionallyAcceptedStatusReason2.ExtendedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#mmExtendedReason
+	 * ConditionallyAcceptedStatusReason2.mmExtendedReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#DataSourceScheme
-	 * ConditionallyAcceptedStatusReason2.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2#mmDataSourceScheme
+	 * ConditionallyAcceptedStatusReason2.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -318,24 +322,24 @@ public class ConditionallyAcceptedStatusReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ReasonOrExtendedReasonOrDSSRule = new MMXor() {
+	public static final MMXor mmReasonOrExtendedReasonOrDSSRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrExtendedReasonOrDSSRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme) must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.Reason, com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.ExtendedReason,
-					com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.DataSourceScheme);
 			messageComponent_lazy = () -> ConditionallyAcceptedStatusReason2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmReason, com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmExtendedReason,
+					com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.Reason, com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.ExtendedReason,
-						com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.DataSourceScheme, com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmReason, com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmExtendedReason,
+						com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmDataSourceScheme, com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -346,11 +350,43 @@ public class ConditionallyAcceptedStatusReason2 {
 				})).get();
 				name = "ConditionallyAcceptedStatusReason2";
 				definition = "Identification of the reason for the conditionally accepted status.";
-				previousVersion_lazy = () -> ConditionallyAcceptedStatusReason3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ConditionallyAcceptedStatusReason3Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.ReasonOrExtendedReasonOrDSSRule);
+				previousVersion_lazy = () -> ConditionallyAcceptedStatusReason3.mmObject();
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmReasonOrExtendedReasonOrDSSRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ConditionallyAcceptedStatusReason2Code getReason() {
+		return reason;
+	}
+
+	public void setReason(ConditionallyAcceptedStatusReason2Code reason) {
+		this.reason = reason;
+	}
+
+	public Extended350Code getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

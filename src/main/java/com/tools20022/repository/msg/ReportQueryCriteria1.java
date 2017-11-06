@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportQueryCriteria1#NewQueryName
- * ReportQueryCriteria1.NewQueryName}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportQueryCriteria1#mmNewQueryName
+ * ReportQueryCriteria1.mmNewQueryName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportQueryCriteria1#SearchCriteria
- * ReportQueryCriteria1.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportQueryCriteria1#mmSearchCriteria
+ * ReportQueryCriteria1.mmSearchCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportQueryCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text newQueryName;
 	/**
 	 * Name of the query defined by the search criteria and return criteria.
 	 * <p>
@@ -88,7 +89,7 @@ public class ReportQueryCriteria1 {
 	 * "Name of the query defined by the search criteria and return criteria. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportQueryCriteria1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class ReportQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQueryName";
 			definition = "Name of the query defined by the search criteria and return criteria. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ReportQuerySearchCriteria1 searchCriteria;
 	/**
 	 * Defines the criteria to be used to extract the account information.
 	 * <p>
@@ -129,7 +131,7 @@ public class ReportQueryCriteria1 {
 	 * "Defines the criteria to be used to extract the account information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportQueryCriteria1.mmObject();
 			isDerived = false;
@@ -137,23 +139,39 @@ public class ReportQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to be used to extract the account information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReportQuerySearchCriteria1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportQueryCriteria1.NewQueryName, com.tools20022.repository.msg.ReportQueryCriteria1.SearchCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportQueryCriteria1.mmNewQueryName, com.tools20022.repository.msg.ReportQueryCriteria1.mmSearchCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportQueryCriteria1";
 				definition = "Defines the criteria which are used to search for generated report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getNewQueryName() {
+		return newQueryName;
+	}
+
+	public void setNewQueryName(Max35Text newQueryName) {
+		this.newQueryName = newQueryName;
+	}
+
+	public ReportQuerySearchCriteria1 getSearchCriteria() {
+		return searchCriteria;
+	}
+
+	public void setSearchCriteria(com.tools20022.repository.msg.ReportQuerySearchCriteria1 searchCriteria) {
+		this.searchCriteria = searchCriteria;
 	}
 }

@@ -69,27 +69,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#AcceptanceIdentification
- * AmendmentAcceptanceV02.AcceptanceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#mmAcceptanceIdentification
+ * AmendmentAcceptanceV02.mmAcceptanceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#TransactionIdentification
- * AmendmentAcceptanceV02.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#mmTransactionIdentification
+ * AmendmentAcceptanceV02.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#SubmitterTransactionReference
- * AmendmentAcceptanceV02.SubmitterTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#mmSubmitterTransactionReference
+ * AmendmentAcceptanceV02.mmSubmitterTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#DeltaReportReference
- * AmendmentAcceptanceV02.DeltaReportReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#mmDeltaReportReference
+ * AmendmentAcceptanceV02.mmDeltaReportReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#AcceptedAmendmentNumber
- * AmendmentAcceptanceV02.AcceptedAmendmentNumber}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#mmAcceptedAmendmentNumber
+ * AmendmentAcceptanceV02.mmAcceptedAmendmentNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#identifier
- * AmendmentAcceptanceV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.005.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmendmentAcceptanceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 acceptanceIdentification;
 	/**
 	 * Identifies the acceptance message.
 	 * <p>
@@ -128,17 +127,18 @@ public class AmendmentAcceptanceV02 {
 	 * definition} = "Identifies the acceptance message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcceptanceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcceptanceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptncId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceIdentification";
 			definition = "Identifies the acceptance message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -166,17 +166,18 @@ public class AmendmentAcceptanceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
 	 * Reference to the identification of the transaction for the requesting
 	 * financial institution.
@@ -203,17 +204,18 @@ public class AmendmentAcceptanceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the identification of the transaction for the requesting financial institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected MessageIdentification1 deltaReportReference;
 	/**
 	 * Reference to the identification of the delta report that contained the
 	 * amendment.
@@ -240,17 +242,18 @@ public class AmendmentAcceptanceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DeltaReportReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDeltaReportReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DltaRptRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeltaReportReference";
 			definition = "Reference to the identification of the delta report that contained the amendment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected Count1 acceptedAmendmentNumber;
 	/**
 	 * Sequence number of the accepted baseline amendment.
 	 * <p>
@@ -272,42 +275,15 @@ public class AmendmentAcceptanceV02 {
 	 * definition} = "Sequence number of the accepted baseline amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcceptedAmendmentNumber = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcceptedAmendmentNumber = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptdAmdmntNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedAmendmentNumber";
 			definition = "Sequence number of the accepted baseline amendment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Count1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "005";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -321,12 +297,59 @@ public class AmendmentAcceptanceV02 {
 				rootElement = "Document";
 				xmlTag = "AmdmntAccptnc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.AcceptanceIdentification, com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.TransactionIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.SubmitterTransactionReference, com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.DeltaReportReference,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.AcceptedAmendmentNumber);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmAcceptanceIdentification, com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmDeltaReportReference,
+						com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmAcceptedAmendmentNumber);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "005";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getAcceptanceIdentification() {
+		return acceptanceIdentification;
+	}
+
+	public void setAcceptanceIdentification(MessageIdentification1 acceptanceIdentification) {
+		this.acceptanceIdentification = acceptanceIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public SimpleIdentificationInformation getSubmitterTransactionReference() {
+		return submitterTransactionReference;
+	}
+
+	public void setSubmitterTransactionReference(SimpleIdentificationInformation submitterTransactionReference) {
+		this.submitterTransactionReference = submitterTransactionReference;
+	}
+
+	public MessageIdentification1 getDeltaReportReference() {
+		return deltaReportReference;
+	}
+
+	public void setDeltaReportReference(MessageIdentification1 deltaReportReference) {
+		this.deltaReportReference = deltaReportReference;
+	}
+
+	public Count1 getAcceptedAmendmentNumber() {
+		return acceptedAmendmentNumber;
+	}
+
+	public void setAcceptedAmendmentNumber(Count1 acceptedAmendmentNumber) {
+		this.acceptedAmendmentNumber = acceptedAmendmentNumber;
 	}
 }

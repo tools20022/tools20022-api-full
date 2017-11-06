@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.Limits4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between details of one or more limits set by the member (or on behalf
@@ -36,18 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitReportOrError1Choice#BusinessReport
- * LimitReportOrError1Choice.BusinessReport}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitReportOrError1Choice#mmBusinessReport
+ * LimitReportOrError1Choice.mmBusinessReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LimitReportOrError1Choice#OperationalError
- * LimitReportOrError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.LimitReportOrError1Choice#mmOperationalError
+ * LimitReportOrError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Limits4 businessReport;
 	/**
 	 * Reports on limits.
 	 * <p>
@@ -97,13 +99,13 @@ public class LimitReportOrError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.LimitReportOrError2Choice#BusinessReport
-	 * LimitReportOrError2Choice.BusinessReport}</li>
+	 * {@linkplain com.tools20022.repository.choice.LimitReportOrError2Choice#mmBusinessReport
+	 * LimitReportOrError2Choice.mmBusinessReport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -111,13 +113,14 @@ public class LimitReportOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports on limits.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitReportOrError2Choice.BusinessReport);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitReportOrError2Choice.mmBusinessReport);
 			maxOccurs = 1;
-			type_lazy = () -> Limits4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Limits4.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Indicates that an operational error has been issued during the processing
 	 * of the related request.
@@ -149,13 +152,13 @@ public class LimitReportOrError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.LimitReportOrError2Choice#OperationalError
-	 * LimitReportOrError2Choice.OperationalError}</li>
+	 * {@linkplain com.tools20022.repository.choice.LimitReportOrError2Choice#mmOperationalError
+	 * LimitReportOrError2Choice.mmOperationalError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -163,18 +166,18 @@ public class LimitReportOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitReportOrError2Choice.OperationalError);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitReportOrError2Choice.mmOperationalError);
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitReportOrError1Choice.BusinessReport, com.tools20022.repository.choice.LimitReportOrError1Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitReportOrError1Choice.mmBusinessReport, com.tools20022.repository.choice.LimitReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitReportOrError1Choice";
 				definition = "Choice between details of one or more limits set by the member (or on behalf of the member) and managed by the transaction administrator or an operational error when the requested data cannot be retrieved.";
@@ -182,5 +185,21 @@ public class LimitReportOrError1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Limits4 getBusinessReport() {
+		return businessReport;
+	}
+
+	public void setBusinessReport(Limits4 businessReport) {
+		this.businessReport = businessReport;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

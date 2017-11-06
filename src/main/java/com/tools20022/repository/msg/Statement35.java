@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Statement35#DateOrPeriod
- * Statement35.DateOrPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement35#HistoricData
- * Statement35.HistoricData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement35#mmDateOrPeriod
+ * Statement35.mmDateOrPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement35#mmHistoricData
+ * Statement35.mmHistoricData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Statement35 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndPeriod1Choice dateOrPeriod;
 	/**
 	 * Date or period of the statement.
 	 * <p>
@@ -85,7 +86,7 @@ public class Statement35 {
 	 * definition} = "Date or period of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateOrPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateOrPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Statement35.mmObject();
 			isDerived = false;
@@ -93,12 +94,13 @@ public class Statement35 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOrPeriod";
 			definition = "Date or period of the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateAndPeriod1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateAndPeriod1Choice.mmObject();
 		}
 	};
+	protected TrueFalseIndicator historicData;
 	/**
 	 * Specifies whether the data is either historical (true) or current
 	 * (false).
@@ -129,7 +131,7 @@ public class Statement35 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HistoricData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHistoricData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement35.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class Statement35 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HistoricData";
 			definition = "Specifies whether the data is either historical (true) or current (false).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class Statement35 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement35.DateOrPeriod, com.tools20022.repository.msg.Statement35.HistoricData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement35.mmDateOrPeriod, com.tools20022.repository.msg.Statement35.mmHistoricData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Statement35";
 				definition = "Defines the criteria used to report on the securities account positions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndPeriod1Choice getDateOrPeriod() {
+		return dateOrPeriod;
+	}
+
+	public void setDateOrPeriod(DateAndPeriod1Choice dateOrPeriod) {
+		this.dateOrPeriod = dateOrPeriod;
+	}
+
+	public TrueFalseIndicator getHistoricData() {
+		return historicData;
+	}
+
+	public void setHistoricData(TrueFalseIndicator historicData) {
+		this.historicData = historicData;
 	}
 }

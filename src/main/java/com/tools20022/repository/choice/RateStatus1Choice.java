@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.RateStatus1Choice#Code
- * RateStatus1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateStatus1Choice#mmCode
+ * RateStatus1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateStatus1Choice#Proprietary
- * RateStatus1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RateStatus1Choice#mmProprietary
+ * RateStatus1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateStatus1Code code;
 	/**
 	 * Standard code to specify the status of the rate.
 	 * <p>
@@ -101,13 +102,14 @@ public class RateStatus1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.RateStatus3Choice#Code
-	 * RateStatus3Choice.Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RateStatus3Choice#mmCode
+	 * RateStatus3Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateStatus1Choice.mmObject();
 			isDerived = false;
@@ -115,12 +117,13 @@ public class RateStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the status of the rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateStatus3Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateStatus3Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of the status of the rate.
 	 * <p>
@@ -150,13 +153,13 @@ public class RateStatus1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RateStatus3Choice#Proprietary
-	 * RateStatus3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateStatus3Choice#mmProprietary
+	 * RateStatus3Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RateStatus1Choice.mmObject();
 			isDerived = false;
@@ -164,20 +167,20 @@ public class RateStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the status of the rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateStatus3Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateStatus3Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateStatus1Choice.Code, com.tools20022.repository.choice.RateStatus1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateStatus1Choice.mmCode, com.tools20022.repository.choice.RateStatus1Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateStatus1Choice";
 				definition = "Choice between a standard code or proprietary code to specify a rate status.";
@@ -185,5 +188,21 @@ public class RateStatus1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(RateStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

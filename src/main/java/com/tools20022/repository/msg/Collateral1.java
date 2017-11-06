@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral1#VariationMargin
- * Collateral1.VariationMargin}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral1#mmVariationMargin
+ * Collateral1.mmVariationMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Collateral1#SegregatedIndependentAmount
- * Collateral1.SegregatedIndependentAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.Collateral1#mmSegregatedIndependentAmount
+ * Collateral1.mmSegregatedIndependentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Collateral1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarginCollateral1 variationMargin;
 	/**
 	 * Provides details about the collateral held, in transit or that still
 	 * needs to be agreed by both parties, against the variation margin.
@@ -75,8 +76,8 @@ public class Collateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#CurrentVariationMargin
-	 * ExposureCalculation.CurrentVariationMargin}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCurrentVariationMargin
+	 * ExposureCalculation.mmCurrentVariationMargin}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,21 +97,22 @@ public class Collateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VariationMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVariationMargin = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmCurrentVariationMargin;
 			componentContext_lazy = () -> Collateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.CurrentVariationMargin;
 			isDerived = false;
 			xmlTag = "VartnMrgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			definition = "Provides details about the collateral held, in transit or that still needs to be agreed by both parties, against the variation margin.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MarginCollateral1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MarginCollateral1.mmObject();
 		}
 	};
+	protected MarginCollateral1 segregatedIndependentAmount;
 	/**
 	 * Provides details about the collateral held, in transit or that still
 	 * needs to be agreed by both parties, against the segregated independent
@@ -124,8 +126,8 @@ public class Collateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#CurrentSegregatedIndependentAmount
-	 * ExposureCalculation.CurrentSegregatedIndependentAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCurrentSegregatedIndependentAmount
+	 * ExposureCalculation.mmCurrentSegregatedIndependentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,33 +147,49 @@ public class Collateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmCurrentSegregatedIndependentAmount;
 			componentContext_lazy = () -> Collateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.CurrentSegregatedIndependentAmount;
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides details about the collateral held, in transit or that still needs to be agreed by both parties, against the segregated independent amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarginCollateral1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MarginCollateral1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral1.VariationMargin, com.tools20022.repository.msg.Collateral1.SegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral1.mmVariationMargin, com.tools20022.repository.msg.Collateral1.mmSegregatedIndependentAmount);
 				trace_lazy = () -> ExposureCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Collateral1";
 				definition = "Provides details about the collateral against variation margin and optionally the segregated independent amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarginCollateral1 getVariationMargin() {
+		return variationMargin;
+	}
+
+	public void setVariationMargin(com.tools20022.repository.msg.MarginCollateral1 variationMargin) {
+		this.variationMargin = variationMargin;
+	}
+
+	public MarginCollateral1 getSegregatedIndependentAmount() {
+		return segregatedIndependentAmount;
+	}
+
+	public void setSegregatedIndependentAmount(com.tools20022.repository.msg.MarginCollateral1 segregatedIndependentAmount) {
+		this.segregatedIndependentAmount = segregatedIndependentAmount;
 	}
 }

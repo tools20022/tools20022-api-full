@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the securities movement resulting from the
@@ -38,20 +39,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#SecurityIdentification
- * CorporateActionSecuritiesMovement2.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#mmSecurityIdentification
+ * CorporateActionSecuritiesMovement2.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#PostingDateTime
- * CorporateActionSecuritiesMovement2.PostingDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#mmPostingDateTime
+ * CorporateActionSecuritiesMovement2.mmPostingDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#PostingIdentification
- * CorporateActionSecuritiesMovement2.PostingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#mmPostingIdentification
+ * CorporateActionSecuritiesMovement2.mmPostingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#PostingQuantity
- * CorporateActionSecuritiesMovement2.PostingQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#mmPostingQuantity
+ * CorporateActionSecuritiesMovement2.mmPostingQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#AccountDetails
- * CorporateActionSecuritiesMovement2.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#mmAccountDetails
+ * CorporateActionSecuritiesMovement2.mmAccountDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionSecuritiesMovement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification7 securityIdentification;
 	/**
 	 * Identification of the financial instrument.
 	 * <p>
@@ -90,8 +92,8 @@ public class CorporateActionSecuritiesMovement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +112,21 @@ public class CorporateActionSecuritiesMovement2 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> CorporateActionSecuritiesMovement2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice postingDateTime;
 	/**
 	 * Date and time of the posting of the movement.
 	 * <p>
@@ -137,8 +140,8 @@ public class CorporateActionSecuritiesMovement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingDateTime
-	 * CorporateActionDistribution.PostingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingDateTime
+	 * CorporateActionDistribution.mmPostingDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,20 +160,21 @@ public class CorporateActionSecuritiesMovement2 {
 	 * definition} = "Date and time of the posting of the movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> CorporateActionSecuritiesMovement2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingDateTime;
 			isDerived = false;
 			xmlTag = "PstngDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDateTime";
 			definition = "Date and time of the posting of the movement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected Max35Text postingIdentification;
 	/**
 	 * Posting identification of the securities movement.
 	 * <p>
@@ -198,7 +202,7 @@ public class CorporateActionSecuritiesMovement2 {
 	 * definition} = "Posting identification of the securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSecuritiesMovement2.mmObject();
 			isDerived = false;
@@ -206,11 +210,12 @@ public class CorporateActionSecuritiesMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingIdentification";
 			definition = "Posting identification of the securities movement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice postingQuantity;
 	/**
 	 * Securities quantity posted as a result of the securities movement.
 	 * <p>
@@ -224,8 +229,8 @@ public class CorporateActionSecuritiesMovement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingQuantity
-	 * CorporateActionDistribution.PostingQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingQuantity
+	 * CorporateActionDistribution.mmPostingQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -245,20 +250,21 @@ public class CorporateActionSecuritiesMovement2 {
 	 * "Securities quantity posted as a result of the securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> CorporateActionSecuritiesMovement2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingQuantity;
 			isDerived = false;
 			xmlTag = "PstngQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "Securities quantity posted as a result of the securities movement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesAccount9> accountDetails;
 	/**
 	 * Provides information about the account which is debited/credited as a
 	 * result of the movement.
@@ -271,8 +277,8 @@ public class CorporateActionSecuritiesMovement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Account
-	 * SecuritiesTransfer.Account}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmAccount
+	 * SecuritiesTransfer.mmAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -293,35 +299,75 @@ public class CorporateActionSecuritiesMovement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> CorporateActionSecuritiesMovement2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.Account;
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the account which is debited/credited as a result of the movement.";
-			minOccurs = 1;
 			maxOccurs = 2;
-			type_lazy = () -> SecuritiesAccount9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.SecurityIdentification, com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.PostingDateTime,
-						com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.PostingIdentification, com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.PostingQuantity,
-						com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.AccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmSecurityIdentification, com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmPostingDateTime,
+						com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmPostingIdentification, com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmPostingQuantity,
+						com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmAccountDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSecuritiesMovement2";
 				definition = "Provides information about the securities movement resulting from the election instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification7 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public DateAndDateTimeChoice getPostingDateTime() {
+		return postingDateTime;
+	}
+
+	public void setPostingDateTime(DateAndDateTimeChoice postingDateTime) {
+		this.postingDateTime = postingDateTime;
+	}
+
+	public Max35Text getPostingIdentification() {
+		return postingIdentification;
+	}
+
+	public void setPostingIdentification(Max35Text postingIdentification) {
+		this.postingIdentification = postingIdentification;
+	}
+
+	public UnitOrFaceAmount1Choice getPostingQuantity() {
+		return postingQuantity;
+	}
+
+	public void setPostingQuantity(UnitOrFaceAmount1Choice postingQuantity) {
+		this.postingQuantity = postingQuantity;
+	}
+
+	public List<SecuritiesAccount9> getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(List<com.tools20022.repository.msg.SecuritiesAccount9> accountDetails) {
+		this.accountDetails = accountDetails;
 	}
 }

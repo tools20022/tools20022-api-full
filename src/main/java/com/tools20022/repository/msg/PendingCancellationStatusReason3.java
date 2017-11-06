@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason3#ReasonCode
- * PendingCancellationStatusReason3.ReasonCode}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason3#mmReasonCode
+ * PendingCancellationStatusReason3.mmReasonCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason3#AdditionalReasonInformation
- * PendingCancellationStatusReason3.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason3#mmAdditionalReasonInformation
+ * PendingCancellationStatusReason3.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PendingCancellationStatusReason3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PendingCancellationReason1Choice reasonCode;
 	/**
 	 * Specifies the reason why the cancellation request is pending.
 	 * <p>
@@ -89,8 +90,8 @@ public class PendingCancellationStatusReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,28 +113,29 @@ public class PendingCancellationStatusReason3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason5#ReasonCode
-	 * PendingCancellationStatusReason5.ReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason5#mmReasonCode
+	 * PendingCancellationStatusReason5.mmReasonCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> PendingCancellationStatusReason3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "RsnCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Specifies the reason why the cancellation request is pending.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingCancellationStatusReason5.ReasonCode);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingCancellationStatusReason5.mmReasonCode);
 			maxOccurs = 1;
-			type_lazy = () -> PendingCancellationReason1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PendingCancellationReason1Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalReasonInformation;
 	/**
 	 * Provides additional information about the processed instruction.
 	 * <p>
@@ -146,8 +148,8 @@ public class PendingCancellationStatusReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,24 +171,24 @@ public class PendingCancellationStatusReason3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason5#AdditionalReasonInformation
-	 * PendingCancellationStatusReason5.AdditionalReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.PendingCancellationStatusReason5#mmAdditionalReasonInformation
+	 * PendingCancellationStatusReason5.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> PendingCancellationStatusReason3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional information about the processed instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingCancellationStatusReason5.AdditionalReasonInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingCancellationStatusReason5.mmAdditionalReasonInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -194,16 +196,32 @@ public class PendingCancellationStatusReason3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingCancellationStatusReason3.ReasonCode, com.tools20022.repository.msg.PendingCancellationStatusReason3.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingCancellationStatusReason3.mmReasonCode, com.tools20022.repository.msg.PendingCancellationStatusReason3.mmAdditionalReasonInformation);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationStatusReason3";
 				definition = "Specifies reasons for the pending cancellation status.";
-				previousVersion_lazy = () -> PendingCancellationStatusReason1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PendingCancellationStatusReason5.mmObject());
+				previousVersion_lazy = () -> PendingCancellationStatusReason1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PendingCancellationReason1Choice getReasonCode() {
+		return reasonCode;
+	}
+
+	public void setReasonCode(PendingCancellationReason1Choice reasonCode) {
+		this.reasonCode = reasonCode;
+	}
+
+	public Max210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

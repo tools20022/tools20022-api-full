@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationType1Choice#IdentificationType
- * IdentificationType1Choice.IdentificationType}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationType1Choice#mmIdentificationType
+ * IdentificationType1Choice.mmIdentificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationType1Choice#Proprietary
- * IdentificationType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationType1Choice#mmProprietary
+ * IdentificationType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IdentificationType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PersonIdentificationType2Code identificationType;
 	/**
 	 * Specifies a type of individual identification.
 	 * <p>
@@ -99,20 +100,21 @@ public class IdentificationType1Choice {
 	 * definition} = "Specifies a type of individual identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IdentificationType1Choice.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> IdentificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IdTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationType";
 			definition = "Specifies a type of individual identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType2Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Specifies a type of individual identification.
 	 * <p>
@@ -126,8 +128,8 @@ public class IdentificationType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,17 +148,17 @@ public class IdentificationType1Choice {
 	 * definition} = "Specifies a type of individual identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> IdentificationType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies a type of individual identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class IdentificationType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType1Choice.IdentificationType, com.tools20022.repository.choice.IdentificationType1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType1Choice.mmIdentificationType, com.tools20022.repository.choice.IdentificationType1Choice.mmProprietary);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IdentificationType1Choice";
 				definition = "Information related to an identification, eg, party identification or account identification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PersonIdentificationType2Code getIdentificationType() {
+		return identificationType;
+	}
+
+	public void setIdentificationType(PersonIdentificationType2Code identificationType) {
+		this.identificationType = identificationType;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

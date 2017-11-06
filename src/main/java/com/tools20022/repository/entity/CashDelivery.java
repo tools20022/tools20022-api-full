@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashDelivery#CashAmount
- * CashDelivery.CashAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashDelivery#mmCashAmount
+ * CashDelivery.mmCashAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashDelivery#RelatedBankingTransaction
- * CashDelivery.RelatedBankingTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.CashDelivery#mmRelatedBankingTransaction
+ * CashDelivery.mmRelatedBankingTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BankingTransaction#CashDelivery
- * BankingTransaction.CashDelivery}</li>
+ * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmCashDelivery
+ * BankingTransaction.mmCashDelivery}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashDelivery extends CreditInstrument {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount cashAmount;
 	/**
 	 * Amount of money to be physically delivered.
 	 * <p>
@@ -100,18 +101,19 @@ public class CashDelivery extends CreditInstrument {
 	 * definition} = "Amount of money to be physically delivered."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CashAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCashAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CashDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashAmount";
 			definition = "Amount of money to be physically delivered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected BankingTransaction relatedBankingTransaction;
 	/**
 	 * Describes the type of transaction associated with a cash delivery.
 	 * <p>
@@ -120,8 +122,8 @@ public class CashDelivery extends CreditInstrument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.BankingTransaction#CashDelivery
-	 * BankingTransaction.CashDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmCashDelivery
+	 * BankingTransaction.mmCashDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -145,33 +147,49 @@ public class CashDelivery extends CreditInstrument {
 	 * "Describes the type of transaction associated with a cash delivery."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedBankingTransaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedBankingTransaction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CashDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedBankingTransaction";
 			definition = "Describes the type of transaction associated with a cash delivery.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BankingTransaction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.BankingTransaction.CashDelivery;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmCashDelivery;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashDelivery";
 				definition = "Amount of money representing a value paid by an agent bank to a creditor.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankingTransaction.CashDelivery);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankingTransaction.mmCashDelivery);
 				superType_lazy = () -> CreditInstrument.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashDelivery.CashAmount, com.tools20022.repository.entity.CashDelivery.RelatedBankingTransaction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashDelivery.mmCashAmount, com.tools20022.repository.entity.CashDelivery.mmRelatedBankingTransaction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getCashAmount() {
+		return cashAmount;
+	}
+
+	public void setCashAmount(ActiveCurrencyAndAmount cashAmount) {
+		this.cashAmount = cashAmount;
+	}
+
+	public BankingTransaction getRelatedBankingTransaction() {
+		return relatedBankingTransaction;
+	}
+
+	public void setRelatedBankingTransaction(com.tools20022.repository.entity.BankingTransaction relatedBankingTransaction) {
+		this.relatedBankingTransaction = relatedBankingTransaction;
 	}
 }

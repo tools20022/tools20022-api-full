@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * A safekeeping account is an account on which a securities entry is made.
@@ -36,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingAccount4#AccountIdentification
- * SafekeepingAccount4.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingAccount4#mmAccountIdentification
+ * SafekeepingAccount4.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingAccount4#AccountOwner
- * SafekeepingAccount4.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingAccount4#mmAccountOwner
+ * SafekeepingAccount4.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingAccount4#SubAccountDetails
- * SafekeepingAccount4.SubAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingAccount4#mmSubAccountDetails
+ * SafekeepingAccount4.mmSubAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingAccount4#InstructedBalance
- * SafekeepingAccount4.InstructedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingAccount4#mmInstructedBalance
+ * SafekeepingAccount4.mmInstructedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingAccount4#RightsHolder
- * SafekeepingAccount4.RightsHolder}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingAccount4#mmRightsHolder
+ * SafekeepingAccount4.mmRightsHolder}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,18 +61,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03#InstructedPosition
- * MeetingInstructionCancellationRequestV03.InstructedPosition}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03#mmInstructedPosition
+ * MeetingInstructionCancellationRequestV03.mmInstructedPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#InstructedPosition
- * MeetingInstructionCancellationRequestV04.InstructedPosition}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04#mmInstructedPosition
+ * MeetingInstructionCancellationRequestV04.mmInstructedPosition}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SafekeepingAccount4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -106,8 +108,8 @@ public class SafekeepingAccount4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -130,27 +132,28 @@ public class SafekeepingAccount4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount6#AccountIdentification
-	 * SafekeepingAccount6.AccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount6#mmAccountIdentification
+	 * SafekeepingAccount6.mmAccountIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SafekeepingAccount4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount6.AccountIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount6.mmAccountIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification9Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -163,8 +166,8 @@ public class SafekeepingAccount4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,28 +188,29 @@ public class SafekeepingAccount4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount6#AccountOwner
-	 * SafekeepingAccount6.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount6#mmAccountOwner
+	 * SafekeepingAccount6.mmAccountOwner}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SafekeepingAccount4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount6.AccountOwner);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount6.mmAccountOwner);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	protected SubAccount2 subAccountDetails;
 	/**
 	 * Identification of a subaccount within the safekeeping account
 	 * <p>
@@ -218,8 +222,8 @@ public class SafekeepingAccount4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#SubAccount
-	 * Account.SubAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmSubAccount
+	 * Account.mmSubAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,28 +245,29 @@ public class SafekeepingAccount4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount6#SubAccountDetails
-	 * SafekeepingAccount6.SubAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount6#mmSubAccountDetails
+	 * SafekeepingAccount6.mmSubAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmSubAccount;
 			componentContext_lazy = () -> SafekeepingAccount4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.SubAccount;
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Identification of a subaccount within the safekeeping account";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount6.SubAccountDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount6.mmSubAccountDetails);
 			maxOccurs = 1;
-			type_lazy = () -> SubAccount2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SubAccount2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.HoldingBalance5> instructedBalance;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -275,8 +280,8 @@ public class SafekeepingAccount4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#SecuritiesBalance
-	 * SecuritiesAccount.SecuritiesBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesBalance
+	 * SecuritiesAccount.mmSecuritiesBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -297,27 +302,28 @@ public class SafekeepingAccount4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount6#InstructedBalance
-	 * SafekeepingAccount6.InstructedBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount6#mmInstructedBalance
+	 * SafekeepingAccount6.mmInstructedBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedBalance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> SafekeepingAccount4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.SecuritiesBalance;
 			isDerived = false;
 			xmlTag = "InstdBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount6.InstructedBalance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount6.mmInstructedBalance);
 			maxOccurs = 10;
-			complexType_lazy = () -> HoldingBalance5.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.HoldingBalance5.mmObject();
 		}
 	};
+	protected List<PartyIdentification9Choice> rightsHolder;
 	/**
 	 * Owner of the voting rights.
 	 * <p>
@@ -330,8 +336,8 @@ public class SafekeepingAccount4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -352,38 +358,38 @@ public class SafekeepingAccount4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount6#RightsHolder
-	 * SafekeepingAccount6.RightsHolder}</li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingAccount6#mmRightsHolder
+	 * SafekeepingAccount6.mmRightsHolder}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RightsHolder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRightsHolder = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SafekeepingAccount4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RghtsHldr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolder";
 			definition = "Owner of the voting rights.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount6.RightsHolder);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount6.mmRightsHolder);
 			maxOccurs = 10;
-			type_lazy = () -> PartyIdentification9Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount4.AccountIdentification, com.tools20022.repository.msg.SafekeepingAccount4.AccountOwner,
-						com.tools20022.repository.msg.SafekeepingAccount4.SubAccountDetails, com.tools20022.repository.msg.SafekeepingAccount4.InstructedBalance, com.tools20022.repository.msg.SafekeepingAccount4.RightsHolder);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount4.mmAccountIdentification, com.tools20022.repository.msg.SafekeepingAccount4.mmAccountOwner,
+						com.tools20022.repository.msg.SafekeepingAccount4.mmSubAccountDetails, com.tools20022.repository.msg.SafekeepingAccount4.mmInstructedBalance, com.tools20022.repository.msg.SafekeepingAccount4.mmRightsHolder);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmInstructedPosition,
+						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmInstructedPosition);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.InstructedPosition,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.InstructedPosition);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingAccount4";
 				definition = "A safekeeping account is an account on which a securities entry is made.";
@@ -391,5 +397,45 @@ public class SafekeepingAccount4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public PartyIdentification9Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification9Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SubAccount2 getSubAccountDetails() {
+		return subAccountDetails;
+	}
+
+	public void setSubAccountDetails(com.tools20022.repository.msg.SubAccount2 subAccountDetails) {
+		this.subAccountDetails = subAccountDetails;
+	}
+
+	public List<HoldingBalance5> getInstructedBalance() {
+		return instructedBalance;
+	}
+
+	public void setInstructedBalance(List<com.tools20022.repository.msg.HoldingBalance5> instructedBalance) {
+		this.instructedBalance = instructedBalance;
+	}
+
+	public List<PartyIdentification9Choice> getRightsHolder() {
+		return rightsHolder;
+	}
+
+	public void setRightsHolder(List<PartyIdentification9Choice> rightsHolder) {
+		this.rightsHolder = rightsHolder;
 	}
 }

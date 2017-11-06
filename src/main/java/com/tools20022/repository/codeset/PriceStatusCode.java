@@ -29,11 +29,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceStatusCode#Pending
- * PriceStatusCode.Pending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceStatusCode#mmPending
+ * PriceStatusCode.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceStatusCode#NotApplicable
- * PriceStatusCode.NotApplicable}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceStatusCode#mmNotApplicable
+ * PriceStatusCode.mmNotApplicable}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,7 +82,7 @@ public class PriceStatusCode {
 	 * definition} = "Price is pending."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -113,7 +113,7 @@ public class PriceStatusCode {
 	 * "No price for transaction (e.g. transfer between accounts)."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotApplicable = new MMCode() {
+	public static final MMCode mmNotApplicable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
@@ -126,11 +126,11 @@ public class PriceStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceStatusCode";
 				definition = "Status of the price of a financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceStatusCode.Pending, com.tools20022.repository.codeset.PriceStatusCode.NotApplicable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceStatusCode.mmPending, com.tools20022.repository.codeset.PriceStatusCode.mmNotApplicable);
 				derivation_lazy = () -> Arrays.asList(PriceStatus1Code.mmObject());
 			}
 		});

@@ -33,27 +33,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType4Code#Merchant
- * PartyType4Code.Merchant}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType4Code#Acceptor
- * PartyType4Code.Acceptor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType4Code#mmMerchant
+ * PartyType4Code.mmMerchant}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType4Code#mmAcceptor
+ * PartyType4Code.mmAcceptor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType4Code#IntermediaryAgent
- * PartyType4Code.IntermediaryAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType4Code#Acquirer
- * PartyType4Code.Acquirer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType4Code#CardIssuer
- * PartyType4Code.CardIssuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType4Code#mmIntermediaryAgent
+ * PartyType4Code.mmIntermediaryAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType4Code#mmAcquirer
+ * PartyType4Code.mmAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType4Code#TaxAuthority
- * PartyType4Code.TaxAuthority}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType4Code#mmCardIssuer
+ * PartyType4Code.mmCardIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType4Code#mmTaxAuthority
+ * PartyType4Code.mmTaxAuthority}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +92,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 * name} = "Merchant"</li>
 	 * </ul>
 	 */
-	public static final MMCode Merchant = new MMCode() {
+	public static final MMCode mmMerchant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
@@ -114,7 +115,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 * name} = "Acceptor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acceptor = new MMCode() {
+	public static final MMCode mmAcceptor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acceptor";
@@ -137,7 +138,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 * name} = "IntermediaryAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntermediaryAgent = new MMCode() {
+	public static final MMCode mmIntermediaryAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
@@ -160,7 +161,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 * name} = "Acquirer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acquirer = new MMCode() {
+	public static final MMCode mmAcquirer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
@@ -183,7 +184,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 * name} = "CardIssuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardIssuer = new MMCode() {
+	public static final MMCode mmCardIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardIssuer";
@@ -206,7 +207,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 * name} = "TaxAuthority"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxAuthority = new MMCode() {
+	public static final MMCode mmTaxAuthority = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAuthority";
@@ -217,13 +218,13 @@ public class PartyType4Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MERC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyType4Code";
 				definition = "Entity assigning an identification  (for example merchant, acceptor, acquirer, tax authority, etc.).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType4Code.Merchant, com.tools20022.repository.codeset.PartyType4Code.Acceptor, com.tools20022.repository.codeset.PartyType4Code.IntermediaryAgent,
-						com.tools20022.repository.codeset.PartyType4Code.Acquirer, com.tools20022.repository.codeset.PartyType4Code.CardIssuer, com.tools20022.repository.codeset.PartyType4Code.TaxAuthority);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType4Code.mmMerchant, com.tools20022.repository.codeset.PartyType4Code.mmAcceptor, com.tools20022.repository.codeset.PartyType4Code.mmIntermediaryAgent,
+						com.tools20022.repository.codeset.PartyType4Code.mmAcquirer, com.tools20022.repository.codeset.PartyType4Code.mmCardIssuer, com.tools20022.repository.codeset.PartyType4Code.mmTaxAuthority);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

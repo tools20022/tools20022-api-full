@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions3#NumberOfEntries
- * NumberAndSumOfTransactions3.NumberOfEntries}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions3#mmNumberOfEntries
+ * NumberAndSumOfTransactions3.mmNumberOfEntries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions3#Sum
- * NumberAndSumOfTransactions3.Sum}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions3#mmSum
+ * NumberAndSumOfTransactions3.mmSum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions3#TotalNetEntryAmount
- * NumberAndSumOfTransactions3.TotalNetEntryAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions3#mmTotalNetEntryAmount
+ * NumberAndSumOfTransactions3.mmTotalNetEntryAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions3#CreditDebitIndicator
- * NumberAndSumOfTransactions3.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberAndSumOfTransactions3#mmCreditDebitIndicator
+ * NumberAndSumOfTransactions3.mmCreditDebitIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NumberAndSumOfTransactions3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max15NumericText numberOfEntries;
 	/**
 	 * Number of individual entries included in the report.
 	 * <p>
@@ -101,7 +102,7 @@ public class NumberAndSumOfTransactions3 {
 	 * definition} = "Number of individual entries included in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfEntries = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfEntries = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberAndSumOfTransactions3.mmObject();
 			isDerived = false;
@@ -109,11 +110,12 @@ public class NumberAndSumOfTransactions3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfEntries";
 			definition = "Number of individual entries included in the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber sum;
 	/**
 	 * Total of all individual entries included in the report.
 	 * <p>
@@ -142,7 +144,7 @@ public class NumberAndSumOfTransactions3 {
 	 * definition} = "Total of all individual entries included in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberAndSumOfTransactions3.mmObject();
 			isDerived = false;
@@ -150,11 +152,12 @@ public class NumberAndSumOfTransactions3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sum";
 			definition = "Total of all individual entries included in the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber totalNetEntryAmount;
 	/**
 	 * Resulting amount of the netted amounts for all debit and credit entries.
 	 * <p>
@@ -185,7 +188,7 @@ public class NumberAndSumOfTransactions3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNetEntryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNetEntryAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberAndSumOfTransactions3.mmObject();
 			isDerived = false;
@@ -193,11 +196,12 @@ public class NumberAndSumOfTransactions3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNetEntryAmount";
 			definition = "Resulting amount of the netted amounts for all debit and credit entries.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the total net entry amount is a credit or a debit
 	 * amount.
@@ -229,7 +233,7 @@ public class NumberAndSumOfTransactions3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberAndSumOfTransactions3.mmObject();
 			isDerived = false;
@@ -237,8 +241,8 @@ public class NumberAndSumOfTransactions3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the total net entry amount is a credit or a debit amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
@@ -246,9 +250,9 @@ public class NumberAndSumOfTransactions3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberAndSumOfTransactions3.NumberOfEntries, com.tools20022.repository.msg.NumberAndSumOfTransactions3.Sum,
-						com.tools20022.repository.msg.NumberAndSumOfTransactions3.TotalNetEntryAmount, com.tools20022.repository.msg.NumberAndSumOfTransactions3.CreditDebitIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberAndSumOfTransactions3.mmNumberOfEntries, com.tools20022.repository.msg.NumberAndSumOfTransactions3.mmSum,
+						com.tools20022.repository.msg.NumberAndSumOfTransactions3.mmTotalNetEntryAmount, com.tools20022.repository.msg.NumberAndSumOfTransactions3.mmCreditDebitIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NumberAndSumOfTransactions3";
 				definition = "Set of elements providing the total sum of entries.";
@@ -256,5 +260,37 @@ public class NumberAndSumOfTransactions3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max15NumericText getNumberOfEntries() {
+		return numberOfEntries;
+	}
+
+	public void setNumberOfEntries(Max15NumericText numberOfEntries) {
+		this.numberOfEntries = numberOfEntries;
+	}
+
+	public DecimalNumber getSum() {
+		return sum;
+	}
+
+	public void setSum(DecimalNumber sum) {
+		this.sum = sum;
+	}
+
+	public DecimalNumber getTotalNetEntryAmount() {
+		return totalNetEntryAmount;
+	}
+
+	public void setTotalNetEntryAmount(DecimalNumber totalNetEntryAmount) {
+		this.totalNetEntryAmount = totalNetEntryAmount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
 	}
 }

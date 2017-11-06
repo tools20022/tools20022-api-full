@@ -58,21 +58,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01#Header
- * AcceptorCancellationRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01#mmHeader
+ * AcceptorCancellationRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01#CancellationRequest
- * AcceptorCancellationRequestV01.CancellationRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01#mmCancellationRequest
+ * AcceptorCancellationRequestV01.mmCancellationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01#SecurityTrailer
- * AcceptorCancellationRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01#mmSecurityTrailer
+ * AcceptorCancellationRequestV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01#identifier
- * AcceptorCancellationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caaa.005.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header1 header;
 	/**
 	 * Cancellation request message management information.
 	 * <p>
@@ -118,17 +117,18 @@ public class AcceptorCancellationRequestV01 {
 	 * definition} = "Cancellation request message management information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Cancellation request message management information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header1.mmObject();
 		}
 	};
+	protected AcceptorCancellationRequest1 cancellationRequest;
 	/**
 	 * Information related to the cancellation request.
 	 * <p>
@@ -152,17 +152,18 @@ public class AcceptorCancellationRequestV01 {
 	 * definition} = "Information related to the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequest";
 			definition = "Information related to the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorCancellationRequest1.mmObject();
 		}
 	};
+	protected ContentInformationType3 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -186,42 +187,15 @@ public class AcceptorCancellationRequestV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType3.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caaa"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caaa";
-			messageFunctionality = "005";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -236,11 +210,42 @@ public class AcceptorCancellationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrCxlReq";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01.Header, com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01.CancellationRequest,
-						com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01.mmCancellationRequest,
+						com.tools20022.repository.area.caaa.AcceptorCancellationRequestV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caaa";
+						messageFunctionality = "005";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header1 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header1 header) {
+		this.header = header;
+	}
+
+	public AcceptorCancellationRequest1 getCancellationRequest() {
+		return cancellationRequest;
+	}
+
+	public void setCancellationRequest(AcceptorCancellationRequest1 cancellationRequest) {
+		this.cancellationRequest = cancellationRequest;
+	}
+
+	public ContentInformationType3 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType3 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

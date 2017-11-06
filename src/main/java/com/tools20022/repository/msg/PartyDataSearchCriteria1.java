@@ -39,32 +39,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#OpeningDate
- * PartyDataSearchCriteria1.OpeningDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#mmOpeningDate
+ * PartyDataSearchCriteria1.mmOpeningDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#ClosingDate
- * PartyDataSearchCriteria1.ClosingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#Type
- * PartyDataSearchCriteria1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#mmClosingDate
+ * PartyDataSearchCriteria1.mmClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#CSDOrNCB
- * PartyDataSearchCriteria1.CSDOrNCB}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#mmType
+ * PartyDataSearchCriteria1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#Identification
- * PartyDataSearchCriteria1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#mmCSDOrNCB
+ * PartyDataSearchCriteria1.mmCSDOrNCB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#RestrictionIdentification
- * PartyDataSearchCriteria1.RestrictionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#mmIdentification
+ * PartyDataSearchCriteria1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#RestrictionIssueDate
- * PartyDataSearchCriteria1.RestrictionIssueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#mmRestrictionIdentification
+ * PartyDataSearchCriteria1.mmRestrictionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria1#mmRestrictionIssueDate
+ * PartyDataSearchCriteria1.mmRestrictionIssueDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyDataSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateSearchChoice openingDate;
 	/**
 	 * Specifies the opening date of the party.
 	 * <p>
@@ -106,7 +108,7 @@ public class PartyDataSearchCriteria1 {
 	 * definition} = "Specifies the opening date of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
@@ -114,11 +116,12 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Specifies the opening date of the party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	protected DateSearchChoice closingDate;
 	/**
 	 * Specifies the closing date of the party.
 	 * <p>
@@ -147,7 +150,7 @@ public class PartyDataSearchCriteria1 {
 	 * definition} = "Specifies the closing date of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
@@ -155,11 +158,12 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Specifies the closing date of the party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	protected SystemPartyType1Code type;
 	/**
 	 * Specifies the type classification of the party.
 	 * <p>
@@ -188,7 +192,7 @@ public class PartyDataSearchCriteria1 {
 	 * definition} = "Specifies the type classification of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
@@ -196,11 +200,12 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type classification of the party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> SystemPartyType1Code.mmObject();
 		}
 	};
+	protected CSDOrNCB1Choice cSDOrNCB;
 	/**
 	 * Identifies the central security depository or the national central bank
 	 * which initially created the party reference data.
@@ -230,7 +235,7 @@ public class PartyDataSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CSDOrNCB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCSDOrNCB = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
@@ -238,12 +243,13 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOrNCB";
 			definition = "Identifies the central security depository or the national central bank which initially created the party reference data.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CSDOrNCB1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CSDOrNCB1Choice.mmObject();
 		}
 	};
+	protected BICFIIdentifier identification;
 	/**
 	 * Unique identification to unambiguously identify the party within the
 	 * system.
@@ -275,7 +281,7 @@ public class PartyDataSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
@@ -283,11 +289,12 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification to unambiguously identify the party within the system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	protected Max35Text restrictionIdentification;
 	/**
 	 * Specifies the identification of a restriction.
 	 * <p>
@@ -315,7 +322,7 @@ public class PartyDataSearchCriteria1 {
 	 * definition} = "Specifies the identification of a restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RestrictionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
@@ -323,11 +330,12 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionIdentification";
 			definition = "Specifies the identification of a restriction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearchChoice restrictionIssueDate;
 	/**
 	 * Specifies the date when the restriction for the party has been issued.
 	 * <p>
@@ -357,7 +365,7 @@ public class PartyDataSearchCriteria1 {
 	 * "Specifies the date when the restriction for the party has been issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RestrictionIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictionIssueDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
@@ -365,8 +373,8 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionIssueDate";
 			definition = "Specifies the date when the restriction for the party has been issued.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 		}
 	};
@@ -374,15 +382,71 @@ public class PartyDataSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyDataSearchCriteria1.OpeningDate, com.tools20022.repository.msg.PartyDataSearchCriteria1.ClosingDate,
-						com.tools20022.repository.msg.PartyDataSearchCriteria1.Type, com.tools20022.repository.msg.PartyDataSearchCriteria1.CSDOrNCB, com.tools20022.repository.msg.PartyDataSearchCriteria1.Identification,
-						com.tools20022.repository.msg.PartyDataSearchCriteria1.RestrictionIdentification, com.tools20022.repository.msg.PartyDataSearchCriteria1.RestrictionIssueDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyDataSearchCriteria1.mmOpeningDate, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmClosingDate,
+						com.tools20022.repository.msg.PartyDataSearchCriteria1.mmType, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmCSDOrNCB, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmIdentification,
+						com.tools20022.repository.msg.PartyDataSearchCriteria1.mmRestrictionIdentification, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmRestrictionIssueDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyDataSearchCriteria1";
 				definition = "Set of search criteria for querying party reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateSearchChoice getOpeningDate() {
+		return openingDate;
+	}
+
+	public void setOpeningDate(DateSearchChoice openingDate) {
+		this.openingDate = openingDate;
+	}
+
+	public DateSearchChoice getClosingDate() {
+		return closingDate;
+	}
+
+	public void setClosingDate(DateSearchChoice closingDate) {
+		this.closingDate = closingDate;
+	}
+
+	public SystemPartyType1Code getType() {
+		return type;
+	}
+
+	public void setType(SystemPartyType1Code type) {
+		this.type = type;
+	}
+
+	public CSDOrNCB1Choice getCSDOrNCB() {
+		return cSDOrNCB;
+	}
+
+	public void setCSDOrNCB(CSDOrNCB1Choice cSDOrNCB) {
+		this.cSDOrNCB = cSDOrNCB;
+	}
+
+	public BICFIIdentifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(BICFIIdentifier identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getRestrictionIdentification() {
+		return restrictionIdentification;
+	}
+
+	public void setRestrictionIdentification(Max35Text restrictionIdentification) {
+		this.restrictionIdentification = restrictionIdentification;
+	}
+
+	public DateAndDateTimeSearchChoice getRestrictionIssueDate() {
+		return restrictionIssueDate;
+	}
+
+	public void setRestrictionIssueDate(DateAndDateTimeSearchChoice restrictionIssueDate) {
+		this.restrictionIssueDate = restrictionIssueDate;
 	}
 }

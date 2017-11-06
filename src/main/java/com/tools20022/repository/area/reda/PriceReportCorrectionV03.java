@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.PriceCorrection3;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,27 +66,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#MessageIdentification
- * PriceReportCorrectionV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#mmMessageIdentification
+ * PriceReportCorrectionV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#PoolReference
- * PriceReportCorrectionV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#mmPoolReference
+ * PriceReportCorrectionV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#PreviousReference
- * PriceReportCorrectionV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#mmPreviousReference
+ * PriceReportCorrectionV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#MessagePagination
- * PriceReportCorrectionV03.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#mmMessagePagination
+ * PriceReportCorrectionV03.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#PriceCorrectionDetails
- * PriceReportCorrectionV03.PriceCorrectionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#mmPriceCorrectionDetails
+ * PriceReportCorrectionV03.mmPriceCorrectionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#identifier
- * PriceReportCorrectionV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code reda.003.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +104,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceReportCorrectionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -131,17 +131,18 @@ public class PriceReportCorrectionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference3 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -165,17 +166,18 @@ public class PriceReportCorrectionV03 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -199,17 +201,18 @@ public class PriceReportCorrectionV03 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Pagination of the message.
 	 * <p>
@@ -232,17 +235,18 @@ public class PriceReportCorrectionV03 {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected List<PriceCorrection3> priceCorrectionDetails;
 	/**
 	 * Information related to the correction of a price of a financial
 	 * instrument.
@@ -269,7 +273,7 @@ public class PriceReportCorrectionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PriceCorrectionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPriceCorrectionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PricCrrctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,33 +281,6 @@ public class PriceReportCorrectionV03 {
 			definition = "Information related to the correction of a price of a financial instrument.";
 			minOccurs = 1;
 			complexType_lazy = () -> PriceCorrection3.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "reda"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "reda";
-			messageFunctionality = "003";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -318,12 +295,59 @@ public class PriceReportCorrectionV03 {
 				rootElement = "Document";
 				xmlTag = "PricRptCrrctnV03";
 				businessArea_lazy = () -> ReferenceDataArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCorrectionV03.MessageIdentification, com.tools20022.repository.area.reda.PriceReportCorrectionV03.PoolReference,
-						com.tools20022.repository.area.reda.PriceReportCorrectionV03.PreviousReference, com.tools20022.repository.area.reda.PriceReportCorrectionV03.MessagePagination,
-						com.tools20022.repository.area.reda.PriceReportCorrectionV03.PriceCorrectionDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.reda.PriceReportCorrectionV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmMessageIdentification, com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmPoolReference,
+						com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmPreviousReference, com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmMessagePagination,
+						com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmPriceCorrectionDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "reda";
+						messageFunctionality = "003";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference3 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference3 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference3 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference3 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public List<PriceCorrection3> getPriceCorrectionDetails() {
+		return priceCorrectionDetails;
+	}
+
+	public void setPriceCorrectionDetails(List<PriceCorrection3> priceCorrectionDetails) {
+		this.priceCorrectionDetails = priceCorrectionDetails;
 	}
 }

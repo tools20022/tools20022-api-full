@@ -67,30 +67,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#NotificationIdentification
- * IntentToPayNotificationV01.NotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#mmNotificationIdentification
+ * IntentToPayNotificationV01.mmNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#TransactionIdentification
- * IntentToPayNotificationV01.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#mmTransactionIdentification
+ * IntentToPayNotificationV01.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#SubmitterTransactionReference
- * IntentToPayNotificationV01.SubmitterTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#mmSubmitterTransactionReference
+ * IntentToPayNotificationV01.mmSubmitterTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#BuyerBank
- * IntentToPayNotificationV01.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#mmBuyerBank
+ * IntentToPayNotificationV01.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#SellerBank
- * IntentToPayNotificationV01.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#mmSellerBank
+ * IntentToPayNotificationV01.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#IntentToPay
- * IntentToPayNotificationV01.IntentToPay}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#mmIntentToPay
+ * IntentToPayNotificationV01.mmIntentToPay}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#identifier
- * IntentToPayNotificationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.044.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,6 +112,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntentToPayNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 notificationIdentification;
 	/**
 	 * Identifies the notification message.
 	 * <p>
@@ -139,24 +138,25 @@ public class IntentToPayNotificationV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#NotificationIdentification
-	 * IntentToPayNotificationV02.NotificationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#mmNotificationIdentification
+	 * IntentToPayNotificationV02.mmNotificationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotificationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identifies the notification message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.NotificationIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmNotificationIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -186,24 +186,25 @@ public class IntentToPayNotificationV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#TransactionIdentification
-	 * IntentToPayNotificationV02.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#mmTransactionIdentification
+	 * IntentToPayNotificationV02.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmTransactionIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
 	 * Reference to the transaction for the requesting financial institution.
 	 * <p>
@@ -230,24 +231,25 @@ public class IntentToPayNotificationV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#SubmitterTransactionReference
-	 * IntentToPayNotificationV02.SubmitterTransactionReference}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#mmSubmitterTransactionReference
+	 * IntentToPayNotificationV02.mmSubmitterTransactionReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.SubmitterTransactionReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmSubmitterTransactionReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected BICIdentification1 buyerBank;
 	/**
 	 * The financial institution of the buyer, uniquely identified by its BIC.
 	 * <p>
@@ -275,24 +277,25 @@ public class IntentToPayNotificationV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#BuyerBank
-	 * IntentToPayNotificationV02.BuyerBank}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#mmBuyerBank
+	 * IntentToPayNotificationV02.mmBuyerBank}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The financial institution of the buyer, uniquely identified by its BIC. \n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.BuyerBank);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmBuyerBank);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected BICIdentification1 sellerBank;
 	/**
 	 * The financial institution of the seller, uniquely identified by its BIC.
 	 * <p>
@@ -320,24 +323,25 @@ public class IntentToPayNotificationV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#SellerBank
-	 * IntentToPayNotificationV02.SellerBank}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#mmSellerBank
+	 * IntentToPayNotificationV02.mmSellerBank}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The financial institution of the seller, uniquely identified by its BIC. \n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.SellerBank);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmSellerBank);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 	};
+	protected IntentToPay1 intentToPay;
 	/**
 	 * Provides the details of the intention to pay.
 	 * <p>
@@ -362,49 +366,22 @@ public class IntentToPayNotificationV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#IntentToPay
-	 * IntentToPayNotificationV02.IntentToPay}</li>
+	 * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#mmIntentToPay
+	 * IntentToPayNotificationV02.mmIntentToPay}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IntentToPay = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIntentToPay = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InttToPay";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntentToPay";
 			definition = "Provides the details of the intention to pay.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.IntentToPay);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmIntentToPay);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> IntentToPay1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "044"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "044";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -419,13 +396,68 @@ public class IntentToPayNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "InttToPayNtfctn";
 				businessArea_lazy = () -> TradeServicesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.NotificationIdentification,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.TransactionIdentification, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.SubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.BuyerBank, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.SellerBank,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.IntentToPay);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmNotificationIdentification,
+						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmTransactionIdentification, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmSubmitterTransactionReference,
+						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmBuyerBank, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmSellerBank,
+						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmIntentToPay);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "044";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getNotificationIdentification() {
+		return notificationIdentification;
+	}
+
+	public void setNotificationIdentification(MessageIdentification1 notificationIdentification) {
+		this.notificationIdentification = notificationIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public SimpleIdentificationInformation getSubmitterTransactionReference() {
+		return submitterTransactionReference;
+	}
+
+	public void setSubmitterTransactionReference(SimpleIdentificationInformation submitterTransactionReference) {
+		this.submitterTransactionReference = submitterTransactionReference;
+	}
+
+	public BICIdentification1 getBuyerBank() {
+		return buyerBank;
+	}
+
+	public void setBuyerBank(BICIdentification1 buyerBank) {
+		this.buyerBank = buyerBank;
+	}
+
+	public BICIdentification1 getSellerBank() {
+		return sellerBank;
+	}
+
+	public void setSellerBank(BICIdentification1 sellerBank) {
+		this.sellerBank = sellerBank;
+	}
+
+	public IntentToPay1 getIntentToPay() {
+		return intentToPay;
+	}
+
+	public void setIntentToPay(IntentToPay1 intentToPay) {
+		this.intentToPay = intentToPay;
 	}
 }

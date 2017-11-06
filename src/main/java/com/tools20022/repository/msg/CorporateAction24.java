@@ -34,12 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateAction24#DateDetails
- * CorporateAction24.DateDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateAction24#EventStage
- * CorporateAction24.EventStage}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateAction24#LotteryType
- * CorporateAction24.LotteryType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction24#mmDateDetails
+ * CorporateAction24.mmDateDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateAction24#mmEventStage
+ * CorporateAction24.mmEventStage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction24#mmLotteryType
+ * CorporateAction24.mmLotteryType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,15 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06#CorporateActionDetails
- * CorporateActionMovementPreliminaryAdviceV06.CorporateActionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06#mmCorporateActionDetails
+ * CorporateActionMovementPreliminaryAdviceV06.mmCorporateActionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateAction24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionDate41 dateDetails;
 	/**
 	 * Provides information about the dates related to a corporate action event.
 	 * <p>
@@ -118,34 +121,35 @@ public class CorporateAction24 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction32#DateDetails
-	 * CorporateAction32.DateDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction32#mmDateDetails
+	 * CorporateAction32.mmDateDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction13#DateDetails
-	 * CorporateAction13.DateDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction13#mmDateDetails
+	 * CorporateAction13.mmDateDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateAction24.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
+			componentContext_lazy = () -> CorporateAction24.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateAction13.DateDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction32.DateDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction32.mmDateDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateAction13.mmDateDetails;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionDate41.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate41.mmObject();
 		}
 	};
+	protected CorporateActionEventStageFormat6Choice eventStage;
 	/**
 	 * Stage in the corporate action event life cycle.
 	 * <p>
@@ -158,8 +162,8 @@ public class CorporateAction24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#EventStage
-	 * CorporateActionEvent.EventStage}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventStage
+	 * CorporateActionEvent.mmEventStage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -180,34 +184,35 @@ public class CorporateAction24 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction32#EventStage
-	 * CorporateAction32.EventStage}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction32#mmEventStage
+	 * CorporateAction32.mmEventStage}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction13#EventStage
-	 * CorporateAction13.EventStage}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction13#mmEventStage
+	 * CorporateAction13.mmEventStage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EventStage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEventStage = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> CorporateAction24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.EventStage;
 			isDerived = false;
 			xmlTag = "EvtStag";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStage";
 			definition = "Stage in the corporate action event life cycle.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateAction13.EventStage;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction32.EventStage);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction32.mmEventStage);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateAction13.mmEventStage;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionEventStageFormat6Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CorporateActionEventStageFormat6Choice.mmObject();
 		}
 	};
+	protected LotteryTypeFormat1Choice lotteryType;
 	/**
 	 * Specifies the type of lottery announced.
 	 * <p>
@@ -220,8 +225,8 @@ public class CorporateAction24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Lottery#LotteryType
-	 * Lottery.LotteryType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Lottery#mmLotteryType
+	 * Lottery.mmLotteryType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -242,49 +247,74 @@ public class CorporateAction24 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction32#LotteryType
-	 * CorporateAction32.LotteryType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction32#mmLotteryType
+	 * CorporateAction32.mmLotteryType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction13#LotteryType
-	 * CorporateAction13.LotteryType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction13#mmLotteryType
+	 * CorporateAction13.mmLotteryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LotteryType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryType;
 			componentContext_lazy = () -> CorporateAction24.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.LotteryType;
 			isDerived = false;
 			xmlTag = "LtryTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateAction13.LotteryType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction32.LotteryType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction32.mmLotteryType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateAction13.mmLotteryType;
 			maxOccurs = 1;
-			type_lazy = () -> LotteryTypeFormat1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> LotteryTypeFormat1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction24.DateDetails, com.tools20022.repository.msg.CorporateAction24.EventStage, com.tools20022.repository.msg.CorporateAction24.LotteryType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction24.mmDateDetails, com.tools20022.repository.msg.CorporateAction24.mmEventStage,
+						com.tools20022.repository.msg.CorporateAction24.mmLotteryType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmCorporateActionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.CorporateActionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateAction24";
 				definition = "Provides information about the corporate action event.";
-				previousVersion_lazy = () -> CorporateAction13.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CorporateAction32.mmObject());
+				previousVersion_lazy = () -> CorporateAction13.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionDate41 getDateDetails() {
+		return dateDetails;
+	}
+
+	public void setDateDetails(com.tools20022.repository.msg.CorporateActionDate41 dateDetails) {
+		this.dateDetails = dateDetails;
+	}
+
+	public CorporateActionEventStageFormat6Choice getEventStage() {
+		return eventStage;
+	}
+
+	public void setEventStage(CorporateActionEventStageFormat6Choice eventStage) {
+		this.eventStage = eventStage;
+	}
+
+	public LotteryTypeFormat1Choice getLotteryType() {
+		return lotteryType;
+	}
+
+	public void setLotteryType(LotteryTypeFormat1Choice lotteryType) {
+		this.lotteryType = lotteryType;
 	}
 }

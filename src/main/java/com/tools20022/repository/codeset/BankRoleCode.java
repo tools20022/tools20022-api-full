@@ -29,14 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#BuyersBank
- * BankRoleCode.BuyersBank}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#SellersBank
- * BankRoleCode.SellersBank}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#ObligorBank
- * BankRoleCode.ObligorBank}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#RecipientBank
- * BankRoleCode.RecipientBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#mmBuyersBank
+ * BankRoleCode.mmBuyersBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#mmSellersBank
+ * BankRoleCode.mmSellersBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#mmObligorBank
+ * BankRoleCode.mmObligorBank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BankRoleCode#mmRecipientBank
+ * BankRoleCode.mmRecipientBank}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +85,7 @@ public class BankRoleCode {
 	 * definition} = "Bank of the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyersBank = new MMCode() {
+	public static final MMCode mmBuyersBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyersBank";
@@ -113,7 +114,7 @@ public class BankRoleCode {
 	 * definition} = "Bank of the seller."</li>
 	 * </ul>
 	 */
-	public static final MMCode SellersBank = new MMCode() {
+	public static final MMCode mmSellersBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellersBank";
@@ -142,7 +143,7 @@ public class BankRoleCode {
 	 * definition} = "Obligor bank"</li>
 	 * </ul>
 	 */
-	public static final MMCode ObligorBank = new MMCode() {
+	public static final MMCode mmObligorBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligorBank";
@@ -171,7 +172,7 @@ public class BankRoleCode {
 	 * definition} = "Recipient bank."</li>
 	 * </ul>
 	 */
-	public static final MMCode RecipientBank = new MMCode() {
+	public static final MMCode mmRecipientBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientBank";
@@ -184,12 +185,12 @@ public class BankRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BankRoleCode";
 				definition = "Specifies the role of the bank in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BankRoleCode.BuyersBank, com.tools20022.repository.codeset.BankRoleCode.SellersBank, com.tools20022.repository.codeset.BankRoleCode.ObligorBank,
-						com.tools20022.repository.codeset.BankRoleCode.RecipientBank);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BankRoleCode.mmBuyersBank, com.tools20022.repository.codeset.BankRoleCode.mmSellersBank, com.tools20022.repository.codeset.BankRoleCode.mmObligorBank,
+						com.tools20022.repository.codeset.BankRoleCode.mmRecipientBank);
 				derivation_lazy = () -> Arrays.asList(BankRole1Code.mmObject());
 			}
 		});

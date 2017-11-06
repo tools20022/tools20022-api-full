@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SystemEventInformation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the participant and their operational status.
@@ -33,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAndStatus1#ParticipantIdentification
- * ParticipantAndStatus1.ParticipantIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAndStatus1#mmParticipantIdentification
+ * ParticipantAndStatus1.mmParticipantIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAndStatus1#ParticipantContactDetails
- * ParticipantAndStatus1.ParticipantContactDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAndStatus1#mmParticipantContactDetails
+ * ParticipantAndStatus1.mmParticipantContactDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParticipantAndStatus1#ServiceAvailability
- * ParticipantAndStatus1.ServiceAvailability}</li>
+ * {@linkplain com.tools20022.repository.msg.ParticipantAndStatus1#mmServiceAvailability
+ * ParticipantAndStatus1.mmServiceAvailability}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ParticipantAndStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstitutionIdentification13 participantIdentification;
 	/**
 	 * Identification of participant.
 	 * <p>
@@ -77,8 +79,8 @@ public class ParticipantAndStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,21 +99,22 @@ public class ParticipantAndStatus1 {
 	 * definition} = "Identification of participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> ParticipantAndStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "PtcptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantIdentification";
 			definition = "Identification of participant.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification13.mmObject();
 		}
 	};
+	protected ContactDetails2 participantContactDetails;
 	/**
 	 * Set of elements used to indicate how to contact the participant.
 	 * <p>
@@ -123,8 +126,8 @@ public class ParticipantAndStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#PersonIdentification
-	 * Person.PersonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmPersonIdentification
+	 * Person.mmPersonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,21 +147,22 @@ public class ParticipantAndStatus1 {
 	 * "Set of elements used to indicate how to contact the participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantContactDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantContactDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPersonIdentification;
 			componentContext_lazy = () -> ParticipantAndStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.PersonIdentification;
 			isDerived = false;
 			xmlTag = "PtcptCtctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantContactDetails";
 			definition = "Set of elements used to indicate how to contact the participant.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ContactDetails2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactDetails2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ServiceAvailability1> serviceAvailability;
 	/**
 	 * Provides details on operational availability of the participant business
 	 * service.
@@ -171,8 +175,8 @@ public class ParticipantAndStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#Availability
-	 * System.Availability}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmAvailability
+	 * System.mmAvailability}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,33 +197,57 @@ public class ParticipantAndStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ServiceAvailability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmServiceAvailability = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmAvailability;
 			componentContext_lazy = () -> ParticipantAndStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.Availability;
 			isDerived = false;
 			xmlTag = "SvcAvlbty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceAvailability";
 			definition = "Provides details on operational availability of the participant business service.";
 			minOccurs = 1;
-			type_lazy = () -> ServiceAvailability1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ServiceAvailability1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantAndStatus1.ParticipantIdentification, com.tools20022.repository.msg.ParticipantAndStatus1.ParticipantContactDetails,
-						com.tools20022.repository.msg.ParticipantAndStatus1.ServiceAvailability);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantAndStatus1.mmParticipantIdentification, com.tools20022.repository.msg.ParticipantAndStatus1.mmParticipantContactDetails,
+						com.tools20022.repository.msg.ParticipantAndStatus1.mmServiceAvailability);
 				trace_lazy = () -> SystemEventInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantAndStatus1";
 				definition = "Provides details on the participant and their operational status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstitutionIdentification13 getParticipantIdentification() {
+		return participantIdentification;
+	}
+
+	public void setParticipantIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification13 participantIdentification) {
+		this.participantIdentification = participantIdentification;
+	}
+
+	public ContactDetails2 getParticipantContactDetails() {
+		return participantContactDetails;
+	}
+
+	public void setParticipantContactDetails(com.tools20022.repository.msg.ContactDetails2 participantContactDetails) {
+		this.participantContactDetails = participantContactDetails;
+	}
+
+	public List<ServiceAvailability1> getServiceAvailability() {
+		return serviceAvailability;
+	}
+
+	public void setServiceAvailability(List<com.tools20022.repository.msg.ServiceAvailability1> serviceAvailability) {
+		this.serviceAvailability = serviceAvailability;
 	}
 }

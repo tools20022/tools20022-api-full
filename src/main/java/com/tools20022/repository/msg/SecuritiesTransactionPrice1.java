@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionPrice1#Pending
- * SecuritiesTransactionPrice1.Pending}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionPrice1#mmPending
+ * SecuritiesTransactionPrice1.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionPrice1#Currency
- * SecuritiesTransactionPrice1.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionPrice1#mmCurrency
+ * SecuritiesTransactionPrice1.mmCurrency}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransactionPrice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceStatus1Code pending;
 	/**
 	 * Price is currently not available, but pending.
 	 * <p>
@@ -87,7 +88,7 @@ public class SecuritiesTransactionPrice1 {
 	 * definition} = "Price is currently not available, but pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Pending = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPending = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionPrice1.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class SecuritiesTransactionPrice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Price is currently not available, but pending.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceStatus1Code.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode currency;
 	/**
 	 * Currency that will be used but for which no price is yet known.
 	 * <p>
@@ -129,7 +131,7 @@ public class SecuritiesTransactionPrice1 {
 	 * "Currency that will be used but for which no price is yet known."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionPrice1.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class SecuritiesTransactionPrice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency that will be used but for which no price is yet known.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class SecuritiesTransactionPrice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionPrice1.Pending, com.tools20022.repository.msg.SecuritiesTransactionPrice1.Currency);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionPrice1.mmPending, com.tools20022.repository.msg.SecuritiesTransactionPrice1.mmCurrency);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionPrice1";
 				definition = "Descriptive fields capturing where no strike price is known.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceStatus1Code getPending() {
+		return pending;
+	}
+
+	public void setPending(PriceStatus1Code pending) {
+		this.pending = pending;
+	}
+
+	public ActiveOrHistoricCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+		this.currency = currency;
 	}
 }

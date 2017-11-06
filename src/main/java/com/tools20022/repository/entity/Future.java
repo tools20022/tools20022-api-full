@@ -44,20 +44,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Future#FutureDate
- * Future.FutureDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Future#MinimumSize
- * Future.MinimumSize}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Future#UnitOfMeasure
- * Future.UnitOfMeasure}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Future#LastDeliveryDate
- * Future.LastDeliveryDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Future#Standardisation
- * Future.Standardisation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Future#UnderlyingType
- * Future.UnderlyingType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Future#FutureRule
- * Future.FutureRule}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Future#mmFutureDate
+ * Future.mmFutureDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Future#mmMinimumSize
+ * Future.mmMinimumSize}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Future#mmUnitOfMeasure
+ * Future.mmUnitOfMeasure}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Future#mmLastDeliveryDate
+ * Future.mmLastDeliveryDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Future#mmStandardisation
+ * Future.mmStandardisation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Future#mmUnderlyingType
+ * Future.mmUnderlyingType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Future#mmFutureRule
+ * Future.mmFutureRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -65,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.FutureRule#RelatedFutureInstrument
- * FutureRule.RelatedFutureInstrument}</li>
+ * {@linkplain com.tools20022.repository.entity.FutureRule#mmRelatedFutureInstrument
+ * FutureRule.mmRelatedFutureInstrument}</li>
  * </ul>
  * </li>
  * <li>
@@ -74,23 +74,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#Future
- * FinancialInstrumentProperties1Choice.Future}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#mmFuture
+ * FinancialInstrumentProperties1Choice.mmFuture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction1#FloatingRateNote
- * UnsecuredMarketTransaction1.FloatingRateNote}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction1#mmFloatingRateNote
+ * UnsecuredMarketTransaction1.mmFloatingRateNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#FloatingRateNote
- * UnsecuredMarketTransaction2.FloatingRateNote}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmFloatingRateNote
+ * UnsecuredMarketTransaction2.mmFloatingRateNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#FloatingRateNote
- * UnsecuredMarketTransaction3.FloatingRateNote}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmFloatingRateNote
+ * UnsecuredMarketTransaction3.mmFloatingRateNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Derivative2Choice#ContractForDifference
- * Derivative2Choice.ContractForDifference}</li>
+ * {@linkplain com.tools20022.repository.choice.Derivative2Choice#mmContractForDifference
+ * Derivative2Choice.mmContractForDifference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#FloatingRateNote
- * UnsecuredMarketTransaction4.FloatingRateNote}</li>
+ * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmFloatingRateNote
+ * UnsecuredMarketTransaction4.mmFloatingRateNote}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -107,8 +107,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,6 +124,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Future extends Derivative {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime futureDate;
 	/**
 	 * Date on which future contracts settle.
 	 * <p>
@@ -133,22 +134,22 @@ public class Future extends Derivative {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Future1#FutureDate
-	 * Future1.FutureDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#FutureDate
-	 * FutureOrOptionDetails1.FutureDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Future2#FutureDate
-	 * Future2.FutureDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Future
 	 * Future}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future1#mmFutureDate
+	 * Future1.mmFutureDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmFutureDate
+	 * FutureOrOptionDetails1.mmFutureDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future2#mmFutureDate
+	 * Future2.mmFutureDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -160,19 +161,20 @@ public class Future extends Derivative {
 	 * definition} = "Date on which future contracts settle."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FutureDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFutureDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Future1.FutureDate, com.tools20022.repository.msg.FutureOrOptionDetails1.FutureDate, com.tools20022.repository.msg.Future2.FutureDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Future1.mmFutureDate, com.tools20022.repository.msg.FutureOrOptionDetails1.mmFutureDate, com.tools20022.repository.msg.Future2.mmFutureDate);
 			elementContext_lazy = () -> Future.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FutureDate";
 			definition = "Date on which future contracts settle.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CurrencyAndAmount minimumSize;
 	/**
 	 * Specifies the minimum ratio or multiply factor used to convert from
 	 * contracts to shares.
@@ -184,22 +186,22 @@ public class Future extends Derivative {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Future1#MinimumSize
-	 * Future1.MinimumSize}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#MinimumSize
-	 * FutureOrOptionDetails1.MinimumSize}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Future2#MinimumSize
-	 * Future2.MinimumSize}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Future
 	 * Future}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future1#mmMinimumSize
+	 * Future1.mmMinimumSize}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmMinimumSize
+	 * FutureOrOptionDetails1.mmMinimumSize}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future2#mmMinimumSize
+	 * Future2.mmMinimumSize}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -213,19 +215,20 @@ public class Future extends Derivative {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MinimumSize = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMinimumSize = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Future1.MinimumSize, com.tools20022.repository.msg.FutureOrOptionDetails1.MinimumSize, com.tools20022.repository.msg.Future2.MinimumSize);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Future1.mmMinimumSize, com.tools20022.repository.msg.FutureOrOptionDetails1.mmMinimumSize, com.tools20022.repository.msg.Future2.mmMinimumSize);
 			elementContext_lazy = () -> Future.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MinimumSize";
 			definition = "Specifies the minimum ratio or multiply factor used to convert from contracts to shares.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected UnitOfMeasureCode unitOfMeasure;
 	/**
 	 * Used to indicate the size of the underlying commodity on which the
 	 * contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude
@@ -238,22 +241,22 @@ public class Future extends Derivative {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
 	 * UnitOfMeasureCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Future1#UnitOfMeasure
-	 * Future1.UnitOfMeasure}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#UnitOfMeasure
-	 * FutureOrOptionDetails1.UnitOfMeasure}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Future2#UnitOfMeasure
-	 * Future2.UnitOfMeasure}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Future
 	 * Future}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future1#mmUnitOfMeasure
+	 * Future1.mmUnitOfMeasure}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmUnitOfMeasure
+	 * FutureOrOptionDetails1.mmUnitOfMeasure}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future2#mmUnitOfMeasure
+	 * Future2.mmUnitOfMeasure}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -267,19 +270,20 @@ public class Future extends Derivative {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute UnitOfMeasure = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmUnitOfMeasure = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Future1.UnitOfMeasure, com.tools20022.repository.msg.FutureOrOptionDetails1.UnitOfMeasure, com.tools20022.repository.msg.Future2.UnitOfMeasure);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Future1.mmUnitOfMeasure, com.tools20022.repository.msg.FutureOrOptionDetails1.mmUnitOfMeasure, com.tools20022.repository.msg.Future2.mmUnitOfMeasure);
 			elementContext_lazy = () -> Future.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnitOfMeasure";
 			definition = "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasureCode.mmObject();
 		}
 	};
+	protected ISODateTime lastDeliveryDate;
 	/**
 	 * Last date/time by which the option for physical delivery may still be
 	 * exercised.
@@ -290,18 +294,18 @@ public class Future extends Derivative {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#LastDeliveryDate
-	 * FutureOrOptionDetails1.LastDeliveryDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Future
 	 * Future}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FutureOrOptionDetails1#mmLastDeliveryDate
+	 * FutureOrOptionDetails1.mmLastDeliveryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -315,19 +319,20 @@ public class Future extends Derivative {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute LastDeliveryDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmLastDeliveryDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FutureOrOptionDetails1.LastDeliveryDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FutureOrOptionDetails1.mmLastDeliveryDate);
 			elementContext_lazy = () -> Future.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LastDeliveryDate";
 			definition = "Last date/time by which the option for physical delivery may still be exercised.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected StandardisationCode standardisation;
 	/**
 	 * Specifies whether the terms of the security (underlying instruments,
 	 * expiration date, contract size) are defined according to the exchange
@@ -357,18 +362,19 @@ public class Future extends Derivative {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Standardisation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStandardisation = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> Future.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Standardisation";
 			definition = "Specifies whether the terms of the security (underlying instruments, expiration date, contract size) are defined according to the exchange specifications or whether they can be user defined.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StandardisationCode.mmObject();
 		}
 	};
+	protected UnderlyingTypeCode underlyingType;
 	/**
 	 * Specifies the type of underlying to which the option relates.
 	 * <p>
@@ -395,18 +401,19 @@ public class Future extends Derivative {
 	 * "Specifies the type of underlying to which the option relates."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute UnderlyingType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmUnderlyingType = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> Future.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingType";
 			definition = "Specifies the type of underlying to which the option relates.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingTypeCode.mmObject();
 		}
 	};
+	protected FutureRule futureRule;
 	/**
 	 * Rule attached to a future on debt.
 	 * <p>
@@ -415,8 +422,8 @@ public class Future extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.FutureRule#RelatedFutureInstrument
-	 * FutureRule.RelatedFutureInstrument}</li>
+	 * {@linkplain com.tools20022.repository.entity.FutureRule#mmRelatedFutureInstrument
+	 * FutureRule.mmRelatedFutureInstrument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -439,39 +446,95 @@ public class Future extends Derivative {
 	 * definition} = "Rule attached to a future on debt."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd FutureRule = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmFutureRule = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Future.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FutureRule";
 			definition = "Rule attached to a future on debt.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.FutureRule.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.FutureRule.RelatedFutureInstrument;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.FutureRule.mmRelatedFutureInstrument;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.FutureRule.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Future";
 				definition = "Parameters for contracts which obligate the buyer to receive and the seller to deliver in the future the assets specified at an agreed price.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FutureRule.RelatedFutureInstrument);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.Future, com.tools20022.repository.msg.UnsecuredMarketTransaction1.FloatingRateNote,
-						com.tools20022.repository.msg.UnsecuredMarketTransaction2.FloatingRateNote, com.tools20022.repository.msg.UnsecuredMarketTransaction3.FloatingRateNote,
-						com.tools20022.repository.choice.Derivative2Choice.ContractForDifference, com.tools20022.repository.msg.UnsecuredMarketTransaction4.FloatingRateNote);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FutureRule.mmRelatedFutureInstrument);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmFuture, com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmFloatingRateNote,
+						com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmFloatingRateNote, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmFloatingRateNote,
+						com.tools20022.repository.choice.Derivative2Choice.mmContractForDifference, com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmFloatingRateNote);
 				superType_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Future.FutureDate, com.tools20022.repository.entity.Future.MinimumSize, com.tools20022.repository.entity.Future.UnitOfMeasure,
-						com.tools20022.repository.entity.Future.LastDeliveryDate, com.tools20022.repository.entity.Future.Standardisation, com.tools20022.repository.entity.Future.UnderlyingType,
-						com.tools20022.repository.entity.Future.FutureRule);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Future.mmFutureDate, com.tools20022.repository.entity.Future.mmMinimumSize, com.tools20022.repository.entity.Future.mmUnitOfMeasure,
+						com.tools20022.repository.entity.Future.mmLastDeliveryDate, com.tools20022.repository.entity.Future.mmStandardisation, com.tools20022.repository.entity.Future.mmUnderlyingType,
+						com.tools20022.repository.entity.Future.mmFutureRule);
 				derivationComponent_lazy = () -> Arrays.asList(Future1.mmObject(), Future2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getFutureDate() {
+		return futureDate;
+	}
+
+	public void setFutureDate(ISODateTime futureDate) {
+		this.futureDate = futureDate;
+	}
+
+	public CurrencyAndAmount getMinimumSize() {
+		return minimumSize;
+	}
+
+	public void setMinimumSize(CurrencyAndAmount minimumSize) {
+		this.minimumSize = minimumSize;
+	}
+
+	public UnitOfMeasureCode getUnitOfMeasure() {
+		return unitOfMeasure;
+	}
+
+	public void setUnitOfMeasure(UnitOfMeasureCode unitOfMeasure) {
+		this.unitOfMeasure = unitOfMeasure;
+	}
+
+	public ISODateTime getLastDeliveryDate() {
+		return lastDeliveryDate;
+	}
+
+	public void setLastDeliveryDate(ISODateTime lastDeliveryDate) {
+		this.lastDeliveryDate = lastDeliveryDate;
+	}
+
+	public StandardisationCode getStandardisation() {
+		return standardisation;
+	}
+
+	public void setStandardisation(StandardisationCode standardisation) {
+		this.standardisation = standardisation;
+	}
+
+	public UnderlyingTypeCode getUnderlyingType() {
+		return underlyingType;
+	}
+
+	public void setUnderlyingType(UnderlyingTypeCode underlyingType) {
+		this.underlyingType = underlyingType;
+	}
+
+	public FutureRule getFutureRule() {
+		return futureRule;
+	}
+
+	public void setFutureRule(com.tools20022.repository.entity.FutureRule futureRule) {
+		this.futureRule = futureRule;
 	}
 }

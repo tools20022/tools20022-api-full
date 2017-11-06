@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.PaymentTransactionInformation5;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -68,21 +69,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01#GroupHeader
- * FIToFIPaymentReversalV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01#mmGroupHeader
+ * FIToFIPaymentReversalV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01#OriginalGroupInformation
- * FIToFIPaymentReversalV01.OriginalGroupInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01#mmOriginalGroupInformation
+ * FIToFIPaymentReversalV01.mmOriginalGroupInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01#TransactionInformation
- * FIToFIPaymentReversalV01.TransactionInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01#mmTransactionInformation
+ * FIToFIPaymentReversalV01.mmTransactionInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01#identifier
- * FIToFIPaymentReversalV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pacs.007.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +104,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FIToFIPaymentReversalV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader9 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -130,17 +130,18 @@ public class FIToFIPaymentReversalV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader9.mmObject();
 		}
 	};
+	protected OriginalGroupInformation5 originalGroupInformation;
 	/**
 	 * Information concerning the original group of transactions, to which the
 	 * message refers.
@@ -167,17 +168,18 @@ public class FIToFIPaymentReversalV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupInformation5.mmObject();
 		}
 	};
+	protected List<PaymentTransactionInformation5> transactionInformation;
 	/**
 	 * Information concerning the original transactions, to which the reversal
 	 * message refers.
@@ -204,7 +206,7 @@ public class FIToFIPaymentReversalV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,33 +214,6 @@ public class FIToFIPaymentReversalV01 {
 			definition = "Information concerning the original transactions, to which the reversal message refers.";
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransactionInformation5.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pacs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pacs";
-			messageFunctionality = "007";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -254,11 +229,42 @@ public class FIToFIPaymentReversalV01 {
 				xmlTag = "pacs.007.001.01";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
 				xmlName = "pacs.007.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01.GroupHeader, com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01.OriginalGroupInformation,
-						com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01.TransactionInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01.mmGroupHeader, com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01.mmOriginalGroupInformation,
+						com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01.mmTransactionInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pacs";
+						messageFunctionality = "007";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader9 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader9 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public OriginalGroupInformation5 getOriginalGroupInformation() {
+		return originalGroupInformation;
+	}
+
+	public void setOriginalGroupInformation(OriginalGroupInformation5 originalGroupInformation) {
+		this.originalGroupInformation = originalGroupInformation;
+	}
+
+	public List<PaymentTransactionInformation5> getTransactionInformation() {
+		return transactionInformation;
+	}
+
+	public void setTransactionInformation(List<PaymentTransactionInformation5> transactionInformation) {
+		this.transactionInformation = transactionInformation;
 	}
 }

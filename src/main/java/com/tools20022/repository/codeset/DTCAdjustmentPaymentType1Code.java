@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#StockLoanPayment
- * DTCAdjustmentPaymentType1Code.StockLoanPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#mmStockLoanPayment
+ * DTCAdjustmentPaymentType1Code.mmStockLoanPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#RepoPayment
- * DTCAdjustmentPaymentType1Code.RepoPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#mmRepoPayment
+ * DTCAdjustmentPaymentType1Code.mmRepoPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#FailPayment
- * DTCAdjustmentPaymentType1Code.FailPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#mmFailPayment
+ * DTCAdjustmentPaymentType1Code.mmFailPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#MiscellaneousPayment
- * DTCAdjustmentPaymentType1Code.MiscellaneousPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#mmMiscellaneousPayment
+ * DTCAdjustmentPaymentType1Code.mmMiscellaneousPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 * name} = "StockLoanPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockLoanPayment = new MMCode() {
+	public static final MMCode mmStockLoanPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanPayment";
@@ -110,7 +110,7 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 * name} = "RepoPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepoPayment = new MMCode() {
+	public static final MMCode mmRepoPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoPayment";
@@ -133,7 +133,7 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 * name} = "FailPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode FailPayment = new MMCode() {
+	public static final MMCode mmFailPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailPayment";
@@ -156,7 +156,7 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 * name} = "MiscellaneousPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode MiscellaneousPayment = new MMCode() {
+	public static final MMCode mmMiscellaneousPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousPayment";
@@ -167,13 +167,13 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STOK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCAdjustmentPaymentType1Code";
 				definition = "Specified the type of the payment adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.StockLoanPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.RepoPayment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.FailPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.MiscellaneousPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmStockLoanPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmRepoPayment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmFailPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmMiscellaneousPayment);
 				trace_lazy = () -> DTCAdjustmentPaymentTypeCode.mmObject();
 			}
 		});

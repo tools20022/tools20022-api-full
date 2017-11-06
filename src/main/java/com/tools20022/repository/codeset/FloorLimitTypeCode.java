@@ -30,12 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FloorLimitTypeCode#Credit
- * FloorLimitTypeCode.Credit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FloorLimitTypeCode#Debit
- * FloorLimitTypeCode.Debit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FloorLimitTypeCode#Both
- * FloorLimitTypeCode.Both}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FloorLimitTypeCode#mmCredit
+ * FloorLimitTypeCode.mmCredit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FloorLimitTypeCode#mmDebit
+ * FloorLimitTypeCode.mmDebit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FloorLimitTypeCode#mmBoth
+ * FloorLimitTypeCode.mmBoth}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +93,7 @@ public class FloorLimitTypeCode {
 	 * definition} = "Floor limit applies to credit entries."</li>
 	 * </ul>
 	 */
-	public static final MMCode Credit = new MMCode() {
+	public static final MMCode mmCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Credit";
@@ -122,7 +123,7 @@ public class FloorLimitTypeCode {
 	 * definition} = "Floor limit applies to debit entries."</li>
 	 * </ul>
 	 */
-	public static final MMCode Debit = new MMCode() {
+	public static final MMCode mmDebit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Debit";
@@ -152,7 +153,7 @@ public class FloorLimitTypeCode {
 	 * definition} = "Floor limit applies to both credit and debit entries."</li>
 	 * </ul>
 	 */
-	public static final MMCode Both = new MMCode() {
+	public static final MMCode mmBoth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Both";
@@ -165,12 +166,12 @@ public class FloorLimitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRED");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FloorLimitTypeCode";
 				definition = "Indicates whether the floor limit applies to credit, to debit or to both credit and debit entries.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FloorLimitTypeCode.Credit, com.tools20022.repository.codeset.FloorLimitTypeCode.Debit, com.tools20022.repository.codeset.FloorLimitTypeCode.Both);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FloorLimitTypeCode.mmCredit, com.tools20022.repository.codeset.FloorLimitTypeCode.mmDebit, com.tools20022.repository.codeset.FloorLimitTypeCode.mmBoth);
 				derivation_lazy = () -> Arrays.asList(FloorLimitType1Code.mmObject());
 			}
 		});

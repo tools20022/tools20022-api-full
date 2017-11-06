@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateFormat42Choice#YearMonth
- * DateFormat42Choice.YearMonth}</li>
+ * {@linkplain com.tools20022.repository.choice.DateFormat42Choice#mmYearMonth
+ * DateFormat42Choice.mmYearMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateFormat42Choice#YearMonthDay
- * DateFormat42Choice.YearMonthDay}</li>
+ * {@linkplain com.tools20022.repository.choice.DateFormat42Choice#mmYearMonthDay
+ * DateFormat42Choice.mmYearMonthDay}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateFormat42Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISOYearMonth yearMonth;
 	/**
 	 * Year and month.
 	 * <p>
@@ -72,8 +73,8 @@ public class DateFormat42Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#SeriesIssueIdentificationDate
-	 * InvestmentFundClass.SeriesIssueIdentificationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmSeriesIssueIdentificationDate
+	 * InvestmentFundClass.mmSeriesIssueIdentificationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,20 +93,21 @@ public class DateFormat42Choice {
 	 * definition} = "Year and month."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute YearMonth = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmYearMonth = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmSeriesIssueIdentificationDate;
 			componentContext_lazy = () -> DateFormat42Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.SeriesIssueIdentificationDate;
 			isDerived = false;
 			xmlTag = "YrMnth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YearMonth";
 			definition = "Year and month.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
 		}
 	};
+	protected ISODate yearMonthDay;
 	/**
 	 * Year, month and day.
 	 * <p>
@@ -118,8 +120,8 @@ public class DateFormat42Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#SeriesIssueIdentificationDate
-	 * InvestmentFundClass.SeriesIssueIdentificationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmSeriesIssueIdentificationDate
+	 * InvestmentFundClass.mmSeriesIssueIdentificationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,17 +140,17 @@ public class DateFormat42Choice {
 	 * definition} = "Year, month and day."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute YearMonthDay = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmYearMonthDay = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmSeriesIssueIdentificationDate;
 			componentContext_lazy = () -> DateFormat42Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.SeriesIssueIdentificationDate;
 			isDerived = false;
 			xmlTag = "YrMnthDay";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YearMonthDay";
 			definition = "Year, month and day.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -156,13 +158,29 @@ public class DateFormat42Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat42Choice.YearMonth, com.tools20022.repository.choice.DateFormat42Choice.YearMonthDay);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat42Choice.mmYearMonth, com.tools20022.repository.choice.DateFormat42Choice.mmYearMonthDay);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateFormat42Choice";
 				definition = "Choice of formats for a date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISOYearMonth getYearMonth() {
+		return yearMonth;
+	}
+
+	public void setYearMonth(ISOYearMonth yearMonth) {
+		this.yearMonth = yearMonth;
+	}
+
+	public ISODate getYearMonthDay() {
+		return yearMonthDay;
+	}
+
+	public void setYearMonthDay(ISODate yearMonthDay) {
+		this.yearMonthDay = yearMonthDay;
 	}
 }

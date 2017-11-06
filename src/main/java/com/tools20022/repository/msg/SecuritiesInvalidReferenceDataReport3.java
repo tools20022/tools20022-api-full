@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reference data instruments that are no longer valid either through an
@@ -33,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3#FinancialInstrument
- * SecuritiesInvalidReferenceDataReport3.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3#mmFinancialInstrument
+ * SecuritiesInvalidReferenceDataReport3.mmFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3#SupplementaryData
- * SecuritiesInvalidReferenceDataReport3.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3#mmSupplementaryData
+ * SecuritiesInvalidReferenceDataReport3.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,16 +46,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#FinancialInstruments
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01#mmFinancialInstruments
  * FinancialInstrumentReportingInvalidReferenceDataReportV01.
- * FinancialInstruments}</li>
+ * mmFinancialInstruments}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesInvalidReferenceDataReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesReferenceDataReport5 financialInstrument;
 	/**
 	 * Instrument details at the time this specific details on the financial
 	 * instrument was invalidated.
@@ -100,7 +102,7 @@ public class SecuritiesInvalidReferenceDataReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesInvalidReferenceDataReport3.mmObject();
 			isDerived = false;
@@ -108,12 +110,13 @@ public class SecuritiesInvalidReferenceDataReport3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Instrument details at the time this specific details on the financial instrument was invalidated.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -143,7 +146,7 @@ public class SecuritiesInvalidReferenceDataReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesInvalidReferenceDataReport3.mmObject();
 			isDerived = false;
@@ -152,22 +155,38 @@ public class SecuritiesInvalidReferenceDataReport3 {
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3.FinancialInstrument, com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3.SupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.FinancialInstruments);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3.mmFinancialInstrument, com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmFinancialInstruments);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesInvalidReferenceDataReport3";
 				definition = "Reference data instruments that are no longer valid either through an instrument update or that have passed their termination date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesReferenceDataReport5 getFinancialInstrument() {
+		return financialInstrument;
+	}
+
+	public void setFinancialInstrument(com.tools20022.repository.msg.SecuritiesReferenceDataReport5 financialInstrument) {
+		this.financialInstrument = financialInstrument;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

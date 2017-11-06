@@ -33,24 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet8#Identification
- * TerminalManagementDataSet8.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet8#mmIdentification
+ * TerminalManagementDataSet8.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet8#POIChallenge
- * TerminalManagementDataSet8.POIChallenge}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet8#mmPOIChallenge
+ * TerminalManagementDataSet8.mmPOIChallenge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet8#TMChallenge
- * TerminalManagementDataSet8.TMChallenge}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet8#mmTMChallenge
+ * TerminalManagementDataSet8.mmTMChallenge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet8#EncryptedKey
- * TerminalManagementDataSet8.EncryptedKey}</li>
+ * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet8#mmEncryptedKey
+ * TerminalManagementDataSet8.mmEncryptedKey}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TerminalManagementDataSet8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataSetIdentification3 identification;
 	/**
 	 * Identification of the required data set.
 	 * <p>
@@ -105,18 +106,18 @@ public class TerminalManagementDataSet8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet12#Identification
-	 * TerminalManagementDataSet12.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet12#mmIdentification
+	 * TerminalManagementDataSet12.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet7#Identification
-	 * TerminalManagementDataSet7.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet7#mmIdentification
+	 * TerminalManagementDataSet7.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet8.mmObject();
 			isDerived = false;
@@ -124,13 +125,14 @@ public class TerminalManagementDataSet8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the required data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.Identification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet12.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet12.mmIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmIdentification;
 			maxOccurs = 1;
-			complexType_lazy = () -> DataSetIdentification3.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.DataSetIdentification3.mmObject();
 		}
 	};
+	protected Max140Binary pOIChallenge;
 	/**
 	 * Point of interaction challenge for cryptographic key injection.
 	 * <p>
@@ -162,18 +164,18 @@ public class TerminalManagementDataSet8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet12#POIChallenge
-	 * TerminalManagementDataSet12.POIChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet12#mmPOIChallenge
+	 * TerminalManagementDataSet12.mmPOIChallenge}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet7#POIChallenge
-	 * TerminalManagementDataSet7.POIChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet7#mmPOIChallenge
+	 * TerminalManagementDataSet7.mmPOIChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute POIChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPOIChallenge = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet8.mmObject();
 			isDerived = false;
@@ -181,13 +183,14 @@ public class TerminalManagementDataSet8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIChallenge";
 			definition = "Point of interaction challenge for cryptographic key injection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.POIChallenge;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet12.POIChallenge);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet12.mmPOIChallenge);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmPOIChallenge;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	protected Max140Binary tMChallenge;
 	/**
 	 * Terminal manager challenge for cryptographic key injection.
 	 * <p>
@@ -219,18 +222,18 @@ public class TerminalManagementDataSet8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet12#TMChallenge
-	 * TerminalManagementDataSet12.TMChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet12#mmTMChallenge
+	 * TerminalManagementDataSet12.mmTMChallenge}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet7#TMChallenge
-	 * TerminalManagementDataSet7.TMChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet7#mmTMChallenge
+	 * TerminalManagementDataSet7.mmTMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet8.mmObject();
 			isDerived = false;
@@ -238,13 +241,14 @@ public class TerminalManagementDataSet8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.TMChallenge;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet12.TMChallenge);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet12.mmTMChallenge);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmTMChallenge;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	protected ContentInformationType7 encryptedKey;
 	/**
 	 * Transport key encrypted by the TM (Terminal manager) key encryption RSA
 	 * key.
@@ -277,11 +281,11 @@ public class TerminalManagementDataSet8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet7#EncryptedKey
-	 * TerminalManagementDataSet7.EncryptedKey}</li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet7#mmEncryptedKey
+	 * TerminalManagementDataSet7.mmEncryptedKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EncryptedKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEncryptedKey = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminalManagementDataSet8.mmObject();
 			isDerived = false;
@@ -289,26 +293,58 @@ public class TerminalManagementDataSet8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedKey";
 			definition = "Transport key encrypted by the TM (Terminal manager) key encryption RSA key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.EncryptedKey;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmEncryptedKey;
 			maxOccurs = 1;
-			complexType_lazy = () -> ContentInformationType7.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ContentInformationType7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet8.Identification, com.tools20022.repository.msg.TerminalManagementDataSet8.POIChallenge,
-						com.tools20022.repository.msg.TerminalManagementDataSet8.TMChallenge, com.tools20022.repository.msg.TerminalManagementDataSet8.EncryptedKey);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet8.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet8.mmPOIChallenge,
+						com.tools20022.repository.msg.TerminalManagementDataSet8.mmTMChallenge, com.tools20022.repository.msg.TerminalManagementDataSet8.mmEncryptedKey);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet8";
 				definition = "Identification of requested data set.";
-				previousVersion_lazy = () -> TerminalManagementDataSet7.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet12.mmObject());
+				previousVersion_lazy = () -> TerminalManagementDataSet7.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataSetIdentification3 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.DataSetIdentification3 identification) {
+		this.identification = identification;
+	}
+
+	public Max140Binary getPOIChallenge() {
+		return pOIChallenge;
+	}
+
+	public void setPOIChallenge(Max140Binary pOIChallenge) {
+		this.pOIChallenge = pOIChallenge;
+	}
+
+	public Max140Binary getTMChallenge() {
+		return tMChallenge;
+	}
+
+	public void setTMChallenge(Max140Binary tMChallenge) {
+		this.tMChallenge = tMChallenge;
+	}
+
+	public ContentInformationType7 getEncryptedKey() {
+		return encryptedKey;
+	}
+
+	public void setEncryptedKey(com.tools20022.repository.msg.ContentInformationType7 encryptedKey) {
+		this.encryptedKey = encryptedKey;
 	}
 }

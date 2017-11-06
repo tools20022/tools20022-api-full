@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for a member and to report on the member.
@@ -34,19 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MemberCriteria2#NewQueryName
- * MemberCriteria2.NewQueryName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MemberCriteria2#SearchCriteria
- * MemberCriteria2.SearchCriteria}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MemberCriteria2#ReturnCriteria
- * MemberCriteria2.ReturnCriteria}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MemberCriteria2#mmNewQueryName
+ * MemberCriteria2.mmNewQueryName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MemberCriteria2#mmSearchCriteria
+ * MemberCriteria2.mmSearchCriteria}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MemberCriteria2#mmReturnCriteria
+ * MemberCriteria2.mmReturnCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MemberCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text newQueryName;
 	/**
 	 * Name of the query defined by the search criteria and return criteria.
 	 * <p>
@@ -90,7 +94,7 @@ public class MemberCriteria2 {
 	 * "Name of the query defined by the search criteria and return criteria. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemberCriteria2.mmObject();
 			isDerived = false;
@@ -98,11 +102,12 @@ public class MemberCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQueryName";
 			definition = "Name of the query defined by the search criteria and return criteria. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.MemberSearchCriteria2> searchCriteria;
 	/**
 	 * Defines the criteria based on which the information is extracted.
 	 * <p>
@@ -130,7 +135,7 @@ public class MemberCriteria2 {
 	 * "Defines the criteria based on which the information is extracted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MemberCriteria2.mmObject();
 			isDerived = false;
@@ -139,10 +144,11 @@ public class MemberCriteria2 {
 			name = "SearchCriteria";
 			definition = "Defines the criteria based on which the information is extracted.";
 			minOccurs = 0;
-			type_lazy = () -> MemberSearchCriteria2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MemberSearchCriteria2.mmObject();
 		}
 	};
+	protected MemberReturnCriteria returnCriteria;
 	/**
 	 * Defines the expected report.
 	 * <p>
@@ -169,7 +175,7 @@ public class MemberCriteria2 {
 	 * definition} = "Defines the expected report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MemberCriteria2.mmObject();
 			isDerived = false;
@@ -177,24 +183,48 @@ public class MemberCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteria";
 			definition = "Defines the expected report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MemberReturnCriteria.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberCriteria2.NewQueryName, com.tools20022.repository.msg.MemberCriteria2.SearchCriteria,
-						com.tools20022.repository.msg.MemberCriteria2.ReturnCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberCriteria2.mmNewQueryName, com.tools20022.repository.msg.MemberCriteria2.mmSearchCriteria,
+						com.tools20022.repository.msg.MemberCriteria2.mmReturnCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberCriteria2";
 				definition = "Defines the criteria used to search for a member and to report on the member. A name may be given to the new query.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getNewQueryName() {
+		return newQueryName;
+	}
+
+	public void setNewQueryName(Max35Text newQueryName) {
+		this.newQueryName = newQueryName;
+	}
+
+	public List<MemberSearchCriteria2> getSearchCriteria() {
+		return searchCriteria;
+	}
+
+	public void setSearchCriteria(List<com.tools20022.repository.msg.MemberSearchCriteria2> searchCriteria) {
+		this.searchCriteria = searchCriteria;
+	}
+
+	public MemberReturnCriteria getReturnCriteria() {
+		return returnCriteria;
+	}
+
+	public void setReturnCriteria(com.tools20022.repository.msg.MemberReturnCriteria returnCriteria) {
+		this.returnCriteria = returnCriteria;
 	}
 }

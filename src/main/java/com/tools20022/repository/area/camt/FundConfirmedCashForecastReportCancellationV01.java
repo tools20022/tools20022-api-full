@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.FundConfirmedCashForecastReport1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -66,25 +67,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#PoolReference
- * FundConfirmedCashForecastReportCancellationV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#mmPoolReference
+ * FundConfirmedCashForecastReportCancellationV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#PreviousReference
- * FundConfirmedCashForecastReportCancellationV01.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#mmPreviousReference
+ * FundConfirmedCashForecastReportCancellationV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#RelatedReference
- * FundConfirmedCashForecastReportCancellationV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#mmRelatedReference
+ * FundConfirmedCashForecastReportCancellationV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#CashForecastReportToBeCancelled
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#mmCashForecastReportToBeCancelled
  * FundConfirmedCashForecastReportCancellationV01.
- * CashForecastReportToBeCancelled}</li>
+ * mmCashForecastReportToBeCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#identifier
- * FundConfirmedCashForecastReportCancellationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.044.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundConfirmedCashForecastReportCancellationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalReference3 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -131,17 +131,18 @@ public class FundConfirmedCashForecastReportCancellationV01 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -165,17 +166,18 @@ public class FundConfirmedCashForecastReportCancellationV01 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -200,7 +202,7 @@ public class FundConfirmedCashForecastReportCancellationV01 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,6 +212,7 @@ public class FundConfirmedCashForecastReportCancellationV01 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected FundConfirmedCashForecastReport1 cashForecastReportToBeCancelled;
 	/**
 	 * The FundDetailedConfirmedCashForecastReport to be cancelled.
 	 * <p>
@@ -234,42 +237,15 @@ public class FundConfirmedCashForecastReportCancellationV01 {
 	 * "The FundDetailedConfirmedCashForecastReport to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CashForecastReportToBeCancelled = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCashForecastReportToBeCancelled = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshFcstRptToBeCanc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashForecastReportToBeCancelled";
 			definition = "The FundDetailedConfirmedCashForecastReport to be cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FundConfirmedCashForecastReport1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "044"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "044";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -285,12 +261,51 @@ public class FundConfirmedCashForecastReportCancellationV01 {
 				xmlTag = "camt.044.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.044.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.PoolReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.PreviousReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.RelatedReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.CashForecastReportToBeCancelled);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.mmPoolReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.mmPreviousReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.mmRelatedReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.mmCashForecastReportToBeCancelled);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "044";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalReference3 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference3 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference3 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference3 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public List<AdditionalReference3> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public FundConfirmedCashForecastReport1 getCashForecastReportToBeCancelled() {
+		return cashForecastReportToBeCancelled;
+	}
+
+	public void setCashForecastReportToBeCancelled(FundConfirmedCashForecastReport1 cashForecastReportToBeCancelled) {
+		this.cashForecastReportToBeCancelled = cashForecastReportToBeCancelled;
 	}
 }

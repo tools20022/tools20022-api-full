@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status report of the individual orders of a bulk or multiple order that was
@@ -38,38 +39,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#MasterReference
- * IndividualOrderStatusAndReason7.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmMasterReference
+ * IndividualOrderStatusAndReason7.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#OrderReference
- * IndividualOrderStatusAndReason7.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmOrderReference
+ * IndividualOrderStatusAndReason7.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#ClientReference
- * IndividualOrderStatusAndReason7.ClientReference}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmClientReference
+ * IndividualOrderStatusAndReason7.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#DealReference
- * IndividualOrderStatusAndReason7.DealReference}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmDealReference
+ * IndividualOrderStatusAndReason7.mmDealReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#CancellationReference
- * IndividualOrderStatusAndReason7.CancellationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmCancellationReference
+ * IndividualOrderStatusAndReason7.mmCancellationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#OrderStatus
- * IndividualOrderStatusAndReason7.OrderStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmOrderStatus
+ * IndividualOrderStatusAndReason7.mmOrderStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#RepairedFee
- * IndividualOrderStatusAndReason7.RepairedFee}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmRepairedFee
+ * IndividualOrderStatusAndReason7.mmRepairedFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#StatusInitiator
- * IndividualOrderStatusAndReason7.StatusInitiator}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmStatusInitiator
+ * IndividualOrderStatusAndReason7.mmStatusInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#OrderData
- * IndividualOrderStatusAndReason7.OrderData}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmOrderData
+ * IndividualOrderStatusAndReason7.mmOrderData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#NewDetails
- * IndividualOrderStatusAndReason7.NewDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmNewDetails
+ * IndividualOrderStatusAndReason7.mmNewDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#GatingOrHoldBackDetails
- * IndividualOrderStatusAndReason7.GatingOrHoldBackDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmGatingOrHoldBackDetails
+ * IndividualOrderStatusAndReason7.mmGatingOrHoldBackDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -78,8 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IndividualOrderStatusAndReason7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text masterReference;
 	/**
 	 * Reference assigned to a set of orders or trades in order to link them
 	 * together.
@@ -112,8 +114,8 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Order#MasterIdentification
-	 * Order.MasterIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+	 * Order.mmMasterIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,25 +137,26 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#MasterReference
-	 * IndividualOrderStatusAndReason2.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmMasterReference
+	 * IndividualOrderStatusAndReason2.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.MasterIdentification;
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.MasterReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmMasterReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text orderReference;
 	/**
 	 * Unique and unambiguous identifier for the order, as assigned by the
 	 * instructing party.
@@ -167,8 +170,8 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -190,25 +193,26 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#OrderReference
-	 * IndividualOrderStatusAndReason2.OrderReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmOrderReference
+	 * IndividualOrderStatusAndReason2.mmOrderReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for the order, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.OrderReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmOrderReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of the order. This
 	 * reference can typically be used in a hub scenario to give the reference
@@ -223,8 +227,8 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#ClientOrderIdentification
-	 * SecuritiesOrder.ClientOrderIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmClientOrderIdentification
+	 * SecuritiesOrder.mmClientOrderIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -246,25 +250,26 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#ClientReference
-	 * IndividualOrderStatusAndReason2.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmClientReference
+	 * IndividualOrderStatusAndReason2.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.ClientOrderIdentification;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.ClientReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmClientReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text dealReference;
 	/**
 	 * Unique and unambiguous identifier for the order execution, as assigned by
 	 * the confirming party.
@@ -278,8 +283,8 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -301,25 +306,26 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#DealReference
-	 * IndividualOrderStatusAndReason2.DealReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmDealReference
+	 * IndividualOrderStatusAndReason2.mmDealReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "DealRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealReference";
 			definition = "Unique and unambiguous identifier for the order execution, as assigned by the confirming party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.DealReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmDealReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text cancellationReference;
 	/**
 	 * Unique and unambiguous identifier for the order cancellation, as assigned
 	 * by the instructing party.
@@ -351,11 +357,11 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#CancellationReference
-	 * IndividualOrderStatusAndReason2.CancellationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmCancellationReference
+	 * IndividualOrderStatusAndReason2.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
 			isDerived = false;
@@ -363,12 +369,13 @@ public class IndividualOrderStatusAndReason7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for the order cancellation, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.CancellationReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmCancellationReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected OrderStatus5Choice orderStatus;
 	/**
 	 * Status of the individual order.
 	 * <p>
@@ -380,8 +387,8 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#OrderStatus
-	 * SecuritiesOrderStatus.OrderStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmOrderStatus
+	 * SecuritiesOrderStatus.mmOrderStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -400,21 +407,22 @@ public class IndividualOrderStatusAndReason7 {
 	 * definition} = "Status of the individual order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.OrderStatus;
 			isDerived = false;
 			xmlTag = "OrdrSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderStatus";
 			definition = "Status of the individual order.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrderStatus5Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OrderStatus5Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Fee3> repairedFee;
 	/**
 	 * Elements from the original individual order that have been repaired so
 	 * that the order can be accepted.
@@ -447,21 +455,22 @@ public class IndividualOrderStatusAndReason7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RepairedFee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRepairedFee = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
 			businessComponentTrace_lazy = () -> Charges.mmObject();
+			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "RprdFee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedFee";
 			definition = "Elements from the original individual order that have been repaired so that the order can be accepted.";
-			minOccurs = 0;
 			maxOccurs = 10;
-			type_lazy = () -> Fee3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
 		}
 	};
+	protected PartyIdentification113 statusInitiator;
 	/**
 	 * Party that initiates the status of the order.
 	 * <p>
@@ -473,8 +482,8 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -493,21 +502,22 @@ public class IndividualOrderStatusAndReason7 {
 	 * definition} = "Party that initiates the status of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status of the order.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification113.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
+	protected FundOrderData5 orderData;
 	/**
 	 * Order data.
 	 * <p>
@@ -519,8 +529,8 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#InvestmentFundOrder
-	 * SecuritiesOrderStatus.InvestmentFundOrder}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmInvestmentFundOrder
+	 * SecuritiesOrderStatus.mmInvestmentFundOrder}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -540,26 +550,27 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#OrderData
-	 * IndividualOrderStatusAndReason2.OrderData}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmOrderData
+	 * IndividualOrderStatusAndReason2.mmOrderData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderData = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmInvestmentFundOrder;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.InvestmentFundOrder;
 			isDerived = false;
 			xmlTag = "OrdrData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderData";
 			definition = "Order data.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.OrderData;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmOrderData;
 			maxOccurs = 1;
-			type_lazy = () -> FundOrderData5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FundOrderData5.mmObject();
 		}
 	};
+	protected ExpectedExecutionDetails4 newDetails;
 	/**
 	 * Expected execution information.
 	 * <p>
@@ -572,8 +583,8 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#InvestmentFundOrderExecution
-	 * InvestmentFundOrder.InvestmentFundOrderExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInvestmentFundOrderExecution
+	 * InvestmentFundOrder.mmInvestmentFundOrderExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -593,26 +604,27 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#NewDetails
-	 * IndividualOrderStatusAndReason2.NewDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason2#mmNewDetails
+	 * IndividualOrderStatusAndReason2.mmNewDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmInvestmentFundOrderExecution;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.InvestmentFundOrderExecution;
 			isDerived = false;
 			xmlTag = "NewDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewDetails";
 			definition = "Expected execution information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.NewDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmNewDetails;
 			maxOccurs = 1;
-			type_lazy = () -> ExpectedExecutionDetails4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails4.mmObject();
 		}
 	};
+	protected HoldBackInformation3 gatingOrHoldBackDetails;
 	/**
 	 * Information about gating and hold back of redemption proceeds.
 	 * <p>
@@ -624,8 +636,8 @@ public class IndividualOrderStatusAndReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#InvestmentFundClass
-	 * InvestmentFundTransaction.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentFundClass
+	 * InvestmentFundTransaction.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -645,33 +657,33 @@ public class IndividualOrderStatusAndReason7 {
 	 * "Information about gating and hold back of redemption proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GatingOrHoldBackDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGatingOrHoldBackDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "GtgOrHldBckDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GatingOrHoldBackDetails";
 			definition = "Information about gating and hold back of redemption proceeds.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> HoldBackInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.HoldBackInformation3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason7.MasterReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.OrderReference,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.ClientReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.DealReference,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.CancellationReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.OrderStatus,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.RepairedFee, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.StatusInitiator,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.OrderData, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.NewDetails,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.GatingOrHoldBackDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmMasterReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmOrderReference,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmClientReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmDealReference,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmCancellationReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmOrderStatus,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmRepairedFee, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmStatusInitiator,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmOrderData, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmNewDetails,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmGatingOrHoldBackDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IndividualOrderStatusAndReason7";
 				definition = "Status report of the individual orders of a bulk or multiple order that was previously received.";
@@ -679,5 +691,93 @@ public class IndividualOrderStatusAndReason7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public Max35Text getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(Max35Text orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public Max35Text getDealReference() {
+		return dealReference;
+	}
+
+	public void setDealReference(Max35Text dealReference) {
+		this.dealReference = dealReference;
+	}
+
+	public Max35Text getCancellationReference() {
+		return cancellationReference;
+	}
+
+	public void setCancellationReference(Max35Text cancellationReference) {
+		this.cancellationReference = cancellationReference;
+	}
+
+	public OrderStatus5Choice getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(OrderStatus5Choice orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+	public List<Fee3> getRepairedFee() {
+		return repairedFee;
+	}
+
+	public void setRepairedFee(List<com.tools20022.repository.msg.Fee3> repairedFee) {
+		this.repairedFee = repairedFee;
+	}
+
+	public PartyIdentification113 getStatusInitiator() {
+		return statusInitiator;
+	}
+
+	public void setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+		this.statusInitiator = statusInitiator;
+	}
+
+	public FundOrderData5 getOrderData() {
+		return orderData;
+	}
+
+	public void setOrderData(com.tools20022.repository.msg.FundOrderData5 orderData) {
+		this.orderData = orderData;
+	}
+
+	public ExpectedExecutionDetails4 getNewDetails() {
+		return newDetails;
+	}
+
+	public void setNewDetails(com.tools20022.repository.msg.ExpectedExecutionDetails4 newDetails) {
+		this.newDetails = newDetails;
+	}
+
+	public HoldBackInformation3 getGatingOrHoldBackDetails() {
+		return gatingOrHoldBackDetails;
+	}
+
+	public void setGatingOrHoldBackDetails(com.tools20022.repository.msg.HoldBackInformation3 gatingOrHoldBackDetails) {
+		this.gatingOrHoldBackDetails = gatingOrHoldBackDetails;
 	}
 }

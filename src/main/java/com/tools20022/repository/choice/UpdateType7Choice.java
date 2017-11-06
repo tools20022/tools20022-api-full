@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.UpdateType7Choice#Add
- * UpdateType7Choice.Add}</li>
- * <li>{@linkplain com.tools20022.repository.choice.UpdateType7Choice#Delete
- * UpdateType7Choice.Delete}</li>
- * <li>{@linkplain com.tools20022.repository.choice.UpdateType7Choice#Modify
- * UpdateType7Choice.Modify}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UpdateType7Choice#mmAdd
+ * UpdateType7Choice.mmAdd}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UpdateType7Choice#mmDelete
+ * UpdateType7Choice.mmDelete}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UpdateType7Choice#mmModify
+ * UpdateType7Choice.mmModify}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdateType7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityAttributes2 add;
 	/**
 	 * Set of data requested to enrich a security.
 	 * <p>
@@ -84,7 +85,7 @@ public class UpdateType7Choice {
 	 * definition} = "Set of data requested to enrich a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Add = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdd = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UpdateType7Choice.mmObject();
 			isDerived = false;
@@ -92,12 +93,13 @@ public class UpdateType7Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Add";
 			definition = "Set of data requested to enrich a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityAttributes2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecurityAttributes2.mmObject();
 		}
 	};
+	protected SecurityAttributes2 delete;
 	/**
 	 * Set of data requested for deletion from a security.
 	 * <p>
@@ -124,7 +126,7 @@ public class UpdateType7Choice {
 	 * definition} = "Set of data requested for deletion from a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Delete = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDelete = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UpdateType7Choice.mmObject();
 			isDerived = false;
@@ -132,12 +134,13 @@ public class UpdateType7Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delete";
 			definition = "Set of data requested for deletion from a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityAttributes2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecurityAttributes2.mmObject();
 		}
 	};
+	protected SecurityAttributes2 modify;
 	/**
 	 * Set of data requested to modify a security.
 	 * <p>
@@ -164,7 +167,7 @@ public class UpdateType7Choice {
 	 * definition} = "Set of data requested to modify a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Modify = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModify = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UpdateType7Choice.mmObject();
 			isDerived = false;
@@ -172,23 +175,47 @@ public class UpdateType7Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modify";
 			definition = "Set of data requested to modify a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityAttributes2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecurityAttributes2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType7Choice.Add, com.tools20022.repository.choice.UpdateType7Choice.Delete, com.tools20022.repository.choice.UpdateType7Choice.Modify);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType7Choice.mmAdd, com.tools20022.repository.choice.UpdateType7Choice.mmDelete, com.tools20022.repository.choice.UpdateType7Choice.mmModify);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdateType7Choice";
 				definition = "Choice between action to request on a security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityAttributes2 getAdd() {
+		return add;
+	}
+
+	public void setAdd(SecurityAttributes2 add) {
+		this.add = add;
+	}
+
+	public SecurityAttributes2 getDelete() {
+		return delete;
+	}
+
+	public void setDelete(SecurityAttributes2 delete) {
+		this.delete = delete;
+	}
+
+	public SecurityAttributes2 getModify() {
+		return modify;
+	}
+
+	public void setModify(SecurityAttributes2 modify) {
+		this.modify = modify;
 	}
 }

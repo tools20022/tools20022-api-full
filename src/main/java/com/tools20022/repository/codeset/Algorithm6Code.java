@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm6Code#AES128CBC
- * Algorithm6Code.AES128CBC}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm6Code#DES112CBC
- * Algorithm6Code.DES112CBC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm6Code#mmAES128CBC
+ * Algorithm6Code.mmAES128CBC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm6Code#mmDES112CBC
+ * Algorithm6Code.mmDES112CBC}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,17 +89,17 @@ public class Algorithm6Code extends AlgorithmCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm15Code#AES128CBC
-	 * Algorithm15Code.AES128CBC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm15Code#mmAES128CBC
+	 * Algorithm15Code.mmAES128CBC}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AES128CBC = new MMCode() {
+	public static final MMCode mmAES128CBC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES128CBC";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm15Code.AES128CBC);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm15Code.mmAES128CBC);
 			owner_lazy = () -> Algorithm6Code.mmObject();
 		}
 	};
@@ -121,17 +121,17 @@ public class Algorithm6Code extends AlgorithmCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm15Code#DES112CBC
-	 * Algorithm15Code.DES112CBC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm15Code#mmDES112CBC
+	 * Algorithm15Code.mmDES112CBC}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DES112CBC = new MMCode() {
+	public static final MMCode mmDES112CBC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112CBC";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm15Code.DES112CBC);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm15Code.mmDES112CBC);
 			owner_lazy = () -> Algorithm6Code.mmObject();
 		}
 	};
@@ -139,13 +139,13 @@ public class Algorithm6Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EA2C");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Algorithm6Code";
 				definition = "Cryptographic algorithms for encryptions with a symmetric cryptographic key.";
 				nextVersions_lazy = () -> Arrays.asList(Algorithm15Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm6Code.AES128CBC, com.tools20022.repository.codeset.Algorithm6Code.DES112CBC);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm6Code.mmAES128CBC, com.tools20022.repository.codeset.Algorithm6Code.mmDES112CBC);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

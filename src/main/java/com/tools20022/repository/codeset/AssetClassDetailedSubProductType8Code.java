@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#CER
- * AssetClassDetailedSubProductType8Code.CER}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#mmCER
+ * AssetClassDetailedSubProductType8Code.mmCER}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#ERU
- * AssetClassDetailedSubProductType8Code.ERU}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#mmERU
+ * AssetClassDetailedSubProductType8Code.mmERU}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#EUA
- * AssetClassDetailedSubProductType8Code.EUA}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#mmEUA
+ * AssetClassDetailedSubProductType8Code.mmEUA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#EUAA
- * AssetClassDetailedSubProductType8Code.EUAA}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#mmEUAA
+ * AssetClassDetailedSubProductType8Code.mmEUAA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#Other
- * AssetClassDetailedSubProductType8Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#mmOther
+ * AssetClassDetailedSubProductType8Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +85,7 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	 * name} = "CER"</li>
 	 * </ul>
 	 */
-	public static final MMCode CER = new MMCode() {
+	public static final MMCode mmCER = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CER";
@@ -108,7 +108,7 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	 * name} = "ERU"</li>
 	 * </ul>
 	 */
-	public static final MMCode ERU = new MMCode() {
+	public static final MMCode mmERU = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERU";
@@ -131,7 +131,7 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	 * name} = "EUA"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUA = new MMCode() {
+	public static final MMCode mmEUA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUA";
@@ -154,7 +154,7 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	 * name} = "EUAA"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUAA = new MMCode() {
+	public static final MMCode mmEUAA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUAA";
@@ -177,7 +177,7 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -188,13 +188,13 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType8Code";
 				definition = "Further sub product code list for commodity derivative Emissions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.CER, com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.ERU,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.EUA, com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.EUAA,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.mmCER, com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.mmERU,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.mmEUA, com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.mmEUAA,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.mmOther);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

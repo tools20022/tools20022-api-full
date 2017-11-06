@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.OptionRight1Choice#Code
- * OptionRight1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.OptionRight1Choice#mmCode
+ * OptionRight1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OptionRight1Choice#Proprietary
- * OptionRight1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.OptionRight1Choice#mmProprietary
+ * OptionRight1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OptionRight1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OptionRight1Code code;
 	/**
 	 * Option rights expressed as an ISO 20022 code.
 	 * <p>
@@ -86,7 +87,7 @@ public class OptionRight1Choice {
 	 * definition} = "Option rights expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionRight1Choice.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class OptionRight1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Option rights expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OptionRight1Code.mmObject();
 		}
 	};
+	protected GenericIdentification38 proprietary;
 	/**
 	 * Option rights expressed as a proprietary code.
 	 * <p>
@@ -127,7 +129,7 @@ public class OptionRight1Choice {
 	 * definition} = "Option rights expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionRight1Choice.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class OptionRight1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Option rights expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class OptionRight1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionRight1Choice.Code, com.tools20022.repository.choice.OptionRight1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionRight1Choice.mmCode, com.tools20022.repository.choice.OptionRight1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionRight1Choice";
 				definition = "Choice of format for the option rights.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OptionRight1Code getCode() {
+		return code;
+	}
+
+	public void setCode(OptionRight1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification38 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetworkType1Code#InternetProtocol
- * NetworkType1Code.InternetProtocol}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetworkType1Code#mmInternetProtocol
+ * NetworkType1Code.mmInternetProtocol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetworkType1Code#PublicTelephone
- * NetworkType1Code.PublicTelephone}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetworkType1Code#mmPublicTelephone
+ * NetworkType1Code.mmPublicTelephone}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class NetworkType1Code extends NetworkTypeCode {
 	 * name} = "InternetProtocol"</li>
 	 * </ul>
 	 */
-	public static final MMCode InternetProtocol = new MMCode() {
+	public static final MMCode mmInternetProtocol = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternetProtocol";
@@ -98,7 +98,7 @@ public class NetworkType1Code extends NetworkTypeCode {
 	 * name} = "PublicTelephone"</li>
 	 * </ul>
 	 */
-	public static final MMCode PublicTelephone = new MMCode() {
+	public static final MMCode mmPublicTelephone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicTelephone";
@@ -109,11 +109,11 @@ public class NetworkType1Code extends NetworkTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetworkType1Code";
 				definition = "Type of communication network.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NetworkType1Code.InternetProtocol, com.tools20022.repository.codeset.NetworkType1Code.PublicTelephone);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NetworkType1Code.mmInternetProtocol, com.tools20022.repository.codeset.NetworkType1Code.mmPublicTelephone);
 				trace_lazy = () -> NetworkTypeCode.mmObject();
 			}
 		});

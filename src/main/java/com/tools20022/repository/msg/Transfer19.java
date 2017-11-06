@@ -34,6 +34,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Parameters applied to the settlement of a security transfer.
@@ -44,50 +45,50 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19#TransferReference
- * Transfer19.TransferReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19#ClientReference
- * Transfer19.ClientReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmTransferReference
+ * Transfer19.mmTransferReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmClientReference
+ * Transfer19.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer19#CounterpartyReference
- * Transfer19.CounterpartyReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19#BusinessFlowType
- * Transfer19.BusinessFlowType}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer19#mmCounterpartyReference
+ * Transfer19.mmCounterpartyReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmBusinessFlowType
+ * Transfer19.mmBusinessFlowType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer19#RequestedSettlementDate
- * Transfer19.RequestedSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer19#mmRequestedSettlementDate
+ * Transfer19.mmRequestedSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer19#TransferOrderDateForm
- * Transfer19.TransferOrderDateForm}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19#TransferReason
- * Transfer19.TransferReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19#HoldingsPlanType
- * Transfer19.HoldingsPlanType}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer19#mmTransferOrderDateForm
+ * Transfer19.mmTransferOrderDateForm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmTransferReason
+ * Transfer19.mmTransferReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmHoldingsPlanType
+ * Transfer19.mmHoldingsPlanType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer19#FinancialInstrumentDetails
- * Transfer19.FinancialInstrumentDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19#Quantity
- * Transfer19.Quantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19#UnitsDetails
- * Transfer19.UnitsDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19#Rounding
- * Transfer19.Rounding}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19#AveragePrice
- * Transfer19.AveragePrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19#TransferCurrency
- * Transfer19.TransferCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer19#mmFinancialInstrumentDetails
+ * Transfer19.mmFinancialInstrumentDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmQuantity
+ * Transfer19.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmUnitsDetails
+ * Transfer19.mmUnitsDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmRounding
+ * Transfer19.mmRounding}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmAveragePrice
+ * Transfer19.mmAveragePrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmTransferCurrency
+ * Transfer19.mmTransferCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer19#OwnAccountTransferIndicator
- * Transfer19.OwnAccountTransferIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer19#mmOwnAccountTransferIndicator
+ * Transfer19.mmOwnAccountTransferIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer19#NonStandardSettlementInformation
- * Transfer19.NonStandardSettlementInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer19#mmNonStandardSettlementInformation
+ * Transfer19.mmNonStandardSettlementInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer19#ReceivingAgentDetails
- * Transfer19.ReceivingAgentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer19#mmReceivingAgentDetails
+ * Transfer19.mmReceivingAgentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Transfer19#DeliveringAgentDetails
- * Transfer19.DeliveringAgentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Transfer19#mmDeliveringAgentDetails
+ * Transfer19.mmDeliveringAgentDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -98,15 +99,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#TransferDetails
- * TransferOutInstructionV04.TransferDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#mmTransferDetails
+ * TransferOutInstructionV04.mmTransferDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -130,6 +131,7 @@ import java.util.function.Supplier;
 public class Transfer19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transferReference;
 	/**
 	 * Unique and unambiguous identifier for a transfer instruction, as assigned
 	 * by the instructing party.
@@ -143,8 +145,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Identification
-	 * SecuritiesTransfer.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmIdentification
+	 * SecuritiesTransfer.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -166,27 +168,28 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#TransferReference
-	 * Transfer27.TransferReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmTransferReference
+	 * Transfer27.mmTransferReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.Identification;
 			isDerived = false;
 			xmlTag = "TrfRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.TransferReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmTransferReference);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of a transfer. This
 	 * reference can typically be used in a hub scenario to give the reference
@@ -201,8 +204,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -223,27 +226,29 @@ public class Transfer19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#ClientReference
-	 * Transfer27.ClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmClientReference
+	 * Transfer27.mmClientReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.ClientReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmClientReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AdditionalReference2 counterpartyReference;
 	/**
 	 * Unambiguous identification of the transfer allocated by the counterparty.
 	 * <p>
@@ -257,8 +262,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CounterpartyReference
-	 * TradeIdentification.CounterpartyReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCounterpartyReference
+	 * TradeIdentification.mmCounterpartyReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -280,27 +285,28 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#CounterpartyReference
-	 * Transfer27.CounterpartyReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmCounterpartyReference
+	 * Transfer27.mmCounterpartyReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CounterpartyReference;
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer allocated by the counterparty.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.CounterpartyReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmCounterpartyReference);
 			maxOccurs = 1;
-			complexType_lazy = () -> AdditionalReference2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
 		}
 	};
+	protected BusinessFlowType1Code businessFlowType;
 	/**
 	 * Identifies the business process in which the actors are involved. This is
 	 * important to trigger the right business process, according to the market
@@ -335,13 +341,13 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#BusinessFlowType
-	 * Transfer27.BusinessFlowType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmBusinessFlowType
+	 * Transfer27.mmBusinessFlowType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BusinessFlowType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBusinessFlowType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Transfer19.mmObject();
 			isDerived = false;
@@ -349,12 +355,13 @@ public class Transfer19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessFlowType";
 			definition = "Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.BusinessFlowType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmBusinessFlowType);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BusinessFlowType1Code.mmObject();
 		}
 	};
+	protected ISODate requestedSettlementDate;
 	/**
 	 * Date and time at which the securities are to be exchanged at the
 	 * International Central Securities Depository (ICSD) or Central Securities
@@ -369,8 +376,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
-	 * Obligation.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+	 * Obligation.mmRequestedSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -392,27 +399,28 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#RequestedSettlementDate
-	 * Transfer27.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmRequestedSettlementDate
+	 * Transfer27.mmRequestedSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementDate;
 			isDerived = false;
 			xmlTag = "ReqdSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementDate";
 			definition = "Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.RequestedSettlementDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmRequestedSettlementDate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate transferOrderDateForm;
 	/**
 	 * Identifies in which date the investor signed the transfer order form.
 	 * <p>
@@ -425,8 +433,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -447,27 +455,28 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#TransferOrderDateForm
-	 * Transfer27.TransferOrderDateForm}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmTransferOrderDateForm
+	 * Transfer27.mmTransferOrderDateForm}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferOrderDateForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferOrderDateForm = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TrfOrdrDtForm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOrderDateForm";
 			definition = "Identifies in which date the investor signed the transfer order form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.TransferOrderDateForm);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmTransferOrderDateForm);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected TransferReason1 transferReason;
 	/**
 	 * Identifies the transfer reason.
 	 * <p>
@@ -481,8 +490,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferReason
-	 * SecuritiesTransfer.TransferReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferReason
+	 * SecuritiesTransfer.mmTransferReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -501,27 +510,29 @@ public class Transfer19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#TransferReason
-	 * Transfer27.TransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmTransferReason
+	 * Transfer27.mmTransferReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferReason;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferReason;
 			isDerived = false;
 			xmlTag = "TrfRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReason";
 			definition = "Identifies the transfer reason.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.TransferReason);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmTransferReason);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransferReason1.mmObject();
 		}
 	};
+	protected List<HoldingsPlanType1Code> holdingsPlanType;
 	/**
 	 * Identifies whether or not saving plan or withdrawal or switch plan are
 	 * included in the holdings.
@@ -536,8 +547,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#HoldingsPlanType
-	 * SecuritiesSettlement.HoldingsPlanType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldingsPlanType
+	 * SecuritiesSettlement.mmHoldingsPlanType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -559,27 +570,28 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#HoldingsPlanType
-	 * Transfer27.HoldingsPlanType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmHoldingsPlanType
+	 * Transfer27.mmHoldingsPlanType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldingsPlanType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldingsPlanType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmHoldingsPlanType;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.HoldingsPlanType;
 			isDerived = false;
 			xmlTag = "HldgsPlanTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsPlanType";
 			definition = "Identifies whether or not saving plan or withdrawal or switch plan are included in the holdings.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.HoldingsPlanType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmHoldingsPlanType);
 			maxOccurs = 3;
+			minOccurs = 0;
 			simpleType_lazy = () -> HoldingsPlanType1Code.mmObject();
 		}
 	};
+	protected FinancialInstrument13 financialInstrumentDetails;
 	/**
 	 * Information related to the financial instrument to be withdrawn.
 	 * <p>
@@ -613,28 +625,29 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#FinancialInstrumentDetails
-	 * Transfer27.FinancialInstrumentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmFinancialInstrumentDetails
+	 * Transfer27.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Transfer19.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
+			componentContext_lazy = () -> Transfer19.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Information related to the financial instrument to be withdrawn.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.FinancialInstrumentDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmFinancialInstrumentDetails);
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument13.mmObject();
 		}
 	};
+	protected Quantity13Choice quantity;
 	/**
 	 * Total quantity of securities to be transferred, expressed in a number of
 	 * units or a percentage rate.
@@ -649,8 +662,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferredQuantity
-	 * SecuritiesTransfer.TransferredQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
+	 * SecuritiesTransfer.mmTransferredQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -671,27 +684,28 @@ public class Transfer19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#Quantity
-	 * Transfer27.Quantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#mmQuantity
+	 * Transfer27.mmQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferredQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Total quantity of securities to be transferred, expressed in a number of units or a percentage rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.Quantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmQuantity);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Quantity13Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Unit3> unitsDetails;
 	/**
 	 * Information about the units to be transferred.
 	 * <p>
@@ -702,8 +716,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferredQuantity
-	 * SecuritiesTransfer.TransferredQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
+	 * SecuritiesTransfer.mmTransferredQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -722,27 +736,28 @@ public class Transfer19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#UnitsDetails
-	 * Transfer27.UnitsDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#mmUnitsDetails
+	 * Transfer27.mmUnitsDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnitsDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnitsDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferredQuantity;
 			isDerived = false;
 			xmlTag = "UnitsDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsDetails";
 			definition = "Information about the units to be transferred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.UnitsDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmUnitsDetails);
 			minOccurs = 0;
-			type_lazy = () -> Unit3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Unit3.mmObject();
 		}
 	};
+	protected RoundingDirection2Code rounding;
 	/**
 	 * Indicates the rounding direction applied to nearest unit.
 	 * <p>
@@ -756,8 +771,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#RoundingDirection
-	 * RoundingParameters.RoundingDirection}</li>
+	 * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRoundingDirection
+	 * RoundingParameters.mmRoundingDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -777,27 +792,28 @@ public class Transfer19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#Rounding
-	 * Transfer27.Rounding}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#mmRounding
+	 * Transfer27.mmRounding}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rounding = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRounding = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmRoundingDirection;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.RoundingDirection;
 			isDerived = false;
 			xmlTag = "Rndg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rounding";
 			definition = "Indicates the rounding direction applied to nearest unit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.Rounding);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmRounding);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RoundingDirection2Code.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAnd13DecimalAmount averagePrice;
 	/**
 	 * Value of a security, as booked in an account. Book value is often
 	 * different from the current market value of the security.
@@ -812,8 +828,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#BookValue
-	 * AssetHolding.BookValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmBookValue
+	 * AssetHolding.mmBookValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -834,27 +850,28 @@ public class Transfer19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#AveragePrice
-	 * Transfer27.AveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#mmAveragePrice
+	 * Transfer27.mmAveragePrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AveragePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAveragePrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.BookValue;
 			isDerived = false;
 			xmlTag = "AvrgPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AveragePrice";
 			definition = "Value of a security, as booked in an account. Book value is often different from the current market value of the security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.AveragePrice);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmAveragePrice);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected CurrencyCode transferCurrency;
 	/**
 	 * Identifies the currency to be used to transfer the holdings.
 	 * <p>
@@ -867,8 +884,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#TransferCurrency
-	 * SecuritiesDeliveryObligation.TransferCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmTransferCurrency
+	 * SecuritiesDeliveryObligation.mmTransferCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -889,27 +906,28 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#TransferCurrency
-	 * Transfer27.TransferCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmTransferCurrency
+	 * Transfer27.mmTransferCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmTransferCurrency;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.TransferCurrency;
 			isDerived = false;
 			xmlTag = "TrfCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferCurrency";
 			definition = "Identifies the currency to be used to transfer the holdings.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.TransferCurrency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmTransferCurrency);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected YesNoIndicator ownAccountTransferIndicator;
 	/**
 	 * Indicates whether the transfer results in a change of beneficial owner.
 	 * <p>
@@ -923,8 +941,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#OwnAccountTransferIndicator
-	 * SecuritiesTransfer.OwnAccountTransferIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmOwnAccountTransferIndicator
+	 * SecuritiesTransfer.mmOwnAccountTransferIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -946,27 +964,28 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#OwnAccountTransferIndicator
-	 * Transfer27.OwnAccountTransferIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmOwnAccountTransferIndicator
+	 * Transfer27.mmOwnAccountTransferIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OwnAccountTransferIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOwnAccountTransferIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmOwnAccountTransferIndicator;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.OwnAccountTransferIndicator;
 			isDerived = false;
 			xmlTag = "OwnAcctTrfInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnAccountTransferIndicator";
 			definition = "Indicates whether the transfer results in a change of beneficial owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.OwnAccountTransferIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmOwnAccountTransferIndicator);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max350Text nonStandardSettlementInformation;
 	/**
 	 * Additional specific settlement information for non-regulated traded
 	 * funds.
@@ -980,8 +999,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#NonStandardSettlementInformation
-	 * InvestmentFundOrderExecution.NonStandardSettlementInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmNonStandardSettlementInformation
+	 * InvestmentFundOrderExecution.mmNonStandardSettlementInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -1003,27 +1022,28 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#NonStandardSettlementInformation
-	 * Transfer27.NonStandardSettlementInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmNonStandardSettlementInformation
+	 * Transfer27.mmNonStandardSettlementInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NonStandardSettlementInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.NonStandardSettlementInformation;
 			isDerived = false;
 			xmlTag = "NonStdSttlmInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardSettlementInformation";
 			definition = "Additional specific settlement information for non-regulated traded funds.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.NonStandardSettlementInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmNonStandardSettlementInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount93 receivingAgentDetails;
 	/**
 	 * Party that receives securities from the delivering agent via the place of
 	 * settlement, for example, securities central depository.
@@ -1038,8 +1058,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -1061,27 +1081,28 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#ReceivingAgentDetails
-	 * Transfer27.ReceivingAgentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmReceivingAgentDetails
+	 * Transfer27.mmReceivingAgentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReceivingAgentDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReceivingAgentDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcvgAgtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgentDetails";
 			definition = "Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.ReceivingAgentDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmReceivingAgentDetails);
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentificationAndAccount93.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount93 deliveringAgentDetails;
 	/**
 	 * Party that delivers securities to the receiving agent at the place of
 	 * settlement, for example, a central securities depository.
@@ -1096,8 +1117,8 @@ public class Transfer19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Transfer19
@@ -1119,40 +1140,41 @@ public class Transfer19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#DeliveringAgentDetails
-	 * Transfer27.DeliveringAgentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmDeliveringAgentDetails
+	 * Transfer27.mmDeliveringAgentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliveringAgentDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliveringAgentDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Transfer19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "DlvrgAgtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgentDetails";
 			definition = "Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.DeliveringAgentDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmDeliveringAgentDetails);
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentificationAndAccount93.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer19.TransferReference, com.tools20022.repository.msg.Transfer19.ClientReference, com.tools20022.repository.msg.Transfer19.CounterpartyReference,
-						com.tools20022.repository.msg.Transfer19.BusinessFlowType, com.tools20022.repository.msg.Transfer19.RequestedSettlementDate, com.tools20022.repository.msg.Transfer19.TransferOrderDateForm,
-						com.tools20022.repository.msg.Transfer19.TransferReason, com.tools20022.repository.msg.Transfer19.HoldingsPlanType, com.tools20022.repository.msg.Transfer19.FinancialInstrumentDetails,
-						com.tools20022.repository.msg.Transfer19.Quantity, com.tools20022.repository.msg.Transfer19.UnitsDetails, com.tools20022.repository.msg.Transfer19.Rounding, com.tools20022.repository.msg.Transfer19.AveragePrice,
-						com.tools20022.repository.msg.Transfer19.TransferCurrency, com.tools20022.repository.msg.Transfer19.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer19.NonStandardSettlementInformation,
-						com.tools20022.repository.msg.Transfer19.ReceivingAgentDetails, com.tools20022.repository.msg.Transfer19.DeliveringAgentDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer19.mmTransferReference, com.tools20022.repository.msg.Transfer19.mmClientReference,
+						com.tools20022.repository.msg.Transfer19.mmCounterpartyReference, com.tools20022.repository.msg.Transfer19.mmBusinessFlowType, com.tools20022.repository.msg.Transfer19.mmRequestedSettlementDate,
+						com.tools20022.repository.msg.Transfer19.mmTransferOrderDateForm, com.tools20022.repository.msg.Transfer19.mmTransferReason, com.tools20022.repository.msg.Transfer19.mmHoldingsPlanType,
+						com.tools20022.repository.msg.Transfer19.mmFinancialInstrumentDetails, com.tools20022.repository.msg.Transfer19.mmQuantity, com.tools20022.repository.msg.Transfer19.mmUnitsDetails,
+						com.tools20022.repository.msg.Transfer19.mmRounding, com.tools20022.repository.msg.Transfer19.mmAveragePrice, com.tools20022.repository.msg.Transfer19.mmTransferCurrency,
+						com.tools20022.repository.msg.Transfer19.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer19.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer19.mmReceivingAgentDetails,
+						com.tools20022.repository.msg.Transfer19.mmDeliveringAgentDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV04.mmTransferDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV04.TransferDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1163,10 +1185,154 @@ public class Transfer19 {
 				})).get();
 				name = "Transfer19";
 				definition = "Parameters applied to the settlement of a security transfer.";
-				previousVersion_lazy = () -> Transfer11.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Transfer27.mmObject());
+				previousVersion_lazy = () -> Transfer11.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransferReference() {
+		return transferReference;
+	}
+
+	public void setTransferReference(Max35Text transferReference) {
+		this.transferReference = transferReference;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public AdditionalReference2 getCounterpartyReference() {
+		return counterpartyReference;
+	}
+
+	public void setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
+		this.counterpartyReference = counterpartyReference;
+	}
+
+	public BusinessFlowType1Code getBusinessFlowType() {
+		return businessFlowType;
+	}
+
+	public void setBusinessFlowType(BusinessFlowType1Code businessFlowType) {
+		this.businessFlowType = businessFlowType;
+	}
+
+	public ISODate getRequestedSettlementDate() {
+		return requestedSettlementDate;
+	}
+
+	public void setRequestedSettlementDate(ISODate requestedSettlementDate) {
+		this.requestedSettlementDate = requestedSettlementDate;
+	}
+
+	public ISODate getTransferOrderDateForm() {
+		return transferOrderDateForm;
+	}
+
+	public void setTransferOrderDateForm(ISODate transferOrderDateForm) {
+		this.transferOrderDateForm = transferOrderDateForm;
+	}
+
+	public TransferReason1 getTransferReason() {
+		return transferReason;
+	}
+
+	public void setTransferReason(TransferReason1 transferReason) {
+		this.transferReason = transferReason;
+	}
+
+	public List<HoldingsPlanType1Code> getHoldingsPlanType() {
+		return holdingsPlanType;
+	}
+
+	public void setHoldingsPlanType(List<HoldingsPlanType1Code> holdingsPlanType) {
+		this.holdingsPlanType = holdingsPlanType;
+	}
+
+	public FinancialInstrument13 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument13 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public Quantity13Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Quantity13Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public List<Unit3> getUnitsDetails() {
+		return unitsDetails;
+	}
+
+	public void setUnitsDetails(List<com.tools20022.repository.msg.Unit3> unitsDetails) {
+		this.unitsDetails = unitsDetails;
+	}
+
+	public RoundingDirection2Code getRounding() {
+		return rounding;
+	}
+
+	public void setRounding(RoundingDirection2Code rounding) {
+		this.rounding = rounding;
+	}
+
+	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
+		return averagePrice;
+	}
+
+	public void setAveragePrice(ActiveOrHistoricCurrencyAnd13DecimalAmount averagePrice) {
+		this.averagePrice = averagePrice;
+	}
+
+	public CurrencyCode getTransferCurrency() {
+		return transferCurrency;
+	}
+
+	public void setTransferCurrency(CurrencyCode transferCurrency) {
+		this.transferCurrency = transferCurrency;
+	}
+
+	public YesNoIndicator getOwnAccountTransferIndicator() {
+		return ownAccountTransferIndicator;
+	}
+
+	public void setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
+		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
+	}
+
+	public Max350Text getNonStandardSettlementInformation() {
+		return nonStandardSettlementInformation;
+	}
+
+	public void setNonStandardSettlementInformation(Max350Text nonStandardSettlementInformation) {
+		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
+	}
+
+	public PartyIdentificationAndAccount93 getReceivingAgentDetails() {
+		return receivingAgentDetails;
+	}
+
+	public void setReceivingAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount93 receivingAgentDetails) {
+		this.receivingAgentDetails = receivingAgentDetails;
+	}
+
+	public PartyIdentificationAndAccount93 getDeliveringAgentDetails() {
+		return deliveringAgentDetails;
+	}
+
+	public void setDeliveringAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount93 deliveringAgentDetails) {
+		this.deliveringAgentDetails = deliveringAgentDetails;
 	}
 }

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the references of the underlying trade leg(s) and/or the reference
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference19#TradeLegNotificationIdentification
- * Reference19.TradeLegNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference19#mmTradeLegNotificationIdentification
+ * Reference19.mmTradeLegNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference19#NetPositionIdentification
- * Reference19.NetPositionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference19#mmNetPositionIdentification
+ * Reference19.mmNetPositionIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max35Text> tradeLegNotificationIdentification;
 	/**
 	 * Reference allocated by the central counterparty - central counterpatry
 	 * trade leg reference identification that uniquely identifies the trade.
@@ -90,7 +92,7 @@ public class Reference19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeLegNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeLegNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference19.mmObject();
 			isDerived = false;
@@ -102,6 +104,7 @@ public class Reference19 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text netPositionIdentification;
 	/**
 	 * After netting, reference that is common to a net transaction to settle
 	 * and all its underlying trades
@@ -131,7 +134,7 @@ public class Reference19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetPositionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetPositionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference19.mmObject();
 			isDerived = false;
@@ -139,8 +142,8 @@ public class Reference19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPositionIdentification";
 			definition = "After netting, reference that is common to a net transaction to settle and all its underlying trades";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -148,13 +151,29 @@ public class Reference19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference19.TradeLegNotificationIdentification, com.tools20022.repository.msg.Reference19.NetPositionIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference19.mmTradeLegNotificationIdentification, com.tools20022.repository.msg.Reference19.mmNetPositionIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reference19";
 				definition = "Provides the references of the underlying trade leg(s) and/or the reference to the related NetPosition report message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max35Text> getTradeLegNotificationIdentification() {
+		return tradeLegNotificationIdentification;
+	}
+
+	public void setTradeLegNotificationIdentification(List<Max35Text> tradeLegNotificationIdentification) {
+		this.tradeLegNotificationIdentification = tradeLegNotificationIdentification;
+	}
+
+	public Max35Text getNetPositionIdentification() {
+		return netPositionIdentification;
+	}
+
+	public void setNetPositionIdentification(Max35Text netPositionIdentification) {
+		this.netPositionIdentification = netPositionIdentification;
 	}
 }

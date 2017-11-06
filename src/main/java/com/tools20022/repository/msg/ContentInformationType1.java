@@ -34,23 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType1#ContentType
- * ContentInformationType1.ContentType}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType1#mmContentType
+ * ContentInformationType1.mmContentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType1#EnvelopedData
- * ContentInformationType1.EnvelopedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType1#mmEnvelopedData
+ * ContentInformationType1.mmEnvelopedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType1#AuthenticatedData
- * ContentInformationType1.AuthenticatedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType1#mmAuthenticatedData
+ * ContentInformationType1.mmAuthenticatedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType1#SignedData
- * ContentInformationType1.SignedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType1#mmSignedData
+ * ContentInformationType1.mmSignedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType1#DigestedData
- * ContentInformationType1.DigestedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType1#mmDigestedData
+ * ContentInformationType1.mmDigestedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ContentInformationType1#NamedKeyEncryptedData
- * ContentInformationType1.NamedKeyEncryptedData}</li>
+ * {@linkplain com.tools20022.repository.msg.ContentInformationType1#mmNamedKeyEncryptedData
+ * ContentInformationType1.mmNamedKeyEncryptedData}</li>
  * </ul>
  * </li>
  * <li>
@@ -58,27 +58,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV01#SecurityTrailer
- * ManagementPlanReplacementV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV01#mmSecurityTrailer
+ * ManagementPlanReplacementV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.StatusReportV01#SecurityTrailer
- * StatusReportV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.StatusReportV01#mmSecurityTrailer
+ * StatusReportV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01#SecurityTrailer
- * AcceptorConfigurationUpdateV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01#mmSecurityTrailer
+ * AcceptorConfigurationUpdateV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#SecurityTrailer
- * AcceptorBatchTransferV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV01#mmSecurityTrailer
+ * AcceptorBatchTransferV01.mmSecurityTrailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV01#SecurityTrailer
- * AcceptorBatchTransferResponseV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV01#mmSecurityTrailer
+ * AcceptorBatchTransferResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ContentInformationType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContentType1Code contentType;
 	/**
 	 * Type of data protection.
 	 * <p>
@@ -128,7 +129,7 @@ public class ContentInformationType1 {
 	 * definition} = "Type of data protection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
@@ -136,11 +137,12 @@ public class ContentInformationType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ContentType1Code.mmObject();
 		}
 	};
+	protected EnvelopedData1 envelopedData;
 	/**
 	 * Data protection by encryption, with a session key.
 	 * <p>
@@ -167,7 +169,7 @@ public class ContentInformationType1 {
 	 * definition} = "Data protection by encryption, with a session key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EnvelopedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
@@ -175,12 +177,13 @@ public class ContentInformationType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
 			definition = "Data protection by encryption, with a session key.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> EnvelopedData1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EnvelopedData1.mmObject();
 		}
 	};
+	protected AuthenticatedData1 authenticatedData;
 	/**
 	 * Data protection by a message authentication code (MAC).
 	 * <p>
@@ -207,7 +210,7 @@ public class ContentInformationType1 {
 	 * definition} = "Data protection by a message authentication code (MAC)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthenticatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
@@ -215,12 +218,13 @@ public class ContentInformationType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
 			definition = "Data protection by a message authentication code (MAC).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AuthenticatedData1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData1.mmObject();
 		}
 	};
+	protected SignedData1 signedData;
 	/**
 	 * Data protected by digital signatures.
 	 * <p>
@@ -247,7 +251,7 @@ public class ContentInformationType1 {
 	 * definition} = "Data protected by digital signatures."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SignedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSignedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
@@ -255,12 +259,13 @@ public class ContentInformationType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedData";
 			definition = "Data protected by digital signatures.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SignedData1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 		}
 	};
+	protected DigestedData1 digestedData;
 	/**
 	 * Data protected by a digest.
 	 * <p>
@@ -287,7 +292,7 @@ public class ContentInformationType1 {
 	 * definition} = "Data protected by a digest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigestedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigestedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
@@ -295,12 +300,13 @@ public class ContentInformationType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestedData";
 			definition = "Data protected by a digest.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DigestedData1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DigestedData1.mmObject();
 		}
 	};
+	protected NamedKeyEncryptedData1 namedKeyEncryptedData;
 	/**
 	 * Data protection by encryption with a previously exchanged key identified
 	 * by a name.
@@ -330,7 +336,7 @@ public class ContentInformationType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NamedKeyEncryptedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNamedKeyEncryptedData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
@@ -338,23 +344,23 @@ public class ContentInformationType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NamedKeyEncryptedData";
 			definition = "Data protection by encryption with a previously exchanged key identified by a name.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> NamedKeyEncryptedData1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NamedKeyEncryptedData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType1.ContentType, com.tools20022.repository.msg.ContentInformationType1.EnvelopedData,
-						com.tools20022.repository.msg.ContentInformationType1.AuthenticatedData, com.tools20022.repository.msg.ContentInformationType1.SignedData, com.tools20022.repository.msg.ContentInformationType1.DigestedData,
-						com.tools20022.repository.msg.ContentInformationType1.NamedKeyEncryptedData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.ManagementPlanReplacementV01.SecurityTrailer, com.tools20022.repository.area.catm.StatusReportV01.SecurityTrailer,
-						com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.SecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.SecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV01.SecurityTrailer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType1.mmContentType, com.tools20022.repository.msg.ContentInformationType1.mmEnvelopedData,
+						com.tools20022.repository.msg.ContentInformationType1.mmAuthenticatedData, com.tools20022.repository.msg.ContentInformationType1.mmSignedData, com.tools20022.repository.msg.ContentInformationType1.mmDigestedData,
+						com.tools20022.repository.msg.ContentInformationType1.mmNamedKeyEncryptedData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.ManagementPlanReplacementV01.mmSecurityTrailer, com.tools20022.repository.area.catm.StatusReportV01.mmSecurityTrailer,
+						com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.mmSecurityTrailer,
+						com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV01.mmSecurityTrailer);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType1";
 				definition = "General cryptographic message syntax (CMS) containing protected data.";
@@ -362,5 +368,53 @@ public class ContentInformationType1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContentType1Code getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(ContentType1Code contentType) {
+		this.contentType = contentType;
+	}
+
+	public EnvelopedData1 getEnvelopedData() {
+		return envelopedData;
+	}
+
+	public void setEnvelopedData(com.tools20022.repository.msg.EnvelopedData1 envelopedData) {
+		this.envelopedData = envelopedData;
+	}
+
+	public AuthenticatedData1 getAuthenticatedData() {
+		return authenticatedData;
+	}
+
+	public void setAuthenticatedData(com.tools20022.repository.msg.AuthenticatedData1 authenticatedData) {
+		this.authenticatedData = authenticatedData;
+	}
+
+	public SignedData1 getSignedData() {
+		return signedData;
+	}
+
+	public void setSignedData(com.tools20022.repository.msg.SignedData1 signedData) {
+		this.signedData = signedData;
+	}
+
+	public DigestedData1 getDigestedData() {
+		return digestedData;
+	}
+
+	public void setDigestedData(com.tools20022.repository.msg.DigestedData1 digestedData) {
+		this.digestedData = digestedData;
+	}
+
+	public NamedKeyEncryptedData1 getNamedKeyEncryptedData() {
+		return namedKeyEncryptedData;
+	}
+
+	public void setNamedKeyEncryptedData(com.tools20022.repository.msg.NamedKeyEncryptedData1 namedKeyEncryptedData) {
+		this.namedKeyEncryptedData = namedKeyEncryptedData;
 	}
 }

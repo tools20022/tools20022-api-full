@@ -36,14 +36,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Statement32#StatementIdentification
- * Statement32.StatementIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement32#ActivityIndicator
- * Statement32.ActivityIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement32#Frequency
- * Statement32.Frequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement32#StatementDateTime
- * Statement32.StatementDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.Statement32#mmStatementIdentification
+ * Statement32.mmStatementIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Statement32#mmActivityIndicator
+ * Statement32.mmActivityIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement32#mmFrequency
+ * Statement32.mmFrequency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Statement32#mmStatementDateTime
+ * Statement32.mmStatementDateTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -51,18 +53,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentStatementV03#StatementParameters
- * InterestPaymentStatementV03.StatementParameters}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentStatementV03#mmStatementParameters
+ * InterestPaymentStatementV03.mmStatementParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.InterestPaymentStatementV04#StatementParameters
- * InterestPaymentStatementV04.StatementParameters}</li>
+ * {@linkplain com.tools20022.repository.area.colr.InterestPaymentStatementV04#mmStatementParameters
+ * InterestPaymentStatementV04.mmStatementParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Statement32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text statementIdentification;
 	/**
 	 * Reference common to all pages of a statement.
 	 * <p>
@@ -102,7 +105,7 @@ public class Statement32 {
 	 * definition} = "Reference common to all pages of a statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement32.mmObject();
 			isDerived = false;
@@ -110,11 +113,12 @@ public class Statement32 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Reference common to all pages of a statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -145,7 +149,7 @@ public class Statement32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement32.mmObject();
 			isDerived = false;
@@ -153,11 +157,12 @@ public class Statement32 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Frequency1Code frequency;
 	/**
 	 * Frequency of the statement.
 	 * <p>
@@ -185,7 +190,7 @@ public class Statement32 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement32.mmObject();
 			isDerived = false;
@@ -193,11 +198,12 @@ public class Statement32 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Frequency1Code.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice statementDateTime;
 	/**
 	 * Date and time of the statement.
 	 * <p>
@@ -225,7 +231,7 @@ public class Statement32 {
 	 * definition} = "Date and time of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement32.mmObject();
 			isDerived = false;
@@ -233,8 +239,8 @@ public class Statement32 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateTime";
 			definition = "Date and time of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -242,15 +248,47 @@ public class Statement32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement32.StatementIdentification, com.tools20022.repository.msg.Statement32.ActivityIndicator, com.tools20022.repository.msg.Statement32.Frequency,
-						com.tools20022.repository.msg.Statement32.StatementDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentStatementV03.StatementParameters, com.tools20022.repository.area.colr.InterestPaymentStatementV04.StatementParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement32.mmStatementIdentification, com.tools20022.repository.msg.Statement32.mmActivityIndicator,
+						com.tools20022.repository.msg.Statement32.mmFrequency, com.tools20022.repository.msg.Statement32.mmStatementDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmStatementParameters, com.tools20022.repository.area.colr.InterestPaymentStatementV04.mmStatementParameters);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Statement32";
 				definition = "Characteristics of the statement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getStatementIdentification() {
+		return statementIdentification;
+	}
+
+	public void setStatementIdentification(Max35Text statementIdentification) {
+		this.statementIdentification = statementIdentification;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
+	}
+
+	public Frequency1Code getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(Frequency1Code frequency) {
+		this.frequency = frequency;
+	}
+
+	public DateAndDateTimeChoice getStatementDateTime() {
+		return statementDateTime;
+	}
+
+	public void setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
+		this.statementDateTime = statementDateTime;
 	}
 }

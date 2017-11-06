@@ -33,23 +33,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.MarketTypeCode MarketTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType4Code#Fund
- * MarketType4Code.Fund}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType4Code#mmFund
+ * MarketType4Code.mmFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType4Code#LocalMarket
- * MarketType4Code.LocalMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType4Code#mmLocalMarket
+ * MarketType4Code.mmLocalMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType4Code#Theoretical
- * MarketType4Code.Theoretical}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType4Code#Vendor
- * MarketType4Code.Vendor}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType4Code#mmTheoretical
+ * MarketType4Code.mmTheoretical}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType4Code#mmVendor
+ * MarketType4Code.mmVendor}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class MarketType4Code extends MarketTypeCode {
 	 * name} = "Fund"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fund = new MMCode() {
+	public static final MMCode mmFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fund";
@@ -110,7 +110,7 @@ public class MarketType4Code extends MarketTypeCode {
 	 * name} = "LocalMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode LocalMarket = new MMCode() {
+	public static final MMCode mmLocalMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalMarket";
@@ -133,7 +133,7 @@ public class MarketType4Code extends MarketTypeCode {
 	 * name} = "Theoretical"</li>
 	 * </ul>
 	 */
-	public static final MMCode Theoretical = new MMCode() {
+	public static final MMCode mmTheoretical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Theoretical";
@@ -156,7 +156,7 @@ public class MarketType4Code extends MarketTypeCode {
 	 * name} = "Vendor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Vendor = new MMCode() {
+	public static final MMCode mmVendor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vendor";
@@ -167,13 +167,13 @@ public class MarketType4Code extends MarketTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FUND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketType4Code";
 				definition = "Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType4Code.Fund, com.tools20022.repository.codeset.MarketType4Code.LocalMarket, com.tools20022.repository.codeset.MarketType4Code.Theoretical,
-						com.tools20022.repository.codeset.MarketType4Code.Vendor);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType4Code.mmFund, com.tools20022.repository.codeset.MarketType4Code.mmLocalMarket, com.tools20022.repository.codeset.MarketType4Code.mmTheoretical,
+						com.tools20022.repository.codeset.MarketType4Code.mmVendor);
 				trace_lazy = () -> MarketTypeCode.mmObject();
 			}
 		});

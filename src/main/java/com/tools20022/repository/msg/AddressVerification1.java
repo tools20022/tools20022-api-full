@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AddressVerification1#AddressDigits
- * AddressVerification1.AddressDigits}</li>
+ * {@linkplain com.tools20022.repository.msg.AddressVerification1#mmAddressDigits
+ * AddressVerification1.mmAddressDigits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AddressVerification1#PostalCodeDigits
- * AddressVerification1.PostalCodeDigits}</li>
+ * {@linkplain com.tools20022.repository.msg.AddressVerification1#mmPostalCodeDigits
+ * AddressVerification1.mmPostalCodeDigits}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AddressVerification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max5NumericText addressDigits;
 	/**
 	 * Numeric characters from the cardholder's address excluding the postal
 	 * code (that is street number).
@@ -90,7 +91,7 @@ public class AddressVerification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AddressDigits = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAddressDigits = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AddressVerification1.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class AddressVerification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressDigits";
 			definition = "Numeric characters from the cardholder's address excluding the postal code (that is street number).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
 		}
 	};
+	protected Max5NumericText postalCodeDigits;
 	/**
 	 * Numeric characters from the cardholder's postal code.
 	 * <p>
@@ -131,7 +133,7 @@ public class AddressVerification1 {
 	 * definition} = "Numeric characters from the cardholder's postal code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostalCodeDigits = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostalCodeDigits = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AddressVerification1.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class AddressVerification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalCodeDigits";
 			definition = "Numeric characters from the cardholder's postal code.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class AddressVerification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AddressVerification1.AddressDigits, com.tools20022.repository.msg.AddressVerification1.PostalCodeDigits);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AddressVerification1.mmAddressDigits, com.tools20022.repository.msg.AddressVerification1.mmPostalCodeDigits);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AddressVerification1";
 				definition = "Numeric characters of the cardholder's address for verification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max5NumericText getAddressDigits() {
+		return addressDigits;
+	}
+
+	public void setAddressDigits(Max5NumericText addressDigits) {
+		this.addressDigits = addressDigits;
+	}
+
+	public Max5NumericText getPostalCodeDigits() {
+		return postalCodeDigits;
+	}
+
+	public void setPostalCodeDigits(Max5NumericText postalCodeDigits) {
+		this.postalCodeDigits = postalCodeDigits;
 	}
 }

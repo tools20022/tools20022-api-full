@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.CashEntry;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Posting of an item to a cash account, in the context of a cash transaction,
@@ -39,23 +40,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashEntry1#Amount
- * CashEntry1.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashEntry1#Date
- * CashEntry1.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashEntry1#Status
- * CashEntry1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashEntry1#Identification
- * CashEntry1.Identification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashEntry1#mmAmount
+ * CashEntry1.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashEntry1#mmDate
+ * CashEntry1.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashEntry1#mmStatus
+ * CashEntry1.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashEntry1#mmIdentification
+ * CashEntry1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashEntry1#StatementIdentification
- * CashEntry1.StatementIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashEntry1#mmStatementIdentification
+ * CashEntry1.mmStatementIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashEntry1#AccountServicerReference
- * CashEntry1.AccountServicerReference}</li>
+ * {@linkplain com.tools20022.repository.msg.CashEntry1#mmAccountServicerReference
+ * CashEntry1.mmAccountServicerReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashEntry1#AdditionalEntryInformation
- * CashEntry1.AdditionalEntryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CashEntry1#mmAdditionalEntryInformation
+ * CashEntry1.mmAdditionalEntryInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount of money in the cash entry.
 	 * <p>
@@ -93,8 +95,8 @@ public class CashEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Amount
-	 * CashEntry.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+	 * CashEntry.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.CashEntry1
@@ -112,20 +114,21 @@ public class CashEntry1 {
 	 * definition} = "Amount of money in the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
 			componentContext_lazy = () -> CashEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Date at which an entry is posted to an account on the account servicer's
 	 * books.
@@ -140,8 +143,8 @@ public class CashEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#EntryDate
-	 * Entry.EntryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmEntryDate
+	 * Entry.mmEntryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.CashEntry1
@@ -161,20 +164,21 @@ public class CashEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
 			componentContext_lazy = () -> CashEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.EntryDate;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date at which an entry is posted to an account on the account servicer's books.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected EntryStatus1Code status;
 	/**
 	 * Status of an entry on the books of the account servicer.
 	 * <p>
@@ -188,8 +192,8 @@ public class CashEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus#EntryStatus
-	 * AccountStatus.EntryStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus#mmEntryStatus
+	 * AccountStatus.mmEntryStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.CashEntry1
@@ -207,20 +211,21 @@ public class CashEntry1 {
 	 * definition} = "Status of an entry on the books of the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> CashEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.EntryStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of an entry on the books of the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identifier for an entry, as assigned by the
 	 * account servicer.
@@ -234,8 +239,8 @@ public class CashEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#Identification
-	 * Entry.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmIdentification
+	 * Entry.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.CashEntry1
@@ -255,20 +260,21 @@ public class CashEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmIdentification;
 			componentContext_lazy = () -> CashEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier for an entry, as assigned by the account servicer. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text statementIdentification;
 	/**
 	 * Unique identification, as assigned by the account servicer, to
 	 * unambiguously identify the account statement.
@@ -298,7 +304,7 @@ public class CashEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashEntry1.mmObject();
 			isDerived = false;
@@ -306,11 +312,12 @@ public class CashEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the account statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number accountServicerReference;
 	/**
 	 * Sequential number of the statement, as assigned by the account servicer.
 	 * Usage: The sequential number is increased incrementally for each
@@ -341,7 +348,7 @@ public class CashEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashEntry1.mmObject();
 			isDerived = false;
@@ -349,11 +356,12 @@ public class CashEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Sequential number of the statement, as assigned by the account servicer.\nUsage: The sequential number is increased incrementally for each statement sent electronically.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<Max140Text> additionalEntryInformation;
 	/**
 	 * Further details of the entry.
 	 * <p>
@@ -380,7 +388,7 @@ public class CashEntry1 {
 	 * definition} = "Further details of the entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalEntryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalEntryInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashEntry1.mmObject();
 			isDerived = false;
@@ -396,16 +404,72 @@ public class CashEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashEntry1.Amount, com.tools20022.repository.msg.CashEntry1.Date, com.tools20022.repository.msg.CashEntry1.Status,
-						com.tools20022.repository.msg.CashEntry1.Identification, com.tools20022.repository.msg.CashEntry1.StatementIdentification, com.tools20022.repository.msg.CashEntry1.AccountServicerReference,
-						com.tools20022.repository.msg.CashEntry1.AdditionalEntryInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashEntry1.mmAmount, com.tools20022.repository.msg.CashEntry1.mmDate, com.tools20022.repository.msg.CashEntry1.mmStatus,
+						com.tools20022.repository.msg.CashEntry1.mmIdentification, com.tools20022.repository.msg.CashEntry1.mmStatementIdentification, com.tools20022.repository.msg.CashEntry1.mmAccountServicerReference,
+						com.tools20022.repository.msg.CashEntry1.mmAdditionalEntryInformation);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashEntry1";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(DateAndDateTimeChoice date) {
+		this.date = date;
+	}
+
+	public EntryStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(EntryStatus1Code status) {
+		this.status = status;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getStatementIdentification() {
+		return statementIdentification;
+	}
+
+	public void setStatementIdentification(Max35Text statementIdentification) {
+		this.statementIdentification = statementIdentification;
+	}
+
+	public Number getAccountServicerReference() {
+		return accountServicerReference;
+	}
+
+	public void setAccountServicerReference(Number accountServicerReference) {
+		this.accountServicerReference = accountServicerReference;
+	}
+
+	public List<Max140Text> getAdditionalEntryInformation() {
+		return additionalEntryInformation;
+	}
+
+	public void setAdditionalEntryInformation(List<Max140Text> additionalEntryInformation) {
+		this.additionalEntryInformation = additionalEntryInformation;
 	}
 }

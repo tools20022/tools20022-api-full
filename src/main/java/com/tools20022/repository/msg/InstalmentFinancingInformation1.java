@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstalmentFinancingInformation1#InstalmentSequenceIdentification
- * InstalmentFinancingInformation1.InstalmentSequenceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InstalmentFinancingInformation1#mmInstalmentSequenceIdentification
+ * InstalmentFinancingInformation1.mmInstalmentSequenceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstalmentFinancingInformation1#InstalmentTotalAmount
- * InstalmentFinancingInformation1.InstalmentTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.InstalmentFinancingInformation1#mmInstalmentTotalAmount
+ * InstalmentFinancingInformation1.mmInstalmentTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstalmentFinancingInformation1#InstalmentFinancingResult
- * InstalmentFinancingInformation1.InstalmentFinancingResult}</li>
+ * {@linkplain com.tools20022.repository.msg.InstalmentFinancingInformation1#mmInstalmentFinancingResult
+ * InstalmentFinancingInformation1.mmInstalmentFinancingResult}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstalmentFinancingInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text instalmentSequenceIdentification;
 	/**
 	 * Progressive number of the single instalment related to an invoice.
 	 * <p>
@@ -97,7 +98,7 @@ public class InstalmentFinancingInformation1 {
 	 * "Progressive number of the single instalment related to an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstalmentSequenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstalmentSequenceIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstalmentFinancingInformation1.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class InstalmentFinancingInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentSequenceIdentification";
 			definition = "Progressive number of the single instalment related to an invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount instalmentTotalAmount;
 	/**
 	 * Amount of money to be moved between the debtor and creditor, before
 	 * deduction of charges, expressed in the currency as ordered by the
@@ -125,8 +127,8 @@ public class InstalmentFinancingInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InstructedAmount
-	 * Payment.InstructedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInstructedAmount
+	 * Payment.mmInstructedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,20 +149,21 @@ public class InstalmentFinancingInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstalmentTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstalmentTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
 			componentContext_lazy = () -> InstalmentFinancingInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.InstructedAmount;
 			isDerived = false;
 			xmlTag = "InstlmtTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentTotalAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected FinancingResult1 instalmentFinancingResult;
 	/**
 	 * Information about the financing result of one instalment.
 	 * <p>
@@ -172,8 +175,8 @@ public class InstalmentFinancingInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#InvoiceFinancingStatus
-	 * InvoiceFinancingAgreement.InvoiceFinancingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
+	 * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,34 +196,58 @@ public class InstalmentFinancingInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstalmentFinancingResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstalmentFinancingResult = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> InstalmentFinancingInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.InvoiceFinancingStatus;
 			isDerived = false;
 			xmlTag = "InstlmtFincgRslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentFinancingResult";
 			definition = "Information about the financing result of one instalment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancingResult1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancingResult1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstalmentFinancingInformation1.InstalmentSequenceIdentification, com.tools20022.repository.msg.InstalmentFinancingInformation1.InstalmentTotalAmount,
-						com.tools20022.repository.msg.InstalmentFinancingInformation1.InstalmentFinancingResult);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentSequenceIdentification,
+						com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentTotalAmount, com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentFinancingResult);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstalmentFinancingInformation1";
 				definition = "Information about result of a single instalment (financed or not) within an invoice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getInstalmentSequenceIdentification() {
+		return instalmentSequenceIdentification;
+	}
+
+	public void setInstalmentSequenceIdentification(Max70Text instalmentSequenceIdentification) {
+		this.instalmentSequenceIdentification = instalmentSequenceIdentification;
+	}
+
+	public ActiveCurrencyAndAmount getInstalmentTotalAmount() {
+		return instalmentTotalAmount;
+	}
+
+	public void setInstalmentTotalAmount(ActiveCurrencyAndAmount instalmentTotalAmount) {
+		this.instalmentTotalAmount = instalmentTotalAmount;
+	}
+
+	public FinancingResult1 getInstalmentFinancingResult() {
+		return instalmentFinancingResult;
+	}
+
+	public void setInstalmentFinancingResult(com.tools20022.repository.msg.FinancingResult1 instalmentFinancingResult) {
+		this.instalmentFinancingResult = instalmentFinancingResult;
 	}
 }

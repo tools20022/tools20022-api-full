@@ -34,48 +34,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#MailToDebtor
- * ChequeDelivery1Code.MailToDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmMailToDebtor
+ * ChequeDelivery1Code.mmMailToDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#MailToCreditor
- * ChequeDelivery1Code.MailToCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmMailToCreditor
+ * ChequeDelivery1Code.mmMailToCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#MailToFinalAgent
- * ChequeDelivery1Code.MailToFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmMailToFinalAgent
+ * ChequeDelivery1Code.mmMailToFinalAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#CourierToDebtor
- * ChequeDelivery1Code.CourierToDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmCourierToDebtor
+ * ChequeDelivery1Code.mmCourierToDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#CourierToCreditor
- * ChequeDelivery1Code.CourierToCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmCourierToCreditor
+ * ChequeDelivery1Code.mmCourierToCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#CourierToFinalAgent
- * ChequeDelivery1Code.CourierToFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmCourierToFinalAgent
+ * ChequeDelivery1Code.mmCourierToFinalAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#PickUpByDebtor
- * ChequeDelivery1Code.PickUpByDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmPickUpByDebtor
+ * ChequeDelivery1Code.mmPickUpByDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#PickUpByCreditor
- * ChequeDelivery1Code.PickUpByCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmPickUpByCreditor
+ * ChequeDelivery1Code.mmPickUpByCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#PickUpByFinalAgent
- * ChequeDelivery1Code.PickUpByFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmPickUpByFinalAgent
+ * ChequeDelivery1Code.mmPickUpByFinalAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#RegisteredMailToDebtor
- * ChequeDelivery1Code.RegisteredMailToDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmRegisteredMailToDebtor
+ * ChequeDelivery1Code.mmRegisteredMailToDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#RegisteredMailToCreditor
- * ChequeDelivery1Code.RegisteredMailToCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmRegisteredMailToCreditor
+ * ChequeDelivery1Code.mmRegisteredMailToCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#RegisteredMailToFinalAgent
- * ChequeDelivery1Code.RegisteredMailToFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code#mmRegisteredMailToFinalAgent
+ * ChequeDelivery1Code.mmRegisteredMailToFinalAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -112,7 +112,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "MailToDebtor"</li>
 	 * </ul>
 	 */
-	public static final MMCode MailToDebtor = new MMCode() {
+	public static final MMCode mmMailToDebtor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailToDebtor";
@@ -135,7 +135,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "MailToCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode MailToCreditor = new MMCode() {
+	public static final MMCode mmMailToCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailToCreditor";
@@ -158,7 +158,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "MailToFinalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode MailToFinalAgent = new MMCode() {
+	public static final MMCode mmMailToFinalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailToFinalAgent";
@@ -181,7 +181,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "CourierToDebtor"</li>
 	 * </ul>
 	 */
-	public static final MMCode CourierToDebtor = new MMCode() {
+	public static final MMCode mmCourierToDebtor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourierToDebtor";
@@ -204,7 +204,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "CourierToCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode CourierToCreditor = new MMCode() {
+	public static final MMCode mmCourierToCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourierToCreditor";
@@ -227,7 +227,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "CourierToFinalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CourierToFinalAgent = new MMCode() {
+	public static final MMCode mmCourierToFinalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourierToFinalAgent";
@@ -250,7 +250,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "PickUpByDebtor"</li>
 	 * </ul>
 	 */
-	public static final MMCode PickUpByDebtor = new MMCode() {
+	public static final MMCode mmPickUpByDebtor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUpByDebtor";
@@ -273,7 +273,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "PickUpByCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode PickUpByCreditor = new MMCode() {
+	public static final MMCode mmPickUpByCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUpByCreditor";
@@ -296,7 +296,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "PickUpByFinalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode PickUpByFinalAgent = new MMCode() {
+	public static final MMCode mmPickUpByFinalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUpByFinalAgent";
@@ -319,7 +319,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "RegisteredMailToDebtor"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegisteredMailToDebtor = new MMCode() {
+	public static final MMCode mmRegisteredMailToDebtor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMailToDebtor";
@@ -342,7 +342,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "RegisteredMailToCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegisteredMailToCreditor = new MMCode() {
+	public static final MMCode mmRegisteredMailToCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMailToCreditor";
@@ -365,7 +365,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 * name} = "RegisteredMailToFinalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegisteredMailToFinalAgent = new MMCode() {
+	public static final MMCode mmRegisteredMailToFinalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMailToFinalAgent";
@@ -376,17 +376,17 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MLDB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChequeDelivery1Code";
 				definition = "Specifies the method to be used in delivering a cheque to a party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChequeDelivery1Code.MailToDebtor, com.tools20022.repository.codeset.ChequeDelivery1Code.MailToCreditor,
-						com.tools20022.repository.codeset.ChequeDelivery1Code.MailToFinalAgent, com.tools20022.repository.codeset.ChequeDelivery1Code.CourierToDebtor, com.tools20022.repository.codeset.ChequeDelivery1Code.CourierToCreditor,
-						com.tools20022.repository.codeset.ChequeDelivery1Code.CourierToFinalAgent, com.tools20022.repository.codeset.ChequeDelivery1Code.PickUpByDebtor,
-						com.tools20022.repository.codeset.ChequeDelivery1Code.PickUpByCreditor, com.tools20022.repository.codeset.ChequeDelivery1Code.PickUpByFinalAgent,
-						com.tools20022.repository.codeset.ChequeDelivery1Code.RegisteredMailToDebtor, com.tools20022.repository.codeset.ChequeDelivery1Code.RegisteredMailToCreditor,
-						com.tools20022.repository.codeset.ChequeDelivery1Code.RegisteredMailToFinalAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChequeDelivery1Code.mmMailToDebtor, com.tools20022.repository.codeset.ChequeDelivery1Code.mmMailToCreditor,
+						com.tools20022.repository.codeset.ChequeDelivery1Code.mmMailToFinalAgent, com.tools20022.repository.codeset.ChequeDelivery1Code.mmCourierToDebtor,
+						com.tools20022.repository.codeset.ChequeDelivery1Code.mmCourierToCreditor, com.tools20022.repository.codeset.ChequeDelivery1Code.mmCourierToFinalAgent,
+						com.tools20022.repository.codeset.ChequeDelivery1Code.mmPickUpByDebtor, com.tools20022.repository.codeset.ChequeDelivery1Code.mmPickUpByCreditor,
+						com.tools20022.repository.codeset.ChequeDelivery1Code.mmPickUpByFinalAgent, com.tools20022.repository.codeset.ChequeDelivery1Code.mmRegisteredMailToDebtor,
+						com.tools20022.repository.codeset.ChequeDelivery1Code.mmRegisteredMailToCreditor, com.tools20022.repository.codeset.ChequeDelivery1Code.mmRegisteredMailToFinalAgent);
 				trace_lazy = () -> ChequeDeliveryCode.mmObject();
 			}
 		});

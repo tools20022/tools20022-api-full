@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Frequency26Choice#Code
- * Frequency26Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Frequency26Choice#mmCode
+ * Frequency26Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Frequency26Choice#Proprietary
- * Frequency26Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.Frequency26Choice#mmProprietary
+ * Frequency26Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Frequency26Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected EventFrequency4Code code;
 	/**
 	 * Frequency expressed as an ISO 20022 code.
 	 * <p>
@@ -89,7 +90,7 @@ public class Frequency26Choice {
 	 * definition} = "Frequency expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Frequency26Choice.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class Frequency26Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Frequency expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency4Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Frequency expressed as a proprietary code.
 	 * <p>
@@ -130,7 +132,7 @@ public class Frequency26Choice {
 	 * definition} = "Frequency expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Frequency26Choice.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class Frequency26Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Frequency expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -147,13 +149,29 @@ public class Frequency26Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency26Choice.Code, com.tools20022.repository.choice.Frequency26Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency26Choice.mmCode, com.tools20022.repository.choice.Frequency26Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Frequency26Choice";
 				definition = "Choice of format for a frequency, for example, the frequency of delivery of a statement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EventFrequency4Code getCode() {
+		return code;
+	}
+
+	public void setCode(EventFrequency4Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

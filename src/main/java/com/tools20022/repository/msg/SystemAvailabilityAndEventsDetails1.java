@@ -28,6 +28,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Set of integrated applications that provides centralised services such as
@@ -40,17 +41,17 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#SystemCurrency
- * SystemAvailabilityAndEventsDetails1.SystemCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#mmSystemCurrency
+ * SystemAvailabilityAndEventsDetails1.mmSystemCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#SessionPeriod
- * SystemAvailabilityAndEventsDetails1.SessionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#mmSessionPeriod
+ * SystemAvailabilityAndEventsDetails1.mmSessionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#Event
- * SystemAvailabilityAndEventsDetails1.Event}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#mmEvent
+ * SystemAvailabilityAndEventsDetails1.mmEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#ClosureInformation
- * SystemAvailabilityAndEventsDetails1.ClosureInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1#mmClosureInformation
+ * SystemAvailabilityAndEventsDetails1.mmClosureInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +59,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,6 +77,7 @@ import java.util.function.Supplier;
 public class SystemAvailabilityAndEventsDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyCode systemCurrency;
 	/**
 	 * Currency which may be processed by the system. A system may process
 	 * transactions in a single currency or in multiple currencies.
@@ -89,8 +91,8 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#Currency
-	 * TransactionAdministrator.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCurrency
+	 * TransactionAdministrator.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +113,21 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmCurrency;
 			componentContext_lazy = () -> SystemAvailabilityAndEventsDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.Currency;
 			isDerived = false;
 			xmlTag = "SysCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemCurrency";
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected TimePeriodDetails sessionPeriod;
 	/**
 	 * Time window of system activity.
 	 * <p>
@@ -138,8 +141,8 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemAvailability#AvailableSessionPeriod
-	 * SystemAvailability.AvailableSessionPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmAvailableSessionPeriod
+	 * SystemAvailability.mmAvailableSessionPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,20 +161,21 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 * definition} = "Time window of system activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SessionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSessionPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmAvailableSessionPeriod;
 			componentContext_lazy = () -> SystemAvailabilityAndEventsDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemAvailability.AvailableSessionPeriod;
 			isDerived = false;
 			xmlTag = "SsnPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SessionPeriod";
 			definition = "Time window of system activity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> TimePeriodDetails.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.TimePeriodDetails.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemEvent1> event;
 	/**
 	 * Detailed information about an event occurring on a system, whether
 	 * planned, eg, cut-off time for a specific type of eligible transfer, or
@@ -208,20 +212,21 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Event = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEvent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SystemAvailabilityAndEventsDetails1.mmObject();
 			businessComponentTrace_lazy = () -> SystemEventInformation.mmObject();
+			componentContext_lazy = () -> SystemAvailabilityAndEventsDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Evt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Event";
 			definition = "Detailed information about an event occurring on a system, whether planned, eg, cut-off time for a specific type of eligible transfer, or unplanned, eg, an unsolicited failure, as stipulated in the specifications of the system.";
 			minOccurs = 0;
-			type_lazy = () -> SystemEvent1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemEvent1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemClosureDetails> closureInformation;
 	/**
 	 * Information about inactivity of a system.
 	 * <p>
@@ -248,7 +253,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 * definition} = "Information about inactivity of a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClosureInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClosureInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SystemAvailabilityAndEventsDetails1.mmObject();
 			isDerived = false;
@@ -257,18 +262,18 @@ public class SystemAvailabilityAndEventsDetails1 {
 			name = "ClosureInformation";
 			definition = "Information about inactivity of a system.";
 			minOccurs = 0;
-			type_lazy = () -> SystemClosureDetails.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemClosureDetails.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.SystemCurrency, com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.SessionPeriod,
-						com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.Event, com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.ClosureInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmSystemCurrency, com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmSessionPeriod,
+						com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmEvent, com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmClosureInformation);
 				trace_lazy = () -> System.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -282,5 +287,37 @@ public class SystemAvailabilityAndEventsDetails1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyCode getSystemCurrency() {
+		return systemCurrency;
+	}
+
+	public void setSystemCurrency(CurrencyCode systemCurrency) {
+		this.systemCurrency = systemCurrency;
+	}
+
+	public TimePeriodDetails getSessionPeriod() {
+		return sessionPeriod;
+	}
+
+	public void setSessionPeriod(com.tools20022.repository.msg.TimePeriodDetails sessionPeriod) {
+		this.sessionPeriod = sessionPeriod;
+	}
+
+	public List<SystemEvent1> getEvent() {
+		return event;
+	}
+
+	public void setEvent(List<com.tools20022.repository.msg.SystemEvent1> event) {
+		this.event = event;
+	}
+
+	public List<SystemClosureDetails> getClosureInformation() {
+		return closureInformation;
+	}
+
+	public void setClosureInformation(List<com.tools20022.repository.msg.SystemClosureDetails> closureInformation) {
+		this.closureInformation = closureInformation;
 	}
 }

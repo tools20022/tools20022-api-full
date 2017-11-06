@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1#CashAccountIdentification
- * CashAccountAuditTrailSearchCriteria1.CashAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1#mmCashAccountIdentification
+ * CashAccountAuditTrailSearchCriteria1.mmCashAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1#DatePeriod
- * CashAccountAuditTrailSearchCriteria1.DatePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1#mmDatePeriod
+ * CashAccountAuditTrailSearchCriteria1.mmDatePeriod}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountAuditTrailSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccount16 cashAccountIdentification;
 	/**
 	 * Describes cash account to be queried.
 	 * <p>
@@ -86,7 +87,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 	 * definition} = "Describes cash account to be queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class CashAccountAuditTrailSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Describes cash account to be queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> CashAccount16.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	protected DateSearchChoice datePeriod;
 	/**
 	 * Describes date period for querying information.
 	 * <p>
@@ -127,7 +129,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 	 * definition} = "Describes date period for querying information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class CashAccountAuditTrailSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Describes date period for querying information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class CashAccountAuditTrailSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1.CashAccountIdentification, com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1.DatePeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1.mmCashAccountIdentification, com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1.mmDatePeriod);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountAuditTrailSearchCriteria1";
 				definition = "Describes search criteria for cash account audit trail query.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccount16 getCashAccountIdentification() {
+		return cashAccountIdentification;
+	}
+
+	public void setCashAccountIdentification(com.tools20022.repository.msg.CashAccount16 cashAccountIdentification) {
+		this.cashAccountIdentification = cashAccountIdentification;
+	}
+
+	public DateSearchChoice getDatePeriod() {
+		return datePeriod;
+	}
+
+	public void setDatePeriod(DateSearchChoice datePeriod) {
+		this.datePeriod = datePeriod;
 	}
 }

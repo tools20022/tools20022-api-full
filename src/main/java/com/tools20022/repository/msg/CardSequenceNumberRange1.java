@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardSequenceNumberRange1#FirstTransaction
- * CardSequenceNumberRange1.FirstTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.CardSequenceNumberRange1#mmFirstTransaction
+ * CardSequenceNumberRange1.mmFirstTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardSequenceNumberRange1#LastTransaction
- * CardSequenceNumberRange1.LastTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.CardSequenceNumberRange1#mmLastTransaction
+ * CardSequenceNumberRange1.mmLastTransaction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardSequenceNumberRange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text firstTransaction;
 	/**
 	 * CardSequenceNumberRange1:FirstTransactionSequenceNumberMessage element to
 	 * be finalised once feedback from Card SEG has been received.
@@ -88,7 +89,7 @@ public class CardSequenceNumberRange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FirstTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFirstTransaction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardSequenceNumberRange1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class CardSequenceNumberRange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstTransaction";
 			definition = "CardSequenceNumberRange1:FirstTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text lastTransaction;
 	/**
 	 * CardSequenceNumberRange1:LastTransactionSequenceNumberMessage element to
 	 * be finalised once feedback from Card SEG has been received.
@@ -131,7 +133,7 @@ public class CardSequenceNumberRange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastTransaction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardSequenceNumberRange1.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class CardSequenceNumberRange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTransaction";
 			definition = "CardSequenceNumberRange1:LastTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class CardSequenceNumberRange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardSequenceNumberRange1.FirstTransaction, com.tools20022.repository.msg.CardSequenceNumberRange1.LastTransaction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardSequenceNumberRange1.mmFirstTransaction, com.tools20022.repository.msg.CardSequenceNumberRange1.mmLastTransaction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardSequenceNumberRange1";
 				definition = "Range of sequence numbers related to card transactions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getFirstTransaction() {
+		return firstTransaction;
+	}
+
+	public void setFirstTransaction(Max35Text firstTransaction) {
+		this.firstTransaction = firstTransaction;
+	}
+
+	public Max35Text getLastTransaction() {
+		return lastTransaction;
+	}
+
+	public void setLastTransaction(Max35Text lastTransaction) {
+		this.lastTransaction = lastTransaction;
 	}
 }

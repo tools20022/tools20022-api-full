@@ -37,19 +37,19 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundOrderType3#OrderTypeOrExtendedOrderTypeRule
- * FundOrderType3.OrderTypeOrExtendedOrderTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.FundOrderType3#mmOrderTypeOrExtendedOrderTypeRule
+ * FundOrderType3.mmOrderTypeOrExtendedOrderTypeRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FundOrderType3#OrderType
- * FundOrderType3.OrderType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundOrderType3#mmOrderType
+ * FundOrderType3.mmOrderType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundOrderType3#ExtendedOrderType
- * FundOrderType3.ExtendedOrderType}</li>
+ * {@linkplain com.tools20022.repository.msg.FundOrderType3#mmExtendedOrderType
+ * FundOrderType3.mmExtendedOrderType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -74,6 +74,7 @@ import java.util.function.Supplier;
 public class FundOrderType3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FundOrderType4Code orderType;
 	/**
 	 * Specifies the category of the investment fund order.
 	 * <p>
@@ -87,8 +88,8 @@ public class FundOrderType3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderType
-	 * InvestmentFundOrder.OrderType}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderType
+	 * InvestmentFundOrder.mmOrderType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +107,21 @@ public class FundOrderType3 {
 	 * definition} = "Specifies the category of the investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> FundOrderType3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderType;
 			isDerived = false;
 			xmlTag = "OrdrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderType";
 			definition = "Specifies the category of the investment fund order.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FundOrderType4Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedOrderType;
 	/**
 	 * Specifies the category of the investment fund order.
 	 * <p>
@@ -133,8 +135,8 @@ public class FundOrderType3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderType
-	 * InvestmentFundOrder.OrderType}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderType
+	 * InvestmentFundOrder.mmOrderType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,17 +154,17 @@ public class FundOrderType3 {
 	 * definition} = "Specifies the category of the investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedOrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedOrderType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> FundOrderType3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderType;
 			isDerived = false;
 			xmlTag = "XtndedOrdrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedOrderType";
 			definition = "Specifies the category of the investment fund order.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
@@ -174,11 +176,11 @@ public class FundOrderType3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.FundOrderType3#OrderType
-	 * FundOrderType3.OrderType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.FundOrderType3#mmOrderType
+	 * FundOrderType3.mmOrderType}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundOrderType3#ExtendedOrderType
-	 * FundOrderType3.ExtendedOrderType}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderType3#mmExtendedOrderType
+	 * FundOrderType3.mmExtendedOrderType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -196,22 +198,22 @@ public class FundOrderType3 {
 	 * "Either OrderType or ExtendedOrderType may be present but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor OrderTypeOrExtendedOrderTypeRule = new MMXor() {
+	public static final MMXor mmOrderTypeOrExtendedOrderTypeRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderTypeOrExtendedOrderTypeRule";
 			definition = "Either OrderType or ExtendedOrderType may be present but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderType3.OrderType, com.tools20022.repository.msg.FundOrderType3.ExtendedOrderType);
 			messageComponent_lazy = () -> FundOrderType3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderType3.mmOrderType, com.tools20022.repository.msg.FundOrderType3.mmExtendedOrderType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderType3.OrderType, com.tools20022.repository.msg.FundOrderType3.ExtendedOrderType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderType3.mmOrderType, com.tools20022.repository.msg.FundOrderType3.mmExtendedOrderType);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -222,9 +224,25 @@ public class FundOrderType3 {
 				})).get();
 				name = "FundOrderType3";
 				definition = "Specifies the category of the investment fund order.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderType3.OrderTypeOrExtendedOrderTypeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderType3.mmOrderTypeOrExtendedOrderTypeRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FundOrderType4Code getOrderType() {
+		return orderType;
+	}
+
+	public void setOrderType(FundOrderType4Code orderType) {
+		this.orderType = orderType;
+	}
+
+	public Extended350Code getExtendedOrderType() {
+		return extendedOrderType;
+	}
+
+	public void setExtendedOrderType(Extended350Code extendedOrderType) {
+		this.extendedOrderType = extendedOrderType;
 	}
 }

@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnableToApplyJustification1Choice#AnyInformation
- * UnableToApplyJustification1Choice.AnyInformation}</li>
+ * {@linkplain com.tools20022.repository.choice.UnableToApplyJustification1Choice#mmAnyInformation
+ * UnableToApplyJustification1Choice.mmAnyInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnableToApplyJustification1Choice#MissingOrIncorrectInformation
- * UnableToApplyJustification1Choice.MissingOrIncorrectInformation}</li>
+ * {@linkplain com.tools20022.repository.choice.UnableToApplyJustification1Choice#mmMissingOrIncorrectInformation
+ * UnableToApplyJustification1Choice.mmMissingOrIncorrectInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnableToApplyJustification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator anyInformation;
 	/**
 	 * When set to yes, indicates that all available information about the
 	 * underlying payment instruction shall be sent.
@@ -94,7 +95,7 @@ public class UnableToApplyJustification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AnyInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAnyInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnableToApplyJustification1Choice.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class UnableToApplyJustification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyInformation";
 			definition = "When set to yes, indicates that all available information about the underlying payment instruction shall be sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected MissingOrIncorrectInformation1 missingOrIncorrectInformation;
 	/**
 	 * Missing or incorrect information.
 	 * <p>
@@ -134,7 +136,7 @@ public class UnableToApplyJustification1Choice {
 	 * definition} = "Missing or incorrect information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MissingOrIncorrectInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMissingOrIncorrectInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UnableToApplyJustification1Choice.mmObject();
 			isDerived = false;
@@ -142,23 +144,40 @@ public class UnableToApplyJustification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingOrIncorrectInformation";
 			definition = "Missing or incorrect information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MissingOrIncorrectInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MissingOrIncorrectInformation1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnableToApplyJustification1Choice.AnyInformation, com.tools20022.repository.choice.UnableToApplyJustification1Choice.MissingOrIncorrectInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnableToApplyJustification1Choice.mmAnyInformation,
+						com.tools20022.repository.choice.UnableToApplyJustification1Choice.mmMissingOrIncorrectInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnableToApplyJustification1Choice";
 				definition = "Choice between details of missing information or the complete set of available information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getAnyInformation() {
+		return anyInformation;
+	}
+
+	public void setAnyInformation(YesNoIndicator anyInformation) {
+		this.anyInformation = anyInformation;
+	}
+
+	public MissingOrIncorrectInformation1 getMissingOrIncorrectInformation() {
+		return missingOrIncorrectInformation;
+	}
+
+	public void setMissingOrIncorrectInformation(MissingOrIncorrectInformation1 missingOrIncorrectInformation) {
+		this.missingOrIncorrectInformation = missingOrIncorrectInformation;
 	}
 }

@@ -64,18 +64,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.TradeStatusReportV01#TradeStatusAdviceDetails
- * TradeStatusReportV01.TradeStatusAdviceDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.TradeStatusReportV01#mmTradeStatusAdviceDetails
+ * TradeStatusReportV01.mmTradeStatusAdviceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.TradeStatusReportV01#DigitalSignature
- * TradeStatusReportV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.TradeStatusReportV01#mmDigitalSignature
+ * TradeStatusReportV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsrv.TradeStatusReportV01#identifier
- * TradeStatusReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsrv.018.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradeStatusReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TradeStatusReport1 tradeStatusAdviceDetails;
 	/**
 	 * Details of the trade status report.
 	 * <p>
@@ -114,17 +113,18 @@ public class TradeStatusReportV01 {
 	 * definition} = "Details of the trade status report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeStatusAdviceDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeStatusAdviceDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradStsAdvcDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeStatusAdviceDetails";
 			definition = "Details of the trade status report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeStatusReport1.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the report.
 	 * <p>
@@ -148,42 +148,15 @@ public class TradeStatusReportV01 {
 	 * definition} = "Digital signature of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "018"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsrv";
-			messageFunctionality = "018";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -197,10 +170,33 @@ public class TradeStatusReportV01 {
 				rootElement = "Document";
 				xmlTag = "TradStsRpt";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.TradeStatusReportV01.TradeStatusAdviceDetails, com.tools20022.repository.area.tsrv.TradeStatusReportV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsrv.TradeStatusReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.TradeStatusReportV01.mmTradeStatusAdviceDetails, com.tools20022.repository.area.tsrv.TradeStatusReportV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsrv";
+						messageFunctionality = "018";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeStatusReport1 getTradeStatusAdviceDetails() {
+		return tradeStatusAdviceDetails;
+	}
+
+	public void setTradeStatusAdviceDetails(TradeStatusReport1 tradeStatusAdviceDetails) {
+		this.tradeStatusAdviceDetails = tradeStatusAdviceDetails;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

@@ -33,14 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateCancellation1#OriginalMessageInformation
- * MandateCancellation1.OriginalMessageInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateCancellation1#mmOriginalMessageInformation
+ * MandateCancellation1.mmOriginalMessageInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateCancellation1#CancellationReason
- * MandateCancellation1.CancellationReason}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateCancellation1#mmCancellationReason
+ * MandateCancellation1.mmCancellationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateCancellation1#OriginalMandate
- * MandateCancellation1.OriginalMandate}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateCancellation1#mmOriginalMandate
+ * MandateCancellation1.mmOriginalMandate}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,15 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV01#UnderlyingCancellationDetails
- * MandateCancellationRequestV01.UnderlyingCancellationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateCancellationRequestV01#mmUnderlyingCancellationDetails
+ * MandateCancellationRequestV01.mmUnderlyingCancellationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateCancellation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OriginalMessageInformation1 originalMessageInformation;
 	/**
 	 * Set of elements used to provide information on the original messsage.
 	 * <p>
@@ -98,7 +99,7 @@ public class MandateCancellation1 {
 	 * "Set of elements used to provide information on the original messsage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMessageInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateCancellation1.mmObject();
 			isDerived = false;
@@ -106,12 +107,13 @@ public class MandateCancellation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageInformation";
 			definition = "Set of elements used to provide information on the original messsage.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMessageInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
 		}
 	};
+	protected CancellationReasonInformation2 cancellationReason;
 	/**
 	 * Set of elements used to provide detailed information on the cancellation
 	 * reason.
@@ -142,7 +144,7 @@ public class MandateCancellation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateCancellation1.mmObject();
 			isDerived = false;
@@ -150,12 +152,13 @@ public class MandateCancellation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Set of elements used to provide detailed information on the cancellation reason.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationReasonInformation2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CancellationReasonInformation2.mmObject();
 		}
 	};
+	protected OriginalMandate1Choice originalMandate;
 	/**
 	 * Set of elements used to provide the original mandate data.
 	 * <p>
@@ -184,7 +187,7 @@ public class MandateCancellation1 {
 	 * "Set of elements used to provide the original mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateCancellation1.mmObject();
 			isDerived = false;
@@ -192,25 +195,49 @@ public class MandateCancellation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandate";
 			definition = "Set of elements used to provide the original mandate data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMandate1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OriginalMandate1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateCancellation1.OriginalMessageInformation, com.tools20022.repository.msg.MandateCancellation1.CancellationReason,
-						com.tools20022.repository.msg.MandateCancellation1.OriginalMandate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCancellationRequestV01.UnderlyingCancellationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateCancellation1.mmOriginalMessageInformation, com.tools20022.repository.msg.MandateCancellation1.mmCancellationReason,
+						com.tools20022.repository.msg.MandateCancellation1.mmOriginalMandate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCancellationRequestV01.mmUnderlyingCancellationDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateCancellation1";
 				definition = "Identifies the mandate to be cancelled.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OriginalMessageInformation1 getOriginalMessageInformation() {
+		return originalMessageInformation;
+	}
+
+	public void setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+		this.originalMessageInformation = originalMessageInformation;
+	}
+
+	public CancellationReasonInformation2 getCancellationReason() {
+		return cancellationReason;
+	}
+
+	public void setCancellationReason(com.tools20022.repository.msg.CancellationReasonInformation2 cancellationReason) {
+		this.cancellationReason = cancellationReason;
+	}
+
+	public OriginalMandate1Choice getOriginalMandate() {
+		return originalMandate;
+	}
+
+	public void setOriginalMandate(OriginalMandate1Choice originalMandate) {
+		this.originalMandate = originalMandate;
 	}
 }

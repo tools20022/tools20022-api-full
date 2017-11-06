@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageProtection1Code#EnvelopedMessage
- * MessageProtection1Code.EnvelopedMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageProtection1Code#mmEnvelopedMessage
+ * MessageProtection1Code.mmEnvelopedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageProtection1Code#MACBody
- * MessageProtection1Code.MACBody}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageProtection1Code#mmMACBody
+ * MessageProtection1Code.mmMACBody}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageProtection1Code#MACMessage
- * MessageProtection1Code.MACMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageProtection1Code#mmMACMessage
+ * MessageProtection1Code.mmMACMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageProtection1Code#NoProtection
- * MessageProtection1Code.NoProtection}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageProtection1Code#mmNoProtection
+ * MessageProtection1Code.mmNoProtection}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +81,7 @@ public class MessageProtection1Code extends MessageProtectionCode {
 	 * name} = "EnvelopedMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode EnvelopedMessage = new MMCode() {
+	public static final MMCode mmEnvelopedMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedMessage";
@@ -104,7 +104,7 @@ public class MessageProtection1Code extends MessageProtectionCode {
 	 * name} = "MACBody"</li>
 	 * </ul>
 	 */
-	public static final MMCode MACBody = new MMCode() {
+	public static final MMCode mmMACBody = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACBody";
@@ -127,7 +127,7 @@ public class MessageProtection1Code extends MessageProtectionCode {
 	 * name} = "MACMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode MACMessage = new MMCode() {
+	public static final MMCode mmMACMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACMessage";
@@ -150,7 +150,7 @@ public class MessageProtection1Code extends MessageProtectionCode {
 	 * name} = "NoProtection"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoProtection = new MMCode() {
+	public static final MMCode mmNoProtection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoProtection";
@@ -161,12 +161,12 @@ public class MessageProtection1Code extends MessageProtectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageProtection1Code";
 				definition = "Mechanism used to protect the message of the ATM protocol.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageProtection1Code.EnvelopedMessage, com.tools20022.repository.codeset.MessageProtection1Code.MACBody,
-						com.tools20022.repository.codeset.MessageProtection1Code.MACMessage, com.tools20022.repository.codeset.MessageProtection1Code.NoProtection);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageProtection1Code.mmEnvelopedMessage, com.tools20022.repository.codeset.MessageProtection1Code.mmMACBody,
+						com.tools20022.repository.codeset.MessageProtection1Code.mmMACMessage, com.tools20022.repository.codeset.MessageProtection1Code.mmNoProtection);
 				trace_lazy = () -> MessageProtectionCode.mmObject();
 			}
 		});

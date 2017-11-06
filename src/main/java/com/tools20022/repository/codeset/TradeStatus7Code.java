@@ -33,33 +33,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus7Code#Invalid
- * TradeStatus7Code.Invalid}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus7Code#Unmatched
- * TradeStatus7Code.Unmatched}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus7Code#Matched
- * TradeStatus7Code.Matched}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus7Code#mmInvalid
+ * TradeStatus7Code.mmInvalid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus7Code#SettlementMature
- * TradeStatus7Code.SettlementMature}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus7Code#Suspended
- * TradeStatus7Code.Suspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus7Code#mmUnmatched
+ * TradeStatus7Code.mmUnmatched}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus7Code#mmMatched
+ * TradeStatus7Code.mmMatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus7Code#SettlementMaturePending
- * TradeStatus7Code.SettlementMaturePending}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus7Code#mmSettlementMature
+ * TradeStatus7Code.mmSettlementMature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus7Code#PartialFix
- * TradeStatus7Code.PartialFix}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus7Code#mmSuspended
+ * TradeStatus7Code.mmSuspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus7Code#FixUnmatched
- * TradeStatus7Code.FixUnmatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus7Code#mmSettlementMaturePending
+ * TradeStatus7Code.mmSettlementMaturePending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus7Code#mmPartialFix
+ * TradeStatus7Code.mmPartialFix}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus7Code#mmFixUnmatched
+ * TradeStatus7Code.mmFixUnmatched}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,15 +104,15 @@ public class TradeStatus7Code extends TradeStatusCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus3Code#Invalid
-	 * TradeStatus3Code.Invalid}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus3Code#mmInvalid
+	 * TradeStatus3Code.mmInvalid}</li>
 	 * </ul>
 	 */
-	public static final MMCode Invalid = new MMCode() {
+	public static final MMCode mmInvalid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.TradeStatus3Code.Invalid;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.TradeStatus3Code.mmInvalid;
 			owner_lazy = () -> TradeStatus7Code.mmObject();
 		}
 	};
@@ -131,15 +133,15 @@ public class TradeStatus7Code extends TradeStatusCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus3Code#Unmatched
-	 * TradeStatus3Code.Unmatched}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus3Code#mmUnmatched
+	 * TradeStatus3Code.mmUnmatched}</li>
 	 * </ul>
 	 */
-	public static final MMCode Unmatched = new MMCode() {
+	public static final MMCode mmUnmatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.TradeStatus3Code.Unmatched;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.TradeStatus3Code.mmUnmatched;
 			owner_lazy = () -> TradeStatus7Code.mmObject();
 		}
 	};
@@ -160,15 +162,15 @@ public class TradeStatus7Code extends TradeStatusCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus3Code#Matched
-	 * TradeStatus3Code.Matched}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus3Code#mmMatched
+	 * TradeStatus3Code.mmMatched}</li>
 	 * </ul>
 	 */
-	public static final MMCode Matched = new MMCode() {
+	public static final MMCode mmMatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.TradeStatus3Code.Matched;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.TradeStatus3Code.mmMatched;
 			owner_lazy = () -> TradeStatus7Code.mmObject();
 		}
 	};
@@ -189,15 +191,15 @@ public class TradeStatus7Code extends TradeStatusCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus3Code#SettlementMature
-	 * TradeStatus3Code.SettlementMature}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus3Code#mmSettlementMature
+	 * TradeStatus3Code.mmSettlementMature}</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementMature = new MMCode() {
+	public static final MMCode mmSettlementMature = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMature";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.TradeStatus3Code.SettlementMature;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.TradeStatus3Code.mmSettlementMature;
 			owner_lazy = () -> TradeStatus7Code.mmObject();
 		}
 	};
@@ -218,15 +220,15 @@ public class TradeStatus7Code extends TradeStatusCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TradeStatus3Code#Suspended
-	 * TradeStatus3Code.Suspended}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TradeStatus3Code#mmSuspended
+	 * TradeStatus3Code.mmSuspended}</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspended = new MMCode() {
+	public static final MMCode mmSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.TradeStatus3Code.Suspended;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.TradeStatus3Code.mmSuspended;
 			owner_lazy = () -> TradeStatus7Code.mmObject();
 		}
 	};
@@ -246,7 +248,7 @@ public class TradeStatus7Code extends TradeStatusCode {
 	 * name} = "SettlementMaturePending"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementMaturePending = new MMCode() {
+	public static final MMCode mmSettlementMaturePending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMaturePending";
@@ -269,7 +271,7 @@ public class TradeStatus7Code extends TradeStatusCode {
 	 * name} = "PartialFix"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialFix = new MMCode() {
+	public static final MMCode mmPartialFix = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialFix";
@@ -292,7 +294,7 @@ public class TradeStatus7Code extends TradeStatusCode {
 	 * name} = "FixUnmatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode FixUnmatched = new MMCode() {
+	public static final MMCode mmFixUnmatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixUnmatched";
@@ -303,15 +305,15 @@ public class TradeStatus7Code extends TradeStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INVA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeStatus7Code";
 				definition = "Specifies the status of a trade in a central matching and settlement system.";
 				previousVersion_lazy = () -> TradeStatus3Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus7Code.Invalid, com.tools20022.repository.codeset.TradeStatus7Code.Unmatched, com.tools20022.repository.codeset.TradeStatus7Code.Matched,
-						com.tools20022.repository.codeset.TradeStatus7Code.SettlementMature, com.tools20022.repository.codeset.TradeStatus7Code.Suspended, com.tools20022.repository.codeset.TradeStatus7Code.SettlementMaturePending,
-						com.tools20022.repository.codeset.TradeStatus7Code.PartialFix, com.tools20022.repository.codeset.TradeStatus7Code.FixUnmatched);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus7Code.mmInvalid, com.tools20022.repository.codeset.TradeStatus7Code.mmUnmatched, com.tools20022.repository.codeset.TradeStatus7Code.mmMatched,
+						com.tools20022.repository.codeset.TradeStatus7Code.mmSettlementMature, com.tools20022.repository.codeset.TradeStatus7Code.mmSuspended, com.tools20022.repository.codeset.TradeStatus7Code.mmSettlementMaturePending,
+						com.tools20022.repository.codeset.TradeStatus7Code.mmPartialFix, com.tools20022.repository.codeset.TradeStatus7Code.mmFixUnmatched);
 				trace_lazy = () -> TradeStatusCode.mmObject();
 			}
 		});

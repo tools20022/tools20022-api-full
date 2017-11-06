@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.Undertaking1;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The UndertakingApplication message is sent by the party requesting issuance
@@ -60,21 +61,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.UndertakingApplicationV01#UndertakingApplicationDetails
- * UndertakingApplicationV01.UndertakingApplicationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.UndertakingApplicationV01#mmUndertakingApplicationDetails
+ * UndertakingApplicationV01.mmUndertakingApplicationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.UndertakingApplicationV01#InstructionsToBank
- * UndertakingApplicationV01.InstructionsToBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.UndertakingApplicationV01#mmInstructionsToBank
+ * UndertakingApplicationV01.mmInstructionsToBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.UndertakingApplicationV01#DigitalSignature
- * UndertakingApplicationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.UndertakingApplicationV01#mmDigitalSignature
+ * UndertakingApplicationV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsin.UndertakingApplicationV01#identifier
- * UndertakingApplicationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsin.005.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingApplicationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Undertaking1 undertakingApplicationDetails;
 	/**
 	 * Details of the application for an independent undertaking, such as a
 	 * demand guarantee or standby letter of credit, that provides financial
@@ -117,17 +117,18 @@ public class UndertakingApplicationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UndertakingApplicationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUndertakingApplicationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UdrtkgApplDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingApplicationDetails";
 			definition = "Details of the application for an independent undertaking, such as a demand guarantee or standby letter of credit, that provides financial assurance, to be collected on the presentation of documents that comply with its terms and conditions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Undertaking1.mmObject();
 		}
 	};
+	protected List<Max2000Text> instructionsToBank;
 	/**
 	 * Instructions specific to the bank receiving the message.
 	 * <p>
@@ -150,17 +151,18 @@ public class UndertakingApplicationV01 {
 	 * definition} = "Instructions specific to the bank receiving the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionsToBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionsToBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrsToBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionsToBank";
 			definition = "Instructions specific to the bank receiving the message.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the undertaking application.
 	 * <p>
@@ -184,42 +186,15 @@ public class UndertakingApplicationV01 {
 	 * definition} = "Digital signature of the undertaking application."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the undertaking application.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsin"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsin";
-			messageFunctionality = "005";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -233,11 +208,42 @@ public class UndertakingApplicationV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgAppl";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.UndertakingApplicationV01.UndertakingApplicationDetails, com.tools20022.repository.area.tsin.UndertakingApplicationV01.InstructionsToBank,
-						com.tools20022.repository.area.tsin.UndertakingApplicationV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsin.UndertakingApplicationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.UndertakingApplicationV01.mmUndertakingApplicationDetails,
+						com.tools20022.repository.area.tsin.UndertakingApplicationV01.mmInstructionsToBank, com.tools20022.repository.area.tsin.UndertakingApplicationV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsin";
+						messageFunctionality = "005";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Undertaking1 getUndertakingApplicationDetails() {
+		return undertakingApplicationDetails;
+	}
+
+	public void setUndertakingApplicationDetails(Undertaking1 undertakingApplicationDetails) {
+		this.undertakingApplicationDetails = undertakingApplicationDetails;
+	}
+
+	public List<Max2000Text> getInstructionsToBank() {
+		return instructionsToBank;
+	}
+
+	public void setInstructionsToBank(List<Max2000Text> instructionsToBank) {
+		this.instructionsToBank = instructionsToBank;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

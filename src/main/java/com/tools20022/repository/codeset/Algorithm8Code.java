@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm8Code#MGF1
- * Algorithm8Code.MGF1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm8Code#mmMGF1
+ * Algorithm8Code.mmMGF1}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class Algorithm8Code extends AlgorithmCode {
 	 * name} = "MGF1"</li>
 	 * </ul>
 	 */
-	public static final MMCode MGF1 = new MMCode() {
+	public static final MMCode mmMGF1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MGF1";
@@ -90,12 +90,12 @@ public class Algorithm8Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MGF1");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Algorithm8Code";
 				definition = "Mask generator functions of the RSAES-OAEP encryption algorithm (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm8Code.MGF1);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm8Code.mmMGF1);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

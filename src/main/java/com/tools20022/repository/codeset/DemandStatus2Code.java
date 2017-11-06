@@ -33,15 +33,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * DemandStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus2Code#Refused
- * DemandStatus2Code.Refused}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DemandStatus2Code#mmRefused
+ * DemandStatus2Code.mmRefused}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +78,7 @@ public class DemandStatus2Code extends DemandStatusCode {
 	 * name} = "Refused"</li>
 	 * </ul>
 	 */
-	public static final MMCode Refused = new MMCode() {
+	public static final MMCode mmRefused = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Refused";
@@ -88,12 +89,12 @@ public class DemandStatus2Code extends DemandStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REFD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DemandStatus2Code";
 				definition = "Specifies the status of the demand for payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandStatus2Code.Refused);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandStatus2Code.mmRefused);
 				trace_lazy = () -> DemandStatusCode.mmObject();
 			}
 		});

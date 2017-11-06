@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Authorisation1Choice#Code
- * Authorisation1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Authorisation1Choice#mmCode
+ * Authorisation1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Authorisation1Choice#Proprietary
- * Authorisation1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.Authorisation1Choice#mmProprietary
+ * Authorisation1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Authorisation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Authorisation1Code code;
 	/**
 	 * Specifies the authorisation, in a coded form.
 	 * <p>
@@ -89,7 +90,7 @@ public class Authorisation1Choice {
 	 * definition} = "Specifies the authorisation, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Authorisation1Choice.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class Authorisation1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the authorisation, in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Authorisation1Code.mmObject();
 		}
 	};
+	protected Max128Text proprietary;
 	/**
 	 * Specifies the authorisation, in a free text form.
 	 * <p>
@@ -129,7 +131,7 @@ public class Authorisation1Choice {
 	 * definition} = "Specifies the authorisation, in a free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Authorisation1Choice.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class Authorisation1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the authorisation, in a free text form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max128Text.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class Authorisation1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Authorisation1Choice.Code, com.tools20022.repository.choice.Authorisation1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Authorisation1Choice.mmCode, com.tools20022.repository.choice.Authorisation1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Authorisation1Choice";
 				definition = "Provides the details on the user identification or any user key that allows to check if the initiating party is allowed to issue the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Authorisation1Code getCode() {
+		return code;
+	}
+
+	public void setCode(Authorisation1Code code) {
+		this.code = code;
+	}
+
+	public Max128Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max128Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

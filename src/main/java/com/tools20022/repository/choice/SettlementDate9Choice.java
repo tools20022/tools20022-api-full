@@ -31,18 +31,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.SettlementDate9Choice#Date
- * SettlementDate9Choice.Date}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementDate9Choice#DateCode
- * SettlementDate9Choice.DateCode}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementDate9Choice#mmDate
+ * SettlementDate9Choice.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementDate9Choice#mmDateCode
+ * SettlementDate9Choice.mmDateCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementDate9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Date in ISO format.
 	 * <p>
@@ -89,11 +91,11 @@ public class SettlementDate9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SettlementDate1Choice#Date
-	 * SettlementDate1Choice.Date}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate1Choice#mmDate
+	 * SettlementDate1Choice.mmDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementDate9Choice.mmObject();
 			isDerived = false;
@@ -101,12 +103,13 @@ public class SettlementDate9Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementDate1Choice.Date;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementDate1Choice.mmDate;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected SettlementDateCode7Choice dateCode;
 	/**
 	 * Date and time at which the securities are to be delivered or received.
 	 * <p>
@@ -120,8 +123,8 @@ public class SettlementDate9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
-	 * Obligation.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+	 * Obligation.mmRequestedSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,31 +145,31 @@ public class SettlementDate9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SettlementDate1Choice#DateCode
-	 * SettlementDate1Choice.DateCode}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate1Choice#mmDateCode
+	 * SettlementDate1Choice.mmDateCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> SettlementDate9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementDate;
 			isDerived = false;
 			xmlTag = "DtCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Date and time at which the securities are to be delivered or received.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementDate1Choice.DateCode;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementDate1Choice.mmDateCode;
 			maxOccurs = 1;
-			complexType_lazy = () -> SettlementDateCode7Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.SettlementDateCode7Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDate9Choice.Date, com.tools20022.repository.choice.SettlementDate9Choice.DateCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDate9Choice.mmDate, com.tools20022.repository.choice.SettlementDate9Choice.mmDateCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate9Choice";
 				definition = "Choice of format for the settlement date.";
@@ -174,5 +177,21 @@ public class SettlementDate9Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+		this.date = date;
+	}
+
+	public SettlementDateCode7Choice getDateCode() {
+		return dateCode;
+	}
+
+	public void setDateCode(com.tools20022.repository.choice.SettlementDateCode7Choice dateCode) {
+		this.dateCode = dateCode;
 	}
 }

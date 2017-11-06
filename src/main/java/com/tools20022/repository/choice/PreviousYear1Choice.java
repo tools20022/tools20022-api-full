@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.PreviousAll;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between selected investment plans issued during previous years or the
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PreviousYear1Choice#AllPreviousYears
- * PreviousYear1Choice.AllPreviousYears}</li>
+ * {@linkplain com.tools20022.repository.choice.PreviousYear1Choice#mmAllPreviousYears
+ * PreviousYear1Choice.mmAllPreviousYears}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PreviousYear1Choice#SpecificPreviousYears
- * PreviousYear1Choice.SpecificPreviousYears}</li>
+ * {@linkplain com.tools20022.repository.choice.PreviousYear1Choice#mmSpecificPreviousYears
+ * PreviousYear1Choice.mmSpecificPreviousYears}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PreviousYear1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PreviousAll allPreviousYears;
 	/**
 	 * Selection ot the entirety of the investment plans.
 	 * <p>
@@ -98,20 +100,21 @@ public class PreviousYear1Choice {
 	 * definition} = "Selection ot the entirety of the investment plans."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllPreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllPreviousYears = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PreviousYear1Choice.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> PreviousYear1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllPrvsYrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllPreviousYears";
 			definition = "Selection ot the entirety of the investment plans.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PreviousAll.mmObject();
 		}
 	};
+	protected List<ISOYear> specificPreviousYears;
 	/**
 	 * Selection of investment plans issued during previous years.
 	 * <p>
@@ -124,8 +127,8 @@ public class PreviousYear1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#TransferredYear
-	 * PortfolioTransfer.TransferredYear}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredYear
+	 * PortfolioTransfer.mmTransferredYear}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,10 +148,10 @@ public class PreviousYear1Choice {
 	 * "Selection of investment plans issued during previous years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SpecificPreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSpecificPreviousYears = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmTransferredYear;
 			componentContext_lazy = () -> PreviousYear1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.TransferredYear;
 			isDerived = false;
 			xmlTag = "SpcfcPrvsYrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,14 +165,30 @@ public class PreviousYear1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreviousYear1Choice.AllPreviousYears, com.tools20022.repository.choice.PreviousYear1Choice.SpecificPreviousYears);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreviousYear1Choice.mmAllPreviousYears, com.tools20022.repository.choice.PreviousYear1Choice.mmSpecificPreviousYears);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PreviousYear1Choice";
 				definition = "Choice between selected investment plans issued during previous years or the entirety of the investment plans.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PreviousAll getAllPreviousYears() {
+		return allPreviousYears;
+	}
+
+	public void setAllPreviousYears(PreviousAll allPreviousYears) {
+		this.allPreviousYears = allPreviousYears;
+	}
+
+	public List<ISOYear> getSpecificPreviousYears() {
+		return specificPreviousYears;
+	}
+
+	public void setSpecificPreviousYears(List<ISOYear> specificPreviousYears) {
+		this.specificPreviousYears = specificPreviousYears;
 	}
 }

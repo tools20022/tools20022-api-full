@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.BookEntry;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Includes a set of dates (e.g. credit date) related to settlement of the
@@ -34,14 +35,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingDateDetails1#BookDate
- * FinancingDateDetails1.BookDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingDateDetails1#CreditDate
- * FinancingDateDetails1.CreditDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingDateDetails1#mmBookDate
+ * FinancingDateDetails1.mmBookDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingDateDetails1#DebitDate
- * FinancingDateDetails1.DebitDate}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingDateDetails1#mmCreditDate
+ * FinancingDateDetails1.mmCreditDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancingDateDetails1#mmDebitDate
+ * FinancingDateDetails1.mmDebitDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancingDateDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ISODate> bookDate;
 	/**
 	 * Date on which the financing transaction has been booked in an account.
 	 * <p>
@@ -78,8 +81,8 @@ public class FinancingDateDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#EntryDate
-	 * Entry.EntryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmEntryDate
+	 * Entry.mmEntryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,10 +102,10 @@ public class FinancingDateDetails1 {
 	 * "Date on which the financing transaction has been booked in an account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BookDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBookDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
 			componentContext_lazy = () -> FinancingDateDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.EntryDate;
 			isDerived = false;
 			xmlTag = "BookDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,6 +115,7 @@ public class FinancingDateDetails1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate creditDate;
 	/**
 	 * Date on which a financed amount has been credited.
 	 * <p>
@@ -124,8 +128,8 @@ public class FinancingDateDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#EntryDate
-	 * Entry.EntryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmEntryDate
+	 * Entry.mmEntryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,20 +148,21 @@ public class FinancingDateDetails1 {
 	 * definition} = "Date on which a financed amount has been credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
 			componentContext_lazy = () -> FinancingDateDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.EntryDate;
 			isDerived = false;
 			xmlTag = "CdtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDate";
 			definition = "Date on which a financed amount has been credited.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate debitDate;
 	/**
 	 * Date on which a financed amount has been debited.
 	 * <p>
@@ -170,8 +175,8 @@ public class FinancingDateDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#EntryDate
-	 * Entry.EntryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmEntryDate
+	 * Entry.mmEntryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -190,17 +195,17 @@ public class FinancingDateDetails1 {
 	 * definition} = "Date on which a financed amount has been debited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DebitDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebitDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
 			componentContext_lazy = () -> FinancingDateDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.EntryDate;
 			isDerived = false;
 			xmlTag = "DbtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitDate";
 			definition = "Date on which a financed amount has been debited.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -208,15 +213,39 @@ public class FinancingDateDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingDateDetails1.BookDate, com.tools20022.repository.msg.FinancingDateDetails1.CreditDate,
-						com.tools20022.repository.msg.FinancingDateDetails1.DebitDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingDateDetails1.mmBookDate, com.tools20022.repository.msg.FinancingDateDetails1.mmCreditDate,
+						com.tools20022.repository.msg.FinancingDateDetails1.mmDebitDate);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancingDateDetails1";
 				definition = "Includes a set of dates (e.g. credit date) related to settlement of the financing amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ISODate> getBookDate() {
+		return bookDate;
+	}
+
+	public void setBookDate(List<ISODate> bookDate) {
+		this.bookDate = bookDate;
+	}
+
+	public ISODate getCreditDate() {
+		return creditDate;
+	}
+
+	public void setCreditDate(ISODate creditDate) {
+		this.creditDate = creditDate;
+	}
+
+	public ISODate getDebitDate() {
+		return debitDate;
+	}
+
+	public void setDebitDate(ISODate debitDate) {
+		this.debitDate = debitDate;
 	}
 }

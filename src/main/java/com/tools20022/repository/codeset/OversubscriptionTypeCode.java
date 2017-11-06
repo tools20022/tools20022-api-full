@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OversubscriptionTypeCode#Unlimited
- * OversubscriptionTypeCode.Unlimited}</li>
+ * {@linkplain com.tools20022.repository.codeset.OversubscriptionTypeCode#mmUnlimited
+ * OversubscriptionTypeCode.mmUnlimited}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OversubscriptionTypeCode#LimitedByQuantityOrPercentage
- * OversubscriptionTypeCode.LimitedByQuantityOrPercentage}</li>
+ * {@linkplain com.tools20022.repository.codeset.OversubscriptionTypeCode#mmLimitedByQuantityOrPercentage
+ * OversubscriptionTypeCode.mmLimitedByQuantityOrPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OversubscriptionTypeCode#NoOversubscription
- * OversubscriptionTypeCode.NoOversubscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.OversubscriptionTypeCode#mmNoOversubscription
+ * OversubscriptionTypeCode.mmNoOversubscription}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class OversubscriptionTypeCode {
 	 * definition} = "Unlimited oversubscription."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unlimited = new MMCode() {
+	public static final MMCode mmUnlimited = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unlimited";
@@ -122,7 +122,7 @@ public class OversubscriptionTypeCode {
 	 * definition} = "Limited subscription by quantity or percentage."</li>
 	 * </ul>
 	 */
-	public static final MMCode LimitedByQuantityOrPercentage = new MMCode() {
+	public static final MMCode mmLimitedByQuantityOrPercentage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedByQuantityOrPercentage";
@@ -152,7 +152,7 @@ public class OversubscriptionTypeCode {
 	 * definition} = "No oversubscription is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoOversubscription = new MMCode() {
+	public static final MMCode mmNoOversubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoOversubscription";
@@ -165,13 +165,13 @@ public class OversubscriptionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNLD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OversubscriptionTypeCode";
 				definition = "Specifies the oversubscription type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OversubscriptionTypeCode.Unlimited, com.tools20022.repository.codeset.OversubscriptionTypeCode.LimitedByQuantityOrPercentage,
-						com.tools20022.repository.codeset.OversubscriptionTypeCode.NoOversubscription);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OversubscriptionTypeCode.mmUnlimited, com.tools20022.repository.codeset.OversubscriptionTypeCode.mmLimitedByQuantityOrPercentage,
+						com.tools20022.repository.codeset.OversubscriptionTypeCode.mmNoOversubscription);
 				derivation_lazy = () -> Arrays.asList(OversubscriptionType1Code.mmObject());
 			}
 		});

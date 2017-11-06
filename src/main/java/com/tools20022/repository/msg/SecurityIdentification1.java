@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -38,25 +39,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#Identification
- * SecurityIdentification1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityIdentification1#Name
- * SecurityIdentification1.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#mmIdentification
+ * SecurityIdentification1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityIdentification1#mmName
+ * SecurityIdentification1.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#ClassType
- * SecurityIdentification1.ClassType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#mmClassType
+ * SecurityIdentification1.mmClassType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#UmbrellaName
- * SecurityIdentification1.UmbrellaName}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#mmUmbrellaName
+ * SecurityIdentification1.mmUmbrellaName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#BaseCurrency
- * SecurityIdentification1.BaseCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#mmBaseCurrency
+ * SecurityIdentification1.mmBaseCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#CountryOfDomicile
- * SecurityIdentification1.CountryOfDomicile}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#mmCountryOfDomicile
+ * SecurityIdentification1.mmCountryOfDomicile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#RegisteredDistributionCountry
- * SecurityIdentification1.RegisteredDistributionCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification1#mmRegisteredDistributionCountry
+ * SecurityIdentification1.mmRegisteredDistributionCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification7 identification;
 	/**
 	 * Identification of a security by an ISIN.
 	 * <p>
@@ -116,20 +118,21 @@ public class SecurityIdentification1 {
 	 * definition} = "Identification of a security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> SecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security by an ISIN.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected Max350Text name;
 	/**
 	 * Name of the financial instrument in free format text.
 	 * <p>
@@ -142,8 +145,8 @@ public class SecurityIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#FullName
-	 * LocalName.FullName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+	 * LocalName.mmFullName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,20 +165,21 @@ public class SecurityIdentification1 {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.FullName;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text classType;
 	/**
 	 * Features of units offered by a fund. For example, a unit may have a
 	 * specific load structure, eg, front end or back end, an income policy, eg,
@@ -192,8 +196,8 @@ public class SecurityIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#ClassType
-	 * InvestmentFundClass.ClassType}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmClassType
+	 * InvestmentFundClass.mmClassType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -214,20 +218,21 @@ public class SecurityIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClassType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmClassType;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.ClassType;
 			isDerived = false;
 			xmlTag = "ClssTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassType";
 			definition = "Features of units offered by a fund. For example, a unit may have a specific load structure, eg, front end or back end, an income policy, eg, pay out or accumulate, or a trailer policy, eg, with or without. Fund classes are typically denoted by a single character, eg, 'Class A', 'Class 2'.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text umbrellaName;
 	/**
 	 * Name of the umbrella fund in which financial instrument is contained.
 	 * <p>
@@ -240,8 +245,8 @@ public class SecurityIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UmbrellaFund#Name
-	 * UmbrellaFund.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.UmbrellaFund#mmName
+	 * UmbrellaFund.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -261,20 +266,21 @@ public class SecurityIdentification1 {
 	 * "Name of the umbrella fund in which financial instrument is contained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UmbrellaName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUmbrellaName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmName;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.Name;
 			isDerived = false;
 			xmlTag = "UmbrllNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UmbrellaName";
 			definition = "Name of the umbrella fund in which financial instrument is contained.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode baseCurrency;
 	/**
 	 * Currency of the investment fund class.
 	 * <p>
@@ -288,8 +294,8 @@ public class SecurityIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#TradingCurrency
-	 * InvestmentFundClass.TradingCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmTradingCurrency
+	 * InvestmentFundClass.mmTradingCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -308,20 +314,21 @@ public class SecurityIdentification1 {
 	 * definition} = "Currency of the investment fund class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmTradingCurrency;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.TradingCurrency;
 			isDerived = false;
 			xmlTag = "BaseCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrency";
 			definition = "Currency of the investment fund class.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected CountryCode countryOfDomicile;
 	/**
 	 * Country where the fund has legal domicile as reflected in the ISIN
 	 * classification.
@@ -335,8 +342,8 @@ public class SecurityIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#DomicileCountry
-	 * InvestmentFund.DomicileCountry}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmDomicileCountry
+	 * InvestmentFund.mmDomicileCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -357,20 +364,21 @@ public class SecurityIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfDomicile = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfDomicile = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmDomicileCountry;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.DomicileCountry;
 			isDerived = false;
 			xmlTag = "CtryOfDmcl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfDomicile";
 			definition = "Country where the fund has legal domicile as reflected in the ISIN classification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected List<CountryCode> registeredDistributionCountry;
 	/**
 	 * Countries where the fund is registered for distribution.
 	 * <p>
@@ -383,8 +391,8 @@ public class SecurityIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#RegisteredDistributionCountry
-	 * Security.RegisteredDistributionCountry}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRegisteredDistributionCountry
+	 * Security.mmRegisteredDistributionCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -403,10 +411,10 @@ public class SecurityIdentification1 {
 	 * definition} = "Countries where the fund is registered for distribution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegisteredDistributionCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegisteredDistributionCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegisteredDistributionCountry;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.RegisteredDistributionCountry;
 			isDerived = false;
 			xmlTag = "RegdDstrbtnCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -420,16 +428,72 @@ public class SecurityIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification1.Identification, com.tools20022.repository.msg.SecurityIdentification1.Name,
-						com.tools20022.repository.msg.SecurityIdentification1.ClassType, com.tools20022.repository.msg.SecurityIdentification1.UmbrellaName, com.tools20022.repository.msg.SecurityIdentification1.BaseCurrency,
-						com.tools20022.repository.msg.SecurityIdentification1.CountryOfDomicile, com.tools20022.repository.msg.SecurityIdentification1.RegisteredDistributionCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification1.mmIdentification, com.tools20022.repository.msg.SecurityIdentification1.mmName,
+						com.tools20022.repository.msg.SecurityIdentification1.mmClassType, com.tools20022.repository.msg.SecurityIdentification1.mmUmbrellaName, com.tools20022.repository.msg.SecurityIdentification1.mmBaseCurrency,
+						com.tools20022.repository.msg.SecurityIdentification1.mmCountryOfDomicile, com.tools20022.repository.msg.SecurityIdentification1.mmRegisteredDistributionCountry);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification1";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification7 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.SecurityIdentification7 identification) {
+		this.identification = identification;
+	}
+
+	public Max350Text getName() {
+		return name;
+	}
+
+	public void setName(Max350Text name) {
+		this.name = name;
+	}
+
+	public Max35Text getClassType() {
+		return classType;
+	}
+
+	public void setClassType(Max35Text classType) {
+		this.classType = classType;
+	}
+
+	public Max35Text getUmbrellaName() {
+		return umbrellaName;
+	}
+
+	public void setUmbrellaName(Max35Text umbrellaName) {
+		this.umbrellaName = umbrellaName;
+	}
+
+	public ActiveCurrencyCode getBaseCurrency() {
+		return baseCurrency;
+	}
+
+	public void setBaseCurrency(ActiveCurrencyCode baseCurrency) {
+		this.baseCurrency = baseCurrency;
+	}
+
+	public CountryCode getCountryOfDomicile() {
+		return countryOfDomicile;
+	}
+
+	public void setCountryOfDomicile(CountryCode countryOfDomicile) {
+		this.countryOfDomicile = countryOfDomicile;
+	}
+
+	public List<CountryCode> getRegisteredDistributionCountry() {
+		return registeredDistributionCountry;
+	}
+
+	public void setRegisteredDistributionCountry(List<CountryCode> registeredDistributionCountry) {
+		this.registeredDistributionCountry = registeredDistributionCountry;
 	}
 }

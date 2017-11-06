@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentAssessment1Code#Approval
- * POIComponentAssessment1Code.Approval}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentAssessment1Code#mmApproval
+ * POIComponentAssessment1Code.mmApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentAssessment1Code#Certification
- * POIComponentAssessment1Code.Certification}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentAssessment1Code#mmCertification
+ * POIComponentAssessment1Code.mmCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POIComponentAssessment1Code#Evaluation
- * POIComponentAssessment1Code.Evaluation}</li>
+ * {@linkplain com.tools20022.repository.codeset.POIComponentAssessment1Code#mmEvaluation
+ * POIComponentAssessment1Code.mmEvaluation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class POIComponentAssessment1Code extends POIComponentAssessmentCode {
 	 * name} = "Approval"</li>
 	 * </ul>
 	 */
-	public static final MMCode Approval = new MMCode() {
+	public static final MMCode mmApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approval";
@@ -108,7 +108,7 @@ public class POIComponentAssessment1Code extends POIComponentAssessmentCode {
 	 * name} = "Certification"</li>
 	 * </ul>
 	 */
-	public static final MMCode Certification = new MMCode() {
+	public static final MMCode mmCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certification";
@@ -131,7 +131,7 @@ public class POIComponentAssessment1Code extends POIComponentAssessmentCode {
 	 * name} = "Evaluation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Evaluation = new MMCode() {
+	public static final MMCode mmEvaluation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Evaluation";
@@ -142,13 +142,13 @@ public class POIComponentAssessment1Code extends POIComponentAssessmentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("APPL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "POIComponentAssessment1Code";
 				definition = "Type of assessment of a POI component (Point of Interaction).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentAssessment1Code.Approval, com.tools20022.repository.codeset.POIComponentAssessment1Code.Certification,
-						com.tools20022.repository.codeset.POIComponentAssessment1Code.Evaluation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentAssessment1Code.mmApproval, com.tools20022.repository.codeset.POIComponentAssessment1Code.mmCertification,
+						com.tools20022.repository.codeset.POIComponentAssessment1Code.mmEvaluation);
 				trace_lazy = () -> POIComponentAssessmentCode.mmObject();
 			}
 		});

@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType4Code#StockIndex
- * UnderlyingEquityType4Code.StockIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType4Code#mmStockIndex
+ * UnderlyingEquityType4Code.mmStockIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType4Code#DividendIndex
- * UnderlyingEquityType4Code.DividendIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType4Code#mmDividendIndex
+ * UnderlyingEquityType4Code.mmDividendIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType4Code#Other
- * UnderlyingEquityType4Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType4Code#mmOther
+ * UnderlyingEquityType4Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType4Code#VolatilityIndex
- * UnderlyingEquityType4Code.VolatilityIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType4Code#mmVolatilityIndex
+ * UnderlyingEquityType4Code.mmVolatilityIndex}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +81,7 @@ public class UnderlyingEquityType4Code extends UnderlyingTypeV2Code {
 	 * name} = "StockIndex"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockIndex = new MMCode() {
+	public static final MMCode mmStockIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockIndex";
@@ -104,7 +104,7 @@ public class UnderlyingEquityType4Code extends UnderlyingTypeV2Code {
 	 * name} = "DividendIndex"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendIndex = new MMCode() {
+	public static final MMCode mmDividendIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendIndex";
@@ -127,7 +127,7 @@ public class UnderlyingEquityType4Code extends UnderlyingTypeV2Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -150,7 +150,7 @@ public class UnderlyingEquityType4Code extends UnderlyingTypeV2Code {
 	 * name} = "VolatilityIndex"</li>
 	 * </ul>
 	 */
-	public static final MMCode VolatilityIndex = new MMCode() {
+	public static final MMCode mmVolatilityIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolatilityIndex";
@@ -161,12 +161,12 @@ public class UnderlyingEquityType4Code extends UnderlyingTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingEquityType4Code";
 				definition = "Specifies the type for a contract for equity derivatives.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingEquityType4Code.StockIndex, com.tools20022.repository.codeset.UnderlyingEquityType4Code.DividendIndex,
-						com.tools20022.repository.codeset.UnderlyingEquityType4Code.Other, com.tools20022.repository.codeset.UnderlyingEquityType4Code.VolatilityIndex);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingEquityType4Code.mmStockIndex, com.tools20022.repository.codeset.UnderlyingEquityType4Code.mmDividendIndex,
+						com.tools20022.repository.codeset.UnderlyingEquityType4Code.mmOther, com.tools20022.repository.codeset.UnderlyingEquityType4Code.mmVolatilityIndex);
 				trace_lazy = () -> UnderlyingTypeV2Code.mmObject();
 			}
 		});

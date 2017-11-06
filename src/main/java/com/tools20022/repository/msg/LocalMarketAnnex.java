@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.TradingMarket;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Processing information specific to a local market.
@@ -34,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LocalMarketAnnex#Country
- * LocalMarketAnnex.Country}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LocalMarketAnnex#mmCountry
+ * LocalMarketAnnex.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex#LocalOrderDesk
- * LocalMarketAnnex.LocalOrderDesk}</li>
+ * {@linkplain com.tools20022.repository.msg.LocalMarketAnnex#mmLocalOrderDesk
+ * LocalMarketAnnex.mmLocalOrderDesk}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LocalMarketAnnex {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CountryCode> country;
 	/**
 	 * Country in which the processing characteristic applies.
 	 * <p>
@@ -74,7 +76,8 @@ public class LocalMarketAnnex {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,10 +96,10 @@ public class LocalMarketAnnex {
 	 * definition} = "Country in which the processing characteristic applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> LocalMarketAnnex.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,6 +109,7 @@ public class LocalMarketAnnex {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected OrderDeskContactDetails localOrderDesk;
 	/**
 	 * Contact information for the local fund order desk.
 	 * <p>
@@ -118,8 +122,8 @@ public class LocalMarketAnnex {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#ContactPoint
-	 * Party.ContactPoint}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmContactPoint
+	 * Party.mmContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,33 +142,49 @@ public class LocalMarketAnnex {
 	 * definition} = "Contact information for the local fund order desk."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LocalOrderDesk = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLocalOrderDesk = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
 			componentContext_lazy = () -> LocalMarketAnnex.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.ContactPoint;
 			isDerived = false;
 			xmlTag = "LclOrdrDsk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalOrderDesk";
 			definition = "Contact information for the local fund order desk.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrderDeskContactDetails.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalMarketAnnex.Country, com.tools20022.repository.msg.LocalMarketAnnex.LocalOrderDesk);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalMarketAnnex.mmCountry, com.tools20022.repository.msg.LocalMarketAnnex.mmLocalOrderDesk);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LocalMarketAnnex";
 				definition = "Processing information specific to a local market.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CountryCode> getCountry() {
+		return country;
+	}
+
+	public void setCountry(List<CountryCode> country) {
+		this.country = country;
+	}
+
+	public OrderDeskContactDetails getLocalOrderDesk() {
+		return localOrderDesk;
+	}
+
+	public void setLocalOrderDesk(com.tools20022.repository.msg.OrderDeskContactDetails localOrderDesk) {
+		this.localOrderDesk = localOrderDesk;
 	}
 }

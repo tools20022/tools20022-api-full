@@ -30,41 +30,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#CashDividend
- * ReinvestmentIncomeClassificationCode.CashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmCashDividend
+ * ReinvestmentIncomeClassificationCode.mmCashDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#CashDividendOnIncreasedShares
- * ReinvestmentIncomeClassificationCode.CashDividendOnIncreasedShares}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmCashDividendOnIncreasedShares
+ * ReinvestmentIncomeClassificationCode.mmCashDividendOnIncreasedShares}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#CashDividendTaxUnfavorable
- * ReinvestmentIncomeClassificationCode.CashDividendTaxUnfavorable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmCashDividendTaxUnfavorable
+ * ReinvestmentIncomeClassificationCode.mmCashDividendTaxUnfavorable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#CashDividendTaxFavorable
- * ReinvestmentIncomeClassificationCode.CashDividendTaxFavorable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmCashDividendTaxFavorable
+ * ReinvestmentIncomeClassificationCode.mmCashDividendTaxFavorable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#CashDividendTaxExempt
- * ReinvestmentIncomeClassificationCode.CashDividendTaxExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmCashDividendTaxExempt
+ * ReinvestmentIncomeClassificationCode.mmCashDividendTaxExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#CashDividendSpecial
- * ReinvestmentIncomeClassificationCode.CashDividendSpecial}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmCashDividendSpecial
+ * ReinvestmentIncomeClassificationCode.mmCashDividendSpecial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#Interest
- * ReinvestmentIncomeClassificationCode.Interest}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmInterest
+ * ReinvestmentIncomeClassificationCode.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#Principal
- * ReinvestmentIncomeClassificationCode.Principal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmPrincipal
+ * ReinvestmentIncomeClassificationCode.mmPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#CapitalGains
- * ReinvestmentIncomeClassificationCode.CapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmCapitalGains
+ * ReinvestmentIncomeClassificationCode.mmCapitalGains}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#LongTermCapitalGains
- * ReinvestmentIncomeClassificationCode.LongTermCapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmLongTermCapitalGains
+ * ReinvestmentIncomeClassificationCode.mmLongTermCapitalGains}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#ShortTermCapitalGains
- * ReinvestmentIncomeClassificationCode.ShortTermCapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmShortTermCapitalGains
+ * ReinvestmentIncomeClassificationCode.mmShortTermCapitalGains}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#ReturnOfCapital
- * ReinvestmentIncomeClassificationCode.ReturnOfCapital}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode#mmReturnOfCapital
+ * ReinvestmentIncomeClassificationCode.mmReturnOfCapital}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -81,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -126,7 +126,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * "Cash proceeds being reinvested is classified as cash dividend."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividend = new MMCode() {
+	public static final MMCode mmCashDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
@@ -159,7 +159,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividendOnIncreasedShares = new MMCode() {
+	public static final MMCode mmCashDividendOnIncreasedShares = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividendOnIncreasedShares";
@@ -193,7 +193,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividendTaxUnfavorable = new MMCode() {
+	public static final MMCode mmCashDividendTaxUnfavorable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividendTaxUnfavorable";
@@ -227,7 +227,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividendTaxFavorable = new MMCode() {
+	public static final MMCode mmCashDividendTaxFavorable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividendTaxFavorable";
@@ -261,7 +261,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividendTaxExempt = new MMCode() {
+	public static final MMCode mmCashDividendTaxExempt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividendTaxExempt";
@@ -293,7 +293,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividendSpecial = new MMCode() {
+	public static final MMCode mmCashDividendSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividendSpecial";
@@ -324,7 +324,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Interest = new MMCode() {
+	public static final MMCode mmInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
@@ -355,7 +355,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * "Cash proceeds being reinvested is classified as principal."</li>
 	 * </ul>
 	 */
-	public static final MMCode Principal = new MMCode() {
+	public static final MMCode mmPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Principal";
@@ -386,7 +386,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * "Cash proceeds being reinvested is classified as capital gains."</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalGains = new MMCode() {
+	public static final MMCode mmCapitalGains = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGains";
@@ -418,7 +418,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LongTermCapitalGains = new MMCode() {
+	public static final MMCode mmLongTermCapitalGains = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongTermCapitalGains";
@@ -450,7 +450,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ShortTermCapitalGains = new MMCode() {
+	public static final MMCode mmShortTermCapitalGains = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortTermCapitalGains";
@@ -481,7 +481,7 @@ public class ReinvestmentIncomeClassificationCode {
 	 * "Cash proceeds being reinvested is classified as return of capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReturnOfCapital = new MMCode() {
+	public static final MMCode mmReturnOfCapital = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnOfCapital";
@@ -494,17 +494,17 @@ public class ReinvestmentIncomeClassificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DVCA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReinvestmentIncomeClassificationCode";
 				definition = "Specifies the type of cash proceeds that the holder is eligible to reinvest.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.CashDividend, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.CashDividendOnIncreasedShares,
-						com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.CashDividendTaxUnfavorable, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.CashDividendTaxFavorable,
-						com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.CashDividendTaxExempt, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.CashDividendSpecial,
-						com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.Interest, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.Principal,
-						com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.CapitalGains, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.LongTermCapitalGains,
-						com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.ShortTermCapitalGains, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.ReturnOfCapital);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmCashDividend, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmCashDividendOnIncreasedShares,
+						com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmCashDividendTaxUnfavorable, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmCashDividendTaxFavorable,
+						com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmCashDividendTaxExempt, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmCashDividendSpecial,
+						com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmInterest, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmPrincipal,
+						com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmCapitalGains, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmLongTermCapitalGains,
+						com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmShortTermCapitalGains, com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmReturnOfCapital);
 				derivation_lazy = () -> Arrays.asList(ReinvestmentIncomeClassification1Code.mmObject(), ReinvestmentIncomeClassification2Code.mmObject());
 			}
 		});

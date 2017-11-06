@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentName1#ISOShortName
- * FinancialInstrumentName1.ISOShortName}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentName1#mmISOShortName
+ * FinancialInstrumentName1.mmISOShortName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentName1#ISOLongName
- * FinancialInstrumentName1.ISOLongName}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentName1#mmISOLongName
+ * FinancialInstrumentName1.mmISOLongName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentName1#ValidFrom
- * FinancialInstrumentName1.ValidFrom}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentName1#mmValidFrom
+ * FinancialInstrumentName1.mmValidFrom}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentName1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text iSOShortName;
 	/**
 	 * Short name of the security expressed as ISO 18773/18774.
 	 * <p>
@@ -78,8 +79,8 @@ public class FinancialInstrumentName1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#ShortName
-	 * LocalName.ShortName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmShortName
+	 * LocalName.mmShortName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class FinancialInstrumentName1 {
 	 * definition} = "Short name of the security expressed as ISO 18773/18774."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISOShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISOShortName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmShortName;
 			componentContext_lazy = () -> FinancialInstrumentName1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.ShortName;
 			isDerived = false;
 			xmlTag = "ISOShrtNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOShortName";
 			definition = "Short name of the security expressed as ISO 18773/18774.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text iSOLongName;
 	/**
 	 * Name of the security.
 	 * <p>
@@ -124,8 +126,8 @@ public class FinancialInstrumentName1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#FullName
-	 * LocalName.FullName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+	 * LocalName.mmFullName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,20 +146,21 @@ public class FinancialInstrumentName1 {
 	 * definition} = "Name of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISOLongName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISOLongName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
 			componentContext_lazy = () -> FinancialInstrumentName1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.FullName;
 			isDerived = false;
 			xmlTag = "ISOLngNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOLongName";
 			definition = "Name of the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice validFrom;
 	/**
 	 * Defines the date since when the name of the security is valid.
 	 * <p>
@@ -171,8 +174,8 @@ public class FinancialInstrumentName1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,17 +195,17 @@ public class FinancialInstrumentName1 {
 	 * "Defines the date since when the name of the security is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> FinancialInstrumentName1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Defines the date since when the name of the security is valid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -210,15 +213,39 @@ public class FinancialInstrumentName1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentName1.ISOShortName, com.tools20022.repository.msg.FinancialInstrumentName1.ISOLongName,
-						com.tools20022.repository.msg.FinancialInstrumentName1.ValidFrom);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentName1.mmISOShortName, com.tools20022.repository.msg.FinancialInstrumentName1.mmISOLongName,
+						com.tools20022.repository.msg.FinancialInstrumentName1.mmValidFrom);
 				trace_lazy = () -> LocalName.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentName1";
 				definition = "Name of the security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getISOShortName() {
+		return iSOShortName;
+	}
+
+	public void setISOShortName(Max35Text iSOShortName) {
+		this.iSOShortName = iSOShortName;
+	}
+
+	public Max350Text getISOLongName() {
+		return iSOLongName;
+	}
+
+	public void setISOLongName(Max350Text iSOLongName) {
+		this.iSOLongName = iSOLongName;
+	}
+
+	public DateAndDateTimeChoice getValidFrom() {
+		return validFrom;
+	}
+
+	public void setValidFrom(DateAndDateTimeChoice validFrom) {
+		this.validFrom = validFrom;
 	}
 }

@@ -35,25 +35,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#WaitingTime
- * ProcessTiming1.WaitingTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#StartTime
- * ProcessTiming1.StartTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#EndTime
- * ProcessTiming1.EndTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#Period
- * ProcessTiming1.Period}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#MaximumNumber
- * ProcessTiming1.MaximumNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#ReTry
- * ProcessTiming1.ReTry}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#mmWaitingTime
+ * ProcessTiming1.mmWaitingTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#mmStartTime
+ * ProcessTiming1.mmStartTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#mmEndTime
+ * ProcessTiming1.mmEndTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#mmPeriod
+ * ProcessTiming1.mmPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#mmMaximumNumber
+ * ProcessTiming1.mmMaximumNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProcessTiming1#mmReTry
+ * ProcessTiming1.mmReTry}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProcessTiming1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max9NumericText waitingTime;
 	/**
 	 * Waiting time after the previous action in months, days, hours and
 	 * minutes, leading zeros could be omitted.
@@ -104,7 +105,7 @@ public class ProcessTiming1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WaitingTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWaitingTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessTiming1.mmObject();
 			isDerived = false;
@@ -112,11 +113,12 @@ public class ProcessTiming1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingTime";
 			definition = "Waiting time after the previous action in months, days, hours and minutes, leading zeros could be omitted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected ISODateTime startTime;
 	/**
 	 * Date and time to start the action.
 	 * <p>
@@ -143,7 +145,7 @@ public class ProcessTiming1 {
 	 * definition} = "Date and time to start the action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessTiming1.mmObject();
 			isDerived = false;
@@ -151,11 +153,12 @@ public class ProcessTiming1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartTime";
 			definition = "Date and time to start the action.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime endTime;
 	/**
 	 * Date and time after which the action cannot be processed.
 	 * <p>
@@ -183,7 +186,7 @@ public class ProcessTiming1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessTiming1.mmObject();
 			isDerived = false;
@@ -191,11 +194,12 @@ public class ProcessTiming1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndTime";
 			definition = "Date and time after which the action cannot be processed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max9NumericText period;
 	/**
 	 * Period delay between cyclic action activation in months, days, hours and
 	 * minutes, leading zeros could be omitted.
@@ -226,7 +230,7 @@ public class ProcessTiming1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Period = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessTiming1.mmObject();
 			isDerived = false;
@@ -234,11 +238,12 @@ public class ProcessTiming1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Period delay between cyclic action activation in months, days, hours and minutes, leading zeros could be omitted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected Number maximumNumber;
 	/**
 	 * Maximum number of cyclic calls.
 	 * <p>
@@ -265,7 +270,7 @@ public class ProcessTiming1 {
 	 * definition} = "Maximum number of cyclic calls."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessTiming1.mmObject();
 			isDerived = false;
@@ -273,11 +278,12 @@ public class ProcessTiming1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumNumber";
 			definition = "Maximum number of cyclic calls.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ProcessRetry1 reTry;
 	/**
 	 * Definition of retry process if activation of the action fails.
 	 * <p>
@@ -304,7 +310,7 @@ public class ProcessTiming1 {
 	 * "Definition of retry process if activation of the action fails."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReTry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReTry = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ProcessTiming1.mmObject();
 			isDerived = false;
@@ -312,19 +318,19 @@ public class ProcessTiming1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReTry";
 			definition = "Definition of retry process if activation of the action fails.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessRetry1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessRetry1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessTiming1.WaitingTime, com.tools20022.repository.msg.ProcessTiming1.StartTime, com.tools20022.repository.msg.ProcessTiming1.EndTime,
-						com.tools20022.repository.msg.ProcessTiming1.Period, com.tools20022.repository.msg.ProcessTiming1.MaximumNumber, com.tools20022.repository.msg.ProcessTiming1.ReTry);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessTiming1.mmWaitingTime, com.tools20022.repository.msg.ProcessTiming1.mmStartTime, com.tools20022.repository.msg.ProcessTiming1.mmEndTime,
+						com.tools20022.repository.msg.ProcessTiming1.mmPeriod, com.tools20022.repository.msg.ProcessTiming1.mmMaximumNumber, com.tools20022.repository.msg.ProcessTiming1.mmReTry);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessTiming1";
 				definition = "Parameters defining the timing conditions to process an action.";
@@ -332,5 +338,53 @@ public class ProcessTiming1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max9NumericText getWaitingTime() {
+		return waitingTime;
+	}
+
+	public void setWaitingTime(Max9NumericText waitingTime) {
+		this.waitingTime = waitingTime;
+	}
+
+	public ISODateTime getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(ISODateTime startTime) {
+		this.startTime = startTime;
+	}
+
+	public ISODateTime getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(ISODateTime endTime) {
+		this.endTime = endTime;
+	}
+
+	public Max9NumericText getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(Max9NumericText period) {
+		this.period = period;
+	}
+
+	public Number getMaximumNumber() {
+		return maximumNumber;
+	}
+
+	public void setMaximumNumber(Number maximumNumber) {
+		this.maximumNumber = maximumNumber;
+	}
+
+	public ProcessRetry1 getReTry() {
+		return reTry;
+	}
+
+	public void setReTry(com.tools20022.repository.msg.ProcessRetry1 reTry) {
+		this.reTry = reTry;
 	}
 }

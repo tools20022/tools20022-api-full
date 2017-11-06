@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code#Subscription
- * InvestmentFundTransactionInType1Code.Subscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code#mmSubscription
+ * InvestmentFundTransactionInType1Code.mmSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code#SwitchIn
- * InvestmentFundTransactionInType1Code.SwitchIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code#mmSwitchIn
+ * InvestmentFundTransactionInType1Code.mmSwitchIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code#InSpecie
- * InvestmentFundTransactionInType1Code.InSpecie}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code#mmInSpecie
+ * InvestmentFundTransactionInType1Code.mmInSpecie}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code#CrossIn
- * InvestmentFundTransactionInType1Code.CrossIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code#mmCrossIn
+ * InvestmentFundTransactionInType1Code.mmCrossIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code#ReinvestmentOfDividend
- * InvestmentFundTransactionInType1Code.ReinvestmentOfDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code#mmReinvestmentOfDividend
+ * InvestmentFundTransactionInType1Code.mmReinvestmentOfDividend}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	 * name} = "Subscription"</li>
 	 * </ul>
 	 */
-	public static final MMCode Subscription = new MMCode() {
+	public static final MMCode mmSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
@@ -116,7 +116,7 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	 * name} = "SwitchIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwitchIn = new MMCode() {
+	public static final MMCode mmSwitchIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchIn";
@@ -139,7 +139,7 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	 * name} = "InSpecie"</li>
 	 * </ul>
 	 */
-	public static final MMCode InSpecie = new MMCode() {
+	public static final MMCode mmInSpecie = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InSpecie";
@@ -162,7 +162,7 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	 * name} = "CrossIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode CrossIn = new MMCode() {
+	public static final MMCode mmCrossIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossIn";
@@ -185,7 +185,7 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	 * name} = "ReinvestmentOfDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReinvestmentOfDividend = new MMCode() {
+	public static final MMCode mmReinvestmentOfDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentOfDividend";
@@ -196,14 +196,14 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SUBS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionInType1Code";
 				definition = "Specifies the type of investment fund transaction that results in a cash movement into a fund.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.Subscription, com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.SwitchIn,
-						com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.InSpecie, com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.CrossIn,
-						com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.ReinvestmentOfDividend);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.mmSubscription, com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.mmSwitchIn,
+						com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.mmInSpecie, com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.mmCrossIn,
+						com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.mmReinvestmentOfDividend);
 				trace_lazy = () -> InvestmentFundTransactionTypeCode.mmObject();
 			}
 		});

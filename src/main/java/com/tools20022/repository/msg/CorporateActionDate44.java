@@ -36,110 +36,110 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#AnnouncementDate
- * CorporateActionDate44.AnnouncementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmAnnouncementDate
+ * CorporateActionDate44.mmAnnouncementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#CertificationDeadline
- * CorporateActionDate44.CertificationDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmCertificationDeadline
+ * CorporateActionDate44.mmCertificationDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#CourtApprovalDate
- * CorporateActionDate44.CourtApprovalDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmCourtApprovalDate
+ * CorporateActionDate44.mmCourtApprovalDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#EarlyClosingDate
- * CorporateActionDate44.EarlyClosingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmEarlyClosingDate
+ * CorporateActionDate44.mmEarlyClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#EffectiveDate
- * CorporateActionDate44.EffectiveDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmEffectiveDate
+ * CorporateActionDate44.mmEffectiveDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#EqualisationDate
- * CorporateActionDate44.EqualisationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmEqualisationDate
+ * CorporateActionDate44.mmEqualisationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#FurtherDetailedAnnouncementDate
- * CorporateActionDate44.FurtherDetailedAnnouncementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmFurtherDetailedAnnouncementDate
+ * CorporateActionDate44.mmFurtherDetailedAnnouncementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#FixingDate
- * CorporateActionDate44.FixingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmFixingDate
+ * CorporateActionDate44.mmFixingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#LotteryDate
- * CorporateActionDate44.LotteryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmLotteryDate
+ * CorporateActionDate44.mmLotteryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#NewMaturityDate
- * CorporateActionDate44.NewMaturityDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmNewMaturityDate
+ * CorporateActionDate44.mmNewMaturityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#MeetingDate
- * CorporateActionDate44.MeetingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmMeetingDate
+ * CorporateActionDate44.mmMeetingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#MarginFixingDate
- * CorporateActionDate44.MarginFixingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmMarginFixingDate
+ * CorporateActionDate44.mmMarginFixingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#ProrationDate
- * CorporateActionDate44.ProrationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmProrationDate
+ * CorporateActionDate44.mmProrationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#RecordDate
- * CorporateActionDate44.RecordDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmRecordDate
+ * CorporateActionDate44.mmRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#RegistrationDeadline
- * CorporateActionDate44.RegistrationDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmRegistrationDeadline
+ * CorporateActionDate44.mmRegistrationDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#ResultsPublicationDate
- * CorporateActionDate44.ResultsPublicationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmResultsPublicationDate
+ * CorporateActionDate44.mmResultsPublicationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#DeadlineToSplit
- * CorporateActionDate44.DeadlineToSplit}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmDeadlineToSplit
+ * CorporateActionDate44.mmDeadlineToSplit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#DeadlineForTaxBreakdownInstruction
- * CorporateActionDate44.DeadlineForTaxBreakdownInstruction}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmDeadlineForTaxBreakdownInstruction
+ * CorporateActionDate44.mmDeadlineForTaxBreakdownInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#TradingSuspendedDate
- * CorporateActionDate44.TradingSuspendedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmTradingSuspendedDate
+ * CorporateActionDate44.mmTradingSuspendedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#UnconditionalDate
- * CorporateActionDate44.UnconditionalDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmUnconditionalDate
+ * CorporateActionDate44.mmUnconditionalDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#WhollyUnconditionalDate
- * CorporateActionDate44.WhollyUnconditionalDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmWhollyUnconditionalDate
+ * CorporateActionDate44.mmWhollyUnconditionalDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#ExDividendDate
- * CorporateActionDate44.ExDividendDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmExDividendDate
+ * CorporateActionDate44.mmExDividendDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#OfficialAnnouncementPublicationDate
- * CorporateActionDate44.OfficialAnnouncementPublicationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmOfficialAnnouncementPublicationDate
+ * CorporateActionDate44.mmOfficialAnnouncementPublicationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#SpecialExDate
- * CorporateActionDate44.SpecialExDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmSpecialExDate
+ * CorporateActionDate44.mmSpecialExDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#GuaranteedParticipationDate
- * CorporateActionDate44.GuaranteedParticipationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmGuaranteedParticipationDate
+ * CorporateActionDate44.mmGuaranteedParticipationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#ElectionToCounterpartyMarketDeadline
- * CorporateActionDate44.ElectionToCounterpartyMarketDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmElectionToCounterpartyMarketDeadline
+ * CorporateActionDate44.mmElectionToCounterpartyMarketDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#ElectionToCounterpartyResponseDeadline
- * CorporateActionDate44.ElectionToCounterpartyResponseDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmElectionToCounterpartyResponseDeadline
+ * CorporateActionDate44.mmElectionToCounterpartyResponseDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#LapsedDate
- * CorporateActionDate44.LapsedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmLapsedDate
+ * CorporateActionDate44.mmLapsedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#PaymentDate
- * CorporateActionDate44.PaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmPaymentDate
+ * CorporateActionDate44.mmPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#ThirdPartyDeadline
- * CorporateActionDate44.ThirdPartyDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmThirdPartyDeadline
+ * CorporateActionDate44.mmThirdPartyDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#EarlyThirdPartyDeadline
- * CorporateActionDate44.EarlyThirdPartyDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmEarlyThirdPartyDeadline
+ * CorporateActionDate44.mmEarlyThirdPartyDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#MarketClaimTrackingEndDate
- * CorporateActionDate44.MarketClaimTrackingEndDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmMarketClaimTrackingEndDate
+ * CorporateActionDate44.mmMarketClaimTrackingEndDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#LeadPlaintiffDeadline
- * CorporateActionDate44.LeadPlaintiffDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmLeadPlaintiffDeadline
+ * CorporateActionDate44.mmLeadPlaintiffDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#FilingDate
- * CorporateActionDate44.FilingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmFilingDate
+ * CorporateActionDate44.mmFilingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#HearingDate
- * CorporateActionDate44.HearingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmHearingDate
+ * CorporateActionDate44.mmHearingDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -148,8 +148,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -167,6 +167,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDate44 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateFormat31Choice announcementDate;
 	/**
 	 * Date/time at which the issuer announced that a corporate action event
 	 * will occur.
@@ -179,8 +180,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#AnnouncementDate
-	 * CorporateActionEvent.AnnouncementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAnnouncementDate
+	 * CorporateActionEvent.mmAnnouncementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,26 +203,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#AnnouncementDate
-	 * CorporateActionDate27.AnnouncementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmAnnouncementDate
+	 * CorporateActionDate27.mmAnnouncementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AnnouncementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAnnouncementDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.AnnouncementDate;
 			isDerived = false;
 			xmlTag = "AnncmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncementDate";
 			definition = "Date/time at which the issuer announced that a corporate action event will occur.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.AnnouncementDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmAnnouncementDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice certificationDeadline;
 	/**
 	 * Deadline by which the beneficial ownership of securities must be
 	 * declared.
@@ -234,8 +236,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#CertificationDeadline
-	 * CorporateActionDeadline.CertificationDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmCertificationDeadline
+	 * CorporateActionDeadline.mmCertificationDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -257,26 +259,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#CertificationDeadline
-	 * CorporateActionDate27.CertificationDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmCertificationDeadline
+	 * CorporateActionDate27.mmCertificationDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CertificationDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCertificationDeadline = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmCertificationDeadline;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.CertificationDeadline;
 			isDerived = false;
 			xmlTag = "CertfctnDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationDeadline";
 			definition = "Deadline by which the beneficial ownership of securities must be declared.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.CertificationDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmCertificationDeadline;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice courtApprovalDate;
 	/**
 	 * Date upon which the court provided approval.
 	 * <p>
@@ -288,8 +291,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction#CourtApprovalDate
-	 * ClassAction.CourtApprovalDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ClassAction#mmCourtApprovalDate
+	 * ClassAction.mmCourtApprovalDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -309,26 +312,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#CourtApprovalDate
-	 * CorporateActionDate27.CourtApprovalDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmCourtApprovalDate
+	 * CorporateActionDate27.mmCourtApprovalDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CourtApprovalDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCourtApprovalDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClassAction.mmCourtApprovalDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClassAction.CourtApprovalDate;
 			isDerived = false;
 			xmlTag = "CrtApprvlDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourtApprovalDate";
 			definition = "Date upon which the court provided approval.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.CourtApprovalDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmCourtApprovalDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice earlyClosingDate;
 	/**
 	 * First possible early closing date of an offer if different from the
 	 * expiry date.
@@ -341,8 +345,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#EarlyClosingDate
-	 * CorporateActionDeadline.EarlyClosingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmEarlyClosingDate
+	 * CorporateActionDeadline.mmEarlyClosingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -364,26 +368,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#EarlyClosingDate
-	 * CorporateActionDate27.EarlyClosingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmEarlyClosingDate
+	 * CorporateActionDate27.mmEarlyClosingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EarlyClosingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEarlyClosingDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmEarlyClosingDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.EarlyClosingDate;
 			isDerived = false;
 			xmlTag = "EarlyClsgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyClosingDate";
 			definition = "First possible early closing date of an offer if different from the expiry date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.EarlyClosingDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmEarlyClosingDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice effectiveDate;
 	/**
 	 * Date/time at which an event is officially effective from the issuer's
 	 * perspective.
@@ -396,8 +401,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#EffectiveDate
-	 * CorporateActionEvent.EffectiveDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEffectiveDate
+	 * CorporateActionEvent.mmEffectiveDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -419,26 +424,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#EffectiveDate
-	 * CorporateActionDate27.EffectiveDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmEffectiveDate
+	 * CorporateActionDate27.mmEffectiveDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EffectiveDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEffectiveDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEffectiveDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.EffectiveDate;
 			isDerived = false;
 			xmlTag = "FctvDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date/time at which an event is officially effective from the issuer's perspective.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.EffectiveDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmEffectiveDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice equalisationDate;
 	/**
 	 * Date/Time on which all or part of any holding bought in a unit trust is
 	 * subject to being treated as capital rather than income. This is normally
@@ -452,8 +458,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Equalisation#Date
-	 * Equalisation.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.Equalisation#mmDate
+	 * Equalisation.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -475,26 +481,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#EqualisationDate
-	 * CorporateActionDate27.EqualisationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmEqualisationDate
+	 * CorporateActionDate27.mmEqualisationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EqualisationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEqualisationDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equalisation.mmDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equalisation.Date;
 			isDerived = false;
 			xmlTag = "EqulstnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualisationDate";
 			definition = "Date/Time on which all or part of any holding bought in a unit trust is subject to being treated as capital rather than income. This is normally one day after the previous distribution's ex date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.EqualisationDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmEqualisationDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice furtherDetailedAnnouncementDate;
 	/**
 	 * Date/time at which additional information on the event will be announced,
 	 * for example, exchange ratio announcement date.
@@ -507,8 +514,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#FurtherDetailsAnnouncementDate
-	 * CorporateActionEvent.FurtherDetailsAnnouncementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmFurtherDetailsAnnouncementDate
+	 * CorporateActionEvent.mmFurtherDetailsAnnouncementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -530,26 +537,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#FurtherDetailedAnnouncementDate
-	 * CorporateActionDate27.FurtherDetailedAnnouncementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmFurtherDetailedAnnouncementDate
+	 * CorporateActionDate27.mmFurtherDetailedAnnouncementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FurtherDetailedAnnouncementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFurtherDetailedAnnouncementDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmFurtherDetailsAnnouncementDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.FurtherDetailsAnnouncementDate;
 			isDerived = false;
 			xmlTag = "FrthrDtldAnncmntDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FurtherDetailedAnnouncementDate";
 			definition = "Date/time at which additional information on the event will be announced, for example, exchange ratio announcement date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.FurtherDetailedAnnouncementDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmFurtherDetailedAnnouncementDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice fixingDate;
 	/**
 	 * Date/time at which an index / rate / price / value will be determined.
 	 * <p>
@@ -561,8 +569,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#OfferPriceFixingDate
-	 * ProceedsDefinition.OfferPriceFixingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmOfferPriceFixingDate
+	 * ProceedsDefinition.mmOfferPriceFixingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -583,26 +591,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#FixingDate
-	 * CorporateActionDate27.FixingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmFixingDate
+	 * CorporateActionDate27.mmFixingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FixingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFixingDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmOfferPriceFixingDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.OfferPriceFixingDate;
 			isDerived = false;
 			xmlTag = "FxgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixingDate";
 			definition = "Date/time at which an index / rate / price / value will be determined.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.FixingDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmFixingDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice lotteryDate;
 	/**
 	 * Date/time on which the lottery is run and applied to the holder's
 	 * positions. This is also applicable to partial calls.
@@ -615,8 +624,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Lottery#LotteryDate
-	 * Lottery.LotteryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Lottery#mmLotteryDate
+	 * Lottery.mmLotteryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -638,26 +647,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#LotteryDate
-	 * CorporateActionDate27.LotteryDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmLotteryDate
+	 * CorporateActionDate27.mmLotteryDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LotteryDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLotteryDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.LotteryDate;
 			isDerived = false;
 			xmlTag = "LtryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.LotteryDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmLotteryDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice newMaturityDate;
 	/**
 	 * Date/time to which the maturity date of an interest bearing security is
 	 * extended.
@@ -670,8 +680,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#MaturityDate
-	 * Asset.MaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -693,26 +703,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#NewMaturityDate
-	 * CorporateActionDate27.NewMaturityDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmNewMaturityDate
+	 * CorporateActionDate27.mmNewMaturityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewMaturityDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewMaturityDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.MaturityDate;
 			isDerived = false;
 			xmlTag = "NewMtrtyDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewMaturityDate";
 			definition = "Date/time to which the maturity date of an interest bearing security is extended.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.NewMaturityDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmNewMaturityDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice meetingDate;
 	/**
 	 * Date/time on which the bondholder's or shareholder's meeting will take
 	 * place.
@@ -725,8 +736,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#DateAndTime
-	 * Meeting.DateAndTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmDateAndTime
+	 * Meeting.mmDateAndTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -748,26 +759,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#MeetingDate
-	 * CorporateActionDate27.MeetingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmMeetingDate
+	 * CorporateActionDate27.mmMeetingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MeetingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMeetingDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmDateAndTime;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.DateAndTime;
 			isDerived = false;
 			xmlTag = "MtgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingDate";
 			definition = "Date/time on which the bondholder's or shareholder's meeting will take place.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.MeetingDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmMeetingDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice marginFixingDate;
 	/**
 	 * Date/time at which the margin rate will be determined .
 	 * <p>
@@ -779,8 +791,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#MarginFixingDate
-	 * CorporateActionEvent.MarginFixingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarginFixingDate
+	 * CorporateActionEvent.mmMarginFixingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -800,26 +812,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#MarginFixingDate
-	 * CorporateActionDate27.MarginFixingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmMarginFixingDate
+	 * CorporateActionDate27.mmMarginFixingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarginFixingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarginFixingDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmMarginFixingDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.MarginFixingDate;
 			isDerived = false;
 			xmlTag = "MrgnFxgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginFixingDate";
 			definition = "Date/time at which the margin rate will be determined .";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.MarginFixingDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmMarginFixingDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice prorationDate;
 	/**
 	 * Date/time (and time) at which an issuer will determine the proration
 	 * amount/quantity of an offer.
@@ -832,8 +845,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#ProrationDate
-	 * BiddingConditions.ProrationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmProrationDate
+	 * BiddingConditions.mmProrationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -855,26 +868,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#ProrationDate
-	 * CorporateActionDate27.ProrationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmProrationDate
+	 * CorporateActionDate27.mmProrationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProrationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProrationDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmProrationDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.ProrationDate;
 			isDerived = false;
 			xmlTag = "PrratnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProrationDate";
 			definition = "Date/time (and time) at which an issuer will determine the proration amount/quantity of an offer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.ProrationDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmProrationDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice recordDate;
 	/**
 	 * Date/time at which positions are struck at the end of the day to note
 	 * which parties will receive the relevant amount of entitlement, due to be
@@ -888,8 +902,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RecordDate
-	 * CorporateActionDeadline.RecordDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRecordDate
+	 * CorporateActionDeadline.mmRecordDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -911,26 +925,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#RecordDate
-	 * CorporateActionDate27.RecordDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmRecordDate
+	 * CorporateActionDate27.mmRecordDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RecordDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecordDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.RecordDate;
 			isDerived = false;
 			xmlTag = "RcrdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.RecordDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmRecordDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice registrationDeadline;
 	/**
 	 * Date/time on which instructions to register or registration details will
 	 * be accepted.
@@ -943,8 +958,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RegistrationDeadline
-	 * CorporateActionDeadline.RegistrationDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRegistrationDeadline
+	 * CorporateActionDeadline.mmRegistrationDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -966,26 +981,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#RegistrationDeadline
-	 * CorporateActionDate27.RegistrationDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmRegistrationDeadline
+	 * CorporateActionDate27.mmRegistrationDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RegistrationDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRegistrationDeadline = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRegistrationDeadline;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.RegistrationDeadline;
 			isDerived = false;
 			xmlTag = "RegnDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDeadline";
 			definition = "Date/time on which instructions to register or registration details will be accepted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.RegistrationDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmRegistrationDeadline;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice resultsPublicationDate;
 	/**
 	 * Date/time on which results are published, for example, results of an
 	 * offer.
@@ -998,8 +1014,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#ResultPublicationDate
-	 * CorporateActionEvent.ResultPublicationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmResultPublicationDate
+	 * CorporateActionEvent.mmResultPublicationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1021,26 +1037,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#ResultsPublicationDate
-	 * CorporateActionDate27.ResultsPublicationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmResultsPublicationDate
+	 * CorporateActionDate27.mmResultsPublicationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ResultsPublicationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmResultsPublicationDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmResultPublicationDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.ResultPublicationDate;
 			isDerived = false;
 			xmlTag = "RsltsPblctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultsPublicationDate";
 			definition = "Date/time on which results are published, for example, results of an offer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.ResultsPublicationDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmResultsPublicationDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice deadlineToSplit;
 	/**
 	 * Deadline by which instructions must be received to split securities, for
 	 * example, of physical certificates.
@@ -1053,8 +1070,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#DeadlineToSplit
-	 * CorporateActionDeadline.DeadlineToSplit}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmDeadlineToSplit
+	 * CorporateActionDeadline.mmDeadlineToSplit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1076,26 +1093,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#DeadlineToSplit
-	 * CorporateActionDate27.DeadlineToSplit}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmDeadlineToSplit
+	 * CorporateActionDate27.mmDeadlineToSplit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeadlineToSplit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeadlineToSplit = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmDeadlineToSplit;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.DeadlineToSplit;
 			isDerived = false;
 			xmlTag = "DdlnToSplt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeadlineToSplit";
 			definition = "Deadline by which instructions must be received to split securities, for example, of physical certificates.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.DeadlineToSplit;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmDeadlineToSplit;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice deadlineForTaxBreakdownInstruction;
 	/**
 	 * Date/time on until which tax breakdown instructions will be accepted.
 	 * <p>
@@ -1107,8 +1125,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDeadline.DeadlineForTaxBreakdownInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDeadline.mmDeadlineForTaxBreakdownInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1129,26 +1147,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#DeadlineForTaxBreakdownInstruction
-	 * CorporateActionDate27.DeadlineForTaxBreakdownInstruction}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate27.mmDeadlineForTaxBreakdownInstruction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeadlineForTaxBreakdownInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeadlineForTaxBreakdownInstruction = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmDeadlineForTaxBreakdownInstruction;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.DeadlineForTaxBreakdownInstruction;
 			isDerived = false;
 			xmlTag = "DdlnForTaxBrkdwnInstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeadlineForTaxBreakdownInstruction";
 			definition = "Date/time on until which tax breakdown instructions will be accepted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.DeadlineForTaxBreakdownInstruction;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmDeadlineForTaxBreakdownInstruction;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice tradingSuspendedDate;
 	/**
 	 * Date/time at which trading of a security is suspended as the result of an
 	 * event.
@@ -1161,8 +1180,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#TradingSuspendedDate
-	 * CorporateActionDeadline.TradingSuspendedDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmTradingSuspendedDate
+	 * CorporateActionDeadline.mmTradingSuspendedDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1184,26 +1203,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#TradingSuspendedDate
-	 * CorporateActionDate27.TradingSuspendedDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmTradingSuspendedDate
+	 * CorporateActionDate27.mmTradingSuspendedDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingSuspendedDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingSuspendedDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmTradingSuspendedDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.TradingSuspendedDate;
 			isDerived = false;
 			xmlTag = "TradgSspdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSuspendedDate";
 			definition = "Date/time at which trading of a security is suspended as the result of an event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.TradingSuspendedDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmTradingSuspendedDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice unconditionalDate;
 	/**
 	 * Date/time upon which the terms of the take-over become unconditional as
 	 * to acceptances.
@@ -1216,8 +1236,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#UnconditionalDate
-	 * CorporateActionEvent.UnconditionalDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmUnconditionalDate
+	 * CorporateActionEvent.mmUnconditionalDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1239,26 +1259,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#UnconditionalDate
-	 * CorporateActionDate27.UnconditionalDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmUnconditionalDate
+	 * CorporateActionDate27.mmUnconditionalDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnconditionalDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnconditionalDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmUnconditionalDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.UnconditionalDate;
 			isDerived = false;
 			xmlTag = "UcondlDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnconditionalDate";
 			definition = "Date/time upon which the terms of the take-over become unconditional as to acceptances.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.UnconditionalDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmUnconditionalDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice whollyUnconditionalDate;
 	/**
 	 * Date/time at on which all conditions, including regulatory, legal etc.
 	 * pertaining to the take-over, have been met.
@@ -1271,8 +1292,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#WhollyUnconditionalDate
-	 * CorporateActionEvent.WhollyUnconditionalDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmWhollyUnconditionalDate
+	 * CorporateActionEvent.mmWhollyUnconditionalDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1294,26 +1315,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#WhollyUnconditionalDate
-	 * CorporateActionDate27.WhollyUnconditionalDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmWhollyUnconditionalDate
+	 * CorporateActionDate27.mmWhollyUnconditionalDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd WhollyUnconditionalDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmWhollyUnconditionalDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmWhollyUnconditionalDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.WhollyUnconditionalDate;
 			isDerived = false;
 			xmlTag = "WhlyUcondlDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhollyUnconditionalDate";
 			definition = "Date/time at on which all conditions, including regulatory, legal etc. pertaining to the take-over, have been met.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.WhollyUnconditionalDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmWhollyUnconditionalDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice exDividendDate;
 	/**
 	 * Date/time as from which trading (including exchange and OTC trading)
 	 * occurs on the underlying security without the benefit.
@@ -1326,8 +1348,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#ExDividendDate
-	 * Dividend.ExDividendDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmExDividendDate
+	 * Dividend.mmExDividendDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1349,26 +1371,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#ExDividendDate
-	 * CorporateActionDate27.ExDividendDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmExDividendDate
+	 * CorporateActionDate27.mmExDividendDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExDividendDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExDividendDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmExDividendDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.ExDividendDate;
 			isDerived = false;
 			xmlTag = "ExDvddDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExDividendDate";
 			definition = "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.ExDividendDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmExDividendDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice officialAnnouncementPublicationDate;
 	/**
 	 * Date/time at which the corporate action is legally announced by an
 	 * official body, for example, publication by a governmental administration.
@@ -1381,8 +1404,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#OfficialAnnouncementPublicationDate
-	 * CorporateActionEventRegistration.OfficialAnnouncementPublicationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmOfficialAnnouncementPublicationDate
+	 * CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1404,26 +1427,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#OfficialAnnouncementPublicationDate
-	 * CorporateActionDate27.OfficialAnnouncementPublicationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmOfficialAnnouncementPublicationDate
+	 * CorporateActionDate27.mmOfficialAnnouncementPublicationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OfficialAnnouncementPublicationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOfficialAnnouncementPublicationDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.OfficialAnnouncementPublicationDate;
 			isDerived = false;
 			xmlTag = "OffclAnncmntPblctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialAnnouncementPublicationDate";
 			definition = "Date/time at which the corporate action is legally announced by an official body, for example, publication by a governmental administration.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.OfficialAnnouncementPublicationDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmOfficialAnnouncementPublicationDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice specialExDate;
 	/**
 	 * Date/time as from which 'special processing' can start to be used by
 	 * participants for that event. Special processing is a means of marking a
@@ -1440,8 +1464,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#SpecialExDate
-	 * CorporateActionDeadline.SpecialExDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmSpecialExDate
+	 * CorporateActionDeadline.mmSpecialExDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1463,26 +1487,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#SpecialExDate
-	 * CorporateActionDate27.SpecialExDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmSpecialExDate
+	 * CorporateActionDate27.mmSpecialExDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SpecialExDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSpecialExDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmSpecialExDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.SpecialExDate;
 			isDerived = false;
 			xmlTag = "SpclExDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExDate";
 			definition = "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively,  for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.SpecialExDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmSpecialExDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice guaranteedParticipationDate;
 	/**
 	 * Last date/time by which a buying counterparty to a trade can be sure that
 	 * it will have the right to participate in an event.
@@ -1495,8 +1520,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#GuaranteedParticipationDate
-	 * CorporateActionDeadline.GuaranteedParticipationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmGuaranteedParticipationDate
+	 * CorporateActionDeadline.mmGuaranteedParticipationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1518,26 +1543,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#GuaranteedParticipationDate
-	 * CorporateActionDate27.GuaranteedParticipationDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmGuaranteedParticipationDate
+	 * CorporateActionDate27.mmGuaranteedParticipationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GuaranteedParticipationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGuaranteedParticipationDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmGuaranteedParticipationDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.GuaranteedParticipationDate;
 			isDerived = false;
 			xmlTag = "GrntedPrtcptnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedParticipationDate";
 			definition = "Last date/time by which a buying counterparty to a trade can be sure that it will have the right to participate in an event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.GuaranteedParticipationDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmGuaranteedParticipationDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice electionToCounterpartyMarketDeadline;
 	/**
 	 * Deadline by which an entitled holder needs to advise their counterparty
 	 * to a transaction of their election for a corporate action event, also
@@ -1551,8 +1577,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ElectionToCounterpartyDeadline
-	 * CorporateActionDeadline.ElectionToCounterpartyDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmElectionToCounterpartyDeadline
+	 * CorporateActionDeadline.mmElectionToCounterpartyDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1574,26 +1600,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#ElectionToCounterpartyDeadline
-	 * CorporateActionDate27.ElectionToCounterpartyDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmElectionToCounterpartyDeadline
+	 * CorporateActionDate27.mmElectionToCounterpartyDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ElectionToCounterpartyMarketDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmElectionToCounterpartyMarketDeadline = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmElectionToCounterpartyDeadline;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.ElectionToCounterpartyDeadline;
 			isDerived = false;
 			xmlTag = "ElctnToCtrPtyMktDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionToCounterpartyMarketDeadline";
 			definition = "Deadline by which an entitled holder needs to advise their counterparty to a transaction of their election for a corporate action event, also known as Buyer Protection Deadline.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.ElectionToCounterpartyDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmElectionToCounterpartyDeadline;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice electionToCounterpartyResponseDeadline;
 	/**
 	 * Date/time the account servicer has set as the deadline to respond, with
 	 * instructions, prior to the election to counterparty market deadline
@@ -1606,8 +1633,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ElectionToCounterpartyDeadline
-	 * CorporateActionDeadline.ElectionToCounterpartyDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmElectionToCounterpartyDeadline
+	 * CorporateActionDeadline.mmElectionToCounterpartyDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1628,21 +1655,22 @@ public class CorporateActionDate44 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ElectionToCounterpartyResponseDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmElectionToCounterpartyResponseDeadline = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmElectionToCounterpartyDeadline;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.ElectionToCounterpartyDeadline;
 			isDerived = false;
 			xmlTag = "ElctnToCtrPtyRspnDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionToCounterpartyResponseDeadline";
 			definition = "Date/time the account servicer has set as the deadline to respond, with instructions, prior to the election to counterparty market deadline ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice lapsedDate;
 	/**
 	 * Date/time at which an event/offer is terminated or lapsed.
 	 * <p>
@@ -1654,8 +1682,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#LapsedDate
-	 * CorporateActionEvent.LapsedDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmLapsedDate
+	 * CorporateActionEvent.mmLapsedDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1676,26 +1704,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#LapsedDate
-	 * CorporateActionDate27.LapsedDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmLapsedDate
+	 * CorporateActionDate27.mmLapsedDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LapsedDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLapsedDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmLapsedDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.LapsedDate;
 			isDerived = false;
 			xmlTag = "LpsdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LapsedDate";
 			definition = "Date/time at which an event/offer is terminated or lapsed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.LapsedDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmLapsedDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice paymentDate;
 	/**
 	 * Date/time at which the movement is due to take place (cash and/or
 	 * securities).
@@ -1708,8 +1737,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#MovementDate
-	 * CorporateActionDistribution.MovementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmMovementDate
+	 * CorporateActionDistribution.mmMovementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1731,26 +1760,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#PaymentDate
-	 * CorporateActionDate27.PaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmPaymentDate
+	 * CorporateActionDate27.mmPaymentDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.MovementDate;
 			isDerived = false;
 			xmlTag = "PmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement is due to take place (cash and/or securities).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.PaymentDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmPaymentDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice thirdPartyDeadline;
 	/**
 	 * Date/Time by which the account owner must instruct directly another
 	 * party, for example to provide documentation to an issuer agent.
@@ -1763,8 +1793,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#ThirdPartyDeadline
-	 * CorporateActionDeadline.ThirdPartyDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmThirdPartyDeadline
+	 * CorporateActionDeadline.mmThirdPartyDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1786,26 +1816,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#ThirdPartyDeadline
-	 * CorporateActionDate27.ThirdPartyDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmThirdPartyDeadline
+	 * CorporateActionDate27.mmThirdPartyDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ThirdPartyDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmThirdPartyDeadline = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmThirdPartyDeadline;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.ThirdPartyDeadline;
 			isDerived = false;
 			xmlTag = "ThrdPtyDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdPartyDeadline";
 			definition = "Date/Time by which the account owner must instruct directly another party, for example to provide documentation to an issuer agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.ThirdPartyDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmThirdPartyDeadline;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice earlyThirdPartyDeadline;
 	/**
 	 * Date/Time set by the issuer agent as a first early deadline by which the
 	 * account owner must instruct directly another party, possibly giving the
@@ -1820,8 +1851,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#EarlyResponseDeadline
-	 * CorporateActionDeadline.EarlyResponseDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmEarlyResponseDeadline
+	 * CorporateActionDeadline.mmEarlyResponseDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1843,26 +1874,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#EarlyThirdPartyDeadline
-	 * CorporateActionDate27.EarlyThirdPartyDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate27.mmEarlyThirdPartyDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EarlyThirdPartyDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEarlyThirdPartyDeadline = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmEarlyResponseDeadline;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.EarlyResponseDeadline;
 			isDerived = false;
 			xmlTag = "EarlyThrdPtyDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyThirdPartyDeadline";
 			definition = "Date/Time set by the issuer agent as a first early deadline by which the account owner must instruct directly another party, possibly giving the holder eligibility to incentives. For example, to provide documentation to an issuer agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.EarlyThirdPartyDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmEarlyThirdPartyDeadline;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice marketClaimTrackingEndDate;
 	/**
 	 * Date by which the depository stops monitoring activities of the event,
 	 * for instance, accounting and tracking activities for due bills end.
@@ -1875,8 +1907,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarketClaim#MarketClaimTrackingEndDate
-	 * MarketClaim.MarketClaimTrackingEndDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarketClaim#mmMarketClaimTrackingEndDate
+	 * MarketClaim.mmMarketClaimTrackingEndDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1898,26 +1930,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#MarketClaimTrackingEndDate
-	 * CorporateActionDate27.MarketClaimTrackingEndDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate27.mmMarketClaimTrackingEndDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarketClaimTrackingEndDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarketClaimTrackingEndDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmMarketClaimTrackingEndDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarketClaim.MarketClaimTrackingEndDate;
 			isDerived = false;
 			xmlTag = "MktClmTrckgEndDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClaimTrackingEndDate";
 			definition = "Date by which the depository stops monitoring activities of the event, for instance, accounting and tracking activities for due bills end.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.MarketClaimTrackingEndDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmMarketClaimTrackingEndDate;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat31Choice leadPlaintiffDeadline;
 	/**
 	 * Last day an investor can become a lead plaintiff.
 	 * <p>
@@ -1929,8 +1962,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction#LeadPlaintiffDeadline
-	 * ClassAction.LeadPlaintiffDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.ClassAction#mmLeadPlaintiffDeadline
+	 * ClassAction.mmLeadPlaintiffDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1950,26 +1983,27 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#LeadPlaintiffDeadline
-	 * CorporateActionDate27.LeadPlaintiffDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmLeadPlaintiffDeadline
+	 * CorporateActionDate27.mmLeadPlaintiffDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LeadPlaintiffDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLeadPlaintiffDeadline = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClassAction.mmLeadPlaintiffDeadline;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClassAction.LeadPlaintiffDeadline;
 			isDerived = false;
 			xmlTag = "LeadPlntffDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LeadPlaintiffDeadline";
 			definition = "Last day an investor can become a lead plaintiff.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.LeadPlaintiffDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmLeadPlaintiffDeadline;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected DateFormat30Choice filingDate;
 	/**
 	 * Date on which the action was filed at the applicable court.
 	 * <p>
@@ -1983,8 +2017,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction#FilingDate
-	 * ClassAction.FilingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ClassAction#mmFilingDate
+	 * ClassAction.mmFilingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2005,25 +2039,26 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#FilingDate
-	 * CorporateActionDate27.FilingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmFilingDate
+	 * CorporateActionDate27.mmFilingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FilingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFilingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClassAction.mmFilingDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClassAction.FilingDate;
 			isDerived = false;
 			xmlTag = "FilgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FilingDate";
 			definition = "Date on which the action was filed at the applicable court.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.FilingDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmFilingDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat30Choice.mmObject();
 		}
 	};
+	protected DateFormat30Choice hearingDate;
 	/**
 	 * Date for the hearing between the plaintiff and defendant, as set by the
 	 * court.
@@ -2038,8 +2073,8 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ClassAction#HearingDate
-	 * ClassAction.HearingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ClassAction#mmHearingDate
+	 * ClassAction.mmHearingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2061,22 +2096,22 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#HearingDate
-	 * CorporateActionDate27.HearingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmHearingDate
+	 * CorporateActionDate27.mmHearingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HearingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHearingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClassAction.mmHearingDate;
 			componentContext_lazy = () -> CorporateActionDate44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClassAction.HearingDate;
 			isDerived = false;
 			xmlTag = "HrgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HearingDate";
 			definition = "Date for the hearing between the plaintiff and defendant, as set by the court.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.HearingDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate27.mmHearingDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat30Choice.mmObject();
 		}
 	};
@@ -2084,23 +2119,23 @@ public class CorporateActionDate44 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate44.AnnouncementDate, com.tools20022.repository.msg.CorporateActionDate44.CertificationDeadline,
-						com.tools20022.repository.msg.CorporateActionDate44.CourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate44.EarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate44.EffectiveDate,
-						com.tools20022.repository.msg.CorporateActionDate44.EqualisationDate, com.tools20022.repository.msg.CorporateActionDate44.FurtherDetailedAnnouncementDate,
-						com.tools20022.repository.msg.CorporateActionDate44.FixingDate, com.tools20022.repository.msg.CorporateActionDate44.LotteryDate, com.tools20022.repository.msg.CorporateActionDate44.NewMaturityDate,
-						com.tools20022.repository.msg.CorporateActionDate44.MeetingDate, com.tools20022.repository.msg.CorporateActionDate44.MarginFixingDate, com.tools20022.repository.msg.CorporateActionDate44.ProrationDate,
-						com.tools20022.repository.msg.CorporateActionDate44.RecordDate, com.tools20022.repository.msg.CorporateActionDate44.RegistrationDeadline, com.tools20022.repository.msg.CorporateActionDate44.ResultsPublicationDate,
-						com.tools20022.repository.msg.CorporateActionDate44.DeadlineToSplit, com.tools20022.repository.msg.CorporateActionDate44.DeadlineForTaxBreakdownInstruction,
-						com.tools20022.repository.msg.CorporateActionDate44.TradingSuspendedDate, com.tools20022.repository.msg.CorporateActionDate44.UnconditionalDate,
-						com.tools20022.repository.msg.CorporateActionDate44.WhollyUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate44.ExDividendDate,
-						com.tools20022.repository.msg.CorporateActionDate44.OfficialAnnouncementPublicationDate, com.tools20022.repository.msg.CorporateActionDate44.SpecialExDate,
-						com.tools20022.repository.msg.CorporateActionDate44.GuaranteedParticipationDate, com.tools20022.repository.msg.CorporateActionDate44.ElectionToCounterpartyMarketDeadline,
-						com.tools20022.repository.msg.CorporateActionDate44.ElectionToCounterpartyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate44.LapsedDate,
-						com.tools20022.repository.msg.CorporateActionDate44.PaymentDate, com.tools20022.repository.msg.CorporateActionDate44.ThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate44.EarlyThirdPartyDeadline,
-						com.tools20022.repository.msg.CorporateActionDate44.MarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate44.LeadPlaintiffDeadline,
-						com.tools20022.repository.msg.CorporateActionDate44.FilingDate, com.tools20022.repository.msg.CorporateActionDate44.HearingDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate44.mmAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate44.mmCertificationDeadline,
+						com.tools20022.repository.msg.CorporateActionDate44.mmCourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate44.mmEarlyClosingDate, com.tools20022.repository.msg.CorporateActionDate44.mmEffectiveDate,
+						com.tools20022.repository.msg.CorporateActionDate44.mmEqualisationDate, com.tools20022.repository.msg.CorporateActionDate44.mmFurtherDetailedAnnouncementDate,
+						com.tools20022.repository.msg.CorporateActionDate44.mmFixingDate, com.tools20022.repository.msg.CorporateActionDate44.mmLotteryDate, com.tools20022.repository.msg.CorporateActionDate44.mmNewMaturityDate,
+						com.tools20022.repository.msg.CorporateActionDate44.mmMeetingDate, com.tools20022.repository.msg.CorporateActionDate44.mmMarginFixingDate, com.tools20022.repository.msg.CorporateActionDate44.mmProrationDate,
+						com.tools20022.repository.msg.CorporateActionDate44.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate44.mmRegistrationDeadline,
+						com.tools20022.repository.msg.CorporateActionDate44.mmResultsPublicationDate, com.tools20022.repository.msg.CorporateActionDate44.mmDeadlineToSplit,
+						com.tools20022.repository.msg.CorporateActionDate44.mmDeadlineForTaxBreakdownInstruction, com.tools20022.repository.msg.CorporateActionDate44.mmTradingSuspendedDate,
+						com.tools20022.repository.msg.CorporateActionDate44.mmUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate44.mmWhollyUnconditionalDate,
+						com.tools20022.repository.msg.CorporateActionDate44.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate44.mmOfficialAnnouncementPublicationDate,
+						com.tools20022.repository.msg.CorporateActionDate44.mmSpecialExDate, com.tools20022.repository.msg.CorporateActionDate44.mmGuaranteedParticipationDate,
+						com.tools20022.repository.msg.CorporateActionDate44.mmElectionToCounterpartyMarketDeadline, com.tools20022.repository.msg.CorporateActionDate44.mmElectionToCounterpartyResponseDeadline,
+						com.tools20022.repository.msg.CorporateActionDate44.mmLapsedDate, com.tools20022.repository.msg.CorporateActionDate44.mmPaymentDate, com.tools20022.repository.msg.CorporateActionDate44.mmThirdPartyDeadline,
+						com.tools20022.repository.msg.CorporateActionDate44.mmEarlyThirdPartyDeadline, com.tools20022.repository.msg.CorporateActionDate44.mmMarketClaimTrackingEndDate,
+						com.tools20022.repository.msg.CorporateActionDate44.mmLeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate44.mmFilingDate, com.tools20022.repository.msg.CorporateActionDate44.mmHearingDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate44";
 				definition = "Specifies corporate action dates.";
@@ -2108,5 +2143,285 @@ public class CorporateActionDate44 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateFormat31Choice getAnnouncementDate() {
+		return announcementDate;
+	}
+
+	public void setAnnouncementDate(DateFormat31Choice announcementDate) {
+		this.announcementDate = announcementDate;
+	}
+
+	public DateFormat31Choice getCertificationDeadline() {
+		return certificationDeadline;
+	}
+
+	public void setCertificationDeadline(DateFormat31Choice certificationDeadline) {
+		this.certificationDeadline = certificationDeadline;
+	}
+
+	public DateFormat31Choice getCourtApprovalDate() {
+		return courtApprovalDate;
+	}
+
+	public void setCourtApprovalDate(DateFormat31Choice courtApprovalDate) {
+		this.courtApprovalDate = courtApprovalDate;
+	}
+
+	public DateFormat31Choice getEarlyClosingDate() {
+		return earlyClosingDate;
+	}
+
+	public void setEarlyClosingDate(DateFormat31Choice earlyClosingDate) {
+		this.earlyClosingDate = earlyClosingDate;
+	}
+
+	public DateFormat31Choice getEffectiveDate() {
+		return effectiveDate;
+	}
+
+	public void setEffectiveDate(DateFormat31Choice effectiveDate) {
+		this.effectiveDate = effectiveDate;
+	}
+
+	public DateFormat31Choice getEqualisationDate() {
+		return equalisationDate;
+	}
+
+	public void setEqualisationDate(DateFormat31Choice equalisationDate) {
+		this.equalisationDate = equalisationDate;
+	}
+
+	public DateFormat31Choice getFurtherDetailedAnnouncementDate() {
+		return furtherDetailedAnnouncementDate;
+	}
+
+	public void setFurtherDetailedAnnouncementDate(DateFormat31Choice furtherDetailedAnnouncementDate) {
+		this.furtherDetailedAnnouncementDate = furtherDetailedAnnouncementDate;
+	}
+
+	public DateFormat31Choice getFixingDate() {
+		return fixingDate;
+	}
+
+	public void setFixingDate(DateFormat31Choice fixingDate) {
+		this.fixingDate = fixingDate;
+	}
+
+	public DateFormat31Choice getLotteryDate() {
+		return lotteryDate;
+	}
+
+	public void setLotteryDate(DateFormat31Choice lotteryDate) {
+		this.lotteryDate = lotteryDate;
+	}
+
+	public DateFormat31Choice getNewMaturityDate() {
+		return newMaturityDate;
+	}
+
+	public void setNewMaturityDate(DateFormat31Choice newMaturityDate) {
+		this.newMaturityDate = newMaturityDate;
+	}
+
+	public DateFormat31Choice getMeetingDate() {
+		return meetingDate;
+	}
+
+	public void setMeetingDate(DateFormat31Choice meetingDate) {
+		this.meetingDate = meetingDate;
+	}
+
+	public DateFormat31Choice getMarginFixingDate() {
+		return marginFixingDate;
+	}
+
+	public void setMarginFixingDate(DateFormat31Choice marginFixingDate) {
+		this.marginFixingDate = marginFixingDate;
+	}
+
+	public DateFormat31Choice getProrationDate() {
+		return prorationDate;
+	}
+
+	public void setProrationDate(DateFormat31Choice prorationDate) {
+		this.prorationDate = prorationDate;
+	}
+
+	public DateFormat31Choice getRecordDate() {
+		return recordDate;
+	}
+
+	public void setRecordDate(DateFormat31Choice recordDate) {
+		this.recordDate = recordDate;
+	}
+
+	public DateFormat31Choice getRegistrationDeadline() {
+		return registrationDeadline;
+	}
+
+	public void setRegistrationDeadline(DateFormat31Choice registrationDeadline) {
+		this.registrationDeadline = registrationDeadline;
+	}
+
+	public DateFormat31Choice getResultsPublicationDate() {
+		return resultsPublicationDate;
+	}
+
+	public void setResultsPublicationDate(DateFormat31Choice resultsPublicationDate) {
+		this.resultsPublicationDate = resultsPublicationDate;
+	}
+
+	public DateFormat31Choice getDeadlineToSplit() {
+		return deadlineToSplit;
+	}
+
+	public void setDeadlineToSplit(DateFormat31Choice deadlineToSplit) {
+		this.deadlineToSplit = deadlineToSplit;
+	}
+
+	public DateFormat31Choice getDeadlineForTaxBreakdownInstruction() {
+		return deadlineForTaxBreakdownInstruction;
+	}
+
+	public void setDeadlineForTaxBreakdownInstruction(DateFormat31Choice deadlineForTaxBreakdownInstruction) {
+		this.deadlineForTaxBreakdownInstruction = deadlineForTaxBreakdownInstruction;
+	}
+
+	public DateFormat31Choice getTradingSuspendedDate() {
+		return tradingSuspendedDate;
+	}
+
+	public void setTradingSuspendedDate(DateFormat31Choice tradingSuspendedDate) {
+		this.tradingSuspendedDate = tradingSuspendedDate;
+	}
+
+	public DateFormat31Choice getUnconditionalDate() {
+		return unconditionalDate;
+	}
+
+	public void setUnconditionalDate(DateFormat31Choice unconditionalDate) {
+		this.unconditionalDate = unconditionalDate;
+	}
+
+	public DateFormat31Choice getWhollyUnconditionalDate() {
+		return whollyUnconditionalDate;
+	}
+
+	public void setWhollyUnconditionalDate(DateFormat31Choice whollyUnconditionalDate) {
+		this.whollyUnconditionalDate = whollyUnconditionalDate;
+	}
+
+	public DateFormat31Choice getExDividendDate() {
+		return exDividendDate;
+	}
+
+	public void setExDividendDate(DateFormat31Choice exDividendDate) {
+		this.exDividendDate = exDividendDate;
+	}
+
+	public DateFormat31Choice getOfficialAnnouncementPublicationDate() {
+		return officialAnnouncementPublicationDate;
+	}
+
+	public void setOfficialAnnouncementPublicationDate(DateFormat31Choice officialAnnouncementPublicationDate) {
+		this.officialAnnouncementPublicationDate = officialAnnouncementPublicationDate;
+	}
+
+	public DateFormat31Choice getSpecialExDate() {
+		return specialExDate;
+	}
+
+	public void setSpecialExDate(DateFormat31Choice specialExDate) {
+		this.specialExDate = specialExDate;
+	}
+
+	public DateFormat31Choice getGuaranteedParticipationDate() {
+		return guaranteedParticipationDate;
+	}
+
+	public void setGuaranteedParticipationDate(DateFormat31Choice guaranteedParticipationDate) {
+		this.guaranteedParticipationDate = guaranteedParticipationDate;
+	}
+
+	public DateFormat31Choice getElectionToCounterpartyMarketDeadline() {
+		return electionToCounterpartyMarketDeadline;
+	}
+
+	public void setElectionToCounterpartyMarketDeadline(DateFormat31Choice electionToCounterpartyMarketDeadline) {
+		this.electionToCounterpartyMarketDeadline = electionToCounterpartyMarketDeadline;
+	}
+
+	public DateFormat31Choice getElectionToCounterpartyResponseDeadline() {
+		return electionToCounterpartyResponseDeadline;
+	}
+
+	public void setElectionToCounterpartyResponseDeadline(DateFormat31Choice electionToCounterpartyResponseDeadline) {
+		this.electionToCounterpartyResponseDeadline = electionToCounterpartyResponseDeadline;
+	}
+
+	public DateFormat31Choice getLapsedDate() {
+		return lapsedDate;
+	}
+
+	public void setLapsedDate(DateFormat31Choice lapsedDate) {
+		this.lapsedDate = lapsedDate;
+	}
+
+	public DateFormat31Choice getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(DateFormat31Choice paymentDate) {
+		this.paymentDate = paymentDate;
+	}
+
+	public DateFormat31Choice getThirdPartyDeadline() {
+		return thirdPartyDeadline;
+	}
+
+	public void setThirdPartyDeadline(DateFormat31Choice thirdPartyDeadline) {
+		this.thirdPartyDeadline = thirdPartyDeadline;
+	}
+
+	public DateFormat31Choice getEarlyThirdPartyDeadline() {
+		return earlyThirdPartyDeadline;
+	}
+
+	public void setEarlyThirdPartyDeadline(DateFormat31Choice earlyThirdPartyDeadline) {
+		this.earlyThirdPartyDeadline = earlyThirdPartyDeadline;
+	}
+
+	public DateFormat31Choice getMarketClaimTrackingEndDate() {
+		return marketClaimTrackingEndDate;
+	}
+
+	public void setMarketClaimTrackingEndDate(DateFormat31Choice marketClaimTrackingEndDate) {
+		this.marketClaimTrackingEndDate = marketClaimTrackingEndDate;
+	}
+
+	public DateFormat31Choice getLeadPlaintiffDeadline() {
+		return leadPlaintiffDeadline;
+	}
+
+	public void setLeadPlaintiffDeadline(DateFormat31Choice leadPlaintiffDeadline) {
+		this.leadPlaintiffDeadline = leadPlaintiffDeadline;
+	}
+
+	public DateFormat30Choice getFilingDate() {
+		return filingDate;
+	}
+
+	public void setFilingDate(DateFormat30Choice filingDate) {
+		this.filingDate = filingDate;
+	}
+
+	public DateFormat30Choice getHearingDate() {
+		return hearingDate;
+	}
+
+	public void setHearingDate(DateFormat30Choice hearingDate) {
+		this.hearingDate = hearingDate;
 	}
 }

@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllegementReason1Code#AllegementReceived
- * AllegementReason1Code.AllegementReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllegementReason1Code#mmAllegementReceived
+ * AllegementReason1Code.mmAllegementReceived}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class AllegementReason1Code extends AllegementReasonCode {
 	 * name} = "AllegementReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllegementReceived = new MMCode() {
+	public static final MMCode mmAllegementReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementReceived";
@@ -90,12 +90,12 @@ public class AllegementReason1Code extends AllegementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALG1");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AllegementReason1Code";
 				definition = "Specifies the reason why the instruction has an allegement status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllegementReason1Code.AllegementReceived);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllegementReason1Code.mmAllegementReceived);
 				trace_lazy = () -> AllegementReasonCode.mmObject();
 			}
 		});

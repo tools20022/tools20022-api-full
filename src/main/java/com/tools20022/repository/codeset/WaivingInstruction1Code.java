@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WaivingInstruction1Code#WaiveInCash
- * WaivingInstruction1Code.WaiveInCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.WaivingInstruction1Code#mmWaiveInCash
+ * WaivingInstruction1Code.mmWaiveInCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WaivingInstruction1Code#WaiveInUnits
- * WaivingInstruction1Code.WaiveInUnits}</li>
+ * {@linkplain com.tools20022.repository.codeset.WaivingInstruction1Code#mmWaiveInUnits
+ * WaivingInstruction1Code.mmWaiveInUnits}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class WaivingInstruction1Code extends WaivingInstructionCode {
 	 * name} = "WaiveInCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode WaiveInCash = new MMCode() {
+	public static final MMCode mmWaiveInCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaiveInCash";
@@ -104,7 +104,7 @@ public class WaivingInstruction1Code extends WaivingInstructionCode {
 	 * name} = "WaiveInUnits"</li>
 	 * </ul>
 	 */
-	public static final MMCode WaiveInUnits = new MMCode() {
+	public static final MMCode mmWaiveInUnits = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaiveInUnits";
@@ -115,12 +115,12 @@ public class WaivingInstruction1Code extends WaivingInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WICA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "WaivingInstruction1Code";
 				definition = "Specifies the form of the rebate when commission is waived.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WaivingInstruction1Code.WaiveInCash, com.tools20022.repository.codeset.WaivingInstruction1Code.WaiveInUnits);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WaivingInstruction1Code.mmWaiveInCash, com.tools20022.repository.codeset.WaivingInstruction1Code.mmWaiveInUnits);
 				trace_lazy = () -> WaivingInstructionCode.mmObject();
 			}
 		});

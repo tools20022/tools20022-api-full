@@ -38,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficiaryInformation1#BeneficiaryIdentification
- * BeneficiaryInformation1.BeneficiaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficiaryInformation1#mmBeneficiaryIdentification
+ * BeneficiaryInformation1.mmBeneficiaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficiaryInformation1#ERISAEligibility
- * BeneficiaryInformation1.ERISAEligibility}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficiaryInformation1#mmERISAEligibility
+ * BeneficiaryInformation1.mmERISAEligibility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficiaryInformation1#ERISARate
- * BeneficiaryInformation1.ERISARate}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficiaryInformation1#mmERISARate
+ * BeneficiaryInformation1.mmERISARate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficiaryInformation1#BenefitPlanDeclarationIndicator
- * BeneficiaryInformation1.BenefitPlanDeclarationIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficiaryInformation1#mmBenefitPlanDeclarationIndicator
+ * BeneficiaryInformation1.mmBenefitPlanDeclarationIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BeneficiaryInformation1#NoChangeToBeneficiaryDetailsIndicator
- * BeneficiaryInformation1.NoChangeToBeneficiaryDetailsIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BeneficiaryInformation1#mmNoChangeToBeneficiaryDetailsIndicator
+ * BeneficiaryInformation1.mmNoChangeToBeneficiaryDetailsIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BeneficiaryInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IndividualPerson15 beneficiaryIdentification;
 	/**
 	 * Identification of the beneficial owner.
 	 * <p>
@@ -105,21 +106,22 @@ public class BeneficiaryInformation1 {
 	 * definition} = "Identification of the beneficial owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BeneficiaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBeneficiaryIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryIdentification";
 			definition = "Identification of the beneficial owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson15.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
 		}
 	};
+	protected ERISAEligibility1Code eRISAEligibility;
 	/**
 	 * Eligibility to federal Employee Retirement Income Security Act.
 	 * <p>
@@ -133,8 +135,8 @@ public class BeneficiaryInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#ERISAEligibility
-	 * BeneficialOwner.ERISAEligibility}</li>
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmERISAEligibility
+	 * BeneficialOwner.mmERISAEligibility}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +156,21 @@ public class BeneficiaryInformation1 {
 	 * "Eligibility to federal Employee Retirement Income Security Act."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ERISAEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmERISAEligibility = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmERISAEligibility;
 			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.ERISAEligibility;
 			isDerived = false;
 			xmlTag = "ERISAElgblty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISAEligibility";
 			definition = "Eligibility to federal Employee Retirement Income Security Act.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ERISAEligibility1Code.mmObject();
 		}
 	};
+	protected PercentageRate eRISARate;
 	/**
 	 * Federal Employee Retirement Income Security Act (ERISA) rate.
 	 * <p>
@@ -181,8 +184,8 @@ public class BeneficiaryInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#ERISARate
-	 * BeneficialOwner.ERISARate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmERISARate
+	 * BeneficialOwner.mmERISARate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,20 +205,21 @@ public class BeneficiaryInformation1 {
 	 * "Federal Employee Retirement Income Security Act (ERISA) rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ERISARate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmERISARate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmERISARate;
 			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.ERISARate;
 			isDerived = false;
 			xmlTag = "ERISARate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISARate";
 			definition = "Federal Employee Retirement Income Security Act (ERISA) rate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected YesNoIndicator benefitPlanDeclarationIndicator;
 	/**
 	 * Indicates whether the investor is a benefit plan investor.
 	 * <p>
@@ -229,8 +233,8 @@ public class BeneficiaryInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#BenefitPlanDeclarationIndicator
-	 * BeneficialOwner.BenefitPlanDeclarationIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmBenefitPlanDeclarationIndicator
+	 * BeneficialOwner.mmBenefitPlanDeclarationIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -250,20 +254,21 @@ public class BeneficiaryInformation1 {
 	 * "Indicates whether the investor is a benefit plan investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BenefitPlanDeclarationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBenefitPlanDeclarationIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmBenefitPlanDeclarationIndicator;
 			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.BenefitPlanDeclarationIndicator;
 			isDerived = false;
 			xmlTag = "BnftPlanDclrtnInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenefitPlanDeclarationIndicator";
 			definition = "Indicates whether the investor is a benefit plan investor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator noChangeToBeneficiaryDetailsIndicator;
 	/**
 	 * Indicates that there has been no change to the beneficiary's details,
 	 * such as domicile, investor status, etc, as represented in the initial
@@ -296,7 +301,7 @@ public class BeneficiaryInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoChangeToBeneficiaryDetailsIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoChangeToBeneficiaryDetailsIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
 			isDerived = false;
@@ -304,8 +309,8 @@ public class BeneficiaryInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoChangeToBeneficiaryDetailsIndicator";
 			definition = "Indicates that there has been no change to the beneficiary's details, such as domicile, investor status, etc, as represented in the initial subscription document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -313,16 +318,56 @@ public class BeneficiaryInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficiaryInformation1.BeneficiaryIdentification, com.tools20022.repository.msg.BeneficiaryInformation1.ERISAEligibility,
-						com.tools20022.repository.msg.BeneficiaryInformation1.ERISARate, com.tools20022.repository.msg.BeneficiaryInformation1.BenefitPlanDeclarationIndicator,
-						com.tools20022.repository.msg.BeneficiaryInformation1.NoChangeToBeneficiaryDetailsIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficiaryInformation1.mmBeneficiaryIdentification, com.tools20022.repository.msg.BeneficiaryInformation1.mmERISAEligibility,
+						com.tools20022.repository.msg.BeneficiaryInformation1.mmERISARate, com.tools20022.repository.msg.BeneficiaryInformation1.mmBenefitPlanDeclarationIndicator,
+						com.tools20022.repository.msg.BeneficiaryInformation1.mmNoChangeToBeneficiaryDetailsIndicator);
 				trace_lazy = () -> BeneficialOwner.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BeneficiaryInformation1";
 				definition = "Information about the beneficial owner.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IndividualPerson15 getBeneficiaryIdentification() {
+		return beneficiaryIdentification;
+	}
+
+	public void setBeneficiaryIdentification(com.tools20022.repository.msg.IndividualPerson15 beneficiaryIdentification) {
+		this.beneficiaryIdentification = beneficiaryIdentification;
+	}
+
+	public ERISAEligibility1Code getERISAEligibility() {
+		return eRISAEligibility;
+	}
+
+	public void setERISAEligibility(ERISAEligibility1Code eRISAEligibility) {
+		this.eRISAEligibility = eRISAEligibility;
+	}
+
+	public PercentageRate getERISARate() {
+		return eRISARate;
+	}
+
+	public void setERISARate(PercentageRate eRISARate) {
+		this.eRISARate = eRISARate;
+	}
+
+	public YesNoIndicator getBenefitPlanDeclarationIndicator() {
+		return benefitPlanDeclarationIndicator;
+	}
+
+	public void setBenefitPlanDeclarationIndicator(YesNoIndicator benefitPlanDeclarationIndicator) {
+		this.benefitPlanDeclarationIndicator = benefitPlanDeclarationIndicator;
+	}
+
+	public YesNoIndicator getNoChangeToBeneficiaryDetailsIndicator() {
+		return noChangeToBeneficiaryDetailsIndicator;
+	}
+
+	public void setNoChangeToBeneficiaryDetailsIndicator(YesNoIndicator noChangeToBeneficiaryDetailsIndicator) {
+		this.noChangeToBeneficiaryDetailsIndicator = noChangeToBeneficiaryDetailsIndicator;
 	}
 }

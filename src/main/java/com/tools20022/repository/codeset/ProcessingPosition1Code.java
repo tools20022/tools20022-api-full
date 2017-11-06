@@ -31,21 +31,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#After
- * ProcessingPosition1Code.After}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#mmAfter
+ * ProcessingPosition1Code.mmAfter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#With
- * ProcessingPosition1Code.With}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#mmWith
+ * ProcessingPosition1Code.mmWith}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#Before
- * ProcessingPosition1Code.Before}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#mmBefore
+ * ProcessingPosition1Code.mmBefore}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class ProcessingPosition1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode After = new MMCode() {
+	public static final MMCode mmAfter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "After";
@@ -124,7 +124,7 @@ public class ProcessingPosition1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode With = new MMCode() {
+	public static final MMCode mmWith = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "With";
@@ -157,7 +157,7 @@ public class ProcessingPosition1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Before = new MMCode() {
+	public static final MMCode mmBefore = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Before";
@@ -170,13 +170,13 @@ public class ProcessingPosition1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AFTR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessingPosition1Code";
 				definition = "Indicates when an instruction is to be executed relative to a linked instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPosition1Code.After, com.tools20022.repository.codeset.ProcessingPosition1Code.With,
-						com.tools20022.repository.codeset.ProcessingPosition1Code.Before);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPosition1Code.mmAfter, com.tools20022.repository.codeset.ProcessingPosition1Code.mmWith,
+						com.tools20022.repository.codeset.ProcessingPosition1Code.mmBefore);
 			}
 		});
 		return mmObject_lazy.get();

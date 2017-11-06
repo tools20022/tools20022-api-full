@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationIdentification4#Identification
- * NotificationIdentification4.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationIdentification4#mmIdentification
+ * NotificationIdentification4.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationIdentification4#CreationDateTime
- * NotificationIdentification4.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationIdentification4#mmCreationDateTime
+ * NotificationIdentification4.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax16Text identification;
 	/**
 	 * Unique identifier of the last notification document (message) assigned by
 	 * the sender of the document.
@@ -81,8 +82,8 @@ public class NotificationIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionNotification#CorporateActionNotificationIdentification
-	 * CorporateActionNotification.CorporateActionNotificationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionNotification#mmCorporateActionNotificationIdentification
+	 * CorporateActionNotification.mmCorporateActionNotificationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class NotificationIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmCorporateActionNotificationIdentification;
 			componentContext_lazy = () -> NotificationIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.CorporateActionNotificationIdentification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the last notification document (message) assigned by the sender of the document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice creationDateTime;
 	/**
 	 * Date and time at which the last notification document (message) was
 	 * created by the sender.
@@ -131,8 +133,8 @@ public class NotificationIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionNotification#CreationDateTime
-	 * CorporateActionNotification.CreationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionNotification#mmCreationDateTime
+	 * CorporateActionNotification.mmCreationDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,17 +155,17 @@ public class NotificationIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmCreationDateTime;
 			componentContext_lazy = () -> NotificationIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.CreationDateTime;
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the last notification document (message) was created by the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -171,14 +173,30 @@ public class NotificationIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationIdentification4.Identification, com.tools20022.repository.msg.NotificationIdentification4.CreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationIdentification4.mmIdentification, com.tools20022.repository.msg.NotificationIdentification4.mmCreationDateTime);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationIdentification4";
 				definition = "Provides information about the identification and the creation date of a notification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax16Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(RestrictedFINXMax16Text identification) {
+		this.identification = identification;
+	}
+
+	public DateAndDateTimeChoice getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

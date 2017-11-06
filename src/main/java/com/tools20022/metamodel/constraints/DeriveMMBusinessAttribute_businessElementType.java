@@ -17,13 +17,17 @@
 
 package com.tools20022.metamodel.constraints;
 
+import java.util.function.Function;
+
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessElementType;
-import java.util.function.Function;
+import com.tools20022.metamodel.struct.MMBusinessAttribute_;
 
 /**
  * Calculate derived attribute
  * {@link MMBusinessAttribute#getBusinessElementType()}
+ * 
+ * @see MMBusinessAttribute_#checkBusinessAttributeHasExactlyOneType
  */
 public class DeriveMMBusinessAttribute_businessElementType implements Function<MMBusinessAttribute, MMBusinessElementType> {
 
@@ -32,6 +36,12 @@ public class DeriveMMBusinessAttribute_businessElementType implements Function<M
 	 */
 	@Override
 	public MMBusinessElementType apply(MMBusinessAttribute mmBean) {
-		throw new RuntimeException("Not implemented!");
+		if( mmBean.getSimpleType().isPresent()) 
+			return mmBean.getSimpleType().get();
+		else if ( mmBean.getComplexType().isPresent()) 
+			return mmBean.getComplexType().get();
+		else
+			throw new RuntimeException(
+					"A BusinessAttribute must have exactly one of the following: simpleType or complexType.");
 	}
 }

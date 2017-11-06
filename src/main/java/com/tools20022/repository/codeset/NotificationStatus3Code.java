@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus3Code#ReceivedButDifferent
- * NotificationStatus3Code.ReceivedButDifferent}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus3Code#mmReceivedButDifferent
+ * NotificationStatus3Code.mmReceivedButDifferent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus3Code#Received
- * NotificationStatus3Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus3Code#mmReceived
+ * NotificationStatus3Code.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus3Code#NotReceived
- * NotificationStatus3Code.NotReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus3Code#mmNotReceived
+ * NotificationStatus3Code.mmNotReceived}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class NotificationStatus3Code extends NotificationToReceiveStatusCode {
 	 * name} = "ReceivedButDifferent"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivedButDifferent = new MMCode() {
+	public static final MMCode mmReceivedButDifferent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedButDifferent";
@@ -107,7 +107,7 @@ public class NotificationStatus3Code extends NotificationToReceiveStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -130,7 +130,7 @@ public class NotificationStatus3Code extends NotificationToReceiveStatusCode {
 	 * name} = "NotReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotReceived = new MMCode() {
+	public static final MMCode mmNotReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReceived";
@@ -141,13 +141,13 @@ public class NotificationStatus3Code extends NotificationToReceiveStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RCBD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationStatus3Code";
 				definition = "Specifies the status of the notification in a coded form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationStatus3Code.ReceivedButDifferent, com.tools20022.repository.codeset.NotificationStatus3Code.Received,
-						com.tools20022.repository.codeset.NotificationStatus3Code.NotReceived);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationStatus3Code.mmReceivedButDifferent, com.tools20022.repository.codeset.NotificationStatus3Code.mmReceived,
+						com.tools20022.repository.codeset.NotificationStatus3Code.mmNotReceived);
 				trace_lazy = () -> NotificationToReceiveStatusCode.mmObject();
 			}
 		});

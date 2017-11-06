@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max70Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Parameters for which a user defined report is requested.
@@ -36,26 +37,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericReportParameters#AccountIdentification
- * GenericReportParameters.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericReportParameters#mmAccountIdentification
+ * GenericReportParameters.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericReportParameters#FinancialInstrumentDetails
- * GenericReportParameters.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericReportParameters#mmFinancialInstrumentDetails
+ * GenericReportParameters.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericReportParameters#ReportDescription
- * GenericReportParameters.ReportDescription}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericReportParameters#Date
- * GenericReportParameters.Date}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericReportParameters#mmReportDescription
+ * GenericReportParameters.mmReportDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericReportParameters#mmDate
+ * GenericReportParameters.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericReportParameters#UserDefinedParameter
- * GenericReportParameters.UserDefinedParameter}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericReportParameters#mmUserDefinedParameter
+ * GenericReportParameters.mmUserDefinedParameter}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GenericReportParameters {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AccountIdentificationFormatChoice> accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -100,7 +102,7 @@ public class GenericReportParameters {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericReportParameters.mmObject();
 			isDerived = false;
@@ -112,6 +114,7 @@ public class GenericReportParameters {
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails;
 	/**
 	 * Financial instrument for which the user-defined report is requested.
 	 * <p>
@@ -139,7 +142,7 @@ public class GenericReportParameters {
 	 * "Financial instrument for which the user-defined report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GenericReportParameters.mmObject();
 			isDerived = false;
@@ -148,10 +151,11 @@ public class GenericReportParameters {
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument for which the user-defined report is requested.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrument17.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
 		}
 	};
+	protected Max70Text reportDescription;
 	/**
 	 * Type of report requested.
 	 * <p>
@@ -179,7 +183,7 @@ public class GenericReportParameters {
 	 * definition} = "Type of report requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericReportParameters.mmObject();
 			isDerived = false;
@@ -187,11 +191,12 @@ public class GenericReportParameters {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDescription";
 			definition = "Type of report requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Date for which the report is requested.
 	 * <p>
@@ -219,7 +224,7 @@ public class GenericReportParameters {
 	 * definition} = "Date for which the report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericReportParameters.mmObject();
 			isDerived = false;
@@ -227,11 +232,12 @@ public class GenericReportParameters {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date for which the report is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<Max70Text> userDefinedParameter;
 	/**
 	 * Parameters that cannot be specifed in the structured fields provided.
 	 * <p>
@@ -260,7 +266,7 @@ public class GenericReportParameters {
 	 * "Parameters that cannot be specifed in the structured fields provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UserDefinedParameter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUserDefinedParameter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericReportParameters.mmObject();
 			isDerived = false;
@@ -268,8 +274,8 @@ public class GenericReportParameters {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefinedParameter";
 			definition = "Parameters that cannot be specifed in the structured fields provided.";
-			minOccurs = 0;
 			maxOccurs = 10;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -277,14 +283,54 @@ public class GenericReportParameters {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericReportParameters.AccountIdentification, com.tools20022.repository.msg.GenericReportParameters.FinancialInstrumentDetails,
-						com.tools20022.repository.msg.GenericReportParameters.ReportDescription, com.tools20022.repository.msg.GenericReportParameters.Date, com.tools20022.repository.msg.GenericReportParameters.UserDefinedParameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericReportParameters.mmAccountIdentification, com.tools20022.repository.msg.GenericReportParameters.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.GenericReportParameters.mmReportDescription, com.tools20022.repository.msg.GenericReportParameters.mmDate, com.tools20022.repository.msg.GenericReportParameters.mmUserDefinedParameter);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GenericReportParameters";
 				definition = "Parameters for which a user defined report is requested.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AccountIdentificationFormatChoice> getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(List<AccountIdentificationFormatChoice> accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public List<FinancialInstrument17> getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public Max70Text getReportDescription() {
+		return reportDescription;
+	}
+
+	public void setReportDescription(Max70Text reportDescription) {
+		this.reportDescription = reportDescription;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public List<Max70Text> getUserDefinedParameter() {
+		return userDefinedParameter;
+	}
+
+	public void setUserDefinedParameter(List<Max70Text> userDefinedParameter) {
+		this.userDefinedParameter = userDefinedParameter;
 	}
 }

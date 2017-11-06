@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity10#UnitOfMeasure
- * Quantity10.UnitOfMeasure}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity10#Value
- * Quantity10.Value}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity10#mmUnitOfMeasure
+ * Quantity10.mmUnitOfMeasure}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity10#mmValue
+ * Quantity10.mmValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Quantity10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnitOfMeasure3Choice unitOfMeasure;
 	/**
 	 * Specifies a unit of measure with a code or free text.
 	 * <p>
@@ -77,8 +78,8 @@ public class Quantity10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#UnitOfMeasure
-	 * ProductQuantity.UnitOfMeasure}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmUnitOfMeasure
+	 * ProductQuantity.mmUnitOfMeasure}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Quantity10
@@ -96,21 +97,22 @@ public class Quantity10 {
 	 * definition} = "Specifies a unit of measure with a code or free text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnitOfMeasure = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnitOfMeasure = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> Quantity10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.UnitOfMeasure;
 			isDerived = false;
 			xmlTag = "UnitOfMeasr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasure";
 			definition = "Specifies a unit of measure with a code or free text.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UnitOfMeasure3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> UnitOfMeasure3Choice.mmObject();
 		}
 	};
+	protected DecimalNumber value;
 	/**
 	 * Quantity of a product on a line specified by a number. For example, 100
 	 * (kgs), 50 (pieces).
@@ -125,8 +127,8 @@ public class Quantity10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#Value
-	 * ProductQuantity.Value}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmValue
+	 * ProductQuantity.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Quantity10
@@ -147,22 +149,22 @@ public class Quantity10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Quantity3#Value
-	 * Quantity3.Value}</li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity3#mmValue
+	 * Quantity3.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
 			componentContext_lazy = () -> Quantity10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.Value;
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Quantity3.Value;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Quantity3.mmValue;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -170,9 +172,9 @@ public class Quantity10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity10.UnitOfMeasure, com.tools20022.repository.msg.Quantity10.Value);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity10.mmUnitOfMeasure, com.tools20022.repository.msg.Quantity10.mmValue);
 				trace_lazy = () -> ProductQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Quantity10";
 				definition = "Specifies the quantity of a product in a trade transaction.";
@@ -180,5 +182,21 @@ public class Quantity10 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnitOfMeasure3Choice getUnitOfMeasure() {
+		return unitOfMeasure;
+	}
+
+	public void setUnitOfMeasure(UnitOfMeasure3Choice unitOfMeasure) {
+		this.unitOfMeasure = unitOfMeasure;
+	}
+
+	public DecimalNumber getValue() {
+		return value;
+	}
+
+	public void setValue(DecimalNumber value) {
+		this.value = value;
 	}
 }

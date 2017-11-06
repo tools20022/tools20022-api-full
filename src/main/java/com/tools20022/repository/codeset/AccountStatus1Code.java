@@ -33,20 +33,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus1Code#Enabled
- * AccountStatus1Code.Enabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatus1Code#Disabled
- * AccountStatus1Code.Disabled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus1Code#Deleted
- * AccountStatus1Code.Deleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatus1Code#mmEnabled
+ * AccountStatus1Code.mmEnabled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatus1Code#mmDisabled
+ * AccountStatus1Code.mmDisabled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatus1Code#mmDeleted
+ * AccountStatus1Code.mmDeleted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +84,7 @@ public class AccountStatus1Code extends AccountStatusCode {
 	 * name} = "Enabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Enabled = new MMCode() {
+	public static final MMCode mmEnabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
@@ -105,7 +107,7 @@ public class AccountStatus1Code extends AccountStatusCode {
 	 * name} = "Disabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Disabled = new MMCode() {
+	public static final MMCode mmDisabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
@@ -128,7 +130,7 @@ public class AccountStatus1Code extends AccountStatusCode {
 	 * name} = "Deleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Deleted = new MMCode() {
+	public static final MMCode mmDeleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
@@ -139,12 +141,13 @@ public class AccountStatus1Code extends AccountStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ENAB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatus1Code";
 				definition = "Qualifies further the current state of an account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatus1Code.Enabled, com.tools20022.repository.codeset.AccountStatus1Code.Disabled, com.tools20022.repository.codeset.AccountStatus1Code.Deleted);
+				code_lazy = () -> Arrays
+						.asList(com.tools20022.repository.codeset.AccountStatus1Code.mmEnabled, com.tools20022.repository.codeset.AccountStatus1Code.mmDisabled, com.tools20022.repository.codeset.AccountStatus1Code.mmDeleted);
 				trace_lazy = () -> AccountStatusCode.mmObject();
 			}
 		});

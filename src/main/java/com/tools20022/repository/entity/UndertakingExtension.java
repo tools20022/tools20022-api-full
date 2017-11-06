@@ -43,26 +43,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingExtension#Undertaking
- * UndertakingExtension.Undertaking}</li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingExtension#mmUndertaking
+ * UndertakingExtension.mmUndertaking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingExtension#AutoExtensionPeriod
- * UndertakingExtension.AutoExtensionPeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingExtension#mmAutoExtensionPeriod
+ * UndertakingExtension.mmAutoExtensionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingExtension#AutoExtensionFinalExpiryDate
- * UndertakingExtension.AutoExtensionFinalExpiryDate}</li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingExtension#mmAutoExtensionFinalExpiryDate
+ * UndertakingExtension.mmAutoExtensionFinalExpiryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingExtension#NonExtensionNoticePeriod
- * UndertakingExtension.NonExtensionNoticePeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingExtension#mmNonExtensionNoticePeriod
+ * UndertakingExtension.mmNonExtensionNoticePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingExtension#NonExtensionIndicator
- * UndertakingExtension.NonExtensionIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingExtension#mmNonExtensionIndicator
+ * UndertakingExtension.mmNonExtensionIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingExtension#AutoExtensionNotificationPeriod
- * UndertakingExtension.AutoExtensionNotificationPeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingExtension#mmAutoExtensionNotificationPeriod
+ * UndertakingExtension.mmAutoExtensionNotificationPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingExtension#NotificationRecipientType
- * UndertakingExtension.NotificationRecipientType}</li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingExtension#mmNotificationRecipientType
+ * UndertakingExtension.mmNotificationRecipientType}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#UndertakingExtension
- * Undertaking.UndertakingExtension}</li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingExtension
+ * Undertaking.mmUndertakingExtension}</li>
  * </ul>
  * </li>
  * <li>
@@ -85,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingExtension {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Undertaking undertaking;
 	/**
 	 * Undertaking for which extension parameters are provided.
 	 * <p>
@@ -109,8 +110,8 @@ public class UndertakingExtension {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#UndertakingExtension
-	 * Undertaking.UndertakingExtension}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingExtension
+	 * Undertaking.mmUndertakingExtension}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -134,20 +135,21 @@ public class UndertakingExtension {
 	 * definition} = "Undertaking for which extension parameters are provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Undertaking = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> UndertakingExtension.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
 			definition = "Undertaking for which extension parameters are provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.UndertakingExtension;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingExtension;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 		}
 	};
+	protected Max35Text autoExtensionPeriod;
 	/**
 	 * Requirement for a clause covering an automatic extension of the validity
 	 * expiry date.
@@ -158,18 +160,18 @@ public class UndertakingExtension {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.AutoExtension1#Period
-	 * AutoExtension1.Period}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AutoExtension1#mmPeriod
+	 * AutoExtension1.mmPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -183,19 +185,20 @@ public class UndertakingExtension {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AutoExtensionPeriod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAutoExtensionPeriod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutoExtension1.Period);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutoExtension1.mmPeriod);
 			elementContext_lazy = () -> UndertakingExtension.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AutoExtensionPeriod";
 			definition = "Requirement for a clause covering an automatic extension of the validity expiry date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate autoExtensionFinalExpiryDate;
 	/**
 	 * Date after which the undertaking will no longer be subject to automatic
 	 * extension.
@@ -206,19 +209,19 @@ public class UndertakingExtension {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AutoExtension1#FinalExpiryDate
-	 * AutoExtension1.FinalExpiryDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AutoExtension1#mmFinalExpiryDate
+	 * AutoExtension1.mmFinalExpiryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -232,19 +235,20 @@ public class UndertakingExtension {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AutoExtensionFinalExpiryDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAutoExtensionFinalExpiryDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutoExtension1.FinalExpiryDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutoExtension1.mmFinalExpiryDate);
 			elementContext_lazy = () -> UndertakingExtension.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AutoExtensionFinalExpiryDate";
 			definition = "Date after which the undertaking will no longer be subject to automatic extension.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Number nonExtensionNoticePeriod;
 	/**
 	 * Minimum number of days of advance notification that must be given to
 	 * indicate the undertaking will no longer be extended.
@@ -255,19 +259,19 @@ public class UndertakingExtension {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NonExtension1#NotificationPeriod
-	 * NonExtension1.NotificationPeriod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension
 	 * UndertakingExtension}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonExtension1#mmNotificationPeriod
+	 * NonExtension1.mmNotificationPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -281,19 +285,20 @@ public class UndertakingExtension {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NonExtensionNoticePeriod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNonExtensionNoticePeriod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonExtension1.NotificationPeriod);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonExtension1.mmNotificationPeriod);
 			elementContext_lazy = () -> UndertakingExtension.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NonExtensionNoticePeriod";
 			definition = "Minimum number of days of advance notification that must be given to indicate the undertaking  will no longer be extended. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected YesNoIndicator nonExtensionIndicator;
 	/**
 	 * Indicates whether the undertaking can be extended.
 	 * <p>
@@ -320,18 +325,19 @@ public class UndertakingExtension {
 	 * definition} = "Indicates whether the undertaking can be extended."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NonExtensionIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNonExtensionIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> UndertakingExtension.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonExtensionIndicator";
 			definition = "Indicates whether the undertaking can be extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Number autoExtensionNotificationPeriod;
 	/**
 	 * Minimum number of days of advance notification given to indicate the
 	 * undertaking will no longer be automatically extended.
@@ -360,18 +366,19 @@ public class UndertakingExtension {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AutoExtensionNotificationPeriod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAutoExtensionNotificationPeriod = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> UndertakingExtension.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoExtensionNotificationPeriod";
 			definition = "Minimum number of days of advance notification given to indicate the undertaking will no longer be automatically extended. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ExternalTypeOfPartyCode notificationRecipientType;
 	/**
 	 * Type of party to whom the notice of non-extension is intended to be
 	 * delivered, such as the applicant or beneficiary.
@@ -401,15 +408,15 @@ public class UndertakingExtension {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NotificationRecipientType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNotificationRecipientType = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> UndertakingExtension.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationRecipientType";
 			definition = "Type of party to whom the notice of non-extension is intended to be delivered, such as the applicant or beneficiary.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalTypeOfPartyCode.mmObject();
 		}
 	};
@@ -417,18 +424,74 @@ public class UndertakingExtension {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingExtension";
 				definition = "Specifies information related to the extension of an undertaking.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.UndertakingExtension);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingExtension.Undertaking, com.tools20022.repository.entity.UndertakingExtension.AutoExtensionPeriod,
-						com.tools20022.repository.entity.UndertakingExtension.AutoExtensionFinalExpiryDate, com.tools20022.repository.entity.UndertakingExtension.NonExtensionNoticePeriod,
-						com.tools20022.repository.entity.UndertakingExtension.NonExtensionIndicator, com.tools20022.repository.entity.UndertakingExtension.AutoExtensionNotificationPeriod,
-						com.tools20022.repository.entity.UndertakingExtension.NotificationRecipientType);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.mmUndertakingExtension);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingExtension.mmUndertaking, com.tools20022.repository.entity.UndertakingExtension.mmAutoExtensionPeriod,
+						com.tools20022.repository.entity.UndertakingExtension.mmAutoExtensionFinalExpiryDate, com.tools20022.repository.entity.UndertakingExtension.mmNonExtensionNoticePeriod,
+						com.tools20022.repository.entity.UndertakingExtension.mmNonExtensionIndicator, com.tools20022.repository.entity.UndertakingExtension.mmAutoExtensionNotificationPeriod,
+						com.tools20022.repository.entity.UndertakingExtension.mmNotificationRecipientType);
 				derivationComponent_lazy = () -> Arrays.asList(NonExtension1.mmObject(), AutoExtension1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Undertaking getUndertaking() {
+		return undertaking;
+	}
+
+	public void setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
+		this.undertaking = undertaking;
+	}
+
+	public Max35Text getAutoExtensionPeriod() {
+		return autoExtensionPeriod;
+	}
+
+	public void setAutoExtensionPeriod(Max35Text autoExtensionPeriod) {
+		this.autoExtensionPeriod = autoExtensionPeriod;
+	}
+
+	public ISODate getAutoExtensionFinalExpiryDate() {
+		return autoExtensionFinalExpiryDate;
+	}
+
+	public void setAutoExtensionFinalExpiryDate(ISODate autoExtensionFinalExpiryDate) {
+		this.autoExtensionFinalExpiryDate = autoExtensionFinalExpiryDate;
+	}
+
+	public Number getNonExtensionNoticePeriod() {
+		return nonExtensionNoticePeriod;
+	}
+
+	public void setNonExtensionNoticePeriod(Number nonExtensionNoticePeriod) {
+		this.nonExtensionNoticePeriod = nonExtensionNoticePeriod;
+	}
+
+	public YesNoIndicator getNonExtensionIndicator() {
+		return nonExtensionIndicator;
+	}
+
+	public void setNonExtensionIndicator(YesNoIndicator nonExtensionIndicator) {
+		this.nonExtensionIndicator = nonExtensionIndicator;
+	}
+
+	public Number getAutoExtensionNotificationPeriod() {
+		return autoExtensionNotificationPeriod;
+	}
+
+	public void setAutoExtensionNotificationPeriod(Number autoExtensionNotificationPeriod) {
+		this.autoExtensionNotificationPeriod = autoExtensionNotificationPeriod;
+	}
+
+	public ExternalTypeOfPartyCode getNotificationRecipientType() {
+		return notificationRecipientType;
+	}
+
+	public void setNotificationRecipientType(ExternalTypeOfPartyCode notificationRecipientType) {
+		this.notificationRecipientType = notificationRecipientType;
 	}
 }

@@ -30,44 +30,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#AccountServicerDeadlineMissed
- * SettlementDeniedReasonCode.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmAccountServicerDeadlineMissed
+ * SettlementDeniedReasonCode.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#CallDeniedSinceAlreadyApplied
- * SettlementDeniedReasonCode.CallDeniedSinceAlreadyApplied}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmCallDeniedSinceAlreadyApplied
+ * SettlementDeniedReasonCode.mmCallDeniedSinceAlreadyApplied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#DeniedSinceCancelled
- * SettlementDeniedReasonCode.DeniedSinceCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmDeniedSinceCancelled
+ * SettlementDeniedReasonCode.mmDeniedSinceCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#DeniedSinceNotAllowed
- * SettlementDeniedReasonCode.DeniedSinceNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmDeniedSinceNotAllowed
+ * SettlementDeniedReasonCode.mmDeniedSinceNotAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#DeniedSinceInProgress
- * SettlementDeniedReasonCode.DeniedSinceInProgress}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmDeniedSinceInProgress
+ * SettlementDeniedReasonCode.mmDeniedSinceInProgress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#DeniedSinceRepoEnded
- * SettlementDeniedReasonCode.DeniedSinceRepoEnded}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmDeniedSinceRepoEnded
+ * SettlementDeniedReasonCode.mmDeniedSinceRepoEnded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#DeniedSinceSettled
- * SettlementDeniedReasonCode.DeniedSinceSettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmDeniedSinceSettled
+ * SettlementDeniedReasonCode.mmDeniedSinceSettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#InstructionProcessed
- * SettlementDeniedReasonCode.InstructionProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmInstructionProcessed
+ * SettlementDeniedReasonCode.mmInstructionProcessed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#MarketDeadlineMissed
- * SettlementDeniedReasonCode.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmMarketDeadlineMissed
+ * SettlementDeniedReasonCode.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#Other
- * SettlementDeniedReasonCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmOther
+ * SettlementDeniedReasonCode.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#ConditionalCurrency
- * SettlementDeniedReasonCode.ConditionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmConditionalCurrency
+ * SettlementDeniedReasonCode.mmConditionalCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#ConditionalRealignement
- * SettlementDeniedReasonCode.ConditionalRealignement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmConditionalRealignement
+ * SettlementDeniedReasonCode.mmConditionalRealignement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#ConditionalRegistrar
- * SettlementDeniedReasonCode.ConditionalRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmConditionalRegistrar
+ * SettlementDeniedReasonCode.mmConditionalRegistrar}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -82,8 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -124,7 +124,7 @@ public class SettlementDeniedReasonCode {
 	 * definition} = "Received after the account servicer's deadline."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -155,7 +155,7 @@ public class SettlementDeniedReasonCode {
 	 * "Repo call request was denied since another call already applies."</li>
 	 * </ul>
 	 */
-	public static final MMCode CallDeniedSinceAlreadyApplied = new MMCode() {
+	public static final MMCode mmCallDeniedSinceAlreadyApplied = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallDeniedSinceAlreadyApplied";
@@ -186,7 +186,7 @@ public class SettlementDeniedReasonCode {
 	 * "Request was denied since the instruction has been cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeniedSinceCancelled = new MMCode() {
+	public static final MMCode mmDeniedSinceCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceCancelled";
@@ -219,7 +219,7 @@ public class SettlementDeniedReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DeniedSinceNotAllowed = new MMCode() {
+	public static final MMCode mmDeniedSinceNotAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceNotAllowed";
@@ -250,7 +250,7 @@ public class SettlementDeniedReasonCode {
 	 * "Request was denied because the process of settlement is in progress."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeniedSinceInProgress = new MMCode() {
+	public static final MMCode mmDeniedSinceInProgress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceInProgress";
@@ -280,7 +280,7 @@ public class SettlementDeniedReasonCode {
 	 * definition} = "Request was denied because the repo was cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeniedSinceRepoEnded = new MMCode() {
+	public static final MMCode mmDeniedSinceRepoEnded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceRepoEnded";
@@ -310,7 +310,7 @@ public class SettlementDeniedReasonCode {
 	 * definition} = "Request was denied because the instruction was settled."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeniedSinceSettled = new MMCode() {
+	public static final MMCode mmDeniedSinceSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceSettled";
@@ -340,7 +340,7 @@ public class SettlementDeniedReasonCode {
 	 * definition} = "Instruction has been processed and cannot be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMCode InstructionProcessed = new MMCode() {
+	public static final MMCode mmInstructionProcessed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessed";
@@ -370,7 +370,7 @@ public class SettlementDeniedReasonCode {
 	 * definition} = "Received after market deadline."</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -400,7 +400,7 @@ public class SettlementDeniedReasonCode {
 	 * definition} = "Other. See Narrative."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -433,7 +433,7 @@ public class SettlementDeniedReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalCurrency = new MMCode() {
+	public static final MMCode mmConditionalCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalCurrency";
@@ -466,7 +466,7 @@ public class SettlementDeniedReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalRealignement = new MMCode() {
+	public static final MMCode mmConditionalRealignement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRealignement";
@@ -498,7 +498,7 @@ public class SettlementDeniedReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalRegistrar = new MMCode() {
+	public static final MMCode mmConditionalRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRegistrar";
@@ -511,18 +511,18 @@ public class SettlementDeniedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDeniedReasonCode";
 				definition = "Specifies the denied reason.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDeniedReasonCode.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.SettlementDeniedReasonCode.CallDeniedSinceAlreadyApplied,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.DeniedSinceCancelled, com.tools20022.repository.codeset.SettlementDeniedReasonCode.DeniedSinceNotAllowed,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.DeniedSinceInProgress, com.tools20022.repository.codeset.SettlementDeniedReasonCode.DeniedSinceRepoEnded,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.DeniedSinceSettled, com.tools20022.repository.codeset.SettlementDeniedReasonCode.InstructionProcessed,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.MarketDeadlineMissed, com.tools20022.repository.codeset.SettlementDeniedReasonCode.Other,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.ConditionalCurrency, com.tools20022.repository.codeset.SettlementDeniedReasonCode.ConditionalRealignement,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.ConditionalRegistrar);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmCallDeniedSinceAlreadyApplied,
+						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmDeniedSinceCancelled, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmDeniedSinceNotAllowed,
+						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmDeniedSinceInProgress, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmDeniedSinceRepoEnded,
+						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmDeniedSinceSettled, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmInstructionProcessed,
+						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmMarketDeadlineMissed, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmOther,
+						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmConditionalCurrency, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmConditionalRealignement,
+						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmConditionalRegistrar);
 				derivation_lazy = () -> Arrays.asList(DeniedReason7Code.mmObject(), DeniedReason6Code.mmObject());
 			}
 		});

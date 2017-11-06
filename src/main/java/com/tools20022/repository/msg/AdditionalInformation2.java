@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.InvestmentFundOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Additional information about a request (e.g. financing request).
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation2#OrderWaiverReason
- * AdditionalInformation2.OrderWaiverReason}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation2#mmOrderWaiverReason
+ * AdditionalInformation2.mmOrderWaiverReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalInformation2#InformationValue
- * AdditionalInformation2.InformationValue}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalInformation2#mmInformationValue
+ * AdditionalInformation2.mmInformationValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<OrderWaiverReason1Choice> orderWaiverReason;
 	/**
 	 * Reason for the waiver.
 	 * <p>
@@ -83,8 +85,8 @@ public class AdditionalInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderWaiverReason
-	 * InvestmentFundOrder.OrderWaiverReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderWaiverReason
+	 * InvestmentFundOrder.mmOrderWaiverReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,27 +107,28 @@ public class AdditionalInformation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderWaiver1#OrderWaiverReason
-	 * OrderWaiver1.OrderWaiverReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.OrderWaiver1#mmOrderWaiverReason
+	 * OrderWaiver1.mmOrderWaiverReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderWaiverReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderWaiverReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> AdditionalInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderWaiverReason;
 			isDerived = false;
 			xmlTag = "OrdrWvrRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderWaiverReason";
 			definition = "Reason for the waiver.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderWaiver1.OrderWaiverReason);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderWaiver1.mmOrderWaiverReason);
 			minOccurs = 0;
-			type_lazy = () -> OrderWaiverReason1Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> OrderWaiverReason1Choice.mmObject();
 		}
 	};
+	protected Max350Text informationValue;
 	/**
 	 * Contents of the additional information.
 	 * <p>
@@ -155,13 +158,13 @@ public class AdditionalInformation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrderWaiver1#InformationValue
-	 * OrderWaiver1.InformationValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.OrderWaiver1#mmInformationValue
+	 * OrderWaiver1.mmInformationValue}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InformationValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInformationValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalInformation2.mmObject();
 			isDerived = false;
@@ -169,9 +172,9 @@ public class AdditionalInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationValue";
 			definition = "Contents of the additional information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderWaiver1.InformationValue);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderWaiver1.mmInformationValue);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -179,9 +182,9 @@ public class AdditionalInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation2.OrderWaiverReason, com.tools20022.repository.msg.AdditionalInformation2.InformationValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation2.mmOrderWaiverReason, com.tools20022.repository.msg.AdditionalInformation2.mmInformationValue);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AdditionalInformation2";
 				definition = "Additional information about a request (e.g. financing request).";
@@ -189,5 +192,21 @@ public class AdditionalInformation2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<OrderWaiverReason1Choice> getOrderWaiverReason() {
+		return orderWaiverReason;
+	}
+
+	public void setOrderWaiverReason(List<OrderWaiverReason1Choice> orderWaiverReason) {
+		this.orderWaiverReason = orderWaiverReason;
+	}
+
+	public Max350Text getInformationValue() {
+		return informationValue;
+	}
+
+	public void setInformationValue(Max350Text informationValue) {
+		this.informationValue = informationValue;
 	}
 }

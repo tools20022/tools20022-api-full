@@ -34,35 +34,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#AdditionalText
- * CorporateActionNarrative27.AdditionalText}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmAdditionalText
+ * CorporateActionNarrative27.mmAdditionalText}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#NarrativeVersion
- * CorporateActionNarrative27.NarrativeVersion}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmNarrativeVersion
+ * CorporateActionNarrative27.mmNarrativeVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#InformationConditions
- * CorporateActionNarrative27.InformationConditions}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmInformationConditions
+ * CorporateActionNarrative27.mmInformationConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#InformationToComplyWith
- * CorporateActionNarrative27.InformationToComplyWith}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmInformationToComplyWith
+ * CorporateActionNarrative27.mmInformationToComplyWith}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#TaxationConditions
- * CorporateActionNarrative27.TaxationConditions}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmTaxationConditions
+ * CorporateActionNarrative27.mmTaxationConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#Disclaimer
- * CorporateActionNarrative27.Disclaimer}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmDisclaimer
+ * CorporateActionNarrative27.mmDisclaimer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#PartyContactNarrative
- * CorporateActionNarrative27.PartyContactNarrative}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmPartyContactNarrative
+ * CorporateActionNarrative27.mmPartyContactNarrative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#RegistrationDetails
- * CorporateActionNarrative27.RegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmRegistrationDetails
+ * CorporateActionNarrative27.mmRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#BasketOrIndexInformation
- * CorporateActionNarrative27.BasketOrIndexInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmBasketOrIndexInformation
+ * CorporateActionNarrative27.mmBasketOrIndexInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#CertificationBreakdown
- * CorporateActionNarrative27.CertificationBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmCertificationBreakdown
+ * CorporateActionNarrative27.mmCertificationBreakdown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,18 +73,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#AdditionalInformation
- * CorporateActionNotificationV06.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06#mmAdditionalInformation
+ * CorporateActionNotificationV06.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#AdditionalInformation
- * CorporateActionNotificationV07.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmAdditionalInformation
+ * CorporateActionNotificationV07.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrative27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UpdatedAdditionalInformation8 additionalText;
 	/**
 	 * Provides additional information or specifies in more detail the content
 	 * of a message. This field may only be used when the information to be
@@ -135,11 +136,11 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#AdditionalText
-	 * CorporateActionNarrative11.AdditionalText}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#mmAdditionalText
+	 * CorporateActionNarrative11.mmAdditionalText}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalText = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalText = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative27.mmObject();
 			isDerived = false;
@@ -147,13 +148,14 @@ public class CorporateActionNarrative27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalText";
 			definition = "Provides additional information or specifies in more detail the content of a message.  This field may only be used when the information to be transmitted, cannot be coded.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.AdditionalText;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.mmAdditionalText;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation8 narrativeVersion;
 	/**
 	 * Provides information that can be ignored for automated processing; -
 	 * reiteration of information that has been included within structured
@@ -186,11 +188,11 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#NarrativeVersion
-	 * CorporateActionNarrative11.NarrativeVersion}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#mmNarrativeVersion
+	 * CorporateActionNarrative11.mmNarrativeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NarrativeVersion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNarrativeVersion = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative27.mmObject();
 			isDerived = false;
@@ -198,13 +200,14 @@ public class CorporateActionNarrative27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeVersion";
 			definition = "Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields, - or narrative information not needed for automatic processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.NarrativeVersion;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.mmNarrativeVersion;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation8 informationConditions;
 	/**
 	 * Provides conditional information related to the event, for example, an
 	 * offer is subject to 50 percent acceptance, the offeror allows the
@@ -219,8 +222,8 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#InformationConditions
-	 * CorporateActionEvent.InformationConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmInformationConditions
+	 * CorporateActionEvent.mmInformationConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -242,26 +245,27 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#InformationConditions
-	 * CorporateActionNarrative11.InformationConditions}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#mmInformationConditions
+	 * CorporateActionNarrative11.mmInformationConditions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InformationConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInformationConditions = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmInformationConditions;
 			componentContext_lazy = () -> CorporateActionNarrative27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.InformationConditions;
 			isDerived = false;
 			xmlTag = "InfConds";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationConditions";
 			definition = "Provides conditional information related to the event, for example, an offer is subject to 50 percent acceptance, the offeror allows the securities holder to set some conditions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.InformationConditions;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.mmInformationConditions;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation8 informationToComplyWith;
 	/**
 	 * Provides information conditions to the account owner that are to be
 	 * complied with, for example, not open to US/Canadian residents, Qualified
@@ -277,8 +281,8 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#InformationToComplyWith
-	 * BiddingConditions.InformationToComplyWith}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmInformationToComplyWith
+	 * BiddingConditions.mmInformationToComplyWith}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -300,26 +304,27 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#InformationToComplyWith
-	 * CorporateActionNarrative11.InformationToComplyWith}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#mmInformationToComplyWith
+	 * CorporateActionNarrative11.mmInformationToComplyWith}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InformationToComplyWith = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInformationToComplyWith = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> CorporateActionNarrative27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.InformationToComplyWith;
 			isDerived = false;
 			xmlTag = "InfToCmplyWth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationToComplyWith";
 			definition = "Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or SIL (Sophisticated Investor Letter)  to be provided.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.InformationToComplyWith;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.mmInformationToComplyWith;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation8 taxationConditions;
 	/**
 	 * Provides taxation conditions that cannot be included within the
 	 * structured fields of this message and has not been mentioned in the
@@ -334,8 +339,8 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#TaxationConditions
-	 * Tax.TaxationConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmTaxationConditions
+	 * Tax.mmTaxationConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -357,26 +362,27 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#TaxationConditions
-	 * CorporateActionNarrative11.TaxationConditions}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#mmTaxationConditions
+	 * CorporateActionNarrative11.mmTaxationConditions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxationConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxationConditions = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxationConditions;
 			componentContext_lazy = () -> CorporateActionNarrative27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.TaxationConditions;
 			isDerived = false;
 			xmlTag = "TaxtnConds";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxationConditions";
 			definition = "Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.TaxationConditions;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.mmTaxationConditions;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation8 disclaimer;
 	/**
 	 * Provides a disclaimer relative to the information provided in the
 	 * message. It may be ignored for automated processing.
@@ -408,11 +414,11 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#Disclaimer
-	 * CorporateActionNarrative11.Disclaimer}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#mmDisclaimer
+	 * CorporateActionNarrative11.mmDisclaimer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Disclaimer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDisclaimer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative27.mmObject();
 			isDerived = false;
@@ -420,13 +426,14 @@ public class CorporateActionNarrative27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclaimer";
 			definition = "Provides a disclaimer relative to the information provided in the message. It may be ignored for automated processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.Disclaimer;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.mmDisclaimer;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation8 partyContactNarrative;
 	/**
 	 * Provides additional information regarding the party, for example, the
 	 * contact unit or person responsible for the transaction identified in the
@@ -441,8 +448,8 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#ContactPersonRole
-	 * Role.ContactPersonRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmContactPersonRole
+	 * Role.mmContactPersonRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -464,26 +471,27 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#PartyContactNarrative
-	 * CorporateActionNarrative11.PartyContactNarrative}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#mmPartyContactNarrative
+	 * CorporateActionNarrative11.mmPartyContactNarrative}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyContactNarrative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyContactNarrative = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
 			componentContext_lazy = () -> CorporateActionNarrative27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.ContactPersonRole;
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyContactNarrative";
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.PartyContactNarrative;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.mmPartyContactNarrative;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation8 registrationDetails;
 	/**
 	 * Provides information required for the registration.
 	 * <p>
@@ -496,8 +504,8 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#RegistrationDetails
-	 * CorporateActionEvent.RegistrationDetails}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRegistrationDetails
+	 * CorporateActionEvent.mmRegistrationDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -517,26 +525,27 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#RegistrationDetails
-	 * CorporateActionNarrative11.RegistrationDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#mmRegistrationDetails
+	 * CorporateActionNarrative11.mmRegistrationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RegistrationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRegistrationDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> CorporateActionNarrative27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.RegistrationDetails;
 			isDerived = false;
 			xmlTag = "RegnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Provides information required for the registration.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.RegistrationDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.mmRegistrationDetails;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation8 basketOrIndexInformation;
 	/**
 	 * Provides additional information on the basket or index underlying a
 	 * security, for example a warrant.
@@ -550,8 +559,8 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#BasketOrIndexInformation
-	 * CorporateActionEvent.BasketOrIndexInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBasketOrIndexInformation
+	 * CorporateActionEvent.mmBasketOrIndexInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -573,26 +582,27 @@ public class CorporateActionNarrative27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#BasketOrIndexInformation
-	 * CorporateActionNarrative11.BasketOrIndexInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#mmBasketOrIndexInformation
+	 * CorporateActionNarrative11.mmBasketOrIndexInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BasketOrIndexInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBasketOrIndexInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmBasketOrIndexInformation;
 			componentContext_lazy = () -> CorporateActionNarrative27.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.BasketOrIndexInformation;
 			isDerived = false;
 			xmlTag = "BsktOrIndxInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasketOrIndexInformation";
 			definition = "Provides additional information on the basket or index underlying a security, for example a warrant.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.BasketOrIndexInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative11.mmBasketOrIndexInformation;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation8 certificationBreakdown;
 	/**
 	 * Provides additional information about the type of certification/breakdown
 	 * required.
@@ -624,7 +634,7 @@ public class CorporateActionNarrative27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationBreakdown = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationBreakdown = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative27.mmObject();
 			isDerived = false;
@@ -632,24 +642,24 @@ public class CorporateActionNarrative27 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationBreakdown";
 			definition = "Provides additional information about the type of certification/breakdown required.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative27.AdditionalText, com.tools20022.repository.msg.CorporateActionNarrative27.NarrativeVersion,
-						com.tools20022.repository.msg.CorporateActionNarrative27.InformationConditions, com.tools20022.repository.msg.CorporateActionNarrative27.InformationToComplyWith,
-						com.tools20022.repository.msg.CorporateActionNarrative27.TaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative27.Disclaimer,
-						com.tools20022.repository.msg.CorporateActionNarrative27.PartyContactNarrative, com.tools20022.repository.msg.CorporateActionNarrative27.RegistrationDetails,
-						com.tools20022.repository.msg.CorporateActionNarrative27.BasketOrIndexInformation, com.tools20022.repository.msg.CorporateActionNarrative27.CertificationBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative27.mmAdditionalText, com.tools20022.repository.msg.CorporateActionNarrative27.mmNarrativeVersion,
+						com.tools20022.repository.msg.CorporateActionNarrative27.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative27.mmInformationToComplyWith,
+						com.tools20022.repository.msg.CorporateActionNarrative27.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative27.mmDisclaimer,
+						com.tools20022.repository.msg.CorporateActionNarrative27.mmPartyContactNarrative, com.tools20022.repository.msg.CorporateActionNarrative27.mmRegistrationDetails,
+						com.tools20022.repository.msg.CorporateActionNarrative27.mmBasketOrIndexInformation, com.tools20022.repository.msg.CorporateActionNarrative27.mmCertificationBreakdown);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmAdditionalInformation,
+						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNotificationV06.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative27";
 				definition = "Provides additional information such as the taxation conditions.";
@@ -657,5 +667,85 @@ public class CorporateActionNarrative27 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UpdatedAdditionalInformation8 getAdditionalText() {
+		return additionalText;
+	}
+
+	public void setAdditionalText(com.tools20022.repository.msg.UpdatedAdditionalInformation8 additionalText) {
+		this.additionalText = additionalText;
+	}
+
+	public UpdatedAdditionalInformation8 getNarrativeVersion() {
+		return narrativeVersion;
+	}
+
+	public void setNarrativeVersion(com.tools20022.repository.msg.UpdatedAdditionalInformation8 narrativeVersion) {
+		this.narrativeVersion = narrativeVersion;
+	}
+
+	public UpdatedAdditionalInformation8 getInformationConditions() {
+		return informationConditions;
+	}
+
+	public void setInformationConditions(com.tools20022.repository.msg.UpdatedAdditionalInformation8 informationConditions) {
+		this.informationConditions = informationConditions;
+	}
+
+	public UpdatedAdditionalInformation8 getInformationToComplyWith() {
+		return informationToComplyWith;
+	}
+
+	public void setInformationToComplyWith(com.tools20022.repository.msg.UpdatedAdditionalInformation8 informationToComplyWith) {
+		this.informationToComplyWith = informationToComplyWith;
+	}
+
+	public UpdatedAdditionalInformation8 getTaxationConditions() {
+		return taxationConditions;
+	}
+
+	public void setTaxationConditions(com.tools20022.repository.msg.UpdatedAdditionalInformation8 taxationConditions) {
+		this.taxationConditions = taxationConditions;
+	}
+
+	public UpdatedAdditionalInformation8 getDisclaimer() {
+		return disclaimer;
+	}
+
+	public void setDisclaimer(com.tools20022.repository.msg.UpdatedAdditionalInformation8 disclaimer) {
+		this.disclaimer = disclaimer;
+	}
+
+	public UpdatedAdditionalInformation8 getPartyContactNarrative() {
+		return partyContactNarrative;
+	}
+
+	public void setPartyContactNarrative(com.tools20022.repository.msg.UpdatedAdditionalInformation8 partyContactNarrative) {
+		this.partyContactNarrative = partyContactNarrative;
+	}
+
+	public UpdatedAdditionalInformation8 getRegistrationDetails() {
+		return registrationDetails;
+	}
+
+	public void setRegistrationDetails(com.tools20022.repository.msg.UpdatedAdditionalInformation8 registrationDetails) {
+		this.registrationDetails = registrationDetails;
+	}
+
+	public UpdatedAdditionalInformation8 getBasketOrIndexInformation() {
+		return basketOrIndexInformation;
+	}
+
+	public void setBasketOrIndexInformation(com.tools20022.repository.msg.UpdatedAdditionalInformation8 basketOrIndexInformation) {
+		this.basketOrIndexInformation = basketOrIndexInformation;
+	}
+
+	public UpdatedAdditionalInformation8 getCertificationBreakdown() {
+		return certificationBreakdown;
+	}
+
+	public void setCertificationBreakdown(com.tools20022.repository.msg.UpdatedAdditionalInformation8 certificationBreakdown) {
+		this.certificationBreakdown = certificationBreakdown;
 	}
 }

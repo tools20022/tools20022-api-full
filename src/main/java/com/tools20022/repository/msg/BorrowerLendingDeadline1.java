@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline1#StockLendingDeadline
- * BorrowerLendingDeadline1.StockLendingDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline1#mmStockLendingDeadline
+ * BorrowerLendingDeadline1.mmStockLendingDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline1#Borrower
- * BorrowerLendingDeadline1.Borrower}</li>
+ * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline1#mmBorrower
+ * BorrowerLendingDeadline1.mmBorrower}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BorrowerLendingDeadline1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateFormat31Choice stockLendingDeadline;
 	/**
 	 * Date/time set as the deadline to respond, with instructions, to an
 	 * outstanding event, for which the underlying security is out on loan.
@@ -77,8 +78,8 @@ public class BorrowerLendingDeadline1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#StockLendingDeadline
-	 * CorporateActionDeadline.StockLendingDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmStockLendingDeadline
+	 * CorporateActionDeadline.mmStockLendingDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,21 +100,22 @@ public class BorrowerLendingDeadline1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StockLendingDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStockLendingDeadline = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmStockLendingDeadline;
 			componentContext_lazy = () -> BorrowerLendingDeadline1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.StockLendingDeadline;
 			isDerived = false;
 			xmlTag = "StockLndgDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLendingDeadline";
 			definition = "Date/time set as the deadline to respond, with instructions, to an outstanding event, for which the underlying security is out on loan.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat31Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	protected PartyIdentification92Choice borrower;
 	/**
 	 * Party who has borrowed stocks on loan.
 	 * <p>
@@ -146,33 +148,49 @@ public class BorrowerLendingDeadline1 {
 	 * definition} = "Party who has borrowed stocks on loan."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Borrower = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBorrower = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BorrowerLendingDeadline1.mmObject();
 			businessComponentTrace_lazy = () -> CorporateActionPartyRole.mmObject();
+			componentContext_lazy = () -> BorrowerLendingDeadline1.mmObject();
 			isDerived = false;
 			xmlTag = "Brrwr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrower";
 			definition = "Party who has borrowed stocks on loan.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification92Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification92Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BorrowerLendingDeadline1.StockLendingDeadline, com.tools20022.repository.msg.BorrowerLendingDeadline1.Borrower);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BorrowerLendingDeadline1.mmStockLendingDeadline, com.tools20022.repository.msg.BorrowerLendingDeadline1.mmBorrower);
 				trace_lazy = () -> CorporateActionDeadline.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BorrowerLendingDeadline1";
 				definition = "Stock lending deadline assigned to a borrower of the stock.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateFormat31Choice getStockLendingDeadline() {
+		return stockLendingDeadline;
+	}
+
+	public void setStockLendingDeadline(DateFormat31Choice stockLendingDeadline) {
+		this.stockLendingDeadline = stockLendingDeadline;
+	}
+
+	public PartyIdentification92Choice getBorrower() {
+		return borrower;
+	}
+
+	public void setBorrower(PartyIdentification92Choice borrower) {
+		this.borrower = borrower;
 	}
 }

@@ -30,10 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TransferTypeCode#Asset
- * TransferTypeCode.Asset}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TransferTypeCode#Cash
- * TransferTypeCode.Cash}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransferTypeCode#mmAsset
+ * TransferTypeCode.mmAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransferTypeCode#mmCash
+ * TransferTypeCode.mmCash}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class TransferTypeCode {
 	 * definition} = "Transfer as asset."</li>
 	 * </ul>
 	 */
-	public static final MMCode Asset = new MMCode() {
+	public static final MMCode mmAsset = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Asset";
@@ -120,7 +120,7 @@ public class TransferTypeCode {
 	 * definition} = "Transfer as cash."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
@@ -133,12 +133,12 @@ public class TransferTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SECU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferTypeCode";
 				definition = "Specifies whether the financial instrument is transferred as an asset or as cash.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferTypeCode.Asset, com.tools20022.repository.codeset.TransferTypeCode.Cash);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferTypeCode.mmAsset, com.tools20022.repository.codeset.TransferTypeCode.mmCash);
 				derivation_lazy = () -> Arrays.asList(TransferType1Code.mmObject());
 			}
 		});

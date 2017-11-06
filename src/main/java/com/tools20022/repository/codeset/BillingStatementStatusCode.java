@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingStatementStatusCode#Original
- * BillingStatementStatusCode.Original}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingStatementStatusCode#mmOriginal
+ * BillingStatementStatusCode.mmOriginal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingStatementStatusCode#Replace
- * BillingStatementStatusCode.Replace}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingStatementStatusCode#mmReplace
+ * BillingStatementStatusCode.mmReplace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingStatementStatusCode#Test
- * BillingStatementStatusCode.Test}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingStatementStatusCode#mmTest
+ * BillingStatementStatusCode.mmTest}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class BillingStatementStatusCode {
 	 * definition} = "Statement is the original statement."</li>
 	 * </ul>
 	 */
-	public static final MMCode Original = new MMCode() {
+	public static final MMCode mmOriginal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Original";
@@ -123,7 +123,7 @@ public class BillingStatementStatusCode {
 	 * definition} = "Statement replaces the original statement."</li>
 	 * </ul>
 	 */
-	public static final MMCode Replace = new MMCode() {
+	public static final MMCode mmReplace = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replace";
@@ -153,7 +153,7 @@ public class BillingStatementStatusCode {
 	 * definition} = "Statement is a test statement."</li>
 	 * </ul>
 	 */
-	public static final MMCode Test = new MMCode() {
+	public static final MMCode mmTest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Test";
@@ -166,13 +166,13 @@ public class BillingStatementStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORGN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BillingStatementStatusCode";
 				definition = "Defines the status of the billing statement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingStatementStatusCode.Original, com.tools20022.repository.codeset.BillingStatementStatusCode.Replace,
-						com.tools20022.repository.codeset.BillingStatementStatusCode.Test);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingStatementStatusCode.mmOriginal, com.tools20022.repository.codeset.BillingStatementStatusCode.mmReplace,
+						com.tools20022.repository.codeset.BillingStatementStatusCode.mmTest);
 				derivation_lazy = () -> Arrays.asList(BillingStatementStatus1Code.mmObject());
 			}
 		});

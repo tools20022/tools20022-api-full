@@ -40,30 +40,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PegOrderInstructions1#Offset
- * PegOrderInstructions1.Offset}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PegOrderInstructions1#mmOffset
+ * PegOrderInstructions1.mmOffset}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#RelatedPriceType
- * PegOrderInstructions1.RelatedPriceType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PegOrderInstructions1#MoveType
- * PegOrderInstructions1.MoveType}</li>
+ * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#mmRelatedPriceType
+ * PegOrderInstructions1.mmRelatedPriceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#OffsetType
- * PegOrderInstructions1.OffsetType}</li>
+ * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#mmMoveType
+ * PegOrderInstructions1.mmMoveType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#LimitType
- * PegOrderInstructions1.LimitType}</li>
+ * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#mmOffsetType
+ * PegOrderInstructions1.mmOffsetType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#RoundDirection
- * PegOrderInstructions1.RoundDirection}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PegOrderInstructions1#Scope
- * PegOrderInstructions1.Scope}</li>
+ * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#mmLimitType
+ * PegOrderInstructions1.mmLimitType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#OffsetSign
- * PegOrderInstructions1.OffsetSign}</li>
+ * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#mmRoundDirection
+ * PegOrderInstructions1.mmRoundDirection}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PegOrderInstructions1#mmScope
+ * PegOrderInstructions1.mmScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#PegSecurityDetails
- * PegOrderInstructions1.PegSecurityDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#mmOffsetSign
+ * PegOrderInstructions1.mmOffsetSign}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PegOrderInstructions1#mmPegSecurityDetails
+ * PegOrderInstructions1.mmPegSecurityDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -73,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PegOrderInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount offset;
 	/**
 	 * Amount added to the peg for a pegged order.
 	 * <p>
@@ -102,8 +104,8 @@ public class PegOrderInstructions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#Offset
-	 * SecuritiesPegOrderInstruction.Offset}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmOffset
+	 * SecuritiesPegOrderInstruction.mmOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -122,20 +124,21 @@ public class PegOrderInstructions1 {
 	 * definition} = "Amount added to the peg for a pegged order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Offset = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOffset = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffset;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.Offset;
 			isDerived = false;
 			xmlTag = "Offset";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offset";
 			definition = "Amount added to the peg for a pegged order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PegType1Code relatedPriceType;
 	/**
 	 * Defines the type of peg.
 	 * <p>
@@ -148,8 +151,8 @@ public class PegOrderInstructions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#PriceType
-	 * SecuritiesPegOrderInstruction.PriceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmPriceType
+	 * SecuritiesPegOrderInstruction.mmPriceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,20 +171,21 @@ public class PegOrderInstructions1 {
 	 * definition} = "Defines the type of peg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedPriceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmPriceType;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.PriceType;
 			isDerived = false;
 			xmlTag = "RltdPricTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPriceType";
 			definition = "Defines the type of peg.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PegType1Code.mmObject();
 		}
 	};
+	protected MoveType1Code moveType;
 	/**
 	 * Describes whether peg is static/fixed or floats.
 	 * <p>
@@ -195,8 +199,8 @@ public class PegOrderInstructions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#MoveType
-	 * SecuritiesPegOrderInstruction.MoveType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmMoveType
+	 * SecuritiesPegOrderInstruction.mmMoveType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,20 +219,21 @@ public class PegOrderInstructions1 {
 	 * definition} = "Describes whether peg is static/fixed or floats."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MoveType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMoveType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmMoveType;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.MoveType;
 			isDerived = false;
 			xmlTag = "MvTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoveType";
 			definition = "Describes whether peg is static/fixed or floats.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> MoveType1Code.mmObject();
 		}
 	};
+	protected OffsetType1Code offsetType;
 	/**
 	 * Type of Peg Offset.
 	 * <p>
@@ -242,8 +247,8 @@ public class PegOrderInstructions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#OffsetType
-	 * SecuritiesPegOrderInstruction.OffsetType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmOffsetType
+	 * SecuritiesPegOrderInstruction.mmOffsetType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -262,20 +267,21 @@ public class PegOrderInstructions1 {
 	 * definition} = "Type of Peg Offset."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OffsetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOffsetType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffsetType;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.OffsetType;
 			isDerived = false;
 			xmlTag = "OffsetTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffsetType";
 			definition = "Type of Peg Offset.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OffsetType1Code.mmObject();
 		}
 	};
+	protected Max35Text limitType;
 	/**
 	 * Specifies nature of resulting pegged price (e.g. or better limit, strict
 	 * limit etc).
@@ -289,8 +295,8 @@ public class PegOrderInstructions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#LimitType
-	 * SecuritiesPegOrderInstruction.LimitType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmLimitType
+	 * SecuritiesPegOrderInstruction.mmLimitType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,20 +317,21 @@ public class PegOrderInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmLimitType;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.LimitType;
 			isDerived = false;
 			xmlTag = "LmtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitType";
 			definition = "Specifies nature of resulting pegged price (e.g. or better limit, strict limit etc).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text roundDirection;
 	/**
 	 * If the calculated peg price is not a valid tick price, specifies how to
 	 * round the price (e.g. be more or less aggressive)
@@ -338,8 +345,8 @@ public class PegOrderInstructions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#RoundDirection
-	 * SecuritiesPegOrderInstruction.RoundDirection}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmRoundDirection
+	 * SecuritiesPegOrderInstruction.mmRoundDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -360,20 +367,21 @@ public class PegOrderInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoundDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoundDirection = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmRoundDirection;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.RoundDirection;
 			isDerived = false;
 			xmlTag = "RndDrctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDirection";
 			definition = "If the calculated peg price is not a valid tick price, specifies how to round the price (e.g. be more or less aggressive)";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PriceProtectionScope2Code scope;
 	/**
 	 * The scope of "related to" price of the peg (for example, local, global
 	 * etc).
@@ -388,8 +396,8 @@ public class PegOrderInstructions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#Scope
-	 * SecuritiesPegOrderInstruction.Scope}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmScope
+	 * SecuritiesPegOrderInstruction.mmScope}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -410,20 +418,21 @@ public class PegOrderInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Scope = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmScope = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmScope;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.Scope;
 			isDerived = false;
 			xmlTag = "Scp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Scope";
 			definition = "The scope of \"related to\" price of the peg (for example, local, global etc).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PriceProtectionScope2Code.mmObject();
 		}
 	};
+	protected PlusOrMinusIndicator offsetSign;
 	/**
 	 * Indicates whether the offset should be added or subtracted from the
 	 * related price.
@@ -438,8 +447,8 @@ public class PegOrderInstructions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#OffsetSign
-	 * SecuritiesPegOrderInstruction.OffsetSign}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmOffsetSign
+	 * SecuritiesPegOrderInstruction.mmOffsetSign}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -460,20 +469,21 @@ public class PegOrderInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OffsetSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOffsetSign = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffsetSign;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.OffsetSign;
 			isDerived = false;
 			xmlTag = "OffsetSgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffsetSign";
 			definition = "Indicates whether the offset should be added or subtracted from the related price.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
+	protected SecurityIdentification7 pegSecurityDetails;
 	/**
 	 * Provides details about the the security off whose prices the order will
 	 * peg.
@@ -487,8 +497,8 @@ public class PegOrderInstructions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -509,36 +519,108 @@ public class PegOrderInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PegSecurityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPegSecurityDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "PegSctyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PegSecurityDetails";
 			definition = "Provides details about the the security off whose prices the order will peg.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PegOrderInstructions1.Offset, com.tools20022.repository.msg.PegOrderInstructions1.RelatedPriceType,
-						com.tools20022.repository.msg.PegOrderInstructions1.MoveType, com.tools20022.repository.msg.PegOrderInstructions1.OffsetType, com.tools20022.repository.msg.PegOrderInstructions1.LimitType,
-						com.tools20022.repository.msg.PegOrderInstructions1.RoundDirection, com.tools20022.repository.msg.PegOrderInstructions1.Scope, com.tools20022.repository.msg.PegOrderInstructions1.OffsetSign,
-						com.tools20022.repository.msg.PegOrderInstructions1.PegSecurityDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PegOrderInstructions1.mmOffset, com.tools20022.repository.msg.PegOrderInstructions1.mmRelatedPriceType,
+						com.tools20022.repository.msg.PegOrderInstructions1.mmMoveType, com.tools20022.repository.msg.PegOrderInstructions1.mmOffsetType, com.tools20022.repository.msg.PegOrderInstructions1.mmLimitType,
+						com.tools20022.repository.msg.PegOrderInstructions1.mmRoundDirection, com.tools20022.repository.msg.PegOrderInstructions1.mmScope, com.tools20022.repository.msg.PegOrderInstructions1.mmOffsetSign,
+						com.tools20022.repository.msg.PegOrderInstructions1.mmPegSecurityDetails);
 				trace_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PegOrderInstructions1";
 				definition = "Provides details about instructions specific to pegged orders.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getOffset() {
+		return offset;
+	}
+
+	public void setOffset(ActiveCurrencyAndAmount offset) {
+		this.offset = offset;
+	}
+
+	public PegType1Code getRelatedPriceType() {
+		return relatedPriceType;
+	}
+
+	public void setRelatedPriceType(PegType1Code relatedPriceType) {
+		this.relatedPriceType = relatedPriceType;
+	}
+
+	public MoveType1Code getMoveType() {
+		return moveType;
+	}
+
+	public void setMoveType(MoveType1Code moveType) {
+		this.moveType = moveType;
+	}
+
+	public OffsetType1Code getOffsetType() {
+		return offsetType;
+	}
+
+	public void setOffsetType(OffsetType1Code offsetType) {
+		this.offsetType = offsetType;
+	}
+
+	public Max35Text getLimitType() {
+		return limitType;
+	}
+
+	public void setLimitType(Max35Text limitType) {
+		this.limitType = limitType;
+	}
+
+	public Max35Text getRoundDirection() {
+		return roundDirection;
+	}
+
+	public void setRoundDirection(Max35Text roundDirection) {
+		this.roundDirection = roundDirection;
+	}
+
+	public PriceProtectionScope2Code getScope() {
+		return scope;
+	}
+
+	public void setScope(PriceProtectionScope2Code scope) {
+		this.scope = scope;
+	}
+
+	public PlusOrMinusIndicator getOffsetSign() {
+		return offsetSign;
+	}
+
+	public void setOffsetSign(PlusOrMinusIndicator offsetSign) {
+		this.offsetSign = offsetSign;
+	}
+
+	public SecurityIdentification7 getPegSecurityDetails() {
+		return pegSecurityDetails;
+	}
+
+	public void setPegSecurityDetails(com.tools20022.repository.msg.SecurityIdentification7 pegSecurityDetails) {
+		this.pegSecurityDetails = pegSecurityDetails;
 	}
 }

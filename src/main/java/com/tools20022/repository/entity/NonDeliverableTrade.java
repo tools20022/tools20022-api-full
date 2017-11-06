@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.entity.ForeignExchangeTrade;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Foreign exchange contract where one of the exchanged amounts is specified in
@@ -39,17 +40,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#SettlementCurrency
- * NonDeliverableTrade.SettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#mmSettlementCurrency
+ * NonDeliverableTrade.mmSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#FixingConditions
- * NonDeliverableTrade.FixingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#mmFixingConditions
+ * NonDeliverableTrade.mmFixingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#OpeningLeg
- * NonDeliverableTrade.OpeningLeg}</li>
+ * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#mmOpeningLeg
+ * NonDeliverableTrade.mmOpeningLeg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#ClosingLeg
- * NonDeliverableTrade.ClosingLeg}</li>
+ * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#mmClosingLeg
+ * NonDeliverableTrade.mmClosingLeg}</li>
  * </ul>
  * </li>
  * <li>
@@ -57,14 +58,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#OpeningLegRelatedNonDeliverableTrade
- * ForeignExchangeTrade.OpeningLegRelatedNonDeliverableTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmOpeningLegRelatedNonDeliverableTrade
+ * ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#ClosingLegRelatedNonDeliverableTrade
- * ForeignExchangeTrade.ClosingLegRelatedNonDeliverableTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmClosingLegRelatedNonDeliverableTrade
+ * ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.FixingCondition#NonDeliverableTrade
- * FixingCondition.NonDeliverableTrade}</li>
+ * {@linkplain com.tools20022.repository.entity.FixingCondition#mmNonDeliverableTrade
+ * FixingCondition.mmNonDeliverableTrade}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -74,8 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NonDeliverableTrade extends ForeignExchangeTrade {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyCode settlementCurrency;
 	/**
 	 * Currency in which a non-deliverable contract is settled.
 	 * <p>
@@ -100,28 +102,28 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1#SettlementCurrency
-	 * NonDeliverableForwardValuationConditions1.SettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions2#SettlementCurrency
-	 * NonDeliverableForwardValuationConditions2.SettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ValuationData1#SettlementCurrency
-	 * ValuationData1.SettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ValuationData2#SettlementCurrency
-	 * ValuationData2.SettlementCurrency}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade
 	 * NonDeliverableTrade}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1#mmSettlementCurrency
+	 * NonDeliverableForwardValuationConditions1.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonDeliverableForwardValuationConditions2#mmSettlementCurrency
+	 * NonDeliverableForwardValuationConditions2.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ValuationData1#mmSettlementCurrency
+	 * ValuationData1.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ValuationData2#mmSettlementCurrency
+	 * ValuationData2.mmSettlementCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -133,20 +135,21 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * definition} = "Currency in which a non-deliverable contract is settled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SettlementCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSettlementCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.SettlementCurrency, com.tools20022.repository.msg.NonDeliverableForwardValuationConditions2.SettlementCurrency,
-					com.tools20022.repository.msg.ValuationData1.SettlementCurrency, com.tools20022.repository.msg.ValuationData2.SettlementCurrency);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmSettlementCurrency, com.tools20022.repository.msg.NonDeliverableForwardValuationConditions2.mmSettlementCurrency,
+					com.tools20022.repository.msg.ValuationData1.mmSettlementCurrency, com.tools20022.repository.msg.ValuationData2.mmSettlementCurrency);
 			elementContext_lazy = () -> NonDeliverableTrade.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency in which a non-deliverable contract is settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected FixingCondition fixingConditions;
 	/**
 	 * Set of parameters used to calculate a rate for instance the fixing rate
 	 * to be applied to a non-deliverable agreement.
@@ -156,8 +159,8 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.FixingCondition#NonDeliverableTrade
-	 * FixingCondition.NonDeliverableTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.FixingCondition#mmNonDeliverableTrade
+	 * FixingCondition.mmNonDeliverableTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -165,22 +168,22 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.FixingCondition
 	 * FixingCondition}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OpeningData1#ValuationConditions
-	 * OpeningData1.ValuationConditions}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OpeningData2#ValuationConditions
-	 * OpeningData2.ValuationConditions}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade
 	 * NonDeliverableTrade}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OpeningData1#mmValuationConditions
+	 * OpeningData1.mmValuationConditions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OpeningData2#mmValuationConditions
+	 * OpeningData2.mmValuationConditions}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -194,21 +197,22 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd FixingConditions = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmFixingConditions = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningData1.ValuationConditions, com.tools20022.repository.msg.OpeningData2.ValuationConditions);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningData1.mmValuationConditions, com.tools20022.repository.msg.OpeningData2.mmValuationConditions);
 			elementContext_lazy = () -> NonDeliverableTrade.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FixingConditions";
 			definition = "Set of parameters used to calculate a rate for instance the fixing rate to be applied to a non-deliverable agreement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FixingCondition.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.FixingCondition.NonDeliverableTrade;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmNonDeliverableTrade;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmObject();
 		}
 	};
+	protected List<ForeignExchangeTrade> openingLeg;
 	/**
 	 * Specifies the opening leg of a non deliverable trade in which the forward
 	 * rate and amount are specified together with the fixing conditions.
@@ -218,8 +222,8 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#OpeningLegRelatedNonDeliverableTrade
-	 * ForeignExchangeTrade.OpeningLegRelatedNonDeliverableTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmOpeningLegRelatedNonDeliverableTrade
+	 * ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -246,7 +250,7 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OpeningLeg = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOpeningLeg = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> NonDeliverableTrade.mmObject();
 			isDerived = false;
@@ -254,11 +258,12 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 			name = "OpeningLeg";
 			definition = "Specifies the opening leg of a non deliverable trade in which the forward rate and amount are specified together with the fixing conditions.";
 			minOccurs = 0;
-			type_lazy = () -> ForeignExchangeTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.OpeningLegRelatedNonDeliverableTrade;
+			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> ForeignExchangeTrade.mmObject();
 		}
 	};
+	protected List<ForeignExchangeTrade> closingLeg;
 	/**
 	 * Specifies the closing leg of a non deliverable trade in which the amount
 	 * to be settled is the difference in the deliverable currency betweem its
@@ -269,8 +274,8 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#ClosingLegRelatedNonDeliverableTrade
-	 * ForeignExchangeTrade.ClosingLegRelatedNonDeliverableTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmClosingLegRelatedNonDeliverableTrade
+	 * ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -297,7 +302,7 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ClosingLeg = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmClosingLeg = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> NonDeliverableTrade.mmObject();
 			isDerived = false;
@@ -305,26 +310,58 @@ public class NonDeliverableTrade extends ForeignExchangeTrade {
 			name = "ClosingLeg";
 			definition = "Specifies the closing leg of a non deliverable trade in which the amount to be settled is the difference in the deliverable currency betweem its original value and the countervalue calculated against the fixing rate.";
 			minOccurs = 0;
-			type_lazy = () -> ForeignExchangeTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.ClosingLegRelatedNonDeliverableTrade;
+			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> ForeignExchangeTrade.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NonDeliverableTrade";
 				definition = "Foreign exchange contract where one of the exchanged amounts is specified in a non-deliverable currency.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ForeignExchangeTrade.OpeningLegRelatedNonDeliverableTrade,
-						com.tools20022.repository.entity.ForeignExchangeTrade.ClosingLegRelatedNonDeliverableTrade, com.tools20022.repository.entity.FixingCondition.NonDeliverableTrade);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade,
+						com.tools20022.repository.entity.ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade, com.tools20022.repository.entity.FixingCondition.mmNonDeliverableTrade);
 				superType_lazy = () -> ForeignExchangeTrade.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.NonDeliverableTrade.SettlementCurrency, com.tools20022.repository.entity.NonDeliverableTrade.FixingConditions,
-						com.tools20022.repository.entity.NonDeliverableTrade.OpeningLeg, com.tools20022.repository.entity.NonDeliverableTrade.ClosingLeg);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.NonDeliverableTrade.mmSettlementCurrency, com.tools20022.repository.entity.NonDeliverableTrade.mmFixingConditions,
+						com.tools20022.repository.entity.NonDeliverableTrade.mmOpeningLeg, com.tools20022.repository.entity.NonDeliverableTrade.mmClosingLeg);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyCode getSettlementCurrency() {
+		return settlementCurrency;
+	}
+
+	public void setSettlementCurrency(CurrencyCode settlementCurrency) {
+		this.settlementCurrency = settlementCurrency;
+	}
+
+	public FixingCondition getFixingConditions() {
+		return fixingConditions;
+	}
+
+	public void setFixingConditions(com.tools20022.repository.entity.FixingCondition fixingConditions) {
+		this.fixingConditions = fixingConditions;
+	}
+
+	public List<ForeignExchangeTrade> getOpeningLeg() {
+		return openingLeg;
+	}
+
+	public void setOpeningLeg(List<ForeignExchangeTrade> openingLeg) {
+		this.openingLeg = openingLeg;
+	}
+
+	public List<ForeignExchangeTrade> getClosingLeg() {
+		return closingLeg;
+	}
+
+	public void setClosingLeg(List<ForeignExchangeTrade> closingLeg) {
+		this.closingLeg = closingLeg;
 	}
 }

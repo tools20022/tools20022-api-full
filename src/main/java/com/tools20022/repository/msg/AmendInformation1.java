@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmendInformation1#PreviousReference
- * AmendInformation1.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.msg.AmendInformation1#mmPreviousReference
+ * AmendInformation1.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmendInformation1#ReconfirmInstructions
- * AmendInformation1.ReconfirmInstructions}</li>
+ * {@linkplain com.tools20022.repository.msg.AmendInformation1#mmReconfirmInstructions
+ * AmendInformation1.mmReconfirmInstructions}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,33 +46,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#Amendment
- * MeetingNotificationV02.Amendment}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV02#mmAmendment
+ * MeetingNotificationV02.mmAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#Amendment
- * MeetingNotificationV03.Amendment}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV03#mmAmendment
+ * MeetingNotificationV03.mmAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#Amendment
- * MeetingNotificationV04.Amendment}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV04#mmAmendment
+ * MeetingNotificationV04.mmAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV02#MessageCancellation
- * MeetingCancellationV02.MessageCancellation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV02#mmMessageCancellation
+ * MeetingCancellationV02.mmMessageCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV03#MessageCancellation
- * MeetingCancellationV03.MessageCancellation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV03#mmMessageCancellation
+ * MeetingCancellationV03.mmMessageCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#MessageCancellation
- * MeetingCancellationV04.MessageCancellation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingCancellationV04#mmMessageCancellation
+ * MeetingCancellationV04.mmMessageCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05#Amendment
- * MeetingNotificationV05.Amendment}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingNotificationV05#mmAmendment
+ * MeetingNotificationV05.mmAmendment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmendInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification previousReference;
 	/**
 	 * Identifies the linked message which was previously sent.
 	 * <p>
@@ -112,7 +113,7 @@ public class AmendInformation1 {
 	 * definition} = "Identifies the linked message which was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AmendInformation1.mmObject();
 			isDerived = false;
@@ -120,12 +121,13 @@ public class AmendInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Identifies the linked message which was previously sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MessageIdentification.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification.mmObject();
 		}
 	};
+	protected YesNoIndicator reconfirmInstructions;
 	/**
 	 * Indicates whether instructions must be resent (in case of modification of
 	 * the parameters of a meeting for which instructions have already been
@@ -158,7 +160,7 @@ public class AmendInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconfirmInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconfirmInstructions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmendInformation1.mmObject();
 			isDerived = false;
@@ -166,8 +168,8 @@ public class AmendInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconfirmInstructions";
 			definition = "Indicates whether instructions must be resent (in case of modification of the parameters of a meeting for which instructions have already been sent).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -175,17 +177,33 @@ public class AmendInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendInformation1.PreviousReference, com.tools20022.repository.msg.AmendInformation1.ReconfirmInstructions);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.Amendment, com.tools20022.repository.area.seev.MeetingNotificationV03.Amendment,
-						com.tools20022.repository.area.seev.MeetingNotificationV04.Amendment, com.tools20022.repository.area.seev.MeetingCancellationV02.MessageCancellation,
-						com.tools20022.repository.area.seev.MeetingCancellationV03.MessageCancellation, com.tools20022.repository.area.seev.MeetingCancellationV04.MessageCancellation,
-						com.tools20022.repository.area.seev.MeetingNotificationV05.Amendment);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendInformation1.mmPreviousReference, com.tools20022.repository.msg.AmendInformation1.mmReconfirmInstructions);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmAmendment, com.tools20022.repository.area.seev.MeetingNotificationV03.mmAmendment,
+						com.tools20022.repository.area.seev.MeetingNotificationV04.mmAmendment, com.tools20022.repository.area.seev.MeetingCancellationV02.mmMessageCancellation,
+						com.tools20022.repository.area.seev.MeetingCancellationV03.mmMessageCancellation, com.tools20022.repository.area.seev.MeetingCancellationV04.mmMessageCancellation,
+						com.tools20022.repository.area.seev.MeetingNotificationV05.mmAmendment);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmendInformation1";
 				definition = "Information specific to an amendment or cancellation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(com.tools20022.repository.msg.MessageIdentification previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public YesNoIndicator getReconfirmInstructions() {
+		return reconfirmInstructions;
+	}
+
+	public void setReconfirmInstructions(YesNoIndicator reconfirmInstructions) {
+		this.reconfirmInstructions = reconfirmInstructions;
 	}
 }

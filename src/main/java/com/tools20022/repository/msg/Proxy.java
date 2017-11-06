@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy#ProxyType
- * Proxy.ProxyType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy#PreassignedProxy
- * Proxy.PreassignedProxy}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy#mmProxyType
+ * Proxy.mmProxyType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy#mmPreassignedProxy
+ * Proxy.mmPreassignedProxy}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Proxy {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProxyType2Code proxyType;
 	/**
 	 * Specifies the type of proxy.
 	 * <p>
@@ -78,8 +79,8 @@ public class Proxy {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProxyAppointment#ProxyType
-	 * ProxyAppointment.ProxyType}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmProxyType
+	 * ProxyAppointment.mmProxyType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Proxy
@@ -97,20 +98,21 @@ public class Proxy {
 	 * definition} = "Specifies the type of proxy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProxyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProxyType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmProxyType;
 			componentContext_lazy = () -> Proxy.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.ProxyType;
 			isDerived = false;
 			xmlTag = "PrxyTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyType";
 			definition = "Specifies the type of proxy.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProxyType2Code.mmObject();
 		}
 	};
+	protected IndividualPerson7 preassignedProxy;
 	/**
 	 * Identifies a proxy that has been assigned by the issuer of the meeting.
 	 * <p>
@@ -142,33 +144,49 @@ public class Proxy {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreassignedProxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreassignedProxy = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Proxy.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> Proxy.mmObject();
 			isDerived = false;
 			xmlTag = "PrssgndPrxy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreassignedProxy";
 			definition = "Identifies a proxy that has been assigned by the issuer of the meeting.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy.ProxyType, com.tools20022.repository.msg.Proxy.PreassignedProxy);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy.mmProxyType, com.tools20022.repository.msg.Proxy.mmPreassignedProxy);
 				trace_lazy = () -> ProxyAppointment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Proxy";
 				definition = "Specifies the elements that identify a prox appointed to represent a party authorised to vote at a general meeting.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProxyType2Code getProxyType() {
+		return proxyType;
+	}
+
+	public void setProxyType(ProxyType2Code proxyType) {
+		this.proxyType = proxyType;
+	}
+
+	public IndividualPerson7 getPreassignedProxy() {
+		return preassignedProxy;
+	}
+
+	public void setPreassignedProxy(com.tools20022.repository.msg.IndividualPerson7 preassignedProxy) {
+		this.preassignedProxy = preassignedProxy;
 	}
 }

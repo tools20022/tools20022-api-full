@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#Denied
- * ReplacementProcessingStatus1Code.Denied}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#mmDenied
+ * ReplacementProcessingStatus1Code.mmDenied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#ReceivedAtStockExchange
- * ReplacementProcessingStatus1Code.ReceivedAtStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#mmReceivedAtStockExchange
+ * ReplacementProcessingStatus1Code.mmReceivedAtStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#ReceivedAtIntermediary
- * ReplacementProcessingStatus1Code.ReceivedAtIntermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#mmReceivedAtIntermediary
+ * ReplacementProcessingStatus1Code.mmReceivedAtIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#Accepted
- * ReplacementProcessingStatus1Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#mmAccepted
+ * ReplacementProcessingStatus1Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#PartialReplacementAccepted
- * ReplacementProcessingStatus1Code.PartialReplacementAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#mmPartialReplacementAccepted
+ * ReplacementProcessingStatus1Code.mmPartialReplacementAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#Pending
- * ReplacementProcessingStatus1Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#mmPending
+ * ReplacementProcessingStatus1Code.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#Rejected
- * ReplacementProcessingStatus1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#mmRejected
+ * ReplacementProcessingStatus1Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#Completed
- * ReplacementProcessingStatus1Code.Completed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#mmCompleted
+ * ReplacementProcessingStatus1Code.mmCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#InRepair
- * ReplacementProcessingStatus1Code.InRepair}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReplacementProcessingStatus1Code#mmInRepair
+ * ReplacementProcessingStatus1Code.mmInRepair}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +102,7 @@ public class ReplacementProcessingStatus1Code extends ReplacementProcessingStatu
 	 * name} = "Denied"</li>
 	 * </ul>
 	 */
-	public static final MMCode Denied = new MMCode() {
+	public static final MMCode mmDenied = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
@@ -125,7 +125,7 @@ public class ReplacementProcessingStatus1Code extends ReplacementProcessingStatu
 	 * name} = "ReceivedAtStockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivedAtStockExchange = new MMCode() {
+	public static final MMCode mmReceivedAtStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtStockExchange";
@@ -148,7 +148,7 @@ public class ReplacementProcessingStatus1Code extends ReplacementProcessingStatu
 	 * name} = "ReceivedAtIntermediary"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivedAtIntermediary = new MMCode() {
+	public static final MMCode mmReceivedAtIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtIntermediary";
@@ -171,7 +171,7 @@ public class ReplacementProcessingStatus1Code extends ReplacementProcessingStatu
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -194,7 +194,7 @@ public class ReplacementProcessingStatus1Code extends ReplacementProcessingStatu
 	 * name} = "PartialReplacementAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialReplacementAccepted = new MMCode() {
+	public static final MMCode mmPartialReplacementAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialReplacementAccepted";
@@ -217,7 +217,7 @@ public class ReplacementProcessingStatus1Code extends ReplacementProcessingStatu
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -240,7 +240,7 @@ public class ReplacementProcessingStatus1Code extends ReplacementProcessingStatu
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -263,7 +263,7 @@ public class ReplacementProcessingStatus1Code extends ReplacementProcessingStatu
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Completed = new MMCode() {
+	public static final MMCode mmCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
@@ -286,7 +286,7 @@ public class ReplacementProcessingStatus1Code extends ReplacementProcessingStatu
 	 * name} = "InRepair"</li>
 	 * </ul>
 	 */
-	public static final MMCode InRepair = new MMCode() {
+	public static final MMCode mmInRepair = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
@@ -297,16 +297,16 @@ public class ReplacementProcessingStatus1Code extends ReplacementProcessingStatu
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DEND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReplacementProcessingStatus1Code";
 				definition = "Specifies the processing status of the replacement request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.Denied, com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.ReceivedAtStockExchange,
-						com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.ReceivedAtIntermediary, com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.Accepted,
-						com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.PartialReplacementAccepted, com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.Pending,
-						com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.Rejected, com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.Completed,
-						com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.InRepair);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.mmDenied, com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.mmReceivedAtStockExchange,
+						com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.mmReceivedAtIntermediary, com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.mmAccepted,
+						com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.mmPartialReplacementAccepted, com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.mmPending,
+						com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.mmRejected, com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.mmCompleted,
+						com.tools20022.repository.codeset.ReplacementProcessingStatus1Code.mmInRepair);
 				trace_lazy = () -> ReplacementProcessingStatusCode.mmObject();
 			}
 		});

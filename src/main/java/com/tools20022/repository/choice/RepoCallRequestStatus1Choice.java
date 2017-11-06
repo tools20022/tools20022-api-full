@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus1Choice#Code
- * RepoCallRequestStatus1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus1Choice#mmCode
+ * RepoCallRequestStatus1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus1Choice#Proprietary
- * RepoCallRequestStatus1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus1Choice#mmProprietary
+ * RepoCallRequestStatus1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RepoCallRequestStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RepoCallRequestStatus1Code code;
 	/**
 	 * Provides the status of the repurchase agreement call request.
 	 * <p>
@@ -85,8 +86,8 @@ public class RepoCallRequestStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#RepoCallRequestStatus
-	 * SecuritiesTradeStatus.RepoCallRequestStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmRepoCallRequestStatus
+	 * SecuritiesTradeStatus.mmRepoCallRequestStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,27 +109,28 @@ public class RepoCallRequestStatus1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus8Choice#Code
-	 * RepoCallRequestStatus8Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus8Choice#mmCode
+	 * RepoCallRequestStatus8Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmRepoCallRequestStatus;
 			componentContext_lazy = () -> RepoCallRequestStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.RepoCallRequestStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of the repurchase agreement call request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepoCallRequestStatus8Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepoCallRequestStatus8Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RepoCallRequestStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Provides the status of the repurchase agreement call request.
 	 * <p>
@@ -142,8 +144,8 @@ public class RepoCallRequestStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#RepoCallRequestStatus
-	 * SecuritiesTradeStatus.RepoCallRequestStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmRepoCallRequestStatus
+	 * SecuritiesTradeStatus.mmRepoCallRequestStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,24 +167,24 @@ public class RepoCallRequestStatus1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus8Choice#Proprietary
-	 * RepoCallRequestStatus8Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RepoCallRequestStatus8Choice#mmProprietary
+	 * RepoCallRequestStatus8Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmRepoCallRequestStatus;
 			componentContext_lazy = () -> RepoCallRequestStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.RepoCallRequestStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of the repurchase agreement call request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepoCallRequestStatus8Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepoCallRequestStatus8Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -190,9 +192,9 @@ public class RepoCallRequestStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepoCallRequestStatus1Choice.Code, com.tools20022.repository.choice.RepoCallRequestStatus1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RepoCallRequestStatus1Choice.mmCode, com.tools20022.repository.choice.RepoCallRequestStatus1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepoCallRequestStatus1Choice";
 				definition = "Choice of format for the repurchase agreement call acknowledgement.";
@@ -200,5 +202,21 @@ public class RepoCallRequestStatus1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RepoCallRequestStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(RepoCallRequestStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

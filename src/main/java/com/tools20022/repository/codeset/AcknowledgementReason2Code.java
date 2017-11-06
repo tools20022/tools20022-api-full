@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code#AccountServicerDeadlineMissed
- * AcknowledgementReason2Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code#mmAccountServicerDeadlineMissed
+ * AcknowledgementReason2Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code#MarketPracticeRuleDiscrepency
- * AcknowledgementReason2Code.MarketPracticeRuleDiscrepency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code#mmMarketPracticeRuleDiscrepency
+ * AcknowledgementReason2Code.mmMarketPracticeRuleDiscrepency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code#MarketDeadlineMissed
- * AcknowledgementReason2Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code#mmMarketDeadlineMissed
+ * AcknowledgementReason2Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code#NotStraightThroughProcessing
- * AcknowledgementReason2Code.NotStraightThroughProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code#mmNotStraightThroughProcessing
+ * AcknowledgementReason2Code.mmNotStraightThroughProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code#AcceptedWithoutVotingRights
- * AcknowledgementReason2Code.AcceptedWithoutVotingRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason2Code#mmAcceptedWithoutVotingRights
+ * AcknowledgementReason2Code.mmAcceptedWithoutVotingRights}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class AcknowledgementReason2Code extends AcknowledgementReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -114,7 +114,7 @@ public class AcknowledgementReason2Code extends AcknowledgementReasonCode {
 	 * name} = "MarketPracticeRuleDiscrepency"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketPracticeRuleDiscrepency = new MMCode() {
+	public static final MMCode mmMarketPracticeRuleDiscrepency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeRuleDiscrepency";
@@ -137,7 +137,7 @@ public class AcknowledgementReason2Code extends AcknowledgementReasonCode {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -160,7 +160,7 @@ public class AcknowledgementReason2Code extends AcknowledgementReasonCode {
 	 * name} = "NotStraightThroughProcessing"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotStraightThroughProcessing = new MMCode() {
+	public static final MMCode mmNotStraightThroughProcessing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotStraightThroughProcessing";
@@ -183,7 +183,7 @@ public class AcknowledgementReason2Code extends AcknowledgementReasonCode {
 	 * name} = "AcceptedWithoutVotingRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedWithoutVotingRights = new MMCode() {
+	public static final MMCode mmAcceptedWithoutVotingRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithoutVotingRights";
@@ -194,14 +194,14 @@ public class AcknowledgementReason2Code extends AcknowledgementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReason2Code";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason2Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason2Code.MarketPracticeRuleDiscrepency,
-						com.tools20022.repository.codeset.AcknowledgementReason2Code.MarketDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason2Code.NotStraightThroughProcessing,
-						com.tools20022.repository.codeset.AcknowledgementReason2Code.AcceptedWithoutVotingRights);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason2Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason2Code.mmMarketPracticeRuleDiscrepency,
+						com.tools20022.repository.codeset.AcknowledgementReason2Code.mmMarketDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason2Code.mmNotStraightThroughProcessing,
+						com.tools20022.repository.codeset.AcknowledgementReason2Code.mmAcceptedWithoutVotingRights);
 				trace_lazy = () -> AcknowledgementReasonCode.mmObject();
 			}
 		});

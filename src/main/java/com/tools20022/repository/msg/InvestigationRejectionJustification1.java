@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestigationRejectionJustification1#RejectionReason
- * InvestigationRejectionJustification1.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestigationRejectionJustification1#mmRejectionReason
+ * InvestigationRejectionJustification1.mmRejectionReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,18 +47,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#Justification
- * RejectInvestigationV03.Justification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03#mmJustification
+ * RejectInvestigationV03.mmJustification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#Justification
- * RejectInvestigationV04.Justification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#mmJustification
+ * RejectInvestigationV04.mmJustification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestigationRejectionJustification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestigationRejection1Code rejectionReason;
 	/**
 	 * Reason for the rejection of a case assignment, in a coded form.
 	 * <p>
@@ -85,8 +86,8 @@ public class InvestigationRejectionJustification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseRejection#InvestigationRejection
-	 * PaymentInvestigationCaseRejection.InvestigationRejection}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseRejection#mmInvestigationRejection
+	 * PaymentInvestigationCaseRejection.mmInvestigationRejection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,17 +107,17 @@ public class InvestigationRejectionJustification1 {
 	 * "Reason for the rejection of a case assignment, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmInvestigationRejection;
 			componentContext_lazy = () -> InvestigationRejectionJustification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.InvestigationRejection;
 			isDerived = false;
 			xmlTag = "RjctnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason for the rejection of a case assignment, in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InvestigationRejection1Code.mmObject();
 		}
 	};
@@ -124,15 +125,23 @@ public class InvestigationRejectionJustification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestigationRejectionJustification1.RejectionReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestigationRejectionJustification1.mmRejectionReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RejectInvestigationV03.mmJustification, com.tools20022.repository.area.camt.RejectInvestigationV04.mmJustification);
 				trace_lazy = () -> PaymentInvestigationCaseRejection.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RejectInvestigationV03.Justification, com.tools20022.repository.area.camt.RejectInvestigationV04.Justification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestigationRejectionJustification1";
 				definition = "Provides the reason for rejecting the case assignment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestigationRejection1Code getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(InvestigationRejection1Code rejectionReason) {
+		this.rejectionReason = rejectionReason;
 	}
 }

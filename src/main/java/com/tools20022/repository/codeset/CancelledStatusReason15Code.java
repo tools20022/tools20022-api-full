@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason15Code#CancelledByYourself
- * CancelledStatusReason15Code.CancelledByYourself}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason15Code#mmCancelledByYourself
+ * CancelledStatusReason15Code.mmCancelledByYourself}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason15Code#CancelledByAgent
- * CancelledStatusReason15Code.CancelledByAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason15Code#mmCancelledByAgent
+ * CancelledStatusReason15Code.mmCancelledByAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,7 +82,7 @@ public class CancelledStatusReason15Code extends CancelledStatusReasonV2Code {
 	 * name} = "CancelledByYourself"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByYourself = new MMCode() {
+	public static final MMCode mmCancelledByYourself = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourself";
@@ -105,7 +105,7 @@ public class CancelledStatusReason15Code extends CancelledStatusReasonV2Code {
 	 * name} = "CancelledByAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByAgent = new MMCode() {
+	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
@@ -116,12 +116,12 @@ public class CancelledStatusReason15Code extends CancelledStatusReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason15Code";
 				definition = "Specifies the underlying reason for the cancellation of the associated transaction.";
 				previousVersion_lazy = () -> CancelledStatusReason14Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason15Code.CancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReason15Code.CancelledByAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason15Code.mmCancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReason15Code.mmCancelledByAgent);
 				trace_lazy = () -> CancelledStatusReasonV2Code.mmObject();
 			}
 		});

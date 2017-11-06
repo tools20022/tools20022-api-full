@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.entity.PostalAddress;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#BICFI
- * FinancialInstitutionIdentification8.BICFI}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#mmBICFI
+ * FinancialInstitutionIdentification8.mmBICFI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#ClearingSystemMemberIdentification
- * FinancialInstitutionIdentification8.ClearingSystemMemberIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#mmClearingSystemMemberIdentification
+ * FinancialInstitutionIdentification8.mmClearingSystemMemberIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#Name
- * FinancialInstitutionIdentification8.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#mmName
+ * FinancialInstitutionIdentification8.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#PostalAddress
- * FinancialInstitutionIdentification8.PostalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#mmPostalAddress
+ * FinancialInstitutionIdentification8.mmPostalAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#Other
- * FinancialInstitutionIdentification8.Other}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification8#mmOther
+ * FinancialInstitutionIdentification8.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstitutionIdentification8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BICFIIdentifier bICFI;
 	/**
 	 * Code allocated to a financial institution by the ISO 9362 Registration
 	 * Authority as described in ISO 9362
@@ -90,8 +92,8 @@ public class FinancialInstitutionIdentification8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,20 +114,21 @@ public class FinancialInstitutionIdentification8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BICFI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> FinancialInstitutionIdentification8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "BICFI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICFI";
 			definition = "Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	protected ClearingSystemMemberIdentification2 clearingSystemMemberIdentification;
 	/**
 	 * Information used to identify a member within a clearing system.
 	 * <p>
@@ -138,8 +141,8 @@ public class FinancialInstitutionIdentification8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#ClearingSystemMemberIdentificationType
-	 * OrganisationIdentification.ClearingSystemMemberIdentificationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmClearingSystemMemberIdentificationType
+	 * OrganisationIdentification.mmClearingSystemMemberIdentificationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,21 +162,22 @@ public class FinancialInstitutionIdentification8 {
 	 * "Information used to identify a member within a clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClearingSystemMemberIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClearingSystemMemberIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> FinancialInstitutionIdentification8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.ClearingSystemMemberIdentificationType;
 			isDerived = false;
 			xmlTag = "ClrSysMmbId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystemMemberIdentification";
 			definition = "Information used to identify a member within a clearing system.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ClearingSystemMemberIdentification2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ClearingSystemMemberIdentification2.mmObject();
 		}
 	};
+	protected Max140Text name;
 	/**
 	 * Name by which an agent is known and which is usually used to identify
 	 * that agent.
@@ -187,8 +191,8 @@ public class FinancialInstitutionIdentification8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -209,20 +213,21 @@ public class FinancialInstitutionIdentification8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> FinancialInstitutionIdentification8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which an agent is known and which is usually used to identify that agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PostalAddress6 postalAddress;
 	/**
 	 * Information that locates and identifies a specific address, as defined by
 	 * postal services.
@@ -257,21 +262,22 @@ public class FinancialInstitutionIdentification8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> FinancialInstitutionIdentification8.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress6.mmObject();
 		}
 	};
+	protected GenericFinancialIdentification1 other;
 	/**
 	 * Unique identification of an agent, as assigned by an institution, using
 	 * an identification scheme.
@@ -307,35 +313,75 @@ public class FinancialInstitutionIdentification8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Other = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstitutionIdentification8.mmObject();
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
+			componentContext_lazy = () -> FinancialInstitutionIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Unique identification of an agent, as assigned by an institution, using an identification scheme.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericFinancialIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericFinancialIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstitutionIdentification8.BICFI, com.tools20022.repository.msg.FinancialInstitutionIdentification8.ClearingSystemMemberIdentification,
-						com.tools20022.repository.msg.FinancialInstitutionIdentification8.Name, com.tools20022.repository.msg.FinancialInstitutionIdentification8.PostalAddress,
-						com.tools20022.repository.msg.FinancialInstitutionIdentification8.Other);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmBICFI, com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmClearingSystemMemberIdentification,
+						com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmName, com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmPostalAddress,
+						com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmOther);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstitutionIdentification8";
 				definition = "Set of elements used to identify a financial institution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BICFIIdentifier getBICFI() {
+		return bICFI;
+	}
+
+	public void setBICFI(BICFIIdentifier bICFI) {
+		this.bICFI = bICFI;
+	}
+
+	public ClearingSystemMemberIdentification2 getClearingSystemMemberIdentification() {
+		return clearingSystemMemberIdentification;
+	}
+
+	public void setClearingSystemMemberIdentification(com.tools20022.repository.msg.ClearingSystemMemberIdentification2 clearingSystemMemberIdentification) {
+		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
+	}
+
+	public Max140Text getName() {
+		return name;
+	}
+
+	public void setName(Max140Text name) {
+		this.name = name;
+	}
+
+	public PostalAddress6 getPostalAddress() {
+		return postalAddress;
+	}
+
+	public void setPostalAddress(com.tools20022.repository.msg.PostalAddress6 postalAddress) {
+		this.postalAddress = postalAddress;
+	}
+
+	public GenericFinancialIdentification1 getOther() {
+		return other;
+	}
+
+	public void setOther(com.tools20022.repository.msg.GenericFinancialIdentification1 other) {
+		this.other = other;
 	}
 }

@@ -34,48 +34,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#PaymentOnReceiptOfInvoice
- * PaymentTime4Code.PaymentOnReceiptOfInvoice}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmPaymentOnReceiptOfInvoice
+ * PaymentTime4Code.mmPaymentOnReceiptOfInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#PaymentOnDelivery
- * PaymentTime4Code.PaymentOnDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmPaymentOnDelivery
+ * PaymentTime4Code.mmPaymentOnDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#EndOfPeriodAfterShipmentDate
- * PaymentTime4Code.EndOfPeriodAfterShipmentDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmEndOfPeriodAfterShipmentDate
+ * PaymentTime4Code.mmEndOfPeriodAfterShipmentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#EndOfPeriodAfterReceipt
- * PaymentTime4Code.EndOfPeriodAfterReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmEndOfPeriodAfterReceipt
+ * PaymentTime4Code.mmEndOfPeriodAfterReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#EndOfPeriodAfterPurchaseOrderDate
- * PaymentTime4Code.EndOfPeriodAfterPurchaseOrderDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmEndOfPeriodAfterPurchaseOrderDate
+ * PaymentTime4Code.mmEndOfPeriodAfterPurchaseOrderDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#EndOfPeriodAfterInvoiceDate
- * PaymentTime4Code.EndOfPeriodAfterInvoiceDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmEndOfPeriodAfterInvoiceDate
+ * PaymentTime4Code.mmEndOfPeriodAfterInvoiceDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#EndOfPeriodAfterEndOfReceiptMonth
- * PaymentTime4Code.EndOfPeriodAfterEndOfReceiptMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmEndOfPeriodAfterEndOfReceiptMonth
+ * PaymentTime4Code.mmEndOfPeriodAfterEndOfReceiptMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#EndOfPeriodAfterEndOfDeliveryMonth
- * PaymentTime4Code.EndOfPeriodAfterEndOfDeliveryMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmEndOfPeriodAfterEndOfDeliveryMonth
+ * PaymentTime4Code.mmEndOfPeriodAfterEndOfDeliveryMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#EndOfPeriodAfterDelivery
- * PaymentTime4Code.EndOfPeriodAfterDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmEndOfPeriodAfterDelivery
+ * PaymentTime4Code.mmEndOfPeriodAfterDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#EndOfPeriodAfterBaselineEstablishment
- * PaymentTime4Code.EndOfPeriodAfterBaselineEstablishment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmEndOfPeriodAfterBaselineEstablishment
+ * PaymentTime4Code.mmEndOfPeriodAfterBaselineEstablishment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#EndOfMonthOfReceipt
- * PaymentTime4Code.EndOfMonthOfReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmEndOfMonthOfReceipt
+ * PaymentTime4Code.mmEndOfMonthOfReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#EndOfMonthOfDelivery
- * PaymentTime4Code.EndOfMonthOfDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTime4Code#mmEndOfMonthOfDelivery
+ * PaymentTime4Code.mmEndOfMonthOfDelivery}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,7 +105,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "PaymentOnReceiptOfInvoice"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentOnReceiptOfInvoice = new MMCode() {
+	public static final MMCode mmPaymentOnReceiptOfInvoice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOnReceiptOfInvoice";
@@ -128,7 +128,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "PaymentOnDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentOnDelivery = new MMCode() {
+	public static final MMCode mmPaymentOnDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOnDelivery";
@@ -151,7 +151,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "EndOfPeriodAfterShipmentDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfPeriodAfterShipmentDate = new MMCode() {
+	public static final MMCode mmEndOfPeriodAfterShipmentDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterShipmentDate";
@@ -174,7 +174,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "EndOfPeriodAfterReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfPeriodAfterReceipt = new MMCode() {
+	public static final MMCode mmEndOfPeriodAfterReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterReceipt";
@@ -197,7 +197,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "EndOfPeriodAfterPurchaseOrderDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfPeriodAfterPurchaseOrderDate = new MMCode() {
+	public static final MMCode mmEndOfPeriodAfterPurchaseOrderDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterPurchaseOrderDate";
@@ -220,7 +220,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "EndOfPeriodAfterInvoiceDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfPeriodAfterInvoiceDate = new MMCode() {
+	public static final MMCode mmEndOfPeriodAfterInvoiceDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterInvoiceDate";
@@ -243,7 +243,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "EndOfPeriodAfterEndOfReceiptMonth"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfPeriodAfterEndOfReceiptMonth = new MMCode() {
+	public static final MMCode mmEndOfPeriodAfterEndOfReceiptMonth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterEndOfReceiptMonth";
@@ -266,7 +266,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "EndOfPeriodAfterEndOfDeliveryMonth"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfPeriodAfterEndOfDeliveryMonth = new MMCode() {
+	public static final MMCode mmEndOfPeriodAfterEndOfDeliveryMonth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterEndOfDeliveryMonth";
@@ -289,7 +289,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "EndOfPeriodAfterDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfPeriodAfterDelivery = new MMCode() {
+	public static final MMCode mmEndOfPeriodAfterDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterDelivery";
@@ -312,7 +312,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "EndOfPeriodAfterBaselineEstablishment"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfPeriodAfterBaselineEstablishment = new MMCode() {
+	public static final MMCode mmEndOfPeriodAfterBaselineEstablishment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterBaselineEstablishment";
@@ -335,7 +335,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "EndOfMonthOfReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfMonthOfReceipt = new MMCode() {
+	public static final MMCode mmEndOfMonthOfReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfMonthOfReceipt";
@@ -358,7 +358,7 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	 * name} = "EndOfMonthOfDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndOfMonthOfDelivery = new MMCode() {
+	public static final MMCode mmEndOfMonthOfDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfMonthOfDelivery";
@@ -369,16 +369,16 @@ public class PaymentTime4Code extends PaymentTimeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTime4Code";
 				definition = "Specifies the payment conditions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentTime4Code.PaymentOnReceiptOfInvoice, com.tools20022.repository.codeset.PaymentTime4Code.PaymentOnDelivery,
-						com.tools20022.repository.codeset.PaymentTime4Code.EndOfPeriodAfterShipmentDate, com.tools20022.repository.codeset.PaymentTime4Code.EndOfPeriodAfterReceipt,
-						com.tools20022.repository.codeset.PaymentTime4Code.EndOfPeriodAfterPurchaseOrderDate, com.tools20022.repository.codeset.PaymentTime4Code.EndOfPeriodAfterInvoiceDate,
-						com.tools20022.repository.codeset.PaymentTime4Code.EndOfPeriodAfterEndOfReceiptMonth, com.tools20022.repository.codeset.PaymentTime4Code.EndOfPeriodAfterEndOfDeliveryMonth,
-						com.tools20022.repository.codeset.PaymentTime4Code.EndOfPeriodAfterDelivery, com.tools20022.repository.codeset.PaymentTime4Code.EndOfPeriodAfterBaselineEstablishment,
-						com.tools20022.repository.codeset.PaymentTime4Code.EndOfMonthOfReceipt, com.tools20022.repository.codeset.PaymentTime4Code.EndOfMonthOfDelivery);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentTime4Code.mmPaymentOnReceiptOfInvoice, com.tools20022.repository.codeset.PaymentTime4Code.mmPaymentOnDelivery,
+						com.tools20022.repository.codeset.PaymentTime4Code.mmEndOfPeriodAfterShipmentDate, com.tools20022.repository.codeset.PaymentTime4Code.mmEndOfPeriodAfterReceipt,
+						com.tools20022.repository.codeset.PaymentTime4Code.mmEndOfPeriodAfterPurchaseOrderDate, com.tools20022.repository.codeset.PaymentTime4Code.mmEndOfPeriodAfterInvoiceDate,
+						com.tools20022.repository.codeset.PaymentTime4Code.mmEndOfPeriodAfterEndOfReceiptMonth, com.tools20022.repository.codeset.PaymentTime4Code.mmEndOfPeriodAfterEndOfDeliveryMonth,
+						com.tools20022.repository.codeset.PaymentTime4Code.mmEndOfPeriodAfterDelivery, com.tools20022.repository.codeset.PaymentTime4Code.mmEndOfPeriodAfterBaselineEstablishment,
+						com.tools20022.repository.codeset.PaymentTime4Code.mmEndOfMonthOfReceipt, com.tools20022.repository.codeset.PaymentTime4Code.mmEndOfMonthOfDelivery);
 				trace_lazy = () -> PaymentTimeCode.mmObject();
 			}
 		});

@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#IBAN
- * AccountIdentification31Choice.IBAN}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmIBAN
+ * AccountIdentification31Choice.mmIBAN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#BBAN
- * AccountIdentification31Choice.BBAN}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmBBAN
+ * AccountIdentification31Choice.mmBBAN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#UPIC
- * AccountIdentification31Choice.UPIC}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmUPIC
+ * AccountIdentification31Choice.mmUPIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#DomesticAccount
- * AccountIdentification31Choice.DomesticAccount}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmDomesticAccount
+ * AccountIdentification31Choice.mmDomesticAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentification31Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected IBANIdentifier iBAN;
 	/**
 	 * International Bank Account Number (IBAN) - identifier used
 	 * internationally by financial institutions to uniquely identify the
@@ -94,8 +95,8 @@ public class AccountIdentification31Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#IBAN
-	 * AccountIdentification.IBAN}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmIBAN
+	 * AccountIdentification.mmIBAN}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,25 +118,26 @@ public class AccountIdentification31Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#IBAN
-	 * AccountIdentification1Choice.IBAN}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmIBAN
+	 * AccountIdentification1Choice.mmIBAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> AccountIdentification31Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.IBAN;
 			isDerived = false;
 			xmlTag = "IBAN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBAN";
 			definition = "International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 \"Banking and related financial services - International Bank Account Number (IBAN)\" version 1997-10-01, or later revisions.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.IBAN;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmIBAN;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
 		}
 	};
+	protected BBANIdentifier bBAN;
 	/**
 	 * Basic Bank Account Number (BBAN) - identifier used nationally by
 	 * financial institutions, ie, in individual countries, generally as part of
@@ -152,8 +154,8 @@ public class AccountIdentification31Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#BBAN
-	 * AccountIdentification.BBAN}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmBBAN
+	 * AccountIdentification.mmBBAN}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -175,25 +177,26 @@ public class AccountIdentification31Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#BBAN
-	 * AccountIdentification1Choice.BBAN}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmBBAN
+	 * AccountIdentification1Choice.mmBBAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBBAN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmBBAN;
 			componentContext_lazy = () -> AccountIdentification31Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.BBAN;
 			isDerived = false;
 			xmlTag = "BBAN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BBAN";
 			definition = "Basic Bank Account Number (BBAN) - identifier used nationally by financial institutions, ie, in individual countries, generally as part of a National Account Numbering Scheme(s), to uniquely identify the account of a customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.BBAN;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmBBAN;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
 		}
 	};
+	protected UPICIdentifier uPIC;
 	/**
 	 * Universal Payment Identification Code (UPIC) - identifier used by the New
 	 * York Clearing House to mask confidential data, such as bank accounts and
@@ -210,8 +213,8 @@ public class AccountIdentification31Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#UPIC
-	 * AccountIdentification.UPIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmUPIC
+	 * AccountIdentification.mmUPIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -233,25 +236,26 @@ public class AccountIdentification31Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#UPIC
-	 * AccountIdentification1Choice.UPIC}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmUPIC
+	 * AccountIdentification1Choice.mmUPIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UPIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUPIC = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmUPIC;
 			componentContext_lazy = () -> AccountIdentification31Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.UPIC;
 			isDerived = false;
 			xmlTag = "UPIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UPIC";
 			definition = "Universal Payment Identification Code (UPIC) - identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.UPIC;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmUPIC;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation4 domesticAccount;
 	/**
 	 * Account number used by financial institutions in individual countries to
 	 * identify an account of a customer, but not necessarily the bank and
@@ -267,8 +271,8 @@ public class AccountIdentification31Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#ProprietaryIdentification
-	 * AccountIdentification.ProprietaryIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmProprietaryIdentification
+	 * AccountIdentification.mmProprietaryIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -290,22 +294,22 @@ public class AccountIdentification31Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#DomesticAccount
-	 * AccountIdentification1Choice.DomesticAccount}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice#mmDomesticAccount
+	 * AccountIdentification1Choice.mmDomesticAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DomesticAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDomesticAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> AccountIdentification31Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.ProprietaryIdentification;
 			isDerived = false;
 			xmlTag = "DmstAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticAccount";
 			definition = "Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.DomesticAccount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmDomesticAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation4.mmObject();
 		}
 	};
@@ -313,10 +317,10 @@ public class AccountIdentification31Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification31Choice.IBAN, com.tools20022.repository.choice.AccountIdentification31Choice.BBAN,
-						com.tools20022.repository.choice.AccountIdentification31Choice.UPIC, com.tools20022.repository.choice.AccountIdentification31Choice.DomesticAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification31Choice.mmIBAN, com.tools20022.repository.choice.AccountIdentification31Choice.mmBBAN,
+						com.tools20022.repository.choice.AccountIdentification31Choice.mmUPIC, com.tools20022.repository.choice.AccountIdentification31Choice.mmDomesticAccount);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification31Choice";
 				definition = "Unique identifier of an account, as assigned by the account servicer.";
@@ -324,5 +328,37 @@ public class AccountIdentification31Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IBANIdentifier getIBAN() {
+		return iBAN;
+	}
+
+	public void setIBAN(IBANIdentifier iBAN) {
+		this.iBAN = iBAN;
+	}
+
+	public BBANIdentifier getBBAN() {
+		return bBAN;
+	}
+
+	public void setBBAN(BBANIdentifier bBAN) {
+		this.bBAN = bBAN;
+	}
+
+	public UPICIdentifier getUPIC() {
+		return uPIC;
+	}
+
+	public void setUPIC(UPICIdentifier uPIC) {
+		this.uPIC = uPIC;
+	}
+
+	public SimpleIdentificationInformation4 getDomesticAccount() {
+		return domesticAccount;
+	}
+
+	public void setDomesticAccount(SimpleIdentificationInformation4 domesticAccount) {
+		this.domesticAccount = domesticAccount;
 	}
 }

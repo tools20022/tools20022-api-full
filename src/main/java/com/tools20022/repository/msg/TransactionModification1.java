@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionModification1#InstructionReference
- * TransactionModification1.InstructionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionModification1#mmInstructionReference
+ * TransactionModification1.mmInstructionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionModification1#NewPaymentValueSet
- * TransactionModification1.NewPaymentValueSet}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionModification1#mmNewPaymentValueSet
+ * TransactionModification1.mmNewPaymentValueSet}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentIdentification3Choice instructionReference;
 	/**
 	 * Reference to the instruction related to the payment for which a
 	 * modification is requested.
@@ -97,21 +98,22 @@ public class TransactionModification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionModification1.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> TransactionModification1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionReference";
 			definition = "Reference to the instruction related to the payment for which a modification is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentIdentification3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PaymentIdentification3Choice.mmObject();
 		}
 	};
+	protected PaymentDetails4 newPaymentValueSet;
 	/**
 	 * New payment values.
 	 * <p>
@@ -143,33 +145,49 @@ public class TransactionModification1 {
 	 * definition} = "New payment values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewPaymentValueSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewPaymentValueSet = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionModification1.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> TransactionModification1.mmObject();
 			isDerived = false;
 			xmlTag = "NewPmtValSet";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPaymentValueSet";
 			definition = "New payment values.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentDetails4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentDetails4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionModification1.InstructionReference, com.tools20022.repository.msg.TransactionModification1.NewPaymentValueSet);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionModification1.mmInstructionReference, com.tools20022.repository.msg.TransactionModification1.mmNewPaymentValueSet);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionModification1";
 				definition = "Contains the requested modifications.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentIdentification3Choice getInstructionReference() {
+		return instructionReference;
+	}
+
+	public void setInstructionReference(PaymentIdentification3Choice instructionReference) {
+		this.instructionReference = instructionReference;
+	}
+
+	public PaymentDetails4 getNewPaymentValueSet() {
+		return newPaymentValueSet;
+	}
+
+	public void setNewPaymentValueSet(com.tools20022.repository.msg.PaymentDetails4 newPaymentValueSet) {
+		this.newPaymentValueSet = newPaymentValueSet;
 	}
 }

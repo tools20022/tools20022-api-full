@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RemarketingMarginType1Code#Agreed
- * RemarketingMarginType1Code.Agreed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RemarketingMarginType1Code#mmAgreed
+ * RemarketingMarginType1Code.mmAgreed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RemarketingMarginType1Code#Alternative
- * RemarketingMarginType1Code.Alternative}</li>
+ * {@linkplain com.tools20022.repository.codeset.RemarketingMarginType1Code#mmAlternative
+ * RemarketingMarginType1Code.mmAlternative}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class RemarketingMarginType1Code extends RemarketingMarginTypeCode {
 	 * name} = "Agreed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Agreed = new MMCode() {
+	public static final MMCode mmAgreed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agreed";
@@ -104,7 +104,7 @@ public class RemarketingMarginType1Code extends RemarketingMarginTypeCode {
 	 * name} = "Alternative"</li>
 	 * </ul>
 	 */
-	public static final MMCode Alternative = new MMCode() {
+	public static final MMCode mmAlternative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Alternative";
@@ -115,12 +115,12 @@ public class RemarketingMarginType1Code extends RemarketingMarginTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGRE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RemarketingMarginType1Code";
 				definition = "Specifies the type of margin.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RemarketingMarginType1Code.Agreed, com.tools20022.repository.codeset.RemarketingMarginType1Code.Alternative);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RemarketingMarginType1Code.mmAgreed, com.tools20022.repository.codeset.RemarketingMarginType1Code.mmAlternative);
 				trace_lazy = () -> RemarketingMarginTypeCode.mmObject();
 			}
 		});

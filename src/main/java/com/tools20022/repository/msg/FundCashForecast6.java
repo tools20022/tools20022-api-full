@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.FundsCashFlow;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Cash movements from or to a fund as a result of investment funds
@@ -41,63 +42,63 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#Identification
- * FundCashForecast6.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmIdentification
+ * FundCashForecast6.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#TradeDateTime
- * FundCashForecast6.TradeDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmTradeDateTime
+ * FundCashForecast6.mmTradeDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#PreviousTradeDateTime
- * FundCashForecast6.PreviousTradeDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmPreviousTradeDateTime
+ * FundCashForecast6.mmPreviousTradeDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#FinancialInstrumentDetails
- * FundCashForecast6.FinancialInstrumentDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast6#TotalNAV
- * FundCashForecast6.TotalNAV}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmFinancialInstrumentDetails
+ * FundCashForecast6.mmFinancialInstrumentDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast6#mmTotalNAV
+ * FundCashForecast6.mmTotalNAV}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#PreviousTotalNAV
- * FundCashForecast6.PreviousTotalNAV}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmPreviousTotalNAV
+ * FundCashForecast6.mmPreviousTotalNAV}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#TotalUnitsNumber
- * FundCashForecast6.TotalUnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmTotalUnitsNumber
+ * FundCashForecast6.mmTotalUnitsNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#PreviousTotalUnitsNumber
- * FundCashForecast6.PreviousTotalUnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmPreviousTotalUnitsNumber
+ * FundCashForecast6.mmPreviousTotalUnitsNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#TotalNAVChangeRate
- * FundCashForecast6.TotalNAVChangeRate}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmTotalNAVChangeRate
+ * FundCashForecast6.mmTotalNAVChangeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#InvestmentCurrency
- * FundCashForecast6.InvestmentCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmInvestmentCurrency
+ * FundCashForecast6.mmInvestmentCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#CurrencyStatus
- * FundCashForecast6.CurrencyStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmCurrencyStatus
+ * FundCashForecast6.mmCurrencyStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#ExceptionalNetCashFlowIndicator
- * FundCashForecast6.ExceptionalNetCashFlowIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast6#Price
- * FundCashForecast6.Price}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmExceptionalNetCashFlowIndicator
+ * FundCashForecast6.mmExceptionalNetCashFlowIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast6#mmPrice
+ * FundCashForecast6.mmPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#ForeignExchangeRate
- * FundCashForecast6.ForeignExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmForeignExchangeRate
+ * FundCashForecast6.mmForeignExchangeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#PercentageOfShareClassTotalNAV
- * FundCashForecast6.PercentageOfShareClassTotalNAV}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmPercentageOfShareClassTotalNAV
+ * FundCashForecast6.mmPercentageOfShareClassTotalNAV}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#BreakdownByParty
- * FundCashForecast6.BreakdownByParty}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmBreakdownByParty
+ * FundCashForecast6.mmBreakdownByParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#BreakdownByCountry
- * FundCashForecast6.BreakdownByCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmBreakdownByCountry
+ * FundCashForecast6.mmBreakdownByCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#BreakdownByCurrency
- * FundCashForecast6.BreakdownByCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmBreakdownByCurrency
+ * FundCashForecast6.mmBreakdownByCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#BreakdownByUserDefinedParameter
- * FundCashForecast6.BreakdownByUserDefinedParameter}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmBreakdownByUserDefinedParameter
+ * FundCashForecast6.mmBreakdownByUserDefinedParameter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecast6#NetCashForecastDetails
- * FundCashForecast6.NetCashForecastDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecast6#mmNetCashForecastDetails
+ * FundCashForecast6.mmNetCashForecastDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -108,15 +109,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#FundCashForecastDetails
- * FundDetailedConfirmedCashForecastReportV04.FundCashForecastDetails}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#mmFundCashForecastDetails
+ * FundDetailedConfirmedCashForecastReportV04.mmFundCashForecastDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -136,6 +137,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundCashForecast6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique technical identifier for an instance of a fund cash forecast
 	 * within a fund cash forecast report as assigned by the issuer of the
@@ -168,11 +170,11 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#Identification
-	 * FundCashForecast4.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmIdentification
+	 * FundCashForecast4.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
 			isDerived = false;
@@ -180,12 +182,13 @@ public class FundCashForecast6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique technical identifier for an instance of a fund cash forecast within a fund cash forecast report as assigned by the issuer of the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice tradeDateTime;
 	/**
 	 * Date and, if required, the time, at which the price has been applied.
 	 * <p>
@@ -199,8 +202,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -221,25 +224,26 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#TradeDateTime
-	 * FundCashForecast4.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmTradeDateTime
+	 * FundCashForecast4.mmTradeDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateTime";
 			definition = "Date and, if required, the time, at which the price has been applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.TradeDateTime;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmTradeDateTime;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice previousTradeDateTime;
 	/**
 	 * Previous date and time at which the price was applied.
 	 * <p>
@@ -253,8 +257,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -274,25 +278,26 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#PreviousTradeDateTime
-	 * FundCashForecast4.PreviousTradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmPreviousTradeDateTime
+	 * FundCashForecast4.mmPreviousTradeDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousTradeDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "PrvsTradDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTradeDateTime";
 			definition = "Previous date and time at which the price was applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.PreviousTradeDateTime;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmPreviousTradeDateTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected FinancialInstrument9 financialInstrumentDetails;
 	/**
 	 * Investment fund class to which the cash flow is related.
 	 * <p>
@@ -304,8 +309,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#InvestmentFund
-	 * InvestmentFundClass.InvestmentFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentFund
+	 * InvestmentFundClass.mmInvestmentFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -325,26 +330,27 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#FinancialInstrumentDetails
-	 * FundCashForecast4.FinancialInstrumentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmFinancialInstrumentDetails
+	 * FundCashForecast4.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentFund;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.InvestmentFund;
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Investment fund class to which the cash flow is related.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.FinancialInstrumentDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmFinancialInstrumentDetails;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument9.mmObject();
 		}
 	};
+	protected List<ActiveOrHistoricCurrencyAndAmount> totalNAV;
 	/**
 	 * Total value of all the holdings, less the fund's liabilities,
 	 * attributable to a specific investment fund class.
@@ -359,8 +365,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#NetAssetValue
-	 * NetAssetValueCalculation.NetAssetValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmNetAssetValue
+	 * NetAssetValueCalculation.mmNetAssetValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -382,24 +388,25 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#TotalNAV
-	 * FundCashForecast4.TotalNAV}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmTotalNAV
+	 * FundCashForecast4.mmTotalNAV}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNAV = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.NetAssetValue;
 			isDerived = false;
 			xmlTag = "TtlNAV";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNAV";
 			definition = "Total value of all the holdings, less the fund's liabilities, attributable to a specific investment fund class.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.TotalNAV;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmTotalNAV;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<ActiveOrHistoricCurrencyAndAmount> previousTotalNAV;
 	/**
 	 * Previous value of all the holdings, less the fund's liabilities,
 	 * attributable to a specific investment fund class.
@@ -414,8 +421,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#NetAssetValue
-	 * NetAssetValueCalculation.NetAssetValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmNetAssetValue
+	 * NetAssetValueCalculation.mmNetAssetValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -437,24 +444,25 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#PreviousTotalNAV
-	 * FundCashForecast4.PreviousTotalNAV}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmPreviousTotalNAV
+	 * FundCashForecast4.mmPreviousTotalNAV}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousTotalNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousTotalNAV = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.NetAssetValue;
 			isDerived = false;
 			xmlTag = "PrvsTtlNAV";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTotalNAV";
 			definition = "Previous value of all the holdings, less the fund's liabilities, attributable to a specific investment fund class.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.PreviousTotalNAV;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmPreviousTotalNAV;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 totalUnitsNumber;
 	/**
 	 * Total number of investment fund class units that have been issued.
 	 * <p>
@@ -468,8 +476,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#Order
-	 * InvestmentFundOrderExecution.Order}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmOrder
+	 * InvestmentFundOrderExecution.mmOrder}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -490,25 +498,26 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#TotalUnitsNumber
-	 * FundCashForecast4.TotalUnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmTotalUnitsNumber
+	 * FundCashForecast4.mmTotalUnitsNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmOrder;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.Order;
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumber";
 			definition = "Total number of investment fund class units that have been issued.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.TotalUnitsNumber;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmTotalUnitsNumber;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 previousTotalUnitsNumber;
 	/**
 	 * Previous total number of investment fund class units that have been
 	 * issued.
@@ -523,8 +532,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#RelatedFund
-	 * NetAssetValueCalculation.RelatedFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmRelatedFund
+	 * NetAssetValueCalculation.mmRelatedFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -546,25 +555,26 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#PreviousTotalUnitsNumber
-	 * FundCashForecast4.PreviousTotalUnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmPreviousTotalUnitsNumber
+	 * FundCashForecast4.mmPreviousTotalUnitsNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousTotalUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmRelatedFund;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.RelatedFund;
 			isDerived = false;
 			xmlTag = "PrvsTtlUnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTotalUnitsNumber";
 			definition = "Previous total number of investment fund class units that have been issued.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.PreviousTotalUnitsNumber;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmPreviousTotalUnitsNumber;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected PercentageRate totalNAVChangeRate;
 	/**
 	 * Rate of change of the net asset value.
 	 * <p>
@@ -578,8 +588,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#NetAssetValueChangeRate
-	 * ValuationStatistics.NetAssetValueChangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmNetAssetValueChangeRate
+	 * ValuationStatistics.mmNetAssetValueChangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -599,25 +609,26 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#TotalNAVChangeRate
-	 * FundCashForecast4.TotalNAVChangeRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmTotalNAVChangeRate
+	 * FundCashForecast4.mmTotalNAVChangeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNAVChangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNAVChangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmNetAssetValueChangeRate;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.NetAssetValueChangeRate;
 			isDerived = false;
 			xmlTag = "TtlNAVChngRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNAVChangeRate";
 			definition = "Rate of change of the net asset value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.TotalNAVChangeRate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmTotalNAVChangeRate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected List<ActiveOrHistoricCurrencyCode> investmentCurrency;
 	/**
 	 * Currency of the investment fund class.
 	 * <p>
@@ -631,8 +642,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#TradingCurrency
-	 * InvestmentFundClass.TradingCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmTradingCurrency
+	 * InvestmentFundClass.mmTradingCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -652,24 +663,25 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#InvestmentCurrency
-	 * FundCashForecast4.InvestmentCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmInvestmentCurrency
+	 * FundCashForecast4.mmInvestmentCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvestmentCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvestmentCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmTradingCurrency;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.TradingCurrency;
 			isDerived = false;
 			xmlTag = "InvstmtCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentCurrency";
 			definition = "Currency of the investment fund class.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.InvestmentCurrency;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmInvestmentCurrency;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected CurrencyDesignation1 currencyStatus;
 	/**
 	 * Information about the designation of the share class currency, that is,
 	 * whether it is for onshore or offshore purposes and other information that
@@ -700,7 +712,7 @@ public class FundCashForecast6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
 			isDerived = false;
@@ -708,12 +720,13 @@ public class FundCashForecast6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyStatus";
 			definition = "Information about the designation of the share class currency, that is, whether it is for onshore or offshore purposes and other information that may be required. This is typically only required for CNY funds.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyDesignation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencyDesignation1.mmObject();
 		}
 	};
+	protected YesNoIndicator exceptionalNetCashFlowIndicator;
 	/**
 	 * Indicates whether the net cash flow is exceptional.
 	 * <p>
@@ -727,8 +740,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#ExceptionalCashFlowIndicator
-	 * FundsCashFlow.ExceptionalCashFlowIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmExceptionalCashFlowIndicator
+	 * FundsCashFlow.mmExceptionalCashFlowIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -748,25 +761,26 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#ExceptionalNetCashFlowIndicator
-	 * FundCashForecast4.ExceptionalNetCashFlowIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmExceptionalNetCashFlowIndicator
+	 * FundCashForecast4.mmExceptionalNetCashFlowIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExceptionalNetCashFlowIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExceptionalNetCashFlowIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmExceptionalCashFlowIndicator;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.ExceptionalCashFlowIndicator;
 			isDerived = false;
 			xmlTag = "XcptnlNetCshFlowInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalNetCashFlowIndicator";
 			definition = "Indicates whether the net cash flow is exceptional.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.ExceptionalNetCashFlowIndicator;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmExceptionalNetCashFlowIndicator;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected UnitPrice19 price;
 	/**
 	 * Price per unit of the trade date.
 	 * <p>
@@ -778,8 +792,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#ExecutedTradePrice
-	 * InvestmentFundOrderExecution.ExecutedTradePrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmExecutedTradePrice
+	 * InvestmentFundOrderExecution.mmExecutedTradePrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -798,21 +812,22 @@ public class FundCashForecast6 {
 	 * definition} = "Price per unit of the trade date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Price = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmExecutedTradePrice;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.ExecutedTradePrice;
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Price per unit of the trade date.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> UnitPrice19.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UnitPrice19.mmObject();
 		}
 	};
+	protected ForeignExchangeTerms19 foreignExchangeRate;
 	/**
 	 * Foreign exchange rate.
 	 * <p>
@@ -826,8 +841,8 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#AgreedRate
-	 * ForeignExchangeTrade.AgreedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+	 * ForeignExchangeTrade.mmAgreedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -846,20 +861,21 @@ public class FundCashForecast6 {
 	 * definition} = "Foreign exchange rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForeignExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForeignExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.AgreedRate;
 			isDerived = false;
 			xmlTag = "FXRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeRate";
 			definition = "Foreign exchange rate.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> ForeignExchangeTerms19.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms19.mmObject();
 		}
 	};
+	protected PercentageRate percentageOfShareClassTotalNAV;
 	/**
 	 * Net cash flow expressed as a percentage of the total NAV for the share
 	 * class.
@@ -891,7 +907,7 @@ public class FundCashForecast6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PercentageOfShareClassTotalNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentageOfShareClassTotalNAV = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
 			isDerived = false;
@@ -899,11 +915,12 @@ public class FundCashForecast6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfShareClassTotalNAV";
 			definition = "Net cash flow expressed as a percentage of the total NAV for the share class.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BreakdownByParty3> breakdownByParty;
 	/**
 	 * Cash flow by party.
 	 * <p>
@@ -931,11 +948,11 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#BreakdownByParty
-	 * FundCashForecast4.BreakdownByParty}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmBreakdownByParty
+	 * FundCashForecast4.mmBreakdownByParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BreakdownByParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBreakdownByParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
 			isDerived = false;
@@ -943,12 +960,13 @@ public class FundCashForecast6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BreakdownByParty";
 			definition = "Cash flow by party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.BreakdownByParty;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmBreakdownByParty;
 			minOccurs = 0;
-			type_lazy = () -> BreakdownByParty3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BreakdownByCountry2> breakdownByCountry;
 	/**
 	 * Cash flow by country.
 	 * <p>
@@ -976,11 +994,11 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#BreakdownByCountry
-	 * FundCashForecast4.BreakdownByCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmBreakdownByCountry
+	 * FundCashForecast4.mmBreakdownByCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BreakdownByCountry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBreakdownByCountry = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
 			isDerived = false;
@@ -988,12 +1006,13 @@ public class FundCashForecast6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BreakdownByCountry";
 			definition = "Cash flow by country.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.BreakdownByCountry;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmBreakdownByCountry;
 			minOccurs = 0;
-			type_lazy = () -> BreakdownByCountry2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BreakdownByCurrency2> breakdownByCurrency;
 	/**
 	 * Cash flow by currency.
 	 * <p>
@@ -1021,11 +1040,11 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#BreakdownByCurrency
-	 * FundCashForecast4.BreakdownByCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmBreakdownByCurrency
+	 * FundCashForecast4.mmBreakdownByCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BreakdownByCurrency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBreakdownByCurrency = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
 			isDerived = false;
@@ -1033,12 +1052,13 @@ public class FundCashForecast6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BreakdownByCurrency";
 			definition = "Cash flow by currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.BreakdownByCurrency;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmBreakdownByCurrency;
 			minOccurs = 0;
-			type_lazy = () -> BreakdownByCurrency2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BreakdownByUserDefinedParameter3> breakdownByUserDefinedParameter;
 	/**
 	 * Cash flow by a user defined parameter/s.
 	 * <p>
@@ -1067,11 +1087,11 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#BreakdownByUserDefinedParameter
-	 * FundCashForecast4.BreakdownByUserDefinedParameter}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmBreakdownByUserDefinedParameter
+	 * FundCashForecast4.mmBreakdownByUserDefinedParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BreakdownByUserDefinedParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBreakdownByUserDefinedParameter = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundCashForecast6.mmObject();
 			isDerived = false;
@@ -1079,12 +1099,13 @@ public class FundCashForecast6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BreakdownByUserDefinedParameter";
 			definition = "Cash flow by a user defined parameter/s.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.BreakdownByUserDefinedParameter;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmBreakdownByUserDefinedParameter;
 			minOccurs = 0;
-			type_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NetCashForecast4> netCashForecastDetails;
 	/**
 	 * Net cash movements per financial instrument.
 	 * <p>
@@ -1117,40 +1138,40 @@ public class FundCashForecast6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#NetCashForecastDetails
-	 * FundCashForecast4.NetCashForecastDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.FundCashForecast4#mmNetCashForecastDetails
+	 * FundCashForecast4.mmNetCashForecastDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetCashForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetCashForecastDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FundCashForecast6.mmObject();
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
+			componentContext_lazy = () -> FundCashForecast6.mmObject();
 			isDerived = false;
 			xmlTag = "NetCshFcstDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashForecastDetails";
 			definition = "Net cash movements per financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.NetCashForecastDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmNetCashForecastDetails;
 			minOccurs = 0;
-			type_lazy = () -> NetCashForecast4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashForecast6.Identification, com.tools20022.repository.msg.FundCashForecast6.TradeDateTime,
-						com.tools20022.repository.msg.FundCashForecast6.PreviousTradeDateTime, com.tools20022.repository.msg.FundCashForecast6.FinancialInstrumentDetails, com.tools20022.repository.msg.FundCashForecast6.TotalNAV,
-						com.tools20022.repository.msg.FundCashForecast6.PreviousTotalNAV, com.tools20022.repository.msg.FundCashForecast6.TotalUnitsNumber, com.tools20022.repository.msg.FundCashForecast6.PreviousTotalUnitsNumber,
-						com.tools20022.repository.msg.FundCashForecast6.TotalNAVChangeRate, com.tools20022.repository.msg.FundCashForecast6.InvestmentCurrency, com.tools20022.repository.msg.FundCashForecast6.CurrencyStatus,
-						com.tools20022.repository.msg.FundCashForecast6.ExceptionalNetCashFlowIndicator, com.tools20022.repository.msg.FundCashForecast6.Price, com.tools20022.repository.msg.FundCashForecast6.ForeignExchangeRate,
-						com.tools20022.repository.msg.FundCashForecast6.PercentageOfShareClassTotalNAV, com.tools20022.repository.msg.FundCashForecast6.BreakdownByParty, com.tools20022.repository.msg.FundCashForecast6.BreakdownByCountry,
-						com.tools20022.repository.msg.FundCashForecast6.BreakdownByCurrency, com.tools20022.repository.msg.FundCashForecast6.BreakdownByUserDefinedParameter,
-						com.tools20022.repository.msg.FundCashForecast6.NetCashForecastDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashForecast6.mmIdentification, com.tools20022.repository.msg.FundCashForecast6.mmTradeDateTime,
+						com.tools20022.repository.msg.FundCashForecast6.mmPreviousTradeDateTime, com.tools20022.repository.msg.FundCashForecast6.mmFinancialInstrumentDetails, com.tools20022.repository.msg.FundCashForecast6.mmTotalNAV,
+						com.tools20022.repository.msg.FundCashForecast6.mmPreviousTotalNAV, com.tools20022.repository.msg.FundCashForecast6.mmTotalUnitsNumber, com.tools20022.repository.msg.FundCashForecast6.mmPreviousTotalUnitsNumber,
+						com.tools20022.repository.msg.FundCashForecast6.mmTotalNAVChangeRate, com.tools20022.repository.msg.FundCashForecast6.mmInvestmentCurrency, com.tools20022.repository.msg.FundCashForecast6.mmCurrencyStatus,
+						com.tools20022.repository.msg.FundCashForecast6.mmExceptionalNetCashFlowIndicator, com.tools20022.repository.msg.FundCashForecast6.mmPrice, com.tools20022.repository.msg.FundCashForecast6.mmForeignExchangeRate,
+						com.tools20022.repository.msg.FundCashForecast6.mmPercentageOfShareClassTotalNAV, com.tools20022.repository.msg.FundCashForecast6.mmBreakdownByParty,
+						com.tools20022.repository.msg.FundCashForecast6.mmBreakdownByCountry, com.tools20022.repository.msg.FundCashForecast6.mmBreakdownByCurrency,
+						com.tools20022.repository.msg.FundCashForecast6.mmBreakdownByUserDefinedParameter, com.tools20022.repository.msg.FundCashForecast6.mmNetCashForecastDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmFundCashForecastDetails);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.FundCashForecastDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundCashForecast6";
 				definition = "Cash movements from or to a fund as a result of investment funds transactions, eg, subscriptions or redemptions.";
@@ -1158,5 +1179,165 @@ public class FundCashForecast6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public DateAndDateTimeChoice getTradeDateTime() {
+		return tradeDateTime;
+	}
+
+	public void setTradeDateTime(DateAndDateTimeChoice tradeDateTime) {
+		this.tradeDateTime = tradeDateTime;
+	}
+
+	public DateAndDateTimeChoice getPreviousTradeDateTime() {
+		return previousTradeDateTime;
+	}
+
+	public void setPreviousTradeDateTime(DateAndDateTimeChoice previousTradeDateTime) {
+		this.previousTradeDateTime = previousTradeDateTime;
+	}
+
+	public FinancialInstrument9 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument9 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public List<ActiveOrHistoricCurrencyAndAmount> getTotalNAV() {
+		return totalNAV;
+	}
+
+	public void setTotalNAV(List<ActiveOrHistoricCurrencyAndAmount> totalNAV) {
+		this.totalNAV = totalNAV;
+	}
+
+	public List<ActiveOrHistoricCurrencyAndAmount> getPreviousTotalNAV() {
+		return previousTotalNAV;
+	}
+
+	public void setPreviousTotalNAV(List<ActiveOrHistoricCurrencyAndAmount> previousTotalNAV) {
+		this.previousTotalNAV = previousTotalNAV;
+	}
+
+	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
+		return totalUnitsNumber;
+	}
+
+	public void setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+		this.totalUnitsNumber = totalUnitsNumber;
+	}
+
+	public FinancialInstrumentQuantity1 getPreviousTotalUnitsNumber() {
+		return previousTotalUnitsNumber;
+	}
+
+	public void setPreviousTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 previousTotalUnitsNumber) {
+		this.previousTotalUnitsNumber = previousTotalUnitsNumber;
+	}
+
+	public PercentageRate getTotalNAVChangeRate() {
+		return totalNAVChangeRate;
+	}
+
+	public void setTotalNAVChangeRate(PercentageRate totalNAVChangeRate) {
+		this.totalNAVChangeRate = totalNAVChangeRate;
+	}
+
+	public List<ActiveOrHistoricCurrencyCode> getInvestmentCurrency() {
+		return investmentCurrency;
+	}
+
+	public void setInvestmentCurrency(List<ActiveOrHistoricCurrencyCode> investmentCurrency) {
+		this.investmentCurrency = investmentCurrency;
+	}
+
+	public CurrencyDesignation1 getCurrencyStatus() {
+		return currencyStatus;
+	}
+
+	public void setCurrencyStatus(com.tools20022.repository.msg.CurrencyDesignation1 currencyStatus) {
+		this.currencyStatus = currencyStatus;
+	}
+
+	public YesNoIndicator getExceptionalNetCashFlowIndicator() {
+		return exceptionalNetCashFlowIndicator;
+	}
+
+	public void setExceptionalNetCashFlowIndicator(YesNoIndicator exceptionalNetCashFlowIndicator) {
+		this.exceptionalNetCashFlowIndicator = exceptionalNetCashFlowIndicator;
+	}
+
+	public UnitPrice19 getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.msg.UnitPrice19 price) {
+		this.price = price;
+	}
+
+	public ForeignExchangeTerms19 getForeignExchangeRate() {
+		return foreignExchangeRate;
+	}
+
+	public void setForeignExchangeRate(com.tools20022.repository.msg.ForeignExchangeTerms19 foreignExchangeRate) {
+		this.foreignExchangeRate = foreignExchangeRate;
+	}
+
+	public PercentageRate getPercentageOfShareClassTotalNAV() {
+		return percentageOfShareClassTotalNAV;
+	}
+
+	public void setPercentageOfShareClassTotalNAV(PercentageRate percentageOfShareClassTotalNAV) {
+		this.percentageOfShareClassTotalNAV = percentageOfShareClassTotalNAV;
+	}
+
+	public List<BreakdownByParty3> getBreakdownByParty() {
+		return breakdownByParty;
+	}
+
+	public void setBreakdownByParty(List<com.tools20022.repository.msg.BreakdownByParty3> breakdownByParty) {
+		this.breakdownByParty = breakdownByParty;
+	}
+
+	public List<BreakdownByCountry2> getBreakdownByCountry() {
+		return breakdownByCountry;
+	}
+
+	public void setBreakdownByCountry(List<com.tools20022.repository.msg.BreakdownByCountry2> breakdownByCountry) {
+		this.breakdownByCountry = breakdownByCountry;
+	}
+
+	public List<BreakdownByCurrency2> getBreakdownByCurrency() {
+		return breakdownByCurrency;
+	}
+
+	public void setBreakdownByCurrency(List<com.tools20022.repository.msg.BreakdownByCurrency2> breakdownByCurrency) {
+		this.breakdownByCurrency = breakdownByCurrency;
+	}
+
+	public List<BreakdownByUserDefinedParameter3> getBreakdownByUserDefinedParameter() {
+		return breakdownByUserDefinedParameter;
+	}
+
+	public void setBreakdownByUserDefinedParameter(List<com.tools20022.repository.msg.BreakdownByUserDefinedParameter3> breakdownByUserDefinedParameter) {
+		this.breakdownByUserDefinedParameter = breakdownByUserDefinedParameter;
+	}
+
+	public List<NetCashForecast4> getNetCashForecastDetails() {
+		return netCashForecastDetails;
+	}
+
+	public void setNetCashForecastDetails(List<com.tools20022.repository.msg.NetCashForecast4> netCashForecastDetails) {
+		this.netCashForecastDetails = netCashForecastDetails;
 	}
 }

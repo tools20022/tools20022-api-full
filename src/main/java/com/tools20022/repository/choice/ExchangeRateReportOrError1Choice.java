@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.CurrencyExchangeReport3;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * It is used to provide information on static data maintained by the
@@ -36,18 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExchangeRateReportOrError1Choice#CurrencyExchangeReport
- * ExchangeRateReportOrError1Choice.CurrencyExchangeReport}</li>
+ * {@linkplain com.tools20022.repository.choice.ExchangeRateReportOrError1Choice#mmCurrencyExchangeReport
+ * ExchangeRateReportOrError1Choice.mmCurrencyExchangeReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExchangeRateReportOrError1Choice#OperationalError
- * ExchangeRateReportOrError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.ExchangeRateReportOrError1Choice#mmOperationalError
+ * ExchangeRateReportOrError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExchangeRateReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CurrencyExchangeReport3> currencyExchangeReport;
 	/**
 	 * Reports on currency exchange information.
 	 * <p>
@@ -90,7 +92,7 @@ public class ExchangeRateReportOrError1Choice {
 	 * definition} = "Reports on currency exchange information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyExchangeReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyExchangeReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ExchangeRateReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -99,10 +101,11 @@ public class ExchangeRateReportOrError1Choice {
 			name = "CurrencyExchangeReport";
 			definition = "Reports on currency exchange information.";
 			minOccurs = 1;
-			type_lazy = () -> CurrencyExchangeReport3.mmObject();
 			isComposite = true;
+			type_lazy = () -> CurrencyExchangeReport3.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Indicates that an operational error has been issued during the processing
 	 * of the related request.
@@ -132,7 +135,7 @@ public class ExchangeRateReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ExchangeRateReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -141,21 +144,37 @@ public class ExchangeRateReportOrError1Choice {
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.CurrencyExchangeReport, com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.mmCurrencyExchangeReport, com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExchangeRateReportOrError1Choice";
 				definition = "It is used to provide information on static data maintained by the transaction administrator and related to currency exchange details as maintained for system operations by the transaction administrator.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CurrencyExchangeReport3> getCurrencyExchangeReport() {
+		return currencyExchangeReport;
+	}
+
+	public void setCurrencyExchangeReport(List<CurrencyExchangeReport3> currencyExchangeReport) {
+		this.currencyExchangeReport = currencyExchangeReport;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

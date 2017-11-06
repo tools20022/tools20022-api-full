@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#Enabled
- * ReservationStatus1Code.Enabled}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#mmEnabled
+ * ReservationStatus1Code.mmEnabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#Disabled
- * ReservationStatus1Code.Disabled}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#mmDisabled
+ * ReservationStatus1Code.mmDisabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#Deleted
- * ReservationStatus1Code.Deleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#mmDeleted
+ * ReservationStatus1Code.mmDeleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#Requested
- * ReservationStatus1Code.Requested}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#mmRequested
+ * ReservationStatus1Code.mmRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#Blocked
- * ReservationStatus1Code.Blocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#mmBlocked
+ * ReservationStatus1Code.mmBlocked}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 * name} = "Enabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Enabled = new MMCode() {
+	public static final MMCode mmEnabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
@@ -113,7 +113,7 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 * name} = "Disabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Disabled = new MMCode() {
+	public static final MMCode mmDisabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
@@ -136,7 +136,7 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 * name} = "Deleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Deleted = new MMCode() {
+	public static final MMCode mmDeleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
@@ -159,7 +159,7 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 * name} = "Requested"</li>
 	 * </ul>
 	 */
-	public static final MMCode Requested = new MMCode() {
+	public static final MMCode mmRequested = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requested";
@@ -182,7 +182,7 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 * name} = "Blocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Blocked = new MMCode() {
+	public static final MMCode mmBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
@@ -193,13 +193,13 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ENAB");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReservationStatus1Code";
 				definition = "Specifies the current status of a limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReservationStatus1Code.Enabled, com.tools20022.repository.codeset.ReservationStatus1Code.Disabled,
-						com.tools20022.repository.codeset.ReservationStatus1Code.Deleted, com.tools20022.repository.codeset.ReservationStatus1Code.Requested, com.tools20022.repository.codeset.ReservationStatus1Code.Blocked);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReservationStatus1Code.mmEnabled, com.tools20022.repository.codeset.ReservationStatus1Code.mmDisabled,
+						com.tools20022.repository.codeset.ReservationStatus1Code.mmDeleted, com.tools20022.repository.codeset.ReservationStatus1Code.mmRequested, com.tools20022.repository.codeset.ReservationStatus1Code.mmBlocked);
 				trace_lazy = () -> ReservationStatusCode.mmObject();
 			}
 		});

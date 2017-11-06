@@ -32,14 +32,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerFinancialResponse1#Environment
- * AcquirerFinancialResponse1.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerFinancialResponse1#mmEnvironment
+ * AcquirerFinancialResponse1.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerFinancialResponse1#Context
- * AcquirerFinancialResponse1.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerFinancialResponse1#mmContext
+ * AcquirerFinancialResponse1.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerFinancialResponse1#Transaction
- * AcquirerFinancialResponse1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerFinancialResponse1#mmTransaction
+ * AcquirerFinancialResponse1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialResponse#FinancialResponse
- * AcquirerFinancialResponse.FinancialResponse}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerFinancialResponse#mmFinancialResponse
+ * AcquirerFinancialResponse.mmFinancialResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerFinancialResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardTransactionEnvironment2 environment;
 	/**
 	 * Environment of the transaction
 	 * <p>
@@ -97,7 +98,7 @@ public class AcquirerFinancialResponse1 {
 	 * definition} = "Environment of the transaction"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerFinancialResponse1.mmObject();
 			isDerived = false;
@@ -105,12 +106,13 @@ public class AcquirerFinancialResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransactionEnvironment2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment2.mmObject();
 		}
 	};
+	protected CardTransactionContext3 context;
 	/**
 	 * Context in which the card transaction is performed.
 	 * <p>
@@ -138,7 +140,7 @@ public class AcquirerFinancialResponse1 {
 	 * definition} = "Context in which the card transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerFinancialResponse1.mmObject();
 			isDerived = false;
@@ -146,12 +148,13 @@ public class AcquirerFinancialResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the card transaction is performed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransactionContext3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransactionContext3.mmObject();
 		}
 	};
+	protected CardTransaction6 transaction;
 	/**
 	 * Card transaction for which the financial authorisation has been
 	 * requested.
@@ -181,7 +184,7 @@ public class AcquirerFinancialResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerFinancialResponse1.mmObject();
 			isDerived = false;
@@ -189,25 +192,49 @@ public class AcquirerFinancialResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card transaction for which the financial authorisation has been requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransaction6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransaction6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerFinancialResponse1.Environment, com.tools20022.repository.msg.AcquirerFinancialResponse1.Context,
-						com.tools20022.repository.msg.AcquirerFinancialResponse1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerFinancialResponse.FinancialResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerFinancialResponse1.mmEnvironment, com.tools20022.repository.msg.AcquirerFinancialResponse1.mmContext,
+						com.tools20022.repository.msg.AcquirerFinancialResponse1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerFinancialResponse.mmFinancialResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcquirerFinancialResponse1";
 				definition = "Information related to the response of a financial authorisation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardTransactionEnvironment2 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment2 environment) {
+		this.environment = environment;
+	}
+
+	public CardTransactionContext3 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.CardTransactionContext3 context) {
+		this.context = context;
+	}
+
+	public CardTransaction6 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.CardTransaction6 transaction) {
+		this.transaction = transaction;
 	}
 }

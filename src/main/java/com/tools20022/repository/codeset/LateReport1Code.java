@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.LateReportCode LateReportCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LateReport1Code#Late
- * LateReport1Code.Late}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LateReport1Code#mmLate
+ * LateReport1Code.mmLate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LateReport1Code#LateBecausePartial
- * LateReport1Code.LateBecausePartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.LateReport1Code#mmLateBecausePartial
+ * LateReport1Code.mmLateBecausePartial}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class LateReport1Code extends LateReportCode {
 	 * name} = "Late"</li>
 	 * </ul>
 	 */
-	public static final MMCode Late = new MMCode() {
+	public static final MMCode mmLate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
@@ -102,7 +102,7 @@ public class LateReport1Code extends LateReportCode {
 	 * name} = "LateBecausePartial"</li>
 	 * </ul>
 	 */
-	public static final MMCode LateBecausePartial = new MMCode() {
+	public static final MMCode mmLateBecausePartial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateBecausePartial";
@@ -113,12 +113,12 @@ public class LateReport1Code extends LateReportCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LAT1");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LateReport1Code";
 				definition = "Specifies whether a transaction report is late.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LateReport1Code.Late, com.tools20022.repository.codeset.LateReport1Code.LateBecausePartial);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LateReport1Code.mmLate, com.tools20022.repository.codeset.LateReport1Code.mmLateBecausePartial);
 				trace_lazy = () -> LateReportCode.mmObject();
 			}
 		});

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardholderIdentification1#CardholderIdentificationValue
- * CardholderIdentification1.CardholderIdentificationValue}</li>
+ * {@linkplain com.tools20022.repository.msg.CardholderIdentification1#mmCardholderIdentificationValue
+ * CardholderIdentification1.mmCardholderIdentificationValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardholderIdentification1#CardholderIdentificationType
- * CardholderIdentification1.CardholderIdentificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.CardholderIdentification1#mmCardholderIdentificationType
+ * CardholderIdentification1.mmCardholderIdentificationType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardholderIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text cardholderIdentificationValue;
 	/**
 	 * Identification value of the cardholder involved in a transaction.
 	 * <p>
@@ -75,8 +76,8 @@ public class CardholderIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class CardholderIdentification1 {
 	 * "Identification value of the cardholder involved in a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardholderIdentificationValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardholderIdentificationValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> CardholderIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "CrdhldrIdVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderIdentificationValue";
 			definition = "Identification value of the cardholder involved in a transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PersonIdentificationType4Code cardholderIdentificationType;
 	/**
 	 * Type of identification used for identifying the cardholder.
 	 * <p>
@@ -144,17 +146,17 @@ public class CardholderIdentification1 {
 	 * "Type of identification used for identifying the cardholder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardholderIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardholderIdentificationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardholderIdentification1.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> CardholderIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrIdTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderIdentificationType";
 			definition = "Type of identification used for identifying the cardholder.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType4Code.mmObject();
 		}
 	};
@@ -162,14 +164,30 @@ public class CardholderIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderIdentification1.CardholderIdentificationValue, com.tools20022.repository.msg.CardholderIdentification1.CardholderIdentificationType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderIdentification1.mmCardholderIdentificationValue, com.tools20022.repository.msg.CardholderIdentification1.mmCardholderIdentificationType);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardholderIdentification1";
 				definition = "Identification of the cardholder involved in a transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCardholderIdentificationValue() {
+		return cardholderIdentificationValue;
+	}
+
+	public void setCardholderIdentificationValue(Max35Text cardholderIdentificationValue) {
+		this.cardholderIdentificationValue = cardholderIdentificationValue;
+	}
+
+	public PersonIdentificationType4Code getCardholderIdentificationType() {
+		return cardholderIdentificationType;
+	}
+
+	public void setCardholderIdentificationType(PersonIdentificationType4Code cardholderIdentificationType) {
+		this.cardholderIdentificationType = cardholderIdentificationType;
 	}
 }

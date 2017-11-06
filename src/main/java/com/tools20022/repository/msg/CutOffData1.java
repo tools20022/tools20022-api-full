@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.ClearingMemberRole;
 import com.tools20022.repository.entity.Netting;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Contains the new, current and previous cut offs for a netting cut off held at
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CutOffData1#ParticipantIdentification
- * CutOffData1.ParticipantIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CutOffData1#mmParticipantIdentification
+ * CutOffData1.mmParticipantIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CutOffData1#NettingCutOffDetails
- * CutOffData1.NettingCutOffDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CutOffData1#mmNettingCutOffDetails
+ * CutOffData1.mmNettingCutOffDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01#ParticipantNettingCutOffData
- * NettingCutOffReferenceDataReportV01.ParticipantNettingCutOffData}</li>
+ * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01#mmParticipantNettingCutOffData
+ * NettingCutOffReferenceDataReportV01.mmParticipantNettingCutOffData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CutOffData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification73Choice participantIdentification;
 	/**
 	 * Describes the participant receiving the net report.
 	 * <p>
@@ -105,21 +107,22 @@ public class CutOffData1 {
 	 * definition} = "Describes the participant receiving the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParticipantIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CutOffData1.mmObject();
 			businessComponentTrace_lazy = () -> ClearingMemberRole.mmObject();
+			componentContext_lazy = () -> CutOffData1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantIdentification";
 			definition = "Describes the participant receiving the net report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NettingCutOff1> nettingCutOffDetails;
 	/**
 	 * Specifies the information regarding the updated netting cut off.
 	 * <p>
@@ -150,33 +153,49 @@ public class CutOffData1 {
 	 * "Specifies the information regarding the updated netting cut off."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NettingCutOffDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNettingCutOffDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CutOffData1.mmObject();
 			businessComponentTrace_lazy = () -> Netting.mmObject();
+			componentContext_lazy = () -> CutOffData1.mmObject();
 			isDerived = false;
 			xmlTag = "NetgCutOffDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettingCutOffDetails";
 			definition = "Specifies the information regarding the updated netting cut off.";
 			minOccurs = 1;
-			type_lazy = () -> NettingCutOff1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NettingCutOff1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CutOffData1.ParticipantIdentification, com.tools20022.repository.msg.CutOffData1.NettingCutOffDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CutOffData1.mmParticipantIdentification, com.tools20022.repository.msg.CutOffData1.mmNettingCutOffDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01.mmParticipantNettingCutOffData);
 				trace_lazy = () -> Netting.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01.ParticipantNettingCutOffData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CutOffData1";
 				definition = "Contains the new, current and previous cut offs for a netting cut off held at the central system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification73Choice getParticipantIdentification() {
+		return participantIdentification;
+	}
+
+	public void setParticipantIdentification(PartyIdentification73Choice participantIdentification) {
+		this.participantIdentification = participantIdentification;
+	}
+
+	public List<NettingCutOff1> getNettingCutOffDetails() {
+		return nettingCutOffDetails;
+	}
+
+	public void setNettingCutOffDetails(List<com.tools20022.repository.msg.NettingCutOff1> nettingCutOffDetails) {
+		this.nettingCutOffDetails = nettingCutOffDetails;
 	}
 }

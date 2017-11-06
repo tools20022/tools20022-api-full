@@ -38,19 +38,19 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyFactors1#Currency
- * CurrencyFactors1.Currency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyFactors1#mmCurrency
+ * CurrencyFactors1.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyFactors1#ShortPositionLimit
- * CurrencyFactors1.ShortPositionLimit}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyFactors1#mmShortPositionLimit
+ * CurrencyFactors1.mmShortPositionLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyFactors1#MinimumPayInAmount
- * CurrencyFactors1.MinimumPayInAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyFactors1#mmMinimumPayInAmount
+ * CurrencyFactors1.mmMinimumPayInAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyFactors1#VolatilityMargin
- * CurrencyFactors1.VolatilityMargin}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyFactors1#Rate
- * CurrencyFactors1.Rate}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyFactors1#mmVolatilityMargin
+ * CurrencyFactors1.mmVolatilityMargin}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyFactors1#mmRate
+ * CurrencyFactors1.mmRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,6 +76,7 @@ import java.util.function.Supplier;
 public class CurrencyFactors1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyCode currency;
 	/**
 	 * Currency of the underlying currency specific amounts and ratios used in
 	 * the pay-in schedule calculation.
@@ -89,8 +90,8 @@ public class CurrencyFactors1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Currency
-	 * Limit.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmCurrency
+	 * Limit.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,20 +112,21 @@ public class CurrencyFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmCurrency;
 			componentContext_lazy = () -> CurrencyFactors1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Currency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the underlying currency specific amounts and ratios used in the pay-in schedule calculation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount shortPositionLimit;
 	/**
 	 * Maximum allowed short position in the currency during settlement.
 	 * <p>
@@ -138,7 +140,8 @@ public class CurrencyFactors1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Amount Limit.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmAmount
+	 * Limit.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,20 +161,21 @@ public class CurrencyFactors1 {
 	 * "Maximum allowed short position in the currency during settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortPositionLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortPositionLimit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
 			componentContext_lazy = () -> CurrencyFactors1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Amount;
 			isDerived = false;
 			xmlTag = "ShrtPosLmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortPositionLimit";
 			definition = "Maximum allowed short position in the currency during settlement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount minimumPayInAmount;
 	/**
 	 * Minimum amount paid in one payment unless the short position is less than
 	 * the minimum.
@@ -203,7 +207,7 @@ public class CurrencyFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumPayInAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumPayInAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyFactors1.mmObject();
 			isDerived = false;
@@ -211,11 +215,12 @@ public class CurrencyFactors1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumPayInAmount";
 			definition = "Minimum amount paid in one payment unless the short position is less than the minimum.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate volatilityMargin;
 	/**
 	 * Margin used to decrease long positions and increase short positions
 	 * during the risk calculation.
@@ -230,8 +235,8 @@ public class CurrencyFactors1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#VolatilityMargin
-	 * LiquidityManagementLimit.VolatilityMargin}</li>
+	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmVolatilityMargin
+	 * LiquidityManagementLimit.mmVolatilityMargin}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -252,20 +257,21 @@ public class CurrencyFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VolatilityMargin = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVolatilityMargin = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmVolatilityMargin;
 			componentContext_lazy = () -> CurrencyFactors1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.VolatilityMargin;
 			isDerived = false;
 			xmlTag = "VoltlyMrgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolatilityMargin";
 			definition = "Margin used to decrease long positions and increase short positions during the risk calculation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected AgreedRate2 rate;
 	/**
 	 * Exchange rate used in the calculation of the pay-in schedule.
 	 * <p>
@@ -278,8 +284,8 @@ public class CurrencyFactors1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#CurrencyExchange
-	 * LiquidityManagementLimit.CurrencyExchange}</li>
+	 * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmCurrencyExchange
+	 * LiquidityManagementLimit.mmCurrencyExchange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -299,28 +305,28 @@ public class CurrencyFactors1 {
 	 * "Exchange rate used in the calculation of the pay-in schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmCurrencyExchange;
 			componentContext_lazy = () -> CurrencyFactors1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.CurrencyExchange;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Exchange rate used in the calculation of the pay-in schedule.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> AgreedRate2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AgreedRate2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyFactors1.Currency, com.tools20022.repository.msg.CurrencyFactors1.ShortPositionLimit,
-						com.tools20022.repository.msg.CurrencyFactors1.MinimumPayInAmount, com.tools20022.repository.msg.CurrencyFactors1.VolatilityMargin, com.tools20022.repository.msg.CurrencyFactors1.Rate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyFactors1.mmCurrency, com.tools20022.repository.msg.CurrencyFactors1.mmShortPositionLimit,
+						com.tools20022.repository.msg.CurrencyFactors1.mmMinimumPayInAmount, com.tools20022.repository.msg.CurrencyFactors1.mmVolatilityMargin, com.tools20022.repository.msg.CurrencyFactors1.mmRate);
 				trace_lazy = () -> LiquidityManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -334,5 +340,45 @@ public class CurrencyFactors1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(CurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public ImpliedCurrencyAndAmount getShortPositionLimit() {
+		return shortPositionLimit;
+	}
+
+	public void setShortPositionLimit(ImpliedCurrencyAndAmount shortPositionLimit) {
+		this.shortPositionLimit = shortPositionLimit;
+	}
+
+	public ImpliedCurrencyAndAmount getMinimumPayInAmount() {
+		return minimumPayInAmount;
+	}
+
+	public void setMinimumPayInAmount(ImpliedCurrencyAndAmount minimumPayInAmount) {
+		this.minimumPayInAmount = minimumPayInAmount;
+	}
+
+	public PercentageRate getVolatilityMargin() {
+		return volatilityMargin;
+	}
+
+	public void setVolatilityMargin(PercentageRate volatilityMargin) {
+		this.volatilityMargin = volatilityMargin;
+	}
+
+	public AgreedRate2 getRate() {
+		return rate;
+	}
+
+	public void setRate(com.tools20022.repository.msg.AgreedRate2 rate) {
+		this.rate = rate;
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for a limit.
@@ -39,24 +40,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#LimitType
- * LimitUtilisationJournalSearchCriteria1.LimitType}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#mmLimitType
+ * LimitUtilisationJournalSearchCriteria1.mmLimitType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#JournalActivityDate
- * LimitUtilisationJournalSearchCriteria1.JournalActivityDate}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#mmJournalActivityDate
+ * LimitUtilisationJournalSearchCriteria1.mmJournalActivityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#AccountIdentification
- * LimitUtilisationJournalSearchCriteria1.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#mmAccountIdentification
+ * LimitUtilisationJournalSearchCriteria1.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#LimitCurrency
- * LimitUtilisationJournalSearchCriteria1.LimitCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#mmLimitCurrency
+ * LimitUtilisationJournalSearchCriteria1.mmLimitCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#AccountOwner
- * LimitUtilisationJournalSearchCriteria1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#mmAccountOwner
+ * LimitUtilisationJournalSearchCriteria1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#BilateralLimitCounterpartyIdentification
+ * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1#mmBilateralLimitCounterpartyIdentification
  * LimitUtilisationJournalSearchCriteria1.
- * BilateralLimitCounterpartyIdentification}</li>
+ * mmBilateralLimitCounterpartyIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitUtilisationJournalSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<LimitType4Code> limitType;
 	/**
 	 * Type of limit applied by the system at the present time.
 	 * <p>
@@ -93,7 +95,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Type Limit.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmType Limit.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,10 +114,10 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * definition} = "Type of limit applied by the system at the present time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmType;
 			componentContext_lazy = () -> LimitUtilisationJournalSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Type;
 			isDerived = false;
 			xmlTag = "LmtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,6 +127,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 			simpleType_lazy = () -> LimitType4Code.mmObject();
 		}
 	};
+	protected ISODate journalActivityDate;
 	/**
 	 * Date upon which journal activity takes place.
 	 * <p>
@@ -152,7 +155,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * definition} = "Date upon which journal activity takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute JournalActivityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmJournalActivityDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LimitUtilisationJournalSearchCriteria1.mmObject();
 			isDerived = false;
@@ -160,11 +163,12 @@ public class LimitUtilisationJournalSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JournalActivityDate";
 			definition = "Date upon which journal activity takes place.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected AccountIdentification4Choice accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -178,8 +182,8 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,21 +204,22 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> LimitUtilisationJournalSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode limitCurrency;
 	/**
 	 * Currency unit used to specify the limit amount.
 	 * <p>
@@ -228,8 +233,8 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Currency
-	 * Limit.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmCurrency
+	 * Limit.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -248,20 +253,21 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * definition} = "Currency unit used to specify the limit amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LimitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmCurrency;
 			componentContext_lazy = () -> LimitUtilisationJournalSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Currency;
 			isDerived = false;
 			xmlTag = "LmtCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCurrency";
 			definition = "Currency unit used to specify the limit amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected BICFIIdentifier accountOwner;
 	/**
 	 * Owner of the account which is being queried.
 	 * <p>
@@ -275,8 +281,8 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -295,20 +301,21 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> LimitUtilisationJournalSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account which is being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	protected SystemPartyIdentification4 bilateralLimitCounterpartyIdentification;
 	/**
 	 * Identification of the system member for which the limit is established.
 	 * <p>
@@ -321,8 +328,8 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -343,35 +350,83 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> LimitUtilisationJournalSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "BilLmtCtrPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterpartyIdentification";
 			definition = "Identification of the system member for which the limit is established.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.LimitType, com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.JournalActivityDate,
-						com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.AccountIdentification, com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.LimitCurrency,
-						com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.AccountOwner, com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.BilateralLimitCounterpartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmLimitType, com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmJournalActivityDate,
+						com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmAccountIdentification, com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmLimitCurrency,
+						com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmAccountOwner, com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmBilateralLimitCounterpartyIdentification);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitUtilisationJournalSearchCriteria1";
 				definition = "Defines the criteria used to search for a limit.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<LimitType4Code> getLimitType() {
+		return limitType;
+	}
+
+	public void setLimitType(List<LimitType4Code> limitType) {
+		this.limitType = limitType;
+	}
+
+	public ISODate getJournalActivityDate() {
+		return journalActivityDate;
+	}
+
+	public void setJournalActivityDate(ISODate journalActivityDate) {
+		this.journalActivityDate = journalActivityDate;
+	}
+
+	public AccountIdentification4Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification4Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public ActiveCurrencyCode getLimitCurrency() {
+		return limitCurrency;
+	}
+
+	public void setLimitCurrency(ActiveCurrencyCode limitCurrency) {
+		this.limitCurrency = limitCurrency;
+	}
+
+	public BICFIIdentifier getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(BICFIIdentifier accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SystemPartyIdentification4 getBilateralLimitCounterpartyIdentification() {
+		return bilateralLimitCounterpartyIdentification;
+	}
+
+	public void setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification4 bilateralLimitCounterpartyIdentification) {
+		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
 	}
 }

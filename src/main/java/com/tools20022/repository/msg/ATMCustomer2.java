@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.CardholderRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Customer involved in a withdrawal transaction.
@@ -32,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer2#Profile
- * ATMCustomer2.Profile}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer2#mmProfile
+ * ATMCustomer2.mmProfile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomer2#AuthenticationResult
- * ATMCustomer2.AuthenticationResult}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomer2#mmAuthenticationResult
+ * ATMCustomer2.mmAuthenticationResult}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCustomer2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMCustomerProfile2 profile;
 	/**
 	 * Profile of the customer selected to perform the withdrawal.
 	 * <p>
@@ -96,18 +98,18 @@ public class ATMCustomer2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer3#Profile
-	 * ATMCustomer3.Profile}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer3#mmProfile
+	 * ATMCustomer3.mmProfile}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomer1#Profile
-	 * ATMCustomer1.Profile}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomer1#mmProfile
+	 * ATMCustomer1.mmProfile}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Profile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProfile = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCustomer2.mmObject();
 			isDerived = false;
@@ -115,14 +117,15 @@ public class ATMCustomer2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Profile";
 			definition = "Profile of the customer selected to perform the withdrawal.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomer1.Profile;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer3.Profile);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer3.mmProfile);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomer1.mmProfile;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCustomerProfile2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult;
 	/**
 	 * Result of the customer authentication for this transaction.
 	 * <p>
@@ -152,18 +155,18 @@ public class ATMCustomer2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomer3#AuthenticationResult
-	 * ATMCustomer3.AuthenticationResult}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomer3#mmAuthenticationResult
+	 * ATMCustomer3.mmAuthenticationResult}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomer1#AuthenticationResult
-	 * ATMCustomer1.AuthenticationResult}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomer1#mmAuthenticationResult
+	 * ATMCustomer1.mmAuthenticationResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthenticationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthenticationResult = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCustomer2.mmObject();
 			isDerived = false;
@@ -171,27 +174,43 @@ public class ATMCustomer2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationResult";
 			definition = "Result of the customer authentication for this transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomer1.AuthenticationResult;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer3.AuthenticationResult);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer3.mmAuthenticationResult);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomer1.mmAuthenticationResult;
 			minOccurs = 0;
-			type_lazy = () -> TransactionVerificationResult5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer2.Profile, com.tools20022.repository.msg.ATMCustomer2.AuthenticationResult);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer2.mmProfile, com.tools20022.repository.msg.ATMCustomer2.mmAuthenticationResult);
 				trace_lazy = () -> CardholderRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomer2";
 				definition = "Customer involved in a withdrawal transaction.";
-				previousVersion_lazy = () -> ATMCustomer1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ATMCustomer3.mmObject());
+				previousVersion_lazy = () -> ATMCustomer1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMCustomerProfile2 getProfile() {
+		return profile;
+	}
+
+	public void setProfile(com.tools20022.repository.msg.ATMCustomerProfile2 profile) {
+		this.profile = profile;
+	}
+
+	public List<TransactionVerificationResult5> getAuthenticationResult() {
+		return authenticationResult;
+	}
+
+	public void setAuthenticationResult(List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult) {
+		this.authenticationResult = authenticationResult;
 	}
 }

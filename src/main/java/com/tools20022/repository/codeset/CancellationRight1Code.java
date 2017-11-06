@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRight1Code#Entitled
- * CancellationRight1Code.Entitled}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRight1Code#mmEntitled
+ * CancellationRight1Code.mmEntitled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRight1Code#ExecutionOnly
- * CancellationRight1Code.ExecutionOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRight1Code#mmExecutionOnly
+ * CancellationRight1Code.mmExecutionOnly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRight1Code#WaiverAgreement
- * CancellationRight1Code.WaiverAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRight1Code#mmWaiverAgreement
+ * CancellationRight1Code.mmWaiverAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRight1Code#Institutional
- * CancellationRight1Code.Institutional}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRight1Code#mmInstitutional
+ * CancellationRight1Code.mmInstitutional}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class CancellationRight1Code extends CancellationRightCode {
 	 * name} = "Entitled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Entitled = new MMCode() {
+	public static final MMCode mmEntitled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entitled";
@@ -113,7 +113,7 @@ public class CancellationRight1Code extends CancellationRightCode {
 	 * name} = "ExecutionOnly"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExecutionOnly = new MMCode() {
+	public static final MMCode mmExecutionOnly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionOnly";
@@ -136,7 +136,7 @@ public class CancellationRight1Code extends CancellationRightCode {
 	 * name} = "WaiverAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode WaiverAgreement = new MMCode() {
+	public static final MMCode mmWaiverAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaiverAgreement";
@@ -159,7 +159,7 @@ public class CancellationRight1Code extends CancellationRightCode {
 	 * name} = "Institutional"</li>
 	 * </ul>
 	 */
-	public static final MMCode Institutional = new MMCode() {
+	public static final MMCode mmInstitutional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Institutional";
@@ -170,13 +170,13 @@ public class CancellationRight1Code extends CancellationRightCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VALI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationRight1Code";
 				definition = "Specifies if the investor has the right to cancel an instruction or, if not, the reason the investor cannot cancel.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationRight1Code.Entitled, com.tools20022.repository.codeset.CancellationRight1Code.ExecutionOnly,
-						com.tools20022.repository.codeset.CancellationRight1Code.WaiverAgreement, com.tools20022.repository.codeset.CancellationRight1Code.Institutional);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationRight1Code.mmEntitled, com.tools20022.repository.codeset.CancellationRight1Code.mmExecutionOnly,
+						com.tools20022.repository.codeset.CancellationRight1Code.mmWaiverAgreement, com.tools20022.repository.codeset.CancellationRight1Code.mmInstitutional);
 				trace_lazy = () -> CancellationRightCode.mmObject();
 			}
 		});

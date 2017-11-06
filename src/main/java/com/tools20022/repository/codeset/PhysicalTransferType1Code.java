@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType1Code#Dematerialised
- * PhysicalTransferType1Code.Dematerialised}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType1Code#mmDematerialised
+ * PhysicalTransferType1Code.mmDematerialised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType1Code#Physical
- * PhysicalTransferType1Code.Physical}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType1Code#mmPhysical
+ * PhysicalTransferType1Code.mmPhysical}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class PhysicalTransferType1Code extends PhysicalTransferTypeCode {
 	 * name} = "Dematerialised"</li>
 	 * </ul>
 	 */
-	public static final MMCode Dematerialised = new MMCode() {
+	public static final MMCode mmDematerialised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dematerialised";
@@ -107,7 +107,7 @@ public class PhysicalTransferType1Code extends PhysicalTransferTypeCode {
 	 * name} = "Physical"</li>
 	 * </ul>
 	 */
-	public static final MMCode Physical = new MMCode() {
+	public static final MMCode mmPhysical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
@@ -118,12 +118,12 @@ public class PhysicalTransferType1Code extends PhysicalTransferTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DEMT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PhysicalTransferType1Code";
 				definition = "Specifies whether the financial instrument is to be physically delivered or is a dematerilized transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PhysicalTransferType1Code.Dematerialised, com.tools20022.repository.codeset.PhysicalTransferType1Code.Physical);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PhysicalTransferType1Code.mmDematerialised, com.tools20022.repository.codeset.PhysicalTransferType1Code.mmPhysical);
 				trace_lazy = () -> PhysicalTransferTypeCode.mmObject();
 			}
 		});

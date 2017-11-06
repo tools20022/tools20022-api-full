@@ -32,24 +32,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionType1Code#ReceiveFree
- * SettlementInstructionType1Code.ReceiveFree}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionType1Code#mmReceiveFree
+ * SettlementInstructionType1Code.mmReceiveFree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionType1Code#ReceiveAgainstPayment
- * SettlementInstructionType1Code.ReceiveAgainstPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionType1Code#mmReceiveAgainstPayment
+ * SettlementInstructionType1Code.mmReceiveAgainstPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionType1Code#DeliverFree
- * SettlementInstructionType1Code.DeliverFree}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionType1Code#mmDeliverFree
+ * SettlementInstructionType1Code.mmDeliverFree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionType1Code#DeliverAgainstPayment
- * SettlementInstructionType1Code.DeliverAgainstPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionType1Code#mmDeliverAgainstPayment
+ * SettlementInstructionType1Code.mmDeliverAgainstPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class SettlementInstructionType1Code {
 	 * definition} = "The transaction is a receive free"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceiveFree = new MMCode() {
+	public static final MMCode mmReceiveFree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "ReceiveFree";
@@ -121,7 +121,7 @@ public class SettlementInstructionType1Code {
 	 * definition} = "The transaction is a receive against payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceiveAgainstPayment = new MMCode() {
+	public static final MMCode mmReceiveAgainstPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "ReceiveAgainstPayment";
@@ -151,7 +151,7 @@ public class SettlementInstructionType1Code {
 	 * definition} = "The transaction is a deliver free."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliverFree = new MMCode() {
+	public static final MMCode mmDeliverFree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "DeliverFree";
@@ -181,7 +181,7 @@ public class SettlementInstructionType1Code {
 	 * definition} = "The transaction is a deliver against payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliverAgainstPayment = new MMCode() {
+	public static final MMCode mmDeliverAgainstPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "DeliverAgainstPayment";
@@ -194,13 +194,13 @@ public class SettlementInstructionType1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "SettlementInstructionType1Code";
 				definition = "Identifies whether  the movement on a securities account was the result of  a deliver or a receive instruction and whether the instruction was free or against payment";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionType1Code.ReceiveFree, com.tools20022.repository.codeset.SettlementInstructionType1Code.ReceiveAgainstPayment,
-						com.tools20022.repository.codeset.SettlementInstructionType1Code.DeliverFree, com.tools20022.repository.codeset.SettlementInstructionType1Code.DeliverAgainstPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionType1Code.mmReceiveFree, com.tools20022.repository.codeset.SettlementInstructionType1Code.mmReceiveAgainstPayment,
+						com.tools20022.repository.codeset.SettlementInstructionType1Code.mmDeliverFree, com.tools20022.repository.codeset.SettlementInstructionType1Code.mmDeliverAgainstPayment);
 			}
 		});
 		return mmObject_lazy.get();

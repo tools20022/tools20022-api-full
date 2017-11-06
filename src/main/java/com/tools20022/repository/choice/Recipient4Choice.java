@@ -35,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Recipient4Choice#KeyTransport
- * Recipient4Choice.KeyTransport}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Recipient4Choice#KEK
- * Recipient4Choice.KEK}</li>
+ * {@linkplain com.tools20022.repository.choice.Recipient4Choice#mmKeyTransport
+ * Recipient4Choice.mmKeyTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Recipient4Choice#mmKEK
+ * Recipient4Choice.mmKEK}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Recipient4Choice#KeyIdentifier
- * Recipient4Choice.KeyIdentifier}</li>
+ * {@linkplain com.tools20022.repository.choice.Recipient4Choice#mmKeyIdentifier
+ * Recipient4Choice.mmKeyIdentifier}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Recipient4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected KeyTransport4 keyTransport;
 	/**
 	 * Encryption key using previously distributed asymmetric public key.
 	 * <p>
@@ -101,11 +102,11 @@ public class Recipient4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Recipient3Choice#KeyTransport
-	 * Recipient3Choice.KeyTransport}</li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient3Choice#mmKeyTransport
+	 * Recipient3Choice.mmKeyTransport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KeyTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKeyTransport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient4Choice.mmObject();
 			isDerived = false;
@@ -113,13 +114,14 @@ public class Recipient4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyTransport";
 			definition = "Encryption key using previously distributed asymmetric public key.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient3Choice.KeyTransport;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient3Choice.mmKeyTransport;
 			maxOccurs = 1;
-			type_lazy = () -> KeyTransport4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> KeyTransport4.mmObject();
 		}
 	};
+	protected KEK4 kEK;
 	/**
 	 * Key encryption key using previously distributed symmetric key.
 	 * <p>
@@ -147,11 +149,11 @@ public class Recipient4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Recipient3Choice#KEK
-	 * Recipient3Choice.KEK}</li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient3Choice#mmKEK
+	 * Recipient3Choice.mmKEK}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KEK = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKEK = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient4Choice.mmObject();
 			isDerived = false;
@@ -159,13 +161,14 @@ public class Recipient4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEK";
 			definition = "Key encryption key using previously distributed symmetric key.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient3Choice.KEK;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient3Choice.mmKEK;
 			maxOccurs = 1;
-			type_lazy = () -> KEK4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> KEK4.mmObject();
 		}
 	};
+	protected KEKIdentifier2 keyIdentifier;
 	/**
 	 * Identification of a protection key without a session key, shared and
 	 * previously exchanged between the initiator and the recipient.
@@ -197,18 +200,18 @@ public class Recipient4Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Recipient5Choice#KeyIdentifier
-	 * Recipient5Choice.KeyIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient5Choice#mmKeyIdentifier
+	 * Recipient5Choice.mmKeyIdentifier}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Recipient3Choice#KeyIdentifier
-	 * Recipient3Choice.KeyIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient3Choice#mmKeyIdentifier
+	 * Recipient3Choice.mmKeyIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd KeyIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKeyIdentifier = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Recipient4Choice.mmObject();
 			isDerived = false;
@@ -216,28 +219,52 @@ public class Recipient4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentifier";
 			definition = "Identification of a protection key without a session key, shared and previously exchanged between the initiator and the recipient.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient3Choice.KeyIdentifier;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient5Choice.KeyIdentifier);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient5Choice.mmKeyIdentifier);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient3Choice.mmKeyIdentifier;
 			maxOccurs = 1;
-			type_lazy = () -> KEKIdentifier2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> KEKIdentifier2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.KeyTransport, com.tools20022.repository.choice.Recipient4Choice.KEK,
-						com.tools20022.repository.choice.Recipient4Choice.KeyIdentifier);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.mmKeyTransport, com.tools20022.repository.choice.Recipient4Choice.mmKEK,
+						com.tools20022.repository.choice.Recipient4Choice.mmKeyIdentifier);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Recipient4Choice";
 				definition = "Transport key or key encryption key (KEK) for the recipient.";
-				previousVersion_lazy = () -> Recipient3Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Recipient5Choice.mmObject());
+				previousVersion_lazy = () -> Recipient3Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public KeyTransport4 getKeyTransport() {
+		return keyTransport;
+	}
+
+	public void setKeyTransport(KeyTransport4 keyTransport) {
+		this.keyTransport = keyTransport;
+	}
+
+	public KEK4 getKEK() {
+		return kEK;
+	}
+
+	public void setKEK(KEK4 kEK) {
+		this.kEK = kEK;
+	}
+
+	public KEKIdentifier2 getKeyIdentifier() {
+		return keyIdentifier;
+	}
+
+	public void setKeyIdentifier(KEKIdentifier2 keyIdentifier) {
+		this.keyIdentifier = keyIdentifier;
 	}
 }

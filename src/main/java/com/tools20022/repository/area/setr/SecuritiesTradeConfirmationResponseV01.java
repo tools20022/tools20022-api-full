@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -78,30 +79,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#Identification
- * SecuritiesTradeConfirmationResponseV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#mmIdentification
+ * SecuritiesTradeConfirmationResponseV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#References
- * SecuritiesTradeConfirmationResponseV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#mmReferences
+ * SecuritiesTradeConfirmationResponseV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#Status
- * SecuritiesTradeConfirmationResponseV01.Status}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#mmStatus
+ * SecuritiesTradeConfirmationResponseV01.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#ClearingDetails
- * SecuritiesTradeConfirmationResponseV01.ClearingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#mmClearingDetails
+ * SecuritiesTradeConfirmationResponseV01.mmClearingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#ConfirmationParties
- * SecuritiesTradeConfirmationResponseV01.ConfirmationParties}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#mmConfirmationParties
+ * SecuritiesTradeConfirmationResponseV01.mmConfirmationParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#SupplementaryData
- * SecuritiesTradeConfirmationResponseV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#mmSupplementaryData
+ * SecuritiesTradeConfirmationResponseV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#identifier
- * SecuritiesTradeConfirmationResponseV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.030.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTradeConfirmationResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TransactiontIdentification4 identification;
 	/**
 	 * Information that unambiguously identifies an
 	 * SecuritiesTradeConfirmationResponse message as known by the account owner
@@ -144,17 +144,18 @@ public class SecuritiesTradeConfirmationResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Information that unambiguously identifies an SecuritiesTradeConfirmationResponse message as known by the account owner (or the instructing party acting on its behalf).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactiontIdentification4.mmObject();
 		}
 	};
+	protected List<Linkages15> references;
 	/**
 	 * Link to another transaction that must be processed after, before or at
 	 * the same time.
@@ -180,7 +181,7 @@ public class SecuritiesTradeConfirmationResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock References = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,6 +191,7 @@ public class SecuritiesTradeConfirmationResponseV01 {
 			complexType_lazy = () -> Linkages15.mmObject();
 		}
 	};
+	protected StatusAndReason10 status;
 	/**
 	 * Provides details on the processing status of the trade.
 	 * <p>
@@ -213,17 +215,18 @@ public class SecuritiesTradeConfirmationResponseV01 {
 	 * definition} = "Provides details on the processing status of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Status = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Provides details on the processing status of the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> StatusAndReason10.mmObject();
 		}
 	};
+	protected Clearing3 clearingDetails;
 	/**
 	 * Provides clearing member information.
 	 * <p>
@@ -246,17 +249,18 @@ public class SecuritiesTradeConfirmationResponseV01 {
 	 * definition} = "Provides clearing member information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingDetails";
 			definition = "Provides clearing member information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Clearing3.mmObject();
 		}
 	};
+	protected List<ConfirmationParties3> confirmationParties;
 	/**
 	 * Parties involved in the confirmation of the details of a trade.
 	 * <p>
@@ -281,7 +285,7 @@ public class SecuritiesTradeConfirmationResponseV01 {
 	 * "Parties involved in the confirmation of the details of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ConfirmationParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmConfirmationParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ConfPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,6 +295,7 @@ public class SecuritiesTradeConfirmationResponseV01 {
 			complexType_lazy = () -> ConfirmationParties3.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -317,7 +322,7 @@ public class SecuritiesTradeConfirmationResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,33 +330,6 @@ public class SecuritiesTradeConfirmationResponseV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "030"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "030";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -365,13 +343,68 @@ public class SecuritiesTradeConfirmationResponseV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesTradConfRspn";
 				businessArea_lazy = () -> SecuritiesTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.Identification,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.References, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.Status,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.ClearingDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.ConfirmationParties,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmIdentification,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmReferences, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmStatus,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmClearingDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmConfirmationParties,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "030";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactiontIdentification4 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(TransactiontIdentification4 identification) {
+		this.identification = identification;
+	}
+
+	public List<Linkages15> getReferences() {
+		return references;
+	}
+
+	public void setReferences(List<Linkages15> references) {
+		this.references = references;
+	}
+
+	public StatusAndReason10 getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatusAndReason10 status) {
+		this.status = status;
+	}
+
+	public Clearing3 getClearingDetails() {
+		return clearingDetails;
+	}
+
+	public void setClearingDetails(Clearing3 clearingDetails) {
+		this.clearingDetails = clearingDetails;
+	}
+
+	public List<ConfirmationParties3> getConfirmationParties() {
+		return confirmationParties;
+	}
+
+	public void setConfirmationParties(List<ConfirmationParties3> confirmationParties) {
+		this.confirmationParties = confirmationParties;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -42,70 +42,70 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#ProposedRate
- * BiddingConditions.ProposedRate}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmProposedRate
+ * BiddingConditions.mmProposedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#OversubscriptionRate
- * BiddingConditions.OversubscriptionRate}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmOversubscriptionRate
+ * BiddingConditions.mmOversubscriptionRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#InformationToComplyWith
- * BiddingConditions.InformationToComplyWith}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmInformationToComplyWith
+ * BiddingConditions.mmInformationToComplyWith}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#SubscriptionCostDebitDate
- * BiddingConditions.SubscriptionCostDebitDate}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmSubscriptionCostDebitDate
+ * BiddingConditions.mmSubscriptionCostDebitDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#MaximumAllowedOverSubscription
- * BiddingConditions.MaximumAllowedOverSubscription}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMaximumAllowedOverSubscription
+ * BiddingConditions.mmMaximumAllowedOverSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#ProrationRate
- * BiddingConditions.ProrationRate}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmProrationRate
+ * BiddingConditions.mmProrationRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#ApplicableRate
- * BiddingConditions.ApplicableRate}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmApplicableRate
+ * BiddingConditions.mmApplicableRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#FrontEndOddLotQuantity
- * BiddingConditions.FrontEndOddLotQuantity}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmFrontEndOddLotQuantity
+ * BiddingConditions.mmFrontEndOddLotQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#BackEndOddLotQuantity
- * BiddingConditions.BackEndOddLotQuantity}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmBackEndOddLotQuantity
+ * BiddingConditions.mmBackEndOddLotQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#TransformationRate
- * BiddingConditions.TransformationRate}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmTransformationRate
+ * BiddingConditions.mmTransformationRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#ProrationDate
- * BiddingConditions.ProrationDate}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmProrationDate
+ * BiddingConditions.mmProrationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#CompulsoryPurchasePeriod
- * BiddingConditions.CompulsoryPurchasePeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmCompulsoryPurchasePeriod
+ * BiddingConditions.mmCompulsoryPurchasePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#PercentageSought
- * BiddingConditions.PercentageSought}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmPercentageSought
+ * BiddingConditions.mmPercentageSought}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#BidInterval
- * BiddingConditions.BidInterval}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmBidInterval
+ * BiddingConditions.mmBidInterval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#MaximumPrice
- * BiddingConditions.MaximumPrice}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMaximumPrice
+ * BiddingConditions.mmMaximumPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#MinimumPrice
- * BiddingConditions.MinimumPrice}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMinimumPrice
+ * BiddingConditions.mmMinimumPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#MaximumQuantity
- * BiddingConditions.MaximumQuantity}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMaximumQuantity
+ * BiddingConditions.mmMaximumQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#MinimumQuantitySought
- * BiddingConditions.MinimumQuantitySought}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMinimumQuantitySought
+ * BiddingConditions.mmMinimumQuantitySought}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#BaseDenomination
- * BiddingConditions.BaseDenomination}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmBaseDenomination
+ * BiddingConditions.mmBaseDenomination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#CalculationMethod
- * BiddingConditions.CalculationMethod}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmCalculationMethod
+ * BiddingConditions.mmCalculationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#AdditionalSubscriptionCost
- * BiddingConditions.AdditionalSubscriptionCost}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BiddingConditions#Event
- * BiddingConditions.Event}</li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmAdditionalSubscriptionCost
+ * BiddingConditions.mmAdditionalSubscriptionCost}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BiddingConditions#mmEvent
+ * BiddingConditions.mmEvent}</li>
  * </ul>
  * </li>
  * <li>
@@ -113,45 +113,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#MaximumPriceBiddingConditions
- * SecuritiesPricing.MaximumPriceBiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMaximumPriceBiddingConditions
+ * SecuritiesPricing.mmMaximumPriceBiddingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#MinimumPriceBiddingConditions
- * SecuritiesPricing.MinimumPriceBiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMinimumPriceBiddingConditions
+ * SecuritiesPricing.mmMinimumPriceBiddingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#BiddingConditions
- * DateTimePeriod.BiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmBiddingConditions
+ * DateTimePeriod.mmBiddingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#BackEndOddLotBiddingConditions
- * SecuritiesQuantity.BackEndOddLotBiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBackEndOddLotBiddingConditions
+ * SecuritiesQuantity.mmBackEndOddLotBiddingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#BiddingConditions
- * SecuritiesQuantity.BiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBiddingConditions
+ * SecuritiesQuantity.mmBiddingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#MaximumQuantityBiddingConditions
- * SecuritiesQuantity.MaximumQuantityBiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumQuantityBiddingConditions
+ * SecuritiesQuantity.mmMaximumQuantityBiddingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#FrontEndOddLotBiddingConditions
- * SecuritiesQuantity.FrontEndOddLotBiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmFrontEndOddLotBiddingConditions
+ * SecuritiesQuantity.mmFrontEndOddLotBiddingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#MinimumQuantityBiddingConditions
- * SecuritiesQuantity.MinimumQuantityBiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityBiddingConditions
+ * SecuritiesQuantity.mmMinimumQuantityBiddingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#BiddingConditions
- * CorporateActionEvent.BiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBiddingConditions
+ * CorporateActionEvent.mmBiddingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#MaximumAllowedBiddingConditions
- * RateAndAmount.MaximumAllowedBiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmMaximumAllowedBiddingConditions
+ * RateAndAmount.mmMaximumAllowedBiddingConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#RateBiddingConditions
- * RateAndAmount.RateBiddingConditions}</li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRateBiddingConditions
+ * RateAndAmount.mmRateBiddingConditions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -167,6 +167,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BiddingConditions {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate proposedRate;
 	/**
 	 * Rate proposed in a remarketing of variable rate notes.
 	 * <p>
@@ -177,37 +178,37 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate8#ProposedRate
-	 * CorporateActionRate8.ProposedRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#ProposedRate
-	 * CorporateActionRate9.ProposedRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection3#ProposedRate
-	 * CorporateActionElection3.ProposedRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate47#ProposedRate
-	 * CorporateActionRate47.ProposedRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate59#ProposedRate
-	 * CorporateActionRate59.ProposedRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate71#ProposedRate
-	 * CorporateActionRate71.ProposedRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#ProposedRate
-	 * CorporateActionRate73.ProposedRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate8#mmProposedRate
+	 * CorporateActionRate8.mmProposedRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#mmProposedRate
+	 * CorporateActionRate9.mmProposedRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection3#mmProposedRate
+	 * CorporateActionElection3.mmProposedRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate47#mmProposedRate
+	 * CorporateActionRate47.mmProposedRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate59#mmProposedRate
+	 * CorporateActionRate59.mmProposedRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate71#mmProposedRate
+	 * CorporateActionRate71.mmProposedRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#mmProposedRate
+	 * CorporateActionRate73.mmProposedRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -219,21 +220,22 @@ public class BiddingConditions {
 	 * definition} = "Rate proposed in a remarketing of variable rate notes."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ProposedRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProposedRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate8.ProposedRate, com.tools20022.repository.msg.CorporateActionRate9.ProposedRate,
-					com.tools20022.repository.msg.CorporateActionElection3.ProposedRate, com.tools20022.repository.msg.CorporateActionRate47.ProposedRate, com.tools20022.repository.msg.CorporateActionRate59.ProposedRate,
-					com.tools20022.repository.msg.CorporateActionRate71.ProposedRate, com.tools20022.repository.msg.CorporateActionRate73.ProposedRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate8.mmProposedRate, com.tools20022.repository.msg.CorporateActionRate9.mmProposedRate,
+					com.tools20022.repository.msg.CorporateActionElection3.mmProposedRate, com.tools20022.repository.msg.CorporateActionRate47.mmProposedRate, com.tools20022.repository.msg.CorporateActionRate59.mmProposedRate,
+					com.tools20022.repository.msg.CorporateActionRate71.mmProposedRate, com.tools20022.repository.msg.CorporateActionRate73.mmProposedRate);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProposedRate";
 			definition = "Rate proposed in a remarketing of variable rate notes.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate oversubscriptionRate;
 	/**
 	 * Rate of allowed over-subscription.
 	 * <p>
@@ -244,34 +246,34 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate8#OversubscriptionRate
-	 * CorporateActionRate8.OversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#OversubscriptionRate
-	 * CorporateActionRate9.OversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate47#OversubscriptionRate
-	 * CorporateActionRate47.OversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate59#OversubscriptionRate
-	 * CorporateActionRate59.OversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate71#OversubscriptionRate
-	 * CorporateActionRate71.OversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#OversubscriptionRate
-	 * CorporateActionRate73.OversubscriptionRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate8#mmOversubscriptionRate
+	 * CorporateActionRate8.mmOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate9#mmOversubscriptionRate
+	 * CorporateActionRate9.mmOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate47#mmOversubscriptionRate
+	 * CorporateActionRate47.mmOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate59#mmOversubscriptionRate
+	 * CorporateActionRate59.mmOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate71#mmOversubscriptionRate
+	 * CorporateActionRate71.mmOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate73#mmOversubscriptionRate
+	 * CorporateActionRate73.mmOversubscriptionRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -283,21 +285,22 @@ public class BiddingConditions {
 	 * definition} = "Rate of allowed over-subscription."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OversubscriptionRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOversubscriptionRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate8.OversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate9.OversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate47.OversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate59.OversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate71.OversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate73.OversubscriptionRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate8.mmOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate9.mmOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate47.mmOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate59.mmOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate71.mmOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate73.mmOversubscriptionRate);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OversubscriptionRate";
 			definition = "Rate of allowed over-subscription.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Max350Text informationToComplyWith;
 	/**
 	 * Provides information conditions to the account owner that are to be
 	 * complied with, eg, not open to US/Canadian residents, QIB or SIL to be
@@ -309,85 +312,85 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative8#InformationToComplyWith
-	 * CorporateActionNarrative8.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative13#InformationToComplyWith
-	 * CorporateActionNarrative13.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative4#InformationToComplyWith
-	 * CorporateActionNarrative4.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative14#InformationToComplyWith
-	 * CorporateActionNarrative14.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative5#InformationToComplyWith
-	 * CorporateActionNarrative5.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative6#InformationToComplyWith
-	 * CorporateActionNarrative6.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative15#InformationToComplyWith
-	 * CorporateActionNarrative15.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative16#InformationToComplyWith
-	 * CorporateActionNarrative16.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative20#InformationToComplyWith
-	 * CorporateActionNarrative20.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative22#InformationToComplyWith
-	 * CorporateActionNarrative22.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#InformationToComplyWith
-	 * CorporateActionNarrative11.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative17#InformationToComplyWith
-	 * CorporateActionNarrative17.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#InformationToComplyWith
-	 * CorporateActionNarrative1.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative2#InformationToComplyWith
-	 * CorporateActionNarrative2.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative9#InformationToComplyWith
-	 * CorporateActionNarrative9.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#InformationToComplyWith
-	 * CorporateActionNarrative27.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative28#InformationToComplyWith
-	 * CorporateActionNarrative28.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative29#InformationToComplyWith
-	 * CorporateActionNarrative29.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative32#InformationToComplyWith
-	 * CorporateActionNarrative32.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative37#InformationToComplyWith
-	 * CorporateActionNarrative37.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative41#InformationToComplyWith
-	 * CorporateActionNarrative41.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative33#InformationToComplyWith
-	 * CorporateActionNarrative33.InformationToComplyWith}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative36#InformationToComplyWith
-	 * CorporateActionNarrative36.InformationToComplyWith}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative8#mmInformationToComplyWith
+	 * CorporateActionNarrative8.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative13#mmInformationToComplyWith
+	 * CorporateActionNarrative13.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative4#mmInformationToComplyWith
+	 * CorporateActionNarrative4.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative14#mmInformationToComplyWith
+	 * CorporateActionNarrative14.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative5#mmInformationToComplyWith
+	 * CorporateActionNarrative5.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative6#mmInformationToComplyWith
+	 * CorporateActionNarrative6.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative15#mmInformationToComplyWith
+	 * CorporateActionNarrative15.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative16#mmInformationToComplyWith
+	 * CorporateActionNarrative16.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative20#mmInformationToComplyWith
+	 * CorporateActionNarrative20.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative22#mmInformationToComplyWith
+	 * CorporateActionNarrative22.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative11#mmInformationToComplyWith
+	 * CorporateActionNarrative11.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative17#mmInformationToComplyWith
+	 * CorporateActionNarrative17.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative1#mmInformationToComplyWith
+	 * CorporateActionNarrative1.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative2#mmInformationToComplyWith
+	 * CorporateActionNarrative2.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative9#mmInformationToComplyWith
+	 * CorporateActionNarrative9.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative27#mmInformationToComplyWith
+	 * CorporateActionNarrative27.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative28#mmInformationToComplyWith
+	 * CorporateActionNarrative28.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative29#mmInformationToComplyWith
+	 * CorporateActionNarrative29.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative32#mmInformationToComplyWith
+	 * CorporateActionNarrative32.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative37#mmInformationToComplyWith
+	 * CorporateActionNarrative37.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative41#mmInformationToComplyWith
+	 * CorporateActionNarrative41.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative33#mmInformationToComplyWith
+	 * CorporateActionNarrative33.mmInformationToComplyWith}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative36#mmInformationToComplyWith
+	 * CorporateActionNarrative36.mmInformationToComplyWith}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -401,30 +404,31 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InformationToComplyWith = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInformationToComplyWith = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative8.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative13.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative4.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative14.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative5.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative6.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative15.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative16.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative20.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative22.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative11.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative17.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative1.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative2.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative9.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative27.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative28.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative29.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative32.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative37.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative41.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative33.InformationToComplyWith,
-					com.tools20022.repository.msg.CorporateActionNarrative36.InformationToComplyWith);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative8.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative13.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative4.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative14.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative5.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative6.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative15.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative16.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative20.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative22.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative11.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative17.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative1.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative2.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative9.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative27.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative28.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative29.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative32.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative37.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative41.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative33.mmInformationToComplyWith,
+					com.tools20022.repository.msg.CorporateActionNarrative36.mmInformationToComplyWith);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InformationToComplyWith";
 			definition = "Provides information conditions to the account owner that are to be complied with, eg, not open to US/Canadian residents, QIB or SIL to be provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODateTime subscriptionCostDebitDate;
 	/**
 	 * Date by which cash must be in place in order to take part in the event.
 	 * <p>
@@ -434,61 +438,61 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate6#SubscriptionCostDebitDate
-	 * CorporateActionDate6.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate10#SubscriptionCostDebitDate
-	 * CorporateActionDate10.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate18#SubscriptionCostDebitDate
-	 * CorporateActionDate18.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate19#SubscriptionCostDebitDate
-	 * CorporateActionDate19.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#SubscriptionCostDebitDate
-	 * CorporateActionDate8.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#SubscriptionCostDebitDate
-	 * CorporateActionDate11.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#SubscriptionCostDebitDate
-	 * CorporateActionDate15.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#SubscriptionCostDebitDate
-	 * CorporateActionDate16.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#SubscriptionCostDebitDate
-	 * CorporateActionDate4.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#SubscriptionCostDebitDate
-	 * CorporateActionDate29.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#SubscriptionCostDebitDate
-	 * CorporateActionDate33.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate46#SubscriptionCostDebitDate
-	 * CorporateActionDate46.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#SubscriptionCostDebitDate
-	 * CorporateActionDate48.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#SubscriptionCostDebitDate
-	 * CorporateActionDate52.SubscriptionCostDebitDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#SubscriptionCostDebitDate
-	 * CorporateActionDate55.SubscriptionCostDebitDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate6#mmSubscriptionCostDebitDate
+	 * CorporateActionDate6.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate10#mmSubscriptionCostDebitDate
+	 * CorporateActionDate10.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate18#mmSubscriptionCostDebitDate
+	 * CorporateActionDate18.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate19#mmSubscriptionCostDebitDate
+	 * CorporateActionDate19.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#mmSubscriptionCostDebitDate
+	 * CorporateActionDate8.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#mmSubscriptionCostDebitDate
+	 * CorporateActionDate11.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate15#mmSubscriptionCostDebitDate
+	 * CorporateActionDate15.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate16#mmSubscriptionCostDebitDate
+	 * CorporateActionDate16.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate4#mmSubscriptionCostDebitDate
+	 * CorporateActionDate4.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate29#mmSubscriptionCostDebitDate
+	 * CorporateActionDate29.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate33#mmSubscriptionCostDebitDate
+	 * CorporateActionDate33.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate46#mmSubscriptionCostDebitDate
+	 * CorporateActionDate46.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate48#mmSubscriptionCostDebitDate
+	 * CorporateActionDate48.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#mmSubscriptionCostDebitDate
+	 * CorporateActionDate52.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmSubscriptionCostDebitDate
+	 * CorporateActionDate55.mmSubscriptionCostDebitDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -502,26 +506,27 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SubscriptionCostDebitDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSubscriptionCostDebitDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.SubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate10.SubscriptionCostDebitDate,
-					com.tools20022.repository.msg.CorporateActionDate18.SubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate19.SubscriptionCostDebitDate,
-					com.tools20022.repository.msg.CorporateActionDate8.SubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate11.SubscriptionCostDebitDate,
-					com.tools20022.repository.msg.CorporateActionDate15.SubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate16.SubscriptionCostDebitDate,
-					com.tools20022.repository.msg.CorporateActionDate4.SubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate29.SubscriptionCostDebitDate,
-					com.tools20022.repository.msg.CorporateActionDate33.SubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate46.SubscriptionCostDebitDate,
-					com.tools20022.repository.msg.CorporateActionDate48.SubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate52.SubscriptionCostDebitDate,
-					com.tools20022.repository.msg.CorporateActionDate55.SubscriptionCostDebitDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.mmSubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate10.mmSubscriptionCostDebitDate,
+					com.tools20022.repository.msg.CorporateActionDate18.mmSubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate19.mmSubscriptionCostDebitDate,
+					com.tools20022.repository.msg.CorporateActionDate8.mmSubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate11.mmSubscriptionCostDebitDate,
+					com.tools20022.repository.msg.CorporateActionDate15.mmSubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate16.mmSubscriptionCostDebitDate,
+					com.tools20022.repository.msg.CorporateActionDate4.mmSubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate29.mmSubscriptionCostDebitDate,
+					com.tools20022.repository.msg.CorporateActionDate33.mmSubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate46.mmSubscriptionCostDebitDate,
+					com.tools20022.repository.msg.CorporateActionDate48.mmSubscriptionCostDebitDate, com.tools20022.repository.msg.CorporateActionDate52.mmSubscriptionCostDebitDate,
+					com.tools20022.repository.msg.CorporateActionDate55.mmSubscriptionCostDebitDate);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionCostDebitDate";
 			definition = "Date by which cash must be in place in order to take part in the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected RateAndAmount maximumAllowedOverSubscription;
 	/**
 	 * A maximum percentage of shares available through the over subscription
 	 * privilege, usually a percentage of the basic subscription shares, eg, an
@@ -533,8 +538,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#MaximumAllowedBiddingConditions
-	 * RateAndAmount.MaximumAllowedBiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmMaximumAllowedBiddingConditions
+	 * RateAndAmount.mmMaximumAllowedBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -542,127 +547,127 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
 	 * RateAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate4.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate10.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate20#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate20.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate22#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate22.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate26#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate26.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate31#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate31.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate38#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate38.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate39#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate39.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate5.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate12.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate15#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate15.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate18#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate18.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate25#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate25.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate30#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate30.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate37#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate37.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate40#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate40.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate36#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate36.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate42#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate42.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#MaximumAllowedOversubscription
-	 * CorporateActionRate2.MaximumAllowedOversubscription}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate46#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate46.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate45#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate45.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate44#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate44.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate60#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate60.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate64#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate64.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate57#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate57.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate68#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate68.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate70#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate70.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate67#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate67.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate74#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate74.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate79#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate79.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate76#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate76.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate82#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate82.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate80#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate80.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate81#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate81.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate83#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate83.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate84#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate84.MaximumAllowedOversubscriptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate85#MaximumAllowedOversubscriptionRate
-	 * CorporateActionRate85.MaximumAllowedOversubscriptionRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate4.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate10.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate20#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate20.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate22#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate22.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate26#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate26.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate31#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate31.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate38#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate38.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate39#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate39.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate5.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate12.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate15#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate15.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate18#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate18.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate25#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate25.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate30#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate30.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate37#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate37.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate40#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate40.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate36#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate36.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate42#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate42.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#mmMaximumAllowedOversubscription
+	 * CorporateActionRate2.mmMaximumAllowedOversubscription}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate46#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate46.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate45#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate45.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate44#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate44.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate60#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate60.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate64#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate64.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate57#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate57.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate68#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate68.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate70#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate70.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate67#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate67.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate74#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate74.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate79#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate79.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate76#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate76.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate82#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate82.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate80#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate80.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate81#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate81.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate83#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate83.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate84#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate84.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate85#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate85.mmMaximumAllowedOversubscriptionRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -676,39 +681,40 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MaximumAllowedOverSubscription = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMaximumAllowedOverSubscription = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate10.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate20.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate22.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate26.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate31.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate38.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate39.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate5.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate12.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate15.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate18.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate25.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate30.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate37.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate40.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate36.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate42.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate2.MaximumAllowedOversubscription, com.tools20022.repository.msg.CorporateActionRate46.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate45.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate44.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate60.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate64.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate57.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate68.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate70.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate67.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate74.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate79.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate76.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate82.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate80.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate81.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate83.MaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate84.MaximumAllowedOversubscriptionRate,
-					com.tools20022.repository.msg.CorporateActionRate85.MaximumAllowedOversubscriptionRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate10.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate20.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate22.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate26.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate31.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate38.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate39.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate5.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate12.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate15.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate18.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate25.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate30.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate37.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate40.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate36.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate42.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate2.mmMaximumAllowedOversubscription, com.tools20022.repository.msg.CorporateActionRate46.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate45.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate44.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate60.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate64.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate57.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate68.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate70.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate67.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate74.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate79.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate76.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate82.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate80.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate81.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate83.mmMaximumAllowedOversubscriptionRate, com.tools20022.repository.msg.CorporateActionRate84.mmMaximumAllowedOversubscriptionRate,
+					com.tools20022.repository.msg.CorporateActionRate85.mmMaximumAllowedOversubscriptionRate);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumAllowedOverSubscription";
 			definition = "A maximum percentage of shares available through the over subscription privilege, usually a percentage of the basic subscription shares, eg, an account owner subscribing to 100 shares may over subscribe to a maximum of 50 additional shares when the over subscription maximum is 50%.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RateAndAmount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.MaximumAllowedBiddingConditions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmMaximumAllowedBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate prorationRate;
 	/**
 	 * Proportionate allocation used for the offer.
 	 * <p>
@@ -719,127 +725,127 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#ProrationRate
-	 * CorporateActionRate4.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#ProrationRate
-	 * CorporateActionRate10.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate20#ProrationRate
-	 * CorporateActionRate20.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate22#ProrationRate
-	 * CorporateActionRate22.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate26#ProrationRate
-	 * CorporateActionRate26.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate31#ProrationRate
-	 * CorporateActionRate31.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate38#ProrationRate
-	 * CorporateActionRate38.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate39#ProrationRate
-	 * CorporateActionRate39.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#ProrationRate
-	 * CorporateActionRate5.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#ProrationRate
-	 * CorporateActionRate12.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate15#ProrationRate
-	 * CorporateActionRate15.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate18#ProrationRate
-	 * CorporateActionRate18.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate25#ProrationRate
-	 * CorporateActionRate25.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate30#ProrationRate
-	 * CorporateActionRate30.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate37#ProrationRate
-	 * CorporateActionRate37.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate40#ProrationRate
-	 * CorporateActionRate40.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate36#ProrationRate
-	 * CorporateActionRate36.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate42#ProrationRate
-	 * CorporateActionRate42.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#Proration
-	 * CorporateActionRate2.Proration}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate46#ProrationRate
-	 * CorporateActionRate46.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate45#ProrationRate
-	 * CorporateActionRate45.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate44#ProrationRate
-	 * CorporateActionRate44.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate60#ProrationRate
-	 * CorporateActionRate60.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate64#ProrationRate
-	 * CorporateActionRate64.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate57#ProrationRate
-	 * CorporateActionRate57.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate68#ProrationRate
-	 * CorporateActionRate68.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate70#ProrationRate
-	 * CorporateActionRate70.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate67#ProrationRate
-	 * CorporateActionRate67.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate74#ProrationRate
-	 * CorporateActionRate74.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate79#ProrationRate
-	 * CorporateActionRate79.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate76#ProrationRate
-	 * CorporateActionRate76.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate82#ProrationRate
-	 * CorporateActionRate82.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate80#ProrationRate
-	 * CorporateActionRate80.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate81#ProrationRate
-	 * CorporateActionRate81.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate83#ProrationRate
-	 * CorporateActionRate83.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate84#ProrationRate
-	 * CorporateActionRate84.ProrationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate85#ProrationRate
-	 * CorporateActionRate85.ProrationRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#mmProrationRate
+	 * CorporateActionRate4.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#mmProrationRate
+	 * CorporateActionRate10.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate20#mmProrationRate
+	 * CorporateActionRate20.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate22#mmProrationRate
+	 * CorporateActionRate22.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate26#mmProrationRate
+	 * CorporateActionRate26.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate31#mmProrationRate
+	 * CorporateActionRate31.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate38#mmProrationRate
+	 * CorporateActionRate38.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate39#mmProrationRate
+	 * CorporateActionRate39.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#mmProrationRate
+	 * CorporateActionRate5.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#mmProrationRate
+	 * CorporateActionRate12.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate15#mmProrationRate
+	 * CorporateActionRate15.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate18#mmProrationRate
+	 * CorporateActionRate18.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate25#mmProrationRate
+	 * CorporateActionRate25.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate30#mmProrationRate
+	 * CorporateActionRate30.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate37#mmProrationRate
+	 * CorporateActionRate37.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate40#mmProrationRate
+	 * CorporateActionRate40.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate36#mmProrationRate
+	 * CorporateActionRate36.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate42#mmProrationRate
+	 * CorporateActionRate42.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#mmProration
+	 * CorporateActionRate2.mmProration}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate46#mmProrationRate
+	 * CorporateActionRate46.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate45#mmProrationRate
+	 * CorporateActionRate45.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate44#mmProrationRate
+	 * CorporateActionRate44.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate60#mmProrationRate
+	 * CorporateActionRate60.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate64#mmProrationRate
+	 * CorporateActionRate64.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate57#mmProrationRate
+	 * CorporateActionRate57.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate68#mmProrationRate
+	 * CorporateActionRate68.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate70#mmProrationRate
+	 * CorporateActionRate70.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate67#mmProrationRate
+	 * CorporateActionRate67.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate74#mmProrationRate
+	 * CorporateActionRate74.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate79#mmProrationRate
+	 * CorporateActionRate79.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate76#mmProrationRate
+	 * CorporateActionRate76.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate82#mmProrationRate
+	 * CorporateActionRate82.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate80#mmProrationRate
+	 * CorporateActionRate80.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate81#mmProrationRate
+	 * CorporateActionRate81.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate83#mmProrationRate
+	 * CorporateActionRate83.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate84#mmProrationRate
+	 * CorporateActionRate84.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate85#mmProrationRate
+	 * CorporateActionRate85.mmProrationRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -851,31 +857,32 @@ public class BiddingConditions {
 	 * definition} = "Proportionate allocation used for the offer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ProrationRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProrationRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.ProrationRate, com.tools20022.repository.msg.CorporateActionRate10.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate20.ProrationRate, com.tools20022.repository.msg.CorporateActionRate22.ProrationRate, com.tools20022.repository.msg.CorporateActionRate26.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate31.ProrationRate, com.tools20022.repository.msg.CorporateActionRate38.ProrationRate, com.tools20022.repository.msg.CorporateActionRate39.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate5.ProrationRate, com.tools20022.repository.msg.CorporateActionRate12.ProrationRate, com.tools20022.repository.msg.CorporateActionRate15.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate18.ProrationRate, com.tools20022.repository.msg.CorporateActionRate25.ProrationRate, com.tools20022.repository.msg.CorporateActionRate30.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate37.ProrationRate, com.tools20022.repository.msg.CorporateActionRate40.ProrationRate, com.tools20022.repository.msg.CorporateActionRate36.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate42.ProrationRate, com.tools20022.repository.msg.CorporateActionRate2.Proration, com.tools20022.repository.msg.CorporateActionRate46.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate45.ProrationRate, com.tools20022.repository.msg.CorporateActionRate44.ProrationRate, com.tools20022.repository.msg.CorporateActionRate60.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate64.ProrationRate, com.tools20022.repository.msg.CorporateActionRate57.ProrationRate, com.tools20022.repository.msg.CorporateActionRate68.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate70.ProrationRate, com.tools20022.repository.msg.CorporateActionRate67.ProrationRate, com.tools20022.repository.msg.CorporateActionRate74.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate79.ProrationRate, com.tools20022.repository.msg.CorporateActionRate76.ProrationRate, com.tools20022.repository.msg.CorporateActionRate82.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate80.ProrationRate, com.tools20022.repository.msg.CorporateActionRate81.ProrationRate, com.tools20022.repository.msg.CorporateActionRate83.ProrationRate,
-					com.tools20022.repository.msg.CorporateActionRate84.ProrationRate, com.tools20022.repository.msg.CorporateActionRate85.ProrationRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate10.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate20.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate22.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate26.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate31.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate38.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate39.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate5.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate12.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate15.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate18.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate25.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate30.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate37.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate40.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate36.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate42.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate2.mmProration, com.tools20022.repository.msg.CorporateActionRate46.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate45.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate44.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate60.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate64.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate57.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate68.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate70.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate67.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate74.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate79.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate76.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate82.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate80.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate81.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate83.mmProrationRate,
+					com.tools20022.repository.msg.CorporateActionRate84.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate85.mmProrationRate);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProrationRate";
 			definition = "Proportionate allocation used for the offer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected RateAndAmount applicableRate;
 	/**
 	 * Rate applicable to the event announced, eg, redemption rate for a
 	 * redemption event.
@@ -885,8 +892,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#RateBiddingConditions
-	 * RateAndAmount.RateBiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRateBiddingConditions
+	 * RateAndAmount.mmRateBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -894,133 +901,133 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
 	 * RateAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#ApplicableRate
-	 * CorporateActionRate4.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#ApplicableRate
-	 * CorporateActionRate10.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails2#ApplicableRate
-	 * RateDetails2.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails4#ApplicableRate
-	 * RateDetails4.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate29#ApplicableRate
-	 * CorporateActionRate29.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails7#ApplicableRate
-	 * RateDetails7.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate34#ApplicableRate
-	 * CorporateActionRate34.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails9#ApplicableRate
-	 * RateDetails9.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails11#ApplicableRate
-	 * RateDetails11.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails12#ApplicableRate
-	 * RateDetails12.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#ApplicableRate
-	 * CorporateActionRate5.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#ApplicableRate
-	 * CorporateActionRate12.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails3#ApplicableRate
-	 * RateDetails3.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails5#ApplicableRate
-	 * RateDetails5.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate28#ApplicableRate
-	 * CorporateActionRate28.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate33#ApplicableRate
-	 * CorporateActionRate33.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails10#ApplicableRate
-	 * RateDetails10.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails13#ApplicableRate
-	 * RateDetails13.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#ApplicableRate
-	 * CorporateActionRate2.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails15#ApplicableRate
-	 * RateDetails15.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate48#ApplicableRate
-	 * CorporateActionRate48.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate49#ApplicableRate
-	 * CorporateActionRate49.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails14#ApplicableRate
-	 * RateDetails14.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate58#ApplicableRate
-	 * CorporateActionRate58.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails18#ApplicableRate
-	 * RateDetails18.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails21#ApplicableRate
-	 * RateDetails21.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate65#ApplicableRate
-	 * CorporateActionRate65.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails23#ApplicableRate
-	 * RateDetails23.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate69#ApplicableRate
-	 * CorporateActionRate69.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails22#ApplicableRate
-	 * RateDetails22.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate72#ApplicableRate
-	 * CorporateActionRate72.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails24#ApplicableRate
-	 * RateDetails24.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails25#ApplicableRate
-	 * RateDetails25.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate77#ApplicableRate
-	 * CorporateActionRate77.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate75#ApplicableRate
-	 * CorporateActionRate75.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails26#ApplicableRate
-	 * RateDetails26.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails27#ApplicableRate
-	 * RateDetails27.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails28#ApplicableRate
-	 * RateDetails28.ApplicableRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RateDetails30#ApplicableRate
-	 * RateDetails30.ApplicableRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate4#mmApplicableRate
+	 * CorporateActionRate4.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate10#mmApplicableRate
+	 * CorporateActionRate10.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails2#mmApplicableRate
+	 * RateDetails2.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails4#mmApplicableRate
+	 * RateDetails4.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate29#mmApplicableRate
+	 * CorporateActionRate29.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails7#mmApplicableRate
+	 * RateDetails7.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate34#mmApplicableRate
+	 * CorporateActionRate34.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails9#mmApplicableRate
+	 * RateDetails9.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails11#mmApplicableRate
+	 * RateDetails11.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails12#mmApplicableRate
+	 * RateDetails12.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate5#mmApplicableRate
+	 * CorporateActionRate5.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate12#mmApplicableRate
+	 * CorporateActionRate12.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails3#mmApplicableRate
+	 * RateDetails3.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails5#mmApplicableRate
+	 * RateDetails5.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate28#mmApplicableRate
+	 * CorporateActionRate28.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate33#mmApplicableRate
+	 * CorporateActionRate33.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails10#mmApplicableRate
+	 * RateDetails10.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails13#mmApplicableRate
+	 * RateDetails13.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate2#mmApplicableRate
+	 * CorporateActionRate2.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails15#mmApplicableRate
+	 * RateDetails15.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate48#mmApplicableRate
+	 * CorporateActionRate48.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate49#mmApplicableRate
+	 * CorporateActionRate49.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails14#mmApplicableRate
+	 * RateDetails14.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate58#mmApplicableRate
+	 * CorporateActionRate58.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails18#mmApplicableRate
+	 * RateDetails18.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails21#mmApplicableRate
+	 * RateDetails21.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate65#mmApplicableRate
+	 * CorporateActionRate65.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails23#mmApplicableRate
+	 * RateDetails23.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate69#mmApplicableRate
+	 * CorporateActionRate69.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails22#mmApplicableRate
+	 * RateDetails22.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate72#mmApplicableRate
+	 * CorporateActionRate72.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails24#mmApplicableRate
+	 * RateDetails24.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails25#mmApplicableRate
+	 * RateDetails25.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate77#mmApplicableRate
+	 * CorporateActionRate77.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate75#mmApplicableRate
+	 * CorporateActionRate75.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails26#mmApplicableRate
+	 * RateDetails26.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails27#mmApplicableRate
+	 * RateDetails27.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails28#mmApplicableRate
+	 * RateDetails28.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails30#mmApplicableRate
+	 * RateDetails30.mmApplicableRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1034,34 +1041,35 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ApplicableRate = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmApplicableRate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate10.ApplicableRate,
-					com.tools20022.repository.msg.RateDetails2.ApplicableRate, com.tools20022.repository.msg.RateDetails4.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate29.ApplicableRate,
-					com.tools20022.repository.msg.RateDetails7.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate34.ApplicableRate, com.tools20022.repository.msg.RateDetails9.ApplicableRate,
-					com.tools20022.repository.msg.RateDetails11.ApplicableRate, com.tools20022.repository.msg.RateDetails12.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate5.ApplicableRate,
-					com.tools20022.repository.msg.CorporateActionRate12.ApplicableRate, com.tools20022.repository.msg.RateDetails3.ApplicableRate, com.tools20022.repository.msg.RateDetails5.ApplicableRate,
-					com.tools20022.repository.msg.CorporateActionRate28.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate33.ApplicableRate, com.tools20022.repository.msg.RateDetails10.ApplicableRate,
-					com.tools20022.repository.msg.RateDetails13.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate2.ApplicableRate, com.tools20022.repository.msg.RateDetails15.ApplicableRate,
-					com.tools20022.repository.msg.CorporateActionRate48.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate49.ApplicableRate, com.tools20022.repository.msg.RateDetails14.ApplicableRate,
-					com.tools20022.repository.msg.CorporateActionRate58.ApplicableRate, com.tools20022.repository.msg.RateDetails18.ApplicableRate, com.tools20022.repository.msg.RateDetails21.ApplicableRate,
-					com.tools20022.repository.msg.CorporateActionRate65.ApplicableRate, com.tools20022.repository.msg.RateDetails23.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate69.ApplicableRate,
-					com.tools20022.repository.msg.RateDetails22.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate72.ApplicableRate, com.tools20022.repository.msg.RateDetails24.ApplicableRate,
-					com.tools20022.repository.msg.RateDetails25.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate77.ApplicableRate, com.tools20022.repository.msg.CorporateActionRate75.ApplicableRate,
-					com.tools20022.repository.msg.RateDetails26.ApplicableRate, com.tools20022.repository.msg.RateDetails27.ApplicableRate, com.tools20022.repository.msg.RateDetails28.ApplicableRate,
-					com.tools20022.repository.msg.RateDetails30.ApplicableRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate10.mmApplicableRate,
+					com.tools20022.repository.msg.RateDetails2.mmApplicableRate, com.tools20022.repository.msg.RateDetails4.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate29.mmApplicableRate,
+					com.tools20022.repository.msg.RateDetails7.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate34.mmApplicableRate, com.tools20022.repository.msg.RateDetails9.mmApplicableRate,
+					com.tools20022.repository.msg.RateDetails11.mmApplicableRate, com.tools20022.repository.msg.RateDetails12.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate5.mmApplicableRate,
+					com.tools20022.repository.msg.CorporateActionRate12.mmApplicableRate, com.tools20022.repository.msg.RateDetails3.mmApplicableRate, com.tools20022.repository.msg.RateDetails5.mmApplicableRate,
+					com.tools20022.repository.msg.CorporateActionRate28.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate33.mmApplicableRate, com.tools20022.repository.msg.RateDetails10.mmApplicableRate,
+					com.tools20022.repository.msg.RateDetails13.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate2.mmApplicableRate, com.tools20022.repository.msg.RateDetails15.mmApplicableRate,
+					com.tools20022.repository.msg.CorporateActionRate48.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate49.mmApplicableRate, com.tools20022.repository.msg.RateDetails14.mmApplicableRate,
+					com.tools20022.repository.msg.CorporateActionRate58.mmApplicableRate, com.tools20022.repository.msg.RateDetails18.mmApplicableRate, com.tools20022.repository.msg.RateDetails21.mmApplicableRate,
+					com.tools20022.repository.msg.CorporateActionRate65.mmApplicableRate, com.tools20022.repository.msg.RateDetails23.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate69.mmApplicableRate,
+					com.tools20022.repository.msg.RateDetails22.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate72.mmApplicableRate, com.tools20022.repository.msg.RateDetails24.mmApplicableRate,
+					com.tools20022.repository.msg.RateDetails25.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate77.mmApplicableRate, com.tools20022.repository.msg.CorporateActionRate75.mmApplicableRate,
+					com.tools20022.repository.msg.RateDetails26.mmApplicableRate, com.tools20022.repository.msg.RateDetails27.mmApplicableRate, com.tools20022.repository.msg.RateDetails28.mmApplicableRate,
+					com.tools20022.repository.msg.RateDetails30.mmApplicableRate);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ApplicableRate";
 			definition = "Rate applicable to the event announced, eg, redemption rate for a redemption event.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RateAndAmount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.RateBiddingConditions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmRateBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
+	protected SecuritiesQuantity frontEndOddLotQuantity;
 	/**
 	 * Specifies that if an order is prorated holders of odd lots who tender
 	 * their full position will not have tendered position prorated but rather
@@ -1072,8 +1080,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#FrontEndOddLotBiddingConditions
-	 * SecuritiesQuantity.FrontEndOddLotBiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmFrontEndOddLotBiddingConditions
+	 * SecuritiesQuantity.mmFrontEndOddLotBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1081,43 +1089,43 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#FrontEndOddLotQuantity
-	 * SecuritiesOption1.FrontEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption9#FrontEndOddLotQuantity
-	 * SecuritiesOption9.FrontEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption15#FrontEndOddLotQuantity
-	 * SecuritiesOption15.FrontEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption16#FrontEndOddLotQuantity
-	 * SecuritiesOption16.FrontEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption23#FrontEndOddLotQuantity
-	 * SecuritiesOption23.FrontEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption28#FrontEndOddLotQuantity
-	 * SecuritiesOption28.FrontEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#FrontEndOddLotSecuritiesQuantity
-	 * CorporateAction2.FrontEndOddLotSecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption51#FrontEndOddLotQuantity
-	 * SecuritiesOption51.FrontEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption56#FrontEndOddLotQuantity
-	 * SecuritiesOption56.FrontEndOddLotQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#mmFrontEndOddLotQuantity
+	 * SecuritiesOption1.mmFrontEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption9#mmFrontEndOddLotQuantity
+	 * SecuritiesOption9.mmFrontEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption15#mmFrontEndOddLotQuantity
+	 * SecuritiesOption15.mmFrontEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption16#mmFrontEndOddLotQuantity
+	 * SecuritiesOption16.mmFrontEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption23#mmFrontEndOddLotQuantity
+	 * SecuritiesOption23.mmFrontEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption28#mmFrontEndOddLotQuantity
+	 * SecuritiesOption28.mmFrontEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#mmFrontEndOddLotSecuritiesQuantity
+	 * CorporateAction2.mmFrontEndOddLotSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption51#mmFrontEndOddLotQuantity
+	 * SecuritiesOption51.mmFrontEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption56#mmFrontEndOddLotQuantity
+	 * SecuritiesOption56.mmFrontEndOddLotQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1131,24 +1139,26 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd FrontEndOddLotQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmFrontEndOddLotQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption1.FrontEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption9.FrontEndOddLotQuantity,
-					com.tools20022.repository.msg.SecuritiesOption15.FrontEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption16.FrontEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption23.FrontEndOddLotQuantity,
-					com.tools20022.repository.msg.SecuritiesOption28.FrontEndOddLotQuantity, com.tools20022.repository.msg.CorporateAction2.FrontEndOddLotSecuritiesQuantity,
-					com.tools20022.repository.msg.SecuritiesOption51.FrontEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption56.FrontEndOddLotQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption1.mmFrontEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption9.mmFrontEndOddLotQuantity,
+					com.tools20022.repository.msg.SecuritiesOption15.mmFrontEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption16.mmFrontEndOddLotQuantity,
+					com.tools20022.repository.msg.SecuritiesOption23.mmFrontEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption28.mmFrontEndOddLotQuantity,
+					com.tools20022.repository.msg.CorporateAction2.mmFrontEndOddLotSecuritiesQuantity, com.tools20022.repository.msg.SecuritiesOption51.mmFrontEndOddLotQuantity,
+					com.tools20022.repository.msg.SecuritiesOption56.mmFrontEndOddLotQuantity);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FrontEndOddLotQuantity";
 			definition = "Specifies that if an order is prorated holders of odd lots who tender their full position will not have tendered position prorated but rather accepted in full.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.FrontEndOddLotBiddingConditions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmFrontEndOddLotBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected SecuritiesQuantity backEndOddLotQuantity;
 	/**
 	 * Represents the presence of a back end odd lot provision and the quantity
 	 * of equity required after proration to be eligible for this privilege.
@@ -1158,8 +1168,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#BackEndOddLotBiddingConditions
-	 * SecuritiesQuantity.BackEndOddLotBiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBackEndOddLotBiddingConditions
+	 * SecuritiesQuantity.mmBackEndOddLotBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1167,43 +1177,43 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#BackEndOddLotQuantity
-	 * SecuritiesOption1.BackEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption9#BackEndOddLotQuantity
-	 * SecuritiesOption9.BackEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption15#BackEndOddLotQuantity
-	 * SecuritiesOption15.BackEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption16#BackEndOddLotQuantity
-	 * SecuritiesOption16.BackEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption23#BackEndOddLotQuantity
-	 * SecuritiesOption23.BackEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption28#BackEndOddLotQuantity
-	 * SecuritiesOption28.BackEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#BackEndOddLotSecuritiesQuantity
-	 * CorporateAction2.BackEndOddLotSecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption51#BackEndOddLotQuantity
-	 * SecuritiesOption51.BackEndOddLotQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption56#BackEndOddLotQuantity
-	 * SecuritiesOption56.BackEndOddLotQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption1#mmBackEndOddLotQuantity
+	 * SecuritiesOption1.mmBackEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption9#mmBackEndOddLotQuantity
+	 * SecuritiesOption9.mmBackEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption15#mmBackEndOddLotQuantity
+	 * SecuritiesOption15.mmBackEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption16#mmBackEndOddLotQuantity
+	 * SecuritiesOption16.mmBackEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption23#mmBackEndOddLotQuantity
+	 * SecuritiesOption23.mmBackEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption28#mmBackEndOddLotQuantity
+	 * SecuritiesOption28.mmBackEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#mmBackEndOddLotSecuritiesQuantity
+	 * CorporateAction2.mmBackEndOddLotSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption51#mmBackEndOddLotQuantity
+	 * SecuritiesOption51.mmBackEndOddLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption56#mmBackEndOddLotQuantity
+	 * SecuritiesOption56.mmBackEndOddLotQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1217,24 +1227,26 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd BackEndOddLotQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmBackEndOddLotQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption1.BackEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption9.BackEndOddLotQuantity,
-					com.tools20022.repository.msg.SecuritiesOption15.BackEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption16.BackEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption23.BackEndOddLotQuantity,
-					com.tools20022.repository.msg.SecuritiesOption28.BackEndOddLotQuantity, com.tools20022.repository.msg.CorporateAction2.BackEndOddLotSecuritiesQuantity,
-					com.tools20022.repository.msg.SecuritiesOption51.BackEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption56.BackEndOddLotQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption1.mmBackEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption9.mmBackEndOddLotQuantity,
+					com.tools20022.repository.msg.SecuritiesOption15.mmBackEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption16.mmBackEndOddLotQuantity,
+					com.tools20022.repository.msg.SecuritiesOption23.mmBackEndOddLotQuantity, com.tools20022.repository.msg.SecuritiesOption28.mmBackEndOddLotQuantity,
+					com.tools20022.repository.msg.CorporateAction2.mmBackEndOddLotSecuritiesQuantity, com.tools20022.repository.msg.SecuritiesOption51.mmBackEndOddLotQuantity,
+					com.tools20022.repository.msg.SecuritiesOption56.mmBackEndOddLotQuantity);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BackEndOddLotQuantity";
 			definition = "Represents the presence of a back end odd lot provision and the quantity of equity required after proration to be eligible for this privilege.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.BackEndOddLotBiddingConditions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmBackEndOddLotBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected PercentageRate transformationRate;
 	/**
 	 * Rate used to determine the cash consideration split across outturn
 	 * settlement transactions that are the result of a transformation of the
@@ -1247,46 +1259,46 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate7#TransformationRate
-	 * CorporateActionRate7.TransformationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate13#TransformationRate
-	 * CorporateActionRate13.TransformationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate17#TransformationRate
-	 * CorporateActionRate17.TransformationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate19#TransformationRate
-	 * CorporateActionRate19.TransformationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate28#TransformationRate
-	 * CorporateActionRate28.TransformationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate33#TransformationRate
-	 * CorporateActionRate33.TransformationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate48#TransformationRate
-	 * CorporateActionRate48.TransformationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate58#TransformationRate
-	 * CorporateActionRate58.TransformationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate69#TransformationRate
-	 * CorporateActionRate69.TransformationRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate77#TransformationRate
-	 * CorporateActionRate77.TransformationRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate7#mmTransformationRate
+	 * CorporateActionRate7.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate13#mmTransformationRate
+	 * CorporateActionRate13.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate17#mmTransformationRate
+	 * CorporateActionRate17.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate19#mmTransformationRate
+	 * CorporateActionRate19.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate28#mmTransformationRate
+	 * CorporateActionRate28.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate33#mmTransformationRate
+	 * CorporateActionRate33.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate48#mmTransformationRate
+	 * CorporateActionRate48.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate58#mmTransformationRate
+	 * CorporateActionRate58.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate69#mmTransformationRate
+	 * CorporateActionRate69.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate77#mmTransformationRate
+	 * CorporateActionRate77.mmTransformationRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1300,22 +1312,24 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransformationRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransformationRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate7.TransformationRate, com.tools20022.repository.msg.CorporateActionRate13.TransformationRate,
-					com.tools20022.repository.msg.CorporateActionRate17.TransformationRate, com.tools20022.repository.msg.CorporateActionRate19.TransformationRate, com.tools20022.repository.msg.CorporateActionRate28.TransformationRate,
-					com.tools20022.repository.msg.CorporateActionRate33.TransformationRate, com.tools20022.repository.msg.CorporateActionRate48.TransformationRate, com.tools20022.repository.msg.CorporateActionRate58.TransformationRate,
-					com.tools20022.repository.msg.CorporateActionRate69.TransformationRate, com.tools20022.repository.msg.CorporateActionRate77.TransformationRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate7.mmTransformationRate, com.tools20022.repository.msg.CorporateActionRate13.mmTransformationRate,
+					com.tools20022.repository.msg.CorporateActionRate17.mmTransformationRate, com.tools20022.repository.msg.CorporateActionRate19.mmTransformationRate,
+					com.tools20022.repository.msg.CorporateActionRate28.mmTransformationRate, com.tools20022.repository.msg.CorporateActionRate33.mmTransformationRate,
+					com.tools20022.repository.msg.CorporateActionRate48.mmTransformationRate, com.tools20022.repository.msg.CorporateActionRate58.mmTransformationRate,
+					com.tools20022.repository.msg.CorporateActionRate69.mmTransformationRate, com.tools20022.repository.msg.CorporateActionRate77.mmTransformationRate);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransformationRate";
 			definition = "Rate used to determine the cash consideration split across outturn settlement transactions that are the result of a transformation of the parent transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ISODateTime prorationDate;
 	/**
 	 * Date (and time) at which an issuer will determine the proration
 	 * amount/quantity of an offer.
@@ -1326,49 +1340,49 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#ProrationDate
-	 * CorporateActionDate1.ProrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#ProrationDate
-	 * CorporateActionDate13.ProrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#ProrationDate
-	 * CorporateActionDate14.ProrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#ProrationDate
-	 * CorporateActionDate21.ProrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#ProrationDate
-	 * CorporateActionDate22.ProrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#ProrationDate
-	 * CorporateActionDate25.ProrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#ProrationDate
-	 * CorporateActionDate27.ProrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#ProrationDate
-	 * CorporateActionDate28.ProrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#ProrationDate
-	 * CorporateActionDate2.ProrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#ProrationDate
-	 * CorporateActionDate44.ProrationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#ProrationDate
-	 * CorporateActionDate58.ProrationDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmProrationDate
+	 * CorporateActionDate1.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmProrationDate
+	 * CorporateActionDate13.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmProrationDate
+	 * CorporateActionDate14.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmProrationDate
+	 * CorporateActionDate21.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmProrationDate
+	 * CorporateActionDate22.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmProrationDate
+	 * CorporateActionDate25.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmProrationDate
+	 * CorporateActionDate27.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmProrationDate
+	 * CorporateActionDate28.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmProrationDate
+	 * CorporateActionDate2.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmProrationDate
+	 * CorporateActionDate44.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmProrationDate
+	 * CorporateActionDate58.mmProrationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1382,22 +1396,23 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ProrationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProrationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.ProrationDate, com.tools20022.repository.msg.CorporateActionDate13.ProrationDate,
-					com.tools20022.repository.msg.CorporateActionDate14.ProrationDate, com.tools20022.repository.msg.CorporateActionDate21.ProrationDate, com.tools20022.repository.msg.CorporateActionDate22.ProrationDate,
-					com.tools20022.repository.msg.CorporateActionDate25.ProrationDate, com.tools20022.repository.msg.CorporateActionDate27.ProrationDate, com.tools20022.repository.msg.CorporateActionDate28.ProrationDate,
-					com.tools20022.repository.msg.CorporateActionDate2.ProrationDate, com.tools20022.repository.msg.CorporateActionDate44.ProrationDate, com.tools20022.repository.msg.CorporateActionDate58.ProrationDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmProrationDate, com.tools20022.repository.msg.CorporateActionDate13.mmProrationDate,
+					com.tools20022.repository.msg.CorporateActionDate14.mmProrationDate, com.tools20022.repository.msg.CorporateActionDate21.mmProrationDate, com.tools20022.repository.msg.CorporateActionDate22.mmProrationDate,
+					com.tools20022.repository.msg.CorporateActionDate25.mmProrationDate, com.tools20022.repository.msg.CorporateActionDate27.mmProrationDate, com.tools20022.repository.msg.CorporateActionDate28.mmProrationDate,
+					com.tools20022.repository.msg.CorporateActionDate2.mmProrationDate, com.tools20022.repository.msg.CorporateActionDate44.mmProrationDate, com.tools20022.repository.msg.CorporateActionDate58.mmProrationDate);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProrationDate";
 			definition = "Date (and time) at which an issuer will determine the proration amount/quantity of an offer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected DateTimePeriod compulsoryPurchasePeriod;
 	/**
 	 * Period during a take-over where any outstanding equity must be purchased
 	 * by the take-over company.
@@ -1407,8 +1422,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#BiddingConditions
-	 * DateTimePeriod.BiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmBiddingConditions
+	 * DateTimePeriod.mmBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1416,31 +1431,31 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod3#CompulsoryPurchasePeriod
-	 * CorporateActionPeriod3.CompulsoryPurchasePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod6#CompulsoryPurchasePeriod
-	 * CorporateActionPeriod6.CompulsoryPurchasePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod8#CompulsoryPurchasePeriod
-	 * CorporateActionPeriod8.CompulsoryPurchasePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#CompulsoryPurchasePeriod
-	 * CorporateActionPeriod1.CompulsoryPurchasePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#CompulsoryPurchasePeriod
-	 * CorporateActionPeriod10.CompulsoryPurchasePeriod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod3#mmCompulsoryPurchasePeriod
+	 * CorporateActionPeriod3.mmCompulsoryPurchasePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod6#mmCompulsoryPurchasePeriod
+	 * CorporateActionPeriod6.mmCompulsoryPurchasePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod8#mmCompulsoryPurchasePeriod
+	 * CorporateActionPeriod8.mmCompulsoryPurchasePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#mmCompulsoryPurchasePeriod
+	 * CorporateActionPeriod1.mmCompulsoryPurchasePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmCompulsoryPurchasePeriod
+	 * CorporateActionPeriod10.mmCompulsoryPurchasePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1454,23 +1469,24 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CompulsoryPurchasePeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCompulsoryPurchasePeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.CompulsoryPurchasePeriod, com.tools20022.repository.msg.CorporateActionPeriod6.CompulsoryPurchasePeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod8.CompulsoryPurchasePeriod, com.tools20022.repository.msg.CorporateActionPeriod1.CompulsoryPurchasePeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod10.CompulsoryPurchasePeriod);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmCompulsoryPurchasePeriod, com.tools20022.repository.msg.CorporateActionPeriod6.mmCompulsoryPurchasePeriod,
+					com.tools20022.repository.msg.CorporateActionPeriod8.mmCompulsoryPurchasePeriod, com.tools20022.repository.msg.CorporateActionPeriod1.mmCompulsoryPurchasePeriod,
+					com.tools20022.repository.msg.CorporateActionPeriod10.mmCompulsoryPurchasePeriod);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CompulsoryPurchasePeriod";
 			definition = "Period during a take-over where any outstanding equity must be purchased by the take-over company.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriod.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.BiddingConditions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected PercentageRate percentageSought;
 	/**
 	 * Percentage of securities the offeror/issuer will purchase or redeem under
 	 * the terms of the event. This can be a number or the term "any and all".
@@ -1482,55 +1498,55 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate3#PercentageSought
-	 * CorporateActionRate3.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate14#PercentageSought
-	 * CorporateActionRate14.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate16#PercentageSought
-	 * CorporateActionRate16.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate24#PercentageSought
-	 * CorporateActionRate24.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate27#PercentageSought
-	 * CorporateActionRate27.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate32#PercentageSought
-	 * CorporateActionRate32.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate35#PercentageSought
-	 * CorporateActionRate35.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate41#PercentageSought
-	 * CorporateActionRate41.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate1#PercentageSought
-	 * CorporateActionRate1.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#PercentageSought
-	 * CorporateActionRate43.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate56#PercentageSought
-	 * CorporateActionRate56.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#PercentageSought
-	 * CorporateActionRate66.PercentageSought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate78#PercentageSought
-	 * CorporateActionRate78.PercentageSought}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate3#mmPercentageSought
+	 * CorporateActionRate3.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate14#mmPercentageSought
+	 * CorporateActionRate14.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate16#mmPercentageSought
+	 * CorporateActionRate16.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate24#mmPercentageSought
+	 * CorporateActionRate24.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate27#mmPercentageSought
+	 * CorporateActionRate27.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate32#mmPercentageSought
+	 * CorporateActionRate32.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate35#mmPercentageSought
+	 * CorporateActionRate35.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate41#mmPercentageSought
+	 * CorporateActionRate41.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate1#mmPercentageSought
+	 * CorporateActionRate1.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmPercentageSought
+	 * CorporateActionRate43.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate56#mmPercentageSought
+	 * CorporateActionRate56.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmPercentageSought
+	 * CorporateActionRate66.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate78#mmPercentageSought
+	 * CorporateActionRate78.mmPercentageSought}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1544,23 +1560,24 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PercentageSought = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPercentageSought = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate3.PercentageSought, com.tools20022.repository.msg.CorporateActionRate14.PercentageSought,
-					com.tools20022.repository.msg.CorporateActionRate16.PercentageSought, com.tools20022.repository.msg.CorporateActionRate24.PercentageSought, com.tools20022.repository.msg.CorporateActionRate27.PercentageSought,
-					com.tools20022.repository.msg.CorporateActionRate32.PercentageSought, com.tools20022.repository.msg.CorporateActionRate35.PercentageSought, com.tools20022.repository.msg.CorporateActionRate41.PercentageSought,
-					com.tools20022.repository.msg.CorporateActionRate1.PercentageSought, com.tools20022.repository.msg.CorporateActionRate43.PercentageSought, com.tools20022.repository.msg.CorporateActionRate56.PercentageSought,
-					com.tools20022.repository.msg.CorporateActionRate66.PercentageSought, com.tools20022.repository.msg.CorporateActionRate78.PercentageSought);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate3.mmPercentageSought, com.tools20022.repository.msg.CorporateActionRate14.mmPercentageSought,
+					com.tools20022.repository.msg.CorporateActionRate16.mmPercentageSought, com.tools20022.repository.msg.CorporateActionRate24.mmPercentageSought, com.tools20022.repository.msg.CorporateActionRate27.mmPercentageSought,
+					com.tools20022.repository.msg.CorporateActionRate32.mmPercentageSought, com.tools20022.repository.msg.CorporateActionRate35.mmPercentageSought, com.tools20022.repository.msg.CorporateActionRate41.mmPercentageSought,
+					com.tools20022.repository.msg.CorporateActionRate1.mmPercentageSought, com.tools20022.repository.msg.CorporateActionRate43.mmPercentageSought, com.tools20022.repository.msg.CorporateActionRate56.mmPercentageSought,
+					com.tools20022.repository.msg.CorporateActionRate66.mmPercentageSought, com.tools20022.repository.msg.CorporateActionRate78.mmPercentageSought);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PercentageSought";
 			definition = "Percentage of securities the offeror/issuer will purchase or redeem under the terms of the event. This can be a number or the term \"any and all\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount bidInterval;
 	/**
 	 * Acceptable price increment used for submitting a bid.
 	 * <p>
@@ -1571,55 +1588,55 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate3#BidInterval
-	 * CorporateActionRate3.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate14#BidInterval
-	 * CorporateActionRate14.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate16#BidInterval
-	 * CorporateActionRate16.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate24#BidInterval
-	 * CorporateActionRate24.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate27#BidInterval
-	 * CorporateActionRate27.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate32#BidInterval
-	 * CorporateActionRate32.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate35#BidInterval
-	 * CorporateActionRate35.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate41#BidInterval
-	 * CorporateActionRate41.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate1#BidInterval
-	 * CorporateActionRate1.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#BidInterval
-	 * CorporateActionRate43.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate56#BidInterval
-	 * CorporateActionRate56.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#BidInterval
-	 * CorporateActionRate66.BidInterval}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate78#BidInterval
-	 * CorporateActionRate78.BidInterval}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate3#mmBidInterval
+	 * CorporateActionRate3.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate14#mmBidInterval
+	 * CorporateActionRate14.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate16#mmBidInterval
+	 * CorporateActionRate16.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate24#mmBidInterval
+	 * CorporateActionRate24.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate27#mmBidInterval
+	 * CorporateActionRate27.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate32#mmBidInterval
+	 * CorporateActionRate32.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate35#mmBidInterval
+	 * CorporateActionRate35.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate41#mmBidInterval
+	 * CorporateActionRate41.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate1#mmBidInterval
+	 * CorporateActionRate1.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate43#mmBidInterval
+	 * CorporateActionRate43.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate56#mmBidInterval
+	 * CorporateActionRate56.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate66#mmBidInterval
+	 * CorporateActionRate66.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate78#mmBidInterval
+	 * CorporateActionRate78.mmBidInterval}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1631,23 +1648,24 @@ public class BiddingConditions {
 	 * definition} = "Acceptable price increment used for submitting a bid."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BidInterval = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBidInterval = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate3.BidInterval, com.tools20022.repository.msg.CorporateActionRate14.BidInterval,
-					com.tools20022.repository.msg.CorporateActionRate16.BidInterval, com.tools20022.repository.msg.CorporateActionRate24.BidInterval, com.tools20022.repository.msg.CorporateActionRate27.BidInterval,
-					com.tools20022.repository.msg.CorporateActionRate32.BidInterval, com.tools20022.repository.msg.CorporateActionRate35.BidInterval, com.tools20022.repository.msg.CorporateActionRate41.BidInterval,
-					com.tools20022.repository.msg.CorporateActionRate1.BidInterval, com.tools20022.repository.msg.CorporateActionRate43.BidInterval, com.tools20022.repository.msg.CorporateActionRate56.BidInterval,
-					com.tools20022.repository.msg.CorporateActionRate66.BidInterval, com.tools20022.repository.msg.CorporateActionRate78.BidInterval);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate3.mmBidInterval, com.tools20022.repository.msg.CorporateActionRate14.mmBidInterval,
+					com.tools20022.repository.msg.CorporateActionRate16.mmBidInterval, com.tools20022.repository.msg.CorporateActionRate24.mmBidInterval, com.tools20022.repository.msg.CorporateActionRate27.mmBidInterval,
+					com.tools20022.repository.msg.CorporateActionRate32.mmBidInterval, com.tools20022.repository.msg.CorporateActionRate35.mmBidInterval, com.tools20022.repository.msg.CorporateActionRate41.mmBidInterval,
+					com.tools20022.repository.msg.CorporateActionRate1.mmBidInterval, com.tools20022.repository.msg.CorporateActionRate43.mmBidInterval, com.tools20022.repository.msg.CorporateActionRate56.mmBidInterval,
+					com.tools20022.repository.msg.CorporateActionRate66.mmBidInterval, com.tools20022.repository.msg.CorporateActionRate78.mmBidInterval);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BidInterval";
 			definition = "Acceptable price increment used for submitting a bid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected SecuritiesPricing maximumPrice;
 	/**
 	 * Maximum or cap price at which a holder can bid, e.g. on a Dutch auction
 	 * offer.
@@ -1657,8 +1675,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#MaximumPriceBiddingConditions
-	 * SecuritiesPricing.MaximumPriceBiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMaximumPriceBiddingConditions
+	 * SecuritiesPricing.mmMaximumPriceBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1666,43 +1684,43 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice3#MaximumPrice
-	 * CorporateActionPrice3.MaximumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice15#MaximumPrice
-	 * CorporateActionPrice15.MaximumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice17#MaximumPrice
-	 * CorporateActionPrice17.MaximumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice25#MaximumPrice
-	 * CorporateActionPrice25.MaximumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice2#MaximumPrice
-	 * CorporateActionPrice2.MaximumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice42#MaximumPrice
-	 * CorporateActionPrice42.MaximumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice50#MaximumPrice
-	 * CorporateActionPrice50.MaximumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice57#MaximumPrice
-	 * CorporateActionPrice57.MaximumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice67#MaximumPrice
-	 * CorporateActionPrice67.MaximumPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice3#mmMaximumPrice
+	 * CorporateActionPrice3.mmMaximumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice15#mmMaximumPrice
+	 * CorporateActionPrice15.mmMaximumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice17#mmMaximumPrice
+	 * CorporateActionPrice17.mmMaximumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice25#mmMaximumPrice
+	 * CorporateActionPrice25.mmMaximumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice2#mmMaximumPrice
+	 * CorporateActionPrice2.mmMaximumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice42#mmMaximumPrice
+	 * CorporateActionPrice42.mmMaximumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice50#mmMaximumPrice
+	 * CorporateActionPrice50.mmMaximumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice57#mmMaximumPrice
+	 * CorporateActionPrice57.mmMaximumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice67#mmMaximumPrice
+	 * CorporateActionPrice67.mmMaximumPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1716,24 +1734,25 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MaximumPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMaximumPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice3.MaximumPrice, com.tools20022.repository.msg.CorporateActionPrice15.MaximumPrice,
-					com.tools20022.repository.msg.CorporateActionPrice17.MaximumPrice, com.tools20022.repository.msg.CorporateActionPrice25.MaximumPrice, com.tools20022.repository.msg.CorporateActionPrice2.MaximumPrice,
-					com.tools20022.repository.msg.CorporateActionPrice42.MaximumPrice, com.tools20022.repository.msg.CorporateActionPrice50.MaximumPrice, com.tools20022.repository.msg.CorporateActionPrice57.MaximumPrice,
-					com.tools20022.repository.msg.CorporateActionPrice67.MaximumPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice3.mmMaximumPrice, com.tools20022.repository.msg.CorporateActionPrice15.mmMaximumPrice,
+					com.tools20022.repository.msg.CorporateActionPrice17.mmMaximumPrice, com.tools20022.repository.msg.CorporateActionPrice25.mmMaximumPrice, com.tools20022.repository.msg.CorporateActionPrice2.mmMaximumPrice,
+					com.tools20022.repository.msg.CorporateActionPrice42.mmMaximumPrice, com.tools20022.repository.msg.CorporateActionPrice50.mmMaximumPrice, com.tools20022.repository.msg.CorporateActionPrice57.mmMaximumPrice,
+					com.tools20022.repository.msg.CorporateActionPrice67.mmMaximumPrice);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumPrice";
 			definition = "Maximum or cap price at which a holder can bid, e.g. on a Dutch auction offer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.MaximumPriceBiddingConditions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmMaximumPriceBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected SecuritiesPricing minimumPrice;
 	/**
 	 * Minimum or floor price at which a holder can bid, e.g. on a Dutch auction
 	 * offer.
@@ -1743,8 +1762,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#MinimumPriceBiddingConditions
-	 * SecuritiesPricing.MinimumPriceBiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmMinimumPriceBiddingConditions
+	 * SecuritiesPricing.mmMinimumPriceBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1752,43 +1771,43 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice3#MinimumPrice
-	 * CorporateActionPrice3.MinimumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice15#MinimumPrice
-	 * CorporateActionPrice15.MinimumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice17#MinimumPrice
-	 * CorporateActionPrice17.MinimumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice25#MinimumPrice
-	 * CorporateActionPrice25.MinimumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice2#MinimumPrice
-	 * CorporateActionPrice2.MinimumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice42#MinimumPrice
-	 * CorporateActionPrice42.MinimumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice50#MinimumPrice
-	 * CorporateActionPrice50.MinimumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice57#MinimumPrice
-	 * CorporateActionPrice57.MinimumPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice67#MinimumPrice
-	 * CorporateActionPrice67.MinimumPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice3#mmMinimumPrice
+	 * CorporateActionPrice3.mmMinimumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice15#mmMinimumPrice
+	 * CorporateActionPrice15.mmMinimumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice17#mmMinimumPrice
+	 * CorporateActionPrice17.mmMinimumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice25#mmMinimumPrice
+	 * CorporateActionPrice25.mmMinimumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice2#mmMinimumPrice
+	 * CorporateActionPrice2.mmMinimumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice42#mmMinimumPrice
+	 * CorporateActionPrice42.mmMinimumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice50#mmMinimumPrice
+	 * CorporateActionPrice50.mmMinimumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice57#mmMinimumPrice
+	 * CorporateActionPrice57.mmMinimumPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice67#mmMinimumPrice
+	 * CorporateActionPrice67.mmMinimumPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1802,24 +1821,25 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MinimumPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMinimumPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice3.MinimumPrice, com.tools20022.repository.msg.CorporateActionPrice15.MinimumPrice,
-					com.tools20022.repository.msg.CorporateActionPrice17.MinimumPrice, com.tools20022.repository.msg.CorporateActionPrice25.MinimumPrice, com.tools20022.repository.msg.CorporateActionPrice2.MinimumPrice,
-					com.tools20022.repository.msg.CorporateActionPrice42.MinimumPrice, com.tools20022.repository.msg.CorporateActionPrice50.MinimumPrice, com.tools20022.repository.msg.CorporateActionPrice57.MinimumPrice,
-					com.tools20022.repository.msg.CorporateActionPrice67.MinimumPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice3.mmMinimumPrice, com.tools20022.repository.msg.CorporateActionPrice15.mmMinimumPrice,
+					com.tools20022.repository.msg.CorporateActionPrice17.mmMinimumPrice, com.tools20022.repository.msg.CorporateActionPrice25.mmMinimumPrice, com.tools20022.repository.msg.CorporateActionPrice2.mmMinimumPrice,
+					com.tools20022.repository.msg.CorporateActionPrice42.mmMinimumPrice, com.tools20022.repository.msg.CorporateActionPrice50.mmMinimumPrice, com.tools20022.repository.msg.CorporateActionPrice57.mmMinimumPrice,
+					com.tools20022.repository.msg.CorporateActionPrice67.mmMinimumPrice);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MinimumPrice";
 			definition = "Minimum or floor price at which a holder can bid, e.g. on a Dutch auction offer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.MinimumPriceBiddingConditions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmMinimumPriceBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected SecuritiesQuantity maximumQuantity;
 	/**
 	 * Maximum number of securities the offeror is requesting to complete the
 	 * event.
@@ -1829,8 +1849,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#MaximumQuantityBiddingConditions
-	 * SecuritiesQuantity.MaximumQuantityBiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumQuantityBiddingConditions
+	 * SecuritiesQuantity.mmMaximumQuantityBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1838,40 +1858,40 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity1#MaximumQuantity
-	 * CorporateActionQuantity1.MaximumQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity2#MaximumQuantity
-	 * CorporateActionQuantity2.MaximumQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity3#MaximumQuantity
-	 * CorporateActionQuantity3.MaximumQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4#MaximumQuantity
-	 * CorporateActionQuantity4.MaximumQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity5#MaximumQuantity
-	 * CorporateActionQuantity5.MaximumQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity6#MaximumQuantity
-	 * CorporateActionQuantity6.MaximumQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity7#MaximumQuantity
-	 * CorporateActionQuantity7.MaximumQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#MaximumQuantity
-	 * CorporateActionQuantity8.MaximumQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity1#mmMaximumQuantity
+	 * CorporateActionQuantity1.mmMaximumQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity2#mmMaximumQuantity
+	 * CorporateActionQuantity2.mmMaximumQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity3#mmMaximumQuantity
+	 * CorporateActionQuantity3.mmMaximumQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4#mmMaximumQuantity
+	 * CorporateActionQuantity4.mmMaximumQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity5#mmMaximumQuantity
+	 * CorporateActionQuantity5.mmMaximumQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity6#mmMaximumQuantity
+	 * CorporateActionQuantity6.mmMaximumQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity7#mmMaximumQuantity
+	 * CorporateActionQuantity7.mmMaximumQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#mmMaximumQuantity
+	 * CorporateActionQuantity8.mmMaximumQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1885,23 +1905,25 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MaximumQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMaximumQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity1.MaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity2.MaximumQuantity,
-					com.tools20022.repository.msg.CorporateActionQuantity3.MaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity4.MaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity5.MaximumQuantity,
-					com.tools20022.repository.msg.CorporateActionQuantity6.MaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity7.MaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity8.MaximumQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity1.mmMaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity2.mmMaximumQuantity,
+					com.tools20022.repository.msg.CorporateActionQuantity3.mmMaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity4.mmMaximumQuantity,
+					com.tools20022.repository.msg.CorporateActionQuantity5.mmMaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity6.mmMaximumQuantity,
+					com.tools20022.repository.msg.CorporateActionQuantity7.mmMaximumQuantity, com.tools20022.repository.msg.CorporateActionQuantity8.mmMaximumQuantity);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumQuantity";
 			definition = "Maximum number of securities the offeror is requesting to complete the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.MaximumQuantityBiddingConditions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumQuantityBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected SecuritiesQuantity minimumQuantitySought;
 	/**
 	 * Minimum quantity of securities the offeror/issuer will purchase or redeem
 	 * under the terms of the event. This can be a number or the term
@@ -1912,8 +1934,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#MinimumQuantityBiddingConditions
-	 * SecuritiesQuantity.MinimumQuantityBiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityBiddingConditions
+	 * SecuritiesQuantity.mmMinimumQuantityBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1921,40 +1943,40 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity1#MinimumQuantitySought
-	 * CorporateActionQuantity1.MinimumQuantitySought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity2#MinimumQuantitySought
-	 * CorporateActionQuantity2.MinimumQuantitySought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity3#MinimumQuantitySought
-	 * CorporateActionQuantity3.MinimumQuantitySought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4#MinimumQuantitySought
-	 * CorporateActionQuantity4.MinimumQuantitySought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity5#MinimumQuantitySought
-	 * CorporateActionQuantity5.MinimumQuantitySought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity6#MinimumQuantitySought
-	 * CorporateActionQuantity6.MinimumQuantitySought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity7#MinimumQuantitySought
-	 * CorporateActionQuantity7.MinimumQuantitySought}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#MinimumQuantitySought
-	 * CorporateActionQuantity8.MinimumQuantitySought}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity1#mmMinimumQuantitySought
+	 * CorporateActionQuantity1.mmMinimumQuantitySought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity2#mmMinimumQuantitySought
+	 * CorporateActionQuantity2.mmMinimumQuantitySought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity3#mmMinimumQuantitySought
+	 * CorporateActionQuantity3.mmMinimumQuantitySought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4#mmMinimumQuantitySought
+	 * CorporateActionQuantity4.mmMinimumQuantitySought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity5#mmMinimumQuantitySought
+	 * CorporateActionQuantity5.mmMinimumQuantitySought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity6#mmMinimumQuantitySought
+	 * CorporateActionQuantity6.mmMinimumQuantitySought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity7#mmMinimumQuantitySought
+	 * CorporateActionQuantity7.mmMinimumQuantitySought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#mmMinimumQuantitySought
+	 * CorporateActionQuantity8.mmMinimumQuantitySought}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1968,24 +1990,25 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MinimumQuantitySought = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMinimumQuantitySought = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity1.MinimumQuantitySought, com.tools20022.repository.msg.CorporateActionQuantity2.MinimumQuantitySought,
-					com.tools20022.repository.msg.CorporateActionQuantity3.MinimumQuantitySought, com.tools20022.repository.msg.CorporateActionQuantity4.MinimumQuantitySought,
-					com.tools20022.repository.msg.CorporateActionQuantity5.MinimumQuantitySought, com.tools20022.repository.msg.CorporateActionQuantity6.MinimumQuantitySought,
-					com.tools20022.repository.msg.CorporateActionQuantity7.MinimumQuantitySought, com.tools20022.repository.msg.CorporateActionQuantity8.MinimumQuantitySought);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity1.mmMinimumQuantitySought, com.tools20022.repository.msg.CorporateActionQuantity2.mmMinimumQuantitySought,
+					com.tools20022.repository.msg.CorporateActionQuantity3.mmMinimumQuantitySought, com.tools20022.repository.msg.CorporateActionQuantity4.mmMinimumQuantitySought,
+					com.tools20022.repository.msg.CorporateActionQuantity5.mmMinimumQuantitySought, com.tools20022.repository.msg.CorporateActionQuantity6.mmMinimumQuantitySought,
+					com.tools20022.repository.msg.CorporateActionQuantity7.mmMinimumQuantitySought, com.tools20022.repository.msg.CorporateActionQuantity8.mmMinimumQuantitySought);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantitySought";
 			definition = "Minimum quantity of securities the offeror/issuer will purchase or redeem under the terms of the event. This can be a number or the term \"any and all\".";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.MinimumQuantityBiddingConditions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected SecuritiesQuantity baseDenomination;
 	/**
 	 * The minimum integral amount of securities that each account owner must
 	 * have remaining after the called amounts are applied.
@@ -1995,8 +2018,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#BiddingConditions
-	 * SecuritiesQuantity.BiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBiddingConditions
+	 * SecuritiesQuantity.mmBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2004,46 +2027,46 @@ public class BiddingConditions {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity1#BaseDenomination
-	 * CorporateActionQuantity1.BaseDenomination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity2#BaseDenomination
-	 * CorporateActionQuantity2.BaseDenomination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity3#BaseDenomination
-	 * CorporateActionQuantity3.BaseDenomination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4#BaseDenomination
-	 * CorporateActionQuantity4.BaseDenomination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity5#BaseDenomination
-	 * CorporateActionQuantity5.BaseDenomination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity6#BaseDenomination
-	 * CorporateActionQuantity6.BaseDenomination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#BaseDenomination
-	 * CorporateAction2.BaseDenomination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity7#BaseDenomination
-	 * CorporateActionQuantity7.BaseDenomination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#BaseDenomination
-	 * CorporateActionQuantity8.BaseDenomination}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantitySD2#BaseDenomination
-	 * CorporateActionQuantitySD2.BaseDenomination}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity1#mmBaseDenomination
+	 * CorporateActionQuantity1.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity2#mmBaseDenomination
+	 * CorporateActionQuantity2.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity3#mmBaseDenomination
+	 * CorporateActionQuantity3.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4#mmBaseDenomination
+	 * CorporateActionQuantity4.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity5#mmBaseDenomination
+	 * CorporateActionQuantity5.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity6#mmBaseDenomination
+	 * CorporateActionQuantity6.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#mmBaseDenomination
+	 * CorporateAction2.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity7#mmBaseDenomination
+	 * CorporateActionQuantity7.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity8#mmBaseDenomination
+	 * CorporateActionQuantity8.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantitySD2#mmBaseDenomination
+	 * CorporateActionQuantitySD2.mmBaseDenomination}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2057,24 +2080,26 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd BaseDenomination = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmBaseDenomination = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity1.BaseDenomination, com.tools20022.repository.msg.CorporateActionQuantity2.BaseDenomination,
-					com.tools20022.repository.msg.CorporateActionQuantity3.BaseDenomination, com.tools20022.repository.msg.CorporateActionQuantity4.BaseDenomination, com.tools20022.repository.msg.CorporateActionQuantity5.BaseDenomination,
-					com.tools20022.repository.msg.CorporateActionQuantity6.BaseDenomination, com.tools20022.repository.msg.CorporateAction2.BaseDenomination, com.tools20022.repository.msg.CorporateActionQuantity7.BaseDenomination,
-					com.tools20022.repository.msg.CorporateActionQuantity8.BaseDenomination, com.tools20022.repository.msg.CorporateActionQuantitySD2.BaseDenomination);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity1.mmBaseDenomination, com.tools20022.repository.msg.CorporateActionQuantity2.mmBaseDenomination,
+					com.tools20022.repository.msg.CorporateActionQuantity3.mmBaseDenomination, com.tools20022.repository.msg.CorporateActionQuantity4.mmBaseDenomination,
+					com.tools20022.repository.msg.CorporateActionQuantity5.mmBaseDenomination, com.tools20022.repository.msg.CorporateActionQuantity6.mmBaseDenomination, com.tools20022.repository.msg.CorporateAction2.mmBaseDenomination,
+					com.tools20022.repository.msg.CorporateActionQuantity7.mmBaseDenomination, com.tools20022.repository.msg.CorporateActionQuantity8.mmBaseDenomination,
+					com.tools20022.repository.msg.CorporateActionQuantitySD2.mmBaseDenomination);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BaseDenomination";
 			definition = "The minimum integral amount of securities that each account owner must have remaining after the called amounts are applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.BiddingConditions;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected CorporateActionCalculationMethodCode calculationMethod;
 	/**
 	 * The method of calculation of drawings and partial redemptions.
 	 * <p>
@@ -2085,19 +2110,19 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethodCode
 	 * CorporateActionCalculationMethodCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#CalculationMethod
-	 * CorporateAction2.CalculationMethod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#mmCalculationMethod
+	 * CorporateAction2.mmCalculationMethod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2110,19 +2135,20 @@ public class BiddingConditions {
 	 * "The method of calculation of drawings and partial redemptions."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CalculationMethod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCalculationMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction2.CalculationMethod);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction2.mmCalculationMethod);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CalculationMethod";
 			definition = "The method of calculation of drawings and partial redemptions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionCalculationMethodCode.mmObject();
 		}
 	};
+	protected CurrencyAndAmount additionalSubscriptionCost;
 	/**
 	 * Additional costs - coming on top of the subscription costs - which the
 	 * subscriber should pay as per the subscription process.
@@ -2134,19 +2160,19 @@ public class BiddingConditions {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts1#AdditionalSubscriptionCost
-	 * CorporateActionAmounts1.AdditionalSubscriptionCost}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.BiddingConditions
 	 * BiddingConditions}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts1#mmAdditionalSubscriptionCost
+	 * CorporateActionAmounts1.mmAdditionalSubscriptionCost}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2160,19 +2186,20 @@ public class BiddingConditions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AdditionalSubscriptionCost = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAdditionalSubscriptionCost = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts1.AdditionalSubscriptionCost);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts1.mmAdditionalSubscriptionCost);
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AdditionalSubscriptionCost";
 			definition = "Additional costs - coming on top of the subscription costs - which the subscriber should pay as per the subscription process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CorporateActionEvent event;
 	/**
 	 * Event to which the bidding conditions apply.
 	 * <p>
@@ -2181,8 +2208,8 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#BiddingConditions
-	 * CorporateActionEvent.BiddingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBiddingConditions
+	 * CorporateActionEvent.mmBiddingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2207,45 +2234,222 @@ public class BiddingConditions {
 	 * definition} = "Event to which the bidding conditions apply."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Event = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmEvent = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> BiddingConditions.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Event";
 			definition = "Event to which the bidding conditions apply.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionEvent.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.BiddingConditions;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmBiddingConditions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BiddingConditions";
 				definition = "Specifies the conditions under which securities can be acquired as part of a corporate action.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.MaximumPriceBiddingConditions, com.tools20022.repository.entity.SecuritiesPricing.MinimumPriceBiddingConditions,
-						com.tools20022.repository.entity.DateTimePeriod.BiddingConditions, com.tools20022.repository.entity.SecuritiesQuantity.BackEndOddLotBiddingConditions,
-						com.tools20022.repository.entity.SecuritiesQuantity.BiddingConditions, com.tools20022.repository.entity.SecuritiesQuantity.MaximumQuantityBiddingConditions,
-						com.tools20022.repository.entity.SecuritiesQuantity.FrontEndOddLotBiddingConditions, com.tools20022.repository.entity.SecuritiesQuantity.MinimumQuantityBiddingConditions,
-						com.tools20022.repository.entity.CorporateActionEvent.BiddingConditions, com.tools20022.repository.entity.RateAndAmount.MaximumAllowedBiddingConditions,
-						com.tools20022.repository.entity.RateAndAmount.RateBiddingConditions);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BiddingConditions.ProposedRate, com.tools20022.repository.entity.BiddingConditions.OversubscriptionRate,
-						com.tools20022.repository.entity.BiddingConditions.InformationToComplyWith, com.tools20022.repository.entity.BiddingConditions.SubscriptionCostDebitDate,
-						com.tools20022.repository.entity.BiddingConditions.MaximumAllowedOverSubscription, com.tools20022.repository.entity.BiddingConditions.ProrationRate, com.tools20022.repository.entity.BiddingConditions.ApplicableRate,
-						com.tools20022.repository.entity.BiddingConditions.FrontEndOddLotQuantity, com.tools20022.repository.entity.BiddingConditions.BackEndOddLotQuantity,
-						com.tools20022.repository.entity.BiddingConditions.TransformationRate, com.tools20022.repository.entity.BiddingConditions.ProrationDate, com.tools20022.repository.entity.BiddingConditions.CompulsoryPurchasePeriod,
-						com.tools20022.repository.entity.BiddingConditions.PercentageSought, com.tools20022.repository.entity.BiddingConditions.BidInterval, com.tools20022.repository.entity.BiddingConditions.MaximumPrice,
-						com.tools20022.repository.entity.BiddingConditions.MinimumPrice, com.tools20022.repository.entity.BiddingConditions.MaximumQuantity, com.tools20022.repository.entity.BiddingConditions.MinimumQuantitySought,
-						com.tools20022.repository.entity.BiddingConditions.BaseDenomination, com.tools20022.repository.entity.BiddingConditions.CalculationMethod,
-						com.tools20022.repository.entity.BiddingConditions.AdditionalSubscriptionCost, com.tools20022.repository.entity.BiddingConditions.Event);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmMaximumPriceBiddingConditions, com.tools20022.repository.entity.SecuritiesPricing.mmMinimumPriceBiddingConditions,
+						com.tools20022.repository.entity.DateTimePeriod.mmBiddingConditions, com.tools20022.repository.entity.SecuritiesQuantity.mmBackEndOddLotBiddingConditions,
+						com.tools20022.repository.entity.SecuritiesQuantity.mmBiddingConditions, com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumQuantityBiddingConditions,
+						com.tools20022.repository.entity.SecuritiesQuantity.mmFrontEndOddLotBiddingConditions, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityBiddingConditions,
+						com.tools20022.repository.entity.CorporateActionEvent.mmBiddingConditions, com.tools20022.repository.entity.RateAndAmount.mmMaximumAllowedBiddingConditions,
+						com.tools20022.repository.entity.RateAndAmount.mmRateBiddingConditions);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BiddingConditions.mmProposedRate, com.tools20022.repository.entity.BiddingConditions.mmOversubscriptionRate,
+						com.tools20022.repository.entity.BiddingConditions.mmInformationToComplyWith, com.tools20022.repository.entity.BiddingConditions.mmSubscriptionCostDebitDate,
+						com.tools20022.repository.entity.BiddingConditions.mmMaximumAllowedOverSubscription, com.tools20022.repository.entity.BiddingConditions.mmProrationRate,
+						com.tools20022.repository.entity.BiddingConditions.mmApplicableRate, com.tools20022.repository.entity.BiddingConditions.mmFrontEndOddLotQuantity,
+						com.tools20022.repository.entity.BiddingConditions.mmBackEndOddLotQuantity, com.tools20022.repository.entity.BiddingConditions.mmTransformationRate,
+						com.tools20022.repository.entity.BiddingConditions.mmProrationDate, com.tools20022.repository.entity.BiddingConditions.mmCompulsoryPurchasePeriod,
+						com.tools20022.repository.entity.BiddingConditions.mmPercentageSought, com.tools20022.repository.entity.BiddingConditions.mmBidInterval, com.tools20022.repository.entity.BiddingConditions.mmMaximumPrice,
+						com.tools20022.repository.entity.BiddingConditions.mmMinimumPrice, com.tools20022.repository.entity.BiddingConditions.mmMaximumQuantity, com.tools20022.repository.entity.BiddingConditions.mmMinimumQuantitySought,
+						com.tools20022.repository.entity.BiddingConditions.mmBaseDenomination, com.tools20022.repository.entity.BiddingConditions.mmCalculationMethod,
+						com.tools20022.repository.entity.BiddingConditions.mmAdditionalSubscriptionCost, com.tools20022.repository.entity.BiddingConditions.mmEvent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getProposedRate() {
+		return proposedRate;
+	}
+
+	public void setProposedRate(PercentageRate proposedRate) {
+		this.proposedRate = proposedRate;
+	}
+
+	public PercentageRate getOversubscriptionRate() {
+		return oversubscriptionRate;
+	}
+
+	public void setOversubscriptionRate(PercentageRate oversubscriptionRate) {
+		this.oversubscriptionRate = oversubscriptionRate;
+	}
+
+	public Max350Text getInformationToComplyWith() {
+		return informationToComplyWith;
+	}
+
+	public void setInformationToComplyWith(Max350Text informationToComplyWith) {
+		this.informationToComplyWith = informationToComplyWith;
+	}
+
+	public ISODateTime getSubscriptionCostDebitDate() {
+		return subscriptionCostDebitDate;
+	}
+
+	public void setSubscriptionCostDebitDate(ISODateTime subscriptionCostDebitDate) {
+		this.subscriptionCostDebitDate = subscriptionCostDebitDate;
+	}
+
+	public RateAndAmount getMaximumAllowedOverSubscription() {
+		return maximumAllowedOverSubscription;
+	}
+
+	public void setMaximumAllowedOverSubscription(com.tools20022.repository.entity.RateAndAmount maximumAllowedOverSubscription) {
+		this.maximumAllowedOverSubscription = maximumAllowedOverSubscription;
+	}
+
+	public PercentageRate getProrationRate() {
+		return prorationRate;
+	}
+
+	public void setProrationRate(PercentageRate prorationRate) {
+		this.prorationRate = prorationRate;
+	}
+
+	public RateAndAmount getApplicableRate() {
+		return applicableRate;
+	}
+
+	public void setApplicableRate(com.tools20022.repository.entity.RateAndAmount applicableRate) {
+		this.applicableRate = applicableRate;
+	}
+
+	public SecuritiesQuantity getFrontEndOddLotQuantity() {
+		return frontEndOddLotQuantity;
+	}
+
+	public void setFrontEndOddLotQuantity(com.tools20022.repository.entity.SecuritiesQuantity frontEndOddLotQuantity) {
+		this.frontEndOddLotQuantity = frontEndOddLotQuantity;
+	}
+
+	public SecuritiesQuantity getBackEndOddLotQuantity() {
+		return backEndOddLotQuantity;
+	}
+
+	public void setBackEndOddLotQuantity(com.tools20022.repository.entity.SecuritiesQuantity backEndOddLotQuantity) {
+		this.backEndOddLotQuantity = backEndOddLotQuantity;
+	}
+
+	public PercentageRate getTransformationRate() {
+		return transformationRate;
+	}
+
+	public void setTransformationRate(PercentageRate transformationRate) {
+		this.transformationRate = transformationRate;
+	}
+
+	public ISODateTime getProrationDate() {
+		return prorationDate;
+	}
+
+	public void setProrationDate(ISODateTime prorationDate) {
+		this.prorationDate = prorationDate;
+	}
+
+	public DateTimePeriod getCompulsoryPurchasePeriod() {
+		return compulsoryPurchasePeriod;
+	}
+
+	public void setCompulsoryPurchasePeriod(com.tools20022.repository.entity.DateTimePeriod compulsoryPurchasePeriod) {
+		this.compulsoryPurchasePeriod = compulsoryPurchasePeriod;
+	}
+
+	public PercentageRate getPercentageSought() {
+		return percentageSought;
+	}
+
+	public void setPercentageSought(PercentageRate percentageSought) {
+		this.percentageSought = percentageSought;
+	}
+
+	public CurrencyAndAmount getBidInterval() {
+		return bidInterval;
+	}
+
+	public void setBidInterval(CurrencyAndAmount bidInterval) {
+		this.bidInterval = bidInterval;
+	}
+
+	public SecuritiesPricing getMaximumPrice() {
+		return maximumPrice;
+	}
+
+	public void setMaximumPrice(com.tools20022.repository.entity.SecuritiesPricing maximumPrice) {
+		this.maximumPrice = maximumPrice;
+	}
+
+	public SecuritiesPricing getMinimumPrice() {
+		return minimumPrice;
+	}
+
+	public void setMinimumPrice(com.tools20022.repository.entity.SecuritiesPricing minimumPrice) {
+		this.minimumPrice = minimumPrice;
+	}
+
+	public SecuritiesQuantity getMaximumQuantity() {
+		return maximumQuantity;
+	}
+
+	public void setMaximumQuantity(com.tools20022.repository.entity.SecuritiesQuantity maximumQuantity) {
+		this.maximumQuantity = maximumQuantity;
+	}
+
+	public SecuritiesQuantity getMinimumQuantitySought() {
+		return minimumQuantitySought;
+	}
+
+	public void setMinimumQuantitySought(com.tools20022.repository.entity.SecuritiesQuantity minimumQuantitySought) {
+		this.minimumQuantitySought = minimumQuantitySought;
+	}
+
+	public SecuritiesQuantity getBaseDenomination() {
+		return baseDenomination;
+	}
+
+	public void setBaseDenomination(com.tools20022.repository.entity.SecuritiesQuantity baseDenomination) {
+		this.baseDenomination = baseDenomination;
+	}
+
+	public CorporateActionCalculationMethodCode getCalculationMethod() {
+		return calculationMethod;
+	}
+
+	public void setCalculationMethod(CorporateActionCalculationMethodCode calculationMethod) {
+		this.calculationMethod = calculationMethod;
+	}
+
+	public CurrencyAndAmount getAdditionalSubscriptionCost() {
+		return additionalSubscriptionCost;
+	}
+
+	public void setAdditionalSubscriptionCost(CurrencyAndAmount additionalSubscriptionCost) {
+		this.additionalSubscriptionCost = additionalSubscriptionCost;
+	}
+
+	public CorporateActionEvent getEvent() {
+		return event;
+	}
+
+	public void setEvent(com.tools20022.repository.entity.CorporateActionEvent event) {
+		this.event = event;
 	}
 }

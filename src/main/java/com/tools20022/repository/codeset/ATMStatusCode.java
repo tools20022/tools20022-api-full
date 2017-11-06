@@ -29,17 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#InService
- * ATMStatusCode.InService}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#OutOfService
- * ATMStatusCode.OutOfService}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#InOperation
- * ATMStatusCode.InOperation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#Stopped
- * ATMStatusCode.Stopped}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmInService
+ * ATMStatusCode.mmInService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMStatusCode#WaitingActivation
- * ATMStatusCode.WaitingActivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmOutOfService
+ * ATMStatusCode.mmOutOfService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmInOperation
+ * ATMStatusCode.mmInOperation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmStopped
+ * ATMStatusCode.mmStopped}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmWaitingActivation
+ * ATMStatusCode.mmWaitingActivation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,7 +95,7 @@ public class ATMStatusCode {
 	 * definition} = "Component is in service."</li>
 	 * </ul>
 	 */
-	public static final MMCode InService = new MMCode() {
+	public static final MMCode mmInService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InService";
@@ -123,7 +125,7 @@ public class ATMStatusCode {
 	 * definition} = "ATM out of service."</li>
 	 * </ul>
 	 */
-	public static final MMCode OutOfService = new MMCode() {
+	public static final MMCode mmOutOfService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfService";
@@ -153,7 +155,7 @@ public class ATMStatusCode {
 	 * definition} = "Component is activated and in operation."</li>
 	 * </ul>
 	 */
-	public static final MMCode InOperation = new MMCode() {
+	public static final MMCode mmInOperation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InOperation";
@@ -183,7 +185,7 @@ public class ATMStatusCode {
 	 * definition} = "Component has been stopped."</li>
 	 * </ul>
 	 */
-	public static final MMCode Stopped = new MMCode() {
+	public static final MMCode mmStopped = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stopped";
@@ -213,7 +215,7 @@ public class ATMStatusCode {
 	 * definition} = "Component has been loaded, but not yet activated."</li>
 	 * </ul>
 	 */
-	public static final MMCode WaitingActivation = new MMCode() {
+	public static final MMCode mmWaitingActivation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingActivation";
@@ -226,12 +228,12 @@ public class ATMStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMStatusCode";
 				definition = "Required status of the ATM, parameters of the status update command.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatusCode.InService, com.tools20022.repository.codeset.ATMStatusCode.OutOfService, com.tools20022.repository.codeset.ATMStatusCode.InOperation,
-						com.tools20022.repository.codeset.ATMStatusCode.Stopped, com.tools20022.repository.codeset.ATMStatusCode.WaitingActivation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatusCode.mmInService, com.tools20022.repository.codeset.ATMStatusCode.mmOutOfService, com.tools20022.repository.codeset.ATMStatusCode.mmInOperation,
+						com.tools20022.repository.codeset.ATMStatusCode.mmStopped, com.tools20022.repository.codeset.ATMStatusCode.mmWaitingActivation);
 				derivation_lazy = () -> Arrays.asList(ATMStatus1Code.mmObject(), ATMStatus2Code.mmObject(), ATMStatus3Code.mmObject());
 			}
 		});

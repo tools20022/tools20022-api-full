@@ -29,19 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus1Code#Booked
- * EntryStatus1Code.Booked}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus1Code#Pending
- * EntryStatus1Code.Pending}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus1Code#Future
- * EntryStatus1Code.Future}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus1Code#mmBooked
+ * EntryStatus1Code.mmBooked}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus1Code#mmPending
+ * EntryStatus1Code.mmPending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus1Code#mmFuture
+ * EntryStatus1Code.mmFuture}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class EntryStatus1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Booked = new MMCode() {
+	public static final MMCode mmBooked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Booked";
@@ -118,7 +118,7 @@ public class EntryStatus1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Pending";
@@ -151,7 +151,7 @@ public class EntryStatus1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Future = new MMCode() {
+	public static final MMCode mmFuture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Future";
@@ -164,12 +164,12 @@ public class EntryStatus1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOOK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EntryStatus1Code";
 				definition = "Specifies the status of an entry.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus1Code.Booked, com.tools20022.repository.codeset.EntryStatus1Code.Pending, com.tools20022.repository.codeset.EntryStatus1Code.Future);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus1Code.mmBooked, com.tools20022.repository.codeset.EntryStatus1Code.mmPending, com.tools20022.repository.codeset.EntryStatus1Code.mmFuture);
 			}
 		});
 		return mmObject_lazy.get();

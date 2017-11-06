@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentStatusCodeChoice#PendingStatus
- * PaymentStatusCodeChoice.PendingStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentStatusCodeChoice#mmPendingStatus
+ * PaymentStatusCodeChoice.mmPendingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentStatusCodeChoice#FinalStatus
- * PaymentStatusCodeChoice.FinalStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentStatusCodeChoice#mmFinalStatus
+ * PaymentStatusCodeChoice.mmFinalStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentStatusCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PendingStatus1Code pendingStatus;
 	/**
 	 * Qualifies further the pending status.
 	 * <p>
@@ -76,8 +77,8 @@ public class PaymentStatusCodeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#InstructionStatus
-	 * PaymentStatus.InstructionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmInstructionStatus
+	 * PaymentStatus.mmInstructionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class PaymentStatusCodeChoice {
 	 * definition} = "Qualifies further the pending status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PendingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPendingStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> PaymentStatusCodeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.InstructionStatus;
 			isDerived = false;
 			xmlTag = "PdgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingStatus";
 			definition = "Qualifies further the pending status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PendingStatus1Code.mmObject();
 		}
 	};
+	protected FinalStatusCode finalStatus;
 	/**
 	 * Qualifies further the final status.
 	 * <p>
@@ -123,8 +125,8 @@ public class PaymentStatusCodeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#InstructionStatus
-	 * PaymentStatus.InstructionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmInstructionStatus
+	 * PaymentStatus.mmInstructionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class PaymentStatusCodeChoice {
 	 * definition} = "Qualifies further the final status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinalStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinalStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> PaymentStatusCodeChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.InstructionStatus;
 			isDerived = false;
 			xmlTag = "FnlSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalStatus";
 			definition = "Qualifies further the final status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FinalStatusCode.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class PaymentStatusCodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusCodeChoice.PendingStatus, com.tools20022.repository.choice.PaymentStatusCodeChoice.FinalStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusCodeChoice.mmPendingStatus, com.tools20022.repository.choice.PaymentStatusCodeChoice.mmFinalStatus);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentStatusCodeChoice";
 				definition = "Choice between a list of pending statuses or final statuses.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PendingStatus1Code getPendingStatus() {
+		return pendingStatus;
+	}
+
+	public void setPendingStatus(PendingStatus1Code pendingStatus) {
+		this.pendingStatus = pendingStatus;
+	}
+
+	public FinalStatusCode getFinalStatus() {
+		return finalStatus;
+	}
+
+	public void setFinalStatus(FinalStatusCode finalStatus) {
+		this.finalStatus = finalStatus;
 	}
 }

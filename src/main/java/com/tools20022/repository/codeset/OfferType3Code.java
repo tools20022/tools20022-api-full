@@ -34,29 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType3Code#SqueezeOutBid
- * OfferType3Code.SqueezeOutBid}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType3Code#mmSqueezeOutBid
+ * OfferType3Code.mmSqueezeOutBid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType3Code#RestrictionExchange
- * OfferType3Code.RestrictionExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType3Code#mmRestrictionExchange
+ * OfferType3Code.mmRestrictionExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType3Code#PartialOffer
- * OfferType3Code.PartialOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType3Code#mmPartialOffer
+ * OfferType3Code.mmPartialOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType3Code#FirstComeFirstServed
- * OfferType3Code.FirstComeFirstServed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OfferType3Code#FinalOffer
- * OfferType3Code.FinalOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType3Code#mmFirstComeFirstServed
+ * OfferType3Code.mmFirstComeFirstServed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType3Code#DissenterRights
- * OfferType3Code.DissenterRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType3Code#mmFinalOffer
+ * OfferType3Code.mmFinalOffer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType3Code#mmDissenterRights
+ * OfferType3Code.mmDissenterRights}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,7 +87,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 * name} = "SqueezeOutBid"</li>
 	 * </ul>
 	 */
-	public static final MMCode SqueezeOutBid = new MMCode() {
+	public static final MMCode mmSqueezeOutBid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SqueezeOutBid";
@@ -109,7 +110,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 * name} = "RestrictionExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode RestrictionExchange = new MMCode() {
+	public static final MMCode mmRestrictionExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionExchange";
@@ -132,7 +133,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 * name} = "PartialOffer"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialOffer = new MMCode() {
+	public static final MMCode mmPartialOffer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOffer";
@@ -155,7 +156,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 * name} = "FirstComeFirstServed"</li>
 	 * </ul>
 	 */
-	public static final MMCode FirstComeFirstServed = new MMCode() {
+	public static final MMCode mmFirstComeFirstServed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstComeFirstServed";
@@ -178,7 +179,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 * name} = "FinalOffer"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinalOffer = new MMCode() {
+	public static final MMCode mmFinalOffer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalOffer";
@@ -201,7 +202,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 * name} = "DissenterRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode DissenterRights = new MMCode() {
+	public static final MMCode mmDissenterRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DissenterRights";
@@ -212,13 +213,13 @@ public class OfferType3Code extends OfferTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OfferType3Code";
 				definition = "Specifies the conditions that apply to the offer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OfferType3Code.SqueezeOutBid, com.tools20022.repository.codeset.OfferType3Code.RestrictionExchange,
-						com.tools20022.repository.codeset.OfferType3Code.PartialOffer, com.tools20022.repository.codeset.OfferType3Code.FirstComeFirstServed, com.tools20022.repository.codeset.OfferType3Code.FinalOffer,
-						com.tools20022.repository.codeset.OfferType3Code.DissenterRights);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OfferType3Code.mmSqueezeOutBid, com.tools20022.repository.codeset.OfferType3Code.mmRestrictionExchange,
+						com.tools20022.repository.codeset.OfferType3Code.mmPartialOffer, com.tools20022.repository.codeset.OfferType3Code.mmFirstComeFirstServed, com.tools20022.repository.codeset.OfferType3Code.mmFinalOffer,
+						com.tools20022.repository.codeset.OfferType3Code.mmDissenterRights);
 				trace_lazy = () -> OfferTypeV2Code.mmObject();
 			}
 		});

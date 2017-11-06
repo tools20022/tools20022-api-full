@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Report on the net position of a security, on a single securities account, for
@@ -33,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Balance3#SafekeepingAccount
- * Balance3.SafekeepingAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Balance3#BalanceForAccount
- * Balance3.BalanceForAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Balance3#SubAccountDetails
- * Balance3.SubAccountDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Balance3#mmSafekeepingAccount
+ * Balance3.mmSafekeepingAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Balance3#mmBalanceForAccount
+ * Balance3.mmBalanceForAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Balance3#mmSubAccountDetails
+ * Balance3.mmSubAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Balance3#AccountBaseCurrencyTotalAmounts
- * Balance3.AccountBaseCurrencyTotalAmounts}</li>
+ * {@linkplain com.tools20022.repository.msg.Balance3#mmAccountBaseCurrencyTotalAmounts
+ * Balance3.mmAccountBaseCurrencyTotalAmounts}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Balance3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccount13 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -78,8 +80,8 @@ public class Balance3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesAccount
-	 * SecuritiesBalance.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesAccount
+	 * SecuritiesBalance.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Balance3
@@ -97,21 +99,22 @@ public class Balance3 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesAccount;
 			componentContext_lazy = () -> Balance3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AggregateBalanceInformation20> balanceForAccount;
 	/**
 	 * Report on the net position of a security, on a single securities account,
 	 * for a certain date.
@@ -146,20 +149,21 @@ public class Balance3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceForAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceForAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Balance3.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> Balance3.mmObject();
 			isDerived = false;
 			xmlTag = "BalForAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccount";
 			definition = "Report on the net position of a security, on a single securities account, for a certain date.";
 			minOccurs = 0;
-			type_lazy = () -> AggregateBalanceInformation20.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation20.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SubAccountIdentification27> subAccountDetails;
 	/**
 	 * Sub-account of the safekeeping or investment account.
 	 * <p>
@@ -172,8 +176,8 @@ public class Balance3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Balance3
@@ -191,20 +195,21 @@ public class Balance3 {
 	 * definition} = "Sub-account of the safekeeping or investment account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> Balance3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Sub-account of the safekeeping or investment account.";
 			minOccurs = 0;
-			type_lazy = () -> SubAccountIdentification27.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification27.mmObject();
 		}
 	};
+	protected TotalValueInPageAndStatement1 accountBaseCurrencyTotalAmounts;
 	/**
 	 * Total valuation amounts provided in the base currency of the account.
 	 * <p>
@@ -232,7 +237,7 @@ public class Balance3 {
 	 * "Total valuation amounts provided in the base currency of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountBaseCurrencyTotalAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountBaseCurrencyTotalAmounts = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Balance3.mmObject();
 			isDerived = false;
@@ -240,25 +245,57 @@ public class Balance3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBaseCurrencyTotalAmounts";
 			definition = "Total valuation amounts provided in the base currency of the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TotalValueInPageAndStatement1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Balance3.SafekeepingAccount, com.tools20022.repository.msg.Balance3.BalanceForAccount, com.tools20022.repository.msg.Balance3.SubAccountDetails,
-						com.tools20022.repository.msg.Balance3.AccountBaseCurrencyTotalAmounts);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Balance3.mmSafekeepingAccount, com.tools20022.repository.msg.Balance3.mmBalanceForAccount, com.tools20022.repository.msg.Balance3.mmSubAccountDetails,
+						com.tools20022.repository.msg.Balance3.mmAccountBaseCurrencyTotalAmounts);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Balance3";
 				definition = "Report on the net position of a security, on a single securities account, for a certain date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccount13 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<AggregateBalanceInformation20> getBalanceForAccount() {
+		return balanceForAccount;
+	}
+
+	public void setBalanceForAccount(List<com.tools20022.repository.msg.AggregateBalanceInformation20> balanceForAccount) {
+		this.balanceForAccount = balanceForAccount;
+	}
+
+	public List<SubAccountIdentification27> getSubAccountDetails() {
+		return subAccountDetails;
+	}
+
+	public void setSubAccountDetails(List<com.tools20022.repository.msg.SubAccountIdentification27> subAccountDetails) {
+		this.subAccountDetails = subAccountDetails;
+	}
+
+	public TotalValueInPageAndStatement1 getAccountBaseCurrencyTotalAmounts() {
+		return accountBaseCurrencyTotalAmounts;
+	}
+
+	public void setAccountBaseCurrencyTotalAmounts(com.tools20022.repository.msg.TotalValueInPageAndStatement1 accountBaseCurrencyTotalAmounts) {
+		this.accountBaseCurrencyTotalAmounts = accountBaseCurrencyTotalAmounts;
 	}
 }

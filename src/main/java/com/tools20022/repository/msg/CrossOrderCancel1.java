@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CrossOrderCancel1#OriginalClientOrderIdentification
- * CrossOrderCancel1.OriginalClientOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CrossOrderCancel1#mmOriginalClientOrderIdentification
+ * CrossOrderCancel1.mmOriginalClientOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CrossOrderCancel1#OriginalOrderModificationTime
- * CrossOrderCancel1.OriginalOrderModificationTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CrossOrderCancel1#mmOriginalOrderModificationTime
+ * CrossOrderCancel1.mmOriginalOrderModificationTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CrossOrderCancel1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text originalClientOrderIdentification;
 	/**
 	 * Client Order identification of the previous order (NOT the initial order
 	 * of the day) as assigned by the institution, used to identify the previous
@@ -91,7 +92,7 @@ public class CrossOrderCancel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalClientOrderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CrossOrderCancel1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class CrossOrderCancel1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalClientOrderIdentification";
 			definition = "Client Order identification of the previous order (NOT the initial order of the day) as assigned by the institution, used to identify the previous order in cancel requests.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime originalOrderModificationTime;
 	/**
 	 * Indicates the most recent (or current) CreationDateTime reported for the
 	 * order. The original order modification time is provided as an optional
@@ -136,7 +138,7 @@ public class CrossOrderCancel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalOrderModificationTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalOrderModificationTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CrossOrderCancel1.mmObject();
 			isDerived = false;
@@ -144,8 +146,8 @@ public class CrossOrderCancel1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalOrderModificationTime";
 			definition = "Indicates the most recent (or current) CreationDateTime reported for the order. The original order modification time is provided as an optional field on Order Cancel Request to identify that the state of the order has not changed since the request was issued.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -153,13 +155,29 @@ public class CrossOrderCancel1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CrossOrderCancel1.OriginalClientOrderIdentification, com.tools20022.repository.msg.CrossOrderCancel1.OriginalOrderModificationTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CrossOrderCancel1.mmOriginalClientOrderIdentification, com.tools20022.repository.msg.CrossOrderCancel1.mmOriginalOrderModificationTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CrossOrderCancel1";
 				definition = "Provides original client order identification and order modification time.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOriginalClientOrderIdentification() {
+		return originalClientOrderIdentification;
+	}
+
+	public void setOriginalClientOrderIdentification(Max35Text originalClientOrderIdentification) {
+		this.originalClientOrderIdentification = originalClientOrderIdentification;
+	}
+
+	public ISODateTime getOriginalOrderModificationTime() {
+		return originalOrderModificationTime;
+	}
+
+	public void setOriginalOrderModificationTime(ISODateTime originalOrderModificationTime) {
+		this.originalOrderModificationTime = originalOrderModificationTime;
 	}
 }

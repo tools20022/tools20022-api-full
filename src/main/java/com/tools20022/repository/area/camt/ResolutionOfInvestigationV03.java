@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -104,33 +105,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#Assignment
- * ResolutionOfInvestigationV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#mmAssignment
+ * ResolutionOfInvestigationV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#ResolvedCase
- * ResolutionOfInvestigationV03.ResolvedCase}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#mmResolvedCase
+ * ResolutionOfInvestigationV03.mmResolvedCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#Status
- * ResolutionOfInvestigationV03.Status}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#mmStatus
+ * ResolutionOfInvestigationV03.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#CancellationDetails
- * ResolutionOfInvestigationV03.CancellationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#mmCancellationDetails
+ * ResolutionOfInvestigationV03.mmCancellationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#StatementDetails
- * ResolutionOfInvestigationV03.StatementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#mmStatementDetails
+ * ResolutionOfInvestigationV03.mmStatementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#CorrectionTransaction
- * ResolutionOfInvestigationV03.CorrectionTransaction}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#mmCorrectionTransaction
+ * ResolutionOfInvestigationV03.mmCorrectionTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#ResolutionRelatedInformation
- * ResolutionOfInvestigationV03.ResolutionRelatedInformation}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#mmResolutionRelatedInformation
+ * ResolutionOfInvestigationV03.mmResolutionRelatedInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV03#identifier
- * ResolutionOfInvestigationV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.029.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -154,6 +153,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ResolutionOfInvestigationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment2 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -180,17 +180,18 @@ public class ResolutionOfInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 	};
+	protected Case2 resolvedCase;
 	/**
 	 * Identifies a resolved case.
 	 * <p>
@@ -212,17 +213,18 @@ public class ResolutionOfInvestigationV03 {
 	 * definition} = "Identifies a resolved case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ResolvedCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmResolvedCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RslvdCase";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolvedCase";
 			definition = "Identifies a resolved case.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Case2.mmObject();
 		}
 	};
+	protected InvestigationStatus2Choice status;
 	/**
 	 * Indicates the status of the investigation.
 	 * <p>
@@ -246,17 +248,18 @@ public class ResolutionOfInvestigationV03 {
 	 * definition} = "Indicates the status of the investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Status = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Indicates the status of the investigation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestigationStatus2Choice.mmObject();
 		}
 	};
+	protected List<UnderlyingTransaction3> cancellationDetails;
 	/**
 	 * Specifies the details of the underlying transactions being cancelled.
 	 * <p>
@@ -281,7 +284,7 @@ public class ResolutionOfInvestigationV03 {
 	 * "Specifies the details of the underlying transactions being cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,6 +294,7 @@ public class ResolutionOfInvestigationV03 {
 			complexType_lazy = () -> UnderlyingTransaction3.mmObject();
 		}
 	};
+	protected StatementResolutionEntry1 statementDetails;
 	/**
 	 * Details on the underlying statement entry.
 	 * <p>
@@ -314,17 +318,18 @@ public class ResolutionOfInvestigationV03 {
 	 * definition} = "Details on the underlying statement entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDetails";
 			definition = "Details on the underlying statement entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatementResolutionEntry1.mmObject();
 		}
 	};
+	protected CorrectiveTransaction1Choice correctionTransaction;
 	/**
 	 * References a transaction initiated to fix the case under investigation.
 	 * <p>
@@ -350,17 +355,18 @@ public class ResolutionOfInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorrectionTransaction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorrectionTransaction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CrrctnTx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrectionTransaction";
 			definition = "References a transaction initiated to fix the case under investigation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorrectiveTransaction1Choice.mmObject();
 		}
 	};
+	protected ResolutionInformation1 resolutionRelatedInformation;
 	/**
 	 * Reference of a return or a reversal initiated to fix the case under
 	 * investigation as part of the resolution.
@@ -387,42 +393,15 @@ public class ResolutionOfInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ResolutionRelatedInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmResolutionRelatedInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RsltnRltdInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolutionRelatedInformation";
 			definition = "Reference of a return or a reversal initiated to fix the case under investigation as part of the resolution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ResolutionInformation1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "029"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "029";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -437,13 +416,76 @@ public class ResolutionOfInvestigationV03 {
 				rootElement = "Document";
 				xmlTag = "RsltnOfInvstgtn";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.Assignment, com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.ResolvedCase,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.Status, com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.CancellationDetails,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.StatementDetails, com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.CorrectionTransaction,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.ResolutionRelatedInformation);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmAssignment, com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmResolvedCase,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmStatus, com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmCancellationDetails,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmStatementDetails, com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmCorrectionTransaction,
+						com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmResolutionRelatedInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "029";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment2 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment2 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case2 getResolvedCase() {
+		return resolvedCase;
+	}
+
+	public void setResolvedCase(Case2 resolvedCase) {
+		this.resolvedCase = resolvedCase;
+	}
+
+	public InvestigationStatus2Choice getStatus() {
+		return status;
+	}
+
+	public void setStatus(InvestigationStatus2Choice status) {
+		this.status = status;
+	}
+
+	public List<UnderlyingTransaction3> getCancellationDetails() {
+		return cancellationDetails;
+	}
+
+	public void setCancellationDetails(List<UnderlyingTransaction3> cancellationDetails) {
+		this.cancellationDetails = cancellationDetails;
+	}
+
+	public StatementResolutionEntry1 getStatementDetails() {
+		return statementDetails;
+	}
+
+	public void setStatementDetails(StatementResolutionEntry1 statementDetails) {
+		this.statementDetails = statementDetails;
+	}
+
+	public CorrectiveTransaction1Choice getCorrectionTransaction() {
+		return correctionTransaction;
+	}
+
+	public void setCorrectionTransaction(CorrectiveTransaction1Choice correctionTransaction) {
+		this.correctionTransaction = correctionTransaction;
+	}
+
+	public ResolutionInformation1 getResolutionRelatedInformation() {
+		return resolutionRelatedInformation;
+	}
+
+	public void setResolutionRelatedInformation(ResolutionInformation1 resolutionRelatedInformation) {
+		this.resolutionRelatedInformation = resolutionRelatedInformation;
 	}
 }

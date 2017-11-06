@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#AccountModification
- * AccountManagementType3Code.AccountModification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#mmAccountModification
+ * AccountManagementType3Code.mmAccountModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#AccountOpening
- * AccountManagementType3Code.AccountOpening}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#mmAccountOpening
+ * AccountManagementType3Code.mmAccountOpening}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#GetAccountDetails
- * AccountManagementType3Code.GetAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#mmGetAccountDetails
+ * AccountManagementType3Code.mmGetAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#AccountStatus
- * AccountManagementType3Code.AccountStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#mmAccountStatus
+ * AccountManagementType3Code.mmAccountStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +81,7 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 * name} = "AccountModification"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountModification = new MMCode() {
+	public static final MMCode mmAccountModification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountModification";
@@ -104,7 +104,7 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 * name} = "AccountOpening"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountOpening = new MMCode() {
+	public static final MMCode mmAccountOpening = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOpening";
@@ -127,7 +127,7 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 * name} = "GetAccountDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode GetAccountDetails = new MMCode() {
+	public static final MMCode mmGetAccountDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GetAccountDetails";
@@ -150,7 +150,7 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 * name} = "AccountStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountStatus = new MMCode() {
+	public static final MMCode mmAccountStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatus";
@@ -161,12 +161,12 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementType3Code";
 				definition = "Specifies the instruction for which an status is required.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementType3Code.AccountModification, com.tools20022.repository.codeset.AccountManagementType3Code.AccountOpening,
-						com.tools20022.repository.codeset.AccountManagementType3Code.GetAccountDetails, com.tools20022.repository.codeset.AccountManagementType3Code.AccountStatus);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementType3Code.mmAccountModification, com.tools20022.repository.codeset.AccountManagementType3Code.mmAccountOpening,
+						com.tools20022.repository.codeset.AccountManagementType3Code.mmGetAccountDetails, com.tools20022.repository.codeset.AccountManagementType3Code.mmAccountStatus);
 				trace_lazy = () -> AccountManagementTypeCode.mmObject();
 			}
 		});

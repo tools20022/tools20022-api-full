@@ -19,6 +19,7 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.msg.IndividualPerson33;
@@ -35,11 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Party33Choice#Organisation
- * Party33Choice.Organisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Party33Choice#IndividualPerson
- * Party33Choice.IndividualPerson}</li>
+ * {@linkplain com.tools20022.repository.choice.Party33Choice#mmOrganisation
+ * Party33Choice.mmOrganisation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Party33Choice#mmIndividualPerson
+ * Party33Choice.mmIndividualPerson}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Party33Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Organisation29 organisation;
 	/**
 	 * Organised structure that is set up for a particular purpose, for example,
 	 * a business, government body, department, charity, or financial
@@ -100,26 +103,27 @@ public class Party33Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Party30Choice#Organisation
-	 * Party30Choice.Organisation}</li>
+	 * {@linkplain com.tools20022.repository.choice.Party30Choice#mmOrganisation
+	 * Party30Choice.mmOrganisation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Organisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrganisation = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> Party33Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
 			xmlTag = "Org";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Organisation";
 			definition = "Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Party30Choice.Organisation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Party30Choice.mmOrganisation;
 			maxOccurs = 1;
-			type_lazy = () -> Organisation29.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Organisation29.mmObject();
 		}
 	};
+	protected IndividualPerson33 individualPerson;
 	/**
 	 * Human entity, as distinguished from a corporate entity (which is
 	 * sometimes referred to as an 'artificial person').
@@ -154,33 +158,33 @@ public class Party33Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Party30Choice#IndividualPerson
-	 * Party30Choice.IndividualPerson}</li>
+	 * {@linkplain com.tools20022.repository.choice.Party30Choice#mmIndividualPerson
+	 * Party30Choice.mmIndividualPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndividualPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividualPerson = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Party33Choice.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> Party33Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvPrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualPerson";
 			definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Party30Choice.IndividualPerson;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Party30Choice.mmIndividualPerson;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson33.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IndividualPerson33.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party33Choice.Organisation, com.tools20022.repository.choice.Party33Choice.IndividualPerson);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party33Choice.mmOrganisation, com.tools20022.repository.choice.Party33Choice.mmIndividualPerson);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Party33Choice";
 				definition = "Choice of formats for the specification of the party.";
@@ -188,5 +192,21 @@ public class Party33Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Organisation29 getOrganisation() {
+		return organisation;
+	}
+
+	public void setOrganisation(Organisation29 organisation) {
+		this.organisation = organisation;
+	}
+
+	public IndividualPerson33 getIndividualPerson() {
+		return individualPerson;
+	}
+
+	public void setIndividualPerson(IndividualPerson33 individualPerson) {
+		this.individualPerson = individualPerson;
 	}
 }

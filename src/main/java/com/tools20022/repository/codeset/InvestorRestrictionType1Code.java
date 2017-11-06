@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionType1Code#LegalResident
- * InvestorRestrictionType1Code.LegalResident}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionType1Code#mmLegalResident
+ * InvestorRestrictionType1Code.mmLegalResident}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionType1Code#Citizen
- * InvestorRestrictionType1Code.Citizen}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionType1Code#mmCitizen
+ * InvestorRestrictionType1Code.mmCitizen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionType1Code#Individual
- * InvestorRestrictionType1Code.Individual}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionType1Code#mmIndividual
+ * InvestorRestrictionType1Code.mmIndividual}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class InvestorRestrictionType1Code extends InvestorRestrictionTypeCode {
 	 * name} = "LegalResident"</li>
 	 * </ul>
 	 */
-	public static final MMCode LegalResident = new MMCode() {
+	public static final MMCode mmLegalResident = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalResident";
@@ -107,7 +107,7 @@ public class InvestorRestrictionType1Code extends InvestorRestrictionTypeCode {
 	 * name} = "Citizen"</li>
 	 * </ul>
 	 */
-	public static final MMCode Citizen = new MMCode() {
+	public static final MMCode mmCitizen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Citizen";
@@ -130,7 +130,7 @@ public class InvestorRestrictionType1Code extends InvestorRestrictionTypeCode {
 	 * name} = "Individual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Individual = new MMCode() {
+	public static final MMCode mmIndividual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Individual";
@@ -141,13 +141,13 @@ public class InvestorRestrictionType1Code extends InvestorRestrictionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LERE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestorRestrictionType1Code";
 				definition = "Specifies to whom or what the restriction applies.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorRestrictionType1Code.LegalResident, com.tools20022.repository.codeset.InvestorRestrictionType1Code.Citizen,
-						com.tools20022.repository.codeset.InvestorRestrictionType1Code.Individual);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorRestrictionType1Code.mmLegalResident, com.tools20022.repository.codeset.InvestorRestrictionType1Code.mmCitizen,
+						com.tools20022.repository.codeset.InvestorRestrictionType1Code.mmIndividual);
 				trace_lazy = () -> InvestorRestrictionTypeCode.mmObject();
 			}
 		});

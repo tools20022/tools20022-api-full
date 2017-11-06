@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Demand;
 import com.tools20022.repository.entity.Undertaking;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the demand.
@@ -38,33 +39,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Demand1#Identification
- * Demand1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand1#Type Demand1.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand1#mmIdentification
+ * Demand1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand1#mmType Demand1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Demand1#UndertakingIdentification
- * Demand1.UndertakingIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand1#DemandAmount
- * Demand1.DemandAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.Demand1#mmUndertakingIdentification
+ * Demand1.mmUndertakingIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand1#mmDemandAmount
+ * Demand1.mmDemandAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Demand1#AdvisingPartyReferenceNumber
- * Demand1.AdvisingPartyReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.Demand1#mmAdvisingPartyReferenceNumber
+ * Demand1.mmAdvisingPartyReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Demand1#SecondAdvisingPartyReferenceNumber
- * Demand1.SecondAdvisingPartyReferenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.Demand1#mmSecondAdvisingPartyReferenceNumber
+ * Demand1.mmSecondAdvisingPartyReferenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Demand1#ConfirmerReferenceNumber
- * Demand1.ConfirmerReferenceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand1#SettlementAccount
- * Demand1.SettlementAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand1#PresentationDetails
- * Demand1.PresentationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand1#RequestedExpiryDate
- * Demand1.RequestedExpiryDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand1#DemandDocumentation
- * Demand1.DemandDocumentation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand1#AdditionalInformation
- * Demand1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Demand1#mmConfirmerReferenceNumber
+ * Demand1.mmConfirmerReferenceNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand1#mmSettlementAccount
+ * Demand1.mmSettlementAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand1#mmPresentationDetails
+ * Demand1.mmPresentationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand1#mmRequestedExpiryDate
+ * Demand1.mmRequestedExpiryDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand1#mmDemandDocumentation
+ * Demand1.mmDemandDocumentation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Demand1#mmAdditionalInformation
+ * Demand1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -74,15 +76,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingDemandV01#UndertakingDemandDetails
- * UndertakingDemandV01.UndertakingDemandDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingDemandV01#mmUndertakingDemandDetails
+ * UndertakingDemandV01.mmUndertakingDemandDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Demand1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identifier assigned by the presenting party to the
 	 * demand.
@@ -125,7 +128,7 @@ public class Demand1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
@@ -133,11 +136,12 @@ public class Demand1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier assigned by the presenting party to the demand.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DemandType1Code type;
 	/**
 	 * Type of demand.
 	 * <p>
@@ -151,7 +155,8 @@ public class Demand1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Demand#Type Demand.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Demand#mmType Demand.mmType}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Demand1
@@ -169,20 +174,21 @@ public class Demand1 {
 	 * definition} = "Type of demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.mmType;
 			componentContext_lazy = () -> Demand1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of demand.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DemandType1Code.mmObject();
 		}
 	};
+	protected Undertaking6 undertakingIdentification;
 	/**
 	 * Details related to the undertaking.
 	 * <p>
@@ -212,21 +218,22 @@ public class Demand1 {
 	 * definition} = "Details related to the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Demand1.mmObject();
 			businessComponentTrace_lazy = () -> Undertaking.mmObject();
+			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Undertaking6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Undertaking6.mmObject();
 		}
 	};
+	protected UndertakingAmount3 demandAmount;
 	/**
 	 * Details related to the demand amount.
 	 * <p>
@@ -238,8 +245,8 @@ public class Demand1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Demand#DemandAmount
-	 * Demand.DemandAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Demand#mmDemandAmount
+	 * Demand.mmDemandAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Demand1
@@ -257,21 +264,22 @@ public class Demand1 {
 	 * definition} = "Details related to the demand amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DemandAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDemandAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.mmDemandAmount;
 			componentContext_lazy = () -> Demand1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.DemandAmount;
 			isDerived = false;
 			xmlTag = "DmndAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandAmount";
 			definition = "Details related to the demand amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> UndertakingAmount3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UndertakingAmount3.mmObject();
 		}
 	};
+	protected Max35Text advisingPartyReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the advising party to the
 	 * undertaking.
@@ -301,7 +309,7 @@ public class Demand1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdvisingPartyReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
@@ -309,11 +317,12 @@ public class Demand1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingPartyReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the advising party to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text secondAdvisingPartyReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the second advising party
 	 * to the undertaking.
@@ -343,7 +352,7 @@ public class Demand1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondAdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondAdvisingPartyReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
@@ -351,11 +360,12 @@ public class Demand1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingPartyReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the second advising party to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text confirmerReferenceNumber;
 	/**
 	 * Unique and unambiguous identifier assigned by the confirmer to the
 	 * undertaking.
@@ -385,7 +395,7 @@ public class Demand1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmerReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmerReferenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
@@ -393,11 +403,12 @@ public class Demand1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmerReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the confirmer to the undertaking.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashAccount27> settlementAccount;
 	/**
 	 * Details related to the settlement account.
 	 * <p>
@@ -409,8 +420,8 @@ public class Demand1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#SettlementAccount
-	 * CashSettlement.SettlementAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementAccount
+	 * CashSettlement.mmSettlementAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Demand1
@@ -428,20 +439,21 @@ public class Demand1 {
 	 * definition} = "Details related to the settlement account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmSettlementAccount;
 			componentContext_lazy = () -> Demand1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.SettlementAccount;
 			isDerived = false;
 			xmlTag = "SttlmAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAccount";
 			definition = "Details related to the settlement account.";
 			minOccurs = 0;
-			type_lazy = () -> CashAccount27.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount27.mmObject();
 		}
 	};
+	protected Presentation2 presentationDetails;
 	/**
 	 * Details of the beneficiary's presentation of documents.
 	 * <p>
@@ -453,8 +465,8 @@ public class Demand1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#Presentation
-	 * Undertaking.Presentation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmPresentation
+	 * Undertaking.mmPresentation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Demand1
@@ -472,21 +484,22 @@ public class Demand1 {
 	 * definition} = "Details of the beneficiary's presentation of documents."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PresentationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPresentationDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmPresentation;
 			componentContext_lazy = () -> Demand1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.Presentation;
 			isDerived = false;
 			xmlTag = "PresntnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationDetails";
 			definition = "Details of the beneficiary's presentation of documents.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Presentation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Presentation2.mmObject();
 		}
 	};
+	protected ISODate requestedExpiryDate;
 	/**
 	 * Requested new expiry date as an alternative to payment of the demand.
 	 * <p>
@@ -499,8 +512,8 @@ public class Demand1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Expiry#ExpiryDateTime
-	 * Expiry.ExpiryDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Expiry#mmExpiryDateTime
+	 * Expiry.mmExpiryDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Demand1
@@ -519,20 +532,21 @@ public class Demand1 {
 	 * "Requested new expiry date as an alternative to payment of the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedExpiryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.mmExpiryDateTime;
 			componentContext_lazy = () -> Demand1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.ExpiryDateTime;
 			isDerived = false;
 			xmlTag = "ReqdXpryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExpiryDate";
 			definition = "Requested new expiry date as an alternative to payment of the demand.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DemandDocumentation1 demandDocumentation;
 	/**
 	 * Document(s) presented for examination.
 	 * <p>
@@ -558,7 +572,7 @@ public class Demand1 {
 	 * definition} = "Document(s) presented for examination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DemandDocumentation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDemandDocumentation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
@@ -566,12 +580,13 @@ public class Demand1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandDocumentation";
 			definition = "Document(s) presented for examination.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DemandDocumentation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information related to the demand.
 	 * <p>
@@ -598,7 +613,7 @@ public class Demand1 {
 	 * definition} = "Additional information related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
@@ -606,8 +621,8 @@ public class Demand1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the demand.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -615,18 +630,114 @@ public class Demand1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Demand1.Identification, com.tools20022.repository.msg.Demand1.Type, com.tools20022.repository.msg.Demand1.UndertakingIdentification,
-						com.tools20022.repository.msg.Demand1.DemandAmount, com.tools20022.repository.msg.Demand1.AdvisingPartyReferenceNumber, com.tools20022.repository.msg.Demand1.SecondAdvisingPartyReferenceNumber,
-						com.tools20022.repository.msg.Demand1.ConfirmerReferenceNumber, com.tools20022.repository.msg.Demand1.SettlementAccount, com.tools20022.repository.msg.Demand1.PresentationDetails,
-						com.tools20022.repository.msg.Demand1.RequestedExpiryDate, com.tools20022.repository.msg.Demand1.DemandDocumentation, com.tools20022.repository.msg.Demand1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Demand1.mmIdentification, com.tools20022.repository.msg.Demand1.mmType, com.tools20022.repository.msg.Demand1.mmUndertakingIdentification,
+						com.tools20022.repository.msg.Demand1.mmDemandAmount, com.tools20022.repository.msg.Demand1.mmAdvisingPartyReferenceNumber, com.tools20022.repository.msg.Demand1.mmSecondAdvisingPartyReferenceNumber,
+						com.tools20022.repository.msg.Demand1.mmConfirmerReferenceNumber, com.tools20022.repository.msg.Demand1.mmSettlementAccount, com.tools20022.repository.msg.Demand1.mmPresentationDetails,
+						com.tools20022.repository.msg.Demand1.mmRequestedExpiryDate, com.tools20022.repository.msg.Demand1.mmDemandDocumentation, com.tools20022.repository.msg.Demand1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingDemandV01.mmUndertakingDemandDetails);
 				trace_lazy = () -> Demand.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingDemandV01.UndertakingDemandDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Demand1";
 				definition = "Details of the demand.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public DemandType1Code getType() {
+		return type;
+	}
+
+	public void setType(DemandType1Code type) {
+		this.type = type;
+	}
+
+	public Undertaking6 getUndertakingIdentification() {
+		return undertakingIdentification;
+	}
+
+	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking6 undertakingIdentification) {
+		this.undertakingIdentification = undertakingIdentification;
+	}
+
+	public UndertakingAmount3 getDemandAmount() {
+		return demandAmount;
+	}
+
+	public void setDemandAmount(com.tools20022.repository.msg.UndertakingAmount3 demandAmount) {
+		this.demandAmount = demandAmount;
+	}
+
+	public Max35Text getAdvisingPartyReferenceNumber() {
+		return advisingPartyReferenceNumber;
+	}
+
+	public void setAdvisingPartyReferenceNumber(Max35Text advisingPartyReferenceNumber) {
+		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
+	}
+
+	public Max35Text getSecondAdvisingPartyReferenceNumber() {
+		return secondAdvisingPartyReferenceNumber;
+	}
+
+	public void setSecondAdvisingPartyReferenceNumber(Max35Text secondAdvisingPartyReferenceNumber) {
+		this.secondAdvisingPartyReferenceNumber = secondAdvisingPartyReferenceNumber;
+	}
+
+	public Max35Text getConfirmerReferenceNumber() {
+		return confirmerReferenceNumber;
+	}
+
+	public void setConfirmerReferenceNumber(Max35Text confirmerReferenceNumber) {
+		this.confirmerReferenceNumber = confirmerReferenceNumber;
+	}
+
+	public List<CashAccount27> getSettlementAccount() {
+		return settlementAccount;
+	}
+
+	public void setSettlementAccount(List<com.tools20022.repository.msg.CashAccount27> settlementAccount) {
+		this.settlementAccount = settlementAccount;
+	}
+
+	public Presentation2 getPresentationDetails() {
+		return presentationDetails;
+	}
+
+	public void setPresentationDetails(com.tools20022.repository.msg.Presentation2 presentationDetails) {
+		this.presentationDetails = presentationDetails;
+	}
+
+	public ISODate getRequestedExpiryDate() {
+		return requestedExpiryDate;
+	}
+
+	public void setRequestedExpiryDate(ISODate requestedExpiryDate) {
+		this.requestedExpiryDate = requestedExpiryDate;
+	}
+
+	public DemandDocumentation1 getDemandDocumentation() {
+		return demandDocumentation;
+	}
+
+	public void setDemandDocumentation(com.tools20022.repository.msg.DemandDocumentation1 demandDocumentation) {
+		this.demandDocumentation = demandDocumentation;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

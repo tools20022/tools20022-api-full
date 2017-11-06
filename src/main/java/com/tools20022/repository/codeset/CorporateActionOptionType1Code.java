@@ -34,72 +34,72 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#BonusSharePlan
- * CorporateActionOptionType1Code.BonusSharePlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmBonusSharePlan
+ * CorporateActionOptionType1Code.mmBonusSharePlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#BuyUp
- * CorporateActionOptionType1Code.BuyUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmBuyUp
+ * CorporateActionOptionType1Code.mmBuyUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#CashAndSecurities
- * CorporateActionOptionType1Code.CashAndSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmCashAndSecurities
+ * CorporateActionOptionType1Code.mmCashAndSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#Cash
- * CorporateActionOptionType1Code.Cash}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmCash
+ * CorporateActionOptionType1Code.mmCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#ConsentAndExchange
- * CorporateActionOptionType1Code.ConsentAndExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmConsentAndExchange
+ * CorporateActionOptionType1Code.mmConsentAndExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#ConsentAndTender
- * CorporateActionOptionType1Code.ConsentAndTender}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmConsentAndTender
+ * CorporateActionOptionType1Code.mmConsentAndTender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#ConsentDenied
- * CorporateActionOptionType1Code.ConsentDenied}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmConsentDenied
+ * CorporateActionOptionType1Code.mmConsentDenied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#ConsentGranted
- * CorporateActionOptionType1Code.ConsentGranted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmConsentGranted
+ * CorporateActionOptionType1Code.mmConsentGranted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#Exercise
- * CorporateActionOptionType1Code.Exercise}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmExercise
+ * CorporateActionOptionType1Code.mmExercise}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#Lapse
- * CorporateActionOptionType1Code.Lapse}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmLapse
+ * CorporateActionOptionType1Code.mmLapse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#Retain
- * CorporateActionOptionType1Code.Retain}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmRetain
+ * CorporateActionOptionType1Code.mmRetain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#NoAction
- * CorporateActionOptionType1Code.NoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmNoAction
+ * CorporateActionOptionType1Code.mmNoAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#ProposedRate
- * CorporateActionOptionType1Code.ProposedRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmProposedRate
+ * CorporateActionOptionType1Code.mmProposedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#Oversubscribe
- * CorporateActionOptionType1Code.Oversubscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmOversubscribe
+ * CorporateActionOptionType1Code.mmOversubscribe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#SecuritiesOption
- * CorporateActionOptionType1Code.SecuritiesOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmSecuritiesOption
+ * CorporateActionOptionType1Code.mmSecuritiesOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#SellEntitlement
- * CorporateActionOptionType1Code.SellEntitlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmSellEntitlement
+ * CorporateActionOptionType1Code.mmSellEntitlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#SplitInstruction
- * CorporateActionOptionType1Code.SplitInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmSplitInstruction
+ * CorporateActionOptionType1Code.mmSplitInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#NonQualifiedInvestor
- * CorporateActionOptionType1Code.NonQualifiedInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmNonQualifiedInvestor
+ * CorporateActionOptionType1Code.mmNonQualifiedInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#Other
- * CorporateActionOptionType1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmOther
+ * CorporateActionOptionType1Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#QualifiedInvestor
- * CorporateActionOptionType1Code.QualifiedInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionType1Code#mmQualifiedInvestor
+ * CorporateActionOptionType1Code.mmQualifiedInvestor}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -135,7 +135,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "BonusSharePlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode BonusSharePlan = new MMCode() {
+	public static final MMCode mmBonusSharePlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusSharePlan";
@@ -158,7 +158,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "BuyUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyUp = new MMCode() {
+	public static final MMCode mmBuyUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyUp";
@@ -181,7 +181,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "CashAndSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashAndSecurities = new MMCode() {
+	public static final MMCode mmCashAndSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAndSecurities";
@@ -204,7 +204,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
@@ -227,7 +227,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "ConsentAndExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsentAndExchange = new MMCode() {
+	public static final MMCode mmConsentAndExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentAndExchange";
@@ -250,7 +250,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "ConsentAndTender"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsentAndTender = new MMCode() {
+	public static final MMCode mmConsentAndTender = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentAndTender";
@@ -273,7 +273,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "ConsentDenied"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsentDenied = new MMCode() {
+	public static final MMCode mmConsentDenied = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentDenied";
@@ -296,7 +296,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "ConsentGranted"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsentGranted = new MMCode() {
+	public static final MMCode mmConsentGranted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentGranted";
@@ -319,7 +319,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "Exercise"</li>
 	 * </ul>
 	 */
-	public static final MMCode Exercise = new MMCode() {
+	public static final MMCode mmExercise = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercise";
@@ -342,7 +342,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "Lapse"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lapse = new MMCode() {
+	public static final MMCode mmLapse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lapse";
@@ -365,7 +365,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "Retain"</li>
 	 * </ul>
 	 */
-	public static final MMCode Retain = new MMCode() {
+	public static final MMCode mmRetain = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retain";
@@ -388,7 +388,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "NoAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAction = new MMCode() {
+	public static final MMCode mmNoAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
@@ -411,7 +411,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "ProposedRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProposedRate = new MMCode() {
+	public static final MMCode mmProposedRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedRate";
@@ -434,7 +434,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "Oversubscribe"</li>
 	 * </ul>
 	 */
-	public static final MMCode Oversubscribe = new MMCode() {
+	public static final MMCode mmOversubscribe = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Oversubscribe";
@@ -457,7 +457,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "SecuritiesOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesOption = new MMCode() {
+	public static final MMCode mmSecuritiesOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesOption";
@@ -480,7 +480,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "SellEntitlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellEntitlement = new MMCode() {
+	public static final MMCode mmSellEntitlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellEntitlement";
@@ -503,7 +503,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "SplitInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode SplitInstruction = new MMCode() {
+	public static final MMCode mmSplitInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitInstruction";
@@ -526,7 +526,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "NonQualifiedInvestor"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonQualifiedInvestor = new MMCode() {
+	public static final MMCode mmNonQualifiedInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonQualifiedInvestor";
@@ -549,7 +549,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -572,7 +572,7 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	 * name} = "QualifiedInvestor"</li>
 	 * </ul>
 	 */
-	public static final MMCode QualifiedInvestor = new MMCode() {
+	public static final MMCode mmQualifiedInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedInvestor";
@@ -583,21 +583,21 @@ public class CorporateActionOptionType1Code extends CorporateActionOptionTypeCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BSPL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOptionType1Code";
 				definition = "Specifies the type of CA options.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionOptionType1Code.BonusSharePlan, com.tools20022.repository.codeset.CorporateActionOptionType1Code.BuyUp,
-						com.tools20022.repository.codeset.CorporateActionOptionType1Code.CashAndSecurities, com.tools20022.repository.codeset.CorporateActionOptionType1Code.Cash,
-						com.tools20022.repository.codeset.CorporateActionOptionType1Code.ConsentAndExchange, com.tools20022.repository.codeset.CorporateActionOptionType1Code.ConsentAndTender,
-						com.tools20022.repository.codeset.CorporateActionOptionType1Code.ConsentDenied, com.tools20022.repository.codeset.CorporateActionOptionType1Code.ConsentGranted,
-						com.tools20022.repository.codeset.CorporateActionOptionType1Code.Exercise, com.tools20022.repository.codeset.CorporateActionOptionType1Code.Lapse,
-						com.tools20022.repository.codeset.CorporateActionOptionType1Code.Retain, com.tools20022.repository.codeset.CorporateActionOptionType1Code.NoAction,
-						com.tools20022.repository.codeset.CorporateActionOptionType1Code.ProposedRate, com.tools20022.repository.codeset.CorporateActionOptionType1Code.Oversubscribe,
-						com.tools20022.repository.codeset.CorporateActionOptionType1Code.SecuritiesOption, com.tools20022.repository.codeset.CorporateActionOptionType1Code.SellEntitlement,
-						com.tools20022.repository.codeset.CorporateActionOptionType1Code.SplitInstruction, com.tools20022.repository.codeset.CorporateActionOptionType1Code.NonQualifiedInvestor,
-						com.tools20022.repository.codeset.CorporateActionOptionType1Code.Other, com.tools20022.repository.codeset.CorporateActionOptionType1Code.QualifiedInvestor);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmBonusSharePlan, com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmBuyUp,
+						com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmCashAndSecurities, com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmCash,
+						com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmConsentAndExchange, com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmConsentAndTender,
+						com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmConsentDenied, com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmConsentGranted,
+						com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmExercise, com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmLapse,
+						com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmRetain, com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmNoAction,
+						com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmProposedRate, com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmOversubscribe,
+						com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmSecuritiesOption, com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmSellEntitlement,
+						com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmSplitInstruction, com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmNonQualifiedInvestor,
+						com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmOther, com.tools20022.repository.codeset.CorporateActionOptionType1Code.mmQualifiedInvestor);
 				trace_lazy = () -> CorporateActionOptionTypeCode.mmObject();
 			}
 		});

@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice#PairedOffQuantity
- * PairedOrTurnedQuantity3Choice.PairedOffQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice#mmPairedOffQuantity
+ * PairedOrTurnedQuantity3Choice.mmPairedOffQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice#TurnedQuantity
- * PairedOrTurnedQuantity3Choice.TurnedQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice#mmTurnedQuantity
+ * PairedOrTurnedQuantity3Choice.mmTurnedQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PairedOrTurnedQuantity3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1Choice pairedOffQuantity;
 	/**
 	 * Quantity of financial instruments of the linked transaction to be
 	 * paired-off.
@@ -82,8 +83,8 @@ public class PairedOrTurnedQuantity3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PairOff#PairedOffQuantity
-	 * PairOff.PairedOffQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.PairOff#mmPairedOffQuantity
+	 * PairOff.mmPairedOffQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,25 +106,26 @@ public class PairedOrTurnedQuantity3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice#PairedOffQuantity
-	 * PairedOrTurnedQuantity1Choice.PairedOffQuantity}</li>
+	 * {@linkplain com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice#mmPairedOffQuantity
+	 * PairedOrTurnedQuantity1Choice.mmPairedOffQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PairedOffQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPairedOffQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PairOff.mmPairedOffQuantity;
 			componentContext_lazy = () -> PairedOrTurnedQuantity3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PairOff.PairedOffQuantity;
 			isDerived = false;
 			xmlTag = "PairdOffQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PairedOffQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be paired-off.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice.PairedOffQuantity;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice.mmPairedOffQuantity;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice turnedQuantity;
 	/**
 	 * Quantity of financial instruments of the linked transaction to be turned.
 	 * <p>
@@ -137,8 +139,8 @@ public class PairedOrTurnedQuantity3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#TurnedQuantity
-	 * SecuritiesSettlement.TurnedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTurnedQuantity
+	 * SecuritiesSettlement.mmTurnedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,32 +162,32 @@ public class PairedOrTurnedQuantity3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice#TurnedQuantity
-	 * PairedOrTurnedQuantity1Choice.TurnedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice#mmTurnedQuantity
+	 * PairedOrTurnedQuantity1Choice.mmTurnedQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TurnedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTurnedQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmTurnedQuantity;
 			componentContext_lazy = () -> PairedOrTurnedQuantity3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.TurnedQuantity;
 			isDerived = false;
 			xmlTag = "TrndQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TurnedQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be turned.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice.TurnedQuantity;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice.mmTurnedQuantity;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice.PairedOffQuantity, com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice.TurnedQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice.mmPairedOffQuantity, com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice.mmTurnedQuantity);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PairedOrTurnedQuantity3Choice";
 				definition = "Choice between a turnaround and pair-off quantity for instructing a one to many and many to many (partial) pair-off or turnaround.";
@@ -193,5 +195,21 @@ public class PairedOrTurnedQuantity3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1Choice getPairedOffQuantity() {
+		return pairedOffQuantity;
+	}
+
+	public void setPairedOffQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice pairedOffQuantity) {
+		this.pairedOffQuantity = pairedOffQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getTurnedQuantity() {
+		return turnedQuantity;
+	}
+
+	public void setTurnedQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice turnedQuantity) {
+		this.turnedQuantity = turnedQuantity;
 	}
 }

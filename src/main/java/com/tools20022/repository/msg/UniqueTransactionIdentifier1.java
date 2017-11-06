@@ -39,11 +39,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UniqueTransactionIdentifier1#UniqueTransactionIdentifier
- * UniqueTransactionIdentifier1.UniqueTransactionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.UniqueTransactionIdentifier1#mmUniqueTransactionIdentifier
+ * UniqueTransactionIdentifier1.mmUniqueTransactionIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UniqueTransactionIdentifier1#PriorUniqueTransactionIdentifier
- * UniqueTransactionIdentifier1.PriorUniqueTransactionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.UniqueTransactionIdentifier1#mmPriorUniqueTransactionIdentifier
+ * UniqueTransactionIdentifier1.mmPriorUniqueTransactionIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UniqueTransactionIdentifier1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max105Text uniqueTransactionIdentifier;
 	/**
 	 * Unique transaction identifier will be created at the time a transaction
 	 * is first executed, shared with all registered entities and counterparties
@@ -92,8 +93,8 @@ public class UniqueTransactionIdentifier1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#UniqueTradeIdentifier
-	 * TradeIdentification.UniqueTradeIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmUniqueTradeIdentifier
+	 * TradeIdentification.mmUniqueTradeIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -116,27 +117,28 @@ public class UniqueTransactionIdentifier1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UniqueTransactionIdentifier2#UniqueTransactionIdentifier
-	 * UniqueTransactionIdentifier2.UniqueTransactionIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.msg.UniqueTransactionIdentifier2#mmUniqueTransactionIdentifier
+	 * UniqueTransactionIdentifier2.mmUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> UniqueTransactionIdentifier1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.UniqueTradeIdentifier;
 			isDerived = false;
 			xmlTag = "UnqTxIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniqueTransactionIdentifier";
 			definition = "Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime. This identifier can also be known as the Unique Swap Identifier (USI).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UniqueTransactionIdentifier2.UniqueTransactionIdentifier);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UniqueTransactionIdentifier2.mmUniqueTransactionIdentifier);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected Max105Text priorUniqueTransactionIdentifier;
 	/**
 	 * Prior unique transaction identifier specifies the previous unique
 	 * transaction identifier (UTI) that was created at the time the transaction
@@ -152,8 +154,8 @@ public class UniqueTransactionIdentifier1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#UniqueTradeIdentifier
-	 * TradeIdentification.UniqueTradeIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmUniqueTradeIdentifier
+	 * TradeIdentification.mmUniqueTradeIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,24 +178,24 @@ public class UniqueTransactionIdentifier1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UniqueTransactionIdentifier2#PriorUniqueTransactionIdentifier
-	 * UniqueTransactionIdentifier2.PriorUniqueTransactionIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.msg.UniqueTransactionIdentifier2#mmPriorUniqueTransactionIdentifier
+	 * UniqueTransactionIdentifier2.mmPriorUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriorUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriorUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> UniqueTransactionIdentifier1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.UniqueTradeIdentifier;
 			isDerived = false;
 			xmlTag = "PrrUnqTxIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorUniqueTransactionIdentifier";
 			definition = "Prior unique transaction identifier specifies the previous unique transaction identifier (UTI) that was created at the time the transaction was executed. This identifier can also be known as the Prior Unique Swap Identifier (PUSI).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UniqueTransactionIdentifier2.PriorUniqueTransactionIdentifier);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UniqueTransactionIdentifier2.mmPriorUniqueTransactionIdentifier);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
@@ -201,9 +203,10 @@ public class UniqueTransactionIdentifier1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UniqueTransactionIdentifier1.UniqueTransactionIdentifier, com.tools20022.repository.msg.UniqueTransactionIdentifier1.PriorUniqueTransactionIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UniqueTransactionIdentifier1.mmUniqueTransactionIdentifier,
+						com.tools20022.repository.msg.UniqueTransactionIdentifier1.mmPriorUniqueTransactionIdentifier);
 				trace_lazy = () -> TradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UniqueTransactionIdentifier1";
 				definition = "Specifies the unique transaction identifier (UTI) that was created at the time a transaction was first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime and optionally, the prior unique transaction identifier (PUTI). These identifiers can also be known as the Unique Swap Identifier (USI) or the Prior Unique Swap Identifier (PUSI). ";
@@ -211,5 +214,21 @@ public class UniqueTransactionIdentifier1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max105Text getUniqueTransactionIdentifier() {
+		return uniqueTransactionIdentifier;
+	}
+
+	public void setUniqueTransactionIdentifier(Max105Text uniqueTransactionIdentifier) {
+		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
+	}
+
+	public Max105Text getPriorUniqueTransactionIdentifier() {
+		return priorUniqueTransactionIdentifier;
+	}
+
+	public void setPriorUniqueTransactionIdentifier(Max105Text priorUniqueTransactionIdentifier) {
+		this.priorUniqueTransactionIdentifier = priorUniqueTransactionIdentifier;
 	}
 }

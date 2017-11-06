@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#Securities
- * EligibilityTypeCode.Securities}</li>
+ * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#mmSecurities
+ * EligibilityTypeCode.mmSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#IssuerCSD
- * EligibilityTypeCode.IssuerCSD}</li>
+ * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#mmIssuerCSD
+ * EligibilityTypeCode.mmIssuerCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#Country
- * EligibilityTypeCode.Country}</li>
+ * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#mmCountry
+ * EligibilityTypeCode.mmCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class EligibilityTypeCode {
 	 * definition} = "Eligiblity applies at securities level."</li>
 	 * </ul>
 	 */
-	public static final MMCode Securities = new MMCode() {
+	public static final MMCode mmSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
@@ -125,7 +125,7 @@ public class EligibilityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IssuerCSD = new MMCode() {
+	public static final MMCode mmIssuerCSD = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
@@ -158,7 +158,7 @@ public class EligibilityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Country = new MMCode() {
+	public static final MMCode mmCountry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
@@ -171,13 +171,13 @@ public class EligibilityTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SECU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EligibilityTypeCode";
 				definition = "Defines the type of eligibility.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EligibilityTypeCode.Securities, com.tools20022.repository.codeset.EligibilityTypeCode.IssuerCSD,
-						com.tools20022.repository.codeset.EligibilityTypeCode.Country);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EligibilityTypeCode.mmSecurities, com.tools20022.repository.codeset.EligibilityTypeCode.mmIssuerCSD,
+						com.tools20022.repository.codeset.EligibilityTypeCode.mmCountry);
 				derivation_lazy = () -> Arrays.asList(EligibilityType1Code.mmObject());
 			}
 		});

@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MetalCommodityNonPrecious1#BaseProduct
- * MetalCommodityNonPrecious1.BaseProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.MetalCommodityNonPrecious1#mmBaseProduct
+ * MetalCommodityNonPrecious1.mmBaseProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MetalCommodityNonPrecious1#SubProduct
- * MetalCommodityNonPrecious1.SubProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.MetalCommodityNonPrecious1#mmSubProduct
+ * MetalCommodityNonPrecious1.mmSubProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MetalCommodityNonPrecious1#AdditionalSubProduct
- * MetalCommodityNonPrecious1.AdditionalSubProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.MetalCommodityNonPrecious1#mmAdditionalSubProduct
+ * MetalCommodityNonPrecious1.mmAdditionalSubProduct}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MetalCommodityNonPrecious1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssetClassProductType7Code baseProduct;
 	/**
 	 * Base product for the underlying asset class as specified in the
 	 * classification of commodities derivatives table.
@@ -83,8 +84,8 @@ public class MetalCommodityNonPrecious1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#BaseProduct
-	 * Commodity.BaseProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmBaseProduct
+	 * Commodity.mmBaseProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +106,21 @@ public class MetalCommodityNonPrecious1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
 			componentContext_lazy = () -> MetalCommodityNonPrecious1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.BaseProduct;
 			isDerived = false;
 			xmlTag = "BasePdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseProduct";
 			definition = "Base product for the underlying asset class as specified in the classification of commodities derivatives table.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType7Code.mmObject();
 		}
 	};
+	protected AssetClassSubProductType15Code subProduct;
 	/**
 	 * Sub-product for the underlying asset class.
 	 * <p>
@@ -132,8 +134,8 @@ public class MetalCommodityNonPrecious1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,20 +154,21 @@ public class MetalCommodityNonPrecious1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> MetalCommodityNonPrecious1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "SubPdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubProduct";
 			definition = "Sub-product for the underlying asset class.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType15Code.mmObject();
 		}
 	};
+	protected AssetClassDetailedSubProductType10Code additionalSubProduct;
 	/**
 	 * Further subproduct type related to instruments that have a non-financial
 	 * instrument or commodity as underlying.
@@ -197,7 +200,7 @@ public class MetalCommodityNonPrecious1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalSubProduct = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MetalCommodityNonPrecious1.mmObject();
 			isDerived = false;
@@ -205,8 +208,8 @@ public class MetalCommodityNonPrecious1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalSubProduct";
 			definition = "Further subproduct type related to instruments that have a non-financial instrument or commodity as underlying.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
 	};
@@ -214,15 +217,39 @@ public class MetalCommodityNonPrecious1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MetalCommodityNonPrecious1.BaseProduct, com.tools20022.repository.msg.MetalCommodityNonPrecious1.SubProduct,
-						com.tools20022.repository.msg.MetalCommodityNonPrecious1.AdditionalSubProduct);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MetalCommodityNonPrecious1.mmBaseProduct, com.tools20022.repository.msg.MetalCommodityNonPrecious1.mmSubProduct,
+						com.tools20022.repository.msg.MetalCommodityNonPrecious1.mmAdditionalSubProduct);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MetalCommodityNonPrecious1";
 				definition = "Defines commodity sub-product attributes of a metal derivative of type non-precious.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssetClassProductType7Code getBaseProduct() {
+		return baseProduct;
+	}
+
+	public void setBaseProduct(AssetClassProductType7Code baseProduct) {
+		this.baseProduct = baseProduct;
+	}
+
+	public AssetClassSubProductType15Code getSubProduct() {
+		return subProduct;
+	}
+
+	public void setSubProduct(AssetClassSubProductType15Code subProduct) {
+		this.subProduct = subProduct;
+	}
+
+	public AssetClassDetailedSubProductType10Code getAdditionalSubProduct() {
+		return additionalSubProduct;
+	}
+
+	public void setAdditionalSubProduct(AssetClassDetailedSubProductType10Code additionalSubProduct) {
+		this.additionalSubProduct = additionalSubProduct;
 	}
 }

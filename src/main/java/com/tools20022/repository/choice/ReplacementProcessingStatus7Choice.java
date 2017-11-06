@@ -36,38 +36,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#Accepted
- * ReplacementProcessingStatus7Choice.Accepted}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmAccepted
+ * ReplacementProcessingStatus7Choice.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#Completed
- * ReplacementProcessingStatus7Choice.Completed}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmCompleted
+ * ReplacementProcessingStatus7Choice.mmCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#Denied
- * ReplacementProcessingStatus7Choice.Denied}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmDenied
+ * ReplacementProcessingStatus7Choice.mmDenied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#InRepair
- * ReplacementProcessingStatus7Choice.InRepair}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmInRepair
+ * ReplacementProcessingStatus7Choice.mmInRepair}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#PartialReplacementAccepted
- * ReplacementProcessingStatus7Choice.PartialReplacementAccepted}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmPartialReplacementAccepted
+ * ReplacementProcessingStatus7Choice.mmPartialReplacementAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#Pending
- * ReplacementProcessingStatus7Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmPending
+ * ReplacementProcessingStatus7Choice.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#ReceivedAtIntermediary
- * ReplacementProcessingStatus7Choice.ReceivedAtIntermediary}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmReceivedAtIntermediary
+ * ReplacementProcessingStatus7Choice.mmReceivedAtIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#ReceivedAtStockExchange
- * ReplacementProcessingStatus7Choice.ReceivedAtStockExchange}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmReceivedAtStockExchange
+ * ReplacementProcessingStatus7Choice.mmReceivedAtStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#Rejected
- * ReplacementProcessingStatus7Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmRejected
+ * ReplacementProcessingStatus7Choice.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#ModificationRequested
- * ReplacementProcessingStatus7Choice.ModificationRequested}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmModificationRequested
+ * ReplacementProcessingStatus7Choice.mmModificationRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#ProprietaryStatus
- * ReplacementProcessingStatus7Choice.ProprietaryStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus7Choice#mmProprietaryStatus
+ * ReplacementProcessingStatus7Choice.mmProprietaryStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -77,18 +77,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#ReplacementProcessingStatus
- * SecuritiesTradeConfirmationStatusAdviceV01.ReplacementProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmReplacementProcessingStatus
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmReplacementProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#ReplacementProcessingStatus
- * SecuritiesTradeConfirmationStatusAdviceV02.ReplacementProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmReplacementProcessingStatus
+ * SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReplacementProcessingStatus7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProprietaryReason1 accepted;
 	/**
 	 * Replacement of the trade is accepted.
 	 * <p>
@@ -113,8 +114,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -133,21 +134,22 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is accepted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Accepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccepted = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "Accptd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Replacement of the trade is accepted.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryReason1 completed;
 	/**
 	 * Replacement of the trade is completed.
 	 * <p>
@@ -159,8 +161,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,21 +181,22 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is completed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Completed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCompleted = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "Cmpltd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
 			definition = "Replacement of the trade is completed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryReason1 denied;
 	/**
 	 * Replacement of the trade is denied.
 	 * <p>
@@ -205,8 +208,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -225,21 +228,22 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is denied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Denied = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDenied = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "Dnd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
 			definition = "Replacement of the trade is denied.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryReason1 inRepair;
 	/**
 	 * Replacement of the trade is In repair.
 	 * <p>
@@ -251,8 +255,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -271,21 +275,22 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is In repair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InRepair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "InRpr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			definition = "Replacement of the trade is In repair.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryReason1 partialReplacementAccepted;
 	/**
 	 * Replacement of the trade is PartialReplacementAccepted.
 	 * <p>
@@ -297,8 +302,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -317,21 +322,22 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is PartialReplacementAccepted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartialReplacementAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartialReplacementAccepted = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "PrtlRplcmntAccptd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialReplacementAccepted";
 			definition = "Replacement of the trade is PartialReplacementAccepted.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryReason1 pending;
 	/**
 	 * Replacement of the trade is pending.
 	 * <p>
@@ -343,8 +349,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -363,21 +369,22 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Pending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Replacement of the trade is pending.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryReason1 receivedAtIntermediary;
 	/**
 	 * Replacement of the trade is ReceivedAtIntermediary.
 	 * <p>
@@ -389,8 +396,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -409,21 +416,22 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is ReceivedAtIntermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivedAtIntermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivedAtIntermediary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "RcvdAtIntrmy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtIntermediary";
 			definition = "Replacement of the trade is ReceivedAtIntermediary.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryReason1 receivedAtStockExchange;
 	/**
 	 * Replacement of the trade is ReceivedAtStockExchange.
 	 * <p>
@@ -435,8 +443,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -455,21 +463,22 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is ReceivedAtStockExchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivedAtStockExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivedAtStockExchange = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "RcvdAtStockXchg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtStockExchange";
 			definition = "Replacement of the trade is ReceivedAtStockExchange.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryReason1 rejected;
 	/**
 	 * Replacement of the trade is rejected.
 	 * <p>
@@ -481,8 +490,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -501,21 +510,22 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Replacement of the trade is rejected.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryReason1 modificationRequested;
 	/**
 	 * Replacement of the trade is Modification Requested.
 	 * <p>
@@ -529,8 +539,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -549,20 +559,21 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is Modification Requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationRequested = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationRequested = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "ModReqd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequested";
 			definition = "Replacement of the trade is Modification Requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	protected ProprietaryStatusAndReason1 proprietaryStatus;
 	/**
 	 * Provides a proprietary status and a proprietary reason of the processing
 	 * status of the trade.
@@ -576,8 +587,8 @@ public class ReplacementProcessingStatus7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -598,40 +609,128 @@ public class ReplacementProcessingStatus7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "PrtrySts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Provides a proprietary status and a proprietary reason of the processing status of the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.Accepted, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.Completed,
-						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.Denied, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.InRepair,
-						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.PartialReplacementAccepted, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.Pending,
-						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.ReceivedAtIntermediary, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.ReceivedAtStockExchange,
-						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.Rejected, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.ModificationRequested,
-						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.ProprietaryStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmAccepted, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmCompleted,
+						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmDenied, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmInRepair,
+						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmPartialReplacementAccepted, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmPending,
+						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmReceivedAtIntermediary, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmReceivedAtStockExchange,
+						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmRejected, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmModificationRequested,
+						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmProprietaryStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmReplacementProcessingStatus,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus);
 				trace_lazy = () -> Status.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.ReplacementProcessingStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.ReplacementProcessingStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReplacementProcessingStatus7Choice";
 				definition = "Choice of status for the replacement processing.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProprietaryReason1 getAccepted() {
+		return accepted;
+	}
+
+	public void setAccepted(ProprietaryReason1 accepted) {
+		this.accepted = accepted;
+	}
+
+	public ProprietaryReason1 getCompleted() {
+		return completed;
+	}
+
+	public void setCompleted(ProprietaryReason1 completed) {
+		this.completed = completed;
+	}
+
+	public ProprietaryReason1 getDenied() {
+		return denied;
+	}
+
+	public void setDenied(ProprietaryReason1 denied) {
+		this.denied = denied;
+	}
+
+	public ProprietaryReason1 getInRepair() {
+		return inRepair;
+	}
+
+	public void setInRepair(ProprietaryReason1 inRepair) {
+		this.inRepair = inRepair;
+	}
+
+	public ProprietaryReason1 getPartialReplacementAccepted() {
+		return partialReplacementAccepted;
+	}
+
+	public void setPartialReplacementAccepted(ProprietaryReason1 partialReplacementAccepted) {
+		this.partialReplacementAccepted = partialReplacementAccepted;
+	}
+
+	public ProprietaryReason1 getPending() {
+		return pending;
+	}
+
+	public void setPending(ProprietaryReason1 pending) {
+		this.pending = pending;
+	}
+
+	public ProprietaryReason1 getReceivedAtIntermediary() {
+		return receivedAtIntermediary;
+	}
+
+	public void setReceivedAtIntermediary(ProprietaryReason1 receivedAtIntermediary) {
+		this.receivedAtIntermediary = receivedAtIntermediary;
+	}
+
+	public ProprietaryReason1 getReceivedAtStockExchange() {
+		return receivedAtStockExchange;
+	}
+
+	public void setReceivedAtStockExchange(ProprietaryReason1 receivedAtStockExchange) {
+		this.receivedAtStockExchange = receivedAtStockExchange;
+	}
+
+	public ProprietaryReason1 getRejected() {
+		return rejected;
+	}
+
+	public void setRejected(ProprietaryReason1 rejected) {
+		this.rejected = rejected;
+	}
+
+	public ProprietaryReason1 getModificationRequested() {
+		return modificationRequested;
+	}
+
+	public void setModificationRequested(ProprietaryReason1 modificationRequested) {
+		this.modificationRequested = modificationRequested;
+	}
+
+	public ProprietaryStatusAndReason1 getProprietaryStatus() {
+		return proprietaryStatus;
+	}
+
+	public void setProprietaryStatus(ProprietaryStatusAndReason1 proprietaryStatus) {
+		this.proprietaryStatus = proprietaryStatus;
 	}
 }

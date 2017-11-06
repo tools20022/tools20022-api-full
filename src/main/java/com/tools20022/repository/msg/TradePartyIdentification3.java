@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#FundInformation
- * TradePartyIdentification3.FundInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#mmFundInformation
+ * TradePartyIdentification3.mmFundInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#SubmittingParty
- * TradePartyIdentification3.SubmittingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#mmSubmittingParty
+ * TradePartyIdentification3.mmSubmittingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#TradeParty
- * TradePartyIdentification3.TradeParty}</li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#mmTradeParty
+ * TradePartyIdentification3.mmTradeParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,54 +54,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02#TradingSideIdentification
- * CreateNonDeliverableForwardOpeningV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02#mmTradingSideIdentification
+ * CreateNonDeliverableForwardOpeningV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02#CounterpartySideIdentification
- * CreateNonDeliverableForwardOpeningV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02#mmCounterpartySideIdentification
+ * CreateNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02#TradingSideIdentification
- * AmendNonDeliverableForwardOpeningV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02#mmTradingSideIdentification
+ * AmendNonDeliverableForwardOpeningV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02#CounterpartySideIdentification
- * AmendNonDeliverableForwardOpeningV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02#mmCounterpartySideIdentification
+ * AmendNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02#TradingSideIdentification
- * CancelNonDeliverableForwardOpeningV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02#mmTradingSideIdentification
+ * CancelNonDeliverableForwardOpeningV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02#CounterpartySideIdentification
- * CancelNonDeliverableForwardOpeningV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02#mmCounterpartySideIdentification
+ * CancelNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#TradingSideIdentification
- * CreateNonDeliverableForwardValuationV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#mmTradingSideIdentification
+ * CreateNonDeliverableForwardValuationV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#CounterpartySideIdentification
- * CreateNonDeliverableForwardValuationV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02#mmCounterpartySideIdentification
+ * CreateNonDeliverableForwardValuationV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#TradingSideIdentification
- * AmendNonDeliverableForwardValuationV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#mmTradingSideIdentification
+ * AmendNonDeliverableForwardValuationV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#CounterpartySideIdentification
- * AmendNonDeliverableForwardValuationV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02#mmCounterpartySideIdentification
+ * AmendNonDeliverableForwardValuationV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02#TradingSideIdentification
- * CancelNonDeliverableForwardValuationV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02#mmTradingSideIdentification
+ * CancelNonDeliverableForwardValuationV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02#CounterpartySideIdentification
- * CancelNonDeliverableForwardValuationV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02#mmCounterpartySideIdentification
+ * CancelNonDeliverableForwardValuationV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#TradingSideIdentification
- * NonDeliverableForwardNotificationV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#mmTradingSideIdentification
+ * NonDeliverableForwardNotificationV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#CounterpartySideIdentification
- * NonDeliverableForwardNotificationV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02#mmCounterpartySideIdentification
+ * NonDeliverableForwardNotificationV02.mmCounterpartySideIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,6 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradePartyIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FundIdentification2 fundInformation;
 	/**
 	 * Identifies the fund which is one of the parties in a treasury trade.
 	 * <p>
@@ -126,8 +127,8 @@ public class TradePartyIdentification3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#InvestmentFund
-	 * TreasuryTradingParty.InvestmentFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#mmInvestmentFund
+	 * TreasuryTradingParty.mmInvestmentFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,21 +148,22 @@ public class TradePartyIdentification3 {
 	 * "Identifies the fund which is one of the parties in a treasury trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FundInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFundInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> TradePartyIdentification3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.InvestmentFund;
 			isDerived = false;
 			xmlTag = "FndInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundInformation";
 			definition = "Identifies the fund which is one of the parties in a treasury trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FundIdentification2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FundIdentification2.mmObject();
 		}
 	};
+	protected PartyIdentification8Choice submittingParty;
 	/**
 	 * Specifies the party which submits a treasury trade to a matching system
 	 * or to a settlement system or to a counterparty.
@@ -197,21 +199,22 @@ public class TradePartyIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubmittingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubmittingParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TradePartyIdentification3.mmObject();
 			businessComponentTrace_lazy = () -> SubmittingPartyRole.mmObject();
+			componentContext_lazy = () -> TradePartyIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittingParty";
 			definition = "Specifies the party which submits a treasury trade to a matching system or to a settlement system or to a counterparty.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification8Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification8Choice.mmObject();
 		}
 	};
+	protected PartyIdentification8Choice tradeParty;
 	/**
 	 * Specifies the party which originated a treasury trade. This party may be
 	 * the same as the submitting party.
@@ -247,42 +250,66 @@ public class TradePartyIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TradePartyIdentification3.mmObject();
 			businessComponentTrace_lazy = () -> TreasuryTradingParty.mmObject();
+			componentContext_lazy = () -> TradePartyIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "TradPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeParty";
 			definition = "Specifies the party which originated a treasury trade. This party may be the same as the submitting party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification8Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification8Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification3.FundInformation, com.tools20022.repository.msg.TradePartyIdentification3.SubmittingParty,
-						com.tools20022.repository.msg.TradePartyIdentification3.TradeParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification3.mmFundInformation, com.tools20022.repository.msg.TradePartyIdentification3.mmSubmittingParty,
+						com.tools20022.repository.msg.TradePartyIdentification3.mmTradeParty);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmTradingSideIdentification,
+						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmCounterpartySideIdentification);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02.TradingSideIdentification,
-						com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02.CounterpartySideIdentification, com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.TradingSideIdentification,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.CounterpartySideIdentification, com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.TradingSideIdentification,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.CounterpartySideIdentification, com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.TradingSideIdentification,
-						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.CounterpartySideIdentification, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.TradingSideIdentification,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.CounterpartySideIdentification, com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.TradingSideIdentification,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.CounterpartySideIdentification, com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.TradingSideIdentification,
-						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.CounterpartySideIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradePartyIdentification3";
 				definition = "Entity involved in an activity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FundIdentification2 getFundInformation() {
+		return fundInformation;
+	}
+
+	public void setFundInformation(com.tools20022.repository.msg.FundIdentification2 fundInformation) {
+		this.fundInformation = fundInformation;
+	}
+
+	public PartyIdentification8Choice getSubmittingParty() {
+		return submittingParty;
+	}
+
+	public void setSubmittingParty(PartyIdentification8Choice submittingParty) {
+		this.submittingParty = submittingParty;
+	}
+
+	public PartyIdentification8Choice getTradeParty() {
+		return tradeParty;
+	}
+
+	public void setTradeParty(PartyIdentification8Choice tradeParty) {
+		this.tradeParty = tradeParty;
 	}
 }

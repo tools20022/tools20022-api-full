@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReceiveDelivery1Code#Delivery
- * ReceiveDelivery1Code.Delivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReceiveDelivery1Code#mmDelivery
+ * ReceiveDelivery1Code.mmDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReceiveDelivery1Code#Receive
- * ReceiveDelivery1Code.Receive}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReceiveDelivery1Code#mmReceive
+ * ReceiveDelivery1Code.mmReceive}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class ReceiveDelivery1Code extends ReceiveDeliveryCode {
 	 * name} = "Delivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode Delivery = new MMCode() {
+	public static final MMCode mmDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delivery";
@@ -105,7 +105,7 @@ public class ReceiveDelivery1Code extends ReceiveDeliveryCode {
 	 * name} = "Receive"</li>
 	 * </ul>
 	 */
-	public static final MMCode Receive = new MMCode() {
+	public static final MMCode mmReceive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receive";
@@ -116,12 +116,12 @@ public class ReceiveDelivery1Code extends ReceiveDeliveryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DELI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReceiveDelivery1Code";
 				definition = "Specifies whether the settlement transaction is a delivery or receipt.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReceiveDelivery1Code.Delivery, com.tools20022.repository.codeset.ReceiveDelivery1Code.Receive);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReceiveDelivery1Code.mmDelivery, com.tools20022.repository.codeset.ReceiveDelivery1Code.mmReceive);
 				trace_lazy = () -> ReceiveDeliveryCode.mmObject();
 			}
 		});

@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice#UnitsNumber
- * FinancialInstrumentQuantity10Choice.UnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice#mmUnitsNumber
+ * FinancialInstrumentQuantity10Choice.mmUnitsNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice#OrderedAmount
- * FinancialInstrumentQuantity10Choice.OrderedAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice#mmOrderedAmount
+ * FinancialInstrumentQuantity10Choice.mmOrderedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice#HoldingsRate
- * FinancialInstrumentQuantity10Choice.HoldingsRate}</li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice#mmHoldingsRate
+ * FinancialInstrumentQuantity10Choice.mmHoldingsRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentQuantity10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
 	 * Total quantity of units to be redeemed.
 	 * <p>
@@ -81,8 +82,8 @@ public class FinancialInstrumentQuantity10Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#UnitsNumber
-	 * InvestmentFundOrder.UnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmUnitsNumber
+	 * InvestmentFundOrder.mmUnitsNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class FinancialInstrumentQuantity10Choice {
 	 * definition} = "Total quantity of units to be redeemed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> FinancialInstrumentQuantity10Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.UnitsNumber;
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Total quantity of units to be redeemed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount orderedAmount;
 	/**
 	 * Amount of money instructed for the redemption.
 	 * <p>
@@ -128,8 +130,8 @@ public class FinancialInstrumentQuantity10Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedAmount
-	 * SecuritiesOrder.OrderedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedAmount
+	 * SecuritiesOrder.mmOrderedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +150,21 @@ public class FinancialInstrumentQuantity10Choice {
 	 * definition} = "Amount of money instructed for the redemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity10Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedAmount;
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedAmount";
 			definition = "Amount of money instructed for the redemption.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate holdingsRate;
 	/**
 	 * Percentage of the holding to be redeemed.
 	 * <p>
@@ -175,8 +178,8 @@ public class FinancialInstrumentQuantity10Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#HoldingsRate
-	 * InvestmentFundOrder.HoldingsRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmHoldingsRate
+	 * InvestmentFundOrder.mmHoldingsRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,17 +198,17 @@ public class FinancialInstrumentQuantity10Choice {
 	 * definition} = "Percentage of the holding to be redeemed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldingsRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmHoldingsRate;
 			componentContext_lazy = () -> FinancialInstrumentQuantity10Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.HoldingsRate;
 			isDerived = false;
 			xmlTag = "HldgsRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRate";
 			definition = "Percentage of the holding to be redeemed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -213,15 +216,39 @@ public class FinancialInstrumentQuantity10Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.UnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.OrderedAmount,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.HoldingsRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmUnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmOrderedAmount,
+						com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmHoldingsRate);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentQuantity10Choice";
 				definition = "Choice between ways to express the quantity of the financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1 getUnitsNumber() {
+		return unitsNumber;
+	}
+
+	public void setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = unitsNumber;
+	}
+
+	public ActiveCurrencyAndAmount getOrderedAmount() {
+		return orderedAmount;
+	}
+
+	public void setOrderedAmount(ActiveCurrencyAndAmount orderedAmount) {
+		this.orderedAmount = orderedAmount;
+	}
+
+	public PercentageRate getHoldingsRate() {
+		return holdingsRate;
+	}
+
+	public void setHoldingsRate(PercentageRate holdingsRate) {
+		this.holdingsRate = holdingsRate;
 	}
 }

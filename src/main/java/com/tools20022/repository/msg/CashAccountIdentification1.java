@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountIdentification1#DomesticAccount
- * CashAccountIdentification1.DomesticAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountIdentification1#mmDomesticAccount
+ * CashAccountIdentification1.mmDomesticAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SimpleIdentificationInformation domesticAccount;
 	/**
 	 * Account number used by financial institutions in individual countries to
 	 * identify an account of a customer, but not necessarily the bank and
@@ -74,8 +75,8 @@ public class CashAccountIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#ProprietaryIdentification
-	 * AccountIdentification.ProprietaryIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmProprietaryIdentification
+	 * AccountIdentification.mmProprietaryIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,32 +97,40 @@ public class CashAccountIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DomesticAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDomesticAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> CashAccountIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.ProprietaryIdentification;
 			isDerived = false;
 			xmlTag = "DmstAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticAccount";
 			definition = "Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SimpleIdentificationInformation.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountIdentification1.DomesticAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountIdentification1.mmDomesticAccount);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccountIdentification1";
 				definition = "Unique identifier of an account, as assigned by the account servicer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SimpleIdentificationInformation getDomesticAccount() {
+		return domesticAccount;
+	}
+
+	public void setDomesticAccount(com.tools20022.repository.msg.SimpleIdentificationInformation domesticAccount) {
+		this.domesticAccount = domesticAccount;
 	}
 }

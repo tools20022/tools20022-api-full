@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.GenderCode GenderCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Gender1Code#Female
- * Gender1Code.Female}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Gender1Code#Male
- * Gender1Code.Male}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Gender1Code#mmFemale
+ * Gender1Code.mmFemale}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Gender1Code#mmMale
+ * Gender1Code.mmMale}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,7 +71,7 @@ public class Gender1Code extends GenderCode {
 	 * name} = "Female"</li>
 	 * </ul>
 	 */
-	public static final MMCode Female = new MMCode() {
+	public static final MMCode mmFemale = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Female";
@@ -93,7 +93,7 @@ public class Gender1Code extends GenderCode {
 	 * name} = "Male"</li>
 	 * </ul>
 	 */
-	public static final MMCode Male = new MMCode() {
+	public static final MMCode mmMale = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Male";
@@ -104,11 +104,11 @@ public class Gender1Code extends GenderCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Gender1Code";
 				definition = "Specifies the gender of a person.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Gender1Code.Female, com.tools20022.repository.codeset.Gender1Code.Male);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Gender1Code.mmFemale, com.tools20022.repository.codeset.Gender1Code.mmMale);
 				trace_lazy = () -> GenderCode.mmObject();
 			}
 		});

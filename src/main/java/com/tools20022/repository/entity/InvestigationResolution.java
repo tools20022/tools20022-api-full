@@ -40,20 +40,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationResolution#InvestigationCase
- * InvestigationResolution.InvestigationCase}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationResolution#mmInvestigationCase
+ * InvestigationResolution.mmInvestigationCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationResolution#InvestigationCaseReference
- * InvestigationResolution.InvestigationCaseReference}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#InvestigationResolution
- * InvestigationCase.InvestigationResolution}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationResolution#mmInvestigationCaseReference
+ * InvestigationResolution.mmInvestigationCaseReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -65,6 +56,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.Reassignment Reassignment}</li>
  * <li>{@linkplain com.tools20022.repository.entity.DuplicateCase DuplicateCase}
  * </li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationResolution
+ * InvestigationCase.mmInvestigationResolution}</li>
  * </ul>
  * </li>
  * <li>
@@ -82,8 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestigationResolution {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestigationCase investigationCase;
 	/**
 	 * Case for which a resolution is provided.
 	 * <p>
@@ -105,8 +106,8 @@ public class InvestigationResolution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#InvestigationResolution
-	 * InvestigationCase.InvestigationResolution}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationResolution
+	 * InvestigationCase.mmInvestigationResolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -114,34 +115,34 @@ public class InvestigationResolution {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.InvestigationCase
 	 * InvestigationCase}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestigationStatus#DuplicateOf
-	 * InvestigationStatus.DuplicateOf}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation24#ResolvedCase
-	 * OriginalGroupInformation24.ResolvedCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction3#ResolvedCase
-	 * OriginalPaymentInstruction3.ResolvedCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction10#ResolvedCase
-	 * OriginalPaymentInstruction10.ResolvedCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction17#ResolvedCase
-	 * OriginalPaymentInstruction17.ResolvedCase}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction22#ResolvedCase
-	 * OriginalPaymentInstruction22.ResolvedCase}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestigationResolution
 	 * InvestigationResolution}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestigationStatus#mmDuplicateOf
+	 * InvestigationStatus.mmDuplicateOf}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation24#mmResolvedCase
+	 * OriginalGroupInformation24.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction3#mmResolvedCase
+	 * OriginalPaymentInstruction3.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction10#mmResolvedCase
+	 * OriginalPaymentInstruction10.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction17#mmResolvedCase
+	 * OriginalPaymentInstruction17.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction22#mmResolvedCase
+	 * OriginalPaymentInstruction22.mmResolvedCase}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -153,23 +154,24 @@ public class InvestigationResolution {
 	 * definition} = "Case for which a resolution is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestigationCase = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestigationCase = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestigationStatus.DuplicateOf, com.tools20022.repository.msg.OriginalGroupInformation24.ResolvedCase,
-					com.tools20022.repository.msg.OriginalPaymentInstruction3.ResolvedCase, com.tools20022.repository.msg.OriginalPaymentInstruction10.ResolvedCase, com.tools20022.repository.msg.OriginalPaymentInstruction17.ResolvedCase,
-					com.tools20022.repository.msg.OriginalPaymentInstruction22.ResolvedCase);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestigationStatus.mmDuplicateOf, com.tools20022.repository.msg.OriginalGroupInformation24.mmResolvedCase,
+					com.tools20022.repository.msg.OriginalPaymentInstruction3.mmResolvedCase, com.tools20022.repository.msg.OriginalPaymentInstruction10.mmResolvedCase,
+					com.tools20022.repository.msg.OriginalPaymentInstruction17.mmResolvedCase, com.tools20022.repository.msg.OriginalPaymentInstruction22.mmResolvedCase);
 			elementContext_lazy = () -> InvestigationResolution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCase";
 			definition = "Case for which a resolution is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCase.InvestigationResolution;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmInvestigationResolution;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
 		}
 	};
+	protected Max35Text investigationCaseReference;
 	/**
 	 * Identifies the case for which a resolution is provided.
 	 * <p>
@@ -195,15 +197,15 @@ public class InvestigationResolution {
 	 * definition} = "Identifies the case for which a resolution is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InvestigationCaseReference = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInvestigationCaseReference = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> InvestigationResolution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCaseReference";
 			definition = "Identifies the case for which a resolution is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -211,16 +213,32 @@ public class InvestigationResolution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestigationResolution";
 				definition = "Specifies the actions taken as a result of an investigation.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCase.InvestigationResolution);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCase.mmInvestigationResolution);
 				subType_lazy = () -> Arrays.asList(PaymentInvestigationCaseResolution.mmObject(), Reassignment.mmObject(), DuplicateCase.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationResolution.InvestigationCase, com.tools20022.repository.entity.InvestigationResolution.InvestigationCaseReference);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCase, com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCaseReference);
 				derivationComponent_lazy = () -> Arrays.asList(CancellationStatusReason1Choice.mmObject(), CancellationStatusReason2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestigationCase getInvestigationCase() {
+		return investigationCase;
+	}
+
+	public void setInvestigationCase(com.tools20022.repository.entity.InvestigationCase investigationCase) {
+		this.investigationCase = investigationCase;
+	}
+
+	public Max35Text getInvestigationCaseReference() {
+		return investigationCaseReference;
+	}
+
+	public void setInvestigationCaseReference(Max35Text investigationCaseReference) {
+		this.investigationCaseReference = investigationCaseReference;
 	}
 }

@@ -34,58 +34,60 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Accepted
- * PendingStatus3Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmAccepted
+ * PendingStatus3Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Validated
- * PendingStatus3Code.Validated}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Matched
- * PendingStatus3Code.Matched}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmValidated
+ * PendingStatus3Code.mmValidated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Authorised
- * PendingStatus3Code.Authorised}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Invalid
- * PendingStatus3Code.Invalid}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmMatched
+ * PendingStatus3Code.mmMatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Unmatched
- * PendingStatus3Code.Unmatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmAuthorised
+ * PendingStatus3Code.mmAuthorised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#SettlementEligible
- * PendingStatus3Code.SettlementEligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmInvalid
+ * PendingStatus3Code.mmInvalid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#SettlementMature
- * PendingStatus3Code.SettlementMature}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmUnmatched
+ * PendingStatus3Code.mmUnmatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Suspended
- * PendingStatus3Code.Suspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmSettlementEligible
+ * PendingStatus3Code.mmSettlementEligible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#PendingCancellation
- * PendingStatus3Code.PendingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmSettlementMature
+ * PendingStatus3Code.mmSettlementMature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#PendingSettlement
- * PendingStatus3Code.PendingSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmSuspended
+ * PendingStatus3Code.mmSuspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#PendingFailingSettlement
- * PendingStatus3Code.PendingFailingSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmPendingCancellation
+ * PendingStatus3Code.mmPendingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#SenderMultilateralLimitRelated
- * PendingStatus3Code.SenderMultilateralLimitRelated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmPendingSettlement
+ * PendingStatus3Code.mmPendingSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#ReceiverMultilateralLimitRelated
- * PendingStatus3Code.ReceiverMultilateralLimitRelated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmPendingFailingSettlement
+ * PendingStatus3Code.mmPendingFailingSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#SenderReceiverBilateralLimitRelated
- * PendingStatus3Code.SenderReceiverBilateralLimitRelated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmSenderMultilateralLimitRelated
+ * PendingStatus3Code.mmSenderMultilateralLimitRelated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#HeldForServiceAvailability
- * PendingStatus3Code.HeldForServiceAvailability}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmReceiverMultilateralLimitRelated
+ * PendingStatus3Code.mmReceiverMultilateralLimitRelated}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmSenderReceiverBilateralLimitRelated
+ * PendingStatus3Code.mmSenderReceiverBilateralLimitRelated}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmHeldForServiceAvailability
+ * PendingStatus3Code.mmHeldForServiceAvailability}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -123,7 +125,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -146,7 +148,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Validated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Validated = new MMCode() {
+	public static final MMCode mmValidated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Validated";
@@ -169,7 +171,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Matched"</li>
 	 * </ul>
 	 */
-	public static final MMCode Matched = new MMCode() {
+	public static final MMCode mmMatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
@@ -192,7 +194,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Authorised"</li>
 	 * </ul>
 	 */
-	public static final MMCode Authorised = new MMCode() {
+	public static final MMCode mmAuthorised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorised";
@@ -215,7 +217,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Invalid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Invalid = new MMCode() {
+	public static final MMCode mmInvalid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
@@ -238,7 +240,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Unmatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unmatched = new MMCode() {
+	public static final MMCode mmUnmatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
@@ -261,7 +263,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "SettlementEligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementEligible = new MMCode() {
+	public static final MMCode mmSettlementEligible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementEligible";
@@ -284,7 +286,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "SettlementMature"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementMature = new MMCode() {
+	public static final MMCode mmSettlementMature = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMature";
@@ -307,7 +309,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspended = new MMCode() {
+	public static final MMCode mmSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
@@ -330,7 +332,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "PendingCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingCancellation = new MMCode() {
+	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
@@ -353,7 +355,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "PendingSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingSettlement = new MMCode() {
+	public static final MMCode mmPendingSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSettlement";
@@ -376,7 +378,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "PendingFailingSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingFailingSettlement = new MMCode() {
+	public static final MMCode mmPendingFailingSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingFailingSettlement";
@@ -399,7 +401,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "SenderMultilateralLimitRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode SenderMultilateralLimitRelated = new MMCode() {
+	public static final MMCode mmSenderMultilateralLimitRelated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderMultilateralLimitRelated";
@@ -422,7 +424,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "ReceiverMultilateralLimitRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceiverMultilateralLimitRelated = new MMCode() {
+	public static final MMCode mmReceiverMultilateralLimitRelated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverMultilateralLimitRelated";
@@ -445,7 +447,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "SenderReceiverBilateralLimitRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode SenderReceiverBilateralLimitRelated = new MMCode() {
+	public static final MMCode mmSenderReceiverBilateralLimitRelated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderReceiverBilateralLimitRelated";
@@ -468,7 +470,7 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "HeldForServiceAvailability"</li>
 	 * </ul>
 	 */
-	public static final MMCode HeldForServiceAvailability = new MMCode() {
+	public static final MMCode mmHeldForServiceAvailability = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeldForServiceAvailability";
@@ -479,18 +481,18 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACPD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingStatus3Code";
 				definition = "Indicates that the state of a payment at the clearing agent side is pending.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingStatus3Code.Accepted, com.tools20022.repository.codeset.PendingStatus3Code.Validated, com.tools20022.repository.codeset.PendingStatus3Code.Matched,
-						com.tools20022.repository.codeset.PendingStatus3Code.Authorised, com.tools20022.repository.codeset.PendingStatus3Code.Invalid, com.tools20022.repository.codeset.PendingStatus3Code.Unmatched,
-						com.tools20022.repository.codeset.PendingStatus3Code.SettlementEligible, com.tools20022.repository.codeset.PendingStatus3Code.SettlementMature, com.tools20022.repository.codeset.PendingStatus3Code.Suspended,
-						com.tools20022.repository.codeset.PendingStatus3Code.PendingCancellation, com.tools20022.repository.codeset.PendingStatus3Code.PendingSettlement,
-						com.tools20022.repository.codeset.PendingStatus3Code.PendingFailingSettlement, com.tools20022.repository.codeset.PendingStatus3Code.SenderMultilateralLimitRelated,
-						com.tools20022.repository.codeset.PendingStatus3Code.ReceiverMultilateralLimitRelated, com.tools20022.repository.codeset.PendingStatus3Code.SenderReceiverBilateralLimitRelated,
-						com.tools20022.repository.codeset.PendingStatus3Code.HeldForServiceAvailability);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingStatus3Code.mmAccepted, com.tools20022.repository.codeset.PendingStatus3Code.mmValidated,
+						com.tools20022.repository.codeset.PendingStatus3Code.mmMatched, com.tools20022.repository.codeset.PendingStatus3Code.mmAuthorised, com.tools20022.repository.codeset.PendingStatus3Code.mmInvalid,
+						com.tools20022.repository.codeset.PendingStatus3Code.mmUnmatched, com.tools20022.repository.codeset.PendingStatus3Code.mmSettlementEligible, com.tools20022.repository.codeset.PendingStatus3Code.mmSettlementMature,
+						com.tools20022.repository.codeset.PendingStatus3Code.mmSuspended, com.tools20022.repository.codeset.PendingStatus3Code.mmPendingCancellation, com.tools20022.repository.codeset.PendingStatus3Code.mmPendingSettlement,
+						com.tools20022.repository.codeset.PendingStatus3Code.mmPendingFailingSettlement, com.tools20022.repository.codeset.PendingStatus3Code.mmSenderMultilateralLimitRelated,
+						com.tools20022.repository.codeset.PendingStatus3Code.mmReceiverMultilateralLimitRelated, com.tools20022.repository.codeset.PendingStatus3Code.mmSenderReceiverBilateralLimitRelated,
+						com.tools20022.repository.codeset.PendingStatus3Code.mmHeldForServiceAvailability);
 				trace_lazy = () -> PaymentInstructionStatusCode.mmObject();
 			}
 		});

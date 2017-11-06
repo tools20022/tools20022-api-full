@@ -38,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Order1#Type Order1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order1#TradingCapacity
- * Order1.TradingCapacity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order1#CustomerCapacity
- * Order1.CustomerCapacity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order1#Side Order1.Side}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order1#PlaceOfExecution
- * Order1.PlaceOfExecution}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order1#ExpiryDateTime
- * Order1.ExpiryDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order1#QuantityDetails
- * Order1.QuantityDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order1#CommissionDetails
- * Order1.CommissionDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order1#mmType Order1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order1#mmTradingCapacity
+ * Order1.mmTradingCapacity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order1#mmCustomerCapacity
+ * Order1.mmCustomerCapacity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order1#mmSide Order1.mmSide}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order1#mmPlaceOfExecution
+ * Order1.mmPlaceOfExecution}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order1#mmExpiryDateTime
+ * Order1.mmExpiryDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order1#mmQuantityDetails
+ * Order1.mmQuantityDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order1#mmCommissionDetails
+ * Order1.mmCommissionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Order1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrderType1Code type;
 	/**
 	 * Indicates the type of instruction to a broker or dealer to buy or sell a
 	 * financial instrument.
@@ -90,8 +91,8 @@ public class Order1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Type
-	 * SecuritiesOrder.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmType
+	 * SecuritiesOrder.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order1
@@ -111,20 +112,21 @@ public class Order1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmType;
 			componentContext_lazy = () -> Order1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OrderType1Code.mmObject();
 		}
 	};
+	protected TradingCapacity3Code tradingCapacity;
 	/**
 	 * Capacity of customer placing the order. Primarily used by futures
 	 * exchanges to indicate the CTI code (customer type indicator) as required
@@ -140,8 +142,8 @@ public class Order1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#CustomerCapacity
-	 * SecuritiesOrder.CustomerCapacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmCustomerCapacity
+	 * SecuritiesOrder.mmCustomerCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order1
@@ -161,20 +163,21 @@ public class Order1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmCustomerCapacity;
 			componentContext_lazy = () -> Order1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.CustomerCapacity;
 			isDerived = false;
 			xmlTag = "TradgCpcty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingCapacity";
 			definition = "Capacity of customer placing the order. Primarily used by futures exchanges to indicate the CTI code (customer type indicator) as required by the US CFTC (Commodity Futures Trading Commission).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TradingCapacity3Code.mmObject();
 		}
 	};
+	protected CustomerOrderCapacity1Code customerCapacity;
 	/**
 	 * Capacity of customer placing the order. Primarily used by futures
 	 * exchanges to indicate the CTI code (customer type indicator) as required
@@ -190,8 +193,8 @@ public class Order1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#CustomerCapacity
-	 * SecuritiesOrder.CustomerCapacity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmCustomerCapacity
+	 * SecuritiesOrder.mmCustomerCapacity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order1
@@ -211,20 +214,21 @@ public class Order1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerCapacity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmCustomerCapacity;
 			componentContext_lazy = () -> Order1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.CustomerCapacity;
 			isDerived = false;
 			xmlTag = "CstmrCpcty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCapacity";
 			definition = "Capacity of customer placing the order. Primarily used by futures exchanges to indicate the CTI code (customer type indicator) as required by the US CFTC (Commodity Futures Trading Commission).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CustomerOrderCapacity1Code.mmObject();
 		}
 	};
+	protected Side1Code side;
 	/**
 	 * Coded list to specify the side of the order.
 	 * <p>
@@ -237,8 +241,8 @@ public class Order1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order1
@@ -256,20 +260,21 @@ public class Order1 {
 	 * definition} = "Coded list to specify the side of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Side = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> Order1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Coded list to specify the side of the order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	protected MarketIdentification1 placeOfExecution;
 	/**
 	 * Unique and unambiguous way to identify an organisation.
 	 * <p>
@@ -281,8 +286,8 @@ public class Order1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#PlaceOfTrade
-	 * SecuritiesOrder.PlaceOfTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmPlaceOfTrade
+	 * SecuritiesOrder.mmPlaceOfTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order1
@@ -300,21 +305,22 @@ public class Order1 {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PlaceOfExecution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlaceOfExecution = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmPlaceOfTrade;
 			componentContext_lazy = () -> Order1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.PlaceOfTrade;
 			isDerived = false;
 			xmlTag = "PlcOfExctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfExecution";
 			definition = "Unique and unambiguous way to identify an organisation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification1.mmObject();
 		}
 	};
+	protected ISODateTime expiryDateTime;
 	/**
 	 * Time/Date of order expiration (always expressed in UTC (Universal Time
 	 * Coordinated, also known as "GMT").
@@ -328,8 +334,8 @@ public class Order1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderExpiryDate
-	 * SecuritiesOrder.OrderExpiryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderExpiryDate
+	 * SecuritiesOrder.mmOrderExpiryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order1
@@ -349,20 +355,21 @@ public class Order1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderExpiryDate;
 			componentContext_lazy = () -> Order1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderExpiryDate;
 			isDerived = false;
 			xmlTag = "XpryDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDateTime";
 			definition = "Time/Date of order expiration (always expressed in UTC (Universal Time Coordinated, also known as \"GMT\").";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected OrderQuantity1 quantityDetails;
 	/**
 	 * Provides details about the order quantity.
 	 * <p>
@@ -374,8 +381,8 @@ public class Order1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order1
@@ -393,21 +400,22 @@ public class Order1 {
 	 * definition} = "Provides details about the order quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> Order1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "QtyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDetails";
 			definition = "Provides details about the order quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OrderQuantity1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
 		}
 	};
+	protected Commission2 commissionDetails;
 	/**
 	 * Commission details related that may apply to the order.
 	 * <p>
@@ -419,8 +427,8 @@ public class Order1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeCommission
-	 * Trade.TradeCommission}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeCommission
+	 * Trade.mmTradeCommission}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Order1
@@ -438,35 +446,99 @@ public class Order1 {
 	 * definition} = "Commission details related that may apply to the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommissionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
 			componentContext_lazy = () -> Order1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeCommission;
 			isDerived = false;
 			xmlTag = "ComssnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Commission details related that may apply to the order.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Commission2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order1.Type, com.tools20022.repository.msg.Order1.TradingCapacity, com.tools20022.repository.msg.Order1.CustomerCapacity,
-						com.tools20022.repository.msg.Order1.Side, com.tools20022.repository.msg.Order1.PlaceOfExecution, com.tools20022.repository.msg.Order1.ExpiryDateTime, com.tools20022.repository.msg.Order1.QuantityDetails,
-						com.tools20022.repository.msg.Order1.CommissionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order1.mmType, com.tools20022.repository.msg.Order1.mmTradingCapacity, com.tools20022.repository.msg.Order1.mmCustomerCapacity,
+						com.tools20022.repository.msg.Order1.mmSide, com.tools20022.repository.msg.Order1.mmPlaceOfExecution, com.tools20022.repository.msg.Order1.mmExpiryDateTime, com.tools20022.repository.msg.Order1.mmQuantityDetails,
+						com.tools20022.repository.msg.Order1.mmCommissionDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Order1";
 				definition = "Intention to transfer an ownership of a financial instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrderType1Code getType() {
+		return type;
+	}
+
+	public void setType(OrderType1Code type) {
+		this.type = type;
+	}
+
+	public TradingCapacity3Code getTradingCapacity() {
+		return tradingCapacity;
+	}
+
+	public void setTradingCapacity(TradingCapacity3Code tradingCapacity) {
+		this.tradingCapacity = tradingCapacity;
+	}
+
+	public CustomerOrderCapacity1Code getCustomerCapacity() {
+		return customerCapacity;
+	}
+
+	public void setCustomerCapacity(CustomerOrderCapacity1Code customerCapacity) {
+		this.customerCapacity = customerCapacity;
+	}
+
+	public Side1Code getSide() {
+		return side;
+	}
+
+	public void setSide(Side1Code side) {
+		this.side = side;
+	}
+
+	public MarketIdentification1 getPlaceOfExecution() {
+		return placeOfExecution;
+	}
+
+	public void setPlaceOfExecution(com.tools20022.repository.msg.MarketIdentification1 placeOfExecution) {
+		this.placeOfExecution = placeOfExecution;
+	}
+
+	public ISODateTime getExpiryDateTime() {
+		return expiryDateTime;
+	}
+
+	public void setExpiryDateTime(ISODateTime expiryDateTime) {
+		this.expiryDateTime = expiryDateTime;
+	}
+
+	public OrderQuantity1 getQuantityDetails() {
+		return quantityDetails;
+	}
+
+	public void setQuantityDetails(com.tools20022.repository.msg.OrderQuantity1 quantityDetails) {
+		this.quantityDetails = quantityDetails;
+	}
+
+	public Commission2 getCommissionDetails() {
+		return commissionDetails;
+	}
+
+	public void setCommissionDetails(com.tools20022.repository.msg.Commission2 commissionDetails) {
+		this.commissionDetails = commissionDetails;
 	}
 }

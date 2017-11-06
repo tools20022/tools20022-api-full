@@ -32,13 +32,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransferRequest1#Environment
- * ATMTransferRequest1.Environment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransferRequest1#Context
- * ATMTransferRequest1.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransferRequest1#mmEnvironment
+ * ATMTransferRequest1.mmEnvironment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransferRequest1#mmContext
+ * ATMTransferRequest1.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMTransferRequest1#Transaction
- * ATMTransferRequest1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMTransferRequest1#mmTransaction
+ * ATMTransferRequest1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMTransferRequestV01#ATMTransferRequest
- * ATMTransferRequestV01.ATMTransferRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMTransferRequestV01#mmATMTransferRequest
+ * ATMTransferRequestV01.mmATMTransferRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMTransferRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment11 environment;
 	/**
 	 * Environment in which the fund transfer is performed.
 	 * <p>
@@ -95,7 +96,7 @@ public class ATMTransferRequest1 {
 	 * definition} = "Environment in which the fund transfer is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransferRequest1.mmObject();
 			isDerived = false;
@@ -103,12 +104,13 @@ public class ATMTransferRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment in which the fund transfer is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment11.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment11.mmObject();
 		}
 	};
+	protected ATMContext18 context;
 	/**
 	 * Context in which the fund transfer is performed.
 	 * <p>
@@ -135,7 +137,7 @@ public class ATMTransferRequest1 {
 	 * definition} = "Context in which the fund transfer is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransferRequest1.mmObject();
 			isDerived = false;
@@ -143,12 +145,13 @@ public class ATMTransferRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the fund transfer is performed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMContext18.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMContext18.mmObject();
 		}
 	};
+	protected ATMTransaction23 transaction;
 	/**
 	 * Transfer information for the transaction.
 	 * <p>
@@ -175,7 +178,7 @@ public class ATMTransferRequest1 {
 	 * definition} = "Transfer information for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMTransferRequest1.mmObject();
 			isDerived = false;
@@ -183,25 +186,49 @@ public class ATMTransferRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transfer information for the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction23.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction23.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransferRequest1.Environment, com.tools20022.repository.msg.ATMTransferRequest1.Context,
-						com.tools20022.repository.msg.ATMTransferRequest1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMTransferRequestV01.ATMTransferRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransferRequest1.mmEnvironment, com.tools20022.repository.msg.ATMTransferRequest1.mmContext,
+						com.tools20022.repository.msg.ATMTransferRequest1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMTransferRequestV01.mmATMTransferRequest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMTransferRequest1";
 				definition = "Information related to the request of a fund transfer from an ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment11 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment11 environment) {
+		this.environment = environment;
+	}
+
+	public ATMContext18 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.ATMContext18 context) {
+		this.context = context;
+	}
+
+	public ATMTransaction23 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction23 transaction) {
+		this.transaction = transaction;
 	}
 }

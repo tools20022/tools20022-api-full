@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.PaymentInstruction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information supplied to enable the matching/reconciliation of an entry with
@@ -39,17 +40,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation8#RemittanceIdentification
- * RemittanceInformation8.RemittanceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation8#mmRemittanceIdentification
+ * RemittanceInformation8.mmRemittanceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation8#Unstructured
- * RemittanceInformation8.Unstructured}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation8#mmUnstructured
+ * RemittanceInformation8.mmUnstructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation8#Structured
- * RemittanceInformation8.Structured}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation8#mmStructured
+ * RemittanceInformation8.mmStructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation8#OriginalPaymentInformation
- * RemittanceInformation8.OriginalPaymentInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation8#mmOriginalPaymentInformation
+ * RemittanceInformation8.mmOriginalPaymentInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,15 +60,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV01#RemittanceInformation
- * RemittanceAdviceV01.RemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.area.remt.RemittanceAdviceV01#mmRemittanceInformation
+ * RemittanceAdviceV01.mmRemittanceInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RemittanceInformation8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text remittanceIdentification;
 	/**
 	 * Unique identification, assigned by the originator, to unambiguously
 	 * identify the remittance information within the message.
@@ -107,8 +109,8 @@ public class RemittanceInformation8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -131,27 +133,28 @@ public class RemittanceInformation8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation12#RemittanceIdentification
-	 * RemittanceInformation12.RemittanceIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation12#mmRemittanceIdentification
+	 * RemittanceInformation12.mmRemittanceIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemittanceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemittanceIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> RemittanceInformation8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "RmtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceIdentification";
 			definition = "Unique identification, assigned by the originator, to unambiguously identify the remittance information within the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation12.RemittanceIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation12.mmRemittanceIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max140Text> unstructured;
 	/**
 	 * Information supplied to enable the matching/reconciliation of an entry
 	 * with the items that the payment is intended to settle, such as commercial
@@ -185,18 +188,18 @@ public class RemittanceInformation8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation12#Unstructured
-	 * RemittanceInformation12.Unstructured}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation12#mmUnstructured
+	 * RemittanceInformation12.mmUnstructured}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation7#Unstructured
-	 * RemittanceInformation7.Unstructured}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation7#mmUnstructured
+	 * RemittanceInformation7.mmUnstructured}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RemittanceInformation8.mmObject();
 			isDerived = false;
@@ -204,12 +207,13 @@ public class RemittanceInformation8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unstructured";
 			definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in an unstructured form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RemittanceInformation7.Unstructured;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation12.Unstructured);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation12.mmUnstructured);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RemittanceInformation7.mmUnstructured;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StructuredRemittanceInformation10> structured;
 	/**
 	 * Information supplied to enable the matching/reconciliation of an entry
 	 * with the items that the payment is intended to settle, such as commercial
@@ -247,33 +251,34 @@ public class RemittanceInformation8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation12#Structured
-	 * RemittanceInformation12.Structured}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation12#mmStructured
+	 * RemittanceInformation12.mmStructured}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation7#Structured
-	 * RemittanceInformation7.Structured}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation7#mmStructured
+	 * RemittanceInformation7.mmStructured}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Structured = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStructured = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RemittanceInformation8.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> RemittanceInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RemittanceInformation7.Structured;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation12.Structured);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation12.mmStructured);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RemittanceInformation7.mmStructured;
 			minOccurs = 0;
-			type_lazy = () -> StructuredRemittanceInformation10.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation10.mmObject();
 		}
 	};
+	protected OriginalPaymentInformation6 originalPaymentInformation;
 	/**
 	 * Set of elements used to provide information on the original transactions,
 	 * to which the remittance message refers.
@@ -311,44 +316,76 @@ public class RemittanceInformation8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation12#OriginalPaymentInformation
-	 * RemittanceInformation12.OriginalPaymentInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation12#mmOriginalPaymentInformation
+	 * RemittanceInformation12.mmOriginalPaymentInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalPaymentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalPaymentInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RemittanceInformation8.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> RemittanceInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformation";
 			definition = "Set of elements used to provide information on the original transactions, to which the remittance message refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation12.OriginalPaymentInformation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation12.mmOriginalPaymentInformation);
 			maxOccurs = 1;
-			type_lazy = () -> OriginalPaymentInformation6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInformation6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation8.RemittanceIdentification, com.tools20022.repository.msg.RemittanceInformation8.Unstructured,
-						com.tools20022.repository.msg.RemittanceInformation8.Structured, com.tools20022.repository.msg.RemittanceInformation8.OriginalPaymentInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation8.mmRemittanceIdentification, com.tools20022.repository.msg.RemittanceInformation8.mmUnstructured,
+						com.tools20022.repository.msg.RemittanceInformation8.mmStructured, com.tools20022.repository.msg.RemittanceInformation8.mmOriginalPaymentInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.remt.RemittanceAdviceV01.mmRemittanceInformation);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.remt.RemittanceAdviceV01.RemittanceInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RemittanceInformation8";
 				definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system.";
-				previousVersion_lazy = () -> RemittanceInformation7.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RemittanceInformation12.mmObject());
+				previousVersion_lazy = () -> RemittanceInformation7.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getRemittanceIdentification() {
+		return remittanceIdentification;
+	}
+
+	public void setRemittanceIdentification(Max35Text remittanceIdentification) {
+		this.remittanceIdentification = remittanceIdentification;
+	}
+
+	public List<Max140Text> getUnstructured() {
+		return unstructured;
+	}
+
+	public void setUnstructured(List<Max140Text> unstructured) {
+		this.unstructured = unstructured;
+	}
+
+	public List<StructuredRemittanceInformation10> getStructured() {
+		return structured;
+	}
+
+	public void setStructured(List<com.tools20022.repository.msg.StructuredRemittanceInformation10> structured) {
+		this.structured = structured;
+	}
+
+	public OriginalPaymentInformation6 getOriginalPaymentInformation() {
+		return originalPaymentInformation;
+	}
+
+	public void setOriginalPaymentInformation(com.tools20022.repository.msg.OriginalPaymentInformation6 originalPaymentInformation) {
+		this.originalPaymentInformation = originalPaymentInformation;
 	}
 }

@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationCode#ValidationSuccessful
- * ValidationCode.ValidationSuccessful}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationCode#mmValidationSuccessful
+ * ValidationCode.mmValidationSuccessful}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationCode#ValidationUnkonwn
- * ValidationCode.ValidationUnkonwn}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationCode#mmValidationUnkonwn
+ * ValidationCode.mmValidationUnkonwn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationCode#ValidationFailed
- * ValidationCode.ValidationFailed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationCode#mmValidationFailed
+ * ValidationCode.mmValidationFailed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,7 +89,7 @@ public class ValidationCode {
 	 * definition} = "Validation of the signature is successful."</li>
 	 * </ul>
 	 */
-	public static final MMCode ValidationSuccessful = new MMCode() {
+	public static final MMCode mmValidationSuccessful = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationSuccessful";
@@ -120,7 +120,7 @@ public class ValidationCode {
 	 * "Validation of the signature is unknown or not yet executed."</li>
 	 * </ul>
 	 */
-	public static final MMCode ValidationUnkonwn = new MMCode() {
+	public static final MMCode mmValidationUnkonwn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationUnkonwn";
@@ -150,7 +150,7 @@ public class ValidationCode {
 	 * definition} = "Validation of the signature has failed."</li>
 	 * </ul>
 	 */
-	public static final MMCode ValidationFailed = new MMCode() {
+	public static final MMCode mmValidationFailed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationFailed";
@@ -163,12 +163,12 @@ public class ValidationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ValidationCode";
 				definition = "Specifies the validation of a signature used to sign the file.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ValidationCode.ValidationSuccessful, com.tools20022.repository.codeset.ValidationCode.ValidationUnkonwn,
-						com.tools20022.repository.codeset.ValidationCode.ValidationFailed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ValidationCode.mmValidationSuccessful, com.tools20022.repository.codeset.ValidationCode.mmValidationUnkonwn,
+						com.tools20022.repository.codeset.ValidationCode.mmValidationFailed);
 				derivation_lazy = () -> Arrays.asList(Validation1Code.mmObject(), Validation2Code.mmObject());
 			}
 		});

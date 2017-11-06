@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Reporting2Code#StockExchange
- * Reporting2Code.StockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.Reporting2Code#mmStockExchange
+ * Reporting2Code.mmStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Reporting2Code#RegulatoryOrganisation
- * Reporting2Code.RegulatoryOrganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.Reporting2Code#mmRegulatoryOrganisation
+ * Reporting2Code.mmRegulatoryOrganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Reporting2Code#DeferredReport
- * Reporting2Code.DeferredReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.Reporting2Code#mmDeferredReport
+ * Reporting2Code.mmDeferredReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class Reporting2Code extends ReportingCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockExchange = new MMCode() {
+	public static final MMCode mmStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
@@ -106,7 +106,7 @@ public class Reporting2Code extends ReportingCode {
 	 * name} = "RegulatoryOrganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegulatoryOrganisation = new MMCode() {
+	public static final MMCode mmRegulatoryOrganisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryOrganisation";
@@ -129,7 +129,7 @@ public class Reporting2Code extends ReportingCode {
 	 * name} = "DeferredReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeferredReport = new MMCode() {
+	public static final MMCode mmDeferredReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredReport";
@@ -140,13 +140,13 @@ public class Reporting2Code extends ReportingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STEX");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reporting2Code";
 				definition = "Specifies information with regards to reporting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Reporting2Code.StockExchange, com.tools20022.repository.codeset.Reporting2Code.RegulatoryOrganisation,
-						com.tools20022.repository.codeset.Reporting2Code.DeferredReport);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Reporting2Code.mmStockExchange, com.tools20022.repository.codeset.Reporting2Code.mmRegulatoryOrganisation,
+						com.tools20022.repository.codeset.Reporting2Code.mmDeferredReport);
 				trace_lazy = () -> ReportingCode.mmObject();
 			}
 		});

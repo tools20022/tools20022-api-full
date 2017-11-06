@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.CashAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Account to or from which a cash entry is made.
@@ -36,27 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#Name
- * CashAccount23.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#Type
- * CashAccount23.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#Currency
- * CashAccount23.Currency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#mmName
+ * CashAccount23.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#mmType
+ * CashAccount23.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#mmCurrency
+ * CashAccount23.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount23#CurrentMultilateralLimit
- * CashAccount23.CurrentMultilateralLimit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#Owner
- * CashAccount23.Owner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#Servicer
- * CashAccount23.Servicer}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount23#mmCurrentMultilateralLimit
+ * CashAccount23.mmCurrentMultilateralLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#mmOwner
+ * CashAccount23.mmOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#mmServicer
+ * CashAccount23.mmServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount23#MultilateralBalance
- * CashAccount23.MultilateralBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount23#mmMultilateralBalance
+ * CashAccount23.mmMultilateralBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount23#CurrentBilateralLimit
- * CashAccount23.CurrentBilateralLimit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#StandingOrder
- * CashAccount23.StandingOrder}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount23#mmCurrentBilateralLimit
+ * CashAccount23.mmCurrentBilateralLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount23#mmStandingOrder
+ * CashAccount23.mmStandingOrder}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccount23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text name;
 	/**
 	 * Name of the account. It provides an additional means of identification,
 	 * and is designated by the account servicer in agreement with the account
@@ -94,8 +96,8 @@ public class CashAccount23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Name
-	 * AccountIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+	 * AccountIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,20 +117,21 @@ public class CashAccount23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
 			componentContext_lazy = () -> CashAccount23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CashAccountType2Choice type;
 	/**
 	 * Specifies the nature, or use, of the cash account.
 	 * <p>
@@ -142,8 +145,8 @@ public class CashAccount23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#CashAccountType
-	 * CashAccount.CashAccountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashAccountType
+	 * CashAccount.mmCashAccountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,20 +164,21 @@ public class CashAccount23 {
 	 * definition} = "Specifies the nature, or use, of the cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> CashAccount23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.CashAccountType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature, or use, of the cash account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CashAccountType2Choice.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode currency;
 	/**
 	 * Specifies the currency of the cash account.
 	 * <p>
@@ -188,8 +192,8 @@ public class CashAccount23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#BaseCurrency
-	 * Account.BaseCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmBaseCurrency
+	 * Account.mmBaseCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,20 +211,21 @@ public class CashAccount23 {
 	 * definition} = "Specifies the currency of the cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
 			componentContext_lazy = () -> CashAccount23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.BaseCurrency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Specifies the currency of the cash account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected Limit5 currentMultilateralLimit;
 	/**
 	 * Maximum amount value applied to or by a participant versus a set of
 	 * counterparts. The multilateral system is taken into account by the
@@ -236,8 +241,8 @@ public class CashAccount23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashManagementService#RiskManagementLimit
-	 * CashManagementService.RiskManagementLimit}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashManagementService#mmRiskManagementLimit
+	 * CashManagementService.mmRiskManagementLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -257,21 +262,22 @@ public class CashAccount23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrentMultilateralLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrentMultilateralLimit = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmRiskManagementLimit;
 			componentContext_lazy = () -> CashAccount23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashManagementService.RiskManagementLimit;
 			isDerived = false;
 			xmlTag = "CurMulLmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentMultilateralLimit";
 			definition = "Maximum amount value applied to or by a participant versus a set of counterparts. The multilateral system is taken into account by the transaction administrator to contain the risk in the system.\nWith the help of the multilateral limit, the direct participant restricts the use of liquidity when clearing payments with all other direct participants for whom no bilateral limit was set.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Limit5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Limit5.mmObject();
 		}
 	};
+	protected PartyIdentification43 owner;
 	/**
 	 * Owner of the account which is being queried.
 	 * <p>
@@ -283,8 +289,8 @@ public class CashAccount23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -302,21 +308,22 @@ public class CashAccount23 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Owner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CashAccount23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Ownr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Owner";
 			definition = "Owner of the account which is being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 servicer;
 	/**
 	 * Servicer of the account which is being queried.
 	 * <p>
@@ -329,8 +336,8 @@ public class CashAccount23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -348,21 +355,22 @@ public class CashAccount23 {
 	 * definition} = "Servicer of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Servicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CashAccount23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "Svcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Servicer of the account which is being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashBalance5> multilateralBalance;
 	/**
 	 * Balance is calculated with regard to many members in the system.
 	 * <p>
@@ -374,8 +382,8 @@ public class CashAccount23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#CashBalance
-	 * CashAccount.CashBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashBalance
+	 * CashAccount.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -394,20 +402,21 @@ public class CashAccount23 {
 	 * "Balance is calculated with regard to many members in the system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MultilateralBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMultilateralBalance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashBalance;
 			componentContext_lazy = () -> CashAccount23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.CashBalance;
 			isDerived = false;
 			xmlTag = "MulBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralBalance";
 			definition = "Balance is calculated with regard to many members in the system.";
 			minOccurs = 0;
-			type_lazy = () -> CashBalance5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashBalance5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BilateralLimit1> currentBilateralLimit;
 	/**
 	 * Limit fixed by a party A with regard to a specific counterparty B and
 	 * corresponding to the maximum amount of traffic that party A may send to
@@ -424,8 +433,8 @@ public class CashAccount23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashManagementService#RiskManagementLimit
-	 * CashManagementService.RiskManagementLimit}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashManagementService#mmRiskManagementLimit
+	 * CashManagementService.mmRiskManagementLimit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -445,20 +454,21 @@ public class CashAccount23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrentBilateralLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrentBilateralLimit = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmRiskManagementLimit;
 			componentContext_lazy = () -> CashAccount23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashManagementService.RiskManagementLimit;
 			isDerived = false;
 			xmlTag = "CurBilLmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentBilateralLimit";
 			definition = "Limit fixed by a party A with regard to a specific counterparty B and corresponding to the maximum amount of traffic that party A may send to party B. The bilateral limit can be expressed as a debit limit or a credit limit. \nWith the help of a bilateral limit, the direct participant restricts the use of liquidity when clearing payments with another direct participant.";
 			minOccurs = 0;
-			type_lazy = () -> BilateralLimit1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BilateralLimit1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StandingOrder2> standingOrder;
 	/**
 	 * Instruction given by a party that has explicit authority to instruct a
 	 * debit on the account, that is either the debtor or originating party, to
@@ -474,8 +484,8 @@ public class CashAccount23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashManagementService#StandingOrder
-	 * CashManagementService.StandingOrder}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashManagementService#mmStandingOrder
+	 * CashManagementService.mmStandingOrder}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -495,34 +505,106 @@ public class CashAccount23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StandingOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStandingOrder = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmStandingOrder;
 			componentContext_lazy = () -> CashAccount23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashManagementService.StandingOrder;
 			isDerived = false;
 			xmlTag = "StgOrdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrder";
 			definition = "Instruction given by a party that has explicit authority to instruct a debit on the account, that is either the debtor or originating party, to the debtor agent, to process liquidity transfers at specified intervals during an implicit or explicit period of time. A standing order is given once and is valid for an open or closed period of time.";
 			minOccurs = 0;
-			type_lazy = () -> StandingOrder2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StandingOrder2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount23.Name, com.tools20022.repository.msg.CashAccount23.Type, com.tools20022.repository.msg.CashAccount23.Currency,
-						com.tools20022.repository.msg.CashAccount23.CurrentMultilateralLimit, com.tools20022.repository.msg.CashAccount23.Owner, com.tools20022.repository.msg.CashAccount23.Servicer,
-						com.tools20022.repository.msg.CashAccount23.MultilateralBalance, com.tools20022.repository.msg.CashAccount23.CurrentBilateralLimit, com.tools20022.repository.msg.CashAccount23.StandingOrder);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount23.mmName, com.tools20022.repository.msg.CashAccount23.mmType, com.tools20022.repository.msg.CashAccount23.mmCurrency,
+						com.tools20022.repository.msg.CashAccount23.mmCurrentMultilateralLimit, com.tools20022.repository.msg.CashAccount23.mmOwner, com.tools20022.repository.msg.CashAccount23.mmServicer,
+						com.tools20022.repository.msg.CashAccount23.mmMultilateralBalance, com.tools20022.repository.msg.CashAccount23.mmCurrentBilateralLimit, com.tools20022.repository.msg.CashAccount23.mmStandingOrder);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccount23";
 				definition = "Account to or from which a cash entry is made.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
+	}
+
+	public CashAccountType2Choice getType() {
+		return type;
+	}
+
+	public void setType(CashAccountType2Choice type) {
+		this.type = type;
+	}
+
+	public ActiveOrHistoricCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public Limit5 getCurrentMultilateralLimit() {
+		return currentMultilateralLimit;
+	}
+
+	public void setCurrentMultilateralLimit(com.tools20022.repository.msg.Limit5 currentMultilateralLimit) {
+		this.currentMultilateralLimit = currentMultilateralLimit;
+	}
+
+	public PartyIdentification43 getOwner() {
+		return owner;
+	}
+
+	public void setOwner(com.tools20022.repository.msg.PartyIdentification43 owner) {
+		this.owner = owner;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getServicer() {
+		return servicer;
+	}
+
+	public void setServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 servicer) {
+		this.servicer = servicer;
+	}
+
+	public List<CashBalance5> getMultilateralBalance() {
+		return multilateralBalance;
+	}
+
+	public void setMultilateralBalance(List<com.tools20022.repository.msg.CashBalance5> multilateralBalance) {
+		this.multilateralBalance = multilateralBalance;
+	}
+
+	public List<BilateralLimit1> getCurrentBilateralLimit() {
+		return currentBilateralLimit;
+	}
+
+	public void setCurrentBilateralLimit(List<com.tools20022.repository.msg.BilateralLimit1> currentBilateralLimit) {
+		this.currentBilateralLimit = currentBilateralLimit;
+	}
+
+	public List<StandingOrder2> getStandingOrder() {
+		return standingOrder;
+	}
+
+	public void setStandingOrder(List<com.tools20022.repository.msg.StandingOrder2> standingOrder) {
+		this.standingOrder = standingOrder;
 	}
 }

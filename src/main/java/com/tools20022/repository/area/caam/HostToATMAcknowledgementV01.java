@@ -60,24 +60,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#Header
- * HostToATMAcknowledgementV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#mmHeader
+ * HostToATMAcknowledgementV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#ProtectedHostToATMAcknowledgement
- * HostToATMAcknowledgementV01.ProtectedHostToATMAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#mmProtectedHostToATMAcknowledgement
+ * HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#HostToATMAcknowledgement
- * HostToATMAcknowledgementV01.HostToATMAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#mmHostToATMAcknowledgement
+ * HostToATMAcknowledgementV01.mmHostToATMAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#SecurityTrailer
- * HostToATMAcknowledgementV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#mmSecurityTrailer
+ * HostToATMAcknowledgementV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01#identifier
- * HostToATMAcknowledgementV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caam.008.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HostToATMAcknowledgementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header20 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -118,17 +117,18 @@ public class HostToATMAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header20.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedHostToATMAcknowledgement;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -152,17 +152,18 @@ public class HostToATMAcknowledgementV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedHostToATMAcknowledgement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedHostToATMAcknowledgement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdHstToATMAck";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedHostToATMAcknowledgement";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected HostToATMAcknowledgement1 hostToATMAcknowledgement;
 	/**
 	 * Information related to the acknowledgement from an ATM to contact the ATM
 	 * manager.
@@ -189,17 +190,18 @@ public class HostToATMAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock HostToATMAcknowledgement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHostToATMAcknowledgement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "HstToATMAck";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostToATMAcknowledgement";
 			definition = "Information related to the acknowledgement from an ATM to contact the ATM manager.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> HostToATMAcknowledgement1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -223,42 +225,15 @@ public class HostToATMAcknowledgementV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caam"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caam";
-			messageFunctionality = "008";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -272,11 +247,50 @@ public class HostToATMAcknowledgementV01 {
 				rootElement = "Document";
 				xmlTag = "HstToATMAck";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.Header, com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.ProtectedHostToATMAcknowledgement,
-						com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.HostToATMAcknowledgement, com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmHeader, com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement,
+						com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmHostToATMAcknowledgement, com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caam";
+						messageFunctionality = "008";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header20 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header20 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedHostToATMAcknowledgement() {
+		return protectedHostToATMAcknowledgement;
+	}
+
+	public void setProtectedHostToATMAcknowledgement(ContentInformationType10 protectedHostToATMAcknowledgement) {
+		this.protectedHostToATMAcknowledgement = protectedHostToATMAcknowledgement;
+	}
+
+	public HostToATMAcknowledgement1 getHostToATMAcknowledgement() {
+		return hostToATMAcknowledgement;
+	}
+
+	public void setHostToATMAcknowledgement(HostToATMAcknowledgement1 hostToATMAcknowledgement) {
+		this.hostToATMAcknowledgement = hostToATMAcknowledgement;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

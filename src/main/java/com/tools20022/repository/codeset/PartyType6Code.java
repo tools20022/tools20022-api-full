@@ -33,28 +33,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#Acceptor
- * PartyType6Code.Acceptor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#Merchant
- * PartyType6Code.Merchant}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#Acquirer
- * PartyType6Code.Acquirer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#mmAcceptor
+ * PartyType6Code.mmAcceptor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#mmMerchant
+ * PartyType6Code.mmMerchant}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#mmAcquirer
+ * PartyType6Code.mmAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType6Code#IntermediaryAgent
- * PartyType6Code.IntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType6Code#mmIntermediaryAgent
+ * PartyType6Code.mmIntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType6Code#MasterTerminalManager
- * PartyType6Code.MasterTerminalManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType6Code#mmMasterTerminalManager
+ * PartyType6Code.mmMasterTerminalManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType6Code#TerminalManager
- * PartyType6Code.TerminalManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType6Code#mmTerminalManager
+ * PartyType6Code.mmTerminalManager}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "Acceptor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acceptor = new MMCode() {
+	public static final MMCode mmAcceptor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acceptor";
@@ -115,7 +115,7 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "Merchant"</li>
 	 * </ul>
 	 */
-	public static final MMCode Merchant = new MMCode() {
+	public static final MMCode mmMerchant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
@@ -138,7 +138,7 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "Acquirer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acquirer = new MMCode() {
+	public static final MMCode mmAcquirer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
@@ -161,7 +161,7 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "IntermediaryAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntermediaryAgent = new MMCode() {
+	public static final MMCode mmIntermediaryAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
@@ -184,7 +184,7 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "MasterTerminalManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode MasterTerminalManager = new MMCode() {
+	public static final MMCode mmMasterTerminalManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterTerminalManager";
@@ -207,7 +207,7 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "TerminalManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode TerminalManager = new MMCode() {
+	public static final MMCode mmTerminalManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManager";
@@ -218,13 +218,13 @@ public class PartyType6Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyType6Code";
 				definition = "Entity assigning an identification of an entity involved in a maintenance operation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType6Code.Acceptor, com.tools20022.repository.codeset.PartyType6Code.Merchant, com.tools20022.repository.codeset.PartyType6Code.Acquirer,
-						com.tools20022.repository.codeset.PartyType6Code.IntermediaryAgent, com.tools20022.repository.codeset.PartyType6Code.MasterTerminalManager, com.tools20022.repository.codeset.PartyType6Code.TerminalManager);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType6Code.mmAcceptor, com.tools20022.repository.codeset.PartyType6Code.mmMerchant, com.tools20022.repository.codeset.PartyType6Code.mmAcquirer,
+						com.tools20022.repository.codeset.PartyType6Code.mmIntermediaryAgent, com.tools20022.repository.codeset.PartyType6Code.mmMasterTerminalManager, com.tools20022.repository.codeset.PartyType6Code.mmTerminalManager);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

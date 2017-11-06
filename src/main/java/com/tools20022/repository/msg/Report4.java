@@ -35,32 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#ReportNumber
- * Report4.ReportNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#QueryReference
- * Report4.QueryReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#ReportIdentification
- * Report4.ReportIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#ReportDateTime
- * Report4.ReportDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#CreationDateTime
- * Report4.CreationDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#PreviousReportDateTime
- * Report4.PreviousReportDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#Frequency
- * Report4.Frequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#UpdateType
- * Report4.UpdateType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#ReportBasis
- * Report4.ReportBasis}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#ReportPeriod
- * Report4.ReportPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#ReportSource
- * Report4.ReportSource}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#AuditedIndicator
- * Report4.AuditedIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report4#ActivityIndicator
- * Report4.ActivityIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmReportNumber
+ * Report4.mmReportNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmQueryReference
+ * Report4.mmQueryReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmReportIdentification
+ * Report4.mmReportIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmReportDateTime
+ * Report4.mmReportDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmCreationDateTime
+ * Report4.mmCreationDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Report4#mmPreviousReportDateTime
+ * Report4.mmPreviousReportDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmFrequency
+ * Report4.mmFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmUpdateType
+ * Report4.mmUpdateType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmReportBasis
+ * Report4.mmReportBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmReportPeriod
+ * Report4.mmReportPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmReportSource
+ * Report4.mmReportSource}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmAuditedIndicator
+ * Report4.mmAuditedIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report4#mmActivityIndicator
+ * Report4.mmActivityIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -68,15 +69,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#ReportGeneralDetails
- * TotalPortfolioValuationReportV01.ReportGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmReportGeneralDetails
+ * TotalPortfolioValuationReportV01.mmReportGeneralDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Report4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max5NumericText reportNumber;
 	/**
 	 * Sequential number of the report.
 	 * <p>
@@ -117,7 +119,7 @@ public class Report4 {
 	 * definition} = "Sequential number of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -125,11 +127,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
 		}
 	};
+	protected Max35Text queryReference;
 	/**
 	 * Identification of the SecuritiesStatementQuery message sent to request
 	 * this statement.
@@ -159,7 +162,7 @@ public class Report4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -167,11 +170,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the SecuritiesStatementQuery message sent to request this statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text reportIdentification;
 	/**
 	 * Unique identification of the report.
 	 * <p>
@@ -198,7 +202,7 @@ public class Report4 {
 	 * definition} = "Unique identification of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -206,11 +210,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique identification of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice reportDateTime;
 	/**
 	 * Date and time of the report.
 	 * <p>
@@ -238,7 +243,7 @@ public class Report4 {
 	 * definition} = "Date and time of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -246,11 +251,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateTime";
 			definition = "Date and time of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice creationDateTime;
 	/**
 	 * Preparation date and time of the report.
 	 * <p>
@@ -264,8 +270,8 @@ public class Report4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Report4
@@ -283,20 +289,21 @@ public class Report4 {
 	 * definition} = "Preparation date and time of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> Report4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Preparation date and time of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice previousReportDateTime;
 	/**
 	 * Previous report date and time.
 	 * <p>
@@ -324,7 +331,7 @@ public class Report4 {
 	 * definition} = "Previous report date and time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousReportDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousReportDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -332,11 +339,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReportDateTime";
 			definition = "Previous report date and time.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected Frequency8Choice frequency;
 	/**
 	 * Specifies the frequency of the report.
 	 * <p>
@@ -364,7 +372,7 @@ public class Report4 {
 	 * definition} = "Specifies the frequency of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -372,11 +380,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Specifies the frequency of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Frequency8Choice.mmObject();
 		}
 	};
+	protected UpdateType4Choice updateType;
 	/**
 	 * Specifies whether the report is complete or contains changes only.
 	 * <p>
@@ -405,7 +414,7 @@ public class Report4 {
 	 * "Specifies whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -413,11 +422,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Specifies whether the report is complete or contains changes only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UpdateType4Choice.mmObject();
 		}
 	};
+	protected StatementBasis6Choice reportBasis;
 	/**
 	 * Specifies the type of balance on which the report is prepared.
 	 * <p>
@@ -446,7 +456,7 @@ public class Report4 {
 	 * "Specifies the type of balance on which the report is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportBasis = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -454,11 +464,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportBasis";
 			definition = "Specifies the type of balance on which the report is prepared.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> StatementBasis6Choice.mmObject();
 		}
 	};
+	protected DatePeriodDetails reportPeriod;
 	/**
 	 * Period for which the report is given.
 	 * <p>
@@ -486,7 +497,7 @@ public class Report4 {
 	 * definition} = "Period for which the report is given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -494,11 +505,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPeriod";
 			definition = "Period for which the report is given.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> DatePeriodDetails.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
 		}
 	};
+	protected StatementSource1Choice reportSource;
 	/**
 	 * Specifies the source of the report.
 	 * <p>
@@ -526,7 +538,7 @@ public class Report4 {
 	 * definition} = "Specifies the source of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportSource = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -534,11 +546,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportSource";
 			definition = "Specifies the source of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatementSource1Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator auditedIndicator;
 	/**
 	 * Indicates whether the report is audited or not.
 	 * <p>
@@ -566,7 +579,7 @@ public class Report4 {
 	 * definition} = "Indicates whether the report is audited or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuditedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuditedIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -574,11 +587,12 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuditedIndicator";
 			definition = "Indicates whether the report is audited or not.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or an information update reported in
 	 * the report.
@@ -609,7 +623,7 @@ public class Report4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
@@ -617,8 +631,8 @@ public class Report4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or an information update reported in the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -626,17 +640,121 @@ public class Report4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report4.ReportNumber, com.tools20022.repository.msg.Report4.QueryReference, com.tools20022.repository.msg.Report4.ReportIdentification,
-						com.tools20022.repository.msg.Report4.ReportDateTime, com.tools20022.repository.msg.Report4.CreationDateTime, com.tools20022.repository.msg.Report4.PreviousReportDateTime,
-						com.tools20022.repository.msg.Report4.Frequency, com.tools20022.repository.msg.Report4.UpdateType, com.tools20022.repository.msg.Report4.ReportBasis, com.tools20022.repository.msg.Report4.ReportPeriod,
-						com.tools20022.repository.msg.Report4.ReportSource, com.tools20022.repository.msg.Report4.AuditedIndicator, com.tools20022.repository.msg.Report4.ActivityIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.ReportGeneralDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report4.mmReportNumber, com.tools20022.repository.msg.Report4.mmQueryReference, com.tools20022.repository.msg.Report4.mmReportIdentification,
+						com.tools20022.repository.msg.Report4.mmReportDateTime, com.tools20022.repository.msg.Report4.mmCreationDateTime, com.tools20022.repository.msg.Report4.mmPreviousReportDateTime,
+						com.tools20022.repository.msg.Report4.mmFrequency, com.tools20022.repository.msg.Report4.mmUpdateType, com.tools20022.repository.msg.Report4.mmReportBasis, com.tools20022.repository.msg.Report4.mmReportPeriod,
+						com.tools20022.repository.msg.Report4.mmReportSource, com.tools20022.repository.msg.Report4.mmAuditedIndicator, com.tools20022.repository.msg.Report4.mmActivityIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmReportGeneralDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Report4";
 				definition = "General characteristics of the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max5NumericText getReportNumber() {
+		return reportNumber;
+	}
+
+	public void setReportNumber(Max5NumericText reportNumber) {
+		this.reportNumber = reportNumber;
+	}
+
+	public Max35Text getQueryReference() {
+		return queryReference;
+	}
+
+	public void setQueryReference(Max35Text queryReference) {
+		this.queryReference = queryReference;
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public DateAndDateTimeChoice getReportDateTime() {
+		return reportDateTime;
+	}
+
+	public void setReportDateTime(DateAndDateTimeChoice reportDateTime) {
+		this.reportDateTime = reportDateTime;
+	}
+
+	public DateAndDateTimeChoice getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public DateAndDateTimeChoice getPreviousReportDateTime() {
+		return previousReportDateTime;
+	}
+
+	public void setPreviousReportDateTime(DateAndDateTimeChoice previousReportDateTime) {
+		this.previousReportDateTime = previousReportDateTime;
+	}
+
+	public Frequency8Choice getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(Frequency8Choice frequency) {
+		this.frequency = frequency;
+	}
+
+	public UpdateType4Choice getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(UpdateType4Choice updateType) {
+		this.updateType = updateType;
+	}
+
+	public StatementBasis6Choice getReportBasis() {
+		return reportBasis;
+	}
+
+	public void setReportBasis(StatementBasis6Choice reportBasis) {
+		this.reportBasis = reportBasis;
+	}
+
+	public DatePeriodDetails getReportPeriod() {
+		return reportPeriod;
+	}
+
+	public void setReportPeriod(com.tools20022.repository.msg.DatePeriodDetails reportPeriod) {
+		this.reportPeriod = reportPeriod;
+	}
+
+	public StatementSource1Choice getReportSource() {
+		return reportSource;
+	}
+
+	public void setReportSource(StatementSource1Choice reportSource) {
+		this.reportSource = reportSource;
+	}
+
+	public YesNoIndicator getAuditedIndicator() {
+		return auditedIndicator;
+	}
+
+	public void setAuditedIndicator(YesNoIndicator auditedIndicator) {
+		this.auditedIndicator = auditedIndicator;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
 	}
 }

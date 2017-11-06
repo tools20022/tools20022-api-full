@@ -40,23 +40,23 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Adjustment4#TypeOrOtherAdjustmentTypeRule
- * Adjustment4.TypeOrOtherAdjustmentTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Adjustment4#mmTypeOrOtherAdjustmentTypeRule
+ * Adjustment4.mmTypeOrOtherAdjustmentTypeRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment4#Type
- * Adjustment4.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment4#mmType
+ * Adjustment4.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Adjustment4#OtherAdjustmentType
- * Adjustment4.OtherAdjustmentType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment4#Direction
- * Adjustment4.Direction}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment4#Amount
- * Adjustment4.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.Adjustment4#mmOtherAdjustmentType
+ * Adjustment4.mmOtherAdjustmentType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment4#mmDirection
+ * Adjustment4.mmDirection}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment4#mmAmount
+ * Adjustment4.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +64,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -88,6 +88,7 @@ import java.util.function.Supplier;
 public class Adjustment4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdjustmentType2Code type;
 	/**
 	 * Specifies the type of adjustment applied to the amount of goods/services
 	 * by means of a code.
@@ -102,8 +103,8 @@ public class Adjustment4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Type
-	 * Adjustment.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmType
+	 * Adjustment.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -123,20 +124,21 @@ public class Adjustment4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
 			componentContext_lazy = () -> Adjustment4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of adjustment applied to the amount of goods/services by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentType2Code.mmObject();
 		}
 	};
+	protected Max35Text otherAdjustmentType;
 	/**
 	 * Specifies a type of adjustment not present in the code list.
 	 * <p>
@@ -149,8 +151,8 @@ public class Adjustment4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Type
-	 * Adjustment.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmType
+	 * Adjustment.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,20 +171,21 @@ public class Adjustment4 {
 	 * "Specifies a type of adjustment not present in the code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherAdjustmentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherAdjustmentType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
 			componentContext_lazy = () -> Adjustment4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Type;
 			isDerived = false;
 			xmlTag = "OthrAdjstmntTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAdjustmentType";
 			definition = "Specifies a type of adjustment not present in the code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AdjustmentDirection1Code direction;
 	/**
 	 * Specifies whether the adjustment must be subtracted or added to the total
 	 * amount.
@@ -197,8 +200,8 @@ public class Adjustment4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Direction
-	 * Adjustment.Direction}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmDirection
+	 * Adjustment.mmDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -219,27 +222,28 @@ public class Adjustment4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Adjustment6#Direction
-	 * Adjustment6.Direction}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Adjustment6#mmDirection
+	 * Adjustment6.mmDirection}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Direction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmDirection;
 			componentContext_lazy = () -> Adjustment4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Direction;
 			isDerived = false;
 			xmlTag = "Drctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direction";
 			definition = "Specifies whether the adjustment must be subtracted or added to the total amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment6.Direction);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment6.mmDirection);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Specifies the monetary amount of the adjustment.
 	 * <p>
@@ -253,8 +257,8 @@ public class Adjustment4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -273,24 +277,24 @@ public class Adjustment4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Adjustment6#Amount
-	 * Adjustment6.Amount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Adjustment6#mmAmount
+	 * Adjustment6.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Adjustment4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Specifies the monetary amount of the adjustment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment6.Amount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment6.mmAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -303,11 +307,11 @@ public class Adjustment4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Adjustment4#Type
-	 * Adjustment4.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Adjustment4#mmType
+	 * Adjustment4.mmType}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Adjustment4#OtherAdjustmentType
-	 * Adjustment4.OtherAdjustmentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.Adjustment4#mmOtherAdjustmentType
+	 * Adjustment4.mmOtherAdjustmentType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -326,23 +330,23 @@ public class Adjustment4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor TypeOrOtherAdjustmentTypeRule = new MMXor() {
+	public static final MMXor mmTypeOrOtherAdjustmentTypeRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrOtherAdjustmentTypeRule";
 			definition = "If Type is present, then OtherAdjustmentType is not allowed. If Type is not present, then OtherAdjustmentType is mandatory.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment4.Type, com.tools20022.repository.msg.Adjustment4.OtherAdjustmentType);
 			messageComponent_lazy = () -> Adjustment4.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment4.mmType, com.tools20022.repository.msg.Adjustment4.mmOtherAdjustmentType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment4.Type, com.tools20022.repository.msg.Adjustment4.OtherAdjustmentType, com.tools20022.repository.msg.Adjustment4.Direction,
-						com.tools20022.repository.msg.Adjustment4.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment4.mmType, com.tools20022.repository.msg.Adjustment4.mmOtherAdjustmentType, com.tools20022.repository.msg.Adjustment4.mmDirection,
+						com.tools20022.repository.msg.Adjustment4.mmAmount);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -354,9 +358,41 @@ public class Adjustment4 {
 				name = "Adjustment4";
 				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
 				nextVersions_lazy = () -> Arrays.asList(Adjustment6.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment4.TypeOrOtherAdjustmentTypeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment4.mmTypeOrOtherAdjustmentTypeRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdjustmentType2Code getType() {
+		return type;
+	}
+
+	public void setType(AdjustmentType2Code type) {
+		this.type = type;
+	}
+
+	public Max35Text getOtherAdjustmentType() {
+		return otherAdjustmentType;
+	}
+
+	public void setOtherAdjustmentType(Max35Text otherAdjustmentType) {
+		this.otherAdjustmentType = otherAdjustmentType;
+	}
+
+	public AdjustmentDirection1Code getDirection() {
+		return direction;
+	}
+
+	public void setDirection(AdjustmentDirection1Code direction) {
+		this.direction = direction;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

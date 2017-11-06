@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Parameter7#InitialisationVector
- * Parameter7.InitialisationVector}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Parameter7#BytePadding
- * Parameter7.BytePadding}</li>
+ * {@linkplain com.tools20022.repository.msg.Parameter7#mmInitialisationVector
+ * Parameter7.mmInitialisationVector}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter7#mmBytePadding
+ * Parameter7.mmBytePadding}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Parameter7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max500Binary initialisationVector;
 	/**
 	 * Initialisation vector of a cipher block chaining (CBC) mode encryption.
 	 * <p>
@@ -91,11 +92,11 @@ public class Parameter7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Parameter1#InitialisationVector
-	 * Parameter1.InitialisationVector}</li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter1#mmInitialisationVector
+	 * Parameter1.mmInitialisationVector}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitialisationVector = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitialisationVector = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter7.mmObject();
 			isDerived = false;
@@ -103,12 +104,13 @@ public class Parameter7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialisationVector";
 			definition = "Initialisation vector of a cipher block chaining (CBC) mode encryption.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter1.InitialisationVector;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter1.mmInitialisationVector;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max500Binary.mmObject();
 		}
 	};
+	protected BytePadding1Code bytePadding;
 	/**
 	 * Byte padding for a cypher block chaining mode encryption, if the padding
 	 * is not implicit.
@@ -139,7 +141,7 @@ public class Parameter7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BytePadding = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBytePadding = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Parameter7.mmObject();
 			isDerived = false;
@@ -147,8 +149,8 @@ public class Parameter7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BytePadding";
 			definition = "Byte padding for a cypher block chaining mode encryption, if the padding is not implicit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BytePadding1Code.mmObject();
 		}
 	};
@@ -156,8 +158,8 @@ public class Parameter7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter7.InitialisationVector, com.tools20022.repository.msg.Parameter7.BytePadding);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter7.mmInitialisationVector, com.tools20022.repository.msg.Parameter7.mmBytePadding);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Parameter7";
 				definition = "Parameters associated to the MAC algorithm.";
@@ -165,5 +167,21 @@ public class Parameter7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max500Binary getInitialisationVector() {
+		return initialisationVector;
+	}
+
+	public void setInitialisationVector(Max500Binary initialisationVector) {
+		this.initialisationVector = initialisationVector;
+	}
+
+	public BytePadding1Code getBytePadding() {
+		return bytePadding;
+	}
+
+	public void setBytePadding(BytePadding1Code bytePadding) {
+		this.bytePadding = bytePadding;
 	}
 }

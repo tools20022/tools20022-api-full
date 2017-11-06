@@ -30,27 +30,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#PrimaryOwner
- * AccountOwnerType1Code.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#mmPrimaryOwner
+ * AccountOwnerType1Code.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#Trustee
- * AccountOwnerType1Code.Trustee}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#mmTrustee
+ * AccountOwnerType1Code.mmTrustee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#CustodianForMinor
- * AccountOwnerType1Code.CustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#mmCustodianForMinor
+ * AccountOwnerType1Code.mmCustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#Nominee
- * AccountOwnerType1Code.Nominee}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#mmNominee
+ * AccountOwnerType1Code.mmNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#SecondaryOwner
- * AccountOwnerType1Code.SecondaryOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#mmSecondaryOwner
+ * AccountOwnerType1Code.mmSecondaryOwner}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class AccountOwnerType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PrimaryOwner = new MMCode() {
+	public static final MMCode mmPrimaryOwner = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryOwner";
@@ -128,7 +128,7 @@ public class AccountOwnerType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Trustee = new MMCode() {
+	public static final MMCode mmTrustee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trustee";
@@ -162,7 +162,7 @@ public class AccountOwnerType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CustodianForMinor = new MMCode() {
+	public static final MMCode mmCustodianForMinor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianForMinor";
@@ -195,7 +195,7 @@ public class AccountOwnerType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Nominee = new MMCode() {
+	public static final MMCode mmNominee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nominee";
@@ -229,7 +229,7 @@ public class AccountOwnerType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SecondaryOwner = new MMCode() {
+	public static final MMCode mmSecondaryOwner = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryOwner";
@@ -242,13 +242,14 @@ public class AccountOwnerType1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("POWN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountOwnerType1Code";
 				definition = "Specifies the type of account owner.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOwnerType1Code.PrimaryOwner, com.tools20022.repository.codeset.AccountOwnerType1Code.Trustee,
-						com.tools20022.repository.codeset.AccountOwnerType1Code.CustodianForMinor, com.tools20022.repository.codeset.AccountOwnerType1Code.Nominee, com.tools20022.repository.codeset.AccountOwnerType1Code.SecondaryOwner);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOwnerType1Code.mmPrimaryOwner, com.tools20022.repository.codeset.AccountOwnerType1Code.mmTrustee,
+						com.tools20022.repository.codeset.AccountOwnerType1Code.mmCustodianForMinor, com.tools20022.repository.codeset.AccountOwnerType1Code.mmNominee,
+						com.tools20022.repository.codeset.AccountOwnerType1Code.mmSecondaryOwner);
 			}
 		});
 		return mmObject_lazy.get();

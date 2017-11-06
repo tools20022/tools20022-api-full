@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllocationIndicator1Code#Postallocation
- * AllocationIndicator1Code.Postallocation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllocationIndicator1Code#mmPostallocation
+ * AllocationIndicator1Code.mmPostallocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllocationIndicator1Code#Preallocation
- * AllocationIndicator1Code.Preallocation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllocationIndicator1Code#mmPreallocation
+ * AllocationIndicator1Code.mmPreallocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllocationIndicator1Code#Unallocated
- * AllocationIndicator1Code.Unallocated}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllocationIndicator1Code#mmUnallocated
+ * AllocationIndicator1Code.mmUnallocated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class AllocationIndicator1Code extends AllocationIndicatorCode {
 	 * name} = "Post-allocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Postallocation = new MMCode() {
+	public static final MMCode mmPostallocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Post-allocation";
@@ -110,7 +110,7 @@ public class AllocationIndicator1Code extends AllocationIndicatorCode {
 	 * name} = "Pre-allocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Preallocation = new MMCode() {
+	public static final MMCode mmPreallocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pre-allocation";
@@ -133,7 +133,7 @@ public class AllocationIndicator1Code extends AllocationIndicatorCode {
 	 * name} = "Unallocated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unallocated = new MMCode() {
+	public static final MMCode mmUnallocated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unallocated";
@@ -144,13 +144,13 @@ public class AllocationIndicator1Code extends AllocationIndicatorCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("POST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AllocationIndicator1Code";
 				definition = "Specifies whether the trade is a pre-allocation or a post-allocation trade, or whether the trade is unallocated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllocationIndicator1Code.Postallocation, com.tools20022.repository.codeset.AllocationIndicator1Code.Preallocation,
-						com.tools20022.repository.codeset.AllocationIndicator1Code.Unallocated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllocationIndicator1Code.mmPostallocation, com.tools20022.repository.codeset.AllocationIndicator1Code.mmPreallocation,
+						com.tools20022.repository.codeset.AllocationIndicator1Code.mmUnallocated);
 				trace_lazy = () -> AllocationIndicatorCode.mmObject();
 			}
 		});

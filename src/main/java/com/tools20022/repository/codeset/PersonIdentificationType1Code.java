@@ -35,42 +35,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#PassportNumber
- * PersonIdentificationType1Code.PassportNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#mmPassportNumber
+ * PersonIdentificationType1Code.mmPassportNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#CPFAccountNumber
- * PersonIdentificationType1Code.CPFAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#mmCPFAccountNumber
+ * PersonIdentificationType1Code.mmCPFAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#SRSAccountNumber
- * PersonIdentificationType1Code.SRSAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#mmSRSAccountNumber
+ * PersonIdentificationType1Code.mmSRSAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#NationalRegistrationIdentificationNumber
- * PersonIdentificationType1Code.NationalRegistrationIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#mmNationalRegistrationIdentificationNumber
+ * PersonIdentificationType1Code.mmNationalRegistrationIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#Other
- * PersonIdentificationType1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#mmOther
+ * PersonIdentificationType1Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#DriversLicenseNumber
- * PersonIdentificationType1Code.DriversLicenseNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#mmDriversLicenseNumber
+ * PersonIdentificationType1Code.mmDriversLicenseNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#SocialSecurityNumber
- * PersonIdentificationType1Code.SocialSecurityNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#mmSocialSecurityNumber
+ * PersonIdentificationType1Code.mmSocialSecurityNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#AlienRegistrationNumber
- * PersonIdentificationType1Code.AlienRegistrationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#mmAlienRegistrationNumber
+ * PersonIdentificationType1Code.mmAlienRegistrationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#IdentityCardNumber
- * PersonIdentificationType1Code.IdentityCardNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#mmIdentityCardNumber
+ * PersonIdentificationType1Code.mmIdentityCardNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#EmployerIdentificationNumber
- * PersonIdentificationType1Code.EmployerIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType1Code#mmEmployerIdentificationNumber
+ * PersonIdentificationType1Code.mmEmployerIdentificationNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,7 +108,7 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	 * name} = "PassportNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode PassportNumber = new MMCode() {
+	public static final MMCode mmPassportNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
@@ -131,7 +131,7 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	 * name} = "CPFAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode CPFAccountNumber = new MMCode() {
+	public static final MMCode mmCPFAccountNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CPFAccountNumber";
@@ -154,7 +154,7 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	 * name} = "SRSAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode SRSAccountNumber = new MMCode() {
+	public static final MMCode mmSRSAccountNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SRSAccountNumber";
@@ -177,7 +177,7 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	 * name} = "NationalRegistrationIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalRegistrationIdentificationNumber = new MMCode() {
+	public static final MMCode mmNationalRegistrationIdentificationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalRegistrationIdentificationNumber";
@@ -200,7 +200,7 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -223,7 +223,7 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	 * name} = "DriversLicenseNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode DriversLicenseNumber = new MMCode() {
+	public static final MMCode mmDriversLicenseNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
@@ -246,7 +246,7 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	 * name} = "SocialSecurityNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode SocialSecurityNumber = new MMCode() {
+	public static final MMCode mmSocialSecurityNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SocialSecurityNumber";
@@ -269,7 +269,7 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	 * name} = "AlienRegistrationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode AlienRegistrationNumber = new MMCode() {
+	public static final MMCode mmAlienRegistrationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
@@ -292,7 +292,7 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	 * name} = "IdentityCardNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode IdentityCardNumber = new MMCode() {
+	public static final MMCode mmIdentityCardNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentityCardNumber";
@@ -315,7 +315,7 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	 * name} = "EmployerIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode EmployerIdentificationNumber = new MMCode() {
+	public static final MMCode mmEmployerIdentificationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployerIdentificationNumber";
@@ -326,16 +326,16 @@ public class PersonIdentificationType1Code extends PersonIdentificationTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PASS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentificationType1Code";
 				definition = "Specifies an alternative identification of an individual person, for example, national registration identification number, passport number.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PersonIdentificationType1Code.PassportNumber, com.tools20022.repository.codeset.PersonIdentificationType1Code.CPFAccountNumber,
-						com.tools20022.repository.codeset.PersonIdentificationType1Code.SRSAccountNumber, com.tools20022.repository.codeset.PersonIdentificationType1Code.NationalRegistrationIdentificationNumber,
-						com.tools20022.repository.codeset.PersonIdentificationType1Code.Other, com.tools20022.repository.codeset.PersonIdentificationType1Code.DriversLicenseNumber,
-						com.tools20022.repository.codeset.PersonIdentificationType1Code.SocialSecurityNumber, com.tools20022.repository.codeset.PersonIdentificationType1Code.AlienRegistrationNumber,
-						com.tools20022.repository.codeset.PersonIdentificationType1Code.IdentityCardNumber, com.tools20022.repository.codeset.PersonIdentificationType1Code.EmployerIdentificationNumber);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PersonIdentificationType1Code.mmPassportNumber, com.tools20022.repository.codeset.PersonIdentificationType1Code.mmCPFAccountNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType1Code.mmSRSAccountNumber, com.tools20022.repository.codeset.PersonIdentificationType1Code.mmNationalRegistrationIdentificationNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType1Code.mmOther, com.tools20022.repository.codeset.PersonIdentificationType1Code.mmDriversLicenseNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType1Code.mmSocialSecurityNumber, com.tools20022.repository.codeset.PersonIdentificationType1Code.mmAlienRegistrationNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType1Code.mmIdentityCardNumber, com.tools20022.repository.codeset.PersonIdentificationType1Code.mmEmployerIdentificationNumber);
 				trace_lazy = () -> PersonIdentificationTypeCode.mmObject();
 			}
 		});

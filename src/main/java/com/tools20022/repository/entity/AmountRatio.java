@@ -40,12 +40,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AmountRatio#SecuritiesPricing
- * AmountRatio.SecuritiesPricing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRatio#Amount1
- * AmountRatio.Amount1}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRatio#Amount2
- * AmountRatio.Amount2}</li>
+ * {@linkplain com.tools20022.repository.entity.AmountRatio#mmSecuritiesPricing
+ * AmountRatio.mmSecuritiesPricing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRatio#mmAmount1
+ * AmountRatio.mmAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRatio#mmAmount2
+ * AmountRatio.mmAmount2}</li>
  * </ul>
  * </li>
  * <li>
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#AmountPricePerAmount
- * SecuritiesPricing.AmountPricePerAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAmountPricePerAmount
+ * SecuritiesPricing.mmAmountPricePerAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -62,77 +62,77 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat3Choice#AmountToAmount
- * RatioFormat3Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat3Choice#mmAmountToAmount
+ * RatioFormat3Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat4Choice#AmountToAmount
- * RatioFormat4Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat4Choice#mmAmountToAmount
+ * RatioFormat4Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat7Choice#AmountToAmount
- * RatioFormat7Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat7Choice#mmAmountToAmount
+ * RatioFormat7Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat8Choice#AmountToAmount
- * RatioFormat8Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat8Choice#mmAmountToAmount
+ * RatioFormat8Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat15Choice#AmountToAmount
- * RatioFormat15Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat15Choice#mmAmountToAmount
+ * RatioFormat15Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat16Choice#AmountToAmount
- * RatioFormat16Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat16Choice#mmAmountToAmount
+ * RatioFormat16Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat5Choice#AmountToAmount
- * RatioFormat5Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat5Choice#mmAmountToAmount
+ * RatioFormat5Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat6Choice#AmountToAmount
- * RatioFormat6Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat6Choice#mmAmountToAmount
+ * RatioFormat6Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat9Choice#AmountToAmount
- * RatioFormat9Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat9Choice#mmAmountToAmount
+ * RatioFormat9Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat10Choice#AmountToAmount
- * RatioFormat10Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat10Choice#mmAmountToAmount
+ * RatioFormat10Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat11Choice#AmountToAmount
- * RatioFormat11Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat11Choice#mmAmountToAmount
+ * RatioFormat11Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat12Choice#AmountToAmount
- * RatioFormat12Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat12Choice#mmAmountToAmount
+ * RatioFormat12Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat13Choice#AmountToAmount
- * RatioFormat13Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat13Choice#mmAmountToAmount
+ * RatioFormat13Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#AmountToAmount
- * RatioFormat14Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#mmAmountToAmount
+ * RatioFormat14Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat2Choice#AmountToAmount
- * RatioFormat2Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat2Choice#mmAmountToAmount
+ * RatioFormat2Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat1Choice#AmountToAmount
- * RatioFormat1Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat1Choice#mmAmountToAmount
+ * RatioFormat1Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat19Choice#AmountToAmount
- * RatioFormat19Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat19Choice#mmAmountToAmount
+ * RatioFormat19Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat17Choice#AmountToAmount
- * RatioFormat17Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat17Choice#mmAmountToAmount
+ * RatioFormat17Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat18Choice#AmountToAmount
- * RatioFormat18Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat18Choice#mmAmountToAmount
+ * RatioFormat18Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat20Choice#AmountToAmount
- * RatioFormat20Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat20Choice#mmAmountToAmount
+ * RatioFormat20Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat22Choice#AmountToAmount
- * RatioFormat22Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat22Choice#mmAmountToAmount
+ * RatioFormat22Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat24Choice#AmountToAmount
- * RatioFormat24Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat24Choice#mmAmountToAmount
+ * RatioFormat24Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat23Choice#AmountToAmount
- * RatioFormat23Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat23Choice#mmAmountToAmount
+ * RatioFormat23Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat21Choice#AmountToAmount
- * RatioFormat21Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat21Choice#mmAmountToAmount
+ * RatioFormat21Choice.mmAmountToAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -150,8 +150,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -165,6 +165,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountRatio {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesPricing securitiesPricing;
 	/**
 	 * Pricing which uses the ratio as format.
 	 * <p>
@@ -173,8 +174,8 @@ public class AmountRatio {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#AmountPricePerAmount
-	 * SecuritiesPricing.AmountPricePerAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAmountPricePerAmount
+	 * SecuritiesPricing.mmAmountPricePerAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -197,20 +198,21 @@ public class AmountRatio {
 	 * definition} = "Pricing which uses the ratio as format."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesPricing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesPricing = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AmountRatio.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPricing";
 			definition = "Pricing which uses the ratio as format.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.AmountPricePerAmount;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerAmount;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount1;
 	/**
 	 * Numerator of the quotient of amounts.
 	 * <p>
@@ -221,24 +223,24 @@ public class AmountRatio {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio2#Amount1
-	 * AmountToAmountRatio2.Amount1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio3#Amount1
-	 * AmountToAmountRatio3.Amount1}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio1#Amount1
-	 * AmountToAmountRatio1.Amount1}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmountRatio AmountRatio}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio2#mmAmount1
+	 * AmountToAmountRatio2.mmAmount1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio3#mmAmount1
+	 * AmountToAmountRatio3.mmAmount1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio1#mmAmount1
+	 * AmountToAmountRatio1.mmAmount1}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -250,19 +252,20 @@ public class AmountRatio {
 	 * definition} = "Numerator of the quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Amount1 = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmount1 = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountToAmountRatio2.Amount1, com.tools20022.repository.msg.AmountToAmountRatio3.Amount1, com.tools20022.repository.msg.AmountToAmountRatio1.Amount1);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountToAmountRatio2.mmAmount1, com.tools20022.repository.msg.AmountToAmountRatio3.mmAmount1, com.tools20022.repository.msg.AmountToAmountRatio1.mmAmount1);
 			elementContext_lazy = () -> AmountRatio.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Amount1";
 			definition = "Numerator of the quotient of amounts.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount2;
 	/**
 	 * Denominator of the quotient of amounts
 	 * <p>
@@ -273,24 +276,24 @@ public class AmountRatio {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio2#Amount2
-	 * AmountToAmountRatio2.Amount2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio3#Amount2
-	 * AmountToAmountRatio3.Amount2}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio1#Amount2
-	 * AmountToAmountRatio1.Amount2}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmountRatio AmountRatio}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio2#mmAmount2
+	 * AmountToAmountRatio2.mmAmount2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio3#mmAmount2
+	 * AmountToAmountRatio3.mmAmount2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountToAmountRatio1#mmAmount2
+	 * AmountToAmountRatio1.mmAmount2}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -302,16 +305,16 @@ public class AmountRatio {
 	 * definition} = "Denominator of the quotient of amounts"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Amount2 = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmount2 = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountToAmountRatio2.Amount2, com.tools20022.repository.msg.AmountToAmountRatio3.Amount2, com.tools20022.repository.msg.AmountToAmountRatio1.Amount2);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountToAmountRatio2.mmAmount2, com.tools20022.repository.msg.AmountToAmountRatio3.mmAmount2, com.tools20022.repository.msg.AmountToAmountRatio1.mmAmount2);
 			elementContext_lazy = () -> AmountRatio.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Amount2";
 			definition = "Denominator of the quotient of amounts";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -319,24 +322,48 @@ public class AmountRatio {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountRatio";
 				definition = "Ratio expressed as a quotient of amounts.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.AmountPricePerAmount);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat3Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat4Choice.AmountToAmount,
-						com.tools20022.repository.choice.RatioFormat7Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat8Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat15Choice.AmountToAmount,
-						com.tools20022.repository.choice.RatioFormat16Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat5Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat6Choice.AmountToAmount,
-						com.tools20022.repository.choice.RatioFormat9Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat10Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat11Choice.AmountToAmount,
-						com.tools20022.repository.choice.RatioFormat12Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat13Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat14Choice.AmountToAmount,
-						com.tools20022.repository.choice.RatioFormat2Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat1Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat19Choice.AmountToAmount,
-						com.tools20022.repository.choice.RatioFormat17Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat18Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat20Choice.AmountToAmount,
-						com.tools20022.repository.choice.RatioFormat22Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat24Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat23Choice.AmountToAmount,
-						com.tools20022.repository.choice.RatioFormat21Choice.AmountToAmount);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountRatio.SecuritiesPricing, com.tools20022.repository.entity.AmountRatio.Amount1, com.tools20022.repository.entity.AmountRatio.Amount2);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerAmount);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat3Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat4Choice.mmAmountToAmount,
+						com.tools20022.repository.choice.RatioFormat7Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat8Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat15Choice.mmAmountToAmount,
+						com.tools20022.repository.choice.RatioFormat16Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat5Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat6Choice.mmAmountToAmount,
+						com.tools20022.repository.choice.RatioFormat9Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat10Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat11Choice.mmAmountToAmount,
+						com.tools20022.repository.choice.RatioFormat12Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat13Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat14Choice.mmAmountToAmount,
+						com.tools20022.repository.choice.RatioFormat2Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat1Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat19Choice.mmAmountToAmount,
+						com.tools20022.repository.choice.RatioFormat17Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat18Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat20Choice.mmAmountToAmount,
+						com.tools20022.repository.choice.RatioFormat22Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat24Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat23Choice.mmAmountToAmount,
+						com.tools20022.repository.choice.RatioFormat21Choice.mmAmountToAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountRatio.mmSecuritiesPricing, com.tools20022.repository.entity.AmountRatio.mmAmount1, com.tools20022.repository.entity.AmountRatio.mmAmount2);
 				derivationComponent_lazy = () -> Arrays.asList(AmountToAmountRatio2.mmObject(), AmountToAmountRatio3.mmObject(), AmountToAmountRatio1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesPricing getSecuritiesPricing() {
+		return securitiesPricing;
+	}
+
+	public void setSecuritiesPricing(com.tools20022.repository.entity.SecuritiesPricing securitiesPricing) {
+		this.securitiesPricing = securitiesPricing;
+	}
+
+	public ActiveCurrencyAndAmount getAmount1() {
+		return amount1;
+	}
+
+	public void setAmount1(ActiveCurrencyAndAmount amount1) {
+		this.amount1 = amount1;
+	}
+
+	public ActiveCurrencyAndAmount getAmount2() {
+		return amount2;
+	}
+
+	public void setAmount2(ActiveCurrencyAndAmount amount2) {
+		this.amount2 = amount2;
 	}
 }

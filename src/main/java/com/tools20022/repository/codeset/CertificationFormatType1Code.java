@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificationFormatType1Code#Electronic
- * CertificationFormatType1Code.Electronic}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificationFormatType1Code#mmElectronic
+ * CertificationFormatType1Code.mmElectronic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificationFormatType1Code#Physical
- * CertificationFormatType1Code.Physical}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificationFormatType1Code#mmPhysical
+ * CertificationFormatType1Code.mmPhysical}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class CertificationFormatType1Code extends CertificationFormatTypeCode {
 	 * name} = "Electronic"</li>
 	 * </ul>
 	 */
-	public static final MMCode Electronic = new MMCode() {
+	public static final MMCode mmElectronic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
@@ -107,7 +107,7 @@ public class CertificationFormatType1Code extends CertificationFormatTypeCode {
 	 * name} = "Physical"</li>
 	 * </ul>
 	 */
-	public static final MMCode Physical = new MMCode() {
+	public static final MMCode mmPhysical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
@@ -118,12 +118,12 @@ public class CertificationFormatType1Code extends CertificationFormatTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELEC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CertificationFormatType1Code";
 				definition = "Specifies the certification format required, that is, physical or electronic format.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CertificationFormatType1Code.Electronic, com.tools20022.repository.codeset.CertificationFormatType1Code.Physical);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CertificationFormatType1Code.mmElectronic, com.tools20022.repository.codeset.CertificationFormatType1Code.mmPhysical);
 				trace_lazy = () -> CertificationFormatTypeCode.mmObject();
 			}
 		});

@@ -32,15 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PayloadTypeDetails1#Type
- * PayloadTypeDetails1.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PayloadTypeDetails1#mmType
+ * PayloadTypeDetails1.mmType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,6 +54,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PayloadTypeDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max256Text type;
 	/**
 	 * Declaration of the payload content. Describes the type of business
 	 * document being exchanged.<br>
@@ -87,7 +88,7 @@ public class PayloadTypeDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PayloadTypeDetails1.mmObject();
 			isDerived = false;
@@ -95,8 +96,8 @@ public class PayloadTypeDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Declaration of the payload content. Describes the type of business document being exchanged.\r\n\r\nWhen sending a copy or a duplicate of a previous document set, the document set identification must remain identical.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -104,13 +105,21 @@ public class PayloadTypeDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayloadTypeDetails1.Type);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayloadTypeDetails1.mmType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PayloadTypeDetails1";
 				definition = "Identification of the type of payload.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max256Text getType() {
+		return type;
+	}
+
+	public void setType(Max256Text type) {
+		this.type = type;
 	}
 }

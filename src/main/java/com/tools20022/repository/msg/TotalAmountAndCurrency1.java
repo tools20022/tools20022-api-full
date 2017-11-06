@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalAmountAndCurrency1#TotalAmount
- * TotalAmountAndCurrency1.TotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalAmountAndCurrency1#mmTotalAmount
+ * TotalAmountAndCurrency1.mmTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalAmountAndCurrency1#CreditDebitIndicator
- * TotalAmountAndCurrency1.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalAmountAndCurrency1#mmCreditDebitIndicator
+ * TotalAmountAndCurrency1.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalAmountAndCurrency1#Currency
- * TotalAmountAndCurrency1.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalAmountAndCurrency1#mmCurrency
+ * TotalAmountAndCurrency1.mmCurrency}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalAmountAndCurrency1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAndAmount totalAmount;
 	/**
 	 * Total net amount for all operations taken into account in the report.
 	 * <p>
@@ -93,7 +94,7 @@ public class TotalAmountAndCurrency1 {
 	 * "Total net amount for all operations taken into account in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalAmountAndCurrency1.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class TotalAmountAndCurrency1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total net amount for all operations taken into account in the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the total amount is a credit or a debit amount.
 	 * <p>
@@ -135,7 +137,7 @@ public class TotalAmountAndCurrency1 {
 	 * "Indicates whether the total amount is a credit or a debit amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalAmountAndCurrency1.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class TotalAmountAndCurrency1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the total amount is a credit or a debit amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode currency;
 	/**
 	 * Currency in which the total amount is expressed.
 	 * <p>
@@ -176,7 +179,7 @@ public class TotalAmountAndCurrency1 {
 	 * definition} = "Currency in which the total amount is expressed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalAmountAndCurrency1.mmObject();
 			isDerived = false;
@@ -184,8 +187,8 @@ public class TotalAmountAndCurrency1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency in which the total amount is expressed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
@@ -193,14 +196,38 @@ public class TotalAmountAndCurrency1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalAmountAndCurrency1.TotalAmount, com.tools20022.repository.msg.TotalAmountAndCurrency1.CreditDebitIndicator,
-						com.tools20022.repository.msg.TotalAmountAndCurrency1.Currency);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalAmountAndCurrency1.mmTotalAmount, com.tools20022.repository.msg.TotalAmountAndCurrency1.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.TotalAmountAndCurrency1.mmCurrency);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalAmountAndCurrency1";
 				definition = "Set of elements providing the total amount of all operations.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAndAmount getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(ImpliedCurrencyAndAmount totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public ActiveCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveCurrencyCode currency) {
+		this.currency = currency;
 	}
 }

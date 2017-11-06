@@ -38,24 +38,24 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntentToPay1#ByPurchaseOrderOrByCommercialInvoiceRule
- * IntentToPay1.ByPurchaseOrderOrByCommercialInvoiceRule}</li>
+ * {@linkplain com.tools20022.repository.msg.IntentToPay1#mmByPurchaseOrderOrByCommercialInvoiceRule
+ * IntentToPay1.mmByPurchaseOrderOrByCommercialInvoiceRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IntentToPay1#ByPurchaseOrder
- * IntentToPay1.ByPurchaseOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntentToPay1#mmByPurchaseOrder
+ * IntentToPay1.mmByPurchaseOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntentToPay1#ByCommercialInvoice
- * IntentToPay1.ByCommercialInvoice}</li>
+ * {@linkplain com.tools20022.repository.msg.IntentToPay1#mmByCommercialInvoice
+ * IntentToPay1.mmByCommercialInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntentToPay1#ExpectedPaymentDate
- * IntentToPay1.ExpectedPaymentDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntentToPay1#SettlementTerms
- * IntentToPay1.SettlementTerms}</li>
+ * {@linkplain com.tools20022.repository.msg.IntentToPay1#mmExpectedPaymentDate
+ * IntentToPay1.mmExpectedPaymentDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntentToPay1#mmSettlementTerms
+ * IntentToPay1.mmSettlementTerms}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,18 +65,18 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#IntentToPay
- * IntentToPayNotificationV01.IntentToPay}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#mmIntentToPay
+ * IntentToPayNotificationV01.mmIntentToPay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#IntentToPay
- * ForwardIntentToPayNotificationV01.IntentToPay}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#mmIntentToPay
+ * ForwardIntentToPayNotificationV01.mmIntentToPay}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -99,6 +99,7 @@ import java.util.function.Supplier;
 public class IntentToPay1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportLine3 byPurchaseOrder;
 	/**
 	 * The intention to pay is based on a purchase order.
 	 * <p>
@@ -124,7 +125,7 @@ public class IntentToPay1 {
 	 * definition} = "The intention to pay is based on a purchase order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ByPurchaseOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmByPurchaseOrder = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntentToPay1.mmObject();
 			isDerived = false;
@@ -132,12 +133,13 @@ public class IntentToPay1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByPurchaseOrder";
 			definition = "The intention to pay is based on a purchase order.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReportLine3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReportLine3.mmObject();
 		}
 	};
+	protected ReportLine4 byCommercialInvoice;
 	/**
 	 * The intention to pay is based on a commercial invoice.
 	 * <p>
@@ -163,7 +165,7 @@ public class IntentToPay1 {
 	 * definition} = "The intention to pay is based on a commercial invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ByCommercialInvoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmByCommercialInvoice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntentToPay1.mmObject();
 			isDerived = false;
@@ -171,12 +173,13 @@ public class IntentToPay1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByCommercialInvoice";
 			definition = "The intention to pay is based on a commercial invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReportLine4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmObject();
 		}
 	};
+	protected ISODate expectedPaymentDate;
 	/**
 	 * Date at which the payment would be effected.
 	 * <p>
@@ -189,8 +192,8 @@ public class IntentToPay1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#Date
-	 * ObligationFulfilment.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
+	 * ObligationFulfilment.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,27 +213,28 @@ public class IntentToPay1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntentToPay2#ExpectedPaymentDate
-	 * IntentToPay2.ExpectedPaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.IntentToPay2#mmExpectedPaymentDate
+	 * IntentToPay2.mmExpectedPaymentDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedPaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> IntentToPay1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.Date;
 			isDerived = false;
 			xmlTag = "XpctdPmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedPaymentDate";
 			definition = "Date at which the payment would be effected.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay2.ExpectedPaymentDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay2.mmExpectedPaymentDate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected SettlementTerms2 settlementTerms;
 	/**
 	 * Specifies the beneficiary's account information.
 	 * <p>
@@ -242,8 +246,8 @@ public class IntentToPay1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#SettlementInstruction
-	 * PaymentInstruction.SettlementInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmSettlementInstruction
+	 * PaymentInstruction.mmSettlementInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -263,26 +267,26 @@ public class IntentToPay1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntentToPay2#SettlementTerms
-	 * IntentToPay2.SettlementTerms}</li>
+	 * {@linkplain com.tools20022.repository.msg.IntentToPay2#mmSettlementTerms
+	 * IntentToPay2.mmSettlementTerms}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> IntentToPay1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.SettlementInstruction;
 			isDerived = false;
 			xmlTag = "SttlmTerms";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTerms";
 			definition = "Specifies the beneficiary's account information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay2.SettlementTerms);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay2.mmSettlementTerms);
 			maxOccurs = 1;
-			type_lazy = () -> SettlementTerms2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementTerms2.mmObject();
 		}
 	};
 	/**
@@ -294,11 +298,11 @@ public class IntentToPay1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntentToPay1#ByPurchaseOrder
-	 * IntentToPay1.ByPurchaseOrder}</li>
+	 * {@linkplain com.tools20022.repository.msg.IntentToPay1#mmByPurchaseOrder
+	 * IntentToPay1.mmByPurchaseOrder}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntentToPay1#ByCommercialInvoice
-	 * IntentToPay1.ByCommercialInvoice}</li>
+	 * {@linkplain com.tools20022.repository.msg.IntentToPay1#mmByCommercialInvoice
+	 * IntentToPay1.mmByCommercialInvoice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -312,23 +316,23 @@ public class IntentToPay1 {
 	 * name} = "ByPurchaseOrderOrByCommercialInvoiceRule"</li>
 	 * </ul>
 	 */
-	public static final MMXor ByPurchaseOrderOrByCommercialInvoiceRule = new MMXor() {
+	public static final MMXor mmByPurchaseOrderOrByCommercialInvoiceRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByPurchaseOrderOrByCommercialInvoiceRule";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.ByPurchaseOrder, com.tools20022.repository.msg.IntentToPay1.ByCommercialInvoice);
 			messageComponent_lazy = () -> IntentToPay1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.mmByPurchaseOrder, com.tools20022.repository.msg.IntentToPay1.mmByCommercialInvoice);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.ByPurchaseOrder, com.tools20022.repository.msg.IntentToPay1.ByCommercialInvoice,
-						com.tools20022.repository.msg.IntentToPay1.ExpectedPaymentDate, com.tools20022.repository.msg.IntentToPay1.SettlementTerms);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.mmByPurchaseOrder, com.tools20022.repository.msg.IntentToPay1.mmByCommercialInvoice,
+						com.tools20022.repository.msg.IntentToPay1.mmExpectedPaymentDate, com.tools20022.repository.msg.IntentToPay1.mmSettlementTerms);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmIntentToPay, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmIntentToPay);
 				trace_lazy = () -> Payment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.IntentToPay, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.IntentToPay);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -340,9 +344,41 @@ public class IntentToPay1 {
 				name = "IntentToPay1";
 				definition = "Specifies the details of an intention to pay based on purchase orders or commercial invoice.";
 				nextVersions_lazy = () -> Arrays.asList(IntentToPay2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.ByPurchaseOrderOrByCommercialInvoiceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.mmByPurchaseOrderOrByCommercialInvoiceRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportLine3 getByPurchaseOrder() {
+		return byPurchaseOrder;
+	}
+
+	public void setByPurchaseOrder(com.tools20022.repository.msg.ReportLine3 byPurchaseOrder) {
+		this.byPurchaseOrder = byPurchaseOrder;
+	}
+
+	public ReportLine4 getByCommercialInvoice() {
+		return byCommercialInvoice;
+	}
+
+	public void setByCommercialInvoice(com.tools20022.repository.msg.ReportLine4 byCommercialInvoice) {
+		this.byCommercialInvoice = byCommercialInvoice;
+	}
+
+	public ISODate getExpectedPaymentDate() {
+		return expectedPaymentDate;
+	}
+
+	public void setExpectedPaymentDate(ISODate expectedPaymentDate) {
+		this.expectedPaymentDate = expectedPaymentDate;
+	}
+
+	public SettlementTerms2 getSettlementTerms() {
+		return settlementTerms;
+	}
+
+	public void setSettlementTerms(com.tools20022.repository.msg.SettlementTerms2 settlementTerms) {
+		this.settlementTerms = settlementTerms;
 	}
 }

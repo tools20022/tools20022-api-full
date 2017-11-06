@@ -33,36 +33,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * VoteInstructionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#For
- * VoteInstruction2Code.For}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#mmFor
+ * VoteInstruction2Code.mmFor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#Against
- * VoteInstruction2Code.Against}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#mmAgainst
+ * VoteInstruction2Code.mmAgainst}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#Abstain
- * VoteInstruction2Code.Abstain}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#mmAbstain
+ * VoteInstruction2Code.mmAbstain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#Withhold
- * VoteInstruction2Code.Withhold}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#mmWithhold
+ * VoteInstruction2Code.mmWithhold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#WithManagement
- * VoteInstruction2Code.WithManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#mmWithManagement
+ * VoteInstruction2Code.mmWithManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#AgainstManagement
- * VoteInstruction2Code.AgainstManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#mmAgainstManagement
+ * VoteInstruction2Code.mmAgainstManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#NoAction
- * VoteInstruction2Code.NoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#mmNoAction
+ * VoteInstruction2Code.mmNoAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#Discretionary
- * VoteInstruction2Code.Discretionary}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstruction2Code#mmDiscretionary
+ * VoteInstruction2Code.mmDiscretionary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +98,7 @@ public class VoteInstruction2Code extends VoteInstructionCode {
 	 * name} = "For"</li>
 	 * </ul>
 	 */
-	public static final MMCode For = new MMCode() {
+	public static final MMCode mmFor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "For";
@@ -121,7 +121,7 @@ public class VoteInstruction2Code extends VoteInstructionCode {
 	 * name} = "Against"</li>
 	 * </ul>
 	 */
-	public static final MMCode Against = new MMCode() {
+	public static final MMCode mmAgainst = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Against";
@@ -144,7 +144,7 @@ public class VoteInstruction2Code extends VoteInstructionCode {
 	 * name} = "Abstain"</li>
 	 * </ul>
 	 */
-	public static final MMCode Abstain = new MMCode() {
+	public static final MMCode mmAbstain = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Abstain";
@@ -167,7 +167,7 @@ public class VoteInstruction2Code extends VoteInstructionCode {
 	 * name} = "Withhold"</li>
 	 * </ul>
 	 */
-	public static final MMCode Withhold = new MMCode() {
+	public static final MMCode mmWithhold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withhold";
@@ -190,7 +190,7 @@ public class VoteInstruction2Code extends VoteInstructionCode {
 	 * name} = "WithManagement"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithManagement = new MMCode() {
+	public static final MMCode mmWithManagement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithManagement";
@@ -213,7 +213,7 @@ public class VoteInstruction2Code extends VoteInstructionCode {
 	 * name} = "AgainstManagement"</li>
 	 * </ul>
 	 */
-	public static final MMCode AgainstManagement = new MMCode() {
+	public static final MMCode mmAgainstManagement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstManagement";
@@ -236,7 +236,7 @@ public class VoteInstruction2Code extends VoteInstructionCode {
 	 * name} = "NoAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAction = new MMCode() {
+	public static final MMCode mmNoAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
@@ -259,7 +259,7 @@ public class VoteInstruction2Code extends VoteInstructionCode {
 	 * name} = "Discretionary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discretionary = new MMCode() {
+	public static final MMCode mmDiscretionary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discretionary";
@@ -270,14 +270,14 @@ public class VoteInstruction2Code extends VoteInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CFOR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VoteInstruction2Code";
 				definition = "Identifies the possible types of voting instructions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.VoteInstruction2Code.For, com.tools20022.repository.codeset.VoteInstruction2Code.Against, com.tools20022.repository.codeset.VoteInstruction2Code.Abstain,
-						com.tools20022.repository.codeset.VoteInstruction2Code.Withhold, com.tools20022.repository.codeset.VoteInstruction2Code.WithManagement, com.tools20022.repository.codeset.VoteInstruction2Code.AgainstManagement,
-						com.tools20022.repository.codeset.VoteInstruction2Code.NoAction, com.tools20022.repository.codeset.VoteInstruction2Code.Discretionary);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.VoteInstruction2Code.mmFor, com.tools20022.repository.codeset.VoteInstruction2Code.mmAgainst,
+						com.tools20022.repository.codeset.VoteInstruction2Code.mmAbstain, com.tools20022.repository.codeset.VoteInstruction2Code.mmWithhold, com.tools20022.repository.codeset.VoteInstruction2Code.mmWithManagement,
+						com.tools20022.repository.codeset.VoteInstruction2Code.mmAgainstManagement, com.tools20022.repository.codeset.VoteInstruction2Code.mmNoAction, com.tools20022.repository.codeset.VoteInstruction2Code.mmDiscretionary);
 				trace_lazy = () -> VoteInstructionCode.mmObject();
 			}
 		});

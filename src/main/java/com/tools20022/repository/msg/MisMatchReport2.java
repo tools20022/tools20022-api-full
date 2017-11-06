@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Description of the mis-matched situation between two baselines or between a
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MisMatchReport2#NumberOfMisMatches
- * MisMatchReport2.NumberOfMisMatches}</li>
+ * {@linkplain com.tools20022.repository.msg.MisMatchReport2#mmNumberOfMisMatches
+ * MisMatchReport2.mmNumberOfMisMatches}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MisMatchReport2#MisMatchInformation
- * MisMatchReport2.MisMatchInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MisMatchReport2#mmMisMatchInformation
+ * MisMatchReport2.mmMisMatchInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MisMatchReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number numberOfMisMatches;
 	/**
 	 * Total number of mismatches between two baselines or between one baseline
 	 * and one data set.
@@ -92,7 +94,7 @@ public class MisMatchReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfMisMatches = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfMisMatches = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MisMatchReport2.mmObject();
 			isDerived = false;
@@ -100,11 +102,12 @@ public class MisMatchReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfMisMatches";
 			definition = "Total number of mismatches between two baselines or between one baseline and one data set.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ValidationResult4> misMatchInformation;
 	/**
 	 * Details of each mismatch occurrence.
 	 * <p>
@@ -131,7 +134,7 @@ public class MisMatchReport2 {
 	 * definition} = "Details of each mismatch occurrence."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MisMatchInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMisMatchInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MisMatchReport2.mmObject();
 			isDerived = false;
@@ -140,21 +143,37 @@ public class MisMatchReport2 {
 			name = "MisMatchInformation";
 			definition = "Details of each mismatch occurrence.";
 			minOccurs = 0;
-			type_lazy = () -> ValidationResult4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ValidationResult4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MisMatchReport2.NumberOfMisMatches, com.tools20022.repository.msg.MisMatchReport2.MisMatchInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MisMatchReport2.mmNumberOfMisMatches, com.tools20022.repository.msg.MisMatchReport2.mmMisMatchInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MisMatchReport2";
 				definition = "Description of the mis-matched situation between two baselines or between a baseline and a data set.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getNumberOfMisMatches() {
+		return numberOfMisMatches;
+	}
+
+	public void setNumberOfMisMatches(Number numberOfMisMatches) {
+		this.numberOfMisMatches = numberOfMisMatches;
+	}
+
+	public List<ValidationResult4> getMisMatchInformation() {
+		return misMatchInformation;
+	}
+
+	public void setMisMatchInformation(List<com.tools20022.repository.msg.ValidationResult4> misMatchInformation) {
+		this.misMatchInformation = misMatchInformation;
 	}
 }

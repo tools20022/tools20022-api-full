@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus4Code#Accepted
- * CancellationStatus4Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus4Code#mmAccepted
+ * CancellationStatus4Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus4Code#Rejected
- * CancellationStatus4Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus4Code#mmRejected
+ * CancellationStatus4Code.mmRejected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class CancellationStatus4Code extends CancellationStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -107,7 +107,7 @@ public class CancellationStatus4Code extends CancellationStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -118,12 +118,12 @@ public class CancellationStatus4Code extends CancellationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus4Code";
 				definition = "Specifies the status of the cancellation request of an invoice financing request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationStatus4Code.Accepted, com.tools20022.repository.codeset.CancellationStatus4Code.Rejected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationStatus4Code.mmAccepted, com.tools20022.repository.codeset.CancellationStatus4Code.mmRejected);
 				trace_lazy = () -> CancellationStatusCode.mmObject();
 			}
 		});

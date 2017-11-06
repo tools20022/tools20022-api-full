@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#Share
- * EquityInstrumentReportingClassification1Code.Share}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#mmShare
+ * EquityInstrumentReportingClassification1Code.mmShare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#Other
- * EquityInstrumentReportingClassification1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#mmOther
+ * EquityInstrumentReportingClassification1Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#ElectronicTradedFund
- * EquityInstrumentReportingClassification1Code.ElectronicTradedFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#mmElectronicTradedFund
+ * EquityInstrumentReportingClassification1Code.mmElectronicTradedFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#DepositaryReceipt
- * EquityInstrumentReportingClassification1Code.DepositaryReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#mmDepositaryReceipt
+ * EquityInstrumentReportingClassification1Code.mmDepositaryReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#Certificate
- * EquityInstrumentReportingClassification1Code.Certificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#mmCertificate
+ * EquityInstrumentReportingClassification1Code.mmCertificate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +84,7 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 * name} = "Share"</li>
 	 * </ul>
 	 */
-	public static final MMCode Share = new MMCode() {
+	public static final MMCode mmShare = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Share";
@@ -107,7 +107,7 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -130,7 +130,7 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 * name} = "ElectronicTradedFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode ElectronicTradedFund = new MMCode() {
+	public static final MMCode mmElectronicTradedFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicTradedFund";
@@ -153,7 +153,7 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 * name} = "DepositaryReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode DepositaryReceipt = new MMCode() {
+	public static final MMCode mmDepositaryReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositaryReceipt";
@@ -176,7 +176,7 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 * name} = "Certificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode Certificate = new MMCode() {
+	public static final MMCode mmCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
@@ -187,13 +187,13 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EquityInstrumentReportingClassification1Code";
 				definition = "Specifies the equity financial instruments.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.Share, com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.Other,
-						com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.ElectronicTradedFund, com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.DepositaryReceipt,
-						com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.Certificate);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmShare, com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmOther,
+						com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmElectronicTradedFund, com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmDepositaryReceipt,
+						com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmCertificate);
 				trace_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
 			}
 		});

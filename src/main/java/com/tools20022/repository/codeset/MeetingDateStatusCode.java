@@ -30,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingDateStatusCode#Tentative
- * MeetingDateStatusCode.Tentative}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingDateStatusCode#mmTentative
+ * MeetingDateStatusCode.mmTentative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingDateStatusCode#Confirmed
- * MeetingDateStatusCode.Confirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingDateStatusCode#mmConfirmed
+ * MeetingDateStatusCode.mmConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingDateStatusCode#Cancelled
- * MeetingDateStatusCode.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingDateStatusCode#mmCancelled
+ * MeetingDateStatusCode.mmCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingDateStatusCode#NoQuorum
- * MeetingDateStatusCode.NoQuorum}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingDateStatusCode#mmNoQuorum
+ * MeetingDateStatusCode.mmNoQuorum}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class MeetingDateStatusCode {
 	 * definition} = "Meeting date is tentative."</li>
 	 * </ul>
 	 */
-	public static final MMCode Tentative = new MMCode() {
+	public static final MMCode mmTentative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tentative";
@@ -125,7 +125,7 @@ public class MeetingDateStatusCode {
 	 * definition} = "Meeting date is confirmed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Confirmed = new MMCode() {
+	public static final MMCode mmConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmed";
@@ -155,7 +155,7 @@ public class MeetingDateStatusCode {
 	 * definition} = "Meeting date has been cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -186,7 +186,7 @@ public class MeetingDateStatusCode {
 	 * "Meeting could not take place as the quorum was not reached."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoQuorum = new MMCode() {
+	public static final MMCode mmNoQuorum = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoQuorum";
@@ -199,13 +199,13 @@ public class MeetingDateStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TNTA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MeetingDateStatusCode";
 				definition = "Identifies the possible statuses of a meeting date.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingDateStatusCode.Tentative, com.tools20022.repository.codeset.MeetingDateStatusCode.Confirmed,
-						com.tools20022.repository.codeset.MeetingDateStatusCode.Cancelled, com.tools20022.repository.codeset.MeetingDateStatusCode.NoQuorum);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingDateStatusCode.mmTentative, com.tools20022.repository.codeset.MeetingDateStatusCode.mmConfirmed,
+						com.tools20022.repository.codeset.MeetingDateStatusCode.mmCancelled, com.tools20022.repository.codeset.MeetingDateStatusCode.mmNoQuorum);
 				derivation_lazy = () -> Arrays.asList(MeetingDateStatus1Code.mmObject());
 			}
 		});

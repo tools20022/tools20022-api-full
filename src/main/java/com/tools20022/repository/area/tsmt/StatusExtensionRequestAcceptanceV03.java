@@ -71,24 +71,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#AcceptanceIdentification
- * StatusExtensionRequestAcceptanceV03.AcceptanceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#mmAcceptanceIdentification
+ * StatusExtensionRequestAcceptanceV03.mmAcceptanceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#TransactionIdentification
- * StatusExtensionRequestAcceptanceV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#mmTransactionIdentification
+ * StatusExtensionRequestAcceptanceV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#SubmitterTransactionReference
- * StatusExtensionRequestAcceptanceV03.SubmitterTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#mmSubmitterTransactionReference
+ * StatusExtensionRequestAcceptanceV03.mmSubmitterTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#ExtendedStatus
- * StatusExtensionRequestAcceptanceV03.ExtendedStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#mmExtendedStatus
+ * StatusExtensionRequestAcceptanceV03.mmExtendedStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03#identifier
- * StatusExtensionRequestAcceptanceV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.031.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusExtensionRequestAcceptanceV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 acceptanceIdentification;
 	/**
 	 * Identifies the acceptance message.
 	 * <p>
@@ -127,17 +126,18 @@ public class StatusExtensionRequestAcceptanceV03 {
 	 * definition} = "Identifies the acceptance message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcceptanceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcceptanceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptncId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceIdentification";
 			definition = "Identifies the acceptance message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -165,17 +165,18 @@ public class StatusExtensionRequestAcceptanceV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation submitterTransactionReference;
 	/**
 	 * Reference to the transaction for the requesting financial institution.
 	 * <p>
@@ -200,17 +201,18 @@ public class StatusExtensionRequestAcceptanceV03 {
 	 * "Reference to the transaction for the requesting financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected TransactionStatus4 extendedStatus;
 	/**
 	 * Identifies the status for which the user accepts an extension of the
 	 * validity period..
@@ -237,42 +239,15 @@ public class StatusExtensionRequestAcceptanceV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ExtendedStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtendedStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "XtndedSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedStatus";
 			definition = "Identifies the status for which the user accepts an extension of the validity period..";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "031"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "031";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -286,12 +261,51 @@ public class StatusExtensionRequestAcceptanceV03 {
 				rootElement = "Document";
 				xmlTag = "StsXtnsnReqAccptnc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.AcceptanceIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.TransactionIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.SubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.ExtendedStatus);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.mmAcceptanceIdentification,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.mmSubmitterTransactionReference,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.mmExtendedStatus);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "031";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getAcceptanceIdentification() {
+		return acceptanceIdentification;
+	}
+
+	public void setAcceptanceIdentification(MessageIdentification1 acceptanceIdentification) {
+		this.acceptanceIdentification = acceptanceIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public SimpleIdentificationInformation getSubmitterTransactionReference() {
+		return submitterTransactionReference;
+	}
+
+	public void setSubmitterTransactionReference(SimpleIdentificationInformation submitterTransactionReference) {
+		this.submitterTransactionReference = submitterTransactionReference;
+	}
+
+	public TransactionStatus4 getExtendedStatus() {
+		return extendedStatus;
+	}
+
+	public void setExtendedStatus(TransactionStatus4 extendedStatus) {
+		this.extendedStatus = extendedStatus;
 	}
 }

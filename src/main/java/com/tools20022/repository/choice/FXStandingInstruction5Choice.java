@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FXStandingInstruction5Choice#Indicator
- * FXStandingInstruction5Choice.Indicator}</li>
+ * {@linkplain com.tools20022.repository.choice.FXStandingInstruction5Choice#mmIndicator
+ * FXStandingInstruction5Choice.mmIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FXStandingInstruction5Choice#Proprietary
- * FXStandingInstruction5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.FXStandingInstruction5Choice#mmProprietary
+ * FXStandingInstruction5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FXStandingInstruction5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator indicator;
 	/**
 	 * Specifies whether the forex standing instruction in place should apply.
 	 * <p>
@@ -78,8 +79,8 @@ public class FXStandingInstruction5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#FXStandingInstruction
-	 * StandingSettlementInstruction.FXStandingInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmFXStandingInstruction
+	 * StandingSettlementInstruction.mmFXStandingInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class FXStandingInstruction5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmFXStandingInstruction;
 			componentContext_lazy = () -> FXStandingInstruction5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.FXStandingInstruction;
 			isDerived = false;
 			xmlTag = "Ind";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether the forex standing instruction in place should apply.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * FX Standing instruction information expressed as a proprietary code.
 	 * <p>
@@ -127,8 +129,8 @@ public class FXStandingInstruction5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#FXStandingInstruction
-	 * StandingSettlementInstruction.FXStandingInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmFXStandingInstruction
+	 * StandingSettlementInstruction.mmFXStandingInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class FXStandingInstruction5Choice {
 	 * "FX Standing instruction information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmFXStandingInstruction;
 			componentContext_lazy = () -> FXStandingInstruction5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.FXStandingInstruction;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "FX Standing instruction information expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class FXStandingInstruction5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FXStandingInstruction5Choice.Indicator, com.tools20022.repository.choice.FXStandingInstruction5Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FXStandingInstruction5Choice.mmIndicator, com.tools20022.repository.choice.FXStandingInstruction5Choice.mmProprietary);
 				trace_lazy = () -> StandingSettlementInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FXStandingInstruction5Choice";
 				definition = "Choice of format for the forex standing instruction information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getIndicator() {
+		return indicator;
+	}
+
+	public void setIndicator(YesNoIndicator indicator) {
+		this.indicator = indicator;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

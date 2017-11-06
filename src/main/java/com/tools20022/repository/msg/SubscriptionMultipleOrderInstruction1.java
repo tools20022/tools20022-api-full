@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SubscriptionOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about a subscription multiple order.
@@ -33,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1#MultipleOrderDetails
- * SubscriptionMultipleOrderInstruction1.MultipleOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1#mmMultipleOrderDetails
+ * SubscriptionMultipleOrderInstruction1.mmMultipleOrderDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1#IntermediaryDetails
- * SubscriptionMultipleOrderInstruction1.IntermediaryDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1#mmIntermediaryDetails
+ * SubscriptionMultipleOrderInstruction1.mmIntermediaryDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1#CopyDetails
- * SubscriptionMultipleOrderInstruction1.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1#mmCopyDetails
+ * SubscriptionMultipleOrderInstruction1.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1#Extension
- * SubscriptionMultipleOrderInstruction1.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1#mmExtension
+ * SubscriptionMultipleOrderInstruction1.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,15 +55,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02#OrderToBeCancelled
- * SubscriptionMultipleOrderCancellationInstructionV02.OrderToBeCancelled}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02#mmOrderToBeCancelled
+ * SubscriptionMultipleOrderCancellationInstructionV02.mmOrderToBeCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubscriptionMultipleOrderInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SubscriptionMultipleOrder2 multipleOrderDetails;
 	/**
 	 * Common information related to all the orders to be cancelled.
 	 * <p>
@@ -109,21 +111,22 @@ public class SubscriptionMultipleOrderInstruction1 {
 	 * "Common information related to all the orders to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MultipleOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMultipleOrderDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction1.mmObject();
 			businessComponentTrace_lazy = () -> SubscriptionOrder.mmObject();
+			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "MltplOrdrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleOrderDetails";
 			definition = "Common information related to all the orders to be cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SubscriptionMultipleOrder2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary4> intermediaryDetails;
 	/**
 	 * Information related to an intermediary.
 	 * <p>
@@ -135,8 +138,8 @@ public class SubscriptionMultipleOrderInstruction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradePartyRole
-	 * Trade.TradePartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradePartyRole
+	 * Trade.mmTradePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,21 +158,22 @@ public class SubscriptionMultipleOrderInstruction1 {
 	 * definition} = "Information related to an intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
 			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradePartyRole;
 			isDerived = false;
 			xmlTag = "IntrmyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryDetails";
 			definition = "Information related to an intermediary.";
-			minOccurs = 0;
 			maxOccurs = 10;
-			type_lazy = () -> Intermediary4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary4.mmObject();
 		}
 	};
+	protected CopyInformation1 copyDetails;
 	/**
 	 * Message is a copy.
 	 * <p>
@@ -196,7 +200,7 @@ public class SubscriptionMultipleOrderInstruction1 {
 	 * definition} = "Message is a copy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CopyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCopyDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction1.mmObject();
 			isDerived = false;
@@ -204,12 +208,13 @@ public class SubscriptionMultipleOrderInstruction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Message is a copy.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CopyInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CopyInformation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -238,7 +243,7 @@ public class SubscriptionMultipleOrderInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction1.mmObject();
 			isDerived = false;
@@ -247,24 +252,57 @@ public class SubscriptionMultipleOrderInstruction1 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.MultipleOrderDetails, com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.IntermediaryDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.CopyDetails, com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.mmMultipleOrderDetails,
+						com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.mmIntermediaryDetails, com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.mmCopyDetails,
+						com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02.mmOrderToBeCancelled);
 				trace_lazy = () -> SubscriptionOrder.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02.OrderToBeCancelled);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionMultipleOrderInstruction1";
 				definition = "Information about a subscription multiple order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SubscriptionMultipleOrder2 getMultipleOrderDetails() {
+		return multipleOrderDetails;
+	}
+
+	public void setMultipleOrderDetails(com.tools20022.repository.msg.SubscriptionMultipleOrder2 multipleOrderDetails) {
+		this.multipleOrderDetails = multipleOrderDetails;
+	}
+
+	public List<Intermediary4> getIntermediaryDetails() {
+		return intermediaryDetails;
+	}
+
+	public void setIntermediaryDetails(List<com.tools20022.repository.msg.Intermediary4> intermediaryDetails) {
+		this.intermediaryDetails = intermediaryDetails;
+	}
+
+	public CopyInformation1 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(com.tools20022.repository.msg.CopyInformation1 copyDetails) {
+		this.copyDetails = copyDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

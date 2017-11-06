@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType3Code#PrimaryMarket
- * MarketType3Code.PrimaryMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType3Code#mmPrimaryMarket
+ * MarketType3Code.mmPrimaryMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType3Code#SecondaryMarket
- * MarketType3Code.SecondaryMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType3Code#mmSecondaryMarket
+ * MarketType3Code.mmSecondaryMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType3Code#OverTheCounter
- * MarketType3Code.OverTheCounter}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType3Code#mmOverTheCounter
+ * MarketType3Code.mmOverTheCounter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType3Code#StockExchange
- * MarketType3Code.StockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType3Code#mmStockExchange
+ * MarketType3Code.mmStockExchange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class MarketType3Code extends MarketTypeCode {
 	 * name} = "PrimaryMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode PrimaryMarket = new MMCode() {
+	public static final MMCode mmPrimaryMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryMarket";
@@ -112,7 +112,7 @@ public class MarketType3Code extends MarketTypeCode {
 	 * name} = "SecondaryMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecondaryMarket = new MMCode() {
+	public static final MMCode mmSecondaryMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryMarket";
@@ -135,7 +135,7 @@ public class MarketType3Code extends MarketTypeCode {
 	 * name} = "OverTheCounter"</li>
 	 * </ul>
 	 */
-	public static final MMCode OverTheCounter = new MMCode() {
+	public static final MMCode mmOverTheCounter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverTheCounter";
@@ -158,7 +158,7 @@ public class MarketType3Code extends MarketTypeCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockExchange = new MMCode() {
+	public static final MMCode mmStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
@@ -169,13 +169,13 @@ public class MarketType3Code extends MarketTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketType3Code";
 				definition = "Specifies the type of market in which transactions take place, for example, primary or secondary.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType3Code.PrimaryMarket, com.tools20022.repository.codeset.MarketType3Code.SecondaryMarket,
-						com.tools20022.repository.codeset.MarketType3Code.OverTheCounter, com.tools20022.repository.codeset.MarketType3Code.StockExchange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType3Code.mmPrimaryMarket, com.tools20022.repository.codeset.MarketType3Code.mmSecondaryMarket,
+						com.tools20022.repository.codeset.MarketType3Code.mmOverTheCounter, com.tools20022.repository.codeset.MarketType3Code.mmStockExchange);
 				trace_lazy = () -> MarketTypeCode.mmObject();
 			}
 		});

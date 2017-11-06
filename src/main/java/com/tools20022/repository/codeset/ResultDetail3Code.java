@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail3Code#UnknownCertificate
- * ResultDetail3Code.UnknownCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail3Code#mmUnknownCertificate
+ * ResultDetail3Code.mmUnknownCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail3Code#UnsupportedService
- * ResultDetail3Code.UnsupportedService}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail3Code#mmUnsupportedService
+ * ResultDetail3Code.mmUnsupportedService}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class ResultDetail3Code extends ResultDetailCode {
 	 * name} = "UnknownCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnknownCertificate = new MMCode() {
+	public static final MMCode mmUnknownCertificate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownCertificate";
@@ -98,7 +98,7 @@ public class ResultDetail3Code extends ResultDetailCode {
 	 * name} = "UnsupportedService"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnsupportedService = new MMCode() {
+	public static final MMCode mmUnsupportedService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnsupportedService";
@@ -109,11 +109,11 @@ public class ResultDetail3Code extends ResultDetailCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResultDetail3Code";
 				definition = "Detail of the response.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail3Code.UnknownCertificate, com.tools20022.repository.codeset.ResultDetail3Code.UnsupportedService);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail3Code.mmUnknownCertificate, com.tools20022.repository.codeset.ResultDetail3Code.mmUnsupportedService);
 				trace_lazy = () -> ResultDetailCode.mmObject();
 			}
 		});

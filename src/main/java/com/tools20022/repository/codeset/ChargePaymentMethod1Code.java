@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargePaymentMethod1Code#Cash
- * ChargePaymentMethod1Code.Cash}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargePaymentMethod1Code#mmCash
+ * ChargePaymentMethod1Code.mmCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargePaymentMethod1Code#Unit
- * ChargePaymentMethod1Code.Unit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargePaymentMethod1Code#mmUnit
+ * ChargePaymentMethod1Code.mmUnit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class ChargePaymentMethod1Code extends ChargePaymentMethodCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
@@ -98,7 +98,7 @@ public class ChargePaymentMethod1Code extends ChargePaymentMethodCode {
 	 * name} = "Unit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unit = new MMCode() {
+	public static final MMCode mmUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
@@ -109,11 +109,11 @@ public class ChargePaymentMethod1Code extends ChargePaymentMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargePaymentMethod1Code";
 				definition = "Specifies how expenses are paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargePaymentMethod1Code.Cash, com.tools20022.repository.codeset.ChargePaymentMethod1Code.Unit);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargePaymentMethod1Code.mmCash, com.tools20022.repository.codeset.ChargePaymentMethod1Code.mmUnit);
 				trace_lazy = () -> ChargePaymentMethodCode.mmObject();
 			}
 		});

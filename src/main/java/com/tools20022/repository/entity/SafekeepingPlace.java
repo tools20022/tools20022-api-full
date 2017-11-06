@@ -40,19 +40,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#SafekeepingPlaceType
- * SafekeepingPlace.SafekeepingPlaceType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SafekeepingPlace#Country
- * SafekeepingPlace.Country}</li>
+ * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#mmSafekeepingPlaceType
+ * SafekeepingPlace.mmSafekeepingPlaceType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SafekeepingPlace#mmCountry
+ * SafekeepingPlace.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#RelatedSecuritiesAccount
- * SafekeepingPlace.RelatedSecuritiesAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#mmRelatedSecuritiesAccount
+ * SafekeepingPlace.mmRelatedSecuritiesAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#SecuritiesBalance
- * SafekeepingPlace.SecuritiesBalance}</li>
+ * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#mmSecuritiesBalance
+ * SafekeepingPlace.mmSecuritiesBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#SecuritiesSettlement
- * SafekeepingPlace.SecuritiesSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.SafekeepingPlace#mmSecuritiesSettlement
+ * SafekeepingPlace.mmSecuritiesSettlement}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,17 +60,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Country#CountryForSafekeepingPlace
- * Country.CountryForSafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.entity.Country#mmCountryForSafekeepingPlace
+ * Country.mmCountryForSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#SafekeepingPlace
- * SecuritiesAccount.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSafekeepingPlace
+ * SecuritiesAccount.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#RequestedSafekeepingPlace
- * SecuritiesSettlement.RequestedSafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRequestedSafekeepingPlace
+ * SecuritiesSettlement.mmRequestedSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SafekeepingPlace
- * SecuritiesBalance.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSafekeepingPlace
+ * SecuritiesBalance.mmSafekeepingPlace}</li>
  * </ul>
  * </li>
  * <li>
@@ -78,1034 +78,1034 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount10#SafekeepingPlace
- * InvestmentAccount10.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount10#mmSafekeepingPlace
+ * InvestmentAccount10.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount22#SafekeepingPlace
- * InvestmentAccount22.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount22#mmSafekeepingPlace
+ * InvestmentAccount22.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice#Identification
- * SafekeepingPlaceFormat3Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice#mmIdentification
+ * SafekeepingPlaceFormat3Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice#TypeAndIdentification
- * SafekeepingPlaceFormat3Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat3Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount29#SafekeepingPlace
- * QuantityAndAccount29.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount29#mmSafekeepingPlace
+ * QuantityAndAccount29.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount30#SafekeepingPlace
- * QuantityAndAccount30.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount30#mmSafekeepingPlace
+ * QuantityAndAccount30.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice#Identification
- * SafekeepingPlaceFormat4Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice#mmIdentification
+ * SafekeepingPlaceFormat4Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice#TypeAndIdentification
- * SafekeepingPlaceFormat4Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat4Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#SafekeepingPlace
- * QuantityAndAccount32.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount32#mmSafekeepingPlace
+ * QuantityAndAccount32.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount33#SafekeepingPlace
- * QuantityAndAccount33.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount33#mmSafekeepingPlace
+ * QuantityAndAccount33.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice#Identification
- * SafekeepingPlaceFormat2Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice#mmIdentification
+ * SafekeepingPlaceFormat2Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice#TypeAndIdentification
- * SafekeepingPlaceFormat2Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat2Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice#Identification
- * SafekeepingPlaceFormat5Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice#mmIdentification
+ * SafekeepingPlaceFormat5Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice#TypeAndIdentification
- * SafekeepingPlaceFormat5Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat5Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance2#SafekeepingPlace
- * AccountAndBalance2.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance2#mmSafekeepingPlace
+ * AccountAndBalance2.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance5#SafekeepingPlace
- * AccountAndBalance5.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance5#mmSafekeepingPlace
+ * AccountAndBalance5.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance10#SafekeepingPlace
- * AccountAndBalance10.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance10#mmSafekeepingPlace
+ * AccountAndBalance10.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance12#SafekeepingPlace
- * AccountAndBalance12.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance12#mmSafekeepingPlace
+ * AccountAndBalance12.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance17#SafekeepingPlace
- * AccountAndBalance17.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance17#mmSafekeepingPlace
+ * AccountAndBalance17.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance20#SafekeepingPlace
- * AccountAndBalance20.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance20#mmSafekeepingPlace
+ * AccountAndBalance20.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption9#SafekeepingPlace
- * CorporateActionOption9.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption9#mmSafekeepingPlace
+ * CorporateActionOption9.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption18#SafekeepingPlace
- * CorporateActionOption18.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption18#mmSafekeepingPlace
+ * CorporateActionOption18.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption22#SafekeepingPlace
- * CorporateActionOption22.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption22#mmSafekeepingPlace
+ * CorporateActionOption22.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption27#SafekeepingPlace
- * CorporateActionOption27.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption27#mmSafekeepingPlace
+ * CorporateActionOption27.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption26#SafekeepingPlace
- * CorporateActionOption26.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption26#mmSafekeepingPlace
+ * CorporateActionOption26.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption41#SafekeepingPlace
- * CorporateActionOption41.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption41#mmSafekeepingPlace
+ * CorporateActionOption41.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption50#SafekeepingPlace
- * CorporateActionOption50.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption50#mmSafekeepingPlace
+ * CorporateActionOption50.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification25#SafekeepingPlace
- * AccountIdentification25.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification25#mmSafekeepingPlace
+ * AccountIdentification25.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification29#SafekeepingPlace
- * AccountIdentification29.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification29#mmSafekeepingPlace
+ * AccountIdentification29.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption29#SafekeepingPlace
- * CorporateActionOption29.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption29#mmSafekeepingPlace
+ * CorporateActionOption29.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance3#SafekeepingPlace
- * AccountAndBalance3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance3#mmSafekeepingPlace
+ * AccountAndBalance3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption3#SafekeepingPlace
- * SecuritiesOption3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption3#mmSafekeepingPlace
+ * SecuritiesOption3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance6#SafekeepingPlace
- * AccountAndBalance6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance6#mmSafekeepingPlace
+ * AccountAndBalance6.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption8#SafekeepingPlace
- * SecuritiesOption8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption8#mmSafekeepingPlace
+ * SecuritiesOption8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance11#SafekeepingPlace
- * AccountAndBalance11.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance11#mmSafekeepingPlace
+ * AccountAndBalance11.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption18#SafekeepingPlace
- * SecuritiesOption18.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption18#mmSafekeepingPlace
+ * SecuritiesOption18.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance13#SafekeepingPlace
- * AccountAndBalance13.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance13#mmSafekeepingPlace
+ * AccountAndBalance13.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption20#SafekeepingPlace
- * SecuritiesOption20.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption20#mmSafekeepingPlace
+ * SecuritiesOption20.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance16#SafekeepingPlace
- * AccountAndBalance16.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance16#mmSafekeepingPlace
+ * AccountAndBalance16.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption26#SafekeepingPlace
- * SecuritiesOption26.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption26#mmSafekeepingPlace
+ * SecuritiesOption26.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance19#SafekeepingPlace
- * AccountAndBalance19.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance19#mmSafekeepingPlace
+ * AccountAndBalance19.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption31#SafekeepingPlace
- * SecuritiesOption31.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption31#mmSafekeepingPlace
+ * SecuritiesOption31.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance22#SafekeepingPlace
- * AccountAndBalance22.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance22#mmSafekeepingPlace
+ * AccountAndBalance22.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption35#SafekeepingPlace
- * SecuritiesOption35.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption35#mmSafekeepingPlace
+ * SecuritiesOption35.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance23#SafekeepingPlace
- * AccountAndBalance23.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance23#mmSafekeepingPlace
+ * AccountAndBalance23.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption36#SafekeepingPlace
- * SecuritiesOption36.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption36#mmSafekeepingPlace
+ * SecuritiesOption36.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance1#SafekeepingPlace
- * AccountAndBalance1.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance1#mmSafekeepingPlace
+ * AccountAndBalance1.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption4#SafekeepingPlace
- * SecuritiesOption4.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption4#mmSafekeepingPlace
+ * SecuritiesOption4.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance7#SafekeepingPlace
- * AccountAndBalance7.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance7#mmSafekeepingPlace
+ * AccountAndBalance7.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption10#SafekeepingPlace
- * SecuritiesOption10.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption10#mmSafekeepingPlace
+ * SecuritiesOption10.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance9#SafekeepingPlace
- * AccountAndBalance9.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance9#mmSafekeepingPlace
+ * AccountAndBalance9.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption13#SafekeepingPlace
- * SecuritiesOption13.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption13#mmSafekeepingPlace
+ * SecuritiesOption13.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance14#SafekeepingPlace
- * AccountAndBalance14.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance14#mmSafekeepingPlace
+ * AccountAndBalance14.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption17#SafekeepingPlace
- * SecuritiesOption17.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption17#mmSafekeepingPlace
+ * SecuritiesOption17.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance15#SafekeepingPlace
- * AccountAndBalance15.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance15#mmSafekeepingPlace
+ * AccountAndBalance15.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption24#SafekeepingPlace
- * SecuritiesOption24.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption24#mmSafekeepingPlace
+ * SecuritiesOption24.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance18#SafekeepingPlace
- * AccountAndBalance18.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance18#mmSafekeepingPlace
+ * AccountAndBalance18.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption29#SafekeepingPlace
- * SecuritiesOption29.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption29#mmSafekeepingPlace
+ * SecuritiesOption29.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance21#SafekeepingPlace
- * AccountAndBalance21.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance21#mmSafekeepingPlace
+ * AccountAndBalance21.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption38#SafekeepingPlace
- * SecuritiesOption38.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption38#mmSafekeepingPlace
+ * SecuritiesOption38.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance24#SafekeepingPlace
- * AccountAndBalance24.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance24#mmSafekeepingPlace
+ * AccountAndBalance24.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption39#SafekeepingPlace
- * SecuritiesOption39.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption39#mmSafekeepingPlace
+ * SecuritiesOption39.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails3#SafekeepingPlace
- * IntraPositionDetails3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails3#mmSafekeepingPlace
+ * IntraPositionDetails3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails6#SafekeepingPlace
- * IntraPositionDetails6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails6#mmSafekeepingPlace
+ * IntraPositionDetails6.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails17#SafekeepingPlace
- * IntraPositionDetails17.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails17#mmSafekeepingPlace
+ * IntraPositionDetails17.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails18#SafekeepingPlace
- * IntraPositionDetails18.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails18#mmSafekeepingPlace
+ * IntraPositionDetails18.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails20#SafekeepingPlace
- * IntraPositionDetails20.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails20#mmSafekeepingPlace
+ * IntraPositionDetails20.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails24#SafekeepingPlace
- * IntraPositionDetails24.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails24#mmSafekeepingPlace
+ * IntraPositionDetails24.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails28#SafekeepingPlace
- * IntraPositionDetails28.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails28#mmSafekeepingPlace
+ * IntraPositionDetails28.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails30#SafekeepingPlace
- * IntraPositionDetails30.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails30#mmSafekeepingPlace
+ * IntraPositionDetails30.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace7#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace7.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace7#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace7.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation8#SafekeepingPlace
- * AggregateBalanceInformation8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation8#mmSafekeepingPlace
+ * AggregateBalanceInformation8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace10#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace10.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace10#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace10.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation11#SafekeepingPlace
- * AggregateBalanceInformation11.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation11#mmSafekeepingPlace
+ * AggregateBalanceInformation11.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormatChoice#Identification
- * SafekeepingPlaceFormatChoice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormatChoice#mmIdentification
+ * SafekeepingPlaceFormatChoice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace2.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace2.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation2#SafekeepingPlace
- * AggregateBalanceInformation2.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation2#mmSafekeepingPlace
+ * AggregateBalanceInformation2.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace4.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace4.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3#SafekeepingPlace
- * AggregateBalanceInformation3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation3#mmSafekeepingPlace
+ * AggregateBalanceInformation3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace12#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace12.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace12#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace12.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation13#SafekeepingPlace
- * AggregateBalanceInformation13.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation13#mmSafekeepingPlace
+ * AggregateBalanceInformation13.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace14#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace14.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace14#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace14.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation15#SafekeepingPlace
- * AggregateBalanceInformation15.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation15#mmSafekeepingPlace
+ * AggregateBalanceInformation15.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace16#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace16.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace16#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace16.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation17#SafekeepingPlace
- * AggregateBalanceInformation17.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation17#mmSafekeepingPlace
+ * AggregateBalanceInformation17.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace18#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace18.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace18#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace18.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation19#SafekeepingPlace
- * AggregateBalanceInformation19.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation19#mmSafekeepingPlace
+ * AggregateBalanceInformation19.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace21#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace21.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace21#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace21.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation22#SafekeepingPlace
- * AggregateBalanceInformation22.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation22#mmSafekeepingPlace
+ * AggregateBalanceInformation22.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace22#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace22.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace22#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace22.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation23#SafekeepingPlace
- * AggregateBalanceInformation23.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation23#mmSafekeepingPlace
+ * AggregateBalanceInformation23.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace8#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace8#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation9#SafekeepingPlace
- * AggregateBalanceInformation9.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation9#mmSafekeepingPlace
+ * AggregateBalanceInformation9.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace9#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace9.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace9#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace9.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation10#SafekeepingPlace
- * AggregateBalanceInformation10.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation10#mmSafekeepingPlace
+ * AggregateBalanceInformation10.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace1.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace1.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation1#SafekeepingPlace
- * AggregateBalanceInformation1.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation1#mmSafekeepingPlace
+ * AggregateBalanceInformation1.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4#SafekeepingPlace
- * AggregateBalanceInformation4.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation4#mmSafekeepingPlace
+ * AggregateBalanceInformation4.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace11#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace11.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace11#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace11.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation12#SafekeepingPlace
- * AggregateBalanceInformation12.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation12#mmSafekeepingPlace
+ * AggregateBalanceInformation12.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace13#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace13.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace13#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace13.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation14#SafekeepingPlace
- * AggregateBalanceInformation14.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation14#mmSafekeepingPlace
+ * AggregateBalanceInformation14.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace15#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace15.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace15#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace15.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation16#SafekeepingPlace
- * AggregateBalanceInformation16.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation16#mmSafekeepingPlace
+ * AggregateBalanceInformation16.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace17#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace17.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace17#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace17.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation18#SafekeepingPlace
- * AggregateBalanceInformation18.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation18#mmSafekeepingPlace
+ * AggregateBalanceInformation18.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace20#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace20.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace20#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace20.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation21#SafekeepingPlace
- * AggregateBalanceInformation21.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation21#mmSafekeepingPlace
+ * AggregateBalanceInformation21.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace23#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace23.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace23#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace23.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation24#SafekeepingPlace
- * AggregateBalanceInformation24.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation24#mmSafekeepingPlace
+ * AggregateBalanceInformation24.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#SafekeepingPlace
- * QuantityAndAccount6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount6#mmSafekeepingPlace
+ * QuantityAndAccount6.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount11#SafekeepingPlace
- * QuantityAndAccount11.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount11#mmSafekeepingPlace
+ * QuantityAndAccount11.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount18#SafekeepingPlace
- * QuantityAndAccount18.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount18#mmSafekeepingPlace
+ * QuantityAndAccount18.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount19#SafekeepingPlace
- * QuantityAndAccount19.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount19#mmSafekeepingPlace
+ * QuantityAndAccount19.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount1#SafekeepingPlace
- * QuantityAndAccount1.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount1#mmSafekeepingPlace
+ * QuantityAndAccount1.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount5#SafekeepingPlace
- * QuantityAndAccount5.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount5#mmSafekeepingPlace
+ * QuantityAndAccount5.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount17#SafekeepingPlace
- * QuantityAndAccount17.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount17#mmSafekeepingPlace
+ * QuantityAndAccount17.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount24#SafekeepingPlace
- * QuantityAndAccount24.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount24#mmSafekeepingPlace
+ * QuantityAndAccount24.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount25#SafekeepingPlace
- * QuantityAndAccount25.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount25#mmSafekeepingPlace
+ * QuantityAndAccount25.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount34#SafekeepingPlace
- * QuantityAndAccount34.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount34#mmSafekeepingPlace
+ * QuantityAndAccount34.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount2#SafekeepingPlace
- * QuantityAndAccount2.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount2#mmSafekeepingPlace
+ * QuantityAndAccount2.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount12#SafekeepingPlace
- * QuantityAndAccount12.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount12#mmSafekeepingPlace
+ * QuantityAndAccount12.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount15#SafekeepingPlace
- * QuantityAndAccount15.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount15#mmSafekeepingPlace
+ * QuantityAndAccount15.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount20#SafekeepingPlace
- * QuantityAndAccount20.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount20#mmSafekeepingPlace
+ * QuantityAndAccount20.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount28#SafekeepingPlace
- * QuantityAndAccount28.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount28#mmSafekeepingPlace
+ * QuantityAndAccount28.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount37#SafekeepingPlace
- * QuantityAndAccount37.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount37#mmSafekeepingPlace
+ * QuantityAndAccount37.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails5#SafekeepingPlace
- * TransactionDetails5.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails5#mmSafekeepingPlace
+ * TransactionDetails5.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails9#SafekeepingPlace
- * TransactionDetails9.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails9#mmSafekeepingPlace
+ * TransactionDetails9.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails22#SafekeepingPlace
- * TransactionDetails22.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails22#mmSafekeepingPlace
+ * TransactionDetails22.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails23#SafekeepingPlace
- * TransactionDetails23.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails23#mmSafekeepingPlace
+ * TransactionDetails23.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails36#SafekeepingPlace
- * TransactionDetails36.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails36#mmSafekeepingPlace
+ * TransactionDetails36.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails47#SafekeepingPlace
- * TransactionDetails47.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails47#mmSafekeepingPlace
+ * TransactionDetails47.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails53#SafekeepingPlace
- * TransactionDetails53.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails53#mmSafekeepingPlace
+ * TransactionDetails53.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails58#SafekeepingPlace
- * TransactionDetails58.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails58#mmSafekeepingPlace
+ * TransactionDetails58.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails7#SafekeepingPlace
- * TransactionDetails7.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails7#mmSafekeepingPlace
+ * TransactionDetails7.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails8#SafekeepingPlace
- * TransactionDetails8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails8#mmSafekeepingPlace
+ * TransactionDetails8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails16#SafekeepingPlace
- * TransactionDetails16.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails16#mmSafekeepingPlace
+ * TransactionDetails16.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails17#SafekeepingPlace
- * TransactionDetails17.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails17#mmSafekeepingPlace
+ * TransactionDetails17.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails26#SafekeepingPlace
- * TransactionDetails26.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails26#mmSafekeepingPlace
+ * TransactionDetails26.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails25#SafekeepingPlace
- * TransactionDetails25.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails25#mmSafekeepingPlace
+ * TransactionDetails25.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails27#SafekeepingPlace
- * TransactionDetails27.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails27#mmSafekeepingPlace
+ * TransactionDetails27.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails33#SafekeepingPlace
- * TransactionDetails33.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails33#mmSafekeepingPlace
+ * TransactionDetails33.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails39#SafekeepingPlace
- * TransactionDetails39.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails39#mmSafekeepingPlace
+ * TransactionDetails39.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails50#SafekeepingPlace
- * TransactionDetails50.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails50#mmSafekeepingPlace
+ * TransactionDetails50.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails56#SafekeepingPlace
- * TransactionDetails56.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails56#mmSafekeepingPlace
+ * TransactionDetails56.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails59#SafekeepingPlace
- * TransactionDetails59.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails59#mmSafekeepingPlace
+ * TransactionDetails59.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails6#SafekeepingPlace
- * TransactionDetails6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails6#mmSafekeepingPlace
+ * TransactionDetails6.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails2#SafekeepingPlace
- * FinancialInstrumentDetails2.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails2#mmSafekeepingPlace
+ * FinancialInstrumentDetails2.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails18#SafekeepingPlace
- * TransactionDetails18.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails18#mmSafekeepingPlace
+ * TransactionDetails18.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails3#SafekeepingPlace
- * FinancialInstrumentDetails3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails3#mmSafekeepingPlace
+ * FinancialInstrumentDetails3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails24#SafekeepingPlace
- * TransactionDetails24.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails24#mmSafekeepingPlace
+ * TransactionDetails24.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails5#SafekeepingPlace
- * FinancialInstrumentDetails5.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails5#mmSafekeepingPlace
+ * FinancialInstrumentDetails5.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails34#SafekeepingPlace
- * TransactionDetails34.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails34#mmSafekeepingPlace
+ * TransactionDetails34.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails8#SafekeepingPlace
- * FinancialInstrumentDetails8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails8#mmSafekeepingPlace
+ * FinancialInstrumentDetails8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails37#SafekeepingPlace
- * TransactionDetails37.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails37#mmSafekeepingPlace
+ * TransactionDetails37.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails9#SafekeepingPlace
- * FinancialInstrumentDetails9.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails9#mmSafekeepingPlace
+ * FinancialInstrumentDetails9.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails48#SafekeepingPlace
- * TransactionDetails48.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails48#mmSafekeepingPlace
+ * TransactionDetails48.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails11#SafekeepingPlace
- * FinancialInstrumentDetails11.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails11#mmSafekeepingPlace
+ * FinancialInstrumentDetails11.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails57#SafekeepingPlace
- * TransactionDetails57.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails57#mmSafekeepingPlace
+ * TransactionDetails57.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails13#SafekeepingPlace
- * FinancialInstrumentDetails13.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails13#mmSafekeepingPlace
+ * FinancialInstrumentDetails13.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails60#SafekeepingPlace
- * TransactionDetails60.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails60#mmSafekeepingPlace
+ * TransactionDetails60.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails16#SafekeepingPlace
- * FinancialInstrumentDetails16.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails16#mmSafekeepingPlace
+ * FinancialInstrumentDetails16.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldingBalance2#SafekeepingPlace
- * HoldingBalance2.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldingBalance2#mmSafekeepingPlace
+ * HoldingBalance2.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldingBalance3#SafekeepingPlace
- * HoldingBalance3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldingBalance3#mmSafekeepingPlace
+ * HoldingBalance3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldingBalance6#SafekeepingPlace
- * HoldingBalance6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldingBalance6#mmSafekeepingPlace
+ * HoldingBalance6.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldingBalance4#SafekeepingPlace
- * HoldingBalance4.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldingBalance4#mmSafekeepingPlace
+ * HoldingBalance4.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldingBalance5#SafekeepingPlace
- * HoldingBalance5.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldingBalance5#mmSafekeepingPlace
+ * HoldingBalance5.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDescription3#SafekeepingPlace
- * FinancialInstrumentDescription3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDescription3#mmSafekeepingPlace
+ * FinancialInstrumentDescription3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount7#SafekeepingPlace
- * QuantityAndAccount7.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount7#mmSafekeepingPlace
+ * QuantityAndAccount7.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount16#SafekeepingPlace
- * QuantityAndAccount16.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount16#mmSafekeepingPlace
+ * QuantityAndAccount16.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails2.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails2.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount3#SafekeepingPlace
- * QuantityAndAccount3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount3#mmSafekeepingPlace
+ * QuantityAndAccount3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount13#SafekeepingPlace
- * QuantityAndAccount13.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount13#mmSafekeepingPlace
+ * QuantityAndAccount13.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount8#SafekeepingPlace
- * QuantityAndAccount8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount8#mmSafekeepingPlace
+ * QuantityAndAccount8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount14#SafekeepingPlace
- * QuantityAndAccount14.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount14#mmSafekeepingPlace
+ * QuantityAndAccount14.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount10#SafekeepingPlace
- * QuantityAndAccount10.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount10#mmSafekeepingPlace
+ * QuantityAndAccount10.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount21#SafekeepingPlace
- * QuantityAndAccount21.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount21#mmSafekeepingPlace
+ * QuantityAndAccount21.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails6.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails10.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails10.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails17.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails17.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails18.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails18.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount4#SafekeepingPlace
- * QuantityAndAccount4.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount4#mmSafekeepingPlace
+ * QuantityAndAccount4.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount22#SafekeepingPlace
- * QuantityAndAccount22.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount22#mmSafekeepingPlace
+ * QuantityAndAccount22.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount27#SafekeepingPlace
- * QuantityAndAccount27.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount27#mmSafekeepingPlace
+ * QuantityAndAccount27.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount36#SafekeepingPlace
- * QuantityAndAccount36.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount36#mmSafekeepingPlace
+ * QuantityAndAccount36.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount9#SafekeepingPlace
- * QuantityAndAccount9.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount9#mmSafekeepingPlace
+ * QuantityAndAccount9.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount23#SafekeepingPlace
- * QuantityAndAccount23.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount23#mmSafekeepingPlace
+ * QuantityAndAccount23.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount26#SafekeepingPlace
- * QuantityAndAccount26.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount26#mmSafekeepingPlace
+ * QuantityAndAccount26.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount35#SafekeepingPlace
- * QuantityAndAccount35.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount35#mmSafekeepingPlace
+ * QuantityAndAccount35.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails10#SafekeepingPlace
- * IntraPositionDetails10.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails10#mmSafekeepingPlace
+ * IntraPositionDetails10.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails14#SafekeepingPlace
- * IntraPositionDetails14.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails14#mmSafekeepingPlace
+ * IntraPositionDetails14.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails51#SafekeepingPlace
- * TransactionDetails51.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails51#mmSafekeepingPlace
+ * TransactionDetails51.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace19#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace19.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace19#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace19.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation20#SafekeepingPlace
- * AggregateBalanceInformation20.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation20#mmSafekeepingPlace
+ * AggregateBalanceInformation20.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#SafekeepingPlace
- * CorporateActionOption8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption8#mmSafekeepingPlace
+ * CorporateActionOption8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#TypeAndIdentification
- * SafekeepingPlaceFormat1Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat1Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#Type
- * SafekeepingPlaceFormat1Choice.Type}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#mmType
+ * SafekeepingPlaceFormat1Choice.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace6.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation6#SafekeepingPlace
- * AggregateBalanceInformation6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation6#mmSafekeepingPlace
+ * AggregateBalanceInformation6.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace5#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace5.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace5#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace5.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation7#SafekeepingPlace
- * AggregateBalanceInformation7.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation7#mmSafekeepingPlace
+ * AggregateBalanceInformation7.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount40#SafekeepingPlace
- * InvestmentAccount40.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount40#mmSafekeepingPlace
+ * InvestmentAccount40.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails61#SafekeepingPlace
- * TransactionDetails61.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails61#mmSafekeepingPlace
+ * TransactionDetails61.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails17#SafekeepingPlace
- * FinancialInstrumentDetails17.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails17#mmSafekeepingPlace
+ * FinancialInstrumentDetails17.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails21.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails21.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails62#SafekeepingPlace
- * TransactionDetails62.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails62#mmSafekeepingPlace
+ * TransactionDetails62.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails63#SafekeepingPlace
- * TransactionDetails63.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails63#mmSafekeepingPlace
+ * TransactionDetails63.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance26#SafekeepingPlace
- * AccountAndBalance26.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance26#mmSafekeepingPlace
+ * AccountAndBalance26.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption42#SafekeepingPlace
- * SecuritiesOption42.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption42#mmSafekeepingPlace
+ * SecuritiesOption42.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance25#SafekeepingPlace
- * AccountAndBalance25.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance25#mmSafekeepingPlace
+ * AccountAndBalance25.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption40#SafekeepingPlace
- * SecuritiesOption40.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption40#mmSafekeepingPlace
+ * SecuritiesOption40.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance32#SafekeepingPlace
- * AccountAndBalance32.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance32#mmSafekeepingPlace
+ * AccountAndBalance32.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance29#SafekeepingPlace
- * AccountAndBalance29.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance29#mmSafekeepingPlace
+ * AccountAndBalance29.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption48#SafekeepingPlace
- * SecuritiesOption48.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption48#mmSafekeepingPlace
+ * SecuritiesOption48.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption45#SafekeepingPlace
- * SecuritiesOption45.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption45#mmSafekeepingPlace
+ * SecuritiesOption45.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails18#SafekeepingPlace
- * FinancialInstrumentDetails18.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails18#mmSafekeepingPlace
+ * FinancialInstrumentDetails18.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails22.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails22.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails66#SafekeepingPlace
- * TransactionDetails66.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails66#mmSafekeepingPlace
+ * TransactionDetails66.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails67#SafekeepingPlace
- * TransactionDetails67.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails67#mmSafekeepingPlace
+ * TransactionDetails67.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails68#SafekeepingPlace
- * TransactionDetails68.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails68#mmSafekeepingPlace
+ * TransactionDetails68.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails24.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails24.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails70#SafekeepingPlace
- * TransactionDetails70.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails70#mmSafekeepingPlace
+ * TransactionDetails70.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails69#SafekeepingPlace
- * TransactionDetails69.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails69#mmSafekeepingPlace
+ * TransactionDetails69.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation26#SafekeepingPlace
- * AggregateBalanceInformation26.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation26#mmSafekeepingPlace
+ * AggregateBalanceInformation26.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation25#SafekeepingPlace
- * AggregateBalanceInformation25.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation25#mmSafekeepingPlace
+ * AggregateBalanceInformation25.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace24.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace24.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace25.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace25.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice#Identification
- * SafekeepingPlaceFormat7Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice#mmIdentification
+ * SafekeepingPlaceFormat7Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice#TypeAndIdentification
- * SafekeepingPlaceFormat7Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat7Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral2#SafekeepingPlace
- * SecuritiesCollateral2.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral2#mmSafekeepingPlace
+ * SecuritiesCollateral2.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral2#SafekeepingPlace
- * OtherCollateral2.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmSafekeepingPlace
+ * OtherCollateral2.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral3#SafekeepingPlace
- * SecuritiesCollateral3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral3#mmSafekeepingPlace
+ * SecuritiesCollateral3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral3#SafekeepingPlace
- * OtherCollateral3.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmSafekeepingPlace
+ * OtherCollateral3.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldingBalance8#SafekeepingPlace
- * HoldingBalance8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldingBalance8#mmSafekeepingPlace
+ * HoldingBalance8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldingBalance7#SafekeepingPlace
- * HoldingBalance7.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldingBalance7#mmSafekeepingPlace
+ * HoldingBalance7.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral4#SafekeepingPlace
- * OtherCollateral4.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral4#mmSafekeepingPlace
+ * OtherCollateral4.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral4#SafekeepingPlace
- * SecuritiesCollateral4.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral4#mmSafekeepingPlace
+ * SecuritiesCollateral4.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation28#SafekeepingPlace
- * AggregateBalanceInformation28.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation28#mmSafekeepingPlace
+ * AggregateBalanceInformation28.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails71#SafekeepingPlace
- * TransactionDetails71.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails71#mmSafekeepingPlace
+ * TransactionDetails71.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails25.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails25.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation27#SafekeepingPlace
- * AggregateBalanceInformation27.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation27#mmSafekeepingPlace
+ * AggregateBalanceInformation27.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace26.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace26.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace27.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace27.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails72#SafekeepingPlace
- * TransactionDetails72.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails72#mmSafekeepingPlace
+ * TransactionDetails72.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount39#SafekeepingPlace
- * QuantityAndAccount39.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount39#mmSafekeepingPlace
+ * QuantityAndAccount39.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation30#SafekeepingPlace
- * AggregateBalanceInformation30.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation30#mmSafekeepingPlace
+ * AggregateBalanceInformation30.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount41#SafekeepingPlace
- * QuantityAndAccount41.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount41#mmSafekeepingPlace
+ * QuantityAndAccount41.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#SafekeepingPlace
- * FinancialInstrumentDetails20.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20#mmSafekeepingPlace
+ * FinancialInstrumentDetails20.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount40#SafekeepingPlace
- * QuantityAndAccount40.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount40#mmSafekeepingPlace
+ * QuantityAndAccount40.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount42#SafekeepingPlace
- * QuantityAndAccount42.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount42#mmSafekeepingPlace
+ * QuantityAndAccount42.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount38#SafekeepingPlace
- * QuantityAndAccount38.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount38#mmSafekeepingPlace
+ * QuantityAndAccount38.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails26.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails26.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails79#SafekeepingPlace
- * TransactionDetails79.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails79#mmSafekeepingPlace
+ * TransactionDetails79.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation31#SafekeepingPlace
- * AggregateBalanceInformation31.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation31#mmSafekeepingPlace
+ * AggregateBalanceInformation31.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace28.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace28.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount43#SafekeepingPlace
- * QuantityAndAccount43.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount43#mmSafekeepingPlace
+ * QuantityAndAccount43.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails75#SafekeepingPlace
- * TransactionDetails75.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails75#mmSafekeepingPlace
+ * TransactionDetails75.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace29.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace29.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails78#SafekeepingPlace
- * TransactionDetails78.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails78#mmSafekeepingPlace
+ * TransactionDetails78.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice#Identification
- * SafekeepingPlaceFormat8Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice#mmIdentification
+ * SafekeepingPlaceFormat8Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice#TypeAndIdentification
- * SafekeepingPlaceFormat8Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat8Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice#Identification
- * SafekeepingPlaceFormat10Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice#mmIdentification
+ * SafekeepingPlaceFormat10Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice#TypeAndIdentification
- * SafekeepingPlaceFormat10Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat10Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount45#SafekeepingPlace
- * QuantityAndAccount45.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount45#mmSafekeepingPlace
+ * QuantityAndAccount45.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails32#SafekeepingPlace
- * IntraPositionDetails32.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails32#mmSafekeepingPlace
+ * IntraPositionDetails32.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount44#SafekeepingPlace
- * QuantityAndAccount44.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount44#mmSafekeepingPlace
+ * QuantityAndAccount44.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance34#SafekeepingPlace
- * AccountAndBalance34.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance34#mmSafekeepingPlace
+ * AccountAndBalance34.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance35#SafekeepingPlace
- * AccountAndBalance35.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance35#mmSafekeepingPlace
+ * AccountAndBalance35.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification33#SafekeepingPlace
- * AccountIdentification33.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification33#mmSafekeepingPlace
+ * AccountIdentification33.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption116#SafekeepingPlace
- * CorporateActionOption116.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption116#mmSafekeepingPlace
+ * CorporateActionOption116.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance33#SafekeepingPlace
- * AccountAndBalance33.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance33#mmSafekeepingPlace
+ * AccountAndBalance33.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption49#SafekeepingPlace
- * SecuritiesOption49.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption49#mmSafekeepingPlace
+ * SecuritiesOption49.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption50#SafekeepingPlace
- * SecuritiesOption50.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption50#mmSafekeepingPlace
+ * SecuritiesOption50.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount54#SafekeepingPlace
- * InvestmentAccount54.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount54#mmSafekeepingPlace
+ * InvestmentAccount54.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount56#SafekeepingPlace
- * InvestmentAccount56.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount56#mmSafekeepingPlace
+ * InvestmentAccount56.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount57#SafekeepingPlace
- * InvestmentAccount57.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount57#mmSafekeepingPlace
+ * InvestmentAccount57.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral7#SafekeepingPlace
- * OtherCollateral7.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral7#mmSafekeepingPlace
+ * OtherCollateral7.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral6#SafekeepingPlace
- * OtherCollateral6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmSafekeepingPlace
+ * OtherCollateral6.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral6#SafekeepingPlace
- * SecuritiesCollateral6.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral6#mmSafekeepingPlace
+ * SecuritiesCollateral6.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral5#SafekeepingPlace
- * SecuritiesCollateral5.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral5#mmSafekeepingPlace
+ * SecuritiesCollateral5.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral5#SafekeepingPlace
- * OtherCollateral5.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral5#mmSafekeepingPlace
+ * OtherCollateral5.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral7#SafekeepingPlace
- * SecuritiesCollateral7.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral7#mmSafekeepingPlace
+ * SecuritiesCollateral7.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption121#SafekeepingPlace
- * CorporateActionOption121.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption121#mmSafekeepingPlace
+ * CorporateActionOption121.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance38#SafekeepingPlace
- * AccountAndBalance38.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance38#mmSafekeepingPlace
+ * AccountAndBalance38.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification35#SafekeepingPlace
- * AccountIdentification35.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification35#mmSafekeepingPlace
+ * AccountIdentification35.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance37#SafekeepingPlace
- * AccountAndBalance37.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance37#mmSafekeepingPlace
+ * AccountAndBalance37.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#SafekeepingPlace
- * SecuritiesOption55.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmSafekeepingPlace
+ * SecuritiesOption55.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice#Identification
- * SafekeepingPlaceFormat11Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice#mmIdentification
+ * SafekeepingPlaceFormat11Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice#TypeAndIdentification
- * SafekeepingPlaceFormat11Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat11Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption57#SafekeepingPlace
- * SecuritiesOption57.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption57#mmSafekeepingPlace
+ * SecuritiesOption57.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountAndBalance39#SafekeepingPlace
- * AccountAndBalance39.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountAndBalance39#mmSafekeepingPlace
+ * AccountAndBalance39.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice#Identification
- * SafekeepingPlaceFormat17Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice#mmIdentification
+ * SafekeepingPlaceFormat17Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice#TypeAndIdentification
- * SafekeepingPlaceFormat17Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat17Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails23#SafekeepingPlace
- * FinancialInstrumentDetails23.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails23#mmSafekeepingPlace
+ * FinancialInstrumentDetails23.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount47#SafekeepingPlace
- * QuantityAndAccount47.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount47#mmSafekeepingPlace
+ * QuantityAndAccount47.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails33.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails33.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation32#SafekeepingPlace
- * AggregateBalanceInformation32.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation32#mmSafekeepingPlace
+ * AggregateBalanceInformation32.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#SafekeepingPlace
- * QuantityAndAccount48.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount48#mmSafekeepingPlace
+ * QuantityAndAccount48.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount46#SafekeepingPlace
- * QuantityAndAccount46.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount46#mmSafekeepingPlace
+ * QuantityAndAccount46.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation33#SafekeepingPlace
- * AggregateBalanceInformation33.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation33#mmSafekeepingPlace
+ * AggregateBalanceInformation33.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount51#SafekeepingPlace
- * QuantityAndAccount51.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount51#mmSafekeepingPlace
+ * QuantityAndAccount51.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails87#SafekeepingPlace
- * TransactionDetails87.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails87#mmSafekeepingPlace
+ * TransactionDetails87.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount49#SafekeepingPlace
- * QuantityAndAccount49.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount49#mmSafekeepingPlace
+ * QuantityAndAccount49.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace31.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace31.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails91#SafekeepingPlace
- * TransactionDetails91.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails91#mmSafekeepingPlace
+ * TransactionDetails91.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount50#SafekeepingPlace
- * QuantityAndAccount50.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount50#mmSafekeepingPlace
+ * QuantityAndAccount50.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails90#SafekeepingPlace
- * TransactionDetails90.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails90#mmSafekeepingPlace
+ * TransactionDetails90.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace30.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace30.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount55#SafekeepingPlace
- * QuantityAndAccount55.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount55#mmSafekeepingPlace
+ * QuantityAndAccount55.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount54#SafekeepingPlace
- * QuantityAndAccount54.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount54#mmSafekeepingPlace
+ * QuantityAndAccount54.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails37#SafekeepingPlace
- * IntraPositionDetails37.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails37#mmSafekeepingPlace
+ * IntraPositionDetails37.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice#Identification
- * SafekeepingPlaceFormat26Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice#mmIdentification
+ * SafekeepingPlaceFormat26Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice#TypeAndIdentification
- * SafekeepingPlaceFormat26Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat26Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification40#SafekeepingPlace
- * AccountIdentification40.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification40#mmSafekeepingPlace
+ * AccountIdentification40.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption60#SafekeepingPlace
- * SecuritiesOption60.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption60#mmSafekeepingPlace
+ * SecuritiesOption60.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption59#SafekeepingPlace
- * SecuritiesOption59.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption59#mmSafekeepingPlace
+ * SecuritiesOption59.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#SafekeepingPlace
- * FinancialInstrumentDetails25.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25#mmSafekeepingPlace
+ * FinancialInstrumentDetails25.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails97#SafekeepingPlace
- * TransactionDetails97.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails97#mmSafekeepingPlace
+ * TransactionDetails97.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails35.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails35.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails96#SafekeepingPlace
- * TransactionDetails96.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails96#mmSafekeepingPlace
+ * TransactionDetails96.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails40#SafekeepingPlace
- * IntraPositionDetails40.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails40#mmSafekeepingPlace
+ * IntraPositionDetails40.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails95#SafekeepingPlace
- * TransactionDetails95.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails95#mmSafekeepingPlace
+ * TransactionDetails95.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#SafekeepingPlace
- * SecuritiesCollateral8.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#mmSafekeepingPlace
+ * SecuritiesCollateral8.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails27#SafekeepingPlace
- * FinancialInstrumentDetails27.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails27#mmSafekeepingPlace
+ * FinancialInstrumentDetails27.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification41#SafekeepingPlace
- * AccountIdentification41.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification41#mmSafekeepingPlace
+ * AccountIdentification41.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#SafekeepingPlace
- * SecuritiesFinancingTransactionDetails36.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmSafekeepingPlace
+ * SecuritiesFinancingTransactionDetails36.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption61#SafekeepingPlace
- * SecuritiesOption61.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption61#mmSafekeepingPlace
+ * SecuritiesOption61.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionDetails44#SafekeepingPlace
- * IntraPositionDetails44.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails44#mmSafekeepingPlace
+ * IntraPositionDetails44.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#SafekeepingPlace
- * SecuritiesOption63.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#mmSafekeepingPlace
+ * SecuritiesOption63.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails100#SafekeepingPlace
- * TransactionDetails100.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails100#mmSafekeepingPlace
+ * TransactionDetails100.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails99#SafekeepingPlace
- * TransactionDetails99.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails99#mmSafekeepingPlace
+ * TransactionDetails99.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionDetails98#SafekeepingPlace
- * TransactionDetails98.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails98#mmSafekeepingPlace
+ * TransactionDetails98.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount57#SafekeepingPlace
- * QuantityAndAccount57.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount57#mmSafekeepingPlace
+ * QuantityAndAccount57.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount58#SafekeepingPlace
- * QuantityAndAccount58.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount58#mmSafekeepingPlace
+ * QuantityAndAccount58.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount56#SafekeepingPlace
- * QuantityAndAccount56.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount56#mmSafekeepingPlace
+ * QuantityAndAccount56.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#SafekeepingPlace
- * QuantityAndAccount61.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount61#mmSafekeepingPlace
+ * QuantityAndAccount61.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount62#SafekeepingPlace
- * QuantityAndAccount62.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount62#mmSafekeepingPlace
+ * QuantityAndAccount62.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount59#SafekeepingPlace
- * QuantityAndAccount59.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount59#mmSafekeepingPlace
+ * QuantityAndAccount59.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityAndAccount60#SafekeepingPlace
- * QuantityAndAccount60.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount60#mmSafekeepingPlace
+ * QuantityAndAccount60.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice#Identification
- * SafekeepingPlaceFormat27Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice#mmIdentification
+ * SafekeepingPlaceFormat27Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice#TypeAndIdentification
- * SafekeepingPlaceFormat27Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice#mmTypeAndIdentification
+ * SafekeepingPlaceFormat27Choice.mmTypeAndIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -1186,8 +1186,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -1202,6 +1202,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SafekeepingPlace extends SecuritiesPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SafekeepingPlaceCode safekeepingPlaceType;
 	/**
 	 * Place of safekeeping.
 	 * <p>
@@ -1212,49 +1213,49 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SafekeepingPlaceCode
 	 * SafekeepingPlaceCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText3#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndText3.SafekeepingPlaceType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndAnyBICIdentifier1.SafekeepingPlaceType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText4#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndText4.SafekeepingPlaceType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText2#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndText2.SafekeepingPlaceType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText5#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndText5.SafekeepingPlaceType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndText1.SafekeepingPlaceType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText6#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndText6.SafekeepingPlaceType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText8#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndText8.SafekeepingPlaceType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText9#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndText9.SafekeepingPlaceType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText15#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndText15.SafekeepingPlaceType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText25#SafekeepingPlaceType
-	 * SafekeepingPlaceTypeAndText25.SafekeepingPlaceType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SafekeepingPlace
 	 * SafekeepingPlace}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText3#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndText3.mmSafekeepingPlaceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndAnyBICIdentifier1.mmSafekeepingPlaceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText4#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndText4.mmSafekeepingPlaceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText2#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndText2.mmSafekeepingPlaceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText5#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndText5.mmSafekeepingPlaceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndText1.mmSafekeepingPlaceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText6#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndText6.mmSafekeepingPlaceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText8#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndText8.mmSafekeepingPlaceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText9#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndText9.mmSafekeepingPlaceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText15#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndText15.mmSafekeepingPlaceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText25#mmSafekeepingPlaceType
+	 * SafekeepingPlaceTypeAndText25.mmSafekeepingPlaceType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1266,24 +1267,25 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 	 * definition} = "Place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SafekeepingPlaceType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSafekeepingPlaceType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingPlaceTypeAndText3.SafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.SafekeepingPlaceType,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText4.SafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText2.SafekeepingPlaceType,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText5.SafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1.SafekeepingPlaceType,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText6.SafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText8.SafekeepingPlaceType,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText9.SafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText15.SafekeepingPlaceType,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText25.SafekeepingPlaceType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingPlaceTypeAndText3.mmSafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.mmSafekeepingPlaceType,
+					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText4.mmSafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText2.mmSafekeepingPlaceType,
+					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText5.mmSafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1.mmSafekeepingPlaceType,
+					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText6.mmSafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText8.mmSafekeepingPlaceType,
+					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText9.mmSafekeepingPlaceType, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText15.mmSafekeepingPlaceType,
+					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText25.mmSafekeepingPlaceType);
 			elementContext_lazy = () -> SafekeepingPlace.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SafekeepingPlaceType";
 			definition = "Place of safekeeping.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SafekeepingPlaceCode.mmObject();
 		}
 	};
+	protected Country country;
 	/**
 	 * Country where the financial instruments are/will be safekept.
 	 * <p>
@@ -1292,60 +1294,60 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Country#CountryForSafekeepingPlace
-	 * Country.CountryForSafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCountryForSafekeepingPlace
+	 * Country.mmCountryForSafekeepingPlace}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Country Country}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice#Country
-	 * SafekeepingPlaceFormat3Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice#Country
-	 * SafekeepingPlaceFormat4Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice#Country
-	 * SafekeepingPlaceFormat2Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice#Country
-	 * SafekeepingPlaceFormat5Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#Country
-	 * SafekeepingPlaceFormat1Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice#Country
-	 * SafekeepingPlaceFormat7Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice#Country
-	 * SafekeepingPlaceFormat8Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice#Country
-	 * SafekeepingPlaceFormat10Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice#Country
-	 * SafekeepingPlaceFormat11Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice#Country
-	 * SafekeepingPlaceFormat17Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice#Country
-	 * SafekeepingPlaceFormat26Choice.Country}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice#Country
-	 * SafekeepingPlaceFormat27Choice.Country}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SafekeepingPlace
 	 * SafekeepingPlace}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice#mmCountry
+	 * SafekeepingPlaceFormat3Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice#mmCountry
+	 * SafekeepingPlaceFormat4Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice#mmCountry
+	 * SafekeepingPlaceFormat2Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice#mmCountry
+	 * SafekeepingPlaceFormat5Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#mmCountry
+	 * SafekeepingPlaceFormat1Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice#mmCountry
+	 * SafekeepingPlaceFormat7Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice#mmCountry
+	 * SafekeepingPlaceFormat8Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice#mmCountry
+	 * SafekeepingPlaceFormat10Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice#mmCountry
+	 * SafekeepingPlaceFormat11Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice#mmCountry
+	 * SafekeepingPlaceFormat17Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice#mmCountry
+	 * SafekeepingPlaceFormat26Choice.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice#mmCountry
+	 * SafekeepingPlaceFormat27Choice.mmCountry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1358,25 +1360,27 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 	 * "Country where the financial instruments are/will be safekept."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Country = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCountry = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice.Country, com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice.Country,
-					com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice.Country, com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice.Country, com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.Country,
-					com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice.Country, com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.Country, com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.Country,
-					com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice.Country, com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.Country, com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice.Country,
-					com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice.Country);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice.mmCountry, com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice.mmCountry,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice.mmCountry, com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice.mmCountry,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.mmCountry, com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice.mmCountry,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.mmCountry, com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmCountry,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice.mmCountry, com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.mmCountry,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice.mmCountry, com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice.mmCountry);
 			elementContext_lazy = () -> SafekeepingPlace.mmObject();
 			isDerived = true;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Country where the financial instruments are/will be safekept.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Country.CountryForSafekeepingPlace;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmCountryForSafekeepingPlace;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 		}
 	};
+	protected SecuritiesAccount relatedSecuritiesAccount;
 	/**
 	 * Account at the safekeeping place where financial instruments are
 	 * safekept.
@@ -1386,8 +1390,8 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#SafekeepingPlace
-	 * SecuritiesAccount.SafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSafekeepingPlace
+	 * SecuritiesAccount.mmSafekeepingPlace}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1413,20 +1417,21 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedSecuritiesAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedSecuritiesAccount = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SafekeepingPlace.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesAccount";
 			definition = "Account at the safekeeping place where financial instruments are safekept.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.SafekeepingPlace;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSafekeepingPlace;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 		}
 	};
+	protected SecuritiesBalance securitiesBalance;
 	/**
 	 * Balance which is held at a safekeeping place.
 	 * <p>
@@ -1435,8 +1440,8 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SafekeepingPlace
-	 * SecuritiesBalance.SafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSafekeepingPlace
+	 * SecuritiesBalance.mmSafekeepingPlace}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1460,20 +1465,21 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 	 * definition} = "Balance which is held at a safekeeping place."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesBalance = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SafekeepingPlace.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBalance";
 			definition = "Balance which is held at a safekeeping place.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SafekeepingPlace;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSafekeepingPlace;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 		}
 	};
+	protected SecuritiesSettlement securitiesSettlement;
 	/**
 	 * Specifies the settlement operation which uses the safekeeping place.
 	 * <p>
@@ -1482,8 +1488,8 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#RequestedSafekeepingPlace
-	 * SecuritiesSettlement.RequestedSafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRequestedSafekeepingPlace
+	 * SecuritiesSettlement.mmRequestedSafekeepingPlace}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1509,174 +1515,179 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 	 * "Specifies the settlement operation which uses the safekeeping place."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SafekeepingPlace.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesSettlement";
 			definition = "Specifies the settlement operation which uses the safekeeping place.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.RequestedSafekeepingPlace;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmRequestedSafekeepingPlace;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlace";
 				definition = "Organisation used as the safekeeping place for the securities.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.CountryForSafekeepingPlace, com.tools20022.repository.entity.SecuritiesAccount.SafekeepingPlace,
-						com.tools20022.repository.entity.SecuritiesSettlement.RequestedSafekeepingPlace, com.tools20022.repository.entity.SecuritiesBalance.SafekeepingPlace);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount10.SafekeepingPlace, com.tools20022.repository.msg.InvestmentAccount22.SafekeepingPlace,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice.Identification, com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice.TypeAndIdentification,
-						com.tools20022.repository.msg.QuantityAndAccount29.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount30.SafekeepingPlace,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice.Identification, com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice.TypeAndIdentification,
-						com.tools20022.repository.msg.QuantityAndAccount32.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount33.SafekeepingPlace,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice.Identification, com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice.TypeAndIdentification,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice.Identification, com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice.TypeAndIdentification,
-						com.tools20022.repository.msg.AccountAndBalance2.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance5.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance10.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance12.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance17.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance20.SafekeepingPlace,
-						com.tools20022.repository.msg.CorporateActionOption9.SafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption18.SafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption22.SafekeepingPlace,
-						com.tools20022.repository.msg.CorporateActionOption27.SafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption26.SafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption41.SafekeepingPlace,
-						com.tools20022.repository.msg.CorporateActionOption50.SafekeepingPlace, com.tools20022.repository.msg.AccountIdentification25.SafekeepingPlace, com.tools20022.repository.msg.AccountIdentification29.SafekeepingPlace,
-						com.tools20022.repository.msg.CorporateActionOption29.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance3.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption3.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance6.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption8.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance11.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesOption18.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance13.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption20.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance16.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption26.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance19.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesOption31.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance22.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption35.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance23.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption36.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance1.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesOption4.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance7.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption10.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance9.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption13.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance14.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesOption17.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance15.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption24.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance18.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption29.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance21.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesOption38.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance24.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption39.SafekeepingPlace,
-						com.tools20022.repository.msg.IntraPositionDetails3.SafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails6.SafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails17.SafekeepingPlace,
-						com.tools20022.repository.msg.IntraPositionDetails18.SafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails20.SafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails24.SafekeepingPlace,
-						com.tools20022.repository.msg.IntraPositionDetails28.SafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails30.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace7.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation8.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace10.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation11.SafekeepingPlace,
-						com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.Identification, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation2.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation3.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace12.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation13.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace14.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation15.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace16.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation17.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace18.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation19.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace21.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation22.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace22.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation23.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace8.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation9.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace9.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation10.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation1.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation4.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace11.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation12.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace13.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation14.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace15.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation16.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace17.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation18.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace20.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation21.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace23.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation24.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount6.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount11.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount18.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount19.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount1.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount5.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount17.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount24.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount25.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount34.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount2.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount12.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount15.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount20.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount28.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount37.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails5.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails9.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails22.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails23.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails36.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails47.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails53.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails58.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails7.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails8.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails16.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails17.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails26.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails25.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails27.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails33.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails39.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails50.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails56.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails59.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails6.SafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails2.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails18.SafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails3.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails24.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDetails5.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails34.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDetails8.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails37.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDetails9.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails48.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDetails11.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails57.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDetails13.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails60.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDetails16.SafekeepingPlace, com.tools20022.repository.msg.HoldingBalance2.SafekeepingPlace, com.tools20022.repository.msg.HoldingBalance3.SafekeepingPlace,
-						com.tools20022.repository.msg.HoldingBalance6.SafekeepingPlace, com.tools20022.repository.msg.HoldingBalance4.SafekeepingPlace, com.tools20022.repository.msg.HoldingBalance5.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDescription3.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount7.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount16.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount3.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount13.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount8.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount14.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount10.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount21.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount4.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount22.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount27.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount36.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount9.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount23.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount26.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount35.SafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails10.SafekeepingPlace,
-						com.tools20022.repository.msg.IntraPositionDetails14.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails51.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace19.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation20.SafekeepingPlace,
-						com.tools20022.repository.msg.CorporateActionOption8.SafekeepingPlace, com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.TypeAndIdentification,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.Type, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation6.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace5.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation7.SafekeepingPlace, com.tools20022.repository.msg.InvestmentAccount40.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails61.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDetails17.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails62.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails63.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance26.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesOption42.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance25.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption40.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance32.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance29.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption48.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesOption45.SafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails18.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails66.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails67.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails68.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails70.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails69.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation26.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation25.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25.SafekeepingPlace, com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice.Identification,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice.TypeAndIdentification, com.tools20022.repository.msg.SecuritiesCollateral2.SafekeepingPlace,
-						com.tools20022.repository.msg.OtherCollateral2.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesCollateral3.SafekeepingPlace, com.tools20022.repository.msg.OtherCollateral3.SafekeepingPlace,
-						com.tools20022.repository.msg.HoldingBalance8.SafekeepingPlace, com.tools20022.repository.msg.HoldingBalance7.SafekeepingPlace, com.tools20022.repository.msg.OtherCollateral4.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesCollateral4.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation28.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails71.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation27.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails72.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount39.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation30.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount41.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDetails20.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount40.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount42.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount38.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails79.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation31.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount43.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails75.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails78.SafekeepingPlace, com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.Identification,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.TypeAndIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.Identification,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.TypeAndIdentification, com.tools20022.repository.msg.QuantityAndAccount45.SafekeepingPlace,
-						com.tools20022.repository.msg.IntraPositionDetails32.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount44.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance34.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance35.SafekeepingPlace, com.tools20022.repository.msg.AccountIdentification33.SafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption116.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance33.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption49.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption50.SafekeepingPlace,
-						com.tools20022.repository.msg.InvestmentAccount54.SafekeepingPlace, com.tools20022.repository.msg.InvestmentAccount56.SafekeepingPlace, com.tools20022.repository.msg.InvestmentAccount57.SafekeepingPlace,
-						com.tools20022.repository.msg.OtherCollateral7.SafekeepingPlace, com.tools20022.repository.msg.OtherCollateral6.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesCollateral6.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesCollateral5.SafekeepingPlace, com.tools20022.repository.msg.OtherCollateral5.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesCollateral7.SafekeepingPlace,
-						com.tools20022.repository.msg.CorporateActionOption121.SafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance38.SafekeepingPlace, com.tools20022.repository.msg.AccountIdentification35.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance37.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption55.SafekeepingPlace, com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice.Identification,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice.TypeAndIdentification, com.tools20022.repository.msg.SecuritiesOption57.SafekeepingPlace,
-						com.tools20022.repository.msg.AccountAndBalance39.SafekeepingPlace, com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.Identification,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.TypeAndIdentification, com.tools20022.repository.msg.FinancialInstrumentDetails23.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount47.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation32.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount48.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount46.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation33.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount51.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails87.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount49.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails91.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount50.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails90.SafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount55.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount54.SafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails37.SafekeepingPlace,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice.Identification, com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice.TypeAndIdentification,
-						com.tools20022.repository.msg.AccountIdentification40.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption60.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption59.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDetails25.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails97.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails96.SafekeepingPlace,
-						com.tools20022.repository.msg.IntraPositionDetails40.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails95.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesCollateral8.SafekeepingPlace,
-						com.tools20022.repository.msg.FinancialInstrumentDetails27.SafekeepingPlace, com.tools20022.repository.msg.AccountIdentification41.SafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption61.SafekeepingPlace,
-						com.tools20022.repository.msg.IntraPositionDetails44.SafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption63.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails100.SafekeepingPlace,
-						com.tools20022.repository.msg.TransactionDetails99.SafekeepingPlace, com.tools20022.repository.msg.TransactionDetails98.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount57.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount58.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount56.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount61.SafekeepingPlace,
-						com.tools20022.repository.msg.QuantityAndAccount62.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount59.SafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount60.SafekeepingPlace,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice.Identification, com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice.TypeAndIdentification);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmCountryForSafekeepingPlace, com.tools20022.repository.entity.SecuritiesAccount.mmSafekeepingPlace,
+						com.tools20022.repository.entity.SecuritiesSettlement.mmRequestedSafekeepingPlace, com.tools20022.repository.entity.SecuritiesBalance.mmSafekeepingPlace);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount10.mmSafekeepingPlace, com.tools20022.repository.msg.InvestmentAccount22.mmSafekeepingPlace,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice.mmTypeAndIdentification,
+						com.tools20022.repository.msg.QuantityAndAccount29.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount30.mmSafekeepingPlace,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice.mmTypeAndIdentification,
+						com.tools20022.repository.msg.QuantityAndAccount32.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount33.mmSafekeepingPlace,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice.mmTypeAndIdentification,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice.mmTypeAndIdentification,
+						com.tools20022.repository.msg.AccountAndBalance2.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance5.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance10.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance12.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance17.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance20.mmSafekeepingPlace,
+						com.tools20022.repository.msg.CorporateActionOption9.mmSafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption18.mmSafekeepingPlace,
+						com.tools20022.repository.msg.CorporateActionOption22.mmSafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption27.mmSafekeepingPlace,
+						com.tools20022.repository.msg.CorporateActionOption26.mmSafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption41.mmSafekeepingPlace,
+						com.tools20022.repository.msg.CorporateActionOption50.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification25.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountIdentification29.mmSafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption29.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance3.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption3.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance6.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesOption8.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance11.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption18.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance13.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption20.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance16.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesOption26.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance19.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption31.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance22.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption35.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance23.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesOption36.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance1.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption4.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance7.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption10.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance9.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesOption13.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance14.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption17.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance15.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption24.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance18.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesOption29.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance21.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption38.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance24.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption39.mmSafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails3.mmSafekeepingPlace,
+						com.tools20022.repository.msg.IntraPositionDetails6.mmSafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails17.mmSafekeepingPlace,
+						com.tools20022.repository.msg.IntraPositionDetails18.mmSafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails20.mmSafekeepingPlace,
+						com.tools20022.repository.msg.IntraPositionDetails24.mmSafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails28.mmSafekeepingPlace,
+						com.tools20022.repository.msg.IntraPositionDetails30.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace7.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalanceInformation8.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace10.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalanceInformation11.mmSafekeepingPlace, com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmIdentification,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation2.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation3.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace12.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation13.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace14.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation15.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace16.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation17.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace18.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation19.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace21.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation22.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace22.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation23.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace8.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation9.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace9.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation10.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation1.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation4.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace11.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation12.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace13.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation14.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace15.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation16.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace17.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation18.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace20.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation21.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace23.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation24.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount6.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount11.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount18.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount19.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount1.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount5.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount17.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount24.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount25.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount34.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount2.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount12.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount15.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount20.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount28.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount37.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails5.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails9.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails22.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails23.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails36.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails47.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails53.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails58.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails7.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails8.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails16.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails17.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails26.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails25.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails27.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails33.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails39.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails50.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails56.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails59.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails6.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails2.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails18.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails3.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails24.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails5.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails34.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails8.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails37.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails9.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails48.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails11.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails57.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails13.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails60.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails16.mmSafekeepingPlace, com.tools20022.repository.msg.HoldingBalance2.mmSafekeepingPlace,
+						com.tools20022.repository.msg.HoldingBalance3.mmSafekeepingPlace, com.tools20022.repository.msg.HoldingBalance6.mmSafekeepingPlace, com.tools20022.repository.msg.HoldingBalance4.mmSafekeepingPlace,
+						com.tools20022.repository.msg.HoldingBalance5.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDescription3.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount7.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount16.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount3.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount13.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount8.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount14.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount10.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount21.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount4.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount22.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount27.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount36.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount9.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount23.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount26.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount35.mmSafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails10.mmSafekeepingPlace,
+						com.tools20022.repository.msg.IntraPositionDetails14.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails51.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace19.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation20.mmSafekeepingPlace,
+						com.tools20022.repository.msg.CorporateActionOption8.mmSafekeepingPlace, com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.mmTypeAndIdentification,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.mmType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalanceInformation6.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace5.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalanceInformation7.mmSafekeepingPlace, com.tools20022.repository.msg.InvestmentAccount40.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails61.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails17.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails62.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails63.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance26.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption42.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance25.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption40.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance32.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance29.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption48.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption45.mmSafekeepingPlace,
+						com.tools20022.repository.msg.FinancialInstrumentDetails18.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails66.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails67.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails68.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails70.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails69.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation26.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalanceInformation25.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25.mmSafekeepingPlace, com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice.mmIdentification,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice.mmTypeAndIdentification, com.tools20022.repository.msg.SecuritiesCollateral2.mmSafekeepingPlace,
+						com.tools20022.repository.msg.OtherCollateral2.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesCollateral3.mmSafekeepingPlace, com.tools20022.repository.msg.OtherCollateral3.mmSafekeepingPlace,
+						com.tools20022.repository.msg.HoldingBalance8.mmSafekeepingPlace, com.tools20022.repository.msg.HoldingBalance7.mmSafekeepingPlace, com.tools20022.repository.msg.OtherCollateral4.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesCollateral4.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation28.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails71.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalanceInformation27.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails72.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount39.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation30.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount41.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails20.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount40.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount42.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount38.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails79.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalanceInformation31.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount43.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails75.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails78.mmSafekeepingPlace,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.mmTypeAndIdentification,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmTypeAndIdentification,
+						com.tools20022.repository.msg.QuantityAndAccount45.mmSafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails32.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount44.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance34.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance35.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification33.mmSafekeepingPlace,
+						com.tools20022.repository.msg.CorporateActionOption116.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance33.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption49.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesOption50.mmSafekeepingPlace, com.tools20022.repository.msg.InvestmentAccount54.mmSafekeepingPlace, com.tools20022.repository.msg.InvestmentAccount56.mmSafekeepingPlace,
+						com.tools20022.repository.msg.InvestmentAccount57.mmSafekeepingPlace, com.tools20022.repository.msg.OtherCollateral7.mmSafekeepingPlace, com.tools20022.repository.msg.OtherCollateral6.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesCollateral6.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesCollateral5.mmSafekeepingPlace, com.tools20022.repository.msg.OtherCollateral5.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesCollateral7.mmSafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption121.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance38.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification35.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance37.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesOption55.mmSafekeepingPlace, com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice.mmIdentification,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice.mmTypeAndIdentification, com.tools20022.repository.msg.SecuritiesOption57.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AccountAndBalance39.mmSafekeepingPlace, com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.mmIdentification,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.mmTypeAndIdentification, com.tools20022.repository.msg.FinancialInstrumentDetails23.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount47.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalanceInformation32.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount48.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount46.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation33.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount51.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails87.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount49.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails91.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount50.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails90.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount55.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount54.mmSafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails37.mmSafekeepingPlace,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice.mmTypeAndIdentification,
+						com.tools20022.repository.msg.AccountIdentification40.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption60.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption59.mmSafekeepingPlace,
+						com.tools20022.repository.msg.FinancialInstrumentDetails25.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails97.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails96.mmSafekeepingPlace,
+						com.tools20022.repository.msg.IntraPositionDetails40.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails95.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesCollateral8.mmSafekeepingPlace,
+						com.tools20022.repository.msg.FinancialInstrumentDetails27.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification41.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption61.mmSafekeepingPlace,
+						com.tools20022.repository.msg.IntraPositionDetails44.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption63.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails100.mmSafekeepingPlace,
+						com.tools20022.repository.msg.TransactionDetails99.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails98.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount57.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount58.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount56.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount61.mmSafekeepingPlace,
+						com.tools20022.repository.msg.QuantityAndAccount62.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount59.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount60.mmSafekeepingPlace,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice.mmTypeAndIdentification);
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
-				element_lazy = () -> Arrays
-						.asList(com.tools20022.repository.entity.SafekeepingPlace.SafekeepingPlaceType, com.tools20022.repository.entity.SafekeepingPlace.Country, com.tools20022.repository.entity.SafekeepingPlace.RelatedSecuritiesAccount,
-								com.tools20022.repository.entity.SafekeepingPlace.SecuritiesBalance, com.tools20022.repository.entity.SafekeepingPlace.SecuritiesSettlement);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SafekeepingPlace.mmSafekeepingPlaceType, com.tools20022.repository.entity.SafekeepingPlace.mmCountry,
+						com.tools20022.repository.entity.SafekeepingPlace.mmRelatedSecuritiesAccount, com.tools20022.repository.entity.SafekeepingPlace.mmSecuritiesBalance,
+						com.tools20022.repository.entity.SafekeepingPlace.mmSecuritiesSettlement);
 				derivationComponent_lazy = () -> Arrays.asList(SafekeepingPlaceTypeAndText3.mmObject(), SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject(), SafekeepingPlaceFormat3Choice.mmObject(), SafekeepingPlaceTypeAndText4.mmObject(),
 						SafekeepingPlaceFormat4Choice.mmObject(), SafekeepingPlaceTypeAndText2.mmObject(), SafekeepingPlaceFormat2Choice.mmObject(), SafekeepingPlaceTypeAndText5.mmObject(), SafekeepingPlaceFormat5Choice.mmObject(),
 						SafekeepingPlaceAsCodeAndPartyIdentification.mmObject(), SafekeepingPlaceFormatChoice.mmObject(), SafekeepingPlaceTypeAndText1.mmObject(), SafekeepingPlaceFormat1Choice.mmObject(),
@@ -1686,5 +1697,45 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SafekeepingPlaceCode getSafekeepingPlaceType() {
+		return safekeepingPlaceType;
+	}
+
+	public void setSafekeepingPlaceType(SafekeepingPlaceCode safekeepingPlaceType) {
+		this.safekeepingPlaceType = safekeepingPlaceType;
+	}
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(com.tools20022.repository.entity.Country country) {
+		this.country = country;
+	}
+
+	public SecuritiesAccount getRelatedSecuritiesAccount() {
+		return relatedSecuritiesAccount;
+	}
+
+	public void setRelatedSecuritiesAccount(com.tools20022.repository.entity.SecuritiesAccount relatedSecuritiesAccount) {
+		this.relatedSecuritiesAccount = relatedSecuritiesAccount;
+	}
+
+	public SecuritiesBalance getSecuritiesBalance() {
+		return securitiesBalance;
+	}
+
+	public void setSecuritiesBalance(com.tools20022.repository.entity.SecuritiesBalance securitiesBalance) {
+		this.securitiesBalance = securitiesBalance;
+	}
+
+	public SecuritiesSettlement getSecuritiesSettlement() {
+		return securitiesSettlement;
+	}
+
+	public void setSecuritiesSettlement(com.tools20022.repository.entity.SecuritiesSettlement securitiesSettlement) {
+		this.securitiesSettlement = securitiesSettlement;
 	}
 }

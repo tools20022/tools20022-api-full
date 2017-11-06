@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile4#RetrievalMode
- * ATMCustomerProfile4.RetrievalMode}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile4#mmRetrievalMode
+ * ATMCustomerProfile4.mmRetrievalMode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile4#ProfileReference
- * ATMCustomerProfile4.ProfileReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile4#mmProfileReference
+ * ATMCustomerProfile4.mmProfileReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile4#CustomerIdentification
- * ATMCustomerProfile4.CustomerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile4#mmCustomerIdentification
+ * ATMCustomerProfile4.mmCustomerIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCustomerProfile4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMCustomerProfile1Code retrievalMode;
 	/**
 	 * Describes the main way customer information was collected to build up the
 	 * customer menu and to provide the service.
@@ -93,7 +94,7 @@ public class ATMCustomerProfile4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RetrievalMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRetrievalMode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCustomerProfile4.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class ATMCustomerProfile4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetrievalMode";
 			definition = "Describes the main way customer information was collected to build up the customer menu and to provide the service.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMCustomerProfile1Code.mmObject();
 		}
 	};
+	protected Max35Text profileReference;
 	/**
 	 * Reference of the customer profile.
 	 * <p>
@@ -133,7 +135,7 @@ public class ATMCustomerProfile4 {
 	 * definition} = "Reference of the customer profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProfileReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProfileReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCustomerProfile4.mmObject();
 			isDerived = false;
@@ -141,11 +143,12 @@ public class ATMCustomerProfile4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileReference";
 			definition = "Reference of the customer profile.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text customerIdentification;
 	/**
 	 * Identification of the customer for the bank.
 	 * <p>
@@ -173,7 +176,7 @@ public class ATMCustomerProfile4 {
 	 * definition} = "Identification of the customer for the bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCustomerProfile4.mmObject();
 			isDerived = false;
@@ -181,8 +184,8 @@ public class ATMCustomerProfile4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerIdentification";
 			definition = "Identification of the customer for the bank.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -190,14 +193,38 @@ public class ATMCustomerProfile4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile4.RetrievalMode, com.tools20022.repository.msg.ATMCustomerProfile4.ProfileReference,
-						com.tools20022.repository.msg.ATMCustomerProfile4.CustomerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile4.mmRetrievalMode, com.tools20022.repository.msg.ATMCustomerProfile4.mmProfileReference,
+						com.tools20022.repository.msg.ATMCustomerProfile4.mmCustomerIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile4";
 				definition = "Profile of the customer selected by an ATM.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMCustomerProfile1Code getRetrievalMode() {
+		return retrievalMode;
+	}
+
+	public void setRetrievalMode(ATMCustomerProfile1Code retrievalMode) {
+		this.retrievalMode = retrievalMode;
+	}
+
+	public Max35Text getProfileReference() {
+		return profileReference;
+	}
+
+	public void setProfileReference(Max35Text profileReference) {
+		this.profileReference = profileReference;
+	}
+
+	public Max35Text getCustomerIdentification() {
+		return customerIdentification;
+	}
+
+	public void setCustomerIdentification(Max35Text customerIdentification) {
+		this.customerIdentification = customerIdentification;
 	}
 }

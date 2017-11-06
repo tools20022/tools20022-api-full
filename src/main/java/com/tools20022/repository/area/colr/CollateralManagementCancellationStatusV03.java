@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.CollateralManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -73,27 +74,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#TransactionIdentification
- * CollateralManagementCancellationStatusV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#mmTransactionIdentification
+ * CollateralManagementCancellationStatusV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#Reference
- * CollateralManagementCancellationStatusV03.Reference}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#mmReference
+ * CollateralManagementCancellationStatusV03.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#Obligation
- * CollateralManagementCancellationStatusV03.Obligation}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#mmObligation
+ * CollateralManagementCancellationStatusV03.mmObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#CancellationStatus
- * CollateralManagementCancellationStatusV03.CancellationStatus}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#mmCancellationStatus
+ * CollateralManagementCancellationStatusV03.mmCancellationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#SupplementaryData
- * CollateralManagementCancellationStatusV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#mmSupplementaryData
+ * CollateralManagementCancellationStatusV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03#identifier
- * CollateralManagementCancellationStatusV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code colr.006.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralManagementCancellationStatusV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as know by the instructing
 	 * party.
@@ -144,24 +144,25 @@ public class CollateralManagementCancellationStatusV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#TransactionIdentification
-	 * CollateralManagementCancellationStatusV04.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#mmTransactionIdentification
+	 * CollateralManagementCancellationStatusV04.mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.TransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.mmTransactionIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Reference16 reference;
 	/**
 	 * Provides reference to the previous received message.
 	 * <p>
@@ -186,24 +187,25 @@ public class CollateralManagementCancellationStatusV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#Reference
-	 * CollateralManagementCancellationStatusV04.Reference}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#mmReference
+	 * CollateralManagementCancellationStatusV04.mmReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Provides reference to the previous received message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.Reference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.mmReference);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Reference16.mmObject();
 		}
 	};
+	protected Obligation3 obligation;
 	/**
 	 * Provides information like the identification of the party or parties
 	 * associated with the collateral agreement, the exposure type and the
@@ -232,24 +234,25 @@ public class CollateralManagementCancellationStatusV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#Obligation
-	 * CollateralManagementCancellationStatusV04.Obligation}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#mmObligation
+	 * CollateralManagementCancellationStatusV04.mmObligation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Obligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.Obligation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.mmObligation);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Obligation3.mmObject();
 		}
 	};
+	protected CollateralCancellationStatus1 cancellationStatus;
 	/**
 	 * Provides status details of the collateral cancellation message.
 	 * <p>
@@ -276,24 +279,25 @@ public class CollateralManagementCancellationStatusV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#CancellationStatus
-	 * CollateralManagementCancellationStatusV04.CancellationStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#mmCancellationStatus
+	 * CollateralManagementCancellationStatusV04.mmCancellationStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatus";
 			definition = "Provides status details of the collateral cancellation message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.CancellationStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.mmCancellationStatus);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CollateralCancellationStatus1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -322,48 +326,21 @@ public class CollateralManagementCancellationStatusV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#SupplementaryData
-	 * CollateralManagementCancellationStatusV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04#mmSupplementaryData
+	 * CollateralManagementCancellationStatusV04.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "colr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "006"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "colr";
-			messageFunctionality = "006";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -378,12 +355,59 @@ public class CollateralManagementCancellationStatusV03 {
 				rootElement = "Document";
 				xmlTag = "CollMgmtCxlSts";
 				businessArea_lazy = () -> CollateralManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.TransactionIdentification,
-						com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.Reference, com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.Obligation,
-						com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.CancellationStatus, com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.mmTransactionIdentification,
+						com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.mmReference, com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.mmObligation,
+						com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.mmCancellationStatus, com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "colr";
+						messageFunctionality = "006";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Reference16 getReference() {
+		return reference;
+	}
+
+	public void setReference(Reference16 reference) {
+		this.reference = reference;
+	}
+
+	public Obligation3 getObligation() {
+		return obligation;
+	}
+
+	public void setObligation(Obligation3 obligation) {
+		this.obligation = obligation;
+	}
+
+	public CollateralCancellationStatus1 getCancellationStatus() {
+		return cancellationStatus;
+	}
+
+	public void setCancellationStatus(CollateralCancellationStatus1 cancellationStatus) {
+		this.cancellationStatus = cancellationStatus;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

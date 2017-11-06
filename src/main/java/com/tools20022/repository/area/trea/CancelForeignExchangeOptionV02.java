@@ -61,24 +61,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#TradeInformation
- * CancelForeignExchangeOptionV02.TradeInformation}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#mmTradeInformation
+ * CancelForeignExchangeOptionV02.mmTradeInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#TradingSideIdentification
- * CancelForeignExchangeOptionV02.TradingSideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#mmTradingSideIdentification
+ * CancelForeignExchangeOptionV02.mmTradingSideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#CounterpartySideIdentification
- * CancelForeignExchangeOptionV02.CounterpartySideIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#mmCounterpartySideIdentification
+ * CancelForeignExchangeOptionV02.mmCounterpartySideIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#Option
- * CancelForeignExchangeOptionV02.Option}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#mmOption
+ * CancelForeignExchangeOptionV02.mmOption}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#identifier
- * CancelForeignExchangeOptionV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code trea.011.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancelForeignExchangeOptionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TradeAgreement2 tradeInformation;
 	/**
 	 * Provides reference and date of the foreign exchange option trade which is
 	 * cancelled.
@@ -119,17 +118,18 @@ public class CancelForeignExchangeOptionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradeInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradeInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeInformation";
 			definition = "Provides reference and date of the foreign exchange option trade which is cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TradeAgreement2.mmObject();
 		}
 	};
+	protected TradePartyIdentification4 tradingSideIdentification;
 	/**
 	 * Specifies the trading side of the currency option trade which is
 	 * cancelled.
@@ -156,17 +156,18 @@ public class CancelForeignExchangeOptionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TradingSideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
 			definition = "Specifies the trading side of the currency option trade which is cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
 	};
+	protected TradePartyIdentification4 counterpartySideIdentification;
 	/**
 	 * Specifies the counterparty of the currency option trade which is
 	 * cancelled.
@@ -193,17 +194,18 @@ public class CancelForeignExchangeOptionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CounterpartySideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
 			definition = "Specifies the counterparty of the currency option trade which is cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
 	};
+	protected Option3 option;
 	/**
 	 * Specifies the parameters of the currency option which is bought by the
 	 * trading side.
@@ -229,42 +231,15 @@ public class CancelForeignExchangeOptionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Option = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOption = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Optn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
 			definition = "Specifies the parameters of the currency option which is bought by the trading side.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Option3.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "trea"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "trea";
-			messageFunctionality = "011";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -278,12 +253,51 @@ public class CancelForeignExchangeOptionV02 {
 				rootElement = "Document";
 				xmlTag = "CclFXOptnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.TradeInformation,
-						com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.TradingSideIdentification, com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.CounterpartySideIdentification,
-						com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.Option);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.mmTradeInformation,
+						com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.mmTradingSideIdentification, com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.mmCounterpartySideIdentification,
+						com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.mmOption);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "trea";
+						messageFunctionality = "011";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeAgreement2 getTradeInformation() {
+		return tradeInformation;
+	}
+
+	public void setTradeInformation(TradeAgreement2 tradeInformation) {
+		this.tradeInformation = tradeInformation;
+	}
+
+	public TradePartyIdentification4 getTradingSideIdentification() {
+		return tradingSideIdentification;
+	}
+
+	public void setTradingSideIdentification(TradePartyIdentification4 tradingSideIdentification) {
+		this.tradingSideIdentification = tradingSideIdentification;
+	}
+
+	public TradePartyIdentification4 getCounterpartySideIdentification() {
+		return counterpartySideIdentification;
+	}
+
+	public void setCounterpartySideIdentification(TradePartyIdentification4 counterpartySideIdentification) {
+		this.counterpartySideIdentification = counterpartySideIdentification;
+	}
+
+	public Option3 getOption() {
+		return option;
+	}
+
+	public void setOption(Option3 option) {
+		this.option = option;
 	}
 }

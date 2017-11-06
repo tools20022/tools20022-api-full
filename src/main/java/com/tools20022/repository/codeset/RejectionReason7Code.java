@@ -34,54 +34,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#EventAlreadyDeactivated
- * RejectionReason7Code.EventAlreadyDeactivated}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmEventAlreadyDeactivated
+ * RejectionReason7Code.mmEventAlreadyDeactivated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#FailedValidation
- * RejectionReason7Code.FailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmFailedValidation
+ * RejectionReason7Code.mmFailedValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#NoPendingDeactivationInstruction
- * RejectionReason7Code.NoPendingDeactivationInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmNoPendingDeactivationInstruction
+ * RejectionReason7Code.mmNoPendingDeactivationInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#InvalidIdentification
- * RejectionReason7Code.InvalidIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmInvalidIdentification
+ * RejectionReason7Code.mmInvalidIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#InvalidCAIdentification
- * RejectionReason7Code.InvalidCAIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmInvalidCAIdentification
+ * RejectionReason7Code.mmInvalidCAIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#InvalidAgent
- * RejectionReason7Code.InvalidAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmInvalidAgent
+ * RejectionReason7Code.mmInvalidAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#SameIdentification
- * RejectionReason7Code.SameIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmSameIdentification
+ * RejectionReason7Code.mmSameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#OptionAlreadyDeactivated
- * RejectionReason7Code.OptionAlreadyDeactivated}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmOptionAlreadyDeactivated
+ * RejectionReason7Code.mmOptionAlreadyDeactivated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#InvalidEventType
- * RejectionReason7Code.InvalidEventType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmInvalidEventType
+ * RejectionReason7Code.mmInvalidEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#InvalidUnderlyingSecurity
- * RejectionReason7Code.InvalidUnderlyingSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmInvalidUnderlyingSecurity
+ * RejectionReason7Code.mmInvalidUnderlyingSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#InvalidEventProcessingType
- * RejectionReason7Code.InvalidEventProcessingType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmInvalidEventProcessingType
+ * RejectionReason7Code.mmInvalidEventProcessingType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#InvalidMandatoryVoluntaryEventType
- * RejectionReason7Code.InvalidMandatoryVoluntaryEventType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmInvalidMandatoryVoluntaryEventType
+ * RejectionReason7Code.mmInvalidMandatoryVoluntaryEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#InvalidCorporateActionInformation
- * RejectionReason7Code.InvalidCorporateActionInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmInvalidCorporateActionInformation
+ * RejectionReason7Code.mmInvalidCorporateActionInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#InvalidDetails
- * RejectionReason7Code.InvalidDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason7Code#mmInvalidDetails
+ * RejectionReason7Code.mmInvalidDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -117,7 +117,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "EventAlreadyDeactivated"</li>
 	 * </ul>
 	 */
-	public static final MMCode EventAlreadyDeactivated = new MMCode() {
+	public static final MMCode mmEventAlreadyDeactivated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventAlreadyDeactivated";
@@ -140,7 +140,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode FailedValidation = new MMCode() {
+	public static final MMCode mmFailedValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
@@ -163,7 +163,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "NoPendingDeactivationInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoPendingDeactivationInstruction = new MMCode() {
+	public static final MMCode mmNoPendingDeactivationInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPendingDeactivationInstruction";
@@ -186,7 +186,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "InvalidIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidIdentification = new MMCode() {
+	public static final MMCode mmInvalidIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidIdentification";
@@ -209,7 +209,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "InvalidCAIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidCAIdentification = new MMCode() {
+	public static final MMCode mmInvalidCAIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCAIdentification";
@@ -232,7 +232,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "InvalidAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidAgent = new MMCode() {
+	public static final MMCode mmInvalidAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAgent";
@@ -255,7 +255,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "SameIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode SameIdentification = new MMCode() {
+	public static final MMCode mmSameIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SameIdentification";
@@ -278,7 +278,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "OptionAlreadyDeactivated"</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionAlreadyDeactivated = new MMCode() {
+	public static final MMCode mmOptionAlreadyDeactivated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionAlreadyDeactivated";
@@ -301,7 +301,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "InvalidEventType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidEventType = new MMCode() {
+	public static final MMCode mmInvalidEventType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidEventType";
@@ -324,7 +324,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "InvalidUnderlyingSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidUnderlyingSecurity = new MMCode() {
+	public static final MMCode mmInvalidUnderlyingSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidUnderlyingSecurity";
@@ -347,7 +347,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "InvalidEventProcessingType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidEventProcessingType = new MMCode() {
+	public static final MMCode mmInvalidEventProcessingType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidEventProcessingType";
@@ -370,7 +370,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "InvalidMandatoryVoluntaryEventType"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidMandatoryVoluntaryEventType = new MMCode() {
+	public static final MMCode mmInvalidMandatoryVoluntaryEventType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidMandatoryVoluntaryEventType";
@@ -393,7 +393,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "InvalidCorporateActionInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidCorporateActionInformation = new MMCode() {
+	public static final MMCode mmInvalidCorporateActionInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCorporateActionInformation";
@@ -416,7 +416,7 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	 * name} = "InvalidDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidDetails = new MMCode() {
+	public static final MMCode mmInvalidDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidDetails";
@@ -427,18 +427,18 @@ public class RejectionReason7Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DEAC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason7Code";
 				definition = "Specifies the reason of a rejection cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason7Code.EventAlreadyDeactivated, com.tools20022.repository.codeset.RejectionReason7Code.FailedValidation,
-						com.tools20022.repository.codeset.RejectionReason7Code.NoPendingDeactivationInstruction, com.tools20022.repository.codeset.RejectionReason7Code.InvalidIdentification,
-						com.tools20022.repository.codeset.RejectionReason7Code.InvalidCAIdentification, com.tools20022.repository.codeset.RejectionReason7Code.InvalidAgent,
-						com.tools20022.repository.codeset.RejectionReason7Code.SameIdentification, com.tools20022.repository.codeset.RejectionReason7Code.OptionAlreadyDeactivated,
-						com.tools20022.repository.codeset.RejectionReason7Code.InvalidEventType, com.tools20022.repository.codeset.RejectionReason7Code.InvalidUnderlyingSecurity,
-						com.tools20022.repository.codeset.RejectionReason7Code.InvalidEventProcessingType, com.tools20022.repository.codeset.RejectionReason7Code.InvalidMandatoryVoluntaryEventType,
-						com.tools20022.repository.codeset.RejectionReason7Code.InvalidCorporateActionInformation, com.tools20022.repository.codeset.RejectionReason7Code.InvalidDetails);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason7Code.mmEventAlreadyDeactivated, com.tools20022.repository.codeset.RejectionReason7Code.mmFailedValidation,
+						com.tools20022.repository.codeset.RejectionReason7Code.mmNoPendingDeactivationInstruction, com.tools20022.repository.codeset.RejectionReason7Code.mmInvalidIdentification,
+						com.tools20022.repository.codeset.RejectionReason7Code.mmInvalidCAIdentification, com.tools20022.repository.codeset.RejectionReason7Code.mmInvalidAgent,
+						com.tools20022.repository.codeset.RejectionReason7Code.mmSameIdentification, com.tools20022.repository.codeset.RejectionReason7Code.mmOptionAlreadyDeactivated,
+						com.tools20022.repository.codeset.RejectionReason7Code.mmInvalidEventType, com.tools20022.repository.codeset.RejectionReason7Code.mmInvalidUnderlyingSecurity,
+						com.tools20022.repository.codeset.RejectionReason7Code.mmInvalidEventProcessingType, com.tools20022.repository.codeset.RejectionReason7Code.mmInvalidMandatoryVoluntaryEventType,
+						com.tools20022.repository.codeset.RejectionReason7Code.mmInvalidCorporateActionInformation, com.tools20022.repository.codeset.RejectionReason7Code.mmInvalidDetails);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

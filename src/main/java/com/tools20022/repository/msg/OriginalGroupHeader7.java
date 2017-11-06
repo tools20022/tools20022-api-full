@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PaymentExecution;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the original group, to which the message refers.
@@ -39,29 +40,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#OriginalMessageIdentification
- * OriginalGroupHeader7.OriginalMessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#mmOriginalMessageIdentification
+ * OriginalGroupHeader7.mmOriginalMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#OriginalMessageNameIdentification
- * OriginalGroupHeader7.OriginalMessageNameIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#mmOriginalMessageNameIdentification
+ * OriginalGroupHeader7.mmOriginalMessageNameIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#OriginalCreationDateTime
- * OriginalGroupHeader7.OriginalCreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#mmOriginalCreationDateTime
+ * OriginalGroupHeader7.mmOriginalCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#OriginalNumberOfTransactions
- * OriginalGroupHeader7.OriginalNumberOfTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#mmOriginalNumberOfTransactions
+ * OriginalGroupHeader7.mmOriginalNumberOfTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#OriginalControlSum
- * OriginalGroupHeader7.OriginalControlSum}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#mmOriginalControlSum
+ * OriginalGroupHeader7.mmOriginalControlSum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#GroupStatus
- * OriginalGroupHeader7.GroupStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#mmGroupStatus
+ * OriginalGroupHeader7.mmGroupStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#StatusReasonInformation
- * OriginalGroupHeader7.StatusReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#mmStatusReasonInformation
+ * OriginalGroupHeader7.mmStatusReasonInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#NumberOfTransactionsPerStatus
- * OriginalGroupHeader7.NumberOfTransactionsPerStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader7#mmNumberOfTransactionsPerStatus
+ * OriginalGroupHeader7.mmNumberOfTransactionsPerStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -72,18 +73,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#OriginalGroupInformationAndStatus
- * FIToFIPaymentStatusReportV08.OriginalGroupInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#mmOriginalGroupInformationAndStatus
+ * FIToFIPaymentStatusReportV08.mmOriginalGroupInformationAndStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08#OriginalGroupInformationAndStatus
- * CustomerPaymentStatusReportV08.OriginalGroupInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08#mmOriginalGroupInformationAndStatus
+ * CustomerPaymentStatusReportV08.mmOriginalGroupInformationAndStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalGroupHeader7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text originalMessageIdentification;
 	/**
 	 * Point to point reference, as assigned by the original instructing party,
 	 * to unambiguously identify the original message.
@@ -115,8 +117,8 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,25 +140,26 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#OriginalMessageIdentification
-	 * OriginalGroupHeader1.OriginalMessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#mmOriginalMessageIdentification
+	 * OriginalGroupHeader1.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalGroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.OriginalMessageIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.mmOriginalMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text originalMessageNameIdentification;
 	/**
 	 * Specifies the original message name identifier to which the message
 	 * refers.
@@ -188,11 +191,11 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#OriginalMessageNameIdentification
-	 * OriginalGroupHeader1.OriginalMessageNameIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#mmOriginalMessageNameIdentification
+	 * OriginalGroupHeader1.mmOriginalMessageNameIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalGroupHeader7.mmObject();
 			isDerived = false;
@@ -200,12 +203,13 @@ public class OriginalGroupHeader7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.OriginalMessageNameIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.mmOriginalMessageNameIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime originalCreationDateTime;
 	/**
 	 * Date and time at which the original message was created.
 	 * <p>
@@ -218,8 +222,8 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreationDate
-	 * PaymentExecution.CreationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreationDate
+	 * PaymentExecution.mmCreationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -239,25 +243,26 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#OriginalCreationDateTime
-	 * OriginalGroupHeader1.OriginalCreationDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#mmOriginalCreationDateTime
+	 * OriginalGroupHeader1.mmOriginalCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalGroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreationDate;
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.OriginalCreationDateTime;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.mmOriginalCreationDateTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max15NumericText originalNumberOfTransactions;
 	/**
 	 * Number of individual transactions contained in the original message.
 	 * <p>
@@ -288,11 +293,11 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#OriginalNumberOfTransactions
-	 * OriginalGroupHeader1.OriginalNumberOfTransactions}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#mmOriginalNumberOfTransactions
+	 * OriginalGroupHeader1.mmOriginalNumberOfTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalGroupHeader7.mmObject();
 			isDerived = false;
@@ -300,12 +305,13 @@ public class OriginalGroupHeader7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNumberOfTransactions";
 			definition = "Number of individual transactions contained in the original message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.OriginalNumberOfTransactions;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.mmOriginalNumberOfTransactions;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber originalControlSum;
 	/**
 	 * Total of all individual amounts included in the original message,
 	 * irrespective of currencies.
@@ -338,11 +344,11 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#OriginalControlSum
-	 * OriginalGroupHeader1.OriginalControlSum}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#mmOriginalControlSum
+	 * OriginalGroupHeader1.mmOriginalControlSum}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalControlSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalGroupHeader7.mmObject();
 			isDerived = false;
@@ -350,12 +356,13 @@ public class OriginalGroupHeader7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalControlSum";
 			definition = "Total of all individual amounts included in the original message, irrespective of currencies.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.OriginalControlSum;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.mmOriginalControlSum;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected ExternalPaymentGroupStatus1Code groupStatus;
 	/**
 	 * Specifies the status of a group of transactions.
 	 * <p>
@@ -369,8 +376,8 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#Status
-	 * PaymentStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmStatus
+	 * PaymentStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -390,25 +397,26 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#GroupStatus
-	 * OriginalGroupHeader1.GroupStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#mmGroupStatus
+	 * OriginalGroupHeader1.mmGroupStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GroupStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroupStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmStatus;
 			componentContext_lazy = () -> OriginalGroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.Status;
 			isDerived = false;
 			xmlTag = "GrpSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupStatus";
 			definition = "Specifies the status of a group of transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.GroupStatus;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.mmGroupStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExternalPaymentGroupStatus1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatusReasonInformation9> statusReasonInformation;
 	/**
 	 * Provides detailed information on the status reason.
 	 * <p>
@@ -421,8 +429,8 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -442,25 +450,26 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#StatusReasonInformation
-	 * OriginalGroupHeader1.StatusReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#mmStatusReasonInformation
+	 * OriginalGroupHeader1.mmStatusReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReasonInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> OriginalGroupHeader7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "StsRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformation";
 			definition = "Provides detailed information on the status reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.StatusReasonInformation;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.mmStatusReasonInformation;
 			minOccurs = 0;
-			type_lazy = () -> StatusReasonInformation9.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation9.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatus;
 	/**
 	 * Detailed information on the number of transactions for each identical
 	 * transaction status.
@@ -492,11 +501,11 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#NumberOfTransactionsPerStatus
-	 * OriginalGroupHeader1.NumberOfTransactionsPerStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1#mmNumberOfTransactionsPerStatus
+	 * OriginalGroupHeader1.mmNumberOfTransactionsPerStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NumberOfTransactionsPerStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNumberOfTransactionsPerStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> OriginalGroupHeader7.mmObject();
 			isDerived = false;
@@ -504,24 +513,24 @@ public class OriginalGroupHeader7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsPerStatus";
 			definition = "Detailed information on the number of transactions for each identical transaction status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.NumberOfTransactionsPerStatus;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader1.mmNumberOfTransactionsPerStatus;
 			minOccurs = 0;
-			type_lazy = () -> NumberOfTransactionsPerStatus5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupHeader7.OriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupHeader7.OriginalMessageNameIdentification,
-						com.tools20022.repository.msg.OriginalGroupHeader7.OriginalCreationDateTime, com.tools20022.repository.msg.OriginalGroupHeader7.OriginalNumberOfTransactions,
-						com.tools20022.repository.msg.OriginalGroupHeader7.OriginalControlSum, com.tools20022.repository.msg.OriginalGroupHeader7.GroupStatus, com.tools20022.repository.msg.OriginalGroupHeader7.StatusReasonInformation,
-						com.tools20022.repository.msg.OriginalGroupHeader7.NumberOfTransactionsPerStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupHeader7.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupHeader7.mmOriginalMessageNameIdentification,
+						com.tools20022.repository.msg.OriginalGroupHeader7.mmOriginalCreationDateTime, com.tools20022.repository.msg.OriginalGroupHeader7.mmOriginalNumberOfTransactions,
+						com.tools20022.repository.msg.OriginalGroupHeader7.mmOriginalControlSum, com.tools20022.repository.msg.OriginalGroupHeader7.mmGroupStatus,
+						com.tools20022.repository.msg.OriginalGroupHeader7.mmStatusReasonInformation, com.tools20022.repository.msg.OriginalGroupHeader7.mmNumberOfTransactionsPerStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08.mmOriginalGroupInformationAndStatus,
+						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08.mmOriginalGroupInformationAndStatus);
 				trace_lazy = () -> PaymentExecution.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08.OriginalGroupInformationAndStatus,
-						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08.OriginalGroupInformationAndStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalGroupHeader7";
 				definition = "Provides details on the original group, to which the message refers.";
@@ -529,5 +538,69 @@ public class OriginalGroupHeader7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOriginalMessageIdentification() {
+		return originalMessageIdentification;
+	}
+
+	public void setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
+		this.originalMessageIdentification = originalMessageIdentification;
+	}
+
+	public Max35Text getOriginalMessageNameIdentification() {
+		return originalMessageNameIdentification;
+	}
+
+	public void setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
+		this.originalMessageNameIdentification = originalMessageNameIdentification;
+	}
+
+	public ISODateTime getOriginalCreationDateTime() {
+		return originalCreationDateTime;
+	}
+
+	public void setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
+		this.originalCreationDateTime = originalCreationDateTime;
+	}
+
+	public Max15NumericText getOriginalNumberOfTransactions() {
+		return originalNumberOfTransactions;
+	}
+
+	public void setOriginalNumberOfTransactions(Max15NumericText originalNumberOfTransactions) {
+		this.originalNumberOfTransactions = originalNumberOfTransactions;
+	}
+
+	public DecimalNumber getOriginalControlSum() {
+		return originalControlSum;
+	}
+
+	public void setOriginalControlSum(DecimalNumber originalControlSum) {
+		this.originalControlSum = originalControlSum;
+	}
+
+	public ExternalPaymentGroupStatus1Code getGroupStatus() {
+		return groupStatus;
+	}
+
+	public void setGroupStatus(ExternalPaymentGroupStatus1Code groupStatus) {
+		this.groupStatus = groupStatus;
+	}
+
+	public List<StatusReasonInformation9> getStatusReasonInformation() {
+		return statusReasonInformation;
+	}
+
+	public void setStatusReasonInformation(List<com.tools20022.repository.msg.StatusReasonInformation9> statusReasonInformation) {
+		this.statusReasonInformation = statusReasonInformation;
+	}
+
+	public List<NumberOfTransactionsPerStatus5> getNumberOfTransactionsPerStatus() {
+		return numberOfTransactionsPerStatus;
+	}
+
+	public void setNumberOfTransactionsPerStatus(List<com.tools20022.repository.msg.NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatus) {
+		this.numberOfTransactionsPerStatus = numberOfTransactionsPerStatus;
 	}
 }

@@ -38,14 +38,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption7#ConditionalQuantity
- * SecuritiesOption7.ConditionalQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption7#mmConditionalQuantity
+ * SecuritiesOption7.mmConditionalQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption7#OverAndAboveNormalEnsuredEntitlementQuantity
- * SecuritiesOption7.OverAndAboveNormalEnsuredEntitlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption7#mmOverAndAboveNormalEnsuredEntitlementQuantity
+ * SecuritiesOption7.mmOverAndAboveNormalEnsuredEntitlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOption7#InstructedOrQuantityToReceive
- * SecuritiesOption7.InstructedOrQuantityToReceive}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption7#mmInstructedOrQuantityToReceive
+ * SecuritiesOption7.mmInstructedOrQuantityToReceive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -70,6 +70,7 @@ import java.util.function.Supplier;
 public class SecuritiesOption7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity15Choice conditionalQuantity;
 	/**
 	 * Minimum quantity of securities to be accepted (used in the framework of
 	 * conditional privilege on election). In case of proration, if this minimum
@@ -84,8 +85,8 @@ public class SecuritiesOption7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#ConditionalQuantity
-	 * SecuritiesProceedsDefinition.ConditionalQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmConditionalQuantity
+	 * SecuritiesProceedsDefinition.mmConditionalQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,21 +107,22 @@ public class SecuritiesOption7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ConditionalQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConditionalQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmConditionalQuantity;
 			componentContext_lazy = () -> SecuritiesOption7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.ConditionalQuantity;
 			isDerived = false;
 			xmlTag = "CondlQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalQuantity";
 			definition = "Minimum quantity of securities to be accepted (used in the framework of conditional privilege on election). In case of proration, if this minimum quantity is not reached then the instruction is void.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice overAndAboveNormalEnsuredEntitlementQuantity;
 	/**
 	 * Quantity instructed to be received over and above normal ensured
 	 * entitlement.
@@ -134,9 +136,9 @@ public class SecuritiesOption7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#OverAndAboveNormalEnsuredEntitlementQuantity
-	 * SecuritiesProceedsDefinition.OverAndAboveNormalEnsuredEntitlementQuantity
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmOverAndAboveNormalEnsuredEntitlementQuantity
+	 * SecuritiesProceedsDefinition.
+	 * mmOverAndAboveNormalEnsuredEntitlementQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,21 +159,22 @@ public class SecuritiesOption7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OverAndAboveNormalEnsuredEntitlementQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOverAndAboveNormalEnsuredEntitlementQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmOverAndAboveNormalEnsuredEntitlementQuantity;
 			componentContext_lazy = () -> SecuritiesOption7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.OverAndAboveNormalEnsuredEntitlementQuantity;
 			isDerived = false;
 			xmlTag = "OverAndAbovNrmlNsrdEntitlmntQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverAndAboveNormalEnsuredEntitlementQuantity";
 			definition = "Quantity instructed to be received over and above normal ensured entitlement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected InstructedOrQuantityToReceive2Choice instructedOrQuantityToReceive;
 	/**
 	 * Specifies whether the quantity of financial instrument is a quantity of
 	 * securities instructed or a quantity to receive.
@@ -202,7 +205,7 @@ public class SecuritiesOption7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructedOrQuantityToReceive = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructedOrQuantityToReceive = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesOption7.mmObject();
 			isDerived = false;
@@ -210,20 +213,20 @@ public class SecuritiesOption7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedOrQuantityToReceive";
 			definition = "Specifies whether the quantity of financial instrument is a quantity of securities instructed or a quantity to receive.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InstructedOrQuantityToReceive2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> InstructedOrQuantityToReceive2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption7.ConditionalQuantity, com.tools20022.repository.msg.SecuritiesOption7.OverAndAboveNormalEnsuredEntitlementQuantity,
-						com.tools20022.repository.msg.SecuritiesOption7.InstructedOrQuantityToReceive);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption7.mmConditionalQuantity, com.tools20022.repository.msg.SecuritiesOption7.mmOverAndAboveNormalEnsuredEntitlementQuantity,
+						com.tools20022.repository.msg.SecuritiesOption7.mmInstructedOrQuantityToReceive);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -237,5 +240,29 @@ public class SecuritiesOption7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity15Choice getConditionalQuantity() {
+		return conditionalQuantity;
+	}
+
+	public void setConditionalQuantity(FinancialInstrumentQuantity15Choice conditionalQuantity) {
+		this.conditionalQuantity = conditionalQuantity;
+	}
+
+	public FinancialInstrumentQuantity15Choice getOverAndAboveNormalEnsuredEntitlementQuantity() {
+		return overAndAboveNormalEnsuredEntitlementQuantity;
+	}
+
+	public void setOverAndAboveNormalEnsuredEntitlementQuantity(FinancialInstrumentQuantity15Choice overAndAboveNormalEnsuredEntitlementQuantity) {
+		this.overAndAboveNormalEnsuredEntitlementQuantity = overAndAboveNormalEnsuredEntitlementQuantity;
+	}
+
+	public InstructedOrQuantityToReceive2Choice getInstructedOrQuantityToReceive() {
+		return instructedOrQuantityToReceive;
+	}
+
+	public void setInstructedOrQuantityToReceive(InstructedOrQuantityToReceive2Choice instructedOrQuantityToReceive) {
+		this.instructedOrQuantityToReceive = instructedOrQuantityToReceive;
 	}
 }

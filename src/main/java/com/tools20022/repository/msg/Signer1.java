@@ -34,23 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Signer1#Version
- * Signer1.Version}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Signer1#SignerIdentification
- * Signer1.SignerIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Signer1#DigestAlgorithm
- * Signer1.DigestAlgorithm}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Signer1#SignatureAlgorithm
- * Signer1.SignatureAlgorithm}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Signer1#Signature
- * Signer1.Signature}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Signer1#mmVersion
+ * Signer1.mmVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Signer1#mmSignerIdentification
+ * Signer1.mmSignerIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Signer1#mmDigestAlgorithm
+ * Signer1.mmDigestAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Signer1#mmSignatureAlgorithm
+ * Signer1.mmSignatureAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Signer1#mmSignature
+ * Signer1.mmSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Signer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number version;
 	/**
 	 * Version of the Cryptographic Message Syntax (CMS) data structure.
 	 * <p>
@@ -97,7 +98,7 @@ public class Signer1 {
 	 * "Version of the Cryptographic Message Syntax (CMS) data structure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Signer1.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class Signer1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the Cryptographic Message Syntax (CMS) data structure.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected CertificateIdentifier1 signerIdentification;
 	/**
 	 * Identification of the entity who has signed the data.
 	 * <p>
@@ -135,7 +137,7 @@ public class Signer1 {
 	 * definition} = "Identification of the entity who has signed the data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SignerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSignerIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Signer1.mmObject();
 			isDerived = false;
@@ -143,12 +145,13 @@ public class Signer1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignerIdentification";
 			definition = "Identification of the entity who has signed the data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CertificateIdentifier1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CertificateIdentifier1.mmObject();
 		}
 	};
+	protected AlgorithmIdentification1 digestAlgorithm;
 	/**
 	 * Identification of a digest algorithm to apply before signature.
 	 * <p>
@@ -176,7 +179,7 @@ public class Signer1 {
 	 * "Identification of a digest algorithm to apply before signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigestAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigestAlgorithm = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Signer1.mmObject();
 			isDerived = false;
@@ -184,12 +187,13 @@ public class Signer1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Identification of a digest algorithm to apply before signature.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AlgorithmIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification1.mmObject();
 		}
 	};
+	protected AlgorithmIdentification1 signatureAlgorithm;
 	/**
 	 * Cryptographic digital signature algorithm.
 	 * <p>
@@ -216,7 +220,7 @@ public class Signer1 {
 	 * definition} = "Cryptographic digital signature algorithm."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SignatureAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSignatureAlgorithm = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Signer1.mmObject();
 			isDerived = false;
@@ -224,12 +228,13 @@ public class Signer1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureAlgorithm";
 			definition = "Cryptographic digital signature algorithm.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AlgorithmIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification1.mmObject();
 		}
 	};
+	protected Max500Binary signature;
 	/**
 	 * Digital signature.
 	 * <p>
@@ -257,7 +262,7 @@ public class Signer1 {
 	 * definition} = "Digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Signature = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignature = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Signer1.mmObject();
 			isDerived = false;
@@ -265,8 +270,8 @@ public class Signer1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Digital signature.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max500Binary.mmObject();
 		}
 	};
@@ -274,9 +279,9 @@ public class Signer1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Signer1.Version, com.tools20022.repository.msg.Signer1.SignerIdentification, com.tools20022.repository.msg.Signer1.DigestAlgorithm,
-						com.tools20022.repository.msg.Signer1.SignatureAlgorithm, com.tools20022.repository.msg.Signer1.Signature);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Signer1.mmVersion, com.tools20022.repository.msg.Signer1.mmSignerIdentification, com.tools20022.repository.msg.Signer1.mmDigestAlgorithm,
+						com.tools20022.repository.msg.Signer1.mmSignatureAlgorithm, com.tools20022.repository.msg.Signer1.mmSignature);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Signer1";
 				definition = "Entity who has signed the data and its digital signature.";
@@ -284,5 +289,45 @@ public class Signer1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public CertificateIdentifier1 getSignerIdentification() {
+		return signerIdentification;
+	}
+
+	public void setSignerIdentification(com.tools20022.repository.msg.CertificateIdentifier1 signerIdentification) {
+		this.signerIdentification = signerIdentification;
+	}
+
+	public AlgorithmIdentification1 getDigestAlgorithm() {
+		return digestAlgorithm;
+	}
+
+	public void setDigestAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification1 digestAlgorithm) {
+		this.digestAlgorithm = digestAlgorithm;
+	}
+
+	public AlgorithmIdentification1 getSignatureAlgorithm() {
+		return signatureAlgorithm;
+	}
+
+	public void setSignatureAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification1 signatureAlgorithm) {
+		this.signatureAlgorithm = signatureAlgorithm;
+	}
+
+	public Max500Binary getSignature() {
+		return signature;
+	}
+
+	public void setSignature(Max500Binary signature) {
+		this.signature = signature;
 	}
 }

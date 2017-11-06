@@ -35,124 +35,124 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AwaitingSharesFromCounterparty
- * PendingSettlementStatusReason2Code.AwaitingSharesFromCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAwaitingSharesFromCounterparty
+ * PendingSettlementStatusReason2Code.mmAwaitingSharesFromCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AccountBlocked
- * PendingSettlementStatusReason2Code.AccountBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAccountBlocked
+ * PendingSettlementStatusReason2Code.mmAccountBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AwaitingSecurities
- * PendingSettlementStatusReason2Code.AwaitingSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAwaitingSecurities
+ * PendingSettlementStatusReason2Code.mmAwaitingSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#CounterpartyInsufficientSecurities
- * PendingSettlementStatusReason2Code.CounterpartyInsufficientSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmCounterpartyInsufficientSecurities
+ * PendingSettlementStatusReason2Code.mmCounterpartyInsufficientSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AwaitingDocumentsOrEndorsementsFromCounterparty
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAwaitingDocumentsOrEndorsementsFromCounterparty
  * PendingSettlementStatusReason2Code.
- * AwaitingDocumentsOrEndorsementsFromCounterparty}</li>
+ * mmAwaitingDocumentsOrEndorsementsFromCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AwaitingDocumentsOrEndorsementsFromYou
- * PendingSettlementStatusReason2Code.AwaitingDocumentsOrEndorsementsFromYou}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAwaitingDocumentsOrEndorsementsFromYou
+ * PendingSettlementStatusReason2Code.mmAwaitingDocumentsOrEndorsementsFromYou}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#StatusReasonInvestigation
- * PendingSettlementStatusReason2Code.StatusReasonInvestigation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmStatusReasonInvestigation
+ * PendingSettlementStatusReason2Code.mmStatusReasonInvestigation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#LackOfSecurities
- * PendingSettlementStatusReason2Code.LackOfSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmLackOfSecurities
+ * PendingSettlementStatusReason2Code.mmLackOfSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#PendingLinkedInstruction
- * PendingSettlementStatusReason2Code.PendingLinkedInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmPendingLinkedInstruction
+ * PendingSettlementStatusReason2Code.mmPendingLinkedInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#PhysicalSecuritiesVerification
- * PendingSettlementStatusReason2Code.PhysicalSecuritiesVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmPhysicalSecuritiesVerification
+ * PendingSettlementStatusReason2Code.mmPhysicalSecuritiesVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#PhysicalDeliveryDelay
- * PendingSettlementStatusReason2Code.PhysicalDeliveryDelay}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmPhysicalDeliveryDelay
+ * PendingSettlementStatusReason2Code.mmPhysicalDeliveryDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#SecuritiesBlocked
- * PendingSettlementStatusReason2Code.SecuritiesBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmSecuritiesBlocked
+ * PendingSettlementStatusReason2Code.mmSecuritiesBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#MissingInformation
- * PendingSettlementStatusReason2Code.MissingInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmMissingInformation
+ * PendingSettlementStatusReason2Code.mmMissingInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AccountNotOpen
- * PendingSettlementStatusReason2Code.AccountNotOpen}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAccountNotOpen
+ * PendingSettlementStatusReason2Code.mmAccountNotOpen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#UnderInvestigation
- * PendingSettlementStatusReason2Code.UnderInvestigation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmUnderInvestigation
+ * PendingSettlementStatusReason2Code.mmUnderInvestigation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#UnderClientInvestigation
- * PendingSettlementStatusReason2Code.UnderClientInvestigation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmUnderClientInvestigation
+ * PendingSettlementStatusReason2Code.mmUnderClientInvestigation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#UnderTransferAgentInvestigation
- * PendingSettlementStatusReason2Code.UnderTransferAgentInvestigation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmUnderTransferAgentInvestigation
+ * PendingSettlementStatusReason2Code.mmUnderTransferAgentInvestigation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AwaitingTransferAgentStatus
- * PendingSettlementStatusReason2Code.AwaitingTransferAgentStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAwaitingTransferAgentStatus
+ * PendingSettlementStatusReason2Code.mmAwaitingTransferAgentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#UsualTransactionTime
- * PendingSettlementStatusReason2Code.UsualTransactionTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmUsualTransactionTime
+ * PendingSettlementStatusReason2Code.mmUsualTransactionTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AwaitingStatus
- * PendingSettlementStatusReason2Code.AwaitingStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAwaitingStatus
+ * PendingSettlementStatusReason2Code.mmAwaitingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#ApplicationFormSent
- * PendingSettlementStatusReason2Code.ApplicationFormSent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmApplicationFormSent
+ * PendingSettlementStatusReason2Code.mmApplicationFormSent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#StockTransferFormSent
- * PendingSettlementStatusReason2Code.StockTransferFormSent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmStockTransferFormSent
+ * PendingSettlementStatusReason2Code.mmStockTransferFormSent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#LongerProcessing
- * PendingSettlementStatusReason2Code.LongerProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmLongerProcessing
+ * PendingSettlementStatusReason2Code.mmLongerProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AdditionalDocumentsRequested
- * PendingSettlementStatusReason2Code.AdditionalDocumentsRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAdditionalDocumentsRequested
+ * PendingSettlementStatusReason2Code.mmAdditionalDocumentsRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AdditionalDocumentsSent1
- * PendingSettlementStatusReason2Code.AdditionalDocumentsSent1}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAdditionalDocumentsSent1
+ * PendingSettlementStatusReason2Code.mmAdditionalDocumentsSent1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AdditionalDocumentsSent2
- * PendingSettlementStatusReason2Code.AdditionalDocumentsSent2}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAdditionalDocumentsSent2
+ * PendingSettlementStatusReason2Code.mmAdditionalDocumentsSent2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#DocumentsRejected
- * PendingSettlementStatusReason2Code.DocumentsRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmDocumentsRejected
+ * PendingSettlementStatusReason2Code.mmDocumentsRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AwaitingCounterpartyReceipt
- * PendingSettlementStatusReason2Code.AwaitingCounterpartyReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAwaitingCounterpartyReceipt
+ * PendingSettlementStatusReason2Code.mmAwaitingCounterpartyReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#AwaitingCounterpartyDelivery
- * PendingSettlementStatusReason2Code.AwaitingCounterpartyDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmAwaitingCounterpartyDelivery
+ * PendingSettlementStatusReason2Code.mmAwaitingCounterpartyDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#NormalProcessingPeriodLapsed
- * PendingSettlementStatusReason2Code.NormalProcessingPeriodLapsed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmNormalProcessingPeriodLapsed
+ * PendingSettlementStatusReason2Code.mmNormalProcessingPeriodLapsed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#WrongCounterpartyAccount
- * PendingSettlementStatusReason2Code.WrongCounterpartyAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmWrongCounterpartyAccount
+ * PendingSettlementStatusReason2Code.mmWrongCounterpartyAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#LackOfStampDutyInformation
- * PendingSettlementStatusReason2Code.LackOfStampDutyInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmLackOfStampDutyInformation
+ * PendingSettlementStatusReason2Code.mmLackOfStampDutyInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#TransferAgentProcessing
- * PendingSettlementStatusReason2Code.TransferAgentProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmTransferAgentProcessing
+ * PendingSettlementStatusReason2Code.mmTransferAgentProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#ExpectedConfirmation
- * PendingSettlementStatusReason2Code.ExpectedConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmExpectedConfirmation
+ * PendingSettlementStatusReason2Code.mmExpectedConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#Escalation
- * PendingSettlementStatusReason2Code.Escalation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmEscalation
+ * PendingSettlementStatusReason2Code.mmEscalation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#TransferAgentNonReceipt
- * PendingSettlementStatusReason2Code.TransferAgentNonReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmTransferAgentNonReceipt
+ * PendingSettlementStatusReason2Code.mmTransferAgentNonReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#FinalVerification
- * PendingSettlementStatusReason2Code.FinalVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason2Code#mmFinalVerification
+ * PendingSettlementStatusReason2Code.mmFinalVerification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -190,7 +190,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AwaitingSharesFromCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingSharesFromCounterparty = new MMCode() {
+	public static final MMCode mmAwaitingSharesFromCounterparty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSharesFromCounterparty";
@@ -213,7 +213,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AccountBlocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountBlocked = new MMCode() {
+	public static final MMCode mmAccountBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlocked";
@@ -236,7 +236,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AwaitingSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingSecurities = new MMCode() {
+	public static final MMCode mmAwaitingSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSecurities";
@@ -259,7 +259,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "CounterpartyInsufficientSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyInsufficientSecurities = new MMCode() {
+	public static final MMCode mmCounterpartyInsufficientSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInsufficientSecurities";
@@ -282,7 +282,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AwaitingDocumentsOrEndorsementsFromCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingDocumentsOrEndorsementsFromCounterparty = new MMCode() {
+	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromCounterparty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromCounterparty";
@@ -305,7 +305,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AwaitingDocumentsOrEndorsementsFromYou"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
+	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromYou";
@@ -328,7 +328,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "StatusReasonInvestigation"</li>
 	 * </ul>
 	 */
-	public static final MMCode StatusReasonInvestigation = new MMCode() {
+	public static final MMCode mmStatusReasonInvestigation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInvestigation";
@@ -351,7 +351,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "LackOfSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode LackOfSecurities = new MMCode() {
+	public static final MMCode mmLackOfSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfSecurities";
@@ -374,7 +374,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "PendingLinkedInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingLinkedInstruction = new MMCode() {
+	public static final MMCode mmPendingLinkedInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingLinkedInstruction";
@@ -397,7 +397,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "PhysicalSecuritiesVerification"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalSecuritiesVerification = new MMCode() {
+	public static final MMCode mmPhysicalSecuritiesVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSecuritiesVerification";
@@ -420,7 +420,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "PhysicalDeliveryDelay"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalDeliveryDelay = new MMCode() {
+	public static final MMCode mmPhysicalDeliveryDelay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDelay";
@@ -443,7 +443,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "SecuritiesBlocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesBlocked = new MMCode() {
+	public static final MMCode mmSecuritiesBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBlocked";
@@ -466,7 +466,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "MissingInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingInformation = new MMCode() {
+	public static final MMCode mmMissingInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInformation";
@@ -489,7 +489,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AccountNotOpen"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountNotOpen = new MMCode() {
+	public static final MMCode mmAccountNotOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountNotOpen";
@@ -512,7 +512,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "UnderInvestigation"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderInvestigation = new MMCode() {
+	public static final MMCode mmUnderInvestigation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderInvestigation";
@@ -535,7 +535,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "UnderClientInvestigation"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderClientInvestigation = new MMCode() {
+	public static final MMCode mmUnderClientInvestigation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderClientInvestigation";
@@ -558,7 +558,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "UnderTransferAgentInvestigation"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderTransferAgentInvestigation = new MMCode() {
+	public static final MMCode mmUnderTransferAgentInvestigation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderTransferAgentInvestigation";
@@ -581,7 +581,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AwaitingTransferAgentStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingTransferAgentStatus = new MMCode() {
+	public static final MMCode mmAwaitingTransferAgentStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingTransferAgentStatus";
@@ -604,7 +604,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "UsualTransactionTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode UsualTransactionTime = new MMCode() {
+	public static final MMCode mmUsualTransactionTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsualTransactionTime";
@@ -627,7 +627,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AwaitingStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingStatus = new MMCode() {
+	public static final MMCode mmAwaitingStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingStatus";
@@ -650,7 +650,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "ApplicationFormSent"</li>
 	 * </ul>
 	 */
-	public static final MMCode ApplicationFormSent = new MMCode() {
+	public static final MMCode mmApplicationFormSent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationFormSent";
@@ -673,7 +673,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "StockTransferFormSent"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockTransferFormSent = new MMCode() {
+	public static final MMCode mmStockTransferFormSent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockTransferFormSent";
@@ -696,7 +696,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "LongerProcessing"</li>
 	 * </ul>
 	 */
-	public static final MMCode LongerProcessing = new MMCode() {
+	public static final MMCode mmLongerProcessing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongerProcessing";
@@ -719,7 +719,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AdditionalDocumentsRequested"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdditionalDocumentsRequested = new MMCode() {
+	public static final MMCode mmAdditionalDocumentsRequested = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDocumentsRequested";
@@ -742,7 +742,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AdditionalDocumentsSent1"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdditionalDocumentsSent1 = new MMCode() {
+	public static final MMCode mmAdditionalDocumentsSent1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDocumentsSent1";
@@ -765,7 +765,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AdditionalDocumentsSent2"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdditionalDocumentsSent2 = new MMCode() {
+	public static final MMCode mmAdditionalDocumentsSent2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDocumentsSent2";
@@ -788,7 +788,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "DocumentsRejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode DocumentsRejected = new MMCode() {
+	public static final MMCode mmDocumentsRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentsRejected";
@@ -811,7 +811,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AwaitingCounterpartyReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingCounterpartyReceipt = new MMCode() {
+	public static final MMCode mmAwaitingCounterpartyReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCounterpartyReceipt";
@@ -834,7 +834,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "AwaitingCounterpartyDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingCounterpartyDelivery = new MMCode() {
+	public static final MMCode mmAwaitingCounterpartyDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCounterpartyDelivery";
@@ -857,7 +857,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "NormalProcessingPeriodLapsed"</li>
 	 * </ul>
 	 */
-	public static final MMCode NormalProcessingPeriodLapsed = new MMCode() {
+	public static final MMCode mmNormalProcessingPeriodLapsed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NormalProcessingPeriodLapsed";
@@ -880,7 +880,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "WrongCounterpartyAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode WrongCounterpartyAccount = new MMCode() {
+	public static final MMCode mmWrongCounterpartyAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCounterpartyAccount";
@@ -903,7 +903,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "LackOfStampDutyInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode LackOfStampDutyInformation = new MMCode() {
+	public static final MMCode mmLackOfStampDutyInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfStampDutyInformation";
@@ -926,7 +926,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "TransferAgentProcessing"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferAgentProcessing = new MMCode() {
+	public static final MMCode mmTransferAgentProcessing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAgentProcessing";
@@ -949,7 +949,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "ExpectedConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExpectedConfirmation = new MMCode() {
+	public static final MMCode mmExpectedConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedConfirmation";
@@ -972,7 +972,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "Escalation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Escalation = new MMCode() {
+	public static final MMCode mmEscalation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Escalation";
@@ -995,7 +995,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "TransferAgentNonReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferAgentNonReceipt = new MMCode() {
+	public static final MMCode mmTransferAgentNonReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAgentNonReceipt";
@@ -1018,7 +1018,7 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	 * name} = "FinalVerification"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinalVerification = new MMCode() {
+	public static final MMCode mmFinalVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalVerification";
@@ -1029,30 +1029,30 @@ public class PendingSettlementStatusReason2Code extends PendingSettlementStatusR
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AWSH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingSettlementStatusReason2Code";
 				definition = "Specifies the reason for a transfer or settlement instruction settlement pending status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AwaitingSharesFromCounterparty, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AccountBlocked,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AwaitingSecurities, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.CounterpartyInsufficientSecurities,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AwaitingDocumentsOrEndorsementsFromCounterparty,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AwaitingDocumentsOrEndorsementsFromYou, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.StatusReasonInvestigation,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.LackOfSecurities, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.PendingLinkedInstruction,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.PhysicalSecuritiesVerification, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.PhysicalDeliveryDelay,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.SecuritiesBlocked, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.MissingInformation,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AccountNotOpen, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.UnderInvestigation,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.UnderClientInvestigation, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.UnderTransferAgentInvestigation,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AwaitingTransferAgentStatus, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.UsualTransactionTime,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AwaitingStatus, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.ApplicationFormSent,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.StockTransferFormSent, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.LongerProcessing,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AdditionalDocumentsRequested, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AdditionalDocumentsSent1,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AdditionalDocumentsSent2, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.DocumentsRejected,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AwaitingCounterpartyReceipt, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.AwaitingCounterpartyDelivery,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.NormalProcessingPeriodLapsed, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.WrongCounterpartyAccount,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.LackOfStampDutyInformation, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.TransferAgentProcessing,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.ExpectedConfirmation, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.Escalation,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.TransferAgentNonReceipt, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.FinalVerification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAwaitingSharesFromCounterparty, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAccountBlocked,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAwaitingSecurities, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmCounterpartyInsufficientSecurities,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAwaitingDocumentsOrEndorsementsFromCounterparty,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAwaitingDocumentsOrEndorsementsFromYou, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmStatusReasonInvestigation,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmLackOfSecurities, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmPendingLinkedInstruction,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmPhysicalSecuritiesVerification, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmPhysicalDeliveryDelay,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmSecuritiesBlocked, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmMissingInformation,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAccountNotOpen, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmUnderInvestigation,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmUnderClientInvestigation, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmUnderTransferAgentInvestigation,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAwaitingTransferAgentStatus, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmUsualTransactionTime,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAwaitingStatus, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmApplicationFormSent,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmStockTransferFormSent, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmLongerProcessing,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAdditionalDocumentsRequested, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAdditionalDocumentsSent1,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAdditionalDocumentsSent2, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmDocumentsRejected,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAwaitingCounterpartyReceipt, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmAwaitingCounterpartyDelivery,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmNormalProcessingPeriodLapsed, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmWrongCounterpartyAccount,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmLackOfStampDutyInformation, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmTransferAgentProcessing,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmExpectedConfirmation, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmEscalation,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmTransferAgentNonReceipt, com.tools20022.repository.codeset.PendingSettlementStatusReason2Code.mmFinalVerification);
 				trace_lazy = () -> PendingSettlementStatusReasonCode.mmObject();
 			}
 		});

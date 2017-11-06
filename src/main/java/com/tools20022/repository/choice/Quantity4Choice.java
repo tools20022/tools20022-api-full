@@ -38,11 +38,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity4Choice#OriginalAndCurrentFaceAmount
- * Quantity4Choice.OriginalAndCurrentFaceAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity4Choice#mmOriginalAndCurrentFaceAmount
+ * Quantity4Choice.mmOriginalAndCurrentFaceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity4Choice#SignedQuantity
- * Quantity4Choice.SignedQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity4Choice#mmSignedQuantity
+ * Quantity4Choice.mmSignedQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -74,6 +74,7 @@ import java.util.function.Supplier;
 public class Quantity4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OriginalAndCurrentQuantities2 originalAndCurrentFaceAmount;
 	/**
 	 * Signed face amount and amortised value of security.
 	 * <p>
@@ -86,8 +87,8 @@ public class Quantity4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#FaceAmount
-	 * AssetHolding.FaceAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmFaceAmount
+	 * AssetHolding.mmFaceAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,28 +109,29 @@ public class Quantity4Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Quantity18Choice#OriginalAndCurrentFaceAmount
-	 * Quantity18Choice.OriginalAndCurrentFaceAmount}</li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity18Choice#mmOriginalAndCurrentFaceAmount
+	 * Quantity18Choice.mmOriginalAndCurrentFaceAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> Quantity4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.FaceAmount;
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFaceAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAndCurrentFaceAmount";
 			definition = "Signed face amount and amortised value of security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity18Choice.OriginalAndCurrentFaceAmount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity18Choice.mmOriginalAndCurrentFaceAmount);
 			maxOccurs = 1;
-			type_lazy = () -> OriginalAndCurrentQuantities2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OriginalAndCurrentQuantities2.mmObject();
 		}
 	};
+	protected SignedQuantityFormat2 signedQuantity;
 	/**
 	 * Signed quantity of security.
 	 * <p>
@@ -158,13 +160,13 @@ public class Quantity4Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Quantity18Choice#SignedQuantity
-	 * Quantity18Choice.SignedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity18Choice#mmSignedQuantity
+	 * Quantity18Choice.mmSignedQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SignedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSignedQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Quantity4Choice.mmObject();
 			isDerived = false;
@@ -172,20 +174,20 @@ public class Quantity4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedQuantity";
 			definition = "Signed quantity of security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity18Choice.SignedQuantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity18Choice.mmSignedQuantity);
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SignedQuantityFormat2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity4Choice.OriginalAndCurrentFaceAmount, com.tools20022.repository.choice.Quantity4Choice.SignedQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity4Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.choice.Quantity4Choice.mmSignedQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -200,5 +202,21 @@ public class Quantity4Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OriginalAndCurrentQuantities2 getOriginalAndCurrentFaceAmount() {
+		return originalAndCurrentFaceAmount;
+	}
+
+	public void setOriginalAndCurrentFaceAmount(OriginalAndCurrentQuantities2 originalAndCurrentFaceAmount) {
+		this.originalAndCurrentFaceAmount = originalAndCurrentFaceAmount;
+	}
+
+	public SignedQuantityFormat2 getSignedQuantity() {
+		return signedQuantity;
+	}
+
+	public void setSignedQuantity(SignedQuantityFormat2 signedQuantity) {
+		this.signedQuantity = signedQuantity;
 	}
 }

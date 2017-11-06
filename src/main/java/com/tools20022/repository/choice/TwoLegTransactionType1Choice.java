@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TwoLegTransactionType1Choice#FutureOrOptionDetails
- * TwoLegTransactionType1Choice.FutureOrOptionDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.TwoLegTransactionType1Choice#mmFutureOrOptionDetails
+ * TwoLegTransactionType1Choice.mmFutureOrOptionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TwoLegTransactionType1Choice#SecuritiesFinancingDetails
- * TwoLegTransactionType1Choice.SecuritiesFinancingDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.TwoLegTransactionType1Choice#mmSecuritiesFinancingDetails
+ * TwoLegTransactionType1Choice.mmSecuritiesFinancingDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TwoLegTransactionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FutureOrOptionDetails1 futureOrOptionDetails;
 	/**
 	 * Parameters for contracts which obligate the buyer to receive and the
 	 * seller to deliver in the future the assets specified at an agreed price
@@ -79,8 +80,8 @@ public class TwoLegTransactionType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#Derivative
-	 * Asset.Derivative}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmDerivative
+	 * Asset.mmDerivative}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,21 +102,22 @@ public class TwoLegTransactionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FutureOrOptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFutureOrOptionDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmDerivative;
 			componentContext_lazy = () -> TwoLegTransactionType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.Derivative;
 			isDerived = false;
 			xmlTag = "FutrOrOptnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureOrOptionDetails";
 			definition = "Parameters for contracts which obligate the buyer to receive and the seller to deliver in the future the assets specified at an agreed price or contracts which grant to the holder either the privilege to purchase or the privilege to sell the assets specified at a predetermined price or formula at or within a time in the future.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FutureOrOptionDetails1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FutureOrOptionDetails1.mmObject();
 		}
 	};
+	protected SecuritiesFinancing10 securitiesFinancingDetails;
 	/**
 	 * Provides details about the two leg transaction.
 	 * <p>
@@ -147,33 +149,49 @@ public class TwoLegTransactionType1Choice {
 	 * definition} = "Provides details about the two leg transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesFinancingDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesFinancingDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TwoLegTransactionType1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesFinancing.mmObject();
+			componentContext_lazy = () -> TwoLegTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingDetails";
 			definition = "Provides details about the two leg transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesFinancing10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesFinancing10.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TwoLegTransactionType1Choice.FutureOrOptionDetails, com.tools20022.repository.choice.TwoLegTransactionType1Choice.SecuritiesFinancingDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmFutureOrOptionDetails, com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmSecuritiesFinancingDetails);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TwoLegTransactionType1Choice";
 				definition = "Specifies the choice of the two leg transaction type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FutureOrOptionDetails1 getFutureOrOptionDetails() {
+		return futureOrOptionDetails;
+	}
+
+	public void setFutureOrOptionDetails(FutureOrOptionDetails1 futureOrOptionDetails) {
+		this.futureOrOptionDetails = futureOrOptionDetails;
+	}
+
+	public SecuritiesFinancing10 getSecuritiesFinancingDetails() {
+		return securitiesFinancingDetails;
+	}
+
+	public void setSecuritiesFinancingDetails(SecuritiesFinancing10 securitiesFinancingDetails) {
+		this.securitiesFinancingDetails = securitiesFinancingDetails;
 	}
 }

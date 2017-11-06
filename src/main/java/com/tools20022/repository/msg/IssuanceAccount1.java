@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IssuanceAccount1#IssuanceAccount
- * IssuanceAccount1.IssuanceAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.IssuanceAccount1#mmIssuanceAccount
+ * IssuanceAccount1.mmIssuanceAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IssuanceAccount1#PrimaryAccountIndicator
- * IssuanceAccount1.PrimaryAccountIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.IssuanceAccount1#mmPrimaryAccountIndicator
+ * IssuanceAccount1.mmPrimaryAccountIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IssuanceAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccount13 issuanceAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -89,7 +90,7 @@ public class IssuanceAccount1 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuanceAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuanceAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IssuanceAccount1.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class IssuanceAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecuritiesAccount13.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	protected YesNoIndicator primaryAccountIndicator;
 	/**
 	 * Defines if the related issuance account is the primary account or not.
 	 * <p>
@@ -131,7 +133,7 @@ public class IssuanceAccount1 {
 	 * "Defines if the related issuance account is the primary account or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PrimaryAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrimaryAccountIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IssuanceAccount1.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class IssuanceAccount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryAccountIndicator";
 			definition = "Defines if the related issuance account is the primary account or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class IssuanceAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuanceAccount1.IssuanceAccount, com.tools20022.repository.msg.IssuanceAccount1.PrimaryAccountIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuanceAccount1.mmIssuanceAccount, com.tools20022.repository.msg.IssuanceAccount1.mmPrimaryAccountIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IssuanceAccount1";
 				definition = "Defines the account to or from which a securities entry is made and the usage type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccount13 getIssuanceAccount() {
+		return issuanceAccount;
+	}
+
+	public void setIssuanceAccount(com.tools20022.repository.msg.SecuritiesAccount13 issuanceAccount) {
+		this.issuanceAccount = issuanceAccount;
+	}
+
+	public YesNoIndicator getPrimaryAccountIndicator() {
+		return primaryAccountIndicator;
+	}
+
+	public void setPrimaryAccountIndicator(YesNoIndicator primaryAccountIndicator) {
+		this.primaryAccountIndicator = primaryAccountIndicator;
 	}
 }

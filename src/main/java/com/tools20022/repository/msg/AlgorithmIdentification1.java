@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification1#Algorithm
- * AlgorithmIdentification1.Algorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification1#mmAlgorithm
+ * AlgorithmIdentification1.mmAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification1#Parameter
- * AlgorithmIdentification1.Parameter}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification1#mmParameter
+ * AlgorithmIdentification1.mmParameter}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AlgorithmIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm1Code algorithm;
 	/**
 	 * Identification of the algorithm.
 	 * <p>
@@ -100,7 +101,7 @@ public class AlgorithmIdentification1 {
 	 * definition} = "Identification of the algorithm."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification1.mmObject();
 			isDerived = false;
@@ -108,11 +109,12 @@ public class AlgorithmIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the algorithm.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm1Code.mmObject();
 		}
 	};
+	protected Parameter1 parameter;
 	/**
 	 * Parameters associated to the algorithm.
 	 * <p>
@@ -138,7 +140,7 @@ public class AlgorithmIdentification1 {
 	 * definition} = "Parameters associated to the algorithm."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Parameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification1.mmObject();
 			isDerived = false;
@@ -146,18 +148,18 @@ public class AlgorithmIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters associated to the algorithm.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Parameter1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Parameter1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification1.Algorithm, com.tools20022.repository.msg.AlgorithmIdentification1.Parameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification1.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification1.mmParameter);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification1";
 				definition = "Identification of a cryptographic algorithm.";
@@ -165,5 +167,21 @@ public class AlgorithmIdentification1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm1Code getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Algorithm1Code algorithm) {
+		this.algorithm = algorithm;
+	}
+
+	public Parameter1 getParameter() {
+		return parameter;
+	}
+
+	public void setParameter(com.tools20022.repository.msg.Parameter1 parameter) {
+		this.parameter = parameter;
 	}
 }

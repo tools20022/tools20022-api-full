@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Digital signature of data, with an asymmetric key.
@@ -34,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SignedData3#Version
- * SignedData3.Version}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SignedData3#DigestAlgorithm
- * SignedData3.DigestAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SignedData3#mmVersion
+ * SignedData3.mmVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SignedData3#mmDigestAlgorithm
+ * SignedData3.mmDigestAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SignedData3#EncapsulatedContent
- * SignedData3.EncapsulatedContent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SignedData3#Certificate
- * SignedData3.Certificate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SignedData3#Signer
- * SignedData3.Signer}</li>
+ * {@linkplain com.tools20022.repository.msg.SignedData3#mmEncapsulatedContent
+ * SignedData3.mmEncapsulatedContent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SignedData3#mmCertificate
+ * SignedData3.mmCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SignedData3#mmSigner
+ * SignedData3.mmSigner}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SignedData3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number version;
 	/**
 	 * Version of the data structure.
 	 * <p>
@@ -101,18 +103,18 @@ public class SignedData3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SignedData4#Version
-	 * SignedData4.Version}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SignedData4#mmVersion
+	 * SignedData4.mmVersion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SignedData2#Version
-	 * SignedData2.Version}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedData2#mmVersion
+	 * SignedData2.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SignedData3.mmObject();
 			isDerived = false;
@@ -120,13 +122,14 @@ public class SignedData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedData2.Version;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData4.Version);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData4.mmVersion);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedData2.mmVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AlgorithmIdentification5> digestAlgorithm;
 	/**
 	 * Identification of a digest algorithm to apply before signature.
 	 * <p>
@@ -156,18 +159,18 @@ public class SignedData3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SignedData4#DigestAlgorithm
-	 * SignedData4.DigestAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedData4#mmDigestAlgorithm
+	 * SignedData4.mmDigestAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SignedData2#DigestAlgorithm
-	 * SignedData2.DigestAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedData2#mmDigestAlgorithm
+	 * SignedData2.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigestAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigestAlgorithm = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SignedData3.mmObject();
 			isDerived = false;
@@ -175,13 +178,14 @@ public class SignedData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Identification of a digest algorithm to apply before signature.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedData2.DigestAlgorithm;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData4.DigestAlgorithm);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData4.mmDigestAlgorithm);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedData2.mmDigestAlgorithm;
 			minOccurs = 1;
-			type_lazy = () -> AlgorithmIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification5.mmObject();
 		}
 	};
+	protected EncapsulatedContent2 encapsulatedContent;
 	/**
 	 * Data to sign.
 	 * <p>
@@ -209,18 +213,18 @@ public class SignedData3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SignedData4#EncapsulatedContent
-	 * SignedData4.EncapsulatedContent}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedData4#mmEncapsulatedContent
+	 * SignedData4.mmEncapsulatedContent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SignedData2#EncapsulatedContent
-	 * SignedData2.EncapsulatedContent}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedData2#mmEncapsulatedContent
+	 * SignedData2.mmEncapsulatedContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EncapsulatedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SignedData3.mmObject();
 			isDerived = false;
@@ -228,14 +232,15 @@ public class SignedData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncapsulatedContent";
 			definition = "Data to sign.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedData2.EncapsulatedContent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData4.EncapsulatedContent);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData4.mmEncapsulatedContent);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedData2.mmEncapsulatedContent;
 			maxOccurs = 1;
-			type_lazy = () -> EncapsulatedContent2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent2.mmObject();
 		}
 	};
+	protected List<Max3000Binary> certificate;
 	/**
 	 * Chain of X.509 certificates.
 	 * <p>
@@ -264,18 +269,18 @@ public class SignedData3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SignedData4#Certificate
-	 * SignedData4.Certificate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SignedData4#mmCertificate
+	 * SignedData4.mmCertificate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SignedData2#Certificate
-	 * SignedData2.Certificate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedData2#mmCertificate
+	 * SignedData2.mmCertificate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Certificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SignedData3.mmObject();
 			isDerived = false;
@@ -283,12 +288,13 @@ public class SignedData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Chain of X.509 certificates.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedData2.Certificate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData4.Certificate);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData4.mmCertificate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedData2.mmCertificate;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Signer2> signer;
 	/**
 	 * Entity who has signed the data.
 	 * <p>
@@ -314,18 +320,18 @@ public class SignedData3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SignedData4#Signer
-	 * SignedData4.Signer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SignedData4#mmSigner
+	 * SignedData4.mmSigner}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SignedData2#Signer
-	 * SignedData2.Signer}</li>
+	 * {@linkplain com.tools20022.repository.msg.SignedData2#mmSigner
+	 * SignedData2.mmSigner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Signer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSigner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SignedData3.mmObject();
 			isDerived = false;
@@ -333,27 +339,67 @@ public class SignedData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signer";
 			definition = "Entity who has signed the data.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedData2.Signer;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData4.Signer);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData4.mmSigner);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SignedData2.mmSigner;
 			minOccurs = 1;
-			type_lazy = () -> Signer2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Signer2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData3.Version, com.tools20022.repository.msg.SignedData3.DigestAlgorithm, com.tools20022.repository.msg.SignedData3.EncapsulatedContent,
-						com.tools20022.repository.msg.SignedData3.Certificate, com.tools20022.repository.msg.SignedData3.Signer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData3.mmVersion, com.tools20022.repository.msg.SignedData3.mmDigestAlgorithm, com.tools20022.repository.msg.SignedData3.mmEncapsulatedContent,
+						com.tools20022.repository.msg.SignedData3.mmCertificate, com.tools20022.repository.msg.SignedData3.mmSigner);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SignedData3";
 				definition = "Digital signature of data, with an asymmetric key.";
-				previousVersion_lazy = () -> SignedData2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SignedData4.mmObject());
+				previousVersion_lazy = () -> SignedData2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public List<AlgorithmIdentification5> getDigestAlgorithm() {
+		return digestAlgorithm;
+	}
+
+	public void setDigestAlgorithm(List<com.tools20022.repository.msg.AlgorithmIdentification5> digestAlgorithm) {
+		this.digestAlgorithm = digestAlgorithm;
+	}
+
+	public EncapsulatedContent2 getEncapsulatedContent() {
+		return encapsulatedContent;
+	}
+
+	public void setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent2 encapsulatedContent) {
+		this.encapsulatedContent = encapsulatedContent;
+	}
+
+	public List<Max3000Binary> getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(List<Max3000Binary> certificate) {
+		this.certificate = certificate;
+	}
+
+	public List<Signer2> getSigner() {
+		return signer;
+	}
+
+	public void setSigner(List<com.tools20022.repository.msg.Signer2> signer) {
+		this.signer = signer;
 	}
 }

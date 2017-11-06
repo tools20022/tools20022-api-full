@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxTypeFormat2Choice#Unstructured
- * TaxTypeFormat2Choice.Unstructured}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxTypeFormat2Choice#mmUnstructured
+ * TaxTypeFormat2Choice.mmUnstructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxTypeFormat2Choice#Structured
- * TaxTypeFormat2Choice.Structured}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxTypeFormat2Choice#mmStructured
+ * TaxTypeFormat2Choice.mmStructured}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxTypeFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text unstructured;
 	/**
 	 * Specifies the type of tax in free text form.
 	 * <p>
@@ -89,7 +90,7 @@ public class TaxTypeFormat2Choice {
 	 * definition} = "Specifies the type of tax in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxTypeFormat2Choice.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class TaxTypeFormat2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unstructured";
 			definition = "Specifies the type of tax in free text form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TaxType2Code structured;
 	/**
 	 * Specifies the type of tax in structured form.
 	 * <p>
@@ -114,7 +116,7 @@ public class TaxTypeFormat2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Type Tax.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -133,17 +135,17 @@ public class TaxTypeFormat2Choice {
 	 * definition} = "Specifies the type of tax in structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Structured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
 			componentContext_lazy = () -> TaxTypeFormat2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Type;
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Specifies the type of tax in structured form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxType2Code.mmObject();
 		}
 	};
@@ -151,14 +153,30 @@ public class TaxTypeFormat2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxTypeFormat2Choice.Unstructured, com.tools20022.repository.choice.TaxTypeFormat2Choice.Structured);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxTypeFormat2Choice.mmUnstructured, com.tools20022.repository.choice.TaxTypeFormat2Choice.mmStructured);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxTypeFormat2Choice";
 				definition = "Type of tax expressed in structured or free text form.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getUnstructured() {
+		return unstructured;
+	}
+
+	public void setUnstructured(Max35Text unstructured) {
+		this.unstructured = unstructured;
+	}
+
+	public TaxType2Code getStructured() {
+		return structured;
+	}
+
+	public void setStructured(TaxType2Code structured) {
+		this.structured = structured;
 	}
 }

@@ -36,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OpeningBalance1#ShortLongIndicator
- * OpeningBalance1.ShortLongIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OpeningBalance1#OpeningBalance
- * OpeningBalance1.OpeningBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.OpeningBalance1#mmShortLongIndicator
+ * OpeningBalance1.mmShortLongIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OpeningBalance1#mmOpeningBalance
+ * OpeningBalance1.mmOpeningBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OpeningBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ShortLong1Code shortLongIndicator;
 	/**
 	 * Indication that the position is short or long.
 	 * <p>
@@ -85,8 +87,8 @@ public class OpeningBalance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#ShortLong
-	 * SecuritiesBalance.ShortLong}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmShortLong
+	 * SecuritiesBalance.mmShortLong}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,27 +109,28 @@ public class OpeningBalance1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OpeningBalance3#ShortLongIndicator
-	 * OpeningBalance3.ShortLongIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.OpeningBalance3#mmShortLongIndicator
+	 * OpeningBalance3.mmShortLongIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortLongIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> OpeningBalance1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.ShortLong;
 			isDerived = false;
 			xmlTag = "ShrtLngInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongIndicator";
 			definition = "Indication that the position is short or long.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningBalance3.ShortLongIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningBalance3.mmShortLongIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	protected OpeningBalance1Choice openingBalance;
 	/**
 	 * Opening balance for the statement period (first opening balance) or of
 	 * this page (intermediary opening balance)
@@ -142,8 +145,8 @@ public class OpeningBalance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#AggregateQuantity
-	 * SecuritiesBalance.AggregateQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAggregateQuantity
+	 * SecuritiesBalance.mmAggregateQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,24 +169,24 @@ public class OpeningBalance1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OpeningBalance3#OpeningBalance
-	 * OpeningBalance3.OpeningBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.OpeningBalance3#mmOpeningBalance
+	 * OpeningBalance3.mmOpeningBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpeningBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpeningBalance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> OpeningBalance1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.AggregateQuantity;
 			isDerived = false;
 			xmlTag = "OpngBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningBalance";
 			definition = "Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance)";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningBalance3.OpeningBalance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningBalance3.mmOpeningBalance);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OpeningBalance1Choice.mmObject();
 		}
 	};
@@ -191,9 +194,9 @@ public class OpeningBalance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningBalance1.ShortLongIndicator, com.tools20022.repository.msg.OpeningBalance1.OpeningBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningBalance1.mmShortLongIndicator, com.tools20022.repository.msg.OpeningBalance1.mmOpeningBalance);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OpeningBalance1";
 				definition = "Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance).";
@@ -201,5 +204,21 @@ public class OpeningBalance1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ShortLong1Code getShortLongIndicator() {
+		return shortLongIndicator;
+	}
+
+	public void setShortLongIndicator(ShortLong1Code shortLongIndicator) {
+		this.shortLongIndicator = shortLongIndicator;
+	}
+
+	public OpeningBalance1Choice getOpeningBalance() {
+		return openingBalance;
+	}
+
+	public void setOpeningBalance(OpeningBalance1Choice openingBalance) {
+		this.openingBalance = openingBalance;
 	}
 }

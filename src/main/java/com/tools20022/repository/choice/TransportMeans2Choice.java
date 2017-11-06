@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransportMeans2Choice#IndividualTransport
- * TransportMeans2Choice.IndividualTransport}</li>
+ * {@linkplain com.tools20022.repository.choice.TransportMeans2Choice#mmIndividualTransport
+ * TransportMeans2Choice.mmIndividualTransport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransportMeans2Choice#MultimodalTransport
- * TransportMeans2Choice.MultimodalTransport}</li>
+ * {@linkplain com.tools20022.repository.choice.TransportMeans2Choice#mmMultimodalTransport
+ * TransportMeans2Choice.mmMultimodalTransport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportMeans2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SingleTransport2 individualTransport;
 	/**
 	 * Moving of goods or people from one place to another by vehicle.
 	 * <p>
@@ -94,21 +95,22 @@ public class TransportMeans2Choice {
 	 * "Moving of goods or people from one place to another by vehicle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndividualTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividualTransport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransportMeans2Choice.mmObject();
 			businessComponentTrace_lazy = () -> Transport.mmObject();
+			componentContext_lazy = () -> TransportMeans2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvTrnsprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualTransport";
 			definition = "Moving of goods or people from one place to another by vehicle.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SingleTransport2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SingleTransport2.mmObject();
 		}
 	};
+	protected MultimodalTransport2 multimodalTransport;
 	/**
 	 * Specifies the different movements and places and their role in a
 	 * multimodal conveyance of goods.
@@ -142,33 +144,49 @@ public class TransportMeans2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MultimodalTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMultimodalTransport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransportMeans2Choice.mmObject();
 			businessComponentTrace_lazy = () -> Transport.mmObject();
+			componentContext_lazy = () -> TransportMeans2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MltmdlTrnsprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultimodalTransport";
 			definition = "Specifies the different movements and places and their role in a multimodal conveyance of goods.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MultimodalTransport2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MultimodalTransport2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransportMeans2Choice.IndividualTransport, com.tools20022.repository.choice.TransportMeans2Choice.MultimodalTransport);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransportMeans2Choice.mmIndividualTransport, com.tools20022.repository.choice.TransportMeans2Choice.mmMultimodalTransport);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransportMeans2Choice";
 				definition = "Describes the multimodal or the individual transport of goods.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SingleTransport2 getIndividualTransport() {
+		return individualTransport;
+	}
+
+	public void setIndividualTransport(SingleTransport2 individualTransport) {
+		this.individualTransport = individualTransport;
+	}
+
+	public MultimodalTransport2 getMultimodalTransport() {
+		return multimodalTransport;
+	}
+
+	public void setMultimodalTransport(MultimodalTransport2 multimodalTransport) {
+		this.multimodalTransport = multimodalTransport;
 	}
 }

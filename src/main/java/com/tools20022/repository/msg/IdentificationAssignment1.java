@@ -36,20 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IdentificationAssignment1#MessageIdentification
- * IdentificationAssignment1.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IdentificationAssignment1#mmMessageIdentification
+ * IdentificationAssignment1.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IdentificationAssignment1#CreationDateTime
- * IdentificationAssignment1.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.IdentificationAssignment1#mmCreationDateTime
+ * IdentificationAssignment1.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IdentificationAssignment1#Creator
- * IdentificationAssignment1.Creator}</li>
+ * {@linkplain com.tools20022.repository.msg.IdentificationAssignment1#mmCreator
+ * IdentificationAssignment1.mmCreator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IdentificationAssignment1#Assigner
- * IdentificationAssignment1.Assigner}</li>
+ * {@linkplain com.tools20022.repository.msg.IdentificationAssignment1#mmAssigner
+ * IdentificationAssignment1.mmAssigner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IdentificationAssignment1#Assignee
- * IdentificationAssignment1.Assignee}</li>
+ * {@linkplain com.tools20022.repository.msg.IdentificationAssignment1#mmAssignee
+ * IdentificationAssignment1.mmAssignee}</li>
  * </ul>
  * </li>
  * <li>
@@ -57,21 +57,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01#Assignment
- * IdentificationModificationAdviceV01.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01#mmAssignment
+ * IdentificationModificationAdviceV01.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01#Assignment
- * IdentificationVerificationRequestV01.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01#mmAssignment
+ * IdentificationVerificationRequestV01.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.IdentificationVerificationReportV01#Assignment
- * IdentificationVerificationReportV01.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.IdentificationVerificationReportV01#mmAssignment
+ * IdentificationVerificationReportV01.mmAssignment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IdentificationAssignment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Point to point reference, as assigned by the assigner, and sent to the
 	 * next party in the chain to unambiguously identify the message.<br>
@@ -118,7 +119,7 @@ public class IdentificationAssignment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
 			isDerived = false;
@@ -126,11 +127,12 @@ public class IdentificationAssignment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the assigner, and sent to the next party in the chain to unambiguously identify the message.\r\n\r\nUsage: The assigner has to make sure that MessageIdentification is unique per assignee for a pre-agreed period.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the identification assignment was created.
 	 * <p>
@@ -159,7 +161,7 @@ public class IdentificationAssignment1 {
 	 * "Date and time at which the identification assignment was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
 			isDerived = false;
@@ -167,11 +169,12 @@ public class IdentificationAssignment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the identification assignment was created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Party7Choice creator;
 	/**
 	 * Party that created the identification assignment.
 	 * <p>
@@ -198,7 +201,7 @@ public class IdentificationAssignment1 {
 	 * definition} = "Party that created the identification assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Creator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreator = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
 			isDerived = false;
@@ -206,12 +209,13 @@ public class IdentificationAssignment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creator";
 			definition = "Party that created the identification assignment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Party7Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Party7Choice.mmObject();
 		}
 	};
+	protected Party7Choice assigner;
 	/**
 	 * Party that assigns the identification assignment to another party. This
 	 * is also the sender of the message.
@@ -241,7 +245,7 @@ public class IdentificationAssignment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Assigner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssigner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
 			isDerived = false;
@@ -249,12 +253,13 @@ public class IdentificationAssignment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assigner";
 			definition = "Party that assigns the identification assignment to another party. This is also the sender of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Party7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Party7Choice.mmObject();
 		}
 	};
+	protected Party7Choice assignee;
 	/**
 	 * Party that the identification assignment is assigned to. This is also the
 	 * receiver of the message.
@@ -284,7 +289,7 @@ public class IdentificationAssignment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Assignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssignee = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
 			isDerived = false;
@@ -292,26 +297,66 @@ public class IdentificationAssignment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignee";
 			definition = "Party that the identification assignment is assigned to. This is also the receiver of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Party7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Party7Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IdentificationAssignment1.MessageIdentification, com.tools20022.repository.msg.IdentificationAssignment1.CreationDateTime,
-						com.tools20022.repository.msg.IdentificationAssignment1.Creator, com.tools20022.repository.msg.IdentificationAssignment1.Assigner, com.tools20022.repository.msg.IdentificationAssignment1.Assignee);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.Assignment, com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01.Assignment,
-						com.tools20022.repository.area.acmt.IdentificationVerificationReportV01.Assignment);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IdentificationAssignment1.mmMessageIdentification, com.tools20022.repository.msg.IdentificationAssignment1.mmCreationDateTime,
+						com.tools20022.repository.msg.IdentificationAssignment1.mmCreator, com.tools20022.repository.msg.IdentificationAssignment1.mmAssigner, com.tools20022.repository.msg.IdentificationAssignment1.mmAssignee);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.mmAssignment, com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01.mmAssignment,
+						com.tools20022.repository.area.acmt.IdentificationVerificationReportV01.mmAssignment);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IdentificationAssignment1";
 				definition = "Set of elements that identify the identification assignment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public Party7Choice getCreator() {
+		return creator;
+	}
+
+	public void setCreator(Party7Choice creator) {
+		this.creator = creator;
+	}
+
+	public Party7Choice getAssigner() {
+		return assigner;
+	}
+
+	public void setAssigner(Party7Choice assigner) {
+		this.assigner = assigner;
+	}
+
+	public Party7Choice getAssignee() {
+		return assignee;
+	}
+
+	public void setAssignee(Party7Choice assignee) {
+		this.assignee = assignee;
 	}
 }

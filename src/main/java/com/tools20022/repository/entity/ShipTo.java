@@ -35,18 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery1#ShipTo
- * TradeDelivery1.ShipTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery1#UltimateShipTo
- * TradeDelivery1.UltimateShipTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem10#ShipTo
- * LineItem10.ShipTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery2#ShipTo
- * TradeDelivery2.ShipTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery2#UltimateShipTo
- * TradeDelivery2.UltimateShipTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem16#ShipTo
- * LineItem16.ShipTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery1#mmShipTo
+ * TradeDelivery1.mmShipTo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeDelivery1#mmUltimateShipTo
+ * TradeDelivery1.mmUltimateShipTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem10#mmShipTo
+ * LineItem10.mmShipTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery2#mmShipTo
+ * TradeDelivery2.mmShipTo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeDelivery2#mmUltimateShipTo
+ * TradeDelivery2.mmUltimateShipTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem16#mmShipTo
+ * LineItem16.mmShipTo}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -56,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,12 +77,12 @@ public class ShipTo extends CommercialTradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ShipTo";
 				definition = "Party to whom the goods must be delivered.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeDelivery1.ShipTo, com.tools20022.repository.msg.TradeDelivery1.UltimateShipTo, com.tools20022.repository.msg.LineItem10.ShipTo,
-						com.tools20022.repository.msg.TradeDelivery2.ShipTo, com.tools20022.repository.msg.TradeDelivery2.UltimateShipTo, com.tools20022.repository.msg.LineItem16.ShipTo);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeDelivery1.mmShipTo, com.tools20022.repository.msg.TradeDelivery1.mmUltimateShipTo, com.tools20022.repository.msg.LineItem10.mmShipTo,
+						com.tools20022.repository.msg.TradeDelivery2.mmShipTo, com.tools20022.repository.msg.TradeDelivery2.mmUltimateShipTo, com.tools20022.repository.msg.LineItem16.mmShipTo);
 				superType_lazy = () -> CommercialTradePartyRole.mmObject();
 			}
 		});

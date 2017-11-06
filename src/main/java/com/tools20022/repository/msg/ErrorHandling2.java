@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ErrorHandling2#ErrorCode
- * ErrorHandling2.ErrorCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ErrorHandling2#Description
- * ErrorHandling2.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ErrorHandling2#mmErrorCode
+ * ErrorHandling2.mmErrorCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ErrorHandling2#mmDescription
+ * ErrorHandling2.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ErrorHandling2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4AlphaNumericText errorCode;
 	/**
 	 * Specification of the error, in coded form.
 	 * <p>
@@ -85,7 +86,7 @@ public class ErrorHandling2 {
 	 * definition} = "Specification of the error, in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ErrorCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmErrorCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ErrorHandling2.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class ErrorHandling2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorCode";
 			definition = "Specification of the error, in coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max140Text description;
 	/**
 	 * Specification of the error, in free format.
 	 * <p>
@@ -124,7 +126,7 @@ public class ErrorHandling2 {
 	 * definition} = "Specification of the error, in free format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ErrorHandling2.mmObject();
 			isDerived = false;
@@ -132,8 +134,8 @@ public class ErrorHandling2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Specification of the error, in free format.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -141,13 +143,29 @@ public class ErrorHandling2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorHandling2.ErrorCode, com.tools20022.repository.msg.ErrorHandling2.Description);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorHandling2.mmErrorCode, com.tools20022.repository.msg.ErrorHandling2.mmDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ErrorHandling2";
 				definition = "Specifies the error resulting from the processing of a request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4AlphaNumericText getErrorCode() {
+		return errorCode;
+	}
+
+	public void setErrorCode(Max4AlphaNumericText errorCode) {
+		this.errorCode = errorCode;
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
 	}
 }

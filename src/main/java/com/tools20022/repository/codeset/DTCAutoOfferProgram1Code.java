@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAutoOfferProgram1Code#Offine
- * DTCAutoOfferProgram1Code.Offine}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAutoOfferProgram1Code#mmOffine
+ * DTCAutoOfferProgram1Code.mmOffine}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAutoOfferProgram1Code#Online
- * DTCAutoOfferProgram1Code.Online}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAutoOfferProgram1Code#mmOnline
+ * DTCAutoOfferProgram1Code.mmOnline}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class DTCAutoOfferProgram1Code extends DTCAutoOfferProgramCode {
 	 * name} = "Offine"</li>
 	 * </ul>
 	 */
-	public static final MMCode Offine = new MMCode() {
+	public static final MMCode mmOffine = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offine";
@@ -107,7 +107,7 @@ public class DTCAutoOfferProgram1Code extends DTCAutoOfferProgramCode {
 	 * name} = "Online"</li>
 	 * </ul>
 	 */
-	public static final MMCode Online = new MMCode() {
+	public static final MMCode mmOnline = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Online";
@@ -118,12 +118,12 @@ public class DTCAutoOfferProgram1Code extends DTCAutoOfferProgramCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFFL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCAutoOfferProgram1Code";
 				definition = "Indicates what type of interface an agent has with DTC (The Depository Trust Corporation).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAutoOfferProgram1Code.Offine, com.tools20022.repository.codeset.DTCAutoOfferProgram1Code.Online);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAutoOfferProgram1Code.mmOffine, com.tools20022.repository.codeset.DTCAutoOfferProgram1Code.mmOnline);
 				trace_lazy = () -> DTCAutoOfferProgramCode.mmObject();
 			}
 		});

@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.CorporateActionStandingInstruction1;
 import com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set-up at the issuer (agent) of a standing instruction originating from the
@@ -47,17 +48,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#StandingInstructionType
- * AgentCorporateActionStandingInstruction.StandingInstructionType}</li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmStandingInstructionType
+ * AgentCorporateActionStandingInstruction.mmStandingInstructionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#GrossOrNetIndicator
- * AgentCorporateActionStandingInstruction.GrossOrNetIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmGrossOrNetIndicator
+ * AgentCorporateActionStandingInstruction.mmGrossOrNetIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#RelatedDeliveryInstructions
- * AgentCorporateActionStandingInstruction.RelatedDeliveryInstructions}</li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmRelatedDeliveryInstructions
+ * AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#Security
- * AgentCorporateActionStandingInstruction.Security}</li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction#mmSecurity
+ * AgentCorporateActionStandingInstruction.mmSecurity}</li>
  * </ul>
  * </li>
  * <li>
@@ -65,12 +66,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Security#CorporateActionStandingInstructions
- * Security.CorporateActionStandingInstructions}</li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmCorporateActionStandingInstructions
+ * Security.mmCorporateActionStandingInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#CorporateActionStandingInstruction
- * CorporateActionProceedsDeliveryInstruction.CorporateActionStandingInstruction
- * }</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCorporateActionStandingInstruction
+ * CorporateActionProceedsDeliveryInstruction.
+ * mmCorporateActionStandingInstruction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -92,8 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentCorporateActionStandingInstruction extends StandingSettlementInstruction {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected StandingInstructionTypeCode standingInstructionType;
 	/**
 	 * Type of standing instruction.
 	 * <p>
@@ -119,20 +121,20 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.StandingInstructionTypeCode
 	 * StandingInstructionTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1#StandingInstructionType
-	 * CorporateActionStandingInstructionGeneralInformation1.
-	 * StandingInstructionType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction
 	 * AgentCorporateActionStandingInstruction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1#mmStandingInstructionType
+	 * CorporateActionStandingInstructionGeneralInformation1.
+	 * mmStandingInstructionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -144,19 +146,20 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * definition} = "Type of standing instruction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute StandingInstructionType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStandingInstructionType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.StandingInstructionType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmStandingInstructionType);
 			elementContext_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StandingInstructionType";
 			definition = "Type of standing instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StandingInstructionTypeCode.mmObject();
 		}
 	};
+	protected StandingInstructionGrossNetCode grossOrNetIndicator;
 	/**
 	 * Indicates whether the payments must always be gross or net.
 	 * <p>
@@ -167,19 +170,19 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNetCode
 	 * StandingInstructionGrossNetCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#NetOrGross
-	 * CorporateActionStandingInstruction1.NetOrGross}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction
 	 * AgentCorporateActionStandingInstruction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionStandingInstruction1#mmNetOrGross
+	 * CorporateActionStandingInstruction1.mmNetOrGross}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -192,19 +195,20 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * "Indicates whether the payments must always be gross or net."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute GrossOrNetIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmGrossOrNetIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstruction1.NetOrGross);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmNetOrGross);
 			elementContext_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GrossOrNetIndicator";
 			definition = "Indicates whether the payments must always be gross or net.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StandingInstructionGrossNetCode.mmObject();
 		}
 	};
+	protected CorporateActionProceedsDeliveryInstruction relatedDeliveryInstructions;
 	/**
 	 * Corporate action delivery instructions which contain settlement standing
 	 * instructions.
@@ -214,9 +218,9 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#CorporateActionStandingInstruction
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCorporateActionStandingInstruction
 	 * CorporateActionProceedsDeliveryInstruction.
-	 * CorporateActionStandingInstruction}</li>
+	 * mmCorporateActionStandingInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -243,20 +247,21 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedDeliveryInstructions = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedDeliveryInstructions = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedDeliveryInstructions";
 			definition = "Corporate action delivery instructions which contain settlement standing instructions.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.CorporateActionStandingInstruction;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmCorporateActionStandingInstruction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Security> security;
 	/**
 	 * Financial instrument to which the standing instruction applies.
 	 * <p>
@@ -265,8 +270,8 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Security#CorporateActionStandingInstructions
-	 * Security.CorporateActionStandingInstructions}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmCorporateActionStandingInstructions
+	 * Security.mmCorporateActionStandingInstructions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -290,7 +295,7 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 	 * "Financial instrument to which the standing instruction applies."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Security = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
 			isDerived = false;
@@ -298,28 +303,60 @@ public class AgentCorporateActionStandingInstruction extends StandingSettlementI
 			name = "Security";
 			definition = "Financial instrument to which the standing instruction applies.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Security.CorporateActionStandingInstructions;
+			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmCorporateActionStandingInstructions;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AgentCorporateActionStandingInstruction";
 				definition = "Set-up at the issuer (agent) of a standing instruction originating from the CSD Participants. These standing instructions allow the participant to indicate details for the distribution of the outturn resources of a CA event outside of the CSD. A standing instruction can be accepted or rejected by the issuer (agent) and a CSD participant can amend or cancel a standing instruction.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.CorporateActionStandingInstructions,
-						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.CorporateActionStandingInstruction);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmCorporateActionStandingInstructions,
+						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmCorporateActionStandingInstruction);
 				superType_lazy = () -> StandingSettlementInstruction.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.StandingInstructionType,
-						com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.GrossOrNetIndicator, com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.RelatedDeliveryInstructions,
-						com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.Security);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmStandingInstructionType,
+						com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmGrossOrNetIndicator, com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions,
+						com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmSecurity);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionStandingInstructionGeneralInformation1.mmObject(), CorporateActionStandingInstruction1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StandingInstructionTypeCode getStandingInstructionType() {
+		return standingInstructionType;
+	}
+
+	public void setStandingInstructionType(StandingInstructionTypeCode standingInstructionType) {
+		this.standingInstructionType = standingInstructionType;
+	}
+
+	public StandingInstructionGrossNetCode getGrossOrNetIndicator() {
+		return grossOrNetIndicator;
+	}
+
+	public void setGrossOrNetIndicator(StandingInstructionGrossNetCode grossOrNetIndicator) {
+		this.grossOrNetIndicator = grossOrNetIndicator;
+	}
+
+	public CorporateActionProceedsDeliveryInstruction getRelatedDeliveryInstructions() {
+		return relatedDeliveryInstructions;
+	}
+
+	public void setRelatedDeliveryInstructions(com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction relatedDeliveryInstructions) {
+		this.relatedDeliveryInstructions = relatedDeliveryInstructions;
+	}
+
+	public List<Security> getSecurity() {
+		return security;
+	}
+
+	public void setSecurity(List<com.tools20022.repository.entity.Security> security) {
+		this.security = security;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.CashAccount23;
 import com.tools20022.repository.msg.ErrorHandling4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between account details or a business error when the requested data
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError2Choice#Account
- * AccountOrBusinessError2Choice.Account}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError2Choice#mmAccount
+ * AccountOrBusinessError2Choice.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError2Choice#BusinessError
- * AccountOrBusinessError2Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError2Choice#mmBusinessError
+ * AccountOrBusinessError2Choice.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountOrBusinessError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccount23 account;
 	/**
 	 * Requested information on the account.
 	 * <p>
@@ -101,26 +103,27 @@ public class AccountOrBusinessError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError1Choice#Account
-	 * AccountOrBusinessError1Choice.Account}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError1Choice#mmAccount
+	 * AccountOrBusinessError1Choice.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountOrBusinessError2Choice.mmObject();
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
+			componentContext_lazy = () -> AccountOrBusinessError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Requested information on the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountOrBusinessError1Choice.Account;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountOrBusinessError1Choice.mmAccount;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount23.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CashAccount23.mmObject();
 		}
 	};
+	protected List<ErrorHandling4> businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -148,11 +151,11 @@ public class AccountOrBusinessError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError1Choice#BusinessError
-	 * AccountOrBusinessError1Choice.BusinessError}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError1Choice#mmBusinessError
+	 * AccountOrBusinessError1Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountOrBusinessError2Choice.mmObject();
 			isDerived = false;
@@ -160,19 +163,19 @@ public class AccountOrBusinessError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountOrBusinessError1Choice.BusinessError;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountOrBusinessError1Choice.mmBusinessError;
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling4.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrBusinessError2Choice.Account, com.tools20022.repository.choice.AccountOrBusinessError2Choice.BusinessError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrBusinessError2Choice.mmAccount, com.tools20022.repository.choice.AccountOrBusinessError2Choice.mmBusinessError);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountOrBusinessError2Choice";
 				definition = "Choice between account details or a business error when the requested data cannot be retrieved.";
@@ -180,5 +183,21 @@ public class AccountOrBusinessError2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccount23 getAccount() {
+		return account;
+	}
+
+	public void setAccount(CashAccount23 account) {
+		this.account = account;
+	}
+
+	public List<ErrorHandling4> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<ErrorHandling4> businessError) {
+		this.businessError = businessError;
 	}
 }

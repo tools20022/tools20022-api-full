@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.FundsCashFlow;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about a cash forecast report.
@@ -33,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport1#FundCashForecastDetails
- * FundConfirmedCashForecastReport1.FundCashForecastDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport1#mmFundCashForecastDetails
+ * FundConfirmedCashForecastReport1.mmFundCashForecastDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport1#Extension
- * FundConfirmedCashForecastReport1.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport1#mmExtension
+ * FundConfirmedCashForecastReport1.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,16 +49,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#CashForecastReportToBeCancelled
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#mmCashForecastReportToBeCancelled
  * FundConfirmedCashForecastReportCancellationV01.
- * CashForecastReportToBeCancelled}</li>
+ * mmCashForecastReportToBeCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundConfirmedCashForecastReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.FundCashForecast1> fundCashForecastDetails;
 	/**
 	 * Information related to the cash-in and cash-out flows for a specific
 	 * trade date as a result of investment fund transactions, for example,
@@ -107,20 +109,21 @@ public class FundConfirmedCashForecastReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FundCashForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFundCashForecastDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FundConfirmedCashForecastReport1.mmObject();
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
+			componentContext_lazy = () -> FundConfirmedCashForecastReport1.mmObject();
 			isDerived = false;
 			xmlTag = "FndCshFcstDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCashForecastDetails";
 			definition = "Information related to the cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example, subscriptions, redemptions or switches to/from a specified investment fund.";
 			minOccurs = 1;
-			type_lazy = () -> FundCashForecast1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -149,7 +152,7 @@ public class FundConfirmedCashForecastReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FundConfirmedCashForecastReport1.mmObject();
 			isDerived = false;
@@ -158,23 +161,39 @@ public class FundConfirmedCashForecastReport1 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundConfirmedCashForecastReport1.FundCashForecastDetails, com.tools20022.repository.msg.FundConfirmedCashForecastReport1.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundConfirmedCashForecastReport1.mmFundCashForecastDetails, com.tools20022.repository.msg.FundConfirmedCashForecastReport1.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.mmCashForecastReportToBeCancelled);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.CashForecastReportToBeCancelled);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundConfirmedCashForecastReport1";
 				definition = "Information about a cash forecast report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<FundCashForecast1> getFundCashForecastDetails() {
+		return fundCashForecastDetails;
+	}
+
+	public void setFundCashForecastDetails(List<com.tools20022.repository.msg.FundCashForecast1> fundCashForecastDetails) {
+		this.fundCashForecastDetails = fundCashForecastDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

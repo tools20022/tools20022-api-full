@@ -67,24 +67,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#PreviousReference
- * StatementOfInvestmentFundTransactionsCancellation.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#mmPreviousReference
+ * StatementOfInvestmentFundTransactionsCancellation.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#RelatedReference
- * StatementOfInvestmentFundTransactionsCancellation.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#mmRelatedReference
+ * StatementOfInvestmentFundTransactionsCancellation.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#MessagePagination
- * StatementOfInvestmentFundTransactionsCancellation.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#mmMessagePagination
+ * StatementOfInvestmentFundTransactionsCancellation.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#StatementToBeCancelled
- * StatementOfInvestmentFundTransactionsCancellation.StatementToBeCancelled}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#mmStatementToBeCancelled
+ * StatementOfInvestmentFundTransactionsCancellation.mmStatementToBeCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#identifier
- * StatementOfInvestmentFundTransactionsCancellation.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.007.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementOfInvestmentFundTransactionsCancellation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalReference2 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -131,17 +130,18 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -166,17 +166,18 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Pagination of the message.
 	 * <p>
@@ -199,17 +200,18 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected StatementOfInvestmentFundTransactions1 statementToBeCancelled;
 	/**
 	 * The Statement of Investment Fund Transactions message to cancel.
 	 * <p>
@@ -234,42 +236,15 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 	 * "The Statement of Investment Fund Transactions message to cancel."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementToBeCancelled = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementToBeCancelled = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtToBeCanc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementToBeCancelled";
 			definition = "The Statement of Investment Fund Transactions message to cancel.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatementOfInvestmentFundTransactions1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "007";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -285,12 +260,51 @@ public class StatementOfInvestmentFundTransactionsCancellation {
 				xmlTag = "semt.007.001.01";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
 				xmlName = "semt.007.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.PreviousReference,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.RelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.MessagePagination,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.StatementToBeCancelled);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmPreviousReference,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmRelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmMessagePagination,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmStatementToBeCancelled);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "007";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalReference2 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference2 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference2 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public StatementOfInvestmentFundTransactions1 getStatementToBeCancelled() {
+		return statementToBeCancelled;
+	}
+
+	public void setStatementToBeCancelled(StatementOfInvestmentFundTransactions1 statementToBeCancelled) {
+		this.statementToBeCancelled = statementToBeCancelled;
 	}
 }

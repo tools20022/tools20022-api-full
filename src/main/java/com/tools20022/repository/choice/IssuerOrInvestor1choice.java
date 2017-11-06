@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IssuerOrInvestor1choice#IssuerCSD
- * IssuerOrInvestor1choice.IssuerCSD}</li>
+ * {@linkplain com.tools20022.repository.choice.IssuerOrInvestor1choice#mmIssuerCSD
+ * IssuerOrInvestor1choice.mmIssuerCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IssuerOrInvestor1choice#InvestorCSD
- * IssuerOrInvestor1choice.InvestorCSD}</li>
+ * {@linkplain com.tools20022.repository.choice.IssuerOrInvestor1choice#mmInvestorCSD
+ * IssuerOrInvestor1choice.mmInvestorCSD}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IssuerOrInvestor1choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemPartyIdentification1Choice issuerCSD;
 	/**
 	 * CSD Issuer of a security.
 	 * <p>
@@ -84,7 +85,7 @@ public class IssuerOrInvestor1choice {
 	 * definition} = "CSD Issuer of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IssuerOrInvestor1choice.mmObject();
 			isDerived = false;
@@ -92,12 +93,13 @@ public class IssuerOrInvestor1choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "CSD Issuer of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	protected SystemPartyIdentification1Choice investorCSD;
 	/**
 	 * CSD Investor of a security.
 	 * <p>
@@ -125,7 +127,7 @@ public class IssuerOrInvestor1choice {
 	 * definition} = "CSD Investor of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestorCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestorCSD = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IssuerOrInvestor1choice.mmObject();
 			isDerived = false;
@@ -133,23 +135,39 @@ public class IssuerOrInvestor1choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCSD";
 			definition = "CSD Investor of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IssuerOrInvestor1choice.IssuerCSD, com.tools20022.repository.choice.IssuerOrInvestor1choice.InvestorCSD);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IssuerOrInvestor1choice.mmIssuerCSD, com.tools20022.repository.choice.IssuerOrInvestor1choice.mmInvestorCSD);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IssuerOrInvestor1choice";
 				definition = "Defines how the CSD is linked to the security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemPartyIdentification1Choice getIssuerCSD() {
+		return issuerCSD;
+	}
+
+	public void setIssuerCSD(com.tools20022.repository.choice.SystemPartyIdentification1Choice issuerCSD) {
+		this.issuerCSD = issuerCSD;
+	}
+
+	public SystemPartyIdentification1Choice getInvestorCSD() {
+		return investorCSD;
+	}
+
+	public void setInvestorCSD(com.tools20022.repository.choice.SystemPartyIdentification1Choice investorCSD) {
+		this.investorCSD = investorCSD;
 	}
 }

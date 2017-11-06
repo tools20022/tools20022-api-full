@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ModifiedStatusReason1Code#ModifiedByYourself
- * ModifiedStatusReason1Code.ModifiedByYourself}</li>
+ * {@linkplain com.tools20022.repository.codeset.ModifiedStatusReason1Code#mmModifiedByYourself
+ * ModifiedStatusReason1Code.mmModifiedByYourself}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ModifiedStatusReason1Code#Other
- * ModifiedStatusReason1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.ModifiedStatusReason1Code#mmOther
+ * ModifiedStatusReason1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class ModifiedStatusReason1Code extends ModifiedStatusReasonCode {
 	 * name} = "ModifiedByYourself"</li>
 	 * </ul>
 	 */
-	public static final MMCode ModifiedByYourself = new MMCode() {
+	public static final MMCode mmModifiedByYourself = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedByYourself";
@@ -104,7 +104,7 @@ public class ModifiedStatusReason1Code extends ModifiedStatusReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -115,12 +115,12 @@ public class ModifiedStatusReason1Code extends ModifiedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MDBY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModifiedStatusReason1Code";
 				definition = "Specifies that the transaction has been modified.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ModifiedStatusReason1Code.ModifiedByYourself, com.tools20022.repository.codeset.ModifiedStatusReason1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ModifiedStatusReason1Code.mmModifiedByYourself, com.tools20022.repository.codeset.ModifiedStatusReason1Code.mmOther);
 				trace_lazy = () -> ModifiedStatusReasonCode.mmObject();
 			}
 		});

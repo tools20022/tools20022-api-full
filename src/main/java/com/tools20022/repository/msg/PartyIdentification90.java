@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification90#IdentificationType
- * PartyIdentification90.IdentificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification90#mmIdentificationType
+ * PartyIdentification90.mmIdentificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification90#Identification
- * PartyIdentification90.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification90#mmIdentification
+ * PartyIdentification90.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification90 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentificationType1Code identificationType;
 	/**
 	 * Specifies a type of party identification.
 	 * <p>
@@ -90,7 +91,7 @@ public class PartyIdentification90 {
 	 * definition} = "Specifies a type of party identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentification90.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class PartyIdentification90 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationType";
 			definition = "Specifies a type of party identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PartyIdentificationType1Code.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Identification of a party related information.
 	 * <p>
@@ -130,7 +132,7 @@ public class PartyIdentification90 {
 	 * definition} = "Identification of a party related information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyIdentification90.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class PartyIdentification90 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a party related information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -147,13 +149,29 @@ public class PartyIdentification90 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification90.IdentificationType, com.tools20022.repository.msg.PartyIdentification90.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification90.mmIdentificationType, com.tools20022.repository.msg.PartyIdentification90.mmIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification90";
 				definition = "Information related to a party identification. For example, party identification or account identification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentificationType1Code getIdentificationType() {
+		return identificationType;
+	}
+
+	public void setIdentificationType(PartyIdentificationType1Code identificationType) {
+		this.identificationType = identificationType;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
 	}
 }

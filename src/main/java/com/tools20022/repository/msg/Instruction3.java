@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.InstructionForMeeting;
 import com.tools20022.repository.entity.Person;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information on the instruction.
@@ -38,25 +39,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Instruction3#InstructionIdentification
- * Instruction3.InstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Instruction3#mmInstructionIdentification
+ * Instruction3.mmInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Instruction3#RequestedExecutionDate
- * Instruction3.RequestedExecutionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.Instruction3#mmRequestedExecutionDate
+ * Instruction3.mmRequestedExecutionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Instruction3#VoteExecutionConfirmation
- * Instruction3.VoteExecutionConfirmation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Instruction3#AccountDetails
- * Instruction3.AccountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Instruction3#Proxy
- * Instruction3.Proxy}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Instruction3#VoteDetails
- * Instruction3.VoteDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Instruction3#MeetingAttendee
- * Instruction3.MeetingAttendee}</li>
+ * {@linkplain com.tools20022.repository.msg.Instruction3#mmVoteExecutionConfirmation
+ * Instruction3.mmVoteExecutionConfirmation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Instruction3#mmAccountDetails
+ * Instruction3.mmAccountDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Instruction3#mmProxy
+ * Instruction3.mmProxy}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Instruction3#mmVoteDetails
+ * Instruction3.mmVoteDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Instruction3#mmMeetingAttendee
+ * Instruction3.mmMeetingAttendee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Instruction3#SpecificInstructionRequest
- * Instruction3.SpecificInstructionRequest}</li>
+ * {@linkplain com.tools20022.repository.msg.Instruction3#mmSpecificInstructionRequest
+ * Instruction3.mmSpecificInstructionRequest}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,15 +68,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#Instruction
- * MeetingInstructionV05.Instruction}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingInstructionV05#mmInstruction
+ * MeetingInstructionV05.mmInstruction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Instruction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text instructionIdentification;
 	/**
 	 * Identifies the detailed instruction.
 	 * <p>
@@ -119,11 +121,11 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Instruction2#InstructionIdentification
-	 * Instruction2.InstructionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Instruction2#mmInstructionIdentification
+	 * Instruction2.mmInstructionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Instruction3.mmObject();
 			isDerived = false;
@@ -131,12 +133,13 @@ public class Instruction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Identifies the detailed instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.InstructionIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.mmInstructionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime requestedExecutionDate;
 	/**
 	 * Date at which the instruction must be executed.
 	 * <p>
@@ -149,8 +152,8 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#RequestedExecutionDate
-	 * InstructionForMeeting.RequestedExecutionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmRequestedExecutionDate
+	 * InstructionForMeeting.mmRequestedExecutionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,25 +172,26 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Instruction2#RequestedExecutionDate
-	 * Instruction2.RequestedExecutionDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.Instruction2#mmRequestedExecutionDate
+	 * Instruction2.mmRequestedExecutionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmRequestedExecutionDate;
 			componentContext_lazy = () -> Instruction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.RequestedExecutionDate;
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the instruction must be executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.RequestedExecutionDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.mmRequestedExecutionDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected YesNoIndicator voteExecutionConfirmation;
 	/**
 	 * Indicates that a vote execution confirmation is requested.
 	 * <p>
@@ -201,8 +205,8 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#VoteExecutionConfirmation
-	 * VoteInstructionRequest.VoteExecutionConfirmation}</li>
+	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVoteExecutionConfirmation
+	 * VoteInstructionRequest.mmVoteExecutionConfirmation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -222,25 +226,26 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Instruction2#VoteExecutionConfirmation
-	 * Instruction2.VoteExecutionConfirmation}</li>
+	 * {@linkplain com.tools20022.repository.msg.Instruction2#mmVoteExecutionConfirmation
+	 * Instruction2.mmVoteExecutionConfirmation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteExecutionConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteExecutionConfirmation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteExecutionConfirmation;
 			componentContext_lazy = () -> Instruction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.VoteExecutionConfirmation;
 			isDerived = false;
 			xmlTag = "VoteExctnConf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteExecutionConfirmation";
 			definition = "Indicates that a vote execution confirmation is requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.VoteExecutionConfirmation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.mmVoteExecutionConfirmation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected SafekeepingAccount6 accountDetails;
 	/**
 	 * Identification of the securities account.
 	 * <p>
@@ -252,8 +257,8 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#SecuritiesAccount
-	 * CorporateActionServicing.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionServicing#mmSecuritiesAccount
+	 * CorporateActionServicing.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -272,26 +277,27 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Instruction2#AccountDetails
-	 * Instruction2.AccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Instruction2#mmAccountDetails
+	 * Instruction2.mmAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmSecuritiesAccount;
 			componentContext_lazy = () -> Instruction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Identification of the securities account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.AccountDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.mmAccountDetails;
 			maxOccurs = 1;
-			type_lazy = () -> SafekeepingAccount6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount6.mmObject();
 		}
 	};
+	protected Proxy6 proxy;
 	/**
 	 * Identification of the person appointed by the security holder as proxy.
 	 * <p>
@@ -302,8 +308,8 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#ProxyAppointment
-	 * InstructionForMeeting.ProxyAppointment}</li>
+	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmProxyAppointment
+	 * InstructionForMeeting.mmProxyAppointment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -324,26 +330,27 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Instruction2#Proxy
-	 * Instruction2.Proxy}</li>
+	 * {@linkplain com.tools20022.repository.msg.Instruction2#mmProxy
+	 * Instruction2.mmProxy}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProxy = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmProxyAppointment;
 			componentContext_lazy = () -> Instruction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.ProxyAppointment;
 			isDerived = false;
 			xmlTag = "Prxy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proxy";
 			definition = "Identification of the person appointed by the security holder as proxy.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.Proxy;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.mmProxy;
 			maxOccurs = 1;
-			type_lazy = () -> Proxy6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Proxy6.mmObject();
 		}
 	};
+	protected VoteDetails3 voteDetails;
 	/**
 	 * Specifies detailed voting instructions.
 	 * <p>
@@ -355,8 +362,8 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#VoteInstruction
-	 * InstructionForMeeting.VoteInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmVoteInstruction
+	 * InstructionForMeeting.mmVoteInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -375,26 +382,27 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Instruction2#VoteDetails
-	 * Instruction2.VoteDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Instruction2#mmVoteDetails
+	 * Instruction2.mmVoteDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VoteDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVoteDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmVoteInstruction;
 			componentContext_lazy = () -> Instruction3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.VoteInstruction;
 			isDerived = false;
 			xmlTag = "VoteDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteDetails";
 			definition = "Specifies detailed voting instructions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.VoteDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.mmVoteDetails;
 			maxOccurs = 1;
-			type_lazy = () -> VoteDetails3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.VoteDetails3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IndividualPerson26> meetingAttendee;
 	/**
 	 * Identification of the security holder who will attend and vote at the
 	 * meeting in person and/or the person assigned by the security holder to
@@ -429,25 +437,26 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Instruction2#MeetingAttendee
-	 * Instruction2.MeetingAttendee}</li>
+	 * {@linkplain com.tools20022.repository.msg.Instruction2#mmMeetingAttendee
+	 * Instruction2.mmMeetingAttendee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MeetingAttendee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMeetingAttendee = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Instruction3.mmObject();
 			businessComponentTrace_lazy = () -> Person.mmObject();
+			componentContext_lazy = () -> Instruction3.mmObject();
 			isDerived = false;
 			xmlTag = "MtgAttndee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingAttendee";
 			definition = "Identification of the security holder who will attend and vote at the meeting in person and/or the person assigned by the security holder to attend the meeting without having any voting rights or taking any action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.MeetingAttendee;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.mmMeetingAttendee;
 			minOccurs = 0;
-			type_lazy = () -> IndividualPerson26.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson26.mmObject();
 		}
 	};
+	protected SpecificInstructionRequest1 specificInstructionRequest;
 	/**
 	 * Request to execute specific instructions, such as participation
 	 * registration, securities registration or blocking of securities.
@@ -483,36 +492,36 @@ public class Instruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Instruction2#SpecificInstructionRequest
-	 * Instruction2.SpecificInstructionRequest}</li>
+	 * {@linkplain com.tools20022.repository.msg.Instruction2#mmSpecificInstructionRequest
+	 * Instruction2.mmSpecificInstructionRequest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SpecificInstructionRequest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSpecificInstructionRequest = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Instruction3.mmObject();
 			businessComponentTrace_lazy = () -> InstructionForMeeting.mmObject();
+			componentContext_lazy = () -> Instruction3.mmObject();
 			isDerived = false;
 			xmlTag = "SpcfcInstrReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificInstructionRequest";
 			definition = "Request to execute specific instructions, such as participation registration, securities registration or blocking of securities.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.SpecificInstructionRequest;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Instruction2.mmSpecificInstructionRequest;
 			maxOccurs = 1;
-			type_lazy = () -> SpecificInstructionRequest1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SpecificInstructionRequest1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction3.InstructionIdentification, com.tools20022.repository.msg.Instruction3.RequestedExecutionDate,
-						com.tools20022.repository.msg.Instruction3.VoteExecutionConfirmation, com.tools20022.repository.msg.Instruction3.AccountDetails, com.tools20022.repository.msg.Instruction3.Proxy,
-						com.tools20022.repository.msg.Instruction3.VoteDetails, com.tools20022.repository.msg.Instruction3.MeetingAttendee, com.tools20022.repository.msg.Instruction3.SpecificInstructionRequest);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction3.mmInstructionIdentification, com.tools20022.repository.msg.Instruction3.mmRequestedExecutionDate,
+						com.tools20022.repository.msg.Instruction3.mmVoteExecutionConfirmation, com.tools20022.repository.msg.Instruction3.mmAccountDetails, com.tools20022.repository.msg.Instruction3.mmProxy,
+						com.tools20022.repository.msg.Instruction3.mmVoteDetails, com.tools20022.repository.msg.Instruction3.mmMeetingAttendee, com.tools20022.repository.msg.Instruction3.mmSpecificInstructionRequest);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionV05.mmInstruction);
 				trace_lazy = () -> InstructionForMeeting.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionV05.Instruction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Instruction3";
 				definition = "Provides information on the instruction.";
@@ -520,5 +529,69 @@ public class Instruction3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getInstructionIdentification() {
+		return instructionIdentification;
+	}
+
+	public void setInstructionIdentification(Max35Text instructionIdentification) {
+		this.instructionIdentification = instructionIdentification;
+	}
+
+	public ISODateTime getRequestedExecutionDate() {
+		return requestedExecutionDate;
+	}
+
+	public void setRequestedExecutionDate(ISODateTime requestedExecutionDate) {
+		this.requestedExecutionDate = requestedExecutionDate;
+	}
+
+	public YesNoIndicator getVoteExecutionConfirmation() {
+		return voteExecutionConfirmation;
+	}
+
+	public void setVoteExecutionConfirmation(YesNoIndicator voteExecutionConfirmation) {
+		this.voteExecutionConfirmation = voteExecutionConfirmation;
+	}
+
+	public SafekeepingAccount6 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(com.tools20022.repository.msg.SafekeepingAccount6 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public Proxy6 getProxy() {
+		return proxy;
+	}
+
+	public void setProxy(com.tools20022.repository.msg.Proxy6 proxy) {
+		this.proxy = proxy;
+	}
+
+	public VoteDetails3 getVoteDetails() {
+		return voteDetails;
+	}
+
+	public void setVoteDetails(com.tools20022.repository.msg.VoteDetails3 voteDetails) {
+		this.voteDetails = voteDetails;
+	}
+
+	public List<IndividualPerson26> getMeetingAttendee() {
+		return meetingAttendee;
+	}
+
+	public void setMeetingAttendee(List<com.tools20022.repository.msg.IndividualPerson26> meetingAttendee) {
+		this.meetingAttendee = meetingAttendee;
+	}
+
+	public SpecificInstructionRequest1 getSpecificInstructionRequest() {
+		return specificInstructionRequest;
+	}
+
+	public void setSpecificInstructionRequest(com.tools20022.repository.msg.SpecificInstructionRequest1 specificInstructionRequest) {
+		this.specificInstructionRequest = specificInstructionRequest;
 	}
 }

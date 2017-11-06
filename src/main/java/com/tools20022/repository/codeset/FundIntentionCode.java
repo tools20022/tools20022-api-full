@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundIntentionCode#Qualified
- * FundIntentionCode.Qualified}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundIntentionCode#mmQualified
+ * FundIntentionCode.mmQualified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundIntentionCode#NotQualified
- * FundIntentionCode.NotQualified}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundIntentionCode#mmNotQualified
+ * FundIntentionCode.mmNotQualified}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,7 +83,7 @@ public class FundIntentionCode {
 	 * definition} = "Qualified."</li>
 	 * </ul>
 	 */
-	public static final MMCode Qualified = new MMCode() {
+	public static final MMCode mmQualified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualified";
@@ -113,7 +113,7 @@ public class FundIntentionCode {
 	 * definition} = "Not qualified."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotQualified = new MMCode() {
+	public static final MMCode mmNotQualified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotQualified";
@@ -126,11 +126,11 @@ public class FundIntentionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundIntentionCode";
 				definition = "Specifies if the fund is intended for qualified investors.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundIntentionCode.Qualified, com.tools20022.repository.codeset.FundIntentionCode.NotQualified);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundIntentionCode.mmQualified, com.tools20022.repository.codeset.FundIntentionCode.mmNotQualified);
 				derivation_lazy = () -> Arrays.asList(FundIntention1Code.mmObject());
 			}
 		});

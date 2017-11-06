@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -31,7 +32,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Count1#Number Count1.Number}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Count1#mmNumber
+ * Count1.mmNumber}</li>
  * </ul>
  * </li>
  * <li>
@@ -39,30 +41,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#AcceptedAmendmentNumber
- * AmendmentAcceptanceV02.AcceptedAmendmentNumber}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02#mmAcceptedAmendmentNumber
+ * AmendmentAcceptanceV02.mmAcceptedAmendmentNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#AcceptedAmendmentNumber
- * AmendmentAcceptanceNotificationV03.AcceptedAmendmentNumber}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#mmAcceptedAmendmentNumber
+ * AmendmentAcceptanceNotificationV03.mmAcceptedAmendmentNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionV02#RejectedAmendmentNumber
- * AmendmentRejectionV02.RejectedAmendmentNumber}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionV02#mmRejectedAmendmentNumber
+ * AmendmentRejectionV02.mmRejectedAmendmentNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#RejectedAmendmentNumber
- * AmendmentRejectionNotificationV03.RejectedAmendmentNumber}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#mmRejectedAmendmentNumber
+ * AmendmentRejectionNotificationV03.mmRejectedAmendmentNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#AmendmentNumber
- * DeltaReportV03.AmendmentNumber}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmAmendmentNumber
+ * DeltaReportV03.mmAmendmentNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#NumberOfErrors
- * ErrorReportV03.NumberOfErrors}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmNumberOfErrors
+ * ErrorReportV03.mmNumberOfErrors}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Count1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number number;
 	/**
 	 * Sequence or total number.
 	 * <p>
@@ -102,7 +105,7 @@ public class Count1 {
 	 * definition} = "Sequence or total number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Count1.mmObject();
 			isDerived = false;
@@ -110,26 +113,34 @@ public class Count1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Sequence or total number.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.datatype.Number.mmObject();
+			minOccurs = 1;
+			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Count1.Number);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.AcceptedAmendmentNumber,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.AcceptedAmendmentNumber, com.tools20022.repository.area.tsmt.AmendmentRejectionV02.RejectedAmendmentNumber,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.RejectedAmendmentNumber, com.tools20022.repository.area.tsmt.DeltaReportV03.AmendmentNumber,
-						com.tools20022.repository.area.tsmt.ErrorReportV03.NumberOfErrors);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Count1.mmNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmAcceptedAmendmentNumber,
+						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmAcceptedAmendmentNumber, com.tools20022.repository.area.tsmt.AmendmentRejectionV02.mmRejectedAmendmentNumber,
+						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmRejectedAmendmentNumber, com.tools20022.repository.area.tsmt.DeltaReportV03.mmAmendmentNumber,
+						com.tools20022.repository.area.tsmt.ErrorReportV03.mmNumberOfErrors);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Count1";
 				definition = "Specifies a sequence number or a total.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getNumber() {
+		return number;
+	}
+
+	public void setNumber(Number number) {
+		this.number = number;
 	}
 }

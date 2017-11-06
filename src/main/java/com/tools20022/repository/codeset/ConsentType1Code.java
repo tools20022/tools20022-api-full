@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConsentType1Code#ChangeInTerms
- * ConsentType1Code.ChangeInTerms}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConsentType1Code#mmChangeInTerms
+ * ConsentType1Code.mmChangeInTerms}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConsentType1Code#DueAndPayable
- * ConsentType1Code.DueAndPayable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConsentType1Code#mmDueAndPayable
+ * ConsentType1Code.mmDueAndPayable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class ConsentType1Code extends ConsentTypeCode {
 	 * name} = "ChangeInTerms"</li>
 	 * </ul>
 	 */
-	public static final MMCode ChangeInTerms = new MMCode() {
+	public static final MMCode mmChangeInTerms = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInTerms";
@@ -98,7 +98,7 @@ public class ConsentType1Code extends ConsentTypeCode {
 	 * name} = "DueAndPayable"</li>
 	 * </ul>
 	 */
-	public static final MMCode DueAndPayable = new MMCode() {
+	public static final MMCode mmDueAndPayable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueAndPayable";
@@ -109,11 +109,11 @@ public class ConsentType1Code extends ConsentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConsentType1Code";
 				definition = "Specifies the type of consent announced.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConsentType1Code.ChangeInTerms, com.tools20022.repository.codeset.ConsentType1Code.DueAndPayable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConsentType1Code.mmChangeInTerms, com.tools20022.repository.codeset.ConsentType1Code.mmDueAndPayable);
 				trace_lazy = () -> ConsentTypeCode.mmObject();
 			}
 		});

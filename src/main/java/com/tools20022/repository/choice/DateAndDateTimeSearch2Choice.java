@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateAndDateTimeSearch2Choice#Date
- * DateAndDateTimeSearch2Choice.Date}</li>
+ * {@linkplain com.tools20022.repository.choice.DateAndDateTimeSearch2Choice#mmDate
+ * DateAndDateTimeSearch2Choice.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateAndDateTimeSearch2Choice#DateTime
- * DateAndDateTimeSearch2Choice.DateTime}</li>
+ * {@linkplain com.tools20022.repository.choice.DateAndDateTimeSearch2Choice#mmDateTime
+ * DateAndDateTimeSearch2Choice.mmDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateAndDateTimeSearch2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateSearchChoice date;
 	/**
 	 * Specified date.
 	 * <p>
@@ -89,7 +90,7 @@ public class DateAndDateTimeSearch2Choice {
 	 * definition} = "Specified date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class DateAndDateTimeSearch2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Specified date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateSearchChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateSearchChoice.mmObject();
 		}
 	};
+	protected DateTimeSearch1Choice dateTime;
 	/**
 	 * Specified date and time.
 	 * <p>
@@ -130,7 +132,7 @@ public class DateAndDateTimeSearch2Choice {
 	 * definition} = "Specified date and time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 			isDerived = false;
@@ -138,23 +140,39 @@ public class DateAndDateTimeSearch2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Specified date and time.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateTimeSearch1Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndDateTimeSearch2Choice.Date, com.tools20022.repository.choice.DateAndDateTimeSearch2Choice.DateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndDateTimeSearch2Choice.mmDate, com.tools20022.repository.choice.DateAndDateTimeSearch2Choice.mmDateTime);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DateAndDateTimeSearch2Choice";
 				definition = "Choice between a date or a date and time format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateSearchChoice getDate() {
+		return date;
+	}
+
+	public void setDate(com.tools20022.repository.choice.DateSearchChoice date) {
+		this.date = date;
+	}
+
+	public DateTimeSearch1Choice getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(com.tools20022.repository.choice.DateTimeSearch1Choice dateTime) {
+		this.dateTime = dateTime;
 	}
 }

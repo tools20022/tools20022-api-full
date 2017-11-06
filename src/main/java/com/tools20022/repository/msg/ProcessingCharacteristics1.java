@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteris
 import com.tools20022.repository.entity.TimeFrame;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Processing characteristics linked to the instrument, ie, not to the market.
@@ -39,23 +40,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#AmountIndicator
- * ProcessingCharacteristics1.AmountIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#mmAmountIndicator
+ * ProcessingCharacteristics1.mmAmountIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#UnitsIndicator
- * ProcessingCharacteristics1.UnitsIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#mmUnitsIndicator
+ * ProcessingCharacteristics1.mmUnitsIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#DealingCurrencyAccepted
- * ProcessingCharacteristics1.DealingCurrencyAccepted}</li>
+ * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#mmDealingCurrencyAccepted
+ * ProcessingCharacteristics1.mmDealingCurrencyAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#DealingCutOffTime
- * ProcessingCharacteristics1.DealingCutOffTime}</li>
+ * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#mmDealingCutOffTime
+ * ProcessingCharacteristics1.mmDealingCutOffTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#DealingCutOffTimeFrame
- * ProcessingCharacteristics1.DealingCutOffTimeFrame}</li>
+ * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#mmDealingCutOffTimeFrame
+ * ProcessingCharacteristics1.mmDealingCutOffTimeFrame}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#SettlementCycle
- * ProcessingCharacteristics1.SettlementCycle}</li>
+ * {@linkplain com.tools20022.repository.msg.ProcessingCharacteristics1#mmSettlementCycle
+ * ProcessingCharacteristics1.mmSettlementCycle}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProcessingCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator amountIndicator;
 	/**
 	 * Indicates whether a subscription or a redemption can be instructed by
 	 * amount.
@@ -96,8 +98,8 @@ public class ProcessingCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#AmountIndicator
-	 * InvestmentFundClassProcessingCharacteristics.AmountIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmAmountIndicator
+	 * InvestmentFundClassProcessingCharacteristics.mmAmountIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,20 +120,21 @@ public class ProcessingCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmAmountIndicator;
 			componentContext_lazy = () -> ProcessingCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.AmountIndicator;
 			isDerived = false;
 			xmlTag = "AmtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountIndicator";
 			definition = "Indicates whether a subscription or  a redemption can be instructed by amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator unitsIndicator;
 	/**
 	 * Indicates whether subscriptions or redemptions may be placed as a number
 	 * of units.
@@ -146,8 +149,8 @@ public class ProcessingCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#UnitsIndicator
-	 * InvestmentFundClassProcessingCharacteristics.UnitsIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmUnitsIndicator
+	 * InvestmentFundClassProcessingCharacteristics.mmUnitsIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,20 +171,21 @@ public class ProcessingCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitsIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitsIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmUnitsIndicator;
 			componentContext_lazy = () -> ProcessingCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.UnitsIndicator;
 			isDerived = false;
 			xmlTag = "UnitsInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsIndicator";
 			definition = "Indicates whether subscriptions or redemptions may be placed as a number of units.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<ActiveCurrencyCode> dealingCurrencyAccepted;
 	/**
 	 * Currency in which a subscription or redemption is accepted.
 	 * <p>
@@ -211,7 +215,7 @@ public class ProcessingCharacteristics1 {
 	 * "Currency in which a subscription or redemption is accepted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealingCurrencyAccepted = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealingCurrencyAccepted = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessingCharacteristics1.mmObject();
 			isDerived = false;
@@ -223,6 +227,7 @@ public class ProcessingCharacteristics1 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected ISOTime dealingCutOffTime;
 	/**
 	 * Last date/time at which an order to subscribe or redeem can be given.
 	 * <p>
@@ -235,8 +240,8 @@ public class ProcessingCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#OrderCutOffDateTime
-	 * InvestmentFundClassProcessingCharacteristics.OrderCutOffDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmOrderCutOffDateTime
+	 * InvestmentFundClassProcessingCharacteristics.mmOrderCutOffDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -256,20 +261,21 @@ public class ProcessingCharacteristics1 {
 	 * "Last date/time at which an order to subscribe or redeem can be given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealingCutOffTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealingCutOffTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmOrderCutOffDateTime;
 			componentContext_lazy = () -> ProcessingCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.OrderCutOffDateTime;
 			isDerived = false;
 			xmlTag = "DealgCutOffTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingCutOffTime";
 			definition = "Last date/time at which an order to subscribe or redeem can be given.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	protected TimeFrame3Choice dealingCutOffTimeFrame;
 	/**
 	 * TimeFrame or period concept that allows definition of a period as number
 	 * of days before or after a defined activity.
@@ -305,20 +311,21 @@ public class ProcessingCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealingCutOffTimeFrame = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealingCutOffTimeFrame = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProcessingCharacteristics1.mmObject();
 			businessComponentTrace_lazy = () -> TimeFrame.mmObject();
+			componentContext_lazy = () -> ProcessingCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "DealgCutOffTmFrame";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingCutOffTimeFrame";
 			definition = "TimeFrame or period concept that allows definition of a period as number of days before or after a defined activity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TimeFrame3Choice.mmObject();
 		}
 	};
+	protected Timeframe2Choice settlementCycle;
 	/**
 	 * An agreed number of days after the Trade date (T) used to define standard
 	 * timeframes e.g T+3 settlement period
@@ -335,8 +342,8 @@ public class ProcessingCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#SettlementCycle
-	 * InvestmentFundClassProcessingCharacteristics.SettlementCycle}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmSettlementCycle
+	 * InvestmentFundClassProcessingCharacteristics.mmSettlementCycle}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -357,17 +364,17 @@ public class ProcessingCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementCycle = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementCycle = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSettlementCycle;
 			componentContext_lazy = () -> ProcessingCharacteristics1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.SettlementCycle;
 			isDerived = false;
 			xmlTag = "SttlmCycl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCycle";
 			definition = "An agreed number of days after the Trade date (T) used to define standard timeframes e.g T+3 settlement period \n\nWhere T = the date the price is applied to a transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Timeframe2Choice.mmObject();
 		}
 	};
@@ -375,16 +382,64 @@ public class ProcessingCharacteristics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessingCharacteristics1.AmountIndicator, com.tools20022.repository.msg.ProcessingCharacteristics1.UnitsIndicator,
-						com.tools20022.repository.msg.ProcessingCharacteristics1.DealingCurrencyAccepted, com.tools20022.repository.msg.ProcessingCharacteristics1.DealingCutOffTime,
-						com.tools20022.repository.msg.ProcessingCharacteristics1.DealingCutOffTimeFrame, com.tools20022.repository.msg.ProcessingCharacteristics1.SettlementCycle);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessingCharacteristics1.mmAmountIndicator, com.tools20022.repository.msg.ProcessingCharacteristics1.mmUnitsIndicator,
+						com.tools20022.repository.msg.ProcessingCharacteristics1.mmDealingCurrencyAccepted, com.tools20022.repository.msg.ProcessingCharacteristics1.mmDealingCutOffTime,
+						com.tools20022.repository.msg.ProcessingCharacteristics1.mmDealingCutOffTimeFrame, com.tools20022.repository.msg.ProcessingCharacteristics1.mmSettlementCycle);
 				trace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProcessingCharacteristics1";
 				definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getAmountIndicator() {
+		return amountIndicator;
+	}
+
+	public void setAmountIndicator(YesNoIndicator amountIndicator) {
+		this.amountIndicator = amountIndicator;
+	}
+
+	public YesNoIndicator getUnitsIndicator() {
+		return unitsIndicator;
+	}
+
+	public void setUnitsIndicator(YesNoIndicator unitsIndicator) {
+		this.unitsIndicator = unitsIndicator;
+	}
+
+	public List<ActiveCurrencyCode> getDealingCurrencyAccepted() {
+		return dealingCurrencyAccepted;
+	}
+
+	public void setDealingCurrencyAccepted(List<ActiveCurrencyCode> dealingCurrencyAccepted) {
+		this.dealingCurrencyAccepted = dealingCurrencyAccepted;
+	}
+
+	public ISOTime getDealingCutOffTime() {
+		return dealingCutOffTime;
+	}
+
+	public void setDealingCutOffTime(ISOTime dealingCutOffTime) {
+		this.dealingCutOffTime = dealingCutOffTime;
+	}
+
+	public TimeFrame3Choice getDealingCutOffTimeFrame() {
+		return dealingCutOffTimeFrame;
+	}
+
+	public void setDealingCutOffTimeFrame(TimeFrame3Choice dealingCutOffTimeFrame) {
+		this.dealingCutOffTimeFrame = dealingCutOffTimeFrame;
+	}
+
+	public Timeframe2Choice getSettlementCycle() {
+		return settlementCycle;
+	}
+
+	public void setSettlementCycle(Timeframe2Choice settlementCycle) {
+		this.settlementCycle = settlementCycle;
 	}
 }

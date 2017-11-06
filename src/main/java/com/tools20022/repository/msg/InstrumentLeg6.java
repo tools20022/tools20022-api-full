@@ -37,42 +37,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegSide
- * InstrumentLeg6.LegSide}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegSide
+ * InstrumentLeg6.mmLegSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegSettlementType
- * InstrumentLeg6.LegSettlementType}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegSettlementType
+ * InstrumentLeg6.mmLegSettlementType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegSettlementDate
- * InstrumentLeg6.LegSettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegLastPrice
- * InstrumentLeg6.LegLastPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegSettlementDate
+ * InstrumentLeg6.mmLegSettlementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegLastPrice
+ * InstrumentLeg6.mmLegLastPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegSettlementCurrency
- * InstrumentLeg6.LegSettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegSettlementCurrency
+ * InstrumentLeg6.mmLegSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegOrderQuantity
- * InstrumentLeg6.LegOrderQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegOrderQuantity
+ * InstrumentLeg6.mmLegOrderQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegForwardPoints
- * InstrumentLeg6.LegForwardPoints}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegForwardPoints
+ * InstrumentLeg6.mmLegForwardPoints}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegCalculatedCounterpartyCurrencyLastQuantity
- * InstrumentLeg6.LegCalculatedCounterpartyCurrencyLastQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegRiskAmount
- * InstrumentLeg6.LegRiskAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegCalculatedCounterpartyCurrencyLastQuantity
+ * InstrumentLeg6.mmLegCalculatedCounterpartyCurrencyLastQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegRiskAmount
+ * InstrumentLeg6.mmLegRiskAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegValuationRate
- * InstrumentLeg6.LegValuationRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegValueDate
- * InstrumentLeg6.LegValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegCurrency
- * InstrumentLeg6.LegCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegSymbol
- * InstrumentLeg6.LegSymbol}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegValuationRate
+ * InstrumentLeg6.mmLegValuationRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegValueDate
+ * InstrumentLeg6.mmLegValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegCurrency
+ * InstrumentLeg6.mmLegCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegSymbol
+ * InstrumentLeg6.mmLegSymbol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#LegSecurityIdentification
- * InstrumentLeg6.LegSecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegSecurityIdentification
+ * InstrumentLeg6.mmLegSecurityIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -80,8 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstrumentLeg6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Side1Code legSide;
 	/**
 	 * Coded list to specify the side of the trade leg.
 	 * <p>
@@ -110,8 +111,8 @@ public class InstrumentLeg6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -129,20 +130,21 @@ public class InstrumentLeg6 {
 	 * definition} = "Coded list to specify the side of the trade leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "LegSd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSide";
 			definition = "Coded list to specify the side of the trade leg.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	protected SettlementDateCode legSettlementType;
 	/**
 	 * Specifies the date of settlement, in coded form.
 	 * <p>
@@ -170,7 +172,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Specifies the date of settlement, in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegSettlementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegSettlementType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -178,11 +180,12 @@ public class InstrumentLeg6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSettlementType";
 			definition = "Specifies the date of settlement, in coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementDateCode.mmObject();
 		}
 	};
+	protected ISODateTime legSettlementDate;
 	/**
 	 * Specifies the date and time on which the trade will be settled.
 	 * <p>
@@ -195,8 +198,8 @@ public class InstrumentLeg6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementDate
-	 * SecuritiesSettlement.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementDate
+	 * SecuritiesSettlement.mmSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,20 +218,21 @@ public class InstrumentLeg6 {
 	 * "Specifies the date and time on which the trade will be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementDate;
 			isDerived = false;
 			xmlTag = "LegSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSettlementDate";
 			definition = "Specifies the date and time on which the trade will be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount legLastPrice;
 	/**
 	 * Execution price of trade leg.
 	 * <p>
@@ -256,7 +260,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Execution price of trade leg. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegLastPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegLastPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -264,11 +268,12 @@ public class InstrumentLeg6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegLastPrice";
 			definition = "Execution price of trade leg. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected CurrencyCode legSettlementCurrency;
 	/**
 	 * Settlement currency of trade leg, agreed by both sides of the trade.
 	 * <p>
@@ -281,8 +286,8 @@ public class InstrumentLeg6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#SettlementCurrency
-	 * SecuritiesOrder.SettlementCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSettlementCurrency
+	 * SecuritiesOrder.mmSettlementCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -301,20 +306,21 @@ public class InstrumentLeg6 {
 	 * "Settlement currency of trade leg, agreed by both sides of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegSettlementCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSettlementCurrency;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.SettlementCurrency;
 			isDerived = false;
 			xmlTag = "LegSttlmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSettlementCurrency";
 			definition = "Settlement currency of trade leg, agreed by both sides of the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected CurrencyAndAmount legOrderQuantity;
 	/**
 	 * Amount of trade leg in trading currency.
 	 * <p>
@@ -328,8 +334,8 @@ public class InstrumentLeg6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesQuantity
-	 * Security.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -347,20 +353,21 @@ public class InstrumentLeg6 {
 	 * definition} = "Amount of trade leg in trading currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegOrderQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegOrderQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "LegOrdrQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegOrderQuantity";
 			definition = "Amount of trade leg in trading currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected DecimalNumber legForwardPoints;
 	/**
 	 * Forward points added to last spot rate . May be a negative value.
 	 * Expressed in decimal form.
@@ -391,7 +398,7 @@ public class InstrumentLeg6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegForwardPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegForwardPoints = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -399,11 +406,12 @@ public class InstrumentLeg6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegForwardPoints";
 			definition = "Forward points added to last spot rate . May be a negative value. Expressed in decimal form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected CurrencyAndAmount legCalculatedCounterpartyCurrencyLastQuantity;
 	/**
 	 * Used for the calculated quantity of the other side of the currency trade.
 	 * Can be derived from leg order quantity and leg last price.
@@ -434,7 +442,7 @@ public class InstrumentLeg6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegCalculatedCounterpartyCurrencyLastQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegCalculatedCounterpartyCurrencyLastQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -442,11 +450,12 @@ public class InstrumentLeg6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegCalculatedCounterpartyCurrencyLastQuantity";
 			definition = "Used for the calculated quantity of the other side of the currency trade. Can be derived from leg order quantity and leg last price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount legRiskAmount;
 	/**
 	 * Measurement of the leg trade values in terms of a currency (for
 	 * example,the amount of trade in US dollars)
@@ -477,7 +486,7 @@ public class InstrumentLeg6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegRiskAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegRiskAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -485,11 +494,12 @@ public class InstrumentLeg6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegRiskAmount";
 			definition = "Measurement of the leg trade values in terms of a currency (for example,the amount of trade in US dollars)";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected AgreedRate3 legValuationRate;
 	/**
 	 * Specifies the valuation rate used for the trade leg.
 	 * <p>
@@ -501,8 +511,8 @@ public class InstrumentLeg6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Rate
-	 * SecuritiesPricing.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRate
+	 * SecuritiesPricing.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -520,21 +530,22 @@ public class InstrumentLeg6 {
 	 * definition} = "Specifies the valuation rate used for the trade leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegValuationRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegValuationRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Rate;
 			isDerived = false;
 			xmlTag = "LegValtnRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegValuationRate";
 			definition = "Specifies the valuation rate used for the trade leg.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AgreedRate3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
 		}
 	};
+	protected ISODate legValueDate;
 	/**
 	 * Specifies the value date of leg spot transaction.
 	 * <p>
@@ -561,7 +572,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Specifies the value date of leg spot transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegValueDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -569,11 +580,12 @@ public class InstrumentLeg6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegValueDate";
 			definition = "Specifies the value date of leg spot transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected CurrencyCode legCurrency;
 	/**
 	 * Currency trade is conducted.
 	 * <p>
@@ -586,7 +598,8 @@ public class InstrumentLeg6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Leg#Currency Leg.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Leg#mmCurrency
+	 * Leg.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -604,20 +617,21 @@ public class InstrumentLeg6 {
 	 * definition} = "Currency trade is conducted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.mmCurrency;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.Currency;
 			isDerived = false;
 			xmlTag = "LegCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegCurrency";
 			definition = "Currency trade is conducted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected Max35Text legSymbol;
 	/**
 	 * Symbol of the leg trade.
 	 * <p>
@@ -644,7 +658,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Symbol of the leg trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegSymbol = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegSymbol = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -652,11 +666,12 @@ public class InstrumentLeg6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSymbol";
 			definition = "Symbol of the leg trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SecurityIdentification18 legSecurityIdentification;
 	/**
 	 * Security identification of the leg trade.
 	 * <p>
@@ -683,7 +698,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Security identification of the leg trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegSecurityIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -691,23 +706,24 @@ public class InstrumentLeg6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSecurityIdentification";
 			definition = "Security identification of the leg trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification18.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification18.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg6.LegSide, com.tools20022.repository.msg.InstrumentLeg6.LegSettlementType, com.tools20022.repository.msg.InstrumentLeg6.LegSettlementDate,
-						com.tools20022.repository.msg.InstrumentLeg6.LegLastPrice, com.tools20022.repository.msg.InstrumentLeg6.LegSettlementCurrency, com.tools20022.repository.msg.InstrumentLeg6.LegOrderQuantity,
-						com.tools20022.repository.msg.InstrumentLeg6.LegForwardPoints, com.tools20022.repository.msg.InstrumentLeg6.LegCalculatedCounterpartyCurrencyLastQuantity, com.tools20022.repository.msg.InstrumentLeg6.LegRiskAmount,
-						com.tools20022.repository.msg.InstrumentLeg6.LegValuationRate, com.tools20022.repository.msg.InstrumentLeg6.LegValueDate, com.tools20022.repository.msg.InstrumentLeg6.LegCurrency,
-						com.tools20022.repository.msg.InstrumentLeg6.LegSymbol, com.tools20022.repository.msg.InstrumentLeg6.LegSecurityIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg6.mmLegSide, com.tools20022.repository.msg.InstrumentLeg6.mmLegSettlementType,
+						com.tools20022.repository.msg.InstrumentLeg6.mmLegSettlementDate, com.tools20022.repository.msg.InstrumentLeg6.mmLegLastPrice, com.tools20022.repository.msg.InstrumentLeg6.mmLegSettlementCurrency,
+						com.tools20022.repository.msg.InstrumentLeg6.mmLegOrderQuantity, com.tools20022.repository.msg.InstrumentLeg6.mmLegForwardPoints,
+						com.tools20022.repository.msg.InstrumentLeg6.mmLegCalculatedCounterpartyCurrencyLastQuantity, com.tools20022.repository.msg.InstrumentLeg6.mmLegRiskAmount,
+						com.tools20022.repository.msg.InstrumentLeg6.mmLegValuationRate, com.tools20022.repository.msg.InstrumentLeg6.mmLegValueDate, com.tools20022.repository.msg.InstrumentLeg6.mmLegCurrency,
+						com.tools20022.repository.msg.InstrumentLeg6.mmLegSymbol, com.tools20022.repository.msg.InstrumentLeg6.mmLegSecurityIdentification);
 				trace_lazy = () -> Leg.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstrumentLeg6";
 				definition = "Additionnal details related to the leg.";
@@ -715,5 +731,117 @@ public class InstrumentLeg6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Side1Code getLegSide() {
+		return legSide;
+	}
+
+	public void setLegSide(Side1Code legSide) {
+		this.legSide = legSide;
+	}
+
+	public SettlementDateCode getLegSettlementType() {
+		return legSettlementType;
+	}
+
+	public void setLegSettlementType(SettlementDateCode legSettlementType) {
+		this.legSettlementType = legSettlementType;
+	}
+
+	public ISODateTime getLegSettlementDate() {
+		return legSettlementDate;
+	}
+
+	public void setLegSettlementDate(ISODateTime legSettlementDate) {
+		this.legSettlementDate = legSettlementDate;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getLegLastPrice() {
+		return legLastPrice;
+	}
+
+	public void setLegLastPrice(ActiveCurrencyAnd13DecimalAmount legLastPrice) {
+		this.legLastPrice = legLastPrice;
+	}
+
+	public CurrencyCode getLegSettlementCurrency() {
+		return legSettlementCurrency;
+	}
+
+	public void setLegSettlementCurrency(CurrencyCode legSettlementCurrency) {
+		this.legSettlementCurrency = legSettlementCurrency;
+	}
+
+	public CurrencyAndAmount getLegOrderQuantity() {
+		return legOrderQuantity;
+	}
+
+	public void setLegOrderQuantity(CurrencyAndAmount legOrderQuantity) {
+		this.legOrderQuantity = legOrderQuantity;
+	}
+
+	public DecimalNumber getLegForwardPoints() {
+		return legForwardPoints;
+	}
+
+	public void setLegForwardPoints(DecimalNumber legForwardPoints) {
+		this.legForwardPoints = legForwardPoints;
+	}
+
+	public CurrencyAndAmount getLegCalculatedCounterpartyCurrencyLastQuantity() {
+		return legCalculatedCounterpartyCurrencyLastQuantity;
+	}
+
+	public void setLegCalculatedCounterpartyCurrencyLastQuantity(CurrencyAndAmount legCalculatedCounterpartyCurrencyLastQuantity) {
+		this.legCalculatedCounterpartyCurrencyLastQuantity = legCalculatedCounterpartyCurrencyLastQuantity;
+	}
+
+	public ActiveCurrencyAndAmount getLegRiskAmount() {
+		return legRiskAmount;
+	}
+
+	public void setLegRiskAmount(ActiveCurrencyAndAmount legRiskAmount) {
+		this.legRiskAmount = legRiskAmount;
+	}
+
+	public AgreedRate3 getLegValuationRate() {
+		return legValuationRate;
+	}
+
+	public void setLegValuationRate(com.tools20022.repository.msg.AgreedRate3 legValuationRate) {
+		this.legValuationRate = legValuationRate;
+	}
+
+	public ISODate getLegValueDate() {
+		return legValueDate;
+	}
+
+	public void setLegValueDate(ISODate legValueDate) {
+		this.legValueDate = legValueDate;
+	}
+
+	public CurrencyCode getLegCurrency() {
+		return legCurrency;
+	}
+
+	public void setLegCurrency(CurrencyCode legCurrency) {
+		this.legCurrency = legCurrency;
+	}
+
+	public Max35Text getLegSymbol() {
+		return legSymbol;
+	}
+
+	public void setLegSymbol(Max35Text legSymbol) {
+		this.legSymbol = legSymbol;
+	}
+
+	public SecurityIdentification18 getLegSecurityIdentification() {
+		return legSecurityIdentification;
+	}
+
+	public void setLegSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification18 legSecurityIdentification) {
+		this.legSecurityIdentification = legSecurityIdentification;
 	}
 }

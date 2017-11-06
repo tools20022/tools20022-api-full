@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationType1Code#MustWithdrawFromTransaction
- * NotificationType1Code.MustWithdrawFromTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationType1Code#mmMustWithdrawFromTransaction
+ * NotificationType1Code.mmMustWithdrawFromTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationType1Code#CannotSubmitDataSet
- * NotificationType1Code.CannotSubmitDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationType1Code#mmCannotSubmitDataSet
+ * NotificationType1Code.mmCannotSubmitDataSet}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class NotificationType1Code extends NotificationTypeCode {
 	 * name} = "MustWithdrawFromTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode MustWithdrawFromTransaction = new MMCode() {
+	public static final MMCode mmMustWithdrawFromTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MustWithdrawFromTransaction";
@@ -105,7 +105,7 @@ public class NotificationType1Code extends NotificationTypeCode {
 	 * name} = "CannotSubmitDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode CannotSubmitDataSet = new MMCode() {
+	public static final MMCode mmCannotSubmitDataSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CannotSubmitDataSet";
@@ -116,12 +116,12 @@ public class NotificationType1Code extends NotificationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MWFT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationType1Code";
 				definition = "Specifies which type of action a user must take or is prevented to take.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationType1Code.MustWithdrawFromTransaction, com.tools20022.repository.codeset.NotificationType1Code.CannotSubmitDataSet);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationType1Code.mmMustWithdrawFromTransaction, com.tools20022.repository.codeset.NotificationType1Code.mmCannotSubmitDataSet);
 				trace_lazy = () -> NotificationTypeCode.mmObject();
 			}
 		});

@@ -33,19 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * TaxationBasisCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#Flat
- * TaxationBasis3Code.Flat}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#PerUnit
- * TaxationBasis3Code.PerUnit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#Other
- * TaxationBasis3Code.Other}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#mmFlat
+ * TaxationBasis3Code.mmFlat}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#mmPerUnit
+ * TaxationBasis3Code.mmPerUnit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#mmOther
+ * TaxationBasis3Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +82,7 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	 * name} = "Flat"</li>
 	 * </ul>
 	 */
-	public static final MMCode Flat = new MMCode() {
+	public static final MMCode mmFlat = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Flat";
@@ -104,7 +105,7 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode PerUnit = new MMCode() {
+	public static final MMCode mmPerUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
@@ -127,7 +128,7 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -138,12 +139,12 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FLAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxationBasis3Code";
 				definition = "Specifies the tax basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasis3Code.Flat, com.tools20022.repository.codeset.TaxationBasis3Code.PerUnit, com.tools20022.repository.codeset.TaxationBasis3Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasis3Code.mmFlat, com.tools20022.repository.codeset.TaxationBasis3Code.mmPerUnit, com.tools20022.repository.codeset.TaxationBasis3Code.mmOther);
 				trace_lazy = () -> TaxationBasisCode.mmObject();
 			}
 		});

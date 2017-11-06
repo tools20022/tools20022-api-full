@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.ValuationStatistics;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Statistical data related to the price change of a security.
@@ -35,22 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ValuationStatistics3#Currency
- * ValuationStatistics3.Currency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationStatistics3#PriceTypeChangeBasis
- * ValuationStatistics3.PriceTypeChangeBasis}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationStatistics3#mmCurrency
+ * ValuationStatistics3.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationStatistics3#PriceChange
- * ValuationStatistics3.PriceChange}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ValuationStatistics3#Yield
- * ValuationStatistics3.Yield}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationStatistics3#mmPriceTypeChangeBasis
+ * ValuationStatistics3.mmPriceTypeChangeBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationStatistics3#ByPredefinedTimePeriods
- * ValuationStatistics3.ByPredefinedTimePeriods}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationStatistics3#mmPriceChange
+ * ValuationStatistics3.mmPriceChange}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ValuationStatistics3#mmYield
+ * ValuationStatistics3.mmYield}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationStatistics3#ByUserDefinedTimePeriod
- * ValuationStatistics3.ByUserDefinedTimePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationStatistics3#mmByPredefinedTimePeriods
+ * ValuationStatistics3.mmByPredefinedTimePeriods}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ValuationStatistics3#mmByUserDefinedTimePeriod
+ * ValuationStatistics3.mmByUserDefinedTimePeriod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ValuationStatistics3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyCode currency;
 	/**
 	 * Currency of the valuation statistics.
 	 * <p>
@@ -87,8 +90,8 @@ public class ValuationStatistics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#Currency
-	 * ValuationStatistics.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmCurrency
+	 * ValuationStatistics.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +110,21 @@ public class ValuationStatistics3 {
 	 * definition} = "Currency of the valuation statistics."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmCurrency;
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.Currency;
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the valuation statistics.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected PriceType2 priceTypeChangeBasis;
 	/**
 	 * Type of price from which the change is calculated, eg, bid, offer, or
 	 * single.
@@ -134,8 +138,8 @@ public class ValuationStatistics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#PriceTypeChangeBasis
-	 * ValuationStatistics.PriceTypeChangeBasis}</li>
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceTypeChangeBasis
+	 * ValuationStatistics.mmPriceTypeChangeBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,20 +160,21 @@ public class ValuationStatistics3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceTypeChangeBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceTypeChangeBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmPriceTypeChangeBasis;
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.PriceTypeChangeBasis;
 			isDerived = false;
 			xmlTag = "PricTpChngBsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceTypeChangeBasis";
 			definition = "Type of price from which the change is calculated, eg, bid, offer, or single.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceType2.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceType2.mmObject();
 		}
 	};
+	protected PriceValueChange1 priceChange;
 	/**
 	 * Change in price since the previous valuation date.
 	 * <p>
@@ -183,8 +188,8 @@ public class ValuationStatistics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#PriceChange
-	 * ValuationStatistics.PriceChange}</li>
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceChange
+	 * ValuationStatistics.mmPriceChange}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,20 +208,21 @@ public class ValuationStatistics3 {
 	 * definition} = "Change in price since the previous valuation date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceChange = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmPriceChange;
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.PriceChange;
 			isDerived = false;
 			xmlTag = "PricChng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceChange";
 			definition = "Change in price since the previous valuation date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> PriceValueChange1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
 		}
 	};
+	protected PercentageRate yield;
 	/**
 	 * Rate of income from the financial instrument, usually calculated as total
 	 * dividends or coupon interest available to investors in the last
@@ -232,8 +238,8 @@ public class ValuationStatistics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#Yield
-	 * ValuationStatistics.Yield}</li>
+	 * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmYield
+	 * ValuationStatistics.mmYield}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,20 +260,21 @@ public class ValuationStatistics3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Yield = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmYield;
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.Yield;
 			isDerived = false;
 			xmlTag = "Yld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yield";
 			definition = "Rate of income from the financial instrument, usually calculated as total dividends or coupon interest available to investors in the last year,divided by the current price.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected StatisticsByPredefinedTimePeriods2 byPredefinedTimePeriods;
 	/**
 	 * Information related to price variations, expressed using pre-defined
 	 * periods.
@@ -298,7 +305,7 @@ public class ValuationStatistics3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ByPredefinedTimePeriods = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmByPredefinedTimePeriods = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
 			isDerived = false;
@@ -306,12 +313,13 @@ public class ValuationStatistics3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByPredefinedTimePeriods";
 			definition = "Information related to price variations, expressed using pre-defined periods.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> StatisticsByPredefinedTimePeriods2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod2> byUserDefinedTimePeriod;
 	/**
 	 * Information related to price variations, expressed using user-defined
 	 * periods.
@@ -342,7 +350,7 @@ public class ValuationStatistics3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ByUserDefinedTimePeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmByUserDefinedTimePeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
 			isDerived = false;
@@ -351,24 +359,72 @@ public class ValuationStatistics3 {
 			name = "ByUserDefinedTimePeriod";
 			definition = "Information related to price variations, expressed using user-defined periods.";
 			minOccurs = 0;
-			type_lazy = () -> StatisticsByUserDefinedTimePeriod2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationStatistics3.Currency, com.tools20022.repository.msg.ValuationStatistics3.PriceTypeChangeBasis,
-						com.tools20022.repository.msg.ValuationStatistics3.PriceChange, com.tools20022.repository.msg.ValuationStatistics3.Yield, com.tools20022.repository.msg.ValuationStatistics3.ByPredefinedTimePeriods,
-						com.tools20022.repository.msg.ValuationStatistics3.ByUserDefinedTimePeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationStatistics3.mmCurrency, com.tools20022.repository.msg.ValuationStatistics3.mmPriceTypeChangeBasis,
+						com.tools20022.repository.msg.ValuationStatistics3.mmPriceChange, com.tools20022.repository.msg.ValuationStatistics3.mmYield, com.tools20022.repository.msg.ValuationStatistics3.mmByPredefinedTimePeriods,
+						com.tools20022.repository.msg.ValuationStatistics3.mmByUserDefinedTimePeriod);
 				trace_lazy = () -> ValuationStatistics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ValuationStatistics3";
 				definition = "Statistical data related to the price change of a security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+		this.currency = currency;
+	}
+
+	public PriceType2 getPriceTypeChangeBasis() {
+		return priceTypeChangeBasis;
+	}
+
+	public void setPriceTypeChangeBasis(com.tools20022.repository.msg.PriceType2 priceTypeChangeBasis) {
+		this.priceTypeChangeBasis = priceTypeChangeBasis;
+	}
+
+	public PriceValueChange1 getPriceChange() {
+		return priceChange;
+	}
+
+	public void setPriceChange(com.tools20022.repository.msg.PriceValueChange1 priceChange) {
+		this.priceChange = priceChange;
+	}
+
+	public PercentageRate getYield() {
+		return yield;
+	}
+
+	public void setYield(PercentageRate yield) {
+		this.yield = yield;
+	}
+
+	public StatisticsByPredefinedTimePeriods2 getByPredefinedTimePeriods() {
+		return byPredefinedTimePeriods;
+	}
+
+	public void setByPredefinedTimePeriods(com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods2 byPredefinedTimePeriods) {
+		this.byPredefinedTimePeriods = byPredefinedTimePeriods;
+	}
+
+	public List<StatisticsByUserDefinedTimePeriod2> getByUserDefinedTimePeriod() {
+		return byUserDefinedTimePeriod;
+	}
+
+	public void setByUserDefinedTimePeriod(List<com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod2> byUserDefinedTimePeriod) {
+		this.byUserDefinedTimePeriod = byUserDefinedTimePeriod;
 	}
 }

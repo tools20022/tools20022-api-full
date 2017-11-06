@@ -35,16 +35,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvoiceStatus#Invoice
- * InvoiceStatus.Invoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvoiceStatus#mmInvoice
+ * InvoiceStatus.mmInvoice}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#InvoiceStatus
- * Invoice.InvoiceStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceStatus
+ * Invoice.mmInvoiceStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoiceStatus extends Status {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Invoice invoice;
 	/**
 	 * Invoice for which a status is provided.
 	 * <p>
@@ -75,8 +76,8 @@ public class InvoiceStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#InvoiceStatus
-	 * Invoice.InvoiceStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceStatus
+	 * Invoice.mmInvoiceStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -99,33 +100,41 @@ public class InvoiceStatus extends Status {
 	 * definition} = "Invoice for which a status is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Invoice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvoice = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvoiceStatus.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Invoice";
 			definition = "Invoice for which a status is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.InvoiceStatus;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmInvoiceStatus;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvoiceStatus";
 				definition = "Status of the invoice or of the billing process.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Invoice.InvoiceStatus);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Invoice.mmInvoiceStatus);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvoiceStatus.Invoice);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvoiceStatus.mmInvoice);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Invoice getInvoice() {
+		return invoice;
+	}
+
+	public void setInvoice(com.tools20022.repository.entity.Invoice invoice) {
+		this.invoice = invoice;
 	}
 }

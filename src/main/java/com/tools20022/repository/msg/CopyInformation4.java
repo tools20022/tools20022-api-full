@@ -33,11 +33,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CopyInformation4#CopyIndicator
- * CopyInformation4.CopyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CopyInformation4#OriginalReceiver
- * CopyInformation4.OriginalReceiver}</li>
+ * {@linkplain com.tools20022.repository.msg.CopyInformation4#mmCopyIndicator
+ * CopyInformation4.mmCopyIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CopyInformation4#mmOriginalReceiver
+ * CopyInformation4.mmOriginalReceiver}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,96 +46,96 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07#CopyDetails
- * ReversalOfTransferOutConfirmationV07.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07#mmCopyDetails
+ * ReversalOfTransferOutConfirmationV07.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#CopyDetails
- * TransferOutCancellationRequestV07.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07#mmCopyDetails
+ * TransferOutCancellationRequestV07.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV07#CopyDetails
- * TransferInConfirmationV07.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV07#mmCopyDetails
+ * TransferInConfirmationV07.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#CopyDetails
- * TransferOutConfirmationV07.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmCopyDetails
+ * TransferOutConfirmationV07.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV07#CopyDetails
- * TransferInCancellationRequestV07.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV07#mmCopyDetails
+ * TransferInCancellationRequestV07.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#CopyDetails
- * TransferOutInstructionV07.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07#mmCopyDetails
+ * TransferOutInstructionV07.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV07#CopyDetails
- * TransferInInstructionV07.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV07#mmCopyDetails
+ * TransferInInstructionV07.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07#CopyDetails
- * ReversalOfTransferInConfirmationV07.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07#mmCopyDetails
+ * ReversalOfTransferInConfirmationV07.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04#CopyDetails
- * SubscriptionBulkOrderConfirmationV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04#mmCopyDetails
+ * SubscriptionBulkOrderConfirmationV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV04#CopyDetails
- * RedemptionBulkOrderV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV04#mmCopyDetails
+ * RedemptionBulkOrderV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04#CopyDetails
- * SubscriptionBulkOrderCancellationRequestV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04#mmCopyDetails
+ * SubscriptionBulkOrderCancellationRequestV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV04#CopyDetails
- * RedemptionOrderV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV04#mmCopyDetails
+ * RedemptionOrderV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04#CopyDetails
- * SubscriptionOrderCancellationRequestV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04#mmCopyDetails
+ * SubscriptionOrderCancellationRequestV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02#CopyDetails
- * RedemptionBulkOrderConfirmationCancellationInstructionV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02#mmCopyDetails
+ * RedemptionBulkOrderConfirmationCancellationInstructionV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04#CopyDetails
- * RedemptionBulkOrderConfirmationV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04#mmCopyDetails
+ * RedemptionBulkOrderConfirmationV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#CopyDetails
- * RedemptionBulkOrderCancellationRequestV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04#mmCopyDetails
+ * RedemptionBulkOrderCancellationRequestV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV04#CopyDetails
- * SwitchOrderConfirmationV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV04#mmCopyDetails
+ * SwitchOrderConfirmationV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04#CopyDetails
- * SubscriptionOrderConfirmationV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04#mmCopyDetails
+ * SubscriptionOrderConfirmationV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#CopyDetails
- * SubscriptionOrderConfirmationCancellationInstructionV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#mmCopyDetails
+ * SubscriptionOrderConfirmationCancellationInstructionV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04#CopyDetails
- * SwitchOrderCancellationRequestV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04#mmCopyDetails
+ * SwitchOrderCancellationRequestV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#CopyDetails
- * SwitchOrderV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmCopyDetails
+ * SwitchOrderV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02#CopyDetails
- * RedemptionOrderConfirmationCancellationInstructionV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02#mmCopyDetails
+ * RedemptionOrderConfirmationCancellationInstructionV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04#CopyDetails
- * RedemptionOrderConfirmationV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04#mmCopyDetails
+ * RedemptionOrderConfirmationV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02#CopyDetails
- * SubscriptionBulkOrderConfirmationCancellationInstructionV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02#mmCopyDetails
+ * SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04#CopyDetails
- * RedemptionOrderCancellationRequestV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04#mmCopyDetails
+ * RedemptionOrderCancellationRequestV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV04#CopyDetails
- * SubscriptionBulkOrderV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV04#mmCopyDetails
+ * SubscriptionBulkOrderV04.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#CopyDetails
- * SwitchOrderConfirmationCancellationInstructionV02.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02#mmCopyDetails
+ * SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV04#CopyDetails
- * SubscriptionOrderV04.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV04#mmCopyDetails
+ * SubscriptionOrderV04.mmCopyDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -152,6 +153,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CopyInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator copyIndicator;
 	/**
 	 * Indicates whether the message is a copy.
 	 * <p>
@@ -181,11 +183,11 @@ public class CopyInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CopyInformation2#CopyIndicator
-	 * CopyInformation2.CopyIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CopyInformation2#mmCopyIndicator
+	 * CopyInformation2.mmCopyIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CopyInformation4.mmObject();
 			isDerived = false;
@@ -193,12 +195,13 @@ public class CopyInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyIndicator";
 			definition = "Indicates whether the message is a copy.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CopyInformation2.CopyIndicator;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CopyInformation2.mmCopyIndicator;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected AnyBICIdentifier originalReceiver;
 	/**
 	 * Original receiver of the message, if this message is a copy.
 	 * <p>
@@ -229,11 +232,11 @@ public class CopyInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CopyInformation2#OriginalReceiver
-	 * CopyInformation2.OriginalReceiver}</li>
+	 * {@linkplain com.tools20022.repository.msg.CopyInformation2#mmOriginalReceiver
+	 * CopyInformation2.mmOriginalReceiver}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalReceiver = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalReceiver = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CopyInformation4.mmObject();
 			isDerived = false;
@@ -241,9 +244,9 @@ public class CopyInformation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalReceiver";
 			definition = "Original receiver of the message, if this message is a copy.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CopyInformation2.OriginalReceiver;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CopyInformation2.mmOriginalReceiver;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
@@ -251,22 +254,22 @@ public class CopyInformation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CopyInformation4.CopyIndicator, com.tools20022.repository.msg.CopyInformation4.OriginalReceiver);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07.CopyDetails, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.CopyDetails,
-						com.tools20022.repository.area.sese.TransferInConfirmationV07.CopyDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV07.CopyDetails,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV07.CopyDetails, com.tools20022.repository.area.sese.TransferOutInstructionV07.CopyDetails,
-						com.tools20022.repository.area.sese.TransferInInstructionV07.CopyDetails, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.CopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.CopyDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderV04.CopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04.CopyDetails, com.tools20022.repository.area.setr.RedemptionOrderV04.CopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04.CopyDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02.CopyDetails,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04.CopyDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.CopyDetails,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV04.CopyDetails, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04.CopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.CopyDetails, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04.CopyDetails,
-						com.tools20022.repository.area.setr.SwitchOrderV04.CopyDetails, com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02.CopyDetails,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04.CopyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02.CopyDetails,
-						com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04.CopyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderV04.CopyDetails,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.CopyDetails, com.tools20022.repository.area.setr.SubscriptionOrderV04.CopyDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CopyInformation4.mmCopyIndicator, com.tools20022.repository.msg.CopyInformation4.mmOriginalReceiver);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07.mmCopyDetails, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmCopyDetails,
+						com.tools20022.repository.area.sese.TransferInConfirmationV07.mmCopyDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmCopyDetails,
+						com.tools20022.repository.area.sese.TransferInCancellationRequestV07.mmCopyDetails, com.tools20022.repository.area.sese.TransferOutInstructionV07.mmCopyDetails,
+						com.tools20022.repository.area.sese.TransferInInstructionV07.mmCopyDetails, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.mmCopyDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmCopyDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderV04.mmCopyDetails,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04.mmCopyDetails, com.tools20022.repository.area.setr.RedemptionOrderV04.mmCopyDetails,
+						com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04.mmCopyDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02.mmCopyDetails,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04.mmCopyDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.mmCopyDetails,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV04.mmCopyDetails, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04.mmCopyDetails,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmCopyDetails, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04.mmCopyDetails,
+						com.tools20022.repository.area.setr.SwitchOrderV04.mmCopyDetails, com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02.mmCopyDetails,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04.mmCopyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmCopyDetails,
+						com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04.mmCopyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderV04.mmCopyDetails,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails, com.tools20022.repository.area.setr.SubscriptionOrderV04.mmCopyDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CopyInformation4";
 				definition = "Information provided when the message is a copy of a previous message.";
@@ -274,5 +277,21 @@ public class CopyInformation4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getCopyIndicator() {
+		return copyIndicator;
+	}
+
+	public void setCopyIndicator(YesNoIndicator copyIndicator) {
+		this.copyIndicator = copyIndicator;
+	}
+
+	public AnyBICIdentifier getOriginalReceiver() {
+		return originalReceiver;
+	}
+
+	public void setOriginalReceiver(AnyBICIdentifier originalReceiver) {
+		this.originalReceiver = originalReceiver;
 	}
 }

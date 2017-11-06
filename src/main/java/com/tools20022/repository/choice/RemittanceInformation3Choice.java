@@ -38,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RemittanceInformation3Choice#Unstructured
- * RemittanceInformation3Choice.Unstructured}</li>
+ * {@linkplain com.tools20022.repository.choice.RemittanceInformation3Choice#mmUnstructured
+ * RemittanceInformation3Choice.mmUnstructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RemittanceInformation3Choice#Structured
- * RemittanceInformation3Choice.Structured}</li>
+ * {@linkplain com.tools20022.repository.choice.RemittanceInformation3Choice#mmStructured
+ * RemittanceInformation3Choice.mmStructured}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RemittanceInformation3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text unstructured;
 	/**
 	 * Information, in free text form, to enable the matching, ie
 	 * reconciliation, (reconciliation) of a payment with the items that the
@@ -103,20 +104,21 @@ public class RemittanceInformation3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RemittanceInformation3Choice.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> RemittanceInformation3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ustrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unstructured";
 			definition = "Information, in free text form, to enable the matching, ie reconciliation, (reconciliation) of a payment with the items that the payment is intended to settle, such as commercial invoices in an accounts receivable system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected StructuredRemittanceInformation2 structured;
 	/**
 	 * Information in structured form, that is supplied to enable the matching,
 	 * ie, reconciliation, of a payment with the items that the payment is
@@ -153,33 +155,49 @@ public class RemittanceInformation3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Structured = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStructured = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RemittanceInformation3Choice.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> RemittanceInformation3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Information in structured form, that is supplied to enable the matching, ie, reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an account receivable system.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> StructuredRemittanceInformation2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> StructuredRemittanceInformation2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RemittanceInformation3Choice.Unstructured, com.tools20022.repository.choice.RemittanceInformation3Choice.Structured);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RemittanceInformation3Choice.mmUnstructured, com.tools20022.repository.choice.RemittanceInformation3Choice.mmStructured);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RemittanceInformation3Choice";
 				definition = "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, eg, commercial invoices in an accounts' receivable system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getUnstructured() {
+		return unstructured;
+	}
+
+	public void setUnstructured(Max140Text unstructured) {
+		this.unstructured = unstructured;
+	}
+
+	public StructuredRemittanceInformation2 getStructured() {
+		return structured;
+	}
+
+	public void setStructured(StructuredRemittanceInformation2 structured) {
+		this.structured = structured;
 	}
 }

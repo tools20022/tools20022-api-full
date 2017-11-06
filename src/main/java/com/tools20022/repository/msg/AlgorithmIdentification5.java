@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification5#Algorithm
- * AlgorithmIdentification5.Algorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification5#mmAlgorithm
+ * AlgorithmIdentification5.mmAlgorithm}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AlgorithmIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Algorithm5Code algorithm;
 	/**
 	 * Identification of the algorithm.
 	 * <p>
@@ -98,13 +99,13 @@ public class AlgorithmIdentification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification16#Algorithm
-	 * AlgorithmIdentification16.Algorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification16#mmAlgorithm
+	 * AlgorithmIdentification16.mmAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AlgorithmIdentification5.mmObject();
 			isDerived = false;
@@ -112,9 +113,9 @@ public class AlgorithmIdentification5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification16.Algorithm);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification16.mmAlgorithm);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm5Code.mmObject();
 		}
 	};
@@ -122,15 +123,23 @@ public class AlgorithmIdentification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification5.Algorithm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification5.mmAlgorithm);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification5";
 				definition = "Cryptographic algorithm and parameters for digests.";
-				previousVersion_lazy = () -> AlgorithmIdentification4.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification6.mmObject(), AlgorithmIdentification16.mmObject());
+				previousVersion_lazy = () -> AlgorithmIdentification4.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Algorithm5Code getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Algorithm5Code algorithm) {
+		this.algorithm = algorithm;
 	}
 }

@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#Name
- * AccountIdentificationOrNameChoice.Name}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#mmName
+ * AccountIdentificationOrNameChoice.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#Identification
- * AccountIdentificationOrNameChoice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#mmIdentification
+ * AccountIdentificationOrNameChoice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#NameAndIdentification
- * AccountIdentificationOrNameChoice.NameAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentificationOrNameChoice#mmNameAndIdentification
+ * AccountIdentificationOrNameChoice.mmNameAndIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentificationOrNameChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text name;
 	/**
 	 * Name of the account. It provides an additional means of identification,
 	 * and is designated by the account servicer in agreement with the account
@@ -84,8 +85,8 @@ public class AccountIdentificationOrNameChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Name
-	 * AccountIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+	 * AccountIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +107,21 @@ public class AccountIdentificationOrNameChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
 			componentContext_lazy = () -> AccountIdentificationOrNameChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AccountIdentification1Choice identification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -156,20 +158,21 @@ public class AccountIdentificationOrNameChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentificationOrNameChoice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentificationOrNameChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmObject();
 		}
 	};
+	protected AccountIdentificationAndName2 nameAndIdentification;
 	/**
 	 * Business relationship between two entities; one entity is the account
 	 * owner, the other entity is the account servicer.
@@ -205,34 +208,58 @@ public class AccountIdentificationOrNameChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NameAndIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNameAndIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountIdentificationOrNameChoice.mmObject();
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
+			componentContext_lazy = () -> AccountIdentificationOrNameChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndIdentification";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentificationAndName2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AccountIdentificationAndName2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationOrNameChoice.Name, com.tools20022.repository.choice.AccountIdentificationOrNameChoice.Identification,
-						com.tools20022.repository.choice.AccountIdentificationOrNameChoice.NameAndIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmName, com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmIdentification,
+						com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmNameAndIdentification);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentificationOrNameChoice";
 				definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getName() {
+		return name;
+	}
+
+	public void setName(Max35Text name) {
+		this.name = name;
+	}
+
+	public AccountIdentification1Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.choice.AccountIdentification1Choice identification) {
+		this.identification = identification;
+	}
+
+	public AccountIdentificationAndName2 getNameAndIdentification() {
+		return nameAndIdentification;
+	}
+
+	public void setNameAndIdentification(AccountIdentificationAndName2 nameAndIdentification) {
+		this.nameAndIdentification = nameAndIdentification;
 	}
 }

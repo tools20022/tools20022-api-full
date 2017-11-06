@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the transactions in the report.
@@ -32,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionPending1#StatusAndReason
- * IntraPositionPending1.StatusAndReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntraPositionPending1#Movement
- * IntraPositionPending1.Movement}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionPending1#mmStatusAndReason
+ * IntraPositionPending1.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionPending1#mmMovement
+ * IntraPositionPending1.mmMovement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionPending1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PendingStatusAndReason1 statusAndReason;
 	/**
 	 * Status and status reason of the transaction.
 	 * <p>
@@ -83,7 +86,7 @@ public class IntraPositionPending1 {
 	 * definition} = "Status and status reason of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionPending1.mmObject();
 			isDerived = false;
@@ -91,12 +94,13 @@ public class IntraPositionPending1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and status reason of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PendingStatusAndReason1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IntraPositionPending2> movement;
 	/**
 	 * Identifies the individual transaction.
 	 * <p>
@@ -123,7 +127,7 @@ public class IntraPositionPending1 {
 	 * definition} = "Identifies the individual transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Movement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMovement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionPending1.mmObject();
 			isDerived = false;
@@ -132,21 +136,37 @@ public class IntraPositionPending1 {
 			name = "Movement";
 			definition = "Identifies the individual transaction.";
 			minOccurs = 1;
-			type_lazy = () -> IntraPositionPending2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IntraPositionPending2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionPending1.StatusAndReason, com.tools20022.repository.msg.IntraPositionPending1.Movement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionPending1.mmStatusAndReason, com.tools20022.repository.msg.IntraPositionPending1.mmMovement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionPending1";
 				definition = "Provides the transactions in the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PendingStatusAndReason1 getStatusAndReason() {
+		return statusAndReason;
+	}
+
+	public void setStatusAndReason(com.tools20022.repository.msg.PendingStatusAndReason1 statusAndReason) {
+		this.statusAndReason = statusAndReason;
+	}
+
+	public List<IntraPositionPending2> getMovement() {
+		return movement;
+	}
+
+	public void setMovement(List<com.tools20022.repository.msg.IntraPositionPending2> movement) {
+		this.movement = movement;
 	}
 }

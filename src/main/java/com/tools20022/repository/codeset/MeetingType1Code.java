@@ -34,30 +34,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingType1Code#AnnualGeneralMeeting
- * MeetingType1Code.AnnualGeneralMeeting}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MeetingType1Code#Ordinary
- * MeetingType1Code.Ordinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingType1Code#mmAnnualGeneralMeeting
+ * MeetingType1Code.mmAnnualGeneralMeeting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingType1Code#Extraordinary
- * MeetingType1Code.Extraordinary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MeetingType1Code#Mixed
- * MeetingType1Code.Mixed}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingType1Code#mmOrdinary
+ * MeetingType1Code.mmOrdinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingType1Code#ClassMeeting
- * MeetingType1Code.ClassMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingType1Code#mmExtraordinary
+ * MeetingType1Code.mmExtraordinary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MeetingType1Code#mmMixed
+ * MeetingType1Code.mmMixed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingType1Code#CourtMeeting
- * MeetingType1Code.CourtMeeting}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MeetingType1Code#Special
- * MeetingType1Code.Special}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingType1Code#mmClassMeeting
+ * MeetingType1Code.mmClassMeeting}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingType1Code#mmCourtMeeting
+ * MeetingType1Code.mmCourtMeeting}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MeetingType1Code#mmSpecial
+ * MeetingType1Code.mmSpecial}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +94,7 @@ public class MeetingType1Code extends MeetingTypeCode {
 	 * name} = "AnnualGeneralMeeting"</li>
 	 * </ul>
 	 */
-	public static final MMCode AnnualGeneralMeeting = new MMCode() {
+	public static final MMCode mmAnnualGeneralMeeting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnualGeneralMeeting";
@@ -116,7 +117,7 @@ public class MeetingType1Code extends MeetingTypeCode {
 	 * name} = "Ordinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Ordinary = new MMCode() {
+	public static final MMCode mmOrdinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ordinary";
@@ -139,7 +140,7 @@ public class MeetingType1Code extends MeetingTypeCode {
 	 * name} = "Extraordinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Extraordinary = new MMCode() {
+	public static final MMCode mmExtraordinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extraordinary";
@@ -162,7 +163,7 @@ public class MeetingType1Code extends MeetingTypeCode {
 	 * name} = "Mixed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mixed = new MMCode() {
+	public static final MMCode mmMixed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mixed";
@@ -185,7 +186,7 @@ public class MeetingType1Code extends MeetingTypeCode {
 	 * name} = "ClassMeeting"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClassMeeting = new MMCode() {
+	public static final MMCode mmClassMeeting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassMeeting";
@@ -208,7 +209,7 @@ public class MeetingType1Code extends MeetingTypeCode {
 	 * name} = "CourtMeeting"</li>
 	 * </ul>
 	 */
-	public static final MMCode CourtMeeting = new MMCode() {
+	public static final MMCode mmCourtMeeting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourtMeeting";
@@ -231,7 +232,7 @@ public class MeetingType1Code extends MeetingTypeCode {
 	 * name} = "Special"</li>
 	 * </ul>
 	 */
-	public static final MMCode Special = new MMCode() {
+	public static final MMCode mmSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
@@ -242,14 +243,14 @@ public class MeetingType1Code extends MeetingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMET");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MeetingType1Code";
 				definition = "Specifies the type of security holders meeting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingType1Code.AnnualGeneralMeeting, com.tools20022.repository.codeset.MeetingType1Code.Ordinary,
-						com.tools20022.repository.codeset.MeetingType1Code.Extraordinary, com.tools20022.repository.codeset.MeetingType1Code.Mixed, com.tools20022.repository.codeset.MeetingType1Code.ClassMeeting,
-						com.tools20022.repository.codeset.MeetingType1Code.CourtMeeting, com.tools20022.repository.codeset.MeetingType1Code.Special);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingType1Code.mmAnnualGeneralMeeting, com.tools20022.repository.codeset.MeetingType1Code.mmOrdinary,
+						com.tools20022.repository.codeset.MeetingType1Code.mmExtraordinary, com.tools20022.repository.codeset.MeetingType1Code.mmMixed, com.tools20022.repository.codeset.MeetingType1Code.mmClassMeeting,
+						com.tools20022.repository.codeset.MeetingType1Code.mmCourtMeeting, com.tools20022.repository.codeset.MeetingType1Code.mmSpecial);
 				trace_lazy = () -> MeetingTypeCode.mmObject();
 			}
 		});

@@ -39,11 +39,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation9#ServiceLevel
- * PaymentTypeInformation9.ServiceLevel}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation9#mmServiceLevel
+ * PaymentTypeInformation9.mmServiceLevel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation9#SequenceType
- * PaymentTypeInformation9.SequenceType}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation9#mmSequenceType
+ * PaymentTypeInformation9.mmSequenceType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -70,6 +70,7 @@ import java.util.function.Supplier;
 public class PaymentTypeInformation9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ServiceLevel4 serviceLevel;
 	/**
 	 * Agreement under which or rules under which the transaction should be
 	 * processed.
@@ -82,8 +83,8 @@ public class PaymentTypeInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#ServiceLevel
-	 * PaymentProcessing.ServiceLevel}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmServiceLevel
+	 * PaymentProcessing.mmServiceLevel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,21 +105,22 @@ public class PaymentTypeInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> PaymentTypeInformation9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.ServiceLevel;
 			isDerived = false;
 			xmlTag = "SvcLvl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevel";
 			definition = "Agreement under which or rules under which the transaction should be processed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ServiceLevel4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ServiceLevel4.mmObject();
 		}
 	};
+	protected SequenceType1Code sequenceType;
 	/**
 	 * Identifies the direct debit sequence, eg, first, recurrent, final or
 	 * one-off.
@@ -133,8 +135,8 @@ public class PaymentTypeInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#SequenceType
-	 * PaymentProcessing.SequenceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmSequenceType
+	 * PaymentProcessing.mmSequenceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,17 +157,17 @@ public class PaymentTypeInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmSequenceType;
 			componentContext_lazy = () -> PaymentTypeInformation9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.SequenceType;
 			isDerived = false;
 			xmlTag = "SeqTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceType";
 			definition = "Identifies the direct debit sequence, eg, first, recurrent, final or one-off.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> SequenceType1Code.mmObject();
 		}
 	};
@@ -173,9 +175,9 @@ public class PaymentTypeInformation9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation9.ServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation9.SequenceType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation9.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation9.mmSequenceType);
 				trace_lazy = () -> PaymentProcessing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -189,5 +191,21 @@ public class PaymentTypeInformation9 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ServiceLevel4 getServiceLevel() {
+		return serviceLevel;
+	}
+
+	public void setServiceLevel(com.tools20022.repository.msg.ServiceLevel4 serviceLevel) {
+		this.serviceLevel = serviceLevel;
+	}
+
+	public SequenceType1Code getSequenceType() {
+		return sequenceType;
+	}
+
+	public void setSequenceType(SequenceType1Code sequenceType) {
+		this.sequenceType = sequenceType;
 	}
 }

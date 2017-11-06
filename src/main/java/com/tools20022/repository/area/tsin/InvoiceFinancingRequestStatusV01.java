@@ -87,21 +87,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#StatusIdentification
- * InvoiceFinancingRequestStatusV01.StatusIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#mmStatusIdentification
+ * InvoiceFinancingRequestStatusV01.mmStatusIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#OriginalRequestInformationAndStatus
- * InvoiceFinancingRequestStatusV01.OriginalRequestInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#mmOriginalRequestInformationAndStatus
+ * InvoiceFinancingRequestStatusV01.mmOriginalRequestInformationAndStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#FinancingInformationAndStatus
- * InvoiceFinancingRequestStatusV01.FinancingInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#mmFinancingInformationAndStatus
+ * InvoiceFinancingRequestStatusV01.mmFinancingInformationAndStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#identifier
- * InvoiceFinancingRequestStatusV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsin.002.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoiceFinancingRequestStatusV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 statusIdentification;
 	/**
 	 * General information that unambiguously identify the invoice financing
 	 * status report, such as status identification, creation date time.
@@ -143,17 +142,18 @@ public class InvoiceFinancingRequestStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIdentification";
 			definition = "General information that unambiguously identify the invoice financing status report, such as status identification, creation date time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected OriginalRequestInformation1 originalRequestInformationAndStatus;
 	/**
 	 * Set of summary information that unambiguously identifies the original
 	 * invoice financing (or cancellation) request to which the status is
@@ -181,17 +181,18 @@ public class InvoiceFinancingRequestStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalRequestInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalRequestInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlReqInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRequestInformationAndStatus";
 			definition = "Set of summary information that unambiguously identifies the original invoice financing (or cancellation) request to which the status is referred. The status of the original request is also given in this block.\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OriginalRequestInformation1.mmObject();
 		}
 	};
+	protected FinancingInformationAndStatus1 financingInformationAndStatus;
 	/**
 	 * Information concerning the business status of a financing request.
 	 * <p>
@@ -216,42 +217,15 @@ public class InvoiceFinancingRequestStatusV01 {
 	 * "Information concerning the business status of a financing request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancingInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancingInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FincgInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingInformationAndStatus";
 			definition = "Information concerning the business status of a financing request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancingInformationAndStatus1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsin"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsin";
-			messageFunctionality = "002";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -265,11 +239,42 @@ public class InvoiceFinancingRequestStatusV01 {
 				rootElement = "Document";
 				xmlTag = "InvcFincgReqSts";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.StatusIdentification,
-						com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.OriginalRequestInformationAndStatus, com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.FinancingInformationAndStatus);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.mmStatusIdentification,
+						com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.mmOriginalRequestInformationAndStatus, com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.mmFinancingInformationAndStatus);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsin";
+						messageFunctionality = "002";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getStatusIdentification() {
+		return statusIdentification;
+	}
+
+	public void setStatusIdentification(MessageIdentification1 statusIdentification) {
+		this.statusIdentification = statusIdentification;
+	}
+
+	public OriginalRequestInformation1 getOriginalRequestInformationAndStatus() {
+		return originalRequestInformationAndStatus;
+	}
+
+	public void setOriginalRequestInformationAndStatus(OriginalRequestInformation1 originalRequestInformationAndStatus) {
+		this.originalRequestInformationAndStatus = originalRequestInformationAndStatus;
+	}
+
+	public FinancingInformationAndStatus1 getFinancingInformationAndStatus() {
+		return financingInformationAndStatus;
+	}
+
+	public void setFinancingInformationAndStatus(FinancingInformationAndStatus1 financingInformationAndStatus) {
+		this.financingInformationAndStatus = financingInformationAndStatus;
 	}
 }

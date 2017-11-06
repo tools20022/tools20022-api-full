@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.ReportingService;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides further details on the reporting request.
@@ -37,27 +38,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest3#Identification
- * ReportingRequest3.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest3#mmIdentification
+ * ReportingRequest3.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest3#RequestedMessageNameIdentification
- * ReportingRequest3.RequestedMessageNameIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportingRequest3#Account
- * ReportingRequest3.Account}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportingRequest3#AccountOwner
- * ReportingRequest3.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest3#mmRequestedMessageNameIdentification
+ * ReportingRequest3.mmRequestedMessageNameIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportingRequest3#mmAccount
+ * ReportingRequest3.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest3#AccountServicer
- * ReportingRequest3.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest3#mmAccountOwner
+ * ReportingRequest3.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest3#ReportingPeriod
- * ReportingRequest3.ReportingPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest3#mmAccountServicer
+ * ReportingRequest3.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest3#RequestedTransactionType
- * ReportingRequest3.RequestedTransactionType}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest3#mmReportingPeriod
+ * ReportingRequest3.mmReportingPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest3#RequestedBalanceType
- * ReportingRequest3.RequestedBalanceType}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest3#mmRequestedTransactionType
+ * ReportingRequest3.mmRequestedTransactionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest3#mmRequestedBalanceType
+ * ReportingRequest3.mmRequestedBalanceType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -68,15 +70,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AccountReportingRequestV03#ReportingRequest
- * AccountReportingRequestV03.ReportingRequest}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AccountReportingRequestV03#mmReportingRequest
+ * AccountReportingRequestV03.mmReportingRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportingRequest3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique identification, as assigned by the account owner, to unambiguously
 	 * identify the account reporting request.
@@ -120,7 +123,7 @@ public class ReportingRequest3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportingRequest3.mmObject();
 			isDerived = false;
@@ -128,11 +131,12 @@ public class ReportingRequest3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by the account owner, to unambiguously identify the account reporting request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text requestedMessageNameIdentification;
 	/**
 	 * Specifies the type of the requested reporting message.
 	 * <p>
@@ -160,7 +164,7 @@ public class ReportingRequest3 {
 	 * definition} = "Specifies the type of the requested reporting message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedMessageNameIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportingRequest3.mmObject();
 			isDerived = false;
@@ -168,11 +172,12 @@ public class ReportingRequest3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedMessageNameIdentification";
 			definition = "Specifies the type of the requested reporting message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CashAccount24 account;
 	/**
 	 * Unambiguous identification of the account to which the reporting request
 	 * refers.
@@ -185,8 +190,8 @@ public class ReportingRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccountContract#CashAccount
-	 * CashAccountContract.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmCashAccount
+	 * CashAccountContract.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,21 +212,22 @@ public class ReportingRequest3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> ReportingRequest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.CashAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account to which the reporting request refers.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected Party12Choice accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -233,8 +239,8 @@ public class ReportingRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,21 +259,22 @@ public class ReportingRequest3 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReportingRequest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Party12Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Party12Choice.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 accountServicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -283,8 +290,8 @@ public class ReportingRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -305,21 +312,22 @@ public class ReportingRequest3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> ReportingRequest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected ReportingPeriod1 reportingPeriod;
 	/**
 	 * Specifies the requested reporting period.
 	 * <p>
@@ -351,21 +359,22 @@ public class ReportingRequest3 {
 	 * definition} = "Specifies the requested reporting period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportingRequest3.mmObject();
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
+			componentContext_lazy = () -> ReportingRequest3.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "Specifies the requested reporting period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReportingPeriod1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReportingPeriod1.mmObject();
 		}
 	};
+	protected TransactionType1 requestedTransactionType;
 	/**
 	 * Identifies the transactions to be reported.
 	 * <p>
@@ -377,8 +386,8 @@ public class ReportingRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#CashEntry
-	 * CashAccount.CashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashEntry
+	 * CashAccount.mmCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -397,21 +406,22 @@ public class ReportingRequest3 {
 	 * definition} = "Identifies the transactions to be reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestedTransactionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestedTransactionType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashEntry;
 			componentContext_lazy = () -> ReportingRequest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.CashEntry;
 			isDerived = false;
 			xmlTag = "ReqdTxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTransactionType";
 			definition = "Identifies the transactions to be reported.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionType1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionType1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BalanceType12> requestedBalanceType;
 	/**
 	 * Provides details on the requested balance reporting.
 	 * <p>
@@ -423,7 +433,8 @@ public class ReportingRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -442,35 +453,99 @@ public class ReportingRequest3 {
 	 * definition} = "Provides details on the requested balance reporting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestedBalanceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestedBalanceType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> ReportingRequest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "ReqdBalTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedBalanceType";
 			definition = "Provides details on the requested balance reporting.";
 			minOccurs = 0;
-			type_lazy = () -> BalanceType12.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BalanceType12.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportingRequest3.Identification, com.tools20022.repository.msg.ReportingRequest3.RequestedMessageNameIdentification,
-						com.tools20022.repository.msg.ReportingRequest3.Account, com.tools20022.repository.msg.ReportingRequest3.AccountOwner, com.tools20022.repository.msg.ReportingRequest3.AccountServicer,
-						com.tools20022.repository.msg.ReportingRequest3.ReportingPeriod, com.tools20022.repository.msg.ReportingRequest3.RequestedTransactionType, com.tools20022.repository.msg.ReportingRequest3.RequestedBalanceType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportingRequest3.mmIdentification, com.tools20022.repository.msg.ReportingRequest3.mmRequestedMessageNameIdentification,
+						com.tools20022.repository.msg.ReportingRequest3.mmAccount, com.tools20022.repository.msg.ReportingRequest3.mmAccountOwner, com.tools20022.repository.msg.ReportingRequest3.mmAccountServicer,
+						com.tools20022.repository.msg.ReportingRequest3.mmReportingPeriod, com.tools20022.repository.msg.ReportingRequest3.mmRequestedTransactionType, com.tools20022.repository.msg.ReportingRequest3.mmRequestedBalanceType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AccountReportingRequestV03.mmReportingRequest);
 				trace_lazy = () -> ReportingService.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AccountReportingRequestV03.ReportingRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportingRequest3";
 				definition = "Provides further details on the reporting request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getRequestedMessageNameIdentification() {
+		return requestedMessageNameIdentification;
+	}
+
+	public void setRequestedMessageNameIdentification(Max35Text requestedMessageNameIdentification) {
+		this.requestedMessageNameIdentification = requestedMessageNameIdentification;
+	}
+
+	public CashAccount24 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+		this.account = account;
+	}
+
+	public Party12Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(Party12Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public ReportingPeriod1 getReportingPeriod() {
+		return reportingPeriod;
+	}
+
+	public void setReportingPeriod(com.tools20022.repository.msg.ReportingPeriod1 reportingPeriod) {
+		this.reportingPeriod = reportingPeriod;
+	}
+
+	public TransactionType1 getRequestedTransactionType() {
+		return requestedTransactionType;
+	}
+
+	public void setRequestedTransactionType(com.tools20022.repository.msg.TransactionType1 requestedTransactionType) {
+		this.requestedTransactionType = requestedTransactionType;
+	}
+
+	public List<BalanceType12> getRequestedBalanceType() {
+		return requestedBalanceType;
+	}
+
+	public void setRequestedBalanceType(List<com.tools20022.repository.msg.BalanceType12> requestedBalanceType) {
+		this.requestedBalanceType = requestedBalanceType;
 	}
 }

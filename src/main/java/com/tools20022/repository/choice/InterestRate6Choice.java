@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.InterestRate6Choice#Fixed
- * InterestRate6Choice.Fixed}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.InterestRate6Choice#mmFixed
+ * InterestRate6Choice.mmFixed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRate6Choice#Floating
- * InterestRate6Choice.Floating}</li>
+ * {@linkplain com.tools20022.repository.choice.InterestRate6Choice#mmFloating
+ * InterestRate6Choice.mmFloating}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InterestRate6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate fixed;
 	/**
 	 * Indicates that the rate is fixed.
 	 * <p>
@@ -80,8 +81,8 @@ public class InterestRate6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,25 +102,26 @@ public class InterestRate6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.InterestRate2Choice#Fixed
-	 * InterestRate2Choice.Fixed}</li>
+	 * {@linkplain com.tools20022.repository.choice.InterestRate2Choice#mmFixed
+	 * InterestRate2Choice.mmFixed}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Fixed = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFixed = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> InterestRate6Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "Fxd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			definition = "Indicates that the rate is fixed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InterestRate2Choice.Fixed;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.InterestRate2Choice.mmFixed;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected FloatingInterestRate6 floating;
 	/**
 	 * Provides details about the variable rate.
 	 * <p>
@@ -152,33 +154,33 @@ public class InterestRate6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.InterestRate2Choice#Floating
-	 * InterestRate2Choice.Floating}</li>
+	 * {@linkplain com.tools20022.repository.choice.InterestRate2Choice#mmFloating
+	 * InterestRate2Choice.mmFloating}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Floating = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFloating = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InterestRate6Choice.mmObject();
 			businessComponentTrace_lazy = () -> VariableInterest.mmObject();
+			componentContext_lazy = () -> InterestRate6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fltg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Floating";
 			definition = "Provides details about the variable rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InterestRate2Choice.Floating;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.InterestRate2Choice.mmFloating;
 			maxOccurs = 1;
-			type_lazy = () -> FloatingInterestRate6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FloatingInterestRate6.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRate6Choice.Fixed, com.tools20022.repository.choice.InterestRate6Choice.Floating);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRate6Choice.mmFixed, com.tools20022.repository.choice.InterestRate6Choice.mmFloating);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestRate6Choice";
 				definition = "Choice between a fixed rate and a floating rate.";
@@ -186,5 +188,21 @@ public class InterestRate6Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getFixed() {
+		return fixed;
+	}
+
+	public void setFixed(PercentageRate fixed) {
+		this.fixed = fixed;
+	}
+
+	public FloatingInterestRate6 getFloating() {
+		return floating;
+	}
+
+	public void setFloating(FloatingInterestRate6 floating) {
+		this.floating = floating;
 	}
 }

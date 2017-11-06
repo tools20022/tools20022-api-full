@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#Freight
- * CommodityDerivate2Choice.Freight}</li>
+ * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#mmFreight
+ * CommodityDerivate2Choice.mmFreight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#Energy
- * CommodityDerivate2Choice.Energy}</li>
+ * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#mmEnergy
+ * CommodityDerivate2Choice.mmEnergy}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommodityDerivate2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CommodityDerivate5 freight;
 	/**
 	 * Details specific to freight derivatives.
 	 * <p>
@@ -94,21 +95,22 @@ public class CommodityDerivate2Choice {
 	 * definition} = "Details specific to freight derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Freight = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFreight = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CommodityDerivate2Choice.mmObject();
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
+			componentContext_lazy = () -> CommodityDerivate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Frght";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Freight";
 			definition = "Details specific to freight derivatives.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CommodityDerivate5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CommodityDerivate5.mmObject();
 		}
 	};
+	protected CommodityDerivate6 energy;
 	/**
 	 * Details specific to energy derivatives.
 	 * <p>
@@ -139,33 +141,49 @@ public class CommodityDerivate2Choice {
 	 * definition} = "Details specific to energy derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Energy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnergy = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CommodityDerivate2Choice.mmObject();
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
+			componentContext_lazy = () -> CommodityDerivate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nrgy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Energy";
 			definition = "Details specific to energy derivatives.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CommodityDerivate6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CommodityDerivate6.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CommodityDerivate2Choice.Freight, com.tools20022.repository.choice.CommodityDerivate2Choice.Energy);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CommodityDerivate2Choice.mmFreight, com.tools20022.repository.choice.CommodityDerivate2Choice.mmEnergy);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate2Choice";
 				definition = "Choice for transparency calculation specific details on commodities.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CommodityDerivate5 getFreight() {
+		return freight;
+	}
+
+	public void setFreight(CommodityDerivate5 freight) {
+		this.freight = freight;
+	}
+
+	public CommodityDerivate6 getEnergy() {
+		return energy;
+	}
+
+	public void setEnergy(CommodityDerivate6 energy) {
+		this.energy = energy;
 	}
 }

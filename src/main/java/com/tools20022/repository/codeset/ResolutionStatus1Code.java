@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionStatus1Code#Active
- * ResolutionStatus1Code.Active}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionStatus1Code#mmActive
+ * ResolutionStatus1Code.mmActive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionStatus1Code#Withdrawn
- * ResolutionStatus1Code.Withdrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionStatus1Code#mmWithdrawn
+ * ResolutionStatus1Code.mmWithdrawn}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class ResolutionStatus1Code extends ResolutionStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode Active = new MMCode() {
+	public static final MMCode mmActive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
@@ -107,7 +107,7 @@ public class ResolutionStatus1Code extends ResolutionStatusCode {
 	 * name} = "Withdrawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode Withdrawn = new MMCode() {
+	public static final MMCode mmWithdrawn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawn";
@@ -118,12 +118,12 @@ public class ResolutionStatus1Code extends ResolutionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResolutionStatus1Code";
 				definition = "Specifies whether a resolution in an agenda is still active or has been deleted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionStatus1Code.Active, com.tools20022.repository.codeset.ResolutionStatus1Code.Withdrawn);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionStatus1Code.mmActive, com.tools20022.repository.codeset.ResolutionStatus1Code.mmWithdrawn);
 				trace_lazy = () -> ResolutionStatusCode.mmObject();
 			}
 		});

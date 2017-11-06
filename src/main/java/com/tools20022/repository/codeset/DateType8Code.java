@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.DateTypeCode DateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DateType8Code#Unknown
- * DateType8Code.Unknown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DateType8Code#Ongoing
- * DateType8Code.Ongoing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateType8Code#mmUnknown
+ * DateType8Code.mmUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateType8Code#mmOngoing
+ * DateType8Code.mmOngoing}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class DateType8Code extends DateTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -101,7 +101,7 @@ public class DateType8Code extends DateTypeCode {
 	 * name} = "Ongoing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Ongoing = new MMCode() {
+	public static final MMCode mmOngoing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ongoing";
@@ -112,12 +112,12 @@ public class DateType8Code extends DateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UKWN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateType8Code";
 				definition = "Specifies the type of dates.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType8Code.Unknown, com.tools20022.repository.codeset.DateType8Code.Ongoing);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType8Code.mmUnknown, com.tools20022.repository.codeset.DateType8Code.mmOngoing);
 				trace_lazy = () -> DateTypeCode.mmObject();
 			}
 		});

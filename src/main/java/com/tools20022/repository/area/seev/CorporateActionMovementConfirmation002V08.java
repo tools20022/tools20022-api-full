@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CorporateActionsISO15022VariantsISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,56 +66,55 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#NotificationIdentification
- * CorporateActionMovementConfirmation002V08.NotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmNotificationIdentification
+ * CorporateActionMovementConfirmation002V08.mmNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#MovementPreliminaryAdviceIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmMovementPreliminaryAdviceIdentification
  * CorporateActionMovementConfirmation002V08.
- * MovementPreliminaryAdviceIdentification}</li>
+ * mmMovementPreliminaryAdviceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#InstructionIdentification
- * CorporateActionMovementConfirmation002V08.InstructionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmInstructionIdentification
+ * CorporateActionMovementConfirmation002V08.mmInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#OtherDocumentIdentification
- * CorporateActionMovementConfirmation002V08.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmOtherDocumentIdentification
+ * CorporateActionMovementConfirmation002V08.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#EventsLinkage
- * CorporateActionMovementConfirmation002V08.EventsLinkage}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmEventsLinkage
+ * CorporateActionMovementConfirmation002V08.mmEventsLinkage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#CorporateActionGeneralInformation
- * CorporateActionMovementConfirmation002V08.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmCorporateActionGeneralInformation
+ * CorporateActionMovementConfirmation002V08.mmCorporateActionGeneralInformation
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#AccountDetails
- * CorporateActionMovementConfirmation002V08.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmAccountDetails
+ * CorporateActionMovementConfirmation002V08.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#CorporateActionDetails
- * CorporateActionMovementConfirmation002V08.CorporateActionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmCorporateActionDetails
+ * CorporateActionMovementConfirmation002V08.mmCorporateActionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#CorporateActionConfirmationDetails
- * CorporateActionMovementConfirmation002V08.CorporateActionConfirmationDetails}
- * </li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmCorporateActionConfirmationDetails
+ * CorporateActionMovementConfirmation002V08.
+ * mmCorporateActionConfirmationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#AdditionalInformation
- * CorporateActionMovementConfirmation002V08.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmAdditionalInformation
+ * CorporateActionMovementConfirmation002V08.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#IssuerAgent
- * CorporateActionMovementConfirmation002V08.IssuerAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmIssuerAgent
+ * CorporateActionMovementConfirmation002V08.mmIssuerAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#PayingAgent
- * CorporateActionMovementConfirmation002V08.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmPayingAgent
+ * CorporateActionMovementConfirmation002V08.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#SubPayingAgent
- * CorporateActionMovementConfirmation002V08.SubPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmSubPayingAgent
+ * CorporateActionMovementConfirmation002V08.mmSubPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#SupplementaryData
- * CorporateActionMovementConfirmation002V08.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmSupplementaryData
+ * CorporateActionMovementConfirmation002V08.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#identifier
- * CorporateActionMovementConfirmation002V08.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.036.002.08}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,6 +130,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionMovementConfirmation002V08 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification37 notificationIdentification;
 	/**
 	 * Identification of a previously sent notification document.
 	 * <p>
@@ -154,17 +155,18 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * "Identification of a previously sent notification document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NotificationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identification of a previously sent notification document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification37.mmObject();
 		}
 	};
+	protected DocumentIdentification37 movementPreliminaryAdviceIdentification;
 	/**
 	 * Identification of a previously sent movement preliminary advice document.
 	 * <p>
@@ -190,17 +192,18 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MovementPreliminaryAdviceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMovementPreliminaryAdviceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MvmntPrlimryAdvcId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementPreliminaryAdviceIdentification";
 			definition = "Identification of a previously sent movement preliminary advice document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification37.mmObject();
 		}
 	};
+	protected DocumentIdentification17 instructionIdentification;
 	/**
 	 * Identification of a related instruction document.
 	 * <p>
@@ -224,17 +227,18 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * definition} = "Identification of a related instruction document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Identification of a related instruction document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification17.mmObject();
 		}
 	};
+	protected List<DocumentIdentification38> otherDocumentIdentification;
 	/**
 	 * Identification of other documents as well as the document number.
 	 * <p>
@@ -259,7 +263,7 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * "Identification of other documents as well as the document number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherDocumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherDocumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrDocId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,6 +273,7 @@ public class CorporateActionMovementConfirmation002V08 {
 			complexType_lazy = () -> DocumentIdentification38.mmObject();
 		}
 	};
+	protected List<CorporateActionEventReference4> eventsLinkage;
 	/**
 	 * Identification of an other corporate action event that needs to be
 	 * closely linked to the processing of the event notified in this document.
@@ -295,7 +300,7 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EventsLinkage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEventsLinkage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EvtsLkg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -305,6 +310,7 @@ public class CorporateActionMovementConfirmation002V08 {
 			complexType_lazy = () -> CorporateActionEventReference4.mmObject();
 		}
 	};
+	protected CorporateActionGeneralInformation118 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -328,17 +334,18 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation118.mmObject();
 		}
 	};
+	protected AccountAndBalance38 accountDetails;
 	/**
 	 * General information about the safekeeping account, owner and account
 	 * balance.
@@ -365,17 +372,18 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "General information about the safekeeping account, owner and account balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountAndBalance38.mmObject();
 		}
 	};
+	protected CorporateAction36 corporateActionDetails;
 	/**
 	 * Information about the corporate action event.
 	 * <p>
@@ -399,17 +407,18 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * definition} = "Information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionDetails";
 			definition = "Information about the corporate action event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateAction36.mmObject();
 		}
 	};
+	protected CorporateActionOption136 corporateActionConfirmationDetails;
 	/**
 	 * Information about the corporate action option.
 	 * <p>
@@ -433,17 +442,18 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * definition} = "Information about the corporate action option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionConfirmationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionConfirmationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnConfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionConfirmationDetails";
 			definition = "Information about the corporate action option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption136.mmObject();
 		}
 	};
+	protected CorporateActionNarrative35 additionalInformation;
 	/**
 	 * Provides additional information.
 	 * <p>
@@ -467,17 +477,18 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * definition} = "Provides additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative35.mmObject();
 		}
 	};
+	protected List<PartyIdentification104Choice> issuerAgent;
 	/**
 	 * Party appointed to administer the event on behalf of the issuer
 	 * company/offeror. The party may be contacted for more information about
@@ -505,7 +516,7 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock IssuerAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIssuerAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IssrAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -515,6 +526,7 @@ public class CorporateActionMovementConfirmation002V08 {
 			complexType_lazy = () -> PartyIdentification104Choice.mmObject();
 		}
 	};
+	protected List<PartyIdentification104Choice> payingAgent;
 	/**
 	 * Agent (principal or fiscal paying agent) appointed to execute the payment
 	 * for the corporate action event on behalf of the issuer company/offeror.
@@ -541,7 +553,7 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PayingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPayingAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PngAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -551,6 +563,7 @@ public class CorporateActionMovementConfirmation002V08 {
 			complexType_lazy = () -> PartyIdentification104Choice.mmObject();
 		}
 	};
+	protected List<PartyIdentification104Choice> subPayingAgent;
 	/**
 	 * Sub-agent appointed to execute the payment for the corporate action event
 	 * on behalf of the issuer company/offeror.
@@ -577,7 +590,7 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubPayingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubPayingAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubPngAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -587,6 +600,7 @@ public class CorporateActionMovementConfirmation002V08 {
 			complexType_lazy = () -> PartyIdentification104Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -613,7 +627,7 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -621,33 +635,6 @@ public class CorporateActionMovementConfirmation002V08 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "08"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "036"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "002"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "036";
-			version = "08";
-			flavour = "002";
 		}
 	};
 
@@ -661,17 +648,137 @@ public class CorporateActionMovementConfirmation002V08 {
 				rootElement = "Document";
 				xmlTag = "CorpActnMvmntConf";
 				businessArea_lazy = () -> SecuritiesEventsLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.NotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.MovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.InstructionIdentification, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.EventsLinkage, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.AccountDetails, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.CorporateActionDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.CorporateActionConfirmationDetails, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.AdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.IssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.PayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.SubPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmNotificationIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmMovementPreliminaryAdviceIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmEventsLinkage, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmCorporateActionDetails,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmCorporateActionConfirmationDetails,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmIssuerAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmSubPayingAgent,
+						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "036";
+						version = "08";
+						flavour = "002";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification37 getNotificationIdentification() {
+		return notificationIdentification;
+	}
+
+	public void setNotificationIdentification(DocumentIdentification37 notificationIdentification) {
+		this.notificationIdentification = notificationIdentification;
+	}
+
+	public DocumentIdentification37 getMovementPreliminaryAdviceIdentification() {
+		return movementPreliminaryAdviceIdentification;
+	}
+
+	public void setMovementPreliminaryAdviceIdentification(DocumentIdentification37 movementPreliminaryAdviceIdentification) {
+		this.movementPreliminaryAdviceIdentification = movementPreliminaryAdviceIdentification;
+	}
+
+	public DocumentIdentification17 getInstructionIdentification() {
+		return instructionIdentification;
+	}
+
+	public void setInstructionIdentification(DocumentIdentification17 instructionIdentification) {
+		this.instructionIdentification = instructionIdentification;
+	}
+
+	public List<DocumentIdentification38> getOtherDocumentIdentification() {
+		return otherDocumentIdentification;
+	}
+
+	public void setOtherDocumentIdentification(List<DocumentIdentification38> otherDocumentIdentification) {
+		this.otherDocumentIdentification = otherDocumentIdentification;
+	}
+
+	public List<CorporateActionEventReference4> getEventsLinkage() {
+		return eventsLinkage;
+	}
+
+	public void setEventsLinkage(List<CorporateActionEventReference4> eventsLinkage) {
+		this.eventsLinkage = eventsLinkage;
+	}
+
+	public CorporateActionGeneralInformation118 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation118 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public AccountAndBalance38 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(AccountAndBalance38 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public CorporateAction36 getCorporateActionDetails() {
+		return corporateActionDetails;
+	}
+
+	public void setCorporateActionDetails(CorporateAction36 corporateActionDetails) {
+		this.corporateActionDetails = corporateActionDetails;
+	}
+
+	public CorporateActionOption136 getCorporateActionConfirmationDetails() {
+		return corporateActionConfirmationDetails;
+	}
+
+	public void setCorporateActionConfirmationDetails(CorporateActionOption136 corporateActionConfirmationDetails) {
+		this.corporateActionConfirmationDetails = corporateActionConfirmationDetails;
+	}
+
+	public CorporateActionNarrative35 getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(CorporateActionNarrative35 additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public List<PartyIdentification104Choice> getIssuerAgent() {
+		return issuerAgent;
+	}
+
+	public void setIssuerAgent(List<PartyIdentification104Choice> issuerAgent) {
+		this.issuerAgent = issuerAgent;
+	}
+
+	public List<PartyIdentification104Choice> getPayingAgent() {
+		return payingAgent;
+	}
+
+	public void setPayingAgent(List<PartyIdentification104Choice> payingAgent) {
+		this.payingAgent = payingAgent;
+	}
+
+	public List<PartyIdentification104Choice> getSubPayingAgent() {
+		return subPayingAgent;
+	}
+
+	public void setSubPayingAgent(List<PartyIdentification104Choice> subPayingAgent) {
+		this.subPayingAgent = subPayingAgent;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

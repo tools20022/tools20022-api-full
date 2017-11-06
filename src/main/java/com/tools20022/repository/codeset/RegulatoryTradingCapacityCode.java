@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#DealOnOwnAccount
- * RegulatoryTradingCapacityCode.DealOnOwnAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#mmDealOnOwnAccount
+ * RegulatoryTradingCapacityCode.mmDealOnOwnAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#MatchedPrincipal
- * RegulatoryTradingCapacityCode.MatchedPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#mmMatchedPrincipal
+ * RegulatoryTradingCapacityCode.mmMatchedPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#AnyOtherCapacity
- * RegulatoryTradingCapacityCode.AnyOtherCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#mmAnyOtherCapacity
+ * RegulatoryTradingCapacityCode.mmAnyOtherCapacity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +87,7 @@ public class RegulatoryTradingCapacityCode {
 	 * definition} = "Transaction was carried out as a deal under own account."</li>
 	 * </ul>
 	 */
-	public static final MMCode DealOnOwnAccount = new MMCode() {
+	public static final MMCode mmDealOnOwnAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealOnOwnAccount";
@@ -118,7 +118,7 @@ public class RegulatoryTradingCapacityCode {
 	 * "Transaction was carried out as a matched principal trading."</li>
 	 * </ul>
 	 */
-	public static final MMCode MatchedPrincipal = new MMCode() {
+	public static final MMCode mmMatchedPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedPrincipal";
@@ -148,7 +148,7 @@ public class RegulatoryTradingCapacityCode {
 	 * definition} = "Transaction was carried out as an agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode AnyOtherCapacity = new MMCode() {
+	public static final MMCode mmAnyOtherCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyOtherCapacity";
@@ -161,12 +161,12 @@ public class RegulatoryTradingCapacityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryTradingCapacityCode";
 				definition = "Specifies the regulatory trading capacity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.DealOnOwnAccount, com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.MatchedPrincipal,
-						com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.AnyOtherCapacity);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.mmDealOnOwnAccount, com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.mmMatchedPrincipal,
+						com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.mmAnyOtherCapacity);
 				derivation_lazy = () -> Arrays.asList(RegulatoryTradingCapacity1Code.mmObject());
 			}
 		});

@@ -31,17 +31,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FromToPercentageRange1#From
- * FromToPercentageRange1.From}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FromToPercentageRange1#To
- * FromToPercentageRange1.To}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FromToPercentageRange1#mmFrom
+ * FromToPercentageRange1.mmFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FromToPercentageRange1#mmTo
+ * FromToPercentageRange1.mmTo}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FromToPercentageRange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRangeBoundary1 from;
 	/**
 	 * Lower boundary of a range of percentage rates.
 	 * <p>
@@ -82,7 +83,7 @@ public class FromToPercentageRange1 {
 	 * definition} = "Lower boundary of a range of percentage rates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd From = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FromToPercentageRange1.mmObject();
 			isDerived = false;
@@ -90,12 +91,13 @@ public class FromToPercentageRange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "Lower boundary of a range of percentage rates.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PercentageRangeBoundary1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PercentageRangeBoundary1.mmObject();
 		}
 	};
+	protected PercentageRangeBoundary1 to;
 	/**
 	 * Upper boundary of a range of percentage rates.
 	 * <p>
@@ -123,7 +125,7 @@ public class FromToPercentageRange1 {
 	 * definition} = "Upper boundary of a range of percentage rates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd To = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FromToPercentageRange1.mmObject();
 			isDerived = false;
@@ -131,23 +133,39 @@ public class FromToPercentageRange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "Upper boundary of a range of percentage rates.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PercentageRangeBoundary1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PercentageRangeBoundary1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToPercentageRange1.From, com.tools20022.repository.msg.FromToPercentageRange1.To);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToPercentageRange1.mmFrom, com.tools20022.repository.msg.FromToPercentageRange1.mmTo);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FromToPercentageRange1";
 				definition = "Range of percentage rates.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRangeBoundary1 getFrom() {
+		return from;
+	}
+
+	public void setFrom(com.tools20022.repository.msg.PercentageRangeBoundary1 from) {
+		this.from = from;
+	}
+
+	public PercentageRangeBoundary1 getTo() {
+		return to;
+	}
+
+	public void setTo(com.tools20022.repository.msg.PercentageRangeBoundary1 to) {
+		this.to = to;
 	}
 }

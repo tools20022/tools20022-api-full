@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.ISODate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Changes in the schedule.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ScheduleChangeDetails1#ScheduleChangeEffectiveDate
- * ScheduleChangeDetails1.ScheduleChangeEffectiveDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeDetails1#mmScheduleChangeEffectiveDate
+ * ScheduleChangeDetails1.mmScheduleChangeEffectiveDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ScheduleChangeDetails1#ScheduleEntry
- * ScheduleChangeDetails1.ScheduleEntry}</li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeDetails1#mmScheduleEntry
+ * ScheduleChangeDetails1.mmScheduleEntry}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ScheduleChangeDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate scheduleChangeEffectiveDate;
 	/**
 	 * Date on which the schedule changes became effective.
 	 * <p>
@@ -86,7 +88,7 @@ public class ScheduleChangeDetails1 {
 	 * definition} = "Date on which the schedule changes became effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ScheduleChangeEffectiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmScheduleChangeEffectiveDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ScheduleChangeDetails1.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class ScheduleChangeDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduleChangeEffectiveDate";
 			definition = "Date on which the schedule changes became effective.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ScheduleChangeEntry1> scheduleEntry;
 	/**
 	 * Information about schedule.
 	 * <p>
@@ -125,7 +128,7 @@ public class ScheduleChangeDetails1 {
 	 * definition} = "Information about schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ScheduleEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmScheduleEntry = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ScheduleChangeDetails1.mmObject();
 			isDerived = false;
@@ -134,21 +137,37 @@ public class ScheduleChangeDetails1 {
 			name = "ScheduleEntry";
 			definition = "Information about schedule.";
 			minOccurs = 1;
-			type_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ScheduleChangeDetails1.ScheduleChangeEffectiveDate, com.tools20022.repository.msg.ScheduleChangeDetails1.ScheduleEntry);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ScheduleChangeDetails1.mmScheduleChangeEffectiveDate, com.tools20022.repository.msg.ScheduleChangeDetails1.mmScheduleEntry);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ScheduleChangeDetails1";
 				definition = "Changes in the schedule.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getScheduleChangeEffectiveDate() {
+		return scheduleChangeEffectiveDate;
+	}
+
+	public void setScheduleChangeEffectiveDate(ISODate scheduleChangeEffectiveDate) {
+		this.scheduleChangeEffectiveDate = scheduleChangeEffectiveDate;
+	}
+
+	public List<ScheduleChangeEntry1> getScheduleEntry() {
+		return scheduleEntry;
+	}
+
+	public void setScheduleEntry(List<com.tools20022.repository.msg.ScheduleChangeEntry1> scheduleEntry) {
+		this.scheduleEntry = scheduleEntry;
 	}
 }

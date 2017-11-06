@@ -24,8 +24,10 @@ import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.codeset.StatisticalReportingStatus1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.entity.Status;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the currency control group status details.
@@ -37,26 +39,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#OriginalReferences
- * CurrencyControlGroupStatus1.OriginalReferences}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#mmOriginalReferences
+ * CurrencyControlGroupStatus1.mmOriginalReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#ReportingParty
- * CurrencyControlGroupStatus1.ReportingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#mmReportingParty
+ * CurrencyControlGroupStatus1.mmReportingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#RegistrationAgent
- * CurrencyControlGroupStatus1.RegistrationAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#mmRegistrationAgent
+ * CurrencyControlGroupStatus1.mmRegistrationAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#ReportingPeriod
- * CurrencyControlGroupStatus1.ReportingPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#mmReportingPeriod
+ * CurrencyControlGroupStatus1.mmReportingPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#Status
- * CurrencyControlGroupStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#mmStatus
+ * CurrencyControlGroupStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#StatusReason
- * CurrencyControlGroupStatus1.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#mmStatusReason
+ * CurrencyControlGroupStatus1.mmStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#StatusDateTime
- * CurrencyControlGroupStatus1.StatusDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#mmStatusDateTime
+ * CurrencyControlGroupStatus1.mmStatusDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,15 +68,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#GroupStatus
- * CurrencyControlStatusAdviceV01.GroupStatus}</li>
+ * {@linkplain com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01#mmGroupStatus
+ * CurrencyControlStatusAdviceV01.mmGroupStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyControlGroupStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OriginalMessage3 originalReferences;
 	/**
 	 * Original underlying message references for which the status advice is
 	 * provided.
@@ -100,8 +103,8 @@ public class CurrencyControlGroupStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentExecution
-	 * Payment.PaymentExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentExecution
+	 * Payment.mmPaymentExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -122,21 +125,22 @@ public class CurrencyControlGroupStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalReferences = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalReferences = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentExecution;
 			componentContext_lazy = () -> CurrencyControlGroupStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentExecution;
 			isDerived = false;
 			xmlTag = "OrgnlRefs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalReferences";
 			definition = "Original underlying message references for which the status advice is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMessage3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalMessage3.mmObject();
 		}
 	};
+	protected TradeParty2 reportingParty;
 	/**
 	 * Party registering the currency control contract.
 	 * <p>
@@ -148,8 +152,8 @@ public class CurrencyControlGroupStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#ReportingParty
-	 * RegisteredContract.ReportingParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmReportingParty
+	 * RegisteredContract.mmReportingParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,21 +172,22 @@ public class CurrencyControlGroupStatus1 {
 	 * definition} = "Party registering the currency control contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportingParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmReportingParty;
 			componentContext_lazy = () -> CurrencyControlGroupStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.ReportingParty;
 			isDerived = false;
 			xmlTag = "RptgPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingParty";
 			definition = "Party registering the currency control contract.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TradeParty2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradeParty2.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 registrationAgent;
 	/**
 	 * Agent which registers the currency control contract.
 	 * <p>
@@ -195,8 +200,8 @@ public class CurrencyControlGroupStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#RegistrationAgent
-	 * RegisteredContract.RegistrationAgent}</li>
+	 * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmRegistrationAgent
+	 * RegisteredContract.mmRegistrationAgent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,21 +220,22 @@ public class CurrencyControlGroupStatus1 {
 	 * definition} = "Agent which registers the currency control contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RegistrationAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRegistrationAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmRegistrationAgent;
 			componentContext_lazy = () -> CurrencyControlGroupStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.RegistrationAgent;
 			isDerived = false;
 			xmlTag = "RegnAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAgent";
 			definition = "Agent which registers the currency control contract.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected Period4Choice reportingPeriod;
 	/**
 	 * For daily reporting this is the day to which the transaction data in the
 	 * status message refers to.<br>
@@ -261,7 +267,7 @@ public class CurrencyControlGroupStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CurrencyControlGroupStatus1.mmObject();
 			isDerived = false;
@@ -269,12 +275,13 @@ public class CurrencyControlGroupStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "For daily reporting this is the day to which the transaction data in the status message refers to.\r\nFor periodic reporting this is the first and the last day to which the transaction data in the status message refers.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	protected StatisticalReportingStatus1Code status;
 	/**
 	 * Provides the status for the full report.
 	 * <p>
@@ -288,8 +295,8 @@ public class CurrencyControlGroupStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDescription
-	 * Status.StatusDescription}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDescription
+	 * Status.mmStatusDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -308,20 +315,21 @@ public class CurrencyControlGroupStatus1 {
 	 * definition} = "Provides the status for the full report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDescription;
 			componentContext_lazy = () -> CurrencyControlGroupStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDescription;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Provides the status for the full report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> StatisticalReportingStatus1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ValidationStatusReason1> statusReason;
 	/**
 	 * Provides detailed information on the status reason.
 	 * <p>
@@ -354,20 +362,21 @@ public class CurrencyControlGroupStatus1 {
 	 * definition} = "Provides detailed information on the status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CurrencyControlGroupStatus1.mmObject();
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
+			componentContext_lazy = () -> CurrencyControlGroupStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Provides detailed information on the status reason.";
 			minOccurs = 0;
-			type_lazy = () -> ValidationStatusReason1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ValidationStatusReason1.mmObject();
 		}
 	};
+	protected ISODateTime statusDateTime;
 	/**
 	 * Provides the date and time when the status was issued.
 	 * <p>
@@ -380,8 +389,8 @@ public class CurrencyControlGroupStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDateTime
-	 * Status.StatusDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDateTime
+	 * Status.mmStatusDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -400,17 +409,17 @@ public class CurrencyControlGroupStatus1 {
 	 * definition} = "Provides the date and time when the status was issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
 			componentContext_lazy = () -> CurrencyControlGroupStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDateTime;
 			isDerived = false;
 			xmlTag = "StsDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDateTime";
 			definition = "Provides the date and time when the status was issued.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -418,17 +427,74 @@ public class CurrencyControlGroupStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyControlGroupStatus1.OriginalReferences, com.tools20022.repository.msg.CurrencyControlGroupStatus1.ReportingParty,
-						com.tools20022.repository.msg.CurrencyControlGroupStatus1.RegistrationAgent, com.tools20022.repository.msg.CurrencyControlGroupStatus1.ReportingPeriod,
-						com.tools20022.repository.msg.CurrencyControlGroupStatus1.Status, com.tools20022.repository.msg.CurrencyControlGroupStatus1.StatusReason, com.tools20022.repository.msg.CurrencyControlGroupStatus1.StatusDateTime);
-				trace_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.GroupStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyControlGroupStatus1.mmOriginalReferences, com.tools20022.repository.msg.CurrencyControlGroupStatus1.mmReportingParty,
+						com.tools20022.repository.msg.CurrencyControlGroupStatus1.mmRegistrationAgent, com.tools20022.repository.msg.CurrencyControlGroupStatus1.mmReportingPeriod,
+						com.tools20022.repository.msg.CurrencyControlGroupStatus1.mmStatus, com.tools20022.repository.msg.CurrencyControlGroupStatus1.mmStatusReason,
+						com.tools20022.repository.msg.CurrencyControlGroupStatus1.mmStatusDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.CurrencyControlStatusAdviceV01.mmGroupStatus);
+				trace_lazy = () -> Status.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CurrencyControlGroupStatus1";
 				definition = "Provides the currency control group status details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OriginalMessage3 getOriginalReferences() {
+		return originalReferences;
+	}
+
+	public void setOriginalReferences(com.tools20022.repository.msg.OriginalMessage3 originalReferences) {
+		this.originalReferences = originalReferences;
+	}
+
+	public TradeParty2 getReportingParty() {
+		return reportingParty;
+	}
+
+	public void setReportingParty(com.tools20022.repository.msg.TradeParty2 reportingParty) {
+		this.reportingParty = reportingParty;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getRegistrationAgent() {
+		return registrationAgent;
+	}
+
+	public void setRegistrationAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 registrationAgent) {
+		this.registrationAgent = registrationAgent;
+	}
+
+	public Period4Choice getReportingPeriod() {
+		return reportingPeriod;
+	}
+
+	public void setReportingPeriod(Period4Choice reportingPeriod) {
+		this.reportingPeriod = reportingPeriod;
+	}
+
+	public StatisticalReportingStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatisticalReportingStatus1Code status) {
+		this.status = status;
+	}
+
+	public List<ValidationStatusReason1> getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(List<com.tools20022.repository.msg.ValidationStatusReason1> statusReason) {
+		this.statusReason = statusReason;
+	}
+
+	public ISODateTime getStatusDateTime() {
+		return statusDateTime;
+	}
+
+	public void setStatusDateTime(ISODateTime statusDateTime) {
+		this.statusDateTime = statusDateTime;
 	}
 }

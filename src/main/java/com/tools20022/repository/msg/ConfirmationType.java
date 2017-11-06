@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationType#Identification
- * ConfirmationType.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationType#mmIdentification
+ * ConfirmationType.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ConfirmationType {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ConfirmationType1Code identification;
 	/**
 	 * Specifies whether the confirmation is an intention to execute the
 	 * transfer or an actual confirmation of a transfer.
@@ -89,7 +90,7 @@ public class ConfirmationType {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ConfirmationType.mmObject();
 			isDerived = false;
@@ -97,8 +98,8 @@ public class ConfirmationType {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Specifies whether the confirmation is an intention to execute the transfer or an actual confirmation of a transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ConfirmationType1Code.mmObject();
 		}
 	};
@@ -106,13 +107,21 @@ public class ConfirmationType {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationType.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationType.mmIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ConfirmationType";
 				definition = "Specifies whether the confirmation is an acknowledgement of the transfer instruction or a confirmation of an actual execution of the transfer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ConfirmationType1Code getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(ConfirmationType1Code identification) {
+		this.identification = identification;
 	}
 }

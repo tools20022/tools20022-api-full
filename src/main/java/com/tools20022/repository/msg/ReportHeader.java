@@ -34,14 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReportHeader#Identification
- * ReportHeader.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportHeader#From
- * ReportHeader.From}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportHeader#To
- * ReportHeader.To}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportHeader#CreationDateTime
- * ReportHeader.CreationDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportHeader#mmIdentification
+ * ReportHeader.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportHeader#mmFrom
+ * ReportHeader.mmFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportHeader#mmTo
+ * ReportHeader.mmTo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReportHeader#mmCreationDateTime
+ * ReportHeader.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,20 +50,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#Header
- * NotificationOfCaseAssignment.Header}</li>
+ * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignment#mmHeader
+ * NotificationOfCaseAssignment.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequest#RequestHeader
- * CaseStatusReportRequest.RequestHeader}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.CaseStatusReport#Header
- * CaseStatusReport.Header}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequest#mmRequestHeader
+ * CaseStatusReportRequest.mmRequestHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReport#mmHeader
+ * CaseStatusReport.mmHeader}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportHeader {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of the report.
 	 * <p>
@@ -102,7 +105,7 @@ public class ReportHeader {
 	 * definition} = "Identification of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportHeader.mmObject();
 			isDerived = false;
@@ -110,11 +113,12 @@ public class ReportHeader {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AnyBICIdentifier from;
 	/**
 	 * Party reporting the status of the case.
 	 * <p>
@@ -142,7 +146,7 @@ public class ReportHeader {
 	 * definition} = "Party reporting the status of the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute From = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrom = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportHeader.mmObject();
 			isDerived = false;
@@ -150,11 +154,12 @@ public class ReportHeader {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "Party reporting the status of the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected AnyBICIdentifier to;
 	/**
 	 * Party to which the status of the case is reported.
 	 * <p>
@@ -182,7 +187,7 @@ public class ReportHeader {
 	 * definition} = "Party to which the status of the case is reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute To = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTo = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportHeader.mmObject();
 			isDerived = false;
@@ -190,11 +195,12 @@ public class ReportHeader {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "Party to which the status of the case is reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Creation date and time of the report generation.
 	 * <p>
@@ -221,7 +227,7 @@ public class ReportHeader {
 	 * definition} = "Creation date and time of the report generation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportHeader.mmObject();
 			isDerived = false;
@@ -229,8 +235,8 @@ public class ReportHeader {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Creation date and time of the report generation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -238,16 +244,48 @@ public class ReportHeader {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportHeader.Identification, com.tools20022.repository.msg.ReportHeader.From, com.tools20022.repository.msg.ReportHeader.To,
-						com.tools20022.repository.msg.ReportHeader.CreationDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationOfCaseAssignment.Header, com.tools20022.repository.area.camt.CaseStatusReportRequest.RequestHeader,
-						com.tools20022.repository.area.camt.CaseStatusReport.Header);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportHeader.mmIdentification, com.tools20022.repository.msg.ReportHeader.mmFrom, com.tools20022.repository.msg.ReportHeader.mmTo,
+						com.tools20022.repository.msg.ReportHeader.mmCreationDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationOfCaseAssignment.mmHeader, com.tools20022.repository.area.camt.CaseStatusReportRequest.mmRequestHeader,
+						com.tools20022.repository.area.camt.CaseStatusReport.mmHeader);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportHeader";
 				definition = "Specifies generic information about an investigation report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public AnyBICIdentifier getFrom() {
+		return from;
+	}
+
+	public void setFrom(AnyBICIdentifier from) {
+		this.from = from;
+	}
+
+	public AnyBICIdentifier getTo() {
+		return to;
+	}
+
+	public void setTo(AnyBICIdentifier to) {
+		this.to = to;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

@@ -36,11 +36,11 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity2Choice#Quantity
- * Quantity2Choice.Quantity}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity2Choice#mmQuantity
+ * Quantity2Choice.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Quantity2Choice#ProprietaryQuantity
- * Quantity2Choice.ProprietaryQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.Quantity2Choice#mmProprietaryQuantity
+ * Quantity2Choice.mmProprietaryQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -72,6 +72,7 @@ import java.util.function.Supplier;
 public class Quantity2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentQuantity1Choice quantity;
 	/**
 	 * Quantity of security.
 	 * <p>
@@ -101,13 +102,13 @@ public class Quantity2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Quantity19Choice#Quantity
-	 * Quantity19Choice.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity19Choice#mmQuantity
+	 * Quantity19Choice.mmQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Quantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Quantity2Choice.mmObject();
 			isDerived = false;
@@ -115,13 +116,14 @@ public class Quantity2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity19Choice.Quantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity19Choice.mmQuantity);
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected ProprietaryQuantity2 proprietaryQuantity;
 	/**
 	 * Proprietary quantity of security format.
 	 * <p>
@@ -150,13 +152,13 @@ public class Quantity2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Quantity19Choice#ProprietaryQuantity
-	 * Quantity19Choice.ProprietaryQuantity}</li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity19Choice#mmProprietaryQuantity
+	 * Quantity19Choice.mmProprietaryQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Quantity2Choice.mmObject();
 			isDerived = false;
@@ -164,20 +166,20 @@ public class Quantity2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryQuantity";
 			definition = "Proprietary quantity of security format.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity19Choice.ProprietaryQuantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity19Choice.mmProprietaryQuantity);
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryQuantity2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryQuantity2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity2Choice.Quantity, com.tools20022.repository.choice.Quantity2Choice.ProprietaryQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity2Choice.mmQuantity, com.tools20022.repository.choice.Quantity2Choice.mmProprietaryQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -192,5 +194,21 @@ public class Quantity2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentQuantity1Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public ProprietaryQuantity2 getProprietaryQuantity() {
+		return proprietaryQuantity;
+	}
+
+	public void setProprietaryQuantity(ProprietaryQuantity2 proprietaryQuantity) {
+		this.proprietaryQuantity = proprietaryQuantity;
 	}
 }

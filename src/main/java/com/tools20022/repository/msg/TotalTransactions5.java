@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to provide summary information on entries.
@@ -32,24 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTransactions5#TotalEntries
- * TotalTransactions5.TotalEntries}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTransactions5#mmTotalEntries
+ * TotalTransactions5.mmTotalEntries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTransactions5#TotalCreditEntries
- * TotalTransactions5.TotalCreditEntries}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTransactions5#mmTotalCreditEntries
+ * TotalTransactions5.mmTotalCreditEntries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTransactions5#TotalDebitEntries
- * TotalTransactions5.TotalDebitEntries}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTransactions5#mmTotalDebitEntries
+ * TotalTransactions5.mmTotalDebitEntries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTransactions5#TotalEntriesPerBankTransactionCode
- * TotalTransactions5.TotalEntriesPerBankTransactionCode}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTransactions5#mmTotalEntriesPerBankTransactionCode
+ * TotalTransactions5.mmTotalEntriesPerBankTransactionCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalTransactions5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NumberAndSumOfTransactions4 totalEntries;
 	/**
 	 * Specifies the total number and sum of debit and credit entries.
 	 * <p>
@@ -97,11 +99,11 @@ public class TotalTransactions5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TotalTransactions4#TotalEntries
-	 * TotalTransactions4.TotalEntries}</li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTransactions4#mmTotalEntries
+	 * TotalTransactions4.mmTotalEntries}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalEntries = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalEntries = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TotalTransactions5.mmObject();
 			isDerived = false;
@@ -109,13 +111,14 @@ public class TotalTransactions5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEntries";
 			definition = "Specifies the total number and sum of debit and credit entries.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.TotalEntries;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.mmTotalEntries;
 			maxOccurs = 1;
-			type_lazy = () -> NumberAndSumOfTransactions4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions4.mmObject();
 		}
 	};
+	protected NumberAndSumOfTransactions1 totalCreditEntries;
 	/**
 	 * Specifies the total number and sum of credit entries.
 	 * <p>
@@ -144,11 +147,11 @@ public class TotalTransactions5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TotalTransactions4#TotalCreditEntries
-	 * TotalTransactions4.TotalCreditEntries}</li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTransactions4#mmTotalCreditEntries
+	 * TotalTransactions4.mmTotalCreditEntries}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalCreditEntries = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalCreditEntries = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TotalTransactions5.mmObject();
 			isDerived = false;
@@ -156,13 +159,14 @@ public class TotalTransactions5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCreditEntries";
 			definition = "Specifies the total number and sum of credit entries.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.TotalCreditEntries;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.mmTotalCreditEntries;
 			maxOccurs = 1;
-			type_lazy = () -> NumberAndSumOfTransactions1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions1.mmObject();
 		}
 	};
+	protected NumberAndSumOfTransactions1 totalDebitEntries;
 	/**
 	 * Specifies the total number and sum of debit entries.
 	 * <p>
@@ -191,11 +195,11 @@ public class TotalTransactions5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TotalTransactions4#TotalDebitEntries
-	 * TotalTransactions4.TotalDebitEntries}</li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTransactions4#mmTotalDebitEntries
+	 * TotalTransactions4.mmTotalDebitEntries}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalDebitEntries = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalDebitEntries = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TotalTransactions5.mmObject();
 			isDerived = false;
@@ -203,13 +207,14 @@ public class TotalTransactions5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDebitEntries";
 			definition = "Specifies the total number and sum of debit entries.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.TotalDebitEntries;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.mmTotalDebitEntries;
 			maxOccurs = 1;
-			type_lazy = () -> NumberAndSumOfTransactions1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TotalsPerBankTransactionCode4> totalEntriesPerBankTransactionCode;
 	/**
 	 * Specifies the total number and sum of entries per bank transaction code.
 	 * <p>
@@ -240,11 +245,11 @@ public class TotalTransactions5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TotalTransactions4#TotalEntriesPerBankTransactionCode
-	 * TotalTransactions4.TotalEntriesPerBankTransactionCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTransactions4#mmTotalEntriesPerBankTransactionCode
+	 * TotalTransactions4.mmTotalEntriesPerBankTransactionCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalEntriesPerBankTransactionCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalEntriesPerBankTransactionCode = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TotalTransactions5.mmObject();
 			isDerived = false;
@@ -252,19 +257,19 @@ public class TotalTransactions5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEntriesPerBankTransactionCode";
 			definition = "Specifies the total number and sum of entries per bank transaction code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.TotalEntriesPerBankTransactionCode;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.mmTotalEntriesPerBankTransactionCode;
 			minOccurs = 0;
-			type_lazy = () -> TotalsPerBankTransactionCode4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TotalsPerBankTransactionCode4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTransactions5.TotalEntries, com.tools20022.repository.msg.TotalTransactions5.TotalCreditEntries,
-						com.tools20022.repository.msg.TotalTransactions5.TotalDebitEntries, com.tools20022.repository.msg.TotalTransactions5.TotalEntriesPerBankTransactionCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTransactions5.mmTotalEntries, com.tools20022.repository.msg.TotalTransactions5.mmTotalCreditEntries,
+						com.tools20022.repository.msg.TotalTransactions5.mmTotalDebitEntries, com.tools20022.repository.msg.TotalTransactions5.mmTotalEntriesPerBankTransactionCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalTransactions5";
 				definition = "Set of elements used to provide summary information on entries.";
@@ -272,5 +277,37 @@ public class TotalTransactions5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NumberAndSumOfTransactions4 getTotalEntries() {
+		return totalEntries;
+	}
+
+	public void setTotalEntries(com.tools20022.repository.msg.NumberAndSumOfTransactions4 totalEntries) {
+		this.totalEntries = totalEntries;
+	}
+
+	public NumberAndSumOfTransactions1 getTotalCreditEntries() {
+		return totalCreditEntries;
+	}
+
+	public void setTotalCreditEntries(com.tools20022.repository.msg.NumberAndSumOfTransactions1 totalCreditEntries) {
+		this.totalCreditEntries = totalCreditEntries;
+	}
+
+	public NumberAndSumOfTransactions1 getTotalDebitEntries() {
+		return totalDebitEntries;
+	}
+
+	public void setTotalDebitEntries(com.tools20022.repository.msg.NumberAndSumOfTransactions1 totalDebitEntries) {
+		this.totalDebitEntries = totalDebitEntries;
+	}
+
+	public List<TotalsPerBankTransactionCode4> getTotalEntriesPerBankTransactionCode() {
+		return totalEntriesPerBankTransactionCode;
+	}
+
+	public void setTotalEntriesPerBankTransactionCode(List<com.tools20022.repository.msg.TotalsPerBankTransactionCode4> totalEntriesPerBankTransactionCode) {
+		this.totalEntriesPerBankTransactionCode = totalEntriesPerBankTransactionCode;
 	}
 }

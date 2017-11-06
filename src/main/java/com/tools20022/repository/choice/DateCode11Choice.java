@@ -37,18 +37,18 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DateCode11Choice#Code
- * DateCode11Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateCode11Choice#mmCode
+ * DateCode11Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateCode11Choice#Proprietary
- * DateCode11Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.DateCode11Choice#mmProprietary
+ * DateCode11Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -70,6 +70,7 @@ import java.util.function.Supplier;
 public class DateCode11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateType8Code code;
 	/**
 	 * Standard code to specify the type of date.
 	 * <p>
@@ -99,13 +100,13 @@ public class DateCode11Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.DateCode19Choice#Code
-	 * DateCode19Choice.Code}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.DateCode19Choice#mmCode
+	 * DateCode19Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateCode11Choice.mmObject();
 			isDerived = false;
@@ -113,12 +114,13 @@ public class DateCode11Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateCode19Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateCode19Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DateType8Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of the type of date.
 	 * <p>
@@ -148,13 +150,13 @@ public class DateCode11Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DateCode19Choice#Proprietary
-	 * DateCode19Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.DateCode19Choice#mmProprietary
+	 * DateCode19Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DateCode11Choice.mmObject();
 			isDerived = false;
@@ -162,19 +164,19 @@ public class DateCode11Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateCode19Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateCode19Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateCode11Choice.Code, com.tools20022.repository.choice.DateCode11Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateCode11Choice.mmCode, com.tools20022.repository.choice.DateCode11Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -189,5 +191,21 @@ public class DateCode11Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateType8Code getCode() {
+		return code;
+	}
+
+	public void setCode(DateType8Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

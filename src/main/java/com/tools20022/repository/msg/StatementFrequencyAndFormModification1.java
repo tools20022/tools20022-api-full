@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndFormModification1#ModificationCode
- * StatementFrequencyAndFormModification1.ModificationCode}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndFormModification1#mmModificationCode
+ * StatementFrequencyAndFormModification1.mmModificationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndFormModification1#StatementFrequencyAndForm
- * StatementFrequencyAndFormModification1.StatementFrequencyAndForm}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementFrequencyAndFormModification1#mmStatementFrequencyAndForm
+ * StatementFrequencyAndFormModification1.mmStatementFrequencyAndForm}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementFrequencyAndFormModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Modification1Code modificationCode;
 	/**
 	 * Specifies the type of change.
 	 * <p>
@@ -91,7 +92,7 @@ public class StatementFrequencyAndFormModification1 {
 	 * definition} = "Specifies the type of change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementFrequencyAndFormModification1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class StatementFrequencyAndFormModification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationCode";
 			definition = "Specifies the type of change.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
 		}
 	};
+	protected StatementFrequencyAndForm1 statementFrequencyAndForm;
 	/**
 	 * Specifies the statement frequency, format, delivery address.
 	 * <p>
@@ -138,33 +140,49 @@ public class StatementFrequencyAndFormModification1 {
 	 * "Specifies the statement frequency, format, delivery address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementFrequencyAndForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementFrequencyAndForm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatementFrequencyAndFormModification1.mmObject();
 			businessComponentTrace_lazy = () -> ReportingService.mmObject();
+			componentContext_lazy = () -> StatementFrequencyAndFormModification1.mmObject();
 			isDerived = false;
 			xmlTag = "StmtFrqcyAndForm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementFrequencyAndForm";
 			definition = "Specifies the statement frequency, format, delivery address.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> StatementFrequencyAndForm1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.StatementFrequencyAndForm1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.StatementFrequencyAndFormModification1.ModificationCode, com.tools20022.repository.msg.StatementFrequencyAndFormModification1.StatementFrequencyAndForm);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementFrequencyAndFormModification1.mmModificationCode,
+						com.tools20022.repository.msg.StatementFrequencyAndFormModification1.mmStatementFrequencyAndForm);
 				trace_lazy = () -> ReportingService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementFrequencyAndFormModification1";
 				definition = "Specifies the type of change to statement frequency and form.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Modification1Code getModificationCode() {
+		return modificationCode;
+	}
+
+	public void setModificationCode(Modification1Code modificationCode) {
+		this.modificationCode = modificationCode;
+	}
+
+	public StatementFrequencyAndForm1 getStatementFrequencyAndForm() {
+		return statementFrequencyAndForm;
+	}
+
+	public void setStatementFrequencyAndForm(com.tools20022.repository.msg.StatementFrequencyAndForm1 statementFrequencyAndForm) {
+		this.statementFrequencyAndForm = statementFrequencyAndForm;
 	}
 }

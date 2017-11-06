@@ -33,10 +33,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PEPOrISAChoice#ISA
- * PEPOrISAChoice.ISA}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PEPOrISAChoice#PEP
- * PEPOrISAChoice.PEP}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PEPOrISAChoice#mmISA
+ * PEPOrISAChoice.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PEPOrISAChoice#mmPEP
+ * PEPOrISAChoice.mmPEP}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PEPOrISAChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISAYearsOfIssue iSA;
 	/**
 	 * UK government schemes to encourage individuals to invest in securities
 	 * based unit and investment trusts, offering certain tax benefits. These
@@ -99,21 +100,22 @@ public class PEPOrISAChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ISA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmISA = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPOrISAChoice.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> PEPOrISAChoice.mmObject();
 			isDerived = false;
 			xmlTag = "ISA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISA";
 			definition = "UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. \nThe Personal Equity Plan (PEP) and the Individual Savings Account (ISA) are provided only by UK based financial institutions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ISAYearsOfIssue.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ISAYearsOfIssue.mmObject();
 		}
 	};
+	protected PreviousYearChoice pEP;
 	/**
 	 * UK government schemes to encourage individuals to invest in securities
 	 * based unit and investment trusts, offering certain tax benefits. These
@@ -153,33 +155,49 @@ public class PEPOrISAChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PEP = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPEP = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PEPOrISAChoice.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> PEPOrISAChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PEP";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEP";
 			definition = "UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. \nThe Personal Equity Plan (PEP) and the Individual Savings Account (ISA) are provided only by UK based financial institutions.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PreviousYearChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PreviousYearChoice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PEPOrISAChoice.ISA, com.tools20022.repository.choice.PEPOrISAChoice.PEP);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PEPOrISAChoice.mmISA, com.tools20022.repository.choice.PEPOrISAChoice.mmPEP);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PEPOrISAChoice";
 				definition = "Indicates if the transfer relates to an PEP or ISA product";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISAYearsOfIssue getISA() {
+		return iSA;
+	}
+
+	public void setISA(ISAYearsOfIssue iSA) {
+		this.iSA = iSA;
+	}
+
+	public PreviousYearChoice getPEP() {
+		return pEP;
+	}
+
+	public void setPEP(com.tools20022.repository.choice.PreviousYearChoice pEP) {
+		this.pEP = pEP;
 	}
 }

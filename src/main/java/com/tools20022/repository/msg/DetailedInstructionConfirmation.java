@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedInstructionConfirmation#Identification
- * DetailedInstructionConfirmation.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedInstructionConfirmation#mmIdentification
+ * DetailedInstructionConfirmation.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedInstructionConfirmation#StandingInstruction
- * DetailedInstructionConfirmation.StandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedInstructionConfirmation#mmStandingInstruction
+ * DetailedInstructionConfirmation.mmStandingInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedInstructionConfirmation#Status
- * DetailedInstructionConfirmation.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedInstructionConfirmation#mmStatus
+ * DetailedInstructionConfirmation.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DetailedInstructionConfirmation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identifies the instruction for which a status is confirmed.
 	 * <p>
@@ -96,7 +97,7 @@ public class DetailedInstructionConfirmation {
 	 * "Identifies the instruction for which a status is confirmed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DetailedInstructionConfirmation.mmObject();
 			isDerived = false;
@@ -104,11 +105,12 @@ public class DetailedInstructionConfirmation {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the instruction for which a status is confirmed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected YesNoIndicator standingInstruction;
 	/**
 	 * Indicates whether standing instruction have been applied or not.
 	 * <p>
@@ -138,7 +140,7 @@ public class DetailedInstructionConfirmation {
 	 * "Indicates whether standing instruction have been applied or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StandingInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStandingInstruction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DetailedInstructionConfirmation.mmObject();
 			isDerived = false;
@@ -146,11 +148,12 @@ public class DetailedInstructionConfirmation {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
 			definition = "Indicates whether standing instruction have been applied or not.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected MeetingInstructionStatusDetails status;
 	/**
 	 * Defines the status of the instruction.
 	 * <p>
@@ -183,34 +186,58 @@ public class DetailedInstructionConfirmation {
 	 * definition} = "Defines the status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Status = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DetailedInstructionConfirmation.mmObject();
 			businessComponentTrace_lazy = () -> MeetingStatus.mmObject();
+			componentContext_lazy = () -> DetailedInstructionConfirmation.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines the status of the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MeetingInstructionStatusDetails.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionConfirmation.Identification, com.tools20022.repository.msg.DetailedInstructionConfirmation.StandingInstruction,
-						com.tools20022.repository.msg.DetailedInstructionConfirmation.Status);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionConfirmation.mmIdentification, com.tools20022.repository.msg.DetailedInstructionConfirmation.mmStandingInstruction,
+						com.tools20022.repository.msg.DetailedInstructionConfirmation.mmStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DetailedInstructionConfirmation";
 				definition = "Contains information relative to the status of a detailed instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public YesNoIndicator getStandingInstruction() {
+		return standingInstruction;
+	}
+
+	public void setStandingInstruction(YesNoIndicator standingInstruction) {
+		this.standingInstruction = standingInstruction;
+	}
+
+	public MeetingInstructionStatusDetails getStatus() {
+		return status;
+	}
+
+	public void setStatus(com.tools20022.repository.msg.MeetingInstructionStatusDetails status) {
+		this.status = status;
 	}
 }

@@ -30,35 +30,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Commitment
- * BlockedReasonCode.Commitment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Pledged
- * BlockedReasonCode.Pledged}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmCommitment
+ * BlockedReasonCode.mmCommitment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Confiscation
- * BlockedReasonCode.Confiscation}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmPledged
+ * BlockedReasonCode.mmPledged}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Bankruptcy
- * BlockedReasonCode.Bankruptcy}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmConfiscation
+ * BlockedReasonCode.mmConfiscation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#MortisCausa
- * BlockedReasonCode.MortisCausa}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Transfer
- * BlockedReasonCode.Transfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmBankruptcy
+ * BlockedReasonCode.mmBankruptcy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Reregistration
- * BlockedReasonCode.Reregistration}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmMortisCausa
+ * BlockedReasonCode.mmMortisCausa}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Sanctions
- * BlockedReasonCode.Sanctions}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmTransfer
+ * BlockedReasonCode.mmTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#PendingComplianceVerification
- * BlockedReasonCode.PendingComplianceVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmReregistration
+ * BlockedReasonCode.mmReregistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#AccountClosingInProcess
- * BlockedReasonCode.AccountClosingInProcess}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Rejected
- * BlockedReasonCode.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmSanctions
+ * BlockedReasonCode.mmSanctions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmPendingComplianceVerification
+ * BlockedReasonCode.mmPendingComplianceVerification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmAccountClosingInProcess
+ * BlockedReasonCode.mmAccountClosingInProcess}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmRejected
+ * BlockedReasonCode.mmRejected}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -75,8 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -117,7 +120,7 @@ public class BlockedReasonCode {
 	 * definition} = "Commitment."</li>
 	 * </ul>
 	 */
-	public static final MMCode Commitment = new MMCode() {
+	public static final MMCode mmCommitment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commitment";
@@ -147,7 +150,7 @@ public class BlockedReasonCode {
 	 * definition} = "Pledged."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pledged = new MMCode() {
+	public static final MMCode mmPledged = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledged";
@@ -177,7 +180,7 @@ public class BlockedReasonCode {
 	 * definition} = "Confiscation."</li>
 	 * </ul>
 	 */
-	public static final MMCode Confiscation = new MMCode() {
+	public static final MMCode mmConfiscation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confiscation";
@@ -207,7 +210,7 @@ public class BlockedReasonCode {
 	 * definition} = "Bankruptcy."</li>
 	 * </ul>
 	 */
-	public static final MMCode Bankruptcy = new MMCode() {
+	public static final MMCode mmBankruptcy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bankruptcy";
@@ -237,7 +240,7 @@ public class BlockedReasonCode {
 	 * definition} = "Reserved in contemplation of death."</li>
 	 * </ul>
 	 */
-	public static final MMCode MortisCausa = new MMCode() {
+	public static final MMCode mmMortisCausa = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortisCausa";
@@ -267,7 +270,7 @@ public class BlockedReasonCode {
 	 * definition} = "Transfer."</li>
 	 * </ul>
 	 */
-	public static final MMCode Transfer = new MMCode() {
+	public static final MMCode mmTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transfer";
@@ -297,7 +300,7 @@ public class BlockedReasonCode {
 	 * definition} = "Reregistration."</li>
 	 * </ul>
 	 */
-	public static final MMCode Reregistration = new MMCode() {
+	public static final MMCode mmReregistration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reregistration";
@@ -327,7 +330,7 @@ public class BlockedReasonCode {
 	 * definition} = "Sanctions are in place."</li>
 	 * </ul>
 	 */
-	public static final MMCode Sanctions = new MMCode() {
+	public static final MMCode mmSanctions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sanctions";
@@ -357,7 +360,7 @@ public class BlockedReasonCode {
 	 * definition} = "Pending compliance verification."</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingComplianceVerification = new MMCode() {
+	public static final MMCode mmPendingComplianceVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingComplianceVerification";
@@ -387,7 +390,7 @@ public class BlockedReasonCode {
 	 * definition} = "Account closing is in process."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountClosingInProcess = new MMCode() {
+	public static final MMCode mmAccountClosingInProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosingInProcess";
@@ -417,7 +420,7 @@ public class BlockedReasonCode {
 	 * definition} = "Account was pending opening but is now rejected."</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -430,15 +433,16 @@ public class BlockedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CMMT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BlockedReasonCode";
 				definition = "Specifies the reason an account is blocked.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BlockedReasonCode.Commitment, com.tools20022.repository.codeset.BlockedReasonCode.Pledged, com.tools20022.repository.codeset.BlockedReasonCode.Confiscation,
-						com.tools20022.repository.codeset.BlockedReasonCode.Bankruptcy, com.tools20022.repository.codeset.BlockedReasonCode.MortisCausa, com.tools20022.repository.codeset.BlockedReasonCode.Transfer,
-						com.tools20022.repository.codeset.BlockedReasonCode.Reregistration, com.tools20022.repository.codeset.BlockedReasonCode.Sanctions, com.tools20022.repository.codeset.BlockedReasonCode.PendingComplianceVerification,
-						com.tools20022.repository.codeset.BlockedReasonCode.AccountClosingInProcess, com.tools20022.repository.codeset.BlockedReasonCode.Rejected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BlockedReasonCode.mmCommitment, com.tools20022.repository.codeset.BlockedReasonCode.mmPledged,
+						com.tools20022.repository.codeset.BlockedReasonCode.mmConfiscation, com.tools20022.repository.codeset.BlockedReasonCode.mmBankruptcy, com.tools20022.repository.codeset.BlockedReasonCode.mmMortisCausa,
+						com.tools20022.repository.codeset.BlockedReasonCode.mmTransfer, com.tools20022.repository.codeset.BlockedReasonCode.mmReregistration, com.tools20022.repository.codeset.BlockedReasonCode.mmSanctions,
+						com.tools20022.repository.codeset.BlockedReasonCode.mmPendingComplianceVerification, com.tools20022.repository.codeset.BlockedReasonCode.mmAccountClosingInProcess,
+						com.tools20022.repository.codeset.BlockedReasonCode.mmRejected);
 				derivation_lazy = () -> Arrays.asList(BlockedReason1Code.mmObject(), BlockedReason2Code.mmObject(), DisabledReason2Code.mmObject());
 			}
 		});

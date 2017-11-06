@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.PaymentsMandatesISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsMandatesMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -70,21 +71,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateSuspensionRequestV01#GroupHeader
- * MandateSuspensionRequestV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateSuspensionRequestV01#mmGroupHeader
+ * MandateSuspensionRequestV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateSuspensionRequestV01#UnderlyingSuspensionDetails
- * MandateSuspensionRequestV01.UnderlyingSuspensionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateSuspensionRequestV01#mmUnderlyingSuspensionDetails
+ * MandateSuspensionRequestV01.mmUnderlyingSuspensionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateSuspensionRequestV01#SupplementaryData
- * MandateSuspensionRequestV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateSuspensionRequestV01#mmSupplementaryData
+ * MandateSuspensionRequestV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.MandateSuspensionRequestV01#identifier
- * MandateSuspensionRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.018.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateSuspensionRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader47 groupHeader;
 	/**
 	 * Set of characteristics to identify the message and parties playing a role
 	 * in the mandate suspension request, but which are not part of the mandate.
@@ -125,17 +125,18 @@ public class MandateSuspensionRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics to identify the message and parties playing a role in the mandate suspension request, but which are not part of the mandate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
 	};
+	protected List<MandateSuspension1> underlyingSuspensionDetails;
 	/**
 	 * Set of elements used to provide information on the suspension request of
 	 * the mandate.
@@ -162,7 +163,7 @@ public class MandateSuspensionRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingSuspensionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingSuspensionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygSspnsnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,6 +173,7 @@ public class MandateSuspensionRequestV01 {
 			complexType_lazy = () -> MandateSuspension1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -198,7 +200,7 @@ public class MandateSuspensionRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,33 +208,6 @@ public class MandateSuspensionRequestV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "018"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "018";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -246,11 +221,42 @@ public class MandateSuspensionRequestV01 {
 				rootElement = "Document";
 				xmlTag = "MndtSspnsnReq";
 				businessArea_lazy = () -> PaymentsInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateSuspensionRequestV01.GroupHeader, com.tools20022.repository.area.pain.MandateSuspensionRequestV01.UnderlyingSuspensionDetails,
-						com.tools20022.repository.area.pain.MandateSuspensionRequestV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.MandateSuspensionRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateSuspensionRequestV01.mmGroupHeader, com.tools20022.repository.area.pain.MandateSuspensionRequestV01.mmUnderlyingSuspensionDetails,
+						com.tools20022.repository.area.pain.MandateSuspensionRequestV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "018";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader47 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader47 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<MandateSuspension1> getUnderlyingSuspensionDetails() {
+		return underlyingSuspensionDetails;
+	}
+
+	public void setUnderlyingSuspensionDetails(List<MandateSuspension1> underlyingSuspensionDetails) {
+		this.underlyingSuspensionDetails = underlyingSuspensionDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

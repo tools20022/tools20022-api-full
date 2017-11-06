@@ -30,27 +30,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode#Trade
- * ForeignExchangeTradeTypeCode.Trade}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode#mmTrade
+ * ForeignExchangeTradeTypeCode.mmTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode#Swap
- * ForeignExchangeTradeTypeCode.Swap}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode#mmSwap
+ * ForeignExchangeTradeTypeCode.mmSwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode#Opening
- * ForeignExchangeTradeTypeCode.Opening}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode#mmOpening
+ * ForeignExchangeTradeTypeCode.mmOpening}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode#PartialClosing
- * ForeignExchangeTradeTypeCode.PartialClosing}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode#mmPartialClosing
+ * ForeignExchangeTradeTypeCode.mmPartialClosing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode#FinalClosing
- * ForeignExchangeTradeTypeCode.FinalClosing}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode#mmFinalClosing
+ * ForeignExchangeTradeTypeCode.mmFinalClosing}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class ForeignExchangeTradeTypeCode {
 	 * definition} = "Indicates that the trade is a spot or forward agreement."</li>
 	 * </ul>
 	 */
-	public static final MMCode Trade = new MMCode() {
+	public static final MMCode mmTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Trade";
@@ -120,7 +120,7 @@ public class ForeignExchangeTradeTypeCode {
 	 * definition} = "Trade is part of a swap agreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode Swap = new MMCode() {
+	public static final MMCode mmSwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Swap";
@@ -153,7 +153,7 @@ public class ForeignExchangeTradeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Opening = new MMCode() {
+	public static final MMCode mmOpening = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Opening";
@@ -186,7 +186,7 @@ public class ForeignExchangeTradeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PartialClosing = new MMCode() {
+	public static final MMCode mmPartialClosing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "PartialClosing";
@@ -221,7 +221,7 @@ public class ForeignExchangeTradeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FinalClosing = new MMCode() {
+	public static final MMCode mmFinalClosing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "FinalClosing";
@@ -234,14 +234,14 @@ public class ForeignExchangeTradeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CONF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "ForeignExchangeTradeTypeCode";
 				definition = "Specifies the type of foreign exchange trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.Trade, com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.Swap,
-						com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.Opening, com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.PartialClosing,
-						com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.FinalClosing);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmTrade, com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmSwap,
+						com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmOpening, com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmPartialClosing,
+						com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmFinalClosing);
 			}
 		});
 		return mmObject_lazy.get();

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the deactivation.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstruction1#DeactivationDateAndTime
- * CorporateActionDeactivationInstruction1.DeactivationDateAndTime}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstruction1#mmDeactivationDateAndTime
+ * CorporateActionDeactivationInstruction1.mmDeactivationDateAndTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstruction1#OptionDetails
- * CorporateActionDeactivationInstruction1.OptionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstruction1#mmOptionDetails
+ * CorporateActionDeactivationInstruction1.mmOptionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,18 +51,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01#DeactivationDetails
- * AgentCADeactivationInstructionV01.DeactivationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01#mmDeactivationDetails
+ * AgentCADeactivationInstructionV01.mmDeactivationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#DeactivationInstructionDetails
- * AgentCADeactivationCancellationRequestV01.DeactivationInstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#mmDeactivationInstructionDetails
+ * AgentCADeactivationCancellationRequestV01.mmDeactivationInstructionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDeactivationInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime deactivationDateAndTime;
 	/**
 	 * Date and time at which the CSD must deactivate the corporate action event
 	 * or the option.
@@ -88,8 +90,8 @@ public class CorporateActionDeactivationInstruction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#DeactivationDateAndTime
-	 * CorporateActionStatus.DeactivationDateAndTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmDeactivationDateAndTime
+	 * CorporateActionStatus.mmDeactivationDateAndTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +112,21 @@ public class CorporateActionDeactivationInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeactivationDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeactivationDateAndTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmDeactivationDateAndTime;
 			componentContext_lazy = () -> CorporateActionDeactivationInstruction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.DeactivationDateAndTime;
 			isDerived = false;
 			xmlTag = "DeactvtnDtAndTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationDateAndTime";
 			definition = "Date and time at which the CSD must deactivate the corporate action event or the option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CorporateActionOption2> optionDetails;
 	/**
 	 * Provides information about the option, when the deactivation instruction
 	 * applies at the level of a corporate action option.
@@ -136,8 +139,8 @@ public class CorporateActionDeactivationInstruction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#CorporateActionOptionDefinition
-	 * ChoiceCorporateAction.CorporateActionOptionDefinition}</li>
+	 * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
+	 * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,34 +161,51 @@ public class CorporateActionDeactivationInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOptionDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition;
 			componentContext_lazy = () -> CorporateActionDeactivationInstruction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.CorporateActionOptionDefinition;
 			isDerived = false;
 			xmlTag = "OptnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionDetails";
 			definition = "Provides information about the option, when the deactivation instruction applies at the level of a corporate action option.";
 			minOccurs = 0;
-			type_lazy = () -> CorporateActionOption2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionOption2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.DeactivationDateAndTime, com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.OptionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.mmDeactivationDateAndTime,
+						com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.mmOptionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01.mmDeactivationDetails,
+						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.mmDeactivationInstructionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01.DeactivationDetails,
-						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.DeactivationInstructionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDeactivationInstruction1";
 				definition = "Provides information about the deactivation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getDeactivationDateAndTime() {
+		return deactivationDateAndTime;
+	}
+
+	public void setDeactivationDateAndTime(ISODateTime deactivationDateAndTime) {
+		this.deactivationDateAndTime = deactivationDateAndTime;
+	}
+
+	public List<CorporateActionOption2> getOptionDetails() {
+		return optionDetails;
+	}
+
+	public void setOptionDetails(List<com.tools20022.repository.msg.CorporateActionOption2> optionDetails) {
+		this.optionDetails = optionDetails;
 	}
 }

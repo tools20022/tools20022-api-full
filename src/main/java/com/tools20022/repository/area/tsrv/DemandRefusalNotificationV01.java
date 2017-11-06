@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The DemandRefusalNotification message is sent to the beneficiary or presenter
@@ -56,18 +57,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01#DemandRefusalNotificationDetails
- * DemandRefusalNotificationV01.DemandRefusalNotificationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01#mmDemandRefusalNotificationDetails
+ * DemandRefusalNotificationV01.mmDemandRefusalNotificationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01#DigitalSignature
- * DemandRefusalNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01#mmDigitalSignature
+ * DemandRefusalNotificationV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01#identifier
- * DemandRefusalNotificationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsrv.016.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DemandRefusalNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected List<DemandRefusal1> demandRefusalNotificationDetails;
 	/**
 	 * Details of the demand refusal notification.
 	 * <p>
@@ -105,7 +105,7 @@ public class DemandRefusalNotificationV01 {
 	 * definition} = "Details of the demand refusal notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DemandRefusalNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDemandRefusalNotificationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DmndRfslNtfctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,6 +115,7 @@ public class DemandRefusalNotificationV01 {
 			complexType_lazy = () -> DemandRefusal1.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the notification.
 	 * <p>
@@ -138,42 +139,15 @@ public class DemandRefusalNotificationV01 {
 	 * definition} = "Digital signature of the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the notification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "016"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsrv";
-			messageFunctionality = "016";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -187,11 +161,34 @@ public class DemandRefusalNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "DmndRfslNtfctn";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01.DemandRefusalNotificationDetails,
-						com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01.mmDemandRefusalNotificationDetails,
+						com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsrv";
+						messageFunctionality = "016";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<DemandRefusal1> getDemandRefusalNotificationDetails() {
+		return demandRefusalNotificationDetails;
+	}
+
+	public void setDemandRefusalNotificationDetails(List<DemandRefusal1> demandRefusalNotificationDetails) {
+		this.demandRefusalNotificationDetails = demandRefusalNotificationDetails;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

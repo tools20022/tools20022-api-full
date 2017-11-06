@@ -58,21 +58,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02#Header
- * AcceptorReconciliationRequestV02.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02#mmHeader
+ * AcceptorReconciliationRequestV02.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02#ReconciliationRequest
- * AcceptorReconciliationRequestV02.ReconciliationRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02#mmReconciliationRequest
+ * AcceptorReconciliationRequestV02.mmReconciliationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02#SecurityTrailer
- * AcceptorReconciliationRequestV02.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02#mmSecurityTrailer
+ * AcceptorReconciliationRequestV02.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02#identifier
- * AcceptorReconciliationRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caaa.009.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorReconciliationRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header1 header;
 	/**
 	 * Reconciliation request message management information.
 	 * <p>
@@ -124,24 +123,25 @@ public class AcceptorReconciliationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03#Header
-	 * AcceptorReconciliationRequestV03.Header}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03#mmHeader
+	 * AcceptorReconciliationRequestV03.mmHeader}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Reconciliation request message management information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03.Header);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03.mmHeader);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header1.mmObject();
 		}
 	};
+	protected AcceptorReconciliationRequest2 reconciliationRequest;
 	/**
 	 * Information related to the reconcilliation request.
 	 * <p>
@@ -167,24 +167,25 @@ public class AcceptorReconciliationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03#ReconciliationRequest
-	 * AcceptorReconciliationRequestV03.ReconciliationRequest}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03#mmReconciliationRequest
+	 * AcceptorReconciliationRequestV03.mmReconciliationRequest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReconciliationRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReconciliationRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcncltnReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationRequest";
 			definition = "Information related to the reconcilliation request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03.ReconciliationRequest);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03.mmReconciliationRequest);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorReconciliationRequest2.mmObject();
 		}
 	};
+	protected ContentInformationType6 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -210,49 +211,22 @@ public class AcceptorReconciliationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03#SecurityTrailer
-	 * AcceptorReconciliationRequestV03.SecurityTrailer}</li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03#mmSecurityTrailer
+	 * AcceptorReconciliationRequestV03.mmSecurityTrailer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03.SecurityTrailer);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV03.mmSecurityTrailer);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType6.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caaa"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "009"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caaa";
-			messageFunctionality = "009";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -262,17 +236,48 @@ public class AcceptorReconciliationRequestV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorReconciliationRequestV02";
 				definition = "The AcceptorReconciliationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to ensure that the debits and credits performed by the acceptor matches the computed balances of the acquirer for the debits and credits performed during the same reconciliation period.\r\nIf the acceptor or the acquirer notices a difference in totals, the discrepancy will be resolved by other means, outside the scope of the protocol.";
-				previousVersion_lazy = () -> AcceptorReconciliationRequestV01.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationRequestV03.mmObject());
+				previousVersion_lazy = () -> AcceptorReconciliationRequestV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrRcncltnReq";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02.Header, com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02.ReconciliationRequest,
-						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02.mmHeader, com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02.mmReconciliationRequest,
+						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caaa";
+						messageFunctionality = "009";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header1 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header1 header) {
+		this.header = header;
+	}
+
+	public AcceptorReconciliationRequest2 getReconciliationRequest() {
+		return reconciliationRequest;
+	}
+
+	public void setReconciliationRequest(AcceptorReconciliationRequest2 reconciliationRequest) {
+		this.reconciliationRequest = reconciliationRequest;
+	}
+
+	public ContentInformationType6 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType6 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

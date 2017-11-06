@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max20000Text;
 import com.tools20022.repository.entity.UndertakingDocument;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about a document.
@@ -35,11 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Document8#Type Document8.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Document8#Wording
- * Document8.Wording}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Document8#ElectronicDetails
- * Document8.ElectronicDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document8#mmType
+ * Document8.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document8#mmWording
+ * Document8.mmWording}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document8#mmElectronicDetails
+ * Document8.mmElectronicDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Document8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PresentationDocumentFormat1Choice type;
 	/**
 	 * Type of document.
 	 * <p>
@@ -76,8 +79,8 @@ public class Document8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#DocumentType
-	 * UndertakingDocument.DocumentType}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#mmDocumentType
+	 * UndertakingDocument.mmDocumentType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Document8
@@ -95,20 +98,21 @@ public class Document8 {
 	 * definition} = "Type of document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmDocumentType;
 			componentContext_lazy = () -> Document8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.DocumentType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PresentationDocumentFormat1Choice.mmObject();
 		}
 	};
+	protected Max20000Text wording;
 	/**
 	 * Wording for document.
 	 * <p>
@@ -136,7 +140,7 @@ public class Document8 {
 	 * definition} = "Wording for document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Wording = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWording = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Document8.mmObject();
 			isDerived = false;
@@ -144,11 +148,12 @@ public class Document8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Wording";
 			definition = "Wording for document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max20000Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Presentation3> electronicDetails;
 	/**
 	 * Details related to an electronic presentation.
 	 * <p>
@@ -160,8 +165,8 @@ public class Document8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Presentation
-	 * Document.Presentation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmPresentation
+	 * Document.mmPresentation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Document8
@@ -179,32 +184,56 @@ public class Document8 {
 	 * definition} = "Details related to an electronic presentation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ElectronicDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmElectronicDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPresentation;
 			componentContext_lazy = () -> Document8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Presentation;
 			isDerived = false;
 			xmlTag = "ElctrncDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicDetails";
 			definition = "Details related to an electronic presentation.";
 			minOccurs = 0;
-			type_lazy = () -> Presentation3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Presentation3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Document8.Type, com.tools20022.repository.msg.Document8.Wording, com.tools20022.repository.msg.Document8.ElectronicDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Document8.mmType, com.tools20022.repository.msg.Document8.mmWording, com.tools20022.repository.msg.Document8.mmElectronicDetails);
 				trace_lazy = () -> UndertakingDocument.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Document8";
 				definition = "Information about a document.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PresentationDocumentFormat1Choice getType() {
+		return type;
+	}
+
+	public void setType(PresentationDocumentFormat1Choice type) {
+		this.type = type;
+	}
+
+	public Max20000Text getWording() {
+		return wording;
+	}
+
+	public void setWording(Max20000Text wording) {
+		this.wording = wording;
+	}
+
+	public List<Presentation3> getElectronicDetails() {
+		return electronicDetails;
+	}
+
+	public void setElectronicDetails(List<com.tools20022.repository.msg.Presentation3> electronicDetails) {
+		this.electronicDetails = electronicDetails;
 	}
 }

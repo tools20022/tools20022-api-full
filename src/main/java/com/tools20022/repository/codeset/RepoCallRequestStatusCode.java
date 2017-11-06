@@ -31,11 +31,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallRequestStatusCode#AcknowledgedAccepted
- * RepoCallRequestStatusCode.AcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallRequestStatusCode#mmAcknowledgedAccepted
+ * RepoCallRequestStatusCode.mmAcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallRequestStatusCode#Denied
- * RepoCallRequestStatusCode.Denied}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallRequestStatusCode#mmDenied
+ * RepoCallRequestStatusCode.mmDenied}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class RepoCallRequestStatusCode {
 	 * "Repurchase agreement call request is acknowledged/accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgedAccepted = new MMCode() {
+	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
@@ -123,7 +123,7 @@ public class RepoCallRequestStatusCode {
 	 * definition} = "Repuchase agreement call request is denied."</li>
 	 * </ul>
 	 */
-	public static final MMCode Denied = new MMCode() {
+	public static final MMCode mmDenied = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
@@ -136,12 +136,12 @@ public class RepoCallRequestStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CACK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepoCallRequestStatusCode";
 				definition = "Specifies additional information about the status of the repurchase agreement call processed instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepoCallRequestStatusCode.AcknowledgedAccepted, com.tools20022.repository.codeset.RepoCallRequestStatusCode.Denied);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepoCallRequestStatusCode.mmAcknowledgedAccepted, com.tools20022.repository.codeset.RepoCallRequestStatusCode.mmDenied);
 				derivation_lazy = () -> Arrays.asList(RepoCallRequestStatus1Code.mmObject());
 			}
 		});

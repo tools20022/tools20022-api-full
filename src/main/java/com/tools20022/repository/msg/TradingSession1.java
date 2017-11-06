@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradingSession1#TradingSessionIdentification
- * TradingSession1.TradingSessionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TradingSession1#mmTradingSessionIdentification
+ * TradingSession1.mmTradingSessionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradingSession1#TradingSessionSubIdentification
- * TradingSession1.TradingSessionSubIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TradingSession1#mmTradingSessionSubIdentification
+ * TradingSession1.mmTradingSessionSubIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradingSession1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max128Text tradingSessionIdentification;
 	/**
 	 * Identification of a specific execution time bracket code through its
 	 * trading session name or description.
@@ -75,8 +76,8 @@ public class TradingSession1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradingSession#TradingSessionName
-	 * TradingSession.TradingSessionName}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingSession#mmTradingSessionName
+	 * TradingSession.mmTradingSessionName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class TradingSession1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingSessionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingSessionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingSession.mmTradingSessionName;
 			componentContext_lazy = () -> TradingSession1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingSession.TradingSessionName;
 			isDerived = false;
 			xmlTag = "TradgSsnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionIdentification";
 			definition = "Identification of a specific execution time bracket code through its trading session name or description.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
 		}
 	};
+	protected Max128Text tradingSessionSubIdentification;
 	/**
 	 * Optional market assigned sub identifier for a trading session. Usage is
 	 * determined by market or counterparties.
@@ -124,8 +126,8 @@ public class TradingSession1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradingSession#TradingSessionName
-	 * TradingSession.TradingSessionName}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingSession#mmTradingSessionName
+	 * TradingSession.mmTradingSessionName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,17 +148,17 @@ public class TradingSession1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingSessionSubIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingSessionSubIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingSession.mmTradingSessionName;
 			componentContext_lazy = () -> TradingSession1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingSession.TradingSessionName;
 			isDerived = false;
 			xmlTag = "TradgSsnSubId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionSubIdentification";
 			definition = "Optional market assigned sub identifier for a trading session. Usage is determined by market or counterparties.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class TradingSession1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingSession1.TradingSessionIdentification, com.tools20022.repository.msg.TradingSession1.TradingSessionSubIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingSession1.mmTradingSessionIdentification, com.tools20022.repository.msg.TradingSession1.mmTradingSessionSubIdentification);
 				trace_lazy = () -> TradingSession.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TradingSession1";
 				definition = "The details of a specific trading session.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max128Text getTradingSessionIdentification() {
+		return tradingSessionIdentification;
+	}
+
+	public void setTradingSessionIdentification(Max128Text tradingSessionIdentification) {
+		this.tradingSessionIdentification = tradingSessionIdentification;
+	}
+
+	public Max128Text getTradingSessionSubIdentification() {
+		return tradingSessionSubIdentification;
+	}
+
+	public void setTradingSessionSubIdentification(Max128Text tradingSessionSubIdentification) {
+		this.tradingSessionSubIdentification = tradingSessionSubIdentification;
 	}
 }

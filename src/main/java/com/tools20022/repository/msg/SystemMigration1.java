@@ -34,25 +34,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemMigration1#NPSParticipantIndicator
- * SystemMigration1.NPSParticipantIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemMigration1#mmNPSParticipantIndicator
+ * SystemMigration1.mmNPSParticipantIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemMigration1#PlannedMigrationDate
- * SystemMigration1.PlannedMigrationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemMigration1#mmPlannedMigrationDate
+ * SystemMigration1.mmPlannedMigrationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemMigration1#BalanceReceivedIndicator
- * SystemMigration1.BalanceReceivedIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemMigration1#Migrated
- * SystemMigration1.Migrated}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemMigration1#LastDate
- * SystemMigration1.LastDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemMigration1#mmBalanceReceivedIndicator
+ * SystemMigration1.mmBalanceReceivedIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemMigration1#mmMigrated
+ * SystemMigration1.mmMigrated}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemMigration1#mmLastDate
+ * SystemMigration1.mmLastDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemMigration1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator nPSParticipantIndicator;
 	/**
 	 * Indicates whether the participant is a member of a new payment system.
 	 * <p>
@@ -96,7 +97,7 @@ public class SystemMigration1 {
 	 * "Indicates whether the participant is a member of a new payment system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NPSParticipantIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNPSParticipantIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemMigration1.mmObject();
 			isDerived = false;
@@ -104,11 +105,12 @@ public class SystemMigration1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NPSParticipantIndicator";
 			definition = "Indicates whether the participant is a member of a new payment system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ISODateTime plannedMigrationDate;
 	/**
 	 * Planned migration date.
 	 * <p>
@@ -136,7 +138,7 @@ public class SystemMigration1 {
 	 * definition} = "Planned migration date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlannedMigrationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlannedMigrationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemMigration1.mmObject();
 			isDerived = false;
@@ -144,11 +146,12 @@ public class SystemMigration1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlannedMigrationDate";
 			definition = "Planned migration date.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected YesNoIndicator balanceReceivedIndicator;
 	/**
 	 * Indicates whether the balance was received.
 	 * <p>
@@ -177,7 +180,7 @@ public class SystemMigration1 {
 	 * definition} = "Indicates whether the balance was received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BalanceReceivedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalanceReceivedIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemMigration1.mmObject();
 			isDerived = false;
@@ -185,11 +188,12 @@ public class SystemMigration1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceReceivedIndicator";
 			definition = "Indicates whether the balance was received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator migrated;
 	/**
 	 * Indicates whether the participant was migrated.
 	 * <p>
@@ -218,7 +222,7 @@ public class SystemMigration1 {
 	 * definition} = "Indicates whether the participant was migrated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Migrated = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMigrated = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemMigration1.mmObject();
 			isDerived = false;
@@ -226,11 +230,12 @@ public class SystemMigration1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Migrated";
 			definition = "Indicates whether the participant was migrated.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected ISODateTime lastDate;
 	/**
 	 * Date of the latest RABIS service
 	 * <p>
@@ -258,7 +263,7 @@ public class SystemMigration1 {
 	 * definition} = "Date of the latest RABIS service"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SystemMigration1.mmObject();
 			isDerived = false;
@@ -266,8 +271,8 @@ public class SystemMigration1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastDate";
 			definition = "Date of the latest RABIS service";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -275,14 +280,54 @@ public class SystemMigration1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemMigration1.NPSParticipantIndicator, com.tools20022.repository.msg.SystemMigration1.PlannedMigrationDate,
-						com.tools20022.repository.msg.SystemMigration1.BalanceReceivedIndicator, com.tools20022.repository.msg.SystemMigration1.Migrated, com.tools20022.repository.msg.SystemMigration1.LastDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemMigration1.mmNPSParticipantIndicator, com.tools20022.repository.msg.SystemMigration1.mmPlannedMigrationDate,
+						com.tools20022.repository.msg.SystemMigration1.mmBalanceReceivedIndicator, com.tools20022.repository.msg.SystemMigration1.mmMigrated, com.tools20022.repository.msg.SystemMigration1.mmLastDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemMigration1";
 				definition = "Data about participant migration to new payment system process.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getNPSParticipantIndicator() {
+		return nPSParticipantIndicator;
+	}
+
+	public void setNPSParticipantIndicator(YesNoIndicator nPSParticipantIndicator) {
+		this.nPSParticipantIndicator = nPSParticipantIndicator;
+	}
+
+	public ISODateTime getPlannedMigrationDate() {
+		return plannedMigrationDate;
+	}
+
+	public void setPlannedMigrationDate(ISODateTime plannedMigrationDate) {
+		this.plannedMigrationDate = plannedMigrationDate;
+	}
+
+	public YesNoIndicator getBalanceReceivedIndicator() {
+		return balanceReceivedIndicator;
+	}
+
+	public void setBalanceReceivedIndicator(YesNoIndicator balanceReceivedIndicator) {
+		this.balanceReceivedIndicator = balanceReceivedIndicator;
+	}
+
+	public YesNoIndicator getMigrated() {
+		return migrated;
+	}
+
+	public void setMigrated(YesNoIndicator migrated) {
+		this.migrated = migrated;
+	}
+
+	public ISODateTime getLastDate() {
+		return lastDate;
+	}
+
+	public void setLastDate(ISODateTime lastDate) {
+		this.lastDate = lastDate;
 	}
 }

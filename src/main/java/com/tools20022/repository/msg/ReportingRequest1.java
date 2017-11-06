@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ReportingService;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to provide details of the reporting request.
@@ -35,22 +36,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest1#Identification
- * ReportingRequest1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest1#mmIdentification
+ * ReportingRequest1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest1#RequestedMessageType
- * ReportingRequest1.RequestedMessageType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportingRequest1#Account
- * ReportingRequest1.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest1#mmRequestedMessageType
+ * ReportingRequest1.mmRequestedMessageType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportingRequest1#mmAccount
+ * ReportingRequest1.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest1#ReportingPeriod
- * ReportingRequest1.ReportingPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest1#mmReportingPeriod
+ * ReportingRequest1.mmReportingPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest1#RequestedTransactionType
- * ReportingRequest1.RequestedTransactionType}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest1#mmRequestedTransactionType
+ * ReportingRequest1.mmRequestedTransactionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportingRequest1#RequestedBalanceType
- * ReportingRequest1.RequestedBalanceType}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest1#mmRequestedBalanceType
+ * ReportingRequest1.mmRequestedBalanceType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportingRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique identification, as assigned by the account owner, to unambiguously
 	 * identify the account reporting request.
@@ -105,7 +107,7 @@ public class ReportingRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
 			isDerived = false;
@@ -113,11 +115,12 @@ public class ReportingRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by the account owner, to unambiguously identify the account reporting request.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text requestedMessageType;
 	/**
 	 * Specifies the type of the requested reporting message.
 	 * <p>
@@ -145,7 +148,7 @@ public class ReportingRequest1 {
 	 * definition} = "Specifies the type of the requested reporting message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedMessageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedMessageType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
 			isDerived = false;
@@ -153,11 +156,12 @@ public class ReportingRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedMessageType";
 			definition = "Specifies the type of the requested reporting message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CashAccount20 account;
 	/**
 	 * Unambiguous identification of the account to which the reporting request
 	 * refers.
@@ -170,8 +174,8 @@ public class ReportingRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccountContract#CashAccount
-	 * CashAccountContract.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmCashAccount
+	 * CashAccountContract.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,21 +196,22 @@ public class ReportingRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.CashAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account to which the reporting request refers.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount20.mmObject();
 		}
 	};
+	protected ReportingPeriod1 reportingPeriod;
 	/**
 	 * Specifies the requested reporting period.
 	 * <p>
@@ -233,7 +238,7 @@ public class ReportingRequest1 {
 	 * definition} = "Specifies the requested reporting period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
 			isDerived = false;
@@ -241,12 +246,13 @@ public class ReportingRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "Specifies the requested reporting period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReportingPeriod1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReportingPeriod1.mmObject();
 		}
 	};
+	protected TransactionType1 requestedTransactionType;
 	/**
 	 * Set of elements used to identify the transactions to be reported.
 	 * <p>
@@ -258,8 +264,8 @@ public class ReportingRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#CashEntry
-	 * CashAccount.CashEntry}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashEntry
+	 * CashAccount.mmCashEntry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -279,21 +285,22 @@ public class ReportingRequest1 {
 	 * "Set of elements used to identify the transactions to be reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestedTransactionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestedTransactionType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashEntry;
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.CashEntry;
 			isDerived = false;
 			xmlTag = "ReqdTxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTransactionType";
 			definition = "Set of elements used to identify the transactions to be reported.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionType1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionType1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BalanceType12> requestedBalanceType;
 	/**
 	 * Set of elements used to provide details on the requested balance
 	 * reporting.
@@ -306,7 +313,8 @@ public class ReportingRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -327,34 +335,82 @@ public class ReportingRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestedBalanceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestedBalanceType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "ReqdBalTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedBalanceType";
 			definition = "Set of elements used to provide details on the requested balance reporting.";
 			minOccurs = 0;
-			type_lazy = () -> BalanceType12.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BalanceType12.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportingRequest1.Identification, com.tools20022.repository.msg.ReportingRequest1.RequestedMessageType,
-						com.tools20022.repository.msg.ReportingRequest1.Account, com.tools20022.repository.msg.ReportingRequest1.ReportingPeriod, com.tools20022.repository.msg.ReportingRequest1.RequestedTransactionType,
-						com.tools20022.repository.msg.ReportingRequest1.RequestedBalanceType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportingRequest1.mmIdentification, com.tools20022.repository.msg.ReportingRequest1.mmRequestedMessageType,
+						com.tools20022.repository.msg.ReportingRequest1.mmAccount, com.tools20022.repository.msg.ReportingRequest1.mmReportingPeriod, com.tools20022.repository.msg.ReportingRequest1.mmRequestedTransactionType,
+						com.tools20022.repository.msg.ReportingRequest1.mmRequestedBalanceType);
 				trace_lazy = () -> ReportingService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportingRequest1";
 				definition = "Set of elements used to provide details of the reporting request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getRequestedMessageType() {
+		return requestedMessageType;
+	}
+
+	public void setRequestedMessageType(Max35Text requestedMessageType) {
+		this.requestedMessageType = requestedMessageType;
+	}
+
+	public CashAccount20 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount20 account) {
+		this.account = account;
+	}
+
+	public ReportingPeriod1 getReportingPeriod() {
+		return reportingPeriod;
+	}
+
+	public void setReportingPeriod(com.tools20022.repository.msg.ReportingPeriod1 reportingPeriod) {
+		this.reportingPeriod = reportingPeriod;
+	}
+
+	public TransactionType1 getRequestedTransactionType() {
+		return requestedTransactionType;
+	}
+
+	public void setRequestedTransactionType(com.tools20022.repository.msg.TransactionType1 requestedTransactionType) {
+		this.requestedTransactionType = requestedTransactionType;
+	}
+
+	public List<BalanceType12> getRequestedBalanceType() {
+		return requestedBalanceType;
+	}
+
+	public void setRequestedBalanceType(List<com.tools20022.repository.msg.BalanceType12> requestedBalanceType) {
+		this.requestedBalanceType = requestedBalanceType;
 	}
 }

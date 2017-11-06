@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Registration1Code#StreetName
- * Registration1Code.StreetName}</li>
+ * {@linkplain com.tools20022.repository.codeset.Registration1Code#mmStreetName
+ * Registration1Code.mmStreetName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Registration1Code#Registered
- * Registration1Code.Registered}</li>
+ * {@linkplain com.tools20022.repository.codeset.Registration1Code#mmRegistered
+ * Registration1Code.mmRegistered}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class Registration1Code extends RegistrationCode {
 	 * name} = "StreetName"</li>
 	 * </ul>
 	 */
-	public static final MMCode StreetName = new MMCode() {
+	public static final MMCode mmStreetName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetName";
@@ -104,7 +104,7 @@ public class Registration1Code extends RegistrationCode {
 	 * name} = "Registered"</li>
 	 * </ul>
 	 */
-	public static final MMCode Registered = new MMCode() {
+	public static final MMCode mmRegistered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registered";
@@ -115,12 +115,12 @@ public class Registration1Code extends RegistrationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NREG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Registration1Code";
 				definition = "Specifies whether registration should occur upon receipt.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Registration1Code.StreetName, com.tools20022.repository.codeset.Registration1Code.Registered);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Registration1Code.mmStreetName, com.tools20022.repository.codeset.Registration1Code.mmRegistered);
 				trace_lazy = () -> RegistrationCode.mmObject();
 			}
 		});

@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationBasis1Code#Average
- * CalculationBasis1Code.Average}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationBasis1Code#mmAverage
+ * CalculationBasis1Code.mmAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationBasis1Code#Daily
- * CalculationBasis1Code.Daily}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationBasis1Code#mmDaily
+ * CalculationBasis1Code.mmDaily}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationBasis1Code#Other
- * CalculationBasis1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationBasis1Code#mmOther
+ * CalculationBasis1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class CalculationBasis1Code extends CalculationBasisCode {
 	 * name} = "Average"</li>
 	 * </ul>
 	 */
-	public static final MMCode Average = new MMCode() {
+	public static final MMCode mmAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Average";
@@ -107,7 +107,7 @@ public class CalculationBasis1Code extends CalculationBasisCode {
 	 * name} = "Daily"</li>
 	 * </ul>
 	 */
-	public static final MMCode Daily = new MMCode() {
+	public static final MMCode mmDaily = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
@@ -130,7 +130,7 @@ public class CalculationBasis1Code extends CalculationBasisCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -141,12 +141,13 @@ public class CalculationBasis1Code extends CalculationBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CalculationBasis1Code";
 				definition = "Specifies the calculation basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationBasis1Code.Average, com.tools20022.repository.codeset.CalculationBasis1Code.Daily, com.tools20022.repository.codeset.CalculationBasis1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationBasis1Code.mmAverage, com.tools20022.repository.codeset.CalculationBasis1Code.mmDaily,
+						com.tools20022.repository.codeset.CalculationBasis1Code.mmOther);
 				trace_lazy = () -> CalculationBasisCode.mmObject();
 			}
 		});

@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * ClearingSideCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ClearingSide1Code#Buy
- * ClearingSide1Code.Buy}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ClearingSide1Code#Sell
- * ClearingSide1Code.Sell}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ClearingSide1Code#Lend
- * ClearingSide1Code.Lend}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ClearingSide1Code#Borrow
- * ClearingSide1Code.Borrow}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ClearingSide1Code#mmBuy
+ * ClearingSide1Code.mmBuy}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ClearingSide1Code#mmSell
+ * ClearingSide1Code.mmSell}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ClearingSide1Code#mmLend
+ * ClearingSide1Code.mmLend}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ClearingSide1Code#mmBorrow
+ * ClearingSide1Code.mmBorrow}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class ClearingSide1Code extends ClearingSideCode {
 	 * name} = "Buy"</li>
 	 * </ul>
 	 */
-	public static final MMCode Buy = new MMCode() {
+	public static final MMCode mmBuy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buy";
@@ -106,7 +106,7 @@ public class ClearingSide1Code extends ClearingSideCode {
 	 * name} = "Sell"</li>
 	 * </ul>
 	 */
-	public static final MMCode Sell = new MMCode() {
+	public static final MMCode mmSell = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
@@ -129,7 +129,7 @@ public class ClearingSide1Code extends ClearingSideCode {
 	 * name} = "Lend"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lend = new MMCode() {
+	public static final MMCode mmLend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lend";
@@ -152,7 +152,7 @@ public class ClearingSide1Code extends ClearingSideCode {
 	 * name} = "Borrow"</li>
 	 * </ul>
 	 */
-	public static final MMCode Borrow = new MMCode() {
+	public static final MMCode mmBorrow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrow";
@@ -163,13 +163,13 @@ public class ClearingSide1Code extends ClearingSideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClearingSide1Code";
 				definition = "Side taken by a party on an order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingSide1Code.Buy, com.tools20022.repository.codeset.ClearingSide1Code.Sell, com.tools20022.repository.codeset.ClearingSide1Code.Lend,
-						com.tools20022.repository.codeset.ClearingSide1Code.Borrow);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingSide1Code.mmBuy, com.tools20022.repository.codeset.ClearingSide1Code.mmSell, com.tools20022.repository.codeset.ClearingSide1Code.mmLend,
+						com.tools20022.repository.codeset.ClearingSide1Code.mmBorrow);
 				trace_lazy = () -> ClearingSideCode.mmObject();
 			}
 		});

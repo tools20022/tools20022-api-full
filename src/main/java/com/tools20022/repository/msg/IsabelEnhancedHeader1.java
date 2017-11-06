@@ -41,46 +41,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#DebitType
- * IsabelEnhancedHeader1.DebitType}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmDebitType
+ * IsabelEnhancedHeader1.mmDebitType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#BankDebitType
- * IsabelEnhancedHeader1.BankDebitType}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmBankDebitType
+ * IsabelEnhancedHeader1.mmBankDebitType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#AccountBasedContract
- * IsabelEnhancedHeader1.AccountBasedContract}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmAccountBasedContract
+ * IsabelEnhancedHeader1.mmAccountBasedContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#ValidationResults
- * IsabelEnhancedHeader1.ValidationResults}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmValidationResults
+ * IsabelEnhancedHeader1.mmValidationResults}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#PowerToSignValidationResults
- * IsabelEnhancedHeader1.PowerToSignValidationResults}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmPowerToSignValidationResults
+ * IsabelEnhancedHeader1.mmPowerToSignValidationResults}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#PowerToSignValidationTimeStamp
- * IsabelEnhancedHeader1.PowerToSignValidationTimeStamp}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmPowerToSignValidationTimeStamp
+ * IsabelEnhancedHeader1.mmPowerToSignValidationTimeStamp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#SenderTrigger
- * IsabelEnhancedHeader1.SenderTrigger}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmSenderTrigger
+ * IsabelEnhancedHeader1.mmSenderTrigger}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#SendTimeStamp
- * IsabelEnhancedHeader1.SendTimeStamp}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmSendTimeStamp
+ * IsabelEnhancedHeader1.mmSendTimeStamp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#ExtraConditionsAccepted
- * IsabelEnhancedHeader1.ExtraConditionsAccepted}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#Source
- * IsabelEnhancedHeader1.Source}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmExtraConditionsAccepted
+ * IsabelEnhancedHeader1.mmExtraConditionsAccepted}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmSource
+ * IsabelEnhancedHeader1.mmSource}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#NumberOfRequiredSignatures
- * IsabelEnhancedHeader1.NumberOfRequiredSignatures}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#Extended
- * IsabelEnhancedHeader1.Extended}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmNumberOfRequiredSignatures
+ * IsabelEnhancedHeader1.mmNumberOfRequiredSignatures}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IsabelEnhancedHeader1#mmExtended
+ * IsabelEnhancedHeader1.mmExtended}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelEnhancedHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DebitType1Code debitType;
 	/**
 	 * Type of debit to be applied to the payment, as provided by the end-user.
 	 * <p>
@@ -125,7 +127,7 @@ public class IsabelEnhancedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DebitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebitType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -133,11 +135,12 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitType";
 			definition = "Type of debit to be applied to the payment, as provided by the end-user.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DebitType1Code.mmObject();
 		}
 	};
+	protected DebitType1Code bankDebitType;
 	/**
 	 * Type of debit to be applied to the payment, as provided by the bank.<br>
 	 * This may supersede the debit type provided by the end-user.
@@ -169,7 +172,7 @@ public class IsabelEnhancedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankDebitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankDebitType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -177,11 +180,12 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankDebitType";
 			definition = "Type of debit to be applied to the payment, as provided by the bank.\r\nThis may supersede the debit type provided by the end-user.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DebitType1Code.mmObject();
 		}
 	};
+	protected TrueFalseIndicator accountBasedContract;
 	/**
 	 * Contract is defined on a specific account.
 	 * <p>
@@ -210,7 +214,7 @@ public class IsabelEnhancedHeader1 {
 	 * definition} = "Contract is defined on a specific account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountBasedContract = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountBasedContract = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -218,11 +222,12 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBasedContract";
 			definition = "Contract is defined on a specific account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Validation1Code validationResults;
 	/**
 	 * Results of all validations performed during the processing of a file
 	 * provided in the payload.
@@ -254,7 +259,7 @@ public class IsabelEnhancedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidationResults = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidationResults = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -262,11 +267,12 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationResults";
 			definition = "Results of all validations performed during the processing of a file provided in the payload.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Validation1Code.mmObject();
 		}
 	};
+	protected Validation2Code powerToSignValidationResults;
 	/**
 	 * Results of the signature validation provided by the 'PowerToSign' user.
 	 * <p>
@@ -297,7 +303,7 @@ public class IsabelEnhancedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PowerToSignValidationResults = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPowerToSignValidationResults = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -305,11 +311,12 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PowerToSignValidationResults";
 			definition = "Results of the signature validation provided by the 'PowerToSign' user.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Validation2Code.mmObject();
 		}
 	};
+	protected ISODateTime powerToSignValidationTimeStamp;
 	/**
 	 * Validation of the time stamp provided by the 'PowerToSign' user.
 	 * <p>
@@ -338,7 +345,7 @@ public class IsabelEnhancedHeader1 {
 	 * "Validation of the time stamp provided by the 'PowerToSign' user."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PowerToSignValidationTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPowerToSignValidationTimeStamp = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -346,11 +353,12 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PowerToSignValidationTimeStamp";
 			definition = "Validation of the time stamp provided by the 'PowerToSign' user.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected IsabelSenderTrigger1Choice senderTrigger;
 	/**
 	 * Trigger used by the sender to transfer the file.
 	 * <p>
@@ -378,7 +386,7 @@ public class IsabelEnhancedHeader1 {
 	 * definition} = "Trigger used by the sender to transfer the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SenderTrigger = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSenderTrigger = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -386,12 +394,13 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderTrigger";
 			definition = "Trigger used by the sender to transfer the file.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelSenderTrigger1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IsabelSenderTrigger1Choice.mmObject();
 		}
 	};
+	protected ISODateTime sendTimeStamp;
 	/**
 	 * Time stamp on when the file is sent.
 	 * <p>
@@ -419,7 +428,7 @@ public class IsabelEnhancedHeader1 {
 	 * definition} = "Time stamp on when the file is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SendTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSendTimeStamp = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -427,11 +436,12 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendTimeStamp";
 			definition = "Time stamp on when the file is sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected TrueFalseIndicator extraConditionsAccepted;
 	/**
 	 * Indicates whether extra conditions are applicable and accepted for this
 	 * file.
@@ -463,7 +473,7 @@ public class IsabelEnhancedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtraConditionsAccepted = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtraConditionsAccepted = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -471,11 +481,12 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtraConditionsAccepted";
 			definition = "Indicates whether extra conditions are applicable and accepted for this file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected IsabelInputSource1Choice source;
 	/**
 	 * Input source for the generation of the file.
 	 * <p>
@@ -503,7 +514,7 @@ public class IsabelEnhancedHeader1 {
 	 * definition} = "Input source for the generation of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Source = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSource = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -511,12 +522,13 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Source";
 			definition = "Input source for the generation of the file.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelInputSource1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IsabelInputSource1Choice.mmObject();
 		}
 	};
+	protected Number numberOfRequiredSignatures;
 	/**
 	 * Number of signatures required to validate the payments file.
 	 * <p>
@@ -545,7 +557,7 @@ public class IsabelEnhancedHeader1 {
 	 * "Number of signatures required to validate the payments file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfRequiredSignatures = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfRequiredSignatures = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -553,11 +565,12 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfRequiredSignatures";
 			definition = "Number of signatures required to validate the payments file.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected IsabelExtendedHeader1 extended;
 	/**
 	 * Extended parameters for an Isabel payment initiation file.
 	 * <p>
@@ -585,7 +598,7 @@ public class IsabelEnhancedHeader1 {
 	 * "Extended parameters for an Isabel payment initiation file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extended = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtended = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -593,27 +606,124 @@ public class IsabelEnhancedHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extended";
 			definition = "Extended parameters for an Isabel payment initiation file.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IsabelExtendedHeader1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IsabelExtendedHeader1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelEnhancedHeader1.DebitType, com.tools20022.repository.msg.IsabelEnhancedHeader1.BankDebitType,
-						com.tools20022.repository.msg.IsabelEnhancedHeader1.AccountBasedContract, com.tools20022.repository.msg.IsabelEnhancedHeader1.ValidationResults,
-						com.tools20022.repository.msg.IsabelEnhancedHeader1.PowerToSignValidationResults, com.tools20022.repository.msg.IsabelEnhancedHeader1.PowerToSignValidationTimeStamp,
-						com.tools20022.repository.msg.IsabelEnhancedHeader1.SenderTrigger, com.tools20022.repository.msg.IsabelEnhancedHeader1.SendTimeStamp, com.tools20022.repository.msg.IsabelEnhancedHeader1.ExtraConditionsAccepted,
-						com.tools20022.repository.msg.IsabelEnhancedHeader1.Source, com.tools20022.repository.msg.IsabelEnhancedHeader1.NumberOfRequiredSignatures, com.tools20022.repository.msg.IsabelEnhancedHeader1.Extended);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelEnhancedHeader1.mmDebitType, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmBankDebitType,
+						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmAccountBasedContract, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmValidationResults,
+						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmPowerToSignValidationResults, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmPowerToSignValidationTimeStamp,
+						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmSenderTrigger, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmSendTimeStamp,
+						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmExtraConditionsAccepted, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmSource,
+						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmNumberOfRequiredSignatures, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmExtended);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelEnhancedHeader1";
 				definition = "Specifies the enhanced parameters for an Isabel payment file.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DebitType1Code getDebitType() {
+		return debitType;
+	}
+
+	public void setDebitType(DebitType1Code debitType) {
+		this.debitType = debitType;
+	}
+
+	public DebitType1Code getBankDebitType() {
+		return bankDebitType;
+	}
+
+	public void setBankDebitType(DebitType1Code bankDebitType) {
+		this.bankDebitType = bankDebitType;
+	}
+
+	public TrueFalseIndicator getAccountBasedContract() {
+		return accountBasedContract;
+	}
+
+	public void setAccountBasedContract(TrueFalseIndicator accountBasedContract) {
+		this.accountBasedContract = accountBasedContract;
+	}
+
+	public Validation1Code getValidationResults() {
+		return validationResults;
+	}
+
+	public void setValidationResults(Validation1Code validationResults) {
+		this.validationResults = validationResults;
+	}
+
+	public Validation2Code getPowerToSignValidationResults() {
+		return powerToSignValidationResults;
+	}
+
+	public void setPowerToSignValidationResults(Validation2Code powerToSignValidationResults) {
+		this.powerToSignValidationResults = powerToSignValidationResults;
+	}
+
+	public ISODateTime getPowerToSignValidationTimeStamp() {
+		return powerToSignValidationTimeStamp;
+	}
+
+	public void setPowerToSignValidationTimeStamp(ISODateTime powerToSignValidationTimeStamp) {
+		this.powerToSignValidationTimeStamp = powerToSignValidationTimeStamp;
+	}
+
+	public IsabelSenderTrigger1Choice getSenderTrigger() {
+		return senderTrigger;
+	}
+
+	public void setSenderTrigger(IsabelSenderTrigger1Choice senderTrigger) {
+		this.senderTrigger = senderTrigger;
+	}
+
+	public ISODateTime getSendTimeStamp() {
+		return sendTimeStamp;
+	}
+
+	public void setSendTimeStamp(ISODateTime sendTimeStamp) {
+		this.sendTimeStamp = sendTimeStamp;
+	}
+
+	public TrueFalseIndicator getExtraConditionsAccepted() {
+		return extraConditionsAccepted;
+	}
+
+	public void setExtraConditionsAccepted(TrueFalseIndicator extraConditionsAccepted) {
+		this.extraConditionsAccepted = extraConditionsAccepted;
+	}
+
+	public IsabelInputSource1Choice getSource() {
+		return source;
+	}
+
+	public void setSource(IsabelInputSource1Choice source) {
+		this.source = source;
+	}
+
+	public Number getNumberOfRequiredSignatures() {
+		return numberOfRequiredSignatures;
+	}
+
+	public void setNumberOfRequiredSignatures(Number numberOfRequiredSignatures) {
+		this.numberOfRequiredSignatures = numberOfRequiredSignatures;
+	}
+
+	public IsabelExtendedHeader1 getExtended() {
+		return extended;
+	}
+
+	public void setExtended(com.tools20022.repository.msg.IsabelExtendedHeader1 extended) {
+		this.extended = extended;
 	}
 }

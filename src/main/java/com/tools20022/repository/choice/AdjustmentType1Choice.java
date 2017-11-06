@@ -35,11 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.AdjustmentType1Choice#Type
- * AdjustmentType1Choice.Type}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AdjustmentType1Choice#OtherAdjustmentType
- * AdjustmentType1Choice.OtherAdjustmentType}</li>
+ * {@linkplain com.tools20022.repository.choice.AdjustmentType1Choice#mmType
+ * AdjustmentType1Choice.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AdjustmentType1Choice#mmOtherAdjustmentType
+ * AdjustmentType1Choice.mmOtherAdjustmentType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdjustmentType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdjustmentType2Code type;
 	/**
 	 * Specifies the type of adjustment applied to the amount of goods/services
 	 * by means of a code.
@@ -78,8 +80,8 @@ public class AdjustmentType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Type
-	 * Adjustment.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmType
+	 * Adjustment.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +102,21 @@ public class AdjustmentType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
 			componentContext_lazy = () -> AdjustmentType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of adjustment applied to the amount of goods/services by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentType2Code.mmObject();
 		}
 	};
+	protected Max35Text otherAdjustmentType;
 	/**
 	 * Specifies a type of adjustment not present in the code list.
 	 * <p>
@@ -126,8 +129,8 @@ public class AdjustmentType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Type
-	 * Adjustment.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmType
+	 * Adjustment.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,17 +150,17 @@ public class AdjustmentType1Choice {
 	 * "Specifies a type of adjustment not present in the code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherAdjustmentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherAdjustmentType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
 			componentContext_lazy = () -> AdjustmentType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Type;
 			isDerived = false;
 			xmlTag = "OthrAdjstmntTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAdjustmentType";
 			definition = "Specifies a type of adjustment not present in the code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -165,14 +168,30 @@ public class AdjustmentType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustmentType1Choice.Type, com.tools20022.repository.choice.AdjustmentType1Choice.OtherAdjustmentType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustmentType1Choice.mmType, com.tools20022.repository.choice.AdjustmentType1Choice.mmOtherAdjustmentType);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdjustmentType1Choice";
 				definition = "Specifies the type of adjustment applied to the amount of goods/services by means of a code or free text.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdjustmentType2Code getType() {
+		return type;
+	}
+
+	public void setType(AdjustmentType2Code type) {
+		this.type = type;
+	}
+
+	public Max35Text getOtherAdjustmentType() {
+		return otherAdjustmentType;
+	}
+
+	public void setOtherAdjustmentType(Max35Text otherAdjustmentType) {
+		this.otherAdjustmentType = otherAdjustmentType;
 	}
 }

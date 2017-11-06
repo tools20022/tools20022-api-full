@@ -37,24 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD5#PlaceAndName
- * CashOptionSD5.PlaceAndName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD5#PayoutNumber
- * CashOptionSD5.PayoutNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD5#PayoutType
- * CashOptionSD5.PayoutType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD5#PayoutStatus
- * CashOptionSD5.PayoutStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD5#mmPlaceAndName
+ * CashOptionSD5.mmPlaceAndName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD5#mmPayoutNumber
+ * CashOptionSD5.mmPayoutNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD5#mmPayoutType
+ * CashOptionSD5.mmPayoutType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD5#mmPayoutStatus
+ * CashOptionSD5.mmPayoutStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOptionSD5#MaximumWithholdingTaxPercentage
- * CashOptionSD5.MaximumWithholdingTaxPercentage}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOptionSD5#mmMaximumWithholdingTaxPercentage
+ * CashOptionSD5.mmMaximumWithholdingTaxPercentage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashOptionSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -96,7 +97,7 @@ public class CashOptionSD5 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD5.mmObject();
 			isDerived = false;
@@ -104,11 +105,12 @@ public class CashOptionSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Exact3NumericText payoutNumber;
 	/**
 	 * Unique number associated with a payout within an option.
 	 * <p>
@@ -136,7 +138,7 @@ public class CashOptionSD5 {
 	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayoutNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD5.mmObject();
 			isDerived = false;
@@ -144,11 +146,12 @@ public class CashOptionSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected DTCCPayoutType1Code payoutType;
 	/**
 	 * Describes the type of payout associated with the event.
 	 * <p>
@@ -176,7 +179,7 @@ public class CashOptionSD5 {
 	 * definition} = "Describes the type of payout associated with the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayoutType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayoutType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD5.mmObject();
 			isDerived = false;
@@ -184,11 +187,12 @@ public class CashOptionSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutType";
 			definition = "Describes the type of payout associated with the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DTCCPayoutType1Code.mmObject();
 		}
 	};
+	protected WorkflowStatus1Code payoutStatus;
 	/**
 	 * Workflow status of the payout.
 	 * <p>
@@ -216,7 +220,7 @@ public class CashOptionSD5 {
 	 * definition} = "Workflow status of the payout."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayoutStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayoutStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD5.mmObject();
 			isDerived = false;
@@ -224,11 +228,12 @@ public class CashOptionSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutStatus";
 			definition = "Workflow status of the payout.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> WorkflowStatus1Code.mmObject();
 		}
 	};
+	protected PercentageRate maximumWithholdingTaxPercentage;
 	/**
 	 * Maximum withholding rate based on the country of the sourced income.
 	 * <p>
@@ -257,7 +262,7 @@ public class CashOptionSD5 {
 	 * "Maximum withholding rate based on the country of the sourced income.  "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumWithholdingTaxPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumWithholdingTaxPercentage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashOptionSD5.mmObject();
 			isDerived = false;
@@ -265,8 +270,8 @@ public class CashOptionSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumWithholdingTaxPercentage";
 			definition = "Maximum withholding rate based on the country of the sourced income.  ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -274,14 +279,54 @@ public class CashOptionSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD5.PlaceAndName, com.tools20022.repository.msg.CashOptionSD5.PayoutNumber, com.tools20022.repository.msg.CashOptionSD5.PayoutType,
-						com.tools20022.repository.msg.CashOptionSD5.PayoutStatus, com.tools20022.repository.msg.CashOptionSD5.MaximumWithholdingTaxPercentage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD5.mmPlaceAndName, com.tools20022.repository.msg.CashOptionSD5.mmPayoutNumber, com.tools20022.repository.msg.CashOptionSD5.mmPayoutType,
+						com.tools20022.repository.msg.CashOptionSD5.mmPayoutStatus, com.tools20022.repository.msg.CashOptionSD5.mmMaximumWithholdingTaxPercentage);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashOptionSD5";
 				definition = "Provides additional information regarding corporate action option cash movement details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Exact3NumericText getPayoutNumber() {
+		return payoutNumber;
+	}
+
+	public void setPayoutNumber(Exact3NumericText payoutNumber) {
+		this.payoutNumber = payoutNumber;
+	}
+
+	public DTCCPayoutType1Code getPayoutType() {
+		return payoutType;
+	}
+
+	public void setPayoutType(DTCCPayoutType1Code payoutType) {
+		this.payoutType = payoutType;
+	}
+
+	public WorkflowStatus1Code getPayoutStatus() {
+		return payoutStatus;
+	}
+
+	public void setPayoutStatus(WorkflowStatus1Code payoutStatus) {
+		this.payoutStatus = payoutStatus;
+	}
+
+	public PercentageRate getMaximumWithholdingTaxPercentage() {
+		return maximumWithholdingTaxPercentage;
+	}
+
+	public void setMaximumWithholdingTaxPercentage(PercentageRate maximumWithholdingTaxPercentage) {
+		this.maximumWithholdingTaxPercentage = maximumWithholdingTaxPercentage;
 	}
 }

@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Role1Choice#Code
- * Role1Choice.Code}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role1Choice#Proprietary
- * Role1Choice.Proprietary}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role1Choice#Text
- * Role1Choice.Text}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role1Choice#mmCode
+ * Role1Choice.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role1Choice#mmProprietary
+ * Role1Choice.mmProprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role1Choice#mmText
+ * Role1Choice.mmText}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Role1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestmentFundRole2Code code;
 	/**
 	 * Function performed by the intermediary.
 	 * <p>
@@ -78,8 +79,8 @@ public class Role1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#PartyRole
-	 * Role.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmPartyRole
+	 * Role.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class Role1Choice {
 	 * definition} = "Function performed by the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmPartyRole;
 			componentContext_lazy = () -> Role1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.PartyRole;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Function performed by the intermediary.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundRole2Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Function performed by the intermediary.
 	 * <p>
@@ -124,8 +126,8 @@ public class Role1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#PartyRole
-	 * Role.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmPartyRole
+	 * Role.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,20 +145,21 @@ public class Role1Choice {
 	 * definition} = "Function performed by the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmPartyRole;
 			componentContext_lazy = () -> Role1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.PartyRole;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Function performed by the intermediary.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
+	protected Max350Text text;
 	/**
 	 * Function performed by the intermediary.
 	 * <p>
@@ -183,7 +186,7 @@ public class Role1Choice {
 	 * definition} = "Function performed by the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Text = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Role1Choice.mmObject();
 			isDerived = false;
@@ -191,8 +194,8 @@ public class Role1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Text";
 			definition = "Function performed by the intermediary.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -200,14 +203,38 @@ public class Role1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Role1Choice.Code, com.tools20022.repository.choice.Role1Choice.Proprietary, com.tools20022.repository.choice.Role1Choice.Text);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Role1Choice.mmCode, com.tools20022.repository.choice.Role1Choice.mmProprietary, com.tools20022.repository.choice.Role1Choice.mmText);
 				trace_lazy = () -> InvestmentFundPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Role1Choice";
 				definition = "Choice of format for a party role.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestmentFundRole2Code getCode() {
+		return code;
+	}
+
+	public void setCode(InvestmentFundRole2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
+	}
+
+	public Max350Text getText() {
+		return text;
+	}
+
+	public void setText(Max350Text text) {
+		this.text = text;
 	}
 }

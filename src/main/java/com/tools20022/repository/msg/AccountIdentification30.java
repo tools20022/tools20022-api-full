@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification30#AccountType
- * AccountIdentification30.AccountType}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification30#mmAccountType
+ * AccountIdentification30.mmAccountType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification30#Identification
- * AccountIdentification30.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification30#mmIdentification
+ * AccountIdentification30.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentification30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountInformationType1Code accountType;
 	/**
 	 * Specifies the type of account.
 	 * <p>
@@ -88,7 +89,7 @@ public class AccountIdentification30 {
 	 * definition} = "Specifies the type of account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountIdentification30.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class AccountIdentification30 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountType";
 			definition = "Specifies the type of account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AccountInformationType1Code.mmObject();
 		}
 	};
+	protected AccountIdentification26 identification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -131,7 +133,7 @@ public class AccountIdentification30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountIdentification30.mmObject();
 			isDerived = false;
@@ -139,23 +141,39 @@ public class AccountIdentification30 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification26.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountIdentification26.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentification30.AccountType, com.tools20022.repository.msg.AccountIdentification30.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentification30.mmAccountType, com.tools20022.repository.msg.AccountIdentification30.mmIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification30";
 				definition = "Identification of the account expressed with a data source scheme.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountInformationType1Code getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(AccountInformationType1Code accountType) {
+		this.accountType = accountType;
+	}
+
+	public AccountIdentification26 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.AccountIdentification26 identification) {
+		this.identification = identification;
 	}
 }

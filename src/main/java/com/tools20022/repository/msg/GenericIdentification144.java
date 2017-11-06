@@ -37,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification144#Identification
- * GenericIdentification144.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification144#mmIdentification
+ * GenericIdentification144.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification144#Issuer
- * GenericIdentification144.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification144#mmIssuer
+ * GenericIdentification144.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification144#SchemeName
- * GenericIdentification144.SchemeName}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification144#mmSchemeName
+ * GenericIdentification144.mmSchemeName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification144#Balance
- * GenericIdentification144.Balance}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification144#mmBalance
+ * GenericIdentification144.mmBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GenericIdentification144 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact4AlphaNumericText identification;
 	/**
 	 * Proprietary information, often a code, issued by the data source scheme
 	 * issuer.
@@ -85,8 +86,8 @@ public class GenericIdentification144 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,20 +108,21 @@ public class GenericIdentification144 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentification144.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Proprietary information, often a code, issued by the data source scheme issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText issuer;
 	/**
 	 * Entity that assigns the identification.
 	 * <p>
@@ -154,20 +156,21 @@ public class GenericIdentification144 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Issuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification144.mmObject();
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
+			componentContext_lazy = () -> GenericIdentification144.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText schemeName;
 	/**
 	 * Short textual description of the scheme.
 	 * <p>
@@ -181,8 +184,8 @@ public class GenericIdentification144 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Scheme#NameShort
-	 * Scheme.NameShort}</li>
+	 * {@linkplain com.tools20022.repository.entity.Scheme#mmNameShort
+	 * Scheme.mmNameShort}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,20 +204,21 @@ public class GenericIdentification144 {
 	 * definition} = "Short textual description of the scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SchemeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmNameShort;
 			componentContext_lazy = () -> GenericIdentification144.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.NameShort;
 			isDerived = false;
 			xmlTag = "SchmeNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeName";
 			definition = "Short textual description of the scheme.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected RestrictedFINDecimalNumber balance;
 	/**
 	 * Value of the balance.
 	 * <p>
@@ -243,7 +247,7 @@ public class GenericIdentification144 {
 	 * definition} = "Value of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Balance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GenericIdentification144.mmObject();
 			isDerived = false;
@@ -251,8 +255,8 @@ public class GenericIdentification144 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Value of the balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
 		}
 	};
@@ -260,15 +264,47 @@ public class GenericIdentification144 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification144.Identification, com.tools20022.repository.msg.GenericIdentification144.Issuer,
-						com.tools20022.repository.msg.GenericIdentification144.SchemeName, com.tools20022.repository.msg.GenericIdentification144.Balance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification144.mmIdentification, com.tools20022.repository.msg.GenericIdentification144.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification144.mmSchemeName, com.tools20022.repository.msg.GenericIdentification144.mmBalance);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification144";
 				definition = "Proprietary information related to a balance.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact4AlphaNumericText getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Exact4AlphaNumericText identification) {
+		this.identification = identification;
+	}
+
+	public Max4AlphaNumericText getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(Max4AlphaNumericText issuer) {
+		this.issuer = issuer;
+	}
+
+	public Max4AlphaNumericText getSchemeName() {
+		return schemeName;
+	}
+
+	public void setSchemeName(Max4AlphaNumericText schemeName) {
+		this.schemeName = schemeName;
+	}
+
+	public RestrictedFINDecimalNumber getBalance() {
+		return balance;
+	}
+
+	public void setBalance(RestrictedFINDecimalNumber balance) {
+		this.balance = balance;
 	}
 }

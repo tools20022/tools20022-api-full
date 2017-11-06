@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation6#StatusOriginator
- * StatusReasonInformation6.StatusOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation6#mmStatusOriginator
+ * StatusReasonInformation6.mmStatusOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation6#StatusReason
- * StatusReasonInformation6.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation6#mmStatusReason
+ * StatusReasonInformation6.mmStatusReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReasonInformation6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification14 statusOriginator;
 	/**
 	 * Party issuing the status.
 	 * <p>
@@ -73,8 +74,8 @@ public class StatusReasonInformation6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,21 +94,22 @@ public class StatusReasonInformation6 {
 	 * definition} = "Party issuing the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusOriginator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> StatusReasonInformation6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "StsOrgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOriginator";
 			definition = "Party issuing the status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
 		}
 	};
+	protected StatusReason5Choice statusReason;
 	/**
 	 * Specifies the reason for the status report.
 	 * <p>
@@ -139,33 +141,49 @@ public class StatusReasonInformation6 {
 	 * definition} = "Specifies the reason for the status report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReasonInformation6.mmObject();
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
+			componentContext_lazy = () -> StatusReasonInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Specifies the reason for the status report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> StatusReason5Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> StatusReason5Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReasonInformation6.StatusOriginator, com.tools20022.repository.msg.StatusReasonInformation6.StatusReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReasonInformation6.mmStatusOriginator, com.tools20022.repository.msg.StatusReasonInformation6.mmStatusReason);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatusReasonInformation6";
 				definition = "Further information on the status reason of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification14 getStatusOriginator() {
+		return statusOriginator;
+	}
+
+	public void setStatusOriginator(com.tools20022.repository.msg.PartyIdentification14 statusOriginator) {
+		this.statusOriginator = statusOriginator;
+	}
+
+	public StatusReason5Choice getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(StatusReason5Choice statusReason) {
+		this.statusReason = statusReason;
 	}
 }

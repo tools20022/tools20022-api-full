@@ -33,24 +33,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * AdjustmentTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#Rebate
- * AdjustmentType2Code.Rebate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#Discount
- * AdjustmentType2Code.Discount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#mmRebate
+ * AdjustmentType2Code.mmRebate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#CreditNote
- * AdjustmentType2Code.CreditNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#mmDiscount
+ * AdjustmentType2Code.mmDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#Surcharge
- * AdjustmentType2Code.Surcharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#mmCreditNote
+ * AdjustmentType2Code.mmCreditNote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#mmSurcharge
+ * AdjustmentType2Code.mmSurcharge}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +87,7 @@ public class AdjustmentType2Code extends AdjustmentTypeCode {
 	 * name} = "Rebate"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rebate = new MMCode() {
+	public static final MMCode mmRebate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rebate";
@@ -109,7 +110,7 @@ public class AdjustmentType2Code extends AdjustmentTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discount = new MMCode() {
+	public static final MMCode mmDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
@@ -132,7 +133,7 @@ public class AdjustmentType2Code extends AdjustmentTypeCode {
 	 * name} = "CreditNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditNote = new MMCode() {
+	public static final MMCode mmCreditNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditNote";
@@ -155,7 +156,7 @@ public class AdjustmentType2Code extends AdjustmentTypeCode {
 	 * name} = "Surcharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode Surcharge = new MMCode() {
+	public static final MMCode mmSurcharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Surcharge";
@@ -166,13 +167,13 @@ public class AdjustmentType2Code extends AdjustmentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REBA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdjustmentType2Code";
 				definition = "Specifies the type of adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdjustmentType2Code.Rebate, com.tools20022.repository.codeset.AdjustmentType2Code.Discount, com.tools20022.repository.codeset.AdjustmentType2Code.CreditNote,
-						com.tools20022.repository.codeset.AdjustmentType2Code.Surcharge);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdjustmentType2Code.mmRebate, com.tools20022.repository.codeset.AdjustmentType2Code.mmDiscount,
+						com.tools20022.repository.codeset.AdjustmentType2Code.mmCreditNote, com.tools20022.repository.codeset.AdjustmentType2Code.mmSurcharge);
 				trace_lazy = () -> AdjustmentTypeCode.mmObject();
 			}
 		});

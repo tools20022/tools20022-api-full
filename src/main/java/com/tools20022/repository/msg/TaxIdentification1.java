@@ -35,13 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxIdentification1#TaxIdentificationNumber
- * TaxIdentification1.TaxIdentificationNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxIdentification1#Description
- * TaxIdentification1.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxIdentification1#mmTaxIdentificationNumber
+ * TaxIdentification1.mmTaxIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxIdentification1#TaxationCountry
- * TaxIdentification1.TaxationCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxIdentification1#mmDescription
+ * TaxIdentification1.mmDescription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TaxIdentification1#mmTaxationCountry
+ * TaxIdentification1.mmTaxationCountry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text taxIdentificationNumber;
 	/**
 	 * Contains the tax identification number.
 	 * <p>
@@ -84,8 +86,8 @@ public class TaxIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Identification
-	 * Tax.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmIdentification
+	 * Tax.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +106,21 @@ public class TaxIdentification1 {
 	 * definition} = "Contains the tax identification number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmIdentification;
 			componentContext_lazy = () -> TaxIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Identification;
 			isDerived = false;
 			xmlTag = "TaxIdNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Contains the tax identification number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text description;
 	/**
 	 * Description of Tax identification number (eg VAT identifier).
 	 * <p>
@@ -146,7 +149,7 @@ public class TaxIdentification1 {
 	 * "Description of Tax identification number (eg VAT identifier)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TaxIdentification1.mmObject();
 			isDerived = false;
@@ -154,11 +157,12 @@ public class TaxIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of Tax identification number (eg VAT identifier).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CountryCode taxationCountry;
 	/**
 	 * Country of residence where the tax identification is assigned.
 	 * <p>
@@ -171,8 +175,8 @@ public class TaxIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#TaxationConditions
-	 * Party.TaxationConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmTaxationConditions
+	 * Party.mmTaxationConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,24 +198,24 @@ public class TaxIdentification1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxIdentification2#IssuerCountry
-	 * TaxIdentification2.IssuerCountry}</li>
+	 * {@linkplain com.tools20022.repository.msg.TaxIdentification2#mmIssuerCountry
+	 * TaxIdentification2.mmIssuerCountry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxationCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxationCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmTaxationConditions;
 			componentContext_lazy = () -> TaxIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.TaxationConditions;
 			isDerived = false;
 			xmlTag = "TaxtnCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxationCountry";
 			definition = "Country of residence where the tax identification is assigned.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxIdentification2.IssuerCountry);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxIdentification2.mmIssuerCountry);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -219,10 +223,10 @@ public class TaxIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxIdentification1.TaxIdentificationNumber, com.tools20022.repository.msg.TaxIdentification1.Description,
-						com.tools20022.repository.msg.TaxIdentification1.TaxationCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxIdentification1.mmTaxIdentificationNumber, com.tools20022.repository.msg.TaxIdentification1.mmDescription,
+						com.tools20022.repository.msg.TaxIdentification1.mmTaxationCountry);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TaxIdentification1";
 				definition = "Information about tax identification (description, taxation country).";
@@ -230,5 +234,29 @@ public class TaxIdentification1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTaxIdentificationNumber() {
+		return taxIdentificationNumber;
+	}
+
+	public void setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
+		this.taxIdentificationNumber = taxIdentificationNumber;
+	}
+
+	public Max35Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max35Text description) {
+		this.description = description;
+	}
+
+	public CountryCode getTaxationCountry() {
+		return taxationCountry;
+	}
+
+	public void setTaxationCountry(CountryCode taxationCountry) {
+		this.taxationCountry = taxationCountry;
 	}
 }

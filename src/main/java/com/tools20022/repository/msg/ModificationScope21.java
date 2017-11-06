@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope21#ModificationScopeIndication
- * ModificationScope21.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope21#mmModificationScopeIndication
+ * ModificationScope21.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope21#IssueAllocation
- * ModificationScope21.IssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope21#mmIssueAllocation
+ * ModificationScope21.mmIssueAllocation}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,21 +46,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#ModifiedIssueAllocation
- * AccountModificationInstructionV05.ModifiedIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#mmModifiedIssueAllocation
+ * AccountModificationInstructionV05.mmModifiedIssueAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#ModifiedIssueAllocation
- * AccountModificationInstructionV06.ModifiedIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#mmModifiedIssueAllocation
+ * AccountModificationInstructionV06.mmModifiedIssueAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV07#ModifiedIssueAllocation
- * AccountModificationInstructionV07.ModifiedIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV07#mmModifiedIssueAllocation
+ * AccountModificationInstructionV07.mmModifiedIssueAllocation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification1Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied on a set of information.
 	 * <p>
@@ -111,11 +112,11 @@ public class ModificationScope21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope9#ModificationScopeIndication
-	 * ModificationScope9.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope9#mmModificationScopeIndication
+	 * ModificationScope9.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope21.mmObject();
 			isDerived = false;
@@ -123,12 +124,13 @@ public class ModificationScope21 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope9.ModificationScopeIndication;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope9.mmModificationScopeIndication;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	protected NewIssueAllocation2 issueAllocation;
 	/**
 	 * Information about the investment account ownership with respect to new
 	 * issue allocation for a hedge fund.
@@ -159,11 +161,11 @@ public class ModificationScope21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope9#IssueAllocation
-	 * ModificationScope9.IssueAllocation}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope9#mmIssueAllocation
+	 * ModificationScope9.mmIssueAllocation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IssueAllocation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssueAllocation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope21.mmObject();
 			isDerived = false;
@@ -171,21 +173,21 @@ public class ModificationScope21 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueAllocation";
 			definition = "Information about the investment account ownership with respect to new issue allocation for a hedge fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope9.IssueAllocation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope9.mmIssueAllocation;
 			maxOccurs = 1;
-			type_lazy = () -> NewIssueAllocation2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope21.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope21.IssueAllocation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV05.ModifiedIssueAllocation,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.ModifiedIssueAllocation, com.tools20022.repository.area.acmt.AccountModificationInstructionV07.ModifiedIssueAllocation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope21.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope21.mmIssueAllocation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedIssueAllocation,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedIssueAllocation, com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedIssueAllocation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope21";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -193,5 +195,21 @@ public class ModificationScope21 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification1Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public NewIssueAllocation2 getIssueAllocation() {
+		return issueAllocation;
+	}
+
+	public void setIssueAllocation(com.tools20022.repository.msg.NewIssueAllocation2 issueAllocation) {
+		this.issueAllocation = issueAllocation;
 	}
 }

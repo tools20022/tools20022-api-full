@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The ContractRegistrationRequest message is sent by the reporting party to the
@@ -56,21 +57,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.ContractRegistrationRequestV01#GroupHeader
- * ContractRegistrationRequestV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.ContractRegistrationRequestV01#mmGroupHeader
+ * ContractRegistrationRequestV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.ContractRegistrationRequestV01#ContractRegistration
- * ContractRegistrationRequestV01.ContractRegistration}</li>
+ * {@linkplain com.tools20022.repository.area.auth.ContractRegistrationRequestV01#mmContractRegistration
+ * ContractRegistrationRequestV01.mmContractRegistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.ContractRegistrationRequestV01#SupplementaryData
- * ContractRegistrationRequestV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.ContractRegistrationRequestV01#mmSupplementaryData
+ * ContractRegistrationRequestV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.ContractRegistrationRequestV01#identifier
- * ContractRegistrationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.018.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ContractRegistrationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyControlHeader1 groupHeader;
 	/**
 	 * Characteristics shared by all individual items included in the message.
 	 * <p>
@@ -111,17 +111,18 @@ public class ContractRegistrationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Characteristics shared by all individual items included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CurrencyControlHeader1.mmObject();
 		}
 	};
+	protected List<ContractRegistration1> contractRegistration;
 	/**
 	 * Identifies the currency control contract details for which the
 	 * registration is requested.
@@ -148,7 +149,7 @@ public class ContractRegistrationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ContractRegistration = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmContractRegistration = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrctRegn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,6 +159,7 @@ public class ContractRegistrationRequestV01 {
 			complexType_lazy = () -> ContractRegistration1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -184,7 +186,7 @@ public class ContractRegistrationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,33 +194,6 @@ public class ContractRegistrationRequestV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "018"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "018";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -232,11 +207,42 @@ public class ContractRegistrationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "CtrctRegnReq";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.ContractRegistrationRequestV01.GroupHeader, com.tools20022.repository.area.auth.ContractRegistrationRequestV01.ContractRegistration,
-						com.tools20022.repository.area.auth.ContractRegistrationRequestV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.ContractRegistrationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.ContractRegistrationRequestV01.mmGroupHeader, com.tools20022.repository.area.auth.ContractRegistrationRequestV01.mmContractRegistration,
+						com.tools20022.repository.area.auth.ContractRegistrationRequestV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "018";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyControlHeader1 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(CurrencyControlHeader1 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<ContractRegistration1> getContractRegistration() {
+		return contractRegistration;
+	}
+
+	public void setContractRegistration(List<ContractRegistration1> contractRegistration) {
+		this.contractRegistration = contractRegistration;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

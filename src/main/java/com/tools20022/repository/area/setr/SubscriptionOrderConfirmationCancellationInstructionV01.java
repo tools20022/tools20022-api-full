@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -92,9 +93,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#CancellationByReferenceOrByOrderConfirmationDetailsRule
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmCancellationByReferenceOrByOrderConfirmationDetailsRule
  * SubscriptionOrderConfirmationCancellationInstructionV01.
- * CancellationByReferenceOrByOrderConfirmationDetailsRule}</li>
+ * mmCancellationByReferenceOrByOrderConfirmationDetailsRule}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -104,36 +105,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#MessageIdentification
- * SubscriptionOrderConfirmationCancellationInstructionV01.MessageIdentification
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#PoolReference
- * SubscriptionOrderConfirmationCancellationInstructionV01.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#PreviousReference
- * SubscriptionOrderConfirmationCancellationInstructionV01.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#RelatedReference
- * SubscriptionOrderConfirmationCancellationInstructionV01.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#CancellationByReference
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmMessageIdentification
  * SubscriptionOrderConfirmationCancellationInstructionV01.
- * CancellationByReference}</li>
+ * mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#CancellationByOrderConfirmationDetails
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmPoolReference
+ * SubscriptionOrderConfirmationCancellationInstructionV01.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmPreviousReference
+ * SubscriptionOrderConfirmationCancellationInstructionV01.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmRelatedReference
+ * SubscriptionOrderConfirmationCancellationInstructionV01.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmCancellationByReference
  * SubscriptionOrderConfirmationCancellationInstructionV01.
- * CancellationByOrderConfirmationDetails}</li>
+ * mmCancellationByReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#CopyDetails
- * SubscriptionOrderConfirmationCancellationInstructionV01.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmCancellationByOrderConfirmationDetails
+ * SubscriptionOrderConfirmationCancellationInstructionV01.
+ * mmCancellationByOrderConfirmationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmCopyDetails
+ * SubscriptionOrderConfirmationCancellationInstructionV01.mmCopyDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#identifier
- * SubscriptionOrderConfirmationCancellationInstructionV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.047.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -168,13 +167,13 @@ public class SubscriptionOrderConfirmationCancellationInstructionV01 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#CancellationByReference
+	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmCancellationByReference
 	 * SubscriptionOrderConfirmationCancellationInstructionV01.
-	 * CancellationByReference}</li>
+	 * mmCancellationByReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#CancellationByOrderConfirmationDetails
+	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmCancellationByOrderConfirmationDetails
 	 * SubscriptionOrderConfirmationCancellationInstructionV01.
-	 * CancellationByOrderConfirmationDetails}</li>
+	 * mmCancellationByOrderConfirmationDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -194,16 +193,17 @@ public class SubscriptionOrderConfirmationCancellationInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor CancellationByReferenceOrByOrderConfirmationDetailsRule = new MMXor() {
+	public static final MMXor mmCancellationByReferenceOrByOrderConfirmationDetailsRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByOrderConfirmationDetailsRule";
 			definition = "Either CancellationByOrderConfirmationDetails or CancellationByReference may be present, but not both.";
 			messageDefinition_lazy = () -> SubscriptionOrderConfirmationCancellationInstructionV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.CancellationByReference,
-					com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.CancellationByOrderConfirmationDetails);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmCancellationByReference,
+					com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmCancellationByOrderConfirmationDetails);
 		}
 	};
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -232,25 +232,26 @@ public class SubscriptionOrderConfirmationCancellationInstructionV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#MessageIdentification
+	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#mmMessageIdentification
 	 * SubscriptionOrderConfirmationCancellationInstructionV02.
-	 * MessageIdentification}</li>
+	 * mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmMessageIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference3 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -276,24 +277,25 @@ public class SubscriptionOrderConfirmationCancellationInstructionV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#PoolReference
-	 * SubscriptionOrderConfirmationCancellationInstructionV02.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#mmPoolReference
+	 * SubscriptionOrderConfirmationCancellationInstructionV02.mmPoolReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.PoolReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmPoolReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -319,24 +321,25 @@ public class SubscriptionOrderConfirmationCancellationInstructionV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#PreviousReference
-	 * SubscriptionOrderConfirmationCancellationInstructionV02.PreviousReference
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#mmPreviousReference
+	 * SubscriptionOrderConfirmationCancellationInstructionV02.
+	 * mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.PreviousReference);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmPreviousReference);
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -363,25 +366,26 @@ public class SubscriptionOrderConfirmationCancellationInstructionV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#RelatedReference
-	 * SubscriptionOrderConfirmationCancellationInstructionV02.RelatedReference}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#mmRelatedReference
+	 * SubscriptionOrderConfirmationCancellationInstructionV02.
+	 * mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.RelatedReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmRelatedReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected InvestmentFundOrderExecution1 cancellationByReference;
 	/**
 	 * References of the orders confirmations to be cancelled.
 	 * <p>
@@ -405,17 +409,18 @@ public class SubscriptionOrderConfirmationCancellationInstructionV01 {
 	 * definition} = "References of the orders confirmations to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationByReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationByReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlByRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReference";
 			definition = "References of the orders confirmations to be cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundOrderExecution1.mmObject();
 		}
 	};
+	protected SubscriptionOrderConfirmation1 cancellationByOrderConfirmationDetails;
 	/**
 	 * Common information related to all the orders confirmations to be
 	 * cancelled.
@@ -442,17 +447,18 @@ public class SubscriptionOrderConfirmationCancellationInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationByOrderConfirmationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationByOrderConfirmationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlByOrdrConfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByOrderConfirmationDetails";
 			definition = "Common information related to all the orders confirmations to be cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SubscriptionOrderConfirmation1.mmObject();
 		}
 	};
+	protected CopyInformation1 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -479,49 +485,22 @@ public class SubscriptionOrderConfirmationCancellationInstructionV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#CopyDetails
-	 * SubscriptionOrderConfirmationCancellationInstructionV02.CopyDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02#mmCopyDetails
+	 * SubscriptionOrderConfirmationCancellationInstructionV02.mmCopyDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.CopyDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmCopyDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "047"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "047";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -533,20 +512,83 @@ public class SubscriptionOrderConfirmationCancellationInstructionV01 {
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the SubscriptionOrderConfirmationCancellationInstruction message to the instructing party, for example, an investment manager or its authorised representative to cancel a previously sent SubscriptionOrderConfirmation.\r\nUsage\r\nThe SubscriptionOrderConfirmationCancellationInstruction message is used to cancel one or more previously sent subscription order confirmations. The amendment indicator element is used to specify whether the subscription order confirmation cancellation is to be followed by a SubscriptionOrderConfirmationAmendment.\r\nThe SubscriptionOrderConfirmationCancellationInstruction message is used to either:\r\n- cancel an entire SubscriptionOrderConfirmation message, that is, all the individual order confirmations that it contained, or,\r\n- request the cancellation of one or more individual confirmations.\r\nThere are two ways to use the message.\r\n(1) When the SubscriptionOrderConfirmationCancellationInstruction message is used to cancel an entire message, this can be done by either:\r\n- quoting the business references, for example, OrderReference, Deal Reference, of all the individual order confirmations listed in the SubscriptionOrderConfirmation message, or,\r\n- quoting the details of all the individual order confirmations (this includes the OrderReference and DealReference) listed in SubscriptionOrderConfirmation message but this is not recommended.\r\nThe message identification of the SubscriptionOrderConfirmation message may also be quoted in PreviousReference.\r\nIt is also possible to instruct the cancellation of an entire confirmation message by quoting its message identification in PreviousReference.\r\n(2) When the SubscriptionOrderConfirmationCancellationInstruction message is used to cancel one or more individual order confirmations, this can be done by either:\r\n- quoting the \"business\" references, for example, OrderReference, Deal Reference, of each individual order confirmation listed in the SubscriptionOrderConfirmation message, or,\r\n- quoting the details of each individual order execution (this includes the OrderReference and DealReference) listed in SubscriptionOrderConfirmation message but this is not recommended.\r\nThe message identification of the SubscriptionOrderConfirmation message in which the individual order confirmation was conveyed may also be quoted in PreviousReference.\r\nThe rejection or acceptance of a SubscriptionOrderConfirmationCancellationInstruction is made using an OrderConfirmationStatusReport message.";
 				nextVersions_lazy = () -> Arrays.asList(SubscriptionOrderConfirmationCancellationInstructionV02.mmObject());
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.CancellationByReferenceOrByOrderConfirmationDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmCancellationByReferenceOrByOrderConfirmationDetailsRule);
 				rootElement = "Document";
 				xmlTag = "SbcptOrdrConfCxlInstrV01";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.MessageIdentification,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.RelatedReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.CancellationByReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.CancellationByOrderConfirmationDetails,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.CopyDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmMessageIdentification,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmRelatedReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmCancellationByReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmCancellationByOrderConfirmationDetails,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmCopyDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "047";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference3 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference3 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public List<AdditionalReference3> getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(List<AdditionalReference3> previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference3 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference3 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public InvestmentFundOrderExecution1 getCancellationByReference() {
+		return cancellationByReference;
+	}
+
+	public void setCancellationByReference(InvestmentFundOrderExecution1 cancellationByReference) {
+		this.cancellationByReference = cancellationByReference;
+	}
+
+	public SubscriptionOrderConfirmation1 getCancellationByOrderConfirmationDetails() {
+		return cancellationByOrderConfirmationDetails;
+	}
+
+	public void setCancellationByOrderConfirmationDetails(SubscriptionOrderConfirmation1 cancellationByOrderConfirmationDetails) {
+		this.cancellationByOrderConfirmationDetails = cancellationByOrderConfirmationDetails;
+	}
+
+	public CopyInformation1 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation1 copyDetails) {
+		this.copyDetails = copyDetails;
 	}
 }

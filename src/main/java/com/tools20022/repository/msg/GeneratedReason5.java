@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.GeneratedReason5#Code
- * GeneratedReason5.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GeneratedReason5#mmCode
+ * GeneratedReason5.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneratedReason5#AdditionalReasonInformation
- * GeneratedReason5.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneratedReason5#mmAdditionalReasonInformation
+ * GeneratedReason5.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,18 +51,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#GeneratedReason
- * SecuritiesSettlementTransactionGenerationNotificationV06.GeneratedReason}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06#mmGeneratedReason
+ * SecuritiesSettlementTransactionGenerationNotificationV06.mmGeneratedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07#GeneratedReason
- * SecuritiesSettlementTransactionGenerationNotificationV07.GeneratedReason}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07#mmGeneratedReason
+ * SecuritiesSettlementTransactionGenerationNotificationV07.mmGeneratedReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeneratedReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GeneratedReasons5Choice code;
 	/**
 	 * Specifies the reason why the transaction was generated.
 	 * <p>
@@ -91,8 +92,8 @@ public class GeneratedReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#GeneratedReason
-	 * SecuritiesTradeStatusReason.GeneratedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmGeneratedReason
+	 * SecuritiesTradeStatusReason.mmGeneratedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,26 +113,27 @@ public class GeneratedReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GeneratedReason3#Code
-	 * GeneratedReason3.Code}</li>
+	 * {@linkplain com.tools20022.repository.msg.GeneratedReason3#mmCode
+	 * GeneratedReason3.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Code = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmGeneratedReason;
 			componentContext_lazy = () -> GeneratedReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.GeneratedReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the transaction was generated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GeneratedReason3.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GeneratedReason3.mmCode;
 			maxOccurs = 1;
-			type_lazy = () -> GeneratedReasons5Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GeneratedReasons5Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalReasonInformation;
 	/**
 	 * Provides additional reason information that cannot be provided in a
 	 * structured field.
@@ -145,8 +147,8 @@ public class GeneratedReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,22 +170,22 @@ public class GeneratedReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GeneratedReason3#AdditionalReasonInformation
-	 * GeneratedReason3.AdditionalReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.GeneratedReason3#mmAdditionalReasonInformation
+	 * GeneratedReason3.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> GeneratedReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional reason information that cannot be provided in a structured field.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GeneratedReason3.AdditionalReasonInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GeneratedReason3.mmAdditionalReasonInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -191,11 +193,11 @@ public class GeneratedReason5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneratedReason5.Code, com.tools20022.repository.msg.GeneratedReason5.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneratedReason5.mmCode, com.tools20022.repository.msg.GeneratedReason5.mmAdditionalReasonInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmGeneratedReason,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07.mmGeneratedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.GeneratedReason,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07.GeneratedReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GeneratedReason5";
 				definition = "Specifies the reason why the transaction was generated.";
@@ -203,5 +205,21 @@ public class GeneratedReason5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GeneratedReasons5Choice getCode() {
+		return code;
+	}
+
+	public void setCode(GeneratedReasons5Choice code) {
+		this.code = code;
+	}
+
+	public Max210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

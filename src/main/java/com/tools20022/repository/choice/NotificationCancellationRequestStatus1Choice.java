@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice#ProcessedStatus
- * NotificationCancellationRequestStatus1Choice.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice#mmProcessedStatus
+ * NotificationCancellationRequestStatus1Choice.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice#RejectedStatus
- * NotificationCancellationRequestStatus1Choice.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice#mmRejectedStatus
+ * NotificationCancellationRequestStatus1Choice.mmRejectedStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#NotificationCancellationRequestStatus
- * AgentCANotificationStatusAdviceV01.NotificationCancellationRequestStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#mmNotificationCancellationRequestStatus
+ * AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationCancellationRequestStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NotificationCancellationProcessingStatus1 processedStatus;
 	/**
 	 * Provides information about the processing status of the cancellation
 	 * request.
@@ -98,7 +99,7 @@ public class NotificationCancellationRequestStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NotificationCancellationRequestStatus1Choice.mmObject();
 			isDerived = false;
@@ -106,12 +107,13 @@ public class NotificationCancellationRequestStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NotificationCancellationProcessingStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NotificationCancellationProcessingStatus1.mmObject();
 		}
 	};
+	protected NotificationCancellationRejectionReason1 rejectedStatus;
 	/**
 	 * Provides information about the rejection status.
 	 * <p>
@@ -139,7 +141,7 @@ public class NotificationCancellationRequestStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NotificationCancellationRequestStatus1Choice.mmObject();
 			isDerived = false;
@@ -147,25 +149,41 @@ public class NotificationCancellationRequestStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NotificationCancellationRejectionReason1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> NotificationCancellationRejectionReason1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice.ProcessedStatus,
-						com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice.RejectedStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.NotificationCancellationRequestStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice.mmProcessedStatus,
+						com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationCancellationRequestStatus1Choice";
 				definition = "Choice between various statuses.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NotificationCancellationProcessingStatus1 getProcessedStatus() {
+		return processedStatus;
+	}
+
+	public void setProcessedStatus(NotificationCancellationProcessingStatus1 processedStatus) {
+		this.processedStatus = processedStatus;
+	}
+
+	public NotificationCancellationRejectionReason1 getRejectedStatus() {
+		return rejectedStatus;
+	}
+
+	public void setRejectedStatus(NotificationCancellationRejectionReason1 rejectedStatus) {
+		this.rejectedStatus = rejectedStatus;
 	}
 }

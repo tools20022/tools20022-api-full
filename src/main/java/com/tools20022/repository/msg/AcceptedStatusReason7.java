@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptedStatusReason7#Reason
- * AcceptedStatusReason7.Reason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptedStatusReason7#mmReason
+ * AcceptedStatusReason7.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason7#AdditionalReasonInformation
- * AcceptedStatusReason7.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptedStatusReason7#mmAdditionalReasonInformation
+ * AcceptedStatusReason7.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptedStatusReason7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AcceptedReason8Choice reason;
 	/**
 	 * Reason for the accepted status.
 	 * <p>
@@ -76,8 +77,8 @@ public class AcceptedStatusReason7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#AcknowledgedAcceptedReason
-	 * StatusReason.AcknowledgedAcceptedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmAcknowledgedAcceptedReason
+	 * StatusReason.mmAcknowledgedAcceptedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,21 +97,22 @@ public class AcceptedStatusReason7 {
 	 * definition} = "Reason for the accepted status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> AcceptedStatusReason7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.AcknowledgedAcceptedReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the accepted status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AcceptedReason8Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AcceptedReason8Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalReasonInformation;
 	/**
 	 * Additional information about the processed instruction.
 	 * <p>
@@ -138,7 +140,7 @@ public class AcceptedStatusReason7 {
 	 * definition} = "Additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcceptedStatusReason7.mmObject();
 			isDerived = false;
@@ -146,8 +148,8 @@ public class AcceptedStatusReason7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional information about the processed instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -155,14 +157,30 @@ public class AcceptedStatusReason7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptedStatusReason7.Reason, com.tools20022.repository.msg.AcceptedStatusReason7.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptedStatusReason7.mmReason, com.tools20022.repository.msg.AcceptedStatusReason7.mmAdditionalReasonInformation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptedStatusReason7";
 				definition = "Reason for an accepted status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AcceptedReason8Choice getReason() {
+		return reason;
+	}
+
+	public void setReason(AcceptedReason8Choice reason) {
+		this.reason = reason;
+	}
+
+	public Max210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

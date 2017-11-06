@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AgreedAmount1#VariationMarginAmount
- * AgreedAmount1.VariationMarginAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.AgreedAmount1#mmVariationMarginAmount
+ * AgreedAmount1.mmVariationMarginAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AgreedAmount1#SegregatedIndependentAmount
- * AgreedAmount1.SegregatedIndependentAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.AgreedAmount1#mmSegregatedIndependentAmount
+ * AgreedAmount1.mmSegregatedIndependentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgreedAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Amount1 variationMarginAmount;
 	/**
 	 * Provides details about the agreed amount for the variation margin.
 	 * <p>
@@ -73,8 +74,8 @@ public class AgreedAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#VariationMargin
-	 * MarginCall.VariationMargin}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmVariationMargin
+	 * MarginCall.mmVariationMargin}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,21 +94,22 @@ public class AgreedAmount1 {
 	 * "Provides details about the agreed amount for the variation margin."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VariationMarginAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVariationMarginAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> AgreedAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.VariationMargin;
 			isDerived = false;
 			xmlTag = "VartnMrgnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMarginAmount";
 			definition = "Provides details about the agreed amount for the variation margin.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Amount1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amount1.mmObject();
 		}
 	};
+	protected Amount1 segregatedIndependentAmount;
 	/**
 	 * Provides details about the agreed amount for the segregated independent
 	 * amount.
@@ -119,8 +121,8 @@ public class AgreedAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#SegregatedIndependentAmount
-	 * MarginCall.SegregatedIndependentAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmSegregatedIndependentAmount
+	 * MarginCall.mmSegregatedIndependentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,33 +142,49 @@ public class AgreedAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> AgreedAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.SegregatedIndependentAmount;
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides details about the agreed amount for the segregated independent amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Amount1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amount1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedAmount1.VariationMarginAmount, com.tools20022.repository.msg.AgreedAmount1.SegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedAmount1.mmVariationMarginAmount, com.tools20022.repository.msg.AgreedAmount1.mmSegregatedIndependentAmount);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AgreedAmount1";
 				definition = "Provides details about the agreed amount for the variation margin and optionaly the segregated independent amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Amount1 getVariationMarginAmount() {
+		return variationMarginAmount;
+	}
+
+	public void setVariationMarginAmount(com.tools20022.repository.msg.Amount1 variationMarginAmount) {
+		this.variationMarginAmount = variationMarginAmount;
+	}
+
+	public Amount1 getSegregatedIndependentAmount() {
+		return segregatedIndependentAmount;
+	}
+
+	public void setSegregatedIndependentAmount(com.tools20022.repository.msg.Amount1 segregatedIndependentAmount) {
+		this.segregatedIndependentAmount = segregatedIndependentAmount;
 	}
 }

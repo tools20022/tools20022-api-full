@@ -32,6 +32,7 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022Varia
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -84,36 +85,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#TransactionIdentification
- * SecuritiesSettlementTransactionStatusAdvice002V08.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#mmTransactionIdentification
+ * SecuritiesSettlementTransactionStatusAdvice002V08.mmTransactionIdentification
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#Linkages
- * SecuritiesSettlementTransactionStatusAdvice002V08.Linkages}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#mmLinkages
+ * SecuritiesSettlementTransactionStatusAdvice002V08.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#ProcessingStatus
- * SecuritiesSettlementTransactionStatusAdvice002V08.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#mmProcessingStatus
+ * SecuritiesSettlementTransactionStatusAdvice002V08.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#InferredMatchingStatus
- * SecuritiesSettlementTransactionStatusAdvice002V08.InferredMatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#mmInferredMatchingStatus
+ * SecuritiesSettlementTransactionStatusAdvice002V08.mmInferredMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#MatchingStatus
- * SecuritiesSettlementTransactionStatusAdvice002V08.MatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#mmMatchingStatus
+ * SecuritiesSettlementTransactionStatusAdvice002V08.mmMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#SettlementStatus
- * SecuritiesSettlementTransactionStatusAdvice002V08.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#mmSettlementStatus
+ * SecuritiesSettlementTransactionStatusAdvice002V08.mmSettlementStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#TransactionDetails
- * SecuritiesSettlementTransactionStatusAdvice002V08.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#mmTransactionDetails
+ * SecuritiesSettlementTransactionStatusAdvice002V08.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#SupplementaryData
- * SecuritiesSettlementTransactionStatusAdvice002V08.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#mmSupplementaryData
+ * SecuritiesSettlementTransactionStatusAdvice002V08.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#identifier
- * SecuritiesSettlementTransactionStatusAdvice002V08.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.024.002.08}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,6 +133,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TransactionIdentifications38 transactionIdentification;
 	/**
 	 * Provides unambiguous transaction identification information.
 	 * <p>
@@ -157,17 +158,18 @@ public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 	 * "Provides unambiguous transaction identification information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Provides unambiguous transaction identification information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionIdentifications38.mmObject();
 		}
 	};
+	protected Linkages50 linkages;
 	/**
 	 * Link to another transaction - provided for information only.
 	 * <p>
@@ -191,17 +193,18 @@ public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 	 * "Link to another transaction - provided for information only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Linkages = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmLinkages = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Lnkgs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Link to another transaction - provided for information only.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Linkages50.mmObject();
 		}
 	};
+	protected ProcessingStatus63Choice processingStatus;
 	/**
 	 * Provides details on the processing status of the transaction.
 	 * <p>
@@ -226,17 +229,18 @@ public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 	 * "Provides details on the processing status of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus63Choice.mmObject();
 		}
 	};
+	protected MatchingStatus32Choice inferredMatchingStatus;
 	/**
 	 * Provides the matching status of an instruction as per the account
 	 * servicer based on an allegement. At this time no matching took place on
@@ -264,17 +268,18 @@ public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InferredMatchingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInferredMatchingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IfrrdMtchgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus32Choice.mmObject();
 		}
 	};
+	protected MatchingStatus32Choice matchingStatus;
 	/**
 	 * Provides the matching status of the instruction.
 	 * <p>
@@ -298,17 +303,18 @@ public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MatchingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMatchingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtchgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus32Choice.mmObject();
 		}
 	};
+	protected SettlementStatus22Choice settlementStatus;
 	/**
 	 * Provides the status of settlement of a transaction.
 	 * <p>
@@ -332,17 +338,18 @@ public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementStatus22Choice.mmObject();
 		}
 	};
+	protected TransactionDetails100 transactionDetails;
 	/**
 	 * Identifies the details of the transaction.
 	 * <p>
@@ -366,17 +373,18 @@ public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 	 * definition} = "Identifies the details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies the details of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransactionDetails100.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -403,7 +411,7 @@ public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -411,33 +419,6 @@ public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "08"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "024"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "002"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "024";
-			version = "08";
-			flavour = "002";
 		}
 	};
 
@@ -452,14 +433,85 @@ public class SecuritiesSettlementTransactionStatusAdvice002V08 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxStsAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.TransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.Linkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.ProcessingStatus,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.InferredMatchingStatus, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.MatchingStatus,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.SettlementStatus, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.TransactionDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.mmTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.mmLinkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.mmProcessingStatus,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.mmInferredMatchingStatus, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.mmMatchingStatus,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.mmSettlementStatus, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.mmTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "024";
+						version = "08";
+						flavour = "002";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionIdentifications38 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(TransactionIdentifications38 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Linkages50 getLinkages() {
+		return linkages;
+	}
+
+	public void setLinkages(Linkages50 linkages) {
+		this.linkages = linkages;
+	}
+
+	public ProcessingStatus63Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatus63Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public MatchingStatus32Choice getInferredMatchingStatus() {
+		return inferredMatchingStatus;
+	}
+
+	public void setInferredMatchingStatus(MatchingStatus32Choice inferredMatchingStatus) {
+		this.inferredMatchingStatus = inferredMatchingStatus;
+	}
+
+	public MatchingStatus32Choice getMatchingStatus() {
+		return matchingStatus;
+	}
+
+	public void setMatchingStatus(MatchingStatus32Choice matchingStatus) {
+		this.matchingStatus = matchingStatus;
+	}
+
+	public SettlementStatus22Choice getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(SettlementStatus22Choice settlementStatus) {
+		this.settlementStatus = settlementStatus;
+	}
+
+	public TransactionDetails100 getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(TransactionDetails100 transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

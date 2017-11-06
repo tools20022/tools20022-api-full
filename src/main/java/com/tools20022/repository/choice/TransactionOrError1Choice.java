@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.Transaction24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between the transaction details or a business error when the requested
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionOrError1Choice#Transaction
- * TransactionOrError1Choice.Transaction}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionOrError1Choice#mmTransaction
+ * TransactionOrError1Choice.mmTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionOrError1Choice#BusinessError
- * TransactionOrError1Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionOrError1Choice#mmBusinessError
+ * TransactionOrError1Choice.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Transaction24 transaction;
 	/**
 	 * Requested information on the payment transaction.
 	 * <p>
@@ -101,13 +103,13 @@ public class TransactionOrError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TransactionOrError2Choice#Transaction
-	 * TransactionOrError2Choice.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionOrError2Choice#mmTransaction
+	 * TransactionOrError2Choice.mmTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionOrError1Choice.mmObject();
 			isDerived = false;
@@ -115,13 +117,14 @@ public class TransactionOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Requested information on the payment transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionOrError2Choice.Transaction);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionOrError2Choice.mmTransaction);
 			maxOccurs = 1;
-			type_lazy = () -> Transaction24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Transaction24.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> businessError;
 	/**
 	 * Reason why the requested business information is not given.
 	 * <p>
@@ -151,13 +154,13 @@ public class TransactionOrError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TransactionOrError2Choice#BusinessError
-	 * TransactionOrError2Choice.BusinessError}</li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionOrError2Choice#mmBusinessError
+	 * TransactionOrError2Choice.mmBusinessError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionOrError1Choice.mmObject();
 			isDerived = false;
@@ -165,19 +168,19 @@ public class TransactionOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason why the requested business information is not given.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionOrError2Choice.BusinessError);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionOrError2Choice.mmBusinessError);
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionOrError1Choice.Transaction, com.tools20022.repository.choice.TransactionOrError1Choice.BusinessError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionOrError1Choice.mmTransaction, com.tools20022.repository.choice.TransactionOrError1Choice.mmBusinessError);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionOrError1Choice";
 				definition = "Choice between the transaction details or a business error when the requested data cannot be retrieved.";
@@ -185,5 +188,21 @@ public class TransactionOrError1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Transaction24 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(Transaction24 transaction) {
+		this.transaction = transaction;
+	}
+
+	public List<ErrorHandling3> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = businessError;
 	}
 }

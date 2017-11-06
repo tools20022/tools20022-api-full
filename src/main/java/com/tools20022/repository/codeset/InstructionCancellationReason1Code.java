@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason1Code#CancelledByYourselves
- * InstructionCancellationReason1Code.CancelledByYourselves}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason1Code#mmCancelledByYourselves
+ * InstructionCancellationReason1Code.mmCancelledByYourselves}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason1Code#CancelledBySystem
- * InstructionCancellationReason1Code.CancelledBySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason1Code#mmCancelledBySystem
+ * InstructionCancellationReason1Code.mmCancelledBySystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason1Code#CancelledByAgent
- * InstructionCancellationReason1Code.CancelledByAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason1Code#mmCancelledByAgent
+ * InstructionCancellationReason1Code.mmCancelledByAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class InstructionCancellationReason1Code extends InstructionCancellationR
 	 * name} = "CancelledByYourselves"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByYourselves = new MMCode() {
+	public static final MMCode mmCancelledByYourselves = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourselves";
@@ -107,7 +107,7 @@ public class InstructionCancellationReason1Code extends InstructionCancellationR
 	 * name} = "CancelledBySystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledBySystem = new MMCode() {
+	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
@@ -130,7 +130,7 @@ public class InstructionCancellationReason1Code extends InstructionCancellationR
 	 * name} = "CancelledByAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledByAgent = new MMCode() {
+	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
@@ -141,13 +141,13 @@ public class InstructionCancellationReason1Code extends InstructionCancellationR
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionCancellationReason1Code";
 				definition = "Specifies the reason why the instruction is cancelled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionCancellationReason1Code.CancelledByYourselves, com.tools20022.repository.codeset.InstructionCancellationReason1Code.CancelledBySystem,
-						com.tools20022.repository.codeset.InstructionCancellationReason1Code.CancelledByAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionCancellationReason1Code.mmCancelledByYourselves, com.tools20022.repository.codeset.InstructionCancellationReason1Code.mmCancelledBySystem,
+						com.tools20022.repository.codeset.InstructionCancellationReason1Code.mmCancelledByAgent);
 				trace_lazy = () -> InstructionCancellationReasonCode.mmObject();
 			}
 		});

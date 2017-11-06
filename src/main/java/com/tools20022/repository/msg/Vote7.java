@@ -35,19 +35,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7#IssuerLabel
- * Vote7.IssuerLabel}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7#ResolutionStatus
- * Vote7.ResolutionStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7#For Vote7.For}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7#Against Vote7.Against}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7#Abstain Vote7.Abstain}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7#Withhold Vote7.Withhold}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7#OneYear Vote7.OneYear}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7#TwoYears Vote7.TwoYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7#ThreeYears
- * Vote7.ThreeYears}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7#NoAction Vote7.NoAction}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7#mmIssuerLabel
+ * Vote7.mmIssuerLabel}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7#mmResolutionStatus
+ * Vote7.mmResolutionStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7#mmFor Vote7.mmFor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7#mmAgainst
+ * Vote7.mmAgainst}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7#mmAbstain
+ * Vote7.mmAbstain}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7#mmWithhold
+ * Vote7.mmWithhold}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7#mmOneYear
+ * Vote7.mmOneYear}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7#mmTwoYears
+ * Vote7.mmTwoYears}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7#mmThreeYears
+ * Vote7.mmThreeYears}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7#mmNoAction
+ * Vote7.mmNoAction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,15 +63,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#VoteResult
- * MeetingResultDisseminationV05.VoteResult}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingResultDisseminationV05#mmVoteResult
+ * MeetingResultDisseminationV05.mmVoteResult}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Vote7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text issuerLabel;
 	/**
 	 * Numbering of the resolution as specified by the issuer or its agent.
 	 * <p>
@@ -93,8 +100,8 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Resolution#IssuerLabel
-	 * Resolution.IssuerLabel}</li>
+	 * {@linkplain com.tools20022.repository.entity.Resolution#mmIssuerLabel
+	 * Resolution.mmIssuerLabel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Vote7
@@ -114,25 +121,26 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Vote5#IssuerLabel
-	 * Vote5.IssuerLabel}</li>
+	 * {@linkplain com.tools20022.repository.msg.Vote5#mmIssuerLabel
+	 * Vote5.mmIssuerLabel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerLabel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmIssuerLabel;
 			componentContext_lazy = () -> Vote7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.IssuerLabel;
 			isDerived = false;
 			xmlTag = "IssrLabl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
 			definition = "Numbering of the resolution as specified by the issuer or its agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.IssuerLabel;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.mmIssuerLabel;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ResolutionStatus2Code resolutionStatus;
 	/**
 	 * Specifies the acceptance status of a resolution.
 	 * <p>
@@ -146,8 +154,8 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MeetingStatus#MeetingResolutionStatus
-	 * MeetingStatus.MeetingResolutionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmMeetingResolutionStatus
+	 * MeetingStatus.mmMeetingResolutionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Vote7
@@ -166,24 +174,26 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Vote5#Accepted Vote5.Accepted}</li>
+	 * {@linkplain com.tools20022.repository.msg.Vote5#mmAccepted
+	 * Vote5.mmAccepted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResolutionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResolutionStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmMeetingResolutionStatus;
 			componentContext_lazy = () -> Vote7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.MeetingResolutionStatus;
 			isDerived = false;
 			xmlTag = "RsltnSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolutionStatus";
 			definition = "Specifies the acceptance status of a resolution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.Accepted;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.mmAccepted;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ResolutionStatus2Code.mmObject();
 		}
 	};
+	protected Number for_;
 	/**
 	 * Number of votes in favour of one resolution.
 	 * <p>
@@ -196,7 +206,7 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Vote#For Vote.For}</li>
+	 * {@linkplain com.tools20022.repository.entity.Vote#mmFor Vote.mmFor}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Vote7
@@ -214,25 +224,26 @@ public class Vote7 {
 	 * definition} = "Number of votes in favour of one resolution."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} = {@linkplain com.tools20022.repository.msg.Vote5#For
-	 * Vote5.For}</li>
+	 * previousVersion} = {@linkplain com.tools20022.repository.msg.Vote5#mmFor
+	 * Vote5.mmFor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute For = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmFor;
 			componentContext_lazy = () -> Vote7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.For;
 			isDerived = false;
 			xmlTag = "For";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "For";
 			definition = "Number of votes in favour of one resolution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.For;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.mmFor;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number against;
 	/**
 	 * Number of votes against one resolution.
 	 * <p>
@@ -245,7 +256,8 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Vote#Against Vote.Against}</li>
+	 * {@linkplain com.tools20022.repository.entity.Vote#mmAgainst
+	 * Vote.mmAgainst}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Vote7
@@ -264,24 +276,26 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Vote5#Against Vote5.Against}</li>
+	 * {@linkplain com.tools20022.repository.msg.Vote5#mmAgainst
+	 * Vote5.mmAgainst}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Against = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgainst = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmAgainst;
 			componentContext_lazy = () -> Vote7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.Against;
 			isDerived = false;
 			xmlTag = "Agnst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Against";
 			definition = "Number of votes against one resolution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.Against;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.mmAgainst;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number abstain;
 	/**
 	 * Number of votes expressed as abstain.
 	 * <p>
@@ -294,7 +308,8 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Vote#Abstain Vote.Abstain}</li>
+	 * {@linkplain com.tools20022.repository.entity.Vote#mmAbstain
+	 * Vote.mmAbstain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Vote7
@@ -313,24 +328,26 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Vote5#Abstain Vote5.Abstain}</li>
+	 * {@linkplain com.tools20022.repository.msg.Vote5#mmAbstain
+	 * Vote5.mmAbstain}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Abstain = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAbstain = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmAbstain;
 			componentContext_lazy = () -> Vote7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.Abstain;
 			isDerived = false;
 			xmlTag = "Abstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Abstain";
 			definition = "Number of votes expressed as abstain.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.Abstain;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.mmAbstain;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number withhold;
 	/**
 	 * Total votes withheld, for example, in the case where a shareholder wishes
 	 * not to endorse the election of a board member.
@@ -344,8 +361,8 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Vote#Withhold Vote.Withhold}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Vote#mmWithhold
+	 * Vote.mmWithhold}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Vote7
@@ -366,24 +383,26 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Vote5#Withhold Vote5.Withhold}</li>
+	 * {@linkplain com.tools20022.repository.msg.Vote5#mmWithhold
+	 * Vote5.mmWithhold}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Withhold = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWithhold = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmWithhold;
 			componentContext_lazy = () -> Vote7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.Withhold;
 			isDerived = false;
 			xmlTag = "Wthhld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withhold";
 			definition = "Total votes withheld, for example, in the case where a shareholder wishes not to endorse the election of a board member.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.Withhold;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.mmWithhold;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number oneYear;
 	/**
 	 * Number of votes in favour for one year for "say on pay" type of
 	 * resolution.
@@ -397,7 +416,8 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Vote#OneYear Vote.OneYear}</li>
+	 * {@linkplain com.tools20022.repository.entity.Vote#mmOneYear
+	 * Vote.mmOneYear}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Vote7
@@ -417,20 +437,21 @@ public class Vote7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OneYear = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOneYear = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmOneYear;
 			componentContext_lazy = () -> Vote7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.OneYear;
 			isDerived = false;
 			xmlTag = "OneYr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneYear";
 			definition = "Number of votes in favour for one year for \"say on pay\" type of resolution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number twoYears;
 	/**
 	 * Number of votes in favour of two years for "say on pay" type of
 	 * resolution.
@@ -444,8 +465,8 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Vote#TwoYears Vote.TwoYears}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Vote#mmTwoYears
+	 * Vote.mmTwoYears}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Vote7
@@ -465,20 +486,21 @@ public class Vote7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TwoYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTwoYears = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmTwoYears;
 			componentContext_lazy = () -> Vote7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.TwoYears;
 			isDerived = false;
 			xmlTag = "TwoYrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoYears";
 			definition = "Number of votes in favour of two years for \"say on pay\" type of resolution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number threeYears;
 	/**
 	 * Number of votes in favour of three years for "say on pay" type of
 	 * resolution.
@@ -492,8 +514,8 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Vote#ThreeYears
-	 * Vote.ThreeYears}</li>
+	 * {@linkplain com.tools20022.repository.entity.Vote#mmThreeYears
+	 * Vote.mmThreeYears}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Vote7
@@ -513,20 +535,21 @@ public class Vote7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ThreeYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmThreeYears = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmThreeYears;
 			componentContext_lazy = () -> Vote7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.ThreeYears;
 			isDerived = false;
 			xmlTag = "ThreeYrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThreeYears";
 			definition = "Number of votes in favour of three years for \"say on pay\" type of resolution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number noAction;
 	/**
 	 * Number of votes for which no action has been taken.
 	 * <p>
@@ -539,8 +562,8 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Vote#NoAction Vote.NoAction}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Vote#mmNoAction
+	 * Vote.mmNoAction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Vote7
@@ -559,21 +582,22 @@ public class Vote7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Vote5#NoAction Vote5.NoAction}</li>
+	 * {@linkplain com.tools20022.repository.msg.Vote5#mmNoAction
+	 * Vote5.mmNoAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoAction = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmNoAction;
 			componentContext_lazy = () -> Vote7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.NoAction;
 			isDerived = false;
 			xmlTag = "NoActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
 			definition = "Number of votes for which no action has been taken.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.NoAction;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Vote5.mmNoAction;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -581,12 +605,12 @@ public class Vote7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote7.IssuerLabel, com.tools20022.repository.msg.Vote7.ResolutionStatus, com.tools20022.repository.msg.Vote7.For,
-						com.tools20022.repository.msg.Vote7.Against, com.tools20022.repository.msg.Vote7.Abstain, com.tools20022.repository.msg.Vote7.Withhold, com.tools20022.repository.msg.Vote7.OneYear,
-						com.tools20022.repository.msg.Vote7.TwoYears, com.tools20022.repository.msg.Vote7.ThreeYears, com.tools20022.repository.msg.Vote7.NoAction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote7.mmIssuerLabel, com.tools20022.repository.msg.Vote7.mmResolutionStatus, com.tools20022.repository.msg.Vote7.mmFor,
+						com.tools20022.repository.msg.Vote7.mmAgainst, com.tools20022.repository.msg.Vote7.mmAbstain, com.tools20022.repository.msg.Vote7.mmWithhold, com.tools20022.repository.msg.Vote7.mmOneYear,
+						com.tools20022.repository.msg.Vote7.mmTwoYears, com.tools20022.repository.msg.Vote7.mmThreeYears, com.tools20022.repository.msg.Vote7.mmNoAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmVoteResult);
 				trace_lazy = () -> Vote.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV05.VoteResult);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Vote7";
 				definition = "Indicates the number of voting rights cast to a resolution.";
@@ -594,5 +618,85 @@ public class Vote7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIssuerLabel() {
+		return issuerLabel;
+	}
+
+	public void setIssuerLabel(Max35Text issuerLabel) {
+		this.issuerLabel = issuerLabel;
+	}
+
+	public ResolutionStatus2Code getResolutionStatus() {
+		return resolutionStatus;
+	}
+
+	public void setResolutionStatus(ResolutionStatus2Code resolutionStatus) {
+		this.resolutionStatus = resolutionStatus;
+	}
+
+	public Number getFor() {
+		return for_;
+	}
+
+	public void setFor(Number for_) {
+		this.for_ = for_;
+	}
+
+	public Number getAgainst() {
+		return against;
+	}
+
+	public void setAgainst(Number against) {
+		this.against = against;
+	}
+
+	public Number getAbstain() {
+		return abstain;
+	}
+
+	public void setAbstain(Number abstain) {
+		this.abstain = abstain;
+	}
+
+	public Number getWithhold() {
+		return withhold;
+	}
+
+	public void setWithhold(Number withhold) {
+		this.withhold = withhold;
+	}
+
+	public Number getOneYear() {
+		return oneYear;
+	}
+
+	public void setOneYear(Number oneYear) {
+		this.oneYear = oneYear;
+	}
+
+	public Number getTwoYears() {
+		return twoYears;
+	}
+
+	public void setTwoYears(Number twoYears) {
+		this.twoYears = twoYears;
+	}
+
+	public Number getThreeYears() {
+		return threeYears;
+	}
+
+	public void setThreeYears(Number threeYears) {
+		this.threeYears = threeYears;
+	}
+
+	public Number getNoAction() {
+		return noAction;
+	}
+
+	public void setNoAction(Number noAction) {
+		this.noAction = noAction;
 	}
 }

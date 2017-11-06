@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PriceSource#PriceSource
- * PriceSource.PriceSource}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceSource#Narrative
- * PriceSource.Narrative}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceSource#mmPriceSource
+ * PriceSource.mmPriceSource}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceSource#mmNarrative
+ * PriceSource.mmNarrative}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceSource {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceSource1Code priceSource;
 	/**
 	 * Source of the price.
 	 * <p>
@@ -88,19 +89,20 @@ public class PriceSource {
 	 * definition} = "Source of the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceSource = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> com.tools20022.repository.msg.PriceSource.mmObject();
+			componentContext_lazy = () -> PriceSource.mmObject();
 			isDerived = false;
 			xmlTag = "PricSrc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceSource";
 			definition = "Source of the price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceSource1Code.mmObject();
 		}
 	};
+	protected Max35Text narrative;
 	/**
 	 * Additional information about the source of a price.
 	 * <p>
@@ -127,16 +129,16 @@ public class PriceSource {
 	 * definition} = "Additional information about the source of a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Narrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNarrative = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> com.tools20022.repository.msg.PriceSource.mmObject();
+			componentContext_lazy = () -> PriceSource.mmObject();
 			isDerived = false;
 			xmlTag = "Nrrtv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Narrative";
 			definition = "Additional information about the source of a price.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -144,14 +146,30 @@ public class PriceSource {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceSource.PriceSource, com.tools20022.repository.msg.PriceSource.Narrative);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceSource.mmPriceSource, com.tools20022.repository.msg.PriceSource.mmNarrative);
 				trace_lazy = () -> SourceOfPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceSource";
 				definition = "Source of a price quotation when it is not the local market.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceSource1Code getPriceSource() {
+		return priceSource;
+	}
+
+	public void setPriceSource(PriceSource1Code priceSource) {
+		this.priceSource = priceSource;
+	}
+
+	public Max35Text getNarrative() {
+		return narrative;
+	}
+
+	public void setNarrative(Max35Text narrative) {
+		this.narrative = narrative;
 	}
 }

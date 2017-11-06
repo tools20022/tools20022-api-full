@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.InvestmentAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Account between an investor(s) and a fund manager or a fund. The account can
@@ -40,75 +41,75 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount47#Name
- * InvestmentAccount47.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmName
+ * InvestmentAccount47.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#Designation
- * InvestmentAccount47.Designation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount47#Type
- * InvestmentAccount47.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmDesignation
+ * InvestmentAccount47.mmDesignation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmType
+ * InvestmentAccount47.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#OwnershipType
- * InvestmentAccount47.OwnershipType}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmOwnershipType
+ * InvestmentAccount47.mmOwnershipType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#TaxExemption
- * InvestmentAccount47.TaxExemption}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmTaxExemption
+ * InvestmentAccount47.mmTaxExemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#StatementFrequency
- * InvestmentAccount47.StatementFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmStatementFrequency
+ * InvestmentAccount47.mmStatementFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#ReferenceCurrency
- * InvestmentAccount47.ReferenceCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount47#Language
- * InvestmentAccount47.Language}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmReferenceCurrency
+ * InvestmentAccount47.mmReferenceCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmLanguage
+ * InvestmentAccount47.mmLanguage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#IncomePreference
- * InvestmentAccount47.IncomePreference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmIncomePreference
+ * InvestmentAccount47.mmIncomePreference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#ReinvestmentDetails
- * InvestmentAccount47.ReinvestmentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmReinvestmentDetails
+ * InvestmentAccount47.mmReinvestmentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#TaxWithholdingMethod
- * InvestmentAccount47.TaxWithholdingMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmTaxWithholdingMethod
+ * InvestmentAccount47.mmTaxWithholdingMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#LetterIntentDetails
- * InvestmentAccount47.LetterIntentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmLetterIntentDetails
+ * InvestmentAccount47.mmLetterIntentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#AccumulationRightReference
- * InvestmentAccount47.AccumulationRightReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmAccumulationRightReference
+ * InvestmentAccount47.mmAccumulationRightReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#RequiredSignatoriesNumber
- * InvestmentAccount47.RequiredSignatoriesNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmRequiredSignatoriesNumber
+ * InvestmentAccount47.mmRequiredSignatoriesNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#FundFamilyName
- * InvestmentAccount47.FundFamilyName}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmFundFamilyName
+ * InvestmentAccount47.mmFundFamilyName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#ModifiedFundDetails
- * InvestmentAccount47.ModifiedFundDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmModifiedFundDetails
+ * InvestmentAccount47.mmModifiedFundDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#RoundingDetails
- * InvestmentAccount47.RoundingDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmRoundingDetails
+ * InvestmentAccount47.mmRoundingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#AccountServicer
- * InvestmentAccount47.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmAccountServicer
+ * InvestmentAccount47.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#BlockedStatus
- * InvestmentAccount47.BlockedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmBlockedStatus
+ * InvestmentAccount47.mmBlockedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#AccountUsageType
- * InvestmentAccount47.AccountUsageType}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmAccountUsageType
+ * InvestmentAccount47.mmAccountUsageType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#ForeignStatusCertification
- * InvestmentAccount47.ForeignStatusCertification}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmForeignStatusCertification
+ * InvestmentAccount47.mmForeignStatusCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#AccountSignatureDateTime
- * InvestmentAccount47.AccountSignatureDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmAccountSignatureDateTime
+ * InvestmentAccount47.mmAccountSignatureDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#TransactionChannelType
- * InvestmentAccount47.TransactionChannelType}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmTransactionChannelType
+ * InvestmentAccount47.mmTransactionChannelType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#InvestmentAccountCategory
- * InvestmentAccount47.InvestmentAccountCategory}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmInvestmentAccountCategory
+ * InvestmentAccount47.mmInvestmentAccountCategory}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -119,15 +120,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#ModifiedInvestmentAccount
- * AccountModificationInstructionV05.ModifiedInvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#mmModifiedInvestmentAccount
+ * AccountModificationInstructionV05.mmModifiedInvestmentAccount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -154,6 +155,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentAccount47 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text name;
 	/**
 	 * Name of the account. It provides an additional means of identification,
 	 * and is designated by the account servicer in agreement with the account
@@ -168,8 +170,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#Name
-	 * AccountIdentification.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmName
+	 * AccountIdentification.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,33 +193,34 @@ public class InvestmentAccount47 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount51#Name
-	 * InvestmentAccount51.Name}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmName
+	 * InvestmentAccount51.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#Name
-	 * InvestmentAccount39.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmName
+	 * InvestmentAccount39.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.Name;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.Name);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmName);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text designation;
 	/**
 	 * Supplementary registration information applying to a specific block of
 	 * units for dealing and reporting purposes. The supplementary registration
@@ -234,8 +237,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#Designation
-	 * InvestmentAccount.Designation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmDesignation
+	 * InvestmentAccount.mmDesignation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -258,33 +261,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#Designation
-	 * InvestmentAccount51.Designation}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmDesignation
+	 * InvestmentAccount51.mmDesignation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#Designation
-	 * InvestmentAccount39.Designation}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmDesignation
+	 * InvestmentAccount39.mmDesignation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Designation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.Designation;
 			isDerived = false;
 			xmlTag = "Dsgnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Designation";
 			definition = "Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.Designation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.Designation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmDesignation);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmDesignation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AccountType1Choice type;
 	/**
 	 * Purpose of the account/source fund type. This is typically linked to an
 	 * investment product, for example, wrapper, ISA.
@@ -322,33 +326,34 @@ public class InvestmentAccount47 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount51#Type
-	 * InvestmentAccount51.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmType
+	 * InvestmentAccount51.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#Type
-	 * InvestmentAccount39.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmType
+	 * InvestmentAccount39.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccount47.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
+			componentContext_lazy = () -> InvestmentAccount47.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Purpose of the account/source fund type. This is typically linked to an investment product, for example, wrapper, ISA.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.Type;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.Type);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountType1Choice.mmObject();
 		}
 	};
+	protected OwnershipType1Choice ownershipType;
 	/**
 	 * Ownership status of the account, for example, joint owners.
 	 * <p>
@@ -362,8 +367,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#OwnershipType
-	 * InvestmentAccount.OwnershipType}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmOwnershipType
+	 * InvestmentAccount.mmOwnershipType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -385,33 +390,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#OwnershipType
-	 * InvestmentAccount51.OwnershipType}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmOwnershipType
+	 * InvestmentAccount51.mmOwnershipType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#OwnershipType
-	 * InvestmentAccount39.OwnershipType}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmOwnershipType
+	 * InvestmentAccount39.mmOwnershipType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OwnershipType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOwnershipType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmOwnershipType;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.OwnershipType;
 			isDerived = false;
 			xmlTag = "OwnrshTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnershipType";
 			definition = "Ownership status of the account, for example, joint owners.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.OwnershipType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.OwnershipType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmOwnershipType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmOwnershipType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OwnershipType1Choice.mmObject();
 		}
 	};
+	protected TaxExemptionReason1Choice taxExemption;
 	/**
 	 * Tax advantage specific to the account.
 	 * <p>
@@ -425,8 +431,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#InvestmentFundTax
-	 * InvestmentAccount.InvestmentFundTax}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundTax
+	 * InvestmentAccount.mmInvestmentFundTax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -447,33 +453,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#TaxExemption
-	 * InvestmentAccount51.TaxExemption}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmTaxExemption
+	 * InvestmentAccount51.mmTaxExemption}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#TaxExemption
-	 * InvestmentAccount39.TaxExemption}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmTaxExemption
+	 * InvestmentAccount39.mmTaxExemption}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxExemption = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxExemption = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundTax;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.InvestmentFundTax;
 			isDerived = false;
 			xmlTag = "TaxXmptn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemption";
 			definition = "Tax advantage specific to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.TaxExemption;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.TaxExemption);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmTaxExemption);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmTaxExemption;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TaxExemptionReason1Choice.mmObject();
 		}
 	};
+	protected StatementFrequencyReason1Choice statementFrequency;
 	/**
 	 * Frequency at which a statement is issued.
 	 * <p>
@@ -487,8 +494,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ReportingService#StatementFrequency
-	 * ReportingService.StatementFrequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.ReportingService#mmStatementFrequency
+	 * ReportingService.mmStatementFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -509,33 +516,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#StatementFrequency
-	 * InvestmentAccount51.StatementFrequency}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmStatementFrequency
+	 * InvestmentAccount51.mmStatementFrequency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#StatementFrequency
-	 * InvestmentAccount39.StatementFrequency}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmStatementFrequency
+	 * InvestmentAccount39.mmStatementFrequency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementFrequency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.mmStatementFrequency;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.StatementFrequency;
 			isDerived = false;
 			xmlTag = "StmtFrqcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementFrequency";
 			definition = "Frequency at which a statement is issued.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.StatementFrequency;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.StatementFrequency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmStatementFrequency);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmStatementFrequency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatementFrequencyReason1Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode referenceCurrency;
 	/**
 	 * Currency chosen for reporting purposes by the account owner in agreement
 	 * with the account servicer.
@@ -550,8 +558,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#ReferenceCurrency
-	 * InvestmentAccount.ReferenceCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmReferenceCurrency
+	 * InvestmentAccount.mmReferenceCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -574,33 +582,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#ReferenceCurrency
-	 * InvestmentAccount51.ReferenceCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmReferenceCurrency
+	 * InvestmentAccount51.mmReferenceCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#ReferenceCurrency
-	 * InvestmentAccount39.ReferenceCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmReferenceCurrency
+	 * InvestmentAccount39.mmReferenceCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmReferenceCurrency;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.ReferenceCurrency;
 			isDerived = false;
 			xmlTag = "RefCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceCurrency";
 			definition = "Currency chosen for reporting purposes by the account owner in agreement with the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.ReferenceCurrency;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.ReferenceCurrency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmReferenceCurrency);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmReferenceCurrency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected LanguageCode language;
 	/**
 	 * Language for all communication concerning the account.
 	 * <p>
@@ -613,8 +622,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Language
-	 * Account.Language}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmLanguage
+	 * Account.mmLanguage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -635,33 +644,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#Language
-	 * InvestmentAccount51.Language}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmLanguage
+	 * InvestmentAccount51.mmLanguage}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#Language
-	 * InvestmentAccount39.Language}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmLanguage
+	 * InvestmentAccount39.mmLanguage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Language = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLanguage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmLanguage;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Language;
 			isDerived = false;
 			xmlTag = "Lang";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Language";
 			definition = "Language for all communication concerning the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.Language;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.Language);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmLanguage);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmLanguage;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	protected IncomePreference1Code incomePreference;
 	/**
 	 * Dividend option chosen by the account owner based on the options offered
 	 * in the prospectus.
@@ -676,8 +686,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#IncomePreference
-	 * InvestmentAccountService.IncomePreference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmIncomePreference
+	 * InvestmentAccountService.mmIncomePreference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -700,33 +710,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#IncomePreference
-	 * InvestmentAccount51.IncomePreference}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmIncomePreference
+	 * InvestmentAccount51.mmIncomePreference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#IncomePreference
-	 * InvestmentAccount39.IncomePreference}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmIncomePreference
+	 * InvestmentAccount39.mmIncomePreference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncomePreference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.IncomePreference;
 			isDerived = false;
 			xmlTag = "IncmPref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePreference";
 			definition = "Dividend option chosen by the account owner based on the options offered in the prospectus.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.IncomePreference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.IncomePreference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmIncomePreference);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmIncomePreference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Reinvestment1> reinvestmentDetails;
 	/**
 	 * Specifies, for income on the fund that is to be reinvested, parameters
 	 * for the reinvestment. If the reinvestment percentage is less than one
@@ -741,8 +752,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#Reinvestment
-	 * InvestmentAccountService.Reinvestment}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmReinvestment
+	 * InvestmentAccountService.mmReinvestment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -765,33 +776,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#ReinvestmentDetails
-	 * InvestmentAccount51.ReinvestmentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmReinvestmentDetails
+	 * InvestmentAccount51.mmReinvestmentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#ReinvestmentDetails
-	 * InvestmentAccount39.ReinvestmentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmReinvestmentDetails
+	 * InvestmentAccount39.mmReinvestmentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReinvestmentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReinvestmentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmReinvestment;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.Reinvestment;
 			isDerived = false;
 			xmlTag = "RinvstmtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentDetails";
 			definition = "Specifies, for income on the fund that is to be reinvested, parameters for the reinvestment. If the reinvestment percentage is less than one hundred percent, the remaining percentage will be invested according to the investor’s subsequent instructions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.ReinvestmentDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.ReinvestmentDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmReinvestmentDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmReinvestmentDetails;
 			minOccurs = 0;
-			type_lazy = () -> Reinvestment1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Reinvestment1.mmObject();
 		}
 	};
+	protected TaxWithholdingMethod2Code taxWithholdingMethod;
 	/**
 	 * Method by which the tax (withholding tax) is to be processed i.e. either
 	 * withheld at source or tax information reported to tax authorities or tax
@@ -807,8 +819,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#TaxWithholdingMethod
-	 * InvestmentAccountService.TaxWithholdingMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmTaxWithholdingMethod
+	 * InvestmentAccountService.mmTaxWithholdingMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -831,33 +843,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#TaxWithholdingMethod
-	 * InvestmentAccount51.TaxWithholdingMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmTaxWithholdingMethod
+	 * InvestmentAccount51.mmTaxWithholdingMethod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#TaxWithholdingMethod
-	 * InvestmentAccount39.TaxWithholdingMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmTaxWithholdingMethod
+	 * InvestmentAccount39.mmTaxWithholdingMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxWithholdingMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxWithholdingMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmTaxWithholdingMethod;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.TaxWithholdingMethod;
 			isDerived = false;
 			xmlTag = "TaxWhldgMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxWithholdingMethod";
 			definition = "Method by which the tax (withholding tax) is to be processed i.e. either withheld at source or tax information reported to tax authorities or tax information is reported due to the provision of a tax certificate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.TaxWithholdingMethod;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.TaxWithholdingMethod);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmTaxWithholdingMethod);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmTaxWithholdingMethod;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TaxWithholdingMethod2Code.mmObject();
 		}
 	};
+	protected LetterIntent1 letterIntentDetails;
 	/**
 	 * Details of the letter of intent.
 	 * <p>
@@ -870,8 +883,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract#LetterIntentReference
-	 * InvestmentAccountContract.LetterIntentReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract#mmLetterIntentReference
+	 * InvestmentAccountContract.mmLetterIntentReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -892,33 +905,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#LetterIntentDetails
-	 * InvestmentAccount51.LetterIntentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmLetterIntentDetails
+	 * InvestmentAccount51.mmLetterIntentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#LetterIntentDetails
-	 * InvestmentAccount39.LetterIntentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmLetterIntentDetails
+	 * InvestmentAccount39.mmLetterIntentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LetterIntentDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLetterIntentDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmLetterIntentReference;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.LetterIntentReference;
 			isDerived = false;
 			xmlTag = "LttrInttDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterIntentDetails";
 			definition = "Details of the letter of intent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.LetterIntentDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.LetterIntentDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmLetterIntentDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmLetterIntentDetails;
 			maxOccurs = 1;
-			complexType_lazy = () -> LetterIntent1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
 		}
 	};
+	protected Max35Text accumulationRightReference;
 	/**
 	 * Reference of an accumulation rights program, in which sales commissions
 	 * are based on a customer's present purchases of shares and the aggregate
@@ -934,8 +948,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract#AccumulationRightReference
-	 * InvestmentAccountContract.AccumulationRightReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountContract#mmAccumulationRightReference
+	 * InvestmentAccountContract.mmAccumulationRightReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -958,33 +972,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#AccumulationRightReference
-	 * InvestmentAccount51.AccumulationRightReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmAccumulationRightReference
+	 * InvestmentAccount51.mmAccumulationRightReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#AccumulationRightReference
-	 * InvestmentAccount39.AccumulationRightReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmAccumulationRightReference
+	 * InvestmentAccount39.mmAccumulationRightReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccumulationRightReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccumulationRightReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmAccumulationRightReference;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.AccumulationRightReference;
 			isDerived = false;
 			xmlTag = "AcmltnRghtRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulationRightReference";
 			definition = "Reference of an accumulation rights program, in which sales commissions are based on a customer's present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.AccumulationRightReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.AccumulationRightReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmAccumulationRightReference);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmAccumulationRightReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number requiredSignatoriesNumber;
 	/**
 	 * Number of account owners or related parties required to authorise
 	 * transactions on the account.
@@ -998,8 +1013,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SignatureCondition#RequiredSignatureNumber
-	 * SignatureCondition.RequiredSignatureNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmRequiredSignatureNumber
+	 * SignatureCondition.mmRequiredSignatureNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1022,33 +1037,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#RequiredSignatoriesNumber
-	 * InvestmentAccount51.RequiredSignatoriesNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmRequiredSignatoriesNumber
+	 * InvestmentAccount51.mmRequiredSignatoriesNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#RequiredSignatoriesNumber
-	 * InvestmentAccount39.RequiredSignatoriesNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmRequiredSignatoriesNumber
+	 * InvestmentAccount39.mmRequiredSignatoriesNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequiredSignatoriesNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequiredSignatoriesNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmRequiredSignatureNumber;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.RequiredSignatureNumber;
 			isDerived = false;
 			xmlTag = "ReqrdSgntriesNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredSignatoriesNumber";
 			definition = "Number of account owners or related parties required to authorise transactions on the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.RequiredSignatoriesNumber;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.RequiredSignatoriesNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmRequiredSignatoriesNumber);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmRequiredSignatoriesNumber;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max350Text fundFamilyName;
 	/**
 	 * Name of the investment fund family.
 	 * <p>
@@ -1061,8 +1077,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#FundFamilyName
-	 * InvestmentFundFamily.FundFamilyName}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#mmFundFamilyName
+	 * InvestmentFundFamily.mmFundFamilyName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1083,33 +1099,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#FundFamilyName
-	 * InvestmentAccount51.FundFamilyName}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmFundFamilyName
+	 * InvestmentAccount51.mmFundFamilyName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#FundFamilyName
-	 * InvestmentAccount39.FundFamilyName}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmFundFamilyName
+	 * InvestmentAccount39.mmFundFamilyName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FundFamilyName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFundFamilyName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.mmFundFamilyName;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.FundFamilyName;
 			isDerived = false;
 			xmlTag = "FndFmlyNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundFamilyName";
 			definition = "Name of the investment fund family.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.FundFamilyName;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.FundFamilyName);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmFundFamilyName);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmFundFamilyName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ModificationScope13> modifiedFundDetails;
 	/**
 	 * Detailed information about the investment fund associated to the account.
 	 * <p>
@@ -1121,8 +1138,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#InvestmentFundClass
-	 * InvestmentAccount.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmInvestmentFundClass
+	 * InvestmentAccount.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1145,33 +1162,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#ModifiedFinancialInstrumentDetails
-	 * InvestmentAccount51.ModifiedFinancialInstrumentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmModifiedFinancialInstrumentDetails
+	 * InvestmentAccount51.mmModifiedFinancialInstrumentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#ModifiedFundDetails
-	 * InvestmentAccount39.ModifiedFundDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmModifiedFundDetails
+	 * InvestmentAccount39.mmModifiedFundDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ModifiedFundDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModifiedFundDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundClass;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "ModfdFndDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedFundDetails";
 			definition = "Detailed information about the investment fund associated to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.ModifiedFundDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.ModifiedFinancialInstrumentDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmModifiedFinancialInstrumentDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmModifiedFundDetails;
 			minOccurs = 0;
-			type_lazy = () -> ModificationScope13.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ModificationScope13.mmObject();
 		}
 	};
+	protected RoundingParameters1 roundingDetails;
 	/**
 	 * Parameters to be applied on deal amount for orders when the amount is a
 	 * fractional number.
@@ -1184,8 +1202,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#RoundingMethod
-	 * InvestmentAccountService.RoundingMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmRoundingMethod
+	 * InvestmentAccountService.mmRoundingMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1208,34 +1226,35 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#RoundingDetails
-	 * InvestmentAccount51.RoundingDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmRoundingDetails
+	 * InvestmentAccount51.mmRoundingDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#RoundingDetails
-	 * InvestmentAccount39.RoundingDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmRoundingDetails
+	 * InvestmentAccount39.mmRoundingDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RoundingDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRoundingDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmRoundingMethod;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.RoundingMethod;
 			isDerived = false;
 			xmlTag = "RndgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingDetails";
 			definition = "Parameters to be applied on deal amount for orders when the amount is a fractional number.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.RoundingDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.RoundingDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmRoundingDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmRoundingDetails;
 			maxOccurs = 1;
-			type_lazy = () -> RoundingParameters1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RoundingParameters1.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice accountServicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -1251,8 +1270,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1275,34 +1294,35 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#AccountServicer
-	 * InvestmentAccount51.AccountServicer}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmAccountServicer
+	 * InvestmentAccount51.mmAccountServicer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#AccountServicer
-	 * InvestmentAccount39.AccountServicer}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmAccountServicer
+	 * InvestmentAccount39.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.AccountServicer;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.AccountServicer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmAccountServicer);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmAccountServicer;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Blocked1> blockedStatus;
 	/**
 	 * Specifies information about blocked accounts.
 	 * <p>
@@ -1315,8 +1335,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Status
-	 * Account.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmStatus
+	 * Account.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1337,32 +1357,33 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#BlockedStatus
-	 * InvestmentAccount51.BlockedStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmBlockedStatus
+	 * InvestmentAccount51.mmBlockedStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#BlockedStatus
-	 * InvestmentAccount39.BlockedStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmBlockedStatus
+	 * InvestmentAccount39.mmBlockedStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BlockedStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBlockedStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmStatus;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Status;
 			isDerived = false;
 			xmlTag = "BlckdSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedStatus";
 			definition = "Specifies information about blocked accounts.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.BlockedStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.BlockedStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmBlockedStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmBlockedStatus;
 			minOccurs = 0;
-			complexType_lazy = () -> Blocked1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.Blocked1.mmObject();
 		}
 	};
+	protected AccountUsageType1Choice accountUsageType;
 	/**
 	 * Specifies the type of usage of the account.
 	 * <p>
@@ -1398,33 +1419,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#AccountUsageType
-	 * InvestmentAccount51.AccountUsageType}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmAccountUsageType
+	 * InvestmentAccount51.mmAccountUsageType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#AccountUsageType
-	 * InvestmentAccount39.AccountUsageType}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmAccountUsageType
+	 * InvestmentAccount39.mmAccountUsageType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountUsageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountUsageType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccount47.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
+			componentContext_lazy = () -> InvestmentAccount47.mmObject();
 			isDerived = false;
 			xmlTag = "AcctUsgTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountUsageType";
 			definition = "Specifies the type of usage of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.AccountUsageType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.AccountUsageType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmAccountUsageType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmAccountUsageType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountUsageType1Choice.mmObject();
 		}
 	};
+	protected Provided1Code foreignStatusCertification;
 	/**
 	 * Specifies if documentary evidence has been provided for the foreign
 	 * resident.
@@ -1458,18 +1480,18 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#ForeignStatusCertification
-	 * InvestmentAccount51.ForeignStatusCertification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmForeignStatusCertification
+	 * InvestmentAccount51.mmForeignStatusCertification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#ForeignStatusCertification
-	 * InvestmentAccount39.ForeignStatusCertification}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmForeignStatusCertification
+	 * InvestmentAccount39.mmForeignStatusCertification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForeignStatusCertification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForeignStatusCertification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
 			isDerived = false;
@@ -1477,13 +1499,14 @@ public class InvestmentAccount47 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignStatusCertification";
 			definition = "Specifies if documentary evidence has been provided for the foreign resident.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.ForeignStatusCertification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.ForeignStatusCertification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmForeignStatusCertification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmForeignStatusCertification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Provided1Code.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice accountSignatureDateTime;
 	/**
 	 * Date the investor signs the open account form.
 	 * <p>
@@ -1497,8 +1520,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#DateSigned
-	 * Agreement.DateSigned}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDateSigned
+	 * Agreement.mmDateSigned}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1519,33 +1542,34 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#AccountSignatureDateTime
-	 * InvestmentAccount51.AccountSignatureDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmAccountSignatureDateTime
+	 * InvestmentAccount51.mmAccountSignatureDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#AccountSignatureDateTime
-	 * InvestmentAccount39.AccountSignatureDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmAccountSignatureDateTime
+	 * InvestmentAccount39.mmAccountSignatureDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountSignatureDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountSignatureDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.DateSigned;
 			isDerived = false;
 			xmlTag = "AcctSgntrDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSignatureDateTime";
 			definition = "Date the investor signs the open account form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.AccountSignatureDateTime;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.AccountSignatureDateTime);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmAccountSignatureDateTime);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmAccountSignatureDateTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected TransactionChannelType1Choice transactionChannelType;
 	/**
 	 * Specifies the means by which the investor submits the open account form.
 	 * <p>
@@ -1558,8 +1582,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountContract#TransactionChannel
-	 * AccountContract.TransactionChannel}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountContract#mmTransactionChannel
+	 * AccountContract.mmTransactionChannel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1582,34 +1606,35 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#TransactionChannelType
-	 * InvestmentAccount51.TransactionChannelType}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmTransactionChannelType
+	 * InvestmentAccount51.mmTransactionChannelType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#TransactionChannelType
-	 * InvestmentAccount39.TransactionChannelType}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmTransactionChannelType
+	 * InvestmentAccount39.mmTransactionChannelType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionChannelType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionChannelType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTransactionChannel;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.TransactionChannel;
 			isDerived = false;
 			xmlTag = "TxChanlTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionChannelType";
 			definition = "Specifies the means by which the investor submits the open account form. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.TransactionChannelType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.TransactionChannelType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmTransactionChannelType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmTransactionChannelType;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionChannelType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> TransactionChannelType1Choice.mmObject();
 		}
 	};
+	protected InvestmentAccountCategory1Choice investmentAccountCategory;
 	/**
 	 * Specifies the category of the investment account.
 	 * <p>
@@ -1622,8 +1647,8 @@ public class InvestmentAccount47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#Category
-	 * InvestmentAccount.Category}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccount#mmCategory
+	 * InvestmentAccount.mmCategory}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1644,57 +1669,250 @@ public class InvestmentAccount47 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#InvestmentAccountCategory
-	 * InvestmentAccount51.InvestmentAccountCategory}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmInvestmentAccountCategory
+	 * InvestmentAccount51.mmInvestmentAccountCategory}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#InvestmentAccountCategory
-	 * InvestmentAccount39.InvestmentAccountCategory}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmInvestmentAccountCategory
+	 * InvestmentAccount39.mmInvestmentAccountCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentAccountCategory = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentAccountCategory = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmCategory;
 			componentContext_lazy = () -> InvestmentAccount47.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.Category;
 			isDerived = false;
 			xmlTag = "InvstmtAcctCtgy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountCategory";
 			definition = "Specifies the category of the investment account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.InvestmentAccountCategory;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.InvestmentAccountCategory);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount51.mmInvestmentAccountCategory);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount39.mmInvestmentAccountCategory;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccountCategory1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> InvestmentAccountCategory1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount47.Name, com.tools20022.repository.msg.InvestmentAccount47.Designation, com.tools20022.repository.msg.InvestmentAccount47.Type,
-						com.tools20022.repository.msg.InvestmentAccount47.OwnershipType, com.tools20022.repository.msg.InvestmentAccount47.TaxExemption, com.tools20022.repository.msg.InvestmentAccount47.StatementFrequency,
-						com.tools20022.repository.msg.InvestmentAccount47.ReferenceCurrency, com.tools20022.repository.msg.InvestmentAccount47.Language, com.tools20022.repository.msg.InvestmentAccount47.IncomePreference,
-						com.tools20022.repository.msg.InvestmentAccount47.ReinvestmentDetails, com.tools20022.repository.msg.InvestmentAccount47.TaxWithholdingMethod, com.tools20022.repository.msg.InvestmentAccount47.LetterIntentDetails,
-						com.tools20022.repository.msg.InvestmentAccount47.AccumulationRightReference, com.tools20022.repository.msg.InvestmentAccount47.RequiredSignatoriesNumber,
-						com.tools20022.repository.msg.InvestmentAccount47.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount47.ModifiedFundDetails, com.tools20022.repository.msg.InvestmentAccount47.RoundingDetails,
-						com.tools20022.repository.msg.InvestmentAccount47.AccountServicer, com.tools20022.repository.msg.InvestmentAccount47.BlockedStatus, com.tools20022.repository.msg.InvestmentAccount47.AccountUsageType,
-						com.tools20022.repository.msg.InvestmentAccount47.ForeignStatusCertification, com.tools20022.repository.msg.InvestmentAccount47.AccountSignatureDateTime,
-						com.tools20022.repository.msg.InvestmentAccount47.TransactionChannelType, com.tools20022.repository.msg.InvestmentAccount47.InvestmentAccountCategory);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount47.mmName, com.tools20022.repository.msg.InvestmentAccount47.mmDesignation, com.tools20022.repository.msg.InvestmentAccount47.mmType,
+						com.tools20022.repository.msg.InvestmentAccount47.mmOwnershipType, com.tools20022.repository.msg.InvestmentAccount47.mmTaxExemption, com.tools20022.repository.msg.InvestmentAccount47.mmStatementFrequency,
+						com.tools20022.repository.msg.InvestmentAccount47.mmReferenceCurrency, com.tools20022.repository.msg.InvestmentAccount47.mmLanguage, com.tools20022.repository.msg.InvestmentAccount47.mmIncomePreference,
+						com.tools20022.repository.msg.InvestmentAccount47.mmReinvestmentDetails, com.tools20022.repository.msg.InvestmentAccount47.mmTaxWithholdingMethod,
+						com.tools20022.repository.msg.InvestmentAccount47.mmLetterIntentDetails, com.tools20022.repository.msg.InvestmentAccount47.mmAccumulationRightReference,
+						com.tools20022.repository.msg.InvestmentAccount47.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount47.mmFundFamilyName,
+						com.tools20022.repository.msg.InvestmentAccount47.mmModifiedFundDetails, com.tools20022.repository.msg.InvestmentAccount47.mmRoundingDetails, com.tools20022.repository.msg.InvestmentAccount47.mmAccountServicer,
+						com.tools20022.repository.msg.InvestmentAccount47.mmBlockedStatus, com.tools20022.repository.msg.InvestmentAccount47.mmAccountUsageType,
+						com.tools20022.repository.msg.InvestmentAccount47.mmForeignStatusCertification, com.tools20022.repository.msg.InvestmentAccount47.mmAccountSignatureDateTime,
+						com.tools20022.repository.msg.InvestmentAccount47.mmTransactionChannelType, com.tools20022.repository.msg.InvestmentAccount47.mmInvestmentAccountCategory);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedInvestmentAccount);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV05.ModifiedInvestmentAccount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccount47";
 				definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
-				previousVersion_lazy = () -> InvestmentAccount39.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(InvestmentAccount51.mmObject());
+				previousVersion_lazy = () -> InvestmentAccount39.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getName() {
+		return name;
+	}
+
+	public void setName(Max35Text name) {
+		this.name = name;
+	}
+
+	public Max35Text getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(Max35Text designation) {
+		this.designation = designation;
+	}
+
+	public AccountType1Choice getType() {
+		return type;
+	}
+
+	public void setType(AccountType1Choice type) {
+		this.type = type;
+	}
+
+	public OwnershipType1Choice getOwnershipType() {
+		return ownershipType;
+	}
+
+	public void setOwnershipType(OwnershipType1Choice ownershipType) {
+		this.ownershipType = ownershipType;
+	}
+
+	public TaxExemptionReason1Choice getTaxExemption() {
+		return taxExemption;
+	}
+
+	public void setTaxExemption(TaxExemptionReason1Choice taxExemption) {
+		this.taxExemption = taxExemption;
+	}
+
+	public StatementFrequencyReason1Choice getStatementFrequency() {
+		return statementFrequency;
+	}
+
+	public void setStatementFrequency(StatementFrequencyReason1Choice statementFrequency) {
+		this.statementFrequency = statementFrequency;
+	}
+
+	public ActiveCurrencyCode getReferenceCurrency() {
+		return referenceCurrency;
+	}
+
+	public void setReferenceCurrency(ActiveCurrencyCode referenceCurrency) {
+		this.referenceCurrency = referenceCurrency;
+	}
+
+	public LanguageCode getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(LanguageCode language) {
+		this.language = language;
+	}
+
+	public IncomePreference1Code getIncomePreference() {
+		return incomePreference;
+	}
+
+	public void setIncomePreference(IncomePreference1Code incomePreference) {
+		this.incomePreference = incomePreference;
+	}
+
+	public List<Reinvestment1> getReinvestmentDetails() {
+		return reinvestmentDetails;
+	}
+
+	public void setReinvestmentDetails(List<com.tools20022.repository.msg.Reinvestment1> reinvestmentDetails) {
+		this.reinvestmentDetails = reinvestmentDetails;
+	}
+
+	public TaxWithholdingMethod2Code getTaxWithholdingMethod() {
+		return taxWithholdingMethod;
+	}
+
+	public void setTaxWithholdingMethod(TaxWithholdingMethod2Code taxWithholdingMethod) {
+		this.taxWithholdingMethod = taxWithholdingMethod;
+	}
+
+	public LetterIntent1 getLetterIntentDetails() {
+		return letterIntentDetails;
+	}
+
+	public void setLetterIntentDetails(com.tools20022.repository.msg.LetterIntent1 letterIntentDetails) {
+		this.letterIntentDetails = letterIntentDetails;
+	}
+
+	public Max35Text getAccumulationRightReference() {
+		return accumulationRightReference;
+	}
+
+	public void setAccumulationRightReference(Max35Text accumulationRightReference) {
+		this.accumulationRightReference = accumulationRightReference;
+	}
+
+	public Number getRequiredSignatoriesNumber() {
+		return requiredSignatoriesNumber;
+	}
+
+	public void setRequiredSignatoriesNumber(Number requiredSignatoriesNumber) {
+		this.requiredSignatoriesNumber = requiredSignatoriesNumber;
+	}
+
+	public Max350Text getFundFamilyName() {
+		return fundFamilyName;
+	}
+
+	public void setFundFamilyName(Max350Text fundFamilyName) {
+		this.fundFamilyName = fundFamilyName;
+	}
+
+	public List<ModificationScope13> getModifiedFundDetails() {
+		return modifiedFundDetails;
+	}
+
+	public void setModifiedFundDetails(List<com.tools20022.repository.msg.ModificationScope13> modifiedFundDetails) {
+		this.modifiedFundDetails = modifiedFundDetails;
+	}
+
+	public RoundingParameters1 getRoundingDetails() {
+		return roundingDetails;
+	}
+
+	public void setRoundingDetails(com.tools20022.repository.msg.RoundingParameters1 roundingDetails) {
+		this.roundingDetails = roundingDetails;
+	}
+
+	public PartyIdentification2Choice getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(PartyIdentification2Choice accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public List<Blocked1> getBlockedStatus() {
+		return blockedStatus;
+	}
+
+	public void setBlockedStatus(List<com.tools20022.repository.msg.Blocked1> blockedStatus) {
+		this.blockedStatus = blockedStatus;
+	}
+
+	public AccountUsageType1Choice getAccountUsageType() {
+		return accountUsageType;
+	}
+
+	public void setAccountUsageType(AccountUsageType1Choice accountUsageType) {
+		this.accountUsageType = accountUsageType;
+	}
+
+	public Provided1Code getForeignStatusCertification() {
+		return foreignStatusCertification;
+	}
+
+	public void setForeignStatusCertification(Provided1Code foreignStatusCertification) {
+		this.foreignStatusCertification = foreignStatusCertification;
+	}
+
+	public DateAndDateTimeChoice getAccountSignatureDateTime() {
+		return accountSignatureDateTime;
+	}
+
+	public void setAccountSignatureDateTime(DateAndDateTimeChoice accountSignatureDateTime) {
+		this.accountSignatureDateTime = accountSignatureDateTime;
+	}
+
+	public TransactionChannelType1Choice getTransactionChannelType() {
+		return transactionChannelType;
+	}
+
+	public void setTransactionChannelType(TransactionChannelType1Choice transactionChannelType) {
+		this.transactionChannelType = transactionChannelType;
+	}
+
+	public InvestmentAccountCategory1Choice getInvestmentAccountCategory() {
+		return investmentAccountCategory;
+	}
+
+	public void setInvestmentAccountCategory(InvestmentAccountCategory1Choice investmentAccountCategory) {
+		this.investmentAccountCategory = investmentAccountCategory;
 	}
 }

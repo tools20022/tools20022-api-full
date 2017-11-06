@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType9Code#ToBeSpecified
- * PriceValueType9Code.ToBeSpecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType9Code#mmToBeSpecified
+ * PriceValueType9Code.mmToBeSpecified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType9Code#Unspecified
- * PriceValueType9Code.Unspecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType9Code#mmUnspecified
+ * PriceValueType9Code.mmUnspecified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType9Code#Unknown
- * PriceValueType9Code.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType9Code#mmUnknown
+ * PriceValueType9Code.mmUnknown}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class PriceValueType9Code extends PriceValueTypeCode {
 	 * name} = "ToBeSpecified"</li>
 	 * </ul>
 	 */
-	public static final MMCode ToBeSpecified = new MMCode() {
+	public static final MMCode mmToBeSpecified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeSpecified";
@@ -107,7 +107,7 @@ public class PriceValueType9Code extends PriceValueTypeCode {
 	 * name} = "Unspecified"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unspecified = new MMCode() {
+	public static final MMCode mmUnspecified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unspecified";
@@ -130,7 +130,7 @@ public class PriceValueType9Code extends PriceValueTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -141,13 +141,13 @@ public class PriceValueType9Code extends PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TBSP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType9Code";
 				definition = "Specifies a type of price value.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType9Code.ToBeSpecified, com.tools20022.repository.codeset.PriceValueType9Code.Unspecified,
-						com.tools20022.repository.codeset.PriceValueType9Code.Unknown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType9Code.mmToBeSpecified, com.tools20022.repository.codeset.PriceValueType9Code.mmUnspecified,
+						com.tools20022.repository.codeset.PriceValueType9Code.mmUnknown);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 			}
 		});

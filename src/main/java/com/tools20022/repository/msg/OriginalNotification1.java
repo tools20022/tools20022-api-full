@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PaymentInstruction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to identify the original notification, to which the
@@ -38,22 +39,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification1#OriginalMessageIdentification
- * OriginalNotification1.OriginalMessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification1#mmOriginalMessageIdentification
+ * OriginalNotification1.mmOriginalMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification1#OriginalCreationDateTime
- * OriginalNotification1.OriginalCreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification1#mmOriginalCreationDateTime
+ * OriginalNotification1.mmOriginalCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification1#OriginalNotificationIdentification
- * OriginalNotification1.OriginalNotificationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalNotification1#Account
- * OriginalNotification1.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification1#mmOriginalNotificationIdentification
+ * OriginalNotification1.mmOriginalNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification1#NotificationCancellation
- * OriginalNotification1.NotificationCancellation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification1#mmAccount
+ * OriginalNotification1.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalNotification1#OriginalItem
- * OriginalNotification1.OriginalItem}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification1#mmNotificationCancellation
+ * OriginalNotification1.mmNotificationCancellation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalNotification1#mmOriginalItem
+ * OriginalNotification1.mmOriginalItem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalNotification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text originalMessageIdentification;
 	/**
 	 * Point to point reference, as assigned by the original sender, to
 	 * unambiguously identify the original notification to receive message.
@@ -109,7 +112,7 @@ public class OriginalNotification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalNotification1.mmObject();
 			isDerived = false;
@@ -117,11 +120,12 @@ public class OriginalNotification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original sender, to unambiguously identify the original notification to receive message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime originalCreationDateTime;
 	/**
 	 * Date and time at which the original message was created.
 	 * <p>
@@ -134,8 +138,8 @@ public class OriginalNotification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#CreationDate
-	 * PaymentExecution.CreationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreationDate
+	 * PaymentExecution.mmCreationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +158,21 @@ public class OriginalNotification1 {
 	 * definition} = "Date and time at which the original message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalNotification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.CreationDate;
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text originalNotificationIdentification;
 	/**
 	 * Identification of the original notification.
 	 * <p>
@@ -195,7 +200,7 @@ public class OriginalNotification1 {
 	 * definition} = "Identification of the original notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalNotification1.mmObject();
 			isDerived = false;
@@ -203,11 +208,12 @@ public class OriginalNotification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationIdentification";
 			definition = "Identification of the original notification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CashAccount20 account;
 	/**
 	 * Identifies the account to be credited with the incoming funds.
 	 * <p>
@@ -219,8 +225,8 @@ public class OriginalNotification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CashAccount
-	 * CashEntry.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCashAccount
+	 * CashEntry.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -240,21 +246,22 @@ public class OriginalNotification1 {
 	 * "Identifies the account to be credited with the incoming funds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
 			componentContext_lazy = () -> OriginalNotification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CashAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Identifies the account to be credited with the incoming funds.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount20.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount20.mmObject();
 		}
 	};
+	protected GroupCancellationIndicator notificationCancellation;
 	/**
 	 * Indicates whether the cancellation applies to the complete original
 	 * notification or to individual items within the original notification.
@@ -286,7 +293,7 @@ public class OriginalNotification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationCancellation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationCancellation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalNotification1.mmObject();
 			isDerived = false;
@@ -294,11 +301,12 @@ public class OriginalNotification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellation";
 			definition = "Indicates whether the cancellation applies to the complete original notification or to individual items within the original notification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> GroupCancellationIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.OriginalItem1> originalItem;
 	/**
 	 * Set of elements used to identify the original notification item, to which
 	 * the cancellation advice refers.
@@ -311,8 +319,8 @@ public class OriginalNotification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#Payment
-	 * PaymentExecution.Payment}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmPayment
+	 * PaymentExecution.mmPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -333,34 +341,82 @@ public class OriginalNotification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalItem = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmPayment;
 			componentContext_lazy = () -> OriginalNotification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.Payment;
 			isDerived = false;
 			xmlTag = "OrgnlItm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalItem";
 			definition = "Set of elements used to identify the original notification item, to which the cancellation advice refers.";
 			minOccurs = 0;
-			type_lazy = () -> OriginalItem1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalItem1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification1.OriginalMessageIdentification, com.tools20022.repository.msg.OriginalNotification1.OriginalCreationDateTime,
-						com.tools20022.repository.msg.OriginalNotification1.OriginalNotificationIdentification, com.tools20022.repository.msg.OriginalNotification1.Account,
-						com.tools20022.repository.msg.OriginalNotification1.NotificationCancellation, com.tools20022.repository.msg.OriginalNotification1.OriginalItem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification1.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalNotification1.mmOriginalCreationDateTime,
+						com.tools20022.repository.msg.OriginalNotification1.mmOriginalNotificationIdentification, com.tools20022.repository.msg.OriginalNotification1.mmAccount,
+						com.tools20022.repository.msg.OriginalNotification1.mmNotificationCancellation, com.tools20022.repository.msg.OriginalNotification1.mmOriginalItem);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalNotification1";
 				definition = "Set of elements used to identify the original notification, to which the cancellation advice refers.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOriginalMessageIdentification() {
+		return originalMessageIdentification;
+	}
+
+	public void setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
+		this.originalMessageIdentification = originalMessageIdentification;
+	}
+
+	public ISODateTime getOriginalCreationDateTime() {
+		return originalCreationDateTime;
+	}
+
+	public void setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
+		this.originalCreationDateTime = originalCreationDateTime;
+	}
+
+	public Max35Text getOriginalNotificationIdentification() {
+		return originalNotificationIdentification;
+	}
+
+	public void setOriginalNotificationIdentification(Max35Text originalNotificationIdentification) {
+		this.originalNotificationIdentification = originalNotificationIdentification;
+	}
+
+	public CashAccount20 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount20 account) {
+		this.account = account;
+	}
+
+	public GroupCancellationIndicator getNotificationCancellation() {
+		return notificationCancellation;
+	}
+
+	public void setNotificationCancellation(GroupCancellationIndicator notificationCancellation) {
+		this.notificationCancellation = notificationCancellation;
+	}
+
+	public List<OriginalItem1> getOriginalItem() {
+		return originalItem;
+	}
+
+	public void setOriginalItem(List<com.tools20022.repository.msg.OriginalItem1> originalItem) {
+		this.originalItem = originalItem;
 	}
 }

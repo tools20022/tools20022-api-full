@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PriorityCode3Choice#Code
- * PriorityCode3Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PriorityCode3Choice#mmCode
+ * PriorityCode3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriorityCode3Choice#Proprietary
- * PriorityCode3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PriorityCode3Choice#mmProprietary
+ * PriorityCode3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriorityCode3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Priority1Code code;
 	/**
 	 * Priority code, in a coded form.
 	 * <p>
@@ -75,8 +76,8 @@ public class PriorityCode3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Priority
-	 * Payment.Priority}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPriority
+	 * Payment.mmPriority}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,25 +97,26 @@ public class PriorityCode3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PriorityCode2Choice#Code
-	 * PriorityCode2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityCode2Choice#mmCode
+	 * PriorityCode2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPriority;
 			componentContext_lazy = () -> PriorityCode3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Priority;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Priority code, in a coded form.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriorityCode2Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PriorityCode2Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Priority1Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Priority code bilaterally agreed between parties.
 	 * <p>
@@ -127,8 +129,8 @@ public class PriorityCode3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Priority
-	 * Payment.Priority}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPriority
+	 * Payment.mmPriority}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,22 +150,22 @@ public class PriorityCode3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PriorityCode2Choice#Proprietary
-	 * PriorityCode2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityCode2Choice#mmProprietary
+	 * PriorityCode2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPriority;
 			componentContext_lazy = () -> PriorityCode3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Priority;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Priority code bilaterally agreed between parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriorityCode2Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PriorityCode2Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -171,8 +173,8 @@ public class PriorityCode3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityCode3Choice.Code, com.tools20022.repository.choice.PriorityCode3Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityCode3Choice.mmCode, com.tools20022.repository.choice.PriorityCode3Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriorityCode3Choice";
 				definition = "Priority is expressed  as a code or a text.";
@@ -180,5 +182,21 @@ public class PriorityCode3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Priority1Code getCode() {
+		return code;
+	}
+
+	public void setCode(Priority1Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

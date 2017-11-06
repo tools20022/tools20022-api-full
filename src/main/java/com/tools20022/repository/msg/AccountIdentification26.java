@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountIdentification26#Proprietary
- * AccountIdentification26.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification26#mmProprietary
+ * AccountIdentification26.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,24 +45,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#AccountIdentification
- * StandingSettlementInstructionV01.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionV01#mmAccountIdentification
+ * StandingSettlementInstructionV01.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01#AccountIdentification
- * StandingSettlementInstructionCancellationV01.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01#mmAccountIdentification
+ * StandingSettlementInstructionCancellationV01.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01#AccountIdentification
- * StandingSettlementInstructionStatusAdviceV01.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01#mmAccountIdentification
+ * StandingSettlementInstructionStatusAdviceV01.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01#AccountIdentification
- * StandingSettlementInstructionDeletionV01.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01#mmAccountIdentification
+ * StandingSettlementInstructionDeletionV01.mmAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountIdentification26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SimpleIdentificationInformation4 proprietary;
 	/**
 	 * Unique identifier for an account. It is assigned by the account servicer
 	 * using a proprietary identification scheme.
@@ -95,8 +96,8 @@ public class AccountIdentification26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#ProprietaryIdentification
-	 * AccountIdentification.ProprietaryIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmProprietaryIdentification
+	 * AccountIdentification.mmProprietaryIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,30 +118,30 @@ public class AccountIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> AccountIdentification26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.ProprietaryIdentification;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SimpleIdentificationInformation4.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SimpleIdentificationInformation4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentification26.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentification26.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmAccountIdentification,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmAccountIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmAccountIdentification,
+						com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01.mmAccountIdentification);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.AccountIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.AccountIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.AccountIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01.AccountIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification26";
 				definition = "Unique identifier of an account, as assigned by the account servicer.";
@@ -148,5 +149,13 @@ public class AccountIdentification26 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SimpleIdentificationInformation4 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(com.tools20022.repository.msg.SimpleIdentificationInformation4 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Digest computed on the identified data.
@@ -34,22 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DigestedData1#Version
- * DigestedData1.Version}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DigestedData1#DigestAlgorithm
- * DigestedData1.DigestAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DigestedData1#mmVersion
+ * DigestedData1.mmVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DigestedData1#EncapsulatedContent
- * DigestedData1.EncapsulatedContent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DigestedData1#Digest
- * DigestedData1.Digest}</li>
+ * {@linkplain com.tools20022.repository.msg.DigestedData1#mmDigestAlgorithm
+ * DigestedData1.mmDigestAlgorithm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DigestedData1#mmEncapsulatedContent
+ * DigestedData1.mmEncapsulatedContent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DigestedData1#mmDigest
+ * DigestedData1.mmDigest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DigestedData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number version;
 	/**
 	 * Version of the data structure.
 	 * <p>
@@ -95,7 +98,7 @@ public class DigestedData1 {
 	 * definition} = "Version of the data structure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DigestedData1.mmObject();
 			isDerived = false;
@@ -103,11 +106,12 @@ public class DigestedData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm;
 	/**
 	 * Identification of a digest algorithm.
 	 * <p>
@@ -134,7 +138,7 @@ public class DigestedData1 {
 	 * definition} = "Identification of a digest algorithm."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigestAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigestAlgorithm = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DigestedData1.mmObject();
 			isDerived = false;
@@ -143,10 +147,11 @@ public class DigestedData1 {
 			name = "DigestAlgorithm";
 			definition = "Identification of a digest algorithm.";
 			minOccurs = 1;
-			type_lazy = () -> AlgorithmIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification1.mmObject();
 		}
 	};
+	protected EncapsulatedContent1 encapsulatedContent;
 	/**
 	 * Data on which the digest is computed.
 	 * <p>
@@ -172,7 +177,7 @@ public class DigestedData1 {
 	 * definition} = "Data on which the digest is computed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EncapsulatedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DigestedData1.mmObject();
 			isDerived = false;
@@ -180,12 +185,13 @@ public class DigestedData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncapsulatedContent";
 			definition = "Data on which the digest is computed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> EncapsulatedContent1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent1.mmObject();
 		}
 	};
+	protected Max140Text digest;
 	/**
 	 * Result of data-digesting process.
 	 * <p>
@@ -212,7 +218,7 @@ public class DigestedData1 {
 	 * definition} = "Result of data-digesting process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Digest = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDigest = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DigestedData1.mmObject();
 			isDerived = false;
@@ -220,8 +226,8 @@ public class DigestedData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Digest";
 			definition = "Result of data-digesting process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -229,9 +235,9 @@ public class DigestedData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DigestedData1.Version, com.tools20022.repository.msg.DigestedData1.DigestAlgorithm, com.tools20022.repository.msg.DigestedData1.EncapsulatedContent,
-						com.tools20022.repository.msg.DigestedData1.Digest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DigestedData1.mmVersion, com.tools20022.repository.msg.DigestedData1.mmDigestAlgorithm,
+						com.tools20022.repository.msg.DigestedData1.mmEncapsulatedContent, com.tools20022.repository.msg.DigestedData1.mmDigest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DigestedData1";
 				definition = "Digest computed on the identified data.";
@@ -239,5 +245,37 @@ public class DigestedData1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public List<AlgorithmIdentification1> getDigestAlgorithm() {
+		return digestAlgorithm;
+	}
+
+	public void setDigestAlgorithm(List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm) {
+		this.digestAlgorithm = digestAlgorithm;
+	}
+
+	public EncapsulatedContent1 getEncapsulatedContent() {
+		return encapsulatedContent;
+	}
+
+	public void setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent1 encapsulatedContent) {
+		this.encapsulatedContent = encapsulatedContent;
+	}
+
+	public Max140Text getDigest() {
+		return digest;
+	}
+
+	public void setDigest(Max140Text digest) {
+		this.digest = digest;
 	}
 }

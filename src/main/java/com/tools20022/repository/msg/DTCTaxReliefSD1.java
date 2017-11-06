@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DTCTaxReliefSD1#CategoryIdentification
- * DTCTaxReliefSD1.CategoryIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DTCTaxReliefSD1#mmCategoryIdentification
+ * DTCTaxReliefSD1.mmCategoryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DTCTaxReliefSD1#CategoryDescription
- * DTCTaxReliefSD1.CategoryDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.DTCTaxReliefSD1#mmCategoryDescription
+ * DTCTaxReliefSD1.mmCategoryDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DTCTaxReliefSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText categoryIdentification;
 	/**
 	 * DTC System assigned identification for tax relief category.
 	 * <p>
@@ -88,7 +89,7 @@ public class DTCTaxReliefSD1 {
 	 * "DTC System assigned identification for tax relief category."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CategoryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCategoryIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DTCTaxReliefSD1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class DTCTaxReliefSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryIdentification";
 			definition = "DTC System assigned identification for tax relief category.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected Max35Text categoryDescription;
 	/**
 	 * Describes tax relief category.
 	 * <p>
@@ -128,7 +130,7 @@ public class DTCTaxReliefSD1 {
 	 * definition} = "Describes tax relief category."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CategoryDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCategoryDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DTCTaxReliefSD1.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class DTCTaxReliefSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryDescription";
 			definition = "Describes tax relief category.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class DTCTaxReliefSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DTCTaxReliefSD1.CategoryIdentification, com.tools20022.repository.msg.DTCTaxReliefSD1.CategoryDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DTCTaxReliefSD1.mmCategoryIdentification, com.tools20022.repository.msg.DTCTaxReliefSD1.mmCategoryDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DTCTaxReliefSD1";
 				definition = "Provides information about tax relief categories.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getCategoryIdentification() {
+		return categoryIdentification;
+	}
+
+	public void setCategoryIdentification(Exact3NumericText categoryIdentification) {
+		this.categoryIdentification = categoryIdentification;
+	}
+
+	public Max35Text getCategoryDescription() {
+		return categoryDescription;
+	}
+
+	public void setCategoryDescription(Max35Text categoryDescription) {
+		this.categoryDescription = categoryDescription;
 	}
 }

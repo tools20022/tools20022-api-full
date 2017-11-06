@@ -37,209 +37,209 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AwaitingMoney
- * PendingReason3Code.AwaitingMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAwaitingMoney
+ * PendingReason3Code.mmAwaitingMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AccountServicerDeadlineMissed
- * PendingReason3Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAccountServicerDeadlineMissed
+ * PendingReason3Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#SentToTaxAuthorities
- * PendingReason3Code.SentToTaxAuthorities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmSentToTaxAuthorities
+ * PendingReason3Code.mmSentToTaxAuthorities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AwaitingSecurities
- * PendingReason3Code.AwaitingSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAwaitingSecurities
+ * PendingReason3Code.mmAwaitingSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#InstructionRefusedOrNotRecognised
- * PendingReason3Code.InstructionRefusedOrNotRecognised}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmInstructionRefusedOrNotRecognised
+ * PendingReason3Code.mmInstructionRefusedOrNotRecognised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AwaitingSecuritiesFromCounterparty
- * PendingReason3Code.AwaitingSecuritiesFromCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAwaitingSecuritiesFromCounterparty
+ * PendingReason3Code.mmAwaitingSecuritiesFromCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#PhysicalDeliveryDelay
- * PendingReason3Code.PhysicalDeliveryDelay}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmPhysicalDeliveryDelay
+ * PendingReason3Code.mmPhysicalDeliveryDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#TradeAmendedInMarket
- * PendingReason3Code.TradeAmendedInMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmTradeAmendedInMarket
+ * PendingReason3Code.mmTradeAmendedInMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AwaitingDocumentsOrEndorsementsFromYou
- * PendingReason3Code.AwaitingDocumentsOrEndorsementsFromYou}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAwaitingDocumentsOrEndorsementsFromYou
+ * PendingReason3Code.mmAwaitingDocumentsOrEndorsementsFromYou}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AwaitingDocumentsOrEndorsementsFromCounterparty
- * PendingReason3Code.AwaitingDocumentsOrEndorsementsFromCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAwaitingDocumentsOrEndorsementsFromCounterparty
+ * PendingReason3Code.mmAwaitingDocumentsOrEndorsementsFromCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AccountBlocked
- * PendingReason3Code.AccountBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAccountBlocked
+ * PendingReason3Code.mmAccountBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#EnquirySent
- * PendingReason3Code.EnquirySent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmEnquirySent
+ * PendingReason3Code.mmEnquirySent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#NewIssues
- * PendingReason3Code.NewIssues}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmNewIssues
+ * PendingReason3Code.mmNewIssues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#CounterpartyInsufficientSecurities
- * PendingReason3Code.CounterpartyInsufficientSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmCounterpartyInsufficientSecurities
+ * PendingReason3Code.mmCounterpartyInsufficientSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#MultipleSettlementAmount
- * PendingReason3Code.MultipleSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmMultipleSettlementAmount
+ * PendingReason3Code.mmMultipleSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#GlobalFormSecurities
- * PendingReason3Code.GlobalFormSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmGlobalFormSecurities
+ * PendingReason3Code.mmGlobalFormSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#YourInstructionOnHold
- * PendingReason3Code.YourInstructionOnHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmYourInstructionOnHold
+ * PendingReason3Code.mmYourInstructionOnHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#TradeSettlesInPartials
- * PendingReason3Code.TradeSettlesInPartials}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmTradeSettlesInPartials
+ * PendingReason3Code.mmTradeSettlesInPartials}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#NoMatchingRequired
- * PendingReason3Code.NoMatchingRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmNoMatchingRequired
+ * PendingReason3Code.mmNoMatchingRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#CounterpartyInsufficientMoney
- * PendingReason3Code.CounterpartyInsufficientMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmCounterpartyInsufficientMoney
+ * PendingReason3Code.mmCounterpartyInsufficientMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#CollateralShortage
- * PendingReason3Code.CollateralShortage}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmCollateralShortage
+ * PendingReason3Code.mmCollateralShortage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#SecuritiesPledgedAsCollateral
- * PendingReason3Code.SecuritiesPledgedAsCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmSecuritiesPledgedAsCollateral
+ * PendingReason3Code.mmSecuritiesPledgedAsCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#RefusedDepositForIssueOfDepositaryReceipts
- * PendingReason3Code.RefusedDepositForIssueOfDepositaryReceipts}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmRefusedDepositForIssueOfDepositaryReceipts
+ * PendingReason3Code.mmRefusedDepositForIssueOfDepositaryReceipts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#MaximumForeignLimitReached
- * PendingReason3Code.MaximumForeignLimitReached}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmMaximumForeignLimitReached
+ * PendingReason3Code.mmMaximumForeignLimitReached}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#NoForeignExchangeInstruction
- * PendingReason3Code.NoForeignExchangeInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmNoForeignExchangeInstruction
+ * PendingReason3Code.mmNoForeignExchangeInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#IncomeAdjustementRequired
- * PendingReason3Code.IncomeAdjustementRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmIncomeAdjustementRequired
+ * PendingReason3Code.mmIncomeAdjustementRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#PendingLinkedInstruction
- * PendingReason3Code.PendingLinkedInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmPendingLinkedInstruction
+ * PendingReason3Code.mmPendingLinkedInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AwaitingSettlementDate
- * PendingReason3Code.AwaitingSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAwaitingSettlementDate
+ * PendingReason3Code.mmAwaitingSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#LackOfSecurities
- * PendingReason3Code.LackOfSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmLackOfSecurities
+ * PendingReason3Code.mmLackOfSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#SecuritiesLoanedOut
- * PendingReason3Code.SecuritiesLoanedOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmSecuritiesLoanedOut
+ * PendingReason3Code.mmSecuritiesLoanedOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#InsufficientMoney
- * PendingReason3Code.InsufficientMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmInsufficientMoney
+ * PendingReason3Code.mmInsufficientMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#ConfirmationNotReceived
- * PendingReason3Code.ConfirmationNotReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmConfirmationNotReceived
+ * PendingReason3Code.mmConfirmationNotReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#NotInGoodOrder
- * PendingReason3Code.NotInGoodOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmNotInGoodOrder
+ * PendingReason3Code.mmNotInGoodOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#LackOfStampDutyInformation
- * PendingReason3Code.LackOfStampDutyInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmLackOfStampDutyInformation
+ * PendingReason3Code.mmLackOfStampDutyInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#ProcessingBatchDifference
- * PendingReason3Code.ProcessingBatchDifference}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmProcessingBatchDifference
+ * PendingReason3Code.mmProcessingBatchDifference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AwaitingNextSettlementCycle
- * PendingReason3Code.AwaitingNextSettlementCycle}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAwaitingNextSettlementCycle
+ * PendingReason3Code.mmAwaitingNextSettlementCycle}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#SecuritiesBlocked
- * PendingReason3Code.SecuritiesBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmSecuritiesBlocked
+ * PendingReason3Code.mmSecuritiesBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#CounterpartyInReceivership
- * PendingReason3Code.CounterpartyInReceivership}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmCounterpartyInReceivership
+ * PendingReason3Code.mmCounterpartyInReceivership}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#MinimumSettlementAmount
- * PendingReason3Code.MinimumSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmMinimumSettlementAmount
+ * PendingReason3Code.mmMinimumSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#StatusReasonInvestigation
- * PendingReason3Code.StatusReasonInvestigation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmStatusReasonInvestigation
+ * PendingReason3Code.mmStatusReasonInvestigation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#PhysicalSecuritiesVerification
- * PendingReason3Code.PhysicalSecuritiesVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmPhysicalSecuritiesVerification
+ * PendingReason3Code.mmPhysicalSecuritiesVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#BeneficialOwnershipDisagreement
- * PendingReason3Code.BeneficialOwnershipDisagreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmBeneficialOwnershipDisagreement
+ * PendingReason3Code.mmBeneficialOwnershipDisagreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#BothInstructionsOnHold
- * PendingReason3Code.BothInstructionsOnHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmBothInstructionsOnHold
+ * PendingReason3Code.mmBothInstructionsOnHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#ClearingHouseTrade
- * PendingReason3Code.ClearingHouseTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmClearingHouseTrade
+ * PendingReason3Code.mmClearingHouseTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#UnavailableDeliverableDenominatedQuantity
- * PendingReason3Code.UnavailableDeliverableDenominatedQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmUnavailableDeliverableDenominatedQuantity
+ * PendingReason3Code.mmUnavailableDeliverableDenominatedQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#NaturalDisaster
- * PendingReason3Code.NaturalDisaster}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmNaturalDisaster
+ * PendingReason3Code.mmNaturalDisaster}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#CounterpartyReturnedShares
- * PendingReason3Code.CounterpartyReturnedShares}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmCounterpartyReturnedShares
+ * PendingReason3Code.mmCounterpartyReturnedShares}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#QuantityDisagreement
- * PendingReason3Code.QuantityDisagreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmQuantityDisagreement
+ * PendingReason3Code.mmQuantityDisagreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#SecuritiesFrozenAtCSD
- * PendingReason3Code.SecuritiesFrozenAtCSD}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmSecuritiesFrozenAtCSD
+ * PendingReason3Code.mmSecuritiesFrozenAtCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AwaitingOtherTransaction
- * PendingReason3Code.AwaitingOtherTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAwaitingOtherTransaction
+ * PendingReason3Code.mmAwaitingOtherTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#MarketDeadlineMissed
- * PendingReason3Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmMarketDeadlineMissed
+ * PendingReason3Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#InsufficientCentralBankLiquidity
- * PendingReason3Code.InsufficientCentralBankLiquidity}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmInsufficientCentralBankLiquidity
+ * PendingReason3Code.mmInsufficientCentralBankLiquidity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#MissingCertification
- * PendingReason3Code.MissingCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmMissingCertification
+ * PendingReason3Code.mmMissingCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#NoPayment
- * PendingReason3Code.NoPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmNoPayment
+ * PendingReason3Code.mmNoPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#NotDelivered
- * PendingReason3Code.NotDelivered}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmNotDelivered
+ * PendingReason3Code.mmNotDelivered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#PendingReceipt
- * PendingReason3Code.PendingReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmPendingReceipt
+ * PendingReason3Code.mmPendingReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#CounterpartyInstructionOnHold
- * PendingReason3Code.CounterpartyInstructionOnHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmCounterpartyInstructionOnHold
+ * PendingReason3Code.mmCounterpartyInstructionOnHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#CertificatesRejected
- * PendingReason3Code.CertificatesRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmCertificatesRejected
+ * PendingReason3Code.mmCertificatesRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#SettlementSystemMethodModified
- * PendingReason3Code.SettlementSystemMethodModified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmSettlementSystemMethodModified
+ * PendingReason3Code.mmSettlementSystemMethodModified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#ValidForTaxAuthorities
- * PendingReason3Code.ValidForTaxAuthorities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmValidForTaxAuthorities
+ * PendingReason3Code.mmValidForTaxAuthorities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#SystemOnHold
- * PendingReason3Code.SystemOnHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmSystemOnHold
+ * PendingReason3Code.mmSystemOnHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#ConditionalCurrency
- * PendingReason3Code.ConditionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmConditionalCurrency
+ * PendingReason3Code.mmConditionalCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#ConditionalRegistrar
- * PendingReason3Code.ConditionalRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmConditionalRegistrar
+ * PendingReason3Code.mmConditionalRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#AwaitingConfirmation
- * PendingReason3Code.AwaitingConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmAwaitingConfirmation
+ * PendingReason3Code.mmAwaitingConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#ConditionalRealignement
- * PendingReason3Code.ConditionalRealignement}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason3Code#Other
- * PendingReason3Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmConditionalRealignement
+ * PendingReason3Code.mmConditionalRealignement}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason3Code#mmOther
+ * PendingReason3Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -277,7 +277,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingMoney = new MMCode() {
+	public static final MMCode mmAwaitingMoney = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingMoney";
@@ -300,7 +300,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -323,7 +323,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "SentToTaxAuthorities"</li>
 	 * </ul>
 	 */
-	public static final MMCode SentToTaxAuthorities = new MMCode() {
+	public static final MMCode mmSentToTaxAuthorities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToTaxAuthorities";
@@ -346,7 +346,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingSecurities = new MMCode() {
+	public static final MMCode mmAwaitingSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSecurities";
@@ -369,7 +369,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "InstructionRefusedOrNotRecognised"</li>
 	 * </ul>
 	 */
-	public static final MMCode InstructionRefusedOrNotRecognised = new MMCode() {
+	public static final MMCode mmInstructionRefusedOrNotRecognised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionRefusedOrNotRecognised";
@@ -392,7 +392,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingSecuritiesFromCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingSecuritiesFromCounterparty = new MMCode() {
+	public static final MMCode mmAwaitingSecuritiesFromCounterparty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSecuritiesFromCounterparty";
@@ -415,7 +415,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "PhysicalDeliveryDelay"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalDeliveryDelay = new MMCode() {
+	public static final MMCode mmPhysicalDeliveryDelay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDelay";
@@ -438,7 +438,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "TradeAmendedInMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradeAmendedInMarket = new MMCode() {
+	public static final MMCode mmTradeAmendedInMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmendedInMarket";
@@ -461,7 +461,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingDocumentsOrEndorsementsFromYou"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
+	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromYou";
@@ -484,7 +484,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingDocumentsOrEndorsementsFromCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingDocumentsOrEndorsementsFromCounterparty = new MMCode() {
+	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromCounterparty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromCounterparty";
@@ -507,7 +507,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AccountBlocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountBlocked = new MMCode() {
+	public static final MMCode mmAccountBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlocked";
@@ -530,7 +530,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "EnquirySent"</li>
 	 * </ul>
 	 */
-	public static final MMCode EnquirySent = new MMCode() {
+	public static final MMCode mmEnquirySent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnquirySent";
@@ -553,7 +553,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "NewIssues"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewIssues = new MMCode() {
+	public static final MMCode mmNewIssues = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssues";
@@ -576,7 +576,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "CounterpartyInsufficientSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyInsufficientSecurities = new MMCode() {
+	public static final MMCode mmCounterpartyInsufficientSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInsufficientSecurities";
@@ -599,7 +599,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "MultipleSettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultipleSettlementAmount = new MMCode() {
+	public static final MMCode mmMultipleSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementAmount";
@@ -622,7 +622,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "GlobalFormSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode GlobalFormSecurities = new MMCode() {
+	public static final MMCode mmGlobalFormSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalFormSecurities";
@@ -645,7 +645,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "YourInstructionOnHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode YourInstructionOnHold = new MMCode() {
+	public static final MMCode mmYourInstructionOnHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YourInstructionOnHold";
@@ -668,7 +668,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "TradeSettlesInPartials"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradeSettlesInPartials = new MMCode() {
+	public static final MMCode mmTradeSettlesInPartials = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlesInPartials";
@@ -691,7 +691,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "NoMatchingRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoMatchingRequired = new MMCode() {
+	public static final MMCode mmNoMatchingRequired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchingRequired";
@@ -714,7 +714,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "CounterpartyInsufficientMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyInsufficientMoney = new MMCode() {
+	public static final MMCode mmCounterpartyInsufficientMoney = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInsufficientMoney";
@@ -737,7 +737,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "CollateralShortage"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralShortage = new MMCode() {
+	public static final MMCode mmCollateralShortage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralShortage";
@@ -760,7 +760,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "SecuritiesPledgedAsCollateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesPledgedAsCollateral = new MMCode() {
+	public static final MMCode mmSecuritiesPledgedAsCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPledgedAsCollateral";
@@ -783,7 +783,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "RefusedDepositForIssueOfDepositaryReceipts"</li>
 	 * </ul>
 	 */
-	public static final MMCode RefusedDepositForIssueOfDepositaryReceipts = new MMCode() {
+	public static final MMCode mmRefusedDepositForIssueOfDepositaryReceipts = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefusedDepositForIssueOfDepositaryReceipts";
@@ -806,7 +806,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "MaximumForeignLimitReached"</li>
 	 * </ul>
 	 */
-	public static final MMCode MaximumForeignLimitReached = new MMCode() {
+	public static final MMCode mmMaximumForeignLimitReached = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumForeignLimitReached";
@@ -829,7 +829,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "NoForeignExchangeInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoForeignExchangeInstruction = new MMCode() {
+	public static final MMCode mmNoForeignExchangeInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoForeignExchangeInstruction";
@@ -852,7 +852,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "IncomeAdjustementRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncomeAdjustementRequired = new MMCode() {
+	public static final MMCode mmIncomeAdjustementRequired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeAdjustementRequired";
@@ -875,7 +875,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "PendingLinkedInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingLinkedInstruction = new MMCode() {
+	public static final MMCode mmPendingLinkedInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingLinkedInstruction";
@@ -898,7 +898,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingSettlementDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingSettlementDate = new MMCode() {
+	public static final MMCode mmAwaitingSettlementDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSettlementDate";
@@ -921,7 +921,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "LackOfSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode LackOfSecurities = new MMCode() {
+	public static final MMCode mmLackOfSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfSecurities";
@@ -944,7 +944,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "SecuritiesLoanedOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesLoanedOut = new MMCode() {
+	public static final MMCode mmSecuritiesLoanedOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesLoanedOut";
@@ -967,7 +967,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "InsufficientMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientMoney = new MMCode() {
+	public static final MMCode mmInsufficientMoney = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientMoney";
@@ -990,7 +990,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "ConfirmationNotReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfirmationNotReceived = new MMCode() {
+	public static final MMCode mmConfirmationNotReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationNotReceived";
@@ -1013,7 +1013,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "NotInGoodOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotInGoodOrder = new MMCode() {
+	public static final MMCode mmNotInGoodOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotInGoodOrder";
@@ -1036,7 +1036,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "LackOfStampDutyInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode LackOfStampDutyInformation = new MMCode() {
+	public static final MMCode mmLackOfStampDutyInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfStampDutyInformation";
@@ -1059,7 +1059,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "ProcessingBatchDifference"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProcessingBatchDifference = new MMCode() {
+	public static final MMCode mmProcessingBatchDifference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingBatchDifference";
@@ -1082,7 +1082,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingNextSettlementCycle"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingNextSettlementCycle = new MMCode() {
+	public static final MMCode mmAwaitingNextSettlementCycle = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingNextSettlementCycle";
@@ -1105,7 +1105,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "SecuritiesBlocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesBlocked = new MMCode() {
+	public static final MMCode mmSecuritiesBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBlocked";
@@ -1128,7 +1128,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "CounterpartyInReceivership"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyInReceivership = new MMCode() {
+	public static final MMCode mmCounterpartyInReceivership = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInReceivership";
@@ -1151,7 +1151,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "MinimumSettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MinimumSettlementAmount = new MMCode() {
+	public static final MMCode mmMinimumSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementAmount";
@@ -1174,7 +1174,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "StatusReasonInvestigation"</li>
 	 * </ul>
 	 */
-	public static final MMCode StatusReasonInvestigation = new MMCode() {
+	public static final MMCode mmStatusReasonInvestigation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInvestigation";
@@ -1197,7 +1197,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "PhysicalSecuritiesVerification"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalSecuritiesVerification = new MMCode() {
+	public static final MMCode mmPhysicalSecuritiesVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSecuritiesVerification";
@@ -1220,7 +1220,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "BeneficialOwnershipDisagreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode BeneficialOwnershipDisagreement = new MMCode() {
+	public static final MMCode mmBeneficialOwnershipDisagreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnershipDisagreement";
@@ -1243,7 +1243,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "BothInstructionsOnHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode BothInstructionsOnHold = new MMCode() {
+	public static final MMCode mmBothInstructionsOnHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BothInstructionsOnHold";
@@ -1266,7 +1266,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "ClearingHouseTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClearingHouseTrade = new MMCode() {
+	public static final MMCode mmClearingHouseTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingHouseTrade";
@@ -1289,7 +1289,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "UnavailableDeliverableDenominatedQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnavailableDeliverableDenominatedQuantity = new MMCode() {
+	public static final MMCode mmUnavailableDeliverableDenominatedQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnavailableDeliverableDenominatedQuantity";
@@ -1312,7 +1312,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "NaturalDisaster"</li>
 	 * </ul>
 	 */
-	public static final MMCode NaturalDisaster = new MMCode() {
+	public static final MMCode mmNaturalDisaster = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NaturalDisaster";
@@ -1335,7 +1335,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "CounterpartyReturnedShares"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyReturnedShares = new MMCode() {
+	public static final MMCode mmCounterpartyReturnedShares = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReturnedShares";
@@ -1358,7 +1358,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "QuantityDisagreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityDisagreement = new MMCode() {
+	public static final MMCode mmQuantityDisagreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDisagreement";
@@ -1381,7 +1381,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "SecuritiesFrozenAtCSD"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesFrozenAtCSD = new MMCode() {
+	public static final MMCode mmSecuritiesFrozenAtCSD = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFrozenAtCSD";
@@ -1404,7 +1404,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingOtherTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingOtherTransaction = new MMCode() {
+	public static final MMCode mmAwaitingOtherTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingOtherTransaction";
@@ -1427,7 +1427,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
@@ -1450,7 +1450,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "InsufficientCentralBankLiquidity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientCentralBankLiquidity = new MMCode() {
+	public static final MMCode mmInsufficientCentralBankLiquidity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCentralBankLiquidity";
@@ -1473,7 +1473,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "MissingCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingCertification = new MMCode() {
+	public static final MMCode mmMissingCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCertification";
@@ -1496,7 +1496,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "NoPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoPayment = new MMCode() {
+	public static final MMCode mmNoPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPayment";
@@ -1519,7 +1519,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "NotDelivered"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotDelivered = new MMCode() {
+	public static final MMCode mmNotDelivered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDelivered";
@@ -1542,7 +1542,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "PendingReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingReceipt = new MMCode() {
+	public static final MMCode mmPendingReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceipt";
@@ -1565,7 +1565,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "CounterpartyInstructionOnHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyInstructionOnHold = new MMCode() {
+	public static final MMCode mmCounterpartyInstructionOnHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInstructionOnHold";
@@ -1588,7 +1588,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "CertificatesRejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode CertificatesRejected = new MMCode() {
+	public static final MMCode mmCertificatesRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificatesRejected";
@@ -1611,7 +1611,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "SettlementSystemMethodModified"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementSystemMethodModified = new MMCode() {
+	public static final MMCode mmSettlementSystemMethodModified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethodModified";
@@ -1634,7 +1634,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "ValidForTaxAuthorities"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValidForTaxAuthorities = new MMCode() {
+	public static final MMCode mmValidForTaxAuthorities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidForTaxAuthorities";
@@ -1657,7 +1657,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "SystemOnHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode SystemOnHold = new MMCode() {
+	public static final MMCode mmSystemOnHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemOnHold";
@@ -1680,7 +1680,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalCurrency = new MMCode() {
+	public static final MMCode mmConditionalCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalCurrency";
@@ -1703,7 +1703,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalRegistrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalRegistrar = new MMCode() {
+	public static final MMCode mmConditionalRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRegistrar";
@@ -1726,7 +1726,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingConfirmation = new MMCode() {
+	public static final MMCode mmAwaitingConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingConfirmation";
@@ -1749,7 +1749,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalRealignement"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalRealignement = new MMCode() {
+	public static final MMCode mmConditionalRealignement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRealignement";
@@ -1772,7 +1772,7 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -1783,42 +1783,43 @@ public class PendingReason3Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AWMO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingReason3Code";
 				definition = "Specifies the reason the transaction/instruction is pending or failing settlement. Settlement on the instructed settlement date is still possible, status is pending. Settlement on the instructed settlement date is no longer possible, status is failing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason3Code.AwaitingMoney, com.tools20022.repository.codeset.PendingReason3Code.AccountServicerDeadlineMissed,
-						com.tools20022.repository.codeset.PendingReason3Code.SentToTaxAuthorities, com.tools20022.repository.codeset.PendingReason3Code.AwaitingSecurities,
-						com.tools20022.repository.codeset.PendingReason3Code.InstructionRefusedOrNotRecognised, com.tools20022.repository.codeset.PendingReason3Code.AwaitingSecuritiesFromCounterparty,
-						com.tools20022.repository.codeset.PendingReason3Code.PhysicalDeliveryDelay, com.tools20022.repository.codeset.PendingReason3Code.TradeAmendedInMarket,
-						com.tools20022.repository.codeset.PendingReason3Code.AwaitingDocumentsOrEndorsementsFromYou, com.tools20022.repository.codeset.PendingReason3Code.AwaitingDocumentsOrEndorsementsFromCounterparty,
-						com.tools20022.repository.codeset.PendingReason3Code.AccountBlocked, com.tools20022.repository.codeset.PendingReason3Code.EnquirySent, com.tools20022.repository.codeset.PendingReason3Code.NewIssues,
-						com.tools20022.repository.codeset.PendingReason3Code.CounterpartyInsufficientSecurities, com.tools20022.repository.codeset.PendingReason3Code.MultipleSettlementAmount,
-						com.tools20022.repository.codeset.PendingReason3Code.GlobalFormSecurities, com.tools20022.repository.codeset.PendingReason3Code.YourInstructionOnHold,
-						com.tools20022.repository.codeset.PendingReason3Code.TradeSettlesInPartials, com.tools20022.repository.codeset.PendingReason3Code.NoMatchingRequired,
-						com.tools20022.repository.codeset.PendingReason3Code.CounterpartyInsufficientMoney, com.tools20022.repository.codeset.PendingReason3Code.CollateralShortage,
-						com.tools20022.repository.codeset.PendingReason3Code.SecuritiesPledgedAsCollateral, com.tools20022.repository.codeset.PendingReason3Code.RefusedDepositForIssueOfDepositaryReceipts,
-						com.tools20022.repository.codeset.PendingReason3Code.MaximumForeignLimitReached, com.tools20022.repository.codeset.PendingReason3Code.NoForeignExchangeInstruction,
-						com.tools20022.repository.codeset.PendingReason3Code.IncomeAdjustementRequired, com.tools20022.repository.codeset.PendingReason3Code.PendingLinkedInstruction,
-						com.tools20022.repository.codeset.PendingReason3Code.AwaitingSettlementDate, com.tools20022.repository.codeset.PendingReason3Code.LackOfSecurities,
-						com.tools20022.repository.codeset.PendingReason3Code.SecuritiesLoanedOut, com.tools20022.repository.codeset.PendingReason3Code.InsufficientMoney,
-						com.tools20022.repository.codeset.PendingReason3Code.ConfirmationNotReceived, com.tools20022.repository.codeset.PendingReason3Code.NotInGoodOrder,
-						com.tools20022.repository.codeset.PendingReason3Code.LackOfStampDutyInformation, com.tools20022.repository.codeset.PendingReason3Code.ProcessingBatchDifference,
-						com.tools20022.repository.codeset.PendingReason3Code.AwaitingNextSettlementCycle, com.tools20022.repository.codeset.PendingReason3Code.SecuritiesBlocked,
-						com.tools20022.repository.codeset.PendingReason3Code.CounterpartyInReceivership, com.tools20022.repository.codeset.PendingReason3Code.MinimumSettlementAmount,
-						com.tools20022.repository.codeset.PendingReason3Code.StatusReasonInvestigation, com.tools20022.repository.codeset.PendingReason3Code.PhysicalSecuritiesVerification,
-						com.tools20022.repository.codeset.PendingReason3Code.BeneficialOwnershipDisagreement, com.tools20022.repository.codeset.PendingReason3Code.BothInstructionsOnHold,
-						com.tools20022.repository.codeset.PendingReason3Code.ClearingHouseTrade, com.tools20022.repository.codeset.PendingReason3Code.UnavailableDeliverableDenominatedQuantity,
-						com.tools20022.repository.codeset.PendingReason3Code.NaturalDisaster, com.tools20022.repository.codeset.PendingReason3Code.CounterpartyReturnedShares,
-						com.tools20022.repository.codeset.PendingReason3Code.QuantityDisagreement, com.tools20022.repository.codeset.PendingReason3Code.SecuritiesFrozenAtCSD,
-						com.tools20022.repository.codeset.PendingReason3Code.AwaitingOtherTransaction, com.tools20022.repository.codeset.PendingReason3Code.MarketDeadlineMissed,
-						com.tools20022.repository.codeset.PendingReason3Code.InsufficientCentralBankLiquidity, com.tools20022.repository.codeset.PendingReason3Code.MissingCertification,
-						com.tools20022.repository.codeset.PendingReason3Code.NoPayment, com.tools20022.repository.codeset.PendingReason3Code.NotDelivered, com.tools20022.repository.codeset.PendingReason3Code.PendingReceipt,
-						com.tools20022.repository.codeset.PendingReason3Code.CounterpartyInstructionOnHold, com.tools20022.repository.codeset.PendingReason3Code.CertificatesRejected,
-						com.tools20022.repository.codeset.PendingReason3Code.SettlementSystemMethodModified, com.tools20022.repository.codeset.PendingReason3Code.ValidForTaxAuthorities,
-						com.tools20022.repository.codeset.PendingReason3Code.SystemOnHold, com.tools20022.repository.codeset.PendingReason3Code.ConditionalCurrency, com.tools20022.repository.codeset.PendingReason3Code.ConditionalRegistrar,
-						com.tools20022.repository.codeset.PendingReason3Code.AwaitingConfirmation, com.tools20022.repository.codeset.PendingReason3Code.ConditionalRealignement, com.tools20022.repository.codeset.PendingReason3Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason3Code.mmAwaitingMoney, com.tools20022.repository.codeset.PendingReason3Code.mmAccountServicerDeadlineMissed,
+						com.tools20022.repository.codeset.PendingReason3Code.mmSentToTaxAuthorities, com.tools20022.repository.codeset.PendingReason3Code.mmAwaitingSecurities,
+						com.tools20022.repository.codeset.PendingReason3Code.mmInstructionRefusedOrNotRecognised, com.tools20022.repository.codeset.PendingReason3Code.mmAwaitingSecuritiesFromCounterparty,
+						com.tools20022.repository.codeset.PendingReason3Code.mmPhysicalDeliveryDelay, com.tools20022.repository.codeset.PendingReason3Code.mmTradeAmendedInMarket,
+						com.tools20022.repository.codeset.PendingReason3Code.mmAwaitingDocumentsOrEndorsementsFromYou, com.tools20022.repository.codeset.PendingReason3Code.mmAwaitingDocumentsOrEndorsementsFromCounterparty,
+						com.tools20022.repository.codeset.PendingReason3Code.mmAccountBlocked, com.tools20022.repository.codeset.PendingReason3Code.mmEnquirySent, com.tools20022.repository.codeset.PendingReason3Code.mmNewIssues,
+						com.tools20022.repository.codeset.PendingReason3Code.mmCounterpartyInsufficientSecurities, com.tools20022.repository.codeset.PendingReason3Code.mmMultipleSettlementAmount,
+						com.tools20022.repository.codeset.PendingReason3Code.mmGlobalFormSecurities, com.tools20022.repository.codeset.PendingReason3Code.mmYourInstructionOnHold,
+						com.tools20022.repository.codeset.PendingReason3Code.mmTradeSettlesInPartials, com.tools20022.repository.codeset.PendingReason3Code.mmNoMatchingRequired,
+						com.tools20022.repository.codeset.PendingReason3Code.mmCounterpartyInsufficientMoney, com.tools20022.repository.codeset.PendingReason3Code.mmCollateralShortage,
+						com.tools20022.repository.codeset.PendingReason3Code.mmSecuritiesPledgedAsCollateral, com.tools20022.repository.codeset.PendingReason3Code.mmRefusedDepositForIssueOfDepositaryReceipts,
+						com.tools20022.repository.codeset.PendingReason3Code.mmMaximumForeignLimitReached, com.tools20022.repository.codeset.PendingReason3Code.mmNoForeignExchangeInstruction,
+						com.tools20022.repository.codeset.PendingReason3Code.mmIncomeAdjustementRequired, com.tools20022.repository.codeset.PendingReason3Code.mmPendingLinkedInstruction,
+						com.tools20022.repository.codeset.PendingReason3Code.mmAwaitingSettlementDate, com.tools20022.repository.codeset.PendingReason3Code.mmLackOfSecurities,
+						com.tools20022.repository.codeset.PendingReason3Code.mmSecuritiesLoanedOut, com.tools20022.repository.codeset.PendingReason3Code.mmInsufficientMoney,
+						com.tools20022.repository.codeset.PendingReason3Code.mmConfirmationNotReceived, com.tools20022.repository.codeset.PendingReason3Code.mmNotInGoodOrder,
+						com.tools20022.repository.codeset.PendingReason3Code.mmLackOfStampDutyInformation, com.tools20022.repository.codeset.PendingReason3Code.mmProcessingBatchDifference,
+						com.tools20022.repository.codeset.PendingReason3Code.mmAwaitingNextSettlementCycle, com.tools20022.repository.codeset.PendingReason3Code.mmSecuritiesBlocked,
+						com.tools20022.repository.codeset.PendingReason3Code.mmCounterpartyInReceivership, com.tools20022.repository.codeset.PendingReason3Code.mmMinimumSettlementAmount,
+						com.tools20022.repository.codeset.PendingReason3Code.mmStatusReasonInvestigation, com.tools20022.repository.codeset.PendingReason3Code.mmPhysicalSecuritiesVerification,
+						com.tools20022.repository.codeset.PendingReason3Code.mmBeneficialOwnershipDisagreement, com.tools20022.repository.codeset.PendingReason3Code.mmBothInstructionsOnHold,
+						com.tools20022.repository.codeset.PendingReason3Code.mmClearingHouseTrade, com.tools20022.repository.codeset.PendingReason3Code.mmUnavailableDeliverableDenominatedQuantity,
+						com.tools20022.repository.codeset.PendingReason3Code.mmNaturalDisaster, com.tools20022.repository.codeset.PendingReason3Code.mmCounterpartyReturnedShares,
+						com.tools20022.repository.codeset.PendingReason3Code.mmQuantityDisagreement, com.tools20022.repository.codeset.PendingReason3Code.mmSecuritiesFrozenAtCSD,
+						com.tools20022.repository.codeset.PendingReason3Code.mmAwaitingOtherTransaction, com.tools20022.repository.codeset.PendingReason3Code.mmMarketDeadlineMissed,
+						com.tools20022.repository.codeset.PendingReason3Code.mmInsufficientCentralBankLiquidity, com.tools20022.repository.codeset.PendingReason3Code.mmMissingCertification,
+						com.tools20022.repository.codeset.PendingReason3Code.mmNoPayment, com.tools20022.repository.codeset.PendingReason3Code.mmNotDelivered, com.tools20022.repository.codeset.PendingReason3Code.mmPendingReceipt,
+						com.tools20022.repository.codeset.PendingReason3Code.mmCounterpartyInstructionOnHold, com.tools20022.repository.codeset.PendingReason3Code.mmCertificatesRejected,
+						com.tools20022.repository.codeset.PendingReason3Code.mmSettlementSystemMethodModified, com.tools20022.repository.codeset.PendingReason3Code.mmValidForTaxAuthorities,
+						com.tools20022.repository.codeset.PendingReason3Code.mmSystemOnHold, com.tools20022.repository.codeset.PendingReason3Code.mmConditionalCurrency,
+						com.tools20022.repository.codeset.PendingReason3Code.mmConditionalRegistrar, com.tools20022.repository.codeset.PendingReason3Code.mmAwaitingConfirmation,
+						com.tools20022.repository.codeset.PendingReason3Code.mmConditionalRealignement, com.tools20022.repository.codeset.PendingReason3Code.mmOther);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

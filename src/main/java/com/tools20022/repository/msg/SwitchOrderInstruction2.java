@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SwitchOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about a switch order.
@@ -33,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderInstruction2#SwitchOrderDetails
- * SwitchOrderInstruction2.SwitchOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderInstruction2#mmSwitchOrderDetails
+ * SwitchOrderInstruction2.mmSwitchOrderDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrderInstruction2#Extension
- * SwitchOrderInstruction2.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrderInstruction2#mmExtension
+ * SwitchOrderInstruction2.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03#CancellationByOrderDetails
- * SwitchOrderCancellationRequestV03.CancellationByOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03#mmCancellationByOrderDetails
+ * SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SwitchOrderInstruction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.SwitchOrder3> switchOrderDetails;
 	/**
 	 * Information related to the switch order
 	 * <p>
@@ -100,20 +102,21 @@ public class SwitchOrderInstruction2 {
 	 * definition} = "Information related to the switch order"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SwitchOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSwitchOrderDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SwitchOrderInstruction2.mmObject();
 			businessComponentTrace_lazy = () -> SwitchOrder.mmObject();
+			componentContext_lazy = () -> SwitchOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchOrdrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOrderDetails";
 			definition = "Information related to the switch order";
 			minOccurs = 1;
-			type_lazy = () -> SwitchOrder3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SwitchOrder3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -142,7 +145,7 @@ public class SwitchOrderInstruction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SwitchOrderInstruction2.mmObject();
 			isDerived = false;
@@ -151,23 +154,39 @@ public class SwitchOrderInstruction2 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderInstruction2.SwitchOrderDetails, com.tools20022.repository.msg.SwitchOrderInstruction2.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderInstruction2.mmSwitchOrderDetails, com.tools20022.repository.msg.SwitchOrderInstruction2.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.CancellationByOrderDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderInstruction2";
 				definition = "Information about a switch order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SwitchOrder3> getSwitchOrderDetails() {
+		return switchOrderDetails;
+	}
+
+	public void setSwitchOrderDetails(List<com.tools20022.repository.msg.SwitchOrder3> switchOrderDetails) {
+		this.switchOrderDetails = switchOrderDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

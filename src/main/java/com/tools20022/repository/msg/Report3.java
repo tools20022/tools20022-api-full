@@ -37,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Report3#ReportNumber
- * Report3.ReportNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report3#QueryReference
- * Report3.QueryReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report3#ReportIdentification
- * Report3.ReportIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report3#ReportDateTime
- * Report3.ReportDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report3#Frequency
- * Report3.Frequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report3#UpdateType
- * Report3.UpdateType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Report3#NoticeType
- * Report3.NoticeType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report3#mmReportNumber
+ * Report3.mmReportNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report3#mmQueryReference
+ * Report3.mmQueryReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report3#mmReportIdentification
+ * Report3.mmReportIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report3#mmReportDateTime
+ * Report3.mmReportDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report3#mmFrequency
+ * Report3.mmFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report3#mmUpdateType
+ * Report3.mmUpdateType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report3#mmNoticeType
+ * Report3.mmNoticeType}</li>
  * </ul>
  * </li>
  * <li>
@@ -58,15 +58,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#ReportGeneralDetails
- * SecuritiesEndOfProcessReportV01.ReportGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01#mmReportGeneralDetails
+ * SecuritiesEndOfProcessReportV01.mmReportGeneralDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Report3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max5NumericText reportNumber;
 	/**
 	 * Sequential number of the report.
 	 * <p>
@@ -109,7 +110,7 @@ public class Report3 {
 	 * definition} = "Sequential number of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
@@ -117,11 +118,12 @@ public class Report3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
 		}
 	};
+	protected QueryReference queryReference;
 	/**
 	 * Gives the name and the reference of the query.
 	 * <p>
@@ -148,7 +150,7 @@ public class Report3 {
 	 * definition} = "Gives the name and the reference of the query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
@@ -156,11 +158,12 @@ public class Report3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Gives the name and the reference of the query.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.QueryReference.mmObject();
 		}
 	};
+	protected Max35Text reportIdentification;
 	/**
 	 * Reference of the report.
 	 * <p>
@@ -187,7 +190,7 @@ public class Report3 {
 	 * definition} = "Reference of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class Report3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Reference of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTime1Choice reportDateTime;
 	/**
 	 * Date of the statement.
 	 * <p>
@@ -227,7 +231,7 @@ public class Report3 {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
@@ -235,11 +239,12 @@ public class Report3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateTime";
 			definition = "Date of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
 		}
 	};
+	protected Frequency4Choice frequency;
 	/**
 	 * Specifies the regularity of an event.
 	 * <p>
@@ -267,7 +272,7 @@ public class Report3 {
 	 * definition} = "Specifies the regularity of an event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
@@ -275,11 +280,12 @@ public class Report3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Specifies the regularity of an event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Frequency4Choice.mmObject();
 		}
 	};
+	protected StatementUpdateTypeCodeAndDSSCodeChoice updateType;
 	/**
 	 * Indicates whether the report is complete or contains changes only.
 	 * <p>
@@ -308,7 +314,7 @@ public class Report3 {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
@@ -316,11 +322,12 @@ public class Report3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the report is complete or contains changes only.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 		}
 	};
+	protected GenericIdentification38 noticeType;
 	/**
 	 * Notifies the type of report transmitted.
 	 * <p>
@@ -348,7 +355,7 @@ public class Report3 {
 	 * definition} = "Notifies the type of report transmitted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoticeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoticeType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
@@ -356,24 +363,80 @@ public class Report3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoticeType";
 			definition = "Notifies the type of report transmitted.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification38.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification38.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report3.ReportNumber, com.tools20022.repository.msg.Report3.QueryReference, com.tools20022.repository.msg.Report3.ReportIdentification,
-						com.tools20022.repository.msg.Report3.ReportDateTime, com.tools20022.repository.msg.Report3.Frequency, com.tools20022.repository.msg.Report3.UpdateType, com.tools20022.repository.msg.Report3.NoticeType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.ReportGeneralDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report3.mmReportNumber, com.tools20022.repository.msg.Report3.mmQueryReference, com.tools20022.repository.msg.Report3.mmReportIdentification,
+						com.tools20022.repository.msg.Report3.mmReportDateTime, com.tools20022.repository.msg.Report3.mmFrequency, com.tools20022.repository.msg.Report3.mmUpdateType, com.tools20022.repository.msg.Report3.mmNoticeType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmReportGeneralDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Report3";
 				definition = "General characteristics related to a statement which reports information for a precise date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max5NumericText getReportNumber() {
+		return reportNumber;
+	}
+
+	public void setReportNumber(Max5NumericText reportNumber) {
+		this.reportNumber = reportNumber;
+	}
+
+	public QueryReference getQueryReference() {
+		return queryReference;
+	}
+
+	public void setQueryReference(com.tools20022.repository.msg.QueryReference queryReference) {
+		this.queryReference = queryReference;
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public DateAndDateTime1Choice getReportDateTime() {
+		return reportDateTime;
+	}
+
+	public void setReportDateTime(DateAndDateTime1Choice reportDateTime) {
+		this.reportDateTime = reportDateTime;
+	}
+
+	public Frequency4Choice getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(Frequency4Choice frequency) {
+		this.frequency = frequency;
+	}
+
+	public StatementUpdateTypeCodeAndDSSCodeChoice getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(StatementUpdateTypeCodeAndDSSCodeChoice updateType) {
+		this.updateType = updateType;
+	}
+
+	public GenericIdentification38 getNoticeType() {
+		return noticeType;
+	}
+
+	public void setNoticeType(com.tools20022.repository.msg.GenericIdentification38 noticeType) {
+		this.noticeType = noticeType;
 	}
 }

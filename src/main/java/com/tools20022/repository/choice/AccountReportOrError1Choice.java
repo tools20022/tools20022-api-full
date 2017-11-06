@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.AccountReport14;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between account information or an error report.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountReportOrError1Choice#Error
- * AccountReportOrError1Choice.Error}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountReportOrError1Choice#mmError
+ * AccountReportOrError1Choice.mmError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountReportOrError1Choice#AccountReport
- * AccountReportOrError1Choice.AccountReport}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountReportOrError1Choice#mmAccountReport
+ * AccountReportOrError1Choice.mmAccountReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ErrorHandling3> error;
 	/**
 	 * Error that occurred during processing.
 	 * <p>
@@ -85,7 +87,7 @@ public class AccountReportOrError1Choice {
 	 * definition} = "Error that occurred during processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Error = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -94,10 +96,11 @@ public class AccountReportOrError1Choice {
 			name = "Error";
 			definition = "Error that occurred during processing.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
+	protected List<AccountReport14> accountReport;
 	/**
 	 * Requested details of the account.
 	 * <p>
@@ -124,7 +127,7 @@ public class AccountReportOrError1Choice {
 	 * definition} = "Requested details of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -133,21 +136,37 @@ public class AccountReportOrError1Choice {
 			name = "AccountReport";
 			definition = "Requested details of the account.";
 			minOccurs = 0;
-			type_lazy = () -> AccountReport14.mmObject();
 			isComposite = true;
+			type_lazy = () -> AccountReport14.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountReportOrError1Choice.Error, com.tools20022.repository.choice.AccountReportOrError1Choice.AccountReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountReportOrError1Choice.mmError, com.tools20022.repository.choice.AccountReportOrError1Choice.mmAccountReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountReportOrError1Choice";
 				definition = "Choice between account information or an error report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ErrorHandling3> getError() {
+		return error;
+	}
+
+	public void setError(List<ErrorHandling3> error) {
+		this.error = error;
+	}
+
+	public List<AccountReport14> getAccountReport() {
+		return accountReport;
+	}
+
+	public void setAccountReport(List<AccountReport14> accountReport) {
+		this.accountReport = accountReport;
 	}
 }

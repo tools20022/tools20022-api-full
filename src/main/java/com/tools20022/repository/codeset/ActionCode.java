@@ -29,38 +29,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionCode#SubmitTwin
- * ActionCode.SubmitTwin}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionCode#ReSubmitTwin
- * ActionCode.ReSubmitTwin}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionCode#mmSubmitTwin
+ * ActionCode.mmSubmitTwin}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionCode#mmReSubmitTwin
+ * ActionCode.mmReSubmitTwin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionCode#ReSubmitBaseline
- * ActionCode.ReSubmitBaseline}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionCode#mmReSubmitBaseline
+ * ActionCode.mmReSubmitBaseline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionCode#AcceptOrRejectDataSetMisMatches
- * ActionCode.AcceptOrRejectDataSetMisMatches}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionCode#mmAcceptOrRejectDataSetMisMatches
+ * ActionCode.mmAcceptOrRejectDataSetMisMatches}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionCode#AcceptOrRejectChangeOfStatus
- * ActionCode.AcceptOrRejectChangeOfStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionCode#mmAcceptOrRejectChangeOfStatus
+ * ActionCode.mmAcceptOrRejectChangeOfStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionCode#AcceptOrRejectExtensionOfStatus
- * ActionCode.AcceptOrRejectExtensionOfStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionCode#mmAcceptOrRejectExtensionOfStatus
+ * ActionCode.mmAcceptOrRejectExtensionOfStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionCode#WaitForBaselineEstablished
- * ActionCode.WaitForBaselineEstablished}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionCode#UpdateAndResend
- * ActionCode.UpdateAndResend}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionCode#SubmitDataSet
- * ActionCode.SubmitDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionCode#mmWaitForBaselineEstablished
+ * ActionCode.mmWaitForBaselineEstablished}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionCode#AcceptOrRejectBaselineAmendment
- * ActionCode.AcceptOrRejectBaselineAmendment}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionCode#mmUpdateAndResend
+ * ActionCode.mmUpdateAndResend}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionCode#mmSubmitDataSet
+ * ActionCode.mmSubmitDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionCode#AcceptOrRejectBaselineAndRole
- * ActionCode.AcceptOrRejectBaselineAndRole}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionCode#mmAcceptOrRejectBaselineAmendment
+ * ActionCode.mmAcceptOrRejectBaselineAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionCode#CheckInvoiceReference
- * ActionCode.CheckInvoiceReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionCode#mmAcceptOrRejectBaselineAndRole
+ * ActionCode.mmAcceptOrRejectBaselineAndRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ActionCode#mmCheckInvoiceReference
+ * ActionCode.mmCheckInvoiceReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -73,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -114,7 +115,7 @@ public class ActionCode {
 	 * definition} = "Request to submit a twin baseline."</li>
 	 * </ul>
 	 */
-	public static final MMCode SubmitTwin = new MMCode() {
+	public static final MMCode mmSubmitTwin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitTwin";
@@ -143,7 +144,7 @@ public class ActionCode {
 	 * definition} = "Request to resubmit a twin baseline."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReSubmitTwin = new MMCode() {
+	public static final MMCode mmReSubmitTwin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReSubmitTwin";
@@ -172,7 +173,7 @@ public class ActionCode {
 	 * definition} = "Request to resubmit a baseline."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReSubmitBaseline = new MMCode() {
+	public static final MMCode mmReSubmitBaseline = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReSubmitBaseline";
@@ -201,7 +202,7 @@ public class ActionCode {
 	 * definition} = "Request to accept or reject mismatched data set(s)."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptOrRejectDataSetMisMatches = new MMCode() {
+	public static final MMCode mmAcceptOrRejectDataSetMisMatches = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptOrRejectDataSetMisMatches";
@@ -233,7 +234,7 @@ public class ActionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptOrRejectChangeOfStatus = new MMCode() {
+	public static final MMCode mmAcceptOrRejectChangeOfStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptOrRejectChangeOfStatus";
@@ -265,7 +266,7 @@ public class ActionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptOrRejectExtensionOfStatus = new MMCode() {
+	public static final MMCode mmAcceptOrRejectExtensionOfStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptOrRejectExtensionOfStatus";
@@ -294,7 +295,7 @@ public class ActionCode {
 	 * definition} = "Request to wait until the baseline is established."</li>
 	 * </ul>
 	 */
-	public static final MMCode WaitForBaselineEstablished = new MMCode() {
+	public static final MMCode mmWaitForBaselineEstablished = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitForBaselineEstablished";
@@ -323,7 +324,7 @@ public class ActionCode {
 	 * definition} = "Request to update and resend."</li>
 	 * </ul>
 	 */
-	public static final MMCode UpdateAndResend = new MMCode() {
+	public static final MMCode mmUpdateAndResend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateAndResend";
@@ -352,7 +353,7 @@ public class ActionCode {
 	 * definition} = "Request to submit data set(s)."</li>
 	 * </ul>
 	 */
-	public static final MMCode SubmitDataSet = new MMCode() {
+	public static final MMCode mmSubmitDataSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitDataSet";
@@ -382,7 +383,7 @@ public class ActionCode {
 	 * "Request to accept or reject a request for a baseline amendment."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptOrRejectBaselineAmendment = new MMCode() {
+	public static final MMCode mmAcceptOrRejectBaselineAmendment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptOrRejectBaselineAmendment";
@@ -414,7 +415,7 @@ public class ActionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptOrRejectBaselineAndRole = new MMCode() {
+	public static final MMCode mmAcceptOrRejectBaselineAndRole = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptOrRejectBaselineAndRole";
@@ -444,7 +445,7 @@ public class ActionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CheckInvoiceReference = new MMCode() {
+	public static final MMCode mmCheckInvoiceReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckInvoiceReference";
@@ -457,16 +458,16 @@ public class ActionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SBTW");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ActionCode";
 				definition = "Specifies which type of action a user should take.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionCode.SubmitTwin, com.tools20022.repository.codeset.ActionCode.ReSubmitTwin, com.tools20022.repository.codeset.ActionCode.ReSubmitBaseline,
-						com.tools20022.repository.codeset.ActionCode.AcceptOrRejectDataSetMisMatches, com.tools20022.repository.codeset.ActionCode.AcceptOrRejectChangeOfStatus,
-						com.tools20022.repository.codeset.ActionCode.AcceptOrRejectExtensionOfStatus, com.tools20022.repository.codeset.ActionCode.WaitForBaselineEstablished, com.tools20022.repository.codeset.ActionCode.UpdateAndResend,
-						com.tools20022.repository.codeset.ActionCode.SubmitDataSet, com.tools20022.repository.codeset.ActionCode.AcceptOrRejectBaselineAmendment, com.tools20022.repository.codeset.ActionCode.AcceptOrRejectBaselineAndRole,
-						com.tools20022.repository.codeset.ActionCode.CheckInvoiceReference);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionCode.mmSubmitTwin, com.tools20022.repository.codeset.ActionCode.mmReSubmitTwin, com.tools20022.repository.codeset.ActionCode.mmReSubmitBaseline,
+						com.tools20022.repository.codeset.ActionCode.mmAcceptOrRejectDataSetMisMatches, com.tools20022.repository.codeset.ActionCode.mmAcceptOrRejectChangeOfStatus,
+						com.tools20022.repository.codeset.ActionCode.mmAcceptOrRejectExtensionOfStatus, com.tools20022.repository.codeset.ActionCode.mmWaitForBaselineEstablished,
+						com.tools20022.repository.codeset.ActionCode.mmUpdateAndResend, com.tools20022.repository.codeset.ActionCode.mmSubmitDataSet, com.tools20022.repository.codeset.ActionCode.mmAcceptOrRejectBaselineAmendment,
+						com.tools20022.repository.codeset.ActionCode.mmAcceptOrRejectBaselineAndRole, com.tools20022.repository.codeset.ActionCode.mmCheckInvoiceReference);
 				derivation_lazy = () -> Arrays.asList(Action1Code.mmObject(), Action2Code.mmObject());
 			}
 		});

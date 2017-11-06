@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#RepurchaseCall
- * RepurchaseType4Code.RepurchaseCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#mmRepurchaseCall
+ * RepurchaseType4Code.mmRepurchaseCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#RepoRate
- * RepurchaseType4Code.RepoRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#mmRepoRate
+ * RepurchaseType4Code.mmRepoRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#Rollover
- * RepurchaseType4Code.Rollover}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#mmRollover
+ * RepurchaseType4Code.mmRollover}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class RepurchaseType4Code extends RepurchaseTypeCode {
 	 * name} = "RepurchaseCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseCall = new MMCode() {
+	public static final MMCode mmRepurchaseCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseCall";
@@ -107,7 +107,7 @@ public class RepurchaseType4Code extends RepurchaseTypeCode {
 	 * name} = "RepoRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepoRate = new MMCode() {
+	public static final MMCode mmRepoRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoRate";
@@ -130,7 +130,7 @@ public class RepurchaseType4Code extends RepurchaseTypeCode {
 	 * name} = "Rollover"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rollover = new MMCode() {
+	public static final MMCode mmRollover = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rollover";
@@ -141,13 +141,13 @@ public class RepurchaseType4Code extends RepurchaseTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CALL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseType4Code";
 				definition = "Specifies the type of repurchase process.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepurchaseType4Code.RepurchaseCall, com.tools20022.repository.codeset.RepurchaseType4Code.RepoRate,
-						com.tools20022.repository.codeset.RepurchaseType4Code.Rollover);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepurchaseType4Code.mmRepurchaseCall, com.tools20022.repository.codeset.RepurchaseType4Code.mmRepoRate,
+						com.tools20022.repository.codeset.RepurchaseType4Code.mmRollover);
 				trace_lazy = () -> RepurchaseTypeCode.mmObject();
 			}
 		});

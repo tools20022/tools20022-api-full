@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.POIComponentType3Code;
+import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.SystemStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Data related to a component of the POI performing the transaction.
@@ -34,23 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#Type
- * PointOfInteractionComponent3.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#mmType
+ * PointOfInteractionComponent3.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#Identification
- * PointOfInteractionComponent3.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#mmIdentification
+ * PointOfInteractionComponent3.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#Status
- * PointOfInteractionComponent3.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#mmStatus
+ * PointOfInteractionComponent3.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#StandardCompliance
- * PointOfInteractionComponent3.StandardCompliance}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#mmStandardCompliance
+ * PointOfInteractionComponent3.mmStandardCompliance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#Characteristics
- * PointOfInteractionComponent3.Characteristics}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#mmCharacteristics
+ * PointOfInteractionComponent3.mmCharacteristics}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#Assessment
- * PointOfInteractionComponent3.Assessment}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent3#mmAssessment
+ * PointOfInteractionComponent3.mmAssessment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PointOfInteractionComponent3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected POIComponentType3Code type;
 	/**
 	 * Type of component belonging to a POI Terminal.
 	 * <p>
@@ -111,13 +114,13 @@ public class PointOfInteractionComponent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#Type
-	 * PointOfInteractionComponent4.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#mmType
+	 * PointOfInteractionComponent4.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
 			isDerived = false;
@@ -125,12 +128,13 @@ public class PointOfInteractionComponent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of component belonging to a POI Terminal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
+	protected PointOfInteractionComponentIdentification1 identification;
 	/**
 	 * Identification of the POI component.
 	 * <p>
@@ -161,13 +165,13 @@ public class PointOfInteractionComponent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#Identification
-	 * PointOfInteractionComponent4.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#mmIdentification
+	 * PointOfInteractionComponent4.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
 			isDerived = false;
@@ -175,12 +179,13 @@ public class PointOfInteractionComponent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the POI component.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.mmIdentification);
 			maxOccurs = 1;
-			complexType_lazy = () -> PointOfInteractionComponentIdentification1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmObject();
 		}
 	};
+	protected PointOfInteractionComponentStatus1 status;
 	/**
 	 * Status of the POI component.
 	 * <p>
@@ -215,27 +220,28 @@ public class PointOfInteractionComponent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#Status
-	 * PointOfInteractionComponent4.Status}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#mmStatus
+	 * PointOfInteractionComponent4.mmStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
 			businessComponentTrace_lazy = () -> SystemStatus.mmObject();
+			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the POI component.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.Status);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.mmStatus);
 			maxOccurs = 1;
-			complexType_lazy = () -> PointOfInteractionComponentStatus1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification48> standardCompliance;
 	/**
 	 * Identification of the standard for which the component complies with.
 	 * <p>
@@ -267,13 +273,13 @@ public class PointOfInteractionComponent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#StandardCompliance
-	 * PointOfInteractionComponent4.StandardCompliance}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#mmStandardCompliance
+	 * PointOfInteractionComponent4.mmStandardCompliance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StandardCompliance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStandardCompliance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
 			isDerived = false;
@@ -281,11 +287,12 @@ public class PointOfInteractionComponent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardCompliance";
 			definition = "Identification of the standard for which the component complies with.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.StandardCompliance);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.mmStandardCompliance);
 			minOccurs = 0;
-			complexType_lazy = () -> GenericIdentification48.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification48.mmObject();
 		}
 	};
+	protected PointOfInteractionComponentCharacteristics1 characteristics;
 	/**
 	 * Characteristics of a POI component.
 	 * <p>
@@ -316,13 +323,13 @@ public class PointOfInteractionComponent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#Characteristics
-	 * PointOfInteractionComponent4.Characteristics}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#mmCharacteristics
+	 * PointOfInteractionComponent4.mmCharacteristics}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Characteristics = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCharacteristics = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
 			isDerived = false;
@@ -330,12 +337,13 @@ public class PointOfInteractionComponent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Characteristics";
 			definition = "Characteristics of a POI component.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.Characteristics);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.mmCharacteristics);
 			maxOccurs = 1;
-			complexType_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PointOfInteractionComponentAssessment1> assessment;
 	/**
 	 * Assessments for the component of the point of interaction.
 	 * <p>
@@ -367,13 +375,13 @@ public class PointOfInteractionComponent3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#Assessment
-	 * PointOfInteractionComponent4.Assessment}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent4#mmAssessment
+	 * PointOfInteractionComponent4.mmAssessment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Assessment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAssessment = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
 			isDerived = false;
@@ -381,20 +389,20 @@ public class PointOfInteractionComponent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assessment";
 			definition = "Assessments for the component of the point of interaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.Assessment);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent4.mmAssessment);
 			minOccurs = 0;
-			complexType_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent3.Type, com.tools20022.repository.msg.PointOfInteractionComponent3.Identification,
-						com.tools20022.repository.msg.PointOfInteractionComponent3.Status, com.tools20022.repository.msg.PointOfInteractionComponent3.StandardCompliance,
-						com.tools20022.repository.msg.PointOfInteractionComponent3.Characteristics, com.tools20022.repository.msg.PointOfInteractionComponent3.Assessment);
-				trace_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent3.mmType, com.tools20022.repository.msg.PointOfInteractionComponent3.mmIdentification,
+						com.tools20022.repository.msg.PointOfInteractionComponent3.mmStatus, com.tools20022.repository.msg.PointOfInteractionComponent3.mmStandardCompliance,
+						com.tools20022.repository.msg.PointOfInteractionComponent3.mmCharacteristics, com.tools20022.repository.msg.PointOfInteractionComponent3.mmAssessment);
+				trace_lazy = () -> Status.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponent3";
 				definition = "Data related to a component of the POI performing the transaction.";
@@ -402,5 +410,53 @@ public class PointOfInteractionComponent3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public POIComponentType3Code getType() {
+		return type;
+	}
+
+	public void setType(POIComponentType3Code type) {
+		this.type = type;
+	}
+
+	public PointOfInteractionComponentIdentification1 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.PointOfInteractionComponentIdentification1 identification) {
+		this.identification = identification;
+	}
+
+	public PointOfInteractionComponentStatus1 getStatus() {
+		return status;
+	}
+
+	public void setStatus(com.tools20022.repository.msg.PointOfInteractionComponentStatus1 status) {
+		this.status = status;
+	}
+
+	public List<GenericIdentification48> getStandardCompliance() {
+		return standardCompliance;
+	}
+
+	public void setStandardCompliance(List<com.tools20022.repository.msg.GenericIdentification48> standardCompliance) {
+		this.standardCompliance = standardCompliance;
+	}
+
+	public PointOfInteractionComponentCharacteristics1 getCharacteristics() {
+		return characteristics;
+	}
+
+	public void setCharacteristics(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1 characteristics) {
+		this.characteristics = characteristics;
+	}
+
+	public List<PointOfInteractionComponentAssessment1> getAssessment() {
+		return assessment;
+	}
+
+	public void setAssessment(List<com.tools20022.repository.msg.PointOfInteractionComponentAssessment1> assessment) {
+		this.assessment = assessment;
 	}
 }

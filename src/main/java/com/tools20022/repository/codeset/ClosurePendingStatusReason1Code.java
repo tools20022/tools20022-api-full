@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClosurePendingStatusReason1Code#AccountClosingInProcess
- * ClosurePendingStatusReason1Code.AccountClosingInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClosurePendingStatusReason1Code#mmAccountClosingInProcess
+ * ClosurePendingStatusReason1Code.mmAccountClosingInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClosurePendingStatusReason1Code#PendingConditions
- * ClosurePendingStatusReason1Code.PendingConditions}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClosurePendingStatusReason1Code#mmPendingConditions
+ * ClosurePendingStatusReason1Code.mmPendingConditions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class ClosurePendingStatusReason1Code extends ClosurePendingStatusReasonC
 	 * name} = "AccountClosingInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountClosingInProcess = new MMCode() {
+	public static final MMCode mmAccountClosingInProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosingInProcess";
@@ -98,7 +98,7 @@ public class ClosurePendingStatusReason1Code extends ClosurePendingStatusReasonC
 	 * name} = "PendingConditions"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingConditions = new MMCode() {
+	public static final MMCode mmPendingConditions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingConditions";
@@ -109,11 +109,11 @@ public class ClosurePendingStatusReason1Code extends ClosurePendingStatusReasonC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClosurePendingStatusReason1Code";
 				definition = "Specifies the reason for the closure pending status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.AccountClosingInProcess, com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.PendingConditions);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.mmAccountClosingInProcess, com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.mmPendingConditions);
 				trace_lazy = () -> ClosurePendingStatusReasonCode.mmObject();
 			}
 		});

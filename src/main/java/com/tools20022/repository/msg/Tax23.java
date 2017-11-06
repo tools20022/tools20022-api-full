@@ -35,9 +35,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Tax23#Type Tax23.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax23#AmountOrPercentage
- * Tax23.AmountOrPercentage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax23#mmType Tax23.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax23#mmAmountOrPercentage
+ * Tax23.mmAmountOrPercentage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Tax23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxType2Choice type;
 	/**
 	 * Specifies the type of tax.
 	 * <p>
@@ -81,7 +82,7 @@ public class Tax23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Type Tax.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax23
@@ -100,27 +101,28 @@ public class Tax23 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax22#Type Tax22.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax22#mmType Tax22.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
 			componentContext_lazy = () -> Tax23.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of tax.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax22.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax22.mmType);
 			maxOccurs = 1;
-			type_lazy = () -> TaxType2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TaxType2Choice.mmObject();
 		}
 	};
+	protected AmountOrPercentage2Choice amountOrPercentage;
 	/**
 	 * Specifies the tax as an amount or percentage.
 	 * <p>
@@ -151,35 +153,51 @@ public class Tax23 {
 	 * definition} = "Specifies the tax as an amount or percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountOrPercentage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountOrPercentage = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Tax23.mmObject();
 			businessComponentTrace_lazy = () -> Tax.mmObject();
+			componentContext_lazy = () -> Tax23.mmObject();
 			isDerived = false;
 			xmlTag = "AmtOrPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrPercentage";
 			definition = "Specifies the tax as an amount or percentage.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountOrPercentage2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountOrPercentage2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax23.Type, com.tools20022.repository.msg.Tax23.AmountOrPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax23.mmType, com.tools20022.repository.msg.Tax23.mmAmountOrPercentage);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Tax23";
 				definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
-				previousVersion_lazy = () -> Tax13.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Tax22.mmObject());
+				previousVersion_lazy = () -> Tax13.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxType2Choice getType() {
+		return type;
+	}
+
+	public void setType(TaxType2Choice type) {
+		this.type = type;
+	}
+
+	public AmountOrPercentage2Choice getAmountOrPercentage() {
+		return amountOrPercentage;
+	}
+
+	public void setAmountOrPercentage(AmountOrPercentage2Choice amountOrPercentage) {
+		this.amountOrPercentage = amountOrPercentage;
 	}
 }

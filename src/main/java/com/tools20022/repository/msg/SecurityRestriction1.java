@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.LegalRestrictions2Choice;
 import com.tools20022.repository.choice.SecurityRestrictionType1Choice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Restrictions applicable to the security.
@@ -36,27 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityRestriction1#EffectivePeriod
- * SecurityRestriction1.EffectivePeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityRestriction1#mmEffectivePeriod
+ * SecurityRestriction1.mmEffectivePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityRestriction1#RestrictionType
- * SecurityRestriction1.RestrictionType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityRestriction1#mmRestrictionType
+ * SecurityRestriction1.mmRestrictionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityRestriction1#LegalRestrictionType
- * SecurityRestriction1.LegalRestrictionType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityRestriction1#mmLegalRestrictionType
+ * SecurityRestriction1.mmLegalRestrictionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityRestriction1#InvestorRestrictionType
- * SecurityRestriction1.InvestorRestrictionType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityRestriction1#mmInvestorRestrictionType
+ * SecurityRestriction1.mmInvestorRestrictionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityRestriction1#InvestorType
- * SecurityRestriction1.InvestorType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityRestriction1#mmInvestorType
+ * SecurityRestriction1.mmInvestorType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityRestriction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateTimePeriodDetails1 effectivePeriod;
 	/**
 	 * Period during which the restriction applies.
 	 * <p>
@@ -98,7 +100,7 @@ public class SecurityRestriction1 {
 	 * definition} = "Period during which the restriction applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectivePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectivePeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityRestriction1.mmObject();
 			isDerived = false;
@@ -106,11 +108,12 @@ public class SecurityRestriction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectivePeriod";
 			definition = "Period during which the restriction applies.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateTimePeriodDetails1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
 		}
 	};
+	protected SecurityRestrictionType1Choice restrictionType;
 	/**
 	 * Type of the restriction, for example, selling restriction, buying
 	 * restriction, placing restriction.
@@ -142,7 +145,7 @@ public class SecurityRestriction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityRestriction1.mmObject();
 			isDerived = false;
@@ -150,11 +153,12 @@ public class SecurityRestriction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecurityRestrictionType1Choice.mmObject();
 		}
 	};
+	protected LegalRestrictions2Choice legalRestrictionType;
 	/**
 	 * Specifies the regulatory restrictions applicable to a security.
 	 * <p>
@@ -184,7 +188,7 @@ public class SecurityRestriction1 {
 	 * "Specifies the regulatory restrictions applicable to a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegalRestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegalRestrictionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityRestriction1.mmObject();
 			isDerived = false;
@@ -192,11 +196,12 @@ public class SecurityRestriction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalRestrictionType";
 			definition = "Specifies the regulatory restrictions applicable to a security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> LegalRestrictions2Choice.mmObject();
 		}
 	};
+	protected List<InvestorRestrictionType2Choice> investorRestrictionType;
 	/**
 	 * Specifies whether the restriction to be applied is relevant for citizen,
 	 * resident, country.
@@ -228,7 +233,7 @@ public class SecurityRestriction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvestorRestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvestorRestrictionType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityRestriction1.mmObject();
 			isDerived = false;
@@ -240,6 +245,7 @@ public class SecurityRestriction1 {
 			complexType_lazy = () -> InvestorRestrictionType2Choice.mmObject();
 		}
 	};
+	protected List<InvestorType2Choice> investorType;
 	/**
 	 * Type of investor that is allowed to hold the security.
 	 * <p>
@@ -268,7 +274,7 @@ public class SecurityRestriction1 {
 	 * definition} = "Type of investor that is allowed to hold the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InvestorType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInvestorType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityRestriction1.mmObject();
 			isDerived = false;
@@ -284,14 +290,55 @@ public class SecurityRestriction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityRestriction1.EffectivePeriod, com.tools20022.repository.msg.SecurityRestriction1.RestrictionType,
-						com.tools20022.repository.msg.SecurityRestriction1.LegalRestrictionType, com.tools20022.repository.msg.SecurityRestriction1.InvestorRestrictionType, com.tools20022.repository.msg.SecurityRestriction1.InvestorType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityRestriction1.mmEffectivePeriod, com.tools20022.repository.msg.SecurityRestriction1.mmRestrictionType,
+						com.tools20022.repository.msg.SecurityRestriction1.mmLegalRestrictionType, com.tools20022.repository.msg.SecurityRestriction1.mmInvestorRestrictionType,
+						com.tools20022.repository.msg.SecurityRestriction1.mmInvestorType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityRestriction1";
 				definition = "Restrictions applicable to the security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateTimePeriodDetails1 getEffectivePeriod() {
+		return effectivePeriod;
+	}
+
+	public void setEffectivePeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 effectivePeriod) {
+		this.effectivePeriod = effectivePeriod;
+	}
+
+	public SecurityRestrictionType1Choice getRestrictionType() {
+		return restrictionType;
+	}
+
+	public void setRestrictionType(SecurityRestrictionType1Choice restrictionType) {
+		this.restrictionType = restrictionType;
+	}
+
+	public LegalRestrictions2Choice getLegalRestrictionType() {
+		return legalRestrictionType;
+	}
+
+	public void setLegalRestrictionType(LegalRestrictions2Choice legalRestrictionType) {
+		this.legalRestrictionType = legalRestrictionType;
+	}
+
+	public List<InvestorRestrictionType2Choice> getInvestorRestrictionType() {
+		return investorRestrictionType;
+	}
+
+	public void setInvestorRestrictionType(List<InvestorRestrictionType2Choice> investorRestrictionType) {
+		this.investorRestrictionType = investorRestrictionType;
+	}
+
+	public List<InvestorType2Choice> getInvestorType() {
+		return investorType;
+	}
+
+	public void setInvestorType(List<InvestorType2Choice> investorType) {
+		this.investorType = investorType;
 	}
 }

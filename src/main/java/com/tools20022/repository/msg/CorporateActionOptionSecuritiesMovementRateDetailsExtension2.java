@@ -36,23 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2#PlaceAndName
- * CorporateActionOptionSecuritiesMovementRateDetailsExtension2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2#mmPlaceAndName
+ * CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2#DTCSecurityRate
- * CorporateActionOptionSecuritiesMovementRateDetailsExtension2.DTCSecurityRate}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2#DTCMultiplyDivideIndicator
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2#mmDTCSecurityRate
  * CorporateActionOptionSecuritiesMovementRateDetailsExtension2.
- * DTCMultiplyDivideIndicator}</li>
+ * mmDTCSecurityRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2#mmDTCMultiplyDivideIndicator
+ * CorporateActionOptionSecuritiesMovementRateDetailsExtension2.
+ * mmDTCMultiplyDivideIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -95,7 +96,7 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DecimalNumber dTCSecurityRate;
 	/**
 	 * Rate of the security is disbursed by DTC (The Depository Trust
 	 * Corporation).
@@ -139,7 +141,7 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCSecurityRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCSecurityRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
 			isDerived = false;
@@ -147,11 +149,12 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCSecurityRate";
 			definition = "Rate of the security is disbursed by DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DTCMultiplyDivide1Code dTCMultiplyDivideIndicator;
 	/**
 	 * Action used to clarify calculation of the security rate: old shares * new
 	 * shares or old shares/ new shares used by DTC (The Depository Trust
@@ -185,7 +188,7 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCMultiplyDivideIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCMultiplyDivideIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
 			isDerived = false;
@@ -193,8 +196,8 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCMultiplyDivideIndicator";
 			definition = "Action used to clarify calculation of the security rate: old shares * new shares or old shares/ new shares used by DTC (The Depository Trust Corporation). Used in conjunction with DTC Security Rate element to determine entitlement. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCMultiplyDivide1Code.mmObject();
 		}
 	};
@@ -202,15 +205,39 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.PlaceAndName,
-						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.DTCSecurityRate,
-						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.DTCMultiplyDivideIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmDTCSecurityRate,
+						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmDTCMultiplyDivideIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSecuritiesMovementRateDetailsExtension2";
 				definition = "Provides additional information regarding corporate action option securities movement rate details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public DecimalNumber getDTCSecurityRate() {
+		return dTCSecurityRate;
+	}
+
+	public void setDTCSecurityRate(DecimalNumber dTCSecurityRate) {
+		this.dTCSecurityRate = dTCSecurityRate;
+	}
+
+	public DTCMultiplyDivide1Code getDTCMultiplyDivideIndicator() {
+		return dTCMultiplyDivideIndicator;
+	}
+
+	public void setDTCMultiplyDivideIndicator(DTCMultiplyDivide1Code dTCMultiplyDivideIndicator) {
+		this.dTCMultiplyDivideIndicator = dTCMultiplyDivideIndicator;
 	}
 }

@@ -36,8 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Assured#AssuredType
- * Assured.AssuredType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Assured#mmAssuredType
+ * Assured.mmAssuredType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Assured extends InsurancePartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssuredTypeCode assuredType;
 	/**
 	 * Specifies the type of assured party.
 	 * <p>
@@ -86,15 +87,15 @@ public class Assured extends InsurancePartyRole {
 	 * definition} = "Specifies the type of assured party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AssuredType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAssuredType = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> Assured.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AssuredType";
 			definition = "Specifies the type of assured party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssuredTypeCode.mmObject();
 		}
 	};
@@ -102,14 +103,22 @@ public class Assured extends InsurancePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Assured";
 				definition = "Party that is covered under the assurance policy.";
 				superType_lazy = () -> InsurancePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Assured.AssuredType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Assured.mmAssuredType);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssuredTypeCode getAssuredType() {
+		return assuredType;
+	}
+
+	public void setAssuredType(AssuredTypeCode assuredType) {
+		this.assuredType = assuredType;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice#Deliverable
- * AssetClassCommodityOtherC102Choice.Deliverable}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice#mmDeliverable
+ * AssetClassCommodityOtherC102Choice.mmDeliverable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice#NonDeliverable
- * AssetClassCommodityOtherC102Choice.NonDeliverable}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice#mmNonDeliverable
+ * AssetClassCommodityOtherC102Choice.mmNonDeliverable}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AssetClassCommodityOtherC102Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OtherC10CommodityDeliverable2 deliverable;
 	/**
 	 * Other C10 deliverable commodity derivative.
 	 * <p>
@@ -75,8 +76,8 @@ public class AssetClassCommodityOtherC102Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,21 +96,22 @@ public class AssetClassCommodityOtherC102Choice {
 	 * definition} = "Other C10 deliverable commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Deliverable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliverable = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityOtherC102Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "Dlvrbl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deliverable";
 			definition = "Other C10 deliverable commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OtherC10CommodityDeliverable2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OtherC10CommodityDeliverable2.mmObject();
 		}
 	};
+	protected OtherC10CommodityNonDeliverable2 nonDeliverable;
 	/**
 	 * Other C10 non-deliverable commodity derivative.
 	 * <p>
@@ -122,8 +124,8 @@ public class AssetClassCommodityOtherC102Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,33 +144,49 @@ public class AssetClassCommodityOtherC102Choice {
 	 * definition} = "Other C10 non-deliverable commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonDeliverable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonDeliverable = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityOtherC102Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "NonDlvrbl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDeliverable";
 			definition = "Other C10 non-deliverable commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OtherC10CommodityNonDeliverable2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OtherC10CommodityNonDeliverable2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.Deliverable, com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.NonDeliverable);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmDeliverable, com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmNonDeliverable);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityOtherC102Choice";
 				definition = "Defines commodity attributes of a derivative where the type is other C10.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OtherC10CommodityDeliverable2 getDeliverable() {
+		return deliverable;
+	}
+
+	public void setDeliverable(OtherC10CommodityDeliverable2 deliverable) {
+		this.deliverable = deliverable;
+	}
+
+	public OtherC10CommodityNonDeliverable2 getNonDeliverable() {
+		return nonDeliverable;
+	}
+
+	public void setNonDeliverable(OtherC10CommodityNonDeliverable2 nonDeliverable) {
+		this.nonDeliverable = nonDeliverable;
 	}
 }

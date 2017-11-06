@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus1Choice#Code
- * SecuritiesPaymentStatus1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus1Choice#mmCode
+ * SecuritiesPaymentStatus1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus1Choice#Proprietary
- * SecuritiesPaymentStatus1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus1Choice#mmProprietary
+ * SecuritiesPaymentStatus1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesPaymentStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesPaymentStatus1Code code;
 	/**
 	 * Status of payment of a security at a particular time.
 	 * <p>
@@ -78,8 +79,8 @@ public class SecuritiesPaymentStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#PaymentStatus
-	 * SecuritiesStatus.PaymentStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmPaymentStatus
+	 * SecuritiesStatus.mmPaymentStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class SecuritiesPaymentStatus1Choice {
 	 * definition} = "Status of payment of a security at a particular time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> SecuritiesPaymentStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.PaymentStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Status of payment of a security at a particular time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Status of payment of a security at a particular time.
 	 * <p>
@@ -125,8 +127,8 @@ public class SecuritiesPaymentStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#PaymentStatus
-	 * SecuritiesStatus.PaymentStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmPaymentStatus
+	 * SecuritiesStatus.mmPaymentStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class SecuritiesPaymentStatus1Choice {
 	 * definition} = "Status of payment of a security at a particular time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> SecuritiesPaymentStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.PaymentStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Status of payment of a security at a particular time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class SecuritiesPaymentStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesPaymentStatus1Choice.Code, com.tools20022.repository.choice.SecuritiesPaymentStatus1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesPaymentStatus1Choice.mmCode, com.tools20022.repository.choice.SecuritiesPaymentStatus1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesPaymentStatus1Choice";
 				definition = "Choice of format for the state of payment of a security at a particular time.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesPaymentStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(SecuritiesPaymentStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

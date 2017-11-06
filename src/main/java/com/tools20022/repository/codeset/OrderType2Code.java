@@ -33,55 +33,55 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.OrderTypeCode OrderTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#Market
- * OrderType2Code.Market}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#Limit
- * OrderType2Code.Limit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#Stop
- * OrderType2Code.Stop}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#LimitWith
- * OrderType2Code.LimitWith}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmMarket
+ * OrderType2Code.mmMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmLimit
+ * OrderType2Code.mmLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmStop
+ * OrderType2Code.mmStop}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmLimitWith
+ * OrderType2Code.mmLimitWith}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#LimitWithout
- * OrderType2Code.LimitWithout}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmLimitWithout
+ * OrderType2Code.mmLimitWithout}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#OnBasisPrice
- * OrderType2Code.OnBasisPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmOnBasisPrice
+ * OrderType2Code.mmOnBasisPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#MarketTouched
- * OrderType2Code.MarketTouched}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmMarketTouched
+ * OrderType2Code.mmMarketTouched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#WithOrWithout
- * OrderType2Code.WithOrWithout}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmWithOrWithout
+ * OrderType2Code.mmWithOrWithout}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#PreviouslyQuoted
- * OrderType2Code.PreviouslyQuoted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmPreviouslyQuoted
+ * OrderType2Code.mmPreviouslyQuoted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#PreviouslyIndicated
- * OrderType2Code.PreviouslyIndicated}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#ForexSwap
- * OrderType2Code.ForexSwap}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#Funari
- * OrderType2Code.Funari}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmPreviouslyIndicated
+ * OrderType2Code.mmPreviouslyIndicated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmForexSwap
+ * OrderType2Code.mmForexSwap}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmFunari
+ * OrderType2Code.mmFunari}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#MarketWithLeftover
- * OrderType2Code.MarketWithLeftover}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#Pegged
- * OrderType2Code.Pegged}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#StopLoss
- * OrderType2Code.StopLoss}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#StopLimit
- * OrderType2Code.StopLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmMarketWithLeftover
+ * OrderType2Code.mmMarketWithLeftover}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmPegged
+ * OrderType2Code.mmPegged}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmStopLoss
+ * OrderType2Code.mmStopLoss}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmStopLimit
+ * OrderType2Code.mmStopLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#CounterOrderSelection
- * OrderType2Code.CounterOrderSelection}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmCounterOrderSelection
+ * OrderType2Code.mmCounterOrderSelection}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -119,7 +119,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "Market"</li>
 	 * </ul>
 	 */
-	public static final MMCode Market = new MMCode() {
+	public static final MMCode mmMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
@@ -142,7 +142,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "Limit"</li>
 	 * </ul>
 	 */
-	public static final MMCode Limit = new MMCode() {
+	public static final MMCode mmLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
@@ -165,7 +165,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "Stop"</li>
 	 * </ul>
 	 */
-	public static final MMCode Stop = new MMCode() {
+	public static final MMCode mmStop = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stop";
@@ -188,7 +188,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "LimitWith"</li>
 	 * </ul>
 	 */
-	public static final MMCode LimitWith = new MMCode() {
+	public static final MMCode mmLimitWith = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitWith";
@@ -211,7 +211,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "LimitWithout"</li>
 	 * </ul>
 	 */
-	public static final MMCode LimitWithout = new MMCode() {
+	public static final MMCode mmLimitWithout = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitWithout";
@@ -234,7 +234,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "OnBasisPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode OnBasisPrice = new MMCode() {
+	public static final MMCode mmOnBasisPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnBasisPrice";
@@ -257,7 +257,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "MarketTouched"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketTouched = new MMCode() {
+	public static final MMCode mmMarketTouched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTouched";
@@ -280,7 +280,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "WithOrWithout"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithOrWithout = new MMCode() {
+	public static final MMCode mmWithOrWithout = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithOrWithout";
@@ -303,7 +303,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "PreviouslyQuoted"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreviouslyQuoted = new MMCode() {
+	public static final MMCode mmPreviouslyQuoted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyQuoted";
@@ -326,7 +326,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "PreviouslyIndicated"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreviouslyIndicated = new MMCode() {
+	public static final MMCode mmPreviouslyIndicated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyIndicated";
@@ -349,7 +349,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "ForexSwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForexSwap = new MMCode() {
+	public static final MMCode mmForexSwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForexSwap";
@@ -372,7 +372,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "Funari"</li>
 	 * </ul>
 	 */
-	public static final MMCode Funari = new MMCode() {
+	public static final MMCode mmFunari = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Funari";
@@ -395,7 +395,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "MarketWithLeftover"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketWithLeftover = new MMCode() {
+	public static final MMCode mmMarketWithLeftover = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketWithLeftover";
@@ -418,7 +418,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "Pegged"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pegged = new MMCode() {
+	public static final MMCode mmPegged = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pegged";
@@ -441,7 +441,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "StopLoss"</li>
 	 * </ul>
 	 */
-	public static final MMCode StopLoss = new MMCode() {
+	public static final MMCode mmStopLoss = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopLoss";
@@ -464,7 +464,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "StopLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode StopLimit = new MMCode() {
+	public static final MMCode mmStopLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopLimit";
@@ -487,7 +487,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "CounterOrderSelection"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterOrderSelection = new MMCode() {
+	public static final MMCode mmCounterOrderSelection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterOrderSelection";
@@ -498,17 +498,17 @@ public class OrderType2Code extends OrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MRKT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderType2Code";
 				definition = "Specifies a type of order based on the Financial Information Exchange Protocol.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderType2Code.Market, com.tools20022.repository.codeset.OrderType2Code.Limit, com.tools20022.repository.codeset.OrderType2Code.Stop,
-						com.tools20022.repository.codeset.OrderType2Code.LimitWith, com.tools20022.repository.codeset.OrderType2Code.LimitWithout, com.tools20022.repository.codeset.OrderType2Code.OnBasisPrice,
-						com.tools20022.repository.codeset.OrderType2Code.MarketTouched, com.tools20022.repository.codeset.OrderType2Code.WithOrWithout, com.tools20022.repository.codeset.OrderType2Code.PreviouslyQuoted,
-						com.tools20022.repository.codeset.OrderType2Code.PreviouslyIndicated, com.tools20022.repository.codeset.OrderType2Code.ForexSwap, com.tools20022.repository.codeset.OrderType2Code.Funari,
-						com.tools20022.repository.codeset.OrderType2Code.MarketWithLeftover, com.tools20022.repository.codeset.OrderType2Code.Pegged, com.tools20022.repository.codeset.OrderType2Code.StopLoss,
-						com.tools20022.repository.codeset.OrderType2Code.StopLimit, com.tools20022.repository.codeset.OrderType2Code.CounterOrderSelection);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderType2Code.mmMarket, com.tools20022.repository.codeset.OrderType2Code.mmLimit, com.tools20022.repository.codeset.OrderType2Code.mmStop,
+						com.tools20022.repository.codeset.OrderType2Code.mmLimitWith, com.tools20022.repository.codeset.OrderType2Code.mmLimitWithout, com.tools20022.repository.codeset.OrderType2Code.mmOnBasisPrice,
+						com.tools20022.repository.codeset.OrderType2Code.mmMarketTouched, com.tools20022.repository.codeset.OrderType2Code.mmWithOrWithout, com.tools20022.repository.codeset.OrderType2Code.mmPreviouslyQuoted,
+						com.tools20022.repository.codeset.OrderType2Code.mmPreviouslyIndicated, com.tools20022.repository.codeset.OrderType2Code.mmForexSwap, com.tools20022.repository.codeset.OrderType2Code.mmFunari,
+						com.tools20022.repository.codeset.OrderType2Code.mmMarketWithLeftover, com.tools20022.repository.codeset.OrderType2Code.mmPegged, com.tools20022.repository.codeset.OrderType2Code.mmStopLoss,
+						com.tools20022.repository.codeset.OrderType2Code.mmStopLimit, com.tools20022.repository.codeset.OrderType2Code.mmCounterOrderSelection);
 				trace_lazy = () -> OrderTypeCode.mmObject();
 			}
 		});

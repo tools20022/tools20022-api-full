@@ -40,18 +40,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SourceOfPrice#MarketIdentification
- * SourceOfPrice.MarketIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SourceOfPrice#Type
- * SourceOfPrice.Type}</li>
+ * {@linkplain com.tools20022.repository.entity.SourceOfPrice#mmMarketIdentification
+ * SourceOfPrice.mmMarketIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SourceOfPrice#mmType
+ * SourceOfPrice.mmType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TradingMarket#SourceOfPrice
- * TradingMarket.SourceOfPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingMarket#mmSourceOfPrice
+ * TradingMarket.mmSourceOfPrice}</li>
  * </ul>
  * </li>
  * <li>
@@ -59,18 +60,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceSourceFormatChoice#NonLocalMarketPlace
- * PriceSourceFormatChoice.NonLocalMarketPlace}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceSourceFormatChoice#mmNonLocalMarketPlace
+ * PriceSourceFormatChoice.mmNonLocalMarketPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceInformation1#SourceOfPrice
- * PriceInformation1.SourceOfPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceInformation1#mmSourceOfPrice
+ * PriceInformation1.mmSourceOfPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceInformation2#SourceOfPrice
- * PriceInformation2.SourceOfPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceInformation2#mmSourceOfPrice
+ * PriceInformation2.mmSourceOfPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PriceInformation3#SourceOfPrice
- * PriceInformation3.SourceOfPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Price6#Source Price6.Source}</li>
+ * {@linkplain com.tools20022.repository.msg.PriceInformation3#mmSourceOfPrice
+ * PriceInformation3.mmSourceOfPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Price6#mmSource
+ * Price6.mmSource}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -89,8 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SourceOfPrice extends InformationPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradingMarket marketIdentification;
 	/**
 	 * Market on which this price is valid (MIC - ISO 3166).
 	 * <p>
@@ -112,8 +115,8 @@ public class SourceOfPrice extends InformationPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TradingMarket#SourceOfPrice
-	 * TradingMarket.SourceOfPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradingMarket#mmSourceOfPrice
+	 * TradingMarket.mmSourceOfPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -121,45 +124,45 @@ public class SourceOfPrice extends InformationPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.TradingMarket
 	 * TradingMarket}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PriceInformation5#SourceOfPrice
-	 * PriceInformation5.SourceOfPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PriceInformation7#SourceOfPrice
-	 * PriceInformation7.SourceOfPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PriceInformation6#SourceOfPrice
-	 * PriceInformation6.SourceOfPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PriceInformation8#SourceOfPrice
-	 * PriceInformation8.SourceOfPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PriceInformation9#SourceOfPrice
-	 * PriceInformation9.SourceOfPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PriceInformation11#SourceOfPrice
-	 * PriceInformation11.SourceOfPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PriceInformation12#SourceOfPrice
-	 * PriceInformation12.SourceOfPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PriceInformation13#SourceOfPrice
-	 * PriceInformation13.SourceOfPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PriceInformation16#SourceOfPrice
-	 * PriceInformation16.SourceOfPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PriceInformation14#SourceOfPrice
-	 * PriceInformation14.SourceOfPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SourceOfPrice SourceOfPrice}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation5#mmSourceOfPrice
+	 * PriceInformation5.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation7#mmSourceOfPrice
+	 * PriceInformation7.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation6#mmSourceOfPrice
+	 * PriceInformation6.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation8#mmSourceOfPrice
+	 * PriceInformation8.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation9#mmSourceOfPrice
+	 * PriceInformation9.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation11#mmSourceOfPrice
+	 * PriceInformation11.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation12#mmSourceOfPrice
+	 * PriceInformation12.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation13#mmSourceOfPrice
+	 * PriceInformation13.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation16#mmSourceOfPrice
+	 * PriceInformation16.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation14#mmSourceOfPrice
+	 * PriceInformation14.mmSourceOfPrice}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -172,24 +175,25 @@ public class SourceOfPrice extends InformationPartyRole {
 	 * definition} = "Market on which this price is valid (MIC - ISO 3166)."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd MarketIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMarketIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation5.SourceOfPrice, com.tools20022.repository.msg.PriceInformation7.SourceOfPrice, com.tools20022.repository.msg.PriceInformation6.SourceOfPrice,
-					com.tools20022.repository.msg.PriceInformation8.SourceOfPrice, com.tools20022.repository.msg.PriceInformation9.SourceOfPrice, com.tools20022.repository.msg.PriceInformation11.SourceOfPrice,
-					com.tools20022.repository.msg.PriceInformation12.SourceOfPrice, com.tools20022.repository.msg.PriceInformation13.SourceOfPrice, com.tools20022.repository.msg.PriceInformation16.SourceOfPrice,
-					com.tools20022.repository.msg.PriceInformation14.SourceOfPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation5.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation7.mmSourceOfPrice,
+					com.tools20022.repository.msg.PriceInformation6.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation8.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation9.mmSourceOfPrice,
+					com.tools20022.repository.msg.PriceInformation11.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation12.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation13.mmSourceOfPrice,
+					com.tools20022.repository.msg.PriceInformation16.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation14.mmSourceOfPrice);
 			elementContext_lazy = () -> SourceOfPrice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarketIdentification";
 			definition = "Market on which this price is valid (MIC - ISO 3166).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TradingMarket.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.SourceOfPrice;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmSourceOfPrice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 		}
 	};
+	protected PriceSourceCode type;
 	/**
 	 * Specifies the type of the source of the price.
 	 * <p>
@@ -216,15 +220,15 @@ public class SourceOfPrice extends InformationPartyRole {
 	 * definition} = "Specifies the type of the source of the price."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Type = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> SourceOfPrice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of the source of the price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceSourceCode.mmObject();
 		}
 	};
@@ -232,18 +236,34 @@ public class SourceOfPrice extends InformationPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SourceOfPrice";
 				definition = "Place from which the price was obtained.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradingMarket.SourceOfPrice);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceSourceFormatChoice.NonLocalMarketPlace, com.tools20022.repository.msg.PriceInformation1.SourceOfPrice,
-						com.tools20022.repository.msg.PriceInformation2.SourceOfPrice, com.tools20022.repository.msg.PriceInformation3.SourceOfPrice, com.tools20022.repository.msg.Price6.Source);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradingMarket.mmSourceOfPrice);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceSourceFormatChoice.mmNonLocalMarketPlace, com.tools20022.repository.msg.PriceInformation1.mmSourceOfPrice,
+						com.tools20022.repository.msg.PriceInformation2.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation3.mmSourceOfPrice, com.tools20022.repository.msg.Price6.mmSource);
 				superType_lazy = () -> InformationPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SourceOfPrice.MarketIdentification, com.tools20022.repository.entity.SourceOfPrice.Type);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SourceOfPrice.mmMarketIdentification, com.tools20022.repository.entity.SourceOfPrice.mmType);
 				derivationComponent_lazy = () -> Arrays.asList(PriceSource.mmObject(), PriceSourceFormatChoice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradingMarket getMarketIdentification() {
+		return marketIdentification;
+	}
+
+	public void setMarketIdentification(com.tools20022.repository.entity.TradingMarket marketIdentification) {
+		this.marketIdentification = marketIdentification;
+	}
+
+	public PriceSourceCode getType() {
+		return type;
+	}
+
+	public void setType(PriceSourceCode type) {
+		this.type = type;
 	}
 }

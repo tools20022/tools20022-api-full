@@ -30,10 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OfferorTypeCode#Self
- * OfferorTypeCode.Self}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OfferorTypeCode#ThirdParty
- * OfferorTypeCode.ThirdParty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OfferorTypeCode#mmSelf
+ * OfferorTypeCode.mmSelf}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OfferorTypeCode#mmThirdParty
+ * OfferorTypeCode.mmThirdParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +91,7 @@ public class OfferorTypeCode {
 	 * definition} = "Offeror is the issuing company."</li>
 	 * </ul>
 	 */
-	public static final MMCode Self = new MMCode() {
+	public static final MMCode mmSelf = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Self";
@@ -120,7 +121,7 @@ public class OfferorTypeCode {
 	 * definition} = "Offer is made by the third party."</li>
 	 * </ul>
 	 */
-	public static final MMCode ThirdParty = new MMCode() {
+	public static final MMCode mmThirdParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdParty";
@@ -133,12 +134,12 @@ public class OfferorTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SELF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OfferorTypeCode";
 				definition = "Specifies whether the offeror for the event is the issuing company or a third party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OfferorTypeCode.Self, com.tools20022.repository.codeset.OfferorTypeCode.ThirdParty);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OfferorTypeCode.mmSelf, com.tools20022.repository.codeset.OfferorTypeCode.mmThirdParty);
 				derivation_lazy = () -> Arrays.asList(OfferorType1Code.mmObject());
 			}
 		});

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.entity.CardPayment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Detailed amounts associated with the total amount of transaction.
@@ -34,18 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#CashBack
- * DetailedAmount7.CashBack}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#Gratuity
- * DetailedAmount7.Gratuity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#Fees
- * DetailedAmount7.Fees}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#Rebate
- * DetailedAmount7.Rebate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#ValueAddedTax
- * DetailedAmount7.ValueAddedTax}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#Surcharge
- * DetailedAmount7.Surcharge}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#mmCashBack
+ * DetailedAmount7.mmCashBack}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#mmGratuity
+ * DetailedAmount7.mmGratuity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#mmFees
+ * DetailedAmount7.mmFees}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#mmRebate
+ * DetailedAmount7.mmRebate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DetailedAmount7#mmValueAddedTax
+ * DetailedAmount7.mmValueAddedTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7#mmSurcharge
+ * DetailedAmount7.mmSurcharge}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DetailedAmount7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAndAmount cashBack;
 	/**
 	 * Cash-back amount.
 	 * <p>
@@ -113,33 +116,35 @@ public class DetailedAmount7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount15#CashBack
-	 * DetailedAmount15.CashBack}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount15#mmCashBack
+	 * DetailedAmount15.mmCashBack}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount5#CashBack
-	 * DetailedAmount5.CashBack}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount5#mmCashBack
+	 * DetailedAmount5.mmCashBack}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashBack = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashBack = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			isDerived = false;
 			xmlTag = "CshBck";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashBack";
 			definition = "Cash-back amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.CashBack;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.CashBack);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.mmCashBack);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmCashBack;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount gratuity;
 	/**
 	 * Gratuity amount.
 	 * <p>
@@ -173,33 +178,35 @@ public class DetailedAmount7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount15#Gratuity
-	 * DetailedAmount15.Gratuity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount15#mmGratuity
+	 * DetailedAmount15.mmGratuity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount5#Gratuity
-	 * DetailedAmount5.Gratuity}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount5#mmGratuity
+	 * DetailedAmount5.mmGratuity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Gratuity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGratuity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			isDerived = false;
 			xmlTag = "Grtty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gratuity";
 			definition = "Gratuity amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.Gratuity;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.Gratuity);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.mmGratuity);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmGratuity;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DetailedAmount4> fees;
 	/**
 	 * Fees amount.
 	 * <p>
@@ -231,33 +238,34 @@ public class DetailedAmount7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount15#Fees
-	 * DetailedAmount15.Fees}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount15#mmFees
+	 * DetailedAmount15.mmFees}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount5#Fees
-	 * DetailedAmount5.Fees}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount5#mmFees
+	 * DetailedAmount5.mmFees}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Fees = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			isDerived = false;
 			xmlTag = "Fees";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
 			definition = "Fees amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.Fees;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.Fees);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.mmFees);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmFees;
 			minOccurs = 0;
-			type_lazy = () -> DetailedAmount4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DetailedAmount4> rebate;
 	/**
 	 * Global rebate of the transaction. This amount is counted as a negative
 	 * amount.
@@ -292,33 +300,34 @@ public class DetailedAmount7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount15#Rebate
-	 * DetailedAmount15.Rebate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount15#mmRebate
+	 * DetailedAmount15.mmRebate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount5#Rebate
-	 * DetailedAmount5.Rebate}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount5#mmRebate
+	 * DetailedAmount5.mmRebate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rebate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRebate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			isDerived = false;
 			xmlTag = "Rbt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rebate";
 			definition = "Global rebate of the transaction. This amount is counted as a negative amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.Rebate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.Rebate);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.mmRebate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmRebate;
 			minOccurs = 0;
-			type_lazy = () -> DetailedAmount4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DetailedAmount4> valueAddedTax;
 	/**
 	 * Value added tax amount.
 	 * <p>
@@ -351,33 +360,34 @@ public class DetailedAmount7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount15#ValueAddedTax
-	 * DetailedAmount15.ValueAddedTax}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount15#mmValueAddedTax
+	 * DetailedAmount15.mmValueAddedTax}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount5#ValueAddedTax
-	 * DetailedAmount5.ValueAddedTax}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount5#mmValueAddedTax
+	 * DetailedAmount5.mmValueAddedTax}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValueAddedTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValueAddedTax = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			isDerived = false;
 			xmlTag = "ValAddedTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
 			definition = "Value added tax amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.ValueAddedTax;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.ValueAddedTax);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.mmValueAddedTax);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmValueAddedTax;
 			minOccurs = 0;
-			type_lazy = () -> DetailedAmount4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DetailedAmount4> surcharge;
 	/**
 	 * Additional charge paid by the cardholder. For example airline credit card
 	 * surcharge.
@@ -408,13 +418,14 @@ public class DetailedAmount7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount15#Surcharge
-	 * DetailedAmount15.Surcharge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount15#mmSurcharge
+	 * DetailedAmount15.mmSurcharge}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Surcharge = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSurcharge = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DetailedAmount7.mmObject();
 			isDerived = false;
@@ -422,27 +433,75 @@ public class DetailedAmount7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Surcharge";
 			definition = "Additional charge paid by the cardholder. For example airline credit card surcharge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.Surcharge);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.mmSurcharge);
 			minOccurs = 0;
-			type_lazy = () -> DetailedAmount4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount7.CashBack, com.tools20022.repository.msg.DetailedAmount7.Gratuity, com.tools20022.repository.msg.DetailedAmount7.Fees,
-						com.tools20022.repository.msg.DetailedAmount7.Rebate, com.tools20022.repository.msg.DetailedAmount7.ValueAddedTax, com.tools20022.repository.msg.DetailedAmount7.Surcharge);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount7.mmCashBack, com.tools20022.repository.msg.DetailedAmount7.mmGratuity, com.tools20022.repository.msg.DetailedAmount7.mmFees,
+						com.tools20022.repository.msg.DetailedAmount7.mmRebate, com.tools20022.repository.msg.DetailedAmount7.mmValueAddedTax, com.tools20022.repository.msg.DetailedAmount7.mmSurcharge);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount7";
 				definition = "Detailed amounts associated with the total amount of transaction.";
-				previousVersion_lazy = () -> DetailedAmount5.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(DetailedAmount15.mmObject());
+				previousVersion_lazy = () -> DetailedAmount5.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAndAmount getCashBack() {
+		return cashBack;
+	}
+
+	public void setCashBack(ImpliedCurrencyAndAmount cashBack) {
+		this.cashBack = cashBack;
+	}
+
+	public ImpliedCurrencyAndAmount getGratuity() {
+		return gratuity;
+	}
+
+	public void setGratuity(ImpliedCurrencyAndAmount gratuity) {
+		this.gratuity = gratuity;
+	}
+
+	public List<DetailedAmount4> getFees() {
+		return fees;
+	}
+
+	public void setFees(List<com.tools20022.repository.msg.DetailedAmount4> fees) {
+		this.fees = fees;
+	}
+
+	public List<DetailedAmount4> getRebate() {
+		return rebate;
+	}
+
+	public void setRebate(List<com.tools20022.repository.msg.DetailedAmount4> rebate) {
+		this.rebate = rebate;
+	}
+
+	public List<DetailedAmount4> getValueAddedTax() {
+		return valueAddedTax;
+	}
+
+	public void setValueAddedTax(List<com.tools20022.repository.msg.DetailedAmount4> valueAddedTax) {
+		this.valueAddedTax = valueAddedTax;
+	}
+
+	public List<DetailedAmount4> getSurcharge() {
+		return surcharge;
+	}
+
+	public void setSurcharge(List<com.tools20022.repository.msg.DetailedAmount4> surcharge) {
+		this.surcharge = surcharge;
 	}
 }

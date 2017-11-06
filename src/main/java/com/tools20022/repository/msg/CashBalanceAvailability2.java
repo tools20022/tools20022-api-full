@@ -36,14 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalanceAvailability2#Date
- * CashBalanceAvailability2.Date}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalanceAvailability2#Amount
- * CashBalanceAvailability2.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceAvailability2#mmDate
+ * CashBalanceAvailability2.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalanceAvailability2#CreditDebitIndicator
- * CashBalanceAvailability2.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceAvailability2#mmAmount
+ * CashBalanceAvailability2.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceAvailability2#mmCreditDebitIndicator
+ * CashBalanceAvailability2.mmCreditDebitIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashBalanceAvailability2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashBalanceAvailabilityDate1 date;
 	/**
 	 * Indicates when the amount of money will become available.
 	 * <p>
@@ -88,8 +90,8 @@ public class CashBalanceAvailability2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAvailability#Date
-	 * CashAvailability.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAvailability#mmDate
+	 * CashAvailability.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,28 +112,29 @@ public class CashBalanceAvailability2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAvailability1#Date
-	 * CashAvailability1.Date}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAvailability1#mmDate
+	 * CashAvailability1.mmDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Date = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmDate;
 			componentContext_lazy = () -> CashBalanceAvailability2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.Date;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Indicates when the amount of money will become available.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAvailability1.Date);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAvailability1.mmDate);
 			maxOccurs = 1;
-			type_lazy = () -> CashBalanceAvailabilityDate1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
 	 * Identifies the available amount.
 	 * <p>
@@ -145,8 +148,8 @@ public class CashBalanceAvailability2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAvailability#Amount
-	 * CashAvailability.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAvailability#mmAmount
+	 * CashAvailability.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,27 +169,28 @@ public class CashBalanceAvailability2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashAvailability1#Amount
-	 * CashAvailability1.Amount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAvailability1#mmAmount
+	 * CashAvailability1.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmAmount;
 			componentContext_lazy = () -> CashBalanceAvailability2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Identifies the available amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAvailability1.Amount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAvailability1.mmAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the availability balance is a credit or a debit
 	 * balance. Usage: A zero balance is considered to be a credit balance.
@@ -201,8 +205,8 @@ public class CashBalanceAvailability2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#CreditDebitIndicator
-	 * Balance.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmCreditDebitIndicator
+	 * Balance.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -225,24 +229,24 @@ public class CashBalanceAvailability2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAvailability1#CreditDebitIndicator
-	 * CashAvailability1.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAvailability1#mmCreditDebitIndicator
+	 * CashAvailability1.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashBalanceAvailability2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the availability balance is a credit or a debit balance. \nUsage: A zero balance is considered to be a credit balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAvailability1.CreditDebitIndicator);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAvailability1.mmCreditDebitIndicator);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
@@ -250,10 +254,10 @@ public class CashBalanceAvailability2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailability2.Date, com.tools20022.repository.msg.CashBalanceAvailability2.Amount,
-						com.tools20022.repository.msg.CashBalanceAvailability2.CreditDebitIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailability2.mmDate, com.tools20022.repository.msg.CashBalanceAvailability2.mmAmount,
+						com.tools20022.repository.msg.CashBalanceAvailability2.mmCreditDebitIndicator);
 				trace_lazy = () -> CashAvailability.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashBalanceAvailability2";
 				definition = "Indicates when the amount of money will become available, ie can be accessed and start generating interest.";
@@ -261,5 +265,29 @@ public class CashBalanceAvailability2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashBalanceAvailabilityDate1 getDate() {
+		return date;
+	}
+
+	public void setDate(com.tools20022.repository.msg.CashBalanceAvailabilityDate1 date) {
+		this.date = date;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
 	}
 }

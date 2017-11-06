@@ -33,28 +33,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BondType1Code#SovereignBond
- * BondType1Code.SovereignBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.BondType1Code#mmSovereignBond
+ * BondType1Code.mmSovereignBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BondType1Code#OtherPublicBond
- * BondType1Code.OtherPublicBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.BondType1Code#mmOtherPublicBond
+ * BondType1Code.mmOtherPublicBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BondType1Code#ConvertibleBond
- * BondType1Code.ConvertibleBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.BondType1Code#mmConvertibleBond
+ * BondType1Code.mmConvertibleBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BondType1Code#CorporateBond
- * BondType1Code.CorporateBond}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BondType1Code#CoveredBond
- * BondType1Code.CoveredBond}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BondType1Code#Other
- * BondType1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.BondType1Code#mmCorporateBond
+ * BondType1Code.mmCorporateBond}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BondType1Code#mmCoveredBond
+ * BondType1Code.mmCoveredBond}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BondType1Code#mmOther
+ * BondType1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +85,7 @@ public class BondType1Code extends BondTypeCode {
 	 * name} = "SovereignBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode SovereignBond = new MMCode() {
+	public static final MMCode mmSovereignBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SovereignBond";
@@ -107,7 +108,7 @@ public class BondType1Code extends BondTypeCode {
 	 * name} = "OtherPublicBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherPublicBond = new MMCode() {
+	public static final MMCode mmOtherPublicBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherPublicBond";
@@ -130,7 +131,7 @@ public class BondType1Code extends BondTypeCode {
 	 * name} = "ConvertibleBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConvertibleBond = new MMCode() {
+	public static final MMCode mmConvertibleBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertibleBond";
@@ -153,7 +154,7 @@ public class BondType1Code extends BondTypeCode {
 	 * name} = "CorporateBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateBond = new MMCode() {
+	public static final MMCode mmCorporateBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateBond";
@@ -176,7 +177,7 @@ public class BondType1Code extends BondTypeCode {
 	 * name} = "CoveredBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode CoveredBond = new MMCode() {
+	public static final MMCode mmCoveredBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoveredBond";
@@ -199,7 +200,7 @@ public class BondType1Code extends BondTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -210,13 +211,13 @@ public class BondType1Code extends BondTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BondType1Code";
 				definition = "Specifies the type of bonds.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BondType1Code.SovereignBond, com.tools20022.repository.codeset.BondType1Code.OtherPublicBond,
-						com.tools20022.repository.codeset.BondType1Code.ConvertibleBond, com.tools20022.repository.codeset.BondType1Code.CorporateBond, com.tools20022.repository.codeset.BondType1Code.CoveredBond,
-						com.tools20022.repository.codeset.BondType1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BondType1Code.mmSovereignBond, com.tools20022.repository.codeset.BondType1Code.mmOtherPublicBond,
+						com.tools20022.repository.codeset.BondType1Code.mmConvertibleBond, com.tools20022.repository.codeset.BondType1Code.mmCorporateBond, com.tools20022.repository.codeset.BondType1Code.mmCoveredBond,
+						com.tools20022.repository.codeset.BondType1Code.mmOther);
 				trace_lazy = () -> BondTypeCode.mmObject();
 			}
 		});

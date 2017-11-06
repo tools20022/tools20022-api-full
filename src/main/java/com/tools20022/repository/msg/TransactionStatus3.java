@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus3#Status
- * TransactionStatus3.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus3#mmStatus
+ * TransactionStatus3.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,27 +45,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestV02#RequestedStatus
- * StatusChangeRequestV02.RequestedStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestV02#mmRequestedStatus
+ * StatusChangeRequestV02.mmRequestedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02#AcceptedStatus
- * StatusChangeRequestAcceptanceV02.AcceptedStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02#mmAcceptedStatus
+ * StatusChangeRequestAcceptanceV02.mmAcceptedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#ProposedStatusChange
- * StatusChangeRequestNotificationV03.ProposedStatusChange}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmProposedStatusChange
+ * StatusChangeRequestNotificationV03.mmProposedStatusChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#RejectedStatusChange
- * StatusChangeRequestRejectionV02.RejectedStatusChange}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02#mmRejectedStatusChange
+ * StatusChangeRequestRejectionV02.mmRejectedStatusChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#RejectedStatusChange
- * StatusChangeRequestRejectionNotificationV03.RejectedStatusChange}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#mmRejectedStatusChange
+ * StatusChangeRequestRejectionNotificationV03.mmRejectedStatusChange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionStatus3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BaselineStatus2Code status;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -92,8 +93,8 @@ public class TransactionStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BaselineStatus#Status
-	 * BaselineStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.BaselineStatus#mmStatus
+	 * BaselineStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,17 +114,17 @@ public class TransactionStatus3 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmStatus;
 			componentContext_lazy = () -> TransactionStatus3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.Status;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatus2Code.mmObject();
 		}
 	};
@@ -131,17 +132,25 @@ public class TransactionStatus3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus3.Status);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus3.mmStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmRequestedStatus, com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.mmAcceptedStatus,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmProposedStatusChange, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmRejectedStatusChange,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmRejectedStatusChange);
 				trace_lazy = () -> BaselineStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestV02.RequestedStatus, com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.AcceptedStatus,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.ProposedStatusChange, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.RejectedStatusChange,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.RejectedStatusChange);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionStatus3";
 				definition = "Identifies the status of the transaction by means of a code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BaselineStatus2Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(BaselineStatus2Code status) {
+		this.status = status;
 	}
 }

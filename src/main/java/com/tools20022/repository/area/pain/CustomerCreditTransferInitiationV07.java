@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsInitiationISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -81,21 +82,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07#GroupHeader
- * CustomerCreditTransferInitiationV07.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07#mmGroupHeader
+ * CustomerCreditTransferInitiationV07.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07#PaymentInformation
- * CustomerCreditTransferInitiationV07.PaymentInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07#mmPaymentInformation
+ * CustomerCreditTransferInitiationV07.mmPaymentInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07#SupplementaryData
- * CustomerCreditTransferInitiationV07.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07#mmSupplementaryData
+ * CustomerCreditTransferInitiationV07.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07#identifier
- * CustomerCreditTransferInitiationV07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.001.001.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,6 +122,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CustomerCreditTransferInitiationV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader48 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -150,30 +150,31 @@ public class CustomerCreditTransferInitiationV07 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08#GroupHeader
-	 * CustomerCreditTransferInitiationV08.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08#mmGroupHeader
+	 * CustomerCreditTransferInitiationV08.mmGroupHeader}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06#GroupHeader
-	 * CustomerCreditTransferInitiationV06.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06#mmGroupHeader
+	 * CustomerCreditTransferInitiationV06.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06.GroupHeader;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08.GroupHeader);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08.mmGroupHeader);
+			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader48.mmObject();
 		}
 	};
+	protected List<PaymentInstruction20> paymentInformation;
 	/**
 	 * Set of characteristics that applies to the debit side of the payment
 	 * transactions included in the credit transfer initiation.
@@ -202,29 +203,30 @@ public class CustomerCreditTransferInitiationV07 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08#PaymentInformation
-	 * CustomerCreditTransferInitiationV08.PaymentInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08#mmPaymentInformation
+	 * CustomerCreditTransferInitiationV08.mmPaymentInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06#PaymentInformation
-	 * CustomerCreditTransferInitiationV06.PaymentInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06#mmPaymentInformation
+	 * CustomerCreditTransferInitiationV06.mmPaymentInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PaymentInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPaymentInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformation";
 			definition = "Set of characteristics that applies to the debit side of the payment transactions included in the credit transfer initiation.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06.PaymentInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08.PaymentInformation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08.mmPaymentInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06.mmPaymentInformation;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstruction20.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -253,54 +255,27 @@ public class CustomerCreditTransferInitiationV07 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08#SupplementaryData
-	 * CustomerCreditTransferInitiationV08.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08#mmSupplementaryData
+	 * CustomerCreditTransferInitiationV08.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06#SupplementaryData
-	 * CustomerCreditTransferInitiationV06.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06#mmSupplementaryData
+	 * CustomerCreditTransferInitiationV06.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV06.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "001";
-			version = "07";
-			flavour = "001";
 		}
 	};
 
@@ -310,17 +285,48 @@ public class CustomerCreditTransferInitiationV07 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CustomerCreditTransferInitiationV07";
 				definition = "Scope\r\nThe CustomerCreditTransferInitiation message is sent by the initiating party to the forwarding agent or debtor agent. It is used to request movement of funds from the debtor account to a creditor.\r\nUsage\r\nThe CustomerCreditTransferInitiation message can contain one or more customer credit transfer instructions.\r\nThe CustomerCreditTransferInitiation message is used to exchange:\r\n- One or more instances of a credit transfer initiation;\r\n- Payment transactions that result in book transfers at the debtor agent or payments to another financial institution;\r\n- Payment transactions that result in an electronic cash transfer to the creditor account or in the emission of a cheque.\r\nThe message can be used in a direct or a relay scenario:\r\n- In a direct scenario, the message is sent directly to the debtor agent. The debtor agent is the account servicer of the debtor.\r\n- In a relay scenario, the message is sent to a forwarding agent. The forwarding agent acts as a concentrating financial institution. It will forward the CustomerCreditTransferInitiation message to the debtor agent.\r\nThe message can also be used by an initiating party that has authority to send the message on behalf of the debtor. This caters for example for the scenario of a payments factory initiating all payments on behalf of a large corporate.\r\nThe CustomerCreditTransferInitiation message can be used in domestic and cross-border scenarios.\r\nThe CustomerCreditTransferInitiation message must not be used by the debtor agent to execute the credit transfer instruction(s). The FIToFICustomerCreditTransfer message must be used instead.";
-				previousVersion_lazy = () -> CustomerCreditTransferInitiationV06.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CustomerCreditTransferInitiationV08.mmObject());
+				previousVersion_lazy = () -> CustomerCreditTransferInitiationV06.mmObject();
 				messageSet_lazy = () -> Arrays.asList(PaymentsInitiationISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CstmrCdtTrfInitn";
 				businessArea_lazy = () -> PaymentsInitiationPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07.GroupHeader,
-						com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07.PaymentInformation, com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07.mmGroupHeader,
+						com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07.mmPaymentInformation, com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "001";
+						version = "07";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader48 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader48 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<PaymentInstruction20> getPaymentInformation() {
+		return paymentInformation;
+	}
+
+	public void setPaymentInformation(List<PaymentInstruction20> paymentInformation) {
+		this.paymentInformation = paymentInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -35,13 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountContract2#TargetGoLiveDate
- * AccountContract2.TargetGoLiveDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountContract2#mmTargetGoLiveDate
+ * AccountContract2.mmTargetGoLiveDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountContract2#TargetClosingDate
- * AccountContract2.TargetClosingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountContract2#UrgencyFlag
- * AccountContract2.UrgencyFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountContract2#mmTargetClosingDate
+ * AccountContract2.mmTargetClosingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountContract2#mmUrgencyFlag
+ * AccountContract2.mmUrgencyFlag}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,51 +52,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01#ContractDates
- * AccountExcludedMandateMaintenanceAmendmentRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01#mmContractDates
+ * AccountExcludedMandateMaintenanceAmendmentRequestV01.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02#ContractDates
- * AccountExcludedMandateMaintenanceAmendmentRequestV02.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02#mmContractDates
+ * AccountExcludedMandateMaintenanceAmendmentRequestV02.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01#ContractDates
- * AccountExcludedMandateMaintenanceRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01#mmContractDates
+ * AccountExcludedMandateMaintenanceRequestV01.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02#ContractDates
- * AccountExcludedMandateMaintenanceRequestV02.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02#mmContractDates
+ * AccountExcludedMandateMaintenanceRequestV02.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01#ContractDates
- * AccountMandateMaintenanceAmendmentRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01#mmContractDates
+ * AccountMandateMaintenanceAmendmentRequestV01.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02#ContractDates
- * AccountMandateMaintenanceAmendmentRequestV02.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02#mmContractDates
+ * AccountMandateMaintenanceAmendmentRequestV02.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#ContractDates
- * AccountMandateMaintenanceRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#mmContractDates
+ * AccountMandateMaintenanceRequestV01.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#ContractDates
- * AccountMandateMaintenanceRequestV02.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#mmContractDates
+ * AccountMandateMaintenanceRequestV02.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01#ContractDates
- * AccountOpeningAmendmentRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01#mmContractDates
+ * AccountOpeningAmendmentRequestV01.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#ContractDates
- * AccountOpeningAmendmentRequestV02.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmContractDates
+ * AccountOpeningAmendmentRequestV02.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV01#ContractDates
- * AccountOpeningRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV01#mmContractDates
+ * AccountOpeningRequestV01.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV02#ContractDates
- * AccountOpeningRequestV02.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV02#mmContractDates
+ * AccountOpeningRequestV02.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#ContractDates
- * AccountReportRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#mmContractDates
+ * AccountReportRequestV01.mmContractDates}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountContract2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate targetGoLiveDate;
 	/**
 	 * Date on which the account and related basic services are expected to be
 	 * operational for the account owner.
@@ -124,8 +125,8 @@ public class AccountContract2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountContract#TargetGoLiveDate
-	 * AccountContract.TargetGoLiveDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountContract#mmTargetGoLiveDate
+	 * AccountContract.mmTargetGoLiveDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,20 +147,21 @@ public class AccountContract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TargetGoLiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTargetGoLiveDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTargetGoLiveDate;
 			componentContext_lazy = () -> AccountContract2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.TargetGoLiveDate;
 			isDerived = false;
 			xmlTag = "TrgtGoLiveDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetGoLiveDate";
 			definition = "Date on which the account and related basic services  are expected to be operational for the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate targetClosingDate;
 	/**
 	 * Date on which the account and related services are expected to cease to
 	 * be operational for the account owner.
@@ -173,8 +175,8 @@ public class AccountContract2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountContract#TargetClosingDate
-	 * AccountContract.TargetClosingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountContract#mmTargetClosingDate
+	 * AccountContract.mmTargetClosingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,20 +197,21 @@ public class AccountContract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TargetClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTargetClosingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTargetClosingDate;
 			componentContext_lazy = () -> AccountContract2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.TargetClosingDate;
 			isDerived = false;
 			xmlTag = "TrgtClsgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetClosingDate";
 			definition = "Date on which the account and related services are expected to cease to be operational for the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected YesNoIndicator urgencyFlag;
 	/**
 	 * Indicator that the account opening/maintenance/closing process needs to
 	 * be treated urgently, that is, sooner than the terms established by the
@@ -225,8 +228,8 @@ public class AccountContract2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountContract#UrgencyFlag
-	 * AccountContract.UrgencyFlag}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountContract#mmUrgencyFlag
+	 * AccountContract.mmUrgencyFlag}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,17 +250,17 @@ public class AccountContract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UrgencyFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUrgencyFlag = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmUrgencyFlag;
 			componentContext_lazy = () -> AccountContract2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.UrgencyFlag;
 			isDerived = false;
 			xmlTag = "UrgcyFlg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UrgencyFlag";
 			definition = "Indicator that the account opening/maintenance/closing process needs to be treated urgently, that is, sooner than the terms established by the service level agreed between the account holder customer and the account servicing institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -265,22 +268,46 @@ public class AccountContract2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract2.TargetGoLiveDate, com.tools20022.repository.msg.AccountContract2.TargetClosingDate,
-						com.tools20022.repository.msg.AccountContract2.UrgencyFlag);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract2.mmTargetGoLiveDate, com.tools20022.repository.msg.AccountContract2.mmTargetClosingDate,
+						com.tools20022.repository.msg.AccountContract2.mmUrgencyFlag);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.mmContractDates,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.mmContractDates,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmContractDates,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmContractDates,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.mmContractDates,
+						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountOpeningRequestV01.mmContractDates,
+						com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountReportRequestV01.mmContractDates);
 				trace_lazy = () -> CashAccountContract.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.ContractDates,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.ContractDates, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.ContractDates,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.ContractDates, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.ContractDates,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.ContractDates, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.ContractDates,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.ContractDates, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.ContractDates,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.ContractDates, com.tools20022.repository.area.acmt.AccountOpeningRequestV01.ContractDates,
-						com.tools20022.repository.area.acmt.AccountOpeningRequestV02.ContractDates, com.tools20022.repository.area.acmt.AccountReportRequestV01.ContractDates);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountContract2";
 				definition = "Specifies target dates dates related to account opening and closing.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getTargetGoLiveDate() {
+		return targetGoLiveDate;
+	}
+
+	public void setTargetGoLiveDate(ISODate targetGoLiveDate) {
+		this.targetGoLiveDate = targetGoLiveDate;
+	}
+
+	public ISODate getTargetClosingDate() {
+		return targetClosingDate;
+	}
+
+	public void setTargetClosingDate(ISODate targetClosingDate) {
+		this.targetClosingDate = targetClosingDate;
+	}
+
+	public YesNoIndicator getUrgencyFlag() {
+		return urgencyFlag;
+	}
+
+	public void setUrgencyFlag(YesNoIndicator urgencyFlag) {
+		this.urgencyFlag = urgencyFlag;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Charge or commission of the original individual order details that have been
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RepairedConditions2#RepairedCharge
- * RepairedConditions2.RepairedCharge}</li>
+ * {@linkplain com.tools20022.repository.msg.RepairedConditions2#mmRepairedCharge
+ * RepairedConditions2.mmRepairedCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RepairedConditions2#RepairedCommission
- * RepairedConditions2.RepairedCommission}</li>
+ * {@linkplain com.tools20022.repository.msg.RepairedConditions2#mmRepairedCommission
+ * RepairedConditions2.mmRepairedCommission}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RepairedConditions2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.Charge11> repairedCharge;
 	/**
 	 * Charge from the original individual order details that has been repaired
 	 * so that the order can be accepted.
@@ -98,21 +100,22 @@ public class RepairedConditions2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RepairedCharge = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRepairedCharge = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RepairedConditions2.mmObject();
 			businessComponentTrace_lazy = () -> Charges.mmObject();
+			componentContext_lazy = () -> RepairedConditions2.mmObject();
 			isDerived = false;
 			xmlTag = "RprdChrg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedCharge";
 			definition = "Charge from the original individual order details that has been repaired so that the order can be accepted.";
-			minOccurs = 0;
 			maxOccurs = 10;
-			type_lazy = () -> Charge11.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Charge11.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Commission7> repairedCommission;
 	/**
 	 * Commission from the original individual order details that has been
 	 * repaired so that the order can be accepted.
@@ -146,33 +149,49 @@ public class RepairedConditions2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RepairedCommission = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRepairedCommission = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RepairedConditions2.mmObject();
 			businessComponentTrace_lazy = () -> Commission.mmObject();
+			componentContext_lazy = () -> RepairedConditions2.mmObject();
 			isDerived = false;
 			xmlTag = "RprdComssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedCommission";
 			definition = "Commission from the original individual order details that has been repaired so that the order can be accepted.";
-			minOccurs = 0;
 			maxOccurs = 10;
-			type_lazy = () -> Commission7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Commission7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RepairedConditions2.RepairedCharge, com.tools20022.repository.msg.RepairedConditions2.RepairedCommission);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RepairedConditions2.mmRepairedCharge, com.tools20022.repository.msg.RepairedConditions2.mmRepairedCommission);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepairedConditions2";
 				definition = "Charge or commission of the original individual order details that have been repaired so that the order can be accepted.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Charge11> getRepairedCharge() {
+		return repairedCharge;
+	}
+
+	public void setRepairedCharge(List<com.tools20022.repository.msg.Charge11> repairedCharge) {
+		this.repairedCharge = repairedCharge;
+	}
+
+	public List<Commission7> getRepairedCommission() {
+		return repairedCommission;
+	}
+
+	public void setRepairedCommission(List<com.tools20022.repository.msg.Commission7> repairedCommission) {
+		this.repairedCommission = repairedCommission;
 	}
 }

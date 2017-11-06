@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code#CollateralSubstitutionReleased
- * CollateralSubstitutionConfirmation1Code.CollateralSubstitutionReleased}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code#mmCollateralSubstitutionReleased
+ * CollateralSubstitutionConfirmation1Code.mmCollateralSubstitutionReleased}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code#CollateralSubstitutionReturned
- * CollateralSubstitutionConfirmation1Code.CollateralSubstitutionReturned}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code#mmCollateralSubstitutionReturned
+ * CollateralSubstitutionConfirmation1Code.mmCollateralSubstitutionReturned}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class CollateralSubstitutionConfirmation1Code extends CollateralSubstitut
 	 * name} = "CollateralSubstitutionReleased"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralSubstitutionReleased = new MMCode() {
+	public static final MMCode mmCollateralSubstitutionReleased = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionReleased";
@@ -107,7 +107,7 @@ public class CollateralSubstitutionConfirmation1Code extends CollateralSubstitut
 	 * name} = "CollateralSubstitutionReturned"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralSubstitutionReturned = new MMCode() {
+	public static final MMCode mmCollateralSubstitutionReturned = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionReturned";
@@ -118,13 +118,13 @@ public class CollateralSubstitutionConfirmation1Code extends CollateralSubstitut
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CREL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitutionConfirmation1Code";
 				definition = "Provides the status of the collateral substitution, either returned or released.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code.CollateralSubstitutionReleased,
-						com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code.CollateralSubstitutionReturned);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code.mmCollateralSubstitutionReleased,
+						com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code.mmCollateralSubstitutionReturned);
 				trace_lazy = () -> CollateralSubstitutionConfirmationCode.mmObject();
 			}
 		});

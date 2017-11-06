@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -67,27 +68,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#MessageIdentification
- * AccountManagementStatusReportV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#mmMessageIdentification
+ * AccountManagementStatusReportV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#RelatedReference
- * AccountManagementStatusReportV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#mmRelatedReference
+ * AccountManagementStatusReportV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#StatusReport
- * AccountManagementStatusReportV04.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#mmStatusReport
+ * AccountManagementStatusReportV04.mmStatusReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#MarketPracticeVersion
- * AccountManagementStatusReportV04.MarketPracticeVersion}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#mmMarketPracticeVersion
+ * AccountManagementStatusReportV04.mmMarketPracticeVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#Extension
- * AccountManagementStatusReportV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#mmExtension
+ * AccountManagementStatusReportV04.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#identifier
- * AccountManagementStatusReportV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code acmt.006.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,6 +114,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountManagementStatusReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Identifies the message.
 	 * <p>
@@ -140,30 +140,31 @@ public class AccountManagementStatusReportV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#MessageIdentification
-	 * AccountManagementStatusReportV05.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#mmMessageIdentification
+	 * AccountManagementStatusReportV05.mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#MessageIdentification
-	 * AccountManagementStatusReportV03.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#mmMessageIdentification
+	 * AccountManagementStatusReportV03.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.MessageIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.mmMessageIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -190,30 +191,31 @@ public class AccountManagementStatusReportV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#RelatedReference
-	 * AccountManagementStatusReportV05.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#mmRelatedReference
+	 * AccountManagementStatusReportV05.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#RelatedReference
-	 * AccountManagementStatusReportV03.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#mmRelatedReference
+	 * AccountManagementStatusReportV03.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.RelatedReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.RelatedReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.mmRelatedReference);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.mmRelatedReference;
 			maxOccurs = 2;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AccountManagementStatusAndReason3 statusReport;
 	/**
 	 * Status report details of an account opening instruction or account
 	 * modification instruction that was previously received.
@@ -242,30 +244,31 @@ public class AccountManagementStatusReportV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#StatusReport
-	 * AccountManagementStatusReportV05.StatusReport}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#mmStatusReport
+	 * AccountManagementStatusReportV05.mmStatusReport}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#StatusReport
-	 * AccountManagementStatusReportV03.StatusReport}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#mmStatusReport
+	 * AccountManagementStatusReportV03.mmStatusReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReport";
 			definition = "Status report details of an account opening instruction or account modification instruction that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.StatusReport;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.StatusReport);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.mmStatusReport);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.mmStatusReport;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountManagementStatusAndReason3.mmObject();
 		}
 	};
+	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
 	 * Identifies the market practice to which the message conforms.
 	 * <p>
@@ -292,24 +295,25 @@ public class AccountManagementStatusReportV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#MarketPracticeVersion
-	 * AccountManagementStatusReportV05.MarketPracticeVersion}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#mmMarketPracticeVersion
+	 * AccountManagementStatusReportV05.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.MarketPracticeVersion);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.mmMarketPracticeVersion);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -337,48 +341,21 @@ public class AccountManagementStatusReportV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#Extension
-	 * AccountManagementStatusReportV05.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV05#mmExtension
+	 * AccountManagementStatusReportV05.mmExtension}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.Extension);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.mmExtension);
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "acmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "006"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "acmt";
-			messageFunctionality = "006";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -388,18 +365,65 @@ public class AccountManagementStatusReportV04 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementStatusReportV04";
 				definition = "Scope\r\nAn account servicer, for example, a registrar, transfer agent or custodian bank sends the AccountManagementStatusReport message to the account owner or its designated agent, for example, an investor to report on the receipt or the processing status of a previously received AccountOpeningInstruction or AccountModificationInstruction or GetAccountDetails message.\r\nUsage\r\nThe AccountManagementStatusReport message is used to provide the processing status of a previously received AccountOpeningInstruction or of an AccountModificationInstruction message.\r\nThe AccountManagementStatusReport message is also used by an account servicer to reject an AccountOpeningInstruction or AccountModificationInstruction or GetAccountDetails message when the message is not compliant with the agreed SLA or when the account cannot be uniquely identified.\r\nThe account owner may report that the status of the instruction is either rejected, accepted, that the instruction is being processed or that the instruction has been forwarded to the next intermediary party for further processing.";
-				previousVersion_lazy = () -> AccountManagementStatusReportV03.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AccountManagementStatusReportV05.mmObject());
+				previousVersion_lazy = () -> AccountManagementStatusReportV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctMgmtStsRpt";
 				businessArea_lazy = () -> AccountManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.MessageIdentification,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.RelatedReference, com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.StatusReport,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.MarketPracticeVersion, com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.mmRelatedReference, com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.mmStatusReport,
+						com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.mmMarketPracticeVersion, com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "acmt";
+						messageFunctionality = "006";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public List<AdditionalReference3> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public AccountManagementStatusAndReason3 getStatusReport() {
+		return statusReport;
+	}
+
+	public void setStatusReport(AccountManagementStatusAndReason3 statusReport) {
+		this.statusReport = statusReport;
+	}
+
+	public MarketPracticeVersion1 getMarketPracticeVersion() {
+		return marketPracticeVersion;
+	}
+
+	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+		this.marketPracticeVersion = marketPracticeVersion;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

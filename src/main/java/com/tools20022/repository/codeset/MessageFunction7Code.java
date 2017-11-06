@@ -34,96 +34,96 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMBalance
- * MessageFunction7Code.ATMBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMBalance
+ * MessageFunction7Code.mmATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMCompletionAcknowledgement
- * MessageFunction7Code.ATMCompletionAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMCompletionAcknowledgement
+ * MessageFunction7Code.mmATMCompletionAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMCompletionAdvice
- * MessageFunction7Code.ATMCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMCompletionAdvice
+ * MessageFunction7Code.mmATMCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMControl
- * MessageFunction7Code.ATMControl}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMControl
+ * MessageFunction7Code.mmATMControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMDeviceControl
- * MessageFunction7Code.ATMDeviceControl}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMDeviceControl
+ * MessageFunction7Code.mmATMDeviceControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMDiagnosticRequest
- * MessageFunction7Code.ATMDiagnosticRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMDiagnosticRequest
+ * MessageFunction7Code.mmATMDiagnosticRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMDiagnosticResponse
- * MessageFunction7Code.ATMDiagnosticResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMDiagnosticResponse
+ * MessageFunction7Code.mmATMDiagnosticResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMGlobalStatus
- * MessageFunction7Code.ATMGlobalStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMGlobalStatus
+ * MessageFunction7Code.mmATMGlobalStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMInquiryRequest
- * MessageFunction7Code.ATMInquiryRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMInquiryRequest
+ * MessageFunction7Code.mmATMInquiryRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMInquiryResponse
- * MessageFunction7Code.ATMInquiryResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMInquiryResponse
+ * MessageFunction7Code.mmATMInquiryResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMKeyDownloadRequest
- * MessageFunction7Code.ATMKeyDownloadRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMKeyDownloadRequest
+ * MessageFunction7Code.mmATMKeyDownloadRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMKeyDownloadResponse
- * MessageFunction7Code.ATMKeyDownloadResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMKeyDownloadResponse
+ * MessageFunction7Code.mmATMKeyDownloadResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMPINManagementRequest
- * MessageFunction7Code.ATMPINManagementRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMPINManagementRequest
+ * MessageFunction7Code.mmATMPINManagementRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMPINManagementResponse
- * MessageFunction7Code.ATMPINManagementResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMPINManagementResponse
+ * MessageFunction7Code.mmATMPINManagementResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMRequestReject
- * MessageFunction7Code.ATMRequestReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMRequestReject
+ * MessageFunction7Code.mmATMRequestReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMResponseReject
- * MessageFunction7Code.ATMResponseReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMResponseReject
+ * MessageFunction7Code.mmATMResponseReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMWithdrawalAdvice
- * MessageFunction7Code.ATMWithdrawalAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMWithdrawalAdvice
+ * MessageFunction7Code.mmATMWithdrawalAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMWithdrawalAknowledgement
- * MessageFunction7Code.ATMWithdrawalAknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMWithdrawalAknowledgement
+ * MessageFunction7Code.mmATMWithdrawalAknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMWithdrawalRequest
- * MessageFunction7Code.ATMWithdrawalRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMWithdrawalRequest
+ * MessageFunction7Code.mmATMWithdrawalRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMWithdrawalResponse
- * MessageFunction7Code.ATMWithdrawalResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMWithdrawalResponse
+ * MessageFunction7Code.mmATMWithdrawalResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#CountersInquiry
- * MessageFunction7Code.CountersInquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmCountersInquiry
+ * MessageFunction7Code.mmCountersInquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#HostToATMAcknowledgement
- * MessageFunction7Code.HostToATMAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmHostToATMAcknowledgement
+ * MessageFunction7Code.mmHostToATMAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#HostToATMRequest
- * MessageFunction7Code.HostToATMRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmHostToATMRequest
+ * MessageFunction7Code.mmHostToATMRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#ATMOperation
- * MessageFunction7Code.ATMOperation}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmATMOperation
+ * MessageFunction7Code.mmATMOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#SecurityControl
- * MessageFunction7Code.SecurityControl}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmSecurityControl
+ * MessageFunction7Code.mmSecurityControl}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#SecurityDetails
- * MessageFunction7Code.SecurityDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmSecurityDetails
+ * MessageFunction7Code.mmSecurityDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#SecurityKeyCompletion
- * MessageFunction7Code.SecurityKeyCompletion}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmSecurityKeyCompletion
+ * MessageFunction7Code.mmSecurityKeyCompletion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#SecurityKeyStatus
- * MessageFunction7Code.SecurityKeyStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction7Code#mmSecurityKeyStatus
+ * MessageFunction7Code.mmSecurityKeyStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -162,17 +162,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMBalance
-	 * MessageFunction11Code.ATMBalance}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMBalance
+	 * MessageFunction11Code.mmATMBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMBalance = new MMCode() {
+	public static final MMCode mmATMBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMBalance);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMBalance);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -194,17 +194,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMCompletionAcknowledgement
-	 * MessageFunction11Code.ATMCompletionAcknowledgement}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMCompletionAcknowledgement
+	 * MessageFunction11Code.mmATMCompletionAcknowledgement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMCompletionAcknowledgement = new MMCode() {
+	public static final MMCode mmATMCompletionAcknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCompletionAcknowledgement";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMCompletionAcknowledgement);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMCompletionAcknowledgement);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -226,17 +226,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMCompletionAdvice
-	 * MessageFunction11Code.ATMCompletionAdvice}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMCompletionAdvice
+	 * MessageFunction11Code.mmATMCompletionAdvice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMCompletionAdvice = new MMCode() {
+	public static final MMCode mmATMCompletionAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCompletionAdvice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMCompletionAdvice);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMCompletionAdvice);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -258,17 +258,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMControl
-	 * MessageFunction11Code.ATMControl}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMControl
+	 * MessageFunction11Code.mmATMControl}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMControl = new MMCode() {
+	public static final MMCode mmATMControl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMControl";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMControl);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMControl);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -290,17 +290,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMDeviceControl
-	 * MessageFunction11Code.ATMDeviceControl}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMDeviceControl
+	 * MessageFunction11Code.mmATMDeviceControl}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMDeviceControl = new MMCode() {
+	public static final MMCode mmATMDeviceControl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDeviceControl";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMDeviceControl);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMDeviceControl);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -322,17 +322,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMDiagnosticRequest
-	 * MessageFunction11Code.ATMDiagnosticRequest}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMDiagnosticRequest
+	 * MessageFunction11Code.mmATMDiagnosticRequest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMDiagnosticRequest = new MMCode() {
+	public static final MMCode mmATMDiagnosticRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDiagnosticRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMDiagnosticRequest);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMDiagnosticRequest);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -354,17 +354,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMDiagnosticResponse
-	 * MessageFunction11Code.ATMDiagnosticResponse}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMDiagnosticResponse
+	 * MessageFunction11Code.mmATMDiagnosticResponse}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMDiagnosticResponse = new MMCode() {
+	public static final MMCode mmATMDiagnosticResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDiagnosticResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMDiagnosticResponse);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMDiagnosticResponse);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -386,17 +386,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMGlobalStatus
-	 * MessageFunction11Code.ATMGlobalStatus}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMGlobalStatus
+	 * MessageFunction11Code.mmATMGlobalStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMGlobalStatus = new MMCode() {
+	public static final MMCode mmATMGlobalStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMGlobalStatus";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMGlobalStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMGlobalStatus);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -418,17 +418,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMInquiryRequest
-	 * MessageFunction11Code.ATMInquiryRequest}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMInquiryRequest
+	 * MessageFunction11Code.mmATMInquiryRequest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMInquiryRequest = new MMCode() {
+	public static final MMCode mmATMInquiryRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMInquiryRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMInquiryRequest);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMInquiryRequest);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -450,17 +450,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMInquiryResponse
-	 * MessageFunction11Code.ATMInquiryResponse}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMInquiryResponse
+	 * MessageFunction11Code.mmATMInquiryResponse}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMInquiryResponse = new MMCode() {
+	public static final MMCode mmATMInquiryResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMInquiryResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMInquiryResponse);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMInquiryResponse);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -482,17 +482,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMKeyDownloadRequest
-	 * MessageFunction11Code.ATMKeyDownloadRequest}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMKeyDownloadRequest
+	 * MessageFunction11Code.mmATMKeyDownloadRequest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMKeyDownloadRequest = new MMCode() {
+	public static final MMCode mmATMKeyDownloadRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMKeyDownloadRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMKeyDownloadRequest);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMKeyDownloadRequest);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -514,17 +514,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMKeyDownloadResponse
-	 * MessageFunction11Code.ATMKeyDownloadResponse}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMKeyDownloadResponse
+	 * MessageFunction11Code.mmATMKeyDownloadResponse}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMKeyDownloadResponse = new MMCode() {
+	public static final MMCode mmATMKeyDownloadResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMKeyDownloadResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMKeyDownloadResponse);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMKeyDownloadResponse);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -546,17 +546,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMPINManagementRequest
-	 * MessageFunction11Code.ATMPINManagementRequest}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMPINManagementRequest
+	 * MessageFunction11Code.mmATMPINManagementRequest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMPINManagementRequest = new MMCode() {
+	public static final MMCode mmATMPINManagementRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMPINManagementRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMPINManagementRequest);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMPINManagementRequest);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -578,17 +578,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMPINManagementResponse
-	 * MessageFunction11Code.ATMPINManagementResponse}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMPINManagementResponse
+	 * MessageFunction11Code.mmATMPINManagementResponse}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMPINManagementResponse = new MMCode() {
+	public static final MMCode mmATMPINManagementResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMPINManagementResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMPINManagementResponse);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMPINManagementResponse);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -610,17 +610,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMRequestReject
-	 * MessageFunction11Code.ATMRequestReject}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMRequestReject
+	 * MessageFunction11Code.mmATMRequestReject}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMRequestReject = new MMCode() {
+	public static final MMCode mmATMRequestReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMRequestReject";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMRequestReject);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMRequestReject);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -642,17 +642,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMResponseReject
-	 * MessageFunction11Code.ATMResponseReject}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMResponseReject
+	 * MessageFunction11Code.mmATMResponseReject}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMResponseReject = new MMCode() {
+	public static final MMCode mmATMResponseReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMResponseReject";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMResponseReject);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMResponseReject);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -674,17 +674,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMWithdrawalAdvice
-	 * MessageFunction11Code.ATMWithdrawalAdvice}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMWithdrawalAdvice
+	 * MessageFunction11Code.mmATMWithdrawalAdvice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMWithdrawalAdvice = new MMCode() {
+	public static final MMCode mmATMWithdrawalAdvice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalAdvice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMWithdrawalAdvice);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMWithdrawalAdvice);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -706,17 +706,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMWithdrawalAknowledgement
-	 * MessageFunction11Code.ATMWithdrawalAknowledgement}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMWithdrawalAknowledgement
+	 * MessageFunction11Code.mmATMWithdrawalAknowledgement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMWithdrawalAknowledgement = new MMCode() {
+	public static final MMCode mmATMWithdrawalAknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalAknowledgement";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMWithdrawalAknowledgement);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMWithdrawalAknowledgement);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -738,17 +738,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMWithdrawalRequest
-	 * MessageFunction11Code.ATMWithdrawalRequest}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMWithdrawalRequest
+	 * MessageFunction11Code.mmATMWithdrawalRequest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMWithdrawalRequest = new MMCode() {
+	public static final MMCode mmATMWithdrawalRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMWithdrawalRequest);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMWithdrawalRequest);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -770,17 +770,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMWithdrawalResponse
-	 * MessageFunction11Code.ATMWithdrawalResponse}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMWithdrawalResponse
+	 * MessageFunction11Code.mmATMWithdrawalResponse}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMWithdrawalResponse = new MMCode() {
+	public static final MMCode mmATMWithdrawalResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMWithdrawalResponse);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMWithdrawalResponse);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -802,17 +802,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#CountersInquiry
-	 * MessageFunction11Code.CountersInquiry}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmCountersInquiry
+	 * MessageFunction11Code.mmCountersInquiry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CountersInquiry = new MMCode() {
+	public static final MMCode mmCountersInquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.CountersInquiry);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmCountersInquiry);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -834,17 +834,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#HostToATMAcknowledgement
-	 * MessageFunction11Code.HostToATMAcknowledgement}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmHostToATMAcknowledgement
+	 * MessageFunction11Code.mmHostToATMAcknowledgement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HostToATMAcknowledgement = new MMCode() {
+	public static final MMCode mmHostToATMAcknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostToATMAcknowledgement";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.HostToATMAcknowledgement);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmHostToATMAcknowledgement);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -866,17 +866,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#HostToATMRequest
-	 * MessageFunction11Code.HostToATMRequest}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmHostToATMRequest
+	 * MessageFunction11Code.mmHostToATMRequest}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HostToATMRequest = new MMCode() {
+	public static final MMCode mmHostToATMRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostToATMRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.HostToATMRequest);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmHostToATMRequest);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -898,17 +898,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#ATMOperation
-	 * MessageFunction11Code.ATMOperation}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmATMOperation
+	 * MessageFunction11Code.mmATMOperation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ATMOperation = new MMCode() {
+	public static final MMCode mmATMOperation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMOperation";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.ATMOperation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmATMOperation);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -930,17 +930,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#SecurityControl
-	 * MessageFunction11Code.SecurityControl}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmSecurityControl
+	 * MessageFunction11Code.mmSecurityControl}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityControl = new MMCode() {
+	public static final MMCode mmSecurityControl = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityControl";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.SecurityControl);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmSecurityControl);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -962,17 +962,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#SecurityDetails
-	 * MessageFunction11Code.SecurityDetails}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmSecurityDetails
+	 * MessageFunction11Code.mmSecurityDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityDetails = new MMCode() {
+	public static final MMCode mmSecurityDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDetails";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.SecurityDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmSecurityDetails);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -994,17 +994,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#SecurityKeyCompletion
-	 * MessageFunction11Code.SecurityKeyCompletion}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmSecurityKeyCompletion
+	 * MessageFunction11Code.mmSecurityKeyCompletion}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityKeyCompletion = new MMCode() {
+	public static final MMCode mmSecurityKeyCompletion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityKeyCompletion";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.SecurityKeyCompletion);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmSecurityKeyCompletion);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -1026,17 +1026,17 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#SecurityKeyStatus
-	 * MessageFunction11Code.SecurityKeyStatus}</li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction11Code#mmSecurityKeyStatus
+	 * MessageFunction11Code.mmSecurityKeyStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityKeyStatus = new MMCode() {
+	public static final MMCode mmSecurityKeyStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityKeyStatus";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.SecurityKeyStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction11Code.mmSecurityKeyStatus);
 			owner_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
@@ -1044,24 +1044,25 @@ public class MessageFunction7Code extends MessageFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction7Code";
 				definition = "Identifies the type of process related to an ATM message.";
 				nextVersions_lazy = () -> Arrays.asList(MessageFunction11Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction7Code.ATMBalance, com.tools20022.repository.codeset.MessageFunction7Code.ATMCompletionAcknowledgement,
-						com.tools20022.repository.codeset.MessageFunction7Code.ATMCompletionAdvice, com.tools20022.repository.codeset.MessageFunction7Code.ATMControl, com.tools20022.repository.codeset.MessageFunction7Code.ATMDeviceControl,
-						com.tools20022.repository.codeset.MessageFunction7Code.ATMDiagnosticRequest, com.tools20022.repository.codeset.MessageFunction7Code.ATMDiagnosticResponse,
-						com.tools20022.repository.codeset.MessageFunction7Code.ATMGlobalStatus, com.tools20022.repository.codeset.MessageFunction7Code.ATMInquiryRequest,
-						com.tools20022.repository.codeset.MessageFunction7Code.ATMInquiryResponse, com.tools20022.repository.codeset.MessageFunction7Code.ATMKeyDownloadRequest,
-						com.tools20022.repository.codeset.MessageFunction7Code.ATMKeyDownloadResponse, com.tools20022.repository.codeset.MessageFunction7Code.ATMPINManagementRequest,
-						com.tools20022.repository.codeset.MessageFunction7Code.ATMPINManagementResponse, com.tools20022.repository.codeset.MessageFunction7Code.ATMRequestReject,
-						com.tools20022.repository.codeset.MessageFunction7Code.ATMResponseReject, com.tools20022.repository.codeset.MessageFunction7Code.ATMWithdrawalAdvice,
-						com.tools20022.repository.codeset.MessageFunction7Code.ATMWithdrawalAknowledgement, com.tools20022.repository.codeset.MessageFunction7Code.ATMWithdrawalRequest,
-						com.tools20022.repository.codeset.MessageFunction7Code.ATMWithdrawalResponse, com.tools20022.repository.codeset.MessageFunction7Code.CountersInquiry,
-						com.tools20022.repository.codeset.MessageFunction7Code.HostToATMAcknowledgement, com.tools20022.repository.codeset.MessageFunction7Code.HostToATMRequest,
-						com.tools20022.repository.codeset.MessageFunction7Code.ATMOperation, com.tools20022.repository.codeset.MessageFunction7Code.SecurityControl, com.tools20022.repository.codeset.MessageFunction7Code.SecurityDetails,
-						com.tools20022.repository.codeset.MessageFunction7Code.SecurityKeyCompletion, com.tools20022.repository.codeset.MessageFunction7Code.SecurityKeyStatus);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction7Code.mmATMBalance, com.tools20022.repository.codeset.MessageFunction7Code.mmATMCompletionAcknowledgement,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmATMCompletionAdvice, com.tools20022.repository.codeset.MessageFunction7Code.mmATMControl,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmATMDeviceControl, com.tools20022.repository.codeset.MessageFunction7Code.mmATMDiagnosticRequest,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmATMDiagnosticResponse, com.tools20022.repository.codeset.MessageFunction7Code.mmATMGlobalStatus,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmATMInquiryRequest, com.tools20022.repository.codeset.MessageFunction7Code.mmATMInquiryResponse,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmATMKeyDownloadRequest, com.tools20022.repository.codeset.MessageFunction7Code.mmATMKeyDownloadResponse,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmATMPINManagementRequest, com.tools20022.repository.codeset.MessageFunction7Code.mmATMPINManagementResponse,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmATMRequestReject, com.tools20022.repository.codeset.MessageFunction7Code.mmATMResponseReject,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmATMWithdrawalAdvice, com.tools20022.repository.codeset.MessageFunction7Code.mmATMWithdrawalAknowledgement,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmATMWithdrawalRequest, com.tools20022.repository.codeset.MessageFunction7Code.mmATMWithdrawalResponse,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmCountersInquiry, com.tools20022.repository.codeset.MessageFunction7Code.mmHostToATMAcknowledgement,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmHostToATMRequest, com.tools20022.repository.codeset.MessageFunction7Code.mmATMOperation,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmSecurityControl, com.tools20022.repository.codeset.MessageFunction7Code.mmSecurityDetails,
+						com.tools20022.repository.codeset.MessageFunction7Code.mmSecurityKeyCompletion, com.tools20022.repository.codeset.MessageFunction7Code.mmSecurityKeyStatus);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
 			}
 		});

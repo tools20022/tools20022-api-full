@@ -31,20 +31,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#Entitled
- * CancellationRightCode.Entitled}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#mmEntitled
+ * CancellationRightCode.mmEntitled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#ExecutionOnly
- * CancellationRightCode.ExecutionOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#mmExecutionOnly
+ * CancellationRightCode.mmExecutionOnly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#WaiverAgreement
- * CancellationRightCode.WaiverAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#mmWaiverAgreement
+ * CancellationRightCode.mmWaiverAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#Institutional
- * CancellationRightCode.Institutional}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#mmInstitutional
+ * CancellationRightCode.mmInstitutional}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#Other
- * CancellationRightCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#mmOther
+ * CancellationRightCode.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -106,7 +106,7 @@ public class CancellationRightCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Entitled = new MMCode() {
+	public static final MMCode mmEntitled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Entitled";
@@ -139,7 +139,7 @@ public class CancellationRightCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ExecutionOnly = new MMCode() {
+	public static final MMCode mmExecutionOnly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExecutionOnly";
@@ -172,7 +172,7 @@ public class CancellationRightCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode WaiverAgreement = new MMCode() {
+	public static final MMCode mmWaiverAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WaiverAgreement";
@@ -205,7 +205,7 @@ public class CancellationRightCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Institutional = new MMCode() {
+	public static final MMCode mmInstitutional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Institutional";
@@ -235,7 +235,7 @@ public class CancellationRightCode {
 	 * definition} = "Another type of cancellation right."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -248,13 +248,13 @@ public class CancellationRightCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VALI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationRightCode";
 				definition = "Specifies if the investor has the right to cancel an instruction or, if not, the reason the investor cannot cancel.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationRightCode.Entitled, com.tools20022.repository.codeset.CancellationRightCode.ExecutionOnly,
-						com.tools20022.repository.codeset.CancellationRightCode.WaiverAgreement, com.tools20022.repository.codeset.CancellationRightCode.Institutional, com.tools20022.repository.codeset.CancellationRightCode.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationRightCode.mmEntitled, com.tools20022.repository.codeset.CancellationRightCode.mmExecutionOnly,
+						com.tools20022.repository.codeset.CancellationRightCode.mmWaiverAgreement, com.tools20022.repository.codeset.CancellationRightCode.mmInstitutional, com.tools20022.repository.codeset.CancellationRightCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(CancellationRight2Code.mmObject(), CancellationRight1Code.mmObject());
 			}
 		});

@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CreditTaxType1#TaxType
- * CreditTaxType1.TaxType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CreditTaxType1#Amount
- * CreditTaxType1.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditTaxType1#mmTaxType
+ * CreditTaxType1.mmTaxType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditTaxType1#mmAmount
+ * CreditTaxType1.mmAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditTaxType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateType3FormatChoice taxType;
 	/**
 	 * Type of tax.
 	 * <p>
@@ -84,7 +85,7 @@ public class CreditTaxType1 {
 	 * definition} = "Type of tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CreditTaxType1.mmObject();
 			isDerived = false;
@@ -92,11 +93,12 @@ public class CreditTaxType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxType";
 			definition = "Type of tax.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> RateType3FormatChoice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * The value of the related tax expressed as an amount.
 	 * <p>
@@ -124,7 +126,7 @@ public class CreditTaxType1 {
 	 * definition} = "The value of the related tax expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CreditTaxType1.mmObject();
 			isDerived = false;
@@ -132,8 +134,8 @@ public class CreditTaxType1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "The value of the related tax expressed as an amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -141,13 +143,29 @@ public class CreditTaxType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTaxType1.TaxType, com.tools20022.repository.msg.CreditTaxType1.Amount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTaxType1.mmTaxType, com.tools20022.repository.msg.CreditTaxType1.mmAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CreditTaxType1";
 				definition = "Specifies the value of credit tax.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateType3FormatChoice getTaxType() {
+		return taxType;
+	}
+
+	public void setTaxType(RateType3FormatChoice taxType) {
+		this.taxType = taxType;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

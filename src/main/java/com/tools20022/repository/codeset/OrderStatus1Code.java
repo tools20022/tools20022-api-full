@@ -33,50 +33,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrderStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#New
- * OrderStatus1Code.New}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmNew
+ * OrderStatus1Code.mmNew}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#PartialFill
- * OrderStatus1Code.PartialFill}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#Filled
- * OrderStatus1Code.Filled}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmPartialFill
+ * OrderStatus1Code.mmPartialFill}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmFilled
+ * OrderStatus1Code.mmFilled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#DoneForDay
- * OrderStatus1Code.DoneForDay}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#Cancelled
- * OrderStatus1Code.Cancelled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#Replaced
- * OrderStatus1Code.Replaced}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmDoneForDay
+ * OrderStatus1Code.mmDoneForDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#PendingCancel
- * OrderStatus1Code.PendingCancel}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#Stopped
- * OrderStatus1Code.Stopped}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#Rejected
- * OrderStatus1Code.Rejected}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#Suspended
- * OrderStatus1Code.Suspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmCancelled
+ * OrderStatus1Code.mmCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#PendingNew
- * OrderStatus1Code.PendingNew}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmReplaced
+ * OrderStatus1Code.mmReplaced}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#Calculated
- * OrderStatus1Code.Calculated}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#Expired
- * OrderStatus1Code.Expired}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmPendingCancel
+ * OrderStatus1Code.mmPendingCancel}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmStopped
+ * OrderStatus1Code.mmStopped}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#AcceptedForBidding
- * OrderStatus1Code.AcceptedForBidding}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmRejected
+ * OrderStatus1Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#PendingReplace
- * OrderStatus1Code.PendingReplace}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmSuspended
+ * OrderStatus1Code.mmSuspended}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmPendingNew
+ * OrderStatus1Code.mmPendingNew}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmCalculated
+ * OrderStatus1Code.mmCalculated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmExpired
+ * OrderStatus1Code.mmExpired}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmAcceptedForBidding
+ * OrderStatus1Code.mmAcceptedForBidding}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus1Code#mmPendingReplace
+ * OrderStatus1Code.mmPendingReplace}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -112,7 +116,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "New"</li>
 	 * </ul>
 	 */
-	public static final MMCode New = new MMCode() {
+	public static final MMCode mmNew = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
@@ -135,7 +139,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "PartialFill"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialFill = new MMCode() {
+	public static final MMCode mmPartialFill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialFill";
@@ -158,7 +162,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "Filled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Filled = new MMCode() {
+	public static final MMCode mmFilled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Filled";
@@ -181,7 +185,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "DoneForDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode DoneForDay = new MMCode() {
+	public static final MMCode mmDoneForDay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoneForDay";
@@ -204,7 +208,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -227,7 +231,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "Replaced"</li>
 	 * </ul>
 	 */
-	public static final MMCode Replaced = new MMCode() {
+	public static final MMCode mmReplaced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replaced";
@@ -250,7 +254,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "PendingCancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingCancel = new MMCode() {
+	public static final MMCode mmPendingCancel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancel";
@@ -273,7 +277,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "Stopped"</li>
 	 * </ul>
 	 */
-	public static final MMCode Stopped = new MMCode() {
+	public static final MMCode mmStopped = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stopped";
@@ -296,7 +300,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -319,7 +323,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspended = new MMCode() {
+	public static final MMCode mmSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
@@ -342,7 +346,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "PendingNew"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingNew = new MMCode() {
+	public static final MMCode mmPendingNew = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingNew";
@@ -365,7 +369,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "Calculated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Calculated = new MMCode() {
+	public static final MMCode mmCalculated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Calculated";
@@ -388,7 +392,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "Expired"</li>
 	 * </ul>
 	 */
-	public static final MMCode Expired = new MMCode() {
+	public static final MMCode mmExpired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
@@ -411,7 +415,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "AcceptedForBidding"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedForBidding = new MMCode() {
+	public static final MMCode mmAcceptedForBidding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedForBidding";
@@ -434,7 +438,7 @@ public class OrderStatus1Code extends OrderStatusCode {
 	 * name} = "PendingReplace"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingReplace = new MMCode() {
+	public static final MMCode mmPendingReplace = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReplace";
@@ -445,16 +449,16 @@ public class OrderStatus1Code extends OrderStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWW");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus1Code";
 				definition = "Identifies current status of order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus1Code.New, com.tools20022.repository.codeset.OrderStatus1Code.PartialFill, com.tools20022.repository.codeset.OrderStatus1Code.Filled,
-						com.tools20022.repository.codeset.OrderStatus1Code.DoneForDay, com.tools20022.repository.codeset.OrderStatus1Code.Cancelled, com.tools20022.repository.codeset.OrderStatus1Code.Replaced,
-						com.tools20022.repository.codeset.OrderStatus1Code.PendingCancel, com.tools20022.repository.codeset.OrderStatus1Code.Stopped, com.tools20022.repository.codeset.OrderStatus1Code.Rejected,
-						com.tools20022.repository.codeset.OrderStatus1Code.Suspended, com.tools20022.repository.codeset.OrderStatus1Code.PendingNew, com.tools20022.repository.codeset.OrderStatus1Code.Calculated,
-						com.tools20022.repository.codeset.OrderStatus1Code.Expired, com.tools20022.repository.codeset.OrderStatus1Code.AcceptedForBidding, com.tools20022.repository.codeset.OrderStatus1Code.PendingReplace);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus1Code.mmNew, com.tools20022.repository.codeset.OrderStatus1Code.mmPartialFill, com.tools20022.repository.codeset.OrderStatus1Code.mmFilled,
+						com.tools20022.repository.codeset.OrderStatus1Code.mmDoneForDay, com.tools20022.repository.codeset.OrderStatus1Code.mmCancelled, com.tools20022.repository.codeset.OrderStatus1Code.mmReplaced,
+						com.tools20022.repository.codeset.OrderStatus1Code.mmPendingCancel, com.tools20022.repository.codeset.OrderStatus1Code.mmStopped, com.tools20022.repository.codeset.OrderStatus1Code.mmRejected,
+						com.tools20022.repository.codeset.OrderStatus1Code.mmSuspended, com.tools20022.repository.codeset.OrderStatus1Code.mmPendingNew, com.tools20022.repository.codeset.OrderStatus1Code.mmCalculated,
+						com.tools20022.repository.codeset.OrderStatus1Code.mmExpired, com.tools20022.repository.codeset.OrderStatus1Code.mmAcceptedForBidding, com.tools20022.repository.codeset.OrderStatus1Code.mmPendingReplace);
 				trace_lazy = () -> OrderStatusCode.mmObject();
 			}
 		});

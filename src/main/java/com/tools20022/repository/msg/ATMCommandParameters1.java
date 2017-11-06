@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCommandParameters1#SerialNumber
- * ATMCommandParameters1.SerialNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommandParameters1#mmSerialNumber
+ * ATMCommandParameters1.mmSerialNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCommandParameters1#RequiredConfiguration
- * ATMCommandParameters1.RequiredConfiguration}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommandParameters1#mmRequiredConfiguration
+ * ATMCommandParameters1.mmRequiredConfiguration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCommandParameters1#RequiredStatus
- * ATMCommandParameters1.RequiredStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommandParameters1#mmRequiredStatus
+ * ATMCommandParameters1.mmRequiredStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCommandParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text serialNumber;
 	/**
 	 * Serial number of the device.
 	 * <p>
@@ -98,7 +99,7 @@ public class ATMCommandParameters1 {
 	 * definition} = "Serial number of the device."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommandParameters1.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class ATMCommandParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerialNumber";
 			definition = "Serial number of the device.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ATMSecurityConfiguration1 requiredConfiguration;
 	/**
 	 * Update of the security configuration to apply on the security module of
 	 * the ATM.
@@ -141,7 +143,7 @@ public class ATMCommandParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequiredConfiguration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequiredConfiguration = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCommandParameters1.mmObject();
 			isDerived = false;
@@ -149,12 +151,13 @@ public class ATMCommandParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredConfiguration";
 			definition = "Update of the security configuration to apply on the security module of the ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMSecurityConfiguration1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 		}
 	};
+	protected ATMStatus2Code requiredStatus;
 	/**
 	 * New status to apply on the security module of the ATM.
 	 * <p>
@@ -183,7 +186,7 @@ public class ATMCommandParameters1 {
 	 * definition} = "New status to apply on the security module of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequiredStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequiredStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommandParameters1.mmObject();
 			isDerived = false;
@@ -191,8 +194,8 @@ public class ATMCommandParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredStatus";
 			definition = "New status to apply on the security module of the ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ATMStatus2Code.mmObject();
 		}
 	};
@@ -200,15 +203,39 @@ public class ATMCommandParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommandParameters1.SerialNumber, com.tools20022.repository.msg.ATMCommandParameters1.RequiredConfiguration,
-						com.tools20022.repository.msg.ATMCommandParameters1.RequiredStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommandParameters1.mmSerialNumber, com.tools20022.repository.msg.ATMCommandParameters1.mmRequiredConfiguration,
+						com.tools20022.repository.msg.ATMCommandParameters1.mmRequiredStatus);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandParameters1";
 				definition = "Parameters to be used to update the configuration or the status security device.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getSerialNumber() {
+		return serialNumber;
+	}
+
+	public void setSerialNumber(Max35Text serialNumber) {
+		this.serialNumber = serialNumber;
+	}
+
+	public ATMSecurityConfiguration1 getRequiredConfiguration() {
+		return requiredConfiguration;
+	}
+
+	public void setRequiredConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 requiredConfiguration) {
+		this.requiredConfiguration = requiredConfiguration;
+	}
+
+	public ATMStatus2Code getRequiredStatus() {
+		return requiredStatus;
+	}
+
+	public void setRequiredStatus(ATMStatus2Code requiredStatus) {
+		this.requiredStatus = requiredStatus;
 	}
 }

@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfPriceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice16Code#Market
- * TypeOfPrice16Code.Market}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice16Code#mmMarket
+ * TypeOfPrice16Code.mmMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice16Code#Indicative
- * TypeOfPrice16Code.Indicative}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice16Code#mmIndicative
+ * TypeOfPrice16Code.mmIndicative}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class TypeOfPrice16Code extends TypeOfPriceCode {
 	 * name} = "Market"</li>
 	 * </ul>
 	 */
-	public static final MMCode Market = new MMCode() {
+	public static final MMCode mmMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
@@ -103,7 +103,7 @@ public class TypeOfPrice16Code extends TypeOfPriceCode {
 	 * name} = "Indicative"</li>
 	 * </ul>
 	 */
-	public static final MMCode Indicative = new MMCode() {
+	public static final MMCode mmIndicative = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
@@ -114,12 +114,12 @@ public class TypeOfPrice16Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MRKT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice16Code";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice16Code.Market, com.tools20022.repository.codeset.TypeOfPrice16Code.Indicative);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice16Code.mmMarket, com.tools20022.repository.codeset.TypeOfPrice16Code.mmIndicative);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaximumAmountByPeriod1#MaximumAmount
- * MaximumAmountByPeriod1.MaximumAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.MaximumAmountByPeriod1#mmMaximumAmount
+ * MaximumAmountByPeriod1.mmMaximumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaximumAmountByPeriod1#NumberOfDays
- * MaximumAmountByPeriod1.NumberOfDays}</li>
+ * {@linkplain com.tools20022.repository.msg.MaximumAmountByPeriod1#mmNumberOfDays
+ * MaximumAmountByPeriod1.mmNumberOfDays}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MaximumAmountByPeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount maximumAmount;
 	/**
 	 * Maximum amount allowed over a specific period of time.
 	 * <p>
@@ -76,8 +77,8 @@ public class MaximumAmountByPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OperationThreshold#MaximumAmount
-	 * OperationThreshold.MaximumAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.OperationThreshold#mmMaximumAmount
+	 * OperationThreshold.mmMaximumAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class MaximumAmountByPeriod1 {
 	 * definition} = "Maximum amount allowed over a specific period of time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OperationThreshold.mmMaximumAmount;
 			componentContext_lazy = () -> MaximumAmountByPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OperationThreshold.MaximumAmount;
 			isDerived = false;
 			xmlTag = "MaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum amount allowed over a specific period of time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max3NumericText numberOfDays;
 	/**
 	 * Period specified as a number of days.
 	 * <p>
@@ -123,8 +125,8 @@ public class MaximumAmountByPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BankOperation#ApplicablePeriod
-	 * BankOperation.ApplicablePeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.BankOperation#mmApplicablePeriod
+	 * BankOperation.mmApplicablePeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class MaximumAmountByPeriod1 {
 	 * definition} = "Period specified as a number of days."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankOperation.mmApplicablePeriod;
 			componentContext_lazy = () -> MaximumAmountByPeriod1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankOperation.ApplicablePeriod;
 			isDerived = false;
 			xmlTag = "NbOfDays";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDays";
 			definition = "Period specified as a number of days.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class MaximumAmountByPeriod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaximumAmountByPeriod1.MaximumAmount, com.tools20022.repository.msg.MaximumAmountByPeriod1.NumberOfDays);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaximumAmountByPeriod1.mmMaximumAmount, com.tools20022.repository.msg.MaximumAmountByPeriod1.mmNumberOfDays);
 				trace_lazy = () -> OperationThreshold.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MaximumAmountByPeriod1";
 				definition = "Maximum amount allowed over a specific period of time.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getMaximumAmount() {
+		return maximumAmount;
+	}
+
+	public void setMaximumAmount(ActiveCurrencyAndAmount maximumAmount) {
+		this.maximumAmount = maximumAmount;
+	}
+
+	public Max3NumericText getNumberOfDays() {
+		return numberOfDays;
+	}
+
+	public void setNumberOfDays(Max3NumericText numberOfDays) {
+		this.numberOfDays = numberOfDays;
 	}
 }

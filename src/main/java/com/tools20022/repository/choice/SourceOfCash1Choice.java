@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.SourceOfCash1Choice#Code
- * SourceOfCash1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SourceOfCash1Choice#mmCode
+ * SourceOfCash1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SourceOfCash1Choice#Proprietary
- * SourceOfCash1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SourceOfCash1Choice#mmProprietary
+ * SourceOfCash1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SourceOfCash1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SourceOfCash1Code code;
 	/**
 	 * Source of cash expressed as a code.
 	 * <p>
@@ -87,7 +88,7 @@ public class SourceOfCash1Choice {
 	 * definition} = "Source of cash expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SourceOfCash1Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class SourceOfCash1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Source of cash expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SourceOfCash1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Source of cash expressed as a proprietary code.
 	 * <p>
@@ -127,7 +129,7 @@ public class SourceOfCash1Choice {
 	 * definition} = "Source of cash expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SourceOfCash1Choice.mmObject();
 			isDerived = false;
@@ -135,23 +137,39 @@ public class SourceOfCash1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Source of cash expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SourceOfCash1Choice.Code, com.tools20022.repository.choice.SourceOfCash1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SourceOfCash1Choice.mmCode, com.tools20022.repository.choice.SourceOfCash1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SourceOfCash1Choice";
 				definition = "Choice of formats for the source of the cash.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SourceOfCash1Code getCode() {
+		return code;
+	}
+
+	public void setCode(SourceOfCash1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

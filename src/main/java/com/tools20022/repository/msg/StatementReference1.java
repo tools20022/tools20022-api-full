@@ -36,13 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementReference1#StatementIdentification
- * StatementReference1.StatementIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementReference1#mmStatementIdentification
+ * StatementReference1.mmStatementIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatementReference1#StatementDateTime
- * StatementReference1.StatementDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatementReference1#Pagination
- * StatementReference1.Pagination}</li>
+ * {@linkplain com.tools20022.repository.msg.StatementReference1#mmStatementDateTime
+ * StatementReference1.mmStatementDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatementReference1#mmPagination
+ * StatementReference1.mmPagination}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#RelatedStatement
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.RelatedStatement}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmRelatedStatement
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmRelatedStatement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementReference1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text statementIdentification;
 	/**
 	 * Reference common to all pages of the statement for which the status
 	 * advice is sent.
@@ -104,7 +106,7 @@ public class StatementReference1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementReference1.mmObject();
 			isDerived = false;
@@ -112,11 +114,12 @@ public class StatementReference1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Reference common to all pages of the statement for which the status advice is sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice statementDateTime;
 	/**
 	 * Date and time the statement was created.
 	 * <p>
@@ -145,7 +148,7 @@ public class StatementReference1 {
 	 * definition} = "Date and time the statement was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementReference1.mmObject();
 			isDerived = false;
@@ -153,11 +156,12 @@ public class StatementReference1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateTime";
 			definition = "Date and time the statement was created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected Pagination pagination;
 	/**
 	 * Page number of the related message (within the statement) and
 	 * continuation indicator to indicate that the statement is to continue or
@@ -187,7 +191,7 @@ public class StatementReference1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Pagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPagination = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatementReference1.mmObject();
 			isDerived = false;
@@ -195,25 +199,49 @@ public class StatementReference1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the related message (within the statement) and continuation indicator to indicate that the statement is to continue or that the related message is the last page of the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementReference1.StatementIdentification, com.tools20022.repository.msg.StatementReference1.StatementDateTime,
-						com.tools20022.repository.msg.StatementReference1.Pagination);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.RelatedStatement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementReference1.mmStatementIdentification, com.tools20022.repository.msg.StatementReference1.mmStatementDateTime,
+						com.tools20022.repository.msg.StatementReference1.mmPagination);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmRelatedStatement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementReference1";
 				definition = "Identifies the reference of the statment  by a unique identifier and the date (and time).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getStatementIdentification() {
+		return statementIdentification;
+	}
+
+	public void setStatementIdentification(Max35Text statementIdentification) {
+		this.statementIdentification = statementIdentification;
+	}
+
+	public DateAndDateTimeChoice getStatementDateTime() {
+		return statementDateTime;
+	}
+
+	public void setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
+		this.statementDateTime = statementDateTime;
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(com.tools20022.repository.msg.Pagination pagination) {
+		this.pagination = pagination;
 	}
 }

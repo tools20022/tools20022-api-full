@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GovernanceIdentification1Choice#Code
- * GovernanceIdentification1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.GovernanceIdentification1Choice#mmCode
+ * GovernanceIdentification1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GovernanceIdentification1Choice#Proprietary
- * GovernanceIdentification1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.GovernanceIdentification1Choice#mmProprietary
+ * GovernanceIdentification1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GovernanceIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected GovernanceIdentification1Code code;
 	/**
 	 * Governance identification information.<br>
 	 * <p>
@@ -77,8 +78,8 @@ public class GovernanceIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GovernanceRules#Identification
-	 * GovernanceRules.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GovernanceRules#mmIdentification
+	 * GovernanceRules.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class GovernanceIdentification1Choice {
 	 * definition} = "Governance identification information.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.mmIdentification;
 			componentContext_lazy = () -> GovernanceIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.Identification;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Governance identification information.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> GovernanceIdentification1Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietary;
 	/**
 	 * Governance identification information expressed as a proprietary code.
 	 * <p>
@@ -122,8 +124,8 @@ public class GovernanceIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GovernanceRules#Identification
-	 * GovernanceRules.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GovernanceRules#mmIdentification
+	 * GovernanceRules.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,33 +145,49 @@ public class GovernanceIdentification1Choice {
 	 * "Governance identification information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.mmIdentification;
 			componentContext_lazy = () -> GovernanceIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.Identification;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Governance identification information expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GovernanceIdentification1Choice.Code, com.tools20022.repository.choice.GovernanceIdentification1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GovernanceIdentification1Choice.mmCode, com.tools20022.repository.choice.GovernanceIdentification1Choice.mmProprietary);
 				trace_lazy = () -> GovernanceRules.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GovernanceIdentification1Choice";
 				definition = "Choice of format for the governance rules.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GovernanceIdentification1Code getCode() {
+		return code;
+	}
+
+	public void setCode(GovernanceIdentification1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

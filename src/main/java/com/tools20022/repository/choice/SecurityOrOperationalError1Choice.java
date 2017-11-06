@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the financial instruments details or the operational error details.
@@ -33,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityOrOperationalError1Choice#SecurityReportOrBusinessError
- * SecurityOrOperationalError1Choice.SecurityReportOrBusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityOrOperationalError1Choice#mmSecurityReportOrBusinessError
+ * SecurityOrOperationalError1Choice.mmSecurityReportOrBusinessError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SecurityOrOperationalError1Choice#OperationalError
- * SecurityOrOperationalError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.SecurityOrOperationalError1Choice#mmOperationalError
+ * SecurityOrOperationalError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityOrBusinessError1Choice securityReportOrBusinessError;
 	/**
 	 * Provides the financial instruments details or the business error.
 	 * <p>
@@ -88,7 +90,7 @@ public class SecurityOrOperationalError1Choice {
 	 * "Provides the financial instruments details or the business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecurityReportOrBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecurityReportOrBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -96,12 +98,13 @@ public class SecurityOrOperationalError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityReportOrBusinessError";
 			definition = "Provides the financial instruments details or the business error.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityOrBusinessError1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.SecurityOrBusinessError1Choice.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Provides the operational error details.
 	 * <p>
@@ -128,7 +131,7 @@ public class SecurityOrOperationalError1Choice {
 	 * definition} = "Provides the operational error details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -137,22 +140,38 @@ public class SecurityOrOperationalError1Choice {
 			name = "OperationalError";
 			definition = "Provides the operational error details.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.choice.SecurityOrOperationalError1Choice.SecurityReportOrBusinessError, com.tools20022.repository.choice.SecurityOrOperationalError1Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityOrOperationalError1Choice.mmSecurityReportOrBusinessError,
+						com.tools20022.repository.choice.SecurityOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityOrOperationalError1Choice";
 				definition = "Provides the financial instruments details or the operational error details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityOrBusinessError1Choice getSecurityReportOrBusinessError() {
+		return securityReportOrBusinessError;
+	}
+
+	public void setSecurityReportOrBusinessError(com.tools20022.repository.choice.SecurityOrBusinessError1Choice securityReportOrBusinessError) {
+		this.securityReportOrBusinessError = securityReportOrBusinessError;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

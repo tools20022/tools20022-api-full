@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.AuditTrail1;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Report between the static data audit trail or a business error.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice#AuditTrail
- * AuditTrailOrBusinessError1Choice.AuditTrail}</li>
+ * {@linkplain com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice#mmAuditTrail
+ * AuditTrailOrBusinessError1Choice.mmAuditTrail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice#BusinessError
- * AuditTrailOrBusinessError1Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice#mmBusinessError
+ * AuditTrailOrBusinessError1Choice.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AuditTrailOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AuditTrail1> auditTrail;
 	/**
 	 * Choice between data concerning static data audit trail retrieved or
 	 * business error.
@@ -89,7 +91,7 @@ public class AuditTrailOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuditTrail = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuditTrail = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -98,10 +100,11 @@ public class AuditTrailOrBusinessError1Choice {
 			name = "AuditTrail";
 			definition = "Choice between data concerning static data audit trail retrieved or business error.";
 			minOccurs = 1;
-			type_lazy = () -> AuditTrail1.mmObject();
 			isComposite = true;
+			type_lazy = () -> AuditTrail1.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> businessError;
 	/**
 	 * Business error resulting from a rejection.
 	 * <p>
@@ -128,7 +131,7 @@ public class AuditTrailOrBusinessError1Choice {
 	 * definition} = "Business error resulting from a rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -137,21 +140,37 @@ public class AuditTrailOrBusinessError1Choice {
 			name = "BusinessError";
 			definition = "Business error resulting from a rejection.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.AuditTrail, com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.BusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.mmAuditTrail, com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.mmBusinessError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AuditTrailOrBusinessError1Choice";
 				definition = "Report between the static data audit trail or a business error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AuditTrail1> getAuditTrail() {
+		return auditTrail;
+	}
+
+	public void setAuditTrail(List<AuditTrail1> auditTrail) {
+		this.auditTrail = auditTrail;
+	}
+
+	public List<ErrorHandling3> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = businessError;
 	}
 }

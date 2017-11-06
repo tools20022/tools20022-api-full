@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -58,27 +59,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#References
- * AccountRequestRejectionV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#mmReferences
+ * AccountRequestRejectionV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#AccountServicerIdentification
- * AccountRequestRejectionV01.AccountServicerIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#mmAccountServicerIdentification
+ * AccountRequestRejectionV01.mmAccountServicerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#AccountIdentification
- * AccountRequestRejectionV01.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#mmAccountIdentification
+ * AccountRequestRejectionV01.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#OrganisationIdentification
- * AccountRequestRejectionV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#mmOrganisationIdentification
+ * AccountRequestRejectionV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#DigitalSignature
- * AccountRequestRejectionV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#mmDigitalSignature
+ * AccountRequestRejectionV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.acmt.AccountRequestRejectionV01#identifier
- * AccountRequestRejectionV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code acmt.011.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountRequestRejectionV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected References6 references;
 	/**
 	 * Set of elements for the identification of the message and related
 	 * references.
@@ -127,17 +127,18 @@ public class AccountRequestRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock References = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Set of elements for the identification of the message and related references.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> References6.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification4 accountServicerIdentification;
 	/**
 	 * Unique and unambiguous identifier of a financial institution, as assigned
 	 * under an internationally recognised or proprietary identification scheme.
@@ -164,17 +165,18 @@ public class AccountRequestRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountServicerIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountServicerIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctSvcrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 	};
+	protected List<AccountForAction1> accountIdentification;
 	/**
 	 * Unique and unambiguous identification of the account between the account
 	 * owner and the account servicer.
@@ -201,7 +203,7 @@ public class AccountRequestRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,6 +213,7 @@ public class AccountRequestRejectionV01 {
 			complexType_lazy = () -> AccountForAction1.mmObject();
 		}
 	};
+	protected List<OrganisationIdentification6> organisationIdentification;
 	/**
 	 * Identifier for an organisation.
 	 * <p>
@@ -234,7 +237,7 @@ public class AccountRequestRejectionV01 {
 	 * definition} = "Identifier for an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OrganisationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOrganisationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,6 +247,7 @@ public class AccountRequestRejectionV01 {
 			complexType_lazy = () -> OrganisationIdentification6.mmObject();
 		}
 	};
+	protected List<PartyAndSignature1> digitalSignature;
 	/**
 	 * Contains the signature with its components, namely signed info, signature
 	 * value, key info and the object.
@@ -270,7 +274,7 @@ public class AccountRequestRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,33 +282,6 @@ public class AccountRequestRejectionV01 {
 			definition = "Contains the signature with its components, namely signed info, signature value, key info and the object.";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "acmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "acmt";
-			messageFunctionality = "011";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -319,12 +296,59 @@ public class AccountRequestRejectionV01 {
 				rootElement = "Document";
 				xmlTag = "AcctReqRjctn";
 				businessArea_lazy = () -> AccountManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountRequestRejectionV01.References, com.tools20022.repository.area.acmt.AccountRequestRejectionV01.AccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountRequestRejectionV01.AccountIdentification, com.tools20022.repository.area.acmt.AccountRequestRejectionV01.OrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountRequestRejectionV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.acmt.AccountRequestRejectionV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountRequestRejectionV01.mmReferences, com.tools20022.repository.area.acmt.AccountRequestRejectionV01.mmAccountServicerIdentification,
+						com.tools20022.repository.area.acmt.AccountRequestRejectionV01.mmAccountIdentification, com.tools20022.repository.area.acmt.AccountRequestRejectionV01.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountRequestRejectionV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "acmt";
+						messageFunctionality = "011";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public References6 getReferences() {
+		return references;
+	}
+
+	public void setReferences(References6 references) {
+		this.references = references;
+	}
+
+	public BranchAndFinancialInstitutionIdentification4 getAccountServicerIdentification() {
+		return accountServicerIdentification;
+	}
+
+	public void setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 accountServicerIdentification) {
+		this.accountServicerIdentification = accountServicerIdentification;
+	}
+
+	public List<AccountForAction1> getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(List<AccountForAction1> accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public List<OrganisationIdentification6> getOrganisationIdentification() {
+		return organisationIdentification;
+	}
+
+	public void setOrganisationIdentification(List<OrganisationIdentification6> organisationIdentification) {
+		this.organisationIdentification = organisationIdentification;
+	}
+
+	public List<PartyAndSignature1> getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(List<PartyAndSignature1> digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

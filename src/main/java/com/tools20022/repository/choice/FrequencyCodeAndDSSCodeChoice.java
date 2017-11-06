@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FrequencyCodeAndDSSCodeChoice#FrequencyAsCode
- * FrequencyCodeAndDSSCodeChoice.FrequencyAsCode}</li>
+ * {@linkplain com.tools20022.repository.choice.FrequencyCodeAndDSSCodeChoice#mmFrequencyAsCode
+ * FrequencyCodeAndDSSCodeChoice.mmFrequencyAsCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FrequencyCodeAndDSSCodeChoice#FrequencyAsDSS
- * FrequencyCodeAndDSSCodeChoice.FrequencyAsDSS}</li>
+ * {@linkplain com.tools20022.repository.choice.FrequencyCodeAndDSSCodeChoice#mmFrequencyAsDSS
+ * FrequencyCodeAndDSSCodeChoice.mmFrequencyAsDSS}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FrequencyCodeAndDSSCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Frequency1Code frequencyAsCode;
 	/**
 	 * Frequency expressed as a code.
 	 * <p>
@@ -87,7 +88,7 @@ public class FrequencyCodeAndDSSCodeChoice {
 	 * definition} = "Frequency expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FrequencyAsCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequencyAsCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FrequencyCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class FrequencyCodeAndDSSCodeChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrequencyAsCode";
 			definition = "Frequency expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Frequency1Code.mmObject();
 		}
 	};
+	protected GenericIdentification7 frequencyAsDSS;
 	/**
 	 * Frequency expressed as a data source scheme and a code used within the
 	 * data source scheme.
@@ -131,7 +133,7 @@ public class FrequencyCodeAndDSSCodeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FrequencyAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequencyAsDSS = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FrequencyCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class FrequencyCodeAndDSSCodeChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrequencyAsDSS";
 			definition = "Frequency expressed as a data source scheme and a code used within the data source scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification7.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class FrequencyCodeAndDSSCodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FrequencyCodeAndDSSCodeChoice.FrequencyAsCode, com.tools20022.repository.choice.FrequencyCodeAndDSSCodeChoice.FrequencyAsDSS);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FrequencyCodeAndDSSCodeChoice.mmFrequencyAsCode, com.tools20022.repository.choice.FrequencyCodeAndDSSCodeChoice.mmFrequencyAsDSS);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FrequencyCodeAndDSSCodeChoice";
 				definition = "Choice between formats for the frequency.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Frequency1Code getFrequencyAsCode() {
+		return frequencyAsCode;
+	}
+
+	public void setFrequencyAsCode(Frequency1Code frequencyAsCode) {
+		this.frequencyAsCode = frequencyAsCode;
+	}
+
+	public GenericIdentification7 getFrequencyAsDSS() {
+		return frequencyAsDSS;
+	}
+
+	public void setFrequencyAsDSS(GenericIdentification7 frequencyAsDSS) {
+		this.frequencyAsDSS = frequencyAsDSS;
 	}
 }

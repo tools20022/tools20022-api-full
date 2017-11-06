@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2#PlaceAndName
- * OptionalDividendAccountQuantitySD2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2#mmPlaceAndName
+ * OptionalDividendAccountQuantitySD2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2#BeneficialOwnerQuantity
- * OptionalDividendAccountQuantitySD2.BeneficialOwnerQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2#mmBeneficialOwnerQuantity
+ * OptionalDividendAccountQuantitySD2.mmBeneficialOwnerQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2#NumberOfAccounts
- * OptionalDividendAccountQuantitySD2.NumberOfAccounts}</li>
+ * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2#mmNumberOfAccounts
+ * OptionalDividendAccountQuantitySD2.mmNumberOfAccounts}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OptionalDividendAccountQuantitySD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -96,7 +97,7 @@ public class OptionalDividendAccountQuantitySD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionalDividendAccountQuantitySD2.mmObject();
 			isDerived = false;
@@ -104,11 +105,12 @@ public class OptionalDividendAccountQuantitySD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice beneficialOwnerQuantity;
 	/**
 	 * Beneficial owner quantity to be paid.
 	 * <p>
@@ -137,7 +139,7 @@ public class OptionalDividendAccountQuantitySD2 {
 	 * definition} = "Beneficial owner quantity to be paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficialOwnerQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficialOwnerQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionalDividendAccountQuantitySD2.mmObject();
 			isDerived = false;
@@ -145,11 +147,12 @@ public class OptionalDividendAccountQuantitySD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerQuantity";
 			definition = "Beneficial owner quantity to be paid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected Max15NumericText numberOfAccounts;
 	/**
 	 * Number of accounts for which the beneficial quantity is elected.
 	 * <p>
@@ -179,7 +182,7 @@ public class OptionalDividendAccountQuantitySD2 {
 	 * "Number of accounts for which the beneficial quantity is elected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfAccounts = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfAccounts = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionalDividendAccountQuantitySD2.mmObject();
 			isDerived = false;
@@ -187,8 +190,8 @@ public class OptionalDividendAccountQuantitySD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfAccounts";
 			definition = "Number of accounts for which the beneficial quantity is elected.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
@@ -196,9 +199,9 @@ public class OptionalDividendAccountQuantitySD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2.PlaceAndName, com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2.BeneficialOwnerQuantity,
-						com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2.NumberOfAccounts);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2.mmPlaceAndName, com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2.mmBeneficialOwnerQuantity,
+						com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2.mmNumberOfAccounts);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OptionalDividendAccountQuantitySD2";
 				definition = "Provides additional information regarding optional dividend election details.";
@@ -206,5 +209,29 @@ public class OptionalDividendAccountQuantitySD2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public FinancialInstrumentQuantity15Choice getBeneficialOwnerQuantity() {
+		return beneficialOwnerQuantity;
+	}
+
+	public void setBeneficialOwnerQuantity(FinancialInstrumentQuantity15Choice beneficialOwnerQuantity) {
+		this.beneficialOwnerQuantity = beneficialOwnerQuantity;
+	}
+
+	public Max15NumericText getNumberOfAccounts() {
+		return numberOfAccounts;
+	}
+
+	public void setNumberOfAccounts(Max15NumericText numberOfAccounts) {
+		this.numberOfAccounts = numberOfAccounts;
 	}
 }

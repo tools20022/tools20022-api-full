@@ -39,43 +39,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TriggeringInstructions#Type
- * TriggeringInstructions.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TriggeringInstructions#Action
- * TriggeringInstructions.Action}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TriggeringInstructions#Price
- * TriggeringInstructions.Price}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmType
+ * TriggeringInstructions.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#PriceProtectionScope
- * TriggeringInstructions.PriceProtectionScope}</li>
+ * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmAction
+ * TriggeringInstructions.mmAction}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmPrice
+ * TriggeringInstructions.mmPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#PriceDirection
- * TriggeringInstructions.PriceDirection}</li>
+ * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmPriceProtectionScope
+ * TriggeringInstructions.mmPriceProtectionScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#NewPrice
- * TriggeringInstructions.NewPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmPriceDirection
+ * TriggeringInstructions.mmPriceDirection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#OrderType
- * TriggeringInstructions.OrderType}</li>
+ * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmNewPrice
+ * TriggeringInstructions.mmNewPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#NewQuantity
- * TriggeringInstructions.NewQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmOrderType
+ * TriggeringInstructions.mmOrderType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#PriceType
- * TriggeringInstructions.PriceType}</li>
+ * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmNewQuantity
+ * TriggeringInstructions.mmNewQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#TriggerSecurityDetails
- * TriggeringInstructions.TriggerSecurityDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmPriceType
+ * TriggeringInstructions.mmPriceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#TradingSessionDetails
- * TriggeringInstructions.TradingSessionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmTriggerSecurityDetails
+ * TriggeringInstructions.mmTriggerSecurityDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TriggeringInstructions#mmTradingSessionDetails
+ * TriggeringInstructions.mmTradingSessionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TriggeringInstructions {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TriggerType1Code type;
 	/**
 	 * Defines when the trigger will hit, i.e. the action specified by the
 	 * trigger instructions will come into effect.
@@ -122,7 +124,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -130,11 +132,12 @@ public class TriggeringInstructions {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TriggerType1Code.mmObject();
 		}
 	};
+	protected TriggerAction1Code action;
 	/**
 	 * Defines the type of action to take when the trigger hits.
 	 * <p>
@@ -164,7 +167,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Action = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -172,11 +175,12 @@ public class TriggeringInstructions {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Defines the type of action to take when the trigger hits.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TriggerAction1Code.mmObject();
 		}
 	};
+	protected Price1 price;
 	/**
 	 * The price at which the trigger should hit.
 	 * <p>
@@ -203,7 +207,7 @@ public class TriggeringInstructions {
 	 * definition} = "The price at which the trigger should hit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Price = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -211,11 +215,12 @@ public class TriggeringInstructions {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "The price at which the trigger should hit.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected PriceProtectionScope2Code priceProtectionScope;
 	/**
 	 * Defines the type of price protection the customer requires on their
 	 * order.
@@ -247,7 +252,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceProtectionScope = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceProtectionScope = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -255,11 +260,12 @@ public class TriggeringInstructions {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceProtectionScope";
 			definition = "Defines the type of price protection the customer requires on their order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PriceProtectionScope2Code.mmObject();
 		}
 	};
+	protected DirectionIndicator priceDirection;
 	/**
 	 * Indicates the side from which the trigger price is reached.
 	 * 
@@ -296,7 +302,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceDirection = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -304,11 +310,12 @@ public class TriggeringInstructions {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDirection";
 			definition = "Indicates the side from which the trigger price is reached.\n\nUp -Trigger if the price of the specified type goes up to or through the specified trigger price.\n\nDown - Trigger if the price of the specified type goes down to or through the specified trigger price.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DirectionIndicator.mmObject();
 		}
 	};
+	protected Price1 newPrice;
 	/**
 	 * The price that the order should have after the trigger has hit. Could be
 	 * applicable for any trigger type, but must be specified for Trigger Type =
@@ -339,7 +346,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -347,11 +354,12 @@ public class TriggeringInstructions {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPrice";
 			definition = "The price that the order should have after the trigger has hit. Could be applicable for any trigger type, but must be specified for Trigger Type = PAEX";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected OrderType2Code orderType;
 	/**
 	 * The order type that the order should have after the trigger has hit.
 	 * Required to express orders that change from limit to market.
@@ -366,8 +374,8 @@ public class TriggeringInstructions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Type
-	 * SecuritiesOrder.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmType
+	 * SecuritiesOrder.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -388,20 +396,21 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmType;
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Type;
 			isDerived = false;
 			xmlTag = "OrdrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderType";
 			definition = "The order type that the order should have after the trigger has hit. Required to express orders that change from limit to market.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OrderType2Code.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice newQuantity;
 	/**
 	 * The quantity the order should have after the trigger has hit.
 	 * <p>
@@ -415,8 +424,8 @@ public class TriggeringInstructions {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -436,20 +445,21 @@ public class TriggeringInstructions {
 	 * "The quantity the order should have after the trigger has hit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "NewQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQuantity";
 			definition = "The quantity the order should have after the trigger has hit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected TriggerPriceType1Code priceType;
 	/**
 	 * Type of price that the trigger is compared to.
 	 * <p>
@@ -478,7 +488,7 @@ public class TriggeringInstructions {
 	 * definition} = "Type of price that the trigger is compared to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -486,11 +496,12 @@ public class TriggeringInstructions {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceType";
 			definition = "Type of price that the trigger is compared to.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TriggerPriceType1Code.mmObject();
 		}
 	};
+	protected SecurityIdentification7 triggerSecurityDetails;
 	/**
 	 * Defines the identification of the security whose prices will be tracked
 	 * by the trigger logic.
@@ -526,21 +537,22 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TriggerSecurityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTriggerSecurityDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "TrggrSctyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TriggerSecurityDetails";
 			definition = "Defines the identification of the security whose prices will be tracked by the trigger logic.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected TradingSession1 tradingSessionDetails;
 	/**
 	 * Provides details about the trading session.
 	 * <p>
@@ -572,35 +584,124 @@ public class TriggeringInstructions {
 	 * definition} = "Provides details about the trading session."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingSessionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingSessionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			businessComponentTrace_lazy = () -> TradingSession.mmObject();
+			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionDetails";
 			definition = "Provides details about the trading session.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TradingSession1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TriggeringInstructions.Type, com.tools20022.repository.msg.TriggeringInstructions.Action, com.tools20022.repository.msg.TriggeringInstructions.Price,
-						com.tools20022.repository.msg.TriggeringInstructions.PriceProtectionScope, com.tools20022.repository.msg.TriggeringInstructions.PriceDirection, com.tools20022.repository.msg.TriggeringInstructions.NewPrice,
-						com.tools20022.repository.msg.TriggeringInstructions.OrderType, com.tools20022.repository.msg.TriggeringInstructions.NewQuantity, com.tools20022.repository.msg.TriggeringInstructions.PriceType,
-						com.tools20022.repository.msg.TriggeringInstructions.TriggerSecurityDetails, com.tools20022.repository.msg.TriggeringInstructions.TradingSessionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TriggeringInstructions.mmType, com.tools20022.repository.msg.TriggeringInstructions.mmAction,
+						com.tools20022.repository.msg.TriggeringInstructions.mmPrice, com.tools20022.repository.msg.TriggeringInstructions.mmPriceProtectionScope, com.tools20022.repository.msg.TriggeringInstructions.mmPriceDirection,
+						com.tools20022.repository.msg.TriggeringInstructions.mmNewPrice, com.tools20022.repository.msg.TriggeringInstructions.mmOrderType, com.tools20022.repository.msg.TriggeringInstructions.mmNewQuantity,
+						com.tools20022.repository.msg.TriggeringInstructions.mmPriceType, com.tools20022.repository.msg.TriggeringInstructions.mmTriggerSecurityDetails,
+						com.tools20022.repository.msg.TriggeringInstructions.mmTradingSessionDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TriggeringInstructions";
 				definition = "Specifies the conditions under which an order will be triggered/activated by market events as well as it specifies the order's behavior in the market once it has been triggered.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TriggerType1Code getType() {
+		return type;
+	}
+
+	public void setType(TriggerType1Code type) {
+		this.type = type;
+	}
+
+	public TriggerAction1Code getAction() {
+		return action;
+	}
+
+	public void setAction(TriggerAction1Code action) {
+		this.action = action;
+	}
+
+	public Price1 getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+		this.price = price;
+	}
+
+	public PriceProtectionScope2Code getPriceProtectionScope() {
+		return priceProtectionScope;
+	}
+
+	public void setPriceProtectionScope(PriceProtectionScope2Code priceProtectionScope) {
+		this.priceProtectionScope = priceProtectionScope;
+	}
+
+	public DirectionIndicator getPriceDirection() {
+		return priceDirection;
+	}
+
+	public void setPriceDirection(DirectionIndicator priceDirection) {
+		this.priceDirection = priceDirection;
+	}
+
+	public Price1 getNewPrice() {
+		return newPrice;
+	}
+
+	public void setNewPrice(com.tools20022.repository.msg.Price1 newPrice) {
+		this.newPrice = newPrice;
+	}
+
+	public OrderType2Code getOrderType() {
+		return orderType;
+	}
+
+	public void setOrderType(OrderType2Code orderType) {
+		this.orderType = orderType;
+	}
+
+	public FinancialInstrumentQuantityChoice getNewQuantity() {
+		return newQuantity;
+	}
+
+	public void setNewQuantity(FinancialInstrumentQuantityChoice newQuantity) {
+		this.newQuantity = newQuantity;
+	}
+
+	public TriggerPriceType1Code getPriceType() {
+		return priceType;
+	}
+
+	public void setPriceType(TriggerPriceType1Code priceType) {
+		this.priceType = priceType;
+	}
+
+	public SecurityIdentification7 getTriggerSecurityDetails() {
+		return triggerSecurityDetails;
+	}
+
+	public void setTriggerSecurityDetails(com.tools20022.repository.msg.SecurityIdentification7 triggerSecurityDetails) {
+		this.triggerSecurityDetails = triggerSecurityDetails;
+	}
+
+	public TradingSession1 getTradingSessionDetails() {
+		return tradingSessionDetails;
+	}
+
+	public void setTradingSessionDetails(com.tools20022.repository.msg.TradingSession1 tradingSessionDetails) {
+		this.tradingSessionDetails = tradingSessionDetails;
 	}
 }

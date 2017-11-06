@@ -34,18 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DuplicateIndication#Reference
- * DuplicateIndication.Reference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DuplicateIndication#Justification
- * DuplicateIndication.Justification}</li>
+ * {@linkplain com.tools20022.repository.msg.DuplicateIndication#mmReference
+ * DuplicateIndication.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DuplicateIndication#mmJustification
+ * DuplicateIndication.mmJustification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DuplicateIndication {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max30Text reference;
 	/**
 	 * Reference of the original message, in case this is a duplicate.
 	 * <p>
@@ -89,7 +91,7 @@ public class DuplicateIndication {
 	 * "Reference of the original message, in case this is a duplicate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DuplicateIndication.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class DuplicateIndication {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference of the original message, in case this is a duplicate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
 		}
 	};
+	protected Max140Text justification;
 	/**
 	 * Information about the duplicate.
 	 * <p>
@@ -129,7 +132,7 @@ public class DuplicateIndication {
 	 * definition} = "Information about the duplicate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Justification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmJustification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DuplicateIndication.mmObject();
 			isDerived = false;
@@ -137,8 +140,8 @@ public class DuplicateIndication {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Justification";
 			definition = "Information about the duplicate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -146,13 +149,29 @@ public class DuplicateIndication {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DuplicateIndication.Reference, com.tools20022.repository.msg.DuplicateIndication.Justification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DuplicateIndication.mmReference, com.tools20022.repository.msg.DuplicateIndication.mmJustification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DuplicateIndication";
 				definition = "Reference to another message indicating that the containing message is a\tduplicate of the referenced message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max30Text getReference() {
+		return reference;
+	}
+
+	public void setReference(Max30Text reference) {
+		this.reference = reference;
+	}
+
+	public Max140Text getJustification() {
+		return justification;
+	}
+
+	public void setJustification(Max140Text justification) {
+		this.justification = justification;
 	}
 }

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.OriginalMandate1Choice;
 import com.tools20022.repository.entity.DirectDebitMandate;
+import com.tools20022.repository.entity.Mandate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,16 +35,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateAmendment1#OriginalMessageInformation
- * MandateAmendment1.OriginalMessageInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateAmendment1#mmOriginalMessageInformation
+ * MandateAmendment1.mmOriginalMessageInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateAmendment1#AmendmentReason
- * MandateAmendment1.AmendmentReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment1#Mandate
- * MandateAmendment1.Mandate}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateAmendment1#mmAmendmentReason
+ * MandateAmendment1.mmAmendmentReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment1#mmMandate
+ * MandateAmendment1.mmMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateAmendment1#OriginalMandate
- * MandateAmendment1.OriginalMandate}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateAmendment1#mmOriginalMandate
+ * MandateAmendment1.mmOriginalMandate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,15 +54,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateAmendmentRequestV01#UnderlyingAmendmentDetails
- * MandateAmendmentRequestV01.UnderlyingAmendmentDetails}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateAmendmentRequestV01#mmUnderlyingAmendmentDetails
+ * MandateAmendmentRequestV01.mmUnderlyingAmendmentDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateAmendment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OriginalMessageInformation1 originalMessageInformation;
 	/**
 	 * Set of elements used to provide information on the original messsage.
 	 * <p>
@@ -104,7 +106,7 @@ public class MandateAmendment1 {
 	 * "Set of elements used to provide information on the original messsage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMessageInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MandateAmendment1.mmObject();
 			isDerived = false;
@@ -112,12 +114,13 @@ public class MandateAmendment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageInformation";
 			definition = "Set of elements used to provide information on the original messsage.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMessageInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
 		}
 	};
+	protected AmendmentReasonInformation1 amendmentReason;
 	/**
 	 * Set of elements used to provide detailed information on the amendment
 	 * reason.
@@ -131,8 +134,8 @@ public class MandateAmendment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,21 +156,22 @@ public class MandateAmendment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmendmentReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmendmentReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> MandateAmendment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "AmdmntRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentReason";
 			definition = "Set of elements used to provide detailed information on the amendment reason.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmendmentReasonInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmendmentReasonInformation1.mmObject();
 		}
 	};
+	protected MandateInformation3 mandate;
 	/**
 	 * Set of elements used to provide the amended mandate data.
 	 * <p>
@@ -200,21 +204,22 @@ public class MandateAmendment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Mandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMandate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MandateAmendment1.mmObject();
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
+			componentContext_lazy = () -> MandateAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "Mndt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandate";
 			definition = "Set of elements used to provide the amended mandate data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MandateInformation3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MandateInformation3.mmObject();
 		}
 	};
+	protected OriginalMandate1Choice originalMandate;
 	/**
 	 * Set of elements used to provide the original mandate data.
 	 * <p>
@@ -247,35 +252,67 @@ public class MandateAmendment1 {
 	 * "Set of elements used to provide the original mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Mandate.mmObject();
 			componentContext_lazy = () -> MandateAmendment1.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMndt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandate";
 			definition = "Set of elements used to provide the original mandate data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OriginalMandate1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OriginalMandate1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateAmendment1.OriginalMessageInformation, com.tools20022.repository.msg.MandateAmendment1.AmendmentReason,
-						com.tools20022.repository.msg.MandateAmendment1.Mandate, com.tools20022.repository.msg.MandateAmendment1.OriginalMandate);
-				trace_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAmendmentRequestV01.UnderlyingAmendmentDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateAmendment1.mmOriginalMessageInformation, com.tools20022.repository.msg.MandateAmendment1.mmAmendmentReason,
+						com.tools20022.repository.msg.MandateAmendment1.mmMandate, com.tools20022.repository.msg.MandateAmendment1.mmOriginalMandate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAmendmentRequestV01.mmUnderlyingAmendmentDetails);
+				trace_lazy = () -> Mandate.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateAmendment1";
 				definition = "Identifies the mandate to be amended and gives details of the new mandate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OriginalMessageInformation1 getOriginalMessageInformation() {
+		return originalMessageInformation;
+	}
+
+	public void setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+		this.originalMessageInformation = originalMessageInformation;
+	}
+
+	public AmendmentReasonInformation1 getAmendmentReason() {
+		return amendmentReason;
+	}
+
+	public void setAmendmentReason(com.tools20022.repository.msg.AmendmentReasonInformation1 amendmentReason) {
+		this.amendmentReason = amendmentReason;
+	}
+
+	public MandateInformation3 getMandate() {
+		return mandate;
+	}
+
+	public void setMandate(com.tools20022.repository.msg.MandateInformation3 mandate) {
+		this.mandate = mandate;
+	}
+
+	public OriginalMandate1Choice getOriginalMandate() {
+		return originalMandate;
+	}
+
+	public void setOriginalMandate(OriginalMandate1Choice originalMandate) {
+		this.originalMandate = originalMandate;
 	}
 }

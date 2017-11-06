@@ -37,16 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashInForecast4#CashSettlementDate
- * CashInForecast4.CashSettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashInForecast4#SubTotalAmount
- * CashInForecast4.SubTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CashInForecast4#mmCashSettlementDate
+ * CashInForecast4.mmCashSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashInForecast4#SubTotalUnitsNumber
- * CashInForecast4.SubTotalUnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CashInForecast4#mmSubTotalAmount
+ * CashInForecast4.mmSubTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashInForecast4#ExceptionalCashFlowIndicator
- * CashInForecast4.ExceptionalCashFlowIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashInForecast4#mmSubTotalUnitsNumber
+ * CashInForecast4.mmSubTotalUnitsNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashInForecast4#mmExceptionalCashFlowIndicator
+ * CashInForecast4.mmExceptionalCashFlowIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashInForecast4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate cashSettlementDate;
 	/**
 	 * Date on which cash is available.
 	 * <p>
@@ -91,8 +93,8 @@ public class CashInForecast4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementDate
-	 * CashSettlement.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+	 * CashSettlement.mmInterbankSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,27 +115,28 @@ public class CashInForecast4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashInForecast6#CashSettlementDate
-	 * CashInForecast6.CashSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashInForecast6#mmCashSettlementDate
+	 * CashInForecast6.mmCashSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> CashInForecast4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementDate;
 			isDerived = false;
 			xmlTag = "CshSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDate";
 			definition = "Date on which cash is available.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast6.CashSettlementDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast6.mmCashSettlementDate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount subTotalAmount;
 	/**
 	 * Sub-total amount of the cash flow in, expressed as an amount of money.
 	 * <p>
@@ -147,8 +150,8 @@ public class CashInForecast4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Amount
-	 * SecuritiesQuantity.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
+	 * SecuritiesQuantity.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,27 +173,28 @@ public class CashInForecast4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashInForecast6#SubTotalAmount
-	 * CashInForecast6.SubTotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashInForecast6#mmSubTotalAmount
+	 * CashInForecast6.mmSubTotalAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> CashInForecast4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Amount;
 			isDerived = false;
 			xmlTag = "SubTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubTotalAmount";
 			definition = "Sub-total amount of the cash flow in, expressed as an amount of money.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast6.SubTotalAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast6.mmSubTotalAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 subTotalUnitsNumber;
 	/**
 	 * Sub-total amount of the cash flow in, expressed as a number of units.
 	 * <p>
@@ -204,8 +208,8 @@ public class CashInForecast4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -227,27 +231,28 @@ public class CashInForecast4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashInForecast6#SubTotalUnitsNumber
-	 * CashInForecast6.SubTotalUnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashInForecast6#mmSubTotalUnitsNumber
+	 * CashInForecast6.mmSubTotalUnitsNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubTotalUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> CashInForecast4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "SubTtlUnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubTotalUnitsNumber";
 			definition = "Sub-total amount of the cash flow in, expressed as a number of units.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast6.SubTotalUnitsNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast6.mmSubTotalUnitsNumber);
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected YesNoIndicator exceptionalCashFlowIndicator;
 	/**
 	 * Indicates whether the cash flow in is exceptional.
 	 * <p>
@@ -261,8 +266,8 @@ public class CashInForecast4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#ExceptionalCashFlowIndicator
-	 * FundsCashFlow.ExceptionalCashFlowIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmExceptionalCashFlowIndicator
+	 * FundsCashFlow.mmExceptionalCashFlowIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -283,24 +288,24 @@ public class CashInForecast4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashInForecast6#ExceptionalCashFlowIndicator
-	 * CashInForecast6.ExceptionalCashFlowIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashInForecast6#mmExceptionalCashFlowIndicator
+	 * CashInForecast6.mmExceptionalCashFlowIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExceptionalCashFlowIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExceptionalCashFlowIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmExceptionalCashFlowIndicator;
 			componentContext_lazy = () -> CashInForecast4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.ExceptionalCashFlowIndicator;
 			isDerived = false;
 			xmlTag = "XcptnlCshFlowInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicator";
 			definition = "Indicates whether the cash flow in is exceptional.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast6.ExceptionalCashFlowIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast6.mmExceptionalCashFlowIndicator);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -308,10 +313,10 @@ public class CashInForecast4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast4.CashSettlementDate, com.tools20022.repository.msg.CashInForecast4.SubTotalAmount,
-						com.tools20022.repository.msg.CashInForecast4.SubTotalUnitsNumber, com.tools20022.repository.msg.CashInForecast4.ExceptionalCashFlowIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast4.mmCashSettlementDate, com.tools20022.repository.msg.CashInForecast4.mmSubTotalAmount,
+						com.tools20022.repository.msg.CashInForecast4.mmSubTotalUnitsNumber, com.tools20022.repository.msg.CashInForecast4.mmExceptionalCashFlowIndicator);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashInForecast4";
 				definition = "Cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.";
@@ -319,5 +324,37 @@ public class CashInForecast4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getCashSettlementDate() {
+		return cashSettlementDate;
+	}
+
+	public void setCashSettlementDate(ISODate cashSettlementDate) {
+		this.cashSettlementDate = cashSettlementDate;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getSubTotalAmount() {
+		return subTotalAmount;
+	}
+
+	public void setSubTotalAmount(ActiveOrHistoricCurrencyAndAmount subTotalAmount) {
+		this.subTotalAmount = subTotalAmount;
+	}
+
+	public FinancialInstrumentQuantity1 getSubTotalUnitsNumber() {
+		return subTotalUnitsNumber;
+	}
+
+	public void setSubTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 subTotalUnitsNumber) {
+		this.subTotalUnitsNumber = subTotalUnitsNumber;
+	}
+
+	public YesNoIndicator getExceptionalCashFlowIndicator() {
+		return exceptionalCashFlowIndicator;
+	}
+
+	public void setExceptionalCashFlowIndicator(YesNoIndicator exceptionalCashFlowIndicator) {
+		this.exceptionalCashFlowIndicator = exceptionalCashFlowIndicator;
 	}
 }

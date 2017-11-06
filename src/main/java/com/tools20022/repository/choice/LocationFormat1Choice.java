@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LocationFormat1Choice#Address
- * LocationFormat1Choice.Address}</li>
+ * {@linkplain com.tools20022.repository.choice.LocationFormat1Choice#mmAddress
+ * LocationFormat1Choice.mmAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LocationFormat1Choice#LocationCode
- * LocationFormat1Choice.LocationCode}</li>
+ * {@linkplain com.tools20022.repository.choice.LocationFormat1Choice#mmLocationCode
+ * LocationFormat1Choice.mmLocationCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LocationFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PostalAddress1 address;
 	/**
 	 * Specifies physical address of the meeting
 	 * <p>
@@ -97,21 +98,22 @@ public class LocationFormat1Choice {
 	 * definition} = "Specifies physical address of the meeting"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Address = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LocationFormat1Choice.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> LocationFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Specifies physical address of the meeting";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PostalAddress1.mmObject();
 		}
 	};
+	protected PlaceType1Code locationCode;
 	/**
 	 * Indicates that the location is unknown.
 	 * <p>
@@ -140,7 +142,7 @@ public class LocationFormat1Choice {
 	 * definition} = "Indicates that the location is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocationCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LocationFormat1Choice.mmObject();
 			isDerived = false;
@@ -148,8 +150,8 @@ public class LocationFormat1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationCode";
 			definition = "Indicates that the location is unknown.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PlaceType1Code.mmObject();
 		}
 	};
@@ -157,14 +159,30 @@ public class LocationFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LocationFormat1Choice.Address, com.tools20022.repository.choice.LocationFormat1Choice.LocationCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LocationFormat1Choice.mmAddress, com.tools20022.repository.choice.LocationFormat1Choice.mmLocationCode);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LocationFormat1Choice";
 				definition = "Choice between the formats to indicate the location of the meeting.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PostalAddress1 getAddress() {
+		return address;
+	}
+
+	public void setAddress(PostalAddress1 address) {
+		this.address = address;
+	}
+
+	public PlaceType1Code getLocationCode() {
+		return locationCode;
+	}
+
+	public void setLocationCode(PlaceType1Code locationCode) {
+		this.locationCode = locationCode;
 	}
 }

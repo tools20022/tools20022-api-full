@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.BalanceDetails5;
 import com.tools20022.repository.msg.BalanceDetails6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Balance breakdown information.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PortfolioBalance1#SummaryBalance
- * PortfolioBalance1.SummaryBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.PortfolioBalance1#mmSummaryBalance
+ * PortfolioBalance1.mmSummaryBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PortfolioBalance1#DetailedBalance
- * PortfolioBalance1.DetailedBalance}</li>
+ * {@linkplain com.tools20022.repository.choice.PortfolioBalance1#mmDetailedBalance
+ * PortfolioBalance1.mmDetailedBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,15 +50,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#Balance
- * TotalPortfolioValuationReportV01.Balance}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmBalance
+ * TotalPortfolioValuationReportV01.mmBalance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PortfolioBalance1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<BalanceDetails5> summaryBalance;
 	/**
 	 * Summary balance information.
 	 * <p>
@@ -101,20 +103,21 @@ public class PortfolioBalance1 {
 	 * definition} = "Summary balance information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SummaryBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSummaryBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PortfolioBalance1.mmObject();
 			businessComponentTrace_lazy = () -> Balance.mmObject();
+			componentContext_lazy = () -> PortfolioBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "SummryBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SummaryBalance";
 			definition = "Summary balance information.";
 			minOccurs = 1;
-			type_lazy = () -> BalanceDetails5.mmObject();
 			isComposite = true;
+			type_lazy = () -> BalanceDetails5.mmObject();
 		}
 	};
+	protected List<BalanceDetails6> detailedBalance;
 	/**
 	 * Detailed balance information.
 	 * <p>
@@ -145,33 +148,49 @@ public class PortfolioBalance1 {
 	 * definition} = "Detailed balance information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DetailedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDetailedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PortfolioBalance1.mmObject();
 			businessComponentTrace_lazy = () -> Balance.mmObject();
+			componentContext_lazy = () -> PortfolioBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "DtldBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedBalance";
 			definition = "Detailed balance information.";
 			minOccurs = 1;
-			type_lazy = () -> BalanceDetails6.mmObject();
 			isComposite = true;
+			type_lazy = () -> BalanceDetails6.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PortfolioBalance1.SummaryBalance, com.tools20022.repository.choice.PortfolioBalance1.DetailedBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PortfolioBalance1.mmSummaryBalance, com.tools20022.repository.choice.PortfolioBalance1.mmDetailedBalance);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmBalance);
 				trace_lazy = () -> Balance.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.Balance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PortfolioBalance1";
 				definition = "Balance breakdown information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<BalanceDetails5> getSummaryBalance() {
+		return summaryBalance;
+	}
+
+	public void setSummaryBalance(List<BalanceDetails5> summaryBalance) {
+		this.summaryBalance = summaryBalance;
+	}
+
+	public List<BalanceDetails6> getDetailedBalance() {
+		return detailedBalance;
+	}
+
+	public void setDetailedBalance(List<BalanceDetails6> detailedBalance) {
+		this.detailedBalance = detailedBalance;
 	}
 }

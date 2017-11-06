@@ -33,14 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus4Choice#Consented
- * ResponseStatus4Choice.Consented}</li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus4Choice#mmConsented
+ * ResponseStatus4Choice.mmConsented}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus4Choice#Rejected
- * ResponseStatus4Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus4Choice#mmRejected
+ * ResponseStatus4Choice.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus4Choice#Pending
- * ResponseStatus4Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus4Choice#mmPending
+ * ResponseStatus4Choice.mmPending}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ResponseStatus4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ConsentStatus3Choice consented;
 	/**
 	 * Reason provided for the status.
 	 * <p>
@@ -79,8 +80,8 @@ public class ResponseStatus4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,21 +100,22 @@ public class ResponseStatus4Choice {
 	 * definition} = "Reason provided for the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Consented = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConsented = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> ResponseStatus4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "Cnsntd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consented";
 			definition = "Reason provided for the status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ConsentStatus3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.ConsentStatus3Choice.mmObject();
 		}
 	};
+	protected RejectionStatus9Choice rejected;
 	/**
 	 * The status of an instruction, advice or request.
 	 * <p>
@@ -145,21 +147,22 @@ public class ResponseStatus4Choice {
 	 * definition} = "The status of an instruction, advice or request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ResponseStatus4Choice.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> ResponseStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "The status of an instruction, advice or request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RejectionStatus9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.RejectionStatus9Choice.mmObject();
 		}
 	};
+	protected PendingStatus20Choice pending;
 	/**
 	 * The status of an instruction, advice or request.
 	 * <p>
@@ -191,29 +194,29 @@ public class ResponseStatus4Choice {
 	 * definition} = "The status of an instruction, advice or request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Pending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ResponseStatus4Choice.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> ResponseStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "The status of an instruction, advice or request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PendingStatus20Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PendingStatus20Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus4Choice.Consented, com.tools20022.repository.choice.ResponseStatus4Choice.Rejected,
-						com.tools20022.repository.choice.ResponseStatus4Choice.Pending);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus4Choice.mmConsented, com.tools20022.repository.choice.ResponseStatus4Choice.mmRejected,
+						com.tools20022.repository.choice.ResponseStatus4Choice.mmPending);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResponseStatus4Choice";
 				definition = "Choice of response status.";
@@ -221,5 +224,29 @@ public class ResponseStatus4Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ConsentStatus3Choice getConsented() {
+		return consented;
+	}
+
+	public void setConsented(com.tools20022.repository.choice.ConsentStatus3Choice consented) {
+		this.consented = consented;
+	}
+
+	public RejectionStatus9Choice getRejected() {
+		return rejected;
+	}
+
+	public void setRejected(com.tools20022.repository.choice.RejectionStatus9Choice rejected) {
+		this.rejected = rejected;
+	}
+
+	public PendingStatus20Choice getPending() {
+		return pending;
+	}
+
+	public void setPending(com.tools20022.repository.choice.PendingStatus20Choice pending) {
+		this.pending = pending;
 	}
 }

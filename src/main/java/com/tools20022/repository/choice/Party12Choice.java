@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Party12Choice#Party
- * Party12Choice.Party}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Party12Choice#Agent
- * Party12Choice.Agent}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party12Choice#mmParty
+ * Party12Choice.mmParty}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party12Choice#mmAgent
+ * Party12Choice.mmAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Party12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification43 party;
 	/**
 	 * Identification of a person or an organisation.
 	 * <p>
@@ -103,28 +104,29 @@ public class Party12Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#Party
-	 * Party28Choice.Party}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#mmParty
+	 * Party28Choice.mmParty}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Party = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Party12Choice.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> Party12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Identification of a person or an organisation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party28Choice.Party);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party28Choice.mmParty);
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification43.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 agent;
 	/**
 	 * Identification of a financial institution.
 	 * <p>
@@ -158,35 +160,35 @@ public class Party12Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#Agent
-	 * Party28Choice.Agent}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#mmAgent
+	 * Party28Choice.mmAgent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Agent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAgent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Party12Choice.mmObject();
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
+			componentContext_lazy = () -> Party12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Agt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			definition = "Identification of a financial institution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party28Choice.Agent);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party28Choice.mmAgent);
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party12Choice.Party, com.tools20022.repository.choice.Party12Choice.Agent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party12Choice.mmParty, com.tools20022.repository.choice.Party12Choice.mmAgent);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Party12Choice";
 				definition = "Identification of a person, an organisation or a financial institution.";
@@ -194,5 +196,21 @@ public class Party12Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification43 getParty() {
+		return party;
+	}
+
+	public void setParty(PartyIdentification43 party) {
+		this.party = party;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAgent() {
+		return agent;
+	}
+
+	public void setAgent(BranchAndFinancialInstitutionIdentification5 agent) {
+		this.agent = agent;
 	}
 }

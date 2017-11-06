@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace1Code#SharesHeldAtLocalCustodian
- * SafekeepingPlace1Code.SharesHeldAtLocalCustodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace1Code#mmSharesHeldAtLocalCustodian
+ * SafekeepingPlace1Code.mmSharesHeldAtLocalCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace1Code#SharesHeldAtICSD
- * SafekeepingPlace1Code.SharesHeldAtICSD}</li>
+ * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace1Code#mmSharesHeldAtICSD
+ * SafekeepingPlace1Code.mmSharesHeldAtICSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace1Code#SharesHeldAtNCSD
- * SafekeepingPlace1Code.SharesHeldAtNCSD}</li>
+ * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace1Code#mmSharesHeldAtNCSD
+ * SafekeepingPlace1Code.mmSharesHeldAtNCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace1Code#SharesHeldElsewhere
- * SafekeepingPlace1Code.SharesHeldElsewhere}</li>
+ * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace1Code#mmSharesHeldElsewhere
+ * SafekeepingPlace1Code.mmSharesHeldElsewhere}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class SafekeepingPlace1Code extends SafekeepingPlaceCode {
 	 * name} = "SharesHeldAtLocalCustodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode SharesHeldAtLocalCustodian = new MMCode() {
+	public static final MMCode mmSharesHeldAtLocalCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesHeldAtLocalCustodian";
@@ -110,7 +110,7 @@ public class SafekeepingPlace1Code extends SafekeepingPlaceCode {
 	 * name} = "SharesHeldAtICSD"</li>
 	 * </ul>
 	 */
-	public static final MMCode SharesHeldAtICSD = new MMCode() {
+	public static final MMCode mmSharesHeldAtICSD = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesHeldAtICSD";
@@ -133,7 +133,7 @@ public class SafekeepingPlace1Code extends SafekeepingPlaceCode {
 	 * name} = "SharesHeldAtNCSD"</li>
 	 * </ul>
 	 */
-	public static final MMCode SharesHeldAtNCSD = new MMCode() {
+	public static final MMCode mmSharesHeldAtNCSD = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesHeldAtNCSD";
@@ -156,7 +156,7 @@ public class SafekeepingPlace1Code extends SafekeepingPlaceCode {
 	 * name} = "SharesHeldElsewhere"</li>
 	 * </ul>
 	 */
-	public static final MMCode SharesHeldElsewhere = new MMCode() {
+	public static final MMCode mmSharesHeldElsewhere = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesHeldElsewhere";
@@ -167,13 +167,13 @@ public class SafekeepingPlace1Code extends SafekeepingPlaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlace1Code";
 				definition = "Specifies the type of place of safekeeping.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SafekeepingPlace1Code.SharesHeldAtLocalCustodian, com.tools20022.repository.codeset.SafekeepingPlace1Code.SharesHeldAtICSD,
-						com.tools20022.repository.codeset.SafekeepingPlace1Code.SharesHeldAtNCSD, com.tools20022.repository.codeset.SafekeepingPlace1Code.SharesHeldElsewhere);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SafekeepingPlace1Code.mmSharesHeldAtLocalCustodian, com.tools20022.repository.codeset.SafekeepingPlace1Code.mmSharesHeldAtICSD,
+						com.tools20022.repository.codeset.SafekeepingPlace1Code.mmSharesHeldAtNCSD, com.tools20022.repository.codeset.SafekeepingPlace1Code.mmSharesHeldElsewhere);
 				trace_lazy = () -> SafekeepingPlaceCode.mmObject();
 			}
 		});

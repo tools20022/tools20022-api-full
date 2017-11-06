@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -78,30 +79,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#MessageIdentification
- * TransferInstructionStatusReportV05.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#mmMessageIdentification
+ * TransferInstructionStatusReportV05.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#CounterpartyReference
- * TransferInstructionStatusReportV05.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#mmCounterpartyReference
+ * TransferInstructionStatusReportV05.mmCounterpartyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#Reference
- * TransferInstructionStatusReportV05.Reference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#mmReference
+ * TransferInstructionStatusReportV05.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#StatusReport
- * TransferInstructionStatusReportV05.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#mmStatusReport
+ * TransferInstructionStatusReportV05.mmStatusReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#MarketPracticeVersion
- * TransferInstructionStatusReportV05.MarketPracticeVersion}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#mmMarketPracticeVersion
+ * TransferInstructionStatusReportV05.mmMarketPracticeVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#Extension
- * TransferInstructionStatusReportV05.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#mmExtension
+ * TransferInstructionStatusReportV05.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05#identifier
- * TransferInstructionStatusReportV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.011.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,6 +120,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferInstructionStatusReportV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -148,22 +148,23 @@ public class TransferInstructionStatusReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#MessageIdentification
-	 * TransferInstructionStatusReportV04.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#mmMessageIdentification
+	 * TransferInstructionStatusReportV04.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.MessageIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference7 counterpartyReference;
 	/**
 	 * Unambiguous identification of the transfer allocated by the counterparty.
 	 * <p>
@@ -190,22 +191,23 @@ public class TransferInstructionStatusReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#CounterpartyReference
-	 * TransferInstructionStatusReportV04.CounterpartyReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#mmCounterpartyReference
+	 * TransferInstructionStatusReportV04.mmCounterpartyReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CounterpartyReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCounterpartyReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtyRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer allocated by the counterparty.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.CounterpartyReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmCounterpartyReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference7.mmObject();
 		}
 	};
+	protected References49Choice reference;
 	/**
 	 * Reference to the message or communication that was previously received.
 	 * <p>
@@ -232,22 +234,23 @@ public class TransferInstructionStatusReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#Reference
-	 * TransferInstructionStatusReportV04.Reference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#mmReference
+	 * TransferInstructionStatusReportV04.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Reference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the message or communication that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.Reference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> References49Choice.mmObject();
 		}
 	};
+	protected TransferStatusAndReason4 statusReport;
 	/**
 	 * Status of the transfer instruction.
 	 * <p>
@@ -272,22 +275,23 @@ public class TransferInstructionStatusReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#StatusReport
-	 * TransferInstructionStatusReportV04.StatusReport}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#mmStatusReport
+	 * TransferInstructionStatusReportV04.mmStatusReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReport";
 			definition = "Status of the transfer instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.StatusReport;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmStatusReport;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransferStatusAndReason4.mmObject();
 		}
 	};
+	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
 	 * Identifies the market practice to which the message conforms.
 	 * <p>
@@ -313,22 +317,23 @@ public class TransferInstructionStatusReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#MarketPracticeVersion
-	 * TransferInstructionStatusReportV04.MarketPracticeVersion}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#mmMarketPracticeVersion
+	 * TransferInstructionStatusReportV04.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.MarketPracticeVersion;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmMarketPracticeVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -355,46 +360,19 @@ public class TransferInstructionStatusReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#Extension
-	 * TransferInstructionStatusReportV04.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#mmExtension
+	 * TransferInstructionStatusReportV04.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.Extension;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "011";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -409,13 +387,68 @@ public class TransferInstructionStatusReportV05 {
 				rootElement = "Document";
 				xmlTag = "TrfInstrStsRpt";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.MessageIdentification,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.CounterpartyReference, com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.Reference,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.StatusReport, com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.MarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmMessageIdentification,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmCounterpartyReference, com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmReference,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmStatusReport, com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmMarketPracticeVersion,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "011";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference7 getCounterpartyReference() {
+		return counterpartyReference;
+	}
+
+	public void setCounterpartyReference(AdditionalReference7 counterpartyReference) {
+		this.counterpartyReference = counterpartyReference;
+	}
+
+	public References49Choice getReference() {
+		return reference;
+	}
+
+	public void setReference(References49Choice reference) {
+		this.reference = reference;
+	}
+
+	public TransferStatusAndReason4 getStatusReport() {
+		return statusReport;
+	}
+
+	public void setStatusReport(TransferStatusAndReason4 statusReport) {
+		this.statusReport = statusReport;
+	}
+
+	public MarketPracticeVersion1 getMarketPracticeVersion() {
+		return marketPracticeVersion;
+	}
+
+	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+		this.marketPracticeVersion = marketPracticeVersion;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

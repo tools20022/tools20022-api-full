@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PaymentMethod1Choice#Code
- * PaymentMethod1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PaymentMethod1Choice#mmCode
+ * PaymentMethod1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentMethod1Choice#Proprietary
- * PaymentMethod1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentMethod1Choice#mmProprietary
+ * PaymentMethod1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentMethod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4AlphaNumericText code;
 	/**
 	 * Method of payment for the remittance of the CSD or NCB to the invoicing
 	 * party, in a coded form.
@@ -92,7 +93,7 @@ public class PaymentMethod1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentMethod1Choice.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class PaymentMethod1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Method of payment for the remittance of the CSD or NCB to the invoicing party, in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected Max210Text proprietary;
 	/**
 	 * Method of payment for the remittance of the CSD or the NCB to the
 	 * invoicing party, in a proprietary free text format.
@@ -135,7 +137,7 @@ public class PaymentMethod1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentMethod1Choice.mmObject();
 			isDerived = false;
@@ -143,8 +145,8 @@ public class PaymentMethod1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Method of payment for the remittance of the CSD or the NCB to the invoicing party, in a proprietary free text format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -152,13 +154,29 @@ public class PaymentMethod1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentMethod1Choice.Code, com.tools20022.repository.choice.PaymentMethod1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentMethod1Choice.mmCode, com.tools20022.repository.choice.PaymentMethod1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentMethod1Choice";
 				definition = "Method of payment for the remittance of the CSD or the NCB to the invoicing party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4AlphaNumericText getCode() {
+		return code;
+	}
+
+	public void setCode(Max4AlphaNumericText code) {
+		this.code = code;
+	}
+
+	public Max210Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max210Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

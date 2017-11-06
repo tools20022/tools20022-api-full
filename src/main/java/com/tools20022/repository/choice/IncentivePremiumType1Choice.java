@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IncentivePremiumType1Choice#PerSecurity
- * IncentivePremiumType1Choice.PerSecurity}</li>
+ * {@linkplain com.tools20022.repository.choice.IncentivePremiumType1Choice#mmPerSecurity
+ * IncentivePremiumType1Choice.mmPerSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IncentivePremiumType1Choice#PerVote
- * IncentivePremiumType1Choice.PerVote}</li>
+ * {@linkplain com.tools20022.repository.choice.IncentivePremiumType1Choice#mmPerVote
+ * IncentivePremiumType1Choice.mmPerVote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IncentivePremiumType1Choice#PerAttendee
- * IncentivePremiumType1Choice.PerAttendee}</li>
+ * {@linkplain com.tools20022.repository.choice.IncentivePremiumType1Choice#mmPerAttendee
+ * IncentivePremiumType1Choice.mmPerAttendee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IncentivePremiumType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number perSecurity;
 	/**
 	 * Number of securities giving right to a premium.
 	 * <p>
@@ -75,8 +76,8 @@ public class IncentivePremiumType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#PerSecurity
-	 * IncentivePremium.PerSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#mmPerSecurity
+	 * IncentivePremium.mmPerSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class IncentivePremiumType1Choice {
 	 * definition} = "Number of securities giving right to a premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PerSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPerSecurity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPerSecurity;
 			componentContext_lazy = () -> IncentivePremiumType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.PerSecurity;
 			isDerived = false;
 			xmlTag = "PerScty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerSecurity";
 			definition = "Number of securities giving right to a premium.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number perVote;
 	/**
 	 * Number of votes giving right to a premium.
 	 * <p>
@@ -121,8 +123,8 @@ public class IncentivePremiumType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#PerVote
-	 * IncentivePremium.PerVote}</li>
+	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#mmPerVote
+	 * IncentivePremium.mmPerVote}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,20 +143,21 @@ public class IncentivePremiumType1Choice {
 	 * definition} = "Number of votes giving right to a premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PerVote = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPerVote = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPerVote;
 			componentContext_lazy = () -> IncentivePremiumType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.PerVote;
 			isDerived = false;
 			xmlTag = "PerVote";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerVote";
 			definition = "Number of votes giving right to a premium.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected YesNoIndicator perAttendee;
 	/**
 	 * Indicates that the premium is given per attendee.
 	 * <p>
@@ -168,8 +171,8 @@ public class IncentivePremiumType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#PerAttendee
-	 * IncentivePremium.PerAttendee}</li>
+	 * {@linkplain com.tools20022.repository.entity.IncentivePremium#mmPerAttendee
+	 * IncentivePremium.mmPerAttendee}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,17 +191,17 @@ public class IncentivePremiumType1Choice {
 	 * definition} = "Indicates that the premium is given per attendee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PerAttendee = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPerAttendee = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPerAttendee;
 			componentContext_lazy = () -> IncentivePremiumType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.PerAttendee;
 			isDerived = false;
 			xmlTag = "PerAttndee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerAttendee";
 			definition = "Indicates that the premium is given per attendee.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -206,14 +209,38 @@ public class IncentivePremiumType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IncentivePremiumType1Choice.PerSecurity, com.tools20022.repository.choice.IncentivePremiumType1Choice.PerVote,
-						com.tools20022.repository.choice.IncentivePremiumType1Choice.PerAttendee);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IncentivePremiumType1Choice.mmPerSecurity, com.tools20022.repository.choice.IncentivePremiumType1Choice.mmPerVote,
+						com.tools20022.repository.choice.IncentivePremiumType1Choice.mmPerAttendee);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IncentivePremiumType1Choice";
 				definition = "Choice of cash premium paid to the security holder when voting.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getPerSecurity() {
+		return perSecurity;
+	}
+
+	public void setPerSecurity(Number perSecurity) {
+		this.perSecurity = perSecurity;
+	}
+
+	public Number getPerVote() {
+		return perVote;
+	}
+
+	public void setPerVote(Number perVote) {
+		this.perVote = perVote;
+	}
+
+	public YesNoIndicator getPerAttendee() {
+		return perAttendee;
+	}
+
+	public void setPerAttendee(YesNoIndicator perAttendee) {
+		this.perAttendee = perAttendee;
 	}
 }

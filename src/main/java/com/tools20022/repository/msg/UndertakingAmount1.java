@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.UndertakingAmount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about an amount.
@@ -35,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UndertakingAmount1#Amount
- * UndertakingAmount1.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UndertakingAmount1#mmAmount
+ * UndertakingAmount1.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmount1#PlusTolerance
- * UndertakingAmount1.PlusTolerance}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmount1#mmPlusTolerance
+ * UndertakingAmount1.mmPlusTolerance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmount1#AdditionalInformation
- * UndertakingAmount1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmount1#mmAdditionalInformation
+ * UndertakingAmount1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount and currency of the undertaking.
 	 * <p>
@@ -79,8 +81,8 @@ public class UndertakingAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount#Amount
-	 * UndertakingAmount.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmAmount
+	 * UndertakingAmount.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +101,21 @@ public class UndertakingAmount1 {
 	 * definition} = "Amount and currency of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmAmount;
 			componentContext_lazy = () -> UndertakingAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount and currency of the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate plusTolerance;
 	/**
 	 * Percentage by which the amount claimed under the undertaking may be more
 	 * than the undertaking amount.
@@ -127,8 +130,8 @@ public class UndertakingAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount#Tolerance
-	 * UndertakingAmount.Tolerance}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmTolerance
+	 * UndertakingAmount.mmTolerance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,20 +152,21 @@ public class UndertakingAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlusTolerance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlusTolerance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmTolerance;
 			componentContext_lazy = () -> UndertakingAmount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.Tolerance;
 			isDerived = false;
 			xmlTag = "PlusTlrnce";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlusTolerance";
 			definition = "Percentage by which the amount claimed under the undertaking may be more than the undertaking amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information concerning the undertaking amount.
 	 * <p>
@@ -191,7 +195,7 @@ public class UndertakingAmount1 {
 	 * "Additional information concerning the undertaking amount. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UndertakingAmount1.mmObject();
 			isDerived = false;
@@ -199,8 +203,8 @@ public class UndertakingAmount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information concerning the undertaking amount. ";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -208,15 +212,39 @@ public class UndertakingAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmount1.Amount, com.tools20022.repository.msg.UndertakingAmount1.PlusTolerance,
-						com.tools20022.repository.msg.UndertakingAmount1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmount1.mmAmount, com.tools20022.repository.msg.UndertakingAmount1.mmPlusTolerance,
+						com.tools20022.repository.msg.UndertakingAmount1.mmAdditionalInformation);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmount1";
 				definition = "Information about an amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PercentageRate getPlusTolerance() {
+		return plusTolerance;
+	}
+
+	public void setPlusTolerance(PercentageRate plusTolerance) {
+		this.plusTolerance = plusTolerance;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

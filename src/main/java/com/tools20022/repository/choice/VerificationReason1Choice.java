@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.VerificationReason1Choice#Code
- * VerificationReason1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.VerificationReason1Choice#mmCode
+ * VerificationReason1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.VerificationReason1Choice#Proprietary
- * VerificationReason1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.VerificationReason1Choice#mmProprietary
+ * VerificationReason1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VerificationReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalVerificationReason1Code code;
 	/**
 	 * Reason why the verified identification information is incorrect, as
 	 * published in an external reason code list.
@@ -93,7 +94,7 @@ public class VerificationReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> VerificationReason1Choice.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class VerificationReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason why the verified identification information is incorrect, as published in an external reason code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalVerificationReason1Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Reason why the verified identification information is incorrect, in a
 	 * proprietary form.
@@ -136,7 +138,7 @@ public class VerificationReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> VerificationReason1Choice.mmObject();
 			isDerived = false;
@@ -144,8 +146,8 @@ public class VerificationReason1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason why the verified identification information is incorrect, in a proprietary form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -153,13 +155,29 @@ public class VerificationReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.VerificationReason1Choice.Code, com.tools20022.repository.choice.VerificationReason1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.VerificationReason1Choice.mmCode, com.tools20022.repository.choice.VerificationReason1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VerificationReason1Choice";
 				definition = "Specifies the reason why the verified identification information is incorrect.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalVerificationReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalVerificationReason1Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

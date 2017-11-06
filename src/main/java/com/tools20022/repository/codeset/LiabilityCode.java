@@ -29,12 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LiabilityCode#Investor
- * LiabilityCode.Investor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LiabilityCode#NotInvestor
- * LiabilityCode.NotInvestor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LiabilityCode#Broker
- * LiabilityCode.Broker}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LiabilityCode#mmInvestor
+ * LiabilityCode.mmInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.LiabilityCode#mmNotInvestor
+ * LiabilityCode.mmNotInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LiabilityCode#mmBroker
+ * LiabilityCode.mmBroker}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,7 +84,7 @@ public class LiabilityCode {
 	 * definition} = "Investor is responsible."</li>
 	 * </ul>
 	 */
-	public static final MMCode Investor = new MMCode() {
+	public static final MMCode mmInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
@@ -113,7 +114,7 @@ public class LiabilityCode {
 	 * definition} = "Investor is not assumed responsibile."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotInvestor = new MMCode() {
+	public static final MMCode mmNotInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotInvestor";
@@ -143,7 +144,7 @@ public class LiabilityCode {
 	 * definition} = "Broker is responsible."</li>
 	 * </ul>
 	 */
-	public static final MMCode Broker = new MMCode() {
+	public static final MMCode mmBroker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Broker";
@@ -156,11 +157,11 @@ public class LiabilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LiabilityCode";
 				definition = "Specifies the party responsible for the liability.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LiabilityCode.Investor, com.tools20022.repository.codeset.LiabilityCode.NotInvestor, com.tools20022.repository.codeset.LiabilityCode.Broker);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LiabilityCode.mmInvestor, com.tools20022.repository.codeset.LiabilityCode.mmNotInvestor, com.tools20022.repository.codeset.LiabilityCode.mmBroker);
 				derivation_lazy = () -> Arrays.asList(Liability1Code.mmObject());
 			}
 		});

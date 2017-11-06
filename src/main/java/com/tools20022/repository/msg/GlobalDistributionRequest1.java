@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.CorporateActionDistribution;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the global distribution.
@@ -38,26 +39,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#PreadviceIndicator
- * GlobalDistributionRequest1.PreadviceIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmPreadviceIndicator
+ * GlobalDistributionRequest1.mmPreadviceIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#OptionNumber
- * GlobalDistributionRequest1.OptionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmOptionNumber
+ * GlobalDistributionRequest1.mmOptionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#OptionType
- * GlobalDistributionRequest1.OptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmOptionType
+ * GlobalDistributionRequest1.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#RecordDate
- * GlobalDistributionRequest1.RecordDate}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmRecordDate
+ * GlobalDistributionRequest1.mmRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#PaymentDate
- * GlobalDistributionRequest1.PaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmPaymentDate
+ * GlobalDistributionRequest1.mmPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#SecuritiesMovement
- * GlobalDistributionRequest1.SecuritiesMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmSecuritiesMovement
+ * GlobalDistributionRequest1.mmSecuritiesMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#CashMovement
- * GlobalDistributionRequest1.CashMovement}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmCashMovement
+ * GlobalDistributionRequest1.mmCashMovement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -69,15 +70,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#GlobalDistributionDetails
- * AgentCAGlobalDistributionAuthorisationRequestV01.GlobalDistributionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01#mmGlobalDistributionDetails
+ * AgentCAGlobalDistributionAuthorisationRequestV01.mmGlobalDistributionDetails}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GlobalDistributionRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator preadviceIndicator;
 	/**
 	 * Indicates wether is message is an advice or pre-advice.
 	 * <p>
@@ -119,7 +122,7 @@ public class GlobalDistributionRequest1 {
 	 * definition} = "Indicates wether is message is an advice or pre-advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreadviceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreadviceIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GlobalDistributionRequest1.mmObject();
 			isDerived = false;
@@ -127,11 +130,12 @@ public class GlobalDistributionRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreadviceIndicator";
 			definition = "Indicates wether is message is an advice or pre-advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Exact3NumericText optionNumber;
 	/**
 	 * Number identifying the available corporate action options.
 	 * <p>
@@ -145,8 +149,8 @@ public class GlobalDistributionRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionNumber
-	 * CorporateActionOption.OptionNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
+	 * CorporateActionOption.mmOptionNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,20 +170,21 @@ public class GlobalDistributionRequest1 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> GlobalDistributionRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionNumber;
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected CorporateActionOption1FormatChoice optionType;
 	/**
 	 * Specifies the corporate action options available to the account owner.
 	 * <p>
@@ -193,8 +198,8 @@ public class GlobalDistributionRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionType
-	 * CorporateActionOption.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionType
+	 * CorporateActionOption.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -214,20 +219,21 @@ public class GlobalDistributionRequest1 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> GlobalDistributionRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionType;
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
 		}
 	};
+	protected DateFormat4Choice recordDate;
 	/**
 	 * Date on which the holders of securities are/will be recorded for the
 	 * income being paid or for entitlement to the rights or offer/privilege.
@@ -242,8 +248,8 @@ public class GlobalDistributionRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RecordDate
-	 * CorporateActionDeadline.RecordDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRecordDate
+	 * CorporateActionDeadline.mmRecordDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -264,20 +270,21 @@ public class GlobalDistributionRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> GlobalDistributionRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.RecordDate;
 			isDerived = false;
 			xmlTag = "RcrdDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date on which the holders of securities are/will be recorded for the income being paid or for entitlement to the rights or offer/privilege.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected DateFormat4Choice paymentDate;
 	/**
 	 * Date on which securities/cash will be paid.
 	 * <p>
@@ -291,8 +298,8 @@ public class GlobalDistributionRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#MovementDate
-	 * CorporateActionDistribution.MovementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmMovementDate
+	 * CorporateActionDistribution.mmMovementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,20 +318,21 @@ public class GlobalDistributionRequest1 {
 	 * definition} = "Date on which securities/cash will be paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> GlobalDistributionRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.MovementDate;
 			isDerived = false;
 			xmlTag = "PmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date on which securities/cash will be paid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityMovement1> securitiesMovement;
 	/**
 	 * Provides information about the securities movement.
 	 * <p>
@@ -336,8 +344,8 @@ public class GlobalDistributionRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#SecuritiesProceedsMovement
-	 * CorporateActionProceedsDeliveryInstruction.SecuritiesProceedsMovement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSecuritiesProceedsMovement
+	 * CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -356,20 +364,21 @@ public class GlobalDistributionRequest1 {
 	 * definition} = "Provides information about the securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesMovement = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement;
 			componentContext_lazy = () -> GlobalDistributionRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.SecuritiesProceedsMovement;
 			isDerived = false;
 			xmlTag = "SctiesMvmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovement";
 			definition = "Provides information about the securities movement.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityMovement1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityMovement1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashMovement1> cashMovement;
 	/**
 	 * Provides information about the cash movement.
 	 * <p>
@@ -381,8 +390,8 @@ public class GlobalDistributionRequest1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#CashProceedsMovement
-	 * CorporateActionProceedsDeliveryInstruction.CashProceedsMovement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCashProceedsMovement
+	 * CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -401,35 +410,91 @@ public class GlobalDistributionRequest1 {
 	 * definition} = "Provides information about the cash movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashMovement = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement;
 			componentContext_lazy = () -> GlobalDistributionRequest1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.CashProceedsMovement;
 			isDerived = false;
 			xmlTag = "CshMvmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMovement";
 			definition = "Provides information about the cash movement.";
 			minOccurs = 0;
-			type_lazy = () -> CashMovement1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashMovement1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionRequest1.PreadviceIndicator, com.tools20022.repository.msg.GlobalDistributionRequest1.OptionNumber,
-						com.tools20022.repository.msg.GlobalDistributionRequest1.OptionType, com.tools20022.repository.msg.GlobalDistributionRequest1.RecordDate, com.tools20022.repository.msg.GlobalDistributionRequest1.PaymentDate,
-						com.tools20022.repository.msg.GlobalDistributionRequest1.SecuritiesMovement, com.tools20022.repository.msg.GlobalDistributionRequest1.CashMovement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionRequest1.mmPreadviceIndicator, com.tools20022.repository.msg.GlobalDistributionRequest1.mmOptionNumber,
+						com.tools20022.repository.msg.GlobalDistributionRequest1.mmOptionType, com.tools20022.repository.msg.GlobalDistributionRequest1.mmRecordDate, com.tools20022.repository.msg.GlobalDistributionRequest1.mmPaymentDate,
+						com.tools20022.repository.msg.GlobalDistributionRequest1.mmSecuritiesMovement, com.tools20022.repository.msg.GlobalDistributionRequest1.mmCashMovement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.mmGlobalDistributionDetails);
 				trace_lazy = () -> CorporateActionDistribution.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.GlobalDistributionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GlobalDistributionRequest1";
 				definition = "Provides information about the global distribution.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getPreadviceIndicator() {
+		return preadviceIndicator;
+	}
+
+	public void setPreadviceIndicator(YesNoIndicator preadviceIndicator) {
+		this.preadviceIndicator = preadviceIndicator;
+	}
+
+	public Exact3NumericText getOptionNumber() {
+		return optionNumber;
+	}
+
+	public void setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = optionNumber;
+	}
+
+	public CorporateActionOption1FormatChoice getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(CorporateActionOption1FormatChoice optionType) {
+		this.optionType = optionType;
+	}
+
+	public DateFormat4Choice getRecordDate() {
+		return recordDate;
+	}
+
+	public void setRecordDate(DateFormat4Choice recordDate) {
+		this.recordDate = recordDate;
+	}
+
+	public DateFormat4Choice getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(DateFormat4Choice paymentDate) {
+		this.paymentDate = paymentDate;
+	}
+
+	public List<SecurityMovement1> getSecuritiesMovement() {
+		return securitiesMovement;
+	}
+
+	public void setSecuritiesMovement(List<com.tools20022.repository.msg.SecurityMovement1> securitiesMovement) {
+		this.securitiesMovement = securitiesMovement;
+	}
+
+	public List<CashMovement1> getCashMovement() {
+		return cashMovement;
+	}
+
+	public void setCashMovement(List<com.tools20022.repository.msg.CashMovement1> cashMovement) {
+		this.cashMovement = cashMovement;
 	}
 }

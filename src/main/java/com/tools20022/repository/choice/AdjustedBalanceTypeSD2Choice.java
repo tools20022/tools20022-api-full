@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice#StockLoan
- * AdjustedBalanceTypeSD2Choice.StockLoan}</li>
+ * {@linkplain com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice#mmStockLoan
+ * AdjustedBalanceTypeSD2Choice.mmStockLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice#Repo
- * AdjustedBalanceTypeSD2Choice.Repo}</li>
+ * {@linkplain com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice#mmRepo
+ * AdjustedBalanceTypeSD2Choice.mmRepo}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdjustedBalanceTypeSD2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SignedQuantityFormat4 stockLoan;
 	/**
 	 * Stock loan transaction position. Stock loan is loaned / borrowed from /
 	 * to a third party.
@@ -93,7 +94,7 @@ public class AdjustedBalanceTypeSD2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StockLoan = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStockLoan = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdjustedBalanceTypeSD2Choice.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class AdjustedBalanceTypeSD2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoan";
 			definition = "Stock loan transaction position. Stock loan is loaned / borrowed from / to a third party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	protected SignedQuantityFormat4 repo;
 	/**
 	 * Repurchase agreement (REPO) between a seller and a buyer whereby the
 	 * seller agrees to repurchase the securities at an agreed upon price, and
@@ -138,7 +140,7 @@ public class AdjustedBalanceTypeSD2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Repo = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRepo = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdjustedBalanceTypeSD2Choice.mmObject();
 			isDerived = false;
@@ -146,8 +148,8 @@ public class AdjustedBalanceTypeSD2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
 			definition = "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
@@ -155,8 +157,8 @@ public class AdjustedBalanceTypeSD2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice.StockLoan, com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice.Repo);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice.mmStockLoan, com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice.mmRepo);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AdjustedBalanceTypeSD2Choice";
 				definition = "Choice of balance types to provide transaction details.";
@@ -164,5 +166,21 @@ public class AdjustedBalanceTypeSD2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SignedQuantityFormat4 getStockLoan() {
+		return stockLoan;
+	}
+
+	public void setStockLoan(SignedQuantityFormat4 stockLoan) {
+		this.stockLoan = stockLoan;
+	}
+
+	public SignedQuantityFormat4 getRepo() {
+		return repo;
+	}
+
+	public void setRepo(SignedQuantityFormat4 repo) {
+		this.repo = repo;
 	}
 }

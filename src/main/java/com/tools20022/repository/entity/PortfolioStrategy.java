@@ -40,46 +40,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PortfolioStrategy#Portfolio
- * PortfolioStrategy.Portfolio}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#InclusionIndicator
- * PortfolioStrategy.InclusionIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmPortfolio
+ * PortfolioStrategy.mmPortfolio}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#MinimumInvestmentAmount
- * PortfolioStrategy.MinimumInvestmentAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmInclusionIndicator
+ * PortfolioStrategy.mmInclusionIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#MinimumInvestmentRate
- * PortfolioStrategy.MinimumInvestmentRate}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmMinimumInvestmentAmount
+ * PortfolioStrategy.mmMinimumInvestmentAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#MaximumInvestmentAmount
- * PortfolioStrategy.MaximumInvestmentAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmMinimumInvestmentRate
+ * PortfolioStrategy.mmMinimumInvestmentRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#MaximumInvestmentRate
- * PortfolioStrategy.MaximumInvestmentRate}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmMaximumInvestmentAmount
+ * PortfolioStrategy.mmMaximumInvestmentAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#EffectivePeriod
- * PortfolioStrategy.EffectivePeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmMaximumInvestmentRate
+ * PortfolioStrategy.mmMaximumInvestmentRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#DistributionPolicy
- * PortfolioStrategy.DistributionPolicy}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmEffectivePeriod
+ * PortfolioStrategy.mmEffectivePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#Description
- * PortfolioStrategy.Description}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmDistributionPolicy
+ * PortfolioStrategy.mmDistributionPolicy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#Definition
- * PortfolioStrategy.Definition}</li>
- * </ul>
- * </li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmDescription
+ * PortfolioStrategy.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#Strategy
- * Portfolio.Strategy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategyDefinition#Strategy
- * PortfolioStrategyDefinition.Strategy}</li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmDefinition
+ * PortfolioStrategy.mmDefinition}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -98,10 +88,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmStrategy
+ * Portfolio.mmStrategy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategyDefinition#mmStrategy
+ * PortfolioStrategyDefinition.mmStrategy}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,6 +116,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PortfolioStrategy {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Portfolio portfolio;
 	/**
 	 * Portfolio for which a strategy is specified.
 	 * <p>
@@ -123,8 +125,8 @@ public class PortfolioStrategy {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Portfolio#Strategy
-	 * Portfolio.Strategy}</li>
+	 * {@linkplain com.tools20022.repository.entity.Portfolio#mmStrategy
+	 * Portfolio.mmStrategy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -148,20 +150,21 @@ public class PortfolioStrategy {
 	 * definition} = "Portfolio for which a strategy is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Portfolio = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPortfolio = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
 			definition = "Portfolio for which a strategy is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Portfolio.Strategy;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Portfolio.mmStrategy;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 		}
 	};
+	protected YesNoIndicator inclusionIndicator;
 	/**
 	 * Indicates whether the referred strategy is included.
 	 * <p>
@@ -188,18 +191,19 @@ public class PortfolioStrategy {
 	 * definition} = "Indicates whether the referred strategy is included."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InclusionIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInclusionIndicator = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InclusionIndicator";
 			definition = "Indicates whether the referred strategy is included.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected CurrencyAndAmount minimumInvestmentAmount;
 	/**
 	 * Minimum amount that has to be invested in the specified strategy.
 	 * <p>
@@ -227,18 +231,19 @@ public class PortfolioStrategy {
 	 * "Minimum amount that has to be invested in the specified strategy."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MinimumInvestmentAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMinimumInvestmentAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MinimumInvestmentAmount";
 			definition = "Minimum amount that has to be invested in the specified strategy.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate minimumInvestmentRate;
 	/**
 	 * Minimum percentage that has to be invested in the specified strategy.
 	 * <p>
@@ -266,18 +271,19 @@ public class PortfolioStrategy {
 	 * "Minimum percentage that has to be invested in the specified strategy."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MinimumInvestmentRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMinimumInvestmentRate = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MinimumInvestmentRate";
 			definition = "Minimum percentage that has to be invested in the specified strategy.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount maximumInvestmentAmount;
 	/**
 	 * Maximum amount that may be invested in the specified strategy.
 	 * <p>
@@ -305,18 +311,19 @@ public class PortfolioStrategy {
 	 * "Maximum amount that may be invested in the specified strategy."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MaximumInvestmentAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMaximumInvestmentAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumInvestmentAmount";
 			definition = "Maximum amount that may be invested in the specified strategy.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate maximumInvestmentRate;
 	/**
 	 * Maximum percentage that may be invested in the specified strategy.
 	 * <p>
@@ -344,18 +351,19 @@ public class PortfolioStrategy {
 	 * "Maximum percentage that may be invested in the specified strategy."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MaximumInvestmentRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMaximumInvestmentRate = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumInvestmentRate";
 			definition = "Maximum percentage that may be invested in the specified strategy.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected DateTimePeriod effectivePeriod;
 	/**
 	 * Period during which the investment guideline is valid.
 	 * <p>
@@ -382,18 +390,19 @@ public class PortfolioStrategy {
 	 * definition} = "Period during which the investment guideline is valid."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EffectivePeriod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEffectivePeriod = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EffectivePeriod";
 			definition = "Period during which the investment guideline is valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateTimePeriod.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected DistributionPolicyCode distributionPolicy;
 	/**
 	 * Income policy relating to the fund, ie, if income is paid out or retained
 	 * in the fund.
@@ -423,18 +432,19 @@ public class PortfolioStrategy {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DistributionPolicy = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDistributionPolicy = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DistributionPolicy";
 			definition = "Income policy relating to the fund, ie, if income is paid out or retained in the fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DistributionPolicyCode.mmObject();
 		}
 	};
+	protected Max2000Text description;
 	/**
 	 * Free text description of the investment guideline, for example, rating
 	 * requirements.
@@ -463,18 +473,19 @@ public class PortfolioStrategy {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Description = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Free text description of the investment guideline, for example, rating requirements.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected PortfolioStrategyDefinition definition;
 	/**
 	 * Definition of the portfolio strategy.
 	 * <p>
@@ -483,8 +494,8 @@ public class PortfolioStrategy {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioStrategyDefinition#Strategy
-	 * PortfolioStrategyDefinition.Strategy}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioStrategyDefinition#mmStrategy
+	 * PortfolioStrategyDefinition.mmStrategy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -509,37 +520,117 @@ public class PortfolioStrategy {
 	 * definition} = "Definition of the portfolio strategy."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Definition = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDefinition = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Definition";
 			definition = "Definition of the portfolio strategy.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PortfolioStrategyDefinition.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PortfolioStrategyDefinition.Strategy;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.PortfolioStrategyDefinition.mmStrategy;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PortfolioStrategyDefinition.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PortfolioStrategy";
 				definition = "Rough allocation of the portfolio.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Portfolio.Strategy, com.tools20022.repository.entity.PortfolioStrategyDefinition.Strategy);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Portfolio.mmStrategy, com.tools20022.repository.entity.PortfolioStrategyDefinition.mmStrategy);
 				subType_lazy = () -> Arrays.asList(JurisdictionStrategy.mmObject(), OrganisationStrategy.mmObject(), SectorStrategy.mmObject(), CurrencyStrategy.mmObject(), AssetClassStrategy.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PortfolioStrategy.Portfolio, com.tools20022.repository.entity.PortfolioStrategy.InclusionIndicator,
-						com.tools20022.repository.entity.PortfolioStrategy.MinimumInvestmentAmount, com.tools20022.repository.entity.PortfolioStrategy.MinimumInvestmentRate,
-						com.tools20022.repository.entity.PortfolioStrategy.MaximumInvestmentAmount, com.tools20022.repository.entity.PortfolioStrategy.MaximumInvestmentRate,
-						com.tools20022.repository.entity.PortfolioStrategy.EffectivePeriod, com.tools20022.repository.entity.PortfolioStrategy.DistributionPolicy, com.tools20022.repository.entity.PortfolioStrategy.Description,
-						com.tools20022.repository.entity.PortfolioStrategy.Definition);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PortfolioStrategy.mmPortfolio, com.tools20022.repository.entity.PortfolioStrategy.mmInclusionIndicator,
+						com.tools20022.repository.entity.PortfolioStrategy.mmMinimumInvestmentAmount, com.tools20022.repository.entity.PortfolioStrategy.mmMinimumInvestmentRate,
+						com.tools20022.repository.entity.PortfolioStrategy.mmMaximumInvestmentAmount, com.tools20022.repository.entity.PortfolioStrategy.mmMaximumInvestmentRate,
+						com.tools20022.repository.entity.PortfolioStrategy.mmEffectivePeriod, com.tools20022.repository.entity.PortfolioStrategy.mmDistributionPolicy, com.tools20022.repository.entity.PortfolioStrategy.mmDescription,
+						com.tools20022.repository.entity.PortfolioStrategy.mmDefinition);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Portfolio getPortfolio() {
+		return portfolio;
+	}
+
+	public void setPortfolio(com.tools20022.repository.entity.Portfolio portfolio) {
+		this.portfolio = portfolio;
+	}
+
+	public YesNoIndicator getInclusionIndicator() {
+		return inclusionIndicator;
+	}
+
+	public void setInclusionIndicator(YesNoIndicator inclusionIndicator) {
+		this.inclusionIndicator = inclusionIndicator;
+	}
+
+	public CurrencyAndAmount getMinimumInvestmentAmount() {
+		return minimumInvestmentAmount;
+	}
+
+	public void setMinimumInvestmentAmount(CurrencyAndAmount minimumInvestmentAmount) {
+		this.minimumInvestmentAmount = minimumInvestmentAmount;
+	}
+
+	public PercentageRate getMinimumInvestmentRate() {
+		return minimumInvestmentRate;
+	}
+
+	public void setMinimumInvestmentRate(PercentageRate minimumInvestmentRate) {
+		this.minimumInvestmentRate = minimumInvestmentRate;
+	}
+
+	public CurrencyAndAmount getMaximumInvestmentAmount() {
+		return maximumInvestmentAmount;
+	}
+
+	public void setMaximumInvestmentAmount(CurrencyAndAmount maximumInvestmentAmount) {
+		this.maximumInvestmentAmount = maximumInvestmentAmount;
+	}
+
+	public PercentageRate getMaximumInvestmentRate() {
+		return maximumInvestmentRate;
+	}
+
+	public void setMaximumInvestmentRate(PercentageRate maximumInvestmentRate) {
+		this.maximumInvestmentRate = maximumInvestmentRate;
+	}
+
+	public DateTimePeriod getEffectivePeriod() {
+		return effectivePeriod;
+	}
+
+	public void setEffectivePeriod(com.tools20022.repository.entity.DateTimePeriod effectivePeriod) {
+		this.effectivePeriod = effectivePeriod;
+	}
+
+	public DistributionPolicyCode getDistributionPolicy() {
+		return distributionPolicy;
+	}
+
+	public void setDistributionPolicy(DistributionPolicyCode distributionPolicy) {
+		this.distributionPolicy = distributionPolicy;
+	}
+
+	public Max2000Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max2000Text description) {
+		this.description = description;
+	}
+
+	public PortfolioStrategyDefinition getDefinition() {
+		return definition;
+	}
+
+	public void setDefinition(com.tools20022.repository.entity.PortfolioStrategyDefinition definition) {
+		this.definition = definition;
 	}
 }

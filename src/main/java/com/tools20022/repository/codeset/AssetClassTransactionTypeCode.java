@@ -30,35 +30,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#Futures
- * AssetClassTransactionTypeCode.Futures}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#mmFutures
+ * AssetClassTransactionTypeCode.mmFutures}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#Options
- * AssetClassTransactionTypeCode.Options}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#mmOptions
+ * AssetClassTransactionTypeCode.mmOptions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#TAPOS
- * AssetClassTransactionTypeCode.TAPOS}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#mmTAPOS
+ * AssetClassTransactionTypeCode.mmTAPOS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#Swaps
- * AssetClassTransactionTypeCode.Swaps}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#mmSwaps
+ * AssetClassTransactionTypeCode.mmSwaps}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#Minis
- * AssetClassTransactionTypeCode.Minis}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#mmMinis
+ * AssetClassTransactionTypeCode.mmMinis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#OTC
- * AssetClassTransactionTypeCode.OTC}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#mmOTC
+ * AssetClassTransactionTypeCode.mmOTC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#Outright
- * AssetClassTransactionTypeCode.Outright}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#mmOutright
+ * AssetClassTransactionTypeCode.mmOutright}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#Crack
- * AssetClassTransactionTypeCode.Crack}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#mmCrack
+ * AssetClassTransactionTypeCode.mmCrack}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#Differential
- * AssetClassTransactionTypeCode.Differential}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#mmDifferential
+ * AssetClassTransactionTypeCode.mmDifferential}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#Other
- * AssetClassTransactionTypeCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassTransactionTypeCode#mmOther
+ * AssetClassTransactionTypeCode.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -72,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,7 +109,7 @@ public class AssetClassTransactionTypeCode {
 	 * definition} = "Futures."</li>
 	 * </ul>
 	 */
-	public static final MMCode Futures = new MMCode() {
+	public static final MMCode mmFutures = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Futures";
@@ -139,7 +139,7 @@ public class AssetClassTransactionTypeCode {
 	 * definition} = "Options.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode Options = new MMCode() {
+	public static final MMCode mmOptions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Options";
@@ -169,7 +169,7 @@ public class AssetClassTransactionTypeCode {
 	 * definition} = "TAPOS."</li>
 	 * </ul>
 	 */
-	public static final MMCode TAPOS = new MMCode() {
+	public static final MMCode mmTAPOS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TAPOS";
@@ -199,7 +199,7 @@ public class AssetClassTransactionTypeCode {
 	 * definition} = "Swaps."</li>
 	 * </ul>
 	 */
-	public static final MMCode Swaps = new MMCode() {
+	public static final MMCode mmSwaps = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swaps";
@@ -229,7 +229,7 @@ public class AssetClassTransactionTypeCode {
 	 * definition} = "Minis."</li>
 	 * </ul>
 	 */
-	public static final MMCode Minis = new MMCode() {
+	public static final MMCode mmMinis = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Minis";
@@ -259,7 +259,7 @@ public class AssetClassTransactionTypeCode {
 	 * definition} = "Over-The-Counter."</li>
 	 * </ul>
 	 */
-	public static final MMCode OTC = new MMCode() {
+	public static final MMCode mmOTC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OTC";
@@ -289,7 +289,7 @@ public class AssetClassTransactionTypeCode {
 	 * definition} = "Outright."</li>
 	 * </ul>
 	 */
-	public static final MMCode Outright = new MMCode() {
+	public static final MMCode mmOutright = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Outright";
@@ -319,7 +319,7 @@ public class AssetClassTransactionTypeCode {
 	 * definition} = "Crack. "</li>
 	 * </ul>
 	 */
-	public static final MMCode Crack = new MMCode() {
+	public static final MMCode mmCrack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Crack";
@@ -349,7 +349,7 @@ public class AssetClassTransactionTypeCode {
 	 * definition} = "Differential."</li>
 	 * </ul>
 	 */
-	public static final MMCode Differential = new MMCode() {
+	public static final MMCode mmDifferential = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Differential";
@@ -379,7 +379,7 @@ public class AssetClassTransactionTypeCode {
 	 * definition} = "Other."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -392,14 +392,15 @@ public class AssetClassTransactionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassTransactionTypeCode";
 				definition = "Code list of transaction type as specified by the trading venue. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassTransactionTypeCode.Futures, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.Options,
-						com.tools20022.repository.codeset.AssetClassTransactionTypeCode.TAPOS, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.Swaps, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.Minis,
-						com.tools20022.repository.codeset.AssetClassTransactionTypeCode.OTC, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.Outright, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.Crack,
-						com.tools20022.repository.codeset.AssetClassTransactionTypeCode.Differential, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassTransactionTypeCode.mmFutures, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.mmOptions,
+						com.tools20022.repository.codeset.AssetClassTransactionTypeCode.mmTAPOS, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.mmSwaps,
+						com.tools20022.repository.codeset.AssetClassTransactionTypeCode.mmMinis, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.mmOTC,
+						com.tools20022.repository.codeset.AssetClassTransactionTypeCode.mmOutright, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.mmCrack,
+						com.tools20022.repository.codeset.AssetClassTransactionTypeCode.mmDifferential, com.tools20022.repository.codeset.AssetClassTransactionTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(AssetClassTransactionType1Code.mmObject());
 			}
 		});

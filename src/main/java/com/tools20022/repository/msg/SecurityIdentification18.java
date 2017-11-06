@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification18#SecurityIdentificationSource
- * SecurityIdentification18.SecurityIdentificationSource}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification18#mmSecurityIdentificationSource
+ * SecurityIdentification18.mmSecurityIdentificationSource}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification18#SecurityIdentification
- * SecurityIdentification18.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification18#mmSecurityIdentification
+ * SecurityIdentification18.mmSecurityIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityIdentification18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IdentificationType2Code securityIdentificationSource;
 	/**
 	 * Security identification source of the trade.
 	 * <p>
@@ -87,7 +88,7 @@ public class SecurityIdentification18 {
 	 * definition} = "Security identification source of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentificationSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentificationSource = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityIdentification18.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class SecurityIdentification18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentificationSource";
 			definition = "Security identification source of the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> IdentificationType2Code.mmObject();
 		}
 	};
+	protected Max35Text securityIdentification;
 	/**
 	 * Security identification of the trade.
 	 * <p>
@@ -127,7 +129,7 @@ public class SecurityIdentification18 {
 	 * definition} = "Security identification of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityIdentification18.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class SecurityIdentification18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Security identification of the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class SecurityIdentification18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification18.SecurityIdentificationSource, com.tools20022.repository.msg.SecurityIdentification18.SecurityIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification18.mmSecurityIdentificationSource, com.tools20022.repository.msg.SecurityIdentification18.mmSecurityIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification18";
 				definition = "Identification of a security by its symbol.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IdentificationType2Code getSecurityIdentificationSource() {
+		return securityIdentificationSource;
+	}
+
+	public void setSecurityIdentificationSource(IdentificationType2Code securityIdentificationSource) {
+		this.securityIdentificationSource = securityIdentificationSource;
+	}
+
+	public Max35Text getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(Max35Text securityIdentification) {
+		this.securityIdentification = securityIdentification;
 	}
 }

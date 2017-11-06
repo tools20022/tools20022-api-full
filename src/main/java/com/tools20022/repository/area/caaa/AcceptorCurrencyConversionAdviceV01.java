@@ -56,21 +56,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01#Header
- * AcceptorCurrencyConversionAdviceV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01#mmHeader
+ * AcceptorCurrencyConversionAdviceV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01#AcceptorCurrencyConversionAdvice
- * AcceptorCurrencyConversionAdviceV01.AcceptorCurrencyConversionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01#mmAcceptorCurrencyConversionAdvice
+ * AcceptorCurrencyConversionAdviceV01.mmAcceptorCurrencyConversionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01#SecurityTrailer
- * AcceptorCurrencyConversionAdviceV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01#mmSecurityTrailer
+ * AcceptorCurrencyConversionAdviceV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01#identifier
- * AcceptorCurrencyConversionAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caaa.018.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorCurrencyConversionAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header34 header;
 	/**
 	 * Currency Conversion request message management information.
 	 * <p>
@@ -109,17 +108,18 @@ public class AcceptorCurrencyConversionAdviceV01 {
 	 * "Currency Conversion request message management information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Currency Conversion request message management information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header34.mmObject();
 		}
 	};
+	protected AcceptorCurrencyConversionAdvice1 acceptorCurrencyConversionAdvice;
 	/**
 	 * Information related to the outcome of the currency conversion.
 	 * <p>
@@ -144,17 +144,18 @@ public class AcceptorCurrencyConversionAdviceV01 {
 	 * "Information related to the outcome of the currency conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcceptorCurrencyConversionAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcceptorCurrencyConversionAdvice = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptrCcyConvsAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorCurrencyConversionAdvice";
 			definition = "Information related to the outcome of the currency conversion.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcceptorCurrencyConversionAdvice1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -178,42 +179,15 @@ public class AcceptorCurrencyConversionAdviceV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caaa"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "018"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caaa";
-			messageFunctionality = "018";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -227,11 +201,42 @@ public class AcceptorCurrencyConversionAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrCcyConvsAdvc";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01.Header,
-						com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01.AcceptorCurrencyConversionAdvice, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01.mmHeader,
+						com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01.mmAcceptorCurrencyConversionAdvice, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caaa";
+						messageFunctionality = "018";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header34 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header34 header) {
+		this.header = header;
+	}
+
+	public AcceptorCurrencyConversionAdvice1 getAcceptorCurrencyConversionAdvice() {
+		return acceptorCurrencyConversionAdvice;
+	}
+
+	public void setAcceptorCurrencyConversionAdvice(AcceptorCurrencyConversionAdvice1 acceptorCurrencyConversionAdvice) {
+		this.acceptorCurrencyConversionAdvice = acceptorCurrencyConversionAdvice;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

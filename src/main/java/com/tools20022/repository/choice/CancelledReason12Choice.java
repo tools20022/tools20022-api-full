@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancelledReason12Choice#Code
- * CancelledReason12Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CancelledReason12Choice#mmCode
+ * CancelledReason12Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancelledReason12Choice#Proprietary
- * CancelledReason12Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CancelledReason12Choice#mmProprietary
+ * CancelledReason12Choice.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancelledReason12Choice#NoSpecifiedReason
- * CancelledReason12Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.CancelledReason12Choice#mmNoSpecifiedReason
+ * CancelledReason12Choice.mmNoSpecifiedReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancelledReason12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancelledStatusReason2Code code;
 	/**
 	 * Cancelled reason expressed as a code.
 	 * <p>
@@ -92,8 +93,8 @@ public class CancelledReason12Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,33 +115,34 @@ public class CancelledReason12Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#Code
-	 * RejectedReason20Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#mmCode
+	 * RejectedReason20Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CancelledReason11Choice#Code
-	 * CancelledReason11Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.CancelledReason11Choice#mmCode
+	 * CancelledReason11Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> CancelledReason12Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Cancelled reason expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CancelledReason11Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason20Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason20Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CancelledReason11Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason2Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietary;
 	/**
 	 * Cancelled reason expressed as a proprietary code.
 	 * <p>
@@ -154,8 +156,8 @@ public class CancelledReason12Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,33 +178,34 @@ public class CancelledReason12Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#Proprietary
-	 * RejectedReason20Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#mmProprietary
+	 * RejectedReason20Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CancelledReason11Choice#Proprietary
-	 * CancelledReason11Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.CancelledReason11Choice#mmProprietary
+	 * CancelledReason11Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> CancelledReason12Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Cancelled reason expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CancelledReason11Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason20Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason20Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CancelledReason11Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * No reason available or to report for the cancelled status.
 	 * <p>
@@ -215,8 +218,8 @@ public class CancelledReason12Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -236,17 +239,17 @@ public class CancelledReason12Choice {
 	 * "No reason available or to report for the cancelled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> CancelledReason12Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "No reason available or to report for the cancelled status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
@@ -254,17 +257,41 @@ public class CancelledReason12Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancelledReason12Choice.Code, com.tools20022.repository.choice.CancelledReason12Choice.Proprietary,
-						com.tools20022.repository.choice.CancelledReason12Choice.NoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancelledReason12Choice.mmCode, com.tools20022.repository.choice.CancelledReason12Choice.mmProprietary,
+						com.tools20022.repository.choice.CancelledReason12Choice.mmNoSpecifiedReason);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancelledReason12Choice";
 				definition = "Choice between formats for a cancelled reason.";
-				previousVersion_lazy = () -> CancelledReason11Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RejectedReason20Choice.mmObject());
+				previousVersion_lazy = () -> CancelledReason11Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancelledStatusReason2Code getCode() {
+		return code;
+	}
+
+	public void setCode(CancelledStatusReason2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification1 proprietary) {
+		this.proprietary = proprietary;
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
 	}
 }

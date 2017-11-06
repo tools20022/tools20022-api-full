@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -64,27 +65,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#RelatedReference
- * MeetingVoteExecutionConfirmationV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#mmRelatedReference
+ * MeetingVoteExecutionConfirmationV05.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#MeetingReference
- * MeetingVoteExecutionConfirmationV05.MeetingReference}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#mmMeetingReference
+ * MeetingVoteExecutionConfirmationV05.mmMeetingReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#FinancialInstrumentIdentification
- * MeetingVoteExecutionConfirmationV05.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#mmFinancialInstrumentIdentification
+ * MeetingVoteExecutionConfirmationV05.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#VoteInstructions
- * MeetingVoteExecutionConfirmationV05.VoteInstructions}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#mmVoteInstructions
+ * MeetingVoteExecutionConfirmationV05.mmVoteInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#SupplementaryData
- * MeetingVoteExecutionConfirmationV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#mmSupplementaryData
+ * MeetingVoteExecutionConfirmationV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05#identifier
- * MeetingVoteExecutionConfirmationV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.007.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MeetingVoteExecutionConfirmationV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification relatedReference;
 	/**
 	 * Identifies the meeting instruction message.
 	 * <p>
@@ -128,22 +128,23 @@ public class MeetingVoteExecutionConfirmationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#RelatedReference
-	 * MeetingVoteExecutionConfirmationV04.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#mmRelatedReference
+	 * MeetingVoteExecutionConfirmationV04.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Identifies the meeting instruction message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.RelatedReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmRelatedReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification.mmObject();
 		}
 	};
+	protected MeetingReference7 meetingReference;
 	/**
 	 * Series of elements which allow to identify a meeting.
 	 * <p>
@@ -168,22 +169,23 @@ public class MeetingVoteExecutionConfirmationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#MeetingReference
-	 * MeetingVoteExecutionConfirmationV04.MeetingReference}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#mmMeetingReference
+	 * MeetingVoteExecutionConfirmationV04.mmMeetingReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.MeetingReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmMeetingReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference7.mmObject();
 		}
 	};
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Identifies the securities for which the meeting is organised.
 	 * <p>
@@ -209,22 +211,23 @@ public class MeetingVoteExecutionConfirmationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#SecurityIdentification
-	 * MeetingVoteExecutionConfirmationV04.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#mmSecurityIdentification
+	 * MeetingVoteExecutionConfirmationV04.mmSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FinancialInstrumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the securities for which the meeting is organised. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.SecurityIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmSecurityIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification14.mmObject();
 		}
 	};
+	protected List<DetailedInstructionStatus10> voteInstructions;
 	/**
 	 * Specifies how a party has voted for each agenda item.
 	 * <p>
@@ -249,21 +252,22 @@ public class MeetingVoteExecutionConfirmationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#VoteInstructions
-	 * MeetingVoteExecutionConfirmationV04.VoteInstructions}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04#mmVoteInstructions
+	 * MeetingVoteExecutionConfirmationV04.mmVoteInstructions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock VoteInstructions = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmVoteInstructions = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "VoteInstrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructions";
 			definition = "Specifies how a party has voted for each agenda item.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.VoteInstructions;
+			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmVoteInstructions;
 			minOccurs = 1;
 			complexType_lazy = () -> DetailedInstructionStatus10.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -290,7 +294,7 @@ public class MeetingVoteExecutionConfirmationV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,33 +302,6 @@ public class MeetingVoteExecutionConfirmationV05 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "007";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -339,12 +316,59 @@ public class MeetingVoteExecutionConfirmationV05 {
 				rootElement = "Document";
 				xmlTag = "MtgVoteExctnConf";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.RelatedReference,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.MeetingReference, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.VoteInstructions, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmRelatedReference,
+						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmMeetingReference, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmVoteInstructions, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "007";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(MessageIdentification relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public MeetingReference7 getMeetingReference() {
+		return meetingReference;
+	}
+
+	public void setMeetingReference(MeetingReference7 meetingReference) {
+		this.meetingReference = meetingReference;
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public List<DetailedInstructionStatus10> getVoteInstructions() {
+		return voteInstructions;
+	}
+
+	public void setVoteInstructions(List<DetailedInstructionStatus10> voteInstructions) {
+		this.voteInstructions = voteInstructions;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

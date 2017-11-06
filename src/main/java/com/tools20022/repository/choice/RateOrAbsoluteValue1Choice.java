@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateOrAbsoluteValue1Choice#RateValue
- * RateOrAbsoluteValue1Choice.RateValue}</li>
+ * {@linkplain com.tools20022.repository.choice.RateOrAbsoluteValue1Choice#mmRateValue
+ * RateOrAbsoluteValue1Choice.mmRateValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateOrAbsoluteValue1Choice#AbsoluteValue
- * RateOrAbsoluteValue1Choice.AbsoluteValue}</li>
+ * {@linkplain com.tools20022.repository.choice.RateOrAbsoluteValue1Choice#mmAbsoluteValue
+ * RateOrAbsoluteValue1Choice.mmAbsoluteValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RateOrAbsoluteValue1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate rateValue;
 	/**
 	 * A rate expressed as a percentage.
 	 * <p>
@@ -76,8 +77,8 @@ public class RateOrAbsoluteValue1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#Rate
-	 * RateAndAmount.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRate
+	 * RateAndAmount.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class RateOrAbsoluteValue1Choice {
 	 * definition} = "A rate expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RateValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRateValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmRate;
 			componentContext_lazy = () -> RateOrAbsoluteValue1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.Rate;
 			isDerived = false;
 			xmlTag = "RateVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateValue";
 			definition = "A rate expressed as a percentage.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Number absoluteValue;
 	/**
 	 * Absolute value determined with a number.
 	 * <p>
@@ -122,8 +124,8 @@ public class RateOrAbsoluteValue1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#AbsoluteValue
-	 * RateAndAmount.AbsoluteValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmAbsoluteValue
+	 * RateAndAmount.mmAbsoluteValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,17 +144,17 @@ public class RateOrAbsoluteValue1Choice {
 	 * definition} = "Absolute value determined with a number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AbsoluteValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAbsoluteValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmAbsoluteValue;
 			componentContext_lazy = () -> RateOrAbsoluteValue1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.AbsoluteValue;
 			isDerived = false;
 			xmlTag = "AbsVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbsoluteValue";
 			definition = "Absolute value determined with a number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -160,14 +162,30 @@ public class RateOrAbsoluteValue1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateOrAbsoluteValue1Choice.RateValue, com.tools20022.repository.choice.RateOrAbsoluteValue1Choice.AbsoluteValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateOrAbsoluteValue1Choice.mmRateValue, com.tools20022.repository.choice.RateOrAbsoluteValue1Choice.mmAbsoluteValue);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateOrAbsoluteValue1Choice";
 				definition = "Choice between a rate or an absolute value.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRateValue() {
+		return rateValue;
+	}
+
+	public void setRateValue(PercentageRate rateValue) {
+		this.rateValue = rateValue;
+	}
+
+	public Number getAbsoluteValue() {
+		return absoluteValue;
+	}
+
+	public void setAbsoluteValue(Number absoluteValue) {
+		this.absoluteValue = absoluteValue;
 	}
 }

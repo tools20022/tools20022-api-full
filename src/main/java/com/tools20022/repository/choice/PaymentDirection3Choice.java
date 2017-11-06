@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentDirection3Choice#Indicator
- * PaymentDirection3Choice.Indicator}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentDirection3Choice#mmIndicator
+ * PaymentDirection3Choice.mmIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentDirection3Choice#Proprietary
- * PaymentDirection3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentDirection3Choice#mmProprietary
+ * PaymentDirection3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentDirection3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentDirectionIndicator indicator;
 	/**
 	 * Indicates the direction of payment for asset or mortgage backed
 	 * securities, ie, whether the repaid capital is distributed (payment
@@ -78,8 +79,8 @@ public class PaymentDirection3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#PaymentDirectionIndicator
-	 * Debt.PaymentDirectionIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmPaymentDirectionIndicator
+	 * Debt.mmPaymentDirectionIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class PaymentDirection3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> PaymentDirection3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.PaymentDirectionIndicator;
 			isDerived = false;
 			xmlTag = "Ind";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Indicates the direction of payment for asset or mortgage backed securities, ie, whether the repaid capital is distributed (payment direction is down) or capitalized (payment direction is up).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentDirectionIndicator.mmObject();
 		}
 	};
+	protected GenericIdentification25 proprietary;
 	/**
 	 * Payment direction expressed as a proprietary code.
 	 * <p>
@@ -126,8 +128,8 @@ public class PaymentDirection3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Debt#PaymentDirectionIndicator
-	 * Debt.PaymentDirectionIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmPaymentDirectionIndicator
+	 * Debt.mmPaymentDirectionIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,33 +148,49 @@ public class PaymentDirection3Choice {
 	 * definition} = "Payment direction expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> PaymentDirection3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.PaymentDirectionIndicator;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Payment direction expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification25.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentDirection3Choice.Indicator, com.tools20022.repository.choice.PaymentDirection3Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentDirection3Choice.mmIndicator, com.tools20022.repository.choice.PaymentDirection3Choice.mmProprietary);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentDirection3Choice";
 				definition = "Choice of format for the payment direction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentDirectionIndicator getIndicator() {
+		return indicator;
+	}
+
+	public void setIndicator(PaymentDirectionIndicator indicator) {
+		this.indicator = indicator;
+	}
+
+	public GenericIdentification25 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

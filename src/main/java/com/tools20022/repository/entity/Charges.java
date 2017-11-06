@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Amount of money associated with a service.
@@ -41,307 +42,53 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#ChargeType
- * Charges.ChargeType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#CalculationBasis
- * Charges.CalculationBasis}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#BearerType
- * Charges.BearerType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#ChargesDebitAccount
- * Charges.ChargesDebitAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#CashEntry
- * Charges.CashEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Charges#CreditDebitIndicator
- * Charges.CreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#MaximumAmount
- * Charges.MaximumAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Charges#InvestmentFundTransaction
- * Charges.InvestmentFundTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Charges#LogisticsChargeLineItem
- * Charges.LogisticsChargeLineItem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#Transport
- * Charges.Transport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#Services
- * Charges.Services}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#RelatedUndertaking
- * Charges.RelatedUndertaking}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#LineItem
- * Charges.LineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Charges#NetPriceChargeLineItem
- * Charges.NetPriceChargeLineItem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#BaseAmount
- * Charges.BaseAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#MaximumRate
- * Charges.MaximumRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#MinimumRate
- * Charges.MinimumRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#MinimumAmount
- * Charges.MinimumAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#RelatedInterest
- * Charges.RelatedInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#ChargePaymentMethod
- * Charges.ChargePaymentMethod}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashAccount#Charges
- * CashAccount.Charges}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountService#AccountAdministrationCharge
- * AccountService.AccountAdministrationCharge}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#Charges
- * CashEntry.Charges}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#TransactionCharge
- * InvestmentFundTransaction.TransactionCharge}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InterestCalculation#Charges
- * InterestCalculation.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#Charges
- * Undertaking.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LineItem#LogisticsCharge
- * LineItem.LogisticsCharge}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LineItem#Charges
- * LineItem.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LineItem#NetPriceCharge
- * LineItem.NetPriceCharge}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Transport#TransportCharges
- * Transport.TransportCharges}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Charges3#Record
- * Charges3.Record}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ChargesRecord2#ChargeIncludedIndicator
- * ChargesRecord2.ChargeIncludedIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges4#Record
- * Charges4.Record}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation1#ChargesInformation
- * PaymentTransactionInformation1.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation25#ChargesInformation
- * PaymentTransactionInformation25.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction32#ChargesInformation
- * PaymentTransaction32.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction46#ChargesInformation
- * PaymentTransaction46.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#ChargesInformation
- * CreditTransferTransactionInformation2.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#ChargesInformation
- * CreditTransferTransactionInformation11.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#ChargesInformation
- * CreditTransferTransaction2.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#ChargesInformation
- * CreditTransferTransaction7.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#ChargesInformation
- * DirectDebitTransactionInformation2.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#ChargesInformation
- * DirectDebitTransactionInformation10.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#ChargesInformation
- * DirectDebitTransactionInformation12.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#ChargesInformation
- * DirectDebitTransactionInformation14.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation5#ChargesInformation
- * PaymentTransactionInformation5.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation29#ChargesInformation
- * PaymentTransactionInformation29.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction36#ChargesInformation
- * PaymentTransaction36.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction45#ChargesInformation
- * PaymentTransaction45.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation26#ChargesInformation
- * PaymentTransactionInformation26.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction33#ChargesInformation
- * PaymentTransaction33.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction43#ChargesInformation
- * PaymentTransaction43.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#ChargesInformation
- * PaymentTransactionInformation2.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#ChargesInformation
- * PaymentTransactionInformation27.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction34#ChargesInformation
- * PaymentTransaction34.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction44#ChargesInformation
- * PaymentTransaction44.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation34#ChargesInformation
- * PaymentTransactionInformation34.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction41#ChargesInformation
- * PaymentTransaction41.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction49#ChargesInformation
- * PaymentTransaction49.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RepairedConditions2#RepairedCharge
- * RepairedConditions2.RepairedCharge}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RepairedConditions3#RepairedCharge
- * RepairedConditions3.RepairedCharge}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalCharges2#ChargeDetails
- * TotalCharges2.ChargeDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalCharges3#ChargeDetails
- * TotalCharges3.ChargeDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashMovement1#Charges
- * CashMovement1.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge12#Charges
- * Charge12.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge13#Charges
- * Charge13.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge21#ChargeAmountOrRate
- * Charge21.ChargeAmountOrRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalCharges4#ChargeDetails
- * TotalCharges4.ChargeDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation15#ChargesInformation
- * PaymentTransactionInformation15.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation22#ChargesInformation
- * PaymentTransactionInformation22.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#ChargesInformation
- * PaymentTransactionInformation16.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#ChargesInformation
- * PaymentTransactionInformation23.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation17#ChargesInformation
- * PaymentTransactionInformation17.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation24#ChargesInformation
- * PaymentTransactionInformation24.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#ChargesInformation
- * PaymentTransactionInformation21.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#ChargesInformation
- * CreditTransferTransactionInformation7.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#ChargesInformation
- * CreditTransferTransactionInformation9.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#ChargesInformation
- * DirectDebitTransactionInformation6.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#ChargesInformation
- * DirectDebitTransactionInformation8.ChargesInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalCharges5#ChargeDetails
- * TotalCharges5.ChargeDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentObligation2#Charges
- * PaymentObligation2.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge24#Charges
- * Charge24.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge25#Charges
- * Charge25.Charges}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RecurringTransaction2#Charges
- * RecurringTransaction2.Charges}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction50#ChargesInformation
- * PaymentTransaction50.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#ChargesInformation
- * CreditTransferTransaction19.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#ChargesInformation
- * DirectDebitTransactionInformation17.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction52#ChargesInformation
- * PaymentTransaction52.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction51#ChargesInformation
- * PaymentTransaction51.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction57#ChargesInformation
- * PaymentTransaction57.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction59#ChargesInformation
- * PaymentTransaction59.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#ChargesInformation
- * CreditTransferTransaction25.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction65#ChargesInformation
- * PaymentTransaction65.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#ChargesInformation
- * DirectDebitTransactionInformation20.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction63#ChargesInformation
- * PaymentTransaction63.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction60#ChargesInformation
- * PaymentTransaction60.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction68#ChargesInformation
- * PaymentTransaction68.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction69#ChargesInformation
- * PaymentTransaction69.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#RepairedFee
- * IndividualOrderStatusAndReason7.RepairedFee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#TotalFees
- * TotalFeesAndTaxes40.TotalFees}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#IndividualFee
- * TotalFeesAndTaxes40.IndividualFee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee2#DiscountDetails
- * Fee2.DiscountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1#DiscountDetails
- * Fee1.DiscountDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchLegReferences2#RepairedFee
- * SwitchLegReferences2.RepairedFee}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#ChargesInformation
- * DirectDebitTransactionInformation21.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction80#ChargesInformation
- * PaymentTransaction80.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction81#ChargesInformation
- * PaymentTransaction81.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#ChargesInformation
- * PaymentTransaction76.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction83#ChargesInformation
- * PaymentTransaction83.ChargesInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction82#ChargesInformation
- * PaymentTransaction82.ChargesInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+ * Charges.mmChargeType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmCalculationBasis
+ * Charges.mmCalculationBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmBearerType
+ * Charges.mmBearerType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Charges#mmChargesDebitAccount
+ * Charges.mmChargesDebitAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmCashEntry
+ * Charges.mmCashEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Charges#mmCreditDebitIndicator
+ * Charges.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmMaximumAmount
+ * Charges.mmMaximumAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Charges#mmInvestmentFundTransaction
+ * Charges.mmInvestmentFundTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Charges#mmLogisticsChargeLineItem
+ * Charges.mmLogisticsChargeLineItem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmTransport
+ * Charges.mmTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmServices
+ * Charges.mmServices}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Charges#mmRelatedUndertaking
+ * Charges.mmRelatedUndertaking}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmLineItem
+ * Charges.mmLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Charges#mmNetPriceChargeLineItem
+ * Charges.mmNetPriceChargeLineItem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmBaseAmount
+ * Charges.mmBaseAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmMaximumRate
+ * Charges.mmMaximumRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmMinimumRate
+ * Charges.mmMinimumRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmMinimumAmount
+ * Charges.mmMinimumAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmRelatedInterest
+ * Charges.mmRelatedInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Charges#mmChargePaymentMethod
+ * Charges.mmChargePaymentMethod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -352,6 +99,267 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges
  * CorporateActionFeesAndCharges}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAccount#mmCharges
+ * CashAccount.mmCharges}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountService#mmAccountAdministrationCharge
+ * AccountService.mmAccountAdministrationCharge}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashEntry#mmCharges
+ * CashEntry.mmCharges}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmTransactionCharge
+ * InvestmentFundTransaction.mmTransactionCharge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmCharges
+ * InterestCalculation.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmCharges
+ * Undertaking.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmLogisticsCharge
+ * LineItem.mmLogisticsCharge}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmCharges
+ * LineItem.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmNetPriceCharge
+ * LineItem.mmNetPriceCharge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Transport#mmTransportCharges
+ * Transport.mmTransportCharges}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges3#mmRecord
+ * Charges3.mmRecord}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ChargesRecord2#mmChargeIncludedIndicator
+ * ChargesRecord2.mmChargeIncludedIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges4#mmRecord
+ * Charges4.mmRecord}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation1#mmChargesInformation
+ * PaymentTransactionInformation1.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation25#mmChargesInformation
+ * PaymentTransactionInformation25.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction32#mmChargesInformation
+ * PaymentTransaction32.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction46#mmChargesInformation
+ * PaymentTransaction46.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#mmChargesInformation
+ * CreditTransferTransactionInformation2.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#mmChargesInformation
+ * CreditTransferTransactionInformation11.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#mmChargesInformation
+ * CreditTransferTransaction2.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#mmChargesInformation
+ * CreditTransferTransaction7.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#mmChargesInformation
+ * DirectDebitTransactionInformation2.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#mmChargesInformation
+ * DirectDebitTransactionInformation10.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#mmChargesInformation
+ * DirectDebitTransactionInformation12.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#mmChargesInformation
+ * DirectDebitTransactionInformation14.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation5#mmChargesInformation
+ * PaymentTransactionInformation5.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation29#mmChargesInformation
+ * PaymentTransactionInformation29.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction36#mmChargesInformation
+ * PaymentTransaction36.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction45#mmChargesInformation
+ * PaymentTransaction45.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation26#mmChargesInformation
+ * PaymentTransactionInformation26.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction33#mmChargesInformation
+ * PaymentTransaction33.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction43#mmChargesInformation
+ * PaymentTransaction43.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#mmChargesInformation
+ * PaymentTransactionInformation2.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#mmChargesInformation
+ * PaymentTransactionInformation27.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction34#mmChargesInformation
+ * PaymentTransaction34.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction44#mmChargesInformation
+ * PaymentTransaction44.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation34#mmChargesInformation
+ * PaymentTransactionInformation34.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction41#mmChargesInformation
+ * PaymentTransaction41.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction49#mmChargesInformation
+ * PaymentTransaction49.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RepairedConditions2#mmRepairedCharge
+ * RepairedConditions2.mmRepairedCharge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RepairedConditions3#mmRepairedCharge
+ * RepairedConditions3.mmRepairedCharge}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalCharges2#mmChargeDetails
+ * TotalCharges2.mmChargeDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalCharges3#mmChargeDetails
+ * TotalCharges3.mmChargeDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashMovement1#mmCharges
+ * CashMovement1.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge12#mmCharges
+ * Charge12.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge13#mmCharges
+ * Charge13.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge21#mmChargeAmountOrRate
+ * Charge21.mmChargeAmountOrRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalCharges4#mmChargeDetails
+ * TotalCharges4.mmChargeDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation15#mmChargesInformation
+ * PaymentTransactionInformation15.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation22#mmChargesInformation
+ * PaymentTransactionInformation22.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#mmChargesInformation
+ * PaymentTransactionInformation16.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#mmChargesInformation
+ * PaymentTransactionInformation23.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation17#mmChargesInformation
+ * PaymentTransactionInformation17.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation24#mmChargesInformation
+ * PaymentTransactionInformation24.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#mmChargesInformation
+ * PaymentTransactionInformation21.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#mmChargesInformation
+ * CreditTransferTransactionInformation7.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#mmChargesInformation
+ * CreditTransferTransactionInformation9.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#mmChargesInformation
+ * DirectDebitTransactionInformation6.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#mmChargesInformation
+ * DirectDebitTransactionInformation8.mmChargesInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalCharges5#mmChargeDetails
+ * TotalCharges5.mmChargeDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentObligation2#mmCharges
+ * PaymentObligation2.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge24#mmCharges
+ * Charge24.mmCharges}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge25#mmCharges
+ * Charge25.mmCharges}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmCharges
+ * RecurringTransaction2.mmCharges}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction50#mmChargesInformation
+ * PaymentTransaction50.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#mmChargesInformation
+ * CreditTransferTransaction19.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#mmChargesInformation
+ * DirectDebitTransactionInformation17.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction52#mmChargesInformation
+ * PaymentTransaction52.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction51#mmChargesInformation
+ * PaymentTransaction51.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction57#mmChargesInformation
+ * PaymentTransaction57.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction59#mmChargesInformation
+ * PaymentTransaction59.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#mmChargesInformation
+ * CreditTransferTransaction25.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction65#mmChargesInformation
+ * PaymentTransaction65.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#mmChargesInformation
+ * DirectDebitTransactionInformation20.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction63#mmChargesInformation
+ * PaymentTransaction63.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction60#mmChargesInformation
+ * PaymentTransaction60.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction68#mmChargesInformation
+ * PaymentTransaction68.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction69#mmChargesInformation
+ * PaymentTransaction69.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason7#mmRepairedFee
+ * IndividualOrderStatusAndReason7.mmRepairedFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#mmTotalFees
+ * TotalFeesAndTaxes40.mmTotalFees}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TotalFeesAndTaxes40#mmIndividualFee
+ * TotalFeesAndTaxes40.mmIndividualFee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmDiscountDetails
+ * Fee2.mmDiscountDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmDiscountDetails
+ * Fee1.mmDiscountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchLegReferences2#mmRepairedFee
+ * SwitchLegReferences2.mmRepairedFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#mmChargesInformation
+ * DirectDebitTransactionInformation21.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction80#mmChargesInformation
+ * PaymentTransaction80.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction81#mmChargesInformation
+ * PaymentTransaction81.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#mmChargesInformation
+ * PaymentTransaction76.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction83#mmChargesInformation
+ * PaymentTransaction83.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction82#mmChargesInformation
+ * PaymentTransaction82.mmChargesInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -447,8 +455,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -462,6 +470,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Charges extends Adjustment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ChargeTypeCode chargeType;
 	/**
 	 * Type of service for which a charge is asked or paid.
 	 * <p>
@@ -472,154 +481,163 @@ public class Charges extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode
 	 * ChargeTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargeType2#Structured
-	 * ChargeType2.Structured}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ChargeType2#AdditionalInformation
-	 * ChargeType2.AdditionalInformation}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge9#Type Charge9.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge15#Type
-	 * Charge15.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge15#ExtendedType
-	 * Charge15.ExtendedType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat2Choice#Unstructured
-	 * ChargeTypeFormat2Choice.Unstructured}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat2Choice#Structured
-	 * ChargeTypeFormat2Choice.Structured}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge4#Type Charge4.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge20#Type
-	 * Charge20.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge20#ExtendedType
-	 * Charge20.ExtendedType}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.ChargeTypeChoice#Code
-	 * ChargeTypeChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeTypeChoice#ProprietaryCode
-	 * ChargeTypeChoice.ProprietaryCode}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation3#Type
-	 * ChargesInformation3.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.ChargeType2Choice#Code
-	 * ChargeType2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeType2Choice#Proprietary
-	 * ChargeType2Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation6#Type
-	 * ChargesInformation6.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.ChargeType3Choice#Code
-	 * ChargeType3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeType3Choice#Proprietary
-	 * ChargeType3Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord1#Type
-	 * ChargesRecord1.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord2#Type
-	 * ChargesRecord2.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge16#Type
-	 * Charge16.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge16#ExtendedType
-	 * Charge16.ExtendedType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargeType1#Structured
-	 * ChargeType1.Structured}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ChargeType1#AdditionalInformation
-	 * ChargeType1.AdditionalInformation}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge11#Type
-	 * Charge11.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge19#Type
-	 * Charge19.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge19#ExtendedType
-	 * Charge19.ExtendedType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge8#Type Charge8.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge17#Type
-	 * Charge17.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge17#ExtendedType
-	 * Charge17.ExtendedType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge10#Type
-	 * Charge10.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge18#Type
-	 * Charge18.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge18#ExtendedType
-	 * Charge18.ExtendedType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeType2FormatChoice#Code
-	 * ChargeType2FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeType2FormatChoice#Proprietary
-	 * ChargeType2FormatChoice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charges1#Type
-	 * Charges1.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat3Choice#Code
-	 * ChargeTypeFormat3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat3Choice#Proprietary
-	 * ChargeTypeFormat3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DiscountOrChargeType1Choice#ChargeType
-	 * DiscountOrChargeType1Choice.ChargeType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails2#Type
-	 * ChargesDetails2.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ChargesDetails2#OtherChargesType
-	 * ChargesDetails2.OtherChargesType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails1#Type
-	 * ChargesDetails1.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ChargesDetails1#OtherChargesType
-	 * ChargesDetails1.OtherChargesType}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.ChargeType1Choice#Type
-	 * ChargeType1Choice.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeType1Choice#Proprietary
-	 * ChargeType1Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge21#ChargeType
-	 * Charge21.ChargeType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge23#Type
-	 * Charge23.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge22#Type
-	 * Charge22.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charges5#Type
-	 * Charges5.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails3#Type
-	 * ChargesDetails3.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.ChargesType1Choice#Type
-	 * ChargesType1Choice.Type}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargesType1Choice#OtherChargesType
-	 * ChargesType1Choice.OtherChargesType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ChargesDetails4#ChargesType
-	 * ChargesDetails4.ChargesType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge26#Type
-	 * Charge26.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.ChargeType4Choice#Code
-	 * ChargeType4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeType4Choice#Proprietary
-	 * ChargeType4Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge27#Type
-	 * Charge27.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge29#Type
-	 * Charge29.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.ChargeType5Choice#Code
-	 * ChargeType5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargeType5Choice#Proprietary
-	 * ChargeType5Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fee3#Type Fee3.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#Type Fee2.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fee1#Type Fee1.Type}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Charges
 	 * Charges}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargeType2#mmStructured
+	 * ChargeType2.mmStructured}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargeType2#mmAdditionalInformation
+	 * ChargeType2.mmAdditionalInformation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge9#mmType
+	 * Charge9.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge15#mmType
+	 * Charge15.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge15#mmExtendedType
+	 * Charge15.mmExtendedType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat2Choice#mmUnstructured
+	 * ChargeTypeFormat2Choice.mmUnstructured}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat2Choice#mmStructured
+	 * ChargeTypeFormat2Choice.mmStructured}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge4#mmType
+	 * Charge4.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge20#mmType
+	 * Charge20.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge20#mmExtendedType
+	 * Charge20.mmExtendedType}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.ChargeTypeChoice#mmCode
+	 * ChargeTypeChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeTypeChoice#mmProprietaryCode
+	 * ChargeTypeChoice.mmProprietaryCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation3#mmType
+	 * ChargesInformation3.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType2Choice#mmCode
+	 * ChargeType2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType2Choice#mmProprietary
+	 * ChargeType2Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation6#mmType
+	 * ChargesInformation6.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType3Choice#mmCode
+	 * ChargeType3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType3Choice#mmProprietary
+	 * ChargeType3Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord1#mmType
+	 * ChargesRecord1.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord2#mmType
+	 * ChargesRecord2.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge16#mmType
+	 * Charge16.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge16#mmExtendedType
+	 * Charge16.mmExtendedType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargeType1#mmStructured
+	 * ChargeType1.mmStructured}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargeType1#mmAdditionalInformation
+	 * ChargeType1.mmAdditionalInformation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge11#mmType
+	 * Charge11.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge19#mmType
+	 * Charge19.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge19#mmExtendedType
+	 * Charge19.mmExtendedType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge8#mmType
+	 * Charge8.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge17#mmType
+	 * Charge17.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge17#mmExtendedType
+	 * Charge17.mmExtendedType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge10#mmType
+	 * Charge10.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge18#mmType
+	 * Charge18.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge18#mmExtendedType
+	 * Charge18.mmExtendedType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType2FormatChoice#mmCode
+	 * ChargeType2FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType2FormatChoice#mmProprietary
+	 * ChargeType2FormatChoice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charges1#mmType
+	 * Charges1.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat3Choice#mmCode
+	 * ChargeTypeFormat3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeTypeFormat3Choice#mmProprietary
+	 * ChargeTypeFormat3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DiscountOrChargeType1Choice#mmChargeType
+	 * DiscountOrChargeType1Choice.mmChargeType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails2#mmType
+	 * ChargesDetails2.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargesDetails2#mmOtherChargesType
+	 * ChargesDetails2.mmOtherChargesType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails1#mmType
+	 * ChargesDetails1.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargesDetails1#mmOtherChargesType
+	 * ChargesDetails1.mmOtherChargesType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType1Choice#mmType
+	 * ChargeType1Choice.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType1Choice#mmProprietary
+	 * ChargeType1Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge21#mmChargeType
+	 * Charge21.mmChargeType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge23#mmType
+	 * Charge23.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge22#mmType
+	 * Charge22.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charges5#mmType
+	 * Charges5.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails3#mmType
+	 * ChargesDetails3.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargesType1Choice#mmType
+	 * ChargesType1Choice.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargesType1Choice#mmOtherChargesType
+	 * ChargesType1Choice.mmOtherChargesType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargesDetails4#mmChargesType
+	 * ChargesDetails4.mmChargesType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge26#mmType
+	 * Charge26.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType4Choice#mmCode
+	 * ChargeType4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType4Choice#mmProprietary
+	 * ChargeType4Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge27#mmType
+	 * Charge27.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge29#mmType
+	 * Charge29.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType5Choice#mmCode
+	 * ChargeType5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType5Choice#mmProprietary
+	 * ChargeType5Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee3#mmType Fee3.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmType Fee2.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmType Fee1.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -631,37 +649,38 @@ public class Charges extends Adjustment {
 	 * definition} = "Type of service for which a charge is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ChargeType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmChargeType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargeType2.Structured, com.tools20022.repository.msg.ChargeType2.AdditionalInformation, com.tools20022.repository.msg.Charge9.Type,
-					com.tools20022.repository.msg.Charge15.Type, com.tools20022.repository.msg.Charge15.ExtendedType, com.tools20022.repository.choice.ChargeTypeFormat2Choice.Unstructured,
-					com.tools20022.repository.choice.ChargeTypeFormat2Choice.Structured, com.tools20022.repository.msg.Charge4.Type, com.tools20022.repository.msg.Charge20.Type, com.tools20022.repository.msg.Charge20.ExtendedType,
-					com.tools20022.repository.choice.ChargeTypeChoice.Code, com.tools20022.repository.choice.ChargeTypeChoice.ProprietaryCode, com.tools20022.repository.msg.ChargesInformation3.Type,
-					com.tools20022.repository.choice.ChargeType2Choice.Code, com.tools20022.repository.choice.ChargeType2Choice.Proprietary, com.tools20022.repository.msg.ChargesInformation6.Type,
-					com.tools20022.repository.choice.ChargeType3Choice.Code, com.tools20022.repository.choice.ChargeType3Choice.Proprietary, com.tools20022.repository.msg.ChargesRecord1.Type,
-					com.tools20022.repository.msg.ChargesRecord2.Type, com.tools20022.repository.msg.Charge16.Type, com.tools20022.repository.msg.Charge16.ExtendedType, com.tools20022.repository.msg.ChargeType1.Structured,
-					com.tools20022.repository.msg.ChargeType1.AdditionalInformation, com.tools20022.repository.msg.Charge11.Type, com.tools20022.repository.msg.Charge19.Type, com.tools20022.repository.msg.Charge19.ExtendedType,
-					com.tools20022.repository.msg.Charge8.Type, com.tools20022.repository.msg.Charge17.Type, com.tools20022.repository.msg.Charge17.ExtendedType, com.tools20022.repository.msg.Charge10.Type,
-					com.tools20022.repository.msg.Charge18.Type, com.tools20022.repository.msg.Charge18.ExtendedType, com.tools20022.repository.choice.ChargeType2FormatChoice.Code,
-					com.tools20022.repository.choice.ChargeType2FormatChoice.Proprietary, com.tools20022.repository.msg.Charges1.Type, com.tools20022.repository.choice.ChargeTypeFormat3Choice.Code,
-					com.tools20022.repository.choice.ChargeTypeFormat3Choice.Proprietary, com.tools20022.repository.choice.DiscountOrChargeType1Choice.ChargeType, com.tools20022.repository.msg.ChargesDetails2.Type,
-					com.tools20022.repository.msg.ChargesDetails2.OtherChargesType, com.tools20022.repository.msg.ChargesDetails1.Type, com.tools20022.repository.msg.ChargesDetails1.OtherChargesType,
-					com.tools20022.repository.choice.ChargeType1Choice.Type, com.tools20022.repository.choice.ChargeType1Choice.Proprietary, com.tools20022.repository.msg.Charge21.ChargeType, com.tools20022.repository.msg.Charge23.Type,
-					com.tools20022.repository.msg.Charge22.Type, com.tools20022.repository.msg.Charges5.Type, com.tools20022.repository.msg.ChargesDetails3.Type, com.tools20022.repository.choice.ChargesType1Choice.Type,
-					com.tools20022.repository.choice.ChargesType1Choice.OtherChargesType, com.tools20022.repository.msg.ChargesDetails4.ChargesType, com.tools20022.repository.msg.Charge26.Type,
-					com.tools20022.repository.choice.ChargeType4Choice.Code, com.tools20022.repository.choice.ChargeType4Choice.Proprietary, com.tools20022.repository.msg.Charge27.Type, com.tools20022.repository.msg.Charge29.Type,
-					com.tools20022.repository.choice.ChargeType5Choice.Code, com.tools20022.repository.choice.ChargeType5Choice.Proprietary, com.tools20022.repository.msg.Fee3.Type, com.tools20022.repository.msg.Fee2.Type,
-					com.tools20022.repository.msg.Fee1.Type);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargeType2.mmStructured, com.tools20022.repository.msg.ChargeType2.mmAdditionalInformation, com.tools20022.repository.msg.Charge9.mmType,
+					com.tools20022.repository.msg.Charge15.mmType, com.tools20022.repository.msg.Charge15.mmExtendedType, com.tools20022.repository.choice.ChargeTypeFormat2Choice.mmUnstructured,
+					com.tools20022.repository.choice.ChargeTypeFormat2Choice.mmStructured, com.tools20022.repository.msg.Charge4.mmType, com.tools20022.repository.msg.Charge20.mmType, com.tools20022.repository.msg.Charge20.mmExtendedType,
+					com.tools20022.repository.choice.ChargeTypeChoice.mmCode, com.tools20022.repository.choice.ChargeTypeChoice.mmProprietaryCode, com.tools20022.repository.msg.ChargesInformation3.mmType,
+					com.tools20022.repository.choice.ChargeType2Choice.mmCode, com.tools20022.repository.choice.ChargeType2Choice.mmProprietary, com.tools20022.repository.msg.ChargesInformation6.mmType,
+					com.tools20022.repository.choice.ChargeType3Choice.mmCode, com.tools20022.repository.choice.ChargeType3Choice.mmProprietary, com.tools20022.repository.msg.ChargesRecord1.mmType,
+					com.tools20022.repository.msg.ChargesRecord2.mmType, com.tools20022.repository.msg.Charge16.mmType, com.tools20022.repository.msg.Charge16.mmExtendedType, com.tools20022.repository.msg.ChargeType1.mmStructured,
+					com.tools20022.repository.msg.ChargeType1.mmAdditionalInformation, com.tools20022.repository.msg.Charge11.mmType, com.tools20022.repository.msg.Charge19.mmType, com.tools20022.repository.msg.Charge19.mmExtendedType,
+					com.tools20022.repository.msg.Charge8.mmType, com.tools20022.repository.msg.Charge17.mmType, com.tools20022.repository.msg.Charge17.mmExtendedType, com.tools20022.repository.msg.Charge10.mmType,
+					com.tools20022.repository.msg.Charge18.mmType, com.tools20022.repository.msg.Charge18.mmExtendedType, com.tools20022.repository.choice.ChargeType2FormatChoice.mmCode,
+					com.tools20022.repository.choice.ChargeType2FormatChoice.mmProprietary, com.tools20022.repository.msg.Charges1.mmType, com.tools20022.repository.choice.ChargeTypeFormat3Choice.mmCode,
+					com.tools20022.repository.choice.ChargeTypeFormat3Choice.mmProprietary, com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmChargeType, com.tools20022.repository.msg.ChargesDetails2.mmType,
+					com.tools20022.repository.msg.ChargesDetails2.mmOtherChargesType, com.tools20022.repository.msg.ChargesDetails1.mmType, com.tools20022.repository.msg.ChargesDetails1.mmOtherChargesType,
+					com.tools20022.repository.choice.ChargeType1Choice.mmType, com.tools20022.repository.choice.ChargeType1Choice.mmProprietary, com.tools20022.repository.msg.Charge21.mmChargeType,
+					com.tools20022.repository.msg.Charge23.mmType, com.tools20022.repository.msg.Charge22.mmType, com.tools20022.repository.msg.Charges5.mmType, com.tools20022.repository.msg.ChargesDetails3.mmType,
+					com.tools20022.repository.choice.ChargesType1Choice.mmType, com.tools20022.repository.choice.ChargesType1Choice.mmOtherChargesType, com.tools20022.repository.msg.ChargesDetails4.mmChargesType,
+					com.tools20022.repository.msg.Charge26.mmType, com.tools20022.repository.choice.ChargeType4Choice.mmCode, com.tools20022.repository.choice.ChargeType4Choice.mmProprietary, com.tools20022.repository.msg.Charge27.mmType,
+					com.tools20022.repository.msg.Charge29.mmType, com.tools20022.repository.choice.ChargeType5Choice.mmCode, com.tools20022.repository.choice.ChargeType5Choice.mmProprietary, com.tools20022.repository.msg.Fee3.mmType,
+					com.tools20022.repository.msg.Fee2.mmType, com.tools20022.repository.msg.Fee1.mmType);
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChargeType";
 			definition = "Type of service for which a charge is asked or paid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ChargeTypeCode.mmObject();
 		}
 	};
+	protected CalculationBasisCode calculationBasis;
 	/**
 	 * Calculation basis for the charge or fee.
 	 * <p>
@@ -672,28 +691,29 @@ public class Charges extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CalculationBasisCode
 	 * CalculationBasisCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CalculationBasis1#Structured
-	 * CalculationBasis1.Structured}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CalculationBasis1#AdditionalInformation
-	 * CalculationBasis1.AdditionalInformation}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge9#CalculationBasis
-	 * Charge9.CalculationBasis}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge15#CalculationBasis
-	 * Charge15.CalculationBasis}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Charge15#ExtendedCalculationBasis
-	 * Charge15.ExtendedCalculationBasis}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Charges
 	 * Charges}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CalculationBasis1#mmStructured
+	 * CalculationBasis1.mmStructured}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CalculationBasis1#mmAdditionalInformation
+	 * CalculationBasis1.mmAdditionalInformation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge9#mmCalculationBasis
+	 * Charge9.mmCalculationBasis}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Charge15#mmCalculationBasis
+	 * Charge15.mmCalculationBasis}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Charge15#mmExtendedCalculationBasis
+	 * Charge15.mmExtendedCalculationBasis}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -705,20 +725,21 @@ public class Charges extends Adjustment {
 	 * definition} = "Calculation basis for the charge or fee."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CalculationBasis = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCalculationBasis = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CalculationBasis1.Structured, com.tools20022.repository.msg.CalculationBasis1.AdditionalInformation, com.tools20022.repository.msg.Charge9.CalculationBasis,
-					com.tools20022.repository.msg.Charge15.CalculationBasis, com.tools20022.repository.msg.Charge15.ExtendedCalculationBasis);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CalculationBasis1.mmStructured, com.tools20022.repository.msg.CalculationBasis1.mmAdditionalInformation,
+					com.tools20022.repository.msg.Charge9.mmCalculationBasis, com.tools20022.repository.msg.Charge15.mmCalculationBasis, com.tools20022.repository.msg.Charge15.mmExtendedCalculationBasis);
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CalculationBasis";
 			definition = "Calculation basis for the charge or fee.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CalculationBasisCode.mmObject();
 		}
 	};
+	protected ChargeBearerTypeCode bearerType;
 	/**
 	 * Specifies which party/parties will bear the charges associated with the
 	 * processing of the payment transaction.
@@ -730,328 +751,330 @@ public class Charges extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ChargeBearerTypeCode
 	 * ChargeBearerTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge4#ChargeBearer
-	 * Charge4.ChargeBearer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge20#ChargeBearer
-	 * Charge20.ChargeBearer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation3#Bearer
-	 * ChargesInformation3.Bearer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation6#Bearer
-	 * ChargesInformation6.Bearer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord1#Bearer
-	 * ChargesRecord1.Bearer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord2#Bearer
-	 * ChargesRecord2.Bearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#ChargeBearer
-	 * CreditTransferTransactionInformation1.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1#ChargeBearer
-	 * PaymentInstructionInformation1.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#ChargeBearer
-	 * CreditTransferTransactionInformation10.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation3#ChargeBearer
-	 * PaymentInstructionInformation3.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#ChargeBearer
-	 * CreditTransferTransaction1.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#ChargeBearer
-	 * PaymentInstruction6.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#ChargeBearer
-	 * CreditTransferTransaction6.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#ChargeBearer
-	 * PaymentInstruction9.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#ChargeBearer
-	 * DirectDebitTransactionInformation1.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation2#ChargeBearer
-	 * PaymentInstructionInformation2.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#ChargeBearer
-	 * DirectDebitTransactionInformation9.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation4#ChargeBearer
-	 * PaymentInstructionInformation4.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#ChargeBearer
-	 * DirectDebitTransactionInformation11.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction7#ChargeBearer
-	 * PaymentInstruction7.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#ChargeBearer
-	 * DirectDebitTransactionInformation13.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction10#ChargeBearer
-	 * PaymentInstruction10.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation4#ChargeBearer
-	 * PaymentTransactionInformation4.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#ChargeBearer
-	 * PaymentTransactionInformation28.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction35#ChargeBearer
-	 * PaymentTransaction35.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction42#ChargeBearer
-	 * PaymentTransaction42.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#ChargeBearer
-	 * CreditTransferTransactionInformation2.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#ChargeBearer
-	 * CreditTransferTransactionInformation11.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#ChargeBearer
-	 * CreditTransferTransaction2.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#ChargeBearer
-	 * CreditTransferTransaction7.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#ChargeBearer
-	 * DirectDebitTransactionInformation2.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#ChargeBearer
-	 * DirectDebitTransactionInformation10.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#ChargeBearer
-	 * DirectDebitTransactionInformation12.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#ChargeBearer
-	 * DirectDebitTransactionInformation14.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation5#ChargeBearer
-	 * PaymentTransactionInformation5.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation29#ChargeBearer
-	 * PaymentTransactionInformation29.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction36#ChargeBearer
-	 * PaymentTransaction36.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction45#ChargeBearer
-	 * PaymentTransaction45.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#ChargeBearer
-	 * PaymentTransactionInformation2.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#ChargeBearer
-	 * PaymentTransactionInformation27.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction34#ChargeBearer
-	 * PaymentTransaction34.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction44#ChargeBearer
-	 * PaymentTransaction44.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation14#ChargeBearer
-	 * CreditTransferTransactionInformation14.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction5#ChargeBearer
-	 * PaymentInstruction5.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction5#ChargeBearer
-	 * CreditTransferTransaction5.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction8#ChargeBearer
-	 * PaymentInstruction8.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction10#ChargeBearer
-	 * CreditTransferTransaction10.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction11#ChargeBearer
-	 * PaymentInstruction11.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#ChargeBearer
-	 * RequestedModification2.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation2#ChargeBearer
-	 * PaymentComplementaryInformation2.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation3#ChargeBearer
-	 * PaymentComplementaryInformation3.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#ChargeBearer
-	 * RequestedModification3.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation13#ChargeBearer
-	 * PaymentTransactionInformation13.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation18#ChargeBearer
-	 * PaymentTransactionInformation18.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation14#ChargeBearer
-	 * PaymentTransactionInformation14.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation20#ChargeBearer
-	 * PaymentTransactionInformation20.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#ChargeBearer
-	 * PaymentTransactionInformation16.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#ChargeBearer
-	 * PaymentTransactionInformation23.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation17#ChargeBearer
-	 * PaymentTransactionInformation17.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation24#ChargeBearer
-	 * PaymentTransactionInformation24.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#ChargeBearer
-	 * PaymentTransactionInformation21.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation6#ChargeBearer
-	 * CreditTransferTransactionInformation6.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation8#ChargeBearer
-	 * CreditTransferTransactionInformation8.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#ChargeBearer
-	 * CreditTransferTransactionInformation7.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#ChargeBearer
-	 * CreditTransferTransactionInformation9.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation5#ChargeBearer
-	 * DirectDebitTransactionInformation5.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation7#ChargeBearer
-	 * DirectDebitTransactionInformation7.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#ChargeBearer
-	 * DirectDebitTransactionInformation6.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#ChargeBearer
-	 * DirectDebitTransactionInformation8.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#ChargeBearer
-	 * PaymentInstruction16.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation4#ChargeBearer
-	 * PaymentComplementaryInformation4.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction50#ChargeBearer
-	 * PaymentTransaction50.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#ChargeBearer
-	 * CreditTransferTransaction19.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#ChargeBearer
-	 * DirectDebitTransactionInformation17.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction15#ChargeBearer
-	 * PaymentInstruction15.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction51#ChargeBearer
-	 * PaymentTransaction51.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#ChargeBearer
-	 * RequestedModification4.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction56#ChargeBearer
-	 * PaymentTransaction56.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#ChargeBearer
-	 * DirectDebitTransactionInformation18.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#ChargeBearer
-	 * CreditTransferTransaction20.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction17#ChargeBearer
-	 * PaymentInstruction17.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction21#ChargeBearer
-	 * CreditTransferTransaction21.ChargeBearer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge27#ChargeBearer
-	 * Charge27.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction18#ChargeBearer
-	 * PaymentInstruction18.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#ChargeBearer
-	 * RequestedModification5.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#ChargeBearer
-	 * CreditTransferTransaction25.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction19#ChargeBearer
-	 * PaymentInstruction19.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction65#ChargeBearer
-	 * PaymentTransaction65.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation5#ChargeBearer
-	 * PaymentComplementaryInformation5.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#ChargeBearer
-	 * PaymentInstruction20.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#ChargeBearer
-	 * DirectDebitTransactionInformation20.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction60#ChargeBearer
-	 * PaymentTransaction60.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#ChargeBearer
-	 * CreditTransferTransaction26.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#ChargeBearer
-	 * DirectDebitTransactionInformation19.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#ChargeBearer
-	 * CreditTransferTransaction22.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction64#ChargeBearer
-	 * PaymentTransaction64.ChargeBearer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Charge29#ChargeBearer
-	 * Charge29.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction21#ChargeBearer
-	 * PaymentInstruction21.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#ChargeBearer
-	 * DirectDebitTransactionInformation21.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction81#ChargeBearer
-	 * PaymentTransaction81.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#ChargeBearer
-	 * RequestedModification6.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction23#ChargeBearer
-	 * PaymentInstruction23.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#ChargeBearer
-	 * PaymentTransaction76.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#ChargeBearer
-	 * PaymentInstruction22.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction77#ChargeBearer
-	 * PaymentTransaction77.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#ChargeBearer
-	 * DirectDebitTransactionInformation22.ChargeBearer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#ChargeBearer
-	 * PaymentComplementaryInformation6.ChargeBearer}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Charges
 	 * Charges}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge4#mmChargeBearer
+	 * Charge4.mmChargeBearer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge20#mmChargeBearer
+	 * Charge20.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargesInformation3#mmBearer
+	 * ChargesInformation3.mmBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargesInformation6#mmBearer
+	 * ChargesInformation6.mmBearer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord1#mmBearer
+	 * ChargesRecord1.mmBearer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord2#mmBearer
+	 * ChargesRecord2.mmBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation1#mmChargeBearer
+	 * CreditTransferTransactionInformation1.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1#mmChargeBearer
+	 * PaymentInstructionInformation1.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation10#mmChargeBearer
+	 * CreditTransferTransactionInformation10.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation3#mmChargeBearer
+	 * PaymentInstructionInformation3.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction1#mmChargeBearer
+	 * CreditTransferTransaction1.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#mmChargeBearer
+	 * PaymentInstruction6.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction6#mmChargeBearer
+	 * CreditTransferTransaction6.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#mmChargeBearer
+	 * PaymentInstruction9.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1#mmChargeBearer
+	 * DirectDebitTransactionInformation1.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation2#mmChargeBearer
+	 * PaymentInstructionInformation2.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9#mmChargeBearer
+	 * DirectDebitTransactionInformation9.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation4#mmChargeBearer
+	 * PaymentInstructionInformation4.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11#mmChargeBearer
+	 * DirectDebitTransactionInformation11.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction7#mmChargeBearer
+	 * PaymentInstruction7.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13#mmChargeBearer
+	 * DirectDebitTransactionInformation13.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction10#mmChargeBearer
+	 * PaymentInstruction10.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation4#mmChargeBearer
+	 * PaymentTransactionInformation4.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation28#mmChargeBearer
+	 * PaymentTransactionInformation28.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction35#mmChargeBearer
+	 * PaymentTransaction35.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction42#mmChargeBearer
+	 * PaymentTransaction42.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation2#mmChargeBearer
+	 * CreditTransferTransactionInformation2.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation11#mmChargeBearer
+	 * CreditTransferTransactionInformation11.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction2#mmChargeBearer
+	 * CreditTransferTransaction2.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction7#mmChargeBearer
+	 * CreditTransferTransaction7.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2#mmChargeBearer
+	 * DirectDebitTransactionInformation2.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10#mmChargeBearer
+	 * DirectDebitTransactionInformation10.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12#mmChargeBearer
+	 * DirectDebitTransactionInformation12.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14#mmChargeBearer
+	 * DirectDebitTransactionInformation14.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation5#mmChargeBearer
+	 * PaymentTransactionInformation5.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation29#mmChargeBearer
+	 * PaymentTransactionInformation29.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction36#mmChargeBearer
+	 * PaymentTransaction36.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction45#mmChargeBearer
+	 * PaymentTransaction45.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation2#mmChargeBearer
+	 * PaymentTransactionInformation2.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation27#mmChargeBearer
+	 * PaymentTransactionInformation27.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction34#mmChargeBearer
+	 * PaymentTransaction34.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction44#mmChargeBearer
+	 * PaymentTransaction44.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation14#mmChargeBearer
+	 * CreditTransferTransactionInformation14.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction5#mmChargeBearer
+	 * PaymentInstruction5.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction5#mmChargeBearer
+	 * CreditTransferTransaction5.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction8#mmChargeBearer
+	 * PaymentInstruction8.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction10#mmChargeBearer
+	 * CreditTransferTransaction10.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction11#mmChargeBearer
+	 * PaymentInstruction11.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification2#mmChargeBearer
+	 * RequestedModification2.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation2#mmChargeBearer
+	 * PaymentComplementaryInformation2.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation3#mmChargeBearer
+	 * PaymentComplementaryInformation3.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmChargeBearer
+	 * RequestedModification3.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation13#mmChargeBearer
+	 * PaymentTransactionInformation13.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation18#mmChargeBearer
+	 * PaymentTransactionInformation18.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation14#mmChargeBearer
+	 * PaymentTransactionInformation14.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation20#mmChargeBearer
+	 * PaymentTransactionInformation20.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation16#mmChargeBearer
+	 * PaymentTransactionInformation16.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation23#mmChargeBearer
+	 * PaymentTransactionInformation23.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation17#mmChargeBearer
+	 * PaymentTransactionInformation17.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation24#mmChargeBearer
+	 * PaymentTransactionInformation24.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransactionInformation21#mmChargeBearer
+	 * PaymentTransactionInformation21.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation6#mmChargeBearer
+	 * CreditTransferTransactionInformation6.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation8#mmChargeBearer
+	 * CreditTransferTransactionInformation8.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation7#mmChargeBearer
+	 * CreditTransferTransactionInformation7.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransactionInformation9#mmChargeBearer
+	 * CreditTransferTransactionInformation9.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation5#mmChargeBearer
+	 * DirectDebitTransactionInformation5.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation7#mmChargeBearer
+	 * DirectDebitTransactionInformation7.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6#mmChargeBearer
+	 * DirectDebitTransactionInformation6.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8#mmChargeBearer
+	 * DirectDebitTransactionInformation8.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#mmChargeBearer
+	 * PaymentInstruction16.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation4#mmChargeBearer
+	 * PaymentComplementaryInformation4.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction50#mmChargeBearer
+	 * PaymentTransaction50.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction19#mmChargeBearer
+	 * CreditTransferTransaction19.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17#mmChargeBearer
+	 * DirectDebitTransactionInformation17.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction15#mmChargeBearer
+	 * PaymentInstruction15.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction51#mmChargeBearer
+	 * PaymentTransaction51.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmChargeBearer
+	 * RequestedModification4.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction56#mmChargeBearer
+	 * PaymentTransaction56.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18#mmChargeBearer
+	 * DirectDebitTransactionInformation18.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction20#mmChargeBearer
+	 * CreditTransferTransaction20.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction17#mmChargeBearer
+	 * PaymentInstruction17.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction21#mmChargeBearer
+	 * CreditTransferTransaction21.mmChargeBearer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge27#mmChargeBearer
+	 * Charge27.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction18#mmChargeBearer
+	 * PaymentInstruction18.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmChargeBearer
+	 * RequestedModification5.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#mmChargeBearer
+	 * CreditTransferTransaction25.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction19#mmChargeBearer
+	 * PaymentInstruction19.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction65#mmChargeBearer
+	 * PaymentTransaction65.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation5#mmChargeBearer
+	 * PaymentComplementaryInformation5.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#mmChargeBearer
+	 * PaymentInstruction20.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20#mmChargeBearer
+	 * DirectDebitTransactionInformation20.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction60#mmChargeBearer
+	 * PaymentTransaction60.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction26#mmChargeBearer
+	 * CreditTransferTransaction26.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19#mmChargeBearer
+	 * DirectDebitTransactionInformation19.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#mmChargeBearer
+	 * CreditTransferTransaction22.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction64#mmChargeBearer
+	 * PaymentTransaction64.mmChargeBearer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Charge29#mmChargeBearer
+	 * Charge29.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction21#mmChargeBearer
+	 * PaymentInstruction21.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#mmChargeBearer
+	 * DirectDebitTransactionInformation21.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction81#mmChargeBearer
+	 * PaymentTransaction81.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmChargeBearer
+	 * RequestedModification6.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction23#mmChargeBearer
+	 * PaymentInstruction23.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#mmChargeBearer
+	 * PaymentTransaction76.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmChargeBearer
+	 * PaymentInstruction22.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction77#mmChargeBearer
+	 * PaymentTransaction77.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#mmChargeBearer
+	 * DirectDebitTransactionInformation22.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmChargeBearer
+	 * PaymentComplementaryInformation6.mmChargeBearer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1065,60 +1088,64 @@ public class Charges extends Adjustment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BearerType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBearerType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge4.ChargeBearer, com.tools20022.repository.msg.Charge20.ChargeBearer, com.tools20022.repository.msg.ChargesInformation3.Bearer,
-					com.tools20022.repository.msg.ChargesInformation6.Bearer, com.tools20022.repository.msg.ChargesRecord1.Bearer, com.tools20022.repository.msg.ChargesRecord2.Bearer,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation1.ChargeBearer, com.tools20022.repository.msg.PaymentInstructionInformation1.ChargeBearer,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation10.ChargeBearer, com.tools20022.repository.msg.PaymentInstructionInformation3.ChargeBearer,
-					com.tools20022.repository.msg.CreditTransferTransaction1.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction6.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction6.ChargeBearer,
-					com.tools20022.repository.msg.PaymentInstruction9.ChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation1.ChargeBearer, com.tools20022.repository.msg.PaymentInstructionInformation2.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation9.ChargeBearer, com.tools20022.repository.msg.PaymentInstructionInformation4.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation11.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction7.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation13.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction10.ChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation4.ChargeBearer,
-					com.tools20022.repository.msg.PaymentTransactionInformation28.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction35.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction42.ChargeBearer,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation2.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransactionInformation11.ChargeBearer,
-					com.tools20022.repository.msg.CreditTransferTransaction2.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction7.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation2.ChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation10.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation12.ChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation14.ChargeBearer,
-					com.tools20022.repository.msg.PaymentTransactionInformation5.ChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation29.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction36.ChargeBearer,
-					com.tools20022.repository.msg.PaymentTransaction45.ChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation2.ChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation27.ChargeBearer,
-					com.tools20022.repository.msg.PaymentTransaction34.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction44.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransactionInformation14.ChargeBearer,
-					com.tools20022.repository.msg.PaymentInstruction5.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction5.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction8.ChargeBearer,
-					com.tools20022.repository.msg.CreditTransferTransaction10.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction11.ChargeBearer, com.tools20022.repository.msg.RequestedModification2.ChargeBearer,
-					com.tools20022.repository.msg.PaymentComplementaryInformation2.ChargeBearer, com.tools20022.repository.msg.PaymentComplementaryInformation3.ChargeBearer,
-					com.tools20022.repository.msg.RequestedModification3.ChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation13.ChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation18.ChargeBearer,
-					com.tools20022.repository.msg.PaymentTransactionInformation14.ChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation20.ChargeBearer,
-					com.tools20022.repository.msg.PaymentTransactionInformation16.ChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation23.ChargeBearer,
-					com.tools20022.repository.msg.PaymentTransactionInformation17.ChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation24.ChargeBearer,
-					com.tools20022.repository.msg.PaymentTransactionInformation21.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransactionInformation6.ChargeBearer,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation8.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransactionInformation7.ChargeBearer,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation9.ChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation5.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation7.ChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation6.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation8.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction16.ChargeBearer,
-					com.tools20022.repository.msg.PaymentComplementaryInformation4.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction50.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction19.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation17.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction15.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction51.ChargeBearer,
-					com.tools20022.repository.msg.RequestedModification4.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction56.ChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation18.ChargeBearer,
-					com.tools20022.repository.msg.CreditTransferTransaction20.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction17.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction21.ChargeBearer,
-					com.tools20022.repository.msg.Charge27.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction18.ChargeBearer, com.tools20022.repository.msg.RequestedModification5.ChargeBearer,
-					com.tools20022.repository.msg.CreditTransferTransaction25.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction19.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction65.ChargeBearer,
-					com.tools20022.repository.msg.PaymentComplementaryInformation5.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction20.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation20.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction60.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction26.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation19.ChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction22.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction64.ChargeBearer,
-					com.tools20022.repository.msg.Charge29.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction21.ChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation21.ChargeBearer,
-					com.tools20022.repository.msg.PaymentTransaction81.ChargeBearer, com.tools20022.repository.msg.RequestedModification6.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction23.ChargeBearer,
-					com.tools20022.repository.msg.PaymentTransaction76.ChargeBearer, com.tools20022.repository.msg.PaymentInstruction22.ChargeBearer, com.tools20022.repository.msg.PaymentTransaction77.ChargeBearer,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation22.ChargeBearer, com.tools20022.repository.msg.PaymentComplementaryInformation6.ChargeBearer);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge4.mmChargeBearer, com.tools20022.repository.msg.Charge20.mmChargeBearer, com.tools20022.repository.msg.ChargesInformation3.mmBearer,
+					com.tools20022.repository.msg.ChargesInformation6.mmBearer, com.tools20022.repository.msg.ChargesRecord1.mmBearer, com.tools20022.repository.msg.ChargesRecord2.mmBearer,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation1.mmChargeBearer, com.tools20022.repository.msg.PaymentInstructionInformation1.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation10.mmChargeBearer, com.tools20022.repository.msg.PaymentInstructionInformation3.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransaction1.mmChargeBearer, com.tools20022.repository.msg.PaymentInstruction6.mmChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction6.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentInstruction9.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation1.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentInstructionInformation2.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation9.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentInstructionInformation4.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentInstruction7.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation13.mmChargeBearer, com.tools20022.repository.msg.PaymentInstruction10.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentTransactionInformation4.mmChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation28.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentTransaction35.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction42.mmChargeBearer, com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction2.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransaction7.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmChargeBearer,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmChargeBearer,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation5.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentTransactionInformation29.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction36.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction45.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentTransactionInformation2.mmChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation27.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentTransaction34.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction44.mmChargeBearer, com.tools20022.repository.msg.CreditTransferTransactionInformation14.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentInstruction5.mmChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction5.mmChargeBearer, com.tools20022.repository.msg.PaymentInstruction8.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransaction10.mmChargeBearer, com.tools20022.repository.msg.PaymentInstruction11.mmChargeBearer, com.tools20022.repository.msg.RequestedModification2.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentComplementaryInformation2.mmChargeBearer, com.tools20022.repository.msg.PaymentComplementaryInformation3.mmChargeBearer,
+					com.tools20022.repository.msg.RequestedModification3.mmChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation13.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentTransactionInformation18.mmChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation14.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentTransactionInformation20.mmChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation16.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentTransactionInformation23.mmChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation17.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentTransactionInformation24.mmChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation21.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation6.mmChargeBearer, com.tools20022.repository.msg.CreditTransferTransactionInformation8.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmChargeBearer, com.tools20022.repository.msg.CreditTransferTransactionInformation9.mmChargeBearer,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation5.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation7.mmChargeBearer,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation8.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentInstruction16.mmChargeBearer, com.tools20022.repository.msg.PaymentComplementaryInformation4.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction50.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransaction19.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentInstruction15.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction51.mmChargeBearer, com.tools20022.repository.msg.RequestedModification4.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentTransaction56.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransaction20.mmChargeBearer, com.tools20022.repository.msg.PaymentInstruction17.mmChargeBearer, com.tools20022.repository.msg.CreditTransferTransaction21.mmChargeBearer,
+					com.tools20022.repository.msg.Charge27.mmChargeBearer, com.tools20022.repository.msg.PaymentInstruction18.mmChargeBearer, com.tools20022.repository.msg.RequestedModification5.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransaction25.mmChargeBearer, com.tools20022.repository.msg.PaymentInstruction19.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction65.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentComplementaryInformation5.mmChargeBearer, com.tools20022.repository.msg.PaymentInstruction20.mmChargeBearer,
+					com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction60.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransaction26.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmChargeBearer,
+					com.tools20022.repository.msg.CreditTransferTransaction22.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction64.mmChargeBearer, com.tools20022.repository.msg.Charge29.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentInstruction21.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction81.mmChargeBearer,
+					com.tools20022.repository.msg.RequestedModification6.mmChargeBearer, com.tools20022.repository.msg.PaymentInstruction23.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction76.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentInstruction22.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction77.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmChargeBearer,
+					com.tools20022.repository.msg.PaymentComplementaryInformation6.mmChargeBearer);
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BearerType";
 			definition = "Specifies which party/parties will bear the charges associated with the processing of the payment transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ChargeBearerTypeCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CashAccount> chargesDebitAccount;
 	/**
 	 * Account from which a charge is debited.
 	 * <p>
@@ -1127,8 +1154,8 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#Charges
-	 * CashAccount.Charges}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCharges
+	 * CashAccount.mmCharges}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1136,63 +1163,63 @@ public class Charges extends Adjustment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Account8Choice#ChargesAccount
-	 * Account8Choice.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Account9Choice#ChargesAccount
-	 * Account9Choice.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1#ChargesAccount
-	 * PaymentInstructionInformation1.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation3#ChargesAccount
-	 * PaymentInstructionInformation3.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#ChargesAccount
-	 * PaymentInstruction6.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#ChargesAccount
-	 * PaymentInstruction9.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation2#ChargesAccount
-	 * PaymentInstructionInformation2.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation4#ChargesAccount
-	 * PaymentInstructionInformation4.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction7#ChargesAccount
-	 * PaymentInstruction7.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction10#ChargesAccount
-	 * PaymentInstruction10.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#ChargesAccount
-	 * PaymentInstruction16.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction15#ChargesAccount
-	 * PaymentInstruction15.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction18#ChargesAccount
-	 * PaymentInstruction18.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#ChargesAccount
-	 * PaymentInstruction20.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction21#ChargesAccount
-	 * PaymentInstruction21.ChargesAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#ChargesAccount
-	 * PaymentInstruction22.ChargesAccount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Charges
 	 * Charges}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Account8Choice#mmChargesAccount
+	 * Account8Choice.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Account9Choice#mmChargesAccount
+	 * Account9Choice.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation1#mmChargesAccount
+	 * PaymentInstructionInformation1.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation3#mmChargesAccount
+	 * PaymentInstructionInformation3.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction6#mmChargesAccount
+	 * PaymentInstruction6.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction9#mmChargesAccount
+	 * PaymentInstruction9.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation2#mmChargesAccount
+	 * PaymentInstructionInformation2.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstructionInformation4#mmChargesAccount
+	 * PaymentInstructionInformation4.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction7#mmChargesAccount
+	 * PaymentInstruction7.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction10#mmChargesAccount
+	 * PaymentInstruction10.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction16#mmChargesAccount
+	 * PaymentInstruction16.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction15#mmChargesAccount
+	 * PaymentInstruction15.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction18#mmChargesAccount
+	 * PaymentInstruction18.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction20#mmChargesAccount
+	 * PaymentInstruction20.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction21#mmChargesAccount
+	 * PaymentInstruction21.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmChargesAccount
+	 * PaymentInstruction22.mmChargesAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1204,25 +1231,26 @@ public class Charges extends Adjustment {
 	 * definition} = "Account from which a charge is debited."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ChargesDebitAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmChargesDebitAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Account8Choice.ChargesAccount, com.tools20022.repository.choice.Account9Choice.ChargesAccount,
-					com.tools20022.repository.msg.PaymentInstructionInformation1.ChargesAccount, com.tools20022.repository.msg.PaymentInstructionInformation3.ChargesAccount, com.tools20022.repository.msg.PaymentInstruction6.ChargesAccount,
-					com.tools20022.repository.msg.PaymentInstruction9.ChargesAccount, com.tools20022.repository.msg.PaymentInstructionInformation2.ChargesAccount, com.tools20022.repository.msg.PaymentInstructionInformation4.ChargesAccount,
-					com.tools20022.repository.msg.PaymentInstruction7.ChargesAccount, com.tools20022.repository.msg.PaymentInstruction10.ChargesAccount, com.tools20022.repository.msg.PaymentInstruction16.ChargesAccount,
-					com.tools20022.repository.msg.PaymentInstruction15.ChargesAccount, com.tools20022.repository.msg.PaymentInstruction18.ChargesAccount, com.tools20022.repository.msg.PaymentInstruction20.ChargesAccount,
-					com.tools20022.repository.msg.PaymentInstruction21.ChargesAccount, com.tools20022.repository.msg.PaymentInstruction22.ChargesAccount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Account8Choice.mmChargesAccount, com.tools20022.repository.choice.Account9Choice.mmChargesAccount,
+					com.tools20022.repository.msg.PaymentInstructionInformation1.mmChargesAccount, com.tools20022.repository.msg.PaymentInstructionInformation3.mmChargesAccount,
+					com.tools20022.repository.msg.PaymentInstruction6.mmChargesAccount, com.tools20022.repository.msg.PaymentInstruction9.mmChargesAccount, com.tools20022.repository.msg.PaymentInstructionInformation2.mmChargesAccount,
+					com.tools20022.repository.msg.PaymentInstructionInformation4.mmChargesAccount, com.tools20022.repository.msg.PaymentInstruction7.mmChargesAccount, com.tools20022.repository.msg.PaymentInstruction10.mmChargesAccount,
+					com.tools20022.repository.msg.PaymentInstruction16.mmChargesAccount, com.tools20022.repository.msg.PaymentInstruction15.mmChargesAccount, com.tools20022.repository.msg.PaymentInstruction18.mmChargesAccount,
+					com.tools20022.repository.msg.PaymentInstruction20.mmChargesAccount, com.tools20022.repository.msg.PaymentInstruction21.mmChargesAccount, com.tools20022.repository.msg.PaymentInstruction22.mmChargesAccount);
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChargesDebitAccount";
 			definition = "Account from which a charge is debited.";
 			minOccurs = 0;
-			type_lazy = () -> CashAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.Charges;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCharges;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
+	protected CashEntry cashEntry;
 	/**
 	 * Entry which contains the charges.
 	 * <p>
@@ -1231,8 +1259,8 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Charges
-	 * CashEntry.Charges}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCharges
+	 * CashEntry.mmCharges}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1255,20 +1283,21 @@ public class Charges extends Adjustment {
 	 * definition} = "Entry which contains the charges."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashEntry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashEntry = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashEntry";
 			definition = "Entry which contains the charges.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CashEntry.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashEntry.Charges;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCharges;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashEntry.mmObject();
 		}
 	};
+	protected DebitCreditCode creditDebitIndicator;
 	/**
 	 * Indicates whether a charge is a credit or a debit.
 	 * <p>
@@ -1279,24 +1308,24 @@ public class Charges extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DebitCreditCode
 	 * DebitCreditCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ChargesInformation6#CreditDebitIndicator
-	 * ChargesInformation6.CreditDebitIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ChargesRecord1#CreditDebitIndicator
-	 * ChargesRecord1.CreditDebitIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ChargesRecord2#CreditDebitIndicator
-	 * ChargesRecord2.CreditDebitIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Charges
 	 * Charges}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargesInformation6#mmCreditDebitIndicator
+	 * ChargesInformation6.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargesRecord1#mmCreditDebitIndicator
+	 * ChargesRecord1.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargesRecord2#mmCreditDebitIndicator
+	 * ChargesRecord2.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1308,20 +1337,21 @@ public class Charges extends Adjustment {
 	 * definition} = "Indicates whether a charge is a credit or a debit."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CreditDebitIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesInformation6.CreditDebitIndicator, com.tools20022.repository.msg.ChargesRecord1.CreditDebitIndicator,
-					com.tools20022.repository.msg.ChargesRecord2.CreditDebitIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesInformation6.mmCreditDebitIndicator, com.tools20022.repository.msg.ChargesRecord1.mmCreditDebitIndicator,
+					com.tools20022.repository.msg.ChargesRecord2.mmCreditDebitIndicator);
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether a charge is a credit or a debit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
 		}
 	};
+	protected CurrencyAndAmount maximumAmount;
 	/**
 	 * Maximum amount of money asked or paid for the charge for example
 	 * depending on the type of investors.
@@ -1350,18 +1380,19 @@ public class Charges extends Adjustment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MaximumAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMaximumAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum amount of money asked or paid for the charge for example depending on the type of investors.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected InvestmentFundTransaction investmentFundTransaction;
 	/**
 	 * Investment fund transaction for which charges are specified.
 	 * <p>
@@ -1370,8 +1401,8 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#TransactionCharge
-	 * InvestmentFundTransaction.TransactionCharge}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmTransactionCharge
+	 * InvestmentFundTransaction.mmTransactionCharge}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1396,20 +1427,21 @@ public class Charges extends Adjustment {
 	 * "Investment fund transaction for which charges are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestmentFundTransaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestmentFundTransaction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundTransaction";
 			definition = "Investment fund transaction for which charges are specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.TransactionCharge;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionCharge;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmObject();
 		}
 	};
+	protected LineItem logisticsChargeLineItem;
 	/**
 	 * Specifies the line item to which the logistics charge applies.
 	 * <p>
@@ -1418,8 +1450,8 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.LineItem#LogisticsCharge
-	 * LineItem.LogisticsCharge}</li>
+	 * {@linkplain com.tools20022.repository.entity.LineItem#mmLogisticsCharge
+	 * LineItem.mmLogisticsCharge}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1442,20 +1474,21 @@ public class Charges extends Adjustment {
 	 * "Specifies the line item to which the logistics charge applies."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd LogisticsChargeLineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmLogisticsChargeLineItem = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LogisticsChargeLineItem";
 			definition = "Specifies the line item to which the logistics charge applies.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.LogisticsCharge;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmLogisticsCharge;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
 		}
 	};
+	protected Transport transport;
 	/**
 	 * Specifies the transport process to which the charges apply.
 	 * <p>
@@ -1464,8 +1497,8 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#TransportCharges
-	 * Transport.TransportCharges}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmTransportCharges
+	 * Transport.mmTransportCharges}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1489,20 +1522,21 @@ public class Charges extends Adjustment {
 	 * "Specifies the transport process to which the charges apply."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Transport = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Transport";
 			definition = "Specifies the transport process to which the charges apply.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Transport.TransportCharges;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Transport.mmTransportCharges;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
 		}
 	};
+	protected AccountService services;
 	/**
 	 * Account services for which account administration charges are specified.
 	 * <p>
@@ -1511,8 +1545,8 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.AccountService#AccountAdministrationCharge
-	 * AccountService.AccountAdministrationCharge}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountService#mmAccountAdministrationCharge
+	 * AccountService.mmAccountAdministrationCharge}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1537,20 +1571,21 @@ public class Charges extends Adjustment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Services = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmServices = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Services";
 			definition = "Account services for which account administration charges are specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountService.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.AccountService.AccountAdministrationCharge;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.AccountService.mmAccountAdministrationCharge;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
 		}
 	};
+	protected Undertaking relatedUndertaking;
 	/**
 	 * Undertaking for which charges are specified.
 	 * <p>
@@ -1559,8 +1594,8 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#Charges
-	 * Undertaking.Charges}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmCharges
+	 * Undertaking.mmCharges}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1583,20 +1618,21 @@ public class Charges extends Adjustment {
 	 * definition} = "Undertaking for which charges are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedUndertaking = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedUndertaking = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedUndertaking";
 			definition = "Undertaking for which charges are specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Undertaking.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.Charges;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.mmCharges;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 		}
 	};
+	protected LineItem lineItem;
 	/**
 	 * Line item for which charges are specified
 	 * <p>
@@ -1605,8 +1641,8 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.LineItem#Charges
-	 * LineItem.Charges}</li>
+	 * {@linkplain com.tools20022.repository.entity.LineItem#mmCharges
+	 * LineItem.mmCharges}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1628,20 +1664,21 @@ public class Charges extends Adjustment {
 	 * definition} = "Line item for which charges are specified"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd LineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmLineItem = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LineItem";
 			definition = "Line item for which charges are specified";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.Charges;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmCharges;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
 		}
 	};
+	protected LineItem netPriceChargeLineItem;
 	/**
 	 * Specifies the line item to which the net price charge applies.
 	 * <p>
@@ -1650,8 +1687,8 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.LineItem#NetPriceCharge
-	 * LineItem.NetPriceCharge}</li>
+	 * {@linkplain com.tools20022.repository.entity.LineItem#mmNetPriceCharge
+	 * LineItem.mmNetPriceCharge}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1674,20 +1711,21 @@ public class Charges extends Adjustment {
 	 * "Specifies the line item to which the net price charge applies."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd NetPriceChargeLineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmNetPriceChargeLineItem = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NetPriceChargeLineItem";
 			definition = "Specifies the line item to which the net price charge applies.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.NetPriceCharge;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmNetPriceCharge;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
 		}
 	};
+	protected CurrencyAndAmount baseAmount;
 	/**
 	 * Amount on which the charges are calculated.
 	 * <p>
@@ -1713,18 +1751,19 @@ public class Charges extends Adjustment {
 	 * definition} = "Amount on which the charges are calculated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BaseAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBaseAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseAmount";
 			definition = "Amount on which the charges are calculated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate maximumRate;
 	/**
 	 * Maximum rate used to calculate the amount of the charge or fee for
 	 * example depending on the type of investors.
@@ -1753,18 +1792,19 @@ public class Charges extends Adjustment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MaximumRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMaximumRate = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumRate";
 			definition = "Maximum rate used to calculate the amount of the charge or fee for example depending on the type of investors.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate minimumRate;
 	/**
 	 * Minimum rate used to calculate the amount of the charge or fee for
 	 * example depending on the type of investors.
@@ -1793,18 +1833,19 @@ public class Charges extends Adjustment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MinimumRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMinimumRate = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MinimumRate";
 			definition = "Minimum rate used to calculate the amount of the charge or fee for example depending on the type of investors.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount minimumAmount;
 	/**
 	 * Minimum amount of money asked or paid for the charge for example
 	 * depending on the type of investors.
@@ -1833,18 +1874,19 @@ public class Charges extends Adjustment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MinimumAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMinimumAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MinimumAmount";
 			definition = "Minimum amount of money asked or paid for the charge for example depending on the type of investors.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.InterestCalculation> relatedInterest;
 	/**
 	 * Interest on which charges are applied.
 	 * <p>
@@ -1853,8 +1895,8 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#Charges
-	 * InterestCalculation.Charges}</li>
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmCharges
+	 * InterestCalculation.mmCharges}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1877,7 +1919,7 @@ public class Charges extends Adjustment {
 	 * definition} = "Interest on which charges are applied."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedInterest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedInterest = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
@@ -1885,11 +1927,12 @@ public class Charges extends Adjustment {
 			name = "RelatedInterest";
 			definition = "Interest on which charges are applied.";
 			minOccurs = 0;
-			type_lazy = () -> InterestCalculation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InterestCalculation.Charges;
+			opposite_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmCharges;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmObject();
 		}
 	};
+	protected ChargePaymentMethodCode chargePaymentMethod;
 	/**
 	 * Specifies how charges are paid.
 	 * <p>
@@ -1900,39 +1943,39 @@ public class Charges extends Adjustment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ChargePaymentMethodCode
 	 * ChargePaymentMethodCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#TransferExpensesPaymentType
-	 * Transfer27.TransferExpensesPaymentType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer28#TransferExpensesPaymentType
-	 * Transfer28.TransferExpensesPaymentType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer29#TransferExpensesPaymentType
-	 * Transfer29.TransferExpensesPaymentType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargePaymentMethod1Choice#Code
-	 * ChargePaymentMethod1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ChargePaymentMethod1Choice#Proprietary
-	 * ChargePaymentMethod1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer31#TransferExpensesPaymentType
-	 * Transfer31.TransferExpensesPaymentType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer30#TransferExpensesPaymentType
-	 * Transfer30.TransferExpensesPaymentType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer33#TransferExpensesPaymentType
-	 * Transfer33.TransferExpensesPaymentType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Charges
 	 * Charges}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmTransferExpensesPaymentType
+	 * Transfer27.mmTransferExpensesPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer28#mmTransferExpensesPaymentType
+	 * Transfer28.mmTransferExpensesPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer29#mmTransferExpensesPaymentType
+	 * Transfer29.mmTransferExpensesPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargePaymentMethod1Choice#mmCode
+	 * ChargePaymentMethod1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargePaymentMethod1Choice#mmProprietary
+	 * ChargePaymentMethod1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmTransferExpensesPaymentType
+	 * Transfer31.mmTransferExpensesPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer30#mmTransferExpensesPaymentType
+	 * Transfer30.mmTransferExpensesPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmTransferExpensesPaymentType
+	 * Transfer33.mmTransferExpensesPaymentType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1944,18 +1987,18 @@ public class Charges extends Adjustment {
 	 * definition} = "Specifies how charges are paid."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ChargePaymentMethod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmChargePaymentMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.TransferExpensesPaymentType, com.tools20022.repository.msg.Transfer28.TransferExpensesPaymentType,
-					com.tools20022.repository.msg.Transfer29.TransferExpensesPaymentType, com.tools20022.repository.choice.ChargePaymentMethod1Choice.Code, com.tools20022.repository.choice.ChargePaymentMethod1Choice.Proprietary,
-					com.tools20022.repository.msg.Transfer31.TransferExpensesPaymentType, com.tools20022.repository.msg.Transfer30.TransferExpensesPaymentType, com.tools20022.repository.msg.Transfer33.TransferExpensesPaymentType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer27.mmTransferExpensesPaymentType, com.tools20022.repository.msg.Transfer28.mmTransferExpensesPaymentType,
+					com.tools20022.repository.msg.Transfer29.mmTransferExpensesPaymentType, com.tools20022.repository.choice.ChargePaymentMethod1Choice.mmCode, com.tools20022.repository.choice.ChargePaymentMethod1Choice.mmProprietary,
+					com.tools20022.repository.msg.Transfer31.mmTransferExpensesPaymentType, com.tools20022.repository.msg.Transfer30.mmTransferExpensesPaymentType, com.tools20022.repository.msg.Transfer33.mmTransferExpensesPaymentType);
 			elementContext_lazy = () -> Charges.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChargePaymentMethod";
 			definition = "Specifies how charges are paid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ChargePaymentMethodCode.mmObject();
 		}
 	};
@@ -1963,57 +2006,59 @@ public class Charges extends Adjustment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Charges";
 				definition = "Amount of money associated with a service.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.Charges, com.tools20022.repository.entity.AccountService.AccountAdministrationCharge,
-						com.tools20022.repository.entity.CashEntry.Charges, com.tools20022.repository.entity.InvestmentFundTransaction.TransactionCharge, com.tools20022.repository.entity.InterestCalculation.Charges,
-						com.tools20022.repository.entity.Undertaking.Charges, com.tools20022.repository.entity.LineItem.LogisticsCharge, com.tools20022.repository.entity.LineItem.Charges,
-						com.tools20022.repository.entity.LineItem.NetPriceCharge, com.tools20022.repository.entity.Transport.TransportCharges);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charges3.Record, com.tools20022.repository.msg.ChargesRecord2.ChargeIncludedIndicator, com.tools20022.repository.msg.Charges4.Record,
-						com.tools20022.repository.msg.PaymentTransactionInformation1.ChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation25.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransaction32.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction46.ChargesInformation,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation2.ChargesInformation, com.tools20022.repository.msg.CreditTransferTransactionInformation11.ChargesInformation,
-						com.tools20022.repository.msg.CreditTransferTransaction2.ChargesInformation, com.tools20022.repository.msg.CreditTransferTransaction7.ChargesInformation,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation2.ChargesInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation10.ChargesInformation,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation12.ChargesInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation14.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransactionInformation5.ChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation29.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransaction36.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction45.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransactionInformation26.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction33.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransaction43.ChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation2.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransactionInformation27.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction34.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransaction44.ChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation34.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransaction41.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction49.ChargesInformation, com.tools20022.repository.msg.RepairedConditions2.RepairedCharge,
-						com.tools20022.repository.msg.RepairedConditions3.RepairedCharge, com.tools20022.repository.msg.TotalCharges2.ChargeDetails, com.tools20022.repository.msg.TotalCharges3.ChargeDetails,
-						com.tools20022.repository.msg.CashMovement1.Charges, com.tools20022.repository.msg.Charge12.Charges, com.tools20022.repository.msg.Charge13.Charges, com.tools20022.repository.msg.Charge21.ChargeAmountOrRate,
-						com.tools20022.repository.msg.TotalCharges4.ChargeDetails, com.tools20022.repository.msg.PaymentTransactionInformation15.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransactionInformation22.ChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation16.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransactionInformation23.ChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation17.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransactionInformation24.ChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation21.ChargesInformation,
-						com.tools20022.repository.msg.CreditTransferTransactionInformation7.ChargesInformation, com.tools20022.repository.msg.CreditTransferTransactionInformation9.ChargesInformation,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation6.ChargesInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation8.ChargesInformation,
-						com.tools20022.repository.msg.TotalCharges5.ChargeDetails, com.tools20022.repository.msg.PaymentObligation2.Charges, com.tools20022.repository.msg.Charge24.Charges, com.tools20022.repository.msg.Charge25.Charges,
-						com.tools20022.repository.msg.RecurringTransaction2.Charges, com.tools20022.repository.msg.PaymentTransaction50.ChargesInformation, com.tools20022.repository.msg.CreditTransferTransaction19.ChargesInformation,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation17.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction52.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransaction51.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction57.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction59.ChargesInformation,
-						com.tools20022.repository.msg.CreditTransferTransaction25.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction65.ChargesInformation,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation20.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction63.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransaction60.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction68.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction69.ChargesInformation,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason7.RepairedFee, com.tools20022.repository.msg.TotalFeesAndTaxes40.TotalFees, com.tools20022.repository.msg.TotalFeesAndTaxes40.IndividualFee,
-						com.tools20022.repository.msg.Fee2.DiscountDetails, com.tools20022.repository.msg.Fee1.DiscountDetails, com.tools20022.repository.msg.SwitchLegReferences2.RepairedFee,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation21.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction80.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransaction81.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction76.ChargesInformation, com.tools20022.repository.msg.PaymentTransaction83.ChargesInformation,
-						com.tools20022.repository.msg.PaymentTransaction82.ChargesInformation);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmCharges, com.tools20022.repository.entity.AccountService.mmAccountAdministrationCharge,
+						com.tools20022.repository.entity.CashEntry.mmCharges, com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionCharge, com.tools20022.repository.entity.InterestCalculation.mmCharges,
+						com.tools20022.repository.entity.Undertaking.mmCharges, com.tools20022.repository.entity.LineItem.mmLogisticsCharge, com.tools20022.repository.entity.LineItem.mmCharges,
+						com.tools20022.repository.entity.LineItem.mmNetPriceCharge, com.tools20022.repository.entity.Transport.mmTransportCharges);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charges3.mmRecord, com.tools20022.repository.msg.ChargesRecord2.mmChargeIncludedIndicator, com.tools20022.repository.msg.Charges4.mmRecord,
+						com.tools20022.repository.msg.PaymentTransactionInformation1.mmChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation25.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction32.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction46.mmChargesInformation,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmChargesInformation, com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmChargesInformation,
+						com.tools20022.repository.msg.CreditTransferTransaction2.mmChargesInformation, com.tools20022.repository.msg.CreditTransferTransaction7.mmChargesInformation,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmChargesInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmChargesInformation,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmChargesInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransactionInformation5.mmChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation29.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction36.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction45.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransactionInformation26.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction33.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction43.mmChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation2.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransactionInformation27.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction34.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction44.mmChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation34.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction41.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction49.mmChargesInformation, com.tools20022.repository.msg.RepairedConditions2.mmRepairedCharge,
+						com.tools20022.repository.msg.RepairedConditions3.mmRepairedCharge, com.tools20022.repository.msg.TotalCharges2.mmChargeDetails, com.tools20022.repository.msg.TotalCharges3.mmChargeDetails,
+						com.tools20022.repository.msg.CashMovement1.mmCharges, com.tools20022.repository.msg.Charge12.mmCharges, com.tools20022.repository.msg.Charge13.mmCharges, com.tools20022.repository.msg.Charge21.mmChargeAmountOrRate,
+						com.tools20022.repository.msg.TotalCharges4.mmChargeDetails, com.tools20022.repository.msg.PaymentTransactionInformation15.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransactionInformation22.mmChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation16.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransactionInformation23.mmChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation17.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransactionInformation24.mmChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation21.mmChargesInformation,
+						com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmChargesInformation, com.tools20022.repository.msg.CreditTransferTransactionInformation9.mmChargesInformation,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmChargesInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation8.mmChargesInformation,
+						com.tools20022.repository.msg.TotalCharges5.mmChargeDetails, com.tools20022.repository.msg.PaymentObligation2.mmCharges, com.tools20022.repository.msg.Charge24.mmCharges,
+						com.tools20022.repository.msg.Charge25.mmCharges, com.tools20022.repository.msg.RecurringTransaction2.mmCharges, com.tools20022.repository.msg.PaymentTransaction50.mmChargesInformation,
+						com.tools20022.repository.msg.CreditTransferTransaction19.mmChargesInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction52.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction51.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction57.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction59.mmChargesInformation,
+						com.tools20022.repository.msg.CreditTransferTransaction25.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction65.mmChargesInformation,
+						com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction63.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction60.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction68.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction69.mmChargesInformation, com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmRepairedFee, com.tools20022.repository.msg.TotalFeesAndTaxes40.mmTotalFees,
+						com.tools20022.repository.msg.TotalFeesAndTaxes40.mmIndividualFee, com.tools20022.repository.msg.Fee2.mmDiscountDetails, com.tools20022.repository.msg.Fee1.mmDiscountDetails,
+						com.tools20022.repository.msg.SwitchLegReferences2.mmRepairedFee, com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction80.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction81.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction76.mmChargesInformation, com.tools20022.repository.msg.PaymentTransaction83.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransaction82.mmChargesInformation);
 				subType_lazy = () -> Arrays.asList(SecuritiesRelatedFees.mmObject(), CorporateActionFeesAndCharges.mmObject());
 				superType_lazy = () -> Adjustment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Charges.ChargeType, com.tools20022.repository.entity.Charges.CalculationBasis, com.tools20022.repository.entity.Charges.BearerType,
-						com.tools20022.repository.entity.Charges.ChargesDebitAccount, com.tools20022.repository.entity.Charges.CashEntry, com.tools20022.repository.entity.Charges.CreditDebitIndicator,
-						com.tools20022.repository.entity.Charges.MaximumAmount, com.tools20022.repository.entity.Charges.InvestmentFundTransaction, com.tools20022.repository.entity.Charges.LogisticsChargeLineItem,
-						com.tools20022.repository.entity.Charges.Transport, com.tools20022.repository.entity.Charges.Services, com.tools20022.repository.entity.Charges.RelatedUndertaking, com.tools20022.repository.entity.Charges.LineItem,
-						com.tools20022.repository.entity.Charges.NetPriceChargeLineItem, com.tools20022.repository.entity.Charges.BaseAmount, com.tools20022.repository.entity.Charges.MaximumRate,
-						com.tools20022.repository.entity.Charges.MinimumRate, com.tools20022.repository.entity.Charges.MinimumAmount, com.tools20022.repository.entity.Charges.RelatedInterest,
-						com.tools20022.repository.entity.Charges.ChargePaymentMethod);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Charges.mmChargeType, com.tools20022.repository.entity.Charges.mmCalculationBasis, com.tools20022.repository.entity.Charges.mmBearerType,
+						com.tools20022.repository.entity.Charges.mmChargesDebitAccount, com.tools20022.repository.entity.Charges.mmCashEntry, com.tools20022.repository.entity.Charges.mmCreditDebitIndicator,
+						com.tools20022.repository.entity.Charges.mmMaximumAmount, com.tools20022.repository.entity.Charges.mmInvestmentFundTransaction, com.tools20022.repository.entity.Charges.mmLogisticsChargeLineItem,
+						com.tools20022.repository.entity.Charges.mmTransport, com.tools20022.repository.entity.Charges.mmServices, com.tools20022.repository.entity.Charges.mmRelatedUndertaking,
+						com.tools20022.repository.entity.Charges.mmLineItem, com.tools20022.repository.entity.Charges.mmNetPriceChargeLineItem, com.tools20022.repository.entity.Charges.mmBaseAmount,
+						com.tools20022.repository.entity.Charges.mmMaximumRate, com.tools20022.repository.entity.Charges.mmMinimumRate, com.tools20022.repository.entity.Charges.mmMinimumAmount,
+						com.tools20022.repository.entity.Charges.mmRelatedInterest, com.tools20022.repository.entity.Charges.mmChargePaymentMethod);
 				derivationComponent_lazy = () -> Arrays.asList(ChargeType2.mmObject(), CalculationBasis1.mmObject(), Charge9.mmObject(), Charge15.mmObject(), ChargeTypeFormat2Choice.mmObject(), Charge4.mmObject(), Charge20.mmObject(),
 						ChargeTypeChoice.mmObject(), ChargesInformation3.mmObject(), ChargeType2Choice.mmObject(), ChargesInformation6.mmObject(), ChargeType3Choice.mmObject(), ChargesRecord1.mmObject(), Charges3.mmObject(),
 						ChargesRecord2.mmObject(), Charges4.mmObject(), ChargesInformation1.mmObject(), ChargesInformation5.mmObject(), ChargesInformation7.mmObject(), Charges2.mmObject(), Charge16.mmObject(), ChargeType1.mmObject(),
@@ -2025,5 +2070,165 @@ public class Charges extends Adjustment {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ChargeTypeCode getChargeType() {
+		return chargeType;
+	}
+
+	public void setChargeType(ChargeTypeCode chargeType) {
+		this.chargeType = chargeType;
+	}
+
+	public CalculationBasisCode getCalculationBasis() {
+		return calculationBasis;
+	}
+
+	public void setCalculationBasis(CalculationBasisCode calculationBasis) {
+		this.calculationBasis = calculationBasis;
+	}
+
+	public ChargeBearerTypeCode getBearerType() {
+		return bearerType;
+	}
+
+	public void setBearerType(ChargeBearerTypeCode bearerType) {
+		this.bearerType = bearerType;
+	}
+
+	public List<CashAccount> getChargesDebitAccount() {
+		return chargesDebitAccount;
+	}
+
+	public void setChargesDebitAccount(List<com.tools20022.repository.entity.CashAccount> chargesDebitAccount) {
+		this.chargesDebitAccount = chargesDebitAccount;
+	}
+
+	public CashEntry getCashEntry() {
+		return cashEntry;
+	}
+
+	public void setCashEntry(com.tools20022.repository.entity.CashEntry cashEntry) {
+		this.cashEntry = cashEntry;
+	}
+
+	public DebitCreditCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(DebitCreditCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public CurrencyAndAmount getMaximumAmount() {
+		return maximumAmount;
+	}
+
+	public void setMaximumAmount(CurrencyAndAmount maximumAmount) {
+		this.maximumAmount = maximumAmount;
+	}
+
+	public InvestmentFundTransaction getInvestmentFundTransaction() {
+		return investmentFundTransaction;
+	}
+
+	public void setInvestmentFundTransaction(com.tools20022.repository.entity.InvestmentFundTransaction investmentFundTransaction) {
+		this.investmentFundTransaction = investmentFundTransaction;
+	}
+
+	public LineItem getLogisticsChargeLineItem() {
+		return logisticsChargeLineItem;
+	}
+
+	public void setLogisticsChargeLineItem(com.tools20022.repository.entity.LineItem logisticsChargeLineItem) {
+		this.logisticsChargeLineItem = logisticsChargeLineItem;
+	}
+
+	public Transport getTransport() {
+		return transport;
+	}
+
+	public void setTransport(com.tools20022.repository.entity.Transport transport) {
+		this.transport = transport;
+	}
+
+	public AccountService getServices() {
+		return services;
+	}
+
+	public void setServices(com.tools20022.repository.entity.AccountService services) {
+		this.services = services;
+	}
+
+	public Undertaking getRelatedUndertaking() {
+		return relatedUndertaking;
+	}
+
+	public void setRelatedUndertaking(com.tools20022.repository.entity.Undertaking relatedUndertaking) {
+		this.relatedUndertaking = relatedUndertaking;
+	}
+
+	public LineItem getLineItem() {
+		return lineItem;
+	}
+
+	public void setLineItem(com.tools20022.repository.entity.LineItem lineItem) {
+		this.lineItem = lineItem;
+	}
+
+	public LineItem getNetPriceChargeLineItem() {
+		return netPriceChargeLineItem;
+	}
+
+	public void setNetPriceChargeLineItem(com.tools20022.repository.entity.LineItem netPriceChargeLineItem) {
+		this.netPriceChargeLineItem = netPriceChargeLineItem;
+	}
+
+	public CurrencyAndAmount getBaseAmount() {
+		return baseAmount;
+	}
+
+	public void setBaseAmount(CurrencyAndAmount baseAmount) {
+		this.baseAmount = baseAmount;
+	}
+
+	public PercentageRate getMaximumRate() {
+		return maximumRate;
+	}
+
+	public void setMaximumRate(PercentageRate maximumRate) {
+		this.maximumRate = maximumRate;
+	}
+
+	public PercentageRate getMinimumRate() {
+		return minimumRate;
+	}
+
+	public void setMinimumRate(PercentageRate minimumRate) {
+		this.minimumRate = minimumRate;
+	}
+
+	public CurrencyAndAmount getMinimumAmount() {
+		return minimumAmount;
+	}
+
+	public void setMinimumAmount(CurrencyAndAmount minimumAmount) {
+		this.minimumAmount = minimumAmount;
+	}
+
+	public List<InterestCalculation> getRelatedInterest() {
+		return relatedInterest;
+	}
+
+	public void setRelatedInterest(List<com.tools20022.repository.entity.InterestCalculation> relatedInterest) {
+		this.relatedInterest = relatedInterest;
+	}
+
+	public ChargePaymentMethodCode getChargePaymentMethod() {
+		return chargePaymentMethod;
+	}
+
+	public void setChargePaymentMethod(ChargePaymentMethodCode chargePaymentMethod) {
+		this.chargePaymentMethod = chargePaymentMethod;
 	}
 }

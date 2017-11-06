@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType3Code#DeliverKey
- * CardServiceType3Code.DeliverKey}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType3Code#mmDeliverKey
+ * CardServiceType3Code.mmDeliverKey}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType3Code#KeyChange
- * CardServiceType3Code.KeyChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType3Code#mmKeyChange
+ * CardServiceType3Code.mmKeyChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType3Code#KeyVerification
- * CardServiceType3Code.KeyVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType3Code#mmKeyVerification
+ * CardServiceType3Code.mmKeyVerification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class CardServiceType3Code extends CardServiceTypeCode {
 	 * name} = "DeliverKey"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliverKey = new MMCode() {
+	public static final MMCode mmDeliverKey = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverKey";
@@ -101,7 +101,7 @@ public class CardServiceType3Code extends CardServiceTypeCode {
 	 * name} = "KeyChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyChange = new MMCode() {
+	public static final MMCode mmKeyChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyChange";
@@ -124,7 +124,7 @@ public class CardServiceType3Code extends CardServiceTypeCode {
 	 * name} = "KeyVerification"</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyVerification = new MMCode() {
+	public static final MMCode mmKeyVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyVerification";
@@ -135,12 +135,12 @@ public class CardServiceType3Code extends CardServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardServiceType3Code";
 				definition = "Type of key exchange.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceType3Code.DeliverKey, com.tools20022.repository.codeset.CardServiceType3Code.KeyChange,
-						com.tools20022.repository.codeset.CardServiceType3Code.KeyVerification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceType3Code.mmDeliverKey, com.tools20022.repository.codeset.CardServiceType3Code.mmKeyChange,
+						com.tools20022.repository.codeset.CardServiceType3Code.mmKeyVerification);
 				trace_lazy = () -> CardServiceTypeCode.mmObject();
 			}
 		});

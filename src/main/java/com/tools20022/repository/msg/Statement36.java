@@ -34,25 +34,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Statement36#QueryReference
- * Statement36.QueryReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement36#mmQueryReference
+ * Statement36.mmQueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Statement36#ReportIdentification
- * Statement36.ReportIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement36#HistoricData
- * Statement36.HistoricData}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement36#ActivityIndicator
- * Statement36.ActivityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Statement36#mmReportIdentification
+ * Statement36.mmReportIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement36#mmHistoricData
+ * Statement36.mmHistoricData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Statement36#SubAccountIndicator
- * Statement36.SubAccountIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Statement36#mmActivityIndicator
+ * Statement36.mmActivityIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Statement36#mmSubAccountIndicator
+ * Statement36.mmSubAccountIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Statement36 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text queryReference;
 	/**
 	 * Identification of the SecuritiesStatementQuery message sent to request
 	 * this statement.
@@ -95,7 +97,7 @@ public class Statement36 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement36.mmObject();
 			isDerived = false;
@@ -103,11 +105,12 @@ public class Statement36 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the SecuritiesStatementQuery message sent to request this statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text reportIdentification;
 	/**
 	 * Reference common to all pages of a report.
 	 * <p>
@@ -134,7 +137,7 @@ public class Statement36 {
 	 * definition} = "Reference common to all pages of a report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement36.mmObject();
 			isDerived = false;
@@ -142,11 +145,12 @@ public class Statement36 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Reference common to all pages of a report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TrueFalseIndicator historicData;
 	/**
 	 * Specifies whether the data is either historical (true) or current
 	 * (false).
@@ -177,7 +181,7 @@ public class Statement36 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HistoricData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHistoricData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement36.mmObject();
 			isDerived = false;
@@ -185,11 +189,12 @@ public class Statement36 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HistoricData";
 			definition = "Specifies whether the data is either historical (true) or current (false).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -220,7 +225,7 @@ public class Statement36 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement36.mmObject();
 			isDerived = false;
@@ -228,11 +233,12 @@ public class Statement36 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator subAccountIndicator;
 	/**
 	 * Indicates whether the statement reports holdings at subsafekeeping
 	 * account level.
@@ -263,7 +269,7 @@ public class Statement36 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubAccountIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement36.mmObject();
 			isDerived = false;
@@ -271,8 +277,8 @@ public class Statement36 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountIndicator";
 			definition = "Indicates whether the statement reports holdings at subsafekeeping account level.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -280,14 +286,54 @@ public class Statement36 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement36.QueryReference, com.tools20022.repository.msg.Statement36.ReportIdentification, com.tools20022.repository.msg.Statement36.HistoricData,
-						com.tools20022.repository.msg.Statement36.ActivityIndicator, com.tools20022.repository.msg.Statement36.SubAccountIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement36.mmQueryReference, com.tools20022.repository.msg.Statement36.mmReportIdentification,
+						com.tools20022.repository.msg.Statement36.mmHistoricData, com.tools20022.repository.msg.Statement36.mmActivityIndicator, com.tools20022.repository.msg.Statement36.mmSubAccountIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Statement36";
 				definition = "Characteristics of the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getQueryReference() {
+		return queryReference;
+	}
+
+	public void setQueryReference(Max35Text queryReference) {
+		this.queryReference = queryReference;
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public TrueFalseIndicator getHistoricData() {
+		return historicData;
+	}
+
+	public void setHistoricData(TrueFalseIndicator historicData) {
+		this.historicData = historicData;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
+	}
+
+	public YesNoIndicator getSubAccountIndicator() {
+		return subAccountIndicator;
+	}
+
+	public void setSubAccountIndicator(YesNoIndicator subAccountIndicator) {
+		this.subAccountIndicator = subAccountIndicator;
 	}
 }

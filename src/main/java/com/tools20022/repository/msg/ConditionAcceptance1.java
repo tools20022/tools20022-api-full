@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConditionAcceptance1#ConditionIdentification
- * ConditionAcceptance1.ConditionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ConditionAcceptance1#mmConditionIdentification
+ * ConditionAcceptance1.mmConditionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConditionAcceptance1#AcceptanceFlag
- * ConditionAcceptance1.AcceptanceFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.ConditionAcceptance1#mmAcceptanceFlag
+ * ConditionAcceptance1.mmAcceptanceFlag}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ConditionAcceptance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max1NumericText conditionIdentification;
 	/**
 	 * Identification of the condition number.
 	 * <p>
@@ -87,7 +88,7 @@ public class ConditionAcceptance1 {
 	 * definition} = "Identification of the condition number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConditionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConditionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ConditionAcceptance1.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class ConditionAcceptance1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionIdentification";
 			definition = "Identification of the condition number.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max1NumericText.mmObject();
 		}
 	};
+	protected YesNoIndicator acceptanceFlag;
 	/**
 	 * Indicates whether the condition is accepted or not.
 	 * <p>
@@ -128,7 +130,7 @@ public class ConditionAcceptance1 {
 	 * definition} = "Indicates whether the condition is accepted or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AcceptanceFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAcceptanceFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ConditionAcceptance1.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class ConditionAcceptance1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceFlag";
 			definition = "Indicates whether the condition is accepted or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class ConditionAcceptance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionAcceptance1.ConditionIdentification, com.tools20022.repository.msg.ConditionAcceptance1.AcceptanceFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionAcceptance1.mmConditionIdentification, com.tools20022.repository.msg.ConditionAcceptance1.mmAcceptanceFlag);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ConditionAcceptance1";
 				definition = "Provides acceptance marker to the identified conditions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max1NumericText getConditionIdentification() {
+		return conditionIdentification;
+	}
+
+	public void setConditionIdentification(Max1NumericText conditionIdentification) {
+		this.conditionIdentification = conditionIdentification;
+	}
+
+	public YesNoIndicator getAcceptanceFlag() {
+		return acceptanceFlag;
+	}
+
+	public void setAcceptanceFlag(YesNoIndicator acceptanceFlag) {
+		this.acceptanceFlag = acceptanceFlag;
 	}
 }

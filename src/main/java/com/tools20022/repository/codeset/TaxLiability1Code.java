@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxLiability1Code#TaxPrincipal
- * TaxLiability1Code.TaxPrincipal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxLiability1Code#TaxAgent
- * TaxLiability1Code.TaxAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxLiability1Code#mmTaxPrincipal
+ * TaxLiability1Code.mmTaxPrincipal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxLiability1Code#mmTaxAgent
+ * TaxLiability1Code.mmTaxAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +81,7 @@ public class TaxLiability1Code extends TaxLiabilityCode {
 	 * name} = "TaxPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxPrincipal = new MMCode() {
+	public static final MMCode mmTaxPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxPrincipal";
@@ -103,7 +104,7 @@ public class TaxLiability1Code extends TaxLiabilityCode {
 	 * name} = "TaxAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxAgent = new MMCode() {
+	public static final MMCode mmTaxAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAgent";
@@ -114,12 +115,12 @@ public class TaxLiability1Code extends TaxLiabilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxLiability1Code";
 				definition = "Specifies the tax role capacity of the instructing party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxLiability1Code.TaxPrincipal, com.tools20022.repository.codeset.TaxLiability1Code.TaxAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxLiability1Code.mmTaxPrincipal, com.tools20022.repository.codeset.TaxLiability1Code.mmTaxAgent);
 				trace_lazy = () -> TaxLiabilityCode.mmObject();
 			}
 		});

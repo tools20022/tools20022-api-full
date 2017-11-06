@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus1Choice#Code
- * RegistrationProcessingStatus1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus1Choice#mmCode
+ * RegistrationProcessingStatus1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus1Choice#Proprietary
- * RegistrationProcessingStatus1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus1Choice#mmProprietary
+ * RegistrationProcessingStatus1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegistrationProcessingStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RegistrationProcessingStatus1Code code;
 	/**
 	 * Provides the status of the registration processing.
 	 * <p>
@@ -83,8 +84,8 @@ public class RegistrationProcessingStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#RegistrationStatus
-	 * SecuritiesStatus.RegistrationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmRegistrationStatus
+	 * SecuritiesStatus.mmRegistrationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,27 +106,28 @@ public class RegistrationProcessingStatus1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus3Choice#Code
-	 * RegistrationProcessingStatus3Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus3Choice#mmCode
+	 * RegistrationProcessingStatus3Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmRegistrationStatus;
 			componentContext_lazy = () -> RegistrationProcessingStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.RegistrationStatus;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of the registration processing.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegistrationProcessingStatus3Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegistrationProcessingStatus3Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RegistrationProcessingStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Provides the status of the registration processing.
 	 * <p>
@@ -139,8 +141,8 @@ public class RegistrationProcessingStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#AgentStandingInstructionStatus
-	 * CorporateActionStatus.AgentStandingInstructionStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmAgentStandingInstructionStatus
+	 * CorporateActionStatus.mmAgentStandingInstructionStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,24 +163,24 @@ public class RegistrationProcessingStatus1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus3Choice#Proprietary
-	 * RegistrationProcessingStatus3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus3Choice#mmProprietary
+	 * RegistrationProcessingStatus3Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmAgentStandingInstructionStatus;
 			componentContext_lazy = () -> RegistrationProcessingStatus1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.AgentStandingInstructionStatus;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of the registration processing.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegistrationProcessingStatus3Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegistrationProcessingStatus3Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -186,9 +188,9 @@ public class RegistrationProcessingStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegistrationProcessingStatus1Choice.Code, com.tools20022.repository.choice.RegistrationProcessingStatus1Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegistrationProcessingStatus1Choice.mmCode, com.tools20022.repository.choice.RegistrationProcessingStatus1Choice.mmProprietary);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegistrationProcessingStatus1Choice";
 				definition = "Choice of format for the registration processing status";
@@ -196,5 +198,21 @@ public class RegistrationProcessingStatus1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RegistrationProcessingStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(RegistrationProcessingStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

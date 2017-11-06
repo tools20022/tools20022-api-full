@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.PostalAddress;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification26#Name
- * PartyIdentification26.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification26#mmName
+ * PartyIdentification26.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification26#ProprietaryIdentification
- * PartyIdentification26.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification26#mmProprietaryIdentification
+ * PartyIdentification26.mmProprietaryIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification26#PostalAddress
- * PartyIdentification26.PostalAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification26#mmPostalAddress
+ * PartyIdentification26.mmPostalAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,36 +54,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#Buyer
- * BaselineMatchReportV03.Buyer}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmBuyer
+ * BaselineMatchReportV03.mmBuyer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#Seller
- * BaselineMatchReportV03.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#Buyer
- * BaselineReportV03.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#Seller
- * BaselineReportV03.Seller}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmSeller
+ * BaselineMatchReportV03.mmSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#Buyer
- * DataSetMatchReportV03.Buyer}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmBuyer
+ * BaselineReportV03.mmBuyer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#Seller
- * DataSetMatchReportV03.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#Buyer
- * DeltaReportV03.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#Seller
- * DeltaReportV03.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#Buyer
- * BaselineReportV04.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#Seller
- * BaselineReportV04.Seller}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmSeller
+ * BaselineReportV03.mmSeller}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmBuyer
+ * DataSetMatchReportV03.mmBuyer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmSeller
+ * DataSetMatchReportV03.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmBuyer
+ * DeltaReportV03.mmBuyer}</li>
+ * <li>{@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmSeller
+ * DeltaReportV03.mmSeller}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmBuyer
+ * BaselineReportV04.mmBuyer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmSeller
+ * BaselineReportV04.mmSeller}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -109,8 +115,8 @@ public class PartyIdentification26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -131,20 +137,21 @@ public class PartyIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> PartyIdentification26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected GenericIdentification4 proprietaryIdentification;
 	/**
 	 * Unique and unambiguous identifier assigned to a party using a proprietary
 	 * identification scheme.
@@ -159,8 +166,8 @@ public class PartyIdentification26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,20 +188,21 @@ public class PartyIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification26.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier assigned to a party using a proprietary identification scheme.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification4.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification4.mmObject();
 		}
 	};
+	protected PostalAddress5 postalAddress;
 	/**
 	 * Information that locates and identifies a specific address, as defined by
 	 * postal services.
@@ -229,38 +237,62 @@ public class PartyIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> PartyIdentification26.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification26.Name, com.tools20022.repository.msg.PartyIdentification26.ProprietaryIdentification,
-						com.tools20022.repository.msg.PartyIdentification26.PostalAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification26.mmName, com.tools20022.repository.msg.PartyIdentification26.mmProprietaryIdentification,
+						com.tools20022.repository.msg.PartyIdentification26.mmPostalAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBuyer, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmSeller,
+						com.tools20022.repository.area.tsmt.BaselineReportV03.mmBuyer, com.tools20022.repository.area.tsmt.BaselineReportV03.mmSeller, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmBuyer,
+						com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmSeller, com.tools20022.repository.area.tsmt.DeltaReportV03.mmBuyer, com.tools20022.repository.area.tsmt.DeltaReportV03.mmSeller,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmBuyer, com.tools20022.repository.area.tsmt.BaselineReportV04.mmSeller);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.Buyer, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.Seller,
-						com.tools20022.repository.area.tsmt.BaselineReportV03.Buyer, com.tools20022.repository.area.tsmt.BaselineReportV03.Seller, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.Buyer,
-						com.tools20022.repository.area.tsmt.DataSetMatchReportV03.Seller, com.tools20022.repository.area.tsmt.DeltaReportV03.Buyer, com.tools20022.repository.area.tsmt.DeltaReportV03.Seller,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.Buyer, com.tools20022.repository.area.tsmt.BaselineReportV04.Seller);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification26";
 				definition = "Entity involved in an activity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
+	}
+
+	public GenericIdentification4 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification4 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
+	}
+
+	public PostalAddress5 getPostalAddress() {
+		return postalAddress;
+	}
+
+	public void setPostalAddress(com.tools20022.repository.msg.PostalAddress5 postalAddress) {
+		this.postalAddress = postalAddress;
 	}
 }

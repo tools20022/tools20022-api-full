@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat7Choice#Rate
- * TaxCreditRateFormat7Choice.Rate}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat7Choice#mmRate
+ * TaxCreditRateFormat7Choice.mmRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat7Choice#Amount
- * TaxCreditRateFormat7Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat7Choice#mmAmount
+ * TaxCreditRateFormat7Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat7Choice#RateTypeAndAmountAndRateStatus
- * TaxCreditRateFormat7Choice.RateTypeAndAmountAndRateStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat7Choice#mmRateTypeAndAmountAndRateStatus
+ * TaxCreditRateFormat7Choice.mmRateTypeAndAmountAndRateStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxCreditRateFormat7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate rate;
 	/**
 	 * Value expressed as a rate.
 	 * <p>
@@ -85,8 +86,8 @@ public class TaxCreditRateFormat7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#Rate
-	 * RateAndAmount.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRate
+	 * RateAndAmount.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,25 +107,26 @@ public class TaxCreditRateFormat7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat2Choice#Rate
-	 * TaxCreditRateFormat2Choice.Rate}</li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat2Choice#mmRate
+	 * TaxCreditRateFormat2Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmRate;
 			componentContext_lazy = () -> TaxCreditRateFormat7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value expressed as a rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat2Choice.Rate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat2Choice.mmRate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Value expressed as an amount.
 	 * <p>
@@ -138,8 +140,8 @@ public class TaxCreditRateFormat7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#Amount
-	 * RateAndAmount.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmAmount
+	 * RateAndAmount.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,25 +161,26 @@ public class TaxCreditRateFormat7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat2Choice#Amount
-	 * TaxCreditRateFormat2Choice.Amount}</li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat2Choice#mmAmount
+	 * TaxCreditRateFormat2Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmAmount;
 			componentContext_lazy = () -> TaxCreditRateFormat7Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value expressed as an amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat2Choice.Amount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat2Choice.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected RateTypeAndAmountAndStatus27 rateTypeAndAmountAndRateStatus;
 	/**
 	 * Specifies different formats for the tax credit rate.
 	 * <p>
@@ -206,11 +209,11 @@ public class TaxCreditRateFormat7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat2Choice#RateTypeAndAmountAndRateStatus
-	 * TaxCreditRateFormat2Choice.RateTypeAndAmountAndRateStatus}</li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCreditRateFormat2Choice#mmRateTypeAndAmountAndRateStatus
+	 * TaxCreditRateFormat2Choice.mmRateTypeAndAmountAndRateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TaxCreditRateFormat7Choice.mmObject();
 			isDerived = false;
@@ -218,21 +221,21 @@ public class TaxCreditRateFormat7Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for the tax credit rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat2Choice.RateTypeAndAmountAndRateStatus;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat2Choice.mmRateTypeAndAmountAndRateStatus;
 			maxOccurs = 1;
-			type_lazy = () -> RateTypeAndAmountAndStatus27.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RateTypeAndAmountAndStatus27.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCreditRateFormat7Choice.Rate, com.tools20022.repository.choice.TaxCreditRateFormat7Choice.Amount,
-						com.tools20022.repository.choice.TaxCreditRateFormat7Choice.RateTypeAndAmountAndRateStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmRate, com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmAmount,
+						com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmRateTypeAndAmountAndRateStatus);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxCreditRateFormat7Choice";
 				definition = "Choice between an amount or an unspecified rate.";
@@ -240,5 +243,29 @@ public class TaxCreditRateFormat7Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public RateTypeAndAmountAndStatus27 getRateTypeAndAmountAndRateStatus() {
+		return rateTypeAndAmountAndRateStatus;
+	}
+
+	public void setRateTypeAndAmountAndRateStatus(RateTypeAndAmountAndStatus27 rateTypeAndAmountAndRateStatus) {
+		this.rateTypeAndAmountAndRateStatus = rateTypeAndAmountAndRateStatus;
 	}
 }

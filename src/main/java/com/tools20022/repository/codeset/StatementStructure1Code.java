@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementStructure1Code#Statuses
- * StatementStructure1Code.Statuses}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementStructure1Code#mmStatuses
+ * StatementStructure1Code.mmStatuses}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementStructure1Code#Transactions
- * StatementStructure1Code.Transactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementStructure1Code#mmTransactions
+ * StatementStructure1Code.mmTransactions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class StatementStructure1Code extends StatementStructureCode {
 	 * name} = "Statuses"</li>
 	 * </ul>
 	 */
-	public static final MMCode Statuses = new MMCode() {
+	public static final MMCode mmStatuses = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statuses";
@@ -105,7 +105,7 @@ public class StatementStructure1Code extends StatementStructureCode {
 	 * name} = "Transactions"</li>
 	 * </ul>
 	 */
-	public static final MMCode Transactions = new MMCode() {
+	public static final MMCode mmTransactions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transactions";
@@ -116,12 +116,12 @@ public class StatementStructure1Code extends StatementStructureCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementStructure1Code";
 				definition = "Specifies the type of balances on which the statement is prepared.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementStructure1Code.Statuses, com.tools20022.repository.codeset.StatementStructure1Code.Transactions);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementStructure1Code.mmStatuses, com.tools20022.repository.codeset.StatementStructure1Code.mmTransactions);
 				trace_lazy = () -> StatementStructureCode.mmObject();
 			}
 		});

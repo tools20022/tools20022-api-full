@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.IndividualPayment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Payment made by drawing a cheque in order to settle a debt.
@@ -35,41 +36,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChequePayment#Cheque
- * ChequePayment.Cheque}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequePayment#mmCheque
+ * ChequePayment.mmCheque}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Cheque#RelatedPayment
- * Cheque.RelatedPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Cheque#mmRelatedPayment
+ * Cheque.mmRelatedPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentInstrument7#Cheque
- * PaymentInstrument7.Cheque}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentInstrument8#Cheque
- * PaymentInstrument8.Cheque}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentInstrument7#mmCheque
+ * PaymentInstrument7.mmCheque}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmCheque
+ * PaymentInstrument8.mmCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#BankersDraft
- * PaymentInstrument8.BankersDraft}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmBankersDraft
+ * PaymentInstrument8.mmBankersDraft}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument17Choice#Cheque
- * PaymentInstrument17Choice.Cheque}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument17Choice#mmCheque
+ * PaymentInstrument17Choice.mmCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument17Choice#BankersDraft
- * PaymentInstrument17Choice.BankersDraft}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument17Choice#mmBankersDraft
+ * PaymentInstrument17Choice.mmBankersDraft}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument18Choice#Cheque
- * PaymentInstrument18Choice.Cheque}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument18Choice#mmCheque
+ * PaymentInstrument18Choice.mmCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument18Choice#BankersDraft
- * PaymentInstrument18Choice.BankersDraft}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument18Choice#mmBankersDraft
+ * PaymentInstrument18Choice.mmBankersDraft}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -78,8 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ChequePayment extends IndividualPayment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Cheque> cheque;
 	/**
 	 * Specifies the characteristics of the cheque which was drawn to settle a
 	 * debt.
@@ -102,26 +104,26 @@ public class ChequePayment extends IndividualPayment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Cheque#RelatedPayment
-	 * Cheque.RelatedPayment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Cheque#mmRelatedPayment
+	 * Cheque.mmRelatedPayment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Cheque Cheque}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#ChequeDetails
-	 * PaymentInstrument6Choice.ChequeDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ChequePayment ChequePayment}
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentInstrument6Choice#mmChequeDetails
+	 * PaymentInstrument6Choice.mmChequeDetails}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -136,36 +138,44 @@ public class ChequePayment extends IndividualPayment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Cheque = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCheque = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument6Choice.ChequeDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument6Choice.mmChequeDetails);
 			elementContext_lazy = () -> ChequePayment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Cheque";
 			definition = "Specifies the characteristics of the cheque which was drawn to settle a debt.";
 			minOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Cheque.RelatedPayment;
+			opposite_lazy = () -> com.tools20022.repository.entity.Cheque.mmRelatedPayment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChequePayment";
 				definition = "Payment made by drawing a cheque in order to settle a debt.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Cheque.RelatedPayment);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument7.Cheque, com.tools20022.repository.msg.PaymentInstrument8.Cheque, com.tools20022.repository.msg.PaymentInstrument8.BankersDraft,
-						com.tools20022.repository.choice.PaymentInstrument17Choice.Cheque, com.tools20022.repository.choice.PaymentInstrument17Choice.BankersDraft, com.tools20022.repository.choice.PaymentInstrument18Choice.Cheque,
-						com.tools20022.repository.choice.PaymentInstrument18Choice.BankersDraft);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Cheque.mmRelatedPayment);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument7.mmCheque, com.tools20022.repository.msg.PaymentInstrument8.mmCheque,
+						com.tools20022.repository.msg.PaymentInstrument8.mmBankersDraft, com.tools20022.repository.choice.PaymentInstrument17Choice.mmCheque, com.tools20022.repository.choice.PaymentInstrument17Choice.mmBankersDraft,
+						com.tools20022.repository.choice.PaymentInstrument18Choice.mmCheque, com.tools20022.repository.choice.PaymentInstrument18Choice.mmBankersDraft);
 				superType_lazy = () -> IndividualPayment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChequePayment.Cheque);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChequePayment.mmCheque);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Cheque> getCheque() {
+		return cheque;
+	}
+
+	public void setCheque(List<com.tools20022.repository.entity.Cheque> cheque) {
+		this.cheque = cheque;
 	}
 }

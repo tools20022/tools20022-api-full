@@ -43,20 +43,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#DateOfIssuance
- * AmendmentOfUndertaking.DateOfIssuance}</li>
+ * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#mmDateOfIssuance
+ * AmendmentOfUndertaking.mmDateOfIssuance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#ChangeOfAmount
- * AmendmentOfUndertaking.ChangeOfAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#mmChangeOfAmount
+ * AmendmentOfUndertaking.mmChangeOfAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#Undertaking
- * AmendmentOfUndertaking.Undertaking}</li>
+ * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#mmUndertaking
+ * AmendmentOfUndertaking.mmUndertaking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#BeneficiaryConsentRequestIndicator
- * AmendmentOfUndertaking.BeneficiaryConsentRequestIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#mmBeneficiaryConsentRequestIndicator
+ * AmendmentOfUndertaking.mmBeneficiaryConsentRequestIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#AmendmentIdentification
- * AmendmentOfUndertaking.AmendmentIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#mmAmendmentIdentification
+ * AmendmentOfUndertaking.mmAmendmentIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -64,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Undertaking#UndertakingAmendment
- * Undertaking.UndertakingAmendment}</li>
+ * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingAmendment
+ * Undertaking.mmUndertakingAmendment}</li>
  * </ul>
  * </li>
  * <li>
@@ -73,20 +73,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentMessage1#UndertakingAmendmentDetails
- * UndertakingAmendmentMessage1.UndertakingAmendmentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentMessage1#mmUndertakingAmendmentDetails
+ * UndertakingAmendmentMessage1.mmUndertakingAmendmentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment2#UndertakingAmendmentMessage
- * Amendment2.UndertakingAmendmentMessage}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment2#mmUndertakingAmendmentMessage
+ * Amendment2.mmUndertakingAmendmentMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment6#UndertakingAmendmentMessage
- * Amendment6.UndertakingAmendmentMessage}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment6#mmUndertakingAmendmentMessage
+ * Amendment6.mmUndertakingAmendmentMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1#UndertakingAmendmentResponseDetails
- * UndertakingAmendmentResponseMessage1.UndertakingAmendmentResponseDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1#mmUndertakingAmendmentResponseDetails
+ * UndertakingAmendmentResponseMessage1.mmUndertakingAmendmentResponseDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment9#UndertakingAmendmentResponseMessage
- * Amendment9.UndertakingAmendmentResponseMessage}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment9#mmUndertakingAmendmentResponseMessage
+ * Amendment9.mmUndertakingAmendmentResponseMessage}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,8 +110,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -127,6 +127,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmendmentOfUndertaking {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime dateOfIssuance;
 	/**
 	 * Date the amendment is issued.
 	 * <p>
@@ -136,18 +137,19 @@ public class AmendmentOfUndertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Amendment1#DateOfIssuance
-	 * Amendment1.DateOfIssuance}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking
 	 * AmendmentOfUndertaking}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Amendment1#mmDateOfIssuance
+	 * Amendment1.mmDateOfIssuance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -159,19 +161,20 @@ public class AmendmentOfUndertaking {
 	 * definition} = "Date the amendment is issued."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute DateOfIssuance = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDateOfIssuance = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment1.DateOfIssuance);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment1.mmDateOfIssuance);
 			elementContext_lazy = () -> AmendmentOfUndertaking.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DateOfIssuance";
 			definition = "Date the amendment is issued.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CurrencyAndAmount changeOfAmount;
 	/**
 	 * Decrease (negative) or increase (positive) of the undertaking as a result
 	 * of the amendment.
@@ -183,22 +186,22 @@ public class AmendmentOfUndertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Amount1Choice#IncreaseAmount
-	 * Amount1Choice.IncreaseAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Amount1Choice#DecreaseAmount
-	 * Amount1Choice.DecreaseAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking
 	 * AmendmentOfUndertaking}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Amount1Choice#mmIncreaseAmount
+	 * Amount1Choice.mmIncreaseAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Amount1Choice#mmDecreaseAmount
+	 * Amount1Choice.mmDecreaseAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -212,19 +215,20 @@ public class AmendmentOfUndertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ChangeOfAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmChangeOfAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Amount1Choice.IncreaseAmount, com.tools20022.repository.choice.Amount1Choice.DecreaseAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Amount1Choice.mmIncreaseAmount, com.tools20022.repository.choice.Amount1Choice.mmDecreaseAmount);
 			elementContext_lazy = () -> AmendmentOfUndertaking.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChangeOfAmount";
 			definition = "Decrease (negative) or increase (positive) of the undertaking as a result of the amendment. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected Undertaking undertaking;
 	/**
 	 * Contents of an UndertakingAmendmentResponse message.
 	 * <p>
@@ -233,8 +237,8 @@ public class AmendmentOfUndertaking {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#UndertakingAmendment
-	 * Undertaking.UndertakingAmendment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingAmendment
+	 * Undertaking.mmUndertakingAmendment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -242,28 +246,28 @@ public class AmendmentOfUndertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Undertaking
 	 * Undertaking}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Amendment1#LocalUndertaking
-	 * Amendment1.LocalUndertaking}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Amendment2#ConfirmationDetails
-	 * Amendment2.ConfirmationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Amendment3#UndertakingIdentification
-	 * Amendment3.UndertakingIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Amendment3#CounterUndertaking
-	 * Amendment3.CounterUndertaking}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking
 	 * AmendmentOfUndertaking}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Amendment1#mmLocalUndertaking
+	 * Amendment1.mmLocalUndertaking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Amendment2#mmConfirmationDetails
+	 * Amendment2.mmConfirmationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Amendment3#mmUndertakingIdentification
+	 * Amendment3.mmUndertakingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Amendment3#mmCounterUndertaking
+	 * Amendment3.mmCounterUndertaking}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -275,22 +279,23 @@ public class AmendmentOfUndertaking {
 	 * definition} = "Contents of an UndertakingAmendmentResponse message."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Undertaking = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment1.LocalUndertaking, com.tools20022.repository.msg.Amendment2.ConfirmationDetails, com.tools20022.repository.msg.Amendment3.UndertakingIdentification,
-					com.tools20022.repository.msg.Amendment3.CounterUndertaking);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment1.mmLocalUndertaking, com.tools20022.repository.msg.Amendment2.mmConfirmationDetails,
+					com.tools20022.repository.msg.Amendment3.mmUndertakingIdentification, com.tools20022.repository.msg.Amendment3.mmCounterUndertaking);
 			elementContext_lazy = () -> AmendmentOfUndertaking.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
 			definition = "Contents of an UndertakingAmendmentResponse message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.UndertakingAmendment;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingAmendment;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 		}
 	};
+	protected YesNoIndicator beneficiaryConsentRequestIndicator;
 	/**
 	 * Indicates whether or not a request for consent is required from the
 	 * beneficiary.
@@ -302,19 +307,19 @@ public class AmendmentOfUndertaking {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Amendment1#BeneficiaryConsentRequestIndicator
-	 * Amendment1.BeneficiaryConsentRequestIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking
 	 * AmendmentOfUndertaking}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Amendment1#mmBeneficiaryConsentRequestIndicator
+	 * Amendment1.mmBeneficiaryConsentRequestIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -328,19 +333,20 @@ public class AmendmentOfUndertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BeneficiaryConsentRequestIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBeneficiaryConsentRequestIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment1.BeneficiaryConsentRequestIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment1.mmBeneficiaryConsentRequestIndicator);
 			elementContext_lazy = () -> AmendmentOfUndertaking.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BeneficiaryConsentRequestIndicator";
 			definition = "Indicates whether or not a request for consent is required from the beneficiary.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max35Text amendmentIdentification;
 	/**
 	 * Identification of the amendment.
 	 * <p>
@@ -350,21 +356,22 @@ public class AmendmentOfUndertaking {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Amendment8#Identification
-	 * Amendment8.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Amendment7#AmendmentIdentification
-	 * Amendment7.AmendmentIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking
 	 * AmendmentOfUndertaking}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Amendment8#mmIdentification
+	 * Amendment8.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Amendment7#mmAmendmentIdentification
+	 * Amendment7.mmAmendmentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -376,16 +383,16 @@ public class AmendmentOfUndertaking {
 	 * definition} = "Identification of the amendment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AmendmentIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmendmentIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment8.Identification, com.tools20022.repository.msg.Amendment7.AmendmentIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment8.mmIdentification, com.tools20022.repository.msg.Amendment7.mmAmendmentIdentification);
 			elementContext_lazy = () -> AmendmentOfUndertaking.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AmendmentIdentification";
 			definition = "Identification of the amendment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -393,21 +400,61 @@ public class AmendmentOfUndertaking {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmendmentOfUndertaking";
 				definition = "Modification of an undertaking such as an guarantee or standby letter of credit.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.UndertakingAmendment);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmendmentMessage1.UndertakingAmendmentDetails, com.tools20022.repository.msg.Amendment2.UndertakingAmendmentMessage,
-						com.tools20022.repository.msg.Amendment6.UndertakingAmendmentMessage, com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1.UndertakingAmendmentResponseDetails,
-						com.tools20022.repository.msg.Amendment9.UndertakingAmendmentResponseMessage);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmendmentOfUndertaking.DateOfIssuance, com.tools20022.repository.entity.AmendmentOfUndertaking.ChangeOfAmount,
-						com.tools20022.repository.entity.AmendmentOfUndertaking.Undertaking, com.tools20022.repository.entity.AmendmentOfUndertaking.BeneficiaryConsentRequestIndicator,
-						com.tools20022.repository.entity.AmendmentOfUndertaking.AmendmentIdentification);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.mmUndertakingAmendment);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmendmentMessage1.mmUndertakingAmendmentDetails, com.tools20022.repository.msg.Amendment2.mmUndertakingAmendmentMessage,
+						com.tools20022.repository.msg.Amendment6.mmUndertakingAmendmentMessage, com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1.mmUndertakingAmendmentResponseDetails,
+						com.tools20022.repository.msg.Amendment9.mmUndertakingAmendmentResponseMessage);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmendmentOfUndertaking.mmDateOfIssuance, com.tools20022.repository.entity.AmendmentOfUndertaking.mmChangeOfAmount,
+						com.tools20022.repository.entity.AmendmentOfUndertaking.mmUndertaking, com.tools20022.repository.entity.AmendmentOfUndertaking.mmBeneficiaryConsentRequestIndicator,
+						com.tools20022.repository.entity.AmendmentOfUndertaking.mmAmendmentIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(Amendment1.mmObject(), UndertakingAmendmentMessage1.mmObject(), Amendment2.mmObject(), Amendment6.mmObject(), Amendment3.mmObject(), Amendment8.mmObject(),
 						Amendment7.mmObject(), UndertakingAmendmentResponseMessage1.mmObject(), Amendment9.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getDateOfIssuance() {
+		return dateOfIssuance;
+	}
+
+	public void setDateOfIssuance(ISODateTime dateOfIssuance) {
+		this.dateOfIssuance = dateOfIssuance;
+	}
+
+	public CurrencyAndAmount getChangeOfAmount() {
+		return changeOfAmount;
+	}
+
+	public void setChangeOfAmount(CurrencyAndAmount changeOfAmount) {
+		this.changeOfAmount = changeOfAmount;
+	}
+
+	public Undertaking getUndertaking() {
+		return undertaking;
+	}
+
+	public void setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
+		this.undertaking = undertaking;
+	}
+
+	public YesNoIndicator getBeneficiaryConsentRequestIndicator() {
+		return beneficiaryConsentRequestIndicator;
+	}
+
+	public void setBeneficiaryConsentRequestIndicator(YesNoIndicator beneficiaryConsentRequestIndicator) {
+		this.beneficiaryConsentRequestIndicator = beneficiaryConsentRequestIndicator;
+	}
+
+	public Max35Text getAmendmentIdentification() {
+		return amendmentIdentification;
+	}
+
+	public void setAmendmentIdentification(Max35Text amendmentIdentification) {
+		this.amendmentIdentification = amendmentIdentification;
 	}
 }

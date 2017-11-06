@@ -33,10 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryQuantity1#Type
- * ProprietaryQuantity1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryQuantity1#Quantity
- * ProprietaryQuantity1.Quantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryQuantity1#mmType
+ * ProprietaryQuantity1.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryQuantity1#mmQuantity
+ * ProprietaryQuantity1.mmQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryQuantity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Identifies the type of proprietary quantity reported.
 	 * <p>
@@ -87,7 +89,7 @@ public class ProprietaryQuantity1 {
 	 * definition} = "Identifies the type of proprietary quantity reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryQuantity1.mmObject();
 			isDerived = false;
@@ -95,11 +97,12 @@ public class ProprietaryQuantity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies the type of proprietary quantity reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text quantity;
 	/**
 	 * Provides the proprietary quantity in free format.
 	 * <p>
@@ -132,17 +135,17 @@ public class ProprietaryQuantity1 {
 	 * definition} = "Provides the proprietary quantity in free format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryQuantity1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
+			componentContext_lazy = () -> ProprietaryQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Provides the proprietary quantity in free format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -150,14 +153,30 @@ public class ProprietaryQuantity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryQuantity1.Type, com.tools20022.repository.msg.ProprietaryQuantity1.Quantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryQuantity1.mmType, com.tools20022.repository.msg.ProprietaryQuantity1.mmQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryQuantity1";
 				definition = "Set of elements to identify a proprietary quantity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public Max35Text getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Max35Text quantity) {
+		this.quantity = quantity;
 	}
 }

@@ -31,8 +31,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnaffirmedReasonCode#CounterpartyNotAffirmed
- * UnaffirmedReasonCode.CounterpartyNotAffirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnaffirmedReasonCode#mmCounterpartyNotAffirmed
+ * UnaffirmedReasonCode.mmCounterpartyNotAffirmed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class UnaffirmedReasonCode {
 	 * definition} = "Specifies the reason the counterparty has not affirmed."</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyNotAffirmed = new MMCode() {
+	public static final MMCode mmCounterpartyNotAffirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyNotAffirmed";
@@ -102,12 +102,12 @@ public class UnaffirmedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NAFF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnaffirmedReasonCode";
 				definition = "Specifies the reason the transaction, transfer or settlement instruction is unaffirmed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnaffirmedReasonCode.CounterpartyNotAffirmed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnaffirmedReasonCode.mmCounterpartyNotAffirmed);
 				derivation_lazy = () -> Arrays.asList(UnaffirmedReason1Code.mmObject());
 			}
 		});

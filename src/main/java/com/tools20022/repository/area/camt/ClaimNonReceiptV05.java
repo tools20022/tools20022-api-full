@@ -31,6 +31,7 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope The Claim Non Receipt message is sent by a case creator/case assigner
@@ -114,26 +115,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#Assignment
- * ClaimNonReceiptV05.Assignment}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#Case
- * ClaimNonReceiptV05.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#mmAssignment
+ * ClaimNonReceiptV05.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#Underlying
- * ClaimNonReceiptV05.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#mmCase
+ * ClaimNonReceiptV05.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#CoverDetails
- * ClaimNonReceiptV05.CoverDetails}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#mmUnderlying
+ * ClaimNonReceiptV05.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#SupplementaryData
- * ClaimNonReceiptV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#mmCoverDetails
+ * ClaimNonReceiptV05.mmCoverDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#mmSupplementaryData
+ * ClaimNonReceiptV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#identifier
- * ClaimNonReceiptV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.027.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -153,6 +153,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClaimNonReceiptV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment3 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -180,22 +181,23 @@ public class ClaimNonReceiptV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04#Assignment
-	 * ClaimNonReceiptV04.Assignment}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04#mmAssignment
+	 * ClaimNonReceiptV04.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV04.Assignment;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmAssignment;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 	};
+	protected Case3 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -218,22 +220,23 @@ public class ClaimNonReceiptV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04#Case
-	 * ClaimNonReceiptV04.Case}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04#mmCase
+	 * ClaimNonReceiptV04.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV04.Case;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmCase;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
 		}
 	};
+	protected UnderlyingTransaction3Choice underlying;
 	/**
 	 * Identifies the payment instruction for which the Creditor has not
 	 * received the funds. Usage: In case of a missing cover, it must be the
@@ -264,22 +267,23 @@ public class ClaimNonReceiptV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04#Underlying
-	 * ClaimNonReceiptV04.Underlying}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04#mmUnderlying
+	 * ClaimNonReceiptV04.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the payment instruction for which the Creditor has not received the funds.\nUsage: In case of a missing cover, it must be the identification of the related payment instruction.\nIn case of a claim non receipt initiated by the debtor, it must be the identification of the instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV04.Underlying;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmUnderlying;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction3Choice.mmObject();
 		}
 	};
+	protected MissingCover3 coverDetails;
 	/**
 	 * Provides the cover related information of a claim non receipt
 	 * investigation. The absence of the component means that the message is not
@@ -307,22 +311,23 @@ public class ClaimNonReceiptV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04#CoverDetails
-	 * ClaimNonReceiptV04.CoverDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04#mmCoverDetails
+	 * ClaimNonReceiptV04.mmCoverDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CoverDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCoverDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CoverDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverDetails";
 			definition = "Provides the cover related information of a claim non receipt investigation. The absence of the component means that the message is not a cover related investigation.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV04.CoverDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmCoverDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MissingCover3.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -350,46 +355,19 @@ public class ClaimNonReceiptV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04#SupplementaryData
-	 * ClaimNonReceiptV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04#mmSupplementaryData
+	 * ClaimNonReceiptV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV04.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "027"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "027";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -404,11 +382,58 @@ public class ClaimNonReceiptV05 {
 				rootElement = "Document";
 				xmlTag = "ClmNonRct";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceiptV05.Assignment, com.tools20022.repository.area.camt.ClaimNonReceiptV05.Case,
-						com.tools20022.repository.area.camt.ClaimNonReceiptV05.Underlying, com.tools20022.repository.area.camt.ClaimNonReceiptV05.CoverDetails, com.tools20022.repository.area.camt.ClaimNonReceiptV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.ClaimNonReceiptV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmAssignment, com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmCase,
+						com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmUnderlying, com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmCoverDetails, com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "027";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment3 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment3 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case3 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case3 case_) {
+		this.case_ = case_;
+	}
+
+	public UnderlyingTransaction3Choice getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(UnderlyingTransaction3Choice underlying) {
+		this.underlying = underlying;
+	}
+
+	public MissingCover3 getCoverDetails() {
+		return coverDetails;
+	}
+
+	public void setCoverDetails(MissingCover3 coverDetails) {
+		this.coverDetails = coverDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

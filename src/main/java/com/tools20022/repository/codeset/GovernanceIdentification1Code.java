@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#InternationalStandbyPractices
- * GovernanceIdentification1Code.InternationalStandbyPractices}</li>
+ * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#mmInternationalStandbyPractices
+ * GovernanceIdentification1Code.mmInternationalStandbyPractices}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#None
- * GovernanceIdentification1Code.None}</li>
+ * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#mmNone
+ * GovernanceIdentification1Code.mmNone}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#UniformCustomsAndPractice
- * GovernanceIdentification1Code.UniformCustomsAndPractice}</li>
+ * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#mmUniformCustomsAndPractice
+ * GovernanceIdentification1Code.mmUniformCustomsAndPractice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#UniformRulesForDemandGuarantees
- * GovernanceIdentification1Code.UniformRulesForDemandGuarantees}</li>
+ * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#mmUniformRulesForDemandGuarantees
+ * GovernanceIdentification1Code.mmUniformRulesForDemandGuarantees}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 * name} = "InternationalStandbyPractices"</li>
 	 * </ul>
 	 */
-	public static final MMCode InternationalStandbyPractices = new MMCode() {
+	public static final MMCode mmInternationalStandbyPractices = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalStandbyPractices";
@@ -112,7 +112,7 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode None = new MMCode() {
+	public static final MMCode mmNone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
@@ -135,7 +135,7 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 * name} = "UniformCustomsAndPractice"</li>
 	 * </ul>
 	 */
-	public static final MMCode UniformCustomsAndPractice = new MMCode() {
+	public static final MMCode mmUniformCustomsAndPractice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniformCustomsAndPractice";
@@ -158,7 +158,7 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 * name} = "UniformRulesForDemandGuarantees"</li>
 	 * </ul>
 	 */
-	public static final MMCode UniformRulesForDemandGuarantees = new MMCode() {
+	public static final MMCode mmUniformRulesForDemandGuarantees = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniformRulesForDemandGuarantees";
@@ -169,13 +169,13 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ISPR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GovernanceIdentification1Code";
 				definition = "Specifies the identification of the rules and laws governing the undertaking.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GovernanceIdentification1Code.InternationalStandbyPractices, com.tools20022.repository.codeset.GovernanceIdentification1Code.None,
-						com.tools20022.repository.codeset.GovernanceIdentification1Code.UniformCustomsAndPractice, com.tools20022.repository.codeset.GovernanceIdentification1Code.UniformRulesForDemandGuarantees);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GovernanceIdentification1Code.mmInternationalStandbyPractices, com.tools20022.repository.codeset.GovernanceIdentification1Code.mmNone,
+						com.tools20022.repository.codeset.GovernanceIdentification1Code.mmUniformCustomsAndPractice, com.tools20022.repository.codeset.GovernanceIdentification1Code.mmUniformRulesForDemandGuarantees);
 				trace_lazy = () -> GovernanceIdentificationCode.mmObject();
 			}
 		});

@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Payment token information.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentToken2#TokenCharacteristic
- * CardPaymentToken2.TokenCharacteristic}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentToken2#mmTokenCharacteristic
+ * CardPaymentToken2.mmTokenCharacteristic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentToken2#TokenAssuranceLevel
- * CardPaymentToken2.TokenAssuranceLevel}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentToken2#mmTokenAssuranceLevel
+ * CardPaymentToken2.mmTokenAssuranceLevel}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentToken2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max35Text> tokenCharacteristic;
 	/**
 	 * Additional token payment information.
 	 * <p>
@@ -97,7 +99,7 @@ public class CardPaymentToken2 {
 	 * definition} = "Additional token payment information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TokenCharacteristic = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTokenCharacteristic = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentToken2.mmObject();
 			isDerived = false;
@@ -109,6 +111,7 @@ public class CardPaymentToken2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number tokenAssuranceLevel;
 	/**
 	 * Level of confidence resulting of the identification and authentication of
 	 * the cardholder performed and the entity that performed it.
@@ -141,13 +144,13 @@ public class CardPaymentToken2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentToken3#TokenAssuranceLevel
-	 * CardPaymentToken3.TokenAssuranceLevel}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentToken3#mmTokenAssuranceLevel
+	 * CardPaymentToken3.mmTokenAssuranceLevel}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TokenAssuranceLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTokenAssuranceLevel = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentToken2.mmObject();
 			isDerived = false;
@@ -155,9 +158,9 @@ public class CardPaymentToken2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TokenAssuranceLevel";
 			definition = "Level of confidence resulting of the identification and authentication of the cardholder performed and the entity that performed it.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentToken3.TokenAssuranceLevel);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentToken3.mmTokenAssuranceLevel);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -165,15 +168,31 @@ public class CardPaymentToken2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentToken2.TokenCharacteristic, com.tools20022.repository.msg.CardPaymentToken2.TokenAssuranceLevel);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentToken2.mmTokenCharacteristic, com.tools20022.repository.msg.CardPaymentToken2.mmTokenAssuranceLevel);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentToken2";
 				definition = "Payment token information.";
-				previousVersion_lazy = () -> CardPaymentToken1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentToken3.mmObject());
+				previousVersion_lazy = () -> CardPaymentToken1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max35Text> getTokenCharacteristic() {
+		return tokenCharacteristic;
+	}
+
+	public void setTokenCharacteristic(List<Max35Text> tokenCharacteristic) {
+		this.tokenCharacteristic = tokenCharacteristic;
+	}
+
+	public Number getTokenAssuranceLevel() {
+		return tokenAssuranceLevel;
+	}
+
+	public void setTokenAssuranceLevel(Number tokenAssuranceLevel) {
+		this.tokenAssuranceLevel = tokenAssuranceLevel;
 	}
 }

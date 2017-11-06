@@ -30,62 +30,63 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#AccessDenied
- * TerminalManagementActionResultCode.AccessDenied}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmAccessDenied
+ * TerminalManagementActionResultCode.mmAccessDenied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#ConnectionError
- * TerminalManagementActionResultCode.ConnectionError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmConnectionError
+ * TerminalManagementActionResultCode.mmConnectionError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#FormatError
- * TerminalManagementActionResultCode.FormatError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmFormatError
+ * TerminalManagementActionResultCode.mmFormatError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#InvalidContent
- * TerminalManagementActionResultCode.InvalidContent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmInvalidContent
+ * TerminalManagementActionResultCode.mmInvalidContent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#LengthError
- * TerminalManagementActionResultCode.LengthError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmLengthError
+ * TerminalManagementActionResultCode.mmLengthError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#MemoryOverflow
- * TerminalManagementActionResultCode.MemoryOverflow}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmMemoryOverflow
+ * TerminalManagementActionResultCode.mmMemoryOverflow}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#MissingFile
- * TerminalManagementActionResultCode.MissingFile}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmMissingFile
+ * TerminalManagementActionResultCode.mmMissingFile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#NotSupported
- * TerminalManagementActionResultCode.NotSupported}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmNotSupported
+ * TerminalManagementActionResultCode.mmNotSupported}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#SignatureError
- * TerminalManagementActionResultCode.SignatureError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmSignatureError
+ * TerminalManagementActionResultCode.mmSignatureError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#Success
- * TerminalManagementActionResultCode.Success}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmSuccess
+ * TerminalManagementActionResultCode.mmSuccess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#SyntaxError
- * TerminalManagementActionResultCode.SyntaxError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmSyntaxError
+ * TerminalManagementActionResultCode.mmSyntaxError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#Timeout
- * TerminalManagementActionResultCode.Timeout}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmTimeout
+ * TerminalManagementActionResultCode.mmTimeout}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#UnknownData
- * TerminalManagementActionResultCode.UnknownData}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmUnknownData
+ * TerminalManagementActionResultCode.mmUnknownData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#UnknownKeyReference
- * TerminalManagementActionResultCode.UnknownKeyReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmUnknownKeyReference
+ * TerminalManagementActionResultCode.mmUnknownKeyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#Hardware
- * TerminalManagementActionResultCode.Hardware}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmHardware
+ * TerminalManagementActionResultCode.mmHardware}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#Security
- * TerminalManagementActionResultCode.Security}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmSecurity
+ * TerminalManagementActionResultCode.mmSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#DelegationParametersReceivedUnauthorized
- * TerminalManagementActionResultCode.DelegationParametersReceivedUnauthorized}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmDelegationParametersReceivedUnauthorized
+ * TerminalManagementActionResultCode.mmDelegationParametersReceivedUnauthorized
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#InvalidDelegationInManagementPlan
- * TerminalManagementActionResultCode.InvalidDelegationInManagementPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmInvalidDelegationInManagementPlan
+ * TerminalManagementActionResultCode.mmInvalidDelegationInManagementPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#InvalidDelegationProof
- * TerminalManagementActionResultCode.InvalidDelegationProof}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode#mmInvalidDelegationProof
+ * TerminalManagementActionResultCode.mmInvalidDelegationProof}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -105,8 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -147,7 +148,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Access is denied while performing the action."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccessDenied = new MMCode() {
+	public static final MMCode mmAccessDenied = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AccessDenied";
@@ -177,7 +178,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Problem to connect while performing the action."</li>
 	 * </ul>
 	 */
-	public static final MMCode ConnectionError = new MMCode() {
+	public static final MMCode mmConnectionError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConnectionError";
@@ -207,7 +208,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Data transferred has a wrong format."</li>
 	 * </ul>
 	 */
-	public static final MMCode FormatError = new MMCode() {
+	public static final MMCode mmFormatError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FormatError";
@@ -237,7 +238,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Content of the data is invalid."</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidContent = new MMCode() {
+	public static final MMCode mmInvalidContent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvalidContent";
@@ -267,7 +268,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Data transferred has a wrong length."</li>
 	 * </ul>
 	 */
-	public static final MMCode LengthError = new MMCode() {
+	public static final MMCode mmLengthError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LengthError";
@@ -297,7 +298,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Memory to store the date exceeded."</li>
 	 * </ul>
 	 */
-	public static final MMCode MemoryOverflow = new MMCode() {
+	public static final MMCode mmMemoryOverflow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MemoryOverflow";
@@ -327,7 +328,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Data set to be maintained is missing."</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingFile = new MMCode() {
+	public static final MMCode mmMissingFile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MissingFile";
@@ -357,7 +358,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Action is not supported."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotSupported = new MMCode() {
+	public static final MMCode mmNotSupported = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NotSupported";
@@ -387,7 +388,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Data transferred has a wrong digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMCode SignatureError = new MMCode() {
+	public static final MMCode mmSignatureError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SignatureError";
@@ -417,7 +418,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Action was successfully performed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Success = new MMCode() {
+	public static final MMCode mmSuccess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Success";
@@ -447,7 +448,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Data transferred has a wrong syntax."</li>
 	 * </ul>
 	 */
-	public static final MMCode SyntaxError = new MMCode() {
+	public static final MMCode mmSyntaxError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SyntaxError";
@@ -477,7 +478,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Timeout expired during the data transfer."</li>
 	 * </ul>
 	 */
-	public static final MMCode Timeout = new MMCode() {
+	public static final MMCode mmTimeout = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Timeout";
@@ -507,7 +508,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Data set identification invalid."</li>
 	 * </ul>
 	 */
-	public static final MMCode UnknownData = new MMCode() {
+	public static final MMCode mmUnknownData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnknownData";
@@ -538,7 +539,7 @@ public class TerminalManagementActionResultCode {
 	 * "Cryptographic key reference used for the data signature is not valid."</li>
 	 * </ul>
 	 */
-	public static final MMCode UnknownKeyReference = new MMCode() {
+	public static final MMCode mmUnknownKeyReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnknownKeyReference";
@@ -568,7 +569,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Hardware error."</li>
 	 * </ul>
 	 */
-	public static final MMCode Hardware = new MMCode() {
+	public static final MMCode mmHardware = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hardware";
@@ -598,7 +599,7 @@ public class TerminalManagementActionResultCode {
 	 * definition} = "Security error."</li>
 	 * </ul>
 	 */
-	public static final MMCode Security = new MMCode() {
+	public static final MMCode mmSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
@@ -631,7 +632,7 @@ public class TerminalManagementActionResultCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DelegationParametersReceivedUnauthorized = new MMCode() {
+	public static final MMCode mmDelegationParametersReceivedUnauthorized = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationParametersReceivedUnauthorized";
@@ -664,7 +665,7 @@ public class TerminalManagementActionResultCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidDelegationInManagementPlan = new MMCode() {
+	public static final MMCode mmInvalidDelegationInManagementPlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidDelegationInManagementPlan";
@@ -697,7 +698,7 @@ public class TerminalManagementActionResultCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidDelegationProof = new MMCode() {
+	public static final MMCode mmInvalidDelegationProof = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidDelegationProof";
@@ -710,21 +711,21 @@ public class TerminalManagementActionResultCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementActionResultCode";
 				definition = "Final result of the processed terminal management action.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionResultCode.AccessDenied, com.tools20022.repository.codeset.TerminalManagementActionResultCode.ConnectionError,
-						com.tools20022.repository.codeset.TerminalManagementActionResultCode.FormatError, com.tools20022.repository.codeset.TerminalManagementActionResultCode.InvalidContent,
-						com.tools20022.repository.codeset.TerminalManagementActionResultCode.LengthError, com.tools20022.repository.codeset.TerminalManagementActionResultCode.MemoryOverflow,
-						com.tools20022.repository.codeset.TerminalManagementActionResultCode.MissingFile, com.tools20022.repository.codeset.TerminalManagementActionResultCode.NotSupported,
-						com.tools20022.repository.codeset.TerminalManagementActionResultCode.SignatureError, com.tools20022.repository.codeset.TerminalManagementActionResultCode.Success,
-						com.tools20022.repository.codeset.TerminalManagementActionResultCode.SyntaxError, com.tools20022.repository.codeset.TerminalManagementActionResultCode.Timeout,
-						com.tools20022.repository.codeset.TerminalManagementActionResultCode.UnknownData, com.tools20022.repository.codeset.TerminalManagementActionResultCode.UnknownKeyReference,
-						com.tools20022.repository.codeset.TerminalManagementActionResultCode.Hardware, com.tools20022.repository.codeset.TerminalManagementActionResultCode.Security,
-						com.tools20022.repository.codeset.TerminalManagementActionResultCode.DelegationParametersReceivedUnauthorized, com.tools20022.repository.codeset.TerminalManagementActionResultCode.InvalidDelegationInManagementPlan,
-						com.tools20022.repository.codeset.TerminalManagementActionResultCode.InvalidDelegationProof);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmAccessDenied, com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmConnectionError,
+						com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmFormatError, com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmInvalidContent,
+						com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmLengthError, com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmMemoryOverflow,
+						com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmMissingFile, com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmNotSupported,
+						com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmSignatureError, com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmSuccess,
+						com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmSyntaxError, com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmTimeout,
+						com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmUnknownData, com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmUnknownKeyReference,
+						com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmHardware, com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmSecurity,
+						com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmDelegationParametersReceivedUnauthorized,
+						com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmInvalidDelegationInManagementPlan, com.tools20022.repository.codeset.TerminalManagementActionResultCode.mmInvalidDelegationProof);
 				derivation_lazy = () -> Arrays.asList(TerminalManagementActionResult1Code.mmObject(), TerminalManagementActionResult2Code.mmObject(), TerminalManagementActionResult3Code.mmObject());
 			}
 		});

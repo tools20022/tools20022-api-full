@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.PortfolioStrategy;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Strategy is jurisdiction based.
@@ -36,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.JurisdictionStrategy#Jurisdiction
- * JurisdictionStrategy.Jurisdiction}</li>
+ * {@linkplain com.tools20022.repository.entity.JurisdictionStrategy#mmJurisdiction
+ * JurisdictionStrategy.mmJurisdiction}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Jurisdiction#AssociatedStrategy
- * Jurisdiction.AssociatedStrategy}</li>
+ * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmAssociatedStrategy
+ * Jurisdiction.mmAssociatedStrategy}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class JurisdictionStrategy extends PortfolioStrategy {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Jurisdiction> jurisdiction;
 	/**
 	 * Jurisdiction (country, county, state, province, city) of the investment.
 	 * <p>
@@ -78,8 +80,8 @@ public class JurisdictionStrategy extends PortfolioStrategy {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Jurisdiction#AssociatedStrategy
-	 * Jurisdiction.AssociatedStrategy}</li>
+	 * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmAssociatedStrategy
+	 * Jurisdiction.mmAssociatedStrategy}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -105,7 +107,7 @@ public class JurisdictionStrategy extends PortfolioStrategy {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Jurisdiction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmJurisdiction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> JurisdictionStrategy.mmObject();
 			isDerived = false;
@@ -113,24 +115,32 @@ public class JurisdictionStrategy extends PortfolioStrategy {
 			name = "Jurisdiction";
 			definition = "Jurisdiction (country, county, state, province, city) of the investment.";
 			minOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Jurisdiction.AssociatedStrategy;
+			opposite_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmAssociatedStrategy;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "JurisdictionStrategy";
 				definition = "Strategy is jurisdiction based.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Jurisdiction.AssociatedStrategy);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Jurisdiction.mmAssociatedStrategy);
 				superType_lazy = () -> PortfolioStrategy.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.JurisdictionStrategy.Jurisdiction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.JurisdictionStrategy.mmJurisdiction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Jurisdiction> getJurisdiction() {
+		return jurisdiction;
+	}
+
+	public void setJurisdiction(List<com.tools20022.repository.entity.Jurisdiction> jurisdiction) {
+		this.jurisdiction = jurisdiction;
 	}
 }

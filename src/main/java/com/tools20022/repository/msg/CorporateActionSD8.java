@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSD8#PlaceAndName
- * CorporateActionSD8.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD8#mmPlaceAndName
+ * CorporateActionSD8.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSD8#LotterySequenceNumber
- * CorporateActionSD8.LotterySequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD8#mmLotterySequenceNumber
+ * CorporateActionSD8.mmLotterySequenceNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionSD8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -87,7 +88,7 @@ public class CorporateActionSD8 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSD8.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class CorporateActionSD8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max3NumericText lotterySequenceNumber;
 	/**
 	 * DTC generated number to distinguish between the series of lotteries run
 	 * against a particular redemption.
@@ -131,7 +133,7 @@ public class CorporateActionSD8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LotterySequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLotterySequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSD8.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class CorporateActionSD8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotterySequenceNumber";
 			definition = "DTC generated number to distinguish between the series of lotteries run against a particular redemption.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class CorporateActionSD8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD8.PlaceAndName, com.tools20022.repository.msg.CorporateActionSD8.LotterySequenceNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD8.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionSD8.mmLotterySequenceNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD8";
 				definition = "Provides additional information regarding corporate action details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max3NumericText getLotterySequenceNumber() {
+		return lotterySequenceNumber;
+	}
+
+	public void setLotterySequenceNumber(Max3NumericText lotterySequenceNumber) {
+		this.lotterySequenceNumber = lotterySequenceNumber;
 	}
 }

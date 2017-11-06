@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation2Choice#LEI
- * PersonOrOrganisation2Choice.LEI}</li>
+ * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation2Choice#mmLEI
+ * PersonOrOrganisation2Choice.mmLEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation2Choice#Person
- * PersonOrOrganisation2Choice.Person}</li>
+ * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation2Choice#mmPerson
+ * PersonOrOrganisation2Choice.mmPerson}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PersonOrOrganisation2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected LEIIdentifier lEI;
 	/**
 	 * Legal entity identifier of the party.
 	 * <p>
@@ -83,8 +84,8 @@ public class PersonOrOrganisation2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#LEI
-	 * PartyIdentificationInformation.LEI}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,25 +105,26 @@ public class PersonOrOrganisation2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation1Choice#LEI
-	 * PersonOrOrganisation1Choice.LEI}</li>
+	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation1Choice#mmLEI
+	 * PersonOrOrganisation1Choice.mmLEI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> PersonOrOrganisation2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.LEI;
 			isDerived = false;
 			xmlTag = "LEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identifier of the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation1Choice.LEI;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmLEI;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	protected PersonIdentification10 person;
 	/**
 	 * Identification of a person.
 	 * <p>
@@ -155,33 +157,33 @@ public class PersonOrOrganisation2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation1Choice#Person
-	 * PersonOrOrganisation1Choice.Person}</li>
+	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation1Choice#mmPerson
+	 * PersonOrOrganisation1Choice.mmPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Person = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPerson = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PersonOrOrganisation2Choice.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> PersonOrOrganisation2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Person";
 			definition = "Identification of a person.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation1Choice.Person;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmPerson;
 			maxOccurs = 1;
-			type_lazy = () -> PersonIdentification10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PersonIdentification10.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PersonOrOrganisation2Choice.LEI, com.tools20022.repository.choice.PersonOrOrganisation2Choice.Person);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmLEI, com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmPerson);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PersonOrOrganisation2Choice";
 				definition = "Specifies the identification of a person or an organisation.";
@@ -189,5 +191,21 @@ public class PersonOrOrganisation2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
+	}
+
+	public PersonIdentification10 getPerson() {
+		return person;
+	}
+
+	public void setPerson(PersonIdentification10 person) {
+		this.person = person;
 	}
 }

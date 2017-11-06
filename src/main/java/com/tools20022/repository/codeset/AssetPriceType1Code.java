@@ -34,30 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#ArgusMcCloskey
- * AssetPriceType1Code.ArgusMcCloskey}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#Baltic
- * AssetPriceType1Code.Baltic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#mmArgusMcCloskey
+ * AssetPriceType1Code.mmArgusMcCloskey}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#Exchange
- * AssetPriceType1Code.Exchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#mmBaltic
+ * AssetPriceType1Code.mmBaltic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#GlobalCoal
- * AssetPriceType1Code.GlobalCoal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#mmExchange
+ * AssetPriceType1Code.mmExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#IHSMcCloskey
- * AssetPriceType1Code.IHSMcCloskey}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#Other
- * AssetPriceType1Code.Other}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#Platts
- * AssetPriceType1Code.Platts}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#mmGlobalCoal
+ * AssetPriceType1Code.mmGlobalCoal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#mmIHSMcCloskey
+ * AssetPriceType1Code.mmIHSMcCloskey}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#mmOther
+ * AssetPriceType1Code.mmOther}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetPriceType1Code#mmPlatts
+ * AssetPriceType1Code.mmPlatts}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +90,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 * name} = "ArgusMcCloskey"</li>
 	 * </ul>
 	 */
-	public static final MMCode ArgusMcCloskey = new MMCode() {
+	public static final MMCode mmArgusMcCloskey = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ArgusMcCloskey";
@@ -110,7 +113,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 * name} = "Baltic"</li>
 	 * </ul>
 	 */
-	public static final MMCode Baltic = new MMCode() {
+	public static final MMCode mmBaltic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Baltic";
@@ -133,7 +136,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 * name} = "Exchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode Exchange = new MMCode() {
+	public static final MMCode mmExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
@@ -156,7 +159,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 * name} = "GlobalCoal"</li>
 	 * </ul>
 	 */
-	public static final MMCode GlobalCoal = new MMCode() {
+	public static final MMCode mmGlobalCoal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalCoal";
@@ -179,7 +182,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 * name} = "IHSMcCloskey"</li>
 	 * </ul>
 	 */
-	public static final MMCode IHSMcCloskey = new MMCode() {
+	public static final MMCode mmIHSMcCloskey = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IHSMcCloskey";
@@ -202,7 +205,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -225,7 +228,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 * name} = "Platts"</li>
 	 * </ul>
 	 */
-	public static final MMCode Platts = new MMCode() {
+	public static final MMCode mmPlatts = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Platts";
@@ -236,13 +239,13 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetPriceType1Code";
 				definition = "Specifies the type of price for an asset.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetPriceType1Code.ArgusMcCloskey, com.tools20022.repository.codeset.AssetPriceType1Code.Baltic,
-						com.tools20022.repository.codeset.AssetPriceType1Code.Exchange, com.tools20022.repository.codeset.AssetPriceType1Code.GlobalCoal, com.tools20022.repository.codeset.AssetPriceType1Code.IHSMcCloskey,
-						com.tools20022.repository.codeset.AssetPriceType1Code.Other, com.tools20022.repository.codeset.AssetPriceType1Code.Platts);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetPriceType1Code.mmArgusMcCloskey, com.tools20022.repository.codeset.AssetPriceType1Code.mmBaltic,
+						com.tools20022.repository.codeset.AssetPriceType1Code.mmExchange, com.tools20022.repository.codeset.AssetPriceType1Code.mmGlobalCoal, com.tools20022.repository.codeset.AssetPriceType1Code.mmIHSMcCloskey,
+						com.tools20022.repository.codeset.AssetPriceType1Code.mmOther, com.tools20022.repository.codeset.AssetPriceType1Code.mmPlatts);
 				trace_lazy = () -> AssetPriceTypeCode.mmObject();
 			}
 		});

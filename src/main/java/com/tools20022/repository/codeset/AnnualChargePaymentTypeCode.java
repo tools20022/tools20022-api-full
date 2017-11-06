@@ -30,18 +30,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AnnualChargePaymentTypeCode#Capital
- * AnnualChargePaymentTypeCode.Capital}</li>
+ * {@linkplain com.tools20022.repository.codeset.AnnualChargePaymentTypeCode#mmCapital
+ * AnnualChargePaymentTypeCode.mmCapital}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AnnualChargePaymentTypeCode#Income
- * AnnualChargePaymentTypeCode.Income}</li>
+ * {@linkplain com.tools20022.repository.codeset.AnnualChargePaymentTypeCode#mmIncome
+ * AnnualChargePaymentTypeCode.mmIncome}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class AnnualChargePaymentTypeCode {
 	 * definition} = "Annual charge is deducted from the fund capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode Capital = new MMCode() {
+	public static final MMCode mmCapital = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Capital";
@@ -111,7 +111,7 @@ public class AnnualChargePaymentTypeCode {
 	 * definition} = "Annual charge is deducted from the fund income."</li>
 	 * </ul>
 	 */
-	public static final MMCode Income = new MMCode() {
+	public static final MMCode mmIncome = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Income";
@@ -124,12 +124,12 @@ public class AnnualChargePaymentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAPL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "AnnualChargePaymentTypeCode";
 				definition = "Specifies how the charge is to be deducted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.Capital, com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.Income);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.mmCapital, com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.mmIncome);
 			}
 		});
 		return mmObject_lazy.get();

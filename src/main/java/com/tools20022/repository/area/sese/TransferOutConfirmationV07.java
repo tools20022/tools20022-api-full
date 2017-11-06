@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -70,45 +71,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#MessageIdentification
- * TransferOutConfirmationV07.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmMessageIdentification
+ * TransferOutConfirmationV07.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#PoolReference
- * TransferOutConfirmationV07.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmPoolReference
+ * TransferOutConfirmationV07.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#PreviousReference
- * TransferOutConfirmationV07.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmPreviousReference
+ * TransferOutConfirmationV07.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#RelatedReference
- * TransferOutConfirmationV07.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmRelatedReference
+ * TransferOutConfirmationV07.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#MasterReference
- * TransferOutConfirmationV07.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmMasterReference
+ * TransferOutConfirmationV07.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#TransferDetails
- * TransferOutConfirmationV07.TransferDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmTransferDetails
+ * TransferOutConfirmationV07.mmTransferDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#AccountDetails
- * TransferOutConfirmationV07.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmAccountDetails
+ * TransferOutConfirmationV07.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#SettlementDetails
- * TransferOutConfirmationV07.SettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmSettlementDetails
+ * TransferOutConfirmationV07.mmSettlementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#MarketPracticeVersion
- * TransferOutConfirmationV07.MarketPracticeVersion}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmMarketPracticeVersion
+ * TransferOutConfirmationV07.mmMarketPracticeVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#CopyDetails
- * TransferOutConfirmationV07.CopyDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmCopyDetails
+ * TransferOutConfirmationV07.mmCopyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#Extension
- * TransferOutConfirmationV07.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#mmExtension
+ * TransferOutConfirmationV07.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07#identifier
- * TransferOutConfirmationV07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.003.001.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -128,6 +127,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferOutConfirmationV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -155,22 +155,23 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#MessageIdentification
-	 * TransferOutConfirmationV06.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmMessageIdentification
+	 * TransferOutConfirmationV06.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.MessageIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference6 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -195,22 +196,23 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#PoolReference
-	 * TransferOutConfirmationV06.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmPoolReference
+	 * TransferOutConfirmationV06.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.PoolReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmPoolReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected AdditionalReference6 previousReference;
 	/**
 	 * Reference of the linked message that was previously sent.
 	 * <p>
@@ -236,22 +238,23 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#PreviousReference
-	 * TransferOutConfirmationV06.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmPreviousReference
+	 * TransferOutConfirmationV06.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference of the linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.PreviousReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmPreviousReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected AdditionalReference6 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -277,22 +280,23 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#RelatedReference
-	 * TransferOutConfirmationV06.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmRelatedReference
+	 * TransferOutConfirmationV06.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.RelatedReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmRelatedReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected Max35Text masterReference;
 	/**
 	 * Unique and unambiguous identifier for a group of individual transfers as
 	 * assigned by the instructing party. This identifier links the individual
@@ -320,22 +324,23 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#MasterReference
-	 * TransferOutConfirmationV06.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmMasterReference
+	 * TransferOutConfirmationV06.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.MasterReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmMasterReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Transfer31> transferDetails;
 	/**
 	 * General information related to the transfer of a financial instrument.
 	 * <p>
@@ -361,21 +366,22 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#TransferDetails
-	 * TransferOutConfirmationV06.TransferDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmTransferDetails
+	 * TransferOutConfirmationV06.mmTransferDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransferDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.TransferDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmTransferDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> Transfer31.mmObject();
 		}
 	};
+	protected InvestmentAccount54 accountDetails;
 	/**
 	 * Information related to the account from which the financial instrument
 	 * was withdrawn.
@@ -403,22 +409,23 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#AccountDetails
-	 * TransferOutConfirmationV06.AccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmAccountDetails
+	 * TransferOutConfirmationV06.mmAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account from which the financial instrument was withdrawn.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.AccountDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmAccountDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount54.mmObject();
 		}
 	};
+	protected ReceiveInformation17 settlementDetails;
 	/**
 	 * Information related to the receiving side of the transfer.
 	 * <p>
@@ -444,22 +451,23 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#SettlementDetails
-	 * TransferOutConfirmationV06.SettlementDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmSettlementDetails
+	 * TransferOutConfirmationV06.mmSettlementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the receiving side of the transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.SettlementDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmSettlementDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ReceiveInformation17.mmObject();
 		}
 	};
+	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
 	 * Identifies the market practice to which the message conforms.
 	 * <p>
@@ -485,22 +493,23 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#MarketPracticeVersion
-	 * TransferOutConfirmationV06.MarketPracticeVersion}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmMarketPracticeVersion
+	 * TransferOutConfirmationV06.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.MarketPracticeVersion;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmMarketPracticeVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 	};
+	protected CopyInformation4 copyDetails;
 	/**
 	 * Information provided when the message is a copy of a previous message.
 	 * <p>
@@ -526,22 +535,23 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#CopyDetails
-	 * TransferOutConfirmationV06.CopyDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmCopyDetails
+	 * TransferOutConfirmationV06.mmCopyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.CopyDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmCopyDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation4.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -568,46 +578,19 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#Extension
-	 * TransferOutConfirmationV06.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmExtension
+	 * TransferOutConfirmationV06.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.Extension;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "003";
-			version = "07";
-			flavour = "001";
 		}
 	};
 
@@ -622,15 +605,110 @@ public class TransferOutConfirmationV07 {
 				rootElement = "Document";
 				xmlTag = "TrfOutConf";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutConfirmationV07.MessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV07.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV07.PreviousReference, com.tools20022.repository.area.sese.TransferOutConfirmationV07.RelatedReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV07.MasterReference, com.tools20022.repository.area.sese.TransferOutConfirmationV07.TransferDetails,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV07.AccountDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV07.SettlementDetails,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV07.MarketPracticeVersion, com.tools20022.repository.area.sese.TransferOutConfirmationV07.CopyDetails,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV07.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.TransferOutConfirmationV07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmMasterReference, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmTransferDetails,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmAccountDetails, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmSettlementDetails,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmCopyDetails,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "003";
+						version = "07";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference6 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference6 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference6 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference6 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference6 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference6 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public List<Transfer31> getTransferDetails() {
+		return transferDetails;
+	}
+
+	public void setTransferDetails(List<Transfer31> transferDetails) {
+		this.transferDetails = transferDetails;
+	}
+
+	public InvestmentAccount54 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(InvestmentAccount54 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public ReceiveInformation17 getSettlementDetails() {
+		return settlementDetails;
+	}
+
+	public void setSettlementDetails(ReceiveInformation17 settlementDetails) {
+		this.settlementDetails = settlementDetails;
+	}
+
+	public MarketPracticeVersion1 getMarketPracticeVersion() {
+		return marketPracticeVersion;
+	}
+
+	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+		this.marketPracticeVersion = marketPracticeVersion;
+	}
+
+	public CopyInformation4 getCopyDetails() {
+		return copyDetails;
+	}
+
+	public void setCopyDetails(CopyInformation4 copyDetails) {
+		this.copyDetails = copyDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

@@ -29,22 +29,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InstructionTypeCode#Lodge
- * InstructionTypeCode.Lodge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#FullPushThrough
- * InstructionTypeCode.FullPushThrough}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmLodge
+ * InstructionTypeCode.mmLodge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#TwinSubmit
- * InstructionTypeCode.TwinSubmit}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmFullPushThrough
+ * InstructionTypeCode.mmFullPushThrough}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#TwinResubmit
- * InstructionTypeCode.TwinResubmit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InstructionTypeCode#Match
- * InstructionTypeCode.Match}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmTwinSubmit
+ * InstructionTypeCode.mmTwinSubmit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#PreMatch
- * InstructionTypeCode.PreMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmTwinResubmit
+ * InstructionTypeCode.mmTwinResubmit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmMatch
+ * InstructionTypeCode.mmMatch}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmPreMatch
+ * InstructionTypeCode.mmPreMatch}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -59,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +104,7 @@ public class InstructionTypeCode {
 	 * definition} = "Instruction to lodge a baseline."</li>
 	 * </ul>
 	 */
-	public static final MMCode Lodge = new MMCode() {
+	public static final MMCode mmLodge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lodge";
@@ -133,7 +135,7 @@ public class InstructionTypeCode {
 	 * "Instruction to push full baseline information to the correspondent."</li>
 	 * </ul>
 	 */
-	public static final MMCode FullPushThrough = new MMCode() {
+	public static final MMCode mmFullPushThrough = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPushThrough";
@@ -163,7 +165,7 @@ public class InstructionTypeCode {
 	 * definition} = "Indication that a twin baseline is submitted."</li>
 	 * </ul>
 	 */
-	public static final MMCode TwinSubmit = new MMCode() {
+	public static final MMCode mmTwinSubmit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwinSubmit";
@@ -193,7 +195,7 @@ public class InstructionTypeCode {
 	 * definition} = "Indication that a twin baseline is resubmitted."</li>
 	 * </ul>
 	 */
-	public static final MMCode TwinResubmit = new MMCode() {
+	public static final MMCode mmTwinResubmit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwinResubmit";
@@ -223,7 +225,7 @@ public class InstructionTypeCode {
 	 * definition} = "Instruction to match a data set."</li>
 	 * </ul>
 	 */
-	public static final MMCode Match = new MMCode() {
+	public static final MMCode mmMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Match";
@@ -253,7 +255,7 @@ public class InstructionTypeCode {
 	 * definition} = "Instruction to pre-match a data set."</li>
 	 * </ul>
 	 */
-	public static final MMCode PreMatch = new MMCode() {
+	public static final MMCode mmPreMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreMatch";
@@ -266,14 +268,14 @@ public class InstructionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LODG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionTypeCode";
 				definition = "Specifies the action that the TSU must take on a baseline or a data set.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionTypeCode.Lodge, com.tools20022.repository.codeset.InstructionTypeCode.FullPushThrough,
-						com.tools20022.repository.codeset.InstructionTypeCode.TwinSubmit, com.tools20022.repository.codeset.InstructionTypeCode.TwinResubmit, com.tools20022.repository.codeset.InstructionTypeCode.Match,
-						com.tools20022.repository.codeset.InstructionTypeCode.PreMatch);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionTypeCode.mmLodge, com.tools20022.repository.codeset.InstructionTypeCode.mmFullPushThrough,
+						com.tools20022.repository.codeset.InstructionTypeCode.mmTwinSubmit, com.tools20022.repository.codeset.InstructionTypeCode.mmTwinResubmit, com.tools20022.repository.codeset.InstructionTypeCode.mmMatch,
+						com.tools20022.repository.codeset.InstructionTypeCode.mmPreMatch);
 				derivation_lazy = () -> Arrays.asList(InstructionType3Code.mmObject(), InstructionType1Code.mmObject());
 			}
 		});

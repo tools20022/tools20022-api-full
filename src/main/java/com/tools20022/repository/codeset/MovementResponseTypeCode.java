@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MovementResponseTypeCode#Full
- * MovementResponseTypeCode.Full}</li>
+ * {@linkplain com.tools20022.repository.codeset.MovementResponseTypeCode#mmFull
+ * MovementResponseTypeCode.mmFull}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MovementResponseTypeCode#Status
- * MovementResponseTypeCode.Status}</li>
+ * {@linkplain com.tools20022.repository.codeset.MovementResponseTypeCode#mmStatus
+ * MovementResponseTypeCode.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class MovementResponseTypeCode {
 	 * "Response will include full details on the movements reported."</li>
 	 * </ul>
 	 */
-	public static final MMCode Full = new MMCode() {
+	public static final MMCode mmFull = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Full";
@@ -123,7 +123,7 @@ public class MovementResponseTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Status = new MMCode() {
+	public static final MMCode mmStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
@@ -136,12 +136,12 @@ public class MovementResponseTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FULL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MovementResponseTypeCode";
 				definition = "Specifies the type of movement response to be returned.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MovementResponseTypeCode.Full, com.tools20022.repository.codeset.MovementResponseTypeCode.Status);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MovementResponseTypeCode.mmFull, com.tools20022.repository.codeset.MovementResponseTypeCode.mmStatus);
 				derivation_lazy = () -> Arrays.asList(MovementResponseType1Code.mmObject());
 			}
 		});

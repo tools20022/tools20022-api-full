@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Forms#ApplicationForm
- * Forms.ApplicationForm}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Forms#SignatureType
- * Forms.SignatureType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Forms#mmApplicationForm
+ * Forms.mmApplicationForm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Forms#mmSignatureType
+ * Forms.mmSignatureType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Forms {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator applicationForm;
 	/**
 	 * Physical application form is required.
 	 * <p>
@@ -77,8 +78,8 @@ public class Forms {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#ApplicationForm
-	 * InvestmentFundClassProcessingCharacteristics.ApplicationForm}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmApplicationForm
+	 * InvestmentFundClassProcessingCharacteristics.mmApplicationForm}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Forms
@@ -96,20 +97,21 @@ public class Forms {
 	 * definition} = "Physical application form is required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApplicationForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApplicationForm = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmApplicationForm;
 			componentContext_lazy = () -> Forms.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.ApplicationForm;
 			isDerived = false;
 			xmlTag = "ApplForm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationForm";
 			definition = "Physical application form is required.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected SignatureType1Code signatureType;
 	/**
 	 * Type of signature.
 	 * <p>
@@ -123,8 +125,8 @@ public class Forms {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#SignatureRequired
-	 * InvestmentFundClassProcessingCharacteristics.SignatureRequired}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmSignatureRequired
+	 * InvestmentFundClassProcessingCharacteristics.mmSignatureRequired}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Forms
@@ -142,17 +144,17 @@ public class Forms {
 	 * definition} = "Type of signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SignatureType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignatureType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSignatureRequired;
 			componentContext_lazy = () -> Forms.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.SignatureRequired;
 			isDerived = false;
 			xmlTag = "SgntrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureType";
 			definition = "Type of signature.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SignatureType1Code.mmObject();
 		}
 	};
@@ -160,14 +162,30 @@ public class Forms {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Forms.ApplicationForm, com.tools20022.repository.msg.Forms.SignatureType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Forms.mmApplicationForm, com.tools20022.repository.msg.Forms.mmSignatureType);
 				trace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Forms";
 				definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getApplicationForm() {
+		return applicationForm;
+	}
+
+	public void setApplicationForm(YesNoIndicator applicationForm) {
+		this.applicationForm = applicationForm;
+	}
+
+	public SignatureType1Code getSignatureType() {
+		return signatureType;
+	}
+
+	public void setSignatureType(SignatureType1Code signatureType) {
+		this.signatureType = signatureType;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.SecurityIdentification10Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to provide detailed information about the security.
@@ -35,24 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics1#Identification
- * SecurityCharacteristics1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics1#mmIdentification
+ * SecurityCharacteristics1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics1#Position
- * SecurityCharacteristics1.Position}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics1#mmPosition
+ * SecurityCharacteristics1.mmPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics1#ValuationPrice
- * SecurityCharacteristics1.ValuationPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics1#mmValuationPrice
+ * SecurityCharacteristics1.mmValuationPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics1#CollateralValue
- * SecurityCharacteristics1.CollateralValue}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics1#mmCollateralValue
+ * SecurityCharacteristics1.mmCollateralValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<SecurityIdentification10Choice> identification;
 	/**
 	 * Unique identification, as known by the account owner, to unambiguously
 	 * identify the security.
@@ -97,7 +99,7 @@ public class SecurityCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityCharacteristics1.mmObject();
 			isDerived = false;
@@ -106,10 +108,11 @@ public class SecurityCharacteristics1 {
 			name = "Identification";
 			definition = "Unique identification, as known by the account owner, to unambiguously identify the security.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityIdentification10Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> SecurityIdentification10Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesPosition1> position;
 	/**
 	 * Specifies the position for the security.
 	 * <p>
@@ -136,7 +139,7 @@ public class SecurityCharacteristics1 {
 	 * definition} = "Specifies the position for the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Position = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityCharacteristics1.mmObject();
 			isDerived = false;
@@ -145,10 +148,11 @@ public class SecurityCharacteristics1 {
 			name = "Position";
 			definition = "Specifies the position for the security.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesPosition1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesPosition1.mmObject();
 		}
 	};
+	protected AmountPricePerFinancialInstrumentQuantity5 valuationPrice;
 	/**
 	 * Specifies the price of the security for valuation purposes.
 	 * <p>
@@ -178,7 +182,7 @@ public class SecurityCharacteristics1 {
 	 * "Specifies the price of the security for valuation purposes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuationPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuationPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCharacteristics1.mmObject();
 			isDerived = false;
@@ -186,11 +190,12 @@ public class SecurityCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationPrice";
 			definition = "Specifies the price of the security for valuation purposes.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountPricePerFinancialInstrumentQuantity5.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount collateralValue;
 	/**
 	 * Specifies the value of the security for collateral purposes.
 	 * <p>
@@ -220,7 +225,7 @@ public class SecurityCharacteristics1 {
 	 * "Specifies the value of the security for collateral purposes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCharacteristics1.mmObject();
 			isDerived = false;
@@ -228,8 +233,8 @@ public class SecurityCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValue";
 			definition = "Specifies the value of the security for collateral purposes.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -237,14 +242,46 @@ public class SecurityCharacteristics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCharacteristics1.Identification, com.tools20022.repository.msg.SecurityCharacteristics1.Position,
-						com.tools20022.repository.msg.SecurityCharacteristics1.ValuationPrice, com.tools20022.repository.msg.SecurityCharacteristics1.CollateralValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCharacteristics1.mmIdentification, com.tools20022.repository.msg.SecurityCharacteristics1.mmPosition,
+						com.tools20022.repository.msg.SecurityCharacteristics1.mmValuationPrice, com.tools20022.repository.msg.SecurityCharacteristics1.mmCollateralValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityCharacteristics1";
 				definition = "Set of elements used to provide detailed information about the security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecurityIdentification10Choice> getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(List<SecurityIdentification10Choice> identification) {
+		this.identification = identification;
+	}
+
+	public List<SecuritiesPosition1> getPosition() {
+		return position;
+	}
+
+	public void setPosition(List<com.tools20022.repository.msg.SecuritiesPosition1> position) {
+		this.position = position;
+	}
+
+	public AmountPricePerFinancialInstrumentQuantity5 getValuationPrice() {
+		return valuationPrice;
+	}
+
+	public void setValuationPrice(com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5 valuationPrice) {
+		this.valuationPrice = valuationPrice;
+	}
+
+	public ActiveCurrencyAndAmount getCollateralValue() {
+		return collateralValue;
+	}
+
+	public void setCollateralValue(ActiveCurrencyAndAmount collateralValue) {
+		this.collateralValue = collateralValue;
 	}
 }

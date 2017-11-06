@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IndicativeOrMarketPrice5Choice#IndicativePrice
- * IndicativeOrMarketPrice5Choice.IndicativePrice}</li>
+ * {@linkplain com.tools20022.repository.choice.IndicativeOrMarketPrice5Choice#mmIndicativePrice
+ * IndicativeOrMarketPrice5Choice.mmIndicativePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IndicativeOrMarketPrice5Choice#MarketPrice
- * IndicativeOrMarketPrice5Choice.MarketPrice}</li>
+ * {@linkplain com.tools20022.repository.choice.IndicativeOrMarketPrice5Choice#mmMarketPrice
+ * IndicativeOrMarketPrice5Choice.mmMarketPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IndicativeOrMarketPrice5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceFormat19Choice indicativePrice;
 	/**
 	 * Estimated price, for example, for valuation purposes.
 	 * <p>
@@ -97,13 +98,13 @@ public class IndicativeOrMarketPrice5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IndicativeOrMarketPrice7Choice#IndicativePrice
-	 * IndicativeOrMarketPrice7Choice.IndicativePrice}</li>
+	 * {@linkplain com.tools20022.repository.choice.IndicativeOrMarketPrice7Choice#mmIndicativePrice
+	 * IndicativeOrMarketPrice7Choice.mmIndicativePrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndicativePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndicativePrice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IndicativeOrMarketPrice5Choice.mmObject();
 			isDerived = false;
@@ -111,13 +112,14 @@ public class IndicativeOrMarketPrice5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativePrice";
 			definition = "Estimated price, for example, for valuation purposes.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice7Choice.IndicativePrice);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice7Choice.mmIndicativePrice);
 			maxOccurs = 1;
-			type_lazy = () -> PriceFormat19Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PriceFormat19Choice.mmObject();
 		}
 	};
+	protected PriceFormat19Choice marketPrice;
 	/**
 	 * Last reported/known price of a financial instrument in a market.
 	 * <p>
@@ -147,13 +149,13 @@ public class IndicativeOrMarketPrice5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IndicativeOrMarketPrice7Choice#MarketPrice
-	 * IndicativeOrMarketPrice7Choice.MarketPrice}</li>
+	 * {@linkplain com.tools20022.repository.choice.IndicativeOrMarketPrice7Choice#mmMarketPrice
+	 * IndicativeOrMarketPrice7Choice.mmMarketPrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarketPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarketPrice = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IndicativeOrMarketPrice5Choice.mmObject();
 			isDerived = false;
@@ -161,20 +163,20 @@ public class IndicativeOrMarketPrice5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
 			definition = "Last reported/known price of a financial instrument in a market.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice7Choice.MarketPrice);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice7Choice.mmMarketPrice);
 			maxOccurs = 1;
-			type_lazy = () -> PriceFormat19Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PriceFormat19Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice5Choice.IndicativePrice, com.tools20022.repository.choice.IndicativeOrMarketPrice5Choice.MarketPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice5Choice.mmIndicativePrice, com.tools20022.repository.choice.IndicativeOrMarketPrice5Choice.mmMarketPrice);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IndicativeOrMarketPrice5Choice";
 				definition = "Choice between an indicative price or a market price.";
@@ -182,5 +184,21 @@ public class IndicativeOrMarketPrice5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceFormat19Choice getIndicativePrice() {
+		return indicativePrice;
+	}
+
+	public void setIndicativePrice(com.tools20022.repository.choice.PriceFormat19Choice indicativePrice) {
+		this.indicativePrice = indicativePrice;
+	}
+
+	public PriceFormat19Choice getMarketPrice() {
+		return marketPrice;
+	}
+
+	public void setMarketPrice(com.tools20022.repository.choice.PriceFormat19Choice marketPrice) {
+		this.marketPrice = marketPrice;
 	}
 }

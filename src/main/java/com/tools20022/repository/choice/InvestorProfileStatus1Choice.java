@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InvestorProfileStatus1Choice#Code
- * InvestorProfileStatus1Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.InvestorProfileStatus1Choice#mmCode
+ * InvestorProfileStatus1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InvestorProfileStatus1Choice#Proprietary
- * InvestorProfileStatus1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.InvestorProfileStatus1Choice#mmProprietary
+ * InvestorProfileStatus1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestorProfileStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestorProfileStatus1Code code;
 	/**
 	 * Investor profile status expressed as a code.
 	 * <p>
@@ -88,7 +89,7 @@ public class InvestorProfileStatus1Choice {
 	 * definition} = "Investor profile status expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestorProfileStatus1Choice.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class InvestorProfileStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Investor profile status expressed as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InvestorProfileStatus1Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Investor profile status expressed as a proprietary code.
 	 * <p>
@@ -128,7 +130,7 @@ public class InvestorProfileStatus1Choice {
 	 * definition} = "Investor profile status expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InvestorProfileStatus1Choice.mmObject();
 			isDerived = false;
@@ -136,23 +138,39 @@ public class InvestorProfileStatus1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Investor profile status expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification47.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestorProfileStatus1Choice.Code, com.tools20022.repository.choice.InvestorProfileStatus1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestorProfileStatus1Choice.mmCode, com.tools20022.repository.choice.InvestorProfileStatus1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestorProfileStatus1Choice";
 				definition = "Choice of formats for the status of the investor profile.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestorProfileStatus1Code getCode() {
+		return code;
+	}
+
+	public void setCode(InvestorProfileStatus1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

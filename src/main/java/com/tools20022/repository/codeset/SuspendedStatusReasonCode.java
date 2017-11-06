@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode#PriceSuspension
- * SuspendedStatusReasonCode.PriceSuspension}</li>
+ * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode#mmPriceSuspension
+ * SuspendedStatusReasonCode.mmPriceSuspension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode#Overflow
- * SuspendedStatusReasonCode.Overflow}</li>
+ * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode#mmOverflow
+ * SuspendedStatusReasonCode.mmOverflow}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode#SuspendedByYourself
- * SuspendedStatusReasonCode.SuspendedByYourself}</li>
+ * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode#mmSuspendedByYourself
+ * SuspendedStatusReasonCode.mmSuspendedByYourself}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode#SuspendedBySystem
- * SuspendedStatusReasonCode.SuspendedBySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode#mmSuspendedBySystem
+ * SuspendedStatusReasonCode.mmSuspendedBySystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode#Other
- * SuspendedStatusReasonCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.SuspendedStatusReasonCode#mmOther
+ * SuspendedStatusReasonCode.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class SuspendedStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PriceSuspension = new MMCode() {
+	public static final MMCode mmPriceSuspension = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PriceSuspension";
@@ -135,7 +135,7 @@ public class SuspendedStatusReasonCode {
 	 * definition} = "There is a fund overflow."</li>
 	 * </ul>
 	 */
-	public static final MMCode Overflow = new MMCode() {
+	public static final MMCode mmOverflow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Overflow";
@@ -168,7 +168,7 @@ public class SuspendedStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SuspendedByYourself = new MMCode() {
+	public static final MMCode mmSuspendedByYourself = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SuspendedByYourself";
@@ -201,7 +201,7 @@ public class SuspendedStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SuspendedBySystem = new MMCode() {
+	public static final MMCode mmSuspendedBySystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SuspendedBySystem";
@@ -231,7 +231,7 @@ public class SuspendedStatusReasonCode {
 	 * definition} = "Another reason for the status suspended."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -244,14 +244,14 @@ public class SuspendedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SuspendedStatusReasonCode";
 				definition = "Specifies the reason for a suspended status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SuspendedStatusReasonCode.PriceSuspension, com.tools20022.repository.codeset.SuspendedStatusReasonCode.Overflow,
-						com.tools20022.repository.codeset.SuspendedStatusReasonCode.SuspendedByYourself, com.tools20022.repository.codeset.SuspendedStatusReasonCode.SuspendedBySystem,
-						com.tools20022.repository.codeset.SuspendedStatusReasonCode.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SuspendedStatusReasonCode.mmPriceSuspension, com.tools20022.repository.codeset.SuspendedStatusReasonCode.mmOverflow,
+						com.tools20022.repository.codeset.SuspendedStatusReasonCode.mmSuspendedByYourself, com.tools20022.repository.codeset.SuspendedStatusReasonCode.mmSuspendedBySystem,
+						com.tools20022.repository.codeset.SuspendedStatusReasonCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(SuspendedStatusReason1Code.mmObject(), SuspendedStatusReason2Code.mmObject(), SuspendedStatusReason3Code.mmObject());
 			}
 		});

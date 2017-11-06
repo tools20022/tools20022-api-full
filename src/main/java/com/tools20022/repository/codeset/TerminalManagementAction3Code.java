@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#Create
- * TerminalManagementAction3Code.Create}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#mmCreate
+ * TerminalManagementAction3Code.mmCreate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#Delete
- * TerminalManagementAction3Code.Delete}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#mmDelete
+ * TerminalManagementAction3Code.mmDelete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#Update
- * TerminalManagementAction3Code.Update}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#mmUpdate
+ * TerminalManagementAction3Code.mmUpdate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	 * name} = "Create"</li>
 	 * </ul>
 	 */
-	public static final MMCode Create = new MMCode() {
+	public static final MMCode mmCreate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Create";
@@ -101,7 +101,7 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	 * name} = "Delete"</li>
 	 * </ul>
 	 */
-	public static final MMCode Delete = new MMCode() {
+	public static final MMCode mmDelete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delete";
@@ -124,7 +124,7 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	 * name} = "Update"</li>
 	 * </ul>
 	 */
-	public static final MMCode Update = new MMCode() {
+	public static final MMCode mmUpdate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Update";
@@ -135,12 +135,12 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementAction3Code";
 				definition = "Type of action to perform.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction3Code.Create, com.tools20022.repository.codeset.TerminalManagementAction3Code.Delete,
-						com.tools20022.repository.codeset.TerminalManagementAction3Code.Update);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction3Code.mmCreate, com.tools20022.repository.codeset.TerminalManagementAction3Code.mmDelete,
+						com.tools20022.repository.codeset.TerminalManagementAction3Code.mmUpdate);
 				trace_lazy = () -> TerminalManagementActionCode.mmObject();
 			}
 		});

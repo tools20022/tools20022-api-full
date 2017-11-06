@@ -35,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#AwaitingAuthorisation
- * SettlementStatus2Code.AwaitingAuthorisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmAwaitingAuthorisation
+ * SettlementStatus2Code.mmAwaitingAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#AcceptedForSettlement
- * SettlementStatus2Code.AcceptedForSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmAcceptedForSettlement
+ * SettlementStatus2Code.mmAcceptedForSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#SettlementTransactionCreated
- * SettlementStatus2Code.SettlementTransactionCreated}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmSettlementTransactionCreated
+ * SettlementStatus2Code.mmSettlementTransactionCreated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#Settled
- * SettlementStatus2Code.Settled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmSettled
+ * SettlementStatus2Code.mmSettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#AwaitingCreationConfirmation
- * SettlementStatus2Code.AwaitingCreationConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmAwaitingCreationConfirmation
+ * SettlementStatus2Code.mmAwaitingCreationConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#AwaitingRescindConfirmation
- * SettlementStatus2Code.AwaitingRescindConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmAwaitingRescindConfirmation
+ * SettlementStatus2Code.mmAwaitingRescindConfirmation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "AwaitingAuthorisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingAuthorisation = new MMCode() {
+	public static final MMCode mmAwaitingAuthorisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingAuthorisation";
@@ -119,7 +119,7 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "AcceptedForSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedForSettlement = new MMCode() {
+	public static final MMCode mmAcceptedForSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedForSettlement";
@@ -142,7 +142,7 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "SettlementTransactionCreated"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementTransactionCreated = new MMCode() {
+	public static final MMCode mmSettlementTransactionCreated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionCreated";
@@ -165,7 +165,7 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settled = new MMCode() {
+	public static final MMCode mmSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
@@ -188,7 +188,7 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "AwaitingCreationConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingCreationConfirmation = new MMCode() {
+	public static final MMCode mmAwaitingCreationConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCreationConfirmation";
@@ -211,7 +211,7 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "AwaitingRescindConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingRescindConfirmation = new MMCode() {
+	public static final MMCode mmAwaitingRescindConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingRescindConfirmation";
@@ -222,14 +222,14 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AAUT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementStatus2Code";
 				definition = "Specifies the status of the settlement of a trade in a central matching and settlement system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementStatus2Code.AwaitingAuthorisation, com.tools20022.repository.codeset.SettlementStatus2Code.AcceptedForSettlement,
-						com.tools20022.repository.codeset.SettlementStatus2Code.SettlementTransactionCreated, com.tools20022.repository.codeset.SettlementStatus2Code.Settled,
-						com.tools20022.repository.codeset.SettlementStatus2Code.AwaitingCreationConfirmation, com.tools20022.repository.codeset.SettlementStatus2Code.AwaitingRescindConfirmation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementStatus2Code.mmAwaitingAuthorisation, com.tools20022.repository.codeset.SettlementStatus2Code.mmAcceptedForSettlement,
+						com.tools20022.repository.codeset.SettlementStatus2Code.mmSettlementTransactionCreated, com.tools20022.repository.codeset.SettlementStatus2Code.mmSettled,
+						com.tools20022.repository.codeset.SettlementStatus2Code.mmAwaitingCreationConfirmation, com.tools20022.repository.codeset.SettlementStatus2Code.mmAwaitingRescindConfirmation);
 				trace_lazy = () -> SettlementStatusCode.mmObject();
 			}
 		});

@@ -38,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CurrentLimitChoice#RiskManagementCurrentLimitIdentification
- * CurrentLimitChoice.RiskManagementCurrentLimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.CurrentLimitChoice#mmRiskManagementCurrentLimitIdentification
+ * CurrentLimitChoice.mmRiskManagementCurrentLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CurrentLimitChoice#LiquidityManagementCurrentLimitIdentification
- * CurrentLimitChoice.LiquidityManagementCurrentLimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.CurrentLimitChoice#mmLiquidityManagementCurrentLimitIdentification
+ * CurrentLimitChoice.mmLiquidityManagementCurrentLimitIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrentLimitChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RiskManagementLimitIdentificationDetails riskManagementCurrentLimitIdentification;
 	/**
 	 * Cash management feature limiting the maximum risk a party accepts to take
 	 * with respect to a counterparty or a set of counterparties. A risk
@@ -108,21 +109,22 @@ public class CurrentLimitChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RiskManagementCurrentLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRiskManagementCurrentLimitIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CurrentLimitChoice.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> CurrentLimitChoice.mmObject();
 			isDerived = false;
 			xmlTag = "RskMgmtCurLmtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskManagementCurrentLimitIdentification";
 			definition = "Cash management feature limiting the maximum risk a party accepts to take with respect to a counterparty or a set of counterparties. A risk management limit is either bilateral, ie, for a counterparty, or multilateral, ie, for a set of counterparties or all other members in a system.The limit may also apply to sponsored members, ie, indirect members. In principle, a risk management limit is calculated on the net position between two members and is expressed as a credit or debit limit, from the point of view of the party setting the limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
 		}
 	};
+	protected LiquidityManagementLimitIdentificationDetails liquidityManagementCurrentLimitIdentification;
 	/**
 	 * Cash management feature limiting the amount of liquidity needed to
 	 * perform clearing and settlement operations. At any point in time during
@@ -161,34 +163,50 @@ public class CurrentLimitChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LiquidityManagementCurrentLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLiquidityManagementCurrentLimitIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CurrentLimitChoice.mmObject();
 			businessComponentTrace_lazy = () -> LiquidityManagementLimit.mmObject();
+			componentContext_lazy = () -> CurrentLimitChoice.mmObject();
 			isDerived = false;
 			xmlTag = "LqdtyMgmtCurLmtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityManagementCurrentLimitIdentification";
 			definition = "Cash management feature limiting the amount of liquidity needed to perform clearing and settlement operations. At any point in time during the process, the limit imposes the maximum amount of liquidity available for operations concerning the system or other managed elements, eg, transaction amount or counterparty.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LiquidityManagementLimitIdentificationDetails.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> LiquidityManagementLimitIdentificationDetails.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrentLimitChoice.RiskManagementCurrentLimitIdentification,
-						com.tools20022.repository.choice.CurrentLimitChoice.LiquidityManagementCurrentLimitIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrentLimitChoice.mmRiskManagementCurrentLimitIdentification,
+						com.tools20022.repository.choice.CurrentLimitChoice.mmLiquidityManagementCurrentLimitIdentification);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrentLimitChoice";
 				definition = "Specification of a risk management type current limit or a liquidity management type current limit. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RiskManagementLimitIdentificationDetails getRiskManagementCurrentLimitIdentification() {
+		return riskManagementCurrentLimitIdentification;
+	}
+
+	public void setRiskManagementCurrentLimitIdentification(RiskManagementLimitIdentificationDetails riskManagementCurrentLimitIdentification) {
+		this.riskManagementCurrentLimitIdentification = riskManagementCurrentLimitIdentification;
+	}
+
+	public LiquidityManagementLimitIdentificationDetails getLiquidityManagementCurrentLimitIdentification() {
+		return liquidityManagementCurrentLimitIdentification;
+	}
+
+	public void setLiquidityManagementCurrentLimitIdentification(LiquidityManagementLimitIdentificationDetails liquidityManagementCurrentLimitIdentification) {
+		this.liquidityManagementCurrentLimitIdentification = liquidityManagementCurrentLimitIdentification;
 	}
 }

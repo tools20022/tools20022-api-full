@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeV2Code#Complete
- * StatementUpdateTypeV2Code.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeV2Code#mmComplete
+ * StatementUpdateTypeV2Code.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeV2Code#Delta
- * StatementUpdateTypeV2Code.Delta}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeV2Code#mmDelta
+ * StatementUpdateTypeV2Code.mmDelta}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class StatementUpdateTypeV2Code {
 	 * definition} = "Statement is complete."</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
@@ -121,7 +121,7 @@ public class StatementUpdateTypeV2Code {
 	 * definition} = "Statement contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMCode Delta = new MMCode() {
+	public static final MMCode mmDelta = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delta";
@@ -134,12 +134,12 @@ public class StatementUpdateTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementUpdateTypeV2Code";
 				definition = "Specifies the nature of a statement update, eg, it is a complete statement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementUpdateTypeV2Code.Complete, com.tools20022.repository.codeset.StatementUpdateTypeV2Code.Delta);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementUpdateTypeV2Code.mmComplete, com.tools20022.repository.codeset.StatementUpdateTypeV2Code.mmDelta);
 				derivation_lazy = () -> Arrays.asList(StatementUpdateType1Code.mmObject());
 			}
 		});

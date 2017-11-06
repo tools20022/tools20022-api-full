@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Price4#Value Price4.Value}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Price4#Type Price4.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Price4#mmValue Price4.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Price4#mmType Price4.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Price4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceRateOrAmountChoice value;
 	/**
 	 * Value of the price.
 	 * <p>
@@ -86,7 +87,7 @@ public class Price4 {
 	 * definition} = "Value of the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Price4.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class Price4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PriceRateOrAmountChoice.mmObject();
 		}
 	};
+	protected PriceValueType7Code type;
 	/**
 	 * Specification of the price type.
 	 * <p>
@@ -112,8 +114,8 @@ public class Price4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceType
-	 * SecuritiesPricing.PriceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceType
+	 * SecuritiesPricing.mmPriceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Price4
@@ -131,17 +133,17 @@ public class Price4 {
 	 * definition} = "Specification of the price type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> Price4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specification of the price type.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PriceValueType7Code.mmObject();
 		}
 	};
@@ -149,14 +151,30 @@ public class Price4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Price4.Value, com.tools20022.repository.msg.Price4.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Price4.mmValue, com.tools20022.repository.msg.Price4.mmType);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Price4";
 				definition = "Provides the value and optionaly the type of price.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceRateOrAmountChoice getValue() {
+		return value;
+	}
+
+	public void setValue(PriceRateOrAmountChoice value) {
+		this.value = value;
+	}
+
+	public PriceValueType7Code getType() {
+		return type;
+	}
+
+	public void setType(PriceValueType7Code type) {
+		this.type = type;
 	}
 }

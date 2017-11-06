@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateFormat29Choice#DateOrDateTime
- * DateFormat29Choice.DateOrDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DateFormat29Choice#DateCode
- * DateFormat29Choice.DateCode}</li>
+ * {@linkplain com.tools20022.repository.choice.DateFormat29Choice#mmDateOrDateTime
+ * DateFormat29Choice.mmDateOrDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateFormat29Choice#mmDateCode
+ * DateFormat29Choice.mmDateCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateFormat29Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice dateOrDateTime;
 	/**
 	 * Date expressed as a calendar date.
 	 * <p>
@@ -86,7 +88,7 @@ public class DateFormat29Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateOrDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateOrDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateFormat29Choice.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class DateFormat29Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOrDateTime";
 			definition = "Date expressed as a calendar date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateType1Code dateCode;
 	/**
 	 * Specifies the type of date.
 	 * <p>
@@ -127,7 +130,7 @@ public class DateFormat29Choice {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateFormat29Choice.mmObject();
 			isDerived = false;
@@ -135,8 +138,8 @@ public class DateFormat29Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DateType1Code.mmObject();
 		}
 	};
@@ -144,13 +147,29 @@ public class DateFormat29Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat29Choice.DateOrDateTime, com.tools20022.repository.choice.DateFormat29Choice.DateCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat29Choice.mmDateOrDateTime, com.tools20022.repository.choice.DateFormat29Choice.mmDateCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateFormat29Choice";
 				definition = "Choice between an ISODate or ISODateTime format or a date code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getDateOrDateTime() {
+		return dateOrDateTime;
+	}
+
+	public void setDateOrDateTime(com.tools20022.repository.choice.DateAndDateTimeChoice dateOrDateTime) {
+		this.dateOrDateTime = dateOrDateTime;
+	}
+
+	public DateType1Code getDateCode() {
+		return dateCode;
+	}
+
+	public void setDateCode(DateType1Code dateCode) {
+		this.dateCode = dateCode;
 	}
 }

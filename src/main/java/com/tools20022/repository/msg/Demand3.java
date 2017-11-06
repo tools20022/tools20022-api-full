@@ -35,11 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Demand3#Identification
- * Demand3.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand3#SubmissionDateTime
- * Demand3.SubmissionDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand3#Amount Demand3.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand3#mmIdentification
+ * Demand3.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand3#mmSubmissionDateTime
+ * Demand3.mmSubmissionDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand3#mmAmount
+ * Demand3.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Demand3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identifier assigned by the presenting party to the
 	 * demand.
@@ -91,7 +93,7 @@ public class Demand3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Demand3.mmObject();
 			isDerived = false;
@@ -99,11 +101,12 @@ public class Demand3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier assigned by the presenting party to the demand.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime submissionDateTime;
 	/**
 	 * Date and time of demand submission.
 	 * <p>
@@ -116,8 +119,8 @@ public class Demand3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Demand#SubmissionDateTime
-	 * Demand.SubmissionDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Demand#mmSubmissionDateTime
+	 * Demand.mmSubmissionDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Demand3
@@ -135,20 +138,21 @@ public class Demand3 {
 	 * definition} = "Date and time of demand submission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubmissionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubmissionDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.mmSubmissionDateTime;
 			componentContext_lazy = () -> Demand3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.SubmissionDateTime;
 			isDerived = false;
 			xmlTag = "SubmissnDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionDateTime";
 			definition = "Date and time of demand submission.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount and currency of the demand.
 	 * <p>
@@ -162,8 +166,8 @@ public class Demand3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Demand#DemandAmount
-	 * Demand.DemandAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Demand#mmDemandAmount
+	 * Demand.mmDemandAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Demand3
@@ -181,17 +185,17 @@ public class Demand3 {
 	 * definition} = "Amount and currency of the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.mmDemandAmount;
 			componentContext_lazy = () -> Demand3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.DemandAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount and currency of the demand.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -199,14 +203,38 @@ public class Demand3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Demand3.Identification, com.tools20022.repository.msg.Demand3.SubmissionDateTime, com.tools20022.repository.msg.Demand3.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Demand3.mmIdentification, com.tools20022.repository.msg.Demand3.mmSubmissionDateTime, com.tools20022.repository.msg.Demand3.mmAmount);
 				trace_lazy = () -> Demand.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Demand3";
 				definition = "Details related to the demand.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ISODateTime getSubmissionDateTime() {
+		return submissionDateTime;
+	}
+
+	public void setSubmissionDateTime(ISODateTime submissionDateTime) {
+		this.submissionDateTime = submissionDateTime;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

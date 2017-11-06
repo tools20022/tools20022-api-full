@@ -25,9 +25,11 @@ import com.tools20022.repository.choice.ExposureType16Choice;
 import com.tools20022.repository.choice.MarketIdentification3Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Net position of a segregated holding, in a single security, within the
@@ -41,53 +43,53 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#SafekeepingPlace
- * AggregateBalancePerSafekeepingPlace28.SafekeepingPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmSafekeepingPlace
+ * AggregateBalancePerSafekeepingPlace28.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#PlaceOfListing
- * AggregateBalancePerSafekeepingPlace28.PlaceOfListing}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmPlaceOfListing
+ * AggregateBalancePerSafekeepingPlace28.mmPlaceOfListing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#Pledgee
- * AggregateBalancePerSafekeepingPlace28.Pledgee}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmPledgee
+ * AggregateBalancePerSafekeepingPlace28.mmPledgee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#AggregateBalance
- * AggregateBalancePerSafekeepingPlace28.AggregateBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmAggregateBalance
+ * AggregateBalancePerSafekeepingPlace28.mmAggregateBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#AvailableBalance
- * AggregateBalancePerSafekeepingPlace28.AvailableBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmAvailableBalance
+ * AggregateBalancePerSafekeepingPlace28.mmAvailableBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#NotAvailableBalance
- * AggregateBalancePerSafekeepingPlace28.NotAvailableBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmNotAvailableBalance
+ * AggregateBalancePerSafekeepingPlace28.mmNotAvailableBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#PriceDetails
- * AggregateBalancePerSafekeepingPlace28.PriceDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmPriceDetails
+ * AggregateBalancePerSafekeepingPlace28.mmPriceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#ForeignExchangeDetails
- * AggregateBalancePerSafekeepingPlace28.ForeignExchangeDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmForeignExchangeDetails
+ * AggregateBalancePerSafekeepingPlace28.mmForeignExchangeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#DaysAccrued
- * AggregateBalancePerSafekeepingPlace28.DaysAccrued}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmDaysAccrued
+ * AggregateBalancePerSafekeepingPlace28.mmDaysAccrued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#AccountBaseCurrencyAmounts
- * AggregateBalancePerSafekeepingPlace28.AccountBaseCurrencyAmounts}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmAccountBaseCurrencyAmounts
+ * AggregateBalancePerSafekeepingPlace28.mmAccountBaseCurrencyAmounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#InstrumentCurrencyAmounts
- * AggregateBalancePerSafekeepingPlace28.InstrumentCurrencyAmounts}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmInstrumentCurrencyAmounts
+ * AggregateBalancePerSafekeepingPlace28.mmInstrumentCurrencyAmounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#QuantityBreakdown
- * AggregateBalancePerSafekeepingPlace28.QuantityBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmQuantityBreakdown
+ * AggregateBalancePerSafekeepingPlace28.mmQuantityBreakdown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#ExposureType
- * AggregateBalancePerSafekeepingPlace28.ExposureType}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmExposureType
+ * AggregateBalancePerSafekeepingPlace28.mmExposureType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#BalanceBreakdown
- * AggregateBalancePerSafekeepingPlace28.BalanceBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmBalanceBreakdown
+ * AggregateBalancePerSafekeepingPlace28.mmBalanceBreakdown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#AdditionalBalanceBreakdown
- * AggregateBalancePerSafekeepingPlace28.AdditionalBalanceBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmAdditionalBalanceBreakdown
+ * AggregateBalancePerSafekeepingPlace28.mmAdditionalBalanceBreakdown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#HoldingAdditionalDetails
- * AggregateBalancePerSafekeepingPlace28.HoldingAdditionalDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28#mmHoldingAdditionalDetails
+ * AggregateBalancePerSafekeepingPlace28.mmHoldingAdditionalDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -96,8 +98,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +119,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AggregateBalancePerSafekeepingPlace28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SafeKeepingPlace1 safekeepingPlace;
 	/**
 	 * Place where the securities are safe-kept, physically or notionally. This
 	 * place can be, for example, a local custodian, a Central Securities
@@ -154,26 +157,27 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#SafekeepingPlace
-	 * AggregateBalancePerSafekeepingPlace24.SafekeepingPlace}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmSafekeepingPlace
+	 * AggregateBalancePerSafekeepingPlace24.mmSafekeepingPlace}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.SafekeepingPlace;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmSafekeepingPlace;
 			maxOccurs = 1;
-			type_lazy = () -> SafeKeepingPlace1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmObject();
 		}
 	};
+	protected MarketIdentification3Choice placeOfListing;
 	/**
 	 * Market(s) on which the security is listed.
 	 * <p>
@@ -186,8 +190,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#PlaceOfListing
-	 * Security.PlaceOfListing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPlaceOfListing
+	 * Security.mmPlaceOfListing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,26 +211,27 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#PlaceOfListing
-	 * AggregateBalancePerSafekeepingPlace24.PlaceOfListing}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmPlaceOfListing
+	 * AggregateBalancePerSafekeepingPlace24.mmPlaceOfListing}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PlaceOfListing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlaceOfListing = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.PlaceOfListing;
 			isDerived = false;
 			xmlTag = "PlcOfListg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
 			definition = "Market(s) on which the security is listed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.PlaceOfListing;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmPlaceOfListing;
 			maxOccurs = 1;
-			type_lazy = () -> MarketIdentification3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MarketIdentification3Choice.mmObject();
 		}
 	};
+	protected Pledgee1 pledgee;
 	/**
 	 * Specify the entity to which the financial instruments are pledged.
 	 * <p>
@@ -237,8 +242,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#Pledgee
-	 * SecuritiesBalance.Pledgee}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmPledgee
+	 * SecuritiesBalance.mmPledgee}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -259,26 +264,27 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#Pledgee
-	 * AggregateBalancePerSafekeepingPlace24.Pledgee}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmPledgee
+	 * AggregateBalancePerSafekeepingPlace24.mmPledgee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Pledgee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPledgee = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmPledgee;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.Pledgee;
 			isDerived = false;
 			xmlTag = "Pldgee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledgee";
 			definition = "Specify the entity to which the financial instruments are pledged.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.Pledgee;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmPledgee;
 			maxOccurs = 1;
-			type_lazy = () -> Pledgee1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Pledgee1.mmObject();
 		}
 	};
+	protected Balance6 aggregateBalance;
 	/**
 	 * Total quantity of financial instruments of the balance.
 	 * <p>
@@ -310,26 +316,27 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#AggregateBalance
-	 * AggregateBalancePerSafekeepingPlace24.AggregateBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmAggregateBalance
+	 * AggregateBalancePerSafekeepingPlace24.mmAggregateBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AggregateBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAggregateBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
 			isDerived = false;
 			xmlTag = "AggtBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateBalance";
 			definition = "Total quantity of financial instruments of the balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.AggregateBalance;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmAggregateBalance;
 			maxOccurs = 1;
-			type_lazy = () -> Balance6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Balance6.mmObject();
 		}
 	};
+	protected Balance8 availableBalance;
 	/**
 	 * Total quantity of financial instruments of the balance that is available.
 	 * <p>
@@ -340,8 +347,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#AvailableQuantity
-	 * SecuritiesBalance.AvailableQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmAvailableQuantity
+	 * SecuritiesBalance.mmAvailableQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -363,26 +370,27 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#AvailableBalance
-	 * AggregateBalancePerSafekeepingPlace24.AvailableBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmAvailableBalance
+	 * AggregateBalancePerSafekeepingPlace24.mmAvailableBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AvailableBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAvailableBalance = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAvailableQuantity;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.AvailableQuantity;
 			isDerived = false;
 			xmlTag = "AvlblBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableBalance";
 			definition = "Total quantity of financial instruments of the balance that is available.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.AvailableBalance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmAvailableBalance;
 			maxOccurs = 1;
-			type_lazy = () -> Balance8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Balance8.mmObject();
 		}
 	};
+	protected BalanceQuantity8Choice notAvailableBalance;
 	/**
 	 * Total quantity of financial instruments of the balance that is not
 	 * available.
@@ -419,26 +427,27 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#NotAvailableBalance
-	 * AggregateBalancePerSafekeepingPlace24.NotAvailableBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmNotAvailableBalance
+	 * AggregateBalancePerSafekeepingPlace24.mmNotAvailableBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NotAvailableBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNotAvailableBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
 			isDerived = false;
 			xmlTag = "NotAvlblBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAvailableBalance";
 			definition = "Total quantity of financial instruments of the balance that is not available.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.NotAvailableBalance;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmNotAvailableBalance;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceQuantity8Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> BalanceQuantity8Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PriceInformation12> priceDetails;
 	/**
 	 * Price of the financial instrument in one or more currencies.
 	 * <p>
@@ -450,8 +459,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Pricing
-	 * Security.Pricing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPricing
+	 * Security.mmPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -472,25 +481,26 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#PriceDetails
-	 * AggregateBalancePerSafekeepingPlace24.PriceDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmPriceDetails
+	 * AggregateBalancePerSafekeepingPlace24.mmPriceDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Pricing;
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Price of the financial instrument in one or more currencies.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.PriceDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmPriceDetails;
 			minOccurs = 0;
-			type_lazy = () -> PriceInformation12.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PriceInformation12.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ForeignExchangeTerms22> foreignExchangeDetails;
 	/**
 	 * Information needed to process a currency exchange or conversion.
 	 * <p>
@@ -502,8 +512,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#ExchangeRate
-	 * SecuritiesBalance.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmExchangeRate
+	 * SecuritiesBalance.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -524,25 +534,26 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#ForeignExchangeDetails
-	 * AggregateBalancePerSafekeepingPlace24.ForeignExchangeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmForeignExchangeDetails
+	 * AggregateBalancePerSafekeepingPlace24.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmExchangeRate;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.ExchangeRate;
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.ForeignExchangeDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmForeignExchangeDetails;
 			minOccurs = 0;
-			type_lazy = () -> ForeignExchangeTerms22.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms22.mmObject();
 		}
 	};
+	protected Number daysAccrued;
 	/**
 	 * Specifies the number of days used for calculating the accrued interest
 	 * amount.
@@ -556,8 +567,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#NumberOfDays
-	 * DateTimePeriod.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmNumberOfDays
+	 * DateTimePeriod.mmNumberOfDays}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -579,25 +590,26 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#DaysAccrued
-	 * AggregateBalancePerSafekeepingPlace24.DaysAccrued}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmDaysAccrued
+	 * AggregateBalancePerSafekeepingPlace24.mmDaysAccrued}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDaysAccrued = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.NumberOfDays;
 			isDerived = false;
 			xmlTag = "DaysAcrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DaysAccrued";
 			definition = "Specifies the number of days used for calculating the accrued interest amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.DaysAccrued;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmDaysAccrued;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected BalanceAmounts3 accountBaseCurrencyAmounts;
 	/**
 	 * Valuation amounts provided in the base currency of the account.
 	 * <p>
@@ -609,8 +621,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#AssetHolding
-	 * Balance.AssetHolding}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmAssetHolding
+	 * Balance.mmAssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -631,26 +643,27 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#AccountBaseCurrencyAmounts
-	 * AggregateBalancePerSafekeepingPlace24.AccountBaseCurrencyAmounts}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmAccountBaseCurrencyAmounts
+	 * AggregateBalancePerSafekeepingPlace24.mmAccountBaseCurrencyAmounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountBaseCurrencyAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountBaseCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmAssetHolding;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.AssetHolding;
 			isDerived = false;
 			xmlTag = "AcctBaseCcyAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBaseCurrencyAmounts";
 			definition = "Valuation amounts provided in the base currency of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.AccountBaseCurrencyAmounts;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmAccountBaseCurrencyAmounts;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceAmounts3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BalanceAmounts3.mmObject();
 		}
 	};
+	protected BalanceAmounts3 instrumentCurrencyAmounts;
 	/**
 	 * Valuation amounts provided in the currency of the financial instrument.
 	 * <p>
@@ -662,8 +675,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#AssetHolding
-	 * Balance.AssetHolding}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmAssetHolding
+	 * Balance.mmAssetHolding}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -685,26 +698,27 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#InstrumentCurrencyAmounts
-	 * AggregateBalancePerSafekeepingPlace24.InstrumentCurrencyAmounts}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmInstrumentCurrencyAmounts
+	 * AggregateBalancePerSafekeepingPlace24.mmInstrumentCurrencyAmounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstrumentCurrencyAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrumentCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmAssetHolding;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.AssetHolding;
 			isDerived = false;
 			xmlTag = "InstrmCcyAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentCurrencyAmounts";
 			definition = "Valuation amounts provided in the currency of the financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.InstrumentCurrencyAmounts;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmInstrumentCurrencyAmounts;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceAmounts3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BalanceAmounts3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QuantityBreakdown27> quantityBreakdown;
 	/**
 	 * Breakdown of the aggregate quantity reported into significant lots, for
 	 * example, tax lots.
@@ -717,8 +731,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#LotBreakdown
-	 * SecuritiesQuantity.LotBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLotBreakdown
+	 * SecuritiesQuantity.mmLotBreakdown}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -740,25 +754,26 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#QuantityBreakdown
-	 * AggregateBalancePerSafekeepingPlace24.QuantityBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmQuantityBreakdown
+	 * AggregateBalancePerSafekeepingPlace24.mmQuantityBreakdown}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.LotBreakdown;
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.QuantityBreakdown;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmQuantityBreakdown;
 			minOccurs = 0;
-			type_lazy = () -> QuantityBreakdown27.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown27.mmObject();
 		}
 	};
+	protected ExposureType16Choice exposureType;
 	/**
 	 * Specifies the underlying business area/type of trade causing the
 	 * collateral movement.
@@ -772,8 +787,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#ExposureType
-	 * Obligation.ExposureType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmExposureType
+	 * Obligation.mmExposureType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -795,26 +810,27 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#ExposureType
-	 * AggregateBalancePerSafekeepingPlace24.ExposureType}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmExposureType
+	 * AggregateBalancePerSafekeepingPlace24.mmExposureType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExposureType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExposureType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmExposureType;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.ExposureType;
 			isDerived = false;
 			xmlTag = "XpsrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposureType";
 			definition = "Specifies the underlying business area/type of trade causing the collateral movement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.ExposureType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmExposureType;
 			maxOccurs = 1;
-			type_lazy = () -> ExposureType16Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ExposureType16Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SubBalanceInformation15> balanceBreakdown;
 	/**
 	 * Breakdown of the aggregate balance per meaningful sub-balances and
 	 * availability.
@@ -828,8 +844,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesSubBalance
-	 * SecuritiesBalance.SecuritiesSubBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesSubBalance
+	 * SecuritiesBalance.mmSecuritiesSubBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -851,25 +867,26 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#BalanceBreakdown
-	 * AggregateBalancePerSafekeepingPlace24.BalanceBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmBalanceBreakdown
+	 * AggregateBalancePerSafekeepingPlace24.mmBalanceBreakdown}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceBreakdown = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesSubBalance;
 			isDerived = false;
 			xmlTag = "BalBrkdwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceBreakdown";
 			definition = "Breakdown of the aggregate balance per meaningful sub-balances and availability.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.BalanceBreakdown;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmBalanceBreakdown;
 			minOccurs = 0;
-			type_lazy = () -> SubBalanceInformation15.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation15.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AdditionalBalanceInformation15> additionalBalanceBreakdown;
 	/**
 	 * Provides additional instrument sub-balance information on all or parts of
 	 * the reported financial instrument (unregistered, tax exempt, etc.).
@@ -883,8 +900,8 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesSubBalance
-	 * SecuritiesBalance.SecuritiesSubBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesSubBalance
+	 * SecuritiesBalance.mmSecuritiesSubBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -906,25 +923,26 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#AdditionalBalanceBreakdown
-	 * AggregateBalancePerSafekeepingPlace24.AdditionalBalanceBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmAdditionalBalanceBreakdown
+	 * AggregateBalancePerSafekeepingPlace24.mmAdditionalBalanceBreakdown}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalBalanceBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalBalanceBreakdown = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesSubBalance;
 			isDerived = false;
 			xmlTag = "AddtlBalBrkdwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBalanceBreakdown";
 			definition = "Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.AdditionalBalanceBreakdown;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmAdditionalBalanceBreakdown;
 			minOccurs = 0;
-			type_lazy = () -> AdditionalBalanceInformation15.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation15.mmObject();
 		}
 	};
+	protected Max350Text holdingAdditionalDetails;
 	/**
 	 * Provides additional information on the holding.
 	 * <p>
@@ -953,11 +971,11 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#HoldingAdditionalDetails
-	 * AggregateBalancePerSafekeepingPlace24.HoldingAdditionalDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24#mmHoldingAdditionalDetails
+	 * AggregateBalancePerSafekeepingPlace24.mmHoldingAdditionalDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldingAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldingAdditionalDetails = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
 			isDerived = false;
@@ -965,9 +983,9 @@ public class AggregateBalancePerSafekeepingPlace28 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetails";
 			definition = "Provides additional information on the holding.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.HoldingAdditionalDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmHoldingAdditionalDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -975,16 +993,16 @@ public class AggregateBalancePerSafekeepingPlace28 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.SafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.PlaceOfListing,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.Pledgee, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.AggregateBalance,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.AvailableBalance, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.NotAvailableBalance,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.PriceDetails, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.ForeignExchangeDetails,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.DaysAccrued, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.AccountBaseCurrencyAmounts,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.InstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.QuantityBreakdown,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.ExposureType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.BalanceBreakdown,
-						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.AdditionalBalanceBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.HoldingAdditionalDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmPlaceOfListing,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmPledgee, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmAggregateBalance,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmAvailableBalance, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmNotAvailableBalance,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmPriceDetails, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmForeignExchangeDetails,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmDaysAccrued, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmAccountBaseCurrencyAmounts,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmQuantityBreakdown,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmExposureType, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmBalanceBreakdown,
+						com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmAdditionalBalanceBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmHoldingAdditionalDetails);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AggregateBalancePerSafekeepingPlace28";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account at a specified place of safekeeping.";
@@ -992,5 +1010,133 @@ public class AggregateBalancePerSafekeepingPlace28 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SafeKeepingPlace1 getSafekeepingPlace() {
+		return safekeepingPlace;
+	}
+
+	public void setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace1 safekeepingPlace) {
+		this.safekeepingPlace = safekeepingPlace;
+	}
+
+	public MarketIdentification3Choice getPlaceOfListing() {
+		return placeOfListing;
+	}
+
+	public void setPlaceOfListing(MarketIdentification3Choice placeOfListing) {
+		this.placeOfListing = placeOfListing;
+	}
+
+	public Pledgee1 getPledgee() {
+		return pledgee;
+	}
+
+	public void setPledgee(com.tools20022.repository.msg.Pledgee1 pledgee) {
+		this.pledgee = pledgee;
+	}
+
+	public Balance6 getAggregateBalance() {
+		return aggregateBalance;
+	}
+
+	public void setAggregateBalance(com.tools20022.repository.msg.Balance6 aggregateBalance) {
+		this.aggregateBalance = aggregateBalance;
+	}
+
+	public Balance8 getAvailableBalance() {
+		return availableBalance;
+	}
+
+	public void setAvailableBalance(com.tools20022.repository.msg.Balance8 availableBalance) {
+		this.availableBalance = availableBalance;
+	}
+
+	public BalanceQuantity8Choice getNotAvailableBalance() {
+		return notAvailableBalance;
+	}
+
+	public void setNotAvailableBalance(BalanceQuantity8Choice notAvailableBalance) {
+		this.notAvailableBalance = notAvailableBalance;
+	}
+
+	public List<PriceInformation12> getPriceDetails() {
+		return priceDetails;
+	}
+
+	public void setPriceDetails(List<com.tools20022.repository.msg.PriceInformation12> priceDetails) {
+		this.priceDetails = priceDetails;
+	}
+
+	public List<ForeignExchangeTerms22> getForeignExchangeDetails() {
+		return foreignExchangeDetails;
+	}
+
+	public void setForeignExchangeDetails(List<com.tools20022.repository.msg.ForeignExchangeTerms22> foreignExchangeDetails) {
+		this.foreignExchangeDetails = foreignExchangeDetails;
+	}
+
+	public Number getDaysAccrued() {
+		return daysAccrued;
+	}
+
+	public void setDaysAccrued(Number daysAccrued) {
+		this.daysAccrued = daysAccrued;
+	}
+
+	public BalanceAmounts3 getAccountBaseCurrencyAmounts() {
+		return accountBaseCurrencyAmounts;
+	}
+
+	public void setAccountBaseCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts3 accountBaseCurrencyAmounts) {
+		this.accountBaseCurrencyAmounts = accountBaseCurrencyAmounts;
+	}
+
+	public BalanceAmounts3 getInstrumentCurrencyAmounts() {
+		return instrumentCurrencyAmounts;
+	}
+
+	public void setInstrumentCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts3 instrumentCurrencyAmounts) {
+		this.instrumentCurrencyAmounts = instrumentCurrencyAmounts;
+	}
+
+	public List<QuantityBreakdown27> getQuantityBreakdown() {
+		return quantityBreakdown;
+	}
+
+	public void setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown27> quantityBreakdown) {
+		this.quantityBreakdown = quantityBreakdown;
+	}
+
+	public ExposureType16Choice getExposureType() {
+		return exposureType;
+	}
+
+	public void setExposureType(ExposureType16Choice exposureType) {
+		this.exposureType = exposureType;
+	}
+
+	public List<SubBalanceInformation15> getBalanceBreakdown() {
+		return balanceBreakdown;
+	}
+
+	public void setBalanceBreakdown(List<com.tools20022.repository.msg.SubBalanceInformation15> balanceBreakdown) {
+		this.balanceBreakdown = balanceBreakdown;
+	}
+
+	public List<AdditionalBalanceInformation15> getAdditionalBalanceBreakdown() {
+		return additionalBalanceBreakdown;
+	}
+
+	public void setAdditionalBalanceBreakdown(List<com.tools20022.repository.msg.AdditionalBalanceInformation15> additionalBalanceBreakdown) {
+		this.additionalBalanceBreakdown = additionalBalanceBreakdown;
+	}
+
+	public Max350Text getHoldingAdditionalDetails() {
+		return holdingAdditionalDetails;
+	}
+
+	public void setHoldingAdditionalDetails(Max350Text holdingAdditionalDetails) {
+		this.holdingAdditionalDetails = holdingAdditionalDetails;
 	}
 }

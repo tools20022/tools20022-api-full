@@ -37,14 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AdditionalReference2#Reference
- * AdditionalReference2.Reference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalReference2#ReferenceIssuer
- * AdditionalReference2.ReferenceIssuer}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference2#mmReference
+ * AdditionalReference2.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalReference2#MessageName
- * AdditionalReference2.MessageName}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference2#mmReferenceIssuer
+ * AdditionalReference2.mmReferenceIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference2#mmMessageName
+ * AdditionalReference2.mmMessageName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,411 +56,411 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation#PreviousReference
- * ReversalOfTransferInConfirmation.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation#mmPreviousReference
+ * ReversalOfTransferInConfirmation.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation#PoolReference
- * ReversalOfTransferInConfirmation.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation#mmPoolReference
+ * ReversalOfTransferInConfirmation.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation#RelatedReference
- * ReversalOfTransferInConfirmation.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation#mmRelatedReference
+ * ReversalOfTransferInConfirmation.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02#PreviousReference
- * ReversalOfTransferInConfirmationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02#mmPreviousReference
+ * ReversalOfTransferInConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02#PoolReference
- * ReversalOfTransferInConfirmationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02#mmPoolReference
+ * ReversalOfTransferInConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02#RelatedReference
- * ReversalOfTransferInConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02#mmRelatedReference
+ * ReversalOfTransferInConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#PreviousReference
- * ReversalOfTransferOutConfirmation.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#mmPreviousReference
+ * ReversalOfTransferOutConfirmation.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#PoolReference
- * ReversalOfTransferOutConfirmation.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#mmPoolReference
+ * ReversalOfTransferOutConfirmation.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#RelatedReference
- * ReversalOfTransferOutConfirmation.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation#mmRelatedReference
+ * ReversalOfTransferOutConfirmation.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02#PreviousReference
- * ReversalOfTransferOutConfirmationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02#mmPreviousReference
+ * ReversalOfTransferOutConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02#PoolReference
- * ReversalOfTransferOutConfirmationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02#mmPoolReference
+ * ReversalOfTransferOutConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02#RelatedReference
- * ReversalOfTransferOutConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02#mmRelatedReference
+ * ReversalOfTransferOutConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationInstruction#PreviousReference
- * TransferInCancellationInstruction.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationInstruction#mmPreviousReference
+ * TransferInCancellationInstruction.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationInstruction#PoolReference
- * TransferInCancellationInstruction.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationInstruction#mmPoolReference
+ * TransferInCancellationInstruction.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationInstruction#RelatedReference
- * TransferInCancellationInstruction.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationInstruction#mmRelatedReference
+ * TransferInCancellationInstruction.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#PreviousReference
- * TransferInCancellationRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmPreviousReference
+ * TransferInCancellationRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#PoolReference
- * TransferInCancellationRequestV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmPoolReference
+ * TransferInCancellationRequestV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#RelatedReference
- * TransferInCancellationRequestV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV02#mmRelatedReference
+ * TransferInCancellationRequestV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmation#RelatedReference
- * TransferInConfirmation.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmation#mmRelatedReference
+ * TransferInConfirmation.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmation#PoolReference
- * TransferInConfirmation.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmation#mmPoolReference
+ * TransferInConfirmation.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmation#PreviousReference
- * TransferInConfirmation.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmation#mmPreviousReference
+ * TransferInConfirmation.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV02#RelatedReference
- * TransferInConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV02#mmRelatedReference
+ * TransferInConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV02#PoolReference
- * TransferInConfirmationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV02#mmPoolReference
+ * TransferInConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV02#PreviousReference
- * TransferInConfirmationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV02#mmPreviousReference
+ * TransferInConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV03#PoolReference
- * TransferInConfirmationV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV03#mmPoolReference
+ * TransferInConfirmationV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV03#PreviousReference
- * TransferInConfirmationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV03#mmPreviousReference
+ * TransferInConfirmationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV03#RelatedReference
- * TransferInConfirmationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV03#mmRelatedReference
+ * TransferInConfirmationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV04#PoolReference
- * TransferInConfirmationV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV04#mmPoolReference
+ * TransferInConfirmationV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV04#PreviousReference
- * TransferInConfirmationV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV04#mmPreviousReference
+ * TransferInConfirmationV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV04#RelatedReference
- * TransferInConfirmationV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV04#mmRelatedReference
+ * TransferInConfirmationV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstruction#PoolReference
- * TransferInInstruction.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstruction#mmPoolReference
+ * TransferInInstruction.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstruction#PreviousReference
- * TransferInInstruction.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstruction#mmPreviousReference
+ * TransferInInstruction.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstruction#RelatedReference
- * TransferInInstruction.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstruction#mmRelatedReference
+ * TransferInInstruction.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV02#PoolReference
- * TransferInInstructionV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV02#mmPoolReference
+ * TransferInInstructionV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV02#PreviousReference
- * TransferInInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV02#mmPreviousReference
+ * TransferInInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV02#RelatedReference
- * TransferInInstructionV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV02#mmRelatedReference
+ * TransferInInstructionV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV03#PoolReference
- * TransferInInstructionV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV03#mmPoolReference
+ * TransferInInstructionV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV03#PreviousReference
- * TransferInInstructionV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV03#mmPreviousReference
+ * TransferInInstructionV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV03#RelatedReference
- * TransferInInstructionV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV03#mmRelatedReference
+ * TransferInInstructionV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#PoolReference
- * TransferInInstructionV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmPoolReference
+ * TransferInInstructionV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#PreviousReference
- * TransferInInstructionV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmPreviousReference
+ * TransferInInstructionV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#RelatedReference
- * TransferInInstructionV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV04#mmRelatedReference
+ * TransferInInstructionV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#PreviousReference
- * TransferOutCancellationInstruction.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#mmPreviousReference
+ * TransferOutCancellationInstruction.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#PoolReference
- * TransferOutCancellationInstruction.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#mmPoolReference
+ * TransferOutCancellationInstruction.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#RelatedReference
- * TransferOutCancellationInstruction.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationInstruction#mmRelatedReference
+ * TransferOutCancellationInstruction.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#PreviousReference
- * TransferOutCancellationRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmPreviousReference
+ * TransferOutCancellationRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#PoolReference
- * TransferOutCancellationRequestV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmPoolReference
+ * TransferOutCancellationRequestV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#RelatedReference
- * TransferOutCancellationRequestV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV02#mmRelatedReference
+ * TransferOutCancellationRequestV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmation#RelatedReference
- * TransferOutConfirmation.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmation#mmRelatedReference
+ * TransferOutConfirmation.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmation#PoolReference
- * TransferOutConfirmation.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmation#mmPoolReference
+ * TransferOutConfirmation.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmation#PreviousReference
- * TransferOutConfirmation.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmation#mmPreviousReference
+ * TransferOutConfirmation.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#RelatedReference
- * TransferOutConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmRelatedReference
+ * TransferOutConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#PoolReference
- * TransferOutConfirmationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmPoolReference
+ * TransferOutConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#PreviousReference
- * TransferOutConfirmationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV02#mmPreviousReference
+ * TransferOutConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV03#PoolReference
- * TransferOutConfirmationV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV03#mmPoolReference
+ * TransferOutConfirmationV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV03#PreviousReference
- * TransferOutConfirmationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV03#mmPreviousReference
+ * TransferOutConfirmationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV03#RelatedReference
- * TransferOutConfirmationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV03#mmRelatedReference
+ * TransferOutConfirmationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV04#PoolReference
- * TransferOutConfirmationV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV04#mmPoolReference
+ * TransferOutConfirmationV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV04#PreviousReference
- * TransferOutConfirmationV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV04#mmPreviousReference
+ * TransferOutConfirmationV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV04#RelatedReference
- * TransferOutConfirmationV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV04#mmRelatedReference
+ * TransferOutConfirmationV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstruction#PoolReference
- * TransferOutInstruction.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstruction#mmPoolReference
+ * TransferOutInstruction.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstruction#PreviousReference
- * TransferOutInstruction.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstruction#mmPreviousReference
+ * TransferOutInstruction.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstruction#RelatedReference
- * TransferOutInstruction.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstruction#mmRelatedReference
+ * TransferOutInstruction.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV02#PoolReference
- * TransferOutInstructionV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV02#mmPoolReference
+ * TransferOutInstructionV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV02#PreviousReference
- * TransferOutInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV02#mmPreviousReference
+ * TransferOutInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV02#RelatedReference
- * TransferOutInstructionV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV02#mmRelatedReference
+ * TransferOutInstructionV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV03#PoolReference
- * TransferOutInstructionV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV03#mmPoolReference
+ * TransferOutInstructionV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV03#PreviousReference
- * TransferOutInstructionV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV03#mmPreviousReference
+ * TransferOutInstructionV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV03#RelatedReference
- * TransferOutInstructionV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV03#mmRelatedReference
+ * TransferOutInstructionV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#PoolReference
- * TransferOutInstructionV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#mmPoolReference
+ * TransferOutInstructionV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#PreviousReference
- * TransferOutInstructionV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#mmPreviousReference
+ * TransferOutInstructionV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#RelatedReference
- * TransferOutInstructionV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV04#mmRelatedReference
+ * TransferOutInstructionV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#PreviousReference
- * AccountingStatementOfHoldings.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmPreviousReference
+ * AccountingStatementOfHoldings.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#RelatedReference
- * AccountingStatementOfHoldings.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmRelatedReference
+ * AccountingStatementOfHoldings.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02#PreviousReference
- * AccountingStatementOfHoldingsV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02#mmPreviousReference
+ * AccountingStatementOfHoldingsV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02#RelatedReference
- * AccountingStatementOfHoldingsV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02#mmRelatedReference
+ * AccountingStatementOfHoldingsV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldings#PreviousReference
- * CustodyStatementOfHoldings.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldings#mmPreviousReference
+ * CustodyStatementOfHoldings.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldings#RelatedReference
- * CustodyStatementOfHoldings.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldings#mmRelatedReference
+ * CustodyStatementOfHoldings.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02#PreviousReference
- * CustodyStatementOfHoldingsV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02#mmPreviousReference
+ * CustodyStatementOfHoldingsV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02#RelatedReference
- * CustodyStatementOfHoldingsV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02#mmRelatedReference
+ * CustodyStatementOfHoldingsV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation#PreviousReference
- * AccountingStatementOfHoldingsCancellation.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation#mmPreviousReference
+ * AccountingStatementOfHoldingsCancellation.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation#RelatedReference
- * AccountingStatementOfHoldingsCancellation.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation#mmRelatedReference
+ * AccountingStatementOfHoldingsCancellation.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02#PreviousReference
- * AccountingStatementOfHoldingsCancellationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02#mmPreviousReference
+ * AccountingStatementOfHoldingsCancellationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02#RelatedReference
- * AccountingStatementOfHoldingsCancellationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02#mmRelatedReference
+ * AccountingStatementOfHoldingsCancellationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation#PreviousReference
- * CustodyStatementOfHoldingsCancellation.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation#mmPreviousReference
+ * CustodyStatementOfHoldingsCancellation.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation#RelatedReference
- * CustodyStatementOfHoldingsCancellation.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation#mmRelatedReference
+ * CustodyStatementOfHoldingsCancellation.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#PreviousReference
- * CustodyStatementOfHoldingsCancellationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#mmPreviousReference
+ * CustodyStatementOfHoldingsCancellationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#RelatedReference
- * CustodyStatementOfHoldingsCancellationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#mmRelatedReference
+ * CustodyStatementOfHoldingsCancellationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejection#RelatedReference
- * SecuritiesMessageRejection.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejection#mmRelatedReference
+ * SecuritiesMessageRejection.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#PreviousReference
- * StatementOfInvestmentFundTransactionsCancellation.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#mmPreviousReference
+ * StatementOfInvestmentFundTransactionsCancellation.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#RelatedReference
- * StatementOfInvestmentFundTransactionsCancellation.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation#mmRelatedReference
+ * StatementOfInvestmentFundTransactionsCancellation.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02#PreviousReference
- * StatementOfInvestmentFundTransactionsCancellationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02#mmPreviousReference
+ * StatementOfInvestmentFundTransactionsCancellationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02#RelatedReference
- * StatementOfInvestmentFundTransactionsCancellationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02#mmRelatedReference
+ * StatementOfInvestmentFundTransactionsCancellationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions#PreviousReference
- * StatementOfInvestmentFundTransactions.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions#mmPreviousReference
+ * StatementOfInvestmentFundTransactions.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions#RelatedReference
- * StatementOfInvestmentFundTransactions.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions#mmRelatedReference
+ * StatementOfInvestmentFundTransactions.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#PreviousReference
- * StatementOfInvestmentFundTransactionsV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmPreviousReference
+ * StatementOfInvestmentFundTransactionsV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#RelatedReference
- * StatementOfInvestmentFundTransactionsV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02#mmRelatedReference
+ * StatementOfInvestmentFundTransactionsV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#RelatedReference
- * TransferCancellationStatusReport.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#mmRelatedReference
+ * TransferCancellationStatusReport.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#OtherReference
- * TransferCancellationStatusReport.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReport#mmOtherReference
+ * TransferCancellationStatusReport.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03#CounterpartyReference
- * TransferCancellationStatusReportV03.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03#mmCounterpartyReference
+ * TransferCancellationStatusReportV03.mmCounterpartyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReport#RelatedReference
- * TransferInstructionStatusReport.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReport#mmRelatedReference
+ * TransferInstructionStatusReport.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReport#OtherReference
- * TransferInstructionStatusReport.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReport#mmOtherReference
+ * TransferInstructionStatusReport.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV03#CounterpartyReference
- * TransferInstructionStatusReportV03.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV03#mmCounterpartyReference
+ * TransferInstructionStatusReportV03.mmCounterpartyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV05#PoolReference
- * TransferInConfirmationV05.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV05#mmPoolReference
+ * TransferInConfirmationV05.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV05#PreviousReference
- * TransferInConfirmationV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV05#mmPreviousReference
+ * TransferInConfirmationV05.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV05#RelatedReference
- * TransferInConfirmationV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV05#mmRelatedReference
+ * TransferInConfirmationV05.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#CounterpartyReference
- * TransferInstructionStatusReportV04.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04#mmCounterpartyReference
+ * TransferInstructionStatusReportV04.mmCounterpartyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#PoolReference
- * TransferOutInstructionV05.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmPoolReference
+ * TransferOutInstructionV05.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#PreviousReference
- * TransferOutInstructionV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmPreviousReference
+ * TransferOutInstructionV05.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#RelatedReference
- * TransferOutInstructionV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05#mmRelatedReference
+ * TransferOutInstructionV05.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV04#CounterpartyReference
- * TransferCancellationStatusReportV04.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV04#mmCounterpartyReference
+ * TransferCancellationStatusReportV04.mmCounterpartyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#PoolReference
- * TransferInInstructionV05.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmPoolReference
+ * TransferInInstructionV05.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#PreviousReference
- * TransferInInstructionV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmPreviousReference
+ * TransferInInstructionV05.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#RelatedReference
- * TransferInInstructionV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV05#mmRelatedReference
+ * TransferInInstructionV05.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05#PoolReference
- * TransferOutConfirmationV05.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05#mmPoolReference
+ * TransferOutConfirmationV05.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05#PreviousReference
- * TransferOutConfirmationV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05#mmPreviousReference
+ * TransferOutConfirmationV05.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05#RelatedReference
- * TransferOutConfirmationV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05#mmRelatedReference
+ * TransferOutConfirmationV05.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#PreviousReference
- * StatementOfInvestmentFundTransactionsV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmPreviousReference
+ * StatementOfInvestmentFundTransactionsV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#RelatedReference
- * StatementOfInvestmentFundTransactionsV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03#mmRelatedReference
+ * StatementOfInvestmentFundTransactionsV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03#PreviousReference
- * StatementOfInvestmentFundTransactionsCancellationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03#mmPreviousReference
+ * StatementOfInvestmentFundTransactionsCancellationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03#RelatedReference
- * StatementOfInvestmentFundTransactionsCancellationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03#mmRelatedReference
+ * StatementOfInvestmentFundTransactionsCancellationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV06#PoolReference
- * TransferInInstructionV06.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV06#mmPoolReference
+ * TransferInInstructionV06.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV06#PreviousReference
- * TransferInInstructionV06.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV06#mmPreviousReference
+ * TransferInInstructionV06.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV06#RelatedReference
- * TransferInInstructionV06.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV06#mmRelatedReference
+ * TransferInInstructionV06.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#PoolReference
- * TransferOutConfirmationV06.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmPoolReference
+ * TransferOutConfirmationV06.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#PreviousReference
- * TransferOutConfirmationV06.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmPreviousReference
+ * TransferOutConfirmationV06.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#RelatedReference
- * TransferOutConfirmationV06.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06#mmRelatedReference
+ * TransferOutConfirmationV06.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#PoolReference
- * TransferOutInstructionV06.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmPoolReference
+ * TransferOutInstructionV06.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#PreviousReference
- * TransferOutInstructionV06.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmPreviousReference
+ * TransferOutInstructionV06.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#RelatedReference
- * TransferOutInstructionV06.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06#mmRelatedReference
+ * TransferOutInstructionV06.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06#PoolReference
- * TransferInConfirmationV06.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06#mmPoolReference
+ * TransferInConfirmationV06.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06#PreviousReference
- * TransferInConfirmationV06.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06#mmPreviousReference
+ * TransferInConfirmationV06.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06#RelatedReference
- * TransferInConfirmationV06.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06#mmRelatedReference
+ * TransferInConfirmationV06.mmRelatedReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -475,6 +476,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalReference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reference;
 	/**
 	 * Business reference of a message assigned by the party issuing the
 	 * message. This reference must be unique amongst all messages of the same
@@ -489,8 +491,8 @@ public class AdditionalReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -511,20 +513,21 @@ public class AdditionalReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Business reference of a message assigned by the party issuing the message. This reference must be unique amongst all messages of the same name sent by the same party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification1Choice referenceIssuer;
 	/**
 	 * Issuer of the reference.
 	 * <p>
@@ -538,8 +541,8 @@ public class AdditionalReference2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -558,20 +561,21 @@ public class AdditionalReference2 {
 	 * definition} = "Issuer of the reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RefIssr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceIssuer";
 			definition = "Issuer of the reference.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification1Choice.mmObject();
 		}
 	};
+	protected Max35Text messageName;
 	/**
 	 * Name of a message.
 	 * <p>
@@ -599,7 +603,7 @@ public class AdditionalReference2 {
 	 * definition} = "Name of a message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalReference2.mmObject();
 			isDerived = false;
@@ -607,8 +611,8 @@ public class AdditionalReference2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of a message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -616,82 +620,106 @@ public class AdditionalReference2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference2.Reference, com.tools20022.repository.msg.AdditionalReference2.ReferenceIssuer,
-						com.tools20022.repository.msg.AdditionalReference2.MessageName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference2.mmReference, com.tools20022.repository.msg.AdditionalReference2.mmReferenceIssuer,
+						com.tools20022.repository.msg.AdditionalReference2.mmMessageName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation.mmPreviousReference, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation.mmPoolReference,
+						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation.mmRelatedReference, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.mmPoolReference, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.mmPreviousReference, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.mmPoolReference,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.mmRelatedReference, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.mmPoolReference, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInCancellationInstruction.mmPreviousReference, com.tools20022.repository.area.sese.TransferInCancellationInstruction.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferInCancellationInstruction.mmRelatedReference, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmPoolReference, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInConfirmation.mmRelatedReference, com.tools20022.repository.area.sese.TransferInConfirmation.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferInConfirmation.mmPreviousReference, com.tools20022.repository.area.sese.TransferInConfirmationV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInConfirmationV02.mmPoolReference, com.tools20022.repository.area.sese.TransferInConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferInConfirmationV03.mmPoolReference, com.tools20022.repository.area.sese.TransferInConfirmationV03.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferInConfirmationV03.mmRelatedReference, com.tools20022.repository.area.sese.TransferInConfirmationV04.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferInConfirmationV04.mmPreviousReference, com.tools20022.repository.area.sese.TransferInConfirmationV04.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInInstruction.mmPoolReference, com.tools20022.repository.area.sese.TransferInInstruction.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferInInstruction.mmRelatedReference, com.tools20022.repository.area.sese.TransferInInstructionV02.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferInInstructionV02.mmPreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInInstructionV03.mmPoolReference, com.tools20022.repository.area.sese.TransferInInstructionV03.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferInInstructionV03.mmRelatedReference, com.tools20022.repository.area.sese.TransferInInstructionV04.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferInInstructionV04.mmPreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV04.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmRelatedReference, com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmPoolReference, com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmation.mmRelatedReference, com.tools20022.repository.area.sese.TransferOutConfirmation.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmation.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmPoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV03.mmPoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV03.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV03.mmRelatedReference, com.tools20022.repository.area.sese.TransferOutConfirmationV04.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV04.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutConfirmationV04.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutInstruction.mmPoolReference, com.tools20022.repository.area.sese.TransferOutInstruction.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferOutInstruction.mmRelatedReference, com.tools20022.repository.area.sese.TransferOutInstructionV02.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferOutInstructionV02.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutInstructionV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutInstructionV03.mmPoolReference, com.tools20022.repository.area.sese.TransferOutInstructionV03.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferOutInstructionV03.mmRelatedReference, com.tools20022.repository.area.sese.TransferOutInstructionV04.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferOutInstructionV04.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutInstructionV04.mmRelatedReference,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmPreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmRelatedReference,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.mmPreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.mmRelatedReference,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmPreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmRelatedReference,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.mmPreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.mmRelatedReference,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.mmPreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.mmRelatedReference,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.mmPreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.mmRelatedReference,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation.mmPreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation.mmRelatedReference,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmPreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmRelatedReference,
+						com.tools20022.repository.area.semt.SecuritiesMessageRejection.mmRelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmPreviousReference,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmRelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02.mmPreviousReference,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02.mmRelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmPreviousReference,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmRelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmPreviousReference,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmRelatedReference, com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReport.mmOtherReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmCounterpartyReference,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReport.mmRelatedReference, com.tools20022.repository.area.sese.TransferInstructionStatusReport.mmOtherReference,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.mmCounterpartyReference, com.tools20022.repository.area.sese.TransferInConfirmationV05.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferInConfirmationV05.mmPreviousReference, com.tools20022.repository.area.sese.TransferInConfirmationV05.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmCounterpartyReference, com.tools20022.repository.area.sese.TransferOutInstructionV05.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferOutInstructionV05.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutInstructionV05.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReportV04.mmCounterpartyReference, com.tools20022.repository.area.sese.TransferInInstructionV05.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferInInstructionV05.mmPreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV05.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV05.mmPoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV05.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV05.mmRelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmPreviousReference,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmRelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03.mmPreviousReference,
+						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03.mmRelatedReference, com.tools20022.repository.area.sese.TransferInInstructionV06.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferInInstructionV06.mmPreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV06.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmPoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmRelatedReference, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmPoolReference,
+						com.tools20022.repository.area.sese.TransferOutInstructionV06.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmPoolReference, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmPreviousReference,
+						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmRelatedReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation.PreviousReference, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation.PoolReference,
-						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmation.RelatedReference, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.PoolReference, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.RelatedReference,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.PreviousReference, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.PoolReference,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmation.RelatedReference, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.PoolReference, com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV02.RelatedReference,
-						com.tools20022.repository.area.sese.TransferInCancellationInstruction.PreviousReference, com.tools20022.repository.area.sese.TransferInCancellationInstruction.PoolReference,
-						com.tools20022.repository.area.sese.TransferInCancellationInstruction.RelatedReference, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.PreviousReference,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV02.PoolReference, com.tools20022.repository.area.sese.TransferInCancellationRequestV02.RelatedReference,
-						com.tools20022.repository.area.sese.TransferInConfirmation.RelatedReference, com.tools20022.repository.area.sese.TransferInConfirmation.PoolReference,
-						com.tools20022.repository.area.sese.TransferInConfirmation.PreviousReference, com.tools20022.repository.area.sese.TransferInConfirmationV02.RelatedReference,
-						com.tools20022.repository.area.sese.TransferInConfirmationV02.PoolReference, com.tools20022.repository.area.sese.TransferInConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.sese.TransferInConfirmationV03.PoolReference, com.tools20022.repository.area.sese.TransferInConfirmationV03.PreviousReference,
-						com.tools20022.repository.area.sese.TransferInConfirmationV03.RelatedReference, com.tools20022.repository.area.sese.TransferInConfirmationV04.PoolReference,
-						com.tools20022.repository.area.sese.TransferInConfirmationV04.PreviousReference, com.tools20022.repository.area.sese.TransferInConfirmationV04.RelatedReference,
-						com.tools20022.repository.area.sese.TransferInInstruction.PoolReference, com.tools20022.repository.area.sese.TransferInInstruction.PreviousReference,
-						com.tools20022.repository.area.sese.TransferInInstruction.RelatedReference, com.tools20022.repository.area.sese.TransferInInstructionV02.PoolReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV02.PreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV02.RelatedReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV03.PoolReference, com.tools20022.repository.area.sese.TransferInInstructionV03.PreviousReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV03.RelatedReference, com.tools20022.repository.area.sese.TransferInInstructionV04.PoolReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV04.PreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV04.RelatedReference,
-						com.tools20022.repository.area.sese.TransferOutCancellationInstruction.PreviousReference, com.tools20022.repository.area.sese.TransferOutCancellationInstruction.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutCancellationInstruction.RelatedReference, com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.PreviousReference,
-						com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.PoolReference, com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.RelatedReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmation.RelatedReference, com.tools20022.repository.area.sese.TransferOutConfirmation.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmation.PreviousReference, com.tools20022.repository.area.sese.TransferOutConfirmationV02.RelatedReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV02.PoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV03.PoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV03.PreviousReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV03.RelatedReference, com.tools20022.repository.area.sese.TransferOutConfirmationV04.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV04.PreviousReference, com.tools20022.repository.area.sese.TransferOutConfirmationV04.RelatedReference,
-						com.tools20022.repository.area.sese.TransferOutInstruction.PoolReference, com.tools20022.repository.area.sese.TransferOutInstruction.PreviousReference,
-						com.tools20022.repository.area.sese.TransferOutInstruction.RelatedReference, com.tools20022.repository.area.sese.TransferOutInstructionV02.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV02.PreviousReference, com.tools20022.repository.area.sese.TransferOutInstructionV02.RelatedReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV03.PoolReference, com.tools20022.repository.area.sese.TransferOutInstructionV03.PreviousReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV03.RelatedReference, com.tools20022.repository.area.sese.TransferOutInstructionV04.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV04.PreviousReference, com.tools20022.repository.area.sese.TransferOutInstructionV04.RelatedReference,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.PreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.RelatedReference,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.PreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.RelatedReference,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldings.PreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldings.RelatedReference,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.PreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.RelatedReference,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.PreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.RelatedReference,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.PreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.RelatedReference,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation.PreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation.RelatedReference,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.PreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.RelatedReference,
-						com.tools20022.repository.area.semt.SecuritiesMessageRejection.RelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.PreviousReference,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.RelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02.PreviousReference,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02.RelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.PreviousReference,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.RelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.PreviousReference,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.RelatedReference, com.tools20022.repository.area.sese.TransferCancellationStatusReport.RelatedReference,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReport.OtherReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.CounterpartyReference,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReport.RelatedReference, com.tools20022.repository.area.sese.TransferInstructionStatusReport.OtherReference,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.CounterpartyReference, com.tools20022.repository.area.sese.TransferInConfirmationV05.PoolReference,
-						com.tools20022.repository.area.sese.TransferInConfirmationV05.PreviousReference, com.tools20022.repository.area.sese.TransferInConfirmationV05.RelatedReference,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.CounterpartyReference, com.tools20022.repository.area.sese.TransferOutInstructionV05.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV05.PreviousReference, com.tools20022.repository.area.sese.TransferOutInstructionV05.RelatedReference,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV04.CounterpartyReference, com.tools20022.repository.area.sese.TransferInInstructionV05.PoolReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV05.PreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV05.RelatedReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV05.PoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV05.PreviousReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV05.RelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.PreviousReference,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.RelatedReference, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03.PreviousReference,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03.RelatedReference, com.tools20022.repository.area.sese.TransferInInstructionV06.PoolReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV06.PreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV06.RelatedReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV06.PoolReference, com.tools20022.repository.area.sese.TransferOutConfirmationV06.PreviousReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV06.RelatedReference, com.tools20022.repository.area.sese.TransferOutInstructionV06.PoolReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV06.PreviousReference, com.tools20022.repository.area.sese.TransferOutInstructionV06.RelatedReference,
-						com.tools20022.repository.area.sese.TransferInConfirmationV06.PoolReference, com.tools20022.repository.area.sese.TransferInConfirmationV06.PreviousReference,
-						com.tools20022.repository.area.sese.TransferInConfirmationV06.RelatedReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReference2";
 				definition = "References a related message or provides another reference, such as a pool reference, linking a set of messages. The party which issued the related reference may be the Sender of the referenced message or a party other than the Sender.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReference() {
+		return reference;
+	}
+
+	public void setReference(Max35Text reference) {
+		this.reference = reference;
+	}
+
+	public PartyIdentification1Choice getReferenceIssuer() {
+		return referenceIssuer;
+	}
+
+	public void setReferenceIssuer(PartyIdentification1Choice referenceIssuer) {
+		this.referenceIssuer = referenceIssuer;
+	}
+
+	public Max35Text getMessageName() {
+		return messageName;
+	}
+
+	public void setMessageName(Max35Text messageName) {
+		this.messageName = messageName;
 	}
 }

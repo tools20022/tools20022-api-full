@@ -60,18 +60,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03#MessageIdentification
- * RequestForAccountManagementStatusReportV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03#mmMessageIdentification
+ * RequestForAccountManagementStatusReportV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03#RequestDetails
- * RequestForAccountManagementStatusReportV03.RequestDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03#mmRequestDetails
+ * RequestForAccountManagementStatusReportV03.mmRequestDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03#identifier
- * RequestForAccountManagementStatusReportV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code acmt.005.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestForAccountManagementStatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -127,30 +126,31 @@ public class RequestForAccountManagementStatusReportV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04#MessageIdentification
-	 * RequestForAccountManagementStatusReportV04.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04#mmMessageIdentification
+	 * RequestForAccountManagementStatusReportV04.mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02#MessageIdentification
-	 * RequestForAccountManagementStatusReportV02.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02#mmMessageIdentification
+	 * RequestForAccountManagementStatusReportV02.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02.MessageIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04.mmMessageIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AccountManagementMessageReference2 requestDetails;
 	/**
 	 * Information to identify the account management instruction for which the
 	 * status is requested.
@@ -179,55 +179,28 @@ public class RequestForAccountManagementStatusReportV03 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04#RequestDetails
-	 * RequestForAccountManagementStatusReportV04.RequestDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04#mmRequestDetails
+	 * RequestForAccountManagementStatusReportV04.mmRequestDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02#RequestDetails
-	 * RequestForAccountManagementStatusReportV02.RequestDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02#mmRequestDetails
+	 * RequestForAccountManagementStatusReportV02.mmRequestDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestDetails";
 			definition = "Information to identify the account management instruction for which the status is requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02.RequestDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04.RequestDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV04.mmRequestDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02.mmRequestDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountManagementMessageReference2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "acmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "acmt";
-			messageFunctionality = "005";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -237,17 +210,40 @@ public class RequestForAccountManagementStatusReportV03 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestForAccountManagementStatusReportV03";
 				definition = "Scope\r\nAn account owner, for example, an investor or its designated agent, sends the RequestForAccountManagementStatusReport message to the account servicer, for example, a registrar, transfer agent or custodian bank to request the status of an AccountOpeningInstruction or an AccountModificationInstruction.\r\nUsage\r\nThe RequestForAccountManagementStatusReport message is used to request the processing status of a previously sent AccountOpeningInstruction message or AccountModificationInstruction message for which a AccountDetailsConfirmation message has not yet been received.";
-				previousVersion_lazy = () -> RequestForAccountManagementStatusReportV02.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RequestForAccountManagementStatusReportV04.mmObject());
+				previousVersion_lazy = () -> RequestForAccountManagementStatusReportV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "ReqForAcctMgmtStsRpt";
 				businessArea_lazy = () -> AccountManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03.MessageIdentification,
-						com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03.RequestDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03.mmMessageIdentification,
+						com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV03.mmRequestDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "acmt";
+						messageFunctionality = "005";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AccountManagementMessageReference2 getRequestDetails() {
+		return requestDetails;
+	}
+
+	public void setRequestDetails(AccountManagementMessageReference2 requestDetails) {
+		this.requestDetails = requestDetails;
 	}
 }

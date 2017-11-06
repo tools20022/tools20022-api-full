@@ -37,47 +37,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties2#PrimaryOwner
- * AccountParties2.PrimaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties5#PrimaryOwner
- * AccountParties5.PrimaryOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties2#mmPrimaryOwner
+ * AccountParties2.mmPrimaryOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties5#mmPrimaryOwner
+ * AccountParties5.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties1Choice#PrimaryOwner
- * AccountParties1Choice.PrimaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#PrimaryOwner
- * AccountParties3.PrimaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties4#PrimaryOwner
- * AccountParties4.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties1Choice#mmPrimaryOwner
+ * AccountParties1Choice.mmPrimaryOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties3#mmPrimaryOwner
+ * AccountParties3.mmPrimaryOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties4#mmPrimaryOwner
+ * AccountParties4.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties2Choice#PrimaryOwner
- * AccountParties2Choice.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties2Choice#mmPrimaryOwner
+ * AccountParties2Choice.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties3Choice#PrimaryOwner
- * AccountParties3Choice.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties3Choice#mmPrimaryOwner
+ * AccountParties3Choice.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties4Choice#PrimaryOwner
- * AccountParties4Choice.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties4Choice#mmPrimaryOwner
+ * AccountParties4Choice.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties7Choice#PrimaryOwner
- * AccountParties7Choice.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties7Choice#mmPrimaryOwner
+ * AccountParties7Choice.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties6Choice#PrimaryOwner
- * AccountParties6Choice.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties6Choice#mmPrimaryOwner
+ * AccountParties6Choice.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties5Choice#PrimaryOwner
- * AccountParties5Choice.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties5Choice#mmPrimaryOwner
+ * AccountParties5Choice.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties9Choice#PrimaryOwner
- * AccountParties9Choice.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties9Choice#mmPrimaryOwner
+ * AccountParties9Choice.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties8Choice#PrimaryOwner
- * AccountParties8Choice.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties8Choice#mmPrimaryOwner
+ * AccountParties8Choice.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties11Choice#PrimaryOwner
- * AccountParties11Choice.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties11Choice#mmPrimaryOwner
+ * AccountParties11Choice.mmPrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountParties10Choice#PrimaryOwner
- * AccountParties10Choice.PrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountParties10Choice#mmPrimaryOwner
+ * AccountParties10Choice.mmPrimaryOwner}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -87,8 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,16 +108,16 @@ public class PrimaryOwner extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PrimaryOwner";
 				definition = "Single owner of the investment account or, when the ownership is split among several owners, the primary owner is the one giving its address and account details for the registration.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.PrimaryOwner, com.tools20022.repository.msg.AccountParties5.PrimaryOwner,
-						com.tools20022.repository.choice.AccountParties1Choice.PrimaryOwner, com.tools20022.repository.msg.AccountParties3.PrimaryOwner, com.tools20022.repository.msg.AccountParties4.PrimaryOwner,
-						com.tools20022.repository.choice.AccountParties2Choice.PrimaryOwner, com.tools20022.repository.choice.AccountParties3Choice.PrimaryOwner, com.tools20022.repository.choice.AccountParties4Choice.PrimaryOwner,
-						com.tools20022.repository.choice.AccountParties7Choice.PrimaryOwner, com.tools20022.repository.choice.AccountParties6Choice.PrimaryOwner, com.tools20022.repository.choice.AccountParties5Choice.PrimaryOwner,
-						com.tools20022.repository.choice.AccountParties9Choice.PrimaryOwner, com.tools20022.repository.choice.AccountParties8Choice.PrimaryOwner, com.tools20022.repository.choice.AccountParties11Choice.PrimaryOwner,
-						com.tools20022.repository.choice.AccountParties10Choice.PrimaryOwner);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmPrimaryOwner, com.tools20022.repository.msg.AccountParties5.mmPrimaryOwner,
+						com.tools20022.repository.choice.AccountParties1Choice.mmPrimaryOwner, com.tools20022.repository.msg.AccountParties3.mmPrimaryOwner, com.tools20022.repository.msg.AccountParties4.mmPrimaryOwner,
+						com.tools20022.repository.choice.AccountParties2Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties3Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties4Choice.mmPrimaryOwner,
+						com.tools20022.repository.choice.AccountParties7Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties6Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties5Choice.mmPrimaryOwner,
+						com.tools20022.repository.choice.AccountParties9Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties8Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties11Choice.mmPrimaryOwner,
+						com.tools20022.repository.choice.AccountParties10Choice.mmPrimaryOwner);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

@@ -43,44 +43,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ApplicationIdentification
- * AcceptorConfiguration.ApplicationIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationIdentification
+ * AcceptorConfiguration.mmApplicationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#FinancialCapture
- * AcceptorConfiguration.FinancialCapture}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmFinancialCapture
+ * AcceptorConfiguration.mmFinancialCapture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#BatchTransferContent
- * AcceptorConfiguration.BatchTransferContent}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmBatchTransferContent
+ * AcceptorConfiguration.mmBatchTransferContent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ExchangePolicy
- * AcceptorConfiguration.ExchangePolicy}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmExchangePolicy
+ * AcceptorConfiguration.mmExchangePolicy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#MaximumNumber
- * AcceptorConfiguration.MaximumNumber}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmMaximumNumber
+ * AcceptorConfiguration.mmMaximumNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#MaximumAmount
- * AcceptorConfiguration.MaximumAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmMaximumAmount
+ * AcceptorConfiguration.mmMaximumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ReconciliationByAcquirer
- * AcceptorConfiguration.ReconciliationByAcquirer}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmReconciliationByAcquirer
+ * AcceptorConfiguration.mmReconciliationByAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#TotalsPerCurrency
- * AcceptorConfiguration.TotalsPerCurrency}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTotalsPerCurrency
+ * AcceptorConfiguration.mmTotalsPerCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ProtectCardData
- * AcceptorConfiguration.ProtectCardData}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmProtectCardData
+ * AcceptorConfiguration.mmProtectCardData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#RetailerParameters
- * AcceptorConfiguration.RetailerParameters}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmRetailerParameters
+ * AcceptorConfiguration.mmRetailerParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ApplicationParameters
- * AcceptorConfiguration.ApplicationParameters}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationParameters
+ * AcceptorConfiguration.mmApplicationParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#TerminalManagementSystem
- * AcceptorConfiguration.TerminalManagementSystem}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmTerminalManagementSystem
+ * AcceptorConfiguration.mmTerminalManagementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ApplicationVersion
- * AcceptorConfiguration.ApplicationVersion}</li>
+ * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationVersion
+ * AcceptorConfiguration.mmApplicationVersion}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,8 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#AcceptorConfiguration
- * TerminalManagementSystem.AcceptorConfiguration}</li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAcceptorConfiguration
+ * TerminalManagementSystem.mmAcceptorConfiguration}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,63 +97,65 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters2#CompletionExchange
- * AcquirerProtocolParameters2.CompletionExchange}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters2#mmCompletionExchange
+ * AcquirerProtocolParameters2.mmCompletionExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#OnLineTransaction
- * AcquirerProtocolParameters1.OnLineTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmOnLineTransaction
+ * AcquirerProtocolParameters1.mmOnLineTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#OffLineTransaction
- * AcquirerProtocolParameters1.OffLineTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmOffLineTransaction
+ * AcquirerProtocolParameters1.mmOffLineTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#ReconciliationExchange
- * AcquirerProtocolParameters1.ReconciliationExchange}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmReconciliationExchange
+ * AcquirerProtocolParameters1.mmReconciliationExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent1#AcquirerProtocolParameters
- * AcceptorConfigurationContent1.AcquirerProtocolParameters}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorConfiguration1#DataSet
- * AcceptorConfiguration1.DataSet}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent1#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent1.mmAcquirerProtocolParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters4#CompletionExchange
- * AcquirerProtocolParameters4.CompletionExchange}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration1#mmDataSet
+ * AcceptorConfiguration1.mmDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#OnLineTransaction
- * AcquirerProtocolParameters3.OnLineTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters4#mmCompletionExchange
+ * AcquirerProtocolParameters4.mmCompletionExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#OffLineTransaction
- * AcquirerProtocolParameters3.OffLineTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmOnLineTransaction
+ * AcquirerProtocolParameters3.mmOnLineTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#ReconciliationExchange
- * AcquirerProtocolParameters3.ReconciliationExchange}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmOffLineTransaction
+ * AcquirerProtocolParameters3.mmOffLineTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent2#AcquirerProtocolParameters
- * AcceptorConfigurationContent2.AcquirerProtocolParameters}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorConfiguration2#DataSet
- * AcceptorConfiguration2.DataSet}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmReconciliationExchange
+ * AcquirerProtocolParameters3.mmReconciliationExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent3#AcquirerProtocolParameters
- * AcceptorConfigurationContent3.AcquirerProtocolParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent2#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent2.mmAcquirerProtocolParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#OnLineTransaction
- * AcquirerProtocolParameters6.OnLineTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration2#mmDataSet
+ * AcceptorConfiguration2.mmDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#OnLineTransaction
- * AcquirerProtocolParameters7.OnLineTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent3#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent3.mmAcquirerProtocolParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent4#AcquirerProtocolParameters
- * AcceptorConfigurationContent4.AcquirerProtocolParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmOnLineTransaction
+ * AcquirerProtocolParameters6.mmOnLineTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#OnLineTransaction
- * AcquirerProtocolParameters9.OnLineTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#mmOnLineTransaction
+ * AcquirerProtocolParameters7.mmOnLineTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#AcquirerProtocolParameters
- * AcceptorConfigurationContent5.AcquirerProtocolParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent4#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent4.mmAcquirerProtocolParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#AcquirerProtocolParameters
- * AcceptorConfigurationContent6.AcquirerProtocolParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#mmOnLineTransaction
+ * AcquirerProtocolParameters9.mmOnLineTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#OnLineTransaction
- * AcquirerProtocolParameters10.OnLineTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent5.mmAcquirerProtocolParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent6.mmAcquirerProtocolParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmOnLineTransaction
+ * AcquirerProtocolParameters10.mmOnLineTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -251,8 +253,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -267,6 +269,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorConfiguration {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text applicationIdentification;
 	/**
 	 * Identification of the payment application.
 	 * <p>
@@ -276,52 +279,52 @@ public class AcceptorConfiguration {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#ApplicationIdentification
-	 * AcquirerProtocolParameters1.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters1#ApplicationIdentification
-	 * ApplicationParameters1.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#ApplicationIdentification
-	 * AcquirerProtocolParameters3.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters2#ApplicationIdentification
-	 * ApplicationParameters2.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#ApplicationIdentification
-	 * AcquirerProtocolParameters6.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters3#ApplicationIdentification
-	 * ApplicationParameters3.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#ApplicationIdentification
-	 * AcquirerProtocolParameters7.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters4#ApplicationIdentification
-	 * ApplicationParameters4.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters5#ApplicationIdentification
-	 * ApplicationParameters5.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#ApplicationIdentification
-	 * AcquirerProtocolParameters9.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters6#ApplicationIdentification
-	 * ApplicationParameters6.ApplicationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#ApplicationIdentification
-	 * AcquirerProtocolParameters10.ApplicationIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmApplicationIdentification
+	 * AcquirerProtocolParameters1.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters1#mmApplicationIdentification
+	 * ApplicationParameters1.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmApplicationIdentification
+	 * AcquirerProtocolParameters3.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters2#mmApplicationIdentification
+	 * ApplicationParameters2.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmApplicationIdentification
+	 * AcquirerProtocolParameters6.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters3#mmApplicationIdentification
+	 * ApplicationParameters3.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#mmApplicationIdentification
+	 * AcquirerProtocolParameters7.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters4#mmApplicationIdentification
+	 * ApplicationParameters4.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters5#mmApplicationIdentification
+	 * ApplicationParameters5.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#mmApplicationIdentification
+	 * AcquirerProtocolParameters9.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters6#mmApplicationIdentification
+	 * ApplicationParameters6.mmApplicationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmApplicationIdentification
+	 * AcquirerProtocolParameters10.mmApplicationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -333,24 +336,25 @@ public class AcceptorConfiguration {
 	 * definition} = "Identification of the payment application."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ApplicationIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmApplicationIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters1.ApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters1.ApplicationIdentification,
-					com.tools20022.repository.msg.AcquirerProtocolParameters3.ApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters2.ApplicationIdentification,
-					com.tools20022.repository.msg.AcquirerProtocolParameters6.ApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters3.ApplicationIdentification,
-					com.tools20022.repository.msg.AcquirerProtocolParameters7.ApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters4.ApplicationIdentification,
-					com.tools20022.repository.msg.ApplicationParameters5.ApplicationIdentification, com.tools20022.repository.msg.AcquirerProtocolParameters9.ApplicationIdentification,
-					com.tools20022.repository.msg.ApplicationParameters6.ApplicationIdentification, com.tools20022.repository.msg.AcquirerProtocolParameters10.ApplicationIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters1.mmApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters1.mmApplicationIdentification,
+					com.tools20022.repository.msg.AcquirerProtocolParameters3.mmApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters2.mmApplicationIdentification,
+					com.tools20022.repository.msg.AcquirerProtocolParameters6.mmApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters3.mmApplicationIdentification,
+					com.tools20022.repository.msg.AcquirerProtocolParameters7.mmApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters4.mmApplicationIdentification,
+					com.tools20022.repository.msg.ApplicationParameters5.mmApplicationIdentification, com.tools20022.repository.msg.AcquirerProtocolParameters9.mmApplicationIdentification,
+					com.tools20022.repository.msg.ApplicationParameters6.mmApplicationIdentification, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmApplicationIdentification);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ApplicationIdentification";
 			definition = "Identification of the payment application.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected FinancialCaptureCode financialCapture;
 	/**
 	 * Mode for the financial capture of the transaction by the acquirer.
 	 * <p>
@@ -361,28 +365,28 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FinancialCaptureCode
 	 * FinancialCaptureCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters2#FinancialCapture
-	 * AcquirerProtocolParameters2.FinancialCapture}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters4#FinancialCapture
-	 * AcquirerProtocolParameters4.FinancialCapture}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters5#FinancialCapture
-	 * AcquirerProtocolParameters5.FinancialCapture}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters8#FinancialCapture
-	 * AcquirerProtocolParameters8.FinancialCapture}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters2#mmFinancialCapture
+	 * AcquirerProtocolParameters2.mmFinancialCapture}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters4#mmFinancialCapture
+	 * AcquirerProtocolParameters4.mmFinancialCapture}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters5#mmFinancialCapture
+	 * AcquirerProtocolParameters5.mmFinancialCapture}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters8#mmFinancialCapture
+	 * AcquirerProtocolParameters8.mmFinancialCapture}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -395,20 +399,21 @@ public class AcceptorConfiguration {
 	 * "Mode for the financial capture of the transaction by the acquirer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FinancialCapture = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFinancialCapture = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters2.FinancialCapture, com.tools20022.repository.msg.AcquirerProtocolParameters4.FinancialCapture,
-					com.tools20022.repository.msg.AcquirerProtocolParameters5.FinancialCapture, com.tools20022.repository.msg.AcquirerProtocolParameters8.FinancialCapture);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters2.mmFinancialCapture, com.tools20022.repository.msg.AcquirerProtocolParameters4.mmFinancialCapture,
+					com.tools20022.repository.msg.AcquirerProtocolParameters5.mmFinancialCapture, com.tools20022.repository.msg.AcquirerProtocolParameters8.mmFinancialCapture);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FinancialCapture";
 			definition = "Mode for the financial capture of the transaction by the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FinancialCaptureCode.mmObject();
 		}
 	};
+	protected BatchTransactionTypeCode batchTransferContent;
 	/**
 	 * Types of transaction to include in the batch.
 	 * <p>
@@ -419,46 +424,46 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode
 	 * BatchTransactionTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters2#BatchTransfer
-	 * AcquirerProtocolParameters2.BatchTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#BatchTransferContent
-	 * AcquirerProtocolParameters1.BatchTransferContent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters4#BatchTransfer
-	 * AcquirerProtocolParameters4.BatchTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#BatchTransferContent
-	 * AcquirerProtocolParameters3.BatchTransferContent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#BatchTransferContent
-	 * AcquirerProtocolParameters6.BatchTransferContent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters5#BatchTransfer
-	 * AcquirerProtocolParameters5.BatchTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#BatchTransferContent
-	 * AcquirerProtocolParameters7.BatchTransferContent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters8#BatchTransfer
-	 * AcquirerProtocolParameters8.BatchTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#BatchTransferContent
-	 * AcquirerProtocolParameters9.BatchTransferContent}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#BatchTransferContent
-	 * AcquirerProtocolParameters10.BatchTransferContent}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters2#mmBatchTransfer
+	 * AcquirerProtocolParameters2.mmBatchTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmBatchTransferContent
+	 * AcquirerProtocolParameters1.mmBatchTransferContent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters4#mmBatchTransfer
+	 * AcquirerProtocolParameters4.mmBatchTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmBatchTransferContent
+	 * AcquirerProtocolParameters3.mmBatchTransferContent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmBatchTransferContent
+	 * AcquirerProtocolParameters6.mmBatchTransferContent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters5#mmBatchTransfer
+	 * AcquirerProtocolParameters5.mmBatchTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#mmBatchTransferContent
+	 * AcquirerProtocolParameters7.mmBatchTransferContent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters8#mmBatchTransfer
+	 * AcquirerProtocolParameters8.mmBatchTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#mmBatchTransferContent
+	 * AcquirerProtocolParameters9.mmBatchTransferContent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmBatchTransferContent
+	 * AcquirerProtocolParameters10.mmBatchTransferContent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -470,23 +475,24 @@ public class AcceptorConfiguration {
 	 * definition} = "Types of transaction to include in the batch."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BatchTransferContent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBatchTransferContent = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters2.BatchTransfer, com.tools20022.repository.msg.AcquirerProtocolParameters1.BatchTransferContent,
-					com.tools20022.repository.msg.AcquirerProtocolParameters4.BatchTransfer, com.tools20022.repository.msg.AcquirerProtocolParameters3.BatchTransferContent,
-					com.tools20022.repository.msg.AcquirerProtocolParameters6.BatchTransferContent, com.tools20022.repository.msg.AcquirerProtocolParameters5.BatchTransfer,
-					com.tools20022.repository.msg.AcquirerProtocolParameters7.BatchTransferContent, com.tools20022.repository.msg.AcquirerProtocolParameters8.BatchTransfer,
-					com.tools20022.repository.msg.AcquirerProtocolParameters9.BatchTransferContent, com.tools20022.repository.msg.AcquirerProtocolParameters10.BatchTransferContent);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters2.mmBatchTransfer, com.tools20022.repository.msg.AcquirerProtocolParameters1.mmBatchTransferContent,
+					com.tools20022.repository.msg.AcquirerProtocolParameters4.mmBatchTransfer, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmBatchTransferContent,
+					com.tools20022.repository.msg.AcquirerProtocolParameters6.mmBatchTransferContent, com.tools20022.repository.msg.AcquirerProtocolParameters5.mmBatchTransfer,
+					com.tools20022.repository.msg.AcquirerProtocolParameters7.mmBatchTransferContent, com.tools20022.repository.msg.AcquirerProtocolParameters8.mmBatchTransfer,
+					com.tools20022.repository.msg.AcquirerProtocolParameters9.mmBatchTransferContent, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmBatchTransferContent);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BatchTransferContent";
 			definition = "Types of transaction to include in the batch.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BatchTransactionTypeCode.mmObject();
 		}
 	};
+	protected ExchangePolicyCode exchangePolicy;
 	/**
 	 * Exchange policy between parties.
 	 * <p>
@@ -497,37 +503,37 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExchangePolicyCode
 	 * ExchangePolicyCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration1#ExchangePolicy
-	 * ExchangeConfiguration1.ExchangePolicy}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#ExchangePolicy
-	 * ExchangeConfiguration2.ExchangePolicy}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration3#ExchangePolicy
-	 * ExchangeConfiguration3.ExchangePolicy}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration5#ExchangePolicy
-	 * ExchangeConfiguration5.ExchangePolicy}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#ExchangePolicy
-	 * ExchangeConfiguration4.ExchangePolicy}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration6#ExchangePolicy
-	 * ExchangeConfiguration6.ExchangePolicy}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration7#ExchangePolicy
-	 * ExchangeConfiguration7.ExchangePolicy}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration1#mmExchangePolicy
+	 * ExchangeConfiguration1.mmExchangePolicy}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#mmExchangePolicy
+	 * ExchangeConfiguration2.mmExchangePolicy}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration3#mmExchangePolicy
+	 * ExchangeConfiguration3.mmExchangePolicy}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration5#mmExchangePolicy
+	 * ExchangeConfiguration5.mmExchangePolicy}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#mmExchangePolicy
+	 * ExchangeConfiguration4.mmExchangePolicy}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration6#mmExchangePolicy
+	 * ExchangeConfiguration6.mmExchangePolicy}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration7#mmExchangePolicy
+	 * ExchangeConfiguration7.mmExchangePolicy}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -539,21 +545,22 @@ public class AcceptorConfiguration {
 	 * definition} = "Exchange policy between parties."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ExchangePolicy = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmExchangePolicy = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration1.ExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration2.ExchangePolicy,
-					com.tools20022.repository.msg.ExchangeConfiguration3.ExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration5.ExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration4.ExchangePolicy,
-					com.tools20022.repository.msg.ExchangeConfiguration6.ExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration7.ExchangePolicy);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration1.mmExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration2.mmExchangePolicy,
+					com.tools20022.repository.msg.ExchangeConfiguration3.mmExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration5.mmExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration4.mmExchangePolicy,
+					com.tools20022.repository.msg.ExchangeConfiguration6.mmExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration7.mmExchangePolicy);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExchangePolicy";
 			definition = "Exchange policy between parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExchangePolicyCode.mmObject();
 		}
 	};
+	protected Number maximumNumber;
 	/**
 	 * Maximum number of transactions without exchange.
 	 * <p>
@@ -563,37 +570,37 @@ public class AcceptorConfiguration {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Number
 	 * Number}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration1#MaximumNumber
-	 * ExchangeConfiguration1.MaximumNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#MaximumNumber
-	 * ExchangeConfiguration2.MaximumNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration3#MaximumNumber
-	 * ExchangeConfiguration3.MaximumNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration5#MaximumNumber
-	 * ExchangeConfiguration5.MaximumNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#MaximumNumber
-	 * ExchangeConfiguration4.MaximumNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration6#MaximumNumber
-	 * ExchangeConfiguration6.MaximumNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration7#MaximumNumber
-	 * ExchangeConfiguration7.MaximumNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration1#mmMaximumNumber
+	 * ExchangeConfiguration1.mmMaximumNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#mmMaximumNumber
+	 * ExchangeConfiguration2.mmMaximumNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration3#mmMaximumNumber
+	 * ExchangeConfiguration3.mmMaximumNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration5#mmMaximumNumber
+	 * ExchangeConfiguration5.mmMaximumNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#mmMaximumNumber
+	 * ExchangeConfiguration4.mmMaximumNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration6#mmMaximumNumber
+	 * ExchangeConfiguration6.mmMaximumNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration7#mmMaximumNumber
+	 * ExchangeConfiguration7.mmMaximumNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -605,21 +612,22 @@ public class AcceptorConfiguration {
 	 * definition} = "Maximum number of transactions without exchange."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MaximumNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMaximumNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration1.MaximumNumber, com.tools20022.repository.msg.ExchangeConfiguration2.MaximumNumber,
-					com.tools20022.repository.msg.ExchangeConfiguration3.MaximumNumber, com.tools20022.repository.msg.ExchangeConfiguration5.MaximumNumber, com.tools20022.repository.msg.ExchangeConfiguration4.MaximumNumber,
-					com.tools20022.repository.msg.ExchangeConfiguration6.MaximumNumber, com.tools20022.repository.msg.ExchangeConfiguration7.MaximumNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration1.mmMaximumNumber, com.tools20022.repository.msg.ExchangeConfiguration2.mmMaximumNumber,
+					com.tools20022.repository.msg.ExchangeConfiguration3.mmMaximumNumber, com.tools20022.repository.msg.ExchangeConfiguration5.mmMaximumNumber, com.tools20022.repository.msg.ExchangeConfiguration4.mmMaximumNumber,
+					com.tools20022.repository.msg.ExchangeConfiguration6.mmMaximumNumber, com.tools20022.repository.msg.ExchangeConfiguration7.mmMaximumNumber);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumNumber";
 			definition = "Maximum number of transactions without exchange.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount maximumAmount;
 	/**
 	 * Maximum cumulative amount of the transactions without exchange.
 	 * <p>
@@ -630,37 +638,37 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ImpliedCurrencyAndAmount
 	 * ImpliedCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration1#MaximumAmount
-	 * ExchangeConfiguration1.MaximumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#MaximumAmount
-	 * ExchangeConfiguration2.MaximumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration3#MaximumAmount
-	 * ExchangeConfiguration3.MaximumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration5#MaximumAmount
-	 * ExchangeConfiguration5.MaximumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#MaximumAmount
-	 * ExchangeConfiguration4.MaximumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration6#MaximumAmount
-	 * ExchangeConfiguration6.MaximumAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration7#MaximumAmount
-	 * ExchangeConfiguration7.MaximumAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration1#mmMaximumAmount
+	 * ExchangeConfiguration1.mmMaximumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration2#mmMaximumAmount
+	 * ExchangeConfiguration2.mmMaximumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration3#mmMaximumAmount
+	 * ExchangeConfiguration3.mmMaximumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration5#mmMaximumAmount
+	 * ExchangeConfiguration5.mmMaximumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration4#mmMaximumAmount
+	 * ExchangeConfiguration4.mmMaximumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration6#mmMaximumAmount
+	 * ExchangeConfiguration6.mmMaximumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeConfiguration7#mmMaximumAmount
+	 * ExchangeConfiguration7.mmMaximumAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -673,21 +681,22 @@ public class AcceptorConfiguration {
 	 * "Maximum cumulative amount of the transactions without exchange."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MaximumAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMaximumAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration1.MaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration2.MaximumAmount,
-					com.tools20022.repository.msg.ExchangeConfiguration3.MaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration5.MaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration4.MaximumAmount,
-					com.tools20022.repository.msg.ExchangeConfiguration6.MaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration7.MaximumAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration1.mmMaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration2.mmMaximumAmount,
+					com.tools20022.repository.msg.ExchangeConfiguration3.mmMaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration5.mmMaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration4.mmMaximumAmount,
+					com.tools20022.repository.msg.ExchangeConfiguration6.mmMaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration7.mmMaximumAmount);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum cumulative amount of the transactions without exchange.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected TrueFalseIndicator reconciliationByAcquirer;
 	/**
 	 * Indicates the reconciliation period is assigned by the acquirer instead
 	 * of the acceptor.
@@ -699,34 +708,34 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#ReconciliationByAcquirer
-	 * AcquirerProtocolParameters1.ReconciliationByAcquirer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#ReconciliationByAcquirer
-	 * AcquirerProtocolParameters3.ReconciliationByAcquirer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#ReconciliationByAcquirer
-	 * AcquirerProtocolParameters6.ReconciliationByAcquirer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#ReconciliationByAcquirer
-	 * AcquirerProtocolParameters7.ReconciliationByAcquirer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#ReconciliationByAcquirer
-	 * AcquirerProtocolParameters9.ReconciliationByAcquirer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#ReconciliationByAcquirer
-	 * AcquirerProtocolParameters10.ReconciliationByAcquirer}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmReconciliationByAcquirer
+	 * AcquirerProtocolParameters1.mmReconciliationByAcquirer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmReconciliationByAcquirer
+	 * AcquirerProtocolParameters3.mmReconciliationByAcquirer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmReconciliationByAcquirer
+	 * AcquirerProtocolParameters6.mmReconciliationByAcquirer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#mmReconciliationByAcquirer
+	 * AcquirerProtocolParameters7.mmReconciliationByAcquirer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#mmReconciliationByAcquirer
+	 * AcquirerProtocolParameters9.mmReconciliationByAcquirer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmReconciliationByAcquirer
+	 * AcquirerProtocolParameters10.mmReconciliationByAcquirer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -740,21 +749,22 @@ public class AcceptorConfiguration {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ReconciliationByAcquirer = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmReconciliationByAcquirer = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters1.ReconciliationByAcquirer, com.tools20022.repository.msg.AcquirerProtocolParameters3.ReconciliationByAcquirer,
-					com.tools20022.repository.msg.AcquirerProtocolParameters6.ReconciliationByAcquirer, com.tools20022.repository.msg.AcquirerProtocolParameters7.ReconciliationByAcquirer,
-					com.tools20022.repository.msg.AcquirerProtocolParameters9.ReconciliationByAcquirer, com.tools20022.repository.msg.AcquirerProtocolParameters10.ReconciliationByAcquirer);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters1.mmReconciliationByAcquirer, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmReconciliationByAcquirer,
+					com.tools20022.repository.msg.AcquirerProtocolParameters6.mmReconciliationByAcquirer, com.tools20022.repository.msg.AcquirerProtocolParameters7.mmReconciliationByAcquirer,
+					com.tools20022.repository.msg.AcquirerProtocolParameters9.mmReconciliationByAcquirer, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmReconciliationByAcquirer);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ReconciliationByAcquirer";
 			definition = "Indicates the reconciliation period is assigned by the acquirer instead of the acceptor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator totalsPerCurrency;
 	/**
 	 * Indicates the reconciliation total amounts are computed per currency.
 	 * <p>
@@ -765,34 +775,34 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#TotalsPerCurrency
-	 * AcquirerProtocolParameters1.TotalsPerCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#TotalsPerCurrency
-	 * AcquirerProtocolParameters3.TotalsPerCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#TotalsPerCurrency
-	 * AcquirerProtocolParameters6.TotalsPerCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#TotalsPerCurrency
-	 * AcquirerProtocolParameters7.TotalsPerCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#TotalsPerCurrency
-	 * AcquirerProtocolParameters9.TotalsPerCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#TotalsPerCurrency
-	 * AcquirerProtocolParameters10.TotalsPerCurrency}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmTotalsPerCurrency
+	 * AcquirerProtocolParameters1.mmTotalsPerCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmTotalsPerCurrency
+	 * AcquirerProtocolParameters3.mmTotalsPerCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmTotalsPerCurrency
+	 * AcquirerProtocolParameters6.mmTotalsPerCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#mmTotalsPerCurrency
+	 * AcquirerProtocolParameters7.mmTotalsPerCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#mmTotalsPerCurrency
+	 * AcquirerProtocolParameters9.mmTotalsPerCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmTotalsPerCurrency
+	 * AcquirerProtocolParameters10.mmTotalsPerCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -805,21 +815,22 @@ public class AcceptorConfiguration {
 	 * "Indicates the reconciliation total amounts are computed per currency."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TotalsPerCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTotalsPerCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters1.TotalsPerCurrency, com.tools20022.repository.msg.AcquirerProtocolParameters3.TotalsPerCurrency,
-					com.tools20022.repository.msg.AcquirerProtocolParameters6.TotalsPerCurrency, com.tools20022.repository.msg.AcquirerProtocolParameters7.TotalsPerCurrency,
-					com.tools20022.repository.msg.AcquirerProtocolParameters9.TotalsPerCurrency, com.tools20022.repository.msg.AcquirerProtocolParameters10.TotalsPerCurrency);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters1.mmTotalsPerCurrency, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmTotalsPerCurrency,
+					com.tools20022.repository.msg.AcquirerProtocolParameters6.mmTotalsPerCurrency, com.tools20022.repository.msg.AcquirerProtocolParameters7.mmTotalsPerCurrency,
+					com.tools20022.repository.msg.AcquirerProtocolParameters9.mmTotalsPerCurrency, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmTotalsPerCurrency);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalsPerCurrency";
 			definition = "Indicates the reconciliation total amounts are computed per currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator protectCardData;
 	/**
 	 * Indicator to require protection of sensitive card data in messages.
 	 * <p>
@@ -830,34 +841,34 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
 	 * TrueFalseIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#ProtectCardData
-	 * AcquirerProtocolParameters1.ProtectCardData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#ProtectCardData
-	 * AcquirerProtocolParameters3.ProtectCardData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#ProtectCardData
-	 * AcquirerProtocolParameters6.ProtectCardData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#ProtectCardData
-	 * AcquirerProtocolParameters7.ProtectCardData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#ProtectCardData
-	 * AcquirerProtocolParameters9.ProtectCardData}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#ProtectCardData
-	 * AcquirerProtocolParameters10.ProtectCardData}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmProtectCardData
+	 * AcquirerProtocolParameters1.mmProtectCardData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmProtectCardData
+	 * AcquirerProtocolParameters3.mmProtectCardData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmProtectCardData
+	 * AcquirerProtocolParameters6.mmProtectCardData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#mmProtectCardData
+	 * AcquirerProtocolParameters7.mmProtectCardData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#mmProtectCardData
+	 * AcquirerProtocolParameters9.mmProtectCardData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmProtectCardData
+	 * AcquirerProtocolParameters10.mmProtectCardData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -870,21 +881,22 @@ public class AcceptorConfiguration {
 	 * "Indicator to require protection of sensitive card data in messages."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ProtectCardData = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmProtectCardData = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters1.ProtectCardData, com.tools20022.repository.msg.AcquirerProtocolParameters3.ProtectCardData,
-					com.tools20022.repository.msg.AcquirerProtocolParameters6.ProtectCardData, com.tools20022.repository.msg.AcquirerProtocolParameters7.ProtectCardData,
-					com.tools20022.repository.msg.AcquirerProtocolParameters9.ProtectCardData, com.tools20022.repository.msg.AcquirerProtocolParameters10.ProtectCardData);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters1.mmProtectCardData, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmProtectCardData,
+					com.tools20022.repository.msg.AcquirerProtocolParameters6.mmProtectCardData, com.tools20022.repository.msg.AcquirerProtocolParameters7.mmProtectCardData,
+					com.tools20022.repository.msg.AcquirerProtocolParameters9.mmProtectCardData, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmProtectCardData);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ProtectCardData";
 			definition = "Indicator to require protection of sensitive card data in messages.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Max10000Binary retailerParameters;
 	/**
 	 * Acceptor parameters dedicated to the retailer.
 	 * <p>
@@ -895,25 +907,25 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max10000Binary
 	 * Max10000Binary}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent1#MerchantParameters
-	 * AcceptorConfigurationContent1.MerchantParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent2#MerchantParameters
-	 * AcceptorConfigurationContent2.MerchantParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent3#MerchantParameters
-	 * AcceptorConfigurationContent3.MerchantParameters}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent1#mmMerchantParameters
+	 * AcceptorConfigurationContent1.mmMerchantParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent2#mmMerchantParameters
+	 * AcceptorConfigurationContent2.mmMerchantParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent3#mmMerchantParameters
+	 * AcceptorConfigurationContent3.mmMerchantParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -925,20 +937,21 @@ public class AcceptorConfiguration {
 	 * definition} = "Acceptor parameters dedicated to the retailer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RetailerParameters = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRetailerParameters = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent1.MerchantParameters, com.tools20022.repository.msg.AcceptorConfigurationContent2.MerchantParameters,
-					com.tools20022.repository.msg.AcceptorConfigurationContent3.MerchantParameters);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent1.mmMerchantParameters, com.tools20022.repository.msg.AcceptorConfigurationContent2.mmMerchantParameters,
+					com.tools20022.repository.msg.AcceptorConfigurationContent3.mmMerchantParameters);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RetailerParameters";
 			definition = "Acceptor parameters dedicated to the retailer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
+	protected Max10000Binary applicationParameters;
 	/**
 	 * Configuration parameters attached to the payment application.
 	 * <p>
@@ -949,34 +962,34 @@ public class AcceptorConfiguration {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Max10000Binary
 	 * Max10000Binary}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent1#ApplicationParameters
-	 * AcceptorConfigurationContent1.ApplicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent2#ApplicationParameters
-	 * AcceptorConfigurationContent2.ApplicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent3#ApplicationParameters
-	 * AcceptorConfigurationContent3.ApplicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent4#ApplicationParameters
-	 * AcceptorConfigurationContent4.ApplicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#ApplicationParameters
-	 * AcceptorConfigurationContent5.ApplicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#ApplicationParameters
-	 * AcceptorConfigurationContent6.ApplicationParameters}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent1#mmApplicationParameters
+	 * AcceptorConfigurationContent1.mmApplicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent2#mmApplicationParameters
+	 * AcceptorConfigurationContent2.mmApplicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent3#mmApplicationParameters
+	 * AcceptorConfigurationContent3.mmApplicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent4#mmApplicationParameters
+	 * AcceptorConfigurationContent4.mmApplicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmApplicationParameters
+	 * AcceptorConfigurationContent5.mmApplicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmApplicationParameters
+	 * AcceptorConfigurationContent6.mmApplicationParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -989,21 +1002,22 @@ public class AcceptorConfiguration {
 	 * "Configuration parameters attached to the payment application."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ApplicationParameters = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmApplicationParameters = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent1.ApplicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent2.ApplicationParameters,
-					com.tools20022.repository.msg.AcceptorConfigurationContent3.ApplicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent4.ApplicationParameters,
-					com.tools20022.repository.msg.AcceptorConfigurationContent5.ApplicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent6.ApplicationParameters);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent1.mmApplicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent2.mmApplicationParameters,
+					com.tools20022.repository.msg.AcceptorConfigurationContent3.mmApplicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent4.mmApplicationParameters,
+					com.tools20022.repository.msg.AcceptorConfigurationContent5.mmApplicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent6.mmApplicationParameters);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ApplicationParameters";
 			definition = "Configuration parameters attached to the payment application.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
+	protected TerminalManagementSystem terminalManagementSystem;
 	/**
 	 * Terminal management system for which an acceptor configuration is
 	 * provided.
@@ -1013,8 +1027,8 @@ public class AcceptorConfiguration {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#AcceptorConfiguration
-	 * TerminalManagementSystem.AcceptorConfiguration}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAcceptorConfiguration
+	 * TerminalManagementSystem.mmAcceptorConfiguration}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1023,52 +1037,52 @@ public class AcceptorConfiguration {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem
 	 * TerminalManagementSystem}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#Host
-	 * AcquirerProtocolParameters1.Host}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent1#HostCommunicationParameters
-	 * AcceptorConfigurationContent1.HostCommunicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#Host
-	 * AcquirerProtocolParameters3.Host}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent2#HostCommunicationParameters
-	 * AcceptorConfigurationContent2.HostCommunicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent3#HostCommunicationParameters
-	 * AcceptorConfigurationContent3.HostCommunicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#Host
-	 * AcquirerProtocolParameters6.Host}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#Host
-	 * AcquirerProtocolParameters7.Host}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent4#HostCommunicationParameters
-	 * AcceptorConfigurationContent4.HostCommunicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#Host
-	 * AcquirerProtocolParameters9.Host}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#HostCommunicationParameters
-	 * AcceptorConfigurationContent5.HostCommunicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#HostCommunicationParameters
-	 * AcceptorConfigurationContent6.HostCommunicationParameters}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#Host
-	 * AcquirerProtocolParameters10.Host}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration
 	 * AcceptorConfiguration}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmHost
+	 * AcquirerProtocolParameters1.mmHost}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent1#mmHostCommunicationParameters
+	 * AcceptorConfigurationContent1.mmHostCommunicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmHost
+	 * AcquirerProtocolParameters3.mmHost}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent2#mmHostCommunicationParameters
+	 * AcceptorConfigurationContent2.mmHostCommunicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent3#mmHostCommunicationParameters
+	 * AcceptorConfigurationContent3.mmHostCommunicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmHost
+	 * AcquirerProtocolParameters6.mmHost}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#mmHost
+	 * AcquirerProtocolParameters7.mmHost}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent4#mmHostCommunicationParameters
+	 * AcceptorConfigurationContent4.mmHostCommunicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#mmHost
+	 * AcquirerProtocolParameters9.mmHost}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmHostCommunicationParameters
+	 * AcceptorConfigurationContent5.mmHostCommunicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmHostCommunicationParameters
+	 * AcceptorConfigurationContent6.mmHostCommunicationParameters}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmHost
+	 * AcquirerProtocolParameters10.mmHost}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1082,26 +1096,27 @@ public class AcceptorConfiguration {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TerminalManagementSystem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTerminalManagementSystem = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters1.Host, com.tools20022.repository.msg.AcceptorConfigurationContent1.HostCommunicationParameters,
-					com.tools20022.repository.msg.AcquirerProtocolParameters3.Host, com.tools20022.repository.msg.AcceptorConfigurationContent2.HostCommunicationParameters,
-					com.tools20022.repository.msg.AcceptorConfigurationContent3.HostCommunicationParameters, com.tools20022.repository.msg.AcquirerProtocolParameters6.Host, com.tools20022.repository.msg.AcquirerProtocolParameters7.Host,
-					com.tools20022.repository.msg.AcceptorConfigurationContent4.HostCommunicationParameters, com.tools20022.repository.msg.AcquirerProtocolParameters9.Host,
-					com.tools20022.repository.msg.AcceptorConfigurationContent5.HostCommunicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent6.HostCommunicationParameters,
-					com.tools20022.repository.msg.AcquirerProtocolParameters10.Host);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters1.mmHost, com.tools20022.repository.msg.AcceptorConfigurationContent1.mmHostCommunicationParameters,
+					com.tools20022.repository.msg.AcquirerProtocolParameters3.mmHost, com.tools20022.repository.msg.AcceptorConfigurationContent2.mmHostCommunicationParameters,
+					com.tools20022.repository.msg.AcceptorConfigurationContent3.mmHostCommunicationParameters, com.tools20022.repository.msg.AcquirerProtocolParameters6.mmHost,
+					com.tools20022.repository.msg.AcquirerProtocolParameters7.mmHost, com.tools20022.repository.msg.AcceptorConfigurationContent4.mmHostCommunicationParameters,
+					com.tools20022.repository.msg.AcquirerProtocolParameters9.mmHost, com.tools20022.repository.msg.AcceptorConfigurationContent5.mmHostCommunicationParameters,
+					com.tools20022.repository.msg.AcceptorConfigurationContent6.mmHostCommunicationParameters, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmHost);
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TerminalManagementSystem";
 			definition = "Terminal management system for which an acceptor configuration is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.AcceptorConfiguration;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmAcceptorConfiguration;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
 		}
 	};
+	protected Max35Text applicationVersion;
 	/**
 	 * Version of the application.
 	 * <p>
@@ -1127,15 +1142,15 @@ public class AcceptorConfiguration {
 	 * definition} = "Version of the application."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ApplicationVersion = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmApplicationVersion = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> AcceptorConfiguration.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ApplicationVersion";
 			definition = "Version of the application.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -1143,28 +1158,28 @@ public class AcceptorConfiguration {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfiguration";
 				definition = "Acceptor parameters to be downloaded from the terminal management system.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TerminalManagementSystem.AcceptorConfiguration);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters2.CompletionExchange, com.tools20022.repository.msg.AcquirerProtocolParameters1.OnLineTransaction,
-						com.tools20022.repository.msg.AcquirerProtocolParameters1.OffLineTransaction, com.tools20022.repository.msg.AcquirerProtocolParameters1.ReconciliationExchange,
-						com.tools20022.repository.msg.AcceptorConfigurationContent1.AcquirerProtocolParameters, com.tools20022.repository.msg.AcceptorConfiguration1.DataSet,
-						com.tools20022.repository.msg.AcquirerProtocolParameters4.CompletionExchange, com.tools20022.repository.msg.AcquirerProtocolParameters3.OnLineTransaction,
-						com.tools20022.repository.msg.AcquirerProtocolParameters3.OffLineTransaction, com.tools20022.repository.msg.AcquirerProtocolParameters3.ReconciliationExchange,
-						com.tools20022.repository.msg.AcceptorConfigurationContent2.AcquirerProtocolParameters, com.tools20022.repository.msg.AcceptorConfiguration2.DataSet,
-						com.tools20022.repository.msg.AcceptorConfigurationContent3.AcquirerProtocolParameters, com.tools20022.repository.msg.AcquirerProtocolParameters6.OnLineTransaction,
-						com.tools20022.repository.msg.AcquirerProtocolParameters7.OnLineTransaction, com.tools20022.repository.msg.AcceptorConfigurationContent4.AcquirerProtocolParameters,
-						com.tools20022.repository.msg.AcquirerProtocolParameters9.OnLineTransaction, com.tools20022.repository.msg.AcceptorConfigurationContent5.AcquirerProtocolParameters,
-						com.tools20022.repository.msg.AcceptorConfigurationContent6.AcquirerProtocolParameters, com.tools20022.repository.msg.AcquirerProtocolParameters10.OnLineTransaction);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AcceptorConfiguration.ApplicationIdentification, com.tools20022.repository.entity.AcceptorConfiguration.FinancialCapture,
-						com.tools20022.repository.entity.AcceptorConfiguration.BatchTransferContent, com.tools20022.repository.entity.AcceptorConfiguration.ExchangePolicy,
-						com.tools20022.repository.entity.AcceptorConfiguration.MaximumNumber, com.tools20022.repository.entity.AcceptorConfiguration.MaximumAmount,
-						com.tools20022.repository.entity.AcceptorConfiguration.ReconciliationByAcquirer, com.tools20022.repository.entity.AcceptorConfiguration.TotalsPerCurrency,
-						com.tools20022.repository.entity.AcceptorConfiguration.ProtectCardData, com.tools20022.repository.entity.AcceptorConfiguration.RetailerParameters,
-						com.tools20022.repository.entity.AcceptorConfiguration.ApplicationParameters, com.tools20022.repository.entity.AcceptorConfiguration.TerminalManagementSystem,
-						com.tools20022.repository.entity.AcceptorConfiguration.ApplicationVersion);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TerminalManagementSystem.mmAcceptorConfiguration);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters2.mmCompletionExchange, com.tools20022.repository.msg.AcquirerProtocolParameters1.mmOnLineTransaction,
+						com.tools20022.repository.msg.AcquirerProtocolParameters1.mmOffLineTransaction, com.tools20022.repository.msg.AcquirerProtocolParameters1.mmReconciliationExchange,
+						com.tools20022.repository.msg.AcceptorConfigurationContent1.mmAcquirerProtocolParameters, com.tools20022.repository.msg.AcceptorConfiguration1.mmDataSet,
+						com.tools20022.repository.msg.AcquirerProtocolParameters4.mmCompletionExchange, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmOnLineTransaction,
+						com.tools20022.repository.msg.AcquirerProtocolParameters3.mmOffLineTransaction, com.tools20022.repository.msg.AcquirerProtocolParameters3.mmReconciliationExchange,
+						com.tools20022.repository.msg.AcceptorConfigurationContent2.mmAcquirerProtocolParameters, com.tools20022.repository.msg.AcceptorConfiguration2.mmDataSet,
+						com.tools20022.repository.msg.AcceptorConfigurationContent3.mmAcquirerProtocolParameters, com.tools20022.repository.msg.AcquirerProtocolParameters6.mmOnLineTransaction,
+						com.tools20022.repository.msg.AcquirerProtocolParameters7.mmOnLineTransaction, com.tools20022.repository.msg.AcceptorConfigurationContent4.mmAcquirerProtocolParameters,
+						com.tools20022.repository.msg.AcquirerProtocolParameters9.mmOnLineTransaction, com.tools20022.repository.msg.AcceptorConfigurationContent5.mmAcquirerProtocolParameters,
+						com.tools20022.repository.msg.AcceptorConfigurationContent6.mmAcquirerProtocolParameters, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmOnLineTransaction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationIdentification, com.tools20022.repository.entity.AcceptorConfiguration.mmFinancialCapture,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmBatchTransferContent, com.tools20022.repository.entity.AcceptorConfiguration.mmExchangePolicy,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmMaximumNumber, com.tools20022.repository.entity.AcceptorConfiguration.mmMaximumAmount,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmReconciliationByAcquirer, com.tools20022.repository.entity.AcceptorConfiguration.mmTotalsPerCurrency,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmProtectCardData, com.tools20022.repository.entity.AcceptorConfiguration.mmRetailerParameters,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationParameters, com.tools20022.repository.entity.AcceptorConfiguration.mmTerminalManagementSystem,
+						com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationVersion);
 				derivationComponent_lazy = () -> Arrays.asList(TerminalManagementDataSet2.mmObject(), TerminalManagementDataSet1.mmObject(), ExchangeConfiguration1.mmObject(), AcquirerProtocolParameters2.mmObject(),
 						AcquirerProtocolParameters1.mmObject(), ApplicationParameters1.mmObject(), AcceptorConfigurationContent1.mmObject(), TerminalManagementDataSet3.mmObject(), AcceptorConfiguration1.mmObject(),
 						ExchangeConfiguration2.mmObject(), ExchangeConfiguration3.mmObject(), AcquirerProtocolParameters4.mmObject(), AcquirerProtocolParameters3.mmObject(), ApplicationParameters2.mmObject(),
@@ -1177,5 +1192,109 @@ public class AcceptorConfiguration {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getApplicationIdentification() {
+		return applicationIdentification;
+	}
+
+	public void setApplicationIdentification(Max35Text applicationIdentification) {
+		this.applicationIdentification = applicationIdentification;
+	}
+
+	public FinancialCaptureCode getFinancialCapture() {
+		return financialCapture;
+	}
+
+	public void setFinancialCapture(FinancialCaptureCode financialCapture) {
+		this.financialCapture = financialCapture;
+	}
+
+	public BatchTransactionTypeCode getBatchTransferContent() {
+		return batchTransferContent;
+	}
+
+	public void setBatchTransferContent(BatchTransactionTypeCode batchTransferContent) {
+		this.batchTransferContent = batchTransferContent;
+	}
+
+	public ExchangePolicyCode getExchangePolicy() {
+		return exchangePolicy;
+	}
+
+	public void setExchangePolicy(ExchangePolicyCode exchangePolicy) {
+		this.exchangePolicy = exchangePolicy;
+	}
+
+	public Number getMaximumNumber() {
+		return maximumNumber;
+	}
+
+	public void setMaximumNumber(Number maximumNumber) {
+		this.maximumNumber = maximumNumber;
+	}
+
+	public ImpliedCurrencyAndAmount getMaximumAmount() {
+		return maximumAmount;
+	}
+
+	public void setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
+		this.maximumAmount = maximumAmount;
+	}
+
+	public TrueFalseIndicator getReconciliationByAcquirer() {
+		return reconciliationByAcquirer;
+	}
+
+	public void setReconciliationByAcquirer(TrueFalseIndicator reconciliationByAcquirer) {
+		this.reconciliationByAcquirer = reconciliationByAcquirer;
+	}
+
+	public TrueFalseIndicator getTotalsPerCurrency() {
+		return totalsPerCurrency;
+	}
+
+	public void setTotalsPerCurrency(TrueFalseIndicator totalsPerCurrency) {
+		this.totalsPerCurrency = totalsPerCurrency;
+	}
+
+	public TrueFalseIndicator getProtectCardData() {
+		return protectCardData;
+	}
+
+	public void setProtectCardData(TrueFalseIndicator protectCardData) {
+		this.protectCardData = protectCardData;
+	}
+
+	public Max10000Binary getRetailerParameters() {
+		return retailerParameters;
+	}
+
+	public void setRetailerParameters(Max10000Binary retailerParameters) {
+		this.retailerParameters = retailerParameters;
+	}
+
+	public Max10000Binary getApplicationParameters() {
+		return applicationParameters;
+	}
+
+	public void setApplicationParameters(Max10000Binary applicationParameters) {
+		this.applicationParameters = applicationParameters;
+	}
+
+	public TerminalManagementSystem getTerminalManagementSystem() {
+		return terminalManagementSystem;
+	}
+
+	public void setTerminalManagementSystem(com.tools20022.repository.entity.TerminalManagementSystem terminalManagementSystem) {
+		this.terminalManagementSystem = terminalManagementSystem;
+	}
+
+	public Max35Text getApplicationVersion() {
+		return applicationVersion;
+	}
+
+	public void setApplicationVersion(Max35Text applicationVersion) {
+		this.applicationVersion = applicationVersion;
 	}
 }

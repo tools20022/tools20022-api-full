@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#Qualifier
- * GeneralBusinessInformation.Qualifier}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#mmQualifier
+ * GeneralBusinessInformation.mmQualifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#Subject
- * GeneralBusinessInformation.Subject}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#mmSubject
+ * GeneralBusinessInformation.mmSubject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#SubjectDetails
- * GeneralBusinessInformation.SubjectDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#mmSubjectDetails
+ * GeneralBusinessInformation.mmSubjectDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeneralBusinessInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InformationQualifierType qualifier;
 	/**
 	 * Further information about the criticality or importance of a general
 	 * business information system.
@@ -81,8 +82,8 @@ public class GeneralBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#Qualifier
-	 * SystemBusinessInformation.Qualifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmQualifier
+	 * SystemBusinessInformation.mmQualifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class GeneralBusinessInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Qualifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmQualifier;
 			componentContext_lazy = () -> GeneralBusinessInformation.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.Qualifier;
 			isDerived = false;
 			xmlTag = "Qlfr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualifier";
 			definition = "Further information about the criticality or importance of a general business information system.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> InformationQualifierType.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.InformationQualifierType.mmObject();
 		}
 	};
+	protected Max35Text subject;
 	/**
 	 * Subject line of an item of general business information, summarizing the
 	 * topic and intended destination of the information.
@@ -130,8 +132,8 @@ public class GeneralBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#Subject
-	 * SystemBusinessInformation.Subject}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmSubject
+	 * SystemBusinessInformation.mmSubject}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,20 +154,21 @@ public class GeneralBusinessInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Subject = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubject = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmSubject;
 			componentContext_lazy = () -> GeneralBusinessInformation.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.Subject;
 			isDerived = false;
 			xmlTag = "Sbjt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subject";
 			definition = "Subject line of an item of general business information, summarizing the topic and intended destination of the information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text subjectDetails;
 	/**
 	 * General business information, in unstructured form.
 	 * <p>
@@ -178,8 +181,8 @@ public class GeneralBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#SubjectDetails
-	 * SystemBusinessInformation.SubjectDetails}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmSubjectDetails
+	 * SystemBusinessInformation.mmSubjectDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,17 +201,17 @@ public class GeneralBusinessInformation {
 	 * definition} = "General business information, in unstructured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubjectDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubjectDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmSubjectDetails;
 			componentContext_lazy = () -> GeneralBusinessInformation.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.SubjectDetails;
 			isDerived = false;
 			xmlTag = "SbjtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectDetails";
 			definition = "General business information, in unstructured form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -216,15 +219,39 @@ public class GeneralBusinessInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformation.Qualifier, com.tools20022.repository.msg.GeneralBusinessInformation.Subject,
-						com.tools20022.repository.msg.GeneralBusinessInformation.SubjectDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformation.mmQualifier, com.tools20022.repository.msg.GeneralBusinessInformation.mmSubject,
+						com.tools20022.repository.msg.GeneralBusinessInformation.mmSubjectDetails);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GeneralBusinessInformation";
 				definition = "Details about business information related to a system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InformationQualifierType getQualifier() {
+		return qualifier;
+	}
+
+	public void setQualifier(com.tools20022.repository.msg.InformationQualifierType qualifier) {
+		this.qualifier = qualifier;
+	}
+
+	public Max35Text getSubject() {
+		return subject;
+	}
+
+	public void setSubject(Max35Text subject) {
+		this.subject = subject;
+	}
+
+	public Max350Text getSubjectDetails() {
+		return subjectDetails;
+	}
+
+	public void setSubjectDetails(Max350Text subjectDetails) {
+		this.subjectDetails = subjectDetails;
 	}
 }

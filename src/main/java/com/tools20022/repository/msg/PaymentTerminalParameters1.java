@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.datatype.Max70Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Manufacturer configuration parameters of the point of interaction (POI).
@@ -35,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters1#ClockSynchronisation
- * PaymentTerminalParameters1.ClockSynchronisation}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters1#mmClockSynchronisation
+ * PaymentTerminalParameters1.mmClockSynchronisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters1#TimeZoneLine
- * PaymentTerminalParameters1.TimeZoneLine}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters1#mmTimeZoneLine
+ * PaymentTerminalParameters1.mmTimeZoneLine}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters1#OtherParameters
- * PaymentTerminalParameters1.OtherParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters1#mmOtherParameters
+ * PaymentTerminalParameters1.mmOtherParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTerminalParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ClockSynchronisation1 clockSynchronisation;
 	/**
 	 * Parameters to synchronise the real time clock of the POI (Point Of
 	 * Interaction).
@@ -102,13 +104,13 @@ public class PaymentTerminalParameters1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters2#ClockSynchronisation
-	 * PaymentTerminalParameters2.ClockSynchronisation}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters2#mmClockSynchronisation
+	 * PaymentTerminalParameters2.mmClockSynchronisation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClockSynchronisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClockSynchronisation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PaymentTerminalParameters1.mmObject();
 			isDerived = false;
@@ -116,13 +118,14 @@ public class PaymentTerminalParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClockSynchronisation";
 			definition = "Parameters to synchronise the real time clock of the POI (Point Of Interaction).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerminalParameters2.ClockSynchronisation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerminalParameters2.mmClockSynchronisation);
 			maxOccurs = 1;
-			type_lazy = () -> ClockSynchronisation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ClockSynchronisation1.mmObject();
 		}
 	};
+	protected List<Max70Text> timeZoneLine;
 	/**
 	 * Time zone line to update in the time zone data base subset stored in the
 	 * POI (Point Of Interaction). The format of the line is conform to the IANA
@@ -156,13 +159,13 @@ public class PaymentTerminalParameters1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters2#TimeZoneLine
-	 * PaymentTerminalParameters2.TimeZoneLine}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters2#mmTimeZoneLine
+	 * PaymentTerminalParameters2.mmTimeZoneLine}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TimeZoneLine = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTimeZoneLine = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentTerminalParameters1.mmObject();
 			isDerived = false;
@@ -170,11 +173,12 @@ public class PaymentTerminalParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeZoneLine";
 			definition = "Time zone line to update in the time zone data base subset stored in the POI (Point Of Interaction). The format of the line is conform to the IANA (Internet Assigned Number Authority) time zone data base.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerminalParameters2.TimeZoneLine);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerminalParameters2.mmTimeZoneLine);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max10000Binary otherParameters;
 	/**
 	 * Others manufacturer configuration parameters of the point of interaction.
 	 * <p>
@@ -207,13 +211,13 @@ public class PaymentTerminalParameters1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters2#OtherParameters
-	 * PaymentTerminalParameters2.OtherParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters2#mmOtherParameters
+	 * PaymentTerminalParameters2.mmOtherParameters}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherParameters = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentTerminalParameters1.mmObject();
 			isDerived = false;
@@ -221,9 +225,9 @@ public class PaymentTerminalParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParameters";
 			definition = "Others manufacturer configuration parameters of the point of interaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerminalParameters2.OtherParameters);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerminalParameters2.mmOtherParameters);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
@@ -231,9 +235,9 @@ public class PaymentTerminalParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerminalParameters1.ClockSynchronisation, com.tools20022.repository.msg.PaymentTerminalParameters1.TimeZoneLine,
-						com.tools20022.repository.msg.PaymentTerminalParameters1.OtherParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerminalParameters1.mmClockSynchronisation, com.tools20022.repository.msg.PaymentTerminalParameters1.mmTimeZoneLine,
+						com.tools20022.repository.msg.PaymentTerminalParameters1.mmOtherParameters);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTerminalParameters1";
 				definition = "Manufacturer configuration parameters of the point of interaction (POI).";
@@ -241,5 +245,29 @@ public class PaymentTerminalParameters1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ClockSynchronisation1 getClockSynchronisation() {
+		return clockSynchronisation;
+	}
+
+	public void setClockSynchronisation(com.tools20022.repository.msg.ClockSynchronisation1 clockSynchronisation) {
+		this.clockSynchronisation = clockSynchronisation;
+	}
+
+	public List<Max70Text> getTimeZoneLine() {
+		return timeZoneLine;
+	}
+
+	public void setTimeZoneLine(List<Max70Text> timeZoneLine) {
+		this.timeZoneLine = timeZoneLine;
+	}
+
+	public Max10000Binary getOtherParameters() {
+		return otherParameters;
+	}
+
+	public void setOtherParameters(Max10000Binary otherParameters) {
+		this.otherParameters = otherParameters;
 	}
 }

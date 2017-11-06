@@ -37,11 +37,12 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakdown20#LotNumber
- * QuantityBreakdown20.LotNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityBreakdown20#LotQuantity
- * QuantityBreakdown20.LotQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityBreakdown20#mmLotNumber
+ * QuantityBreakdown20.mmLotNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityBreakdown20#mmLotQuantity
+ * QuantityBreakdown20.mmLotQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -66,6 +67,7 @@ import java.util.function.Supplier;
 public class QuantityBreakdown20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification39 lotNumber;
 	/**
 	 * Identification, for tax purposes, of a lot of identical securities that
 	 * are bought at a certain date and at a certain price.
@@ -80,8 +82,8 @@ public class QuantityBreakdown20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#LotNumber
-	 * LotBreakdown.LotNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotNumber
+	 * LotBreakdown.mmLotNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +104,21 @@ public class QuantityBreakdown20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LotNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLotNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotNumber;
 			componentContext_lazy = () -> QuantityBreakdown20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.LotNumber;
 			isDerived = false;
 			xmlTag = "LotNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification39.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification39.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice lotQuantity;
 	/**
 	 * Quantity of financial instruments that is part of the lot described.
 	 * <p>
@@ -128,8 +131,8 @@ public class QuantityBreakdown20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#SecuritiesQuantity
-	 * LotBreakdown.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmSecuritiesQuantity
+	 * LotBreakdown.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,28 +152,28 @@ public class QuantityBreakdown20 {
 	 * "Quantity of financial instruments that is part of the lot described."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LotQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmSecuritiesQuantity;
 			componentContext_lazy = () -> QuantityBreakdown20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "LotQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantity";
 			definition = "Quantity of financial instruments that is part of the lot described.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown20.LotNumber, com.tools20022.repository.msg.QuantityBreakdown20.LotQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown20.mmLotNumber, com.tools20022.repository.msg.QuantityBreakdown20.mmLotQuantity);
 				trace_lazy = () -> LotBreakdown.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -184,5 +187,21 @@ public class QuantityBreakdown20 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification39 getLotNumber() {
+		return lotNumber;
+	}
+
+	public void setLotNumber(com.tools20022.repository.msg.GenericIdentification39 lotNumber) {
+		this.lotNumber = lotNumber;
+	}
+
+	public FinancialInstrumentQuantity15Choice getLotQuantity() {
+		return lotQuantity;
+	}
+
+	public void setLotQuantity(FinancialInstrumentQuantity15Choice lotQuantity) {
+		this.lotQuantity = lotQuantity;
 	}
 }

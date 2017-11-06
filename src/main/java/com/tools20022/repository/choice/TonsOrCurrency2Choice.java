@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TonsOrCurrency2Choice#Number
- * TonsOrCurrency2Choice.Number}</li>
+ * {@linkplain com.tools20022.repository.choice.TonsOrCurrency2Choice#mmNumber
+ * TonsOrCurrency2Choice.mmNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TonsOrCurrency2Choice#Amount
- * TonsOrCurrency2Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.TonsOrCurrency2Choice#mmAmount
+ * TonsOrCurrency2Choice.mmAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TonsOrCurrency2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber number;
 	/**
 	 * Total number of specific transactions expresses in tons.
 	 * <p>
@@ -90,7 +91,7 @@ public class TonsOrCurrency2Choice {
 	 * definition} = "Total number of specific transactions expresses in tons."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TonsOrCurrency2Choice.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class TonsOrCurrency2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Total number of specific transactions expresses in tons.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
 	 * Total volume of specific transactions expresses in currency and amount
 	 * format.
@@ -134,7 +136,7 @@ public class TonsOrCurrency2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TonsOrCurrency2Choice.mmObject();
 			isDerived = false;
@@ -142,8 +144,8 @@ public class TonsOrCurrency2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Total volume of specific transactions expresses in currency and amount format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
@@ -151,13 +153,29 @@ public class TonsOrCurrency2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TonsOrCurrency2Choice.Number, com.tools20022.repository.choice.TonsOrCurrency2Choice.Amount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TonsOrCurrency2Choice.mmNumber, com.tools20022.repository.choice.TonsOrCurrency2Choice.mmAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TonsOrCurrency2Choice";
 				definition = "Specifies the commodity quantity in tons or the amount and currency used (for example carbone dioxide).\r\n";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getNumber() {
+		return number;
+	}
+
+	public void setNumber(DecimalNumber number) {
+		this.number = number;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

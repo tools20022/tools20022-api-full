@@ -32,49 +32,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ATMCommandCode ATMCommandCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand2Code#ATMBalance
- * ATMCommand2Code.ATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#ATMStatusUpdate
- * ATMCommand2Code.ATMStatusUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmATMBalance
+ * ATMCommand2Code.mmATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#ConfigurationUpdate
- * ATMCommand2Code.ConfigurationUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmATMStatusUpdate
+ * ATMCommand2Code.mmATMStatusUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#CountersInquiry
- * ATMCommand2Code.CountersInquiry}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand2Code#Disconnect
- * ATMCommand2Code.Disconnect}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmConfigurationUpdate
+ * ATMCommand2Code.mmConfigurationUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#KeyActivation
- * ATMCommand2Code.KeyActivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmCountersInquiry
+ * ATMCommand2Code.mmCountersInquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#KeyDeactivation
- * ATMCommand2Code.KeyDeactivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmDisconnect
+ * ATMCommand2Code.mmDisconnect}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#KeyDownload
- * ATMCommand2Code.KeyDownload}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand2Code#KeyRemove
- * ATMCommand2Code.KeyRemove}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmKeyActivation
+ * ATMCommand2Code.mmKeyActivation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#SecurityDeviceConfigurationUpdate
- * ATMCommand2Code.SecurityDeviceConfigurationUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmKeyDeactivation
+ * ATMCommand2Code.mmKeyDeactivation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#SecurityDeviceSchemeUpdate
- * ATMCommand2Code.SecurityDeviceSchemeUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmKeyDownload
+ * ATMCommand2Code.mmKeyDownload}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#SecurityDeviceStatusUpdate
- * ATMCommand2Code.SecurityDeviceStatusUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmKeyRemove
+ * ATMCommand2Code.mmKeyRemove}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#SendMessage
- * ATMCommand2Code.SendMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmSecurityDeviceConfigurationUpdate
+ * ATMCommand2Code.mmSecurityDeviceConfigurationUpdate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmSecurityDeviceSchemeUpdate
+ * ATMCommand2Code.mmSecurityDeviceSchemeUpdate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmSecurityDeviceStatusUpdate
+ * ATMCommand2Code.mmSecurityDeviceStatusUpdate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand2Code#mmSendMessage
+ * ATMCommand2Code.mmSendMessage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,7 +107,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "ATMBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMBalance = new MMCode() {
+	public static final MMCode mmATMBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
@@ -127,7 +130,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "ATMStatusUpdate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMStatusUpdate = new MMCode() {
+	public static final MMCode mmATMStatusUpdate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMStatusUpdate";
@@ -150,7 +153,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "ConfigurationUpdate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfigurationUpdate = new MMCode() {
+	public static final MMCode mmConfigurationUpdate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfigurationUpdate";
@@ -173,7 +176,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "CountersInquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode CountersInquiry = new MMCode() {
+	public static final MMCode mmCountersInquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
@@ -196,7 +199,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "Disconnect"</li>
 	 * </ul>
 	 */
-	public static final MMCode Disconnect = new MMCode() {
+	public static final MMCode mmDisconnect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disconnect";
@@ -219,7 +222,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "KeyActivation"</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyActivation = new MMCode() {
+	public static final MMCode mmKeyActivation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyActivation";
@@ -242,7 +245,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "KeyDeactivation"</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyDeactivation = new MMCode() {
+	public static final MMCode mmKeyDeactivation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyDeactivation";
@@ -265,7 +268,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "KeyDownload"</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyDownload = new MMCode() {
+	public static final MMCode mmKeyDownload = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyDownload";
@@ -288,7 +291,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "KeyRemove"</li>
 	 * </ul>
 	 */
-	public static final MMCode KeyRemove = new MMCode() {
+	public static final MMCode mmKeyRemove = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyRemove";
@@ -311,7 +314,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "SecurityDeviceConfigurationUpdate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityDeviceConfigurationUpdate = new MMCode() {
+	public static final MMCode mmSecurityDeviceConfigurationUpdate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDeviceConfigurationUpdate";
@@ -334,7 +337,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "SecurityDeviceSchemeUpdate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityDeviceSchemeUpdate = new MMCode() {
+	public static final MMCode mmSecurityDeviceSchemeUpdate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDeviceSchemeUpdate";
@@ -357,7 +360,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "SecurityDeviceStatusUpdate"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecurityDeviceStatusUpdate = new MMCode() {
+	public static final MMCode mmSecurityDeviceStatusUpdate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDeviceStatusUpdate";
@@ -380,7 +383,7 @@ public class ATMCommand2Code extends ATMCommandCode {
 	 * name} = "SendMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode SendMessage = new MMCode() {
+	public static final MMCode mmSendMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendMessage";
@@ -391,16 +394,16 @@ public class ATMCommand2Code extends ATMCommandCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand2Code";
 				definition = "Type of command performed by the ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand2Code.ATMBalance, com.tools20022.repository.codeset.ATMCommand2Code.ATMStatusUpdate,
-						com.tools20022.repository.codeset.ATMCommand2Code.ConfigurationUpdate, com.tools20022.repository.codeset.ATMCommand2Code.CountersInquiry, com.tools20022.repository.codeset.ATMCommand2Code.Disconnect,
-						com.tools20022.repository.codeset.ATMCommand2Code.KeyActivation, com.tools20022.repository.codeset.ATMCommand2Code.KeyDeactivation, com.tools20022.repository.codeset.ATMCommand2Code.KeyDownload,
-						com.tools20022.repository.codeset.ATMCommand2Code.KeyRemove, com.tools20022.repository.codeset.ATMCommand2Code.SecurityDeviceConfigurationUpdate,
-						com.tools20022.repository.codeset.ATMCommand2Code.SecurityDeviceSchemeUpdate, com.tools20022.repository.codeset.ATMCommand2Code.SecurityDeviceStatusUpdate,
-						com.tools20022.repository.codeset.ATMCommand2Code.SendMessage);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand2Code.mmATMBalance, com.tools20022.repository.codeset.ATMCommand2Code.mmATMStatusUpdate,
+						com.tools20022.repository.codeset.ATMCommand2Code.mmConfigurationUpdate, com.tools20022.repository.codeset.ATMCommand2Code.mmCountersInquiry, com.tools20022.repository.codeset.ATMCommand2Code.mmDisconnect,
+						com.tools20022.repository.codeset.ATMCommand2Code.mmKeyActivation, com.tools20022.repository.codeset.ATMCommand2Code.mmKeyDeactivation, com.tools20022.repository.codeset.ATMCommand2Code.mmKeyDownload,
+						com.tools20022.repository.codeset.ATMCommand2Code.mmKeyRemove, com.tools20022.repository.codeset.ATMCommand2Code.mmSecurityDeviceConfigurationUpdate,
+						com.tools20022.repository.codeset.ATMCommand2Code.mmSecurityDeviceSchemeUpdate, com.tools20022.repository.codeset.ATMCommand2Code.mmSecurityDeviceStatusUpdate,
+						com.tools20022.repository.codeset.ATMCommand2Code.mmSendMessage);
 				trace_lazy = () -> ATMCommandCode.mmObject();
 			}
 		});

@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,33 +66,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#AcknowledgementIdentification
- * AcknowledgementV03.AcknowledgementIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmAcknowledgementIdentification
+ * AcknowledgementV03.mmAcknowledgementIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#TransactionIdentification
- * AcknowledgementV03.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmTransactionIdentification
+ * AcknowledgementV03.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#EstablishedBaselineIdentification
- * AcknowledgementV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmEstablishedBaselineIdentification
+ * AcknowledgementV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#TransactionStatus
- * AcknowledgementV03.TransactionStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmTransactionStatus
+ * AcknowledgementV03.mmTransactionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#UserTransactionReference
- * AcknowledgementV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmUserTransactionReference
+ * AcknowledgementV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#AcknowledgedMessageReference
- * AcknowledgementV03.AcknowledgedMessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmAcknowledgedMessageReference
+ * AcknowledgementV03.mmAcknowledgedMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#RequestForAction
- * AcknowledgementV03.RequestForAction}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmRequestForAction
+ * AcknowledgementV03.mmRequestForAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#identifier
- * AcknowledgementV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.001.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcknowledgementV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 acknowledgementIdentification;
 	/**
 	 * Identifies the acknowledgement message.
 	 * <p>
@@ -130,17 +130,18 @@ public class AcknowledgementV03 {
 	 * definition} = "Identifies the acknowledgement message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcknowledgementIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcknowledgementIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AckId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementIdentification";
 			definition = "Identifies the acknowledgement message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -168,17 +169,18 @@ public class AcknowledgementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 	};
+	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * baseline when it is established.
@@ -205,17 +207,18 @@ public class AcknowledgementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 	};
+	protected TransactionStatus4 transactionStatus;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -240,17 +243,18 @@ public class AcknowledgementV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 	};
+	protected List<DocumentIdentification5> userTransactionReference;
 	/**
 	 * Reference to the transaction for the financial institution that is the
 	 * sender of the acknowledged message.
@@ -277,17 +281,18 @@ public class AcknowledgementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for the financial institution that is the sender of the acknowledged message. ";
-			minOccurs = 0;
 			maxOccurs = 2;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 	};
+	protected MessageIdentification1 acknowledgedMessageReference;
 	/**
 	 * Reference to the identification of the acknowledged message.
 	 * <p>
@@ -312,17 +317,18 @@ public class AcknowledgementV03 {
 	 * "Reference to the identification of the acknowledged message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcknowledgedMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcknowledgedMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AckdMsgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedMessageReference";
 			definition = "Reference to the identification of the acknowledged message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected PendingActivity2 requestForAction;
 	/**
 	 * Information on the next processing step required.
 	 * <p>
@@ -346,42 +352,15 @@ public class AcknowledgementV03 {
 	 * definition} = "Information on the next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "001";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -395,13 +374,76 @@ public class AcknowledgementV03 {
 				rootElement = "Document";
 				xmlTag = "Ack";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.AcknowledgementIdentification, com.tools20022.repository.area.tsmt.AcknowledgementV03.TransactionIdentification,
-						com.tools20022.repository.area.tsmt.AcknowledgementV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.AcknowledgementV03.TransactionStatus,
-						com.tools20022.repository.area.tsmt.AcknowledgementV03.UserTransactionReference, com.tools20022.repository.area.tsmt.AcknowledgementV03.AcknowledgedMessageReference,
-						com.tools20022.repository.area.tsmt.AcknowledgementV03.RequestForAction);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.AcknowledgementV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmAcknowledgementIdentification, com.tools20022.repository.area.tsmt.AcknowledgementV03.mmTransactionIdentification,
+						com.tools20022.repository.area.tsmt.AcknowledgementV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.AcknowledgementV03.mmTransactionStatus,
+						com.tools20022.repository.area.tsmt.AcknowledgementV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.AcknowledgementV03.mmAcknowledgedMessageReference,
+						com.tools20022.repository.area.tsmt.AcknowledgementV03.mmRequestForAction);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "001";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getAcknowledgementIdentification() {
+		return acknowledgementIdentification;
+	}
+
+	public void setAcknowledgementIdentification(MessageIdentification1 acknowledgementIdentification) {
+		this.acknowledgementIdentification = acknowledgementIdentification;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DocumentIdentification3 getEstablishedBaselineIdentification() {
+		return establishedBaselineIdentification;
+	}
+
+	public void setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
+		this.establishedBaselineIdentification = establishedBaselineIdentification;
+	}
+
+	public TransactionStatus4 getTransactionStatus() {
+		return transactionStatus;
+	}
+
+	public void setTransactionStatus(TransactionStatus4 transactionStatus) {
+		this.transactionStatus = transactionStatus;
+	}
+
+	public List<DocumentIdentification5> getUserTransactionReference() {
+		return userTransactionReference;
+	}
+
+	public void setUserTransactionReference(List<DocumentIdentification5> userTransactionReference) {
+		this.userTransactionReference = userTransactionReference;
+	}
+
+	public MessageIdentification1 getAcknowledgedMessageReference() {
+		return acknowledgedMessageReference;
+	}
+
+	public void setAcknowledgedMessageReference(MessageIdentification1 acknowledgedMessageReference) {
+		this.acknowledgedMessageReference = acknowledgedMessageReference;
+	}
+
+	public PendingActivity2 getRequestForAction() {
+		return requestForAction;
+	}
+
+	public void setRequestForAction(PendingActivity2 requestForAction) {
+		this.requestForAction = requestForAction;
 	}
 }

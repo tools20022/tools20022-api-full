@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.Side5Code;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional indicators on the transaction.
@@ -36,27 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionIndicator2#WaiverIndicator
- * SecuritiesTransactionIndicator2.WaiverIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionIndicator2#mmWaiverIndicator
+ * SecuritiesTransactionIndicator2.mmWaiverIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionIndicator2#ShortSellingIndicator
- * SecuritiesTransactionIndicator2.ShortSellingIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionIndicator2#mmShortSellingIndicator
+ * SecuritiesTransactionIndicator2.mmShortSellingIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionIndicator2#OTCPostTradeIndicator
- * SecuritiesTransactionIndicator2.OTCPostTradeIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionIndicator2#mmOTCPostTradeIndicator
+ * SecuritiesTransactionIndicator2.mmOTCPostTradeIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionIndicator2#RiskReducingTransaction
- * SecuritiesTransactionIndicator2.RiskReducingTransaction}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionIndicator2#mmRiskReducingTransaction
+ * SecuritiesTransactionIndicator2.mmRiskReducingTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionIndicator2#SecuritiesFinancingTransactionIndicator
- * SecuritiesTransactionIndicator2.SecuritiesFinancingTransactionIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionIndicator2#mmSecuritiesFinancingTransactionIndicator
+ * SecuritiesTransactionIndicator2.mmSecuritiesFinancingTransactionIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransactionIndicator2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ReportingWaiverType1Code> waiverIndicator;
 	/**
 	 * Indicates whether the transaction was executed under a pre-trade waiver.
 	 * <p>
@@ -100,7 +102,7 @@ public class SecuritiesTransactionIndicator2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WaiverIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWaiverIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
@@ -112,6 +114,7 @@ public class SecuritiesTransactionIndicator2 {
 			simpleType_lazy = () -> ReportingWaiverType1Code.mmObject();
 		}
 	};
+	protected Side5Code shortSellingIndicator;
 	/**
 	 * Indicates a short sell concluded by the investment agent on its own
 	 * accounts or on behalf of a client, as described in the local regulation.
@@ -142,7 +145,7 @@ public class SecuritiesTransactionIndicator2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortSellingIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortSellingIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
@@ -150,11 +153,12 @@ public class SecuritiesTransactionIndicator2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortSellingIndicator";
 			definition = "Indicates a short sell concluded by the investment agent on its own accounts or on behalf of a client, as described in the local regulation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Side5Code.mmObject();
 		}
 	};
+	protected List<ReportingWaiverType3Code> oTCPostTradeIndicator;
 	/**
 	 * Indicates the type of transaction in accordance with the local
 	 * regulation.
@@ -186,7 +190,7 @@ public class SecuritiesTransactionIndicator2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OTCPostTradeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOTCPostTradeIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
@@ -198,6 +202,7 @@ public class SecuritiesTransactionIndicator2 {
 			simpleType_lazy = () -> ReportingWaiverType3Code.mmObject();
 		}
 	};
+	protected TrueFalseIndicator riskReducingTransaction;
 	/**
 	 * Indicates whether the transaction is objectively measurable as reducing
 	 * risks directly relating to the commercial activity of the entity
@@ -230,7 +235,7 @@ public class SecuritiesTransactionIndicator2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RiskReducingTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRiskReducingTransaction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
@@ -238,11 +243,12 @@ public class SecuritiesTransactionIndicator2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskReducingTransaction";
 			definition = "Indicates whether the transaction is objectively measurable as reducing risks directly relating to the commercial activity of the entity executing the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator securitiesFinancingTransactionIndicator;
 	/**
 	 * Indicates whether the transaction falls within the scope of activity to
 	 * be reported under the Securities Financing Transactions Regulation.
@@ -274,7 +280,7 @@ public class SecuritiesTransactionIndicator2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesFinancingTransactionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesFinancingTransactionIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
@@ -282,8 +288,8 @@ public class SecuritiesTransactionIndicator2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTransactionIndicator";
 			definition = "Indicates whether the transaction falls within the scope of activity to be reported under the Securities Financing Transactions Regulation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
@@ -291,15 +297,55 @@ public class SecuritiesTransactionIndicator2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionIndicator2.WaiverIndicator, com.tools20022.repository.msg.SecuritiesTransactionIndicator2.ShortSellingIndicator,
-						com.tools20022.repository.msg.SecuritiesTransactionIndicator2.OTCPostTradeIndicator, com.tools20022.repository.msg.SecuritiesTransactionIndicator2.RiskReducingTransaction,
-						com.tools20022.repository.msg.SecuritiesTransactionIndicator2.SecuritiesFinancingTransactionIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmWaiverIndicator, com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmShortSellingIndicator,
+						com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmOTCPostTradeIndicator, com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmRiskReducingTransaction,
+						com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmSecuritiesFinancingTransactionIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionIndicator2";
 				definition = "Provides additional indicators on the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ReportingWaiverType1Code> getWaiverIndicator() {
+		return waiverIndicator;
+	}
+
+	public void setWaiverIndicator(List<ReportingWaiverType1Code> waiverIndicator) {
+		this.waiverIndicator = waiverIndicator;
+	}
+
+	public Side5Code getShortSellingIndicator() {
+		return shortSellingIndicator;
+	}
+
+	public void setShortSellingIndicator(Side5Code shortSellingIndicator) {
+		this.shortSellingIndicator = shortSellingIndicator;
+	}
+
+	public List<ReportingWaiverType3Code> getOTCPostTradeIndicator() {
+		return oTCPostTradeIndicator;
+	}
+
+	public void setOTCPostTradeIndicator(List<ReportingWaiverType3Code> oTCPostTradeIndicator) {
+		this.oTCPostTradeIndicator = oTCPostTradeIndicator;
+	}
+
+	public TrueFalseIndicator getRiskReducingTransaction() {
+		return riskReducingTransaction;
+	}
+
+	public void setRiskReducingTransaction(TrueFalseIndicator riskReducingTransaction) {
+		this.riskReducingTransaction = riskReducingTransaction;
+	}
+
+	public TrueFalseIndicator getSecuritiesFinancingTransactionIndicator() {
+		return securitiesFinancingTransactionIndicator;
+	}
+
+	public void setSecuritiesFinancingTransactionIndicator(TrueFalseIndicator securitiesFinancingTransactionIndicator) {
+		this.securitiesFinancingTransactionIndicator = securitiesFinancingTransactionIndicator;
 	}
 }

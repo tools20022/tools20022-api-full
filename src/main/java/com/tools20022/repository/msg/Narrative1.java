@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.NarrativeType1Choice;
 import com.tools20022.repository.datatype.Max20000Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Narrative information for an undertaking.
@@ -33,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Narrative1#Type
- * Narrative1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Narrative1#Text
- * Narrative1.Text}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Narrative1#mmType
+ * Narrative1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Narrative1#mmText
+ * Narrative1.mmText}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Narrative1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NarrativeType1Choice type;
 	/**
 	 * Type of term or condition.
 	 * <p>
@@ -84,7 +86,7 @@ public class Narrative1 {
 	 * definition} = "Type of term or condition."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Narrative1.mmObject();
 			isDerived = false;
@@ -92,11 +94,12 @@ public class Narrative1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of term or condition.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> NarrativeType1Choice.mmObject();
 		}
 	};
+	protected List<Max20000Text> text;
 	/**
 	 * Narrative text.
 	 * <p>
@@ -124,7 +127,7 @@ public class Narrative1 {
 	 * definition} = "Narrative text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Text = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Narrative1.mmObject();
 			isDerived = false;
@@ -132,8 +135,8 @@ public class Narrative1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Text";
 			definition = "Narrative text.";
-			minOccurs = 1;
 			maxOccurs = 5;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max20000Text.mmObject();
 		}
 	};
@@ -141,13 +144,29 @@ public class Narrative1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Narrative1.Type, com.tools20022.repository.msg.Narrative1.Text);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Narrative1.mmType, com.tools20022.repository.msg.Narrative1.mmText);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Narrative1";
 				definition = "Narrative information for an undertaking.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NarrativeType1Choice getType() {
+		return type;
+	}
+
+	public void setType(NarrativeType1Choice type) {
+		this.type = type;
+	}
+
+	public List<Max20000Text> getText() {
+		return text;
+	}
+
+	public void setText(List<Max20000Text> text) {
+		this.text = text;
 	}
 }

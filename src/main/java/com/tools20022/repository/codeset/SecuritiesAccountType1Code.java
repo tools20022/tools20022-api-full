@@ -30,15 +30,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountType1Code#Safekeeping
- * SecuritiesAccountType1Code.Safekeeping}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountType1Code#mmSafekeeping
+ * SecuritiesAccountType1Code.mmSafekeeping}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class SecuritiesAccountType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Safekeeping = new MMCode() {
+	public static final MMCode mmSafekeeping = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 			name = "Safekeeping";
@@ -93,12 +93,12 @@ public class SecuritiesAccountType1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SAFE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				name = "SecuritiesAccountType1Code";
 				definition = "Specifies the type of securities account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesAccountType1Code.Safekeeping);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesAccountType1Code.mmSafekeeping);
 			}
 		});
 		return mmObject_lazy.get();

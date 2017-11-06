@@ -38,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundIdentification4#FundIdentification
- * FundIdentification4.FundIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FundIdentification4#mmFundIdentification
+ * FundIdentification4.mmFundIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundIdentification4#AccountIdentificationWithCustodian
- * FundIdentification4.AccountIdentificationWithCustodian}</li>
+ * {@linkplain com.tools20022.repository.msg.FundIdentification4#mmAccountIdentificationWithCustodian
+ * FundIdentification4.mmAccountIdentificationWithCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundIdentification4#CustodianIdentification
- * FundIdentification4.CustodianIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FundIdentification4#mmCustodianIdentification
+ * FundIdentification4.mmCustodianIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification60 fundIdentification;
 	/**
 	 * Identification of the investment fund.
 	 * <p>
@@ -88,8 +89,8 @@ public class FundIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#Identification
-	 * InvestmentFund.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmIdentification
+	 * InvestmentFund.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +109,21 @@ public class FundIdentification4 {
 	 * definition} = "Identification of the investment fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FundIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFundIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmIdentification;
 			componentContext_lazy = () -> FundIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.Identification;
 			isDerived = false;
 			xmlTag = "FndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundIdentification";
 			definition = "Identification of the investment fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification60.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification60.mmObject();
 		}
 	};
+	protected Max35Text accountIdentificationWithCustodian;
 	/**
 	 * Identifies the account of the fund held with the custodian.
 	 * <p>
@@ -134,8 +136,8 @@ public class FundIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,20 +157,21 @@ public class FundIdentification4 {
 	 * "Identifies the account of the fund held with the custodian."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentificationWithCustodian = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentificationWithCustodian = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> FundIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AcctIdWthCtdn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationWithCustodian";
 			definition = "Identifies the account of the fund held with the custodian.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice custodianIdentification;
 	/**
 	 * Identification of the custodian which services the account of the fund.
 	 * <p>
@@ -181,8 +184,8 @@ public class FundIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,29 +206,29 @@ public class FundIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CustodianIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCustodianIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> FundIdentification4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "CtdnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianIdentification";
 			definition = "Identification of the custodian which services the account of the fund.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundIdentification4.FundIdentification, com.tools20022.repository.msg.FundIdentification4.AccountIdentificationWithCustodian,
-						com.tools20022.repository.msg.FundIdentification4.CustodianIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundIdentification4.mmFundIdentification, com.tools20022.repository.msg.FundIdentification4.mmAccountIdentificationWithCustodian,
+						com.tools20022.repository.msg.FundIdentification4.mmCustodianIdentification);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundIdentification4";
 				definition = "Distinct pool of financial instruments managed by a single investment policy. May or may not be part of an umbrella fund.The pool is issued in at least one investment fund class.";
@@ -233,5 +236,29 @@ public class FundIdentification4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification60 getFundIdentification() {
+		return fundIdentification;
+	}
+
+	public void setFundIdentification(com.tools20022.repository.msg.PartyIdentification60 fundIdentification) {
+		this.fundIdentification = fundIdentification;
+	}
+
+	public Max35Text getAccountIdentificationWithCustodian() {
+		return accountIdentificationWithCustodian;
+	}
+
+	public void setAccountIdentificationWithCustodian(Max35Text accountIdentificationWithCustodian) {
+		this.accountIdentificationWithCustodian = accountIdentificationWithCustodian;
+	}
+
+	public PartyIdentification73Choice getCustodianIdentification() {
+		return custodianIdentification;
+	}
+
+	public void setCustodianIdentification(PartyIdentification73Choice custodianIdentification) {
+		this.custodianIdentification = custodianIdentification;
 	}
 }

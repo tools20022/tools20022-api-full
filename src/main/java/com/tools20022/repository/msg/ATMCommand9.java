@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand9#Type
- * ATMCommand9.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand9#mmType
+ * ATMCommand9.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCommand9#CommandIdentification
- * ATMCommand9.CommandIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommand9#mmCommandIdentification
+ * ATMCommand9.mmCommandIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCommand9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMCommand5Code type;
 	/**
 	 * Type of command to be performed by the ATM.
 	 * <p>
@@ -85,7 +86,7 @@ public class ATMCommand9 {
 	 * definition} = "Type of command to be performed by the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand9.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class ATMCommand9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of command to be performed by the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMCommand5Code.mmObject();
 		}
 	};
+	protected ATMCommandIdentification1 commandIdentification;
 	/**
 	 * Identification of the entity issuing the command.
 	 * <p>
@@ -124,7 +126,7 @@ public class ATMCommand9 {
 	 * definition} = "Identification of the entity issuing the command."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommandIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCommand9.mmObject();
 			isDerived = false;
@@ -132,23 +134,39 @@ public class ATMCommand9 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCommandIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand9.Type, com.tools20022.repository.msg.ATMCommand9.CommandIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand9.mmType, com.tools20022.repository.msg.ATMCommand9.mmCommandIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand9";
 				definition = "Party which has requested the reconciliation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMCommand5Code getType() {
+		return type;
+	}
+
+	public void setType(ATMCommand5Code type) {
+		this.type = type;
+	}
+
+	public ATMCommandIdentification1 getCommandIdentification() {
+		return commandIdentification;
+	}
+
+	public void setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+		this.commandIdentification = commandIdentification;
 	}
 }

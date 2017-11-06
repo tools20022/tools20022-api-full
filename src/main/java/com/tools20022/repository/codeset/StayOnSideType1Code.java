@@ -34,20 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * StayOnSideTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.StayOnSideType1Code#Offer
- * StayOnSideType1Code.Offer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.StayOnSideType1Code#Bid
- * StayOnSideType1Code.Bid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StayOnSideType1Code#DontCare
- * StayOnSideType1Code.DontCare}</li>
+ * {@linkplain com.tools20022.repository.codeset.StayOnSideType1Code#mmOffer
+ * StayOnSideType1Code.mmOffer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.StayOnSideType1Code#mmBid
+ * StayOnSideType1Code.mmBid}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.StayOnSideType1Code#mmDontCare
+ * StayOnSideType1Code.mmDontCare}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +86,7 @@ public class StayOnSideType1Code extends StayOnSideTypeCode {
 	 * name} = "Offer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Offer = new MMCode() {
+	public static final MMCode mmOffer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
@@ -108,7 +109,7 @@ public class StayOnSideType1Code extends StayOnSideTypeCode {
 	 * name} = "Bid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bid = new MMCode() {
+	public static final MMCode mmBid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
@@ -131,7 +132,7 @@ public class StayOnSideType1Code extends StayOnSideTypeCode {
 	 * name} = "DontCare"</li>
 	 * </ul>
 	 */
-	public static final MMCode DontCare = new MMCode() {
+	public static final MMCode mmDontCare = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DontCare";
@@ -142,12 +143,12 @@ public class StayOnSideType1Code extends StayOnSideTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFFR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StayOnSideType1Code";
 				definition = "Indicates that an order is pegged against the offer/bid at the time of the order submission.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StayOnSideType1Code.Offer, com.tools20022.repository.codeset.StayOnSideType1Code.Bid, com.tools20022.repository.codeset.StayOnSideType1Code.DontCare);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StayOnSideType1Code.mmOffer, com.tools20022.repository.codeset.StayOnSideType1Code.mmBid, com.tools20022.repository.codeset.StayOnSideType1Code.mmDontCare);
 				trace_lazy = () -> StayOnSideTypeCode.mmObject();
 			}
 		});

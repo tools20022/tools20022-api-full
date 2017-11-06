@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReportHeader1#CreationDateTime
- * ReportHeader1.CreationDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportHeader1#ContentsType
- * ReportHeader1.ContentsType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReportHeader1#mmCreationDateTime
+ * ReportHeader1.mmCreationDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportHeader1#mmContentsType
+ * ReportHeader1.mmContentsType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the report was created.
 	 * <p>
@@ -83,7 +85,7 @@ public class ReportHeader1 {
 	 * definition} = "Date and time at which the report was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportHeader1.mmObject();
 			isDerived = false;
@@ -91,11 +93,12 @@ public class ReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the report was created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max35Text contentsType;
 	/**
 	 * Identification of the type of report.
 	 * <p>
@@ -122,7 +125,7 @@ public class ReportHeader1 {
 	 * definition} = "Identification of the type of report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContentsType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContentsType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportHeader1.mmObject();
 			isDerived = false;
@@ -130,8 +133,8 @@ public class ReportHeader1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentsType";
 			definition = "Identification of the type of report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -139,13 +142,29 @@ public class ReportHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportHeader1.CreationDateTime, com.tools20022.repository.msg.ReportHeader1.ContentsType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportHeader1.mmCreationDateTime, com.tools20022.repository.msg.ReportHeader1.mmContentsType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportHeader1";
 				definition = "General properties of the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public Max35Text getContentsType() {
+		return contentsType;
+	}
+
+	public void setContentsType(Max35Text contentsType) {
+		this.contentsType = contentsType;
 	}
 }

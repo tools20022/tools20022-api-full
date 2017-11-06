@@ -34,17 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AddressType1Code#Residential
- * AddressType1Code.Residential}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AddressType1Code#Business
- * AddressType1Code.Business}</li>
+ * {@linkplain com.tools20022.repository.codeset.AddressType1Code#mmResidential
+ * AddressType1Code.mmResidential}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AddressType1Code#mmBusiness
+ * AddressType1Code.mmBusiness}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +81,7 @@ public class AddressType1Code extends AddressTypeCode {
 	 * name} = "Residential"</li>
 	 * </ul>
 	 */
-	public static final MMCode Residential = new MMCode() {
+	public static final MMCode mmResidential = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Residential";
@@ -103,7 +104,7 @@ public class AddressType1Code extends AddressTypeCode {
 	 * name} = "Business"</li>
 	 * </ul>
 	 */
-	public static final MMCode Business = new MMCode() {
+	public static final MMCode mmBusiness = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Business";
@@ -114,12 +115,12 @@ public class AddressType1Code extends AddressTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HOME");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AddressType1Code";
 				definition = "Specifies the type of address.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AddressType1Code.Residential, com.tools20022.repository.codeset.AddressType1Code.Business);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AddressType1Code.mmResidential, com.tools20022.repository.codeset.AddressType1Code.mmBusiness);
 				trace_lazy = () -> AddressTypeCode.mmObject();
 			}
 		});

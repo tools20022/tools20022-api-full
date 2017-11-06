@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.TEFRARulesCode TEFRARulesCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TEFRARules1Code#C
- * TEFRARules1Code.C}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TEFRARules1Code#D
- * TEFRARules1Code.D}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TEFRARules1Code#mmC
+ * TEFRARules1Code.mmC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TEFRARules1Code#mmD
+ * TEFRARules1Code.mmD}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class TEFRARules1Code extends TEFRARulesCode {
 	 * name} = "C"</li>
 	 * </ul>
 	 */
-	public static final MMCode C = new MMCode() {
+	public static final MMCode mmC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "C";
@@ -104,7 +104,7 @@ public class TEFRARules1Code extends TEFRARulesCode {
 	 * name} = "D"</li>
 	 * </ul>
 	 */
-	public static final MMCode D = new MMCode() {
+	public static final MMCode mmD = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "D";
@@ -115,12 +115,12 @@ public class TEFRARules1Code extends TEFRARulesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RULC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TEFRARules1Code";
 				definition = "Indicates the Tax Equity and Fiscal Responsibility Act (TEFRA) rule levied by the IRS under which the security is issued.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TEFRARules1Code.C, com.tools20022.repository.codeset.TEFRARules1Code.D);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TEFRARules1Code.mmC, com.tools20022.repository.codeset.TEFRARules1Code.mmD);
 				trace_lazy = () -> TEFRARulesCode.mmObject();
 			}
 		});

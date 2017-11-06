@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.msg.Contribution1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Portion of the participation to the default fund that clearing member must
@@ -41,20 +42,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#RelatedMarginCall
- * DefaultFundContribution.RelatedMarginCall}</li>
+ * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#mmRelatedMarginCall
+ * DefaultFundContribution.mmRelatedMarginCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#DefaultFund
- * DefaultFundContribution.DefaultFund}</li>
+ * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#mmDefaultFund
+ * DefaultFundContribution.mmDefaultFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#ExcessOrDeficitAmount
- * DefaultFundContribution.ExcessOrDeficitAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#mmExcessOrDeficitAmount
+ * DefaultFundContribution.mmExcessOrDeficitAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#ContributionAccount
- * DefaultFundContribution.ContributionAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#mmContributionAccount
+ * DefaultFundContribution.mmContributionAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#AmountDirection
- * DefaultFundContribution.AmountDirection}</li>
+ * {@linkplain com.tools20022.repository.entity.DefaultFundContribution#mmAmountDirection
+ * DefaultFundContribution.mmAmountDirection}</li>
  * </ul>
  * </li>
  * <li>
@@ -62,13 +63,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Account#DefaultFundContribution
- * Account.DefaultFundContribution}</li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmDefaultFundContribution
+ * Account.mmDefaultFundContribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#DefaultFundContribution
- * MarginCall.DefaultFundContribution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DefaultFund#Contribution
- * DefaultFund.Contribution}</li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmDefaultFundContribution
+ * MarginCall.mmDefaultFundContribution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DefaultFund#mmContribution
+ * DefaultFund.mmContribution}</li>
  * </ul>
  * </li>
  * <li>
@@ -81,8 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DefaultFundContribution {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected MarginCall relatedMarginCall;
 	/**
 	 * Margin call for which a contribution to a default fund is specified.
 	 * <p>
@@ -106,8 +108,8 @@ public class DefaultFundContribution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#DefaultFundContribution
-	 * MarginCall.DefaultFundContribution}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmDefaultFundContribution
+	 * MarginCall.mmDefaultFundContribution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -132,20 +134,21 @@ public class DefaultFundContribution {
 	 * "Margin call for which a contribution to a default fund is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedMarginCall = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedMarginCall = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> DefaultFundContribution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMarginCall";
 			definition = "Margin call for which a contribution to a default fund is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MarginCall.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.MarginCall.DefaultFundContribution;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.MarginCall.mmDefaultFundContribution;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.MarginCall.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.DefaultFund> defaultFund;
 	/**
 	 * Management of the assets posted by participants in a clearing fund that
 	 * can be used in the event of a default by a participant to compensate
@@ -156,8 +159,8 @@ public class DefaultFundContribution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DefaultFund#Contribution
-	 * DefaultFund.Contribution}</li>
+	 * {@linkplain com.tools20022.repository.entity.DefaultFund#mmContribution
+	 * DefaultFund.mmContribution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -183,7 +186,7 @@ public class DefaultFundContribution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd DefaultFund = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDefaultFund = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> DefaultFundContribution.mmObject();
 			isDerived = false;
@@ -191,11 +194,12 @@ public class DefaultFundContribution {
 			name = "DefaultFund";
 			definition = "Management of the assets posted by participants in a clearing fund that can be used in the event of a default by a participant to compensate non-defaulting participants for losses they suffer due to this default.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DefaultFund.Contribution;
+			opposite_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmContribution;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount excessOrDeficitAmount;
 	/**
 	 * Excess amount that the CCP will restitute to the Clearing member OR
 	 * deficit to be provided by the member for the guarantee fund.
@@ -207,28 +211,28 @@ public class DefaultFundContribution {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarginCallResult1#DefaultFundAmount
-	 * MarginCallResult1.DefaultFundAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarginCallResult3#DefaultFundAmount
-	 * MarginCallResult3.DefaultFundAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Contribution1#IncreaseCoverageAmount
-	 * Contribution1.IncreaseCoverageAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DefaultFund1#IncreaseCoverageAmount
-	 * DefaultFund1.IncreaseCoverageAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.DefaultFundContribution
 	 * DefaultFundContribution}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarginCallResult1#mmDefaultFundAmount
+	 * MarginCallResult1.mmDefaultFundAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarginCallResult3#mmDefaultFundAmount
+	 * MarginCallResult3.mmDefaultFundAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Contribution1#mmIncreaseCoverageAmount
+	 * Contribution1.mmIncreaseCoverageAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DefaultFund1#mmIncreaseCoverageAmount
+	 * DefaultFund1.mmIncreaseCoverageAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -242,20 +246,21 @@ public class DefaultFundContribution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ExcessOrDeficitAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmExcessOrDeficitAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCallResult1.DefaultFundAmount, com.tools20022.repository.msg.MarginCallResult3.DefaultFundAmount,
-					com.tools20022.repository.msg.Contribution1.IncreaseCoverageAmount, com.tools20022.repository.msg.DefaultFund1.IncreaseCoverageAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCallResult1.mmDefaultFundAmount, com.tools20022.repository.msg.MarginCallResult3.mmDefaultFundAmount,
+					com.tools20022.repository.msg.Contribution1.mmIncreaseCoverageAmount, com.tools20022.repository.msg.DefaultFund1.mmIncreaseCoverageAmount);
 			elementContext_lazy = () -> DefaultFundContribution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExcessOrDeficitAmount";
 			definition = "Excess amount that the CCP will restitute to the Clearing member OR deficit to be provided by the member for the guarantee fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Account> contributionAccount;
 	/**
 	 * Sub account segregated by the central counterparty on the basis of
 	 * trading venues/products or other attributes.
@@ -265,8 +270,8 @@ public class DefaultFundContribution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Account#DefaultFundContribution
-	 * Account.DefaultFundContribution}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmDefaultFundContribution
+	 * Account.mmDefaultFundContribution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -291,7 +296,7 @@ public class DefaultFundContribution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ContributionAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmContributionAccount = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> DefaultFundContribution.mmObject();
 			isDerived = false;
@@ -299,11 +304,12 @@ public class DefaultFundContribution {
 			name = "ContributionAccount";
 			definition = "Sub account segregated by the central counterparty on the basis of trading venues/products or other attributes.";
 			minOccurs = 0;
-			type_lazy = () -> Account.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.DefaultFundContribution;
+			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmDefaultFundContribution;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
+	protected DebitCreditCode amountDirection;
 	/**
 	 * Specifies whether the amount is a deficit (debit) or an excess (credit).
 	 * <p>
@@ -332,15 +338,15 @@ public class DefaultFundContribution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute AmountDirection = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmAmountDirection = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> DefaultFundContribution.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDirection";
 			definition = "Specifies whether the amount is a deficit (debit) or an excess (credit).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
 		}
 	};
@@ -348,18 +354,58 @@ public class DefaultFundContribution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DefaultFundContribution";
 				definition = "Portion of the participation to the default fund that clearing member must provide. It is the sum of the individual contributions.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.DefaultFundContribution, com.tools20022.repository.entity.MarginCall.DefaultFundContribution,
-						com.tools20022.repository.entity.DefaultFund.Contribution);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DefaultFundContribution.RelatedMarginCall, com.tools20022.repository.entity.DefaultFundContribution.DefaultFund,
-						com.tools20022.repository.entity.DefaultFundContribution.ExcessOrDeficitAmount, com.tools20022.repository.entity.DefaultFundContribution.ContributionAccount,
-						com.tools20022.repository.entity.DefaultFundContribution.AmountDirection);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmDefaultFundContribution, com.tools20022.repository.entity.MarginCall.mmDefaultFundContribution,
+						com.tools20022.repository.entity.DefaultFund.mmContribution);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DefaultFundContribution.mmRelatedMarginCall, com.tools20022.repository.entity.DefaultFundContribution.mmDefaultFund,
+						com.tools20022.repository.entity.DefaultFundContribution.mmExcessOrDeficitAmount, com.tools20022.repository.entity.DefaultFundContribution.mmContributionAccount,
+						com.tools20022.repository.entity.DefaultFundContribution.mmAmountDirection);
 				derivationComponent_lazy = () -> Arrays.asList(Contribution1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MarginCall getRelatedMarginCall() {
+		return relatedMarginCall;
+	}
+
+	public void setRelatedMarginCall(com.tools20022.repository.entity.MarginCall relatedMarginCall) {
+		this.relatedMarginCall = relatedMarginCall;
+	}
+
+	public List<DefaultFund> getDefaultFund() {
+		return defaultFund;
+	}
+
+	public void setDefaultFund(List<com.tools20022.repository.entity.DefaultFund> defaultFund) {
+		this.defaultFund = defaultFund;
+	}
+
+	public ActiveCurrencyAndAmount getExcessOrDeficitAmount() {
+		return excessOrDeficitAmount;
+	}
+
+	public void setExcessOrDeficitAmount(ActiveCurrencyAndAmount excessOrDeficitAmount) {
+		this.excessOrDeficitAmount = excessOrDeficitAmount;
+	}
+
+	public List<Account> getContributionAccount() {
+		return contributionAccount;
+	}
+
+	public void setContributionAccount(List<com.tools20022.repository.entity.Account> contributionAccount) {
+		this.contributionAccount = contributionAccount;
+	}
+
+	public DebitCreditCode getAmountDirection() {
+		return amountDirection;
+	}
+
+	public void setAmountDirection(DebitCreditCode amountDirection) {
+		this.amountDirection = amountDirection;
 	}
 }

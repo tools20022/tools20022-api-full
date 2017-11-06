@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiptDetails1#RelatedReference
- * ReceiptDetails1.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiptDetails1#mmRelatedReference
+ * ReceiptDetails1.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiptDetails1#RequestHandling
- * ReceiptDetails1.RequestHandling}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiptDetails1#mmRequestHandling
+ * ReceiptDetails1.mmRequestHandling}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReceiptDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalReferences relatedReference;
 	/**
 	 * Reference of the request.
 	 * <p>
@@ -83,7 +84,7 @@ public class ReceiptDetails1 {
 	 * definition} = "Reference of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReceiptDetails1.mmObject();
 			isDerived = false;
@@ -91,12 +92,13 @@ public class ReceiptDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference of the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalReferences.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalReferences.mmObject();
 		}
 	};
+	protected RequestHandling requestHandling;
 	/**
 	 * Gives the status of the request.
 	 * <p>
@@ -123,7 +125,7 @@ public class ReceiptDetails1 {
 	 * definition} = "Gives the status of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestHandling = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestHandling = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReceiptDetails1.mmObject();
 			isDerived = false;
@@ -131,23 +133,39 @@ public class ReceiptDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestHandling";
 			definition = "Gives the status of the request.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.RequestHandling.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.RequestHandling.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiptDetails1.RelatedReference, com.tools20022.repository.msg.ReceiptDetails1.RequestHandling);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiptDetails1.mmRelatedReference, com.tools20022.repository.msg.ReceiptDetails1.mmRequestHandling);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReceiptDetails1";
 				definition = "Provides details on the request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalReferences getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(com.tools20022.repository.msg.AdditionalReferences relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public RequestHandling getRequestHandling() {
+		return requestHandling;
+	}
+
+	public void setRequestHandling(com.tools20022.repository.msg.RequestHandling requestHandling) {
+		this.requestHandling = requestHandling;
 	}
 }

@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.OffMarketCode OffMarketCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OffMarket1Code#OffMarket
- * OffMarket1Code.OffMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OffMarket1Code#mmOffMarket
+ * OffMarket1Code.mmOffMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OffMarket1Code#NotAdmittedOnExchange
- * OffMarket1Code.NotAdmittedOnExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.OffMarket1Code#mmNotAdmittedOnExchange
+ * OffMarket1Code.mmNotAdmittedOnExchange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class OffMarket1Code extends OffMarketCode {
 	 * name} = "OffMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode OffMarket = new MMCode() {
+	public static final MMCode mmOffMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffMarket";
@@ -102,7 +102,7 @@ public class OffMarket1Code extends OffMarketCode {
 	 * name} = "NotAdmittedOnExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAdmittedOnExchange = new MMCode() {
+	public static final MMCode mmNotAdmittedOnExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAdmittedOnExchange";
@@ -113,12 +113,12 @@ public class OffMarket1Code extends OffMarketCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("XOFF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OffMarket1Code";
 				definition = "Indicates that the trade was executed off-market.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OffMarket1Code.OffMarket, com.tools20022.repository.codeset.OffMarket1Code.NotAdmittedOnExchange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OffMarket1Code.mmOffMarket, com.tools20022.repository.codeset.OffMarket1Code.mmNotAdmittedOnExchange);
 				trace_lazy = () -> OffMarketCode.mmObject();
 			}
 		});

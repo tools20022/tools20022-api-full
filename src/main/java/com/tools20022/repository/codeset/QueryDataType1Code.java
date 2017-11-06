@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryDataType1Code#QueryForeignExchangeTradingData
- * QueryDataType1Code.QueryForeignExchangeTradingData}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryDataType1Code#mmQueryForeignExchangeTradingData
+ * QueryDataType1Code.mmQueryForeignExchangeTradingData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryDataType1Code#QueryOptionTradingData
- * QueryDataType1Code.QueryOptionTradingData}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryDataType1Code#mmQueryOptionTradingData
+ * QueryDataType1Code.mmQueryOptionTradingData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class QueryDataType1Code extends QueryDataTypeCode {
 	 * name} = "QueryForeignExchangeTradingData"</li>
 	 * </ul>
 	 */
-	public static final MMCode QueryForeignExchangeTradingData = new MMCode() {
+	public static final MMCode mmQueryForeignExchangeTradingData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryForeignExchangeTradingData";
@@ -98,7 +98,7 @@ public class QueryDataType1Code extends QueryDataTypeCode {
 	 * name} = "QueryOptionTradingData"</li>
 	 * </ul>
 	 */
-	public static final MMCode QueryOptionTradingData = new MMCode() {
+	public static final MMCode mmQueryOptionTradingData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryOptionTradingData";
@@ -109,11 +109,11 @@ public class QueryDataType1Code extends QueryDataTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QueryDataType1Code";
 				definition = "Specifies the inquiry type of the data.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryDataType1Code.QueryForeignExchangeTradingData, com.tools20022.repository.codeset.QueryDataType1Code.QueryOptionTradingData);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryDataType1Code.mmQueryForeignExchangeTradingData, com.tools20022.repository.codeset.QueryDataType1Code.mmQueryOptionTradingData);
 				trace_lazy = () -> QueryDataTypeCode.mmObject();
 			}
 		});

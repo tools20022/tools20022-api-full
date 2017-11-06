@@ -34,45 +34,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#InvalidMeetingReference
- * MeetingInstructionRejection1Code.InvalidMeetingReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmInvalidMeetingReference
+ * MeetingInstructionRejection1Code.mmInvalidMeetingReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#InvalidAccount
- * MeetingInstructionRejection1Code.InvalidAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmInvalidAccount
+ * MeetingInstructionRejection1Code.mmInvalidAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#InsufficientSecurityPosition
- * MeetingInstructionRejection1Code.InsufficientSecurityPosition}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmInsufficientSecurityPosition
+ * MeetingInstructionRejection1Code.mmInsufficientSecurityPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#InvalidInstructedQuantity
- * MeetingInstructionRejection1Code.InvalidInstructedQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmInvalidInstructedQuantity
+ * MeetingInstructionRejection1Code.mmInvalidInstructedQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#InvalidDate
- * MeetingInstructionRejection1Code.InvalidDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmInvalidDate
+ * MeetingInstructionRejection1Code.mmInvalidDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#SplitVoteNotAllowed
- * MeetingInstructionRejection1Code.SplitVoteNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmSplitVoteNotAllowed
+ * MeetingInstructionRejection1Code.mmSplitVoteNotAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#PartialVoteNotAllowed
- * MeetingInstructionRejection1Code.PartialVoteNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmPartialVoteNotAllowed
+ * MeetingInstructionRejection1Code.mmPartialVoteNotAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#MissingOrInvalidPOA
- * MeetingInstructionRejection1Code.MissingOrInvalidPOA}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmMissingOrInvalidPOA
+ * MeetingInstructionRejection1Code.mmMissingOrInvalidPOA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#ProxyCardDiscrepancy
- * MeetingInstructionRejection1Code.ProxyCardDiscrepancy}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmProxyCardDiscrepancy
+ * MeetingInstructionRejection1Code.mmProxyCardDiscrepancy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#RejectedByIssuer
- * MeetingInstructionRejection1Code.RejectedByIssuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmRejectedByIssuer
+ * MeetingInstructionRejection1Code.mmRejectedByIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#Other
- * MeetingInstructionRejection1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code#mmOther
+ * MeetingInstructionRejection1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,7 +108,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "InvalidMeetingReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidMeetingReference = new MMCode() {
+	public static final MMCode mmInvalidMeetingReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidMeetingReference";
@@ -131,7 +131,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "InvalidAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidAccount = new MMCode() {
+	public static final MMCode mmInvalidAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAccount";
@@ -154,7 +154,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "InsufficientSecurityPosition"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientSecurityPosition = new MMCode() {
+	public static final MMCode mmInsufficientSecurityPosition = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientSecurityPosition";
@@ -177,7 +177,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "InvalidInstructedQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidInstructedQuantity = new MMCode() {
+	public static final MMCode mmInvalidInstructedQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidInstructedQuantity";
@@ -200,7 +200,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "InvalidDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidDate = new MMCode() {
+	public static final MMCode mmInvalidDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidDate";
@@ -223,7 +223,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "SplitVoteNotAllowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode SplitVoteNotAllowed = new MMCode() {
+	public static final MMCode mmSplitVoteNotAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitVoteNotAllowed";
@@ -246,7 +246,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "PartialVoteNotAllowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialVoteNotAllowed = new MMCode() {
+	public static final MMCode mmPartialVoteNotAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialVoteNotAllowed";
@@ -269,7 +269,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "MissingOrInvalidPOA"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingOrInvalidPOA = new MMCode() {
+	public static final MMCode mmMissingOrInvalidPOA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingOrInvalidPOA";
@@ -292,7 +292,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "ProxyCardDiscrepancy"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProxyCardDiscrepancy = new MMCode() {
+	public static final MMCode mmProxyCardDiscrepancy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyCardDiscrepancy";
@@ -315,7 +315,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "RejectedByIssuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedByIssuer = new MMCode() {
+	public static final MMCode mmRejectedByIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedByIssuer";
@@ -338,7 +338,7 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -349,17 +349,17 @@ public class MeetingInstructionRejection1Code extends MeetingInstructionRejectio
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INMR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionRejection1Code";
 				definition = "Identifies the possible rejection reasons.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingInstructionRejection1Code.InvalidMeetingReference, com.tools20022.repository.codeset.MeetingInstructionRejection1Code.InvalidAccount,
-						com.tools20022.repository.codeset.MeetingInstructionRejection1Code.InsufficientSecurityPosition, com.tools20022.repository.codeset.MeetingInstructionRejection1Code.InvalidInstructedQuantity,
-						com.tools20022.repository.codeset.MeetingInstructionRejection1Code.InvalidDate, com.tools20022.repository.codeset.MeetingInstructionRejection1Code.SplitVoteNotAllowed,
-						com.tools20022.repository.codeset.MeetingInstructionRejection1Code.PartialVoteNotAllowed, com.tools20022.repository.codeset.MeetingInstructionRejection1Code.MissingOrInvalidPOA,
-						com.tools20022.repository.codeset.MeetingInstructionRejection1Code.ProxyCardDiscrepancy, com.tools20022.repository.codeset.MeetingInstructionRejection1Code.RejectedByIssuer,
-						com.tools20022.repository.codeset.MeetingInstructionRejection1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmInvalidMeetingReference, com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmInvalidAccount,
+						com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmInsufficientSecurityPosition, com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmInvalidInstructedQuantity,
+						com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmInvalidDate, com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmSplitVoteNotAllowed,
+						com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmPartialVoteNotAllowed, com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmMissingOrInvalidPOA,
+						com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmProxyCardDiscrepancy, com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmRejectedByIssuer,
+						com.tools20022.repository.codeset.MeetingInstructionRejection1Code.mmOther);
 				trace_lazy = () -> MeetingInstructionRejectionCode.mmObject();
 			}
 		});

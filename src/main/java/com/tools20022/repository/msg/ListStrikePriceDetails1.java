@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ListTrading;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the details for negotiating and trading a large number of securities
@@ -45,37 +46,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#ClientOrderIdentification
- * ListStrikePriceDetails1.ClientOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmClientOrderIdentification
+ * ListStrikePriceDetails1.mmClientOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#StrikePrice
- * ListStrikePriceDetails1.StrikePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmStrikePrice
+ * ListStrikePriceDetails1.mmStrikePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#SecondaryClientOrderIdentification
- * ListStrikePriceDetails1.SecondaryClientOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmSecondaryClientOrderIdentification
+ * ListStrikePriceDetails1.mmSecondaryClientOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#PreviousClosingPrice
- * ListStrikePriceDetails1.PreviousClosingPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#Side
- * ListStrikePriceDetails1.Side}</li>
+ * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmPreviousClosingPrice
+ * ListStrikePriceDetails1.mmPreviousClosingPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmSide
+ * ListStrikePriceDetails1.mmSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#UnderlyingFinancialInstrument
- * ListStrikePriceDetails1.UnderlyingFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmUnderlyingFinancialInstrument
+ * ListStrikePriceDetails1.mmUnderlyingFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#Stipulations
- * ListStrikePriceDetails1.Stipulations}</li>
+ * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmStipulations
+ * ListStrikePriceDetails1.mmStipulations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#UnderlyingStipulations
- * ListStrikePriceDetails1.UnderlyingStipulations}</li>
+ * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmUnderlyingStipulations
+ * ListStrikePriceDetails1.mmUnderlyingStipulations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#FinancialInstrumentAttributes
- * ListStrikePriceDetails1.FinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmFinancialInstrumentAttributes
+ * ListStrikePriceDetails1.mmFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#UnderlyingFinancialInstrumentAttributes
- * ListStrikePriceDetails1.UnderlyingFinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmUnderlyingFinancialInstrumentAttributes
+ * ListStrikePriceDetails1.mmUnderlyingFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#FinancialInstrument
- * ListStrikePriceDetails1.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1#mmFinancialInstrument
+ * ListStrikePriceDetails1.mmFinancialInstrument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -84,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ListStrikePriceDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text clientOrderIdentification;
 	/**
 	 * Unique identifier for the order as assigned by the buy-side. Uniqueness
 	 * must be guaranteed within a single trading day. Firms, particularly those
@@ -117,8 +119,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,20 +141,21 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "ClntOrdrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for the order as assigned by the buy-side.  Uniqueness must be guaranteed within a single trading day. Firms, particularly those  that  electronically submit multi-day orders, trade globally or throughout market close periods, should ensure  uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Price1 strikePrice;
 	/**
 	 * Amount of money for which goods or services are offered, sold, or bought.
 	 * <p>
@@ -164,8 +167,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderPrice
-	 * SecuritiesOrder.OrderPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderPrice
+	 * SecuritiesOrder.mmOrderPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -186,20 +189,21 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StrikePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderPrice;
 			isDerived = false;
 			xmlTag = "StrkPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected Max35Text secondaryClientOrderIdentification;
 	/**
 	 * Assigned by the party that originates the order. Can be used to provide
 	 * the ClientOrderIdentification used by an exchange or executing system.
@@ -213,8 +217,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -235,20 +239,21 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondaryClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "ScndryClntOrdrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryClientOrderIdentification";
 			definition = "Assigned by the party that  originates the order. Can be used to provide the ClientOrderIdentification used by an exchange or executing system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Price1 previousClosingPrice;
 	/**
 	 * Price of a financial instrument at closing time of the exchange in which
 	 * it is traded.
@@ -261,8 +266,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Pricing
-	 * Security.Pricing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPricing
+	 * Security.mmPricing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -283,20 +288,21 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousClosingPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousClosingPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Pricing;
 			isDerived = false;
 			xmlTag = "PrvsClsgPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousClosingPrice";
 			definition = "Price of a financial instrument at closing time of the exchange in which it is traded.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected Side1Code side;
 	/**
 	 * Coded list to specify the side of the order.
 	 * <p>
@@ -309,8 +315,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -329,20 +335,21 @@ public class ListStrikePriceDetails1 {
 	 * definition} = "Coded list to specify the side of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Side = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Coded list to specify the side of the order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument;
 	/**
 	 * Unique and unambiguous identifier of a security, assigned under a formal
 	 * or proprietary identification scheme.
@@ -356,8 +363,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -378,20 +385,21 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrument = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrument";
 			definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityIdentification7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected FinancialInstrumentStipulations stipulations;
 	/**
 	 * Provides details about the financial instrument stipulations.
 	 * <p>
@@ -404,8 +412,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedSecurity
-	 * SecuritiesOrder.OrderedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedSecurity
+	 * SecuritiesOrder.mmOrderedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -425,21 +433,22 @@ public class ListStrikePriceDetails1 {
 	 * "Provides details about the financial instrument stipulations."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Stipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStipulations = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedSecurity;
 			isDerived = false;
 			xmlTag = "Stiptns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stipulations";
 			definition = "Provides details about the financial instrument stipulations.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations;
 	/**
 	 * Provides details about the underlying financial instrument stipulations.
 	 * <p>
@@ -452,8 +461,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedSecurity
-	 * SecuritiesOrder.OrderedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedSecurity
+	 * SecuritiesOrder.mmOrderedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -474,20 +483,21 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedSecurity;
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingStipulations";
 			definition = "Provides details about the underlying financial instrument stipulations.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes1 financialInstrumentAttributes;
 	/**
 	 * Provides details about the financial instrument attributes.
 	 * <p>
@@ -500,8 +510,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedSecurity
-	 * SecuritiesOrder.OrderedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedSecurity
+	 * SecuritiesOrder.mmOrderedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -521,21 +531,22 @@ public class ListStrikePriceDetails1 {
 	 * "Provides details about the financial instrument attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedSecurity;
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Provides details about the financial instrument attributes.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes;
 	/**
 	 * Provides details about the underlying financial instrument attributes.
 	 * <p>
@@ -548,8 +559,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedSecurity
-	 * SecuritiesOrder.OrderedSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedSecurity
+	 * SecuritiesOrder.mmOrderedSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -569,20 +580,21 @@ public class ListStrikePriceDetails1 {
 	 * "Provides details about the underlying financial instrument attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedSecurity;
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentAttributes";
 			definition = "Provides details about the underlying financial instrument attributes.";
 			minOccurs = 0;
-			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	protected SecurityIdentification7 financialInstrument;
 	/**
 	 * Unique and unambiguous identifier of a security, assigned under a formal
 	 * or proprietary identification scheme.
@@ -596,8 +608,8 @@ public class ListStrikePriceDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -618,37 +630,126 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> ListStrikePriceDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ListStrikePriceDetails1.ClientOrderIdentification, com.tools20022.repository.msg.ListStrikePriceDetails1.StrikePrice,
-						com.tools20022.repository.msg.ListStrikePriceDetails1.SecondaryClientOrderIdentification, com.tools20022.repository.msg.ListStrikePriceDetails1.PreviousClosingPrice,
-						com.tools20022.repository.msg.ListStrikePriceDetails1.Side, com.tools20022.repository.msg.ListStrikePriceDetails1.UnderlyingFinancialInstrument, com.tools20022.repository.msg.ListStrikePriceDetails1.Stipulations,
-						com.tools20022.repository.msg.ListStrikePriceDetails1.UnderlyingStipulations, com.tools20022.repository.msg.ListStrikePriceDetails1.FinancialInstrumentAttributes,
-						com.tools20022.repository.msg.ListStrikePriceDetails1.UnderlyingFinancialInstrumentAttributes, com.tools20022.repository.msg.ListStrikePriceDetails1.FinancialInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ListStrikePriceDetails1.mmClientOrderIdentification, com.tools20022.repository.msg.ListStrikePriceDetails1.mmStrikePrice,
+						com.tools20022.repository.msg.ListStrikePriceDetails1.mmSecondaryClientOrderIdentification, com.tools20022.repository.msg.ListStrikePriceDetails1.mmPreviousClosingPrice,
+						com.tools20022.repository.msg.ListStrikePriceDetails1.mmSide, com.tools20022.repository.msg.ListStrikePriceDetails1.mmUnderlyingFinancialInstrument,
+						com.tools20022.repository.msg.ListStrikePriceDetails1.mmStipulations, com.tools20022.repository.msg.ListStrikePriceDetails1.mmUnderlyingStipulations,
+						com.tools20022.repository.msg.ListStrikePriceDetails1.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.ListStrikePriceDetails1.mmUnderlyingFinancialInstrumentAttributes,
+						com.tools20022.repository.msg.ListStrikePriceDetails1.mmFinancialInstrument);
 				trace_lazy = () -> ListTrading.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ListStrikePriceDetails1";
 				definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. \n\nOne example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of\na derivative product (for example index futures) to profit from price differences between the basket and the derivative product. \n\nOther examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getClientOrderIdentification() {
+		return clientOrderIdentification;
+	}
+
+	public void setClientOrderIdentification(Max35Text clientOrderIdentification) {
+		this.clientOrderIdentification = clientOrderIdentification;
+	}
+
+	public Price1 getStrikePrice() {
+		return strikePrice;
+	}
+
+	public void setStrikePrice(com.tools20022.repository.msg.Price1 strikePrice) {
+		this.strikePrice = strikePrice;
+	}
+
+	public Max35Text getSecondaryClientOrderIdentification() {
+		return secondaryClientOrderIdentification;
+	}
+
+	public void setSecondaryClientOrderIdentification(Max35Text secondaryClientOrderIdentification) {
+		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
+	}
+
+	public Price1 getPreviousClosingPrice() {
+		return previousClosingPrice;
+	}
+
+	public void setPreviousClosingPrice(com.tools20022.repository.msg.Price1 previousClosingPrice) {
+		this.previousClosingPrice = previousClosingPrice;
+	}
+
+	public Side1Code getSide() {
+		return side;
+	}
+
+	public void setSide(Side1Code side) {
+		this.side = side;
+	}
+
+	public List<SecurityIdentification7> getUnderlyingFinancialInstrument() {
+		return underlyingFinancialInstrument;
+	}
+
+	public void setUnderlyingFinancialInstrument(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument) {
+		this.underlyingFinancialInstrument = underlyingFinancialInstrument;
+	}
+
+	public FinancialInstrumentStipulations getStipulations() {
+		return stipulations;
+	}
+
+	public void setStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations stipulations) {
+		this.stipulations = stipulations;
+	}
+
+	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
+		return underlyingStipulations;
+	}
+
+	public void setUnderlyingStipulations(List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations) {
+		this.underlyingStipulations = underlyingStipulations;
+	}
+
+	public FinancialInstrumentAttributes1 getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes;
+	}
+
+	public void setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	}
+
+	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
+		return underlyingFinancialInstrumentAttributes;
+	}
+
+	public void setUnderlyingFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
+		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
+	}
+
+	public SecurityIdentification7 getFinancialInstrument() {
+		return financialInstrument;
+	}
+
+	public void setFinancialInstrument(com.tools20022.repository.msg.SecurityIdentification7 financialInstrument) {
+		this.financialInstrument = financialInstrument;
 	}
 }

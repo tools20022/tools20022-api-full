@@ -38,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#IntroducingFirm
- * ConfirmationParties4.IntroducingFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmIntroducingFirm
+ * ConfirmationParties4.mmIntroducingFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties2#IntroducingFirm
- * ConfirmationParties2.IntroducingFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties2#mmIntroducingFirm
+ * ConfirmationParties2.mmIntroducingFirm}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,11 +73,11 @@ public class IntroducingFirm extends SecuritiesOrderPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntroducingFirm";
 				definition = "Party (broker or other intermediary) that owns the relationship with the investor. It can relay an order directly to the trading floor, or give clients direct access to the floor.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.IntroducingFirm, com.tools20022.repository.msg.ConfirmationParties2.IntroducingFirm);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.mmIntroducingFirm, com.tools20022.repository.msg.ConfirmationParties2.mmIntroducingFirm);
 				superType_lazy = () -> SecuritiesOrderPartyRole.mmObject();
 			}
 		});

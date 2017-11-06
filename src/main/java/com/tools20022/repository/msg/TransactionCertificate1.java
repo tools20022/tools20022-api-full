@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.RegisteredContract;
 import com.tools20022.repository.entity.TradeCertificate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Certificate against which all currency control transactions are registered.
@@ -37,26 +38,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#TransactionIdentification
- * TransactionCertificate1.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#mmTransactionIdentification
+ * TransactionCertificate1.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#Certificate
- * TransactionCertificate1.Certificate}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#mmCertificate
+ * TransactionCertificate1.mmCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#Account
- * TransactionCertificate1.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#mmAccount
+ * TransactionCertificate1.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#BankAccountDomiciliationCountry
- * TransactionCertificate1.BankAccountDomiciliationCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#mmBankAccountDomiciliationCountry
+ * TransactionCertificate1.mmBankAccountDomiciliationCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#Amendment
- * TransactionCertificate1.Amendment}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#mmAmendment
+ * TransactionCertificate1.mmAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#CertificateRecord
- * TransactionCertificate1.CertificateRecord}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#mmCertificateRecord
+ * TransactionCertificate1.mmCertificateRecord}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#SupplementaryData
- * TransactionCertificate1.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificate1#mmSupplementaryData
+ * TransactionCertificate1.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionCertificate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unique and unambiguous identification of the transaction.
 	 * <p>
@@ -110,7 +112,7 @@ public class TransactionCertificate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionCertificate1.mmObject();
 			isDerived = false;
@@ -118,11 +120,12 @@ public class TransactionCertificate1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique and unambiguous identification of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DocumentIdentification28 certificate;
 	/**
 	 * Reference of the transaction certificate.
 	 * <p>
@@ -135,8 +138,8 @@ public class TransactionCertificate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#DocumentIdentification
-	 * Document.DocumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmDocumentIdentification
+	 * Document.mmDocumentIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,21 +158,22 @@ public class TransactionCertificate1 {
 	 * definition} = "Reference of the transaction certificate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Certificate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCertificate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentIdentification;
 			componentContext_lazy = () -> TransactionCertificate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.DocumentIdentification;
 			isDerived = false;
 			xmlTag = "Cert";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Reference of the transaction certificate.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification28.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification28.mmObject();
 		}
 	};
+	protected CashAccount24 account;
 	/**
 	 * Cash account, linked to the registered contract, on which the cash entry
 	 * is made.
@@ -182,8 +186,8 @@ public class TransactionCertificate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Reconciliation#Account
-	 * Reconciliation.Account}</li>
+	 * {@linkplain com.tools20022.repository.entity.Reconciliation#mmAccount
+	 * Reconciliation.mmAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,21 +208,22 @@ public class TransactionCertificate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reconciliation.mmAccount;
 			componentContext_lazy = () -> TransactionCertificate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reconciliation.Account;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Cash account, linked to the registered contract, on which the cash entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected CountryCode bankAccountDomiciliationCountry;
 	/**
 	 * Country in which the bank account is located, when the bank which
 	 * services the account is located in another country.
@@ -232,8 +237,8 @@ public class TransactionCertificate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#Country
-	 * PostalAddress.Country}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
+	 * PostalAddress.mmCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,20 +259,21 @@ public class TransactionCertificate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankAccountDomiciliationCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankAccountDomiciliationCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
 			componentContext_lazy = () -> TransactionCertificate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.Country;
 			isDerived = false;
 			xmlTag = "BkAcctDmcltnCtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankAccountDomiciliationCountry";
 			definition = "Country in which the bank account is located, when the bank which services the account is located in another country.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected DocumentAmendment1 amendment;
 	/**
 	 * Amendment indicator details.
 	 * <p>
@@ -299,21 +305,22 @@ public class TransactionCertificate1 {
 	 * definition} = "Amendment indicator details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Amendment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmendment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionCertificate1.mmObject();
 			businessComponentTrace_lazy = () -> RegisteredContract.mmObject();
+			componentContext_lazy = () -> TransactionCertificate1.mmObject();
 			isDerived = false;
 			xmlTag = "Amdmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
 			definition = "Amendment indicator details.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentAmendment1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentAmendment1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransactionCertificateRecord1> certificateRecord;
 	/**
 	 * Record of the transaction certificate.
 	 * <p>
@@ -346,20 +353,21 @@ public class TransactionCertificate1 {
 	 * definition} = "Record of the transaction certificate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CertificateRecord = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCertificateRecord = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionCertificate1.mmObject();
 			businessComponentTrace_lazy = () -> RegisteredContract.mmObject();
+			componentContext_lazy = () -> TransactionCertificate1.mmObject();
 			isDerived = false;
 			xmlTag = "CertRcrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateRecord";
 			definition = "Record of the transaction certificate.";
 			minOccurs = 1;
-			type_lazy = () -> TransactionCertificateRecord1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionCertificateRecord1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -389,7 +397,7 @@ public class TransactionCertificate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionCertificate1.mmObject();
 			isDerived = false;
@@ -398,24 +406,82 @@ public class TransactionCertificate1 {
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificate1.TransactionIdentification, com.tools20022.repository.msg.TransactionCertificate1.Certificate,
-						com.tools20022.repository.msg.TransactionCertificate1.Account, com.tools20022.repository.msg.TransactionCertificate1.BankAccountDomiciliationCountry, com.tools20022.repository.msg.TransactionCertificate1.Amendment,
-						com.tools20022.repository.msg.TransactionCertificate1.CertificateRecord, com.tools20022.repository.msg.TransactionCertificate1.SupplementaryData);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.TransactionCertificate1.mmTransactionIdentification, com.tools20022.repository.msg.TransactionCertificate1.mmCertificate,
+								com.tools20022.repository.msg.TransactionCertificate1.mmAccount, com.tools20022.repository.msg.TransactionCertificate1.mmBankAccountDomiciliationCountry,
+								com.tools20022.repository.msg.TransactionCertificate1.mmAmendment, com.tools20022.repository.msg.TransactionCertificate1.mmCertificateRecord,
+								com.tools20022.repository.msg.TransactionCertificate1.mmSupplementaryData);
 				trace_lazy = () -> TradeCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionCertificate1";
 				definition = "Certificate against which all currency control transactions are registered.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public DocumentIdentification28 getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(com.tools20022.repository.msg.DocumentIdentification28 certificate) {
+		this.certificate = certificate;
+	}
+
+	public CashAccount24 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+		this.account = account;
+	}
+
+	public CountryCode getBankAccountDomiciliationCountry() {
+		return bankAccountDomiciliationCountry;
+	}
+
+	public void setBankAccountDomiciliationCountry(CountryCode bankAccountDomiciliationCountry) {
+		this.bankAccountDomiciliationCountry = bankAccountDomiciliationCountry;
+	}
+
+	public DocumentAmendment1 getAmendment() {
+		return amendment;
+	}
+
+	public void setAmendment(com.tools20022.repository.msg.DocumentAmendment1 amendment) {
+		this.amendment = amendment;
+	}
+
+	public List<TransactionCertificateRecord1> getCertificateRecord() {
+		return certificateRecord;
+	}
+
+	public void setCertificateRecord(List<com.tools20022.repository.msg.TransactionCertificateRecord1> certificateRecord) {
+		this.certificateRecord = certificateRecord;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

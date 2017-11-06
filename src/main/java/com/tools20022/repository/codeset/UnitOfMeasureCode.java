@@ -29,196 +29,206 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Kilogram
- * UnitOfMeasureCode.Kilogram}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Piece
- * UnitOfMeasureCode.Piece}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Ton
- * UnitOfMeasureCode.Ton}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Metre
- * UnitOfMeasureCode.Metre}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Inch
- * UnitOfMeasureCode.Inch}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Yard
- * UnitOfMeasureCode.Yard}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#GBGallon
- * UnitOfMeasureCode.GBGallon}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Gram
- * UnitOfMeasureCode.Gram}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Centimetre
- * UnitOfMeasureCode.Centimetre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmKilogram
+ * UnitOfMeasureCode.mmKilogram}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmPiece
+ * UnitOfMeasureCode.mmPiece}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmTon
+ * UnitOfMeasureCode.mmTon}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMetre
+ * UnitOfMeasureCode.mmMetre}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmInch
+ * UnitOfMeasureCode.mmInch}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmYard
+ * UnitOfMeasureCode.mmYard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#SquareMetre
- * UnitOfMeasureCode.SquareMetre}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Foot
- * UnitOfMeasureCode.Foot}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Mile
- * UnitOfMeasureCode.Mile}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmGBGallon
+ * UnitOfMeasureCode.mmGBGallon}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmGram
+ * UnitOfMeasureCode.mmGram}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#SquareInch
- * UnitOfMeasureCode.SquareInch}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmCentimetre
+ * UnitOfMeasureCode.mmCentimetre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#SquareFoot
- * UnitOfMeasureCode.SquareFoot}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmSquareMetre
+ * UnitOfMeasureCode.mmSquareMetre}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmFoot
+ * UnitOfMeasureCode.mmFoot}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMile
+ * UnitOfMeasureCode.mmMile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#SquareMile
- * UnitOfMeasureCode.SquareMile}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#GBOunce
- * UnitOfMeasureCode.GBOunce}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#USOunce
- * UnitOfMeasureCode.USOunce}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#GBPint
- * UnitOfMeasureCode.GBPint}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#USPint
- * UnitOfMeasureCode.USPint}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#GBQuart
- * UnitOfMeasureCode.GBQuart}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#USQuart
- * UnitOfMeasureCode.USQuart}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#USGallon
- * UnitOfMeasureCode.USGallon}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmSquareInch
+ * UnitOfMeasureCode.mmSquareInch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Millimetre
- * UnitOfMeasureCode.Millimetre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmSquareFoot
+ * UnitOfMeasureCode.mmSquareFoot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Kilometre
- * UnitOfMeasureCode.Kilometre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmSquareMile
+ * UnitOfMeasureCode.mmSquareMile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#SquareYard
- * UnitOfMeasureCode.SquareYard}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Acre
- * UnitOfMeasureCode.Acre}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Are
- * UnitOfMeasureCode.Are}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmGBOunce
+ * UnitOfMeasureCode.mmGBOunce}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#SquareMillimetre
- * UnitOfMeasureCode.SquareMillimetre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmUSOunce
+ * UnitOfMeasureCode.mmUSOunce}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmGBPint
+ * UnitOfMeasureCode.mmGBPint}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmUSPint
+ * UnitOfMeasureCode.mmUSPint}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#SquareCentimetre
- * UnitOfMeasureCode.SquareCentimetre}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Hectare
- * UnitOfMeasureCode.Hectare}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmGBQuart
+ * UnitOfMeasureCode.mmGBQuart}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#SquareKilometre
- * UnitOfMeasureCode.SquareKilometre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmUSQuart
+ * UnitOfMeasureCode.mmUSQuart}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#MilliLitre
- * UnitOfMeasureCode.MilliLitre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmUSGallon
+ * UnitOfMeasureCode.mmUSGallon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Centilitre
- * UnitOfMeasureCode.Centilitre}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Litre
- * UnitOfMeasureCode.Litre}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Pound
- * UnitOfMeasureCode.Pound}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMillimetre
+ * UnitOfMeasureCode.mmMillimetre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Allowances
- * UnitOfMeasureCode.Allowances}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmKilometre
+ * UnitOfMeasureCode.mmKilometre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#AmountOfCurrency
- * UnitOfMeasureCode.AmountOfCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Barrels
- * UnitOfMeasureCode.Barrels}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmSquareYard
+ * UnitOfMeasureCode.mmSquareYard}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmAcre
+ * UnitOfMeasureCode.mmAcre}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmAre
+ * UnitOfMeasureCode.mmAre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#BillionCubicFeet
- * UnitOfMeasureCode.BillionCubicFeet}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmSquareMillimetre
+ * UnitOfMeasureCode.mmSquareMillimetre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#BoardFeet
- * UnitOfMeasureCode.BoardFeet}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Bushels
- * UnitOfMeasureCode.Bushels}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmSquareCentimetre
+ * UnitOfMeasureCode.mmSquareCentimetre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#CertifiedEmissionsReduction
- * UnitOfMeasureCode.CertifiedEmissionsReduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmHectare
+ * UnitOfMeasureCode.mmHectare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#ClimateReserveTonnes
- * UnitOfMeasureCode.ClimateReserveTonnes}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmSquareKilometre
+ * UnitOfMeasureCode.mmSquareKilometre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#CubicMeters
- * UnitOfMeasureCode.CubicMeters}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Days
- * UnitOfMeasureCode.Days}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMilliLitre
+ * UnitOfMeasureCode.mmMilliLitre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#DryMetricTons
- * UnitOfMeasureCode.DryMetricTons}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmCentilitre
+ * UnitOfMeasureCode.mmCentilitre}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmLitre
+ * UnitOfMeasureCode.mmLitre}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmPound
+ * UnitOfMeasureCode.mmPound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#EnvironmentalCredit
- * UnitOfMeasureCode.EnvironmentalCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmAllowances
+ * UnitOfMeasureCode.mmAllowances}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#EnvironmentalOffset
- * UnitOfMeasureCode.EnvironmentalOffset}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmAmountOfCurrency
+ * UnitOfMeasureCode.mmAmountOfCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Hundredweight
- * UnitOfMeasureCode.Hundredweight}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmBarrels
+ * UnitOfMeasureCode.mmBarrels}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#KilowattDayCapacity
- * UnitOfMeasureCode.KilowattDayCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmBillionCubicFeet
+ * UnitOfMeasureCode.mmBillionCubicFeet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#KilowattHours
- * UnitOfMeasureCode.KilowattHours}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmBoardFeet
+ * UnitOfMeasureCode.mmBoardFeet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#KilowattHoursCapacity
- * UnitOfMeasureCode.KilowattHoursCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmBushels
+ * UnitOfMeasureCode.mmBushels}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#KilowattMinuteCapacity
- * UnitOfMeasureCode.KilowattMinuteCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmCertifiedEmissionsReduction
+ * UnitOfMeasureCode.mmCertifiedEmissionsReduction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#KilowattMonthCapacity
- * UnitOfMeasureCode.KilowattMonthCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmClimateReserveTonnes
+ * UnitOfMeasureCode.mmClimateReserveTonnes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#KilowattYearCapacity
- * UnitOfMeasureCode.KilowattYearCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmCubicMeters
+ * UnitOfMeasureCode.mmCubicMeters}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmDays
+ * UnitOfMeasureCode.mmDays}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#MegawattDayCapacity
- * UnitOfMeasureCode.MegawattDayCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmDryMetricTons
+ * UnitOfMeasureCode.mmDryMetricTons}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#MegawattHours
- * UnitOfMeasureCode.MegawattHours}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmEnvironmentalCredit
+ * UnitOfMeasureCode.mmEnvironmentalCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#MegawattHoursCapacity
- * UnitOfMeasureCode.MegawattHoursCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmEnvironmentalOffset
+ * UnitOfMeasureCode.mmEnvironmentalOffset}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#MegawattMinuteCapacity
- * UnitOfMeasureCode.MegawattMinuteCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmHundredweight
+ * UnitOfMeasureCode.mmHundredweight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#MegawattMonthCapacity
- * UnitOfMeasureCode.MegawattMonthCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmKilowattDayCapacity
+ * UnitOfMeasureCode.mmKilowattDayCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#MegawattYearCapacity
- * UnitOfMeasureCode.MegawattYearCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmKilowattHours
+ * UnitOfMeasureCode.mmKilowattHours}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#MetricTons
- * UnitOfMeasureCode.MetricTons}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmKilowattHoursCapacity
+ * UnitOfMeasureCode.mmKilowattHoursCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#MillionBarrels
- * UnitOfMeasureCode.MillionBarrels}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmKilowattMinuteCapacity
+ * UnitOfMeasureCode.mmKilowattMinuteCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#OneMillionBTU
- * UnitOfMeasureCode.OneMillionBTU}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmKilowattMonthCapacity
+ * UnitOfMeasureCode.mmKilowattMonthCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#TroyOunces
- * UnitOfMeasureCode.TroyOunces}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmKilowattYearCapacity
+ * UnitOfMeasureCode.mmKilowattYearCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#USHundredweight
- * UnitOfMeasureCode.USHundredweight}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMegawattDayCapacity
+ * UnitOfMeasureCode.mmMegawattDayCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#IndexPoint
- * UnitOfMeasureCode.IndexPoint}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMegawattHours
+ * UnitOfMeasureCode.mmMegawattHours}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#PrincipalWithRelationToDebtInstrument
- * UnitOfMeasureCode.PrincipalWithRelationToDebtInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMegawattHoursCapacity
+ * UnitOfMeasureCode.mmMegawattHoursCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#DieselGallonEquivalent
- * UnitOfMeasureCode.DieselGallonEquivalent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMegawattMinuteCapacity
+ * UnitOfMeasureCode.mmMegawattMinuteCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#GasolineGallonEquivalent
- * UnitOfMeasureCode.GasolineGallonEquivalent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMegawattMonthCapacity
+ * UnitOfMeasureCode.mmMegawattMonthCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#TonsOfCarbonDioxide
- * UnitOfMeasureCode.TonsOfCarbonDioxide}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Lot
- * UnitOfMeasureCode.Lot}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMegawattYearCapacity
+ * UnitOfMeasureCode.mmMegawattYearCapacity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMetricTons
+ * UnitOfMeasureCode.mmMetricTons}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmMillionBarrels
+ * UnitOfMeasureCode.mmMillionBarrels}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmOneMillionBTU
+ * UnitOfMeasureCode.mmOneMillionBTU}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmTroyOunces
+ * UnitOfMeasureCode.mmTroyOunces}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmUSHundredweight
+ * UnitOfMeasureCode.mmUSHundredweight}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmIndexPoint
+ * UnitOfMeasureCode.mmIndexPoint}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmPrincipalWithRelationToDebtInstrument
+ * UnitOfMeasureCode.mmPrincipalWithRelationToDebtInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmDieselGallonEquivalent
+ * UnitOfMeasureCode.mmDieselGallonEquivalent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmGasolineGallonEquivalent
+ * UnitOfMeasureCode.mmGasolineGallonEquivalent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmTonsOfCarbonDioxide
+ * UnitOfMeasureCode.mmTonsOfCarbonDioxide}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#mmLot
+ * UnitOfMeasureCode.mmLot}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -233,8 +243,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -275,7 +285,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Basic unit of mass in the SI system, 1000 grams."</li>
 	 * </ul>
 	 */
-	public static final MMCode Kilogram = new MMCode() {
+	public static final MMCode mmKilogram = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Kilogram";
@@ -308,7 +318,7 @@ public class UnitOfMeasureCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Piece = new MMCode() {
+	public static final MMCode mmPiece = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Piece";
@@ -341,7 +351,7 @@ public class UnitOfMeasureCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Ton = new MMCode() {
+	public static final MMCode mmTon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Ton";
@@ -372,7 +382,7 @@ public class UnitOfMeasureCode {
 	 * "Unit of length in the metric system, equal to 39.37 inches."</li>
 	 * </ul>
 	 */
-	public static final MMCode Metre = new MMCode() {
+	public static final MMCode mmMetre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Metre";
@@ -402,7 +412,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Measure of length equal to 2.54 cm."</li>
 	 * </ul>
 	 */
-	public static final MMCode Inch = new MMCode() {
+	public static final MMCode mmInch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Inch";
@@ -432,7 +442,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of length equal to 3 feet or 0.9144 metre."</li>
 	 * </ul>
 	 */
-	public static final MMCode Yard = new MMCode() {
+	public static final MMCode mmYard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Yard";
@@ -462,7 +472,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of volume that is equal to 8 pints."</li>
 	 * </ul>
 	 */
-	public static final MMCode GBGallon = new MMCode() {
+	public static final MMCode mmGBGallon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GBGallon";
@@ -492,7 +502,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of measure that is equal to a 1,000th of a kilo."</li>
 	 * </ul>
 	 */
-	public static final MMCode Gram = new MMCode() {
+	public static final MMCode mmGram = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Gram";
@@ -522,7 +532,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "One 100th part of a metre."</li>
 	 * </ul>
 	 */
-	public static final MMCode Centimetre = new MMCode() {
+	public static final MMCode mmCentimetre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Centimetre";
@@ -552,7 +562,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Measure of a surface, one metre by one metre."</li>
 	 * </ul>
 	 */
-	public static final MMCode SquareMetre = new MMCode() {
+	public static final MMCode mmSquareMetre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SquareMetre";
@@ -582,7 +592,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of length equal to 1/3 yard."</li>
 	 * </ul>
 	 */
-	public static final MMCode Foot = new MMCode() {
+	public static final MMCode mmFoot = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Foot";
@@ -612,7 +622,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of length equal to 1,760 yards"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mile = new MMCode() {
+	public static final MMCode mmMile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Mile";
@@ -642,7 +652,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Measure of a surface, one inch by one inch."</li>
 	 * </ul>
 	 */
-	public static final MMCode SquareInch = new MMCode() {
+	public static final MMCode mmSquareInch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SquareInch";
@@ -672,7 +682,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Measure of a surface, one foot by one foot."</li>
 	 * </ul>
 	 */
-	public static final MMCode SquareFoot = new MMCode() {
+	public static final MMCode mmSquareFoot = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SquareFoot";
@@ -702,7 +712,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Measure of a surface, one mile by one mile."</li>
 	 * </ul>
 	 */
-	public static final MMCode SquareMile = new MMCode() {
+	public static final MMCode mmSquareMile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SquareMile";
@@ -732,7 +742,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of weight equal to a sixteenth of a pound."</li>
 	 * </ul>
 	 */
-	public static final MMCode GBOunce = new MMCode() {
+	public static final MMCode mmGBOunce = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GBOunce";
@@ -762,7 +772,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of weight equal to a sixteenth of a pound."</li>
 	 * </ul>
 	 */
-	public static final MMCode USOunce = new MMCode() {
+	public static final MMCode mmUSOunce = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "USOunce";
@@ -792,7 +802,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of volume that is equal to 568 cubic centimetres."</li>
 	 * </ul>
 	 */
-	public static final MMCode GBPint = new MMCode() {
+	public static final MMCode mmGBPint = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GBPint";
@@ -822,7 +832,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of volume that is equal to 473 cubic centimetres."</li>
 	 * </ul>
 	 */
-	public static final MMCode USPint = new MMCode() {
+	public static final MMCode mmUSPint = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "USPint";
@@ -852,7 +862,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of volume that is equal to 2 pints."</li>
 	 * </ul>
 	 */
-	public static final MMCode GBQuart = new MMCode() {
+	public static final MMCode mmGBQuart = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GBQuart";
@@ -882,7 +892,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of volume that is equal to 2 pints."</li>
 	 * </ul>
 	 */
-	public static final MMCode USQuart = new MMCode() {
+	public static final MMCode mmUSQuart = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "USQuart";
@@ -912,7 +922,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of volume that is equal to 8 pints."</li>
 	 * </ul>
 	 */
-	public static final MMCode USGallon = new MMCode() {
+	public static final MMCode mmUSGallon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "USGallon";
@@ -942,7 +952,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of measure that is a thousandth of one metre."</li>
 	 * </ul>
 	 */
-	public static final MMCode Millimetre = new MMCode() {
+	public static final MMCode mmMillimetre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Millimetre";
@@ -972,7 +982,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of measure that is equal to 1,000 meters."</li>
 	 * </ul>
 	 */
-	public static final MMCode Kilometre = new MMCode() {
+	public static final MMCode mmKilometre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Kilometre";
@@ -1002,7 +1012,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Measure of a surface, one yard by one yard."</li>
 	 * </ul>
 	 */
-	public static final MMCode SquareYard = new MMCode() {
+	public static final MMCode mmSquareYard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SquareYard";
@@ -1032,7 +1042,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of measure equal to 4,840 square yards."</li>
 	 * </ul>
 	 */
-	public static final MMCode Acre = new MMCode() {
+	public static final MMCode mmAcre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Acre";
@@ -1062,7 +1072,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of measure equal to a 100 square meters."</li>
 	 * </ul>
 	 */
-	public static final MMCode Are = new MMCode() {
+	public static final MMCode mmAre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Are";
@@ -1092,7 +1102,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Measure of a surface, one millimetre by one millimetre."</li>
 	 * </ul>
 	 */
-	public static final MMCode SquareMillimetre = new MMCode() {
+	public static final MMCode mmSquareMillimetre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SquareMillimetre";
@@ -1122,7 +1132,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Measure of a surface, one centimetre by one centimetre."</li>
 	 * </ul>
 	 */
-	public static final MMCode SquareCentimetre = new MMCode() {
+	public static final MMCode mmSquareCentimetre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SquareCentimetre";
@@ -1152,7 +1162,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of measure that is equal to 10,000 square meters."</li>
 	 * </ul>
 	 */
-	public static final MMCode Hectare = new MMCode() {
+	public static final MMCode mmHectare = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Hectare";
@@ -1182,7 +1192,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Measure of a surface, one kilometre by one kilometre."</li>
 	 * </ul>
 	 */
-	public static final MMCode SquareKilometre = new MMCode() {
+	public static final MMCode mmSquareKilometre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SquareKilometre";
@@ -1213,7 +1223,7 @@ public class UnitOfMeasureCode {
 	 * "Unit of volume that is equal to one thousandth of a litre."</li>
 	 * </ul>
 	 */
-	public static final MMCode MilliLitre = new MMCode() {
+	public static final MMCode mmMilliLitre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MilliLitre";
@@ -1244,7 +1254,7 @@ public class UnitOfMeasureCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Centilitre = new MMCode() {
+	public static final MMCode mmCentilitre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Centilitre";
@@ -1275,7 +1285,7 @@ public class UnitOfMeasureCode {
 	 * "Unit of volume that is equal to a thousand cubic centimetres."</li>
 	 * </ul>
 	 */
-	public static final MMCode Litre = new MMCode() {
+	public static final MMCode mmLitre = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Litre";
@@ -1305,7 +1315,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Unit of weight equal to 0.454 kilograms."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pound = new MMCode() {
+	public static final MMCode mmPound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Pound";
@@ -1335,7 +1345,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode Allowances = new MMCode() {
+	public static final MMCode mmAllowances = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Allowances";
@@ -1365,7 +1375,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode AmountOfCurrency = new MMCode() {
+	public static final MMCode mmAmountOfCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOfCurrency";
@@ -1395,7 +1405,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode Barrels = new MMCode() {
+	public static final MMCode mmBarrels = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Barrels";
@@ -1425,7 +1435,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode BillionCubicFeet = new MMCode() {
+	public static final MMCode mmBillionCubicFeet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillionCubicFeet";
@@ -1455,7 +1465,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode BoardFeet = new MMCode() {
+	public static final MMCode mmBoardFeet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoardFeet";
@@ -1485,7 +1495,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bushels = new MMCode() {
+	public static final MMCode mmBushels = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bushels";
@@ -1515,7 +1525,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode CertifiedEmissionsReduction = new MMCode() {
+	public static final MMCode mmCertifiedEmissionsReduction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertifiedEmissionsReduction";
@@ -1545,7 +1555,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClimateReserveTonnes = new MMCode() {
+	public static final MMCode mmClimateReserveTonnes = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClimateReserveTonnes";
@@ -1575,7 +1585,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode CubicMeters = new MMCode() {
+	public static final MMCode mmCubicMeters = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CubicMeters";
@@ -1605,7 +1615,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode Days = new MMCode() {
+	public static final MMCode mmDays = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Days";
@@ -1635,7 +1645,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode DryMetricTons = new MMCode() {
+	public static final MMCode mmDryMetricTons = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DryMetricTons";
@@ -1665,7 +1675,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode EnvironmentalCredit = new MMCode() {
+	public static final MMCode mmEnvironmentalCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvironmentalCredit";
@@ -1695,7 +1705,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode EnvironmentalOffset = new MMCode() {
+	public static final MMCode mmEnvironmentalOffset = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvironmentalOffset";
@@ -1725,7 +1735,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode Hundredweight = new MMCode() {
+	public static final MMCode mmHundredweight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hundredweight";
@@ -1755,7 +1765,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode KilowattDayCapacity = new MMCode() {
+	public static final MMCode mmKilowattDayCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattDayCapacity";
@@ -1788,7 +1798,7 @@ public class UnitOfMeasureCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode KilowattHours = new MMCode() {
+	public static final MMCode mmKilowattHours = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattHours";
@@ -1818,7 +1828,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode KilowattHoursCapacity = new MMCode() {
+	public static final MMCode mmKilowattHoursCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattHoursCapacity";
@@ -1848,7 +1858,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode KilowattMinuteCapacity = new MMCode() {
+	public static final MMCode mmKilowattMinuteCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattMinuteCapacity";
@@ -1878,7 +1888,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode KilowattMonthCapacity = new MMCode() {
+	public static final MMCode mmKilowattMonthCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattMonthCapacity";
@@ -1908,7 +1918,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode KilowattYearCapacity = new MMCode() {
+	public static final MMCode mmKilowattYearCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattYearCapacity";
@@ -1938,7 +1948,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode MegawattDayCapacity = new MMCode() {
+	public static final MMCode mmMegawattDayCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattDayCapacity";
@@ -1968,7 +1978,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode MegawattHours = new MMCode() {
+	public static final MMCode mmMegawattHours = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattHours";
@@ -1998,7 +2008,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode MegawattHoursCapacity = new MMCode() {
+	public static final MMCode mmMegawattHoursCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattHoursCapacity";
@@ -2028,7 +2038,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode MegawattMinuteCapacity = new MMCode() {
+	public static final MMCode mmMegawattMinuteCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattMinuteCapacity";
@@ -2058,7 +2068,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode MegawattMonthCapacity = new MMCode() {
+	public static final MMCode mmMegawattMonthCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattMonthCapacity";
@@ -2088,7 +2098,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode MegawattYearCapacity = new MMCode() {
+	public static final MMCode mmMegawattYearCapacity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattYearCapacity";
@@ -2118,7 +2128,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode MetricTons = new MMCode() {
+	public static final MMCode mmMetricTons = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MetricTons";
@@ -2148,7 +2158,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode MillionBarrels = new MMCode() {
+	public static final MMCode mmMillionBarrels = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MillionBarrels";
@@ -2178,7 +2188,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode OneMillionBTU = new MMCode() {
+	public static final MMCode mmOneMillionBTU = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneMillionBTU";
@@ -2208,7 +2218,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode TroyOunces = new MMCode() {
+	public static final MMCode mmTroyOunces = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TroyOunces";
@@ -2238,7 +2248,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode USHundredweight = new MMCode() {
+	public static final MMCode mmUSHundredweight = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USHundredweight";
@@ -2268,7 +2278,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode IndexPoint = new MMCode() {
+	public static final MMCode mmIndexPoint = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexPoint";
@@ -2298,7 +2308,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "TO BE REVIEWED"</li>
 	 * </ul>
 	 */
-	public static final MMCode PrincipalWithRelationToDebtInstrument = new MMCode() {
+	public static final MMCode mmPrincipalWithRelationToDebtInstrument = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalWithRelationToDebtInstrument";
@@ -2329,7 +2339,7 @@ public class UnitOfMeasureCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DieselGallonEquivalent = new MMCode() {
+	public static final MMCode mmDieselGallonEquivalent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DieselGallonEquivalent";
@@ -2360,7 +2370,7 @@ public class UnitOfMeasureCode {
 	 * "Amount of fuel alternative equal to one gallon of gasoline."</li>
 	 * </ul>
 	 */
-	public static final MMCode GasolineGallonEquivalent = new MMCode() {
+	public static final MMCode mmGasolineGallonEquivalent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GasolineGallonEquivalent";
@@ -2390,7 +2400,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Tons of carbon dioxide."</li>
 	 * </ul>
 	 */
-	public static final MMCode TonsOfCarbonDioxide = new MMCode() {
+	public static final MMCode mmTonsOfCarbonDioxide = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TonsOfCarbonDioxide";
@@ -2420,7 +2430,7 @@ public class UnitOfMeasureCode {
 	 * definition} = "Indication of the unit of measurement"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lot = new MMCode() {
+	public static final MMCode mmLot = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lot";
@@ -2433,37 +2443,38 @@ public class UnitOfMeasureCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("KILO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnitOfMeasureCode";
 				definition = "Identifies the unit of measure by means of a code.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnitOfMeasureCode.Kilogram, com.tools20022.repository.codeset.UnitOfMeasureCode.Piece, com.tools20022.repository.codeset.UnitOfMeasureCode.Ton,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.Metre, com.tools20022.repository.codeset.UnitOfMeasureCode.Inch, com.tools20022.repository.codeset.UnitOfMeasureCode.Yard,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.GBGallon, com.tools20022.repository.codeset.UnitOfMeasureCode.Gram, com.tools20022.repository.codeset.UnitOfMeasureCode.Centimetre,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.SquareMetre, com.tools20022.repository.codeset.UnitOfMeasureCode.Foot, com.tools20022.repository.codeset.UnitOfMeasureCode.Mile,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.SquareInch, com.tools20022.repository.codeset.UnitOfMeasureCode.SquareFoot, com.tools20022.repository.codeset.UnitOfMeasureCode.SquareMile,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.GBOunce, com.tools20022.repository.codeset.UnitOfMeasureCode.USOunce, com.tools20022.repository.codeset.UnitOfMeasureCode.GBPint,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.USPint, com.tools20022.repository.codeset.UnitOfMeasureCode.GBQuart, com.tools20022.repository.codeset.UnitOfMeasureCode.USQuart,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.USGallon, com.tools20022.repository.codeset.UnitOfMeasureCode.Millimetre, com.tools20022.repository.codeset.UnitOfMeasureCode.Kilometre,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.SquareYard, com.tools20022.repository.codeset.UnitOfMeasureCode.Acre, com.tools20022.repository.codeset.UnitOfMeasureCode.Are,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.SquareMillimetre, com.tools20022.repository.codeset.UnitOfMeasureCode.SquareCentimetre, com.tools20022.repository.codeset.UnitOfMeasureCode.Hectare,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.SquareKilometre, com.tools20022.repository.codeset.UnitOfMeasureCode.MilliLitre, com.tools20022.repository.codeset.UnitOfMeasureCode.Centilitre,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.Litre, com.tools20022.repository.codeset.UnitOfMeasureCode.Pound, com.tools20022.repository.codeset.UnitOfMeasureCode.Allowances,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.AmountOfCurrency, com.tools20022.repository.codeset.UnitOfMeasureCode.Barrels, com.tools20022.repository.codeset.UnitOfMeasureCode.BillionCubicFeet,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.BoardFeet, com.tools20022.repository.codeset.UnitOfMeasureCode.Bushels, com.tools20022.repository.codeset.UnitOfMeasureCode.CertifiedEmissionsReduction,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.ClimateReserveTonnes, com.tools20022.repository.codeset.UnitOfMeasureCode.CubicMeters, com.tools20022.repository.codeset.UnitOfMeasureCode.Days,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.DryMetricTons, com.tools20022.repository.codeset.UnitOfMeasureCode.EnvironmentalCredit, com.tools20022.repository.codeset.UnitOfMeasureCode.EnvironmentalOffset,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.Hundredweight, com.tools20022.repository.codeset.UnitOfMeasureCode.KilowattDayCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.KilowattHours,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.KilowattHoursCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.KilowattMinuteCapacity,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.KilowattMonthCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.KilowattYearCapacity,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.MegawattDayCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.MegawattHours, com.tools20022.repository.codeset.UnitOfMeasureCode.MegawattHoursCapacity,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.MegawattMinuteCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.MegawattMonthCapacity,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.MegawattYearCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.MetricTons, com.tools20022.repository.codeset.UnitOfMeasureCode.MillionBarrels,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.OneMillionBTU, com.tools20022.repository.codeset.UnitOfMeasureCode.TroyOunces, com.tools20022.repository.codeset.UnitOfMeasureCode.USHundredweight,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.IndexPoint, com.tools20022.repository.codeset.UnitOfMeasureCode.PrincipalWithRelationToDebtInstrument,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.DieselGallonEquivalent, com.tools20022.repository.codeset.UnitOfMeasureCode.GasolineGallonEquivalent,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.TonsOfCarbonDioxide, com.tools20022.repository.codeset.UnitOfMeasureCode.Lot);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilogram, com.tools20022.repository.codeset.UnitOfMeasureCode.mmPiece, com.tools20022.repository.codeset.UnitOfMeasureCode.mmTon,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmMetre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmInch, com.tools20022.repository.codeset.UnitOfMeasureCode.mmYard,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmGBGallon, com.tools20022.repository.codeset.UnitOfMeasureCode.mmGram, com.tools20022.repository.codeset.UnitOfMeasureCode.mmCentimetre,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareMetre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmFoot, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMile,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareInch, com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareFoot, com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareMile,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmGBOunce, com.tools20022.repository.codeset.UnitOfMeasureCode.mmUSOunce, com.tools20022.repository.codeset.UnitOfMeasureCode.mmGBPint,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmUSPint, com.tools20022.repository.codeset.UnitOfMeasureCode.mmGBQuart, com.tools20022.repository.codeset.UnitOfMeasureCode.mmUSQuart,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmUSGallon, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMillimetre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilometre,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareYard, com.tools20022.repository.codeset.UnitOfMeasureCode.mmAcre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmAre,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareMillimetre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareCentimetre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmHectare,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareKilometre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMilliLitre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmCentilitre,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmLitre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmPound, com.tools20022.repository.codeset.UnitOfMeasureCode.mmAllowances,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmAmountOfCurrency, com.tools20022.repository.codeset.UnitOfMeasureCode.mmBarrels, com.tools20022.repository.codeset.UnitOfMeasureCode.mmBillionCubicFeet,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmBoardFeet, com.tools20022.repository.codeset.UnitOfMeasureCode.mmBushels, com.tools20022.repository.codeset.UnitOfMeasureCode.mmCertifiedEmissionsReduction,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmClimateReserveTonnes, com.tools20022.repository.codeset.UnitOfMeasureCode.mmCubicMeters, com.tools20022.repository.codeset.UnitOfMeasureCode.mmDays,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmDryMetricTons, com.tools20022.repository.codeset.UnitOfMeasureCode.mmEnvironmentalCredit,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmEnvironmentalOffset, com.tools20022.repository.codeset.UnitOfMeasureCode.mmHundredweight,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattDayCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattHours,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattHoursCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattMinuteCapacity,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattMonthCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattYearCapacity,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattDayCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattHours,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattHoursCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattMinuteCapacity,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattMonthCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattYearCapacity,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmMetricTons, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMillionBarrels, com.tools20022.repository.codeset.UnitOfMeasureCode.mmOneMillionBTU,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmTroyOunces, com.tools20022.repository.codeset.UnitOfMeasureCode.mmUSHundredweight, com.tools20022.repository.codeset.UnitOfMeasureCode.mmIndexPoint,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmPrincipalWithRelationToDebtInstrument, com.tools20022.repository.codeset.UnitOfMeasureCode.mmDieselGallonEquivalent,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.mmGasolineGallonEquivalent, com.tools20022.repository.codeset.UnitOfMeasureCode.mmTonsOfCarbonDioxide, com.tools20022.repository.codeset.UnitOfMeasureCode.mmLot);
 				derivation_lazy = () -> Arrays.asList(UnitOfMeasure1Code.mmObject(), UnitOfMeasure6Code.mmObject());
 			}
 		});

@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndLocation1#Name
- * NameAndLocation1.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndLocation1#Location
- * NameAndLocation1.Location}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndLocation1#mmName
+ * NameAndLocation1.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndLocation1#mmLocation
+ * NameAndLocation1.mmLocation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NameAndLocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text name;
 	/**
 	 * Internal name of the counterparty of the reporting agent used by the
 	 * reporting agent.
@@ -81,8 +82,8 @@ public class NameAndLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Sector#Identification
-	 * Sector.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Sector#mmIdentification
+	 * Sector.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class NameAndLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.mmIdentification;
 			componentContext_lazy = () -> NameAndLocation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.Identification;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Internal name of the counterparty of the reporting agent used by the reporting agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected CountryCode location;
 	/**
 	 * Location of the country in which the counterparty is incorporated.
 	 * <p>
@@ -129,8 +131,8 @@ public class NameAndLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#Country
-	 * PostalAddress.Country}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
+	 * PostalAddress.mmCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,22 +153,22 @@ public class NameAndLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReportedPartyIdentification1#Location
-	 * ReportedPartyIdentification1.Location}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReportedPartyIdentification1#mmLocation
+	 * ReportedPartyIdentification1.mmLocation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Location = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
 			componentContext_lazy = () -> NameAndLocation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.Country;
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location of the country in which the counterparty is incorporated. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportedPartyIdentification1.Location;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportedPartyIdentification1.mmLocation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
@@ -174,9 +176,9 @@ public class NameAndLocation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NameAndLocation1.Name, com.tools20022.repository.msg.NameAndLocation1.Location);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NameAndLocation1.mmName, com.tools20022.repository.msg.NameAndLocation1.mmLocation);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NameAndLocation1";
 				definition = "Provides the identification of the reported party through the name and the location.";
@@ -184,5 +186,21 @@ public class NameAndLocation1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
+	}
+
+	public CountryCode getLocation() {
+		return location;
+	}
+
+	public void setLocation(CountryCode location) {
+		this.location = location;
 	}
 }

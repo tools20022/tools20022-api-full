@@ -33,15 +33,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfPriceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice14Code#Average
- * TypeOfPrice14Code.Average}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice14Code#mmAverage
+ * TypeOfPrice14Code.mmAverage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +78,7 @@ public class TypeOfPrice14Code extends TypeOfPriceCode {
 	 * name} = "Average"</li>
 	 * </ul>
 	 */
-	public static final MMCode Average = new MMCode() {
+	public static final MMCode mmAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Average";
@@ -88,12 +89,12 @@ public class TypeOfPrice14Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice14Code";
 				definition = "Specifies the type of transaction price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice14Code.Average);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice14Code.mmAverage);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

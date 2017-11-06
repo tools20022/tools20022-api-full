@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMMessageFunction1#Function
- * ATMMessageFunction1.Function}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMMessageFunction1#mmFunction
+ * ATMMessageFunction1.mmFunction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMMessageFunction1#ATMServiceCode
- * ATMMessageFunction1.ATMServiceCode}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMMessageFunction1#mmATMServiceCode
+ * ATMMessageFunction1.mmATMServiceCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMMessageFunction1#HostServiceCode
- * ATMMessageFunction1.HostServiceCode}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMMessageFunction1#mmHostServiceCode
+ * ATMMessageFunction1.mmHostServiceCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMMessageFunction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MessageFunction7Code function;
 	/**
 	 * Type of requested function.
 	 * <p>
@@ -89,7 +90,7 @@ public class ATMMessageFunction1 {
 	 * definition} = "Type of requested function."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Function = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFunction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMMessageFunction1.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class ATMMessageFunction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Function";
 			definition = "Type of requested function.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
+	protected Max35Text aTMServiceCode;
 	/**
 	 * Codification of the type of service for the ATM.
 	 * <p>
@@ -129,7 +131,7 @@ public class ATMMessageFunction1 {
 	 * definition} = "Codification of the type of service for the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ATMServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmATMServiceCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMMessageFunction1.mmObject();
 			isDerived = false;
@@ -137,11 +139,12 @@ public class ATMMessageFunction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMServiceCode";
 			definition = "Codification of the type of service for the ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text hostServiceCode;
 	/**
 	 * Codification of the type of service for the ATM manager host.
 	 * <p>
@@ -170,7 +173,7 @@ public class ATMMessageFunction1 {
 	 * "Codification of the type of service for the ATM manager host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostServiceCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMMessageFunction1.mmObject();
 			isDerived = false;
@@ -178,8 +181,8 @@ public class ATMMessageFunction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostServiceCode";
 			definition = "Codification of the type of service for the ATM manager host.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -187,14 +190,38 @@ public class ATMMessageFunction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMMessageFunction1.Function, com.tools20022.repository.msg.ATMMessageFunction1.ATMServiceCode,
-						com.tools20022.repository.msg.ATMMessageFunction1.HostServiceCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMMessageFunction1.mmFunction, com.tools20022.repository.msg.ATMMessageFunction1.mmATMServiceCode,
+						com.tools20022.repository.msg.ATMMessageFunction1.mmHostServiceCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMMessageFunction1";
 				definition = "Identifies the type of process related to an ATM message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageFunction7Code getFunction() {
+		return function;
+	}
+
+	public void setFunction(MessageFunction7Code function) {
+		this.function = function;
+	}
+
+	public Max35Text getATMServiceCode() {
+		return aTMServiceCode;
+	}
+
+	public void setATMServiceCode(Max35Text aTMServiceCode) {
+		this.aTMServiceCode = aTMServiceCode;
+	}
+
+	public Max35Text getHostServiceCode() {
+		return hostServiceCode;
+	}
+
+	public void setHostServiceCode(Max35Text hostServiceCode) {
+		this.hostServiceCode = hostServiceCode;
 	}
 }

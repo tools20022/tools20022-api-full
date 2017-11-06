@@ -32,11 +32,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerReversalInitiation1#Environment
- * AcquirerReversalInitiation1.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerReversalInitiation1#mmEnvironment
+ * AcquirerReversalInitiation1.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerReversalInitiation1#Transaction
- * AcquirerReversalInitiation1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerReversalInitiation1#mmTransaction
+ * AcquirerReversalInitiation1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,15 +44,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalInitiation#ReversalInitiation
- * AcquirerReversalInitiation.ReversalInitiation}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalInitiation#mmReversalInitiation
+ * AcquirerReversalInitiation.mmReversalInitiation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerReversalInitiation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CardTransactionEnvironment3 environment;
 	/**
 	 * Environment of the transaction.
 	 * <p>
@@ -93,7 +94,7 @@ public class AcquirerReversalInitiation1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerReversalInitiation1.mmObject();
 			isDerived = false;
@@ -101,12 +102,13 @@ public class AcquirerReversalInitiation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransactionEnvironment3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment3.mmObject();
 		}
 	};
+	protected CardTransaction7 transaction;
 	/**
 	 * Reversal transaction.
 	 * <p>
@@ -133,7 +135,7 @@ public class AcquirerReversalInitiation1 {
 	 * definition} = "Reversal transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcquirerReversalInitiation1.mmObject();
 			isDerived = false;
@@ -141,24 +143,40 @@ public class AcquirerReversalInitiation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Reversal transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CardTransaction7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardTransaction7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerReversalInitiation1.Environment, com.tools20022.repository.msg.AcquirerReversalInitiation1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerReversalInitiation.ReversalInitiation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerReversalInitiation1.mmEnvironment, com.tools20022.repository.msg.AcquirerReversalInitiation1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerReversalInitiation.mmReversalInitiation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcquirerReversalInitiation1";
 				definition = "Information related to the reversal.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CardTransactionEnvironment3 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment3 environment) {
+		this.environment = environment;
+	}
+
+	public CardTransaction7 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.CardTransaction7 transaction) {
+		this.transaction = transaction;
 	}
 }

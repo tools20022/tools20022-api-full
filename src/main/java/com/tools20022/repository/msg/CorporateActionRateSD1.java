@@ -36,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD1#PlaceAndName
- * CorporateActionRateSD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD1#mmPlaceAndName
+ * CorporateActionRateSD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD1#DeferredInterestRate
- * CorporateActionRateSD1.DeferredInterestRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD1#mmDeferredInterestRate
+ * CorporateActionRateSD1.mmDeferredInterestRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD1#InterestShortfallRate
- * CorporateActionRateSD1.InterestShortfallRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD1#mmInterestShortfallRate
+ * CorporateActionRateSD1.mmInterestShortfallRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD1#RealisedLossRate
- * CorporateActionRateSD1.RealisedLossRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD1#mmRealisedLossRate
+ * CorporateActionRateSD1.mmRealisedLossRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD1#AmericanOrGlobalDepositReceiptRatio
- * CorporateActionRateSD1.AmericanOrGlobalDepositReceiptRatio}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD1#mmAmericanOrGlobalDepositReceiptRatio
+ * CorporateActionRateSD1.mmAmericanOrGlobalDepositReceiptRatio}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionRateSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -99,7 +100,7 @@ public class CorporateActionRateSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionRateSD1.mmObject();
 			isDerived = false;
@@ -107,11 +108,12 @@ public class CorporateActionRateSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected PercentageRate deferredInterestRate;
 	/**
 	 * Applicable to structured securities where there is a set schedule of
 	 * principal and interest payments for the life of the issue. A portion of
@@ -145,7 +147,7 @@ public class CorporateActionRateSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeferredInterestRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeferredInterestRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionRateSD1.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class CorporateActionRateSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredInterestRate";
 			definition = "Applicable to structured securities where there is a set schedule of principal and interest payments for the life of the issue. A portion of the scheduled interest payment will not be paid at the time of distribution.  ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate interestShortfallRate;
 	/**
 	 * Applicable for structured security issues where there is a set schedule
 	 * of principal and interest payments for the life of the issue. An interest
@@ -191,7 +194,7 @@ public class CorporateActionRateSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestShortfallRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestShortfallRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionRateSD1.mmObject();
 			isDerived = false;
@@ -199,11 +202,12 @@ public class CorporateActionRateSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestShortfallRate";
 			definition = "Applicable for structured security issues where there is a set schedule of principal and interest payments for the life of the issue. An interest shortfall occurs when scheduled interest is not paid to the investor as scheduled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate realisedLossRate;
 	/**
 	 * Applicable to structured securities where there is a set schedule of
 	 * principal and interest payments for the life of the issue. This term
@@ -237,7 +241,7 @@ public class CorporateActionRateSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RealisedLossRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRealisedLossRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionRateSD1.mmObject();
 			isDerived = false;
@@ -245,11 +249,12 @@ public class CorporateActionRateSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealisedLossRate";
 			definition = "Applicable to structured securities where there is a set schedule of principal and interest payments for the life of the issue. This term refers specifically to the principal payment of a mortgage. One or more mortgages within the pool are in default.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CorporateActionRateSD2 americanOrGlobalDepositReceiptRatio;
 	/**
 	 * American or Global Depository Receipt(s) per ordinary share(s) ratio.
 	 * <p>
@@ -277,7 +282,7 @@ public class CorporateActionRateSD1 {
 	 * "American or Global Depository Receipt(s) per ordinary share(s) ratio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmericanOrGlobalDepositReceiptRatio = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmericanOrGlobalDepositReceiptRatio = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionRateSD1.mmObject();
 			isDerived = false;
@@ -285,25 +290,65 @@ public class CorporateActionRateSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmericanOrGlobalDepositReceiptRatio";
 			definition = "American or Global Depository Receipt(s) per ordinary share(s) ratio.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionRateSD2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD1.PlaceAndName, com.tools20022.repository.msg.CorporateActionRateSD1.DeferredInterestRate,
-						com.tools20022.repository.msg.CorporateActionRateSD1.InterestShortfallRate, com.tools20022.repository.msg.CorporateActionRateSD1.RealisedLossRate,
-						com.tools20022.repository.msg.CorporateActionRateSD1.AmericanOrGlobalDepositReceiptRatio);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionRateSD1.mmDeferredInterestRate,
+						com.tools20022.repository.msg.CorporateActionRateSD1.mmInterestShortfallRate, com.tools20022.repository.msg.CorporateActionRateSD1.mmRealisedLossRate,
+						com.tools20022.repository.msg.CorporateActionRateSD1.mmAmericanOrGlobalDepositReceiptRatio);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionRateSD1";
 				definition = "Provides additional information regarding corporate action details rates and amounts details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public PercentageRate getDeferredInterestRate() {
+		return deferredInterestRate;
+	}
+
+	public void setDeferredInterestRate(PercentageRate deferredInterestRate) {
+		this.deferredInterestRate = deferredInterestRate;
+	}
+
+	public PercentageRate getInterestShortfallRate() {
+		return interestShortfallRate;
+	}
+
+	public void setInterestShortfallRate(PercentageRate interestShortfallRate) {
+		this.interestShortfallRate = interestShortfallRate;
+	}
+
+	public PercentageRate getRealisedLossRate() {
+		return realisedLossRate;
+	}
+
+	public void setRealisedLossRate(PercentageRate realisedLossRate) {
+		this.realisedLossRate = realisedLossRate;
+	}
+
+	public CorporateActionRateSD2 getAmericanOrGlobalDepositReceiptRatio() {
+		return americanOrGlobalDepositReceiptRatio;
+	}
+
+	public void setAmericanOrGlobalDepositReceiptRatio(com.tools20022.repository.msg.CorporateActionRateSD2 americanOrGlobalDepositReceiptRatio) {
+		this.americanOrGlobalDepositReceiptRatio = americanOrGlobalDepositReceiptRatio;
 	}
 }

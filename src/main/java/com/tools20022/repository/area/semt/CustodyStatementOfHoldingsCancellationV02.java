@@ -69,27 +69,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#MessageIdentification
- * CustodyStatementOfHoldingsCancellationV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#mmMessageIdentification
+ * CustodyStatementOfHoldingsCancellationV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#PreviousReference
- * CustodyStatementOfHoldingsCancellationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#mmPreviousReference
+ * CustodyStatementOfHoldingsCancellationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#RelatedReference
- * CustodyStatementOfHoldingsCancellationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#mmRelatedReference
+ * CustodyStatementOfHoldingsCancellationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#MessagePagination
- * CustodyStatementOfHoldingsCancellationV02.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#mmMessagePagination
+ * CustodyStatementOfHoldingsCancellationV02.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#StatementToBeCancelled
- * CustodyStatementOfHoldingsCancellationV02.StatementToBeCancelled}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#mmStatementToBeCancelled
+ * CustodyStatementOfHoldingsCancellationV02.mmStatementToBeCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02#identifier
- * CustodyStatementOfHoldingsCancellationV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.004.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CustodyStatementOfHoldingsCancellationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies a message from a business application
 	 * standpoint.
@@ -135,17 +134,18 @@ public class CustodyStatementOfHoldingsCancellationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference2 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -169,17 +169,18 @@ public class CustodyStatementOfHoldingsCancellationV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected AdditionalReference2 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -204,17 +205,18 @@ public class CustodyStatementOfHoldingsCancellationV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Number used to sequence pages when it is not possible for data to be
 	 * conveyed in a single message and the data has to be split across several
@@ -241,17 +243,18 @@ public class CustodyStatementOfHoldingsCancellationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Number used to sequence pages when it is not possible for data to be conveyed in a single message and the data has to be split across several pages (messages).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected CustodyStatementOfHoldings2 statementToBeCancelled;
 	/**
 	 * The Custody Statement of Holdings message to cancel.
 	 * <p>
@@ -275,42 +278,15 @@ public class CustodyStatementOfHoldingsCancellationV02 {
 	 * definition} = "The Custody Statement of Holdings message to cancel."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementToBeCancelled = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementToBeCancelled = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtToBeCanc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementToBeCancelled";
 			definition = "The Custody Statement of Holdings message to cancel.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CustodyStatementOfHoldings2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "004"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "004";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -325,12 +301,59 @@ public class CustodyStatementOfHoldingsCancellationV02 {
 				rootElement = "Document";
 				xmlTag = "CtdyStmtOfHldgsCxlV02";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.MessageIdentification,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.PreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.RelatedReference,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.MessagePagination, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.StatementToBeCancelled);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmMessageIdentification,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmPreviousReference, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmRelatedReference,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmMessagePagination, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmStatementToBeCancelled);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "004";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference2 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference2 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference2 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public CustodyStatementOfHoldings2 getStatementToBeCancelled() {
+		return statementToBeCancelled;
+	}
+
+	public void setStatementToBeCancelled(CustodyStatementOfHoldings2 statementToBeCancelled) {
+		this.statementToBeCancelled = statementToBeCancelled;
 	}
 }

@@ -37,8 +37,8 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BICIdentification1#BIC
- * BICIdentification1.BIC}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BICIdentification1#mmBIC
+ * BICIdentification1.mmBIC}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,137 +49,138 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#EntitiesToBeReported
- * ActivityReportRequestV03.EntitiesToBeReported}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActivityReportRequestV03#mmEntitiesToBeReported
+ * ActivityReportRequestV03.mmEntitiesToBeReported}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#Initiator
- * AmendmentAcceptanceNotificationV03.Initiator}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#mmInitiator
+ * AmendmentAcceptanceNotificationV03.mmInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#Initiator
- * AmendmentRejectionNotificationV03.Initiator}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#mmInitiator
+ * AmendmentRejectionNotificationV03.mmInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#BuyerBank
- * BaselineMatchReportV03.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmBuyerBank
+ * BaselineMatchReportV03.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#SellerBank
- * BaselineMatchReportV03.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmSellerBank
+ * BaselineMatchReportV03.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#BuyerBank
- * BaselineReportV03.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmBuyerBank
+ * BaselineReportV03.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#SellerBank
- * BaselineReportV03.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmSellerBank
+ * BaselineReportV03.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#BuyerBank
- * DataSetMatchReportV03.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmBuyerBank
+ * DataSetMatchReportV03.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#SellerBank
- * DataSetMatchReportV03.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmSellerBank
+ * DataSetMatchReportV03.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV03#BuyerBank
- * DataSetSubmissionV03.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV03#mmBuyerBank
+ * DataSetSubmissionV03.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV03#SellerBank
- * DataSetSubmissionV03.SellerBank}</li>
- * <li>{@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#BuyerBank
- * DeltaReportV03.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV03#mmSellerBank
+ * DataSetSubmissionV03.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#SellerBank
- * DeltaReportV03.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmBuyerBank
+ * DeltaReportV03.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03#Submitter
- * ForwardDataSetSubmissionReportV03.Submitter}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmSellerBank
+ * DeltaReportV03.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03#BuyerBank
- * ForwardDataSetSubmissionReportV03.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03#mmSubmitter
+ * ForwardDataSetSubmissionReportV03.mmSubmitter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03#SellerBank
- * ForwardDataSetSubmissionReportV03.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03#mmBuyerBank
+ * ForwardDataSetSubmissionReportV03.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#Initiator
- * StatusChangeRequestNotificationV03.Initiator}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03#mmSellerBank
+ * ForwardDataSetSubmissionReportV03.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03#Initiator
- * StatusExtensionRequestNotificationV03.Initiator}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmInitiator
+ * StatusChangeRequestNotificationV03.mmInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusReportRequestV03#EntitiesToBeReported
- * StatusReportRequestV03.EntitiesToBeReported}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03#mmInitiator
+ * StatusExtensionRequestNotificationV03.mmInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#BuyerBank
- * IntentToPayNotificationV01.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusReportRequestV03#mmEntitiesToBeReported
+ * StatusReportRequestV03.mmEntitiesToBeReported}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#SellerBank
- * IntentToPayNotificationV01.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#mmBuyerBank
+ * IntentToPayNotificationV01.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#BuyerBank
- * ForwardIntentToPayNotificationV01.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV01#mmSellerBank
+ * IntentToPayNotificationV01.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#SellerBank
- * ForwardIntentToPayNotificationV01.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#mmBuyerBank
+ * ForwardIntentToPayNotificationV01.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#Initiator
- * SpecialNotificationV01.Initiator}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#mmSellerBank
+ * ForwardIntentToPayNotificationV01.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#Initiator
- * RoleAndBaselineAcceptanceNotificationV01.Initiator}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#mmInitiator
+ * SpecialNotificationV01.mmInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#Initiator
- * RoleAndBaselineRejectionNotificationV01.Initiator}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#mmInitiator
+ * RoleAndBaselineAcceptanceNotificationV01.mmInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#BuyerBank
- * DataSetSubmissionV04.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#mmInitiator
+ * RoleAndBaselineRejectionNotificationV01.mmInitiator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#SellerBank
- * DataSetSubmissionV04.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmBuyerBank
+ * DataSetSubmissionV04.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04#Submitter
- * ForwardDataSetSubmissionReportV04.Submitter}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV04#mmSellerBank
+ * DataSetSubmissionV04.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04#BuyerBank
- * ForwardDataSetSubmissionReportV04.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04#mmSubmitter
+ * ForwardDataSetSubmissionReportV04.mmSubmitter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04#SellerBank
- * ForwardDataSetSubmissionReportV04.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04#mmBuyerBank
+ * ForwardDataSetSubmissionReportV04.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#BuyerBank
- * IntentToPayNotificationV02.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04#mmSellerBank
+ * ForwardDataSetSubmissionReportV04.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#SellerBank
- * IntentToPayNotificationV02.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#mmBuyerBank
+ * IntentToPayNotificationV02.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#BuyerBank
- * ForwardIntentToPayNotificationV02.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.IntentToPayNotificationV02#mmSellerBank
+ * IntentToPayNotificationV02.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#SellerBank
- * ForwardIntentToPayNotificationV02.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#mmBuyerBank
+ * ForwardIntentToPayNotificationV02.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#BuyerBank
- * BaselineReportV04.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#mmSellerBank
+ * ForwardIntentToPayNotificationV02.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#SellerBank
- * BaselineReportV04.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmBuyerBank
+ * BaselineReportV04.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#Submitter
- * ForwardDataSetSubmissionReportV05.Submitter}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmSellerBank
+ * BaselineReportV04.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#BuyerBank
- * ForwardDataSetSubmissionReportV05.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#mmSubmitter
+ * ForwardDataSetSubmissionReportV05.mmSubmitter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#SellerBank
- * ForwardDataSetSubmissionReportV05.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#mmBuyerBank
+ * ForwardDataSetSubmissionReportV05.mmBuyerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#BuyerBank
- * DataSetSubmissionV05.BuyerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05#mmSellerBank
+ * ForwardDataSetSubmissionReportV05.mmSellerBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#SellerBank
- * DataSetSubmissionV05.SellerBank}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmBuyerBank
+ * DataSetSubmissionV05.mmBuyerBank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetSubmissionV05#mmSellerBank
+ * DataSetSubmissionV05.mmSellerBank}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -196,6 +197,7 @@ import java.util.function.Supplier;
 public class BICIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BICIdentifier bIC;
 	/**
 	 * Code allocated to a financial institution by the ISO 9362 Registration
 	 * Authority as described in ISO 9362
@@ -212,8 +214,8 @@ public class BICIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -234,17 +236,17 @@ public class BICIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> BICIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "BIC";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
 			definition = "Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
@@ -252,28 +254,29 @@ public class BICIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BICIdentification1.BIC);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BICIdentification1.mmBIC);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportRequestV03.mmEntitiesToBeReported, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmInitiator,
+						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmInitiator, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBuyerBank,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmSellerBank, com.tools20022.repository.area.tsmt.BaselineReportV03.mmBuyerBank, com.tools20022.repository.area.tsmt.BaselineReportV03.mmSellerBank,
+						com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmBuyerBank, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmSellerBank, com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmBuyerBank,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmSellerBank, com.tools20022.repository.area.tsmt.DeltaReportV03.mmBuyerBank, com.tools20022.repository.area.tsmt.DeltaReportV03.mmSellerBank,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmSubmitter, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmBuyerBank,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmSellerBank, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmInitiator,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.mmInitiator, com.tools20022.repository.area.tsmt.StatusReportRequestV03.mmEntitiesToBeReported,
+						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmBuyerBank, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmSellerBank,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmBuyerBank, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmSellerBank,
+						com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmInitiator, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmInitiator,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmInitiator, com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmBuyerBank,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmSellerBank, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmSubmitter,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmBuyerBank, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmSellerBank,
+						com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmBuyerBank, com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmSellerBank,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmBuyerBank, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmSellerBank,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmBuyerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.mmSellerBank,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmSubmitter, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmBuyerBank,
+						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmSellerBank, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmBuyerBank,
+						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmSellerBank);
 				trace_lazy = () -> FinancialInstitution.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportRequestV03.EntitiesToBeReported, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.Initiator,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.Initiator, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.BuyerBank,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.SellerBank, com.tools20022.repository.area.tsmt.BaselineReportV03.BuyerBank, com.tools20022.repository.area.tsmt.BaselineReportV03.SellerBank,
-						com.tools20022.repository.area.tsmt.DataSetMatchReportV03.BuyerBank, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.SellerBank, com.tools20022.repository.area.tsmt.DataSetSubmissionV03.BuyerBank,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV03.SellerBank, com.tools20022.repository.area.tsmt.DeltaReportV03.BuyerBank, com.tools20022.repository.area.tsmt.DeltaReportV03.SellerBank,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.Submitter, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.BuyerBank,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.SellerBank, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.Initiator,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.Initiator, com.tools20022.repository.area.tsmt.StatusReportRequestV03.EntitiesToBeReported,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.BuyerBank, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.SellerBank,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.BuyerBank, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.SellerBank,
-						com.tools20022.repository.area.tsmt.SpecialNotificationV01.Initiator, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.Initiator,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.Initiator, com.tools20022.repository.area.tsmt.DataSetSubmissionV04.BuyerBank,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV04.SellerBank, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.Submitter,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.BuyerBank, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.SellerBank,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.BuyerBank, com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.SellerBank,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.BuyerBank, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.SellerBank,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.BuyerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.SellerBank, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.Submitter,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.BuyerBank, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.SellerBank,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.BuyerBank, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.SellerBank);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -287,5 +290,13 @@ public class BICIdentification1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BICIdentifier getBIC() {
+		return bIC;
+	}
+
+	public void setBIC(BICIdentifier bIC) {
+		this.bIC = bIC;
 	}
 }

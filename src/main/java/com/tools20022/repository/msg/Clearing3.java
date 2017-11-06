@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.entity.Clearing;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the clearing details.
@@ -33,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Clearing3#ClearingMember
- * Clearing3.ClearingMember}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Clearing3#ClearingSegment
- * Clearing3.ClearingSegment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Clearing3#mmClearingMember
+ * Clearing3.mmClearingMember}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Clearing3#mmClearingSegment
+ * Clearing3.mmClearingSegment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,24 +47,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#ClearingDetails
- * SecuritiesTradeConfirmationResponseV01.ClearingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#mmClearingDetails
+ * SecuritiesTradeConfirmationResponseV01.mmClearingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01#ClearingDetails
- * SecuritiesTradeConfirmationV01.ClearingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01#mmClearingDetails
+ * SecuritiesTradeConfirmationV01.mmClearingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02#ClearingDetails
- * SecuritiesTradeConfirmationV02.ClearingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02#mmClearingDetails
+ * SecuritiesTradeConfirmationV02.mmClearingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03#ClearingDetails
- * SecuritiesTradeConfirmationV03.ClearingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03#mmClearingDetails
+ * SecuritiesTradeConfirmationV03.mmClearingDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Clearing3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount78> clearingMember;
 	/**
 	 * Provides details about the clearing member identification and account.
 	 * <p>
@@ -90,8 +92,8 @@ public class Clearing3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Clearing3
@@ -110,19 +112,20 @@ public class Clearing3 {
 	 * "Provides details about the clearing member identification and account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingMember = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingMember = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Clearing3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "ClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides details about the clearing member identification and account.";
 			minOccurs = 1;
-			complexType_lazy = () -> PartyIdentificationAndAccount78.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingSegment;
 	/**
 	 * Clearing organisation that will clear the trade.<br>
 	 * Note: This field allows Clearing Member Firm to segregate flows coming
@@ -140,8 +143,8 @@ public class Clearing3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Clearing3
@@ -161,17 +164,17 @@ public class Clearing3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingSegment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingSegment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Clearing3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "ClrSgmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSegment";
 			definition = "Clearing organisation that will clear the trade.\r\nNote: This field allows Clearing Member Firm to segregate flows coming from clearing counterparty's clearing system. Indeed, Clearing Member Firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
@@ -179,16 +182,33 @@ public class Clearing3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing3.ClearingMember, com.tools20022.repository.msg.Clearing3.ClearingSegment);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing3.mmClearingMember, com.tools20022.repository.msg.Clearing3.mmClearingSegment);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmClearingDetails,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmClearingDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmClearingDetails,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmClearingDetails);
 				trace_lazy = () -> Clearing.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.ClearingDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.ClearingDetails,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.ClearingDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.ClearingDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Clearing3";
 				definition = "Provides the clearing details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PartyIdentificationAndAccount78> getClearingMember() {
+		return clearingMember;
+	}
+
+	public void setClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount78> clearingMember) {
+		this.clearingMember = clearingMember;
+	}
+
+	public PartyIdentification35Choice getClearingSegment() {
+		return clearingSegment;
+	}
+
+	public void setClearingSegment(PartyIdentification35Choice clearingSegment) {
+		this.clearingSegment = clearingSegment;
 	}
 }

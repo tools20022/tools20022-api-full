@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InformationQualifierType#IsFormatted
- * InformationQualifierType.IsFormatted}</li>
+ * {@linkplain com.tools20022.repository.msg.InformationQualifierType#mmIsFormatted
+ * InformationQualifierType.mmIsFormatted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InformationQualifierType#Priority
- * InformationQualifierType.Priority}</li>
+ * {@linkplain com.tools20022.repository.msg.InformationQualifierType#mmPriority
+ * InformationQualifierType.mmPriority}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InformationQualifierType {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator isFormatted;
 	/**
 	 * Indicates whether the information is formatted.
 	 * <p>
@@ -79,8 +80,8 @@ public class InformationQualifierType {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InformationQualifier#IsFormatted
-	 * InformationQualifier.IsFormatted}</li>
+	 * {@linkplain com.tools20022.repository.entity.InformationQualifier#mmIsFormatted
+	 * InformationQualifier.mmIsFormatted}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class InformationQualifierType {
 	 * definition} = "Indicates whether the information is formatted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IsFormatted = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIsFormatted = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InformationQualifier.mmIsFormatted;
 			componentContext_lazy = () -> InformationQualifierType.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InformationQualifier.IsFormatted;
 			isDerived = false;
 			xmlTag = "IsFrmtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IsFormatted";
 			definition = "Indicates whether the information is formatted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Priority1Code priority;
 	/**
 	 * Priority of the information.
 	 * <p>
@@ -126,8 +128,8 @@ public class InformationQualifierType {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InformationQualifier#Priority
-	 * InformationQualifier.Priority}</li>
+	 * {@linkplain com.tools20022.repository.entity.InformationQualifier#mmPriority
+	 * InformationQualifier.mmPriority}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,17 +148,17 @@ public class InformationQualifierType {
 	 * definition} = "Priority of the information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Priority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InformationQualifier.mmPriority;
 			componentContext_lazy = () -> InformationQualifierType.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InformationQualifier.Priority;
 			isDerived = false;
 			xmlTag = "Prty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Priority of the information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Priority1Code.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class InformationQualifierType {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InformationQualifierType.IsFormatted, com.tools20022.repository.msg.InformationQualifierType.Priority);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InformationQualifierType.mmIsFormatted, com.tools20022.repository.msg.InformationQualifierType.mmPriority);
 				trace_lazy = () -> InformationQualifier.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InformationQualifierType";
 				definition = "Further qualifies the information provided in terms of its importance and its format.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getIsFormatted() {
+		return isFormatted;
+	}
+
+	public void setIsFormatted(YesNoIndicator isFormatted) {
+		this.isFormatted = isFormatted;
+	}
+
+	public Priority1Code getPriority() {
+		return priority;
+	}
+
+	public void setPriority(Priority1Code priority) {
+		this.priority = priority;
 	}
 }

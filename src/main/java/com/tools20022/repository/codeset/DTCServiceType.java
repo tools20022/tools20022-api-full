@@ -31,14 +31,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCServiceType#CashInLieuRoundUp
- * DTCServiceType.CashInLieuRoundUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCServiceType#mmCashInLieuRoundUp
+ * DTCServiceType.mmCashInLieuRoundUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCServiceType#USTaxWithholding
- * DTCServiceType.USTaxWithholding}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCServiceType#mmUSTaxWithholding
+ * DTCServiceType.mmUSTaxWithholding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCServiceType#ForeignTaxRelief
- * DTCServiceType.ForeignTaxRelief}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCServiceType#mmForeignTaxRelief
+ * DTCServiceType.mmForeignTaxRelief}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class DTCServiceType {
 	 * definition} = "Cash In Lieu or Round Up service."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashInLieuRoundUp = new MMCode() {
+	public static final MMCode mmCashInLieuRoundUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuRoundUp";
@@ -125,7 +125,7 @@ public class DTCServiceType {
 	 * definition} = "U.S. Tax Withholding service."</li>
 	 * </ul>
 	 */
-	public static final MMCode USTaxWithholding = new MMCode() {
+	public static final MMCode mmUSTaxWithholding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USTaxWithholding";
@@ -155,7 +155,7 @@ public class DTCServiceType {
 	 * definition} = "Foreign Tax Relief service."</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignTaxRelief = new MMCode() {
+	public static final MMCode mmForeignTaxRelief = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxRelief";
@@ -168,13 +168,13 @@ public class DTCServiceType {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CILR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCServiceType";
 				definition = "Indicates the type of DTC (The Depository Trust Company) service, for example Cash In Lieu/ Round Up, Foreign Tax Relief, etc.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCServiceType.CashInLieuRoundUp, com.tools20022.repository.codeset.DTCServiceType.USTaxWithholding,
-						com.tools20022.repository.codeset.DTCServiceType.ForeignTaxRelief);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCServiceType.mmCashInLieuRoundUp, com.tools20022.repository.codeset.DTCServiceType.mmUSTaxWithholding,
+						com.tools20022.repository.codeset.DTCServiceType.mmForeignTaxRelief);
 				derivation_lazy = () -> Arrays.asList(DTCServiceType1Code.mmObject());
 			}
 		});

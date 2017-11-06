@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount16#ReceiversCustodianDetails
- * ReceivingPartiesAndAccount16.ReceiversCustodianDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount16#mmReceiversCustodianDetails
+ * ReceivingPartiesAndAccount16.mmReceiversCustodianDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount16#ReceiversIntermediary1Details
- * ReceivingPartiesAndAccount16.ReceiversIntermediary1Details}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount16#mmReceiversIntermediary1Details
+ * ReceivingPartiesAndAccount16.mmReceiversIntermediary1Details}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount16#ReceiversIntermediary2Details
- * ReceivingPartiesAndAccount16.ReceiversIntermediary2Details}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount16#mmReceiversIntermediary2Details
+ * ReceivingPartiesAndAccount16.mmReceiversIntermediary2Details}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount16#ReceivingAgentDetails
- * ReceivingPartiesAndAccount16.ReceivingAgentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount16#mmReceivingAgentDetails
+ * ReceivingPartiesAndAccount16.mmReceivingAgentDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReceivingPartiesAndAccount16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentificationAndAccount147 receiversCustodianDetails;
 	/**
 	 * Party that acts on behalf of the buyer of securities when the buyer does
 	 * not have a direct relationship with the receiving agent.
@@ -85,8 +86,8 @@ public class ReceivingPartiesAndAccount16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,26 +109,27 @@ public class ReceivingPartiesAndAccount16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount3#ReceiversCustodianDetails
-	 * ReceivingPartiesAndAccount3.ReceiversCustodianDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount3#mmReceiversCustodianDetails
+	 * ReceivingPartiesAndAccount3.mmReceiversCustodianDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceiversCustodianDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceiversCustodianDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReceivingPartiesAndAccount16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcvrsCtdnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetails";
 			definition = "Party that acts on behalf of the buyer of securities when the buyer does not have a direct relationship with the receiving agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount3.ReceiversCustodianDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount3.mmReceiversCustodianDetails;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount147.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount147.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount147 receiversIntermediary1Details;
 	/**
 	 * Party that the receiver's custodian uses to effect the receipt of a
 	 * security, when the receiver's custodian does not have a direct
@@ -142,8 +144,8 @@ public class ReceivingPartiesAndAccount16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,26 +167,27 @@ public class ReceivingPartiesAndAccount16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount3#ReceiversIntermediaryDetails
-	 * ReceivingPartiesAndAccount3.ReceiversIntermediaryDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount3#mmReceiversIntermediaryDetails
+	 * ReceivingPartiesAndAccount3.mmReceiversIntermediaryDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceiversIntermediary1Details = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceiversIntermediary1Details = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReceivingPartiesAndAccount16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcvrsIntrmy1Dtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary1Details";
 			definition = "Party that the receiver's custodian uses to effect the receipt of a security, when the receiver's custodian does not have a direct relationship with the receiving agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount3.ReceiversIntermediaryDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount3.mmReceiversIntermediaryDetails;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount147.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount147.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount147 receiversIntermediary2Details;
 	/**
 	 * Party that interacts with the receiver’s intermediary 1.
 	 * <p>
@@ -197,8 +200,8 @@ public class ReceivingPartiesAndAccount16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -217,21 +220,22 @@ public class ReceivingPartiesAndAccount16 {
 	 * definition} = "Party that interacts with the receiver’s intermediary 1."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceiversIntermediary2Details = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceiversIntermediary2Details = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReceivingPartiesAndAccount16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcvrsIntrmy2Dtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary2Details";
 			definition = "Party that interacts with the receiver’s intermediary 1.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount147.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount147.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount147 receivingAgentDetails;
 	/**
 	 * Party that receives securities from the delivering agent at the place of
 	 * settlement, for example, central securities depository.
@@ -245,8 +249,8 @@ public class ReceivingPartiesAndAccount16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -268,34 +272,34 @@ public class ReceivingPartiesAndAccount16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount3#ReceivingAgentDetails
-	 * ReceivingPartiesAndAccount3.ReceivingAgentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount3#mmReceivingAgentDetails
+	 * ReceivingPartiesAndAccount3.mmReceivingAgentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingAgentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingAgentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReceivingPartiesAndAccount16.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcvgAgtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgentDetails";
 			definition = "Party that receives securities from the delivering agent at the place of settlement, for example, central securities depository.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount3.ReceivingAgentDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount3.mmReceivingAgentDetails;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount147.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount147.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceivingPartiesAndAccount16.ReceiversCustodianDetails, com.tools20022.repository.msg.ReceivingPartiesAndAccount16.ReceiversIntermediary1Details,
-						com.tools20022.repository.msg.ReceivingPartiesAndAccount16.ReceiversIntermediary2Details, com.tools20022.repository.msg.ReceivingPartiesAndAccount16.ReceivingAgentDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceivingPartiesAndAccount16.mmReceiversCustodianDetails, com.tools20022.repository.msg.ReceivingPartiesAndAccount16.mmReceiversIntermediary1Details,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount16.mmReceiversIntermediary2Details, com.tools20022.repository.msg.ReceivingPartiesAndAccount16.mmReceivingAgentDetails);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReceivingPartiesAndAccount16";
 				definition = "Parameters applied to the settlement of a security transfer.";
@@ -303,5 +307,37 @@ public class ReceivingPartiesAndAccount16 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentificationAndAccount147 getReceiversCustodianDetails() {
+		return receiversCustodianDetails;
+	}
+
+	public void setReceiversCustodianDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount147 receiversCustodianDetails) {
+		this.receiversCustodianDetails = receiversCustodianDetails;
+	}
+
+	public PartyIdentificationAndAccount147 getReceiversIntermediary1Details() {
+		return receiversIntermediary1Details;
+	}
+
+	public void setReceiversIntermediary1Details(com.tools20022.repository.msg.PartyIdentificationAndAccount147 receiversIntermediary1Details) {
+		this.receiversIntermediary1Details = receiversIntermediary1Details;
+	}
+
+	public PartyIdentificationAndAccount147 getReceiversIntermediary2Details() {
+		return receiversIntermediary2Details;
+	}
+
+	public void setReceiversIntermediary2Details(com.tools20022.repository.msg.PartyIdentificationAndAccount147 receiversIntermediary2Details) {
+		this.receiversIntermediary2Details = receiversIntermediary2Details;
+	}
+
+	public PartyIdentificationAndAccount147 getReceivingAgentDetails() {
+		return receivingAgentDetails;
+	}
+
+	public void setReceivingAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount147 receivingAgentDetails) {
+		this.receivingAgentDetails = receivingAgentDetails;
 	}
 }

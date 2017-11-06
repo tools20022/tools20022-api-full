@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#FinancingRequestor
- * RequestGroupInformation1.FinancingRequestor}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestGroupInformation1#mmFinancingRequestor
+ * RequestGroupInformation1.mmFinancingRequestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#Supplier
- * InvoiceRequestInformation1.Supplier}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmSupplier
+ * InvoiceRequestInformation1.mmSupplier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,11 +71,11 @@ public class FinancingRequestorRole extends InvoiceFinancingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancingRequestorRole";
 				definition = "Credit party that requests the invoice financing, on behalf of creditor.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestGroupInformation1.FinancingRequestor, com.tools20022.repository.msg.InvoiceRequestInformation1.Supplier);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestGroupInformation1.mmFinancingRequestor, com.tools20022.repository.msg.InvoiceRequestInformation1.mmSupplier);
 				superType_lazy = () -> InvoiceFinancingPartyRole.mmObject();
 			}
 		});

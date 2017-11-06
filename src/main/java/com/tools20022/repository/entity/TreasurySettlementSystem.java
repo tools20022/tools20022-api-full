@@ -38,8 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasurySettlementSystem#SystemRole
- * TreasurySettlementSystem.SystemRole}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasurySettlementSystem#mmSystemRole
+ * TreasurySettlementSystem.mmSystemRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TreasurySettlementSystemRole#System
- * TreasurySettlementSystemRole.System}</li>
+ * {@linkplain com.tools20022.repository.entity.TreasurySettlementSystemRole#mmSystem
+ * TreasurySettlementSystemRole.mmSystem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TreasurySettlementSystem extends System {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected TreasurySettlementSystemRole systemRole;
 	/**
 	 * Specifies the role played by the treasury settlement system.
 	 * <p>
@@ -81,8 +82,8 @@ public class TreasurySettlementSystem extends System {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.TreasurySettlementSystemRole#System
-	 * TreasurySettlementSystemRole.System}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasurySettlementSystemRole#mmSystem
+	 * TreasurySettlementSystemRole.mmSystem}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -108,33 +109,41 @@ public class TreasurySettlementSystem extends System {
 	 * "Specifies the role played by the treasury settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SystemRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSystemRole = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> TreasurySettlementSystem.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SystemRole";
 			definition = "Specifies the role played by the treasury settlement system.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TreasurySettlementSystemRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.TreasurySettlementSystemRole.System;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.TreasurySettlementSystemRole.mmSystem;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.TreasurySettlementSystemRole.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TreasurySettlementSystem";
 				definition = "Centralised system in which a central party settles treasury trades between members.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasurySettlementSystemRole.System);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasurySettlementSystemRole.mmSystem);
 				superType_lazy = () -> System.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasurySettlementSystem.SystemRole);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasurySettlementSystem.mmSystemRole);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TreasurySettlementSystemRole getSystemRole() {
+		return systemRole;
+	}
+
+	public void setSystemRole(com.tools20022.repository.entity.TreasurySettlementSystemRole systemRole) {
+		this.systemRole = systemRole;
 	}
 }

@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Instrument that has or represents monetary value and is used to process a
@@ -41,9 +42,9 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#CashAccountOrPaymentCardOrDirectDebitOrChequeOrBankersDraftRule
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmCashAccountOrPaymentCardOrDirectDebitOrChequeOrBankersDraftRule
  * PaymentInstrument8.
- * CashAccountOrPaymentCardOrDirectDebitOrChequeOrBankersDraftRule}</li>
+ * mmCashAccountOrPaymentCardOrDirectDebitOrChequeOrBankersDraftRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -51,22 +52,22 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#SettlementCurrency
- * PaymentInstrument8.SettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmSettlementCurrency
+ * PaymentInstrument8.mmSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#CashAccountDetails
- * PaymentInstrument8.CashAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmCashAccountDetails
+ * PaymentInstrument8.mmCashAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#PaymentCardDetails
- * PaymentInstrument8.PaymentCardDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmPaymentCardDetails
+ * PaymentInstrument8.mmPaymentCardDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#DirectDebitDetails
- * PaymentInstrument8.DirectDebitDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentInstrument8#Cheque
- * PaymentInstrument8.Cheque}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmDirectDebitDetails
+ * PaymentInstrument8.mmDirectDebitDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmCheque
+ * PaymentInstrument8.mmCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#BankersDraft
- * PaymentInstrument8.BankersDraft}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmBankersDraft
+ * PaymentInstrument8.mmBankersDraft}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -74,8 +75,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -99,6 +100,7 @@ import java.util.function.Supplier;
 public class PaymentInstrument8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyCode settlementCurrency;
 	/**
 	 * Currency associated with the payment instrument.
 	 * <p>
@@ -112,8 +114,8 @@ public class PaymentInstrument8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#CurrencyOfTransfer
-	 * Payment.CurrencyOfTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmCurrencyOfTransfer
+	 * Payment.mmCurrencyOfTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -132,20 +134,21 @@ public class PaymentInstrument8 {
 	 * definition} = "Currency associated with the payment instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> PaymentInstrument8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.CurrencyOfTransfer;
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency associated with the payment instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashAccount4> cashAccountDetails;
 	/**
 	 * Cash account to debit for the payment of a subscription or of a savings
 	 * plan to an investment fund.
@@ -158,8 +161,8 @@ public class PaymentInstrument8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CashAccount
-	 * CashEntry.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCashAccount
+	 * CashEntry.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -180,21 +183,22 @@ public class PaymentInstrument8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
 			componentContext_lazy = () -> PaymentInstrument8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CashAccount;
 			isDerived = false;
 			xmlTag = "CshAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountDetails";
 			definition = "Cash account to debit for the payment of a subscription or of a savings plan to an investment fund.";
-			minOccurs = 1;
 			maxOccurs = 3;
-			type_lazy = () -> CashAccount4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
 		}
 	};
+	protected PaymentCard2 paymentCardDetails;
 	/**
 	 * Settlement instructions for a payment by card.
 	 * <p>
@@ -206,8 +210,8 @@ public class PaymentInstrument8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#PaymentCard
-	 * CardPayment.PaymentCard}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCard
+	 * CardPayment.mmPaymentCard}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,21 +230,22 @@ public class PaymentInstrument8 {
 	 * definition} = "Settlement instructions for a payment by card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentCardDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentCardDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> PaymentInstrument8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.PaymentCard;
 			isDerived = false;
 			xmlTag = "PmtCardDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCardDetails";
 			definition = "Settlement instructions for a payment by card.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentCard2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
 		}
 	};
+	protected DirectDebitMandate4 directDebitDetails;
 	/**
 	 * Settlement instructions for a payment by direct debit.
 	 * <p>
@@ -271,21 +276,22 @@ public class PaymentInstrument8 {
 	 * definition} = "Settlement instructions for a payment by direct debit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DirectDebitDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDirectDebitDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentInstrument8.mmObject();
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
+			componentContext_lazy = () -> PaymentInstrument8.mmObject();
 			isDerived = false;
 			xmlTag = "DrctDbtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebitDetails";
 			definition = "Settlement instructions for a payment by direct debit.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DirectDebitMandate4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate4.mmObject();
 		}
 	};
+	protected YesNoIndicator cheque;
 	/**
 	 * Indicates whether the payment is done via cheque.
 	 * <p>
@@ -319,20 +325,21 @@ public class PaymentInstrument8 {
 	 * definition} = "Indicates whether the payment is done via cheque."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Cheque = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCheque = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentInstrument8.mmObject();
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
+			componentContext_lazy = () -> PaymentInstrument8.mmObject();
 			isDerived = false;
 			xmlTag = "Chq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cheque";
 			definition = "Indicates whether the payment is done via cheque.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator bankersDraft;
 	/**
 	 * Indicates whether the payment is done via draft.
 	 * <p>
@@ -366,17 +373,17 @@ public class PaymentInstrument8 {
 	 * definition} = "Indicates whether the payment is done via draft."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankersDraft = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankersDraft = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentInstrument8.mmObject();
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
+			componentContext_lazy = () -> PaymentInstrument8.mmObject();
 			isDerived = false;
 			xmlTag = "BkrsDrft";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankersDraft";
 			definition = "Indicates whether the payment is done via draft.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -392,19 +399,20 @@ public class PaymentInstrument8 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#CashAccountDetails
-	 * PaymentInstrument8.CashAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmCashAccountDetails
+	 * PaymentInstrument8.mmCashAccountDetails}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#PaymentCardDetails
-	 * PaymentInstrument8.PaymentCardDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmPaymentCardDetails
+	 * PaymentInstrument8.mmPaymentCardDetails}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#DirectDebitDetails
-	 * PaymentInstrument8.DirectDebitDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentInstrument8#Cheque
-	 * PaymentInstrument8.Cheque}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmDirectDebitDetails
+	 * PaymentInstrument8.mmDirectDebitDetails}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#BankersDraft
-	 * PaymentInstrument8.BankersDraft}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmCheque
+	 * PaymentInstrument8.mmCheque}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument8#mmBankersDraft
+	 * PaymentInstrument8.mmBankersDraft}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -425,25 +433,25 @@ public class PaymentInstrument8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor CashAccountOrPaymentCardOrDirectDebitOrChequeOrBankersDraftRule = new MMXor() {
+	public static final MMXor mmCashAccountOrPaymentCardOrDirectDebitOrChequeOrBankersDraftRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountOrPaymentCardOrDirectDebitOrChequeOrBankersDraftRule";
 			definition = "At least one occurrence of one and only one message element in the list (CashAccountDetails, Cheque, PaymentCardDetails, DirectDebitDetails, BankersDraft) must be present. The chosen message element may be repeated, if repetitive.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument8.CashAccountDetails, com.tools20022.repository.msg.PaymentInstrument8.PaymentCardDetails,
-					com.tools20022.repository.msg.PaymentInstrument8.DirectDebitDetails, com.tools20022.repository.msg.PaymentInstrument8.Cheque, com.tools20022.repository.msg.PaymentInstrument8.BankersDraft);
 			messageComponent_lazy = () -> PaymentInstrument8.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument8.mmCashAccountDetails, com.tools20022.repository.msg.PaymentInstrument8.mmPaymentCardDetails,
+					com.tools20022.repository.msg.PaymentInstrument8.mmDirectDebitDetails, com.tools20022.repository.msg.PaymentInstrument8.mmCheque, com.tools20022.repository.msg.PaymentInstrument8.mmBankersDraft);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument8.SettlementCurrency, com.tools20022.repository.msg.PaymentInstrument8.CashAccountDetails,
-						com.tools20022.repository.msg.PaymentInstrument8.PaymentCardDetails, com.tools20022.repository.msg.PaymentInstrument8.DirectDebitDetails, com.tools20022.repository.msg.PaymentInstrument8.Cheque,
-						com.tools20022.repository.msg.PaymentInstrument8.BankersDraft);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument8.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument8.mmCashAccountDetails,
+						com.tools20022.repository.msg.PaymentInstrument8.mmPaymentCardDetails, com.tools20022.repository.msg.PaymentInstrument8.mmDirectDebitDetails, com.tools20022.repository.msg.PaymentInstrument8.mmCheque,
+						com.tools20022.repository.msg.PaymentInstrument8.mmBankersDraft);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -455,9 +463,57 @@ public class PaymentInstrument8 {
 				name = "PaymentInstrument8";
 				definition = "Instrument that has or represents monetary value and is used to process a payment instruction.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentInstrument11.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument8.CashAccountOrPaymentCardOrDirectDebitOrChequeOrBankersDraftRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument8.mmCashAccountOrPaymentCardOrDirectDebitOrChequeOrBankersDraftRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyCode getSettlementCurrency() {
+		return settlementCurrency;
+	}
+
+	public void setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
+		this.settlementCurrency = settlementCurrency;
+	}
+
+	public List<CashAccount4> getCashAccountDetails() {
+		return cashAccountDetails;
+	}
+
+	public void setCashAccountDetails(List<com.tools20022.repository.msg.CashAccount4> cashAccountDetails) {
+		this.cashAccountDetails = cashAccountDetails;
+	}
+
+	public PaymentCard2 getPaymentCardDetails() {
+		return paymentCardDetails;
+	}
+
+	public void setPaymentCardDetails(com.tools20022.repository.msg.PaymentCard2 paymentCardDetails) {
+		this.paymentCardDetails = paymentCardDetails;
+	}
+
+	public DirectDebitMandate4 getDirectDebitDetails() {
+		return directDebitDetails;
+	}
+
+	public void setDirectDebitDetails(com.tools20022.repository.msg.DirectDebitMandate4 directDebitDetails) {
+		this.directDebitDetails = directDebitDetails;
+	}
+
+	public YesNoIndicator getCheque() {
+		return cheque;
+	}
+
+	public void setCheque(YesNoIndicator cheque) {
+		this.cheque = cheque;
+	}
+
+	public YesNoIndicator getBankersDraft() {
+		return bankersDraft;
+	}
+
+	public void setBankersDraft(YesNoIndicator bankersDraft) {
+		this.bankersDraft = bankersDraft;
 	}
 }

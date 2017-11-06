@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.ISODate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Record where all transactions are originally entered. The journal details
@@ -34,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LimitJournal1#Limit
- * LimitJournal1.Limit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitJournal1#mmLimit
+ * LimitJournal1.mmLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitJournal1#JournalActivityDate
- * LimitJournal1.JournalActivityDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitJournal1#JournalEntry
- * LimitJournal1.JournalEntry}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitJournal1#mmJournalActivityDate
+ * LimitJournal1.mmJournalActivityDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitJournal1#mmJournalEntry
+ * LimitJournal1.mmJournalEntry}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitJournal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected LimitAmount1 limit;
 	/**
 	 * Maximum value used for risk containment in a system or towards
 	 * counterparts. The limit may be a current limit or a default limit.
@@ -91,7 +93,7 @@ public class LimitJournal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Limit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimit = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitJournal1.mmObject();
 			isDerived = false;
@@ -99,12 +101,13 @@ public class LimitJournal1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit. ";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitAmount1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LimitAmount1.mmObject();
 		}
 	};
+	protected ISODate journalActivityDate;
 	/**
 	 * Date upon which journal activity takes place.
 	 * <p>
@@ -131,7 +134,7 @@ public class LimitJournal1 {
 	 * definition} = "Date upon which journal activity takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute JournalActivityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmJournalActivityDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LimitJournal1.mmObject();
 			isDerived = false;
@@ -139,11 +142,12 @@ public class LimitJournal1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JournalActivityDate";
 			definition = "Date upon which journal activity takes place.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.LimitJournalEntry1> journalEntry;
 	/**
 	 * Recording of transaction data pertaining to a transaction in a journal.
 	 * <p>
@@ -171,7 +175,7 @@ public class LimitJournal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd JournalEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmJournalEntry = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitJournal1.mmObject();
 			isDerived = false;
@@ -180,21 +184,45 @@ public class LimitJournal1 {
 			name = "JournalEntry";
 			definition = "Recording of transaction data pertaining to a transaction in a journal.";
 			minOccurs = 0;
-			type_lazy = () -> LimitJournalEntry1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournal1.Limit, com.tools20022.repository.msg.LimitJournal1.JournalActivityDate, com.tools20022.repository.msg.LimitJournal1.JournalEntry);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournal1.mmLimit, com.tools20022.repository.msg.LimitJournal1.mmJournalActivityDate, com.tools20022.repository.msg.LimitJournal1.mmJournalEntry);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournal1";
 				definition = "Record where all transactions are originally entered.  The journal details which transactions occurred and what accounts were affected.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LimitAmount1 getLimit() {
+		return limit;
+	}
+
+	public void setLimit(com.tools20022.repository.msg.LimitAmount1 limit) {
+		this.limit = limit;
+	}
+
+	public ISODate getJournalActivityDate() {
+		return journalActivityDate;
+	}
+
+	public void setJournalActivityDate(ISODate journalActivityDate) {
+		this.journalActivityDate = journalActivityDate;
+	}
+
+	public List<LimitJournalEntry1> getJournalEntry() {
+		return journalEntry;
+	}
+
+	public void setJournalEntry(List<com.tools20022.repository.msg.LimitJournalEntry1> journalEntry) {
+		this.journalEntry = journalEntry;
 	}
 }

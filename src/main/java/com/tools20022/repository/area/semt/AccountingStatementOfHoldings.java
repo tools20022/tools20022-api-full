@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -82,39 +83,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#PreviousReference
- * AccountingStatementOfHoldings.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmPreviousReference
+ * AccountingStatementOfHoldings.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#RelatedReference
- * AccountingStatementOfHoldings.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmRelatedReference
+ * AccountingStatementOfHoldings.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#MessagePagination
- * AccountingStatementOfHoldings.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmMessagePagination
+ * AccountingStatementOfHoldings.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#StatementGeneralDetails
- * AccountingStatementOfHoldings.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmStatementGeneralDetails
+ * AccountingStatementOfHoldings.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#AccountDetails
- * AccountingStatementOfHoldings.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmAccountDetails
+ * AccountingStatementOfHoldings.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#BalanceForAccount
- * AccountingStatementOfHoldings.BalanceForAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmBalanceForAccount
+ * AccountingStatementOfHoldings.mmBalanceForAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#SubAccountDetails
- * AccountingStatementOfHoldings.SubAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmSubAccountDetails
+ * AccountingStatementOfHoldings.mmSubAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#TotalValues
- * AccountingStatementOfHoldings.TotalValues}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmTotalValues
+ * AccountingStatementOfHoldings.mmTotalValues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#Extension
- * AccountingStatementOfHoldings.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmExtension
+ * AccountingStatementOfHoldings.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#identifier
- * AccountingStatementOfHoldings.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.003.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -138,6 +137,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountingStatementOfHoldings {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected List<AdditionalReference2> previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -161,7 +161,7 @@ public class AccountingStatementOfHoldings {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,6 +171,7 @@ public class AccountingStatementOfHoldings {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected List<AdditionalReference2> relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -195,7 +196,7 @@ public class AccountingStatementOfHoldings {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,6 +206,7 @@ public class AccountingStatementOfHoldings {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Pagination of the message.
 	 * <p>
@@ -227,17 +229,18 @@ public class AccountingStatementOfHoldings {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Statement4 statementGeneralDetails;
 	/**
 	 * General information related to the accounting statement of holdings.
 	 * <p>
@@ -261,17 +264,18 @@ public class AccountingStatementOfHoldings {
 	 * "General information related to the accounting statement of holdings."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General information related to the accounting statement of holdings.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Statement4.mmObject();
 		}
 	};
+	protected SafekeepingAccount1 accountDetails;
 	/**
 	 * The safekeeping or investment account.
 	 * <p>
@@ -295,17 +299,18 @@ public class AccountingStatementOfHoldings {
 	 * definition} = "The safekeeping or investment account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "The safekeeping or investment account.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SafekeepingAccount1.mmObject();
 		}
 	};
+	protected List<AggregateBalanceInformation2> balanceForAccount;
 	/**
 	 * Net position of a segregated holding, in a single security, within the
 	 * overall position held in a securities account.
@@ -332,7 +337,7 @@ public class AccountingStatementOfHoldings {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BalanceForAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBalanceForAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BalForAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,6 +347,7 @@ public class AccountingStatementOfHoldings {
 			complexType_lazy = () -> AggregateBalanceInformation2.mmObject();
 		}
 	};
+	protected List<SubAccountIdentification2> subAccountDetails;
 	/**
 	 * The sub-account of the safekeeping or investment account.
 	 * <p>
@@ -366,7 +372,7 @@ public class AccountingStatementOfHoldings {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SubAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSubAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -376,6 +382,7 @@ public class AccountingStatementOfHoldings {
 			complexType_lazy = () -> SubAccountIdentification2.mmObject();
 		}
 	};
+	protected TotalValueInPageAndStatement totalValues;
 	/**
 	 * Value of total holdings reported.
 	 * <p>
@@ -399,17 +406,18 @@ public class AccountingStatementOfHoldings {
 	 * definition} = "Value of total holdings reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TotalValues = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTotalValues = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TtlVals";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalValues";
 			definition = "Value of total holdings reported.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TotalValueInPageAndStatement.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -435,7 +443,7 @@ public class AccountingStatementOfHoldings {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -443,33 +451,6 @@ public class AccountingStatementOfHoldings {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "003"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "003";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -485,14 +466,93 @@ public class AccountingStatementOfHoldings {
 				xmlTag = "semt.003.001.01";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
 				xmlName = "semt.003.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.AccountingStatementOfHoldings.PreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.RelatedReference,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.MessagePagination, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.StatementGeneralDetails,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.AccountDetails, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.BalanceForAccount,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.SubAccountDetails, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.TotalValues,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.AccountingStatementOfHoldings.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmPreviousReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmRelatedReference,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmMessagePagination, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmStatementGeneralDetails,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmAccountDetails, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmBalanceForAccount,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmSubAccountDetails, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmTotalValues,
+						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "003";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AdditionalReference2> getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(List<AdditionalReference2> previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public List<AdditionalReference2> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<AdditionalReference2> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public Statement4 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(Statement4 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public SafekeepingAccount1 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(SafekeepingAccount1 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public List<AggregateBalanceInformation2> getBalanceForAccount() {
+		return balanceForAccount;
+	}
+
+	public void setBalanceForAccount(List<AggregateBalanceInformation2> balanceForAccount) {
+		this.balanceForAccount = balanceForAccount;
+	}
+
+	public List<SubAccountIdentification2> getSubAccountDetails() {
+		return subAccountDetails;
+	}
+
+	public void setSubAccountDetails(List<SubAccountIdentification2> subAccountDetails) {
+		this.subAccountDetails = subAccountDetails;
+	}
+
+	public TotalValueInPageAndStatement getTotalValues() {
+		return totalValues;
+	}
+
+	public void setTotalValues(TotalValueInPageAndStatement totalValues) {
+		this.totalValues = totalValues;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

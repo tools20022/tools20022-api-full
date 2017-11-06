@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferReference8#TransferReference
- * TransferReference8.TransferReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferReference8#mmTransferReference
+ * TransferReference8.mmTransferReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferReference8#CancellationReference
- * TransferReference8.CancellationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferReference8#mmCancellationReference
+ * TransferReference8.mmCancellationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferReference8#TransferConfirmationReference
- * TransferReference8.TransferConfirmationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferReference8#mmTransferConfirmationReference
+ * TransferReference8.mmTransferConfirmationReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferReference8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transferReference;
 	/**
 	 * Unique and unambiguous identifier for a transfer instruction, as assigned
 	 * by the instructing party.
@@ -82,8 +83,8 @@ public class TransferReference8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Identification
-	 * SecuritiesTransfer.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmIdentification
+	 * SecuritiesTransfer.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,25 +106,26 @@ public class TransferReference8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferReference1#TransferReference
-	 * TransferReference1.TransferReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference1#mmTransferReference
+	 * TransferReference1.mmTransferReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> TransferReference8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.Identification;
 			isDerived = false;
 			xmlTag = "TrfRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferReference1.TransferReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferReference1.mmTransferReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text cancellationReference;
 	/**
 	 * Unique and unambiguous identifier for a transfer cancellation, as
 	 * assigned by the instructing party.
@@ -155,11 +157,11 @@ public class TransferReference8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferReference1#CancellationReference
-	 * TransferReference1.CancellationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference1#mmCancellationReference
+	 * TransferReference1.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransferReference8.mmObject();
 			isDerived = false;
@@ -167,12 +169,13 @@ public class TransferReference8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferReference1.CancellationReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferReference1.mmCancellationReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text transferConfirmationReference;
 	/**
 	 * Unique and unambiguous identifier for a transfer execution, as assigned
 	 * by a confirming party.
@@ -203,7 +206,7 @@ public class TransferReference8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferConfirmationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferConfirmationReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransferReference8.mmObject();
 			isDerived = false;
@@ -211,8 +214,8 @@ public class TransferReference8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferConfirmationReference";
 			definition = "Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -220,10 +223,10 @@ public class TransferReference8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference8.TransferReference, com.tools20022.repository.msg.TransferReference8.CancellationReference,
-						com.tools20022.repository.msg.TransferReference8.TransferConfirmationReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference8.mmTransferReference, com.tools20022.repository.msg.TransferReference8.mmCancellationReference,
+						com.tools20022.repository.msg.TransferReference8.mmTransferConfirmationReference);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferReference8";
 				definition = "Reference of a transfer and of a transfer cancellation.";
@@ -231,5 +234,29 @@ public class TransferReference8 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransferReference() {
+		return transferReference;
+	}
+
+	public void setTransferReference(Max35Text transferReference) {
+		this.transferReference = transferReference;
+	}
+
+	public Max35Text getCancellationReference() {
+		return cancellationReference;
+	}
+
+	public void setCancellationReference(Max35Text cancellationReference) {
+		this.cancellationReference = cancellationReference;
+	}
+
+	public Max35Text getTransferConfirmationReference() {
+		return transferConfirmationReference;
+	}
+
+	public void setTransferConfirmationReference(Max35Text transferConfirmationReference) {
+		this.transferConfirmationReference = transferConfirmationReference;
 	}
 }

@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantity2Code#Unknown
- * SecuritiesQuantity2Code.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantity2Code#mmUnknown
+ * SecuritiesQuantity2Code.mmUnknown}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class SecuritiesQuantity2Code extends SecuritiesQuantityTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -87,11 +87,11 @@ public class SecuritiesQuantity2Code extends SecuritiesQuantityTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesQuantity2Code";
 				definition = "TSE/JASDEC codes for unknown number of shares to be purchased.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesQuantity2Code.Unknown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesQuantity2Code.mmUnknown);
 				trace_lazy = () -> SecuritiesQuantityTypeCode.mmObject();
 			}
 		});

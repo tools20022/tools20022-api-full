@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the alternatives available to an account owner
@@ -44,53 +45,53 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionNumber
- * CorporateActionOption.OptionNumber}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
+ * CorporateActionOption.mmOptionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionType
- * CorporateActionOption.OptionType}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionType
+ * CorporateActionOption.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#FractionDisposition
- * CorporateActionOption.FractionDisposition}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmFractionDisposition
+ * CorporateActionOption.mmFractionDisposition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#CurrencyOption
- * CorporateActionOption.CurrencyOption}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCurrencyOption
+ * CorporateActionOption.mmCurrencyOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#RelatedChoiceCorporateAction
- * CorporateActionOption.RelatedChoiceCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmRelatedChoiceCorporateAction
+ * CorporateActionOption.mmRelatedChoiceCorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#CorporateActionElection
- * CorporateActionOption.CorporateActionElection}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCorporateActionElection
+ * CorporateActionOption.mmCorporateActionElection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionFeatures
- * CorporateActionOption.OptionFeatures}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionFeatures
+ * CorporateActionOption.mmOptionFeatures}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#ActionPeriod
- * CorporateActionOption.ActionPeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmActionPeriod
+ * CorporateActionOption.mmActionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OfferType
- * CorporateActionOption.OfferType}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOfferType
+ * CorporateActionOption.mmOfferType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#ChargesAppliedIndicator
- * CorporateActionOption.ChargesAppliedIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmChargesAppliedIndicator
+ * CorporateActionOption.mmChargesAppliedIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#WithdrawalAllowedIndicator
- * CorporateActionOption.WithdrawalAllowedIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmWithdrawalAllowedIndicator
+ * CorporateActionOption.mmWithdrawalAllowedIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#ChangeAllowedIndicator
- * CorporateActionOption.ChangeAllowedIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmChangeAllowedIndicator
+ * CorporateActionOption.mmChangeAllowedIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#CorporateActionOptionServicing
- * CorporateActionOption.CorporateActionOptionServicing}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCorporateActionOptionServicing
+ * CorporateActionOption.mmCorporateActionOptionServicing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#ProceedsDefinition
- * CorporateActionOption.ProceedsDefinition}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmProceedsDefinition
+ * CorporateActionOption.mmProceedsDefinition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#Distribution
- * CorporateActionOption.Distribution}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmDistribution
+ * CorporateActionOption.mmDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#Default
- * CorporateActionOption.Default}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmDefault
+ * CorporateActionOption.mmDefault}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,22 +99,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#CorporateActionOption
- * DateTimePeriod.CorporateActionOption}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProceedsDefinition#Option
- * ProceedsDefinition.Option}</li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmCorporateActionOption
+ * DateTimePeriod.mmCorporateActionOption}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmOption
+ * ProceedsDefinition.mmOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionElection#Option
- * CorporateActionElection.Option}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmOption
+ * CorporateActionElection.mmOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#CorporateActionOptionDefinition
- * ChoiceCorporateAction.CorporateActionOptionDefinition}</li>
+ * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
+ * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#Option
- * CorporateActionDistribution.Option}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmOption
+ * CorporateActionDistribution.mmOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#RelatedOption
- * CorporateActionOptionServicing.RelatedOption}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedOption
+ * CorporateActionOptionServicing.mmRelatedOption}</li>
  * </ul>
  * </li>
  * <li>
@@ -677,8 +678,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -694,6 +695,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOption {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText optionNumber;
 	/**
 	 * Number identifying the available corporate action options.
 	 * <p>
@@ -704,333 +706,333 @@ public class CorporateActionOption {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.Exact3NumericText
 	 * Exact3NumericText}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#OptionNumber
-	 * CorporateActionOption5.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#OptionNumber
-	 * CorporateActionOption13.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#OptionNumber
-	 * CorporateActionOption25.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#OptionNumber
-	 * CorporateActionOption30.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#OptionNumber
-	 * CorporateActionOption38.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#OptionNumber
-	 * CorporateActionOption47.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#OptionNumber
-	 * CorporateActionOption57.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#OptionNumber
-	 * CorporateActionOption58.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption6#OptionNumber
-	 * CorporateActionOption6.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption21#OptionNumber
-	 * CorporateActionOption21.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption42#OptionNumber
-	 * CorporateActionOption42.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption28#OptionNumber
-	 * CorporateActionOption28.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption43#OptionNumber
-	 * CorporateActionOption43.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption9#OptionNumber
-	 * CorporateActionOption9.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption18#OptionNumber
-	 * CorporateActionOption18.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption22#OptionNumber
-	 * CorporateActionOption22.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption27#OptionNumber
-	 * CorporateActionOption27.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption26#OptionNumber
-	 * CorporateActionOption26.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption41#OptionNumber
-	 * CorporateActionOption41.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption50#OptionNumber
-	 * CorporateActionOption50.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption1#OptionNumber
-	 * InstructedCorporateActionOption1.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption2#OptionNumber
-	 * InstructedCorporateActionOption2.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption4#OptionNumber
-	 * InstructedCorporateActionOption4.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption5#OptionNumber
-	 * InstructedCorporateActionOption5.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption29#OptionNumber
-	 * CorporateActionOption29.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#OptionNumber
-	 * CorporateActionOption4.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#OptionNumber
-	 * CorporateActionOption14.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#OptionNumber
-	 * CorporateActionOption23.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#OptionNumber
-	 * CorporateActionOption31.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#OptionNumber
-	 * CorporateActionOption37.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#OptionNumber
-	 * CorporateActionOption46.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#OptionNumber
-	 * CorporateActionOption53.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#OptionNumber
-	 * CorporateActionOption54.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#OptionNumber
-	 * CorporateActionOption10.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#OptionNumber
-	 * CorporateActionOption15.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#OptionNumber
-	 * CorporateActionOption20.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#OptionNumber
-	 * CorporateActionOption32.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#OptionNumber
-	 * CorporateActionOption35.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#OptionNumber
-	 * CorporateActionOption44.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#OptionNumber
-	 * CorporateActionOption52.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#OptionNumber
-	 * CorporateActionOption55.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption12#OptionNumber
-	 * CorporateActionOption12.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption16#OptionNumber
-	 * CorporateActionOption16.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption24#OptionNumber
-	 * CorporateActionOption24.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption33#OptionNumber
-	 * CorporateActionOption33.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#OptionNumber
-	 * CorporateActionOption39.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption48#OptionNumber
-	 * CorporateActionOption48.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#OptionNumber
-	 * CorporateActionOption3.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#OptionNumber
-	 * CorporateActionOption17.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#OptionNumber
-	 * CorporateActionOption19.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#OptionNumber
-	 * CorporateActionOption34.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#OptionNumber
-	 * CorporateActionOption36.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#OptionNumber
-	 * CorporateActionOption45.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#OptionNumber
-	 * CorporateActionOption51.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#OptionNumber
-	 * CorporateActionOption56.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#OptionNumber
-	 * CorporateActionOption1.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount9#OptionNumber
-	 * SecuritiesAccount9.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection3#OptionNumber
-	 * CorporateActionElection3.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection1#OptionNumber
-	 * CorporateActionElection1.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection2#OptionNumber
-	 * CorporateActionElection2.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#OptionNumber
-	 * EntitlementAdvice1.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#OptionNumber
-	 * GlobalDistributionRequest1.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#OptionNumber
-	 * CorporateActionMovement1.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount8#OptionNumber
-	 * SecuritiesAccount8.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption2#OptionNumber
-	 * CorporateActionOption2.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1#OptionNumber
-	 * CorporateActionDeactivationInstructionStatus1.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption7#OptionNumber
-	 * CorporateActionOption7.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption99#OptionNumber
-	 * CorporateActionOption99.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption11#OptionNumber
-	 * CorporateActionOption11.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#OptionNumber
-	 * CorporateActionOption103.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#OptionNumber
-	 * CorporateActionOption100.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#OptionNumber
-	 * CorporateActionOption101.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#OptionNumber
-	 * CorporateActionOption102.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#OptionNumber
-	 * CorporateActionOption110.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#OptionNumber
-	 * CorporateActionOption108.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#OptionNumber
-	 * CorporateActionOption107.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#OptionNumber
-	 * CorporateActionOption106.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#OptionNumber
-	 * CorporateActionOption111.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#OptionNumber
-	 * CorporateActionOption113.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#OptionNumber
-	 * CorporateActionOption117.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#OptionNumber
-	 * CorporateActionOption118.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#OptionNumber
-	 * CorporateActionOption119.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#OptionNumber
-	 * CorporateActionOption115.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption116#OptionNumber
-	 * CorporateActionOption116.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#OptionNumber
-	 * CorporateActionOption114.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption120#OptionNumber
-	 * CorporateActionOption120.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption6#OptionNumber
-	 * InstructedCorporateActionOption6.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption121#OptionNumber
-	 * CorporateActionOption121.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption126#OptionNumber
-	 * CorporateActionOption126.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#OptionNumber
-	 * CorporateActionOption124.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#OptionNumber
-	 * CorporateActionOption125.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#OptionNumber
-	 * CorporateActionOption123.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#OptionNumber
-	 * CorporateActionOption127.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#OptionNumber
-	 * InstructedCorporateActionOption7.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption128#OptionNumber
-	 * CorporateActionOption128.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#OptionNumber
-	 * CorporateActionOption132.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#OptionNumber
-	 * CorporateActionOption130.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#OptionNumber
-	 * CorporateActionOption131.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#OptionNumber
-	 * CorporateActionOption129.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1#OptionNumber
-	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.
-	 * OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1#OptionNumber
-	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD1.OptionNumber}
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#OptionNumber
-	 * CorporateActionOption134.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#OptionNumber
-	 * CorporateActionOption136.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#OptionNumber
-	 * CorporateActionOption135.OptionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#OptionNumber
-	 * CorporateActionOption133.OptionNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#mmOptionNumber
+	 * CorporateActionOption5.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#mmOptionNumber
+	 * CorporateActionOption13.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#mmOptionNumber
+	 * CorporateActionOption25.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#mmOptionNumber
+	 * CorporateActionOption30.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#mmOptionNumber
+	 * CorporateActionOption38.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#mmOptionNumber
+	 * CorporateActionOption47.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#mmOptionNumber
+	 * CorporateActionOption57.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#mmOptionNumber
+	 * CorporateActionOption58.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption6#mmOptionNumber
+	 * CorporateActionOption6.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption21#mmOptionNumber
+	 * CorporateActionOption21.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption42#mmOptionNumber
+	 * CorporateActionOption42.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption28#mmOptionNumber
+	 * CorporateActionOption28.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption43#mmOptionNumber
+	 * CorporateActionOption43.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption9#mmOptionNumber
+	 * CorporateActionOption9.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption18#mmOptionNumber
+	 * CorporateActionOption18.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption22#mmOptionNumber
+	 * CorporateActionOption22.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption27#mmOptionNumber
+	 * CorporateActionOption27.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption26#mmOptionNumber
+	 * CorporateActionOption26.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption41#mmOptionNumber
+	 * CorporateActionOption41.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption50#mmOptionNumber
+	 * CorporateActionOption50.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption1#mmOptionNumber
+	 * InstructedCorporateActionOption1.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption2#mmOptionNumber
+	 * InstructedCorporateActionOption2.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption4#mmOptionNumber
+	 * InstructedCorporateActionOption4.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption5#mmOptionNumber
+	 * InstructedCorporateActionOption5.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption29#mmOptionNumber
+	 * CorporateActionOption29.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#mmOptionNumber
+	 * CorporateActionOption4.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#mmOptionNumber
+	 * CorporateActionOption14.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#mmOptionNumber
+	 * CorporateActionOption23.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#mmOptionNumber
+	 * CorporateActionOption31.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#mmOptionNumber
+	 * CorporateActionOption37.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#mmOptionNumber
+	 * CorporateActionOption46.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#mmOptionNumber
+	 * CorporateActionOption53.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#mmOptionNumber
+	 * CorporateActionOption54.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmOptionNumber
+	 * CorporateActionOption10.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmOptionNumber
+	 * CorporateActionOption15.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmOptionNumber
+	 * CorporateActionOption20.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmOptionNumber
+	 * CorporateActionOption32.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmOptionNumber
+	 * CorporateActionOption35.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmOptionNumber
+	 * CorporateActionOption44.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmOptionNumber
+	 * CorporateActionOption52.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmOptionNumber
+	 * CorporateActionOption55.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption12#mmOptionNumber
+	 * CorporateActionOption12.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption16#mmOptionNumber
+	 * CorporateActionOption16.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption24#mmOptionNumber
+	 * CorporateActionOption24.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption33#mmOptionNumber
+	 * CorporateActionOption33.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#mmOptionNumber
+	 * CorporateActionOption39.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption48#mmOptionNumber
+	 * CorporateActionOption48.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmOptionNumber
+	 * CorporateActionOption3.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmOptionNumber
+	 * CorporateActionOption17.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmOptionNumber
+	 * CorporateActionOption19.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmOptionNumber
+	 * CorporateActionOption34.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmOptionNumber
+	 * CorporateActionOption36.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmOptionNumber
+	 * CorporateActionOption45.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmOptionNumber
+	 * CorporateActionOption51.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmOptionNumber
+	 * CorporateActionOption56.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmOptionNumber
+	 * CorporateActionOption1.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount9#mmOptionNumber
+	 * SecuritiesAccount9.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection3#mmOptionNumber
+	 * CorporateActionElection3.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection1#mmOptionNumber
+	 * CorporateActionElection1.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection2#mmOptionNumber
+	 * CorporateActionElection2.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#mmOptionNumber
+	 * EntitlementAdvice1.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmOptionNumber
+	 * GlobalDistributionRequest1.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#mmOptionNumber
+	 * CorporateActionMovement1.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount8#mmOptionNumber
+	 * SecuritiesAccount8.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption2#mmOptionNumber
+	 * CorporateActionOption2.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1#mmOptionNumber
+	 * CorporateActionDeactivationInstructionStatus1.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption7#mmOptionNumber
+	 * CorporateActionOption7.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption99#mmOptionNumber
+	 * CorporateActionOption99.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption11#mmOptionNumber
+	 * CorporateActionOption11.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#mmOptionNumber
+	 * CorporateActionOption103.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmOptionNumber
+	 * CorporateActionOption100.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmOptionNumber
+	 * CorporateActionOption101.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#mmOptionNumber
+	 * CorporateActionOption102.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#mmOptionNumber
+	 * CorporateActionOption110.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmOptionNumber
+	 * CorporateActionOption108.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#mmOptionNumber
+	 * CorporateActionOption107.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmOptionNumber
+	 * CorporateActionOption106.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#mmOptionNumber
+	 * CorporateActionOption111.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#mmOptionNumber
+	 * CorporateActionOption113.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#mmOptionNumber
+	 * CorporateActionOption117.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#mmOptionNumber
+	 * CorporateActionOption118.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#mmOptionNumber
+	 * CorporateActionOption119.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmOptionNumber
+	 * CorporateActionOption115.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption116#mmOptionNumber
+	 * CorporateActionOption116.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmOptionNumber
+	 * CorporateActionOption114.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption120#mmOptionNumber
+	 * CorporateActionOption120.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption6#mmOptionNumber
+	 * InstructedCorporateActionOption6.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption121#mmOptionNumber
+	 * CorporateActionOption121.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption126#mmOptionNumber
+	 * CorporateActionOption126.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#mmOptionNumber
+	 * CorporateActionOption124.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmOptionNumber
+	 * CorporateActionOption125.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#mmOptionNumber
+	 * CorporateActionOption123.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmOptionNumber
+	 * CorporateActionOption127.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#mmOptionNumber
+	 * InstructedCorporateActionOption7.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption128#mmOptionNumber
+	 * CorporateActionOption128.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#mmOptionNumber
+	 * CorporateActionOption132.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmOptionNumber
+	 * CorporateActionOption130.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#mmOptionNumber
+	 * CorporateActionOption131.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmOptionNumber
+	 * CorporateActionOption129.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1#mmOptionNumber
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.
+	 * mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1#mmOptionNumber
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD1.
+	 * mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#mmOptionNumber
+	 * CorporateActionOption134.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#mmOptionNumber
+	 * CorporateActionOption136.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmOptionNumber
+	 * CorporateActionOption135.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmOptionNumber
+	 * CorporateActionOption133.mmOptionNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1043,55 +1045,57 @@ public class CorporateActionOption {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OptionNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOptionNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.OptionNumber, com.tools20022.repository.msg.CorporateActionOption13.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption25.OptionNumber, com.tools20022.repository.msg.CorporateActionOption30.OptionNumber, com.tools20022.repository.msg.CorporateActionOption38.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption47.OptionNumber, com.tools20022.repository.msg.CorporateActionOption57.OptionNumber, com.tools20022.repository.msg.CorporateActionOption58.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption6.OptionNumber, com.tools20022.repository.msg.CorporateActionOption21.OptionNumber, com.tools20022.repository.msg.CorporateActionOption42.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption28.OptionNumber, com.tools20022.repository.msg.CorporateActionOption43.OptionNumber, com.tools20022.repository.msg.CorporateActionOption9.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption18.OptionNumber, com.tools20022.repository.msg.CorporateActionOption22.OptionNumber, com.tools20022.repository.msg.CorporateActionOption27.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption26.OptionNumber, com.tools20022.repository.msg.CorporateActionOption41.OptionNumber, com.tools20022.repository.msg.CorporateActionOption50.OptionNumber,
-					com.tools20022.repository.msg.InstructedCorporateActionOption1.OptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption2.OptionNumber,
-					com.tools20022.repository.msg.InstructedCorporateActionOption4.OptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption5.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption29.OptionNumber, com.tools20022.repository.msg.CorporateActionOption4.OptionNumber, com.tools20022.repository.msg.CorporateActionOption14.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption23.OptionNumber, com.tools20022.repository.msg.CorporateActionOption31.OptionNumber, com.tools20022.repository.msg.CorporateActionOption37.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption46.OptionNumber, com.tools20022.repository.msg.CorporateActionOption53.OptionNumber, com.tools20022.repository.msg.CorporateActionOption54.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption10.OptionNumber, com.tools20022.repository.msg.CorporateActionOption15.OptionNumber, com.tools20022.repository.msg.CorporateActionOption20.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption32.OptionNumber, com.tools20022.repository.msg.CorporateActionOption35.OptionNumber, com.tools20022.repository.msg.CorporateActionOption44.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption52.OptionNumber, com.tools20022.repository.msg.CorporateActionOption55.OptionNumber, com.tools20022.repository.msg.CorporateActionOption12.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption16.OptionNumber, com.tools20022.repository.msg.CorporateActionOption24.OptionNumber, com.tools20022.repository.msg.CorporateActionOption33.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption39.OptionNumber, com.tools20022.repository.msg.CorporateActionOption48.OptionNumber, com.tools20022.repository.msg.CorporateActionOption3.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption17.OptionNumber, com.tools20022.repository.msg.CorporateActionOption19.OptionNumber, com.tools20022.repository.msg.CorporateActionOption34.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption36.OptionNumber, com.tools20022.repository.msg.CorporateActionOption45.OptionNumber, com.tools20022.repository.msg.CorporateActionOption51.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption56.OptionNumber, com.tools20022.repository.msg.CorporateActionOption1.OptionNumber, com.tools20022.repository.msg.SecuritiesAccount9.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionElection3.OptionNumber, com.tools20022.repository.msg.CorporateActionElection1.OptionNumber, com.tools20022.repository.msg.CorporateActionElection2.OptionNumber,
-					com.tools20022.repository.msg.EntitlementAdvice1.OptionNumber, com.tools20022.repository.msg.GlobalDistributionRequest1.OptionNumber, com.tools20022.repository.msg.CorporateActionMovement1.OptionNumber,
-					com.tools20022.repository.msg.SecuritiesAccount8.OptionNumber, com.tools20022.repository.msg.CorporateActionOption2.OptionNumber, com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption7.OptionNumber, com.tools20022.repository.msg.CorporateActionOption99.OptionNumber, com.tools20022.repository.msg.CorporateActionOption11.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption103.OptionNumber, com.tools20022.repository.msg.CorporateActionOption100.OptionNumber, com.tools20022.repository.msg.CorporateActionOption101.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption102.OptionNumber, com.tools20022.repository.msg.CorporateActionOption110.OptionNumber, com.tools20022.repository.msg.CorporateActionOption108.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption107.OptionNumber, com.tools20022.repository.msg.CorporateActionOption106.OptionNumber, com.tools20022.repository.msg.CorporateActionOption111.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption113.OptionNumber, com.tools20022.repository.msg.CorporateActionOption117.OptionNumber, com.tools20022.repository.msg.CorporateActionOption118.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption119.OptionNumber, com.tools20022.repository.msg.CorporateActionOption115.OptionNumber, com.tools20022.repository.msg.CorporateActionOption116.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption114.OptionNumber, com.tools20022.repository.msg.CorporateActionOption120.OptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption6.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption121.OptionNumber, com.tools20022.repository.msg.CorporateActionOption126.OptionNumber, com.tools20022.repository.msg.CorporateActionOption124.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption125.OptionNumber, com.tools20022.repository.msg.CorporateActionOption123.OptionNumber, com.tools20022.repository.msg.CorporateActionOption127.OptionNumber,
-					com.tools20022.repository.msg.InstructedCorporateActionOption7.OptionNumber, com.tools20022.repository.msg.CorporateActionOption128.OptionNumber, com.tools20022.repository.msg.CorporateActionOption132.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption130.OptionNumber, com.tools20022.repository.msg.CorporateActionOption131.OptionNumber, com.tools20022.repository.msg.CorporateActionOption129.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.OptionNumber, com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption134.OptionNumber, com.tools20022.repository.msg.CorporateActionOption136.OptionNumber, com.tools20022.repository.msg.CorporateActionOption135.OptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption133.OptionNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption13.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption25.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption30.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption38.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption47.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption57.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption58.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption6.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption21.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption42.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption28.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption43.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption9.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption18.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption22.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption27.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption26.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption41.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption50.mmOptionNumber,
+					com.tools20022.repository.msg.InstructedCorporateActionOption1.mmOptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption2.mmOptionNumber,
+					com.tools20022.repository.msg.InstructedCorporateActionOption4.mmOptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption5.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption29.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption4.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption14.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption23.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption31.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption37.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption46.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption53.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption54.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption10.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption15.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption20.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption32.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption35.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption44.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption52.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption55.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption12.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption16.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption24.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption33.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption39.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption48.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption3.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption17.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption19.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption34.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption36.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption45.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption51.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption56.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption1.mmOptionNumber, com.tools20022.repository.msg.SecuritiesAccount9.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionElection3.mmOptionNumber, com.tools20022.repository.msg.CorporateActionElection1.mmOptionNumber, com.tools20022.repository.msg.CorporateActionElection2.mmOptionNumber,
+					com.tools20022.repository.msg.EntitlementAdvice1.mmOptionNumber, com.tools20022.repository.msg.GlobalDistributionRequest1.mmOptionNumber, com.tools20022.repository.msg.CorporateActionMovement1.mmOptionNumber,
+					com.tools20022.repository.msg.SecuritiesAccount8.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption2.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption7.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption99.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption11.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption103.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption100.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption101.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption102.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption110.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption108.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption107.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption106.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption111.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption113.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption117.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption118.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption119.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption115.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption116.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption114.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption120.mmOptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption6.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption121.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption126.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption124.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption125.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption123.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption127.mmOptionNumber,
+					com.tools20022.repository.msg.InstructedCorporateActionOption7.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption128.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption132.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption130.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption131.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption129.mmOptionNumber, com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption134.mmOptionNumber,
+					com.tools20022.repository.msg.CorporateActionOption136.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption135.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption133.mmOptionNumber);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected CorporateActionOptionCode optionType;
 	/**
 	 * Type of corporate action options available to the account owner.
 	 * <p>
@@ -1102,562 +1106,562 @@ public class CorporateActionOption {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionCode
 	 * CorporateActionOptionCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption4Choice#Code
-	 * CorporateActionOption4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption4Choice#Proprietary
-	 * CorporateActionOption4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#OptionType
-	 * CorporateActionOption5.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption6Choice#Code
-	 * CorporateActionOption6Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption6Choice#Proprietary
-	 * CorporateActionOption6Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#OptionType
-	 * CorporateActionOption13.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#OptionType
-	 * CorporateActionOption25.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#OptionType
-	 * CorporateActionOption30.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption12Choice#Code
-	 * CorporateActionOption12Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption12Choice#Proprietary
-	 * CorporateActionOption12Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#OptionType
-	 * CorporateActionOption38.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption15Choice#Code
-	 * CorporateActionOption15Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption15Choice#Proprietary
-	 * CorporateActionOption15Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#OptionType
-	 * CorporateActionOption47.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#OptionType
-	 * CorporateActionOption57.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#OptionType
-	 * CorporateActionOption58.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption6#OptionType
-	 * CorporateActionOption6.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption21#OptionType
-	 * CorporateActionOption21.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption42#OptionType
-	 * CorporateActionOption42.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption28#OptionType
-	 * CorporateActionOption28.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption43#OptionType
-	 * CorporateActionOption43.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption5Choice#Code
-	 * CorporateActionOption5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption5Choice#Proprietary
-	 * CorporateActionOption5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption9#OptionType
-	 * CorporateActionOption9.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption7Choice#Code
-	 * CorporateActionOption7Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption7Choice#Proprietary
-	 * CorporateActionOption7Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption18#OptionType
-	 * CorporateActionOption18.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption22#OptionType
-	 * CorporateActionOption22.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption27#OptionType
-	 * CorporateActionOption27.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption26#OptionType
-	 * CorporateActionOption26.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption13Choice#Code
-	 * CorporateActionOption13Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption13Choice#Proprietary
-	 * CorporateActionOption13Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption41#OptionType
-	 * CorporateActionOption41.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption16Choice#Code
-	 * CorporateActionOption16Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption16Choice#Proprietary
-	 * CorporateActionOption16Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption50#OptionType
-	 * CorporateActionOption50.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption2Choice#Code
-	 * CorporateActionOption2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption2Choice#Proprietary
-	 * CorporateActionOption2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption1#OptionType
-	 * InstructedCorporateActionOption1.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption9Choice#Code
-	 * CorporateActionOption9Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption9Choice#Proprietary
-	 * CorporateActionOption9Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption2#OptionType
-	 * InstructedCorporateActionOption2.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption10Choice#Code
-	 * CorporateActionOption10Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption10Choice#Proprietary
-	 * CorporateActionOption10Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption4#OptionType
-	 * InstructedCorporateActionOption4.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption17Choice#Code
-	 * CorporateActionOption17Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption17Choice#Proprietary
-	 * CorporateActionOption17Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption5#OptionType
-	 * InstructedCorporateActionOption5.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption29#OptionType
-	 * CorporateActionOption29.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption3Choice#Code
-	 * CorporateActionOption3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption3Choice#Proprietary
-	 * CorporateActionOption3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#OptionType
-	 * CorporateActionOption4.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption8Choice#Code
-	 * CorporateActionOption8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption8Choice#Proprietary
-	 * CorporateActionOption8Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#OptionType
-	 * CorporateActionOption14.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#OptionType
-	 * CorporateActionOption23.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#OptionType
-	 * CorporateActionOption31.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption11Choice#Code
-	 * CorporateActionOption11Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption11Choice#Proprietary
-	 * CorporateActionOption11Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#OptionType
-	 * CorporateActionOption37.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption14Choice#Code
-	 * CorporateActionOption14Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption14Choice#Proprietary
-	 * CorporateActionOption14Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#OptionType
-	 * CorporateActionOption46.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#OptionType
-	 * CorporateActionOption53.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#OptionType
-	 * CorporateActionOption54.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#OptionType
-	 * CorporateActionOption10.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#OptionType
-	 * CorporateActionOption15.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#OptionType
-	 * CorporateActionOption20.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#OptionType
-	 * CorporateActionOption32.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#OptionType
-	 * CorporateActionOption35.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#OptionType
-	 * CorporateActionOption44.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#OptionType
-	 * CorporateActionOption52.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#OptionType
-	 * CorporateActionOption55.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption12#OptionType
-	 * CorporateActionOption12.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption16#OptionType
-	 * CorporateActionOption16.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption24#OptionType
-	 * CorporateActionOption24.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption33#OptionType
-	 * CorporateActionOption33.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#OptionType
-	 * CorporateActionOption39.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption48#OptionType
-	 * CorporateActionOption48.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#OptionType
-	 * CorporateActionOption3.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#OptionType
-	 * CorporateActionOption17.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#OptionType
-	 * CorporateActionOption19.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#OptionType
-	 * CorporateActionOption34.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#OptionType
-	 * CorporateActionOption36.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#OptionType
-	 * CorporateActionOption45.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#OptionType
-	 * CorporateActionOption51.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#OptionType
-	 * CorporateActionOption56.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation8#CorporateActionOptionType
-	 * AggregateBalanceInformation8.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation11#CorporateActionOptionType
-	 * AggregateBalanceInformation11.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation13#CorporateActionOptionType
-	 * AggregateBalanceInformation13.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation15#CorporateActionOptionType
-	 * AggregateBalanceInformation15.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation17#CorporateActionOptionType
-	 * AggregateBalanceInformation17.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation19#CorporateActionOptionType
-	 * AggregateBalanceInformation19.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation22#CorporateActionOptionType
-	 * AggregateBalanceInformation22.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation23#CorporateActionOptionType
-	 * AggregateBalanceInformation23.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation9#CorporateActionOptionType
-	 * AggregateBalanceInformation9.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation10#CorporateActionOptionType
-	 * AggregateBalanceInformation10.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation12#CorporateActionOptionType
-	 * AggregateBalanceInformation12.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation14#CorporateActionOptionType
-	 * AggregateBalanceInformation14.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation16#CorporateActionOptionType
-	 * AggregateBalanceInformation16.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation18#CorporateActionOptionType
-	 * AggregateBalanceInformation18.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation21#CorporateActionOptionType
-	 * AggregateBalanceInformation21.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation24#CorporateActionOptionType
-	 * AggregateBalanceInformation24.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption1FormatChoice#Code
-	 * CorporateActionOption1FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption1FormatChoice#Proprietary
-	 * CorporateActionOption1FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#DefaultOptionType
-	 * CorporateAction2.DefaultOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#OptionType
-	 * CorporateActionOption1.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount9#OptionType
-	 * SecuritiesAccount9.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection3#OptionType
-	 * CorporateActionElection3.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection1#OptionType
-	 * CorporateActionElection1.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection2#OptionType
-	 * CorporateActionElection2.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#OptionType
-	 * EntitlementAdvice1.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#OptionType
-	 * GlobalDistributionRequest1.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#OptionType
-	 * CorporateActionMovement1.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount8#OptionType
-	 * SecuritiesAccount8.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption2#OptionType
-	 * CorporateActionOption2.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1#OptionType
-	 * CorporateActionDeactivationInstructionStatus1.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption7#OptionType
-	 * CorporateActionOption7.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation20#CorporateActionOptionType
-	 * AggregateBalanceInformation20.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption11#OptionType
-	 * CorporateActionOption11.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation6#CorporateActionOptionType
-	 * AggregateBalanceInformation6.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation7#CorporateActionOptionType
-	 * AggregateBalanceInformation7.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#OptionType
-	 * CorporateActionOption103.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#OptionType
-	 * CorporateActionOption100.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#OptionType
-	 * CorporateActionOption101.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#OptionType
-	 * CorporateActionOption102.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#OptionType
-	 * CorporateActionOption110.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#OptionType
-	 * CorporateActionOption108.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#OptionType
-	 * CorporateActionOption107.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#OptionType
-	 * CorporateActionOption106.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation26#CorporateActionOptionType
-	 * AggregateBalanceInformation26.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation25#CorporateActionOptionType
-	 * AggregateBalanceInformation25.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#OptionType
-	 * CorporateActionOption111.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#OptionType
-	 * CorporateActionOption113.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation28#CorporateActionOptionType
-	 * AggregateBalanceInformation28.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation27#CorporateActionOptionType
-	 * AggregateBalanceInformation27.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation30#CorporateActionOptionType
-	 * AggregateBalanceInformation30.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation31#CorporateActionOptionType
-	 * AggregateBalanceInformation31.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#OptionType
-	 * CorporateActionOption117.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#OptionType
-	 * CorporateActionOption118.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#OptionType
-	 * CorporateActionOption119.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#OptionType
-	 * CorporateActionOption115.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption116#OptionType
-	 * CorporateActionOption116.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#OptionType
-	 * CorporateActionOption114.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption120#OptionType
-	 * CorporateActionOption120.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption19Choice#Code
-	 * CorporateActionOption19Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption19Choice#Proprietary
-	 * CorporateActionOption19Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption6#OptionType
-	 * InstructedCorporateActionOption6.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption18Choice#Code
-	 * CorporateActionOption18Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption18Choice#Proprietary
-	 * CorporateActionOption18Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption21Choice#Code
-	 * CorporateActionOption21Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption21Choice#Proprietary
-	 * CorporateActionOption21Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption20Choice#Code
-	 * CorporateActionOption20Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption20Choice#Proprietary
-	 * CorporateActionOption20Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption121#OptionType
-	 * CorporateActionOption121.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption126#OptionType
-	 * CorporateActionOption126.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#OptionType
-	 * CorporateActionOption124.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#OptionType
-	 * CorporateActionOption125.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#OptionType
-	 * CorporateActionOption123.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#OptionType
-	 * CorporateActionOption127.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption26Choice#Code
-	 * CorporateActionOption26Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption26Choice#Proprietary
-	 * CorporateActionOption26Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#OptionType
-	 * InstructedCorporateActionOption7.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption23Choice#Code
-	 * CorporateActionOption23Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption23Choice#Proprietary
-	 * CorporateActionOption23Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption22Choice#Code
-	 * CorporateActionOption22Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption22Choice#Proprietary
-	 * CorporateActionOption22Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption25Choice#Code
-	 * CorporateActionOption25Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption25Choice#Proprietary
-	 * CorporateActionOption25Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation32#CorporateActionOptionType
-	 * AggregateBalanceInformation32.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation33#CorporateActionOptionType
-	 * AggregateBalanceInformation33.CorporateActionOptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption128#OptionType
-	 * CorporateActionOption128.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption29Choice#Code
-	 * CorporateActionOption29Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption29Choice#Proprietary
-	 * CorporateActionOption29Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#OptionType
-	 * CorporateActionOption132.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#OptionType
-	 * CorporateActionOption130.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#OptionType
-	 * CorporateActionOption131.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#OptionType
-	 * CorporateActionOption129.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#OptionType
-	 * CorporateActionOption134.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#OptionType
-	 * CorporateActionOption136.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#OptionType
-	 * CorporateActionOption135.OptionType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#OptionType
-	 * CorporateActionOption133.OptionType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption4Choice#mmCode
+	 * CorporateActionOption4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption4Choice#mmProprietary
+	 * CorporateActionOption4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#mmOptionType
+	 * CorporateActionOption5.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption6Choice#mmCode
+	 * CorporateActionOption6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption6Choice#mmProprietary
+	 * CorporateActionOption6Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#mmOptionType
+	 * CorporateActionOption13.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#mmOptionType
+	 * CorporateActionOption25.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#mmOptionType
+	 * CorporateActionOption30.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption12Choice#mmCode
+	 * CorporateActionOption12Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption12Choice#mmProprietary
+	 * CorporateActionOption12Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#mmOptionType
+	 * CorporateActionOption38.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption15Choice#mmCode
+	 * CorporateActionOption15Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption15Choice#mmProprietary
+	 * CorporateActionOption15Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#mmOptionType
+	 * CorporateActionOption47.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#mmOptionType
+	 * CorporateActionOption57.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#mmOptionType
+	 * CorporateActionOption58.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption6#mmOptionType
+	 * CorporateActionOption6.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption21#mmOptionType
+	 * CorporateActionOption21.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption42#mmOptionType
+	 * CorporateActionOption42.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption28#mmOptionType
+	 * CorporateActionOption28.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption43#mmOptionType
+	 * CorporateActionOption43.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption5Choice#mmCode
+	 * CorporateActionOption5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption5Choice#mmProprietary
+	 * CorporateActionOption5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption9#mmOptionType
+	 * CorporateActionOption9.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption7Choice#mmCode
+	 * CorporateActionOption7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption7Choice#mmProprietary
+	 * CorporateActionOption7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption18#mmOptionType
+	 * CorporateActionOption18.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption22#mmOptionType
+	 * CorporateActionOption22.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption27#mmOptionType
+	 * CorporateActionOption27.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption26#mmOptionType
+	 * CorporateActionOption26.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption13Choice#mmCode
+	 * CorporateActionOption13Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption13Choice#mmProprietary
+	 * CorporateActionOption13Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption41#mmOptionType
+	 * CorporateActionOption41.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption16Choice#mmCode
+	 * CorporateActionOption16Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption16Choice#mmProprietary
+	 * CorporateActionOption16Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption50#mmOptionType
+	 * CorporateActionOption50.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption2Choice#mmCode
+	 * CorporateActionOption2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption2Choice#mmProprietary
+	 * CorporateActionOption2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption1#mmOptionType
+	 * InstructedCorporateActionOption1.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption9Choice#mmCode
+	 * CorporateActionOption9Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption9Choice#mmProprietary
+	 * CorporateActionOption9Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption2#mmOptionType
+	 * InstructedCorporateActionOption2.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption10Choice#mmCode
+	 * CorporateActionOption10Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption10Choice#mmProprietary
+	 * CorporateActionOption10Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption4#mmOptionType
+	 * InstructedCorporateActionOption4.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption17Choice#mmCode
+	 * CorporateActionOption17Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption17Choice#mmProprietary
+	 * CorporateActionOption17Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption5#mmOptionType
+	 * InstructedCorporateActionOption5.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption29#mmOptionType
+	 * CorporateActionOption29.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption3Choice#mmCode
+	 * CorporateActionOption3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption3Choice#mmProprietary
+	 * CorporateActionOption3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#mmOptionType
+	 * CorporateActionOption4.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption8Choice#mmCode
+	 * CorporateActionOption8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption8Choice#mmProprietary
+	 * CorporateActionOption8Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#mmOptionType
+	 * CorporateActionOption14.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#mmOptionType
+	 * CorporateActionOption23.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#mmOptionType
+	 * CorporateActionOption31.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption11Choice#mmCode
+	 * CorporateActionOption11Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption11Choice#mmProprietary
+	 * CorporateActionOption11Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#mmOptionType
+	 * CorporateActionOption37.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption14Choice#mmCode
+	 * CorporateActionOption14Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption14Choice#mmProprietary
+	 * CorporateActionOption14Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#mmOptionType
+	 * CorporateActionOption46.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#mmOptionType
+	 * CorporateActionOption53.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#mmOptionType
+	 * CorporateActionOption54.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmOptionType
+	 * CorporateActionOption10.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmOptionType
+	 * CorporateActionOption15.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmOptionType
+	 * CorporateActionOption20.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmOptionType
+	 * CorporateActionOption32.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmOptionType
+	 * CorporateActionOption35.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmOptionType
+	 * CorporateActionOption44.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmOptionType
+	 * CorporateActionOption52.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmOptionType
+	 * CorporateActionOption55.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption12#mmOptionType
+	 * CorporateActionOption12.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption16#mmOptionType
+	 * CorporateActionOption16.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption24#mmOptionType
+	 * CorporateActionOption24.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption33#mmOptionType
+	 * CorporateActionOption33.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption39#mmOptionType
+	 * CorporateActionOption39.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption48#mmOptionType
+	 * CorporateActionOption48.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmOptionType
+	 * CorporateActionOption3.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmOptionType
+	 * CorporateActionOption17.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmOptionType
+	 * CorporateActionOption19.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmOptionType
+	 * CorporateActionOption34.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmOptionType
+	 * CorporateActionOption36.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmOptionType
+	 * CorporateActionOption45.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmOptionType
+	 * CorporateActionOption51.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmOptionType
+	 * CorporateActionOption56.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation8#mmCorporateActionOptionType
+	 * AggregateBalanceInformation8.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation11#mmCorporateActionOptionType
+	 * AggregateBalanceInformation11.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation13#mmCorporateActionOptionType
+	 * AggregateBalanceInformation13.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation15#mmCorporateActionOptionType
+	 * AggregateBalanceInformation15.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation17#mmCorporateActionOptionType
+	 * AggregateBalanceInformation17.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation19#mmCorporateActionOptionType
+	 * AggregateBalanceInformation19.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation22#mmCorporateActionOptionType
+	 * AggregateBalanceInformation22.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation23#mmCorporateActionOptionType
+	 * AggregateBalanceInformation23.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation9#mmCorporateActionOptionType
+	 * AggregateBalanceInformation9.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation10#mmCorporateActionOptionType
+	 * AggregateBalanceInformation10.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation12#mmCorporateActionOptionType
+	 * AggregateBalanceInformation12.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation14#mmCorporateActionOptionType
+	 * AggregateBalanceInformation14.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation16#mmCorporateActionOptionType
+	 * AggregateBalanceInformation16.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation18#mmCorporateActionOptionType
+	 * AggregateBalanceInformation18.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation21#mmCorporateActionOptionType
+	 * AggregateBalanceInformation21.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation24#mmCorporateActionOptionType
+	 * AggregateBalanceInformation24.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption1FormatChoice#mmCode
+	 * CorporateActionOption1FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption1FormatChoice#mmProprietary
+	 * CorporateActionOption1FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#mmDefaultOptionType
+	 * CorporateAction2.mmDefaultOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmOptionType
+	 * CorporateActionOption1.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount9#mmOptionType
+	 * SecuritiesAccount9.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection3#mmOptionType
+	 * CorporateActionElection3.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection1#mmOptionType
+	 * CorporateActionElection1.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionElection2#mmOptionType
+	 * CorporateActionElection2.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntitlementAdvice1#mmOptionType
+	 * EntitlementAdvice1.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionRequest1#mmOptionType
+	 * GlobalDistributionRequest1.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#mmOptionType
+	 * CorporateActionMovement1.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccount8#mmOptionType
+	 * SecuritiesAccount8.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption2#mmOptionType
+	 * CorporateActionOption2.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1#mmOptionType
+	 * CorporateActionDeactivationInstructionStatus1.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption7#mmOptionType
+	 * CorporateActionOption7.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation20#mmCorporateActionOptionType
+	 * AggregateBalanceInformation20.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption11#mmOptionType
+	 * CorporateActionOption11.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation6#mmCorporateActionOptionType
+	 * AggregateBalanceInformation6.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation7#mmCorporateActionOptionType
+	 * AggregateBalanceInformation7.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#mmOptionType
+	 * CorporateActionOption103.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmOptionType
+	 * CorporateActionOption100.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmOptionType
+	 * CorporateActionOption101.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#mmOptionType
+	 * CorporateActionOption102.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#mmOptionType
+	 * CorporateActionOption110.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmOptionType
+	 * CorporateActionOption108.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#mmOptionType
+	 * CorporateActionOption107.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmOptionType
+	 * CorporateActionOption106.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation26#mmCorporateActionOptionType
+	 * AggregateBalanceInformation26.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation25#mmCorporateActionOptionType
+	 * AggregateBalanceInformation25.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#mmOptionType
+	 * CorporateActionOption111.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#mmOptionType
+	 * CorporateActionOption113.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation28#mmCorporateActionOptionType
+	 * AggregateBalanceInformation28.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation27#mmCorporateActionOptionType
+	 * AggregateBalanceInformation27.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation30#mmCorporateActionOptionType
+	 * AggregateBalanceInformation30.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation31#mmCorporateActionOptionType
+	 * AggregateBalanceInformation31.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#mmOptionType
+	 * CorporateActionOption117.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#mmOptionType
+	 * CorporateActionOption118.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption119#mmOptionType
+	 * CorporateActionOption119.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmOptionType
+	 * CorporateActionOption115.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption116#mmOptionType
+	 * CorporateActionOption116.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmOptionType
+	 * CorporateActionOption114.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption120#mmOptionType
+	 * CorporateActionOption120.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption19Choice#mmCode
+	 * CorporateActionOption19Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption19Choice#mmProprietary
+	 * CorporateActionOption19Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption6#mmOptionType
+	 * InstructedCorporateActionOption6.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption18Choice#mmCode
+	 * CorporateActionOption18Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption18Choice#mmProprietary
+	 * CorporateActionOption18Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption21Choice#mmCode
+	 * CorporateActionOption21Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption21Choice#mmProprietary
+	 * CorporateActionOption21Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption20Choice#mmCode
+	 * CorporateActionOption20Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption20Choice#mmProprietary
+	 * CorporateActionOption20Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption121#mmOptionType
+	 * CorporateActionOption121.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption126#mmOptionType
+	 * CorporateActionOption126.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#mmOptionType
+	 * CorporateActionOption124.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmOptionType
+	 * CorporateActionOption125.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#mmOptionType
+	 * CorporateActionOption123.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmOptionType
+	 * CorporateActionOption127.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption26Choice#mmCode
+	 * CorporateActionOption26Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption26Choice#mmProprietary
+	 * CorporateActionOption26Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption7#mmOptionType
+	 * InstructedCorporateActionOption7.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption23Choice#mmCode
+	 * CorporateActionOption23Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption23Choice#mmProprietary
+	 * CorporateActionOption23Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption22Choice#mmCode
+	 * CorporateActionOption22Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption22Choice#mmProprietary
+	 * CorporateActionOption22Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption25Choice#mmCode
+	 * CorporateActionOption25Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption25Choice#mmProprietary
+	 * CorporateActionOption25Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation32#mmCorporateActionOptionType
+	 * AggregateBalanceInformation32.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation33#mmCorporateActionOptionType
+	 * AggregateBalanceInformation33.mmCorporateActionOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption128#mmOptionType
+	 * CorporateActionOption128.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption29Choice#mmCode
+	 * CorporateActionOption29Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption29Choice#mmProprietary
+	 * CorporateActionOption29Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#mmOptionType
+	 * CorporateActionOption132.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmOptionType
+	 * CorporateActionOption130.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#mmOptionType
+	 * CorporateActionOption131.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmOptionType
+	 * CorporateActionOption129.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#mmOptionType
+	 * CorporateActionOption134.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#mmOptionType
+	 * CorporateActionOption136.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmOptionType
+	 * CorporateActionOption135.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmOptionType
+	 * CorporateActionOption133.mmOptionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1670,86 +1674,91 @@ public class CorporateActionOption {
 	 * "Type of corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OptionType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOptionType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionOption4Choice.Code, com.tools20022.repository.choice.CorporateActionOption4Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption5.OptionType, com.tools20022.repository.choice.CorporateActionOption6Choice.Code, com.tools20022.repository.choice.CorporateActionOption6Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption13.OptionType, com.tools20022.repository.msg.CorporateActionOption25.OptionType, com.tools20022.repository.msg.CorporateActionOption30.OptionType,
-					com.tools20022.repository.choice.CorporateActionOption12Choice.Code, com.tools20022.repository.choice.CorporateActionOption12Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption38.OptionType,
-					com.tools20022.repository.choice.CorporateActionOption15Choice.Code, com.tools20022.repository.choice.CorporateActionOption15Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption47.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption57.OptionType, com.tools20022.repository.msg.CorporateActionOption58.OptionType, com.tools20022.repository.msg.CorporateActionOption6.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption21.OptionType, com.tools20022.repository.msg.CorporateActionOption42.OptionType, com.tools20022.repository.msg.CorporateActionOption28.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption43.OptionType, com.tools20022.repository.choice.CorporateActionOption5Choice.Code, com.tools20022.repository.choice.CorporateActionOption5Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption9.OptionType, com.tools20022.repository.choice.CorporateActionOption7Choice.Code, com.tools20022.repository.choice.CorporateActionOption7Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption18.OptionType, com.tools20022.repository.msg.CorporateActionOption22.OptionType, com.tools20022.repository.msg.CorporateActionOption27.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption26.OptionType, com.tools20022.repository.choice.CorporateActionOption13Choice.Code, com.tools20022.repository.choice.CorporateActionOption13Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption41.OptionType, com.tools20022.repository.choice.CorporateActionOption16Choice.Code, com.tools20022.repository.choice.CorporateActionOption16Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption50.OptionType, com.tools20022.repository.choice.CorporateActionOption2Choice.Code, com.tools20022.repository.choice.CorporateActionOption2Choice.Proprietary,
-					com.tools20022.repository.msg.InstructedCorporateActionOption1.OptionType, com.tools20022.repository.choice.CorporateActionOption9Choice.Code, com.tools20022.repository.choice.CorporateActionOption9Choice.Proprietary,
-					com.tools20022.repository.msg.InstructedCorporateActionOption2.OptionType, com.tools20022.repository.choice.CorporateActionOption10Choice.Code, com.tools20022.repository.choice.CorporateActionOption10Choice.Proprietary,
-					com.tools20022.repository.msg.InstructedCorporateActionOption4.OptionType, com.tools20022.repository.choice.CorporateActionOption17Choice.Code, com.tools20022.repository.choice.CorporateActionOption17Choice.Proprietary,
-					com.tools20022.repository.msg.InstructedCorporateActionOption5.OptionType, com.tools20022.repository.msg.CorporateActionOption29.OptionType, com.tools20022.repository.choice.CorporateActionOption3Choice.Code,
-					com.tools20022.repository.choice.CorporateActionOption3Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption4.OptionType, com.tools20022.repository.choice.CorporateActionOption8Choice.Code,
-					com.tools20022.repository.choice.CorporateActionOption8Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption14.OptionType, com.tools20022.repository.msg.CorporateActionOption23.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption31.OptionType, com.tools20022.repository.choice.CorporateActionOption11Choice.Code, com.tools20022.repository.choice.CorporateActionOption11Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption37.OptionType, com.tools20022.repository.choice.CorporateActionOption14Choice.Code, com.tools20022.repository.choice.CorporateActionOption14Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption46.OptionType, com.tools20022.repository.msg.CorporateActionOption53.OptionType, com.tools20022.repository.msg.CorporateActionOption54.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption10.OptionType, com.tools20022.repository.msg.CorporateActionOption15.OptionType, com.tools20022.repository.msg.CorporateActionOption20.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption32.OptionType, com.tools20022.repository.msg.CorporateActionOption35.OptionType, com.tools20022.repository.msg.CorporateActionOption44.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption52.OptionType, com.tools20022.repository.msg.CorporateActionOption55.OptionType, com.tools20022.repository.msg.CorporateActionOption12.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption16.OptionType, com.tools20022.repository.msg.CorporateActionOption24.OptionType, com.tools20022.repository.msg.CorporateActionOption33.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption39.OptionType, com.tools20022.repository.msg.CorporateActionOption48.OptionType, com.tools20022.repository.msg.CorporateActionOption3.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption17.OptionType, com.tools20022.repository.msg.CorporateActionOption19.OptionType, com.tools20022.repository.msg.CorporateActionOption34.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption36.OptionType, com.tools20022.repository.msg.CorporateActionOption45.OptionType, com.tools20022.repository.msg.CorporateActionOption51.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption56.OptionType, com.tools20022.repository.msg.AggregateBalanceInformation8.CorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation11.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation13.CorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation15.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation17.CorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation19.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation22.CorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation23.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation9.CorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation10.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation12.CorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation14.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation16.CorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation18.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation21.CorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation24.CorporateActionOptionType, com.tools20022.repository.choice.CorporateActionOption1FormatChoice.Code,
-					com.tools20022.repository.choice.CorporateActionOption1FormatChoice.Proprietary, com.tools20022.repository.msg.CorporateAction2.DefaultOptionType, com.tools20022.repository.msg.CorporateActionOption1.OptionType,
-					com.tools20022.repository.msg.SecuritiesAccount9.OptionType, com.tools20022.repository.msg.CorporateActionElection3.OptionType, com.tools20022.repository.msg.CorporateActionElection1.OptionType,
-					com.tools20022.repository.msg.CorporateActionElection2.OptionType, com.tools20022.repository.msg.EntitlementAdvice1.OptionType, com.tools20022.repository.msg.GlobalDistributionRequest1.OptionType,
-					com.tools20022.repository.msg.CorporateActionMovement1.OptionType, com.tools20022.repository.msg.SecuritiesAccount8.OptionType, com.tools20022.repository.msg.CorporateActionOption2.OptionType,
-					com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.OptionType, com.tools20022.repository.msg.CorporateActionOption7.OptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation20.CorporateActionOptionType, com.tools20022.repository.msg.CorporateActionOption11.OptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation6.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation7.CorporateActionOptionType,
-					com.tools20022.repository.msg.CorporateActionOption103.OptionType, com.tools20022.repository.msg.CorporateActionOption100.OptionType, com.tools20022.repository.msg.CorporateActionOption101.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption102.OptionType, com.tools20022.repository.msg.CorporateActionOption110.OptionType, com.tools20022.repository.msg.CorporateActionOption108.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption107.OptionType, com.tools20022.repository.msg.CorporateActionOption106.OptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation26.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation25.CorporateActionOptionType,
-					com.tools20022.repository.msg.CorporateActionOption111.OptionType, com.tools20022.repository.msg.CorporateActionOption113.OptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation28.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation27.CorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation30.CorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation31.CorporateActionOptionType,
-					com.tools20022.repository.msg.CorporateActionOption117.OptionType, com.tools20022.repository.msg.CorporateActionOption118.OptionType, com.tools20022.repository.msg.CorporateActionOption119.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption115.OptionType, com.tools20022.repository.msg.CorporateActionOption116.OptionType, com.tools20022.repository.msg.CorporateActionOption114.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption120.OptionType, com.tools20022.repository.choice.CorporateActionOption19Choice.Code, com.tools20022.repository.choice.CorporateActionOption19Choice.Proprietary,
-					com.tools20022.repository.msg.InstructedCorporateActionOption6.OptionType, com.tools20022.repository.choice.CorporateActionOption18Choice.Code, com.tools20022.repository.choice.CorporateActionOption18Choice.Proprietary,
-					com.tools20022.repository.choice.CorporateActionOption21Choice.Code, com.tools20022.repository.choice.CorporateActionOption21Choice.Proprietary, com.tools20022.repository.choice.CorporateActionOption20Choice.Code,
-					com.tools20022.repository.choice.CorporateActionOption20Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption121.OptionType, com.tools20022.repository.msg.CorporateActionOption126.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption124.OptionType, com.tools20022.repository.msg.CorporateActionOption125.OptionType, com.tools20022.repository.msg.CorporateActionOption123.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption127.OptionType, com.tools20022.repository.choice.CorporateActionOption26Choice.Code, com.tools20022.repository.choice.CorporateActionOption26Choice.Proprietary,
-					com.tools20022.repository.msg.InstructedCorporateActionOption7.OptionType, com.tools20022.repository.choice.CorporateActionOption23Choice.Code, com.tools20022.repository.choice.CorporateActionOption23Choice.Proprietary,
-					com.tools20022.repository.choice.CorporateActionOption22Choice.Code, com.tools20022.repository.choice.CorporateActionOption22Choice.Proprietary, com.tools20022.repository.choice.CorporateActionOption25Choice.Code,
-					com.tools20022.repository.choice.CorporateActionOption25Choice.Proprietary, com.tools20022.repository.msg.AggregateBalanceInformation32.CorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation33.CorporateActionOptionType, com.tools20022.repository.msg.CorporateActionOption128.OptionType,
-					com.tools20022.repository.choice.CorporateActionOption29Choice.Code, com.tools20022.repository.choice.CorporateActionOption29Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption132.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption130.OptionType, com.tools20022.repository.msg.CorporateActionOption131.OptionType, com.tools20022.repository.msg.CorporateActionOption129.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption134.OptionType, com.tools20022.repository.msg.CorporateActionOption136.OptionType, com.tools20022.repository.msg.CorporateActionOption135.OptionType,
-					com.tools20022.repository.msg.CorporateActionOption133.OptionType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionOption4Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption4Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption5.mmOptionType, com.tools20022.repository.choice.CorporateActionOption6Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption6Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption13.mmOptionType, com.tools20022.repository.msg.CorporateActionOption25.mmOptionType, com.tools20022.repository.msg.CorporateActionOption30.mmOptionType,
+					com.tools20022.repository.choice.CorporateActionOption12Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption12Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption38.mmOptionType,
+					com.tools20022.repository.choice.CorporateActionOption15Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption15Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption47.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption57.mmOptionType, com.tools20022.repository.msg.CorporateActionOption58.mmOptionType, com.tools20022.repository.msg.CorporateActionOption6.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption21.mmOptionType, com.tools20022.repository.msg.CorporateActionOption42.mmOptionType, com.tools20022.repository.msg.CorporateActionOption28.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption43.mmOptionType, com.tools20022.repository.choice.CorporateActionOption5Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption5Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption9.mmOptionType, com.tools20022.repository.choice.CorporateActionOption7Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption7Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption18.mmOptionType, com.tools20022.repository.msg.CorporateActionOption22.mmOptionType, com.tools20022.repository.msg.CorporateActionOption27.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption26.mmOptionType, com.tools20022.repository.choice.CorporateActionOption13Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption13Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption41.mmOptionType, com.tools20022.repository.choice.CorporateActionOption16Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption16Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption50.mmOptionType, com.tools20022.repository.choice.CorporateActionOption2Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption2Choice.mmProprietary,
+					com.tools20022.repository.msg.InstructedCorporateActionOption1.mmOptionType, com.tools20022.repository.choice.CorporateActionOption9Choice.mmCode,
+					com.tools20022.repository.choice.CorporateActionOption9Choice.mmProprietary, com.tools20022.repository.msg.InstructedCorporateActionOption2.mmOptionType,
+					com.tools20022.repository.choice.CorporateActionOption10Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption10Choice.mmProprietary,
+					com.tools20022.repository.msg.InstructedCorporateActionOption4.mmOptionType, com.tools20022.repository.choice.CorporateActionOption17Choice.mmCode,
+					com.tools20022.repository.choice.CorporateActionOption17Choice.mmProprietary, com.tools20022.repository.msg.InstructedCorporateActionOption5.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption29.mmOptionType, com.tools20022.repository.choice.CorporateActionOption3Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption3Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption4.mmOptionType, com.tools20022.repository.choice.CorporateActionOption8Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption8Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption14.mmOptionType, com.tools20022.repository.msg.CorporateActionOption23.mmOptionType, com.tools20022.repository.msg.CorporateActionOption31.mmOptionType,
+					com.tools20022.repository.choice.CorporateActionOption11Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption11Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption37.mmOptionType,
+					com.tools20022.repository.choice.CorporateActionOption14Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption14Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption46.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption53.mmOptionType, com.tools20022.repository.msg.CorporateActionOption54.mmOptionType, com.tools20022.repository.msg.CorporateActionOption10.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption15.mmOptionType, com.tools20022.repository.msg.CorporateActionOption20.mmOptionType, com.tools20022.repository.msg.CorporateActionOption32.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption35.mmOptionType, com.tools20022.repository.msg.CorporateActionOption44.mmOptionType, com.tools20022.repository.msg.CorporateActionOption52.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption55.mmOptionType, com.tools20022.repository.msg.CorporateActionOption12.mmOptionType, com.tools20022.repository.msg.CorporateActionOption16.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption24.mmOptionType, com.tools20022.repository.msg.CorporateActionOption33.mmOptionType, com.tools20022.repository.msg.CorporateActionOption39.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption48.mmOptionType, com.tools20022.repository.msg.CorporateActionOption3.mmOptionType, com.tools20022.repository.msg.CorporateActionOption17.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption19.mmOptionType, com.tools20022.repository.msg.CorporateActionOption34.mmOptionType, com.tools20022.repository.msg.CorporateActionOption36.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption45.mmOptionType, com.tools20022.repository.msg.CorporateActionOption51.mmOptionType, com.tools20022.repository.msg.CorporateActionOption56.mmOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation8.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation11.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation13.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation15.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation17.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation19.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation22.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation23.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation9.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation10.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation12.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation14.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation16.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation18.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation21.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation24.mmCorporateActionOptionType,
+					com.tools20022.repository.choice.CorporateActionOption1FormatChoice.mmCode, com.tools20022.repository.choice.CorporateActionOption1FormatChoice.mmProprietary,
+					com.tools20022.repository.msg.CorporateAction2.mmDefaultOptionType, com.tools20022.repository.msg.CorporateActionOption1.mmOptionType, com.tools20022.repository.msg.SecuritiesAccount9.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionElection3.mmOptionType, com.tools20022.repository.msg.CorporateActionElection1.mmOptionType, com.tools20022.repository.msg.CorporateActionElection2.mmOptionType,
+					com.tools20022.repository.msg.EntitlementAdvice1.mmOptionType, com.tools20022.repository.msg.GlobalDistributionRequest1.mmOptionType, com.tools20022.repository.msg.CorporateActionMovement1.mmOptionType,
+					com.tools20022.repository.msg.SecuritiesAccount8.mmOptionType, com.tools20022.repository.msg.CorporateActionOption2.mmOptionType, com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption7.mmOptionType, com.tools20022.repository.msg.AggregateBalanceInformation20.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.CorporateActionOption11.mmOptionType, com.tools20022.repository.msg.AggregateBalanceInformation6.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation7.mmCorporateActionOptionType, com.tools20022.repository.msg.CorporateActionOption103.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption100.mmOptionType, com.tools20022.repository.msg.CorporateActionOption101.mmOptionType, com.tools20022.repository.msg.CorporateActionOption102.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption110.mmOptionType, com.tools20022.repository.msg.CorporateActionOption108.mmOptionType, com.tools20022.repository.msg.CorporateActionOption107.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption106.mmOptionType, com.tools20022.repository.msg.AggregateBalanceInformation26.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation25.mmCorporateActionOptionType, com.tools20022.repository.msg.CorporateActionOption111.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption113.mmOptionType, com.tools20022.repository.msg.AggregateBalanceInformation28.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation27.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation30.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation31.mmCorporateActionOptionType, com.tools20022.repository.msg.CorporateActionOption117.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption118.mmOptionType, com.tools20022.repository.msg.CorporateActionOption119.mmOptionType, com.tools20022.repository.msg.CorporateActionOption115.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption116.mmOptionType, com.tools20022.repository.msg.CorporateActionOption114.mmOptionType, com.tools20022.repository.msg.CorporateActionOption120.mmOptionType,
+					com.tools20022.repository.choice.CorporateActionOption19Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption19Choice.mmProprietary,
+					com.tools20022.repository.msg.InstructedCorporateActionOption6.mmOptionType, com.tools20022.repository.choice.CorporateActionOption18Choice.mmCode,
+					com.tools20022.repository.choice.CorporateActionOption18Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionOption21Choice.mmCode,
+					com.tools20022.repository.choice.CorporateActionOption21Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionOption20Choice.mmCode,
+					com.tools20022.repository.choice.CorporateActionOption20Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption121.mmOptionType, com.tools20022.repository.msg.CorporateActionOption126.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption124.mmOptionType, com.tools20022.repository.msg.CorporateActionOption125.mmOptionType, com.tools20022.repository.msg.CorporateActionOption123.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption127.mmOptionType, com.tools20022.repository.choice.CorporateActionOption26Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption26Choice.mmProprietary,
+					com.tools20022.repository.msg.InstructedCorporateActionOption7.mmOptionType, com.tools20022.repository.choice.CorporateActionOption23Choice.mmCode,
+					com.tools20022.repository.choice.CorporateActionOption23Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionOption22Choice.mmCode,
+					com.tools20022.repository.choice.CorporateActionOption22Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionOption25Choice.mmCode,
+					com.tools20022.repository.choice.CorporateActionOption25Choice.mmProprietary, com.tools20022.repository.msg.AggregateBalanceInformation32.mmCorporateActionOptionType,
+					com.tools20022.repository.msg.AggregateBalanceInformation33.mmCorporateActionOptionType, com.tools20022.repository.msg.CorporateActionOption128.mmOptionType,
+					com.tools20022.repository.choice.CorporateActionOption29Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption29Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption132.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption130.mmOptionType, com.tools20022.repository.msg.CorporateActionOption131.mmOptionType, com.tools20022.repository.msg.CorporateActionOption129.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption134.mmOptionType, com.tools20022.repository.msg.CorporateActionOption136.mmOptionType, com.tools20022.repository.msg.CorporateActionOption135.mmOptionType,
+					com.tools20022.repository.msg.CorporateActionOption133.mmOptionType);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OptionType";
 			definition = "Type of corporate action options available to the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionOptionCode.mmObject();
 		}
 	};
+	protected FractionDispositionTypeCode fractionDisposition;
 	/**
 	 * Treatment of the fractions resulting from derived securities will be
 	 * processed or how prorated decisions will be rounding, if provided with a
@@ -1762,514 +1771,514 @@ public class CorporateActionOption {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeCode
 	 * FractionDispositionTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType2Choice#Code
-	 * FractionDispositionType2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType2Choice#Proprietary
-	 * FractionDispositionType2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#FractionDisposition
-	 * CorporateActionOption5.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType8Choice#Code
-	 * FractionDispositionType8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType8Choice#Proprietary
-	 * FractionDispositionType8Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#FractionDisposition
-	 * CorporateActionOption13.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType10Choice#Code
-	 * FractionDispositionType10Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType10Choice#Proprietary
-	 * FractionDispositionType10Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#FractionDisposition
-	 * CorporateActionOption25.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType11Choice#Code
-	 * FractionDispositionType11Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType11Choice#Proprietary
-	 * FractionDispositionType11Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#FractionDisposition
-	 * CorporateActionOption30.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#FractionDisposition
-	 * CorporateActionOption38.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#FractionDisposition
-	 * CorporateActionOption47.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType17Choice#Code
-	 * FractionDispositionType17Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType17Choice#Proprietary
-	 * FractionDispositionType17Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#FractionDisposition
-	 * CorporateActionOption57.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType18Choice#Code
-	 * FractionDispositionType18Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType18Choice#Proprietary
-	 * FractionDispositionType18Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#FractionDisposition
-	 * CorporateActionOption58.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType1Choice#Code
-	 * FractionDispositionType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType1Choice#Proprietary
-	 * FractionDispositionType1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType4Choice#Code
-	 * FractionDispositionType4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType4Choice#Proprietary
-	 * FractionDispositionType4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption3#FractionDisposition
-	 * SecuritiesOption3.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#FractionDisposition
-	 * CorporateActionOption4.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType6Choice#Code
-	 * FractionDispositionType6Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType6Choice#Proprietary
-	 * FractionDispositionType6Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType7Choice#Code
-	 * FractionDispositionType7Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType7Choice#Proprietary
-	 * FractionDispositionType7Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption8#FractionDisposition
-	 * SecuritiesOption8.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#FractionDisposition
-	 * CorporateActionOption14.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType12Choice#Code
-	 * FractionDispositionType12Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType12Choice#Proprietary
-	 * FractionDispositionType12Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption18#FractionDisposition
-	 * SecuritiesOption18.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#FractionDisposition
-	 * CorporateActionOption23.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType13Choice#Code
-	 * FractionDispositionType13Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType13Choice#Proprietary
-	 * FractionDispositionType13Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption20#FractionDisposition
-	 * SecuritiesOption20.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#FractionDisposition
-	 * CorporateActionOption31.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption26#FractionDisposition
-	 * SecuritiesOption26.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#FractionDisposition
-	 * CorporateActionOption37.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption31#FractionDisposition
-	 * SecuritiesOption31.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#FractionDisposition
-	 * CorporateActionOption46.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType23Choice#Code
-	 * FractionDispositionType23Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType23Choice#Proprietary
-	 * FractionDispositionType23Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption35#FractionDisposition
-	 * SecuritiesOption35.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#FractionDisposition
-	 * CorporateActionOption53.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType24Choice#Code
-	 * FractionDispositionType24Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType24Choice#Proprietary
-	 * FractionDispositionType24Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption36#FractionDisposition
-	 * SecuritiesOption36.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#FractionDisposition
-	 * CorporateActionOption54.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption4#FractionDisposition
-	 * SecuritiesOption4.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#FractionDisposition
-	 * CorporateActionOption10.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption10#FractionDisposition
-	 * SecuritiesOption10.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#FractionDisposition
-	 * CorporateActionOption15.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption13#FractionDisposition
-	 * SecuritiesOption13.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#FractionDisposition
-	 * CorporateActionOption20.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption17#FractionDisposition
-	 * SecuritiesOption17.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#FractionDisposition
-	 * CorporateActionOption32.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption24#FractionDisposition
-	 * SecuritiesOption24.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#FractionDisposition
-	 * CorporateActionOption35.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption29#FractionDisposition
-	 * SecuritiesOption29.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#FractionDisposition
-	 * CorporateActionOption44.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType19Choice#Code
-	 * FractionDispositionType19Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType19Choice#Proprietary
-	 * FractionDispositionType19Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption33#FractionDisposition
-	 * SecuritiesOption33.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption38#FractionDisposition
-	 * SecuritiesOption38.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#FractionDisposition
-	 * CorporateActionOption52.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType20Choice#Code
-	 * FractionDispositionType20Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType20Choice#Proprietary
-	 * FractionDispositionType20Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption37#FractionDisposition
-	 * SecuritiesOption37.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption39#FractionDisposition
-	 * SecuritiesOption39.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#FractionDisposition
-	 * CorporateActionOption55.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType3Choice#Code
-	 * FractionDispositionType3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType3Choice#Proprietary
-	 * FractionDispositionType3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes3#FractionDisposition
-	 * FinancialInstrumentAttributes3.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption6#FractionDisposition
-	 * SecuritiesOption6.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#FractionDisposition
-	 * CorporateActionOption3.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType5Choice#Code
-	 * FractionDispositionType5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType5Choice#Proprietary
-	 * FractionDispositionType5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes12#FractionDisposition
-	 * FinancialInstrumentAttributes12.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption12#FractionDisposition
-	 * SecuritiesOption12.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#FractionDisposition
-	 * CorporateActionOption17.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType9Choice#Code
-	 * FractionDispositionType9Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType9Choice#Proprietary
-	 * FractionDispositionType9Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes17#FractionDisposition
-	 * FinancialInstrumentAttributes17.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption14#FractionDisposition
-	 * SecuritiesOption14.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#FractionDisposition
-	 * CorporateActionOption19.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType14Choice#Code
-	 * FractionDispositionType14Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType14Choice#Proprietary
-	 * FractionDispositionType14Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes25#FractionDisposition
-	 * FinancialInstrumentAttributes25.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption22#FractionDisposition
-	 * SecuritiesOption22.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#FractionDisposition
-	 * CorporateActionOption34.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption25#FractionDisposition
-	 * SecuritiesOption25.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#FractionDisposition
-	 * CorporateActionOption36.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption30#FractionDisposition
-	 * SecuritiesOption30.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#FractionDisposition
-	 * CorporateActionOption45.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType15Choice#Code
-	 * FractionDispositionType15Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType15Choice#Proprietary
-	 * FractionDispositionType15Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes46#FractionDisposition
-	 * FinancialInstrumentAttributes46.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#FractionDisposition
-	 * CorporateActionOption51.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType16Choice#Code
-	 * FractionDispositionType16Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType16Choice#Proprietary
-	 * FractionDispositionType16Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes47#FractionDisposition
-	 * FinancialInstrumentAttributes47.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#FractionDisposition
-	 * CorporateActionOption56.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType1FormatChoice#Code
-	 * FractionDispositionType1FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType1FormatChoice#Proprietary
-	 * FractionDispositionType1FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityOption1#FractionDisposition
-	 * SecurityOption1.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#FractionDisposition
-	 * CorporateActionOption1.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#FractionDisposition
-	 * CorporateActionOption103.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#FractionDisposition
-	 * CorporateActionOption100.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#FractionDisposition
-	 * CorporateActionOption101.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#FractionDisposition
-	 * CorporateActionOption102.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption42#FractionDisposition
-	 * SecuritiesOption42.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption40#FractionDisposition
-	 * SecuritiesOption40.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#FractionDisposition
-	 * CorporateActionOption110.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#FractionDisposition
-	 * CorporateActionOption108.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#FractionDisposition
-	 * CorporateActionOption107.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#FractionDisposition
-	 * CorporateActionOption106.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption48#FractionDisposition
-	 * SecuritiesOption48.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption45#FractionDisposition
-	 * SecuritiesOption45.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#FractionDisposition
-	 * CorporateActionOption111.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#FractionDisposition
-	 * CorporateActionOption113.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#FractionDisposition
-	 * CorporateActionOption117.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#FractionDisposition
-	 * CorporateActionOption118.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#FractionDisposition
-	 * CorporateActionOption115.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#FractionDisposition
-	 * CorporateActionOption114.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes68#FractionDisposition
-	 * FinancialInstrumentAttributes68.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType25Choice#Code
-	 * FractionDispositionType25Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType25Choice#Proprietary
-	 * FractionDispositionType25Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType27Choice#Code
-	 * FractionDispositionType27Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType27Choice#Proprietary
-	 * FractionDispositionType27Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption49#FractionDisposition
-	 * SecuritiesOption49.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType26Choice#Code
-	 * FractionDispositionType26Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType26Choice#Proprietary
-	 * FractionDispositionType26Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType28Choice#Code
-	 * FractionDispositionType28Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType28Choice#Proprietary
-	 * FractionDispositionType28Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption50#FractionDisposition
-	 * SecuritiesOption50.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#FractionDisposition
-	 * CorporateActionOption124.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#FractionDisposition
-	 * CorporateActionOption125.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#FractionDisposition
-	 * CorporateActionOption123.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes73#FractionDisposition
-	 * FinancialInstrumentAttributes73.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#FractionDisposition
-	 * CorporateActionOption127.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType30Choice#Code
-	 * FractionDispositionType30Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType30Choice#Proprietary
-	 * FractionDispositionType30Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#FractionDisposition
-	 * SecuritiesOption55.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType29Choice#Code
-	 * FractionDispositionType29Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType29Choice#Proprietary
-	 * FractionDispositionType29Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption57#FractionDisposition
-	 * SecuritiesOption57.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType31Choice#Code
-	 * FractionDispositionType31Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType31Choice#Proprietary
-	 * FractionDispositionType31Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType32Choice#Code
-	 * FractionDispositionType32Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType32Choice#Proprietary
-	 * FractionDispositionType32Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#FractionDisposition
-	 * CorporateActionOption132.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#FractionDisposition
-	 * CorporateActionOption130.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#FractionDisposition
-	 * CorporateActionOption131.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#FractionDisposition
-	 * CorporateActionOption129.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption60#FractionDisposition
-	 * SecuritiesOption60.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption59#FractionDisposition
-	 * SecuritiesOption59.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#FractionDisposition
-	 * CorporateActionOption134.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#FractionDisposition
-	 * CorporateActionOption136.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#FractionDisposition
-	 * CorporateActionOption135.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#FractionDisposition
-	 * CorporateActionOption133.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption61#FractionDisposition
-	 * SecuritiesOption61.FractionDisposition}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#FractionDisposition
-	 * SecuritiesOption63.FractionDisposition}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType2Choice#mmCode
+	 * FractionDispositionType2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType2Choice#mmProprietary
+	 * FractionDispositionType2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#mmFractionDisposition
+	 * CorporateActionOption5.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType8Choice#mmCode
+	 * FractionDispositionType8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType8Choice#mmProprietary
+	 * FractionDispositionType8Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#mmFractionDisposition
+	 * CorporateActionOption13.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType10Choice#mmCode
+	 * FractionDispositionType10Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType10Choice#mmProprietary
+	 * FractionDispositionType10Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#mmFractionDisposition
+	 * CorporateActionOption25.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType11Choice#mmCode
+	 * FractionDispositionType11Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType11Choice#mmProprietary
+	 * FractionDispositionType11Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#mmFractionDisposition
+	 * CorporateActionOption30.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#mmFractionDisposition
+	 * CorporateActionOption38.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#mmFractionDisposition
+	 * CorporateActionOption47.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType17Choice#mmCode
+	 * FractionDispositionType17Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType17Choice#mmProprietary
+	 * FractionDispositionType17Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#mmFractionDisposition
+	 * CorporateActionOption57.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType18Choice#mmCode
+	 * FractionDispositionType18Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType18Choice#mmProprietary
+	 * FractionDispositionType18Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#mmFractionDisposition
+	 * CorporateActionOption58.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType1Choice#mmCode
+	 * FractionDispositionType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType1Choice#mmProprietary
+	 * FractionDispositionType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType4Choice#mmCode
+	 * FractionDispositionType4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType4Choice#mmProprietary
+	 * FractionDispositionType4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption3#mmFractionDisposition
+	 * SecuritiesOption3.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#mmFractionDisposition
+	 * CorporateActionOption4.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType6Choice#mmCode
+	 * FractionDispositionType6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType6Choice#mmProprietary
+	 * FractionDispositionType6Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType7Choice#mmCode
+	 * FractionDispositionType7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType7Choice#mmProprietary
+	 * FractionDispositionType7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption8#mmFractionDisposition
+	 * SecuritiesOption8.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#mmFractionDisposition
+	 * CorporateActionOption14.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType12Choice#mmCode
+	 * FractionDispositionType12Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType12Choice#mmProprietary
+	 * FractionDispositionType12Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption18#mmFractionDisposition
+	 * SecuritiesOption18.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#mmFractionDisposition
+	 * CorporateActionOption23.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType13Choice#mmCode
+	 * FractionDispositionType13Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType13Choice#mmProprietary
+	 * FractionDispositionType13Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption20#mmFractionDisposition
+	 * SecuritiesOption20.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#mmFractionDisposition
+	 * CorporateActionOption31.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption26#mmFractionDisposition
+	 * SecuritiesOption26.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#mmFractionDisposition
+	 * CorporateActionOption37.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption31#mmFractionDisposition
+	 * SecuritiesOption31.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#mmFractionDisposition
+	 * CorporateActionOption46.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType23Choice#mmCode
+	 * FractionDispositionType23Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType23Choice#mmProprietary
+	 * FractionDispositionType23Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption35#mmFractionDisposition
+	 * SecuritiesOption35.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#mmFractionDisposition
+	 * CorporateActionOption53.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType24Choice#mmCode
+	 * FractionDispositionType24Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType24Choice#mmProprietary
+	 * FractionDispositionType24Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption36#mmFractionDisposition
+	 * SecuritiesOption36.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#mmFractionDisposition
+	 * CorporateActionOption54.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption4#mmFractionDisposition
+	 * SecuritiesOption4.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmFractionDisposition
+	 * CorporateActionOption10.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption10#mmFractionDisposition
+	 * SecuritiesOption10.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmFractionDisposition
+	 * CorporateActionOption15.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption13#mmFractionDisposition
+	 * SecuritiesOption13.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmFractionDisposition
+	 * CorporateActionOption20.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption17#mmFractionDisposition
+	 * SecuritiesOption17.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmFractionDisposition
+	 * CorporateActionOption32.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption24#mmFractionDisposition
+	 * SecuritiesOption24.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmFractionDisposition
+	 * CorporateActionOption35.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption29#mmFractionDisposition
+	 * SecuritiesOption29.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmFractionDisposition
+	 * CorporateActionOption44.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType19Choice#mmCode
+	 * FractionDispositionType19Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType19Choice#mmProprietary
+	 * FractionDispositionType19Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption33#mmFractionDisposition
+	 * SecuritiesOption33.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption38#mmFractionDisposition
+	 * SecuritiesOption38.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmFractionDisposition
+	 * CorporateActionOption52.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType20Choice#mmCode
+	 * FractionDispositionType20Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType20Choice#mmProprietary
+	 * FractionDispositionType20Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption37#mmFractionDisposition
+	 * SecuritiesOption37.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption39#mmFractionDisposition
+	 * SecuritiesOption39.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmFractionDisposition
+	 * CorporateActionOption55.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType3Choice#mmCode
+	 * FractionDispositionType3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType3Choice#mmProprietary
+	 * FractionDispositionType3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes3#mmFractionDisposition
+	 * FinancialInstrumentAttributes3.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption6#mmFractionDisposition
+	 * SecuritiesOption6.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmFractionDisposition
+	 * CorporateActionOption3.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType5Choice#mmCode
+	 * FractionDispositionType5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType5Choice#mmProprietary
+	 * FractionDispositionType5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes12#mmFractionDisposition
+	 * FinancialInstrumentAttributes12.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption12#mmFractionDisposition
+	 * SecuritiesOption12.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmFractionDisposition
+	 * CorporateActionOption17.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType9Choice#mmCode
+	 * FractionDispositionType9Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType9Choice#mmProprietary
+	 * FractionDispositionType9Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes17#mmFractionDisposition
+	 * FinancialInstrumentAttributes17.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption14#mmFractionDisposition
+	 * SecuritiesOption14.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmFractionDisposition
+	 * CorporateActionOption19.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType14Choice#mmCode
+	 * FractionDispositionType14Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType14Choice#mmProprietary
+	 * FractionDispositionType14Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes25#mmFractionDisposition
+	 * FinancialInstrumentAttributes25.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption22#mmFractionDisposition
+	 * SecuritiesOption22.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmFractionDisposition
+	 * CorporateActionOption34.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption25#mmFractionDisposition
+	 * SecuritiesOption25.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmFractionDisposition
+	 * CorporateActionOption36.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption30#mmFractionDisposition
+	 * SecuritiesOption30.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmFractionDisposition
+	 * CorporateActionOption45.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType15Choice#mmCode
+	 * FractionDispositionType15Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType15Choice#mmProprietary
+	 * FractionDispositionType15Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes46#mmFractionDisposition
+	 * FinancialInstrumentAttributes46.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmFractionDisposition
+	 * CorporateActionOption51.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType16Choice#mmCode
+	 * FractionDispositionType16Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType16Choice#mmProprietary
+	 * FractionDispositionType16Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes47#mmFractionDisposition
+	 * FinancialInstrumentAttributes47.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmFractionDisposition
+	 * CorporateActionOption56.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType1FormatChoice#mmCode
+	 * FractionDispositionType1FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType1FormatChoice#mmProprietary
+	 * FractionDispositionType1FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityOption1#mmFractionDisposition
+	 * SecurityOption1.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmFractionDisposition
+	 * CorporateActionOption1.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#mmFractionDisposition
+	 * CorporateActionOption103.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmFractionDisposition
+	 * CorporateActionOption100.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmFractionDisposition
+	 * CorporateActionOption101.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#mmFractionDisposition
+	 * CorporateActionOption102.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption42#mmFractionDisposition
+	 * SecuritiesOption42.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption40#mmFractionDisposition
+	 * SecuritiesOption40.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#mmFractionDisposition
+	 * CorporateActionOption110.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmFractionDisposition
+	 * CorporateActionOption108.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#mmFractionDisposition
+	 * CorporateActionOption107.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmFractionDisposition
+	 * CorporateActionOption106.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption48#mmFractionDisposition
+	 * SecuritiesOption48.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption45#mmFractionDisposition
+	 * SecuritiesOption45.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#mmFractionDisposition
+	 * CorporateActionOption111.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#mmFractionDisposition
+	 * CorporateActionOption113.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#mmFractionDisposition
+	 * CorporateActionOption117.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#mmFractionDisposition
+	 * CorporateActionOption118.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmFractionDisposition
+	 * CorporateActionOption115.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmFractionDisposition
+	 * CorporateActionOption114.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes68#mmFractionDisposition
+	 * FinancialInstrumentAttributes68.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType25Choice#mmCode
+	 * FractionDispositionType25Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType25Choice#mmProprietary
+	 * FractionDispositionType25Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType27Choice#mmCode
+	 * FractionDispositionType27Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType27Choice#mmProprietary
+	 * FractionDispositionType27Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption49#mmFractionDisposition
+	 * SecuritiesOption49.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType26Choice#mmCode
+	 * FractionDispositionType26Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType26Choice#mmProprietary
+	 * FractionDispositionType26Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType28Choice#mmCode
+	 * FractionDispositionType28Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType28Choice#mmProprietary
+	 * FractionDispositionType28Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption50#mmFractionDisposition
+	 * SecuritiesOption50.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#mmFractionDisposition
+	 * CorporateActionOption124.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmFractionDisposition
+	 * CorporateActionOption125.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#mmFractionDisposition
+	 * CorporateActionOption123.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes73#mmFractionDisposition
+	 * FinancialInstrumentAttributes73.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmFractionDisposition
+	 * CorporateActionOption127.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType30Choice#mmCode
+	 * FractionDispositionType30Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType30Choice#mmProprietary
+	 * FractionDispositionType30Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmFractionDisposition
+	 * SecuritiesOption55.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType29Choice#mmCode
+	 * FractionDispositionType29Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType29Choice#mmProprietary
+	 * FractionDispositionType29Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption57#mmFractionDisposition
+	 * SecuritiesOption57.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType31Choice#mmCode
+	 * FractionDispositionType31Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType31Choice#mmProprietary
+	 * FractionDispositionType31Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType32Choice#mmCode
+	 * FractionDispositionType32Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FractionDispositionType32Choice#mmProprietary
+	 * FractionDispositionType32Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#mmFractionDisposition
+	 * CorporateActionOption132.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmFractionDisposition
+	 * CorporateActionOption130.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#mmFractionDisposition
+	 * CorporateActionOption131.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmFractionDisposition
+	 * CorporateActionOption129.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption60#mmFractionDisposition
+	 * SecuritiesOption60.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption59#mmFractionDisposition
+	 * SecuritiesOption59.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#mmFractionDisposition
+	 * CorporateActionOption134.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#mmFractionDisposition
+	 * CorporateActionOption136.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmFractionDisposition
+	 * CorporateActionOption135.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmFractionDisposition
+	 * CorporateActionOption133.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption61#mmFractionDisposition
+	 * SecuritiesOption61.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#mmFractionDisposition
+	 * SecuritiesOption63.mmFractionDisposition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2283,89 +2292,101 @@ public class CorporateActionOption {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FractionDisposition = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFractionDisposition = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FractionDispositionType2Choice.Code, com.tools20022.repository.choice.FractionDispositionType2Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption5.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType8Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType8Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption13.FractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType10Choice.Code, com.tools20022.repository.choice.FractionDispositionType10Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption25.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType11Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType11Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption30.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption38.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption47.FractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType17Choice.Code, com.tools20022.repository.choice.FractionDispositionType17Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption57.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType18Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType18Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption58.FractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType1Choice.Code, com.tools20022.repository.choice.FractionDispositionType1Choice.Proprietary, com.tools20022.repository.choice.FractionDispositionType4Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType4Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption3.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption4.FractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType6Choice.Code, com.tools20022.repository.choice.FractionDispositionType6Choice.Proprietary, com.tools20022.repository.choice.FractionDispositionType7Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType7Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption8.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption14.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType12Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType12Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption18.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption23.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType13Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType13Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption20.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption31.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption26.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption37.FractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption31.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption46.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType23Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType23Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption35.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption53.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType24Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType24Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption36.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption54.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption4.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption10.FractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption10.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption15.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption13.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption20.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption17.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption32.FractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption24.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption35.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption29.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption44.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType19Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType19Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption33.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption38.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption52.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType20Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType20Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption37.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption39.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption55.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType3Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType3Choice.Proprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes3.FractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption6.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption3.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType5Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType5Choice.Proprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes12.FractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption12.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption17.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType9Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType9Choice.Proprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes17.FractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption14.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption19.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType14Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType14Choice.Proprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes25.FractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption22.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption34.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption25.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption36.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption30.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption45.FractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType15Choice.Code, com.tools20022.repository.choice.FractionDispositionType15Choice.Proprietary,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes46.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption51.FractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType16Choice.Code, com.tools20022.repository.choice.FractionDispositionType16Choice.Proprietary,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes47.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption56.FractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType1FormatChoice.Code, com.tools20022.repository.choice.FractionDispositionType1FormatChoice.Proprietary,
-					com.tools20022.repository.msg.SecurityOption1.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption1.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption103.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption100.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption101.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption102.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption42.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption40.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption110.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption108.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption107.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption106.FractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption48.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption45.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption111.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption113.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption117.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption118.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption115.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption114.FractionDisposition, com.tools20022.repository.msg.FinancialInstrumentAttributes68.FractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType25Choice.Code, com.tools20022.repository.choice.FractionDispositionType25Choice.Proprietary, com.tools20022.repository.choice.FractionDispositionType27Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType27Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption49.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType26Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType26Choice.Proprietary, com.tools20022.repository.choice.FractionDispositionType28Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType28Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption50.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption124.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption125.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption123.FractionDisposition, com.tools20022.repository.msg.FinancialInstrumentAttributes73.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption127.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType30Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType30Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption55.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType29Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType29Choice.Proprietary, com.tools20022.repository.msg.SecuritiesOption57.FractionDisposition, com.tools20022.repository.choice.FractionDispositionType31Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType31Choice.Proprietary, com.tools20022.repository.choice.FractionDispositionType32Choice.Code,
-					com.tools20022.repository.choice.FractionDispositionType32Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption132.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption130.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption131.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption129.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption60.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption59.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption134.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption136.FractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption135.FractionDisposition, com.tools20022.repository.msg.CorporateActionOption133.FractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption61.FractionDisposition, com.tools20022.repository.msg.SecuritiesOption63.FractionDisposition);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FractionDispositionType2Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType2Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption5.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType8Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType8Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption13.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType10Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType10Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption25.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType11Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType11Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption30.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption38.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption47.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType17Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType17Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption57.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType18Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType18Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption58.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType1Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType1Choice.mmProprietary,
+					com.tools20022.repository.choice.FractionDispositionType4Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType4Choice.mmProprietary,
+					com.tools20022.repository.msg.SecuritiesOption3.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption4.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType6Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType6Choice.mmProprietary, com.tools20022.repository.choice.FractionDispositionType7Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType7Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption8.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption14.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType12Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType12Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption18.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption23.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType13Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType13Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption20.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption31.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption26.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption37.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption31.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption46.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType23Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType23Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption35.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption53.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType24Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType24Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption36.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption54.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption4.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption10.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption10.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption15.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption13.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption20.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption17.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption32.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption24.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption35.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption29.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption44.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType19Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType19Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption33.mmFractionDisposition,
+					com.tools20022.repository.msg.SecuritiesOption38.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption52.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType20Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType20Choice.mmProprietary,
+					com.tools20022.repository.msg.SecuritiesOption37.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption39.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption55.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType3Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType3Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes3.mmFractionDisposition,
+					com.tools20022.repository.msg.SecuritiesOption6.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption3.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType5Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType5Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes12.mmFractionDisposition,
+					com.tools20022.repository.msg.SecuritiesOption12.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption17.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType9Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType9Choice.mmProprietary,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes17.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption14.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption19.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType14Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType14Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmFractionDisposition,
+					com.tools20022.repository.msg.SecuritiesOption22.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption34.mmFractionDisposition,
+					com.tools20022.repository.msg.SecuritiesOption25.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption36.mmFractionDisposition,
+					com.tools20022.repository.msg.SecuritiesOption30.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption45.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType15Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType15Choice.mmProprietary,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes46.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption51.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType16Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType16Choice.mmProprietary,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes47.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption56.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType1FormatChoice.mmCode, com.tools20022.repository.choice.FractionDispositionType1FormatChoice.mmProprietary,
+					com.tools20022.repository.msg.SecurityOption1.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption1.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption103.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption100.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption101.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption102.mmFractionDisposition,
+					com.tools20022.repository.msg.SecuritiesOption42.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption40.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption110.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption108.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption107.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption106.mmFractionDisposition,
+					com.tools20022.repository.msg.SecuritiesOption48.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption45.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption111.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption113.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption117.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption118.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption115.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption114.mmFractionDisposition,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes68.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType25Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType25Choice.mmProprietary, com.tools20022.repository.choice.FractionDispositionType27Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType27Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption49.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType26Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType26Choice.mmProprietary,
+					com.tools20022.repository.choice.FractionDispositionType28Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType28Choice.mmProprietary,
+					com.tools20022.repository.msg.SecuritiesOption50.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption124.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption125.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption123.mmFractionDisposition,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption127.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType30Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType30Choice.mmProprietary,
+					com.tools20022.repository.msg.SecuritiesOption55.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType29Choice.mmCode,
+					com.tools20022.repository.choice.FractionDispositionType29Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption57.mmFractionDisposition,
+					com.tools20022.repository.choice.FractionDispositionType31Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType31Choice.mmProprietary,
+					com.tools20022.repository.choice.FractionDispositionType32Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType32Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption132.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption130.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption131.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption129.mmFractionDisposition,
+					com.tools20022.repository.msg.SecuritiesOption60.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption59.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption134.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption136.mmFractionDisposition,
+					com.tools20022.repository.msg.CorporateActionOption135.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption133.mmFractionDisposition,
+					com.tools20022.repository.msg.SecuritiesOption61.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption63.mmFractionDisposition);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FractionDisposition";
 			definition = "Treatment of the fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> FractionDispositionTypeCode.mmObject();
 		}
 	};
+	protected CurrencyCode currencyOption;
 	/**
 	 * Currency choice given to the investor.
 	 * <p>
@@ -2375,300 +2396,300 @@ public class CorporateActionOption {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#CurrencyOption
-	 * CorporateActionOption5.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#CurrencyOption
-	 * CorporateActionOption13.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#CurrencyOption
-	 * CorporateActionOption25.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#CurrencyOption
-	 * CorporateActionOption30.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#CurrencyOption
-	 * CorporateActionOption38.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#CurrencyOption
-	 * CorporateActionOption47.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#CurrencyOption
-	 * CorporateActionOption57.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#CurrencyOption
-	 * CorporateActionOption58.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption3#CurrencyOption
-	 * SecuritiesOption3.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#CurrencyOption
-	 * CorporateActionOption4.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption8#CurrencyOption
-	 * SecuritiesOption8.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#CurrencyOption
-	 * CorporateActionOption14.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption18#CurrencyOption
-	 * SecuritiesOption18.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#CurrencyOption
-	 * CorporateActionOption23.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption20#CurrencyOption
-	 * SecuritiesOption20.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#CurrencyOption
-	 * CorporateActionOption31.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption26#CurrencyOption
-	 * SecuritiesOption26.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#CurrencyOption
-	 * CorporateActionOption37.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption31#CurrencyOption
-	 * SecuritiesOption31.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#CurrencyOption
-	 * CorporateActionOption46.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption35#CurrencyOption
-	 * SecuritiesOption35.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#CurrencyOption
-	 * CorporateActionOption53.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption36#CurrencyOption
-	 * SecuritiesOption36.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#CurrencyOption
-	 * CorporateActionOption54.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption4#CurrencyOption
-	 * SecuritiesOption4.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#CurrencyOption
-	 * CorporateActionOption10.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption10#CurrencyOption
-	 * SecuritiesOption10.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#CurrencyOption
-	 * CorporateActionOption15.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption13#CurrencyOption
-	 * SecuritiesOption13.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#CurrencyOption
-	 * CorporateActionOption20.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption17#CurrencyOption
-	 * SecuritiesOption17.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#CurrencyOption
-	 * CorporateActionOption32.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption24#CurrencyOption
-	 * SecuritiesOption24.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#CurrencyOption
-	 * CorporateActionOption35.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption29#CurrencyOption
-	 * SecuritiesOption29.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#CurrencyOption
-	 * CorporateActionOption44.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption33#CurrencyOption
-	 * SecuritiesOption33.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption38#CurrencyOption
-	 * SecuritiesOption38.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#CurrencyOption
-	 * CorporateActionOption52.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption37#CurrencyOption
-	 * SecuritiesOption37.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption39#CurrencyOption
-	 * SecuritiesOption39.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#CurrencyOption
-	 * CorporateActionOption55.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption6#CurrencyOption
-	 * SecuritiesOption6.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#CurrencyOption
-	 * CorporateActionOption3.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption12#CurrencyOption
-	 * SecuritiesOption12.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#CurrencyOption
-	 * CorporateActionOption17.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption14#CurrencyOption
-	 * SecuritiesOption14.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#CurrencyOption
-	 * CorporateActionOption19.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption22#CurrencyOption
-	 * SecuritiesOption22.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#CurrencyOption
-	 * CorporateActionOption34.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption25#CurrencyOption
-	 * SecuritiesOption25.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#CurrencyOption
-	 * CorporateActionOption36.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption30#CurrencyOption
-	 * SecuritiesOption30.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#CurrencyOption
-	 * CorporateActionOption45.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#CurrencyOption
-	 * CorporateActionOption51.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#CurrencyOption
-	 * CorporateActionOption56.CurrencyOption}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption1#Currency
-	 * CashOption1.Currency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#CurrencyOption
-	 * CorporateActionOption103.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#CurrencyOption
-	 * CorporateActionOption100.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#CurrencyOption
-	 * CorporateActionOption101.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#CurrencyOption
-	 * CorporateActionOption102.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption42#CurrencyOption
-	 * SecuritiesOption42.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption40#CurrencyOption
-	 * SecuritiesOption40.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#CurrencyOption
-	 * CorporateActionOption110.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#CurrencyOption
-	 * CorporateActionOption108.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#CurrencyOption
-	 * CorporateActionOption107.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#CurrencyOption
-	 * CorporateActionOption106.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption48#CurrencyOption
-	 * SecuritiesOption48.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption45#CurrencyOption
-	 * SecuritiesOption45.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#CurrencyOption
-	 * CorporateActionOption111.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#CurrencyOption
-	 * CorporateActionOption113.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#CurrencyOption
-	 * CorporateActionOption117.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#CurrencyOption
-	 * CorporateActionOption118.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#CurrencyOption
-	 * CorporateActionOption115.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#CurrencyOption
-	 * CorporateActionOption114.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption49#CurrencyOption
-	 * SecuritiesOption49.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption50#CurrencyOption
-	 * SecuritiesOption50.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#CurrencyOption
-	 * CorporateActionOption124.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#CurrencyOption
-	 * CorporateActionOption125.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#CurrencyOption
-	 * CorporateActionOption123.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#CurrencyOption
-	 * CorporateActionOption127.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#CurrencyOption
-	 * SecuritiesOption55.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption57#CurrencyOption
-	 * SecuritiesOption57.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#CurrencyOption
-	 * CorporateActionOption132.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#CurrencyOption
-	 * CorporateActionOption130.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#CurrencyOption
-	 * CorporateActionOption131.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#CurrencyOption
-	 * CorporateActionOption129.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption60#CurrencyOption
-	 * SecuritiesOption60.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption59#CurrencyOption
-	 * SecuritiesOption59.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#CurrencyOption
-	 * CorporateActionOption134.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#CurrencyOption
-	 * CorporateActionOption136.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#CurrencyOption
-	 * CorporateActionOption135.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#CurrencyOption
-	 * CorporateActionOption133.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption61#CurrencyOption
-	 * SecuritiesOption61.CurrencyOption}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#CurrencyOption
-	 * SecuritiesOption63.CurrencyOption}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#mmCurrencyOption
+	 * CorporateActionOption5.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#mmCurrencyOption
+	 * CorporateActionOption13.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#mmCurrencyOption
+	 * CorporateActionOption25.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#mmCurrencyOption
+	 * CorporateActionOption30.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#mmCurrencyOption
+	 * CorporateActionOption38.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#mmCurrencyOption
+	 * CorporateActionOption47.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#mmCurrencyOption
+	 * CorporateActionOption57.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#mmCurrencyOption
+	 * CorporateActionOption58.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption3#mmCurrencyOption
+	 * SecuritiesOption3.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#mmCurrencyOption
+	 * CorporateActionOption4.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption8#mmCurrencyOption
+	 * SecuritiesOption8.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#mmCurrencyOption
+	 * CorporateActionOption14.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption18#mmCurrencyOption
+	 * SecuritiesOption18.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#mmCurrencyOption
+	 * CorporateActionOption23.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption20#mmCurrencyOption
+	 * SecuritiesOption20.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#mmCurrencyOption
+	 * CorporateActionOption31.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption26#mmCurrencyOption
+	 * SecuritiesOption26.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#mmCurrencyOption
+	 * CorporateActionOption37.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption31#mmCurrencyOption
+	 * SecuritiesOption31.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#mmCurrencyOption
+	 * CorporateActionOption46.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption35#mmCurrencyOption
+	 * SecuritiesOption35.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#mmCurrencyOption
+	 * CorporateActionOption53.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption36#mmCurrencyOption
+	 * SecuritiesOption36.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#mmCurrencyOption
+	 * CorporateActionOption54.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption4#mmCurrencyOption
+	 * SecuritiesOption4.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmCurrencyOption
+	 * CorporateActionOption10.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption10#mmCurrencyOption
+	 * SecuritiesOption10.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmCurrencyOption
+	 * CorporateActionOption15.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption13#mmCurrencyOption
+	 * SecuritiesOption13.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmCurrencyOption
+	 * CorporateActionOption20.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption17#mmCurrencyOption
+	 * SecuritiesOption17.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmCurrencyOption
+	 * CorporateActionOption32.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption24#mmCurrencyOption
+	 * SecuritiesOption24.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmCurrencyOption
+	 * CorporateActionOption35.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption29#mmCurrencyOption
+	 * SecuritiesOption29.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmCurrencyOption
+	 * CorporateActionOption44.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption33#mmCurrencyOption
+	 * SecuritiesOption33.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption38#mmCurrencyOption
+	 * SecuritiesOption38.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmCurrencyOption
+	 * CorporateActionOption52.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption37#mmCurrencyOption
+	 * SecuritiesOption37.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption39#mmCurrencyOption
+	 * SecuritiesOption39.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmCurrencyOption
+	 * CorporateActionOption55.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption6#mmCurrencyOption
+	 * SecuritiesOption6.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmCurrencyOption
+	 * CorporateActionOption3.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption12#mmCurrencyOption
+	 * SecuritiesOption12.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmCurrencyOption
+	 * CorporateActionOption17.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption14#mmCurrencyOption
+	 * SecuritiesOption14.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmCurrencyOption
+	 * CorporateActionOption19.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption22#mmCurrencyOption
+	 * SecuritiesOption22.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmCurrencyOption
+	 * CorporateActionOption34.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption25#mmCurrencyOption
+	 * SecuritiesOption25.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmCurrencyOption
+	 * CorporateActionOption36.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption30#mmCurrencyOption
+	 * SecuritiesOption30.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmCurrencyOption
+	 * CorporateActionOption45.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmCurrencyOption
+	 * CorporateActionOption51.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmCurrencyOption
+	 * CorporateActionOption56.mmCurrencyOption}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption1#mmCurrency
+	 * CashOption1.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#mmCurrencyOption
+	 * CorporateActionOption103.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmCurrencyOption
+	 * CorporateActionOption100.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmCurrencyOption
+	 * CorporateActionOption101.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#mmCurrencyOption
+	 * CorporateActionOption102.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption42#mmCurrencyOption
+	 * SecuritiesOption42.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption40#mmCurrencyOption
+	 * SecuritiesOption40.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#mmCurrencyOption
+	 * CorporateActionOption110.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmCurrencyOption
+	 * CorporateActionOption108.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#mmCurrencyOption
+	 * CorporateActionOption107.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmCurrencyOption
+	 * CorporateActionOption106.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption48#mmCurrencyOption
+	 * SecuritiesOption48.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption45#mmCurrencyOption
+	 * SecuritiesOption45.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#mmCurrencyOption
+	 * CorporateActionOption111.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#mmCurrencyOption
+	 * CorporateActionOption113.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#mmCurrencyOption
+	 * CorporateActionOption117.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#mmCurrencyOption
+	 * CorporateActionOption118.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmCurrencyOption
+	 * CorporateActionOption115.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmCurrencyOption
+	 * CorporateActionOption114.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption49#mmCurrencyOption
+	 * SecuritiesOption49.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption50#mmCurrencyOption
+	 * SecuritiesOption50.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#mmCurrencyOption
+	 * CorporateActionOption124.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmCurrencyOption
+	 * CorporateActionOption125.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#mmCurrencyOption
+	 * CorporateActionOption123.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmCurrencyOption
+	 * CorporateActionOption127.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption55#mmCurrencyOption
+	 * SecuritiesOption55.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption57#mmCurrencyOption
+	 * SecuritiesOption57.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#mmCurrencyOption
+	 * CorporateActionOption132.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmCurrencyOption
+	 * CorporateActionOption130.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#mmCurrencyOption
+	 * CorporateActionOption131.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmCurrencyOption
+	 * CorporateActionOption129.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption60#mmCurrencyOption
+	 * SecuritiesOption60.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption59#mmCurrencyOption
+	 * SecuritiesOption59.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#mmCurrencyOption
+	 * CorporateActionOption134.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#mmCurrencyOption
+	 * CorporateActionOption136.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmCurrencyOption
+	 * CorporateActionOption135.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmCurrencyOption
+	 * CorporateActionOption133.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption61#mmCurrencyOption
+	 * SecuritiesOption61.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#mmCurrencyOption
+	 * SecuritiesOption63.mmCurrencyOption}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2680,50 +2701,51 @@ public class CorporateActionOption {
 	 * definition} = "Currency choice given to the investor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CurrencyOption = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCurrencyOption = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption13.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption25.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption30.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption38.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption47.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption57.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption58.CurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption3.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption4.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption8.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption14.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption18.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption23.CurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption20.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption31.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption26.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption37.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption31.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption46.CurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption35.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption53.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption36.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption54.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption4.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption10.CurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption10.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption15.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption13.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption20.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption17.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption32.CurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption24.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption35.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption29.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption44.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption33.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption38.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption52.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption37.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption39.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption55.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption6.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption3.CurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption12.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption17.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption14.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption19.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption22.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption34.CurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption25.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption36.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption30.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption45.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption51.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption56.CurrencyOption,
-					com.tools20022.repository.msg.CashOption1.Currency, com.tools20022.repository.msg.CorporateActionOption103.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption100.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption101.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption102.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption42.CurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption40.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption110.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption108.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption107.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption106.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption48.CurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption45.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption111.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption113.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption117.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption118.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption115.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption114.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption49.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption50.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption124.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption125.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption123.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption127.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption55.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption57.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption132.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption130.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption131.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption129.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption60.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption59.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption134.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption136.CurrencyOption, com.tools20022.repository.msg.CorporateActionOption135.CurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption133.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption61.CurrencyOption, com.tools20022.repository.msg.SecuritiesOption63.CurrencyOption);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption13.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption25.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption30.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption38.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption47.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption57.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption58.mmCurrencyOption,
+					com.tools20022.repository.msg.SecuritiesOption3.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption4.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption8.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption14.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption18.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption23.mmCurrencyOption,
+					com.tools20022.repository.msg.SecuritiesOption20.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption31.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption26.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption37.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption31.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption46.mmCurrencyOption,
+					com.tools20022.repository.msg.SecuritiesOption35.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption53.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption36.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption54.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption4.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption10.mmCurrencyOption,
+					com.tools20022.repository.msg.SecuritiesOption10.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption15.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption13.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption20.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption17.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption32.mmCurrencyOption,
+					com.tools20022.repository.msg.SecuritiesOption24.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption35.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption29.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption44.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption33.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption38.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption52.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption37.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption39.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption55.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption6.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption3.mmCurrencyOption,
+					com.tools20022.repository.msg.SecuritiesOption12.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption17.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption14.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption19.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption22.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption34.mmCurrencyOption,
+					com.tools20022.repository.msg.SecuritiesOption25.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption36.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption30.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption45.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption51.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption56.mmCurrencyOption,
+					com.tools20022.repository.msg.CashOption1.mmCurrency, com.tools20022.repository.msg.CorporateActionOption103.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption100.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption101.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption102.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption42.mmCurrencyOption,
+					com.tools20022.repository.msg.SecuritiesOption40.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption110.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption108.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption107.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption106.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption48.mmCurrencyOption,
+					com.tools20022.repository.msg.SecuritiesOption45.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption111.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption113.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption117.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption118.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption115.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption114.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption49.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption50.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption124.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption125.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption123.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption127.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption55.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption57.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption132.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption130.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption131.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption129.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption60.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption59.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption134.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption136.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption135.mmCurrencyOption,
+					com.tools20022.repository.msg.CorporateActionOption133.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption61.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption63.mmCurrencyOption);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CurrencyOption";
 			definition = "Currency choice given to the investor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected ChoiceCorporateAction relatedChoiceCorporateAction;
 	/**
 	 * Corporate action for which one or more options are provided.
 	 * <p>
@@ -2732,8 +2754,8 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#CorporateActionOptionDefinition
-	 * ChoiceCorporateAction.CorporateActionOptionDefinition}</li>
+	 * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
+	 * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2742,757 +2764,802 @@ public class CorporateActionOption {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction
 	 * ChoiceCorporateAction}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#RateAndAmountDetails
-	 * CorporateActionOption5.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#RateAndAmountDetails
-	 * CorporateActionOption13.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#RateAndAmountDetails
-	 * CorporateActionOption25.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#RateAndAmountDetails
-	 * CorporateActionOption30.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#RateAndAmountDetails
-	 * CorporateActionOption38.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#RateAndAmountDetails
-	 * CorporateActionOption47.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#RateAndAmountDetails
-	 * CorporateActionOption57.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#RateAndAmountDetails
-	 * CorporateActionOption58.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption2#AmountDetails
-	 * CashOption2.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption2#DateDetails
-	 * CashOption2.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#DateDetails
-	 * CorporateActionOption4.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#PeriodDetails
-	 * CorporateActionOption4.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#RateAndAmountDetails
-	 * CorporateActionOption4.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption9#AmountDetails
-	 * CashOption9.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption9#DateDetails
-	 * CashOption9.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#DateDetails
-	 * CorporateActionOption14.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#PeriodDetails
-	 * CorporateActionOption14.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#RateAndAmountDetails
-	 * CorporateActionOption14.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption12#AmountDetails
-	 * CashOption12.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption12#DateDetails
-	 * CashOption12.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption12#RateAndAmountDetails
-	 * CashOption12.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#DateDetails
-	 * CorporateActionOption23.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#PeriodDetails
-	 * CorporateActionOption23.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#RateAndAmountDetails
-	 * CorporateActionOption23.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption13#AmountDetails
-	 * CashOption13.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption13#DateDetails
-	 * CashOption13.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption13#RateAndAmountDetails
-	 * CashOption13.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#DateDetails
-	 * CorporateActionOption31.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#PeriodDetails
-	 * CorporateActionOption31.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#RateAndAmountDetails
-	 * CorporateActionOption31.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption18#AmountDetails
-	 * CashOption18.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption18#DateDetails
-	 * CashOption18.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption18#RateAndAmountDetails
-	 * CashOption18.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#DateDetails
-	 * CorporateActionOption37.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#PeriodDetails
-	 * CorporateActionOption37.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#RateAndAmountDetails
-	 * CorporateActionOption37.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption22#AmountDetails
-	 * CashOption22.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption22#DateDetails
-	 * CashOption22.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption22#RateAndAmountDetails
-	 * CashOption22.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#DateDetails
-	 * CorporateActionOption46.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#PeriodDetails
-	 * CorporateActionOption46.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#RateAndAmountDetails
-	 * CorporateActionOption46.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption26#AmountDetails
-	 * CashOption26.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption26#DateDetails
-	 * CashOption26.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption26#RateAndAmountDetails
-	 * CashOption26.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#DateDetails
-	 * CorporateActionOption53.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#PeriodDetails
-	 * CorporateActionOption53.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#RateAndAmountDetails
-	 * CorporateActionOption53.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption27#AmountDetails
-	 * CashOption27.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption27#DateDetails
-	 * CashOption27.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption27#RateAndAmountDetails
-	 * CashOption27.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#DateDetails
-	 * CorporateActionOption54.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#PeriodDetails
-	 * CorporateActionOption54.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#RateAndAmountDetails
-	 * CorporateActionOption54.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption3#AmountDetails
-	 * CashOption3.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption3#DateDetails
-	 * CashOption3.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#DateDetails
-	 * CorporateActionOption10.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#PeriodDetails
-	 * CorporateActionOption10.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#RateAndAmountDetails
-	 * CorporateActionOption10.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption6#AmountDetails
-	 * CashOption6.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption6#DateDetails
-	 * CashOption6.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#DateDetails
-	 * CorporateActionOption15.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#PeriodDetails
-	 * CorporateActionOption15.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#RateAndAmountDetails
-	 * CorporateActionOption15.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption11#AmountDetails
-	 * CashOption11.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption11#DateDetails
-	 * CashOption11.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption11#RateAndAmountDetails
-	 * CashOption11.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#DateDetails
-	 * CorporateActionOption20.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#PeriodDetails
-	 * CorporateActionOption20.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#RateAndAmountDetails
-	 * CorporateActionOption20.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption14#AmountDetails
-	 * CashOption14.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption14#DateDetails
-	 * CashOption14.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption14#RateAndAmountDetails
-	 * CashOption14.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#DateDetails
-	 * CorporateActionOption32.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#PeriodDetails
-	 * CorporateActionOption32.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#RateAndAmountDetails
-	 * CorporateActionOption32.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption16#AmountDetails
-	 * CashOption16.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption16#DateDetails
-	 * CashOption16.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption16#RateAndAmountDetails
-	 * CashOption16.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#DateDetails
-	 * CorporateActionOption35.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#PeriodDetails
-	 * CorporateActionOption35.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#RateAndAmountDetails
-	 * CorporateActionOption35.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption20#AmountDetails
-	 * CashOption20.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption20#DateDetails
-	 * CashOption20.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption20#RateAndAmountDetails
-	 * CashOption20.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#DateDetails
-	 * CorporateActionOption44.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#PeriodDetails
-	 * CorporateActionOption44.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#RateAndAmountDetails
-	 * CorporateActionOption44.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption25#AmountDetails
-	 * CashOption25.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption25#DateDetails
-	 * CashOption25.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption25#RateAndAmountDetails
-	 * CashOption25.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#DateDetails
-	 * CorporateActionOption52.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#PeriodDetails
-	 * CorporateActionOption52.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#RateAndAmountDetails
-	 * CorporateActionOption52.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption28#AmountDetails
-	 * CashOption28.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption28#DateDetails
-	 * CashOption28.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption28#RateAndAmountDetails
-	 * CashOption28.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#DateDetails
-	 * CorporateActionOption55.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#PeriodDetails
-	 * CorporateActionOption55.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#RateAndAmountDetails
-	 * CorporateActionOption55.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption4#AmountDetails
-	 * CashOption4.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption4#DateDetails
-	 * CashOption4.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#DateDetails
-	 * CorporateActionOption3.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#PeriodDetails
-	 * CorporateActionOption3.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#RateAndAmountDetails
-	 * CorporateActionOption3.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption8#AmountDetails
-	 * CashOption8.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption8#DateDetails
-	 * CashOption8.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#DateDetails
-	 * CorporateActionOption17.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#PeriodDetails
-	 * CorporateActionOption17.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#RateAndAmountDetails
-	 * CorporateActionOption17.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption10#AmountDetails
-	 * CashOption10.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption10#DateDetails
-	 * CashOption10.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption10#RateAndAmountDetails
-	 * CashOption10.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#DateDetails
-	 * CorporateActionOption19.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#PeriodDetails
-	 * CorporateActionOption19.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#RateAndAmountDetails
-	 * CorporateActionOption19.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption15#AmountDetails
-	 * CashOption15.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption15#DateDetails
-	 * CashOption15.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption15#RateAndAmountDetails
-	 * CashOption15.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#DateDetails
-	 * CorporateActionOption34.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#PeriodDetails
-	 * CorporateActionOption34.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#RateAndAmountDetails
-	 * CorporateActionOption34.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption17#AmountDetails
-	 * CashOption17.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption17#DateDetails
-	 * CashOption17.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption17#RateAndAmountDetails
-	 * CashOption17.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#DateDetails
-	 * CorporateActionOption36.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#PeriodDetails
-	 * CorporateActionOption36.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#RateAndAmountDetails
-	 * CorporateActionOption36.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption21#AmountDetails
-	 * CashOption21.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption21#DateDetails
-	 * CashOption21.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption21#RateAndAmountDetails
-	 * CashOption21.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#DateDetails
-	 * CorporateActionOption45.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#PeriodDetails
-	 * CorporateActionOption45.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#RateAndAmountDetails
-	 * CorporateActionOption45.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption24#AmountDetails
-	 * CashOption24.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption24#DateDetails
-	 * CashOption24.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption24#RateAndAmountDetails
-	 * CashOption24.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#DateDetails
-	 * CorporateActionOption51.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#PeriodDetails
-	 * CorporateActionOption51.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#RateAndAmountDetails
-	 * CorporateActionOption51.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption29#AmountDetails
-	 * CashOption29.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption29#DateDetails
-	 * CashOption29.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption29#RateAndAmountDetails
-	 * CashOption29.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#DateDetails
-	 * CorporateActionOption56.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#PeriodDetails
-	 * CorporateActionOption56.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#RateAndAmountDetails
-	 * CorporateActionOption56.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption1#DateDetails
-	 * CashOption1.DateDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption1#AmountDetails
-	 * CashOption1.AmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#DateDetails
-	 * CorporateActionOption1.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#RateAndAmountDetails
-	 * CorporateActionOption1.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#PeriodDetails
-	 * CorporateActionOption1.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#RateAndAmountDetails
-	 * CorporateActionOption103.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#DateDetails
-	 * CorporateActionOption100.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#PeriodDetails
-	 * CorporateActionOption100.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#RateAndAmountDetails
-	 * CorporateActionOption100.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#DateDetails
-	 * CorporateActionOption101.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#PeriodDetails
-	 * CorporateActionOption101.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#RateAndAmountDetails
-	 * CorporateActionOption101.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#DateDetails
-	 * CorporateActionOption102.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#PeriodDetails
-	 * CorporateActionOption102.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#RateAndAmountDetails
-	 * CorporateActionOption102.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption30#AmountDetails
-	 * CashOption30.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption30#DateDetails
-	 * CashOption30.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption30#RateAndAmountDetails
-	 * CashOption30.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption31#AmountDetails
-	 * CashOption31.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption31#DateDetails
-	 * CashOption31.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption31#RateAndAmountDetails
-	 * CashOption31.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption32#AmountDetails
-	 * CashOption32.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption32#DateDetails
-	 * CashOption32.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption32#RateAndAmountDetails
-	 * CashOption32.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#DateDetails
-	 * CorporateActionOption110.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#PeriodDetails
-	 * CorporateActionOption110.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#RateAndAmountDetails
-	 * CorporateActionOption110.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#DateDetails
-	 * CorporateActionOption108.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#PeriodDetails
-	 * CorporateActionOption108.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#RateAndAmountDetails
-	 * CorporateActionOption108.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#RateAndAmountDetails
-	 * CorporateActionOption107.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#DateDetails
-	 * CorporateActionOption106.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#PeriodDetails
-	 * CorporateActionOption106.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#RateAndAmountDetails
-	 * CorporateActionOption106.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption36#AmountDetails
-	 * CashOption36.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption36#DateDetails
-	 * CashOption36.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption36#RateAndAmountDetails
-	 * CashOption36.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption35#AmountDetails
-	 * CashOption35.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption35#DateDetails
-	 * CashOption35.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption35#RateAndAmountDetails
-	 * CashOption35.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption38#AmountDetails
-	 * CashOption38.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption38#DateDetails
-	 * CashOption38.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption38#RateAndAmountDetails
-	 * CashOption38.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#DateDetails
-	 * CorporateActionOption111.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#PeriodDetails
-	 * CorporateActionOption111.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#RateAndAmountDetails
-	 * CorporateActionOption111.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption39#AmountDetails
-	 * CashOption39.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption39#DateDetails
-	 * CashOption39.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption39#RateAndAmountDetails
-	 * CashOption39.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#DateDetails
-	 * CorporateActionOption113.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#PeriodDetails
-	 * CorporateActionOption113.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#RateAndAmountDetails
-	 * CorporateActionOption113.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption41#AmountDetails
-	 * CashOption41.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption41#DateDetails
-	 * CashOption41.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption41#RateAndAmountDetails
-	 * CashOption41.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#DateDetails
-	 * CorporateActionOption117.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#PeriodDetails
-	 * CorporateActionOption117.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#RateAndAmountDetails
-	 * CorporateActionOption117.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#RateAndAmountDetails
-	 * CorporateActionOption118.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#DateDetails
-	 * CorporateActionOption115.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#PeriodDetails
-	 * CorporateActionOption115.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#RateAndAmountDetails
-	 * CorporateActionOption115.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#DateDetails
-	 * CorporateActionOption114.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#PeriodDetails
-	 * CorporateActionOption114.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#RateAndAmountDetails
-	 * CorporateActionOption114.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption44#AmountDetails
-	 * CashOption44.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption44#DateDetails
-	 * CashOption44.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption44#RateAndAmountDetails
-	 * CashOption44.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption42#AmountDetails
-	 * CashOption42.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption42#DateDetails
-	 * CashOption42.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption42#RateAndAmountDetails
-	 * CashOption42.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption43#AmountDetails
-	 * CashOption43.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption43#DateDetails
-	 * CashOption43.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption43#RateAndAmountDetails
-	 * CashOption43.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#DateDetails
-	 * CorporateActionOption124.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#PeriodDetails
-	 * CorporateActionOption124.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#RateAndAmountDetails
-	 * CorporateActionOption124.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#DateDetails
-	 * CorporateActionOption125.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#PeriodDetails
-	 * CorporateActionOption125.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#RateAndAmountDetails
-	 * CorporateActionOption125.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#RateAndAmountDetails
-	 * CorporateActionOption123.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#DateDetails
-	 * CorporateActionOption127.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#PeriodDetails
-	 * CorporateActionOption127.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#RateAndAmountDetails
-	 * CorporateActionOption127.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption46#AmountDetails
-	 * CashOption46.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption46#DateDetails
-	 * CashOption46.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption46#RateAndAmountDetails
-	 * CashOption46.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption49#AmountDetails
-	 * CashOption49.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption49#DateDetails
-	 * CashOption49.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption49#RateAndAmountDetails
-	 * CashOption49.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption47#AmountDetails
-	 * CashOption47.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption47#DateDetails
-	 * CashOption47.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption47#RateAndAmountDetails
-	 * CashOption47.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#DateDetails
-	 * CorporateActionOption132.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#PeriodDetails
-	 * CorporateActionOption132.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#RateAndAmountDetails
-	 * CorporateActionOption132.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#DateDetails
-	 * CorporateActionOption130.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#PeriodDetails
-	 * CorporateActionOption130.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#RateAndAmountDetails
-	 * CorporateActionOption130.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#RateAndAmountDetails
-	 * CorporateActionOption131.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#DateDetails
-	 * CorporateActionOption129.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#PeriodDetails
-	 * CorporateActionOption129.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#RateAndAmountDetails
-	 * CorporateActionOption129.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#AmountDetails
-	 * CashOption52.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#DateDetails
-	 * CashOption52.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption52#RateAndAmountDetails
-	 * CashOption52.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption51#AmountDetails
-	 * CashOption51.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption51#DateDetails
-	 * CashOption51.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption51#RateAndAmountDetails
-	 * CashOption51.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption50#AmountDetails
-	 * CashOption50.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption50#DateDetails
-	 * CashOption50.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption50#RateAndAmountDetails
-	 * CashOption50.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#RateAndAmountDetails
-	 * CorporateActionOption134.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#DateDetails
-	 * CorporateActionOption136.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#PeriodDetails
-	 * CorporateActionOption136.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#RateAndAmountDetails
-	 * CorporateActionOption136.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#DateDetails
-	 * CorporateActionOption135.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#PeriodDetails
-	 * CorporateActionOption135.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#RateAndAmountDetails
-	 * CorporateActionOption135.RateAndAmountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#DateDetails
-	 * CorporateActionOption133.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#PeriodDetails
-	 * CorporateActionOption133.PeriodDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#RateAndAmountDetails
-	 * CorporateActionOption133.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption53#AmountDetails
-	 * CashOption53.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption53#DateDetails
-	 * CashOption53.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption53#RateAndAmountDetails
-	 * CashOption53.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption54#AmountDetails
-	 * CashOption54.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption54#DateDetails
-	 * CashOption54.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption54#RateAndAmountDetails
-	 * CashOption54.RateAndAmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption55#AmountDetails
-	 * CashOption55.AmountDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CashOption55#DateDetails
-	 * CashOption55.DateDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOption55#RateAndAmountDetails
-	 * CashOption55.RateAndAmountDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption5#mmRateAndAmountDetails
+	 * CorporateActionOption5.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption13#mmRateAndAmountDetails
+	 * CorporateActionOption13.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption25#mmRateAndAmountDetails
+	 * CorporateActionOption25.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption30#mmRateAndAmountDetails
+	 * CorporateActionOption30.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption38#mmRateAndAmountDetails
+	 * CorporateActionOption38.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption47#mmRateAndAmountDetails
+	 * CorporateActionOption47.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption57#mmRateAndAmountDetails
+	 * CorporateActionOption57.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption58#mmRateAndAmountDetails
+	 * CorporateActionOption58.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption2#mmAmountDetails
+	 * CashOption2.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption2#mmDateDetails
+	 * CashOption2.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#mmDateDetails
+	 * CorporateActionOption4.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#mmPeriodDetails
+	 * CorporateActionOption4.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#mmRateAndAmountDetails
+	 * CorporateActionOption4.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption9#mmAmountDetails
+	 * CashOption9.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption9#mmDateDetails
+	 * CashOption9.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#mmDateDetails
+	 * CorporateActionOption14.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#mmPeriodDetails
+	 * CorporateActionOption14.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#mmRateAndAmountDetails
+	 * CorporateActionOption14.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption12#mmAmountDetails
+	 * CashOption12.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption12#mmDateDetails
+	 * CashOption12.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption12#mmRateAndAmountDetails
+	 * CashOption12.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#mmDateDetails
+	 * CorporateActionOption23.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#mmPeriodDetails
+	 * CorporateActionOption23.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#mmRateAndAmountDetails
+	 * CorporateActionOption23.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption13#mmAmountDetails
+	 * CashOption13.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption13#mmDateDetails
+	 * CashOption13.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption13#mmRateAndAmountDetails
+	 * CashOption13.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#mmDateDetails
+	 * CorporateActionOption31.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#mmPeriodDetails
+	 * CorporateActionOption31.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#mmRateAndAmountDetails
+	 * CorporateActionOption31.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption18#mmAmountDetails
+	 * CashOption18.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption18#mmDateDetails
+	 * CashOption18.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption18#mmRateAndAmountDetails
+	 * CashOption18.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#mmDateDetails
+	 * CorporateActionOption37.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#mmPeriodDetails
+	 * CorporateActionOption37.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#mmRateAndAmountDetails
+	 * CorporateActionOption37.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption22#mmAmountDetails
+	 * CashOption22.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption22#mmDateDetails
+	 * CashOption22.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption22#mmRateAndAmountDetails
+	 * CashOption22.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#mmDateDetails
+	 * CorporateActionOption46.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#mmPeriodDetails
+	 * CorporateActionOption46.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#mmRateAndAmountDetails
+	 * CorporateActionOption46.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption26#mmAmountDetails
+	 * CashOption26.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption26#mmDateDetails
+	 * CashOption26.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption26#mmRateAndAmountDetails
+	 * CashOption26.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#mmDateDetails
+	 * CorporateActionOption53.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#mmPeriodDetails
+	 * CorporateActionOption53.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#mmRateAndAmountDetails
+	 * CorporateActionOption53.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption27#mmAmountDetails
+	 * CashOption27.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption27#mmDateDetails
+	 * CashOption27.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption27#mmRateAndAmountDetails
+	 * CashOption27.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#mmDateDetails
+	 * CorporateActionOption54.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#mmPeriodDetails
+	 * CorporateActionOption54.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#mmRateAndAmountDetails
+	 * CorporateActionOption54.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption3#mmAmountDetails
+	 * CashOption3.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption3#mmDateDetails
+	 * CashOption3.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmDateDetails
+	 * CorporateActionOption10.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmPeriodDetails
+	 * CorporateActionOption10.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmRateAndAmountDetails
+	 * CorporateActionOption10.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption6#mmAmountDetails
+	 * CashOption6.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption6#mmDateDetails
+	 * CashOption6.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmDateDetails
+	 * CorporateActionOption15.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmPeriodDetails
+	 * CorporateActionOption15.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmRateAndAmountDetails
+	 * CorporateActionOption15.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption11#mmAmountDetails
+	 * CashOption11.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption11#mmDateDetails
+	 * CashOption11.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption11#mmRateAndAmountDetails
+	 * CashOption11.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmDateDetails
+	 * CorporateActionOption20.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmPeriodDetails
+	 * CorporateActionOption20.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmRateAndAmountDetails
+	 * CorporateActionOption20.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption14#mmAmountDetails
+	 * CashOption14.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption14#mmDateDetails
+	 * CashOption14.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption14#mmRateAndAmountDetails
+	 * CashOption14.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmDateDetails
+	 * CorporateActionOption32.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmPeriodDetails
+	 * CorporateActionOption32.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmRateAndAmountDetails
+	 * CorporateActionOption32.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption16#mmAmountDetails
+	 * CashOption16.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption16#mmDateDetails
+	 * CashOption16.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption16#mmRateAndAmountDetails
+	 * CashOption16.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmDateDetails
+	 * CorporateActionOption35.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmPeriodDetails
+	 * CorporateActionOption35.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmRateAndAmountDetails
+	 * CorporateActionOption35.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption20#mmAmountDetails
+	 * CashOption20.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption20#mmDateDetails
+	 * CashOption20.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption20#mmRateAndAmountDetails
+	 * CashOption20.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmDateDetails
+	 * CorporateActionOption44.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmPeriodDetails
+	 * CorporateActionOption44.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmRateAndAmountDetails
+	 * CorporateActionOption44.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption25#mmAmountDetails
+	 * CashOption25.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption25#mmDateDetails
+	 * CashOption25.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption25#mmRateAndAmountDetails
+	 * CashOption25.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmDateDetails
+	 * CorporateActionOption52.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmPeriodDetails
+	 * CorporateActionOption52.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmRateAndAmountDetails
+	 * CorporateActionOption52.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption28#mmAmountDetails
+	 * CashOption28.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption28#mmDateDetails
+	 * CashOption28.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption28#mmRateAndAmountDetails
+	 * CashOption28.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmDateDetails
+	 * CorporateActionOption55.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmPeriodDetails
+	 * CorporateActionOption55.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmRateAndAmountDetails
+	 * CorporateActionOption55.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption4#mmAmountDetails
+	 * CashOption4.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption4#mmDateDetails
+	 * CashOption4.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmDateDetails
+	 * CorporateActionOption3.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmPeriodDetails
+	 * CorporateActionOption3.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmRateAndAmountDetails
+	 * CorporateActionOption3.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption8#mmAmountDetails
+	 * CashOption8.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption8#mmDateDetails
+	 * CashOption8.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmDateDetails
+	 * CorporateActionOption17.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmPeriodDetails
+	 * CorporateActionOption17.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmRateAndAmountDetails
+	 * CorporateActionOption17.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption10#mmAmountDetails
+	 * CashOption10.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption10#mmDateDetails
+	 * CashOption10.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption10#mmRateAndAmountDetails
+	 * CashOption10.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmDateDetails
+	 * CorporateActionOption19.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmPeriodDetails
+	 * CorporateActionOption19.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmRateAndAmountDetails
+	 * CorporateActionOption19.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption15#mmAmountDetails
+	 * CashOption15.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption15#mmDateDetails
+	 * CashOption15.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption15#mmRateAndAmountDetails
+	 * CashOption15.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmDateDetails
+	 * CorporateActionOption34.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmPeriodDetails
+	 * CorporateActionOption34.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmRateAndAmountDetails
+	 * CorporateActionOption34.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption17#mmAmountDetails
+	 * CashOption17.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption17#mmDateDetails
+	 * CashOption17.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption17#mmRateAndAmountDetails
+	 * CashOption17.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmDateDetails
+	 * CorporateActionOption36.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmPeriodDetails
+	 * CorporateActionOption36.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmRateAndAmountDetails
+	 * CorporateActionOption36.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption21#mmAmountDetails
+	 * CashOption21.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption21#mmDateDetails
+	 * CashOption21.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption21#mmRateAndAmountDetails
+	 * CashOption21.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmDateDetails
+	 * CorporateActionOption45.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmPeriodDetails
+	 * CorporateActionOption45.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmRateAndAmountDetails
+	 * CorporateActionOption45.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption24#mmAmountDetails
+	 * CashOption24.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption24#mmDateDetails
+	 * CashOption24.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption24#mmRateAndAmountDetails
+	 * CashOption24.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmDateDetails
+	 * CorporateActionOption51.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmPeriodDetails
+	 * CorporateActionOption51.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmRateAndAmountDetails
+	 * CorporateActionOption51.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption29#mmAmountDetails
+	 * CashOption29.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption29#mmDateDetails
+	 * CashOption29.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption29#mmRateAndAmountDetails
+	 * CashOption29.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmDateDetails
+	 * CorporateActionOption56.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmPeriodDetails
+	 * CorporateActionOption56.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmRateAndAmountDetails
+	 * CorporateActionOption56.mmRateAndAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption1#mmDateDetails
+	 * CashOption1.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption1#mmAmountDetails
+	 * CashOption1.mmAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmDateDetails
+	 * CorporateActionOption1.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmRateAndAmountDetails
+	 * CorporateActionOption1.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmPeriodDetails
+	 * CorporateActionOption1.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption103#mmRateAndAmountDetails
+	 * CorporateActionOption103.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmDateDetails
+	 * CorporateActionOption100.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmPeriodDetails
+	 * CorporateActionOption100.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmRateAndAmountDetails
+	 * CorporateActionOption100.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmDateDetails
+	 * CorporateActionOption101.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmPeriodDetails
+	 * CorporateActionOption101.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmRateAndAmountDetails
+	 * CorporateActionOption101.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#mmDateDetails
+	 * CorporateActionOption102.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#mmPeriodDetails
+	 * CorporateActionOption102.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#mmRateAndAmountDetails
+	 * CorporateActionOption102.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption30#mmAmountDetails
+	 * CashOption30.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption30#mmDateDetails
+	 * CashOption30.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption30#mmRateAndAmountDetails
+	 * CashOption30.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption31#mmAmountDetails
+	 * CashOption31.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption31#mmDateDetails
+	 * CashOption31.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption31#mmRateAndAmountDetails
+	 * CashOption31.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption32#mmAmountDetails
+	 * CashOption32.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption32#mmDateDetails
+	 * CashOption32.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption32#mmRateAndAmountDetails
+	 * CashOption32.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#mmDateDetails
+	 * CorporateActionOption110.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#mmPeriodDetails
+	 * CorporateActionOption110.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#mmRateAndAmountDetails
+	 * CorporateActionOption110.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmDateDetails
+	 * CorporateActionOption108.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmPeriodDetails
+	 * CorporateActionOption108.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmRateAndAmountDetails
+	 * CorporateActionOption108.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption107#mmRateAndAmountDetails
+	 * CorporateActionOption107.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmDateDetails
+	 * CorporateActionOption106.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmPeriodDetails
+	 * CorporateActionOption106.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmRateAndAmountDetails
+	 * CorporateActionOption106.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption36#mmAmountDetails
+	 * CashOption36.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption36#mmDateDetails
+	 * CashOption36.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption36#mmRateAndAmountDetails
+	 * CashOption36.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption35#mmAmountDetails
+	 * CashOption35.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption35#mmDateDetails
+	 * CashOption35.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption35#mmRateAndAmountDetails
+	 * CashOption35.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption38#mmAmountDetails
+	 * CashOption38.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption38#mmDateDetails
+	 * CashOption38.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption38#mmRateAndAmountDetails
+	 * CashOption38.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#mmDateDetails
+	 * CorporateActionOption111.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#mmPeriodDetails
+	 * CorporateActionOption111.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#mmRateAndAmountDetails
+	 * CorporateActionOption111.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmAmountDetails
+	 * CashOption39.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption39#mmDateDetails
+	 * CashOption39.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption39#mmRateAndAmountDetails
+	 * CashOption39.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#mmDateDetails
+	 * CorporateActionOption113.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#mmPeriodDetails
+	 * CorporateActionOption113.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#mmRateAndAmountDetails
+	 * CorporateActionOption113.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption41#mmAmountDetails
+	 * CashOption41.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption41#mmDateDetails
+	 * CashOption41.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption41#mmRateAndAmountDetails
+	 * CashOption41.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#mmDateDetails
+	 * CorporateActionOption117.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#mmPeriodDetails
+	 * CorporateActionOption117.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#mmRateAndAmountDetails
+	 * CorporateActionOption117.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption118#mmRateAndAmountDetails
+	 * CorporateActionOption118.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmDateDetails
+	 * CorporateActionOption115.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmPeriodDetails
+	 * CorporateActionOption115.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmRateAndAmountDetails
+	 * CorporateActionOption115.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmDateDetails
+	 * CorporateActionOption114.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmPeriodDetails
+	 * CorporateActionOption114.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmRateAndAmountDetails
+	 * CorporateActionOption114.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption44#mmAmountDetails
+	 * CashOption44.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption44#mmDateDetails
+	 * CashOption44.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption44#mmRateAndAmountDetails
+	 * CashOption44.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption42#mmAmountDetails
+	 * CashOption42.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption42#mmDateDetails
+	 * CashOption42.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption42#mmRateAndAmountDetails
+	 * CashOption42.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption43#mmAmountDetails
+	 * CashOption43.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption43#mmDateDetails
+	 * CashOption43.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption43#mmRateAndAmountDetails
+	 * CashOption43.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#mmDateDetails
+	 * CorporateActionOption124.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#mmPeriodDetails
+	 * CorporateActionOption124.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#mmRateAndAmountDetails
+	 * CorporateActionOption124.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmDateDetails
+	 * CorporateActionOption125.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmPeriodDetails
+	 * CorporateActionOption125.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmRateAndAmountDetails
+	 * CorporateActionOption125.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption123#mmRateAndAmountDetails
+	 * CorporateActionOption123.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmDateDetails
+	 * CorporateActionOption127.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmPeriodDetails
+	 * CorporateActionOption127.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmRateAndAmountDetails
+	 * CorporateActionOption127.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption46#mmAmountDetails
+	 * CashOption46.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption46#mmDateDetails
+	 * CashOption46.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption46#mmRateAndAmountDetails
+	 * CashOption46.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption49#mmAmountDetails
+	 * CashOption49.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption49#mmDateDetails
+	 * CashOption49.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption49#mmRateAndAmountDetails
+	 * CashOption49.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption47#mmAmountDetails
+	 * CashOption47.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption47#mmDateDetails
+	 * CashOption47.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption47#mmRateAndAmountDetails
+	 * CashOption47.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#mmDateDetails
+	 * CorporateActionOption132.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#mmPeriodDetails
+	 * CorporateActionOption132.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#mmRateAndAmountDetails
+	 * CorporateActionOption132.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmDateDetails
+	 * CorporateActionOption130.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmPeriodDetails
+	 * CorporateActionOption130.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmRateAndAmountDetails
+	 * CorporateActionOption130.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption131#mmRateAndAmountDetails
+	 * CorporateActionOption131.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmDateDetails
+	 * CorporateActionOption129.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmPeriodDetails
+	 * CorporateActionOption129.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmRateAndAmountDetails
+	 * CorporateActionOption129.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmAmountDetails
+	 * CashOption52.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption52#mmDateDetails
+	 * CashOption52.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption52#mmRateAndAmountDetails
+	 * CashOption52.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption51#mmAmountDetails
+	 * CashOption51.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption51#mmDateDetails
+	 * CashOption51.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption51#mmRateAndAmountDetails
+	 * CashOption51.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption50#mmAmountDetails
+	 * CashOption50.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption50#mmDateDetails
+	 * CashOption50.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption50#mmRateAndAmountDetails
+	 * CashOption50.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#mmRateAndAmountDetails
+	 * CorporateActionOption134.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#mmDateDetails
+	 * CorporateActionOption136.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#mmPeriodDetails
+	 * CorporateActionOption136.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#mmRateAndAmountDetails
+	 * CorporateActionOption136.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmDateDetails
+	 * CorporateActionOption135.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmPeriodDetails
+	 * CorporateActionOption135.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmRateAndAmountDetails
+	 * CorporateActionOption135.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmDateDetails
+	 * CorporateActionOption133.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmPeriodDetails
+	 * CorporateActionOption133.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmRateAndAmountDetails
+	 * CorporateActionOption133.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption53#mmAmountDetails
+	 * CashOption53.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption53#mmDateDetails
+	 * CashOption53.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption53#mmRateAndAmountDetails
+	 * CashOption53.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption54#mmAmountDetails
+	 * CashOption54.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption54#mmDateDetails
+	 * CashOption54.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption54#mmRateAndAmountDetails
+	 * CashOption54.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption55#mmAmountDetails
+	 * CashOption55.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption55#mmDateDetails
+	 * CashOption55.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption55#mmRateAndAmountDetails
+	 * CashOption55.mmRateAndAmountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3505,115 +3572,122 @@ public class CorporateActionOption {
 	 * "Corporate action for which one or more options are provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedChoiceCorporateAction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedChoiceCorporateAction = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption13.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption25.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption30.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption38.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption47.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption57.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption58.RateAndAmountDetails, com.tools20022.repository.msg.CashOption2.AmountDetails,
-					com.tools20022.repository.msg.CashOption2.DateDetails, com.tools20022.repository.msg.CorporateActionOption4.DateDetails, com.tools20022.repository.msg.CorporateActionOption4.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption4.RateAndAmountDetails, com.tools20022.repository.msg.CashOption9.AmountDetails, com.tools20022.repository.msg.CashOption9.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption14.DateDetails, com.tools20022.repository.msg.CorporateActionOption14.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption14.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption12.AmountDetails, com.tools20022.repository.msg.CashOption12.DateDetails, com.tools20022.repository.msg.CashOption12.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption23.DateDetails, com.tools20022.repository.msg.CorporateActionOption23.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption23.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption13.AmountDetails, com.tools20022.repository.msg.CashOption13.DateDetails, com.tools20022.repository.msg.CashOption13.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption31.DateDetails, com.tools20022.repository.msg.CorporateActionOption31.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption31.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption18.AmountDetails, com.tools20022.repository.msg.CashOption18.DateDetails, com.tools20022.repository.msg.CashOption18.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption37.DateDetails, com.tools20022.repository.msg.CorporateActionOption37.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption37.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption22.AmountDetails, com.tools20022.repository.msg.CashOption22.DateDetails, com.tools20022.repository.msg.CashOption22.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption46.DateDetails, com.tools20022.repository.msg.CorporateActionOption46.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption46.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption26.AmountDetails, com.tools20022.repository.msg.CashOption26.DateDetails, com.tools20022.repository.msg.CashOption26.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption53.DateDetails, com.tools20022.repository.msg.CorporateActionOption53.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption53.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption27.AmountDetails, com.tools20022.repository.msg.CashOption27.DateDetails, com.tools20022.repository.msg.CashOption27.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption54.DateDetails, com.tools20022.repository.msg.CorporateActionOption54.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption54.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption3.AmountDetails, com.tools20022.repository.msg.CashOption3.DateDetails, com.tools20022.repository.msg.CorporateActionOption10.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption10.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption10.RateAndAmountDetails, com.tools20022.repository.msg.CashOption6.AmountDetails,
-					com.tools20022.repository.msg.CashOption6.DateDetails, com.tools20022.repository.msg.CorporateActionOption15.DateDetails, com.tools20022.repository.msg.CorporateActionOption15.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption15.RateAndAmountDetails, com.tools20022.repository.msg.CashOption11.AmountDetails, com.tools20022.repository.msg.CashOption11.DateDetails,
-					com.tools20022.repository.msg.CashOption11.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption20.DateDetails, com.tools20022.repository.msg.CorporateActionOption20.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption20.RateAndAmountDetails, com.tools20022.repository.msg.CashOption14.AmountDetails, com.tools20022.repository.msg.CashOption14.DateDetails,
-					com.tools20022.repository.msg.CashOption14.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption32.DateDetails, com.tools20022.repository.msg.CorporateActionOption32.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption32.RateAndAmountDetails, com.tools20022.repository.msg.CashOption16.AmountDetails, com.tools20022.repository.msg.CashOption16.DateDetails,
-					com.tools20022.repository.msg.CashOption16.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption35.DateDetails, com.tools20022.repository.msg.CorporateActionOption35.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption35.RateAndAmountDetails, com.tools20022.repository.msg.CashOption20.AmountDetails, com.tools20022.repository.msg.CashOption20.DateDetails,
-					com.tools20022.repository.msg.CashOption20.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption44.DateDetails, com.tools20022.repository.msg.CorporateActionOption44.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption44.RateAndAmountDetails, com.tools20022.repository.msg.CashOption25.AmountDetails, com.tools20022.repository.msg.CashOption25.DateDetails,
-					com.tools20022.repository.msg.CashOption25.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption52.DateDetails, com.tools20022.repository.msg.CorporateActionOption52.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption52.RateAndAmountDetails, com.tools20022.repository.msg.CashOption28.AmountDetails, com.tools20022.repository.msg.CashOption28.DateDetails,
-					com.tools20022.repository.msg.CashOption28.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption55.DateDetails, com.tools20022.repository.msg.CorporateActionOption55.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption55.RateAndAmountDetails, com.tools20022.repository.msg.CashOption4.AmountDetails, com.tools20022.repository.msg.CashOption4.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption3.DateDetails, com.tools20022.repository.msg.CorporateActionOption3.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption3.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption8.AmountDetails, com.tools20022.repository.msg.CashOption8.DateDetails, com.tools20022.repository.msg.CorporateActionOption17.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption17.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption17.RateAndAmountDetails, com.tools20022.repository.msg.CashOption10.AmountDetails,
-					com.tools20022.repository.msg.CashOption10.DateDetails, com.tools20022.repository.msg.CashOption10.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption19.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption19.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption19.RateAndAmountDetails, com.tools20022.repository.msg.CashOption15.AmountDetails,
-					com.tools20022.repository.msg.CashOption15.DateDetails, com.tools20022.repository.msg.CashOption15.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption34.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption34.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption34.RateAndAmountDetails, com.tools20022.repository.msg.CashOption17.AmountDetails,
-					com.tools20022.repository.msg.CashOption17.DateDetails, com.tools20022.repository.msg.CashOption17.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption36.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption36.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption36.RateAndAmountDetails, com.tools20022.repository.msg.CashOption21.AmountDetails,
-					com.tools20022.repository.msg.CashOption21.DateDetails, com.tools20022.repository.msg.CashOption21.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption45.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption45.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption45.RateAndAmountDetails, com.tools20022.repository.msg.CashOption24.AmountDetails,
-					com.tools20022.repository.msg.CashOption24.DateDetails, com.tools20022.repository.msg.CashOption24.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption51.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption51.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption51.RateAndAmountDetails, com.tools20022.repository.msg.CashOption29.AmountDetails,
-					com.tools20022.repository.msg.CashOption29.DateDetails, com.tools20022.repository.msg.CashOption29.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption56.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption56.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption56.RateAndAmountDetails, com.tools20022.repository.msg.CashOption1.DateDetails,
-					com.tools20022.repository.msg.CashOption1.AmountDetails, com.tools20022.repository.msg.CorporateActionOption1.DateDetails, com.tools20022.repository.msg.CorporateActionOption1.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption1.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption103.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption100.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption100.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption100.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption101.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption101.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption101.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption102.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption102.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption102.RateAndAmountDetails, com.tools20022.repository.msg.CashOption30.AmountDetails,
-					com.tools20022.repository.msg.CashOption30.DateDetails, com.tools20022.repository.msg.CashOption30.RateAndAmountDetails, com.tools20022.repository.msg.CashOption31.AmountDetails,
-					com.tools20022.repository.msg.CashOption31.DateDetails, com.tools20022.repository.msg.CashOption31.RateAndAmountDetails, com.tools20022.repository.msg.CashOption32.AmountDetails,
-					com.tools20022.repository.msg.CashOption32.DateDetails, com.tools20022.repository.msg.CashOption32.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption110.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption110.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption110.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption108.DateDetails,
-					com.tools20022.repository.msg.CorporateActionOption108.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption108.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption107.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption106.DateDetails, com.tools20022.repository.msg.CorporateActionOption106.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption106.RateAndAmountDetails, com.tools20022.repository.msg.CashOption36.AmountDetails, com.tools20022.repository.msg.CashOption36.DateDetails,
-					com.tools20022.repository.msg.CashOption36.RateAndAmountDetails, com.tools20022.repository.msg.CashOption35.AmountDetails, com.tools20022.repository.msg.CashOption35.DateDetails,
-					com.tools20022.repository.msg.CashOption35.RateAndAmountDetails, com.tools20022.repository.msg.CashOption38.AmountDetails, com.tools20022.repository.msg.CashOption38.DateDetails,
-					com.tools20022.repository.msg.CashOption38.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption111.DateDetails, com.tools20022.repository.msg.CorporateActionOption111.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption111.RateAndAmountDetails, com.tools20022.repository.msg.CashOption39.AmountDetails, com.tools20022.repository.msg.CashOption39.DateDetails,
-					com.tools20022.repository.msg.CashOption39.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption113.DateDetails, com.tools20022.repository.msg.CorporateActionOption113.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption113.RateAndAmountDetails, com.tools20022.repository.msg.CashOption41.AmountDetails, com.tools20022.repository.msg.CashOption41.DateDetails,
-					com.tools20022.repository.msg.CashOption41.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption117.DateDetails, com.tools20022.repository.msg.CorporateActionOption117.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption117.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption118.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption115.DateDetails, com.tools20022.repository.msg.CorporateActionOption115.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption115.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption114.DateDetails, com.tools20022.repository.msg.CorporateActionOption114.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption114.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption44.AmountDetails, com.tools20022.repository.msg.CashOption44.DateDetails, com.tools20022.repository.msg.CashOption44.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption42.AmountDetails, com.tools20022.repository.msg.CashOption42.DateDetails, com.tools20022.repository.msg.CashOption42.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption43.AmountDetails, com.tools20022.repository.msg.CashOption43.DateDetails, com.tools20022.repository.msg.CashOption43.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption124.DateDetails, com.tools20022.repository.msg.CorporateActionOption124.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption124.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption125.DateDetails, com.tools20022.repository.msg.CorporateActionOption125.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption125.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption123.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption127.DateDetails, com.tools20022.repository.msg.CorporateActionOption127.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption127.RateAndAmountDetails, com.tools20022.repository.msg.CashOption46.AmountDetails, com.tools20022.repository.msg.CashOption46.DateDetails,
-					com.tools20022.repository.msg.CashOption46.RateAndAmountDetails, com.tools20022.repository.msg.CashOption49.AmountDetails, com.tools20022.repository.msg.CashOption49.DateDetails,
-					com.tools20022.repository.msg.CashOption49.RateAndAmountDetails, com.tools20022.repository.msg.CashOption47.AmountDetails, com.tools20022.repository.msg.CashOption47.DateDetails,
-					com.tools20022.repository.msg.CashOption47.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption132.DateDetails, com.tools20022.repository.msg.CorporateActionOption132.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption132.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption130.DateDetails, com.tools20022.repository.msg.CorporateActionOption130.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption130.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption131.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption129.DateDetails, com.tools20022.repository.msg.CorporateActionOption129.PeriodDetails, com.tools20022.repository.msg.CorporateActionOption129.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption52.AmountDetails, com.tools20022.repository.msg.CashOption52.DateDetails, com.tools20022.repository.msg.CashOption52.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption51.AmountDetails, com.tools20022.repository.msg.CashOption51.DateDetails, com.tools20022.repository.msg.CashOption51.RateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption50.AmountDetails, com.tools20022.repository.msg.CashOption50.DateDetails, com.tools20022.repository.msg.CashOption50.RateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption134.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption136.DateDetails, com.tools20022.repository.msg.CorporateActionOption136.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption136.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption135.DateDetails, com.tools20022.repository.msg.CorporateActionOption135.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption135.RateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption133.DateDetails, com.tools20022.repository.msg.CorporateActionOption133.PeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption133.RateAndAmountDetails, com.tools20022.repository.msg.CashOption53.AmountDetails, com.tools20022.repository.msg.CashOption53.DateDetails,
-					com.tools20022.repository.msg.CashOption53.RateAndAmountDetails, com.tools20022.repository.msg.CashOption54.AmountDetails, com.tools20022.repository.msg.CashOption54.DateDetails,
-					com.tools20022.repository.msg.CashOption54.RateAndAmountDetails, com.tools20022.repository.msg.CashOption55.AmountDetails, com.tools20022.repository.msg.CashOption55.DateDetails,
-					com.tools20022.repository.msg.CashOption55.RateAndAmountDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption13.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption25.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption30.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption38.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption47.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption57.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption58.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption2.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption2.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption4.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption4.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption4.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption9.mmAmountDetails, com.tools20022.repository.msg.CashOption9.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption14.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption14.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption14.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CashOption12.mmAmountDetails, com.tools20022.repository.msg.CashOption12.mmDateDetails, com.tools20022.repository.msg.CashOption12.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption23.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption23.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption23.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CashOption13.mmAmountDetails, com.tools20022.repository.msg.CashOption13.mmDateDetails, com.tools20022.repository.msg.CashOption13.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption31.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption31.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption31.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CashOption18.mmAmountDetails, com.tools20022.repository.msg.CashOption18.mmDateDetails, com.tools20022.repository.msg.CashOption18.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption37.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption37.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption37.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CashOption22.mmAmountDetails, com.tools20022.repository.msg.CashOption22.mmDateDetails, com.tools20022.repository.msg.CashOption22.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption46.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption46.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption46.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CashOption26.mmAmountDetails, com.tools20022.repository.msg.CashOption26.mmDateDetails, com.tools20022.repository.msg.CashOption26.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption53.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption53.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption53.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CashOption27.mmAmountDetails, com.tools20022.repository.msg.CashOption27.mmDateDetails, com.tools20022.repository.msg.CashOption27.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption54.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption54.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption54.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CashOption3.mmAmountDetails, com.tools20022.repository.msg.CashOption3.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption10.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption10.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption10.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption6.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption6.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption15.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption15.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption15.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption11.mmAmountDetails, com.tools20022.repository.msg.CashOption11.mmDateDetails,
+					com.tools20022.repository.msg.CashOption11.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption20.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption20.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption20.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption14.mmAmountDetails, com.tools20022.repository.msg.CashOption14.mmDateDetails,
+					com.tools20022.repository.msg.CashOption14.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption32.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption32.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption32.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption16.mmAmountDetails, com.tools20022.repository.msg.CashOption16.mmDateDetails,
+					com.tools20022.repository.msg.CashOption16.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption35.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption35.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption35.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption20.mmAmountDetails, com.tools20022.repository.msg.CashOption20.mmDateDetails,
+					com.tools20022.repository.msg.CashOption20.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption44.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption44.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption44.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption25.mmAmountDetails, com.tools20022.repository.msg.CashOption25.mmDateDetails,
+					com.tools20022.repository.msg.CashOption25.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption52.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption52.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption52.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption28.mmAmountDetails, com.tools20022.repository.msg.CashOption28.mmDateDetails,
+					com.tools20022.repository.msg.CashOption28.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption55.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption55.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption55.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption4.mmAmountDetails, com.tools20022.repository.msg.CashOption4.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption3.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption3.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption3.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CashOption8.mmAmountDetails, com.tools20022.repository.msg.CashOption8.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption17.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption17.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption17.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption10.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption10.mmDateDetails, com.tools20022.repository.msg.CashOption10.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption19.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption19.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption19.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption15.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption15.mmDateDetails, com.tools20022.repository.msg.CashOption15.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption34.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption34.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption34.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption17.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption17.mmDateDetails, com.tools20022.repository.msg.CashOption17.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption36.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption36.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption36.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption21.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption21.mmDateDetails, com.tools20022.repository.msg.CashOption21.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption45.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption45.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption45.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption24.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption24.mmDateDetails, com.tools20022.repository.msg.CashOption24.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption51.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption51.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption51.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption29.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption29.mmDateDetails, com.tools20022.repository.msg.CashOption29.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption56.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption56.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption56.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption1.mmDateDetails,
+					com.tools20022.repository.msg.CashOption1.mmAmountDetails, com.tools20022.repository.msg.CorporateActionOption1.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption1.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption1.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption103.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption100.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption100.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption100.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption101.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption101.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption101.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption102.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption102.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption102.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption30.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption30.mmDateDetails, com.tools20022.repository.msg.CashOption30.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption31.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption31.mmDateDetails, com.tools20022.repository.msg.CashOption31.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption32.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption32.mmDateDetails, com.tools20022.repository.msg.CashOption32.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption110.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption110.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption110.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption108.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption108.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption108.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption107.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption106.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption106.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption106.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption36.mmAmountDetails, com.tools20022.repository.msg.CashOption36.mmDateDetails,
+					com.tools20022.repository.msg.CashOption36.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption35.mmAmountDetails, com.tools20022.repository.msg.CashOption35.mmDateDetails,
+					com.tools20022.repository.msg.CashOption35.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption38.mmAmountDetails, com.tools20022.repository.msg.CashOption38.mmDateDetails,
+					com.tools20022.repository.msg.CashOption38.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption111.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption111.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption111.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption39.mmAmountDetails, com.tools20022.repository.msg.CashOption39.mmDateDetails,
+					com.tools20022.repository.msg.CashOption39.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption113.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption113.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption113.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption41.mmAmountDetails, com.tools20022.repository.msg.CashOption41.mmDateDetails,
+					com.tools20022.repository.msg.CashOption41.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption117.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption117.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption117.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption118.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption115.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption115.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption115.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption114.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption114.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption114.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption44.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption44.mmDateDetails, com.tools20022.repository.msg.CashOption44.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption42.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption42.mmDateDetails, com.tools20022.repository.msg.CashOption42.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption43.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption43.mmDateDetails, com.tools20022.repository.msg.CashOption43.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption124.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption124.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption124.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption125.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption125.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption125.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption123.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption127.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption127.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption127.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption46.mmAmountDetails, com.tools20022.repository.msg.CashOption46.mmDateDetails,
+					com.tools20022.repository.msg.CashOption46.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption49.mmAmountDetails, com.tools20022.repository.msg.CashOption49.mmDateDetails,
+					com.tools20022.repository.msg.CashOption49.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption47.mmAmountDetails, com.tools20022.repository.msg.CashOption47.mmDateDetails,
+					com.tools20022.repository.msg.CashOption47.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption132.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption132.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption132.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption130.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption130.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption130.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption131.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption129.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption129.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption129.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption52.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption52.mmDateDetails, com.tools20022.repository.msg.CashOption52.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption51.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption51.mmDateDetails, com.tools20022.repository.msg.CashOption51.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption50.mmAmountDetails,
+					com.tools20022.repository.msg.CashOption50.mmDateDetails, com.tools20022.repository.msg.CashOption50.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption134.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption136.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption136.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption136.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption135.mmDateDetails,
+					com.tools20022.repository.msg.CorporateActionOption135.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption135.mmRateAndAmountDetails,
+					com.tools20022.repository.msg.CorporateActionOption133.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption133.mmPeriodDetails,
+					com.tools20022.repository.msg.CorporateActionOption133.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption53.mmAmountDetails, com.tools20022.repository.msg.CashOption53.mmDateDetails,
+					com.tools20022.repository.msg.CashOption53.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption54.mmAmountDetails, com.tools20022.repository.msg.CashOption54.mmDateDetails,
+					com.tools20022.repository.msg.CashOption54.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption55.mmAmountDetails, com.tools20022.repository.msg.CashOption55.mmDateDetails,
+					com.tools20022.repository.msg.CashOption55.mmRateAndAmountDetails);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedChoiceCorporateAction";
 			definition = "Corporate action for which one or more options are provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ChoiceCorporateAction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.CorporateActionOptionDefinition;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmObject();
 		}
 	};
+	protected CorporateActionElection corporateActionElection;
 	/**
 	 * Election process which selected a specific option.
 	 * <p>
@@ -3622,8 +3696,8 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection#Option
-	 * CorporateActionElection.Option}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmOption
+	 * CorporateActionElection.mmOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3648,20 +3722,21 @@ public class CorporateActionOption {
 	 * definition} = "Election process which selected a specific option."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CorporateActionElection = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCorporateActionElection = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionElection";
 			definition = "Election process which selected a specific option.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.Option;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmOption;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 		}
 	};
+	protected OptionFeaturesCode optionFeatures;
 	/**
 	 * Features that may apply to a corporate action option.
 	 * <p>
@@ -3672,277 +3747,277 @@ public class CorporateActionOption {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OptionFeaturesCode
 	 * OptionFeaturesCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat1Choice#Code
-	 * OptionFeaturesFormat1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat1Choice#Proprietary
-	 * OptionFeaturesFormat1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#OptionFeatures
-	 * CorporateActionOption4.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat3Choice#Code
-	 * OptionFeaturesFormat3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat3Choice#Proprietary
-	 * OptionFeaturesFormat3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#OptionFeatures
-	 * CorporateActionOption14.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#OptionFeatures
-	 * CorporateActionOption23.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#OptionFeatures
-	 * CorporateActionOption31.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#OptionFeatures
-	 * CorporateActionOption37.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#OptionFeatures
-	 * CorporateActionOption46.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#OptionFeatures
-	 * CorporateActionOption53.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#OptionFeatures
-	 * CorporateActionOption54.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat2Choice#Code
-	 * OptionFeaturesFormat2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat2Choice#Proprietary
-	 * OptionFeaturesFormat2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#OptionFeatures
-	 * CorporateActionOption10.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat4Choice#Code
-	 * OptionFeaturesFormat4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat4Choice#Proprietary
-	 * OptionFeaturesFormat4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#OptionFeatures
-	 * CorporateActionOption15.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat6Choice#Code
-	 * OptionFeaturesFormat6Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat6Choice#Proprietary
-	 * OptionFeaturesFormat6Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#OptionFeatures
-	 * CorporateActionOption20.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat7Choice#Code
-	 * OptionFeaturesFormat7Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat7Choice#Proprietary
-	 * OptionFeaturesFormat7Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#OptionFeatures
-	 * CorporateActionOption32.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat5Choice#Code
-	 * OptionFeaturesFormat5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat5Choice#Proprietary
-	 * OptionFeaturesFormat5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat9Choice#Code
-	 * OptionFeaturesFormat9Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat9Choice#Proprietary
-	 * OptionFeaturesFormat9Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#OptionFeatures
-	 * CorporateActionOption35.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat11Choice#Code
-	 * OptionFeaturesFormat11Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat11Choice#Proprietary
-	 * OptionFeaturesFormat11Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#OptionFeatures
-	 * CorporateActionOption44.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#OptionFeatures
-	 * CorporateActionOption52.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#OptionFeatures
-	 * CorporateActionOption55.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#OptionFeatures
-	 * CorporateActionOption3.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#OptionFeatures
-	 * CorporateActionOption17.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#OptionFeatures
-	 * CorporateActionOption19.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat8Choice#Code
-	 * OptionFeaturesFormat8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat8Choice#Proprietary
-	 * OptionFeaturesFormat8Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#OptionFeatures
-	 * CorporateActionOption34.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#OptionFeatures
-	 * CorporateActionOption36.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#OptionFeatures
-	 * CorporateActionOption45.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#OptionFeatures
-	 * CorporateActionOption51.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#OptionFeatures
-	 * CorporateActionOption56.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeatures1FormatChoice#Code
-	 * OptionFeatures1FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeatures1FormatChoice#Proprietary
-	 * OptionFeatures1FormatChoice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#OptionFeatures
-	 * CorporateActionOption1.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#OptionFeatures
-	 * CorporateActionOption100.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#OptionFeatures
-	 * CorporateActionOption101.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#OptionFeatures
-	 * CorporateActionOption102.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat12Choice#Code
-	 * OptionFeaturesFormat12Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat12Choice#Proprietary
-	 * OptionFeaturesFormat12Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#OptionFeatures
-	 * CorporateActionOption110.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#OptionFeatures
-	 * CorporateActionOption108.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#OptionFeatures
-	 * CorporateActionOption106.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat15Choice#Code
-	 * OptionFeaturesFormat15Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat15Choice#Proprietary
-	 * OptionFeaturesFormat15Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#OptionFeatures
-	 * CorporateActionOption111.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#OptionFeatures
-	 * CorporateActionOption113.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#OptionFeatures
-	 * CorporateActionOption117.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#OptionFeatures
-	 * CorporateActionOption115.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#OptionFeatures
-	 * CorporateActionOption114.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat17Choice#Code
-	 * OptionFeaturesFormat17Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat17Choice#Proprietary
-	 * OptionFeaturesFormat17Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat18Choice#Code
-	 * OptionFeaturesFormat18Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat18Choice#Proprietary
-	 * OptionFeaturesFormat18Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat16Choice#Code
-	 * OptionFeaturesFormat16Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat16Choice#Proprietary
-	 * OptionFeaturesFormat16Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#OptionFeatures
-	 * CorporateActionOption124.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#OptionFeatures
-	 * CorporateActionOption125.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#OptionFeatures
-	 * CorporateActionOption127.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat19Choice#Code
-	 * OptionFeaturesFormat19Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat19Choice#Proprietary
-	 * OptionFeaturesFormat19Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat21Choice#Code
-	 * OptionFeaturesFormat21Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat21Choice#Proprietary
-	 * OptionFeaturesFormat21Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat20Choice#Code
-	 * OptionFeaturesFormat20Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat20Choice#Proprietary
-	 * OptionFeaturesFormat20Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#OptionFeatures
-	 * CorporateActionOption132.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#OptionFeatures
-	 * CorporateActionOption130.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#OptionFeatures
-	 * CorporateActionOption129.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat22Choice#Code
-	 * OptionFeaturesFormat22Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat22Choice#Proprietary
-	 * OptionFeaturesFormat22Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#OptionFeatures
-	 * CorporateActionOption136.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#OptionFeatures
-	 * CorporateActionOption135.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#OptionFeatures
-	 * CorporateActionOption133.OptionFeatures}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat23Choice#Code
-	 * OptionFeaturesFormat23Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat23Choice#Proprietary
-	 * OptionFeaturesFormat23Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat1Choice#mmCode
+	 * OptionFeaturesFormat1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat1Choice#mmProprietary
+	 * OptionFeaturesFormat1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption4#mmOptionFeatures
+	 * CorporateActionOption4.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat3Choice#mmCode
+	 * OptionFeaturesFormat3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat3Choice#mmProprietary
+	 * OptionFeaturesFormat3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption14#mmOptionFeatures
+	 * CorporateActionOption14.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption23#mmOptionFeatures
+	 * CorporateActionOption23.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption31#mmOptionFeatures
+	 * CorporateActionOption31.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption37#mmOptionFeatures
+	 * CorporateActionOption37.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption46#mmOptionFeatures
+	 * CorporateActionOption46.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption53#mmOptionFeatures
+	 * CorporateActionOption53.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption54#mmOptionFeatures
+	 * CorporateActionOption54.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat2Choice#mmCode
+	 * OptionFeaturesFormat2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat2Choice#mmProprietary
+	 * OptionFeaturesFormat2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmOptionFeatures
+	 * CorporateActionOption10.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat4Choice#mmCode
+	 * OptionFeaturesFormat4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat4Choice#mmProprietary
+	 * OptionFeaturesFormat4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmOptionFeatures
+	 * CorporateActionOption15.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat6Choice#mmCode
+	 * OptionFeaturesFormat6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat6Choice#mmProprietary
+	 * OptionFeaturesFormat6Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmOptionFeatures
+	 * CorporateActionOption20.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat7Choice#mmCode
+	 * OptionFeaturesFormat7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat7Choice#mmProprietary
+	 * OptionFeaturesFormat7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmOptionFeatures
+	 * CorporateActionOption32.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat5Choice#mmCode
+	 * OptionFeaturesFormat5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat5Choice#mmProprietary
+	 * OptionFeaturesFormat5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat9Choice#mmCode
+	 * OptionFeaturesFormat9Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat9Choice#mmProprietary
+	 * OptionFeaturesFormat9Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmOptionFeatures
+	 * CorporateActionOption35.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat11Choice#mmCode
+	 * OptionFeaturesFormat11Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat11Choice#mmProprietary
+	 * OptionFeaturesFormat11Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmOptionFeatures
+	 * CorporateActionOption44.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmOptionFeatures
+	 * CorporateActionOption52.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmOptionFeatures
+	 * CorporateActionOption55.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmOptionFeatures
+	 * CorporateActionOption3.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmOptionFeatures
+	 * CorporateActionOption17.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmOptionFeatures
+	 * CorporateActionOption19.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat8Choice#mmCode
+	 * OptionFeaturesFormat8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat8Choice#mmProprietary
+	 * OptionFeaturesFormat8Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmOptionFeatures
+	 * CorporateActionOption34.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmOptionFeatures
+	 * CorporateActionOption36.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmOptionFeatures
+	 * CorporateActionOption45.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmOptionFeatures
+	 * CorporateActionOption51.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmOptionFeatures
+	 * CorporateActionOption56.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeatures1FormatChoice#mmCode
+	 * OptionFeatures1FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeatures1FormatChoice#mmProprietary
+	 * OptionFeatures1FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmOptionFeatures
+	 * CorporateActionOption1.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmOptionFeatures
+	 * CorporateActionOption100.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmOptionFeatures
+	 * CorporateActionOption101.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption102#mmOptionFeatures
+	 * CorporateActionOption102.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat12Choice#mmCode
+	 * OptionFeaturesFormat12Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat12Choice#mmProprietary
+	 * OptionFeaturesFormat12Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption110#mmOptionFeatures
+	 * CorporateActionOption110.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmOptionFeatures
+	 * CorporateActionOption108.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmOptionFeatures
+	 * CorporateActionOption106.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat15Choice#mmCode
+	 * OptionFeaturesFormat15Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat15Choice#mmProprietary
+	 * OptionFeaturesFormat15Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption111#mmOptionFeatures
+	 * CorporateActionOption111.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption113#mmOptionFeatures
+	 * CorporateActionOption113.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption117#mmOptionFeatures
+	 * CorporateActionOption117.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmOptionFeatures
+	 * CorporateActionOption115.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmOptionFeatures
+	 * CorporateActionOption114.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat17Choice#mmCode
+	 * OptionFeaturesFormat17Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat17Choice#mmProprietary
+	 * OptionFeaturesFormat17Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat18Choice#mmCode
+	 * OptionFeaturesFormat18Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat18Choice#mmProprietary
+	 * OptionFeaturesFormat18Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat16Choice#mmCode
+	 * OptionFeaturesFormat16Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat16Choice#mmProprietary
+	 * OptionFeaturesFormat16Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption124#mmOptionFeatures
+	 * CorporateActionOption124.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmOptionFeatures
+	 * CorporateActionOption125.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmOptionFeatures
+	 * CorporateActionOption127.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat19Choice#mmCode
+	 * OptionFeaturesFormat19Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat19Choice#mmProprietary
+	 * OptionFeaturesFormat19Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat21Choice#mmCode
+	 * OptionFeaturesFormat21Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat21Choice#mmProprietary
+	 * OptionFeaturesFormat21Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat20Choice#mmCode
+	 * OptionFeaturesFormat20Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat20Choice#mmProprietary
+	 * OptionFeaturesFormat20Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#mmOptionFeatures
+	 * CorporateActionOption132.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmOptionFeatures
+	 * CorporateActionOption130.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmOptionFeatures
+	 * CorporateActionOption129.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat22Choice#mmCode
+	 * OptionFeaturesFormat22Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat22Choice#mmProprietary
+	 * OptionFeaturesFormat22Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption136#mmOptionFeatures
+	 * CorporateActionOption136.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmOptionFeatures
+	 * CorporateActionOption135.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmOptionFeatures
+	 * CorporateActionOption133.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat23Choice#mmCode
+	 * OptionFeaturesFormat23Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat23Choice#mmProprietary
+	 * OptionFeaturesFormat23Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3954,48 +4029,51 @@ public class CorporateActionOption {
 	 * definition} = "Features that may apply to a corporate action option."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OptionFeatures = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOptionFeatures = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat1Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat1Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption4.OptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat3Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat3Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption14.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption23.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption31.OptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption37.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption46.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption53.OptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption54.OptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat2Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat2Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption10.OptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat4Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat4Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption15.OptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat6Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat6Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption20.OptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat7Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat7Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption32.OptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat5Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat5Choice.Proprietary,
-					com.tools20022.repository.choice.OptionFeaturesFormat9Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat9Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption35.OptionFeatures,
-					com.tools20022.repository.choice.OptionFeaturesFormat11Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat11Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption44.OptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption52.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption55.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption3.OptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption17.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption19.OptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat8Choice.Code,
-					com.tools20022.repository.choice.OptionFeaturesFormat8Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption34.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption36.OptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption45.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption51.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption56.OptionFeatures,
-					com.tools20022.repository.choice.OptionFeatures1FormatChoice.Code, com.tools20022.repository.choice.OptionFeatures1FormatChoice.Proprietary, com.tools20022.repository.msg.CorporateActionOption1.OptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption100.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption101.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption102.OptionFeatures,
-					com.tools20022.repository.choice.OptionFeaturesFormat12Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat12Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption110.OptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption108.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption106.OptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat15Choice.Code,
-					com.tools20022.repository.choice.OptionFeaturesFormat15Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption111.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption113.OptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption117.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption115.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption114.OptionFeatures,
-					com.tools20022.repository.choice.OptionFeaturesFormat17Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.Proprietary, com.tools20022.repository.choice.OptionFeaturesFormat18Choice.Code,
-					com.tools20022.repository.choice.OptionFeaturesFormat18Choice.Proprietary, com.tools20022.repository.choice.OptionFeaturesFormat16Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat16Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption124.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption125.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption127.OptionFeatures,
-					com.tools20022.repository.choice.OptionFeaturesFormat19Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat19Choice.Proprietary, com.tools20022.repository.choice.OptionFeaturesFormat21Choice.Code,
-					com.tools20022.repository.choice.OptionFeaturesFormat21Choice.Proprietary, com.tools20022.repository.choice.OptionFeaturesFormat20Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat20Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption132.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption130.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption129.OptionFeatures,
-					com.tools20022.repository.choice.OptionFeaturesFormat22Choice.Code, com.tools20022.repository.choice.OptionFeaturesFormat22Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption136.OptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption135.OptionFeatures, com.tools20022.repository.msg.CorporateActionOption133.OptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat23Choice.Code,
-					com.tools20022.repository.choice.OptionFeaturesFormat23Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat1Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat1Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption4.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat3Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat3Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption14.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption23.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption31.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption37.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption46.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption53.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption54.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat2Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat2Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption10.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat4Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat4Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption15.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat6Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat6Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption20.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat7Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat7Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption32.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat5Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat5Choice.mmProprietary,
+					com.tools20022.repository.choice.OptionFeaturesFormat9Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat9Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption35.mmOptionFeatures,
+					com.tools20022.repository.choice.OptionFeaturesFormat11Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat11Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption44.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption52.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption55.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption3.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption17.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption19.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat8Choice.mmCode,
+					com.tools20022.repository.choice.OptionFeaturesFormat8Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption34.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption36.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption45.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption51.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption56.mmOptionFeatures,
+					com.tools20022.repository.choice.OptionFeatures1FormatChoice.mmCode, com.tools20022.repository.choice.OptionFeatures1FormatChoice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption1.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption100.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption101.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption102.mmOptionFeatures,
+					com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption110.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption108.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption106.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat15Choice.mmCode,
+					com.tools20022.repository.choice.OptionFeaturesFormat15Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption111.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption113.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption117.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption115.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption114.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.mmProprietary,
+					com.tools20022.repository.choice.OptionFeaturesFormat18Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat18Choice.mmProprietary, com.tools20022.repository.choice.OptionFeaturesFormat16Choice.mmCode,
+					com.tools20022.repository.choice.OptionFeaturesFormat16Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption124.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption125.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption127.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat19Choice.mmCode,
+					com.tools20022.repository.choice.OptionFeaturesFormat19Choice.mmProprietary, com.tools20022.repository.choice.OptionFeaturesFormat21Choice.mmCode,
+					com.tools20022.repository.choice.OptionFeaturesFormat21Choice.mmProprietary, com.tools20022.repository.choice.OptionFeaturesFormat20Choice.mmCode,
+					com.tools20022.repository.choice.OptionFeaturesFormat20Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption132.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption130.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption129.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat22Choice.mmCode,
+					com.tools20022.repository.choice.OptionFeaturesFormat22Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption136.mmOptionFeatures,
+					com.tools20022.repository.msg.CorporateActionOption135.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption133.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat23Choice.mmCode,
+					com.tools20022.repository.choice.OptionFeaturesFormat23Choice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OptionFeatures";
 			definition = "Features that may apply to a corporate action option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OptionFeaturesCode.mmObject();
 		}
 	};
+	protected DateTimePeriod actionPeriod;
 	/**
 	 * Period during which the specified option remains valid, eg, offer period.
 	 * <p>
@@ -4004,8 +4082,8 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#CorporateActionOption
-	 * DateTimePeriod.CorporateActionOption}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmCorporateActionOption
+	 * DateTimePeriod.mmCorporateActionOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -4013,37 +4091,37 @@ public class CorporateActionOption {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod4#ActionPeriod
-	 * CorporateActionPeriod4.ActionPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod9#ActionPeriod
-	 * CorporateActionPeriod9.ActionPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod5#ActionPeriod
-	 * CorporateActionPeriod5.ActionPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#ActionPeriod
-	 * CorporateActionPeriod7.ActionPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#ActionPeriod
-	 * CorporateActionPeriod1.ActionPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod2#ActionPeriod
-	 * CorporateActionPeriod2.ActionPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod11#ActionPeriod
-	 * CorporateActionPeriod11.ActionPeriod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod4#mmActionPeriod
+	 * CorporateActionPeriod4.mmActionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod9#mmActionPeriod
+	 * CorporateActionPeriod9.mmActionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod5#mmActionPeriod
+	 * CorporateActionPeriod5.mmActionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmActionPeriod
+	 * CorporateActionPeriod7.mmActionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod1#mmActionPeriod
+	 * CorporateActionPeriod1.mmActionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod2#mmActionPeriod
+	 * CorporateActionPeriod2.mmActionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod11#mmActionPeriod
+	 * CorporateActionPeriod11.mmActionPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4057,23 +4135,24 @@ public class CorporateActionOption {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ActionPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmActionPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod4.ActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod9.ActionPeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod5.ActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.ActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.ActionPeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod2.ActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod11.ActionPeriod);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod4.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod9.mmActionPeriod,
+					com.tools20022.repository.msg.CorporateActionPeriod5.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.mmActionPeriod,
+					com.tools20022.repository.msg.CorporateActionPeriod2.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod11.mmActionPeriod);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ActionPeriod";
 			definition = "Period during which the specified option remains valid, eg, offer period.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriod.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.CorporateActionOption;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmCorporateActionOption;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected OfferTypeV2Code offerType;
 	/**
 	 * Conditions that apply to the offer.
 	 * <p>
@@ -4084,189 +4163,196 @@ public class CorporateActionOption {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OfferTypeV2Code
 	 * OfferTypeV2Code}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat1Choice#Code
-	 * OfferTypeFormat1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat1Choice#Proprietary
-	 * OfferTypeFormat1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#OfferType
-	 * CorporateActionOption10.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat2Choice#Code
-	 * OfferTypeFormat2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat2Choice#Proprietary
-	 * OfferTypeFormat2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#OfferType
-	 * CorporateActionOption15.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#OfferType
-	 * CorporateActionOption20.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#OfferType
-	 * CorporateActionOption32.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#OfferType
-	 * CorporateActionOption35.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#OfferType
-	 * CorporateActionOption44.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat3Choice#Code
-	 * OfferTypeFormat3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat3Choice#Proprietary
-	 * OfferTypeFormat3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#OfferType
-	 * CorporateActionOption52.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat4Choice#Code
-	 * OfferTypeFormat4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat4Choice#Proprietary
-	 * OfferTypeFormat4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#OfferType
-	 * CorporateActionOption55.OfferType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CorporateAction3#OfferType
-	 * CorporateAction3.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#OfferType
-	 * CorporateActionOption3.OfferType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CorporateAction4#OfferType
-	 * CorporateAction4.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#OfferType
-	 * CorporateActionOption17.OfferType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CorporateAction5#OfferType
-	 * CorporateAction5.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#OfferType
-	 * CorporateActionOption19.OfferType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CorporateAction6#OfferType
-	 * CorporateAction6.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#OfferType
-	 * CorporateActionOption34.OfferType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CorporateAction7#OfferType
-	 * CorporateAction7.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#OfferType
-	 * CorporateActionOption36.OfferType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CorporateAction8#OfferType
-	 * CorporateAction8.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#OfferType
-	 * CorporateActionOption45.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction10#OfferType
-	 * CorporateAction10.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#OfferType
-	 * CorporateActionOption51.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction11#OfferType
-	 * CorporateAction11.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#OfferType
-	 * CorporateActionOption56.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferType1FormatChoice#Code
-	 * OfferType1FormatChoice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferType1FormatChoice#Proprietary
-	 * OfferType1FormatChoice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CorporateAction2#OfferType
-	 * CorporateAction2.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#OfferType
-	 * CorporateActionOption1.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#OfferType
-	 * CorporateActionOption100.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#OfferType
-	 * CorporateActionOption101.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction12#OfferType
-	 * CorporateAction12.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat5Choice#Code
-	 * OfferTypeFormat5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat5Choice#Proprietary
-	 * OfferTypeFormat5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#OfferType
-	 * CorporateActionOption108.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#OfferType
-	 * CorporateActionOption106.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction17#OfferType
-	 * CorporateAction17.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat8Choice#Code
-	 * OfferTypeFormat8Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat8Choice#Proprietary
-	 * OfferTypeFormat8Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#OfferType
-	 * CorporateActionOption115.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#OfferType
-	 * CorporateActionOption114.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction31#OfferType
-	 * CorporateAction31.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat10Choice#Code
-	 * OfferTypeFormat10Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat10Choice#Proprietary
-	 * OfferTypeFormat10Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#OfferType
-	 * CorporateActionOption125.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#OfferType
-	 * CorporateActionOption127.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction40#OfferType
-	 * CorporateAction40.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat11Choice#Code
-	 * OfferTypeFormat11Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat11Choice#Proprietary
-	 * OfferTypeFormat11Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#OfferType
-	 * CorporateActionOption130.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#OfferType
-	 * CorporateActionOption129.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#OfferType
-	 * CorporateActionOption135.OfferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#OfferType
-	 * CorporateActionOption133.OfferType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat1Choice#mmCode
+	 * OfferTypeFormat1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat1Choice#mmProprietary
+	 * OfferTypeFormat1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmOfferType
+	 * CorporateActionOption10.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat2Choice#mmCode
+	 * OfferTypeFormat2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat2Choice#mmProprietary
+	 * OfferTypeFormat2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmOfferType
+	 * CorporateActionOption15.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmOfferType
+	 * CorporateActionOption20.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmOfferType
+	 * CorporateActionOption32.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmOfferType
+	 * CorporateActionOption35.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmOfferType
+	 * CorporateActionOption44.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat3Choice#mmCode
+	 * OfferTypeFormat3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat3Choice#mmProprietary
+	 * OfferTypeFormat3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmOfferType
+	 * CorporateActionOption52.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat4Choice#mmCode
+	 * OfferTypeFormat4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat4Choice#mmProprietary
+	 * OfferTypeFormat4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmOfferType
+	 * CorporateActionOption55.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction3#mmOfferType
+	 * CorporateAction3.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmOfferType
+	 * CorporateActionOption3.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction4#mmOfferType
+	 * CorporateAction4.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmOfferType
+	 * CorporateActionOption17.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction5#mmOfferType
+	 * CorporateAction5.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmOfferType
+	 * CorporateActionOption19.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction6#mmOfferType
+	 * CorporateAction6.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmOfferType
+	 * CorporateActionOption34.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction7#mmOfferType
+	 * CorporateAction7.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmOfferType
+	 * CorporateActionOption36.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction8#mmOfferType
+	 * CorporateAction8.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmOfferType
+	 * CorporateActionOption45.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction10#mmOfferType
+	 * CorporateAction10.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmOfferType
+	 * CorporateActionOption51.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction11#mmOfferType
+	 * CorporateAction11.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmOfferType
+	 * CorporateActionOption56.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferType1FormatChoice#mmCode
+	 * OfferType1FormatChoice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferType1FormatChoice#mmProprietary
+	 * OfferType1FormatChoice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#mmOfferType
+	 * CorporateAction2.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmOfferType
+	 * CorporateActionOption1.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmOfferType
+	 * CorporateActionOption100.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmOfferType
+	 * CorporateActionOption101.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction12#mmOfferType
+	 * CorporateAction12.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat5Choice#mmCode
+	 * OfferTypeFormat5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat5Choice#mmProprietary
+	 * OfferTypeFormat5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmOfferType
+	 * CorporateActionOption108.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmOfferType
+	 * CorporateActionOption106.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction17#mmOfferType
+	 * CorporateAction17.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat8Choice#mmCode
+	 * OfferTypeFormat8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat8Choice#mmProprietary
+	 * OfferTypeFormat8Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmOfferType
+	 * CorporateActionOption115.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmOfferType
+	 * CorporateActionOption114.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction31#mmOfferType
+	 * CorporateAction31.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat10Choice#mmCode
+	 * OfferTypeFormat10Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat10Choice#mmProprietary
+	 * OfferTypeFormat10Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmOfferType
+	 * CorporateActionOption125.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmOfferType
+	 * CorporateActionOption127.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction40#mmOfferType
+	 * CorporateAction40.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat11Choice#mmCode
+	 * OfferTypeFormat11Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat11Choice#mmProprietary
+	 * OfferTypeFormat11Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmOfferType
+	 * CorporateActionOption130.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmOfferType
+	 * CorporateActionOption129.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmOfferType
+	 * CorporateActionOption135.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmOfferType
+	 * CorporateActionOption133.mmOfferType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4278,39 +4364,40 @@ public class CorporateActionOption {
 	 * definition} = "Conditions that apply to the offer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OfferType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOfferType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat1Choice.Code, com.tools20022.repository.choice.OfferTypeFormat1Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption10.OfferType, com.tools20022.repository.choice.OfferTypeFormat2Choice.Code, com.tools20022.repository.choice.OfferTypeFormat2Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption15.OfferType, com.tools20022.repository.msg.CorporateActionOption20.OfferType, com.tools20022.repository.msg.CorporateActionOption32.OfferType,
-					com.tools20022.repository.msg.CorporateActionOption35.OfferType, com.tools20022.repository.msg.CorporateActionOption44.OfferType, com.tools20022.repository.choice.OfferTypeFormat3Choice.Code,
-					com.tools20022.repository.choice.OfferTypeFormat3Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption52.OfferType, com.tools20022.repository.choice.OfferTypeFormat4Choice.Code,
-					com.tools20022.repository.choice.OfferTypeFormat4Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption55.OfferType, com.tools20022.repository.msg.CorporateAction3.OfferType,
-					com.tools20022.repository.msg.CorporateActionOption3.OfferType, com.tools20022.repository.msg.CorporateAction4.OfferType, com.tools20022.repository.msg.CorporateActionOption17.OfferType,
-					com.tools20022.repository.msg.CorporateAction5.OfferType, com.tools20022.repository.msg.CorporateActionOption19.OfferType, com.tools20022.repository.msg.CorporateAction6.OfferType,
-					com.tools20022.repository.msg.CorporateActionOption34.OfferType, com.tools20022.repository.msg.CorporateAction7.OfferType, com.tools20022.repository.msg.CorporateActionOption36.OfferType,
-					com.tools20022.repository.msg.CorporateAction8.OfferType, com.tools20022.repository.msg.CorporateActionOption45.OfferType, com.tools20022.repository.msg.CorporateAction10.OfferType,
-					com.tools20022.repository.msg.CorporateActionOption51.OfferType, com.tools20022.repository.msg.CorporateAction11.OfferType, com.tools20022.repository.msg.CorporateActionOption56.OfferType,
-					com.tools20022.repository.choice.OfferType1FormatChoice.Code, com.tools20022.repository.choice.OfferType1FormatChoice.Proprietary, com.tools20022.repository.msg.CorporateAction2.OfferType,
-					com.tools20022.repository.msg.CorporateActionOption1.OfferType, com.tools20022.repository.msg.CorporateActionOption100.OfferType, com.tools20022.repository.msg.CorporateActionOption101.OfferType,
-					com.tools20022.repository.msg.CorporateAction12.OfferType, com.tools20022.repository.choice.OfferTypeFormat5Choice.Code, com.tools20022.repository.choice.OfferTypeFormat5Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption108.OfferType, com.tools20022.repository.msg.CorporateActionOption106.OfferType, com.tools20022.repository.msg.CorporateAction17.OfferType,
-					com.tools20022.repository.choice.OfferTypeFormat8Choice.Code, com.tools20022.repository.choice.OfferTypeFormat8Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption115.OfferType,
-					com.tools20022.repository.msg.CorporateActionOption114.OfferType, com.tools20022.repository.msg.CorporateAction31.OfferType, com.tools20022.repository.choice.OfferTypeFormat10Choice.Code,
-					com.tools20022.repository.choice.OfferTypeFormat10Choice.Proprietary, com.tools20022.repository.msg.CorporateActionOption125.OfferType, com.tools20022.repository.msg.CorporateActionOption127.OfferType,
-					com.tools20022.repository.msg.CorporateAction40.OfferType, com.tools20022.repository.choice.OfferTypeFormat11Choice.Code, com.tools20022.repository.choice.OfferTypeFormat11Choice.Proprietary,
-					com.tools20022.repository.msg.CorporateActionOption130.OfferType, com.tools20022.repository.msg.CorporateActionOption129.OfferType, com.tools20022.repository.msg.CorporateActionOption135.OfferType,
-					com.tools20022.repository.msg.CorporateActionOption133.OfferType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat1Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat1Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption10.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat2Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat2Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption15.mmOfferType, com.tools20022.repository.msg.CorporateActionOption20.mmOfferType, com.tools20022.repository.msg.CorporateActionOption32.mmOfferType,
+					com.tools20022.repository.msg.CorporateActionOption35.mmOfferType, com.tools20022.repository.msg.CorporateActionOption44.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat3Choice.mmCode,
+					com.tools20022.repository.choice.OfferTypeFormat3Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption52.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat4Choice.mmCode,
+					com.tools20022.repository.choice.OfferTypeFormat4Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption55.mmOfferType, com.tools20022.repository.msg.CorporateAction3.mmOfferType,
+					com.tools20022.repository.msg.CorporateActionOption3.mmOfferType, com.tools20022.repository.msg.CorporateAction4.mmOfferType, com.tools20022.repository.msg.CorporateActionOption17.mmOfferType,
+					com.tools20022.repository.msg.CorporateAction5.mmOfferType, com.tools20022.repository.msg.CorporateActionOption19.mmOfferType, com.tools20022.repository.msg.CorporateAction6.mmOfferType,
+					com.tools20022.repository.msg.CorporateActionOption34.mmOfferType, com.tools20022.repository.msg.CorporateAction7.mmOfferType, com.tools20022.repository.msg.CorporateActionOption36.mmOfferType,
+					com.tools20022.repository.msg.CorporateAction8.mmOfferType, com.tools20022.repository.msg.CorporateActionOption45.mmOfferType, com.tools20022.repository.msg.CorporateAction10.mmOfferType,
+					com.tools20022.repository.msg.CorporateActionOption51.mmOfferType, com.tools20022.repository.msg.CorporateAction11.mmOfferType, com.tools20022.repository.msg.CorporateActionOption56.mmOfferType,
+					com.tools20022.repository.choice.OfferType1FormatChoice.mmCode, com.tools20022.repository.choice.OfferType1FormatChoice.mmProprietary, com.tools20022.repository.msg.CorporateAction2.mmOfferType,
+					com.tools20022.repository.msg.CorporateActionOption1.mmOfferType, com.tools20022.repository.msg.CorporateActionOption100.mmOfferType, com.tools20022.repository.msg.CorporateActionOption101.mmOfferType,
+					com.tools20022.repository.msg.CorporateAction12.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat5Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat5Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption108.mmOfferType, com.tools20022.repository.msg.CorporateActionOption106.mmOfferType, com.tools20022.repository.msg.CorporateAction17.mmOfferType,
+					com.tools20022.repository.choice.OfferTypeFormat8Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat8Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption115.mmOfferType,
+					com.tools20022.repository.msg.CorporateActionOption114.mmOfferType, com.tools20022.repository.msg.CorporateAction31.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat10Choice.mmCode,
+					com.tools20022.repository.choice.OfferTypeFormat10Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption125.mmOfferType, com.tools20022.repository.msg.CorporateActionOption127.mmOfferType,
+					com.tools20022.repository.msg.CorporateAction40.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat11Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat11Choice.mmProprietary,
+					com.tools20022.repository.msg.CorporateActionOption130.mmOfferType, com.tools20022.repository.msg.CorporateActionOption129.mmOfferType, com.tools20022.repository.msg.CorporateActionOption135.mmOfferType,
+					com.tools20022.repository.msg.CorporateActionOption133.mmOfferType);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OfferType";
 			definition = "Conditions that apply to the offer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OfferTypeV2Code.mmObject();
 		}
 	};
+	protected YesNoIndicator chargesAppliedIndicator;
 	/**
 	 * Indicates whether charges apply to the holder, for instance redemption
 	 * charges.
@@ -4322,142 +4409,142 @@ public class CorporateActionOption {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#ChargesAppliedIndicator
-	 * CorporateActionOption10.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#ChargesAppliedIndicator
-	 * CorporateActionOption15.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#ChargesAppliedIndicator
-	 * CorporateActionOption20.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#ChargesAppliedIndicator
-	 * CorporateActionOption32.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#ChargesAppliedIndicator
-	 * CorporateActionOption35.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#ChargesAppliedIndicator
-	 * CorporateActionOption44.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#ChargesAppliedIndicator
-	 * CorporateActionOption52.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#ChargesAppliedIndicator
-	 * CorporateActionOption55.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction3#ChargesAppliedIndicator
-	 * CorporateAction3.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#ChargesAppliedIndicator
-	 * CorporateActionOption3.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction4#ChargesAppliedIndicator
-	 * CorporateAction4.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#ChargesAppliedIndicator
-	 * CorporateActionOption17.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction5#ChargesAppliedIndicator
-	 * CorporateAction5.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#ChargesAppliedIndicator
-	 * CorporateActionOption19.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction6#ChargesAppliedIndicator
-	 * CorporateAction6.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#ChargesAppliedIndicator
-	 * CorporateActionOption34.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction7#ChargesAppliedIndicator
-	 * CorporateAction7.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#ChargesAppliedIndicator
-	 * CorporateActionOption36.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction8#ChargesAppliedIndicator
-	 * CorporateAction8.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#ChargesAppliedIndicator
-	 * CorporateActionOption45.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction10#ChargesAppliedIndicator
-	 * CorporateAction10.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#ChargesAppliedIndicator
-	 * CorporateActionOption51.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction11#ChargesAppliedIndicator
-	 * CorporateAction11.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#ChargesAppliedIndicator
-	 * CorporateActionOption56.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#RedemptionChargesAppliedIndicator
-	 * CorporateAction2.RedemptionChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#RedemptionChargesAppliedIndicator
-	 * CorporateActionOption1.RedemptionChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#ChargesAppliedIndicator
-	 * CorporateActionOption100.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#ChargesAppliedIndicator
-	 * CorporateActionOption101.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction12#ChargesAppliedIndicator
-	 * CorporateAction12.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#ChargesAppliedIndicator
-	 * CorporateActionOption108.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#ChargesAppliedIndicator
-	 * CorporateActionOption106.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction17#ChargesAppliedIndicator
-	 * CorporateAction17.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#ChargesAppliedIndicator
-	 * CorporateActionOption115.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#ChargesAppliedIndicator
-	 * CorporateActionOption114.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction31#ChargesAppliedIndicator
-	 * CorporateAction31.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#ChargesAppliedIndicator
-	 * CorporateActionOption125.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#ChargesAppliedIndicator
-	 * CorporateActionOption127.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateAction40#ChargesAppliedIndicator
-	 * CorporateAction40.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#ChargesAppliedIndicator
-	 * CorporateActionOption130.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#ChargesAppliedIndicator
-	 * CorporateActionOption129.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#ChargesAppliedIndicator
-	 * CorporateActionOption135.ChargesAppliedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#ChargesAppliedIndicator
-	 * CorporateActionOption133.ChargesAppliedIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmChargesAppliedIndicator
+	 * CorporateActionOption10.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmChargesAppliedIndicator
+	 * CorporateActionOption15.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmChargesAppliedIndicator
+	 * CorporateActionOption20.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmChargesAppliedIndicator
+	 * CorporateActionOption32.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmChargesAppliedIndicator
+	 * CorporateActionOption35.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmChargesAppliedIndicator
+	 * CorporateActionOption44.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmChargesAppliedIndicator
+	 * CorporateActionOption52.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmChargesAppliedIndicator
+	 * CorporateActionOption55.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction3#mmChargesAppliedIndicator
+	 * CorporateAction3.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmChargesAppliedIndicator
+	 * CorporateActionOption3.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction4#mmChargesAppliedIndicator
+	 * CorporateAction4.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmChargesAppliedIndicator
+	 * CorporateActionOption17.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction5#mmChargesAppliedIndicator
+	 * CorporateAction5.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmChargesAppliedIndicator
+	 * CorporateActionOption19.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction6#mmChargesAppliedIndicator
+	 * CorporateAction6.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmChargesAppliedIndicator
+	 * CorporateActionOption34.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction7#mmChargesAppliedIndicator
+	 * CorporateAction7.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmChargesAppliedIndicator
+	 * CorporateActionOption36.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction8#mmChargesAppliedIndicator
+	 * CorporateAction8.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmChargesAppliedIndicator
+	 * CorporateActionOption45.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction10#mmChargesAppliedIndicator
+	 * CorporateAction10.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmChargesAppliedIndicator
+	 * CorporateActionOption51.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction11#mmChargesAppliedIndicator
+	 * CorporateAction11.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmChargesAppliedIndicator
+	 * CorporateActionOption56.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction2#mmRedemptionChargesAppliedIndicator
+	 * CorporateAction2.mmRedemptionChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmRedemptionChargesAppliedIndicator
+	 * CorporateActionOption1.mmRedemptionChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmChargesAppliedIndicator
+	 * CorporateActionOption100.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmChargesAppliedIndicator
+	 * CorporateActionOption101.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction12#mmChargesAppliedIndicator
+	 * CorporateAction12.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmChargesAppliedIndicator
+	 * CorporateActionOption108.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmChargesAppliedIndicator
+	 * CorporateActionOption106.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction17#mmChargesAppliedIndicator
+	 * CorporateAction17.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmChargesAppliedIndicator
+	 * CorporateActionOption115.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmChargesAppliedIndicator
+	 * CorporateActionOption114.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction31#mmChargesAppliedIndicator
+	 * CorporateAction31.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmChargesAppliedIndicator
+	 * CorporateActionOption125.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmChargesAppliedIndicator
+	 * CorporateActionOption127.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction40#mmChargesAppliedIndicator
+	 * CorporateAction40.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmChargesAppliedIndicator
+	 * CorporateActionOption130.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmChargesAppliedIndicator
+	 * CorporateActionOption129.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmChargesAppliedIndicator
+	 * CorporateActionOption135.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmChargesAppliedIndicator
+	 * CorporateActionOption133.mmChargesAppliedIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4471,39 +4558,40 @@ public class CorporateActionOption {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ChargesAppliedIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmChargesAppliedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption15.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption20.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption32.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption35.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption44.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption52.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption55.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction3.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption3.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction4.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption17.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction5.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption19.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction6.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption34.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction7.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption36.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction8.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption45.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction10.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption51.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction11.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption56.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction2.RedemptionChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption1.RedemptionChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption100.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption101.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction12.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption108.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption106.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateAction17.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption115.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption114.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction31.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption125.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption127.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateAction40.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption130.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption129.ChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption135.ChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption133.ChargesAppliedIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption15.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption20.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption32.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption35.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption44.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption52.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption55.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction3.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption3.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction4.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption17.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction5.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption19.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction6.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption34.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction7.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption36.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction8.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption45.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction10.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption51.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction11.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption56.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction2.mmRedemptionChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption1.mmRedemptionChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption100.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption101.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction12.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption108.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption106.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateAction17.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption115.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption114.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateAction31.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption125.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption127.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateAction40.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption130.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption129.mmChargesAppliedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption135.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption133.mmChargesAppliedIndicator);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChargesAppliedIndicator";
 			definition = "Indicates whether charges apply to the holder, for instance redemption charges.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator withdrawalAllowedIndicator;
 	/**
 	 * Indicates whether withdrawal of instruction is allowed.
 	 * <p>
@@ -4514,103 +4602,103 @@ public class CorporateActionOption {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#WithdrawalAllowedIndicator
-	 * CorporateActionOption10.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#WithdrawalAllowedIndicator
-	 * CorporateActionOption15.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#WithdrawalAllowedIndicator
-	 * CorporateActionOption20.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#WithdrawalAllowedIndicator
-	 * CorporateActionOption32.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#WithdrawalAllowedIndicator
-	 * CorporateActionOption35.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#WithdrawalAllowedIndicator
-	 * CorporateActionOption44.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#WithdrawalAllowedIndicator
-	 * CorporateActionOption52.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#WithdrawalAllowedIndicator
-	 * CorporateActionOption55.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#WithdrawalAllowedIndicator
-	 * CorporateActionOption3.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#WithdrawalAllowedIndicator
-	 * CorporateActionOption17.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#WithdrawalAllowedIndicator
-	 * CorporateActionOption19.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#WithdrawalAllowedIndicator
-	 * CorporateActionOption34.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#WithdrawalAllowedIndicator
-	 * CorporateActionOption36.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#WithdrawalAllowedIndicator
-	 * CorporateActionOption45.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#WithdrawalAllowedIndicator
-	 * CorporateActionOption51.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#WithdrawalAllowedIndicator
-	 * CorporateActionOption56.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#WithdrawalAllowedIndicator
-	 * CorporateActionOption1.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#WithdrawalAllowedIndicator
-	 * CorporateActionOption100.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#WithdrawalAllowedIndicator
-	 * CorporateActionOption101.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#WithdrawalAllowedIndicator
-	 * CorporateActionOption108.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#WithdrawalAllowedIndicator
-	 * CorporateActionOption106.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#WithdrawalAllowedIndicator
-	 * CorporateActionOption115.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#WithdrawalAllowedIndicator
-	 * CorporateActionOption114.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#WithdrawalAllowedIndicator
-	 * CorporateActionOption125.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#WithdrawalAllowedIndicator
-	 * CorporateActionOption127.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#WithdrawalAllowedIndicator
-	 * CorporateActionOption130.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#WithdrawalAllowedIndicator
-	 * CorporateActionOption129.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#WithdrawalAllowedIndicator
-	 * CorporateActionOption135.WithdrawalAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#WithdrawalAllowedIndicator
-	 * CorporateActionOption133.WithdrawalAllowedIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption10.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption15.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption20.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption32.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption35.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption44.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption52.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption55.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption3.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption17.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption19.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption34.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption36.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption45.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption51.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption56.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption1.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption100.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption101.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption108.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption106.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption115.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption114.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption125.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption127.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption130.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption129.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption135.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption133.mmWithdrawalAllowedIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4622,33 +4710,34 @@ public class CorporateActionOption {
 	 * definition} = "Indicates whether withdrawal of instruction is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute WithdrawalAllowedIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmWithdrawalAllowedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption15.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption20.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption32.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption35.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption44.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption52.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption55.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption3.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption17.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption19.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption34.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption36.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption45.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption51.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption56.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption1.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption100.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption101.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption108.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption106.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption115.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption114.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption125.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption127.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption130.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption129.WithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption135.WithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption133.WithdrawalAllowedIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption15.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption20.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption32.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption35.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption44.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption52.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption55.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption3.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption17.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption19.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption34.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption36.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption45.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption51.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption56.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption1.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption100.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption101.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption108.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption106.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption115.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption114.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption125.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption127.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption130.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption129.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption135.mmWithdrawalAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption133.mmWithdrawalAllowedIndicator);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WithdrawalAllowedIndicator";
 			definition = "Indicates whether withdrawal of instruction is allowed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator changeAllowedIndicator;
 	/**
 	 * Indicates whether change of instruction is allowed.
 	 * <p>
@@ -4659,103 +4748,103 @@ public class CorporateActionOption {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#ChangeAllowedIndicator
-	 * CorporateActionOption10.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#ChangeAllowedIndicator
-	 * CorporateActionOption15.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#ChangeAllowedIndicator
-	 * CorporateActionOption20.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#ChangeAllowedIndicator
-	 * CorporateActionOption32.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#ChangeAllowedIndicator
-	 * CorporateActionOption35.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#ChangeAllowedIndicator
-	 * CorporateActionOption44.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#ChangeAllowedIndicator
-	 * CorporateActionOption52.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#ChangeAllowedIndicator
-	 * CorporateActionOption55.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#ChangeAllowedIndicator
-	 * CorporateActionOption3.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#ChangeAllowedIndicator
-	 * CorporateActionOption17.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#ChangeAllowedIndicator
-	 * CorporateActionOption19.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#ChangeAllowedIndicator
-	 * CorporateActionOption34.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#ChangeAllowedIndicator
-	 * CorporateActionOption36.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#ChangeAllowedIndicator
-	 * CorporateActionOption45.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#ChangeAllowedIndicator
-	 * CorporateActionOption51.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#ChangeAllowedIndicator
-	 * CorporateActionOption56.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#ChangeAllowedIndicator
-	 * CorporateActionOption1.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#ChangeAllowedIndicator
-	 * CorporateActionOption100.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#ChangeAllowedIndicator
-	 * CorporateActionOption101.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#ChangeAllowedIndicator
-	 * CorporateActionOption108.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#ChangeAllowedIndicator
-	 * CorporateActionOption106.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#ChangeAllowedIndicator
-	 * CorporateActionOption115.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#ChangeAllowedIndicator
-	 * CorporateActionOption114.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#ChangeAllowedIndicator
-	 * CorporateActionOption125.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#ChangeAllowedIndicator
-	 * CorporateActionOption127.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#ChangeAllowedIndicator
-	 * CorporateActionOption130.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#ChangeAllowedIndicator
-	 * CorporateActionOption129.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#ChangeAllowedIndicator
-	 * CorporateActionOption135.ChangeAllowedIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#ChangeAllowedIndicator
-	 * CorporateActionOption133.ChangeAllowedIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption
 	 * CorporateActionOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption10#mmChangeAllowedIndicator
+	 * CorporateActionOption10.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption15#mmChangeAllowedIndicator
+	 * CorporateActionOption15.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption20#mmChangeAllowedIndicator
+	 * CorporateActionOption20.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption32#mmChangeAllowedIndicator
+	 * CorporateActionOption32.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption35#mmChangeAllowedIndicator
+	 * CorporateActionOption35.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption44#mmChangeAllowedIndicator
+	 * CorporateActionOption44.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption52#mmChangeAllowedIndicator
+	 * CorporateActionOption52.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption55#mmChangeAllowedIndicator
+	 * CorporateActionOption55.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption3#mmChangeAllowedIndicator
+	 * CorporateActionOption3.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption17#mmChangeAllowedIndicator
+	 * CorporateActionOption17.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption19#mmChangeAllowedIndicator
+	 * CorporateActionOption19.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption34#mmChangeAllowedIndicator
+	 * CorporateActionOption34.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption36#mmChangeAllowedIndicator
+	 * CorporateActionOption36.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption45#mmChangeAllowedIndicator
+	 * CorporateActionOption45.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption51#mmChangeAllowedIndicator
+	 * CorporateActionOption51.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption56#mmChangeAllowedIndicator
+	 * CorporateActionOption56.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmChangeAllowedIndicator
+	 * CorporateActionOption1.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption100#mmChangeAllowedIndicator
+	 * CorporateActionOption100.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption101#mmChangeAllowedIndicator
+	 * CorporateActionOption101.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption108#mmChangeAllowedIndicator
+	 * CorporateActionOption108.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption106#mmChangeAllowedIndicator
+	 * CorporateActionOption106.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption115#mmChangeAllowedIndicator
+	 * CorporateActionOption115.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption114#mmChangeAllowedIndicator
+	 * CorporateActionOption114.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption125#mmChangeAllowedIndicator
+	 * CorporateActionOption125.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption127#mmChangeAllowedIndicator
+	 * CorporateActionOption127.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption130#mmChangeAllowedIndicator
+	 * CorporateActionOption130.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption129#mmChangeAllowedIndicator
+	 * CorporateActionOption129.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmChangeAllowedIndicator
+	 * CorporateActionOption135.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmChangeAllowedIndicator
+	 * CorporateActionOption133.mmChangeAllowedIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -4767,33 +4856,34 @@ public class CorporateActionOption {
 	 * definition} = "Indicates whether change of instruction is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ChangeAllowedIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmChangeAllowedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption15.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption20.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption32.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption35.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption44.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption52.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption55.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption3.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption17.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption19.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption34.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption36.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption45.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption51.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption56.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption1.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption100.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption101.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption108.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption106.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption115.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption114.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption125.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption127.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption130.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption129.ChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption135.ChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption133.ChangeAllowedIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption15.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption20.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption32.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption35.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption44.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption52.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption55.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption3.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption17.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption19.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption34.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption36.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption45.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption51.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption56.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption1.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption100.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption101.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption108.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption106.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption115.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption114.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption125.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption127.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption130.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption129.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption135.mmChangeAllowedIndicator,
+					com.tools20022.repository.msg.CorporateActionOption133.mmChangeAllowedIndicator);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChangeAllowedIndicator";
 			definition = "Indicates whether change of instruction is allowed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CorporateActionOptionServicing> corporateActionOptionServicing;
 	/**
 	 * Calculation of the entitlement on the basis of the proposed option.
 	 * <p>
@@ -4802,8 +4892,8 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#RelatedOption
-	 * CorporateActionOptionServicing.RelatedOption}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedOption
+	 * CorporateActionOptionServicing.mmRelatedOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -4829,7 +4919,7 @@ public class CorporateActionOption {
 	 * "Calculation of the entitlement on the basis of the proposed option."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CorporateActionOptionServicing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCorporateActionOptionServicing = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
@@ -4837,11 +4927,12 @@ public class CorporateActionOption {
 			name = "CorporateActionOptionServicing";
 			definition = "Calculation of the entitlement on the basis of the proposed option.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.RelatedOption;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.mmRelatedOption;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.ProceedsDefinition> proceedsDefinition;
 	/**
 	 * Definition of exchanges of cash and / or securities available in the
 	 * processing of corporate actions.
@@ -4851,8 +4942,8 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#Option
-	 * ProceedsDefinition.Option}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmOption
+	 * ProceedsDefinition.mmOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -4878,7 +4969,7 @@ public class CorporateActionOption {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ProceedsDefinition = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmProceedsDefinition = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
@@ -4886,11 +4977,12 @@ public class CorporateActionOption {
 			name = "ProceedsDefinition";
 			definition = "Definition of exchanges of cash and / or securities available in the processing of corporate actions.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.Option;
+			opposite_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmOption;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CorporateActionDistribution> distribution;
 	/**
 	 * Distribution process for which an option is selected.
 	 * <p>
@@ -4899,8 +4991,8 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#Option
-	 * CorporateActionDistribution.Option}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmOption
+	 * CorporateActionDistribution.mmOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -4925,7 +5017,7 @@ public class CorporateActionOption {
 	 * definition} = "Distribution process for which an option is selected."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Distribution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmDistribution = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
@@ -4933,11 +5025,12 @@ public class CorporateActionOption {
 			name = "Distribution";
 			definition = "Distribution process for which an option is selected.";
 			minOccurs = 0;
-			type_lazy = () -> CorporateActionDistribution.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.Option;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmOption;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 		}
 	};
+	protected YesNoIndicator default_;
 	/**
 	 * Specifies whether the option is the default option or not.
 	 * <p>
@@ -4965,15 +5058,15 @@ public class CorporateActionOption {
 	 * "Specifies whether the option is the default option or not."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Default = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDefault = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Default";
 			definition = "Specifies whether the option is the default option or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -4981,20 +5074,20 @@ public class CorporateActionOption {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption";
 				definition = "Provides information about the alternatives available to an account owner when participating to a corporate action event. This is defined at a general level without looking at the specificities of the securities balances.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.CorporateActionOption, com.tools20022.repository.entity.ProceedsDefinition.Option,
-						com.tools20022.repository.entity.CorporateActionElection.Option, com.tools20022.repository.entity.ChoiceCorporateAction.CorporateActionOptionDefinition,
-						com.tools20022.repository.entity.CorporateActionDistribution.Option, com.tools20022.repository.entity.CorporateActionOptionServicing.RelatedOption);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionOption.OptionNumber, com.tools20022.repository.entity.CorporateActionOption.OptionType,
-						com.tools20022.repository.entity.CorporateActionOption.FractionDisposition, com.tools20022.repository.entity.CorporateActionOption.CurrencyOption,
-						com.tools20022.repository.entity.CorporateActionOption.RelatedChoiceCorporateAction, com.tools20022.repository.entity.CorporateActionOption.CorporateActionElection,
-						com.tools20022.repository.entity.CorporateActionOption.OptionFeatures, com.tools20022.repository.entity.CorporateActionOption.ActionPeriod, com.tools20022.repository.entity.CorporateActionOption.OfferType,
-						com.tools20022.repository.entity.CorporateActionOption.ChargesAppliedIndicator, com.tools20022.repository.entity.CorporateActionOption.WithdrawalAllowedIndicator,
-						com.tools20022.repository.entity.CorporateActionOption.ChangeAllowedIndicator, com.tools20022.repository.entity.CorporateActionOption.CorporateActionOptionServicing,
-						com.tools20022.repository.entity.CorporateActionOption.ProceedsDefinition, com.tools20022.repository.entity.CorporateActionOption.Distribution, com.tools20022.repository.entity.CorporateActionOption.Default);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmCorporateActionOption, com.tools20022.repository.entity.ProceedsDefinition.mmOption,
+						com.tools20022.repository.entity.CorporateActionElection.mmOption, com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition,
+						com.tools20022.repository.entity.CorporateActionDistribution.mmOption, com.tools20022.repository.entity.CorporateActionOptionServicing.mmRelatedOption);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber, com.tools20022.repository.entity.CorporateActionOption.mmOptionType,
+						com.tools20022.repository.entity.CorporateActionOption.mmFractionDisposition, com.tools20022.repository.entity.CorporateActionOption.mmCurrencyOption,
+						com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction, com.tools20022.repository.entity.CorporateActionOption.mmCorporateActionElection,
+						com.tools20022.repository.entity.CorporateActionOption.mmOptionFeatures, com.tools20022.repository.entity.CorporateActionOption.mmActionPeriod, com.tools20022.repository.entity.CorporateActionOption.mmOfferType,
+						com.tools20022.repository.entity.CorporateActionOption.mmChargesAppliedIndicator, com.tools20022.repository.entity.CorporateActionOption.mmWithdrawalAllowedIndicator,
+						com.tools20022.repository.entity.CorporateActionOption.mmChangeAllowedIndicator, com.tools20022.repository.entity.CorporateActionOption.mmCorporateActionOptionServicing,
+						com.tools20022.repository.entity.CorporateActionOption.mmProceedsDefinition, com.tools20022.repository.entity.CorporateActionOption.mmDistribution, com.tools20022.repository.entity.CorporateActionOption.mmDefault);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionOption4Choice.mmObject(), FractionDispositionType2Choice.mmObject(), SecuritiesOption2.mmObject(), CorporateActionOption5.mmObject(),
 						CorporateActionOption6Choice.mmObject(), FractionDispositionType8Choice.mmObject(), SecuritiesOption7.mmObject(), CorporateActionOption13.mmObject(), FractionDispositionType10Choice.mmObject(),
 						CorporateActionOption25.mmObject(), FractionDispositionType11Choice.mmObject(), CorporateActionOption30.mmObject(), CorporateActionOption12Choice.mmObject(), CorporateActionOption38.mmObject(),
@@ -5043,5 +5136,133 @@ public class CorporateActionOption {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getOptionNumber() {
+		return optionNumber;
+	}
+
+	public void setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = optionNumber;
+	}
+
+	public CorporateActionOptionCode getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(CorporateActionOptionCode optionType) {
+		this.optionType = optionType;
+	}
+
+	public FractionDispositionTypeCode getFractionDisposition() {
+		return fractionDisposition;
+	}
+
+	public void setFractionDisposition(FractionDispositionTypeCode fractionDisposition) {
+		this.fractionDisposition = fractionDisposition;
+	}
+
+	public CurrencyCode getCurrencyOption() {
+		return currencyOption;
+	}
+
+	public void setCurrencyOption(CurrencyCode currencyOption) {
+		this.currencyOption = currencyOption;
+	}
+
+	public ChoiceCorporateAction getRelatedChoiceCorporateAction() {
+		return relatedChoiceCorporateAction;
+	}
+
+	public void setRelatedChoiceCorporateAction(com.tools20022.repository.entity.ChoiceCorporateAction relatedChoiceCorporateAction) {
+		this.relatedChoiceCorporateAction = relatedChoiceCorporateAction;
+	}
+
+	public CorporateActionElection getCorporateActionElection() {
+		return corporateActionElection;
+	}
+
+	public void setCorporateActionElection(com.tools20022.repository.entity.CorporateActionElection corporateActionElection) {
+		this.corporateActionElection = corporateActionElection;
+	}
+
+	public OptionFeaturesCode getOptionFeatures() {
+		return optionFeatures;
+	}
+
+	public void setOptionFeatures(OptionFeaturesCode optionFeatures) {
+		this.optionFeatures = optionFeatures;
+	}
+
+	public DateTimePeriod getActionPeriod() {
+		return actionPeriod;
+	}
+
+	public void setActionPeriod(com.tools20022.repository.entity.DateTimePeriod actionPeriod) {
+		this.actionPeriod = actionPeriod;
+	}
+
+	public OfferTypeV2Code getOfferType() {
+		return offerType;
+	}
+
+	public void setOfferType(OfferTypeV2Code offerType) {
+		this.offerType = offerType;
+	}
+
+	public YesNoIndicator getChargesAppliedIndicator() {
+		return chargesAppliedIndicator;
+	}
+
+	public void setChargesAppliedIndicator(YesNoIndicator chargesAppliedIndicator) {
+		this.chargesAppliedIndicator = chargesAppliedIndicator;
+	}
+
+	public YesNoIndicator getWithdrawalAllowedIndicator() {
+		return withdrawalAllowedIndicator;
+	}
+
+	public void setWithdrawalAllowedIndicator(YesNoIndicator withdrawalAllowedIndicator) {
+		this.withdrawalAllowedIndicator = withdrawalAllowedIndicator;
+	}
+
+	public YesNoIndicator getChangeAllowedIndicator() {
+		return changeAllowedIndicator;
+	}
+
+	public void setChangeAllowedIndicator(YesNoIndicator changeAllowedIndicator) {
+		this.changeAllowedIndicator = changeAllowedIndicator;
+	}
+
+	public List<CorporateActionOptionServicing> getCorporateActionOptionServicing() {
+		return corporateActionOptionServicing;
+	}
+
+	public void setCorporateActionOptionServicing(List<com.tools20022.repository.entity.CorporateActionOptionServicing> corporateActionOptionServicing) {
+		this.corporateActionOptionServicing = corporateActionOptionServicing;
+	}
+
+	public List<ProceedsDefinition> getProceedsDefinition() {
+		return proceedsDefinition;
+	}
+
+	public void setProceedsDefinition(List<com.tools20022.repository.entity.ProceedsDefinition> proceedsDefinition) {
+		this.proceedsDefinition = proceedsDefinition;
+	}
+
+	public List<CorporateActionDistribution> getDistribution() {
+		return distribution;
+	}
+
+	public void setDistribution(List<com.tools20022.repository.entity.CorporateActionDistribution> distribution) {
+		this.distribution = distribution;
+	}
+
+	public YesNoIndicator getDefault() {
+		return default_;
+	}
+
+	public void setDefault(YesNoIndicator default_) {
+		this.default_ = default_;
 	}
 }

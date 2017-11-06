@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Status is accepted under certain conditions.
@@ -38,8 +39,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#NoSpecifiedReasonOrReasonDetailsRule
- * ConditionallyAcceptedStatus2.NoSpecifiedReasonOrReasonDetailsRule}</li>
+ * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#mmNoSpecifiedReasonOrReasonDetailsRule
+ * ConditionallyAcceptedStatus2.mmNoSpecifiedReasonOrReasonDetailsRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,11 +48,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#NoSpecifiedReason
- * ConditionallyAcceptedStatus2.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#mmNoSpecifiedReason
+ * ConditionallyAcceptedStatus2.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#ReasonDetails
- * ConditionallyAcceptedStatus2.ReasonDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#mmReasonDetails
+ * ConditionallyAcceptedStatus2.mmReasonDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -84,6 +85,7 @@ import java.util.function.Supplier;
 public class ConditionallyAcceptedStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -96,8 +98,8 @@ public class ConditionallyAcceptedStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,27 +121,28 @@ public class ConditionallyAcceptedStatus2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice#NoSpecifiedReason
-	 * ConditionallyAcceptedStatus3Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice#mmNoSpecifiedReason
+	 * ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> ConditionallyAcceptedStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.NoSpecifiedReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2> reasonDetails;
 	/**
 	 * Reason for the conditionally accepted status.
 	 * <p>
@@ -152,8 +155,8 @@ public class ConditionallyAcceptedStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#ConditionallyAcceptedStatus
-	 * SecuritiesOrderStatus.ConditionallyAcceptedStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmConditionallyAcceptedStatus
+	 * SecuritiesOrderStatus.mmConditionallyAcceptedStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -174,26 +177,26 @@ public class ConditionallyAcceptedStatus2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice#ReasonDetails
-	 * ConditionallyAcceptedStatus3Choice.ReasonDetails}</li>
+	 * {@linkplain com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice#mmReasonDetails
+	 * ConditionallyAcceptedStatus3Choice.mmReasonDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReasonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> ConditionallyAcceptedStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.ConditionallyAcceptedStatus;
 			isDerived = false;
 			xmlTag = "RsnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonDetails";
 			definition = "Reason for the conditionally accepted status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.ReasonDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmReasonDetails);
 			maxOccurs = 5;
-			type_lazy = () -> ConditionallyAcceptedStatusReason2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmObject();
 		}
 	};
 	/**
@@ -205,11 +208,11 @@ public class ConditionallyAcceptedStatus2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#NoSpecifiedReason
-	 * ConditionallyAcceptedStatus2.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#mmNoSpecifiedReason
+	 * ConditionallyAcceptedStatus2.mmNoSpecifiedReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#ReasonDetails
-	 * ConditionallyAcceptedStatus2.ReasonDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2#mmReasonDetails
+	 * ConditionallyAcceptedStatus2.mmReasonDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -229,22 +232,22 @@ public class ConditionallyAcceptedStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor NoSpecifiedReasonOrReasonDetailsRule = new MMXor() {
+	public static final MMXor mmNoSpecifiedReasonOrReasonDetailsRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReasonOrReasonDetailsRule";
 			definition = "Either NoSpecifiedReason or ReasonDetails must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatus2.NoSpecifiedReason, com.tools20022.repository.msg.ConditionallyAcceptedStatus2.ReasonDetails);
 			messageComponent_lazy = () -> ConditionallyAcceptedStatus2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmNoSpecifiedReason, com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmReasonDetails);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatus2.NoSpecifiedReason, com.tools20022.repository.msg.ConditionallyAcceptedStatus2.ReasonDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmNoSpecifiedReason, com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmReasonDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -256,9 +259,25 @@ public class ConditionallyAcceptedStatus2 {
 				name = "ConditionallyAcceptedStatus2";
 				definition = "Status is accepted under certain conditions.";
 				nextVersions_lazy = () -> Arrays.asList(ConditionallyAcceptedStatus3Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatus2.NoSpecifiedReasonOrReasonDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmNoSpecifiedReasonOrReasonDetailsRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<ConditionallyAcceptedStatusReason2> getReasonDetails() {
+		return reasonDetails;
+	}
+
+	public void setReasonDetails(List<com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2> reasonDetails) {
+		this.reasonDetails = reasonDetails;
 	}
 }

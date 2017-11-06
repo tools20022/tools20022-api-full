@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactiontIdentification4#TransactionIdentification
- * TransactiontIdentification4.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactiontIdentification4#mmTransactionIdentification
+ * TransactiontIdentification4.mmTransactionIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -42,33 +42,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01#Identification
- * SecuritiesTradeConfirmationCancellationV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01#mmIdentification
+ * SecuritiesTradeConfirmationCancellationV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#Identification
- * SecuritiesTradeConfirmationResponseV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01#mmIdentification
+ * SecuritiesTradeConfirmationResponseV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#Identification
- * SecuritiesTradeConfirmationStatusAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmIdentification
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01#Identification
- * SecuritiesTradeConfirmationV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01#mmIdentification
+ * SecuritiesTradeConfirmationV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02#Identification
- * SecuritiesTradeConfirmationV02.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02#mmIdentification
+ * SecuritiesTradeConfirmationV02.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03#Identification
- * SecuritiesTradeConfirmationV03.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03#mmIdentification
+ * SecuritiesTradeConfirmationV03.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#Identification
- * SecuritiesTradeConfirmationStatusAdviceV02.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmIdentification
+ * SecuritiesTradeConfirmationStatusAdviceV02.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactiontIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as known by the instructing
 	 * party.
@@ -112,7 +113,7 @@ public class TransactiontIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactiontIdentification4.mmObject();
 			isDerived = false;
@@ -120,8 +121,8 @@ public class TransactiontIdentification4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the instructing party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -129,17 +130,25 @@ public class TransactiontIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactiontIdentification4.TransactionIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01.Identification,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.Identification, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.Identification,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.Identification, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.Identification,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.Identification, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactiontIdentification4.mmTransactionIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01.mmIdentification,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmIdentification, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmIdentification, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmIdentification,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmIdentification, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactiontIdentification4";
 				definition = "Transaction identification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
 	}
 }

@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseLevel1Code#NoAcknowledgement
- * ResponseLevel1Code.NoAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseLevel1Code#mmNoAcknowledgement
+ * ResponseLevel1Code.mmNoAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseLevel1Code#AcknowledgementNegativeError
- * ResponseLevel1Code.AcknowledgementNegativeError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseLevel1Code#mmAcknowledgementNegativeError
+ * ResponseLevel1Code.mmAcknowledgementNegativeError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseLevel1Code#AcknowledgementEach
- * ResponseLevel1Code.AcknowledgementEach}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseLevel1Code#mmAcknowledgementEach
+ * ResponseLevel1Code.mmAcknowledgementEach}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +86,7 @@ public class ResponseLevel1Code extends ResponseLevelCode {
 	 * name} = "NoAcknowledgement"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAcknowledgement = new MMCode() {
+	public static final MMCode mmNoAcknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAcknowledgement";
@@ -109,7 +109,7 @@ public class ResponseLevel1Code extends ResponseLevelCode {
 	 * name} = "AcknowledgementNegativeError"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgementNegativeError = new MMCode() {
+	public static final MMCode mmAcknowledgementNegativeError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementNegativeError";
@@ -132,7 +132,7 @@ public class ResponseLevel1Code extends ResponseLevelCode {
 	 * name} = "AcknowledgementEach"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgementEach = new MMCode() {
+	public static final MMCode mmAcknowledgementEach = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementEach";
@@ -143,13 +143,13 @@ public class ResponseLevel1Code extends ResponseLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NACK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResponseLevel1Code";
 				definition = "Specifies the level of response requested from the receiver of the message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseLevel1Code.NoAcknowledgement, com.tools20022.repository.codeset.ResponseLevel1Code.AcknowledgementNegativeError,
-						com.tools20022.repository.codeset.ResponseLevel1Code.AcknowledgementEach);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseLevel1Code.mmNoAcknowledgement, com.tools20022.repository.codeset.ResponseLevel1Code.mmAcknowledgementNegativeError,
+						com.tools20022.repository.codeset.ResponseLevel1Code.mmAcknowledgementEach);
 				trace_lazy = () -> ResponseLevelCode.mmObject();
 			}
 		});

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus2#Status
- * TransactionStatus2.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus2#mmStatus
+ * TransactionStatus2.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionStatus2#ChangeDateTime
- * TransactionStatus2.ChangeDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionStatus2#mmChangeDateTime
+ * TransactionStatus2.mmChangeDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BaselineStatus1Code status;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -78,8 +79,8 @@ public class TransactionStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BaselineStatus#Status
-	 * BaselineStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.BaselineStatus#mmStatus
+	 * BaselineStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class TransactionStatus2 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmStatus;
 			componentContext_lazy = () -> TransactionStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.Status;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatus1Code.mmObject();
 		}
 	};
+	protected ISODateTime changeDateTime;
 	/**
 	 * Date and time at which the current status will change.
 	 * <p>
@@ -125,8 +127,8 @@ public class TransactionStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDateTime
-	 * Status.StatusDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDateTime
+	 * Status.mmStatusDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class TransactionStatus2 {
 	 * definition} = "Date and time at which the current status will change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChangeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChangeDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
 			componentContext_lazy = () -> TransactionStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDateTime;
 			isDerived = false;
 			xmlTag = "ChngDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeDateTime";
 			definition = "Date and time at which the current status will change.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class TransactionStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus2.Status, com.tools20022.repository.msg.TransactionStatus2.ChangeDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus2.mmStatus, com.tools20022.repository.msg.TransactionStatus2.mmChangeDateTime);
 				trace_lazy = () -> BaselineStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionStatus2";
 				definition = "Identifies the future status of the transaction by means of a code and a period.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BaselineStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(BaselineStatus1Code status) {
+		this.status = status;
+	}
+
+	public ISODateTime getChangeDateTime() {
+		return changeDateTime;
+	}
+
+	public void setChangeDateTime(ISODateTime changeDateTime) {
+		this.changeDateTime = changeDateTime;
 	}
 }

@@ -35,36 +35,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#SingleMonthlyMortality
- * PrePaymentSpeed1Code.SingleMonthlyMortality}</li>
+ * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#mmSingleMonthlyMortality
+ * PrePaymentSpeed1Code.mmSingleMonthlyMortality}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#ConstantPrePaymentRate
- * PrePaymentSpeed1Code.ConstantPrePaymentRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#mmConstantPrePaymentRate
+ * PrePaymentSpeed1Code.mmConstantPrePaymentRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#AbsolutePrePaymentSpeed
- * PrePaymentSpeed1Code.AbsolutePrePaymentSpeed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#mmAbsolutePrePaymentSpeed
+ * PrePaymentSpeed1Code.mmAbsolutePrePaymentSpeed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#MonthlyPrePaymentRate
- * PrePaymentSpeed1Code.MonthlyPrePaymentRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#mmMonthlyPrePaymentRate
+ * PrePaymentSpeed1Code.mmMonthlyPrePaymentRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#HomeEquityPrePaymentCurve
- * PrePaymentSpeed1Code.HomeEquityPrePaymentCurve}</li>
+ * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#mmHomeEquityPrePaymentCurve
+ * PrePaymentSpeed1Code.mmHomeEquityPrePaymentCurve}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#BMAPrePaymentCurve
- * PrePaymentSpeed1Code.BMAPrePaymentCurve}</li>
+ * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#mmBMAPrePaymentCurve
+ * PrePaymentSpeed1Code.mmBMAPrePaymentCurve}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#ProspectusPrePaymentCurve
- * PrePaymentSpeed1Code.ProspectusPrePaymentCurve}</li>
+ * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#mmProspectusPrePaymentCurve
+ * PrePaymentSpeed1Code.mmProspectusPrePaymentCurve}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#ManufacturedHousingPrePaymentCurve
- * PrePaymentSpeed1Code.ManufacturedHousingPrePaymentCurve}</li>
+ * {@linkplain com.tools20022.repository.codeset.PrePaymentSpeed1Code#mmManufacturedHousingPrePaymentCurve
+ * PrePaymentSpeed1Code.mmManufacturedHousingPrePaymentCurve}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +102,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 * name} = "SingleMonthlyMortality"</li>
 	 * </ul>
 	 */
-	public static final MMCode SingleMonthlyMortality = new MMCode() {
+	public static final MMCode mmSingleMonthlyMortality = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleMonthlyMortality";
@@ -125,7 +125,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 * name} = "ConstantPrePaymentRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConstantPrePaymentRate = new MMCode() {
+	public static final MMCode mmConstantPrePaymentRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConstantPrePaymentRate";
@@ -148,7 +148,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 * name} = "AbsolutePrePaymentSpeed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AbsolutePrePaymentSpeed = new MMCode() {
+	public static final MMCode mmAbsolutePrePaymentSpeed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbsolutePrePaymentSpeed";
@@ -171,7 +171,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 * name} = "MonthlyPrePaymentRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode MonthlyPrePaymentRate = new MMCode() {
+	public static final MMCode mmMonthlyPrePaymentRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonthlyPrePaymentRate";
@@ -194,7 +194,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 * name} = "HomeEquityPrePaymentCurve"</li>
 	 * </ul>
 	 */
-	public static final MMCode HomeEquityPrePaymentCurve = new MMCode() {
+	public static final MMCode mmHomeEquityPrePaymentCurve = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HomeEquityPrePaymentCurve";
@@ -217,7 +217,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 * name} = "BMAPrePaymentCurve"</li>
 	 * </ul>
 	 */
-	public static final MMCode BMAPrePaymentCurve = new MMCode() {
+	public static final MMCode mmBMAPrePaymentCurve = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BMAPrePaymentCurve";
@@ -240,7 +240,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 * name} = "ProspectusPrePaymentCurve"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProspectusPrePaymentCurve = new MMCode() {
+	public static final MMCode mmProspectusPrePaymentCurve = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProspectusPrePaymentCurve";
@@ -263,7 +263,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 * name} = "ManufacturedHousingPrePaymentCurve"</li>
 	 * </ul>
 	 */
-	public static final MMCode ManufacturedHousingPrePaymentCurve = new MMCode() {
+	public static final MMCode mmManufacturedHousingPrePaymentCurve = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManufacturedHousingPrePaymentCurve";
@@ -274,15 +274,15 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SIMM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PrePaymentSpeed1Code";
 				definition = "Speed of unscheduled partial of complete payment of the principal amount outstanding on a debt obligation before its due date.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PrePaymentSpeed1Code.SingleMonthlyMortality, com.tools20022.repository.codeset.PrePaymentSpeed1Code.ConstantPrePaymentRate,
-						com.tools20022.repository.codeset.PrePaymentSpeed1Code.AbsolutePrePaymentSpeed, com.tools20022.repository.codeset.PrePaymentSpeed1Code.MonthlyPrePaymentRate,
-						com.tools20022.repository.codeset.PrePaymentSpeed1Code.HomeEquityPrePaymentCurve, com.tools20022.repository.codeset.PrePaymentSpeed1Code.BMAPrePaymentCurve,
-						com.tools20022.repository.codeset.PrePaymentSpeed1Code.ProspectusPrePaymentCurve, com.tools20022.repository.codeset.PrePaymentSpeed1Code.ManufacturedHousingPrePaymentCurve);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmSingleMonthlyMortality, com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmConstantPrePaymentRate,
+						com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmAbsolutePrePaymentSpeed, com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmMonthlyPrePaymentRate,
+						com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmHomeEquityPrePaymentCurve, com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmBMAPrePaymentCurve,
+						com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmProspectusPrePaymentCurve, com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmManufacturedHousingPrePaymentCurve);
 				trace_lazy = () -> PrePaymentSpeedCode.mmObject();
 			}
 		});

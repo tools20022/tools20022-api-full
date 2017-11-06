@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NumberAndVolume2#Number
- * NumberAndVolume2.Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NumberAndVolume2#Volume
- * NumberAndVolume2.Volume}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NumberAndVolume2#mmNumber
+ * NumberAndVolume2.mmNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NumberAndVolume2#mmVolume
+ * NumberAndVolume2.mmVolume}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NumberAndVolume2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumberFraction5 number;
 	/**
 	 * Total number of specific transaction types executed on the reporting day.
 	 * <p>
@@ -90,7 +91,7 @@ public class NumberAndVolume2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberAndVolume2.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class NumberAndVolume2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Total number of specific transaction types executed on the reporting day.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumberFraction5.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount volume;
 	/**
 	 * Total volume of specific transactions executed on the reporting day.
 	 * <p>
@@ -132,7 +134,7 @@ public class NumberAndVolume2 {
 	 * "Total volume of specific transactions executed on the reporting day."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Volume = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVolume = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberAndVolume2.mmObject();
 			isDerived = false;
@@ -140,8 +142,8 @@ public class NumberAndVolume2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Volume";
 			definition = "Total volume of specific transactions executed on the reporting day.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
@@ -149,13 +151,29 @@ public class NumberAndVolume2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberAndVolume2.Number, com.tools20022.repository.msg.NumberAndVolume2.Volume);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberAndVolume2.mmNumber, com.tools20022.repository.msg.NumberAndVolume2.mmVolume);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NumberAndVolume2";
 				definition = "Detail the number and the volume, defined by currency amount, for use in a transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumberFraction5 getNumber() {
+		return number;
+	}
+
+	public void setNumber(DecimalNumberFraction5 number) {
+		this.number = number;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getVolume() {
+		return volume;
+	}
+
+	public void setVolume(ActiveOrHistoricCurrencyAndAmount volume) {
+		this.volume = volume;
 	}
 }

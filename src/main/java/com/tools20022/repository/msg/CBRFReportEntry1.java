@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max9NumericText;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Report entry details.
@@ -34,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CBRFReportEntry1#MessageName
- * CBRFReportEntry1.MessageName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CBRFReportEntry1#mmMessageName
+ * CBRFReportEntry1.mmMessageName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CBRFReportEntry1#TotalNumberOfEntries
- * CBRFReportEntry1.TotalNumberOfEntries}</li>
+ * {@linkplain com.tools20022.repository.msg.CBRFReportEntry1#mmTotalNumberOfEntries
+ * CBRFReportEntry1.mmTotalNumberOfEntries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CBRFReportEntry1#MessageDetails
- * CBRFReportEntry1.MessageDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CBRFReportEntry1#mmMessageDetails
+ * CBRFReportEntry1.mmMessageDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CBRFReportEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageName;
 	/**
 	 * Name of the message.
 	 * <p>
@@ -89,7 +91,7 @@ public class CBRFReportEntry1 {
 	 * definition} = "Name of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CBRFReportEntry1.mmObject();
 			isDerived = false;
@@ -97,11 +99,12 @@ public class CBRFReportEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max9NumericText totalNumberOfEntries;
 	/**
 	 * Total number of entries in the group.
 	 * <p>
@@ -130,7 +133,7 @@ public class CBRFReportEntry1 {
 	 * definition} = "Total number of entries in the group."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfEntries = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfEntries = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CBRFReportEntry1.mmObject();
 			isDerived = false;
@@ -138,11 +141,12 @@ public class CBRFReportEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfEntries";
 			definition = "Total number of entries in the group.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ElectronicMessageDetails1> messageDetails;
 	/**
 	 * Information identifying electronic messages.
 	 * <p>
@@ -170,7 +174,7 @@ public class CBRFReportEntry1 {
 	 * definition} = "Information identifying electronic messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CBRFReportEntry1.mmObject();
 			isDerived = false;
@@ -179,22 +183,46 @@ public class CBRFReportEntry1 {
 			name = "MessageDetails";
 			definition = "Information identifying electronic messages.";
 			minOccurs = 1;
-			type_lazy = () -> ElectronicMessageDetails1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ElectronicMessageDetails1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CBRFReportEntry1.MessageName, com.tools20022.repository.msg.CBRFReportEntry1.TotalNumberOfEntries,
-						com.tools20022.repository.msg.CBRFReportEntry1.MessageDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CBRFReportEntry1.mmMessageName, com.tools20022.repository.msg.CBRFReportEntry1.mmTotalNumberOfEntries,
+						com.tools20022.repository.msg.CBRFReportEntry1.mmMessageDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CBRFReportEntry1";
 				definition = "Report entry details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageName() {
+		return messageName;
+	}
+
+	public void setMessageName(Max35Text messageName) {
+		this.messageName = messageName;
+	}
+
+	public Max9NumericText getTotalNumberOfEntries() {
+		return totalNumberOfEntries;
+	}
+
+	public void setTotalNumberOfEntries(Max9NumericText totalNumberOfEntries) {
+		this.totalNumberOfEntries = totalNumberOfEntries;
+	}
+
+	public List<ElectronicMessageDetails1> getMessageDetails() {
+		return messageDetails;
+	}
+
+	public void setMessageDetails(List<com.tools20022.repository.msg.ElectronicMessageDetails1> messageDetails) {
+		this.messageDetails = messageDetails;
 	}
 }

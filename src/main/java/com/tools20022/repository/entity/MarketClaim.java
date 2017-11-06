@@ -40,14 +40,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MarketClaim#MarketClaimAmount
- * MarketClaim.MarketClaimAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.MarketClaim#mmMarketClaimAmount
+ * MarketClaim.mmMarketClaimAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MarketClaim#MarketClaimTrackingEndDate
- * MarketClaim.MarketClaimTrackingEndDate}</li>
+ * {@linkplain com.tools20022.repository.entity.MarketClaim#mmMarketClaimTrackingEndDate
+ * MarketClaim.mmMarketClaimTrackingEndDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.MarketClaim#RelatedCorporateEvent
- * MarketClaim.RelatedCorporateEvent}</li>
+ * {@linkplain com.tools20022.repository.entity.MarketClaim#mmRelatedCorporateEvent
+ * MarketClaim.mmRelatedCorporateEvent}</li>
  * </ul>
  * </li>
  * <li>
@@ -55,15 +55,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#MarketClaim
- * CorporateActionEvent.MarketClaim}</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarketClaim
+ * CorporateActionEvent.mmMarketClaim}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarketClaim {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount marketClaimAmount;
 	/**
 	 * Amount of money resulting from a market claim.
 	 * <p>
@@ -89,90 +90,90 @@ public class MarketClaim {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#MarketClaimAmount
-	 * CorporateActionAmounts2.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#MarketClaimAmount
-	 * CorporateActionAmounts5.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#MarketClaimAmount
-	 * CorporateActionAmounts11.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#MarketClaimAmount
-	 * CorporateActionAmounts12.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#MarketClaimAmount
-	 * CorporateActionAmounts17.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#MarketClaimAmount
-	 * CorporateActionAmounts20.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#MarketClaimAmount
-	 * CorporateActionAmounts23.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#MarketClaimAmount
-	 * CorporateActionAmounts24.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts3#MarketClaimAmount
-	 * CorporateActionAmounts3.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts6#MarketClaimAmount
-	 * CorporateActionAmounts6.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts9#MarketClaimAmount
-	 * CorporateActionAmounts9.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts13#MarketClaimAmount
-	 * CorporateActionAmounts13.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts16#MarketClaimAmount
-	 * CorporateActionAmounts16.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts19#MarketClaimAmount
-	 * CorporateActionAmounts19.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts22#MarketClaimAmount
-	 * CorporateActionAmounts22.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts25#MarketClaimAmount
-	 * CorporateActionAmounts25.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts1#MarketClaimAmount
-	 * CorporateActionAmounts1.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#MarketClaimAmount
-	 * CorporateActionAmounts29.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts28#MarketClaimAmount
-	 * CorporateActionAmounts28.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts33#MarketClaimAmount
-	 * CorporateActionAmounts33.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#MarketClaimAmount
-	 * CorporateActionAmounts35.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#MarketClaimAmount
-	 * CorporateActionAmounts37.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts38#MarketClaimAmount
-	 * CorporateActionAmounts38.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#MarketClaimAmount
-	 * CorporateActionAmounts39.MarketClaimAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#MarketClaimAmount
-	 * CorporateActionAmounts40.MarketClaimAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarketClaim MarketClaim}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts2#mmMarketClaimAmount
+	 * CorporateActionAmounts2.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts5#mmMarketClaimAmount
+	 * CorporateActionAmounts5.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts11#mmMarketClaimAmount
+	 * CorporateActionAmounts11.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts12#mmMarketClaimAmount
+	 * CorporateActionAmounts12.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts17#mmMarketClaimAmount
+	 * CorporateActionAmounts17.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts20#mmMarketClaimAmount
+	 * CorporateActionAmounts20.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts23#mmMarketClaimAmount
+	 * CorporateActionAmounts23.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts24#mmMarketClaimAmount
+	 * CorporateActionAmounts24.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts3#mmMarketClaimAmount
+	 * CorporateActionAmounts3.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts6#mmMarketClaimAmount
+	 * CorporateActionAmounts6.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts9#mmMarketClaimAmount
+	 * CorporateActionAmounts9.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts13#mmMarketClaimAmount
+	 * CorporateActionAmounts13.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts16#mmMarketClaimAmount
+	 * CorporateActionAmounts16.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts19#mmMarketClaimAmount
+	 * CorporateActionAmounts19.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts22#mmMarketClaimAmount
+	 * CorporateActionAmounts22.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts25#mmMarketClaimAmount
+	 * CorporateActionAmounts25.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts1#mmMarketClaimAmount
+	 * CorporateActionAmounts1.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmMarketClaimAmount
+	 * CorporateActionAmounts29.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts28#mmMarketClaimAmount
+	 * CorporateActionAmounts28.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts33#mmMarketClaimAmount
+	 * CorporateActionAmounts33.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts35#mmMarketClaimAmount
+	 * CorporateActionAmounts35.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmMarketClaimAmount
+	 * CorporateActionAmounts37.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts38#mmMarketClaimAmount
+	 * CorporateActionAmounts38.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#mmMarketClaimAmount
+	 * CorporateActionAmounts39.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmMarketClaimAmount
+	 * CorporateActionAmounts40.mmMarketClaimAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -184,30 +185,32 @@ public class MarketClaim {
 	 * definition} = "Amount of money resulting from a market claim."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MarketClaimAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMarketClaimAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts5.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts12.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts20.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts24.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts6.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts9.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts13.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts16.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts19.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts22.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts25.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts1.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts29.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts28.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts35.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts37.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts38.MarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts39.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts40.MarketClaimAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts11.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts17.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts23.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts3.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts9.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts13.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts16.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts19.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts22.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts25.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts1.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts28.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts33.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts35.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts38.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts39.mmMarketClaimAmount,
+					com.tools20022.repository.msg.CorporateActionAmounts40.mmMarketClaimAmount);
 			elementContext_lazy = () -> MarketClaim.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarketClaimAmount";
 			definition = "Amount of money resulting from a market claim.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODateTime marketClaimTrackingEndDate;
 	/**
 	 * Date by which the depository stops monitoring activities of the event,
 	 * for instance, accounting and tracking activities for due bills end.
@@ -218,45 +221,45 @@ public class MarketClaim {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#MarketClaimTrackingEndDate
-	 * CorporateActionDate1.MarketClaimTrackingEndDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#MarketClaimTrackingEndDate
-	 * CorporateActionDate13.MarketClaimTrackingEndDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#MarketClaimTrackingEndDate
-	 * CorporateActionDate14.MarketClaimTrackingEndDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#MarketClaimTrackingEndDate
-	 * CorporateActionDate21.MarketClaimTrackingEndDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#MarketClaimTrackingEndDate
-	 * CorporateActionDate22.MarketClaimTrackingEndDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#MarketClaimTrackingEndDate
-	 * CorporateActionDate25.MarketClaimTrackingEndDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#MarketClaimTrackingEndDate
-	 * CorporateActionDate27.MarketClaimTrackingEndDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#MarketClaimTrackingEndDate
-	 * CorporateActionDate28.MarketClaimTrackingEndDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#MarketClaimTrackingEndDate
-	 * CorporateActionDate44.MarketClaimTrackingEndDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#MarketClaimTrackingEndDate
-	 * CorporateActionDate58.MarketClaimTrackingEndDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.MarketClaim MarketClaim}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate1.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate13.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate14.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate21.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate22.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate25.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate27.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate28.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate44.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate58.mmMarketClaimTrackingEndDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -270,23 +273,24 @@ public class MarketClaim {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MarketClaimTrackingEndDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMarketClaimTrackingEndDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.MarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate13.MarketClaimTrackingEndDate,
-					com.tools20022.repository.msg.CorporateActionDate14.MarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate21.MarketClaimTrackingEndDate,
-					com.tools20022.repository.msg.CorporateActionDate22.MarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate25.MarketClaimTrackingEndDate,
-					com.tools20022.repository.msg.CorporateActionDate27.MarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate28.MarketClaimTrackingEndDate,
-					com.tools20022.repository.msg.CorporateActionDate44.MarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate58.MarketClaimTrackingEndDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmMarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate13.mmMarketClaimTrackingEndDate,
+					com.tools20022.repository.msg.CorporateActionDate14.mmMarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate21.mmMarketClaimTrackingEndDate,
+					com.tools20022.repository.msg.CorporateActionDate22.mmMarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate25.mmMarketClaimTrackingEndDate,
+					com.tools20022.repository.msg.CorporateActionDate27.mmMarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate28.mmMarketClaimTrackingEndDate,
+					com.tools20022.repository.msg.CorporateActionDate44.mmMarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate58.mmMarketClaimTrackingEndDate);
 			elementContext_lazy = () -> MarketClaim.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarketClaimTrackingEndDate";
 			definition = "Date by which the depository stops monitoring activities of the event, for instance, accounting and tracking activities for due bills end.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CorporateActionEvent relatedCorporateEvent;
 	/**
 	 * Corporate event for which market claim information is provided.
 	 * <p>
@@ -295,8 +299,8 @@ public class MarketClaim {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#MarketClaim
-	 * CorporateActionEvent.MarketClaim}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarketClaim
+	 * CorporateActionEvent.mmMarketClaim}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -321,33 +325,57 @@ public class MarketClaim {
 	 * "Corporate event for which market claim information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedCorporateEvent = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedCorporateEvent = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> MarketClaim.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateEvent";
 			definition = "Corporate event for which market claim information is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionEvent.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.MarketClaim;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmMarketClaim;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketClaim";
 				definition = "Processes that reallocate corporate action proceeds to the entitled party and that compensate financial penalties or indirect costs due to late delivery or payment.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.MarketClaim);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MarketClaim.MarketClaimAmount, com.tools20022.repository.entity.MarketClaim.MarketClaimTrackingEndDate,
-						com.tools20022.repository.entity.MarketClaim.RelatedCorporateEvent);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.mmMarketClaim);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MarketClaim.mmMarketClaimAmount, com.tools20022.repository.entity.MarketClaim.mmMarketClaimTrackingEndDate,
+						com.tools20022.repository.entity.MarketClaim.mmRelatedCorporateEvent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getMarketClaimAmount() {
+		return marketClaimAmount;
+	}
+
+	public void setMarketClaimAmount(CurrencyAndAmount marketClaimAmount) {
+		this.marketClaimAmount = marketClaimAmount;
+	}
+
+	public ISODateTime getMarketClaimTrackingEndDate() {
+		return marketClaimTrackingEndDate;
+	}
+
+	public void setMarketClaimTrackingEndDate(ISODateTime marketClaimTrackingEndDate) {
+		this.marketClaimTrackingEndDate = marketClaimTrackingEndDate;
+	}
+
+	public CorporateActionEvent getRelatedCorporateEvent() {
+		return relatedCorporateEvent;
+	}
+
+	public void setRelatedCorporateEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateEvent) {
+		this.relatedCorporateEvent = relatedCorporateEvent;
 	}
 }

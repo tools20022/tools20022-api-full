@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus1#Status
- * TransactionStatus1.Status}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionStatus1#mmStatus
+ * TransactionStatus1.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BaselineStatus1Code status;
 	/**
 	 * Identifies the status of the transaction by means of a code.
 	 * <p>
@@ -71,8 +72,8 @@ public class TransactionStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BaselineStatus#Status
-	 * BaselineStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.BaselineStatus#mmStatus
+	 * BaselineStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,17 +93,17 @@ public class TransactionStatus1 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmStatus;
 			componentContext_lazy = () -> TransactionStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.Status;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Identifies the status of the transaction by means of a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatus1Code.mmObject();
 		}
 	};
@@ -110,14 +111,22 @@ public class TransactionStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus1.Status);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus1.mmStatus);
 				trace_lazy = () -> BaselineStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionStatus1";
 				definition = "Identifies the status of the transaction by means of a code.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BaselineStatus1Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(BaselineStatus1Code status) {
+		this.status = status;
 	}
 }

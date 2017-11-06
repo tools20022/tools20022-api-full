@@ -32,15 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ResponseLevel#ResponseLevel
- * ResponseLevel.ResponseLevel}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ResponseLevel#mmResponseLevel
+ * ResponseLevel.mmResponseLevel}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +56,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ResponseLevel {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ResponseLevel1Code responseLevel;
 	/**
 	 * Specifies the level of response requested from the receiver of the
 	 * message.
@@ -86,16 +87,16 @@ public class ResponseLevel {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseLevel = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseLevel.mmObject();
+			componentContext_lazy = () -> ResponseLevel.mmObject();
 			isDerived = false;
 			xmlTag = "RspnLvl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseLevel";
 			definition = "Specifies the level of response requested from the receiver of the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ResponseLevel1Code.mmObject();
 		}
 	};
@@ -103,13 +104,21 @@ public class ResponseLevel {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseLevel.ResponseLevel);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseLevel.mmResponseLevel);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ResponseLevel";
 				definition = "Identifies the level of response requested from the receiver of this message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ResponseLevel1Code getResponseLevel() {
+		return responseLevel;
+	}
+
+	public void setResponseLevel(ResponseLevel1Code responseLevel) {
+		this.responseLevel = responseLevel;
 	}
 }

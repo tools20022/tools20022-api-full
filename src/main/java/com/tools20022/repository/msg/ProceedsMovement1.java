@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the proceeds movements.
@@ -32,13 +33,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProceedsMovement1#CashProceedsMovementDetails
- * ProceedsMovement1.CashProceedsMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ProceedsMovement1#mmCashProceedsMovementDetails
+ * ProceedsMovement1.mmCashProceedsMovementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProceedsMovement1#SecuritiesProceedsMovementDetails
- * ProceedsMovement1.SecuritiesProceedsMovementDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProceedsMovement1#TaxDetails
- * ProceedsMovement1.TaxDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ProceedsMovement1#mmSecuritiesProceedsMovementDetails
+ * ProceedsMovement1.mmSecuritiesProceedsMovementDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProceedsMovement1#mmTaxDetails
+ * ProceedsMovement1.mmTaxDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#ProceedsMovementDetails
- * AgentCAMovementInstructionV01.ProceedsMovementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmProceedsMovementDetails
+ * AgentCAMovementInstructionV01.mmProceedsMovementDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProceedsMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.CashProceeds1> cashProceedsMovementDetails;
 	/**
 	 * Provides information about the movement of the cash proceeds.
 	 * <p>
@@ -95,7 +97,7 @@ public class ProceedsMovement1 {
 	 * "Provides information about the movement of the cash proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashProceedsMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashProceedsMovementDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ProceedsMovement1.mmObject();
 			isDerived = false;
@@ -104,10 +106,11 @@ public class ProceedsMovement1 {
 			name = "CashProceedsMovementDetails";
 			definition = "Provides information about the movement of the cash proceeds.";
 			minOccurs = 0;
-			type_lazy = () -> CashProceeds1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashProceeds1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesProceeds1> securitiesProceedsMovementDetails;
 	/**
 	 * Provides information about the movement of the securities proceeds.
 	 * <p>
@@ -135,7 +138,7 @@ public class ProceedsMovement1 {
 	 * "Provides information about the movement of the securities proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesProceedsMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesProceedsMovementDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ProceedsMovement1.mmObject();
 			isDerived = false;
@@ -144,10 +147,11 @@ public class ProceedsMovement1 {
 			name = "SecuritiesProceedsMovementDetails";
 			definition = "Provides information about the movement of the securities proceeds.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesProceeds1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesProceeds1.mmObject();
 		}
 	};
+	protected TaxVoucher1 taxDetails;
 	/**
 	 * Provides information about the tax voucher.
 	 * <p>
@@ -159,8 +163,8 @@ public class ProceedsMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferTax
-	 * SecuritiesTransfer.TransferTax}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferTax
+	 * SecuritiesTransfer.mmTransferTax}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,34 +183,58 @@ public class ProceedsMovement1 {
 	 * definition} = "Provides information about the tax voucher."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TaxDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferTax;
 			componentContext_lazy = () -> ProceedsMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferTax;
 			isDerived = false;
 			xmlTag = "TaxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Provides information about the tax voucher.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TaxVoucher1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProceedsMovement1.CashProceedsMovementDetails, com.tools20022.repository.msg.ProceedsMovement1.SecuritiesProceedsMovementDetails,
-						com.tools20022.repository.msg.ProceedsMovement1.TaxDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.ProceedsMovementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProceedsMovement1.mmCashProceedsMovementDetails, com.tools20022.repository.msg.ProceedsMovement1.mmSecuritiesProceedsMovementDetails,
+						com.tools20022.repository.msg.ProceedsMovement1.mmTaxDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmProceedsMovementDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProceedsMovement1";
 				definition = "Details of the proceeds movements.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CashProceeds1> getCashProceedsMovementDetails() {
+		return cashProceedsMovementDetails;
+	}
+
+	public void setCashProceedsMovementDetails(List<com.tools20022.repository.msg.CashProceeds1> cashProceedsMovementDetails) {
+		this.cashProceedsMovementDetails = cashProceedsMovementDetails;
+	}
+
+	public List<SecuritiesProceeds1> getSecuritiesProceedsMovementDetails() {
+		return securitiesProceedsMovementDetails;
+	}
+
+	public void setSecuritiesProceedsMovementDetails(List<com.tools20022.repository.msg.SecuritiesProceeds1> securitiesProceedsMovementDetails) {
+		this.securitiesProceedsMovementDetails = securitiesProceedsMovementDetails;
+	}
+
+	public TaxVoucher1 getTaxDetails() {
+		return taxDetails;
+	}
+
+	public void setTaxDetails(com.tools20022.repository.msg.TaxVoucher1 taxDetails) {
+		this.taxDetails = taxDetails;
 	}
 }

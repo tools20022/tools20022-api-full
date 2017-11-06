@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The SystemEventAcknowledgement message is sent by a participant of a central
@@ -61,27 +62,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#MessageIdentification
- * SystemEventAcknowledgementV01.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#mmMessageIdentification
+ * SystemEventAcknowledgementV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#OriginatorReference
- * SystemEventAcknowledgementV01.OriginatorReference}</li>
+ * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#mmOriginatorReference
+ * SystemEventAcknowledgementV01.mmOriginatorReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#SettlementSessionIdentifier
- * SystemEventAcknowledgementV01.SettlementSessionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#mmSettlementSessionIdentifier
+ * SystemEventAcknowledgementV01.mmSettlementSessionIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#AcknowledgementDetails
- * SystemEventAcknowledgementV01.AcknowledgementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#mmAcknowledgementDetails
+ * SystemEventAcknowledgementV01.mmAcknowledgementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#SupplementaryData
- * SystemEventAcknowledgementV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#mmSupplementaryData
+ * SystemEventAcknowledgementV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.admi.SystemEventAcknowledgementV01#identifier
- * SystemEventAcknowledgementV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code admi.011.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemEventAcknowledgementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Unique and unambiguous identifier for the message, as assigned by the
 	 * sender.
@@ -122,17 +122,18 @@ public class SystemEventAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for the message, as assigned by the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text originatorReference;
 	/**
 	 * Represents the original reference of the system event notification for
 	 * which the acknowledgement is given, as assigned by the central system.
@@ -158,17 +159,18 @@ public class SystemEventAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginatorReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginatorReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgtrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatorReference";
 			definition = "Represents the original reference of the system event notification for which the acknowledgement is given, as assigned by the central system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
 	 * To indicate the requested CLS Settlement Session that the related trade
 	 * is part of.
@@ -195,17 +197,18 @@ public class SystemEventAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "To indicate the requested CLS Settlement Session that the related trade is part of.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected Event1 acknowledgementDetails;
 	/**
 	 * Details of the system event being acknowledged.
 	 * <p>
@@ -227,17 +230,18 @@ public class SystemEventAcknowledgementV01 {
 	 * definition} = "Details of the system event being acknowledged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcknowledgementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcknowledgementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AckDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementDetails";
 			definition = "Details of the system event being acknowledged.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Event1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -264,7 +268,7 @@ public class SystemEventAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,33 +276,6 @@ public class SystemEventAcknowledgementV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "admi"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "011"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "admi";
-			messageFunctionality = "011";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -312,12 +289,59 @@ public class SystemEventAcknowledgementV01 {
 				rootElement = "Document";
 				xmlTag = "SysEvtAck";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.MessageIdentification, com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.OriginatorReference,
-						com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.SettlementSessionIdentifier, com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.AcknowledgementDetails,
-						com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmMessageIdentification,
+						com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmOriginatorReference, com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmSettlementSessionIdentifier,
+						com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmAcknowledgementDetails, com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "admi";
+						messageFunctionality = "011";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Max35Text getOriginatorReference() {
+		return originatorReference;
+	}
+
+	public void setOriginatorReference(Max35Text originatorReference) {
+		this.originatorReference = originatorReference;
+	}
+
+	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier;
+	}
+
+	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+		this.settlementSessionIdentifier = settlementSessionIdentifier;
+	}
+
+	public Event1 getAcknowledgementDetails() {
+		return acknowledgementDetails;
+	}
+
+	public void setAcknowledgementDetails(Event1 acknowledgementDetails) {
+		this.acknowledgementDetails = acknowledgementDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

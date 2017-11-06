@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -79,38 +80,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#Identification
- * SecuritiesTransactionCancellationRequestStatusAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmIdentification
+ * SecuritiesTransactionCancellationRequestStatusAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#CancellationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmCancellationRequestReference
  * SecuritiesTransactionCancellationRequestStatusAdviceV01.
- * CancellationRequestReference}</li>
+ * mmCancellationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#TransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmTransactionIdentification
  * SecuritiesTransactionCancellationRequestStatusAdviceV01.
- * TransactionIdentification}</li>
+ * mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#ProcessingStatus
- * SecuritiesTransactionCancellationRequestStatusAdviceV01.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmProcessingStatus
+ * SecuritiesTransactionCancellationRequestStatusAdviceV01.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#TransactionDetails
- * SecuritiesTransactionCancellationRequestStatusAdviceV01.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmTransactionDetails
+ * SecuritiesTransactionCancellationRequestStatusAdviceV01.mmTransactionDetails}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#MessageOriginator
- * SecuritiesTransactionCancellationRequestStatusAdviceV01.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmMessageOriginator
+ * SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#MessageRecipient
- * SecuritiesTransactionCancellationRequestStatusAdviceV01.MessageRecipient}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmMessageRecipient
+ * SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageRecipient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#Extension
- * SecuritiesTransactionCancellationRequestStatusAdviceV01.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#mmExtension
+ * SecuritiesTransactionCancellationRequestStatusAdviceV01.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01#identifier
- * SecuritiesTransactionCancellationRequestStatusAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.027.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -134,6 +134,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification11 identification;
 	/**
 	 * Information that unambiguously identifies a
 	 * SecuritiesTransactionCancellationRequestStatusAdvice message as know by
@@ -161,17 +162,18 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Information that unambiguously identifies a SecuritiesTransactionCancellationRequestStatusAdvice message as know by the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
 	};
+	protected Identification1 cancellationRequestReference;
 	/**
 	 * Reference to the unambiguous identification of the cancellation request
 	 * as per the account owner.
@@ -197,17 +199,18 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationRequestReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationRequestReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlReqRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequestReference";
 			definition = "Reference to the unambiguous identification of the cancellation request as per the account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Identification1.mmObject();
 		}
 	};
+	protected TransactionIdentifications4 transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as known by the account
 	 * servicer.
@@ -234,17 +237,18 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransactionIdentifications4.mmObject();
 		}
 	};
+	protected ProcessingStatus2Choice processingStatus;
 	/**
 	 * Provides details on the processing status of the request.
 	 * <p>
@@ -269,17 +273,18 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProcessingStatus2Choice.mmObject();
 		}
 	};
+	protected TransactionDetails4 transactionDetails;
 	/**
 	 * Identifies the details of the transaction.
 	 * <p>
@@ -303,17 +308,18 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 	 * definition} = "Identifies the details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies the details of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransactionDetails4.mmObject();
 		}
 	};
+	protected PartyIdentification10Choice messageOriginator;
 	/**
 	 * Party that originated the message, if other than the sender.
 	 * <p>
@@ -338,17 +344,18 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 	};
+	protected PartyIdentification10Choice messageRecipient;
 	/**
 	 * Party that is the final destination of the message, if other than the
 	 * receiver.
@@ -375,17 +382,18 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRecipient";
 			definition = "Party that is the final destination of the message, if other than the receiver.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 	};
+	protected List<Extension2> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -411,7 +419,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -419,33 +427,6 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "027"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "027";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -460,16 +441,89 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesTxCxlReqStsAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.Identification,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.CancellationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.TransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.ProcessingStatus,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.TransactionDetails,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.MessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.MessageRecipient, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays
+						.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmIdentification,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmCancellationRequestReference,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmTransactionIdentification,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmProcessingStatus,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmTransactionDetails,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageOriginator,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageRecipient,
+								com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "027";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification11 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification11 identification) {
+		this.identification = identification;
+	}
+
+	public Identification1 getCancellationRequestReference() {
+		return cancellationRequestReference;
+	}
+
+	public void setCancellationRequestReference(Identification1 cancellationRequestReference) {
+		this.cancellationRequestReference = cancellationRequestReference;
+	}
+
+	public TransactionIdentifications4 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(TransactionIdentifications4 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public ProcessingStatus2Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatus2Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public TransactionDetails4 getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(TransactionDetails4 transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public PartyIdentification10Choice getMessageOriginator() {
+		return messageOriginator;
+	}
+
+	public void setMessageOriginator(PartyIdentification10Choice messageOriginator) {
+		this.messageOriginator = messageOriginator;
+	}
+
+	public PartyIdentification10Choice getMessageRecipient() {
+		return messageRecipient;
+	}
+
+	public void setMessageRecipient(PartyIdentification10Choice messageRecipient) {
+		this.messageRecipient = messageRecipient;
+	}
+
+	public List<Extension2> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension2> extension) {
+		this.extension = extension;
 	}
 }

@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeBasicAttributes2#NotionalCurrencyAndAmount
- * DerivativeBasicAttributes2.NotionalCurrencyAndAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeBasicAttributes2#mmNotionalCurrencyAndAmount
+ * DerivativeBasicAttributes2.mmNotionalCurrencyAndAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeBasicAttributes2#InterestIncludedInPrice
- * DerivativeBasicAttributes2.InterestIncludedInPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeBasicAttributes2#mmInterestIncludedInPrice
+ * DerivativeBasicAttributes2.mmInterestIncludedInPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DerivativeBasicAttributes2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINActiveOrHistoricCurrencyAndAmount notionalCurrencyAndAmount;
 	/**
 	 * Amount underlying a financial derivatives contract necessary for
 	 * calculating payments or receipts.
@@ -79,8 +80,8 @@ public class DerivativeBasicAttributes2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#NotionalCurrencyAndAmount
-	 * Derivative.NotionalCurrencyAndAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrencyAndAmount
+	 * Derivative.mmNotionalCurrencyAndAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class DerivativeBasicAttributes2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotionalCurrencyAndAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotionalCurrencyAndAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrencyAndAmount;
 			componentContext_lazy = () -> DerivativeBasicAttributes2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.NotionalCurrencyAndAmount;
 			isDerived = false;
 			xmlTag = "NtnlCcyAndAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrencyAndAmount";
 			definition = "Amount underlying a financial derivatives contract necessary for calculating payments or receipts.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected YesNoIndicator interestIncludedInPrice;
 	/**
 	 * Indicates whether the given derivative price includes a prorated accrued
 	 * interest component.
@@ -146,7 +148,7 @@ public class DerivativeBasicAttributes2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestIncludedInPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestIncludedInPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DerivativeBasicAttributes2.mmObject();
 			isDerived = false;
@@ -154,8 +156,8 @@ public class DerivativeBasicAttributes2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestIncludedInPrice";
 			definition = "Indicates whether the given derivative price includes a prorated accrued interest component.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class DerivativeBasicAttributes2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeBasicAttributes2.NotionalCurrencyAndAmount, com.tools20022.repository.msg.DerivativeBasicAttributes2.InterestIncludedInPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeBasicAttributes2.mmNotionalCurrencyAndAmount, com.tools20022.repository.msg.DerivativeBasicAttributes2.mmInterestIncludedInPrice);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DerivativeBasicAttributes2";
 				definition = "Details of the derivative contract not included in the general financial instrument attributes component.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINActiveOrHistoricCurrencyAndAmount getNotionalCurrencyAndAmount() {
+		return notionalCurrencyAndAmount;
+	}
+
+	public void setNotionalCurrencyAndAmount(RestrictedFINActiveOrHistoricCurrencyAndAmount notionalCurrencyAndAmount) {
+		this.notionalCurrencyAndAmount = notionalCurrencyAndAmount;
+	}
+
+	public YesNoIndicator getInterestIncludedInPrice() {
+		return interestIncludedInPrice;
+	}
+
+	public void setInterestIncludedInPrice(YesNoIndicator interestIncludedInPrice) {
+		this.interestIncludedInPrice = interestIncludedInPrice;
 	}
 }

@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionType1Code#PreFunded
- * RedemptionType1Code.PreFunded}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionType1Code#mmPreFunded
+ * RedemptionType1Code.mmPreFunded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionType1Code#Escrowed
- * RedemptionType1Code.Escrowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionType1Code#mmEscrowed
+ * RedemptionType1Code.mmEscrowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionType1Code#Convertible
- * RedemptionType1Code.Convertible}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionType1Code#mmConvertible
+ * RedemptionType1Code.mmConvertible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionType1Code#Callable
- * RedemptionType1Code.Callable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionType1Code#mmCallable
+ * RedemptionType1Code.mmCallable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionType1Code#Putable
- * RedemptionType1Code.Putable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionType1Code#mmPutable
+ * RedemptionType1Code.mmPutable}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	 * name} = "PreFunded"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreFunded = new MMCode() {
+	public static final MMCode mmPreFunded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreFunded";
@@ -114,7 +114,7 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	 * name} = "Escrowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Escrowed = new MMCode() {
+	public static final MMCode mmEscrowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Escrowed";
@@ -137,7 +137,7 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	 * name} = "Convertible"</li>
 	 * </ul>
 	 */
-	public static final MMCode Convertible = new MMCode() {
+	public static final MMCode mmConvertible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Convertible";
@@ -160,7 +160,7 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	 * name} = "Callable"</li>
 	 * </ul>
 	 */
-	public static final MMCode Callable = new MMCode() {
+	public static final MMCode mmCallable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Callable";
@@ -183,7 +183,7 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	 * name} = "Putable"</li>
 	 * </ul>
 	 */
-	public static final MMCode Putable = new MMCode() {
+	public static final MMCode mmPutable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Putable";
@@ -194,13 +194,13 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PFIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RedemptionType1Code";
 				definition = "Indicates the redemption type of the interest bearing instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RedemptionType1Code.PreFunded, com.tools20022.repository.codeset.RedemptionType1Code.Escrowed,
-						com.tools20022.repository.codeset.RedemptionType1Code.Convertible, com.tools20022.repository.codeset.RedemptionType1Code.Callable, com.tools20022.repository.codeset.RedemptionType1Code.Putable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RedemptionType1Code.mmPreFunded, com.tools20022.repository.codeset.RedemptionType1Code.mmEscrowed,
+						com.tools20022.repository.codeset.RedemptionType1Code.mmConvertible, com.tools20022.repository.codeset.RedemptionType1Code.mmCallable, com.tools20022.repository.codeset.RedemptionType1Code.mmPutable);
 				trace_lazy = () -> RedemptionTypeCode.mmObject();
 			}
 		});

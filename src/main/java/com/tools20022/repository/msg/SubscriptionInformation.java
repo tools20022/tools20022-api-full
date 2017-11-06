@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionInformation#DateOfFirstSubscription
- * SubscriptionInformation.DateOfFirstSubscription}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionInformation#mmDateOfFirstSubscription
+ * SubscriptionInformation.mmDateOfFirstSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionInformation#EquityComponent
- * SubscriptionInformation.EquityComponent}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionInformation#mmEquityComponent
+ * SubscriptionInformation.mmEquityComponent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionInformation#CashComponent
- * SubscriptionInformation.CashComponent}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionInformation#mmCashComponent
+ * SubscriptionInformation.mmCashComponent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionInformation#TotalAmountYearToDate
- * SubscriptionInformation.TotalAmountYearToDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionInformation#mmTotalAmountYearToDate
+ * SubscriptionInformation.mmTotalAmountYearToDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubscriptionInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate dateOfFirstSubscription;
 	/**
 	 * Date the investment plan starts.
 	 * <p>
@@ -81,8 +82,8 @@ public class SubscriptionInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class SubscriptionInformation {
 	 * definition} = "Date the investment plan starts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateOfFirstSubscription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateOfFirstSubscription = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> SubscriptionInformation.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "DtOfFrstSbcpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfFirstSubscription";
 			definition = "Date the investment plan starts.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount equityComponent;
 	/**
 	 * Amount subscribed in the current tax year into equity (not including
 	 * dividends).
@@ -129,8 +131,8 @@ public class SubscriptionInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#EquityComponent
-	 * SubscriptionExecution.EquityComponent}</li>
+	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmEquityComponent
+	 * SubscriptionExecution.mmEquityComponent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,20 +153,21 @@ public class SubscriptionInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EquityComponent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEquityComponent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmEquityComponent;
 			componentContext_lazy = () -> SubscriptionInformation.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.EquityComponent;
 			isDerived = false;
 			xmlTag = "EqtyCmpnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquityComponent";
 			definition = "Amount subscribed in the current tax year into equity (not including dividends).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount cashComponent;
 	/**
 	 * Amount subscribed in the current tax year into cash.
 	 * <p>
@@ -178,8 +181,8 @@ public class SubscriptionInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#CashComponent
-	 * SubscriptionExecution.CashComponent}</li>
+	 * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmCashComponent
+	 * SubscriptionExecution.mmCashComponent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,20 +201,21 @@ public class SubscriptionInformation {
 	 * definition} = "Amount subscribed in the current tax year into cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashComponent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashComponent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmCashComponent;
 			componentContext_lazy = () -> SubscriptionInformation.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.CashComponent;
 			isDerived = false;
 			xmlTag = "CshCmpnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashComponent";
 			definition = "Amount subscribed in the current tax year into cash.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount totalAmountYearToDate;
 	/**
 	 * Total amount subscribed in the current tax year.
 	 * <p>
@@ -225,8 +229,8 @@ public class SubscriptionInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#TotalAmount
-	 * InvestmentFundOrder.TotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmTotalAmount
+	 * InvestmentFundOrder.mmTotalAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -245,17 +249,17 @@ public class SubscriptionInformation {
 	 * definition} = "Total amount subscribed in the current tax year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalAmountYearToDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalAmountYearToDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmTotalAmount;
 			componentContext_lazy = () -> SubscriptionInformation.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.TotalAmount;
 			isDerived = false;
 			xmlTag = "TtlAmtYrToDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountYearToDate";
 			definition = "Total amount subscribed in the current tax year.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -263,15 +267,47 @@ public class SubscriptionInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionInformation.DateOfFirstSubscription, com.tools20022.repository.msg.SubscriptionInformation.EquityComponent,
-						com.tools20022.repository.msg.SubscriptionInformation.CashComponent, com.tools20022.repository.msg.SubscriptionInformation.TotalAmountYearToDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionInformation.mmDateOfFirstSubscription, com.tools20022.repository.msg.SubscriptionInformation.mmEquityComponent,
+						com.tools20022.repository.msg.SubscriptionInformation.mmCashComponent, com.tools20022.repository.msg.SubscriptionInformation.mmTotalAmountYearToDate);
 				trace_lazy = () -> SubscriptionExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubscriptionInformation";
 				definition = "Execution of a subscription order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDateOfFirstSubscription() {
+		return dateOfFirstSubscription;
+	}
+
+	public void setDateOfFirstSubscription(ISODate dateOfFirstSubscription) {
+		this.dateOfFirstSubscription = dateOfFirstSubscription;
+	}
+
+	public CurrencyAndAmount getEquityComponent() {
+		return equityComponent;
+	}
+
+	public void setEquityComponent(CurrencyAndAmount equityComponent) {
+		this.equityComponent = equityComponent;
+	}
+
+	public CurrencyAndAmount getCashComponent() {
+		return cashComponent;
+	}
+
+	public void setCashComponent(CurrencyAndAmount cashComponent) {
+		this.cashComponent = cashComponent;
+	}
+
+	public CurrencyAndAmount getTotalAmountYearToDate() {
+		return totalAmountYearToDate;
+	}
+
+	public void setTotalAmountYearToDate(CurrencyAndAmount totalAmountYearToDate) {
+		this.totalAmountYearToDate = totalAmountYearToDate;
 	}
 }

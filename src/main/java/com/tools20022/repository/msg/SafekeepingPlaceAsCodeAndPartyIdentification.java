@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification#PlaceSafekeeping
- * SafekeepingPlaceAsCodeAndPartyIdentification.PlaceSafekeeping}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification#mmPlaceSafekeeping
+ * SafekeepingPlaceAsCodeAndPartyIdentification.mmPlaceSafekeeping}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification#Narrative
- * SafekeepingPlaceAsCodeAndPartyIdentification.Narrative}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification#mmNarrative
+ * SafekeepingPlaceAsCodeAndPartyIdentification.mmNarrative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification#Party
- * SafekeepingPlaceAsCodeAndPartyIdentification.Party}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification#mmParty
+ * SafekeepingPlaceAsCodeAndPartyIdentification.mmParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SafekeepingPlaceAsCodeAndPartyIdentification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SafekeepingPlace1Code placeSafekeeping;
 	/**
 	 * Place of safekeeping as a code.
 	 * <p>
@@ -95,7 +96,7 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 	 * definition} = "Place of safekeeping as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceSafekeeping = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceSafekeeping = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SafekeepingPlaceAsCodeAndPartyIdentification.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceSafekeeping";
 			definition = "Place of safekeeping as a code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SafekeepingPlace1Code.mmObject();
 		}
 	};
+	protected Max35Text narrative;
 	/**
 	 * Additional information about the place of safekeeping.
 	 * <p>
@@ -135,7 +137,7 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 	 * definition} = "Additional information about the place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Narrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNarrative = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SafekeepingPlaceAsCodeAndPartyIdentification.mmObject();
 			isDerived = false;
@@ -143,11 +145,12 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Narrative";
 			definition = "Additional information about the place of safekeeping.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification3 party;
 	/**
 	 * Place of safekeeping.
 	 * <p>
@@ -161,8 +164,8 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,33 +184,57 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 	 * definition} = "Place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Party = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SafekeepingPlaceAsCodeAndPartyIdentification.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Place of safekeeping.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification.PlaceSafekeeping, com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification.Narrative,
-						com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification.Party);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification.mmPlaceSafekeeping,
+						com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification.mmNarrative, com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification.mmParty);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlaceAsCodeAndPartyIdentification";
 				definition = "Identification of the place of safekeeping expressed as a code and a BIC.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SafekeepingPlace1Code getPlaceSafekeeping() {
+		return placeSafekeeping;
+	}
+
+	public void setPlaceSafekeeping(SafekeepingPlace1Code placeSafekeeping) {
+		this.placeSafekeeping = placeSafekeeping;
+	}
+
+	public Max35Text getNarrative() {
+		return narrative;
+	}
+
+	public void setNarrative(Max35Text narrative) {
+		this.narrative = narrative;
+	}
+
+	public PartyIdentification3 getParty() {
+		return party;
+	}
+
+	public void setParty(com.tools20022.repository.msg.PartyIdentification3 party) {
+		this.party = party;
 	}
 }

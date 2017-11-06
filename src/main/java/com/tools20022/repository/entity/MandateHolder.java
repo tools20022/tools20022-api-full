@@ -37,56 +37,56 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties2#PowerOfAttorney
- * AccountParties2.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties2#mmPowerOfAttorney
+ * AccountParties2.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties5#PowerOfAttorney
- * AccountParties5.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties5#mmPowerOfAttorney
+ * AccountParties5.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties6#PowerOfAttorney
- * AccountParties6.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties6#mmPowerOfAttorney
+ * AccountParties6.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties3#PowerOfAttorney
- * AccountParties3.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmPowerOfAttorney
+ * AccountParties3.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties4#PowerOfAttorney
- * AccountParties4.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties4#mmPowerOfAttorney
+ * AccountParties4.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties7#PowerOfAttorney
- * AccountParties7.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties7#mmPowerOfAttorney
+ * AccountParties7.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OperationMandate2#MandateHolder
- * OperationMandate2.MandateHolder}</li>
+ * {@linkplain com.tools20022.repository.msg.OperationMandate2#mmMandateHolder
+ * OperationMandate2.mmMandateHolder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OperationMandate3#MandateHolder
- * OperationMandate3.MandateHolder}</li>
+ * {@linkplain com.tools20022.repository.msg.OperationMandate3#mmMandateHolder
+ * OperationMandate3.mmMandateHolder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties9#PowerOfAttorney
- * AccountParties9.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties9#mmPowerOfAttorney
+ * AccountParties9.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties8#PowerOfAttorney
- * AccountParties8.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties8#mmPowerOfAttorney
+ * AccountParties8.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties11#PowerOfAttorney
- * AccountParties11.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties11#mmPowerOfAttorney
+ * AccountParties11.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties10#PowerOfAttorney
- * AccountParties10.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties10#mmPowerOfAttorney
+ * AccountParties10.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties12#PowerOfAttorney
- * AccountParties12.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties12#mmPowerOfAttorney
+ * AccountParties12.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties13#PowerOfAttorney
- * AccountParties13.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties13#mmPowerOfAttorney
+ * AccountParties13.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties14#PowerOfAttorney
- * AccountParties14.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties14#mmPowerOfAttorney
+ * AccountParties14.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties15#PowerOfAttorney
- * AccountParties15.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties15#mmPowerOfAttorney
+ * AccountParties15.mmPowerOfAttorney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties16#PowerOfAttorney
- * AccountParties16.PowerOfAttorney}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties16#mmPowerOfAttorney
+ * AccountParties16.mmPowerOfAttorney}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -103,8 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,16 +124,16 @@ public class MandateHolder extends MandatePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateHolder";
 				definition = "Entity that was given by another entity the authority to act on its behalf.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.PowerOfAttorney, com.tools20022.repository.msg.AccountParties5.PowerOfAttorney,
-						com.tools20022.repository.msg.AccountParties6.PowerOfAttorney, com.tools20022.repository.msg.AccountParties3.PowerOfAttorney, com.tools20022.repository.msg.AccountParties4.PowerOfAttorney,
-						com.tools20022.repository.msg.AccountParties7.PowerOfAttorney, com.tools20022.repository.msg.OperationMandate2.MandateHolder, com.tools20022.repository.msg.OperationMandate3.MandateHolder,
-						com.tools20022.repository.msg.AccountParties9.PowerOfAttorney, com.tools20022.repository.msg.AccountParties8.PowerOfAttorney, com.tools20022.repository.msg.AccountParties11.PowerOfAttorney,
-						com.tools20022.repository.msg.AccountParties10.PowerOfAttorney, com.tools20022.repository.msg.AccountParties12.PowerOfAttorney, com.tools20022.repository.msg.AccountParties13.PowerOfAttorney,
-						com.tools20022.repository.msg.AccountParties14.PowerOfAttorney, com.tools20022.repository.msg.AccountParties15.PowerOfAttorney, com.tools20022.repository.msg.AccountParties16.PowerOfAttorney);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties5.mmPowerOfAttorney,
+						com.tools20022.repository.msg.AccountParties6.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties3.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties4.mmPowerOfAttorney,
+						com.tools20022.repository.msg.AccountParties7.mmPowerOfAttorney, com.tools20022.repository.msg.OperationMandate2.mmMandateHolder, com.tools20022.repository.msg.OperationMandate3.mmMandateHolder,
+						com.tools20022.repository.msg.AccountParties9.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties8.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties11.mmPowerOfAttorney,
+						com.tools20022.repository.msg.AccountParties10.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties12.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties13.mmPowerOfAttorney,
+						com.tools20022.repository.msg.AccountParties14.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties15.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties16.mmPowerOfAttorney);
 				superType_lazy = () -> MandatePartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(PartyAndCertificate1.mmObject());
 			}

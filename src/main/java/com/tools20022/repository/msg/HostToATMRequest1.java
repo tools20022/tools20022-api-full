@@ -33,14 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.HostToATMRequest1#Environment
- * HostToATMRequest1.Environment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HostToATMRequest1#CommandIdentification
- * HostToATMRequest1.CommandIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.HostToATMRequest1#mmEnvironment
+ * HostToATMRequest1.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HostToATMRequest1#ExpectedMessageFunction
- * HostToATMRequest1.ExpectedMessageFunction}</li>
+ * {@linkplain com.tools20022.repository.msg.HostToATMRequest1#mmCommandIdentification
+ * HostToATMRequest1.mmCommandIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.HostToATMRequest1#mmExpectedMessageFunction
+ * HostToATMRequest1.mmExpectedMessageFunction}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#HostToATMRequest
- * HostToATMRequestV01.HostToATMRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#mmHostToATMRequest
+ * HostToATMRequestV01.mmHostToATMRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HostToATMRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment9 environment;
 	/**
 	 * Environment of the ATM.
 	 * <p>
@@ -97,7 +99,7 @@ public class HostToATMRequest1 {
 	 * definition} = "Environment of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> HostToATMRequest1.mmObject();
 			isDerived = false;
@@ -105,12 +107,13 @@ public class HostToATMRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment9.mmObject();
 		}
 	};
+	protected ATMCommandIdentification1 commandIdentification;
 	/**
 	 * Identification of the entity issuing the command.
 	 * <p>
@@ -138,7 +141,7 @@ public class HostToATMRequest1 {
 	 * definition} = "Identification of the entity issuing the command."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommandIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> HostToATMRequest1.mmObject();
 			isDerived = false;
@@ -146,12 +149,13 @@ public class HostToATMRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCommandIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
 		}
 	};
+	protected MessageFunction8Code expectedMessageFunction;
 	/**
 	 * Message that have to be sent by the ATM.
 	 * <p>
@@ -180,7 +184,7 @@ public class HostToATMRequest1 {
 	 * definition} = "Message that have to be sent by the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedMessageFunction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> HostToATMRequest1.mmObject();
 			isDerived = false;
@@ -188,8 +192,8 @@ public class HostToATMRequest1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedMessageFunction";
 			definition = "Message that have to be sent by the ATM.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction8Code.mmObject();
 		}
 	};
@@ -197,15 +201,39 @@ public class HostToATMRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HostToATMRequest1.Environment, com.tools20022.repository.msg.HostToATMRequest1.CommandIdentification,
-						com.tools20022.repository.msg.HostToATMRequest1.ExpectedMessageFunction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.HostToATMRequestV01.HostToATMRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HostToATMRequest1.mmEnvironment, com.tools20022.repository.msg.HostToATMRequest1.mmCommandIdentification,
+						com.tools20022.repository.msg.HostToATMRequest1.mmExpectedMessageFunction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.HostToATMRequestV01.mmHostToATMRequest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HostToATMRequest1";
 				definition = "Information related to the request to an ATM to contact the ATM manager.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment9 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment9 environment) {
+		this.environment = environment;
+	}
+
+	public ATMCommandIdentification1 getCommandIdentification() {
+		return commandIdentification;
+	}
+
+	public void setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+		this.commandIdentification = commandIdentification;
+	}
+
+	public MessageFunction8Code getExpectedMessageFunction() {
+		return expectedMessageFunction;
+	}
+
+	public void setExpectedMessageFunction(MessageFunction8Code expectedMessageFunction) {
+		this.expectedMessageFunction = expectedMessageFunction;
 	}
 }

@@ -32,30 +32,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode ChargeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType14Code#ADRFee
- * ChargeType14Code.ADRFee}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType14Code#mmADRFee
+ * ChargeType14Code.mmADRFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType14Code#IssuanceCancellationFee
- * ChargeType14Code.IssuanceCancellationFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType14Code#mmIssuanceCancellationFee
+ * ChargeType14Code.mmIssuanceCancellationFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType14Code#CustodyFee
- * ChargeType14Code.CustodyFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType14Code#mmCustodyFee
+ * ChargeType14Code.mmCustodyFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType14Code#ServiceProvisionFee
- * ChargeType14Code.ServiceProvisionFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType14Code#mmServiceProvisionFee
+ * ChargeType14Code.mmServiceProvisionFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType14Code#MiscellaneousFee
- * ChargeType14Code.MiscellaneousFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType14Code#mmMiscellaneousFee
+ * ChargeType14Code.mmMiscellaneousFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType14Code#IssuanceFee
- * ChargeType14Code.IssuanceFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType14Code#mmIssuanceFee
+ * ChargeType14Code.mmIssuanceFee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 * name} = "ADRFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode ADRFee = new MMCode() {
+	public static final MMCode mmADRFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ADRFee";
@@ -114,7 +114,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 * name} = "IssuanceCancellationFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuanceCancellationFee = new MMCode() {
+	public static final MMCode mmIssuanceCancellationFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceCancellationFee";
@@ -137,7 +137,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 * name} = "CustodyFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustodyFee = new MMCode() {
+	public static final MMCode mmCustodyFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyFee";
@@ -160,7 +160,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 * name} = "ServiceProvisionFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode ServiceProvisionFee = new MMCode() {
+	public static final MMCode mmServiceProvisionFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceProvisionFee";
@@ -183,7 +183,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 * name} = "MiscellaneousFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode MiscellaneousFee = new MMCode() {
+	public static final MMCode mmMiscellaneousFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousFee";
@@ -206,7 +206,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 * name} = "IssuanceFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssuanceFee = new MMCode() {
+	public static final MMCode mmIssuanceFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceFee";
@@ -217,14 +217,14 @@ public class ChargeType14Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADRF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeType14Code";
 				definition = "Identifies charges linked to the type of service.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType14Code.ADRFee, com.tools20022.repository.codeset.ChargeType14Code.IssuanceCancellationFee,
-						com.tools20022.repository.codeset.ChargeType14Code.CustodyFee, com.tools20022.repository.codeset.ChargeType14Code.ServiceProvisionFee, com.tools20022.repository.codeset.ChargeType14Code.MiscellaneousFee,
-						com.tools20022.repository.codeset.ChargeType14Code.IssuanceFee);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType14Code.mmADRFee, com.tools20022.repository.codeset.ChargeType14Code.mmIssuanceCancellationFee,
+						com.tools20022.repository.codeset.ChargeType14Code.mmCustodyFee, com.tools20022.repository.codeset.ChargeType14Code.mmServiceProvisionFee, com.tools20022.repository.codeset.ChargeType14Code.mmMiscellaneousFee,
+						com.tools20022.repository.codeset.ChargeType14Code.mmIssuanceFee);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

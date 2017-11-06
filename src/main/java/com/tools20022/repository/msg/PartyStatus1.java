@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.Status6Code;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Business status of the party for processing in the system.
@@ -33,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyStatus1#Status
- * PartyStatus1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyStatus1#StatusReason
- * PartyStatus1.StatusReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyStatus1#mmStatus
+ * PartyStatus1.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyStatus1#mmStatusReason
+ * PartyStatus1.mmStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyStatus1#SystemPartyIdentification
- * PartyStatus1.SystemPartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyStatus1#mmSystemPartyIdentification
+ * PartyStatus1.mmSystemPartyIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status6Code status;
 	/**
 	 * Status of the party maintenance instruction.
 	 * <p>
@@ -86,7 +88,7 @@ public class PartyStatus1 {
 	 * definition} = "Status of the party maintenance instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyStatus1.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class PartyStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the party maintenance instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
 	/**
 	 * Specifies the underlying reason for the status of an object.
 	 * <p>
@@ -126,7 +129,7 @@ public class PartyStatus1 {
 	 * "Specifies the underlying reason for the status of an object."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyStatus1.mmObject();
 			isDerived = false;
@@ -135,10 +138,11 @@ public class PartyStatus1 {
 			name = "StatusReason";
 			definition = "Specifies the underlying reason for the status of an object.";
 			minOccurs = 0;
-			type_lazy = () -> StatusReasonInformation10.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
 		}
 	};
+	protected SystemPartyIdentification3 systemPartyIdentification;
 	/**
 	 * Specifications of a party defined within a system.
 	 * <p>
@@ -165,7 +169,7 @@ public class PartyStatus1 {
 	 * definition} = "Specifications of a party defined within a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SystemPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSystemPartyIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyStatus1.mmObject();
 			isDerived = false;
@@ -173,23 +177,48 @@ public class PartyStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemPartyIdentification";
 			definition = "Specifications of a party defined within a system.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyStatus1.Status, com.tools20022.repository.msg.PartyStatus1.StatusReason, com.tools20022.repository.msg.PartyStatus1.SystemPartyIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyStatus1.mmStatus, com.tools20022.repository.msg.PartyStatus1.mmStatusReason,
+						com.tools20022.repository.msg.PartyStatus1.mmSystemPartyIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyStatus1";
 				definition = "Business status of the party for processing in the system. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status6Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status6Code status) {
+		this.status = status;
+	}
+
+	public List<StatusReasonInformation10> getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+		this.statusReason = statusReason;
+	}
+
+	public SystemPartyIdentification3 getSystemPartyIdentification() {
+		return systemPartyIdentification;
+	}
+
+	public void setSystemPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 systemPartyIdentification) {
+		this.systemPartyIdentification = systemPartyIdentification;
 	}
 }

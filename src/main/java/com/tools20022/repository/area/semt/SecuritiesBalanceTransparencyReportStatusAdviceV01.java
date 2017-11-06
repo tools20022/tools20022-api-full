@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TransparencyOfHoldingsMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * SCOPE<br>
@@ -64,33 +65,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#MessageIdentification
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmMessageIdentification
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#SenderIdentification
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.SenderIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmSenderIdentification
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmSenderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#ReceiverIdentification
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.ReceiverIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmReceiverIdentification
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmReceiverIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#RelatedStatement
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.RelatedStatement}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmRelatedStatement
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmRelatedStatement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#Status
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.Status}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmStatus
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#NumberOfItemsPerStatus
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.NumberOfItemsPerStatus}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmNumberOfItemsPerStatus
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmNumberOfItemsPerStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#SupplementaryData
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#mmSupplementaryData
+ * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01#identifier
- * SecuritiesBalanceTransparencyReportStatusAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.042.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Unique and unambiguous identification of the status advice message.
 	 * <p>
@@ -130,17 +130,18 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * "Unique and unambiguous identification of the status advice message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identification of the status advice message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected PartyIdentification100 senderIdentification;
 	/**
 	 * Identification of the party that is the sender of the status advice
 	 * message.
@@ -167,17 +168,18 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SenderIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSenderIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SndrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderIdentification";
 			definition = "Identification of the party that is the sender of the status advice message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification100.mmObject();
 		}
 	};
+	protected PartyIdentification100 receiverIdentification;
 	/**
 	 * Identification of the party that is the receiver of the status advice
 	 * message.
@@ -204,17 +206,18 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReceiverIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReceiverIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcvrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverIdentification";
 			definition = "Identification of the party that is the receiver of the status advice message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification100.mmObject();
 		}
 	};
+	protected StatementReference1 relatedStatement;
 	/**
 	 * Reference of the statement for which the status advice has been issued.
 	 * <p>
@@ -240,17 +243,18 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedStatement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedStatement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdStmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedStatement";
 			definition = "Reference of the statement for which the status advice has been issued.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> StatementReference1.mmObject();
 		}
 	};
+	protected ReportItemStatus1Choice status;
 	/**
 	 * Status of the referenced statement.
 	 * <p>
@@ -274,17 +278,18 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * definition} = "Status of the referenced statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Status = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the referenced statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportItemStatus1Choice.mmObject();
 		}
 	};
+	protected List<NumberOfItemsPerStatus1> numberOfItemsPerStatus;
 	/**
 	 * Number of items for each identical transaction status.
 	 * <p>
@@ -308,17 +313,18 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * definition} = "Number of items for each identical transaction status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NumberOfItemsPerStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNumberOfItemsPerStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NbOfItmsPerSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfItemsPerStatus";
 			definition = "Number of items for each identical transaction status.";
-			minOccurs = 0;
 			maxOccurs = 2;
+			minOccurs = 0;
 			complexType_lazy = () -> NumberOfItemsPerStatus1.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -345,7 +351,7 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -353,33 +359,6 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "042"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "042";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -393,14 +372,78 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesBalTrnsprncyRptStsAdvc";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.MessageIdentification,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.SenderIdentification,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.ReceiverIdentification, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.RelatedStatement,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.Status, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.NumberOfItemsPerStatus,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmMessageIdentification,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmSenderIdentification,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmReceiverIdentification,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmRelatedStatement, com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmStatus,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmNumberOfItemsPerStatus,
+						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "042";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public PartyIdentification100 getSenderIdentification() {
+		return senderIdentification;
+	}
+
+	public void setSenderIdentification(PartyIdentification100 senderIdentification) {
+		this.senderIdentification = senderIdentification;
+	}
+
+	public PartyIdentification100 getReceiverIdentification() {
+		return receiverIdentification;
+	}
+
+	public void setReceiverIdentification(PartyIdentification100 receiverIdentification) {
+		this.receiverIdentification = receiverIdentification;
+	}
+
+	public StatementReference1 getRelatedStatement() {
+		return relatedStatement;
+	}
+
+	public void setRelatedStatement(StatementReference1 relatedStatement) {
+		this.relatedStatement = relatedStatement;
+	}
+
+	public ReportItemStatus1Choice getStatus() {
+		return status;
+	}
+
+	public void setStatus(ReportItemStatus1Choice status) {
+		this.status = status;
+	}
+
+	public List<NumberOfItemsPerStatus1> getNumberOfItemsPerStatus() {
+		return numberOfItemsPerStatus;
+	}
+
+	public void setNumberOfItemsPerStatus(List<NumberOfItemsPerStatus1> numberOfItemsPerStatus) {
+		this.numberOfItemsPerStatus = numberOfItemsPerStatus;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

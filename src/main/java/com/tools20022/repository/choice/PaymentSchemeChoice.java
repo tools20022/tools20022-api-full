@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PaymentSchemeChoice#Code
- * PaymentSchemeChoice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PaymentSchemeChoice#mmCode
+ * PaymentSchemeChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentSchemeChoice#ProprietaryInformation
- * PaymentSchemeChoice.ProprietaryInformation}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentSchemeChoice#mmProprietaryInformation
+ * PaymentSchemeChoice.mmProprietaryInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentSchemeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashClearingSystem2Code code;
 	/**
 	 * Specifies the channel through which the payment instruction is to be
 	 * processed in coded form.
@@ -98,7 +99,7 @@ public class PaymentSchemeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentSchemeChoice.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class PaymentSchemeChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the channel through which the payment instruction is to be processed in coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CashClearingSystem2Code.mmObject();
 		}
 	};
+	protected Max35Text proprietaryInformation;
 	/**
 	 * Channel that is specific to a user community and is required for use
 	 * within that user community.
@@ -145,7 +147,7 @@ public class PaymentSchemeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentSchemeChoice.mmObject();
 			isDerived = false;
@@ -153,8 +155,8 @@ public class PaymentSchemeChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryInformation";
 			definition = "Channel that is specific to a user community and is required for use within that user community.\n\nUsage : if the channel is included in the list of codes provided for the payment scheme, the code element should be used instead of the proprietary element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -162,14 +164,30 @@ public class PaymentSchemeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentSchemeChoice.Code, com.tools20022.repository.choice.PaymentSchemeChoice.ProprietaryInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentSchemeChoice.mmCode, com.tools20022.repository.choice.PaymentSchemeChoice.mmProprietaryInformation);
 				trace_lazy = () -> CashSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentSchemeChoice";
 				definition = "Pre-agreed offering between clearing agents, or the channel through which the payment instruction is to be processed. This payment scheme can point to a specific rulebook governing the rules of clearing and settlement between two parties.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashClearingSystem2Code getCode() {
+		return code;
+	}
+
+	public void setCode(CashClearingSystem2Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietaryInformation() {
+		return proprietaryInformation;
+	}
+
+	public void setProprietaryInformation(Max35Text proprietaryInformation) {
+		this.proprietaryInformation = proprietaryInformation;
 	}
 }

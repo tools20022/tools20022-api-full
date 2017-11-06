@@ -30,32 +30,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#Cancellation
- * SecuritiesTransactionReasonCode.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#mmCancellation
+ * SecuritiesTransactionReasonCode.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#PendingCancellation
- * SecuritiesTransactionReasonCode.PendingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#mmPendingCancellation
+ * SecuritiesTransactionReasonCode.mmPendingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#Generated
- * SecuritiesTransactionReasonCode.Generated}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#mmGenerated
+ * SecuritiesTransactionReasonCode.mmGenerated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#Unmatched
- * SecuritiesTransactionReasonCode.Unmatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#mmUnmatched
+ * SecuritiesTransactionReasonCode.mmUnmatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#Acknowledgement
- * SecuritiesTransactionReasonCode.Acknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#mmAcknowledgement
+ * SecuritiesTransactionReasonCode.mmAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#Pending
- * SecuritiesTransactionReasonCode.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#mmPending
+ * SecuritiesTransactionReasonCode.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#Failing
- * SecuritiesTransactionReasonCode.Failing}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#mmFailing
+ * SecuritiesTransactionReasonCode.mmFailing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#PendingProcessing
- * SecuritiesTransactionReasonCode.PendingProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#mmPendingProcessing
+ * SecuritiesTransactionReasonCode.mmPendingProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#Repair
- * SecuritiesTransactionReasonCode.Repair}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode#mmRepair
+ * SecuritiesTransactionReasonCode.mmRepair}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -69,8 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -112,7 +112,7 @@ public class SecuritiesTransactionReasonCode {
 	 * definition} = "Specifies the reason why the instruction is cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancellation = new MMCode() {
+	public static final MMCode mmCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
@@ -145,7 +145,7 @@ public class SecuritiesTransactionReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PendingCancellation = new MMCode() {
+	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
@@ -175,7 +175,7 @@ public class SecuritiesTransactionReasonCode {
 	 * definition} = "Specifies the reason why the transaction was generated."</li>
 	 * </ul>
 	 */
-	public static final MMCode Generated = new MMCode() {
+	public static final MMCode mmGenerated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Generated";
@@ -206,7 +206,7 @@ public class SecuritiesTransactionReasonCode {
 	 * "Specifies the reason why the instruction has an unmatched status."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unmatched = new MMCode() {
+	public static final MMCode mmUnmatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
@@ -237,7 +237,7 @@ public class SecuritiesTransactionReasonCode {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMCode Acknowledgement = new MMCode() {
+	public static final MMCode mmAcknowledgement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acknowledgement";
@@ -268,7 +268,7 @@ public class SecuritiesTransactionReasonCode {
 	 * "Specifies the reason why the instruction has a pending status."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -300,7 +300,7 @@ public class SecuritiesTransactionReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Failing = new MMCode() {
+	public static final MMCode mmFailing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failing";
@@ -332,7 +332,7 @@ public class SecuritiesTransactionReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PendingProcessing = new MMCode() {
+	public static final MMCode mmPendingProcessing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
@@ -362,7 +362,7 @@ public class SecuritiesTransactionReasonCode {
 	 * definition} = "Specifies the reason why the instruction is in repair."</li>
 	 * </ul>
 	 */
-	public static final MMCode Repair = new MMCode() {
+	public static final MMCode mmRepair = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repair";
@@ -375,16 +375,16 @@ public class SecuritiesTransactionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionReasonCode";
 				definition = "Identifies the reason why the transaction has a specific status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.Cancellation, com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.PendingCancellation,
-						com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.Generated, com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.Unmatched,
-						com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.Acknowledgement, com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.Pending,
-						com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.Failing, com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.PendingProcessing,
-						com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.Repair);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.mmCancellation, com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.mmPendingCancellation,
+						com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.mmGenerated, com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.mmUnmatched,
+						com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.mmAcknowledgement, com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.mmPending,
+						com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.mmFailing, com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.mmPendingProcessing,
+						com.tools20022.repository.codeset.SecuritiesTransactionReasonCode.mmRepair);
 				derivation_lazy = () -> Arrays.asList(SecuritiesTransactionReason1Code.mmObject());
 			}
 		});

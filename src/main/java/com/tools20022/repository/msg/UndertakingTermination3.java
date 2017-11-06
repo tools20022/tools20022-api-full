@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.UndertakingStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the notification of the termination of an undertaking.
@@ -36,13 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingTermination3#EffectiveDate
- * UndertakingTermination3.EffectiveDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UndertakingTermination3#Reason
- * UndertakingTermination3.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingTermination3#mmEffectiveDate
+ * UndertakingTermination3.mmEffectiveDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingTermination3#AdditionalInformation
- * UndertakingTermination3.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingTermination3#mmReason
+ * UndertakingTermination3.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingTermination3#mmAdditionalInformation
+ * UndertakingTermination3.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingTermination3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate effectiveDate;
 	/**
 	 * Date on which the termination is effective.
 	 * <p>
@@ -79,8 +82,8 @@ public class UndertakingTermination3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#TerminationDate
-	 * Undertaking.TerminationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmTerminationDate
+	 * Undertaking.mmTerminationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +102,21 @@ public class UndertakingTermination3 {
 	 * definition} = "Date on which the termination is effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectiveDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmTerminationDate;
 			componentContext_lazy = () -> UndertakingTermination3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.TerminationDate;
 			isDerived = false;
 			xmlTag = "FctvDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date on which the termination is effective.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected TerminationReason1Choice reason;
 	/**
 	 * Reason for the termination.
 	 * <p>
@@ -126,8 +130,8 @@ public class UndertakingTermination3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatusReason#TerminationReason
-	 * UndertakingStatusReason.TerminationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatusReason#mmTerminationReason
+	 * UndertakingStatusReason.mmTerminationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,20 +150,21 @@ public class UndertakingTermination3 {
 	 * definition} = "Reason for the termination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmTerminationReason;
 			componentContext_lazy = () -> UndertakingTermination3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.TerminationReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the termination.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TerminationReason1Choice.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information related to the termination.
 	 * <p>
@@ -172,8 +177,8 @@ public class UndertakingTermination3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDescription
-	 * Status.StatusDescription}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDescription
+	 * Status.mmStatusDescription}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,17 +197,17 @@ public class UndertakingTermination3 {
 	 * definition} = "Additional information related to the termination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDescription;
 			componentContext_lazy = () -> UndertakingTermination3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDescription;
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the termination.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -210,15 +215,39 @@ public class UndertakingTermination3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingTermination3.EffectiveDate, com.tools20022.repository.msg.UndertakingTermination3.Reason,
-						com.tools20022.repository.msg.UndertakingTermination3.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingTermination3.mmEffectiveDate, com.tools20022.repository.msg.UndertakingTermination3.mmReason,
+						com.tools20022.repository.msg.UndertakingTermination3.mmAdditionalInformation);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingTermination3";
 				definition = "Information about the notification of the termination of an undertaking.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getEffectiveDate() {
+		return effectiveDate;
+	}
+
+	public void setEffectiveDate(ISODate effectiveDate) {
+		this.effectiveDate = effectiveDate;
+	}
+
+	public TerminationReason1Choice getReason() {
+		return reason;
+	}
+
+	public void setReason(TerminationReason1Choice reason) {
+		this.reason = reason;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

@@ -33,26 +33,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment14#Acquirer
- * ATMEnvironment14.Acquirer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment14#mmAcquirer
+ * ATMEnvironment14.mmAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMEnvironment14#ATMManagerIdentification
- * ATMEnvironment14.ATMManagerIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment14#HostingEntity
- * ATMEnvironment14.HostingEntity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment14#ATM
- * ATMEnvironment14.ATM}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment14#Customer
- * ATMEnvironment14.Customer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment14#Card
- * ATMEnvironment14.Card}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMEnvironment14#mmATMManagerIdentification
+ * ATMEnvironment14.mmATMManagerIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMEnvironment14#mmHostingEntity
+ * ATMEnvironment14.mmHostingEntity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment14#mmATM
+ * ATMEnvironment14.mmATM}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment14#mmCustomer
+ * ATMEnvironment14.mmCustomer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment14#mmCard
+ * ATMEnvironment14.mmCard}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMEnvironment14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Acquirer7 acquirer;
 	/**
 	 * Acquirer of the transactions, in charge of the funds settlement with the
 	 * issuer.
@@ -94,7 +96,7 @@ public class ATMEnvironment14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Acquirer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAcquirer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMEnvironment14.mmObject();
 			isDerived = false;
@@ -102,12 +104,13 @@ public class ATMEnvironment14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
 			definition = "Acquirer of the transactions, in charge of the funds settlement with the issuer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Acquirer7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Acquirer7.mmObject();
 		}
 	};
+	protected Max35Text aTMManagerIdentification;
 	/**
 	 * Identification of the ATM manager.
 	 * <p>
@@ -135,7 +138,7 @@ public class ATMEnvironment14 {
 	 * definition} = "Identification of the ATM manager."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ATMManagerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmATMManagerIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMEnvironment14.mmObject();
 			isDerived = false;
@@ -143,11 +146,12 @@ public class ATMEnvironment14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMManagerIdentification";
 			definition = "Identification of the ATM manager.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TerminalHosting1 hostingEntity;
 	/**
 	 * Entity hosting the ATM terminal.
 	 * <p>
@@ -174,7 +178,7 @@ public class ATMEnvironment14 {
 	 * definition} = "Entity hosting the ATM terminal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd HostingEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmHostingEntity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMEnvironment14.mmObject();
 			isDerived = false;
@@ -182,12 +186,13 @@ public class ATMEnvironment14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostingEntity";
 			definition = "Entity hosting the ATM terminal.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TerminalHosting1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TerminalHosting1.mmObject();
 		}
 	};
+	protected AutomatedTellerMachine10 aTM;
 	/**
 	 * ATM information.
 	 * <p>
@@ -215,7 +220,7 @@ public class ATMEnvironment14 {
 	 * definition} = "ATM information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ATM = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMEnvironment14.mmObject();
 			isDerived = false;
@@ -223,12 +228,13 @@ public class ATMEnvironment14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATM";
 			definition = "ATM information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AutomatedTellerMachine10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine10.mmObject();
 		}
 	};
+	protected ATMCustomer4 customer;
 	/**
 	 * Customer involved in the withdrawal transaction.
 	 * <p>
@@ -255,7 +261,7 @@ public class ATMEnvironment14 {
 	 * definition} = "Customer involved in the withdrawal transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Customer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCustomer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMEnvironment14.mmObject();
 			isDerived = false;
@@ -263,12 +269,13 @@ public class ATMEnvironment14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Customer";
 			definition = "Customer involved in the withdrawal transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCustomer4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCustomer4.mmObject();
 		}
 	};
+	protected PaymentCard22 card;
 	/**
 	 * Card performing the withdrawal transaction.
 	 * <p>
@@ -295,7 +302,7 @@ public class ATMEnvironment14 {
 	 * definition} = "Card performing the withdrawal transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Card = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCard = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMEnvironment14.mmObject();
 			isDerived = false;
@@ -303,25 +310,73 @@ public class ATMEnvironment14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "Card performing the withdrawal transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentCard22.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentCard22.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEnvironment14.Acquirer, com.tools20022.repository.msg.ATMEnvironment14.ATMManagerIdentification,
-						com.tools20022.repository.msg.ATMEnvironment14.HostingEntity, com.tools20022.repository.msg.ATMEnvironment14.ATM, com.tools20022.repository.msg.ATMEnvironment14.Customer,
-						com.tools20022.repository.msg.ATMEnvironment14.Card);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEnvironment14.mmAcquirer, com.tools20022.repository.msg.ATMEnvironment14.mmATMManagerIdentification,
+						com.tools20022.repository.msg.ATMEnvironment14.mmHostingEntity, com.tools20022.repository.msg.ATMEnvironment14.mmATM, com.tools20022.repository.msg.ATMEnvironment14.mmCustomer,
+						com.tools20022.repository.msg.ATMEnvironment14.mmCard);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMEnvironment14";
 				definition = "Environment of the inquiry.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Acquirer7 getAcquirer() {
+		return acquirer;
+	}
+
+	public void setAcquirer(com.tools20022.repository.msg.Acquirer7 acquirer) {
+		this.acquirer = acquirer;
+	}
+
+	public Max35Text getATMManagerIdentification() {
+		return aTMManagerIdentification;
+	}
+
+	public void setATMManagerIdentification(Max35Text aTMManagerIdentification) {
+		this.aTMManagerIdentification = aTMManagerIdentification;
+	}
+
+	public TerminalHosting1 getHostingEntity() {
+		return hostingEntity;
+	}
+
+	public void setHostingEntity(com.tools20022.repository.msg.TerminalHosting1 hostingEntity) {
+		this.hostingEntity = hostingEntity;
+	}
+
+	public AutomatedTellerMachine10 getATM() {
+		return aTM;
+	}
+
+	public void setATM(com.tools20022.repository.msg.AutomatedTellerMachine10 aTM) {
+		this.aTM = aTM;
+	}
+
+	public ATMCustomer4 getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(com.tools20022.repository.msg.ATMCustomer4 customer) {
+		this.customer = customer;
+	}
+
+	public PaymentCard22 getCard() {
+		return card;
+	}
+
+	public void setCard(com.tools20022.repository.msg.PaymentCard22 card) {
+		this.card = card;
 	}
 }

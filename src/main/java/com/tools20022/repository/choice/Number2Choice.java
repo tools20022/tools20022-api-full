@@ -36,17 +36,17 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Number2Choice#Short
- * Number2Choice.Short}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Number2Choice#Long
- * Number2Choice.Long}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Number2Choice#mmShort
+ * Number2Choice.mmShort}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Number2Choice#mmLong
+ * Number2Choice.mmLong}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -68,6 +68,7 @@ import java.util.function.Supplier;
 public class Number2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText short_;
 	/**
 	 * Number of maximum 3 numeric text.
 	 * <p>
@@ -97,13 +98,13 @@ public class Number2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.Number22Choice#Short
-	 * Number22Choice.Short}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Number22Choice#mmShort
+	 * Number22Choice.mmShort}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Short = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShort = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Number2Choice.mmObject();
 			isDerived = false;
@@ -111,12 +112,13 @@ public class Number2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Short";
 			definition = "Number of maximum 3 numeric text.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number22Choice.Short);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number22Choice.mmShort);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected GenericIdentification1 long_;
 	/**
 	 * Number of maximum 35 text, with the possibility to provide an issuer for
 	 * the number identification.
@@ -149,13 +151,13 @@ public class Number2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.Number22Choice#Long
-	 * Number22Choice.Long}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Number22Choice#mmLong
+	 * Number22Choice.mmLong}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Long = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLong = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Number2Choice.mmObject();
 			isDerived = false;
@@ -163,9 +165,9 @@ public class Number2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Long";
 			definition = "Number of maximum 35 text, with the possibility to provide an issuer for the number identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number22Choice.Long);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number22Choice.mmLong);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
@@ -173,8 +175,8 @@ public class Number2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number2Choice.Short, com.tools20022.repository.choice.Number2Choice.Long);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number2Choice.mmShort, com.tools20022.repository.choice.Number2Choice.mmLong);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -189,5 +191,21 @@ public class Number2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getShort() {
+		return short_;
+	}
+
+	public void setShort(Exact3NumericText short_) {
+		this.short_ = short_;
+	}
+
+	public GenericIdentification1 getLong() {
+		return long_;
+	}
+
+	public void setLong(GenericIdentification1 long_) {
+		this.long_ = long_;
 	}
 }

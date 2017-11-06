@@ -37,12 +37,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment6#Type
- * Adjustment6.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment6#Direction
- * Adjustment6.Direction}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment6#Amount
- * Adjustment6.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment6#mmType
+ * Adjustment6.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment6#mmDirection
+ * Adjustment6.mmDirection}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment6#mmAmount
+ * Adjustment6.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Adjustment6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdjustmentType1Choice type;
 	/**
 	 * Specifies the type of adjustment.
 	 * <p>
@@ -88,8 +89,8 @@ public class Adjustment6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Type
-	 * Adjustment.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmType
+	 * Adjustment.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,28 +109,29 @@ public class Adjustment6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Adjustment7#Type
-	 * Adjustment7.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Adjustment7#mmType
+	 * Adjustment7.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
 			componentContext_lazy = () -> Adjustment6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of adjustment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment7.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment7.mmType);
 			maxOccurs = 1;
-			type_lazy = () -> AdjustmentType1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AdjustmentType1Choice.mmObject();
 		}
 	};
+	protected AdjustmentDirection1Code direction;
 	/**
 	 * Specifies whether the adjustment must be subtracted or added to the total
 	 * amount.
@@ -144,8 +146,8 @@ public class Adjustment6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Direction
-	 * Adjustment.Direction}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmDirection
+	 * Adjustment.mmDirection}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,33 +168,34 @@ public class Adjustment6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Adjustment7#Direction
-	 * Adjustment7.Direction}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Adjustment7#mmDirection
+	 * Adjustment7.mmDirection}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Adjustment4#Direction
-	 * Adjustment4.Direction}</li>
+	 * {@linkplain com.tools20022.repository.msg.Adjustment4#mmDirection
+	 * Adjustment4.mmDirection}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Direction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmDirection;
 			componentContext_lazy = () -> Adjustment6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Direction;
 			isDerived = false;
 			xmlTag = "Drctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direction";
 			definition = "Specifies whether the adjustment must be subtracted or added to the total amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Adjustment4.Direction;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment7.Direction);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment7.mmDirection);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmDirection;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Specifies the monetary amount of the adjustment.
 	 * <p>
@@ -206,8 +209,8 @@ public class Adjustment6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -227,30 +230,30 @@ public class Adjustment6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Adjustment7#AmountOrPercentage
-	 * Adjustment7.AmountOrPercentage}</li>
+	 * {@linkplain com.tools20022.repository.msg.Adjustment7#mmAmountOrPercentage
+	 * Adjustment7.mmAmountOrPercentage}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Adjustment4#Amount
-	 * Adjustment4.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.Adjustment4#mmAmount
+	 * Adjustment4.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Adjustment6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Specifies the monetary amount of the adjustment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Adjustment4.Amount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment7.AmountOrPercentage);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment7.mmAmountOrPercentage);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -258,16 +261,40 @@ public class Adjustment6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment6.Type, com.tools20022.repository.msg.Adjustment6.Direction, com.tools20022.repository.msg.Adjustment6.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment6.mmType, com.tools20022.repository.msg.Adjustment6.mmDirection, com.tools20022.repository.msg.Adjustment6.mmAmount);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Adjustment6";
 				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
-				previousVersion_lazy = () -> Adjustment4.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Adjustment7.mmObject());
+				previousVersion_lazy = () -> Adjustment4.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdjustmentType1Choice getType() {
+		return type;
+	}
+
+	public void setType(AdjustmentType1Choice type) {
+		this.type = type;
+	}
+
+	public AdjustmentDirection1Code getDirection() {
+		return direction;
+	}
+
+	public void setDirection(AdjustmentDirection1Code direction) {
+		this.direction = direction;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

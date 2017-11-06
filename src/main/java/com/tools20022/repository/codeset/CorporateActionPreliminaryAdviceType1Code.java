@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code#New
- * CorporateActionPreliminaryAdviceType1Code.New}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code#mmNew
+ * CorporateActionPreliminaryAdviceType1Code.mmNew}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code#Replacement
- * CorporateActionPreliminaryAdviceType1Code.Replacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code#mmReplacement
+ * CorporateActionPreliminaryAdviceType1Code.mmReplacement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class CorporateActionPreliminaryAdviceType1Code extends CorporateActionPr
 	 * name} = "New"</li>
 	 * </ul>
 	 */
-	public static final MMCode New = new MMCode() {
+	public static final MMCode mmNew = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
@@ -104,7 +104,7 @@ public class CorporateActionPreliminaryAdviceType1Code extends CorporateActionPr
 	 * name} = "Replacement"</li>
 	 * </ul>
 	 */
-	public static final MMCode Replacement = new MMCode() {
+	public static final MMCode mmReplacement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replacement";
@@ -115,12 +115,12 @@ public class CorporateActionPreliminaryAdviceType1Code extends CorporateActionPr
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPreliminaryAdviceType1Code";
 				definition = "Type of movement preliminary advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.New, com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.Replacement);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.mmNew, com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.mmReplacement);
 				trace_lazy = () -> CorporateActionPreliminaryAdviceTypeCode.mmObject();
 			}
 		});

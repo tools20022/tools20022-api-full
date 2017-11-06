@@ -35,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OptionData3#TradeDate
- * OptionData3.TradeDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OptionData3#mmTradeDate
+ * OptionData3.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OptionData3#NotificationIdentification
- * OptionData3.NotificationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OptionData3#CommonReference
- * OptionData3.CommonReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OptionData3#RelatedReference
- * OptionData3.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.msg.OptionData3#mmNotificationIdentification
+ * OptionData3.mmNotificationIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OptionData3#mmCommonReference
+ * OptionData3.mmCommonReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OptionData3#mmRelatedReference
+ * OptionData3.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OptionData3#AmendOrCancelReason
- * OptionData3.AmendOrCancelReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OptionData3#Option
- * OptionData3.Option}</li>
+ * {@linkplain com.tools20022.repository.msg.OptionData3#mmAmendOrCancelReason
+ * OptionData3.mmAmendOrCancelReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OptionData3#mmOption
+ * OptionData3.mmOption}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OptionData3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate tradeDate;
 	/**
 	 * Date at which the trading parties have agreed on an option trade.
 	 * <p>
@@ -85,8 +86,8 @@ public class OptionData3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +106,21 @@ public class OptionData3 {
 	 * "Date at which the trading parties have agreed on an option trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> OptionData3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date at which the trading parties have agreed on an option trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text notificationIdentification;
 	/**
 	 * Refers to the identification of a trade assigned by the trading side of a
 	 * foreign exchange option trade.
@@ -148,7 +150,7 @@ public class OptionData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionData3.mmObject();
 			isDerived = false;
@@ -156,11 +158,12 @@ public class OptionData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Refers to the identification of a trade assigned by the trading side of a foreign exchange option trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text commonReference;
 	/**
 	 * Reference common to the parties of a trade.
 	 * <p>
@@ -173,8 +176,8 @@ public class OptionData3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CommonIdentification
-	 * TradeIdentification.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
+	 * TradeIdentification.mmCommonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,20 +195,21 @@ public class OptionData3 {
 	 * definition} = "Reference common to the parties of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommonReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> OptionData3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CommonIdentification;
 			isDerived = false;
 			xmlTag = "CmonRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
 			definition = "Reference common to the parties of a trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text relatedReference;
 	/**
 	 * Refers to the identification of a previous event in the life of a foreign
 	 * exchange option trade.
@@ -235,7 +239,7 @@ public class OptionData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionData3.mmObject();
 			isDerived = false;
@@ -243,11 +247,12 @@ public class OptionData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Refers to the identification of a previous event in the life of a foreign exchange option trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text amendOrCancelReason;
 	/**
 	 * Describes the reason for the cancellation or the amendment.
 	 * <p>
@@ -275,7 +280,7 @@ public class OptionData3 {
 	 * "Describes the reason for the cancellation or the amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmendOrCancelReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmendOrCancelReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OptionData3.mmObject();
 			isDerived = false;
@@ -283,11 +288,12 @@ public class OptionData3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendOrCancelReason";
 			definition = "Describes the reason for the cancellation or the amendment.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Option4 option;
 	/**
 	 * Set of data defining a foreign exchange option sold.
 	 * <p>
@@ -317,34 +323,83 @@ public class OptionData3 {
 	 * definition} = "Set of data defining a foreign exchange option sold."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Option = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOption = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OptionData3.mmObject();
 			businessComponentTrace_lazy = () -> CurrencyOption.mmObject();
+			componentContext_lazy = () -> OptionData3.mmObject();
 			isDerived = false;
 			xmlTag = "Optn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
 			definition = "Set of data defining a foreign exchange option sold.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Option4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Option4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionData3.TradeDate, com.tools20022.repository.msg.OptionData3.NotificationIdentification, com.tools20022.repository.msg.OptionData3.CommonReference,
-						com.tools20022.repository.msg.OptionData3.RelatedReference, com.tools20022.repository.msg.OptionData3.AmendOrCancelReason, com.tools20022.repository.msg.OptionData3.Option);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionData3.mmTradeDate, com.tools20022.repository.msg.OptionData3.mmNotificationIdentification,
+						com.tools20022.repository.msg.OptionData3.mmCommonReference, com.tools20022.repository.msg.OptionData3.mmRelatedReference, com.tools20022.repository.msg.OptionData3.mmAmendOrCancelReason,
+						com.tools20022.repository.msg.OptionData3.mmOption);
 				trace_lazy = () -> CurrencyOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OptionData3";
 				definition = "Set of data which contains the link to a previously notified option trade.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(ISODate tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public Max35Text getNotificationIdentification() {
+		return notificationIdentification;
+	}
+
+	public void setNotificationIdentification(Max35Text notificationIdentification) {
+		this.notificationIdentification = notificationIdentification;
+	}
+
+	public Max35Text getCommonReference() {
+		return commonReference;
+	}
+
+	public void setCommonReference(Max35Text commonReference) {
+		this.commonReference = commonReference;
+	}
+
+	public Max35Text getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(Max35Text relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Max35Text getAmendOrCancelReason() {
+		return amendOrCancelReason;
+	}
+
+	public void setAmendOrCancelReason(Max35Text amendOrCancelReason) {
+		this.amendOrCancelReason = amendOrCancelReason;
+	}
+
+	public Option4 getOption() {
+		return option;
+	}
+
+	public void setOption(com.tools20022.repository.msg.Option4 option) {
+		this.option = option;
 	}
 }

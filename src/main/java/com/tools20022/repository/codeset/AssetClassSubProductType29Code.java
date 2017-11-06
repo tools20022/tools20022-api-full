@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType29Code#CarbonRelated
- * AssetClassSubProductType29Code.CarbonRelated}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType29Code#mmCarbonRelated
+ * AssetClassSubProductType29Code.mmCarbonRelated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class AssetClassSubProductType29Code extends AssetClassSubProductTypeCode
 	 * name} = "CarbonRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode CarbonRelated = new MMCode() {
+	public static final MMCode mmCarbonRelated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarbonRelated";
@@ -83,11 +83,11 @@ public class AssetClassSubProductType29Code extends AssetClassSubProductTypeCode
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType29Code";
 				definition = "Defines the sub-product of type Carbon Related.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType29Code.CarbonRelated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType29Code.mmCarbonRelated);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

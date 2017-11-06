@@ -29,13 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ExchangeRateTypeCode#Spot
- * ExchangeRateTypeCode.Spot}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExchangeRateTypeCode#Sale
- * ExchangeRateTypeCode.Sale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangeRateTypeCode#Agreed
- * ExchangeRateTypeCode.Agreed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangeRateTypeCode#mmSpot
+ * ExchangeRateTypeCode.mmSpot}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangeRateTypeCode#mmSale
+ * ExchangeRateTypeCode.mmSale}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangeRateTypeCode#mmAgreed
+ * ExchangeRateTypeCode.mmAgreed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +92,7 @@ public class ExchangeRateTypeCode {
 	 * definition} = "Exchange rate applied is the spot rate."</li>
 	 * </ul>
 	 */
-	public static final MMCode Spot = new MMCode() {
+	public static final MMCode mmSpot = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Spot";
@@ -121,7 +123,7 @@ public class ExchangeRateTypeCode {
 	 * "Exchange rate applied is the market rate at the time of the sale."</li>
 	 * </ul>
 	 */
-	public static final MMCode Sale = new MMCode() {
+	public static final MMCode mmSale = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Sale";
@@ -152,7 +154,7 @@ public class ExchangeRateTypeCode {
 	 * "Exchange rate applied is the rate agreed between the parties."</li>
 	 * </ul>
 	 */
-	public static final MMCode Agreed = new MMCode() {
+	public static final MMCode mmAgreed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Agreed";
@@ -165,12 +167,12 @@ public class ExchangeRateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SPOT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExchangeRateTypeCode";
 				definition = "Code used to define the type of the currency exchange.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExchangeRateTypeCode.Spot, com.tools20022.repository.codeset.ExchangeRateTypeCode.Sale, com.tools20022.repository.codeset.ExchangeRateTypeCode.Agreed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExchangeRateTypeCode.mmSpot, com.tools20022.repository.codeset.ExchangeRateTypeCode.mmSale, com.tools20022.repository.codeset.ExchangeRateTypeCode.mmAgreed);
 				derivation_lazy = () -> Arrays.asList(ExchangeRateType1Code.mmObject());
 			}
 		});

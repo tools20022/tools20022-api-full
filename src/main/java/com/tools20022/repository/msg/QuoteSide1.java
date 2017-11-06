@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.PartyIdentification25Choice;
 import com.tools20022.repository.entity.Quote;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Indicates whether the quote details are indicated as an offer, a bid or a mid
@@ -37,18 +38,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#Price
- * QuoteSide1.Price}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#MarketPrice
- * QuoteSide1.MarketPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#MinimumQuantity
- * QuoteSide1.MinimumQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#Quantity
- * QuoteSide1.Quantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#MaximumQuantity
- * QuoteSide1.MaximumQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#SourceOfQuote
- * QuoteSide1.SourceOfQuote}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#mmPrice
+ * QuoteSide1.mmPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#mmMarketPrice
+ * QuoteSide1.mmMarketPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#mmMinimumQuantity
+ * QuoteSide1.mmMinimumQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#mmQuantity
+ * QuoteSide1.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#mmMaximumQuantity
+ * QuoteSide1.mmMaximumQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteSide1#mmSourceOfQuote
+ * QuoteSide1.mmSourceOfQuote}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuoteSide1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Price1 price;
 	/**
 	 * Indicates the price of the instrument, applicable to the quote.
 	 * <p>
@@ -84,7 +86,8 @@ public class QuoteSide1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#Price Quote.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmPrice Quote.mmPrice}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.QuoteSide1
@@ -103,20 +106,21 @@ public class QuoteSide1 {
 	 * "Indicates the price of the instrument, applicable to the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Price = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmPrice;
 			componentContext_lazy = () -> QuoteSide1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.Price;
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Indicates the price of the instrument, applicable to the quote.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Price1> marketPrice;
 	/**
 	 * Used by markets to indicate the current best bid and offer.
 	 * <p>
@@ -128,8 +132,8 @@ public class QuoteSide1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#MarketPrice
-	 * Quote.MarketPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmMarketPrice
+	 * Quote.mmMarketPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.QuoteSide1
@@ -148,19 +152,20 @@ public class QuoteSide1 {
 	 * "Used by markets to indicate the current best bid and offer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmMarketPrice;
 			componentContext_lazy = () -> QuoteSide1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.MarketPrice;
 			isDerived = false;
 			xmlTag = "MktPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
 			definition = "Used by markets to indicate the current best bid and offer.";
 			minOccurs = 0;
-			complexType_lazy = () -> Price1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected List<FinancialInstrumentQuantityChoice> minimumQuantity;
 	/**
 	 * Specifies the minimal quantity of the financial instrument.
 	 * <p>
@@ -174,8 +179,8 @@ public class QuoteSide1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#MinimumQuantity
-	 * Quote.MinimumQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmMinimumQuantity
+	 * Quote.mmMinimumQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.QuoteSide1
@@ -194,10 +199,10 @@ public class QuoteSide1 {
 	 * "Specifies the minimal quantity of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmMinimumQuantity;
 			componentContext_lazy = () -> QuoteSide1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.MinimumQuantity;
 			isDerived = false;
 			xmlTag = "MinQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,6 +212,7 @@ public class QuoteSide1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice quantity;
 	/**
 	 * Quantity of a Financial Instrument.
 	 * <p>
@@ -220,8 +226,8 @@ public class QuoteSide1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#Quantity
-	 * Quote.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmQuantity
+	 * Quote.mmQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.QuoteSide1
@@ -239,20 +245,21 @@ public class QuoteSide1 {
 	 * definition} = "Quantity of a Financial Instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmQuantity;
 			componentContext_lazy = () -> QuoteSide1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.Quantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of a Financial Instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice maximumQuantity;
 	/**
 	 * Specifies the maximum quantity of the financial instrument.
 	 * <p>
@@ -266,8 +273,8 @@ public class QuoteSide1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Quote#MaximumQuantity
-	 * Quote.MaximumQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Quote#mmMaximumQuantity
+	 * Quote.mmMaximumQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.QuoteSide1
@@ -286,20 +293,21 @@ public class QuoteSide1 {
 	 * "Specifies the maximum quantity of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmMaximumQuantity;
 			componentContext_lazy = () -> QuoteSide1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.MaximumQuantity;
 			isDerived = false;
 			xmlTag = "MaxQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumQuantity";
 			definition = "Specifies the maximum quantity of the financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected PartyIdentification25Choice sourceOfQuote;
 	/**
 	 * Source of the quote.
 	 * <p>
@@ -312,8 +320,8 @@ public class QuoteSide1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.QuoteSide1
@@ -331,34 +339,82 @@ public class QuoteSide1 {
 	 * definition} = "Source of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SourceOfQuote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSourceOfQuote = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> QuoteSide1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "SrcOfQt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceOfQuote";
 			definition = "Source of the quote.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification25Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification25Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.Price, com.tools20022.repository.msg.QuoteSide1.MarketPrice, com.tools20022.repository.msg.QuoteSide1.MinimumQuantity,
-						com.tools20022.repository.msg.QuoteSide1.Quantity, com.tools20022.repository.msg.QuoteSide1.MaximumQuantity, com.tools20022.repository.msg.QuoteSide1.SourceOfQuote);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSide1.mmPrice, com.tools20022.repository.msg.QuoteSide1.mmMarketPrice, com.tools20022.repository.msg.QuoteSide1.mmMinimumQuantity,
+						com.tools20022.repository.msg.QuoteSide1.mmQuantity, com.tools20022.repository.msg.QuoteSide1.mmMaximumQuantity, com.tools20022.repository.msg.QuoteSide1.mmSourceOfQuote);
 				trace_lazy = () -> Quote.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteSide1";
 				definition = "Indicates whether the quote details are indicated as an offer, a bid or a mid of a security, commodity, currency (the latter being an average of the offer and the bid).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Price1 getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+		this.price = price;
+	}
+
+	public List<Price1> getMarketPrice() {
+		return marketPrice;
+	}
+
+	public void setMarketPrice(List<com.tools20022.repository.msg.Price1> marketPrice) {
+		this.marketPrice = marketPrice;
+	}
+
+	public List<FinancialInstrumentQuantityChoice> getMinimumQuantity() {
+		return minimumQuantity;
+	}
+
+	public void setMinimumQuantity(List<FinancialInstrumentQuantityChoice> minimumQuantity) {
+		this.minimumQuantity = minimumQuantity;
+	}
+
+	public FinancialInstrumentQuantityChoice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(FinancialInstrumentQuantityChoice quantity) {
+		this.quantity = quantity;
+	}
+
+	public FinancialInstrumentQuantityChoice getMaximumQuantity() {
+		return maximumQuantity;
+	}
+
+	public void setMaximumQuantity(FinancialInstrumentQuantityChoice maximumQuantity) {
+		this.maximumQuantity = maximumQuantity;
+	}
+
+	public PartyIdentification25Choice getSourceOfQuote() {
+		return sourceOfQuote;
+	}
+
+	public void setSourceOfQuote(PartyIdentification25Choice sourceOfQuote) {
+		this.sourceOfQuote = sourceOfQuote;
 	}
 }

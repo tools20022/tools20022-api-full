@@ -42,39 +42,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#Identification
- * FinancialInstrument46.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument46#Name
- * FinancialInstrument46.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmIdentification
+ * FinancialInstrument46.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmName
+ * FinancialInstrument46.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#ShortName
- * FinancialInstrument46.ShortName}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmShortName
+ * FinancialInstrument46.mmShortName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#TransferType
- * FinancialInstrument46.TransferType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument46#Quantity
- * FinancialInstrument46.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmTransferType
+ * FinancialInstrument46.mmTransferType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#AverageAcquisitionPrice
- * FinancialInstrument46.AverageAcquisitionPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmQuantity
+ * FinancialInstrument46.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#TransferCurrency
- * FinancialInstrument46.TransferCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmAverageAcquisitionPrice
+ * FinancialInstrument46.mmAverageAcquisitionPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#TotalBookValue
- * FinancialInstrument46.TotalBookValue}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmTransferCurrency
+ * FinancialInstrument46.mmTransferCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#TransfereeAccount
- * FinancialInstrument46.TransfereeAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmTotalBookValue
+ * FinancialInstrument46.mmTotalBookValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#SubAccountDetails
- * FinancialInstrument46.SubAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmTransfereeAccount
+ * FinancialInstrument46.mmTransfereeAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#SettlementPartiesReceivingSideDetails
- * FinancialInstrument46.SettlementPartiesReceivingSideDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmSubAccountDetails
+ * FinancialInstrument46.mmSubAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#DeliveringAgentDetails
- * FinancialInstrument46.DeliveringAgentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmSettlementPartiesReceivingSideDetails
+ * FinancialInstrument46.mmSettlementPartiesReceivingSideDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmDeliveringAgentDetails
+ * FinancialInstrument46.mmDeliveringAgentDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -83,8 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrument46 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification23Choice identification;
 	/**
 	 * Unique and unambiguous identifier of a security, assigned under a formal
 	 * or proprietary identification scheme.
@@ -118,8 +120,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,25 +143,26 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#Identification
-	 * FinancialInstrument39.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmIdentification
+	 * FinancialInstrument39.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification23Choice.mmObject();
 		}
 	};
+	protected Max350Text name;
 	/**
 	 * Name of the financial instrument in free format text.
 	 * <p>
@@ -172,8 +175,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#FullName
-	 * LocalName.FullName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+	 * LocalName.mmFullName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,25 +196,26 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#Name
-	 * FinancialInstrument39.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmName
+	 * FinancialInstrument39.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.FullName;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.Name;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.mmName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text shortName;
 	/**
 	 * Financial Instrument Short Name (FISN) expressed in conformance with the
 	 * ISO 18774 standard.
@@ -225,8 +229,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#ShortName
-	 * LocalName.ShortName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmShortName
+	 * LocalName.mmShortName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,20 +251,21 @@ public class FinancialInstrument46 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmShortName;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.ShortName;
 			isDerived = false;
 			xmlTag = "ShrtNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TransferType1Code transferType;
 	/**
 	 * Specifies whether the financial instrument is transferred as an asset or
 	 * as cash.
@@ -275,8 +280,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferType
-	 * SecuritiesTransfer.TransferType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferType
+	 * SecuritiesTransfer.mmTransferType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -298,25 +303,26 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#TransferType
-	 * FinancialInstrument39.TransferType}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmTransferType
+	 * FinancialInstrument39.mmTransferType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferType;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.TransferType;
 			isDerived = false;
 			xmlTag = "TrfTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferType";
 			definition = "Specifies whether the financial instrument is transferred as an asset or as cash.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.TransferType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.mmTransferType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransferType1Code.mmObject();
 		}
 	};
+	protected Quantity12Choice quantity;
 	/**
 	 * Specifies the quantity of assets to be transferred in units or in a
 	 * percentage rate.
@@ -331,8 +337,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesQuantity
-	 * Security.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -354,25 +360,26 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#Quantity
-	 * FinancialInstrument39.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmQuantity
+	 * FinancialInstrument39.mmQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity of assets to be transferred in units or in a percentage rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.Quantity;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.mmQuantity;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Quantity12Choice.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount averageAcquisitionPrice;
 	/**
 	 * Average cost per share of a security, including all charges and
 	 * commissions.
@@ -387,8 +394,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#BookValue
-	 * AssetHolding.BookValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmBookValue
+	 * AssetHolding.mmBookValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -410,25 +417,26 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#AverageAcquisitionPrice
-	 * FinancialInstrument39.AverageAcquisitionPrice}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmAverageAcquisitionPrice
+	 * FinancialInstrument39.mmAverageAcquisitionPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AverageAcquisitionPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAverageAcquisitionPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.BookValue;
 			isDerived = false;
 			xmlTag = "AvrgAcqstnPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageAcquisitionPrice";
 			definition = "Average cost per share of a security, including all charges and commissions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.AverageAcquisitionPrice;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.mmAverageAcquisitionPrice;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode transferCurrency;
 	/**
 	 * Identifies the currency to be used to transfer the holdings. Some
 	 * transfer agents register holdings grouped by currency in addition to
@@ -444,8 +452,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#TransferCurrency
-	 * SecuritiesDeliveryObligation.TransferCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmTransferCurrency
+	 * SecuritiesDeliveryObligation.mmTransferCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -467,25 +475,26 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#TransferCurrency
-	 * FinancialInstrument39.TransferCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmTransferCurrency
+	 * FinancialInstrument39.mmTransferCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmTransferCurrency;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.TransferCurrency;
 			isDerived = false;
 			xmlTag = "TrfCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferCurrency";
 			definition = "Identifies the currency to be used to transfer the holdings. Some transfer agents register holdings grouped by currency in addition to using the ISIN for multi-currency fund shares.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.TransferCurrency;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.mmTransferCurrency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount totalBookValue;
 	/**
 	 * Net asset on balance sheet - total portfolio value minus or plus the
 	 * unrealised gain or loss.
@@ -500,8 +509,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#BookValue
-	 * AssetHolding.BookValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmBookValue
+	 * AssetHolding.mmBookValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -523,25 +532,26 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#TotalBookValue
-	 * FinancialInstrument39.TotalBookValue}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmTotalBookValue
+	 * FinancialInstrument39.mmTotalBookValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalBookValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalBookValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.BookValue;
 			isDerived = false;
 			xmlTag = "TtlBookVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalBookValue";
 			definition = "Net asset on balance sheet - total portfolio value minus or plus the unrealised gain or loss.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.TotalBookValue;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.mmTotalBookValue;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Account19 transfereeAccount;
 	/**
 	 * Account held in the name of a party that is not the name of the
 	 * beneficial owner of the shares.
@@ -555,8 +565,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#InvestmentAccount
-	 * InvestmentFundClass.InvestmentAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentAccount
+	 * InvestmentFundClass.mmInvestmentAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -578,25 +588,26 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#TransfereeAccount
-	 * FinancialInstrument39.TransfereeAccount}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmTransfereeAccount
+	 * FinancialInstrument39.mmTransfereeAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransfereeAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransfereeAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentAccount;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.InvestmentAccount;
 			isDerived = false;
 			xmlTag = "TrfeeAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransfereeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.TransfereeAccount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.mmTransfereeAccount;
 			maxOccurs = 1;
-			complexType_lazy = () -> Account19.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Account19.mmObject();
 		}
 	};
+	protected SubAccount5 subAccountDetails;
 	/**
 	 * Sub-accounts that are grouped in a master or omnibus account.
 	 * <p>
@@ -608,8 +619,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#InvestmentAccount
-	 * InvestmentFundClass.InvestmentAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmInvestmentAccount
+	 * InvestmentFundClass.mmInvestmentAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -630,26 +641,27 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#SubAccountDetails
-	 * FinancialInstrument39.SubAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmSubAccountDetails
+	 * FinancialInstrument39.mmSubAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentAccount;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.InvestmentAccount;
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Sub-accounts that are grouped in a master or omnibus account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.SubAccountDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.mmSubAccountDetails;
 			maxOccurs = 1;
-			type_lazy = () -> SubAccount5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SubAccount5.mmObject();
 		}
 	};
+	protected ReceivingPartiesAndAccount14 settlementPartiesReceivingSideDetails;
 	/**
 	 * Chain of parties involved in the settlement of a transaction.
 	 * <p>
@@ -662,8 +674,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartyRole
-	 * SecuritiesSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+	 * SecuritiesSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -683,21 +695,22 @@ public class FinancialInstrument46 {
 	 * "Chain of parties involved in the settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementPartiesReceivingSideDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementPartiesReceivingSideDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartyRole;
 			isDerived = false;
 			xmlTag = "SttlmPtiesRcvgSdDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPartiesReceivingSideDetails";
 			definition = "Chain of parties involved in the settlement of a transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReceivingPartiesAndAccount14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount14.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount125 deliveringAgentDetails;
 	/**
 	 * Party that delivers securities to the receiving agent at the place of
 	 * settlement, for example, a central securities depository.
@@ -712,8 +725,8 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -735,36 +748,36 @@ public class FinancialInstrument46 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#DeliveringAgentDetails
-	 * FinancialInstrument39.DeliveringAgentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmDeliveringAgentDetails
+	 * FinancialInstrument39.mmDeliveringAgentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeliveringAgentDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeliveringAgentDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument46.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "DlvrgAgtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgentDetails";
 			definition = "Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.DeliveringAgentDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrument39.mmDeliveringAgentDetails;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentificationAndAccount125.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount125.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument46.Identification, com.tools20022.repository.msg.FinancialInstrument46.Name,
-						com.tools20022.repository.msg.FinancialInstrument46.ShortName, com.tools20022.repository.msg.FinancialInstrument46.TransferType, com.tools20022.repository.msg.FinancialInstrument46.Quantity,
-						com.tools20022.repository.msg.FinancialInstrument46.AverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument46.TransferCurrency, com.tools20022.repository.msg.FinancialInstrument46.TotalBookValue,
-						com.tools20022.repository.msg.FinancialInstrument46.TransfereeAccount, com.tools20022.repository.msg.FinancialInstrument46.SubAccountDetails,
-						com.tools20022.repository.msg.FinancialInstrument46.SettlementPartiesReceivingSideDetails, com.tools20022.repository.msg.FinancialInstrument46.DeliveringAgentDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument46.mmIdentification, com.tools20022.repository.msg.FinancialInstrument46.mmName,
+						com.tools20022.repository.msg.FinancialInstrument46.mmShortName, com.tools20022.repository.msg.FinancialInstrument46.mmTransferType, com.tools20022.repository.msg.FinancialInstrument46.mmQuantity,
+						com.tools20022.repository.msg.FinancialInstrument46.mmAverageAcquisitionPrice, com.tools20022.repository.msg.FinancialInstrument46.mmTransferCurrency,
+						com.tools20022.repository.msg.FinancialInstrument46.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument46.mmTransfereeAccount, com.tools20022.repository.msg.FinancialInstrument46.mmSubAccountDetails,
+						com.tools20022.repository.msg.FinancialInstrument46.mmSettlementPartiesReceivingSideDetails, com.tools20022.repository.msg.FinancialInstrument46.mmDeliveringAgentDetails);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument46";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency.";
@@ -772,5 +785,101 @@ public class FinancialInstrument46 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification23Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(SecurityIdentification23Choice identification) {
+		this.identification = identification;
+	}
+
+	public Max350Text getName() {
+		return name;
+	}
+
+	public void setName(Max350Text name) {
+		this.name = name;
+	}
+
+	public Max35Text getShortName() {
+		return shortName;
+	}
+
+	public void setShortName(Max35Text shortName) {
+		this.shortName = shortName;
+	}
+
+	public TransferType1Code getTransferType() {
+		return transferType;
+	}
+
+	public void setTransferType(TransferType1Code transferType) {
+		this.transferType = transferType;
+	}
+
+	public Quantity12Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Quantity12Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getAverageAcquisitionPrice() {
+		return averageAcquisitionPrice;
+	}
+
+	public void setAverageAcquisitionPrice(ActiveOrHistoricCurrencyAndAmount averageAcquisitionPrice) {
+		this.averageAcquisitionPrice = averageAcquisitionPrice;
+	}
+
+	public ActiveOrHistoricCurrencyCode getTransferCurrency() {
+		return transferCurrency;
+	}
+
+	public void setTransferCurrency(ActiveOrHistoricCurrencyCode transferCurrency) {
+		this.transferCurrency = transferCurrency;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getTotalBookValue() {
+		return totalBookValue;
+	}
+
+	public void setTotalBookValue(ActiveOrHistoricCurrencyAndAmount totalBookValue) {
+		this.totalBookValue = totalBookValue;
+	}
+
+	public Account19 getTransfereeAccount() {
+		return transfereeAccount;
+	}
+
+	public void setTransfereeAccount(com.tools20022.repository.msg.Account19 transfereeAccount) {
+		this.transfereeAccount = transfereeAccount;
+	}
+
+	public SubAccount5 getSubAccountDetails() {
+		return subAccountDetails;
+	}
+
+	public void setSubAccountDetails(com.tools20022.repository.msg.SubAccount5 subAccountDetails) {
+		this.subAccountDetails = subAccountDetails;
+	}
+
+	public ReceivingPartiesAndAccount14 getSettlementPartiesReceivingSideDetails() {
+		return settlementPartiesReceivingSideDetails;
+	}
+
+	public void setSettlementPartiesReceivingSideDetails(com.tools20022.repository.msg.ReceivingPartiesAndAccount14 settlementPartiesReceivingSideDetails) {
+		this.settlementPartiesReceivingSideDetails = settlementPartiesReceivingSideDetails;
+	}
+
+	public PartyIdentificationAndAccount125 getDeliveringAgentDetails() {
+		return deliveringAgentDetails;
+	}
+
+	public void setDeliveringAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount125 deliveringAgentDetails) {
+		this.deliveringAgentDetails = deliveringAgentDetails;
 	}
 }

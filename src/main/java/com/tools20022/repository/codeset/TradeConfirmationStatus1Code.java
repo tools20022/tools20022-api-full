@@ -34,39 +34,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#AllStatus
- * TradeConfirmationStatus1Code.AllStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#mmAllStatus
+ * TradeConfirmationStatus1Code.mmAllStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#Confirmed
- * TradeConfirmationStatus1Code.Confirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#mmConfirmed
+ * TradeConfirmationStatus1Code.mmConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#Disaccord
- * TradeConfirmationStatus1Code.Disaccord}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#mmDisaccord
+ * TradeConfirmationStatus1Code.mmDisaccord}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#EmergencyConfirmed
- * TradeConfirmationStatus1Code.EmergencyConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#mmEmergencyConfirmed
+ * TradeConfirmationStatus1Code.mmEmergencyConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#Mismatched
- * TradeConfirmationStatus1Code.Mismatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#mmMismatched
+ * TradeConfirmationStatus1Code.mmMismatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#SelfConfirmedAndCouterpartyNotConfirmed
- * TradeConfirmationStatus1Code.SelfConfirmedAndCouterpartyNotConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#mmSelfConfirmedAndCouterpartyNotConfirmed
+ * TradeConfirmationStatus1Code.mmSelfConfirmedAndCouterpartyNotConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#SelfNotConfirmedAndCouterpartyConfirmed
- * TradeConfirmationStatus1Code.SelfNotConfirmedAndCouterpartyConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#mmSelfNotConfirmedAndCouterpartyConfirmed
+ * TradeConfirmationStatus1Code.mmSelfNotConfirmedAndCouterpartyConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#SelfNotConfirmedAndCouterpartyNotConfirmed
- * TradeConfirmationStatus1Code.SelfNotConfirmedAndCouterpartyNotConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#mmSelfNotConfirmedAndCouterpartyNotConfirmed
+ * TradeConfirmationStatus1Code.mmSelfNotConfirmedAndCouterpartyNotConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#Unconfirmed
- * TradeConfirmationStatus1Code.Unconfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeConfirmationStatus1Code#mmUnconfirmed
+ * TradeConfirmationStatus1Code.mmUnconfirmed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,7 +96,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 * name} = "AllStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllStatus = new MMCode() {
+	public static final MMCode mmAllStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllStatus";
@@ -119,7 +119,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 * name} = "Confirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Confirmed = new MMCode() {
+	public static final MMCode mmConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmed";
@@ -142,7 +142,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 * name} = "Disaccord"</li>
 	 * </ul>
 	 */
-	public static final MMCode Disaccord = new MMCode() {
+	public static final MMCode mmDisaccord = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disaccord";
@@ -165,7 +165,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 * name} = "EmergencyConfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode EmergencyConfirmed = new MMCode() {
+	public static final MMCode mmEmergencyConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmergencyConfirmed";
@@ -188,7 +188,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 * name} = "Mismatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mismatched = new MMCode() {
+	public static final MMCode mmMismatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mismatched";
@@ -211,7 +211,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 * name} = "SelfConfirmedAndCouterpartyNotConfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode SelfConfirmedAndCouterpartyNotConfirmed = new MMCode() {
+	public static final MMCode mmSelfConfirmedAndCouterpartyNotConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfConfirmedAndCouterpartyNotConfirmed";
@@ -234,7 +234,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 * name} = "SelfNotConfirmedAndCouterpartyConfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode SelfNotConfirmedAndCouterpartyConfirmed = new MMCode() {
+	public static final MMCode mmSelfNotConfirmedAndCouterpartyConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfNotConfirmedAndCouterpartyConfirmed";
@@ -257,7 +257,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 * name} = "SelfNotConfirmedAndCouterpartyNotConfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode SelfNotConfirmedAndCouterpartyNotConfirmed = new MMCode() {
+	public static final MMCode mmSelfNotConfirmedAndCouterpartyNotConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfNotConfirmedAndCouterpartyNotConfirmed";
@@ -280,7 +280,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 * name} = "Unconfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unconfirmed = new MMCode() {
+	public static final MMCode mmUnconfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unconfirmed";
@@ -291,15 +291,15 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeConfirmationStatus1Code";
 				definition = "Identifies the status of the confirmation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeConfirmationStatus1Code.AllStatus, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.Confirmed,
-						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.Disaccord, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.EmergencyConfirmed,
-						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.Mismatched, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.SelfConfirmedAndCouterpartyNotConfirmed,
-						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.SelfNotConfirmedAndCouterpartyConfirmed, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.SelfNotConfirmedAndCouterpartyNotConfirmed,
-						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.Unconfirmed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmAllStatus, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmConfirmed,
+						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmDisaccord, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmEmergencyConfirmed,
+						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmMismatched, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmSelfConfirmedAndCouterpartyNotConfirmed,
+						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmSelfNotConfirmedAndCouterpartyConfirmed, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmSelfNotConfirmedAndCouterpartyNotConfirmed,
+						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmUnconfirmed);
 				trace_lazy = () -> TradeConfirmationStatusCode.mmObject();
 			}
 		});

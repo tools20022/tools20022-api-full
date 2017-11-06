@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.ErrorHandling4;
 import com.tools20022.repository.msg.StandingOrder4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between the standing order details or an operational error when the
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingOrderOrError3Choice#Report
- * StandingOrderOrError3Choice.Report}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingOrderOrError3Choice#mmReport
+ * StandingOrderOrError3Choice.mmReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingOrderOrError3Choice#OperationalError
- * StandingOrderOrError3Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingOrderOrError3Choice#mmOperationalError
+ * StandingOrderOrError3Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StandingOrderOrError3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<StandingOrder4> report;
 	/**
 	 * Reports either on the standing order or on a business error.
 	 * <p>
@@ -94,11 +96,11 @@ public class StandingOrderOrError3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.StandingOrderOrError1Choice#Report
-	 * StandingOrderOrError1Choice.Report}</li>
+	 * {@linkplain com.tools20022.repository.choice.StandingOrderOrError1Choice#mmReport
+	 * StandingOrderOrError1Choice.mmReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Report = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StandingOrderOrError3Choice.mmObject();
 			isDerived = false;
@@ -106,12 +108,13 @@ public class StandingOrderOrError3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Report";
 			definition = "Reports either on the standing order or on a business error.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.StandingOrderOrError1Choice.Report;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.StandingOrderOrError1Choice.mmReport;
 			minOccurs = 1;
-			type_lazy = () -> StandingOrder4.mmObject();
 			isComposite = true;
+			type_lazy = () -> StandingOrder4.mmObject();
 		}
 	};
+	protected List<ErrorHandling4> operationalError;
 	/**
 	 * Indicates that an operational error has been issued during the processing
 	 * of the related request.
@@ -142,11 +145,11 @@ public class StandingOrderOrError3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.StandingOrderOrError1Choice#OperationalError
-	 * StandingOrderOrError1Choice.OperationalError}</li>
+	 * {@linkplain com.tools20022.repository.choice.StandingOrderOrError1Choice#mmOperationalError
+	 * StandingOrderOrError1Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StandingOrderOrError3Choice.mmObject();
 			isDerived = false;
@@ -154,18 +157,18 @@ public class StandingOrderOrError3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.StandingOrderOrError1Choice.OperationalError;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.StandingOrderOrError1Choice.mmOperationalError;
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling4.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError3Choice.Report, com.tools20022.repository.choice.StandingOrderOrError3Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError3Choice.mmReport, com.tools20022.repository.choice.StandingOrderOrError3Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderOrError3Choice";
 				definition = "Choice between the standing order details or an operational error when the requested data cannot be retrieved.";
@@ -173,5 +176,21 @@ public class StandingOrderOrError3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<StandingOrder4> getReport() {
+		return report;
+	}
+
+	public void setReport(List<StandingOrder4> report) {
+		this.report = report;
+	}
+
+	public List<ErrorHandling4> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling4> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

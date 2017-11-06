@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.ATMMediaType2Code;
 import com.tools20022.repository.codeset.ATMMediaType3Code;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Deposited media put in the safe.
@@ -34,20 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia3#MediaType
- * ATMDepositedMedia3.MediaType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia3#mmMediaType
+ * ATMDepositedMedia3.mmMediaType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia3#MediaCategory
- * ATMDepositedMedia3.MediaCategory}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMDepositedMedia3#MediaItems
- * ATMDepositedMedia3.MediaItems}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia3#mmMediaCategory
+ * ATMDepositedMedia3.mmMediaCategory}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia3#mmMediaItems
+ * ATMDepositedMedia3.mmMediaItems}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDepositedMedia3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMMediaType2Code mediaType;
 	/**
 	 * Type of deposited media.
 	 * <p>
@@ -94,11 +97,11 @@ public class ATMDepositedMedia3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia1#MediaType
-	 * ATMDepositedMedia1.MediaType}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia1#mmMediaType
+	 * ATMDepositedMedia1.mmMediaType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MediaType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMediaType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMDepositedMedia3.mmObject();
 			isDerived = false;
@@ -106,12 +109,13 @@ public class ATMDepositedMedia3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaType";
 			definition = "Type of deposited media.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia1.MediaType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia1.mmMediaType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMMediaType2Code.mmObject();
 		}
 	};
+	protected ATMMediaType3Code mediaCategory;
 	/**
 	 * Category of deposited media items.
 	 * <p>
@@ -141,11 +145,11 @@ public class ATMDepositedMedia3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia1#MediaCategory
-	 * ATMDepositedMedia1.MediaCategory}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia1#mmMediaCategory
+	 * ATMDepositedMedia1.mmMediaCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MediaCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMediaCategory = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMDepositedMedia3.mmObject();
 			isDerived = false;
@@ -153,12 +157,13 @@ public class ATMDepositedMedia3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaCategory";
 			definition = "Category of deposited media items.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia1.MediaCategory;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia1.mmMediaCategory;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ATMMediaType3Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMDepositedMedia2> mediaItems;
 	/**
 	 * Media item that are deposited.
 	 * <p>
@@ -186,11 +191,11 @@ public class ATMDepositedMedia3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia1#MediaItems
-	 * ATMDepositedMedia1.MediaItems}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMDepositedMedia1#mmMediaItems
+	 * ATMDepositedMedia1.mmMediaItems}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MediaItems = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMediaItems = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMDepositedMedia3.mmObject();
 			isDerived = false;
@@ -198,19 +203,19 @@ public class ATMDepositedMedia3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaItems";
 			definition = "Media item that are deposited.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia1.MediaItems;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia1.mmMediaItems;
 			minOccurs = 1;
-			type_lazy = () -> ATMDepositedMedia2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositedMedia3.MediaType, com.tools20022.repository.msg.ATMDepositedMedia3.MediaCategory,
-						com.tools20022.repository.msg.ATMDepositedMedia3.MediaItems);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositedMedia3.mmMediaType, com.tools20022.repository.msg.ATMDepositedMedia3.mmMediaCategory,
+						com.tools20022.repository.msg.ATMDepositedMedia3.mmMediaItems);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositedMedia3";
 				definition = "Deposited media put in the safe.";
@@ -218,5 +223,29 @@ public class ATMDepositedMedia3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMMediaType2Code getMediaType() {
+		return mediaType;
+	}
+
+	public void setMediaType(ATMMediaType2Code mediaType) {
+		this.mediaType = mediaType;
+	}
+
+	public ATMMediaType3Code getMediaCategory() {
+		return mediaCategory;
+	}
+
+	public void setMediaCategory(ATMMediaType3Code mediaCategory) {
+		this.mediaCategory = mediaCategory;
+	}
+
+	public List<ATMDepositedMedia2> getMediaItems() {
+		return mediaItems;
+	}
+
+	public void setMediaItems(List<com.tools20022.repository.msg.ATMDepositedMedia2> mediaItems) {
+		this.mediaItems = mediaItems;
 	}
 }

@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Amendment7#AmendmentIdentification
- * Amendment7.AmendmentIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Amendment7#AmendmentStatus
- * Amendment7.AmendmentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.Amendment7#mmAmendmentIdentification
+ * Amendment7.mmAmendmentIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Amendment7#mmAmendmentStatus
+ * Amendment7.mmAmendmentStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseV01#UndertakingAmendmentResponseDetails
- * UndertakingAmendmentResponseV01.UndertakingAmendmentResponseDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseV01#mmUndertakingAmendmentResponseDetails
+ * UndertakingAmendmentResponseV01.mmUndertakingAmendmentResponseDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Amendment7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Amendment8 amendmentIdentification;
 	/**
 	 * Identification of the proposed amendment.
 	 * <p>
@@ -81,8 +82,8 @@ public class Amendment7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#AmendmentIdentification
-	 * AmendmentOfUndertaking.AmendmentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.AmendmentOfUndertaking#mmAmendmentIdentification
+	 * AmendmentOfUndertaking.mmAmendmentIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Amendment7
@@ -100,21 +101,22 @@ public class Amendment7 {
 	 * definition} = "Identification of the proposed amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmendmentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmendmentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmAmendmentIdentification;
 			componentContext_lazy = () -> Amendment7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.AmendmentIdentification;
 			isDerived = false;
 			xmlTag = "AmdmntId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIdentification";
 			definition = "Identification of the proposed amendment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Amendment8.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
 		}
 	};
+	protected UndertakingStatus2Code amendmentStatus;
 	/**
 	 * Proposed undertaking amendment status.
 	 * <p>
@@ -128,8 +130,8 @@ public class Amendment7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Undertaking#UndertakingStatus
-	 * Undertaking.UndertakingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Undertaking#mmUndertakingStatus
+	 * Undertaking.mmUndertakingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Amendment7
@@ -147,17 +149,17 @@ public class Amendment7 {
 	 * definition} = "Proposed undertaking amendment status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmendmentStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmendmentStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingStatus;
 			componentContext_lazy = () -> Amendment7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.UndertakingStatus;
 			isDerived = false;
 			xmlTag = "AmdmntSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentStatus";
 			definition = "Proposed undertaking amendment status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UndertakingStatus2Code.mmObject();
 		}
 	};
@@ -165,15 +167,31 @@ public class Amendment7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment7.AmendmentIdentification, com.tools20022.repository.msg.Amendment7.AmendmentStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment7.mmAmendmentIdentification, com.tools20022.repository.msg.Amendment7.mmAmendmentStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseV01.mmUndertakingAmendmentResponseDetails);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseV01.UndertakingAmendmentResponseDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Amendment7";
 				definition = "Details of the amendment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Amendment8 getAmendmentIdentification() {
+		return amendmentIdentification;
+	}
+
+	public void setAmendmentIdentification(com.tools20022.repository.msg.Amendment8 amendmentIdentification) {
+		this.amendmentIdentification = amendmentIdentification;
+	}
+
+	public UndertakingStatus2Code getAmendmentStatus() {
+		return amendmentStatus;
+	}
+
+	public void setAmendmentStatus(UndertakingStatus2Code amendmentStatus) {
+		this.amendmentStatus = amendmentStatus;
 	}
 }

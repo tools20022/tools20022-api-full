@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information for the MTM to build or include delegated actions in the
@@ -37,36 +38,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#PeriodicAction
- * MaintenanceDelegateAction3.PeriodicAction}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#mmPeriodicAction
+ * MaintenanceDelegateAction3.mmPeriodicAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#TMRemoteAccess
- * MaintenanceDelegateAction3.TMRemoteAccess}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#mmTMRemoteAccess
+ * MaintenanceDelegateAction3.mmTMRemoteAccess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#TMSProtocol
- * MaintenanceDelegateAction3.TMSProtocol}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#mmTMSProtocol
+ * MaintenanceDelegateAction3.mmTMSProtocol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#TMSProtocolVersion
- * MaintenanceDelegateAction3.TMSProtocolVersion}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#mmTMSProtocolVersion
+ * MaintenanceDelegateAction3.mmTMSProtocolVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#DataSetIdentification
- * MaintenanceDelegateAction3.DataSetIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#mmDataSetIdentification
+ * MaintenanceDelegateAction3.mmDataSetIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#ReTry
- * MaintenanceDelegateAction3.ReTry}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#mmReTry
+ * MaintenanceDelegateAction3.mmReTry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#AdditionalInformation
- * MaintenanceDelegateAction3.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#mmAdditionalInformation
+ * MaintenanceDelegateAction3.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#Action
- * MaintenanceDelegateAction3.Action}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction3#mmAction
+ * MaintenanceDelegateAction3.mmAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MaintenanceDelegateAction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator periodicAction;
 	/**
 	 * Flag to indicate that the delegated actions have to be included in a
 	 * periodic sequence of actions.
@@ -118,11 +120,11 @@ public class MaintenanceDelegateAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#PeriodicAction
-	 * MaintenanceDelegateAction2.PeriodicAction}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#mmPeriodicAction
+	 * MaintenanceDelegateAction2.mmPeriodicAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PeriodicAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPeriodicAction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegateAction3.mmObject();
 			isDerived = false;
@@ -130,12 +132,13 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodicAction";
 			definition = "Flag to indicate that the delegated actions have to be included in a periodic sequence of actions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.PeriodicAction;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.mmPeriodicAction;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected NetworkParameters5 tMRemoteAccess;
 	/**
 	 * Network address and parameters of the terminal manager host which will
 	 * performs the delegated actions.
@@ -166,11 +169,11 @@ public class MaintenanceDelegateAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#TMRemoteAccess
-	 * MaintenanceDelegateAction2.TMRemoteAccess}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#mmTMRemoteAccess
+	 * MaintenanceDelegateAction2.mmTMRemoteAccess}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TMRemoteAccess = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTMRemoteAccess = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegateAction3.mmObject();
 			isDerived = false;
@@ -178,13 +181,14 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMRemoteAccess";
 			definition = "Network address and parameters of the terminal manager host which will performs the delegated actions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.TMRemoteAccess;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.mmTMRemoteAccess;
 			maxOccurs = 1;
-			type_lazy = () -> NetworkParameters5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters5.mmObject();
 		}
 	};
+	protected Max35Text tMSProtocol;
 	/**
 	 * TMS protocol to use to perform the maintenance action.
 	 * <p>
@@ -213,11 +217,11 @@ public class MaintenanceDelegateAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#TMSProtocol
-	 * MaintenanceDelegateAction2.TMSProtocol}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#mmTMSProtocol
+	 * MaintenanceDelegateAction2.mmTMSProtocol}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TMSProtocol = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTMSProtocol = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegateAction3.mmObject();
 			isDerived = false;
@@ -225,12 +229,13 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocol";
 			definition = "TMS protocol to use to perform the maintenance action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.TMSProtocol;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.mmTMSProtocol;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text tMSProtocolVersion;
 	/**
 	 * Version of the TMS protocol to use to perform the maintenance action.
 	 * <p>
@@ -260,11 +265,11 @@ public class MaintenanceDelegateAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#TMSProtocolVersion
-	 * MaintenanceDelegateAction2.TMSProtocolVersion}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#mmTMSProtocolVersion
+	 * MaintenanceDelegateAction2.mmTMSProtocolVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TMSProtocolVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTMSProtocolVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegateAction3.mmObject();
 			isDerived = false;
@@ -272,12 +277,13 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocolVersion";
 			definition = "Version of the TMS protocol to use to perform the maintenance action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.TMSProtocolVersion;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.mmTMSProtocolVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DataSetIdentification6 dataSetIdentification;
 	/**
 	 * Data set on which the delegated action has to be performed.
 	 * <p>
@@ -306,11 +312,11 @@ public class MaintenanceDelegateAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#DataSetIdentification
-	 * MaintenanceDelegateAction2.DataSetIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#mmDataSetIdentification
+	 * MaintenanceDelegateAction2.mmDataSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegateAction3.mmObject();
 			isDerived = false;
@@ -318,13 +324,14 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Data set  on which the delegated action has to be performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.DataSetIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.mmDataSetIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> DataSetIdentification6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification6.mmObject();
 		}
 	};
+	protected ProcessRetry2 reTry;
 	/**
 	 * Definition of retry process when activation of the action fails.
 	 * <p>
@@ -353,11 +360,11 @@ public class MaintenanceDelegateAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#ReTry
-	 * MaintenanceDelegateAction2.ReTry}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#mmReTry
+	 * MaintenanceDelegateAction2.mmReTry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReTry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReTry = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegateAction3.mmObject();
 			isDerived = false;
@@ -365,13 +372,14 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReTry";
 			definition = "Definition of retry process when activation of the action fails.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.ReTry;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.mmReTry;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessRetry2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProcessRetry2.mmObject();
 		}
 	};
+	protected List<Max3000Binary> additionalInformation;
 	/**
 	 * Additional information to include in the maintenance action.
 	 * <p>
@@ -402,11 +410,11 @@ public class MaintenanceDelegateAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#AdditionalInformation
-	 * MaintenanceDelegateAction2.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#mmAdditionalInformation
+	 * MaintenanceDelegateAction2.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegateAction3.mmObject();
 			isDerived = false;
@@ -414,11 +422,12 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information to include in the maintenance action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.AdditionalInformation;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.mmAdditionalInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TMSAction6> action;
 	/**
 	 * Sequence of action to include in the next MTM management plan.
 	 * <p>
@@ -446,11 +455,11 @@ public class MaintenanceDelegateAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#Action
-	 * MaintenanceDelegateAction2.Action}</li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2#mmAction
+	 * MaintenanceDelegateAction2.mmAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Action = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MaintenanceDelegateAction3.mmObject();
 			isDerived = false;
@@ -458,21 +467,21 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Sequence of action to include in the next MTM management plan.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.Action;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.mmAction;
 			minOccurs = 0;
-			type_lazy = () -> TMSAction6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TMSAction6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegateAction3.PeriodicAction, com.tools20022.repository.msg.MaintenanceDelegateAction3.TMRemoteAccess,
-						com.tools20022.repository.msg.MaintenanceDelegateAction3.TMSProtocol, com.tools20022.repository.msg.MaintenanceDelegateAction3.TMSProtocolVersion,
-						com.tools20022.repository.msg.MaintenanceDelegateAction3.DataSetIdentification, com.tools20022.repository.msg.MaintenanceDelegateAction3.ReTry,
-						com.tools20022.repository.msg.MaintenanceDelegateAction3.AdditionalInformation, com.tools20022.repository.msg.MaintenanceDelegateAction3.Action);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegateAction3.mmPeriodicAction, com.tools20022.repository.msg.MaintenanceDelegateAction3.mmTMRemoteAccess,
+						com.tools20022.repository.msg.MaintenanceDelegateAction3.mmTMSProtocol, com.tools20022.repository.msg.MaintenanceDelegateAction3.mmTMSProtocolVersion,
+						com.tools20022.repository.msg.MaintenanceDelegateAction3.mmDataSetIdentification, com.tools20022.repository.msg.MaintenanceDelegateAction3.mmReTry,
+						com.tools20022.repository.msg.MaintenanceDelegateAction3.mmAdditionalInformation, com.tools20022.repository.msg.MaintenanceDelegateAction3.mmAction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegateAction3";
 				definition = "Information for the MTM to build or include delegated actions in the management plan of the POI.";
@@ -480,5 +489,69 @@ public class MaintenanceDelegateAction3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getPeriodicAction() {
+		return periodicAction;
+	}
+
+	public void setPeriodicAction(TrueFalseIndicator periodicAction) {
+		this.periodicAction = periodicAction;
+	}
+
+	public NetworkParameters5 getTMRemoteAccess() {
+		return tMRemoteAccess;
+	}
+
+	public void setTMRemoteAccess(com.tools20022.repository.msg.NetworkParameters5 tMRemoteAccess) {
+		this.tMRemoteAccess = tMRemoteAccess;
+	}
+
+	public Max35Text getTMSProtocol() {
+		return tMSProtocol;
+	}
+
+	public void setTMSProtocol(Max35Text tMSProtocol) {
+		this.tMSProtocol = tMSProtocol;
+	}
+
+	public Max35Text getTMSProtocolVersion() {
+		return tMSProtocolVersion;
+	}
+
+	public void setTMSProtocolVersion(Max35Text tMSProtocolVersion) {
+		this.tMSProtocolVersion = tMSProtocolVersion;
+	}
+
+	public DataSetIdentification6 getDataSetIdentification() {
+		return dataSetIdentification;
+	}
+
+	public void setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification6 dataSetIdentification) {
+		this.dataSetIdentification = dataSetIdentification;
+	}
+
+	public ProcessRetry2 getReTry() {
+		return reTry;
+	}
+
+	public void setReTry(com.tools20022.repository.msg.ProcessRetry2 reTry) {
+		this.reTry = reTry;
+	}
+
+	public List<Max3000Binary> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max3000Binary> additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public List<TMSAction6> getAction() {
+		return action;
+	}
+
+	public void setAction(List<com.tools20022.repository.msg.TMSAction6> action) {
+		this.action = action;
 	}
 }

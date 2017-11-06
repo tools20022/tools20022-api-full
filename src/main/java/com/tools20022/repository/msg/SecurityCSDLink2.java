@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.SystemPartyIdentification1Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines how the CSD is linked to the security.
@@ -37,31 +38,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCSDLink2#FinancialInstrumentIdentification
- * SecurityCSDLink2.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCSDLink2#mmFinancialInstrumentIdentification
+ * SecurityCSDLink2.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCSDLink2#IssuerInvestorCSD
- * SecurityCSDLink2.IssuerInvestorCSD}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCSDLink2#mmIssuerInvestorCSD
+ * SecurityCSDLink2.mmIssuerInvestorCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCSDLink2#TechnicalIssuerCSD
- * SecurityCSDLink2.TechnicalIssuerCSD}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCSDLink2#mmTechnicalIssuerCSD
+ * SecurityCSDLink2.mmTechnicalIssuerCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCSDLink2#SecurityMaintenance
- * SecurityCSDLink2.SecurityMaintenance}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCSDLink2#mmSecurityMaintenance
+ * SecurityCSDLink2.mmSecurityMaintenance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityCSDLink2#IssuanceAccount
- * SecurityCSDLink2.IssuanceAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityCSDLink2#ValidFrom
- * SecurityCSDLink2.ValidFrom}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityCSDLink2#ValidTo
- * SecurityCSDLink2.ValidTo}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityCSDLink2#mmIssuanceAccount
+ * SecurityCSDLink2.mmIssuanceAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityCSDLink2#mmValidFrom
+ * SecurityCSDLink2.mmValidFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityCSDLink2#mmValidTo
+ * SecurityCSDLink2.mmValidTo}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityCSDLink2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Identification of a security.
 	 * <p>
@@ -103,7 +105,7 @@ public class SecurityCSDLink2 {
 	 * definition} = "Identification of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
 			isDerived = false;
@@ -111,11 +113,12 @@ public class SecurityCSDLink2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected IssuerOrInvestor1choice issuerInvestorCSD;
 	/**
 	 * CSD Issuer of a security.
 	 * <p>
@@ -144,7 +147,7 @@ public class SecurityCSDLink2 {
 	 * definition} = "CSD Issuer of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerInvestorCSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerInvestorCSD = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
 			isDerived = false;
@@ -152,11 +155,12 @@ public class SecurityCSDLink2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerInvestorCSD";
 			definition = "CSD Issuer of a security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> IssuerOrInvestor1choice.mmObject();
 		}
 	};
+	protected SystemPartyIdentification1Choice technicalIssuerCSD;
 	/**
 	 * Technical issuer of a security.
 	 * <p>
@@ -184,7 +188,7 @@ public class SecurityCSDLink2 {
 	 * definition} = "Technical issuer of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TechnicalIssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTechnicalIssuerCSD = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
 			isDerived = false;
@@ -192,12 +196,13 @@ public class SecurityCSDLink2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalIssuerCSD";
 			definition = "Technical issuer of a security.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator securityMaintenance;
 	/**
 	 * Specifies if the involved CSD (issuer/technical issuer/investor) is also
 	 * the maintainer of related reference data.<br>
@@ -229,7 +234,7 @@ public class SecurityCSDLink2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityMaintenance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityMaintenance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
 			isDerived = false;
@@ -237,11 +242,12 @@ public class SecurityCSDLink2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityMaintenance";
 			definition = "Specifies if the involved CSD (issuer/technical issuer/investor) is also the maintainer of related reference data.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IssuanceAccount1> issuanceAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -268,7 +274,7 @@ public class SecurityCSDLink2 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IssuanceAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuanceAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
 			isDerived = false;
@@ -277,10 +283,11 @@ public class SecurityCSDLink2 {
 			name = "IssuanceAccount";
 			definition = "Account to or from which a securities entry is made.";
 			minOccurs = 0;
-			type_lazy = () -> IssuanceAccount1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IssuanceAccount1.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice validFrom;
 	/**
 	 * Defines the date since when the CSD is linked to the security.
 	 * <p>
@@ -310,7 +317,7 @@ public class SecurityCSDLink2 {
 	 * "Defines the date since when the CSD is linked to the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
 			isDerived = false;
@@ -318,11 +325,12 @@ public class SecurityCSDLink2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Defines the date since when the CSD is linked to the security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice validTo;
 	/**
 	 * Defines the date until when the CSD is linked to the security.
 	 * <p>
@@ -352,7 +360,7 @@ public class SecurityCSDLink2 {
 	 * "Defines the date until when the CSD is linked to the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
 			isDerived = false;
@@ -360,8 +368,8 @@ public class SecurityCSDLink2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidTo";
 			definition = "Defines the date until when the CSD is linked to the security.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -369,15 +377,71 @@ public class SecurityCSDLink2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCSDLink2.FinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityCSDLink2.IssuerInvestorCSD,
-						com.tools20022.repository.msg.SecurityCSDLink2.TechnicalIssuerCSD, com.tools20022.repository.msg.SecurityCSDLink2.SecurityMaintenance, com.tools20022.repository.msg.SecurityCSDLink2.IssuanceAccount,
-						com.tools20022.repository.msg.SecurityCSDLink2.ValidFrom, com.tools20022.repository.msg.SecurityCSDLink2.ValidTo);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCSDLink2.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityCSDLink2.mmIssuerInvestorCSD,
+						com.tools20022.repository.msg.SecurityCSDLink2.mmTechnicalIssuerCSD, com.tools20022.repository.msg.SecurityCSDLink2.mmSecurityMaintenance, com.tools20022.repository.msg.SecurityCSDLink2.mmIssuanceAccount,
+						com.tools20022.repository.msg.SecurityCSDLink2.mmValidFrom, com.tools20022.repository.msg.SecurityCSDLink2.mmValidTo);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityCSDLink2";
 				definition = "Defines how the CSD is linked to the security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public IssuerOrInvestor1choice getIssuerInvestorCSD() {
+		return issuerInvestorCSD;
+	}
+
+	public void setIssuerInvestorCSD(IssuerOrInvestor1choice issuerInvestorCSD) {
+		this.issuerInvestorCSD = issuerInvestorCSD;
+	}
+
+	public SystemPartyIdentification1Choice getTechnicalIssuerCSD() {
+		return technicalIssuerCSD;
+	}
+
+	public void setTechnicalIssuerCSD(SystemPartyIdentification1Choice technicalIssuerCSD) {
+		this.technicalIssuerCSD = technicalIssuerCSD;
+	}
+
+	public YesNoIndicator getSecurityMaintenance() {
+		return securityMaintenance;
+	}
+
+	public void setSecurityMaintenance(YesNoIndicator securityMaintenance) {
+		this.securityMaintenance = securityMaintenance;
+	}
+
+	public List<IssuanceAccount1> getIssuanceAccount() {
+		return issuanceAccount;
+	}
+
+	public void setIssuanceAccount(List<com.tools20022.repository.msg.IssuanceAccount1> issuanceAccount) {
+		this.issuanceAccount = issuanceAccount;
+	}
+
+	public DateAndDateTimeChoice getValidFrom() {
+		return validFrom;
+	}
+
+	public void setValidFrom(DateAndDateTimeChoice validFrom) {
+		this.validFrom = validFrom;
+	}
+
+	public DateAndDateTimeChoice getValidTo() {
+		return validTo;
+	}
+
+	public void setValidTo(DateAndDateTimeChoice validTo) {
+		this.validTo = validTo;
 	}
 }

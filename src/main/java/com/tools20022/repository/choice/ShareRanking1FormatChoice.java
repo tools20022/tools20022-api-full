@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ShareRanking1FormatChoice#Code
- * ShareRanking1FormatChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.ShareRanking1FormatChoice#mmCode
+ * ShareRanking1FormatChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ShareRanking1FormatChoice#Proprietary
- * ShareRanking1FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ShareRanking1FormatChoice#mmProprietary
+ * ShareRanking1FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ShareRanking1FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ShareRanking1Code code;
 	/**
 	 * Standard code to specify the share ranking.
 	 * <p>
@@ -87,7 +88,7 @@ public class ShareRanking1FormatChoice {
 	 * definition} = "Standard code to specify the share ranking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ShareRanking1FormatChoice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class ShareRanking1FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the share ranking.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ShareRanking1Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code to express the share ranking.
 	 * <p>
@@ -128,7 +130,7 @@ public class ShareRanking1FormatChoice {
 	 * definition} = "Proprietary code to express the share ranking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ShareRanking1FormatChoice.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class ShareRanking1FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to express the share ranking.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class ShareRanking1FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ShareRanking1FormatChoice.Code, com.tools20022.repository.choice.ShareRanking1FormatChoice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ShareRanking1FormatChoice.mmCode, com.tools20022.repository.choice.ShareRanking1FormatChoice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ShareRanking1FormatChoice";
 				definition = "Choice of formats to  express the share ranking.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ShareRanking1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ShareRanking1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

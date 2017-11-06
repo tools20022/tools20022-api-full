@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#ICC
- * AuthenticationEntity2Code.ICC}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#mmICC
+ * AuthenticationEntity2Code.mmICC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#AuthorisedAgent
- * AuthenticationEntity2Code.AuthorisedAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#mmAuthorisedAgent
+ * AuthenticationEntity2Code.mmAuthorisedAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#Merchant
- * AuthenticationEntity2Code.Merchant}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#mmMerchant
+ * AuthenticationEntity2Code.mmMerchant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#Acquirer
- * AuthenticationEntity2Code.Acquirer}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#mmAcquirer
+ * AuthenticationEntity2Code.mmAcquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#Issuer
- * AuthenticationEntity2Code.Issuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#mmIssuer
+ * AuthenticationEntity2Code.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#Terminal
- * AuthenticationEntity2Code.Terminal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#mmTerminal
+ * AuthenticationEntity2Code.mmTerminal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,15 +98,15 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#ICC
-	 * AuthenticationEntity1Code.ICC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#mmICC
+	 * AuthenticationEntity1Code.mmICC}</li>
 	 * </ul>
 	 */
-	public static final MMCode ICC = new MMCode() {
+	public static final MMCode mmICC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICC";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.ICC;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.mmICC;
 			owner_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
 	};
@@ -127,15 +127,15 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#AuthorisedAgent
-	 * AuthenticationEntity1Code.AuthorisedAgent}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#mmAuthorisedAgent
+	 * AuthenticationEntity1Code.mmAuthorisedAgent}</li>
 	 * </ul>
 	 */
-	public static final MMCode AuthorisedAgent = new MMCode() {
+	public static final MMCode mmAuthorisedAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedAgent";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.AuthorisedAgent;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.mmAuthorisedAgent;
 			owner_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
 	};
@@ -156,15 +156,15 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#Merchant
-	 * AuthenticationEntity1Code.Merchant}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#mmMerchant
+	 * AuthenticationEntity1Code.mmMerchant}</li>
 	 * </ul>
 	 */
-	public static final MMCode Merchant = new MMCode() {
+	public static final MMCode mmMerchant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.Merchant;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.mmMerchant;
 			owner_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
 	};
@@ -184,7 +184,7 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 * name} = "Acquirer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Acquirer = new MMCode() {
+	public static final MMCode mmAcquirer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
@@ -207,7 +207,7 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 * name} = "Issuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Issuer = new MMCode() {
+	public static final MMCode mmIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
@@ -230,7 +230,7 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 * name} = "Terminal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Terminal = new MMCode() {
+	public static final MMCode mmTerminal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Terminal";
@@ -241,15 +241,15 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ICCD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AuthenticationEntity2Code";
 				definition = "Entity or device that has performed the verification.";
 				previousVersion_lazy = () -> AuthenticationEntity1Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationEntity2Code.ICC, com.tools20022.repository.codeset.AuthenticationEntity2Code.AuthorisedAgent,
-						com.tools20022.repository.codeset.AuthenticationEntity2Code.Merchant, com.tools20022.repository.codeset.AuthenticationEntity2Code.Acquirer, com.tools20022.repository.codeset.AuthenticationEntity2Code.Issuer,
-						com.tools20022.repository.codeset.AuthenticationEntity2Code.Terminal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationEntity2Code.mmICC, com.tools20022.repository.codeset.AuthenticationEntity2Code.mmAuthorisedAgent,
+						com.tools20022.repository.codeset.AuthenticationEntity2Code.mmMerchant, com.tools20022.repository.codeset.AuthenticationEntity2Code.mmAcquirer, com.tools20022.repository.codeset.AuthenticationEntity2Code.mmIssuer,
+						com.tools20022.repository.codeset.AuthenticationEntity2Code.mmTerminal);
 				trace_lazy = () -> AuthenticationEntityCode.mmObject();
 			}
 		});

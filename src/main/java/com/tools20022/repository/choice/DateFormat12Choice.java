@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.DateFormat12Choice#Date
- * DateFormat12Choice.Date}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateFormat12Choice#mmDate
+ * DateFormat12Choice.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DateFormat12Choice#NotSpecifiedDate
- * DateFormat12Choice.NotSpecifiedDate}</li>
+ * {@linkplain com.tools20022.repository.choice.DateFormat12Choice#mmNotSpecifiedDate
+ * DateFormat12Choice.mmNotSpecifiedDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateFormat12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Date expressed as an ISO Date.
 	 * <p>
@@ -85,7 +86,7 @@ public class DateFormat12Choice {
 	 * definition} = "Date expressed as an ISO Date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateFormat12Choice.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class DateFormat12Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as an ISO Date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateType6Code notSpecifiedDate;
 	/**
 	 * Date not specified, for example, the date is unknown.
 	 * <p>
@@ -126,7 +128,7 @@ public class DateFormat12Choice {
 	 * definition} = "Date not specified, for example, the date is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateFormat12Choice.mmObject();
 			isDerived = false;
@@ -134,8 +136,8 @@ public class DateFormat12Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedDate";
 			definition = "Date not specified, for example, the date is unknown.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DateType6Code.mmObject();
 		}
 	};
@@ -143,13 +145,29 @@ public class DateFormat12Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat12Choice.Date, com.tools20022.repository.choice.DateFormat12Choice.NotSpecifiedDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat12Choice.mmDate, com.tools20022.repository.choice.DateFormat12Choice.mmNotSpecifiedDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateFormat12Choice";
 				definition = "Specifies the value of a date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+		this.date = date;
+	}
+
+	public DateType6Code getNotSpecifiedDate() {
+		return notSpecifiedDate;
+	}
+
+	public void setNotSpecifiedDate(DateType6Code notSpecifiedDate) {
+		this.notSpecifiedDate = notSpecifiedDate;
 	}
 }

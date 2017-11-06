@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.ReportIndicator1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria which are used to search for a transaction and to report
@@ -36,24 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCriteria3#NewQueryName
- * TransactionCriteria3.NewQueryName}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCriteria3#mmNewQueryName
+ * TransactionCriteria3.mmNewQueryName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCriteria3#SearchCriteria
- * TransactionCriteria3.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCriteria3#mmSearchCriteria
+ * TransactionCriteria3.mmSearchCriteria}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCriteria3#StatementReport
- * TransactionCriteria3.StatementReport}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCriteria3#mmStatementReport
+ * TransactionCriteria3.mmStatementReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCriteria3#ReturnCriteria
- * TransactionCriteria3.ReturnCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCriteria3#mmReturnCriteria
+ * TransactionCriteria3.mmReturnCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text newQueryName;
 	/**
 	 * Name of the query defined by the search criteria and return criteria.
 	 * <p>
@@ -97,7 +99,7 @@ public class TransactionCriteria3 {
 	 * "Name of the query defined by the search criteria and return criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionCriteria3.mmObject();
 			isDerived = false;
@@ -105,11 +107,12 @@ public class TransactionCriteria3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQueryName";
 			definition = "Name of the query defined by the search criteria and return criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransactionSearchCriteria3> searchCriteria;
 	/**
 	 * Defines the criteria on which the information is extracted.
 	 * <p>
@@ -138,7 +141,7 @@ public class TransactionCriteria3 {
 	 * "Defines the criteria on which the information is extracted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionCriteria3.mmObject();
 			isDerived = false;
@@ -147,10 +150,11 @@ public class TransactionCriteria3 {
 			name = "SearchCriteria";
 			definition = "Defines the criteria on which the information is extracted.";
 			minOccurs = 0;
-			type_lazy = () -> TransactionSearchCriteria3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionSearchCriteria3.mmObject();
 		}
 	};
+	protected ReportIndicator1Code statementReport;
 	/**
 	 * Indicates the format of the requested report.
 	 * <p>
@@ -179,7 +183,7 @@ public class TransactionCriteria3 {
 	 * definition} = "Indicates the format of the requested report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementReport = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementReport = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionCriteria3.mmObject();
 			isDerived = false;
@@ -187,11 +191,12 @@ public class TransactionCriteria3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementReport";
 			definition = "Indicates the format of the requested report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ReportIndicator1Code.mmObject();
 		}
 	};
+	protected TransactionReturnCriteria2 returnCriteria;
 	/**
 	 * Defines the expected report.
 	 * <p>
@@ -219,7 +224,7 @@ public class TransactionCriteria3 {
 	 * definition} = "Defines the expected report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionCriteria3.mmObject();
 			isDerived = false;
@@ -227,24 +232,56 @@ public class TransactionCriteria3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteria";
 			definition = "Defines the expected report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionReturnCriteria2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionReturnCriteria2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCriteria3.NewQueryName, com.tools20022.repository.msg.TransactionCriteria3.SearchCriteria,
-						com.tools20022.repository.msg.TransactionCriteria3.StatementReport, com.tools20022.repository.msg.TransactionCriteria3.ReturnCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCriteria3.mmNewQueryName, com.tools20022.repository.msg.TransactionCriteria3.mmSearchCriteria,
+						com.tools20022.repository.msg.TransactionCriteria3.mmStatementReport, com.tools20022.repository.msg.TransactionCriteria3.mmReturnCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionCriteria3";
 				definition = "Defines the criteria which are used to search for a transaction and to report on the transaction. A name may be given to the new query.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getNewQueryName() {
+		return newQueryName;
+	}
+
+	public void setNewQueryName(Max35Text newQueryName) {
+		this.newQueryName = newQueryName;
+	}
+
+	public List<TransactionSearchCriteria3> getSearchCriteria() {
+		return searchCriteria;
+	}
+
+	public void setSearchCriteria(List<com.tools20022.repository.msg.TransactionSearchCriteria3> searchCriteria) {
+		this.searchCriteria = searchCriteria;
+	}
+
+	public ReportIndicator1Code getStatementReport() {
+		return statementReport;
+	}
+
+	public void setStatementReport(ReportIndicator1Code statementReport) {
+		this.statementReport = statementReport;
+	}
+
+	public TransactionReturnCriteria2 getReturnCriteria() {
+		return returnCriteria;
+	}
+
+	public void setReturnCriteria(com.tools20022.repository.msg.TransactionReturnCriteria2 returnCriteria) {
+		this.returnCriteria = returnCriteria;
 	}
 }

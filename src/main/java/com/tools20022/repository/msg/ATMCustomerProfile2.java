@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile2#ProfileReference
- * ATMCustomerProfile2.ProfileReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile2#mmProfileReference
+ * ATMCustomerProfile2.mmProfileReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile2#CustomerIdentification
- * ATMCustomerProfile2.CustomerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile2#mmCustomerIdentification
+ * ATMCustomerProfile2.mmCustomerIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCustomerProfile2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text profileReference;
 	/**
 	 * Reference of the customer profile.
 	 * <p>
@@ -98,18 +99,18 @@ public class ATMCustomerProfile2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#ProfileReference
-	 * ATMCustomerProfile3.ProfileReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#mmProfileReference
+	 * ATMCustomerProfile3.mmProfileReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile1#ProfileReference
-	 * ATMCustomerProfile1.ProfileReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile1#mmProfileReference
+	 * ATMCustomerProfile1.mmProfileReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProfileReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProfileReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCustomerProfile2.mmObject();
 			isDerived = false;
@@ -117,13 +118,14 @@ public class ATMCustomerProfile2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileReference";
 			definition = "Reference of the customer profile.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.ProfileReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile3.ProfileReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile3.mmProfileReference);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmProfileReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text customerIdentification;
 	/**
 	 * Identification of the customer for the bank.
 	 * <p>
@@ -153,18 +155,18 @@ public class ATMCustomerProfile2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#CustomerIdentification
-	 * ATMCustomerProfile3.CustomerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#mmCustomerIdentification
+	 * ATMCustomerProfile3.mmCustomerIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile1#CustomerIdentification
-	 * ATMCustomerProfile1.CustomerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile1#mmCustomerIdentification
+	 * ATMCustomerProfile1.mmCustomerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCustomerProfile2.mmObject();
 			isDerived = false;
@@ -172,10 +174,10 @@ public class ATMCustomerProfile2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerIdentification";
 			definition = "Identification of the customer for the bank.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.CustomerIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile3.CustomerIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile3.mmCustomerIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmCustomerIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -183,15 +185,31 @@ public class ATMCustomerProfile2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile2.ProfileReference, com.tools20022.repository.msg.ATMCustomerProfile2.CustomerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile2.mmProfileReference, com.tools20022.repository.msg.ATMCustomerProfile2.mmCustomerIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile2";
 				definition = "Profile of the customer selected by an ATM.";
-				previousVersion_lazy = () -> ATMCustomerProfile1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ATMCustomerProfile3.mmObject());
+				previousVersion_lazy = () -> ATMCustomerProfile1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getProfileReference() {
+		return profileReference;
+	}
+
+	public void setProfileReference(Max35Text profileReference) {
+		this.profileReference = profileReference;
+	}
+
+	public Max35Text getCustomerIdentification() {
+		return customerIdentification;
+	}
+
+	public void setCustomerIdentification(Max35Text customerIdentification) {
+		this.customerIdentification = customerIdentification;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reference of an order, order cancellation and master reference.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder1#MasterReference
- * InvestmentFundOrder1.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder1#mmMasterReference
+ * InvestmentFundOrder1.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder1#OrderReferences
- * InvestmentFundOrder1.OrderReferences}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder1#mmOrderReferences
+ * InvestmentFundOrder1.mmOrderReferences}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,27 +51,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#CancellationByReference
- * RedemptionBulkOrderCancellationRequestV03.CancellationByReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmCancellationByReference
+ * RedemptionBulkOrderCancellationRequestV03.mmCancellationByReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03#CancellationByReference
- * RedemptionOrderCancellationRequestV03.CancellationByReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03#mmCancellationByReference
+ * RedemptionOrderCancellationRequestV03.mmCancellationByReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03#CancellationByReference
- * SubscriptionBulkOrderCancellationRequestV03.CancellationByReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03#mmCancellationByReference
+ * SubscriptionBulkOrderCancellationRequestV03.mmCancellationByReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03#CancellationByReference
- * SubscriptionOrderCancellationRequestV03.CancellationByReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03#mmCancellationByReference
+ * SubscriptionOrderCancellationRequestV03.mmCancellationByReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03#CancellationByReference
- * SwitchOrderCancellationRequestV03.CancellationByReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03#mmCancellationByReference
+ * SwitchOrderCancellationRequestV03.mmCancellationByReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFundOrder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text masterReference;
 	/**
 	 * Reference assigned to a set of orders or trades in order to link them
 	 * together.
@@ -98,8 +100,8 @@ public class InvestmentFundOrder1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Order#MasterIdentification
-	 * Order.MasterIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+	 * Order.mmMasterIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -120,20 +122,21 @@ public class InvestmentFundOrder1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.MasterIdentification;
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InvestmentFundOrder5> orderReferences;
 	/**
 	 * Reference of an order and order cancellation.
 	 * <p>
@@ -145,8 +148,8 @@ public class InvestmentFundOrder1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,35 +168,51 @@ public class InvestmentFundOrder1 {
 	 * definition} = "Reference of an order and order cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderReferences = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderReferences = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrRefs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferences";
 			definition = "Reference of an order and order cancellation.";
 			minOccurs = 1;
-			type_lazy = () -> InvestmentFundOrder5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder1.MasterReference, com.tools20022.repository.msg.InvestmentFundOrder1.OrderReferences);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder1.mmMasterReference, com.tools20022.repository.msg.InvestmentFundOrder1.mmOrderReferences);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmCancellationByReference,
+						com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03.mmCancellationByReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmCancellationByReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03.mmCancellationByReference, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCancellationByReference);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.CancellationByReference,
-						com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03.CancellationByReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.CancellationByReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03.CancellationByReference, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.CancellationByReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundOrder1";
 				definition = "Reference of an order, order cancellation and master reference.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public List<InvestmentFundOrder5> getOrderReferences() {
+		return orderReferences;
+	}
+
+	public void setOrderReferences(List<com.tools20022.repository.msg.InvestmentFundOrder5> orderReferences) {
+		this.orderReferences = orderReferences;
 	}
 }

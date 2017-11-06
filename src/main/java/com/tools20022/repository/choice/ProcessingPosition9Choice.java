@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingPosition9Choice#Code
- * ProcessingPosition9Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingPosition9Choice#mmCode
+ * ProcessingPosition9Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProcessingPosition9Choice#Proprietary
- * ProcessingPosition9Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingPosition9Choice#mmProprietary
+ * ProcessingPosition9Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProcessingPosition9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProcessingPosition5Code code;
 	/**
 	 * Processing position expressed as an ISO 20022 code.
 	 * <p>
@@ -93,18 +94,18 @@ public class ProcessingPosition9Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessingPosition23Choice#Code
-	 * ProcessingPosition23Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingPosition23Choice#mmCode
+	 * ProcessingPosition23Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ProcessingPosition8Choice#Code
-	 * ProcessingPosition8Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingPosition8Choice#mmCode
+	 * ProcessingPosition8Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessingPosition9Choice.mmObject();
 			isDerived = false;
@@ -112,13 +113,14 @@ public class ProcessingPosition9Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Processing position expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingPosition8Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingPosition23Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingPosition23Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingPosition8Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ProcessingPosition5Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Processing position expressed as a proprietary code.
 	 * <p>
@@ -149,18 +151,18 @@ public class ProcessingPosition9Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProcessingPosition23Choice#Proprietary
-	 * ProcessingPosition23Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingPosition23Choice#mmProprietary
+	 * ProcessingPosition23Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ProcessingPosition8Choice#Proprietary
-	 * ProcessingPosition8Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingPosition8Choice#mmProprietary
+	 * ProcessingPosition8Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProcessingPosition9Choice.mmObject();
 			isDerived = false;
@@ -168,10 +170,10 @@ public class ProcessingPosition9Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Processing position expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingPosition8Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingPosition23Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingPosition23Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingPosition8Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
@@ -179,8 +181,8 @@ public class ProcessingPosition9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingPosition9Choice.Code, com.tools20022.repository.choice.ProcessingPosition9Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingPosition9Choice.mmCode, com.tools20022.repository.choice.ProcessingPosition9Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProcessingPosition9Choice";
 				definition = "Choice of format for the processing position.";
@@ -188,5 +190,21 @@ public class ProcessingPosition9Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProcessingPosition5Code getCode() {
+		return code;
+	}
+
+	public void setCode(ProcessingPosition5Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

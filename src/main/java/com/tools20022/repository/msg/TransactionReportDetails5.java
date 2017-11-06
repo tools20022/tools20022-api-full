@@ -36,8 +36,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#TransactionOrBusinessErrorRule
- * TransactionReportDetails5.TransactionOrBusinessErrorRule}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#mmTransactionOrBusinessErrorRule
+ * TransactionReportDetails5.mmTransactionOrBusinessErrorRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,14 +45,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#InstructionReference
- * TransactionReportDetails5.InstructionReference}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#mmInstructionReference
+ * TransactionReportDetails5.mmInstructionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#Transaction
- * TransactionReportDetails5.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#mmTransaction
+ * TransactionReportDetails5.mmTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#BusinessError
- * TransactionReportDetails5.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#mmBusinessError
+ * TransactionReportDetails5.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -77,6 +77,7 @@ import java.util.function.Supplier;
 public class TransactionReportDetails5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentIdentification3Choice instructionReference;
 	/**
 	 * Reference to the instruction related to the payment for which information
 	 * is requested.
@@ -90,8 +91,8 @@ public class TransactionReportDetails5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentRelatedIdentifications
-	 * Payment.PaymentRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentRelatedIdentifications
+	 * Payment.mmPaymentRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,21 +113,22 @@ public class TransactionReportDetails5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionReference = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentRelatedIdentifications;
 			componentContext_lazy = () -> TransactionReportDetails5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "InstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionReference";
 			definition = "Reference to the instruction related to the payment for which information is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentIdentification3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PaymentIdentification3Choice.mmObject();
 		}
 	};
+	protected Transaction5 transaction;
 	/**
 	 * Requested information on the payment transaction.
 	 * <p>
@@ -157,21 +159,22 @@ public class TransactionReportDetails5 {
 	 * definition} = "Requested information on the payment transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportDetails5.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> TransactionReportDetails5.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Requested information on the payment transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Transaction5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Transaction5.mmObject();
 		}
 	};
+	protected ErrorHandling3 businessError;
 	/**
 	 * Reason why the requested business information is not given.
 	 * <p>
@@ -199,7 +202,7 @@ public class TransactionReportDetails5 {
 	 * "Reason why the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionReportDetails5.mmObject();
 			isDerived = false;
@@ -207,10 +210,10 @@ public class TransactionReportDetails5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason why the requested business information is not given.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.mmObject();
 		}
 	};
 	/**
@@ -222,11 +225,11 @@ public class TransactionReportDetails5 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#Transaction
-	 * TransactionReportDetails5.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#mmTransaction
+	 * TransactionReportDetails5.mmTransaction}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#BusinessError
-	 * TransactionReportDetails5.BusinessError}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReportDetails5#mmBusinessError
+	 * TransactionReportDetails5.mmBusinessError}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -245,23 +248,23 @@ public class TransactionReportDetails5 {
 	 * "Either Transaction or BusinessError must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor TransactionOrBusinessErrorRule = new MMXor() {
+	public static final MMXor mmTransactionOrBusinessErrorRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOrBusinessErrorRule";
 			definition = "Either Transaction or BusinessError must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportDetails5.Transaction, com.tools20022.repository.msg.TransactionReportDetails5.BusinessError);
 			messageComponent_lazy = () -> TransactionReportDetails5.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportDetails5.mmTransaction, com.tools20022.repository.msg.TransactionReportDetails5.mmBusinessError);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportDetails5.InstructionReference, com.tools20022.repository.msg.TransactionReportDetails5.Transaction,
-						com.tools20022.repository.msg.TransactionReportDetails5.BusinessError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportDetails5.mmInstructionReference, com.tools20022.repository.msg.TransactionReportDetails5.mmTransaction,
+						com.tools20022.repository.msg.TransactionReportDetails5.mmBusinessError);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -272,9 +275,33 @@ public class TransactionReportDetails5 {
 				})).get();
 				name = "TransactionReportDetails5";
 				definition = "Reports either on the transaction information or on a business error.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportDetails5.TransactionOrBusinessErrorRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportDetails5.mmTransactionOrBusinessErrorRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentIdentification3Choice getInstructionReference() {
+		return instructionReference;
+	}
+
+	public void setInstructionReference(PaymentIdentification3Choice instructionReference) {
+		this.instructionReference = instructionReference;
+	}
+
+	public Transaction5 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.Transaction5 transaction) {
+		this.transaction = transaction;
+	}
+
+	public ErrorHandling3 getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(com.tools20022.repository.msg.ErrorHandling3 businessError) {
+		this.businessError = businessError;
 	}
 }

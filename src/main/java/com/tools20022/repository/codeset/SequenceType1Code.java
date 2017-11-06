@@ -36,22 +36,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * SequenceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceType1Code#First
- * SequenceType1Code.First}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceType1Code#mmFirst
+ * SequenceType1Code.mmFirst}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SequenceType1Code#Recurring
- * SequenceType1Code.Recurring}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceType1Code#Final
- * SequenceType1Code.Final}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceType1Code#OneOff
- * SequenceType1Code.OneOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SequenceType1Code#mmRecurring
+ * SequenceType1Code.mmRecurring}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceType1Code#mmFinal
+ * SequenceType1Code.mmFinal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceType1Code#mmOneOff
+ * SequenceType1Code.mmOneOff}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class SequenceType1Code extends SequenceTypeCode {
 	 * name} = "First"</li>
 	 * </ul>
 	 */
-	public static final MMCode First = new MMCode() {
+	public static final MMCode mmFirst = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "First";
@@ -112,7 +112,7 @@ public class SequenceType1Code extends SequenceTypeCode {
 	 * name} = "Recurring"</li>
 	 * </ul>
 	 */
-	public static final MMCode Recurring = new MMCode() {
+	public static final MMCode mmRecurring = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recurring";
@@ -135,7 +135,7 @@ public class SequenceType1Code extends SequenceTypeCode {
 	 * name} = "Final"</li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
@@ -158,7 +158,7 @@ public class SequenceType1Code extends SequenceTypeCode {
 	 * name} = "OneOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode OneOff = new MMCode() {
+	public static final MMCode mmOneOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneOff";
@@ -169,13 +169,13 @@ public class SequenceType1Code extends SequenceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FRST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SequenceType1Code";
 				definition = "Specifies the type of the current transaction that belongs to a sequence of transactions. Specific attributes are required for the first, the recurring and the last instructions of a series, as well as the specification of a unique transaction (one-off direct debit transaction).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SequenceType1Code.First, com.tools20022.repository.codeset.SequenceType1Code.Recurring, com.tools20022.repository.codeset.SequenceType1Code.Final,
-						com.tools20022.repository.codeset.SequenceType1Code.OneOff);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SequenceType1Code.mmFirst, com.tools20022.repository.codeset.SequenceType1Code.mmRecurring, com.tools20022.repository.codeset.SequenceType1Code.mmFinal,
+						com.tools20022.repository.codeset.SequenceType1Code.mmOneOff);
 				trace_lazy = () -> SequenceTypeCode.mmObject();
 			}
 		});

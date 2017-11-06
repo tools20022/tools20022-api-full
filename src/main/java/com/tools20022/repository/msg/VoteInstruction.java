@@ -37,20 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.VoteInstruction#Identification
- * VoteInstruction.Identification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteInstruction#RequestedExecutionDate
- * VoteInstruction.RequestedExecutionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteInstruction#mmIdentification
+ * VoteInstruction.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteInstruction#VoteExecutionConfirmation
- * VoteInstruction.VoteExecutionConfirmation}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteInstruction#mmRequestedExecutionDate
+ * VoteInstruction.mmRequestedExecutionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteInstruction#VotePerResolution
- * VoteInstruction.VotePerResolution}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteInstruction#mmVoteExecutionConfirmation
+ * VoteInstruction.mmVoteExecutionConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VoteInstruction#VoteInstructionForMeetingResolution
- * VoteInstruction.VoteInstructionForMeetingResolution}</li>
+ * {@linkplain com.tools20022.repository.msg.VoteInstruction#mmVotePerResolution
+ * VoteInstruction.mmVotePerResolution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.VoteInstruction#mmVoteInstructionForMeetingResolution
+ * VoteInstruction.mmVoteInstructionForMeetingResolution}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VoteInstruction {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identifies the instruction.
 	 * <p>
@@ -101,7 +103,7 @@ public class VoteInstruction {
 	 * definition} = "Identifies the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> VoteInstruction.mmObject();
 			isDerived = false;
@@ -109,11 +111,12 @@ public class VoteInstruction {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime requestedExecutionDate;
 	/**
 	 * Date at which the instruction must b e executed.
 	 * <p>
@@ -126,8 +129,8 @@ public class VoteInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#RequestedExecutionDate
-	 * InstructionForMeeting.RequestedExecutionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmRequestedExecutionDate
+	 * InstructionForMeeting.mmRequestedExecutionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,20 +149,21 @@ public class VoteInstruction {
 	 * definition} = "Date at which the instruction must b e executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmRequestedExecutionDate;
 			componentContext_lazy = () -> VoteInstruction.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.RequestedExecutionDate;
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the instruction must b e executed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected YesNoIndicator voteExecutionConfirmation;
 	/**
 	 * Indicates that a Vote execution confirmation is requested.
 	 * <p>
@@ -173,8 +177,8 @@ public class VoteInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#VoteExecutionConfirmation
-	 * VoteInstructionRequest.VoteExecutionConfirmation}</li>
+	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVoteExecutionConfirmation
+	 * VoteInstructionRequest.mmVoteExecutionConfirmation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -194,20 +198,21 @@ public class VoteInstruction {
 	 * "Indicates that a Vote execution confirmation is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VoteExecutionConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVoteExecutionConfirmation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteExecutionConfirmation;
 			componentContext_lazy = () -> VoteInstruction.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.VoteExecutionConfirmation;
 			isDerived = false;
 			xmlTag = "VoteExctnConf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteExecutionConfirmation";
 			definition = "Indicates that a Vote execution confirmation is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected VoteChoice votePerResolution;
 	/**
 	 * Details of the vote.
 	 * <p>
@@ -219,8 +224,8 @@ public class VoteInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#VotePerResolution
-	 * VoteInstructionRequest.VotePerResolution}</li>
+	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVotePerResolution
+	 * VoteInstructionRequest.mmVotePerResolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -239,21 +244,22 @@ public class VoteInstruction {
 	 * definition} = "Details of the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VotePerResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVotePerResolution = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> VoteInstruction.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.VotePerResolution;
 			isDerived = false;
 			xmlTag = "VotePerRsltn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VotePerResolution";
 			definition = "Details of the vote.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> VoteChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> VoteChoice.mmObject();
 		}
 	};
+	protected VoteInstructionForMeetingResolution voteInstructionForMeetingResolution;
 	/**
 	 * Indicates the vote instruction for the resolutions that would be added
 	 * during the meeting.
@@ -267,8 +273,8 @@ public class VoteInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#VoteForMeetingResolution
-	 * VoteInstructionRequest.VoteForMeetingResolution}</li>
+	 * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVoteForMeetingResolution
+	 * VoteInstructionRequest.mmVoteForMeetingResolution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -289,35 +295,75 @@ public class VoteInstruction {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VoteInstructionForMeetingResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> VoteInstruction.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.VoteForMeetingResolution;
 			isDerived = false;
 			xmlTag = "VoteInstrForMtgRsltn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionForMeetingResolution";
 			definition = "Indicates the vote instruction for the resolutions that would be added during the meeting.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.msg.VoteInstructionForMeetingResolution.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.VoteInstructionForMeetingResolution.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstruction.Identification, com.tools20022.repository.msg.VoteInstruction.RequestedExecutionDate,
-						com.tools20022.repository.msg.VoteInstruction.VoteExecutionConfirmation, com.tools20022.repository.msg.VoteInstruction.VotePerResolution,
-						com.tools20022.repository.msg.VoteInstruction.VoteInstructionForMeetingResolution);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstruction.mmIdentification, com.tools20022.repository.msg.VoteInstruction.mmRequestedExecutionDate,
+						com.tools20022.repository.msg.VoteInstruction.mmVoteExecutionConfirmation, com.tools20022.repository.msg.VoteInstruction.mmVotePerResolution,
+						com.tools20022.repository.msg.VoteInstruction.mmVoteInstructionForMeetingResolution);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VoteInstruction";
 				definition = "Specifies the vote instructions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ISODateTime getRequestedExecutionDate() {
+		return requestedExecutionDate;
+	}
+
+	public void setRequestedExecutionDate(ISODateTime requestedExecutionDate) {
+		this.requestedExecutionDate = requestedExecutionDate;
+	}
+
+	public YesNoIndicator getVoteExecutionConfirmation() {
+		return voteExecutionConfirmation;
+	}
+
+	public void setVoteExecutionConfirmation(YesNoIndicator voteExecutionConfirmation) {
+		this.voteExecutionConfirmation = voteExecutionConfirmation;
+	}
+
+	public VoteChoice getVotePerResolution() {
+		return votePerResolution;
+	}
+
+	public void setVotePerResolution(VoteChoice votePerResolution) {
+		this.votePerResolution = votePerResolution;
+	}
+
+	public VoteInstructionForMeetingResolution getVoteInstructionForMeetingResolution() {
+		return voteInstructionForMeetingResolution;
+	}
+
+	public void setVoteInstructionForMeetingResolution(com.tools20022.repository.msg.VoteInstructionForMeetingResolution voteInstructionForMeetingResolution) {
+		this.voteInstructionForMeetingResolution = voteInstructionForMeetingResolution;
 	}
 }

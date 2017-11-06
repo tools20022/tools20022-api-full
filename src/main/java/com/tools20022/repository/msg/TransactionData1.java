@@ -35,19 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionData1#CardBrand
- * TransactionData1.CardBrand}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionData1#CardData
- * TransactionData1.CardData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionData1#mmCardBrand
+ * TransactionData1.mmCardBrand}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionData1#mmCardData
+ * TransactionData1.mmCardData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionData1#PointOfInteraction
- * TransactionData1.PointOfInteraction}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionData1#mmPointOfInteraction
+ * TransactionData1.mmPointOfInteraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionData1#TransactionDetails
- * TransactionData1.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionData1#mmTransactionDetails
+ * TransactionData1.mmTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionData1#PrePaidAccount
- * TransactionData1.PrePaidAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionData1#mmPrePaidAccount
+ * TransactionData1.mmPrePaidAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,15 +58,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.supl.PaymentSD1V01#CardRemittanceInformation
- * PaymentSD1V01.CardRemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.area.supl.PaymentSD1V01#mmCardRemittanceInformation
+ * PaymentSD1V01.mmCardRemittanceInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text cardBrand;
 	/**
 	 * Brand name of the card.
 	 * <p>
@@ -92,8 +93,8 @@ public class TransactionData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard#CardBrand
-	 * PaymentCard.CardBrand}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard#mmCardBrand
+	 * PaymentCard.mmCardBrand}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,20 +113,21 @@ public class TransactionData1 {
 	 * definition} = "Brand name of the card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardBrand = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardBrand = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmCardBrand;
 			componentContext_lazy = () -> TransactionData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.CardBrand;
 			isDerived = false;
 			xmlTag = "CardBrnd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardBrand";
 			definition = "Brand name of the card.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PlainCardData3 cardData;
 	/**
 	 * Card data associated with the card performing the transaction.
 	 * <p>
@@ -157,21 +159,22 @@ public class TransactionData1 {
 	 * "Card data associated with the card performing the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCardData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionData1.mmObject();
 			businessComponentTrace_lazy = () -> PaymentCard.mmObject();
+			componentContext_lazy = () -> TransactionData1.mmObject();
 			isDerived = false;
 			xmlTag = "CardData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardData";
 			definition = "Card data associated with the card performing the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PlainCardData3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PlainCardData3.mmObject();
 		}
 	};
+	protected PointOfInteraction1 pointOfInteraction;
 	/**
 	 * Point of interaction (POI) performing the transaction.
 	 * <p>
@@ -183,8 +186,8 @@ public class TransactionData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#PointOfInteraction
-	 * CardPaymentAcquiring.PointOfInteraction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmPointOfInteraction
+	 * CardPaymentAcquiring.mmPointOfInteraction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,21 +206,22 @@ public class TransactionData1 {
 	 * definition} = "Point of interaction (POI) performing the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PointOfInteraction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPointOfInteraction = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> TransactionData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.PointOfInteraction;
 			isDerived = false;
 			xmlTag = "PtOfIntractn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PointOfInteraction";
 			definition = "Point of interaction (POI) performing the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PointOfInteraction1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction1.mmObject();
 		}
 	};
+	protected CardPaymentTransactionDetails8 transactionDetails;
 	/**
 	 * Details of the transaction.
 	 * <p>
@@ -249,21 +253,22 @@ public class TransactionData1 {
 	 * definition} = "Details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionData1.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> TransactionData1.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Details of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CardPaymentTransactionDetails8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails8.mmObject();
 		}
 	};
+	protected CashAccount24 prePaidAccount;
 	/**
 	 * PrePaid Account for funds transfer or loading.
 	 * <p>
@@ -275,8 +280,8 @@ public class TransactionData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard#RelatedAccount
-	 * PaymentCard.RelatedAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard#mmRelatedAccount
+	 * PaymentCard.mmRelatedAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -295,35 +300,75 @@ public class TransactionData1 {
 	 * definition} = "PrePaid Account for funds transfer or loading."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrePaidAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrePaidAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmRelatedAccount;
 			componentContext_lazy = () -> TransactionData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.RelatedAccount;
 			isDerived = false;
 			xmlTag = "PrePdAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrePaidAccount";
 			definition = "PrePaid Account for funds transfer or loading.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionData1.CardBrand, com.tools20022.repository.msg.TransactionData1.CardData, com.tools20022.repository.msg.TransactionData1.PointOfInteraction,
-						com.tools20022.repository.msg.TransactionData1.TransactionDetails, com.tools20022.repository.msg.TransactionData1.PrePaidAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionData1.mmCardBrand, com.tools20022.repository.msg.TransactionData1.mmCardData,
+						com.tools20022.repository.msg.TransactionData1.mmPointOfInteraction, com.tools20022.repository.msg.TransactionData1.mmTransactionDetails, com.tools20022.repository.msg.TransactionData1.mmPrePaidAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.supl.PaymentSD1V01.mmCardRemittanceInformation);
 				trace_lazy = () -> PaymentCard.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.supl.PaymentSD1V01.CardRemittanceInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionData1";
 				definition = "Card transaction information to be transferred.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCardBrand() {
+		return cardBrand;
+	}
+
+	public void setCardBrand(Max35Text cardBrand) {
+		this.cardBrand = cardBrand;
+	}
+
+	public PlainCardData3 getCardData() {
+		return cardData;
+	}
+
+	public void setCardData(com.tools20022.repository.msg.PlainCardData3 cardData) {
+		this.cardData = cardData;
+	}
+
+	public PointOfInteraction1 getPointOfInteraction() {
+		return pointOfInteraction;
+	}
+
+	public void setPointOfInteraction(com.tools20022.repository.msg.PointOfInteraction1 pointOfInteraction) {
+		this.pointOfInteraction = pointOfInteraction;
+	}
+
+	public CardPaymentTransactionDetails8 getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(com.tools20022.repository.msg.CardPaymentTransactionDetails8 transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public CashAccount24 getPrePaidAccount() {
+		return prePaidAccount;
+	}
+
+	public void setPrePaidAccount(com.tools20022.repository.msg.CashAccount24 prePaidAccount) {
+		this.prePaidAccount = prePaidAccount;
 	}
 }

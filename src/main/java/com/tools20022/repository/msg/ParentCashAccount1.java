@@ -34,13 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ParentCashAccount1#Level
- * ParentCashAccount1.Level}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ParentCashAccount1#mmLevel
+ * ParentCashAccount1.mmLevel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ParentCashAccount1#Identification
- * ParentCashAccount1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ParentCashAccount1#Servicer
- * ParentCashAccount1.Servicer}</li>
+ * {@linkplain com.tools20022.repository.msg.ParentCashAccount1#mmIdentification
+ * ParentCashAccount1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ParentCashAccount1#mmServicer
+ * ParentCashAccount1.mmServicer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ParentCashAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountLevel1Code level;
 	/**
 	 * Defines the parent account level within a hierarchy.
 	 * <p>
@@ -85,8 +86,8 @@ public class ParentCashAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccount#Level
-	 * CashAccount.Level}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmLevel
+	 * CashAccount.mmLevel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,27 +107,28 @@ public class ParentCashAccount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.ParentCashAccount2#Level
-	 * ParentCashAccount2.Level}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ParentCashAccount2#mmLevel
+	 * ParentCashAccount2.mmLevel}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Level = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLevel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmLevel;
 			componentContext_lazy = () -> ParentCashAccount1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.Level;
 			isDerived = false;
 			xmlTag = "Lvl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level";
 			definition = "Defines the parent account level within a hierarchy.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount2.Level);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount2.mmLevel);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AccountLevel1Code.mmObject();
 		}
 	};
+	protected CashAccount16 identification;
 	/**
 	 * Unique and unambiguous identification for the parent account between the
 	 * parent account owner and the parent account servicer.
@@ -163,27 +165,28 @@ public class ParentCashAccount1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ParentCashAccount2#Identification
-	 * ParentCashAccount2.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ParentCashAccount2#mmIdentification
+	 * ParentCashAccount2.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ParentCashAccount1.mmObject();
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
+			componentContext_lazy = () -> ParentCashAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the parent account between the parent account owner and the parent account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount2.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount2.mmIdentification);
 			maxOccurs = 1;
-			complexType_lazy = () -> CashAccount16.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 servicer;
 	/**
 	 * Financial institution in which the parent account resides.
 	 * <p>
@@ -220,34 +223,35 @@ public class ParentCashAccount1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ParentCashAccount2#Servicer
-	 * ParentCashAccount2.Servicer}</li>
+	 * {@linkplain com.tools20022.repository.msg.ParentCashAccount2#mmServicer
+	 * ParentCashAccount2.mmServicer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Servicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServicer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ParentCashAccount1.mmObject();
 			businessComponentTrace_lazy = () -> AccountServicerRole.mmObject();
+			componentContext_lazy = () -> ParentCashAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Financial institution in which the parent account resides.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount2.Servicer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount2.mmServicer);
 			maxOccurs = 1;
-			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount1.Level, com.tools20022.repository.msg.ParentCashAccount1.Identification, com.tools20022.repository.msg.ParentCashAccount1.Servicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount1.mmLevel, com.tools20022.repository.msg.ParentCashAccount1.mmIdentification,
+						com.tools20022.repository.msg.ParentCashAccount1.mmServicer);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ParentCashAccount1";
 				definition = "Specifies the cash account elements of a parent cash account.";
@@ -255,5 +259,29 @@ public class ParentCashAccount1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountLevel1Code getLevel() {
+		return level;
+	}
+
+	public void setLevel(AccountLevel1Code level) {
+		this.level = level;
+	}
+
+	public CashAccount16 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.CashAccount16 identification) {
+		this.identification = identification;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getServicer() {
+		return servicer;
+	}
+
+	public void setServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 servicer) {
+		this.servicer = servicer;
 	}
 }

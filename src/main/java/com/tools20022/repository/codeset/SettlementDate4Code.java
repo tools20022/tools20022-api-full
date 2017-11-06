@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate4Code#WhenIssued
- * SettlementDate4Code.WhenIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate4Code#mmWhenIssued
+ * SettlementDate4Code.mmWhenIssued}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class SettlementDate4Code extends SettlementDateCode {
 	 * name} = "WhenIssued"</li>
 	 * </ul>
 	 */
-	public static final MMCode WhenIssued = new MMCode() {
+	public static final MMCode mmWhenIssued = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenIssued";
@@ -89,12 +89,12 @@ public class SettlementDate4Code extends SettlementDateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WISS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate4Code";
 				definition = "Specifies the date of settlement, in coded form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate4Code.WhenIssued);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate4Code.mmWhenIssued);
 				trace_lazy = () -> SettlementDateCode.mmObject();
 			}
 		});

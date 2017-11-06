@@ -19,10 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.Reservation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports either on the reservation or on a business error.
@@ -34,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReservationOrError3Choice#Reservation
- * ReservationOrError3Choice.Reservation}</li>
+ * {@linkplain com.tools20022.repository.choice.ReservationOrError3Choice#mmReservation
+ * ReservationOrError3Choice.mmReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReservationOrError3Choice#BusinessError
- * ReservationOrError3Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.ReservationOrError3Choice#mmBusinessError
+ * ReservationOrError3Choice.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReservationOrError3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Reservation1 reservation;
 	/**
 	 * Requested information on the limit.
 	 * <p>
@@ -101,28 +104,29 @@ public class ReservationOrError3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReservationOrError5Choice#Reservation
-	 * ReservationOrError5Choice.Reservation}</li>
+	 * {@linkplain com.tools20022.repository.choice.ReservationOrError5Choice#mmReservation
+	 * ReservationOrError5Choice.mmReservation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reservation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReservation = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> ReservationOrError3Choice.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
 			isDerived = false;
 			xmlTag = "Rsvatn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reservation";
 			definition = "Requested information on the limit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationOrError5Choice.Reservation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationOrError5Choice.mmReservation);
 			maxOccurs = 1;
-			type_lazy = () -> Reservation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Reservation1.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -151,13 +155,13 @@ public class ReservationOrError3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ReservationOrError5Choice#BusinessError
-	 * ReservationOrError5Choice.BusinessError}</li>
+	 * {@linkplain com.tools20022.repository.choice.ReservationOrError5Choice#mmBusinessError
+	 * ReservationOrError5Choice.mmBusinessError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReservationOrError3Choice.mmObject();
 			isDerived = false;
@@ -165,19 +169,19 @@ public class ReservationOrError3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationOrError5Choice.BusinessError);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationOrError5Choice.mmBusinessError);
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationOrError3Choice.Reservation, com.tools20022.repository.choice.ReservationOrError3Choice.BusinessError);
-				trace_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationOrError3Choice.mmReservation, com.tools20022.repository.choice.ReservationOrError3Choice.mmBusinessError);
+				trace_lazy = () -> Reservation.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationOrError3Choice";
 				definition = "Reports either on the reservation or on a business error.";
@@ -185,5 +189,21 @@ public class ReservationOrError3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Reservation1 getReservation() {
+		return reservation;
+	}
+
+	public void setReservation(Reservation1 reservation) {
+		this.reservation = reservation;
+	}
+
+	public List<ErrorHandling3> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = businessError;
 	}
 }

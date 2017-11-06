@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionQueryDefinition3#QueryType
- * IntraPositionQueryDefinition3.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryDefinition3#mmQueryType
+ * IntraPositionQueryDefinition3.mmQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionQueryDefinition3#SearchCriteria
- * IntraPositionQueryDefinition3.SearchCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionQueryDefinition3#mmSearchCriteria
+ * IntraPositionQueryDefinition3.mmSearchCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionQueryDefinition3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MovementResponseType1Code queryType;
 	/**
 	 * Defines the type of query.
 	 * <p>
@@ -90,7 +91,7 @@ public class IntraPositionQueryDefinition3 {
 	 * definition} = "Defines the type of query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionQueryDefinition3.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class IntraPositionQueryDefinition3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Defines the type of query.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
 		}
 	};
+	protected IntraPositionQueryCriteria3 searchCriteria;
 	/**
 	 * Defines the criteria to extract the intra-position movement instruction
 	 * information.
@@ -133,7 +135,7 @@ public class IntraPositionQueryDefinition3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionQueryDefinition3.mmObject();
 			isDerived = false;
@@ -141,23 +143,39 @@ public class IntraPositionQueryDefinition3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to extract the intra-position movement instruction information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IntraPositionQueryCriteria3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryCriteria3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryDefinition3.QueryType, com.tools20022.repository.msg.IntraPositionQueryDefinition3.SearchCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryDefinition3.mmQueryType, com.tools20022.repository.msg.IntraPositionQueryDefinition3.mmSearchCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionQueryDefinition3";
 				definition = "Defines the information that is searched through the definition of specific criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MovementResponseType1Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(MovementResponseType1Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public IntraPositionQueryCriteria3 getSearchCriteria() {
+		return searchCriteria;
+	}
+
+	public void setSearchCriteria(com.tools20022.repository.msg.IntraPositionQueryCriteria3 searchCriteria) {
+		this.searchCriteria = searchCriteria;
 	}
 }

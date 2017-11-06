@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatusReason1#Structured
- * TransferUnmatchedStatusReason1.Structured}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatusReason1#mmStructured
+ * TransferUnmatchedStatusReason1.mmStructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatusReason1#AdditionalInformation
- * TransferUnmatchedStatusReason1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatusReason1#mmAdditionalInformation
+ * TransferUnmatchedStatusReason1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferUnmatchedStatusReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransferUnmatchedReason1Code structured;
 	/**
 	 * Reason for a rejected status in structured form.
 	 * <p>
@@ -91,7 +92,7 @@ public class TransferUnmatchedStatusReason1 {
 	 * definition} = "Reason for a rejected status in structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Structured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransferUnmatchedStatusReason1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class TransferUnmatchedStatusReason1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Reason for a rejected status in structured form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransferUnmatchedReason1Code.mmObject();
 		}
 	};
+	protected Max350Text additionalInformation;
 	/**
 	 * Additional information about the reason for the unmatched status in
 	 * textual form.
@@ -134,7 +136,7 @@ public class TransferUnmatchedStatusReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransferUnmatchedStatusReason1.mmObject();
 			isDerived = false;
@@ -142,8 +144,8 @@ public class TransferUnmatchedStatusReason1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the reason for the unmatched status in textual form.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -151,14 +153,30 @@ public class TransferUnmatchedStatusReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferUnmatchedStatusReason1.Structured, com.tools20022.repository.msg.TransferUnmatchedStatusReason1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferUnmatchedStatusReason1.mmStructured, com.tools20022.repository.msg.TransferUnmatchedStatusReason1.mmAdditionalInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferUnmatchedStatusReason1";
 				definition = "Reason for an unmatched status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransferUnmatchedReason1Code getStructured() {
+		return structured;
+	}
+
+	public void setStructured(TransferUnmatchedReason1Code structured) {
+		this.structured = structured;
+	}
+
+	public Max350Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

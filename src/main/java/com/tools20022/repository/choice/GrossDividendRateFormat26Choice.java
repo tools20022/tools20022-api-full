@@ -39,17 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat26Choice#Amount
- * GrossDividendRateFormat26Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat26Choice#mmAmount
+ * GrossDividendRateFormat26Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat26Choice#AmountAndRateStatus
- * GrossDividendRateFormat26Choice.AmountAndRateStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat26Choice#mmAmountAndRateStatus
+ * GrossDividendRateFormat26Choice.mmAmountAndRateStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat26Choice#RateTypeAndAmountAndRateStatus
- * GrossDividendRateFormat26Choice.RateTypeAndAmountAndRateStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat26Choice#mmRateTypeAndAmountAndRateStatus
+ * GrossDividendRateFormat26Choice.mmRateTypeAndAmountAndRateStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat26Choice#NotSpecifiedRate
- * GrossDividendRateFormat26Choice.NotSpecifiedRate}</li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat26Choice#mmNotSpecifiedRate
+ * GrossDividendRateFormat26Choice.mmNotSpecifiedRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GrossDividendRateFormat26Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Number of monetary units specified in a currency.
 	 * <p>
@@ -85,8 +86,8 @@ public class GrossDividendRateFormat26Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#Amount
-	 * RateAndAmount.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmAmount
+	 * RateAndAmount.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +106,21 @@ public class GrossDividendRateFormat26Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmAmount;
 			componentContext_lazy = () -> GrossDividendRateFormat26Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected AmountAndRateStatus2 amountAndRateStatus;
 	/**
 	 * Specifies an amount and a rate status.
 	 * <p>
@@ -150,21 +152,22 @@ public class GrossDividendRateFormat26Choice {
 	 * definition} = "Specifies an amount and a rate status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GrossDividendRateFormat26Choice.mmObject();
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
+			componentContext_lazy = () -> GrossDividendRateFormat26Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtAndRateSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountAndRateStatus";
 			definition = "Specifies an amount and a rate status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndRateStatus2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountAndRateStatus2.mmObject();
 		}
 	};
+	protected RateTypeAndAmountAndStatus35 rateTypeAndAmountAndRateStatus;
 	/**
 	 * Specifies different formats for the gross dividend rate.
 	 * <p>
@@ -192,7 +195,7 @@ public class GrossDividendRateFormat26Choice {
 	 * definition} = "Specifies different formats for the gross dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GrossDividendRateFormat26Choice.mmObject();
 			isDerived = false;
@@ -200,12 +203,13 @@ public class GrossDividendRateFormat26Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for the gross dividend rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RateTypeAndAmountAndStatus35.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> RateTypeAndAmountAndStatus35.mmObject();
 		}
 	};
+	protected RateType13Code notSpecifiedRate;
 	/**
 	 * Value of the rate not specified.
 	 * <p>
@@ -234,7 +238,7 @@ public class GrossDividendRateFormat26Choice {
 	 * definition} = "Value of the rate not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GrossDividendRateFormat26Choice.mmObject();
 			isDerived = false;
@@ -242,8 +246,8 @@ public class GrossDividendRateFormat26Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateType13Code.mmObject();
 		}
 	};
@@ -251,15 +255,47 @@ public class GrossDividendRateFormat26Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GrossDividendRateFormat26Choice.Amount, com.tools20022.repository.choice.GrossDividendRateFormat26Choice.AmountAndRateStatus,
-						com.tools20022.repository.choice.GrossDividendRateFormat26Choice.RateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.GrossDividendRateFormat26Choice.NotSpecifiedRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GrossDividendRateFormat26Choice.mmAmount, com.tools20022.repository.choice.GrossDividendRateFormat26Choice.mmAmountAndRateStatus,
+						com.tools20022.repository.choice.GrossDividendRateFormat26Choice.mmRateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.GrossDividendRateFormat26Choice.mmNotSpecifiedRate);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GrossDividendRateFormat26Choice";
 				definition = "Choice between an amount or an unspecified rate.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(RestrictedFINActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public AmountAndRateStatus2 getAmountAndRateStatus() {
+		return amountAndRateStatus;
+	}
+
+	public void setAmountAndRateStatus(AmountAndRateStatus2 amountAndRateStatus) {
+		this.amountAndRateStatus = amountAndRateStatus;
+	}
+
+	public RateTypeAndAmountAndStatus35 getRateTypeAndAmountAndRateStatus() {
+		return rateTypeAndAmountAndRateStatus;
+	}
+
+	public void setRateTypeAndAmountAndRateStatus(RateTypeAndAmountAndStatus35 rateTypeAndAmountAndRateStatus) {
+		this.rateTypeAndAmountAndRateStatus = rateTypeAndAmountAndRateStatus;
+	}
+
+	public RateType13Code getNotSpecifiedRate() {
+		return notSpecifiedRate;
+	}
+
+	public void setNotSpecifiedRate(RateType13Code notSpecifiedRate) {
+		this.notSpecifiedRate = notSpecifiedRate;
 	}
 }

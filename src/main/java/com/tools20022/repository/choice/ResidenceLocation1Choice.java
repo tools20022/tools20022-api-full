@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ResidenceLocation1Choice#Country
- * ResidenceLocation1Choice.Country}</li>
+ * {@linkplain com.tools20022.repository.choice.ResidenceLocation1Choice#mmCountry
+ * ResidenceLocation1Choice.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ResidenceLocation1Choice#Area
- * ResidenceLocation1Choice.Area}</li>
+ * {@linkplain com.tools20022.repository.choice.ResidenceLocation1Choice#mmArea
+ * ResidenceLocation1Choice.mmArea}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ResidenceLocation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Specifies the account owner's resident country.
 	 * <p>
@@ -75,7 +76,8 @@ public class ResidenceLocation1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,20 +96,21 @@ public class ResidenceLocation1Choice {
 	 * definition} = "Specifies the account owner's resident country."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> ResidenceLocation1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Specifies the account owner's resident country.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max35Text area;
 	/**
 	 * Specifies the account owner's resident geographical region or area.
 	 * <p>
@@ -120,8 +123,8 @@ public class ResidenceLocation1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#RegionIdentification
-	 * PostalAddress.RegionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmRegionIdentification
+	 * PostalAddress.mmRegionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,17 +144,17 @@ public class ResidenceLocation1Choice {
 	 * "Specifies the account owner's resident geographical region or area."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Area = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmArea = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmRegionIdentification;
 			componentContext_lazy = () -> ResidenceLocation1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.RegionIdentification;
 			isDerived = false;
 			xmlTag = "Area";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Area";
 			definition = "Specifies the account owner's resident geographical region or area.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -159,14 +162,30 @@ public class ResidenceLocation1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResidenceLocation1Choice.Country, com.tools20022.repository.choice.ResidenceLocation1Choice.Area);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResidenceLocation1Choice.mmCountry, com.tools20022.repository.choice.ResidenceLocation1Choice.mmArea);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResidenceLocation1Choice";
 				definition = "Choice of location of a residence of a party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public Max35Text getArea() {
+		return area;
+	}
+
+	public void setArea(Max35Text area) {
+		this.area = area;
 	}
 }

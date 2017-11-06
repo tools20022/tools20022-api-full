@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.InformationType1Choice#Code
- * InformationType1Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InformationType1Choice#Proprietary
- * InformationType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.InformationType1Choice#mmCode
+ * InformationType1Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InformationType1Choice#mmProprietary
+ * InformationType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InformationType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InformationType1Code code;
 	/**
 	 * Type of additional information in a coded form.
 	 * <p>
@@ -86,7 +88,7 @@ public class InformationType1Choice {
 	 * definition} = "Type of additional information in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InformationType1Choice.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class InformationType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of additional information in a coded form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> InformationType1Code.mmObject();
 		}
 	};
+	protected Max140Text proprietary;
 	/**
 	 * Type of additional information not catered for by the available codes.
 	 * <p>
@@ -127,7 +130,7 @@ public class InformationType1Choice {
 	 * "Type of additional information not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InformationType1Choice.mmObject();
 			isDerived = false;
@@ -135,8 +138,8 @@ public class InformationType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of additional information not catered for by the available codes.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -144,13 +147,29 @@ public class InformationType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InformationType1Choice.Code, com.tools20022.repository.choice.InformationType1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InformationType1Choice.mmCode, com.tools20022.repository.choice.InformationType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InformationType1Choice";
 				definition = "Specifies the type of additional information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InformationType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(InformationType1Code code) {
+		this.code = code;
+	}
+
+	public Max140Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max140Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

@@ -37,19 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOption45#CreditDebitIndicator
- * CashOption45.CreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption45#Account
- * CashOption45.Account}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption45#PostingDate
- * CashOption45.PostingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOption45#mmCreditDebitIndicator
+ * CashOption45.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption45#mmAccount
+ * CashOption45.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption45#mmPostingDate
+ * CashOption45.mmPostingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOption45#OriginalPostingDate
- * CashOption45.OriginalPostingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption45#ValueDate
- * CashOption45.ValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption45#PostingAmount
- * CashOption45.PostingAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOption45#mmOriginalPostingDate
+ * CashOption45.mmOriginalPostingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption45#mmValueDate
+ * CashOption45.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption45#mmPostingAmount
+ * CashOption45.mmPostingAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashOption45 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the value is a debit or credit.
 	 * <p>
@@ -89,8 +90,8 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#CreditDebitIndicator
-	 * ProceedsDefinition.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmCreditDebitIndicator
+	 * ProceedsDefinition.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,25 +110,26 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption19#CreditDebitIndicator
-	 * CashOption19.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption19#mmCreditDebitIndicator
+	 * CashOption19.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashOption45.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or credit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.CreditDebitIndicator;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.mmCreditDebitIndicator;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected Account8Choice account;
 	/**
 	 * Choice between a cash account, a charges account or a tax account.
 	 * <p>
@@ -141,8 +143,8 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection#CashAccount
-	 * CorporateActionElection.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmCashAccount
+	 * CorporateActionElection.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,25 +164,26 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption19#Account
-	 * CashOption19.Account}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption19#mmAccount
+	 * CashOption19.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Account = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmCashAccount;
 			componentContext_lazy = () -> CashOption45.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.CashAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Choice between a cash account, a charges account or a tax account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.Account;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.mmAccount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Account8Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice postingDate;
 	/**
 	 * Date/Time of the posting (credit or debit) to the account.
 	 * <p>
@@ -194,8 +197,8 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingDateTime
-	 * CorporateActionDistribution.PostingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingDateTime
+	 * CorporateActionDistribution.mmPostingDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -215,25 +218,26 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption19#PostingDate
-	 * CashOption19.PostingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption19#mmPostingDate
+	 * CashOption19.mmPostingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> CashOption45.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingDateTime;
 			isDerived = false;
 			xmlTag = "PstngDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date/Time of the posting (credit or debit) to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.PostingDate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.mmPostingDate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice originalPostingDate;
 	/**
 	 * Date/Time of the posting (credit or debit) to the account that was
 	 * initially communicated in the confirmation.
@@ -248,8 +252,8 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingDateTime
-	 * CorporateActionDistribution.PostingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingDateTime
+	 * CorporateActionDistribution.mmPostingDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -270,25 +274,26 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption19#OriginalPostingDate
-	 * CashOption19.OriginalPostingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption19#mmOriginalPostingDate
+	 * CashOption19.mmOriginalPostingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalPostingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalPostingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> CashOption45.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingDateTime;
 			isDerived = false;
 			xmlTag = "OrgnlPstngDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPostingDate";
 			definition = "Date/Time of the posting (credit or debit) to the account that was initially communicated in the confirmation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.OriginalPostingDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.mmOriginalPostingDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice valueDate;
 	/**
 	 * Date/time when calculating economic benefit for a cash amount.
 	 * <p>
@@ -302,8 +307,8 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#ValueDate
-	 * ProceedsDefinition.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmValueDate
+	 * ProceedsDefinition.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -323,25 +328,26 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption19#ValueDate
-	 * CashOption19.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption19#mmValueDate
+	 * CashOption19.mmValueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmValueDate;
 			componentContext_lazy = () -> CashOption45.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time when calculating economic benefit for a cash amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.ValueDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.mmValueDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount postingAmount;
 	/**
 	 * Amount of money that is to be/was posted to the account.
 	 * <p>
@@ -355,8 +361,8 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingAmount
-	 * CorporateActionDistribution.PostingAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingAmount
+	 * CorporateActionDistribution.mmPostingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -375,22 +381,22 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashOption19#PostingAmount
-	 * CashOption19.PostingAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption19#mmPostingAmount
+	 * CashOption19.mmPostingAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingAmount;
 			componentContext_lazy = () -> CashOption45.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingAmount;
 			isDerived = false;
 			xmlTag = "PstngAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingAmount";
 			definition = "Amount of money that is to be/was posted to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.PostingAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption19.mmPostingAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -398,10 +404,10 @@ public class CashOption45 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption45.CreditDebitIndicator, com.tools20022.repository.msg.CashOption45.Account, com.tools20022.repository.msg.CashOption45.PostingDate,
-						com.tools20022.repository.msg.CashOption45.OriginalPostingDate, com.tools20022.repository.msg.CashOption45.ValueDate, com.tools20022.repository.msg.CashOption45.PostingAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption45.mmCreditDebitIndicator, com.tools20022.repository.msg.CashOption45.mmAccount, com.tools20022.repository.msg.CashOption45.mmPostingDate,
+						com.tools20022.repository.msg.CashOption45.mmOriginalPostingDate, com.tools20022.repository.msg.CashOption45.mmValueDate, com.tools20022.repository.msg.CashOption45.mmPostingAmount);
 				trace_lazy = () -> CashProceedsDefinition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashOption45";
 				definition = "Provides information about the cash option.";
@@ -409,5 +415,53 @@ public class CashOption45 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public Account8Choice getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account8Choice account) {
+		this.account = account;
+	}
+
+	public DateAndDateTimeChoice getPostingDate() {
+		return postingDate;
+	}
+
+	public void setPostingDate(DateAndDateTimeChoice postingDate) {
+		this.postingDate = postingDate;
+	}
+
+	public DateAndDateTimeChoice getOriginalPostingDate() {
+		return originalPostingDate;
+	}
+
+	public void setOriginalPostingDate(DateAndDateTimeChoice originalPostingDate) {
+		this.originalPostingDate = originalPostingDate;
+	}
+
+	public DateAndDateTimeChoice getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(DateAndDateTimeChoice valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public ActiveCurrencyAndAmount getPostingAmount() {
+		return postingAmount;
+	}
+
+	public void setPostingAmount(ActiveCurrencyAndAmount postingAmount) {
+		this.postingAmount = postingAmount;
 	}
 }

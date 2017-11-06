@@ -40,42 +40,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#PlaceAndName
- * CorporateActionGeneralInformationSD13.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#mmPlaceAndName
+ * CorporateActionGeneralInformationSD13.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#EventGroup
- * CorporateActionGeneralInformationSD13.EventGroup}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#mmEventGroup
+ * CorporateActionGeneralInformationSD13.mmEventGroup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#EventType
- * CorporateActionGeneralInformationSD13.EventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#mmEventType
+ * CorporateActionGeneralInformationSD13.mmEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#SubEventType
- * CorporateActionGeneralInformationSD13.SubEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#mmSubEventType
+ * CorporateActionGeneralInformationSD13.mmSubEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#DTCMandatoryVoluntaryEventType
- * CorporateActionGeneralInformationSD13.DTCMandatoryVoluntaryEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#mmDTCMandatoryVoluntaryEventType
+ * CorporateActionGeneralInformationSD13.mmDTCMandatoryVoluntaryEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#DeclaredMandatoryVoluntaryEventType
- * CorporateActionGeneralInformationSD13.DeclaredMandatoryVoluntaryEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#mmDeclaredMandatoryVoluntaryEventType
+ * CorporateActionGeneralInformationSD13.mmDeclaredMandatoryVoluntaryEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#EDSMessagingEligibilityFlag
- * CorporateActionGeneralInformationSD13.EDSMessagingEligibilityFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#mmEDSMessagingEligibilityFlag
+ * CorporateActionGeneralInformationSD13.mmEDSMessagingEligibilityFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#RedemptionIdentification
- * CorporateActionGeneralInformationSD13.RedemptionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#mmRedemptionIdentification
+ * CorporateActionGeneralInformationSD13.mmRedemptionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#DTCFCPElectionFlag
- * CorporateActionGeneralInformationSD13.DTCFCPElectionFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#mmDTCFCPElectionFlag
+ * CorporateActionGeneralInformationSD13.mmDTCFCPElectionFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#AssetServicerProcessingFlag
- * CorporateActionGeneralInformationSD13.AssetServicerProcessingFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD13#mmAssetServicerProcessingFlag
+ * CorporateActionGeneralInformationSD13.mmAssetServicerProcessingFlag}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionGeneralInformationSD13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -123,11 +124,11 @@ public class CorporateActionGeneralInformationSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#PlaceAndName
-	 * CorporateActionGeneralInformationSD11.PlaceAndName}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#mmPlaceAndName
+	 * CorporateActionGeneralInformationSD11.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
 			isDerived = false;
@@ -135,12 +136,13 @@ public class CorporateActionGeneralInformationSD13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.PlaceAndName;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.mmPlaceAndName;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected EventGroup1Code eventGroup;
 	/**
 	 * DTC processing domain/ category for event types.
 	 * <p>
@@ -170,11 +172,11 @@ public class CorporateActionGeneralInformationSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#EventGroup
-	 * CorporateActionGeneralInformationSD11.EventGroup}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#mmEventGroup
+	 * CorporateActionGeneralInformationSD11.mmEventGroup}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventGroup = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventGroup = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
 			isDerived = false;
@@ -182,12 +184,13 @@ public class CorporateActionGeneralInformationSD13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventGroup";
 			definition = "DTC processing domain/ category for event types.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.EventGroup;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.mmEventGroup;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EventGroup1Code.mmObject();
 		}
 	};
+	protected ExtendedEventType2Code eventType;
 	/**
 	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
 	 * action event type name. Used in place for the events that cannot be
@@ -223,11 +226,11 @@ public class CorporateActionGeneralInformationSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#EventType
-	 * CorporateActionGeneralInformationSD11.EventType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#mmEventType
+	 * CorporateActionGeneralInformationSD11.mmEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
 			isDerived = false;
@@ -235,12 +238,13 @@ public class CorporateActionGeneralInformationSD13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two  or more distinct events (in DTCC model)  use same ISO code and there are no additional data elements that distinguish those two or more events.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.EventType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.mmEventType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType2Code.mmObject();
 		}
 	};
+	protected DTCCSubEventType3Code subEventType;
 	/**
 	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
 	 * action sub event type name further defines the event type.
@@ -273,11 +277,11 @@ public class CorporateActionGeneralInformationSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#SubEventType
-	 * CorporateActionGeneralInformationSD11.SubEventType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#mmSubEventType
+	 * CorporateActionGeneralInformationSD11.mmSubEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
 			isDerived = false;
@@ -285,12 +289,13 @@ public class CorporateActionGeneralInformationSD13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.SubEventType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.mmSubEventType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType3Code.mmObject();
 		}
 	};
+	protected CorporateActionMandatoryVoluntary1Code dTCMandatoryVoluntaryEventType;
 	/**
 	 * Specifies the nature of the event with regard to how it is being
 	 * supported by DTC (The Depository Trust Corporation) the custodian:
@@ -330,11 +335,11 @@ public class CorporateActionGeneralInformationSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#DTCMandatoryVoluntaryEventType
-	 * CorporateActionGeneralInformationSD11.DTCMandatoryVoluntaryEventType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#mmDTCMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformationSD11.mmDTCMandatoryVoluntaryEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCMandatoryVoluntaryEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCMandatoryVoluntaryEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
 			isDerived = false;
@@ -342,12 +347,13 @@ public class CorporateActionGeneralInformationSD13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCMandatoryVoluntaryEventType";
 			definition = "Specifies the nature of the event with regard to how it is being supported by DTC (The Depository Trust Corporation)  the custodian: whether the event is mandatory, voluntary, or mandatory with options and eligible for DTC processing. This classification is necessary for the event types that have additional DTC only options. For an example: a MAND event, where the issuer declared only one option may be eligible for special DTC options (services like Dividend Reinvestment, Foreign Currency Payment, etc)  in this case it will be announced as MAND by the issuer and CHOS by DTC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.DTCMandatoryVoluntaryEventType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.mmDTCMandatoryVoluntaryEventType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
 		}
 	};
+	protected CorporateActionMandatoryVoluntary1Code declaredMandatoryVoluntaryEventType;
 	/**
 	 * Specifies the nature of the event as announced by the agent or issuer.
 	 * <p>
@@ -378,12 +384,12 @@ public class CorporateActionGeneralInformationSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#DeclaredMandatoryVoluntaryEventType
-	 * CorporateActionGeneralInformationSD11.DeclaredMandatoryVoluntaryEventType
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#mmDeclaredMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformationSD11.
+	 * mmDeclaredMandatoryVoluntaryEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeclaredMandatoryVoluntaryEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeclaredMandatoryVoluntaryEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
 			isDerived = false;
@@ -391,12 +397,13 @@ public class CorporateActionGeneralInformationSD13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredMandatoryVoluntaryEventType";
 			definition = "Specifies the nature of the event as announced by the agent or issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.DeclaredMandatoryVoluntaryEventType;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.mmDeclaredMandatoryVoluntaryEventType;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator eDSMessagingEligibilityFlag;
 	/**
 	 * Indicates whether the event is eligible for EDS (Elective Dividend
 	 * Services) ISO20022 messaging.
@@ -429,11 +436,11 @@ public class CorporateActionGeneralInformationSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#EDSMessagingEligibilityFlag
-	 * CorporateActionGeneralInformationSD11.EDSMessagingEligibilityFlag}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD11#mmEDSMessagingEligibilityFlag
+	 * CorporateActionGeneralInformationSD11.mmEDSMessagingEligibilityFlag}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EDSMessagingEligibilityFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEDSMessagingEligibilityFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
 			isDerived = false;
@@ -441,12 +448,13 @@ public class CorporateActionGeneralInformationSD13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityFlag";
 			definition = "Indicates whether the event is eligible for EDS (Elective Dividend Services) ISO20022 messaging.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.EDSMessagingEligibilityFlag;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD11.mmEDSMessagingEligibilityFlag;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max10NumericText redemptionIdentification;
 	/**
 	 * Unique number systemically assigned to all Lottery and Non-Lottery events
 	 * announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/
@@ -479,7 +487,7 @@ public class CorporateActionGeneralInformationSD13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RedemptionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRedemptionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
 			isDerived = false;
@@ -487,11 +495,12 @@ public class CorporateActionGeneralInformationSD13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionIdentification";
 			definition = "Unique number systemically assigned to all Lottery and Non-Lottery events announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/ Particinant Browser System(PBS) function. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10NumericText.mmObject();
 		}
 	};
+	protected YesNoIndicator dTCFCPElectionFlag;
 	/**
 	 * Identifies events that offer instruction processing specific to foreign
 	 * currency payment (FCP) elections.
@@ -523,7 +532,7 @@ public class CorporateActionGeneralInformationSD13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCFCPElectionFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCFCPElectionFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
 			isDerived = false;
@@ -531,11 +540,12 @@ public class CorporateActionGeneralInformationSD13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCFCPElectionFlag";
 			definition = "Identifies events that offer instruction processing specific to foreign currency payment (FCP) elections.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator assetServicerProcessingFlag;
 	/**
 	 * Indicates whether the event is being processed by DTC.
 	 * <p>
@@ -564,7 +574,7 @@ public class CorporateActionGeneralInformationSD13 {
 	 * definition} = "Indicates whether the event is being processed by DTC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AssetServicerProcessingFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAssetServicerProcessingFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
 			isDerived = false;
@@ -572,8 +582,8 @@ public class CorporateActionGeneralInformationSD13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetServicerProcessingFlag";
 			definition = "Indicates whether the event is being processed by DTC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -581,12 +591,12 @@ public class CorporateActionGeneralInformationSD13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.PlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.EventGroup,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.EventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.SubEventType,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.DTCMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.DeclaredMandatoryVoluntaryEventType,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.EDSMessagingEligibilityFlag, com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.RedemptionIdentification,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.DTCFCPElectionFlag, com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.AssetServicerProcessingFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.mmEventGroup,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.mmSubEventType,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.mmDTCMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.mmDeclaredMandatoryVoluntaryEventType,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.mmEDSMessagingEligibilityFlag, com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.mmRedemptionIdentification,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.mmDTCFCPElectionFlag, com.tools20022.repository.msg.CorporateActionGeneralInformationSD13.mmAssetServicerProcessingFlag);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionGeneralInformationSD13";
 				definition = "Provides additional information regarding corporate action general information details.";
@@ -594,5 +604,85 @@ public class CorporateActionGeneralInformationSD13 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public EventGroup1Code getEventGroup() {
+		return eventGroup;
+	}
+
+	public void setEventGroup(EventGroup1Code eventGroup) {
+		this.eventGroup = eventGroup;
+	}
+
+	public ExtendedEventType2Code getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(ExtendedEventType2Code eventType) {
+		this.eventType = eventType;
+	}
+
+	public DTCCSubEventType3Code getSubEventType() {
+		return subEventType;
+	}
+
+	public void setSubEventType(DTCCSubEventType3Code subEventType) {
+		this.subEventType = subEventType;
+	}
+
+	public CorporateActionMandatoryVoluntary1Code getDTCMandatoryVoluntaryEventType() {
+		return dTCMandatoryVoluntaryEventType;
+	}
+
+	public void setDTCMandatoryVoluntaryEventType(CorporateActionMandatoryVoluntary1Code dTCMandatoryVoluntaryEventType) {
+		this.dTCMandatoryVoluntaryEventType = dTCMandatoryVoluntaryEventType;
+	}
+
+	public CorporateActionMandatoryVoluntary1Code getDeclaredMandatoryVoluntaryEventType() {
+		return declaredMandatoryVoluntaryEventType;
+	}
+
+	public void setDeclaredMandatoryVoluntaryEventType(CorporateActionMandatoryVoluntary1Code declaredMandatoryVoluntaryEventType) {
+		this.declaredMandatoryVoluntaryEventType = declaredMandatoryVoluntaryEventType;
+	}
+
+	public YesNoIndicator getEDSMessagingEligibilityFlag() {
+		return eDSMessagingEligibilityFlag;
+	}
+
+	public void setEDSMessagingEligibilityFlag(YesNoIndicator eDSMessagingEligibilityFlag) {
+		this.eDSMessagingEligibilityFlag = eDSMessagingEligibilityFlag;
+	}
+
+	public Max10NumericText getRedemptionIdentification() {
+		return redemptionIdentification;
+	}
+
+	public void setRedemptionIdentification(Max10NumericText redemptionIdentification) {
+		this.redemptionIdentification = redemptionIdentification;
+	}
+
+	public YesNoIndicator getDTCFCPElectionFlag() {
+		return dTCFCPElectionFlag;
+	}
+
+	public void setDTCFCPElectionFlag(YesNoIndicator dTCFCPElectionFlag) {
+		this.dTCFCPElectionFlag = dTCFCPElectionFlag;
+	}
+
+	public YesNoIndicator getAssetServicerProcessingFlag() {
+		return assetServicerProcessingFlag;
+	}
+
+	public void setAssetServicerProcessingFlag(YesNoIndicator assetServicerProcessingFlag) {
+		this.assetServicerProcessingFlag = assetServicerProcessingFlag;
 	}
 }

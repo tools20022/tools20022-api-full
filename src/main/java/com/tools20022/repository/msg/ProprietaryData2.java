@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData2#Type
- * ProprietaryData2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData2#Any
- * ProprietaryData2.Any}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData2#mmType
+ * ProprietaryData2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData2#mmAny
+ * ProprietaryData2.mmAny}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Type of the proprietary document
 	 * <p>
@@ -87,7 +88,7 @@ public class ProprietaryData2 {
 	 * definition} = "Type of the proprietary document"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryData2.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class ProprietaryData2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the proprietary document";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SkipProcessing any;
 	/**
 	 * Proprietary content.
 	 * <p>
@@ -128,7 +130,7 @@ public class ProprietaryData2 {
 	 * definition} = "Proprietary content."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Any = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAny = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryData2.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class ProprietaryData2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Any";
 			definition = "Proprietary content.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SkipProcessing.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class ProprietaryData2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryData2.Type, com.tools20022.repository.msg.ProprietaryData2.Any);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryData2.mmType, com.tools20022.repository.msg.ProprietaryData2.mmAny);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProprietaryData2";
 				definition = "Container for proprietary information. Business content of this element is not specified.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public SkipProcessing getAny() {
+		return any;
+	}
+
+	public void setAny(SkipProcessing any) {
+		this.any = any;
 	}
 }

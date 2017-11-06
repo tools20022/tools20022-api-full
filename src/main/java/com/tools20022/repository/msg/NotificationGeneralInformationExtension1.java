@@ -39,42 +39,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#PlaceAndName
- * NotificationGeneralInformationExtension1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#mmPlaceAndName
+ * NotificationGeneralInformationExtension1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#EventStatus
- * NotificationGeneralInformationExtension1.EventStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#mmEventStatus
+ * NotificationGeneralInformationExtension1.mmEventStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#CreateDateAndTime
- * NotificationGeneralInformationExtension1.CreateDateAndTime}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#mmCreateDateAndTime
+ * NotificationGeneralInformationExtension1.mmCreateDateAndTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#UpdateDateAndTime
- * NotificationGeneralInformationExtension1.UpdateDateAndTime}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#mmUpdateDateAndTime
+ * NotificationGeneralInformationExtension1.mmUpdateDateAndTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#ApprovedDate
- * NotificationGeneralInformationExtension1.ApprovedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#mmApprovedDate
+ * NotificationGeneralInformationExtension1.mmApprovedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#MatchDate
- * NotificationGeneralInformationExtension1.MatchDate}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#mmMatchDate
+ * NotificationGeneralInformationExtension1.mmMatchDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#ActiveUntilDate
- * NotificationGeneralInformationExtension1.ActiveUntilDate}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#mmActiveUntilDate
+ * NotificationGeneralInformationExtension1.mmActiveUntilDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#ServiceLevelAgreementPeriod
- * NotificationGeneralInformationExtension1.ServiceLevelAgreementPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#mmServiceLevelAgreementPeriod
+ * NotificationGeneralInformationExtension1.mmServiceLevelAgreementPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#IssuerStatus
- * NotificationGeneralInformationExtension1.IssuerStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#mmIssuerStatus
+ * NotificationGeneralInformationExtension1.mmIssuerStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#ValidationNotSupportedReason
- * NotificationGeneralInformationExtension1.ValidationNotSupportedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationGeneralInformationExtension1#mmValidationNotSupportedReason
+ * NotificationGeneralInformationExtension1.mmValidationNotSupportedReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationGeneralInformationExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -117,7 +118,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -125,11 +126,12 @@ public class NotificationGeneralInformationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected EventWorkflowStatus1Code eventStatus;
 	/**
 	 * Workflow status of the event.
 	 * <p>
@@ -158,7 +160,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * definition} = "Workflow status of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -166,11 +168,12 @@ public class NotificationGeneralInformationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStatus";
 			definition = "Workflow status of the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
 	};
+	protected ISODateTime createDateAndTime;
 	/**
 	 * Date and time when DTCC (The Depository Trust and Clearing Corporation)
 	 * created the announcement record.
@@ -201,7 +204,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreateDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreateDateAndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -209,11 +212,12 @@ public class NotificationGeneralInformationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreateDateAndTime";
 			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) created the announcement record.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime updateDateAndTime;
 	/**
 	 * Date and time when DTCC (The Depository Trust and Clearing Corporation)
 	 * last updated the announcement.
@@ -244,7 +248,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateDateAndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -252,11 +256,12 @@ public class NotificationGeneralInformationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDateAndTime";
 			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) last updated the announcement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODate approvedDate;
 	/**
 	 * Date by which the announcement is set to approve event status.
 	 * <p>
@@ -285,7 +290,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * "Date by which the announcement is set to approve event status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApprovedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApprovedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -293,11 +298,12 @@ public class NotificationGeneralInformationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedDate";
 			definition = "Date by which the announcement is set to approve event status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate matchDate;
 	/**
 	 * Date used to match records from multiple vendors to the same event. It is
 	 * typically the first key date on the event.
@@ -328,7 +334,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -336,11 +342,12 @@ public class NotificationGeneralInformationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchDate";
 			definition = "Date used to match records from multiple vendors to the same event. It is typically the first key date on the event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate activeUntilDate;
 	/**
 	 * Date until which the event will remain in an active status on DTCC (The
 	 * Depository Trust and Clearing Corporation) system.
@@ -371,7 +378,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActiveUntilDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActiveUntilDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -379,11 +386,12 @@ public class NotificationGeneralInformationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveUntilDate";
 			definition = "Date until which the event will remain in an active status on DTCC  (The Depository Trust and Clearing Corporation) system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Period3 serviceLevelAgreementPeriod;
 	/**
 	 * Start date and end date of the service level agreement.
 	 * <p>
@@ -411,7 +419,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * definition} = "Start date and end date of the service level agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceLevelAgreementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceLevelAgreementPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -419,11 +427,12 @@ public class NotificationGeneralInformationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevelAgreementPeriod";
 			definition = "Start date and end date of the service level agreement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	protected IssuerStatus1Code issuerStatus;
 	/**
 	 * Status of the event as announced by the issuer/offeror.
 	 * <p>
@@ -452,7 +461,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * definition} = "Status of the event as announced by the issuer/offeror."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -460,11 +469,12 @@ public class NotificationGeneralInformationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerStatus";
 			definition = "Status of the event as announced by the issuer/offeror.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> IssuerStatus1Code.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText validationNotSupportedReason;
 	/**
 	 * Specifies a reason why a corporate action will not be supported by the
 	 * validation service. This is usually due to the event type or the product
@@ -498,7 +508,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidationNotSupportedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidationNotSupportedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -506,8 +516,8 @@ public class NotificationGeneralInformationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationNotSupportedReason";
 			definition = "Specifies a reason why a corporate action will not be supported by the validation service. This is usually due to the event type or the product (security) type. The list of values will be provided externally to the schema.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
@@ -515,17 +525,97 @@ public class NotificationGeneralInformationExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationGeneralInformationExtension1.PlaceAndName, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.EventStatus,
-						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.CreateDateAndTime, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.UpdateDateAndTime,
-						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.ApprovedDate, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.MatchDate,
-						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.ActiveUntilDate, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.ServiceLevelAgreementPeriod,
-						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.IssuerStatus, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.ValidationNotSupportedReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmPlaceAndName, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmEventStatus,
+						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmCreateDateAndTime, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmUpdateDateAndTime,
+						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmApprovedDate, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmMatchDate,
+						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmActiveUntilDate, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmServiceLevelAgreementPeriod,
+						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmIssuerStatus, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmValidationNotSupportedReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NotificationGeneralInformationExtension1";
 				definition = "Provides additional information regarding notification general information details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public EventWorkflowStatus1Code getEventStatus() {
+		return eventStatus;
+	}
+
+	public void setEventStatus(EventWorkflowStatus1Code eventStatus) {
+		this.eventStatus = eventStatus;
+	}
+
+	public ISODateTime getCreateDateAndTime() {
+		return createDateAndTime;
+	}
+
+	public void setCreateDateAndTime(ISODateTime createDateAndTime) {
+		this.createDateAndTime = createDateAndTime;
+	}
+
+	public ISODateTime getUpdateDateAndTime() {
+		return updateDateAndTime;
+	}
+
+	public void setUpdateDateAndTime(ISODateTime updateDateAndTime) {
+		this.updateDateAndTime = updateDateAndTime;
+	}
+
+	public ISODate getApprovedDate() {
+		return approvedDate;
+	}
+
+	public void setApprovedDate(ISODate approvedDate) {
+		this.approvedDate = approvedDate;
+	}
+
+	public ISODate getMatchDate() {
+		return matchDate;
+	}
+
+	public void setMatchDate(ISODate matchDate) {
+		this.matchDate = matchDate;
+	}
+
+	public ISODate getActiveUntilDate() {
+		return activeUntilDate;
+	}
+
+	public void setActiveUntilDate(ISODate activeUntilDate) {
+		this.activeUntilDate = activeUntilDate;
+	}
+
+	public Period3 getServiceLevelAgreementPeriod() {
+		return serviceLevelAgreementPeriod;
+	}
+
+	public void setServiceLevelAgreementPeriod(com.tools20022.repository.msg.Period3 serviceLevelAgreementPeriod) {
+		this.serviceLevelAgreementPeriod = serviceLevelAgreementPeriod;
+	}
+
+	public IssuerStatus1Code getIssuerStatus() {
+		return issuerStatus;
+	}
+
+	public void setIssuerStatus(IssuerStatus1Code issuerStatus) {
+		this.issuerStatus = issuerStatus;
+	}
+
+	public Max4AlphaNumericText getValidationNotSupportedReason() {
+		return validationNotSupportedReason;
+	}
+
+	public void setValidationNotSupportedReason(Max4AlphaNumericText validationNotSupportedReason) {
+		this.validationNotSupportedReason = validationNotSupportedReason;
 	}
 }

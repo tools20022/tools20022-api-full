@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TimeOut1Code#LatestShipmentDateDue
- * TimeOut1Code.LatestShipmentDateDue}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeOut1Code#NoAction
- * TimeOut1Code.NoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TimeOut1Code#mmLatestShipmentDateDue
+ * TimeOut1Code.mmLatestShipmentDateDue}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeOut1Code#mmNoAction
+ * TimeOut1Code.mmNoAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class TimeOut1Code extends TimeOutCode {
 	 * name} = "LatestShipmentDateDue"</li>
 	 * </ul>
 	 */
-	public static final MMCode LatestShipmentDateDue = new MMCode() {
+	public static final MMCode mmLatestShipmentDateDue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestShipmentDateDue";
@@ -100,7 +100,7 @@ public class TimeOut1Code extends TimeOutCode {
 	 * name} = "NoAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoAction = new MMCode() {
+	public static final MMCode mmNoAction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
@@ -111,12 +111,12 @@ public class TimeOut1Code extends TimeOutCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LSDD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TimeOut1Code";
 				definition = "Specifies the reason for time-out.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TimeOut1Code.LatestShipmentDateDue, com.tools20022.repository.codeset.TimeOut1Code.NoAction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TimeOut1Code.mmLatestShipmentDateDue, com.tools20022.repository.codeset.TimeOut1Code.mmNoAction);
 				trace_lazy = () -> TimeOutCode.mmObject();
 			}
 		});

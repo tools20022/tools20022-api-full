@@ -34,10 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope33#ModificationScopeIndication
- * ModificationScope33.ModificationScopeIndication}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ModificationScope33#Placement
- * ModificationScope33.Placement}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope33#mmModificationScopeIndication
+ * ModificationScope33.mmModificationScopeIndication}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope33#mmPlacement
+ * ModificationScope33.mmPlacement}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,18 +46,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#ModifiedPlacement
- * AccountModificationInstructionV06.ModifiedPlacement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#mmModifiedPlacement
+ * AccountModificationInstructionV06.mmModifiedPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV07#ModifiedPlacement
- * AccountModificationInstructionV07.ModifiedPlacement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV07#mmModifiedPlacement
+ * AccountModificationInstructionV07.mmModifiedPlacement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification1Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied.
 	 * <p>
@@ -105,11 +107,11 @@ public class ModificationScope33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope26#ModificationScopeIndication
-	 * ModificationScope26.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope26#mmModificationScopeIndication
+	 * ModificationScope26.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope33.mmObject();
 			isDerived = false;
@@ -117,12 +119,13 @@ public class ModificationScope33 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope26.ModificationScopeIndication;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope26.mmModificationScopeIndication;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	protected ReferredAgent2 placement;
 	/**
 	 * Referral information.
 	 * <p>
@@ -149,7 +152,7 @@ public class ModificationScope33 {
 	 * definition} = "Referral information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Placement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlacement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope33.mmObject();
 			isDerived = false;
@@ -157,20 +160,20 @@ public class ModificationScope33 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Placement";
 			definition = "Referral information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReferredAgent2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReferredAgent2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope33.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope33.Placement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.ModifiedPlacement,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV07.ModifiedPlacement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope33.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope33.mmPlacement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedPlacement,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedPlacement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope33";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -178,5 +181,21 @@ public class ModificationScope33 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification1Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public ReferredAgent2 getPlacement() {
+		return placement;
+	}
+
+	public void setPlacement(com.tools20022.repository.msg.ReferredAgent2 placement) {
+		this.placement = placement;
 	}
 }

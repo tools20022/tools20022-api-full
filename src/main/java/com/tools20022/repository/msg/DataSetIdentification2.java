@@ -34,22 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification2#Name
- * DataSetIdentification2.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification2#Type
- * DataSetIdentification2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification2#Version
- * DataSetIdentification2.Version}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification2#mmName
+ * DataSetIdentification2.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification2#mmType
+ * DataSetIdentification2.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DataSetIdentification2#CreationDateTime
- * DataSetIdentification2.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.DataSetIdentification2#mmVersion
+ * DataSetIdentification2.mmVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DataSetIdentification2#mmCreationDateTime
+ * DataSetIdentification2.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DataSetIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max256Text name;
 	/**
 	 * Name of the data set.
 	 * <p>
@@ -97,7 +99,7 @@ public class DataSetIdentification2 {
 	 * definition} = "Name of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataSetIdentification2.mmObject();
 			isDerived = false;
@@ -105,11 +107,12 @@ public class DataSetIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the data set.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected DataSetCategory2Code type;
 	/**
 	 * Category of data set.
 	 * <p>
@@ -138,7 +141,7 @@ public class DataSetIdentification2 {
 	 * definition} = "Category of data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataSetIdentification2.mmObject();
 			isDerived = false;
@@ -146,11 +149,12 @@ public class DataSetIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Category of data set.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory2Code.mmObject();
 		}
 	};
+	protected Max256Text version;
 	/**
 	 * Version of the data set.
 	 * <p>
@@ -178,7 +182,7 @@ public class DataSetIdentification2 {
 	 * definition} = "Version of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataSetIdentification2.mmObject();
 			isDerived = false;
@@ -186,11 +190,12 @@ public class DataSetIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data set.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time of creation of the data set.
 	 * <p>
@@ -218,7 +223,7 @@ public class DataSetIdentification2 {
 	 * definition} = "Date and time of creation of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataSetIdentification2.mmObject();
 			isDerived = false;
@@ -226,8 +231,8 @@ public class DataSetIdentification2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time of creation of the data set.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -235,9 +240,9 @@ public class DataSetIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification2.Name, com.tools20022.repository.msg.DataSetIdentification2.Type, com.tools20022.repository.msg.DataSetIdentification2.Version,
-						com.tools20022.repository.msg.DataSetIdentification2.CreationDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification2.mmName, com.tools20022.repository.msg.DataSetIdentification2.mmType,
+						com.tools20022.repository.msg.DataSetIdentification2.mmVersion, com.tools20022.repository.msg.DataSetIdentification2.mmCreationDateTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataSetIdentification2";
 				definition = "Identification of a data set.";
@@ -245,5 +250,37 @@ public class DataSetIdentification2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max256Text getName() {
+		return name;
+	}
+
+	public void setName(Max256Text name) {
+		this.name = name;
+	}
+
+	public DataSetCategory2Code getType() {
+		return type;
+	}
+
+	public void setType(DataSetCategory2Code type) {
+		this.type = type;
+	}
+
+	public Max256Text getVersion() {
+		return version;
+	}
+
+	public void setVersion(Max256Text version) {
+		this.version = version;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

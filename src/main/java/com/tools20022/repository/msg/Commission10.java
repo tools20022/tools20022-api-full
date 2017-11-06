@@ -43,37 +43,37 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Commission10#TypeOrExtendedTypeRule
- * Commission10.TypeOrExtendedTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Commission10#mmTypeOrExtendedTypeRule
+ * Commission10.mmTypeOrExtendedTypeRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Commission10#BasisOrExtendedBasisRule
- * Commission10.BasisOrExtendedBasisRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Commission10#mmBasisOrExtendedBasisRule
+ * Commission10.mmBasisOrExtendedBasisRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Commission10#Type
- * Commission10.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission10#ExtendedType
- * Commission10.ExtendedType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission10#Basis
- * Commission10.Basis}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission10#ExtendedBasis
- * Commission10.ExtendedBasis}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission10#Amount
- * Commission10.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission10#Rate
- * Commission10.Rate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission10#mmType
+ * Commission10.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission10#mmExtendedType
+ * Commission10.mmExtendedType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission10#mmBasis
+ * Commission10.mmBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission10#mmExtendedBasis
+ * Commission10.mmExtendedBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission10#mmAmount
+ * Commission10.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission10#mmRate
+ * Commission10.mmRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Commission10#RecipientIdentification
- * Commission10.RecipientIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Commission10#mmRecipientIdentification
+ * Commission10.mmRecipientIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Commission10#CommercialAgreementReference
- * Commission10.CommercialAgreementReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission10#WaivingDetails
- * Commission10.WaivingDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Commission10#mmCommercialAgreementReference
+ * Commission10.mmCommercialAgreementReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission10#mmWaivingDetails
+ * Commission10.mmWaivingDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -81,8 +81,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -105,6 +105,7 @@ import java.util.function.Supplier;
 public class Commission10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CommissionType6Code type;
 	/**
 	 * Service for which the commission is asked or paid.
 	 * <p>
@@ -118,8 +119,8 @@ public class Commission10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommissionType
-	 * Commission.CommissionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionType
+	 * Commission.mmCommissionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,20 +138,21 @@ public class Commission10 {
 	 * definition} = "Service for which the commission is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionType;
 			componentContext_lazy = () -> Commission10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommissionType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Service for which the commission is asked or paid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CommissionType6Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedType;
 	/**
 	 * Service for which the commission is asked or paid.
 	 * <p>
@@ -164,8 +166,8 @@ public class Commission10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommissionType
-	 * Commission.CommissionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionType
+	 * Commission.mmCommissionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,20 +185,21 @@ public class Commission10 {
 	 * definition} = "Service for which the commission is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionType;
 			componentContext_lazy = () -> Commission10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommissionType;
 			isDerived = false;
 			xmlTag = "XtndedTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedType";
 			definition = "Service for which the commission is asked or paid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected TaxationBasis4Code basis;
 	/**
 	 * Basis upon which a commission is charged, eg, flat fee.
 	 * <p>
@@ -210,8 +213,8 @@ public class Commission10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#Basis
-	 * Commission.Basis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmBasis
+	 * Commission.mmBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -229,20 +232,21 @@ public class Commission10 {
 	 * definition} = "Basis upon which a commission is charged, eg, flat fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Basis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmBasis;
 			componentContext_lazy = () -> Commission10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.Basis;
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Basis upon which a commission is charged, eg, flat fee.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TaxationBasis4Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedBasis;
 	/**
 	 * Basis upon which a commission is charged, eg, flat fee.
 	 * <p>
@@ -256,8 +260,8 @@ public class Commission10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#Basis
-	 * Commission.Basis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmBasis
+	 * Commission.mmBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -275,20 +279,21 @@ public class Commission10 {
 	 * definition} = "Basis upon which a commission is charged, eg, flat fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmBasis;
 			componentContext_lazy = () -> Commission10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.Basis;
 			isDerived = false;
 			xmlTag = "XtndedBsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedBasis";
 			definition = "Basis upon which a commission is charged, eg, flat fee.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Commission expressed as an amount of money.
 	 * <p>
@@ -302,8 +307,8 @@ public class Commission10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -322,27 +327,28 @@ public class Commission10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Commission19#Amount
-	 * Commission19.Amount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Commission19#mmAmount
+	 * Commission19.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Commission10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Commission expressed as an amount of money.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission19.Amount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission19.mmAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected PercentageRate rate;
 	/**
 	 * Commission expressed as a percentage.
 	 * <p>
@@ -356,8 +362,8 @@ public class Commission10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#Rate
-	 * Commission.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmRate
+	 * Commission.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -376,27 +382,28 @@ public class Commission10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Commission18#Rate
-	 * Commission18.Rate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Commission18#mmRate
+	 * Commission18.mmRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmRate;
 			componentContext_lazy = () -> Commission10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.Rate;
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Commission expressed as a percentage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission18.Rate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission18.mmRate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice recipientIdentification;
 	/**
 	 * Party entitled to the amount of money resulting from a commission.
 	 * <p>
@@ -410,8 +417,8 @@ public class Commission10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -430,20 +437,21 @@ public class Commission10 {
 	 * "Party entitled to the amount of money resulting from a commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Commission10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Party entitled to the amount of money resulting from a commission.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected Max35Text commercialAgreementReference;
 	/**
 	 * Reference to the agreement established between the fund and another
 	 * party. This element, amongst others, defines the conditions of the
@@ -458,8 +466,8 @@ public class Commission10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommercialAgreementReference
-	 * Commission.CommercialAgreementReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommercialAgreementReference
+	 * Commission.mmCommercialAgreementReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -479,20 +487,21 @@ public class Commission10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommercialAgreementReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> Commission10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommercialAgreementReference;
 			isDerived = false;
 			xmlTag = "ComrclAgrmtRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreementReference";
 			definition = "Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CommissionWaiver3 waivingDetails;
 	/**
 	 * Voluntary non-enforcement of the right to all or part of a commission.
 	 * <p>
@@ -504,8 +513,8 @@ public class Commission10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommissionWaiving
-	 * Commission.CommissionWaiving}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionWaiving
+	 * Commission.mmCommissionWaiving}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -524,19 +533,19 @@ public class Commission10 {
 	 * "Voluntary non-enforcement of the right to all or part of a commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd WaivingDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmWaivingDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionWaiving;
 			componentContext_lazy = () -> Commission10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommissionWaiving;
 			isDerived = false;
 			xmlTag = "WvgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaivingDetails";
 			definition = "Voluntary non-enforcement of the right to all or part of a commission.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CommissionWaiver3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CommissionWaiver3.mmObject();
 		}
 	};
 	/**
@@ -547,10 +556,11 @@ public class Commission10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Commission10#Type
-	 * Commission10.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Commission10#ExtendedType
-	 * Commission10.ExtendedType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Commission10#mmType
+	 * Commission10.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Commission10#mmExtendedType
+	 * Commission10.mmExtendedType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -568,13 +578,13 @@ public class Commission10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor TypeOrExtendedTypeRule = new MMXor() {
+	public static final MMXor mmTypeOrExtendedTypeRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedTypeRule";
 			definition = "Either Type or ExtendedType may be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.Type, com.tools20022.repository.msg.Commission10.ExtendedType);
 			messageComponent_lazy = () -> Commission10.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmType, com.tools20022.repository.msg.Commission10.mmExtendedType);
 		}
 	};
 	/**
@@ -585,10 +595,11 @@ public class Commission10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Commission10#Basis
-	 * Commission10.Basis}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Commission10#ExtendedBasis
-	 * Commission10.ExtendedBasis}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Commission10#mmBasis
+	 * Commission10.mmBasis}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Commission10#mmExtendedBasis
+	 * Commission10.mmExtendedBasis}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -606,24 +617,24 @@ public class Commission10 {
 	 * "Either Basis oe ExtendedBasis may be present but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor BasisOrExtendedBasisRule = new MMXor() {
+	public static final MMXor mmBasisOrExtendedBasisRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisOrExtendedBasisRule";
 			definition = "Either Basis oe ExtendedBasis may be present but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.Basis, com.tools20022.repository.msg.Commission10.ExtendedBasis);
 			messageComponent_lazy = () -> Commission10.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmBasis, com.tools20022.repository.msg.Commission10.mmExtendedBasis);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.Type, com.tools20022.repository.msg.Commission10.ExtendedType, com.tools20022.repository.msg.Commission10.Basis,
-						com.tools20022.repository.msg.Commission10.ExtendedBasis, com.tools20022.repository.msg.Commission10.Amount, com.tools20022.repository.msg.Commission10.Rate,
-						com.tools20022.repository.msg.Commission10.RecipientIdentification, com.tools20022.repository.msg.Commission10.CommercialAgreementReference, com.tools20022.repository.msg.Commission10.WaivingDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmType, com.tools20022.repository.msg.Commission10.mmExtendedType, com.tools20022.repository.msg.Commission10.mmBasis,
+						com.tools20022.repository.msg.Commission10.mmExtendedBasis, com.tools20022.repository.msg.Commission10.mmAmount, com.tools20022.repository.msg.Commission10.mmRate,
+						com.tools20022.repository.msg.Commission10.mmRecipientIdentification, com.tools20022.repository.msg.Commission10.mmCommercialAgreementReference, com.tools20022.repository.msg.Commission10.mmWaivingDetails);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -635,9 +646,81 @@ public class Commission10 {
 				name = "Commission10";
 				definition = "Amount of money due to a party as compensation for a service.";
 				nextVersions_lazy = () -> Arrays.asList(Commission18.mmObject(), Commission19.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.TypeOrExtendedTypeRule, com.tools20022.repository.msg.Commission10.BasisOrExtendedBasisRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmTypeOrExtendedTypeRule, com.tools20022.repository.msg.Commission10.mmBasisOrExtendedBasisRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CommissionType6Code getType() {
+		return type;
+	}
+
+	public void setType(CommissionType6Code type) {
+		this.type = type;
+	}
+
+	public Extended350Code getExtendedType() {
+		return extendedType;
+	}
+
+	public void setExtendedType(Extended350Code extendedType) {
+		this.extendedType = extendedType;
+	}
+
+	public TaxationBasis4Code getBasis() {
+		return basis;
+	}
+
+	public void setBasis(TaxationBasis4Code basis) {
+		this.basis = basis;
+	}
+
+	public Extended350Code getExtendedBasis() {
+		return extendedBasis;
+	}
+
+	public void setExtendedBasis(Extended350Code extendedBasis) {
+		this.extendedBasis = extendedBasis;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public PartyIdentification2Choice getRecipientIdentification() {
+		return recipientIdentification;
+	}
+
+	public void setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
+		this.recipientIdentification = recipientIdentification;
+	}
+
+	public Max35Text getCommercialAgreementReference() {
+		return commercialAgreementReference;
+	}
+
+	public void setCommercialAgreementReference(Max35Text commercialAgreementReference) {
+		this.commercialAgreementReference = commercialAgreementReference;
+	}
+
+	public CommissionWaiver3 getWaivingDetails() {
+		return waivingDetails;
+	}
+
+	public void setWaivingDetails(com.tools20022.repository.msg.CommissionWaiver3 waivingDetails) {
+		this.waivingDetails = waivingDetails;
 	}
 }

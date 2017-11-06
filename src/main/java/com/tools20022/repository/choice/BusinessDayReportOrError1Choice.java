@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.BusinessDay1;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between business day information details or an operational error when
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError1Choice#BusinessReport
- * BusinessDayReportOrError1Choice.BusinessReport}</li>
+ * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError1Choice#mmBusinessReport
+ * BusinessDayReportOrError1Choice.mmBusinessReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError1Choice#OperationalError
- * BusinessDayReportOrError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError1Choice#mmOperationalError
+ * BusinessDayReportOrError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessDayReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<BusinessDay1> businessReport;
 	/**
 	 * Reports either business day information or a business error.
 	 * <p>
@@ -102,16 +104,16 @@ public class BusinessDayReportOrError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError5Choice#BusinessReport
-	 * BusinessDayReportOrError5Choice.BusinessReport}</li>
+	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError5Choice#mmBusinessReport
+	 * BusinessDayReportOrError5Choice.mmBusinessReport}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError3Choice#BusinessReport
-	 * BusinessDayReportOrError3Choice.BusinessReport}</li>
+	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError3Choice#mmBusinessReport
+	 * BusinessDayReportOrError3Choice.mmBusinessReport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessDayReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -119,12 +121,13 @@ public class BusinessDayReportOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports either business day information or a business error.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError5Choice.BusinessReport, com.tools20022.repository.choice.BusinessDayReportOrError3Choice.BusinessReport);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError5Choice.mmBusinessReport, com.tools20022.repository.choice.BusinessDayReportOrError3Choice.mmBusinessReport);
 			minOccurs = 1;
-			type_lazy = () -> BusinessDay1.mmObject();
 			isComposite = true;
+			type_lazy = () -> BusinessDay1.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Indicates that an operational error has been issued during the processing
 	 * of the related request.
@@ -156,16 +159,16 @@ public class BusinessDayReportOrError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError5Choice#OperationalError
-	 * BusinessDayReportOrError5Choice.OperationalError}</li>
+	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError5Choice#mmOperationalError
+	 * BusinessDayReportOrError5Choice.mmOperationalError}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError3Choice#OperationalError
-	 * BusinessDayReportOrError3Choice.OperationalError}</li>
+	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError3Choice#mmOperationalError
+	 * BusinessDayReportOrError3Choice.mmOperationalError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessDayReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -173,18 +176,18 @@ public class BusinessDayReportOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError5Choice.OperationalError, com.tools20022.repository.choice.BusinessDayReportOrError3Choice.OperationalError);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError5Choice.mmOperationalError, com.tools20022.repository.choice.BusinessDayReportOrError3Choice.mmOperationalError);
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError1Choice.BusinessReport, com.tools20022.repository.choice.BusinessDayReportOrError1Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError1Choice.mmBusinessReport, com.tools20022.repository.choice.BusinessDayReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayReportOrError1Choice";
 				definition = "Choice between business day information details or an operational error when the requested data cannot be retrieved.";
@@ -192,5 +195,21 @@ public class BusinessDayReportOrError1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<BusinessDay1> getBusinessReport() {
+		return businessReport;
+	}
+
+	public void setBusinessReport(List<BusinessDay1> businessReport) {
+		this.businessReport = businessReport;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

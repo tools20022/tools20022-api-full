@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DocumentNumber1#Number
- * DocumentNumber1.Number}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DocumentNumber1#mmNumber
+ * DocumentNumber1.mmNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,27 +44,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#StatementRequested
- * SecuritiesStatementQueryV01.StatementRequested}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV01#mmStatementRequested
+ * SecuritiesStatementQueryV01.mmStatementRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV02#StatementRequested
- * SecuritiesStatementQueryV02.StatementRequested}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV02#mmStatementRequested
+ * SecuritiesStatementQueryV02.mmStatementRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV03#StatementRequested
- * SecuritiesStatementQueryV03.StatementRequested}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV03#mmStatementRequested
+ * SecuritiesStatementQueryV03.mmStatementRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV04#StatementRequested
- * SecuritiesStatementQueryV04.StatementRequested}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV04#mmStatementRequested
+ * SecuritiesStatementQueryV04.mmStatementRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV05#StatementRequested
- * SecuritiesStatementQueryV05.StatementRequested}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV05#mmStatementRequested
+ * SecuritiesStatementQueryV05.mmStatementRequested}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentNumber1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentNumber1Choice number;
 	/**
 	 * Number used to identify a message or document.
 	 * <p>
@@ -113,13 +114,13 @@ public class DocumentNumber1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.DocumentNumber13#Number
-	 * DocumentNumber13.Number}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DocumentNumber13#mmNumber
+	 * DocumentNumber13.mmNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Number = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DocumentNumber1.mmObject();
 			isDerived = false;
@@ -127,23 +128,23 @@ public class DocumentNumber1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number used to identify a message or document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber13.Number);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber13.mmNumber);
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber1.Number);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber1.mmNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmStatementRequested, com.tools20022.repository.area.semt.SecuritiesStatementQueryV02.mmStatementRequested,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmStatementRequested, com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmStatementRequested,
+						com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmStatementRequested);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.StatementRequested, com.tools20022.repository.area.semt.SecuritiesStatementQueryV02.StatementRequested,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.StatementRequested, com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.StatementRequested,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.StatementRequested);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentNumber1";
 				definition = "Identification of a document.";
@@ -151,5 +152,13 @@ public class DocumentNumber1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentNumber1Choice getNumber() {
+		return number;
+	}
+
+	public void setNumber(DocumentNumber1Choice number) {
+		this.number = number;
 	}
 }

@@ -32,10 +32,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails3#Type
- * RequestDetails3.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails3#Key
- * RequestDetails3.Key}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails3#mmType
+ * RequestDetails3.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails3#mmKey
+ * RequestDetails3.mmKey}</li>
  * </ul>
  * </li>
  * <li>
@@ -43,15 +43,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#DataRequestDetails
- * StaticDataRequestV02.DataRequestDetails}</li>
+ * {@linkplain com.tools20022.repository.area.admi.StaticDataRequestV02#mmDataRequestDetails
+ * StaticDataRequestV02.mmDataRequestDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Type of data being requested, for example, a sub-member BIC.
 	 * <p>
@@ -101,13 +102,13 @@ public class RequestDetails3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails19#Type
-	 * RequestDetails19.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails19#mmType
+	 * RequestDetails19.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails3.mmObject();
 			isDerived = false;
@@ -115,12 +116,13 @@ public class RequestDetails3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of data being requested, for example, a sub-member BIC.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails19.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails19.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text key;
 	/**
 	 * Specific report data requested, for example, a BIC.
 	 * <p>
@@ -150,13 +152,13 @@ public class RequestDetails3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails19#RequestorIdentification
-	 * RequestDetails19.RequestorIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails19#mmRequestorIdentification
+	 * RequestDetails19.mmRequestorIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Key = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails3.mmObject();
 			isDerived = false;
@@ -164,9 +166,9 @@ public class RequestDetails3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Specific report data requested, for example, a  BIC.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails19.RequestorIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails19.mmRequestorIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -174,9 +176,9 @@ public class RequestDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails3.Type, com.tools20022.repository.msg.RequestDetails3.Key);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.StaticDataRequestV02.DataRequestDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails3.mmType, com.tools20022.repository.msg.RequestDetails3.mmKey);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.StaticDataRequestV02.mmDataRequestDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails3";
 				definition = "Details of data request.";
@@ -184,5 +186,21 @@ public class RequestDetails3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public Max35Text getKey() {
+		return key;
+	}
+
+	public void setKey(Max35Text key) {
+		this.key = key;
 	}
 }

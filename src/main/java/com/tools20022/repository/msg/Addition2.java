@@ -32,15 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Addition2#ProposedValue
- * Addition2.ProposedValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Addition2#mmProposedValue
+ * Addition2.mmProposedValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,6 +54,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Addition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text proposedValue;
 	/**
 	 * Content of the new element.
 	 * <p>
@@ -80,7 +81,7 @@ public class Addition2 {
 	 * definition} = "Content of the new element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProposedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProposedValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Addition2.mmObject();
 			isDerived = false;
@@ -88,8 +89,8 @@ public class Addition2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedValue";
 			definition = "Content of the new element.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -97,13 +98,21 @@ public class Addition2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Addition2.ProposedValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Addition2.mmProposedValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Addition2";
 				definition = "Addition of a new element.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getProposedValue() {
+		return proposedValue;
+	}
+
+	public void setProposedValue(Max350Text proposedValue) {
+		this.proposedValue = proposedValue;
 	}
 }

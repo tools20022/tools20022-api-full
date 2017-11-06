@@ -37,26 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PercentageRange1Choice#From
- * PercentageRange1Choice.From}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PercentageRange1Choice#To
- * PercentageRange1Choice.To}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PercentageRange1Choice#FromTo
- * PercentageRange1Choice.FromTo}</li>
+ * {@linkplain com.tools20022.repository.choice.PercentageRange1Choice#mmFrom
+ * PercentageRange1Choice.mmFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PercentageRange1Choice#mmTo
+ * PercentageRange1Choice.mmTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PercentageRange1Choice#Equal
- * PercentageRange1Choice.Equal}</li>
+ * {@linkplain com.tools20022.repository.choice.PercentageRange1Choice#mmFromTo
+ * PercentageRange1Choice.mmFromTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PercentageRange1Choice#NotEqual
- * PercentageRange1Choice.NotEqual}</li>
+ * {@linkplain com.tools20022.repository.choice.PercentageRange1Choice#mmEqual
+ * PercentageRange1Choice.mmEqual}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PercentageRange1Choice#mmNotEqual
+ * PercentageRange1Choice.mmNotEqual}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PercentageRange1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRangeBoundary1 from;
 	/**
 	 * Lower boundary of a range of percentage rates.
 	 * <p>
@@ -99,7 +101,7 @@ public class PercentageRange1Choice {
 	 * definition} = "Lower boundary of a range of percentage rates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd From = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
 			isDerived = false;
@@ -107,12 +109,13 @@ public class PercentageRange1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "Lower boundary of a range of percentage rates.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PercentageRangeBoundary1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PercentageRangeBoundary1.mmObject();
 		}
 	};
+	protected PercentageRangeBoundary1 to;
 	/**
 	 * Upper boundary of a range of percentage rates.
 	 * <p>
@@ -140,7 +143,7 @@ public class PercentageRange1Choice {
 	 * definition} = "Upper boundary of a range of percentage rates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd To = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
 			isDerived = false;
@@ -148,12 +151,13 @@ public class PercentageRange1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "Upper boundary of a range of percentage rates.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PercentageRangeBoundary1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PercentageRangeBoundary1.mmObject();
 		}
 	};
+	protected FromToPercentageRange1 fromTo;
 	/**
 	 * Range of valid percentage rates.
 	 * <p>
@@ -180,7 +184,7 @@ public class PercentageRange1Choice {
 	 * definition} = "Range of valid percentage rates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FromTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFromTo = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
 			isDerived = false;
@@ -188,12 +192,13 @@ public class PercentageRange1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromTo";
 			definition = "Range of valid percentage rates.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FromToPercentageRange1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FromToPercentageRange1.mmObject();
 		}
 	};
+	protected PercentageRate equal;
 	/**
 	 * Exact percentage rate must match to be considered valid.
 	 * <p>
@@ -222,7 +227,7 @@ public class PercentageRange1Choice {
 	 * definition} = "Exact percentage rate must match to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Equal = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEqual = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
 			isDerived = false;
@@ -230,11 +235,12 @@ public class PercentageRange1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equal";
 			definition = "Exact percentage rate must match to be considered valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate notEqual;
 	/**
 	 * Value that percentage rate must not match to be considered valid.
 	 * <p>
@@ -264,7 +270,7 @@ public class PercentageRange1Choice {
 	 * "Value that percentage rate must not match to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotEqual = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotEqual = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
 			isDerived = false;
@@ -272,8 +278,8 @@ public class PercentageRange1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqual";
 			definition = "Value that percentage rate must not match to be considered valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -281,14 +287,54 @@ public class PercentageRange1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PercentageRange1Choice.From, com.tools20022.repository.choice.PercentageRange1Choice.To,
-						com.tools20022.repository.choice.PercentageRange1Choice.FromTo, com.tools20022.repository.choice.PercentageRange1Choice.Equal, com.tools20022.repository.choice.PercentageRange1Choice.NotEqual);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PercentageRange1Choice.mmFrom, com.tools20022.repository.choice.PercentageRange1Choice.mmTo,
+						com.tools20022.repository.choice.PercentageRange1Choice.mmFromTo, com.tools20022.repository.choice.PercentageRange1Choice.mmEqual, com.tools20022.repository.choice.PercentageRange1Choice.mmNotEqual);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PercentageRange1Choice";
 				definition = "Choice between ranges of rates in which a percentage rate is considered valid or a specified percentage rate which has to be matched or unmatched to be valid.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRangeBoundary1 getFrom() {
+		return from;
+	}
+
+	public void setFrom(PercentageRangeBoundary1 from) {
+		this.from = from;
+	}
+
+	public PercentageRangeBoundary1 getTo() {
+		return to;
+	}
+
+	public void setTo(PercentageRangeBoundary1 to) {
+		this.to = to;
+	}
+
+	public FromToPercentageRange1 getFromTo() {
+		return fromTo;
+	}
+
+	public void setFromTo(FromToPercentageRange1 fromTo) {
+		this.fromTo = fromTo;
+	}
+
+	public PercentageRate getEqual() {
+		return equal;
+	}
+
+	public void setEqual(PercentageRate equal) {
+		this.equal = equal;
+	}
+
+	public PercentageRate getNotEqual() {
+		return notEqual;
+	}
+
+	public void setNotEqual(PercentageRate notEqual) {
+		this.notEqual = notEqual;
 	}
 }

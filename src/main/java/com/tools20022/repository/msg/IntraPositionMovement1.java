@@ -35,35 +35,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#AccountOwner
- * IntraPositionMovement1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#mmAccountOwner
+ * IntraPositionMovement1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#SafekeepingAccount
- * IntraPositionMovement1.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#mmSafekeepingAccount
+ * IntraPositionMovement1.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#StatusAndReason
- * IntraPositionMovement1.StatusAndReason}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#mmStatusAndReason
+ * IntraPositionMovement1.mmStatusAndReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#AccountOwnerTransactionIdentification
- * IntraPositionMovement1.AccountOwnerTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#mmAccountOwnerTransactionIdentification
+ * IntraPositionMovement1.mmAccountOwnerTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#AccountServicerTransactionIdentification
- * IntraPositionMovement1.AccountServicerTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#mmAccountServicerTransactionIdentification
+ * IntraPositionMovement1.mmAccountServicerTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#MarketInfrastructureTransactionIdentification
- * IntraPositionMovement1.MarketInfrastructureTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#mmMarketInfrastructureTransactionIdentification
+ * IntraPositionMovement1.mmMarketInfrastructureTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#ProcessorTransactionIdentification
- * IntraPositionMovement1.ProcessorTransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#mmProcessorTransactionIdentification
+ * IntraPositionMovement1.mmProcessorTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#PoolIdentification
- * IntraPositionMovement1.PoolIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#mmPoolIdentification
+ * IntraPositionMovement1.mmPoolIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#CorporateActionEventIdentification
- * IntraPositionMovement1.CorporateActionEventIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#mmCorporateActionEventIdentification
+ * IntraPositionMovement1.mmCorporateActionEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#MovementDetails
- * IntraPositionMovement1.MovementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement1#mmMovementDetails
+ * IntraPositionMovement1.mmMovementDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -72,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemPartyIdentification5 accountOwner;
 	/**
 	 * Party that owns the account.
 	 * <p>
@@ -99,8 +100,8 @@ public class IntraPositionMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#PartyRole
-	 * System.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmPartyRole
+	 * System.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,21 +120,22 @@ public class IntraPositionMovement1 {
 	 * definition} = "Party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmPartyRole;
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.PartyRole;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected SecuritiesAccount13 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -160,7 +162,7 @@ public class IntraPositionMovement1 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
@@ -168,12 +170,13 @@ public class IntraPositionMovement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount13.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	protected IntraPositionStatusAndReason1 statusAndReason;
 	/**
 	 * Status and status reason of the transaction.
 	 * <p>
@@ -201,7 +204,7 @@ public class IntraPositionMovement1 {
 	 * definition} = "Status and status reason of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
@@ -209,12 +212,13 @@ public class IntraPositionMovement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and status reason of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IntraPositionStatusAndReason1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmObject();
 		}
 	};
+	protected Max35Text accountOwnerTransactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as known by the account
 	 * owner (or the instructing party managing the account).
@@ -245,7 +249,7 @@ public class IntraPositionMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
@@ -253,11 +257,12 @@ public class IntraPositionMovement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accountServicerTransactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as known by the account
 	 * servicer.
@@ -288,7 +293,7 @@ public class IntraPositionMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
@@ -296,11 +301,12 @@ public class IntraPositionMovement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text marketInfrastructureTransactionIdentification;
 	/**
 	 * Identification of a transaction assigned by a market infrastructure other
 	 * than a central securities depository, for example, Target2-Securities.
@@ -331,7 +337,7 @@ public class IntraPositionMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
@@ -339,11 +345,12 @@ public class IntraPositionMovement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text processorTransactionIdentification;
 	/**
 	 * Identification of the transaction as assigned by the processor.
 	 * <p>
@@ -372,7 +379,7 @@ public class IntraPositionMovement1 {
 	 * "Identification of the transaction as assigned by the processor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
@@ -380,11 +387,12 @@ public class IntraPositionMovement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction as assigned by the processor.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text poolIdentification;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -412,7 +420,7 @@ public class IntraPositionMovement1 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
@@ -420,11 +428,12 @@ public class IntraPositionMovement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text corporateActionEventIdentification;
 	/**
 	 * Identification assigned by the account servicer to unambiguously identify
 	 * a corporate action event.
@@ -455,7 +464,7 @@ public class IntraPositionMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
@@ -463,11 +472,12 @@ public class IntraPositionMovement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected IntraPositionMovement2 movementDetails;
 	/**
 	 * Identifies additional details of the transaction.
 	 * <p>
@@ -494,7 +504,7 @@ public class IntraPositionMovement1 {
 	 * definition} = "Identifies additional details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMovementDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
@@ -502,28 +512,108 @@ public class IntraPositionMovement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementDetails";
 			definition = "Identifies additional details of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> IntraPositionMovement2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.IntraPositionMovement2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovement1.AccountOwner, com.tools20022.repository.msg.IntraPositionMovement1.SafekeepingAccount,
-						com.tools20022.repository.msg.IntraPositionMovement1.StatusAndReason, com.tools20022.repository.msg.IntraPositionMovement1.AccountOwnerTransactionIdentification,
-						com.tools20022.repository.msg.IntraPositionMovement1.AccountServicerTransactionIdentification, com.tools20022.repository.msg.IntraPositionMovement1.MarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.msg.IntraPositionMovement1.ProcessorTransactionIdentification, com.tools20022.repository.msg.IntraPositionMovement1.PoolIdentification,
-						com.tools20022.repository.msg.IntraPositionMovement1.CorporateActionEventIdentification, com.tools20022.repository.msg.IntraPositionMovement1.MovementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovement1.mmAccountOwner, com.tools20022.repository.msg.IntraPositionMovement1.mmSafekeepingAccount,
+						com.tools20022.repository.msg.IntraPositionMovement1.mmStatusAndReason, com.tools20022.repository.msg.IntraPositionMovement1.mmAccountOwnerTransactionIdentification,
+						com.tools20022.repository.msg.IntraPositionMovement1.mmAccountServicerTransactionIdentification, com.tools20022.repository.msg.IntraPositionMovement1.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.msg.IntraPositionMovement1.mmProcessorTransactionIdentification, com.tools20022.repository.msg.IntraPositionMovement1.mmPoolIdentification,
+						com.tools20022.repository.msg.IntraPositionMovement1.mmCorporateActionEventIdentification, com.tools20022.repository.msg.IntraPositionMovement1.mmMovementDetails);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionMovement1";
 				definition = "Identifies the details of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemPartyIdentification5 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount13 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public IntraPositionStatusAndReason1 getStatusAndReason() {
+		return statusAndReason;
+	}
+
+	public void setStatusAndReason(com.tools20022.repository.msg.IntraPositionStatusAndReason1 statusAndReason) {
+		this.statusAndReason = statusAndReason;
+	}
+
+	public Max35Text getAccountOwnerTransactionIdentification() {
+		return accountOwnerTransactionIdentification;
+	}
+
+	public void setAccountOwnerTransactionIdentification(Max35Text accountOwnerTransactionIdentification) {
+		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
+	}
+
+	public Max35Text getAccountServicerTransactionIdentification() {
+		return accountServicerTransactionIdentification;
+	}
+
+	public void setAccountServicerTransactionIdentification(Max35Text accountServicerTransactionIdentification) {
+		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
+	}
+
+	public Max35Text getMarketInfrastructureTransactionIdentification() {
+		return marketInfrastructureTransactionIdentification;
+	}
+
+	public void setMarketInfrastructureTransactionIdentification(Max35Text marketInfrastructureTransactionIdentification) {
+		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
+	}
+
+	public Max35Text getProcessorTransactionIdentification() {
+		return processorTransactionIdentification;
+	}
+
+	public void setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
+		this.processorTransactionIdentification = processorTransactionIdentification;
+	}
+
+	public Max35Text getPoolIdentification() {
+		return poolIdentification;
+	}
+
+	public void setPoolIdentification(Max35Text poolIdentification) {
+		this.poolIdentification = poolIdentification;
+	}
+
+	public Max35Text getCorporateActionEventIdentification() {
+		return corporateActionEventIdentification;
+	}
+
+	public void setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
+		this.corporateActionEventIdentification = corporateActionEventIdentification;
+	}
+
+	public IntraPositionMovement2 getMovementDetails() {
+		return movementDetails;
+	}
+
+	public void setMovementDetails(com.tools20022.repository.msg.IntraPositionMovement2 movementDetails) {
+		this.movementDetails = movementDetails;
 	}
 }

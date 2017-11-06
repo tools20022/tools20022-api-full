@@ -44,18 +44,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Pledgee#PledgeeType
- * Pledgee.PledgeeType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Pledgee#SecuritiesBalance
- * Pledgee.SecuritiesBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Pledgee#mmPledgeeType
+ * Pledgee.mmPledgeeType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Pledgee#mmSecuritiesBalance
+ * Pledgee.mmSecuritiesBalance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBalance#Pledgee
- * SecuritiesBalance.Pledgee}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmPledgee
+ * SecuritiesBalance.mmPledgee}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,38 +63,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText1#Identification
- * PledgeeTypeAndText1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText1#mmIdentification
+ * PledgeeTypeAndText1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat1Choice#TypeAndIdentification
- * PledgeeFormat1Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat1Choice#mmTypeAndIdentification
+ * PledgeeFormat1Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat1Choice#Identification
- * PledgeeFormat1Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat1Choice#mmIdentification
+ * PledgeeFormat1Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1#Identification
- * PledgeeTypeAndAnyBICIdentifier1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1#mmIdentification
+ * PledgeeTypeAndAnyBICIdentifier1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#TypeAndIdentification
- * PledgeeFormat2Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#mmTypeAndIdentification
+ * PledgeeFormat2Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#Identification
- * PledgeeFormat2Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#mmIdentification
+ * PledgeeFormat2Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText2#Identification
- * PledgeeTypeAndText2.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText2#mmIdentification
+ * PledgeeTypeAndText2.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat3Choice#TypeAndIdentification
- * PledgeeFormat3Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat3Choice#mmTypeAndIdentification
+ * PledgeeFormat3Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat3Choice#Identification
- * PledgeeFormat3Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat3Choice#mmIdentification
+ * PledgeeFormat3Choice.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat4Choice#TypeAndIdentification
- * PledgeeFormat4Choice.TypeAndIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat4Choice#mmTypeAndIdentification
+ * PledgeeFormat4Choice.mmTypeAndIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PledgeeFormat4Choice#Identification
- * PledgeeFormat4Choice.Identification}</li>
+ * {@linkplain com.tools20022.repository.choice.PledgeeFormat4Choice#mmIdentification
+ * PledgeeFormat4Choice.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -125,8 +125,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -140,6 +140,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Pledgee extends SecuritiesPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected PledgeeTypeCode pledgeeType;
 	/**
 	 * Specifies the type of pledgee.
 	 * <p>
@@ -150,24 +151,24 @@ public class Pledgee extends SecuritiesPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PledgeeTypeCode
 	 * PledgeeTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText1#PledgeeType
-	 * PledgeeTypeAndText1.PledgeeType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1#PledgeeType
-	 * PledgeeTypeAndAnyBICIdentifier1.PledgeeType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText2#PledgeeType
-	 * PledgeeTypeAndText2.PledgeeType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Pledgee
 	 * Pledgee}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText1#mmPledgeeType
+	 * PledgeeTypeAndText1.mmPledgeeType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1#mmPledgeeType
+	 * PledgeeTypeAndAnyBICIdentifier1.mmPledgeeType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndText2#mmPledgeeType
+	 * PledgeeTypeAndText2.mmPledgeeType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -179,20 +180,21 @@ public class Pledgee extends SecuritiesPartyRole {
 	 * definition} = "Specifies the type of pledgee."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PledgeeType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPledgeeType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PledgeeTypeAndText1.PledgeeType, com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1.PledgeeType,
-					com.tools20022.repository.msg.PledgeeTypeAndText2.PledgeeType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PledgeeTypeAndText1.mmPledgeeType, com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1.mmPledgeeType,
+					com.tools20022.repository.msg.PledgeeTypeAndText2.mmPledgeeType);
 			elementContext_lazy = () -> Pledgee.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PledgeeType";
 			definition = "Specifies the type of pledgee.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PledgeeTypeCode.mmObject();
 		}
 	};
+	protected SecuritiesBalance securitiesBalance;
 	/**
 	 * Balance which is held by a pledgee.
 	 * <p>
@@ -201,8 +203,8 @@ public class Pledgee extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#Pledgee
-	 * SecuritiesBalance.Pledgee}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmPledgee
+	 * SecuritiesBalance.mmPledgee}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -225,40 +227,57 @@ public class Pledgee extends SecuritiesPartyRole {
 	 * definition} = "Balance which is held by a pledgee."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesBalance = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Pledgee.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBalance";
 			definition = "Balance which is held by a pledgee.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.Pledgee;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmPledgee;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Pledgee";
 				definition = "Organisation used as the pledgee for the securities.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesBalance.Pledgee);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PledgeeTypeAndText1.Identification, com.tools20022.repository.choice.PledgeeFormat1Choice.TypeAndIdentification,
-						com.tools20022.repository.choice.PledgeeFormat1Choice.Identification, com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1.Identification,
-						com.tools20022.repository.choice.PledgeeFormat2Choice.TypeAndIdentification, com.tools20022.repository.choice.PledgeeFormat2Choice.Identification, com.tools20022.repository.msg.PledgeeTypeAndText2.Identification,
-						com.tools20022.repository.choice.PledgeeFormat3Choice.TypeAndIdentification, com.tools20022.repository.choice.PledgeeFormat3Choice.Identification,
-						com.tools20022.repository.choice.PledgeeFormat4Choice.TypeAndIdentification, com.tools20022.repository.choice.PledgeeFormat4Choice.Identification);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesBalance.mmPledgee);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PledgeeTypeAndText1.mmIdentification, com.tools20022.repository.choice.PledgeeFormat1Choice.mmTypeAndIdentification,
+						com.tools20022.repository.choice.PledgeeFormat1Choice.mmIdentification, com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1.mmIdentification,
+						com.tools20022.repository.choice.PledgeeFormat2Choice.mmTypeAndIdentification, com.tools20022.repository.choice.PledgeeFormat2Choice.mmIdentification,
+						com.tools20022.repository.msg.PledgeeTypeAndText2.mmIdentification, com.tools20022.repository.choice.PledgeeFormat3Choice.mmTypeAndIdentification,
+						com.tools20022.repository.choice.PledgeeFormat3Choice.mmIdentification, com.tools20022.repository.choice.PledgeeFormat4Choice.mmTypeAndIdentification,
+						com.tools20022.repository.choice.PledgeeFormat4Choice.mmIdentification);
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Pledgee.PledgeeType, com.tools20022.repository.entity.Pledgee.SecuritiesBalance);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Pledgee.mmPledgeeType, com.tools20022.repository.entity.Pledgee.mmSecuritiesBalance);
 				derivationComponent_lazy = () -> Arrays.asList(PledgeeTypeAndText1.mmObject(), PledgeeFormat1Choice.mmObject(), PledgeeTypeAndAnyBICIdentifier1.mmObject(), PledgeeFormat2Choice.mmObject(), PledgeeTypeAndText2.mmObject(),
 						PledgeeFormat3Choice.mmObject(), PledgeeFormat4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PledgeeTypeCode getPledgeeType() {
+		return pledgeeType;
+	}
+
+	public void setPledgeeType(PledgeeTypeCode pledgeeType) {
+		this.pledgeeType = pledgeeType;
+	}
+
+	public SecuritiesBalance getSecuritiesBalance() {
+		return securitiesBalance;
+	}
+
+	public void setSecuritiesBalance(com.tools20022.repository.entity.SecuritiesBalance securitiesBalance) {
+		this.securitiesBalance = securitiesBalance;
 	}
 }

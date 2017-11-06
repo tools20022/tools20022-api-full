@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SettlementPartyRole;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Role played by a party in the context of the settlement of securities.
@@ -42,74 +43,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#SecuritiesSettlement
- * SecuritiesSettlementPartyRole.SecuritiesSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#mmSecuritiesSettlement
+ * SecuritiesSettlementPartyRole.mmSecuritiesSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#SecuritiesSettlementSystem
- * SecuritiesSettlementPartyRole.SecuritiesSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#mmSecuritiesSettlementSystem
+ * SecuritiesSettlementPartyRole.mmSecuritiesSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#SettlingCapacity
- * SecuritiesSettlementPartyRole.SettlingCapacity}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#mmSettlingCapacity
+ * SecuritiesSettlementPartyRole.mmSettlingCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#TaxCapacity
- * SecuritiesSettlementPartyRole.TaxCapacity}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartyRole
- * SecuritiesSettlement.PartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem#SettlementParty
- * SecuritiesSettlementSystem.SettlementParty}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount7#Party1
- * ReceivingPartiesAndAccount7.Party1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount7#Party2
- * ReceivingPartiesAndAccount7.Party2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#Depository
- * SettlementParties32.Depository}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#Party1
- * SettlementParties32.Party1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#Party2
- * SettlementParties32.Party2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#Party3
- * SettlementParties32.Party3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#Party4
- * SettlementParties32.Party4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#Party5
- * SettlementParties32.Party5}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount10#Party1
- * ReceivingPartiesAndAccount10.Party1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount10#Party2
- * ReceivingPartiesAndAccount10.Party2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount11#Party1
- * ReceivingPartiesAndAccount11.Party1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount11#Party2
- * ReceivingPartiesAndAccount11.Party2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount54#SettlementPartiesDetails
- * InvestmentAccount54.SettlementPartiesDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount15#Party1
- * ReceivingPartiesAndAccount15.Party1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount15#Party2
- * ReceivingPartiesAndAccount15.Party2}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole#mmTaxCapacity
+ * SecuritiesSettlementPartyRole.mmTaxCapacity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -135,6 +79,64 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReceiversCustodian}</li>
  * <li>{@linkplain com.tools20022.repository.entity.ReceiversIntermediary
  * ReceiversIntermediary}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+ * SecuritiesSettlement.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem#mmSettlementParty
+ * SecuritiesSettlementSystem.mmSettlementParty}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount7#mmParty1
+ * ReceivingPartiesAndAccount7.mmParty1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount7#mmParty2
+ * ReceivingPartiesAndAccount7.mmParty2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementParties32#mmDepository
+ * SettlementParties32.mmDepository}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#mmParty1
+ * SettlementParties32.mmParty1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#mmParty2
+ * SettlementParties32.mmParty2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#mmParty3
+ * SettlementParties32.mmParty3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#mmParty4
+ * SettlementParties32.mmParty4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementParties32#mmParty5
+ * SettlementParties32.mmParty5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount10#mmParty1
+ * ReceivingPartiesAndAccount10.mmParty1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount10#mmParty2
+ * ReceivingPartiesAndAccount10.mmParty2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount11#mmParty1
+ * ReceivingPartiesAndAccount11.mmParty1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount11#mmParty2
+ * ReceivingPartiesAndAccount11.mmParty2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount54#mmSettlementPartiesDetails
+ * InvestmentAccount54.mmSettlementPartiesDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount15#mmParty1
+ * ReceivingPartiesAndAccount15.mmParty1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount15#mmParty2
+ * ReceivingPartiesAndAccount15.mmParty2}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -296,8 +298,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -312,6 +314,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement;
 	/**
 	 * Specifies the settlement process in which a party plays a role.
 	 * <p>
@@ -320,8 +323,8 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartyRole
-	 * SecuritiesSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+	 * SecuritiesSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -347,7 +350,7 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * "Specifies the settlement process in which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			isDerived = false;
@@ -355,11 +358,12 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 			name = "SecuritiesSettlement";
 			definition = "Specifies the settlement process in which a party plays a role.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartyRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesSettlementSystem> securitiesSettlementSystem;
 	/**
 	 * Specifies the system which may be used by a party in a settlement
 	 * process.
@@ -369,8 +373,8 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem#SettlementParty
-	 * SecuritiesSettlementSystem.SettlementParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem#mmSettlementParty
+	 * SecuritiesSettlementSystem.mmSettlementParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -397,7 +401,7 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesSettlementSystem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesSettlementSystem = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			isDerived = false;
@@ -405,11 +409,12 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 			name = "SecuritiesSettlementSystem";
 			definition = "Specifies the system which may be used by a party in a settlement process.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementSystem.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementSystem.SettlementParty;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementSystem.mmSettlementParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementSystem.mmObject();
 		}
 	};
+	protected SettlingCapacityCode settlingCapacity;
 	/**
 	 * Role of a party in the settlement of the transaction.
 	 * <p>
@@ -420,349 +425,349 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlingCapacityCode
 	 * SettlingCapacityCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#SettlingCapacity
-	 * SettlementDetails50.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#SettlingCapacity
-	 * SettlementDetails51.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails9#SettlingCapacity
-	 * SettlementDetails9.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails17#SettlingCapacity
-	 * SettlementDetails17.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails30#SettlingCapacity
-	 * SettlementDetails30.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails32#SettlingCapacity
-	 * SettlementDetails32.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails60#SettlingCapacity
-	 * SettlementDetails60.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails64#SettlingCapacity
-	 * SettlementDetails64.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails3#SettlingCapacity
-	 * SettlementDetails3.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails16#SettlingCapacity
-	 * SettlementDetails16.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails31#SettlingCapacity
-	 * SettlementDetails31.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails40#SettlingCapacity
-	 * SettlementDetails40.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails62#SettlingCapacity
-	 * SettlementDetails62.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails63#SettlingCapacity
-	 * SettlementDetails63.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#SettlingCapacity
-	 * SettlementDetails6.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#SettlingCapacity
-	 * SettlementDetails20.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#SettlingCapacity
-	 * SettlementDetails24.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#SettlingCapacity
-	 * SettlementDetails33.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#SettlingCapacity
-	 * SettlementDetails45.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#SettlingCapacity
-	 * SettlementDetails54.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#SettlingCapacity
-	 * SettlementDetails1.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#SettlingCapacity
-	 * SettlementDetails19.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#SettlingCapacity
-	 * SettlementDetails22.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#SettlingCapacity
-	 * SettlementDetails35.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#SettlingCapacity
-	 * SettlementDetails42.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#SettlingCapacity
-	 * SettlementDetails52.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails8#SettlingCapacity
-	 * SettlementDetails8.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails11#SettlingCapacity
-	 * SettlementDetails11.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails23#SettlingCapacity
-	 * SettlementDetails23.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails37#SettlingCapacity
-	 * SettlementDetails37.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails44#SettlingCapacity
-	 * SettlementDetails44.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails53#SettlingCapacity
-	 * SettlementDetails53.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails7#SettlingCapacity
-	 * SettlementDetails7.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails12#SettlingCapacity
-	 * SettlementDetails12.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails28#SettlingCapacity
-	 * SettlementDetails28.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails38#SettlingCapacity
-	 * SettlementDetails38.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails47#SettlingCapacity
-	 * SettlementDetails47.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails56#SettlingCapacity
-	 * SettlementDetails56.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails2#SettlingCapacity
-	 * SettlementDetails2.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails13#SettlingCapacity
-	 * SettlementDetails13.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails27#SettlingCapacity
-	 * SettlementDetails27.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails39#SettlingCapacity
-	 * SettlementDetails39.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails48#SettlingCapacity
-	 * SettlementDetails48.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails57#SettlingCapacity
-	 * SettlementDetails57.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#SettlingCapacity
-	 * SettlementDetails43.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails10#SettlingCapacity
-	 * SettlementDetails10.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails29#SettlingCapacity
-	 * SettlementDetails29.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails5#SettlingCapacity
-	 * SettlementDetails5.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#SettlingCapacity
-	 * SettlementDetails26.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails65#SettlingCapacity
-	 * SettlementDetails65.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails14#SettlingCapacity
-	 * SettlementDetails14.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails41#SettlingCapacity
-	 * SettlementDetails41.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails61#SettlingCapacity
-	 * SettlementDetails61.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails59#SettlingCapacity
-	 * SettlementDetails59.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails15#SettlingCapacity
-	 * SettlementDetails15.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#SettlingCapacity
-	 * SettlementDetails36.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails66#SettlingCapacity
-	 * SettlementDetails66.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#SettlingCapacity
-	 * SettlementDetails67.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#SettlingCapacity
-	 * SettlementDetails70.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#SettlingCapacity
-	 * SettlementDetails68.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails69#SettlingCapacity
-	 * SettlementDetails69.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails71#SettlingCapacity
-	 * SettlementDetails71.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails72#SettlingCapacity
-	 * SettlementDetails72.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails75#SettlingCapacity
-	 * SettlementDetails75.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails73#SettlingCapacity
-	 * SettlementDetails73.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails74#SettlingCapacity
-	 * SettlementDetails74.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#SettlingCapacity
-	 * SettlementDetails81.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails76#SettlingCapacity
-	 * SettlementDetails76.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#SettlingCapacity
-	 * SettlementDetails80.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails78#SettlingCapacity
-	 * SettlementDetails78.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails77#SettlingCapacity
-	 * SettlementDetails77.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails79#SettlingCapacity
-	 * SettlementDetails79.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails87#SettlingCapacity
-	 * SettlementDetails87.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#SettlingCapacity
-	 * SettlementDetails83.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails86#SettlingCapacity
-	 * SettlementDetails86.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails85#SettlingCapacity
-	 * SettlementDetails85.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#SettlingCapacity
-	 * SettlementDetails93.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#SettlingCapacity
-	 * SettlementDetails90.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails96#SettlingCapacity
-	 * SettlementDetails96.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails97#SettlingCapacity
-	 * SettlementDetails97.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#SettlingCapacity
-	 * SettlementDetails94.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails95#SettlingCapacity
-	 * SettlementDetails95.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails91#SettlingCapacity
-	 * SettlementDetails91.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails92#SettlingCapacity
-	 * SettlementDetails92.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails98#SettlingCapacity
-	 * SettlementDetails98.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#SettlingCapacity
-	 * SettlementDetails101.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails105#SettlingCapacity
-	 * SettlementDetails105.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails106#SettlingCapacity
-	 * SettlementDetails106.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails104#SettlingCapacity
-	 * SettlementDetails104.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#SettlingCapacity
-	 * SettlementDetails111.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#SettlingCapacity
-	 * SettlementDetails112.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#SettlingCapacity
-	 * SettlementDetails110.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails107#SettlingCapacity
-	 * SettlementDetails107.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails115#SettlingCapacity
-	 * SettlementDetails115.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails117#SettlingCapacity
-	 * SettlementDetails117.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails116#SettlingCapacity
-	 * SettlementDetails116.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#SettlingCapacity
-	 * SettlementDetails113.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#SettlingCapacity
-	 * SettlementDetails128.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#SettlingCapacity
-	 * SettlementDetails120.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#SettlingCapacity
-	 * SettlementDetails119.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails126#SettlingCapacity
-	 * SettlementDetails126.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#SettlingCapacity
-	 * SettlementDetails122.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails127#SettlingCapacity
-	 * SettlementDetails127.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails121#SettlingCapacity
-	 * SettlementDetails121.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#SettlingCapacity
-	 * SettlementDetails134.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#SettlingCapacity
-	 * SettlementDetails137.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#SettlingCapacity
-	 * SettlementDetails132.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#SettlingCapacity
-	 * SettlementDetails138.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails130#SettlingCapacity
-	 * SettlementDetails130.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#SettlingCapacity
-	 * SettlementDetails133.SettlingCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#SettlingCapacity
-	 * SettlementDetails139.SettlingCapacity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole
 	 * SecuritiesSettlementPartyRole}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#mmSettlingCapacity
+	 * SettlementDetails50.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#mmSettlingCapacity
+	 * SettlementDetails51.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails9#mmSettlingCapacity
+	 * SettlementDetails9.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails17#mmSettlingCapacity
+	 * SettlementDetails17.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails30#mmSettlingCapacity
+	 * SettlementDetails30.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails32#mmSettlingCapacity
+	 * SettlementDetails32.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails60#mmSettlingCapacity
+	 * SettlementDetails60.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails64#mmSettlingCapacity
+	 * SettlementDetails64.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails3#mmSettlingCapacity
+	 * SettlementDetails3.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails16#mmSettlingCapacity
+	 * SettlementDetails16.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails31#mmSettlingCapacity
+	 * SettlementDetails31.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails40#mmSettlingCapacity
+	 * SettlementDetails40.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails62#mmSettlingCapacity
+	 * SettlementDetails62.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails63#mmSettlingCapacity
+	 * SettlementDetails63.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#mmSettlingCapacity
+	 * SettlementDetails6.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#mmSettlingCapacity
+	 * SettlementDetails20.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#mmSettlingCapacity
+	 * SettlementDetails24.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#mmSettlingCapacity
+	 * SettlementDetails33.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#mmSettlingCapacity
+	 * SettlementDetails45.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#mmSettlingCapacity
+	 * SettlementDetails54.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#mmSettlingCapacity
+	 * SettlementDetails1.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#mmSettlingCapacity
+	 * SettlementDetails19.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#mmSettlingCapacity
+	 * SettlementDetails22.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#mmSettlingCapacity
+	 * SettlementDetails35.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#mmSettlingCapacity
+	 * SettlementDetails42.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#mmSettlingCapacity
+	 * SettlementDetails52.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails8#mmSettlingCapacity
+	 * SettlementDetails8.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails11#mmSettlingCapacity
+	 * SettlementDetails11.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails23#mmSettlingCapacity
+	 * SettlementDetails23.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails37#mmSettlingCapacity
+	 * SettlementDetails37.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails44#mmSettlingCapacity
+	 * SettlementDetails44.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails53#mmSettlingCapacity
+	 * SettlementDetails53.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails7#mmSettlingCapacity
+	 * SettlementDetails7.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails12#mmSettlingCapacity
+	 * SettlementDetails12.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails28#mmSettlingCapacity
+	 * SettlementDetails28.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails38#mmSettlingCapacity
+	 * SettlementDetails38.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails47#mmSettlingCapacity
+	 * SettlementDetails47.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails56#mmSettlingCapacity
+	 * SettlementDetails56.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails2#mmSettlingCapacity
+	 * SettlementDetails2.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails13#mmSettlingCapacity
+	 * SettlementDetails13.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails27#mmSettlingCapacity
+	 * SettlementDetails27.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails39#mmSettlingCapacity
+	 * SettlementDetails39.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails48#mmSettlingCapacity
+	 * SettlementDetails48.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails57#mmSettlingCapacity
+	 * SettlementDetails57.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#mmSettlingCapacity
+	 * SettlementDetails43.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails10#mmSettlingCapacity
+	 * SettlementDetails10.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails29#mmSettlingCapacity
+	 * SettlementDetails29.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails5#mmSettlingCapacity
+	 * SettlementDetails5.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#mmSettlingCapacity
+	 * SettlementDetails26.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails65#mmSettlingCapacity
+	 * SettlementDetails65.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails14#mmSettlingCapacity
+	 * SettlementDetails14.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails41#mmSettlingCapacity
+	 * SettlementDetails41.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails61#mmSettlingCapacity
+	 * SettlementDetails61.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails59#mmSettlingCapacity
+	 * SettlementDetails59.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails15#mmSettlingCapacity
+	 * SettlementDetails15.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#mmSettlingCapacity
+	 * SettlementDetails36.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails66#mmSettlingCapacity
+	 * SettlementDetails66.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#mmSettlingCapacity
+	 * SettlementDetails67.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#mmSettlingCapacity
+	 * SettlementDetails70.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#mmSettlingCapacity
+	 * SettlementDetails68.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails69#mmSettlingCapacity
+	 * SettlementDetails69.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails71#mmSettlingCapacity
+	 * SettlementDetails71.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails72#mmSettlingCapacity
+	 * SettlementDetails72.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails75#mmSettlingCapacity
+	 * SettlementDetails75.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails73#mmSettlingCapacity
+	 * SettlementDetails73.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails74#mmSettlingCapacity
+	 * SettlementDetails74.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#mmSettlingCapacity
+	 * SettlementDetails81.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails76#mmSettlingCapacity
+	 * SettlementDetails76.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#mmSettlingCapacity
+	 * SettlementDetails80.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails78#mmSettlingCapacity
+	 * SettlementDetails78.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails77#mmSettlingCapacity
+	 * SettlementDetails77.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails79#mmSettlingCapacity
+	 * SettlementDetails79.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails87#mmSettlingCapacity
+	 * SettlementDetails87.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#mmSettlingCapacity
+	 * SettlementDetails83.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails86#mmSettlingCapacity
+	 * SettlementDetails86.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails85#mmSettlingCapacity
+	 * SettlementDetails85.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#mmSettlingCapacity
+	 * SettlementDetails93.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#mmSettlingCapacity
+	 * SettlementDetails90.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails96#mmSettlingCapacity
+	 * SettlementDetails96.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails97#mmSettlingCapacity
+	 * SettlementDetails97.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#mmSettlingCapacity
+	 * SettlementDetails94.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails95#mmSettlingCapacity
+	 * SettlementDetails95.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails91#mmSettlingCapacity
+	 * SettlementDetails91.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails92#mmSettlingCapacity
+	 * SettlementDetails92.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails98#mmSettlingCapacity
+	 * SettlementDetails98.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#mmSettlingCapacity
+	 * SettlementDetails101.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails105#mmSettlingCapacity
+	 * SettlementDetails105.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails106#mmSettlingCapacity
+	 * SettlementDetails106.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails104#mmSettlingCapacity
+	 * SettlementDetails104.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#mmSettlingCapacity
+	 * SettlementDetails111.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#mmSettlingCapacity
+	 * SettlementDetails112.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#mmSettlingCapacity
+	 * SettlementDetails110.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails107#mmSettlingCapacity
+	 * SettlementDetails107.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails115#mmSettlingCapacity
+	 * SettlementDetails115.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails117#mmSettlingCapacity
+	 * SettlementDetails117.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails116#mmSettlingCapacity
+	 * SettlementDetails116.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#mmSettlingCapacity
+	 * SettlementDetails113.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#mmSettlingCapacity
+	 * SettlementDetails128.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#mmSettlingCapacity
+	 * SettlementDetails120.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#mmSettlingCapacity
+	 * SettlementDetails119.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails126#mmSettlingCapacity
+	 * SettlementDetails126.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#mmSettlingCapacity
+	 * SettlementDetails122.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails127#mmSettlingCapacity
+	 * SettlementDetails127.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails121#mmSettlingCapacity
+	 * SettlementDetails121.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#mmSettlingCapacity
+	 * SettlementDetails134.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#mmSettlingCapacity
+	 * SettlementDetails137.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#mmSettlingCapacity
+	 * SettlementDetails132.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmSettlingCapacity
+	 * SettlementDetails138.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails130#mmSettlingCapacity
+	 * SettlementDetails130.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#mmSettlingCapacity
+	 * SettlementDetails133.mmSettlingCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmSettlingCapacity
+	 * SettlementDetails139.mmSettlingCapacity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -774,56 +779,57 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * definition} = "Role of a party in the settlement of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SettlingCapacity = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSettlingCapacity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails51.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails9.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails17.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails30.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails32.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails60.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails64.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails3.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails16.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails31.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails40.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails62.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails63.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails6.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails20.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails24.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails33.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails45.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails54.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails1.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails19.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails22.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails35.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails42.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails52.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails8.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails11.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails23.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails37.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails44.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails53.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails7.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails12.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails28.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails38.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails47.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails56.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails2.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails13.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails27.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails39.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails48.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails57.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails43.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails10.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails29.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails5.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails26.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails65.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails14.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails41.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails61.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails59.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails15.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails36.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails66.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails67.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails70.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails68.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails69.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails71.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails72.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails75.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails73.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails74.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails81.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails76.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails80.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails78.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails77.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails79.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails87.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails83.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails86.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails85.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails93.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails90.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails96.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails97.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails94.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails95.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails91.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails92.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails98.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails101.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails105.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails106.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails104.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails111.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails112.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails110.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails107.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails115.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails117.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails116.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails113.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails128.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails120.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails119.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails126.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails122.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails127.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails121.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails134.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails137.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails132.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails138.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails130.SettlingCapacity, com.tools20022.repository.msg.SettlementDetails133.SettlingCapacity,
-					com.tools20022.repository.msg.SettlementDetails139.SettlingCapacity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails51.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails9.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails17.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails30.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails32.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails60.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails64.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails3.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails16.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails31.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails40.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails62.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails63.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails6.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails20.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails24.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails33.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails45.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails54.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails1.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails19.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails22.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails35.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails42.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails52.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails8.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails11.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails23.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails37.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails44.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails53.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails7.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails12.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails28.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails38.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails47.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails56.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails2.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails13.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails27.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails39.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails48.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails57.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails43.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails10.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails29.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails5.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails26.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails65.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails14.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails41.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails61.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails59.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails15.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails36.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails66.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails67.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails70.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails68.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails69.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails71.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails72.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails75.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails73.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails74.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails81.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails76.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails80.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails78.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails77.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails79.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails87.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails83.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails86.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails85.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails93.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails90.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails96.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails97.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails94.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails95.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails91.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails92.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails98.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails101.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails105.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails106.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails104.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails111.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails112.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails110.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails107.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails115.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails117.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails116.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails113.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails128.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails120.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails119.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails126.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails122.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails127.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails121.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails134.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails137.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails132.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails138.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails130.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails133.mmSettlingCapacity,
+					com.tools20022.repository.msg.SettlementDetails139.mmSettlingCapacity);
 			elementContext_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SettlingCapacity";
 			definition = "Role of a party in the settlement of the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlingCapacityCode.mmObject();
 		}
 	};
+	protected TaxLiabilityCode taxCapacity;
 	/**
 	 * Tax role capacity of the instructing party.
 	 * <p>
@@ -834,391 +840,391 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxLiabilityCode
 	 * TaxLiabilityCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty1Choice#Code
-	 * TaxCapacityParty1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty1Choice#Proprietary
-	 * TaxCapacityParty1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#TaxCapacity
-	 * SettlementDetails50.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty2Choice#Code
-	 * TaxCapacityParty2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty2Choice#Proprietary
-	 * TaxCapacityParty2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#TaxCapacity
-	 * SettlementDetails51.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails9#TaxCapacity
-	 * SettlementDetails9.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails17#TaxCapacity
-	 * SettlementDetails17.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails30#TaxCapacity
-	 * SettlementDetails30.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails32#TaxCapacity
-	 * SettlementDetails32.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails60#TaxCapacity
-	 * SettlementDetails60.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails64#TaxCapacity
-	 * SettlementDetails64.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails3#TaxCapacity
-	 * SettlementDetails3.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails16#TaxCapacity
-	 * SettlementDetails16.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails31#TaxCapacity
-	 * SettlementDetails31.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails40#TaxCapacity
-	 * SettlementDetails40.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails62#TaxCapacity
-	 * SettlementDetails62.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails63#TaxCapacity
-	 * SettlementDetails63.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#TaxCapacity
-	 * SettlementDetails6.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#TaxCapacity
-	 * SettlementDetails20.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#TaxCapacity
-	 * SettlementDetails24.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#TaxCapacity
-	 * SettlementDetails33.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#TaxCapacity
-	 * SettlementDetails45.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#TaxCapacity
-	 * SettlementDetails54.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#TaxCapacity
-	 * SettlementDetails1.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#TaxCapacity
-	 * SettlementDetails19.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#TaxCapacity
-	 * SettlementDetails22.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#TaxCapacity
-	 * SettlementDetails35.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#TaxCapacity
-	 * SettlementDetails42.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#TaxCapacity
-	 * SettlementDetails52.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails8#TaxCapacity
-	 * SettlementDetails8.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails11#TaxCapacity
-	 * SettlementDetails11.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails23#TaxCapacity
-	 * SettlementDetails23.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails37#TaxCapacity
-	 * SettlementDetails37.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails44#TaxCapacity
-	 * SettlementDetails44.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails53#TaxCapacity
-	 * SettlementDetails53.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails7#TaxCapacity
-	 * SettlementDetails7.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails12#TaxCapacity
-	 * SettlementDetails12.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails28#TaxCapacity
-	 * SettlementDetails28.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails38#TaxCapacity
-	 * SettlementDetails38.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails47#TaxCapacity
-	 * SettlementDetails47.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails56#TaxCapacity
-	 * SettlementDetails56.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails2#TaxCapacity
-	 * SettlementDetails2.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails13#TaxCapacity
-	 * SettlementDetails13.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails27#TaxCapacity
-	 * SettlementDetails27.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails39#TaxCapacity
-	 * SettlementDetails39.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails48#TaxCapacity
-	 * SettlementDetails48.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails57#TaxCapacity
-	 * SettlementDetails57.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty3Choice#Code
-	 * TaxCapacityParty3Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty3Choice#Proprietary
-	 * TaxCapacityParty3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#TaxCapacity
-	 * SettlementDetails43.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails4#TaxCapacity
-	 * SettlementDetails4.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails10#TaxCapacity
-	 * SettlementDetails10.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails29#TaxCapacity
-	 * SettlementDetails29.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails5#TaxCapacity
-	 * SettlementDetails5.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#TaxCapacity
-	 * SettlementDetails26.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails65#TaxCapacity
-	 * SettlementDetails65.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails14#TaxCapacity
-	 * SettlementDetails14.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails41#TaxCapacity
-	 * SettlementDetails41.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails61#TaxCapacity
-	 * SettlementDetails61.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails59#TaxCapacity
-	 * SettlementDetails59.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails15#TaxCapacity
-	 * SettlementDetails15.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#TaxCapacity
-	 * SettlementDetails36.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails18#TaxCapacity
-	 * SettlementDetails18.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails66#TaxCapacity
-	 * SettlementDetails66.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#TaxCapacity
-	 * SettlementDetails67.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#TaxCapacity
-	 * SettlementDetails70.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#TaxCapacity
-	 * SettlementDetails68.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails69#TaxCapacity
-	 * SettlementDetails69.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails71#TaxCapacity
-	 * SettlementDetails71.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails72#TaxCapacity
-	 * SettlementDetails72.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails75#TaxCapacity
-	 * SettlementDetails75.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails73#TaxCapacity
-	 * SettlementDetails73.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails74#TaxCapacity
-	 * SettlementDetails74.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#TaxCapacity
-	 * SettlementDetails81.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails76#TaxCapacity
-	 * SettlementDetails76.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#TaxCapacity
-	 * SettlementDetails80.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails78#TaxCapacity
-	 * SettlementDetails78.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails77#TaxCapacity
-	 * SettlementDetails77.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails79#TaxCapacity
-	 * SettlementDetails79.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails87#TaxCapacity
-	 * SettlementDetails87.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#TaxCapacity
-	 * SettlementDetails83.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails86#TaxCapacity
-	 * SettlementDetails86.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails85#TaxCapacity
-	 * SettlementDetails85.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#TaxCapacity
-	 * SettlementDetails93.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#TaxCapacity
-	 * SettlementDetails90.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails96#TaxCapacity
-	 * SettlementDetails96.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails97#TaxCapacity
-	 * SettlementDetails97.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#TaxCapacity
-	 * SettlementDetails94.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails100#TaxCapacity
-	 * SettlementDetails100.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty4Choice#Code
-	 * TaxCapacityParty4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty4Choice#Proprietary
-	 * TaxCapacityParty4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails95#TaxCapacity
-	 * SettlementDetails95.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails91#TaxCapacity
-	 * SettlementDetails91.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails92#TaxCapacity
-	 * SettlementDetails92.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails98#TaxCapacity
-	 * SettlementDetails98.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#TaxCapacity
-	 * SettlementDetails101.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails105#TaxCapacity
-	 * SettlementDetails105.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails106#TaxCapacity
-	 * SettlementDetails106.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails104#TaxCapacity
-	 * SettlementDetails104.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#TaxCapacity
-	 * SettlementDetails111.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#TaxCapacity
-	 * SettlementDetails112.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#TaxCapacity
-	 * SettlementDetails110.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails103#TaxCapacity
-	 * SettlementDetails103.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails107#TaxCapacity
-	 * SettlementDetails107.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails115#TaxCapacity
-	 * SettlementDetails115.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails117#TaxCapacity
-	 * SettlementDetails117.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty5Choice#Code
-	 * TaxCapacityParty5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty5Choice#Proprietary
-	 * TaxCapacityParty5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails116#TaxCapacity
-	 * SettlementDetails116.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#TaxCapacity
-	 * SettlementDetails113.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#TaxCapacity
-	 * SettlementDetails128.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#TaxCapacity
-	 * SettlementDetails120.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#TaxCapacity
-	 * SettlementDetails119.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails126#TaxCapacity
-	 * SettlementDetails126.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#TaxCapacity
-	 * SettlementDetails122.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails127#TaxCapacity
-	 * SettlementDetails127.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails121#TaxCapacity
-	 * SettlementDetails121.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#TaxCapacity
-	 * SettlementDetails134.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#TaxCapacity
-	 * SettlementDetails137.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#TaxCapacity
-	 * SettlementDetails132.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#TaxCapacity
-	 * SettlementDetails138.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails130#TaxCapacity
-	 * SettlementDetails130.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#TaxCapacity
-	 * SettlementDetails133.TaxCapacity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#TaxCapacity
-	 * SettlementDetails139.TaxCapacity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole
 	 * SecuritiesSettlementPartyRole}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty1Choice#mmCode
+	 * TaxCapacityParty1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty1Choice#mmProprietary
+	 * TaxCapacityParty1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails50#mmTaxCapacity
+	 * SettlementDetails50.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty2Choice#mmCode
+	 * TaxCapacityParty2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty2Choice#mmProprietary
+	 * TaxCapacityParty2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails51#mmTaxCapacity
+	 * SettlementDetails51.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails9#mmTaxCapacity
+	 * SettlementDetails9.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails17#mmTaxCapacity
+	 * SettlementDetails17.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails30#mmTaxCapacity
+	 * SettlementDetails30.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails32#mmTaxCapacity
+	 * SettlementDetails32.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails60#mmTaxCapacity
+	 * SettlementDetails60.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails64#mmTaxCapacity
+	 * SettlementDetails64.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails3#mmTaxCapacity
+	 * SettlementDetails3.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails16#mmTaxCapacity
+	 * SettlementDetails16.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails31#mmTaxCapacity
+	 * SettlementDetails31.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails40#mmTaxCapacity
+	 * SettlementDetails40.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails62#mmTaxCapacity
+	 * SettlementDetails62.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails63#mmTaxCapacity
+	 * SettlementDetails63.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails6#mmTaxCapacity
+	 * SettlementDetails6.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails20#mmTaxCapacity
+	 * SettlementDetails20.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails24#mmTaxCapacity
+	 * SettlementDetails24.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails33#mmTaxCapacity
+	 * SettlementDetails33.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails45#mmTaxCapacity
+	 * SettlementDetails45.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails54#mmTaxCapacity
+	 * SettlementDetails54.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails1#mmTaxCapacity
+	 * SettlementDetails1.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails19#mmTaxCapacity
+	 * SettlementDetails19.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails22#mmTaxCapacity
+	 * SettlementDetails22.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails35#mmTaxCapacity
+	 * SettlementDetails35.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails42#mmTaxCapacity
+	 * SettlementDetails42.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails52#mmTaxCapacity
+	 * SettlementDetails52.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails8#mmTaxCapacity
+	 * SettlementDetails8.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails11#mmTaxCapacity
+	 * SettlementDetails11.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails23#mmTaxCapacity
+	 * SettlementDetails23.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails37#mmTaxCapacity
+	 * SettlementDetails37.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails44#mmTaxCapacity
+	 * SettlementDetails44.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails53#mmTaxCapacity
+	 * SettlementDetails53.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails7#mmTaxCapacity
+	 * SettlementDetails7.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails12#mmTaxCapacity
+	 * SettlementDetails12.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails28#mmTaxCapacity
+	 * SettlementDetails28.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails38#mmTaxCapacity
+	 * SettlementDetails38.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails47#mmTaxCapacity
+	 * SettlementDetails47.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails56#mmTaxCapacity
+	 * SettlementDetails56.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails2#mmTaxCapacity
+	 * SettlementDetails2.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails13#mmTaxCapacity
+	 * SettlementDetails13.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails27#mmTaxCapacity
+	 * SettlementDetails27.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails39#mmTaxCapacity
+	 * SettlementDetails39.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails48#mmTaxCapacity
+	 * SettlementDetails48.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails57#mmTaxCapacity
+	 * SettlementDetails57.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty3Choice#mmCode
+	 * TaxCapacityParty3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty3Choice#mmProprietary
+	 * TaxCapacityParty3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails43#mmTaxCapacity
+	 * SettlementDetails43.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails4#mmTaxCapacity
+	 * SettlementDetails4.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails10#mmTaxCapacity
+	 * SettlementDetails10.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails29#mmTaxCapacity
+	 * SettlementDetails29.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails5#mmTaxCapacity
+	 * SettlementDetails5.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails26#mmTaxCapacity
+	 * SettlementDetails26.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails65#mmTaxCapacity
+	 * SettlementDetails65.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails14#mmTaxCapacity
+	 * SettlementDetails14.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails41#mmTaxCapacity
+	 * SettlementDetails41.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails61#mmTaxCapacity
+	 * SettlementDetails61.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails59#mmTaxCapacity
+	 * SettlementDetails59.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails15#mmTaxCapacity
+	 * SettlementDetails15.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails36#mmTaxCapacity
+	 * SettlementDetails36.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails18#mmTaxCapacity
+	 * SettlementDetails18.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails66#mmTaxCapacity
+	 * SettlementDetails66.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails67#mmTaxCapacity
+	 * SettlementDetails67.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails70#mmTaxCapacity
+	 * SettlementDetails70.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails68#mmTaxCapacity
+	 * SettlementDetails68.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails69#mmTaxCapacity
+	 * SettlementDetails69.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails71#mmTaxCapacity
+	 * SettlementDetails71.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails72#mmTaxCapacity
+	 * SettlementDetails72.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails75#mmTaxCapacity
+	 * SettlementDetails75.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails73#mmTaxCapacity
+	 * SettlementDetails73.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails74#mmTaxCapacity
+	 * SettlementDetails74.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails81#mmTaxCapacity
+	 * SettlementDetails81.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails76#mmTaxCapacity
+	 * SettlementDetails76.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails80#mmTaxCapacity
+	 * SettlementDetails80.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails78#mmTaxCapacity
+	 * SettlementDetails78.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails77#mmTaxCapacity
+	 * SettlementDetails77.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails79#mmTaxCapacity
+	 * SettlementDetails79.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails87#mmTaxCapacity
+	 * SettlementDetails87.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails83#mmTaxCapacity
+	 * SettlementDetails83.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails86#mmTaxCapacity
+	 * SettlementDetails86.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails85#mmTaxCapacity
+	 * SettlementDetails85.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails93#mmTaxCapacity
+	 * SettlementDetails93.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails90#mmTaxCapacity
+	 * SettlementDetails90.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails96#mmTaxCapacity
+	 * SettlementDetails96.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails97#mmTaxCapacity
+	 * SettlementDetails97.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails94#mmTaxCapacity
+	 * SettlementDetails94.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails100#mmTaxCapacity
+	 * SettlementDetails100.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty4Choice#mmCode
+	 * TaxCapacityParty4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty4Choice#mmProprietary
+	 * TaxCapacityParty4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails95#mmTaxCapacity
+	 * SettlementDetails95.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails91#mmTaxCapacity
+	 * SettlementDetails91.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails92#mmTaxCapacity
+	 * SettlementDetails92.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails98#mmTaxCapacity
+	 * SettlementDetails98.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails101#mmTaxCapacity
+	 * SettlementDetails101.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails105#mmTaxCapacity
+	 * SettlementDetails105.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails106#mmTaxCapacity
+	 * SettlementDetails106.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails104#mmTaxCapacity
+	 * SettlementDetails104.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails111#mmTaxCapacity
+	 * SettlementDetails111.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails112#mmTaxCapacity
+	 * SettlementDetails112.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails110#mmTaxCapacity
+	 * SettlementDetails110.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails103#mmTaxCapacity
+	 * SettlementDetails103.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails107#mmTaxCapacity
+	 * SettlementDetails107.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails115#mmTaxCapacity
+	 * SettlementDetails115.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails117#mmTaxCapacity
+	 * SettlementDetails117.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty5Choice#mmCode
+	 * TaxCapacityParty5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TaxCapacityParty5Choice#mmProprietary
+	 * TaxCapacityParty5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails116#mmTaxCapacity
+	 * SettlementDetails116.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails113#mmTaxCapacity
+	 * SettlementDetails113.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#mmTaxCapacity
+	 * SettlementDetails128.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#mmTaxCapacity
+	 * SettlementDetails120.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails119#mmTaxCapacity
+	 * SettlementDetails119.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails126#mmTaxCapacity
+	 * SettlementDetails126.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails122#mmTaxCapacity
+	 * SettlementDetails122.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails127#mmTaxCapacity
+	 * SettlementDetails127.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails121#mmTaxCapacity
+	 * SettlementDetails121.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails134#mmTaxCapacity
+	 * SettlementDetails134.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails137#mmTaxCapacity
+	 * SettlementDetails137.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#mmTaxCapacity
+	 * SettlementDetails132.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmTaxCapacity
+	 * SettlementDetails138.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails130#mmTaxCapacity
+	 * SettlementDetails130.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#mmTaxCapacity
+	 * SettlementDetails133.mmTaxCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmTaxCapacity
+	 * SettlementDetails139.mmTaxCapacity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1230,57 +1236,57 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * definition} = "Tax role capacity of the instructing party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TaxCapacity = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTaxCapacity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCapacityParty1Choice.Code, com.tools20022.repository.choice.TaxCapacityParty1Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails50.TaxCapacity, com.tools20022.repository.choice.TaxCapacityParty2Choice.Code, com.tools20022.repository.choice.TaxCapacityParty2Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails51.TaxCapacity, com.tools20022.repository.msg.SettlementDetails9.TaxCapacity, com.tools20022.repository.msg.SettlementDetails17.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails30.TaxCapacity, com.tools20022.repository.msg.SettlementDetails32.TaxCapacity, com.tools20022.repository.msg.SettlementDetails60.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails64.TaxCapacity, com.tools20022.repository.msg.SettlementDetails3.TaxCapacity, com.tools20022.repository.msg.SettlementDetails16.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails31.TaxCapacity, com.tools20022.repository.msg.SettlementDetails40.TaxCapacity, com.tools20022.repository.msg.SettlementDetails62.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails63.TaxCapacity, com.tools20022.repository.msg.SettlementDetails6.TaxCapacity, com.tools20022.repository.msg.SettlementDetails20.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails24.TaxCapacity, com.tools20022.repository.msg.SettlementDetails33.TaxCapacity, com.tools20022.repository.msg.SettlementDetails45.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails54.TaxCapacity, com.tools20022.repository.msg.SettlementDetails1.TaxCapacity, com.tools20022.repository.msg.SettlementDetails19.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails22.TaxCapacity, com.tools20022.repository.msg.SettlementDetails35.TaxCapacity, com.tools20022.repository.msg.SettlementDetails42.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails52.TaxCapacity, com.tools20022.repository.msg.SettlementDetails8.TaxCapacity, com.tools20022.repository.msg.SettlementDetails11.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails23.TaxCapacity, com.tools20022.repository.msg.SettlementDetails37.TaxCapacity, com.tools20022.repository.msg.SettlementDetails44.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails53.TaxCapacity, com.tools20022.repository.msg.SettlementDetails7.TaxCapacity, com.tools20022.repository.msg.SettlementDetails12.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails28.TaxCapacity, com.tools20022.repository.msg.SettlementDetails38.TaxCapacity, com.tools20022.repository.msg.SettlementDetails47.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails56.TaxCapacity, com.tools20022.repository.msg.SettlementDetails2.TaxCapacity, com.tools20022.repository.msg.SettlementDetails13.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails27.TaxCapacity, com.tools20022.repository.msg.SettlementDetails39.TaxCapacity, com.tools20022.repository.msg.SettlementDetails48.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails57.TaxCapacity, com.tools20022.repository.choice.TaxCapacityParty3Choice.Code, com.tools20022.repository.choice.TaxCapacityParty3Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails43.TaxCapacity, com.tools20022.repository.msg.SettlementDetails4.TaxCapacity, com.tools20022.repository.msg.SettlementDetails10.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails29.TaxCapacity, com.tools20022.repository.msg.SettlementDetails5.TaxCapacity, com.tools20022.repository.msg.SettlementDetails26.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails65.TaxCapacity, com.tools20022.repository.msg.SettlementDetails14.TaxCapacity, com.tools20022.repository.msg.SettlementDetails41.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails61.TaxCapacity, com.tools20022.repository.msg.SettlementDetails59.TaxCapacity, com.tools20022.repository.msg.SettlementDetails15.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails36.TaxCapacity, com.tools20022.repository.msg.SettlementDetails18.TaxCapacity, com.tools20022.repository.msg.SettlementDetails66.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails67.TaxCapacity, com.tools20022.repository.msg.SettlementDetails70.TaxCapacity, com.tools20022.repository.msg.SettlementDetails68.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails69.TaxCapacity, com.tools20022.repository.msg.SettlementDetails71.TaxCapacity, com.tools20022.repository.msg.SettlementDetails72.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails75.TaxCapacity, com.tools20022.repository.msg.SettlementDetails73.TaxCapacity, com.tools20022.repository.msg.SettlementDetails74.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails81.TaxCapacity, com.tools20022.repository.msg.SettlementDetails76.TaxCapacity, com.tools20022.repository.msg.SettlementDetails80.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails78.TaxCapacity, com.tools20022.repository.msg.SettlementDetails77.TaxCapacity, com.tools20022.repository.msg.SettlementDetails79.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails87.TaxCapacity, com.tools20022.repository.msg.SettlementDetails83.TaxCapacity, com.tools20022.repository.msg.SettlementDetails86.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails85.TaxCapacity, com.tools20022.repository.msg.SettlementDetails93.TaxCapacity, com.tools20022.repository.msg.SettlementDetails90.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails96.TaxCapacity, com.tools20022.repository.msg.SettlementDetails97.TaxCapacity, com.tools20022.repository.msg.SettlementDetails94.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails100.TaxCapacity, com.tools20022.repository.choice.TaxCapacityParty4Choice.Code, com.tools20022.repository.choice.TaxCapacityParty4Choice.Proprietary,
-					com.tools20022.repository.msg.SettlementDetails95.TaxCapacity, com.tools20022.repository.msg.SettlementDetails91.TaxCapacity, com.tools20022.repository.msg.SettlementDetails92.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails98.TaxCapacity, com.tools20022.repository.msg.SettlementDetails101.TaxCapacity, com.tools20022.repository.msg.SettlementDetails105.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails106.TaxCapacity, com.tools20022.repository.msg.SettlementDetails104.TaxCapacity, com.tools20022.repository.msg.SettlementDetails111.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails112.TaxCapacity, com.tools20022.repository.msg.SettlementDetails110.TaxCapacity, com.tools20022.repository.msg.SettlementDetails103.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails107.TaxCapacity, com.tools20022.repository.msg.SettlementDetails115.TaxCapacity, com.tools20022.repository.msg.SettlementDetails117.TaxCapacity,
-					com.tools20022.repository.choice.TaxCapacityParty5Choice.Code, com.tools20022.repository.choice.TaxCapacityParty5Choice.Proprietary, com.tools20022.repository.msg.SettlementDetails116.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails113.TaxCapacity, com.tools20022.repository.msg.SettlementDetails128.TaxCapacity, com.tools20022.repository.msg.SettlementDetails120.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails119.TaxCapacity, com.tools20022.repository.msg.SettlementDetails126.TaxCapacity, com.tools20022.repository.msg.SettlementDetails122.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails127.TaxCapacity, com.tools20022.repository.msg.SettlementDetails121.TaxCapacity, com.tools20022.repository.msg.SettlementDetails134.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails137.TaxCapacity, com.tools20022.repository.msg.SettlementDetails132.TaxCapacity, com.tools20022.repository.msg.SettlementDetails138.TaxCapacity,
-					com.tools20022.repository.msg.SettlementDetails130.TaxCapacity, com.tools20022.repository.msg.SettlementDetails133.TaxCapacity, com.tools20022.repository.msg.SettlementDetails139.TaxCapacity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCapacityParty1Choice.mmCode, com.tools20022.repository.choice.TaxCapacityParty1Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails50.mmTaxCapacity, com.tools20022.repository.choice.TaxCapacityParty2Choice.mmCode, com.tools20022.repository.choice.TaxCapacityParty2Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails51.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails9.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails17.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails30.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails32.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails60.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails64.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails3.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails16.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails31.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails40.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails62.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails63.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails6.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails20.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails24.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails33.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails45.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails54.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails1.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails19.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails22.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails35.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails42.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails52.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails8.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails11.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails23.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails37.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails44.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails53.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails7.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails12.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails28.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails38.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails47.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails56.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails2.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails13.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails27.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails39.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails48.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails57.mmTaxCapacity, com.tools20022.repository.choice.TaxCapacityParty3Choice.mmCode, com.tools20022.repository.choice.TaxCapacityParty3Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails43.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails4.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails10.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails29.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails5.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails26.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails65.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails14.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails41.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails61.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails59.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails15.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails36.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails18.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails66.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails67.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails70.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails68.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails69.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails71.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails72.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails75.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails73.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails74.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails81.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails76.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails80.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails78.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails77.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails79.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails87.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails83.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails86.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails85.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails93.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails90.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails96.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails97.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails94.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails100.mmTaxCapacity, com.tools20022.repository.choice.TaxCapacityParty4Choice.mmCode, com.tools20022.repository.choice.TaxCapacityParty4Choice.mmProprietary,
+					com.tools20022.repository.msg.SettlementDetails95.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails91.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails92.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails98.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails101.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails105.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails106.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails104.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails111.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails112.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails110.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails103.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails107.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails115.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails117.mmTaxCapacity,
+					com.tools20022.repository.choice.TaxCapacityParty5Choice.mmCode, com.tools20022.repository.choice.TaxCapacityParty5Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails116.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails113.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails128.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails120.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails119.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails126.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails122.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails127.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails121.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails134.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails137.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails132.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails138.mmTaxCapacity,
+					com.tools20022.repository.msg.SettlementDetails130.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails133.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails139.mmTaxCapacity);
 			elementContext_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxCapacity";
 			definition = "Tax role capacity of the instructing party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxLiabilityCode.mmObject();
 		}
 	};
@@ -1288,22 +1294,22 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementPartyRole";
 				definition = "Role played by a party in the context of the settlement of securities.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.PartyRole, com.tools20022.repository.entity.SecuritiesSettlementSystem.SettlementParty);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceivingPartiesAndAccount7.Party1, com.tools20022.repository.msg.ReceivingPartiesAndAccount7.Party2,
-						com.tools20022.repository.msg.SettlementParties32.Depository, com.tools20022.repository.msg.SettlementParties32.Party1, com.tools20022.repository.msg.SettlementParties32.Party2,
-						com.tools20022.repository.msg.SettlementParties32.Party3, com.tools20022.repository.msg.SettlementParties32.Party4, com.tools20022.repository.msg.SettlementParties32.Party5,
-						com.tools20022.repository.msg.ReceivingPartiesAndAccount10.Party1, com.tools20022.repository.msg.ReceivingPartiesAndAccount10.Party2, com.tools20022.repository.msg.ReceivingPartiesAndAccount11.Party1,
-						com.tools20022.repository.msg.ReceivingPartiesAndAccount11.Party2, com.tools20022.repository.msg.InvestmentAccount54.SettlementPartiesDetails, com.tools20022.repository.msg.ReceivingPartiesAndAccount15.Party1,
-						com.tools20022.repository.msg.ReceivingPartiesAndAccount15.Party2);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole, com.tools20022.repository.entity.SecuritiesSettlementSystem.mmSettlementParty);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmParty1, com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmParty2,
+						com.tools20022.repository.msg.SettlementParties32.mmDepository, com.tools20022.repository.msg.SettlementParties32.mmParty1, com.tools20022.repository.msg.SettlementParties32.mmParty2,
+						com.tools20022.repository.msg.SettlementParties32.mmParty3, com.tools20022.repository.msg.SettlementParties32.mmParty4, com.tools20022.repository.msg.SettlementParties32.mmParty5,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount10.mmParty1, com.tools20022.repository.msg.ReceivingPartiesAndAccount10.mmParty2, com.tools20022.repository.msg.ReceivingPartiesAndAccount11.mmParty1,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount11.mmParty2, com.tools20022.repository.msg.InvestmentAccount54.mmSettlementPartiesDetails, com.tools20022.repository.msg.ReceivingPartiesAndAccount15.mmParty1,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount15.mmParty2);
 				subType_lazy = () -> Arrays.asList(ReceivingSettlementParty.mmObject(), DeliveringSettlementParty.mmObject(), ReceivingAgent.mmObject(), LocalSettlementAgentRole.mmObject(), DeliverersCustodian.mmObject(),
 						DeliverersIntermediary.mmObject(), DeliveringAgent.mmObject(), PlaceOfSettlement.mmObject(), ReceiversCustodian.mmObject(), ReceiversIntermediary.mmObject());
 				superType_lazy = () -> SettlementPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlementPartyRole.SecuritiesSettlement, com.tools20022.repository.entity.SecuritiesSettlementPartyRole.SecuritiesSettlementSystem,
-						com.tools20022.repository.entity.SecuritiesSettlementPartyRole.SettlingCapacity, com.tools20022.repository.entity.SecuritiesSettlementPartyRole.TaxCapacity);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmSecuritiesSettlement, com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmSecuritiesSettlementSystem,
+						com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmSettlingCapacity, com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmTaxCapacity);
 				derivationComponent_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount1.mmObject(), DeliveringPartiesAndAccount4.mmObject(), DeliveringPartiesAndAccount8.mmObject(), ReceivingPartiesAndAccount1.mmObject(),
 						ReceivingPartiesAndAccount4.mmObject(), ReceivingPartiesAndAccount8.mmObject(), SettlementParties2.mmObject(), SettlementParties13.mmObject(), TaxCapacityParty1Choice.mmObject(), SettlementParties5.mmObject(),
 						SettlementParties11.mmObject(), SettlementParties26.mmObject(), SettlementParties12.mmObject(), SettlementParties19.mmObject(), SettlementParties21.mmObject(), TaxCapacityParty2Choice.mmObject(),
@@ -1321,5 +1327,37 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<SecuritiesSettlement> getSecuritiesSettlement() {
+		return securitiesSettlement;
+	}
+
+	public void setSecuritiesSettlement(List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement) {
+		this.securitiesSettlement = securitiesSettlement;
+	}
+
+	public List<SecuritiesSettlementSystem> getSecuritiesSettlementSystem() {
+		return securitiesSettlementSystem;
+	}
+
+	public void setSecuritiesSettlementSystem(List<com.tools20022.repository.entity.SecuritiesSettlementSystem> securitiesSettlementSystem) {
+		this.securitiesSettlementSystem = securitiesSettlementSystem;
+	}
+
+	public SettlingCapacityCode getSettlingCapacity() {
+		return settlingCapacity;
+	}
+
+	public void setSettlingCapacity(SettlingCapacityCode settlingCapacity) {
+		this.settlingCapacity = settlingCapacity;
+	}
+
+	public TaxLiabilityCode getTaxCapacity() {
+		return taxCapacity;
+	}
+
+	public void setTaxCapacity(TaxLiabilityCode taxCapacity) {
+		this.taxCapacity = taxCapacity;
 	}
 }

@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1#NotifyingParty
- * UndertakingNonExtensionStatusAdvice1.NotifyingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1#mmNotifyingParty
+ * UndertakingNonExtensionStatusAdvice1.mmNotifyingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1#UndertakingIdentification
- * UndertakingNonExtensionStatusAdvice1.UndertakingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1#mmUndertakingIdentification
+ * UndertakingNonExtensionStatusAdvice1.mmUndertakingIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,16 +48,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01#UndertakingNonExtensionNotificationDetails
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01#mmUndertakingNonExtensionNotificationDetails
  * UndertakingNonExtensionNotificationV01.
- * UndertakingNonExtensionNotificationDetails}</li>
+ * mmUndertakingNonExtensionNotificationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingNonExtensionStatusAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification43 notifyingParty;
 	/**
 	 * Details related to the notifying party.
 	 * <p>
@@ -82,8 +83,8 @@ public class UndertakingNonExtensionStatusAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,21 +103,22 @@ public class UndertakingNonExtensionStatusAdvice1 {
 	 * definition} = "Details related to the notifying party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NotifyingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNotifyingParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> UndertakingNonExtensionStatusAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "NtifngPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotifyingParty";
 			definition = "Details related to the notifying party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected Undertaking7 undertakingIdentification;
 	/**
 	 * Details related to the identification of the undertaking.
 	 * <p>
@@ -128,8 +130,8 @@ public class UndertakingNonExtensionStatusAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#Undertaking
-	 * UndertakingStatus.Undertaking}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingStatus#mmUndertaking
+	 * UndertakingStatus.mmUndertaking}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,34 +151,50 @@ public class UndertakingNonExtensionStatusAdvice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertaking;
 			componentContext_lazy = () -> UndertakingNonExtensionStatusAdvice1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.Undertaking;
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the identification of the undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Undertaking7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Undertaking7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1.NotifyingParty, com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1.UndertakingIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1.mmNotifyingParty, com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1.mmUndertakingIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.mmUndertakingNonExtensionNotificationDetails);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.UndertakingNonExtensionNotificationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingNonExtensionStatusAdvice1";
 				definition = "Details of a non-extension advice.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification43 getNotifyingParty() {
+		return notifyingParty;
+	}
+
+	public void setNotifyingParty(com.tools20022.repository.msg.PartyIdentification43 notifyingParty) {
+		this.notifyingParty = notifyingParty;
+	}
+
+	public Undertaking7 getUndertakingIdentification() {
+		return undertakingIdentification;
+	}
+
+	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking7 undertakingIdentification) {
+		this.undertakingIdentification = undertakingIdentification;
 	}
 }

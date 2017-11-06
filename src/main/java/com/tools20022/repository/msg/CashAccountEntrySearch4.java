@@ -29,6 +29,7 @@ import com.tools20022.repository.codeset.EntryStatus1Code;
 import com.tools20022.repository.entity.CashEntry;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for a cash entry.
@@ -40,29 +41,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#AccountIdentification
- * CashAccountEntrySearch4.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#mmAccountIdentification
+ * CashAccountEntrySearch4.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#EntryAmount
- * CashAccountEntrySearch4.EntryAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#mmEntryAmount
+ * CashAccountEntrySearch4.mmEntryAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#EntryAmountCurrency
- * CashAccountEntrySearch4.EntryAmountCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#mmEntryAmountCurrency
+ * CashAccountEntrySearch4.mmEntryAmountCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#CreditDebitIndicator
- * CashAccountEntrySearch4.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#mmCreditDebitIndicator
+ * CashAccountEntrySearch4.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#EntryStatus
- * CashAccountEntrySearch4.EntryStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#mmEntryStatus
+ * CashAccountEntrySearch4.mmEntryStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#EntryDate
- * CashAccountEntrySearch4.EntryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#mmEntryDate
+ * CashAccountEntrySearch4.mmEntryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#AccountOwner
- * CashAccountEntrySearch4.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#mmAccountOwner
+ * CashAccountEntrySearch4.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#AccountServicer
- * CashAccountEntrySearch4.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch4#mmAccountServicer
+ * CashAccountEntrySearch4.mmAccountServicer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -70,8 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccountEntrySearch4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AccountIdentificationSearchCriteria2Choice> accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -102,8 +104,8 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CashAccount
-	 * CashEntry.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCashAccount
+	 * CashEntry.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -125,25 +127,26 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#AccountIdentification
-	 * CashAccountEntrySearch3.AccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#mmAccountIdentification
+	 * CashAccountEntrySearch3.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CashAccount;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.AccountIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmAccountIdentification;
 			minOccurs = 0;
-			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
 	};
+	protected List<ActiveOrHistoricAmountRange1Choice> entryAmount;
 	/**
 	 * Specifies the entry amount(s) on which the query is performed.
 	 * <p>
@@ -157,8 +160,8 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#Amount
-	 * CashEntry.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+	 * CashEntry.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,24 +182,25 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#EntryAmount
-	 * CashAccountEntrySearch3.EntryAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#mmEntryAmount
+	 * CashAccountEntrySearch3.mmEntryAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.Amount;
 			isDerived = false;
 			xmlTag = "NtryAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmount";
 			definition = "Specifies the entry amount(s) on which the query is performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.EntryAmount;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmEntryAmount;
 			minOccurs = 0;
 			complexType_lazy = () -> ActiveOrHistoricAmountRange1Choice.mmObject();
 		}
 	};
+	protected List<ActiveOrHistoricCurrencyCode> entryAmountCurrency;
 	/**
 	 * Currency of the entry amount.
 	 * <p>
@@ -226,11 +230,11 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#EntryAmountCurrency
-	 * CashAccountEntrySearch3.EntryAmountCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#mmEntryAmountCurrency
+	 * CashAccountEntrySearch3.mmEntryAmountCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryAmountCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryAmountCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
 			isDerived = false;
@@ -238,11 +242,12 @@ public class CashAccountEntrySearch4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmountCurrency";
 			definition = "Currency of the entry amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.EntryAmountCurrency;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmEntryAmountCurrency;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether an entry is a credit or a debit.
 	 * <p>
@@ -256,8 +261,8 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#CreditDebitIndicator
-	 * Entry.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmCreditDebitIndicator
+	 * Entry.mmCreditDebitIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -277,25 +282,26 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#CreditDebitIndicator
-	 * CashAccountEntrySearch3.CreditDebitIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#mmCreditDebitIndicator
+	 * CashAccountEntrySearch3.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.CreditDebitIndicator;
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether an entry is a credit or a debit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.CreditDebitIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmCreditDebitIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected List<EntryStatus1Code> entryStatus;
 	/**
 	 * Status of an entry on the books of the account servicer.
 	 * <p>
@@ -309,8 +315,8 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountStatus#EntryStatus
-	 * AccountStatus.EntryStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountStatus#mmEntryStatus
+	 * AccountStatus.mmEntryStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -330,24 +336,25 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#EntryStatus
-	 * CashAccountEntrySearch3.EntryStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#mmEntryStatus
+	 * CashAccountEntrySearch3.mmEntryStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.EntryStatus;
 			isDerived = false;
 			xmlTag = "NtrySts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryStatus";
 			definition = "Status of an entry on the books of the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.EntryStatus;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmEntryStatus;
 			minOccurs = 0;
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
 		}
 	};
+	protected List<DateAndDateTimeSearchChoice> entryDate;
 	/**
 	 * Date and time at which an entry is posted to an account on the account
 	 * servicer's books.
@@ -362,8 +369,8 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#EntryDate
-	 * Entry.EntryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmEntryDate
+	 * Entry.mmEntryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -385,24 +392,25 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#EntryDate
-	 * CashAccountEntrySearch3.EntryDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#mmEntryDate
+	 * CashAccountEntrySearch3.mmEntryDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.EntryDate;
 			isDerived = false;
 			xmlTag = "NtryDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDate";
 			definition = "Date and time at which an entry is posted to an account on the account servicer's books.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.EntryDate;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmEntryDate;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 		}
 	};
+	protected PartyIdentification43 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -414,8 +422,8 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -435,26 +443,27 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#AccountOwner
-	 * CashAccountEntrySearch3.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#mmAccountOwner
+	 * CashAccountEntrySearch3.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.AccountOwner;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmAccountOwner;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification43.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 accountServicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -470,8 +479,8 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -493,36 +502,36 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#AccountServicer
-	 * CashAccountEntrySearch3.AccountServicer}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3#mmAccountServicer
+	 * CashAccountEntrySearch3.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.AccountServicer;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmAccountServicer;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountEntrySearch4.AccountIdentification, com.tools20022.repository.msg.CashAccountEntrySearch4.EntryAmount,
-						com.tools20022.repository.msg.CashAccountEntrySearch4.EntryAmountCurrency, com.tools20022.repository.msg.CashAccountEntrySearch4.CreditDebitIndicator,
-						com.tools20022.repository.msg.CashAccountEntrySearch4.EntryStatus, com.tools20022.repository.msg.CashAccountEntrySearch4.EntryDate, com.tools20022.repository.msg.CashAccountEntrySearch4.AccountOwner,
-						com.tools20022.repository.msg.CashAccountEntrySearch4.AccountServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountEntrySearch4.mmAccountIdentification, com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryAmount,
+						com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryAmountCurrency, com.tools20022.repository.msg.CashAccountEntrySearch4.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryStatus, com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryDate, com.tools20022.repository.msg.CashAccountEntrySearch4.mmAccountOwner,
+						com.tools20022.repository.msg.CashAccountEntrySearch4.mmAccountServicer);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashAccountEntrySearch4";
 				definition = "Defines the criteria used to search for a cash entry.";
@@ -530,5 +539,69 @@ public class CashAccountEntrySearch4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AccountIdentificationSearchCriteria2Choice> getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(List<AccountIdentificationSearchCriteria2Choice> accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public List<ActiveOrHistoricAmountRange1Choice> getEntryAmount() {
+		return entryAmount;
+	}
+
+	public void setEntryAmount(List<ActiveOrHistoricAmountRange1Choice> entryAmount) {
+		this.entryAmount = entryAmount;
+	}
+
+	public List<ActiveOrHistoricCurrencyCode> getEntryAmountCurrency() {
+		return entryAmountCurrency;
+	}
+
+	public void setEntryAmountCurrency(List<ActiveOrHistoricCurrencyCode> entryAmountCurrency) {
+		this.entryAmountCurrency = entryAmountCurrency;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public List<EntryStatus1Code> getEntryStatus() {
+		return entryStatus;
+	}
+
+	public void setEntryStatus(List<EntryStatus1Code> entryStatus) {
+		this.entryStatus = entryStatus;
+	}
+
+	public List<DateAndDateTimeSearchChoice> getEntryDate() {
+		return entryDate;
+	}
+
+	public void setEntryDate(List<DateAndDateTimeSearchChoice> entryDate) {
+		this.entryDate = entryDate;
+	}
+
+	public PartyIdentification43 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.PartyIdentification43 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+		this.accountServicer = accountServicer;
 	}
 }

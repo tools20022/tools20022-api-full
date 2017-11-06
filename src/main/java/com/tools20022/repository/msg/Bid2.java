@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identification of an attempt to buy or sell a large number of financial
@@ -35,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Bid2#BidIdentification
- * Bid2.BidIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Bid2#ClientBidIdentification
- * Bid2.ClientBidIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Bid2#ListIdentification
- * Bid2.ListIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Bid2#BidResponsePriceDetails
- * Bid2.BidResponsePriceDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Bid2#mmBidIdentification
+ * Bid2.mmBidIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Bid2#mmClientBidIdentification
+ * Bid2.mmClientBidIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Bid2#mmListIdentification
+ * Bid2.mmListIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Bid2#mmBidResponsePriceDetails
+ * Bid2.mmBidResponsePriceDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Bid2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text bidIdentification;
 	/**
 	 * Unique and unambiguous identification of the bid.
 	 * <p>
@@ -93,7 +95,7 @@ public class Bid2 {
 	 * definition} = "Unique and unambiguous identification of the bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBidIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Bid2.mmObject();
 			isDerived = false;
@@ -101,11 +103,12 @@ public class Bid2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidIdentification";
 			definition = "Unique and unambiguous identification of the bid.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientBidIdentification;
 	/**
 	 * Unique identifier for a Bid Request as assigned by institution.
 	 * Uniqueness must be guaranteed within a single trading day.
@@ -134,7 +137,7 @@ public class Bid2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientBidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientBidIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Bid2.mmObject();
 			isDerived = false;
@@ -142,11 +145,12 @@ public class Bid2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientBidIdentification";
 			definition = "Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text listIdentification;
 	/**
 	 * Name or number assigned by an entity to enable recognition of that
 	 * entity, eg, account identifier.
@@ -160,8 +164,8 @@ public class Bid2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ListTrading#ListIdentification
-	 * ListTrading.ListIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.ListTrading#mmListIdentification
+	 * ListTrading.mmListIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Bid2 Bid2}</li>
@@ -180,20 +184,21 @@ public class Bid2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListIdentification;
 			componentContext_lazy = () -> Bid2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.ListIdentification;
 			isDerived = false;
 			xmlTag = "ListId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BidResponsePrice1> bidResponsePriceDetails;
 	/**
 	 * Provides details about the price linked to a particular bid.
 	 * <p>
@@ -205,8 +210,8 @@ public class Bid2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#BidSide
-	 * SecuritiesQuoteVariable.BidSide}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuoteVariable#mmBidSide
+	 * SecuritiesQuoteVariable.mmBidSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Bid2 Bid2}</li>
@@ -224,33 +229,65 @@ public class Bid2 {
 	 * "Provides details about the price linked to a particular bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BidResponsePriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBidResponsePriceDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmBidSide;
 			componentContext_lazy = () -> Bid2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.BidSide;
 			isDerived = false;
 			xmlTag = "BidRspnPricDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidResponsePriceDetails";
 			definition = "Provides details about the price linked to a particular bid.";
 			minOccurs = 1;
-			type_lazy = () -> BidResponsePrice1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Bid2.BidIdentification, com.tools20022.repository.msg.Bid2.ClientBidIdentification, com.tools20022.repository.msg.Bid2.ListIdentification,
-						com.tools20022.repository.msg.Bid2.BidResponsePriceDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Bid2.mmBidIdentification, com.tools20022.repository.msg.Bid2.mmClientBidIdentification, com.tools20022.repository.msg.Bid2.mmListIdentification,
+						com.tools20022.repository.msg.Bid2.mmBidResponsePriceDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Bid2";
 				definition = "Identification of an attempt to buy or sell a large number of financial instruments contained in or comprising a portfolio.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getBidIdentification() {
+		return bidIdentification;
+	}
+
+	public void setBidIdentification(Max35Text bidIdentification) {
+		this.bidIdentification = bidIdentification;
+	}
+
+	public Max35Text getClientBidIdentification() {
+		return clientBidIdentification;
+	}
+
+	public void setClientBidIdentification(Max35Text clientBidIdentification) {
+		this.clientBidIdentification = clientBidIdentification;
+	}
+
+	public Max35Text getListIdentification() {
+		return listIdentification;
+	}
+
+	public void setListIdentification(Max35Text listIdentification) {
+		this.listIdentification = listIdentification;
+	}
+
+	public List<BidResponsePrice1> getBidResponsePriceDetails() {
+		return bidResponsePriceDetails;
+	}
+
+	public void setBidResponsePriceDetails(List<com.tools20022.repository.msg.BidResponsePrice1> bidResponsePriceDetails) {
+		this.bidResponsePriceDetails = bidResponsePriceDetails;
 	}
 }

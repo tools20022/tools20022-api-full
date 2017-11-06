@@ -34,35 +34,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#Investments
- * BalanceType13Code.Investments}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmInvestments
+ * BalanceType13Code.mmInvestments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#CashAndCashEquivalents
- * BalanceType13Code.CashAndCashEquivalents}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmCashAndCashEquivalents
+ * BalanceType13Code.mmCashAndCashEquivalents}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#Borrowings
- * BalanceType13Code.Borrowings}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code#Revenues
- * BalanceType13Code.Revenues}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code#Expenses
- * BalanceType13Code.Expenses}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmBorrowings
+ * BalanceType13Code.mmBorrowings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#InvestorInflowOutflow
- * BalanceType13Code.InvestorInflowOutflow}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code#Other
- * BalanceType13Code.Other}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code#Payables
- * BalanceType13Code.Payables}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmRevenues
+ * BalanceType13Code.mmRevenues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#Receivables
- * BalanceType13Code.Receivables}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmExpenses
+ * BalanceType13Code.mmExpenses}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmInvestorInflowOutflow
+ * BalanceType13Code.mmInvestorInflowOutflow}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmOther
+ * BalanceType13Code.mmOther}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmPayables
+ * BalanceType13Code.mmPayables}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmReceivables
+ * BalanceType13Code.mmReceivables}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +101,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Investments"</li>
 	 * </ul>
 	 */
-	public static final MMCode Investments = new MMCode() {
+	public static final MMCode mmInvestments = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investments";
@@ -121,7 +124,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "CashAndCashEquivalents"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashAndCashEquivalents = new MMCode() {
+	public static final MMCode mmCashAndCashEquivalents = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAndCashEquivalents";
@@ -144,7 +147,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Borrowings"</li>
 	 * </ul>
 	 */
-	public static final MMCode Borrowings = new MMCode() {
+	public static final MMCode mmBorrowings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrowings";
@@ -167,7 +170,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Revenues"</li>
 	 * </ul>
 	 */
-	public static final MMCode Revenues = new MMCode() {
+	public static final MMCode mmRevenues = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Revenues";
@@ -190,7 +193,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Expenses"</li>
 	 * </ul>
 	 */
-	public static final MMCode Expenses = new MMCode() {
+	public static final MMCode mmExpenses = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expenses";
@@ -213,7 +216,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "InvestorInflowOutflow"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestorInflowOutflow = new MMCode() {
+	public static final MMCode mmInvestorInflowOutflow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorInflowOutflow";
@@ -236,7 +239,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -259,7 +262,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Payables"</li>
 	 * </ul>
 	 */
-	public static final MMCode Payables = new MMCode() {
+	public static final MMCode mmPayables = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payables";
@@ -282,7 +285,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Receivables"</li>
 	 * </ul>
 	 */
-	public static final MMCode Receivables = new MMCode() {
+	public static final MMCode mmReceivables = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receivables";
@@ -293,15 +296,15 @@ public class BalanceType13Code extends BalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INVE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BalanceType13Code";
 				definition = "Specifies the kind of the balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceType13Code.Investments, com.tools20022.repository.codeset.BalanceType13Code.CashAndCashEquivalents,
-						com.tools20022.repository.codeset.BalanceType13Code.Borrowings, com.tools20022.repository.codeset.BalanceType13Code.Revenues, com.tools20022.repository.codeset.BalanceType13Code.Expenses,
-						com.tools20022.repository.codeset.BalanceType13Code.InvestorInflowOutflow, com.tools20022.repository.codeset.BalanceType13Code.Other, com.tools20022.repository.codeset.BalanceType13Code.Payables,
-						com.tools20022.repository.codeset.BalanceType13Code.Receivables);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceType13Code.mmInvestments, com.tools20022.repository.codeset.BalanceType13Code.mmCashAndCashEquivalents,
+						com.tools20022.repository.codeset.BalanceType13Code.mmBorrowings, com.tools20022.repository.codeset.BalanceType13Code.mmRevenues, com.tools20022.repository.codeset.BalanceType13Code.mmExpenses,
+						com.tools20022.repository.codeset.BalanceType13Code.mmInvestorInflowOutflow, com.tools20022.repository.codeset.BalanceType13Code.mmOther, com.tools20022.repository.codeset.BalanceType13Code.mmPayables,
+						com.tools20022.repository.codeset.BalanceType13Code.mmReceivables);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
 			}
 		});

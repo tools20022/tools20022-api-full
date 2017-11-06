@@ -34,23 +34,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#Ammonia
- * AssetClassCommodityFertilizer1Choice.Ammonia}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#mmAmmonia
+ * AssetClassCommodityFertilizer1Choice.mmAmmonia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#DiammoniumPhosphate
- * AssetClassCommodityFertilizer1Choice.DiammoniumPhosphate}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#mmDiammoniumPhosphate
+ * AssetClassCommodityFertilizer1Choice.mmDiammoniumPhosphate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#Potash
- * AssetClassCommodityFertilizer1Choice.Potash}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#mmPotash
+ * AssetClassCommodityFertilizer1Choice.mmPotash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#Sulphur
- * AssetClassCommodityFertilizer1Choice.Sulphur}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#mmSulphur
+ * AssetClassCommodityFertilizer1Choice.mmSulphur}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#Urea
- * AssetClassCommodityFertilizer1Choice.Urea}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#mmUrea
+ * AssetClassCommodityFertilizer1Choice.mmUrea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#UreaAndAmmoniumNitrate
- * AssetClassCommodityFertilizer1Choice.UreaAndAmmoniumNitrate}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice#mmUreaAndAmmoniumNitrate
+ * AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AssetClassCommodityFertilizer1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected FertilizerCommodityAmmonia1 ammonia;
 	/**
 	 * Ammonia fertilizer commodity derivative.
 	 * <p>
@@ -86,8 +87,8 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#BaseProduct
-	 * Commodity.BaseProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmBaseProduct
+	 * Commodity.mmBaseProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,21 +107,22 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * definition} = "Ammonia fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Ammonia = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmmonia = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.BaseProduct;
 			isDerived = false;
 			xmlTag = "Ammn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ammonia";
 			definition = "Ammonia fertilizer commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FertilizerCommodityAmmonia1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FertilizerCommodityAmmonia1.mmObject();
 		}
 	};
+	protected FertilizerCommodityDiammoniumPhosphate1 diammoniumPhosphate;
 	/**
 	 * Diammonium phosphate fertilizer commodity derivative.
 	 * <p>
@@ -133,8 +135,8 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,21 +155,22 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * definition} = "Diammonium phosphate fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DiammoniumPhosphate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDiammoniumPhosphate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "DmmnmPhspht";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiammoniumPhosphate";
 			definition = "Diammonium phosphate fertilizer commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FertilizerCommodityDiammoniumPhosphate1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FertilizerCommodityDiammoniumPhosphate1.mmObject();
 		}
 	};
+	protected FertilizerCommodityPotash1 potash;
 	/**
 	 * Potash fertilizer commodity derivative.
 	 * <p>
@@ -180,8 +183,8 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,21 +203,22 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * definition} = "Potash fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Potash = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPotash = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "Ptsh";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Potash";
 			definition = "Potash fertilizer commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FertilizerCommodityPotash1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FertilizerCommodityPotash1.mmObject();
 		}
 	};
+	protected FertilizerCommoditySulphur1 sulphur;
 	/**
 	 * Sulphur fertilizer commodity derivative.
 	 * <p>
@@ -227,8 +231,8 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,21 +251,22 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * definition} = "Sulphur fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Sulphur = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSulphur = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "Slphr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sulphur";
 			definition = "Sulphur fertilizer commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FertilizerCommoditySulphur1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FertilizerCommoditySulphur1.mmObject();
 		}
 	};
+	protected FertilizerCommodityUrea1 urea;
 	/**
 	 * Urea fertilizer commodity derivative.
 	 * <p>
@@ -274,8 +279,8 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -294,21 +299,22 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * definition} = "Urea fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Urea = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUrea = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "Urea";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Urea";
 			definition = "Urea fertilizer commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FertilizerCommodityUrea1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FertilizerCommodityUrea1.mmObject();
 		}
 	};
+	protected FertilizerCommodityUreaAndAmmoniumNitrate1 ureaAndAmmoniumNitrate;
 	/**
 	 * Urea and ammonium nitrate fertilizer commodity derivative.
 	 * <p>
@@ -321,8 +327,8 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -342,35 +348,83 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * "Urea and ammonium nitrate fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UreaAndAmmoniumNitrate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUreaAndAmmoniumNitrate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "UreaAndAmmnmNtrt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UreaAndAmmoniumNitrate";
 			definition = "Urea and ammonium nitrate fertilizer commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FertilizerCommodityUreaAndAmmoniumNitrate1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> FertilizerCommodityUreaAndAmmoniumNitrate1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.Ammonia, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.DiammoniumPhosphate,
-						com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.Potash, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.Sulphur,
-						com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.Urea, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.UreaAndAmmoniumNitrate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmAmmonia, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmDiammoniumPhosphate,
+						com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmPotash, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmSulphur,
+						com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmUrea, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityFertilizer1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is fertilizer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FertilizerCommodityAmmonia1 getAmmonia() {
+		return ammonia;
+	}
+
+	public void setAmmonia(FertilizerCommodityAmmonia1 ammonia) {
+		this.ammonia = ammonia;
+	}
+
+	public FertilizerCommodityDiammoniumPhosphate1 getDiammoniumPhosphate() {
+		return diammoniumPhosphate;
+	}
+
+	public void setDiammoniumPhosphate(FertilizerCommodityDiammoniumPhosphate1 diammoniumPhosphate) {
+		this.diammoniumPhosphate = diammoniumPhosphate;
+	}
+
+	public FertilizerCommodityPotash1 getPotash() {
+		return potash;
+	}
+
+	public void setPotash(FertilizerCommodityPotash1 potash) {
+		this.potash = potash;
+	}
+
+	public FertilizerCommoditySulphur1 getSulphur() {
+		return sulphur;
+	}
+
+	public void setSulphur(FertilizerCommoditySulphur1 sulphur) {
+		this.sulphur = sulphur;
+	}
+
+	public FertilizerCommodityUrea1 getUrea() {
+		return urea;
+	}
+
+	public void setUrea(FertilizerCommodityUrea1 urea) {
+		this.urea = urea;
+	}
+
+	public FertilizerCommodityUreaAndAmmoniumNitrate1 getUreaAndAmmoniumNitrate() {
+		return ureaAndAmmoniumNitrate;
+	}
+
+	public void setUreaAndAmmoniumNitrate(FertilizerCommodityUreaAndAmmoniumNitrate1 ureaAndAmmoniumNitrate) {
+		this.ureaAndAmmoniumNitrate = ureaAndAmmoniumNitrate;
 	}
 }

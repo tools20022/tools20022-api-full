@@ -37,18 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14#Amount
- * DetailedAmount14.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14#DateTime
- * DetailedAmount14.DateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14#mmAmount
+ * DetailedAmount14.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14#mmDateTime
+ * DetailedAmount14.mmDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedAmount14#CardDataEntryMode
- * DetailedAmount14.CardDataEntryMode}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedAmount14#mmCardDataEntryMode
+ * DetailedAmount14.mmCardDataEntryMode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedAmount14#ICCRelatedData
- * DetailedAmount14.ICCRelatedData}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14#Label
- * DetailedAmount14.Label}</li>
+ * {@linkplain com.tools20022.repository.msg.DetailedAmount14#mmICCRelatedData
+ * DetailedAmount14.mmICCRelatedData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14#mmLabel
+ * DetailedAmount14.mmLabel}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DetailedAmount14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAndAmount amount;
 	/**
 	 * Amount value.
 	 * <p>
@@ -89,8 +90,8 @@ public class DetailedAmount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,25 +111,26 @@ public class DetailedAmount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount6#Amount
-	 * DetailedAmount6.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount6#mmAmount
+	 * DetailedAmount6.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> DetailedAmount14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.Amount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODateTime dateTime;
 	/**
 	 * Date and time of the payment.
 	 * <p>
@@ -141,8 +143,8 @@ public class DetailedAmount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#Date
-	 * ObligationFulfilment.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
+	 * ObligationFulfilment.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,25 +164,26 @@ public class DetailedAmount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount6#DateTime
-	 * DetailedAmount6.DateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount6#mmDateTime
+	 * DetailedAmount6.mmDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> DetailedAmount14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.Date;
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time of the payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.DateTime;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmDateTime;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CardDataReading5Code cardDataEntryMode;
 	/**
 	 * Card data entry mode for the related payment.
 	 * <p>
@@ -210,11 +213,11 @@ public class DetailedAmount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount6#CardDataEntryMode
-	 * DetailedAmount6.CardDataEntryMode}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount6#mmCardDataEntryMode
+	 * DetailedAmount6.mmCardDataEntryMode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardDataEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DetailedAmount14.mmObject();
 			isDerived = false;
@@ -222,12 +225,13 @@ public class DetailedAmount14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDataEntryMode";
 			definition = "Card data entry mode for the related payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.CardDataEntryMode;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmCardDataEntryMode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading5Code.mmObject();
 		}
 	};
+	protected Max10000Binary iCCRelatedData;
 	/**
 	 * Data of an integrated circuit card application for the related payment.
 	 * <p>
@@ -241,8 +245,8 @@ public class DetailedAmount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#ICCRelatedData
-	 * CardPaymentAcquiring.ICCRelatedData}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmICCRelatedData
+	 * CardPaymentAcquiring.mmICCRelatedData}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -264,25 +268,26 @@ public class DetailedAmount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount6#ICCRelatedData
-	 * DetailedAmount6.ICCRelatedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount6#mmICCRelatedData
+	 * DetailedAmount6.mmICCRelatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmICCRelatedData;
 			componentContext_lazy = () -> DetailedAmount14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.ICCRelatedData;
 			isDerived = false;
 			xmlTag = "ICCRltdData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Data of an integrated circuit card application for the related payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.ICCRelatedData;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmICCRelatedData;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
+	protected Max140Text label;
 	/**
 	 * Short description of the amount to display or print.
 	 * <p>
@@ -311,11 +316,11 @@ public class DetailedAmount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount6#Label
-	 * DetailedAmount6.Label}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount6#mmLabel
+	 * DetailedAmount6.mmLabel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Label = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DetailedAmount14.mmObject();
 			isDerived = false;
@@ -323,9 +328,9 @@ public class DetailedAmount14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Label";
 			definition = "Short description of the amount to display or print.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.Label;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmLabel;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -333,10 +338,10 @@ public class DetailedAmount14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount14.Amount, com.tools20022.repository.msg.DetailedAmount14.DateTime, com.tools20022.repository.msg.DetailedAmount14.CardDataEntryMode,
-						com.tools20022.repository.msg.DetailedAmount14.ICCRelatedData, com.tools20022.repository.msg.DetailedAmount14.Label);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount14.mmAmount, com.tools20022.repository.msg.DetailedAmount14.mmDateTime,
+						com.tools20022.repository.msg.DetailedAmount14.mmCardDataEntryMode, com.tools20022.repository.msg.DetailedAmount14.mmICCRelatedData, com.tools20022.repository.msg.DetailedAmount14.mmLabel);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount14";
 				definition = "Detailed amounts associated with the total amount of transaction.";
@@ -344,5 +349,45 @@ public class DetailedAmount14 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public ISODateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(ISODateTime dateTime) {
+		this.dateTime = dateTime;
+	}
+
+	public CardDataReading5Code getCardDataEntryMode() {
+		return cardDataEntryMode;
+	}
+
+	public void setCardDataEntryMode(CardDataReading5Code cardDataEntryMode) {
+		this.cardDataEntryMode = cardDataEntryMode;
+	}
+
+	public Max10000Binary getICCRelatedData() {
+		return iCCRelatedData;
+	}
+
+	public void setICCRelatedData(Max10000Binary iCCRelatedData) {
+		this.iCCRelatedData = iCCRelatedData;
+	}
+
+	public Max140Text getLabel() {
+		return label;
+	}
+
+	public void setLabel(Max140Text label) {
+		this.label = label;
 	}
 }

@@ -34,19 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UTMCoordinates1#UTMZone
- * UTMCoordinates1.UTMZone}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UTMCoordinates1#UTMEastward
- * UTMCoordinates1.UTMEastward}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UTMCoordinates1#UTMNorthward
- * UTMCoordinates1.UTMNorthward}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UTMCoordinates1#mmUTMZone
+ * UTMCoordinates1.mmUTMZone}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UTMCoordinates1#mmUTMEastward
+ * UTMCoordinates1.mmUTMEastward}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UTMCoordinates1#mmUTMNorthward
+ * UTMCoordinates1.mmUTMNorthward}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UTMCoordinates1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max16Text uTMZone;
 	/**
 	 * UTM grid zone combination of the longitude zone (1 to 60) and the
 	 * latitude band, C to X, excluding I and O (for example Eiffel tower UTM
@@ -93,7 +94,7 @@ public class UTMCoordinates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UTMZone = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUTMZone = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UTMCoordinates1.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class UTMCoordinates1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTMZone";
 			definition = "UTM grid zone combination of the longitude zone (1 to 60) and the latitude band, C to X, excluding I and O (for example Eiffel tower UTM zone is 31U).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected Number uTMEastward;
 	/**
 	 * X-coordinate of the Universal Transverse Mercator coordinate system in
 	 * meters (for example 448 265m for Eiffel Tower X-coordinate).
@@ -136,7 +138,7 @@ public class UTMCoordinates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UTMEastward = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUTMEastward = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UTMCoordinates1.mmObject();
 			isDerived = false;
@@ -144,11 +146,12 @@ public class UTMCoordinates1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTMEastward";
 			definition = "X-coordinate of the Universal Transverse Mercator coordinate system in meters (for example 448 265m for Eiffel Tower X-coordinate).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number uTMNorthward;
 	/**
 	 * Y-coordinate of the Universal Transverse Mercator coordinate system (for
 	 * example 5 411 920m for Eiffel Tower Y-coordinate).
@@ -179,7 +182,7 @@ public class UTMCoordinates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UTMNorthward = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUTMNorthward = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UTMCoordinates1.mmObject();
 			isDerived = false;
@@ -187,8 +190,8 @@ public class UTMCoordinates1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTMNorthward";
 			definition = "Y-coordinate of the Universal Transverse Mercator coordinate system (for example 5 411 920m for Eiffel Tower Y-coordinate).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -196,13 +199,37 @@ public class UTMCoordinates1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UTMCoordinates1.UTMZone, com.tools20022.repository.msg.UTMCoordinates1.UTMEastward, com.tools20022.repository.msg.UTMCoordinates1.UTMNorthward);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UTMCoordinates1.mmUTMZone, com.tools20022.repository.msg.UTMCoordinates1.mmUTMEastward, com.tools20022.repository.msg.UTMCoordinates1.mmUTMNorthward);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UTMCoordinates1";
 				definition = "Location on the Earth specified by the Universal Transverse Mercator coordinate system, using the WGS84 geodesic system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max16Text getUTMZone() {
+		return uTMZone;
+	}
+
+	public void setUTMZone(Max16Text uTMZone) {
+		this.uTMZone = uTMZone;
+	}
+
+	public Number getUTMEastward() {
+		return uTMEastward;
+	}
+
+	public void setUTMEastward(Number uTMEastward) {
+		this.uTMEastward = uTMEastward;
+	}
+
+	public Number getUTMNorthward() {
+		return uTMNorthward;
+	}
+
+	public void setUTMNorthward(Number uTMNorthward) {
+		this.uTMNorthward = uTMNorthward;
 	}
 }

@@ -34,42 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapType1Code#OvernightIndexSingleCurrencySwap
- * SwapType1Code.OvernightIndexSingleCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapType1Code#mmOvernightIndexSingleCurrencySwap
+ * SwapType1Code.mmOvernightIndexSingleCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapType1Code#FixedToFloatSingleCurrencySwap
- * SwapType1Code.FixedToFloatSingleCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapType1Code#mmFixedToFloatSingleCurrencySwap
+ * SwapType1Code.mmFixedToFloatSingleCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapType1Code#FixedToFloatMultiCurrencySwap
- * SwapType1Code.FixedToFloatMultiCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapType1Code#mmFixedToFloatMultiCurrencySwap
+ * SwapType1Code.mmFixedToFloatMultiCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapType1Code#FixedToFixedSingleCurrencySwap
- * SwapType1Code.FixedToFixedSingleCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapType1Code#mmFixedToFixedSingleCurrencySwap
+ * SwapType1Code.mmFixedToFixedSingleCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapType1Code#FixedToFixedMultiCurrencySwap
- * SwapType1Code.FixedToFixedMultiCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapType1Code#mmFixedToFixedMultiCurrencySwap
+ * SwapType1Code.mmFixedToFixedMultiCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapType1Code#InflationMultiCurrencySwap
- * SwapType1Code.InflationMultiCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapType1Code#mmInflationMultiCurrencySwap
+ * SwapType1Code.mmInflationMultiCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapType1Code#FloatToFloatSingleCurrencySwap
- * SwapType1Code.FloatToFloatSingleCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapType1Code#mmFloatToFloatSingleCurrencySwap
+ * SwapType1Code.mmFloatToFloatSingleCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapType1Code#FloatToFloatMultiCurrencySwap
- * SwapType1Code.FloatToFloatMultiCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapType1Code#mmFloatToFloatMultiCurrencySwap
+ * SwapType1Code.mmFloatToFloatMultiCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapType1Code#InflationSingleCurrencySwap
- * SwapType1Code.InflationSingleCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapType1Code#mmInflationSingleCurrencySwap
+ * SwapType1Code.mmInflationSingleCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapType1Code#OvernightIndexMultiCurrencySwap
- * SwapType1Code.OvernightIndexMultiCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapType1Code#mmOvernightIndexMultiCurrencySwap
+ * SwapType1Code.mmOvernightIndexMultiCurrencySwap}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,7 +101,7 @@ public class SwapType1Code extends SwapTypeCode {
 	 * name} = "OvernightIndexSingleCurrencySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode OvernightIndexSingleCurrencySwap = new MMCode() {
+	public static final MMCode mmOvernightIndexSingleCurrencySwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OvernightIndexSingleCurrencySwap";
@@ -124,7 +124,7 @@ public class SwapType1Code extends SwapTypeCode {
 	 * name} = "FixedToFloatSingleCurrencySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode FixedToFloatSingleCurrencySwap = new MMCode() {
+	public static final MMCode mmFixedToFloatSingleCurrencySwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedToFloatSingleCurrencySwap";
@@ -147,7 +147,7 @@ public class SwapType1Code extends SwapTypeCode {
 	 * name} = "FixedToFloatMultiCurrencySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode FixedToFloatMultiCurrencySwap = new MMCode() {
+	public static final MMCode mmFixedToFloatMultiCurrencySwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedToFloatMultiCurrencySwap";
@@ -170,7 +170,7 @@ public class SwapType1Code extends SwapTypeCode {
 	 * name} = "FixedToFixedSingleCurrencySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode FixedToFixedSingleCurrencySwap = new MMCode() {
+	public static final MMCode mmFixedToFixedSingleCurrencySwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedToFixedSingleCurrencySwap";
@@ -193,7 +193,7 @@ public class SwapType1Code extends SwapTypeCode {
 	 * name} = "FixedToFixedMultiCurrencySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode FixedToFixedMultiCurrencySwap = new MMCode() {
+	public static final MMCode mmFixedToFixedMultiCurrencySwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedToFixedMultiCurrencySwap";
@@ -216,7 +216,7 @@ public class SwapType1Code extends SwapTypeCode {
 	 * name} = "InflationMultiCurrencySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode InflationMultiCurrencySwap = new MMCode() {
+	public static final MMCode mmInflationMultiCurrencySwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InflationMultiCurrencySwap";
@@ -239,7 +239,7 @@ public class SwapType1Code extends SwapTypeCode {
 	 * name} = "FloatToFloatSingleCurrencySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode FloatToFloatSingleCurrencySwap = new MMCode() {
+	public static final MMCode mmFloatToFloatSingleCurrencySwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatToFloatSingleCurrencySwap";
@@ -262,7 +262,7 @@ public class SwapType1Code extends SwapTypeCode {
 	 * name} = "FloatToFloatMultiCurrencySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode FloatToFloatMultiCurrencySwap = new MMCode() {
+	public static final MMCode mmFloatToFloatMultiCurrencySwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatToFloatMultiCurrencySwap";
@@ -285,7 +285,7 @@ public class SwapType1Code extends SwapTypeCode {
 	 * name} = "InflationSingleCurrencySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode InflationSingleCurrencySwap = new MMCode() {
+	public static final MMCode mmInflationSingleCurrencySwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InflationSingleCurrencySwap";
@@ -308,7 +308,7 @@ public class SwapType1Code extends SwapTypeCode {
 	 * name} = "OvernightIndexMultiCurrencySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode OvernightIndexMultiCurrencySwap = new MMCode() {
+	public static final MMCode mmOvernightIndexMultiCurrencySwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OvernightIndexMultiCurrencySwap";
@@ -319,15 +319,15 @@ public class SwapType1Code extends SwapTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SwapType1Code";
 				definition = "Specifies the type of an interest rate derivative when the contract type is a swap, a swaption, a future on a swap and / or a forward on a swap.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SwapType1Code.OvernightIndexSingleCurrencySwap, com.tools20022.repository.codeset.SwapType1Code.FixedToFloatSingleCurrencySwap,
-						com.tools20022.repository.codeset.SwapType1Code.FixedToFloatMultiCurrencySwap, com.tools20022.repository.codeset.SwapType1Code.FixedToFixedSingleCurrencySwap,
-						com.tools20022.repository.codeset.SwapType1Code.FixedToFixedMultiCurrencySwap, com.tools20022.repository.codeset.SwapType1Code.InflationMultiCurrencySwap,
-						com.tools20022.repository.codeset.SwapType1Code.FloatToFloatSingleCurrencySwap, com.tools20022.repository.codeset.SwapType1Code.FloatToFloatMultiCurrencySwap,
-						com.tools20022.repository.codeset.SwapType1Code.InflationSingleCurrencySwap, com.tools20022.repository.codeset.SwapType1Code.OvernightIndexMultiCurrencySwap);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SwapType1Code.mmOvernightIndexSingleCurrencySwap, com.tools20022.repository.codeset.SwapType1Code.mmFixedToFloatSingleCurrencySwap,
+						com.tools20022.repository.codeset.SwapType1Code.mmFixedToFloatMultiCurrencySwap, com.tools20022.repository.codeset.SwapType1Code.mmFixedToFixedSingleCurrencySwap,
+						com.tools20022.repository.codeset.SwapType1Code.mmFixedToFixedMultiCurrencySwap, com.tools20022.repository.codeset.SwapType1Code.mmInflationMultiCurrencySwap,
+						com.tools20022.repository.codeset.SwapType1Code.mmFloatToFloatSingleCurrencySwap, com.tools20022.repository.codeset.SwapType1Code.mmFloatToFloatMultiCurrencySwap,
+						com.tools20022.repository.codeset.SwapType1Code.mmInflationSingleCurrencySwap, com.tools20022.repository.codeset.SwapType1Code.mmOvernightIndexMultiCurrencySwap);
 				trace_lazy = () -> SwapTypeCode.mmObject();
 			}
 		});

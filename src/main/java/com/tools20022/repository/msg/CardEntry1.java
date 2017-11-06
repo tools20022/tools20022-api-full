@@ -32,11 +32,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CardEntry1#Card
- * CardEntry1.Card}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardEntry1#POI CardEntry1.POI}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardEntry1#AggregatedEntry
- * CardEntry1.AggregatedEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardEntry1#mmCard
+ * CardEntry1.mmCard}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardEntry1#mmPOI
+ * CardEntry1.mmPOI}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardEntry1#mmAggregatedEntry
+ * CardEntry1.mmAggregatedEntry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentCard4 card;
 	/**
 	 * Electronic money product that provides the cardholder with a portable and
 	 * specialised computer device, which typically contains a microprocessor.
@@ -78,8 +80,8 @@ public class CardEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#PaymentCard
-	 * CardPayment.PaymentCard}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCard
+	 * CardPayment.mmPaymentCard}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.CardEntry1
@@ -100,28 +102,29 @@ public class CardEntry1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardEntry2#Card
-	 * CardEntry2.Card}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardEntry2#mmCard
+	 * CardEntry2.mmCard}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Card = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCard = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> CardEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.PaymentCard;
 			isDerived = false;
 			xmlTag = "Card";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry2.Card);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry2.mmCard);
 			maxOccurs = 1;
-			type_lazy = () -> PaymentCard4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentCard4.mmObject();
 		}
 	};
+	protected PointOfInteraction1 pOI;
 	/**
 	 * Physical or logical card payment terminal containing software and
 	 * hardware components.
@@ -134,8 +137,8 @@ public class CardEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#PointOfInteraction
-	 * CardPaymentAcquiring.PointOfInteraction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmPointOfInteraction
+	 * CardPaymentAcquiring.mmPointOfInteraction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.CardEntry1
@@ -156,28 +159,29 @@ public class CardEntry1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardEntry2#POI
-	 * CardEntry2.POI}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardEntry2#mmPOI
+	 * CardEntry2.mmPOI}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd POI = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPOI = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> CardEntry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.PointOfInteraction;
 			isDerived = false;
 			xmlTag = "POI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POI";
 			definition = "Physical or logical card payment terminal containing software and hardware components.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry2.POI);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry2.mmPOI);
 			maxOccurs = 1;
-			type_lazy = () -> PointOfInteraction1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction1.mmObject();
 		}
 	};
+	protected CardAggregated1 aggregatedEntry;
 	/**
 	 * Card entry details, based on card transaction aggregated data performed
 	 * by the account servicer.
@@ -211,35 +215,36 @@ public class CardEntry1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.CardEntry2#AggregatedEntry
-	 * CardEntry2.AggregatedEntry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardEntry2#mmAggregatedEntry
+	 * CardEntry2.mmAggregatedEntry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AggregatedEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAggregatedEntry = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardEntry1.mmObject();
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
+			componentContext_lazy = () -> CardEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AggtdNtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregatedEntry";
 			definition = "Card entry details, based on card transaction aggregated data performed by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry2.AggregatedEntry);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry2.mmAggregatedEntry);
 			maxOccurs = 1;
-			type_lazy = () -> CardAggregated1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardAggregated1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry1.Card, com.tools20022.repository.msg.CardEntry1.POI, com.tools20022.repository.msg.CardEntry1.AggregatedEntry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry1.mmCard, com.tools20022.repository.msg.CardEntry1.mmPOI, com.tools20022.repository.msg.CardEntry1.mmAggregatedEntry);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardEntry1";
 				definition = "Card transaction entry.";
@@ -247,5 +252,29 @@ public class CardEntry1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentCard4 getCard() {
+		return card;
+	}
+
+	public void setCard(com.tools20022.repository.msg.PaymentCard4 card) {
+		this.card = card;
+	}
+
+	public PointOfInteraction1 getPOI() {
+		return pOI;
+	}
+
+	public void setPOI(com.tools20022.repository.msg.PointOfInteraction1 pOI) {
+		this.pOI = pOI;
+	}
+
+	public CardAggregated1 getAggregatedEntry() {
+		return aggregatedEntry;
+	}
+
+	public void setAggregatedEntry(com.tools20022.repository.msg.CardAggregated1 aggregatedEntry) {
+		this.aggregatedEntry = aggregatedEntry;
 	}
 }

@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Packaging1#Type
- * Packaging1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Packaging1#Name
- * Packaging1.Name}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Packaging1#mmType
+ * Packaging1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Packaging1#mmName
+ * Packaging1.mmName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Packaging1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalPackagingType1Code type;
 	/**
 	 * Specifies the type of packaging as a code.
 	 * <p>
@@ -91,20 +92,21 @@ public class Packaging1 {
 	 * definition} = "Specifies the type of packaging as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Packaging1.mmObject();
 			businessComponentTrace_lazy = () -> Packaging.mmObject();
+			componentContext_lazy = () -> Packaging1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of packaging as a code.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExternalPackagingType1Code.mmObject();
 		}
 	};
+	protected Max35Text name;
 	/**
 	 * Specifies the type of packaging as text. For instance, halogenated resin
 	 * (PVC).
@@ -118,8 +120,8 @@ public class Packaging1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Packaging#PackagingName
-	 * Packaging.PackagingName}</li>
+	 * {@linkplain com.tools20022.repository.entity.Packaging#mmPackagingName
+	 * Packaging.mmPackagingName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Packaging1
@@ -139,17 +141,17 @@ public class Packaging1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.mmPackagingName;
 			componentContext_lazy = () -> Packaging1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.PackagingName;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Specifies the type of packaging as text. For instance, halogenated resin (PVC).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -157,14 +159,30 @@ public class Packaging1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Packaging1.Type, com.tools20022.repository.msg.Packaging1.Name);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Packaging1.mmType, com.tools20022.repository.msg.Packaging1.mmName);
 				trace_lazy = () -> Packaging.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Packaging1";
 				definition = "Physical packaging of goods for transport";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalPackagingType1Code getType() {
+		return type;
+	}
+
+	public void setType(ExternalPackagingType1Code type) {
+		this.type = type;
+	}
+
+	public Max35Text getName() {
+		return name;
+	}
+
+	public void setName(Max35Text name) {
+		this.name = name;
 	}
 }

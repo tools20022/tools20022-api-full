@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the original transactions, to which the status report
@@ -39,26 +40,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#OriginalPaymentInformationIdentification
- * OriginalPaymentInstruction19.OriginalPaymentInformationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#mmOriginalPaymentInformationIdentification
+ * OriginalPaymentInstruction19.mmOriginalPaymentInformationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#OriginalNumberOfTransactions
- * OriginalPaymentInstruction19.OriginalNumberOfTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#mmOriginalNumberOfTransactions
+ * OriginalPaymentInstruction19.mmOriginalNumberOfTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#OriginalControlSum
- * OriginalPaymentInstruction19.OriginalControlSum}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#mmOriginalControlSum
+ * OriginalPaymentInstruction19.mmOriginalControlSum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#PaymentInformationStatus
- * OriginalPaymentInstruction19.PaymentInformationStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#mmPaymentInformationStatus
+ * OriginalPaymentInstruction19.mmPaymentInformationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#StatusReasonInformation
- * OriginalPaymentInstruction19.StatusReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#mmStatusReasonInformation
+ * OriginalPaymentInstruction19.mmStatusReasonInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#NumberOfTransactionsPerStatus
- * OriginalPaymentInstruction19.NumberOfTransactionsPerStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#mmNumberOfTransactionsPerStatus
+ * OriginalPaymentInstruction19.mmNumberOfTransactionsPerStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#TransactionInformationAndStatus
- * OriginalPaymentInstruction19.TransactionInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction19#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction19.mmTransactionInformationAndStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -68,16 +69,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05#OriginalPaymentInformationAndStatus
+ * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05#mmOriginalPaymentInformationAndStatus
  * CreditorPaymentActivationRequestStatusReportV05.
- * OriginalPaymentInformationAndStatus}</li>
+ * mmOriginalPaymentInformationAndStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalPaymentInstruction19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text originalPaymentInformationIdentification;
 	/**
 	 * Unique identification, as assigned by the original sending party, to
 	 * unambiguously identify the original payment information group.
@@ -117,8 +119,8 @@ public class OriginalPaymentInstruction19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#Identification
-	 * TradeIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmIdentification
+	 * TradeIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,33 +143,34 @@ public class OriginalPaymentInstruction19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#OriginalPaymentInformationIdentification
-	 * OriginalPaymentInstruction24.OriginalPaymentInformationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#mmOriginalPaymentInformationIdentification
+	 * OriginalPaymentInstruction24.mmOriginalPaymentInformationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#OriginalPaymentInformationIdentification
-	 * OriginalPaymentInstruction14.OriginalPaymentInformationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#mmOriginalPaymentInformationIdentification
+	 * OriginalPaymentInstruction14.mmOriginalPaymentInformationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalPaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalPaymentInformationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> OriginalPaymentInstruction19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.Identification;
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationIdentification";
 			definition = "Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.OriginalPaymentInformationIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.OriginalPaymentInformationIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.mmOriginalPaymentInformationIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.mmOriginalPaymentInformationIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max15NumericText originalNumberOfTransactions;
 	/**
 	 * Number of individual transactions contained in the original payment
 	 * information group.
@@ -201,18 +204,18 @@ public class OriginalPaymentInstruction19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#OriginalNumberOfTransactions
-	 * OriginalPaymentInstruction24.OriginalNumberOfTransactions}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#mmOriginalNumberOfTransactions
+	 * OriginalPaymentInstruction24.mmOriginalNumberOfTransactions}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#OriginalNumberOfTransactions
-	 * OriginalPaymentInstruction14.OriginalNumberOfTransactions}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#mmOriginalNumberOfTransactions
+	 * OriginalPaymentInstruction14.mmOriginalNumberOfTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalPaymentInstruction19.mmObject();
 			isDerived = false;
@@ -220,13 +223,14 @@ public class OriginalPaymentInstruction19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNumberOfTransactions";
 			definition = "Number of individual transactions contained in the original payment information group.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.OriginalNumberOfTransactions;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.OriginalNumberOfTransactions);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.mmOriginalNumberOfTransactions);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.mmOriginalNumberOfTransactions;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber originalControlSum;
 	/**
 	 * Total of all individual amounts included in the original payment
 	 * information group, irrespective of currencies.
@@ -260,18 +264,18 @@ public class OriginalPaymentInstruction19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#OriginalControlSum
-	 * OriginalPaymentInstruction24.OriginalControlSum}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#mmOriginalControlSum
+	 * OriginalPaymentInstruction24.mmOriginalControlSum}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#OriginalControlSum
-	 * OriginalPaymentInstruction14.OriginalControlSum}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#mmOriginalControlSum
+	 * OriginalPaymentInstruction14.mmOriginalControlSum}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalControlSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalPaymentInstruction19.mmObject();
 			isDerived = false;
@@ -279,13 +283,14 @@ public class OriginalPaymentInstruction19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalControlSum";
 			definition = "Total of all individual amounts included in the original payment information group, irrespective of currencies.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.OriginalControlSum;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.OriginalControlSum);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.mmOriginalControlSum);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.mmOriginalControlSum;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected TransactionGroupStatus3Code paymentInformationStatus;
 	/**
 	 * Specifies the status of the payment information group.
 	 * <p>
@@ -299,8 +304,8 @@ public class OriginalPaymentInstruction19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#Status
-	 * PaymentStatus.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmStatus
+	 * PaymentStatus.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -321,33 +326,34 @@ public class OriginalPaymentInstruction19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#PaymentInformationStatus
-	 * OriginalPaymentInstruction24.PaymentInformationStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#mmPaymentInformationStatus
+	 * OriginalPaymentInstruction24.mmPaymentInformationStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#PaymentInformationStatus
-	 * OriginalPaymentInstruction14.PaymentInformationStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#mmPaymentInformationStatus
+	 * OriginalPaymentInstruction14.mmPaymentInformationStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInformationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInformationStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmStatus;
 			componentContext_lazy = () -> OriginalPaymentInstruction19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.Status;
 			isDerived = false;
 			xmlTag = "PmtInfSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatus";
 			definition = "Specifies the status of the payment information group.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.PaymentInformationStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.PaymentInformationStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.mmPaymentInformationStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.mmPaymentInformationStatus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TransactionGroupStatus3Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatusReasonInformation9> statusReasonInformation;
 	/**
 	 * Provides detailed information on the status reason.
 	 * <p>
@@ -360,8 +366,8 @@ public class OriginalPaymentInstruction19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -382,33 +388,34 @@ public class OriginalPaymentInstruction19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#StatusReasonInformation
-	 * OriginalPaymentInstruction24.StatusReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#mmStatusReasonInformation
+	 * OriginalPaymentInstruction24.mmStatusReasonInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#StatusReasonInformation
-	 * OriginalPaymentInstruction14.StatusReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#mmStatusReasonInformation
+	 * OriginalPaymentInstruction14.mmStatusReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReasonInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> OriginalPaymentInstruction19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "StsRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformation";
 			definition = "Provides detailed information on the status reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.StatusReasonInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.StatusReasonInformation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.mmStatusReasonInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.mmStatusReasonInformation;
 			minOccurs = 0;
-			type_lazy = () -> StatusReasonInformation9.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation9.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NumberOfTransactionsPerStatus3> numberOfTransactionsPerStatus;
 	/**
 	 * Detailed information on the number of transactions for each identical
 	 * transaction status.
@@ -441,18 +448,18 @@ public class OriginalPaymentInstruction19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#NumberOfTransactionsPerStatus
-	 * OriginalPaymentInstruction24.NumberOfTransactionsPerStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#mmNumberOfTransactionsPerStatus
+	 * OriginalPaymentInstruction24.mmNumberOfTransactionsPerStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#NumberOfTransactionsPerStatus
-	 * OriginalPaymentInstruction14.NumberOfTransactionsPerStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#mmNumberOfTransactionsPerStatus
+	 * OriginalPaymentInstruction14.mmNumberOfTransactionsPerStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NumberOfTransactionsPerStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNumberOfTransactionsPerStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> OriginalPaymentInstruction19.mmObject();
 			isDerived = false;
@@ -460,13 +467,14 @@ public class OriginalPaymentInstruction19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsPerStatus";
 			definition = "Detailed information on the number of transactions for each identical transaction status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.NumberOfTransactionsPerStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.NumberOfTransactionsPerStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.mmNumberOfTransactionsPerStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.mmNumberOfTransactionsPerStatus;
 			minOccurs = 0;
-			type_lazy = () -> NumberOfTransactionsPerStatus3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PaymentTransaction69> transactionInformationAndStatus;
 	/**
 	 * Provides information on the original transactions to which the status
 	 * report message refers.
@@ -502,51 +510,107 @@ public class OriginalPaymentInstruction19 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#TransactionInformationAndStatus
-	 * OriginalPaymentInstruction24.TransactionInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction24#mmTransactionInformationAndStatus
+	 * OriginalPaymentInstruction24.mmTransactionInformationAndStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#TransactionInformationAndStatus
-	 * OriginalPaymentInstruction14.TransactionInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction14#mmTransactionInformationAndStatus
+	 * OriginalPaymentInstruction14.mmTransactionInformationAndStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionInformationAndStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionInformationAndStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OriginalPaymentInstruction19.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> OriginalPaymentInstruction19.mmObject();
 			isDerived = false;
 			xmlTag = "TxInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformationAndStatus";
 			definition = "Provides information on the original transactions to which the status report message refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.TransactionInformationAndStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.TransactionInformationAndStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction24.mmTransactionInformationAndStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction14.mmTransactionInformationAndStatus;
 			minOccurs = 0;
-			type_lazy = () -> PaymentTransaction69.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction69.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction19.OriginalPaymentInformationIdentification,
-						com.tools20022.repository.msg.OriginalPaymentInstruction19.OriginalNumberOfTransactions, com.tools20022.repository.msg.OriginalPaymentInstruction19.OriginalControlSum,
-						com.tools20022.repository.msg.OriginalPaymentInstruction19.PaymentInformationStatus, com.tools20022.repository.msg.OriginalPaymentInstruction19.StatusReasonInformation,
-						com.tools20022.repository.msg.OriginalPaymentInstruction19.NumberOfTransactionsPerStatus, com.tools20022.repository.msg.OriginalPaymentInstruction19.TransactionInformationAndStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction19.mmOriginalPaymentInformationIdentification,
+						com.tools20022.repository.msg.OriginalPaymentInstruction19.mmOriginalNumberOfTransactions, com.tools20022.repository.msg.OriginalPaymentInstruction19.mmOriginalControlSum,
+						com.tools20022.repository.msg.OriginalPaymentInstruction19.mmPaymentInformationStatus, com.tools20022.repository.msg.OriginalPaymentInstruction19.mmStatusReasonInformation,
+						com.tools20022.repository.msg.OriginalPaymentInstruction19.mmNumberOfTransactionsPerStatus, com.tools20022.repository.msg.OriginalPaymentInstruction19.mmTransactionInformationAndStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05.mmOriginalPaymentInformationAndStatus);
 				trace_lazy = () -> Payment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05.OriginalPaymentInformationAndStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalPaymentInstruction19";
 				definition = "Provides details on the original transactions, to which the status report message refers.";
-				previousVersion_lazy = () -> OriginalPaymentInstruction14.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction24.mmObject());
+				previousVersion_lazy = () -> OriginalPaymentInstruction14.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getOriginalPaymentInformationIdentification() {
+		return originalPaymentInformationIdentification;
+	}
+
+	public void setOriginalPaymentInformationIdentification(Max35Text originalPaymentInformationIdentification) {
+		this.originalPaymentInformationIdentification = originalPaymentInformationIdentification;
+	}
+
+	public Max15NumericText getOriginalNumberOfTransactions() {
+		return originalNumberOfTransactions;
+	}
+
+	public void setOriginalNumberOfTransactions(Max15NumericText originalNumberOfTransactions) {
+		this.originalNumberOfTransactions = originalNumberOfTransactions;
+	}
+
+	public DecimalNumber getOriginalControlSum() {
+		return originalControlSum;
+	}
+
+	public void setOriginalControlSum(DecimalNumber originalControlSum) {
+		this.originalControlSum = originalControlSum;
+	}
+
+	public TransactionGroupStatus3Code getPaymentInformationStatus() {
+		return paymentInformationStatus;
+	}
+
+	public void setPaymentInformationStatus(TransactionGroupStatus3Code paymentInformationStatus) {
+		this.paymentInformationStatus = paymentInformationStatus;
+	}
+
+	public List<StatusReasonInformation9> getStatusReasonInformation() {
+		return statusReasonInformation;
+	}
+
+	public void setStatusReasonInformation(List<com.tools20022.repository.msg.StatusReasonInformation9> statusReasonInformation) {
+		this.statusReasonInformation = statusReasonInformation;
+	}
+
+	public List<NumberOfTransactionsPerStatus3> getNumberOfTransactionsPerStatus() {
+		return numberOfTransactionsPerStatus;
+	}
+
+	public void setNumberOfTransactionsPerStatus(List<com.tools20022.repository.msg.NumberOfTransactionsPerStatus3> numberOfTransactionsPerStatus) {
+		this.numberOfTransactionsPerStatus = numberOfTransactionsPerStatus;
+	}
+
+	public List<PaymentTransaction69> getTransactionInformationAndStatus() {
+		return transactionInformationAndStatus;
+	}
+
+	public void setTransactionInformationAndStatus(List<com.tools20022.repository.msg.PaymentTransaction69> transactionInformationAndStatus) {
+		this.transactionInformationAndStatus = transactionInformationAndStatus;
 	}
 }

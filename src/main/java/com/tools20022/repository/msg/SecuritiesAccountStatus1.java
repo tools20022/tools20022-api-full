@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.Status6Code;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status of the securities account processed in the system.
@@ -34,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus1#RelatedSecuritiesAccount
- * SecuritiesAccountStatus1.RelatedSecuritiesAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus1#mmRelatedSecuritiesAccount
+ * SecuritiesAccountStatus1.mmRelatedSecuritiesAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus1#Status
- * SecuritiesAccountStatus1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus1#mmStatus
+ * SecuritiesAccountStatus1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus1#StatusReason
- * SecuritiesAccountStatus1.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus1#mmStatusReason
+ * SecuritiesAccountStatus1.mmStatusReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccountStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccount13 relatedSecuritiesAccount;
 	/**
 	 * Unique identification of the securities account referenced by a request
 	 * <p>
@@ -90,7 +92,7 @@ public class SecuritiesAccountStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedSecuritiesAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedSecuritiesAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
@@ -98,12 +100,13 @@ public class SecuritiesAccountStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedSecuritiesAccount";
 			definition = "Unique identification of the securities account referenced by a request";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount13.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	protected Status6Code status;
 	/**
 	 * Status of the securities account maintenance instruction.
 	 * <p>
@@ -132,7 +135,7 @@ public class SecuritiesAccountStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
@@ -140,11 +143,12 @@ public class SecuritiesAccountStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the securities account maintenance instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
 	/**
 	 * Reason for the status of a securities account maintenance instruction.
 	 * <p>
@@ -173,7 +177,7 @@ public class SecuritiesAccountStatus1 {
 	 * "Reason for the status of a securities account maintenance instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
@@ -182,22 +186,46 @@ public class SecuritiesAccountStatus1 {
 			name = "StatusReason";
 			definition = "Reason for the status of a securities account maintenance instruction.";
 			minOccurs = 0;
-			type_lazy = () -> StatusReasonInformation10.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountStatus1.RelatedSecuritiesAccount, com.tools20022.repository.msg.SecuritiesAccountStatus1.Status,
-						com.tools20022.repository.msg.SecuritiesAccountStatus1.StatusReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountStatus1.mmRelatedSecuritiesAccount, com.tools20022.repository.msg.SecuritiesAccountStatus1.mmStatus,
+						com.tools20022.repository.msg.SecuritiesAccountStatus1.mmStatusReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountStatus1";
 				definition = "Status of the securities account processed in the system. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccount13 getRelatedSecuritiesAccount() {
+		return relatedSecuritiesAccount;
+	}
+
+	public void setRelatedSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 relatedSecuritiesAccount) {
+		this.relatedSecuritiesAccount = relatedSecuritiesAccount;
+	}
+
+	public Status6Code getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status6Code status) {
+		this.status = status;
+	}
+
+	public List<StatusReasonInformation10> getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+		this.statusReason = statusReason;
 	}
 }

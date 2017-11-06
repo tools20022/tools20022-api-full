@@ -33,19 +33,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * WarrantStyleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#American
- * WarrantStyle1Code.American}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#European
- * WarrantStyle1Code.European}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#Bermudan
- * WarrantStyle1Code.Bermudan}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#mmAmerican
+ * WarrantStyle1Code.mmAmerican}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#mmEuropean
+ * WarrantStyle1Code.mmEuropean}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#mmBermudan
+ * WarrantStyle1Code.mmBermudan}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +84,7 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	 * name} = "American"</li>
 	 * </ul>
 	 */
-	public static final MMCode American = new MMCode() {
+	public static final MMCode mmAmerican = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
@@ -104,7 +107,7 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	 * name} = "European"</li>
 	 * </ul>
 	 */
-	public static final MMCode European = new MMCode() {
+	public static final MMCode mmEuropean = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
@@ -127,7 +130,7 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	 * name} = "Bermudan"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bermudan = new MMCode() {
+	public static final MMCode mmBermudan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bermudan";
@@ -138,12 +141,12 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "WarrantStyle1Code";
 				definition = "Defines how an option can be exercised.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WarrantStyle1Code.American, com.tools20022.repository.codeset.WarrantStyle1Code.European, com.tools20022.repository.codeset.WarrantStyle1Code.Bermudan);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WarrantStyle1Code.mmAmerican, com.tools20022.repository.codeset.WarrantStyle1Code.mmEuropean, com.tools20022.repository.codeset.WarrantStyle1Code.mmBermudan);
 				trace_lazy = () -> WarrantStyleCode.mmObject();
 			}
 		});

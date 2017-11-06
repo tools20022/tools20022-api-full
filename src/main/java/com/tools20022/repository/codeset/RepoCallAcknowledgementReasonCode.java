@@ -31,20 +31,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#AccountServicerDeadlineMissed
- * RepoCallAcknowledgementReasonCode.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#mmAccountServicerDeadlineMissed
+ * RepoCallAcknowledgementReasonCode.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#InProcess
- * RepoCallAcknowledgementReasonCode.InProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#mmInProcess
+ * RepoCallAcknowledgementReasonCode.mmInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#Issued
- * RepoCallAcknowledgementReasonCode.Issued}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#mmIssued
+ * RepoCallAcknowledgementReasonCode.mmIssued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#Processed
- * RepoCallAcknowledgementReasonCode.Processed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#mmProcessed
+ * RepoCallAcknowledgementReasonCode.mmProcessed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#BeingProcessed
- * RepoCallAcknowledgementReasonCode.BeingProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#mmBeingProcessed
+ * RepoCallAcknowledgementReasonCode.mmBeingProcessed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -61,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,7 +108,7 @@ public class RepoCallAcknowledgementReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -138,7 +138,7 @@ public class RepoCallAcknowledgementReasonCode {
 	 * definition} = "Repuchase agreement call is in process."</li>
 	 * </ul>
 	 */
-	public static final MMCode InProcess = new MMCode() {
+	public static final MMCode mmInProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InProcess";
@@ -168,7 +168,7 @@ public class RepoCallAcknowledgementReasonCode {
 	 * definition} = "Repurchase agreement call is issued."</li>
 	 * </ul>
 	 */
-	public static final MMCode Issued = new MMCode() {
+	public static final MMCode mmIssued = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issued";
@@ -198,7 +198,7 @@ public class RepoCallAcknowledgementReasonCode {
 	 * definition} = "Repurchase agreement call is processed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Processed = new MMCode() {
+	public static final MMCode mmProcessed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processed";
@@ -228,7 +228,7 @@ public class RepoCallAcknowledgementReasonCode {
 	 * definition} = "Repurchase agreement call request is being processed."</li>
 	 * </ul>
 	 */
-	public static final MMCode BeingProcessed = new MMCode() {
+	public static final MMCode mmBeingProcessed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeingProcessed";
@@ -241,14 +241,14 @@ public class RepoCallAcknowledgementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RepoCallAcknowledgementReasonCode";
 				definition = "Specifies additional information about the repurchase agreement call processed instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.InProcess,
-						com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.Issued, com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.Processed,
-						com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.BeingProcessed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.mmInProcess,
+						com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.mmIssued, com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.mmProcessed,
+						com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.mmBeingProcessed);
 				derivation_lazy = () -> Arrays.asList(RepoCallAcknowledgementReason2Code.mmObject(), RepoCallAcknowledgementReason1Code.mmObject());
 			}
 		});

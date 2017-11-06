@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope An account servicer sends an
@@ -79,29 +80,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#CancellationRequestReference
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#mmCancellationRequestReference
  * SecuritiesTransactionCancellationRequestStatusAdviceV04.
- * CancellationRequestReference}</li>
+ * mmCancellationRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#TransactionIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#mmTransactionIdentification
  * SecuritiesTransactionCancellationRequestStatusAdviceV04.
- * TransactionIdentification}</li>
+ * mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#ProcessingStatus
- * SecuritiesTransactionCancellationRequestStatusAdviceV04.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#mmProcessingStatus
+ * SecuritiesTransactionCancellationRequestStatusAdviceV04.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#TransactionDetails
- * SecuritiesTransactionCancellationRequestStatusAdviceV04.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#mmTransactionDetails
+ * SecuritiesTransactionCancellationRequestStatusAdviceV04.mmTransactionDetails}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#SupplementaryData
- * SecuritiesTransactionCancellationRequestStatusAdviceV04.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#mmSupplementaryData
+ * SecuritiesTransactionCancellationRequestStatusAdviceV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04#identifier
- * SecuritiesTransactionCancellationRequestStatusAdviceV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.027.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -129,6 +129,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransactionCancellationRequestStatusAdviceV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Identification1 cancellationRequestReference;
 	/**
 	 * Reference to the unambiguous identification of the cancellation request
 	 * as per the account owner.
@@ -156,32 +157,33 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05#CancellationRequestReference
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05#mmCancellationRequestReference
 	 * SecuritiesTransactionCancellationRequestStatusAdviceV05.
-	 * CancellationRequestReference}</li>
+	 * mmCancellationRequestReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#CancellationRequestReference
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#mmCancellationRequestReference
 	 * SecuritiesTransactionCancellationRequestStatusAdviceV03.
-	 * CancellationRequestReference}</li>
+	 * mmCancellationRequestReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationRequestReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationRequestReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlReqRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequestReference";
 			definition = "Reference to the unambiguous identification of the cancellation request as per the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.CancellationRequestReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05.CancellationRequestReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05.mmCancellationRequestReference);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.mmCancellationRequestReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Identification1.mmObject();
 		}
 	};
+	protected TransactionIdentifications17 transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as known by the account
 	 * servicer.
@@ -210,32 +212,33 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05#TransactionIdentification
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05#mmTransactionIdentification
 	 * SecuritiesTransactionCancellationRequestStatusAdviceV05.
-	 * TransactionIdentification}</li>
+	 * mmTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#TransactionIdentification
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#mmTransactionIdentification
 	 * SecuritiesTransactionCancellationRequestStatusAdviceV03.
-	 * TransactionIdentification}</li>
+	 * mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.TransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05.TransactionIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05.mmTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.mmTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransactionIdentifications17.mmObject();
 		}
 	};
+	protected ProcessingStatus45Choice processingStatus;
 	/**
 	 * Provides details on the processing status of the request.
 	 * <p>
@@ -262,32 +265,33 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05#ProcessingStatus
-	 * SecuritiesTransactionCancellationRequestStatusAdviceV05.ProcessingStatus}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05#mmProcessingStatus
+	 * SecuritiesTransactionCancellationRequestStatusAdviceV05.
+	 * mmProcessingStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#ProcessingStatus
-	 * SecuritiesTransactionCancellationRequestStatusAdviceV03.ProcessingStatus}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#mmProcessingStatus
+	 * SecuritiesTransactionCancellationRequestStatusAdviceV03.
+	 * mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the request.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.ProcessingStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05.ProcessingStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05.mmProcessingStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.mmProcessingStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProcessingStatus45Choice.mmObject();
 		}
 	};
+	protected TransactionDetails30 transactionDetails;
 	/**
 	 * Identifies the details of the transaction.
 	 * <p>
@@ -313,32 +317,33 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05#TransactionDetails
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05#mmTransactionDetails
 	 * SecuritiesTransactionCancellationRequestStatusAdviceV05.
-	 * TransactionDetails}</li>
+	 * mmTransactionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#TransactionDetails
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#mmTransactionDetails
 	 * SecuritiesTransactionCancellationRequestStatusAdviceV03.
-	 * TransactionDetails}</li>
+	 * mmTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies the details of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.TransactionDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05.TransactionDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05.mmTransactionDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.mmTransactionDetails;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransactionDetails30.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -367,56 +372,29 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV04 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05#SupplementaryData
-	 * SecuritiesTransactionCancellationRequestStatusAdviceV05.SupplementaryData
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05#mmSupplementaryData
+	 * SecuritiesTransactionCancellationRequestStatusAdviceV05.
+	 * mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#SupplementaryData
-	 * SecuritiesTransactionCancellationRequestStatusAdviceV03.SupplementaryData
-	 * }</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03#mmSupplementaryData
+	 * SecuritiesTransactionCancellationRequestStatusAdviceV03.
+	 * mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "027"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "027";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -426,20 +404,67 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV04 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionCancellationRequestStatusAdviceV04";
 				definition = "Scope\nAn account servicer sends an SecuritiesTransactionCancellationRequestStatusAdvice to an account owner to advise the status of a securities transaction cancellation request previously sent by the account owner.\nThe account servicer/owner relationship may be:\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\n\nUsage\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
-				previousVersion_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV03.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionCancellationRequestStatusAdviceV05.mmObject());
+				previousVersion_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesTxCxlReqStsAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.CancellationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.TransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.ProcessingStatus,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.TransactionDetails,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.mmCancellationRequestReference,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.mmTransactionIdentification,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.mmProcessingStatus,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.mmTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "027";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Identification1 getCancellationRequestReference() {
+		return cancellationRequestReference;
+	}
+
+	public void setCancellationRequestReference(Identification1 cancellationRequestReference) {
+		this.cancellationRequestReference = cancellationRequestReference;
+	}
+
+	public TransactionIdentifications17 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(TransactionIdentifications17 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public ProcessingStatus45Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatus45Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public TransactionDetails30 getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(TransactionDetails30 transactionDetails) {
+		this.transactionDetails = transactionDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

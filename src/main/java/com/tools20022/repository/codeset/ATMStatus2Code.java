@@ -32,18 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ATMStatusCode ATMStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus2Code#InOperation
- * ATMStatus2Code.InOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMStatus2Code#OutOfService
- * ATMStatus2Code.OutOfService}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMStatus2Code#mmInOperation
+ * ATMStatus2Code.mmInOperation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMStatus2Code#mmOutOfService
+ * ATMStatus2Code.mmOutOfService}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +74,7 @@ public class ATMStatus2Code extends ATMStatusCode {
 	 * name} = "InOperation"</li>
 	 * </ul>
 	 */
-	public static final MMCode InOperation = new MMCode() {
+	public static final MMCode mmInOperation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InOperation";
@@ -96,7 +97,7 @@ public class ATMStatus2Code extends ATMStatusCode {
 	 * name} = "OutOfService"</li>
 	 * </ul>
 	 */
-	public static final MMCode OutOfService = new MMCode() {
+	public static final MMCode mmOutOfService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfService";
@@ -107,11 +108,11 @@ public class ATMStatus2Code extends ATMStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMStatus2Code";
 				definition = "Current status of the security device.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatus2Code.InOperation, com.tools20022.repository.codeset.ATMStatus2Code.OutOfService);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatus2Code.mmInOperation, com.tools20022.repository.codeset.ATMStatus2Code.mmOutOfService);
 				trace_lazy = () -> ATMStatusCode.mmObject();
 			}
 		});

@@ -31,11 +31,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TechnicalValidationStatusCode#ReceptionConfirmation
- * TechnicalValidationStatusCode.ReceptionConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TechnicalValidationStatusCode#mmReceptionConfirmation
+ * TechnicalValidationStatusCode.mmReceptionConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TechnicalValidationStatusCode#ReceptionError
- * TechnicalValidationStatusCode.ReceptionError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TechnicalValidationStatusCode#mmReceptionError
+ * TechnicalValidationStatusCode.mmReceptionError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class TechnicalValidationStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReceptionConfirmation = new MMCode() {
+	public static final MMCode mmReceptionConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceptionConfirmation";
@@ -129,7 +129,7 @@ public class TechnicalValidationStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReceptionError = new MMCode() {
+	public static final MMCode mmReceptionError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceptionError";
@@ -142,12 +142,12 @@ public class TechnicalValidationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RCCF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TechnicalValidationStatusCode";
 				definition = "Specifies the result of the technical validation carried out by the receiver (forwarding or first agent).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TechnicalValidationStatusCode.ReceptionConfirmation, com.tools20022.repository.codeset.TechnicalValidationStatusCode.ReceptionError);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TechnicalValidationStatusCode.mmReceptionConfirmation, com.tools20022.repository.codeset.TechnicalValidationStatusCode.mmReceptionError);
 				derivation_lazy = () -> Arrays.asList(TechnicalValidationStatus1Code.mmObject());
 			}
 		});

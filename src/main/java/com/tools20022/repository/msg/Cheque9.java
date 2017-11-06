@@ -34,13 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque9#Number Cheque9.Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque9#PayeeIdentification
- * Cheque9.PayeeIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque9#DraweeIdentification
- * Cheque9.DraweeIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque9#DrawerIdentification
- * Cheque9.DrawerIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque9#mmNumber
+ * Cheque9.mmNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque9#mmPayeeIdentification
+ * Cheque9.mmPayeeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque9#mmDraweeIdentification
+ * Cheque9.mmDraweeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque9#mmDrawerIdentification
+ * Cheque9.mmDrawerIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Cheque9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text number;
 	/**
 	 * Unique and unambiguous identifier for a cheque as assigned by the
 	 * financial institution.
@@ -82,8 +84,8 @@ public class Cheque9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CreditInstrument#CreditInstrumentIdentification
-	 * CreditInstrument.CreditInstrumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CreditInstrument#mmCreditInstrumentIdentification
+	 * CreditInstrument.mmCreditInstrumentIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque9
@@ -104,24 +106,26 @@ public class Cheque9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Cheque3#Number Cheque3.Number}</li>
+	 * {@linkplain com.tools20022.repository.msg.Cheque3#mmNumber
+	 * Cheque3.mmNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmCreditInstrumentIdentification;
 			componentContext_lazy = () -> Cheque9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.CreditInstrumentIdentification;
 			isDerived = false;
 			xmlTag = "Nb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Unique and unambiguous identifier for a cheque as assigned by the financial institution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.Number;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.mmNumber;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification113 payeeIdentification;
 	/**
 	 * Party to which a cheque is made payable.
 	 * <p>
@@ -135,8 +139,8 @@ public class Cheque9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque9
@@ -155,25 +159,26 @@ public class Cheque9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Cheque3#PayeeIdentification
-	 * Cheque3.PayeeIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Cheque3#mmPayeeIdentification
+	 * Cheque3.mmPayeeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayeeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayeeIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Cheque9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "PyeeId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayeeIdentification";
 			definition = "Party to which a cheque is made payable.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.PayeeIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.mmPayeeIdentification;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification113.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification10 draweeIdentification;
 	/**
 	 * Financial institution on which a cheque is drawn, that is, the financial
 	 * institution that services the account of the entity that issued the
@@ -189,8 +194,8 @@ public class Cheque9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque9
@@ -211,25 +216,26 @@ public class Cheque9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Cheque3#DraweeIdentification
-	 * Cheque3.DraweeIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Cheque3#mmDraweeIdentification
+	 * Cheque3.mmDraweeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DraweeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDraweeIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> Cheque9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "DrweeId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DraweeIdentification";
 			definition = "Financial institution on which a cheque is drawn, that is, the financial institution that services the account of the entity that issued the cheque.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.DraweeIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.mmDraweeIdentification;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstitutionIdentification10.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmObject();
 		}
 	};
+	protected PartyIdentification113 drawerIdentification;
 	/**
 	 * Account owner that issues a cheque ordering the drawee bank to pay a
 	 * specific amount, upon demand, to the payee.
@@ -244,8 +250,8 @@ public class Cheque9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque9
@@ -266,33 +272,33 @@ public class Cheque9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Cheque3#DrawerIdentification
-	 * Cheque3.DrawerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Cheque3#mmDrawerIdentification
+	 * Cheque3.mmDrawerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DrawerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDrawerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Cheque9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "DrwrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DrawerIdentification";
 			definition = "Account owner that issues a cheque ordering the drawee bank to pay a specific amount, upon demand, to the payee.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.DrawerIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.mmDrawerIdentification;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification113.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.Number, com.tools20022.repository.msg.Cheque9.PayeeIdentification, com.tools20022.repository.msg.Cheque9.DraweeIdentification,
-						com.tools20022.repository.msg.Cheque9.DrawerIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.mmNumber, com.tools20022.repository.msg.Cheque9.mmPayeeIdentification, com.tools20022.repository.msg.Cheque9.mmDraweeIdentification,
+						com.tools20022.repository.msg.Cheque9.mmDrawerIdentification);
 				trace_lazy = () -> ChequeIssue.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Cheque9";
 				definition = "Set of characteristics related to a cheque instruction, such as cheque type or cheque number.";
@@ -300,5 +306,37 @@ public class Cheque9 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getNumber() {
+		return number;
+	}
+
+	public void setNumber(Max35Text number) {
+		this.number = number;
+	}
+
+	public PartyIdentification113 getPayeeIdentification() {
+		return payeeIdentification;
+	}
+
+	public void setPayeeIdentification(com.tools20022.repository.msg.PartyIdentification113 payeeIdentification) {
+		this.payeeIdentification = payeeIdentification;
+	}
+
+	public FinancialInstitutionIdentification10 getDraweeIdentification() {
+		return draweeIdentification;
+	}
+
+	public void setDraweeIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification10 draweeIdentification) {
+		this.draweeIdentification = draweeIdentification;
+	}
+
+	public PartyIdentification113 getDrawerIdentification() {
+		return drawerIdentification;
+	}
+
+	public void setDrawerIdentification(com.tools20022.repository.msg.PartyIdentification113 drawerIdentification) {
+		this.drawerIdentification = drawerIdentification;
 	}
 }

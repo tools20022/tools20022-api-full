@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max70Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements for the identification of the message and related references.
@@ -34,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.References4#MessageIdentification
- * References4.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.References4#mmMessageIdentification
+ * References4.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.References4#ProcessIdentification
- * References4.ProcessIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.References4#mmProcessIdentification
+ * References4.mmProcessIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.References4#AttachedDocumentName
- * References4.AttachedDocumentName}</li>
+ * {@linkplain com.tools20022.repository.msg.References4#mmAttachedDocumentName
+ * References4.mmAttachedDocumentName}</li>
  * </ul>
  * </li>
  * <li>
@@ -49,66 +50,66 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01#References
- * AccountClosingAmendmentRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01#mmReferences
+ * AccountClosingAmendmentRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02#References
- * AccountClosingAmendmentRequestV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02#mmReferences
+ * AccountClosingAmendmentRequestV02.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#References
- * AccountClosingRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmReferences
+ * AccountClosingRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV02#References
- * AccountClosingRequestV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV02#mmReferences
+ * AccountClosingRequestV02.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01#References
- * AccountExcludedMandateMaintenanceAmendmentRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01#mmReferences
+ * AccountExcludedMandateMaintenanceAmendmentRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02#References
- * AccountExcludedMandateMaintenanceAmendmentRequestV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02#mmReferences
+ * AccountExcludedMandateMaintenanceAmendmentRequestV02.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01#References
- * AccountExcludedMandateMaintenanceRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01#mmReferences
+ * AccountExcludedMandateMaintenanceRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02#References
- * AccountExcludedMandateMaintenanceRequestV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02#mmReferences
+ * AccountExcludedMandateMaintenanceRequestV02.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01#References
- * AccountMandateMaintenanceAmendmentRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01#mmReferences
+ * AccountMandateMaintenanceAmendmentRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02#References
- * AccountMandateMaintenanceAmendmentRequestV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02#mmReferences
+ * AccountMandateMaintenanceAmendmentRequestV02.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#References
- * AccountMandateMaintenanceRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01#mmReferences
+ * AccountMandateMaintenanceRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#References
- * AccountMandateMaintenanceRequestV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#mmReferences
+ * AccountMandateMaintenanceRequestV02.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01#References
- * AccountOpeningAmendmentRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01#mmReferences
+ * AccountOpeningAmendmentRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#References
- * AccountOpeningAmendmentRequestV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02#mmReferences
+ * AccountOpeningAmendmentRequestV02.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV01#References
- * AccountOpeningRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV01#mmReferences
+ * AccountOpeningRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV02#References
- * AccountOpeningRequestV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV02#mmReferences
+ * AccountOpeningRequestV02.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#References
- * AccountReportRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#mmReferences
+ * AccountReportRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV02#References
- * AccountReportRequestV02.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV02#mmReferences
+ * AccountReportRequestV02.mmReferences}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,6 +125,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class References4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Identifies a message by a unique identifier and the date and time when
 	 * the message was created by the sender.
@@ -152,7 +154,7 @@ public class References4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> References4.mmObject();
 			isDerived = false;
@@ -160,12 +162,13 @@ public class References4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies a message by a unique identifier and the date and time when the message was created by the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MessageIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification1.mmObject();
 		}
 	};
+	protected MessageIdentification1 processIdentification;
 	/**
 	 * Identifies a process by a unique identifier and the date and time when
 	 * the first message belonging to the process was created by the sender. The
@@ -197,7 +200,7 @@ public class References4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> References4.mmObject();
 			isDerived = false;
@@ -205,12 +208,13 @@ public class References4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessIdentification";
 			definition = "Identifies a process by a unique identifier and the date and time when the first message belonging to the process was created by the sender. The process identification remains the same in all messages belonging to the same process, from the initial request message to the final account report closing the process.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MessageIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification1.mmObject();
 		}
 	};
+	protected List<Max70Text> attachedDocumentName;
 	/**
 	 * File name of a document logically related to the request.
 	 * <p>
@@ -238,7 +242,7 @@ public class References4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttachedDocumentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttachedDocumentName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> References4.mmObject();
 			isDerived = false;
@@ -254,23 +258,47 @@ public class References4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References4.MessageIdentification, com.tools20022.repository.msg.References4.ProcessIdentification,
-						com.tools20022.repository.msg.References4.AttachedDocumentName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.References, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.References,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV01.References, com.tools20022.repository.area.acmt.AccountClosingRequestV02.References,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.References, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.References,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.References, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.References,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.References, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.References,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.References, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.References,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.References, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.References,
-						com.tools20022.repository.area.acmt.AccountOpeningRequestV01.References, com.tools20022.repository.area.acmt.AccountOpeningRequestV02.References,
-						com.tools20022.repository.area.acmt.AccountReportRequestV01.References, com.tools20022.repository.area.acmt.AccountReportRequestV02.References);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References4.mmMessageIdentification, com.tools20022.repository.msg.References4.mmProcessIdentification,
+						com.tools20022.repository.msg.References4.mmAttachedDocumentName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.mmReferences,
+						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountClosingRequestV02.mmReferences,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmReferences,
+						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmReferences,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmReferences,
+						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmReferences,
+						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmReferences,
+						com.tools20022.repository.area.acmt.AccountOpeningRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmReferences,
+						com.tools20022.repository.area.acmt.AccountReportRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountReportRequestV02.mmReferences);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "References4";
 				definition = "Set of elements for the identification of the message and related references.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(com.tools20022.repository.msg.MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public MessageIdentification1 getProcessIdentification() {
+		return processIdentification;
+	}
+
+	public void setProcessIdentification(com.tools20022.repository.msg.MessageIdentification1 processIdentification) {
+		this.processIdentification = processIdentification;
+	}
+
+	public List<Max70Text> getAttachedDocumentName() {
+		return attachedDocumentName;
+	}
+
+	public void setAttachedDocumentName(List<Max70Text> attachedDocumentName) {
+		this.attachedDocumentName = attachedDocumentName;
 	}
 }

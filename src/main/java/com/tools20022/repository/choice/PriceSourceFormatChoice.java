@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceSourceFormatChoice#LocalMarketPlace
- * PriceSourceFormatChoice.LocalMarketPlace}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceSourceFormatChoice#mmLocalMarketPlace
+ * PriceSourceFormatChoice.mmLocalMarketPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceSourceFormatChoice#NonLocalMarketPlace
- * PriceSourceFormatChoice.NonLocalMarketPlace}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceSourceFormatChoice#mmNonLocalMarketPlace
+ * PriceSourceFormatChoice.mmNonLocalMarketPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceSourceFormatChoice#PlaceAsDSS
- * PriceSourceFormatChoice.PlaceAsDSS}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceSourceFormatChoice#mmPlaceAsDSS
+ * PriceSourceFormatChoice.mmPlaceAsDSS}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriceSourceFormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected MICIdentifier localMarketPlace;
 	/**
 	 * Source of price quotation is the market, expressed as a Market Identifier
 	 * Code (MIC).
@@ -81,8 +82,8 @@ public class PriceSourceFormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
-	 * OrganisationIdentification.MIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+	 * OrganisationIdentification.mmMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class PriceSourceFormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocalMarketPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocalMarketPlace = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> PriceSourceFormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.MIC;
 			isDerived = false;
 			xmlTag = "LclMktPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalMarketPlace";
 			definition = "Source of price quotation is the market, expressed as a Market Identifier Code (MIC).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected PriceSource nonLocalMarketPlace;
 	/**
 	 * Source of a price quotation when it is not the local market.
 	 * <p>
@@ -150,20 +152,21 @@ public class PriceSourceFormatChoice {
 	 * "Source of a price quotation when it is not the local market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NonLocalMarketPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNonLocalMarketPlace = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PriceSourceFormatChoice.mmObject();
 			businessComponentTrace_lazy = () -> SourceOfPrice.mmObject();
+			componentContext_lazy = () -> PriceSourceFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NonLclMktPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonLocalMarketPlace";
 			definition = "Source of a price quotation when it is not the local market.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PriceSource.mmObject();
 		}
 	};
+	protected GenericIdentification5 placeAsDSS;
 	/**
 	 * Source of a price quotation expressed with a propriety identification
 	 * scheme.
@@ -178,8 +181,8 @@ public class PriceSourceFormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InformationPartyRole#GenericIdentification
-	 * InformationPartyRole.GenericIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmGenericIdentification
+	 * InformationPartyRole.mmGenericIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,17 +203,17 @@ public class PriceSourceFormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAsDSS = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmGenericIdentification;
 			componentContext_lazy = () -> PriceSourceFormatChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.GenericIdentification;
 			isDerived = false;
 			xmlTag = "PlcAsDSS";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAsDSS";
 			definition = "Source of a price quotation expressed with a propriety identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification5.mmObject();
 		}
 	};
@@ -218,15 +221,39 @@ public class PriceSourceFormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceSourceFormatChoice.LocalMarketPlace, com.tools20022.repository.choice.PriceSourceFormatChoice.NonLocalMarketPlace,
-						com.tools20022.repository.choice.PriceSourceFormatChoice.PlaceAsDSS);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceSourceFormatChoice.mmLocalMarketPlace, com.tools20022.repository.choice.PriceSourceFormatChoice.mmNonLocalMarketPlace,
+						com.tools20022.repository.choice.PriceSourceFormatChoice.mmPlaceAsDSS);
 				trace_lazy = () -> SourceOfPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceSourceFormatChoice";
 				definition = "Choice of the source (place) of the price quotation";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MICIdentifier getLocalMarketPlace() {
+		return localMarketPlace;
+	}
+
+	public void setLocalMarketPlace(MICIdentifier localMarketPlace) {
+		this.localMarketPlace = localMarketPlace;
+	}
+
+	public PriceSource getNonLocalMarketPlace() {
+		return nonLocalMarketPlace;
+	}
+
+	public void setNonLocalMarketPlace(PriceSource nonLocalMarketPlace) {
+		this.nonLocalMarketPlace = nonLocalMarketPlace;
+	}
+
+	public GenericIdentification5 getPlaceAsDSS() {
+		return placeAsDSS;
+	}
+
+	public void setPlaceAsDSS(GenericIdentification5 placeAsDSS) {
+		this.placeAsDSS = placeAsDSS;
 	}
 }

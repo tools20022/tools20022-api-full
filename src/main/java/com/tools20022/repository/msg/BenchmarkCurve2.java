@@ -40,22 +40,23 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve2#Spread
- * BenchmarkCurve2.Spread}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve2#mmSpread
+ * BenchmarkCurve2.mmSpread}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#BenchmarkIdentification
- * BenchmarkCurve2.BenchmarkIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve2#BenchmarkPrice
- * BenchmarkCurve2.BenchmarkPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#mmBenchmarkIdentification
+ * BenchmarkCurve2.mmBenchmarkIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#BenchmarkCurveCurrency
- * BenchmarkCurve2.BenchmarkCurveCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#mmBenchmarkPrice
+ * BenchmarkCurve2.mmBenchmarkPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#BenchmarkCurveName
- * BenchmarkCurve2.BenchmarkCurveName}</li>
+ * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#mmBenchmarkCurveCurrency
+ * BenchmarkCurve2.mmBenchmarkCurveCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#BenchmarkCurvePoint
- * BenchmarkCurve2.BenchmarkCurvePoint}</li>
+ * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#mmBenchmarkCurveName
+ * BenchmarkCurve2.mmBenchmarkCurveName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BenchmarkCurve2#mmBenchmarkCurvePoint
+ * BenchmarkCurve2.mmBenchmarkCurvePoint}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +64,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,6 +82,7 @@ import java.util.function.Supplier;
 public class BenchmarkCurve2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DecimalNumber spread;
 	/**
 	 * Either a swap spread or spread to benchmark depending upon order type. In
 	 * case of a spread to benchmark, the price offset is expressed in terms of
@@ -98,7 +100,8 @@ public class BenchmarkCurve2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Curve#Spread Curve.Spread}</li>
+	 * {@linkplain com.tools20022.repository.entity.Curve#mmSpread
+	 * Curve.mmSpread}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,20 +122,21 @@ public class BenchmarkCurve2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Spread = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSpread = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmSpread;
 			componentContext_lazy = () -> BenchmarkCurve2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.Spread;
 			isDerived = false;
 			xmlTag = "Sprd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
 			definition = "Either a swap spread or spread to benchmark depending upon order type.  In case of a spread to benchmark, the price offset is expressed in terms of basis points relative to a benchmark - this can be a positive or a negative spread. In case of a swap spread, the price offset is a target spread for a swap.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected SecurityIdentification14 benchmarkIdentification;
 	/**
 	 * Identification of a security by an ISIN.
 	 * <p>
@@ -145,8 +149,8 @@ public class BenchmarkCurve2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,21 +169,22 @@ public class BenchmarkCurve2 {
 	 * definition} = "Identification of a security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BenchmarkIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBenchmarkIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> BenchmarkCurve2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "BchmkId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkIdentification";
 			definition = "Identification of a security by an ISIN.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected Price1 benchmarkPrice;
 	/**
 	 * Identifies the price of the benchmark security.
 	 * <p>
@@ -191,8 +196,8 @@ public class BenchmarkCurve2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Spread#BenchmarkPrice
-	 * Spread.BenchmarkPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkPrice
+	 * Spread.mmBenchmarkPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -211,20 +216,21 @@ public class BenchmarkCurve2 {
 	 * definition} = "Identifies the price of the benchmark security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BenchmarkPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBenchmarkPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmBenchmarkPrice;
 			componentContext_lazy = () -> BenchmarkCurve2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.BenchmarkPrice;
 			isDerived = false;
 			xmlTag = "BchmkPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkPrice";
 			definition = "Identifies the price of the benchmark security.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected CurrencyCode benchmarkCurveCurrency;
 	/**
 	 * Identifies the currency used for the benchmark curve.
 	 * <p>
@@ -237,8 +243,8 @@ public class BenchmarkCurve2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Curve#Currency
-	 * Curve.Currency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Curve#mmCurrency
+	 * Curve.mmCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -257,20 +263,21 @@ public class BenchmarkCurve2 {
 	 * definition} = "Identifies the currency used for the benchmark curve."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BenchmarkCurveCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBenchmarkCurveCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmCurrency;
 			componentContext_lazy = () -> BenchmarkCurve2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.Currency;
 			isDerived = false;
 			xmlTag = "BchmkCrvCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkCurveCurrency";
 			definition = "Identifies the currency used for the benchmark curve.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected BenchmarkCurveName2Choice benchmarkCurveName;
 	/**
 	 * Identifies the name of the benchmark curve.
 	 * <p>
@@ -284,7 +291,7 @@ public class BenchmarkCurve2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Curve#Name Curve.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.Curve#mmName Curve.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -303,20 +310,21 @@ public class BenchmarkCurve2 {
 	 * definition} = "Identifies the name of the benchmark curve."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BenchmarkCurveName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBenchmarkCurveName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmName;
 			componentContext_lazy = () -> BenchmarkCurve2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.Name;
 			isDerived = false;
 			xmlTag = "BchmkCrvNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkCurveName";
 			definition = "Identifies the name of the benchmark curve.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> BenchmarkCurveName2Choice.mmObject();
 		}
 	};
+	protected Max256Text benchmarkCurvePoint;
 	/**
 	 * Identifies a point on a benchmark curve. The point can be stated via a
 	 * combination of maturity month/year and coupon.
@@ -330,7 +338,8 @@ public class BenchmarkCurve2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Curve#Point Curve.Point}</li>
+	 * {@linkplain com.tools20022.repository.entity.Curve#mmPoint Curve.mmPoint}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -351,17 +360,17 @@ public class BenchmarkCurve2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BenchmarkCurvePoint = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBenchmarkCurvePoint = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmPoint;
 			componentContext_lazy = () -> BenchmarkCurve2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.Point;
 			isDerived = false;
 			xmlTag = "BchmkCrvPt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkCurvePoint";
 			definition = "Identifies a point on a benchmark curve. The point can be stated via a combination of maturity month/year and coupon.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -369,11 +378,11 @@ public class BenchmarkCurve2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BenchmarkCurve2.Spread, com.tools20022.repository.msg.BenchmarkCurve2.BenchmarkIdentification,
-						com.tools20022.repository.msg.BenchmarkCurve2.BenchmarkPrice, com.tools20022.repository.msg.BenchmarkCurve2.BenchmarkCurveCurrency, com.tools20022.repository.msg.BenchmarkCurve2.BenchmarkCurveName,
-						com.tools20022.repository.msg.BenchmarkCurve2.BenchmarkCurvePoint);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BenchmarkCurve2.mmSpread, com.tools20022.repository.msg.BenchmarkCurve2.mmBenchmarkIdentification,
+						com.tools20022.repository.msg.BenchmarkCurve2.mmBenchmarkPrice, com.tools20022.repository.msg.BenchmarkCurve2.mmBenchmarkCurveCurrency, com.tools20022.repository.msg.BenchmarkCurve2.mmBenchmarkCurveName,
+						com.tools20022.repository.msg.BenchmarkCurve2.mmBenchmarkCurvePoint);
 				trace_lazy = () -> Curve.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -387,5 +396,53 @@ public class BenchmarkCurve2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DecimalNumber getSpread() {
+		return spread;
+	}
+
+	public void setSpread(DecimalNumber spread) {
+		this.spread = spread;
+	}
+
+	public SecurityIdentification14 getBenchmarkIdentification() {
+		return benchmarkIdentification;
+	}
+
+	public void setBenchmarkIdentification(com.tools20022.repository.msg.SecurityIdentification14 benchmarkIdentification) {
+		this.benchmarkIdentification = benchmarkIdentification;
+	}
+
+	public Price1 getBenchmarkPrice() {
+		return benchmarkPrice;
+	}
+
+	public void setBenchmarkPrice(com.tools20022.repository.msg.Price1 benchmarkPrice) {
+		this.benchmarkPrice = benchmarkPrice;
+	}
+
+	public CurrencyCode getBenchmarkCurveCurrency() {
+		return benchmarkCurveCurrency;
+	}
+
+	public void setBenchmarkCurveCurrency(CurrencyCode benchmarkCurveCurrency) {
+		this.benchmarkCurveCurrency = benchmarkCurveCurrency;
+	}
+
+	public BenchmarkCurveName2Choice getBenchmarkCurveName() {
+		return benchmarkCurveName;
+	}
+
+	public void setBenchmarkCurveName(BenchmarkCurveName2Choice benchmarkCurveName) {
+		this.benchmarkCurveName = benchmarkCurveName;
+	}
+
+	public Max256Text getBenchmarkCurvePoint() {
+		return benchmarkCurvePoint;
+	}
+
+	public void setBenchmarkCurvePoint(Max256Text benchmarkCurvePoint) {
+		this.benchmarkCurvePoint = benchmarkCurvePoint;
 	}
 }

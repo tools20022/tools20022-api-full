@@ -35,38 +35,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#ScheduleEventType
- * ScheduleChangeEntry1.ScheduleEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#mmScheduleEventType
+ * ScheduleChangeEntry1.mmScheduleEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#ScheduleEventIdentification
- * ScheduleChangeEntry1.ScheduleEventIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#mmScheduleEventIdentification
+ * ScheduleChangeEntry1.mmScheduleEventIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#EventFrequency
- * ScheduleChangeEntry1.EventFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#mmEventFrequency
+ * ScheduleChangeEntry1.mmEventFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#EventPreviousFrequency
- * ScheduleChangeEntry1.EventPreviousFrequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#EventTime
- * ScheduleChangeEntry1.EventTime}</li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#mmEventPreviousFrequency
+ * ScheduleChangeEntry1.mmEventPreviousFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#EventPreviousTime
- * ScheduleChangeEntry1.EventPreviousTime}</li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#mmEventTime
+ * ScheduleChangeEntry1.mmEventTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#EventDuration
- * ScheduleChangeEntry1.EventDuration}</li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#mmEventPreviousTime
+ * ScheduleChangeEntry1.mmEventPreviousTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#EventPreviousDuration
- * ScheduleChangeEntry1.EventPreviousDuration}</li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#mmEventDuration
+ * ScheduleChangeEntry1.mmEventDuration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#ChangeType
- * ScheduleChangeEntry1.ChangeType}</li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#mmEventPreviousDuration
+ * ScheduleChangeEntry1.mmEventPreviousDuration}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ScheduleChangeEntry1#mmChangeType
+ * ScheduleChangeEntry1.mmChangeType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ScheduleChangeEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemEventType2Choice scheduleEventType;
 	/**
 	 * Type of the scheduled event.
 	 * <p>
@@ -107,7 +109,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Type of the scheduled event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ScheduleEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmScheduleEventType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -115,12 +117,13 @@ public class ScheduleChangeEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduleEventType";
 			definition = "Type of the scheduled event.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemEventType2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SystemEventType2Choice.mmObject();
 		}
 	};
+	protected Exact1NumericText scheduleEventIdentification;
 	/**
 	 * Identificaiton of the scheduled event
 	 * <p>
@@ -149,7 +152,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Identificaiton of the scheduled event"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ScheduleEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmScheduleEventIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -157,11 +160,12 @@ public class ScheduleChangeEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduleEventIdentification";
 			definition = "Identificaiton of the scheduled event";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact1NumericText.mmObject();
 		}
 	};
+	protected Max4Text eventFrequency;
 	/**
 	 * New frequency of the scheduled event.
 	 * <p>
@@ -189,7 +193,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "New frequency of the scheduled event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -197,11 +201,12 @@ public class ScheduleChangeEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventFrequency";
 			definition = "New frequency of the scheduled event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	protected Max4Text eventPreviousFrequency;
 	/**
 	 * Frequency of the scheduled event before change.
 	 * <p>
@@ -229,7 +234,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Frequency of the scheduled event before change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventPreviousFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventPreviousFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -237,11 +242,12 @@ public class ScheduleChangeEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventPreviousFrequency";
 			definition = "Frequency of the scheduled event before change.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	protected ISOTime eventTime;
 	/**
 	 * New scheduled time of the event.
 	 * <p>
@@ -269,7 +275,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "New scheduled time of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -277,11 +283,12 @@ public class ScheduleChangeEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTime";
 			definition = "New scheduled time of the event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	protected ISOTime eventPreviousTime;
 	/**
 	 * Scheduled time of the event before change.
 	 * <p>
@@ -309,7 +316,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Scheduled time of the event before change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventPreviousTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventPreviousTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -317,11 +324,12 @@ public class ScheduleChangeEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventPreviousTime";
 			definition = "Scheduled time of the event before change.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	protected Max3NumericText eventDuration;
 	/**
 	 * Minimum duration of event.
 	 * <p>
@@ -350,7 +358,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Minimum duration of event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventDuration = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventDuration = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -358,11 +366,12 @@ public class ScheduleChangeEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventDuration";
 			definition = "Minimum duration of event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected Max3NumericText eventPreviousDuration;
 	/**
 	 * Set earlier duration of event.
 	 * <p>
@@ -391,7 +400,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Set earlier duration of event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventPreviousDuration = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventPreviousDuration = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -399,11 +408,12 @@ public class ScheduleChangeEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventPreviousDuration";
 			definition = "Set earlier duration of event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	protected Max35Text changeType;
 	/**
 	 * Type of schedule modification (i.e. event cancelled, new event).
 	 * <p>
@@ -432,7 +442,7 @@ public class ScheduleChangeEntry1 {
 	 * "Type of schedule modification (i.e. event cancelled, new event)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChangeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChangeType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -440,8 +450,8 @@ public class ScheduleChangeEntry1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeType";
 			definition = "Type of schedule modification (i.e. event cancelled, new event).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -449,16 +459,88 @@ public class ScheduleChangeEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ScheduleChangeEntry1.ScheduleEventType, com.tools20022.repository.msg.ScheduleChangeEntry1.ScheduleEventIdentification,
-						com.tools20022.repository.msg.ScheduleChangeEntry1.EventFrequency, com.tools20022.repository.msg.ScheduleChangeEntry1.EventPreviousFrequency, com.tools20022.repository.msg.ScheduleChangeEntry1.EventTime,
-						com.tools20022.repository.msg.ScheduleChangeEntry1.EventPreviousTime, com.tools20022.repository.msg.ScheduleChangeEntry1.EventDuration, com.tools20022.repository.msg.ScheduleChangeEntry1.EventPreviousDuration,
-						com.tools20022.repository.msg.ScheduleChangeEntry1.ChangeType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ScheduleChangeEntry1.mmScheduleEventType, com.tools20022.repository.msg.ScheduleChangeEntry1.mmScheduleEventIdentification,
+						com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventFrequency, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventPreviousFrequency, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventTime,
+						com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventPreviousTime, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventDuration, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventPreviousDuration,
+						com.tools20022.repository.msg.ScheduleChangeEntry1.mmChangeType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ScheduleChangeEntry1";
 				definition = "Details about the schedule change.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemEventType2Choice getScheduleEventType() {
+		return scheduleEventType;
+	}
+
+	public void setScheduleEventType(SystemEventType2Choice scheduleEventType) {
+		this.scheduleEventType = scheduleEventType;
+	}
+
+	public Exact1NumericText getScheduleEventIdentification() {
+		return scheduleEventIdentification;
+	}
+
+	public void setScheduleEventIdentification(Exact1NumericText scheduleEventIdentification) {
+		this.scheduleEventIdentification = scheduleEventIdentification;
+	}
+
+	public Max4Text getEventFrequency() {
+		return eventFrequency;
+	}
+
+	public void setEventFrequency(Max4Text eventFrequency) {
+		this.eventFrequency = eventFrequency;
+	}
+
+	public Max4Text getEventPreviousFrequency() {
+		return eventPreviousFrequency;
+	}
+
+	public void setEventPreviousFrequency(Max4Text eventPreviousFrequency) {
+		this.eventPreviousFrequency = eventPreviousFrequency;
+	}
+
+	public ISOTime getEventTime() {
+		return eventTime;
+	}
+
+	public void setEventTime(ISOTime eventTime) {
+		this.eventTime = eventTime;
+	}
+
+	public ISOTime getEventPreviousTime() {
+		return eventPreviousTime;
+	}
+
+	public void setEventPreviousTime(ISOTime eventPreviousTime) {
+		this.eventPreviousTime = eventPreviousTime;
+	}
+
+	public Max3NumericText getEventDuration() {
+		return eventDuration;
+	}
+
+	public void setEventDuration(Max3NumericText eventDuration) {
+		this.eventDuration = eventDuration;
+	}
+
+	public Max3NumericText getEventPreviousDuration() {
+		return eventPreviousDuration;
+	}
+
+	public void setEventPreviousDuration(Max3NumericText eventPreviousDuration) {
+		this.eventPreviousDuration = eventPreviousDuration;
+	}
+
+	public Max35Text getChangeType() {
+		return changeType;
+	}
+
+	public void setChangeType(Max35Text changeType) {
+		this.changeType = changeType;
 	}
 }

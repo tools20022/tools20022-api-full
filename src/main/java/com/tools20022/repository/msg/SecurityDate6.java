@@ -34,20 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityDate6#PostingDate
- * SecurityDate6.PostingDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityDate6#AvailableDate
- * SecurityDate6.AvailableDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityDate6#PariPassuDate
- * SecurityDate6.PariPassuDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityDate6#mmPostingDate
+ * SecurityDate6.mmPostingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityDate6#mmAvailableDate
+ * SecurityDate6.mmAvailableDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityDate6#mmPariPassuDate
+ * SecurityDate6.mmPariPassuDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityDate6#DividendRankingDate
- * SecurityDate6.DividendRankingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityDate6#mmDividendRankingDate
+ * SecurityDate6.mmDividendRankingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityDate6#EarliestPaymentDate
- * SecurityDate6.EarliestPaymentDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityDate6#PaymentDate
- * SecurityDate6.PaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityDate6#mmEarliestPaymentDate
+ * SecurityDate6.mmEarliestPaymentDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityDate6#mmPaymentDate
+ * SecurityDate6.mmPaymentDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityDate6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice postingDate;
 	/**
 	 * Date of the posting (credit or debit) to the account.
 	 * <p>
@@ -89,8 +90,8 @@ public class SecurityDate6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingDateTime
-	 * CorporateActionDistribution.PostingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingDateTime
+	 * CorporateActionDistribution.mmPostingDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,28 +110,30 @@ public class SecurityDate6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecurityDate11#PostingDate
-	 * SecurityDate11.PostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate11#mmPostingDate
+	 * SecurityDate11.mmPostingDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PostingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPostingDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> SecurityDate6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingDateTime;
 			isDerived = false;
 			xmlTag = "PstngDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date of the posting (credit or debit) to the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.PostingDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.mmPostingDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateFormat19Choice availableDate;
 	/**
 	 * Date/time at which securities become available for trading, for example
 	 * first dealing date.
@@ -143,8 +146,8 @@ public class SecurityDate6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#AvailableDate
-	 * Security.AvailableDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmAvailableDate
+	 * Security.mmAvailableDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,28 +169,29 @@ public class SecurityDate6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityDate11#AvailableDate
-	 * SecurityDate11.AvailableDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate11#mmAvailableDate
+	 * SecurityDate11.mmAvailableDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AvailableDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAvailableDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmAvailableDate;
 			componentContext_lazy = () -> SecurityDate6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.AvailableDate;
 			isDerived = false;
 			xmlTag = "AvlblDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDate";
 			definition = "Date/time at which securities become available for trading, for example first dealing date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.AvailableDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.mmAvailableDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat19Choice.mmObject();
 		}
 	};
+	protected DateFormat19Choice pariPassuDate;
 	/**
 	 * Date/time at which security will assimilate, become fungible, or have the
 	 * same rights to dividends as the parent issue.
@@ -200,8 +204,8 @@ public class SecurityDate6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#PariPassuDate
-	 * CorporateActionEvent.PariPassuDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmPariPassuDate
+	 * CorporateActionEvent.mmPariPassuDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -223,28 +227,29 @@ public class SecurityDate6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityDate11#PariPassuDate
-	 * SecurityDate11.PariPassuDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate11#mmPariPassuDate
+	 * SecurityDate11.mmPariPassuDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PariPassuDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPariPassuDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmPariPassuDate;
 			componentContext_lazy = () -> SecurityDate6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.PariPassuDate;
 			isDerived = false;
 			xmlTag = "PrpssDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassuDate";
 			definition = "Date/time at which security will assimilate, become fungible, or have the same rights to dividends as the parent issue.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.PariPassuDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.mmPariPassuDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat19Choice.mmObject();
 		}
 	};
+	protected DateFormat19Choice dividendRankingDate;
 	/**
 	 * Date/time at which a security will be entitled to a dividend.
 	 * <p>
@@ -256,8 +261,8 @@ public class SecurityDate6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#DividendRankingDate
-	 * Dividend.DividendRankingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmDividendRankingDate
+	 * Dividend.mmDividendRankingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -278,28 +283,29 @@ public class SecurityDate6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityDate11#DividendRankingDate
-	 * SecurityDate11.DividendRankingDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate11#mmDividendRankingDate
+	 * SecurityDate11.mmDividendRankingDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DividendRankingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDividendRankingDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmDividendRankingDate;
 			componentContext_lazy = () -> SecurityDate6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.DividendRankingDate;
 			isDerived = false;
 			xmlTag = "DvddRnkgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendRankingDate";
 			definition = "Date/time at which a security will be entitled to a dividend.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.DividendRankingDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.mmDividendRankingDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat19Choice.mmObject();
 		}
 	};
+	protected DateFormat19Choice earliestPaymentDate;
 	/**
 	 * Date/time at which a payment can be made, for example, if payment date is
 	 * a non-business day or to indicate the first payment date of an offer.
@@ -312,8 +318,8 @@ public class SecurityDate6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#EarliestPaymentDate
-	 * ProceedsDefinition.EarliestPaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmEarliestPaymentDate
+	 * ProceedsDefinition.mmEarliestPaymentDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -335,28 +341,29 @@ public class SecurityDate6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityDate11#EarliestPaymentDate
-	 * SecurityDate11.EarliestPaymentDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate11#mmEarliestPaymentDate
+	 * SecurityDate11.mmEarliestPaymentDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EarliestPaymentDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEarliestPaymentDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmEarliestPaymentDate;
 			componentContext_lazy = () -> SecurityDate6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.EarliestPaymentDate;
 			isDerived = false;
 			xmlTag = "EarlstPmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/time at which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.EarliestPaymentDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.mmEarliestPaymentDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat19Choice.mmObject();
 		}
 	};
+	protected DateFormat19Choice paymentDate;
 	/**
 	 * Date/time at which the movement is due to take place (cash and/or
 	 * securities).
@@ -369,8 +376,8 @@ public class SecurityDate6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#MovementDate
-	 * CorporateActionDistribution.MovementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmMovementDate
+	 * CorporateActionDistribution.mmMovementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -391,36 +398,37 @@ public class SecurityDate6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.SecurityDate11#PaymentDate
-	 * SecurityDate11.PaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate11#mmPaymentDate
+	 * SecurityDate11.mmPaymentDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentDate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> SecurityDate6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.MovementDate;
 			isDerived = false;
 			xmlTag = "PmtDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement is due to take place (cash and/or securities).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.PaymentDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.mmPaymentDate);
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat19Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate6.PostingDate, com.tools20022.repository.msg.SecurityDate6.AvailableDate, com.tools20022.repository.msg.SecurityDate6.PariPassuDate,
-						com.tools20022.repository.msg.SecurityDate6.DividendRankingDate, com.tools20022.repository.msg.SecurityDate6.EarliestPaymentDate, com.tools20022.repository.msg.SecurityDate6.PaymentDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate6.mmPostingDate, com.tools20022.repository.msg.SecurityDate6.mmAvailableDate, com.tools20022.repository.msg.SecurityDate6.mmPariPassuDate,
+						com.tools20022.repository.msg.SecurityDate6.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate6.mmEarliestPaymentDate, com.tools20022.repository.msg.SecurityDate6.mmPaymentDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityDate6";
 				definition = "Specifies security date details.";
@@ -428,5 +436,53 @@ public class SecurityDate6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getPostingDate() {
+		return postingDate;
+	}
+
+	public void setPostingDate(DateAndDateTimeChoice postingDate) {
+		this.postingDate = postingDate;
+	}
+
+	public DateFormat19Choice getAvailableDate() {
+		return availableDate;
+	}
+
+	public void setAvailableDate(DateFormat19Choice availableDate) {
+		this.availableDate = availableDate;
+	}
+
+	public DateFormat19Choice getPariPassuDate() {
+		return pariPassuDate;
+	}
+
+	public void setPariPassuDate(DateFormat19Choice pariPassuDate) {
+		this.pariPassuDate = pariPassuDate;
+	}
+
+	public DateFormat19Choice getDividendRankingDate() {
+		return dividendRankingDate;
+	}
+
+	public void setDividendRankingDate(DateFormat19Choice dividendRankingDate) {
+		this.dividendRankingDate = dividendRankingDate;
+	}
+
+	public DateFormat19Choice getEarliestPaymentDate() {
+		return earliestPaymentDate;
+	}
+
+	public void setEarliestPaymentDate(DateFormat19Choice earliestPaymentDate) {
+		this.earliestPaymentDate = earliestPaymentDate;
+	}
+
+	public DateFormat19Choice getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(DateFormat19Choice paymentDate) {
+		this.paymentDate = paymentDate;
 	}
 }

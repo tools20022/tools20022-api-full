@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.Operation1Code;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides constrains on a range of business values.
@@ -34,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountOrPercentageRange#Operation
- * AmountOrPercentageRange.Operation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountOrPercentageRange#Term
- * AmountOrPercentageRange.Term}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountOrPercentageRange#mmOperation
+ * AmountOrPercentageRange.mmOperation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountOrPercentageRange#mmTerm
+ * AmountOrPercentageRange.mmTerm}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountOrPercentageRange {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Operation1Code operation;
 	/**
 	 * Indication of the relationship between two variables.
 	 * <p>
@@ -86,7 +88,7 @@ public class AmountOrPercentageRange {
 	 * definition} = "Indication of the relationship between two variables."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Operation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOperation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountOrPercentageRange.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class AmountOrPercentageRange {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operation";
 			definition = "Indication of the relationship between two variables.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Operation1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Term1> term;
 	/**
 	 * Indicates one of the constraints of a range of business values.
 	 * <p>
@@ -125,7 +128,7 @@ public class AmountOrPercentageRange {
 	 * "Indicates one of the constraints of a range of business values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Term = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTerm = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AmountOrPercentageRange.mmObject();
 			isDerived = false;
@@ -133,23 +136,39 @@ public class AmountOrPercentageRange {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Term";
 			definition = "Indicates one of the constraints of a range of business values.";
-			minOccurs = 0;
 			maxOccurs = 10;
-			type_lazy = () -> Term1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Term1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountOrPercentageRange.Operation, com.tools20022.repository.msg.AmountOrPercentageRange.Term);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountOrPercentageRange.mmOperation, com.tools20022.repository.msg.AmountOrPercentageRange.mmTerm);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountOrPercentageRange";
 				definition = "Provides constrains on a range of business values.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Operation1Code getOperation() {
+		return operation;
+	}
+
+	public void setOperation(Operation1Code operation) {
+		this.operation = operation;
+	}
+
+	public List<Term1> getTerm() {
+		return term;
+	}
+
+	public void setTerm(List<com.tools20022.repository.msg.Term1> term) {
+		this.term = term;
 	}
 }

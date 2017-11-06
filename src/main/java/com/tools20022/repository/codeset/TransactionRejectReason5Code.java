@@ -35,48 +35,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#IncorrectAccountNumber
- * TransactionRejectReason5Code.IncorrectAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmIncorrectAccountNumber
+ * TransactionRejectReason5Code.mmIncorrectAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#ClosedAccountNumber
- * TransactionRejectReason5Code.ClosedAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmClosedAccountNumber
+ * TransactionRejectReason5Code.mmClosedAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#BlockedAccount
- * TransactionRejectReason5Code.BlockedAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmBlockedAccount
+ * TransactionRejectReason5Code.mmBlockedAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#TransactionForbidden
- * TransactionRejectReason5Code.TransactionForbidden}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmTransactionForbidden
+ * TransactionRejectReason5Code.mmTransactionForbidden}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#InsufficientFunds
- * TransactionRejectReason5Code.InsufficientFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmInsufficientFunds
+ * TransactionRejectReason5Code.mmInsufficientFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#Duplication
- * TransactionRejectReason5Code.Duplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmDuplication
+ * TransactionRejectReason5Code.mmDuplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#MissingCreditorAddress
- * TransactionRejectReason5Code.MissingCreditorAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmMissingCreditorAddress
+ * TransactionRejectReason5Code.mmMissingCreditorAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#NoMandate
- * TransactionRejectReason5Code.NoMandate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmNoMandate
+ * TransactionRejectReason5Code.mmNoMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#RefundRequestByEndCustomer
- * TransactionRejectReason5Code.RefundRequestByEndCustomer}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmRefundRequestByEndCustomer
+ * TransactionRejectReason5Code.mmRefundRequestByEndCustomer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#EndCustomerDeceased
- * TransactionRejectReason5Code.EndCustomerDeceased}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmEndCustomerDeceased
+ * TransactionRejectReason5Code.mmEndCustomerDeceased}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#NotSpecifiedReasonCustomerGenerated
- * TransactionRejectReason5Code.NotSpecifiedReasonCustomerGenerated}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmNotSpecifiedReasonCustomerGenerated
+ * TransactionRejectReason5Code.mmNotSpecifiedReasonCustomerGenerated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#NotSpecifiedReasonAgentGenerated
- * TransactionRejectReason5Code.NotSpecifiedReasonAgentGenerated}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmNotSpecifiedReasonAgentGenerated
+ * TransactionRejectReason5Code.mmNotSpecifiedReasonAgentGenerated}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -114,7 +114,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "IncorrectAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectAccountNumber = new MMCode() {
+	public static final MMCode mmIncorrectAccountNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccountNumber";
@@ -137,7 +137,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "ClosedAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode ClosedAccountNumber = new MMCode() {
+	public static final MMCode mmClosedAccountNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccountNumber";
@@ -160,7 +160,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "BlockedAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode BlockedAccount = new MMCode() {
+	public static final MMCode mmBlockedAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedAccount";
@@ -183,7 +183,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "TransactionForbidden"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionForbidden = new MMCode() {
+	public static final MMCode mmTransactionForbidden = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionForbidden";
@@ -206,7 +206,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "InsufficientFunds"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientFunds = new MMCode() {
+	public static final MMCode mmInsufficientFunds = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientFunds";
@@ -229,7 +229,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "Duplication"</li>
 	 * </ul>
 	 */
-	public static final MMCode Duplication = new MMCode() {
+	public static final MMCode mmDuplication = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplication";
@@ -252,7 +252,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "MissingCreditorAddress"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingCreditorAddress = new MMCode() {
+	public static final MMCode mmMissingCreditorAddress = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCreditorAddress";
@@ -275,7 +275,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "NoMandate"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoMandate = new MMCode() {
+	public static final MMCode mmNoMandate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMandate";
@@ -298,7 +298,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "RefundRequestByEndCustomer"</li>
 	 * </ul>
 	 */
-	public static final MMCode RefundRequestByEndCustomer = new MMCode() {
+	public static final MMCode mmRefundRequestByEndCustomer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundRequestByEndCustomer";
@@ -321,7 +321,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "EndCustomerDeceased"</li>
 	 * </ul>
 	 */
-	public static final MMCode EndCustomerDeceased = new MMCode() {
+	public static final MMCode mmEndCustomerDeceased = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndCustomerDeceased";
@@ -344,7 +344,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "NotSpecifiedReasonCustomerGenerated"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotSpecifiedReasonCustomerGenerated = new MMCode() {
+	public static final MMCode mmNotSpecifiedReasonCustomerGenerated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedReasonCustomerGenerated";
@@ -367,7 +367,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "NotSpecifiedReasonAgentGenerated"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotSpecifiedReasonAgentGenerated = new MMCode() {
+	public static final MMCode mmNotSpecifiedReasonAgentGenerated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedReasonAgentGenerated";
@@ -378,17 +378,17 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AC01");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionRejectReason5Code";
 				definition = "Specifies the reason for a transaction to be rejected or returned by an instructed agent or somebody acting on behalf of an instructed agent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionRejectReason5Code.IncorrectAccountNumber, com.tools20022.repository.codeset.TransactionRejectReason5Code.ClosedAccountNumber,
-						com.tools20022.repository.codeset.TransactionRejectReason5Code.BlockedAccount, com.tools20022.repository.codeset.TransactionRejectReason5Code.TransactionForbidden,
-						com.tools20022.repository.codeset.TransactionRejectReason5Code.InsufficientFunds, com.tools20022.repository.codeset.TransactionRejectReason5Code.Duplication,
-						com.tools20022.repository.codeset.TransactionRejectReason5Code.MissingCreditorAddress, com.tools20022.repository.codeset.TransactionRejectReason5Code.NoMandate,
-						com.tools20022.repository.codeset.TransactionRejectReason5Code.RefundRequestByEndCustomer, com.tools20022.repository.codeset.TransactionRejectReason5Code.EndCustomerDeceased,
-						com.tools20022.repository.codeset.TransactionRejectReason5Code.NotSpecifiedReasonCustomerGenerated, com.tools20022.repository.codeset.TransactionRejectReason5Code.NotSpecifiedReasonAgentGenerated);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionRejectReason5Code.mmIncorrectAccountNumber, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmClosedAccountNumber,
+						com.tools20022.repository.codeset.TransactionRejectReason5Code.mmBlockedAccount, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmTransactionForbidden,
+						com.tools20022.repository.codeset.TransactionRejectReason5Code.mmInsufficientFunds, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmDuplication,
+						com.tools20022.repository.codeset.TransactionRejectReason5Code.mmMissingCreditorAddress, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmNoMandate,
+						com.tools20022.repository.codeset.TransactionRejectReason5Code.mmRefundRequestByEndCustomer, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmEndCustomerDeceased,
+						com.tools20022.repository.codeset.TransactionRejectReason5Code.mmNotSpecifiedReasonCustomerGenerated, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmNotSpecifiedReasonAgentGenerated);
 				trace_lazy = () -> TransactionReasonCode.mmObject();
 			}
 		});

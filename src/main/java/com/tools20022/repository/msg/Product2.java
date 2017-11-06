@@ -37,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Product2#ProductCode
- * Product2.ProductCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Product2#UnitOfMeasure
- * Product2.UnitOfMeasure}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Product2#ProductQuantity
- * Product2.ProductQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Product2#UnitPrice
- * Product2.UnitPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Product2#ProductAmount
- * Product2.ProductAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Product2#TaxType
- * Product2.TaxType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product2#mmProductCode
+ * Product2.mmProductCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product2#mmUnitOfMeasure
+ * Product2.mmUnitOfMeasure}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product2#mmProductQuantity
+ * Product2.mmProductQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product2#mmUnitPrice
+ * Product2.mmUnitPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product2#mmProductAmount
+ * Product2.mmProductAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product2#mmTaxType
+ * Product2.mmTaxType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Product2#AdditionalProductInformation
- * Product2.AdditionalProductInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.Product2#mmAdditionalProductInformation
+ * Product2.mmAdditionalProductInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Product2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text productCode;
 	/**
 	 * Product code of the item purchased.
 	 * <p>
@@ -86,8 +87,8 @@ public class Product2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductIdentification#Identifier
-	 * ProductIdentification.Identifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmIdentifier
+	 * ProductIdentification.mmIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Product2
@@ -105,20 +106,21 @@ public class Product2 {
 	 * definition} = "Product code of the item purchased."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProductCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProductCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmIdentifier;
 			componentContext_lazy = () -> Product2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.Identifier;
 			isDerived = false;
 			xmlTag = "PdctCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCode";
 			definition = "Product code of the item purchased.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected UnitOfMeasure1Code unitOfMeasure;
 	/**
 	 * Unit of measure of the item purchased.
 	 * <p>
@@ -132,8 +134,8 @@ public class Product2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#UnitOfMeasure
-	 * ProductQuantity.UnitOfMeasure}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmUnitOfMeasure
+	 * ProductQuantity.mmUnitOfMeasure}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Product2
@@ -151,20 +153,21 @@ public class Product2 {
 	 * definition} = "Unit of measure of the item purchased."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitOfMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitOfMeasure = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> Product2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.UnitOfMeasure;
 			isDerived = false;
 			xmlTag = "UnitOfMeasr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasure";
 			definition = "Unit of measure of the item purchased.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> UnitOfMeasure1Code.mmObject();
 		}
 	};
+	protected DecimalNumber productQuantity;
 	/**
 	 * Product quantity.
 	 * <p>
@@ -178,8 +181,8 @@ public class Product2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#Value
-	 * ProductQuantity.Value}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmValue
+	 * ProductQuantity.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Product2
@@ -197,20 +200,21 @@ public class Product2 {
 	 * definition} = "Product quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProductQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProductQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
 			componentContext_lazy = () -> Product2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.Value;
 			isDerived = false;
 			xmlTag = "PdctQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductQuantity";
 			definition = "Product quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount unitPrice;
 	/**
 	 * Price per unit of product.
 	 * <p>
@@ -224,8 +228,8 @@ public class Product2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Product#UnitPrice
-	 * Product.UnitPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Product#mmUnitPrice
+	 * Product.mmUnitPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Product2
@@ -243,20 +247,21 @@ public class Product2 {
 	 * definition} = "Price per unit of product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmUnitPrice;
 			componentContext_lazy = () -> Product2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.UnitPrice;
 			isDerived = false;
 			xmlTag = "UnitPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitPrice";
 			definition = "Price per unit of product.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount productAmount;
 	/**
 	 * Monetary value of purchased product.
 	 * <p>
@@ -284,7 +289,7 @@ public class Product2 {
 	 * definition} = "Monetary value of purchased product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProductAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProductAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Product2.mmObject();
 			isDerived = false;
@@ -292,11 +297,12 @@ public class Product2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductAmount";
 			definition = "Monetary value of purchased product.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max35Text taxType;
 	/**
 	 * Information on tax paid on the product.
 	 * <p>
@@ -323,7 +329,7 @@ public class Product2 {
 	 * definition} = "Information on tax paid on the product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Product2.mmObject();
 			isDerived = false;
@@ -331,11 +337,12 @@ public class Product2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxType";
 			definition = "Information on tax paid on the product.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text additionalProductInformation;
 	/**
 	 * Additional information related to the product.
 	 * <p>
@@ -362,7 +369,7 @@ public class Product2 {
 	 * definition} = "Additional information related to the product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalProductInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalProductInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Product2.mmObject();
 			isDerived = false;
@@ -370,8 +377,8 @@ public class Product2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalProductInformation";
 			definition = "Additional information related to the product.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -379,16 +386,72 @@ public class Product2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Product2.ProductCode, com.tools20022.repository.msg.Product2.UnitOfMeasure, com.tools20022.repository.msg.Product2.ProductQuantity,
-						com.tools20022.repository.msg.Product2.UnitPrice, com.tools20022.repository.msg.Product2.ProductAmount, com.tools20022.repository.msg.Product2.TaxType,
-						com.tools20022.repository.msg.Product2.AdditionalProductInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Product2.mmProductCode, com.tools20022.repository.msg.Product2.mmUnitOfMeasure, com.tools20022.repository.msg.Product2.mmProductQuantity,
+						com.tools20022.repository.msg.Product2.mmUnitPrice, com.tools20022.repository.msg.Product2.mmProductAmount, com.tools20022.repository.msg.Product2.mmTaxType,
+						com.tools20022.repository.msg.Product2.mmAdditionalProductInformation);
 				trace_lazy = () -> Product.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Product2";
 				definition = "Product purchased to be paid.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getProductCode() {
+		return productCode;
+	}
+
+	public void setProductCode(Max70Text productCode) {
+		this.productCode = productCode;
+	}
+
+	public UnitOfMeasure1Code getUnitOfMeasure() {
+		return unitOfMeasure;
+	}
+
+	public void setUnitOfMeasure(UnitOfMeasure1Code unitOfMeasure) {
+		this.unitOfMeasure = unitOfMeasure;
+	}
+
+	public DecimalNumber getProductQuantity() {
+		return productQuantity;
+	}
+
+	public void setProductQuantity(DecimalNumber productQuantity) {
+		this.productQuantity = productQuantity;
+	}
+
+	public ImpliedCurrencyAndAmount getUnitPrice() {
+		return unitPrice;
+	}
+
+	public void setUnitPrice(ImpliedCurrencyAndAmount unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+
+	public ImpliedCurrencyAndAmount getProductAmount() {
+		return productAmount;
+	}
+
+	public void setProductAmount(ImpliedCurrencyAndAmount productAmount) {
+		this.productAmount = productAmount;
+	}
+
+	public Max35Text getTaxType() {
+		return taxType;
+	}
+
+	public void setTaxType(Max35Text taxType) {
+		this.taxType = taxType;
+	}
+
+	public Max35Text getAdditionalProductInformation() {
+		return additionalProductInformation;
+	}
+
+	public void setAdditionalProductInformation(Max35Text additionalProductInformation) {
+		this.additionalProductInformation = additionalProductInformation;
 	}
 }

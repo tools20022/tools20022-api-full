@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CountryAndResidentialStatusType1#Country
- * CountryAndResidentialStatusType1.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.CountryAndResidentialStatusType1#mmCountry
+ * CountryAndResidentialStatusType1.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CountryAndResidentialStatusType1#ResidentialStatus
- * CountryAndResidentialStatusType1.ResidentialStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CountryAndResidentialStatusType1#mmResidentialStatus
+ * CountryAndResidentialStatusType1.mmResidentialStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CountryAndResidentialStatusType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Country to which the residential status is applicable.
 	 * <p>
@@ -82,7 +83,8 @@ public class CountryAndResidentialStatusType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,27 +105,28 @@ public class CountryAndResidentialStatusType1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CountryAndResidentialStatusType2#Country
-	 * CountryAndResidentialStatusType2.Country}</li>
+	 * {@linkplain com.tools20022.repository.msg.CountryAndResidentialStatusType2#mmCountry
+	 * CountryAndResidentialStatusType2.mmCountry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> CountryAndResidentialStatusType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country to which the residential status is applicable.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CountryAndResidentialStatusType2.Country);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CountryAndResidentialStatusType2.mmCountry);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected ResidentialStatus1Code residentialStatus;
 	/**
 	 * Residential status of an individual, for example, non-permanent resident.
 	 * <p>
@@ -137,8 +140,8 @@ public class CountryAndResidentialStatusType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#ResidentialStatus
-	 * Person.ResidentialStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmResidentialStatus
+	 * Person.mmResidentialStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,24 +164,24 @@ public class CountryAndResidentialStatusType1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CountryAndResidentialStatusType2#ResidentialStatus
-	 * CountryAndResidentialStatusType2.ResidentialStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.CountryAndResidentialStatusType2#mmResidentialStatus
+	 * CountryAndResidentialStatusType2.mmResidentialStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResidentialStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResidentialStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmResidentialStatus;
 			componentContext_lazy = () -> CountryAndResidentialStatusType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.ResidentialStatus;
 			isDerived = false;
 			xmlTag = "ResdtlSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidentialStatus";
 			definition = "Residential status of an individual, for example, non-permanent resident.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CountryAndResidentialStatusType2.ResidentialStatus);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CountryAndResidentialStatusType2.mmResidentialStatus);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ResidentialStatus1Code.mmObject();
 		}
 	};
@@ -186,9 +189,9 @@ public class CountryAndResidentialStatusType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CountryAndResidentialStatusType1.Country, com.tools20022.repository.msg.CountryAndResidentialStatusType1.ResidentialStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CountryAndResidentialStatusType1.mmCountry, com.tools20022.repository.msg.CountryAndResidentialStatusType1.mmResidentialStatus);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CountryAndResidentialStatusType1";
 				definition = "Country and residential status.";
@@ -196,5 +199,21 @@ public class CountryAndResidentialStatusType1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public ResidentialStatus1Code getResidentialStatus() {
+		return residentialStatus;
+	}
+
+	public void setResidentialStatus(ResidentialStatus1Code residentialStatus) {
+		this.residentialStatus = residentialStatus;
 	}
 }

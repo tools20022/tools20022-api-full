@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartiallySettled21Choice#Code
- * PartiallySettled21Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.PartiallySettled21Choice#mmCode
+ * PartiallySettled21Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartiallySettled21Choice#Proprietary
- * PartiallySettled21Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PartiallySettled21Choice#mmProprietary
+ * PartiallySettled21Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartiallySettled21Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettledStatusReason2Code code;
 	/**
 	 * Partially settled reason expressed as a code.
 	 * <p>
@@ -93,11 +94,11 @@ public class PartiallySettled21Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#Code
-	 * RejectedReason20Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#mmCode
+	 * RejectedReason20Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartiallySettled21Choice.mmObject();
 			isDerived = false;
@@ -105,12 +106,13 @@ public class PartiallySettled21Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Partially settled reason expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedReason20Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedReason20Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettledStatusReason2Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietary;
 	/**
 	 * Partially settled reason expressed as a proprietary code.
 	 * <p>
@@ -141,11 +143,11 @@ public class PartiallySettled21Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#Proprietary
-	 * RejectedReason20Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#mmProprietary
+	 * RejectedReason20Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartiallySettled21Choice.mmObject();
 			isDerived = false;
@@ -153,9 +155,9 @@ public class PartiallySettled21Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Partially settled reason expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedReason20Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedReason20Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
@@ -163,8 +165,8 @@ public class PartiallySettled21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartiallySettled21Choice.Code, com.tools20022.repository.choice.PartiallySettled21Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartiallySettled21Choice.mmCode, com.tools20022.repository.choice.PartiallySettled21Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartiallySettled21Choice";
 				definition = "Choice between formats for a partially settled reason.";
@@ -172,5 +174,21 @@ public class PartiallySettled21Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettledStatusReason2Code getCode() {
+		return code;
+	}
+
+	public void setCode(SettledStatusReason2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

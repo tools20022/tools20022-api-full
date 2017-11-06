@@ -35,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#PlaceAndName
- * CorporateActionDateSD7.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#mmPlaceAndName
+ * CorporateActionDateSD7.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#ActualEarlyExpirationDate
- * CorporateActionDateSD7.ActualEarlyExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#mmActualEarlyExpirationDate
+ * CorporateActionDateSD7.mmActualEarlyExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#ActualProtectExpirationDate
- * CorporateActionDateSD7.ActualProtectExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#mmActualProtectExpirationDate
+ * CorporateActionDateSD7.mmActualProtectExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#ActualEarlyProtectExpirationDate
- * CorporateActionDateSD7.ActualEarlyProtectExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#mmActualEarlyProtectExpirationDate
+ * CorporateActionDateSD7.mmActualEarlyProtectExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#DTCEarlyProtectExpirationDate
- * CorporateActionDateSD7.DTCEarlyProtectExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#mmDTCEarlyProtectExpirationDate
+ * CorporateActionDateSD7.mmDTCEarlyProtectExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#ActualEarlyCoverProtectExpirationDate
- * CorporateActionDateSD7.ActualEarlyCoverProtectExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#mmActualEarlyCoverProtectExpirationDate
+ * CorporateActionDateSD7.mmActualEarlyCoverProtectExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#DTCEarlyCoverProtectExpirationDate
- * CorporateActionDateSD7.DTCEarlyCoverProtectExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD7#mmDTCEarlyCoverProtectExpirationDate
+ * CorporateActionDateSD7.mmDTCEarlyCoverProtectExpirationDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDateSD7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -104,7 +105,7 @@ public class CorporateActionDateSD7 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -112,11 +113,12 @@ public class CorporateActionDateSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODateTime actualEarlyExpirationDate;
 	/**
 	 * Actual early expiration time as set by the issuer/offer/agent.
 	 * <p>
@@ -145,7 +147,7 @@ public class CorporateActionDateSD7 {
 	 * "Actual early expiration time as set by the issuer/offer/agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActualEarlyExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActualEarlyExpirationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class CorporateActionDateSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualEarlyExpirationDate";
 			definition = "Actual early expiration time as set by the issuer/offer/agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime actualProtectExpirationDate;
 	/**
 	 * Last day protect instructions can be submitted to the issuer / agent.
 	 * <p>
@@ -186,7 +189,7 @@ public class CorporateActionDateSD7 {
 	 * "Last day protect instructions can be submitted to the issuer / agent. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActualProtectExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActualProtectExpirationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -194,11 +197,12 @@ public class CorporateActionDateSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualProtectExpirationDate";
 			definition = "Last day protect instructions can be submitted to the issuer / agent. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime actualEarlyProtectExpirationDate;
 	/**
 	 * Last day protect instructions can be submitted to the issuer / agent for
 	 * the early expiration.
@@ -229,7 +233,7 @@ public class CorporateActionDateSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActualEarlyProtectExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActualEarlyProtectExpirationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -237,11 +241,12 @@ public class CorporateActionDateSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualEarlyProtectExpirationDate";
 			definition = "Last day protect instructions can be submitted to the issuer / agent for the early expiration. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime dTCEarlyProtectExpirationDate;
 	/**
 	 * Last day protect instructions can be submitted to DTC for the early
 	 * expiration.
@@ -272,7 +277,7 @@ public class CorporateActionDateSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCEarlyProtectExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCEarlyProtectExpirationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -280,11 +285,12 @@ public class CorporateActionDateSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCEarlyProtectExpirationDate";
 			definition = "Last day protect instructions can be submitted to DTC for the early expiration.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime actualEarlyCoverProtectExpirationDate;
 	/**
 	 * Last day cover early protect instructions can be submitted to the issuer
 	 * / agent.
@@ -315,7 +321,7 @@ public class CorporateActionDateSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActualEarlyCoverProtectExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActualEarlyCoverProtectExpirationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -323,11 +329,12 @@ public class CorporateActionDateSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualEarlyCoverProtectExpirationDate";
 			definition = "Last day cover early protect instructions can be submitted to the issuer / agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime dTCEarlyCoverProtectExpirationDate;
 	/**
 	 * Last day cover early protect instructions can be submitted to DTC.
 	 * <p>
@@ -356,7 +363,7 @@ public class CorporateActionDateSD7 {
 	 * "Last day cover early protect instructions can be submitted to DTC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCEarlyCoverProtectExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCEarlyCoverProtectExpirationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -364,8 +371,8 @@ public class CorporateActionDateSD7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCEarlyCoverProtectExpirationDate";
 			definition = "Last day cover early protect instructions can be submitted to DTC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -373,16 +380,72 @@ public class CorporateActionDateSD7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD7.PlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD7.ActualEarlyExpirationDate,
-						com.tools20022.repository.msg.CorporateActionDateSD7.ActualProtectExpirationDate, com.tools20022.repository.msg.CorporateActionDateSD7.ActualEarlyProtectExpirationDate,
-						com.tools20022.repository.msg.CorporateActionDateSD7.DTCEarlyProtectExpirationDate, com.tools20022.repository.msg.CorporateActionDateSD7.ActualEarlyCoverProtectExpirationDate,
-						com.tools20022.repository.msg.CorporateActionDateSD7.DTCEarlyCoverProtectExpirationDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD7.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD7.mmActualEarlyExpirationDate,
+						com.tools20022.repository.msg.CorporateActionDateSD7.mmActualProtectExpirationDate, com.tools20022.repository.msg.CorporateActionDateSD7.mmActualEarlyProtectExpirationDate,
+						com.tools20022.repository.msg.CorporateActionDateSD7.mmDTCEarlyProtectExpirationDate, com.tools20022.repository.msg.CorporateActionDateSD7.mmActualEarlyCoverProtectExpirationDate,
+						com.tools20022.repository.msg.CorporateActionDateSD7.mmDTCEarlyCoverProtectExpirationDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionDateSD7";
 				definition = "Provides additional information regarding corporate action options date details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ISODateTime getActualEarlyExpirationDate() {
+		return actualEarlyExpirationDate;
+	}
+
+	public void setActualEarlyExpirationDate(ISODateTime actualEarlyExpirationDate) {
+		this.actualEarlyExpirationDate = actualEarlyExpirationDate;
+	}
+
+	public ISODateTime getActualProtectExpirationDate() {
+		return actualProtectExpirationDate;
+	}
+
+	public void setActualProtectExpirationDate(ISODateTime actualProtectExpirationDate) {
+		this.actualProtectExpirationDate = actualProtectExpirationDate;
+	}
+
+	public ISODateTime getActualEarlyProtectExpirationDate() {
+		return actualEarlyProtectExpirationDate;
+	}
+
+	public void setActualEarlyProtectExpirationDate(ISODateTime actualEarlyProtectExpirationDate) {
+		this.actualEarlyProtectExpirationDate = actualEarlyProtectExpirationDate;
+	}
+
+	public ISODateTime getDTCEarlyProtectExpirationDate() {
+		return dTCEarlyProtectExpirationDate;
+	}
+
+	public void setDTCEarlyProtectExpirationDate(ISODateTime dTCEarlyProtectExpirationDate) {
+		this.dTCEarlyProtectExpirationDate = dTCEarlyProtectExpirationDate;
+	}
+
+	public ISODateTime getActualEarlyCoverProtectExpirationDate() {
+		return actualEarlyCoverProtectExpirationDate;
+	}
+
+	public void setActualEarlyCoverProtectExpirationDate(ISODateTime actualEarlyCoverProtectExpirationDate) {
+		this.actualEarlyCoverProtectExpirationDate = actualEarlyCoverProtectExpirationDate;
+	}
+
+	public ISODateTime getDTCEarlyCoverProtectExpirationDate() {
+		return dTCEarlyCoverProtectExpirationDate;
+	}
+
+	public void setDTCEarlyCoverProtectExpirationDate(ISODateTime dTCEarlyCoverProtectExpirationDate) {
+		this.dTCEarlyCoverProtectExpirationDate = dTCEarlyCoverProtectExpirationDate;
 	}
 }

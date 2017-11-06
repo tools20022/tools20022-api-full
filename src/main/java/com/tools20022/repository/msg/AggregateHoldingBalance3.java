@@ -23,6 +23,7 @@ import com.tools20022.repository.entity.IntermediaryRole;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Overall holding position, in a single financial instrument, held in a
@@ -35,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance3#BalanceForAccount
- * AggregateHoldingBalance3.BalanceForAccount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AggregateHoldingBalance3#Agent
- * AggregateHoldingBalance3.Agent}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance3#mmBalanceForAccount
+ * AggregateHoldingBalance3.mmBalanceForAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance3#mmAgent
+ * AggregateHoldingBalance3.mmAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AggregateHoldingBalance3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.AggregateHoldingBalance1> balanceForAccount;
 	/**
 	 * Report on the net position of a financial instrument on the sub-account,
 	 * for a certain date.
@@ -103,20 +106,21 @@ public class AggregateHoldingBalance3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceForAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceForAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AggregateHoldingBalance3.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> AggregateHoldingBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "BalForAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccount";
 			definition = "Report on the net position of a  financial instrument on the sub-account, for a certain date.";
 			minOccurs = 1;
-			type_lazy = () -> AggregateHoldingBalance1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary29> agent;
 	/**
 	 * Agent of the financial instrument, for example, a trade intermediary.
 	 * <p>
@@ -149,33 +153,49 @@ public class AggregateHoldingBalance3 {
 	 * "Agent of the financial instrument, for example, a trade intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Agent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAgent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AggregateHoldingBalance3.mmObject();
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
+			componentContext_lazy = () -> AggregateHoldingBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "Agt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			definition = "Agent of the financial instrument, for example, a trade intermediary.";
 			minOccurs = 0;
-			type_lazy = () -> Intermediary29.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary29.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateHoldingBalance3.BalanceForAccount, com.tools20022.repository.msg.AggregateHoldingBalance3.Agent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateHoldingBalance3.mmBalanceForAccount, com.tools20022.repository.msg.AggregateHoldingBalance3.mmAgent);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AggregateHoldingBalance3";
 				definition = "Overall holding position, in a single financial instrument, held in a securities account at a specified place of safekeeping.";
-				previousVersion_lazy = () -> AggregateHoldingBalance1.mmObject();
+				previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AggregateHoldingBalance1> getBalanceForAccount() {
+		return balanceForAccount;
+	}
+
+	public void setBalanceForAccount(List<com.tools20022.repository.msg.AggregateHoldingBalance1> balanceForAccount) {
+		this.balanceForAccount = balanceForAccount;
+	}
+
+	public List<Intermediary29> getAgent() {
+		return agent;
+	}
+
+	public void setAgent(List<com.tools20022.repository.msg.Intermediary29> agent) {
+		this.agent = agent;
 	}
 }

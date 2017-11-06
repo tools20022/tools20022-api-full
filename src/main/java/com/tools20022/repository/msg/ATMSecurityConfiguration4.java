@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.Algorithm14Code;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Configuration of the digital signatures if the security module is able to
@@ -35,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration4#MaximumCertificates
- * ATMSecurityConfiguration4.MaximumCertificates}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration4#mmMaximumCertificates
+ * ATMSecurityConfiguration4.mmMaximumCertificates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration4#MaximumSignatures
- * ATMSecurityConfiguration4.MaximumSignatures}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration4#mmMaximumSignatures
+ * ATMSecurityConfiguration4.mmMaximumSignatures}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration4#DigitalSignatureAlgorithm
- * ATMSecurityConfiguration4.DigitalSignatureAlgorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration4#mmDigitalSignatureAlgorithm
+ * ATMSecurityConfiguration4.mmDigitalSignatureAlgorithm}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMSecurityConfiguration4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number maximumCertificates;
 	/**
 	 * Maximum number of certificates in a certificate path, the security module
 	 * is able to manage.
@@ -106,7 +108,7 @@ public class ATMSecurityConfiguration4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumCertificates = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumCertificates = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration4.mmObject();
 			isDerived = false;
@@ -114,11 +116,12 @@ public class ATMSecurityConfiguration4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumCertificates";
 			definition = "Maximum number of certificates in a certificate path, the security module is able to manage.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number maximumSignatures;
 	/**
 	 * Maximum number of cosigners, the security module is able to manage in a
 	 * digital signature.
@@ -149,7 +152,7 @@ public class ATMSecurityConfiguration4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumSignatures = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumSignatures = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration4.mmObject();
 			isDerived = false;
@@ -157,11 +160,12 @@ public class ATMSecurityConfiguration4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumSignatures";
 			definition = "Maximum number of cosigners, the security module is able to manage in a digital signature.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<Algorithm14Code> digitalSignatureAlgorithm;
 	/**
 	 * Digital signature algorithm the security module is able to manage.
 	 * <p>
@@ -192,11 +196,11 @@ public class ATMSecurityConfiguration4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#SymmetricTransportKeyAlgorithm
-	 * ATMSecurityConfiguration3.SymmetricTransportKeyAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityConfiguration3#mmSymmetricTransportKeyAlgorithm
+	 * ATMSecurityConfiguration3.mmSymmetricTransportKeyAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DigitalSignatureAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDigitalSignatureAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityConfiguration4.mmObject();
 			isDerived = false;
@@ -204,7 +208,7 @@ public class ATMSecurityConfiguration4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignatureAlgorithm";
 			definition = "Digital signature algorithm the security module is able to manage.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.SymmetricTransportKeyAlgorithm;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.mmSymmetricTransportKeyAlgorithm;
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm14Code.mmObject();
 		}
@@ -213,16 +217,40 @@ public class ATMSecurityConfiguration4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration4.MaximumCertificates, com.tools20022.repository.msg.ATMSecurityConfiguration4.MaximumSignatures,
-						com.tools20022.repository.msg.ATMSecurityConfiguration4.DigitalSignatureAlgorithm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration4.mmMaximumCertificates, com.tools20022.repository.msg.ATMSecurityConfiguration4.mmMaximumSignatures,
+						com.tools20022.repository.msg.ATMSecurityConfiguration4.mmDigitalSignatureAlgorithm);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration4";
 				definition = "Configuration of the digital signatures if the security module is able to perform digital signatures with an asymmetric key.";
-				previousVersion_lazy = () -> ATMSecurityConfiguration3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ATMSecurityConfiguration5.mmObject());
+				previousVersion_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getMaximumCertificates() {
+		return maximumCertificates;
+	}
+
+	public void setMaximumCertificates(Number maximumCertificates) {
+		this.maximumCertificates = maximumCertificates;
+	}
+
+	public Number getMaximumSignatures() {
+		return maximumSignatures;
+	}
+
+	public void setMaximumSignatures(Number maximumSignatures) {
+		this.maximumSignatures = maximumSignatures;
+	}
+
+	public List<Algorithm14Code> getDigitalSignatureAlgorithm() {
+		return digitalSignatureAlgorithm;
+	}
+
+	public void setDigitalSignatureAlgorithm(List<Algorithm14Code> digitalSignatureAlgorithm) {
+		this.digitalSignatureAlgorithm = digitalSignatureAlgorithm;
 	}
 }

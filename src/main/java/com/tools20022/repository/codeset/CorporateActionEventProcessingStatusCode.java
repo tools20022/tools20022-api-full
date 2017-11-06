@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#Complete
- * CorporateActionEventProcessingStatusCode.Complete}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#mmComplete
+ * CorporateActionEventProcessingStatusCode.mmComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#Pending
- * CorporateActionEventProcessingStatusCode.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#mmPending
+ * CorporateActionEventProcessingStatusCode.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#Reconciled
- * CorporateActionEventProcessingStatusCode.Reconciled}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#mmReconciled
+ * CorporateActionEventProcessingStatusCode.mmReconciled}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class CorporateActionEventProcessingStatusCode {
 	 * "Specifies that a corporate action event processing has been completed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Complete";
@@ -128,7 +128,7 @@ public class CorporateActionEventProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Pending";
@@ -162,7 +162,7 @@ public class CorporateActionEventProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Reconciled = new MMCode() {
+	public static final MMCode mmReconciled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Reconciled";
@@ -175,13 +175,13 @@ public class CorporateActionEventProcessingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventProcessingStatusCode";
 				definition = "Specifies the stage in the corporate action event life cycle.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.Complete, com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.Pending,
-						com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.Reconciled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.mmComplete, com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.mmPending,
+						com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.mmReconciled);
 				derivation_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatus1Code.mmObject());
 			}
 		});

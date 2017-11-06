@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorRejection2#RejectReason
- * AcceptorRejection2.RejectReason}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorRejection2#mmRejectReason
+ * AcceptorRejection2.mmRejectReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorRejection2#AdditionalInformation
- * AcceptorRejection2.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorRejection2#mmAdditionalInformation
+ * AcceptorRejection2.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorRejection2#MessageInError
- * AcceptorRejection2.MessageInError}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorRejection2#mmMessageInError
+ * AcceptorRejection2.mmMessageInError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,24 +54,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV02#Reject
- * TerminalManagementRejectionV02.Reject}</li>
+ * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV02#mmReject
+ * TerminalManagementRejectionV02.mmReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV03#Reject
- * AcceptorRejectionV03.Reject}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV03#mmReject
+ * AcceptorRejectionV03.mmReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV04#Reject
- * AcceptorRejectionV04.Reject}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV04#mmReject
+ * AcceptorRejectionV04.mmReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV05#Reject
- * AcceptorRejectionV05.Reject}</li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV05#mmReject
+ * AcceptorRejectionV05.mmReject}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorRejection2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RejectReason1Code rejectReason;
 	/**
 	 * Reject reason of the request or the advice.
 	 * <p>
@@ -111,8 +112,8 @@ public class AcceptorRejection2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentStatus#RejectionReason
-	 * CardPaymentStatus.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentStatus#mmRejectionReason
+	 * CardPaymentStatus.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -133,36 +134,37 @@ public class AcceptorRejection2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection3#RejectReason
-	 * AcceptorRejection3.RejectReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection3#mmRejectReason
+	 * AcceptorRejection3.mmRejectReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection4#RejectReason
-	 * AcceptorRejection4.RejectReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection4#mmRejectReason
+	 * AcceptorRejection4.mmRejectReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection1#RejectReason
-	 * AcceptorRejection1.RejectReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection1#mmRejectReason
+	 * AcceptorRejection1.mmRejectReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmRejectionReason;
 			componentContext_lazy = () -> AcceptorRejection2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.RejectionReason;
 			isDerived = false;
 			xmlTag = "RjctRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectReason";
 			definition = "Reject reason of the request or the advice.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorRejection1.RejectReason;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorRejection3.RejectReason, com.tools20022.repository.msg.AcceptorRejection4.RejectReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorRejection3.mmRejectReason, com.tools20022.repository.msg.AcceptorRejection4.mmRejectReason);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorRejection1.mmRejectReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
+	protected Max500Text additionalInformation;
 	/**
 	 * Additional information related to the reject of the exchange.
 	 * <p>
@@ -193,18 +195,18 @@ public class AcceptorRejection2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection3#AdditionalInformation
-	 * AcceptorRejection3.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection3#mmAdditionalInformation
+	 * AcceptorRejection3.mmAdditionalInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection1#AdditionalInformation
-	 * AcceptorRejection1.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection1#mmAdditionalInformation
+	 * AcceptorRejection1.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcceptorRejection2.mmObject();
 			isDerived = false;
@@ -212,13 +214,14 @@ public class AcceptorRejection2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the reject of the exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorRejection1.AdditionalInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorRejection3.AdditionalInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorRejection3.mmAdditionalInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorRejection1.mmAdditionalInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
+	protected Max100KBinary messageInError;
 	/**
 	 * Original request that caused the recipient party to reject it.
 	 * <p>
@@ -250,21 +253,21 @@ public class AcceptorRejection2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection3#MessageInError
-	 * AcceptorRejection3.MessageInError}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection3#mmMessageInError
+	 * AcceptorRejection3.mmMessageInError}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection4#MessageInError
-	 * AcceptorRejection4.MessageInError}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection4#mmMessageInError
+	 * AcceptorRejection4.mmMessageInError}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection1#MessageInError
-	 * AcceptorRejection1.MessageInError}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorRejection1#mmMessageInError
+	 * AcceptorRejection1.mmMessageInError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageInError = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageInError = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AcceptorRejection2.mmObject();
 			isDerived = false;
@@ -272,10 +275,10 @@ public class AcceptorRejection2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageInError";
 			definition = "Original request that caused the recipient party to reject it.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorRejection1.MessageInError;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorRejection3.MessageInError, com.tools20022.repository.msg.AcceptorRejection4.MessageInError);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorRejection3.mmMessageInError, com.tools20022.repository.msg.AcceptorRejection4.mmMessageInError);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorRejection1.mmMessageInError;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
 		}
 	};
@@ -283,19 +286,43 @@ public class AcceptorRejection2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorRejection2.RejectReason, com.tools20022.repository.msg.AcceptorRejection2.AdditionalInformation,
-						com.tools20022.repository.msg.AcceptorRejection2.MessageInError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorRejection2.mmRejectReason, com.tools20022.repository.msg.AcceptorRejection2.mmAdditionalInformation,
+						com.tools20022.repository.msg.AcceptorRejection2.mmMessageInError);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV02.mmReject, com.tools20022.repository.area.caaa.AcceptorRejectionV03.mmReject,
+						com.tools20022.repository.area.caaa.AcceptorRejectionV04.mmReject, com.tools20022.repository.area.caaa.AcceptorRejectionV05.mmReject);
 				trace_lazy = () -> CardPaymentStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV02.Reject, com.tools20022.repository.area.caaa.AcceptorRejectionV03.Reject,
-						com.tools20022.repository.area.caaa.AcceptorRejectionV04.Reject, com.tools20022.repository.area.caaa.AcceptorRejectionV05.Reject);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorRejection2";
 				definition = "Reject of an exchange.";
-				previousVersion_lazy = () -> AcceptorRejection1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorRejection3.mmObject(), AcceptorRejection4.mmObject());
+				previousVersion_lazy = () -> AcceptorRejection1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RejectReason1Code getRejectReason() {
+		return rejectReason;
+	}
+
+	public void setRejectReason(RejectReason1Code rejectReason) {
+		this.rejectReason = rejectReason;
+	}
+
+	public Max500Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max500Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public Max100KBinary getMessageInError() {
+		return messageInError;
+	}
+
+	public void setMessageInError(Max100KBinary messageInError) {
+		this.messageInError = messageInError;
 	}
 }

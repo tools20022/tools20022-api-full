@@ -34,41 +34,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#AccountServicerDeadlineMissed
- * PendingReason13Code.AccountServicerDeadlineMissed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason13Code#Other
- * PendingReason13Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#mmAccountServicerDeadlineMissed
+ * PendingReason13Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#PendingBeneficiaryOwnerDetails
- * PendingReason13Code.PendingBeneficiaryOwnerDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#mmOther
+ * PendingReason13Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#MissingCertification
- * PendingReason13Code.MissingCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#mmPendingBeneficiaryOwnerDetails
+ * PendingReason13Code.mmPendingBeneficiaryOwnerDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#InsufficientMoney
- * PendingReason13Code.InsufficientMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#mmMissingCertification
+ * PendingReason13Code.mmMissingCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#LackOfSecurities
- * PendingReason13Code.LackOfSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#mmInsufficientMoney
+ * PendingReason13Code.mmInsufficientMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#MarketDeadlineMissed
- * PendingReason13Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#mmLackOfSecurities
+ * PendingReason13Code.mmLackOfSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#QuantityDisagreement
- * PendingReason13Code.QuantityDisagreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#mmMarketDeadlineMissed
+ * PendingReason13Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#PendingReceipt
- * PendingReason13Code.PendingReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#mmQuantityDisagreement
+ * PendingReason13Code.mmQuantityDisagreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#WrongCertificatesNumbers
- * PendingReason13Code.WrongCertificatesNumbers}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#mmPendingReceipt
+ * PendingReason13Code.mmPendingReceipt}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason13Code#mmWrongCertificatesNumbers
+ * PendingReason13Code.mmWrongCertificatesNumbers}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,17 +109,17 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#AccountServicerDeadlineMissed
-	 * PendingReason14Code.AccountServicerDeadlineMissed}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#mmAccountServicerDeadlineMissed
+	 * PendingReason14Code.mmAccountServicerDeadlineMissed}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.AccountServicerDeadlineMissed);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.mmAccountServicerDeadlineMissed);
 			owner_lazy = () -> PendingReason13Code.mmObject();
 		}
 	};
@@ -140,17 +141,17 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#Other
-	 * PendingReason14Code.Other}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#mmOther
+	 * PendingReason14Code.mmOther}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.Other);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.mmOther);
 			owner_lazy = () -> PendingReason13Code.mmObject();
 		}
 	};
@@ -172,17 +173,17 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#PendingBeneficiaryOwnerDetails
-	 * PendingReason14Code.PendingBeneficiaryOwnerDetails}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#mmPendingBeneficiaryOwnerDetails
+	 * PendingReason14Code.mmPendingBeneficiaryOwnerDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PendingBeneficiaryOwnerDetails = new MMCode() {
+	public static final MMCode mmPendingBeneficiaryOwnerDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingBeneficiaryOwnerDetails";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.PendingBeneficiaryOwnerDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.mmPendingBeneficiaryOwnerDetails);
 			owner_lazy = () -> PendingReason13Code.mmObject();
 		}
 	};
@@ -204,17 +205,17 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#MissingCertification
-	 * PendingReason14Code.MissingCertification}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#mmMissingCertification
+	 * PendingReason14Code.mmMissingCertification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MissingCertification = new MMCode() {
+	public static final MMCode mmMissingCertification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCertification";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.MissingCertification);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.mmMissingCertification);
 			owner_lazy = () -> PendingReason13Code.mmObject();
 		}
 	};
@@ -236,17 +237,17 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#InsufficientMoney
-	 * PendingReason14Code.InsufficientMoney}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#mmInsufficientMoney
+	 * PendingReason14Code.mmInsufficientMoney}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientMoney = new MMCode() {
+	public static final MMCode mmInsufficientMoney = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientMoney";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.InsufficientMoney);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.mmInsufficientMoney);
 			owner_lazy = () -> PendingReason13Code.mmObject();
 		}
 	};
@@ -268,17 +269,17 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#LackOfSecurities
-	 * PendingReason14Code.LackOfSecurities}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#mmLackOfSecurities
+	 * PendingReason14Code.mmLackOfSecurities}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LackOfSecurities = new MMCode() {
+	public static final MMCode mmLackOfSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfSecurities";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.LackOfSecurities);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.mmLackOfSecurities);
 			owner_lazy = () -> PendingReason13Code.mmObject();
 		}
 	};
@@ -300,17 +301,17 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#MarketDeadlineMissed
-	 * PendingReason14Code.MarketDeadlineMissed}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#mmMarketDeadlineMissed
+	 * PendingReason14Code.mmMarketDeadlineMissed}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.MarketDeadlineMissed);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.mmMarketDeadlineMissed);
 			owner_lazy = () -> PendingReason13Code.mmObject();
 		}
 	};
@@ -332,17 +333,17 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#QuantityDisagreement
-	 * PendingReason14Code.QuantityDisagreement}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#mmQuantityDisagreement
+	 * PendingReason14Code.mmQuantityDisagreement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityDisagreement = new MMCode() {
+	public static final MMCode mmQuantityDisagreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDisagreement";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.QuantityDisagreement);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.mmQuantityDisagreement);
 			owner_lazy = () -> PendingReason13Code.mmObject();
 		}
 	};
@@ -364,17 +365,17 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#PendingReceipt
-	 * PendingReason14Code.PendingReceipt}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#mmPendingReceipt
+	 * PendingReason14Code.mmPendingReceipt}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PendingReceipt = new MMCode() {
+	public static final MMCode mmPendingReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceipt";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.PendingReceipt);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.mmPendingReceipt);
 			owner_lazy = () -> PendingReason13Code.mmObject();
 		}
 	};
@@ -396,17 +397,17 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#WrongCertificatesNumbers
-	 * PendingReason14Code.WrongCertificatesNumbers}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PendingReason14Code#mmWrongCertificatesNumbers
+	 * PendingReason14Code.mmWrongCertificatesNumbers}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode WrongCertificatesNumbers = new MMCode() {
+	public static final MMCode mmWrongCertificatesNumbers = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCertificatesNumbers";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.WrongCertificatesNumbers);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason14Code.mmWrongCertificatesNumbers);
 			owner_lazy = () -> PendingReason13Code.mmObject();
 		}
 	};
@@ -414,16 +415,16 @@ public class PendingReason13Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingReason13Code";
 				definition = "Specifies the reason why the instruction has a pending status.";
 				nextVersions_lazy = () -> Arrays.asList(PendingReason14Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason13Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingReason13Code.Other,
-						com.tools20022.repository.codeset.PendingReason13Code.PendingBeneficiaryOwnerDetails, com.tools20022.repository.codeset.PendingReason13Code.MissingCertification,
-						com.tools20022.repository.codeset.PendingReason13Code.InsufficientMoney, com.tools20022.repository.codeset.PendingReason13Code.LackOfSecurities,
-						com.tools20022.repository.codeset.PendingReason13Code.MarketDeadlineMissed, com.tools20022.repository.codeset.PendingReason13Code.QuantityDisagreement,
-						com.tools20022.repository.codeset.PendingReason13Code.PendingReceipt, com.tools20022.repository.codeset.PendingReason13Code.WrongCertificatesNumbers);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason13Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingReason13Code.mmOther,
+						com.tools20022.repository.codeset.PendingReason13Code.mmPendingBeneficiaryOwnerDetails, com.tools20022.repository.codeset.PendingReason13Code.mmMissingCertification,
+						com.tools20022.repository.codeset.PendingReason13Code.mmInsufficientMoney, com.tools20022.repository.codeset.PendingReason13Code.mmLackOfSecurities,
+						com.tools20022.repository.codeset.PendingReason13Code.mmMarketDeadlineMissed, com.tools20022.repository.codeset.PendingReason13Code.mmQuantityDisagreement,
+						com.tools20022.repository.codeset.PendingReason13Code.mmPendingReceipt, com.tools20022.repository.codeset.PendingReason13Code.mmWrongCertificatesNumbers);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

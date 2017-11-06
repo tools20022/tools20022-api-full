@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingStatusReason5#ReasonCode
- * PendingStatusReason5.ReasonCode}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingStatusReason5#mmReasonCode
+ * PendingStatusReason5.mmReasonCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PendingStatusReason5#AdditionalReasonInformation
- * PendingStatusReason5.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.PendingStatusReason5#mmAdditionalReasonInformation
+ * PendingStatusReason5.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PendingStatusReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PendingReason22Choice reasonCode;
 	/**
 	 * Specifies the reason why the instruction's processing is pending.
 	 * <p>
@@ -88,8 +89,8 @@ public class PendingStatusReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,34 +112,35 @@ public class PendingStatusReason5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason7#ReasonCode
-	 * PendingStatusReason7.ReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason7#mmReasonCode
+	 * PendingStatusReason7.mmReasonCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason1#ReasonCode
-	 * PendingStatusReason1.ReasonCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason1#mmReasonCode
+	 * PendingStatusReason1.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> PendingStatusReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "RsnCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Specifies the reason why the instruction's processing is pending.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PendingStatusReason1.ReasonCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingStatusReason7.ReasonCode);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingStatusReason7.mmReasonCode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PendingStatusReason1.mmReasonCode;
 			maxOccurs = 1;
-			type_lazy = () -> PendingReason22Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PendingReason22Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalReasonInformation;
 	/**
 	 * Provides additional information about the processed instruction.
 	 * <p>
@@ -151,8 +153,8 @@ public class PendingStatusReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -174,30 +176,30 @@ public class PendingStatusReason5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason7#AdditionalReasonInformation
-	 * PendingStatusReason7.AdditionalReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason7#mmAdditionalReasonInformation
+	 * PendingStatusReason7.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason1#AdditionalReasonInformation
-	 * PendingStatusReason1.AdditionalReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason1#mmAdditionalReasonInformation
+	 * PendingStatusReason1.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> PendingStatusReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional information about the processed instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PendingStatusReason1.AdditionalReasonInformation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingStatusReason7.AdditionalReasonInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingStatusReason7.mmAdditionalReasonInformation);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PendingStatusReason1.mmAdditionalReasonInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -205,16 +207,32 @@ public class PendingStatusReason5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingStatusReason5.ReasonCode, com.tools20022.repository.msg.PendingStatusReason5.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingStatusReason5.mmReasonCode, com.tools20022.repository.msg.PendingStatusReason5.mmAdditionalReasonInformation);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingStatusReason5";
 				definition = "Specifies reasons for the pending status.";
-				previousVersion_lazy = () -> PendingStatusReason1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PendingStatusReason7.mmObject());
+				previousVersion_lazy = () -> PendingStatusReason1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PendingReason22Choice getReasonCode() {
+		return reasonCode;
+	}
+
+	public void setReasonCode(PendingReason22Choice reasonCode) {
+		this.reasonCode = reasonCode;
+	}
+
+	public Max210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

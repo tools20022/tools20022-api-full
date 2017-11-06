@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#Imputed
- * RateType3Code.Imputed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#Precompte
- * RateType3Code.Precompte}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#OneTierTax
- * RateType3Code.OneTierTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#mmImputed
+ * RateType3Code.mmImputed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#mmPrecompte
+ * RateType3Code.mmPrecompte}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#mmOneTierTax
+ * RateType3Code.mmOneTierTax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class RateType3Code extends RateTypeCode {
 	 * name} = "Imputed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Imputed = new MMCode() {
+	public static final MMCode mmImputed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Imputed";
@@ -103,7 +103,7 @@ public class RateType3Code extends RateTypeCode {
 	 * name} = "Precompte"</li>
 	 * </ul>
 	 */
-	public static final MMCode Precompte = new MMCode() {
+	public static final MMCode mmPrecompte = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Precompte";
@@ -126,7 +126,7 @@ public class RateType3Code extends RateTypeCode {
 	 * name} = "OneTierTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode OneTierTax = new MMCode() {
+	public static final MMCode mmOneTierTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneTierTax";
@@ -137,12 +137,12 @@ public class RateType3Code extends RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IMPU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateType3Code";
 				definition = "Specifies the type of tax rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType3Code.Imputed, com.tools20022.repository.codeset.RateType3Code.Precompte, com.tools20022.repository.codeset.RateType3Code.OneTierTax);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType3Code.mmImputed, com.tools20022.repository.codeset.RateType3Code.mmPrecompte, com.tools20022.repository.codeset.RateType3Code.mmOneTierTax);
 				trace_lazy = () -> RateTypeCode.mmObject();
 			}
 		});

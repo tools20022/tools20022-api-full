@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Content of the management plan.
@@ -32,8 +33,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ManagementPlanContent2#Action
- * ManagementPlanContent2.Action}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ManagementPlanContent2#mmAction
+ * ManagementPlanContent2.mmAction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ManagementPlanContent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.TMSAction2> action;
 	/**
 	 * Terminal management action to be performed by the point of interaction
 	 * (POI).
@@ -99,13 +102,13 @@ public class ManagementPlanContent2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent3#Action
-	 * ManagementPlanContent3.Action}</li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent3#mmAction
+	 * ManagementPlanContent3.mmAction}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Action = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ManagementPlanContent2.mmObject();
 			isDerived = false;
@@ -113,26 +116,34 @@ public class ManagementPlanContent2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Terminal management action to be performed by the point of interaction (POI).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent3.Action);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent3.mmAction);
 			minOccurs = 1;
-			type_lazy = () -> TMSAction2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TMSAction2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent2.Action);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent2.mmAction);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlanContent2";
 				definition = "Content of the management plan.";
-				previousVersion_lazy = () -> ManagementPlanContent1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ManagementPlanContent3.mmObject());
+				previousVersion_lazy = () -> ManagementPlanContent1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<TMSAction2> getAction() {
+		return action;
+	}
+
+	public void setAction(List<com.tools20022.repository.msg.TMSAction2> action) {
+		this.action = action;
 	}
 }

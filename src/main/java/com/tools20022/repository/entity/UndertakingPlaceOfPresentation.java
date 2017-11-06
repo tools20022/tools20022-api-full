@@ -39,8 +39,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingPlaceOfPresentation#PresentationUnderConfirmation
- * UndertakingPlaceOfPresentation.PresentationUnderConfirmation}</li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingPlaceOfPresentation#mmPresentationUnderConfirmation
+ * UndertakingPlaceOfPresentation.mmPresentationUnderConfirmation}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1#PlaceOfPresentation
- * PlaceOrUnderConfirmationChoice1.PlaceOfPresentation}</li>
+ * {@linkplain com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1#mmPlaceOfPresentation
+ * PlaceOrUnderConfirmationChoice1.mmPlaceOfPresentation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -68,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected PresentationPartyCode presentationUnderConfirmation;
 	/**
 	 * Specifies the type of party to which a presentation under confirmation is
 	 * required.
@@ -112,15 +113,15 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PresentationUnderConfirmation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPresentationUnderConfirmation = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> UndertakingPlaceOfPresentation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationUnderConfirmation";
 			definition = "Specifies the type of party to which a presentation under confirmation is required.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PresentationPartyCode.mmObject();
 		}
 	};
@@ -128,16 +129,24 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingPlaceOfPresentation";
 				definition = "Place at which the documents must be presented.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.PlaceOfPresentation);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmPlaceOfPresentation);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingPlaceOfPresentation.PresentationUnderConfirmation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingPlaceOfPresentation.mmPresentationUnderConfirmation);
 				derivationComponent_lazy = () -> Arrays.asList(PlaceOrUnderConfirmationChoice1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PresentationPartyCode getPresentationUnderConfirmation() {
+		return presentationUnderConfirmation;
+	}
+
+	public void setPresentationUnderConfirmation(PresentationPartyCode presentationUnderConfirmation) {
+		this.presentationUnderConfirmation = presentationUnderConfirmation;
 	}
 }

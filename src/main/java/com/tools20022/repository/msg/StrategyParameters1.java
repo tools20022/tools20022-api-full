@@ -33,20 +33,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.StrategyParameters1#Name
- * StrategyParameters1.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StrategyParameters1#Type
- * StrategyParameters1.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StrategyParameters1#mmName
+ * StrategyParameters1.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StrategyParameters1#mmType
+ * StrategyParameters1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StrategyParameters1#TargetStrategy
- * StrategyParameters1.TargetStrategy}</li>
+ * {@linkplain com.tools20022.repository.msg.StrategyParameters1#mmTargetStrategy
+ * StrategyParameters1.mmTargetStrategy}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StrategyParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text name;
 	/**
 	 * Name of parameter.
 	 * <p>
@@ -88,7 +89,7 @@ public class StrategyParameters1 {
 	 * definition} = "Name of parameter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StrategyParameters1.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class StrategyParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of parameter.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text type;
 	/**
 	 * Type of the parameter.
 	 * <p>
@@ -128,7 +130,7 @@ public class StrategyParameters1 {
 	 * definition} = "Type of the parameter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StrategyParameters1.mmObject();
 			isDerived = false;
@@ -136,11 +138,12 @@ public class StrategyParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the parameter.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max70Text targetStrategy;
 	/**
 	 * Defines the target strategy of the order, specifies the type of trading
 	 * or algorithm strategy.
@@ -171,7 +174,7 @@ public class StrategyParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TargetStrategy = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTargetStrategy = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StrategyParameters1.mmObject();
 			isDerived = false;
@@ -179,8 +182,8 @@ public class StrategyParameters1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetStrategy";
 			definition = "Defines the target strategy of the order, specifies the type of trading or algorithm strategy.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -188,13 +191,38 @@ public class StrategyParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StrategyParameters1.Name, com.tools20022.repository.msg.StrategyParameters1.Type, com.tools20022.repository.msg.StrategyParameters1.TargetStrategy);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StrategyParameters1.mmName, com.tools20022.repository.msg.StrategyParameters1.mmType,
+						com.tools20022.repository.msg.StrategyParameters1.mmTargetStrategy);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StrategyParameters1";
 				definition = "Allows the user to specify the algorithm parameters for the algo strategy.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getName() {
+		return name;
+	}
+
+	public void setName(Max35Text name) {
+		this.name = name;
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public Max70Text getTargetStrategy() {
+		return targetStrategy;
+	}
+
+	public void setTargetStrategy(Max70Text targetStrategy) {
+		this.targetStrategy = targetStrategy;
 	}
 }

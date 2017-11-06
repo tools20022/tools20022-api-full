@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateAction6SD1#PlaceAndName
- * CorporateAction6SD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction6SD1#mmPlaceAndName
+ * CorporateAction6SD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateAction6SD1#MergerDetails
- * CorporateAction6SD1.MergerDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction6SD1#mmMergerDetails
+ * CorporateAction6SD1.mmMergerDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateAction6SD1#TargetCompanyAgreement
- * CorporateAction6SD1.TargetCompanyAgreement}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction6SD1#mmTargetCompanyAgreement
+ * CorporateAction6SD1.mmTargetCompanyAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateAction6SD1#TotalNumberOfNewSharesIssued
- * CorporateAction6SD1.TotalNumberOfNewSharesIssued}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction6SD1#mmTotalNumberOfNewSharesIssued
+ * CorporateAction6SD1.mmTotalNumberOfNewSharesIssued}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateAction6SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -98,7 +99,7 @@ public class CorporateAction6SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateAction6SD1.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class CorporateAction6SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected MergerDetailsType1 mergerDetails;
 	/**
 	 * Provides additional information about mergers.
 	 * <p>
@@ -139,7 +141,7 @@ public class CorporateAction6SD1 {
 	 * definition} = "Provides additional information about mergers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MergerDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMergerDetails = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateAction6SD1.mmObject();
 			isDerived = false;
@@ -147,11 +149,12 @@ public class CorporateAction6SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MergerDetails";
 			definition = "Provides additional information about mergers.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> MergerDetailsType1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.MergerDetailsType1.mmObject();
 		}
 	};
+	protected TargetCompanyAgreementCode targetCompanyAgreement;
 	/**
 	 * Agreement of the target company.<br>
 	 * TargetCompanyAgreement should only be used for corporate action event
@@ -187,7 +190,7 @@ public class CorporateAction6SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TargetCompanyAgreement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTargetCompanyAgreement = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateAction6SD1.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class CorporateAction6SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetCompanyAgreement";
 			definition = "Agreement of the target company.\r\nTargetCompanyAgreement should only be used for corporate action event type code TEND. It is not necessary for  corporate action event type code BIDS.   \r\n 対象会社の同意の有無\r\n公開買付のときのみ。（自己株買付のときは無し）";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TargetCompanyAgreementCode.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice totalNumberOfNewSharesIssued;
 	/**
 	 * Total number of new shares to be issued.<br>
 	 * 発行新株式数
@@ -229,7 +233,7 @@ public class CorporateAction6SD1 {
 	 * definition} = "Total number of new shares to be issued.\r\n発行新株式数"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfNewSharesIssued = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfNewSharesIssued = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateAction6SD1.mmObject();
 			isDerived = false;
@@ -237,8 +241,8 @@ public class CorporateAction6SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfNewSharesIssued";
 			definition = "Total number of new shares to be issued.\r\n発行新株式数";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
@@ -246,14 +250,46 @@ public class CorporateAction6SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction6SD1.PlaceAndName, com.tools20022.repository.msg.CorporateAction6SD1.MergerDetails,
-						com.tools20022.repository.msg.CorporateAction6SD1.TargetCompanyAgreement, com.tools20022.repository.msg.CorporateAction6SD1.TotalNumberOfNewSharesIssued);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction6SD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateAction6SD1.mmMergerDetails,
+						com.tools20022.repository.msg.CorporateAction6SD1.mmTargetCompanyAgreement, com.tools20022.repository.msg.CorporateAction6SD1.mmTotalNumberOfNewSharesIssued);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateAction6SD1";
 				definition = "Extension for mergers.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public MergerDetailsType1 getMergerDetails() {
+		return mergerDetails;
+	}
+
+	public void setMergerDetails(com.tools20022.repository.msg.MergerDetailsType1 mergerDetails) {
+		this.mergerDetails = mergerDetails;
+	}
+
+	public TargetCompanyAgreementCode getTargetCompanyAgreement() {
+		return targetCompanyAgreement;
+	}
+
+	public void setTargetCompanyAgreement(TargetCompanyAgreementCode targetCompanyAgreement) {
+		this.targetCompanyAgreement = targetCompanyAgreement;
+	}
+
+	public FinancialInstrumentQuantity15Choice getTotalNumberOfNewSharesIssued() {
+		return totalNumberOfNewSharesIssued;
+	}
+
+	public void setTotalNumberOfNewSharesIssued(FinancialInstrumentQuantity15Choice totalNumberOfNewSharesIssued) {
+		this.totalNumberOfNewSharesIssued = totalNumberOfNewSharesIssued;
 	}
 }

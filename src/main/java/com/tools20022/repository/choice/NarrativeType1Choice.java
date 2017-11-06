@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.NarrativeType1Choice#Code
- * NarrativeType1Choice.Code}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.NarrativeType1Choice#mmCode
+ * NarrativeType1Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NarrativeType1Choice#Proprietary
- * NarrativeType1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.NarrativeType1Choice#mmProprietary
+ * NarrativeType1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NarrativeType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalNarrativeType1Code code;
 	/**
 	 * Type of narrative.<br>
 	 * <p>
@@ -87,7 +88,7 @@ public class NarrativeType1Choice {
 	 * definition} = "Type of narrative.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NarrativeType1Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class NarrativeType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of narrative.\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalNarrativeType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietary;
 	/**
 	 * Type of narrative expressed as a proprietary code.
 	 * <p>
@@ -126,7 +128,7 @@ public class NarrativeType1Choice {
 	 * definition} = "Type of narrative expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NarrativeType1Choice.mmObject();
 			isDerived = false;
@@ -134,23 +136,39 @@ public class NarrativeType1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of narrative expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NarrativeType1Choice.Code, com.tools20022.repository.choice.NarrativeType1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NarrativeType1Choice.mmCode, com.tools20022.repository.choice.NarrativeType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NarrativeType1Choice";
 				definition = "Choice of format for the type of narrative.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalNarrativeType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalNarrativeType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

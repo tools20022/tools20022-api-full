@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#SystemicLocked
- * InstructionLockoutCode.SystemicLocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#mmSystemicLocked
+ * InstructionLockoutCode.mmSystemicLocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#ManualLocked
- * InstructionLockoutCode.ManualLocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#mmManualLocked
+ * InstructionLockoutCode.mmManualLocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#NotLocked
- * InstructionLockoutCode.NotLocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#mmNotLocked
+ * InstructionLockoutCode.mmNotLocked}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class InstructionLockoutCode {
 	 * "System suspended elections processing based on business rules."</li>
 	 * </ul>
 	 */
-	public static final MMCode SystemicLocked = new MMCode() {
+	public static final MMCode mmSystemicLocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemicLocked";
@@ -126,7 +126,7 @@ public class InstructionLockoutCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ManualLocked = new MMCode() {
+	public static final MMCode mmManualLocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualLocked";
@@ -156,7 +156,7 @@ public class InstructionLockoutCode {
 	 * definition} = "Eligible for elections processing."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotLocked = new MMCode() {
+	public static final MMCode mmNotLocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotLocked";
@@ -169,13 +169,13 @@ public class InstructionLockoutCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SYLK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionLockoutCode";
 				definition = "Specifies status of the instruction lock (for elections).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionLockoutCode.SystemicLocked, com.tools20022.repository.codeset.InstructionLockoutCode.ManualLocked,
-						com.tools20022.repository.codeset.InstructionLockoutCode.NotLocked);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionLockoutCode.mmSystemicLocked, com.tools20022.repository.codeset.InstructionLockoutCode.mmManualLocked,
+						com.tools20022.repository.codeset.InstructionLockoutCode.mmNotLocked);
 				derivation_lazy = () -> Arrays.asList(InstructionLockout1Code.mmObject());
 			}
 		});

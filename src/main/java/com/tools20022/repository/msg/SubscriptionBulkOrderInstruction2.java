@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.SubscriptionOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about a subscription bulk order.
@@ -33,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2#BulkOrderDetails
- * SubscriptionBulkOrderInstruction2.BulkOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2#mmBulkOrderDetails
+ * SubscriptionBulkOrderInstruction2.mmBulkOrderDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2#RelatedPartyDetails
- * SubscriptionBulkOrderInstruction2.RelatedPartyDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2#mmRelatedPartyDetails
+ * SubscriptionBulkOrderInstruction2.mmRelatedPartyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2#Extension
- * SubscriptionBulkOrderInstruction2.Extension}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2#mmExtension
+ * SubscriptionBulkOrderInstruction2.mmExtension}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,15 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03#CancellationByOrderDetails
- * SubscriptionBulkOrderCancellationRequestV03.CancellationByOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03#mmCancellationByOrderDetails
+ * SubscriptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SubscriptionBulkOrderInstruction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SubscriptionBulkOrder3 bulkOrderDetails;
 	/**
 	 * Common information related to all the orders to be cancelled.
 	 * <p>
@@ -105,21 +107,22 @@ public class SubscriptionBulkOrderInstruction2 {
 	 * "Common information related to all the orders to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BulkOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBulkOrderDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubscriptionBulkOrderInstruction2.mmObject();
 			businessComponentTrace_lazy = () -> SubscriptionOrder.mmObject();
+			componentContext_lazy = () -> SubscriptionBulkOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "BlkOrdrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkOrderDetails";
 			definition = "Common information related to all the orders to be cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SubscriptionBulkOrder3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SubscriptionBulkOrder3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary8> relatedPartyDetails;
 	/**
 	 * Information about parties related to the transaction.
 	 * <p>
@@ -131,8 +134,8 @@ public class SubscriptionBulkOrderInstruction2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradePartyRole
-	 * Trade.TradePartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradePartyRole
+	 * Trade.mmTradePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,21 +154,22 @@ public class SubscriptionBulkOrderInstruction2 {
 	 * definition} = "Information about parties related to the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedPartyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
 			componentContext_lazy = () -> SubscriptionBulkOrderInstruction2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradePartyRole;
 			isDerived = false;
 			xmlTag = "RltdPtyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyDetails";
 			definition = "Information about parties related to the transaction.";
-			minOccurs = 0;
 			maxOccurs = 10;
-			type_lazy = () -> Intermediary8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary8.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -194,7 +198,7 @@ public class SubscriptionBulkOrderInstruction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Extension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SubscriptionBulkOrderInstruction2.mmObject();
 			isDerived = false;
@@ -203,24 +207,48 @@ public class SubscriptionBulkOrderInstruction2 {
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> Extension1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2.BulkOrderDetails, com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2.RelatedPartyDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2.Extension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2.mmBulkOrderDetails, com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2.mmRelatedPartyDetails,
+						com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails);
 				trace_lazy = () -> SubscriptionOrder.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.CancellationByOrderDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionBulkOrderInstruction2";
 				definition = "Information about a subscription bulk order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SubscriptionBulkOrder3 getBulkOrderDetails() {
+		return bulkOrderDetails;
+	}
+
+	public void setBulkOrderDetails(com.tools20022.repository.msg.SubscriptionBulkOrder3 bulkOrderDetails) {
+		this.bulkOrderDetails = bulkOrderDetails;
+	}
+
+	public List<Intermediary8> getRelatedPartyDetails() {
+		return relatedPartyDetails;
+	}
+
+	public void setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary8> relatedPartyDetails) {
+		this.relatedPartyDetails = relatedPartyDetails;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = extension;
 	}
 }

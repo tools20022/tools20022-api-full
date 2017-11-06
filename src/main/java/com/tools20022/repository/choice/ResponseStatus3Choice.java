@@ -33,14 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus3Choice#Consented
- * ResponseStatus3Choice.Consented}</li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus3Choice#mmConsented
+ * ResponseStatus3Choice.mmConsented}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus3Choice#Rejected
- * ResponseStatus3Choice.Rejected}</li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus3Choice#mmRejected
+ * ResponseStatus3Choice.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus3Choice#Pending
- * ResponseStatus3Choice.Pending}</li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus3Choice#mmPending
+ * ResponseStatus3Choice.mmPending}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,15 +50,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#ResponseStatus
- * SecuritiesSettlementTransactionCounterpartyResponseV01.ResponseStatus}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01#mmResponseStatus
+ * SecuritiesSettlementTransactionCounterpartyResponseV01.mmResponseStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ResponseStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ConsentStatus2Choice consented;
 	/**
 	 * Reason provided for the status.
 	 * <p>
@@ -93,8 +94,8 @@ public class ResponseStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,28 +116,29 @@ public class ResponseStatus3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ResponseStatus6Choice#Consented
-	 * ResponseStatus6Choice.Consented}</li>
+	 * {@linkplain com.tools20022.repository.choice.ResponseStatus6Choice#mmConsented
+	 * ResponseStatus6Choice.mmConsented}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Consented = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConsented = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> ResponseStatus3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "Cnsntd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consented";
 			definition = "Reason provided for the status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus6Choice.Consented);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus6Choice.mmConsented);
 			maxOccurs = 1;
-			type_lazy = () -> ConsentStatus2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.ConsentStatus2Choice.mmObject();
 		}
 	};
+	protected RejectionStatus7Choice rejected;
 	/**
 	 * The status of an instruction, advice or request.
 	 * <p>
@@ -170,28 +172,29 @@ public class ResponseStatus3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ResponseStatus6Choice#Rejected
-	 * ResponseStatus6Choice.Rejected}</li>
+	 * {@linkplain com.tools20022.repository.choice.ResponseStatus6Choice#mmRejected
+	 * ResponseStatus6Choice.mmRejected}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Rejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ResponseStatus3Choice.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> ResponseStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "The status of an instruction, advice or request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus6Choice.Rejected);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus6Choice.mmRejected);
 			maxOccurs = 1;
-			type_lazy = () -> RejectionStatus7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.RejectionStatus7Choice.mmObject();
 		}
 	};
+	protected PendingStatus20Choice pending;
 	/**
 	 * The status of an instruction, advice or request.
 	 * <p>
@@ -225,37 +228,37 @@ public class ResponseStatus3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ResponseStatus6Choice#Pending
-	 * ResponseStatus6Choice.Pending}</li>
+	 * {@linkplain com.tools20022.repository.choice.ResponseStatus6Choice#mmPending
+	 * ResponseStatus6Choice.mmPending}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Pending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ResponseStatus3Choice.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> ResponseStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "The status of an instruction, advice or request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus6Choice.Pending);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus6Choice.mmPending);
 			maxOccurs = 1;
-			type_lazy = () -> PendingStatus20Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.PendingStatus20Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus3Choice.Consented, com.tools20022.repository.choice.ResponseStatus3Choice.Rejected,
-						com.tools20022.repository.choice.ResponseStatus3Choice.Pending);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus3Choice.mmConsented, com.tools20022.repository.choice.ResponseStatus3Choice.mmRejected,
+						com.tools20022.repository.choice.ResponseStatus3Choice.mmPending);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.mmResponseStatus);
 				trace_lazy = () -> Status.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01.ResponseStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResponseStatus3Choice";
 				definition = "Choice of response status.";
@@ -263,5 +266,29 @@ public class ResponseStatus3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ConsentStatus2Choice getConsented() {
+		return consented;
+	}
+
+	public void setConsented(com.tools20022.repository.choice.ConsentStatus2Choice consented) {
+		this.consented = consented;
+	}
+
+	public RejectionStatus7Choice getRejected() {
+		return rejected;
+	}
+
+	public void setRejected(com.tools20022.repository.choice.RejectionStatus7Choice rejected) {
+		this.rejected = rejected;
+	}
+
+	public PendingStatus20Choice getPending() {
+		return pending;
+	}
+
+	public void setPending(com.tools20022.repository.choice.PendingStatus20Choice pending) {
+		this.pending = pending;
 	}
 }

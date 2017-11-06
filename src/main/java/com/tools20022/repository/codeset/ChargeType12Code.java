@@ -33,35 +33,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#BackEndLoad
- * ChargeType12Code.BackEndLoad}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType12Code#Discount
- * ChargeType12Code.Discount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#mmBackEndLoad
+ * ChargeType12Code.mmBackEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#FrontEndLoad
- * ChargeType12Code.FrontEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#mmDiscount
+ * ChargeType12Code.mmDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#PostageCharge
- * ChargeType12Code.PostageCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#mmFrontEndLoad
+ * ChargeType12Code.mmFrontEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#RegulatoryFee
- * ChargeType12Code.RegulatoryFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#mmPostageCharge
+ * ChargeType12Code.mmPostageCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#ShippingCharge
- * ChargeType12Code.ShippingCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#mmRegulatoryFee
+ * ChargeType12Code.mmRegulatoryFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#SpecialConcessions
- * ChargeType12Code.SpecialConcessions}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#mmShippingCharge
+ * ChargeType12Code.mmShippingCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#TransferFee
- * ChargeType12Code.TransferFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#mmSpecialConcessions
+ * ChargeType12Code.mmSpecialConcessions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType12Code#mmTransferFee
+ * ChargeType12Code.mmTransferFee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +98,7 @@ public class ChargeType12Code extends ChargeTypeCode {
 	 * name} = "BackEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode BackEndLoad = new MMCode() {
+	public static final MMCode mmBackEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
@@ -120,7 +121,7 @@ public class ChargeType12Code extends ChargeTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discount = new MMCode() {
+	public static final MMCode mmDiscount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
@@ -143,7 +144,7 @@ public class ChargeType12Code extends ChargeTypeCode {
 	 * name} = "FrontEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode FrontEndLoad = new MMCode() {
+	public static final MMCode mmFrontEndLoad = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
@@ -166,7 +167,7 @@ public class ChargeType12Code extends ChargeTypeCode {
 	 * name} = "PostageCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode PostageCharge = new MMCode() {
+	public static final MMCode mmPostageCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostageCharge";
@@ -189,7 +190,7 @@ public class ChargeType12Code extends ChargeTypeCode {
 	 * name} = "RegulatoryFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegulatoryFee = new MMCode() {
+	public static final MMCode mmRegulatoryFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryFee";
@@ -212,7 +213,7 @@ public class ChargeType12Code extends ChargeTypeCode {
 	 * name} = "ShippingCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShippingCharge = new MMCode() {
+	public static final MMCode mmShippingCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingCharge";
@@ -235,7 +236,7 @@ public class ChargeType12Code extends ChargeTypeCode {
 	 * name} = "SpecialConcessions"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialConcessions = new MMCode() {
+	public static final MMCode mmSpecialConcessions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialConcessions";
@@ -258,7 +259,7 @@ public class ChargeType12Code extends ChargeTypeCode {
 	 * name} = "TransferFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferFee = new MMCode() {
+	public static final MMCode mmTransferFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferFee";
@@ -269,14 +270,14 @@ public class ChargeType12Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BEND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeType12Code";
 				definition = "Type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType12Code.BackEndLoad, com.tools20022.repository.codeset.ChargeType12Code.Discount, com.tools20022.repository.codeset.ChargeType12Code.FrontEndLoad,
-						com.tools20022.repository.codeset.ChargeType12Code.PostageCharge, com.tools20022.repository.codeset.ChargeType12Code.RegulatoryFee, com.tools20022.repository.codeset.ChargeType12Code.ShippingCharge,
-						com.tools20022.repository.codeset.ChargeType12Code.SpecialConcessions, com.tools20022.repository.codeset.ChargeType12Code.TransferFee);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType12Code.mmBackEndLoad, com.tools20022.repository.codeset.ChargeType12Code.mmDiscount,
+						com.tools20022.repository.codeset.ChargeType12Code.mmFrontEndLoad, com.tools20022.repository.codeset.ChargeType12Code.mmPostageCharge, com.tools20022.repository.codeset.ChargeType12Code.mmRegulatoryFee,
+						com.tools20022.repository.codeset.ChargeType12Code.mmShippingCharge, com.tools20022.repository.codeset.ChargeType12Code.mmSpecialConcessions, com.tools20022.repository.codeset.ChargeType12Code.mmTransferFee);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

@@ -37,26 +37,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#Identification
- * OriginalRequestInformation1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#mmIdentification
+ * OriginalRequestInformation1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#CreationDateTime
- * OriginalRequestInformation1.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#mmCreationDateTime
+ * OriginalRequestInformation1.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#FinancingRequestor
- * OriginalRequestInformation1.FinancingRequestor}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#mmFinancingRequestor
+ * OriginalRequestInformation1.mmFinancingRequestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#IntermediaryAgent
- * OriginalRequestInformation1.IntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#mmIntermediaryAgent
+ * OriginalRequestInformation1.mmIntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#FirstAgent
- * OriginalRequestInformation1.FirstAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#mmFirstAgent
+ * OriginalRequestInformation1.mmFirstAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#ValidationStatusInformation
- * OriginalRequestInformation1.ValidationStatusInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#mmValidationStatusInformation
+ * OriginalRequestInformation1.mmValidationStatusInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#CancellationStatusInformation
- * OriginalRequestInformation1.CancellationStatusInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalRequestInformation1#mmCancellationStatusInformation
+ * OriginalRequestInformation1.mmCancellationStatusInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -68,15 +68,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#OriginalRequestInformationAndStatus
- * InvoiceFinancingRequestStatusV01.OriginalRequestInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01#mmOriginalRequestInformationAndStatus
+ * InvoiceFinancingRequestStatusV01.mmOriginalRequestInformationAndStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalRequestInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identifier of the original request message as
 	 * assigned by the original sending party.
@@ -122,7 +123,7 @@ public class OriginalRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
 			isDerived = false;
@@ -130,11 +131,12 @@ public class OriginalRequestInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the original request message as assigned by the original sending party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Date and time at which the original request message was created.
 	 * <p>
@@ -163,7 +165,7 @@ public class OriginalRequestInformation1 {
 	 * "Date and time at which the original request message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
 			isDerived = false;
@@ -171,11 +173,12 @@ public class OriginalRequestInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the original request message was created.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount6 financingRequestor;
 	/**
 	 * Party that requests the invoice financing, on behalf of a creditor, as
 	 * indicated in the original request message.
@@ -189,8 +192,8 @@ public class OriginalRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -211,21 +214,22 @@ public class OriginalRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancingRequestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancingRequestor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "FincgRqstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingRequestor";
 			definition = "Party that requests the invoice financing, on behalf of a creditor, as indicated in the original request message.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification6 intermediaryAgent;
 	/**
 	 * Financial institution that receives the request from the financing
 	 * requestor and forwards it to the first agent for execution, as indicated
@@ -240,8 +244,8 @@ public class OriginalRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -262,21 +266,22 @@ public class OriginalRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IntermediaryAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
 			definition = "Financial institution that receives the request from the financing requestor and forwards it to the first agent for execution, as indicated in the original request message.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification6 firstAgent;
 	/**
 	 * Financial institution of financing requestor to which an invoice
 	 * financing request is addressed, as indicated in the original request
@@ -291,8 +296,8 @@ public class OriginalRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -313,21 +318,22 @@ public class OriginalRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FirstAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFirstAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "FrstAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAgent";
 			definition = "Financial institution of financing requestor to which an invoice financing request is addressed, as indicated in the original request message.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
 		}
 	};
+	protected ValidationStatusInformation1 validationStatusInformation;
 	/**
 	 * Information about the validation status of the request message.
 	 * <p>
@@ -340,8 +346,8 @@ public class OriginalRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#InvoiceFinancingStatus
-	 * InvoiceFinancingAgreement.InvoiceFinancingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
+	 * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -361,21 +367,22 @@ public class OriginalRequestInformation1 {
 	 * "Information about the validation status of the request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidationStatusInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.InvoiceFinancingStatus;
 			isDerived = false;
 			xmlTag = "VldtnStsInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationStatusInformation";
 			definition = "Information about the validation status of the request message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ValidationStatusInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
 		}
 	};
+	protected CancellationStatusInformation1 cancellationStatusInformation;
 	/**
 	 * Information on the business status of the cancellation.
 	 * <p>
@@ -388,8 +395,8 @@ public class OriginalRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#InvoiceFinancingStatus
-	 * InvoiceFinancingAgreement.InvoiceFinancingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
+	 * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -408,37 +415,93 @@ public class OriginalRequestInformation1 {
 	 * definition} = "Information on the business status of the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationStatusInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationStatusInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.InvoiceFinancingStatus;
 			isDerived = false;
 			xmlTag = "CxlStsInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusInformation";
 			definition = "Information on the business status of the cancellation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationStatusInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CancellationStatusInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalRequestInformation1.Identification, com.tools20022.repository.msg.OriginalRequestInformation1.CreationDateTime,
-						com.tools20022.repository.msg.OriginalRequestInformation1.FinancingRequestor, com.tools20022.repository.msg.OriginalRequestInformation1.IntermediaryAgent,
-						com.tools20022.repository.msg.OriginalRequestInformation1.FirstAgent, com.tools20022.repository.msg.OriginalRequestInformation1.ValidationStatusInformation,
-						com.tools20022.repository.msg.OriginalRequestInformation1.CancellationStatusInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalRequestInformation1.mmIdentification, com.tools20022.repository.msg.OriginalRequestInformation1.mmCreationDateTime,
+						com.tools20022.repository.msg.OriginalRequestInformation1.mmFinancingRequestor, com.tools20022.repository.msg.OriginalRequestInformation1.mmIntermediaryAgent,
+						com.tools20022.repository.msg.OriginalRequestInformation1.mmFirstAgent, com.tools20022.repository.msg.OriginalRequestInformation1.mmValidationStatusInformation,
+						com.tools20022.repository.msg.OriginalRequestInformation1.mmCancellationStatusInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.mmOriginalRequestInformationAndStatus);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.OriginalRequestInformationAndStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalRequestInformation1";
 				definition = "Set of characteristics that unambiguously identify the original global invoice financing request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public PartyIdentificationAndAccount6 getFinancingRequestor() {
+		return financingRequestor;
+	}
+
+	public void setFinancingRequestor(com.tools20022.repository.msg.PartyIdentificationAndAccount6 financingRequestor) {
+		this.financingRequestor = financingRequestor;
+	}
+
+	public FinancialInstitutionIdentification6 getIntermediaryAgent() {
+		return intermediaryAgent;
+	}
+
+	public void setIntermediaryAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 intermediaryAgent) {
+		this.intermediaryAgent = intermediaryAgent;
+	}
+
+	public FinancialInstitutionIdentification6 getFirstAgent() {
+		return firstAgent;
+	}
+
+	public void setFirstAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 firstAgent) {
+		this.firstAgent = firstAgent;
+	}
+
+	public ValidationStatusInformation1 getValidationStatusInformation() {
+		return validationStatusInformation;
+	}
+
+	public void setValidationStatusInformation(com.tools20022.repository.msg.ValidationStatusInformation1 validationStatusInformation) {
+		this.validationStatusInformation = validationStatusInformation;
+	}
+
+	public CancellationStatusInformation1 getCancellationStatusInformation() {
+		return cancellationStatusInformation;
+	}
+
+	public void setCancellationStatusInformation(com.tools20022.repository.msg.CancellationStatusInformation1 cancellationStatusInformation) {
+		this.cancellationStatusInformation = cancellationStatusInformation;
 	}
 }

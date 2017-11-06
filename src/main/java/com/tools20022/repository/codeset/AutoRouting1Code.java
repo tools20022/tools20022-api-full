@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * AutoRoutingCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AutoRouting1Code#DOTSystem
- * AutoRouting1Code.DOTSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AutoRouting1Code#SuperDOTSystem
- * AutoRouting1Code.SuperDOTSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.AutoRouting1Code#mmDOTSystem
+ * AutoRouting1Code.mmDOTSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AutoRouting1Code#mmSuperDOTSystem
+ * AutoRouting1Code.mmSuperDOTSystem}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +81,7 @@ public class AutoRouting1Code extends AutoRoutingCode {
 	 * name} = "DOTSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode DOTSystem = new MMCode() {
+	public static final MMCode mmDOTSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DOTSystem";
@@ -103,7 +104,7 @@ public class AutoRouting1Code extends AutoRoutingCode {
 	 * name} = "SuperDOTSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode SuperDOTSystem = new MMCode() {
+	public static final MMCode mmSuperDOTSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuperDOTSystem";
@@ -114,12 +115,12 @@ public class AutoRouting1Code extends AutoRoutingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DDOT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AutoRouting1Code";
 				definition = "Indicates whether an automatic routing system is involved.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AutoRouting1Code.DOTSystem, com.tools20022.repository.codeset.AutoRouting1Code.SuperDOTSystem);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AutoRouting1Code.mmDOTSystem, com.tools20022.repository.codeset.AutoRouting1Code.mmSuperDOTSystem);
 				trace_lazy = () -> AutoRoutingCode.mmObject();
 			}
 		});

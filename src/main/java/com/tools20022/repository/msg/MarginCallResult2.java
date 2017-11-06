@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCallResult2#VariationMarginResult
- * MarginCallResult2.VariationMarginResult}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCallResult2#mmVariationMarginResult
+ * MarginCallResult2.mmVariationMarginResult}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginCallResult2#SegregatedIndependentAmount
- * MarginCallResult2.SegregatedIndependentAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginCallResult2#mmSegregatedIndependentAmount
+ * MarginCallResult2.mmSegregatedIndependentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginCallResult2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Result1 variationMarginResult;
 	/**
 	 * Provides the summation of the call amounts for the variation margin
 	 * amount only.
@@ -74,8 +75,8 @@ public class MarginCallResult2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#VariationMargin
-	 * MarginCall.VariationMargin}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmVariationMargin
+	 * MarginCall.mmVariationMargin}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,21 +97,22 @@ public class MarginCallResult2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd VariationMarginResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmVariationMarginResult = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> MarginCallResult2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.VariationMargin;
 			isDerived = false;
 			xmlTag = "VartnMrgnRslt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMarginResult";
 			definition = "Provides the summation of the call amounts for the variation margin amount only.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Result1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Result1.mmObject();
 		}
 	};
+	protected Result1 segregatedIndependentAmount;
 	/**
 	 * Provides the summation of the call amounts for the segregated independent
 	 * amount.
@@ -122,8 +124,8 @@ public class MarginCallResult2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#SegregatedIndependentAmount
-	 * MarginCall.SegregatedIndependentAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmSegregatedIndependentAmount
+	 * MarginCall.mmSegregatedIndependentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,33 +146,49 @@ public class MarginCallResult2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> MarginCallResult2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.SegregatedIndependentAmount;
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides the summation of the call amounts for the segregated independent amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Result1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Result1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCallResult2.VariationMarginResult, com.tools20022.repository.msg.MarginCallResult2.SegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCallResult2.mmVariationMarginResult, com.tools20022.repository.msg.MarginCallResult2.mmSegregatedIndependentAmount);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarginCallResult2";
 				definition = "Provides the summation of the call amounts for the variation margin and optionaly the segregated independent amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Result1 getVariationMarginResult() {
+		return variationMarginResult;
+	}
+
+	public void setVariationMarginResult(com.tools20022.repository.msg.Result1 variationMarginResult) {
+		this.variationMarginResult = variationMarginResult;
+	}
+
+	public Result1 getSegregatedIndependentAmount() {
+		return segregatedIndependentAmount;
+	}
+
+	public void setSegregatedIndependentAmount(com.tools20022.repository.msg.Result1 segregatedIndependentAmount) {
+		this.segregatedIndependentAmount = segregatedIndependentAmount;
 	}
 }

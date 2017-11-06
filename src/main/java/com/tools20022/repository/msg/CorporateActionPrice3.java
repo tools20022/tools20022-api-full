@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice3#MaximumPrice
- * CorporateActionPrice3.MaximumPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice3#mmMaximumPrice
+ * CorporateActionPrice3.mmMaximumPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPrice3#MinimumPrice
- * CorporateActionPrice3.MinimumPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPrice3#mmMinimumPrice
+ * CorporateActionPrice3.mmMinimumPrice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPrice3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceFormat11Choice maximumPrice;
 	/**
 	 * Maximum or cap price at which a holder can bid, for example, on a Dutch
 	 * auction offer.
@@ -76,8 +77,8 @@ public class CorporateActionPrice3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#MaximumPrice
-	 * BiddingConditions.MaximumPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMaximumPrice
+	 * BiddingConditions.mmMaximumPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class CorporateActionPrice3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmMaximumPrice;
 			componentContext_lazy = () -> CorporateActionPrice3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.MaximumPrice;
 			isDerived = false;
 			xmlTag = "MaxPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumPrice";
 			definition = "Maximum or cap price at which a holder can bid, for example, on a Dutch auction offer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat11Choice.mmObject();
 		}
 	};
+	protected PriceFormat11Choice minimumPrice;
 	/**
 	 * Minimum or floor price at which a holder can bid, for example, on a Dutch
 	 * auction offer.
@@ -126,8 +128,8 @@ public class CorporateActionPrice3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#MinimumPrice
-	 * BiddingConditions.MinimumPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMinimumPrice
+	 * BiddingConditions.mmMinimumPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class CorporateActionPrice3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmMinimumPrice;
 			componentContext_lazy = () -> CorporateActionPrice3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.MinimumPrice;
 			isDerived = false;
 			xmlTag = "MinPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumPrice";
 			definition = "Minimum or floor price at which a holder can bid, for example, on a Dutch auction offer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat11Choice.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class CorporateActionPrice3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice3.MaximumPrice, com.tools20022.repository.msg.CorporateActionPrice3.MinimumPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice3.mmMaximumPrice, com.tools20022.repository.msg.CorporateActionPrice3.mmMinimumPrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice3";
 				definition = "Specifies prices of a corporate action.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceFormat11Choice getMaximumPrice() {
+		return maximumPrice;
+	}
+
+	public void setMaximumPrice(PriceFormat11Choice maximumPrice) {
+		this.maximumPrice = maximumPrice;
+	}
+
+	public PriceFormat11Choice getMinimumPrice() {
+		return minimumPrice;
+	}
+
+	public void setMinimumPrice(PriceFormat11Choice minimumPrice) {
+		this.minimumPrice = minimumPrice;
 	}
 }

@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelSignatureHash1#Hash
- * IsabelSignatureHash1.Hash}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IsabelSignatureHash1#Algorithm
- * IsabelSignatureHash1.Algorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IsabelSignatureHash1#mmHash
+ * IsabelSignatureHash1.mmHash}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IsabelSignatureHash1#mmAlgorithm
+ * IsabelSignatureHash1.mmAlgorithm}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelSignatureHash1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max50Binary hash;
 	/**
 	 * Arbitrary block of data defined as a fixed-size bit string, the
 	 * (cryptographic) hash value, that allows the detection of an accidental or
@@ -88,7 +90,7 @@ public class IsabelSignatureHash1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Hash = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHash = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSignatureHash1.mmObject();
 			isDerived = false;
@@ -96,11 +98,12 @@ public class IsabelSignatureHash1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hash";
 			definition = "Arbitrary block of data defined as a fixed-size bit string, the (cryptographic) hash value, that allows the detection of an accidental or intentional change to the data.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max50Binary.mmObject();
 		}
 	};
+	protected Max105Text algorithm;
 	/**
 	 * Effective method for calculating the signature hash using a finite
 	 * sequence of instructions.
@@ -131,7 +134,7 @@ public class IsabelSignatureHash1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSignatureHash1.mmObject();
 			isDerived = false;
@@ -139,8 +142,8 @@ public class IsabelSignatureHash1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Effective method for calculating the signature hash using a finite sequence of instructions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
@@ -148,13 +151,29 @@ public class IsabelSignatureHash1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureHash1.Hash, com.tools20022.repository.msg.IsabelSignatureHash1.Algorithm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureHash1.mmHash, com.tools20022.repository.msg.IsabelSignatureHash1.mmAlgorithm);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelSignatureHash1";
 				definition = "Specifies the hash data for the file signature.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max50Binary getHash() {
+		return hash;
+	}
+
+	public void setHash(Max50Binary hash) {
+		this.hash = hash;
+	}
+
+	public Max105Text getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Max105Text algorithm) {
+		this.algorithm = algorithm;
 	}
 }

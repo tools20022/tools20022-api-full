@@ -33,20 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DefaultAccountDetails1#AccountOwner
- * DefaultAccountDetails1.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DefaultAccountDetails1#Account
- * DefaultAccountDetails1.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.DefaultAccountDetails1#mmAccountOwner
+ * DefaultAccountDetails1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DefaultAccountDetails1#DailyFundTransfer
- * DefaultAccountDetails1.DailyFundTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.DefaultAccountDetails1#mmAccount
+ * DefaultAccountDetails1.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DefaultAccountDetails1#mmDailyFundTransfer
+ * DefaultAccountDetails1.mmDailyFundTransfer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DefaultAccountDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstitutionIdentification9 accountOwner;
 	/**
 	 * Account owner identification.
 	 * <p>
@@ -88,7 +90,7 @@ public class DefaultAccountDetails1 {
 	 * definition} = "Account owner identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DefaultAccountDetails1.mmObject();
 			isDerived = false;
@@ -96,12 +98,13 @@ public class DefaultAccountDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Account owner identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
 		}
 	};
+	protected CashAccount24 account;
 	/**
 	 * Account identification.
 	 * <p>
@@ -128,7 +131,7 @@ public class DefaultAccountDetails1 {
 	 * definition} = "Account identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DefaultAccountDetails1.mmObject();
 			isDerived = false;
@@ -136,12 +139,13 @@ public class DefaultAccountDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected DailyFundTransfer1Choice dailyFundTransfer;
 	/**
 	 * Information about time and event fund transfer.
 	 * <p>
@@ -169,7 +173,7 @@ public class DefaultAccountDetails1 {
 	 * definition} = "Information about time and event fund transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DailyFundTransfer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDailyFundTransfer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DefaultAccountDetails1.mmObject();
 			isDerived = false;
@@ -177,24 +181,48 @@ public class DefaultAccountDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DailyFundTransfer";
 			definition = "Information about time and event fund transfer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DailyFundTransfer1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DailyFundTransfer1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultAccountDetails1.AccountOwner, com.tools20022.repository.msg.DefaultAccountDetails1.Account,
-						com.tools20022.repository.msg.DefaultAccountDetails1.DailyFundTransfer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultAccountDetails1.mmAccountOwner, com.tools20022.repository.msg.DefaultAccountDetails1.mmAccount,
+						com.tools20022.repository.msg.DefaultAccountDetails1.mmDailyFundTransfer);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DefaultAccountDetails1";
 				definition = "Details about successor account for automated default funds transfer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstitutionIdentification9 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public CashAccount24 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+		this.account = account;
+	}
+
+	public DailyFundTransfer1Choice getDailyFundTransfer() {
+		return dailyFundTransfer;
+	}
+
+	public void setDailyFundTransfer(DailyFundTransfer1Choice dailyFundTransfer) {
+		this.dailyFundTransfer = dailyFundTransfer;
 	}
 }

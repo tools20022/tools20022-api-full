@@ -37,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther1Choice#PaymentCode
- * PaymentCodeOrOther1Choice.PaymentCode}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther1Choice#mmPaymentCode
+ * PaymentCodeOrOther1Choice.mmPaymentCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther1Choice#PaymentDueDate
- * PaymentCodeOrOther1Choice.PaymentDueDate}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther1Choice#mmPaymentDueDate
+ * PaymentCodeOrOther1Choice.mmPaymentDueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther1Choice#OtherPaymentTerms
- * PaymentCodeOrOther1Choice.OtherPaymentTerms}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther1Choice#mmOtherPaymentTerms
+ * PaymentCodeOrOther1Choice.mmOtherPaymentTerms}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentCodeOrOther1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentPeriod3 paymentCode;
 	/**
 	 * Specifies the payment period in coded form and a number of days.
 	 * <p>
@@ -105,28 +106,29 @@ public class PaymentCodeOrOther1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther2Choice#PaymentCode
-	 * PaymentCodeOrOther2Choice.PaymentCode}</li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther2Choice#mmPaymentCode
+	 * PaymentCodeOrOther2Choice.mmPaymentCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentCode = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentCodeOrOther1Choice.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> PaymentCodeOrOther1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCode";
 			definition = "Specifies the payment period in coded form and a number of days.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther2Choice.PaymentCode);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther2Choice.mmPaymentCode);
 			maxOccurs = 1;
-			type_lazy = () -> PaymentPeriod3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PaymentPeriod3.mmObject();
 		}
 	};
+	protected ISODate paymentDueDate;
 	/**
 	 * Specifies the payment date as a fixed date.
 	 * <p>
@@ -139,8 +141,8 @@ public class PaymentCodeOrOther1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#Date
-	 * ObligationFulfilment.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
+	 * ObligationFulfilment.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,27 +163,28 @@ public class PaymentCodeOrOther1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther2Choice#PaymentDueDate
-	 * PaymentCodeOrOther2Choice.PaymentDueDate}</li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther2Choice#mmPaymentDueDate
+	 * PaymentCodeOrOther2Choice.mmPaymentDueDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentDueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> PaymentCodeOrOther1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.Date;
 			isDerived = false;
 			xmlTag = "PmtDueDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDueDate";
 			definition = "Specifies the payment date as a fixed date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther2Choice.PaymentDueDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther2Choice.mmPaymentDueDate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max140Text otherPaymentTerms;
 	/**
 	 * Specifies payment terms not present in a code list.
 	 * <p>
@@ -211,13 +214,13 @@ public class PaymentCodeOrOther1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther2Choice#OtherPaymentTerms
-	 * PaymentCodeOrOther2Choice.OtherPaymentTerms}</li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther2Choice#mmOtherPaymentTerms
+	 * PaymentCodeOrOther2Choice.mmOtherPaymentTerms}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherPaymentTerms = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherPaymentTerms = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentCodeOrOther1Choice.mmObject();
 			isDerived = false;
@@ -225,9 +228,9 @@ public class PaymentCodeOrOther1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherPaymentTerms";
 			definition = "Specifies payment terms not present in a code list.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther2Choice.OtherPaymentTerms);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther2Choice.mmOtherPaymentTerms);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -235,9 +238,9 @@ public class PaymentCodeOrOther1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther1Choice.PaymentCode, com.tools20022.repository.choice.PaymentCodeOrOther1Choice.PaymentDueDate,
-						com.tools20022.repository.choice.PaymentCodeOrOther1Choice.OtherPaymentTerms);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther1Choice.mmPaymentCode, com.tools20022.repository.choice.PaymentCodeOrOther1Choice.mmPaymentDueDate,
+						com.tools20022.repository.choice.PaymentCodeOrOther1Choice.mmOtherPaymentTerms);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentCodeOrOther1Choice";
 				definition = "Choice between a payment term in a coded or free format.";
@@ -245,5 +248,29 @@ public class PaymentCodeOrOther1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentPeriod3 getPaymentCode() {
+		return paymentCode;
+	}
+
+	public void setPaymentCode(PaymentPeriod3 paymentCode) {
+		this.paymentCode = paymentCode;
+	}
+
+	public ISODate getPaymentDueDate() {
+		return paymentDueDate;
+	}
+
+	public void setPaymentDueDate(ISODate paymentDueDate) {
+		this.paymentDueDate = paymentDueDate;
+	}
+
+	public Max140Text getOtherPaymentTerms() {
+		return otherPaymentTerms;
+	}
+
+	public void setOtherPaymentTerms(Max140Text otherPaymentTerms) {
+		this.otherPaymentTerms = otherPaymentTerms;
 	}
 }

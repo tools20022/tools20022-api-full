@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#Critical
- * TMSContactLevel1Code.Critical}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#mmCritical
+ * TMSContactLevel1Code.mmCritical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#AsSoonAsPossible
- * TMSContactLevel1Code.AsSoonAsPossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#mmAsSoonAsPossible
+ * TMSContactLevel1Code.mmAsSoonAsPossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#DateTime
- * TMSContactLevel1Code.DateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#mmDateTime
+ * TMSContactLevel1Code.mmDateTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class TMSContactLevel1Code extends TMSContactLevelCode {
 	 * name} = "Critical"</li>
 	 * </ul>
 	 */
-	public static final MMCode Critical = new MMCode() {
+	public static final MMCode mmCritical = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Critical";
@@ -108,7 +108,7 @@ public class TMSContactLevel1Code extends TMSContactLevelCode {
 	 * name} = "AsSoonAsPossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode AsSoonAsPossible = new MMCode() {
+	public static final MMCode mmAsSoonAsPossible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsSoonAsPossible";
@@ -131,7 +131,7 @@ public class TMSContactLevel1Code extends TMSContactLevelCode {
 	 * name} = "DateTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode DateTime = new MMCode() {
+	public static final MMCode mmDateTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
@@ -142,13 +142,13 @@ public class TMSContactLevel1Code extends TMSContactLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRIT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TMSContactLevel1Code";
 				definition = "Level of urgency in contacting the terminal management system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TMSContactLevel1Code.Critical, com.tools20022.repository.codeset.TMSContactLevel1Code.AsSoonAsPossible,
-						com.tools20022.repository.codeset.TMSContactLevel1Code.DateTime);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TMSContactLevel1Code.mmCritical, com.tools20022.repository.codeset.TMSContactLevel1Code.mmAsSoonAsPossible,
+						com.tools20022.repository.codeset.TMSContactLevel1Code.mmDateTime);
 				trace_lazy = () -> TMSContactLevelCode.mmObject();
 			}
 		});

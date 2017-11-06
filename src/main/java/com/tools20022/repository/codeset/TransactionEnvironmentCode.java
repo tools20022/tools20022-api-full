@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#Merchant
- * TransactionEnvironmentCode.Merchant}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#mmMerchant
+ * TransactionEnvironmentCode.mmMerchant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#Private
- * TransactionEnvironmentCode.Private}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#mmPrivate
+ * TransactionEnvironmentCode.mmPrivate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#Public
- * TransactionEnvironmentCode.Public}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#mmPublic
+ * TransactionEnvironmentCode.mmPublic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#Branch
- * TransactionEnvironmentCode.Branch}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#mmBranch
+ * TransactionEnvironmentCode.mmBranch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#Other
- * TransactionEnvironmentCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode#mmOther
+ * TransactionEnvironmentCode.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -63,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class TransactionEnvironmentCode {
 	 * definition} = "Merchant environment."</li>
 	 * </ul>
 	 */
-	public static final MMCode Merchant = new MMCode() {
+	public static final MMCode mmMerchant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Merchant";
@@ -135,7 +135,7 @@ public class TransactionEnvironmentCode {
 	 * definition} = "Private environment."</li>
 	 * </ul>
 	 */
-	public static final MMCode Private = new MMCode() {
+	public static final MMCode mmPrivate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Private";
@@ -165,7 +165,7 @@ public class TransactionEnvironmentCode {
 	 * definition} = "Public environment."</li>
 	 * </ul>
 	 */
-	public static final MMCode Public = new MMCode() {
+	public static final MMCode mmPublic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Public";
@@ -195,7 +195,7 @@ public class TransactionEnvironmentCode {
 	 * definition} = "Bank environment."</li>
 	 * </ul>
 	 */
-	public static final MMCode Branch = new MMCode() {
+	public static final MMCode mmBranch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Branch";
@@ -225,7 +225,7 @@ public class TransactionEnvironmentCode {
 	 * definition} = "Other environments, for instance a mall or an airport."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -238,13 +238,13 @@ public class TransactionEnvironmentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MERC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionEnvironmentCode";
 				definition = "Indicates the environment of the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionEnvironmentCode.Merchant, com.tools20022.repository.codeset.TransactionEnvironmentCode.Private,
-						com.tools20022.repository.codeset.TransactionEnvironmentCode.Public, com.tools20022.repository.codeset.TransactionEnvironmentCode.Branch, com.tools20022.repository.codeset.TransactionEnvironmentCode.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionEnvironmentCode.mmMerchant, com.tools20022.repository.codeset.TransactionEnvironmentCode.mmPrivate,
+						com.tools20022.repository.codeset.TransactionEnvironmentCode.mmPublic, com.tools20022.repository.codeset.TransactionEnvironmentCode.mmBranch, com.tools20022.repository.codeset.TransactionEnvironmentCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(TransactionEnvironment1Code.mmObject(), TransactionEnvironment3Code.mmObject(), TransactionEnvironment2Code.mmObject());
 			}
 		});

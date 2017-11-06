@@ -37,10 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommissionWaiver4#InstructionBasis
- * CommissionWaiver4.InstructionBasis}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommissionWaiver4#WaivedRate
- * CommissionWaiver4.WaivedRate}</li>
+ * {@linkplain com.tools20022.repository.msg.CommissionWaiver4#mmInstructionBasis
+ * CommissionWaiver4.mmInstructionBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommissionWaiver4#mmWaivedRate
+ * CommissionWaiver4.mmWaivedRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommissionWaiver4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected WaivingInstruction1Choice instructionBasis;
 	/**
 	 * Form of the rebate, for example, cash.
 	 * <p>
@@ -82,8 +83,8 @@ public class CommissionWaiver4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CommissionWaiver#InstructionBasis
-	 * CommissionWaiver.InstructionBasis}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommissionWaiver#mmInstructionBasis
+	 * CommissionWaiver.mmInstructionBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,21 +103,22 @@ public class CommissionWaiver4 {
 	 * definition} = "Form of the rebate, for example, cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionBasis = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> CommissionWaiver4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.InstructionBasis;
 			isDerived = false;
 			xmlTag = "InstrBsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionBasis";
 			definition = "Form of the rebate, for example, cash.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> WaivingInstruction1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> WaivingInstruction1Choice.mmObject();
 		}
 	};
+	protected PercentageRate waivedRate;
 	/**
 	 * Proportion of the commission that is waived, for example, if the
 	 * commission is 5% and half is waived, 2.5% should be stated in this field.
@@ -131,8 +133,8 @@ public class CommissionWaiver4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CommissionWaiver#WaivedRate
-	 * CommissionWaiver.WaivedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommissionWaiver#mmWaivedRate
+	 * CommissionWaiver.mmWaivedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,22 +156,22 @@ public class CommissionWaiver4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CommissionWaiver3#WaivedRate
-	 * CommissionWaiver3.WaivedRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CommissionWaiver3#mmWaivedRate
+	 * CommissionWaiver3.mmWaivedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WaivedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWaivedRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmWaivedRate;
 			componentContext_lazy = () -> CommissionWaiver4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.WaivedRate;
 			isDerived = false;
 			xmlTag = "WvdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaivedRate";
 			definition = "Proportion of the commission that is waived, for example, if  the commission is 5% and half is waived, 2.5% should be stated in this field.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommissionWaiver3.WaivedRate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CommissionWaiver3.mmWaivedRate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -177,9 +179,9 @@ public class CommissionWaiver4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionWaiver4.InstructionBasis, com.tools20022.repository.msg.CommissionWaiver4.WaivedRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionWaiver4.mmInstructionBasis, com.tools20022.repository.msg.CommissionWaiver4.mmWaivedRate);
 				trace_lazy = () -> CommissionWaiver.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CommissionWaiver4";
 				definition = "Non-enforcement of the right to all or part of a commission by the party entitled to the commission.";
@@ -187,5 +189,21 @@ public class CommissionWaiver4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public WaivingInstruction1Choice getInstructionBasis() {
+		return instructionBasis;
+	}
+
+	public void setInstructionBasis(WaivingInstruction1Choice instructionBasis) {
+		this.instructionBasis = instructionBasis;
+	}
+
+	public PercentageRate getWaivedRate() {
+		return waivedRate;
+	}
+
+	public void setWaivedRate(PercentageRate waivedRate) {
+		this.waivedRate = waivedRate;
 	}
 }

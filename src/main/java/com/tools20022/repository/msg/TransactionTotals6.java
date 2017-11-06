@@ -33,36 +33,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals6#Authorisation
- * TransactionTotals6.Authorisation}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals6#mmAuthorisation
+ * TransactionTotals6.mmAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals6#AuthorisationReversal
- * TransactionTotals6.AuthorisationReversal}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals6#Inquiry
- * TransactionTotals6.Inquiry}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals6#mmAuthorisationReversal
+ * TransactionTotals6.mmAuthorisationReversal}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals6#mmInquiry
+ * TransactionTotals6.mmInquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals6#InquiryReversal
- * TransactionTotals6.InquiryReversal}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals6#Payments
- * TransactionTotals6.Payments}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals6#mmInquiryReversal
+ * TransactionTotals6.mmInquiryReversal}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals6#mmPayments
+ * TransactionTotals6.mmPayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals6#PaymentReversal
- * TransactionTotals6.PaymentReversal}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals6#Transfer
- * TransactionTotals6.Transfer}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals6#mmPaymentReversal
+ * TransactionTotals6.mmPaymentReversal}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals6#mmTransfer
+ * TransactionTotals6.mmTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals6#TransferReversal
- * TransactionTotals6.TransferReversal}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals6#mmTransferReversal
+ * TransactionTotals6.mmTransferReversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTotals6#FeeCollection
- * TransactionTotals6.FeeCollection}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTotals6#mmFeeCollection
+ * TransactionTotals6.mmFeeCollection}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionTotals6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number authorisation;
 	/**
 	 * Sum number of all authorisation transactions.
 	 * <p>
@@ -107,7 +108,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all authorisation transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Authorisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
@@ -115,11 +116,12 @@ public class TransactionTotals6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
 			definition = "Sum number of all authorisation transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number authorisationReversal;
 	/**
 	 * Sum number of all reversed authorisation transactions.
 	 * <p>
@@ -147,7 +149,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all reversed authorisation transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthorisationReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthorisationReversal = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
@@ -155,11 +157,12 @@ public class TransactionTotals6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationReversal";
 			definition = "Sum number of all reversed authorisation transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number inquiry;
 	/**
 	 * Sum number of all inquiry transactions.
 	 * <p>
@@ -187,7 +190,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all inquiry transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Inquiry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInquiry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class TransactionTotals6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inquiry";
 			definition = "Sum number of all inquiry transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number inquiryReversal;
 	/**
 	 * Sum number of all reversed inquiry transactions.
 	 * <p>
@@ -227,7 +231,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all reversed inquiry transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InquiryReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInquiryReversal = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
@@ -235,11 +239,12 @@ public class TransactionTotals6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InquiryReversal";
 			definition = "Sum number of all reversed inquiry transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number payments;
 	/**
 	 * Sum number of all financial presentment payment transactions processed.
 	 * <p>
@@ -269,7 +274,7 @@ public class TransactionTotals6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Payments = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayments = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
@@ -277,11 +282,12 @@ public class TransactionTotals6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payments";
 			definition = "Sum number of all financial presentment payment transactions processed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number paymentReversal;
 	/**
 	 * Sum number of all financial presentment payment transactions which have
 	 * been reversed.
@@ -312,7 +318,7 @@ public class TransactionTotals6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentReversal = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
@@ -320,11 +326,12 @@ public class TransactionTotals6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReversal";
 			definition = "Sum number of all financial presentment payment transactions which have been reversed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number transfer;
 	/**
 	 * Sum number of all financial presentment transactions processed.
 	 * <p>
@@ -353,7 +360,7 @@ public class TransactionTotals6 {
 	 * "Sum number of all financial presentment transactions processed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Transfer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransfer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
@@ -361,11 +368,12 @@ public class TransactionTotals6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transfer";
 			definition = "Sum number of all financial presentment transactions processed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number transferReversal;
 	/**
 	 * Sum number of all reversal transactions processed.
 	 * <p>
@@ -393,7 +401,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all reversal transactions processed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferReversal = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
@@ -401,11 +409,12 @@ public class TransactionTotals6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReversal";
 			definition = "Sum number of all reversal transactions processed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number feeCollection;
 	/**
 	 * Sum number of all fee collection transactions.
 	 * <p>
@@ -433,7 +442,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all fee collection transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FeeCollection = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFeeCollection = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
@@ -441,8 +450,8 @@ public class TransactionTotals6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeeCollection";
 			definition = "Sum number of all fee collection transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -450,11 +459,11 @@ public class TransactionTotals6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals6.Authorisation, com.tools20022.repository.msg.TransactionTotals6.AuthorisationReversal,
-						com.tools20022.repository.msg.TransactionTotals6.Inquiry, com.tools20022.repository.msg.TransactionTotals6.InquiryReversal, com.tools20022.repository.msg.TransactionTotals6.Payments,
-						com.tools20022.repository.msg.TransactionTotals6.PaymentReversal, com.tools20022.repository.msg.TransactionTotals6.Transfer, com.tools20022.repository.msg.TransactionTotals6.TransferReversal,
-						com.tools20022.repository.msg.TransactionTotals6.FeeCollection);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals6.mmAuthorisation, com.tools20022.repository.msg.TransactionTotals6.mmAuthorisationReversal,
+						com.tools20022.repository.msg.TransactionTotals6.mmInquiry, com.tools20022.repository.msg.TransactionTotals6.mmInquiryReversal, com.tools20022.repository.msg.TransactionTotals6.mmPayments,
+						com.tools20022.repository.msg.TransactionTotals6.mmPaymentReversal, com.tools20022.repository.msg.TransactionTotals6.mmTransfer, com.tools20022.repository.msg.TransactionTotals6.mmTransferReversal,
+						com.tools20022.repository.msg.TransactionTotals6.mmFeeCollection);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals6";
 				definition = "Additional count which may be utilised for reconciliation.";
@@ -462,5 +471,77 @@ public class TransactionTotals6 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getAuthorisation() {
+		return authorisation;
+	}
+
+	public void setAuthorisation(Number authorisation) {
+		this.authorisation = authorisation;
+	}
+
+	public Number getAuthorisationReversal() {
+		return authorisationReversal;
+	}
+
+	public void setAuthorisationReversal(Number authorisationReversal) {
+		this.authorisationReversal = authorisationReversal;
+	}
+
+	public Number getInquiry() {
+		return inquiry;
+	}
+
+	public void setInquiry(Number inquiry) {
+		this.inquiry = inquiry;
+	}
+
+	public Number getInquiryReversal() {
+		return inquiryReversal;
+	}
+
+	public void setInquiryReversal(Number inquiryReversal) {
+		this.inquiryReversal = inquiryReversal;
+	}
+
+	public Number getPayments() {
+		return payments;
+	}
+
+	public void setPayments(Number payments) {
+		this.payments = payments;
+	}
+
+	public Number getPaymentReversal() {
+		return paymentReversal;
+	}
+
+	public void setPaymentReversal(Number paymentReversal) {
+		this.paymentReversal = paymentReversal;
+	}
+
+	public Number getTransfer() {
+		return transfer;
+	}
+
+	public void setTransfer(Number transfer) {
+		this.transfer = transfer;
+	}
+
+	public Number getTransferReversal() {
+		return transferReversal;
+	}
+
+	public void setTransferReversal(Number transferReversal) {
+		this.transferReversal = transferReversal;
+	}
+
+	public Number getFeeCollection() {
+		return feeCollection;
+	}
+
+	public void setFeeCollection(Number feeCollection) {
+		this.feeCollection = feeCollection;
 	}
 }

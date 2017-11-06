@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationSource5Choice#DomesticIdentificationSource
- * IdentificationSource5Choice.DomesticIdentificationSource}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationSource5Choice#mmDomesticIdentificationSource
+ * IdentificationSource5Choice.mmDomesticIdentificationSource}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationSource5Choice#ProprietaryIdentificationSource
- * IdentificationSource5Choice.ProprietaryIdentificationSource}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationSource5Choice#mmProprietaryIdentificationSource
+ * IdentificationSource5Choice.mmProprietaryIdentificationSource}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IdentificationSource5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode domesticIdentificationSource;
 	/**
 	 * Country of the proprietary identification scheme.
 	 * <p>
@@ -81,7 +82,8 @@ public class IdentificationSource5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Scheme#Code Scheme.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Scheme#mmCode Scheme.mmCode}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,25 +103,26 @@ public class IdentificationSource5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.IdentificationSource3Choice#Code
-	 * IdentificationSource3Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationSource3Choice#mmCode
+	 * IdentificationSource3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DomesticIdentificationSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDomesticIdentificationSource = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmCode;
 			componentContext_lazy = () -> IdentificationSource5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.Code;
 			isDerived = false;
 			xmlTag = "DmstIdSrc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticIdentificationSource";
 			definition = "Country of the proprietary identification scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IdentificationSource3Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.IdentificationSource3Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max35Text proprietaryIdentificationSource;
 	/**
 	 * Entity that issues the proprietary identification.
 	 * <p>
@@ -132,8 +135,8 @@ public class IdentificationSource5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,22 +156,22 @@ public class IdentificationSource5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.IdentificationSource3Choice#Proprietary
-	 * IdentificationSource3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationSource3Choice#mmProprietary
+	 * IdentificationSource3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryIdentificationSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryIdentificationSource = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> IdentificationSource5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "PrtryIdSrc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentificationSource";
 			definition = "Entity that issues the proprietary identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IdentificationSource3Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.IdentificationSource3Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -176,10 +179,10 @@ public class IdentificationSource5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationSource5Choice.DomesticIdentificationSource,
-						com.tools20022.repository.choice.IdentificationSource5Choice.ProprietaryIdentificationSource);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationSource5Choice.mmDomesticIdentificationSource,
+						com.tools20022.repository.choice.IdentificationSource5Choice.mmProprietaryIdentificationSource);
 				trace_lazy = () -> IdentificationIssuerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IdentificationSource5Choice";
 				definition = "Choice between source of identification of a financial instrument.";
@@ -187,5 +190,21 @@ public class IdentificationSource5Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getDomesticIdentificationSource() {
+		return domesticIdentificationSource;
+	}
+
+	public void setDomesticIdentificationSource(CountryCode domesticIdentificationSource) {
+		this.domesticIdentificationSource = domesticIdentificationSource;
+	}
+
+	public Max35Text getProprietaryIdentificationSource() {
+		return proprietaryIdentificationSource;
+	}
+
+	public void setProprietaryIdentificationSource(Max35Text proprietaryIdentificationSource) {
+		this.proprietaryIdentificationSource = proprietaryIdentificationSource;
 	}
 }

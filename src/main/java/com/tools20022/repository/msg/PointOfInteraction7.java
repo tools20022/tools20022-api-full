@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PointOfInteraction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Point of interaction (POI) performing the transaction.
@@ -37,23 +38,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#Identification
- * PointOfInteraction7.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction7#SystemName
- * PointOfInteraction7.SystemName}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#mmIdentification
+ * PointOfInteraction7.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#GroupIdentification
- * PointOfInteraction7.GroupIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#mmSystemName
+ * PointOfInteraction7.mmSystemName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#Capabilities
- * PointOfInteraction7.Capabilities}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction7#TimeZone
- * PointOfInteraction7.TimeZone}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#mmGroupIdentification
+ * PointOfInteraction7.mmGroupIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#TerminalIntegration
- * PointOfInteraction7.TerminalIntegration}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction7#Component
- * PointOfInteraction7.Component}</li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#mmCapabilities
+ * PointOfInteraction7.mmCapabilities}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction7#mmTimeZone
+ * PointOfInteraction7.mmTimeZone}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#mmTerminalIntegration
+ * PointOfInteraction7.mmTerminalIntegration}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#mmComponent
+ * PointOfInteraction7.mmComponent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PointOfInteraction7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification32 identification;
 	/**
 	 * Identification of the POI (Point Of Interaction) for the acquirer or its
 	 * agent.
@@ -112,11 +116,11 @@ public class PointOfInteraction7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#Identification
-	 * PointOfInteraction5.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#mmIdentification
+	 * PointOfInteraction5.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PointOfInteraction7.mmObject();
 			isDerived = false;
@@ -124,13 +128,14 @@ public class PointOfInteraction7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the POI (Point Of Interaction) for the acquirer or its agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.mmIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected Max70Text systemName;
 	/**
 	 * Common name assigned by the acquirer to the POI (Point Of Interaction)
 	 * system.
@@ -144,8 +149,8 @@ public class PointOfInteraction7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemName#Name
-	 * SystemName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemName#mmName
+	 * SystemName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,25 +172,26 @@ public class PointOfInteraction7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#SystemName
-	 * PointOfInteraction5.SystemName}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#mmSystemName
+	 * PointOfInteraction5.mmSystemName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemName.mmName;
 			componentContext_lazy = () -> PointOfInteraction7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemName.Name;
 			isDerived = false;
 			xmlTag = "SysNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemName";
 			definition = "Common name assigned by the acquirer to the POI (Point Of Interaction) system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.SystemName;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.mmSystemName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max35Text groupIdentification;
 	/**
 	 * Identifier assigned by the merchant identifying a set of POI (Point Of
 	 * Interaction) terminals performing some categories of transactions.
@@ -217,11 +223,11 @@ public class PointOfInteraction7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#GroupIdentification
-	 * PointOfInteraction5.GroupIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#mmGroupIdentification
+	 * PointOfInteraction5.mmGroupIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroupIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteraction7.mmObject();
 			isDerived = false;
@@ -229,12 +235,13 @@ public class PointOfInteraction7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Identifier assigned by the merchant identifying a set of POI (Point Of Interaction) terminals performing some categories of transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.GroupIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.mmGroupIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PointOfInteractionCapabilities6 capabilities;
 	/**
 	 * Capabilities of the POI (Point Of Interaction) performing the
 	 * transaction.
@@ -271,26 +278,27 @@ public class PointOfInteraction7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#Capabilities
-	 * PointOfInteraction5.Capabilities}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#mmCapabilities
+	 * PointOfInteraction5.mmCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Capabilities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PointOfInteraction7.mmObject();
 			businessComponentTrace_lazy = () -> PointOfInteraction.mmObject();
+			componentContext_lazy = () -> PointOfInteraction7.mmObject();
 			isDerived = false;
 			xmlTag = "Cpblties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capabilities";
 			definition = "Capabilities of the POI (Point Of Interaction) performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.Capabilities;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.mmCapabilities;
 			maxOccurs = 1;
-			type_lazy = () -> PointOfInteractionCapabilities6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmObject();
 		}
 	};
+	protected Max70Text timeZone;
 	/**
 	 * Time zone name as defined by IANA (Internet Assigned Numbers Authority)
 	 * in the time zone data base. America/Chicago or Europe/Paris are examples
@@ -323,11 +331,11 @@ public class PointOfInteraction7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#TimeZone
-	 * PointOfInteraction5.TimeZone}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#mmTimeZone
+	 * PointOfInteraction5.mmTimeZone}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TimeZone = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTimeZone = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteraction7.mmObject();
 			isDerived = false;
@@ -335,12 +343,13 @@ public class PointOfInteraction7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeZone";
 			definition = "Time zone name as defined by IANA (Internet Assigned Numbers Authority) in the time zone data base. America/Chicago or Europe/Paris are examples of time zone names.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.TimeZone;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.mmTimeZone;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected LocationCategory3Code terminalIntegration;
 	/**
 	 * Indicates the type of integration of the POI terminal in the sale
 	 * environment.
@@ -373,11 +382,11 @@ public class PointOfInteraction7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#TerminalIntegration
-	 * PointOfInteraction5.TerminalIntegration}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#mmTerminalIntegration
+	 * PointOfInteraction5.mmTerminalIntegration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TerminalIntegration = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTerminalIntegration = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PointOfInteraction7.mmObject();
 			isDerived = false;
@@ -385,12 +394,13 @@ public class PointOfInteraction7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalIntegration";
 			definition = "Indicates the type of integration of the POI terminal in the sale environment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.TerminalIntegration;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.mmTerminalIntegration;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LocationCategory3Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PointOfInteractionComponent7> component;
 	/**
 	 * Data related to a component of the POI (Point Of Interaction) performing
 	 * the transaction.
@@ -404,8 +414,8 @@ public class PointOfInteraction7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#Component
-	 * PointOfInteraction.Component}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmComponent
+	 * PointOfInteraction.mmComponent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -427,34 +437,34 @@ public class PointOfInteraction7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#Component
-	 * PointOfInteraction5.Component}</li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction5#mmComponent
+	 * PointOfInteraction5.mmComponent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Component = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmComponent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmComponent;
 			componentContext_lazy = () -> PointOfInteraction7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.Component;
 			isDerived = false;
 			xmlTag = "Cmpnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Component";
 			definition = "Data related to a component of the POI (Point Of Interaction) performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.Component;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteraction5.mmComponent;
 			minOccurs = 0;
-			type_lazy = () -> PointOfInteractionComponent7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction7.Identification, com.tools20022.repository.msg.PointOfInteraction7.SystemName,
-						com.tools20022.repository.msg.PointOfInteraction7.GroupIdentification, com.tools20022.repository.msg.PointOfInteraction7.Capabilities, com.tools20022.repository.msg.PointOfInteraction7.TimeZone,
-						com.tools20022.repository.msg.PointOfInteraction7.TerminalIntegration, com.tools20022.repository.msg.PointOfInteraction7.Component);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction7.mmIdentification, com.tools20022.repository.msg.PointOfInteraction7.mmSystemName,
+						com.tools20022.repository.msg.PointOfInteraction7.mmGroupIdentification, com.tools20022.repository.msg.PointOfInteraction7.mmCapabilities, com.tools20022.repository.msg.PointOfInteraction7.mmTimeZone,
+						com.tools20022.repository.msg.PointOfInteraction7.mmTerminalIntegration, com.tools20022.repository.msg.PointOfInteraction7.mmComponent);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteraction7";
 				definition = "Point of interaction (POI) performing the transaction.";
@@ -462,5 +472,61 @@ public class PointOfInteraction7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification32 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+		this.identification = identification;
+	}
+
+	public Max70Text getSystemName() {
+		return systemName;
+	}
+
+	public void setSystemName(Max70Text systemName) {
+		this.systemName = systemName;
+	}
+
+	public Max35Text getGroupIdentification() {
+		return groupIdentification;
+	}
+
+	public void setGroupIdentification(Max35Text groupIdentification) {
+		this.groupIdentification = groupIdentification;
+	}
+
+	public PointOfInteractionCapabilities6 getCapabilities() {
+		return capabilities;
+	}
+
+	public void setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities6 capabilities) {
+		this.capabilities = capabilities;
+	}
+
+	public Max70Text getTimeZone() {
+		return timeZone;
+	}
+
+	public void setTimeZone(Max70Text timeZone) {
+		this.timeZone = timeZone;
+	}
+
+	public LocationCategory3Code getTerminalIntegration() {
+		return terminalIntegration;
+	}
+
+	public void setTerminalIntegration(LocationCategory3Code terminalIntegration) {
+		this.terminalIntegration = terminalIntegration;
+	}
+
+	public List<PointOfInteractionComponent7> getComponent() {
+		return component;
+	}
+
+	public void setComponent(List<com.tools20022.repository.msg.PointOfInteractionComponent7> component) {
+		this.component = component;
 	}
 }

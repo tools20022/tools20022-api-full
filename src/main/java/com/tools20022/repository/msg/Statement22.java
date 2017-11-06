@@ -41,28 +41,29 @@ import java.util.function.Supplier;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Statement22#ReportNumber
- * Statement22.ReportNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement22#QueryReference
- * Statement22.QueryReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement22#mmReportNumber
+ * Statement22.mmReportNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement22#mmQueryReference
+ * Statement22.mmQueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Statement22#StatementIdentification
- * Statement22.StatementIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement22#StatementPeriod
- * Statement22.StatementPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement22#Frequency
- * Statement22.Frequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement22#UpdateType
- * Statement22.UpdateType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement22#ActivityIndicator
- * Statement22.ActivityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Statement22#mmStatementIdentification
+ * Statement22.mmStatementIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement22#mmStatementPeriod
+ * Statement22.mmStatementPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement22#mmFrequency
+ * Statement22.mmFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement22#mmUpdateType
+ * Statement22.mmUpdateType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Statement22#mmActivityIndicator
+ * Statement22.mmActivityIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -77,6 +78,7 @@ import java.util.function.Supplier;
 public class Statement22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number3Choice reportNumber;
 	/**
 	 * Sequential number of the report.
 	 * <p>
@@ -102,7 +104,7 @@ public class Statement22 {
 	 * definition} = "Sequential number of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Statement22.mmObject();
 			isDerived = false;
@@ -110,12 +112,13 @@ public class Statement22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Number3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Number3Choice.mmObject();
 		}
 	};
+	protected RestrictedFINXMax16Text queryReference;
 	/**
 	 * Identification of the SecuritiesStatementQuery message sent to request
 	 * this statement.
@@ -146,7 +149,7 @@ public class Statement22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement22.mmObject();
 			isDerived = false;
@@ -154,11 +157,12 @@ public class Statement22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the SecuritiesStatementQuery message sent to request this statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected RestrictedFINXMax16Text statementIdentification;
 	/**
 	 * Reference common to all pages of a statement.
 	 * <p>
@@ -186,7 +190,7 @@ public class Statement22 {
 	 * definition} = "Reference common to all pages of a statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement22.mmObject();
 			isDerived = false;
@@ -194,11 +198,12 @@ public class Statement22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Reference common to all pages of a statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	protected Period2Choice statementPeriod;
 	/**
 	 * Period for the statement.
 	 * <p>
@@ -224,7 +229,7 @@ public class Statement22 {
 	 * definition} = "Period for the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatementPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatementPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Statement22.mmObject();
 			isDerived = false;
@@ -232,12 +237,13 @@ public class Statement22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementPeriod";
 			definition = "Period for the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Period2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Period2Choice.mmObject();
 		}
 	};
+	protected Frequency6Choice frequency;
 	/**
 	 * Frequency of the statement.
 	 * <p>
@@ -263,7 +269,7 @@ public class Statement22 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Frequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFrequency = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Statement22.mmObject();
 			isDerived = false;
@@ -271,12 +277,13 @@ public class Statement22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Frequency6Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Frequency6Choice.mmObject();
 		}
 	};
+	protected UpdateType3Choice updateType;
 	/**
 	 * Indicates whether the statement is complete or contains changes only.
 	 * <p>
@@ -303,7 +310,7 @@ public class Statement22 {
 	 * "Indicates whether the statement is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Statement22.mmObject();
 			isDerived = false;
@@ -311,12 +318,13 @@ public class Statement22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> UpdateType3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> UpdateType3Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -347,7 +355,7 @@ public class Statement22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement22.mmObject();
 			isDerived = false;
@@ -355,8 +363,8 @@ public class Statement22 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -364,10 +372,10 @@ public class Statement22 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement22.ReportNumber, com.tools20022.repository.msg.Statement22.QueryReference, com.tools20022.repository.msg.Statement22.StatementIdentification,
-						com.tools20022.repository.msg.Statement22.StatementPeriod, com.tools20022.repository.msg.Statement22.Frequency, com.tools20022.repository.msg.Statement22.UpdateType,
-						com.tools20022.repository.msg.Statement22.ActivityIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement22.mmReportNumber, com.tools20022.repository.msg.Statement22.mmQueryReference,
+						com.tools20022.repository.msg.Statement22.mmStatementIdentification, com.tools20022.repository.msg.Statement22.mmStatementPeriod, com.tools20022.repository.msg.Statement22.mmFrequency,
+						com.tools20022.repository.msg.Statement22.mmUpdateType, com.tools20022.repository.msg.Statement22.mmActivityIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -381,5 +389,61 @@ public class Statement22 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number3Choice getReportNumber() {
+		return reportNumber;
+	}
+
+	public void setReportNumber(Number3Choice reportNumber) {
+		this.reportNumber = reportNumber;
+	}
+
+	public RestrictedFINXMax16Text getQueryReference() {
+		return queryReference;
+	}
+
+	public void setQueryReference(RestrictedFINXMax16Text queryReference) {
+		this.queryReference = queryReference;
+	}
+
+	public RestrictedFINXMax16Text getStatementIdentification() {
+		return statementIdentification;
+	}
+
+	public void setStatementIdentification(RestrictedFINXMax16Text statementIdentification) {
+		this.statementIdentification = statementIdentification;
+	}
+
+	public Period2Choice getStatementPeriod() {
+		return statementPeriod;
+	}
+
+	public void setStatementPeriod(Period2Choice statementPeriod) {
+		this.statementPeriod = statementPeriod;
+	}
+
+	public Frequency6Choice getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(Frequency6Choice frequency) {
+		this.frequency = frequency;
+	}
+
+	public UpdateType3Choice getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(UpdateType3Choice updateType) {
+		this.updateType = updateType;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
 	}
 }

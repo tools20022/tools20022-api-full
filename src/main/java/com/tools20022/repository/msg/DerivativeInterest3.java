@@ -36,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInterest3#InterestRate
- * DerivativeInterest3.InterestRate}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInterest3#mmInterestRate
+ * DerivativeInterest3.mmInterestRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInterest3#FirstLegInterestRate
- * DerivativeInterest3.FirstLegInterestRate}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInterest3#mmFirstLegInterestRate
+ * DerivativeInterest3.mmFirstLegInterestRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInterest3#OtherNotionalCurrency
- * DerivativeInterest3.OtherNotionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInterest3#mmOtherNotionalCurrency
+ * DerivativeInterest3.mmOtherNotionalCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DerivativeInterest3#OtherLegInterestRate
- * DerivativeInterest3.OtherLegInterestRate}</li>
+ * {@linkplain com.tools20022.repository.msg.DerivativeInterest3#mmOtherLegInterestRate
+ * DerivativeInterest3.mmOtherLegInterestRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DerivativeInterest3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FloatingInterestRate8 interestRate;
 	/**
 	 * Provides the interest rate in number of days, weeks, months or years.
 	 * <p>
@@ -80,8 +81,8 @@ public class DerivativeInterest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,21 +102,22 @@ public class DerivativeInterest3 {
 	 * "Provides the interest rate in number of days, weeks, months or years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInterestRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> DerivativeInterest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "IntrstRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Provides the interest rate in number of days, weeks, months or years.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FloatingInterestRate8.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate8.mmObject();
 		}
 	};
+	protected InterestRate8Choice firstLegInterestRate;
 	/**
 	 * Interest rate of the notional currency.
 	 * <p>
@@ -127,8 +129,8 @@ public class DerivativeInterest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,21 +149,22 @@ public class DerivativeInterest3 {
 	 * definition} = "Interest rate of the notional currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FirstLegInterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFirstLegInterestRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> DerivativeInterest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "FrstLegIntrstRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstLegInterestRate";
 			definition = "Interest rate of the notional currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InterestRate8Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> InterestRate8Choice.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode otherNotionalCurrency;
 	/**
 	 * Notional currency in which leg 2 of the contract is denominated, in case
 	 * of multi-currency or cross-currency swaps.<br>
@@ -180,8 +183,8 @@ public class DerivativeInterest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#NotionalCurrency
-	 * Derivative.NotionalCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrency
+	 * Derivative.mmNotionalCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,20 +205,21 @@ public class DerivativeInterest3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherNotionalCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> DerivativeInterest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.NotionalCurrency;
 			isDerived = false;
 			xmlTag = "OthrNtnlCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNotionalCurrency";
 			definition = "Notional currency in which leg 2 of the contract is denominated, in case of multi-currency or cross-currency swaps.\r\n\r\nNotional currency in which leg 2 of the swap is denominated, in case of swaptions where the underlying swap is  multi-currency.\r\n\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected InterestRate8Choice otherLegInterestRate;
 	/**
 	 * Indication of the interest rate used for leg 2, if applicable.
 	 * <p>
@@ -227,8 +231,8 @@ public class DerivativeInterest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -248,34 +252,66 @@ public class DerivativeInterest3 {
 	 * "Indication of the interest rate used for leg 2, if applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherLegInterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherLegInterestRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> DerivativeInterest3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "OthrLegIntrstRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherLegInterestRate";
 			definition = "Indication of the interest rate used for leg 2, if applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> InterestRate8Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> InterestRate8Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeInterest3.InterestRate, com.tools20022.repository.msg.DerivativeInterest3.FirstLegInterestRate,
-						com.tools20022.repository.msg.DerivativeInterest3.OtherNotionalCurrency, com.tools20022.repository.msg.DerivativeInterest3.OtherLegInterestRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeInterest3.mmInterestRate, com.tools20022.repository.msg.DerivativeInterest3.mmFirstLegInterestRate,
+						com.tools20022.repository.msg.DerivativeInterest3.mmOtherNotionalCurrency, com.tools20022.repository.msg.DerivativeInterest3.mmOtherLegInterestRate);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DerivativeInterest3";
 				definition = "Specifies a multi-leg interest derivative.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FloatingInterestRate8 getInterestRate() {
+		return interestRate;
+	}
+
+	public void setInterestRate(com.tools20022.repository.msg.FloatingInterestRate8 interestRate) {
+		this.interestRate = interestRate;
+	}
+
+	public InterestRate8Choice getFirstLegInterestRate() {
+		return firstLegInterestRate;
+	}
+
+	public void setFirstLegInterestRate(InterestRate8Choice firstLegInterestRate) {
+		this.firstLegInterestRate = firstLegInterestRate;
+	}
+
+	public ActiveOrHistoricCurrencyCode getOtherNotionalCurrency() {
+		return otherNotionalCurrency;
+	}
+
+	public void setOtherNotionalCurrency(ActiveOrHistoricCurrencyCode otherNotionalCurrency) {
+		this.otherNotionalCurrency = otherNotionalCurrency;
+	}
+
+	public InterestRate8Choice getOtherLegInterestRate() {
+		return otherLegInterestRate;
+	}
+
+	public void setOtherLegInterestRate(InterestRate8Choice otherLegInterestRate) {
+		this.otherLegInterestRate = otherLegInterestRate;
 	}
 }

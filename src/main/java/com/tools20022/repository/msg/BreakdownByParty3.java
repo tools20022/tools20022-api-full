@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the cash-in and cash-out flows by party.
@@ -32,27 +33,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BreakdownByParty3#Party
- * BreakdownByParty3.Party}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BreakdownByParty3#mmParty
+ * BreakdownByParty3.mmParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByParty3#AdditionalParameters
- * BreakdownByParty3.AdditionalParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByParty3#mmAdditionalParameters
+ * BreakdownByParty3.mmAdditionalParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByParty3#CashInForecast
- * BreakdownByParty3.CashInForecast}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByParty3#mmCashInForecast
+ * BreakdownByParty3.mmCashInForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByParty3#CashOutForecast
- * BreakdownByParty3.CashOutForecast}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByParty3#mmCashOutForecast
+ * BreakdownByParty3.mmCashOutForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BreakdownByParty3#NetCashForecast
- * BreakdownByParty3.NetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.msg.BreakdownByParty3#mmNetCashForecast
+ * BreakdownByParty3.mmNetCashForecast}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BreakdownByParty3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InvestmentAccount42 party;
 	/**
 	 * Party, for example, fund management company, for which the cash flow is
 	 * being reported.
@@ -102,11 +104,11 @@ public class BreakdownByParty3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByParty1#Party
-	 * BreakdownByParty1.Party}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByParty1#mmParty
+	 * BreakdownByParty1.mmParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Party = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BreakdownByParty3.mmObject();
 			isDerived = false;
@@ -114,12 +116,13 @@ public class BreakdownByParty3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Party, for example, fund management company, for which the cash flow is being reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.Party;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.mmParty;
 			maxOccurs = 1;
-			complexType_lazy = () -> InvestmentAccount42.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.InvestmentAccount42.mmObject();
 		}
 	};
+	protected AdditionalParameters1 additionalParameters;
 	/**
 	 * Additional parameter/s applied to the cash flow by party.
 	 * <p>
@@ -148,11 +151,11 @@ public class BreakdownByParty3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByParty1#AdditionalParameters
-	 * BreakdownByParty1.AdditionalParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByParty1#mmAdditionalParameters
+	 * BreakdownByParty1.mmAdditionalParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalParameters = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByParty3.mmObject();
 			isDerived = false;
@@ -160,13 +163,14 @@ public class BreakdownByParty3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalParameters";
 			definition = "Additional parameter/s applied to the cash flow by party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.AdditionalParameters;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.mmAdditionalParameters;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalParameters1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashInForecast5> cashInForecast;
 	/**
 	 * Cash movement into the fund as a result of transactions in shares in an
 	 * investment fund, for example, subscriptions or switch-ins.
@@ -197,11 +201,11 @@ public class BreakdownByParty3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByParty1#CashInForecast
-	 * BreakdownByParty1.CashInForecast}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByParty1#mmCashInForecast
+	 * BreakdownByParty1.mmCashInForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashInForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashInForecast = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByParty3.mmObject();
 			isDerived = false;
@@ -209,12 +213,13 @@ public class BreakdownByParty3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInForecast";
 			definition = "Cash movement into the fund as a result of transactions in shares in an investment fund, for example, subscriptions or switch-ins.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.CashInForecast;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.mmCashInForecast;
 			minOccurs = 0;
-			type_lazy = () -> CashInForecast5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast;
 	/**
 	 * Cash movement out of the fund as a result of transactions in shares in an
 	 * investment fund, for example, redemptions or switch-outs.
@@ -245,11 +250,11 @@ public class BreakdownByParty3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByParty1#CashOutForecast
-	 * BreakdownByParty1.CashOutForecast}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByParty1#mmCashOutForecast
+	 * BreakdownByParty1.mmCashOutForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashOutForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashOutForecast = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByParty3.mmObject();
 			isDerived = false;
@@ -257,12 +262,13 @@ public class BreakdownByParty3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutForecast";
 			definition = "Cash movement out of the fund as a result of transactions in shares in an investment fund, for example, redemptions or switch-outs.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.CashOutForecast;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.mmCashOutForecast;
 			minOccurs = 0;
-			type_lazy = () -> CashOutForecast5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast5.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast;
 	/**
 	 * Net cash as a result of the cash-in and cash-out flows specified for the
 	 * party.
@@ -293,11 +299,11 @@ public class BreakdownByParty3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BreakdownByParty1#NetCashForecast
-	 * BreakdownByParty1.NetCashForecast}</li>
+	 * {@linkplain com.tools20022.repository.msg.BreakdownByParty1#mmNetCashForecast
+	 * BreakdownByParty1.mmNetCashForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NetCashForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNetCashForecast = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BreakdownByParty3.mmObject();
 			isDerived = false;
@@ -305,19 +311,19 @@ public class BreakdownByParty3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashForecast";
 			definition = "Net cash as a result of the cash-in and cash-out flows specified for the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.NetCashForecast;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.mmNetCashForecast;
 			minOccurs = 0;
-			type_lazy = () -> NetCashForecast4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty3.Party, com.tools20022.repository.msg.BreakdownByParty3.AdditionalParameters,
-						com.tools20022.repository.msg.BreakdownByParty3.CashInForecast, com.tools20022.repository.msg.BreakdownByParty3.CashOutForecast, com.tools20022.repository.msg.BreakdownByParty3.NetCashForecast);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty3.mmParty, com.tools20022.repository.msg.BreakdownByParty3.mmAdditionalParameters,
+						com.tools20022.repository.msg.BreakdownByParty3.mmCashInForecast, com.tools20022.repository.msg.BreakdownByParty3.mmCashOutForecast, com.tools20022.repository.msg.BreakdownByParty3.mmNetCashForecast);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BreakdownByParty3";
 				definition = "Specifies the cash-in and cash-out flows by party.";
@@ -325,5 +331,45 @@ public class BreakdownByParty3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InvestmentAccount42 getParty() {
+		return party;
+	}
+
+	public void setParty(com.tools20022.repository.msg.InvestmentAccount42 party) {
+		this.party = party;
+	}
+
+	public AdditionalParameters1 getAdditionalParameters() {
+		return additionalParameters;
+	}
+
+	public void setAdditionalParameters(com.tools20022.repository.msg.AdditionalParameters1 additionalParameters) {
+		this.additionalParameters = additionalParameters;
+	}
+
+	public List<CashInForecast5> getCashInForecast() {
+		return cashInForecast;
+	}
+
+	public void setCashInForecast(List<com.tools20022.repository.msg.CashInForecast5> cashInForecast) {
+		this.cashInForecast = cashInForecast;
+	}
+
+	public List<CashOutForecast5> getCashOutForecast() {
+		return cashOutForecast;
+	}
+
+	public void setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast) {
+		this.cashOutForecast = cashOutForecast;
+	}
+
+	public List<NetCashForecast4> getNetCashForecast() {
+		return netCashForecast;
+	}
+
+	public void setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast) {
+		this.netCashForecast = netCashForecast;
 	}
 }

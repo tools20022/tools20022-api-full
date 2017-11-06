@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Exact2AlphaNumericText;
 import com.tools20022.repository.datatype.Exact4NumericText;
 import com.tools20022.repository.datatype.RateSourceText;
@@ -36,23 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementRateSource1#RateSource
- * SettlementRateSource1.RateSource}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementRateSource1#Time
- * SettlementRateSource1.Time}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementRateSource1#mmRateSource
+ * SettlementRateSource1.mmRateSource}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementRateSource1#mmTime
+ * SettlementRateSource1.mmTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementRateSource1#CountryCode
- * SettlementRateSource1.CountryCode}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementRateSource1#mmCountryCode
+ * SettlementRateSource1.mmCountryCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementRateSource1#LocationCode
- * SettlementRateSource1.LocationCode}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementRateSource1#mmLocationCode
+ * SettlementRateSource1.mmLocationCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementRateSource1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RateSourceText rateSource;
 	/**
 	 * Specifies the rate source for the non deliverable trade.
 	 * <p>
@@ -96,7 +98,7 @@ public class SettlementRateSource1 {
 	 * definition} = "Specifies the rate source for the non deliverable trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RateSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRateSource = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementRateSource1.mmObject();
 			isDerived = false;
@@ -104,11 +106,12 @@ public class SettlementRateSource1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateSource";
 			definition = "Specifies the rate source for the non deliverable trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateSourceText.mmObject();
 		}
 	};
+	protected Exact4NumericText time;
 	/**
 	 * Specifies the time "HHMM" associated with the rate source.
 	 * <p>
@@ -138,7 +141,7 @@ public class SettlementRateSource1 {
 	 * "Specifies the time \"HHMM\" associated with the rate source."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Time = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementRateSource1.mmObject();
 			isDerived = false;
@@ -146,11 +149,12 @@ public class SettlementRateSource1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Time";
 			definition = "Specifies the time \"HHMM\" associated with the rate source.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4NumericText.mmObject();
 		}
 	};
+	protected CountryCode countryCode;
 	/**
 	 * Specifies the country code for the quoted rate source.
 	 * <p>
@@ -178,7 +182,7 @@ public class SettlementRateSource1 {
 	 * definition} = "Specifies the country code for the quoted rate source."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementRateSource1.mmObject();
 			isDerived = false;
@@ -186,11 +190,12 @@ public class SettlementRateSource1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryCode";
 			definition = "Specifies the country code for the quoted rate source.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			simpleType_lazy = () -> com.tools20022.repository.codeset.CountryCode.mmObject();
+			minOccurs = 0;
+			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Exact2AlphaNumericText locationCode;
 	/**
 	 * The location expressed as a 2 character code.
 	 * <p>
@@ -219,7 +224,7 @@ public class SettlementRateSource1 {
 	 * definition} = "The location expressed as a 2 character code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocationCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlementRateSource1.mmObject();
 			isDerived = false;
@@ -227,8 +232,8 @@ public class SettlementRateSource1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationCode";
 			definition = "The location expressed as a 2 character code.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact2AlphaNumericText.mmObject();
 		}
 	};
@@ -236,14 +241,46 @@ public class SettlementRateSource1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementRateSource1.RateSource, com.tools20022.repository.msg.SettlementRateSource1.Time,
-						com.tools20022.repository.msg.SettlementRateSource1.CountryCode, com.tools20022.repository.msg.SettlementRateSource1.LocationCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementRateSource1.mmRateSource, com.tools20022.repository.msg.SettlementRateSource1.mmTime,
+						com.tools20022.repository.msg.SettlementRateSource1.mmCountryCode, com.tools20022.repository.msg.SettlementRateSource1.mmLocationCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementRateSource1";
 				definition = "Specifies the components of a settlement rate source for a non delvierable trade.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RateSourceText getRateSource() {
+		return rateSource;
+	}
+
+	public void setRateSource(RateSourceText rateSource) {
+		this.rateSource = rateSource;
+	}
+
+	public Exact4NumericText getTime() {
+		return time;
+	}
+
+	public void setTime(Exact4NumericText time) {
+		this.time = time;
+	}
+
+	public CountryCode getCountryCode() {
+		return countryCode;
+	}
+
+	public void setCountryCode(CountryCode countryCode) {
+		this.countryCode = countryCode;
+	}
+
+	public Exact2AlphaNumericText getLocationCode() {
+		return locationCode;
+	}
+
+	public void setLocationCode(Exact2AlphaNumericText locationCode) {
+		this.locationCode = locationCode;
 	}
 }

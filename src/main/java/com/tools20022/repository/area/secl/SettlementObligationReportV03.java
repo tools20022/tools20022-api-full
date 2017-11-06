@@ -23,13 +23,11 @@ import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.choice.SettlementParties2Choice;
-import com.tools20022.repository.msg.Report5;
-import com.tools20022.repository.msg.ReportParameters4;
-import com.tools20022.repository.msg.SecuritiesAccount19;
-import com.tools20022.repository.msg.SupplementaryData1;
+import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -72,36 +70,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#ReportParameters
- * SettlementObligationReportV03.ReportParameters}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmReportParameters
+ * SettlementObligationReportV03.mmReportParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#Pagination
- * SettlementObligationReportV03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmPagination
+ * SettlementObligationReportV03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#ClearingMember
- * SettlementObligationReportV03.ClearingMember}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmClearingMember
+ * SettlementObligationReportV03.mmClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#ClearingSegment
- * SettlementObligationReportV03.ClearingSegment}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmClearingSegment
+ * SettlementObligationReportV03.mmClearingSegment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#DeliveryAccount
- * SettlementObligationReportV03.DeliveryAccount}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmDeliveryAccount
+ * SettlementObligationReportV03.mmDeliveryAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#ReportDetails
- * SettlementObligationReportV03.ReportDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmReportDetails
+ * SettlementObligationReportV03.mmReportDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#SettlementParties
- * SettlementObligationReportV03.SettlementParties}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmSettlementParties
+ * SettlementObligationReportV03.mmSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#SupplementaryData
- * SettlementObligationReportV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmSupplementaryData
+ * SettlementObligationReportV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#identifier
- * SettlementObligationReportV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code secl.010.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,6 +113,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementObligationReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ReportParameters4 reportParameters;
 	/**
 	 * Provides details about the report such as the report identification, the
 	 * creation date and time.
@@ -143,17 +140,18 @@ public class SettlementObligationReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptParams";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameters";
 			definition = "Provides details about the report such as the report identification, the creation date and time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportParameters4.mmObject();
 		}
 	};
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a report) and continuation indicator
 	 * to indicate that the report is to continue or that the message is the
@@ -180,17 +178,18 @@ public class SettlementObligationReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingMember;
 	/**
 	 * Provides the identification of the clearing member (individual clearing
 	 * member or general clearing member).
@@ -217,17 +216,18 @@ public class SettlementObligationReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides the identification of the clearing member (individual clearing member or general clearing member).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected PartyIdentification35Choice clearingSegment;
 	/**
 	 * Clearing organisation that will clear the trade.<br>
 	 * Note: This field allows Clearing Member Firm to segregate flows coming
@@ -257,17 +257,18 @@ public class SettlementObligationReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ClearingSegment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmClearingSegment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrSgmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSegment";
 			definition = "Clearing organisation that will clear the trade.\r\nNote: This field allows Clearing Member Firm to segregate flows coming from clearing counterparty's clearing system. Indeed, Clearing Member Firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	protected SecuritiesAccount19 deliveryAccount;
 	/**
 	 * Provides the identification of the account used for netting. This is an
 	 * account opened by the central counterparty in the name of the clearing
@@ -297,17 +298,18 @@ public class SettlementObligationReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DeliveryAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDeliveryAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DlvryAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryAccount";
 			definition = "Provides the identification of the account used for netting. This is an account opened by the central counterparty in the name of the clearing member or its settlement agent within the account structure, for settlement purposes (gives information about the clearing member/its settlement agent account at the central securities depository).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
 	};
+	protected List<Report5> reportDetails;
 	/**
 	 * Provides details on the settlement obligation report.
 	 * <p>
@@ -330,7 +332,7 @@ public class SettlementObligationReportV03 {
 	 * definition} = "Provides details on the settlement obligation report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,6 +342,7 @@ public class SettlementObligationReportV03 {
 			complexType_lazy = () -> Report5.mmObject();
 		}
 	};
+	protected SettlementParties2Choice settlementParties;
 	/**
 	 * Provides details about the receiving parties involved in the settlement
 	 * chain.
@@ -366,17 +369,18 @@ public class SettlementObligationReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParties";
 			definition = "Provides details about the receiving parties involved in the settlement chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties2Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -403,7 +407,7 @@ public class SettlementObligationReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -411,33 +415,6 @@ public class SettlementObligationReportV03 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "secl"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "secl";
-			messageFunctionality = "010";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -451,13 +428,84 @@ public class SettlementObligationReportV03 {
 				rootElement = "Document";
 				xmlTag = "SttlmOblgtnRpt";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.SettlementObligationReportV03.ReportParameters, com.tools20022.repository.area.secl.SettlementObligationReportV03.Pagination,
-						com.tools20022.repository.area.secl.SettlementObligationReportV03.ClearingMember, com.tools20022.repository.area.secl.SettlementObligationReportV03.ClearingSegment,
-						com.tools20022.repository.area.secl.SettlementObligationReportV03.DeliveryAccount, com.tools20022.repository.area.secl.SettlementObligationReportV03.ReportDetails,
-						com.tools20022.repository.area.secl.SettlementObligationReportV03.SettlementParties, com.tools20022.repository.area.secl.SettlementObligationReportV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.secl.SettlementObligationReportV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.SettlementObligationReportV03.mmReportParameters, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmPagination,
+						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmClearingMember, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmClearingSegment,
+						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmDeliveryAccount, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmReportDetails,
+						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmSettlementParties, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "secl";
+						messageFunctionality = "010";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportParameters4 getReportParameters() {
+		return reportParameters;
+	}
+
+	public void setReportParameters(ReportParameters4 reportParameters) {
+		this.reportParameters = reportParameters;
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public PartyIdentification35Choice getClearingMember() {
+		return clearingMember;
+	}
+
+	public void setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = clearingMember;
+	}
+
+	public PartyIdentification35Choice getClearingSegment() {
+		return clearingSegment;
+	}
+
+	public void setClearingSegment(PartyIdentification35Choice clearingSegment) {
+		this.clearingSegment = clearingSegment;
+	}
+
+	public SecuritiesAccount19 getDeliveryAccount() {
+		return deliveryAccount;
+	}
+
+	public void setDeliveryAccount(SecuritiesAccount19 deliveryAccount) {
+		this.deliveryAccount = deliveryAccount;
+	}
+
+	public List<Report5> getReportDetails() {
+		return reportDetails;
+	}
+
+	public void setReportDetails(List<Report5> reportDetails) {
+		this.reportDetails = reportDetails;
+	}
+
+	public SettlementParties2Choice getSettlementParties() {
+		return settlementParties;
+	}
+
+	public void setSettlementParties(SettlementParties2Choice settlementParties) {
+		this.settlementParties = settlementParties;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Profile of the customer with the allowed services and restrictions.
@@ -35,24 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#ProfileReference
- * ATMCustomerProfile3.ProfileReference}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#mmProfileReference
+ * ATMCustomerProfile3.mmProfileReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#CustomerIdentification
- * ATMCustomerProfile3.CustomerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#mmCustomerIdentification
+ * ATMCustomerProfile3.mmCustomerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#ProfileDescription
- * ATMCustomerProfile3.ProfileDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#mmProfileDescription
+ * ATMCustomerProfile3.mmProfileDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#AllowedServices
- * ATMCustomerProfile3.AllowedServices}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile3#mmAllowedServices
+ * ATMCustomerProfile3.mmAllowedServices}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCustomerProfile3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text profileReference;
 	/**
 	 * Reference of the customer profile.
 	 * <p>
@@ -99,11 +101,11 @@ public class ATMCustomerProfile3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile2#ProfileReference
-	 * ATMCustomerProfile2.ProfileReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile2#mmProfileReference
+	 * ATMCustomerProfile2.mmProfileReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProfileReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProfileReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCustomerProfile3.mmObject();
 			isDerived = false;
@@ -111,12 +113,13 @@ public class ATMCustomerProfile3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileReference";
 			definition = "Reference of the customer profile.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile2.ProfileReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile2.mmProfileReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text customerIdentification;
 	/**
 	 * Identification of the customer for the bank.
 	 * <p>
@@ -145,11 +148,11 @@ public class ATMCustomerProfile3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile2#CustomerIdentification
-	 * ATMCustomerProfile2.CustomerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomerProfile2#mmCustomerIdentification
+	 * ATMCustomerProfile2.mmCustomerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCustomerProfile3.mmObject();
 			isDerived = false;
@@ -157,12 +160,13 @@ public class ATMCustomerProfile3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerIdentification";
 			definition = "Identification of the customer for the bank.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile2.CustomerIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile2.mmCustomerIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max70Text profileDescription;
 	/**
 	 * Description of the customer's profile in plaintext.
 	 * <p>
@@ -190,7 +194,7 @@ public class ATMCustomerProfile3 {
 	 * definition} = "Description of the customer's profile in plaintext."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProfileDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProfileDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCustomerProfile3.mmObject();
 			isDerived = false;
@@ -198,11 +202,12 @@ public class ATMCustomerProfile3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileDescription";
 			definition = "Description of the customer's profile in plaintext.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ATMService7> allowedServices;
 	/**
 	 * Services allowed for the customer's profile.
 	 * <p>
@@ -229,7 +234,7 @@ public class ATMCustomerProfile3 {
 	 * definition} = "Services allowed for the customer's profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AllowedServices = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAllowedServices = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCustomerProfile3.mmObject();
 			isDerived = false;
@@ -238,17 +243,17 @@ public class ATMCustomerProfile3 {
 			name = "AllowedServices";
 			definition = "Services allowed for the customer's profile.";
 			minOccurs = 0;
-			type_lazy = () -> ATMService7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMService7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile3.ProfileReference, com.tools20022.repository.msg.ATMCustomerProfile3.CustomerIdentification,
-						com.tools20022.repository.msg.ATMCustomerProfile3.ProfileDescription, com.tools20022.repository.msg.ATMCustomerProfile3.AllowedServices);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile3.mmProfileReference, com.tools20022.repository.msg.ATMCustomerProfile3.mmCustomerIdentification,
+						com.tools20022.repository.msg.ATMCustomerProfile3.mmProfileDescription, com.tools20022.repository.msg.ATMCustomerProfile3.mmAllowedServices);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile3";
 				definition = "Profile of the customer with the allowed services and restrictions.";
@@ -256,5 +261,37 @@ public class ATMCustomerProfile3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getProfileReference() {
+		return profileReference;
+	}
+
+	public void setProfileReference(Max35Text profileReference) {
+		this.profileReference = profileReference;
+	}
+
+	public Max35Text getCustomerIdentification() {
+		return customerIdentification;
+	}
+
+	public void setCustomerIdentification(Max35Text customerIdentification) {
+		this.customerIdentification = customerIdentification;
+	}
+
+	public Max70Text getProfileDescription() {
+		return profileDescription;
+	}
+
+	public void setProfileDescription(Max70Text profileDescription) {
+		this.profileDescription = profileDescription;
+	}
+
+	public List<ATMService7> getAllowedServices() {
+		return allowedServices;
+	}
+
+	public void setAllowedServices(List<com.tools20022.repository.msg.ATMService7> allowedServices) {
+		this.allowedServices = allowedServices;
 	}
 }

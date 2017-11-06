@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#MarketIdentificationCode
- * TradingVenueIdentification1Choice.MarketIdentificationCode}</li>
+ * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#mmMarketIdentificationCode
+ * TradingVenueIdentification1Choice.mmMarketIdentificationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#NationalCompetentAuthority
- * TradingVenueIdentification1Choice.NationalCompetentAuthority}</li>
+ * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#mmNationalCompetentAuthority
+ * TradingVenueIdentification1Choice.mmNationalCompetentAuthority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#Other
- * TradingVenueIdentification1Choice.Other}</li>
+ * {@linkplain com.tools20022.repository.choice.TradingVenueIdentification1Choice#mmOther
+ * TradingVenueIdentification1Choice.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TradingVenueIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected MICIdentifier marketIdentificationCode;
 	/**
 	 * Identification used where reporting entity uses a market identification
 	 * code (MIC).
@@ -83,8 +84,8 @@ public class TradingVenueIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#MIC
-	 * OrganisationIdentification.MIC}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmMIC
+	 * OrganisationIdentification.mmMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +106,21 @@ public class TradingVenueIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketIdentificationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketIdentificationCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> TradingVenueIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.MIC;
 			isDerived = false;
 			xmlTag = "MktIdCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentificationCode";
 			definition = "Identification used where reporting entity uses a market identification code (MIC).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected CountryCode nationalCompetentAuthority;
 	/**
 	 * Identification used where reporting entity is a national competent
 	 * authority.
@@ -132,8 +134,8 @@ public class TradingVenueIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#Country
-	 * PostalAddress.Country}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
+	 * PostalAddress.mmCountry}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +156,21 @@ public class TradingVenueIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NationalCompetentAuthority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNationalCompetentAuthority = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
 			componentContext_lazy = () -> TradingVenueIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.Country;
 			isDerived = false;
 			xmlTag = "NtlCmptntAuthrty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalCompetentAuthority";
 			definition = "Identification used where reporting entity is a national competent authority.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected TradingVenueIdentification2 other;
 	/**
 	 * Identification used where a venue does not have an already defined code
 	 * type.
@@ -203,34 +206,58 @@ public class TradingVenueIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Other = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TradingVenueIdentification1Choice.mmObject();
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
+			componentContext_lazy = () -> TradingVenueIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Identification used where a venue does not have an already defined code type.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TradingVenueIdentification2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TradingVenueIdentification2.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradingVenueIdentification1Choice.MarketIdentificationCode,
-						com.tools20022.repository.choice.TradingVenueIdentification1Choice.NationalCompetentAuthority, com.tools20022.repository.choice.TradingVenueIdentification1Choice.Other);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmMarketIdentificationCode,
+						com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmNationalCompetentAuthority, com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmOther);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingVenueIdentification1Choice";
 				definition = "Trade venue related fields.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MICIdentifier getMarketIdentificationCode() {
+		return marketIdentificationCode;
+	}
+
+	public void setMarketIdentificationCode(MICIdentifier marketIdentificationCode) {
+		this.marketIdentificationCode = marketIdentificationCode;
+	}
+
+	public CountryCode getNationalCompetentAuthority() {
+		return nationalCompetentAuthority;
+	}
+
+	public void setNationalCompetentAuthority(CountryCode nationalCompetentAuthority) {
+		this.nationalCompetentAuthority = nationalCompetentAuthority;
+	}
+
+	public TradingVenueIdentification2 getOther() {
+		return other;
+	}
+
+	public void setOther(TradingVenueIdentification2 other) {
+		this.other = other;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.entity.IntraPositionTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria based on which information is included.
@@ -36,47 +37,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#References
- * IntraBalanceQueryCriteria1.References}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmReferences
+ * IntraBalanceQueryCriteria1.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#Status
- * IntraBalanceQueryCriteria1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmStatus
+ * IntraBalanceQueryCriteria1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#CashAccountOwner
- * IntraBalanceQueryCriteria1.CashAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmCashAccountOwner
+ * IntraBalanceQueryCriteria1.mmCashAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#CashAccount
- * IntraBalanceQueryCriteria1.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmCashAccount
+ * IntraBalanceQueryCriteria1.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#BalanceType
- * IntraBalanceQueryCriteria1.BalanceType}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmBalanceType
+ * IntraBalanceQueryCriteria1.mmBalanceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#CashSubBalanceIdentification
- * IntraBalanceQueryCriteria1.CashSubBalanceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmCashSubBalanceIdentification
+ * IntraBalanceQueryCriteria1.mmCashSubBalanceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#SettlementAmount
- * IntraBalanceQueryCriteria1.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmSettlementAmount
+ * IntraBalanceQueryCriteria1.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#SettledAmount
- * IntraBalanceQueryCriteria1.SettledAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmSettledAmount
+ * IntraBalanceQueryCriteria1.mmSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#SettlementCurrency
- * IntraBalanceQueryCriteria1.SettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmSettlementCurrency
+ * IntraBalanceQueryCriteria1.mmSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#IntendedSettlementDate
- * IntraBalanceQueryCriteria1.IntendedSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmIntendedSettlementDate
+ * IntraBalanceQueryCriteria1.mmIntendedSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#EffectiveSettlementDate
- * IntraBalanceQueryCriteria1.EffectiveSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmEffectiveSettlementDate
+ * IntraBalanceQueryCriteria1.mmEffectiveSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#Priority
- * IntraBalanceQueryCriteria1.Priority}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmPriority
+ * IntraBalanceQueryCriteria1.mmPriority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#MessageOriginator
- * IntraBalanceQueryCriteria1.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmMessageOriginator
+ * IntraBalanceQueryCriteria1.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#CreationDateTime
- * IntraBalanceQueryCriteria1.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria1#mmCreationDateTime
+ * IntraBalanceQueryCriteria1.mmCreationDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -85,8 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalanceQueryCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<References36Choice> references;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -128,7 +130,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute References = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferences = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -140,6 +142,7 @@ public class IntraBalanceQueryCriteria1 {
 			complexType_lazy = () -> References36Choice.mmObject();
 		}
 	};
+	protected IntraBalanceQueryStatus1 status;
 	/**
 	 * Provides the status of settlement of a transaction.
 	 * <p>
@@ -168,7 +171,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -176,11 +179,12 @@ public class IntraBalanceQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Provides the status of settlement of a transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> IntraBalanceQueryStatus1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryStatus1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> cashAccountOwner;
 	/**
 	 * Party that owns the account.
 	 * <p>
@@ -208,7 +212,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * definition} = "Party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -217,10 +221,11 @@ public class IntraBalanceQueryCriteria1 {
 			name = "CashAccountOwner";
 			definition = "Party that owns the account.";
 			minOccurs = 0;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected List<AccountIdentificationSearchCriteria2Choice> cashAccount;
 	/**
 	 * Account in which cash is maintained.
 	 * <p>
@@ -249,7 +254,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * definition} = "Account in which cash is maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -261,6 +266,7 @@ public class IntraBalanceQueryCriteria1 {
 			complexType_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.IntraBalanceType1> balanceType;
 	/**
 	 * Balance to which the amount of money is moved.
 	 * <p>
@@ -289,7 +295,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * definition} = "Balance to which the amount of money is moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -298,9 +304,10 @@ public class IntraBalanceQueryCriteria1 {
 			name = "BalanceType";
 			definition = "Balance to which the amount of money is moved.";
 			minOccurs = 0;
-			complexType_lazy = () -> IntraBalanceType1.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.IntraBalanceType1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification37> cashSubBalanceIdentification;
 	/**
 	 * Number identifying a lot constituting the sub-balance.
 	 * <p>
@@ -328,7 +335,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * definition} = "Number identifying a lot constituting the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashSubBalanceIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashSubBalanceIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -337,10 +344,11 @@ public class IntraBalanceQueryCriteria1 {
 			name = "CashSubBalanceIdentification";
 			definition = "Number identifying a lot constituting the sub-balance.";
 			minOccurs = 0;
-			type_lazy = () -> GenericIdentification37.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAmountRangeChoice settlementAmount;
 	/**
 	 * Total amount of money to be settled.
 	 * <p>
@@ -369,7 +377,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * definition} = "Total amount of money to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -377,11 +385,12 @@ public class IntraBalanceQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money to be settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAmountRangeChoice settledAmount;
 	/**
 	 * Amount of money effectively settled and which will be credited to/debited
 	 * from the account owner's cash account. It may differ from the instructed
@@ -414,7 +423,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettledAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -422,11 +431,12 @@ public class IntraBalanceQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Amount of money effectively settled and which will be credited to/debited from the account owner's cash account. It may differ from the instructed settlement amount based on market tolerance level.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 		}
 	};
+	protected List<ActiveOrHistoricCurrencyCode> settlementCurrency;
 	/**
 	 * Currency in which the instructed amount is expressed.
 	 * <p>
@@ -455,7 +465,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * definition} = "Currency in which the instructed amount is expressed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -467,6 +477,7 @@ public class IntraBalanceQueryCriteria1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice intendedSettlementDate;
 	/**
 	 * Date and time at which the amount of money is intended to be moved.
 	 * <p>
@@ -496,7 +507,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * "Date and time at which the amount of money is intended to be moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntendedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -504,11 +515,12 @@ public class IntraBalanceQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Date and time at which the amount of money is intended to be moved.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice effectiveSettlementDate;
 	/**
 	 * Date and time at which the amount of money is moved.
 	 * <p>
@@ -537,7 +549,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * definition} = "Date and time at which the amount of money is moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectiveSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -545,11 +557,12 @@ public class IntraBalanceQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which the amount of money is moved.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
+	protected List<PriorityNumeric1Choice> priority;
 	/**
 	 * Specifies whether the transaction is to be executed with a high priority.
 	 * <p>
@@ -580,7 +593,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Priority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -592,6 +605,7 @@ public class IntraBalanceQueryCriteria1 {
 			complexType_lazy = () -> PriorityNumeric1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator;
 	/**
 	 * Party that originated the message, if other than the sender.
 	 * <p>
@@ -620,7 +634,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -629,10 +643,11 @@ public class IntraBalanceQueryCriteria1 {
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			minOccurs = 0;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected DateAndDateTimeSearch2Choice creationDateTime;
 	/**
 	 * Specifies the creation date/time of the intra-balance movement.
 	 * <p>
@@ -662,7 +677,7 @@ public class IntraBalanceQueryCriteria1 {
 	 * "Specifies the creation date/time of the intra-balance movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
@@ -670,8 +685,8 @@ public class IntraBalanceQueryCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the creation date/time of the intra-balance movement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
@@ -679,20 +694,132 @@ public class IntraBalanceQueryCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryCriteria1.References, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.Status,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.CashAccountOwner, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.CashAccount, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.BalanceType,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.CashSubBalanceIdentification, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.SettlementAmount,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.SettledAmount, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.SettlementCurrency,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.IntendedSettlementDate, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.EffectiveSettlementDate,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.Priority, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.MessageOriginator,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.CreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmReferences, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmStatus,
+						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmCashAccountOwner, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmCashAccount,
+						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmBalanceType, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmCashSubBalanceIdentification,
+						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmSettlementAmount, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmSettledAmount,
+						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmSettlementCurrency, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmIntendedSettlementDate,
+						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmEffectiveSettlementDate, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmPriority,
+						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmMessageOriginator, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmCreationDateTime);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryCriteria1";
 				definition = "Defines the criteria based on which information is included.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<References36Choice> getReferences() {
+		return references;
+	}
+
+	public void setReferences(List<References36Choice> references) {
+		this.references = references;
+	}
+
+	public IntraBalanceQueryStatus1 getStatus() {
+		return status;
+	}
+
+	public void setStatus(com.tools20022.repository.msg.IntraBalanceQueryStatus1 status) {
+		this.status = status;
+	}
+
+	public List<SystemPartyIdentification5> getCashAccountOwner() {
+		return cashAccountOwner;
+	}
+
+	public void setCashAccountOwner(List<com.tools20022.repository.msg.SystemPartyIdentification5> cashAccountOwner) {
+		this.cashAccountOwner = cashAccountOwner;
+	}
+
+	public List<AccountIdentificationSearchCriteria2Choice> getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(List<AccountIdentificationSearchCriteria2Choice> cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public List<IntraBalanceType1> getBalanceType() {
+		return balanceType;
+	}
+
+	public void setBalanceType(List<com.tools20022.repository.msg.IntraBalanceType1> balanceType) {
+		this.balanceType = balanceType;
+	}
+
+	public List<GenericIdentification37> getCashSubBalanceIdentification() {
+		return cashSubBalanceIdentification;
+	}
+
+	public void setCashSubBalanceIdentification(List<com.tools20022.repository.msg.GenericIdentification37> cashSubBalanceIdentification) {
+		this.cashSubBalanceIdentification = cashSubBalanceIdentification;
+	}
+
+	public ImpliedCurrencyAmountRangeChoice getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(ImpliedCurrencyAmountRangeChoice settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public ImpliedCurrencyAmountRangeChoice getSettledAmount() {
+		return settledAmount;
+	}
+
+	public void setSettledAmount(ImpliedCurrencyAmountRangeChoice settledAmount) {
+		this.settledAmount = settledAmount;
+	}
+
+	public List<ActiveOrHistoricCurrencyCode> getSettlementCurrency() {
+		return settlementCurrency;
+	}
+
+	public void setSettlementCurrency(List<ActiveOrHistoricCurrencyCode> settlementCurrency) {
+		this.settlementCurrency = settlementCurrency;
+	}
+
+	public DateAndDateTimeSearch2Choice getIntendedSettlementDate() {
+		return intendedSettlementDate;
+	}
+
+	public void setIntendedSettlementDate(DateAndDateTimeSearch2Choice intendedSettlementDate) {
+		this.intendedSettlementDate = intendedSettlementDate;
+	}
+
+	public DateAndDateTimeSearch2Choice getEffectiveSettlementDate() {
+		return effectiveSettlementDate;
+	}
+
+	public void setEffectiveSettlementDate(DateAndDateTimeSearch2Choice effectiveSettlementDate) {
+		this.effectiveSettlementDate = effectiveSettlementDate;
+	}
+
+	public List<PriorityNumeric1Choice> getPriority() {
+		return priority;
+	}
+
+	public void setPriority(List<PriorityNumeric1Choice> priority) {
+		this.priority = priority;
+	}
+
+	public List<SystemPartyIdentification5> getMessageOriginator() {
+		return messageOriginator;
+	}
+
+	public void setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator) {
+		this.messageOriginator = messageOriginator;
+	}
+
+	public DateAndDateTimeSearch2Choice getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(DateAndDateTimeSearch2Choice creationDateTime) {
+		this.creationDateTime = creationDateTime;
 	}
 }

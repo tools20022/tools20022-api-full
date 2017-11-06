@@ -37,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#SequenceNumber
- * RecurringTransaction1.SequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#mmSequenceNumber
+ * RecurringTransaction1.mmSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#PeriodUnit
- * RecurringTransaction1.PeriodUnit}</li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#mmPeriodUnit
+ * RecurringTransaction1.mmPeriodUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#InstalmentPeriod
- * RecurringTransaction1.InstalmentPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#mmInstalmentPeriod
+ * RecurringTransaction1.mmInstalmentPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#TotalNumberOfPayments
- * RecurringTransaction1.TotalNumberOfPayments}</li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#mmTotalNumberOfPayments
+ * RecurringTransaction1.mmTotalNumberOfPayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#InterestCharges
- * RecurringTransaction1.InterestCharges}</li>
+ * {@linkplain com.tools20022.repository.msg.RecurringTransaction1#mmInterestCharges
+ * RecurringTransaction1.mmInterestCharges}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RecurringTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max2NumericText sequenceNumber;
 	/**
 	 * Indicates the recurring/instalment occurrence of the transaction (1 = 1st
 	 * instalment, 2 = 2nd instalment, etc.).
@@ -113,13 +114,13 @@ public class RecurringTransaction1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#SequenceNumber
-	 * RecurringTransaction2.SequenceNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmSequenceNumber
+	 * RecurringTransaction2.mmSequenceNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RecurringTransaction1.mmObject();
 			isDerived = false;
@@ -127,12 +128,13 @@ public class RecurringTransaction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Indicates the recurring/instalment occurrence of the transaction (1 = 1st instalment, 2 = 2nd instalment, etc.).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.SequenceNumber);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmSequenceNumber);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max2NumericText.mmObject();
 		}
 	};
+	protected Frequency4Code periodUnit;
 	/**
 	 * Period unit between consecutive payments (for example day, month, year).
 	 * <p>
@@ -146,8 +148,8 @@ public class RecurringTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment#PeriodUnit
-	 * Instalment.PeriodUnit}</li>
+	 * {@linkplain com.tools20022.repository.entity.Instalment#mmPeriodUnit
+	 * Instalment.mmPeriodUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,27 +172,28 @@ public class RecurringTransaction1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#PeriodUnit
-	 * RecurringTransaction2.PeriodUnit}</li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmPeriodUnit
+	 * RecurringTransaction2.mmPeriodUnit}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PeriodUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPeriodUnit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmPeriodUnit;
 			componentContext_lazy = () -> RecurringTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.PeriodUnit;
 			isDerived = false;
 			xmlTag = "PrdUnit";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodUnit";
 			definition = "Period unit between consecutive payments (for example day, month, year).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.PeriodUnit);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmPeriodUnit);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Frequency4Code.mmObject();
 		}
 	};
+	protected Number instalmentPeriod;
 	/**
 	 * Number of period units between consecutive payments.
 	 * <p>
@@ -203,8 +206,8 @@ public class RecurringTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment#NumberOfUnits
-	 * Instalment.NumberOfUnits}</li>
+	 * {@linkplain com.tools20022.repository.entity.Instalment#mmNumberOfUnits
+	 * Instalment.mmNumberOfUnits}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -225,27 +228,28 @@ public class RecurringTransaction1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#InstalmentPeriod
-	 * RecurringTransaction2.InstalmentPeriod}</li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmInstalmentPeriod
+	 * RecurringTransaction2.mmInstalmentPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstalmentPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstalmentPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmNumberOfUnits;
 			componentContext_lazy = () -> RecurringTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.NumberOfUnits;
 			isDerived = false;
 			xmlTag = "InstlmtPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentPeriod";
 			definition = "Number of period units between consecutive payments.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.InstalmentPeriod);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmInstalmentPeriod);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number totalNumberOfPayments;
 	/**
 	 * Total number of instalment payments.
 	 * <p>
@@ -258,8 +262,8 @@ public class RecurringTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Instalment#TotalNumberOfInstalment
-	 * Instalment.TotalNumberOfInstalment}</li>
+	 * {@linkplain com.tools20022.repository.entity.Instalment#mmTotalNumberOfInstalment
+	 * Instalment.mmTotalNumberOfInstalment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -280,27 +284,28 @@ public class RecurringTransaction1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#TotalNumberOfPayments
-	 * RecurringTransaction2.TotalNumberOfPayments}</li>
+	 * {@linkplain com.tools20022.repository.msg.RecurringTransaction2#mmTotalNumberOfPayments
+	 * RecurringTransaction2.mmTotalNumberOfPayments}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfPayments = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfPayments = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmTotalNumberOfInstalment;
 			componentContext_lazy = () -> RecurringTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.TotalNumberOfInstalment;
 			isDerived = false;
 			xmlTag = "TtlNbOfPmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfPayments";
 			definition = "Total number of instalment payments.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.TotalNumberOfPayments);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmTotalNumberOfPayments);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ImpliedCurrencyAndAmount interestCharges;
 	/**
 	 * Interest charged in percentage for the total amount of payments.
 	 * <p>
@@ -314,8 +319,8 @@ public class RecurringTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#Interest
-	 * PaymentObligation.Interest}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmInterest
+	 * PaymentObligation.mmInterest}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -335,17 +340,17 @@ public class RecurringTransaction1 {
 	 * "Interest charged in percentage for the total amount of payments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestCharges = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestCharges = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmInterest;
 			componentContext_lazy = () -> RecurringTransaction1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.Interest;
 			isDerived = false;
 			xmlTag = "IntrstChrgs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestCharges";
 			definition = "Interest charged in percentage for the total amount of payments.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
@@ -353,10 +358,11 @@ public class RecurringTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction1.SequenceNumber, com.tools20022.repository.msg.RecurringTransaction1.PeriodUnit,
-						com.tools20022.repository.msg.RecurringTransaction1.InstalmentPeriod, com.tools20022.repository.msg.RecurringTransaction1.TotalNumberOfPayments, com.tools20022.repository.msg.RecurringTransaction1.InterestCharges);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction1.mmSequenceNumber, com.tools20022.repository.msg.RecurringTransaction1.mmPeriodUnit,
+						com.tools20022.repository.msg.RecurringTransaction1.mmInstalmentPeriod, com.tools20022.repository.msg.RecurringTransaction1.mmTotalNumberOfPayments,
+						com.tools20022.repository.msg.RecurringTransaction1.mmInterestCharges);
 				trace_lazy = () -> Instalment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RecurringTransaction1";
 				definition = "Financial loan (instalment) or a recurring transaction.";
@@ -364,5 +370,45 @@ public class RecurringTransaction1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max2NumericText getSequenceNumber() {
+		return sequenceNumber;
+	}
+
+	public void setSequenceNumber(Max2NumericText sequenceNumber) {
+		this.sequenceNumber = sequenceNumber;
+	}
+
+	public Frequency4Code getPeriodUnit() {
+		return periodUnit;
+	}
+
+	public void setPeriodUnit(Frequency4Code periodUnit) {
+		this.periodUnit = periodUnit;
+	}
+
+	public Number getInstalmentPeriod() {
+		return instalmentPeriod;
+	}
+
+	public void setInstalmentPeriod(Number instalmentPeriod) {
+		this.instalmentPeriod = instalmentPeriod;
+	}
+
+	public Number getTotalNumberOfPayments() {
+		return totalNumberOfPayments;
+	}
+
+	public void setTotalNumberOfPayments(Number totalNumberOfPayments) {
+		this.totalNumberOfPayments = totalNumberOfPayments;
+	}
+
+	public ImpliedCurrencyAndAmount getInterestCharges() {
+		return interestCharges;
+	}
+
+	public void setInterestCharges(ImpliedCurrencyAndAmount interestCharges) {
+		this.interestCharges = interestCharges;
 	}
 }

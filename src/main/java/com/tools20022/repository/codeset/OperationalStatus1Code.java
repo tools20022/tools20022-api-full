@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OperationalStatus1Code#Enabled
- * OperationalStatus1Code.Enabled}</li>
+ * {@linkplain com.tools20022.repository.codeset.OperationalStatus1Code#mmEnabled
+ * OperationalStatus1Code.mmEnabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OperationalStatus1Code#SpecialCircumstances
- * OperationalStatus1Code.SpecialCircumstances}</li>
+ * {@linkplain com.tools20022.repository.codeset.OperationalStatus1Code#mmSpecialCircumstances
+ * OperationalStatus1Code.mmSpecialCircumstances}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class OperationalStatus1Code extends OperationalStatusCode {
 	 * name} = "Enabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Enabled = new MMCode() {
+	public static final MMCode mmEnabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
@@ -98,7 +98,7 @@ public class OperationalStatus1Code extends OperationalStatusCode {
 	 * name} = "SpecialCircumstances"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialCircumstances = new MMCode() {
+	public static final MMCode mmSpecialCircumstances = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCircumstances";
@@ -109,11 +109,11 @@ public class OperationalStatus1Code extends OperationalStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OperationalStatus1Code";
 				definition = "Specifies the operational status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OperationalStatus1Code.Enabled, com.tools20022.repository.codeset.OperationalStatus1Code.SpecialCircumstances);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OperationalStatus1Code.mmEnabled, com.tools20022.repository.codeset.OperationalStatus1Code.mmSpecialCircumstances);
 				trace_lazy = () -> OperationalStatusCode.mmObject();
 			}
 		});

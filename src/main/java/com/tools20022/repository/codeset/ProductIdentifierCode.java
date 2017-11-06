@@ -30,37 +30,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#BuyersItemNumber
- * ProductIdentifierCode.BuyersItemNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmBuyersItemNumber
+ * ProductIdentifierCode.mmBuyersItemNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#CommercialDescriptionCodeName
- * ProductIdentifierCode.CommercialDescriptionCodeName}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#EAN
- * ProductIdentifierCode.EAN}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmCommercialDescriptionCodeName
+ * ProductIdentifierCode.mmCommercialDescriptionCodeName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#HarmonizedTariffCodeName
- * ProductIdentifierCode.HarmonizedTariffCodeName}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmEAN
+ * ProductIdentifierCode.mmEAN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#ManufacturersItemNumber
- * ProductIdentifierCode.ManufacturersItemNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmHarmonizedTariffCodeName
+ * ProductIdentifierCode.mmHarmonizedTariffCodeName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#ModelNumber
- * ProductIdentifierCode.ModelNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmManufacturersItemNumber
+ * ProductIdentifierCode.mmManufacturersItemNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#PartNumber
- * ProductIdentifierCode.PartNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmModelNumber
+ * ProductIdentifierCode.mmModelNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#QuotaCategory
- * ProductIdentifierCode.QuotaCategory}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmPartNumber
+ * ProductIdentifierCode.mmPartNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#StyleNumber
- * ProductIdentifierCode.StyleNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmQuotaCategory
+ * ProductIdentifierCode.mmQuotaCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#SuppliersItemNumber
- * ProductIdentifierCode.SuppliersItemNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmStyleNumber
+ * ProductIdentifierCode.mmStyleNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#UniversalProductCode
- * ProductIdentifierCode.UniversalProductCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmSuppliersItemNumber
+ * ProductIdentifierCode.mmSuppliersItemNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode#mmUniversalProductCode
+ * ProductIdentifierCode.mmUniversalProductCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -73,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -115,7 +116,7 @@ public class ProductIdentifierCode {
 	 * definition} = "Product identifier assigned by the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyersItemNumber = new MMCode() {
+	public static final MMCode mmBuyersItemNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BuyersItemNumber";
@@ -147,7 +148,7 @@ public class ProductIdentifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialDescriptionCodeName = new MMCode() {
+	public static final MMCode mmCommercialDescriptionCodeName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CommercialDescriptionCodeName";
@@ -177,7 +178,7 @@ public class ProductIdentifierCode {
 	 * definition} = "The unique EAN (European Article Number) code."</li>
 	 * </ul>
 	 */
-	public static final MMCode EAN = new MMCode() {
+	public static final MMCode mmEAN = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EAN";
@@ -209,7 +210,7 @@ public class ProductIdentifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HarmonizedTariffCodeName = new MMCode() {
+	public static final MMCode mmHarmonizedTariffCodeName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HarmonizedTariffCodeName";
@@ -239,7 +240,7 @@ public class ProductIdentifierCode {
 	 * definition} = "Product identifier as assigned by the manufacturer."</li>
 	 * </ul>
 	 */
-	public static final MMCode ManufacturersItemNumber = new MMCode() {
+	public static final MMCode mmManufacturersItemNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ManufacturersItemNumber";
@@ -272,7 +273,7 @@ public class ProductIdentifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ModelNumber = new MMCode() {
+	public static final MMCode mmModelNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ModelNumber";
@@ -303,7 +304,7 @@ public class ProductIdentifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PartNumber = new MMCode() {
+	public static final MMCode mmPartNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartNumber";
@@ -333,7 +334,7 @@ public class ProductIdentifierCode {
 	 * definition} = "Product identifier used by the retail industry."</li>
 	 * </ul>
 	 */
-	public static final MMCode QuotaCategory = new MMCode() {
+	public static final MMCode mmQuotaCategory = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "QuotaCategory";
@@ -363,7 +364,7 @@ public class ProductIdentifierCode {
 	 * definition} = "Identification of the style of a product."</li>
 	 * </ul>
 	 */
-	public static final MMCode StyleNumber = new MMCode() {
+	public static final MMCode mmStyleNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StyleNumber";
@@ -394,7 +395,7 @@ public class ProductIdentifierCode {
 	 * "Number assigned to an article by the supplier of that article."</li>
 	 * </ul>
 	 */
-	public static final MMCode SuppliersItemNumber = new MMCode() {
+	public static final MMCode mmSuppliersItemNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SuppliersItemNumber";
@@ -426,7 +427,7 @@ public class ProductIdentifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UniversalProductCode = new MMCode() {
+	public static final MMCode mmUniversalProductCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UniversalProductCode";
@@ -439,16 +440,16 @@ public class ProductIdentifierCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BINR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductIdentifierCode";
 				definition = "Specifies the type of identifier of a product.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductIdentifierCode.BuyersItemNumber, com.tools20022.repository.codeset.ProductIdentifierCode.CommercialDescriptionCodeName,
-						com.tools20022.repository.codeset.ProductIdentifierCode.EAN, com.tools20022.repository.codeset.ProductIdentifierCode.HarmonizedTariffCodeName,
-						com.tools20022.repository.codeset.ProductIdentifierCode.ManufacturersItemNumber, com.tools20022.repository.codeset.ProductIdentifierCode.ModelNumber,
-						com.tools20022.repository.codeset.ProductIdentifierCode.PartNumber, com.tools20022.repository.codeset.ProductIdentifierCode.QuotaCategory, com.tools20022.repository.codeset.ProductIdentifierCode.StyleNumber,
-						com.tools20022.repository.codeset.ProductIdentifierCode.SuppliersItemNumber, com.tools20022.repository.codeset.ProductIdentifierCode.UniversalProductCode);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductIdentifierCode.mmBuyersItemNumber, com.tools20022.repository.codeset.ProductIdentifierCode.mmCommercialDescriptionCodeName,
+						com.tools20022.repository.codeset.ProductIdentifierCode.mmEAN, com.tools20022.repository.codeset.ProductIdentifierCode.mmHarmonizedTariffCodeName,
+						com.tools20022.repository.codeset.ProductIdentifierCode.mmManufacturersItemNumber, com.tools20022.repository.codeset.ProductIdentifierCode.mmModelNumber,
+						com.tools20022.repository.codeset.ProductIdentifierCode.mmPartNumber, com.tools20022.repository.codeset.ProductIdentifierCode.mmQuotaCategory, com.tools20022.repository.codeset.ProductIdentifierCode.mmStyleNumber,
+						com.tools20022.repository.codeset.ProductIdentifierCode.mmSuppliersItemNumber, com.tools20022.repository.codeset.ProductIdentifierCode.mmUniversalProductCode);
 				derivation_lazy = () -> Arrays.asList(ProductIdentifier2Code.mmObject());
 			}
 		});

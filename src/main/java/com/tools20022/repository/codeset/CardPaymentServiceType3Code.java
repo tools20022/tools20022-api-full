@@ -35,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#InitialReservation
- * CardPaymentServiceType3Code.InitialReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmInitialReservation
+ * CardPaymentServiceType3Code.mmInitialReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#UpdateReservation
- * CardPaymentServiceType3Code.UpdateReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmUpdateReservation
+ * CardPaymentServiceType3Code.mmUpdateReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#PaymentReservation
- * CardPaymentServiceType3Code.PaymentReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmPaymentReservation
+ * CardPaymentServiceType3Code.mmPaymentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#AdditionalPayment
- * CardPaymentServiceType3Code.AdditionalPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmAdditionalPayment
+ * CardPaymentServiceType3Code.mmAdditionalPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#FirstRecurring
- * CardPaymentServiceType3Code.FirstRecurring}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmFirstRecurring
+ * CardPaymentServiceType3Code.mmFirstRecurring}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#FollowingRecurring
- * CardPaymentServiceType3Code.FollowingRecurring}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmFollowingRecurring
+ * CardPaymentServiceType3Code.mmFollowingRecurring}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "InitialReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode InitialReservation = new MMCode() {
+	public static final MMCode mmInitialReservation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialReservation";
@@ -119,7 +119,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "UpdateReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode UpdateReservation = new MMCode() {
+	public static final MMCode mmUpdateReservation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateReservation";
@@ -142,7 +142,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "PaymentReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentReservation = new MMCode() {
+	public static final MMCode mmPaymentReservation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReservation";
@@ -165,7 +165,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "AdditionalPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdditionalPayment = new MMCode() {
+	public static final MMCode mmAdditionalPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalPayment";
@@ -188,7 +188,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "FirstRecurring"</li>
 	 * </ul>
 	 */
-	public static final MMCode FirstRecurring = new MMCode() {
+	public static final MMCode mmFirstRecurring = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstRecurring";
@@ -211,7 +211,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "FollowingRecurring"</li>
 	 * </ul>
 	 */
-	public static final MMCode FollowingRecurring = new MMCode() {
+	public static final MMCode mmFollowingRecurring = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FollowingRecurring";
@@ -222,14 +222,14 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IRES");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentServiceType3Code";
 				definition = "Additional attributes of the service provided by the card payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType3Code.InitialReservation, com.tools20022.repository.codeset.CardPaymentServiceType3Code.UpdateReservation,
-						com.tools20022.repository.codeset.CardPaymentServiceType3Code.PaymentReservation, com.tools20022.repository.codeset.CardPaymentServiceType3Code.AdditionalPayment,
-						com.tools20022.repository.codeset.CardPaymentServiceType3Code.FirstRecurring, com.tools20022.repository.codeset.CardPaymentServiceType3Code.FollowingRecurring);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmInitialReservation, com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmUpdateReservation,
+						com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmPaymentReservation, com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmAdditionalPayment,
+						com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmFirstRecurring, com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmFollowingRecurring);
 				trace_lazy = () -> CardPaymentServiceTypeCode.mmObject();
 			}
 		});

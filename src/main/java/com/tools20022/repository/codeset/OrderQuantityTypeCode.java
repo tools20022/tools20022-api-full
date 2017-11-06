@@ -30,44 +30,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#Unit
- * OrderQuantityTypeCode.Unit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#Amount
- * OrderQuantityTypeCode.Amount}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmUnit
+ * OrderQuantityTypeCode.mmUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#Other
- * OrderQuantityTypeCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmAmount
+ * OrderQuantityTypeCode.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#UnitsOfMeasurePerTimeUnit
- * OrderQuantityTypeCode.UnitsOfMeasurePerTimeUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmOther
+ * OrderQuantityTypeCode.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#CancelledQuantity
- * OrderQuantityTypeCode.CancelledQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmUnitsOfMeasurePerTimeUnit
+ * OrderQuantityTypeCode.mmUnitsOfMeasurePerTimeUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#Confirmed
- * OrderQuantityTypeCode.Confirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmCancelledQuantity
+ * OrderQuantityTypeCode.mmCancelledQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#MatchIncrement
- * OrderQuantityTypeCode.MatchIncrement}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmConfirmed
+ * OrderQuantityTypeCode.mmConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#OriginalOrdered
- * OrderQuantityTypeCode.OriginalOrdered}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmMatchIncrement
+ * OrderQuantityTypeCode.mmMatchIncrement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#PreviouslyExecuted
- * OrderQuantityTypeCode.PreviouslyExecuted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmOriginalOrdered
+ * OrderQuantityTypeCode.mmOriginalOrdered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#RemainingOnOrder
- * OrderQuantityTypeCode.RemainingOnOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmPreviouslyExecuted
+ * OrderQuantityTypeCode.mmPreviouslyExecuted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#ReplacedQuantity
- * OrderQuantityTypeCode.ReplacedQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmRemainingOnOrder
+ * OrderQuantityTypeCode.mmRemainingOnOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#RequestedToBeCancelledQuantity
- * OrderQuantityTypeCode.RequestedToBeCancelledQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmReplacedQuantity
+ * OrderQuantityTypeCode.mmReplacedQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#RequestedToBeReplacedQuantity
- * OrderQuantityTypeCode.RequestedToBeReplacedQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmRequestedToBeCancelledQuantity
+ * OrderQuantityTypeCode.mmRequestedToBeCancelledQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderQuantityTypeCode#mmRequestedToBeReplacedQuantity
+ * OrderQuantityTypeCode.mmRequestedToBeReplacedQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -84,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -128,7 +129,7 @@ public class OrderQuantityTypeCode {
 	 * definition} = "Order is placed by unit."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unit = new MMCode() {
+	public static final MMCode mmUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Unit";
@@ -158,7 +159,7 @@ public class OrderQuantityTypeCode {
 	 * definition} = "Order is placed by amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMCode Amount = new MMCode() {
+	public static final MMCode mmAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Amount";
@@ -188,7 +189,7 @@ public class OrderQuantityTypeCode {
 	 * definition} = "Transaction is another type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -221,7 +222,7 @@ public class OrderQuantityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UnitsOfMeasurePerTimeUnit = new MMCode() {
+	public static final MMCode mmUnitsOfMeasurePerTimeUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsOfMeasurePerTimeUnit";
@@ -254,7 +255,7 @@ public class OrderQuantityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CancelledQuantity = new MMCode() {
+	public static final MMCode mmCancelledQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledQuantity";
@@ -284,7 +285,7 @@ public class OrderQuantityTypeCode {
 	 * definition} = "Quantity of financial instrument confirmed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Confirmed = new MMCode() {
+	public static final MMCode mmConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmed";
@@ -318,7 +319,7 @@ public class OrderQuantityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MatchIncrement = new MMCode() {
+	public static final MMCode mmMatchIncrement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIncrement";
@@ -348,7 +349,7 @@ public class OrderQuantityTypeCode {
 	 * definition} = "Quantity of financial instrument ordered."</li>
 	 * </ul>
 	 */
-	public static final MMCode OriginalOrdered = new MMCode() {
+	public static final MMCode mmOriginalOrdered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalOrdered";
@@ -379,7 +380,7 @@ public class OrderQuantityTypeCode {
 	 * "Quantity of financial instrument that has been previously executed."</li>
 	 * </ul>
 	 */
-	public static final MMCode PreviouslyExecuted = new MMCode() {
+	public static final MMCode mmPreviouslyExecuted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyExecuted";
@@ -410,7 +411,7 @@ public class OrderQuantityTypeCode {
 	 * "Quantity of financial instrument that is remaining on order."</li>
 	 * </ul>
 	 */
-	public static final MMCode RemainingOnOrder = new MMCode() {
+	public static final MMCode mmRemainingOnOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingOnOrder";
@@ -443,7 +444,7 @@ public class OrderQuantityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReplacedQuantity = new MMCode() {
+	public static final MMCode mmReplacedQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacedQuantity";
@@ -476,7 +477,7 @@ public class OrderQuantityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RequestedToBeCancelledQuantity = new MMCode() {
+	public static final MMCode mmRequestedToBeCancelledQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedToBeCancelledQuantity";
@@ -509,7 +510,7 @@ public class OrderQuantityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RequestedToBeReplacedQuantity = new MMCode() {
+	public static final MMCode mmRequestedToBeReplacedQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedToBeReplacedQuantity";
@@ -522,17 +523,18 @@ public class OrderQuantityTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNIT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderQuantityTypeCode";
 				definition = "Specifies how the order is placed, eg by quantity of units or by amount of money.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderQuantityTypeCode.Unit, com.tools20022.repository.codeset.OrderQuantityTypeCode.Amount, com.tools20022.repository.codeset.OrderQuantityTypeCode.Other,
-						com.tools20022.repository.codeset.OrderQuantityTypeCode.UnitsOfMeasurePerTimeUnit, com.tools20022.repository.codeset.OrderQuantityTypeCode.CancelledQuantity,
-						com.tools20022.repository.codeset.OrderQuantityTypeCode.Confirmed, com.tools20022.repository.codeset.OrderQuantityTypeCode.MatchIncrement, com.tools20022.repository.codeset.OrderQuantityTypeCode.OriginalOrdered,
-						com.tools20022.repository.codeset.OrderQuantityTypeCode.PreviouslyExecuted, com.tools20022.repository.codeset.OrderQuantityTypeCode.RemainingOnOrder,
-						com.tools20022.repository.codeset.OrderQuantityTypeCode.ReplacedQuantity, com.tools20022.repository.codeset.OrderQuantityTypeCode.RequestedToBeCancelledQuantity,
-						com.tools20022.repository.codeset.OrderQuantityTypeCode.RequestedToBeReplacedQuantity);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderQuantityTypeCode.mmUnit, com.tools20022.repository.codeset.OrderQuantityTypeCode.mmAmount,
+						com.tools20022.repository.codeset.OrderQuantityTypeCode.mmOther, com.tools20022.repository.codeset.OrderQuantityTypeCode.mmUnitsOfMeasurePerTimeUnit,
+						com.tools20022.repository.codeset.OrderQuantityTypeCode.mmCancelledQuantity, com.tools20022.repository.codeset.OrderQuantityTypeCode.mmConfirmed,
+						com.tools20022.repository.codeset.OrderQuantityTypeCode.mmMatchIncrement, com.tools20022.repository.codeset.OrderQuantityTypeCode.mmOriginalOrdered,
+						com.tools20022.repository.codeset.OrderQuantityTypeCode.mmPreviouslyExecuted, com.tools20022.repository.codeset.OrderQuantityTypeCode.mmRemainingOnOrder,
+						com.tools20022.repository.codeset.OrderQuantityTypeCode.mmReplacedQuantity, com.tools20022.repository.codeset.OrderQuantityTypeCode.mmRequestedToBeCancelledQuantity,
+						com.tools20022.repository.codeset.OrderQuantityTypeCode.mmRequestedToBeReplacedQuantity);
 				derivation_lazy = () -> Arrays.asList(OrderQuantityType3Code.mmObject(), OrderQuantityType1Code.mmObject(), OrderQuantityType2Code.mmObject());
 			}
 		});

@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.StandAloneRemittanceAdviceISOPreviousver
 import com.tools20022.repository.msgset.StandAloneRemittanceAdviceMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The RemittanceLocationAdvice message allows the originator of the message to
@@ -65,21 +66,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.remt.RemittanceLocationAdviceV01#GroupHeader
- * RemittanceLocationAdviceV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.remt.RemittanceLocationAdviceV01#mmGroupHeader
+ * RemittanceLocationAdviceV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.remt.RemittanceLocationAdviceV01#RemittanceLocation
- * RemittanceLocationAdviceV01.RemittanceLocation}</li>
+ * {@linkplain com.tools20022.repository.area.remt.RemittanceLocationAdviceV01#mmRemittanceLocation
+ * RemittanceLocationAdviceV01.mmRemittanceLocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.remt.RemittanceLocationAdviceV01#SupplementaryData
- * RemittanceLocationAdviceV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.remt.RemittanceLocationAdviceV01#mmSupplementaryData
+ * RemittanceLocationAdviceV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.remt.RemittanceLocationAdviceV01#identifier
- * RemittanceLocationAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code remt.002.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RemittanceLocationAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader62 groupHeader;
 	/**
 	 * Set of characteristics shared by all remittance location information
 	 * included in the message.
@@ -120,17 +120,18 @@ public class RemittanceLocationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all remittance location information included in the message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader62.mmObject();
 		}
 	};
+	protected List<RemittanceLocation3> remittanceLocation;
 	/**
 	 * Provides information related to location and/or delivery of the
 	 * remittance information. This information is used to enable the matching
@@ -159,7 +160,7 @@ public class RemittanceLocationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RemittanceLocation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRemittanceLocation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RmtLctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,6 +170,7 @@ public class RemittanceLocationAdviceV01 {
 			complexType_lazy = () -> RemittanceLocation3.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -195,7 +197,7 @@ public class RemittanceLocationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,33 +205,6 @@ public class RemittanceLocationAdviceV01 {
 			definition = "Additional information that cannot be  captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "remt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "remt";
-			messageFunctionality = "002";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -244,11 +219,42 @@ public class RemittanceLocationAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "RmtLctnAdvc";
 				businessArea_lazy = () -> PaymentsRemittanceAdviceLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.remt.RemittanceLocationAdviceV01.GroupHeader, com.tools20022.repository.area.remt.RemittanceLocationAdviceV01.RemittanceLocation,
-						com.tools20022.repository.area.remt.RemittanceLocationAdviceV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.remt.RemittanceLocationAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.remt.RemittanceLocationAdviceV01.mmGroupHeader, com.tools20022.repository.area.remt.RemittanceLocationAdviceV01.mmRemittanceLocation,
+						com.tools20022.repository.area.remt.RemittanceLocationAdviceV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "remt";
+						messageFunctionality = "002";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader62 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader62 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<RemittanceLocation3> getRemittanceLocation() {
+		return remittanceLocation;
+	}
+
+	public void setRemittanceLocation(List<RemittanceLocation3> remittanceLocation) {
+		this.remittanceLocation = remittanceLocation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

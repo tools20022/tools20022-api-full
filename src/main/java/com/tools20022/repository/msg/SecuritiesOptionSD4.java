@@ -37,23 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD4#PlaceAndName
- * SecuritiesOptionSD4.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD4#mmPlaceAndName
+ * SecuritiesOptionSD4.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD4#PayoutNumber
- * SecuritiesOptionSD4.PayoutNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOptionSD4#PayoutType
- * SecuritiesOptionSD4.PayoutType}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD4#mmPayoutNumber
+ * SecuritiesOptionSD4.mmPayoutNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD4#PayoutStatus
- * SecuritiesOptionSD4.PayoutStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD4#mmPayoutType
+ * SecuritiesOptionSD4.mmPayoutType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOptionSD4#mmPayoutStatus
+ * SecuritiesOptionSD4.mmPayoutStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesOptionSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -96,7 +98,7 @@ public class SecuritiesOptionSD4 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD4.mmObject();
 			isDerived = false;
@@ -104,11 +106,12 @@ public class SecuritiesOptionSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Exact3NumericText payoutNumber;
 	/**
 	 * Unique number associated with a payout within an option.
 	 * <p>
@@ -137,7 +140,7 @@ public class SecuritiesOptionSD4 {
 	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayoutNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD4.mmObject();
 			isDerived = false;
@@ -145,11 +148,12 @@ public class SecuritiesOptionSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected DTCCPayoutType2Code payoutType;
 	/**
 	 * Describes the type of payout associated with the event.
 	 * <p>
@@ -178,7 +182,7 @@ public class SecuritiesOptionSD4 {
 	 * definition} = "Describes the type of payout associated with the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayoutType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayoutType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD4.mmObject();
 			isDerived = false;
@@ -186,11 +190,12 @@ public class SecuritiesOptionSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutType";
 			definition = "Describes the type of payout associated with the event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DTCCPayoutType2Code.mmObject();
 		}
 	};
+	protected WorkflowStatus1Code payoutStatus;
 	/**
 	 * Workflow status of the payout.
 	 * <p>
@@ -219,7 +224,7 @@ public class SecuritiesOptionSD4 {
 	 * definition} = "Workflow status of the payout."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayoutStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayoutStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesOptionSD4.mmObject();
 			isDerived = false;
@@ -227,8 +232,8 @@ public class SecuritiesOptionSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutStatus";
 			definition = "Workflow status of the payout.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> WorkflowStatus1Code.mmObject();
 		}
 	};
@@ -236,14 +241,46 @@ public class SecuritiesOptionSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD4.PlaceAndName, com.tools20022.repository.msg.SecuritiesOptionSD4.PayoutNumber,
-						com.tools20022.repository.msg.SecuritiesOptionSD4.PayoutType, com.tools20022.repository.msg.SecuritiesOptionSD4.PayoutStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD4.mmPlaceAndName, com.tools20022.repository.msg.SecuritiesOptionSD4.mmPayoutNumber,
+						com.tools20022.repository.msg.SecuritiesOptionSD4.mmPayoutType, com.tools20022.repository.msg.SecuritiesOptionSD4.mmPayoutStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesOptionSD4";
 				definition = "Provides additional information regarding corporate action option securities movement details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Exact3NumericText getPayoutNumber() {
+		return payoutNumber;
+	}
+
+	public void setPayoutNumber(Exact3NumericText payoutNumber) {
+		this.payoutNumber = payoutNumber;
+	}
+
+	public DTCCPayoutType2Code getPayoutType() {
+		return payoutType;
+	}
+
+	public void setPayoutType(DTCCPayoutType2Code payoutType) {
+		this.payoutType = payoutType;
+	}
+
+	public WorkflowStatus1Code getPayoutStatus() {
+		return payoutStatus;
+	}
+
+	public void setPayoutStatus(WorkflowStatus1Code payoutStatus) {
+		this.payoutStatus = payoutStatus;
 	}
 }

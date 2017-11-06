@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.PaymentCard;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Card used to represent a financial account for the purpose of payment
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialCard1#CreditLimitAmount
- * FinancialCard1.CreditLimitAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialCard1#mmCreditLimitAmount
+ * FinancialCard1.mmCreditLimitAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialCard1#CreditAvailableAmount
- * FinancialCard1.CreditAvailableAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialCard1#mmCreditAvailableAmount
+ * FinancialCard1.mmCreditAvailableAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialCard1#InterestRatePercent
- * FinancialCard1.InterestRatePercent}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialCard1#mmInterestRatePercent
+ * FinancialCard1.mmInterestRatePercent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialCard1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<CurrencyAndAmount> creditLimitAmount;
 	/**
 	 * Monetary value of the credit limit for this financial card.
 	 * <p>
@@ -82,7 +84,8 @@ public class FinancialCard1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Amount Limit.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmAmount
+	 * Limit.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,10 +104,10 @@ public class FinancialCard1 {
 	 * "Monetary value of the credit limit for this financial card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditLimitAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditLimitAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
 			componentContext_lazy = () -> FinancialCard1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Amount;
 			isDerived = false;
 			xmlTag = "CdtLmtAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,6 +117,7 @@ public class FinancialCard1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<CurrencyAndAmount> creditAvailableAmount;
 	/**
 	 * Monetary value of the credit available for this financial card.
 	 * <p>
@@ -127,8 +131,8 @@ public class FinancialCard1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentCard#CreditAvailableAmount
-	 * PaymentCard.CreditAvailableAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentCard#mmCreditAvailableAmount
+	 * PaymentCard.mmCreditAvailableAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,10 +151,10 @@ public class FinancialCard1 {
 	 * "Monetary value of the credit available for this financial card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditAvailableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditAvailableAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmCreditAvailableAmount;
 			componentContext_lazy = () -> FinancialCard1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.CreditAvailableAmount;
 			isDerived = false;
 			xmlTag = "CdtAvlblAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,6 +164,7 @@ public class FinancialCard1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate interestRatePercent;
 	/**
 	 * Interest rate expressed as a percentage for this financial card.
 	 * <p>
@@ -173,8 +178,8 @@ public class FinancialCard1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Rate Interest.Rate}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmRate
+	 * Interest.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -193,17 +198,17 @@ public class FinancialCard1 {
 	 * "Interest rate expressed as a percentage for this financial card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestRatePercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestRatePercent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
 			componentContext_lazy = () -> FinancialCard1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Rate;
 			isDerived = false;
 			xmlTag = "IntrstRatePct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRatePercent";
 			definition = "Interest rate expressed as a percentage for this financial card.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -211,15 +216,39 @@ public class FinancialCard1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialCard1.CreditLimitAmount, com.tools20022.repository.msg.FinancialCard1.CreditAvailableAmount,
-						com.tools20022.repository.msg.FinancialCard1.InterestRatePercent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialCard1.mmCreditLimitAmount, com.tools20022.repository.msg.FinancialCard1.mmCreditAvailableAmount,
+						com.tools20022.repository.msg.FinancialCard1.mmInterestRatePercent);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialCard1";
 				definition = "Card used to represent a financial account for the purpose of payment settlement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CurrencyAndAmount> getCreditLimitAmount() {
+		return creditLimitAmount;
+	}
+
+	public void setCreditLimitAmount(List<CurrencyAndAmount> creditLimitAmount) {
+		this.creditLimitAmount = creditLimitAmount;
+	}
+
+	public List<CurrencyAndAmount> getCreditAvailableAmount() {
+		return creditAvailableAmount;
+	}
+
+	public void setCreditAvailableAmount(List<CurrencyAndAmount> creditAvailableAmount) {
+		this.creditAvailableAmount = creditAvailableAmount;
+	}
+
+	public PercentageRate getInterestRatePercent() {
+		return interestRatePercent;
+	}
+
+	public void setInterestRatePercent(PercentageRate interestRatePercent) {
+		this.interestRatePercent = interestRatePercent;
 	}
 }

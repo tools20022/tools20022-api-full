@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.CorporateActionStatusReason;
 import com.tools20022.repository.msg.PendingStatusReason5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between a reason or no reason for the corporate action instruction
@@ -37,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PendingStatus32Choice#NoSpecifiedReason
- * PendingStatus32Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.PendingStatus32Choice#mmNoSpecifiedReason
+ * PendingStatus32Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PendingStatus32Choice#Reason
- * PendingStatus32Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.PendingStatus32Choice#mmReason
+ * PendingStatus32Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PendingStatus32Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Reason not specified.
 	 * <p>
@@ -91,8 +93,8 @@ public class PendingStatus32Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,33 +115,34 @@ public class PendingStatus32Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingStatus34Choice#NoSpecifiedReason
-	 * PendingStatus34Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingStatus34Choice#mmNoSpecifiedReason
+	 * PendingStatus34Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PendingStatus1Choice#NoSpecifiedReason
-	 * PendingStatus1Choice.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingStatus1Choice#mmNoSpecifiedReason
+	 * PendingStatus1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> PendingStatus32Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Reason not specified.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingStatus1Choice.NoSpecifiedReason;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatus34Choice.NoSpecifiedReason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatus34Choice.mmNoSpecifiedReason);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingStatus1Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected List<PendingStatusReason5> reason;
 	/**
 	 * Reason for the pending status.
 	 * <p>
@@ -151,8 +154,8 @@ public class PendingStatus32Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#PendingReason
-	 * StatusReason.PendingReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmPendingReason
+	 * StatusReason.mmPendingReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -173,47 +176,63 @@ public class PendingStatus32Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PendingStatus34Choice#Reason
-	 * PendingStatus34Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingStatus34Choice#mmReason
+	 * PendingStatus34Choice.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PendingStatus1Choice#Reason
-	 * PendingStatus1Choice.Reason}</li>
+	 * {@linkplain com.tools20022.repository.choice.PendingStatus1Choice#mmReason
+	 * PendingStatus1Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
 			componentContext_lazy = () -> PendingStatus32Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.PendingReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingStatus1Choice.Reason;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatus34Choice.Reason);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatus34Choice.mmReason);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingStatus1Choice.mmReason;
 			minOccurs = 1;
-			type_lazy = () -> PendingStatusReason5.mmObject();
 			isComposite = true;
+			type_lazy = () -> PendingStatusReason5.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatus32Choice.NoSpecifiedReason, com.tools20022.repository.choice.PendingStatus32Choice.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatus32Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.PendingStatus32Choice.mmReason);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingStatus32Choice";
 				definition = "Choice between a reason or no reason for the corporate action instruction processing pending status.";
-				previousVersion_lazy = () -> PendingStatus1Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PendingStatus34Choice.mmObject());
+				previousVersion_lazy = () -> PendingStatus1Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public List<PendingStatusReason5> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<PendingStatusReason5> reason) {
+		this.reason = reason;
 	}
 }

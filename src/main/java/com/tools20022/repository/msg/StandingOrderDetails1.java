@@ -36,20 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.StandingOrderDetails1#Amount
- * StandingOrderDetails1.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingOrderDetails1#mmAmount
+ * StandingOrderDetails1.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderDetails1#CreditAccount
- * StandingOrderDetails1.CreditAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderDetails1#mmCreditAccount
+ * StandingOrderDetails1.mmCreditAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderDetails1#DebitAccount
- * StandingOrderDetails1.DebitAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderDetails1#mmDebitAccount
+ * StandingOrderDetails1.mmDebitAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderDetails1#Frequency
- * StandingOrderDetails1.Frequency}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderDetails1#mmFrequency
+ * StandingOrderDetails1.mmFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingOrderDetails1#ValidityPeriod
- * StandingOrderDetails1.ValidityPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrderDetails1#mmValidityPeriod
+ * StandingOrderDetails1.mmValidityPeriod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StandingOrderDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountChoice amount;
 	/**
 	 * Amount of money and currency to be transferred when a payment instruction
 	 * is created as a result of a standing order.
@@ -86,8 +87,8 @@ public class StandingOrderDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder#Amount
-	 * StandingOrder.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder#mmAmount
+	 * StandingOrder.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +109,21 @@ public class StandingOrderDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmAmount;
 			componentContext_lazy = () -> StandingOrderDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money and currency to be transferred when a payment instruction is created as a result of a standing order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AmountChoice.mmObject();
 		}
 	};
+	protected AccountIdentificationDetails creditAccount;
 	/**
 	 * Cash account credited from a standing order mechanism.
 	 * <p>
@@ -134,8 +136,8 @@ public class StandingOrderDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder#CreditAccount
-	 * StandingOrder.CreditAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder#mmCreditAccount
+	 * StandingOrder.mmCreditAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,21 +156,22 @@ public class StandingOrderDetails1 {
 	 * definition} = "Cash account credited from a  standing order mechanism."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CreditAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCreditAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmCreditAccount;
 			componentContext_lazy = () -> StandingOrderDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.CreditAccount;
 			isDerived = false;
 			xmlTag = "CdtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditAccount";
 			definition = "Cash account credited from a  standing order mechanism.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentificationDetails.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountIdentificationDetails.mmObject();
 		}
 	};
+	protected AccountIdentificationDetails debitAccount;
 	/**
 	 * Cash account debited from a standing order mechanism.
 	 * <p>
@@ -181,8 +184,8 @@ public class StandingOrderDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder#DebitAccount
-	 * StandingOrder.DebitAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder#mmDebitAccount
+	 * StandingOrder.mmDebitAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,21 +204,22 @@ public class StandingOrderDetails1 {
 	 * definition} = "Cash account debited from a standing order mechanism."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DebitAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebitAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmDebitAccount;
 			componentContext_lazy = () -> StandingOrderDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.DebitAccount;
 			isDerived = false;
 			xmlTag = "DbtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitAccount";
 			definition = "Cash account debited from a standing order mechanism.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentificationDetails.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountIdentificationDetails.mmObject();
 		}
 	};
+	protected Frequency2Code frequency;
 	/**
 	 * Regularity with which payment instructions are to be created and
 	 * processed as a result of the standing order, eg, daily, weekly, or
@@ -231,8 +235,8 @@ public class StandingOrderDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder#Frequency
-	 * StandingOrder.Frequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder#mmFrequency
+	 * StandingOrder.mmFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,20 +257,21 @@ public class StandingOrderDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmFrequency;
 			componentContext_lazy = () -> StandingOrderDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.Frequency;
 			isDerived = false;
 			xmlTag = "Frqcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Regularity with which payment instructions are to be created and processed as a result of the standing order, eg, daily, weekly, or monthly.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Frequency2Code.mmObject();
 		}
 	};
+	protected DatePeriodDetails2Choice validityPeriod;
 	/**
 	 * Dates during which the standing order is in effect.
 	 * <p>
@@ -279,8 +284,8 @@ public class StandingOrderDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StandingOrder#ValidityPeriod
-	 * StandingOrder.ValidityPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.StandingOrder#mmValidityPeriod
+	 * StandingOrder.mmValidityPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -299,34 +304,74 @@ public class StandingOrderDetails1 {
 	 * definition} = "Dates during which the standing order is in effect."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmValidityPeriod;
 			componentContext_lazy = () -> StandingOrderDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.ValidityPeriod;
 			isDerived = false;
 			xmlTag = "VldtyPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Dates during which the standing order is in effect.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DatePeriodDetails2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DatePeriodDetails2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderDetails1.Amount, com.tools20022.repository.msg.StandingOrderDetails1.CreditAccount,
-						com.tools20022.repository.msg.StandingOrderDetails1.DebitAccount, com.tools20022.repository.msg.StandingOrderDetails1.Frequency, com.tools20022.repository.msg.StandingOrderDetails1.ValidityPeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderDetails1.mmAmount, com.tools20022.repository.msg.StandingOrderDetails1.mmCreditAccount,
+						com.tools20022.repository.msg.StandingOrderDetails1.mmDebitAccount, com.tools20022.repository.msg.StandingOrderDetails1.mmFrequency, com.tools20022.repository.msg.StandingOrderDetails1.mmValidityPeriod);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderDetails1";
 				definition = "New standing order values.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountChoice getAmount() {
+		return amount;
+	}
+
+	public void setAmount(AmountChoice amount) {
+		this.amount = amount;
+	}
+
+	public AccountIdentificationDetails getCreditAccount() {
+		return creditAccount;
+	}
+
+	public void setCreditAccount(com.tools20022.repository.msg.AccountIdentificationDetails creditAccount) {
+		this.creditAccount = creditAccount;
+	}
+
+	public AccountIdentificationDetails getDebitAccount() {
+		return debitAccount;
+	}
+
+	public void setDebitAccount(com.tools20022.repository.msg.AccountIdentificationDetails debitAccount) {
+		this.debitAccount = debitAccount;
+	}
+
+	public Frequency2Code getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(Frequency2Code frequency) {
+		this.frequency = frequency;
+	}
+
+	public DatePeriodDetails2Choice getValidityPeriod() {
+		return validityPeriod;
+	}
+
+	public void setValidityPeriod(DatePeriodDetails2Choice validityPeriod) {
+		this.validityPeriod = validityPeriod;
 	}
 }

@@ -32,18 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Reference11#IOIIdentification
- * Reference11.IOIIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference11#QuoteIdentification
- * Reference11.QuoteIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference11#mmIOIIdentification
+ * Reference11.mmIOIIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Reference11#mmQuoteIdentification
+ * Reference11.mmQuoteIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text iOIIdentification;
 	/**
 	 * Unique identifier of indication of interest message. Required for
 	 * previously indicated orders.
@@ -86,7 +88,7 @@ public class Reference11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IOIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIOIIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference11.mmObject();
 			isDerived = false;
@@ -94,11 +96,12 @@ public class Reference11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IOIIdentification";
 			definition = "Unique identifier of indication of interest message. Required for previously indicated orders.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text quoteIdentification;
 	/**
 	 * Unique identifier for quote. Required for previously quoted orders.
 	 * <p>
@@ -126,7 +129,7 @@ public class Reference11 {
 	 * "Unique identifier for quote. Required for previously quoted orders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuoteIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuoteIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference11.mmObject();
 			isDerived = false;
@@ -134,8 +137,8 @@ public class Reference11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteIdentification";
 			definition = "Unique identifier for quote. Required for previously quoted orders.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -143,13 +146,29 @@ public class Reference11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference11.IOIIdentification, com.tools20022.repository.msg.Reference11.QuoteIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference11.mmIOIIdentification, com.tools20022.repository.msg.Reference11.mmQuoteIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference11";
 				definition = "Additional references linked to the cross order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIOIIdentification() {
+		return iOIIdentification;
+	}
+
+	public void setIOIIdentification(Max35Text iOIIdentification) {
+		this.iOIIdentification = iOIIdentification;
+	}
+
+	public Max35Text getQuoteIdentification() {
+		return quoteIdentification;
+	}
+
+	public void setQuoteIdentification(Max35Text quoteIdentification) {
+		this.quoteIdentification = quoteIdentification;
 	}
 }

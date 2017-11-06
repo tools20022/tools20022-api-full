@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationSource3Choice#Code
- * IdentificationSource3Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationSource3Choice#mmCode
+ * IdentificationSource3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationSource3Choice#Proprietary
- * IdentificationSource3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationSource3Choice#mmProprietary
+ * IdentificationSource3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IdentificationSource3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalFinancialInstrumentIdentificationType1Code code;
 	/**
 	 * Unique and unambiguous identification source, as assigned via a
 	 * pre-determined code list.
@@ -86,7 +87,8 @@ public class IdentificationSource3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Scheme#Code Scheme.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Scheme#mmCode Scheme.mmCode}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,27 +111,28 @@ public class IdentificationSource3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationSource5Choice#DomesticIdentificationSource
-	 * IdentificationSource5Choice.DomesticIdentificationSource}</li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationSource5Choice#mmDomesticIdentificationSource
+	 * IdentificationSource5Choice.mmDomesticIdentificationSource}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmCode;
 			componentContext_lazy = () -> IdentificationSource3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.Code;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Unique and unambiguous identification source, as assigned via a pre-determined code list.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationSource5Choice.DomesticIdentificationSource);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationSource5Choice.mmDomesticIdentificationSource);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalFinancialInstrumentIdentificationType1Code.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Unique and unambiguous identification source using a proprietary
 	 * identification scheme.
@@ -143,8 +146,8 @@ public class IdentificationSource3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -167,24 +170,24 @@ public class IdentificationSource3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationSource5Choice#ProprietaryIdentificationSource
-	 * IdentificationSource5Choice.ProprietaryIdentificationSource}</li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationSource5Choice#mmProprietaryIdentificationSource
+	 * IdentificationSource5Choice.mmProprietaryIdentificationSource}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> IdentificationSource3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Unique and unambiguous identification source using a proprietary identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationSource5Choice.ProprietaryIdentificationSource);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationSource5Choice.mmProprietaryIdentificationSource);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -192,9 +195,9 @@ public class IdentificationSource3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationSource3Choice.Code, com.tools20022.repository.choice.IdentificationSource3Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationSource3Choice.mmCode, com.tools20022.repository.choice.IdentificationSource3Choice.mmProprietary);
 				trace_lazy = () -> IdentificationIssuerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IdentificationSource3Choice";
 				definition = "Choice between source of identification of a financial instrument.";
@@ -202,5 +205,21 @@ public class IdentificationSource3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalFinancialInstrumentIdentificationType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ExternalFinancialInstrumentIdentificationType1Code code) {
+		this.code = code;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

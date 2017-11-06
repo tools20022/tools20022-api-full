@@ -35,23 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Household#Member
- * Household.Member}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Household#mmMember
+ * Household.mmMember}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Person#Household
- * Person.Household}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Person#mmHousehold
+ * Person.mmHousehold}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Household {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Person member;
 	/**
 	 * Identifies the member of a household.
 	 * <p>
@@ -75,8 +76,8 @@ public class Household {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Person#Household
-	 * Person.Household}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmHousehold
+	 * Person.mmHousehold}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -98,32 +99,40 @@ public class Household {
 	 * definition} = "Identifies the member of a household."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Member = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmMember = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Household.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Member";
 			definition = "Identifies the member of a household.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Person.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Person.Household;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Person.mmHousehold;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Household";
 				definition = "Specifies the members of a household in relation with the ownership of an account.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.Household);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Household.Member);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmHousehold);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Household.mmMember);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Person getMember() {
+		return member;
+	}
+
+	public void setMember(com.tools20022.repository.entity.Person member) {
+		this.member = member;
 	}
 }

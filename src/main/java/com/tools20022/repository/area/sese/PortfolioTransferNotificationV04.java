@@ -21,14 +21,12 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
-import com.tools20022.repository.msg.PartyIdentification98;
-import com.tools20022.repository.msg.SecuritiesAccount19;
-import com.tools20022.repository.msg.SecuritiesTradeDetails48;
-import com.tools20022.repository.msg.Statement46;
+import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -83,27 +81,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#Pagination
- * PortfolioTransferNotificationV04.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#mmPagination
+ * PortfolioTransferNotificationV04.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#StatementGeneralDetails
- * PortfolioTransferNotificationV04.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#mmStatementGeneralDetails
+ * PortfolioTransferNotificationV04.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#AccountOwner
- * PortfolioTransferNotificationV04.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#mmAccountOwner
+ * PortfolioTransferNotificationV04.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#SafekeepingAccount
- * PortfolioTransferNotificationV04.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#mmSafekeepingAccount
+ * PortfolioTransferNotificationV04.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#TransferNotificationDetails
- * PortfolioTransferNotificationV04.TransferNotificationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#mmTransferNotificationDetails
+ * PortfolioTransferNotificationV04.mmTransferNotificationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04#identifier
- * PortfolioTransferNotificationV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.037.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,6 +119,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PortfolioTransferNotificationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a statement) and continuation
 	 * indicator to indicate that the statement is to continue or that the
@@ -150,22 +147,23 @@ public class PortfolioTransferNotificationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#Pagination
-	 * PortfolioTransferNotificationV03.Pagination}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#mmPagination
+	 * PortfolioTransferNotificationV03.mmPagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.Pagination;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmPagination;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Statement46 statementGeneralDetails;
 	/**
 	 * Provides general information on the notification
 	 * <p>
@@ -189,22 +187,23 @@ public class PortfolioTransferNotificationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#StatementGeneralDetails
-	 * PortfolioTransferNotificationV03.StatementGeneralDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#mmStatementGeneralDetails
+	 * PortfolioTransferNotificationV03.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "Provides general information on the notification";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.StatementGeneralDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmStatementGeneralDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Statement46.mmObject();
 		}
 	};
+	protected PartyIdentification98 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -229,22 +228,23 @@ public class PortfolioTransferNotificationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#AccountOwner
-	 * PortfolioTransferNotificationV03.AccountOwner}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#mmAccountOwner
+	 * PortfolioTransferNotificationV03.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.AccountOwner;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmAccountOwner;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification98.mmObject();
 		}
 	};
+	protected SecuritiesAccount19 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -269,22 +269,23 @@ public class PortfolioTransferNotificationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#SafekeepingAccount
-	 * PortfolioTransferNotificationV03.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#mmSafekeepingAccount
+	 * PortfolioTransferNotificationV03.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.SafekeepingAccount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmSafekeepingAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
 	};
+	protected List<SecuritiesTradeDetails48> transferNotificationDetails;
 	/**
 	 * Details of transfer.
 	 * <p>
@@ -309,46 +310,19 @@ public class PortfolioTransferNotificationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#TransferNotificationDetails
-	 * PortfolioTransferNotificationV03.TransferNotificationDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03#mmTransferNotificationDetails
+	 * PortfolioTransferNotificationV03.mmTransferNotificationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransferNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferNotificationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfNtfctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferNotificationDetails";
 			definition = "Details of transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.TransferNotificationDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmTransferNotificationDetails;
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesTradeDetails48.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "037"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "037";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -363,12 +337,59 @@ public class PortfolioTransferNotificationV04 {
 				rootElement = "Document";
 				xmlTag = "PrtflTrfNtfctn";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.Pagination, com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.StatementGeneralDetails,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.AccountOwner, com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.SafekeepingAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.TransferNotificationDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.mmPagination,
+						com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.mmStatementGeneralDetails, com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.mmAccountOwner,
+						com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.mmSafekeepingAccount, com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.mmTransferNotificationDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "037";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public Statement46 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(Statement46 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public PartyIdentification98 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification98 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public SecuritiesAccount19 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount19 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public List<SecuritiesTradeDetails48> getTransferNotificationDetails() {
+		return transferNotificationDetails;
+	}
+
+	public void setTransferNotificationDetails(List<SecuritiesTradeDetails48> transferNotificationDetails) {
+		this.transferNotificationDetails = transferNotificationDetails;
 	}
 }

@@ -31,17 +31,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthorisationCode#PreAuthorisedFile
- * AuthorisationCode.PreAuthorisedFile}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthorisationCode#mmPreAuthorisedFile
+ * AuthorisationCode.mmPreAuthorisedFile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthorisationCode#FileLevelAuthorisationDetails
- * AuthorisationCode.FileLevelAuthorisationDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthorisationCode#mmFileLevelAuthorisationDetails
+ * AuthorisationCode.mmFileLevelAuthorisationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthorisationCode#FileLevelAuthorisationSummary
- * AuthorisationCode.FileLevelAuthorisationSummary}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthorisationCode#mmFileLevelAuthorisationSummary
+ * AuthorisationCode.mmFileLevelAuthorisationSummary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthorisationCode#InstructionLevelAuthorisation
- * AuthorisationCode.InstructionLevelAuthorisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthorisationCode#mmInstructionLevelAuthorisation
+ * AuthorisationCode.mmInstructionLevelAuthorisation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -101,7 +101,7 @@ public class AuthorisationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PreAuthorisedFile = new MMCode() {
+	public static final MMCode mmPreAuthorisedFile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAuthorisedFile";
@@ -135,7 +135,7 @@ public class AuthorisationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FileLevelAuthorisationDetails = new MMCode() {
+	public static final MMCode mmFileLevelAuthorisationDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileLevelAuthorisationDetails";
@@ -168,7 +168,7 @@ public class AuthorisationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FileLevelAuthorisationSummary = new MMCode() {
+	public static final MMCode mmFileLevelAuthorisationSummary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileLevelAuthorisationSummary";
@@ -201,7 +201,7 @@ public class AuthorisationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InstructionLevelAuthorisation = new MMCode() {
+	public static final MMCode mmInstructionLevelAuthorisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionLevelAuthorisation";
@@ -214,13 +214,13 @@ public class AuthorisationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUTH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AuthorisationCode";
 				definition = "Specifies the level of approval depending on a number of factors, including payment type, threshold amount or local country or operations practice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthorisationCode.PreAuthorisedFile, com.tools20022.repository.codeset.AuthorisationCode.FileLevelAuthorisationDetails,
-						com.tools20022.repository.codeset.AuthorisationCode.FileLevelAuthorisationSummary, com.tools20022.repository.codeset.AuthorisationCode.InstructionLevelAuthorisation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthorisationCode.mmPreAuthorisedFile, com.tools20022.repository.codeset.AuthorisationCode.mmFileLevelAuthorisationDetails,
+						com.tools20022.repository.codeset.AuthorisationCode.mmFileLevelAuthorisationSummary, com.tools20022.repository.codeset.AuthorisationCode.mmInstructionLevelAuthorisation);
 				derivation_lazy = () -> Arrays.asList(Authorisation1Code.mmObject());
 			}
 		});

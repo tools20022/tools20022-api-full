@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTokenIdentifiers1#ProviderIdentification
- * PaymentTokenIdentifiers1.ProviderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTokenIdentifiers1#mmProviderIdentification
+ * PaymentTokenIdentifiers1.mmProviderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTokenIdentifiers1#RequestorIdentification
- * PaymentTokenIdentifiers1.RequestorIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTokenIdentifiers1#mmRequestorIdentification
+ * PaymentTokenIdentifiers1.mmRequestorIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTokenIdentifiers1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text providerIdentification;
 	/**
 	 * Identifier of the token provider.
 	 * <p>
@@ -85,7 +86,7 @@ public class PaymentTokenIdentifiers1 {
 	 * definition} = "Identifier of the token provider."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProviderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProviderIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentTokenIdentifiers1.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class PaymentTokenIdentifiers1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProviderIdentification";
 			definition = "Identifier of the token provider.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text requestorIdentification;
 	/**
 	 * Identifier of the token requestor.
 	 * <p>
@@ -125,7 +127,7 @@ public class PaymentTokenIdentifiers1 {
 	 * definition} = "Identifier of the token requestor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestorIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestorIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentTokenIdentifiers1.mmObject();
 			isDerived = false;
@@ -133,8 +135,8 @@ public class PaymentTokenIdentifiers1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestorIdentification";
 			definition = "Identifier of the token requestor.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -142,13 +144,29 @@ public class PaymentTokenIdentifiers1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTokenIdentifiers1.ProviderIdentification, com.tools20022.repository.msg.PaymentTokenIdentifiers1.RequestorIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTokenIdentifiers1.mmProviderIdentification, com.tools20022.repository.msg.PaymentTokenIdentifiers1.mmRequestorIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTokenIdentifiers1";
 				definition = "Identifier of a token provider requestor.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getProviderIdentification() {
+		return providerIdentification;
+	}
+
+	public void setProviderIdentification(Max35Text providerIdentification) {
+		this.providerIdentification = providerIdentification;
+	}
+
+	public Max35Text getRequestorIdentification() {
+		return requestorIdentification;
+	}
+
+	public void setRequestorIdentification(Max35Text requestorIdentification) {
+		this.requestorIdentification = requestorIdentification;
 	}
 }

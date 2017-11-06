@@ -35,12 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters2#Address
- * NetworkParameters2.Address}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters2#PortNumber
- * NetworkParameters2.PortNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters2#Delay
- * NetworkParameters2.Delay}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters2#mmAddress
+ * NetworkParameters2.mmAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NetworkParameters2#mmPortNumber
+ * NetworkParameters2.mmPortNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetworkParameters2#mmDelay
+ * NetworkParameters2.mmDelay}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NetworkParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text address;
 	/**
 	 * IP address or hostname.
 	 * <p>
@@ -80,8 +82,8 @@ public class NetworkParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#NetworkAddress
-	 * NetworkAccess.NetworkAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetworkAccess#mmNetworkAddress
+	 * NetworkAccess.mmNetworkAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +102,21 @@ public class NetworkParameters2 {
 	 * definition} = "IP address or hostname."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Address = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmNetworkAddress;
 			componentContext_lazy = () -> NetworkParameters2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.NetworkAddress;
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "IP address or hostname.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number portNumber;
 	/**
 	 * Port number of the server, if the default port number is not used.
 	 * <p>
@@ -142,7 +145,7 @@ public class NetworkParameters2 {
 	 * "Port number of the server, if the default port number is not used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PortNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPortNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetworkParameters2.mmObject();
 			isDerived = false;
@@ -150,11 +153,12 @@ public class NetworkParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortNumber";
 			definition = "Port number of the server, if the default port number is not used.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected ISOTime delay;
 	/**
 	 * Delay between two contacts of the server..
 	 * <p>
@@ -182,7 +186,7 @@ public class NetworkParameters2 {
 	 * definition} = "Delay between two contacts of the server.."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Delay = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelay = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NetworkParameters2.mmObject();
 			isDerived = false;
@@ -190,8 +194,8 @@ public class NetworkParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delay";
 			definition = "Delay between two contacts of the server..";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
@@ -199,9 +203,9 @@ public class NetworkParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters2.Address, com.tools20022.repository.msg.NetworkParameters2.PortNumber, com.tools20022.repository.msg.NetworkParameters2.Delay);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters2.mmAddress, com.tools20022.repository.msg.NetworkParameters2.mmPortNumber, com.tools20022.repository.msg.NetworkParameters2.mmDelay);
 				trace_lazy = () -> NetworkAccess.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters2";
 				definition = "Configuration parameters to communicate with a host.";
@@ -209,5 +213,29 @@ public class NetworkParameters2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getAddress() {
+		return address;
+	}
+
+	public void setAddress(Max35Text address) {
+		this.address = address;
+	}
+
+	public Number getPortNumber() {
+		return portNumber;
+	}
+
+	public void setPortNumber(Number portNumber) {
+		this.portNumber = portNumber;
+	}
+
+	public ISOTime getDelay() {
+		return delay;
+	}
+
+	public void setDelay(ISOTime delay) {
+		this.delay = delay;
 	}
 }

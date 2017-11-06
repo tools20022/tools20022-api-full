@@ -40,23 +40,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#ResponseType
- * CashCollateralResponse2.ResponseType}</li>
+ * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#mmResponseType
+ * CashCollateralResponse2.mmResponseType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#CollateralIdentification
- * CashCollateralResponse2.CollateralIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#mmCollateralIdentification
+ * CashCollateralResponse2.mmCollateralIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#AssetNumber
- * CashCollateralResponse2.AssetNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#mmAssetNumber
+ * CashCollateralResponse2.mmAssetNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#CashAccountIdentification
- * CashCollateralResponse2.CashAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#mmCashAccountIdentification
+ * CashCollateralResponse2.mmCashAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#RejectionReason
- * CashCollateralResponse2.RejectionReason}</li>
+ * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#mmRejectionReason
+ * CashCollateralResponse2.mmRejectionReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#RejectionInformation
- * CashCollateralResponse2.RejectionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CashCollateralResponse2#mmRejectionInformation
+ * CashCollateralResponse2.mmRejectionInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashCollateralResponse2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status4Code responseType;
 	/**
 	 * Specifies the status of the collateral proposal.
 	 * <p>
@@ -98,8 +99,8 @@ public class CashCollateralResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#ResponseStatus
-	 * CollateralStatus.ResponseStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmResponseStatus
+	 * CollateralStatus.mmResponseStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,25 +120,26 @@ public class CashCollateralResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#ResponseType
-	 * CashCollateralResponse1.ResponseType}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#mmResponseType
+	 * CashCollateralResponse1.mmResponseType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmResponseStatus;
 			componentContext_lazy = () -> CashCollateralResponse2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.ResponseStatus;
 			isDerived = false;
 			xmlTag = "RspnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseType";
 			definition = "Specifies the status of the collateral proposal.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.ResponseType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmResponseType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
 		}
 	};
+	protected Max35Text collateralIdentification;
 	/**
 	 * Provides the identification of the proposed collateral.
 	 * <p>
@@ -166,11 +168,11 @@ public class CashCollateralResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#CollateralIdentification
-	 * CashCollateralResponse1.CollateralIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#mmCollateralIdentification
+	 * CashCollateralResponse1.mmCollateralIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashCollateralResponse2.mmObject();
 			isDerived = false;
@@ -178,12 +180,13 @@ public class CashCollateralResponse2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIdentification";
 			definition = "Provides the identification of the proposed collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.CollateralIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmCollateralIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text assetNumber;
 	/**
 	 * Identifies the register number of the collateral deposit assigned by the
 	 * central counterparty.
@@ -215,11 +218,11 @@ public class CashCollateralResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#AssetNumber
-	 * CashCollateralResponse1.AssetNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#mmAssetNumber
+	 * CashCollateralResponse1.mmAssetNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AssetNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAssetNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashCollateralResponse2.mmObject();
 			isDerived = false;
@@ -227,12 +230,13 @@ public class CashCollateralResponse2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetNumber";
 			definition = "Identifies the register number of the collateral deposit assigned by the central counterparty.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.AssetNumber;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmAssetNumber;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AccountIdentification4Choice cashAccountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -246,8 +250,8 @@ public class CashCollateralResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -269,26 +273,27 @@ public class CashCollateralResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#CashAccountIdentification
-	 * CashCollateralResponse1.CashAccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#mmCashAccountIdentification
+	 * CashCollateralResponse1.mmCashAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> CashCollateralResponse2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "CshAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.CashAccountIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmCashAccountIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	protected RejectionReasonV021Code rejectionReason;
 	/**
 	 * Specifies the reason why the instruction/cancellation request has a
 	 * rejected status.
@@ -303,8 +308,8 @@ public class CashCollateralResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectionReason
-	 * StatusReason.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectionReason
+	 * StatusReason.mmRejectionReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -326,25 +331,26 @@ public class CashCollateralResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#RejectionReason
-	 * CashCollateralResponse1.RejectionReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#mmRejectionReason
+	 * CashCollateralResponse1.mmRejectionReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> CashCollateralResponse2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectionReason;
 			isDerived = false;
 			xmlTag = "RjctnRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.RejectionReason;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmRejectionReason;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
 	};
+	protected Max35Text rejectionInformation;
 	/**
 	 * Additional information regarding why the collateral proposal has a
 	 * rejected status.
@@ -376,11 +382,11 @@ public class CashCollateralResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#RejectionInformation
-	 * CashCollateralResponse1.RejectionInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateralResponse1#mmRejectionInformation
+	 * CashCollateralResponse1.mmRejectionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectionInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CashCollateralResponse2.mmObject();
 			isDerived = false;
@@ -388,9 +394,9 @@ public class CashCollateralResponse2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionInformation";
 			definition = "Additional information regarding why the collateral proposal has a rejected status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.RejectionInformation;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmRejectionInformation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -398,11 +404,11 @@ public class CashCollateralResponse2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashCollateralResponse2.ResponseType, com.tools20022.repository.msg.CashCollateralResponse2.CollateralIdentification,
-						com.tools20022.repository.msg.CashCollateralResponse2.AssetNumber, com.tools20022.repository.msg.CashCollateralResponse2.CashAccountIdentification,
-						com.tools20022.repository.msg.CashCollateralResponse2.RejectionReason, com.tools20022.repository.msg.CashCollateralResponse2.RejectionInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashCollateralResponse2.mmResponseType, com.tools20022.repository.msg.CashCollateralResponse2.mmCollateralIdentification,
+						com.tools20022.repository.msg.CashCollateralResponse2.mmAssetNumber, com.tools20022.repository.msg.CashCollateralResponse2.mmCashAccountIdentification,
+						com.tools20022.repository.msg.CashCollateralResponse2.mmRejectionReason, com.tools20022.repository.msg.CashCollateralResponse2.mmRejectionInformation);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashCollateralResponse2";
 				definition = "Provides more details on the response such as the response type, the collateral identification, and optionally further details in case of rejection.";
@@ -410,5 +416,53 @@ public class CashCollateralResponse2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status4Code getResponseType() {
+		return responseType;
+	}
+
+	public void setResponseType(Status4Code responseType) {
+		this.responseType = responseType;
+	}
+
+	public Max35Text getCollateralIdentification() {
+		return collateralIdentification;
+	}
+
+	public void setCollateralIdentification(Max35Text collateralIdentification) {
+		this.collateralIdentification = collateralIdentification;
+	}
+
+	public Max35Text getAssetNumber() {
+		return assetNumber;
+	}
+
+	public void setAssetNumber(Max35Text assetNumber) {
+		this.assetNumber = assetNumber;
+	}
+
+	public AccountIdentification4Choice getCashAccountIdentification() {
+		return cashAccountIdentification;
+	}
+
+	public void setCashAccountIdentification(AccountIdentification4Choice cashAccountIdentification) {
+		this.cashAccountIdentification = cashAccountIdentification;
+	}
+
+	public RejectionReasonV021Code getRejectionReason() {
+		return rejectionReason;
+	}
+
+	public void setRejectionReason(RejectionReasonV021Code rejectionReason) {
+		this.rejectionReason = rejectionReason;
+	}
+
+	public Max35Text getRejectionInformation() {
+		return rejectionInformation;
+	}
+
+	public void setRejectionInformation(Max35Text rejectionInformation) {
+		this.rejectionInformation = rejectionInformation;
 	}
 }

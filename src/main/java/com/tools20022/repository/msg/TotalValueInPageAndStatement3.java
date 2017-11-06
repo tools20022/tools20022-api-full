@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3#TotalHoldingsValueOfPage
- * TotalValueInPageAndStatement3.TotalHoldingsValueOfPage}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3#mmTotalHoldingsValueOfPage
+ * TotalValueInPageAndStatement3.mmTotalHoldingsValueOfPage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3#TotalHoldingsValueOfStatement
- * TotalValueInPageAndStatement3.TotalHoldingsValueOfStatement}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3#mmTotalHoldingsValueOfStatement
+ * TotalValueInPageAndStatement3.mmTotalHoldingsValueOfStatement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3#TotalBookValueOfStatement
- * TotalValueInPageAndStatement3.TotalBookValueOfStatement}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3#mmTotalBookValueOfStatement
+ * TotalValueInPageAndStatement3.mmTotalBookValueOfStatement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3#TotalEligibleCollateralValue
- * TotalValueInPageAndStatement3.TotalEligibleCollateralValue}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement3#mmTotalEligibleCollateralValue
+ * TotalValueInPageAndStatement3.mmTotalEligibleCollateralValue}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,15 +50,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09#AccountBaseCurrencyTotalAmounts
- * SecuritiesBalanceCustodyReport002V09.AccountBaseCurrencyTotalAmounts}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09#mmAccountBaseCurrencyTotalAmounts
+ * SecuritiesBalanceCustodyReport002V09.mmAccountBaseCurrencyTotalAmounts}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalValueInPageAndStatement3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountAndDirection14 totalHoldingsValueOfPage;
 	/**
 	 * Total value of positions reported in this message.
 	 * <p>
@@ -99,7 +100,7 @@ public class TotalValueInPageAndStatement3 {
 	 * definition} = "Total value of positions reported in this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalHoldingsValueOfPage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalHoldingsValueOfPage = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TotalValueInPageAndStatement3.mmObject();
 			isDerived = false;
@@ -107,12 +108,13 @@ public class TotalValueInPageAndStatement3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalHoldingsValueOfPage";
 			definition = "Total value of positions reported in this message.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
 		}
 	};
+	protected AmountAndDirection14 totalHoldingsValueOfStatement;
 	/**
 	 * Total value of positions reported in this statement (a statement may
 	 * comprise one or more messages).
@@ -142,7 +144,7 @@ public class TotalValueInPageAndStatement3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalHoldingsValueOfStatement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalHoldingsValueOfStatement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TotalValueInPageAndStatement3.mmObject();
 			isDerived = false;
@@ -150,12 +152,13 @@ public class TotalValueInPageAndStatement3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalHoldingsValueOfStatement";
 			definition = "Total value of positions reported in this statement (a statement may comprise one or more messages).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
 		}
 	};
+	protected AmountAndDirection14 totalBookValueOfStatement;
 	/**
 	 * Total book value of positions reported in this statement (a statement may
 	 * comprise one or more messages).
@@ -185,7 +188,7 @@ public class TotalValueInPageAndStatement3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalBookValueOfStatement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalBookValueOfStatement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TotalValueInPageAndStatement3.mmObject();
 			isDerived = false;
@@ -193,12 +196,13 @@ public class TotalValueInPageAndStatement3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalBookValueOfStatement";
 			definition = "Total book value of positions reported in this statement (a statement may comprise one or more messages).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
 		}
 	};
+	protected AmountAndDirection14 totalEligibleCollateralValue;
 	/**
 	 * Total value of the holdings eligible for collateral purposes reported in
 	 * this statement (a statement may comprise one or more messages).
@@ -211,8 +215,8 @@ public class TotalValueInPageAndStatement3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#EligibleCollateralValue
-	 * AssetHolding.EligibleCollateralValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmEligibleCollateralValue
+	 * AssetHolding.mmEligibleCollateralValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -233,34 +237,66 @@ public class TotalValueInPageAndStatement3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TotalEligibleCollateralValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTotalEligibleCollateralValue = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmEligibleCollateralValue;
 			componentContext_lazy = () -> TotalValueInPageAndStatement3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.EligibleCollateralValue;
 			isDerived = false;
 			xmlTag = "TtlElgblCollVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleCollateralValue";
 			definition = "Total value of the holdings eligible for collateral purposes reported in this statement (a statement may comprise one or more messages).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndDirection14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalValueInPageAndStatement3.TotalHoldingsValueOfPage, com.tools20022.repository.msg.TotalValueInPageAndStatement3.TotalHoldingsValueOfStatement,
-						com.tools20022.repository.msg.TotalValueInPageAndStatement3.TotalBookValueOfStatement, com.tools20022.repository.msg.TotalValueInPageAndStatement3.TotalEligibleCollateralValue);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09.AccountBaseCurrencyTotalAmounts);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalValueInPageAndStatement3.mmTotalHoldingsValueOfPage, com.tools20022.repository.msg.TotalValueInPageAndStatement3.mmTotalHoldingsValueOfStatement,
+						com.tools20022.repository.msg.TotalValueInPageAndStatement3.mmTotalBookValueOfStatement, com.tools20022.repository.msg.TotalValueInPageAndStatement3.mmTotalEligibleCollateralValue);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09.mmAccountBaseCurrencyTotalAmounts);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalValueInPageAndStatement3";
 				definition = "Totals for the value of the holdings reported in the statement or page.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountAndDirection14 getTotalHoldingsValueOfPage() {
+		return totalHoldingsValueOfPage;
+	}
+
+	public void setTotalHoldingsValueOfPage(com.tools20022.repository.msg.AmountAndDirection14 totalHoldingsValueOfPage) {
+		this.totalHoldingsValueOfPage = totalHoldingsValueOfPage;
+	}
+
+	public AmountAndDirection14 getTotalHoldingsValueOfStatement() {
+		return totalHoldingsValueOfStatement;
+	}
+
+	public void setTotalHoldingsValueOfStatement(com.tools20022.repository.msg.AmountAndDirection14 totalHoldingsValueOfStatement) {
+		this.totalHoldingsValueOfStatement = totalHoldingsValueOfStatement;
+	}
+
+	public AmountAndDirection14 getTotalBookValueOfStatement() {
+		return totalBookValueOfStatement;
+	}
+
+	public void setTotalBookValueOfStatement(com.tools20022.repository.msg.AmountAndDirection14 totalBookValueOfStatement) {
+		this.totalBookValueOfStatement = totalBookValueOfStatement;
+	}
+
+	public AmountAndDirection14 getTotalEligibleCollateralValue() {
+		return totalEligibleCollateralValue;
+	}
+
+	public void setTotalEligibleCollateralValue(com.tools20022.repository.msg.AmountAndDirection14 totalEligibleCollateralValue) {
+		this.totalEligibleCollateralValue = totalEligibleCollateralValue;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -67,60 +68,58 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#MessageIdentification
- * AccountOpeningInstructionV06.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmMessageIdentification
+ * AccountOpeningInstructionV06.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#OrderReference
- * AccountOpeningInstructionV06.OrderReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmOrderReference
+ * AccountOpeningInstructionV06.mmOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#PreviousReference
- * AccountOpeningInstructionV06.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmPreviousReference
+ * AccountOpeningInstructionV06.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#InstructionDetails
- * AccountOpeningInstructionV06.InstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmInstructionDetails
+ * AccountOpeningInstructionV06.mmInstructionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#InvestmentAccount
- * AccountOpeningInstructionV06.InvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmInvestmentAccount
+ * AccountOpeningInstructionV06.mmInvestmentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#AccountParties
- * AccountOpeningInstructionV06.AccountParties}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmAccountParties
+ * AccountOpeningInstructionV06.mmAccountParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#Intermediaries
- * AccountOpeningInstructionV06.Intermediaries}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmIntermediaries
+ * AccountOpeningInstructionV06.mmIntermediaries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#Placement
- * AccountOpeningInstructionV06.Placement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmPlacement
+ * AccountOpeningInstructionV06.mmPlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#NewIssueAllocation
- * AccountOpeningInstructionV06.NewIssueAllocation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmNewIssueAllocation
+ * AccountOpeningInstructionV06.mmNewIssueAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#SavingsInvestmentPlan
- * AccountOpeningInstructionV06.SavingsInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmSavingsInvestmentPlan
+ * AccountOpeningInstructionV06.mmSavingsInvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#WithdrawalInvestmentPlan
- * AccountOpeningInstructionV06.WithdrawalInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmWithdrawalInvestmentPlan
+ * AccountOpeningInstructionV06.mmWithdrawalInvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#CashSettlement
- * AccountOpeningInstructionV06.CashSettlement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmCashSettlement
+ * AccountOpeningInstructionV06.mmCashSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#ServiceLevelAgreement
- * AccountOpeningInstructionV06.ServiceLevelAgreement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmServiceLevelAgreement
+ * AccountOpeningInstructionV06.mmServiceLevelAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#AdditionalInformation
- * AccountOpeningInstructionV06.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmAdditionalInformation
+ * AccountOpeningInstructionV06.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#MarketPracticeVersion
- * AccountOpeningInstructionV06.MarketPracticeVersion}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmMarketPracticeVersion
+ * AccountOpeningInstructionV06.mmMarketPracticeVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#Extension
- * AccountOpeningInstructionV06.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#mmExtension
+ * AccountOpeningInstructionV06.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV06#identifier
- * AccountOpeningInstructionV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code acmt.001.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -148,6 +147,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountOpeningInstructionV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Reference that uniquely identifies the message from a business
 	 * application standpoint.
@@ -176,30 +176,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#MessageIdentification
-	 * AccountOpeningInstructionV07.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmMessageIdentification
+	 * AccountOpeningInstructionV07.mmMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#MessageIdentification
-	 * AccountOpeningInstructionV05.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmMessageIdentification
+	 * AccountOpeningInstructionV05.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies the message from a business application standpoint.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.MessageIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.MessageIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmMessageIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected InvestmentFundOrder4 orderReference;
 	/**
 	 * Identifies a related order or settlement transaction.
 	 * <p>
@@ -225,30 +226,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#OrderReference
-	 * AccountOpeningInstructionV07.OrderReference}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmOrderReference
+	 * AccountOpeningInstructionV07.mmOrderReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#OrderReference
-	 * AccountOpeningInstructionV05.OrderReference}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmOrderReference
+	 * AccountOpeningInstructionV05.mmOrderReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OrderReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOrderReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Identifies a related order or settlement transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.OrderReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.OrderReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmOrderReference);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmOrderReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundOrder4.mmObject();
 		}
 	};
+	protected AdditionalReference6 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -274,30 +276,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#PreviousReference
-	 * AccountOpeningInstructionV07.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmPreviousReference
+	 * AccountOpeningInstructionV07.mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#PreviousReference
-	 * AccountOpeningInstructionV05.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmPreviousReference
+	 * AccountOpeningInstructionV05.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.PreviousReference;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.PreviousReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmPreviousReference);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmPreviousReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected InvestmentAccountOpening2 instructionDetails;
 	/**
 	 * Information about the opening instruction.
 	 * <p>
@@ -323,30 +326,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#InstructionDetails
-	 * AccountOpeningInstructionV07.InstructionDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmInstructionDetails
+	 * AccountOpeningInstructionV07.mmInstructionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#InstructionDetails
-	 * AccountOpeningInstructionV05.InstructionDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmInstructionDetails
+	 * AccountOpeningInstructionV05.mmInstructionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InstructionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInstructionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionDetails";
 			definition = "Information about the opening instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.InstructionDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.InstructionDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmInstructionDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmInstructionDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccountOpening2.mmObject();
 		}
 	};
+	protected InvestmentAccount49 investmentAccount;
 	/**
 	 * Detailed information about the account to be opened.
 	 * <p>
@@ -372,30 +376,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#InvestmentAccount
-	 * AccountOpeningInstructionV07.InvestmentAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmInvestmentAccount
+	 * AccountOpeningInstructionV07.mmInvestmentAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#InvestmentAccount
-	 * AccountOpeningInstructionV05.InvestmentAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmInvestmentAccount
+	 * AccountOpeningInstructionV05.mmInvestmentAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock InvestmentAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInvestmentAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstmtAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Detailed information about the account to be opened.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.InvestmentAccount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.InvestmentAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmInvestmentAccount);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmInvestmentAccount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount49.mmObject();
 		}
 	};
+	protected AccountParties13 accountParties;
 	/**
 	 * Information related to parties that are related to the account, for
 	 * example, primary account owner.
@@ -424,30 +429,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#AccountParties
-	 * AccountOpeningInstructionV07.AccountParties}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmAccountParties
+	 * AccountOpeningInstructionV07.mmAccountParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#AccountParties
-	 * AccountOpeningInstructionV05.AccountParties}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmAccountParties
+	 * AccountOpeningInstructionV05.mmAccountParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountParties";
 			definition = "Information related to parties that are related to the account, for example, primary account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.AccountParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.AccountParties);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmAccountParties);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmAccountParties;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountParties13.mmObject();
 		}
 	};
+	protected List<Intermediary36> intermediaries;
 	/**
 	 * Intermediary or other party related to the management of the account. In
 	 * some markets, when this intermediary is a party acting on behalf of the
@@ -478,30 +484,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#Intermediaries
-	 * AccountOpeningInstructionV07.Intermediaries}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmIntermediaries
+	 * AccountOpeningInstructionV07.mmIntermediaries}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#Intermediaries
-	 * AccountOpeningInstructionV05.Intermediaries}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmIntermediaries
+	 * AccountOpeningInstructionV05.mmIntermediaries}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Intermediaries = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIntermediaries = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Intrmies";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediaries";
 			definition = "Intermediary or other party related to the management of the account. In some markets, when this intermediary is a party acting on behalf of the investor for which it has opened an account at, for example, a central securities depository or international central securities depository, this party is known by the investor as the 'account controller'.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.Intermediaries;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.Intermediaries);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmIntermediaries);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmIntermediaries;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> Intermediary36.mmObject();
 		}
 	};
+	protected ReferredAgent2 placement;
 	/**
 	 * Referral information.
 	 * <p>
@@ -526,30 +533,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#Placement
-	 * AccountOpeningInstructionV07.Placement}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmPlacement
+	 * AccountOpeningInstructionV07.mmPlacement}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#Placement
-	 * AccountOpeningInstructionV05.Placement}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmPlacement
+	 * AccountOpeningInstructionV05.mmPlacement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Placement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPlacement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Plcmnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Placement";
 			definition = "Referral information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.Placement;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.Placement);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmPlacement);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmPlacement;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ReferredAgent2.mmObject();
 		}
 	};
+	protected NewIssueAllocation2 newIssueAllocation;
 	/**
 	 * Eligibility conditions applicable when there is an allocation of new
 	 * issues for hedge fund account opening.
@@ -578,30 +586,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#NewIssueAllocation
-	 * AccountOpeningInstructionV07.NewIssueAllocation}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmNewIssueAllocation
+	 * AccountOpeningInstructionV07.mmNewIssueAllocation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#NewIssueAllocation
-	 * AccountOpeningInstructionV05.NewIssueAllocation}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmNewIssueAllocation
+	 * AccountOpeningInstructionV05.mmNewIssueAllocation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NewIssueAllocation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNewIssueAllocation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NewIsseAllcn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssueAllocation";
 			definition = "Eligibility conditions applicable when there is an allocation of new issues for hedge fund account opening.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.NewIssueAllocation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.NewIssueAllocation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmNewIssueAllocation);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmNewIssueAllocation;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> NewIssueAllocation2.mmObject();
 		}
 	};
+	protected List<InvestmentPlan12> savingsInvestmentPlan;
 	/**
 	 * Plan that allows individuals to set aside a fixed amount of money at
 	 * specified intervals, usually for a special purpose, for example,
@@ -631,30 +640,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#SavingsInvestmentPlan
-	 * AccountOpeningInstructionV07.SavingsInvestmentPlan}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmSavingsInvestmentPlan
+	 * AccountOpeningInstructionV07.mmSavingsInvestmentPlan}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#SavingsInvestmentPlan
-	 * AccountOpeningInstructionV05.SavingsInvestmentPlan}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmSavingsInvestmentPlan
+	 * AccountOpeningInstructionV05.mmSavingsInvestmentPlan}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SavingsInvestmentPlan = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSavingsInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SvgsInvstmtPlan";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SavingsInvestmentPlan";
 			definition = "Plan that allows individuals to set aside a fixed amount of money at specified intervals, usually for a special purpose, for example, retirement.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.SavingsInvestmentPlan;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.SavingsInvestmentPlan);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmSavingsInvestmentPlan);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmSavingsInvestmentPlan;
 			maxOccurs = 50;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentPlan12.mmObject();
 		}
 	};
+	protected List<InvestmentPlan12> withdrawalInvestmentPlan;
 	/**
 	 * Plan through which holdings are depleted through regular withdrawals at
 	 * specified intervals.
@@ -683,30 +693,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#WithdrawalInvestmentPlan
-	 * AccountOpeningInstructionV07.WithdrawalInvestmentPlan}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmWithdrawalInvestmentPlan
+	 * AccountOpeningInstructionV07.mmWithdrawalInvestmentPlan}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#WithdrawalInvestmentPlan
-	 * AccountOpeningInstructionV05.WithdrawalInvestmentPlan}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmWithdrawalInvestmentPlan
+	 * AccountOpeningInstructionV05.mmWithdrawalInvestmentPlan}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock WithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmWithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "WdrwlInvstmtPlan";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalInvestmentPlan";
 			definition = "Plan through which holdings are depleted through regular withdrawals at specified intervals.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.WithdrawalInvestmentPlan;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.WithdrawalInvestmentPlan);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmWithdrawalInvestmentPlan);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmWithdrawalInvestmentPlan;
 			maxOccurs = 10;
+			minOccurs = 0;
 			complexType_lazy = () -> InvestmentPlan12.mmObject();
 		}
 	};
+	protected List<CashSettlement1> cashSettlement;
 	/**
 	 * Cash settlement standing instruction associated to transactions on the
 	 * account.
@@ -734,30 +745,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#CashSettlement
-	 * AccountOpeningInstructionV07.CashSettlement}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmCashSettlement
+	 * AccountOpeningInstructionV07.mmCashSettlement}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#CashSettlement
-	 * AccountOpeningInstructionV05.CashSettlement}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmCashSettlement
+	 * AccountOpeningInstructionV05.mmCashSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CashSettlement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCashSettlement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshSttlm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
 			definition = "Cash settlement standing instruction associated to  transactions on the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.CashSettlement;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.CashSettlement);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmCashSettlement);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmCashSettlement;
 			maxOccurs = 8;
+			minOccurs = 0;
 			complexType_lazy = () -> CashSettlement1.mmObject();
 		}
 	};
+	protected List<DocumentToSend3> serviceLevelAgreement;
 	/**
 	 * Identifies documents to be provided for the account opening.
 	 * <p>
@@ -783,30 +795,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#ServiceLevelAgreement
-	 * AccountOpeningInstructionV07.ServiceLevelAgreement}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmServiceLevelAgreement
+	 * AccountOpeningInstructionV07.mmServiceLevelAgreement}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#ServiceLevelAgreement
-	 * AccountOpeningInstructionV05.ServiceLevelAgreement}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmServiceLevelAgreement
+	 * AccountOpeningInstructionV05.mmServiceLevelAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ServiceLevelAgreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmServiceLevelAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SvcLvlAgrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevelAgreement";
 			definition = "Identifies documents to be provided for the account opening.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.ServiceLevelAgreement;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.ServiceLevelAgreement);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmServiceLevelAgreement);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmServiceLevelAgreement;
 			maxOccurs = 30;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentToSend3.mmObject();
 		}
 	};
+	protected List<AccountRestrictions1> additionalInformation;
 	/**
 	 * Additional information concerning limitations and restrictions on the
 	 * account.
@@ -835,23 +848,24 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#AdditionalInformation
-	 * AccountOpeningInstructionV07.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmAdditionalInformation
+	 * AccountOpeningInstructionV07.mmAdditionalInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information concerning limitations and restrictions on the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.AdditionalInformation);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmAdditionalInformation);
 			minOccurs = 0;
 			complexType_lazy = () -> AccountRestrictions1.mmObject();
 		}
 	};
+	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
 	 * Identifies the market practice to which the message conforms.
 	 * <p>
@@ -878,30 +892,31 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#MarketPracticeVersion
-	 * AccountOpeningInstructionV07.MarketPracticeVersion}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmMarketPracticeVersion
+	 * AccountOpeningInstructionV07.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#MarketPracticeVersion
-	 * AccountOpeningInstructionV05.MarketPracticeVersion}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmMarketPracticeVersion
+	 * AccountOpeningInstructionV05.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.MarketPracticeVersion;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.MarketPracticeVersion);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmMarketPracticeVersion);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmMarketPracticeVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -929,54 +944,27 @@ public class AccountOpeningInstructionV06 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#Extension
-	 * AccountOpeningInstructionV07.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV07#mmExtension
+	 * AccountOpeningInstructionV07.mmExtension}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#Extension
-	 * AccountOpeningInstructionV05.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmExtension
+	 * AccountOpeningInstructionV05.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.Extension;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.Extension);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmExtension);
+			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "acmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "acmt";
-			messageFunctionality = "001";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -986,23 +974,158 @@ public class AccountOpeningInstructionV06 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountOpeningInstructionV06";
 				definition = "Scope\r\nAn account owner, for example, an investor or its designated agent sends the AccountOpeningInstruction message to the account servicer, for example, a registrar, transfer agent, custodian or securities depository to instruct the opening of an account or the opening of an account and the establishment of an investment plan.\r\nUsage\r\nThe AccountOpeningInstruction is used to open an account directly or indirectly with the account servicer or an intermediary.\r\nIn some markets, for example, Australia, and for some products in the United Kingdom, a first order (also known as a deposit instruction) is placed at the same time as the account opening. To cater for this scenario, an order message can be linked (via references in the message) to the AccountOpeningInstruction message when needed.\r\nExecution of the AccountOpeningInstruction is confirmed via an AccountDetailsConfirmation message.";
-				previousVersion_lazy = () -> AccountOpeningInstructionV05.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AccountOpeningInstructionV07.mmObject());
+				previousVersion_lazy = () -> AccountOpeningInstructionV05.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctOpngInstr";
 				businessArea_lazy = () -> AccountManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.MessageIdentification, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.OrderReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.PreviousReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.InstructionDetails,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.InvestmentAccount, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.AccountParties,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.Intermediaries, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.Placement,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.NewIssueAllocation, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.SavingsInvestmentPlan,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.WithdrawalInvestmentPlan, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.CashSettlement,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.ServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.AdditionalInformation,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.MarketPracticeVersion, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmOrderReference,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmPreviousReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmInstructionDetails,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmInvestmentAccount, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmAccountParties,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmIntermediaries, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmPlacement,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmSavingsInvestmentPlan,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmWithdrawalInvestmentPlan, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmCashSettlement,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmAdditionalInformation,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmMarketPracticeVersion, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "acmt";
+						messageFunctionality = "001";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public InvestmentFundOrder4 getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(InvestmentFundOrder4 orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public AdditionalReference6 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference6 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public InvestmentAccountOpening2 getInstructionDetails() {
+		return instructionDetails;
+	}
+
+	public void setInstructionDetails(InvestmentAccountOpening2 instructionDetails) {
+		this.instructionDetails = instructionDetails;
+	}
+
+	public InvestmentAccount49 getInvestmentAccount() {
+		return investmentAccount;
+	}
+
+	public void setInvestmentAccount(InvestmentAccount49 investmentAccount) {
+		this.investmentAccount = investmentAccount;
+	}
+
+	public AccountParties13 getAccountParties() {
+		return accountParties;
+	}
+
+	public void setAccountParties(AccountParties13 accountParties) {
+		this.accountParties = accountParties;
+	}
+
+	public List<Intermediary36> getIntermediaries() {
+		return intermediaries;
+	}
+
+	public void setIntermediaries(List<Intermediary36> intermediaries) {
+		this.intermediaries = intermediaries;
+	}
+
+	public ReferredAgent2 getPlacement() {
+		return placement;
+	}
+
+	public void setPlacement(ReferredAgent2 placement) {
+		this.placement = placement;
+	}
+
+	public NewIssueAllocation2 getNewIssueAllocation() {
+		return newIssueAllocation;
+	}
+
+	public void setNewIssueAllocation(NewIssueAllocation2 newIssueAllocation) {
+		this.newIssueAllocation = newIssueAllocation;
+	}
+
+	public List<InvestmentPlan12> getSavingsInvestmentPlan() {
+		return savingsInvestmentPlan;
+	}
+
+	public void setSavingsInvestmentPlan(List<InvestmentPlan12> savingsInvestmentPlan) {
+		this.savingsInvestmentPlan = savingsInvestmentPlan;
+	}
+
+	public List<InvestmentPlan12> getWithdrawalInvestmentPlan() {
+		return withdrawalInvestmentPlan;
+	}
+
+	public void setWithdrawalInvestmentPlan(List<InvestmentPlan12> withdrawalInvestmentPlan) {
+		this.withdrawalInvestmentPlan = withdrawalInvestmentPlan;
+	}
+
+	public List<CashSettlement1> getCashSettlement() {
+		return cashSettlement;
+	}
+
+	public void setCashSettlement(List<CashSettlement1> cashSettlement) {
+		this.cashSettlement = cashSettlement;
+	}
+
+	public List<DocumentToSend3> getServiceLevelAgreement() {
+		return serviceLevelAgreement;
+	}
+
+	public void setServiceLevelAgreement(List<DocumentToSend3> serviceLevelAgreement) {
+		this.serviceLevelAgreement = serviceLevelAgreement;
+	}
+
+	public List<AccountRestrictions1> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<AccountRestrictions1> additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public MarketPracticeVersion1 getMarketPracticeVersion() {
+		return marketPracticeVersion;
+	}
+
+	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+		this.marketPracticeVersion = marketPracticeVersion;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

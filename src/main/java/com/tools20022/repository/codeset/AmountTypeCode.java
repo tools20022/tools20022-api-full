@@ -29,18 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountTypeCode#Open
- * AmountTypeCode.Open}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountTypeCode#Unknown
- * AmountTypeCode.Unknown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountTypeCode#FixedAmount
- * AmountTypeCode.FixedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountTypeCode#mmOpen
+ * AmountTypeCode.mmOpen}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountTypeCode#mmUnknown
+ * AmountTypeCode.mmUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountTypeCode#MinimumAmount
- * AmountTypeCode.MinimumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountTypeCode#mmFixedAmount
+ * AmountTypeCode.mmFixedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountTypeCode#MaximumAmount
- * AmountTypeCode.MaximumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountTypeCode#mmMinimumAmount
+ * AmountTypeCode.mmMinimumAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AmountTypeCode#mmMaximumAmount
+ * AmountTypeCode.mmMaximumAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +98,7 @@ public class AmountTypeCode {
 	 * definition} = "The amount is open."</li>
 	 * </ul>
 	 */
-	public static final MMCode Open = new MMCode() {
+	public static final MMCode mmOpen = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Open";
@@ -127,7 +128,7 @@ public class AmountTypeCode {
 	 * definition} = "The amount is unkown."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Unknown";
@@ -157,7 +158,7 @@ public class AmountTypeCode {
 	 * definition} = "The amount represents a fixed value."</li>
 	 * </ul>
 	 */
-	public static final MMCode FixedAmount = new MMCode() {
+	public static final MMCode mmFixedAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedAmount";
@@ -187,7 +188,7 @@ public class AmountTypeCode {
 	 * definition} = "The amount represents the minimum value."</li>
 	 * </ul>
 	 */
-	public static final MMCode MinimumAmount = new MMCode() {
+	public static final MMCode mmMinimumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAmount";
@@ -217,7 +218,7 @@ public class AmountTypeCode {
 	 * definition} = "The amount represents the maximum value."</li>
 	 * </ul>
 	 */
-	public static final MMCode MaximumAmount = new MMCode() {
+	public static final MMCode mmMaximumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
@@ -230,13 +231,13 @@ public class AmountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountTypeCode";
 				definition = "Specifies the reason why an amount is not specified.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountTypeCode.Open, com.tools20022.repository.codeset.AmountTypeCode.Unknown, com.tools20022.repository.codeset.AmountTypeCode.FixedAmount,
-						com.tools20022.repository.codeset.AmountTypeCode.MinimumAmount, com.tools20022.repository.codeset.AmountTypeCode.MaximumAmount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountTypeCode.mmOpen, com.tools20022.repository.codeset.AmountTypeCode.mmUnknown, com.tools20022.repository.codeset.AmountTypeCode.mmFixedAmount,
+						com.tools20022.repository.codeset.AmountTypeCode.mmMinimumAmount, com.tools20022.repository.codeset.AmountTypeCode.mmMaximumAmount);
 				derivation_lazy = () -> Arrays.asList(AmountType2Code.mmObject(), AmountType1Code.mmObject());
 			}
 		});

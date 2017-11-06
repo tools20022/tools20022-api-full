@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status of the acceptor system containing the identification of the POI, its
@@ -33,13 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReport1#POIIdentification
- * StatusReport1.POIIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReport1#mmPOIIdentification
+ * StatusReport1.mmPOIIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReport1#TerminalManagerIdentification
- * StatusReport1.TerminalManagerIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusReport1#DataSet
- * StatusReport1.DataSet}</li>
+ * {@linkplain com.tools20022.repository.msg.StatusReport1#mmTerminalManagerIdentification
+ * StatusReport1.mmTerminalManagerIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusReport1#mmDataSet
+ * StatusReport1.mmDataSet}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,15 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.StatusReportV01#StatusReport
- * StatusReportV01.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.catm.StatusReportV01#mmStatusReport
+ * StatusReportV01.mmStatusReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification35 pOIIdentification;
 	/**
 	 * Identification of the point of interaction for terminal management.
 	 * <p>
@@ -104,7 +106,7 @@ public class StatusReport1 {
 	 * "Identification of the point of interaction for terminal management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd POIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReport1.mmObject();
 			isDerived = false;
@@ -112,12 +114,13 @@ public class StatusReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the point of interaction for terminal management.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification35.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification35.mmObject();
 		}
 	};
+	protected GenericIdentification35 terminalManagerIdentification;
 	/**
 	 * Identification of the terminal management system (TMS) to contact for the
 	 * maintenance.
@@ -147,7 +150,7 @@ public class StatusReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReport1.mmObject();
 			isDerived = false;
@@ -155,12 +158,13 @@ public class StatusReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the terminal management system (TMS) to contact for the maintenance.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification35.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification35.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TerminalManagementDataSet1> dataSet;
 	/**
 	 * Data related to a status report of a point of interaction (POI).
 	 * <p>
@@ -188,7 +192,7 @@ public class StatusReport1 {
 	 * "Data related to a status report of a point of interaction (POI)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSet = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusReport1.mmObject();
 			isDerived = false;
@@ -197,18 +201,18 @@ public class StatusReport1 {
 			name = "DataSet";
 			definition = "Data related to a status report of a point of interaction (POI).";
 			minOccurs = 1;
-			type_lazy = () -> TerminalManagementDataSet1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport1.POIIdentification, com.tools20022.repository.msg.StatusReport1.TerminalManagerIdentification,
-						com.tools20022.repository.msg.StatusReport1.DataSet);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV01.StatusReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport1.mmPOIIdentification, com.tools20022.repository.msg.StatusReport1.mmTerminalManagerIdentification,
+						com.tools20022.repository.msg.StatusReport1.mmDataSet);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV01.mmStatusReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusReport1";
 				definition = "Status of the acceptor system containing the identification of the POI, its components and their installed versions.";
@@ -216,5 +220,29 @@ public class StatusReport1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification35 getPOIIdentification() {
+		return pOIIdentification;
+	}
+
+	public void setPOIIdentification(com.tools20022.repository.msg.GenericIdentification35 pOIIdentification) {
+		this.pOIIdentification = pOIIdentification;
+	}
+
+	public GenericIdentification35 getTerminalManagerIdentification() {
+		return terminalManagerIdentification;
+	}
+
+	public void setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification35 terminalManagerIdentification) {
+		this.terminalManagerIdentification = terminalManagerIdentification;
+	}
+
+	public List<TerminalManagementDataSet1> getDataSet() {
+		return dataSet;
+	}
+
+	public void setDataSet(List<com.tools20022.repository.msg.TerminalManagementDataSet1> dataSet) {
+		this.dataSet = dataSet;
 	}
 }

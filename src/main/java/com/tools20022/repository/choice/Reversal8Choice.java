@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.TransferOut16;
 import com.tools20022.repository.msg.TransferReference10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between reversal by reference or by reversal details.
@@ -34,11 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal8Choice#References
- * Reversal8Choice.References}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Reversal8Choice#TransferOutConfirmationDetails
- * Reversal8Choice.TransferOutConfirmationDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.Reversal8Choice#mmReferences
+ * Reversal8Choice.mmReferences}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Reversal8Choice#mmTransferOutConfirmationDetails
+ * Reversal8Choice.mmTransferOutConfirmationDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07#Reversal
- * ReversalOfTransferOutConfirmationV07.Reversal}</li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07#mmReversal
+ * ReversalOfTransferOutConfirmationV07.mmReversal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reversal8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<TransferReference10> references;
 	/**
 	 * Reference of the transfer confirmation to be reversed.
 	 * <p>
@@ -104,11 +107,11 @@ public class Reversal8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reversal5Choice#References
-	 * Reversal5Choice.References}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reversal5Choice#mmReferences
+	 * Reversal5Choice.mmReferences}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute References = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferences = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reversal8Choice.mmObject();
 			isDerived = false;
@@ -116,11 +119,12 @@ public class Reversal8Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Reference of the transfer confirmation to be reversed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reversal5Choice.References;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reversal5Choice.mmReferences;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferReference10.mmObject();
 		}
 	};
+	protected TransferOut16 transferOutConfirmationDetails;
 	/**
 	 * Details of the transfer out confirmation to be reversed.
 	 * <p>
@@ -133,8 +137,8 @@ public class Reversal8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#RelatedSettlement
-	 * SecuritiesTransfer.RelatedSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmRelatedSettlement
+	 * SecuritiesTransfer.mmRelatedSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,22 +158,22 @@ public class Reversal8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.Reversal5Choice#TransferOutConfirmationDetails
-	 * Reversal5Choice.TransferOutConfirmationDetails}</li>
+	 * {@linkplain com.tools20022.repository.choice.Reversal5Choice#mmTransferOutConfirmationDetails
+	 * Reversal5Choice.mmTransferOutConfirmationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferOutConfirmationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferOutConfirmationDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> Reversal8Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.RelatedSettlement;
 			isDerived = false;
 			xmlTag = "TrfOutConfDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOutConfirmationDetails";
 			definition = "Details of the transfer out confirmation to be reversed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reversal5Choice.TransferOutConfirmationDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.Reversal5Choice.mmTransferOutConfirmationDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransferOut16.mmObject();
 		}
 	};
@@ -177,10 +181,10 @@ public class Reversal8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reversal8Choice.References, com.tools20022.repository.choice.Reversal8Choice.TransferOutConfirmationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reversal8Choice.mmReferences, com.tools20022.repository.choice.Reversal8Choice.mmTransferOutConfirmationDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07.mmReversal);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07.Reversal);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reversal8Choice";
 				definition = "Choice between reversal by reference or by reversal details.";
@@ -188,5 +192,21 @@ public class Reversal8Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<TransferReference10> getReferences() {
+		return references;
+	}
+
+	public void setReferences(List<TransferReference10> references) {
+		this.references = references;
+	}
+
+	public TransferOut16 getTransferOutConfirmationDetails() {
+		return transferOutConfirmationDetails;
+	}
+
+	public void setTransferOutConfirmationDetails(TransferOut16 transferOutConfirmationDetails) {
+		this.transferOutConfirmationDetails = transferOutConfirmationDetails;
 	}
 }

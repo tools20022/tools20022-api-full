@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Subbalances providing additional information on a specific position but that
@@ -42,17 +43,17 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation11#SubBalanceType
- * AdditionalBalanceInformation11.SubBalanceType}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation11#mmSubBalanceType
+ * AdditionalBalanceInformation11.mmSubBalanceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation11#Quantity
- * AdditionalBalanceInformation11.Quantity}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation11#mmQuantity
+ * AdditionalBalanceInformation11.mmQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation11#SubBalanceAdditionalDetails
- * AdditionalBalanceInformation11.SubBalanceAdditionalDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation11#mmSubBalanceAdditionalDetails
+ * AdditionalBalanceInformation11.mmSubBalanceAdditionalDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation11#QuantityBreakdown
- * AdditionalBalanceInformation11.QuantityBreakdown}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation11#mmQuantityBreakdown
+ * AdditionalBalanceInformation11.mmQuantityBreakdown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,8 +62,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -90,6 +91,7 @@ import java.util.function.Supplier;
 public class AdditionalBalanceInformation11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SubBalanceType6Choice subBalanceType;
 	/**
 	 * Reason for the sub-balance.
 	 * <p>
@@ -103,8 +105,8 @@ public class AdditionalBalanceInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SecuritiesBalanceType
-	 * SecuritiesBalance.SecuritiesBalanceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSecuritiesBalanceType
+	 * SecuritiesBalance.mmSecuritiesBalanceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -125,27 +127,28 @@ public class AdditionalBalanceInformation11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation15#SubBalanceType
-	 * AdditionalBalanceInformation15.SubBalanceType}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation15#mmSubBalanceType
+	 * AdditionalBalanceInformation15.mmSubBalanceType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubBalanceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> AdditionalBalanceInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SecuritiesBalanceType;
 			isDerived = false;
 			xmlTag = "SubBalTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceType";
 			definition = "Reason for the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation15.SubBalanceType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation15.mmSubBalanceType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceType6Choice.mmObject();
 		}
 	};
+	protected SubBalanceQuantity3Choice quantity;
 	/**
 	 * Quantity of securities in the sub-balance.
 	 * <p>
@@ -159,8 +162,8 @@ public class AdditionalBalanceInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#SubBalanceQuantity
-	 * SecuritiesBalance.SubBalanceQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmSubBalanceQuantity
+	 * SecuritiesBalance.mmSubBalanceQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,27 +184,28 @@ public class AdditionalBalanceInformation11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation15#Quantity
-	 * AdditionalBalanceInformation15.Quantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation15#mmQuantity
+	 * AdditionalBalanceInformation15.mmQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Quantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> AdditionalBalanceInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.SubBalanceQuantity;
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of securities in the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation15.Quantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation15.mmQuantity);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceQuantity3Choice.mmObject();
 		}
 	};
+	protected Max140Text subBalanceAdditionalDetails;
 	/**
 	 * Provides additional subbalance information.
 	 * <p>
@@ -231,13 +235,13 @@ public class AdditionalBalanceInformation11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation15#SubBalanceAdditionalDetails
-	 * AdditionalBalanceInformation15.SubBalanceAdditionalDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation15#mmSubBalanceAdditionalDetails
+	 * AdditionalBalanceInformation15.mmSubBalanceAdditionalDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubBalanceAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubBalanceAdditionalDetails = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalBalanceInformation11.mmObject();
 			isDerived = false;
@@ -245,12 +249,13 @@ public class AdditionalBalanceInformation11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetails";
 			definition = "Provides additional subbalance information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation15.SubBalanceAdditionalDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation15.mmSubBalanceAdditionalDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QuantityBreakdown23> quantityBreakdown;
 	/**
 	 * Breakdown of the aggregate quantity reported into significant lots, for
 	 * example, tax lots.
@@ -263,8 +268,8 @@ public class AdditionalBalanceInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#LotBreakdown
-	 * SecuritiesQuantity.LotBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLotBreakdown
+	 * SecuritiesQuantity.mmLotBreakdown}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -287,35 +292,35 @@ public class AdditionalBalanceInformation11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation15#QuantityBreakdown
-	 * AdditionalBalanceInformation15.QuantityBreakdown}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalBalanceInformation15#mmQuantityBreakdown
+	 * AdditionalBalanceInformation15.mmQuantityBreakdown}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> AdditionalBalanceInformation11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.LotBreakdown;
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation15.QuantityBreakdown);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation15.mmQuantityBreakdown);
 			minOccurs = 0;
-			type_lazy = () -> QuantityBreakdown23.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown23.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation11.SubBalanceType, com.tools20022.repository.msg.AdditionalBalanceInformation11.Quantity,
-						com.tools20022.repository.msg.AdditionalBalanceInformation11.SubBalanceAdditionalDetails, com.tools20022.repository.msg.AdditionalBalanceInformation11.QuantityBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation11.mmSubBalanceType, com.tools20022.repository.msg.AdditionalBalanceInformation11.mmQuantity,
+						com.tools20022.repository.msg.AdditionalBalanceInformation11.mmSubBalanceAdditionalDetails, com.tools20022.repository.msg.AdditionalBalanceInformation11.mmQuantityBreakdown);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -326,10 +331,42 @@ public class AdditionalBalanceInformation11 {
 				})).get();
 				name = "AdditionalBalanceInformation11";
 				definition = "Subbalances providing additional information on a specific position but that is not to be accounted for in the building of the aggregate balance, for example, registered.";
-				previousVersion_lazy = () -> AdditionalBalanceInformation9.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AdditionalBalanceInformation15.mmObject());
+				previousVersion_lazy = () -> AdditionalBalanceInformation9.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SubBalanceType6Choice getSubBalanceType() {
+		return subBalanceType;
+	}
+
+	public void setSubBalanceType(SubBalanceType6Choice subBalanceType) {
+		this.subBalanceType = subBalanceType;
+	}
+
+	public SubBalanceQuantity3Choice getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(SubBalanceQuantity3Choice quantity) {
+		this.quantity = quantity;
+	}
+
+	public Max140Text getSubBalanceAdditionalDetails() {
+		return subBalanceAdditionalDetails;
+	}
+
+	public void setSubBalanceAdditionalDetails(Max140Text subBalanceAdditionalDetails) {
+		this.subBalanceAdditionalDetails = subBalanceAdditionalDetails;
+	}
+
+	public List<QuantityBreakdown23> getQuantityBreakdown() {
+		return quantityBreakdown;
+	}
+
+	public void setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown23> quantityBreakdown) {
+		this.quantityBreakdown = quantityBreakdown;
 	}
 }

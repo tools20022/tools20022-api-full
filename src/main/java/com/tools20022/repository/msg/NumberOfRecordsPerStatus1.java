@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberOfRecordsPerStatus1#DetailedNumberOfRecords
- * NumberOfRecordsPerStatus1.DetailedNumberOfRecords}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberOfRecordsPerStatus1#mmDetailedNumberOfRecords
+ * NumberOfRecordsPerStatus1.mmDetailedNumberOfRecords}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NumberOfRecordsPerStatus1#DetailedStatus
- * NumberOfRecordsPerStatus1.DetailedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.NumberOfRecordsPerStatus1#mmDetailedStatus
+ * NumberOfRecordsPerStatus1.mmDetailedStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NumberOfRecordsPerStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max15NumericText detailedNumberOfRecords;
 	/**
 	 * Number of individual records contained in the message, detailed per
 	 * status.
@@ -93,7 +94,7 @@ public class NumberOfRecordsPerStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DetailedNumberOfRecords = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDetailedNumberOfRecords = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberOfRecordsPerStatus1.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class NumberOfRecordsPerStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedNumberOfRecords";
 			definition = "Number of individual records contained in the message, detailed per status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected ReportingRecordStatus1Code detailedStatus;
 	/**
 	 * Common transaction status for all individual records reported.
 	 * <p>
@@ -135,7 +137,7 @@ public class NumberOfRecordsPerStatus1 {
 	 * "Common transaction status for all individual records reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DetailedStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDetailedStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NumberOfRecordsPerStatus1.mmObject();
 			isDerived = false;
@@ -143,8 +145,8 @@ public class NumberOfRecordsPerStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedStatus";
 			definition = "Common transaction status for all individual records reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
 	};
@@ -152,13 +154,29 @@ public class NumberOfRecordsPerStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfRecordsPerStatus1.DetailedNumberOfRecords, com.tools20022.repository.msg.NumberOfRecordsPerStatus1.DetailedStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfRecordsPerStatus1.mmDetailedNumberOfRecords, com.tools20022.repository.msg.NumberOfRecordsPerStatus1.mmDetailedStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NumberOfRecordsPerStatus1";
 				definition = "Provides detailed information on the number of transactions that are reported with a specific transaction status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max15NumericText getDetailedNumberOfRecords() {
+		return detailedNumberOfRecords;
+	}
+
+	public void setDetailedNumberOfRecords(Max15NumericText detailedNumberOfRecords) {
+		this.detailedNumberOfRecords = detailedNumberOfRecords;
+	}
+
+	public ReportingRecordStatus1Code getDetailedStatus() {
+		return detailedStatus;
+	}
+
+	public void setDetailedStatus(ReportingRecordStatus1Code detailedStatus) {
+		this.detailedStatus = detailedStatus;
 	}
 }

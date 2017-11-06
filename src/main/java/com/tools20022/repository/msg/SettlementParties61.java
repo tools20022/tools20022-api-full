@@ -32,14 +32,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementParties61#Depository
- * SettlementParties61.Depository}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementParties61#Party1
- * SettlementParties61.Party1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementParties61#Party2
- * SettlementParties61.Party2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementParties61#Party3
- * SettlementParties61.Party3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementParties61#mmDepository
+ * SettlementParties61.mmDepository}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementParties61#mmParty1
+ * SettlementParties61.mmParty1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementParties61#mmParty2
+ * SettlementParties61.mmParty2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementParties61#mmParty3
+ * SettlementParties61.mmParty3}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementParties61 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification120 depository;
 	/**
 	 * First receiving party in the settlement chain. In a plain vanilla
 	 * settlement, it is the central securities depository where the receiving
@@ -81,8 +83,8 @@ public class SettlementParties61 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,26 +106,27 @@ public class SettlementParties61 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementParties43#Depository
-	 * SettlementParties43.Depository}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties43#mmDepository
+	 * SettlementParties43.mmDepository}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Depository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties61.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Dpstry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "First receiving party in the settlement chain. In a plain vanilla settlement, it is the central securities depository where the receiving side of the transaction requests to receive the financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties43.Depository;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties43.mmDepository;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification120.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification120.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount128 party1;
 	/**
 	 * Party that interacts with the depository.
 	 * <p>
@@ -136,8 +139,8 @@ public class SettlementParties61 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,26 +160,27 @@ public class SettlementParties61 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementParties43#Party1
-	 * SettlementParties43.Party1}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties43#mmParty1
+	 * SettlementParties43.mmParty1}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Party1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParty1 = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties61.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Pty1";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party1";
 			definition = "Party that interacts with the depository.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties43.Party1;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties43.mmParty1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount128.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount128.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount128 party2;
 	/**
 	 * Party that interacts with the party1.
 	 * <p>
@@ -189,8 +193,8 @@ public class SettlementParties61 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,26 +214,27 @@ public class SettlementParties61 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementParties43#Party2
-	 * SettlementParties43.Party2}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties43#mmParty2
+	 * SettlementParties43.mmParty2}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Party2 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParty2 = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties61.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Pty2";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party2";
 			definition = "Party that interacts with the party1.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties43.Party2;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties43.mmParty2;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount128.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount128.mmObject();
 		}
 	};
+	protected PartyIdentificationAndAccount128 party3;
 	/**
 	 * Party that interacts with the party2.
 	 * <p>
@@ -242,8 +247,8 @@ public class SettlementParties61 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -263,34 +268,34 @@ public class SettlementParties61 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SettlementParties43#Party3
-	 * SettlementParties43.Party3}</li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties43#mmParty3
+	 * SettlementParties43.mmParty3}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Party3 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParty3 = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties61.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Pty3";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party3";
 			definition = "Party that interacts with the party2.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties43.Party3;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties43.mmParty3;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndAccount128.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount128.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties61.Depository, com.tools20022.repository.msg.SettlementParties61.Party1, com.tools20022.repository.msg.SettlementParties61.Party2,
-						com.tools20022.repository.msg.SettlementParties61.Party3);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties61.mmDepository, com.tools20022.repository.msg.SettlementParties61.mmParty1,
+						com.tools20022.repository.msg.SettlementParties61.mmParty2, com.tools20022.repository.msg.SettlementParties61.mmParty3);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties61";
 				definition = "Specifies settlement parties (delivering/receiving).";
@@ -298,5 +303,37 @@ public class SettlementParties61 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification120 getDepository() {
+		return depository;
+	}
+
+	public void setDepository(com.tools20022.repository.msg.PartyIdentification120 depository) {
+		this.depository = depository;
+	}
+
+	public PartyIdentificationAndAccount128 getParty1() {
+		return party1;
+	}
+
+	public void setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount128 party1) {
+		this.party1 = party1;
+	}
+
+	public PartyIdentificationAndAccount128 getParty2() {
+		return party2;
+	}
+
+	public void setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount128 party2) {
+		this.party2 = party2;
+	}
+
+	public PartyIdentificationAndAccount128 getParty3() {
+		return party3;
+	}
+
+	public void setParty3(com.tools20022.repository.msg.PartyIdentificationAndAccount128 party3) {
+		this.party3 = party3;
 	}
 }

@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashForecastMessage1Code#Estimated
- * CashForecastMessage1Code.Estimated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashForecastMessage1Code#mmEstimated
+ * CashForecastMessage1Code.mmEstimated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashForecastMessage1Code#EstimatedDetailed
- * CashForecastMessage1Code.EstimatedDetailed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashForecastMessage1Code#mmEstimatedDetailed
+ * CashForecastMessage1Code.mmEstimatedDetailed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashForecastMessage1Code#Confirmed
- * CashForecastMessage1Code.Confirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashForecastMessage1Code#mmConfirmed
+ * CashForecastMessage1Code.mmConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashForecastMessage1Code#CornfirmedDetailed
- * CashForecastMessage1Code.CornfirmedDetailed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashForecastMessage1Code#mmCornfirmedDetailed
+ * CashForecastMessage1Code.mmCornfirmedDetailed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CashForecastMessage1Code extends MessageTypeCode {
 	 * name} = "Estimated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Estimated = new MMCode() {
+	public static final MMCode mmEstimated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
@@ -110,7 +110,7 @@ public class CashForecastMessage1Code extends MessageTypeCode {
 	 * name} = "EstimatedDetailed"</li>
 	 * </ul>
 	 */
-	public static final MMCode EstimatedDetailed = new MMCode() {
+	public static final MMCode mmEstimatedDetailed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedDetailed";
@@ -133,7 +133,7 @@ public class CashForecastMessage1Code extends MessageTypeCode {
 	 * name} = "Confirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Confirmed = new MMCode() {
+	public static final MMCode mmConfirmed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmed";
@@ -156,7 +156,7 @@ public class CashForecastMessage1Code extends MessageTypeCode {
 	 * name} = "CornfirmedDetailed"</li>
 	 * </ul>
 	 */
-	public static final MMCode CornfirmedDetailed = new MMCode() {
+	public static final MMCode mmCornfirmedDetailed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CornfirmedDetailed";
@@ -167,13 +167,13 @@ public class CashForecastMessage1Code extends MessageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CF40");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashForecastMessage1Code";
 				definition = "Specifies the fund cash forecast message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashForecastMessage1Code.Estimated, com.tools20022.repository.codeset.CashForecastMessage1Code.EstimatedDetailed,
-						com.tools20022.repository.codeset.CashForecastMessage1Code.Confirmed, com.tools20022.repository.codeset.CashForecastMessage1Code.CornfirmedDetailed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashForecastMessage1Code.mmEstimated, com.tools20022.repository.codeset.CashForecastMessage1Code.mmEstimatedDetailed,
+						com.tools20022.repository.codeset.CashForecastMessage1Code.mmConfirmed, com.tools20022.repository.codeset.CashForecastMessage1Code.mmCornfirmedDetailed);
 				trace_lazy = () -> MessageTypeCode.mmObject();
 			}
 		});

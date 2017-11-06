@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#PlaceAndName
- * CorporateActionUnallocatedBalanceSD2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#mmPlaceAndName
+ * CorporateActionUnallocatedBalanceSD2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#TotalEligibleBalance
- * CorporateActionUnallocatedBalanceSD2.TotalEligibleBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#mmTotalEligibleBalance
+ * CorporateActionUnallocatedBalanceSD2.mmTotalEligibleBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#PledgedBalance
- * CorporateActionUnallocatedBalanceSD2.PledgedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#mmPledgedBalance
+ * CorporateActionUnallocatedBalanceSD2.mmPledgedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#InvestmentPledgedBalance
- * CorporateActionUnallocatedBalanceSD2.InvestmentPledgedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#mmInvestmentPledgedBalance
+ * CorporateActionUnallocatedBalanceSD2.mmInvestmentPledgedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#InvestmentUnpledgedBalance
- * CorporateActionUnallocatedBalanceSD2.InvestmentUnpledgedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#mmInvestmentUnpledgedBalance
+ * CorporateActionUnallocatedBalanceSD2.mmInvestmentUnpledgedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#MemoSegregationBalance
- * CorporateActionUnallocatedBalanceSD2.MemoSegregationBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2#mmMemoSegregationBalance
+ * CorporateActionUnallocatedBalanceSD2.mmMemoSegregationBalance}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionUnallocatedBalanceSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -98,7 +99,7 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 totalEligibleBalance;
 	/**
 	 * Total balance of securities eligible for this corporate action event. The
 	 * entitlement calculation is based on this balance.
@@ -142,7 +144,7 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalEligibleBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2.mmObject();
 			isDerived = false;
@@ -150,11 +152,12 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total balance of securities eligible for this corporate action event. The entitlement calculation is based on this balance. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 pledgedBalance;
 	/**
 	 * Position held in DTC Segregated account. This position is ineligible for
 	 * payment until released from pledgee.
@@ -184,7 +187,7 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPledgedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2.mmObject();
 			isDerived = false;
@@ -192,12 +195,13 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgedBalance";
 			definition = "Position held in DTC Segregated account.  This position is ineligible for payment until released from pledgee.  ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 investmentPledgedBalance;
 	/**
 	 * Position held in DTC Segregated account also called account 18. This
 	 * position is not eligible for instruction processing but will be eligible
@@ -228,7 +232,7 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentPledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentPledgedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2.mmObject();
 			isDerived = false;
@@ -236,12 +240,13 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
 			definition = "Position held in DTC Segregated account also called account 18.   This position is not eligible for instruction processing but will be eligible for payment on mandatory events.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 investmentUnpledgedBalance;
 	/**
 	 * Position held in DTC Segregated account also called account 22. This
 	 * position is not eligible for instruction processing but will be eligible
@@ -272,7 +277,7 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2.mmObject();
 			isDerived = false;
@@ -280,12 +285,13 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Position held in DTC Segregated account also called account 22.   This position is not eligible for instruction processing but will be eligible for payment on mandatory events.  \r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	protected SignedQuantityFormat9 memoSegregationBalance;
 	/**
 	 * Position held in DTC Segregated account. This position is eligible for
 	 * payment.
@@ -315,7 +321,7 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MemoSegregationBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMemoSegregationBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2.mmObject();
 			isDerived = false;
@@ -323,25 +329,73 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemoSegregationBalance";
 			definition = "Position held in DTC Segregated account. This position is eligible for payment.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SignedQuantityFormat9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.PlaceAndName, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.TotalEligibleBalance,
-						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.PledgedBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.InvestmentPledgedBalance,
-						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.InvestmentUnpledgedBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.MemoSegregationBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.mmTotalEligibleBalance,
+						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.mmPledgedBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.mmInvestmentPledgedBalance,
+						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.mmInvestmentUnpledgedBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD2.mmMemoSegregationBalance);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionUnallocatedBalanceSD2";
 				definition = "Balance types related to an unallocated redemption payment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public SignedQuantityFormat9 getTotalEligibleBalance() {
+		return totalEligibleBalance;
+	}
+
+	public void setTotalEligibleBalance(com.tools20022.repository.msg.SignedQuantityFormat9 totalEligibleBalance) {
+		this.totalEligibleBalance = totalEligibleBalance;
+	}
+
+	public SignedQuantityFormat9 getPledgedBalance() {
+		return pledgedBalance;
+	}
+
+	public void setPledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 pledgedBalance) {
+		this.pledgedBalance = pledgedBalance;
+	}
+
+	public SignedQuantityFormat9 getInvestmentPledgedBalance() {
+		return investmentPledgedBalance;
+	}
+
+	public void setInvestmentPledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 investmentPledgedBalance) {
+		this.investmentPledgedBalance = investmentPledgedBalance;
+	}
+
+	public SignedQuantityFormat9 getInvestmentUnpledgedBalance() {
+		return investmentUnpledgedBalance;
+	}
+
+	public void setInvestmentUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 investmentUnpledgedBalance) {
+		this.investmentUnpledgedBalance = investmentUnpledgedBalance;
+	}
+
+	public SignedQuantityFormat9 getMemoSegregationBalance() {
+		return memoSegregationBalance;
+	}
+
+	public void setMemoSegregationBalance(com.tools20022.repository.msg.SignedQuantityFormat9 memoSegregationBalance) {
+		this.memoSegregationBalance = memoSegregationBalance;
 	}
 }

@@ -38,22 +38,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1#Type Fee1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1#Basis Fee1.Basis}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1#StandardAmount
- * Fee1.StandardAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1#StandardRate
- * Fee1.StandardRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1#DiscountDetails
- * Fee1.DiscountDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1#RequestedAmount
- * Fee1.RequestedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1#RequestedRate
- * Fee1.RequestedRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1#NonStandardSLAReference
- * Fee1.NonStandardSLAReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1#RecipientIdentification
- * Fee1.RecipientIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmType Fee1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmBasis Fee1.mmBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmStandardAmount
+ * Fee1.mmStandardAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmStandardRate
+ * Fee1.mmStandardRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmDiscountDetails
+ * Fee1.mmDiscountDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmRequestedAmount
+ * Fee1.mmRequestedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmRequestedRate
+ * Fee1.mmRequestedRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmNonStandardSLAReference
+ * Fee1.mmNonStandardSLAReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmRecipientIdentification
+ * Fee1.mmRecipientIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Fee1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ChargeType5Choice type;
 	/**
 	 * Type of fee (charge/commission).
 	 * <p>
@@ -92,8 +93,8 @@ public class Fee1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
@@ -111,26 +112,27 @@ public class Fee1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#Type Fee2.Type}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmType Fee2.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> Fee1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of fee (charge/commission).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ChargeType5Choice.mmObject();
 		}
 	};
+	protected ChargeBasis2Choice basis;
 	/**
 	 * Method used to calculate the fee (charge/commission).
 	 * <p>
@@ -144,8 +146,8 @@ public class Fee1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#CalculationMethod
-	 * Adjustment.CalculationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmCalculationMethod
+	 * Adjustment.mmCalculationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
@@ -163,26 +165,27 @@ public class Fee1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#Basis Fee2.Basis}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmBasis Fee2.mmBasis}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Basis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmCalculationMethod;
 			componentContext_lazy = () -> Fee1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.CalculationMethod;
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Method used to calculate the fee (charge/commission). ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.Basis);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmBasis);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ChargeBasis2Choice.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount standardAmount;
 	/**
 	 * Standard fee (charge/commission) amount as specified in the fund
 	 * prospectus or agreed for the account.
@@ -197,8 +200,8 @@ public class Fee1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
@@ -218,27 +221,28 @@ public class Fee1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#StandardAmount
-	 * Fee2.StandardAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmStandardAmount
+	 * Fee2.mmStandardAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StandardAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStandardAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Fee1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "StdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardAmount";
 			definition = "Standard fee (charge/commission) amount as specified in the fund prospectus or agreed for the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.StandardAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmStandardAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate standardRate;
 	/**
 	 * Standard fee (charge/commission) rate used to calculate the amount of the
 	 * charge or fee, as specified in the fund prospectus or agreed for the
@@ -254,8 +258,8 @@ public class Fee1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargeRate
-	 * Adjustment.ChargeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+	 * Adjustment.mmChargeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
@@ -275,27 +279,28 @@ public class Fee1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#StandardRate
-	 * Fee2.StandardRate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmStandardRate
+	 * Fee2.mmStandardRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StandardRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStandardRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
 			componentContext_lazy = () -> Fee1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargeRate;
 			isDerived = false;
 			xmlTag = "StdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardRate";
 			definition = "Standard fee (charge/commission) rate used to calculate the amount of the charge or fee, as specified in the fund prospectus or agreed for the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.StandardRate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmStandardRate);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected ChargeOrCommissionDiscount1 discountDetails;
 	/**
 	 * Discount or waiver applied to the fee (charge/commission).
 	 * <p>
@@ -326,21 +331,22 @@ public class Fee1 {
 	 * "Discount or waiver applied to the fee (charge/commission)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DiscountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDiscountDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Fee1.mmObject();
 			businessComponentTrace_lazy = () -> Charges.mmObject();
+			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
 			xmlTag = "DscntDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountDetails";
 			definition = "Discount or waiver applied to the fee (charge/commission).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ChargeOrCommissionDiscount1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount requestedAmount;
 	/**
 	 * Requested fee (charge/commission) amount as agreed for the account.
 	 * <p>
@@ -354,8 +360,8 @@ public class Fee1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
@@ -373,20 +379,21 @@ public class Fee1 {
 	 * "Requested fee (charge/commission) amount as agreed for the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Fee1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "ReqdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedAmount";
 			definition = "Requested fee (charge/commission) amount as agreed for the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PercentageRate requestedRate;
 	/**
 	 * Requested rate used to calculate the amount of the fee
 	 * (charge/commission), as agreed for the account.
@@ -401,8 +408,8 @@ public class Fee1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargeRate
-	 * Adjustment.ChargeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+	 * Adjustment.mmChargeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
@@ -421,20 +428,21 @@ public class Fee1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
 			componentContext_lazy = () -> Fee1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargeRate;
 			isDerived = false;
 			xmlTag = "ReqdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedRate";
 			definition = "Requested rate used to calculate the amount of the fee (charge/commission), as agreed for the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected Max35Text nonStandardSLAReference;
 	/**
 	 * Reference to a sales agreement that overrides normal processing or the
 	 * Service Level Agreement (SLA), such as a fee (charge/commission).
@@ -465,13 +473,13 @@ public class Fee1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Fee2#NonStandardSLAReference
-	 * Fee2.NonStandardSLAReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.Fee2#mmNonStandardSLAReference
+	 * Fee2.mmNonStandardSLAReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NonStandardSLAReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNonStandardSLAReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
@@ -479,12 +487,13 @@ public class Fee1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardSLAReference";
 			definition = "Reference to a sales agreement that overrides normal processing or the Service Level Agreement (SLA), such as a fee (charge/commission).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.NonStandardSLAReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmNonStandardSLAReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification113 recipientIdentification;
 	/**
 	 * Party entitled to the amount of money resulting from a fee
 	 * (charge/commission).
@@ -499,8 +508,8 @@ public class Fee1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
@@ -521,36 +530,36 @@ public class Fee1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Fee2#RecipientIdentification
-	 * Fee2.RecipientIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Fee2#mmRecipientIdentification
+	 * Fee2.mmRecipientIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Fee1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Party entitled to the amount of money resulting from a fee (charge/commission).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.RecipientIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmRecipientIdentification);
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification113.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee1.Type, com.tools20022.repository.msg.Fee1.Basis, com.tools20022.repository.msg.Fee1.StandardAmount,
-						com.tools20022.repository.msg.Fee1.StandardRate, com.tools20022.repository.msg.Fee1.DiscountDetails, com.tools20022.repository.msg.Fee1.RequestedAmount, com.tools20022.repository.msg.Fee1.RequestedRate,
-						com.tools20022.repository.msg.Fee1.NonStandardSLAReference, com.tools20022.repository.msg.Fee1.RecipientIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee1.mmType, com.tools20022.repository.msg.Fee1.mmBasis, com.tools20022.repository.msg.Fee1.mmStandardAmount,
+						com.tools20022.repository.msg.Fee1.mmStandardRate, com.tools20022.repository.msg.Fee1.mmDiscountDetails, com.tools20022.repository.msg.Fee1.mmRequestedAmount, com.tools20022.repository.msg.Fee1.mmRequestedRate,
+						com.tools20022.repository.msg.Fee1.mmNonStandardSLAReference, com.tools20022.repository.msg.Fee1.mmRecipientIdentification);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Fee1";
 				definition = "Amount of money associated with a service.";
@@ -558,5 +567,77 @@ public class Fee1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ChargeType5Choice getType() {
+		return type;
+	}
+
+	public void setType(ChargeType5Choice type) {
+		this.type = type;
+	}
+
+	public ChargeBasis2Choice getBasis() {
+		return basis;
+	}
+
+	public void setBasis(ChargeBasis2Choice basis) {
+		this.basis = basis;
+	}
+
+	public ActiveCurrencyAndAmount getStandardAmount() {
+		return standardAmount;
+	}
+
+	public void setStandardAmount(ActiveCurrencyAndAmount standardAmount) {
+		this.standardAmount = standardAmount;
+	}
+
+	public PercentageRate getStandardRate() {
+		return standardRate;
+	}
+
+	public void setStandardRate(PercentageRate standardRate) {
+		this.standardRate = standardRate;
+	}
+
+	public ChargeOrCommissionDiscount1 getDiscountDetails() {
+		return discountDetails;
+	}
+
+	public void setDiscountDetails(com.tools20022.repository.msg.ChargeOrCommissionDiscount1 discountDetails) {
+		this.discountDetails = discountDetails;
+	}
+
+	public ActiveCurrencyAndAmount getRequestedAmount() {
+		return requestedAmount;
+	}
+
+	public void setRequestedAmount(ActiveCurrencyAndAmount requestedAmount) {
+		this.requestedAmount = requestedAmount;
+	}
+
+	public PercentageRate getRequestedRate() {
+		return requestedRate;
+	}
+
+	public void setRequestedRate(PercentageRate requestedRate) {
+		this.requestedRate = requestedRate;
+	}
+
+	public Max35Text getNonStandardSLAReference() {
+		return nonStandardSLAReference;
+	}
+
+	public void setNonStandardSLAReference(Max35Text nonStandardSLAReference) {
+		this.nonStandardSLAReference = nonStandardSLAReference;
+	}
+
+	public PartyIdentification113 getRecipientIdentification() {
+		return recipientIdentification;
+	}
+
+	public void setRecipientIdentification(com.tools20022.repository.msg.PartyIdentification113 recipientIdentification) {
+		this.recipientIdentification = recipientIdentification;
 	}
 }

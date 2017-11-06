@@ -44,23 +44,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#Qualifier
- * SystemBusinessInformation.Qualifier}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmQualifier
+ * SystemBusinessInformation.mmQualifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#Subject
- * SystemBusinessInformation.Subject}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmSubject
+ * SystemBusinessInformation.mmSubject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#SubjectDetails
- * SystemBusinessInformation.SubjectDetails}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmSubjectDetails
+ * SystemBusinessInformation.mmSubjectDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#Identification
- * SystemBusinessInformation.Identification}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmIdentification
+ * SystemBusinessInformation.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#Reference
- * SystemBusinessInformation.Reference}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmReference
+ * SystemBusinessInformation.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#System
- * SystemBusinessInformation.System}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmSystem
+ * SystemBusinessInformation.mmSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -68,11 +68,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.System#SystemGeneratedInformation
- * System.SystemGeneratedInformation}</li>
+ * {@linkplain com.tools20022.repository.entity.System#mmSystemGeneratedInformation
+ * System.mmSystemGeneratedInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InformationQualifier#SystemBusinessInformation
- * InformationQualifier.SystemBusinessInformation}</li>
+ * {@linkplain com.tools20022.repository.entity.InformationQualifier#mmSystemBusinessInformation
+ * InformationQualifier.mmSystemBusinessInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -80,17 +80,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport#GeneralBusinessInformation
- * GeneralBusinessReport.GeneralBusinessInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport#mmGeneralBusinessInformation
+ * GeneralBusinessReport.mmGeneralBusinessInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport2#GeneralBusinessInformation
- * GeneralBusinessReport2.GeneralBusinessInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport2#mmGeneralBusinessInformation
+ * GeneralBusinessReport2.mmGeneralBusinessInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3#GeneralBusinessOrError
- * GeneralBusinessReport3.GeneralBusinessOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3#mmGeneralBusinessOrError
+ * GeneralBusinessReport3.mmGeneralBusinessOrError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#GeneralBusinessOrError
- * GeneralBusinessReport4.GeneralBusinessOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#mmGeneralBusinessOrError
+ * GeneralBusinessReport4.mmGeneralBusinessOrError}</li>
  * </ul>
  * </li>
  * <li>
@@ -127,8 +127,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,6 +142,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemBusinessInformation {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected InformationQualifier qualifier;
 	/**
 	 * Further information about the criticality or importance of a general
 	 * business information system.
@@ -151,8 +152,8 @@ public class SystemBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InformationQualifier#SystemBusinessInformation
-	 * InformationQualifier.SystemBusinessInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InformationQualifier#mmSystemBusinessInformation
+	 * InformationQualifier.mmSystemBusinessInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -161,22 +162,22 @@ public class SystemBusinessInformation {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.InformationQualifier
 	 * InformationQualifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#Qualifier
-	 * GeneralBusinessInformation.Qualifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#Qualifier
-	 * GeneralBusinessInformationSearchCriteria.Qualifier}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#mmQualifier
+	 * GeneralBusinessInformation.mmQualifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#mmQualifier
+	 * GeneralBusinessInformationSearchCriteria.mmQualifier}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -190,21 +191,22 @@ public class SystemBusinessInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Qualifier = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmQualifier = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformation.Qualifier, com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.Qualifier);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformation.mmQualifier, com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmQualifier);
 			elementContext_lazy = () -> SystemBusinessInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Qualifier";
 			definition = "Further information about the criticality or importance of a general business information system.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InformationQualifier.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InformationQualifier.SystemBusinessInformation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.InformationQualifier.mmSystemBusinessInformation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InformationQualifier.mmObject();
 		}
 	};
+	protected Max35Text subject;
 	/**
 	 * Subject line of an item of general business information, summarizing the
 	 * topic and intended destination of the information.
@@ -215,22 +217,22 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#Subject
-	 * GeneralBusinessInformation.Subject}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#Subject
-	 * GeneralBusinessInformationSearchCriteria.Subject}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#mmSubject
+	 * GeneralBusinessInformation.mmSubject}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#mmSubject
+	 * GeneralBusinessInformationSearchCriteria.mmSubject}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -244,19 +246,20 @@ public class SystemBusinessInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Subject = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSubject = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformation.Subject, com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.Subject);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformation.mmSubject, com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmSubject);
 			elementContext_lazy = () -> SystemBusinessInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Subject";
 			definition = "Subject line of an item of general business information, summarizing the topic and intended destination of the information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text subjectDetails;
 	/**
 	 * General business information, in unstructured form.
 	 * <p>
@@ -266,19 +269,19 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#SubjectDetails
-	 * GeneralBusinessInformation.SubjectDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#mmSubjectDetails
+	 * GeneralBusinessInformation.mmSubjectDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -290,19 +293,20 @@ public class SystemBusinessInformation {
 	 * definition} = "General business information, in unstructured form."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute SubjectDetails = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmSubjectDetails = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformation.SubjectDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformation.mmSubjectDetails);
 			elementContext_lazy = () -> SystemBusinessInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SubjectDetails";
 			definition = "General business information, in unstructured form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identification of a general business information
 	 * system, as assigned by the system transaction administrator.
@@ -313,28 +317,28 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport#BusinessInformationReference
-	 * GeneralBusinessReport.BusinessInformationReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport2#BusinessInformationReference
-	 * GeneralBusinessReport2.BusinessInformationReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3#BusinessInformationReference
-	 * GeneralBusinessReport3.BusinessInformationReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#BusinessInformationReference
-	 * GeneralBusinessReport4.BusinessInformationReference}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport#mmBusinessInformationReference
+	 * GeneralBusinessReport.mmBusinessInformationReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport2#mmBusinessInformationReference
+	 * GeneralBusinessReport2.mmBusinessInformationReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3#mmBusinessInformationReference
+	 * GeneralBusinessReport3.mmBusinessInformationReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#mmBusinessInformationReference
+	 * GeneralBusinessReport4.mmBusinessInformationReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -348,20 +352,21 @@ public class SystemBusinessInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Identification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessReport.BusinessInformationReference, com.tools20022.repository.msg.GeneralBusinessReport2.BusinessInformationReference,
-					com.tools20022.repository.msg.GeneralBusinessReport3.BusinessInformationReference, com.tools20022.repository.msg.GeneralBusinessReport4.BusinessInformationReference);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessReport.mmBusinessInformationReference, com.tools20022.repository.msg.GeneralBusinessReport2.mmBusinessInformationReference,
+					com.tools20022.repository.msg.GeneralBusinessReport3.mmBusinessInformationReference, com.tools20022.repository.msg.GeneralBusinessReport4.mmBusinessInformationReference);
 			elementContext_lazy = () -> SystemBusinessInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text reference;
 	/**
 	 * Unique and unambiguous reference assigned to a general business
 	 * information system.
@@ -372,19 +377,19 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#Reference
-	 * GeneralBusinessInformationSearchCriteria.Reference}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#mmReference
+	 * GeneralBusinessInformationSearchCriteria.mmReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -398,19 +403,20 @@ public class SystemBusinessInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Reference = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmReference = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.Reference);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmReference);
 			elementContext_lazy = () -> SystemBusinessInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Reference";
 			definition = "Unique and unambiguous reference assigned to a general business information system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected System system;
 	/**
 	 * System for which business information is generated.
 	 * <p>
@@ -419,8 +425,8 @@ public class SystemBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.System#SystemGeneratedInformation
-	 * System.SystemGeneratedInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmSystemGeneratedInformation
+	 * System.mmSystemGeneratedInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -443,39 +449,87 @@ public class SystemBusinessInformation {
 	 * definition} = "System for which business information is generated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd System = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SystemBusinessInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "System for which business information is generated.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.System.SystemGeneratedInformation;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.System.mmSystemGeneratedInformation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SystemBusinessInformation";
 				definition = "Details about business information related to a system.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.SystemGeneratedInformation, com.tools20022.repository.entity.InformationQualifier.SystemBusinessInformation);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessReport.GeneralBusinessInformation, com.tools20022.repository.msg.GeneralBusinessReport2.GeneralBusinessInformation,
-						com.tools20022.repository.msg.GeneralBusinessReport3.GeneralBusinessOrError, com.tools20022.repository.msg.GeneralBusinessReport4.GeneralBusinessOrError);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemBusinessInformation.Qualifier, com.tools20022.repository.entity.SystemBusinessInformation.Subject,
-						com.tools20022.repository.entity.SystemBusinessInformation.SubjectDetails, com.tools20022.repository.entity.SystemBusinessInformation.Identification,
-						com.tools20022.repository.entity.SystemBusinessInformation.Reference, com.tools20022.repository.entity.SystemBusinessInformation.System);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmSystemGeneratedInformation, com.tools20022.repository.entity.InformationQualifier.mmSystemBusinessInformation);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessReport.mmGeneralBusinessInformation, com.tools20022.repository.msg.GeneralBusinessReport2.mmGeneralBusinessInformation,
+						com.tools20022.repository.msg.GeneralBusinessReport3.mmGeneralBusinessOrError, com.tools20022.repository.msg.GeneralBusinessReport4.mmGeneralBusinessOrError);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemBusinessInformation.mmQualifier, com.tools20022.repository.entity.SystemBusinessInformation.mmSubject,
+						com.tools20022.repository.entity.SystemBusinessInformation.mmSubjectDetails, com.tools20022.repository.entity.SystemBusinessInformation.mmIdentification,
+						com.tools20022.repository.entity.SystemBusinessInformation.mmReference, com.tools20022.repository.entity.SystemBusinessInformation.mmSystem);
 				derivationComponent_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmObject(), GeneralBusinessReport.mmObject(), GeneralBusinessReport2.mmObject(), GeneralBusinessOrError2Choice.mmObject(),
 						GeneralBusinessReport3.mmObject(), GeneralBusinessOrError1Choice.mmObject(), GeneralBusinessInformationSearchCriteria.mmObject(), GeneralBusinessOrError3Choice.mmObject(), GeneralBusinessOrError4Choice.mmObject(),
 						GeneralBusinessReport4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InformationQualifier getQualifier() {
+		return qualifier;
+	}
+
+	public void setQualifier(com.tools20022.repository.entity.InformationQualifier qualifier) {
+		this.qualifier = qualifier;
+	}
+
+	public Max35Text getSubject() {
+		return subject;
+	}
+
+	public void setSubject(Max35Text subject) {
+		this.subject = subject;
+	}
+
+	public Max350Text getSubjectDetails() {
+		return subjectDetails;
+	}
+
+	public void setSubjectDetails(Max350Text subjectDetails) {
+		this.subjectDetails = subjectDetails;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getReference() {
+		return reference;
+	}
+
+	public void setReference(Max35Text reference) {
+		this.reference = reference;
+	}
+
+	public System getSystem() {
+		return system;
+	}
+
+	public void setSystem(com.tools20022.repository.entity.System system) {
+		this.system = system;
 	}
 }

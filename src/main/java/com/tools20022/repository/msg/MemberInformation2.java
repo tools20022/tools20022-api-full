@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports on members.
@@ -32,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberInformation2#MemberReport
- * MemberInformation2.MemberReport}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberInformation2#mmMemberReport
+ * MemberInformation2.mmMemberReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MemberInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.MemberReport2> memberReport;
 	/**
 	 * Reports either member information or a business error.
 	 * <p>
@@ -80,7 +82,7 @@ public class MemberInformation2 {
 	 * definition} = "Reports either member information or a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MemberReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMemberReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MemberInformation2.mmObject();
 			isDerived = false;
@@ -89,21 +91,29 @@ public class MemberInformation2 {
 			name = "MemberReport";
 			definition = "Reports either member information or a business error.";
 			minOccurs = 1;
-			type_lazy = () -> MemberReport2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MemberReport2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberInformation2.MemberReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberInformation2.mmMemberReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberInformation2";
 				definition = "Reports on members.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<MemberReport2> getMemberReport() {
+		return memberReport;
+	}
+
+	public void setMemberReport(List<com.tools20022.repository.msg.MemberReport2> memberReport) {
+		this.memberReport = memberReport;
 	}
 }

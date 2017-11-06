@@ -33,19 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateAction1#Code
- * CorporateAction1.Code}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateAction1#Number
- * CorporateAction1.Number}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateAction1#Proprietary
- * CorporateAction1.Proprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateAction1#mmCode
+ * CorporateAction1.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateAction1#mmNumber
+ * CorporateAction1.mmNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateAction1#mmProprietary
+ * CorporateAction1.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateAction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text code;
 	/**
 	 * Specifies the code of corporate action event, in free-text format.
 	 * <p>
@@ -89,7 +90,7 @@ public class CorporateAction1 {
 	 * "Specifies the code of corporate action event, in free-text format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateAction1.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class CorporateAction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the code of corporate action event, in free-text format.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text number;
 	/**
 	 * Reference assigned by the account servicer to unambiguously identify a
 	 * corporate action event.
@@ -132,7 +134,7 @@ public class CorporateAction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateAction1.mmObject();
 			isDerived = false;
@@ -140,11 +142,12 @@ public class CorporateAction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Reference assigned by the account servicer to unambiguously identify a corporate action event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text proprietary;
 	/**
 	 * Proprietary corporate action event information.
 	 * <p>
@@ -172,7 +175,7 @@ public class CorporateAction1 {
 	 * definition} = "Proprietary corporate action event information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateAction1.mmObject();
 			isDerived = false;
@@ -180,8 +183,8 @@ public class CorporateAction1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary corporate action event information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -189,13 +192,37 @@ public class CorporateAction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction1.Code, com.tools20022.repository.msg.CorporateAction1.Number, com.tools20022.repository.msg.CorporateAction1.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction1.mmCode, com.tools20022.repository.msg.CorporateAction1.mmNumber, com.tools20022.repository.msg.CorporateAction1.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateAction1";
 				definition = "An event determined by a corporation's board of directors, that changes the existing corporate capital structure or financial condition.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCode() {
+		return code;
+	}
+
+	public void setCode(Max35Text code) {
+		this.code = code;
+	}
+
+	public Max35Text getNumber() {
+		return number;
+	}
+
+	public void setNumber(Max35Text number) {
+		this.number = number;
+	}
+
+	public Max35Text getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(Max35Text proprietary) {
+		this.proprietary = proprietary;
 	}
 }

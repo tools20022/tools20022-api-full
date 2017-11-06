@@ -34,10 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage5#Format
- * ActionMessage5.Format}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage5#MessageContent
- * ActionMessage5.MessageContent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActionMessage5#mmFormat
+ * ActionMessage5.mmFormat}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ActionMessage5#mmMessageContent
+ * ActionMessage5.mmMessageContent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ActionMessage5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected OutputFormat1Code format;
 	/**
 	 * Format of the content.
 	 * <p>
@@ -91,7 +93,7 @@ public class ActionMessage5 {
 	 * definition} = "Format of the content."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Format = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ActionMessage5.mmObject();
 			isDerived = false;
@@ -99,11 +101,12 @@ public class ActionMessage5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Format of the content.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> OutputFormat1Code.mmObject();
 		}
 	};
+	protected Max20000Text messageContent;
 	/**
 	 * Text or graphic data to be display or printed to the cardholder or the
 	 * cashier.
@@ -118,8 +121,8 @@ public class ActionMessage5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#ActionMessage
-	 * CardPaymentAcquiring.ActionMessage}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmActionMessage
+	 * CardPaymentAcquiring.mmActionMessage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -140,22 +143,22 @@ public class ActionMessage5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ActionMessage1#MessageContent
-	 * ActionMessage1.MessageContent}</li>
+	 * {@linkplain com.tools20022.repository.msg.ActionMessage1#mmMessageContent
+	 * ActionMessage1.mmMessageContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageContent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageContent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmActionMessage;
 			componentContext_lazy = () -> ActionMessage5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.ActionMessage;
 			isDerived = false;
 			xmlTag = "MsgCntt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageContent";
 			definition = "Text or graphic data to be display or printed to the cardholder or the cashier.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActionMessage1.MessageContent;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ActionMessage1.mmMessageContent;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max20000Text.mmObject();
 		}
 	};
@@ -163,9 +166,9 @@ public class ActionMessage5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActionMessage5.Format, com.tools20022.repository.msg.ActionMessage5.MessageContent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActionMessage5.mmFormat, com.tools20022.repository.msg.ActionMessage5.mmMessageContent);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ActionMessage5";
 				definition = "Message to be displayed to the cardholder or the cashier.";
@@ -173,5 +176,21 @@ public class ActionMessage5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OutputFormat1Code getFormat() {
+		return format;
+	}
+
+	public void setFormat(OutputFormat1Code format) {
+		this.format = format;
+	}
+
+	public Max20000Text getMessageContent() {
+		return messageContent;
+	}
+
+	public void setMessageContent(Max20000Text messageContent) {
+		this.messageContent = messageContent;
 	}
 }

@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralMovement9#CollateralType
- * CollateralMovement9.CollateralType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralMovement9#Date
- * CollateralMovement9.Date}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralMovement9#mmCollateralType
+ * CollateralMovement9.mmCollateralType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralMovement9#mmDate
+ * CollateralMovement9.mmDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralMovement9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CollateralType1Code collateralType;
 	/**
 	 * Specifies the type of collateral.
 	 * <p>
@@ -77,8 +78,8 @@ public class CollateralMovement9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Collateral#CollateralType
-	 * Collateral.CollateralType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralType
+	 * Collateral.mmCollateralType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class CollateralMovement9 {
 	 * definition} = "Specifies the type of collateral."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CollateralType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCollateralType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralType;
 			componentContext_lazy = () -> CollateralMovement9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.CollateralType;
 			isDerived = false;
 			xmlTag = "CollTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralType";
 			definition = "Specifies the type of collateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CollateralType1Code.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Date by which the collateral movement must be executed.
 	 * <p>
@@ -123,8 +125,8 @@ public class CollateralMovement9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#RequestedSettlementDate
-	 * Obligation.RequestedSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmRequestedSettlementDate
+	 * Obligation.mmRequestedSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class CollateralMovement9 {
 	 * definition} = "Date by which the collateral movement must be executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> CollateralMovement9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.RequestedSettlementDate;
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date by which the collateral movement must be executed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class CollateralMovement9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement9.CollateralType, com.tools20022.repository.msg.CollateralMovement9.Date);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement9.mmCollateralType, com.tools20022.repository.msg.CollateralMovement9.mmDate);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralMovement9";
 				definition = "Specifies the type of collateral that will be delivered and the date to be reported.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CollateralType1Code getCollateralType() {
+		return collateralType;
+	}
+
+	public void setCollateralType(CollateralType1Code collateralType) {
+		this.collateralType = collateralType;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction2Choice#Initiation
- * CorrectiveTransaction2Choice.Initiation}</li>
+ * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction2Choice#mmInitiation
+ * CorrectiveTransaction2Choice.mmInitiation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction2Choice#Interbank
- * CorrectiveTransaction2Choice.Interbank}</li>
+ * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction2Choice#mmInterbank
+ * CorrectiveTransaction2Choice.mmInterbank}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#CorrectionTransaction
- * ResolutionOfInvestigationV07.CorrectionTransaction}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07#mmCorrectionTransaction
+ * ResolutionOfInvestigationV07.mmCorrectionTransaction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorrectiveTransaction2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorrectivePaymentInitiation2 initiation;
 	/**
 	 * Set of elements used to reference the details of the corrective payment
 	 * initiation.
@@ -90,8 +91,8 @@ public class CorrectiveTransaction2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentExecution
-	 * Payment.PaymentExecution}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentExecution
+	 * Payment.mmPaymentExecution}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,26 +114,27 @@ public class CorrectiveTransaction2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction1Choice#Initiation
-	 * CorrectiveTransaction1Choice.Initiation}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction1Choice#mmInitiation
+	 * CorrectiveTransaction1Choice.mmInitiation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Initiation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInitiation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentExecution;
 			componentContext_lazy = () -> CorrectiveTransaction2Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentExecution;
 			isDerived = false;
 			xmlTag = "Initn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initiation";
 			definition = "Set of elements used to reference the details of the corrective payment initiation.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorrectiveTransaction1Choice.Initiation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmInitiation;
 			maxOccurs = 1;
-			type_lazy = () -> CorrectivePaymentInitiation2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorrectivePaymentInitiation2.mmObject();
 		}
 	};
+	protected CorrectiveInterbankTransaction1 interbank;
 	/**
 	 * Set of elements used to reference the details of the corrective interbank
 	 * payment transaction.
@@ -168,34 +170,34 @@ public class CorrectiveTransaction2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction1Choice#Interbank
-	 * CorrectiveTransaction1Choice.Interbank}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction1Choice#mmInterbank
+	 * CorrectiveTransaction1Choice.mmInterbank}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Interbank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInterbank = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorrectiveTransaction2Choice.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> CorrectiveTransaction2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBk";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interbank";
 			definition = "Set of elements used to reference the details of the corrective interbank payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorrectiveTransaction1Choice.Interbank;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmInterbank;
 			maxOccurs = 1;
-			type_lazy = () -> CorrectiveInterbankTransaction1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CorrectiveInterbankTransaction1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorrectiveTransaction2Choice.Initiation, com.tools20022.repository.choice.CorrectiveTransaction2Choice.Interbank);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorrectiveTransaction2Choice.mmInitiation, com.tools20022.repository.choice.CorrectiveTransaction2Choice.mmInterbank);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmCorrectionTransaction);
 				trace_lazy = () -> Payment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.CorrectionTransaction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorrectiveTransaction2Choice";
 				definition = "Specifies the corrective transaction on which the investigation is processed.";
@@ -203,5 +205,21 @@ public class CorrectiveTransaction2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorrectivePaymentInitiation2 getInitiation() {
+		return initiation;
+	}
+
+	public void setInitiation(CorrectivePaymentInitiation2 initiation) {
+		this.initiation = initiation;
+	}
+
+	public CorrectiveInterbankTransaction1 getInterbank() {
+		return interbank;
+	}
+
+	public void setInterbank(CorrectiveInterbankTransaction1 interbank) {
+		this.interbank = interbank;
 	}
 }

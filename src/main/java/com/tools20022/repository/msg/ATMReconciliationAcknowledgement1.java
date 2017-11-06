@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMReconciliationAcknowledgement1#ATM
- * ATMReconciliationAcknowledgement1.ATM}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMReconciliationAcknowledgement1#mmATM
+ * ATMReconciliationAcknowledgement1.mmATM}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMReconciliationAcknowledgement1#Transaction
- * ATMReconciliationAcknowledgement1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMReconciliationAcknowledgement1#mmTransaction
+ * ATMReconciliationAcknowledgement1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,15 +45,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01#ATMReconciliationAcknowledgement
- * ATMReconciliationAcknowledgementV01.ATMReconciliationAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01#mmATMReconciliationAcknowledgement
+ * ATMReconciliationAcknowledgementV01.mmATMReconciliationAcknowledgement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMReconciliationAcknowledgement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AutomatedTellerMachine3 aTM;
 	/**
 	 * ATM information.
 	 * <p>
@@ -96,7 +97,7 @@ public class ATMReconciliationAcknowledgement1 {
 	 * definition} = "ATM information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ATM = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMReconciliationAcknowledgement1.mmObject();
 			isDerived = false;
@@ -104,12 +105,13 @@ public class ATMReconciliationAcknowledgement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATM";
 			definition = "ATM information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AutomatedTellerMachine3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine3.mmObject();
 		}
 	};
+	protected ATMTransaction12 transaction;
 	/**
 	 * Information about the reconciliation response.
 	 * <p>
@@ -136,7 +138,7 @@ public class ATMReconciliationAcknowledgement1 {
 	 * definition} = "Information about the reconciliation response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMReconciliationAcknowledgement1.mmObject();
 			isDerived = false;
@@ -144,24 +146,40 @@ public class ATMReconciliationAcknowledgement1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Information about the reconciliation response.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction12.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMReconciliationAcknowledgement1.ATM, com.tools20022.repository.msg.ATMReconciliationAcknowledgement1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.ATMReconciliationAcknowledgement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMReconciliationAcknowledgement1.mmATM, com.tools20022.repository.msg.ATMReconciliationAcknowledgement1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.mmATMReconciliationAcknowledgement);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMReconciliationAcknowledgement1";
 				definition = "Information related to the acknowledgement  of an ATM reconciliation from the ATM. manager.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AutomatedTellerMachine3 getATM() {
+		return aTM;
+	}
+
+	public void setATM(com.tools20022.repository.msg.AutomatedTellerMachine3 aTM) {
+		this.aTM = aTM;
+	}
+
+	public ATMTransaction12 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction12 transaction) {
+		this.transaction = transaction;
 	}
 }

@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch2#PaymentInstructionStatus
- * InstructionStatusSearch2.PaymentInstructionStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch2#mmPaymentInstructionStatus
+ * InstructionStatusSearch2.mmPaymentInstructionStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch2#PaymentInstructionStatusDateTime
- * InstructionStatusSearch2.PaymentInstructionStatusDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch2#mmPaymentInstructionStatusDateTime
+ * InstructionStatusSearch2.mmPaymentInstructionStatusDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch2#ProprietaryStatusReason
- * InstructionStatusSearch2.ProprietaryStatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch2#mmProprietaryStatusReason
+ * InstructionStatusSearch2.mmProprietaryStatusReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstructionStatusSearch2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentStatusCodeSearchChoice paymentInstructionStatus;
 	/**
 	 * Status of a transfer.
 	 * <p>
@@ -102,20 +103,21 @@ public class InstructionStatusSearch2 {
 	 * definition} = "Status of a transfer.\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInstructionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInstructionStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstructionStatusSearch2.mmObject();
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
+			componentContext_lazy = () -> InstructionStatusSearch2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatus";
 			definition = "Status of a transfer.\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentStatusCodeSearchChoice.mmObject();
 		}
 	};
+	protected DateTimePeriodChoice paymentInstructionStatusDateTime;
 	/**
 	 * Date and time at which the status was assigned to the transfer.
 	 * <p>
@@ -129,8 +131,8 @@ public class InstructionStatusSearch2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDateTime
-	 * Status.StatusDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDateTime
+	 * Status.mmStatusDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +152,21 @@ public class InstructionStatusSearch2 {
 	 * "Date and time at which the status was assigned to the transfer.\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInstructionStatusDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInstructionStatusDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
 			componentContext_lazy = () -> InstructionStatusSearch2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDateTime;
 			isDerived = false;
 			xmlTag = "PmtInstrStsDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusDateTime";
 			definition = "Date and time at which the status was assigned to the transfer.\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText proprietaryStatusReason;
 	/**
 	 * Defines the reason that has been used by the Target2 SSP system to reject
 	 * the transaction
@@ -195,7 +198,7 @@ public class InstructionStatusSearch2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProprietaryStatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietaryStatusReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstructionStatusSearch2.mmObject();
 			isDerived = false;
@@ -203,8 +206,8 @@ public class InstructionStatusSearch2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatusReason";
 			definition = "Defines the reason that has been used by the Target2 SSP system to reject the transaction";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
@@ -212,15 +215,39 @@ public class InstructionStatusSearch2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionStatusSearch2.PaymentInstructionStatus, com.tools20022.repository.msg.InstructionStatusSearch2.PaymentInstructionStatusDateTime,
-						com.tools20022.repository.msg.InstructionStatusSearch2.ProprietaryStatusReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionStatusSearch2.mmPaymentInstructionStatus, com.tools20022.repository.msg.InstructionStatusSearch2.mmPaymentInstructionStatusDateTime,
+						com.tools20022.repository.msg.InstructionStatusSearch2.mmProprietaryStatusReason);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstructionStatusSearch2";
 				definition = "Defines the criteria which are used to search for the status of the payment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentStatusCodeSearchChoice getPaymentInstructionStatus() {
+		return paymentInstructionStatus;
+	}
+
+	public void setPaymentInstructionStatus(PaymentStatusCodeSearchChoice paymentInstructionStatus) {
+		this.paymentInstructionStatus = paymentInstructionStatus;
+	}
+
+	public DateTimePeriodChoice getPaymentInstructionStatusDateTime() {
+		return paymentInstructionStatusDateTime;
+	}
+
+	public void setPaymentInstructionStatusDateTime(DateTimePeriodChoice paymentInstructionStatusDateTime) {
+		this.paymentInstructionStatusDateTime = paymentInstructionStatusDateTime;
+	}
+
+	public Max4AlphaNumericText getProprietaryStatusReason() {
+		return proprietaryStatusReason;
+	}
+
+	public void setProprietaryStatusReason(Max4AlphaNumericText proprietaryStatusReason) {
+		this.proprietaryStatusReason = proprietaryStatusReason;
 	}
 }

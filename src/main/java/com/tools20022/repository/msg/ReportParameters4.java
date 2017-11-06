@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters4#ReportIdentification
- * ReportParameters4.ReportIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters4#mmReportIdentification
+ * ReportParameters4.mmReportIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportParameters4#ReportDateAndTime
- * ReportParameters4.ReportDateAndTime}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportParameters4#mmReportDateAndTime
+ * ReportParameters4.mmReportDateAndTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#ReportParameters
- * SettlementObligationReportV03.ReportParameters}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmReportParameters
+ * SettlementObligationReportV03.mmReportParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reportIdentification;
 	/**
 	 * Unique identification of the report.
 	 * <p>
@@ -95,7 +96,7 @@ public class ReportParameters4 {
 	 * definition} = "Unique identification of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters4.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class ReportParameters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique identification of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice reportDateAndTime;
 	/**
 	 * Date and time of the report .
 	 * <p>
@@ -136,7 +138,7 @@ public class ReportParameters4 {
 	 * definition} = "Date and time of the report ."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportDateAndTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameters4.mmObject();
 			isDerived = false;
@@ -144,8 +146,8 @@ public class ReportParameters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateAndTime";
 			definition = "Date and time of the report .";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -153,14 +155,30 @@ public class ReportParameters4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters4.ReportIdentification, com.tools20022.repository.msg.ReportParameters4.ReportDateAndTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.SettlementObligationReportV03.ReportParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters4.mmReportIdentification, com.tools20022.repository.msg.ReportParameters4.mmReportDateAndTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.SettlementObligationReportV03.mmReportParameters);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportParameters4";
 				definition = "Provides the parameters of the report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReportIdentification() {
+		return reportIdentification;
+	}
+
+	public void setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = reportIdentification;
+	}
+
+	public DateAndDateTimeChoice getReportDateAndTime() {
+		return reportDateAndTime;
+	}
+
+	public void setReportDateAndTime(DateAndDateTimeChoice reportDateAndTime) {
+		this.reportDateAndTime = reportDateAndTime;
 	}
 }

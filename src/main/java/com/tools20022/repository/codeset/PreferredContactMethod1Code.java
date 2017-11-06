@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferredContactMethod1Code#Letter
- * PreferredContactMethod1Code.Letter}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferredContactMethod1Code#mmLetter
+ * PreferredContactMethod1Code.mmLetter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferredContactMethod1Code#Email
- * PreferredContactMethod1Code.Email}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferredContactMethod1Code#mmEmail
+ * PreferredContactMethod1Code.mmEmail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferredContactMethod1Code#Phone
- * PreferredContactMethod1Code.Phone}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferredContactMethod1Code#mmPhone
+ * PreferredContactMethod1Code.mmPhone}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferredContactMethod1Code#Fax
- * PreferredContactMethod1Code.Fax}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferredContactMethod1Code#mmFax
+ * PreferredContactMethod1Code.mmFax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferredContactMethod1Code#MobileOrCellPhone
- * PreferredContactMethod1Code.MobileOrCellPhone}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferredContactMethod1Code#mmMobileOrCellPhone
+ * PreferredContactMethod1Code.mmMobileOrCellPhone}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	 * name} = "Letter"</li>
 	 * </ul>
 	 */
-	public static final MMCode Letter = new MMCode() {
+	public static final MMCode mmLetter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Letter";
@@ -115,7 +115,7 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	 * name} = "Email"</li>
 	 * </ul>
 	 */
-	public static final MMCode Email = new MMCode() {
+	public static final MMCode mmEmail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Email";
@@ -138,7 +138,7 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	 * name} = "Phone"</li>
 	 * </ul>
 	 */
-	public static final MMCode Phone = new MMCode() {
+	public static final MMCode mmPhone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Phone";
@@ -161,7 +161,7 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	 * name} = "Fax"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fax = new MMCode() {
+	public static final MMCode mmFax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fax";
@@ -184,7 +184,7 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	 * name} = "MobileOrCellPhone"</li>
 	 * </ul>
 	 */
-	public static final MMCode MobileOrCellPhone = new MMCode() {
+	public static final MMCode mmMobileOrCellPhone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MobileOrCellPhone";
@@ -195,14 +195,14 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LETT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PreferredContactMethod1Code";
 				definition = "Preferred method used to reach the individual contact within an organisation.";
-				code_lazy = () -> Arrays
-						.asList(com.tools20022.repository.codeset.PreferredContactMethod1Code.Letter, com.tools20022.repository.codeset.PreferredContactMethod1Code.Email, com.tools20022.repository.codeset.PreferredContactMethod1Code.Phone,
-								com.tools20022.repository.codeset.PreferredContactMethod1Code.Fax, com.tools20022.repository.codeset.PreferredContactMethod1Code.MobileOrCellPhone);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreferredContactMethod1Code.mmLetter, com.tools20022.repository.codeset.PreferredContactMethod1Code.mmEmail,
+						com.tools20022.repository.codeset.PreferredContactMethod1Code.mmPhone, com.tools20022.repository.codeset.PreferredContactMethod1Code.mmFax,
+						com.tools20022.repository.codeset.PreferredContactMethod1Code.mmMobileOrCellPhone);
 				trace_lazy = () -> PreferredContactMethodCode.mmObject();
 			}
 		});

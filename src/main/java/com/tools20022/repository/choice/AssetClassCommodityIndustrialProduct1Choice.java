@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice#Construction
- * AssetClassCommodityIndustrialProduct1Choice.Construction}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice#mmConstruction
+ * AssetClassCommodityIndustrialProduct1Choice.mmConstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice#Manufacturing
- * AssetClassCommodityIndustrialProduct1Choice.Manufacturing}</li>
+ * {@linkplain com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice#mmManufacturing
+ * AssetClassCommodityIndustrialProduct1Choice.mmManufacturing}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AssetClassCommodityIndustrialProduct1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected IndustrialProductCommodityConstruction1 construction;
 	/**
 	 * Construction related industrial product commodity derivative.
 	 * <p>
@@ -77,8 +78,8 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +99,22 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	 * "Construction related industrial product commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Construction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConstruction = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityIndustrialProduct1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "Cnstrctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Construction";
 			definition = "Construction related industrial product commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IndustrialProductCommodityConstruction1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IndustrialProductCommodityConstruction1.mmObject();
 		}
 	};
+	protected IndustrialProductCommodityManufacturing1 manufacturing;
 	/**
 	 * Manufacturing related industrial product commodity derivative.
 	 * <p>
@@ -125,8 +127,8 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,34 +148,50 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	 * "Manufacturing related industrial product commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Manufacturing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmManufacturing = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityIndustrialProduct1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "Manfctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manufacturing";
 			definition = "Manufacturing related industrial product commodity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> IndustrialProductCommodityManufacturing1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IndustrialProductCommodityManufacturing1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.Construction, com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.Manufacturing);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmConstruction,
+						com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmManufacturing);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityIndustrialProduct1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is industrial product.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IndustrialProductCommodityConstruction1 getConstruction() {
+		return construction;
+	}
+
+	public void setConstruction(IndustrialProductCommodityConstruction1 construction) {
+		this.construction = construction;
+	}
+
+	public IndustrialProductCommodityManufacturing1 getManufacturing() {
+		return manufacturing;
+	}
+
+	public void setManufacturing(IndustrialProductCommodityManufacturing1 manufacturing) {
+		this.manufacturing = manufacturing;
 	}
 }

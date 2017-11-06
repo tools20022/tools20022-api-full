@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountModification1#ScopeIndication
- * SecuritiesAccountModification1.ScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountModification1#mmScopeIndication
+ * SecuritiesAccountModification1.mmScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesAccountModification1#RequestedModification
- * SecuritiesAccountModification1.RequestedModification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountModification1#mmRequestedModification
+ * SecuritiesAccountModification1.mmRequestedModification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesAccountModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification1Code scopeIndication;
 	/**
 	 * Specifies the type of requested modification.
 	 * <p>
@@ -91,7 +92,7 @@ public class SecuritiesAccountModification1 {
 	 * definition} = "Specifies the type of requested modification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountModification1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class SecuritiesAccountModification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScopeIndication";
 			definition = "Specifies the type of requested modification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	protected SecuritiesAccountModification1Choice requestedModification;
 	/**
 	 * Specifies the elements to be modified for the securities account
 	 * reference data.
@@ -134,7 +136,7 @@ public class SecuritiesAccountModification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestedModification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestedModification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecuritiesAccountModification1.mmObject();
 			isDerived = false;
@@ -142,23 +144,39 @@ public class SecuritiesAccountModification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedModification";
 			definition = "Specifies the elements to be modified for the securities account reference data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountModification1.ScopeIndication, com.tools20022.repository.msg.SecuritiesAccountModification1.RequestedModification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountModification1.mmScopeIndication, com.tools20022.repository.msg.SecuritiesAccountModification1.mmRequestedModification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountModification1";
 				definition = "Information about the kind of modification request for securities account reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification1Code getScopeIndication() {
+		return scopeIndication;
+	}
+
+	public void setScopeIndication(DataModification1Code scopeIndication) {
+		this.scopeIndication = scopeIndication;
+	}
+
+	public SecuritiesAccountModification1Choice getRequestedModification() {
+		return requestedModification;
+	}
+
+	public void setRequestedModification(SecuritiesAccountModification1Choice requestedModification) {
+		this.requestedModification = requestedModification;
 	}
 }

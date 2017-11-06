@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max15NumericText;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Statistical information on the processing of records included in the original
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalReportStatistics3#TotalNumberOfRecords
- * OriginalReportStatistics3.TotalNumberOfRecords}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalReportStatistics3#mmTotalNumberOfRecords
+ * OriginalReportStatistics3.mmTotalNumberOfRecords}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalReportStatistics3#NumberOfRecordsPerStatus
- * OriginalReportStatistics3.NumberOfRecordsPerStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalReportStatistics3#mmNumberOfRecordsPerStatus
+ * OriginalReportStatistics3.mmNumberOfRecordsPerStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalReportStatistics3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max15NumericText totalNumberOfRecords;
 	/**
 	 * Total numbers of records included in the original file.
 	 * <p>
@@ -90,7 +92,7 @@ public class OriginalReportStatistics3 {
 	 * definition} = "Total numbers of records included in the original file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfRecords = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfRecords = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalReportStatistics3.mmObject();
 			isDerived = false;
@@ -98,11 +100,12 @@ public class OriginalReportStatistics3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfRecords";
 			definition = "Total numbers of records included in the original file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.NumberOfRecordsPerStatus1> numberOfRecordsPerStatus;
 	/**
 	 * Detailed information on the number of records for each records status.
 	 * <p>
@@ -131,7 +134,7 @@ public class OriginalReportStatistics3 {
 	 * "Detailed information on the number of records for each records status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NumberOfRecordsPerStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNumberOfRecordsPerStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> OriginalReportStatistics3.mmObject();
 			isDerived = false;
@@ -140,21 +143,37 @@ public class OriginalReportStatistics3 {
 			name = "NumberOfRecordsPerStatus";
 			definition = "Detailed information on the number of records for each records status.";
 			minOccurs = 1;
-			type_lazy = () -> NumberOfRecordsPerStatus1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NumberOfRecordsPerStatus1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalReportStatistics3.TotalNumberOfRecords, com.tools20022.repository.msg.OriginalReportStatistics3.NumberOfRecordsPerStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalReportStatistics3.mmTotalNumberOfRecords, com.tools20022.repository.msg.OriginalReportStatistics3.mmNumberOfRecordsPerStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalReportStatistics3";
 				definition = "Statistical information on the processing of records included in the original report.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max15NumericText getTotalNumberOfRecords() {
+		return totalNumberOfRecords;
+	}
+
+	public void setTotalNumberOfRecords(Max15NumericText totalNumberOfRecords) {
+		this.totalNumberOfRecords = totalNumberOfRecords;
+	}
+
+	public List<NumberOfRecordsPerStatus1> getNumberOfRecordsPerStatus() {
+		return numberOfRecordsPerStatus;
+	}
+
+	public void setNumberOfRecordsPerStatus(List<com.tools20022.repository.msg.NumberOfRecordsPerStatus1> numberOfRecordsPerStatus) {
+		this.numberOfRecordsPerStatus = numberOfRecordsPerStatus;
 	}
 }

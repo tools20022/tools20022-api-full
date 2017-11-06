@@ -37,32 +37,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AgentExtension4#PlaceAndName
- * AgentExtension4.PlaceAndName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AgentExtension4#AgentType
- * AgentExtension4.AgentType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AgentExtension4#mmPlaceAndName
+ * AgentExtension4.mmPlaceAndName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AgentExtension4#mmAgentType
+ * AgentExtension4.mmAgentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AgentExtension4#AgentIdentification
- * AgentExtension4.AgentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AgentExtension4#mmAgentIdentification
+ * AgentExtension4.mmAgentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AgentExtension4#AgentNameAndAddress
- * AgentExtension4.AgentNameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.AgentExtension4#mmAgentNameAndAddress
+ * AgentExtension4.mmAgentNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AgentExtension4#AgentTelephoneNumber
- * AgentExtension4.AgentTelephoneNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.AgentExtension4#mmAgentTelephoneNumber
+ * AgentExtension4.mmAgentTelephoneNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AgentExtension4#AgentEmailAddress
- * AgentExtension4.AgentEmailAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.AgentExtension4#mmAgentEmailAddress
+ * AgentExtension4.mmAgentEmailAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AgentExtension4#ContactInformation
- * AgentExtension4.ContactInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AgentExtension4#mmContactInformation
+ * AgentExtension4.mmContactInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentExtension4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -104,7 +105,7 @@ public class AgentExtension4 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AgentExtension4.mmObject();
 			isDerived = false;
@@ -112,11 +113,12 @@ public class AgentExtension4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected AgentType1Code agentType;
 	/**
 	 * Function the agent is performing.
 	 * <p>
@@ -145,7 +147,7 @@ public class AgentExtension4 {
 	 * definition} = "Function the agent is performing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AgentExtension4.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class AgentExtension4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentType";
 			definition = "Function the agent is performing.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AgentType1Code.mmObject();
 		}
 	};
+	protected Max8Text agentIdentification;
 	/**
 	 * DTC agent identification number.
 	 * <p>
@@ -185,7 +188,7 @@ public class AgentExtension4 {
 	 * definition} = "DTC agent identification number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AgentExtension4.mmObject();
 			isDerived = false;
@@ -193,11 +196,12 @@ public class AgentExtension4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentIdentification";
 			definition = "DTC agent identification number.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	protected NameAndAddress5 agentNameAndAddress;
 	/**
 	 * Name and address of the agent.
 	 * <p>
@@ -225,7 +229,7 @@ public class AgentExtension4 {
 	 * definition} = "Name and address of the agent.  "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentNameAndAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AgentExtension4.mmObject();
 			isDerived = false;
@@ -233,11 +237,12 @@ public class AgentExtension4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentNameAndAddress";
 			definition = "Name and address of the agent.  ";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> NameAndAddress5.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
 		}
 	};
+	protected PhoneNumber agentTelephoneNumber;
 	/**
 	 * Telephone number of the agent.
 	 * <p>
@@ -265,7 +270,7 @@ public class AgentExtension4 {
 	 * definition} = "Telephone number of the agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentTelephoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentTelephoneNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AgentExtension4.mmObject();
 			isDerived = false;
@@ -273,11 +278,12 @@ public class AgentExtension4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentTelephoneNumber";
 			definition = "Telephone number of the agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
 		}
 	};
+	protected Max256Text agentEmailAddress;
 	/**
 	 * Email address of the event agent.
 	 * <p>
@@ -305,7 +311,7 @@ public class AgentExtension4 {
 	 * definition} = "Email address of the event agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentEmailAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AgentExtension4.mmObject();
 			isDerived = false;
@@ -313,11 +319,12 @@ public class AgentExtension4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentEmailAddress";
 			definition = "Email address of the event agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected ContactInformation3 contactInformation;
 	/**
 	 * Agent designated contact Information details.
 	 * <p>
@@ -344,7 +351,7 @@ public class AgentExtension4 {
 	 * definition} = "Agent designated contact Information details. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AgentExtension4.mmObject();
 			isDerived = false;
@@ -352,25 +359,81 @@ public class AgentExtension4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactInformation";
 			definition = "Agent designated contact Information details. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ContactInformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactInformation3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgentExtension4.PlaceAndName, com.tools20022.repository.msg.AgentExtension4.AgentType,
-						com.tools20022.repository.msg.AgentExtension4.AgentIdentification, com.tools20022.repository.msg.AgentExtension4.AgentNameAndAddress, com.tools20022.repository.msg.AgentExtension4.AgentTelephoneNumber,
-						com.tools20022.repository.msg.AgentExtension4.AgentEmailAddress, com.tools20022.repository.msg.AgentExtension4.ContactInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgentExtension4.mmPlaceAndName, com.tools20022.repository.msg.AgentExtension4.mmAgentType,
+						com.tools20022.repository.msg.AgentExtension4.mmAgentIdentification, com.tools20022.repository.msg.AgentExtension4.mmAgentNameAndAddress, com.tools20022.repository.msg.AgentExtension4.mmAgentTelephoneNumber,
+						com.tools20022.repository.msg.AgentExtension4.mmAgentEmailAddress, com.tools20022.repository.msg.AgentExtension4.mmContactInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AgentExtension4";
 				definition = "Provides additional information regarding new agent block component. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public AgentType1Code getAgentType() {
+		return agentType;
+	}
+
+	public void setAgentType(AgentType1Code agentType) {
+		this.agentType = agentType;
+	}
+
+	public Max8Text getAgentIdentification() {
+		return agentIdentification;
+	}
+
+	public void setAgentIdentification(Max8Text agentIdentification) {
+		this.agentIdentification = agentIdentification;
+	}
+
+	public NameAndAddress5 getAgentNameAndAddress() {
+		return agentNameAndAddress;
+	}
+
+	public void setAgentNameAndAddress(com.tools20022.repository.msg.NameAndAddress5 agentNameAndAddress) {
+		this.agentNameAndAddress = agentNameAndAddress;
+	}
+
+	public PhoneNumber getAgentTelephoneNumber() {
+		return agentTelephoneNumber;
+	}
+
+	public void setAgentTelephoneNumber(PhoneNumber agentTelephoneNumber) {
+		this.agentTelephoneNumber = agentTelephoneNumber;
+	}
+
+	public Max256Text getAgentEmailAddress() {
+		return agentEmailAddress;
+	}
+
+	public void setAgentEmailAddress(Max256Text agentEmailAddress) {
+		this.agentEmailAddress = agentEmailAddress;
+	}
+
+	public ContactInformation3 getContactInformation() {
+		return contactInformation;
+	}
+
+	public void setContactInformation(com.tools20022.repository.msg.ContactInformation3 contactInformation) {
+		this.contactInformation = contactInformation;
 	}
 }

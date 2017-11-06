@@ -30,8 +30,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInformationTypeCode#ConferenceCall
- * CorporateActionInformationTypeCode.ConferenceCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInformationTypeCode#mmConferenceCall
+ * CorporateActionInformationTypeCode.mmConferenceCall}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +85,7 @@ public class CorporateActionInformationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ConferenceCall = new MMCode() {
+	public static final MMCode mmConferenceCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConferenceCall";
@@ -98,11 +98,11 @@ public class CorporateActionInformationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInformationTypeCode";
 				definition = "Specifies the type of information event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionInformationTypeCode.ConferenceCall);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionInformationTypeCode.mmConferenceCall);
 				derivation_lazy = () -> Arrays.asList(CorporateActionInformationType1Code.mmObject());
 			}
 		});

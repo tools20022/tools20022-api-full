@@ -60,19 +60,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03#Assignment
- * DuplicateV03.Assignment}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03#Case
- * DuplicateV03.Case}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03#Duplicate
- * DuplicateV03.Duplicate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.DuplicateV03#mmAssignment
+ * DuplicateV03.mmAssignment}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03#mmCase
+ * DuplicateV03.mmCase}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03#mmDuplicate
+ * DuplicateV03.mmDuplicate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.DuplicateV03#identifier
- * DuplicateV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.034.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DuplicateV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment2 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -121,17 +121,18 @@ public class DuplicateV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 	};
+	protected Case2 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -153,17 +154,18 @@ public class DuplicateV03 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case2.mmObject();
 		}
 	};
+	protected ProprietaryData4 duplicate;
 	/**
 	 * Duplicate of a previously sent message.
 	 * <p>
@@ -187,42 +189,15 @@ public class DuplicateV03 {
 	 * definition} = "Duplicate of a previously sent message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Duplicate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDuplicate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Dplct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplicate";
 			definition = "Duplicate of a previously sent message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ProprietaryData4.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "034"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "034";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -237,10 +212,42 @@ public class DuplicateV03 {
 				rootElement = "Document";
 				xmlTag = "Dplct";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DuplicateV03.Assignment, com.tools20022.repository.area.camt.DuplicateV03.Case, com.tools20022.repository.area.camt.DuplicateV03.Duplicate);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.DuplicateV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DuplicateV03.mmAssignment, com.tools20022.repository.area.camt.DuplicateV03.mmCase,
+						com.tools20022.repository.area.camt.DuplicateV03.mmDuplicate);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "034";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment2 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment2 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case2 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case2 case_) {
+		this.case_ = case_;
+	}
+
+	public ProprietaryData4 getDuplicate() {
+		return duplicate;
+	}
+
+	public void setDuplicate(ProprietaryData4 duplicate) {
+		this.duplicate = duplicate;
 	}
 }

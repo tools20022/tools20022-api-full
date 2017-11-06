@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.IntraPositionTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies additional details of the transaction.
@@ -40,62 +41,62 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#BalanceFrom
- * IntraPositionMovement2.BalanceFrom}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmBalanceFrom
+ * IntraPositionMovement2.mmBalanceFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#BalanceTo
- * IntraPositionMovement2.BalanceTo}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmBalanceTo
+ * IntraPositionMovement2.mmBalanceTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#FinancialInstrumentIdentification
- * IntraPositionMovement2.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmFinancialInstrumentIdentification
+ * IntraPositionMovement2.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#FinancialInstrumentAttributes
- * IntraPositionMovement2.FinancialInstrumentAttributes}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmFinancialInstrumentAttributes
+ * IntraPositionMovement2.mmFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#SettlementQuantity
- * IntraPositionMovement2.SettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmSettlementQuantity
+ * IntraPositionMovement2.mmSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#SettledQuantity
- * IntraPositionMovement2.SettledQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmSettledQuantity
+ * IntraPositionMovement2.mmSettledQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#PreviouslySettledQuantity
- * IntraPositionMovement2.PreviouslySettledQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmPreviouslySettledQuantity
+ * IntraPositionMovement2.mmPreviouslySettledQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#RemainingToBeSettledQuantity
- * IntraPositionMovement2.RemainingToBeSettledQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmRemainingToBeSettledQuantity
+ * IntraPositionMovement2.mmRemainingToBeSettledQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#IntendedSettlementDate
- * IntraPositionMovement2.IntendedSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmIntendedSettlementDate
+ * IntraPositionMovement2.mmIntendedSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#EffectiveSettlementDate
- * IntraPositionMovement2.EffectiveSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmEffectiveSettlementDate
+ * IntraPositionMovement2.mmEffectiveSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#StatusDate
- * IntraPositionMovement2.StatusDate}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmStatusDate
+ * IntraPositionMovement2.mmStatusDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#Linkages
- * IntraPositionMovement2.Linkages}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmLinkages
+ * IntraPositionMovement2.mmLinkages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#SecuritiesSubBalanceIdentification
- * IntraPositionMovement2.SecuritiesSubBalanceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmSecuritiesSubBalanceIdentification
+ * IntraPositionMovement2.mmSecuritiesSubBalanceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#Priority
- * IntraPositionMovement2.Priority}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmPriority
+ * IntraPositionMovement2.mmPriority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#CorporateActionEventType
- * IntraPositionMovement2.CorporateActionEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmCorporateActionEventType
+ * IntraPositionMovement2.mmCorporateActionEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#MessageOriginator
- * IntraPositionMovement2.MessageOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmMessageOriginator
+ * IntraPositionMovement2.mmMessageOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#CreationDateTime
- * IntraPositionMovement2.CreationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmCreationDateTime
+ * IntraPositionMovement2.mmCreationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#InstructionProcessingAdditionalDetails
- * IntraPositionMovement2.InstructionProcessingAdditionalDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmInstructionProcessingAdditionalDetails
+ * IntraPositionMovement2.mmInstructionProcessingAdditionalDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#SupplementaryData
- * IntraPositionMovement2.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovement2#mmSupplementaryData
+ * IntraPositionMovement2.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -104,8 +105,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,6 +120,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraPositionMovement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceFrom;
 	/**
 	 * Balance from which the securities are moving.
 	 * <p>
@@ -146,7 +148,7 @@ public class IntraPositionMovement2 {
 	 * definition} = "Balance from which the securities are moving."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -154,12 +156,13 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the securities are moving.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmObject();
 		}
 	};
+	protected SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceTo;
 	/**
 	 * Balance to which the securities are moving.
 	 * <p>
@@ -187,7 +190,7 @@ public class IntraPositionMovement2 {
 	 * definition} = "Balance to which the securities are moving."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -195,12 +198,13 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the securities are moving.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmObject();
 		}
 	};
+	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
 	 * Financial instruments representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -232,7 +236,7 @@ public class IntraPositionMovement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -240,11 +244,12 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification14.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes36 financialInstrumentAttributes;
 	/**
 	 * Elements characterising a financial instrument.
 	 * <p>
@@ -272,7 +277,7 @@ public class IntraPositionMovement2 {
 	 * definition} = "Elements characterising a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -280,12 +285,13 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAttributes36.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice settlementQuantity;
 	/**
 	 * Total quantity of securities to be settled.
 	 * <p>
@@ -314,7 +320,7 @@ public class IntraPositionMovement2 {
 	 * definition} = "Total quantity of securities to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -322,11 +328,12 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice settledQuantity;
 	/**
 	 * Quantity of financial instrument effectively settled.
 	 * <p>
@@ -354,7 +361,7 @@ public class IntraPositionMovement2 {
 	 * definition} = "Quantity of financial instrument effectively settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettledQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -362,12 +369,13 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledQuantity";
 			definition = "Quantity of financial instrument effectively settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice previouslySettledQuantity;
 	/**
 	 * Quantity of financial instrument previously settled.
 	 * <p>
@@ -395,7 +403,7 @@ public class IntraPositionMovement2 {
 	 * definition} = "Quantity of financial instrument previously settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviouslySettledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviouslySettledQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -403,12 +411,13 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySettledQuantity";
 			definition = "Quantity of financial instrument previously settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice remainingToBeSettledQuantity;
 	/**
 	 * Quantity of financial instrument remaining to be settled.
 	 * <p>
@@ -438,7 +447,7 @@ public class IntraPositionMovement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemainingToBeSettledQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemainingToBeSettledQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -446,11 +455,12 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingToBeSettledQuantity";
 			definition = "Quantity of financial instrument remaining to be settled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice intendedSettlementDate;
 	/**
 	 * Date and time at which the securities are intended to be moved.
 	 * <p>
@@ -480,7 +490,7 @@ public class IntraPositionMovement2 {
 	 * "Date and time at which the securities are intended to be moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IntendedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -488,11 +498,12 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Date and time at which the securities are intended to be moved.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice effectiveSettlementDate;
 	/**
 	 * Date and time at which the securities are moved.
 	 * <p>
@@ -521,7 +532,7 @@ public class IntraPositionMovement2 {
 	 * definition} = "Date and time at which the securities are moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EffectiveSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -529,11 +540,12 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which the securities are moved.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected ISODateTime statusDate;
 	/**
 	 * Date and time at which the status was assigned.
 	 * <p>
@@ -561,7 +573,7 @@ public class IntraPositionMovement2 {
 	 * definition} = "Date and time at which the status was assigned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -569,11 +581,12 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date and time at which the status was assigned.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Linkages26> linkages;
 	/**
 	 * Link to another transaction that must be processed after, before or at
 	 * the same time.
@@ -604,7 +617,7 @@ public class IntraPositionMovement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Linkages = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkages = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -613,9 +626,10 @@ public class IntraPositionMovement2 {
 			name = "Linkages";
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
 			minOccurs = 0;
-			complexType_lazy = () -> Linkages26.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.Linkages26.mmObject();
 		}
 	};
+	protected GenericIdentification37 securitiesSubBalanceIdentification;
 	/**
 	 * Number identifying a lot constituting the sub-balance.
 	 * <p>
@@ -643,7 +657,7 @@ public class IntraPositionMovement2 {
 	 * definition} = "Number identifying a lot constituting the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesSubBalanceIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesSubBalanceIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -651,12 +665,13 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSubBalanceIdentification";
 			definition = "Number identifying a lot constituting the sub-balance.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification37.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
 		}
 	};
+	protected PriorityNumeric1Choice priority;
 	/**
 	 * Specifies whether the transaction is to be executed with a high priority.
 	 * <p>
@@ -687,7 +702,7 @@ public class IntraPositionMovement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Priority = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -695,11 +710,12 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PriorityNumeric1Choice.mmObject();
 		}
 	};
+	protected CorporateActionEventType3Choice corporateActionEventType;
 	/**
 	 * Specifies the type of corporate event.
 	 * <p>
@@ -728,7 +744,7 @@ public class IntraPositionMovement2 {
 	 * definition} = "Specifies the type of corporate event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorporateActionEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorporateActionEventType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -736,11 +752,12 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventType";
 			definition = "Specifies the type of corporate event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionEventType3Choice.mmObject();
 		}
 	};
+	protected SystemPartyIdentification5 messageOriginator;
 	/**
 	 * Party that originated the message, if other than the sender.
 	 * <p>
@@ -769,7 +786,7 @@ public class IntraPositionMovement2 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -777,12 +794,13 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected ISODateTime creationDateTime;
 	/**
 	 * Specifies the creation date/time of the intra-position movement.
 	 * <p>
@@ -811,7 +829,7 @@ public class IntraPositionMovement2 {
 	 * "Specifies the creation date/time of the intra-position movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -819,11 +837,12 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the creation date/time of the intra-position movement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max350Text instructionProcessingAdditionalDetails;
 	/**
 	 * Provides additional settlement processing information which can not be
 	 * included within the structured fields of the message.
@@ -854,7 +873,7 @@ public class IntraPositionMovement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionProcessingAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionProcessingAdditionalDetails = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -862,11 +881,12 @@ public class IntraPositionMovement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingAdditionalDetails";
 			definition = "Provides additional settlement processing information which can not be included within the structured fields of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -896,7 +916,7 @@ public class IntraPositionMovement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IntraPositionMovement2.mmObject();
 			isDerived = false;
@@ -905,31 +925,183 @@ public class IntraPositionMovement2 {
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovement2.BalanceFrom, com.tools20022.repository.msg.IntraPositionMovement2.BalanceTo,
-						com.tools20022.repository.msg.IntraPositionMovement2.FinancialInstrumentIdentification, com.tools20022.repository.msg.IntraPositionMovement2.FinancialInstrumentAttributes,
-						com.tools20022.repository.msg.IntraPositionMovement2.SettlementQuantity, com.tools20022.repository.msg.IntraPositionMovement2.SettledQuantity,
-						com.tools20022.repository.msg.IntraPositionMovement2.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovement2.RemainingToBeSettledQuantity,
-						com.tools20022.repository.msg.IntraPositionMovement2.IntendedSettlementDate, com.tools20022.repository.msg.IntraPositionMovement2.EffectiveSettlementDate,
-						com.tools20022.repository.msg.IntraPositionMovement2.StatusDate, com.tools20022.repository.msg.IntraPositionMovement2.Linkages,
-						com.tools20022.repository.msg.IntraPositionMovement2.SecuritiesSubBalanceIdentification, com.tools20022.repository.msg.IntraPositionMovement2.Priority,
-						com.tools20022.repository.msg.IntraPositionMovement2.CorporateActionEventType, com.tools20022.repository.msg.IntraPositionMovement2.MessageOriginator,
-						com.tools20022.repository.msg.IntraPositionMovement2.CreationDateTime, com.tools20022.repository.msg.IntraPositionMovement2.InstructionProcessingAdditionalDetails,
-						com.tools20022.repository.msg.IntraPositionMovement2.SupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovement2.mmBalanceFrom, com.tools20022.repository.msg.IntraPositionMovement2.mmBalanceTo,
+						com.tools20022.repository.msg.IntraPositionMovement2.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.IntraPositionMovement2.mmFinancialInstrumentAttributes,
+						com.tools20022.repository.msg.IntraPositionMovement2.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionMovement2.mmSettledQuantity,
+						com.tools20022.repository.msg.IntraPositionMovement2.mmPreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovement2.mmRemainingToBeSettledQuantity,
+						com.tools20022.repository.msg.IntraPositionMovement2.mmIntendedSettlementDate, com.tools20022.repository.msg.IntraPositionMovement2.mmEffectiveSettlementDate,
+						com.tools20022.repository.msg.IntraPositionMovement2.mmStatusDate, com.tools20022.repository.msg.IntraPositionMovement2.mmLinkages,
+						com.tools20022.repository.msg.IntraPositionMovement2.mmSecuritiesSubBalanceIdentification, com.tools20022.repository.msg.IntraPositionMovement2.mmPriority,
+						com.tools20022.repository.msg.IntraPositionMovement2.mmCorporateActionEventType, com.tools20022.repository.msg.IntraPositionMovement2.mmMessageOriginator,
+						com.tools20022.repository.msg.IntraPositionMovement2.mmCreationDateTime, com.tools20022.repository.msg.IntraPositionMovement2.mmInstructionProcessingAdditionalDetails,
+						com.tools20022.repository.msg.IntraPositionMovement2.mmSupplementaryData);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionMovement2";
 				definition = "Identifies additional details of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
+		return balanceFrom;
+	}
+
+	public void setBalanceFrom(com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
+		this.balanceFrom = balanceFrom;
+	}
+
+	public SecuritiesSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
+		return balanceTo;
+	}
+
+	public void setBalanceTo(com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceTo) {
+		this.balanceTo = balanceTo;
+	}
+
+	public SecurityIdentification14 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public FinancialInstrumentAttributes36 getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes;
+	}
+
+	public void setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes36 financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	}
+
+	public FinancialInstrumentQuantity1Choice getSettlementQuantity() {
+		return settlementQuantity;
+	}
+
+	public void setSettlementQuantity(FinancialInstrumentQuantity1Choice settlementQuantity) {
+		this.settlementQuantity = settlementQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getSettledQuantity() {
+		return settledQuantity;
+	}
+
+	public void setSettledQuantity(FinancialInstrumentQuantity1Choice settledQuantity) {
+		this.settledQuantity = settledQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getPreviouslySettledQuantity() {
+		return previouslySettledQuantity;
+	}
+
+	public void setPreviouslySettledQuantity(FinancialInstrumentQuantity1Choice previouslySettledQuantity) {
+		this.previouslySettledQuantity = previouslySettledQuantity;
+	}
+
+	public FinancialInstrumentQuantity1Choice getRemainingToBeSettledQuantity() {
+		return remainingToBeSettledQuantity;
+	}
+
+	public void setRemainingToBeSettledQuantity(FinancialInstrumentQuantity1Choice remainingToBeSettledQuantity) {
+		this.remainingToBeSettledQuantity = remainingToBeSettledQuantity;
+	}
+
+	public DateAndDateTimeChoice getIntendedSettlementDate() {
+		return intendedSettlementDate;
+	}
+
+	public void setIntendedSettlementDate(DateAndDateTimeChoice intendedSettlementDate) {
+		this.intendedSettlementDate = intendedSettlementDate;
+	}
+
+	public DateAndDateTimeChoice getEffectiveSettlementDate() {
+		return effectiveSettlementDate;
+	}
+
+	public void setEffectiveSettlementDate(DateAndDateTimeChoice effectiveSettlementDate) {
+		this.effectiveSettlementDate = effectiveSettlementDate;
+	}
+
+	public ISODateTime getStatusDate() {
+		return statusDate;
+	}
+
+	public void setStatusDate(ISODateTime statusDate) {
+		this.statusDate = statusDate;
+	}
+
+	public List<Linkages26> getLinkages() {
+		return linkages;
+	}
+
+	public void setLinkages(List<com.tools20022.repository.msg.Linkages26> linkages) {
+		this.linkages = linkages;
+	}
+
+	public GenericIdentification37 getSecuritiesSubBalanceIdentification() {
+		return securitiesSubBalanceIdentification;
+	}
+
+	public void setSecuritiesSubBalanceIdentification(com.tools20022.repository.msg.GenericIdentification37 securitiesSubBalanceIdentification) {
+		this.securitiesSubBalanceIdentification = securitiesSubBalanceIdentification;
+	}
+
+	public PriorityNumeric1Choice getPriority() {
+		return priority;
+	}
+
+	public void setPriority(PriorityNumeric1Choice priority) {
+		this.priority = priority;
+	}
+
+	public CorporateActionEventType3Choice getCorporateActionEventType() {
+		return corporateActionEventType;
+	}
+
+	public void setCorporateActionEventType(CorporateActionEventType3Choice corporateActionEventType) {
+		this.corporateActionEventType = corporateActionEventType;
+	}
+
+	public SystemPartyIdentification5 getMessageOriginator() {
+		return messageOriginator;
+	}
+
+	public void setMessageOriginator(com.tools20022.repository.msg.SystemPartyIdentification5 messageOriginator) {
+		this.messageOriginator = messageOriginator;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public void setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = creationDateTime;
+	}
+
+	public Max350Text getInstructionProcessingAdditionalDetails() {
+		return instructionProcessingAdditionalDetails;
+	}
+
+	public void setInstructionProcessingAdditionalDetails(Max350Text instructionProcessingAdditionalDetails) {
+		this.instructionProcessingAdditionalDetails = instructionProcessingAdditionalDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapType1Code#Paid
- * OvernightIndexSwapType1Code.Paid}</li>
+ * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapType1Code#mmPaid
+ * OvernightIndexSwapType1Code.mmPaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapType1Code#Received
- * OvernightIndexSwapType1Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapType1Code#mmReceived
+ * OvernightIndexSwapType1Code.mmReceived}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class OvernightIndexSwapType1Code extends OvernightIndexSwapTypeCode {
 	 * name} = "Paid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Paid = new MMCode() {
+	public static final MMCode mmPaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paid";
@@ -98,7 +98,7 @@ public class OvernightIndexSwapType1Code extends OvernightIndexSwapTypeCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -109,11 +109,11 @@ public class OvernightIndexSwapType1Code extends OvernightIndexSwapTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OvernightIndexSwapType1Code";
 				definition = "Specifies the type of overnight index swap transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OvernightIndexSwapType1Code.Paid, com.tools20022.repository.codeset.OvernightIndexSwapType1Code.Received);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OvernightIndexSwapType1Code.mmPaid, com.tools20022.repository.codeset.OvernightIndexSwapType1Code.mmReceived);
 				trace_lazy = () -> OvernightIndexSwapTypeCode.mmObject();
 			}
 		});

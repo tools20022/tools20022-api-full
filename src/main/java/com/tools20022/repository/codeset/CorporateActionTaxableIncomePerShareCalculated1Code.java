@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code#Calculated
- * CorporateActionTaxableIncomePerShareCalculated1Code.Calculated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code#mmCalculated
+ * CorporateActionTaxableIncomePerShareCalculated1Code.mmCalculated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code#NotCalculated
- * CorporateActionTaxableIncomePerShareCalculated1Code.NotCalculated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code#mmNotCalculated
+ * CorporateActionTaxableIncomePerShareCalculated1Code.mmNotCalculated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code#Unknown
- * CorporateActionTaxableIncomePerShareCalculated1Code.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code#mmUnknown
+ * CorporateActionTaxableIncomePerShareCalculated1Code.mmUnknown}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CorporateActionTaxableIncomePerShareCalculated1Code extends Corpora
 	 * name} = "Calculated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Calculated = new MMCode() {
+	public static final MMCode mmCalculated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Calculated";
@@ -110,7 +110,7 @@ public class CorporateActionTaxableIncomePerShareCalculated1Code extends Corpora
 	 * name} = "NotCalculated"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotCalculated = new MMCode() {
+	public static final MMCode mmNotCalculated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCalculated";
@@ -133,7 +133,7 @@ public class CorporateActionTaxableIncomePerShareCalculated1Code extends Corpora
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -144,13 +144,13 @@ public class CorporateActionTaxableIncomePerShareCalculated1Code extends Corpora
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TDIY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionTaxableIncomePerShareCalculated1Code";
 				definition = "Specifies whether the fund calculates the taxable income per dividend/taxable income per share (TID/TIS).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code.Calculated,
-						com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code.NotCalculated, com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code.Unknown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code.mmCalculated,
+						com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code.mmNotCalculated, com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculated1Code.mmUnknown);
 				trace_lazy = () -> CorporateActionTaxableIncomePerShareCalculatedCode.mmObject();
 			}
 		});

@@ -30,19 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxAdvantageTypeCode#ConcessionalGST
- * TaxAdvantageTypeCode.ConcessionalGST}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxAdvantageTypeCode#mmConcessionalGST
+ * TaxAdvantageTypeCode.mmConcessionalGST}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxAdvantageTypeCode#NotApplicable
- * TaxAdvantageTypeCode.NotApplicable}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxAdvantageTypeCode#mmNotApplicable
+ * TaxAdvantageTypeCode.mmNotApplicable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxAdvantageTypeCode#NotAvailable
- * TaxAdvantageTypeCode.NotAvailable}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxAdvantageTypeCode#Other
- * TaxAdvantageTypeCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxAdvantageTypeCode#mmNotAvailable
+ * TaxAdvantageTypeCode.mmNotAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxAdvantageTypeCode#PooledDevelopmentFundRebta
- * TaxAdvantageTypeCode.PooledDevelopmentFundRebta}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxAdvantageTypeCode#mmOther
+ * TaxAdvantageTypeCode.mmOther}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxAdvantageTypeCode#mmPooledDevelopmentFundRebta
+ * TaxAdvantageTypeCode.mmPooledDevelopmentFundRebta}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,7 +93,7 @@ public class TaxAdvantageTypeCode {
 	 * "Tax advantage type is: Concessional Goods and Services Tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode ConcessionalGST = new MMCode() {
+	public static final MMCode mmConcessionalGST = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConcessionalGST";
@@ -122,7 +123,7 @@ public class TaxAdvantageTypeCode {
 	 * definition} = "Tax advantage type is not applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotApplicable = new MMCode() {
+	public static final MMCode mmNotApplicable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
@@ -152,7 +153,7 @@ public class TaxAdvantageTypeCode {
 	 * definition} = "Tax advantage type is not available."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAvailable = new MMCode() {
+	public static final MMCode mmNotAvailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAvailable";
@@ -182,7 +183,7 @@ public class TaxAdvantageTypeCode {
 	 * definition} = "Other type of tax advantage type."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -212,7 +213,7 @@ public class TaxAdvantageTypeCode {
 	 * definition} = "Tax advantage type is: pooled development fund Rebta."</li>
 	 * </ul>
 	 */
-	public static final MMCode PooledDevelopmentFundRebta = new MMCode() {
+	public static final MMCode mmPooledDevelopmentFundRebta = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PooledDevelopmentFundRebta";
@@ -225,12 +226,13 @@ public class TaxAdvantageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxAdvantageTypeCode";
 				definition = "Code for the form of tax advantage on the dividend.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxAdvantageTypeCode.ConcessionalGST, com.tools20022.repository.codeset.TaxAdvantageTypeCode.NotApplicable,
-						com.tools20022.repository.codeset.TaxAdvantageTypeCode.NotAvailable, com.tools20022.repository.codeset.TaxAdvantageTypeCode.Other, com.tools20022.repository.codeset.TaxAdvantageTypeCode.PooledDevelopmentFundRebta);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxAdvantageTypeCode.mmConcessionalGST, com.tools20022.repository.codeset.TaxAdvantageTypeCode.mmNotApplicable,
+						com.tools20022.repository.codeset.TaxAdvantageTypeCode.mmNotAvailable, com.tools20022.repository.codeset.TaxAdvantageTypeCode.mmOther,
+						com.tools20022.repository.codeset.TaxAdvantageTypeCode.mmPooledDevelopmentFundRebta);
 				derivation_lazy = () -> Arrays.asList(TaxAdvantageType1Code.mmObject());
 			}
 		});

@@ -37,11 +37,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InstructionForNextAgent1#Code
- * InstructionForNextAgent1.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionForNextAgent1#InstructionInformation
- * InstructionForNextAgent1.InstructionInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructionForNextAgent1#mmCode
+ * InstructionForNextAgent1.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstructionForNextAgent1#mmInstructionInformation
+ * InstructionForNextAgent1.mmInstructionInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstructionForNextAgent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Instruction4Code code;
 	/**
 	 * Coded information related to the processing of the payment instruction,
 	 * provided by the initiating party, and intended for the next agent in the
@@ -82,8 +84,8 @@ public class InstructionForNextAgent1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#InstructionForNextAgent
-	 * PaymentInstruction.InstructionForNextAgent}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmInstructionForNextAgent
+	 * PaymentInstruction.mmInstructionForNextAgent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +106,21 @@ public class InstructionForNextAgent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> InstructionForNextAgent1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.InstructionForNextAgent;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Coded information related to the processing of the payment instruction, provided by the initiating party, and intended for the next agent in the payment chain.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Instruction4Code.mmObject();
 		}
 	};
+	protected Max140Text instructionInformation;
 	/**
 	 * Further information complementing the coded instruction or instruction to
 	 * the next agent that is bilaterally agreed or specific to a user
@@ -149,7 +152,7 @@ public class InstructionForNextAgent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructionInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstructionForNextAgent1.mmObject();
 			isDerived = false;
@@ -157,8 +160,8 @@ public class InstructionForNextAgent1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionInformation";
 			definition = "Further information complementing the coded instruction or instruction to the next agent that is bilaterally agreed or specific to a user community.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -166,14 +169,30 @@ public class InstructionForNextAgent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionForNextAgent1.Code, com.tools20022.repository.msg.InstructionForNextAgent1.InstructionInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionForNextAgent1.mmCode, com.tools20022.repository.msg.InstructionForNextAgent1.mmInstructionInformation);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionForNextAgent1";
 				definition = "Further information related to the processing of the payment instruction that may need to be acted upon by an other agent. The instruction may relate to a level of service, or may be an instruction that has to be executed by the creditor's agent, or may be information required by the other agent.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Instruction4Code getCode() {
+		return code;
+	}
+
+	public void setCode(Instruction4Code code) {
+		this.code = code;
+	}
+
+	public Max140Text getInstructionInformation() {
+		return instructionInformation;
+	}
+
+	public void setInstructionInformation(Max140Text instructionInformation) {
+		this.instructionInformation = instructionInformation;
 	}
 }

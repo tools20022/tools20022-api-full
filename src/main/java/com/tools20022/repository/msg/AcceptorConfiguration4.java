@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Acceptor configuration to be downloaded from the terminal management system.
@@ -33,13 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration4#POIIdentification
- * AcceptorConfiguration4.POIIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration4#mmPOIIdentification
+ * AcceptorConfiguration4.mmPOIIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration4#TerminalManagerIdentification
- * AcceptorConfiguration4.TerminalManagerIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorConfiguration4#DataSet
- * AcceptorConfiguration4.DataSet}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration4#mmTerminalManagerIdentification
+ * AcceptorConfiguration4.mmTerminalManagerIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration4#mmDataSet
+ * AcceptorConfiguration4.mmDataSet}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,15 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04#AcceptorConfiguration
- * AcceptorConfigurationUpdateV04.AcceptorConfiguration}</li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04#mmAcceptorConfiguration
+ * AcceptorConfigurationUpdateV04.mmAcceptorConfiguration}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcceptorConfiguration4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification71 pOIIdentification;
 	/**
 	 * Identification of the point of interaction for terminal management.
 	 * <p>
@@ -97,8 +100,8 @@ public class AcceptorConfiguration4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#SystemIdentification
-	 * System.SystemIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+	 * System.mmSystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,26 +122,27 @@ public class AcceptorConfiguration4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration3#POIIdentification
-	 * AcceptorConfiguration3.POIIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration3#mmPOIIdentification
+	 * AcceptorConfiguration3.mmPOIIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd POIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
 			componentContext_lazy = () -> AcceptorConfiguration4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.SystemIdentification;
 			isDerived = false;
 			xmlTag = "POIId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the point of interaction for terminal management.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration3.POIIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration3.mmPOIIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification71.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	protected GenericIdentification71 terminalManagerIdentification;
 	/**
 	 * Identification of the terminal management system (TMS) sending the
 	 * acceptor parameters.
@@ -152,8 +156,8 @@ public class AcceptorConfiguration4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#SystemIdentification
-	 * System.SystemIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+	 * System.mmSystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,34 +180,35 @@ public class AcceptorConfiguration4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration5#TerminalManagerIdentification
-	 * AcceptorConfiguration5.TerminalManagerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration5#mmTerminalManagerIdentification
+	 * AcceptorConfiguration5.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration3#TerminalManagerIdentification
-	 * AcceptorConfiguration3.TerminalManagerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration3#mmTerminalManagerIdentification
+	 * AcceptorConfiguration3.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
 			componentContext_lazy = () -> AcceptorConfiguration4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.SystemIdentification;
 			isDerived = false;
 			xmlTag = "TermnlMgrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the terminal management system (TMS) sending the acceptor parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration3.TerminalManagerIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfiguration5.TerminalManagerIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfiguration5.mmTerminalManagerIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration3.mmTerminalManagerIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification71.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TerminalManagementDataSet14> dataSet;
 	/**
 	 * Data set containing the acceptor parameters of a point of interaction
 	 * (POI).
@@ -236,18 +241,18 @@ public class AcceptorConfiguration4 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration5#DataSet
-	 * AcceptorConfiguration5.DataSet}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration5#mmDataSet
+	 * AcceptorConfiguration5.mmDataSet}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration3#DataSet
-	 * AcceptorConfiguration3.DataSet}</li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration3#mmDataSet
+	 * AcceptorConfiguration3.mmDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSet = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AcceptorConfiguration4.mmObject();
 			isDerived = false;
@@ -255,29 +260,53 @@ public class AcceptorConfiguration4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Data set containing the acceptor parameters of a point of interaction (POI).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration3.DataSet;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfiguration5.DataSet);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfiguration5.mmDataSet);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration3.mmDataSet;
 			minOccurs = 1;
-			type_lazy = () -> TerminalManagementDataSet14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet14.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfiguration4.POIIdentification, com.tools20022.repository.msg.AcceptorConfiguration4.TerminalManagerIdentification,
-						com.tools20022.repository.msg.AcceptorConfiguration4.DataSet);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfiguration4.mmPOIIdentification, com.tools20022.repository.msg.AcceptorConfiguration4.mmTerminalManagerIdentification,
+						com.tools20022.repository.msg.AcceptorConfiguration4.mmDataSet);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04.mmAcceptorConfiguration);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04.AcceptorConfiguration);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfiguration4";
 				definition = "Acceptor configuration to be downloaded from the terminal management system.";
-				previousVersion_lazy = () -> AcceptorConfiguration3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AcceptorConfiguration5.mmObject());
+				previousVersion_lazy = () -> AcceptorConfiguration3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification71 getPOIIdentification() {
+		return pOIIdentification;
+	}
+
+	public void setPOIIdentification(com.tools20022.repository.msg.GenericIdentification71 pOIIdentification) {
+		this.pOIIdentification = pOIIdentification;
+	}
+
+	public GenericIdentification71 getTerminalManagerIdentification() {
+		return terminalManagerIdentification;
+	}
+
+	public void setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+		this.terminalManagerIdentification = terminalManagerIdentification;
+	}
+
+	public List<TerminalManagementDataSet14> getDataSet() {
+		return dataSet;
+	}
+
+	public void setDataSet(List<com.tools20022.repository.msg.TerminalManagementDataSet14> dataSet) {
+		this.dataSet = dataSet;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The MoneyMarketSecuredMarketStatisticalReport message is sent by the
@@ -56,22 +57,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01#ReportHeader
- * MoneyMarketForeignExchangeSwapsStatisticalReportV01.ReportHeader}</li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01#mmReportHeader
+ * MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmReportHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01#ForeignExchangeSwapsReport
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01#mmForeignExchangeSwapsReport
  * MoneyMarketForeignExchangeSwapsStatisticalReportV01.
- * ForeignExchangeSwapsReport}</li>
+ * mmForeignExchangeSwapsReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01#SupplementaryData
- * MoneyMarketForeignExchangeSwapsStatisticalReportV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01#mmSupplementaryData
+ * MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01#identifier
- * MoneyMarketForeignExchangeSwapsStatisticalReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code auth.014.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MoneyMarketForeignExchangeSwapsStatisticalReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MoneyMarketReportHeader1 reportHeader;
 	/**
 	 * Provides the elements specific to the report.
 	 * <p>
@@ -120,24 +120,25 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02#ReportHeader
-	 * MoneyMarketForeignExchangeSwapsStatisticalReportV02.ReportHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02#mmReportHeader
+	 * MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmReportHeader}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportHeader";
 			definition = "Provides the elements specific to the report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.ReportHeader);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmReportHeader);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MoneyMarketReportHeader1.mmObject();
 		}
 	};
+	protected ForeignExchangeSwap2Choice foreignExchangeSwapsReport;
 	/**
 	 * Provides the reason why no activity is reported or the required list of
 	 * transactions for the foreign exchange swaps segment.
@@ -166,25 +167,26 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02#ForeignExchangeSwapsReport
+	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02#mmForeignExchangeSwapsReport
 	 * MoneyMarketForeignExchangeSwapsStatisticalReportV02.
-	 * ForeignExchangeSwapsReport}</li>
+	 * mmForeignExchangeSwapsReport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ForeignExchangeSwapsReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmForeignExchangeSwapsReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FXSwpsRpt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeSwapsReport";
 			definition = "Provides the reason why no activity is reported or the required list of transactions for the foreign exchange swaps segment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.ForeignExchangeSwapsReport);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmForeignExchangeSwapsReport);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ForeignExchangeSwap2Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -213,48 +215,21 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02#SupplementaryData
-	 * MoneyMarketForeignExchangeSwapsStatisticalReportV02.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02#mmSupplementaryData
+	 * MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "auth"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "014"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "auth";
-			messageFunctionality = "014";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -269,12 +244,43 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV01 {
 				rootElement = "Document";
 				xmlTag = "MnyMktFXSwpsSttstclRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.ReportHeader,
-						com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.ForeignExchangeSwapsReport,
-						com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmReportHeader,
+						com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmForeignExchangeSwapsReport,
+						com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "auth";
+						messageFunctionality = "014";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MoneyMarketReportHeader1 getReportHeader() {
+		return reportHeader;
+	}
+
+	public void setReportHeader(MoneyMarketReportHeader1 reportHeader) {
+		this.reportHeader = reportHeader;
+	}
+
+	public ForeignExchangeSwap2Choice getForeignExchangeSwapsReport() {
+		return foreignExchangeSwapsReport;
+	}
+
+	public void setForeignExchangeSwapsReport(ForeignExchangeSwap2Choice foreignExchangeSwapsReport) {
+		this.foreignExchangeSwapsReport = foreignExchangeSwapsReport;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

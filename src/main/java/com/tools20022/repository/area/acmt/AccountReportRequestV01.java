@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -59,30 +60,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#References
- * AccountReportRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#mmReferences
+ * AccountReportRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#AccountIdentification
- * AccountReportRequestV01.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#mmAccountIdentification
+ * AccountReportRequestV01.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#AccountServicerIdentification
- * AccountReportRequestV01.AccountServicerIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#mmAccountServicerIdentification
+ * AccountReportRequestV01.mmAccountServicerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#OrganisationIdentification
- * AccountReportRequestV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#mmOrganisationIdentification
+ * AccountReportRequestV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#ContractDates
- * AccountReportRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#mmContractDates
+ * AccountReportRequestV01.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#DigitalSignature
- * AccountReportRequestV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#mmDigitalSignature
+ * AccountReportRequestV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.acmt.AccountReportRequestV01#identifier
- * AccountReportRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code acmt.013.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +104,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountReportRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected References4 references;
 	/**
 	 * Set of elements for the identification of the message and related
 	 * references.
@@ -130,17 +130,18 @@ public class AccountReportRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock References = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Set of elements for the identification of the message and related references.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> References4.mmObject();
 		}
 	};
+	protected AccountForAction1 accountIdentification;
 	/**
 	 * Unique and unambiguous identification of the account between the account
 	 * owner and the account servicer.
@@ -167,17 +168,18 @@ public class AccountReportRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification of the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountForAction1.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification4 accountServicerIdentification;
 	/**
 	 * Unique and unambiguous identifier of a financial institution, as assigned
 	 * under an internationally recognised or proprietary identification scheme.
@@ -204,17 +206,18 @@ public class AccountReportRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountServicerIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountServicerIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctSvcrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. \n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 	};
+	protected List<OrganisationIdentification6> organisationIdentification;
 	/**
 	 * Identification of the organisation requesting the report.
 	 * <p>
@@ -239,7 +242,7 @@ public class AccountReportRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OrganisationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOrganisationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,6 +252,7 @@ public class AccountReportRequestV01 {
 			complexType_lazy = () -> OrganisationIdentification6.mmObject();
 		}
 	};
+	protected AccountContract2 contractDates;
 	/**
 	 * Specifies target and/or actual dates.
 	 * <p>
@@ -272,17 +276,18 @@ public class AccountReportRequestV01 {
 	 * definition} = "Specifies target and/or actual dates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ContractDates = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmContractDates = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrctDts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates";
 			definition = "Specifies target and/or actual dates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountContract2.mmObject();
 		}
 	};
+	protected List<PartyAndSignature1> digitalSignature;
 	/**
 	 * Contains the signature with its components, namely signed info, signature
 	 * value, key info and the object.
@@ -309,7 +314,7 @@ public class AccountReportRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,33 +322,6 @@ public class AccountReportRequestV01 {
 			definition = "Contains the signature with its components, namely signed info, signature value, key info and the object.";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "acmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "013"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "acmt";
-			messageFunctionality = "013";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -358,12 +336,67 @@ public class AccountReportRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AcctRptReq";
 				businessArea_lazy = () -> AccountManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountReportRequestV01.References, com.tools20022.repository.area.acmt.AccountReportRequestV01.AccountIdentification,
-						com.tools20022.repository.area.acmt.AccountReportRequestV01.AccountServicerIdentification, com.tools20022.repository.area.acmt.AccountReportRequestV01.OrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountReportRequestV01.ContractDates, com.tools20022.repository.area.acmt.AccountReportRequestV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.acmt.AccountReportRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountReportRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountReportRequestV01.mmAccountIdentification,
+						com.tools20022.repository.area.acmt.AccountReportRequestV01.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountReportRequestV01.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountReportRequestV01.mmContractDates, com.tools20022.repository.area.acmt.AccountReportRequestV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "acmt";
+						messageFunctionality = "013";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public References4 getReferences() {
+		return references;
+	}
+
+	public void setReferences(References4 references) {
+		this.references = references;
+	}
+
+	public AccountForAction1 getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountForAction1 accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public BranchAndFinancialInstitutionIdentification4 getAccountServicerIdentification() {
+		return accountServicerIdentification;
+	}
+
+	public void setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 accountServicerIdentification) {
+		this.accountServicerIdentification = accountServicerIdentification;
+	}
+
+	public List<OrganisationIdentification6> getOrganisationIdentification() {
+		return organisationIdentification;
+	}
+
+	public void setOrganisationIdentification(List<OrganisationIdentification6> organisationIdentification) {
+		this.organisationIdentification = organisationIdentification;
+	}
+
+	public AccountContract2 getContractDates() {
+		return contractDates;
+	}
+
+	public void setContractDates(AccountContract2 contractDates) {
+		this.contractDates = contractDates;
+	}
+
+	public List<PartyAndSignature1> getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(List<PartyAndSignature1> digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

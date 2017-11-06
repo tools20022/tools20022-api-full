@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation9#Basis
- * TaxCalculationInformation9.Basis}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation9#mmBasis
+ * TaxCalculationInformation9.mmBasis}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TaxCalculationInformation9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxBasis1Choice basis;
 	/**
 	 * Form of the rebate, for example, cash.
 	 * <p>
@@ -76,7 +77,7 @@ public class TaxCalculationInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Basis Tax.Basis}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,22 +97,22 @@ public class TaxCalculationInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation8#Basis
-	 * TaxCalculationInformation8.Basis}</li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation8#mmBasis
+	 * TaxCalculationInformation8.mmBasis}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Basis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
 			componentContext_lazy = () -> TaxCalculationInformation9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Basis;
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Form of the rebate, for example, cash.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation8.Basis;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation8.mmBasis;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TaxBasis1Choice.mmObject();
 		}
 	};
@@ -119,9 +120,9 @@ public class TaxCalculationInformation9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation9.Basis);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation9.mmBasis);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxCalculationInformation9";
 				definition = "Information used to calculate the tax.";
@@ -129,5 +130,13 @@ public class TaxCalculationInformation9 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxBasis1Choice getBasis() {
+		return basis;
+	}
+
+	public void setBasis(TaxBasis1Choice basis) {
+		this.basis = basis;
 	}
 }

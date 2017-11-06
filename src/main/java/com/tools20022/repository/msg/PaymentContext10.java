@@ -34,34 +34,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext10#CardPresent
- * PaymentContext10.CardPresent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext10#mmCardPresent
+ * PaymentContext10.mmCardPresent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext10#CardholderPresent
- * PaymentContext10.CardholderPresent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext10#OnLineContext
- * PaymentContext10.OnLineContext}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext10#mmCardholderPresent
+ * PaymentContext10.mmCardholderPresent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext10#AttendanceContext
- * PaymentContext10.AttendanceContext}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext10#mmOnLineContext
+ * PaymentContext10.mmOnLineContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext10#TransactionEnvironment
- * PaymentContext10.TransactionEnvironment}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext10#mmAttendanceContext
+ * PaymentContext10.mmAttendanceContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext10#TransactionChannel
- * PaymentContext10.TransactionChannel}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext10#mmTransactionEnvironment
+ * PaymentContext10.mmTransactionEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext10#AttendantMessageCapable
- * PaymentContext10.AttendantMessageCapable}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext10#mmTransactionChannel
+ * PaymentContext10.mmTransactionChannel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext10#AttendantLanguage
- * PaymentContext10.AttendantLanguage}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext10#mmAttendantMessageCapable
+ * PaymentContext10.mmAttendantMessageCapable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext10#CardDataEntryMode
- * PaymentContext10.CardDataEntryMode}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext10#mmAttendantLanguage
+ * PaymentContext10.mmAttendantLanguage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentContext10#FallbackIndicator
- * PaymentContext10.FallbackIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext10#mmCardDataEntryMode
+ * PaymentContext10.mmCardDataEntryMode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentContext10#mmFallbackIndicator
+ * PaymentContext10.mmFallbackIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -70,8 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentContext10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator cardPresent;
 	/**
 	 * Indicates whether the transaction has been initiated by a card physically
 	 * present or not.
@@ -109,8 +111,8 @@ public class PaymentContext10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#CardPresent
-	 * CardPaymentAcquiring.CardPresent}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardPresent
+	 * CardPaymentAcquiring.mmCardPresent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -133,33 +135,34 @@ public class PaymentContext10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#CardPresent
-	 * PaymentContext16.CardPresent}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#mmCardPresent
+	 * PaymentContext16.mmCardPresent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#CardPresent
-	 * PaymentContext1.CardPresent}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#mmCardPresent
+	 * PaymentContext1.mmCardPresent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardPresent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardPresent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPresent;
 			componentContext_lazy = () -> PaymentContext10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.CardPresent;
 			isDerived = false;
 			xmlTag = "CardPres";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardPresent";
 			definition = "Indicates whether the transaction has been initiated by a card physically present or not.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.CardPresent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.CardPresent);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.mmCardPresent);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.mmCardPresent;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator cardholderPresent;
 	/**
 	 * Indicates whether the transaction has been initiated in presence of the
 	 * cardholder or not.
@@ -174,8 +177,8 @@ public class PaymentContext10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#CardholderPresent
-	 * CardPaymentAcquiring.CardholderPresent}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardholderPresent
+	 * CardPaymentAcquiring.mmCardholderPresent}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,33 +201,34 @@ public class PaymentContext10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#CardholderPresent
-	 * PaymentContext16.CardholderPresent}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#mmCardholderPresent
+	 * PaymentContext16.mmCardholderPresent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#CardholderPresent
-	 * PaymentContext1.CardholderPresent}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#mmCardholderPresent
+	 * PaymentContext1.mmCardholderPresent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardholderPresent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardholderPresent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardholderPresent;
 			componentContext_lazy = () -> PaymentContext10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.CardholderPresent;
 			isDerived = false;
 			xmlTag = "CrdhldrPres";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderPresent";
 			definition = "Indicates whether the transaction has been initiated in presence of the cardholder or not.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.CardholderPresent;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.CardholderPresent);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.mmCardholderPresent);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.mmCardholderPresent;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected TrueFalseIndicator onLineContext;
 	/**
 	 * On-line or off-line context of the transaction.
 	 * <p>
@@ -238,8 +242,8 @@ public class PaymentContext10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#OnLineContext
-	 * CardPaymentAcquiring.OnLineContext}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmOnLineContext
+	 * CardPaymentAcquiring.mmOnLineContext}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -259,25 +263,26 @@ public class PaymentContext10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#OnLineContext
-	 * PaymentContext1.OnLineContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#mmOnLineContext
+	 * PaymentContext1.mmOnLineContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OnLineContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOnLineContext = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmOnLineContext;
 			componentContext_lazy = () -> PaymentContext10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.OnLineContext;
 			isDerived = false;
 			xmlTag = "OnLineCntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineContext";
 			definition = "On-line or off-line context of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.OnLineContext;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.mmOnLineContext;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected AttendanceContext1Code attendanceContext;
 	/**
 	 * Human attendance at the POI location during the transaction.
 	 * <p>
@@ -291,8 +296,8 @@ public class PaymentContext10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#AttendanceContext
-	 * CardPaymentAcquiring.AttendanceContext}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendanceContext
+	 * CardPaymentAcquiring.mmAttendanceContext}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -314,33 +319,34 @@ public class PaymentContext10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#AttendanceContext
-	 * PaymentContext16.AttendanceContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#mmAttendanceContext
+	 * PaymentContext16.mmAttendanceContext}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#AttendanceContext
-	 * PaymentContext1.AttendanceContext}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#mmAttendanceContext
+	 * PaymentContext1.mmAttendanceContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendanceContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendanceContext;
 			componentContext_lazy = () -> PaymentContext10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.AttendanceContext;
 			isDerived = false;
 			xmlTag = "AttndncCntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceContext";
 			definition = "Human attendance at the POI location during the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.AttendanceContext;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.AttendanceContext);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.mmAttendanceContext);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.mmAttendanceContext;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AttendanceContext1Code.mmObject();
 		}
 	};
+	protected TransactionEnvironment1Code transactionEnvironment;
 	/**
 	 * Indicates the environment of the transaction.
 	 * <p>
@@ -354,8 +360,8 @@ public class PaymentContext10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#TransactionEnvironment
-	 * CardPaymentAcquiring.TransactionEnvironment}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionEnvironment
+	 * CardPaymentAcquiring.mmTransactionEnvironment}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -376,33 +382,34 @@ public class PaymentContext10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#TransactionEnvironment
-	 * PaymentContext16.TransactionEnvironment}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#mmTransactionEnvironment
+	 * PaymentContext16.mmTransactionEnvironment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#TransactionEnvironment
-	 * PaymentContext1.TransactionEnvironment}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#mmTransactionEnvironment
+	 * PaymentContext1.mmTransactionEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionEnvironment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionEnvironment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionEnvironment;
 			componentContext_lazy = () -> PaymentContext10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.TransactionEnvironment;
 			isDerived = false;
 			xmlTag = "TxEnvt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionEnvironment";
 			definition = "Indicates the environment of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.TransactionEnvironment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.TransactionEnvironment);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.mmTransactionEnvironment);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.mmTransactionEnvironment;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment1Code.mmObject();
 		}
 	};
+	protected TransactionChannel3Code transactionChannel;
 	/**
 	 * Identifies the type of the communication channels used by the cardholder
 	 * to the acceptor system.
@@ -417,8 +424,8 @@ public class PaymentContext10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#TransactionChannel
-	 * CardPaymentAcquiring.TransactionChannel}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmTransactionChannel
+	 * CardPaymentAcquiring.mmTransactionChannel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -441,33 +448,34 @@ public class PaymentContext10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#TransactionChannel
-	 * PaymentContext16.TransactionChannel}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#mmTransactionChannel
+	 * PaymentContext16.mmTransactionChannel}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#TransactionChannel
-	 * PaymentContext1.TransactionChannel}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#mmTransactionChannel
+	 * PaymentContext1.mmTransactionChannel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionChannel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionChannel;
 			componentContext_lazy = () -> PaymentContext10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.TransactionChannel;
 			isDerived = false;
 			xmlTag = "TxChanl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionChannel";
 			definition = "Identifies the type of the communication channels used by the cardholder to the acceptor system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.TransactionChannel;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.TransactionChannel);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.mmTransactionChannel);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.mmTransactionChannel;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TransactionChannel3Code.mmObject();
 		}
 	};
+	protected TrueFalseIndicator attendantMessageCapable;
 	/**
 	 * Indicates whether a message can be sent or not on an attendant display
 	 * (attendant display present or not).
@@ -482,8 +490,8 @@ public class PaymentContext10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#AttendantMessageCapable
-	 * CardPaymentAcquiring.AttendantMessageCapable}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendantMessageCapable
+	 * CardPaymentAcquiring.mmAttendantMessageCapable}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -506,33 +514,34 @@ public class PaymentContext10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#AttendantMessageCapable
-	 * PaymentContext16.AttendantMessageCapable}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#mmAttendantMessageCapable
+	 * PaymentContext16.mmAttendantMessageCapable}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#AttendantMessageCapable
-	 * PaymentContext1.AttendantMessageCapable}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#mmAttendantMessageCapable
+	 * PaymentContext1.mmAttendantMessageCapable}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendantMessageCapable = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendantMessageCapable = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendantMessageCapable;
 			componentContext_lazy = () -> PaymentContext10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.AttendantMessageCapable;
 			isDerived = false;
 			xmlTag = "AttndntMsgCpbl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendantMessageCapable";
 			definition = "Indicates whether a message can be sent or not on an attendant display (attendant display present or not).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.AttendantMessageCapable;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.AttendantMessageCapable);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.mmAttendantMessageCapable);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.mmAttendantMessageCapable;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected LanguageCode attendantLanguage;
 	/**
 	 * Language used to display messages to the attendant.<br>
 	 * Reference: ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).
@@ -546,8 +555,8 @@ public class PaymentContext10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#AttendantLanguage
-	 * CardPaymentAcquiring.AttendantLanguage}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmAttendantLanguage
+	 * CardPaymentAcquiring.mmAttendantLanguage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -570,33 +579,34 @@ public class PaymentContext10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#AttendantLanguage
-	 * PaymentContext16.AttendantLanguage}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#mmAttendantLanguage
+	 * PaymentContext16.mmAttendantLanguage}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#AttendantLanguage
-	 * PaymentContext1.AttendantLanguage}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#mmAttendantLanguage
+	 * PaymentContext1.mmAttendantLanguage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AttendantLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAttendantLanguage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendantLanguage;
 			componentContext_lazy = () -> PaymentContext10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.AttendantLanguage;
 			isDerived = false;
 			xmlTag = "AttndntLang";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendantLanguage";
 			definition = "Language used to display messages to the attendant.\r\nReference: ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.AttendantLanguage;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.AttendantLanguage);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.mmAttendantLanguage);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.mmAttendantLanguage;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	protected CardDataReading1Code cardDataEntryMode;
 	/**
 	 * Entry mode of the card data.
 	 * <p>
@@ -610,8 +620,8 @@ public class PaymentContext10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#CardDataEntryMode
-	 * CardPaymentAcquiring.CardDataEntryMode}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCardDataEntryMode
+	 * CardPaymentAcquiring.mmCardDataEntryMode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -632,33 +642,34 @@ public class PaymentContext10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#CardDataEntryMode
-	 * PaymentContext16.CardDataEntryMode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#mmCardDataEntryMode
+	 * PaymentContext16.mmCardDataEntryMode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#CardDataEntryMode
-	 * PaymentContext1.CardDataEntryMode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#mmCardDataEntryMode
+	 * PaymentContext1.mmCardDataEntryMode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardDataEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardDataEntryMode;
 			componentContext_lazy = () -> PaymentContext10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.CardDataEntryMode;
 			isDerived = false;
 			xmlTag = "CardDataNtryMd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDataEntryMode";
 			definition = "Entry mode of the card data.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.CardDataEntryMode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.CardDataEntryMode);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.mmCardDataEntryMode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.mmCardDataEntryMode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CardDataReading1Code.mmObject();
 		}
 	};
+	protected CardFallback1Code fallbackIndicator;
 	/**
 	 * Indicator of a card entry mode fallback.
 	 * <p>
@@ -689,18 +700,18 @@ public class PaymentContext10 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#FallbackIndicator
-	 * PaymentContext16.FallbackIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext16#mmFallbackIndicator
+	 * PaymentContext16.mmFallbackIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#FallbackIndicator
-	 * PaymentContext1.FallbackIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentContext1#mmFallbackIndicator
+	 * PaymentContext1.mmFallbackIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FallbackIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFallbackIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentContext10.mmObject();
 			isDerived = false;
@@ -708,10 +719,10 @@ public class PaymentContext10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackIndicator";
 			definition = "Indicator of a card entry mode fallback.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.FallbackIndicator;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.FallbackIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext16.mmFallbackIndicator);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentContext1.mmFallbackIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CardFallback1Code.mmObject();
 		}
 	};
@@ -719,19 +730,99 @@ public class PaymentContext10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext10.CardPresent, com.tools20022.repository.msg.PaymentContext10.CardholderPresent,
-						com.tools20022.repository.msg.PaymentContext10.OnLineContext, com.tools20022.repository.msg.PaymentContext10.AttendanceContext, com.tools20022.repository.msg.PaymentContext10.TransactionEnvironment,
-						com.tools20022.repository.msg.PaymentContext10.TransactionChannel, com.tools20022.repository.msg.PaymentContext10.AttendantMessageCapable, com.tools20022.repository.msg.PaymentContext10.AttendantLanguage,
-						com.tools20022.repository.msg.PaymentContext10.CardDataEntryMode, com.tools20022.repository.msg.PaymentContext10.FallbackIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext10.mmCardPresent, com.tools20022.repository.msg.PaymentContext10.mmCardholderPresent,
+						com.tools20022.repository.msg.PaymentContext10.mmOnLineContext, com.tools20022.repository.msg.PaymentContext10.mmAttendanceContext, com.tools20022.repository.msg.PaymentContext10.mmTransactionEnvironment,
+						com.tools20022.repository.msg.PaymentContext10.mmTransactionChannel, com.tools20022.repository.msg.PaymentContext10.mmAttendantMessageCapable, com.tools20022.repository.msg.PaymentContext10.mmAttendantLanguage,
+						com.tools20022.repository.msg.PaymentContext10.mmCardDataEntryMode, com.tools20022.repository.msg.PaymentContext10.mmFallbackIndicator);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentContext10";
 				definition = "Payment context in which the transaction is performed.";
-				previousVersion_lazy = () -> PaymentContext1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(PaymentContext16.mmObject());
+				previousVersion_lazy = () -> PaymentContext1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getCardPresent() {
+		return cardPresent;
+	}
+
+	public void setCardPresent(TrueFalseIndicator cardPresent) {
+		this.cardPresent = cardPresent;
+	}
+
+	public TrueFalseIndicator getCardholderPresent() {
+		return cardholderPresent;
+	}
+
+	public void setCardholderPresent(TrueFalseIndicator cardholderPresent) {
+		this.cardholderPresent = cardholderPresent;
+	}
+
+	public TrueFalseIndicator getOnLineContext() {
+		return onLineContext;
+	}
+
+	public void setOnLineContext(TrueFalseIndicator onLineContext) {
+		this.onLineContext = onLineContext;
+	}
+
+	public AttendanceContext1Code getAttendanceContext() {
+		return attendanceContext;
+	}
+
+	public void setAttendanceContext(AttendanceContext1Code attendanceContext) {
+		this.attendanceContext = attendanceContext;
+	}
+
+	public TransactionEnvironment1Code getTransactionEnvironment() {
+		return transactionEnvironment;
+	}
+
+	public void setTransactionEnvironment(TransactionEnvironment1Code transactionEnvironment) {
+		this.transactionEnvironment = transactionEnvironment;
+	}
+
+	public TransactionChannel3Code getTransactionChannel() {
+		return transactionChannel;
+	}
+
+	public void setTransactionChannel(TransactionChannel3Code transactionChannel) {
+		this.transactionChannel = transactionChannel;
+	}
+
+	public TrueFalseIndicator getAttendantMessageCapable() {
+		return attendantMessageCapable;
+	}
+
+	public void setAttendantMessageCapable(TrueFalseIndicator attendantMessageCapable) {
+		this.attendantMessageCapable = attendantMessageCapable;
+	}
+
+	public LanguageCode getAttendantLanguage() {
+		return attendantLanguage;
+	}
+
+	public void setAttendantLanguage(LanguageCode attendantLanguage) {
+		this.attendantLanguage = attendantLanguage;
+	}
+
+	public CardDataReading1Code getCardDataEntryMode() {
+		return cardDataEntryMode;
+	}
+
+	public void setCardDataEntryMode(CardDataReading1Code cardDataEntryMode) {
+		this.cardDataEntryMode = cardDataEntryMode;
+	}
+
+	public CardFallback1Code getFallbackIndicator() {
+		return fallbackIndicator;
+	}
+
+	public void setFallbackIndicator(CardFallback1Code fallbackIndicator) {
+		this.fallbackIndicator = fallbackIndicator;
 	}
 }

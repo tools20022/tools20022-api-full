@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionActivity1Code#BorrowingLendingActivity
- * TransactionActivity1Code.BorrowingLendingActivity}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionActivity1Code#mmBorrowingLendingActivity
+ * TransactionActivity1Code.mmBorrowingLendingActivity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionActivity1Code#MarketClaim
- * TransactionActivity1Code.MarketClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionActivity1Code#mmMarketClaim
+ * TransactionActivity1Code.mmMarketClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionActivity1Code#CollateralActivity
- * TransactionActivity1Code.CollateralActivity}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionActivity1Code#mmCollateralActivity
+ * TransactionActivity1Code.mmCollateralActivity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionActivity1Code#CorporateActionActivity
- * TransactionActivity1Code.CorporateActionActivity}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionActivity1Code#mmCorporateActionActivity
+ * TransactionActivity1Code.mmCorporateActionActivity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionActivity1Code#SettlementandClearingActivity
- * TransactionActivity1Code.SettlementandClearingActivity}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionActivity1Code#mmSettlementandClearingActivity
+ * TransactionActivity1Code.mmSettlementandClearingActivity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	 * name} = "BorrowingLendingActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode BorrowingLendingActivity = new MMCode() {
+	public static final MMCode mmBorrowingLendingActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowingLendingActivity";
@@ -114,7 +114,7 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	 * name} = "MarketClaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarketClaim = new MMCode() {
+	public static final MMCode mmMarketClaim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClaim";
@@ -137,7 +137,7 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	 * name} = "CollateralActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralActivity = new MMCode() {
+	public static final MMCode mmCollateralActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralActivity";
@@ -160,7 +160,7 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	 * name} = "CorporateActionActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateActionActivity = new MMCode() {
+	public static final MMCode mmCorporateActionActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionActivity";
@@ -183,7 +183,7 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	 * name} = "SettlementandClearingActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementandClearingActivity = new MMCode() {
+	public static final MMCode mmSettlementandClearingActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementandClearingActivity";
@@ -194,14 +194,14 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOLE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionActivity1Code";
 				definition = "Specifies the type of activity to which this transaction relates.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionActivity1Code.BorrowingLendingActivity, com.tools20022.repository.codeset.TransactionActivity1Code.MarketClaim,
-						com.tools20022.repository.codeset.TransactionActivity1Code.CollateralActivity, com.tools20022.repository.codeset.TransactionActivity1Code.CorporateActionActivity,
-						com.tools20022.repository.codeset.TransactionActivity1Code.SettlementandClearingActivity);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionActivity1Code.mmBorrowingLendingActivity, com.tools20022.repository.codeset.TransactionActivity1Code.mmMarketClaim,
+						com.tools20022.repository.codeset.TransactionActivity1Code.mmCollateralActivity, com.tools20022.repository.codeset.TransactionActivity1Code.mmCorporateActionActivity,
+						com.tools20022.repository.codeset.TransactionActivity1Code.mmSettlementandClearingActivity);
 				trace_lazy = () -> TransactionActivityCode.mmObject();
 			}
 		});

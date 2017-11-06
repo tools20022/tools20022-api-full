@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#NetNegotiation
- * ClearingMethodCode.NetNegotiation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#mmNetNegotiation
+ * ClearingMethodCode.mmNetNegotiation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#GrossNegotiation
- * ClearingMethodCode.GrossNegotiation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#mmGrossNegotiation
+ * ClearingMethodCode.mmGrossNegotiation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#NetMatch
- * ClearingMethodCode.NetMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#mmNetMatch
+ * ClearingMethodCode.mmNetMatch}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,7 +90,7 @@ public class ClearingMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NetNegotiation = new MMCode() {
+	public static final MMCode mmNetNegotiation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetNegotiation";
@@ -123,7 +123,7 @@ public class ClearingMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode GrossNegotiation = new MMCode() {
+	public static final MMCode mmGrossNegotiation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossNegotiation";
@@ -156,7 +156,7 @@ public class ClearingMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NetMatch = new MMCode() {
+	public static final MMCode mmNetMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetMatch";
@@ -169,12 +169,12 @@ public class ClearingMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClearingMethodCode";
 				definition = "Specifies whether the value is net (inclusive of tax) or gross.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingMethodCode.NetNegotiation, com.tools20022.repository.codeset.ClearingMethodCode.GrossNegotiation,
-						com.tools20022.repository.codeset.ClearingMethodCode.NetMatch);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingMethodCode.mmNetNegotiation, com.tools20022.repository.codeset.ClearingMethodCode.mmGrossNegotiation,
+						com.tools20022.repository.codeset.ClearingMethodCode.mmNetMatch);
 				derivation_lazy = () -> Arrays.asList(ClearingMethod1Code.mmObject());
 			}
 		});

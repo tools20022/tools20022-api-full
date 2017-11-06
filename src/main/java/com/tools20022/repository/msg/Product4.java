@@ -33,10 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Product4#ProductCode
- * Product4.ProductCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Product4#AdditionalProductCode
- * Product4.AdditionalProductCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product4#mmProductCode
+ * Product4.mmProductCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Product4#mmAdditionalProductCode
+ * Product4.mmAdditionalProductCode}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Product4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text productCode;
 	/**
 	 * Product code.
 	 * <p>
@@ -74,8 +76,8 @@ public class Product4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductIdentification#Identifier
-	 * ProductIdentification.Identifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmIdentifier
+	 * ProductIdentification.mmIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Product4
@@ -94,25 +96,26 @@ public class Product4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Product3#ProductCode
-	 * Product3.ProductCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.Product3#mmProductCode
+	 * Product3.mmProductCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProductCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProductCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmIdentifier;
 			componentContext_lazy = () -> Product4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.Identifier;
 			isDerived = false;
 			xmlTag = "PdctCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCode";
 			definition = "Product code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.ProductCode;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.mmProductCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max70Text additionalProductCode;
 	/**
 	 * Additional product code related to the product.
 	 * <p>
@@ -140,11 +143,11 @@ public class Product4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Product3#AdditionalProductCode
-	 * Product3.AdditionalProductCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.Product3#mmAdditionalProductCode
+	 * Product3.mmAdditionalProductCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalProductCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalProductCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Product4.mmObject();
 			isDerived = false;
@@ -152,9 +155,9 @@ public class Product4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalProductCode";
 			definition = "Additional product code related to the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.AdditionalProductCode;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.mmAdditionalProductCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -162,9 +165,9 @@ public class Product4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Product4.ProductCode, com.tools20022.repository.msg.Product4.AdditionalProductCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Product4.mmProductCode, com.tools20022.repository.msg.Product4.mmAdditionalProductCode);
 				trace_lazy = () -> Product.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Product4";
 				definition = "Product to purchase.";
@@ -172,5 +175,21 @@ public class Product4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getProductCode() {
+		return productCode;
+	}
+
+	public void setProductCode(Max70Text productCode) {
+		this.productCode = productCode;
+	}
+
+	public Max70Text getAdditionalProductCode() {
+		return additionalProductCode;
+	}
+
+	public void setAdditionalProductCode(Max70Text additionalProductCode) {
+		this.additionalProductCode = additionalProductCode;
 	}
 }

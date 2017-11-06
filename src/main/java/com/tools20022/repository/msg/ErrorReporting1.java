@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ErrorReporting1#Type
- * ErrorReporting1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ErrorReporting1#Description
- * ErrorReporting1.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ErrorReporting1#mmType
+ * ErrorReporting1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ErrorReporting1#mmDescription
+ * ErrorReporting1.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ErrorReporting1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Type of error.
 	 * <p>
@@ -84,7 +85,7 @@ public class ErrorReporting1 {
 	 * definition} = "Type of error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ErrorReporting1.mmObject();
 			isDerived = false;
@@ -92,11 +93,12 @@ public class ErrorReporting1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of error.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max500Text description;
 	/**
 	 * Detailed description of the error.
 	 * <p>
@@ -124,7 +126,7 @@ public class ErrorReporting1 {
 	 * definition} = "Detailed description of the error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ErrorReporting1.mmObject();
 			isDerived = false;
@@ -132,8 +134,8 @@ public class ErrorReporting1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Detailed description of the error.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
@@ -141,13 +143,29 @@ public class ErrorReporting1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorReporting1.Type, com.tools20022.repository.msg.ErrorReporting1.Description);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorReporting1.mmType, com.tools20022.repository.msg.ErrorReporting1.mmDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ErrorReporting1";
 				definition = "Detailed description of an error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public Max500Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max500Text description) {
+		this.description = description;
 	}
 }

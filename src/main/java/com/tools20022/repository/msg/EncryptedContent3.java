@@ -34,21 +34,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EncryptedContent3#ContentType
- * EncryptedContent3.ContentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EncryptedContent3#ContentEncryptionAlgorithm
- * EncryptedContent3.ContentEncryptionAlgorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.EncryptedContent3#mmContentType
+ * EncryptedContent3.mmContentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EncryptedContent3#EncryptedData
- * EncryptedContent3.EncryptedData}</li>
+ * {@linkplain com.tools20022.repository.msg.EncryptedContent3#mmContentEncryptionAlgorithm
+ * EncryptedContent3.mmContentEncryptionAlgorithm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EncryptedContent3#mmEncryptedData
+ * EncryptedContent3.mmEncryptedData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EncryptedContent3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContentType2Code contentType;
 	/**
 	 * Type of data which have been encrypted.
 	 * <p>
@@ -95,11 +97,11 @@ public class EncryptedContent3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.EncryptedContent2#ContentType
-	 * EncryptedContent2.ContentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.EncryptedContent2#mmContentType
+	 * EncryptedContent2.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EncryptedContent3.mmObject();
 			isDerived = false;
@@ -107,12 +109,13 @@ public class EncryptedContent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data which have been encrypted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EncryptedContent2.ContentType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.EncryptedContent2.mmContentType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
 		}
 	};
+	protected AlgorithmIdentification14 contentEncryptionAlgorithm;
 	/**
 	 * Algorithm used to encrypt the data.
 	 * <p>
@@ -141,11 +144,11 @@ public class EncryptedContent3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.EncryptedContent2#ContentEncryptionAlgorithm
-	 * EncryptedContent2.ContentEncryptionAlgorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.EncryptedContent2#mmContentEncryptionAlgorithm
+	 * EncryptedContent2.mmContentEncryptionAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContentEncryptionAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContentEncryptionAlgorithm = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> EncryptedContent3.mmObject();
 			isDerived = false;
@@ -153,13 +156,14 @@ public class EncryptedContent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentEncryptionAlgorithm";
 			definition = "Algorithm used to encrypt the data.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EncryptedContent2.ContentEncryptionAlgorithm;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.EncryptedContent2.mmContentEncryptionAlgorithm;
 			maxOccurs = 1;
-			type_lazy = () -> AlgorithmIdentification14.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification14.mmObject();
 		}
 	};
+	protected Max100KBinary encryptedData;
 	/**
 	 * Encrypted data, result of the content encryption.
 	 * <p>
@@ -189,11 +193,11 @@ public class EncryptedContent3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.EncryptedContent2#EncryptedData
-	 * EncryptedContent2.EncryptedData}</li>
+	 * {@linkplain com.tools20022.repository.msg.EncryptedContent2#mmEncryptedData
+	 * EncryptedContent2.mmEncryptedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EncryptedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEncryptedData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EncryptedContent3.mmObject();
 			isDerived = false;
@@ -201,9 +205,9 @@ public class EncryptedContent3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedData";
 			definition = "Encrypted data, result of the content encryption.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EncryptedContent2.EncryptedData;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.EncryptedContent2.mmEncryptedData;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
 		}
 	};
@@ -211,9 +215,9 @@ public class EncryptedContent3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncryptedContent3.ContentType, com.tools20022.repository.msg.EncryptedContent3.ContentEncryptionAlgorithm,
-						com.tools20022.repository.msg.EncryptedContent3.EncryptedData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncryptedContent3.mmContentType, com.tools20022.repository.msg.EncryptedContent3.mmContentEncryptionAlgorithm,
+						com.tools20022.repository.msg.EncryptedContent3.mmEncryptedData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EncryptedContent3";
 				definition = "Encrypted data with an encryption key.";
@@ -221,5 +225,29 @@ public class EncryptedContent3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContentType2Code getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(ContentType2Code contentType) {
+		this.contentType = contentType;
+	}
+
+	public AlgorithmIdentification14 getContentEncryptionAlgorithm() {
+		return contentEncryptionAlgorithm;
+	}
+
+	public void setContentEncryptionAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification14 contentEncryptionAlgorithm) {
+		this.contentEncryptionAlgorithm = contentEncryptionAlgorithm;
+	}
+
+	public Max100KBinary getEncryptedData() {
+		return encryptedData;
+	}
+
+	public void setEncryptedData(Max100KBinary encryptedData) {
+		this.encryptedData = encryptedData;
 	}
 }

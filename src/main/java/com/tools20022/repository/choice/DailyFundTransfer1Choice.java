@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DailyFundTransfer1Choice#TransferTime
- * DailyFundTransfer1Choice.TransferTime}</li>
+ * {@linkplain com.tools20022.repository.choice.DailyFundTransfer1Choice#mmTransferTime
+ * DailyFundTransfer1Choice.mmTransferTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DailyFundTransfer1Choice#TransferEvent
- * DailyFundTransfer1Choice.TransferEvent}</li>
+ * {@linkplain com.tools20022.repository.choice.DailyFundTransfer1Choice#mmTransferEvent
+ * DailyFundTransfer1Choice.mmTransferEvent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DailyFundTransfer1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISOTime transferTime;
 	/**
 	 * Time daily balances are transferred.
 	 * <p>
@@ -87,7 +88,7 @@ public class DailyFundTransfer1Choice {
 	 * definition} = "Time daily balances are transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransferTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransferTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DailyFundTransfer1Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class DailyFundTransfer1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTime";
 			definition = "Time daily balances are transferred.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	protected TransferEvent1 transferEvent;
 	/**
 	 * Information about code and number of transfer.
 	 * <p>
@@ -126,7 +128,7 @@ public class DailyFundTransfer1Choice {
 	 * definition} = "Information about code and number of transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransferEvent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferEvent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DailyFundTransfer1Choice.mmObject();
 			isDerived = false;
@@ -134,23 +136,39 @@ public class DailyFundTransfer1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferEvent";
 			definition = "Information about code and number of transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransferEvent1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> TransferEvent1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DailyFundTransfer1Choice.TransferTime, com.tools20022.repository.choice.DailyFundTransfer1Choice.TransferEvent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DailyFundTransfer1Choice.mmTransferTime, com.tools20022.repository.choice.DailyFundTransfer1Choice.mmTransferEvent);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DailyFundTransfer1Choice";
 				definition = "Choice between time and event fund transfer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISOTime getTransferTime() {
+		return transferTime;
+	}
+
+	public void setTransferTime(ISOTime transferTime) {
+		this.transferTime = transferTime;
+	}
+
+	public TransferEvent1 getTransferEvent() {
+		return transferEvent;
+	}
+
+	public void setTransferEvent(TransferEvent1 transferEvent) {
+		this.transferEvent = transferEvent;
 	}
 }

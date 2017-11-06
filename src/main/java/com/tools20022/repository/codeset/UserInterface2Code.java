@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterface2Code#MerchantDisplay
- * UserInterface2Code.MerchantDisplay}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterface2Code#mmMerchantDisplay
+ * UserInterface2Code.mmMerchantDisplay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterface2Code#CardholderDisplay
- * UserInterface2Code.CardholderDisplay}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterface2Code#mmCardholderDisplay
+ * UserInterface2Code.mmCardholderDisplay}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class UserInterface2Code extends UserInterfaceCode {
 	 * name} = "MerchantDisplay"</li>
 	 * </ul>
 	 */
-	public static final MMCode MerchantDisplay = new MMCode() {
+	public static final MMCode mmMerchantDisplay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantDisplay";
@@ -104,7 +104,7 @@ public class UserInterface2Code extends UserInterfaceCode {
 	 * name} = "CardholderDisplay"</li>
 	 * </ul>
 	 */
-	public static final MMCode CardholderDisplay = new MMCode() {
+	public static final MMCode mmCardholderDisplay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderDisplay";
@@ -115,12 +115,12 @@ public class UserInterface2Code extends UserInterfaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MDSP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UserInterface2Code";
 				definition = "Type of interface to display a message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterface2Code.MerchantDisplay, com.tools20022.repository.codeset.UserInterface2Code.CardholderDisplay);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterface2Code.mmMerchantDisplay, com.tools20022.repository.codeset.UserInterface2Code.mmCardholderDisplay);
 				trace_lazy = () -> UserInterfaceCode.mmObject();
 			}
 		});

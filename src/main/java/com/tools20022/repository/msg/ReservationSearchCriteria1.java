@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.entity.Reservation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for a reservation.
@@ -38,20 +39,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#SystemIdentification
- * ReservationSearchCriteria1.SystemIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#mmSystemIdentification
+ * ReservationSearchCriteria1.mmSystemIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#DefaultReservationType
- * ReservationSearchCriteria1.DefaultReservationType}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#mmDefaultReservationType
+ * ReservationSearchCriteria1.mmDefaultReservationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#CurrentReservationType
- * ReservationSearchCriteria1.CurrentReservationType}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#mmCurrentReservationType
+ * ReservationSearchCriteria1.mmCurrentReservationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#AccountOwner
- * ReservationSearchCriteria1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#mmAccountOwner
+ * ReservationSearchCriteria1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#AccountIdentification
- * ReservationSearchCriteria1.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationSearchCriteria1#mmAccountIdentification
+ * ReservationSearchCriteria1.mmAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReservationSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemIdentificationChoice systemIdentification;
 	/**
 	 * Identification of a particular cash clearing system.
 	 * <p>
@@ -88,8 +90,8 @@ public class ReservationSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#SystemIdentification
-	 * System.SystemIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+	 * System.mmSystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,20 +110,21 @@ public class ReservationSearchCriteria1 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
 			componentContext_lazy = () -> ReservationSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.SystemIdentification;
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
 		}
 	};
+	protected List<ReservationType1Code> defaultReservationType;
 	/**
 	 * Type of reservation as set by default in the system. The default
 	 * reservation is applicable by the system unless otherwise instructed.
@@ -136,8 +139,8 @@ public class ReservationSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Reservation#ReservationType
-	 * Reservation.ReservationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Reservation#mmReservationType
+	 * Reservation.mmReservationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,10 +161,10 @@ public class ReservationSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DefaultReservationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDefaultReservationType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.mmReservationType;
 			componentContext_lazy = () -> ReservationSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.ReservationType;
 			isDerived = false;
 			xmlTag = "DfltRsvatnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,6 +174,7 @@ public class ReservationSearchCriteria1 {
 			simpleType_lazy = () -> ReservationType1Code.mmObject();
 		}
 	};
+	protected List<ReservationType1Code> currentReservationType;
 	/**
 	 * Type of reservation applied by the system at the present time.
 	 * <p>
@@ -184,8 +188,8 @@ public class ReservationSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Reservation#ReservationType
-	 * Reservation.ReservationType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Reservation#mmReservationType
+	 * Reservation.mmReservationType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,10 +209,10 @@ public class ReservationSearchCriteria1 {
 	 * "Type of reservation applied by the system at the present time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentReservationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentReservationType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.mmReservationType;
 			componentContext_lazy = () -> ReservationSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.ReservationType;
 			isDerived = false;
 			xmlTag = "CurRsvatnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,6 +222,7 @@ public class ReservationSearchCriteria1 {
 			simpleType_lazy = () -> ReservationType1Code.mmObject();
 		}
 	};
+	protected BICIdentifier accountOwner;
 	/**
 	 * Owner of the account which is being queried.
 	 * <p>
@@ -231,8 +236,8 @@ public class ReservationSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -251,20 +256,21 @@ public class ReservationSearchCriteria1 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReservationSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account which is being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected AccountIdentification1Choice accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -278,8 +284,8 @@ public class ReservationSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -300,35 +306,75 @@ public class ReservationSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> ReservationSearchCriteria1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationSearchCriteria1.SystemIdentification, com.tools20022.repository.msg.ReservationSearchCriteria1.DefaultReservationType,
-						com.tools20022.repository.msg.ReservationSearchCriteria1.CurrentReservationType, com.tools20022.repository.msg.ReservationSearchCriteria1.AccountOwner,
-						com.tools20022.repository.msg.ReservationSearchCriteria1.AccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationSearchCriteria1.mmSystemIdentification, com.tools20022.repository.msg.ReservationSearchCriteria1.mmDefaultReservationType,
+						com.tools20022.repository.msg.ReservationSearchCriteria1.mmCurrentReservationType, com.tools20022.repository.msg.ReservationSearchCriteria1.mmAccountOwner,
+						com.tools20022.repository.msg.ReservationSearchCriteria1.mmAccountIdentification);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationSearchCriteria1";
 				definition = "Defines the criteria used to search for a reservation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemIdentificationChoice getSystemIdentification() {
+		return systemIdentification;
+	}
+
+	public void setSystemIdentification(SystemIdentificationChoice systemIdentification) {
+		this.systemIdentification = systemIdentification;
+	}
+
+	public List<ReservationType1Code> getDefaultReservationType() {
+		return defaultReservationType;
+	}
+
+	public void setDefaultReservationType(List<ReservationType1Code> defaultReservationType) {
+		this.defaultReservationType = defaultReservationType;
+	}
+
+	public List<ReservationType1Code> getCurrentReservationType() {
+		return currentReservationType;
+	}
+
+	public void setCurrentReservationType(List<ReservationType1Code> currentReservationType) {
+		this.currentReservationType = currentReservationType;
+	}
+
+	public BICIdentifier getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(BICIdentifier accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public AccountIdentification1Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification1Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
 	}
 }

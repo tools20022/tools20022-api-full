@@ -32,45 +32,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ActionTypeCode ActionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType7Code#Busy
- * ActionType7Code.Busy}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType7Code#mmBusy
+ * ActionType7Code.mmBusy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType7Code#CaptureCard
- * ActionType7Code.CaptureCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType7Code#mmCaptureCard
+ * ActionType7Code.mmCaptureCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType7Code#DisplayMessage
- * ActionType7Code.DisplayMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType7Code#mmDisplayMessage
+ * ActionType7Code.mmDisplayMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType7Code#ForbidOverride
- * ActionType7Code.ForbidOverride}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType7Code#mmForbidOverride
+ * ActionType7Code.mmForbidOverride}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType7Code#IdentificationRequired
- * ActionType7Code.IdentificationRequired}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType7Code#PINLastTry
- * ActionType7Code.PINLastTry}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType7Code#PINRetry
- * ActionType7Code.PINRetry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType7Code#mmIdentificationRequired
+ * ActionType7Code.mmIdentificationRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType7Code#PrintMessage
- * ActionType7Code.PrintMessage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType7Code#Referral
- * ActionType7Code.Referral}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType7Code#mmPINLastTry
+ * ActionType7Code.mmPINLastTry}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType7Code#mmPINRetry
+ * ActionType7Code.mmPINRetry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType7Code#RequestData
- * ActionType7Code.RequestData}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType7Code#mmPrintMessage
+ * ActionType7Code.mmPrintMessage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType7Code#mmReferral
+ * ActionType7Code.mmReferral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType7Code#AcceptCurrencyConversion
- * ActionType7Code.AcceptCurrencyConversion}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType7Code#mmRequestData
+ * ActionType7Code.mmRequestData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType7Code#FallForward
- * ActionType7Code.FallForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType7Code#mmAcceptCurrencyConversion
+ * ActionType7Code.mmAcceptCurrencyConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType7Code#mmFallForward
+ * ActionType7Code.mmFallForward}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -112,15 +113,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#Busy
-	 * ActionType3Code.Busy}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmBusy
+	 * ActionType3Code.mmBusy}</li>
 	 * </ul>
 	 */
-	public static final MMCode Busy = new MMCode() {
+	public static final MMCode mmBusy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Busy";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.Busy;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmBusy;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -141,15 +142,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#CaptureCard
-	 * ActionType3Code.CaptureCard}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmCaptureCard
+	 * ActionType3Code.mmCaptureCard}</li>
 	 * </ul>
 	 */
-	public static final MMCode CaptureCard = new MMCode() {
+	public static final MMCode mmCaptureCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.CaptureCard;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmCaptureCard;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -170,15 +171,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#DisplayMessage
-	 * ActionType3Code.DisplayMessage}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmDisplayMessage
+	 * ActionType3Code.mmDisplayMessage}</li>
 	 * </ul>
 	 */
-	public static final MMCode DisplayMessage = new MMCode() {
+	public static final MMCode mmDisplayMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayMessage";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.DisplayMessage;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmDisplayMessage;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -199,15 +200,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#ForbidOverride
-	 * ActionType3Code.ForbidOverride}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmForbidOverride
+	 * ActionType3Code.mmForbidOverride}</li>
 	 * </ul>
 	 */
-	public static final MMCode ForbidOverride = new MMCode() {
+	public static final MMCode mmForbidOverride = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForbidOverride";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.ForbidOverride;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmForbidOverride;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -228,15 +229,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#IdentificationRequired
-	 * ActionType3Code.IdentificationRequired}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmIdentificationRequired
+	 * ActionType3Code.mmIdentificationRequired}</li>
 	 * </ul>
 	 */
-	public static final MMCode IdentificationRequired = new MMCode() {
+	public static final MMCode mmIdentificationRequired = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRequired";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.IdentificationRequired;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmIdentificationRequired;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -257,15 +258,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#PINLastTry
-	 * ActionType3Code.PINLastTry}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmPINLastTry
+	 * ActionType3Code.mmPINLastTry}</li>
 	 * </ul>
 	 */
-	public static final MMCode PINLastTry = new MMCode() {
+	public static final MMCode mmPINLastTry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLastTry";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.PINLastTry;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmPINLastTry;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -286,15 +287,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#PINRetry
-	 * ActionType3Code.PINRetry}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmPINRetry
+	 * ActionType3Code.mmPINRetry}</li>
 	 * </ul>
 	 */
-	public static final MMCode PINRetry = new MMCode() {
+	public static final MMCode mmPINRetry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRetry";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.PINRetry;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmPINRetry;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -315,15 +316,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#PrintMessage
-	 * ActionType3Code.PrintMessage}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmPrintMessage
+	 * ActionType3Code.mmPrintMessage}</li>
 	 * </ul>
 	 */
-	public static final MMCode PrintMessage = new MMCode() {
+	public static final MMCode mmPrintMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrintMessage";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.PrintMessage;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmPrintMessage;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -344,15 +345,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#Referral
-	 * ActionType3Code.Referral}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmReferral
+	 * ActionType3Code.mmReferral}</li>
 	 * </ul>
 	 */
-	public static final MMCode Referral = new MMCode() {
+	public static final MMCode mmReferral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referral";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.Referral;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmReferral;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -373,15 +374,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#RequestData
-	 * ActionType3Code.RequestData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmRequestData
+	 * ActionType3Code.mmRequestData}</li>
 	 * </ul>
 	 */
-	public static final MMCode RequestData = new MMCode() {
+	public static final MMCode mmRequestData = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestData";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.RequestData;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmRequestData;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -402,15 +403,15 @@ public class ActionType7Code extends ActionTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#AcceptCurrencyConversion
-	 * ActionType3Code.AcceptCurrencyConversion}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ActionType3Code#mmAcceptCurrencyConversion
+	 * ActionType3Code.mmAcceptCurrencyConversion}</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptCurrencyConversion = new MMCode() {
+	public static final MMCode mmAcceptCurrencyConversion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptCurrencyConversion";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.AcceptCurrencyConversion;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType3Code.mmAcceptCurrencyConversion;
 			owner_lazy = () -> ActionType7Code.mmObject();
 		}
 	};
@@ -430,7 +431,7 @@ public class ActionType7Code extends ActionTypeCode {
 	 * name} = "FallForward"</li>
 	 * </ul>
 	 */
-	public static final MMCode FallForward = new MMCode() {
+	public static final MMCode mmFallForward = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallForward";
@@ -441,16 +442,16 @@ public class ActionType7Code extends ActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUSY");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ActionType7Code";
 				definition = "Type of action to be performed by the point of interaction (POI).";
 				previousVersion_lazy = () -> ActionType3Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.Busy, com.tools20022.repository.codeset.ActionType7Code.CaptureCard, com.tools20022.repository.codeset.ActionType7Code.DisplayMessage,
-						com.tools20022.repository.codeset.ActionType7Code.ForbidOverride, com.tools20022.repository.codeset.ActionType7Code.IdentificationRequired, com.tools20022.repository.codeset.ActionType7Code.PINLastTry,
-						com.tools20022.repository.codeset.ActionType7Code.PINRetry, com.tools20022.repository.codeset.ActionType7Code.PrintMessage, com.tools20022.repository.codeset.ActionType7Code.Referral,
-						com.tools20022.repository.codeset.ActionType7Code.RequestData, com.tools20022.repository.codeset.ActionType7Code.AcceptCurrencyConversion, com.tools20022.repository.codeset.ActionType7Code.FallForward);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmBusy, com.tools20022.repository.codeset.ActionType7Code.mmCaptureCard, com.tools20022.repository.codeset.ActionType7Code.mmDisplayMessage,
+						com.tools20022.repository.codeset.ActionType7Code.mmForbidOverride, com.tools20022.repository.codeset.ActionType7Code.mmIdentificationRequired, com.tools20022.repository.codeset.ActionType7Code.mmPINLastTry,
+						com.tools20022.repository.codeset.ActionType7Code.mmPINRetry, com.tools20022.repository.codeset.ActionType7Code.mmPrintMessage, com.tools20022.repository.codeset.ActionType7Code.mmReferral,
+						com.tools20022.repository.codeset.ActionType7Code.mmRequestData, com.tools20022.repository.codeset.ActionType7Code.mmAcceptCurrencyConversion, com.tools20022.repository.codeset.ActionType7Code.mmFallForward);
 				trace_lazy = () -> ActionTypeCode.mmObject();
 			}
 		});

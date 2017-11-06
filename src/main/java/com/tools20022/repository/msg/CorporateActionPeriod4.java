@@ -33,14 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod4#PriceCalculationPeriod
- * CorporateActionPeriod4.PriceCalculationPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod4#mmPriceCalculationPeriod
+ * CorporateActionPeriod4.mmPriceCalculationPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod4#ActionPeriod
- * CorporateActionPeriod4.ActionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod4#mmActionPeriod
+ * CorporateActionPeriod4.mmActionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod4#ParallelTradingPeriod
- * CorporateActionPeriod4.ParallelTradingPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod4#mmParallelTradingPeriod
+ * CorporateActionPeriod4.mmParallelTradingPeriod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPeriod4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Period3 priceCalculationPeriod;
 	/**
 	 * Period during which the price of a security is determined.
 	 * <p>
@@ -76,8 +77,8 @@ public class CorporateActionPeriod4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceCalculationPeriod
-	 * SecuritiesPricing.PriceCalculationPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceCalculationPeriod
+	 * SecuritiesPricing.mmPriceCalculationPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class CorporateActionPeriod4 {
 	 * "Period during which the price of a security is determined."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceCalculationPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceCalculationPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceCalculationPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceCalculationPeriod;
 			isDerived = false;
 			xmlTag = "PricClctnPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
 			definition = "Period during which the price of a security is determined.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	protected Period3 actionPeriod;
 	/**
 	 * Period during which the specified option, or all options of the event,
 	 * remains valid, for example, offer period.
@@ -124,8 +126,8 @@ public class CorporateActionPeriod4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#ActionPeriod
-	 * CorporateActionOption.ActionPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmActionPeriod
+	 * CorporateActionOption.mmActionPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,20 +148,21 @@ public class CorporateActionPeriod4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActionPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmActionPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.ActionPeriod;
 			isDerived = false;
 			xmlTag = "ActnPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionPeriod";
 			definition = "Period during which the specified option, or all options of the event, remains valid, for example, offer period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	protected Period3 parallelTradingPeriod;
 	/**
 	 * Period during which both old and new equity may be traded simultaneously,
 	 * for example, consolidation of equity or splitting of equity.
@@ -173,8 +176,8 @@ public class CorporateActionPeriod4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#ParallelTradingPeriod
-	 * SecuritiesProceedsDefinition.ParallelTradingPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmParallelTradingPeriod
+	 * SecuritiesProceedsDefinition.mmParallelTradingPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,33 +198,57 @@ public class CorporateActionPeriod4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ParallelTradingPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParallelTradingPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmParallelTradingPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.ParallelTradingPeriod;
 			isDerived = false;
 			xmlTag = "ParllTradgPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParallelTradingPeriod";
 			definition = "Period during which both old and new equity may be traded simultaneously, for example, consolidation of equity or splitting of equity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod4.PriceCalculationPeriod, com.tools20022.repository.msg.CorporateActionPeriod4.ActionPeriod,
-						com.tools20022.repository.msg.CorporateActionPeriod4.ParallelTradingPeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod4.mmPriceCalculationPeriod, com.tools20022.repository.msg.CorporateActionPeriod4.mmActionPeriod,
+						com.tools20022.repository.msg.CorporateActionPeriod4.mmParallelTradingPeriod);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPeriod4";
 				definition = "Specifies periods.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Period3 getPriceCalculationPeriod() {
+		return priceCalculationPeriod;
+	}
+
+	public void setPriceCalculationPeriod(com.tools20022.repository.msg.Period3 priceCalculationPeriod) {
+		this.priceCalculationPeriod = priceCalculationPeriod;
+	}
+
+	public Period3 getActionPeriod() {
+		return actionPeriod;
+	}
+
+	public void setActionPeriod(com.tools20022.repository.msg.Period3 actionPeriod) {
+		this.actionPeriod = actionPeriod;
+	}
+
+	public Period3 getParallelTradingPeriod() {
+		return parallelTradingPeriod;
+	}
+
+	public void setParallelTradingPeriod(com.tools20022.repository.msg.Period3 parallelTradingPeriod) {
+		this.parallelTradingPeriod = parallelTradingPeriod;
 	}
 }

@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.repository.entity.Debt;
+import com.tools20022.repository.entity.Equity;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.entity.Warrant;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,15 +35,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#Equity
- * FinancialInstrument28.Equity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#Warrant
- * FinancialInstrument28.Warrant}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#Debt
- * FinancialInstrument28.Debt}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmEquity
+ * FinancialInstrument28.mmEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument28#Derivative
- * FinancialInstrument28.Derivative}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmWarrant
+ * FinancialInstrument28.mmWarrant}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmDebt
+ * FinancialInstrument28.mmDebt}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmDerivative
+ * FinancialInstrument28.mmDerivative}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrument28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Equity2 equity;
 	/**
 	 * Financial instrument which represents a title of ownership in a company,
 	 * ie, the shareholder is entitled to a part of the company's profit -
@@ -100,21 +105,22 @@ public class FinancialInstrument28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Equity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEquity = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Equity.mmObject();
 			componentContext_lazy = () -> FinancialInstrument28.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
 			xmlTag = "Eqty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
 			definition = "Financial instrument which represents a title of ownership  in a company, ie,  the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, eg, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Equity2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
 		}
 	};
+	protected Warrant2 warrant;
 	/**
 	 * Financial instrument that gives the holder the right to purchase shares
 	 * or bonds at a given price within a specified time.
@@ -147,21 +153,22 @@ public class FinancialInstrument28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Warrant = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmWarrant = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Warrant.mmObject();
 			componentContext_lazy = () -> FinancialInstrument28.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			isDerived = false;
 			xmlTag = "Warrt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warrant";
 			definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Warrant2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Warrant2.mmObject();
 		}
 	};
+	protected Debt2 debt;
 	/**
 	 * Financial instruments evidencing moneys owed by the issuer to the holder
 	 * on terms as specified.
@@ -194,21 +201,22 @@ public class FinancialInstrument28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Debt = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDebt = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Debt.mmObject();
 			componentContext_lazy = () -> FinancialInstrument28.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
 			xmlTag = "Debt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debt";
 			definition = "Financial instruments evidencing moneys owed by the issuer to the holder on terms as specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Debt2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 		}
 	};
+	protected Derivative1 derivative;
 	/**
 	 * Choice between type of derivatives.
 	 * <p>
@@ -220,8 +228,8 @@ public class FinancialInstrument28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#Derivative
-	 * Asset.Derivative}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmDerivative
+	 * Asset.mmDerivative}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -240,34 +248,66 @@ public class FinancialInstrument28 {
 	 * definition} = "Choice between type of derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Derivative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDerivative = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmDerivative;
 			componentContext_lazy = () -> FinancialInstrument28.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.Derivative;
 			isDerived = false;
 			xmlTag = "Deriv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Derivative";
 			definition = "Choice between type of derivatives.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Derivative1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Derivative1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument28.Equity, com.tools20022.repository.msg.FinancialInstrument28.Warrant, com.tools20022.repository.msg.FinancialInstrument28.Debt,
-						com.tools20022.repository.msg.FinancialInstrument28.Derivative);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument28.mmEquity, com.tools20022.repository.msg.FinancialInstrument28.mmWarrant,
+						com.tools20022.repository.msg.FinancialInstrument28.mmDebt, com.tools20022.repository.msg.FinancialInstrument28.mmDerivative);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument28";
 				definition = "Tangible items of value to a business.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Equity2 getEquity() {
+		return equity;
+	}
+
+	public void setEquity(com.tools20022.repository.msg.Equity2 equity) {
+		this.equity = equity;
+	}
+
+	public Warrant2 getWarrant() {
+		return warrant;
+	}
+
+	public void setWarrant(com.tools20022.repository.msg.Warrant2 warrant) {
+		this.warrant = warrant;
+	}
+
+	public Debt2 getDebt() {
+		return debt;
+	}
+
+	public void setDebt(com.tools20022.repository.msg.Debt2 debt) {
+		this.debt = debt;
+	}
+
+	public Derivative1 getDerivative() {
+		return derivative;
+	}
+
+	public void setDerivative(com.tools20022.repository.msg.Derivative1 derivative) {
+		this.derivative = derivative;
 	}
 }

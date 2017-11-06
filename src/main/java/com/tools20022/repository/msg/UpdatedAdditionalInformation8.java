@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max8000Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Additional information with update description and date.
@@ -35,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation8#UpdateDescription
- * UpdatedAdditionalInformation8.UpdateDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation8#mmUpdateDescription
+ * UpdatedAdditionalInformation8.mmUpdateDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation8#UpdateDate
- * UpdatedAdditionalInformation8.UpdateDate}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation8#mmUpdateDate
+ * UpdatedAdditionalInformation8.mmUpdateDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation8#AdditionalInformation
- * UpdatedAdditionalInformation8.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation8#mmAdditionalInformation
+ * UpdatedAdditionalInformation8.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -50,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#AdditionalInformation
- * CorporateActionNarrativeV04.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04#mmAdditionalInformation
+ * CorporateActionNarrativeV04.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdatedAdditionalInformation8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text updateDescription;
 	/**
 	 * Specifies the amendments made to the narrative since the last message.
 	 * <p>
@@ -105,11 +107,11 @@ public class UpdatedAdditionalInformation8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation2#UpdateDescription
-	 * UpdatedAdditionalInformation2.UpdateDescription}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation2#mmUpdateDescription
+	 * UpdatedAdditionalInformation2.mmUpdateDescription}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation8.mmObject();
 			isDerived = false;
@@ -117,12 +119,13 @@ public class UpdatedAdditionalInformation8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDescription";
 			definition = "Specifies the amendments made to the narrative since the last message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.UpdateDescription;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmUpdateDescription;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected ISODate updateDate;
 	/**
 	 * Specifies the date at which the narrative has been updated.
 	 * <p>
@@ -152,11 +155,11 @@ public class UpdatedAdditionalInformation8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation2#UpdateDate
-	 * UpdatedAdditionalInformation2.UpdateDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation2#mmUpdateDate
+	 * UpdatedAdditionalInformation2.mmUpdateDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation8.mmObject();
 			isDerived = false;
@@ -164,12 +167,13 @@ public class UpdatedAdditionalInformation8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDate";
 			definition = "Specifies the date at which the narrative has been updated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.UpdateDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmUpdateDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<Max8000Text> additionalInformation;
 	/**
 	 * Provides additional textual information.
 	 * <p>
@@ -198,11 +202,11 @@ public class UpdatedAdditionalInformation8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation2#AdditionalInformation
-	 * UpdatedAdditionalInformation2.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation2#mmAdditionalInformation
+	 * UpdatedAdditionalInformation2.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedAdditionalInformation8.mmObject();
 			isDerived = false;
@@ -210,7 +214,7 @@ public class UpdatedAdditionalInformation8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional textual information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.AdditionalInformation;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmAdditionalInformation;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max8000Text.mmObject();
 		}
@@ -219,10 +223,10 @@ public class UpdatedAdditionalInformation8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation8.UpdateDescription, com.tools20022.repository.msg.UpdatedAdditionalInformation8.UpdateDate,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation8.AdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV04.AdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmUpdateDescription, com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmUpdateDate,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmAdditionalInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UpdatedAdditionalInformation8";
 				definition = "Additional information with update description and date.";
@@ -230,5 +234,29 @@ public class UpdatedAdditionalInformation8 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getUpdateDescription() {
+		return updateDescription;
+	}
+
+	public void setUpdateDescription(Max140Text updateDescription) {
+		this.updateDescription = updateDescription;
+	}
+
+	public ISODate getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(ISODate updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public List<Max8000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max8000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

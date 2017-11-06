@@ -39,11 +39,11 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerms2#PercentageOrAmountRule
- * PaymentTerms2.PercentageOrAmountRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerms2#mmPercentageOrAmountRule
+ * PaymentTerms2.mmPercentageOrAmountRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerms2#OtherPaymentTermsOrPaymentCodeRule
- * PaymentTerms2.OtherPaymentTermsOrPaymentCodeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerms2#mmOtherPaymentTermsOrPaymentCodeRule
+ * PaymentTerms2.mmOtherPaymentTermsOrPaymentCodeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -51,14 +51,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTerms2#OtherPaymentTerms
- * PaymentTerms2.OtherPaymentTerms}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#PaymentCode
- * PaymentTerms2.PaymentCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#Percentage
- * PaymentTerms2.Percentage}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#Amount
- * PaymentTerms2.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTerms2#mmOtherPaymentTerms
+ * PaymentTerms2.mmOtherPaymentTerms}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#mmPaymentCode
+ * PaymentTerms2.mmPaymentCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#mmPercentage
+ * PaymentTerms2.mmPercentage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#mmAmount
+ * PaymentTerms2.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,8 +67,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -89,6 +89,7 @@ import java.util.function.Supplier;
 public class PaymentTerms2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text otherPaymentTerms;
 	/**
 	 * Specifies payment terms not present in a code list.
 	 * <p>
@@ -115,7 +116,7 @@ public class PaymentTerms2 {
 	 * definition} = "Specifies payment terms not present in a code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherPaymentTerms = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherPaymentTerms = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentTerms2.mmObject();
 			isDerived = false;
@@ -123,11 +124,12 @@ public class PaymentTerms2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherPaymentTerms";
 			definition = "Specifies payment terms not present in a code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PaymentPeriod2 paymentCode;
 	/**
 	 * Specifies the payment period in coded form and a number of days.
 	 * <p>
@@ -139,8 +141,8 @@ public class PaymentTerms2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentTerms
-	 * PaymentObligation.PaymentTerms}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentTerms
+	 * PaymentObligation.mmPaymentTerms}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,21 +161,22 @@ public class PaymentTerms2 {
 	 * "Specifies the payment period in coded form and a number of days."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentTerms;
 			componentContext_lazy = () -> PaymentTerms2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentTerms;
 			isDerived = false;
 			xmlTag = "PmtCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCode";
 			definition = "Specifies the payment period in coded form and a number of days.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentPeriod2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentPeriod2.mmObject();
 		}
 	};
+	protected PercentageRate percentage;
 	/**
 	 * Specifies that the payment conditions apply to a percentage of the amount
 	 * due.
@@ -188,8 +191,8 @@ public class PaymentTerms2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentTerms#Percentage
-	 * PaymentTerms.Percentage}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmPercentage
+	 * PaymentTerms.mmPercentage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -209,20 +212,21 @@ public class PaymentTerms2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Percentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmPercentage;
 			componentContext_lazy = () -> PaymentTerms2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.Percentage;
 			isDerived = false;
 			xmlTag = "Pctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Specifies that the payment conditions apply to a percentage of the amount due.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount of money to be moved between the debtor and creditor, before
 	 * deduction of charges, expressed in the currency as ordered by the
@@ -238,8 +242,8 @@ public class PaymentTerms2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentTerms#Amount
-	 * PaymentTerms.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmAmount
+	 * PaymentTerms.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -259,17 +263,17 @@ public class PaymentTerms2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmAmount;
 			componentContext_lazy = () -> PaymentTerms2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -282,10 +286,10 @@ public class PaymentTerms2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#Percentage
-	 * PaymentTerms2.Percentage}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#Amount
-	 * PaymentTerms2.Amount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#mmPercentage
+	 * PaymentTerms2.mmPercentage}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#mmAmount
+	 * PaymentTerms2.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -304,13 +308,13 @@ public class PaymentTerms2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor PercentageOrAmountRule = new MMXor() {
+	public static final MMXor mmPercentageOrAmountRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOrAmountRule";
 			definition = "If Percentage is present, then Amount is not allowed. If Percentage is not present, then Amount is mandatory.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms2.Percentage, com.tools20022.repository.msg.PaymentTerms2.Amount);
 			messageComponent_lazy = () -> PaymentTerms2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms2.mmPercentage, com.tools20022.repository.msg.PaymentTerms2.mmAmount);
 		}
 	};
 	/**
@@ -323,10 +327,11 @@ public class PaymentTerms2 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerms2#OtherPaymentTerms
-	 * PaymentTerms2.OtherPaymentTerms}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms2#PaymentCode
-	 * PaymentTerms2.PaymentCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerms2#mmOtherPaymentTerms
+	 * PaymentTerms2.mmOtherPaymentTerms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerms2#mmPaymentCode
+	 * PaymentTerms2.mmPaymentCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -345,23 +350,23 @@ public class PaymentTerms2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor OtherPaymentTermsOrPaymentCodeRule = new MMXor() {
+	public static final MMXor mmOtherPaymentTermsOrPaymentCodeRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherPaymentTermsOrPaymentCodeRule";
 			definition = "If OtherPaymentTerms is present, then PaymentCode is not allowed. If OtherPaymentTerms is not present, then PaymentCode is mandatory.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms2.OtherPaymentTerms, com.tools20022.repository.msg.PaymentTerms2.PaymentCode);
 			messageComponent_lazy = () -> PaymentTerms2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms2.mmOtherPaymentTerms, com.tools20022.repository.msg.PaymentTerms2.mmPaymentCode);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms2.OtherPaymentTerms, com.tools20022.repository.msg.PaymentTerms2.PaymentCode, com.tools20022.repository.msg.PaymentTerms2.Percentage,
-						com.tools20022.repository.msg.PaymentTerms2.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms2.mmOtherPaymentTerms, com.tools20022.repository.msg.PaymentTerms2.mmPaymentCode, com.tools20022.repository.msg.PaymentTerms2.mmPercentage,
+						com.tools20022.repository.msg.PaymentTerms2.mmAmount);
 				trace_lazy = () -> PaymentObligation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -373,9 +378,41 @@ public class PaymentTerms2 {
 				name = "PaymentTerms2";
 				definition = "Specifies the payment terms of the underlying transaction.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentTerms4.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms2.PercentageOrAmountRule, com.tools20022.repository.msg.PaymentTerms2.OtherPaymentTermsOrPaymentCodeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms2.mmPercentageOrAmountRule, com.tools20022.repository.msg.PaymentTerms2.mmOtherPaymentTermsOrPaymentCodeRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getOtherPaymentTerms() {
+		return otherPaymentTerms;
+	}
+
+	public void setOtherPaymentTerms(Max140Text otherPaymentTerms) {
+		this.otherPaymentTerms = otherPaymentTerms;
+	}
+
+	public PaymentPeriod2 getPaymentCode() {
+		return paymentCode;
+	}
+
+	public void setPaymentCode(com.tools20022.repository.msg.PaymentPeriod2 paymentCode) {
+		this.paymentCode = paymentCode;
+	}
+
+	public PercentageRate getPercentage() {
+		return percentage;
+	}
+
+	public void setPercentage(PercentageRate percentage) {
+		this.percentage = percentage;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

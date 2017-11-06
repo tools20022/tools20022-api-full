@@ -57,24 +57,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#Header
- * ATMReconciliationAdviceV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#mmHeader
+ * ATMReconciliationAdviceV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#ProtectedATMReconciliationAdvice
- * ATMReconciliationAdviceV01.ProtectedATMReconciliationAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#mmProtectedATMReconciliationAdvice
+ * ATMReconciliationAdviceV01.mmProtectedATMReconciliationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#ATMReconciliationAdvice
- * ATMReconciliationAdviceV01.ATMReconciliationAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#mmATMReconciliationAdvice
+ * ATMReconciliationAdviceV01.mmATMReconciliationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#SecurityTrailer
- * ATMReconciliationAdviceV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#mmSecurityTrailer
+ * ATMReconciliationAdviceV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01#identifier
- * ATMReconciliationAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caam.009.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMReconciliationAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header21 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -123,17 +122,18 @@ public class ATMReconciliationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header21.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedATMReconciliationAdvice;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -157,17 +157,18 @@ public class ATMReconciliationAdviceV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedATMReconciliationAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedATMReconciliationAdvice = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMRcncltnAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMReconciliationAdvice";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected ATMReconciliationAdvice1 aTMReconciliationAdvice;
 	/**
 	 * Information related to the reconciliation of an ATM.
 	 * <p>
@@ -191,17 +192,18 @@ public class ATMReconciliationAdviceV01 {
 	 * definition} = "Information related to the reconciliation of an ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMReconciliationAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMReconciliationAdvice = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMRcncltnAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMReconciliationAdvice";
 			definition = "Information related to the reconciliation of an ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ATMReconciliationAdvice1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -225,42 +227,15 @@ public class ATMReconciliationAdviceV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caam"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "009"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caam";
-			messageFunctionality = "009";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -275,11 +250,50 @@ public class ATMReconciliationAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "ATMRcncltnAdvc";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.Header, com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.ProtectedATMReconciliationAdvice,
-						com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.ATMReconciliationAdvice, com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmHeader, com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmProtectedATMReconciliationAdvice,
+						com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmATMReconciliationAdvice, com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caam";
+						messageFunctionality = "009";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header21 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header21 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedATMReconciliationAdvice() {
+		return protectedATMReconciliationAdvice;
+	}
+
+	public void setProtectedATMReconciliationAdvice(ContentInformationType10 protectedATMReconciliationAdvice) {
+		this.protectedATMReconciliationAdvice = protectedATMReconciliationAdvice;
+	}
+
+	public ATMReconciliationAdvice1 getATMReconciliationAdvice() {
+		return aTMReconciliationAdvice;
+	}
+
+	public void setATMReconciliationAdvice(ATMReconciliationAdvice1 aTMReconciliationAdvice) {
+		this.aTMReconciliationAdvice = aTMReconciliationAdvice;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

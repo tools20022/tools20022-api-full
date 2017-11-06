@@ -26,6 +26,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Limit details of one particular limit set by the member and managed by the
@@ -36,8 +37,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#SingleOrAllLimitsRule
- * LimitDetailsStructure3.SingleOrAllLimitsRule}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#mmSingleOrAllLimitsRule
+ * LimitDetailsStructure3.mmSingleOrAllLimitsRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,11 +46,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#CurrentLimitIdentification
- * LimitDetailsStructure3.CurrentLimitIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#mmCurrentLimitIdentification
+ * LimitDetailsStructure3.mmCurrentLimitIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#AllCurrentLimits
- * LimitDetailsStructure3.AllCurrentLimits}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#mmAllCurrentLimits
+ * LimitDetailsStructure3.mmAllCurrentLimits}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +59,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,6 +77,7 @@ import java.util.function.Supplier;
 public class LimitDetailsStructure3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.LimitIdentificationDetails2> currentLimitIdentification;
 	/**
 	 * Identification of the current limit.
 	 * <p>
@@ -108,20 +110,21 @@ public class LimitDetailsStructure3 {
 	 * definition} = "Identification of the current limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrentLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrentLimitIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitDetailsStructure3.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitDetailsStructure3.mmObject();
 			isDerived = false;
 			xmlTag = "CurLmtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentLimitIdentification";
 			definition = "Identification of the current limit.";
 			minOccurs = 1;
-			type_lazy = () -> LimitIdentificationDetails2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.LimitIdentificationDetails3> allCurrentLimits;
 	/**
 	 * Identification of the current limit.
 	 * <p>
@@ -154,18 +157,18 @@ public class LimitDetailsStructure3 {
 	 * definition} = "Identification of the current limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AllCurrentLimits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAllCurrentLimits = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitDetailsStructure3.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitDetailsStructure3.mmObject();
 			isDerived = false;
 			xmlTag = "AllCurLmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllCurrentLimits";
 			definition = "Identification of the current limit.";
 			minOccurs = 1;
-			type_lazy = () -> LimitIdentificationDetails3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails3.mmObject();
 		}
 	};
 	/**
@@ -177,11 +180,11 @@ public class LimitDetailsStructure3 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#CurrentLimitIdentification
-	 * LimitDetailsStructure3.CurrentLimitIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#mmCurrentLimitIdentification
+	 * LimitDetailsStructure3.mmCurrentLimitIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#AllCurrentLimits
-	 * LimitDetailsStructure3.AllCurrentLimits}</li>
+	 * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#mmAllCurrentLimits
+	 * LimitDetailsStructure3.mmAllCurrentLimits}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -200,22 +203,22 @@ public class LimitDetailsStructure3 {
 	 * "Each ModifyLimit message can only modify one type of limit."</li>
 	 * </ul>
 	 */
-	public static final MMXor SingleOrAllLimitsRule = new MMXor() {
+	public static final MMXor mmSingleOrAllLimitsRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleOrAllLimitsRule";
 			definition = "Each ModifyLimit message can only modify one type of limit.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure3.CurrentLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure3.AllCurrentLimits);
 			messageComponent_lazy = () -> LimitDetailsStructure3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure3.mmCurrentLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure3.mmAllCurrentLimits);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure3.CurrentLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure3.AllCurrentLimits);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure3.mmCurrentLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure3.mmAllCurrentLimits);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -226,9 +229,25 @@ public class LimitDetailsStructure3 {
 				})).get();
 				name = "LimitDetailsStructure3";
 				definition = "Limit details of one particular limit set by the member and managed by the transaction administrator.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure3.SingleOrAllLimitsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure3.mmSingleOrAllLimitsRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<LimitIdentificationDetails2> getCurrentLimitIdentification() {
+		return currentLimitIdentification;
+	}
+
+	public void setCurrentLimitIdentification(List<com.tools20022.repository.msg.LimitIdentificationDetails2> currentLimitIdentification) {
+		this.currentLimitIdentification = currentLimitIdentification;
+	}
+
+	public List<LimitIdentificationDetails3> getAllCurrentLimits() {
+		return allCurrentLimits;
+	}
+
+	public void setAllCurrentLimits(List<com.tools20022.repository.msg.LimitIdentificationDetails3> allCurrentLimits) {
+		this.allCurrentLimits = allCurrentLimits;
 	}
 }

@@ -29,12 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#Referred
- * ReferredCode.Referred}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#NotReferred
- * ReferredCode.NotReferred}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#NotKnown
- * ReferredCode.NotKnown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#mmReferred
+ * ReferredCode.mmReferred}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#mmNotReferred
+ * ReferredCode.mmNotReferred}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#mmNotKnown
+ * ReferredCode.mmNotKnown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class ReferredCode {
 	 * "The investor was referred to the fund by a placement agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode Referred = new MMCode() {
+	public static final MMCode mmReferred = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referred";
@@ -119,7 +119,7 @@ public class ReferredCode {
 	 * "The investor was not referred to the fund by a placement agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotReferred = new MMCode() {
+	public static final MMCode mmNotReferred = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReferred";
@@ -151,7 +151,7 @@ public class ReferredCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NotKnown = new MMCode() {
+	public static final MMCode mmNotKnown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotKnown";
@@ -164,12 +164,12 @@ public class ReferredCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REFR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReferredCode";
 				definition = "Indicates if the investor was referred.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReferredCode.Referred, com.tools20022.repository.codeset.ReferredCode.NotReferred, com.tools20022.repository.codeset.ReferredCode.NotKnown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReferredCode.mmReferred, com.tools20022.repository.codeset.ReferredCode.mmNotReferred, com.tools20022.repository.codeset.ReferredCode.mmNotKnown);
 				derivation_lazy = () -> Arrays.asList(Referred1Code.mmObject());
 			}
 		});

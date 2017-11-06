@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat4#DateCode
- * DateCodeAndTimeFormat4.DateCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat4#Time
- * DateCodeAndTimeFormat4.Time}</li>
+ * {@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat4#mmDateCode
+ * DateCodeAndTimeFormat4.mmDateCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat4#mmTime
+ * DateCodeAndTimeFormat4.mmTime}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateCodeAndTimeFormat4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateCode26Choice dateCode;
 	/**
 	 * Specifies the type of date.
 	 * <p>
@@ -85,7 +86,7 @@ public class DateCodeAndTimeFormat4 {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DateCodeAndTimeFormat4.mmObject();
 			isDerived = false;
@@ -93,12 +94,13 @@ public class DateCodeAndTimeFormat4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateCode26Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateCode26Choice.mmObject();
 		}
 	};
+	protected ISOTime time;
 	/**
 	 * Specifies the time.
 	 * <p>
@@ -126,7 +128,7 @@ public class DateCodeAndTimeFormat4 {
 	 * definition} = "Specifies the time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Time = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateCodeAndTimeFormat4.mmObject();
 			isDerived = false;
@@ -134,8 +136,8 @@ public class DateCodeAndTimeFormat4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Time";
 			definition = "Specifies the time.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
@@ -143,13 +145,29 @@ public class DateCodeAndTimeFormat4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateCodeAndTimeFormat4.DateCode, com.tools20022.repository.msg.DateCodeAndTimeFormat4.Time);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateCodeAndTimeFormat4.mmDateCode, com.tools20022.repository.msg.DateCodeAndTimeFormat4.mmTime);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateCodeAndTimeFormat4";
 				definition = "Specifies  a date code and a time.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateCode26Choice getDateCode() {
+		return dateCode;
+	}
+
+	public void setDateCode(DateCode26Choice dateCode) {
+		this.dateCode = dateCode;
+	}
+
+	public ISOTime getTime() {
+		return time;
+	}
+
+	public void setTime(ISOTime time) {
+		this.time = time;
 	}
 }

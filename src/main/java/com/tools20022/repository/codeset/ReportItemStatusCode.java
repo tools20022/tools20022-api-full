@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportItemStatusCode#AcceptedWithException
- * ReportItemStatusCode.AcceptedWithException}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportItemStatusCode#mmAcceptedWithException
+ * ReportItemStatusCode.mmAcceptedWithException}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportItemStatusCode#Rejected
- * ReportItemStatusCode.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportItemStatusCode#mmRejected
+ * ReportItemStatusCode.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportItemStatusCode#Accepted
- * ReportItemStatusCode.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportItemStatusCode#mmAccepted
+ * ReportItemStatusCode.mmAccepted}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class ReportItemStatusCode {
 	 * "Entry has been accepted with exceptions by the receiver of the report."</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedWithException = new MMCode() {
+	public static final MMCode mmAcceptedWithException = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithException";
@@ -123,7 +123,7 @@ public class ReportItemStatusCode {
 	 * definition} = "Entry has been rejected by the receiver of the report."</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -153,7 +153,7 @@ public class ReportItemStatusCode {
 	 * definition} = "Entry has been accepted by the receiver of the report."</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -166,13 +166,13 @@ public class ReportItemStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACPD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportItemStatusCode";
 				definition = "Specifies the status of an entry in a report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportItemStatusCode.AcceptedWithException, com.tools20022.repository.codeset.ReportItemStatusCode.Rejected,
-						com.tools20022.repository.codeset.ReportItemStatusCode.Accepted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportItemStatusCode.mmAcceptedWithException, com.tools20022.repository.codeset.ReportItemStatusCode.mmRejected,
+						com.tools20022.repository.codeset.ReportItemStatusCode.mmAccepted);
 				derivation_lazy = () -> Arrays.asList(ReportItemStatus1Code.mmObject());
 			}
 		});

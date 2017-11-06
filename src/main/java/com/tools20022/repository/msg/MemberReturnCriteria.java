@@ -33,33 +33,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#NameIndicator
- * MemberReturnCriteria.NameIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#mmNameIndicator
+ * MemberReturnCriteria.mmNameIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#MemberReturnAddressIndicator
- * MemberReturnCriteria.MemberReturnAddressIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#mmMemberReturnAddressIndicator
+ * MemberReturnCriteria.mmMemberReturnAddressIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#AccountIndicator
- * MemberReturnCriteria.AccountIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#mmAccountIndicator
+ * MemberReturnCriteria.mmAccountIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#TypeIndicator
- * MemberReturnCriteria.TypeIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#mmTypeIndicator
+ * MemberReturnCriteria.mmTypeIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#StatusIndicator
- * MemberReturnCriteria.StatusIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#mmStatusIndicator
+ * MemberReturnCriteria.mmStatusIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#ContactReferenceIndicator
- * MemberReturnCriteria.ContactReferenceIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#mmContactReferenceIndicator
+ * MemberReturnCriteria.mmContactReferenceIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#CommunicationAddressIndicator
- * MemberReturnCriteria.CommunicationAddressIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.MemberReturnCriteria#mmCommunicationAddressIndicator
+ * MemberReturnCriteria.mmCommunicationAddressIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MemberReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestedIndicator nameIndicator;
 	/**
 	 * Indicates whether the member name is requested.
 	 * <p>
@@ -101,7 +102,7 @@ public class MemberReturnCriteria {
 	 * definition} = "Indicates whether the member name is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NameIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNameIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -109,11 +110,12 @@ public class MemberReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameIndicator";
 			definition = "Indicates whether the member name is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator memberReturnAddressIndicator;
 	/**
 	 * Indicates whether the member return address is requested.
 	 * <p>
@@ -143,7 +145,7 @@ public class MemberReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MemberReturnAddressIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMemberReturnAddressIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -151,11 +153,12 @@ public class MemberReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberReturnAddressIndicator";
 			definition = "Indicates whether the member return address is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator accountIndicator;
 	/**
 	 * Indicates whether the member account is requested.
 	 * <p>
@@ -184,7 +187,7 @@ public class MemberReturnCriteria {
 	 * definition} = "Indicates whether the member account is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -192,11 +195,12 @@ public class MemberReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIndicator";
 			definition = "Indicates whether the member account is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator typeIndicator;
 	/**
 	 * Indicates whether the member type is requested.
 	 * <p>
@@ -225,7 +229,7 @@ public class MemberReturnCriteria {
 	 * definition} = "Indicates whether the member type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -233,11 +237,12 @@ public class MemberReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeIndicator";
 			definition = "Indicates whether the member type is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator statusIndicator;
 	/**
 	 * Indicates whether the member status is requested.
 	 * <p>
@@ -266,7 +271,7 @@ public class MemberReturnCriteria {
 	 * definition} = "Indicates whether the member status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -274,11 +279,12 @@ public class MemberReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIndicator";
 			definition = "Indicates whether the member status is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator contactReferenceIndicator;
 	/**
 	 * Indicates whether the contact references are requested.
 	 * <p>
@@ -307,7 +313,7 @@ public class MemberReturnCriteria {
 	 * definition} = "Indicates whether the contact references are requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContactReferenceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContactReferenceIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -315,11 +321,12 @@ public class MemberReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactReferenceIndicator";
 			definition = "Indicates whether the contact references are requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator communicationAddressIndicator;
 	/**
 	 * Indicates whether the communication addresses are requested.
 	 * <p>
@@ -349,7 +356,7 @@ public class MemberReturnCriteria {
 	 * "Indicates whether the communication addresses are requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommunicationAddressIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommunicationAddressIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -357,8 +364,8 @@ public class MemberReturnCriteria {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationAddressIndicator";
 			definition = "Indicates whether the communication addresses are requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
@@ -366,15 +373,71 @@ public class MemberReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReturnCriteria.NameIndicator, com.tools20022.repository.msg.MemberReturnCriteria.MemberReturnAddressIndicator,
-						com.tools20022.repository.msg.MemberReturnCriteria.AccountIndicator, com.tools20022.repository.msg.MemberReturnCriteria.TypeIndicator, com.tools20022.repository.msg.MemberReturnCriteria.StatusIndicator,
-						com.tools20022.repository.msg.MemberReturnCriteria.ContactReferenceIndicator, com.tools20022.repository.msg.MemberReturnCriteria.CommunicationAddressIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReturnCriteria.mmNameIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmMemberReturnAddressIndicator,
+						com.tools20022.repository.msg.MemberReturnCriteria.mmAccountIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmTypeIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmStatusIndicator,
+						com.tools20022.repository.msg.MemberReturnCriteria.mmContactReferenceIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmCommunicationAddressIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberReturnCriteria";
 				definition = "Defines the criteria used to report on a member.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestedIndicator getNameIndicator() {
+		return nameIndicator;
+	}
+
+	public void setNameIndicator(RequestedIndicator nameIndicator) {
+		this.nameIndicator = nameIndicator;
+	}
+
+	public RequestedIndicator getMemberReturnAddressIndicator() {
+		return memberReturnAddressIndicator;
+	}
+
+	public void setMemberReturnAddressIndicator(RequestedIndicator memberReturnAddressIndicator) {
+		this.memberReturnAddressIndicator = memberReturnAddressIndicator;
+	}
+
+	public RequestedIndicator getAccountIndicator() {
+		return accountIndicator;
+	}
+
+	public void setAccountIndicator(RequestedIndicator accountIndicator) {
+		this.accountIndicator = accountIndicator;
+	}
+
+	public RequestedIndicator getTypeIndicator() {
+		return typeIndicator;
+	}
+
+	public void setTypeIndicator(RequestedIndicator typeIndicator) {
+		this.typeIndicator = typeIndicator;
+	}
+
+	public RequestedIndicator getStatusIndicator() {
+		return statusIndicator;
+	}
+
+	public void setStatusIndicator(RequestedIndicator statusIndicator) {
+		this.statusIndicator = statusIndicator;
+	}
+
+	public RequestedIndicator getContactReferenceIndicator() {
+		return contactReferenceIndicator;
+	}
+
+	public void setContactReferenceIndicator(RequestedIndicator contactReferenceIndicator) {
+		this.contactReferenceIndicator = contactReferenceIndicator;
+	}
+
+	public RequestedIndicator getCommunicationAddressIndicator() {
+		return communicationAddressIndicator;
+	}
+
+	public void setCommunicationAddressIndicator(RequestedIndicator communicationAddressIndicator) {
+		this.communicationAddressIndicator = communicationAddressIndicator;
 	}
 }

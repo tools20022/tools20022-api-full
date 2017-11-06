@@ -32,17 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.FiscalYear1Choice#StartDate
- * FiscalYear1Choice.StartDate}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FiscalYear1Choice#EndDate
- * FiscalYear1Choice.EndDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FiscalYear1Choice#mmStartDate
+ * FiscalYear1Choice.mmStartDate}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FiscalYear1Choice#mmEndDate
+ * FiscalYear1Choice.mmEndDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FiscalYear1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate startDate;
 	/**
 	 * Start date of the fiscal year.
 	 * <p>
@@ -83,7 +85,7 @@ public class FiscalYear1Choice {
 	 * definition} = "Start date of the fiscal year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FiscalYear1Choice.mmObject();
 			isDerived = false;
@@ -91,11 +93,12 @@ public class FiscalYear1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date of the fiscal year.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate endDate;
 	/**
 	 * End date of the fiscal year.
 	 * <p>
@@ -123,7 +126,7 @@ public class FiscalYear1Choice {
 	 * definition} = "End date of the fiscal year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FiscalYear1Choice.mmObject();
 			isDerived = false;
@@ -131,8 +134,8 @@ public class FiscalYear1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "End date of the fiscal year.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -140,13 +143,29 @@ public class FiscalYear1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FiscalYear1Choice.StartDate, com.tools20022.repository.choice.FiscalYear1Choice.EndDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FiscalYear1Choice.mmStartDate, com.tools20022.repository.choice.FiscalYear1Choice.mmEndDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FiscalYear1Choice";
 				definition = "Choice of start date and end date for the fiscal year.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(ISODate startDate) {
+		this.startDate = startDate;
+	}
+
+	public ISODate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(ISODate endDate) {
+		this.endDate = endDate;
 	}
 }

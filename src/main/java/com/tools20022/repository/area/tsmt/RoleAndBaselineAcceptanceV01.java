@@ -63,21 +63,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#AcceptanceIdentification
- * RoleAndBaselineAcceptanceV01.AcceptanceIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#mmAcceptanceIdentification
+ * RoleAndBaselineAcceptanceV01.mmAcceptanceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#RelatedMessageReference
- * RoleAndBaselineAcceptanceV01.RelatedMessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#mmRelatedMessageReference
+ * RoleAndBaselineAcceptanceV01.mmRelatedMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#TransactionIdentification
- * RoleAndBaselineAcceptanceV01.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#mmTransactionIdentification
+ * RoleAndBaselineAcceptanceV01.mmTransactionIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01#identifier
- * RoleAndBaselineAcceptanceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsmt.049.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RoleAndBaselineAcceptanceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 acceptanceIdentification;
 	/**
 	 * Identifies the acceptance message.
 	 * <p>
@@ -116,17 +115,18 @@ public class RoleAndBaselineAcceptanceV01 {
 	 * definition} = "Identifies the acceptance message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcceptanceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcceptanceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptncId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceIdentification";
 			definition = "Identifies the acceptance message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected MessageIdentification1 relatedMessageReference;
 	/**
 	 * Reference to the message that contained the baseline and is accepted.
 	 * <p>
@@ -151,17 +151,18 @@ public class RoleAndBaselineAcceptanceV01 {
 	 * "Reference to the message that contained the baseline and is accepted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdMsgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMessageReference";
 			definition = "Reference to the message that contained the baseline and is accepted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected SimpleIdentificationInformation transactionIdentification;
 	/**
 	 * Unique identification assigned by the matching application to the
 	 * transaction. This identification is to be used in any communication
@@ -189,42 +190,15 @@ public class RoleAndBaselineAcceptanceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "049"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsmt";
-			messageFunctionality = "049";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -238,11 +212,42 @@ public class RoleAndBaselineAcceptanceV01 {
 				rootElement = "Document";
 				xmlTag = "RoleAndBaselnAccptnc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.AcceptanceIdentification,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.RelatedMessageReference, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.TransactionIdentification);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.mmAcceptanceIdentification,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.mmRelatedMessageReference, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.mmTransactionIdentification);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsmt";
+						messageFunctionality = "049";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getAcceptanceIdentification() {
+		return acceptanceIdentification;
+	}
+
+	public void setAcceptanceIdentification(MessageIdentification1 acceptanceIdentification) {
+		this.acceptanceIdentification = acceptanceIdentification;
+	}
+
+	public MessageIdentification1 getRelatedMessageReference() {
+		return relatedMessageReference;
+	}
+
+	public void setRelatedMessageReference(MessageIdentification1 relatedMessageReference) {
+		this.relatedMessageReference = relatedMessageReference;
+	}
+
+	public SimpleIdentificationInformation getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
 	}
 }

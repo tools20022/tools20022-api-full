@@ -40,18 +40,18 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormatSD2Choice#NotSpecifiedPrice
- * PriceFormatSD2Choice.NotSpecifiedPrice}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormatSD2Choice#mmNotSpecifiedPrice
+ * PriceFormatSD2Choice.mmNotSpecifiedPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormatSD2Choice#AmountPricePerFinancialInstrumentQuantity
- * PriceFormatSD2Choice.AmountPricePerFinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormatSD2Choice#mmAmountPricePerFinancialInstrumentQuantity
+ * PriceFormatSD2Choice.mmAmountPricePerFinancialInstrumentQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -72,6 +72,7 @@ import java.util.function.Supplier;
 public class PriceFormatSD2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PriceValueType10Code notSpecifiedPrice;
 	/**
 	 * Value of the price not specified.
 	 * <p>
@@ -101,11 +102,11 @@ public class PriceFormatSD2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice#NotSpecifiedPrice
-	 * PriceFormatSD1Choice.NotSpecifiedPrice}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice#mmNotSpecifiedPrice
+	 * PriceFormatSD1Choice.mmNotSpecifiedPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriceFormatSD2Choice.mmObject();
 			isDerived = false;
@@ -113,12 +114,13 @@ public class PriceFormatSD2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedPrice";
 			definition = "Value of the price not specified.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormatSD1Choice.NotSpecifiedPrice;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormatSD1Choice.mmNotSpecifiedPrice;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType10Code.mmObject();
 		}
 	};
+	protected AmountPricePerFinancialInstrumentQuantity4 amountPricePerFinancialInstrumentQuantity;
 	/**
 	 * Price expressed as a ratio: amount price per financial instrument
 	 * quantity.
@@ -150,11 +152,11 @@ public class PriceFormatSD2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice#AmountPricePerFinancialInstrumentQuantity
-	 * PriceFormatSD1Choice.AmountPricePerFinancialInstrumentQuantity}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice#mmAmountPricePerFinancialInstrumentQuantity
+	 * PriceFormatSD1Choice.mmAmountPricePerFinancialInstrumentQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PriceFormatSD2Choice.mmObject();
 			isDerived = false;
@@ -162,19 +164,19 @@ public class PriceFormatSD2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPricePerFinancialInstrumentQuantity";
 			definition = "Price expressed as a ratio: amount price per financial instrument quantity.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormatSD1Choice.AmountPricePerFinancialInstrumentQuantity;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormatSD1Choice.mmAmountPricePerFinancialInstrumentQuantity;
 			maxOccurs = 1;
-			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormatSD2Choice.NotSpecifiedPrice, com.tools20022.repository.choice.PriceFormatSD2Choice.AmountPricePerFinancialInstrumentQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormatSD2Choice.mmNotSpecifiedPrice, com.tools20022.repository.choice.PriceFormatSD2Choice.mmAmountPricePerFinancialInstrumentQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -189,5 +191,21 @@ public class PriceFormatSD2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PriceValueType10Code getNotSpecifiedPrice() {
+		return notSpecifiedPrice;
+	}
+
+	public void setNotSpecifiedPrice(PriceValueType10Code notSpecifiedPrice) {
+		this.notSpecifiedPrice = notSpecifiedPrice;
+	}
+
+	public AmountPricePerFinancialInstrumentQuantity4 getAmountPricePerFinancialInstrumentQuantity() {
+		return amountPricePerFinancialInstrumentQuantity;
+	}
+
+	public void setAmountPricePerFinancialInstrumentQuantity(AmountPricePerFinancialInstrumentQuantity4 amountPricePerFinancialInstrumentQuantity) {
+		this.amountPricePerFinancialInstrumentQuantity = amountPricePerFinancialInstrumentQuantity;
 	}
 }

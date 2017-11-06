@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CreditLine1#Included
- * CreditLine1.Included}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CreditLine1#Amount
- * CreditLine1.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditLine1#mmIncluded
+ * CreditLine1.mmIncluded}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditLine1#mmAmount
+ * CreditLine1.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CreditLine1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator included;
 	/**
 	 * Indicates whether the credit line is included or not.
 	 * 
@@ -95,7 +96,7 @@ public class CreditLine1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Included = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CreditLine1.mmObject();
 			isDerived = false;
@@ -103,11 +104,12 @@ public class CreditLine1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Included";
 			definition = "Indicates whether the credit line is included or not.\n\nUsage : if not present, credit line is not included in the balance amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount of money of the credit line.
 	 * <p>
@@ -121,7 +123,8 @@ public class CreditLine1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Amount Limit.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmAmount
+	 * Limit.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,17 +142,17 @@ public class CreditLine1 {
 	 * definition} = "Amount of money of the credit line."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
 			componentContext_lazy = () -> CreditLine1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the credit line.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -157,14 +160,30 @@ public class CreditLine1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditLine1.Included, com.tools20022.repository.msg.CreditLine1.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditLine1.mmIncluded, com.tools20022.repository.msg.CreditLine1.mmAmount);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CreditLine1";
 				definition = "Transaction has an origin and a destination in the same country and is made in the currency of that country.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getIncluded() {
+		return included;
+	}
+
+	public void setIncluded(TrueFalseIndicator included) {
+		this.included = included;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

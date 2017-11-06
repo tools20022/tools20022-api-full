@@ -30,72 +30,74 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#ChosenWithdrawal
- * ATMServiceTypeCode.ChosenWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmChosenWithdrawal
+ * ATMServiceTypeCode.mmChosenWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#PreAuthorisedWithdrawal
- * ATMServiceTypeCode.PreAuthorisedWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmPreAuthorisedWithdrawal
+ * ATMServiceTypeCode.mmPreAuthorisedWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#ProfileWithdrawal
- * ATMServiceTypeCode.ProfileWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmProfileWithdrawal
+ * ATMServiceTypeCode.mmProfileWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#StandardWithdrawal
- * ATMServiceTypeCode.StandardWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmStandardWithdrawal
+ * ATMServiceTypeCode.mmStandardWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#SupervisedWithdrawal
- * ATMServiceTypeCode.SupervisedWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmSupervisedWithdrawal
+ * ATMServiceTypeCode.mmSupervisedWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#PINChange
- * ATMServiceTypeCode.PINChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmPINChange
+ * ATMServiceTypeCode.mmPINChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#PINRecovery
- * ATMServiceTypeCode.PINRecovery}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmPINRecovery
+ * ATMServiceTypeCode.mmPINRecovery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#PINUnblock
- * ATMServiceTypeCode.PINUnblock}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmPINUnblock
+ * ATMServiceTypeCode.mmPINUnblock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#AccountStatements
- * ATMServiceTypeCode.AccountStatements}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmAccountStatements
+ * ATMServiceTypeCode.mmAccountStatements}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#CardVerification
- * ATMServiceTypeCode.CardVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmCardVerification
+ * ATMServiceTypeCode.mmCardVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#CustomerProfile
- * ATMServiceTypeCode.CustomerProfile}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmCustomerProfile
+ * ATMServiceTypeCode.mmCustomerProfile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#DynamicCurrencyConversion
- * ATMServiceTypeCode.DynamicCurrencyConversion}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmDynamicCurrencyConversion
+ * ATMServiceTypeCode.mmDynamicCurrencyConversion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#ExchangeRateDeposit
- * ATMServiceTypeCode.ExchangeRateDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmExchangeRateDeposit
+ * ATMServiceTypeCode.mmExchangeRateDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#ExchangeRateWithdrawal
- * ATMServiceTypeCode.ExchangeRateWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmExchangeRateWithdrawal
+ * ATMServiceTypeCode.mmExchangeRateWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#SelectEMVApplication
- * ATMServiceTypeCode.SelectEMVApplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmSelectEMVApplication
+ * ATMServiceTypeCode.mmSelectEMVApplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#BalanceInquiry
- * ATMServiceTypeCode.BalanceInquiry}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#Deposit
- * ATMServiceTypeCode.Deposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmBalanceInquiry
+ * ATMServiceTypeCode.mmBalanceInquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#MakingChange
- * ATMServiceTypeCode.MakingChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmDeposit
+ * ATMServiceTypeCode.mmDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#NonVerifiedDeposit
- * ATMServiceTypeCode.NonVerifiedDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmMakingChange
+ * ATMServiceTypeCode.mmMakingChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#VerifiedDeposit
- * ATMServiceTypeCode.VerifiedDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmNonVerifiedDeposit
+ * ATMServiceTypeCode.mmNonVerifiedDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#CustomerTransfer
- * ATMServiceTypeCode.CustomerTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmVerifiedDeposit
+ * ATMServiceTypeCode.mmVerifiedDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#InterCustomerTransfer
- * ATMServiceTypeCode.InterCustomerTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#Payment
- * ATMServiceTypeCode.Payment}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmCustomerTransfer
+ * ATMServiceTypeCode.mmCustomerTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmInterCustomerTransfer
+ * ATMServiceTypeCode.mmInterCustomerTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode#mmPayment
+ * ATMServiceTypeCode.mmPayment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -126,8 +128,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -163,7 +165,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Amount and notes values are chosen by the customer."</li>
 	 * </ul>
 	 */
-	public static final MMCode ChosenWithdrawal = new MMCode() {
+	public static final MMCode mmChosenWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChosenWithdrawal";
@@ -197,7 +199,7 @@ public class ATMServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PreAuthorisedWithdrawal = new MMCode() {
+	public static final MMCode mmPreAuthorisedWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAuthorisedWithdrawal";
@@ -228,7 +230,7 @@ public class ATMServiceTypeCode {
 	 * "Amount and notes Values are pre-defined by the customer profile."</li>
 	 * </ul>
 	 */
-	public static final MMCode ProfileWithdrawal = new MMCode() {
+	public static final MMCode mmProfileWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileWithdrawal";
@@ -258,7 +260,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Standard withdrawal of items."</li>
 	 * </ul>
 	 */
-	public static final MMCode StandardWithdrawal = new MMCode() {
+	public static final MMCode mmStandardWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardWithdrawal";
@@ -288,7 +290,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Withdrawal authorised by a supervisor."</li>
 	 * </ul>
 	 */
-	public static final MMCode SupervisedWithdrawal = new MMCode() {
+	public static final MMCode mmSupervisedWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupervisedWithdrawal";
@@ -318,7 +320,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Modification of the card PIN value."</li>
 	 * </ul>
 	 */
-	public static final MMCode PINChange = new MMCode() {
+	public static final MMCode mmPINChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINChange";
@@ -348,7 +350,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Resetting of a PIN."</li>
 	 * </ul>
 	 */
-	public static final MMCode PINRecovery = new MMCode() {
+	public static final MMCode mmPINRecovery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRecovery";
@@ -378,7 +380,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Unblock the PIN."</li>
 	 * </ul>
 	 */
-	public static final MMCode PINUnblock = new MMCode() {
+	public static final MMCode mmPINUnblock = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINUnblock";
@@ -409,7 +411,7 @@ public class ATMServiceTypeCode {
 	 * "Ask for account statement information to a related custumer account."</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountStatements = new MMCode() {
+	public static final MMCode mmAccountStatements = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatements";
@@ -439,7 +441,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Verification of the card."</li>
 	 * </ul>
 	 */
-	public static final MMCode CardVerification = new MMCode() {
+	public static final MMCode mmCardVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardVerification";
@@ -470,7 +472,7 @@ public class ATMServiceTypeCode {
 	 * "Ask for customer profile with eventualy related account information."</li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerProfile = new MMCode() {
+	public static final MMCode mmCustomerProfile = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerProfile";
@@ -503,7 +505,7 @@ public class ATMServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DynamicCurrencyConversion = new MMCode() {
+	public static final MMCode mmDynamicCurrencyConversion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DynamicCurrencyConversion";
@@ -534,7 +536,7 @@ public class ATMServiceTypeCode {
 	 * "Ask for exchange rate for the ongoing deposit transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExchangeRateDeposit = new MMCode() {
+	public static final MMCode mmExchangeRateDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRateDeposit";
@@ -565,7 +567,7 @@ public class ATMServiceTypeCode {
 	 * "Ask for exchange rate for the ongoing withdrawal transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExchangeRateWithdrawal = new MMCode() {
+	public static final MMCode mmExchangeRateWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRateWithdrawal";
@@ -595,7 +597,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Select the EMV applications allowed by the acquirer."</li>
 	 * </ul>
 	 */
-	public static final MMCode SelectEMVApplication = new MMCode() {
+	public static final MMCode mmSelectEMVApplication = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectEMVApplication";
@@ -625,7 +627,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Balance inquiry."</li>
 	 * </ul>
 	 */
-	public static final MMCode BalanceInquiry = new MMCode() {
+	public static final MMCode mmBalanceInquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceInquiry";
@@ -655,7 +657,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Deposit of items."</li>
 	 * </ul>
 	 */
-	public static final MMCode Deposit = new MMCode() {
+	public static final MMCode mmDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deposit";
@@ -685,7 +687,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Making change between media types."</li>
 	 * </ul>
 	 */
-	public static final MMCode MakingChange = new MMCode() {
+	public static final MMCode mmMakingChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MakingChange";
@@ -718,7 +720,7 @@ public class ATMServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NonVerifiedDeposit = new MMCode() {
+	public static final MMCode mmNonVerifiedDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonVerifiedDeposit";
@@ -748,7 +750,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Deposit of media items verified by the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode VerifiedDeposit = new MMCode() {
+	public static final MMCode mmVerifiedDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VerifiedDeposit";
@@ -781,7 +783,7 @@ public class ATMServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CustomerTransfer = new MMCode() {
+	public static final MMCode mmCustomerTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerTransfer";
@@ -811,7 +813,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Funds transfer to another customer."</li>
 	 * </ul>
 	 */
-	public static final MMCode InterCustomerTransfer = new MMCode() {
+	public static final MMCode mmInterCustomerTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterCustomerTransfer";
@@ -841,7 +843,7 @@ public class ATMServiceTypeCode {
 	 * definition} = "Funds transfer to pay a third party."</li>
 	 * </ul>
 	 */
-	public static final MMCode Payment = new MMCode() {
+	public static final MMCode mmPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
@@ -854,19 +856,19 @@ public class ATMServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMServiceTypeCode";
 				definition = "Describes the type of transaction available for a customer on an ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceTypeCode.ChosenWithdrawal, com.tools20022.repository.codeset.ATMServiceTypeCode.PreAuthorisedWithdrawal,
-						com.tools20022.repository.codeset.ATMServiceTypeCode.ProfileWithdrawal, com.tools20022.repository.codeset.ATMServiceTypeCode.StandardWithdrawal,
-						com.tools20022.repository.codeset.ATMServiceTypeCode.SupervisedWithdrawal, com.tools20022.repository.codeset.ATMServiceTypeCode.PINChange, com.tools20022.repository.codeset.ATMServiceTypeCode.PINRecovery,
-						com.tools20022.repository.codeset.ATMServiceTypeCode.PINUnblock, com.tools20022.repository.codeset.ATMServiceTypeCode.AccountStatements, com.tools20022.repository.codeset.ATMServiceTypeCode.CardVerification,
-						com.tools20022.repository.codeset.ATMServiceTypeCode.CustomerProfile, com.tools20022.repository.codeset.ATMServiceTypeCode.DynamicCurrencyConversion,
-						com.tools20022.repository.codeset.ATMServiceTypeCode.ExchangeRateDeposit, com.tools20022.repository.codeset.ATMServiceTypeCode.ExchangeRateWithdrawal,
-						com.tools20022.repository.codeset.ATMServiceTypeCode.SelectEMVApplication, com.tools20022.repository.codeset.ATMServiceTypeCode.BalanceInquiry, com.tools20022.repository.codeset.ATMServiceTypeCode.Deposit,
-						com.tools20022.repository.codeset.ATMServiceTypeCode.MakingChange, com.tools20022.repository.codeset.ATMServiceTypeCode.NonVerifiedDeposit, com.tools20022.repository.codeset.ATMServiceTypeCode.VerifiedDeposit,
-						com.tools20022.repository.codeset.ATMServiceTypeCode.CustomerTransfer, com.tools20022.repository.codeset.ATMServiceTypeCode.InterCustomerTransfer, com.tools20022.repository.codeset.ATMServiceTypeCode.Payment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceTypeCode.mmChosenWithdrawal, com.tools20022.repository.codeset.ATMServiceTypeCode.mmPreAuthorisedWithdrawal,
+						com.tools20022.repository.codeset.ATMServiceTypeCode.mmProfileWithdrawal, com.tools20022.repository.codeset.ATMServiceTypeCode.mmStandardWithdrawal,
+						com.tools20022.repository.codeset.ATMServiceTypeCode.mmSupervisedWithdrawal, com.tools20022.repository.codeset.ATMServiceTypeCode.mmPINChange, com.tools20022.repository.codeset.ATMServiceTypeCode.mmPINRecovery,
+						com.tools20022.repository.codeset.ATMServiceTypeCode.mmPINUnblock, com.tools20022.repository.codeset.ATMServiceTypeCode.mmAccountStatements, com.tools20022.repository.codeset.ATMServiceTypeCode.mmCardVerification,
+						com.tools20022.repository.codeset.ATMServiceTypeCode.mmCustomerProfile, com.tools20022.repository.codeset.ATMServiceTypeCode.mmDynamicCurrencyConversion,
+						com.tools20022.repository.codeset.ATMServiceTypeCode.mmExchangeRateDeposit, com.tools20022.repository.codeset.ATMServiceTypeCode.mmExchangeRateWithdrawal,
+						com.tools20022.repository.codeset.ATMServiceTypeCode.mmSelectEMVApplication, com.tools20022.repository.codeset.ATMServiceTypeCode.mmBalanceInquiry, com.tools20022.repository.codeset.ATMServiceTypeCode.mmDeposit,
+						com.tools20022.repository.codeset.ATMServiceTypeCode.mmMakingChange, com.tools20022.repository.codeset.ATMServiceTypeCode.mmNonVerifiedDeposit, com.tools20022.repository.codeset.ATMServiceTypeCode.mmVerifiedDeposit,
+						com.tools20022.repository.codeset.ATMServiceTypeCode.mmCustomerTransfer, com.tools20022.repository.codeset.ATMServiceTypeCode.mmInterCustomerTransfer, com.tools20022.repository.codeset.ATMServiceTypeCode.mmPayment);
 				derivation_lazy = () -> Arrays.asList(ATMServiceType1Code.mmObject(), ATMServiceType4Code.mmObject(), ATMServiceType2Code.mmObject(), ATMServiceType3Code.mmObject(), ATMServiceType5Code.mmObject(),
 						ATMServiceType6Code.mmObject(), ATMServiceType7Code.mmObject(), ATMServiceType8Code.mmObject(), ATMServiceType9Code.mmObject(), ATMServiceType10Code.mmObject());
 			}

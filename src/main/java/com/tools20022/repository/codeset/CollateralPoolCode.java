@@ -30,13 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralPoolCode#Pool
- * CollateralPoolCode.Pool}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralPoolCode#NoPool
- * CollateralPoolCode.NoPool}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralPoolCode#mmPool
+ * CollateralPoolCode.mmPool}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralPoolCode#DeliveryByValuePool
- * CollateralPoolCode.DeliveryByValuePool}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralPoolCode#mmNoPool
+ * CollateralPoolCode.mmNoPool}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralPoolCode#mmDeliveryByValuePool
+ * CollateralPoolCode.mmDeliveryByValuePool}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +88,7 @@ public class CollateralPoolCode {
 	 * definition} = "Collateral is of pool type."</li>
 	 * </ul>
 	 */
-	public static final MMCode Pool = new MMCode() {
+	public static final MMCode mmPool = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pool";
@@ -117,7 +118,7 @@ public class CollateralPoolCode {
 	 * definition} = "Collateral is not of pool type."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoPool = new MMCode() {
+	public static final MMCode mmNoPool = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPool";
@@ -148,7 +149,7 @@ public class CollateralPoolCode {
 	 * "Transaction was settled using a delivery by value mechanism."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliveryByValuePool = new MMCode() {
+	public static final MMCode mmDeliveryByValuePool = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryByValuePool";
@@ -161,12 +162,12 @@ public class CollateralPoolCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralPoolCode";
 				definition = "Specifies whether the collateral is a pool collateral, delivery by value specific pool or not a pool.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralPoolCode.Pool, com.tools20022.repository.codeset.CollateralPoolCode.NoPool,
-						com.tools20022.repository.codeset.CollateralPoolCode.DeliveryByValuePool);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralPoolCode.mmPool, com.tools20022.repository.codeset.CollateralPoolCode.mmNoPool,
+						com.tools20022.repository.codeset.CollateralPoolCode.mmDeliveryByValuePool);
 				derivation_lazy = () -> Arrays.asList(CollateralPool1Code.mmObject());
 			}
 		});

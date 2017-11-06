@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityContext2#CurrentSecurityScheme
- * ATMSecurityContext2.CurrentSecurityScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityContext2#mmCurrentSecurityScheme
+ * ATMSecurityContext2.mmCurrentSecurityScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityContext2#DeviceProperty
- * ATMSecurityContext2.DeviceProperty}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityContext2#mmDeviceProperty
+ * ATMSecurityContext2.mmDeviceProperty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMSecurityContext2#CurrentConfiguration
- * ATMSecurityContext2.CurrentConfiguration}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMSecurityContext2#mmCurrentConfiguration
+ * ATMSecurityContext2.mmCurrentConfiguration}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMSecurityContext2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMSecurityScheme1Code currentSecurityScheme;
 	/**
 	 * Key exchange security scheme in activation on the ATM for the host
 	 * manager.
@@ -98,11 +99,11 @@ public class ATMSecurityContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1#CurrentSecurityScheme
-	 * ATMSecurityContext1.CurrentSecurityScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1#mmCurrentSecurityScheme
+	 * ATMSecurityContext1.mmCurrentSecurityScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentSecurityScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentSecurityScheme = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMSecurityContext2.mmObject();
 			isDerived = false;
@@ -110,12 +111,13 @@ public class ATMSecurityContext2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentSecurityScheme";
 			definition = "Key exchange security scheme in activation on the ATM for the host manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext1.CurrentSecurityScheme;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext1.mmCurrentSecurityScheme;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMSecurityScheme1Code.mmObject();
 		}
 	};
+	protected ATMEquipment3 deviceProperty;
 	/**
 	 * Hardware security module information, so called EPP for Encrypted PIN
 	 * Pad.
@@ -145,7 +147,7 @@ public class ATMSecurityContext2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeviceProperty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeviceProperty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMSecurityContext2.mmObject();
 			isDerived = false;
@@ -153,12 +155,13 @@ public class ATMSecurityContext2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeviceProperty";
 			definition = "Hardware security module information, so called EPP for Encrypted PIN Pad.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEquipment3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
 		}
 	};
+	protected ATMSecurityConfiguration1 currentConfiguration;
 	/**
 	 * Configuration parameters in use by the security device.
 	 * <p>
@@ -186,7 +189,7 @@ public class ATMSecurityContext2 {
 	 * definition} = "Configuration parameters in use by the security device."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrentConfiguration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrentConfiguration = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMSecurityContext2.mmObject();
 			isDerived = false;
@@ -194,19 +197,19 @@ public class ATMSecurityContext2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentConfiguration";
 			definition = "Configuration parameters in use by the security device.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ATMSecurityConfiguration1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityContext2.CurrentSecurityScheme, com.tools20022.repository.msg.ATMSecurityContext2.DeviceProperty,
-						com.tools20022.repository.msg.ATMSecurityContext2.CurrentConfiguration);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityContext2.mmCurrentSecurityScheme, com.tools20022.repository.msg.ATMSecurityContext2.mmDeviceProperty,
+						com.tools20022.repository.msg.ATMSecurityContext2.mmCurrentConfiguration);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityContext2";
 				definition = "Context of the ATM for the key download.";
@@ -214,5 +217,29 @@ public class ATMSecurityContext2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMSecurityScheme1Code getCurrentSecurityScheme() {
+		return currentSecurityScheme;
+	}
+
+	public void setCurrentSecurityScheme(ATMSecurityScheme1Code currentSecurityScheme) {
+		this.currentSecurityScheme = currentSecurityScheme;
+	}
+
+	public ATMEquipment3 getDeviceProperty() {
+		return deviceProperty;
+	}
+
+	public void setDeviceProperty(com.tools20022.repository.msg.ATMEquipment3 deviceProperty) {
+		this.deviceProperty = deviceProperty;
+	}
+
+	public ATMSecurityConfiguration1 getCurrentConfiguration() {
+		return currentConfiguration;
+	}
+
+	public void setCurrentConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 currentConfiguration) {
+		this.currentConfiguration = currentConfiguration;
 	}
 }

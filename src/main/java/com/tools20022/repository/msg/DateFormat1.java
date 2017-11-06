@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DateFormat1#Date
- * DateFormat1.Date}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DateFormat1#DateMode
- * DateFormat1.DateMode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DateFormat1#mmDate
+ * DateFormat1.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DateFormat1#mmDateMode
+ * DateFormat1.mmDateMode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DateFormat1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateFormat3Choice date;
 	/**
 	 * Date at which the event occurs.
 	 * <p>
@@ -83,7 +84,7 @@ public class DateFormat1 {
 	 * definition} = "Date at which the event occurs."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Date = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DateFormat1.mmObject();
 			isDerived = false;
@@ -91,12 +92,13 @@ public class DateFormat1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date at which the event occurs.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateFormat3Choice.mmObject();
 		}
 	};
+	protected DateMode1Code dateMode;
 	/**
 	 * Specifies whether an event for which a date is provided occurs typically
 	 * at the "beginning of day" or at the "end of day".
@@ -127,7 +129,7 @@ public class DateFormat1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateMode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DateFormat1.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class DateFormat1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateMode";
 			definition = "Specifies whether an event for which a date is provided occurs typically at the \"beginning of day\" or at the \"end of day\".";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DateMode1Code.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class DateFormat1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateFormat1.Date, com.tools20022.repository.msg.DateFormat1.DateMode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateFormat1.mmDate, com.tools20022.repository.msg.DateFormat1.mmDateMode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DateFormat1";
 				definition = "Format to express a date and a date mode.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateFormat3Choice getDate() {
+		return date;
+	}
+
+	public void setDate(DateFormat3Choice date) {
+		this.date = date;
+	}
+
+	public DateMode1Code getDateMode() {
+		return dateMode;
+	}
+
+	public void setDateMode(DateMode1Code dateMode) {
+		this.dateMode = dateMode;
 	}
 }

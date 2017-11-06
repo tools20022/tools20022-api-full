@@ -33,17 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MarketSpecificAttribute1#Name
- * MarketSpecificAttribute1.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketSpecificAttribute1#Value
- * MarketSpecificAttribute1.Value}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MarketSpecificAttribute1#mmName
+ * MarketSpecificAttribute1.mmName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MarketSpecificAttribute1#mmValue
+ * MarketSpecificAttribute1.mmValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarketSpecificAttribute1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text name;
 	/**
 	 * Specifies the name of the market-specific attribute.
 	 * <p>
@@ -84,7 +87,7 @@ public class MarketSpecificAttribute1 {
 	 * definition} = "Specifies the name of the market-specific attribute."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketSpecificAttribute1.mmObject();
 			isDerived = false;
@@ -92,11 +95,12 @@ public class MarketSpecificAttribute1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Specifies the name of the market-specific attribute.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text value;
 	/**
 	 * Specifies the value of the market-specific attribute.
 	 * <p>
@@ -124,7 +128,7 @@ public class MarketSpecificAttribute1 {
 	 * definition} = "Specifies the value of the market-specific attribute."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketSpecificAttribute1.mmObject();
 			isDerived = false;
@@ -132,8 +136,8 @@ public class MarketSpecificAttribute1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Specifies the value of the market-specific attribute.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -141,13 +145,29 @@ public class MarketSpecificAttribute1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketSpecificAttribute1.Name, com.tools20022.repository.msg.MarketSpecificAttribute1.Value);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketSpecificAttribute1.mmName, com.tools20022.repository.msg.MarketSpecificAttribute1.mmValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarketSpecificAttribute1";
 				definition = "Defines additional attributes for party reference data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getName() {
+		return name;
+	}
+
+	public void setName(Max35Text name) {
+		this.name = name;
+	}
+
+	public Max350Text getValue() {
+		return value;
+	}
+
+	public void setValue(Max350Text value) {
+		this.value = value;
 	}
 }

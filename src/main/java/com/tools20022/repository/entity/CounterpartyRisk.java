@@ -37,32 +37,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CounterpartyRisk#Party
- * CounterpartyRisk.Party}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CounterpartyRisk#mmParty
+ * CounterpartyRisk.mmParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CounterpartyRisk#ExposedAmount
- * CounterpartyRisk.ExposedAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.CounterpartyRisk#mmExposedAmount
+ * CounterpartyRisk.mmExposedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CounterpartyRisk#ExposureCalculation
- * CounterpartyRisk.ExposureCalculation}</li>
+ * {@linkplain com.tools20022.repository.entity.CounterpartyRisk#mmExposureCalculation
+ * CounterpartyRisk.mmExposureCalculation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Role#CounterpartyRisk
- * Role.CounterpartyRisk}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Role#mmCounterpartyRisk
+ * Role.mmCounterpartyRisk}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#CounterpartyRisk
- * ExposureCalculation.CounterpartyRisk}</li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCounterpartyRisk
+ * ExposureCalculation.mmCounterpartyRisk}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CounterpartyRisk {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Role party;
 	/**
 	 * Specifies which role played by a party was taken into consideration for
 	 * the risk calculation, for instance clearing member role.
@@ -87,45 +88,45 @@ public class CounterpartyRisk {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Role#CounterpartyRisk
-	 * Role.CounterpartyRisk}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmCounterpartyRisk
+	 * Role.mmCounterpartyRisk}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction1#CounterpartyIdentification
-	 * UnsecuredMarketTransaction1.CounterpartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction1#CounterpartyIdentification
-	 * OvernightIndexSwapTransaction1.CounterpartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#CounterpartyIdentification
-	 * UnsecuredMarketTransaction2.CounterpartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#CounterpartyIdentification
-	 * UnsecuredMarketTransaction3.CounterpartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction3#CounterpartyIdentification
-	 * OvernightIndexSwapTransaction3.CounterpartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction4#CounterpartyIdentification
-	 * OvernightIndexSwapTransaction4.CounterpartyIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#CounterpartyIdentification
-	 * UnsecuredMarketTransaction4.CounterpartyIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CounterpartyRisk
 	 * CounterpartyRisk}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction1#mmCounterpartyIdentification
+	 * UnsecuredMarketTransaction1.mmCounterpartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction1#mmCounterpartyIdentification
+	 * OvernightIndexSwapTransaction1.mmCounterpartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmCounterpartyIdentification
+	 * UnsecuredMarketTransaction2.mmCounterpartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmCounterpartyIdentification
+	 * UnsecuredMarketTransaction3.mmCounterpartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction3#mmCounterpartyIdentification
+	 * OvernightIndexSwapTransaction3.mmCounterpartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction4#mmCounterpartyIdentification
+	 * OvernightIndexSwapTransaction4.mmCounterpartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmCounterpartyIdentification
+	 * UnsecuredMarketTransaction4.mmCounterpartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -139,24 +140,25 @@ public class CounterpartyRisk {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Party = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmParty = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction1.CounterpartyIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.CounterpartyIdentification,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction2.CounterpartyIdentification, com.tools20022.repository.msg.UnsecuredMarketTransaction3.CounterpartyIdentification,
-					com.tools20022.repository.msg.OvernightIndexSwapTransaction3.CounterpartyIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction4.CounterpartyIdentification,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction4.CounterpartyIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmCounterpartyIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmCounterpartyIdentification,
+					com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmCounterpartyIdentification, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmCounterpartyIdentification,
+					com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmCounterpartyIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction4.mmCounterpartyIdentification,
+					com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmCounterpartyIdentification);
 			elementContext_lazy = () -> CounterpartyRisk.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Party";
 			definition = "Specifies which role played by a party was taken into consideration for the risk calculation, for instance clearing member role.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Role.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Role.CounterpartyRisk;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Role.mmCounterpartyRisk;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Role.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount exposedAmount;
 	/**
 	 * The amount which needs to be covered for the counterparty risk.
 	 * <p>
@@ -184,18 +186,19 @@ public class CounterpartyRisk {
 	 * "The amount which needs to be covered for the counterparty risk."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ExposedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmExposedAmount = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CounterpartyRisk.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposedAmount";
 			definition = "The amount which needs to be covered for the counterparty risk.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ExposureCalculation exposureCalculation;
 	/**
 	 * Specifies the exposure for which the risk is calculated on a counterparty
 	 * basis.
@@ -205,8 +208,8 @@ public class CounterpartyRisk {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#CounterpartyRisk
-	 * ExposureCalculation.CounterpartyRisk}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCounterpartyRisk
+	 * ExposureCalculation.mmCounterpartyRisk}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -232,33 +235,57 @@ public class CounterpartyRisk {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ExposureCalculation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmExposureCalculation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CounterpartyRisk.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposureCalculation";
 			definition = "Specifies the exposure for which the risk is calculated on a counterparty basis.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.CounterpartyRisk;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmCounterpartyRisk;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CounterpartyRisk";
 				definition = "Calculation of the exposure amount that one party has vis-a-vis one counterparty or a central system, based on its credit risk.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Role.CounterpartyRisk, com.tools20022.repository.entity.ExposureCalculation.CounterpartyRisk);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CounterpartyRisk.Party, com.tools20022.repository.entity.CounterpartyRisk.ExposedAmount,
-						com.tools20022.repository.entity.CounterpartyRisk.ExposureCalculation);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Role.mmCounterpartyRisk, com.tools20022.repository.entity.ExposureCalculation.mmCounterpartyRisk);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CounterpartyRisk.mmParty, com.tools20022.repository.entity.CounterpartyRisk.mmExposedAmount,
+						com.tools20022.repository.entity.CounterpartyRisk.mmExposureCalculation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Role getParty() {
+		return party;
+	}
+
+	public void setParty(com.tools20022.repository.entity.Role party) {
+		this.party = party;
+	}
+
+	public ActiveCurrencyAndAmount getExposedAmount() {
+		return exposedAmount;
+	}
+
+	public void setExposedAmount(ActiveCurrencyAndAmount exposedAmount) {
+		this.exposedAmount = exposedAmount;
+	}
+
+	public ExposureCalculation getExposureCalculation() {
+		return exposureCalculation;
+	}
+
+	public void setExposureCalculation(com.tools20022.repository.entity.ExposureCalculation exposureCalculation) {
+		this.exposureCalculation = exposureCalculation;
 	}
 }

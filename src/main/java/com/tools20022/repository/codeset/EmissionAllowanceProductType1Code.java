@@ -34,27 +34,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code#EUAA
- * EmissionAllowanceProductType1Code.EUAA}</li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code#mmEUAA
+ * EmissionAllowanceProductType1Code.mmEUAA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code#EUA
- * EmissionAllowanceProductType1Code.EUA}</li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code#mmEUA
+ * EmissionAllowanceProductType1Code.mmEUA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code#ERU
- * EmissionAllowanceProductType1Code.ERU}</li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code#mmERU
+ * EmissionAllowanceProductType1Code.mmERU}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code#CER
- * EmissionAllowanceProductType1Code.CER}</li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code#mmCER
+ * EmissionAllowanceProductType1Code.mmCER}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code#Other
- * EmissionAllowanceProductType1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType1Code#mmOther
+ * EmissionAllowanceProductType1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +84,7 @@ public class EmissionAllowanceProductType1Code extends AssetClassDetailedSubProd
 	 * name} = "EUAA"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUAA = new MMCode() {
+	public static final MMCode mmEUAA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUAA";
@@ -107,7 +107,7 @@ public class EmissionAllowanceProductType1Code extends AssetClassDetailedSubProd
 	 * name} = "EUA"</li>
 	 * </ul>
 	 */
-	public static final MMCode EUA = new MMCode() {
+	public static final MMCode mmEUA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUA";
@@ -130,7 +130,7 @@ public class EmissionAllowanceProductType1Code extends AssetClassDetailedSubProd
 	 * name} = "ERU"</li>
 	 * </ul>
 	 */
-	public static final MMCode ERU = new MMCode() {
+	public static final MMCode mmERU = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERU";
@@ -153,7 +153,7 @@ public class EmissionAllowanceProductType1Code extends AssetClassDetailedSubProd
 	 * name} = "CER"</li>
 	 * </ul>
 	 */
-	public static final MMCode CER = new MMCode() {
+	public static final MMCode mmCER = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CER";
@@ -176,7 +176,7 @@ public class EmissionAllowanceProductType1Code extends AssetClassDetailedSubProd
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -187,13 +187,13 @@ public class EmissionAllowanceProductType1Code extends AssetClassDetailedSubProd
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EmissionAllowanceProductType1Code";
 				definition = "Specifies an mission allowance type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EmissionAllowanceProductType1Code.EUAA, com.tools20022.repository.codeset.EmissionAllowanceProductType1Code.EUA,
-						com.tools20022.repository.codeset.EmissionAllowanceProductType1Code.ERU, com.tools20022.repository.codeset.EmissionAllowanceProductType1Code.CER,
-						com.tools20022.repository.codeset.EmissionAllowanceProductType1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EmissionAllowanceProductType1Code.mmEUAA, com.tools20022.repository.codeset.EmissionAllowanceProductType1Code.mmEUA,
+						com.tools20022.repository.codeset.EmissionAllowanceProductType1Code.mmERU, com.tools20022.repository.codeset.EmissionAllowanceProductType1Code.mmCER,
+						com.tools20022.repository.codeset.EmissionAllowanceProductType1Code.mmOther);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

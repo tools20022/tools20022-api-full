@@ -36,11 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.OfferTypeFormat5Choice#Code
- * OfferTypeFormat5Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OfferTypeFormat5Choice#Proprietary
- * OfferTypeFormat5Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.OfferTypeFormat5Choice#mmCode
+ * OfferTypeFormat5Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OfferTypeFormat5Choice#mmProprietary
+ * OfferTypeFormat5Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OfferTypeFormat5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OfferType3Code code;
 	/**
 	 * Standard code to specify the conditions that apply to the offer.
 	 * <p>
@@ -90,8 +92,8 @@ public class OfferTypeFormat5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OfferType
-	 * CorporateActionOption.OfferType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOfferType
+	 * CorporateActionOption.mmOfferType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,33 +115,34 @@ public class OfferTypeFormat5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat10Choice#Code
-	 * OfferTypeFormat10Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat10Choice#mmCode
+	 * OfferTypeFormat10Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat3Choice#Code
-	 * OfferTypeFormat3Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat3Choice#mmCode
+	 * OfferTypeFormat3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOfferType;
 			componentContext_lazy = () -> OfferTypeFormat5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OfferType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the conditions that apply to the offer.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OfferTypeFormat3Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat10Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat10Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.OfferTypeFormat3Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OfferType3Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Proprietary identification of the conditions that apply to the offer.
 	 * <p>
@@ -152,8 +155,8 @@ public class OfferTypeFormat5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OfferType
-	 * CorporateActionOption.OfferType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOfferType
+	 * CorporateActionOption.mmOfferType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -175,48 +178,64 @@ public class OfferTypeFormat5Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat10Choice#Proprietary
-	 * OfferTypeFormat10Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat10Choice#mmProprietary
+	 * OfferTypeFormat10Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat3Choice#Proprietary
-	 * OfferTypeFormat3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.OfferTypeFormat3Choice#mmProprietary
+	 * OfferTypeFormat3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOfferType;
 			componentContext_lazy = () -> OfferTypeFormat5Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OfferType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the conditions that apply to the offer.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OfferTypeFormat3Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat10Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat10Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.OfferTypeFormat3Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification20.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat5Choice.Code, com.tools20022.repository.choice.OfferTypeFormat5Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat5Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat5Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OfferTypeFormat5Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of offer.";
-				previousVersion_lazy = () -> OfferTypeFormat3Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(OfferTypeFormat10Choice.mmObject());
+				previousVersion_lazy = () -> OfferTypeFormat3Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OfferType3Code getCode() {
+		return code;
+	}
+
+	public void setCode(OfferType3Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

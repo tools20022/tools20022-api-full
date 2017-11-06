@@ -36,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EquityDerivative2#UnderlyingType
- * EquityDerivative2.UnderlyingType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EquityDerivative2#Parameter
- * EquityDerivative2.Parameter}</li>
+ * {@linkplain com.tools20022.repository.msg.EquityDerivative2#mmUnderlyingType
+ * EquityDerivative2.mmUnderlyingType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EquityDerivative2#mmParameter
+ * EquityDerivative2.mmParameter}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EquityDerivative2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EquityDerivative3Choice underlyingType;
 	/**
 	 * Underlying type of the equity derivative.
 	 * <p>
@@ -74,8 +75,8 @@ public class EquityDerivative2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Derivative#UnderlyingAsset
-	 * Derivative.UnderlyingAsset}</li>
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmUnderlyingAsset
+	 * Derivative.mmUnderlyingAsset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,21 +95,22 @@ public class EquityDerivative2 {
 	 * definition} = "Underlying type of the equity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> EquityDerivative2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.UnderlyingAsset;
 			isDerived = false;
 			xmlTag = "UndrlygTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingType";
 			definition = "Underlying type of the equity derivative.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> EquityDerivative3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> EquityDerivative3Choice.mmObject();
 		}
 	};
+	protected EquityReturnParameter1Code parameter;
 	/**
 	 * Return parameter for the equity derivative.
 	 * <p>
@@ -137,7 +139,7 @@ public class EquityDerivative2 {
 	 * definition} = "Return parameter for the equity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Parameter = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParameter = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EquityDerivative2.mmObject();
 			isDerived = false;
@@ -145,8 +147,8 @@ public class EquityDerivative2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Return parameter for the equity derivative.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EquityReturnParameter1Code.mmObject();
 		}
 	};
@@ -154,14 +156,30 @@ public class EquityDerivative2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EquityDerivative2.UnderlyingType, com.tools20022.repository.msg.EquityDerivative2.Parameter);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EquityDerivative2.mmUnderlyingType, com.tools20022.repository.msg.EquityDerivative2.mmParameter);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EquityDerivative2";
 				definition = "Element to define an equity instrument.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EquityDerivative3Choice getUnderlyingType() {
+		return underlyingType;
+	}
+
+	public void setUnderlyingType(EquityDerivative3Choice underlyingType) {
+		this.underlyingType = underlyingType;
+	}
+
+	public EquityReturnParameter1Code getParameter() {
+		return parameter;
+	}
+
+	public void setParameter(EquityReturnParameter1Code parameter) {
+		this.parameter = parameter;
 	}
 }

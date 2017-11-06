@@ -32,21 +32,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.PINFormatCode PINFormatCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#ISO0
- * PINFormat1Code.ISO0}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#ISO1
- * PINFormat1Code.ISO1}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#ISO2
- * PINFormat1Code.ISO2}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#ISO3
- * PINFormat1Code.ISO3}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#mmISO0
+ * PINFormat1Code.mmISO0}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#mmISO1
+ * PINFormat1Code.mmISO1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#mmISO2
+ * PINFormat1Code.mmISO2}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#mmISO3
+ * PINFormat1Code.mmISO3}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class PINFormat1Code extends PINFormatCode {
 	 * name} = "ISO0"</li>
 	 * </ul>
 	 */
-	public static final MMCode ISO0 = new MMCode() {
+	public static final MMCode mmISO0 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO0";
@@ -106,7 +106,7 @@ public class PINFormat1Code extends PINFormatCode {
 	 * name} = "ISO1"</li>
 	 * </ul>
 	 */
-	public static final MMCode ISO1 = new MMCode() {
+	public static final MMCode mmISO1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO1";
@@ -129,7 +129,7 @@ public class PINFormat1Code extends PINFormatCode {
 	 * name} = "ISO2"</li>
 	 * </ul>
 	 */
-	public static final MMCode ISO2 = new MMCode() {
+	public static final MMCode mmISO2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO2";
@@ -152,7 +152,7 @@ public class PINFormat1Code extends PINFormatCode {
 	 * name} = "ISO3"</li>
 	 * </ul>
 	 */
-	public static final MMCode ISO3 = new MMCode() {
+	public static final MMCode mmISO3 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO3";
@@ -163,13 +163,13 @@ public class PINFormat1Code extends PINFormatCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ISO0");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PINFormat1Code";
 				definition = "PIN (Personal Identification Number) format used to encrypt the PIN block.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat1Code.ISO0, com.tools20022.repository.codeset.PINFormat1Code.ISO1, com.tools20022.repository.codeset.PINFormat1Code.ISO2,
-						com.tools20022.repository.codeset.PINFormat1Code.ISO3);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat1Code.mmISO0, com.tools20022.repository.codeset.PINFormat1Code.mmISO1, com.tools20022.repository.codeset.PINFormat1Code.mmISO2,
+						com.tools20022.repository.codeset.PINFormat1Code.mmISO3);
 				trace_lazy = () -> PINFormatCode.mmObject();
 			}
 		});

@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery1#ShipFrom
- * TradeDelivery1.ShipFrom}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery2#ShipFrom
- * TradeDelivery2.ShipFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery1#mmShipFrom
+ * TradeDelivery1.mmShipFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery2#mmShipFrom
+ * TradeDelivery2.mmShipFrom}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,11 +67,11 @@ public class ShipFrom extends CommercialTradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ShipFrom";
 				definition = "Party from whom the goods are dispatched.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeDelivery1.ShipFrom, com.tools20022.repository.msg.TradeDelivery2.ShipFrom);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeDelivery1.mmShipFrom, com.tools20022.repository.msg.TradeDelivery2.mmShipFrom);
 				superType_lazy = () -> CommercialTradePartyRole.mmObject();
 			}
 		});

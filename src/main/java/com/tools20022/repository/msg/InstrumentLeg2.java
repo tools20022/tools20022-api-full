@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Additionnal details related to the leg.
@@ -40,49 +41,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegIdentification
- * InstrumentLeg2.LegIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegIdentification
+ * InstrumentLeg2.mmLegIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegOrderQuantity
- * InstrumentLeg2.LegOrderQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegBidPrice
- * InstrumentLeg2.LegBidPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegOfferPrice
- * InstrumentLeg2.LegOfferPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegOptionRatio
- * InstrumentLeg2.LegOptionRatio}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegSwapType
- * InstrumentLeg2.LegSwapType}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegOrderQuantity
+ * InstrumentLeg2.mmLegOrderQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegBidPrice
+ * InstrumentLeg2.mmLegBidPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegOfferPrice
+ * InstrumentLeg2.mmLegOfferPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegSettlementDate
- * InstrumentLeg2.LegSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegOptionRatio
+ * InstrumentLeg2.mmLegOptionRatio}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegSwapType
+ * InstrumentLeg2.mmLegSwapType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegSettlementDateCode
- * InstrumentLeg2.LegSettlementDateCode}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegSettlementDate
+ * InstrumentLeg2.mmLegSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#InstrumentLegDetails
- * InstrumentLeg2.InstrumentLegDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegSettlementDateCode
+ * InstrumentLeg2.mmLegSettlementDateCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegFinancialInstrumentAttributes
- * InstrumentLeg2.LegFinancialInstrumentAttributes}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegStipulations
- * InstrumentLeg2.LegStipulations}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmInstrumentLegDetails
+ * InstrumentLeg2.mmInstrumentLegDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#LegBenchmarkCurveDetails
- * InstrumentLeg2.LegBenchmarkCurveDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#TradingParties
- * InstrumentLeg2.TradingParties}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#CashParties
- * InstrumentLeg2.CashParties}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegFinancialInstrumentAttributes
+ * InstrumentLeg2.mmLegFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#OtherBusinessParties
- * InstrumentLeg2.OtherBusinessParties}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegStipulations
+ * InstrumentLeg2.mmLegStipulations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#ReceivingSettlementParties
- * InstrumentLeg2.ReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmLegBenchmarkCurveDetails
+ * InstrumentLeg2.mmLegBenchmarkCurveDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#DeliveringSettlementParties
- * InstrumentLeg2.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmTradingParties
+ * InstrumentLeg2.mmTradingParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmCashParties
+ * InstrumentLeg2.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmOtherBusinessParties
+ * InstrumentLeg2.mmOtherBusinessParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmReceivingSettlementParties
+ * InstrumentLeg2.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmDeliveringSettlementParties
+ * InstrumentLeg2.mmDeliveringSettlementParties}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -90,8 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstrumentLeg2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text legIdentification;
 	/**
 	 * Used to identify a specific leg.
 	 * <p>
@@ -131,7 +136,7 @@ public class InstrumentLeg2 {
 	 * definition} = "Used to identify a specific leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
 			isDerived = false;
@@ -139,11 +144,12 @@ public class InstrumentLeg2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegIdentification";
 			definition = "Used to identify a specific leg.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Quantity1Choice legOrderQuantity;
 	/**
 	 * Required for multileg Quote/Order and for each leg.
 	 * <p>
@@ -157,8 +163,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderedQuantity
-	 * SecuritiesOrder.OrderedQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderedQuantity
+	 * SecuritiesOrder.mmOrderedQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,20 +182,21 @@ public class InstrumentLeg2 {
 	 * definition} = "Required for multileg Quote/Order and for each leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegOrderQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegOrderQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderedQuantity;
 			isDerived = false;
 			xmlTag = "LegOrdrQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegOrderQuantity";
 			definition = "Required for multileg Quote/Order and for each leg.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Quantity1Choice.mmObject();
 		}
 	};
+	protected Price1 legBidPrice;
 	/**
 	 * Amount of money for which goods or services are offered, sold, or bought.
 	 * <p>
@@ -201,8 +208,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -222,20 +229,21 @@ public class InstrumentLeg2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegBidPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegBidPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "LegBidPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegBidPrice";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected Price1 legOfferPrice;
 	/**
 	 * Amount of money for which goods or services are offered, sold, or bought.
 	 * <p>
@@ -247,8 +255,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -268,20 +276,21 @@ public class InstrumentLeg2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegOfferPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegOfferPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "LegOfferPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegOfferPrice";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected PercentageRate legOptionRatio;
 	/**
 	 * A derived multiplier or factor used against the future leg to specify how
 	 * many futures is needed to cover the option.
@@ -300,8 +309,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#OptionRatio
-	 * Option.OptionRatio}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionRatio
+	 * Option.mmOptionRatio}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -321,20 +330,21 @@ public class InstrumentLeg2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegOptionRatio = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegOptionRatio = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionRatio;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.OptionRatio;
 			isDerived = false;
 			xmlTag = "LegOptnRatio";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegOptionRatio";
 			definition = "A derived multiplier or factor used against the future leg to specify how many futures is needed to cover the option.\n\nExpresses the risk of an option legValue must be between -1 and 1. A Call Option will require a ratio value between 0 and 1. A Put Option will require a ratio value between -1 and 0.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected LegSwapType1Code legSwapType;
 	/**
 	 * For Fixed Income, used instead of LegQty or LegOrderQty to requests the
 	 * respondent to calculate the quantity based on the quantity on the
@@ -350,7 +360,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Leg#SwapType Leg.SwapType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Leg#mmSwapType
+	 * Leg.mmSwapType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -370,20 +381,21 @@ public class InstrumentLeg2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegSwapType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegSwapType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.mmSwapType;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.SwapType;
 			isDerived = false;
 			xmlTag = "LegSwpTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSwapType";
 			definition = "For Fixed Income, used instead of LegQty or LegOrderQty to requests the respondent to calculate the quantity based on the quantity on the opposite side of the swap.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LegSwapType1Code.mmObject();
 		}
 	};
+	protected ISODateTime legSettlementDate;
 	/**
 	 * Parameters applied to the settlement of a security transfer.
 	 * <p>
@@ -396,8 +408,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementDate
-	 * SecuritiesSettlement.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementDate
+	 * SecuritiesSettlement.mmSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -416,20 +428,21 @@ public class InstrumentLeg2 {
 	 * "Parameters applied to the settlement of a security transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementDate;
 			isDerived = false;
 			xmlTag = "LegSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSettlementDate";
 			definition = "Parameters applied to the settlement of a security transfer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected DateType1Choice legSettlementDateCode;
 	/**
 	 * Indicates the date of settlement for the leg in a coded form or using a
 	 * data source scheme.
@@ -444,8 +457,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#SettlementDateCode
-	 * SecuritiesDeliveryObligation.SettlementDateCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSettlementDateCode
+	 * SecuritiesDeliveryObligation.mmSettlementDateCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -465,20 +478,21 @@ public class InstrumentLeg2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegSettlementDateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegSettlementDateCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSettlementDateCode;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.SettlementDateCode;
 			isDerived = false;
 			xmlTag = "LegSttlmDtCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSettlementDateCode";
 			definition = "Indicates the date of settlement for the leg in a coded form or using a data source scheme.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateType1Choice.mmObject();
 		}
 	};
+	protected SecurityIdentification7 instrumentLegDetails;
 	/**
 	 * Provides details about the financial instrument of a particular leg.
 	 * <p>
@@ -491,8 +505,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -511,21 +525,22 @@ public class InstrumentLeg2 {
 	 * "Provides details about the financial instrument of a particular leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstrumentLegDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrumentLegDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "InstrmLegDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegDetails";
 			definition = "Provides details about the financial instrument of a particular leg.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes1 legFinancialInstrumentAttributes;
 	/**
 	 * Provides details about the leg financial instrument attributes.
 	 * <p>
@@ -538,8 +553,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Leg#RelatedAsset
-	 * Leg.RelatedAsset}</li>
+	 * {@linkplain com.tools20022.repository.entity.Leg#mmRelatedAsset
+	 * Leg.mmRelatedAsset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -558,21 +573,22 @@ public class InstrumentLeg2 {
 	 * "Provides details about the leg financial instrument attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.mmRelatedAsset;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.RelatedAsset;
 			isDerived = false;
 			xmlTag = "LegFinInstrmAttrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegFinancialInstrumentAttributes";
 			definition = "Provides details about the leg financial instrument attributes.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	protected FinancialInstrumentStipulations legStipulations;
 	/**
 	 * Provides details about the leg stipulations
 	 * <p>
@@ -603,21 +619,22 @@ public class InstrumentLeg2 {
 	 * definition} = "Provides details about the leg stipulations"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegStipulations = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstrumentLeg2.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> InstrumentLeg2.mmObject();
 			isDerived = false;
 			xmlTag = "LegStiptns";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegStipulations";
 			definition = "Provides details about the leg stipulations";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	protected BenchmarkCurve1 legBenchmarkCurveDetails;
 	/**
 	 * Describes a benchmark curve.
 	 * <p>
@@ -629,8 +646,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Spread#BenchmarkCurve
-	 * Spread.BenchmarkCurve}</li>
+	 * {@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkCurve
+	 * Spread.mmBenchmarkCurve}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -648,21 +665,22 @@ public class InstrumentLeg2 {
 	 * definition} = "Describes a benchmark curve."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegBenchmarkCurveDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegBenchmarkCurveDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmBenchmarkCurve;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.BenchmarkCurve;
 			isDerived = false;
 			xmlTag = "LegBchmkCrvDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegBenchmarkCurveDetails";
 			definition = "Describes a benchmark curve.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BenchmarkCurve1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary14> tradingParties;
 	/**
 	 * Organised structure that is set up for a particular purpose, eg, a
 	 * business, government body, department, charity, or financial institution.
@@ -675,8 +693,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradePartyRole
-	 * Trade.TradePartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradePartyRole
+	 * Trade.mmTradePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -696,20 +714,21 @@ public class InstrumentLeg2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradingParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradePartyRole;
 			isDerived = false;
 			xmlTag = "TradgPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingParties";
 			definition = "Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.";
 			minOccurs = 0;
-			type_lazy = () -> Intermediary14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 		}
 	};
+	protected CashParties1 cashParties;
 	/**
 	 * Payment processes required to transfer cash from the debtor to the
 	 * creditor.
@@ -743,21 +762,22 @@ public class InstrumentLeg2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstrumentLeg2.mmObject();
 			businessComponentTrace_lazy = () -> PaymentPartyRole.mmObject();
+			componentContext_lazy = () -> InstrumentLeg2.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Payment processes required to transfer cash from the debtor to the creditor.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashParties1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashParties1.mmObject();
 		}
 	};
+	protected OtherParties1 otherBusinessParties;
 	/**
 	 * Chain of parties involved in the settlement of a transaction, including
 	 * receipts and deliveries, book transfers, treasury deals, or other
@@ -772,8 +792,8 @@ public class InstrumentLeg2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#AssetPartyRole
-	 * Asset.AssetPartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmAssetPartyRole
+	 * Asset.mmAssetPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -793,21 +813,22 @@ public class InstrumentLeg2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherBusinessParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmAssetPartyRole;
 			componentContext_lazy = () -> InstrumentLeg2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.AssetPartyRole;
 			isDerived = false;
 			xmlTag = "OthrBizPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OtherParties1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OtherParties1.mmObject();
 		}
 	};
+	protected SettlementParties3 receivingSettlementParties;
 	/**
 	 * Chain of parties involved in the settlement of a transaction, including
 	 * receipts and deliveries, book transfers, treasury deals, or other
@@ -843,21 +864,22 @@ public class InstrumentLeg2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstrumentLeg2.mmObject();
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
+			componentContext_lazy = () -> InstrumentLeg2.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	protected SettlementParties3 deliveringSettlementParties;
 	/**
 	 * Chain of parties involved in the settlement of a transaction, including
 	 * receipts and deliveries, book transfers, treasury deals, or other
@@ -893,38 +915,175 @@ public class InstrumentLeg2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstrumentLeg2.mmObject();
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
+			componentContext_lazy = () -> InstrumentLeg2.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementParties3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg2.LegIdentification, com.tools20022.repository.msg.InstrumentLeg2.LegOrderQuantity,
-						com.tools20022.repository.msg.InstrumentLeg2.LegBidPrice, com.tools20022.repository.msg.InstrumentLeg2.LegOfferPrice, com.tools20022.repository.msg.InstrumentLeg2.LegOptionRatio,
-						com.tools20022.repository.msg.InstrumentLeg2.LegSwapType, com.tools20022.repository.msg.InstrumentLeg2.LegSettlementDate, com.tools20022.repository.msg.InstrumentLeg2.LegSettlementDateCode,
-						com.tools20022.repository.msg.InstrumentLeg2.InstrumentLegDetails, com.tools20022.repository.msg.InstrumentLeg2.LegFinancialInstrumentAttributes, com.tools20022.repository.msg.InstrumentLeg2.LegStipulations,
-						com.tools20022.repository.msg.InstrumentLeg2.LegBenchmarkCurveDetails, com.tools20022.repository.msg.InstrumentLeg2.TradingParties, com.tools20022.repository.msg.InstrumentLeg2.CashParties,
-						com.tools20022.repository.msg.InstrumentLeg2.OtherBusinessParties, com.tools20022.repository.msg.InstrumentLeg2.ReceivingSettlementParties, com.tools20022.repository.msg.InstrumentLeg2.DeliveringSettlementParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg2.mmLegIdentification, com.tools20022.repository.msg.InstrumentLeg2.mmLegOrderQuantity,
+						com.tools20022.repository.msg.InstrumentLeg2.mmLegBidPrice, com.tools20022.repository.msg.InstrumentLeg2.mmLegOfferPrice, com.tools20022.repository.msg.InstrumentLeg2.mmLegOptionRatio,
+						com.tools20022.repository.msg.InstrumentLeg2.mmLegSwapType, com.tools20022.repository.msg.InstrumentLeg2.mmLegSettlementDate, com.tools20022.repository.msg.InstrumentLeg2.mmLegSettlementDateCode,
+						com.tools20022.repository.msg.InstrumentLeg2.mmInstrumentLegDetails, com.tools20022.repository.msg.InstrumentLeg2.mmLegFinancialInstrumentAttributes, com.tools20022.repository.msg.InstrumentLeg2.mmLegStipulations,
+						com.tools20022.repository.msg.InstrumentLeg2.mmLegBenchmarkCurveDetails, com.tools20022.repository.msg.InstrumentLeg2.mmTradingParties, com.tools20022.repository.msg.InstrumentLeg2.mmCashParties,
+						com.tools20022.repository.msg.InstrumentLeg2.mmOtherBusinessParties, com.tools20022.repository.msg.InstrumentLeg2.mmReceivingSettlementParties,
+						com.tools20022.repository.msg.InstrumentLeg2.mmDeliveringSettlementParties);
 				trace_lazy = () -> Leg.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstrumentLeg2";
 				definition = "Additionnal details related to the leg.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getLegIdentification() {
+		return legIdentification;
+	}
+
+	public void setLegIdentification(Max35Text legIdentification) {
+		this.legIdentification = legIdentification;
+	}
+
+	public Quantity1Choice getLegOrderQuantity() {
+		return legOrderQuantity;
+	}
+
+	public void setLegOrderQuantity(Quantity1Choice legOrderQuantity) {
+		this.legOrderQuantity = legOrderQuantity;
+	}
+
+	public Price1 getLegBidPrice() {
+		return legBidPrice;
+	}
+
+	public void setLegBidPrice(com.tools20022.repository.msg.Price1 legBidPrice) {
+		this.legBidPrice = legBidPrice;
+	}
+
+	public Price1 getLegOfferPrice() {
+		return legOfferPrice;
+	}
+
+	public void setLegOfferPrice(com.tools20022.repository.msg.Price1 legOfferPrice) {
+		this.legOfferPrice = legOfferPrice;
+	}
+
+	public PercentageRate getLegOptionRatio() {
+		return legOptionRatio;
+	}
+
+	public void setLegOptionRatio(PercentageRate legOptionRatio) {
+		this.legOptionRatio = legOptionRatio;
+	}
+
+	public LegSwapType1Code getLegSwapType() {
+		return legSwapType;
+	}
+
+	public void setLegSwapType(LegSwapType1Code legSwapType) {
+		this.legSwapType = legSwapType;
+	}
+
+	public ISODateTime getLegSettlementDate() {
+		return legSettlementDate;
+	}
+
+	public void setLegSettlementDate(ISODateTime legSettlementDate) {
+		this.legSettlementDate = legSettlementDate;
+	}
+
+	public DateType1Choice getLegSettlementDateCode() {
+		return legSettlementDateCode;
+	}
+
+	public void setLegSettlementDateCode(DateType1Choice legSettlementDateCode) {
+		this.legSettlementDateCode = legSettlementDateCode;
+	}
+
+	public SecurityIdentification7 getInstrumentLegDetails() {
+		return instrumentLegDetails;
+	}
+
+	public void setInstrumentLegDetails(com.tools20022.repository.msg.SecurityIdentification7 instrumentLegDetails) {
+		this.instrumentLegDetails = instrumentLegDetails;
+	}
+
+	public FinancialInstrumentAttributes1 getLegFinancialInstrumentAttributes() {
+		return legFinancialInstrumentAttributes;
+	}
+
+	public void setLegFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 legFinancialInstrumentAttributes) {
+		this.legFinancialInstrumentAttributes = legFinancialInstrumentAttributes;
+	}
+
+	public FinancialInstrumentStipulations getLegStipulations() {
+		return legStipulations;
+	}
+
+	public void setLegStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations legStipulations) {
+		this.legStipulations = legStipulations;
+	}
+
+	public BenchmarkCurve1 getLegBenchmarkCurveDetails() {
+		return legBenchmarkCurveDetails;
+	}
+
+	public void setLegBenchmarkCurveDetails(com.tools20022.repository.msg.BenchmarkCurve1 legBenchmarkCurveDetails) {
+		this.legBenchmarkCurveDetails = legBenchmarkCurveDetails;
+	}
+
+	public List<Intermediary14> getTradingParties() {
+		return tradingParties;
+	}
+
+	public void setTradingParties(List<com.tools20022.repository.msg.Intermediary14> tradingParties) {
+		this.tradingParties = tradingParties;
+	}
+
+	public CashParties1 getCashParties() {
+		return cashParties;
+	}
+
+	public void setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
+		this.cashParties = cashParties;
+	}
+
+	public OtherParties1 getOtherBusinessParties() {
+		return otherBusinessParties;
+	}
+
+	public void setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
+		this.otherBusinessParties = otherBusinessParties;
+	}
+
+	public SettlementParties3 getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
+	}
+
+	public SettlementParties3 getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
 	}
 }

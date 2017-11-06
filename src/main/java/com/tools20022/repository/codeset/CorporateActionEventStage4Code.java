@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage4Code#CancellationAndReRun
- * CorporateActionEventStage4Code.CancellationAndReRun}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage4Code#mmCancellationAndReRun
+ * CorporateActionEventStage4Code.mmCancellationAndReRun}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage4Code#SupplementalCancellationAndReRun
- * CorporateActionEventStage4Code.SupplementalCancellationAndReRun}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage4Code#mmSupplementalCancellationAndReRun
+ * CorporateActionEventStage4Code.mmSupplementalCancellationAndReRun}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage4Code#SupplementalCancellation
- * CorporateActionEventStage4Code.SupplementalCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStage4Code#mmSupplementalCancellation
+ * CorporateActionEventStage4Code.mmSupplementalCancellation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class CorporateActionEventStage4Code extends CorporateActionEventStageV2C
 	 * name} = "CancellationAndReRun"</li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationAndReRun = new MMCode() {
+	public static final MMCode mmCancellationAndReRun = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAndReRun";
@@ -101,7 +101,7 @@ public class CorporateActionEventStage4Code extends CorporateActionEventStageV2C
 	 * name} = "SupplementalCancellationAndReRun"</li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementalCancellationAndReRun = new MMCode() {
+	public static final MMCode mmSupplementalCancellationAndReRun = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalCancellationAndReRun";
@@ -124,7 +124,7 @@ public class CorporateActionEventStage4Code extends CorporateActionEventStageV2C
 	 * name} = "SupplementalCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementalCancellation = new MMCode() {
+	public static final MMCode mmSupplementalCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalCancellation";
@@ -135,12 +135,12 @@ public class CorporateActionEventStage4Code extends CorporateActionEventStageV2C
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStage4Code";
 				definition = "Specifies the stage of the CA lottery event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStage4Code.CancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStage4Code.SupplementalCancellationAndReRun,
-						com.tools20022.repository.codeset.CorporateActionEventStage4Code.SupplementalCancellation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStage4Code.mmCancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStage4Code.mmSupplementalCancellationAndReRun,
+						com.tools20022.repository.codeset.CorporateActionEventStage4Code.mmSupplementalCancellation);
 				trace_lazy = () -> CorporateActionEventStageV2Code.mmObject();
 			}
 		});

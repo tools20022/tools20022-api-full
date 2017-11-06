@@ -33,24 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LiquidityDetails1#Balance
- * LiquidityDetails1.Balance}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LiquidityDetails1#mmBalance
+ * LiquidityDetails1.mmBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LiquidityDetails1#NetAvailableLiquidity
- * LiquidityDetails1.NetAvailableLiquidity}</li>
+ * {@linkplain com.tools20022.repository.msg.LiquidityDetails1#mmNetAvailableLiquidity
+ * LiquidityDetails1.mmNetAvailableLiquidity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LiquidityDetails1#NonCashReservedAmount
- * LiquidityDetails1.NonCashReservedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LiquidityDetails1#mmNonCashReservedAmount
+ * LiquidityDetails1.mmNonCashReservedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LiquidityDetails1#CashReservedAmount
- * LiquidityDetails1.CashReservedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.LiquidityDetails1#mmCashReservedAmount
+ * LiquidityDetails1.mmCashReservedAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LiquidityDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashBalance6 balance;
 	/**
 	 * Current balance.
 	 * <p>
@@ -90,7 +91,7 @@ public class LiquidityDetails1 {
 	 * definition} = "Current balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Balance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LiquidityDetails1.mmObject();
 			isDerived = false;
@@ -98,12 +99,13 @@ public class LiquidityDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Current balance.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashBalance6.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount netAvailableLiquidity;
 	/**
 	 * Net available liquidity on the account(s).
 	 * <p>
@@ -132,7 +134,7 @@ public class LiquidityDetails1 {
 	 * definition} = "Net available liquidity on the account(s). "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetAvailableLiquidity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetAvailableLiquidity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LiquidityDetails1.mmObject();
 			isDerived = false;
@@ -140,11 +142,12 @@ public class LiquidityDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAvailableLiquidity";
 			definition = "Net available liquidity on the account(s). ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount nonCashReservedAmount;
 	/**
 	 * Total amount of liquidity reserved for operations other than cash
 	 * withdrawal.
@@ -176,7 +179,7 @@ public class LiquidityDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NonCashReservedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNonCashReservedAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LiquidityDetails1.mmObject();
 			isDerived = false;
@@ -184,11 +187,12 @@ public class LiquidityDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCashReservedAmount";
 			definition = "Total amount of liquidity reserved for operations other than cash withdrawal.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount cashReservedAmount;
 	/**
 	 * Total amount of liquidity reserved for cash withdrawal.
 	 * <p>
@@ -217,7 +221,7 @@ public class LiquidityDetails1 {
 	 * definition} = "Total amount of liquidity reserved for cash withdrawal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashReservedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashReservedAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LiquidityDetails1.mmObject();
 			isDerived = false;
@@ -225,8 +229,8 @@ public class LiquidityDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashReservedAmount";
 			definition = "Total amount of liquidity reserved for cash withdrawal.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -234,14 +238,46 @@ public class LiquidityDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityDetails1.Balance, com.tools20022.repository.msg.LiquidityDetails1.NetAvailableLiquidity,
-						com.tools20022.repository.msg.LiquidityDetails1.NonCashReservedAmount, com.tools20022.repository.msg.LiquidityDetails1.CashReservedAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityDetails1.mmBalance, com.tools20022.repository.msg.LiquidityDetails1.mmNetAvailableLiquidity,
+						com.tools20022.repository.msg.LiquidityDetails1.mmNonCashReservedAmount, com.tools20022.repository.msg.LiquidityDetails1.mmCashReservedAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityDetails1";
 				definition = "Information regarding liquidity valuation.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashBalance6 getBalance() {
+		return balance;
+	}
+
+	public void setBalance(com.tools20022.repository.msg.CashBalance6 balance) {
+		this.balance = balance;
+	}
+
+	public ActiveCurrencyAndAmount getNetAvailableLiquidity() {
+		return netAvailableLiquidity;
+	}
+
+	public void setNetAvailableLiquidity(ActiveCurrencyAndAmount netAvailableLiquidity) {
+		this.netAvailableLiquidity = netAvailableLiquidity;
+	}
+
+	public ActiveCurrencyAndAmount getNonCashReservedAmount() {
+		return nonCashReservedAmount;
+	}
+
+	public void setNonCashReservedAmount(ActiveCurrencyAndAmount nonCashReservedAmount) {
+		this.nonCashReservedAmount = nonCashReservedAmount;
+	}
+
+	public ActiveCurrencyAndAmount getCashReservedAmount() {
+		return cashReservedAmount;
+	}
+
+	public void setCashReservedAmount(ActiveCurrencyAndAmount cashReservedAmount) {
+		this.cashReservedAmount = cashReservedAmount;
 	}
 }

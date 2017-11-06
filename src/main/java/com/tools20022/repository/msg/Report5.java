@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.Party;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the settlement obligation report.
@@ -32,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Report5#NonClearingMember
- * Report5.NonClearingMember}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Report5#mmNonClearingMember
+ * Report5.mmNonClearingMember}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Report5#SettlementObligationDetails
- * Report5.SettlementObligationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Report5#mmSettlementObligationDetails
+ * Report5.mmSettlementObligationDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,15 +45,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#ReportDetails
- * SettlementObligationReportV03.ReportDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.SettlementObligationReportV03#mmReportDetails
+ * SettlementObligationReportV03.mmReportDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Report5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember;
 	/**
 	 * Provides the identification for the non-clearing member. This is
 	 * mandatory if the clearing member identification equals a general clearing
@@ -104,25 +106,26 @@ public class Report5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Report2#NonClearingMember
-	 * Report2.NonClearingMember}</li>
+	 * {@linkplain com.tools20022.repository.msg.Report2#mmNonClearingMember
+	 * Report2.mmNonClearingMember}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Report5.mmObject();
 			businessComponentTrace_lazy = () -> Party.mmObject();
+			componentContext_lazy = () -> Report5.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides the identification for the non-clearing member. This is mandatory if the clearing member identification equals a general clearing member.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Report2.NonClearingMember;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Report2.mmNonClearingMember;
 			minOccurs = 0;
-			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SettlementObligation8> settlementObligationDetails;
 	/**
 	 * Provides information about the settlement obligation details.
 	 * <p>
@@ -150,11 +153,11 @@ public class Report5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Report2#SettlementObligationDetails
-	 * Report2.SettlementObligationDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Report2#mmSettlementObligationDetails
+	 * Report2.mmSettlementObligationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementObligationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementObligationDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Report5.mmObject();
 			isDerived = false;
@@ -162,19 +165,19 @@ public class Report5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementObligationDetails";
 			definition = "Provides information about the settlement obligation details.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Report2.SettlementObligationDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Report2.mmSettlementObligationDetails;
 			minOccurs = 1;
-			type_lazy = () -> SettlementObligation8.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementObligation8.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report5.NonClearingMember, com.tools20022.repository.msg.Report5.SettlementObligationDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.SettlementObligationReportV03.ReportDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report5.mmNonClearingMember, com.tools20022.repository.msg.Report5.mmSettlementObligationDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.SettlementObligationReportV03.mmReportDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Report5";
 				definition = "Provides details on the settlement obligation report.";
@@ -182,5 +185,21 @@ public class Report5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PartyIdentificationAndAccount31> getNonClearingMember() {
+		return nonClearingMember;
+	}
+
+	public void setNonClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember) {
+		this.nonClearingMember = nonClearingMember;
+	}
+
+	public List<SettlementObligation8> getSettlementObligationDetails() {
+		return settlementObligationDetails;
+	}
+
+	public void setSettlementObligationDetails(List<com.tools20022.repository.msg.SettlementObligation8> settlementObligationDetails) {
+		this.settlementObligationDetails = settlementObligationDetails;
 	}
 }

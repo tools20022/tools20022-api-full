@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.PaymentStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to provide information on the reason of the return of
@@ -37,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10#OriginalBankTransactionCode
- * ReturnReasonInformation10.OriginalBankTransactionCode}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10#mmOriginalBankTransactionCode
+ * ReturnReasonInformation10.mmOriginalBankTransactionCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10#Originator
- * ReturnReasonInformation10.Originator}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10#mmOriginator
+ * ReturnReasonInformation10.mmOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10#Reason
- * ReturnReasonInformation10.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10#mmReason
+ * ReturnReasonInformation10.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10#AdditionalInformation
- * ReturnReasonInformation10.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10#mmAdditionalInformation
+ * ReturnReasonInformation10.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReturnReasonInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BankTransactionCodeStructure4 originalBankTransactionCode;
 	/**
 	 * Bank transaction code included in the original entry for the transaction.
 	 * <p>
@@ -85,8 +87,8 @@ public class ReturnReasonInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#BankTransactionCode
-	 * Entry.BankTransactionCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmBankTransactionCode
+	 * Entry.mmBankTransactionCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,21 +109,22 @@ public class ReturnReasonInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalBankTransactionCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalBankTransactionCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmBankTransactionCode;
 			componentContext_lazy = () -> ReturnReasonInformation10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.BankTransactionCode;
 			isDerived = false;
 			xmlTag = "OrgnlBkTxCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBankTransactionCode";
 			definition = "Bank transaction code included in the original entry for the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BankTransactionCodeStructure4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure4.mmObject();
 		}
 	};
+	protected PartyIdentification32 originator;
 	/**
 	 * Party that issues the return.
 	 * <p>
@@ -133,8 +136,8 @@ public class ReturnReasonInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,21 +156,22 @@ public class ReturnReasonInformation10 {
 	 * definition} = "Party that issues the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Originator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReturnReasonInformation10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Orgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Party that issues the return.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification32.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
 		}
 	};
+	protected ReturnReason5Choice reason;
 	/**
 	 * Specifies the reason for the return.
 	 * <p>
@@ -199,21 +203,22 @@ public class ReturnReasonInformation10 {
 	 * definition} = "Specifies the reason for the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReturnReasonInformation10.mmObject();
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
+			componentContext_lazy = () -> ReturnReasonInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the return.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReturnReason5Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ReturnReason5Choice.mmObject();
 		}
 	};
+	protected List<Max105Text> additionalInformation;
 	/**
 	 * Further details on the return reason.
 	 * <p>
@@ -241,7 +246,7 @@ public class ReturnReasonInformation10 {
 	 * definition} = "Further details on the return reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReturnReasonInformation10.mmObject();
 			isDerived = false;
@@ -257,15 +262,47 @@ public class ReturnReasonInformation10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnReasonInformation10.OriginalBankTransactionCode, com.tools20022.repository.msg.ReturnReasonInformation10.Originator,
-						com.tools20022.repository.msg.ReturnReasonInformation10.Reason, com.tools20022.repository.msg.ReturnReasonInformation10.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnReasonInformation10.mmOriginalBankTransactionCode, com.tools20022.repository.msg.ReturnReasonInformation10.mmOriginator,
+						com.tools20022.repository.msg.ReturnReasonInformation10.mmReason, com.tools20022.repository.msg.ReturnReasonInformation10.mmAdditionalInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReturnReasonInformation10";
 				definition = "Set of elements used to provide information on the reason of the return of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BankTransactionCodeStructure4 getOriginalBankTransactionCode() {
+		return originalBankTransactionCode;
+	}
+
+	public void setOriginalBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure4 originalBankTransactionCode) {
+		this.originalBankTransactionCode = originalBankTransactionCode;
+	}
+
+	public PartyIdentification32 getOriginator() {
+		return originator;
+	}
+
+	public void setOriginator(com.tools20022.repository.msg.PartyIdentification32 originator) {
+		this.originator = originator;
+	}
+
+	public ReturnReason5Choice getReason() {
+		return reason;
+	}
+
+	public void setReason(ReturnReason5Choice reason) {
+		this.reason = reason;
+	}
+
+	public List<Max105Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max105Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

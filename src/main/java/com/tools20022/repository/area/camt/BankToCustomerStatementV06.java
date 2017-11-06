@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -73,21 +74,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV06#GroupHeader
- * BankToCustomerStatementV06.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV06#mmGroupHeader
+ * BankToCustomerStatementV06.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV06#Statement
- * BankToCustomerStatementV06.Statement}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV06#mmStatement
+ * BankToCustomerStatementV06.mmStatement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV06#SupplementaryData
- * BankToCustomerStatementV06.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV06#mmSupplementaryData
+ * BankToCustomerStatementV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV06#identifier
- * BankToCustomerStatementV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.053.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,6 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BankToCustomerStatementV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader58 groupHeader;
 	/**
 	 * Common information for the message.
 	 * <p>
@@ -130,22 +130,23 @@ public class BankToCustomerStatementV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV05#GroupHeader
-	 * BankToCustomerStatementV05.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV05#mmGroupHeader
+	 * BankToCustomerStatementV05.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common information for the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV05.GroupHeader;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV05.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader58.mmObject();
 		}
 	};
+	protected List<AccountStatement6> statement;
 	/**
 	 * Reports on booked entries and balances for a cash account.
 	 * <p>
@@ -171,21 +172,22 @@ public class BankToCustomerStatementV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV05#Statement
-	 * BankToCustomerStatementV05.Statement}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV05#mmStatement
+	 * BankToCustomerStatementV05.mmStatement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Statement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Stmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statement";
 			definition = "Reports on booked entries and balances for a cash account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV05.Statement;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV05.mmStatement;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountStatement6.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -213,46 +215,19 @@ public class BankToCustomerStatementV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV05#SupplementaryData
-	 * BankToCustomerStatementV05.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV05#mmSupplementaryData
+	 * BankToCustomerStatementV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV05.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV05.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "053"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "053";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -267,11 +242,42 @@ public class BankToCustomerStatementV06 {
 				rootElement = "Document";
 				xmlTag = "BkToCstmrStmt";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV06.GroupHeader, com.tools20022.repository.area.camt.BankToCustomerStatementV06.Statement,
-						com.tools20022.repository.area.camt.BankToCustomerStatementV06.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV06.mmGroupHeader, com.tools20022.repository.area.camt.BankToCustomerStatementV06.mmStatement,
+						com.tools20022.repository.area.camt.BankToCustomerStatementV06.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "053";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader58 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader58 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<AccountStatement6> getStatement() {
+		return statement;
+	}
+
+	public void setStatement(List<AccountStatement6> statement) {
+		this.statement = statement;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

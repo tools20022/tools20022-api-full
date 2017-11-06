@@ -35,158 +35,159 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#NoMatch
- * UnmatchedReason6Code.NoMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmNoMatch
+ * UnmatchedReason6Code.mmNoMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#SettlementDate
- * UnmatchedReason6Code.SettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmSettlementDate
+ * UnmatchedReason6Code.mmSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#TransactionDirection
- * UnmatchedReason6Code.TransactionDirection}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmTransactionDirection
+ * UnmatchedReason6Code.mmTransactionDirection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#TransactionDealAmount
- * UnmatchedReason6Code.TransactionDealAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmTransactionDealAmount
+ * UnmatchedReason6Code.mmTransactionDealAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#ReceivingDeliveringDepository
- * UnmatchedReason6Code.ReceivingDeliveringDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmReceivingDeliveringDepository
+ * UnmatchedReason6Code.mmReceivingDeliveringDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#SettlementAmount
- * UnmatchedReason6Code.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmSettlementAmount
+ * UnmatchedReason6Code.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#DealPrice
- * UnmatchedReason6Code.DealPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmDealPrice
+ * UnmatchedReason6Code.mmDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#FinancialInstrumentQuantity
- * UnmatchedReason6Code.FinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmFinancialInstrumentQuantity
+ * UnmatchedReason6Code.mmFinancialInstrumentQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#RepurchaseCallDelay
- * UnmatchedReason6Code.RepurchaseCallDelay}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmRepurchaseCallDelay
+ * UnmatchedReason6Code.mmRepurchaseCallDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#AccountServicerDeadlineMissed
- * UnmatchedReason6Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmAccountServicerDeadlineMissed
+ * UnmatchedReason6Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#SettlementTransaction
- * UnmatchedReason6Code.SettlementTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmSettlementTransaction
+ * UnmatchedReason6Code.mmSettlementTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#SettlementSystemMethod
- * UnmatchedReason6Code.SettlementSystemMethod}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmSettlementSystemMethod
+ * UnmatchedReason6Code.mmSettlementSystemMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#FinancialInstrument
- * UnmatchedReason6Code.FinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmFinancialInstrument
+ * UnmatchedReason6Code.mmFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#VariableRateSupport
- * UnmatchedReason6Code.VariableRateSupport}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmVariableRateSupport
+ * UnmatchedReason6Code.mmVariableRateSupport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#NotRecognised
- * UnmatchedReason6Code.NotRecognised}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmNotRecognised
+ * UnmatchedReason6Code.mmNotRecognised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#RepurchaseSpreadRate
- * UnmatchedReason6Code.RepurchaseSpreadRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmRepurchaseSpreadRate
+ * UnmatchedReason6Code.mmRepurchaseSpreadRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#RepurchaseRate
- * UnmatchedReason6Code.RepurchaseRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmRepurchaseRate
+ * UnmatchedReason6Code.mmRepurchaseRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#CounterpartyTooLateForMatching
- * UnmatchedReason6Code.CounterpartyTooLateForMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmCounterpartyTooLateForMatching
+ * UnmatchedReason6Code.mmCounterpartyTooLateForMatching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#RepurchaseRateType
- * UnmatchedReason6Code.RepurchaseRateType}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmRepurchaseRateType
+ * UnmatchedReason6Code.mmRepurchaseRateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#RepurchaseAmount
- * UnmatchedReason6Code.RepurchaseAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmRepurchaseAmount
+ * UnmatchedReason6Code.mmRepurchaseAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#RepurchasePremiumAmount
- * UnmatchedReason6Code.RepurchasePremiumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmRepurchasePremiumAmount
+ * UnmatchedReason6Code.mmRepurchasePremiumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#PhysicalSettlement
- * UnmatchedReason6Code.PhysicalSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmPhysicalSettlement
+ * UnmatchedReason6Code.mmPhysicalSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#CommonReference
- * UnmatchedReason6Code.CommonReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmCommonReference
+ * UnmatchedReason6Code.mmCommonReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#PaymentCode
- * UnmatchedReason6Code.PaymentCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmPaymentCode
+ * UnmatchedReason6Code.mmPaymentCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#PlaceOfTrade
- * UnmatchedReason6Code.PlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmPlaceOfTrade
+ * UnmatchedReason6Code.mmPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#PossibleDuplicate
- * UnmatchedReason6Code.PossibleDuplicate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmPossibleDuplicate
+ * UnmatchedReason6Code.mmPossibleDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#ForfeitRepurchaseAmount
- * UnmatchedReason6Code.ForfeitRepurchaseAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmForfeitRepurchaseAmount
+ * UnmatchedReason6Code.mmForfeitRepurchaseAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#ExecutionBrokerCommission
- * UnmatchedReason6Code.ExecutionBrokerCommission}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmExecutionBrokerCommission
+ * UnmatchedReason6Code.mmExecutionBrokerCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#RegistrationDetails
- * UnmatchedReason6Code.RegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmRegistrationDetails
+ * UnmatchedReason6Code.mmRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#RTGSSystem
- * UnmatchedReason6Code.RTGSSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmRTGSSystem
+ * UnmatchedReason6Code.mmRTGSSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#ReceivingDeliveringParty1
- * UnmatchedReason6Code.ReceivingDeliveringParty1}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmReceivingDeliveringParty1
+ * UnmatchedReason6Code.mmReceivingDeliveringParty1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#CounterpartyCancelled
- * UnmatchedReason6Code.CounterpartyCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmCounterpartyCancelled
+ * UnmatchedReason6Code.mmCounterpartyCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#ChargesAmount
- * UnmatchedReason6Code.ChargesAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmChargesAmount
+ * UnmatchedReason6Code.mmChargesAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#ReceivingDeliveringParty3
- * UnmatchedReason6Code.ReceivingDeliveringParty3}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmReceivingDeliveringParty3
+ * UnmatchedReason6Code.mmReceivingDeliveringParty3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#CurrencySettlementAmount
- * UnmatchedReason6Code.CurrencySettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmCurrencySettlementAmount
+ * UnmatchedReason6Code.mmCurrencySettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#MatchingRecordCancelled
- * UnmatchedReason6Code.MatchingRecordCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmMatchingRecordCancelled
+ * UnmatchedReason6Code.mmMatchingRecordCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#LetterOfGuarantee
- * UnmatchedReason6Code.LetterOfGuarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmLetterOfGuarantee
+ * UnmatchedReason6Code.mmLetterOfGuarantee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#NoMatchingStarted
- * UnmatchedReason6Code.NoMatchingStarted}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmNoMatchingStarted
+ * UnmatchedReason6Code.mmNoMatchingStarted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#SafekeepingAccount
- * UnmatchedReason6Code.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmSafekeepingAccount
+ * UnmatchedReason6Code.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#TradeDate
- * UnmatchedReason6Code.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmTradeDate
+ * UnmatchedReason6Code.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#MarketDeadlineMissed
- * UnmatchedReason6Code.MarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmMarketDeadlineMissed
+ * UnmatchedReason6Code.mmMarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#ClosingDateTime
- * UnmatchedReason6Code.ClosingDateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmClosingDateTime
+ * UnmatchedReason6Code.mmClosingDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#TaxStatus
- * UnmatchedReason6Code.TaxStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmTaxStatus
+ * UnmatchedReason6Code.mmTaxStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#ReceivingDeliveringParty2
- * UnmatchedReason6Code.ReceivingDeliveringParty2}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmReceivingDeliveringParty2
+ * UnmatchedReason6Code.mmReceivingDeliveringParty2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#PlaceOfSafekeeping
- * UnmatchedReason6Code.PlaceOfSafekeeping}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmPlaceOfSafekeeping
+ * UnmatchedReason6Code.mmPlaceOfSafekeeping}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#MissingMarketSide
- * UnmatchedReason6Code.MissingMarketSide}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmMissingMarketSide
+ * UnmatchedReason6Code.mmMissingMarketSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#UnmatchedMarketSide
- * UnmatchedReason6Code.UnmatchedMarketSide}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#Other
- * UnmatchedReason6Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmUnmatchedMarketSide
+ * UnmatchedReason6Code.mmUnmatchedMarketSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#AccruedInterestAmount1
- * UnmatchedReason6Code.AccruedInterestAmount1}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmOther
+ * UnmatchedReason6Code.mmOther}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedReason6Code#mmAccruedInterestAmount1
+ * UnmatchedReason6Code.mmAccruedInterestAmount1}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -237,17 +238,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#NoMatch
-	 * UnmatchedReason9Code.NoMatch}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmNoMatch
+	 * UnmatchedReason9Code.mmNoMatch}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NoMatch = new MMCode() {
+	public static final MMCode mmNoMatch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.NoMatch);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmNoMatch);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -269,17 +270,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#SettlementDate
-	 * UnmatchedReason9Code.SettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmSettlementDate
+	 * UnmatchedReason9Code.mmSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementDate = new MMCode() {
+	public static final MMCode mmSettlementDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.SettlementDate);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmSettlementDate);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -301,17 +302,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#TransactionDirection
-	 * UnmatchedReason9Code.TransactionDirection}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmTransactionDirection
+	 * UnmatchedReason9Code.mmTransactionDirection}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionDirection = new MMCode() {
+	public static final MMCode mmTransactionDirection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDirection";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.TransactionDirection);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmTransactionDirection);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -333,17 +334,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#TransactionDealAmount
-	 * UnmatchedReason9Code.TransactionDealAmount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmTransactionDealAmount
+	 * UnmatchedReason9Code.mmTransactionDealAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TransactionDealAmount = new MMCode() {
+	public static final MMCode mmTransactionDealAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDealAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.TransactionDealAmount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmTransactionDealAmount);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -365,17 +366,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#ReceivingDeliveringDepository
-	 * UnmatchedReason9Code.ReceivingDeliveringDepository}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmReceivingDeliveringDepository
+	 * UnmatchedReason9Code.mmReceivingDeliveringDepository}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringDepository = new MMCode() {
+	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.ReceivingDeliveringDepository);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmReceivingDeliveringDepository);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -397,17 +398,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#SettlementAmount
-	 * UnmatchedReason9Code.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmSettlementAmount
+	 * UnmatchedReason9Code.mmSettlementAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementAmount = new MMCode() {
+	public static final MMCode mmSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.SettlementAmount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmSettlementAmount);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -429,17 +430,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#DealPrice
-	 * UnmatchedReason9Code.DealPrice}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmDealPrice
+	 * UnmatchedReason9Code.mmDealPrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DealPrice = new MMCode() {
+	public static final MMCode mmDealPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.DealPrice);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmDealPrice);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -461,17 +462,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#FinancialInstrumentQuantity
-	 * UnmatchedReason9Code.FinancialInstrumentQuantity}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmFinancialInstrumentQuantity
+	 * UnmatchedReason9Code.mmFinancialInstrumentQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrumentQuantity = new MMCode() {
+	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.FinancialInstrumentQuantity);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmFinancialInstrumentQuantity);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -493,17 +494,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#RepurchaseCallDelay
-	 * UnmatchedReason9Code.RepurchaseCallDelay}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmRepurchaseCallDelay
+	 * UnmatchedReason9Code.mmRepurchaseCallDelay}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseCallDelay = new MMCode() {
+	public static final MMCode mmRepurchaseCallDelay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseCallDelay";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.RepurchaseCallDelay);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmRepurchaseCallDelay);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -525,17 +526,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#AccountServicerDeadlineMissed
-	 * UnmatchedReason9Code.AccountServicerDeadlineMissed}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmAccountServicerDeadlineMissed
+	 * UnmatchedReason9Code.mmAccountServicerDeadlineMissed}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.AccountServicerDeadlineMissed);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmAccountServicerDeadlineMissed);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -557,17 +558,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#SettlementTransaction
-	 * UnmatchedReason9Code.SettlementTransaction}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmSettlementTransaction
+	 * UnmatchedReason9Code.mmSettlementTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementTransaction = new MMCode() {
+	public static final MMCode mmSettlementTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.SettlementTransaction);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmSettlementTransaction);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -589,17 +590,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#SettlementSystemMethod
-	 * UnmatchedReason9Code.SettlementSystemMethod}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmSettlementSystemMethod
+	 * UnmatchedReason9Code.mmSettlementSystemMethod}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementSystemMethod = new MMCode() {
+	public static final MMCode mmSettlementSystemMethod = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethod";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.SettlementSystemMethod);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmSettlementSystemMethod);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -621,17 +622,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#FinancialInstrument
-	 * UnmatchedReason9Code.FinancialInstrument}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmFinancialInstrument
+	 * UnmatchedReason9Code.mmFinancialInstrument}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialInstrument = new MMCode() {
+	public static final MMCode mmFinancialInstrument = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.FinancialInstrument);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmFinancialInstrument);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -653,17 +654,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#VariableRateSupport
-	 * UnmatchedReason9Code.VariableRateSupport}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmVariableRateSupport
+	 * UnmatchedReason9Code.mmVariableRateSupport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode VariableRateSupport = new MMCode() {
+	public static final MMCode mmVariableRateSupport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateSupport";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.VariableRateSupport);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmVariableRateSupport);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -685,17 +686,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#NotRecognised
-	 * UnmatchedReason9Code.NotRecognised}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmNotRecognised
+	 * UnmatchedReason9Code.mmNotRecognised}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NotRecognised = new MMCode() {
+	public static final MMCode mmNotRecognised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotRecognised";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.NotRecognised);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmNotRecognised);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -717,17 +718,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#RepurchaseSpreadRate
-	 * UnmatchedReason9Code.RepurchaseSpreadRate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmRepurchaseSpreadRate
+	 * UnmatchedReason9Code.mmRepurchaseSpreadRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseSpreadRate = new MMCode() {
+	public static final MMCode mmRepurchaseSpreadRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseSpreadRate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.RepurchaseSpreadRate);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmRepurchaseSpreadRate);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -749,17 +750,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#RepurchaseRate
-	 * UnmatchedReason9Code.RepurchaseRate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmRepurchaseRate
+	 * UnmatchedReason9Code.mmRepurchaseRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseRate = new MMCode() {
+	public static final MMCode mmRepurchaseRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.RepurchaseRate);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmRepurchaseRate);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -781,17 +782,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#CounterpartyTooLateForMatching
-	 * UnmatchedReason9Code.CounterpartyTooLateForMatching}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmCounterpartyTooLateForMatching
+	 * UnmatchedReason9Code.mmCounterpartyTooLateForMatching}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyTooLateForMatching = new MMCode() {
+	public static final MMCode mmCounterpartyTooLateForMatching = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTooLateForMatching";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.CounterpartyTooLateForMatching);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmCounterpartyTooLateForMatching);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -813,17 +814,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#RepurchaseRateType
-	 * UnmatchedReason9Code.RepurchaseRateType}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmRepurchaseRateType
+	 * UnmatchedReason9Code.mmRepurchaseRateType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseRateType = new MMCode() {
+	public static final MMCode mmRepurchaseRateType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRateType";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.RepurchaseRateType);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmRepurchaseRateType);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -845,17 +846,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#RepurchaseAmount
-	 * UnmatchedReason9Code.RepurchaseAmount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmRepurchaseAmount
+	 * UnmatchedReason9Code.mmRepurchaseAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchaseAmount = new MMCode() {
+	public static final MMCode mmRepurchaseAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.RepurchaseAmount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmRepurchaseAmount);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -877,17 +878,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#RepurchasePremiumAmount
-	 * UnmatchedReason9Code.RepurchasePremiumAmount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmRepurchasePremiumAmount
+	 * UnmatchedReason9Code.mmRepurchasePremiumAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RepurchasePremiumAmount = new MMCode() {
+	public static final MMCode mmRepurchasePremiumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchasePremiumAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.RepurchasePremiumAmount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmRepurchasePremiumAmount);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -909,17 +910,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#PhysicalSettlement
-	 * UnmatchedReason9Code.PhysicalSettlement}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmPhysicalSettlement
+	 * UnmatchedReason9Code.mmPhysicalSettlement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalSettlement = new MMCode() {
+	public static final MMCode mmPhysicalSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.PhysicalSettlement);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmPhysicalSettlement);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -941,17 +942,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#CommonReference
-	 * UnmatchedReason9Code.CommonReference}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmCommonReference
+	 * UnmatchedReason9Code.mmCommonReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CommonReference = new MMCode() {
+	public static final MMCode mmCommonReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.CommonReference);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmCommonReference);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -973,17 +974,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#PaymentCode
-	 * UnmatchedReason9Code.PaymentCode}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmPaymentCode
+	 * UnmatchedReason9Code.mmPaymentCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentCode = new MMCode() {
+	public static final MMCode mmPaymentCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCode";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.PaymentCode);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmPaymentCode);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1005,17 +1006,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#PlaceOfTrade
-	 * UnmatchedReason9Code.PlaceOfTrade}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmPlaceOfTrade
+	 * UnmatchedReason9Code.mmPlaceOfTrade}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfTrade = new MMCode() {
+	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.PlaceOfTrade);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmPlaceOfTrade);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1037,17 +1038,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#PossibleDuplicate
-	 * UnmatchedReason9Code.PossibleDuplicate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmPossibleDuplicate
+	 * UnmatchedReason9Code.mmPossibleDuplicate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PossibleDuplicate = new MMCode() {
+	public static final MMCode mmPossibleDuplicate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.PossibleDuplicate);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmPossibleDuplicate);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1069,17 +1070,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#ForfeitRepurchaseAmount
-	 * UnmatchedReason9Code.ForfeitRepurchaseAmount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmForfeitRepurchaseAmount
+	 * UnmatchedReason9Code.mmForfeitRepurchaseAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ForfeitRepurchaseAmount = new MMCode() {
+	public static final MMCode mmForfeitRepurchaseAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForfeitRepurchaseAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.ForfeitRepurchaseAmount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmForfeitRepurchaseAmount);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1101,17 +1102,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#ExecutionBrokerCommission
-	 * UnmatchedReason9Code.ExecutionBrokerCommission}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmExecutionBrokerCommission
+	 * UnmatchedReason9Code.mmExecutionBrokerCommission}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ExecutionBrokerCommission = new MMCode() {
+	public static final MMCode mmExecutionBrokerCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionBrokerCommission";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.ExecutionBrokerCommission);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmExecutionBrokerCommission);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1133,17 +1134,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#RegistrationDetails
-	 * UnmatchedReason9Code.RegistrationDetails}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmRegistrationDetails
+	 * UnmatchedReason9Code.mmRegistrationDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RegistrationDetails = new MMCode() {
+	public static final MMCode mmRegistrationDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.RegistrationDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmRegistrationDetails);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1165,17 +1166,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#RTGSSystem
-	 * UnmatchedReason9Code.RTGSSystem}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmRTGSSystem
+	 * UnmatchedReason9Code.mmRTGSSystem}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RTGSSystem = new MMCode() {
+	public static final MMCode mmRTGSSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RTGSSystem";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.RTGSSystem);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmRTGSSystem);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1197,17 +1198,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#ReceivingDeliveringParty1
-	 * UnmatchedReason9Code.ReceivingDeliveringParty1}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmReceivingDeliveringParty1
+	 * UnmatchedReason9Code.mmReceivingDeliveringParty1}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty1 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty1";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.ReceivingDeliveringParty1);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmReceivingDeliveringParty1);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1229,17 +1230,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#CounterpartyCancelled
-	 * UnmatchedReason9Code.CounterpartyCancelled}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmCounterpartyCancelled
+	 * UnmatchedReason9Code.mmCounterpartyCancelled}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyCancelled = new MMCode() {
+	public static final MMCode mmCounterpartyCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyCancelled";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.CounterpartyCancelled);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmCounterpartyCancelled);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1261,17 +1262,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#ChargesAmount
-	 * UnmatchedReason9Code.ChargesAmount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmChargesAmount
+	 * UnmatchedReason9Code.mmChargesAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ChargesAmount = new MMCode() {
+	public static final MMCode mmChargesAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.ChargesAmount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmChargesAmount);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1293,17 +1294,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#ReceivingDeliveringParty3
-	 * UnmatchedReason9Code.ReceivingDeliveringParty3}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmReceivingDeliveringParty3
+	 * UnmatchedReason9Code.mmReceivingDeliveringParty3}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty3 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty3 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty3";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.ReceivingDeliveringParty3);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmReceivingDeliveringParty3);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1325,17 +1326,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#CurrencySettlementAmount
-	 * UnmatchedReason9Code.CurrencySettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmCurrencySettlementAmount
+	 * UnmatchedReason9Code.mmCurrencySettlementAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CurrencySettlementAmount = new MMCode() {
+	public static final MMCode mmCurrencySettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencySettlementAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.CurrencySettlementAmount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmCurrencySettlementAmount);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1357,17 +1358,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#MatchingRecordCancelled
-	 * UnmatchedReason9Code.MatchingRecordCancelled}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmMatchingRecordCancelled
+	 * UnmatchedReason9Code.mmMatchingRecordCancelled}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MatchingRecordCancelled = new MMCode() {
+	public static final MMCode mmMatchingRecordCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingRecordCancelled";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.MatchingRecordCancelled);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmMatchingRecordCancelled);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1389,17 +1390,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#LetterOfGuarantee
-	 * UnmatchedReason9Code.LetterOfGuarantee}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmLetterOfGuarantee
+	 * UnmatchedReason9Code.mmLetterOfGuarantee}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LetterOfGuarantee = new MMCode() {
+	public static final MMCode mmLetterOfGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfGuarantee";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.LetterOfGuarantee);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmLetterOfGuarantee);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1421,17 +1422,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#NoMatchingStarted
-	 * UnmatchedReason9Code.NoMatchingStarted}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmNoMatchingStarted
+	 * UnmatchedReason9Code.mmNoMatchingStarted}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NoMatchingStarted = new MMCode() {
+	public static final MMCode mmNoMatchingStarted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchingStarted";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.NoMatchingStarted);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmNoMatchingStarted);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1453,17 +1454,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#SafekeepingAccount
-	 * UnmatchedReason9Code.SafekeepingAccount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmSafekeepingAccount
+	 * UnmatchedReason9Code.mmSafekeepingAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SafekeepingAccount = new MMCode() {
+	public static final MMCode mmSafekeepingAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.SafekeepingAccount);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmSafekeepingAccount);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1485,17 +1486,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#TradeDate
-	 * UnmatchedReason9Code.TradeDate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmTradeDate
+	 * UnmatchedReason9Code.mmTradeDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TradeDate = new MMCode() {
+	public static final MMCode mmTradeDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.TradeDate);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmTradeDate);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1517,17 +1518,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#MarketDeadlineMissed
-	 * UnmatchedReason9Code.MarketDeadlineMissed}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmMarketDeadlineMissed
+	 * UnmatchedReason9Code.mmMarketDeadlineMissed}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MarketDeadlineMissed = new MMCode() {
+	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.MarketDeadlineMissed);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmMarketDeadlineMissed);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1549,17 +1550,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#ClosingDateTime
-	 * UnmatchedReason9Code.ClosingDateTime}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmClosingDateTime
+	 * UnmatchedReason9Code.mmClosingDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ClosingDateTime = new MMCode() {
+	public static final MMCode mmClosingDateTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDateTime";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.ClosingDateTime);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmClosingDateTime);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1581,17 +1582,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#TaxStatus
-	 * UnmatchedReason9Code.TaxStatus}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmTaxStatus
+	 * UnmatchedReason9Code.mmTaxStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TaxStatus = new MMCode() {
+	public static final MMCode mmTaxStatus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxStatus";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.TaxStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmTaxStatus);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1613,17 +1614,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#ReceivingDeliveringParty2
-	 * UnmatchedReason9Code.ReceivingDeliveringParty2}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmReceivingDeliveringParty2
+	 * UnmatchedReason9Code.mmReceivingDeliveringParty2}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty2 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty2";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.ReceivingDeliveringParty2);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmReceivingDeliveringParty2);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1645,17 +1646,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#PlaceOfSafekeeping
-	 * UnmatchedReason9Code.PlaceOfSafekeeping}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmPlaceOfSafekeeping
+	 * UnmatchedReason9Code.mmPlaceOfSafekeeping}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfSafekeeping = new MMCode() {
+	public static final MMCode mmPlaceOfSafekeeping = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSafekeeping";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.PlaceOfSafekeeping);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmPlaceOfSafekeeping);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1677,17 +1678,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#MissingMarketSide
-	 * UnmatchedReason9Code.MissingMarketSide}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmMissingMarketSide
+	 * UnmatchedReason9Code.mmMissingMarketSide}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MissingMarketSide = new MMCode() {
+	public static final MMCode mmMissingMarketSide = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingMarketSide";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.MissingMarketSide);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmMissingMarketSide);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1709,17 +1710,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#UnmatchedMarketSide
-	 * UnmatchedReason9Code.UnmatchedMarketSide}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmUnmatchedMarketSide
+	 * UnmatchedReason9Code.mmUnmatchedMarketSide}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UnmatchedMarketSide = new MMCode() {
+	public static final MMCode mmUnmatchedMarketSide = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnmatchedMarketSide";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.UnmatchedMarketSide);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmUnmatchedMarketSide);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1741,17 +1742,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#Other
-	 * UnmatchedReason9Code.Other}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmOther
+	 * UnmatchedReason9Code.mmOther}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.Other);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmOther);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1773,17 +1774,17 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#AccruedInterestAmount1
-	 * UnmatchedReason9Code.AccruedInterestAmount1}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UnmatchedReason9Code#mmAccruedInterestAmount1
+	 * UnmatchedReason9Code.mmAccruedInterestAmount1}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AccruedInterestAmount1 = new MMCode() {
+	public static final MMCode mmAccruedInterestAmount1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount1";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.AccruedInterestAmount1);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason9Code.mmAccruedInterestAmount1);
 			owner_lazy = () -> UnmatchedReason6Code.mmObject();
 		}
 	};
@@ -1791,36 +1792,37 @@ public class UnmatchedReason6Code extends UnmatchedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CMIS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedReason6Code";
 				definition = "Specifies the reason the transaction, transfer or settlement instruction is unmatched.";
-				previousVersion_lazy = () -> UnmatchedReason3Code.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(UnmatchedReason9Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason6Code.NoMatch, com.tools20022.repository.codeset.UnmatchedReason6Code.SettlementDate,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.TransactionDirection, com.tools20022.repository.codeset.UnmatchedReason6Code.TransactionDealAmount,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.ReceivingDeliveringDepository, com.tools20022.repository.codeset.UnmatchedReason6Code.SettlementAmount,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.DealPrice, com.tools20022.repository.codeset.UnmatchedReason6Code.FinancialInstrumentQuantity,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.RepurchaseCallDelay, com.tools20022.repository.codeset.UnmatchedReason6Code.AccountServicerDeadlineMissed,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.SettlementTransaction, com.tools20022.repository.codeset.UnmatchedReason6Code.SettlementSystemMethod,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.FinancialInstrument, com.tools20022.repository.codeset.UnmatchedReason6Code.VariableRateSupport,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.NotRecognised, com.tools20022.repository.codeset.UnmatchedReason6Code.RepurchaseSpreadRate,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.RepurchaseRate, com.tools20022.repository.codeset.UnmatchedReason6Code.CounterpartyTooLateForMatching,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.RepurchaseRateType, com.tools20022.repository.codeset.UnmatchedReason6Code.RepurchaseAmount,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.RepurchasePremiumAmount, com.tools20022.repository.codeset.UnmatchedReason6Code.PhysicalSettlement,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.CommonReference, com.tools20022.repository.codeset.UnmatchedReason6Code.PaymentCode, com.tools20022.repository.codeset.UnmatchedReason6Code.PlaceOfTrade,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.PossibleDuplicate, com.tools20022.repository.codeset.UnmatchedReason6Code.ForfeitRepurchaseAmount,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.ExecutionBrokerCommission, com.tools20022.repository.codeset.UnmatchedReason6Code.RegistrationDetails,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.RTGSSystem, com.tools20022.repository.codeset.UnmatchedReason6Code.ReceivingDeliveringParty1,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.CounterpartyCancelled, com.tools20022.repository.codeset.UnmatchedReason6Code.ChargesAmount,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.ReceivingDeliveringParty3, com.tools20022.repository.codeset.UnmatchedReason6Code.CurrencySettlementAmount,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.MatchingRecordCancelled, com.tools20022.repository.codeset.UnmatchedReason6Code.LetterOfGuarantee,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.NoMatchingStarted, com.tools20022.repository.codeset.UnmatchedReason6Code.SafekeepingAccount, com.tools20022.repository.codeset.UnmatchedReason6Code.TradeDate,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.MarketDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason6Code.ClosingDateTime, com.tools20022.repository.codeset.UnmatchedReason6Code.TaxStatus,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.ReceivingDeliveringParty2, com.tools20022.repository.codeset.UnmatchedReason6Code.PlaceOfSafekeeping,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.MissingMarketSide, com.tools20022.repository.codeset.UnmatchedReason6Code.UnmatchedMarketSide, com.tools20022.repository.codeset.UnmatchedReason6Code.Other,
-						com.tools20022.repository.codeset.UnmatchedReason6Code.AccruedInterestAmount1);
+				previousVersion_lazy = () -> UnmatchedReason3Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason6Code.mmNoMatch, com.tools20022.repository.codeset.UnmatchedReason6Code.mmSettlementDate,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmTransactionDirection, com.tools20022.repository.codeset.UnmatchedReason6Code.mmTransactionDealAmount,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmReceivingDeliveringDepository, com.tools20022.repository.codeset.UnmatchedReason6Code.mmSettlementAmount,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmDealPrice, com.tools20022.repository.codeset.UnmatchedReason6Code.mmFinancialInstrumentQuantity,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmRepurchaseCallDelay, com.tools20022.repository.codeset.UnmatchedReason6Code.mmAccountServicerDeadlineMissed,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmSettlementTransaction, com.tools20022.repository.codeset.UnmatchedReason6Code.mmSettlementSystemMethod,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmFinancialInstrument, com.tools20022.repository.codeset.UnmatchedReason6Code.mmVariableRateSupport,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmNotRecognised, com.tools20022.repository.codeset.UnmatchedReason6Code.mmRepurchaseSpreadRate,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmRepurchaseRate, com.tools20022.repository.codeset.UnmatchedReason6Code.mmCounterpartyTooLateForMatching,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmRepurchaseRateType, com.tools20022.repository.codeset.UnmatchedReason6Code.mmRepurchaseAmount,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmRepurchasePremiumAmount, com.tools20022.repository.codeset.UnmatchedReason6Code.mmPhysicalSettlement,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmCommonReference, com.tools20022.repository.codeset.UnmatchedReason6Code.mmPaymentCode, com.tools20022.repository.codeset.UnmatchedReason6Code.mmPlaceOfTrade,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmPossibleDuplicate, com.tools20022.repository.codeset.UnmatchedReason6Code.mmForfeitRepurchaseAmount,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmExecutionBrokerCommission, com.tools20022.repository.codeset.UnmatchedReason6Code.mmRegistrationDetails,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmRTGSSystem, com.tools20022.repository.codeset.UnmatchedReason6Code.mmReceivingDeliveringParty1,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmCounterpartyCancelled, com.tools20022.repository.codeset.UnmatchedReason6Code.mmChargesAmount,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmReceivingDeliveringParty3, com.tools20022.repository.codeset.UnmatchedReason6Code.mmCurrencySettlementAmount,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmMatchingRecordCancelled, com.tools20022.repository.codeset.UnmatchedReason6Code.mmLetterOfGuarantee,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmNoMatchingStarted, com.tools20022.repository.codeset.UnmatchedReason6Code.mmSafekeepingAccount,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmTradeDate, com.tools20022.repository.codeset.UnmatchedReason6Code.mmMarketDeadlineMissed,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmClosingDateTime, com.tools20022.repository.codeset.UnmatchedReason6Code.mmTaxStatus,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmReceivingDeliveringParty2, com.tools20022.repository.codeset.UnmatchedReason6Code.mmPlaceOfSafekeeping,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmMissingMarketSide, com.tools20022.repository.codeset.UnmatchedReason6Code.mmUnmatchedMarketSide,
+						com.tools20022.repository.codeset.UnmatchedReason6Code.mmOther, com.tools20022.repository.codeset.UnmatchedReason6Code.mmAccruedInterestAmount1);
 				trace_lazy = () -> UnmatchedReasonCode.mmObject();
 			}
 		});

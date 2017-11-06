@@ -31,11 +31,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCLateCode#LateAnnouncement
- * DTCLateCode.LateAnnouncement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCLateCode#mmLateAnnouncement
+ * DTCLateCode.mmLateAnnouncement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCLateCode#LateAnnouncementPending
- * DTCLateCode.LateAnnouncementPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCLateCode#mmLateAnnouncementPending
+ * DTCLateCode.mmLateAnnouncementPending}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class DTCLateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LateAnnouncement = new MMCode() {
+	public static final MMCode mmLateAnnouncement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncement";
@@ -125,7 +125,7 @@ public class DTCLateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LateAnnouncementPending = new MMCode() {
+	public static final MMCode mmLateAnnouncementPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncementPending";
@@ -138,12 +138,12 @@ public class DTCLateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LATE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCLateCode";
 				definition = "Specifies late announcements: wither the announcement was made before or after position capture.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCLateCode.LateAnnouncement, com.tools20022.repository.codeset.DTCLateCode.LateAnnouncementPending);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCLateCode.mmLateAnnouncement, com.tools20022.repository.codeset.DTCLateCode.mmLateAnnouncementPending);
 				derivation_lazy = () -> Arrays.asList(DTCLate1Code.mmObject());
 			}
 		});

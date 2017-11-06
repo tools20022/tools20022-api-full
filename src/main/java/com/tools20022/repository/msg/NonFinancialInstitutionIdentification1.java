@@ -38,26 +38,26 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#BEI
- * NonFinancialInstitutionIdentification1.BEI}</li>
+ * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmBEI
+ * NonFinancialInstitutionIdentification1.mmBEI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#EANGLN
- * NonFinancialInstitutionIdentification1.EANGLN}</li>
+ * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmEANGLN
+ * NonFinancialInstitutionIdentification1.mmEANGLN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#CHIPSUniversalIdentification
- * NonFinancialInstitutionIdentification1.CHIPSUniversalIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmCHIPSUniversalIdentification
+ * NonFinancialInstitutionIdentification1.mmCHIPSUniversalIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#DUNS
- * NonFinancialInstitutionIdentification1.DUNS}</li>
+ * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmDUNS
+ * NonFinancialInstitutionIdentification1.mmDUNS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#BankPartyIdentification
- * NonFinancialInstitutionIdentification1.BankPartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmBankPartyIdentification
+ * NonFinancialInstitutionIdentification1.mmBankPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#TaxIdentificationNumber
- * NonFinancialInstitutionIdentification1.TaxIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmTaxIdentificationNumber
+ * NonFinancialInstitutionIdentification1.mmTaxIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#ProprietaryIdentification
- * NonFinancialInstitutionIdentification1.ProprietaryIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmProprietaryIdentification
+ * NonFinancialInstitutionIdentification1.mmProprietaryIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,8 +67,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -84,6 +84,7 @@ import java.util.function.Supplier;
 public class NonFinancialInstitutionIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BEIIdentifier bEI;
 	/**
 	 * Code allocated to a non-financial institution by the ISO 9362
 	 * Registration Authority as described in ISO 9362
@@ -100,8 +101,8 @@ public class NonFinancialInstitutionIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICNonFI
-	 * OrganisationIdentification.BICNonFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICNonFI
+	 * OrganisationIdentification.mmBICNonFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -122,20 +123,21 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBEI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICNonFI;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICNonFI;
 			isDerived = false;
 			xmlTag = "BEI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BEI";
 			definition = "Code allocated to a non-financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BEIIdentifier.mmObject();
 		}
 	};
+	protected EANGLNIdentifier eANGLN;
 	/**
 	 * Global Location Number. A non-significant reference number used to
 	 * identify legal entities, functional entities or physical entities
@@ -153,8 +155,8 @@ public class NonFinancialInstitutionIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#EANGLN
-	 * OrganisationIdentification.EANGLN}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmEANGLN
+	 * OrganisationIdentification.mmEANGLN}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -175,20 +177,21 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EANGLN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEANGLN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmEANGLN;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.EANGLN;
 			isDerived = false;
 			xmlTag = "EANGLN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EANGLN";
 			definition = "Global Location Number.  A non-significant reference number used to identify legal entities, functional entities or physical entities according to the European Association for Numbering (EAN) numbering scheme rules. The number is used to retrieve detailed information linked to it.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EANGLNIdentifier.mmObject();
 		}
 	};
+	protected CHIPSUniversalIdentifier cHIPSUniversalIdentification;
 	/**
 	 * (United States) Clearing House Interbank Payments System (CHIPS)
 	 * Universal Identification (UID) - identifies entities that own accounts at
@@ -205,8 +208,8 @@ public class NonFinancialInstitutionIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#CHIPSUniversalIdentifier
-	 * OrganisationIdentification.CHIPSUniversalIdentifier}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmCHIPSUniversalIdentifier
+	 * OrganisationIdentification.mmCHIPSUniversalIdentifier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -227,20 +230,21 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CHIPSUniversalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCHIPSUniversalIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmCHIPSUniversalIdentifier;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.CHIPSUniversalIdentifier;
 			isDerived = false;
 			xmlTag = "USCHU";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CHIPSUniversalIdentification";
 			definition = "(United States) Clearing House Interbank Payments System (CHIPS) Universal Identification (UID) - identifies entities that own accounts at CHIPS participating financial institutions, through which CHIPS payments are effected. The CHIPS UID is assigned by the New York Clearing House.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CHIPSUniversalIdentifier.mmObject();
 		}
 	};
+	protected DunsIdentifier dUNS;
 	/**
 	 * Data Universal Numbering System. A unique identification number provided
 	 * by Dun &amp; Bradstreet to identify an organization.
@@ -255,8 +259,8 @@ public class NonFinancialInstitutionIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#DUNS
-	 * OrganisationIdentification.DUNS}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmDUNS
+	 * OrganisationIdentification.mmDUNS}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -277,20 +281,21 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DUNS = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDUNS = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmDUNS;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.DUNS;
 			isDerived = false;
 			xmlTag = "DUNS";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUNS";
 			definition = "Data Universal Numbering System. A unique identification number provided by Dun & Bradstreet to identify an organization.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DunsIdentifier.mmObject();
 		}
 	};
+	protected Max35Text bankPartyIdentification;
 	/**
 	 * Unique and unambiguous assignment made by a specific bank to identify a
 	 * relationship as defined between the bank and its client.
@@ -304,8 +309,8 @@ public class NonFinancialInstitutionIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BankPartyIdentification
-	 * OrganisationIdentification.BankPartyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBankPartyIdentification
+	 * OrganisationIdentification.mmBankPartyIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -326,20 +331,21 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BankPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBankPartyIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBankPartyIdentification;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BankPartyIdentification;
 			isDerived = false;
 			xmlTag = "BkPtyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankPartyIdentification";
 			definition = "Unique and unambiguous assignment made by a specific bank to identify a relationship as defined between the bank and its client.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text taxIdentificationNumber;
 	/**
 	 * Number assigned by a tax authority to an entity.
 	 * <p>
@@ -352,8 +358,8 @@ public class NonFinancialInstitutionIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TaxIdentificationNumber
-	 * PartyIdentificationInformation.TaxIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTaxIdentificationNumber
+	 * PartyIdentificationInformation.mmTaxIdentificationNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -372,20 +378,21 @@ public class NonFinancialInstitutionIdentification1 {
 	 * definition} = "Number assigned by a tax authority to an entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.TaxIdentificationNumber;
 			isDerived = false;
 			xmlTag = "TaxIdNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GenericIdentification3 proprietaryIdentification;
 	/**
 	 * Unique and unambiguous identifier for an organisation that is allocated
 	 * by an institution.
@@ -398,8 +405,8 @@ public class NonFinancialInstitutionIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -420,31 +427,31 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier for an organisation that is allocated by an institution.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.BEI, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.EANGLN,
-						com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.CHIPSUniversalIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.DUNS,
-						com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.BankPartyIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.TaxIdentificationNumber,
-						com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.ProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmBEI, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmEANGLN,
+						com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmCHIPSUniversalIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmDUNS,
+						com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmBankPartyIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmTaxIdentificationNumber,
+						com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmProprietaryIdentification);
 				trace_lazy = () -> NonFinancialInstitution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -458,5 +465,61 @@ public class NonFinancialInstitutionIdentification1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BEIIdentifier getBEI() {
+		return bEI;
+	}
+
+	public void setBEI(BEIIdentifier bEI) {
+		this.bEI = bEI;
+	}
+
+	public EANGLNIdentifier getEANGLN() {
+		return eANGLN;
+	}
+
+	public void setEANGLN(EANGLNIdentifier eANGLN) {
+		this.eANGLN = eANGLN;
+	}
+
+	public CHIPSUniversalIdentifier getCHIPSUniversalIdentification() {
+		return cHIPSUniversalIdentification;
+	}
+
+	public void setCHIPSUniversalIdentification(CHIPSUniversalIdentifier cHIPSUniversalIdentification) {
+		this.cHIPSUniversalIdentification = cHIPSUniversalIdentification;
+	}
+
+	public DunsIdentifier getDUNS() {
+		return dUNS;
+	}
+
+	public void setDUNS(DunsIdentifier dUNS) {
+		this.dUNS = dUNS;
+	}
+
+	public Max35Text getBankPartyIdentification() {
+		return bankPartyIdentification;
+	}
+
+	public void setBankPartyIdentification(Max35Text bankPartyIdentification) {
+		this.bankPartyIdentification = bankPartyIdentification;
+	}
+
+	public Max35Text getTaxIdentificationNumber() {
+		return taxIdentificationNumber;
+	}
+
+	public void setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
+		this.taxIdentificationNumber = taxIdentificationNumber;
+	}
+
+	public GenericIdentification3 getProprietaryIdentification() {
+		return proprietaryIdentification;
+	}
+
+	public void setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification3 proprietaryIdentification) {
+		this.proprietaryIdentification = proprietaryIdentification;
 	}
 }

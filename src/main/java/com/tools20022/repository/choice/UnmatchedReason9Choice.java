@@ -34,11 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.UnmatchedReason9Choice#Code
- * UnmatchedReason9Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnmatchedReason9Choice#Proprietary
- * UnmatchedReason9Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.UnmatchedReason9Choice#mmCode
+ * UnmatchedReason9Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnmatchedReason9Choice#mmProprietary
+ * UnmatchedReason9Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnmatchedReason9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnmatchedReason5Code code;
 	/**
 	 * Specifies the reason why the instruction has an unmatched status.
 	 * <p>
@@ -90,8 +92,8 @@ public class UnmatchedReason9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#UnmatchedReason
-	 * SecuritiesTradeStatusReason.UnmatchedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmUnmatchedReason
+	 * SecuritiesTradeStatusReason.mmUnmatchedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,30 +115,31 @@ public class UnmatchedReason9Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UnmatchedReason14Choice#Code
-	 * UnmatchedReason14Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.UnmatchedReason14Choice#mmCode
+	 * UnmatchedReason14Choice.mmCode}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UnmatchedReason23Choice#Code
-	 * UnmatchedReason23Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.UnmatchedReason23Choice#mmCode
+	 * UnmatchedReason23Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> UnmatchedReason9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.UnmatchedReason;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction has an unmatched status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnmatchedReason14Choice.Code, com.tools20022.repository.choice.UnmatchedReason23Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnmatchedReason14Choice.mmCode, com.tools20022.repository.choice.UnmatchedReason23Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UnmatchedReason5Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Specifies the reason why the instruction has an unmatched status.
 	 * <p>
@@ -150,8 +153,8 @@ public class UnmatchedReason9Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#UnmatchedReason
-	 * SecuritiesTradeStatusReason.UnmatchedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatusReason#mmUnmatchedReason
+	 * SecuritiesTradeStatusReason.mmUnmatchedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -173,27 +176,27 @@ public class UnmatchedReason9Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UnmatchedReason14Choice#Proprietary
-	 * UnmatchedReason14Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.UnmatchedReason14Choice#mmProprietary
+	 * UnmatchedReason14Choice.mmProprietary}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.UnmatchedReason23Choice#Proprietary
-	 * UnmatchedReason23Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.UnmatchedReason23Choice#mmProprietary
+	 * UnmatchedReason23Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> UnmatchedReason9Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.UnmatchedReason;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the reason why the instruction has an unmatched status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnmatchedReason14Choice.Proprietary, com.tools20022.repository.choice.UnmatchedReason23Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnmatchedReason14Choice.mmProprietary, com.tools20022.repository.choice.UnmatchedReason23Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -201,16 +204,32 @@ public class UnmatchedReason9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnmatchedReason9Choice.Code, com.tools20022.repository.choice.UnmatchedReason9Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnmatchedReason9Choice.mmCode, com.tools20022.repository.choice.UnmatchedReason9Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedReason9Choice";
 				definition = "Choice of format for the settlement transaction unmatched reason.";
-				previousVersion_lazy = () -> UnmatchedReason1Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(UnmatchedReason14Choice.mmObject(), UnmatchedReason23Choice.mmObject());
+				previousVersion_lazy = () -> UnmatchedReason1Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnmatchedReason5Code getCode() {
+		return code;
+	}
+
+	public void setCode(UnmatchedReason5Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

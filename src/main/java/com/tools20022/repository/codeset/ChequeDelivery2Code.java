@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code#MailToFinalAgent
- * ChequeDelivery2Code.MailToFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code#mmMailToFinalAgent
+ * ChequeDelivery2Code.mmMailToFinalAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code#CourierToFinalAgent
- * ChequeDelivery2Code.CourierToFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code#mmCourierToFinalAgent
+ * ChequeDelivery2Code.mmCourierToFinalAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code#PickUpByFinalAgent
- * ChequeDelivery2Code.PickUpByFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code#mmPickUpByFinalAgent
+ * ChequeDelivery2Code.mmPickUpByFinalAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code#RegisteredMailToFinalAgent
- * ChequeDelivery2Code.RegisteredMailToFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code#mmRegisteredMailToFinalAgent
+ * ChequeDelivery2Code.mmRegisteredMailToFinalAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class ChequeDelivery2Code extends ChequeDeliveryCode {
 	 * name} = "MailToFinalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode MailToFinalAgent = new MMCode() {
+	public static final MMCode mmMailToFinalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailToFinalAgent";
@@ -111,7 +111,7 @@ public class ChequeDelivery2Code extends ChequeDeliveryCode {
 	 * name} = "CourierToFinalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CourierToFinalAgent = new MMCode() {
+	public static final MMCode mmCourierToFinalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourierToFinalAgent";
@@ -134,7 +134,7 @@ public class ChequeDelivery2Code extends ChequeDeliveryCode {
 	 * name} = "PickUpByFinalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode PickUpByFinalAgent = new MMCode() {
+	public static final MMCode mmPickUpByFinalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUpByFinalAgent";
@@ -157,7 +157,7 @@ public class ChequeDelivery2Code extends ChequeDeliveryCode {
 	 * name} = "RegisteredMailToFinalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode RegisteredMailToFinalAgent = new MMCode() {
+	public static final MMCode mmRegisteredMailToFinalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMailToFinalAgent";
@@ -168,13 +168,13 @@ public class ChequeDelivery2Code extends ChequeDeliveryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MLFA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChequeDelivery2Code";
 				definition = "Specifies the method to be used in delivering a cheque to a party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChequeDelivery2Code.MailToFinalAgent, com.tools20022.repository.codeset.ChequeDelivery2Code.CourierToFinalAgent,
-						com.tools20022.repository.codeset.ChequeDelivery2Code.PickUpByFinalAgent, com.tools20022.repository.codeset.ChequeDelivery2Code.RegisteredMailToFinalAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChequeDelivery2Code.mmMailToFinalAgent, com.tools20022.repository.codeset.ChequeDelivery2Code.mmCourierToFinalAgent,
+						com.tools20022.repository.codeset.ChequeDelivery2Code.mmPickUpByFinalAgent, com.tools20022.repository.codeset.ChequeDelivery2Code.mmRegisteredMailToFinalAgent);
 				trace_lazy = () -> ChequeDeliveryCode.mmObject();
 			}
 		});

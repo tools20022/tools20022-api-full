@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#UnitsPartiallySettled
- * SettledStatusReason1Code.UnitsPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#mmUnitsPartiallySettled
+ * SettledStatusReason1Code.mmUnitsPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#CashPartiallySettled
- * SettledStatusReason1Code.CashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#mmCashPartiallySettled
+ * SettledStatusReason1Code.mmCashPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#UnitsCashPartiallySettled
- * SettledStatusReason1Code.UnitsCashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#mmUnitsCashPartiallySettled
+ * SettledStatusReason1Code.mmUnitsCashPartiallySettled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	 * name} = "UnitsPartiallySettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnitsPartiallySettled = new MMCode() {
+	public static final MMCode mmUnitsPartiallySettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
@@ -107,7 +107,7 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	 * name} = "CashPartiallySettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashPartiallySettled = new MMCode() {
+	public static final MMCode mmCashPartiallySettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiallySettled";
@@ -130,7 +130,7 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	 * name} = "UnitsCashPartiallySettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnitsCashPartiallySettled = new MMCode() {
+	public static final MMCode mmUnitsCashPartiallySettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsCashPartiallySettled";
@@ -141,13 +141,13 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UPST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettledStatusReason1Code";
 				definition = "Specifies the reason for a partially settled status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettledStatusReason1Code.UnitsPartiallySettled, com.tools20022.repository.codeset.SettledStatusReason1Code.CashPartiallySettled,
-						com.tools20022.repository.codeset.SettledStatusReason1Code.UnitsCashPartiallySettled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettledStatusReason1Code.mmUnitsPartiallySettled, com.tools20022.repository.codeset.SettledStatusReason1Code.mmCashPartiallySettled,
+						com.tools20022.repository.codeset.SettledStatusReason1Code.mmUnitsCashPartiallySettled);
 				trace_lazy = () -> SettledStatusReasonCode.mmObject();
 			}
 		});

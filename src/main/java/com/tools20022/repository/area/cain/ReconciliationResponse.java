@@ -56,21 +56,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.ReconciliationResponse#Header
- * ReconciliationResponse.Header}</li>
+ * {@linkplain com.tools20022.repository.area.cain.ReconciliationResponse#mmHeader
+ * ReconciliationResponse.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.ReconciliationResponse#ReconciliationResponse
- * ReconciliationResponse.ReconciliationResponse}</li>
+ * {@linkplain com.tools20022.repository.area.cain.ReconciliationResponse#mmReconciliationResponse
+ * ReconciliationResponse.mmReconciliationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.ReconciliationResponse#SecurityTrailer
- * ReconciliationResponse.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.ReconciliationResponse#mmSecurityTrailer
+ * ReconciliationResponse.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.cain.ReconciliationResponse#identifier
- * ReconciliationResponse.identifier}</li>
+ * messageDefinitionIdentifier} = {@code cain.008.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReconciliationResponse {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header17 header;
 	/**
 	 * Information related to the protocol management.
 	 * <p>
@@ -108,17 +107,18 @@ public class ReconciliationResponse {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header17.mmObject();
 		}
 	};
+	protected AcquirerReconciliationResponse1 reconciliationResponse;
 	/**
 	 * Information related to the response to a reconciliation.
 	 * <p>
@@ -142,17 +142,18 @@ public class ReconciliationResponse {
 	 * definition} = "Information related to the response to a reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReconciliationResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReconciliationResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcncltnRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationResponse";
 			definition = "Information related to the response to a reconciliation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcquirerReconciliationResponse1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -176,42 +177,15 @@ public class ReconciliationResponse {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "cain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "cain";
-			messageFunctionality = "008";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -225,11 +199,42 @@ public class ReconciliationResponse {
 				rootElement = "Document";
 				xmlTag = "RcncltnRspn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.ReconciliationResponse.Header, com.tools20022.repository.area.cain.ReconciliationResponse.ReconciliationResponse,
-						com.tools20022.repository.area.cain.ReconciliationResponse.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.cain.ReconciliationResponse.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.ReconciliationResponse.mmHeader, com.tools20022.repository.area.cain.ReconciliationResponse.mmReconciliationResponse,
+						com.tools20022.repository.area.cain.ReconciliationResponse.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "cain";
+						messageFunctionality = "008";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header17 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header17 header) {
+		this.header = header;
+	}
+
+	public AcquirerReconciliationResponse1 getReconciliationResponse() {
+		return reconciliationResponse;
+	}
+
+	public void setReconciliationResponse(AcquirerReconciliationResponse1 reconciliationResponse) {
+		this.reconciliationResponse = reconciliationResponse;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

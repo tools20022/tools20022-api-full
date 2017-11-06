@@ -35,26 +35,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountLimits1#LimitType
- * AccountLimits1.LimitType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountLimits1#LimitAmount
- * AccountLimits1.LimitAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLimits1#mmLimitType
+ * AccountLimits1.mmLimitType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLimits1#mmLimitAmount
+ * AccountLimits1.mmLimitAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLimits1#LimitUtilisationAmount
- * AccountLimits1.LimitUtilisationAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLimits1#mmLimitUtilisationAmount
+ * AccountLimits1.mmLimitUtilisationAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLimits1#BilateralLimitCounterpartyIdentification
- * AccountLimits1.BilateralLimitCounterpartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLimits1#mmBilateralLimitCounterpartyIdentification
+ * AccountLimits1.mmBilateralLimitCounterpartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLimits1#ClearingCircuitScheme
- * AccountLimits1.ClearingCircuitScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountLimits1#mmClearingCircuitScheme
+ * AccountLimits1.mmClearingCircuitScheme}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountLimits1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text limitType;
 	/**
 	 * Defines type of funds limits.
 	 * <p>
@@ -94,7 +95,7 @@ public class AccountLimits1 {
 	 * definition} = "Defines type of funds limits."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountLimits1.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class AccountLimits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitType";
 			definition = "Defines type of funds limits.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount limitAmount;
 	/**
 	 * Amount of money of the limit.
 	 * <p>
@@ -134,7 +136,7 @@ public class AccountLimits1 {
 	 * definition} = "Amount of money of the limit. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LimitAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountLimits1.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class AccountLimits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitAmount";
 			definition = "Amount of money of the limit. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount limitUtilisationAmount;
 	/**
 	 * Amount of used funds out of defined limit.
 	 * <p>
@@ -174,7 +177,7 @@ public class AccountLimits1 {
 	 * definition} = "Amount of used funds out of defined limit. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LimitUtilisationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitUtilisationAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountLimits1.mmObject();
 			isDerived = false;
@@ -182,11 +185,12 @@ public class AccountLimits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitUtilisationAmount";
 			definition = "Amount of used funds out of defined limit. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification;
 	/**
 	 * Identification of the system member for which the limit is established.
 	 * <p>
@@ -215,7 +219,7 @@ public class AccountLimits1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountLimits1.mmObject();
 			isDerived = false;
@@ -223,12 +227,13 @@ public class AccountLimits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterpartyIdentification";
 			definition = "Identification of the system member for which the limit is established.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	protected ClearingScheme1Choice clearingCircuitScheme;
 	/**
 	 * Clearing scheme related to Registry of the Clearing Positions (RCP).
 	 * <p>
@@ -256,7 +261,7 @@ public class AccountLimits1 {
 	 * "Clearing scheme related to Registry of the Clearing Positions (RCP)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClearingCircuitScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClearingCircuitScheme = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountLimits1.mmObject();
 			isDerived = false;
@@ -264,25 +269,65 @@ public class AccountLimits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingCircuitScheme";
 			definition = "Clearing scheme related to Registry of the Clearing Positions (RCP).";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ClearingScheme1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ClearingScheme1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLimits1.LimitType, com.tools20022.repository.msg.AccountLimits1.LimitAmount,
-						com.tools20022.repository.msg.AccountLimits1.LimitUtilisationAmount, com.tools20022.repository.msg.AccountLimits1.BilateralLimitCounterpartyIdentification,
-						com.tools20022.repository.msg.AccountLimits1.ClearingCircuitScheme);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLimits1.mmLimitType, com.tools20022.repository.msg.AccountLimits1.mmLimitAmount,
+						com.tools20022.repository.msg.AccountLimits1.mmLimitUtilisationAmount, com.tools20022.repository.msg.AccountLimits1.mmBilateralLimitCounterpartyIdentification,
+						com.tools20022.repository.msg.AccountLimits1.mmClearingCircuitScheme);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLimits1";
 				definition = "Characteristics and values set for account limits.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getLimitType() {
+		return limitType;
+	}
+
+	public void setLimitType(Max35Text limitType) {
+		this.limitType = limitType;
+	}
+
+	public ActiveCurrencyAndAmount getLimitAmount() {
+		return limitAmount;
+	}
+
+	public void setLimitAmount(ActiveCurrencyAndAmount limitAmount) {
+		this.limitAmount = limitAmount;
+	}
+
+	public ActiveCurrencyAndAmount getLimitUtilisationAmount() {
+		return limitUtilisationAmount;
+	}
+
+	public void setLimitUtilisationAmount(ActiveCurrencyAndAmount limitUtilisationAmount) {
+		this.limitUtilisationAmount = limitUtilisationAmount;
+	}
+
+	public BranchAndFinancialInstitutionIdentification5 getBilateralLimitCounterpartyIdentification() {
+		return bilateralLimitCounterpartyIdentification;
+	}
+
+	public void setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification) {
+		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
+	}
+
+	public ClearingScheme1Choice getClearingCircuitScheme() {
+		return clearingCircuitScheme;
+	}
+
+	public void setClearingCircuitScheme(ClearingScheme1Choice clearingCircuitScheme) {
+		this.clearingCircuitScheme = clearingCircuitScheme;
 	}
 }

@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EnvironmentalCommodityEmission1#BaseProduct
- * EnvironmentalCommodityEmission1.BaseProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.EnvironmentalCommodityEmission1#mmBaseProduct
+ * EnvironmentalCommodityEmission1.mmBaseProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EnvironmentalCommodityEmission1#SubProduct
- * EnvironmentalCommodityEmission1.SubProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.EnvironmentalCommodityEmission1#mmSubProduct
+ * EnvironmentalCommodityEmission1.mmSubProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EnvironmentalCommodityEmission1#AdditionalSubProduct
- * EnvironmentalCommodityEmission1.AdditionalSubProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.EnvironmentalCommodityEmission1#mmAdditionalSubProduct
+ * EnvironmentalCommodityEmission1.mmAdditionalSubProduct}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EnvironmentalCommodityEmission1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssetClassProductType3Code baseProduct;
 	/**
 	 * Base product for the underlying asset class as specified in the
 	 * classification of commodities derivatives table.
@@ -97,7 +98,7 @@ public class EnvironmentalCommodityEmission1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EnvironmentalCommodityEmission1.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class EnvironmentalCommodityEmission1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseProduct";
 			definition = "Base product for the underlying asset class as specified in the classification of commodities derivatives table.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType3Code.mmObject();
 		}
 	};
+	protected AssetClassSubProductType10Code subProduct;
 	/**
 	 * Sub-product for the underlying asset class.
 	 * <p>
@@ -138,7 +140,7 @@ public class EnvironmentalCommodityEmission1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EnvironmentalCommodityEmission1.mmObject();
 			isDerived = false;
@@ -146,11 +148,12 @@ public class EnvironmentalCommodityEmission1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubProduct";
 			definition = "Sub-product for the underlying asset class.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType10Code.mmObject();
 		}
 	};
+	protected AssetClassDetailedSubProductType8Code additionalSubProduct;
 	/**
 	 * Further subproduct type related to instruments that have a non-financial
 	 * instrument or commodity as underlying.
@@ -182,7 +185,7 @@ public class EnvironmentalCommodityEmission1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalSubProduct = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EnvironmentalCommodityEmission1.mmObject();
 			isDerived = false;
@@ -190,8 +193,8 @@ public class EnvironmentalCommodityEmission1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalSubProduct";
 			definition = "Further subproduct type related to instruments that have a non-financial instrument or commodity as underlying.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassDetailedSubProductType8Code.mmObject();
 		}
 	};
@@ -199,14 +202,38 @@ public class EnvironmentalCommodityEmission1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnvironmentalCommodityEmission1.BaseProduct, com.tools20022.repository.msg.EnvironmentalCommodityEmission1.SubProduct,
-						com.tools20022.repository.msg.EnvironmentalCommodityEmission1.AdditionalSubProduct);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnvironmentalCommodityEmission1.mmBaseProduct, com.tools20022.repository.msg.EnvironmentalCommodityEmission1.mmSubProduct,
+						com.tools20022.repository.msg.EnvironmentalCommodityEmission1.mmAdditionalSubProduct);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EnvironmentalCommodityEmission1";
 				definition = "Defines commodity sub-product attributes of an environmental derivative of type emission.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssetClassProductType3Code getBaseProduct() {
+		return baseProduct;
+	}
+
+	public void setBaseProduct(AssetClassProductType3Code baseProduct) {
+		this.baseProduct = baseProduct;
+	}
+
+	public AssetClassSubProductType10Code getSubProduct() {
+		return subProduct;
+	}
+
+	public void setSubProduct(AssetClassSubProductType10Code subProduct) {
+		this.subProduct = subProduct;
+	}
+
+	public AssetClassDetailedSubProductType8Code getAdditionalSubProduct() {
+		return additionalSubProduct;
+	}
+
+	public void setAdditionalSubProduct(AssetClassDetailedSubProductType8Code additionalSubProduct) {
+		this.additionalSubProduct = additionalSubProduct;
 	}
 }

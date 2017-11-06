@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingCancellationReason1Code#Quorum
- * MeetingCancellationReason1Code.Quorum}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingCancellationReason1Code#mmQuorum
+ * MeetingCancellationReason1Code.mmQuorum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingCancellationReason1Code#Processing
- * MeetingCancellationReason1Code.Processing}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingCancellationReason1Code#mmProcessing
+ * MeetingCancellationReason1Code.mmProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingCancellationReason1Code#Other
- * MeetingCancellationReason1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingCancellationReason1Code#mmOther
+ * MeetingCancellationReason1Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class MeetingCancellationReason1Code extends MeetingCancellationReasonCod
 	 * name} = "Quorum"</li>
 	 * </ul>
 	 */
-	public static final MMCode Quorum = new MMCode() {
+	public static final MMCode mmQuorum = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quorum";
@@ -107,7 +107,7 @@ public class MeetingCancellationReason1Code extends MeetingCancellationReasonCod
 	 * name} = "Processing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Processing = new MMCode() {
+	public static final MMCode mmProcessing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processing";
@@ -130,7 +130,7 @@ public class MeetingCancellationReason1Code extends MeetingCancellationReasonCod
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -141,13 +141,13 @@ public class MeetingCancellationReason1Code extends MeetingCancellationReasonCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("QORM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MeetingCancellationReason1Code";
 				definition = "Specifies the reason for cancelling a meeting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingCancellationReason1Code.Quorum, com.tools20022.repository.codeset.MeetingCancellationReason1Code.Processing,
-						com.tools20022.repository.codeset.MeetingCancellationReason1Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingCancellationReason1Code.mmQuorum, com.tools20022.repository.codeset.MeetingCancellationReason1Code.mmProcessing,
+						com.tools20022.repository.codeset.MeetingCancellationReason1Code.mmOther);
 				trace_lazy = () -> MeetingCancellationReasonCode.mmObject();
 			}
 		});

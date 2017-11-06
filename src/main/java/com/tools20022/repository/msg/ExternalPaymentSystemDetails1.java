@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about external payment system.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExternalPaymentSystemDetails1#ClearingPositionsRegisterAllowedIndicator
- * ExternalPaymentSystemDetails1.ClearingPositionsRegisterAllowedIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ExternalPaymentSystemDetails1#mmClearingPositionsRegisterAllowedIndicator
+ * ExternalPaymentSystemDetails1.mmClearingPositionsRegisterAllowedIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ExternalPaymentSystemDetails1#ClearingCircuits
- * ExternalPaymentSystemDetails1.ClearingCircuits}</li>
+ * {@linkplain com.tools20022.repository.msg.ExternalPaymentSystemDetails1#mmClearingCircuits
+ * ExternalPaymentSystemDetails1.mmClearingCircuits}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExternalPaymentSystemDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator clearingPositionsRegisterAllowedIndicator;
 	/**
 	 * Indicates whether the participant can send Register of Clearing
 	 * Positions.
@@ -90,7 +92,7 @@ public class ExternalPaymentSystemDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingPositionsRegisterAllowedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingPositionsRegisterAllowedIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ExternalPaymentSystemDetails1.mmObject();
 			isDerived = false;
@@ -98,11 +100,12 @@ public class ExternalPaymentSystemDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingPositionsRegisterAllowedIndicator";
 			definition = "Indicates whether the participant can send Register  of Clearing Positions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ClearingCircuits1> clearingCircuits;
 	/**
 	 * List of the clearing schemes.
 	 * <p>
@@ -129,7 +132,7 @@ public class ExternalPaymentSystemDetails1 {
 	 * definition} = "List of the clearing schemes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClearingCircuits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClearingCircuits = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ExternalPaymentSystemDetails1.mmObject();
 			isDerived = false;
@@ -138,21 +141,38 @@ public class ExternalPaymentSystemDetails1 {
 			name = "ClearingCircuits";
 			definition = "List of the clearing schemes.";
 			minOccurs = 1;
-			type_lazy = () -> ClearingCircuits1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ClearingCircuits1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExternalPaymentSystemDetails1.ClearingPositionsRegisterAllowedIndicator, com.tools20022.repository.msg.ExternalPaymentSystemDetails1.ClearingCircuits);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExternalPaymentSystemDetails1.mmClearingPositionsRegisterAllowedIndicator,
+						com.tools20022.repository.msg.ExternalPaymentSystemDetails1.mmClearingCircuits);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExternalPaymentSystemDetails1";
 				definition = "Information about external payment system.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getClearingPositionsRegisterAllowedIndicator() {
+		return clearingPositionsRegisterAllowedIndicator;
+	}
+
+	public void setClearingPositionsRegisterAllowedIndicator(YesNoIndicator clearingPositionsRegisterAllowedIndicator) {
+		this.clearingPositionsRegisterAllowedIndicator = clearingPositionsRegisterAllowedIndicator;
+	}
+
+	public List<ClearingCircuits1> getClearingCircuits() {
+		return clearingCircuits;
+	}
+
+	public void setClearingCircuits(List<com.tools20022.repository.msg.ClearingCircuits1> clearingCircuits) {
+		this.clearingCircuits = clearingCircuits;
 	}
 }

@@ -32,10 +32,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceType1#BalanceFrom
- * IntraBalanceType1.BalanceFrom}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceType1#BalanceTo
- * IntraBalanceType1.BalanceTo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceType1#mmBalanceFrom
+ * IntraBalanceType1.mmBalanceFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceType1#mmBalanceTo
+ * IntraBalanceType1.mmBalanceTo}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +44,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalanceType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom;
 	/**
 	 * Balance from which the amount of money is moved.
 	 * <p>
@@ -71,8 +73,8 @@ public class IntraBalanceType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CashBalance
-	 * CashEntry.CashBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCashBalance
+	 * CashEntry.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -91,21 +93,22 @@ public class IntraBalanceType1 {
 	 * definition} = "Balance from which the amount of money is moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashBalance;
 			componentContext_lazy = () -> IntraBalanceType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CashBalance;
 			isDerived = false;
 			xmlTag = "BalFr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the amount of money is moved.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
 		}
 	};
+	protected CashSubBalanceTypeAndQuantityBreakdown1 balanceTo;
 	/**
 	 * Balance to which the amount of money is moved.
 	 * <p>
@@ -118,8 +121,8 @@ public class IntraBalanceType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CashBalance
-	 * CashEntry.CashBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCashBalance
+	 * CashEntry.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,33 +141,49 @@ public class IntraBalanceType1 {
 	 * definition} = "Balance to which the amount of money is moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashBalance;
 			componentContext_lazy = () -> IntraBalanceType1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CashBalance;
 			isDerived = false;
 			xmlTag = "BalTo";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the amount of money is moved.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceType1.BalanceFrom, com.tools20022.repository.msg.IntraBalanceType1.BalanceTo);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceType1.mmBalanceFrom, com.tools20022.repository.msg.IntraBalanceType1.mmBalanceTo);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceType1";
 				definition = "Intra-balance type used to specify pairs of from/to balances.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
+		return balanceFrom;
+	}
+
+	public void setBalanceFrom(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
+		this.balanceFrom = balanceFrom;
+	}
+
+	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
+		return balanceTo;
+	}
+
+	public void setBalanceTo(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1 balanceTo) {
+		this.balanceTo = balanceTo;
 	}
 }

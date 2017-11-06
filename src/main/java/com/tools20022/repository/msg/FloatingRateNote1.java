@@ -38,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FloatingRateNote1#ReferenceRateIndex
- * FloatingRateNote1.ReferenceRateIndex}</li>
+ * {@linkplain com.tools20022.repository.msg.FloatingRateNote1#mmReferenceRateIndex
+ * FloatingRateNote1.mmReferenceRateIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FloatingRateNote1#BasisPointSpread
- * FloatingRateNote1.BasisPointSpread}</li>
+ * {@linkplain com.tools20022.repository.msg.FloatingRateNote1#mmBasisPointSpread
+ * FloatingRateNote1.mmBasisPointSpread}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FloatingRateNote1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINIdentifier referenceRateIndex;
 	/**
 	 * Underlying reference rate on the basis on which the periodic interest
 	 * payments are calculated.
@@ -89,8 +90,8 @@ public class FloatingRateNote1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Index#Identification
-	 * Index.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Index#mmIdentification
+	 * Index.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,27 +114,28 @@ public class FloatingRateNote1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FloatingRateNote2#ReferenceRateIndex
-	 * FloatingRateNote2.ReferenceRateIndex}</li>
+	 * {@linkplain com.tools20022.repository.msg.FloatingRateNote2#mmReferenceRateIndex
+	 * FloatingRateNote2.mmReferenceRateIndex}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceRateIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceRateIndex = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIdentification;
 			componentContext_lazy = () -> FloatingRateNote1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.Identification;
 			isDerived = false;
 			xmlTag = "RefRateIndx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRateIndex";
 			definition = "Underlying reference rate on the basis on which the periodic interest payments are calculated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingRateNote2.ReferenceRateIndex);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingRateNote2.mmReferenceRateIndex);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	protected Number basisPointSpread;
 	/**
 	 * Number of basis points added to (if positive) or deducted from (if
 	 * negative) the underlying reference rate to calculate the actual interest
@@ -152,8 +154,8 @@ public class FloatingRateNote1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Spread#BasisPointSpread
-	 * Spread.BasisPointSpread}</li>
+	 * {@linkplain com.tools20022.repository.entity.Spread#mmBasisPointSpread
+	 * Spread.mmBasisPointSpread}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,24 +178,24 @@ public class FloatingRateNote1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FloatingRateNote2#BasisPointSpread
-	 * FloatingRateNote2.BasisPointSpread}</li>
+	 * {@linkplain com.tools20022.repository.msg.FloatingRateNote2#mmBasisPointSpread
+	 * FloatingRateNote2.mmBasisPointSpread}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BasisPointSpread = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasisPointSpread = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmBasisPointSpread;
 			componentContext_lazy = () -> FloatingRateNote1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.BasisPointSpread;
 			isDerived = false;
 			xmlTag = "BsisPtSprd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisPointSpread";
 			definition = "Number of basis points added to (if positive) or deducted from (if negative) the underlying reference rate to calculate the actual interest rate applicable for a given period at issuance of the floating rate instrument.\r\n\r\nUsed to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingRateNote2.BasisPointSpread);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingRateNote2.mmBasisPointSpread);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -201,9 +203,9 @@ public class FloatingRateNote1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingRateNote1.ReferenceRateIndex, com.tools20022.repository.msg.FloatingRateNote1.BasisPointSpread);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingRateNote1.mmReferenceRateIndex, com.tools20022.repository.msg.FloatingRateNote1.mmBasisPointSpread);
 				trace_lazy = () -> VariableInterest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FloatingRateNote1";
 				definition = "Provides the details of a debt instrument in which the periodic interest payments are calculated on the basis of the value (that is, fixing of an underlying reference rate such as the Euribor) on predefined dates (that is, fixing dates) and which has a maturity of no more than one year.";
@@ -211,5 +213,21 @@ public class FloatingRateNote1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINIdentifier getReferenceRateIndex() {
+		return referenceRateIndex;
+	}
+
+	public void setReferenceRateIndex(ISINIdentifier referenceRateIndex) {
+		this.referenceRateIndex = referenceRateIndex;
+	}
+
+	public Number getBasisPointSpread() {
+		return basisPointSpread;
+	}
+
+	public void setBasisPointSpread(Number basisPointSpread) {
+		this.basisPointSpread = basisPointSpread;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code#ExCoupon
- * TradeTransactionCondition5Code.ExCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code#mmExCoupon
+ * TradeTransactionCondition5Code.mmExCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code#CumCoupon
- * TradeTransactionCondition5Code.CumCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code#mmCumCoupon
+ * TradeTransactionCondition5Code.mmCumCoupon}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,7 +77,7 @@ public class TradeTransactionCondition5Code extends TradeTransactionConditionCod
 	 * name} = "ExCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExCoupon = new MMCode() {
+	public static final MMCode mmExCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExCoupon";
@@ -100,7 +100,7 @@ public class TradeTransactionCondition5Code extends TradeTransactionConditionCod
 	 * name} = "CumCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode CumCoupon = new MMCode() {
+	public static final MMCode mmCumCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumCoupon";
@@ -111,11 +111,11 @@ public class TradeTransactionCondition5Code extends TradeTransactionConditionCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeTransactionCondition5Code";
 				definition = "Specifies the conditions under which the order/trade is to be/was executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionCondition5Code.ExCoupon, com.tools20022.repository.codeset.TradeTransactionCondition5Code.CumCoupon);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionCondition5Code.mmExCoupon, com.tools20022.repository.codeset.TradeTransactionCondition5Code.mmCumCoupon);
 				trace_lazy = () -> TradeTransactionConditionCode.mmObject();
 			}
 		});

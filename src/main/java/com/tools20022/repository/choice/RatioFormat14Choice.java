@@ -43,27 +43,27 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#QuantityToQuantity
- * RatioFormat14Choice.QuantityToQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#mmQuantityToQuantity
+ * RatioFormat14Choice.mmQuantityToQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#NotSpecifiedRate
- * RatioFormat14Choice.NotSpecifiedRate}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#mmNotSpecifiedRate
+ * RatioFormat14Choice.mmNotSpecifiedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#AmountToAmount
- * RatioFormat14Choice.AmountToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#mmAmountToAmount
+ * RatioFormat14Choice.mmAmountToAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#AmountToQuantity
- * RatioFormat14Choice.AmountToQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#mmAmountToQuantity
+ * RatioFormat14Choice.mmAmountToQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#QuantityToAmount
- * RatioFormat14Choice.QuantityToAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.RatioFormat14Choice#mmQuantityToAmount
+ * RatioFormat14Choice.mmQuantityToAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -78,6 +78,7 @@ import java.util.function.Supplier;
 public class RatioFormat14Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuantityToQuantityRatio2 quantityToQuantity;
 	/**
 	 * Ratio expressed as a quotient of quantities.
 	 * <p>
@@ -110,21 +111,22 @@ public class RatioFormat14Choice {
 	 * definition} = "Ratio expressed as a quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityToQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RatioFormat14Choice.mmObject();
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
+			componentContext_lazy = () -> RatioFormat14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToQuantity";
 			definition = "Ratio expressed as a quotient of quantities.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> QuantityToQuantityRatio2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> QuantityToQuantityRatio2.mmObject();
 		}
 	};
+	protected RateValueType7Code notSpecifiedRate;
 	/**
 	 * Value of the ratio not specified.
 	 * <p>
@@ -153,7 +155,7 @@ public class RatioFormat14Choice {
 	 * definition} = "Value of the ratio not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RatioFormat14Choice.mmObject();
 			isDerived = false;
@@ -161,11 +163,12 @@ public class RatioFormat14Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the ratio not specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
 		}
 	};
+	protected AmountToAmountRatio3 amountToAmount;
 	/**
 	 * Ratio expressed as a quotient of amounts.
 	 * <p>
@@ -196,21 +199,22 @@ public class RatioFormat14Choice {
 	 * definition} = "Ratio expressed as a quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountToAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RatioFormat14Choice.mmObject();
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
+			componentContext_lazy = () -> RatioFormat14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToAmount";
 			definition = "Ratio expressed as a quotient of amounts.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountToAmountRatio3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountToAmountRatio3.mmObject();
 		}
 	};
+	protected AmountAndQuantityRatio3 amountToQuantity;
 	/**
 	 * Ratio expressed as an amount to quantity ratio.
 	 * <p>
@@ -243,21 +247,22 @@ public class RatioFormat14Choice {
 	 * definition} = "Ratio expressed as an amount to quantity ratio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountToQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RatioFormat14Choice.mmObject();
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
+			componentContext_lazy = () -> RatioFormat14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToQuantity";
 			definition = "Ratio expressed as an amount to quantity ratio.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndQuantityRatio3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountAndQuantityRatio3.mmObject();
 		}
 	};
+	protected AmountAndQuantityRatio3 quantityToAmount;
 	/**
 	 * Ratio expressed as a quantity to amount ratio.
 	 * <p>
@@ -290,28 +295,30 @@ public class RatioFormat14Choice {
 	 * definition} = "Ratio expressed as a quantity to amount ratio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd QuantityToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmQuantityToAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RatioFormat14Choice.mmObject();
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
+			componentContext_lazy = () -> RatioFormat14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToAmount";
 			definition = "Ratio expressed as a quantity to amount ratio.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountAndQuantityRatio3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountAndQuantityRatio3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat14Choice.QuantityToQuantity, com.tools20022.repository.choice.RatioFormat14Choice.NotSpecifiedRate,
-						com.tools20022.repository.choice.RatioFormat14Choice.AmountToAmount, com.tools20022.repository.choice.RatioFormat14Choice.AmountToQuantity, com.tools20022.repository.choice.RatioFormat14Choice.QuantityToAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.choice.RatioFormat14Choice.mmQuantityToQuantity, com.tools20022.repository.choice.RatioFormat14Choice.mmNotSpecifiedRate,
+								com.tools20022.repository.choice.RatioFormat14Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat14Choice.mmAmountToQuantity,
+								com.tools20022.repository.choice.RatioFormat14Choice.mmQuantityToAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -325,5 +332,45 @@ public class RatioFormat14Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuantityToQuantityRatio2 getQuantityToQuantity() {
+		return quantityToQuantity;
+	}
+
+	public void setQuantityToQuantity(QuantityToQuantityRatio2 quantityToQuantity) {
+		this.quantityToQuantity = quantityToQuantity;
+	}
+
+	public RateValueType7Code getNotSpecifiedRate() {
+		return notSpecifiedRate;
+	}
+
+	public void setNotSpecifiedRate(RateValueType7Code notSpecifiedRate) {
+		this.notSpecifiedRate = notSpecifiedRate;
+	}
+
+	public AmountToAmountRatio3 getAmountToAmount() {
+		return amountToAmount;
+	}
+
+	public void setAmountToAmount(AmountToAmountRatio3 amountToAmount) {
+		this.amountToAmount = amountToAmount;
+	}
+
+	public AmountAndQuantityRatio3 getAmountToQuantity() {
+		return amountToQuantity;
+	}
+
+	public void setAmountToQuantity(AmountAndQuantityRatio3 amountToQuantity) {
+		this.amountToQuantity = amountToQuantity;
+	}
+
+	public AmountAndQuantityRatio3 getQuantityToAmount() {
+		return quantityToAmount;
+	}
+
+	public void setQuantityToAmount(AmountAndQuantityRatio3 quantityToAmount) {
+		this.quantityToAmount = quantityToAmount;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Describes the error that is the cause of the rejection.
@@ -36,16 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationResult3#SequenceNumber
- * ValidationResult3.SequenceNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationResult3#mmSequenceNumber
+ * ValidationResult3.mmSequenceNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationResult3#RuleIdentification
- * ValidationResult3.RuleIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationResult3#mmRuleIdentification
+ * ValidationResult3.mmRuleIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValidationResult3#RuleDescription
- * ValidationResult3.RuleDescription}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ValidationResult3#Element
- * ValidationResult3.Element}</li>
+ * {@linkplain com.tools20022.repository.msg.ValidationResult3#mmRuleDescription
+ * ValidationResult3.mmRuleDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ValidationResult3#mmElement
+ * ValidationResult3.mmElement}</li>
  * </ul>
  * </li>
  * <li>
@@ -53,15 +54,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#ErrorDescription
- * ErrorReportV03.ErrorDescription}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmErrorDescription
+ * ErrorReportV03.mmErrorDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ValidationResult3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number sequenceNumber;
 	/**
 	 * Sequential number assigned to the error.
 	 * <p>
@@ -102,7 +104,7 @@ public class ValidationResult3 {
 	 * definition} = "Sequential number assigned to the error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValidationResult3.mmObject();
 			isDerived = false;
@@ -110,11 +112,12 @@ public class ValidationResult3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Sequential number assigned to the error.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max35Text ruleIdentification;
 	/**
 	 * Coded identification of the rule that is violated by the rejected
 	 * message.
@@ -145,7 +148,7 @@ public class ValidationResult3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RuleIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRuleIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValidationResult3.mmObject();
 			isDerived = false;
@@ -153,11 +156,12 @@ public class ValidationResult3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RuleIdentification";
 			definition = "Coded identification of the rule that is violated by the rejected message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max350Text ruleDescription;
 	/**
 	 * Detailed description of the rule.
 	 * <p>
@@ -185,7 +189,7 @@ public class ValidationResult3 {
 	 * definition} = "Detailed description of the rule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RuleDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRuleDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValidationResult3.mmObject();
 			isDerived = false;
@@ -193,11 +197,12 @@ public class ValidationResult3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RuleDescription";
 			definition = "Detailed description of the rule.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ElementIdentification3> element;
 	/**
 	 * Description of the elements that violated the rule.
 	 * <p>
@@ -224,7 +229,7 @@ public class ValidationResult3 {
 	 * definition} = "Description of the elements that violated the rule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Element = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmElement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ValidationResult3.mmObject();
 			isDerived = false;
@@ -233,23 +238,55 @@ public class ValidationResult3 {
 			name = "Element";
 			definition = "Description of the elements that violated the rule.";
 			minOccurs = 0;
-			type_lazy = () -> ElementIdentification3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ElementIdentification3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValidationResult3.SequenceNumber, com.tools20022.repository.msg.ValidationResult3.RuleIdentification,
-						com.tools20022.repository.msg.ValidationResult3.RuleDescription, com.tools20022.repository.msg.ValidationResult3.Element);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ErrorReportV03.ErrorDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValidationResult3.mmSequenceNumber, com.tools20022.repository.msg.ValidationResult3.mmRuleIdentification,
+						com.tools20022.repository.msg.ValidationResult3.mmRuleDescription, com.tools20022.repository.msg.ValidationResult3.mmElement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ErrorReportV03.mmErrorDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ValidationResult3";
 				definition = "Describes the error that is the cause of the rejection.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getSequenceNumber() {
+		return sequenceNumber;
+	}
+
+	public void setSequenceNumber(Number sequenceNumber) {
+		this.sequenceNumber = sequenceNumber;
+	}
+
+	public Max35Text getRuleIdentification() {
+		return ruleIdentification;
+	}
+
+	public void setRuleIdentification(Max35Text ruleIdentification) {
+		this.ruleIdentification = ruleIdentification;
+	}
+
+	public Max350Text getRuleDescription() {
+		return ruleDescription;
+	}
+
+	public void setRuleDescription(Max350Text ruleDescription) {
+		this.ruleDescription = ruleDescription;
+	}
+
+	public List<ElementIdentification3> getElement() {
+		return element;
+	}
+
+	public void setElement(List<com.tools20022.repository.msg.ElementIdentification3> element) {
+		this.element = element;
 	}
 }

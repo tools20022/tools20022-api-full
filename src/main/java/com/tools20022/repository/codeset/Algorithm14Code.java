@@ -33,20 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#SHA256WithRSA
- * Algorithm14Code.SHA256WithRSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#mmSHA256WithRSA
+ * Algorithm14Code.mmSHA256WithRSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#SHA1WithRSA
- * Algorithm14Code.SHA1WithRSA}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm14Code#RSASSAPSS
- * Algorithm14Code.RSASSAPSS}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#mmSHA1WithRSA
+ * Algorithm14Code.mmSHA1WithRSA}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#mmRSASSAPSS
+ * Algorithm14Code.mmRSASSAPSS}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,15 +87,15 @@ public class Algorithm14Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm4Code#SHA256WithRSA
-	 * Algorithm4Code.SHA256WithRSA}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm4Code#mmSHA256WithRSA
+	 * Algorithm4Code.mmSHA256WithRSA}</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA256WithRSA = new MMCode() {
+	public static final MMCode mmSHA256WithRSA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256WithRSA";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm4Code.SHA256WithRSA;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm4Code.mmSHA256WithRSA;
 			owner_lazy = () -> Algorithm14Code.mmObject();
 		}
 	};
@@ -114,7 +115,7 @@ public class Algorithm14Code extends AlgorithmCode {
 	 * name} = "SHA1WithRSA"</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA1WithRSA = new MMCode() {
+	public static final MMCode mmSHA1WithRSA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA1WithRSA";
@@ -137,7 +138,7 @@ public class Algorithm14Code extends AlgorithmCode {
 	 * name} = "RSASSA-PSS"</li>
 	 * </ul>
 	 */
-	public static final MMCode RSASSAPSS = new MMCode() {
+	public static final MMCode mmRSASSAPSS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSASSA-PSS";
@@ -148,13 +149,14 @@ public class Algorithm14Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ERS2");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Algorithm14Code";
 				definition = "Cryptographic algorithms for digital signatures.";
 				previousVersion_lazy = () -> Algorithm4Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm14Code.SHA256WithRSA, com.tools20022.repository.codeset.Algorithm14Code.SHA1WithRSA, com.tools20022.repository.codeset.Algorithm14Code.RSASSAPSS);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm14Code.mmSHA256WithRSA, com.tools20022.repository.codeset.Algorithm14Code.mmSHA1WithRSA,
+						com.tools20022.repository.codeset.Algorithm14Code.mmRSASSAPSS);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

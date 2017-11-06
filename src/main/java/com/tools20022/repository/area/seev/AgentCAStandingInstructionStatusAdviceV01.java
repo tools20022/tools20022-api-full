@@ -62,14 +62,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#StandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmStandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule
  * AgentCAStandingInstructionStatusAdviceV01.
- * StandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule
+ * mmStandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#StandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmStandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule
  * AgentCAStandingInstructionStatusAdviceV01.
- * StandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule
+ * mmStandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule
  * }</li>
  * </ul>
  * </li>
@@ -80,34 +80,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#Identification
- * AgentCAStandingInstructionStatusAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmIdentification
+ * AgentCAStandingInstructionStatusAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#AgentCAStandingInstructionRequestIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmAgentCAStandingInstructionRequestIdentification
  * AgentCAStandingInstructionStatusAdviceV01.
- * AgentCAStandingInstructionRequestIdentification}</li>
+ * mmAgentCAStandingInstructionRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#AgentCAStandingInstructionCancellationRequestIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmAgentCAStandingInstructionCancellationRequestIdentification
  * AgentCAStandingInstructionStatusAdviceV01.
- * AgentCAStandingInstructionCancellationRequestIdentification}</li>
+ * mmAgentCAStandingInstructionCancellationRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#StandingInstructionGeneralInformation
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmStandingInstructionGeneralInformation
  * AgentCAStandingInstructionStatusAdviceV01.
- * StandingInstructionGeneralInformation}</li>
+ * mmStandingInstructionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#StandingInstructionRequestStatus
- * AgentCAStandingInstructionStatusAdviceV01.StandingInstructionRequestStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmStandingInstructionRequestStatus
+ * AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatus}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#StandingInstructionCancellationRequestStatus
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmStandingInstructionCancellationRequestStatus
  * AgentCAStandingInstructionStatusAdviceV01.
- * StandingInstructionCancellationRequestStatus}</li>
+ * mmStandingInstructionCancellationRequestStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#identifier
- * AgentCAStandingInstructionStatusAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.027.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -135,13 +134,13 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#AgentCAStandingInstructionRequestIdentification
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmAgentCAStandingInstructionRequestIdentification
 	 * AgentCAStandingInstructionStatusAdviceV01.
-	 * AgentCAStandingInstructionRequestIdentification}</li>
+	 * mmAgentCAStandingInstructionRequestIdentification}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#AgentCAStandingInstructionCancellationRequestIdentification
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmAgentCAStandingInstructionCancellationRequestIdentification
 	 * AgentCAStandingInstructionStatusAdviceV01.
-	 * AgentCAStandingInstructionCancellationRequestIdentification}</li>
+	 * mmAgentCAStandingInstructionCancellationRequestIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -163,14 +162,14 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor StandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule = new MMXor() {
+	public static final MMXor mmStandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule";
 			definition = "Either AgentCAStandingInstructionRequestIdentification or AgentCAStandingInstructionCancellationRequestIdentification must be present, but not both.";
 			messageDefinition_lazy = () -> AgentCAStandingInstructionStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.AgentCAStandingInstructionRequestIdentification,
-					com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.AgentCAStandingInstructionCancellationRequestIdentification);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionRequestIdentification,
+					com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionCancellationRequestIdentification);
 		}
 	};
 	/**
@@ -185,13 +184,13 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * impactedMessageBuildingBlocks} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#StandingInstructionRequestStatus
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmStandingInstructionRequestStatus
 	 * AgentCAStandingInstructionStatusAdviceV01.
-	 * StandingInstructionRequestStatus}</li>
+	 * mmStandingInstructionRequestStatus}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#StandingInstructionCancellationRequestStatus
+	 * {@linkplain com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01#mmStandingInstructionCancellationRequestStatus
 	 * AgentCAStandingInstructionStatusAdviceV01.
-	 * StandingInstructionCancellationRequestStatus}</li>
+	 * mmStandingInstructionCancellationRequestStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageDefinition
@@ -213,16 +212,17 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor StandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule = new MMXor() {
+	public static final MMXor mmStandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule";
 			definition = "Either StandingInstructionRequestStatus or StandingInstructionCancellationRequestStatus must be present, but not both.";
 			messageDefinition_lazy = () -> AgentCAStandingInstructionStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.StandingInstructionRequestStatus,
-					com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.StandingInstructionCancellationRequestStatus);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatus,
+					com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionCancellationRequestStatus);
 		}
 	};
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * status advice.
@@ -249,17 +249,18 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the status advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAStandingInstructionRequestIdentification;
 	/**
 	 * Identification of the linked Agent CA Standing Instruction Request for
 	 * which a status is given.
@@ -286,17 +287,18 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgentCAStandingInstructionRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgentCAStandingInstructionRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAStgInstrReqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAStandingInstructionRequestIdentification";
 			definition = "Identification of the linked Agent CA Standing Instruction Request for which a status is given.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCAStandingInstructionCancellationRequestIdentification;
 	/**
 	 * Identification of the linked Agent CA Standing Instruction Cancellation
 	 * Request for which a status is given.
@@ -323,17 +325,18 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgentCAStandingInstructionCancellationRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgentCAStandingInstructionCancellationRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAStgInstrCxlReqId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAStandingInstructionCancellationRequestIdentification";
 			definition = "Identification of the linked Agent CA Standing Instruction  Cancellation Request for which a status is given.\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected CorporateActionStandingInstructionGeneralInformation1 standingInstructionGeneralInformation;
 	/**
 	 * General information about the standing instruction.
 	 * <p>
@@ -357,17 +360,18 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * definition} = "General information about the standing instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StandingInstructionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStandingInstructionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StgInstrGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionGeneralInformation";
 			definition = "General information about the standing instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionStandingInstructionGeneralInformation1.mmObject();
 		}
 	};
+	protected StandingInstructionStatus1Choice standingInstructionRequestStatus;
 	/**
 	 * Status of the standing instruction request.
 	 * <p>
@@ -391,17 +395,18 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * definition} = "Status of the standing instruction request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StandingInstructionRequestStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStandingInstructionRequestStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StgInstrReqSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionRequestStatus";
 			definition = "Status of the standing instruction request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> StandingInstructionStatus1Choice.mmObject();
 		}
 	};
+	protected StandingInstructionCancellationStatus1Choice standingInstructionCancellationRequestStatus;
 	/**
 	 * Provides information about the status of a standing instruction
 	 * cancellation request.
@@ -428,42 +433,15 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StandingInstructionCancellationRequestStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStandingInstructionCancellationRequestStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StgInstrCxlReqSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionCancellationRequestStatus";
 			definition = "Provides information about the status of a standing instruction cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> StandingInstructionCancellationStatus1Choice.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "027"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "027";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -474,20 +452,75 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 				name = "AgentCAStandingInstructionStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to the CSD to report the status, or a change in status, of a standing instruction request or the status of a standing instruction cancellation request.\r\nUsage\r\nWhen this message is used to report the status of a standing instruction request, the building block Standing Instruction Request Identification must be present.\r\nWhen this message is used to report the status of a standing instruction cancellation request, the building block Standing Instruction Cancellation Request Identification must be present.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.StandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.StandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestIdentificationOrStandingInstructionCancellationIdentificationRule,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatusOrStandingInstructionCancellationRequestStatusRule);
 				rootElement = "Document";
 				xmlTag = "AgtCAStgInstrStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.Identification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.AgentCAStandingInstructionRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.AgentCAStandingInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.StandingInstructionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.StandingInstructionRequestStatus,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.StandingInstructionCancellationRequestStatus);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionCancellationRequestIdentification,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionRequestStatus,
+						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionCancellationRequestStatus);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "027";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public DocumentIdentification8 getAgentCAStandingInstructionRequestIdentification() {
+		return agentCAStandingInstructionRequestIdentification;
+	}
+
+	public void setAgentCAStandingInstructionRequestIdentification(DocumentIdentification8 agentCAStandingInstructionRequestIdentification) {
+		this.agentCAStandingInstructionRequestIdentification = agentCAStandingInstructionRequestIdentification;
+	}
+
+	public DocumentIdentification8 getAgentCAStandingInstructionCancellationRequestIdentification() {
+		return agentCAStandingInstructionCancellationRequestIdentification;
+	}
+
+	public void setAgentCAStandingInstructionCancellationRequestIdentification(DocumentIdentification8 agentCAStandingInstructionCancellationRequestIdentification) {
+		this.agentCAStandingInstructionCancellationRequestIdentification = agentCAStandingInstructionCancellationRequestIdentification;
+	}
+
+	public CorporateActionStandingInstructionGeneralInformation1 getStandingInstructionGeneralInformation() {
+		return standingInstructionGeneralInformation;
+	}
+
+	public void setStandingInstructionGeneralInformation(CorporateActionStandingInstructionGeneralInformation1 standingInstructionGeneralInformation) {
+		this.standingInstructionGeneralInformation = standingInstructionGeneralInformation;
+	}
+
+	public StandingInstructionStatus1Choice getStandingInstructionRequestStatus() {
+		return standingInstructionRequestStatus;
+	}
+
+	public void setStandingInstructionRequestStatus(StandingInstructionStatus1Choice standingInstructionRequestStatus) {
+		this.standingInstructionRequestStatus = standingInstructionRequestStatus;
+	}
+
+	public StandingInstructionCancellationStatus1Choice getStandingInstructionCancellationRequestStatus() {
+		return standingInstructionCancellationRequestStatus;
+	}
+
+	public void setStandingInstructionCancellationRequestStatus(StandingInstructionCancellationStatus1Choice standingInstructionCancellationRequestStatus) {
+		this.standingInstructionCancellationRequestStatus = standingInstructionCancellationRequestStatus;
 	}
 }

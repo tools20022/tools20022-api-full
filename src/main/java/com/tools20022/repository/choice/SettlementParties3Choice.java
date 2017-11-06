@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementParties3Choice#DeliveringSettlementParties
- * SettlementParties3Choice.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementParties3Choice#mmDeliveringSettlementParties
+ * SettlementParties3Choice.mmDeliveringSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementParties3Choice#ReceivingSettlementParties
- * SettlementParties3Choice.ReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementParties3Choice#mmReceivingSettlementParties
+ * SettlementParties3Choice.mmReceivingSettlementParties}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementParties3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DeliveringPartiesAndAccount10 deliveringSettlementParties;
 	/**
 	 * Chain of parties involved in the settlement of a transaction, including
 	 * receipts and deliveries, book transfers, treasury deals, or other
@@ -117,34 +118,35 @@ public class SettlementParties3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementParties5Choice#DeliveringSettlementParties
-	 * SettlementParties5Choice.DeliveringSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementParties5Choice#mmDeliveringSettlementParties
+	 * SettlementParties5Choice.mmDeliveringSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SettlementParties2Choice#DeliveringSettlementParties
-	 * SettlementParties2Choice.DeliveringSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementParties2Choice#mmDeliveringSettlementParties
+	 * SettlementParties2Choice.mmDeliveringSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementParties3Choice.mmObject();
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
+			componentContext_lazy = () -> SettlementParties3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementParties2Choice.DeliveringSettlementParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementParties5Choice.DeliveringSettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementParties5Choice.mmDeliveringSettlementParties);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementParties2Choice.mmDeliveringSettlementParties;
 			maxOccurs = 1;
-			type_lazy = () -> DeliveringPartiesAndAccount10.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DeliveringPartiesAndAccount10.mmObject();
 		}
 	};
+	protected ReceivingPartiesAndAccount10 receivingSettlementParties;
 	/**
 	 * Chain of parties involved in the settlement of a transaction, including
 	 * receipts and deliveries, book transfers, treasury deals, or other
@@ -184,48 +186,64 @@ public class SettlementParties3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SettlementParties5Choice#ReceivingSettlementParties
-	 * SettlementParties5Choice.ReceivingSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementParties5Choice#mmReceivingSettlementParties
+	 * SettlementParties5Choice.mmReceivingSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.SettlementParties2Choice#ReceivingSettlementParties
-	 * SettlementParties2Choice.ReceivingSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementParties2Choice#mmReceivingSettlementParties
+	 * SettlementParties2Choice.mmReceivingSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementParties3Choice.mmObject();
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
+			componentContext_lazy = () -> SettlementParties3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementParties2Choice.ReceivingSettlementParties;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementParties5Choice.ReceivingSettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementParties5Choice.mmReceivingSettlementParties);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementParties2Choice.mmReceivingSettlementParties;
 			maxOccurs = 1;
-			type_lazy = () -> ReceivingPartiesAndAccount10.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ReceivingPartiesAndAccount10.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementParties3Choice.DeliveringSettlementParties, com.tools20022.repository.choice.SettlementParties3Choice.ReceivingSettlementParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementParties3Choice.mmDeliveringSettlementParties, com.tools20022.repository.choice.SettlementParties3Choice.mmReceivingSettlementParties);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties3Choice";
 				definition = "Provides details on either the delivering or receiving parties.";
-				previousVersion_lazy = () -> SettlementParties2Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(SettlementParties5Choice.mmObject());
+				previousVersion_lazy = () -> SettlementParties2Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DeliveringPartiesAndAccount10 getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(DeliveringPartiesAndAccount10 deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
+	}
+
+	public ReceivingPartiesAndAccount10 getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(ReceivingPartiesAndAccount10 receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
 	}
 }

@@ -41,18 +41,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#BirthName
- * PersonName.BirthName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#NamePrefix
- * PersonName.NamePrefix}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#GivenName
- * PersonName.GivenName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#MiddleName
- * PersonName.MiddleName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#NameSuffix
- * PersonName.NameSuffix}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PersonName#Identification
- * PersonName.Identification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmBirthName
+ * PersonName.mmBirthName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmNamePrefix
+ * PersonName.mmNamePrefix}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmGivenName
+ * PersonName.mmGivenName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmMiddleName
+ * PersonName.mmMiddleName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmNameSuffix
+ * PersonName.mmNameSuffix}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PersonName#mmIdentification
+ * PersonName.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PersonIdentification#PersonName
- * PersonIdentification.PersonName}</li>
+ * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmPersonName
+ * PersonIdentification.mmPersonName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -80,8 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PersonName extends PartyName {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text birthName;
 	/**
 	 * Name received at birth, eg, maiden name.
 	 * <p>
@@ -106,89 +107,89 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson5#Name
-	 * IndividualPerson5.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson10#Name
-	 * IndividualPerson10.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson20#Name
-	 * IndividualPerson20.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson3#Name
-	 * IndividualPerson3.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson8#Name
-	 * IndividualPerson8.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson4#Name
-	 * IndividualPerson4.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#Name
-	 * IndividualPerson6.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson11#Name
-	 * IndividualPerson11.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson2#Name
-	 * IndividualPerson2.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson12#Name
-	 * IndividualPerson12.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson9#Name
-	 * IndividualPerson9.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson7#BirthName
-	 * IndividualPerson7.BirthName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson14#BirthName
-	 * IndividualPerson14.BirthName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson16#BirthName
-	 * IndividualPerson16.BirthName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson13#BirthName
-	 * IndividualPerson13.BirthName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson17#BirthName
-	 * IndividualPerson17.BirthName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson15#Name
-	 * IndividualPerson15.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson21#Name
-	 * IndividualPerson21.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson22#Name
-	 * IndividualPerson22.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson23#Name
-	 * IndividualPerson23.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson24#Name
-	 * IndividualPerson24.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson25#BirthName
-	 * IndividualPerson25.BirthName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson26#BirthName
-	 * IndividualPerson26.BirthName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson30#Name
-	 * IndividualPerson30.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson28#Name
-	 * IndividualPerson28.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson27#Name
-	 * IndividualPerson27.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonalInformation1#NameOfFather
-	 * PersonalInformation1.NameOfFather}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson29#Name
-	 * IndividualPerson29.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson32#Name
-	 * IndividualPerson32.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson31#Name
-	 * IndividualPerson31.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson33#Name
-	 * IndividualPerson33.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson35#Name
-	 * IndividualPerson35.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson34#Name
-	 * IndividualPerson34.Name}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson5#mmName
+	 * IndividualPerson5.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson10#mmName
+	 * IndividualPerson10.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson20#mmName
+	 * IndividualPerson20.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson3#mmName
+	 * IndividualPerson3.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson8#mmName
+	 * IndividualPerson8.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson4#mmName
+	 * IndividualPerson4.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson6#mmName
+	 * IndividualPerson6.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson11#mmName
+	 * IndividualPerson11.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson2#mmName
+	 * IndividualPerson2.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson12#mmName
+	 * IndividualPerson12.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson9#mmName
+	 * IndividualPerson9.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson7#mmBirthName
+	 * IndividualPerson7.mmBirthName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson14#mmBirthName
+	 * IndividualPerson14.mmBirthName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson16#mmBirthName
+	 * IndividualPerson16.mmBirthName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson13#mmBirthName
+	 * IndividualPerson13.mmBirthName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson17#mmBirthName
+	 * IndividualPerson17.mmBirthName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson15#mmName
+	 * IndividualPerson15.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson21#mmName
+	 * IndividualPerson21.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson22#mmName
+	 * IndividualPerson22.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson23#mmName
+	 * IndividualPerson23.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson24#mmName
+	 * IndividualPerson24.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson25#mmBirthName
+	 * IndividualPerson25.mmBirthName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson26#mmBirthName
+	 * IndividualPerson26.mmBirthName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson30#mmName
+	 * IndividualPerson30.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson28#mmName
+	 * IndividualPerson28.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson27#mmName
+	 * IndividualPerson27.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonalInformation1#mmNameOfFather
+	 * PersonalInformation1.mmNameOfFather}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson29#mmName
+	 * IndividualPerson29.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson32#mmName
+	 * IndividualPerson32.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson31#mmName
+	 * IndividualPerson31.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson33#mmName
+	 * IndividualPerson33.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson35#mmName
+	 * IndividualPerson35.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson34#mmName
+	 * IndividualPerson34.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -200,28 +201,30 @@ public class PersonName extends PartyName {
 	 * definition} = "Name received at birth, eg, maiden name."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BirthName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBirthName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.Name, com.tools20022.repository.msg.IndividualPerson10.Name, com.tools20022.repository.msg.IndividualPerson20.Name,
-					com.tools20022.repository.msg.IndividualPerson3.Name, com.tools20022.repository.msg.IndividualPerson8.Name, com.tools20022.repository.msg.IndividualPerson4.Name, com.tools20022.repository.msg.IndividualPerson6.Name,
-					com.tools20022.repository.msg.IndividualPerson11.Name, com.tools20022.repository.msg.IndividualPerson2.Name, com.tools20022.repository.msg.IndividualPerson12.Name, com.tools20022.repository.msg.IndividualPerson9.Name,
-					com.tools20022.repository.msg.IndividualPerson7.BirthName, com.tools20022.repository.msg.IndividualPerson14.BirthName, com.tools20022.repository.msg.IndividualPerson16.BirthName,
-					com.tools20022.repository.msg.IndividualPerson13.BirthName, com.tools20022.repository.msg.IndividualPerson17.BirthName, com.tools20022.repository.msg.IndividualPerson15.Name,
-					com.tools20022.repository.msg.IndividualPerson21.Name, com.tools20022.repository.msg.IndividualPerson22.Name, com.tools20022.repository.msg.IndividualPerson23.Name, com.tools20022.repository.msg.IndividualPerson24.Name,
-					com.tools20022.repository.msg.IndividualPerson25.BirthName, com.tools20022.repository.msg.IndividualPerson26.BirthName, com.tools20022.repository.msg.IndividualPerson30.Name,
-					com.tools20022.repository.msg.IndividualPerson28.Name, com.tools20022.repository.msg.IndividualPerson27.Name, com.tools20022.repository.msg.PersonalInformation1.NameOfFather,
-					com.tools20022.repository.msg.IndividualPerson29.Name, com.tools20022.repository.msg.IndividualPerson32.Name, com.tools20022.repository.msg.IndividualPerson31.Name, com.tools20022.repository.msg.IndividualPerson33.Name,
-					com.tools20022.repository.msg.IndividualPerson35.Name, com.tools20022.repository.msg.IndividualPerson34.Name);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.mmName, com.tools20022.repository.msg.IndividualPerson10.mmName, com.tools20022.repository.msg.IndividualPerson20.mmName,
+					com.tools20022.repository.msg.IndividualPerson3.mmName, com.tools20022.repository.msg.IndividualPerson8.mmName, com.tools20022.repository.msg.IndividualPerson4.mmName,
+					com.tools20022.repository.msg.IndividualPerson6.mmName, com.tools20022.repository.msg.IndividualPerson11.mmName, com.tools20022.repository.msg.IndividualPerson2.mmName,
+					com.tools20022.repository.msg.IndividualPerson12.mmName, com.tools20022.repository.msg.IndividualPerson9.mmName, com.tools20022.repository.msg.IndividualPerson7.mmBirthName,
+					com.tools20022.repository.msg.IndividualPerson14.mmBirthName, com.tools20022.repository.msg.IndividualPerson16.mmBirthName, com.tools20022.repository.msg.IndividualPerson13.mmBirthName,
+					com.tools20022.repository.msg.IndividualPerson17.mmBirthName, com.tools20022.repository.msg.IndividualPerson15.mmName, com.tools20022.repository.msg.IndividualPerson21.mmName,
+					com.tools20022.repository.msg.IndividualPerson22.mmName, com.tools20022.repository.msg.IndividualPerson23.mmName, com.tools20022.repository.msg.IndividualPerson24.mmName,
+					com.tools20022.repository.msg.IndividualPerson25.mmBirthName, com.tools20022.repository.msg.IndividualPerson26.mmBirthName, com.tools20022.repository.msg.IndividualPerson30.mmName,
+					com.tools20022.repository.msg.IndividualPerson28.mmName, com.tools20022.repository.msg.IndividualPerson27.mmName, com.tools20022.repository.msg.PersonalInformation1.mmNameOfFather,
+					com.tools20022.repository.msg.IndividualPerson29.mmName, com.tools20022.repository.msg.IndividualPerson32.mmName, com.tools20022.repository.msg.IndividualPerson31.mmName,
+					com.tools20022.repository.msg.IndividualPerson33.mmName, com.tools20022.repository.msg.IndividualPerson35.mmName, com.tools20022.repository.msg.IndividualPerson34.mmName);
 			elementContext_lazy = () -> PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BirthName";
 			definition = "Name received at birth, eg, maiden name.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected NamePrefix1Code namePrefix;
 	/**
 	 * Specifies the terms used to formally address a person.
 	 * <p>
@@ -232,98 +235,101 @@ public class PersonName extends PartyName {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.NamePrefix1Code
 	 * NamePrefix1Code}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#NamePrefix
-	 * IndividualPerson5.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#ExtendedNamePrefix
-	 * IndividualPerson5.ExtendedNamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#NamePrefix
-	 * IndividualPerson10.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#ExtendedNamePrefix
-	 * IndividualPerson10.ExtendedNamePrefix}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.NamePrefix1Choice#Code
-	 * NamePrefix1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.NamePrefix1Choice#Proprietary
-	 * NamePrefix1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson20#NamePrefix
-	 * IndividualPerson20.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson3#NamePrefix
-	 * IndividualPerson3.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson8#NamePrefix
-	 * IndividualPerson8.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#NamePrefix
-	 * IndividualPerson6.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#ExtendedNamePrefix
-	 * IndividualPerson6.ExtendedNamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#NamePrefix
-	 * IndividualPerson11.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#ExtendedNamePrefix
-	 * IndividualPerson11.ExtendedNamePrefix}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ContactDetails2#NamePrefix
-	 * ContactDetails2.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification2#NamePrefix
-	 * ContactIdentification2.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification1#NamePrefix
-	 * ContactIdentification1.NamePrefix}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Contacts3#NamePrefix
-	 * Contacts3.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification4#NamePrefix
-	 * ContactIdentification4.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification3#NamePrefix
-	 * ContactIdentification3.NamePrefix}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ContactDetails3#NamePrefix
-	 * ContactDetails3.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson21#NamePrefix
-	 * IndividualPerson21.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson22#NamePrefix
-	 * IndividualPerson22.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson23#NamePrefix
-	 * IndividualPerson23.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#NamePrefix
-	 * IndividualPerson24.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#NamePrefix
-	 * IndividualPerson28.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson27#NamePrefix
-	 * IndividualPerson27.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson29#NamePrefix
-	 * IndividualPerson29.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson33#NamePrefix
-	 * IndividualPerson33.NamePrefix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson34#NamePrefix
-	 * IndividualPerson34.NamePrefix}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#mmNamePrefix
+	 * IndividualPerson5.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#mmExtendedNamePrefix
+	 * IndividualPerson5.mmExtendedNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#mmNamePrefix
+	 * IndividualPerson10.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#mmExtendedNamePrefix
+	 * IndividualPerson10.mmExtendedNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.NamePrefix1Choice#mmCode
+	 * NamePrefix1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.NamePrefix1Choice#mmProprietary
+	 * NamePrefix1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson20#mmNamePrefix
+	 * IndividualPerson20.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson3#mmNamePrefix
+	 * IndividualPerson3.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson8#mmNamePrefix
+	 * IndividualPerson8.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmNamePrefix
+	 * IndividualPerson6.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmExtendedNamePrefix
+	 * IndividualPerson6.mmExtendedNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#mmNamePrefix
+	 * IndividualPerson11.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#mmExtendedNamePrefix
+	 * IndividualPerson11.mmExtendedNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails2#mmNamePrefix
+	 * ContactDetails2.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification2#mmNamePrefix
+	 * ContactIdentification2.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification1#mmNamePrefix
+	 * ContactIdentification1.mmNamePrefix}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Contacts3#mmNamePrefix
+	 * Contacts3.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification4#mmNamePrefix
+	 * ContactIdentification4.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification3#mmNamePrefix
+	 * ContactIdentification3.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactDetails3#mmNamePrefix
+	 * ContactDetails3.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson21#mmNamePrefix
+	 * IndividualPerson21.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson22#mmNamePrefix
+	 * IndividualPerson22.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson23#mmNamePrefix
+	 * IndividualPerson23.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmNamePrefix
+	 * IndividualPerson24.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#mmNamePrefix
+	 * IndividualPerson28.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson27#mmNamePrefix
+	 * IndividualPerson27.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson29#mmNamePrefix
+	 * IndividualPerson29.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson33#mmNamePrefix
+	 * IndividualPerson33.mmNamePrefix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson34#mmNamePrefix
+	 * IndividualPerson34.mmNamePrefix}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -335,28 +341,29 @@ public class PersonName extends PartyName {
 	 * definition} = "Specifies the terms used to formally address a person."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NamePrefix = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNamePrefix = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.NamePrefix, com.tools20022.repository.msg.IndividualPerson5.ExtendedNamePrefix, com.tools20022.repository.msg.IndividualPerson10.NamePrefix,
-					com.tools20022.repository.msg.IndividualPerson10.ExtendedNamePrefix, com.tools20022.repository.choice.NamePrefix1Choice.Code, com.tools20022.repository.choice.NamePrefix1Choice.Proprietary,
-					com.tools20022.repository.msg.IndividualPerson20.NamePrefix, com.tools20022.repository.msg.IndividualPerson3.NamePrefix, com.tools20022.repository.msg.IndividualPerson8.NamePrefix,
-					com.tools20022.repository.msg.IndividualPerson6.NamePrefix, com.tools20022.repository.msg.IndividualPerson6.ExtendedNamePrefix, com.tools20022.repository.msg.IndividualPerson11.NamePrefix,
-					com.tools20022.repository.msg.IndividualPerson11.ExtendedNamePrefix, com.tools20022.repository.msg.ContactDetails2.NamePrefix, com.tools20022.repository.msg.ContactIdentification2.NamePrefix,
-					com.tools20022.repository.msg.ContactIdentification1.NamePrefix, com.tools20022.repository.msg.Contacts3.NamePrefix, com.tools20022.repository.msg.ContactIdentification4.NamePrefix,
-					com.tools20022.repository.msg.ContactIdentification3.NamePrefix, com.tools20022.repository.msg.ContactDetails3.NamePrefix, com.tools20022.repository.msg.IndividualPerson21.NamePrefix,
-					com.tools20022.repository.msg.IndividualPerson22.NamePrefix, com.tools20022.repository.msg.IndividualPerson23.NamePrefix, com.tools20022.repository.msg.IndividualPerson24.NamePrefix,
-					com.tools20022.repository.msg.IndividualPerson28.NamePrefix, com.tools20022.repository.msg.IndividualPerson27.NamePrefix, com.tools20022.repository.msg.IndividualPerson29.NamePrefix,
-					com.tools20022.repository.msg.IndividualPerson33.NamePrefix, com.tools20022.repository.msg.IndividualPerson34.NamePrefix);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson5.mmExtendedNamePrefix,
+					com.tools20022.repository.msg.IndividualPerson10.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson10.mmExtendedNamePrefix, com.tools20022.repository.choice.NamePrefix1Choice.mmCode,
+					com.tools20022.repository.choice.NamePrefix1Choice.mmProprietary, com.tools20022.repository.msg.IndividualPerson20.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson3.mmNamePrefix,
+					com.tools20022.repository.msg.IndividualPerson8.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson6.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson6.mmExtendedNamePrefix,
+					com.tools20022.repository.msg.IndividualPerson11.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson11.mmExtendedNamePrefix, com.tools20022.repository.msg.ContactDetails2.mmNamePrefix,
+					com.tools20022.repository.msg.ContactIdentification2.mmNamePrefix, com.tools20022.repository.msg.ContactIdentification1.mmNamePrefix, com.tools20022.repository.msg.Contacts3.mmNamePrefix,
+					com.tools20022.repository.msg.ContactIdentification4.mmNamePrefix, com.tools20022.repository.msg.ContactIdentification3.mmNamePrefix, com.tools20022.repository.msg.ContactDetails3.mmNamePrefix,
+					com.tools20022.repository.msg.IndividualPerson21.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson22.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson23.mmNamePrefix,
+					com.tools20022.repository.msg.IndividualPerson24.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson28.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson27.mmNamePrefix,
+					com.tools20022.repository.msg.IndividualPerson29.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson33.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson34.mmNamePrefix);
 			elementContext_lazy = () -> PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NamePrefix";
 			definition = "Specifies the terms used to formally address a person.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NamePrefix1Code.mmObject();
 		}
 	};
+	protected Max35Text givenName;
 	/**
 	 * First name of a person.
 	 * <p>
@@ -366,135 +373,135 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#GivenName
-	 * IndividualPerson5.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#GivenName
-	 * IndividualPerson10.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson20#GivenName
-	 * IndividualPerson20.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson3#GivenName
-	 * IndividualPerson3.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson8#GivenName
-	 * IndividualPerson8.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson4#GivenName
-	 * IndividualPerson4.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#GivenName
-	 * IndividualPerson6.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#GivenName
-	 * IndividualPerson11.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification2#GivenName
-	 * ContactIdentification2.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification1#GivenName
-	 * ContactIdentification1.GivenName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder2#Name
-	 * Cardholder2.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder4#Name
-	 * Cardholder4.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#Name
-	 * Cardholder1.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder3#Name
-	 * Cardholder3.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson7#GivenName
-	 * IndividualPerson7.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson14#GivenName
-	 * IndividualPerson14.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson16#GivenName
-	 * IndividualPerson16.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson13#GivenName
-	 * IndividualPerson13.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson17#GivenName
-	 * IndividualPerson17.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification4#GivenName
-	 * ContactIdentification4.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ContactIdentification3#GivenName
-	 * ContactIdentification3.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson21#GivenName
-	 * IndividualPerson21.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson22#GivenName
-	 * IndividualPerson22.GivenName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder5#Name
-	 * Cardholder5.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder6#Name
-	 * Cardholder6.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson23#GivenName
-	 * IndividualPerson23.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#GivenName
-	 * IndividualPerson24.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson25#GivenName
-	 * IndividualPerson25.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson26#GivenName
-	 * IndividualPerson26.GivenName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder8#Name
-	 * Cardholder8.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder7#Name
-	 * Cardholder7.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder9#Name
-	 * Cardholder9.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification10#FirstName
-	 * PersonIdentification10.FirstName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson30#GivenName
-	 * IndividualPerson30.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#GivenName
-	 * IndividualPerson28.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson27#GivenName
-	 * IndividualPerson27.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonalInformation1#NameOfPartner
-	 * PersonalInformation1.NameOfPartner}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson29#GivenName
-	 * IndividualPerson29.GivenName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder11#Name
-	 * Cardholder11.Name}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder10#Name
-	 * Cardholder10.Name}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson33#GivenName
-	 * IndividualPerson33.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson35#GivenName
-	 * IndividualPerson35.GivenName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson34#GivenName
-	 * IndividualPerson34.GivenName}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder12#Name
-	 * Cardholder12.Name}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#mmGivenName
+	 * IndividualPerson5.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#mmGivenName
+	 * IndividualPerson10.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson20#mmGivenName
+	 * IndividualPerson20.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson3#mmGivenName
+	 * IndividualPerson3.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson8#mmGivenName
+	 * IndividualPerson8.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson4#mmGivenName
+	 * IndividualPerson4.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmGivenName
+	 * IndividualPerson6.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#mmGivenName
+	 * IndividualPerson11.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification2#mmGivenName
+	 * ContactIdentification2.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification1#mmGivenName
+	 * ContactIdentification1.mmGivenName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder2#mmName
+	 * Cardholder2.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder4#mmName
+	 * Cardholder4.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#mmName
+	 * Cardholder1.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder3#mmName
+	 * Cardholder3.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson7#mmGivenName
+	 * IndividualPerson7.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson14#mmGivenName
+	 * IndividualPerson14.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson16#mmGivenName
+	 * IndividualPerson16.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson13#mmGivenName
+	 * IndividualPerson13.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson17#mmGivenName
+	 * IndividualPerson17.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification4#mmGivenName
+	 * ContactIdentification4.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification3#mmGivenName
+	 * ContactIdentification3.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson21#mmGivenName
+	 * IndividualPerson21.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson22#mmGivenName
+	 * IndividualPerson22.mmGivenName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder5#mmName
+	 * Cardholder5.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder6#mmName
+	 * Cardholder6.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson23#mmGivenName
+	 * IndividualPerson23.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmGivenName
+	 * IndividualPerson24.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson25#mmGivenName
+	 * IndividualPerson25.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson26#mmGivenName
+	 * IndividualPerson26.mmGivenName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder8#mmName
+	 * Cardholder8.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder7#mmName
+	 * Cardholder7.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder9#mmName
+	 * Cardholder9.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification10#mmFirstName
+	 * PersonIdentification10.mmFirstName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson30#mmGivenName
+	 * IndividualPerson30.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#mmGivenName
+	 * IndividualPerson28.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson27#mmGivenName
+	 * IndividualPerson27.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonalInformation1#mmNameOfPartner
+	 * PersonalInformation1.mmNameOfPartner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson29#mmGivenName
+	 * IndividualPerson29.mmGivenName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder11#mmName
+	 * Cardholder11.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder10#mmName
+	 * Cardholder10.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson33#mmGivenName
+	 * IndividualPerson33.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson35#mmGivenName
+	 * IndividualPerson35.mmGivenName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson34#mmGivenName
+	 * IndividualPerson34.mmGivenName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder12#mmName
+	 * Cardholder12.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -506,32 +513,33 @@ public class PersonName extends PartyName {
 	 * definition} = "First name of a person."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute GivenName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmGivenName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.GivenName, com.tools20022.repository.msg.IndividualPerson10.GivenName, com.tools20022.repository.msg.IndividualPerson20.GivenName,
-					com.tools20022.repository.msg.IndividualPerson3.GivenName, com.tools20022.repository.msg.IndividualPerson8.GivenName, com.tools20022.repository.msg.IndividualPerson4.GivenName,
-					com.tools20022.repository.msg.IndividualPerson6.GivenName, com.tools20022.repository.msg.IndividualPerson11.GivenName, com.tools20022.repository.msg.ContactIdentification2.GivenName,
-					com.tools20022.repository.msg.ContactIdentification1.GivenName, com.tools20022.repository.msg.Cardholder2.Name, com.tools20022.repository.msg.Cardholder4.Name, com.tools20022.repository.msg.Cardholder1.Name,
-					com.tools20022.repository.msg.Cardholder3.Name, com.tools20022.repository.msg.IndividualPerson7.GivenName, com.tools20022.repository.msg.IndividualPerson14.GivenName,
-					com.tools20022.repository.msg.IndividualPerson16.GivenName, com.tools20022.repository.msg.IndividualPerson13.GivenName, com.tools20022.repository.msg.IndividualPerson17.GivenName,
-					com.tools20022.repository.msg.ContactIdentification4.GivenName, com.tools20022.repository.msg.ContactIdentification3.GivenName, com.tools20022.repository.msg.IndividualPerson21.GivenName,
-					com.tools20022.repository.msg.IndividualPerson22.GivenName, com.tools20022.repository.msg.Cardholder5.Name, com.tools20022.repository.msg.Cardholder6.Name, com.tools20022.repository.msg.IndividualPerson23.GivenName,
-					com.tools20022.repository.msg.IndividualPerson24.GivenName, com.tools20022.repository.msg.IndividualPerson25.GivenName, com.tools20022.repository.msg.IndividualPerson26.GivenName,
-					com.tools20022.repository.msg.Cardholder8.Name, com.tools20022.repository.msg.Cardholder7.Name, com.tools20022.repository.msg.Cardholder9.Name, com.tools20022.repository.msg.PersonIdentification10.FirstName,
-					com.tools20022.repository.msg.IndividualPerson30.GivenName, com.tools20022.repository.msg.IndividualPerson28.GivenName, com.tools20022.repository.msg.IndividualPerson27.GivenName,
-					com.tools20022.repository.msg.PersonalInformation1.NameOfPartner, com.tools20022.repository.msg.IndividualPerson29.GivenName, com.tools20022.repository.msg.Cardholder11.Name,
-					com.tools20022.repository.msg.Cardholder10.Name, com.tools20022.repository.msg.IndividualPerson33.GivenName, com.tools20022.repository.msg.IndividualPerson35.GivenName,
-					com.tools20022.repository.msg.IndividualPerson34.GivenName, com.tools20022.repository.msg.Cardholder12.Name);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.mmGivenName, com.tools20022.repository.msg.IndividualPerson10.mmGivenName, com.tools20022.repository.msg.IndividualPerson20.mmGivenName,
+					com.tools20022.repository.msg.IndividualPerson3.mmGivenName, com.tools20022.repository.msg.IndividualPerson8.mmGivenName, com.tools20022.repository.msg.IndividualPerson4.mmGivenName,
+					com.tools20022.repository.msg.IndividualPerson6.mmGivenName, com.tools20022.repository.msg.IndividualPerson11.mmGivenName, com.tools20022.repository.msg.ContactIdentification2.mmGivenName,
+					com.tools20022.repository.msg.ContactIdentification1.mmGivenName, com.tools20022.repository.msg.Cardholder2.mmName, com.tools20022.repository.msg.Cardholder4.mmName, com.tools20022.repository.msg.Cardholder1.mmName,
+					com.tools20022.repository.msg.Cardholder3.mmName, com.tools20022.repository.msg.IndividualPerson7.mmGivenName, com.tools20022.repository.msg.IndividualPerson14.mmGivenName,
+					com.tools20022.repository.msg.IndividualPerson16.mmGivenName, com.tools20022.repository.msg.IndividualPerson13.mmGivenName, com.tools20022.repository.msg.IndividualPerson17.mmGivenName,
+					com.tools20022.repository.msg.ContactIdentification4.mmGivenName, com.tools20022.repository.msg.ContactIdentification3.mmGivenName, com.tools20022.repository.msg.IndividualPerson21.mmGivenName,
+					com.tools20022.repository.msg.IndividualPerson22.mmGivenName, com.tools20022.repository.msg.Cardholder5.mmName, com.tools20022.repository.msg.Cardholder6.mmName,
+					com.tools20022.repository.msg.IndividualPerson23.mmGivenName, com.tools20022.repository.msg.IndividualPerson24.mmGivenName, com.tools20022.repository.msg.IndividualPerson25.mmGivenName,
+					com.tools20022.repository.msg.IndividualPerson26.mmGivenName, com.tools20022.repository.msg.Cardholder8.mmName, com.tools20022.repository.msg.Cardholder7.mmName, com.tools20022.repository.msg.Cardholder9.mmName,
+					com.tools20022.repository.msg.PersonIdentification10.mmFirstName, com.tools20022.repository.msg.IndividualPerson30.mmGivenName, com.tools20022.repository.msg.IndividualPerson28.mmGivenName,
+					com.tools20022.repository.msg.IndividualPerson27.mmGivenName, com.tools20022.repository.msg.PersonalInformation1.mmNameOfPartner, com.tools20022.repository.msg.IndividualPerson29.mmGivenName,
+					com.tools20022.repository.msg.Cardholder11.mmName, com.tools20022.repository.msg.Cardholder10.mmName, com.tools20022.repository.msg.IndividualPerson33.mmGivenName,
+					com.tools20022.repository.msg.IndividualPerson35.mmGivenName, com.tools20022.repository.msg.IndividualPerson34.mmGivenName, com.tools20022.repository.msg.Cardholder12.mmName);
 			elementContext_lazy = () -> PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GivenName";
 			definition = "First name of a person.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text middleName;
 	/**
 	 * Second name of a person.
 	 * <p>
@@ -541,66 +549,66 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#MiddleName
-	 * IndividualPerson5.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#MiddleName
-	 * IndividualPerson10.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson20#MiddleName
-	 * IndividualPerson20.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson4#MiddleName
-	 * IndividualPerson4.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#MiddleName
-	 * IndividualPerson6.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#MiddleName
-	 * IndividualPerson11.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson21#MiddleName
-	 * IndividualPerson21.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson22#MiddleName
-	 * IndividualPerson22.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson23#MiddleName
-	 * IndividualPerson23.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#MiddleName
-	 * IndividualPerson24.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson30#MiddleName
-	 * IndividualPerson30.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#MiddleName
-	 * IndividualPerson28.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson27#MiddleName
-	 * IndividualPerson27.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson29#MiddleName
-	 * IndividualPerson29.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson33#MiddleName
-	 * IndividualPerson33.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson35#MiddleName
-	 * IndividualPerson35.MiddleName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson34#MiddleName
-	 * IndividualPerson34.MiddleName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#mmMiddleName
+	 * IndividualPerson5.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#mmMiddleName
+	 * IndividualPerson10.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson20#mmMiddleName
+	 * IndividualPerson20.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson4#mmMiddleName
+	 * IndividualPerson4.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmMiddleName
+	 * IndividualPerson6.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#mmMiddleName
+	 * IndividualPerson11.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson21#mmMiddleName
+	 * IndividualPerson21.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson22#mmMiddleName
+	 * IndividualPerson22.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson23#mmMiddleName
+	 * IndividualPerson23.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmMiddleName
+	 * IndividualPerson24.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson30#mmMiddleName
+	 * IndividualPerson30.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#mmMiddleName
+	 * IndividualPerson28.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson27#mmMiddleName
+	 * IndividualPerson27.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson29#mmMiddleName
+	 * IndividualPerson29.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson33#mmMiddleName
+	 * IndividualPerson33.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson35#mmMiddleName
+	 * IndividualPerson35.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson34#mmMiddleName
+	 * IndividualPerson34.mmMiddleName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -612,24 +620,25 @@ public class PersonName extends PartyName {
 	 * definition} = "Second name of a person."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MiddleName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMiddleName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.MiddleName, com.tools20022.repository.msg.IndividualPerson10.MiddleName, com.tools20022.repository.msg.IndividualPerson20.MiddleName,
-					com.tools20022.repository.msg.IndividualPerson4.MiddleName, com.tools20022.repository.msg.IndividualPerson6.MiddleName, com.tools20022.repository.msg.IndividualPerson11.MiddleName,
-					com.tools20022.repository.msg.IndividualPerson21.MiddleName, com.tools20022.repository.msg.IndividualPerson22.MiddleName, com.tools20022.repository.msg.IndividualPerson23.MiddleName,
-					com.tools20022.repository.msg.IndividualPerson24.MiddleName, com.tools20022.repository.msg.IndividualPerson30.MiddleName, com.tools20022.repository.msg.IndividualPerson28.MiddleName,
-					com.tools20022.repository.msg.IndividualPerson27.MiddleName, com.tools20022.repository.msg.IndividualPerson29.MiddleName, com.tools20022.repository.msg.IndividualPerson33.MiddleName,
-					com.tools20022.repository.msg.IndividualPerson35.MiddleName, com.tools20022.repository.msg.IndividualPerson34.MiddleName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.mmMiddleName, com.tools20022.repository.msg.IndividualPerson10.mmMiddleName, com.tools20022.repository.msg.IndividualPerson20.mmMiddleName,
+					com.tools20022.repository.msg.IndividualPerson4.mmMiddleName, com.tools20022.repository.msg.IndividualPerson6.mmMiddleName, com.tools20022.repository.msg.IndividualPerson11.mmMiddleName,
+					com.tools20022.repository.msg.IndividualPerson21.mmMiddleName, com.tools20022.repository.msg.IndividualPerson22.mmMiddleName, com.tools20022.repository.msg.IndividualPerson23.mmMiddleName,
+					com.tools20022.repository.msg.IndividualPerson24.mmMiddleName, com.tools20022.repository.msg.IndividualPerson30.mmMiddleName, com.tools20022.repository.msg.IndividualPerson28.mmMiddleName,
+					com.tools20022.repository.msg.IndividualPerson27.mmMiddleName, com.tools20022.repository.msg.IndividualPerson29.mmMiddleName, com.tools20022.repository.msg.IndividualPerson33.mmMiddleName,
+					com.tools20022.repository.msg.IndividualPerson35.mmMiddleName, com.tools20022.repository.msg.IndividualPerson34.mmMiddleName);
 			elementContext_lazy = () -> PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MiddleName";
 			definition = "Second name of a person.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text nameSuffix;
 	/**
 	 * Additional information about a person that follows a person's name, eg,
 	 * qualification such as Doctor of Philosophy (PhD).
@@ -640,60 +649,60 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#NameSuffix
-	 * IndividualPerson5.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#NameSuffix
-	 * IndividualPerson10.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson20#NameSuffix
-	 * IndividualPerson20.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson3#NameSuffix
-	 * IndividualPerson3.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson8#NameSuffix
-	 * IndividualPerson8.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#NameSuffix
-	 * IndividualPerson6.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#NameSuffix
-	 * IndividualPerson11.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson21#NameSuffix
-	 * IndividualPerson21.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson22#NameSuffix
-	 * IndividualPerson22.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson23#NameSuffix
-	 * IndividualPerson23.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#NameSuffix
-	 * IndividualPerson24.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#NameSuffix
-	 * IndividualPerson28.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson27#NameSuffix
-	 * IndividualPerson27.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson33#NameSuffix
-	 * IndividualPerson33.NameSuffix}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson34#NameSuffix
-	 * IndividualPerson34.NameSuffix}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PersonName PersonName}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#mmNameSuffix
+	 * IndividualPerson5.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#mmNameSuffix
+	 * IndividualPerson10.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson20#mmNameSuffix
+	 * IndividualPerson20.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson3#mmNameSuffix
+	 * IndividualPerson3.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson8#mmNameSuffix
+	 * IndividualPerson8.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmNameSuffix
+	 * IndividualPerson6.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#mmNameSuffix
+	 * IndividualPerson11.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson21#mmNameSuffix
+	 * IndividualPerson21.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson22#mmNameSuffix
+	 * IndividualPerson22.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson23#mmNameSuffix
+	 * IndividualPerson23.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmNameSuffix
+	 * IndividualPerson24.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#mmNameSuffix
+	 * IndividualPerson28.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson27#mmNameSuffix
+	 * IndividualPerson27.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson33#mmNameSuffix
+	 * IndividualPerson33.mmNameSuffix}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson34#mmNameSuffix
+	 * IndividualPerson34.mmNameSuffix}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -707,23 +716,24 @@ public class PersonName extends PartyName {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NameSuffix = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNameSuffix = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.NameSuffix, com.tools20022.repository.msg.IndividualPerson10.NameSuffix, com.tools20022.repository.msg.IndividualPerson20.NameSuffix,
-					com.tools20022.repository.msg.IndividualPerson3.NameSuffix, com.tools20022.repository.msg.IndividualPerson8.NameSuffix, com.tools20022.repository.msg.IndividualPerson6.NameSuffix,
-					com.tools20022.repository.msg.IndividualPerson11.NameSuffix, com.tools20022.repository.msg.IndividualPerson21.NameSuffix, com.tools20022.repository.msg.IndividualPerson22.NameSuffix,
-					com.tools20022.repository.msg.IndividualPerson23.NameSuffix, com.tools20022.repository.msg.IndividualPerson24.NameSuffix, com.tools20022.repository.msg.IndividualPerson28.NameSuffix,
-					com.tools20022.repository.msg.IndividualPerson27.NameSuffix, com.tools20022.repository.msg.IndividualPerson33.NameSuffix, com.tools20022.repository.msg.IndividualPerson34.NameSuffix);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson10.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson20.mmNameSuffix,
+					com.tools20022.repository.msg.IndividualPerson3.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson8.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson6.mmNameSuffix,
+					com.tools20022.repository.msg.IndividualPerson11.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson21.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson22.mmNameSuffix,
+					com.tools20022.repository.msg.IndividualPerson23.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson24.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson28.mmNameSuffix,
+					com.tools20022.repository.msg.IndividualPerson27.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson33.mmNameSuffix, com.tools20022.repository.msg.IndividualPerson34.mmNameSuffix);
 			elementContext_lazy = () -> PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NameSuffix";
 			definition = "Additional information about a person that follows a person's name, eg, qualification such as Doctor of Philosophy (PhD).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PersonIdentification identification;
 	/**
 	 * Person identification which contains a name.
 	 * <p>
@@ -732,8 +742,8 @@ public class PersonName extends PartyName {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#PersonName
-	 * PersonIdentification.PersonName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmPersonName
+	 * PersonIdentification.mmPersonName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -757,35 +767,83 @@ public class PersonName extends PartyName {
 	 * definition} = "Person identification which contains a name."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Identification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PersonName.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Person identification which contains a name.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PersonIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PersonIdentification.PersonName;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPersonName;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PersonName";
 				definition = "Name by which a person is known and that is usually used to identify that person.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PersonIdentification.PersonName);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PersonIdentification.mmPersonName);
 				superType_lazy = () -> PartyName.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PersonName.BirthName, com.tools20022.repository.entity.PersonName.NamePrefix, com.tools20022.repository.entity.PersonName.GivenName,
-						com.tools20022.repository.entity.PersonName.MiddleName, com.tools20022.repository.entity.PersonName.NameSuffix, com.tools20022.repository.entity.PersonName.Identification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PersonName.mmBirthName, com.tools20022.repository.entity.PersonName.mmNamePrefix, com.tools20022.repository.entity.PersonName.mmGivenName,
+						com.tools20022.repository.entity.PersonName.mmMiddleName, com.tools20022.repository.entity.PersonName.mmNameSuffix, com.tools20022.repository.entity.PersonName.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(NamePrefix1Choice.mmObject(), PersonalInformation1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getBirthName() {
+		return birthName;
+	}
+
+	public void setBirthName(Max35Text birthName) {
+		this.birthName = birthName;
+	}
+
+	public NamePrefix1Code getNamePrefix() {
+		return namePrefix;
+	}
+
+	public void setNamePrefix(NamePrefix1Code namePrefix) {
+		this.namePrefix = namePrefix;
+	}
+
+	public Max35Text getGivenName() {
+		return givenName;
+	}
+
+	public void setGivenName(Max35Text givenName) {
+		this.givenName = givenName;
+	}
+
+	public Max35Text getMiddleName() {
+		return middleName;
+	}
+
+	public void setMiddleName(Max35Text middleName) {
+		this.middleName = middleName;
+	}
+
+	public Max35Text getNameSuffix() {
+		return nameSuffix;
+	}
+
+	public void setNameSuffix(Max35Text nameSuffix) {
+		this.nameSuffix = nameSuffix;
+	}
+
+	public PersonIdentification getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.entity.PersonIdentification identification) {
+		this.identification = identification;
 	}
 }

@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Extension3#PlaceAndName
- * Extension3.PlaceAndName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Extension3#ExtensionEnvelope
- * Extension3.ExtensionEnvelope}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Extension3#mmPlaceAndName
+ * Extension3.mmPlaceAndName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Extension3#mmExtensionEnvelope
+ * Extension3.mmExtensionEnvelope}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Extension3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Name qualifying the information provided in the Text field, and place
 	 * where this information should be inserted.
@@ -89,7 +90,7 @@ public class Extension3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Extension3.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class Extension3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Name qualifying the information provided in the Text field, and place where this information should be inserted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ExtensionEnvelope2 extensionEnvelope;
 	/**
 	 * Technical element wrapping the extension.
 	 * <p>
@@ -127,7 +129,7 @@ public class Extension3 {
 	 * definition} = "Technical element wrapping the extension."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExtensionEnvelope = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExtensionEnvelope = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Extension3.mmObject();
 			isDerived = false;
@@ -135,23 +137,39 @@ public class Extension3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtensionEnvelope";
 			definition = "Technical element wrapping the extension.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ExtensionEnvelope2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ExtensionEnvelope2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Extension3.PlaceAndName, com.tools20022.repository.msg.Extension3.ExtensionEnvelope);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Extension3.mmPlaceAndName, com.tools20022.repository.msg.Extension3.mmExtensionEnvelope);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Extension3";
 				definition = "Additional information that can not be captured in the structured fields and/or any other specific block .";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ExtensionEnvelope2 getExtensionEnvelope() {
+		return extensionEnvelope;
+	}
+
+	public void setExtensionEnvelope(com.tools20022.repository.msg.ExtensionEnvelope2 extensionEnvelope) {
+		this.extensionEnvelope = extensionEnvelope;
 	}
 }

@@ -38,8 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Money#CashAmount
- * Money.CashAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Money#mmCashAmount
+ * Money.mmCashAmount}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Deposit Deposit}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,52 +53,46 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProposalType1Choice#CashCollateral
- * ProposalType1Choice.CashCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral4#CashCollateral
- * Collateral4.CashCollateral}</li>
+ * {@linkplain com.tools20022.repository.choice.ProposalType1Choice#mmCashCollateral
+ * ProposalType1Choice.mmCashCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral4#mmCashCollateral
+ * Collateral4.mmCashCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution1#CashCollateral
- * CollateralSubstitution1.CashCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution1#mmCashCollateral
+ * CollateralSubstitution1.mmCashCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation1#CashCollateralDetails
- * CollateralValuation1.CashCollateralDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmCashCollateralDetails
+ * CollateralValuation1.mmCashCollateralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution2#CashCollateral
- * CollateralSubstitution2.CashCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution2#mmCashCollateral
+ * CollateralSubstitution2.mmCashCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#CashCollateral
- * CollateralValuation2.CashCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral7#CashCollateral
- * Collateral7.CashCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral8#CashCollateral
- * Collateral8.CashCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmCashCollateral
+ * CollateralValuation2.mmCashCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral7#mmCashCollateral
+ * Collateral7.mmCashCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral8#mmCashCollateral
+ * Collateral8.mmCashCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution3#CashCollateral
- * CollateralSubstitution3.CashCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution3#mmCashCollateral
+ * CollateralSubstitution3.mmCashCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution5#CashCollateral
- * CollateralSubstitution5.CashCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution5#mmCashCollateral
+ * CollateralSubstitution5.mmCashCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution4#CashCollateral
- * CollateralSubstitution4.CashCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution4#mmCashCollateral
+ * CollateralSubstitution4.mmCashCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation5#CashCollateral
- * CollateralValuation5.CashCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral11#CashCollateral
- * Collateral11.CashCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral12#CashCollateral
- * Collateral12.CashCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral16#CashCollateral
- * Collateral16.CashCollateral}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral17#CashCollateral
- * Collateral17.CashCollateral}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Deposit Deposit}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmCashCollateral
+ * CollateralValuation5.mmCashCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral11#mmCashCollateral
+ * Collateral11.mmCashCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral12#mmCashCollateral
+ * Collateral12.mmCashCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral16#mmCashCollateral
+ * Collateral16.mmCashCollateral}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral17#mmCashCollateral
+ * Collateral17.mmCashCollateral}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -116,8 +116,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,6 +133,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Money extends Asset {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount cashAmount;
 	/**
 	 * Value of the asset specified as a currency and an amount.
 	 * <p>
@@ -143,33 +144,33 @@ public class Money extends Asset {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral1#DepositAmount
-	 * CashCollateral1.DepositAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral3#DepositAmount
-	 * CashCollateral3.DepositAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral4#DepositAmount
-	 * CashCollateral4.DepositAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral4#BlockedAmount
-	 * CashCollateral4.BlockedAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral2#DepositAmount
-	 * CashCollateral2.DepositAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashCollateral5#DepositAmount
-	 * CashCollateral5.DepositAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Money
 	 * Money}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral1#mmDepositAmount
+	 * CashCollateral1.mmDepositAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral3#mmDepositAmount
+	 * CashCollateral3.mmDepositAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral4#mmDepositAmount
+	 * CashCollateral4.mmDepositAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral4#mmBlockedAmount
+	 * CashCollateral4.mmBlockedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral2#mmDepositAmount
+	 * CashCollateral2.mmDepositAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashCollateral5#mmDepositAmount
+	 * CashCollateral5.mmDepositAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -182,17 +183,17 @@ public class Money extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CashAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCashAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashCollateral1.DepositAmount, com.tools20022.repository.msg.CashCollateral3.DepositAmount, com.tools20022.repository.msg.CashCollateral4.DepositAmount,
-					com.tools20022.repository.msg.CashCollateral4.BlockedAmount, com.tools20022.repository.msg.CashCollateral2.DepositAmount, com.tools20022.repository.msg.CashCollateral5.DepositAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashCollateral1.mmDepositAmount, com.tools20022.repository.msg.CashCollateral3.mmDepositAmount, com.tools20022.repository.msg.CashCollateral4.mmDepositAmount,
+					com.tools20022.repository.msg.CashCollateral4.mmBlockedAmount, com.tools20022.repository.msg.CashCollateral2.mmDepositAmount, com.tools20022.repository.msg.CashCollateral5.mmDepositAmount);
 			elementContext_lazy = () -> Money.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashAmount";
 			definition = "Value of the asset specified as a currency and an amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -200,22 +201,30 @@ public class Money extends Asset {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Money";
 				definition = "Currency (banknotes and coins) and demand deposits or 'bank money' (the balance held in checking accounts and savings accounts).";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProposalType1Choice.CashCollateral, com.tools20022.repository.msg.Collateral4.CashCollateral,
-						com.tools20022.repository.msg.CollateralSubstitution1.CashCollateral, com.tools20022.repository.msg.CollateralValuation1.CashCollateralDetails, com.tools20022.repository.msg.CollateralSubstitution2.CashCollateral,
-						com.tools20022.repository.msg.CollateralValuation2.CashCollateral, com.tools20022.repository.msg.Collateral7.CashCollateral, com.tools20022.repository.msg.Collateral8.CashCollateral,
-						com.tools20022.repository.msg.CollateralSubstitution3.CashCollateral, com.tools20022.repository.msg.CollateralSubstitution5.CashCollateral, com.tools20022.repository.msg.CollateralSubstitution4.CashCollateral,
-						com.tools20022.repository.msg.CollateralValuation5.CashCollateral, com.tools20022.repository.msg.Collateral11.CashCollateral, com.tools20022.repository.msg.Collateral12.CashCollateral,
-						com.tools20022.repository.msg.Collateral16.CashCollateral, com.tools20022.repository.msg.Collateral17.CashCollateral);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProposalType1Choice.mmCashCollateral, com.tools20022.repository.msg.Collateral4.mmCashCollateral,
+						com.tools20022.repository.msg.CollateralSubstitution1.mmCashCollateral, com.tools20022.repository.msg.CollateralValuation1.mmCashCollateralDetails,
+						com.tools20022.repository.msg.CollateralSubstitution2.mmCashCollateral, com.tools20022.repository.msg.CollateralValuation2.mmCashCollateral, com.tools20022.repository.msg.Collateral7.mmCashCollateral,
+						com.tools20022.repository.msg.Collateral8.mmCashCollateral, com.tools20022.repository.msg.CollateralSubstitution3.mmCashCollateral, com.tools20022.repository.msg.CollateralSubstitution5.mmCashCollateral,
+						com.tools20022.repository.msg.CollateralSubstitution4.mmCashCollateral, com.tools20022.repository.msg.CollateralValuation5.mmCashCollateral, com.tools20022.repository.msg.Collateral11.mmCashCollateral,
+						com.tools20022.repository.msg.Collateral12.mmCashCollateral, com.tools20022.repository.msg.Collateral16.mmCashCollateral, com.tools20022.repository.msg.Collateral17.mmCashCollateral);
 				subType_lazy = () -> Arrays.asList(Deposit.mmObject());
 				superType_lazy = () -> Asset.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Money.CashAmount);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Money.mmCashAmount);
 				derivationComponent_lazy = () -> Arrays.asList(CashCollateral1.mmObject(), CashCollateral3.mmObject(), CashCollateral4.mmObject(), CashCollateral2.mmObject(), CashCollateral5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getCashAmount() {
+		return cashAmount;
+	}
+
+	public void setCashAmount(CurrencyAndAmount cashAmount) {
+		this.cashAmount = cashAmount;
 	}
 }

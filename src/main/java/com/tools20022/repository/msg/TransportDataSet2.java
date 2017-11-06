@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.Transport;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details on the transportation of goods that are part of a commercial
@@ -34,19 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportDataSet2#DataSetIdentification
- * TransportDataSet2.DataSetIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportDataSet2#Buyer
- * TransportDataSet2.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportDataSet2#Seller
- * TransportDataSet2.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportDataSet2#ShipTo
- * TransportDataSet2.ShipTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportDataSet2#Consignee
- * TransportDataSet2.Consignee}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportDataSet2#mmDataSetIdentification
+ * TransportDataSet2.mmDataSetIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportDataSet2#mmBuyer
+ * TransportDataSet2.mmBuyer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportDataSet2#mmSeller
+ * TransportDataSet2.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportDataSet2#mmShipTo
+ * TransportDataSet2.mmShipTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportDataSet2#mmConsignee
+ * TransportDataSet2.mmConsignee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportDataSet2#TransportInformation
- * TransportDataSet2.TransportInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportDataSet2#mmTransportInformation
+ * TransportDataSet2.mmTransportInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportDataSet2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification1 dataSetIdentification;
 	/**
 	 * Identifies the submitted transport data set.
 	 * <p>
@@ -98,7 +100,7 @@ public class TransportDataSet2 {
 	 * definition} = "Identifies the submitted transport data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransportDataSet2.mmObject();
 			isDerived = false;
@@ -106,12 +108,13 @@ public class TransportDataSet2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Identifies the submitted transport data set.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
 		}
 	};
+	protected PartyIdentification9 buyer;
 	/**
 	 * Party that buys goods or services, or a financial instrument.
 	 * <p>
@@ -123,8 +126,8 @@ public class TransportDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,21 +147,22 @@ public class TransportDataSet2 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Buyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> TransportDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected PartyIdentification9 seller;
 	/**
 	 * Party that sells goods or services, or a financial instrument.
 	 * <p>
@@ -170,8 +174,8 @@ public class TransportDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,21 +195,22 @@ public class TransportDataSet2 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Seller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> TransportDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Sellr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected PartyIdentification9 shipTo;
 	/**
 	 * Party to whom the goods must be delivered in the end.
 	 * <p>
@@ -217,8 +222,8 @@ public class TransportDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -237,21 +242,22 @@ public class TransportDataSet2 {
 	 * definition} = "Party to whom the goods must be delivered in the end."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ShipTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmShipTo = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> TransportDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "ShipTo";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipTo";
 			definition = "Party to whom the goods must be delivered in the end.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected PartyIdentification9 consignee;
 	/**
 	 * Party to whom the goods must be delivered.
 	 * <p>
@@ -263,8 +269,8 @@ public class TransportDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -283,21 +289,22 @@ public class TransportDataSet2 {
 	 * definition} = "Party to whom the goods must be delivered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Consignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConsignee = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> TransportDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Consgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignee";
 			definition = "Party to whom the goods must be delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransportDetails1> transportInformation;
 	/**
 	 * Specifies the shipment date, the charges, the routing and the goods that
 	 * are described in the transport document.
@@ -331,33 +338,82 @@ public class TransportDataSet2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransportInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransportInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransportDataSet2.mmObject();
 			businessComponentTrace_lazy = () -> Transport.mmObject();
+			componentContext_lazy = () -> TransportDataSet2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportInformation";
 			definition = "Specifies the shipment date, the charges, the routing and the goods that are described in the transport document.";
 			minOccurs = 1;
-			type_lazy = () -> TransportDetails1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransportDetails1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDataSet2.DataSetIdentification, com.tools20022.repository.msg.TransportDataSet2.Buyer, com.tools20022.repository.msg.TransportDataSet2.Seller,
-						com.tools20022.repository.msg.TransportDataSet2.ShipTo, com.tools20022.repository.msg.TransportDataSet2.Consignee, com.tools20022.repository.msg.TransportDataSet2.TransportInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDataSet2.mmDataSetIdentification, com.tools20022.repository.msg.TransportDataSet2.mmBuyer,
+						com.tools20022.repository.msg.TransportDataSet2.mmSeller, com.tools20022.repository.msg.TransportDataSet2.mmShipTo, com.tools20022.repository.msg.TransportDataSet2.mmConsignee,
+						com.tools20022.repository.msg.TransportDataSet2.mmTransportInformation);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransportDataSet2";
 				definition = "Provides details on the transportation of goods that are part of a commercial trade agreement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification1 getDataSetIdentification() {
+		return dataSetIdentification;
+	}
+
+	public void setDataSetIdentification(com.tools20022.repository.msg.DocumentIdentification1 dataSetIdentification) {
+		this.dataSetIdentification = dataSetIdentification;
+	}
+
+	public PartyIdentification9 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(com.tools20022.repository.msg.PartyIdentification9 buyer) {
+		this.buyer = buyer;
+	}
+
+	public PartyIdentification9 getSeller() {
+		return seller;
+	}
+
+	public void setSeller(com.tools20022.repository.msg.PartyIdentification9 seller) {
+		this.seller = seller;
+	}
+
+	public PartyIdentification9 getShipTo() {
+		return shipTo;
+	}
+
+	public void setShipTo(com.tools20022.repository.msg.PartyIdentification9 shipTo) {
+		this.shipTo = shipTo;
+	}
+
+	public PartyIdentification9 getConsignee() {
+		return consignee;
+	}
+
+	public void setConsignee(com.tools20022.repository.msg.PartyIdentification9 consignee) {
+		this.consignee = consignee;
+	}
+
+	public List<TransportDetails1> getTransportInformation() {
+		return transportInformation;
+	}
+
+	public void setTransportInformation(List<com.tools20022.repository.msg.TransportDetails1> transportInformation) {
+		this.transportInformation = transportInformation;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType5Code#OverTheCounter
- * MarketType5Code.OverTheCounter}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType5Code#mmOverTheCounter
+ * MarketType5Code.mmOverTheCounter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType5Code#StockExchange
- * MarketType5Code.StockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType5Code#mmStockExchange
+ * MarketType5Code.mmStockExchange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class MarketType5Code extends MarketTypeCode {
 	 * name} = "OverTheCounter"</li>
 	 * </ul>
 	 */
-	public static final MMCode OverTheCounter = new MMCode() {
+	public static final MMCode mmOverTheCounter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverTheCounter";
@@ -106,7 +106,7 @@ public class MarketType5Code extends MarketTypeCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockExchange = new MMCode() {
+	public static final MMCode mmStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
@@ -117,12 +117,12 @@ public class MarketType5Code extends MarketTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OTCO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketType5Code";
 				definition = "Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType5Code.OverTheCounter, com.tools20022.repository.codeset.MarketType5Code.StockExchange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType5Code.mmOverTheCounter, com.tools20022.repository.codeset.MarketType5Code.mmStockExchange);
 				trace_lazy = () -> MarketTypeCode.mmObject();
 			}
 		});

@@ -40,25 +40,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation2#Type
- * HoldBackInformation2.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation2#Amount
- * HoldBackInformation2.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation2#mmType
+ * HoldBackInformation2.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation2#mmAmount
+ * HoldBackInformation2.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#ExpectedReleaseDate
- * HoldBackInformation2.ExpectedReleaseDate}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#mmExpectedReleaseDate
+ * HoldBackInformation2.mmExpectedReleaseDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#FinancialInstrumentIdentification
- * HoldBackInformation2.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#mmFinancialInstrumentIdentification
+ * HoldBackInformation2.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#FinancialInstrumentName
- * HoldBackInformation2.FinancialInstrumentName}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#mmFinancialInstrumentName
+ * HoldBackInformation2.mmFinancialInstrumentName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#RedemptionCompletion
- * HoldBackInformation2.RedemptionCompletion}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#mmRedemptionCompletion
+ * HoldBackInformation2.mmRedemptionCompletion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#FinalConfirmation
- * HoldBackInformation2.FinalConfirmation}</li>
+ * {@linkplain com.tools20022.repository.msg.HoldBackInformation2#mmFinalConfirmation
+ * HoldBackInformation2.mmFinalConfirmation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HoldBackInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GateHoldBack1Code type;
 	/**
 	 * Type of gating or a hold back.
 	 * <p>
@@ -122,13 +123,14 @@ public class HoldBackInformation2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation3#Type
-	 * HoldBackInformation3.Type}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#mmType
+	 * HoldBackInformation3.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> HoldBackInformation2.mmObject();
 			isDerived = false;
@@ -136,12 +138,13 @@ public class HoldBackInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of gating or a hold back.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.Type);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.mmType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> GateHoldBack1Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Value of the redemption amount subject to gating or a hold back.
 	 * <p>
@@ -155,8 +158,8 @@ public class HoldBackInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#HoldBackAmount
-	 * InvestmentFundClass.HoldBackAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmHoldBackAmount
+	 * InvestmentFundClass.mmHoldBackAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -178,33 +181,34 @@ public class HoldBackInformation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#Amount
-	 * HoldBackInformation3.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#mmAmount
+	 * HoldBackInformation3.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation1#HoldBackAmount
-	 * HoldBackInformation1.HoldBackAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation1#mmHoldBackAmount
+	 * HoldBackInformation1.mmHoldBackAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmHoldBackAmount;
 			componentContext_lazy = () -> HoldBackInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.HoldBackAmount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value of the redemption amount subject to gating or a hold back.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.HoldBackInformation1.HoldBackAmount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.Amount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.mmAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.HoldBackInformation1.mmHoldBackAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate expectedReleaseDate;
 	/**
 	 * Date on which the gated amount or hold back amount is expected to be
 	 * released.
@@ -218,8 +222,8 @@ public class HoldBackInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#HoldBackReleaseDate
-	 * InvestmentFundClass.HoldBackReleaseDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmHoldBackReleaseDate
+	 * InvestmentFundClass.mmHoldBackReleaseDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -242,33 +246,34 @@ public class HoldBackInformation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#ExpectedReleaseDate
-	 * HoldBackInformation3.ExpectedReleaseDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#mmExpectedReleaseDate
+	 * HoldBackInformation3.mmExpectedReleaseDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation1#HoldBackReleaseDate
-	 * HoldBackInformation1.HoldBackReleaseDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation1#mmHoldBackReleaseDate
+	 * HoldBackInformation1.mmHoldBackReleaseDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedReleaseDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedReleaseDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmHoldBackReleaseDate;
 			componentContext_lazy = () -> HoldBackInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.HoldBackReleaseDate;
 			isDerived = false;
 			xmlTag = "XpctdRlsDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedReleaseDate";
 			definition = "Date on which the gated amount or hold back amount is expected to be released.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.HoldBackInformation1.HoldBackReleaseDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.ExpectedReleaseDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.mmExpectedReleaseDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.HoldBackInformation1.mmHoldBackReleaseDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected SecurityIdentification25Choice financialInstrumentIdentification;
 	/**
 	 * New identification of the security.
 	 * <p>
@@ -281,8 +286,8 @@ public class HoldBackInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#InvestmentFundClass
-	 * InvestmentFundTransaction.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentFundClass
+	 * InvestmentFundTransaction.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -303,28 +308,29 @@ public class HoldBackInformation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#FinancialInstrumentIdentification
-	 * HoldBackInformation3.FinancialInstrumentIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#mmFinancialInstrumentIdentification
+	 * HoldBackInformation3.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> HoldBackInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "New identification of the security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.FinancialInstrumentIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification25Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SecurityIdentification25Choice.mmObject();
 		}
 	};
+	protected Max350Text financialInstrumentName;
 	/**
 	 * New name of the security.
 	 * <p>
@@ -337,8 +343,8 @@ public class HoldBackInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LocalName#FullName
-	 * LocalName.FullName}</li>
+	 * {@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+	 * LocalName.mmFullName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -359,27 +365,28 @@ public class HoldBackInformation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#FinancialInstrumentName
-	 * HoldBackInformation3.FinancialInstrumentName}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#mmFinancialInstrumentName
+	 * HoldBackInformation3.mmFinancialInstrumentName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
 			componentContext_lazy = () -> HoldBackInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.FullName;
 			isDerived = false;
 			xmlTag = "FinInstrmNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentName";
 			definition = "New name of the security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.FinancialInstrumentName);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.mmFinancialInstrumentName);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected RedemptionCompletion1Code redemptionCompletion;
 	/**
 	 * Specifies whether or not additional redemption order instructions are
 	 * required in order for the redemption to be completed.
@@ -413,13 +420,13 @@ public class HoldBackInformation2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#RedemptionCompletion
-	 * HoldBackInformation3.RedemptionCompletion}</li>
+	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#mmRedemptionCompletion
+	 * HoldBackInformation3.mmRedemptionCompletion}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RedemptionCompletion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRedemptionCompletion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> HoldBackInformation2.mmObject();
 			isDerived = false;
@@ -427,12 +434,13 @@ public class HoldBackInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionCompletion";
 			definition = "Specifies whether or not additional redemption order instructions are required in order for the redemption to be completed. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.RedemptionCompletion);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation3.mmRedemptionCompletion);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RedemptionCompletion1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator finalConfirmation;
 	/**
 	 * Indicates whether or not this is the final redemption confirmation in the
 	 * execution of a gated redemption.
@@ -464,7 +472,7 @@ public class HoldBackInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinalConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinalConfirmation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> HoldBackInformation2.mmObject();
 			isDerived = false;
@@ -472,8 +480,8 @@ public class HoldBackInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalConfirmation";
 			definition = "Indicates whether or not this is the final redemption confirmation in the execution of a gated redemption.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -481,19 +489,75 @@ public class HoldBackInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation2.Type, com.tools20022.repository.msg.HoldBackInformation2.Amount,
-						com.tools20022.repository.msg.HoldBackInformation2.ExpectedReleaseDate, com.tools20022.repository.msg.HoldBackInformation2.FinancialInstrumentIdentification,
-						com.tools20022.repository.msg.HoldBackInformation2.FinancialInstrumentName, com.tools20022.repository.msg.HoldBackInformation2.RedemptionCompletion,
-						com.tools20022.repository.msg.HoldBackInformation2.FinalConfirmation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation2.mmType, com.tools20022.repository.msg.HoldBackInformation2.mmAmount,
+						com.tools20022.repository.msg.HoldBackInformation2.mmExpectedReleaseDate, com.tools20022.repository.msg.HoldBackInformation2.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.HoldBackInformation2.mmFinancialInstrumentName, com.tools20022.repository.msg.HoldBackInformation2.mmRedemptionCompletion,
+						com.tools20022.repository.msg.HoldBackInformation2.mmFinalConfirmation);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HoldBackInformation2";
 				definition = "Information about hold back and gating.";
-				previousVersion_lazy = () -> HoldBackInformation1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(HoldBackInformation3.mmObject());
+				previousVersion_lazy = () -> HoldBackInformation1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GateHoldBack1Code getType() {
+		return type;
+	}
+
+	public void setType(GateHoldBack1Code type) {
+		this.type = type;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public ISODate getExpectedReleaseDate() {
+		return expectedReleaseDate;
+	}
+
+	public void setExpectedReleaseDate(ISODate expectedReleaseDate) {
+		this.expectedReleaseDate = expectedReleaseDate;
+	}
+
+	public SecurityIdentification25Choice getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(SecurityIdentification25Choice financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public Max350Text getFinancialInstrumentName() {
+		return financialInstrumentName;
+	}
+
+	public void setFinancialInstrumentName(Max350Text financialInstrumentName) {
+		this.financialInstrumentName = financialInstrumentName;
+	}
+
+	public RedemptionCompletion1Code getRedemptionCompletion() {
+		return redemptionCompletion;
+	}
+
+	public void setRedemptionCompletion(RedemptionCompletion1Code redemptionCompletion) {
+		this.redemptionCompletion = redemptionCompletion;
+	}
+
+	public YesNoIndicator getFinalConfirmation() {
+		return finalConfirmation;
+	}
+
+	public void setFinalConfirmation(YesNoIndicator finalConfirmation) {
+		this.finalConfirmation = finalConfirmation;
 	}
 }

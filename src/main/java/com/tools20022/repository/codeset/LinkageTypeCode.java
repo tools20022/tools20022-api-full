@@ -29,12 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#Link
- * LinkageTypeCode.Link}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#Unlink
- * LinkageTypeCode.Unlink}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#Soft
- * LinkageTypeCode.Soft}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#mmLink
+ * LinkageTypeCode.mmLink}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#mmUnlink
+ * LinkageTypeCode.mmUnlink}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#mmSoft
+ * LinkageTypeCode.mmSoft}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class LinkageTypeCode {
 	 * definition} = "Request is to link the referenced transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode Link = new MMCode() {
+	public static final MMCode mmLink = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Link";
@@ -119,7 +119,7 @@ public class LinkageTypeCode {
 	 * definition} = "Request is to unlink the referenced transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unlink = new MMCode() {
+	public static final MMCode mmUnlink = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unlink";
@@ -149,7 +149,7 @@ public class LinkageTypeCode {
 	 * definition} = "Request is to soft link the referenced transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode Soft = new MMCode() {
+	public static final MMCode mmSoft = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Soft";
@@ -162,12 +162,12 @@ public class LinkageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LINK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LinkageTypeCode";
 				definition = "Type of linkage requested.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LinkageTypeCode.Link, com.tools20022.repository.codeset.LinkageTypeCode.Unlink, com.tools20022.repository.codeset.LinkageTypeCode.Soft);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LinkageTypeCode.mmLink, com.tools20022.repository.codeset.LinkageTypeCode.mmUnlink, com.tools20022.repository.codeset.LinkageTypeCode.mmSoft);
 				derivation_lazy = () -> Arrays.asList(LinkageType1Code.mmObject());
 			}
 		});

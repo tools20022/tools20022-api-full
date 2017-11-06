@@ -36,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClosingBalance4#ShortLongIndicator
- * ClosingBalance4.ShortLongIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ClosingBalance4#ClosingBalance
- * ClosingBalance4.ClosingBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.ClosingBalance4#mmShortLongIndicator
+ * ClosingBalance4.mmShortLongIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ClosingBalance4#mmClosingBalance
+ * ClosingBalance4.mmClosingBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClosingBalance4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ShortLong1Code shortLongIndicator;
 	/**
 	 * Indication that the position is short or long.
 	 * <p>
@@ -78,8 +80,8 @@ public class ClosingBalance4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#ShortLong
-	 * SecuritiesBalance.ShortLong}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmShortLong
+	 * SecuritiesBalance.mmShortLong}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +100,21 @@ public class ClosingBalance4 {
 	 * definition} = "Indication that the position is short or long."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortLongIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> ClosingBalance4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.ShortLong;
 			isDerived = false;
 			xmlTag = "ShrtLngInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongIndicator";
 			definition = "Indication that the position is short or long.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	protected ClosingBalance5Choice closingBalance;
 	/**
 	 * Closing balance for the statement period (final closing balance) or of
 	 * this page (intermediary closing balance).
@@ -148,17 +151,17 @@ public class ClosingBalance4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosingBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosingBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ClosingBalance4.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
+			componentContext_lazy = () -> ClosingBalance4.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingBalance";
 			definition = "Closing balance for the statement period (final closing balance) or of this page (intermediary closing balance).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ClosingBalance5Choice.mmObject();
 		}
 	};
@@ -166,14 +169,30 @@ public class ClosingBalance4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClosingBalance4.ShortLongIndicator, com.tools20022.repository.msg.ClosingBalance4.ClosingBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClosingBalance4.mmShortLongIndicator, com.tools20022.repository.msg.ClosingBalance4.mmClosingBalance);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClosingBalance4";
 				definition = "Closing balance for the statement period (final closing balance) or of this page (intermediary closing balance).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ShortLong1Code getShortLongIndicator() {
+		return shortLongIndicator;
+	}
+
+	public void setShortLongIndicator(ShortLong1Code shortLongIndicator) {
+		this.shortLongIndicator = shortLongIndicator;
+	}
+
+	public ClosingBalance5Choice getClosingBalance() {
+		return closingBalance;
+	}
+
+	public void setClosingBalance(ClosingBalance5Choice closingBalance) {
+		this.closingBalance = closingBalance;
 	}
 }

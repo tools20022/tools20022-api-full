@@ -33,19 +33,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * OptionStyleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle4Code#American
- * OptionStyle4Code.American}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle4Code#European
- * OptionStyle4Code.European}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle4Code#Bermudan
- * OptionStyle4Code.Bermudan}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionStyle4Code#mmAmerican
+ * OptionStyle4Code.mmAmerican}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionStyle4Code#mmEuropean
+ * OptionStyle4Code.mmEuropean}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionStyle4Code#mmBermudan
+ * OptionStyle4Code.mmBermudan}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +84,7 @@ public class OptionStyle4Code extends OptionStyleCode {
 	 * name} = "American"</li>
 	 * </ul>
 	 */
-	public static final MMCode American = new MMCode() {
+	public static final MMCode mmAmerican = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
@@ -104,7 +107,7 @@ public class OptionStyle4Code extends OptionStyleCode {
 	 * name} = "European"</li>
 	 * </ul>
 	 */
-	public static final MMCode European = new MMCode() {
+	public static final MMCode mmEuropean = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
@@ -127,7 +130,7 @@ public class OptionStyle4Code extends OptionStyleCode {
 	 * name} = "Bermudan"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bermudan = new MMCode() {
+	public static final MMCode mmBermudan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bermudan";
@@ -138,12 +141,12 @@ public class OptionStyle4Code extends OptionStyleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMER");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle4Code";
 				definition = "Defines how an option can be exercised";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle4Code.American, com.tools20022.repository.codeset.OptionStyle4Code.European, com.tools20022.repository.codeset.OptionStyle4Code.Bermudan);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle4Code.mmAmerican, com.tools20022.repository.codeset.OptionStyle4Code.mmEuropean, com.tools20022.repository.codeset.OptionStyle4Code.mmBermudan);
 				trace_lazy = () -> OptionStyleCode.mmObject();
 			}
 		});

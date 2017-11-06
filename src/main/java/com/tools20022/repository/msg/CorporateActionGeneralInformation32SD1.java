@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1#PlaceAndName
- * CorporateActionGeneralInformation32SD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1#mmPlaceAndName
+ * CorporateActionGeneralInformation32SD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1#WebServiceNotificationDate
- * CorporateActionGeneralInformation32SD1.WebServiceNotificationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1#mmWebServiceNotificationDate
+ * CorporateActionGeneralInformation32SD1.mmWebServiceNotificationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1#PreviousWebServiceNotificationDate
- * CorporateActionGeneralInformation32SD1.PreviousWebServiceNotificationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1#mmPreviousWebServiceNotificationDate
+ * CorporateActionGeneralInformation32SD1.mmPreviousWebServiceNotificationDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionGeneralInformation32SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -98,7 +99,7 @@ public class CorporateActionGeneralInformation32SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionGeneralInformation32SD1.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class CorporateActionGeneralInformation32SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DateFormat22Choice webServiceNotificationDate;
 	/**
 	 * Date and time of notification via web service as reference information.<br>
 	 * 通知日時 Notification date and time.
@@ -125,8 +127,8 @@ public class CorporateActionGeneralInformation32SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#AnnouncementDate
-	 * CorporateActionEvent.AnnouncementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAnnouncementDate
+	 * CorporateActionEvent.mmAnnouncementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,20 +149,21 @@ public class CorporateActionGeneralInformation32SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WebServiceNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWebServiceNotificationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> CorporateActionGeneralInformation32SD1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.AnnouncementDate;
 			isDerived = false;
 			xmlTag = "WebSvcNtfctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WebServiceNotificationDate";
 			definition = "Date and time of notification via web service as reference information.\r\n通知日時  Notification date and time.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice previousWebServiceNotificationDate;
 	/**
 	 * Date and time of previous notification via web service as a reference
 	 * information (in case of replacement). <br>
@@ -176,8 +179,8 @@ public class CorporateActionGeneralInformation32SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#AnnouncementDate
-	 * CorporateActionEvent.AnnouncementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAnnouncementDate
+	 * CorporateActionEvent.mmAnnouncementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,17 +201,17 @@ public class CorporateActionGeneralInformation32SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousWebServiceNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousWebServiceNotificationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> CorporateActionGeneralInformation32SD1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.AnnouncementDate;
 			isDerived = false;
 			xmlTag = "PrvsWebSvcNtfctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousWebServiceNotificationDate";
 			definition = "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
@@ -216,15 +219,39 @@ public class CorporateActionGeneralInformation32SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.PlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.WebServiceNotificationDate,
-						com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.PreviousWebServiceNotificationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmWebServiceNotificationDate, com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmPreviousWebServiceNotificationDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformation32SD1";
 				definition = "Extension to specify corporate action dates.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public DateFormat22Choice getWebServiceNotificationDate() {
+		return webServiceNotificationDate;
+	}
+
+	public void setWebServiceNotificationDate(DateFormat22Choice webServiceNotificationDate) {
+		this.webServiceNotificationDate = webServiceNotificationDate;
+	}
+
+	public DateFormat22Choice getPreviousWebServiceNotificationDate() {
+		return previousWebServiceNotificationDate;
+	}
+
+	public void setPreviousWebServiceNotificationDate(DateFormat22Choice previousWebServiceNotificationDate) {
+		this.previousWebServiceNotificationDate = previousWebServiceNotificationDate;
 	}
 }

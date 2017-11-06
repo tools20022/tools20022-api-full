@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasis1Code#FlatOrAbsolute
- * ChargeTaxBasis1Code.FlatOrAbsolute}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasis1Code#mmFlatOrAbsolute
+ * ChargeTaxBasis1Code.mmFlatOrAbsolute}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasis1Code#PerUnit
- * ChargeTaxBasis1Code.PerUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasis1Code#mmPerUnit
+ * ChargeTaxBasis1Code.mmPerUnit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class ChargeTaxBasis1Code extends ChargeTaxBasisCode {
 	 * name} = "FlatOrAbsolute"</li>
 	 * </ul>
 	 */
-	public static final MMCode FlatOrAbsolute = new MMCode() {
+	public static final MMCode mmFlatOrAbsolute = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlatOrAbsolute";
@@ -104,7 +104,7 @@ public class ChargeTaxBasis1Code extends ChargeTaxBasisCode {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode PerUnit = new MMCode() {
+	public static final MMCode mmPerUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
@@ -115,12 +115,12 @@ public class ChargeTaxBasis1Code extends ChargeTaxBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FLAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargeTaxBasis1Code";
 				definition = "Define the Charges/tax basis for the trade being allocated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeTaxBasis1Code.FlatOrAbsolute, com.tools20022.repository.codeset.ChargeTaxBasis1Code.PerUnit);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeTaxBasis1Code.mmFlatOrAbsolute, com.tools20022.repository.codeset.ChargeTaxBasis1Code.mmPerUnit);
 				trace_lazy = () -> ChargeTaxBasisCode.mmObject();
 			}
 		});

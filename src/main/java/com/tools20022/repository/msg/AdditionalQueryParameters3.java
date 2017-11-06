@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.Status8Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Additional specific query criteria.
@@ -35,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters3#Status
- * AdditionalQueryParameters3.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters3#mmStatus
+ * AdditionalQueryParameters3.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters3#Reason
- * AdditionalQueryParameters3.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters3#mmReason
+ * AdditionalQueryParameters3.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters3#FinancialInstrumentIdentification
- * AdditionalQueryParameters3.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalQueryParameters3#mmFinancialInstrumentIdentification
+ * AdditionalQueryParameters3.mmFinancialInstrumentIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,15 +54,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV02#AdditionalQueryParameters
- * SecuritiesStatementQueryV02.AdditionalQueryParameters}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesStatementQueryV02#mmAdditionalQueryParameters
+ * SecuritiesStatementQueryV02.mmAdditionalQueryParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalQueryParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status8Choice status;
 	/**
 	 * Request to obtain a Securities Transaction Pending Report for
 	 * transactions with the specified status.
@@ -116,21 +118,22 @@ public class AdditionalQueryParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Status = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AdditionalQueryParameters3.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
+			componentContext_lazy = () -> AdditionalQueryParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Request to obtain a Securities Transaction Pending Report for transactions with the specified status.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Status8Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Status8Choice.mmObject();
 		}
 	};
+	protected List<Reason6Choice> reason;
 	/**
 	 * Request to obtain a Securities Transaction Pending Report for
 	 * transactions with the specified status reason.
@@ -143,8 +146,8 @@ public class AdditionalQueryParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,20 +168,21 @@ public class AdditionalQueryParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> AdditionalQueryParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Request to obtain a Securities Transaction Pending Report for transactions with the specified status reason.";
 			minOccurs = 0;
-			type_lazy = () -> Reason6Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> Reason6Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification;
 	/**
 	 * Financial instruments representing a sum of rights of the investor
 	 * vis-a-vis the issuer.
@@ -192,8 +196,8 @@ public class AdditionalQueryParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -214,29 +218,29 @@ public class AdditionalQueryParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> AdditionalQueryParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityIdentification14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalQueryParameters3.Status, com.tools20022.repository.msg.AdditionalQueryParameters3.Reason,
-						com.tools20022.repository.msg.AdditionalQueryParameters3.FinancialInstrumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalQueryParameters3.mmStatus, com.tools20022.repository.msg.AdditionalQueryParameters3.mmReason,
+						com.tools20022.repository.msg.AdditionalQueryParameters3.mmFinancialInstrumentIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV02.mmAdditionalQueryParameters);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV02.AdditionalQueryParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalQueryParameters3";
 				definition = "Additional specific query criteria.";
@@ -244,5 +248,29 @@ public class AdditionalQueryParameters3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status8Choice getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status8Choice status) {
+		this.status = status;
+	}
+
+	public List<Reason6Choice> getReason() {
+		return reason;
+	}
+
+	public void setReason(List<Reason6Choice> reason) {
+		this.reason = reason;
+	}
+
+	public List<SecurityIdentification14> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
 	}
 }

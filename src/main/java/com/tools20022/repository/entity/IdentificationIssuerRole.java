@@ -40,191 +40,258 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#Country
- * IdentificationIssuerRole.Country}</li>
+ * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmCountry
+ * IdentificationIssuerRole.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#EntityName
- * IdentificationIssuerRole.EntityName}</li>
+ * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmEntityName
+ * IdentificationIssuerRole.mmEntityName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#OwnerCode
- * IdentificationIssuerRole.OwnerCode}</li>
+ * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmOwnerCode
+ * IdentificationIssuerRole.mmOwnerCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification1#Issuer
- * GenericIdentification1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification7#Issuer
- * GenericIdentification7.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification8#Issuer
- * GenericIdentification8.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification9#Issuer
- * GenericIdentification9.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification13#Issuer
- * GenericIdentification13.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification20#Issuer
- * GenericIdentification20.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification25#Issuer
- * GenericIdentification25.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification47#Issuer
- * GenericIdentification47.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification44#Issuer
- * GenericIdentification44.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification41#Issuer
- * GenericIdentification41.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification3#Issuer
- * GenericIdentification3.Issuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericFinancialIdentification1#Issuer
- * GenericFinancialIdentification1.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification1#mmIssuer
+ * GenericIdentification1.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericAccountIdentification1#Issuer
- * GenericAccountIdentification1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification3#Issuer
- * PersonIdentification3.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification7#mmIssuer
+ * GenericIdentification7.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericOrganisationIdentification1#Issuer
- * GenericOrganisationIdentification1.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification8#mmIssuer
+ * GenericIdentification8.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericPersonIdentification1#Issuer
- * GenericPersonIdentification1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification19#Issuer
- * GenericIdentification19.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification24#Issuer
- * GenericIdentification24.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification9#mmIssuer
+ * GenericIdentification9.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericOrganisationIdentification2#Issuer
- * GenericOrganisationIdentification2.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification37#Issuer
- * GenericIdentification37.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification23#Issuer
- * GenericIdentification23.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification18#Issuer
- * GenericIdentification18.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification39#Issuer
- * GenericIdentification39.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification27#Issuer
- * GenericIdentification27.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification22#Issuer
- * GenericIdentification22.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification28#Issuer
- * GenericIdentification28.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification6#Issuer
- * GenericIdentification6.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification5#Issuer
- * GenericIdentification5.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification34#Issuer
- * GenericIdentification34.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification38#Issuer
- * GenericIdentification38.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification29#Issuer
- * GenericIdentification29.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification36#Issuer
- * GenericIdentification36.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification13#mmIssuer
+ * GenericIdentification13.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryBankTransactionCodeStructure1#Issuer
- * ProprietaryBankTransactionCodeStructure1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification32#Issuer
- * GenericIdentification32.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification35#Issuer
- * GenericIdentification35.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification48#Issuer
- * GenericIdentification48.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification31#Issuer
- * GenericIdentification31.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification33#Issuer
- * GenericIdentification33.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification2#Issuer
- * GenericIdentification2.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification11#Issuer
- * GenericIdentification11.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification2#Issuer
- * PersonIdentification2.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification16#Issuer
- * GenericIdentification16.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification30#Issuer
- * GenericIdentification30.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification20#mmIssuer
+ * GenericIdentification20.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingServiceCommonIdentification1#Issuer
- * BillingServiceCommonIdentification1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification12#Issuer
- * GenericIdentification12.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification17#Issuer
- * GenericIdentification17.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification40#Issuer
- * GenericIdentification40.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification15#Issuer
- * GenericIdentification15.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification42#Issuer
- * GenericIdentification42.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification51#Issuer
- * GenericIdentification51.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification55#Issuer
- * GenericIdentification55.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification56#Issuer
- * GenericIdentification56.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification65#Issuer
- * GenericIdentification65.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification63#Issuer
- * GenericIdentification63.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification66#Issuer
- * GenericIdentification66.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification62#Issuer
- * GenericIdentification62.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification60#Issuer
- * GenericIdentification60.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification64#Issuer
- * GenericIdentification64.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification67#Issuer
- * GenericIdentification67.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification53#Issuer
- * GenericIdentification53.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification71#Issuer
- * GenericIdentification71.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification73#Issuer
- * GenericIdentification73.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification74#Issuer
- * GenericIdentification74.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification72#Issuer
- * GenericIdentification72.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification70#Issuer
- * GenericIdentification70.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification75#Issuer
- * GenericIdentification75.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification76#Issuer
- * GenericIdentification76.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification77#Issuer
- * GenericIdentification77.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification25#mmIssuer
+ * GenericIdentification25.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#Issuer
- * AlternateIdentification4.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification82#Issuer
- * GenericIdentification82.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification84#Issuer
- * GenericIdentification84.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification86#Issuer
- * GenericIdentification86.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification47#mmIssuer
+ * GenericIdentification47.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification144#Issuer
- * GenericIdentification144.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification44#mmIssuer
+ * GenericIdentification44.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification163#Issuer
- * GenericIdentification163.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification79#Issuer
- * GenericIdentification79.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification94#Issuer
- * GenericIdentification94.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification90#Issuer
- * GenericIdentification90.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification93#Issuer
- * GenericIdentification93.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification92#Issuer
- * GenericIdentification92.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification41#mmIssuer
+ * GenericIdentification41.mmIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification164#Issuer
- * GenericIdentification164.Issuer}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification3#mmIssuer
+ * GenericIdentification3.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericFinancialIdentification1#mmIssuer
+ * GenericFinancialIdentification1.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericAccountIdentification1#mmIssuer
+ * GenericAccountIdentification1.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification3#mmIssuer
+ * PersonIdentification3.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericOrganisationIdentification1#mmIssuer
+ * GenericOrganisationIdentification1.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericPersonIdentification1#mmIssuer
+ * GenericPersonIdentification1.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification19#mmIssuer
+ * GenericIdentification19.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification24#mmIssuer
+ * GenericIdentification24.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericOrganisationIdentification2#mmIssuer
+ * GenericOrganisationIdentification2.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification37#mmIssuer
+ * GenericIdentification37.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification23#mmIssuer
+ * GenericIdentification23.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification18#mmIssuer
+ * GenericIdentification18.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification39#mmIssuer
+ * GenericIdentification39.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification27#mmIssuer
+ * GenericIdentification27.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification22#mmIssuer
+ * GenericIdentification22.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification28#mmIssuer
+ * GenericIdentification28.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification6#mmIssuer
+ * GenericIdentification6.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification5#mmIssuer
+ * GenericIdentification5.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification34#mmIssuer
+ * GenericIdentification34.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification38#mmIssuer
+ * GenericIdentification38.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification29#mmIssuer
+ * GenericIdentification29.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification36#mmIssuer
+ * GenericIdentification36.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryBankTransactionCodeStructure1#mmIssuer
+ * ProprietaryBankTransactionCodeStructure1.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification32#mmIssuer
+ * GenericIdentification32.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification35#mmIssuer
+ * GenericIdentification35.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification48#mmIssuer
+ * GenericIdentification48.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification31#mmIssuer
+ * GenericIdentification31.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification33#mmIssuer
+ * GenericIdentification33.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification2#mmIssuer
+ * GenericIdentification2.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification11#mmIssuer
+ * GenericIdentification11.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification2#mmIssuer
+ * PersonIdentification2.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification16#mmIssuer
+ * GenericIdentification16.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification30#mmIssuer
+ * GenericIdentification30.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BillingServiceCommonIdentification1#mmIssuer
+ * BillingServiceCommonIdentification1.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification12#mmIssuer
+ * GenericIdentification12.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification17#mmIssuer
+ * GenericIdentification17.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification40#mmIssuer
+ * GenericIdentification40.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification15#mmIssuer
+ * GenericIdentification15.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification42#mmIssuer
+ * GenericIdentification42.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification51#mmIssuer
+ * GenericIdentification51.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification55#mmIssuer
+ * GenericIdentification55.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification56#mmIssuer
+ * GenericIdentification56.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification65#mmIssuer
+ * GenericIdentification65.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification63#mmIssuer
+ * GenericIdentification63.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification66#mmIssuer
+ * GenericIdentification66.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification62#mmIssuer
+ * GenericIdentification62.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification60#mmIssuer
+ * GenericIdentification60.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification64#mmIssuer
+ * GenericIdentification64.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification67#mmIssuer
+ * GenericIdentification67.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification53#mmIssuer
+ * GenericIdentification53.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification71#mmIssuer
+ * GenericIdentification71.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification73#mmIssuer
+ * GenericIdentification73.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification74#mmIssuer
+ * GenericIdentification74.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification72#mmIssuer
+ * GenericIdentification72.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification70#mmIssuer
+ * GenericIdentification70.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification75#mmIssuer
+ * GenericIdentification75.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification76#mmIssuer
+ * GenericIdentification76.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification77#mmIssuer
+ * GenericIdentification77.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#mmIssuer
+ * AlternateIdentification4.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification82#mmIssuer
+ * GenericIdentification82.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification84#mmIssuer
+ * GenericIdentification84.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification86#mmIssuer
+ * GenericIdentification86.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification144#mmIssuer
+ * GenericIdentification144.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification163#mmIssuer
+ * GenericIdentification163.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification79#mmIssuer
+ * GenericIdentification79.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification94#mmIssuer
+ * GenericIdentification94.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification90#mmIssuer
+ * GenericIdentification90.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification93#mmIssuer
+ * GenericIdentification93.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification92#mmIssuer
+ * GenericIdentification92.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification164#mmIssuer
+ * GenericIdentification164.mmIssuer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -250,8 +317,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -265,6 +332,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IdentificationIssuerRole extends InformationPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Country of the proprietary identification scheme.
 	 * <p>
@@ -274,35 +342,35 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CountryCode
 	 * CountryCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification3#DomesticIdentificationSource
-	 * AlternateSecurityIdentification3.DomesticIdentificationSource}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification1#DomesticIdentificationSource
-	 * AlternateSecurityIdentification1.DomesticIdentificationSource}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationSource1Choice#Domestic
-	 * IdentificationSource1Choice.Domestic}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationSource2Choice#Domestic
-	 * IdentificationSource2Choice.Domestic}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1#DomesticIdentificationSource
-	 * AlternateFinancialInstrumentIdentification1.DomesticIdentificationSource}
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification4#DomesticIdentificationSource
-	 * AlternateSecurityIdentification4.DomesticIdentificationSource}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
 	 * IdentificationIssuerRole}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification3#mmDomesticIdentificationSource
+	 * AlternateSecurityIdentification3.mmDomesticIdentificationSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification1#mmDomesticIdentificationSource
+	 * AlternateSecurityIdentification1.mmDomesticIdentificationSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationSource1Choice#mmDomestic
+	 * IdentificationSource1Choice.mmDomestic}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationSource2Choice#mmDomestic
+	 * IdentificationSource2Choice.mmDomestic}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1#mmDomesticIdentificationSource
+	 * AlternateFinancialInstrumentIdentification1.
+	 * mmDomesticIdentificationSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification4#mmDomesticIdentificationSource
+	 * AlternateSecurityIdentification4.mmDomesticIdentificationSource}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -314,21 +382,22 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * definition} = "Country of the proprietary identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Country = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCountry = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification3.DomesticIdentificationSource, com.tools20022.repository.msg.AlternateSecurityIdentification1.DomesticIdentificationSource,
-					com.tools20022.repository.choice.IdentificationSource1Choice.Domestic, com.tools20022.repository.choice.IdentificationSource2Choice.Domestic,
-					com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.DomesticIdentificationSource, com.tools20022.repository.msg.AlternateSecurityIdentification4.DomesticIdentificationSource);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification3.mmDomesticIdentificationSource, com.tools20022.repository.msg.AlternateSecurityIdentification1.mmDomesticIdentificationSource,
+					com.tools20022.repository.choice.IdentificationSource1Choice.mmDomestic, com.tools20022.repository.choice.IdentificationSource2Choice.mmDomestic,
+					com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.mmDomesticIdentificationSource, com.tools20022.repository.msg.AlternateSecurityIdentification4.mmDomesticIdentificationSource);
 			elementContext_lazy = () -> IdentificationIssuerRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Country of the proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max35Text entityName;
 	/**
 	 * Entity that issues the proprietary identification.
 	 * <p>
@@ -338,44 +407,44 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification3#ProprietaryIdentificationSource
-	 * AlternateSecurityIdentification3.ProprietaryIdentificationSource}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification1#ProprietaryIdentificationSource
-	 * AlternateSecurityIdentification1.ProprietaryIdentificationSource}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate1#Issuer
-	 * SecuritiesCertificate1.Issuer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate2#Issuer
-	 * SecuritiesCertificate2.Issuer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate3#Issuer
-	 * SecuritiesCertificate3.Issuer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1#ProprietaryIdentificationSource
-	 * AlternateFinancialInstrumentIdentification1.
-	 * ProprietaryIdentificationSource}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification4#ProprietaryIdentificationSource
-	 * AlternateSecurityIdentification4.ProprietaryIdentificationSource}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate4#Issuer
-	 * SecuritiesCertificate4.Issuer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate5#Issuer
-	 * SecuritiesCertificate5.Issuer}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
 	 * IdentificationIssuerRole}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification3#mmProprietaryIdentificationSource
+	 * AlternateSecurityIdentification3.mmProprietaryIdentificationSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification1#mmProprietaryIdentificationSource
+	 * AlternateSecurityIdentification1.mmProprietaryIdentificationSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate1#mmIssuer
+	 * SecuritiesCertificate1.mmIssuer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate2#mmIssuer
+	 * SecuritiesCertificate2.mmIssuer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate3#mmIssuer
+	 * SecuritiesCertificate3.mmIssuer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1#mmProprietaryIdentificationSource
+	 * AlternateFinancialInstrumentIdentification1.
+	 * mmProprietaryIdentificationSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification4#mmProprietaryIdentificationSource
+	 * AlternateSecurityIdentification4.mmProprietaryIdentificationSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate4#mmIssuer
+	 * SecuritiesCertificate4.mmIssuer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate5#mmIssuer
+	 * SecuritiesCertificate5.mmIssuer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -387,22 +456,24 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * definition} = "Entity that issues the proprietary identification."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute EntityName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmEntityName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification3.ProprietaryIdentificationSource,
-					com.tools20022.repository.msg.AlternateSecurityIdentification1.ProprietaryIdentificationSource, com.tools20022.repository.msg.SecuritiesCertificate1.Issuer, com.tools20022.repository.msg.SecuritiesCertificate2.Issuer,
-					com.tools20022.repository.msg.SecuritiesCertificate3.Issuer, com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.ProprietaryIdentificationSource,
-					com.tools20022.repository.msg.AlternateSecurityIdentification4.ProprietaryIdentificationSource, com.tools20022.repository.msg.SecuritiesCertificate4.Issuer, com.tools20022.repository.msg.SecuritiesCertificate5.Issuer);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification3.mmProprietaryIdentificationSource,
+					com.tools20022.repository.msg.AlternateSecurityIdentification1.mmProprietaryIdentificationSource, com.tools20022.repository.msg.SecuritiesCertificate1.mmIssuer,
+					com.tools20022.repository.msg.SecuritiesCertificate2.mmIssuer, com.tools20022.repository.msg.SecuritiesCertificate3.mmIssuer,
+					com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.mmProprietaryIdentificationSource, com.tools20022.repository.msg.AlternateSecurityIdentification4.mmProprietaryIdentificationSource,
+					com.tools20022.repository.msg.SecuritiesCertificate4.mmIssuer, com.tools20022.repository.msg.SecuritiesCertificate5.mmIssuer);
 			elementContext_lazy = () -> IdentificationIssuerRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EntityName";
 			definition = "Entity that issues the proprietary identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text ownerCode;
 	/**
 	 * Code representing the organisation that owns and is responsible of an
 	 * enumerated code list, for example ISO.
@@ -431,15 +502,15 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OwnerCode = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOwnerCode = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> IdentificationIssuerRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OwnerCode";
 			definition = "Code representing the organisation that owns and is responsible of an enumerated code list, for example ISO.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -447,44 +518,68 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IdentificationIssuerRole";
 				definition = "Entity that assigns the identification.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification1.Issuer, com.tools20022.repository.msg.GenericIdentification7.Issuer,
-						com.tools20022.repository.msg.GenericIdentification8.Issuer, com.tools20022.repository.msg.GenericIdentification9.Issuer, com.tools20022.repository.msg.GenericIdentification13.Issuer,
-						com.tools20022.repository.msg.GenericIdentification20.Issuer, com.tools20022.repository.msg.GenericIdentification25.Issuer, com.tools20022.repository.msg.GenericIdentification47.Issuer,
-						com.tools20022.repository.msg.GenericIdentification44.Issuer, com.tools20022.repository.msg.GenericIdentification41.Issuer, com.tools20022.repository.msg.GenericIdentification3.Issuer,
-						com.tools20022.repository.msg.GenericFinancialIdentification1.Issuer, com.tools20022.repository.msg.GenericAccountIdentification1.Issuer, com.tools20022.repository.msg.PersonIdentification3.Issuer,
-						com.tools20022.repository.msg.GenericOrganisationIdentification1.Issuer, com.tools20022.repository.msg.GenericPersonIdentification1.Issuer, com.tools20022.repository.msg.GenericIdentification19.Issuer,
-						com.tools20022.repository.msg.GenericIdentification24.Issuer, com.tools20022.repository.msg.GenericOrganisationIdentification2.Issuer, com.tools20022.repository.msg.GenericIdentification37.Issuer,
-						com.tools20022.repository.msg.GenericIdentification23.Issuer, com.tools20022.repository.msg.GenericIdentification18.Issuer, com.tools20022.repository.msg.GenericIdentification39.Issuer,
-						com.tools20022.repository.msg.GenericIdentification27.Issuer, com.tools20022.repository.msg.GenericIdentification22.Issuer, com.tools20022.repository.msg.GenericIdentification28.Issuer,
-						com.tools20022.repository.msg.GenericIdentification6.Issuer, com.tools20022.repository.msg.GenericIdentification5.Issuer, com.tools20022.repository.msg.GenericIdentification34.Issuer,
-						com.tools20022.repository.msg.GenericIdentification38.Issuer, com.tools20022.repository.msg.GenericIdentification29.Issuer, com.tools20022.repository.msg.GenericIdentification36.Issuer,
-						com.tools20022.repository.msg.ProprietaryBankTransactionCodeStructure1.Issuer, com.tools20022.repository.msg.GenericIdentification32.Issuer, com.tools20022.repository.msg.GenericIdentification35.Issuer,
-						com.tools20022.repository.msg.GenericIdentification48.Issuer, com.tools20022.repository.msg.GenericIdentification31.Issuer, com.tools20022.repository.msg.GenericIdentification33.Issuer,
-						com.tools20022.repository.msg.GenericIdentification2.Issuer, com.tools20022.repository.msg.GenericIdentification11.Issuer, com.tools20022.repository.msg.PersonIdentification2.Issuer,
-						com.tools20022.repository.msg.GenericIdentification16.Issuer, com.tools20022.repository.msg.GenericIdentification30.Issuer, com.tools20022.repository.msg.BillingServiceCommonIdentification1.Issuer,
-						com.tools20022.repository.msg.GenericIdentification12.Issuer, com.tools20022.repository.msg.GenericIdentification17.Issuer, com.tools20022.repository.msg.GenericIdentification40.Issuer,
-						com.tools20022.repository.msg.GenericIdentification15.Issuer, com.tools20022.repository.msg.GenericIdentification42.Issuer, com.tools20022.repository.msg.GenericIdentification51.Issuer,
-						com.tools20022.repository.msg.GenericIdentification55.Issuer, com.tools20022.repository.msg.GenericIdentification56.Issuer, com.tools20022.repository.msg.GenericIdentification65.Issuer,
-						com.tools20022.repository.msg.GenericIdentification63.Issuer, com.tools20022.repository.msg.GenericIdentification66.Issuer, com.tools20022.repository.msg.GenericIdentification62.Issuer,
-						com.tools20022.repository.msg.GenericIdentification60.Issuer, com.tools20022.repository.msg.GenericIdentification64.Issuer, com.tools20022.repository.msg.GenericIdentification67.Issuer,
-						com.tools20022.repository.msg.GenericIdentification53.Issuer, com.tools20022.repository.msg.GenericIdentification71.Issuer, com.tools20022.repository.msg.GenericIdentification73.Issuer,
-						com.tools20022.repository.msg.GenericIdentification74.Issuer, com.tools20022.repository.msg.GenericIdentification72.Issuer, com.tools20022.repository.msg.GenericIdentification70.Issuer,
-						com.tools20022.repository.msg.GenericIdentification75.Issuer, com.tools20022.repository.msg.GenericIdentification76.Issuer, com.tools20022.repository.msg.GenericIdentification77.Issuer,
-						com.tools20022.repository.msg.AlternateIdentification4.Issuer, com.tools20022.repository.msg.GenericIdentification82.Issuer, com.tools20022.repository.msg.GenericIdentification84.Issuer,
-						com.tools20022.repository.msg.GenericIdentification86.Issuer, com.tools20022.repository.msg.GenericIdentification144.Issuer, com.tools20022.repository.msg.GenericIdentification163.Issuer,
-						com.tools20022.repository.msg.GenericIdentification79.Issuer, com.tools20022.repository.msg.GenericIdentification94.Issuer, com.tools20022.repository.msg.GenericIdentification90.Issuer,
-						com.tools20022.repository.msg.GenericIdentification93.Issuer, com.tools20022.repository.msg.GenericIdentification92.Issuer, com.tools20022.repository.msg.GenericIdentification164.Issuer);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification1.mmIssuer, com.tools20022.repository.msg.GenericIdentification7.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification8.mmIssuer, com.tools20022.repository.msg.GenericIdentification9.mmIssuer, com.tools20022.repository.msg.GenericIdentification13.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification20.mmIssuer, com.tools20022.repository.msg.GenericIdentification25.mmIssuer, com.tools20022.repository.msg.GenericIdentification47.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification44.mmIssuer, com.tools20022.repository.msg.GenericIdentification41.mmIssuer, com.tools20022.repository.msg.GenericIdentification3.mmIssuer,
+						com.tools20022.repository.msg.GenericFinancialIdentification1.mmIssuer, com.tools20022.repository.msg.GenericAccountIdentification1.mmIssuer, com.tools20022.repository.msg.PersonIdentification3.mmIssuer,
+						com.tools20022.repository.msg.GenericOrganisationIdentification1.mmIssuer, com.tools20022.repository.msg.GenericPersonIdentification1.mmIssuer, com.tools20022.repository.msg.GenericIdentification19.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification24.mmIssuer, com.tools20022.repository.msg.GenericOrganisationIdentification2.mmIssuer, com.tools20022.repository.msg.GenericIdentification37.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification23.mmIssuer, com.tools20022.repository.msg.GenericIdentification18.mmIssuer, com.tools20022.repository.msg.GenericIdentification39.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification27.mmIssuer, com.tools20022.repository.msg.GenericIdentification22.mmIssuer, com.tools20022.repository.msg.GenericIdentification28.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification6.mmIssuer, com.tools20022.repository.msg.GenericIdentification5.mmIssuer, com.tools20022.repository.msg.GenericIdentification34.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification38.mmIssuer, com.tools20022.repository.msg.GenericIdentification29.mmIssuer, com.tools20022.repository.msg.GenericIdentification36.mmIssuer,
+						com.tools20022.repository.msg.ProprietaryBankTransactionCodeStructure1.mmIssuer, com.tools20022.repository.msg.GenericIdentification32.mmIssuer, com.tools20022.repository.msg.GenericIdentification35.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification48.mmIssuer, com.tools20022.repository.msg.GenericIdentification31.mmIssuer, com.tools20022.repository.msg.GenericIdentification33.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification2.mmIssuer, com.tools20022.repository.msg.GenericIdentification11.mmIssuer, com.tools20022.repository.msg.PersonIdentification2.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification16.mmIssuer, com.tools20022.repository.msg.GenericIdentification30.mmIssuer, com.tools20022.repository.msg.BillingServiceCommonIdentification1.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification12.mmIssuer, com.tools20022.repository.msg.GenericIdentification17.mmIssuer, com.tools20022.repository.msg.GenericIdentification40.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification15.mmIssuer, com.tools20022.repository.msg.GenericIdentification42.mmIssuer, com.tools20022.repository.msg.GenericIdentification51.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification55.mmIssuer, com.tools20022.repository.msg.GenericIdentification56.mmIssuer, com.tools20022.repository.msg.GenericIdentification65.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification63.mmIssuer, com.tools20022.repository.msg.GenericIdentification66.mmIssuer, com.tools20022.repository.msg.GenericIdentification62.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification60.mmIssuer, com.tools20022.repository.msg.GenericIdentification64.mmIssuer, com.tools20022.repository.msg.GenericIdentification67.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification53.mmIssuer, com.tools20022.repository.msg.GenericIdentification71.mmIssuer, com.tools20022.repository.msg.GenericIdentification73.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification74.mmIssuer, com.tools20022.repository.msg.GenericIdentification72.mmIssuer, com.tools20022.repository.msg.GenericIdentification70.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification75.mmIssuer, com.tools20022.repository.msg.GenericIdentification76.mmIssuer, com.tools20022.repository.msg.GenericIdentification77.mmIssuer,
+						com.tools20022.repository.msg.AlternateIdentification4.mmIssuer, com.tools20022.repository.msg.GenericIdentification82.mmIssuer, com.tools20022.repository.msg.GenericIdentification84.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification86.mmIssuer, com.tools20022.repository.msg.GenericIdentification144.mmIssuer, com.tools20022.repository.msg.GenericIdentification163.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification79.mmIssuer, com.tools20022.repository.msg.GenericIdentification94.mmIssuer, com.tools20022.repository.msg.GenericIdentification90.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification93.mmIssuer, com.tools20022.repository.msg.GenericIdentification92.mmIssuer, com.tools20022.repository.msg.GenericIdentification164.mmIssuer);
 				superType_lazy = () -> InformationPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IdentificationIssuerRole.Country, com.tools20022.repository.entity.IdentificationIssuerRole.EntityName,
-						com.tools20022.repository.entity.IdentificationIssuerRole.OwnerCode);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IdentificationIssuerRole.mmCountry, com.tools20022.repository.entity.IdentificationIssuerRole.mmEntityName,
+						com.tools20022.repository.entity.IdentificationIssuerRole.mmOwnerCode);
 				derivationComponent_lazy = () -> Arrays.asList(IdentificationSource1Choice.mmObject(), IdentificationSource3Choice.mmObject(), IdentificationSource4Choice.mmObject(), IdentificationSource2Choice.mmObject(),
 						IdentificationSource5Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public Max35Text getEntityName() {
+		return entityName;
+	}
+
+	public void setEntityName(Max35Text entityName) {
+		this.entityName = entityName;
+	}
+
+	public Max35Text getOwnerCode() {
+		return ownerCode;
+	}
+
+	public void setOwnerCode(Max35Text ownerCode) {
+		this.ownerCode = ownerCode;
 	}
 }

@@ -56,21 +56,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#Header
- * AcquirerAuthorisationInitiation.Header}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#mmHeader
+ * AcquirerAuthorisationInitiation.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#AuthorisationInitiation
- * AcquirerAuthorisationInitiation.AuthorisationInitiation}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#mmAuthorisationInitiation
+ * AcquirerAuthorisationInitiation.mmAuthorisationInitiation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#SecurityTrailer
- * AcquirerAuthorisationInitiation.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#mmSecurityTrailer
+ * AcquirerAuthorisationInitiation.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation#identifier
- * AcquirerAuthorisationInitiation.identifier}</li>
+ * messageDefinitionIdentifier} = {@code cain.001.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,6 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerAuthorisationInitiation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header17 header;
 	/**
 	 * Information related to the protocol management.
 	 * <p>
@@ -108,17 +107,18 @@ public class AcquirerAuthorisationInitiation {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header17.mmObject();
 		}
 	};
+	protected AcquirerAuthorisationInitiation1 authorisationInitiation;
 	/**
 	 * Information related to the authorisation initiation.
 	 * <p>
@@ -142,17 +142,18 @@ public class AcquirerAuthorisationInitiation {
 	 * definition} = "Information related to the authorisation initiation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AuthorisationInitiation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAuthorisationInitiation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AuthstnInitn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationInitiation";
 			definition = "Information related to the authorisation initiation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcquirerAuthorisationInitiation1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.<br>
 	 * It corresponds patially to ISO 8583 field number 53, completed by the
@@ -180,42 +181,15 @@ public class AcquirerAuthorisationInitiation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.\r\nIt corresponds patially to ISO 8583 field number 53, completed by the field number 64 or 128.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "cain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "cain";
-			messageFunctionality = "001";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -229,11 +203,42 @@ public class AcquirerAuthorisationInitiation {
 				rootElement = "Document";
 				xmlTag = "AcqrrAuthstnInitn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.Header, com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.AuthorisationInitiation,
-						com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.mmHeader, com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.mmAuthorisationInitiation,
+						com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "cain";
+						messageFunctionality = "001";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header17 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header17 header) {
+		this.header = header;
+	}
+
+	public AcquirerAuthorisationInitiation1 getAuthorisationInitiation() {
+		return authorisationInitiation;
+	}
+
+	public void setAuthorisationInitiation(AcquirerAuthorisationInitiation1 authorisationInitiation) {
+		this.authorisationInitiation = authorisationInitiation;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

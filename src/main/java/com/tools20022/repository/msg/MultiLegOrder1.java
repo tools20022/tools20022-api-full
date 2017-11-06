@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.MultilegReportType1Code;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides details about the multileg order.
@@ -35,12 +36,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultiLegOrder1#ReportTypeRequest
- * MultiLegOrder1.ReportTypeRequest}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MultiLegOrder1#OrderDetails
- * MultiLegOrder1.OrderDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MultiLegOrder1#LegGroupDetails
- * MultiLegOrder1.LegGroupDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.MultiLegOrder1#mmReportTypeRequest
+ * MultiLegOrder1.mmReportTypeRequest}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MultiLegOrder1#mmOrderDetails
+ * MultiLegOrder1.mmOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MultiLegOrder1#mmLegGroupDetails
+ * MultiLegOrder1.mmLegGroupDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MultiLegOrder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MultilegReportType1Code reportTypeRequest;
 	/**
 	 * Indicates the method of execution reporting requested by issuer of the
 	 * order.
@@ -94,7 +97,7 @@ public class MultiLegOrder1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportTypeRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportTypeRequest = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MultiLegOrder1.mmObject();
 			isDerived = false;
@@ -102,11 +105,12 @@ public class MultiLegOrder1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportTypeRequest";
 			definition = "Indicates the method of execution reporting requested by issuer of the order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> MultilegReportType1Code.mmObject();
 		}
 	};
+	protected Order3 orderDetails;
 	/**
 	 * Provides order details.
 	 * <p>
@@ -136,21 +140,22 @@ public class MultiLegOrder1 {
 	 * definition} = "Provides order details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MultiLegOrder1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
+			componentContext_lazy = () -> MultiLegOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetails";
 			definition = "Provides order details.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Order3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Order3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InstrumentLeg3> legGroupDetails;
 	/**
 	 * Provides details about each intrument leg.
 	 * <p>
@@ -162,8 +167,8 @@ public class MultiLegOrder1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#LegAdditionalInformation
-	 * Asset.LegAdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmLegAdditionalInformation
+	 * Asset.mmLegAdditionalInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,33 +186,57 @@ public class MultiLegOrder1 {
 	 * definition} = "Provides details about each intrument leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LegGroupDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLegGroupDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmLegAdditionalInformation;
 			componentContext_lazy = () -> MultiLegOrder1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.LegAdditionalInformation;
 			isDerived = false;
 			xmlTag = "LegGrpDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegGroupDetails";
 			definition = "Provides details about each intrument leg.";
 			minOccurs = 0;
-			type_lazy = () -> InstrumentLeg3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InstrumentLeg3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultiLegOrder1.ReportTypeRequest, com.tools20022.repository.msg.MultiLegOrder1.OrderDetails,
-						com.tools20022.repository.msg.MultiLegOrder1.LegGroupDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultiLegOrder1.mmReportTypeRequest, com.tools20022.repository.msg.MultiLegOrder1.mmOrderDetails,
+						com.tools20022.repository.msg.MultiLegOrder1.mmLegGroupDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MultiLegOrder1";
 				definition = "Provides details about the multileg order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MultilegReportType1Code getReportTypeRequest() {
+		return reportTypeRequest;
+	}
+
+	public void setReportTypeRequest(MultilegReportType1Code reportTypeRequest) {
+		this.reportTypeRequest = reportTypeRequest;
+	}
+
+	public Order3 getOrderDetails() {
+		return orderDetails;
+	}
+
+	public void setOrderDetails(com.tools20022.repository.msg.Order3 orderDetails) {
+		this.orderDetails = orderDetails;
+	}
+
+	public List<InstrumentLeg3> getLegGroupDetails() {
+		return legGroupDetails;
+	}
+
+	public void setLegGroupDetails(List<com.tools20022.repository.msg.InstrumentLeg3> legGroupDetails) {
+		this.legGroupDetails = legGroupDetails;
 	}
 }

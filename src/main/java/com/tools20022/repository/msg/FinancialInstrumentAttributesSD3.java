@@ -39,33 +39,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#PlaceAndName
- * FinancialInstrumentAttributesSD3.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#mmPlaceAndName
+ * FinancialInstrumentAttributesSD3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#DTCSecurityTransferableFlag
- * FinancialInstrumentAttributesSD3.DTCSecurityTransferableFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#mmDTCSecurityTransferableFlag
+ * FinancialInstrumentAttributesSD3.mmDTCSecurityTransferableFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#CSDDisbursedSecurityDetails
- * FinancialInstrumentAttributesSD3.CSDDisbursedSecurityDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#mmCSDDisbursedSecurityDetails
+ * FinancialInstrumentAttributesSD3.mmCSDDisbursedSecurityDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#DTCDisbursedSecurityAssetType
- * FinancialInstrumentAttributesSD3.DTCDisbursedSecurityAssetType}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#mmDTCDisbursedSecurityAssetType
+ * FinancialInstrumentAttributesSD3.mmDTCDisbursedSecurityAssetType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#DTCDisbursedSecurityAssetClass
- * FinancialInstrumentAttributesSD3.DTCDisbursedSecurityAssetClass}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#mmDTCDisbursedSecurityAssetClass
+ * FinancialInstrumentAttributesSD3.mmDTCDisbursedSecurityAssetClass}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#BabyBondDenomination
- * FinancialInstrumentAttributesSD3.BabyBondDenomination}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#mmBabyBondDenomination
+ * FinancialInstrumentAttributesSD3.mmBabyBondDenomination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#DisbursedSecurityEligibilityFlag
- * FinancialInstrumentAttributesSD3.DisbursedSecurityEligibilityFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD3#mmDisbursedSecurityEligibilityFlag
+ * FinancialInstrumentAttributesSD3.mmDisbursedSecurityEligibilityFlag}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAttributesSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -108,7 +109,7 @@ public class FinancialInstrumentAttributesSD3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD3.mmObject();
 			isDerived = false;
@@ -116,11 +117,12 @@ public class FinancialInstrumentAttributesSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected YesNoIndicator dTCSecurityTransferableFlag;
 	/**
 	 * Indicates whether or not the newly issued securities are transferable by
 	 * the agent. This flag is specific to DTC (The Depository Trust
@@ -153,7 +155,7 @@ public class FinancialInstrumentAttributesSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCSecurityTransferableFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCSecurityTransferableFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD3.mmObject();
 			isDerived = false;
@@ -161,11 +163,12 @@ public class FinancialInstrumentAttributesSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCSecurityTransferableFlag";
 			definition = "Indicates whether or not the newly issued securities are transferable by the agent. This flag is specific to DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributesSD4 cSDDisbursedSecurityDetails;
 	/**
 	 * Details of security that DTC will distribute as part of the entitlement.
 	 * <p>
@@ -195,7 +198,7 @@ public class FinancialInstrumentAttributesSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CSDDisbursedSecurityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCSDDisbursedSecurityDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD3.mmObject();
 			isDerived = false;
@@ -203,12 +206,13 @@ public class FinancialInstrumentAttributesSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDDisbursedSecurityDetails";
 			definition = "Details of security that DTC will distribute as part of the entitlement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAttributesSD4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmObject();
 		}
 	};
+	protected DTCAssetType1Code dTCDisbursedSecurityAssetType;
 	/**
 	 * Further classification of DTC disbursed security instruments into (issue)
 	 * asset types at DTC (The Depository Trust Corporation).
@@ -240,7 +244,7 @@ public class FinancialInstrumentAttributesSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCDisbursedSecurityAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCDisbursedSecurityAssetType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD3.mmObject();
 			isDerived = false;
@@ -248,11 +252,12 @@ public class FinancialInstrumentAttributesSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDisbursedSecurityAssetType";
 			definition = "Further classification of DTC disbursed security instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
 		}
 	};
+	protected AssetClass1Code dTCDisbursedSecurityAssetClass;
 	/**
 	 * Classification of DTC disbursed security instruments into asset classes
 	 * at DTC (The Depository Trust Corporation).
@@ -284,7 +289,7 @@ public class FinancialInstrumentAttributesSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCDisbursedSecurityAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCDisbursedSecurityAssetClass = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD3.mmObject();
 			isDerived = false;
@@ -292,11 +297,12 @@ public class FinancialInstrumentAttributesSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDisbursedSecurityAssetClass";
 			definition = "Classification of DTC disbursed security instruments into asset classes at DTC (The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
 		}
 	};
+	protected DecimalNumber babyBondDenomination;
 	/**
 	 * Dollar amount attributed to the bond when the par value is less than
 	 * 1000.
@@ -328,7 +334,7 @@ public class FinancialInstrumentAttributesSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BabyBondDenomination = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBabyBondDenomination = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD3.mmObject();
 			isDerived = false;
@@ -336,11 +342,12 @@ public class FinancialInstrumentAttributesSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BabyBondDenomination";
 			definition = "Dollar amount attributed to the bond when the par value is less than 1000.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected YesNoIndicator disbursedSecurityEligibilityFlag;
 	/**
 	 * Indicates whether the disbursed security is eligible at CSD (for example
 	 * in the US - DTC, The Depository Trust Corporation).
@@ -372,7 +379,7 @@ public class FinancialInstrumentAttributesSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DisbursedSecurityEligibilityFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDisbursedSecurityEligibilityFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD3.mmObject();
 			isDerived = false;
@@ -380,8 +387,8 @@ public class FinancialInstrumentAttributesSD3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisbursedSecurityEligibilityFlag";
 			definition = "Indicates whether the disbursed security is eligible at CSD (for example in the US -  DTC, The Depository Trust Corporation).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -389,16 +396,72 @@ public class FinancialInstrumentAttributesSD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.PlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.DTCSecurityTransferableFlag,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.CSDDisbursedSecurityDetails, com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.DTCDisbursedSecurityAssetType,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.DTCDisbursedSecurityAssetClass, com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.BabyBondDenomination,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.DisbursedSecurityEligibilityFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.mmDTCSecurityTransferableFlag,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.mmCSDDisbursedSecurityDetails, com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.mmDTCDisbursedSecurityAssetType,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.mmDTCDisbursedSecurityAssetClass, com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.mmBabyBondDenomination,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD3.mmDisbursedSecurityEligibilityFlag);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributesSD3";
 				definition = "Provides additional information regarding corporate action option securities movement security details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public YesNoIndicator getDTCSecurityTransferableFlag() {
+		return dTCSecurityTransferableFlag;
+	}
+
+	public void setDTCSecurityTransferableFlag(YesNoIndicator dTCSecurityTransferableFlag) {
+		this.dTCSecurityTransferableFlag = dTCSecurityTransferableFlag;
+	}
+
+	public FinancialInstrumentAttributesSD4 getCSDDisbursedSecurityDetails() {
+		return cSDDisbursedSecurityDetails;
+	}
+
+	public void setCSDDisbursedSecurityDetails(com.tools20022.repository.msg.FinancialInstrumentAttributesSD4 cSDDisbursedSecurityDetails) {
+		this.cSDDisbursedSecurityDetails = cSDDisbursedSecurityDetails;
+	}
+
+	public DTCAssetType1Code getDTCDisbursedSecurityAssetType() {
+		return dTCDisbursedSecurityAssetType;
+	}
+
+	public void setDTCDisbursedSecurityAssetType(DTCAssetType1Code dTCDisbursedSecurityAssetType) {
+		this.dTCDisbursedSecurityAssetType = dTCDisbursedSecurityAssetType;
+	}
+
+	public AssetClass1Code getDTCDisbursedSecurityAssetClass() {
+		return dTCDisbursedSecurityAssetClass;
+	}
+
+	public void setDTCDisbursedSecurityAssetClass(AssetClass1Code dTCDisbursedSecurityAssetClass) {
+		this.dTCDisbursedSecurityAssetClass = dTCDisbursedSecurityAssetClass;
+	}
+
+	public DecimalNumber getBabyBondDenomination() {
+		return babyBondDenomination;
+	}
+
+	public void setBabyBondDenomination(DecimalNumber babyBondDenomination) {
+		this.babyBondDenomination = babyBondDenomination;
+	}
+
+	public YesNoIndicator getDisbursedSecurityEligibilityFlag() {
+		return disbursedSecurityEligibilityFlag;
+	}
+
+	public void setDisbursedSecurityEligibilityFlag(YesNoIndicator disbursedSecurityEligibilityFlag) {
+		this.disbursedSecurityEligibilityFlag = disbursedSecurityEligibilityFlag;
 	}
 }

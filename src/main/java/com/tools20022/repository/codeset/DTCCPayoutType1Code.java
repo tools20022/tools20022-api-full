@@ -34,45 +34,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * DTCCPayoutTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#Cash
- * DTCCPayoutType1Code.Cash}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmCash
+ * DTCCPayoutType1Code.mmCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#Dividend
- * DTCCPayoutType1Code.Dividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmDividend
+ * DTCCPayoutType1Code.mmDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#ReturnOfCapital
- * DTCCPayoutType1Code.ReturnOfCapital}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmReturnOfCapital
+ * DTCCPayoutType1Code.mmReturnOfCapital}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#ShortTermCapitalGains
- * DTCCPayoutType1Code.ShortTermCapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmShortTermCapitalGains
+ * DTCCPayoutType1Code.mmShortTermCapitalGains}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#LongTermCapitalGains
- * DTCCPayoutType1Code.LongTermCapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmLongTermCapitalGains
+ * DTCCPayoutType1Code.mmLongTermCapitalGains}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#CapitalGains
- * DTCCPayoutType1Code.CapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmCapitalGains
+ * DTCCPayoutType1Code.mmCapitalGains}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#Premium
- * DTCCPayoutType1Code.Premium}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmPremium
+ * DTCCPayoutType1Code.mmPremium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#Principal
- * DTCCPayoutType1Code.Principal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmPrincipal
+ * DTCCPayoutType1Code.mmPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#Interest
- * DTCCPayoutType1Code.Interest}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmInterest
+ * DTCCPayoutType1Code.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#Franked
- * DTCCPayoutType1Code.Franked}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmFranked
+ * DTCCPayoutType1Code.mmFranked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#Unfranked
- * DTCCPayoutType1Code.Unfranked}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code#mmUnfranked
+ * DTCCPayoutType1Code.mmUnfranked}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -110,7 +110,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
@@ -133,7 +133,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "Dividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode Dividend = new MMCode() {
+	public static final MMCode mmDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
@@ -156,7 +156,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "ReturnOfCapital"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReturnOfCapital = new MMCode() {
+	public static final MMCode mmReturnOfCapital = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnOfCapital";
@@ -179,7 +179,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "ShortTermCapitalGains"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShortTermCapitalGains = new MMCode() {
+	public static final MMCode mmShortTermCapitalGains = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortTermCapitalGains";
@@ -202,7 +202,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "LongTermCapitalGains"</li>
 	 * </ul>
 	 */
-	public static final MMCode LongTermCapitalGains = new MMCode() {
+	public static final MMCode mmLongTermCapitalGains = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongTermCapitalGains";
@@ -225,7 +225,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "CapitalGains"</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalGains = new MMCode() {
+	public static final MMCode mmCapitalGains = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGains";
@@ -248,7 +248,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "Premium"</li>
 	 * </ul>
 	 */
-	public static final MMCode Premium = new MMCode() {
+	public static final MMCode mmPremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
@@ -271,7 +271,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "Principal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Principal = new MMCode() {
+	public static final MMCode mmPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Principal";
@@ -294,7 +294,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "Interest"</li>
 	 * </ul>
 	 */
-	public static final MMCode Interest = new MMCode() {
+	public static final MMCode mmInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
@@ -317,7 +317,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "Franked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Franked = new MMCode() {
+	public static final MMCode mmFranked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Franked";
@@ -340,7 +340,7 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	 * name} = "Unfranked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unfranked = new MMCode() {
+	public static final MMCode mmUnfranked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfranked";
@@ -351,16 +351,16 @@ public class DTCCPayoutType1Code extends DTCCPayoutTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCCPayoutType1Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined payout types.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCPayoutType1Code.Cash, com.tools20022.repository.codeset.DTCCPayoutType1Code.Dividend,
-						com.tools20022.repository.codeset.DTCCPayoutType1Code.ReturnOfCapital, com.tools20022.repository.codeset.DTCCPayoutType1Code.ShortTermCapitalGains,
-						com.tools20022.repository.codeset.DTCCPayoutType1Code.LongTermCapitalGains, com.tools20022.repository.codeset.DTCCPayoutType1Code.CapitalGains, com.tools20022.repository.codeset.DTCCPayoutType1Code.Premium,
-						com.tools20022.repository.codeset.DTCCPayoutType1Code.Principal, com.tools20022.repository.codeset.DTCCPayoutType1Code.Interest, com.tools20022.repository.codeset.DTCCPayoutType1Code.Franked,
-						com.tools20022.repository.codeset.DTCCPayoutType1Code.Unfranked);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCPayoutType1Code.mmCash, com.tools20022.repository.codeset.DTCCPayoutType1Code.mmDividend,
+						com.tools20022.repository.codeset.DTCCPayoutType1Code.mmReturnOfCapital, com.tools20022.repository.codeset.DTCCPayoutType1Code.mmShortTermCapitalGains,
+						com.tools20022.repository.codeset.DTCCPayoutType1Code.mmLongTermCapitalGains, com.tools20022.repository.codeset.DTCCPayoutType1Code.mmCapitalGains, com.tools20022.repository.codeset.DTCCPayoutType1Code.mmPremium,
+						com.tools20022.repository.codeset.DTCCPayoutType1Code.mmPrincipal, com.tools20022.repository.codeset.DTCCPayoutType1Code.mmInterest, com.tools20022.repository.codeset.DTCCPayoutType1Code.mmFranked,
+						com.tools20022.repository.codeset.DTCCPayoutType1Code.mmUnfranked);
 				trace_lazy = () -> DTCCPayoutTypeCode.mmObject();
 			}
 		});

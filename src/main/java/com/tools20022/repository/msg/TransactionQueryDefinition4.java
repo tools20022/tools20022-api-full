@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionQueryDefinition4#QueryType
- * TransactionQueryDefinition4.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionQueryDefinition4#mmQueryType
+ * TransactionQueryDefinition4.mmQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionQueryDefinition4#TransactionCriteria
- * TransactionQueryDefinition4.TransactionCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionQueryDefinition4#mmTransactionCriteria
+ * TransactionQueryDefinition4.mmTransactionCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionQueryDefinition4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QueryType2Code queryType;
 	/**
 	 * Specifies the type of matching items to be returned in the response to
 	 * the query.
@@ -91,7 +92,7 @@ public class TransactionQueryDefinition4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransactionQueryDefinition4.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class TransactionQueryDefinition4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	protected TransactionCriteriaDefinition3Choice transactionCriteria;
 	/**
 	 * Defines the transaction query criteria.
 	 * <p>
@@ -131,7 +133,7 @@ public class TransactionQueryDefinition4 {
 	 * definition} = "Defines the transaction query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionQueryDefinition4.mmObject();
 			isDerived = false;
@@ -139,23 +141,39 @@ public class TransactionQueryDefinition4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCriteria";
 			definition = "Defines the transaction query criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionCriteriaDefinition3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> TransactionCriteriaDefinition3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionQueryDefinition4.QueryType, com.tools20022.repository.msg.TransactionQueryDefinition4.TransactionCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionQueryDefinition4.mmQueryType, com.tools20022.repository.msg.TransactionQueryDefinition4.mmTransactionCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionQueryDefinition4";
 				definition = "Defines the query criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QueryType2Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(QueryType2Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public TransactionCriteriaDefinition3Choice getTransactionCriteria() {
+		return transactionCriteria;
+	}
+
+	public void setTransactionCriteria(TransactionCriteriaDefinition3Choice transactionCriteria) {
+		this.transactionCriteria = transactionCriteria;
 	}
 }

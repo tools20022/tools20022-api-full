@@ -33,33 +33,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#SystemDateIndicator
- * BusinessDayReturnCriteria2.SystemDateIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#mmSystemDateIndicator
+ * BusinessDayReturnCriteria2.mmSystemDateIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#SystemStatusIndicator
- * BusinessDayReturnCriteria2.SystemStatusIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#mmSystemStatusIndicator
+ * BusinessDayReturnCriteria2.mmSystemStatusIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#SystemCurrencyIndicator
- * BusinessDayReturnCriteria2.SystemCurrencyIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#mmSystemCurrencyIndicator
+ * BusinessDayReturnCriteria2.mmSystemCurrencyIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#ClosurePeriodIndicator
- * BusinessDayReturnCriteria2.ClosurePeriodIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#mmClosurePeriodIndicator
+ * BusinessDayReturnCriteria2.mmClosurePeriodIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#EventIndicator
- * BusinessDayReturnCriteria2.EventIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#mmEventIndicator
+ * BusinessDayReturnCriteria2.mmEventIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#SessionPeriodIndicator
- * BusinessDayReturnCriteria2.SessionPeriodIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#mmSessionPeriodIndicator
+ * BusinessDayReturnCriteria2.mmSessionPeriodIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#EventTypeIndicator
- * BusinessDayReturnCriteria2.EventTypeIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayReturnCriteria2#mmEventTypeIndicator
+ * BusinessDayReturnCriteria2.mmEventTypeIndicator}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessDayReturnCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RequestedIndicator systemDateIndicator;
 	/**
 	 * Indicates whether the system date is requested.
 	 * <p>
@@ -102,7 +103,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the system date is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemDateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemDateIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -110,11 +111,12 @@ public class BusinessDayReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDateIndicator";
 			definition = "Indicates whether the system date is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator systemStatusIndicator;
 	/**
 	 * Indicates whether the system status is requested.
 	 * <p>
@@ -143,7 +145,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the system status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemStatusIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -151,11 +153,12 @@ public class BusinessDayReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemStatusIndicator";
 			definition = "Indicates whether the system status is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator systemCurrencyIndicator;
 	/**
 	 * Indicates whether the system currency is requested.
 	 * <p>
@@ -184,7 +187,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the system currency is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemCurrencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemCurrencyIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -192,11 +195,12 @@ public class BusinessDayReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemCurrencyIndicator";
 			definition = "Indicates whether the system currency is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator closurePeriodIndicator;
 	/**
 	 * Indicates whether the closure information is requested.
 	 * <p>
@@ -225,7 +229,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the closure information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosurePeriodIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosurePeriodIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -233,11 +237,12 @@ public class BusinessDayReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosurePeriodIndicator";
 			definition = "Indicates whether the closure information is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator eventIndicator;
 	/**
 	 * Indicates whether the events are requested.
 	 * <p>
@@ -266,7 +271,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the events are requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -274,11 +279,12 @@ public class BusinessDayReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventIndicator";
 			definition = "Indicates whether the events are requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator sessionPeriodIndicator;
 	/**
 	 * Indicates whether the session period is requested.
 	 * <p>
@@ -307,7 +313,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the session period is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SessionPeriodIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSessionPeriodIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -315,11 +321,12 @@ public class BusinessDayReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SessionPeriodIndicator";
 			definition = "Indicates whether the session period is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	protected RequestedIndicator eventTypeIndicator;
 	/**
 	 * Indicates whether the system event type is requested.
 	 * <p>
@@ -348,7 +355,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the system event type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventTypeIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -356,8 +363,8 @@ public class BusinessDayReturnCriteria2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeIndicator";
 			definition = "Indicates whether the system event type is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
@@ -365,16 +372,72 @@ public class BusinessDayReturnCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayReturnCriteria2.SystemDateIndicator, com.tools20022.repository.msg.BusinessDayReturnCriteria2.SystemStatusIndicator,
-						com.tools20022.repository.msg.BusinessDayReturnCriteria2.SystemCurrencyIndicator, com.tools20022.repository.msg.BusinessDayReturnCriteria2.ClosurePeriodIndicator,
-						com.tools20022.repository.msg.BusinessDayReturnCriteria2.EventIndicator, com.tools20022.repository.msg.BusinessDayReturnCriteria2.SessionPeriodIndicator,
-						com.tools20022.repository.msg.BusinessDayReturnCriteria2.EventTypeIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmSystemDateIndicator, com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmSystemStatusIndicator,
+						com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmSystemCurrencyIndicator, com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmClosurePeriodIndicator,
+						com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmEventIndicator, com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmSessionPeriodIndicator,
+						com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmEventTypeIndicator);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayReturnCriteria2";
 				definition = "Defines the criteria used to report on business day information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RequestedIndicator getSystemDateIndicator() {
+		return systemDateIndicator;
+	}
+
+	public void setSystemDateIndicator(RequestedIndicator systemDateIndicator) {
+		this.systemDateIndicator = systemDateIndicator;
+	}
+
+	public RequestedIndicator getSystemStatusIndicator() {
+		return systemStatusIndicator;
+	}
+
+	public void setSystemStatusIndicator(RequestedIndicator systemStatusIndicator) {
+		this.systemStatusIndicator = systemStatusIndicator;
+	}
+
+	public RequestedIndicator getSystemCurrencyIndicator() {
+		return systemCurrencyIndicator;
+	}
+
+	public void setSystemCurrencyIndicator(RequestedIndicator systemCurrencyIndicator) {
+		this.systemCurrencyIndicator = systemCurrencyIndicator;
+	}
+
+	public RequestedIndicator getClosurePeriodIndicator() {
+		return closurePeriodIndicator;
+	}
+
+	public void setClosurePeriodIndicator(RequestedIndicator closurePeriodIndicator) {
+		this.closurePeriodIndicator = closurePeriodIndicator;
+	}
+
+	public RequestedIndicator getEventIndicator() {
+		return eventIndicator;
+	}
+
+	public void setEventIndicator(RequestedIndicator eventIndicator) {
+		this.eventIndicator = eventIndicator;
+	}
+
+	public RequestedIndicator getSessionPeriodIndicator() {
+		return sessionPeriodIndicator;
+	}
+
+	public void setSessionPeriodIndicator(RequestedIndicator sessionPeriodIndicator) {
+		this.sessionPeriodIndicator = sessionPeriodIndicator;
+	}
+
+	public RequestedIndicator getEventTypeIndicator() {
+		return eventTypeIndicator;
+	}
+
+	public void setEventTypeIndicator(RequestedIndicator eventTypeIndicator) {
+		this.eventTypeIndicator = eventTypeIndicator;
 	}
 }

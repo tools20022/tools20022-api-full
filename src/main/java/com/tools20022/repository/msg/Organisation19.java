@@ -36,15 +36,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation19#Identification
- * Organisation19.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation19#CommonName
- * Organisation19.CommonName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Organisation19#SelectedLanguage
- * Organisation19.SelectedLanguage}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation19#SchemeData
- * Organisation19.SchemeData}</li>
+ * {@linkplain com.tools20022.repository.msg.Organisation19#mmIdentification
+ * Organisation19.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation19#mmCommonName
+ * Organisation19.mmCommonName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation19#mmSelectedLanguage
+ * Organisation19.mmSelectedLanguage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation19#mmSchemeData
+ * Organisation19.mmSchemeData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Organisation19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification32 identification;
 	/**
 	 * Identification of the card acceptor.
 	 * <p>
@@ -83,8 +85,8 @@ public class Organisation19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,26 +105,27 @@ public class Organisation19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Organisation18#Identification
-	 * Organisation18.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation18#mmIdentification
+	 * Organisation18.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Organisation19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the card acceptor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.mmIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected Max70Text commonName;
 	/**
 	 * Name of the card acceptor as appearing on the receipt or the statement of
 	 * account of the cardholder.<br>
@@ -137,8 +140,8 @@ public class Organisation19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationName#ShortName
-	 * OrganisationName.ShortName}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationName#mmShortName
+	 * OrganisationName.mmShortName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,25 +162,26 @@ public class Organisation19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Organisation18#CommonName
-	 * Organisation18.CommonName}</li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation18#mmCommonName
+	 * Organisation18.mmCommonName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommonName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmShortName;
 			componentContext_lazy = () -> Organisation19.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.ShortName;
 			isDerived = false;
 			xmlTag = "CmonNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonName";
 			definition = "Name of the card acceptor as appearing on the receipt or the statement of account of the cardholder.\r\nIt correspond to the ISO 8583, field number 43.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.CommonName;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.mmCommonName;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected LanguageCode selectedLanguage;
 	/**
 	 * Selected language of the card acceptor. Reference ISO 639-1 (alpha-2) and
 	 * ISO 639-2 (alpha-3).
@@ -208,11 +212,11 @@ public class Organisation19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Organisation18#SelectedLanguage
-	 * Organisation18.SelectedLanguage}</li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation18#mmSelectedLanguage
+	 * Organisation18.mmSelectedLanguage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SelectedLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSelectedLanguage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Organisation19.mmObject();
 			isDerived = false;
@@ -220,12 +224,13 @@ public class Organisation19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectedLanguage";
 			definition = "Selected language of the card acceptor. Reference ISO 639-1 (alpha-2) and ISO 639-2 (alpha-3).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.SelectedLanguage;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.mmSelectedLanguage;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	protected Max140Text schemeData;
 	/**
 	 * Additional card acceptor data required by a card scheme.
 	 * <p>
@@ -253,11 +258,11 @@ public class Organisation19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Organisation18#SchemeData
-	 * Organisation18.SchemeData}</li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation18#mmSchemeData
+	 * Organisation18.mmSchemeData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SchemeData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSchemeData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Organisation19.mmObject();
 			isDerived = false;
@@ -265,9 +270,9 @@ public class Organisation19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeData";
 			definition = "Additional card acceptor data required by a card scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.SchemeData;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.mmSchemeData;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -275,10 +280,10 @@ public class Organisation19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation19.Identification, com.tools20022.repository.msg.Organisation19.CommonName, com.tools20022.repository.msg.Organisation19.SelectedLanguage,
-						com.tools20022.repository.msg.Organisation19.SchemeData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation19.mmIdentification, com.tools20022.repository.msg.Organisation19.mmCommonName,
+						com.tools20022.repository.msg.Organisation19.mmSelectedLanguage, com.tools20022.repository.msg.Organisation19.mmSchemeData);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Organisation19";
 				definition = "Card acceptor performing the transaction.";
@@ -286,5 +291,37 @@ public class Organisation19 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification32 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+		this.identification = identification;
+	}
+
+	public Max70Text getCommonName() {
+		return commonName;
+	}
+
+	public void setCommonName(Max70Text commonName) {
+		this.commonName = commonName;
+	}
+
+	public LanguageCode getSelectedLanguage() {
+		return selectedLanguage;
+	}
+
+	public void setSelectedLanguage(LanguageCode selectedLanguage) {
+		this.selectedLanguage = selectedLanguage;
+	}
+
+	public Max140Text getSchemeData() {
+		return schemeData;
+	}
+
+	public void setSchemeData(Max140Text schemeData) {
+		this.schemeData = schemeData;
 	}
 }

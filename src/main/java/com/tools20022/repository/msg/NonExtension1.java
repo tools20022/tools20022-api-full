@@ -39,20 +39,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonExtension1#NotificationPeriod
- * NonExtension1.NotificationPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.NonExtension1#mmNotificationPeriod
+ * NonExtension1.mmNotificationPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonExtension1#NotificationMethod
- * NonExtension1.NotificationMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.NonExtension1#mmNotificationMethod
+ * NonExtension1.mmNotificationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonExtension1#NotificationRecipientType
- * NonExtension1.NotificationRecipientType}</li>
+ * {@linkplain com.tools20022.repository.msg.NonExtension1#mmNotificationRecipientType
+ * NonExtension1.mmNotificationRecipientType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonExtension1#NotificationRecipientName
- * NonExtension1.NotificationRecipientName}</li>
+ * {@linkplain com.tools20022.repository.msg.NonExtension1#mmNotificationRecipientName
+ * NonExtension1.mmNotificationRecipientName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NonExtension1#NotificationRecipientAddress
- * NonExtension1.NotificationRecipientAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.NonExtension1#mmNotificationRecipientAddress
+ * NonExtension1.mmNotificationRecipientAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NonExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number notificationPeriod;
 	/**
 	 * Minimum number of days prior to the then current expiry date by which
 	 * notice of non-extension must be sent.
@@ -89,8 +90,8 @@ public class NonExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension#NonExtensionNoticePeriod
-	 * UndertakingExtension.NonExtensionNoticePeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingExtension#mmNonExtensionNoticePeriod
+	 * UndertakingExtension.mmNonExtensionNoticePeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +111,21 @@ public class NonExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.mmNonExtensionNoticePeriod;
 			componentContext_lazy = () -> NonExtension1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.NonExtensionNoticePeriod;
 			isDerived = false;
 			xmlTag = "NtfctnPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationPeriod";
 			definition = "Minimum number of days prior to the then current expiry date by which notice of non-extension must be sent. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected CommunicationMethod1Choice notificationMethod;
 	/**
 	 * Method by which the notice of non-extension is intended to be delivered.
 	 * <p>
@@ -137,8 +139,8 @@ public class NonExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Presentation#CommunicationMethod
-	 * Presentation.CommunicationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Presentation#mmCommunicationMethod
+	 * Presentation.mmCommunicationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,20 +160,21 @@ public class NonExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> NonExtension1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.CommunicationMethod;
 			isDerived = false;
 			xmlTag = "NtfctnMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationMethod";
 			definition = "Method by which the notice of non-extension is intended to be delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CommunicationMethod1Choice.mmObject();
 		}
 	};
+	protected PartyType1Choice notificationRecipientType;
 	/**
 	 * Type of party to whom the notice of non-extension is intended to be
 	 * delivered.
@@ -184,8 +187,8 @@ public class NonExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,21 +208,22 @@ public class NonExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NotificationRecipientType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNotificationRecipientType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> NonExtension1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "NtfctnRcptTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationRecipientType";
 			definition = "Type of party to whom the notice of non-extension is intended to be delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyType1Choice.mmObject();
 		}
 	};
+	protected Max140Text notificationRecipientName;
 	/**
 	 * Name of party to whom the notice of non-extension is intended to be
 	 * delivered.
@@ -233,8 +237,8 @@ public class NonExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,20 +258,21 @@ public class NonExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationRecipientName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationRecipientName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> NonExtension1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "NtfctnRcptNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationRecipientName";
 			definition = "Name of party to whom the notice of non-extension is intended to be delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PostalAddress6 notificationRecipientAddress;
 	/**
 	 * Address of party to whom the notice of non-extension is intended to be
 	 * delivered.
@@ -302,33 +307,74 @@ public class NonExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationRecipientAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationRecipientAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NonExtension1.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> NonExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnRcptAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationRecipientAddress";
 			definition = "Address of party to whom the notice of non-extension is intended to be delivered.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PostalAddress6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PostalAddress6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonExtension1.NotificationPeriod, com.tools20022.repository.msg.NonExtension1.NotificationMethod,
-						com.tools20022.repository.msg.NonExtension1.NotificationRecipientType, com.tools20022.repository.msg.NonExtension1.NotificationRecipientName, com.tools20022.repository.msg.NonExtension1.NotificationRecipientAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonExtension1.mmNotificationPeriod, com.tools20022.repository.msg.NonExtension1.mmNotificationMethod,
+						com.tools20022.repository.msg.NonExtension1.mmNotificationRecipientType, com.tools20022.repository.msg.NonExtension1.mmNotificationRecipientName,
+						com.tools20022.repository.msg.NonExtension1.mmNotificationRecipientAddress);
 				trace_lazy = () -> UndertakingExtension.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NonExtension1";
 				definition = "Non-extension information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getNotificationPeriod() {
+		return notificationPeriod;
+	}
+
+	public void setNotificationPeriod(Number notificationPeriod) {
+		this.notificationPeriod = notificationPeriod;
+	}
+
+	public CommunicationMethod1Choice getNotificationMethod() {
+		return notificationMethod;
+	}
+
+	public void setNotificationMethod(CommunicationMethod1Choice notificationMethod) {
+		this.notificationMethod = notificationMethod;
+	}
+
+	public PartyType1Choice getNotificationRecipientType() {
+		return notificationRecipientType;
+	}
+
+	public void setNotificationRecipientType(PartyType1Choice notificationRecipientType) {
+		this.notificationRecipientType = notificationRecipientType;
+	}
+
+	public Max140Text getNotificationRecipientName() {
+		return notificationRecipientName;
+	}
+
+	public void setNotificationRecipientName(Max140Text notificationRecipientName) {
+		this.notificationRecipientName = notificationRecipientName;
+	}
+
+	public PostalAddress6 getNotificationRecipientAddress() {
+		return notificationRecipientAddress;
+	}
+
+	public void setNotificationRecipientAddress(com.tools20022.repository.msg.PostalAddress6 notificationRecipientAddress) {
+		this.notificationRecipientAddress = notificationRecipientAddress;
 	}
 }

@@ -33,39 +33,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * FundOrderTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType7Code#All
- * FundOrderType7Code.All}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmAll
+ * FundOrderType7Code.mmAll}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#SecuritiesPurchase
- * FundOrderType7Code.SecuritiesPurchase}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmSecuritiesPurchase
+ * FundOrderType7Code.mmSecuritiesPurchase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#SecuritiesSale
- * FundOrderType7Code.SecuritiesSale}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmSecuritiesSale
+ * FundOrderType7Code.mmSecuritiesSale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#SwitchFrom
- * FundOrderType7Code.SwitchFrom}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmSwitchFrom
+ * FundOrderType7Code.mmSwitchFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#SwitchTo
- * FundOrderType7Code.SwitchTo}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmSwitchTo
+ * FundOrderType7Code.mmSwitchTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#TransferIn
- * FundOrderType7Code.TransferIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmTransferIn
+ * FundOrderType7Code.mmTransferIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#TransferOut
- * FundOrderType7Code.TransferOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmTransferOut
+ * FundOrderType7Code.mmTransferOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#Subscription
- * FundOrderType7Code.Subscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmSubscription
+ * FundOrderType7Code.mmSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#Redemption
- * FundOrderType7Code.Redemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmRedemption
+ * FundOrderType7Code.mmRedemption}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,7 +95,7 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "All"</li>
 	 * </ul>
 	 */
-	public static final MMCode All = new MMCode() {
+	public static final MMCode mmAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
@@ -118,7 +118,7 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "SecuritiesPurchase"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesPurchase = new MMCode() {
+	public static final MMCode mmSecuritiesPurchase = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPurchase";
@@ -141,7 +141,7 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "SecuritiesSale"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesSale = new MMCode() {
+	public static final MMCode mmSecuritiesSale = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSale";
@@ -164,7 +164,7 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "SwitchFrom"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwitchFrom = new MMCode() {
+	public static final MMCode mmSwitchFrom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchFrom";
@@ -187,7 +187,7 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "SwitchTo"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwitchTo = new MMCode() {
+	public static final MMCode mmSwitchTo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchTo";
@@ -210,7 +210,7 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "TransferIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferIn = new MMCode() {
+	public static final MMCode mmTransferIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIn";
@@ -233,7 +233,7 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "TransferOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferOut = new MMCode() {
+	public static final MMCode mmTransferOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOut";
@@ -256,7 +256,7 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "Subscription"</li>
 	 * </ul>
 	 */
-	public static final MMCode Subscription = new MMCode() {
+	public static final MMCode mmSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
@@ -279,7 +279,7 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode Redemption = new MMCode() {
+	public static final MMCode mmRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
@@ -290,14 +290,14 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType7Code";
 				definition = "Specifies the fund order type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType7Code.All, com.tools20022.repository.codeset.FundOrderType7Code.SecuritiesPurchase,
-						com.tools20022.repository.codeset.FundOrderType7Code.SecuritiesSale, com.tools20022.repository.codeset.FundOrderType7Code.SwitchFrom, com.tools20022.repository.codeset.FundOrderType7Code.SwitchTo,
-						com.tools20022.repository.codeset.FundOrderType7Code.TransferIn, com.tools20022.repository.codeset.FundOrderType7Code.TransferOut, com.tools20022.repository.codeset.FundOrderType7Code.Subscription,
-						com.tools20022.repository.codeset.FundOrderType7Code.Redemption);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType7Code.mmAll, com.tools20022.repository.codeset.FundOrderType7Code.mmSecuritiesPurchase,
+						com.tools20022.repository.codeset.FundOrderType7Code.mmSecuritiesSale, com.tools20022.repository.codeset.FundOrderType7Code.mmSwitchFrom, com.tools20022.repository.codeset.FundOrderType7Code.mmSwitchTo,
+						com.tools20022.repository.codeset.FundOrderType7Code.mmTransferIn, com.tools20022.repository.codeset.FundOrderType7Code.mmTransferOut, com.tools20022.repository.codeset.FundOrderType7Code.mmSubscription,
+						com.tools20022.repository.codeset.FundOrderType7Code.mmRedemption);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
 			}
 		});

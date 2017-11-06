@@ -35,8 +35,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitReport2#LimitOrBusinessErrorRule
- * LimitReport2.LimitOrBusinessErrorRule}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitReport2#mmLimitOrBusinessErrorRule
+ * LimitReport2.mmLimitOrBusinessErrorRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -44,12 +44,12 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitReport2#LimitIdentification
- * LimitReport2.LimitIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport2#Limit
- * LimitReport2.Limit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport2#BusinessError
- * LimitReport2.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitReport2#mmLimitIdentification
+ * LimitReport2.mmLimitIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport2#mmLimit
+ * LimitReport2.mmLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport2#mmBusinessError
+ * LimitReport2.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -75,6 +75,7 @@ import java.util.function.Supplier;
 public class LimitReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected LimitIdentificationDetails2 limitIdentification;
 	/**
 	 * Identification of the limit on which information is requested.
 	 * <p>
@@ -107,21 +108,22 @@ public class LimitReport2 {
 	 * "Identification of the limit on which information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitReport2.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitReport2.mmObject();
 			isDerived = false;
 			xmlTag = "LmtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the limit on which information is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitIdentificationDetails2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails2.mmObject();
 		}
 	};
+	protected LimitDetails3 limit;
 	/**
 	 * Requested information on the limit.
 	 * <p>
@@ -152,21 +154,22 @@ public class LimitReport2 {
 	 * definition} = "Requested information on the limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Limit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimit = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitReport2.mmObject();
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
+			componentContext_lazy = () -> LimitReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Lmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "Requested information on the limit.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> LimitDetails3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LimitDetails3.mmObject();
 		}
 	};
+	protected ErrorHandling2 businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -192,7 +195,7 @@ public class LimitReport2 {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitReport2.mmObject();
 			isDerived = false;
@@ -200,10 +203,10 @@ public class LimitReport2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ErrorHandling2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
 		}
 	};
 	/**
@@ -214,10 +217,11 @@ public class LimitReport2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.LimitReport2#Limit
-	 * LimitReport2.Limit}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LimitReport2#BusinessError
-	 * LimitReport2.BusinessError}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LimitReport2#mmLimit
+	 * LimitReport2.mmLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitReport2#mmBusinessError
+	 * LimitReport2.mmBusinessError}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -235,22 +239,22 @@ public class LimitReport2 {
 	 * "Either Limit or BusinessError must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor LimitOrBusinessErrorRule = new MMXor() {
+	public static final MMXor mmLimitOrBusinessErrorRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOrBusinessErrorRule";
 			definition = "Either Limit or BusinessError must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport2.Limit, com.tools20022.repository.msg.LimitReport2.BusinessError);
 			messageComponent_lazy = () -> LimitReport2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport2.mmLimit, com.tools20022.repository.msg.LimitReport2.mmBusinessError);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport2.LimitIdentification, com.tools20022.repository.msg.LimitReport2.Limit, com.tools20022.repository.msg.LimitReport2.BusinessError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport2.mmLimitIdentification, com.tools20022.repository.msg.LimitReport2.mmLimit, com.tools20022.repository.msg.LimitReport2.mmBusinessError);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -261,9 +265,33 @@ public class LimitReport2 {
 				})).get();
 				name = "LimitReport2";
 				definition = "Reports either on the risk management limit or on a business error.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport2.LimitOrBusinessErrorRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport2.mmLimitOrBusinessErrorRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public LimitIdentificationDetails2 getLimitIdentification() {
+		return limitIdentification;
+	}
+
+	public void setLimitIdentification(com.tools20022.repository.msg.LimitIdentificationDetails2 limitIdentification) {
+		this.limitIdentification = limitIdentification;
+	}
+
+	public LimitDetails3 getLimit() {
+		return limit;
+	}
+
+	public void setLimit(com.tools20022.repository.msg.LimitDetails3 limit) {
+		this.limit = limit;
+	}
+
+	public ErrorHandling2 getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
+		this.businessError = businessError;
 	}
 }

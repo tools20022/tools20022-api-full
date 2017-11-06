@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus2Code#SentToNextParty
- * CancellationStatus2Code.SentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus2Code#mmSentToNextParty
+ * CancellationStatus2Code.mmSentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus2Code#Accepted
- * CancellationStatus2Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus2Code#mmAccepted
+ * CancellationStatus2Code.mmAccepted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class CancellationStatus2Code extends CancellationStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode SentToNextParty = new MMCode() {
+	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
@@ -104,7 +104,7 @@ public class CancellationStatus2Code extends CancellationStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -115,12 +115,12 @@ public class CancellationStatus2Code extends CancellationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STNP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus2Code";
 				definition = "Specifies the cancellation status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationStatus2Code.SentToNextParty, com.tools20022.repository.codeset.CancellationStatus2Code.Accepted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationStatus2Code.mmSentToNextParty, com.tools20022.repository.codeset.CancellationStatus2Code.mmAccepted);
 				trace_lazy = () -> CancellationStatusCode.mmObject();
 			}
 		});

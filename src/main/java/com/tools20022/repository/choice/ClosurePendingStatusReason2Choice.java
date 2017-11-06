@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClosurePendingStatusReason2Choice#Code
- * ClosurePendingStatusReason2Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.ClosurePendingStatusReason2Choice#mmCode
+ * ClosurePendingStatusReason2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClosurePendingStatusReason2Choice#Proprietary
- * ClosurePendingStatusReason2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ClosurePendingStatusReason2Choice#mmProprietary
+ * ClosurePendingStatusReason2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClosurePendingStatusReason2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ClosurePendingStatusReason1Code code;
 	/**
 	 * Reason for the closure pending status expressed as a code.
 	 * <p>
@@ -94,11 +95,11 @@ public class ClosurePendingStatusReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ClosedStatusReason2Choice#Code
-	 * ClosedStatusReason2Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.ClosedStatusReason2Choice#mmCode
+	 * ClosedStatusReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClosurePendingStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -106,12 +107,13 @@ public class ClosurePendingStatusReason2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the closure pending status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ClosedStatusReason2Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ClosedStatusReason2Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ClosurePendingStatusReason1Code.mmObject();
 		}
 	};
+	protected GenericIdentification36 proprietary;
 	/**
 	 * Reason for the closure pending status expressed as a proprietary code.
 	 * <p>
@@ -141,11 +143,11 @@ public class ClosurePendingStatusReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ClosedStatusReason2Choice#Proprietary
-	 * ClosedStatusReason2Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.ClosedStatusReason2Choice#mmProprietary
+	 * ClosedStatusReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ClosurePendingStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -153,19 +155,19 @@ public class ClosurePendingStatusReason2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the closure pending status expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ClosedStatusReason2Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ClosedStatusReason2Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification36.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification36.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosurePendingStatusReason2Choice.Code, com.tools20022.repository.choice.ClosurePendingStatusReason2Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosurePendingStatusReason2Choice.mmCode, com.tools20022.repository.choice.ClosurePendingStatusReason2Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClosurePendingStatusReason2Choice";
 				definition = "Choice of formats for a closure pending reason code.";
@@ -173,5 +175,21 @@ public class ClosurePendingStatusReason2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ClosurePendingStatusReason1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ClosurePendingStatusReason1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification36 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification36 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

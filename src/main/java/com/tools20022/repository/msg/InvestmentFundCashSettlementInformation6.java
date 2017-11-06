@@ -36,23 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#ModificationScopeIndication
- * InvestmentFundCashSettlementInformation6.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmModificationScopeIndication
+ * InvestmentFundCashSettlementInformation6.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#SubscriptionPaymentInstrument
- * InvestmentFundCashSettlementInformation6.SubscriptionPaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmSubscriptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation6.mmSubscriptionPaymentInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#RedemptionPaymentInstrument
- * InvestmentFundCashSettlementInformation6.RedemptionPaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmRedemptionPaymentInstrument
+ * InvestmentFundCashSettlementInformation6.mmRedemptionPaymentInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#DividendPaymentInstrument
- * InvestmentFundCashSettlementInformation6.DividendPaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmDividendPaymentInstrument
+ * InvestmentFundCashSettlementInformation6.mmDividendPaymentInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#SavingsPlanPaymentInstrument
- * InvestmentFundCashSettlementInformation6.SavingsPlanPaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmSavingsPlanPaymentInstrument
+ * InvestmentFundCashSettlementInformation6.mmSavingsPlanPaymentInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#InterestPaymentInstrument
- * InvestmentFundCashSettlementInformation6.InterestPaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6#mmInterestPaymentInstrument
+ * InvestmentFundCashSettlementInformation6.mmInterestPaymentInstrument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,15 +62,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#ModifiedCashSettlement
- * AccountModificationInstructionV03.ModifiedCashSettlement}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#mmModifiedCashSettlement
+ * AccountModificationInstructionV03.mmModifiedCashSettlement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFundCashSettlementInformation6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification2Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied on a set of information.
 	 * <p>
@@ -130,13 +131,13 @@ public class InvestmentFundCashSettlementInformation6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#ModificationScopeIndication
-	 * InvestmentFundCashSettlementInformation8.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmModificationScopeIndication
+	 * InvestmentFundCashSettlementInformation8.mmModificationScopeIndication}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			isDerived = false;
@@ -144,12 +145,13 @@ public class InvestmentFundCashSettlementInformation6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.ModificationScopeIndication);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmModificationScopeIndication);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	protected PaymentInstrument11 subscriptionPaymentInstrument;
 	/**
 	 * Instrument that has or represents monetary value and is used to process a
 	 * payment instruction for a subscription payment.
@@ -185,28 +187,30 @@ public class InvestmentFundCashSettlementInformation6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#SubscriptionPaymentInstrument
-	 * InvestmentFundCashSettlementInformation8.SubscriptionPaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmSubscriptionPaymentInstrument
+	 * InvestmentFundCashSettlementInformation8.mmSubscriptionPaymentInstrument}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubscriptionPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubscriptionPaymentInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptPmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a subscription payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.SubscriptionPaymentInstrument);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmSubscriptionPaymentInstrument);
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInstrument11.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument11.mmObject();
 		}
 	};
+	protected PaymentInstrument10 redemptionPaymentInstrument;
 	/**
 	 * Instrument that has or represents monetary value and is used to process a
 	 * payment instruction for a redemption payment.
@@ -242,28 +246,29 @@ public class InvestmentFundCashSettlementInformation6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#RedemptionPaymentInstrument
-	 * InvestmentFundCashSettlementInformation8.RedemptionPaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmRedemptionPaymentInstrument
+	 * InvestmentFundCashSettlementInformation8.mmRedemptionPaymentInstrument}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RedemptionPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRedemptionPaymentInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "RedPmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a redemption payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.RedemptionPaymentInstrument);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmRedemptionPaymentInstrument);
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInstrument10.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
 		}
 	};
+	protected PaymentInstrument10 dividendPaymentInstrument;
 	/**
 	 * Instrument that has or represents monetary value and is used to process a
 	 * payment instruction for a dividend payment.
@@ -299,28 +304,29 @@ public class InvestmentFundCashSettlementInformation6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#DividendPaymentInstrument
-	 * InvestmentFundCashSettlementInformation8.DividendPaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmDividendPaymentInstrument
+	 * InvestmentFundCashSettlementInformation8.mmDividendPaymentInstrument}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DividendPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDividendPaymentInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "DvddPmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a dividend payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.DividendPaymentInstrument);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmDividendPaymentInstrument);
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInstrument10.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
 		}
 	};
+	protected PaymentInstrument11 savingsPlanPaymentInstrument;
 	/**
 	 * Instrument that has or represents monetary value and is used to process a
 	 * payment instruction for a savings plan payment.
@@ -356,28 +362,29 @@ public class InvestmentFundCashSettlementInformation6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#SavingsPlanPaymentInstrument
-	 * InvestmentFundCashSettlementInformation8.SavingsPlanPaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmSavingsPlanPaymentInstrument
+	 * InvestmentFundCashSettlementInformation8.mmSavingsPlanPaymentInstrument}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SavingsPlanPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSavingsPlanPaymentInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "SvgsPlanPmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SavingsPlanPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a savings plan payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.SavingsPlanPaymentInstrument);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmSavingsPlanPaymentInstrument);
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInstrument11.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument11.mmObject();
 		}
 	};
+	protected PaymentInstrument10 interestPaymentInstrument;
 	/**
 	 * Instrument that has or represents monetary value and is used to process a
 	 * payment instruction for an interest payment.
@@ -415,45 +422,93 @@ public class InvestmentFundCashSettlementInformation6 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#InterestPaymentInstrument
-	 * InvestmentFundCashSettlementInformation8.InterestPaymentInstrument}</li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8#mmInterestPaymentInstrument
+	 * InvestmentFundCashSettlementInformation8.mmInterestPaymentInstrument}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestPaymentInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestPaymentInstrument = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> InvestmentFundCashSettlementInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for an interest payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.InterestPaymentInstrument);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmInterestPaymentInstrument);
 			maxOccurs = 1;
-			complexType_lazy = () -> PaymentInstrument10.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.ModificationScopeIndication,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.SubscriptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.RedemptionPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.DividendPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.SavingsPlanPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.InterestPaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmModificationScopeIndication,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmSubscriptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmRedemptionPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmDividendPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmSavingsPlanPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation6.mmInterestPaymentInstrument);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedCashSettlement);
 				trace_lazy = () -> Payment.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV03.ModifiedCashSettlement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundCashSettlementInformation6";
 				definition = "Settlement instructions to be used to transfer cash from the Debtor to the Creditor.";
-				previousVersion_lazy = () -> InvestmentFundCashSettlementInformation4.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(InvestmentFundCashSettlementInformation8.mmObject());
+				previousVersion_lazy = () -> InvestmentFundCashSettlementInformation4.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification2Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public PaymentInstrument11 getSubscriptionPaymentInstrument() {
+		return subscriptionPaymentInstrument;
+	}
+
+	public void setSubscriptionPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument11 subscriptionPaymentInstrument) {
+		this.subscriptionPaymentInstrument = subscriptionPaymentInstrument;
+	}
+
+	public PaymentInstrument10 getRedemptionPaymentInstrument() {
+		return redemptionPaymentInstrument;
+	}
+
+	public void setRedemptionPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 redemptionPaymentInstrument) {
+		this.redemptionPaymentInstrument = redemptionPaymentInstrument;
+	}
+
+	public PaymentInstrument10 getDividendPaymentInstrument() {
+		return dividendPaymentInstrument;
+	}
+
+	public void setDividendPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 dividendPaymentInstrument) {
+		this.dividendPaymentInstrument = dividendPaymentInstrument;
+	}
+
+	public PaymentInstrument11 getSavingsPlanPaymentInstrument() {
+		return savingsPlanPaymentInstrument;
+	}
+
+	public void setSavingsPlanPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument11 savingsPlanPaymentInstrument) {
+		this.savingsPlanPaymentInstrument = savingsPlanPaymentInstrument;
+	}
+
+	public PaymentInstrument10 getInterestPaymentInstrument() {
+		return interestPaymentInstrument;
+	}
+
+	public void setInterestPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 interestPaymentInstrument) {
+		this.interestPaymentInstrument = interestPaymentInstrument;
 	}
 }

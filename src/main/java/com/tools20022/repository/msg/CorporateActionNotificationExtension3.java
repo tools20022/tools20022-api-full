@@ -35,22 +35,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationExtension3#PlaceAndName
- * CorporateActionNotificationExtension3.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationExtension3#mmPlaceAndName
+ * CorporateActionNotificationExtension3.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationExtension3#CustomerInternalSecurityIdentification
- * CorporateActionNotificationExtension3.CustomerInternalSecurityIdentification}
- * </li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationExtension3#mmCustomerInternalSecurityIdentification
+ * CorporateActionNotificationExtension3.
+ * mmCustomerInternalSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationExtension3#SecurityOfInterestMatchingSecurity
- * CorporateActionNotificationExtension3.SecurityOfInterestMatchingSecurity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationExtension3#mmSecurityOfInterestMatchingSecurity
+ * CorporateActionNotificationExtension3.mmSecurityOfInterestMatchingSecurity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNotificationExtension3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -93,7 +94,7 @@ public class CorporateActionNotificationExtension3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationExtension3.mmObject();
 			isDerived = false;
@@ -101,11 +102,12 @@ public class CorporateActionNotificationExtension3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max16Text customerInternalSecurityIdentification;
 	/**
 	 * Internal security identification as provided by the customer for the
 	 * given security on the security of interest (SOI) import file.
@@ -136,7 +138,7 @@ public class CorporateActionNotificationExtension3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerInternalSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerInternalSecurityIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationExtension3.mmObject();
 			isDerived = false;
@@ -144,11 +146,12 @@ public class CorporateActionNotificationExtension3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerInternalSecurityIdentification";
 			definition = "Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected SecurityIdentification7 securityOfInterestMatchingSecurity;
 	/**
 	 * Security identifier that is used to match the customer's SOI (Security of
 	 * Interest) to the GCA VS Security Cross Reference.
@@ -180,7 +183,7 @@ public class CorporateActionNotificationExtension3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationExtension3.mmObject();
 			isDerived = false;
@@ -188,23 +191,47 @@ public class CorporateActionNotificationExtension3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityOfInterestMatchingSecurity";
 			definition = "Security identifier that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationExtension3.PlaceAndName,
-						com.tools20022.repository.msg.CorporateActionNotificationExtension3.CustomerInternalSecurityIdentification, com.tools20022.repository.msg.CorporateActionNotificationExtension3.SecurityOfInterestMatchingSecurity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationExtension3.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionNotificationExtension3.mmCustomerInternalSecurityIdentification, com.tools20022.repository.msg.CorporateActionNotificationExtension3.mmSecurityOfInterestMatchingSecurity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionNotificationExtension3";
 				definition = "Provides additional information regarding corporate action notification details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max16Text getCustomerInternalSecurityIdentification() {
+		return customerInternalSecurityIdentification;
+	}
+
+	public void setCustomerInternalSecurityIdentification(Max16Text customerInternalSecurityIdentification) {
+		this.customerInternalSecurityIdentification = customerInternalSecurityIdentification;
+	}
+
+	public SecurityIdentification7 getSecurityOfInterestMatchingSecurity() {
+		return securityOfInterestMatchingSecurity;
+	}
+
+	public void setSecurityOfInterestMatchingSecurity(com.tools20022.repository.msg.SecurityIdentification7 securityOfInterestMatchingSecurity) {
+		this.securityOfInterestMatchingSecurity = securityOfInterestMatchingSecurity;
 	}
 }

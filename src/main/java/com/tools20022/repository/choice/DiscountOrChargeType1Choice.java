@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DiscountOrChargeType1Choice#ChargeType
- * DiscountOrChargeType1Choice.ChargeType}</li>
+ * {@linkplain com.tools20022.repository.choice.DiscountOrChargeType1Choice#mmChargeType
+ * DiscountOrChargeType1Choice.mmChargeType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DiscountOrChargeType1Choice#DiscountType
- * DiscountOrChargeType1Choice.DiscountType}</li>
+ * {@linkplain com.tools20022.repository.choice.DiscountOrChargeType1Choice#mmDiscountType
+ * DiscountOrChargeType1Choice.mmDiscountType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DiscountOrChargeType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ChargeTypeFormat3Choice chargeType;
 	/**
 	 * Type of charge.
 	 * <p>
@@ -72,8 +73,8 @@ public class DiscountOrChargeType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -92,21 +93,22 @@ public class DiscountOrChargeType1Choice {
 	 * definition} = "Type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargeType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargeType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> DiscountOrChargeType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "ChrgTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeType";
 			definition = "Type of charge.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ChargeTypeFormat3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.ChargeTypeFormat3Choice.mmObject();
 		}
 	};
+	protected DiscountTypeFormat1Choice discountType;
 	/**
 	 * Type of discount.
 	 * <p>
@@ -119,8 +121,8 @@ public class DiscountOrChargeType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Discount#DiscountType
-	 * Discount.DiscountType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Discount#mmDiscountType
+	 * Discount.mmDiscountType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,33 +141,49 @@ public class DiscountOrChargeType1Choice {
 	 * definition} = "Type of discount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DiscountType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDiscountType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountType;
 			componentContext_lazy = () -> DiscountOrChargeType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.DiscountType;
 			isDerived = false;
 			xmlTag = "DscntTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountType";
 			definition = "Type of discount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DiscountTypeFormat1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.DiscountTypeFormat1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountOrChargeType1Choice.ChargeType, com.tools20022.repository.choice.DiscountOrChargeType1Choice.DiscountType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmChargeType, com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmDiscountType);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DiscountOrChargeType1Choice";
 				definition = "Choice between a type of discount or a type of charge.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ChargeTypeFormat3Choice getChargeType() {
+		return chargeType;
+	}
+
+	public void setChargeType(com.tools20022.repository.choice.ChargeTypeFormat3Choice chargeType) {
+		this.chargeType = chargeType;
+	}
+
+	public DiscountTypeFormat1Choice getDiscountType() {
+		return discountType;
+	}
+
+	public void setDiscountType(com.tools20022.repository.choice.DiscountTypeFormat1Choice discountType) {
+		this.discountType = discountType;
 	}
 }

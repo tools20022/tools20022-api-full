@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification12#CountryOfBranch
- * PersonIdentification12.CountryOfBranch}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification12#Other
- * PersonIdentification12.Other}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification12#mmCountryOfBranch
+ * PersonIdentification12.mmCountryOfBranch}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification12#mmOther
+ * PersonIdentification12.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PersonIdentification12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode countryOfBranch;
 	/**
 	 * Branch where the trader is located.
 	 * <p>
@@ -78,7 +79,8 @@ public class PersonIdentification12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,25 +100,26 @@ public class PersonIdentification12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification76#CountryOfBranch
-	 * PartyIdentification76.CountryOfBranch}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification76#mmCountryOfBranch
+	 * PartyIdentification76.mmCountryOfBranch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryOfBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryOfBranch = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> PersonIdentification12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "CtryOfBrnch";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfBranch";
 			definition = "Branch where the trader is located.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification76.CountryOfBranch;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification76.mmCountryOfBranch;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected GenericPersonIdentification1 other;
 	/**
 	 * Unique identification of a person, as assigned by an institution, using
 	 * an identification scheme.
@@ -130,8 +133,8 @@ public class PersonIdentification12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,33 +156,33 @@ public class PersonIdentification12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification76#Identification
-	 * PartyIdentification76.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification76#mmIdentification
+	 * PartyIdentification76.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Other = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PersonIdentification12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Unique identification of a person, as assigned by an institution, using an identification scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification76.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification76.mmIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericPersonIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericPersonIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification12.CountryOfBranch, com.tools20022.repository.msg.PersonIdentification12.Other);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification12.mmCountryOfBranch, com.tools20022.repository.msg.PersonIdentification12.mmOther);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentification12";
 				definition = "Specifies the identification of a person.";
@@ -187,5 +190,21 @@ public class PersonIdentification12 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountryOfBranch() {
+		return countryOfBranch;
+	}
+
+	public void setCountryOfBranch(CountryCode countryOfBranch) {
+		this.countryOfBranch = countryOfBranch;
+	}
+
+	public GenericPersonIdentification1 getOther() {
+		return other;
+	}
+
+	public void setOther(com.tools20022.repository.msg.GenericPersonIdentification1 other) {
+		this.other = other;
 	}
 }

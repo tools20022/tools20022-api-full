@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AgriculturalCommodityForestry1#BaseProduct
- * AgriculturalCommodityForestry1.BaseProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.AgriculturalCommodityForestry1#mmBaseProduct
+ * AgriculturalCommodityForestry1.mmBaseProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AgriculturalCommodityForestry1#SubProduct
- * AgriculturalCommodityForestry1.SubProduct}</li>
+ * {@linkplain com.tools20022.repository.msg.AgriculturalCommodityForestry1#mmSubProduct
+ * AgriculturalCommodityForestry1.mmSubProduct}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgriculturalCommodityForestry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssetClassProductType1Code baseProduct;
 	/**
 	 * Base product for the underlying asset class as specified in the
 	 * classification of commodities derivatives table.
@@ -79,8 +80,8 @@ public class AgriculturalCommodityForestry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#BaseProduct
-	 * Commodity.BaseProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmBaseProduct
+	 * Commodity.mmBaseProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +102,21 @@ public class AgriculturalCommodityForestry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AgriculturalCommodityForestry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.BaseProduct;
 			isDerived = false;
 			xmlTag = "BasePdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseProduct";
 			definition = "Base product for the underlying asset class as specified in the classification of commodities derivatives table.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType1Code.mmObject();
 		}
 	};
+	protected AssetClassSubProductType21Code subProduct;
 	/**
 	 * Sub-product for the underlying asset class.
 	 * <p>
@@ -128,8 +130,8 @@ public class AgriculturalCommodityForestry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,17 +150,17 @@ public class AgriculturalCommodityForestry1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> AgriculturalCommodityForestry1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "SubPdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubProduct";
 			definition = "Sub-product for the underlying asset class.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType21Code.mmObject();
 		}
 	};
@@ -166,14 +168,30 @@ public class AgriculturalCommodityForestry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgriculturalCommodityForestry1.BaseProduct, com.tools20022.repository.msg.AgriculturalCommodityForestry1.SubProduct);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgriculturalCommodityForestry1.mmBaseProduct, com.tools20022.repository.msg.AgriculturalCommodityForestry1.mmSubProduct);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AgriculturalCommodityForestry1";
 				definition = "Defines commodity sub-product attributes of an agricultural derivative of type forestry.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssetClassProductType1Code getBaseProduct() {
+		return baseProduct;
+	}
+
+	public void setBaseProduct(AssetClassProductType1Code baseProduct) {
+		this.baseProduct = baseProduct;
+	}
+
+	public AssetClassSubProductType21Code getSubProduct() {
+		return subProduct;
+	}
+
+	public void setSubProduct(AssetClassSubProductType21Code subProduct) {
+		this.subProduct = subProduct;
 	}
 }

@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * OptionPartyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionParty3Code#Maker
- * OptionParty3Code.Maker}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionParty3Code#Taker
- * OptionParty3Code.Taker}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionParty3Code#mmMaker
+ * OptionParty3Code.mmMaker}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionParty3Code#mmTaker
+ * OptionParty3Code.mmTaker}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class OptionParty3Code extends OptionPartyCode {
 	 * name} = "Maker"</li>
 	 * </ul>
 	 */
-	public static final MMCode Maker = new MMCode() {
+	public static final MMCode mmMaker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maker";
@@ -96,7 +96,7 @@ public class OptionParty3Code extends OptionPartyCode {
 	 * name} = "Taker"</li>
 	 * </ul>
 	 */
-	public static final MMCode Taker = new MMCode() {
+	public static final MMCode mmTaker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Taker";
@@ -107,11 +107,11 @@ public class OptionParty3Code extends OptionPartyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OptionParty3Code";
 				definition = "Specifies if a trade party is a taker or a maker.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionParty3Code.Maker, com.tools20022.repository.codeset.OptionParty3Code.Taker);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionParty3Code.mmMaker, com.tools20022.repository.codeset.OptionParty3Code.mmTaker);
 				trace_lazy = () -> OptionPartyCode.mmObject();
 			}
 		});

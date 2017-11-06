@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitQueryDefinition1#QueryType
- * LimitQueryDefinition1.QueryType}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitQueryDefinition1#mmQueryType
+ * LimitQueryDefinition1.mmQueryType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitQueryDefinition1#LimitCriteria
- * LimitQueryDefinition1.LimitCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitQueryDefinition1#mmLimitCriteria
+ * LimitQueryDefinition1.mmLimitCriteria}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LimitQueryDefinition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QueryType1Code queryType;
 	/**
 	 * Specifies if all matching items or only the new matching items since the
 	 * latest query are returned.
@@ -91,7 +92,7 @@ public class LimitQueryDefinition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> LimitQueryDefinition1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class LimitQueryDefinition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies if all matching items or only the new matching items since the latest query are returned. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> QueryType1Code.mmObject();
 		}
 	};
+	protected LimitCriteriaDefinition1Choice limitCriteria;
 	/**
 	 * Defines the limit query criteria.
 	 * <p>
@@ -131,7 +133,7 @@ public class LimitQueryDefinition1 {
 	 * definition} = "Defines the limit query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LimitCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLimitCriteria = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> LimitQueryDefinition1.mmObject();
 			isDerived = false;
@@ -139,23 +141,39 @@ public class LimitQueryDefinition1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteria";
 			definition = "Defines the limit query criteria.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> LimitCriteriaDefinition1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> LimitCriteriaDefinition1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitQueryDefinition1.QueryType, com.tools20022.repository.msg.LimitQueryDefinition1.LimitCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitQueryDefinition1.mmQueryType, com.tools20022.repository.msg.LimitQueryDefinition1.mmLimitCriteria);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitQueryDefinition1";
 				definition = "Defines the query criteria.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QueryType1Code getQueryType() {
+		return queryType;
+	}
+
+	public void setQueryType(QueryType1Code queryType) {
+		this.queryType = queryType;
+	}
+
+	public LimitCriteriaDefinition1Choice getLimitCriteria() {
+		return limitCriteria;
+	}
+
+	public void setLimitCriteria(LimitCriteriaDefinition1Choice limitCriteria) {
+		this.limitCriteria = limitCriteria;
 	}
 }

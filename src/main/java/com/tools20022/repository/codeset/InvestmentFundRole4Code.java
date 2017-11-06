@@ -33,57 +33,57 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#FundManagementCompany
- * InvestmentFundRole4Code.FundManagementCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmFundManagementCompany
+ * InvestmentFundRole4Code.mmFundManagementCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#Registrar
- * InvestmentFundRole4Code.Registrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmRegistrar
+ * InvestmentFundRole4Code.mmRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#TransferAgent
- * InvestmentFundRole4Code.TransferAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmTransferAgent
+ * InvestmentFundRole4Code.mmTransferAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#Intermediary
- * InvestmentFundRole4Code.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmIntermediary
+ * InvestmentFundRole4Code.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#Distributor
- * InvestmentFundRole4Code.Distributor}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmDistributor
+ * InvestmentFundRole4Code.mmDistributor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#Concentrator
- * InvestmentFundRole4Code.Concentrator}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmConcentrator
+ * InvestmentFundRole4Code.mmConcentrator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#UnderlyingClient1
- * InvestmentFundRole4Code.UnderlyingClient1}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmUnderlyingClient1
+ * InvestmentFundRole4Code.mmUnderlyingClient1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#UnderlyingClient2
- * InvestmentFundRole4Code.UnderlyingClient2}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmUnderlyingClient2
+ * InvestmentFundRole4Code.mmUnderlyingClient2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#TransmittingAgent
- * InvestmentFundRole4Code.TransmittingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmTransmittingAgent
+ * InvestmentFundRole4Code.mmTransmittingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#ContactPersonAtInstructingPartyInstitution
- * InvestmentFundRole4Code.ContactPersonAtInstructingPartyInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmContactPersonAtInstructingPartyInstitution
+ * InvestmentFundRole4Code.mmContactPersonAtInstructingPartyInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#ContactPersonAtExecutingPartyInstitution
- * InvestmentFundRole4Code.ContactPersonAtExecutingPartyInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmContactPersonAtExecutingPartyInstitution
+ * InvestmentFundRole4Code.mmContactPersonAtExecutingPartyInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#NameOfAgentToOrder
- * InvestmentFundRole4Code.NameOfAgentToOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmNameOfAgentToOrder
+ * InvestmentFundRole4Code.mmNameOfAgentToOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#Custodian
- * InvestmentFundRole4Code.Custodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmCustodian
+ * InvestmentFundRole4Code.mmCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#FundBroker
- * InvestmentFundRole4Code.FundBroker}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmFundBroker
+ * InvestmentFundRole4Code.mmFundBroker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#PrimeBroker
- * InvestmentFundRole4Code.PrimeBroker}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole4Code#mmPrimeBroker
+ * InvestmentFundRole4Code.mmPrimeBroker}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -120,7 +120,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "FundManagementCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundManagementCompany = new MMCode() {
+	public static final MMCode mmFundManagementCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundManagementCompany";
@@ -143,7 +143,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "Registrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode Registrar = new MMCode() {
+	public static final MMCode mmRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registrar";
@@ -166,7 +166,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "TransferAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferAgent = new MMCode() {
+	public static final MMCode mmTransferAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAgent";
@@ -189,7 +189,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "Intermediary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Intermediary = new MMCode() {
+	public static final MMCode mmIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
@@ -212,7 +212,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "Distributor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Distributor = new MMCode() {
+	public static final MMCode mmDistributor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distributor";
@@ -235,7 +235,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "Concentrator"</li>
 	 * </ul>
 	 */
-	public static final MMCode Concentrator = new MMCode() {
+	public static final MMCode mmConcentrator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Concentrator";
@@ -258,7 +258,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "UnderlyingClient1"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderlyingClient1 = new MMCode() {
+	public static final MMCode mmUnderlyingClient1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingClient1";
@@ -281,7 +281,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "UnderlyingClient2"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderlyingClient2 = new MMCode() {
+	public static final MMCode mmUnderlyingClient2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingClient2";
@@ -304,7 +304,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "TransmittingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransmittingAgent = new MMCode() {
+	public static final MMCode mmTransmittingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransmittingAgent";
@@ -327,7 +327,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "ContactPersonAtInstructingPartyInstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode ContactPersonAtInstructingPartyInstitution = new MMCode() {
+	public static final MMCode mmContactPersonAtInstructingPartyInstitution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPersonAtInstructingPartyInstitution";
@@ -350,7 +350,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "ContactPersonAtExecutingPartyInstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode ContactPersonAtExecutingPartyInstitution = new MMCode() {
+	public static final MMCode mmContactPersonAtExecutingPartyInstitution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPersonAtExecutingPartyInstitution";
@@ -373,7 +373,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "NameOfAgentToOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode NameOfAgentToOrder = new MMCode() {
+	public static final MMCode mmNameOfAgentToOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameOfAgentToOrder";
@@ -396,7 +396,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "Custodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode Custodian = new MMCode() {
+	public static final MMCode mmCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custodian";
@@ -419,7 +419,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "FundBroker"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundBroker = new MMCode() {
+	public static final MMCode mmFundBroker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundBroker";
@@ -442,7 +442,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 * name} = "PrimeBroker"</li>
 	 * </ul>
 	 */
-	public static final MMCode PrimeBroker = new MMCode() {
+	public static final MMCode mmPrimeBroker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimeBroker";
@@ -453,18 +453,18 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FMCO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundRole4Code";
 				definition = "Specifies the role played by an actor in an investment fund transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundRole4Code.FundManagementCompany, com.tools20022.repository.codeset.InvestmentFundRole4Code.Registrar,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.TransferAgent, com.tools20022.repository.codeset.InvestmentFundRole4Code.Intermediary, com.tools20022.repository.codeset.InvestmentFundRole4Code.Distributor,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.Concentrator, com.tools20022.repository.codeset.InvestmentFundRole4Code.UnderlyingClient1,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.UnderlyingClient2, com.tools20022.repository.codeset.InvestmentFundRole4Code.TransmittingAgent,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.ContactPersonAtInstructingPartyInstitution, com.tools20022.repository.codeset.InvestmentFundRole4Code.ContactPersonAtExecutingPartyInstitution,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.NameOfAgentToOrder, com.tools20022.repository.codeset.InvestmentFundRole4Code.Custodian,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.FundBroker, com.tools20022.repository.codeset.InvestmentFundRole4Code.PrimeBroker);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundRole4Code.mmFundManagementCompany, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmRegistrar,
+						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmTransferAgent, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmIntermediary,
+						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmDistributor, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmConcentrator,
+						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmUnderlyingClient1, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmUnderlyingClient2,
+						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmTransmittingAgent, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmContactPersonAtInstructingPartyInstitution,
+						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmContactPersonAtExecutingPartyInstitution, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmNameOfAgentToOrder,
+						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmCustodian, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmFundBroker, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmPrimeBroker);
 				trace_lazy = () -> PartyRoleCode.mmObject();
 			}
 		});

@@ -61,18 +61,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01#UndertakingAmendmentNotificationDetails
- * UndertakingAmendmentNotificationV01.UndertakingAmendmentNotificationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01#mmUndertakingAmendmentNotificationDetails
+ * UndertakingAmendmentNotificationV01.mmUndertakingAmendmentNotificationDetails
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01#DigitalSignature
- * UndertakingAmendmentNotificationV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01#mmDigitalSignature
+ * UndertakingAmendmentNotificationV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01#identifier
- * UndertakingAmendmentNotificationV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsrv.007.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingAmendmentNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Amendment6 undertakingAmendmentNotificationDetails;
 	/**
 	 * Details related to the notification of the proposed amended undertaking.
 	 * <p>
@@ -112,17 +112,18 @@ public class UndertakingAmendmentNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UndertakingAmendmentNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUndertakingAmendmentNotificationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UdrtkgAmdmntNtfctnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentNotificationDetails";
 			definition = "Details related to the notification of the proposed amended undertaking.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Amendment6.mmObject();
 		}
 	};
+	protected PartyAndSignature2 digitalSignature;
 	/**
 	 * Digital signature of the notification.
 	 * <p>
@@ -146,42 +147,15 @@ public class UndertakingAmendmentNotificationV01 {
 	 * definition} = "Digital signature of the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the notification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsrv";
-			messageFunctionality = "007";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -195,11 +169,34 @@ public class UndertakingAmendmentNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgAmdmntNtfctn";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.UndertakingAmendmentNotificationDetails,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.mmUndertakingAmendmentNotificationDetails,
+						com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsrv";
+						messageFunctionality = "007";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Amendment6 getUndertakingAmendmentNotificationDetails() {
+		return undertakingAmendmentNotificationDetails;
+	}
+
+	public void setUndertakingAmendmentNotificationDetails(Amendment6 undertakingAmendmentNotificationDetails) {
+		this.undertakingAmendmentNotificationDetails = undertakingAmendmentNotificationDetails;
+	}
+
+	public PartyAndSignature2 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

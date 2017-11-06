@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.YieldCalculation2;
 import com.tools20022.repository.msg.YieldCalculation3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Characteristics related to the yield.
@@ -43,26 +44,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.YieldCalculation#RedemptionPrice
- * YieldCalculation.RedemptionPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.YieldCalculation#Value
- * YieldCalculation.Value}</li>
+ * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmRedemptionPrice
+ * YieldCalculation.mmRedemptionPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.YieldCalculation#mmValue
+ * YieldCalculation.mmValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.YieldCalculation#CalculationType
- * YieldCalculation.CalculationType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.YieldCalculation#ValueDate
- * YieldCalculation.ValueDate}</li>
+ * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmCalculationType
+ * YieldCalculation.mmCalculationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.YieldCalculation#ValuePeriod
- * YieldCalculation.ValuePeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmValueDate
+ * YieldCalculation.mmValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.YieldCalculation#YieldCalculationDate
- * YieldCalculation.YieldCalculationDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.YieldCalculation#YieldRange
- * YieldCalculation.YieldRange}</li>
+ * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmValuePeriod
+ * YieldCalculation.mmValuePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.YieldCalculation#VariableInterest
- * YieldCalculation.VariableInterest}</li>
+ * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmYieldCalculationDate
+ * YieldCalculation.mmYieldCalculationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmYieldRange
+ * YieldCalculation.mmYieldRange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmVariableInterest
+ * YieldCalculation.mmVariableInterest}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,37 +73,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#YieldCalculation
- * SecuritiesPricing.YieldCalculation}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmYieldCalculation
+ * SecuritiesPricing.mmYieldCalculation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#YieldCalculation
- * DateTimePeriod.YieldCalculation}</li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmYieldCalculation
+ * DateTimePeriod.mmYieldCalculation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.VariableInterest#YieldCalculation
- * VariableInterest.YieldCalculation}</li>
+ * {@linkplain com.tools20022.repository.entity.VariableInterest#mmYieldCalculation
+ * VariableInterest.mmYieldCalculation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#RelatedYieldCalculation
- * RateAndAmount.RelatedYieldCalculation}</li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRelatedYieldCalculation
+ * RateAndAmount.mmRelatedYieldCalculation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SingleQuote1#MidYield
- * SingleQuote1.MidYield}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SingleQuote1#BidYield
- * SingleQuote1.BidYield}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SingleQuote1#OfferYield
- * SingleQuote1.OfferYield}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteRequest1#YieldDetails
- * QuoteRequest1.YieldDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quote1#OfferYield
- * Quote1.OfferYield}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quote1#MidYield
- * Quote1.MidYield}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quote1#BidYield
- * Quote1.BidYield}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SingleQuote1#mmMidYield
+ * SingleQuote1.mmMidYield}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SingleQuote1#mmBidYield
+ * SingleQuote1.mmBidYield}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SingleQuote1#mmOfferYield
+ * SingleQuote1.mmOfferYield}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteRequest1#mmYieldDetails
+ * QuoteRequest1.mmYieldDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote1#mmOfferYield
+ * Quote1.mmOfferYield}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote1#mmMidYield
+ * Quote1.mmMidYield}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote1#mmBidYield
+ * Quote1.mmBidYield}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,8 +123,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -135,6 +138,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class YieldCalculation {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesPricing redemptionPrice;
 	/**
 	 * Price on which the yield is computed.
 	 * <p>
@@ -143,8 +147,8 @@ public class YieldCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#YieldCalculation
-	 * SecuritiesPricing.YieldCalculation}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmYieldCalculation
+	 * SecuritiesPricing.mmYieldCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -152,25 +156,25 @@ public class YieldCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation1#RedemptionPrice
-	 * YieldCalculation1.RedemptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation2#RedemptionPrice
-	 * YieldCalculation2.RedemptionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#RedemptionPrice
-	 * YieldCalculation3.RedemptionPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.YieldCalculation
 	 * YieldCalculation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation1#mmRedemptionPrice
+	 * YieldCalculation1.mmRedemptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation2#mmRedemptionPrice
+	 * YieldCalculation2.mmRedemptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#mmRedemptionPrice
+	 * YieldCalculation3.mmRedemptionPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -182,22 +186,23 @@ public class YieldCalculation {
 	 * definition} = "Price on which the yield is computed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RedemptionPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRedemptionPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.RedemptionPrice, com.tools20022.repository.msg.YieldCalculation2.RedemptionPrice,
-					com.tools20022.repository.msg.YieldCalculation3.RedemptionPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.mmRedemptionPrice, com.tools20022.repository.msg.YieldCalculation2.mmRedemptionPrice,
+					com.tools20022.repository.msg.YieldCalculation3.mmRedemptionPrice);
 			elementContext_lazy = () -> YieldCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RedemptionPrice";
 			definition = "Price on which the yield is computed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.YieldCalculation;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmYieldCalculation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected PercentageRate value;
 	/**
 	 * Result of the yield calculation.
 	 * <p>
@@ -208,25 +213,25 @@ public class YieldCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation1#Value
-	 * YieldCalculation1.Value}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation2#Value
-	 * YieldCalculation2.Value}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation3#Value
-	 * YieldCalculation3.Value}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#Yield
-	 * SecuritiesTransactionPrice2Choice.Yield}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.YieldCalculation
 	 * YieldCalculation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation1#mmValue
+	 * YieldCalculation1.mmValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation2#mmValue
+	 * YieldCalculation2.mmValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation3#mmValue
+	 * YieldCalculation3.mmValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#mmYield
+	 * SecuritiesTransactionPrice2Choice.mmYield}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -238,20 +243,21 @@ public class YieldCalculation {
 	 * definition} = "Result of the yield calculation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Value = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.Value, com.tools20022.repository.msg.YieldCalculation2.Value, com.tools20022.repository.msg.YieldCalculation3.Value,
-					com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.Yield);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.mmValue, com.tools20022.repository.msg.YieldCalculation2.mmValue, com.tools20022.repository.msg.YieldCalculation3.mmValue,
+					com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmYield);
 			elementContext_lazy = () -> YieldCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Value";
 			definition = "Result of the yield calculation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CalculationTypeCode calculationType;
 	/**
 	 * Specifies the type of calculation.
 	 * <p>
@@ -262,41 +268,41 @@ public class YieldCalculation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CalculationTypeCode
 	 * CalculationTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation1#CalculationType
-	 * YieldCalculation1.CalculationType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation2#CalculationType
-	 * YieldCalculation2.CalculationType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order16#YieldType
-	 * Order16.YieldType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order14#YieldType
-	 * Order14.YieldType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CalculationType2Choice#Code
-	 * CalculationType2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CalculationType2Choice#Proprietary
-	 * CalculationType2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#CalculationType
-	 * YieldCalculation3.CalculationType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order6#YieldDetails
-	 * Order6.YieldDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order17#YieldType
-	 * Order17.YieldType}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Order18#YieldType
-	 * Order18.YieldType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.YieldCalculation
 	 * YieldCalculation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation1#mmCalculationType
+	 * YieldCalculation1.mmCalculationType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation2#mmCalculationType
+	 * YieldCalculation2.mmCalculationType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order16#mmYieldType
+	 * Order16.mmYieldType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order14#mmYieldType
+	 * Order14.mmYieldType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CalculationType2Choice#mmCode
+	 * CalculationType2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CalculationType2Choice#mmProprietary
+	 * CalculationType2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#mmCalculationType
+	 * YieldCalculation3.mmCalculationType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order6#mmYieldDetails
+	 * Order6.mmYieldDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order17#mmYieldType
+	 * Order17.mmYieldType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Order18#mmYieldType
+	 * Order18.mmYieldType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -308,21 +314,23 @@ public class YieldCalculation {
 	 * definition} = "Specifies the type of calculation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CalculationType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCalculationType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.CalculationType, com.tools20022.repository.msg.YieldCalculation2.CalculationType, com.tools20022.repository.msg.Order16.YieldType,
-					com.tools20022.repository.msg.Order14.YieldType, com.tools20022.repository.choice.CalculationType2Choice.Code, com.tools20022.repository.choice.CalculationType2Choice.Proprietary,
-					com.tools20022.repository.msg.YieldCalculation3.CalculationType, com.tools20022.repository.msg.Order6.YieldDetails, com.tools20022.repository.msg.Order17.YieldType, com.tools20022.repository.msg.Order18.YieldType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.mmCalculationType, com.tools20022.repository.msg.YieldCalculation2.mmCalculationType, com.tools20022.repository.msg.Order16.mmYieldType,
+					com.tools20022.repository.msg.Order14.mmYieldType, com.tools20022.repository.choice.CalculationType2Choice.mmCode, com.tools20022.repository.choice.CalculationType2Choice.mmProprietary,
+					com.tools20022.repository.msg.YieldCalculation3.mmCalculationType, com.tools20022.repository.msg.Order6.mmYieldDetails, com.tools20022.repository.msg.Order17.mmYieldType,
+					com.tools20022.repository.msg.Order18.mmYieldType);
 			elementContext_lazy = () -> YieldCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CalculationType";
 			definition = "Specifies the type of calculation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CalculationTypeCode.mmObject();
 		}
 	};
+	protected ISODateTime valueDate;
 	/**
 	 * Date/time on which the calculation is based, for example, valuation on
 	 * October 1 (price date) based on price of September 19 ( value date).
@@ -333,25 +341,25 @@ public class YieldCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation1#ValueDateTime
-	 * YieldCalculation1.ValueDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation2#ValueDate
-	 * YieldCalculation2.ValueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#ValueDate
-	 * YieldCalculation3.ValueDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.YieldCalculation
 	 * YieldCalculation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation1#mmValueDateTime
+	 * YieldCalculation1.mmValueDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation2#mmValueDate
+	 * YieldCalculation2.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#mmValueDate
+	 * YieldCalculation3.mmValueDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -365,19 +373,20 @@ public class YieldCalculation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ValueDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.ValueDateTime, com.tools20022.repository.msg.YieldCalculation2.ValueDate, com.tools20022.repository.msg.YieldCalculation3.ValueDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.mmValueDateTime, com.tools20022.repository.msg.YieldCalculation2.mmValueDate, com.tools20022.repository.msg.YieldCalculation3.mmValueDate);
 			elementContext_lazy = () -> YieldCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time on which the calculation is based, for example, valuation on October 1 (price date) based on price of September 19 ( value date).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected DateTimePeriod valuePeriod;
 	/**
 	 * Period on which the calculation is based.
 	 * <p>
@@ -386,8 +395,8 @@ public class YieldCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#YieldCalculation
-	 * DateTimePeriod.YieldCalculation}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmYieldCalculation
+	 * DateTimePeriod.mmYieldCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -395,25 +404,25 @@ public class YieldCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation1#ValuePeriod
-	 * YieldCalculation1.ValuePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation2#ValuePeriod
-	 * YieldCalculation2.ValuePeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#ValuePeriod
-	 * YieldCalculation3.ValuePeriod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.YieldCalculation
 	 * YieldCalculation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation1#mmValuePeriod
+	 * YieldCalculation1.mmValuePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation2#mmValuePeriod
+	 * YieldCalculation2.mmValuePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#mmValuePeriod
+	 * YieldCalculation3.mmValuePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -425,21 +434,22 @@ public class YieldCalculation {
 	 * definition} = "Period on which the calculation is based."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ValuePeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmValuePeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.ValuePeriod, com.tools20022.repository.msg.YieldCalculation2.ValuePeriod, com.tools20022.repository.msg.YieldCalculation3.ValuePeriod);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.mmValuePeriod, com.tools20022.repository.msg.YieldCalculation2.mmValuePeriod, com.tools20022.repository.msg.YieldCalculation3.mmValuePeriod);
 			elementContext_lazy = () -> YieldCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValuePeriod";
 			definition = "Period on which the calculation is based.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriod.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.YieldCalculation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmYieldCalculation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected ISODateTime yieldCalculationDate;
 	/**
 	 * Clarifies the yield irregularities associated with the date to which the
 	 * yield has been calculated, eg, when it falls on a non-business day.
@@ -450,25 +460,25 @@ public class YieldCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation1#CalculationDate
-	 * YieldCalculation1.CalculationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation2#CalculationDate
-	 * YieldCalculation2.CalculationDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#CalculationDate
-	 * YieldCalculation3.CalculationDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.YieldCalculation
 	 * YieldCalculation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation1#mmCalculationDate
+	 * YieldCalculation1.mmCalculationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation2#mmCalculationDate
+	 * YieldCalculation2.mmCalculationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#mmCalculationDate
+	 * YieldCalculation3.mmCalculationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -482,20 +492,21 @@ public class YieldCalculation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute YieldCalculationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmYieldCalculationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.CalculationDate, com.tools20022.repository.msg.YieldCalculation2.CalculationDate,
-					com.tools20022.repository.msg.YieldCalculation3.CalculationDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation1.mmCalculationDate, com.tools20022.repository.msg.YieldCalculation2.mmCalculationDate,
+					com.tools20022.repository.msg.YieldCalculation3.mmCalculationDate);
 			elementContext_lazy = () -> YieldCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "YieldCalculationDate";
 			definition = "Clarifies the yield irregularities associated with the date to which the yield has been calculated, eg, when it falls on a non-business day.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected RateAndAmount yieldRange;
 	/**
 	 * Range of allowed yield.
 	 * <p>
@@ -504,8 +515,8 @@ public class YieldCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#RelatedYieldCalculation
-	 * RateAndAmount.RelatedYieldCalculation}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRelatedYieldCalculation
+	 * RateAndAmount.mmRelatedYieldCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -513,18 +524,18 @@ public class YieldCalculation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.RateAndAmount
 	 * RateAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#YieldRange
-	 * Debt2.YieldRange}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.YieldCalculation
 	 * YieldCalculation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmYieldRange
+	 * Debt2.mmYieldRange}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -536,21 +547,22 @@ public class YieldCalculation {
 	 * definition} = "Range of allowed yield."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd YieldRange = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmYieldRange = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt2.YieldRange);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt2.mmYieldRange);
 			elementContext_lazy = () -> YieldCalculation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "YieldRange";
 			definition = "Range of allowed yield.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RateAndAmount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.RelatedYieldCalculation;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmRelatedYieldCalculation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.VariableInterest> variableInterest;
 	/**
 	 * Variable interest used for the calculation.
 	 * <p>
@@ -559,8 +571,8 @@ public class YieldCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.VariableInterest#YieldCalculation
-	 * VariableInterest.YieldCalculation}</li>
+	 * {@linkplain com.tools20022.repository.entity.VariableInterest#mmYieldCalculation
+	 * VariableInterest.mmYieldCalculation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -584,7 +596,7 @@ public class YieldCalculation {
 	 * definition} = "Variable interest used for the calculation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd VariableInterest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmVariableInterest = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> YieldCalculation.mmObject();
 			isDerived = false;
@@ -592,29 +604,93 @@ public class YieldCalculation {
 			name = "VariableInterest";
 			definition = "Variable interest used for the calculation.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.VariableInterest.YieldCalculation;
+			opposite_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmYieldCalculation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "YieldCalculation";
 				definition = "Characteristics related to the yield.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.YieldCalculation, com.tools20022.repository.entity.DateTimePeriod.YieldCalculation,
-						com.tools20022.repository.entity.VariableInterest.YieldCalculation, com.tools20022.repository.entity.RateAndAmount.RelatedYieldCalculation);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleQuote1.MidYield, com.tools20022.repository.msg.SingleQuote1.BidYield, com.tools20022.repository.msg.SingleQuote1.OfferYield,
-						com.tools20022.repository.msg.QuoteRequest1.YieldDetails, com.tools20022.repository.msg.Quote1.OfferYield, com.tools20022.repository.msg.Quote1.MidYield, com.tools20022.repository.msg.Quote1.BidYield);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.YieldCalculation.RedemptionPrice, com.tools20022.repository.entity.YieldCalculation.Value,
-						com.tools20022.repository.entity.YieldCalculation.CalculationType, com.tools20022.repository.entity.YieldCalculation.ValueDate, com.tools20022.repository.entity.YieldCalculation.ValuePeriod,
-						com.tools20022.repository.entity.YieldCalculation.YieldCalculationDate, com.tools20022.repository.entity.YieldCalculation.YieldRange, com.tools20022.repository.entity.YieldCalculation.VariableInterest);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmYieldCalculation, com.tools20022.repository.entity.DateTimePeriod.mmYieldCalculation,
+						com.tools20022.repository.entity.VariableInterest.mmYieldCalculation, com.tools20022.repository.entity.RateAndAmount.mmRelatedYieldCalculation);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleQuote1.mmMidYield, com.tools20022.repository.msg.SingleQuote1.mmBidYield, com.tools20022.repository.msg.SingleQuote1.mmOfferYield,
+						com.tools20022.repository.msg.QuoteRequest1.mmYieldDetails, com.tools20022.repository.msg.Quote1.mmOfferYield, com.tools20022.repository.msg.Quote1.mmMidYield, com.tools20022.repository.msg.Quote1.mmBidYield);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.YieldCalculation.mmRedemptionPrice, com.tools20022.repository.entity.YieldCalculation.mmValue,
+						com.tools20022.repository.entity.YieldCalculation.mmCalculationType, com.tools20022.repository.entity.YieldCalculation.mmValueDate, com.tools20022.repository.entity.YieldCalculation.mmValuePeriod,
+						com.tools20022.repository.entity.YieldCalculation.mmYieldCalculationDate, com.tools20022.repository.entity.YieldCalculation.mmYieldRange, com.tools20022.repository.entity.YieldCalculation.mmVariableInterest);
 				derivationComponent_lazy = () -> Arrays.asList(YieldCalculation1.mmObject(), YieldCalculation2.mmObject(), CalculationType2Choice.mmObject(), YieldCalculation3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesPricing getRedemptionPrice() {
+		return redemptionPrice;
+	}
+
+	public void setRedemptionPrice(com.tools20022.repository.entity.SecuritiesPricing redemptionPrice) {
+		this.redemptionPrice = redemptionPrice;
+	}
+
+	public PercentageRate getValue() {
+		return value;
+	}
+
+	public void setValue(PercentageRate value) {
+		this.value = value;
+	}
+
+	public CalculationTypeCode getCalculationType() {
+		return calculationType;
+	}
+
+	public void setCalculationType(CalculationTypeCode calculationType) {
+		this.calculationType = calculationType;
+	}
+
+	public ISODateTime getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODateTime valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public DateTimePeriod getValuePeriod() {
+		return valuePeriod;
+	}
+
+	public void setValuePeriod(com.tools20022.repository.entity.DateTimePeriod valuePeriod) {
+		this.valuePeriod = valuePeriod;
+	}
+
+	public ISODateTime getYieldCalculationDate() {
+		return yieldCalculationDate;
+	}
+
+	public void setYieldCalculationDate(ISODateTime yieldCalculationDate) {
+		this.yieldCalculationDate = yieldCalculationDate;
+	}
+
+	public RateAndAmount getYieldRange() {
+		return yieldRange;
+	}
+
+	public void setYieldRange(com.tools20022.repository.entity.RateAndAmount yieldRange) {
+		this.yieldRange = yieldRange;
+	}
+
+	public List<VariableInterest> getVariableInterest() {
+		return variableInterest;
+	}
+
+	public void setVariableInterest(List<com.tools20022.repository.entity.VariableInterest> variableInterest) {
+		this.variableInterest = variableInterest;
 	}
 }

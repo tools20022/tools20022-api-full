@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional information such as the taxation conditions.
@@ -33,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative39#Offeror
- * CorporateActionNarrative39.Offeror}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative39#mmOfferor
+ * CorporateActionNarrative39.mmOfferor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative39#NewCompanyName
- * CorporateActionNarrative39.NewCompanyName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative39#mmNewCompanyName
+ * CorporateActionNarrative39.mmNewCompanyName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative39#URLAddress
- * CorporateActionNarrative39.URLAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative39#mmURLAddress
+ * CorporateActionNarrative39.mmURLAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrative39 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.UpdatedAdditionalInformation6> offeror;
 	/**
 	 * Provides the entity making the offer and is different from the issuing
 	 * company.
@@ -78,8 +80,8 @@ public class CorporateActionNarrative39 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +102,21 @@ public class CorporateActionNarrative39 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Offeror = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOfferor = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionNarrative39.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Offerr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offeror";
 			definition = "Provides the entity making the offer and is different from the issuing company.";
 			minOccurs = 0;
-			type_lazy = () -> UpdatedAdditionalInformation6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6.mmObject();
 		}
 	};
+	protected UpdatedAdditionalInformation6 newCompanyName;
 	/**
 	 * Provides the new name of a company following a name change.
 	 * <p>
@@ -142,7 +145,7 @@ public class CorporateActionNarrative39 {
 	 * "Provides the new name of a company following a name change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewCompanyName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewCompanyName = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative39.mmObject();
 			isDerived = false;
@@ -150,12 +153,13 @@ public class CorporateActionNarrative39 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCompanyName";
 			definition = "Provides the new name of a company following a name change.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedAdditionalInformation6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6.mmObject();
 		}
 	};
+	protected UpdatedURLlnformation3 uRLAddress;
 	/**
 	 * Provides the web address published for the event, that is, the address
 	 * for the Universal Resource Locator (URL), for example, used over the www
@@ -169,8 +173,8 @@ public class CorporateActionNarrative39 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#DocumentationLocation
-	 * CorporateActionEvent.DocumentationLocation}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmDocumentationLocation
+	 * CorporateActionEvent.mmDocumentationLocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,34 +195,58 @@ public class CorporateActionNarrative39 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd URLAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmURLAddress = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmDocumentationLocation;
 			componentContext_lazy = () -> CorporateActionNarrative39.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.DocumentationLocation;
 			isDerived = false;
 			xmlTag = "URLAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Provides the web address published for the event, that is, the address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> UpdatedURLlnformation3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.UpdatedURLlnformation3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative39.Offeror, com.tools20022.repository.msg.CorporateActionNarrative39.NewCompanyName,
-						com.tools20022.repository.msg.CorporateActionNarrative39.URLAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative39.mmOfferor, com.tools20022.repository.msg.CorporateActionNarrative39.mmNewCompanyName,
+						com.tools20022.repository.msg.CorporateActionNarrative39.mmURLAddress);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative39";
 				definition = "Provides additional information such as the taxation conditions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<UpdatedAdditionalInformation6> getOfferor() {
+		return offeror;
+	}
+
+	public void setOfferor(List<com.tools20022.repository.msg.UpdatedAdditionalInformation6> offeror) {
+		this.offeror = offeror;
+	}
+
+	public UpdatedAdditionalInformation6 getNewCompanyName() {
+		return newCompanyName;
+	}
+
+	public void setNewCompanyName(com.tools20022.repository.msg.UpdatedAdditionalInformation6 newCompanyName) {
+		this.newCompanyName = newCompanyName;
+	}
+
+	public UpdatedURLlnformation3 getURLAddress() {
+		return uRLAddress;
+	}
+
+	public void setURLAddress(com.tools20022.repository.msg.UpdatedURLlnformation3 uRLAddress) {
+		this.uRLAddress = uRLAddress;
 	}
 }

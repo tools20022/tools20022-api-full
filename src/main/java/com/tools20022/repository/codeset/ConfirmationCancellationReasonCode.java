@@ -30,71 +30,71 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectBackEndLoadAmount
- * ConfirmationCancellationReasonCode.IncorrectBackEndLoadAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectBackEndLoadAmount
+ * ConfirmationCancellationReasonCode.mmIncorrectBackEndLoadAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#ConfirmationReplacement
- * ConfirmationCancellationReasonCode.ConfirmationReplacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmConfirmationReplacement
+ * ConfirmationCancellationReasonCode.mmConfirmationReplacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#CashNotReceived
- * ConfirmationCancellationReasonCode.CashNotReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmCashNotReceived
+ * ConfirmationCancellationReasonCode.mmCashNotReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectCashAmount
- * ConfirmationCancellationReasonCode.IncorrectCashAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectCashAmount
+ * ConfirmationCancellationReasonCode.mmIncorrectCashAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectSettlementDate
- * ConfirmationCancellationReasonCode.IncorrectSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectSettlementDate
+ * ConfirmationCancellationReasonCode.mmIncorrectSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectTradeDate
- * ConfirmationCancellationReasonCode.IncorrectTradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectTradeDate
+ * ConfirmationCancellationReasonCode.mmIncorrectTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectDiscountAmount
- * ConfirmationCancellationReasonCode.IncorrectDiscountAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectDiscountAmount
+ * ConfirmationCancellationReasonCode.mmIncorrectDiscountAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectDiscountAmountCurrency
- * ConfirmationCancellationReasonCode.IncorrectDiscountAmountCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectDiscountAmountCurrency
+ * ConfirmationCancellationReasonCode.mmIncorrectDiscountAmountCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectSettlementAmount
- * ConfirmationCancellationReasonCode.IncorrectSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectSettlementAmount
+ * ConfirmationCancellationReasonCode.mmIncorrectSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectFinancialInstrumentQuantity
- * ConfirmationCancellationReasonCode.IncorrectFinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectFinancialInstrumentQuantity
+ * ConfirmationCancellationReasonCode.mmIncorrectFinancialInstrumentQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectExchangeRate
- * ConfirmationCancellationReasonCode.IncorrectExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectExchangeRate
+ * ConfirmationCancellationReasonCode.mmIncorrectExchangeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectFeeOrCommission
- * ConfirmationCancellationReasonCode.IncorrectFeeOrCommission}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectFeeOrCommission
+ * ConfirmationCancellationReasonCode.mmIncorrectFeeOrCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectFrontEndLoadAmount
- * ConfirmationCancellationReasonCode.IncorrectFrontEndLoadAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectFrontEndLoadAmount
+ * ConfirmationCancellationReasonCode.mmIncorrectFrontEndLoadAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectGrossAmount
- * ConfirmationCancellationReasonCode.IncorrectGrossAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectGrossAmount
+ * ConfirmationCancellationReasonCode.mmIncorrectGrossAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectGrossAmountCurrency
- * ConfirmationCancellationReasonCode.IncorrectGrossAmountCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectGrossAmountCurrency
+ * ConfirmationCancellationReasonCode.mmIncorrectGrossAmountCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectQuantityUnitsOrCash
- * ConfirmationCancellationReasonCode.IncorrectQuantityUnitsOrCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectQuantityUnitsOrCash
+ * ConfirmationCancellationReasonCode.mmIncorrectQuantityUnitsOrCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectSettlementAmountCurrency
- * ConfirmationCancellationReasonCode.IncorrectSettlementAmountCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectSettlementAmountCurrency
+ * ConfirmationCancellationReasonCode.mmIncorrectSettlementAmountCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectNetAmount
- * ConfirmationCancellationReasonCode.IncorrectNetAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectNetAmount
+ * ConfirmationCancellationReasonCode.mmIncorrectNetAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectNetAmountCurrency
- * ConfirmationCancellationReasonCode.IncorrectNetAmountCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectNetAmountCurrency
+ * ConfirmationCancellationReasonCode.mmIncorrectNetAmountCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectOperation
- * ConfirmationCancellationReasonCode.IncorrectOperation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectOperation
+ * ConfirmationCancellationReasonCode.mmIncorrectOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#InvalidReference
- * ConfirmationCancellationReasonCode.InvalidReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmInvalidReference
+ * ConfirmationCancellationReasonCode.mmInvalidReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#IncorrectSettlementMethod
- * ConfirmationCancellationReasonCode.IncorrectSettlementMethod}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationCancellationReasonCode#mmIncorrectSettlementMethod
+ * ConfirmationCancellationReasonCode.mmIncorrectSettlementMethod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -108,8 +108,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -146,7 +146,7 @@ public class ConfirmationCancellationReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectBackEndLoadAmount = new MMCode() {
+	public static final MMCode mmIncorrectBackEndLoadAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectBackEndLoadAmount";
@@ -176,7 +176,7 @@ public class ConfirmationCancellationReasonCode {
 	 * definition} = "Confirmation is cancelled because it will be replaced."</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfirmationReplacement = new MMCode() {
+	public static final MMCode mmConfirmationReplacement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationReplacement";
@@ -207,7 +207,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because the cash has not been received."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashNotReceived = new MMCode() {
+	public static final MMCode mmCashNotReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashNotReceived";
@@ -238,7 +238,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because the cash amount is incorrect."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectCashAmount = new MMCode() {
+	public static final MMCode mmIncorrectCashAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCashAmount";
@@ -269,7 +269,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because the settlement date is incorrect."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectSettlementDate = new MMCode() {
+	public static final MMCode mmIncorrectSettlementDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSettlementDate";
@@ -300,7 +300,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because the trade date is incorrect."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectTradeDate = new MMCode() {
+	public static final MMCode mmIncorrectTradeDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectTradeDate";
@@ -331,7 +331,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because the discount amount is incorrect."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectDiscountAmount = new MMCode() {
+	public static final MMCode mmIncorrectDiscountAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDiscountAmount";
@@ -364,7 +364,7 @@ public class ConfirmationCancellationReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectDiscountAmountCurrency = new MMCode() {
+	public static final MMCode mmIncorrectDiscountAmountCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDiscountAmountCurrency";
@@ -395,7 +395,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because the settlement amount is incorrect."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectSettlementAmount = new MMCode() {
+	public static final MMCode mmIncorrectSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSettlementAmount";
@@ -428,7 +428,7 @@ public class ConfirmationCancellationReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectFinancialInstrumentQuantity = new MMCode() {
+	public static final MMCode mmIncorrectFinancialInstrumentQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFinancialInstrumentQuantity";
@@ -459,7 +459,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because the exchange rate is incorrect."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectExchangeRate = new MMCode() {
+	public static final MMCode mmIncorrectExchangeRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectExchangeRate";
@@ -492,7 +492,7 @@ public class ConfirmationCancellationReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectFeeOrCommission = new MMCode() {
+	public static final MMCode mmIncorrectFeeOrCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFeeOrCommission";
@@ -524,7 +524,7 @@ public class ConfirmationCancellationReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectFrontEndLoadAmount = new MMCode() {
+	public static final MMCode mmIncorrectFrontEndLoadAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFrontEndLoadAmount";
@@ -555,7 +555,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because the gross amount is incorrect."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectGrossAmount = new MMCode() {
+	public static final MMCode mmIncorrectGrossAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectGrossAmount";
@@ -588,7 +588,7 @@ public class ConfirmationCancellationReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectGrossAmountCurrency = new MMCode() {
+	public static final MMCode mmIncorrectGrossAmountCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectGrossAmountCurrency";
@@ -621,7 +621,7 @@ public class ConfirmationCancellationReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectQuantityUnitsOrCash = new MMCode() {
+	public static final MMCode mmIncorrectQuantityUnitsOrCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectQuantityUnitsOrCash";
@@ -654,7 +654,7 @@ public class ConfirmationCancellationReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectSettlementAmountCurrency = new MMCode() {
+	public static final MMCode mmIncorrectSettlementAmountCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSettlementAmountCurrency";
@@ -685,7 +685,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because the net amount is incorrect."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectNetAmount = new MMCode() {
+	public static final MMCode mmIncorrectNetAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectNetAmount";
@@ -718,7 +718,7 @@ public class ConfirmationCancellationReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectNetAmountCurrency = new MMCode() {
+	public static final MMCode mmIncorrectNetAmountCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectNetAmountCurrency";
@@ -749,7 +749,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because of an incorrect operation."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectOperation = new MMCode() {
+	public static final MMCode mmIncorrectOperation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectOperation";
@@ -779,7 +779,7 @@ public class ConfirmationCancellationReasonCode {
 	 * definition} = "Confirmation contains an invalid business reference."</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidReference = new MMCode() {
+	public static final MMCode mmInvalidReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidReference";
@@ -810,7 +810,7 @@ public class ConfirmationCancellationReasonCode {
 	 * "Confirmation is cancelled because the settlement method is incorrect."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectSettlementMethod = new MMCode() {
+	public static final MMCode mmIncorrectSettlementMethod = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSettlementMethod";
@@ -823,21 +823,22 @@ public class ConfirmationCancellationReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationCancellationReasonCode";
 				definition = "Specifies the reason why a confirmation is cancelled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectBackEndLoadAmount, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.ConfirmationReplacement,
-						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.CashNotReceived, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectCashAmount,
-						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectSettlementDate, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectTradeDate,
-						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectDiscountAmount, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectDiscountAmountCurrency,
-						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectSettlementAmount, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectFinancialInstrumentQuantity,
-						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectExchangeRate, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectFeeOrCommission,
-						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectFrontEndLoadAmount, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectGrossAmount,
-						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectGrossAmountCurrency, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectQuantityUnitsOrCash,
-						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectSettlementAmountCurrency, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectNetAmount,
-						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectNetAmountCurrency, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectOperation,
-						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.InvalidReference, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.IncorrectSettlementMethod);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectBackEndLoadAmount,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmConfirmationReplacement, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmCashNotReceived,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectCashAmount, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectSettlementDate,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectTradeDate, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectDiscountAmount,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectDiscountAmountCurrency, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectSettlementAmount,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectFinancialInstrumentQuantity, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectExchangeRate,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectFeeOrCommission, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectFrontEndLoadAmount,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectGrossAmount, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectGrossAmountCurrency,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectQuantityUnitsOrCash, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectSettlementAmountCurrency,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectNetAmount, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectNetAmountCurrency,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectOperation, com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmInvalidReference,
+						com.tools20022.repository.codeset.ConfirmationCancellationReasonCode.mmIncorrectSettlementMethod);
 				derivation_lazy = () -> Arrays.asList(ConfirmationCancellationReason1Code.mmObject());
 			}
 		});

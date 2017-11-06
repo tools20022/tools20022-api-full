@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -70,51 +71,49 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#Identification
- * SecuritiesTradeConfirmationStatusAdviceV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmIdentification
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#References
- * SecuritiesTradeConfirmationStatusAdviceV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmReferences
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#AffirmationStatus
- * SecuritiesTradeConfirmationStatusAdviceV01.AffirmationStatus}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmAffirmationStatus
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmAffirmationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#ProcessingStatus
- * SecuritiesTradeConfirmationStatusAdviceV01.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmProcessingStatus
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#MatchingStatus
- * SecuritiesTradeConfirmationStatusAdviceV01.MatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmMatchingStatus
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#ReplacementProcessingStatus
- * SecuritiesTradeConfirmationStatusAdviceV01.ReplacementProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmReplacementProcessingStatus
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmReplacementProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#CancellationProcessingStatus
- * SecuritiesTradeConfirmationStatusAdviceV01.CancellationProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmCancellationProcessingStatus
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmCancellationProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#PartyTradingDetails
- * SecuritiesTradeConfirmationStatusAdviceV01.PartyTradingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmPartyTradingDetails
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmPartyTradingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#CounterpartyTradingDetails
- * SecuritiesTradeConfirmationStatusAdviceV01.CounterpartyTradingDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmCounterpartyTradingDetails
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmCounterpartyTradingDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#ConfirmationParties
- * SecuritiesTradeConfirmationStatusAdviceV01.ConfirmationParties}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmConfirmationParties
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmConfirmationParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#DeliveringSettlementParties
- * SecuritiesTradeConfirmationStatusAdviceV01.DeliveringSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmDeliveringSettlementParties
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmDeliveringSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#ReceivingSettlementParties
- * SecuritiesTradeConfirmationStatusAdviceV01.ReceivingSettlementParties}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmReceivingSettlementParties
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmReceivingSettlementParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#SupplementaryData
- * SecuritiesTradeConfirmationStatusAdviceV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#mmSupplementaryData
+ * SecuritiesTradeConfirmationStatusAdviceV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01#identifier
- * SecuritiesTradeConfirmationStatusAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.044.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -138,6 +137,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTradeConfirmationStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TransactiontIdentification4 identification;
 	/**
 	 * Information that unambiguously identifies an
 	 * SecuritiesTradeConfirmationStatusAdvice message as known by the account
@@ -167,24 +167,25 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#Identification
-	 * SecuritiesTradeConfirmationStatusAdviceV02.Identification}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmIdentification
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Information that unambiguously identifies an SecuritiesTradeConfirmationStatusAdvice message as known by the account owner (or the instructing party acting on its behalf).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactiontIdentification4.mmObject();
 		}
 	};
+	protected List<Linkages18> references;
 	/**
 	 * Link to another transaction that must be processed after, before or at
 	 * the same time.
@@ -212,23 +213,24 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#References
-	 * SecuritiesTradeConfirmationStatusAdviceV02.References}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmReferences
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmReferences}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock References = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.References);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReferences);
 			minOccurs = 1;
 			complexType_lazy = () -> Linkages18.mmObject();
 		}
 	};
+	protected AffirmationStatus6Choice affirmationStatus;
 	/**
 	 * Provides details on the affitrmation status of a trade.
 	 * <p>
@@ -254,24 +256,25 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#AffirmationStatus
-	 * SecuritiesTradeConfirmationStatusAdviceV02.AffirmationStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmAffirmationStatus
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmAffirmationStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AffirmationStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAffirmationStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AffirmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmationStatus";
 			definition = "Provides details on the affitrmation status of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.AffirmationStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmAffirmationStatus);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AffirmationStatus6Choice.mmObject();
 		}
 	};
+	protected ProcessingStatus17Choice processingStatus;
 	/**
 	 * Provides the processing status of a trade.
 	 * <p>
@@ -297,24 +300,25 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#ProcessingStatus
-	 * SecuritiesTradeConfirmationStatusAdviceV02.ProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmProcessingStatus
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmProcessingStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides the processing status of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.ProcessingStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmProcessingStatus);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus17Choice.mmObject();
 		}
 	};
+	protected MatchingStatus9Choice matchingStatus;
 	/**
 	 * Provides details on the matching status of a trade.
 	 * <p>
@@ -340,24 +344,25 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#MatchingStatus
-	 * SecuritiesTradeConfirmationStatusAdviceV02.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmMatchingStatus
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmMatchingStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MatchingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMatchingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtchgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides details on the matching status of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.MatchingStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmMatchingStatus);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus9Choice.mmObject();
 		}
 	};
+	protected ReplacementProcessingStatus7Choice replacementProcessingStatus;
 	/**
 	 * Provides the replacement processing status of a trade.
 	 * <p>
@@ -383,24 +388,26 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#ReplacementProcessingStatus
-	 * SecuritiesTradeConfirmationStatusAdviceV02.ReplacementProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmReplacementProcessingStatus
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReplacementProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReplacementProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RplcmntPrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacementProcessingStatus";
 			definition = "Provides the replacement processing status of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.ReplacementProcessingStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 		}
 	};
+	protected CancellationProcessingStatus6Choice cancellationProcessingStatus;
 	/**
 	 * Provides details on the cancellation status of a trade.
 	 * <p>
@@ -426,24 +433,26 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#CancellationProcessingStatus
-	 * SecuritiesTradeConfirmationStatusAdviceV02.CancellationProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmCancellationProcessingStatus
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmCancellationProcessingStatus
+	 * }</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CancellationProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellationProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlPrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationProcessingStatus";
 			definition = "Provides details on the cancellation status of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.CancellationProcessingStatus);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmCancellationProcessingStatus);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CancellationProcessingStatus6Choice.mmObject();
 		}
 	};
+	protected Order16 partyTradingDetails;
 	/**
 	 * Details of the trading party.
 	 * <p>
@@ -468,24 +477,25 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#PartyTradingDetails
-	 * SecuritiesTradeConfirmationStatusAdviceV02.PartyTradingDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmPartyTradingDetails
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmPartyTradingDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PartyTradingDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPartyTradingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PtyTradgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyTradingDetails";
 			definition = "Details of the trading party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.PartyTradingDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmPartyTradingDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Order16.mmObject();
 		}
 	};
+	protected Order16 counterpartyTradingDetails;
 	/**
 	 * Details of the trading counterparty.
 	 * <p>
@@ -510,24 +520,25 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#CounterpartyTradingDetails
-	 * SecuritiesTradeConfirmationStatusAdviceV02.CounterpartyTradingDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmCounterpartyTradingDetails
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmCounterpartyTradingDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CounterpartyTradingDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCounterpartyTradingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtyTradgDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTradingDetails";
 			definition = "Details of the trading counterparty.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.CounterpartyTradingDetails);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmCounterpartyTradingDetails);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Order16.mmObject();
 		}
 	};
+	protected List<ConfirmationParties4> confirmationParties;
 	/**
 	 * Parties used for acting parties that applies either to the whole message
 	 * or to individual sides.
@@ -556,23 +567,24 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#ConfirmationParties
-	 * SecuritiesTradeConfirmationStatusAdviceV02.ConfirmationParties}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmConfirmationParties
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmConfirmationParties}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ConfirmationParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmConfirmationParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ConfPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationParties";
 			definition = "Parties used for acting parties that applies either to the whole message or to individual sides.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.ConfirmationParties);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmConfirmationParties);
 			minOccurs = 0;
 			complexType_lazy = () -> ConfirmationParties4.mmObject();
 		}
 	};
+	protected SettlementParties23 deliveringSettlementParties;
 	/**
 	 * Identifies the chain of delivering settlement parties.
 	 * <p>
@@ -598,24 +610,26 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#DeliveringSettlementParties
-	 * SecuritiesTradeConfirmationStatusAdviceV02.DeliveringSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmDeliveringSettlementParties
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmDeliveringSettlementParties}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DeliveringSettlementParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDeliveringSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.DeliveringSettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmDeliveringSettlementParties);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties23.mmObject();
 		}
 	};
+	protected SettlementParties23 receivingSettlementParties;
 	/**
 	 * Identifies the chain of receiving settlement parties.
 	 * <p>
@@ -641,24 +655,25 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#ReceivingSettlementParties
-	 * SecuritiesTradeConfirmationStatusAdviceV02.ReceivingSettlementParties}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmReceivingSettlementParties
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmReceivingSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReceivingSettlementParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReceivingSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.ReceivingSettlementParties);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReceivingSettlementParties);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties23.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -687,48 +702,21 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#SupplementaryData
-	 * SecuritiesTradeConfirmationStatusAdviceV02.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02#mmSupplementaryData
+	 * SecuritiesTradeConfirmationStatusAdviceV02.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "044"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "044";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -743,17 +731,128 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesTradConfStsAdvc";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.Identification,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.References, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.AffirmationStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.ProcessingStatus, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.MatchingStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.ReplacementProcessingStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.CancellationProcessingStatus, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.PartyTradingDetails,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.CounterpartyTradingDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.ConfirmationParties,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.DeliveringSettlementParties, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.ReceivingSettlementParties,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmIdentification,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmReferences, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmAffirmationStatus,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmProcessingStatus, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmMatchingStatus,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmReplacementProcessingStatus,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmCancellationProcessingStatus, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmPartyTradingDetails,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmCounterpartyTradingDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmConfirmationParties,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmDeliveringSettlementParties,
+						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmReceivingSettlementParties, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "044";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactiontIdentification4 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(TransactiontIdentification4 identification) {
+		this.identification = identification;
+	}
+
+	public List<Linkages18> getReferences() {
+		return references;
+	}
+
+	public void setReferences(List<Linkages18> references) {
+		this.references = references;
+	}
+
+	public AffirmationStatus6Choice getAffirmationStatus() {
+		return affirmationStatus;
+	}
+
+	public void setAffirmationStatus(AffirmationStatus6Choice affirmationStatus) {
+		this.affirmationStatus = affirmationStatus;
+	}
+
+	public ProcessingStatus17Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatus17Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public MatchingStatus9Choice getMatchingStatus() {
+		return matchingStatus;
+	}
+
+	public void setMatchingStatus(MatchingStatus9Choice matchingStatus) {
+		this.matchingStatus = matchingStatus;
+	}
+
+	public ReplacementProcessingStatus7Choice getReplacementProcessingStatus() {
+		return replacementProcessingStatus;
+	}
+
+	public void setReplacementProcessingStatus(ReplacementProcessingStatus7Choice replacementProcessingStatus) {
+		this.replacementProcessingStatus = replacementProcessingStatus;
+	}
+
+	public CancellationProcessingStatus6Choice getCancellationProcessingStatus() {
+		return cancellationProcessingStatus;
+	}
+
+	public void setCancellationProcessingStatus(CancellationProcessingStatus6Choice cancellationProcessingStatus) {
+		this.cancellationProcessingStatus = cancellationProcessingStatus;
+	}
+
+	public Order16 getPartyTradingDetails() {
+		return partyTradingDetails;
+	}
+
+	public void setPartyTradingDetails(Order16 partyTradingDetails) {
+		this.partyTradingDetails = partyTradingDetails;
+	}
+
+	public Order16 getCounterpartyTradingDetails() {
+		return counterpartyTradingDetails;
+	}
+
+	public void setCounterpartyTradingDetails(Order16 counterpartyTradingDetails) {
+		this.counterpartyTradingDetails = counterpartyTradingDetails;
+	}
+
+	public List<ConfirmationParties4> getConfirmationParties() {
+		return confirmationParties;
+	}
+
+	public void setConfirmationParties(List<ConfirmationParties4> confirmationParties) {
+		this.confirmationParties = confirmationParties;
+	}
+
+	public SettlementParties23 getDeliveringSettlementParties() {
+		return deliveringSettlementParties;
+	}
+
+	public void setDeliveringSettlementParties(SettlementParties23 deliveringSettlementParties) {
+		this.deliveringSettlementParties = deliveringSettlementParties;
+	}
+
+	public SettlementParties23 getReceivingSettlementParties() {
+		return receivingSettlementParties;
+	}
+
+	public void setReceivingSettlementParties(SettlementParties23 receivingSettlementParties) {
+		this.receivingSettlementParties = receivingSettlementParties;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope13#ModificationScopeIndication
- * ModificationScope13.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope13#mmModificationScopeIndication
+ * ModificationScope13.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope13#FundDetails
- * ModificationScope13.FundDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope13#mmFundDetails
+ * ModificationScope13.mmFundDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification2Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied on a set of information.
 	 * <p>
@@ -104,13 +105,13 @@ public class ModificationScope13 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope29#ModificationScopeIndication
-	 * ModificationScope29.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope29#mmModificationScopeIndication
+	 * ModificationScope29.mmModificationScopeIndication}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope13.mmObject();
 			isDerived = false;
@@ -118,12 +119,13 @@ public class ModificationScope13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope29.ModificationScopeIndication);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope29.mmModificationScopeIndication);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	protected FinancialInstrument29 fundDetails;
 	/**
 	 * Information related to the account to be modified.
 	 * <p>
@@ -152,13 +154,13 @@ public class ModificationScope13 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope29#FinancialInstrumentDetails
-	 * ModificationScope29.FinancialInstrumentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope29#mmFinancialInstrumentDetails
+	 * ModificationScope29.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FundDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFundDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope13.mmObject();
 			isDerived = false;
@@ -166,26 +168,42 @@ public class ModificationScope13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetails";
 			definition = "Information related to the account to be modified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope29.FinancialInstrumentDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope29.mmFinancialInstrumentDetails);
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument29.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument29.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope13.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope13.FundDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope13.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope13.mmFundDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope13";
 				definition = "Scope of the modification to be applied on an identified set of information.";
-				previousVersion_lazy = () -> ModificationScope12.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ModificationScope29.mmObject());
+				previousVersion_lazy = () -> ModificationScope12.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification2Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public FinancialInstrument29 getFundDetails() {
+		return fundDetails;
+	}
+
+	public void setFundDetails(com.tools20022.repository.msg.FinancialInstrument29 fundDetails) {
+		this.fundDetails = fundDetails;
 	}
 }

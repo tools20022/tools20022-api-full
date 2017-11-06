@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -87,39 +88,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#MessageIdentification
- * FundEstimatedCashForecastReportV04.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmMessageIdentification
+ * FundEstimatedCashForecastReportV04.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#PoolReference
- * FundEstimatedCashForecastReportV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmPoolReference
+ * FundEstimatedCashForecastReportV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#PreviousReference
- * FundEstimatedCashForecastReportV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmPreviousReference
+ * FundEstimatedCashForecastReportV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#RelatedReference
- * FundEstimatedCashForecastReportV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmRelatedReference
+ * FundEstimatedCashForecastReportV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#MessagePagination
- * FundEstimatedCashForecastReportV04.MessagePagination}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmMessagePagination
+ * FundEstimatedCashForecastReportV04.mmMessagePagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#FundOrSubFundDetails
- * FundEstimatedCashForecastReportV04.FundOrSubFundDetails}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmFundOrSubFundDetails
+ * FundEstimatedCashForecastReportV04.mmFundOrSubFundDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#EstimatedFundCashForecastDetails
- * FundEstimatedCashForecastReportV04.EstimatedFundCashForecastDetails}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmEstimatedFundCashForecastDetails
+ * FundEstimatedCashForecastReportV04.mmEstimatedFundCashForecastDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#ConsolidatedNetCashForecast
- * FundEstimatedCashForecastReportV04.ConsolidatedNetCashForecast}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmConsolidatedNetCashForecast
+ * FundEstimatedCashForecastReportV04.mmConsolidatedNetCashForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#Extension
- * FundEstimatedCashForecastReportV04.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmExtension
+ * FundEstimatedCashForecastReportV04.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#identifier
- * FundEstimatedCashForecastReportV04.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.040.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -139,6 +138,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundEstimatedCashForecastReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageIdentification;
 	/**
 	 * Identifies the message.
 	 * <p>
@@ -163,22 +163,23 @@ public class FundEstimatedCashForecastReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#MessageIdentification
-	 * FundEstimatedCashForecastReportV03.MessageIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmMessageIdentification
+	 * FundEstimatedCashForecastReportV03.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.MessageIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmMessageIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference3 poolReference;
 	/**
 	 * Collective reference identifying a set of messages
 	 * <p>
@@ -203,22 +204,23 @@ public class FundEstimatedCashForecastReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#PoolReference
-	 * FundEstimatedCashForecastReportV03.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmPoolReference
+	 * FundEstimatedCashForecastReportV03.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.PoolReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmPoolReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -243,21 +245,22 @@ public class FundEstimatedCashForecastReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#PreviousReference
-	 * FundEstimatedCashForecastReportV03.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmPreviousReference
+	 * FundEstimatedCashForecastReportV03.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.PreviousReference;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmPreviousReference;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected List<AdditionalReference3> relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -283,21 +286,22 @@ public class FundEstimatedCashForecastReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#RelatedReference
-	 * FundEstimatedCashForecastReportV03.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmRelatedReference
+	 * FundEstimatedCashForecastReportV03.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.RelatedReference;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmRelatedReference;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected Pagination messagePagination;
 	/**
 	 * Pagination of the message.
 	 * <p>
@@ -321,22 +325,23 @@ public class FundEstimatedCashForecastReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#MessagePagination
-	 * FundEstimatedCashForecastReportV03.MessagePagination}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmMessagePagination
+	 * FundEstimatedCashForecastReportV03.mmMessagePagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.MessagePagination;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmMessagePagination;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected List<Fund1> fundOrSubFundDetails;
 	/**
 	 * Information about the fund/sub fund when the report either specifies cash
 	 * flow for the fund/sub fund or for a share class of the fund/sub fund.
@@ -361,7 +366,7 @@ public class FundEstimatedCashForecastReportV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock FundOrSubFundDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmFundOrSubFundDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FndOrSubFndDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,6 +376,7 @@ public class FundEstimatedCashForecastReportV04 {
 			complexType_lazy = () -> Fund1.mmObject();
 		}
 	};
+	protected List<EstimatedFundCashForecast6> estimatedFundCashForecastDetails;
 	/**
 	 * Information related to the estimated cash-in and cash-out flows for a
 	 * specific trade date as a result of transactions in shares in an
@@ -399,21 +405,22 @@ public class FundEstimatedCashForecastReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#EstimatedFundCashForecastDetails
-	 * FundEstimatedCashForecastReportV03.EstimatedFundCashForecastDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmEstimatedFundCashForecastDetails
+	 * FundEstimatedCashForecastReportV03.mmEstimatedFundCashForecastDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock EstimatedFundCashForecastDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmEstimatedFundCashForecastDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstmtdFndCshFcstDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedFundCashForecastDetails";
 			definition = "Information related to the estimated cash-in and cash-out flows for a specific trade date as a result of transactions in shares in an investment fund, for example, subscriptions, redemptions or switches.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.EstimatedFundCashForecastDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmEstimatedFundCashForecastDetails;
 			minOccurs = 0;
 			complexType_lazy = () -> EstimatedFundCashForecast6.mmObject();
 		}
 	};
+	protected NetCashForecast3 consolidatedNetCashForecast;
 	/**
 	 * Estimated net cash as a result of the cash-in and cash-out flows.
 	 * <p>
@@ -439,22 +446,23 @@ public class FundEstimatedCashForecastReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#ConsolidatedNetCashForecast
-	 * FundEstimatedCashForecastReportV03.ConsolidatedNetCashForecast}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmConsolidatedNetCashForecast
+	 * FundEstimatedCashForecastReportV03.mmConsolidatedNetCashForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ConsolidatedNetCashForecast = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmConsolidatedNetCashForecast = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CnsltdNetCshFcst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedNetCashForecast";
 			definition = "Estimated net cash as a result of the cash-in and cash-out flows.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.ConsolidatedNetCashForecast;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmConsolidatedNetCashForecast;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> NetCashForecast3.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -481,46 +489,19 @@ public class FundEstimatedCashForecastReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#Extension
-	 * FundEstimatedCashForecastReportV03.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmExtension
+	 * FundEstimatedCashForecastReportV03.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.Extension;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "04"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "040"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "040";
-			version = "04";
-			flavour = "001";
 		}
 	};
 
@@ -535,14 +516,93 @@ public class FundEstimatedCashForecastReportV04 {
 				rootElement = "Document";
 				xmlTag = "FndEstmtdCshFcstRpt";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.MessageIdentification,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.PoolReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.PreviousReference,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.RelatedReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.MessagePagination,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.FundOrSubFundDetails, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.EstimatedFundCashForecastDetails,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.ConsolidatedNetCashForecast, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmMessageIdentification,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmPoolReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmRelatedReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmMessagePagination,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmFundOrSubFundDetails, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmEstimatedFundCashForecastDetails,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmConsolidatedNetCashForecast, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "040";
+						version = "04";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public AdditionalReference3 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference3 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public List<AdditionalReference3> getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(List<AdditionalReference3> previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public List<AdditionalReference3> getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Pagination getMessagePagination() {
+		return messagePagination;
+	}
+
+	public void setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = messagePagination;
+	}
+
+	public List<Fund1> getFundOrSubFundDetails() {
+		return fundOrSubFundDetails;
+	}
+
+	public void setFundOrSubFundDetails(List<Fund1> fundOrSubFundDetails) {
+		this.fundOrSubFundDetails = fundOrSubFundDetails;
+	}
+
+	public List<EstimatedFundCashForecast6> getEstimatedFundCashForecastDetails() {
+		return estimatedFundCashForecastDetails;
+	}
+
+	public void setEstimatedFundCashForecastDetails(List<EstimatedFundCashForecast6> estimatedFundCashForecastDetails) {
+		this.estimatedFundCashForecastDetails = estimatedFundCashForecastDetails;
+	}
+
+	public NetCashForecast3 getConsolidatedNetCashForecast() {
+		return consolidatedNetCashForecast;
+	}
+
+	public void setConsolidatedNetCashForecast(NetCashForecast3 consolidatedNetCashForecast) {
+		this.consolidatedNetCashForecast = consolidatedNetCashForecast;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

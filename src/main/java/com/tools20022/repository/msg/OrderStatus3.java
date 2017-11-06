@@ -38,27 +38,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatus3#ClientOrderIdentification
- * OrderStatus3.ClientOrderIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatus3#mmClientOrderIdentification
+ * OrderStatus3.mmClientOrderIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatus3#SecondaryClientOrderIdentification
- * OrderStatus3.SecondaryClientOrderIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderStatus3#Side
- * OrderStatus3.Side}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderStatus3#WorkingIndicator
- * OrderStatus3.WorkingIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderStatus3#RemainingQuantity
- * OrderStatus3.RemainingQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatus3#mmSecondaryClientOrderIdentification
+ * OrderStatus3.mmSecondaryClientOrderIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderStatus3#mmSide
+ * OrderStatus3.mmSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatus3#CumulativeQuantity
- * OrderStatus3.CumulativeQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderStatus3#CancelledQuantity
- * OrderStatus3.CancelledQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderStatus3#AveragePrice
- * OrderStatus3.AveragePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatus3#mmWorkingIndicator
+ * OrderStatus3.mmWorkingIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatus3#SingleOrderStatusDetails
- * OrderStatus3.SingleOrderStatusDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatus3#mmRemainingQuantity
+ * OrderStatus3.mmRemainingQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatus3#mmCumulativeQuantity
+ * OrderStatus3.mmCumulativeQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatus3#mmCancelledQuantity
+ * OrderStatus3.mmCancelledQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderStatus3#mmAveragePrice
+ * OrderStatus3.mmAveragePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatus3#mmSingleOrderStatusDetails
+ * OrderStatus3.mmSingleOrderStatusDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrderStatus3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text clientOrderIdentification;
 	/**
 	 * Unique identifier for the order as assigned by the buy-side. Uniqueness
 	 * must be guaranteed within a single trading day. Firms, particularly those
@@ -100,8 +104,8 @@ public class OrderStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#ClientOrderIdentification
-	 * SecuritiesOrder.ClientOrderIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmClientOrderIdentification
+	 * SecuritiesOrder.mmClientOrderIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -121,20 +125,21 @@ public class OrderStatus3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.ClientOrderIdentification;
 			isDerived = false;
 			xmlTag = "ClntOrdrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text secondaryClientOrderIdentification;
 	/**
 	 * Name or number assigned by an entity to enable recognition of that
 	 * entity, eg, account identifier.
@@ -148,8 +153,8 @@ public class OrderStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#ClientOrderIdentification
-	 * SecuritiesOrder.ClientOrderIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmClientOrderIdentification
+	 * SecuritiesOrder.mmClientOrderIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,20 +174,21 @@ public class OrderStatus3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondaryClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.ClientOrderIdentification;
 			isDerived = false;
 			xmlTag = "ScndryClntOrdrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryClientOrderIdentification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Side1Code side;
 	/**
 	 * Coded list to specify the side of the order.
 	 * <p>
@@ -195,8 +201,8 @@ public class OrderStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Side
-	 * SecuritiesOrder.Side}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmSide
+	 * SecuritiesOrder.mmSide}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -214,20 +220,21 @@ public class OrderStatus3 {
 	 * definition} = "Coded list to specify the side of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Side = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Side;
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Coded list to specify the side of the order.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator workingIndicator;
 	/**
 	 * Indicates if the order is currently being worked. For open outcry markets
 	 * this indicates that the order is being worked in the crowd. For
@@ -244,8 +251,8 @@ public class OrderStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#WorkingIndicator
-	 * SecuritiesOrderParameters.WorkingIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#mmWorkingIndicator
+	 * SecuritiesOrderParameters.mmWorkingIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -265,20 +272,21 @@ public class OrderStatus3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WorkingIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWorkingIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmWorkingIndicator;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.WorkingIndicator;
 			isDerived = false;
 			xmlTag = "WorkgInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WorkingIndicator";
 			definition = "Indicates if the order is currently being worked. For open outcry markets this indicates that the order is being worked in the crowd.  For electronic markets it indicates that the order has transitioned from a contingent order to a market order.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice remainingQuantity;
 	/**
 	 * Quantity opened for further execution.
 	 * <p>
@@ -292,8 +300,8 @@ public class OrderStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#RemainingQuantity
-	 * SecuritiesOrderStatus.RemainingQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmRemainingQuantity
+	 * SecuritiesOrderStatus.mmRemainingQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,20 +319,21 @@ public class OrderStatus3 {
 	 * definition} = "Quantity opened for further execution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemainingQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmRemainingQuantity;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.RemainingQuantity;
 			isDerived = false;
 			xmlTag = "RmngQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingQuantity";
 			definition = "Quantity opened for further execution.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice cumulativeQuantity;
 	/**
 	 * Quantity of financial instrument to be ordered.
 	 * <p>
@@ -338,8 +347,8 @@ public class OrderStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#CumulativeQuantity
-	 * SecuritiesOrderStatus.CumulativeQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmCumulativeQuantity
+	 * SecuritiesOrderStatus.mmCumulativeQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -357,20 +366,21 @@ public class OrderStatus3 {
 	 * definition} = "Quantity of financial instrument to be ordered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CumulativeQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCumulativeQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmCumulativeQuantity;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.CumulativeQuantity;
 			isDerived = false;
 			xmlTag = "CmltvQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumulativeQuantity";
 			definition = "Quantity of financial instrument to be ordered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantityChoice cancelledQuantity;
 	/**
 	 * Total quantity cancelled for this order.
 	 * <p>
@@ -398,7 +408,7 @@ public class OrderStatus3 {
 	 * definition} = "Total quantity cancelled for this order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancelledQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancelledQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
@@ -406,11 +416,12 @@ public class OrderStatus3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledQuantity";
 			definition = "Total quantity cancelled for this order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	protected Price1 averagePrice;
 	/**
 	 * Calculated average price of all fills on this order.
 	 * <p>
@@ -422,8 +433,8 @@ public class OrderStatus3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#OrderPrice
-	 * SecuritiesOrder.OrderPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderPrice
+	 * SecuritiesOrder.mmOrderPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -441,20 +452,21 @@ public class OrderStatus3 {
 	 * definition} = "Calculated average price of all fills on this order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AveragePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAveragePrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.OrderPrice;
 			isDerived = false;
 			xmlTag = "AvrgPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AveragePrice";
 			definition = "Calculated average price of all fills on this order.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Price1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	protected OrderStatusAndReason5 singleOrderStatusDetails;
 	/**
 	 * Status of the order.
 	 * <p>
@@ -485,36 +497,108 @@ public class OrderStatus3 {
 	 * definition} = "Status of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SingleOrderStatusDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSingleOrderStatusDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OrderStatus3.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
+			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "SnglOrdrStsDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleOrderStatusDetails";
 			definition = "Status of the order.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrderStatusAndReason5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus3.ClientOrderIdentification, com.tools20022.repository.msg.OrderStatus3.SecondaryClientOrderIdentification,
-						com.tools20022.repository.msg.OrderStatus3.Side, com.tools20022.repository.msg.OrderStatus3.WorkingIndicator, com.tools20022.repository.msg.OrderStatus3.RemainingQuantity,
-						com.tools20022.repository.msg.OrderStatus3.CumulativeQuantity, com.tools20022.repository.msg.OrderStatus3.CancelledQuantity, com.tools20022.repository.msg.OrderStatus3.AveragePrice,
-						com.tools20022.repository.msg.OrderStatus3.SingleOrderStatusDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus3.mmClientOrderIdentification, com.tools20022.repository.msg.OrderStatus3.mmSecondaryClientOrderIdentification,
+						com.tools20022.repository.msg.OrderStatus3.mmSide, com.tools20022.repository.msg.OrderStatus3.mmWorkingIndicator, com.tools20022.repository.msg.OrderStatus3.mmRemainingQuantity,
+						com.tools20022.repository.msg.OrderStatus3.mmCumulativeQuantity, com.tools20022.repository.msg.OrderStatus3.mmCancelledQuantity, com.tools20022.repository.msg.OrderStatus3.mmAveragePrice,
+						com.tools20022.repository.msg.OrderStatus3.mmSingleOrderStatusDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderStatus3";
 				definition = "Provides details related to each single order being part of the list order.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getClientOrderIdentification() {
+		return clientOrderIdentification;
+	}
+
+	public void setClientOrderIdentification(Max35Text clientOrderIdentification) {
+		this.clientOrderIdentification = clientOrderIdentification;
+	}
+
+	public Max35Text getSecondaryClientOrderIdentification() {
+		return secondaryClientOrderIdentification;
+	}
+
+	public void setSecondaryClientOrderIdentification(Max35Text secondaryClientOrderIdentification) {
+		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
+	}
+
+	public Side1Code getSide() {
+		return side;
+	}
+
+	public void setSide(Side1Code side) {
+		this.side = side;
+	}
+
+	public YesNoIndicator getWorkingIndicator() {
+		return workingIndicator;
+	}
+
+	public void setWorkingIndicator(YesNoIndicator workingIndicator) {
+		this.workingIndicator = workingIndicator;
+	}
+
+	public FinancialInstrumentQuantityChoice getRemainingQuantity() {
+		return remainingQuantity;
+	}
+
+	public void setRemainingQuantity(FinancialInstrumentQuantityChoice remainingQuantity) {
+		this.remainingQuantity = remainingQuantity;
+	}
+
+	public FinancialInstrumentQuantityChoice getCumulativeQuantity() {
+		return cumulativeQuantity;
+	}
+
+	public void setCumulativeQuantity(FinancialInstrumentQuantityChoice cumulativeQuantity) {
+		this.cumulativeQuantity = cumulativeQuantity;
+	}
+
+	public FinancialInstrumentQuantityChoice getCancelledQuantity() {
+		return cancelledQuantity;
+	}
+
+	public void setCancelledQuantity(FinancialInstrumentQuantityChoice cancelledQuantity) {
+		this.cancelledQuantity = cancelledQuantity;
+	}
+
+	public Price1 getAveragePrice() {
+		return averagePrice;
+	}
+
+	public void setAveragePrice(com.tools20022.repository.msg.Price1 averagePrice) {
+		this.averagePrice = averagePrice;
+	}
+
+	public OrderStatusAndReason5 getSingleOrderStatusDetails() {
+		return singleOrderStatusDetails;
+	}
+
+	public void setSingleOrderStatusDetails(com.tools20022.repository.msg.OrderStatusAndReason5 singleOrderStatusDetails) {
+		this.singleOrderStatusDetails = singleOrderStatusDetails;
 	}
 }

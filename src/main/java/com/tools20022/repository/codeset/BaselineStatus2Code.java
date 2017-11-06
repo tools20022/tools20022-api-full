@@ -34,19 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#Complete
- * BaselineStatus2Code.Complete}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#Closed
- * BaselineStatus2Code.Closed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#Active
- * BaselineStatus2Code.Active}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#mmComplete
+ * BaselineStatus2Code.mmComplete}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#mmClosed
+ * BaselineStatus2Code.mmClosed}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#mmActive
+ * BaselineStatus2Code.mmActive}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +85,7 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode Complete = new MMCode() {
+	public static final MMCode mmComplete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
@@ -106,7 +108,7 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	 * name} = "Closed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Closed = new MMCode() {
+	public static final MMCode mmClosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
@@ -129,7 +131,7 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode Active = new MMCode() {
+	public static final MMCode mmActive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
@@ -140,12 +142,13 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BaselineStatus2Code";
 				definition = "Specifies the status requested to be assigned to the baseline.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BaselineStatus2Code.Complete, com.tools20022.repository.codeset.BaselineStatus2Code.Closed, com.tools20022.repository.codeset.BaselineStatus2Code.Active);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BaselineStatus2Code.mmComplete, com.tools20022.repository.codeset.BaselineStatus2Code.mmClosed,
+						com.tools20022.repository.codeset.BaselineStatus2Code.mmActive);
 				trace_lazy = () -> BaselineStatusCode.mmObject();
 			}
 		});

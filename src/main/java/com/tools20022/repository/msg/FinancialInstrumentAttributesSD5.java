@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD5#PlaceAndName
- * FinancialInstrumentAttributesSD5.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD5#mmPlaceAndName
+ * FinancialInstrumentAttributesSD5.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD5#SecurityOfInterestMatchingSecurity
- * FinancialInstrumentAttributesSD5.SecurityOfInterestMatchingSecurity}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD5#mmSecurityOfInterestMatchingSecurity
+ * FinancialInstrumentAttributesSD5.mmSecurityOfInterestMatchingSecurity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAttributesSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -88,7 +89,7 @@ public class FinancialInstrumentAttributesSD5 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD5.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class FinancialInstrumentAttributesSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected SecurityIdentification15 securityOfInterestMatchingSecurity;
 	/**
 	 * Matching security identifier for the disbursed security that is used to
 	 * match the customer's SOI (Security of Interest) to the GCA VS Security
@@ -133,7 +135,7 @@ public class FinancialInstrumentAttributesSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD5.mmObject();
 			isDerived = false;
@@ -141,22 +143,38 @@ public class FinancialInstrumentAttributesSD5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityOfInterestMatchingSecurity";
 			definition = "Matching security identifier for  the disbursed security that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification15.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.PlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.SecurityOfInterestMatchingSecurity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.mmSecurityOfInterestMatchingSecurity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD5";
 				definition = "Provides additional information regarding corporate action option securities movement security details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public SecurityIdentification15 getSecurityOfInterestMatchingSecurity() {
+		return securityOfInterestMatchingSecurity;
+	}
+
+	public void setSecurityOfInterestMatchingSecurity(com.tools20022.repository.msg.SecurityIdentification15 securityOfInterestMatchingSecurity) {
+		this.securityOfInterestMatchingSecurity = securityOfInterestMatchingSecurity;
 	}
 }

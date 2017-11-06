@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code#ProRata
- * CorporateActionCalculationMethod1Code.ProRata}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code#mmProRata
+ * CorporateActionCalculationMethod1Code.mmProRata}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code#Lottery
- * CorporateActionCalculationMethod1Code.Lottery}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code#mmLottery
+ * CorporateActionCalculationMethod1Code.mmLottery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code#NominalReduction
- * CorporateActionCalculationMethod1Code.NominalReduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code#mmNominalReduction
+ * CorporateActionCalculationMethod1Code.mmNominalReduction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code#NoNominalReduction
- * CorporateActionCalculationMethod1Code.NoNominalReduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code#mmNoNominalReduction
+ * CorporateActionCalculationMethod1Code.mmNoNominalReduction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CorporateActionCalculationMethod1Code extends CorporateActionCalcul
 	 * name} = "ProRata"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProRata = new MMCode() {
+	public static final MMCode mmProRata = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProRata";
@@ -110,7 +110,7 @@ public class CorporateActionCalculationMethod1Code extends CorporateActionCalcul
 	 * name} = "Lottery"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lottery = new MMCode() {
+	public static final MMCode mmLottery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lottery";
@@ -133,7 +133,7 @@ public class CorporateActionCalculationMethod1Code extends CorporateActionCalcul
 	 * name} = "NominalReduction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NominalReduction = new MMCode() {
+	public static final MMCode mmNominalReduction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NominalReduction";
@@ -156,7 +156,7 @@ public class CorporateActionCalculationMethod1Code extends CorporateActionCalcul
 	 * name} = "NoNominalReduction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoNominalReduction = new MMCode() {
+	public static final MMCode mmNoNominalReduction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoNominalReduction";
@@ -167,13 +167,13 @@ public class CorporateActionCalculationMethod1Code extends CorporateActionCalcul
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCalculationMethod1Code";
 				definition = "Specifies the calculation method for drawings.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code.ProRata, com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code.Lottery,
-						com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code.NominalReduction, com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code.NoNominalReduction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code.mmProRata, com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code.mmLottery,
+						com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code.mmNominalReduction, com.tools20022.repository.codeset.CorporateActionCalculationMethod1Code.mmNoNominalReduction);
 				trace_lazy = () -> CorporateActionCalculationMethodCode.mmObject();
 			}
 		});

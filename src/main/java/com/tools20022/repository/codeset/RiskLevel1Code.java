@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.RiskLevelCode RiskLevelCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#High
- * RiskLevel1Code.High}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#Low
- * RiskLevel1Code.Low}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#Medium
- * RiskLevel1Code.Medium}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#mmHigh
+ * RiskLevel1Code.mmHigh}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#mmLow
+ * RiskLevel1Code.mmLow}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#mmMedium
+ * RiskLevel1Code.mmMedium}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class RiskLevel1Code extends RiskLevelCode {
 	 * name} = "High"</li>
 	 * </ul>
 	 */
-	public static final MMCode High = new MMCode() {
+	public static final MMCode mmHigh = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "High";
@@ -103,7 +103,7 @@ public class RiskLevel1Code extends RiskLevelCode {
 	 * name} = "Low"</li>
 	 * </ul>
 	 */
-	public static final MMCode Low = new MMCode() {
+	public static final MMCode mmLow = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Low";
@@ -126,7 +126,7 @@ public class RiskLevel1Code extends RiskLevelCode {
 	 * name} = "Medium"</li>
 	 * </ul>
 	 */
-	public static final MMCode Medium = new MMCode() {
+	public static final MMCode mmMedium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
@@ -137,12 +137,12 @@ public class RiskLevel1Code extends RiskLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HIGH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RiskLevel1Code";
 				definition = "Specifies the risk level.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RiskLevel1Code.High, com.tools20022.repository.codeset.RiskLevel1Code.Low, com.tools20022.repository.codeset.RiskLevel1Code.Medium);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RiskLevel1Code.mmHigh, com.tools20022.repository.codeset.RiskLevel1Code.mmLow, com.tools20022.repository.codeset.RiskLevel1Code.mmMedium);
 				trace_lazy = () -> RiskLevelCode.mmObject();
 			}
 		});

@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BasicCollateralValuation1Details#ValuationHaircut
- * BasicCollateralValuation1Details.ValuationHaircut}</li>
+ * {@linkplain com.tools20022.repository.msg.BasicCollateralValuation1Details#mmValuationHaircut
+ * BasicCollateralValuation1Details.mmValuationHaircut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BasicCollateralValuation1Details#HaircutSource
- * BasicCollateralValuation1Details.HaircutSource}</li>
+ * {@linkplain com.tools20022.repository.msg.BasicCollateralValuation1Details#mmHaircutSource
+ * BasicCollateralValuation1Details.mmHaircutSource}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BasicCollateralValuation1Details {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate valuationHaircut;
 	/**
 	 * Haircut percentage applied to the market value of underlying assets used
 	 * as collateral as a risk control measure. The institution valuating the
@@ -78,8 +79,8 @@ public class BasicCollateralValuation1Details {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.HaircutValuation#Haircut
-	 * HaircutValuation.Haircut}</li>
+	 * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmHaircut
+	 * HaircutValuation.mmHaircut}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -100,20 +101,21 @@ public class BasicCollateralValuation1Details {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuationHaircut = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuationHaircut = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> BasicCollateralValuation1Details.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.Haircut;
 			isDerived = false;
 			xmlTag = "ValtnHrcut";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationHaircut";
 			definition = "Haircut percentage applied to the market value of underlying assets used as collateral as a risk control measure. The institution valuating the collateral calculates the value of underlying assets based on its market value less a certain percentage (the haircut).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PartyIdentification15 haircutSource;
 	/**
 	 * Place where the valuation haircut was calculated.
 	 * <p>
@@ -127,8 +129,8 @@ public class BasicCollateralValuation1Details {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -147,32 +149,48 @@ public class BasicCollateralValuation1Details {
 	 * definition} = "Place where the valuation haircut was calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HaircutSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHaircutSource = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> BasicCollateralValuation1Details.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "HrcutSrc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HaircutSource";
 			definition = "Place where the valuation haircut was calculated.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification15.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification15.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BasicCollateralValuation1Details.ValuationHaircut, com.tools20022.repository.msg.BasicCollateralValuation1Details.HaircutSource);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BasicCollateralValuation1Details.mmValuationHaircut, com.tools20022.repository.msg.BasicCollateralValuation1Details.mmHaircutSource);
 				trace_lazy = () -> HaircutValuation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BasicCollateralValuation1Details";
 				definition = "Basic valuation details of a collateral position.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getValuationHaircut() {
+		return valuationHaircut;
+	}
+
+	public void setValuationHaircut(PercentageRate valuationHaircut) {
+		this.valuationHaircut = valuationHaircut;
+	}
+
+	public PartyIdentification15 getHaircutSource() {
+		return haircutSource;
+	}
+
+	public void setHaircutSource(com.tools20022.repository.msg.PartyIdentification15 haircutSource) {
+		this.haircutSource = haircutSource;
 	}
 }

@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType8Code#ToBeSpecified
- * PriceValueType8Code.ToBeSpecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType8Code#mmToBeSpecified
+ * PriceValueType8Code.mmToBeSpecified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType8Code#Unspecified
- * PriceValueType8Code.Unspecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType8Code#mmUnspecified
+ * PriceValueType8Code.mmUnspecified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType8Code#Unknown
- * PriceValueType8Code.Unknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType8Code#mmUnknown
+ * PriceValueType8Code.mmUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType8Code#NilPayment
- * PriceValueType8Code.NilPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType8Code#mmNilPayment
+ * PriceValueType8Code.mmNilPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class PriceValueType8Code extends PriceValueTypeCode {
 	 * name} = "ToBeSpecified"</li>
 	 * </ul>
 	 */
-	public static final MMCode ToBeSpecified = new MMCode() {
+	public static final MMCode mmToBeSpecified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeSpecified";
@@ -110,7 +110,7 @@ public class PriceValueType8Code extends PriceValueTypeCode {
 	 * name} = "Unspecified"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unspecified = new MMCode() {
+	public static final MMCode mmUnspecified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unspecified";
@@ -133,7 +133,7 @@ public class PriceValueType8Code extends PriceValueTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unknown = new MMCode() {
+	public static final MMCode mmUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
@@ -156,7 +156,7 @@ public class PriceValueType8Code extends PriceValueTypeCode {
 	 * name} = "NilPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode NilPayment = new MMCode() {
+	public static final MMCode mmNilPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NilPayment";
@@ -167,13 +167,13 @@ public class PriceValueType8Code extends PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TBSP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType8Code";
 				definition = "Specifies a type of price value.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType8Code.ToBeSpecified, com.tools20022.repository.codeset.PriceValueType8Code.Unspecified,
-						com.tools20022.repository.codeset.PriceValueType8Code.Unknown, com.tools20022.repository.codeset.PriceValueType8Code.NilPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType8Code.mmToBeSpecified, com.tools20022.repository.codeset.PriceValueType8Code.mmUnspecified,
+						com.tools20022.repository.codeset.PriceValueType8Code.mmUnknown, com.tools20022.repository.codeset.PriceValueType8Code.mmNilPayment);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 			}
 		});

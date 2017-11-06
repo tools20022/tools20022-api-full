@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnitOfMeasure3Choice#UnitOfMeasureCode
- * UnitOfMeasure3Choice.UnitOfMeasureCode}</li>
+ * {@linkplain com.tools20022.repository.choice.UnitOfMeasure3Choice#mmUnitOfMeasureCode
+ * UnitOfMeasure3Choice.mmUnitOfMeasureCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnitOfMeasure3Choice#OtherUnitOfMeasure
- * UnitOfMeasure3Choice.OtherUnitOfMeasure}</li>
+ * {@linkplain com.tools20022.repository.choice.UnitOfMeasure3Choice#mmOtherUnitOfMeasure
+ * UnitOfMeasure3Choice.mmOtherUnitOfMeasure}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnitOfMeasure3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected UnitOfMeasure4Code unitOfMeasureCode;
 	/**
 	 * Quantity of a product on a line specified by a number. For example, 100
 	 * (kgs), 50 (pieces).
@@ -77,8 +78,8 @@ public class UnitOfMeasure3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#UnitOfMeasure
-	 * ProductQuantity.UnitOfMeasure}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmUnitOfMeasure
+	 * ProductQuantity.mmUnitOfMeasure}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class UnitOfMeasure3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnitOfMeasureCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnitOfMeasureCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> UnitOfMeasure3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.UnitOfMeasure;
 			isDerived = false;
 			xmlTag = "UnitOfMeasrCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasureCode";
 			definition = "Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasure4Code.mmObject();
 		}
 	};
+	protected Max35Text otherUnitOfMeasure;
 	/**
 	 * Identifies the unit of measure not present in the code list.
 	 * <p>
@@ -125,8 +127,8 @@ public class UnitOfMeasure3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#UnitOfMeasure
-	 * ProductQuantity.UnitOfMeasure}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmUnitOfMeasure
+	 * ProductQuantity.mmUnitOfMeasure}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,17 +148,17 @@ public class UnitOfMeasure3Choice {
 	 * "Identifies the unit of measure not present in the code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherUnitOfMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherUnitOfMeasure = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> UnitOfMeasure3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.UnitOfMeasure;
 			isDerived = false;
 			xmlTag = "OthrUnitOfMeasr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherUnitOfMeasure";
 			definition = "Identifies the unit of measure not present in the code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class UnitOfMeasure3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitOfMeasure3Choice.UnitOfMeasureCode, com.tools20022.repository.choice.UnitOfMeasure3Choice.OtherUnitOfMeasure);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitOfMeasure3Choice.mmUnitOfMeasureCode, com.tools20022.repository.choice.UnitOfMeasure3Choice.mmOtherUnitOfMeasure);
 				trace_lazy = () -> ProductQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnitOfMeasure3Choice";
 				definition = "Specifies a unit of measure with a code or free text.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UnitOfMeasure4Code getUnitOfMeasureCode() {
+		return unitOfMeasureCode;
+	}
+
+	public void setUnitOfMeasureCode(UnitOfMeasure4Code unitOfMeasureCode) {
+		this.unitOfMeasureCode = unitOfMeasureCode;
+	}
+
+	public Max35Text getOtherUnitOfMeasure() {
+		return otherUnitOfMeasure;
+	}
+
+	public void setOtherUnitOfMeasure(Max35Text otherUnitOfMeasure) {
+		this.otherUnitOfMeasure = otherUnitOfMeasure;
 	}
 }

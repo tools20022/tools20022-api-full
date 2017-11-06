@@ -32,6 +32,7 @@ import com.tools20022.repository.entity.SwitchOrder;
 import com.tools20022.repository.entity.TradingMarket;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Transfer from one investment fund/fund class to another investment fund or
@@ -44,65 +45,69 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#MasterReference
- * SwitchOrder7.MasterReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#OrderDateTime
- * SwitchOrder7.OrderDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#PlaceOfTrade
- * SwitchOrder7.PlaceOfTrade}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#OrderReference
- * SwitchOrder7.OrderReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#ClientReference
- * SwitchOrder7.ClientReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#mmMasterReference
+ * SwitchOrder7.mmMasterReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#mmOrderDateTime
+ * SwitchOrder7.mmOrderDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#mmPlaceOfTrade
+ * SwitchOrder7.mmPlaceOfTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#mmOrderReference
+ * SwitchOrder7.mmOrderReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#mmClientReference
+ * SwitchOrder7.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#InvestmentAccountDetails
- * SwitchOrder7.InvestmentAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmInvestmentAccountDetails
+ * SwitchOrder7.mmInvestmentAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#RelatedPartyDetails
- * SwitchOrder7.RelatedPartyDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmRelatedPartyDetails
+ * SwitchOrder7.mmRelatedPartyDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#RequestedFutureTradeDate
- * SwitchOrder7.RequestedFutureTradeDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#SettlementAmount
- * SwitchOrder7.SettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmRequestedFutureTradeDate
+ * SwitchOrder7.mmRequestedFutureTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#CashSettlementDate
- * SwitchOrder7.CashSettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#SettlementMethod
- * SwitchOrder7.SettlementMethod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#AdditionalAmount
- * SwitchOrder7.AdditionalAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#ExpiryDateTime
- * SwitchOrder7.ExpiryDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#CancellationRight
- * SwitchOrder7.CancellationRight}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmSettlementAmount
+ * SwitchOrder7.mmSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#RedemptionLegDetails
- * SwitchOrder7.RedemptionLegDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmCashSettlementDate
+ * SwitchOrder7.mmCashSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#SubscriptionLegDetails
- * SwitchOrder7.SubscriptionLegDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmSettlementMethod
+ * SwitchOrder7.mmSettlementMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#CashSettlementDetails
- * SwitchOrder7.CashSettlementDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmAdditionalAmount
+ * SwitchOrder7.mmAdditionalAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#mmExpiryDateTime
+ * SwitchOrder7.mmExpiryDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#ForeignExchangeDetails
- * SwitchOrder7.ForeignExchangeDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#FinancialAdvice
- * SwitchOrder7.FinancialAdvice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#NegotiatedTrade
- * SwitchOrder7.NegotiatedTrade}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmCancellationRight
+ * SwitchOrder7.mmCancellationRight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#CustomerConductClassification
- * SwitchOrder7.CustomerConductClassification}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmRedemptionLegDetails
+ * SwitchOrder7.mmRedemptionLegDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#TransactionChannelType
- * SwitchOrder7.TransactionChannelType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#SignatureType
- * SwitchOrder7.SignatureType}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmSubscriptionLegDetails
+ * SwitchOrder7.mmSubscriptionLegDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder7#OrderWaiverDetails
- * SwitchOrder7.OrderWaiverDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmCashSettlementDetails
+ * SwitchOrder7.mmCashSettlementDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmForeignExchangeDetails
+ * SwitchOrder7.mmForeignExchangeDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#mmFinancialAdvice
+ * SwitchOrder7.mmFinancialAdvice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#mmNegotiatedTrade
+ * SwitchOrder7.mmNegotiatedTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmCustomerConductClassification
+ * SwitchOrder7.mmCustomerConductClassification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmTransactionChannelType
+ * SwitchOrder7.mmTransactionChannelType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7#mmSignatureType
+ * SwitchOrder7.mmSignatureType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder7#mmOrderWaiverDetails
+ * SwitchOrder7.mmOrderWaiverDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -113,15 +118,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#SwitchOrderDetails
- * SwitchOrderV04.SwitchOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV04#mmSwitchOrderDetails
+ * SwitchOrderV04.mmSwitchOrderDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -140,6 +145,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SwitchOrder7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text masterReference;
 	/**
 	 * Unique and unambiguous identifier for a group of individual orders, as
 	 * assigned by the instructing party. This identifier links the individual
@@ -154,8 +160,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Order#MasterIdentification
-	 * Order.MasterIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+	 * Order.mmMasterIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,25 +182,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#MasterReference
-	 * SwitchOrder4.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmMasterReference
+	 * SwitchOrder4.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.MasterIdentification;
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.MasterReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmMasterReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime orderDateTime;
 	/**
 	 * Date and time the order is placed by the investor or its agent.
 	 * <p>
@@ -207,8 +214,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderDateTime
-	 * InvestmentFundOrder.OrderDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderDateTime
+	 * InvestmentFundOrder.mmOrderDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -228,25 +235,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#OrderDateTime
-	 * SwitchOrder4.OrderDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmOrderDateTime
+	 * SwitchOrder4.mmOrderDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderDateTime;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderDateTime;
 			isDerived = false;
 			xmlTag = "OrdrDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDateTime";
 			definition = "Date and time the order is placed by the investor or its agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.OrderDateTime;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmOrderDateTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected PlaceOfTradeIdentification1Choice placeOfTrade;
 	/**
 	 * Market in which the advised trade transaction was executed.
 	 * <p>
@@ -280,20 +288,21 @@ public class SwitchOrder7 {
 	 * "Market in which the advised trade transaction was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SwitchOrder7.mmObject();
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
+			componentContext_lazy = () -> SwitchOrder7.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which the advised trade transaction was executed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PlaceOfTradeIdentification1Choice.mmObject();
 		}
 	};
+	protected Max35Text orderReference;
 	/**
 	 * Unique and unambiguous identifier for the order, as assigned by the
 	 * instructing party.
@@ -307,8 +316,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#Identification
-	 * SecuritiesOrder.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmIdentification
+	 * SecuritiesOrder.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -329,25 +338,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#OrderReference
-	 * SwitchOrder4.OrderReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmOrderReference
+	 * SwitchOrder4.mmOrderReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.Identification;
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for the order, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.OrderReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmOrderReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous investor's identification of the order. This
 	 * reference can typically be used in a hub scenario to give the reference
@@ -362,8 +372,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -384,25 +394,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#ClientReference
-	 * SwitchOrder4.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmClientReference
+	 * SwitchOrder4.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.ClientReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmClientReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected InvestmentAccount58 investmentAccountDetails;
 	/**
 	 * Account impacted by the investment fund order.
 	 * <p>
@@ -414,8 +425,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#InvestmentAccount
-	 * InvestmentFundTransaction.InvestmentAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentAccount
+	 * InvestmentFundTransaction.mmInvestmentAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -434,26 +445,27 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#InvestmentAccountDetails
-	 * SwitchOrder4.InvestmentAccountDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmInvestmentAccountDetails
+	 * SwitchOrder4.mmInvestmentAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.InvestmentAccount;
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account impacted by the investment fund order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.InvestmentAccountDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmInvestmentAccountDetails;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount58.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount58.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Intermediary40> relatedPartyDetails;
 	/**
 	 * Party related to the transaction.
 	 * <p>
@@ -465,8 +477,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradePartyRole
-	 * Trade.TradePartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradePartyRole
+	 * Trade.mmTradePartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -485,26 +497,27 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#RelatedPartyDetails
-	 * SwitchOrder4.RelatedPartyDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmRelatedPartyDetails
+	 * SwitchOrder4.mmRelatedPartyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedPartyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradePartyRole;
 			isDerived = false;
 			xmlTag = "RltdPtyDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyDetails";
 			definition = "Party related to the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.RelatedPartyDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmRelatedPartyDetails;
 			maxOccurs = 10;
-			type_lazy = () -> Intermediary40.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary40.mmObject();
 		}
 	};
+	protected ISODate requestedFutureTradeDate;
 	/**
 	 * Future date at which the investor requests the order to be executed. The
 	 * specification of a requested future trade date is not allowed in some
@@ -519,8 +532,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#RequestedExecutionDateTime
-	 * InvestmentFundOrder.RequestedExecutionDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmRequestedExecutionDateTime
+	 * InvestmentFundOrder.mmRequestedExecutionDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -541,25 +554,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#RequestedFutureTradeDate
-	 * SwitchOrder4.RequestedFutureTradeDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmRequestedFutureTradeDate
+	 * SwitchOrder4.mmRequestedFutureTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedFutureTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedFutureTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmRequestedExecutionDateTime;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.RequestedExecutionDateTime;
 			isDerived = false;
 			xmlTag = "ReqdFutrTradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedFutureTradeDate";
 			definition = "Future date at which the investor requests the order to be executed.\nThe specification of a requested future trade date is not allowed in some markets. The date must be a date in the future.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.RequestedFutureTradeDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmRequestedFutureTradeDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount settlementAmount;
 	/**
 	 * Total amount of money paid /to be paid or received in exchange for the
 	 * financial instrument in the individual order.
@@ -574,8 +588,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementAmount
-	 * SecuritiesSettlement.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+	 * SecuritiesSettlement.mmSettlementAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -596,25 +610,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#SettlementAmount
-	 * SwitchOrder4.SettlementAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmSettlementAmount
+	 * SwitchOrder4.mmSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementAmount;
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.SettlementAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmSettlementAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate cashSettlementDate;
 	/**
 	 * Date on which cash is available.
 	 * <p>
@@ -627,8 +642,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#ValueDate
-	 * Payment.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmValueDate
+	 * Payment.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -647,25 +662,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#CashSettlementDate
-	 * SwitchOrder4.CashSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmCashSettlementDate
+	 * SwitchOrder4.mmCashSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.ValueDate;
 			isDerived = false;
 			xmlTag = "CshSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDate";
 			definition = "Date on which cash is available.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.CashSettlementDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmCashSettlementDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DeliveryReceiptType2Code settlementMethod;
 	/**
 	 * Method by which the transaction is settled.
 	 * <p>
@@ -679,8 +695,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementType
-	 * SecuritiesSettlement.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+	 * SecuritiesSettlement.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -699,25 +715,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#SettlementMethod
-	 * SwitchOrder4.SettlementMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmSettlementMethod
+	 * SwitchOrder4.mmSettlementMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementType;
 			isDerived = false;
 			xmlTag = "SttlmMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod";
 			definition = "Method by which the transaction is settled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.SettlementMethod;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmSettlementMethod;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected AdditionalAmount1Choice additionalAmount;
 	/**
 	 * Choice between additional cash in or resulting cash out.
 	 * <p>
@@ -731,8 +748,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#AdditionalCashIn
-	 * SwitchOrder.AdditionalCashIn}</li>
+	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmAdditionalCashIn
+	 * SwitchOrder.mmAdditionalCashIn}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -751,25 +768,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#AdditionalCashIn
-	 * SwitchOrder4.AdditionalCashIn}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmAdditionalCashIn
+	 * SwitchOrder4.mmAdditionalCashIn}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmAdditionalCashIn;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.AdditionalCashIn;
 			isDerived = false;
 			xmlTag = "AddtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalAmount";
 			definition = "Choice between additional cash in or resulting cash out.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.AdditionalCashIn;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmAdditionalCashIn;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalAmount1Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice expiryDateTime;
 	/**
 	 * Date on which the order expires.
 	 * <p>
@@ -783,8 +801,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#ExpiryDateTime
-	 * InvestmentFundOrder.ExpiryDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmExpiryDateTime
+	 * InvestmentFundOrder.mmExpiryDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -803,25 +821,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#ExpiryDateTime
-	 * SwitchOrder4.ExpiryDateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmExpiryDateTime
+	 * SwitchOrder4.mmExpiryDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmExpiryDateTime;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.ExpiryDateTime;
 			isDerived = false;
 			xmlTag = "XpryDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDateTime";
 			definition = "Date on which the order expires.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.ExpiryDateTime;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmExpiryDateTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected CancellationRight1Choice cancellationRight;
 	/**
 	 * Cancellation right of the investor with respect to the investment fund
 	 * order.
@@ -836,8 +855,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#CancellationRight
-	 * InvestmentFundOrder.CancellationRight}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmCancellationRight
+	 * InvestmentFundOrder.mmCancellationRight}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -857,20 +876,21 @@ public class SwitchOrder7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationRight = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmCancellationRight;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.CancellationRight;
 			isDerived = false;
 			xmlTag = "CxlRght";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRight";
 			definition = "Cancellation right of the investor with respect to the investment fund order.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CancellationRight1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SwitchRedemptionLegOrder6> redemptionLegDetails;
 	/**
 	 * Part of the investment fund switch order that is a redemption.
 	 * <p>
@@ -883,8 +903,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#RedemptionLeg
-	 * SwitchOrder.RedemptionLeg}</li>
+	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmRedemptionLeg
+	 * SwitchOrder.mmRedemptionLeg}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -904,25 +924,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#RedemptionLegDetails
-	 * SwitchOrder4.RedemptionLegDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmRedemptionLegDetails
+	 * SwitchOrder4.mmRedemptionLegDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RedemptionLegDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRedemptionLegDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmRedemptionLeg;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.RedemptionLeg;
 			isDerived = false;
 			xmlTag = "RedLegDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionLegDetails";
 			definition = "Part of the investment fund switch order that is a redemption.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.RedemptionLegDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmRedemptionLegDetails;
 			minOccurs = 1;
-			type_lazy = () -> SwitchRedemptionLegOrder6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder6.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder6> subscriptionLegDetails;
 	/**
 	 * Part of the investment fund switch order that is a subscription.
 	 * <p>
@@ -935,8 +956,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#SubscriptionLeg
-	 * SwitchOrder.SubscriptionLeg}</li>
+	 * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmSubscriptionLeg
+	 * SwitchOrder.mmSubscriptionLeg}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -956,25 +977,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#SubscriptionLegDetails
-	 * SwitchOrder4.SubscriptionLegDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmSubscriptionLegDetails
+	 * SwitchOrder4.mmSubscriptionLegDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SubscriptionLegDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSubscriptionLegDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmSubscriptionLeg;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.SubscriptionLeg;
 			isDerived = false;
 			xmlTag = "SbcptLegDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionLegDetails";
 			definition = "Part of the investment fund switch order that is a subscription.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.SubscriptionLegDetails;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmSubscriptionLegDetails;
 			minOccurs = 1;
-			type_lazy = () -> SwitchSubscriptionLegOrder6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.mmObject();
 		}
 	};
+	protected PaymentTransaction71 cashSettlementDetails;
 	/**
 	 * Payment process for the transfer of cash from the debtor to the creditor.
 	 * <p>
@@ -986,8 +1008,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentOffset
-	 * PaymentObligation.PaymentOffset}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentOffset
+	 * PaymentObligation.mmPaymentOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1008,26 +1030,27 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#CashSettlementDetails
-	 * SwitchOrder4.CashSettlementDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmCashSettlementDetails
+	 * SwitchOrder4.mmCashSettlementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashSettlementDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentOffset;
 			isDerived = false;
 			xmlTag = "CshSttlmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDetails";
 			definition = "Payment process for the transfer of cash from the debtor to the creditor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.CashSettlementDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmCashSettlementDetails;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentTransaction71.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction71.mmObject();
 		}
 	};
+	protected ForeignExchangeTerms32 foreignExchangeDetails;
 	/**
 	 * Information needed to process a currency exchange or conversion.<br>
 	 * Information needed to process a currency exchange or conversion.<br>
@@ -1052,8 +1075,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#AgreedRate
-	 * ForeignExchangeTrade.AgreedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+	 * ForeignExchangeTrade.mmAgreedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1074,26 +1097,27 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#ForeignExchangeDetails
-	 * SwitchOrder4.ForeignExchangeDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmForeignExchangeDetails
+	 * SwitchOrder4.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.AgreedRate;
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.\r\nInformation needed to process a currency exchange or conversion.\r\nHow the exchange rate is expressed determines which currency is the Unit Currency and Quoted Currency. If the amounts concerned are EUR 1000 and USD 1300, the exchange rate may be expressed as per either of the following examples:\r\nEXAMPLE 1 \r\nUnitCurrency  EUR\r\nQuotedCurrency  USD\r\nExchangeRate  1.300\r\nEXAMPLE 2\r\nUnitCurrency  USD\r\nQuotedCurrency  EUR\r\nExchangeRate  0.769";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.ForeignExchangeDetails;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmForeignExchangeDetails;
 			maxOccurs = 1;
-			type_lazy = () -> ForeignExchangeTerms32.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms32.mmObject();
 		}
 	};
+	protected FinancialAdvice1Code financialAdvice;
 	/**
 	 * Specifies if advice has been received from an independent financial
 	 * advisor.
@@ -1108,8 +1132,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#FinancialAdvice
-	 * InvestmentFundOrder.FinancialAdvice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmFinancialAdvice
+	 * InvestmentFundOrder.mmFinancialAdvice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1130,25 +1154,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#FinancialAdvice
-	 * SwitchOrder4.FinancialAdvice}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmFinancialAdvice
+	 * SwitchOrder4.mmFinancialAdvice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialAdvice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialAdvice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmFinancialAdvice;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.FinancialAdvice;
 			isDerived = false;
 			xmlTag = "FinAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdvice";
 			definition = "Specifies if advice has been received from an independent financial advisor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.FinancialAdvice;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmFinancialAdvice;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> FinancialAdvice1Code.mmObject();
 		}
 	};
+	protected NegotiatedTrade1Code negotiatedTrade;
 	/**
 	 * Specifies whether the trade is negotiated.
 	 * <p>
@@ -1162,8 +1187,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#NegotiatedTrade
-	 * InvestmentFundOrder.NegotiatedTrade}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmNegotiatedTrade
+	 * InvestmentFundOrder.mmNegotiatedTrade}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1182,25 +1207,26 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#NegotiatedTrade
-	 * SwitchOrder4.NegotiatedTrade}</li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrder4#mmNegotiatedTrade
+	 * SwitchOrder4.mmNegotiatedTrade}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NegotiatedTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNegotiatedTrade = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmNegotiatedTrade;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.NegotiatedTrade;
 			isDerived = false;
 			xmlTag = "NgtdTrad";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiatedTrade";
 			definition = "Specifies whether the trade is negotiated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.NegotiatedTrade;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SwitchOrder4.mmNegotiatedTrade;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NegotiatedTrade1Code.mmObject();
 		}
 	};
+	protected CustomerConductClassification1Choice customerConductClassification;
 	/**
 	 * Assessment of the customer’s behaviour at the time of the account opening
 	 * application.
@@ -1231,7 +1257,7 @@ public class SwitchOrder7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CustomerConductClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCustomerConductClassification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
 			isDerived = false;
@@ -1239,11 +1265,12 @@ public class SwitchOrder7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerConductClassification";
 			definition = "Assessment of the customer’s behaviour at the time of the account opening application.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CustomerConductClassification1Choice.mmObject();
 		}
 	};
+	protected TransactionChannelType1Choice transactionChannelType;
 	/**
 	 * Means by which the investor or account owner submits the open account
 	 * form.
@@ -1257,8 +1284,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountContract#TransactionChannel
-	 * AccountContract.TransactionChannel}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountContract#mmTransactionChannel
+	 * AccountContract.mmTransactionChannel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1278,21 +1305,22 @@ public class SwitchOrder7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionChannelType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionChannelType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTransactionChannel;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.TransactionChannel;
 			isDerived = false;
 			xmlTag = "TxChanlTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionChannelType";
 			definition = "Means by which the investor or account owner submits the open account form. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionChannelType1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> TransactionChannelType1Choice.mmObject();
 		}
 	};
+	protected SignatureType1Choice signatureType;
 	/**
 	 * Type of signature.
 	 * <p>
@@ -1306,8 +1334,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#SignatureRequired
-	 * InvestmentFundClassProcessingCharacteristics.SignatureRequired}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmSignatureRequired
+	 * InvestmentFundClassProcessingCharacteristics.mmSignatureRequired}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1325,20 +1353,21 @@ public class SwitchOrder7 {
 	 * definition} = "Type of signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SignatureType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignatureType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSignatureRequired;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.SignatureRequired;
 			isDerived = false;
 			xmlTag = "SgntrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureType";
 			definition = "Type of signature.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SignatureType1Choice.mmObject();
 		}
 	};
+	protected OrderWaiver1 orderWaiverDetails;
 	/**
 	 * Information about a non-standard order.
 	 * <p>
@@ -1350,8 +1379,8 @@ public class SwitchOrder7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#OrderWaiverReason
-	 * InvestmentFundOrder.OrderWaiverReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderWaiverReason
+	 * InvestmentFundOrder.mmOrderWaiverReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1369,36 +1398,36 @@ public class SwitchOrder7 {
 	 * definition} = "Information about a non-standard order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderWaiverDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderWaiverDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> SwitchOrder7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.OrderWaiverReason;
 			isDerived = false;
 			xmlTag = "OrdrWvrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderWaiverDetails";
 			definition = "Information about a non-standard order.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OrderWaiver1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OrderWaiver1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder7.MasterReference, com.tools20022.repository.msg.SwitchOrder7.OrderDateTime, com.tools20022.repository.msg.SwitchOrder7.PlaceOfTrade,
-						com.tools20022.repository.msg.SwitchOrder7.OrderReference, com.tools20022.repository.msg.SwitchOrder7.ClientReference, com.tools20022.repository.msg.SwitchOrder7.InvestmentAccountDetails,
-						com.tools20022.repository.msg.SwitchOrder7.RelatedPartyDetails, com.tools20022.repository.msg.SwitchOrder7.RequestedFutureTradeDate, com.tools20022.repository.msg.SwitchOrder7.SettlementAmount,
-						com.tools20022.repository.msg.SwitchOrder7.CashSettlementDate, com.tools20022.repository.msg.SwitchOrder7.SettlementMethod, com.tools20022.repository.msg.SwitchOrder7.AdditionalAmount,
-						com.tools20022.repository.msg.SwitchOrder7.ExpiryDateTime, com.tools20022.repository.msg.SwitchOrder7.CancellationRight, com.tools20022.repository.msg.SwitchOrder7.RedemptionLegDetails,
-						com.tools20022.repository.msg.SwitchOrder7.SubscriptionLegDetails, com.tools20022.repository.msg.SwitchOrder7.CashSettlementDetails, com.tools20022.repository.msg.SwitchOrder7.ForeignExchangeDetails,
-						com.tools20022.repository.msg.SwitchOrder7.FinancialAdvice, com.tools20022.repository.msg.SwitchOrder7.NegotiatedTrade, com.tools20022.repository.msg.SwitchOrder7.CustomerConductClassification,
-						com.tools20022.repository.msg.SwitchOrder7.TransactionChannelType, com.tools20022.repository.msg.SwitchOrder7.SignatureType, com.tools20022.repository.msg.SwitchOrder7.OrderWaiverDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder7.mmMasterReference, com.tools20022.repository.msg.SwitchOrder7.mmOrderDateTime, com.tools20022.repository.msg.SwitchOrder7.mmPlaceOfTrade,
+						com.tools20022.repository.msg.SwitchOrder7.mmOrderReference, com.tools20022.repository.msg.SwitchOrder7.mmClientReference, com.tools20022.repository.msg.SwitchOrder7.mmInvestmentAccountDetails,
+						com.tools20022.repository.msg.SwitchOrder7.mmRelatedPartyDetails, com.tools20022.repository.msg.SwitchOrder7.mmRequestedFutureTradeDate, com.tools20022.repository.msg.SwitchOrder7.mmSettlementAmount,
+						com.tools20022.repository.msg.SwitchOrder7.mmCashSettlementDate, com.tools20022.repository.msg.SwitchOrder7.mmSettlementMethod, com.tools20022.repository.msg.SwitchOrder7.mmAdditionalAmount,
+						com.tools20022.repository.msg.SwitchOrder7.mmExpiryDateTime, com.tools20022.repository.msg.SwitchOrder7.mmCancellationRight, com.tools20022.repository.msg.SwitchOrder7.mmRedemptionLegDetails,
+						com.tools20022.repository.msg.SwitchOrder7.mmSubscriptionLegDetails, com.tools20022.repository.msg.SwitchOrder7.mmCashSettlementDetails, com.tools20022.repository.msg.SwitchOrder7.mmForeignExchangeDetails,
+						com.tools20022.repository.msg.SwitchOrder7.mmFinancialAdvice, com.tools20022.repository.msg.SwitchOrder7.mmNegotiatedTrade, com.tools20022.repository.msg.SwitchOrder7.mmCustomerConductClassification,
+						com.tools20022.repository.msg.SwitchOrder7.mmTransactionChannelType, com.tools20022.repository.msg.SwitchOrder7.mmSignatureType, com.tools20022.repository.msg.SwitchOrder7.mmOrderWaiverDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.mmSwitchOrderDetails);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderV04.SwitchOrderDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrder7";
 				definition = "Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs.";
@@ -1406,5 +1435,197 @@ public class SwitchOrder7 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public ISODateTime getOrderDateTime() {
+		return orderDateTime;
+	}
+
+	public void setOrderDateTime(ISODateTime orderDateTime) {
+		this.orderDateTime = orderDateTime;
+	}
+
+	public PlaceOfTradeIdentification1Choice getPlaceOfTrade() {
+		return placeOfTrade;
+	}
+
+	public void setPlaceOfTrade(PlaceOfTradeIdentification1Choice placeOfTrade) {
+		this.placeOfTrade = placeOfTrade;
+	}
+
+	public Max35Text getOrderReference() {
+		return orderReference;
+	}
+
+	public void setOrderReference(Max35Text orderReference) {
+		this.orderReference = orderReference;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public InvestmentAccount58 getInvestmentAccountDetails() {
+		return investmentAccountDetails;
+	}
+
+	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
+		this.investmentAccountDetails = investmentAccountDetails;
+	}
+
+	public List<Intermediary40> getRelatedPartyDetails() {
+		return relatedPartyDetails;
+	}
+
+	public void setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary40> relatedPartyDetails) {
+		this.relatedPartyDetails = relatedPartyDetails;
+	}
+
+	public ISODate getRequestedFutureTradeDate() {
+		return requestedFutureTradeDate;
+	}
+
+	public void setRequestedFutureTradeDate(ISODate requestedFutureTradeDate) {
+		this.requestedFutureTradeDate = requestedFutureTradeDate;
+	}
+
+	public ActiveCurrencyAndAmount getSettlementAmount() {
+		return settlementAmount;
+	}
+
+	public void setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
+		this.settlementAmount = settlementAmount;
+	}
+
+	public ISODate getCashSettlementDate() {
+		return cashSettlementDate;
+	}
+
+	public void setCashSettlementDate(ISODate cashSettlementDate) {
+		this.cashSettlementDate = cashSettlementDate;
+	}
+
+	public DeliveryReceiptType2Code getSettlementMethod() {
+		return settlementMethod;
+	}
+
+	public void setSettlementMethod(DeliveryReceiptType2Code settlementMethod) {
+		this.settlementMethod = settlementMethod;
+	}
+
+	public AdditionalAmount1Choice getAdditionalAmount() {
+		return additionalAmount;
+	}
+
+	public void setAdditionalAmount(AdditionalAmount1Choice additionalAmount) {
+		this.additionalAmount = additionalAmount;
+	}
+
+	public DateAndDateTimeChoice getExpiryDateTime() {
+		return expiryDateTime;
+	}
+
+	public void setExpiryDateTime(DateAndDateTimeChoice expiryDateTime) {
+		this.expiryDateTime = expiryDateTime;
+	}
+
+	public CancellationRight1Choice getCancellationRight() {
+		return cancellationRight;
+	}
+
+	public void setCancellationRight(CancellationRight1Choice cancellationRight) {
+		this.cancellationRight = cancellationRight;
+	}
+
+	public List<SwitchRedemptionLegOrder6> getRedemptionLegDetails() {
+		return redemptionLegDetails;
+	}
+
+	public void setRedemptionLegDetails(List<com.tools20022.repository.msg.SwitchRedemptionLegOrder6> redemptionLegDetails) {
+		this.redemptionLegDetails = redemptionLegDetails;
+	}
+
+	public List<SwitchSubscriptionLegOrder6> getSubscriptionLegDetails() {
+		return subscriptionLegDetails;
+	}
+
+	public void setSubscriptionLegDetails(List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder6> subscriptionLegDetails) {
+		this.subscriptionLegDetails = subscriptionLegDetails;
+	}
+
+	public PaymentTransaction71 getCashSettlementDetails() {
+		return cashSettlementDetails;
+	}
+
+	public void setCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction71 cashSettlementDetails) {
+		this.cashSettlementDetails = cashSettlementDetails;
+	}
+
+	public ForeignExchangeTerms32 getForeignExchangeDetails() {
+		return foreignExchangeDetails;
+	}
+
+	public void setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms32 foreignExchangeDetails) {
+		this.foreignExchangeDetails = foreignExchangeDetails;
+	}
+
+	public FinancialAdvice1Code getFinancialAdvice() {
+		return financialAdvice;
+	}
+
+	public void setFinancialAdvice(FinancialAdvice1Code financialAdvice) {
+		this.financialAdvice = financialAdvice;
+	}
+
+	public NegotiatedTrade1Code getNegotiatedTrade() {
+		return negotiatedTrade;
+	}
+
+	public void setNegotiatedTrade(NegotiatedTrade1Code negotiatedTrade) {
+		this.negotiatedTrade = negotiatedTrade;
+	}
+
+	public CustomerConductClassification1Choice getCustomerConductClassification() {
+		return customerConductClassification;
+	}
+
+	public void setCustomerConductClassification(CustomerConductClassification1Choice customerConductClassification) {
+		this.customerConductClassification = customerConductClassification;
+	}
+
+	public TransactionChannelType1Choice getTransactionChannelType() {
+		return transactionChannelType;
+	}
+
+	public void setTransactionChannelType(TransactionChannelType1Choice transactionChannelType) {
+		this.transactionChannelType = transactionChannelType;
+	}
+
+	public SignatureType1Choice getSignatureType() {
+		return signatureType;
+	}
+
+	public void setSignatureType(SignatureType1Choice signatureType) {
+		this.signatureType = signatureType;
+	}
+
+	public OrderWaiver1 getOrderWaiverDetails() {
+		return orderWaiverDetails;
+	}
+
+	public void setOrderWaiverDetails(com.tools20022.repository.msg.OrderWaiver1 orderWaiverDetails) {
+		this.orderWaiverDetails = orderWaiverDetails;
 	}
 }

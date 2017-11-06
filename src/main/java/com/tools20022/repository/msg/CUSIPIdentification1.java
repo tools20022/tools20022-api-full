@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CUSIPIdentification1#CUSIPCountry
- * CUSIPIdentification1.CUSIPCountry}</li>
+ * {@linkplain com.tools20022.repository.msg.CUSIPIdentification1#mmCUSIPCountry
+ * CUSIPIdentification1.mmCUSIPCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CUSIPIdentification1#CUSIPIdentification
- * CUSIPIdentification1.CUSIPIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CUSIPIdentification1#mmCUSIPIdentification
+ * CUSIPIdentification1.mmCUSIPIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CUSIPIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode cUSIPCountry;
 	/**
 	 * Country in which the CUSIP has been assigned.
 	 * <p>
@@ -86,7 +87,7 @@ public class CUSIPIdentification1 {
 	 * definition} = "Country in which the CUSIP has been assigned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CUSIPCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCUSIPCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CUSIPIdentification1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class CUSIPIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CUSIPCountry";
 			definition = "Country in which the CUSIP has been assigned.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected CUSIPIdentifier cUSIPIdentification;
 	/**
 	 * CUSIP identification of the security.
 	 * <p>
@@ -127,7 +129,7 @@ public class CUSIPIdentification1 {
 	 * definition} = "CUSIP identification of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CUSIPIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCUSIPIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CUSIPIdentification1.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class CUSIPIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CUSIPIdentification";
 			definition = "CUSIP identification of the security.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CUSIPIdentifier.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class CUSIPIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CUSIPIdentification1.CUSIPCountry, com.tools20022.repository.msg.CUSIPIdentification1.CUSIPIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CUSIPIdentification1.mmCUSIPCountry, com.tools20022.repository.msg.CUSIPIdentification1.mmCUSIPIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CUSIPIdentification1";
 				definition = "Provides the CUSIP identification of a security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCUSIPCountry() {
+		return cUSIPCountry;
+	}
+
+	public void setCUSIPCountry(CountryCode cUSIPCountry) {
+		this.cUSIPCountry = cUSIPCountry;
+	}
+
+	public CUSIPIdentifier getCUSIPIdentification() {
+		return cUSIPIdentification;
+	}
+
+	public void setCUSIPIdentification(CUSIPIdentifier cUSIPIdentification) {
+		this.cUSIPIdentification = cUSIPIdentification;
 	}
 }

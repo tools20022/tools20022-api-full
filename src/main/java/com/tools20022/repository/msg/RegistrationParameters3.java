@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.BasicSecuritiesRegistration;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to registration of securities.
@@ -36,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegistrationParameters3#CertificationIdentification
- * RegistrationParameters3.CertificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.RegistrationParameters3#mmCertificationIdentification
+ * RegistrationParameters3.mmCertificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegistrationParameters3#CertificationDateTime
- * RegistrationParameters3.CertificationDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.RegistrationParameters3#mmCertificationDateTime
+ * RegistrationParameters3.mmCertificationDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegistrationParameters3#RegistrarAccount
- * RegistrationParameters3.RegistrarAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.RegistrationParameters3#mmRegistrarAccount
+ * RegistrationParameters3.mmRegistrarAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RegistrationParameters3#CertificateNumber
- * RegistrationParameters3.CertificateNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.RegistrationParameters3#mmCertificateNumber
+ * RegistrationParameters3.mmCertificateNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RegistrationParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text certificationIdentification;
 	/**
 	 * Identification assigned to a deposit.
 	 * <p>
@@ -83,8 +85,8 @@ public class RegistrationParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#CertificationIdentification
-	 * BasicSecuritiesRegistration.CertificationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmCertificationIdentification
+	 * BasicSecuritiesRegistration.mmCertificationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +105,21 @@ public class RegistrationParameters3 {
 	 * definition} = "Identification assigned to a deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmCertificationIdentification;
 			componentContext_lazy = () -> RegistrationParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.CertificationIdentification;
 			isDerived = false;
 			xmlTag = "CertfctnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIdentification";
 			definition = "Identification assigned to a deposit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTime1Choice certificationDateTime;
 	/**
 	 * Date/time at which the certificates in the deposit were validated by the
 	 * agent.
@@ -131,8 +134,8 @@ public class RegistrationParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#CertificationDate
-	 * BasicSecuritiesRegistration.CertificationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmCertificationDate
+	 * BasicSecuritiesRegistration.mmCertificationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,20 +156,21 @@ public class RegistrationParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificationDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmCertificationDate;
 			componentContext_lazy = () -> RegistrationParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.CertificationDate;
 			isDerived = false;
 			xmlTag = "CertfctnDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationDateTime";
 			definition = "Date/time at which the certificates in the deposit were validated by the agent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
 		}
 	};
+	protected Max35Text registrarAccount;
 	/**
 	 * Account at the registrar where financial instruments are registered.
 	 * <p>
@@ -179,8 +183,8 @@ public class RegistrationParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#SecuritiesAccount
-	 * SecuritiesPartyRole.SecuritiesAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmSecuritiesAccount
+	 * SecuritiesPartyRole.mmSecuritiesAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,20 +204,21 @@ public class RegistrationParameters3 {
 	 * "Account at the registrar where financial instruments are registered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrarAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrarAccount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmSecuritiesAccount;
 			componentContext_lazy = () -> RegistrationParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.SecuritiesAccount;
 			isDerived = false;
 			xmlTag = "RegarAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrarAccount";
 			definition = "Account at the registrar where financial instruments are registered.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesCertificate3> certificateNumber;
 	/**
 	 * Unique and unambiguous identifier of a certificate assigned by the
 	 * issuer.
@@ -226,8 +231,8 @@ public class RegistrationParameters3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#SecuritiesCertificate
-	 * BasicSecuritiesRegistration.SecuritiesCertificate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmSecuritiesCertificate
+	 * BasicSecuritiesRegistration.mmSecuritiesCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -248,33 +253,65 @@ public class RegistrationParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CertificateNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCertificateNumber = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmSecuritiesCertificate;
 			componentContext_lazy = () -> RegistrationParameters3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.SecuritiesCertificate;
 			isDerived = false;
 			xmlTag = "CertNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesCertificate3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters3.CertificationIdentification, com.tools20022.repository.msg.RegistrationParameters3.CertificationDateTime,
-						com.tools20022.repository.msg.RegistrationParameters3.RegistrarAccount, com.tools20022.repository.msg.RegistrationParameters3.CertificateNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters3.mmCertificationIdentification, com.tools20022.repository.msg.RegistrationParameters3.mmCertificationDateTime,
+						com.tools20022.repository.msg.RegistrationParameters3.mmRegistrarAccount, com.tools20022.repository.msg.RegistrationParameters3.mmCertificateNumber);
 				trace_lazy = () -> BasicSecuritiesRegistration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RegistrationParameters3";
 				definition = "Information related to registration of securities.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCertificationIdentification() {
+		return certificationIdentification;
+	}
+
+	public void setCertificationIdentification(Max35Text certificationIdentification) {
+		this.certificationIdentification = certificationIdentification;
+	}
+
+	public DateAndDateTime1Choice getCertificationDateTime() {
+		return certificationDateTime;
+	}
+
+	public void setCertificationDateTime(DateAndDateTime1Choice certificationDateTime) {
+		this.certificationDateTime = certificationDateTime;
+	}
+
+	public Max35Text getRegistrarAccount() {
+		return registrarAccount;
+	}
+
+	public void setRegistrarAccount(Max35Text registrarAccount) {
+		this.registrarAccount = registrarAccount;
+	}
+
+	public List<SecuritiesCertificate3> getCertificateNumber() {
+		return certificateNumber;
+	}
+
+	public void setCertificateNumber(List<com.tools20022.repository.msg.SecuritiesCertificate3> certificateNumber) {
+		this.certificateNumber = certificateNumber;
 	}
 }

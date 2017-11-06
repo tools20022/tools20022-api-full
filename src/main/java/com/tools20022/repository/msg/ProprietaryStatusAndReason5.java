@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason5#Status
- * ProprietaryStatusAndReason5.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason5#mmStatus
+ * ProprietaryStatusAndReason5.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason5#Reason
- * ProprietaryStatusAndReason5.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason5#mmReason
+ * ProprietaryStatusAndReason5.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason5#AdditionalReasonInformation
- * ProprietaryStatusAndReason5.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason5#mmAdditionalReasonInformation
+ * ProprietaryStatusAndReason5.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProprietaryStatusAndReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification36 status;
 	/**
 	 * Proprietary identification of the status of the instruction.
 	 * <p>
@@ -100,11 +101,11 @@ public class ProprietaryStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason3#ProprietaryStatus
-	 * ProprietaryStatusAndReason3.ProprietaryStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason3#mmProprietaryStatus
+	 * ProprietaryStatusAndReason3.mmProprietaryStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryStatusAndReason5.mmObject();
 			isDerived = false;
@@ -112,12 +113,13 @@ public class ProprietaryStatusAndReason5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Proprietary identification of the status of the instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason3.ProprietaryStatus;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason3.mmProprietaryStatus;
 			maxOccurs = 1;
-			complexType_lazy = () -> GenericIdentification36.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
 		}
 	};
+	protected ProprietaryReason1Choice reason;
 	/**
 	 * Proprietary identification of the reason for the status.
 	 * <p>
@@ -146,11 +148,11 @@ public class ProprietaryStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason3#ProprietaryReason
-	 * ProprietaryStatusAndReason3.ProprietaryReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason3#mmProprietaryReason
+	 * ProprietaryStatusAndReason3.mmProprietaryReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ProprietaryStatusAndReason5.mmObject();
 			isDerived = false;
@@ -158,13 +160,14 @@ public class ProprietaryStatusAndReason5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Proprietary identification of the reason for the status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason3.ProprietaryReason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason3.mmProprietaryReason;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReason1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProprietaryReason1Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalReasonInformation;
 	/**
 	 * Additional information about the processed instruction.
 	 * <p>
@@ -192,7 +195,7 @@ public class ProprietaryStatusAndReason5 {
 	 * definition} = "Additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProprietaryStatusAndReason5.mmObject();
 			isDerived = false;
@@ -200,8 +203,8 @@ public class ProprietaryStatusAndReason5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional information about the processed instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -209,9 +212,9 @@ public class ProprietaryStatusAndReason5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryStatusAndReason5.Status, com.tools20022.repository.msg.ProprietaryStatusAndReason5.Reason,
-						com.tools20022.repository.msg.ProprietaryStatusAndReason5.AdditionalReasonInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryStatusAndReason5.mmStatus, com.tools20022.repository.msg.ProprietaryStatusAndReason5.mmReason,
+						com.tools20022.repository.msg.ProprietaryStatusAndReason5.mmAdditionalReasonInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryStatusAndReason5";
 				definition = "Proprietary status and reason of an instruction or an instruction cancellation.";
@@ -219,5 +222,29 @@ public class ProprietaryStatusAndReason5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification36 getStatus() {
+		return status;
+	}
+
+	public void setStatus(com.tools20022.repository.msg.GenericIdentification36 status) {
+		this.status = status;
+	}
+
+	public ProprietaryReason1Choice getReason() {
+		return reason;
+	}
+
+	public void setReason(ProprietaryReason1Choice reason) {
+		this.reason = reason;
+	}
+
+	public Max210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

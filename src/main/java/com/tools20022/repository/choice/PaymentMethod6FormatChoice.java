@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentMethod6FormatChoice#Code
- * PaymentMethod6FormatChoice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentMethod6FormatChoice#mmCode
+ * PaymentMethod6FormatChoice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentMethod6FormatChoice#Proprietary
- * PaymentMethod6FormatChoice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentMethod6FormatChoice#mmProprietary
+ * PaymentMethod6FormatChoice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentMethod6FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentMethod6Code code;
 	/**
 	 * Standard code to specify the method of payment.
 	 * <p>
@@ -87,7 +88,7 @@ public class PaymentMethod6FormatChoice {
 	 * definition} = "Standard code to  specify the method of payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentMethod6FormatChoice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class PaymentMethod6FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to  specify the method of payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PaymentMethod6Code.mmObject();
 		}
 	};
+	protected GenericIdentification13 proprietary;
 	/**
 	 * Proprietary code to express the method of payment.
 	 * <p>
@@ -128,7 +130,7 @@ public class PaymentMethod6FormatChoice {
 	 * definition} = "Proprietary code to  express the method of payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentMethod6FormatChoice.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class PaymentMethod6FormatChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to  express the method of payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class PaymentMethod6FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentMethod6FormatChoice.Code, com.tools20022.repository.choice.PaymentMethod6FormatChoice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentMethod6FormatChoice.mmCode, com.tools20022.repository.choice.PaymentMethod6FormatChoice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentMethod6FormatChoice";
 				definition = "Choice of formats to  express the method of payment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentMethod6Code getCode() {
+		return code;
+	}
+
+	public void setCode(PaymentMethod6Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification13 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

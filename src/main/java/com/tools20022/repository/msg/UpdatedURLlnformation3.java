@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation3#UpdateDescription
- * UpdatedURLlnformation3.UpdateDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation3#mmUpdateDescription
+ * UpdatedURLlnformation3.mmUpdateDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation3#UpdateDate
- * UpdatedURLlnformation3.UpdateDate}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation3#mmUpdateDate
+ * UpdatedURLlnformation3.mmUpdateDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation3#URLAddress
- * UpdatedURLlnformation3.URLAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.UpdatedURLlnformation3#mmURLAddress
+ * UpdatedURLlnformation3.mmURLAddress}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UpdatedURLlnformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected RestrictedFINXMax140Text updateDescription;
 	/**
 	 * Specifies the amendments made to the narrative since the last message.
 	 * <p>
@@ -92,7 +93,7 @@ public class UpdatedURLlnformation3 {
 	 * "Specifies the amendments made to the narrative since the last message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedURLlnformation3.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class UpdatedURLlnformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDescription";
 			definition = "Specifies the amendments made to the narrative since the last message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
 		}
 	};
+	protected ISODate updateDate;
 	/**
 	 * Specifies the date at which the narrative has been updated.
 	 * <p>
@@ -133,7 +135,7 @@ public class UpdatedURLlnformation3 {
 	 * "Specifies the date at which the narrative has been updated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedURLlnformation3.mmObject();
 			isDerived = false;
@@ -141,11 +143,12 @@ public class UpdatedURLlnformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDate";
 			definition = "Specifies the date at which the narrative has been updated.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected RestrictedFINZMax256Text uRLAddress;
 	/**
 	 * Provides the web address, that is, the address for the Universal Resource
 	 * Locator (URL), to use over the www (HTTP) service where additional
@@ -178,7 +181,7 @@ public class UpdatedURLlnformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute URLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UpdatedURLlnformation3.mmObject();
 			isDerived = false;
@@ -186,8 +189,8 @@ public class UpdatedURLlnformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Provides the web address, that is, the address for the Universal Resource Locator (URL), to use over the www (HTTP) service where additional information may be found.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINZMax256Text.mmObject();
 		}
 	};
@@ -195,14 +198,38 @@ public class UpdatedURLlnformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedURLlnformation3.UpdateDescription, com.tools20022.repository.msg.UpdatedURLlnformation3.UpdateDate,
-						com.tools20022.repository.msg.UpdatedURLlnformation3.URLAddress);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedURLlnformation3.mmUpdateDescription, com.tools20022.repository.msg.UpdatedURLlnformation3.mmUpdateDate,
+						com.tools20022.repository.msg.UpdatedURLlnformation3.mmURLAddress);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UpdatedURLlnformation3";
 				definition = "Additional information with update description and date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINXMax140Text getUpdateDescription() {
+		return updateDescription;
+	}
+
+	public void setUpdateDescription(RestrictedFINXMax140Text updateDescription) {
+		this.updateDescription = updateDescription;
+	}
+
+	public ISODate getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(ISODate updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public RestrictedFINZMax256Text getURLAddress() {
+		return uRLAddress;
+	}
+
+	public void setURLAddress(RestrictedFINZMax256Text uRLAddress) {
+		this.uRLAddress = uRLAddress;
 	}
 }

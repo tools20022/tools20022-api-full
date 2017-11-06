@@ -36,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BankingTransaction#PaymentObligation
- * BankingTransaction.PaymentObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmPaymentObligation
+ * BankingTransaction.mmPaymentObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BankingTransaction#FinancialTransaction
- * BankingTransaction.FinancialTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmFinancialTransaction
+ * BankingTransaction.mmFinancialTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BankingTransaction#CashDelivery
- * BankingTransaction.CashDelivery}</li>
+ * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmCashDelivery
+ * BankingTransaction.mmCashDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BankingTransaction#CashDeposit
- * BankingTransaction.CashDeposit}</li>
+ * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmCashDeposit
+ * BankingTransaction.mmCashDeposit}</li>
  * </ul>
  * </li>
  * <li>
@@ -54,24 +54,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#BankingTransaction
- * PaymentObligation.BankingTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmBankingTransaction
+ * PaymentObligation.mmBankingTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashDeposit#RelatedBankingTransaction
- * CashDeposit.RelatedBankingTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.CashDeposit#mmRelatedBankingTransaction
+ * CashDeposit.mmRelatedBankingTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashDelivery#RelatedBankingTransaction
- * CashDelivery.RelatedBankingTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.CashDelivery#mmRelatedBankingTransaction
+ * CashDelivery.mmRelatedBankingTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#BankingTransaction
- * FinancialTransaction.BankingTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmBankingTransaction
+ * FinancialTransaction.mmBankingTransaction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BankingTransaction {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected PaymentObligation paymentObligation;
 	/**
 	 * Payment obligation resulting from a banking transaction.
 	 * <p>
@@ -95,8 +96,8 @@ public class BankingTransaction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#BankingTransaction
-	 * PaymentObligation.BankingTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmBankingTransaction
+	 * PaymentObligation.mmBankingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -120,20 +121,21 @@ public class BankingTransaction {
 	 * definition} = "Payment obligation resulting from a banking transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PaymentObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> BankingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
 			definition = "Payment obligation resulting from a banking transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.BankingTransaction;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmBankingTransaction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
+	protected FinancialTransaction financialTransaction;
 	/**
 	 * Financial transaction to which the banking transaction is associated.
 	 * <p>
@@ -142,8 +144,8 @@ public class BankingTransaction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.FinancialTransaction#BankingTransaction
-	 * FinancialTransaction.BankingTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmBankingTransaction
+	 * FinancialTransaction.mmBankingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -169,20 +171,21 @@ public class BankingTransaction {
 	 * "Financial transaction to which the banking transaction is associated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd FinancialTransaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmFinancialTransaction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> BankingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialTransaction";
 			definition = "Financial transaction to which the banking transaction is associated.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.BankingTransaction;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmBankingTransaction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
 		}
 	};
+	protected CashDelivery cashDelivery;
 	/**
 	 * Specifies the cash which is delivered by a financial institution.
 	 * <p>
@@ -191,8 +194,8 @@ public class BankingTransaction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashDelivery#RelatedBankingTransaction
-	 * CashDelivery.RelatedBankingTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashDelivery#mmRelatedBankingTransaction
+	 * CashDelivery.mmRelatedBankingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -217,20 +220,21 @@ public class BankingTransaction {
 	 * "Specifies the cash which is delivered by a financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashDelivery = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashDelivery = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> BankingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashDelivery";
 			definition = "Specifies the cash which is delivered by a financial institution.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashDelivery.RelatedBankingTransaction;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmRelatedBankingTransaction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmObject();
 		}
 	};
+	protected CashDeposit cashDeposit;
 	/**
 	 * Specifies the cash which is received by a financial institution.
 	 * <p>
@@ -239,8 +243,8 @@ public class BankingTransaction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashDeposit#RelatedBankingTransaction
-	 * CashDeposit.RelatedBankingTransaction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashDeposit#mmRelatedBankingTransaction
+	 * CashDeposit.mmRelatedBankingTransaction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -265,34 +269,66 @@ public class BankingTransaction {
 	 * "Specifies the cash which is received by a financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CashDeposit = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCashDeposit = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> BankingTransaction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashDeposit";
 			definition = "Specifies the cash which is received by a financial institution.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.CashDeposit.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashDeposit.RelatedBankingTransaction;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashDeposit.mmRelatedBankingTransaction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashDeposit.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BankingTransaction";
 				definition = "Transaction executed by the client of a financial institution from/to the account serviced by the financial institution, such as mortgage payment.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.BankingTransaction, com.tools20022.repository.entity.CashDeposit.RelatedBankingTransaction,
-						com.tools20022.repository.entity.CashDelivery.RelatedBankingTransaction, com.tools20022.repository.entity.FinancialTransaction.BankingTransaction);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankingTransaction.PaymentObligation, com.tools20022.repository.entity.BankingTransaction.FinancialTransaction,
-						com.tools20022.repository.entity.BankingTransaction.CashDelivery, com.tools20022.repository.entity.BankingTransaction.CashDeposit);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmBankingTransaction, com.tools20022.repository.entity.CashDeposit.mmRelatedBankingTransaction,
+						com.tools20022.repository.entity.CashDelivery.mmRelatedBankingTransaction, com.tools20022.repository.entity.FinancialTransaction.mmBankingTransaction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankingTransaction.mmPaymentObligation, com.tools20022.repository.entity.BankingTransaction.mmFinancialTransaction,
+						com.tools20022.repository.entity.BankingTransaction.mmCashDelivery, com.tools20022.repository.entity.BankingTransaction.mmCashDeposit);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PaymentObligation getPaymentObligation() {
+		return paymentObligation;
+	}
+
+	public void setPaymentObligation(com.tools20022.repository.entity.PaymentObligation paymentObligation) {
+		this.paymentObligation = paymentObligation;
+	}
+
+	public FinancialTransaction getFinancialTransaction() {
+		return financialTransaction;
+	}
+
+	public void setFinancialTransaction(com.tools20022.repository.entity.FinancialTransaction financialTransaction) {
+		this.financialTransaction = financialTransaction;
+	}
+
+	public CashDelivery getCashDelivery() {
+		return cashDelivery;
+	}
+
+	public void setCashDelivery(com.tools20022.repository.entity.CashDelivery cashDelivery) {
+		this.cashDelivery = cashDelivery;
+	}
+
+	public CashDeposit getCashDeposit() {
+		return cashDeposit;
+	}
+
+	public void setCashDeposit(com.tools20022.repository.entity.CashDeposit cashDeposit) {
+		this.cashDeposit = cashDeposit;
 	}
 }

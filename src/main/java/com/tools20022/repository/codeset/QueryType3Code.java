@@ -34,19 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.QueryTypeCode QueryTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#All
- * QueryType3Code.All}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#Changed
- * QueryType3Code.Changed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#Modified
- * QueryType3Code.Modified}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#mmAll
+ * QueryType3Code.mmAll}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#mmChanged
+ * QueryType3Code.mmChanged}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#mmModified
+ * QueryType3Code.mmModified}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class QueryType3Code extends QueryTypeCode {
 	 * name} = "All"</li>
 	 * </ul>
 	 */
-	public static final MMCode All = new MMCode() {
+	public static final MMCode mmAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
@@ -107,7 +107,7 @@ public class QueryType3Code extends QueryTypeCode {
 	 * name} = "Changed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Changed = new MMCode() {
+	public static final MMCode mmChanged = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Changed";
@@ -130,7 +130,7 @@ public class QueryType3Code extends QueryTypeCode {
 	 * name} = "Modified"</li>
 	 * </ul>
 	 */
-	public static final MMCode Modified = new MMCode() {
+	public static final MMCode mmModified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modified";
@@ -141,12 +141,12 @@ public class QueryType3Code extends QueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "QueryType3Code";
 				definition = "Specifyies the nature of the request, that is whether all information be returned or only information that has changed since the last similar request was returned.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType3Code.All, com.tools20022.repository.codeset.QueryType3Code.Changed, com.tools20022.repository.codeset.QueryType3Code.Modified);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType3Code.mmAll, com.tools20022.repository.codeset.QueryType3Code.mmChanged, com.tools20022.repository.codeset.QueryType3Code.mmModified);
 				trace_lazy = () -> QueryTypeCode.mmObject();
 			}
 		});

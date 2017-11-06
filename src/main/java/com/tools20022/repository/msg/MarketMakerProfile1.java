@@ -35,22 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketMakerProfile1#ContractPeriod
- * MarketMakerProfile1.ContractPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketMakerProfile1#Compliance
- * MarketMakerProfile1.Compliance}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketMakerProfile1#mmContractPeriod
+ * MarketMakerProfile1.mmContractPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarketMakerProfile1#MaximumSpread
- * MarketMakerProfile1.MaximumSpread}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarketMakerProfile1#Discount
- * MarketMakerProfile1.Discount}</li>
+ * {@linkplain com.tools20022.repository.msg.MarketMakerProfile1#mmCompliance
+ * MarketMakerProfile1.mmCompliance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MarketMakerProfile1#mmMaximumSpread
+ * MarketMakerProfile1.mmMaximumSpread}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketMakerProfile1#mmDiscount
+ * MarketMakerProfile1.mmDiscount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarketMakerProfile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateTimePeriodDetails1 contractPeriod;
 	/**
 	 * Period of the contract.
 	 * <p>
@@ -90,7 +92,7 @@ public class MarketMakerProfile1 {
 	 * definition} = "Period of the contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContractPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContractPeriod = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> MarketMakerProfile1.mmObject();
 			isDerived = false;
@@ -98,12 +100,13 @@ public class MarketMakerProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractPeriod";
 			definition = "Period of the contract.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriodDetails1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
 		}
 	};
+	protected YesNoIndicator compliance;
 	/**
 	 * Indicates whether the market maker is obligated to comply with the
 	 * requirements of the contract it holds with the exchange or is exempt from
@@ -136,7 +139,7 @@ public class MarketMakerProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Compliance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCompliance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketMakerProfile1.mmObject();
 			isDerived = false;
@@ -144,11 +147,12 @@ public class MarketMakerProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compliance";
 			definition = "Indicates whether the market maker is obligated to comply with the requirements of the contract it holds with the  exchange or is exempt from these obligations.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected PercentageRate maximumSpread;
 	/**
 	 * Percentage of the variation between the maximum accepted minimum and
 	 * maximum value of an action.
@@ -180,7 +184,7 @@ public class MarketMakerProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumSpread = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumSpread = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketMakerProfile1.mmObject();
 			isDerived = false;
@@ -188,11 +192,12 @@ public class MarketMakerProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumSpread";
 			definition = "Percentage of the variation between the maximum accepted minimum and maximum value of an action.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected PercentageRate discount;
 	/**
 	 * Rate of discount.
 	 * <p>
@@ -221,7 +226,7 @@ public class MarketMakerProfile1 {
 	 * definition} = "Rate of discount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Discount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDiscount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MarketMakerProfile1.mmObject();
 			isDerived = false;
@@ -229,8 +234,8 @@ public class MarketMakerProfile1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
 			definition = "Rate of discount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -238,14 +243,46 @@ public class MarketMakerProfile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketMakerProfile1.ContractPeriod, com.tools20022.repository.msg.MarketMakerProfile1.Compliance,
-						com.tools20022.repository.msg.MarketMakerProfile1.MaximumSpread, com.tools20022.repository.msg.MarketMakerProfile1.Discount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketMakerProfile1.mmContractPeriod, com.tools20022.repository.msg.MarketMakerProfile1.mmCompliance,
+						com.tools20022.repository.msg.MarketMakerProfile1.mmMaximumSpread, com.tools20022.repository.msg.MarketMakerProfile1.mmDiscount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketMakerProfile1";
 				definition = "Market maker profile.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateTimePeriodDetails1 getContractPeriod() {
+		return contractPeriod;
+	}
+
+	public void setContractPeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 contractPeriod) {
+		this.contractPeriod = contractPeriod;
+	}
+
+	public YesNoIndicator getCompliance() {
+		return compliance;
+	}
+
+	public void setCompliance(YesNoIndicator compliance) {
+		this.compliance = compliance;
+	}
+
+	public PercentageRate getMaximumSpread() {
+		return maximumSpread;
+	}
+
+	public void setMaximumSpread(PercentageRate maximumSpread) {
+		this.maximumSpread = maximumSpread;
+	}
+
+	public PercentageRate getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(PercentageRate discount) {
+		this.discount = discount;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -60,36 +61,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#References
- * AccountClosingRequestV01.References}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmReferences
+ * AccountClosingRequestV01.mmReferences}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#AccountIdentification
- * AccountClosingRequestV01.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmAccountIdentification
+ * AccountClosingRequestV01.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#AccountServicerIdentification
- * AccountClosingRequestV01.AccountServicerIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmAccountServicerIdentification
+ * AccountClosingRequestV01.mmAccountServicerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#OrganisationIdentification
- * AccountClosingRequestV01.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmOrganisationIdentification
+ * AccountClosingRequestV01.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#ContractDates
- * AccountClosingRequestV01.ContractDates}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmContractDates
+ * AccountClosingRequestV01.mmContractDates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#BalanceTransferAccount
- * AccountClosingRequestV01.BalanceTransferAccount}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmBalanceTransferAccount
+ * AccountClosingRequestV01.mmBalanceTransferAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#TransferAccountServicerIdentification
- * AccountClosingRequestV01.TransferAccountServicerIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmTransferAccountServicerIdentification
+ * AccountClosingRequestV01.mmTransferAccountServicerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#DigitalSignature
- * AccountClosingRequestV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#mmDigitalSignature
+ * AccountClosingRequestV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.acmt.AccountClosingRequestV01#identifier
- * AccountClosingRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code acmt.019.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountClosingRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected References4 references;
 	/**
 	 * Set of elements for the identification of the message and related
 	 * references.
@@ -137,17 +137,18 @@ public class AccountClosingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock References = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Set of elements for the identification of the message and related references.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> References4.mmObject();
 		}
 	};
+	protected AccountForAction1 accountIdentification;
 	/**
 	 * Unique and unambiguous identification of the account between the account
 	 * owner and the account servicer.
@@ -174,17 +175,18 @@ public class AccountClosingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification of the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountForAction1.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification4 accountServicerIdentification;
 	/**
 	 * Unique and unambiguous identifier of a financial institution, as assigned
 	 * under an internationally recognised or proprietary identification scheme.
@@ -211,17 +213,18 @@ public class AccountClosingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountServicerIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountServicerIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctSvcrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 	};
+	protected List<OrganisationIdentification6> organisationIdentification;
 	/**
 	 * Identification of the organisation requesting the change.
 	 * <p>
@@ -246,7 +249,7 @@ public class AccountClosingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OrganisationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOrganisationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,6 +259,7 @@ public class AccountClosingRequestV01 {
 			complexType_lazy = () -> OrganisationIdentification6.mmObject();
 		}
 	};
+	protected AccountContract4 contractDates;
 	/**
 	 * Specifies target dates.
 	 * <p>
@@ -279,17 +283,18 @@ public class AccountClosingRequestV01 {
 	 * definition} = "Specifies target dates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ContractDates = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmContractDates = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrctDts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates";
 			definition = "Specifies target dates.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountContract4.mmObject();
 		}
 	};
+	protected AccountForAction1 balanceTransferAccount;
 	/**
 	 * Identification of the account to which the remaining positive balance of
 	 * the account to be closed must be transferred or account from which funds
@@ -322,17 +327,18 @@ public class AccountClosingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BalanceTransferAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBalanceTransferAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BalTrfAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTransferAccount";
 			definition = "Identification of the account to which the remaining positive balance of the account to be closed must be transferred or account from which funds can be moved to the account to be closed and which balance is negative. This account must be held in the same financial institution as the account to be closed if the transfer account is used to compensate a negative balance. For a positive balance to be transferred, an account in another financial institution might be used. In that case the account servicer is mandatory.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AccountForAction1.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification4 transferAccountServicerIdentification;
 	/**
 	 * Unique and unambiguous identifier of a financial institution, as assigned
 	 * under an internationally recognised or proprietary identification scheme,
@@ -360,17 +366,18 @@ public class AccountClosingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransferAccountServicerIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferAccountServicerIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfAcctSvcrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAccountServicerIdentification";
 			definition = "Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme, that is the servicer of the transfer account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 	};
+	protected List<PartyAndSignature1> digitalSignature;
 	/**
 	 * Contains the signature with its components, namely signed info, signature
 	 * value, key info and the object.
@@ -397,7 +404,7 @@ public class AccountClosingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -405,33 +412,6 @@ public class AccountClosingRequestV01 {
 			definition = "Contains the signature with its components, namely signed info, signature value, key info and the object.";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "acmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "019"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "acmt";
-			messageFunctionality = "019";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -446,13 +426,84 @@ public class AccountClosingRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AcctClsgReq";
 				businessArea_lazy = () -> AccountManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingRequestV01.References, com.tools20022.repository.area.acmt.AccountClosingRequestV01.AccountIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV01.AccountServicerIdentification, com.tools20022.repository.area.acmt.AccountClosingRequestV01.OrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV01.ContractDates, com.tools20022.repository.area.acmt.AccountClosingRequestV01.BalanceTransferAccount,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV01.TransferAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountClosingRequestV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.acmt.AccountClosingRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmAccountIdentification,
+						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmOrganisationIdentification,
+						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmContractDates, com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmBalanceTransferAccount,
+						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmTransferAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "acmt";
+						messageFunctionality = "019";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public References4 getReferences() {
+		return references;
+	}
+
+	public void setReferences(References4 references) {
+		this.references = references;
+	}
+
+	public AccountForAction1 getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountForAction1 accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public BranchAndFinancialInstitutionIdentification4 getAccountServicerIdentification() {
+		return accountServicerIdentification;
+	}
+
+	public void setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 accountServicerIdentification) {
+		this.accountServicerIdentification = accountServicerIdentification;
+	}
+
+	public List<OrganisationIdentification6> getOrganisationIdentification() {
+		return organisationIdentification;
+	}
+
+	public void setOrganisationIdentification(List<OrganisationIdentification6> organisationIdentification) {
+		this.organisationIdentification = organisationIdentification;
+	}
+
+	public AccountContract4 getContractDates() {
+		return contractDates;
+	}
+
+	public void setContractDates(AccountContract4 contractDates) {
+		this.contractDates = contractDates;
+	}
+
+	public AccountForAction1 getBalanceTransferAccount() {
+		return balanceTransferAccount;
+	}
+
+	public void setBalanceTransferAccount(AccountForAction1 balanceTransferAccount) {
+		this.balanceTransferAccount = balanceTransferAccount;
+	}
+
+	public BranchAndFinancialInstitutionIdentification4 getTransferAccountServicerIdentification() {
+		return transferAccountServicerIdentification;
+	}
+
+	public void setTransferAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 transferAccountServicerIdentification) {
+		this.transferAccountServicerIdentification = transferAccountServicerIdentification;
+	}
+
+	public List<PartyAndSignature1> getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(List<PartyAndSignature1> digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

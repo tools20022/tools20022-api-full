@@ -22,11 +22,13 @@ import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant;
 import com.tools20022.repository.msg.AccountIdentification41;
+import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.Statement48;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CorporateActionsISO15022VariantsISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -67,24 +69,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#Pagination
- * CorporateActionInstructionStatementReport002V06.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#mmPagination
+ * CorporateActionInstructionStatementReport002V06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#StatementGeneralDetails
- * CorporateActionInstructionStatementReport002V06.StatementGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#mmStatementGeneralDetails
+ * CorporateActionInstructionStatementReport002V06.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#AccountAndStatementDetails
- * CorporateActionInstructionStatementReport002V06.AccountAndStatementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#mmAccountAndStatementDetails
+ * CorporateActionInstructionStatementReport002V06.mmAccountAndStatementDetails}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#SupplementaryData
- * CorporateActionInstructionStatementReport002V06.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#mmSupplementaryData
+ * CorporateActionInstructionStatementReport002V06.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#identifier
- * CorporateActionInstructionStatementReport002V06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.042.002.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionInstructionStatementReport002V06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a statement) and continuation
 	 * indicator to indicate that the statement is to continue or that the
@@ -126,17 +128,18 @@ public class CorporateActionInstructionStatementReport002V06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Statement48 statementGeneralDetails;
 	/**
 	 * General characteristics related to a statement which reports information.
 	 * <p>
@@ -161,17 +164,18 @@ public class CorporateActionInstructionStatementReport002V06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General characteristics related to a statement which reports information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Statement48.mmObject();
 		}
 	};
+	protected List<AccountIdentification41> accountAndStatementDetails;
 	/**
 	 * Account information and detailed account holdings information report for
 	 * corporate action events.
@@ -198,7 +202,7 @@ public class CorporateActionInstructionStatementReport002V06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountAndStatementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountAndStatementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctAndStmtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,6 +212,7 @@ public class CorporateActionInstructionStatementReport002V06 {
 			complexType_lazy = () -> AccountIdentification41.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -234,7 +239,7 @@ public class CorporateActionInstructionStatementReport002V06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,33 +247,6 @@ public class CorporateActionInstructionStatementReport002V06 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "042"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "002"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "042";
-			version = "06";
-			flavour = "002";
 		}
 	};
 
@@ -282,12 +260,52 @@ public class CorporateActionInstructionStatementReport002V06 {
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrStmtRpt";
 				businessArea_lazy = () -> SecuritiesEventsLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.Pagination,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.StatementGeneralDetails,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.AccountAndStatementDetails, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmPagination,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmStatementGeneralDetails,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmAccountAndStatementDetails,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "042";
+						version = "06";
+						flavour = "002";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public Statement48 getStatementGeneralDetails() {
+		return statementGeneralDetails;
+	}
+
+	public void setStatementGeneralDetails(Statement48 statementGeneralDetails) {
+		this.statementGeneralDetails = statementGeneralDetails;
+	}
+
+	public List<AccountIdentification41> getAccountAndStatementDetails() {
+		return accountAndStatementDetails;
+	}
+
+	public void setAccountAndStatementDetails(List<AccountIdentification41> accountAndStatementDetails) {
+		this.accountAndStatementDetails = accountAndStatementDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

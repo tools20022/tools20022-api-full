@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOPr
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -73,21 +74,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01#Assignment
- * IdentificationModificationAdviceV01.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01#mmAssignment
+ * IdentificationModificationAdviceV01.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01#OriginalTransactionReference
- * IdentificationModificationAdviceV01.OriginalTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01#mmOriginalTransactionReference
+ * IdentificationModificationAdviceV01.mmOriginalTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01#Modification
- * IdentificationModificationAdviceV01.Modification}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01#mmModification
+ * IdentificationModificationAdviceV01.mmModification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01#identifier
- * IdentificationModificationAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code acmt.022.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IdentificationModificationAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected IdentificationAssignment1 assignment;
 	/**
 	 * Identifies the identification assignment.
 	 * <p>
@@ -134,17 +134,18 @@ public class IdentificationModificationAdviceV01 {
 	 * definition} = "Identifies the identification assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the identification assignment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> IdentificationAssignment1.mmObject();
 		}
 	};
+	protected OriginalTransactionReference14 originalTransactionReference;
 	/**
 	 * Provides reference information on the original message.
 	 * <p>
@@ -168,17 +169,18 @@ public class IdentificationModificationAdviceV01 {
 	 * definition} = "Provides reference information on the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlTxRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionReference";
 			definition = "Provides reference information on the original message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> OriginalTransactionReference14.mmObject();
 		}
 	};
+	protected List<IdentificationModification1> modification;
 	/**
 	 * Information concerning the identification data that is advised to be
 	 * modified.
@@ -205,7 +207,7 @@ public class IdentificationModificationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Modification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Mod";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,33 +215,6 @@ public class IdentificationModificationAdviceV01 {
 			definition = "Information concerning the identification data that is advised to be modified.";
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationModification1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "acmt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "022"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "acmt";
-			messageFunctionality = "022";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -254,11 +229,42 @@ public class IdentificationModificationAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "IdModAdvc";
 				businessArea_lazy = () -> AccountManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.Assignment,
-						com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.OriginalTransactionReference, com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.Modification);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.mmAssignment,
+						com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.mmOriginalTransactionReference, com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.mmModification);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "acmt";
+						messageFunctionality = "022";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IdentificationAssignment1 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(IdentificationAssignment1 assignment) {
+		this.assignment = assignment;
+	}
+
+	public OriginalTransactionReference14 getOriginalTransactionReference() {
+		return originalTransactionReference;
+	}
+
+	public void setOriginalTransactionReference(OriginalTransactionReference14 originalTransactionReference) {
+		this.originalTransactionReference = originalTransactionReference;
+	}
+
+	public List<IdentificationModification1> getModification() {
+		return modification;
+	}
+
+	public void setModification(List<IdentificationModification1> modification) {
+		this.modification = modification;
 	}
 }

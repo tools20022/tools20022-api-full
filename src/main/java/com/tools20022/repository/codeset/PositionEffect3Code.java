@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * PositionEffectCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PositionEffect3Code#Fifo
- * PositionEffect3Code.Fifo}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PositionEffect3Code#Lifo
- * PositionEffect3Code.Lifo}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PositionEffect3Code#mmFifo
+ * PositionEffect3Code.mmFifo}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PositionEffect3Code#mmLifo
+ * PositionEffect3Code.mmLifo}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +73,7 @@ public class PositionEffect3Code extends PositionEffectCode {
 	 * name} = "Fifo"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fifo = new MMCode() {
+	public static final MMCode mmFifo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fifo";
@@ -96,7 +96,7 @@ public class PositionEffect3Code extends PositionEffectCode {
 	 * name} = "Lifo"</li>
 	 * </ul>
 	 */
-	public static final MMCode Lifo = new MMCode() {
+	public static final MMCode mmLifo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lifo";
@@ -107,11 +107,11 @@ public class PositionEffect3Code extends PositionEffectCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PositionEffect3Code";
 				definition = "Specifies the order in which events are processed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PositionEffect3Code.Fifo, com.tools20022.repository.codeset.PositionEffect3Code.Lifo);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PositionEffect3Code.mmFifo, com.tools20022.repository.codeset.PositionEffect3Code.mmLifo);
 				trace_lazy = () -> PositionEffectCode.mmObject();
 			}
 		});

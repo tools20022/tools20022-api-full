@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CollateralManagementMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -72,27 +73,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#TransactionIdentification
- * CollateralProposalV05.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#mmTransactionIdentification
+ * CollateralProposalV05.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#Obligation
- * CollateralProposalV05.Obligation}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#mmObligation
+ * CollateralProposalV05.mmObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#Agreement
- * CollateralProposalV05.Agreement}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#mmAgreement
+ * CollateralProposalV05.mmAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#TypeAndDetails
- * CollateralProposalV05.TypeAndDetails}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#mmTypeAndDetails
+ * CollateralProposalV05.mmTypeAndDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#SupplementaryData
- * CollateralProposalV05.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#mmSupplementaryData
+ * CollateralProposalV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV05#identifier
- * CollateralProposalV05.identifier}</li>
+ * messageDefinitionIdentifier} = {@code colr.007.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,6 +111,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralProposalV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction as know by the instructing
 	 * party.
@@ -138,22 +138,23 @@ public class CollateralProposalV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV04#TransactionIdentification
-	 * CollateralProposalV04.TransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV04#mmTransactionIdentification
+	 * CollateralProposalV04.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV04.TransactionIdentification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV04.mmTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Obligation5 obligation;
 	/**
 	 * Provides information like the identification of the party or parties
 	 * associated with the collateral agreement, the exposure type and the
@@ -181,22 +182,23 @@ public class CollateralProposalV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV04#Obligation
-	 * CollateralProposalV04.Obligation}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV04#mmObligation
+	 * CollateralProposalV04.mmObligation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Obligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV04.Obligation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV04.mmObligation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Obligation5.mmObject();
 		}
 	};
+	protected Agreement4 agreement;
 	/**
 	 * Agreement details for the over the counter market.
 	 * <p>
@@ -220,22 +222,23 @@ public class CollateralProposalV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV04#Agreement
-	 * CollateralProposalV04.Agreement}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV04#mmAgreement
+	 * CollateralProposalV04.mmAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Agreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Agrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agreement";
 			definition = "Agreement details for the over the counter market.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV04.Agreement;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV04.mmAgreement;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Agreement4.mmObject();
 		}
 	};
+	protected Proposal5 typeAndDetails;
 	/**
 	 * Indicates whether this is an initial or counter proposal.
 	 * <p>
@@ -260,22 +263,23 @@ public class CollateralProposalV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV04#TypeAndDetails
-	 * CollateralProposalV04.TypeAndDetails}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV04#mmTypeAndDetails
+	 * CollateralProposalV04.mmTypeAndDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TypeAndDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTypeAndDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TpAndDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAndDetails";
 			definition = "Indicates whether this is an initial or counter proposal.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV04.TypeAndDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV04.mmTypeAndDetails;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Proposal5.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -303,46 +307,19 @@ public class CollateralProposalV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV04#SupplementaryData
-	 * CollateralProposalV04.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.colr.CollateralProposalV04#mmSupplementaryData
+	 * CollateralProposalV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV04.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "05"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "colr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "colr";
-			messageFunctionality = "007";
-			version = "05";
-			flavour = "001";
 		}
 	};
 
@@ -357,12 +334,59 @@ public class CollateralProposalV05 {
 				rootElement = "Document";
 				xmlTag = "CollPrpsl";
 				businessArea_lazy = () -> CollateralManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalV05.TransactionIdentification, com.tools20022.repository.area.colr.CollateralProposalV05.Obligation,
-						com.tools20022.repository.area.colr.CollateralProposalV05.Agreement, com.tools20022.repository.area.colr.CollateralProposalV05.TypeAndDetails,
-						com.tools20022.repository.area.colr.CollateralProposalV05.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV05.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalV05.mmTransactionIdentification, com.tools20022.repository.area.colr.CollateralProposalV05.mmObligation,
+						com.tools20022.repository.area.colr.CollateralProposalV05.mmAgreement, com.tools20022.repository.area.colr.CollateralProposalV05.mmTypeAndDetails,
+						com.tools20022.repository.area.colr.CollateralProposalV05.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "colr";
+						messageFunctionality = "007";
+						version = "05";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public Obligation5 getObligation() {
+		return obligation;
+	}
+
+	public void setObligation(Obligation5 obligation) {
+		this.obligation = obligation;
+	}
+
+	public Agreement4 getAgreement() {
+		return agreement;
+	}
+
+	public void setAgreement(Agreement4 agreement) {
+		this.agreement = agreement;
+	}
+
+	public Proposal5 getTypeAndDetails() {
+		return typeAndDetails;
+	}
+
+	public void setTypeAndDetails(Proposal5 typeAndDetails) {
+		this.typeAndDetails = typeAndDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

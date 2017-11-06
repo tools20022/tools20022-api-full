@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.PaymentTransactionInformation1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -76,21 +77,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.PaymentStatusReportV02#GroupHeader
- * PaymentStatusReportV02.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.PaymentStatusReportV02#mmGroupHeader
+ * PaymentStatusReportV02.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.PaymentStatusReportV02#OriginalGroupInformationAndStatus
- * PaymentStatusReportV02.OriginalGroupInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.pain.PaymentStatusReportV02#mmOriginalGroupInformationAndStatus
+ * PaymentStatusReportV02.mmOriginalGroupInformationAndStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.PaymentStatusReportV02#TransactionInformationAndStatus
- * PaymentStatusReportV02.TransactionInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.pain.PaymentStatusReportV02#mmTransactionInformationAndStatus
+ * PaymentStatusReportV02.mmTransactionInformationAndStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.PaymentStatusReportV02#identifier
- * PaymentStatusReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.002.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,6 +113,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader5 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the status report message.
@@ -139,17 +139,18 @@ public class PaymentStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the status report message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader5.mmObject();
 		}
 	};
+	protected OriginalGroupInformation1 originalGroupInformationAndStatus;
 	/**
 	 * Original group information concerning the group of transactions, to which
 	 * the status report message refers to.
@@ -176,17 +177,18 @@ public class PaymentStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndStatus";
 			definition = "Original group information concerning the group of transactions, to which the status report message refers to.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupInformation1.mmObject();
 		}
 	};
+	protected List<PaymentTransactionInformation1> transactionInformationAndStatus;
 	/**
 	 * Information concerning the original transactions, to which the status
 	 * report message refers.
@@ -213,7 +215,7 @@ public class PaymentStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,33 +223,6 @@ public class PaymentStatusReportV02 {
 			definition = "Information concerning the original transactions, to which the status report message refers.";
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransactionInformation1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "002";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -263,11 +238,42 @@ public class PaymentStatusReportV02 {
 				xmlTag = "pain.002.001.02";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
 				xmlName = "pain.002.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.PaymentStatusReportV02.GroupHeader, com.tools20022.repository.area.pain.PaymentStatusReportV02.OriginalGroupInformationAndStatus,
-						com.tools20022.repository.area.pain.PaymentStatusReportV02.TransactionInformationAndStatus);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.PaymentStatusReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.PaymentStatusReportV02.mmGroupHeader, com.tools20022.repository.area.pain.PaymentStatusReportV02.mmOriginalGroupInformationAndStatus,
+						com.tools20022.repository.area.pain.PaymentStatusReportV02.mmTransactionInformationAndStatus);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "002";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader5 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader5 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public OriginalGroupInformation1 getOriginalGroupInformationAndStatus() {
+		return originalGroupInformationAndStatus;
+	}
+
+	public void setOriginalGroupInformationAndStatus(OriginalGroupInformation1 originalGroupInformationAndStatus) {
+		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
+	}
+
+	public List<PaymentTransactionInformation1> getTransactionInformationAndStatus() {
+		return transactionInformationAndStatus;
+	}
+
+	public void setTransactionInformationAndStatus(List<PaymentTransactionInformation1> transactionInformationAndStatus) {
+		this.transactionInformationAndStatus = transactionInformationAndStatus;
 	}
 }

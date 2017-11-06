@@ -30,69 +30,74 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Basket
- * UnderlyingTypeV3Code.Basket}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Bond
- * UnderlyingTypeV3Code.Bond}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmBasket
+ * UnderlyingTypeV3Code.mmBasket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#BondFuture
- * UnderlyingTypeV3Code.BondFuture}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmBond
+ * UnderlyingTypeV3Code.mmBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Commodity
- * UnderlyingTypeV3Code.Commodity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmBondFuture
+ * UnderlyingTypeV3Code.mmBondFuture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Currency
- * UnderlyingTypeV3Code.Currency}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmCommodity
+ * UnderlyingTypeV3Code.mmCommodity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#DividendIndex
- * UnderlyingTypeV3Code.DividendIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmCurrency
+ * UnderlyingTypeV3Code.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Equity
- * UnderlyingTypeV3Code.Equity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmDividendIndex
+ * UnderlyingTypeV3Code.mmDividendIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#ExchangeTradedFund
- * UnderlyingTypeV3Code.ExchangeTradedFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmEquity
+ * UnderlyingTypeV3Code.mmEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Future
- * UnderlyingTypeV3Code.Future}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmExchangeTradedFund
+ * UnderlyingTypeV3Code.mmExchangeTradedFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#FutureOnEquity
- * UnderlyingTypeV3Code.FutureOnEquity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Index
- * UnderlyingTypeV3Code.Index}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmFuture
+ * UnderlyingTypeV3Code.mmFuture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#InterestRate
- * UnderlyingTypeV3Code.InterestRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmFutureOnEquity
+ * UnderlyingTypeV3Code.mmFutureOnEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Option
- * UnderlyingTypeV3Code.Option}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmIndex
+ * UnderlyingTypeV3Code.mmIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#OptionOnEquity
- * UnderlyingTypeV3Code.OptionOnEquity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Other
- * UnderlyingTypeV3Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmInterestRate
+ * UnderlyingTypeV3Code.mmInterestRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#PreciousMetal
- * UnderlyingTypeV3Code.PreciousMetal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Share
- * UnderlyingTypeV3Code.Share}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmOption
+ * UnderlyingTypeV3Code.mmOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#StockDividend
- * UnderlyingTypeV3Code.StockDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmOptionOnEquity
+ * UnderlyingTypeV3Code.mmOptionOnEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#StockIndex
- * UnderlyingTypeV3Code.StockIndex}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#Swap
- * UnderlyingTypeV3Code.Swap}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmOther
+ * UnderlyingTypeV3Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#VolatilityIndex
- * UnderlyingTypeV3Code.VolatilityIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmPreciousMetal
+ * UnderlyingTypeV3Code.mmPreciousMetal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#InterestRateFutureFRA
- * UnderlyingTypeV3Code.InterestRateFutureFRA}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmShare
+ * UnderlyingTypeV3Code.mmShare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#EmissionAllowance
- * UnderlyingTypeV3Code.EmissionAllowance}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmStockDividend
+ * UnderlyingTypeV3Code.mmStockDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmStockIndex
+ * UnderlyingTypeV3Code.mmStockIndex}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmSwap
+ * UnderlyingTypeV3Code.mmSwap}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmVolatilityIndex
+ * UnderlyingTypeV3Code.mmVolatilityIndex}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmInterestRateFutureFRA
+ * UnderlyingTypeV3Code.mmInterestRateFutureFRA}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code#mmEmissionAllowance
+ * UnderlyingTypeV3Code.mmEmissionAllowance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -113,8 +118,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -149,7 +154,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a basket."</li>
 	 * </ul>
 	 */
-	public static final MMCode Basket = new MMCode() {
+	public static final MMCode mmBasket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basket";
@@ -179,7 +184,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a bond."</li>
 	 * </ul>
 	 */
-	public static final MMCode Bond = new MMCode() {
+	public static final MMCode mmBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
@@ -209,7 +214,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a bond future."</li>
 	 * </ul>
 	 */
-	public static final MMCode BondFuture = new MMCode() {
+	public static final MMCode mmBondFuture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondFuture";
@@ -239,7 +244,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a commodity."</li>
 	 * </ul>
 	 */
-	public static final MMCode Commodity = new MMCode() {
+	public static final MMCode mmCommodity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
@@ -269,7 +274,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode Currency = new MMCode() {
+	public static final MMCode mmCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
@@ -299,7 +304,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a dividend index."</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendIndex = new MMCode() {
+	public static final MMCode mmDividendIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendIndex";
@@ -329,7 +334,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is an equity."</li>
 	 * </ul>
 	 */
-	public static final MMCode Equity = new MMCode() {
+	public static final MMCode mmEquity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
@@ -359,7 +364,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is an exchange traded fund."</li>
 	 * </ul>
 	 */
-	public static final MMCode ExchangeTradedFund = new MMCode() {
+	public static final MMCode mmExchangeTradedFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedFund";
@@ -389,7 +394,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a future."</li>
 	 * </ul>
 	 */
-	public static final MMCode Future = new MMCode() {
+	public static final MMCode mmFuture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Future";
@@ -419,7 +424,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a future on equity."</li>
 	 * </ul>
 	 */
-	public static final MMCode FutureOnEquity = new MMCode() {
+	public static final MMCode mmFutureOnEquity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureOnEquity";
@@ -449,7 +454,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is an index."</li>
 	 * </ul>
 	 */
-	public static final MMCode Index = new MMCode() {
+	public static final MMCode mmIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
@@ -479,7 +484,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is interest rate."</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestRate = new MMCode() {
+	public static final MMCode mmInterestRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
@@ -509,7 +514,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is an option."</li>
 	 * </ul>
 	 */
-	public static final MMCode Option = new MMCode() {
+	public static final MMCode mmOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
@@ -539,7 +544,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is an option on equity."</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionOnEquity = new MMCode() {
+	public static final MMCode mmOptionOnEquity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionOnEquity";
@@ -569,7 +574,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is of other type."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -599,7 +604,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is precious metal."</li>
 	 * </ul>
 	 */
-	public static final MMCode PreciousMetal = new MMCode() {
+	public static final MMCode mmPreciousMetal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreciousMetal";
@@ -629,7 +634,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a share."</li>
 	 * </ul>
 	 */
-	public static final MMCode Share = new MMCode() {
+	public static final MMCode mmShare = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Share";
@@ -659,7 +664,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a stock dividend."</li>
 	 * </ul>
 	 */
-	public static final MMCode StockDividend = new MMCode() {
+	public static final MMCode mmStockDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
@@ -689,7 +694,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a stock index."</li>
 	 * </ul>
 	 */
-	public static final MMCode StockIndex = new MMCode() {
+	public static final MMCode mmStockIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockIndex";
@@ -719,7 +724,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode Swap = new MMCode() {
+	public static final MMCode mmSwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swap";
@@ -749,7 +754,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is a volatility index."</li>
 	 * </ul>
 	 */
-	public static final MMCode VolatilityIndex = new MMCode() {
+	public static final MMCode mmVolatilityIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolatilityIndex";
@@ -781,7 +786,7 @@ public class UnderlyingTypeV3Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InterestRateFutureFRA = new MMCode() {
+	public static final MMCode mmInterestRateFutureFRA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRateFutureFRA";
@@ -811,7 +816,7 @@ public class UnderlyingTypeV3Code {
 	 * definition} = "Underlying is an emission allowance."</li>
 	 * </ul>
 	 */
-	public static final MMCode EmissionAllowance = new MMCode() {
+	public static final MMCode mmEmissionAllowance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
@@ -824,18 +829,19 @@ public class UnderlyingTypeV3Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTypeV3Code";
 				definition = "Specifies the underlying financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingTypeV3Code.Basket, com.tools20022.repository.codeset.UnderlyingTypeV3Code.Bond, com.tools20022.repository.codeset.UnderlyingTypeV3Code.BondFuture,
-						com.tools20022.repository.codeset.UnderlyingTypeV3Code.Commodity, com.tools20022.repository.codeset.UnderlyingTypeV3Code.Currency, com.tools20022.repository.codeset.UnderlyingTypeV3Code.DividendIndex,
-						com.tools20022.repository.codeset.UnderlyingTypeV3Code.Equity, com.tools20022.repository.codeset.UnderlyingTypeV3Code.ExchangeTradedFund, com.tools20022.repository.codeset.UnderlyingTypeV3Code.Future,
-						com.tools20022.repository.codeset.UnderlyingTypeV3Code.FutureOnEquity, com.tools20022.repository.codeset.UnderlyingTypeV3Code.Index, com.tools20022.repository.codeset.UnderlyingTypeV3Code.InterestRate,
-						com.tools20022.repository.codeset.UnderlyingTypeV3Code.Option, com.tools20022.repository.codeset.UnderlyingTypeV3Code.OptionOnEquity, com.tools20022.repository.codeset.UnderlyingTypeV3Code.Other,
-						com.tools20022.repository.codeset.UnderlyingTypeV3Code.PreciousMetal, com.tools20022.repository.codeset.UnderlyingTypeV3Code.Share, com.tools20022.repository.codeset.UnderlyingTypeV3Code.StockDividend,
-						com.tools20022.repository.codeset.UnderlyingTypeV3Code.StockIndex, com.tools20022.repository.codeset.UnderlyingTypeV3Code.Swap, com.tools20022.repository.codeset.UnderlyingTypeV3Code.VolatilityIndex,
-						com.tools20022.repository.codeset.UnderlyingTypeV3Code.InterestRateFutureFRA, com.tools20022.repository.codeset.UnderlyingTypeV3Code.EmissionAllowance);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmBasket, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmBond,
+						com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmBondFuture, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmCommodity, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmCurrency,
+						com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmDividendIndex, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmEquity, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmExchangeTradedFund,
+						com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmFuture, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmFutureOnEquity, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmIndex,
+						com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmInterestRate, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmOption, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmOptionOnEquity,
+						com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmOther, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmPreciousMetal, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmShare,
+						com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmStockDividend, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmStockIndex, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmSwap,
+						com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmVolatilityIndex, com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmInterestRateFutureFRA,
+						com.tools20022.repository.codeset.UnderlyingTypeV3Code.mmEmissionAllowance);
 				derivation_lazy = () -> Arrays.asList(UnderlyingInterestRateType3Code.mmObject(), UnderlyingContractForDifferenceType3Code.mmObject(), UnderlyingEquityType6Code.mmObject(), UnderlyingEquityType5Code.mmObject());
 			}
 		});

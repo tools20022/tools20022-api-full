@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.IndividualOrderStatusAndReason8;
 import com.tools20022.repository.msg.OrderStatusAndReason9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice of status.
@@ -34,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status26Choice#CancellationStatusReport
- * Status26Choice.CancellationStatusReport}</li>
+ * {@linkplain com.tools20022.repository.choice.Status26Choice#mmCancellationStatusReport
+ * Status26Choice.mmCancellationStatusReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status26Choice#IndividualCancellationStatusReport
- * Status26Choice.IndividualCancellationStatusReport}</li>
+ * {@linkplain com.tools20022.repository.choice.Status26Choice#mmIndividualCancellationStatusReport
+ * Status26Choice.mmIndividualCancellationStatusReport}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV04#StatusReport
- * OrderCancellationStatusReportV04.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV04#mmStatusReport
+ * OrderCancellationStatusReportV04.mmStatusReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Status26Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected OrderStatusAndReason9 cancellationStatusReport;
 	/**
 	 * Status report details of a bulk or multiple or switch order cancellation
 	 * message.
@@ -97,7 +99,7 @@ public class Status26Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationStatusReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationStatusReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Status26Choice.mmObject();
 			isDerived = false;
@@ -105,12 +107,13 @@ public class Status26Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReport";
 			definition = "Status report details of a bulk or multiple or switch order cancellation message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrderStatusAndReason9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OrderStatusAndReason9.mmObject();
 		}
 	};
+	protected List<IndividualOrderStatusAndReason8> individualCancellationStatusReport;
 	/**
 	 * Status report details of one or more individual orders from a bulk or
 	 * multiple or switch order cancellation request.
@@ -141,7 +144,7 @@ public class Status26Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndividualCancellationStatusReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividualCancellationStatusReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Status26Choice.mmObject();
 			isDerived = false;
@@ -150,22 +153,38 @@ public class Status26Choice {
 			name = "IndividualCancellationStatusReport";
 			definition = "Status report details of one or more individual orders from a bulk or multiple or switch order cancellation request.";
 			minOccurs = 1;
-			type_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
 			isComposite = true;
+			type_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status26Choice.CancellationStatusReport, com.tools20022.repository.choice.Status26Choice.IndividualCancellationStatusReport);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV04.StatusReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status26Choice.mmCancellationStatusReport, com.tools20022.repository.choice.Status26Choice.mmIndividualCancellationStatusReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV04.mmStatusReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Status26Choice";
 				definition = "Choice of status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public OrderStatusAndReason9 getCancellationStatusReport() {
+		return cancellationStatusReport;
+	}
+
+	public void setCancellationStatusReport(OrderStatusAndReason9 cancellationStatusReport) {
+		this.cancellationStatusReport = cancellationStatusReport;
+	}
+
+	public List<IndividualOrderStatusAndReason8> getIndividualCancellationStatusReport() {
+		return individualCancellationStatusReport;
+	}
+
+	public void setIndividualCancellationStatusReport(List<IndividualOrderStatusAndReason8> individualCancellationStatusReport) {
+		this.individualCancellationStatusReport = individualCancellationStatusReport;
 	}
 }

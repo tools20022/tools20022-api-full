@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides the details on the margin report per clearing member, and optionaly
@@ -36,15 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MarginReport1#MarginAccount
- * MarginReport1.MarginAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginReport1#mmMarginAccount
+ * MarginReport1.mmMarginAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MarginReport1#NonClearingMember
- * MarginReport1.NonClearingMember}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginReport1#MarginProduct
- * MarginReport1.MarginProduct}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginReport1#MarginDetails
- * MarginReport1.MarginDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.MarginReport1#mmNonClearingMember
+ * MarginReport1.mmNonClearingMember}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginReport1#mmMarginProduct
+ * MarginReport1.mmMarginProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginReport1#mmMarginDetails
+ * MarginReport1.mmMarginDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MarginReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccount18 marginAccount;
 	/**
 	 * Identifies the clearing member's account.
 	 * <p>
@@ -99,21 +101,22 @@ public class MarginReport1 {
 	 * definition} = "Identifies the clearing member's account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarginAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarginAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MarginReport1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginAccount";
 			definition = "Identifies the clearing member's account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount18.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount18.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember;
 	/**
 	 * Provides details about the non clearing member identification and
 	 * account.
@@ -127,8 +130,8 @@ public class MarginReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,20 +151,21 @@ public class MarginReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> MarginReport1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "NonClrMmb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides details about the non clearing member identification and account.";
 			minOccurs = 0;
-			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
 		}
 	};
+	protected List<MarginProductType1Choice> marginProduct;
 	/**
 	 * Specifies if the margin is related to equities or fixed income.
 	 * <p>
@@ -194,10 +198,10 @@ public class MarginReport1 {
 	 * "Specifies if the margin is related to equities or fixed income."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginProduct = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MarginReport1.mmObject();
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
+			componentContext_lazy = () -> MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnPdct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,6 +211,7 @@ public class MarginReport1 {
 			complexType_lazy = () -> MarginProductType1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Margin2> marginDetails;
 	/**
 	 * Provides the margin details such as the exposure amount and the initial
 	 * margin.
@@ -238,33 +243,65 @@ public class MarginReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MarginDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMarginDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MarginReport1.mmObject();
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
+			componentContext_lazy = () -> MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginDetails";
 			definition = "Provides the margin details such as the exposure amount and the initial margin.";
 			minOccurs = 1;
-			type_lazy = () -> Margin2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Margin2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginReport1.MarginAccount, com.tools20022.repository.msg.MarginReport1.NonClearingMember, com.tools20022.repository.msg.MarginReport1.MarginProduct,
-						com.tools20022.repository.msg.MarginReport1.MarginDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginReport1.mmMarginAccount, com.tools20022.repository.msg.MarginReport1.mmNonClearingMember,
+						com.tools20022.repository.msg.MarginReport1.mmMarginProduct, com.tools20022.repository.msg.MarginReport1.mmMarginDetails);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarginReport1";
 				definition = "Provides the details on the margin report per clearing member, and optionaly either per financial instrument or per non-clearing member.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccount18 getMarginAccount() {
+		return marginAccount;
+	}
+
+	public void setMarginAccount(com.tools20022.repository.msg.SecuritiesAccount18 marginAccount) {
+		this.marginAccount = marginAccount;
+	}
+
+	public List<PartyIdentificationAndAccount31> getNonClearingMember() {
+		return nonClearingMember;
+	}
+
+	public void setNonClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember) {
+		this.nonClearingMember = nonClearingMember;
+	}
+
+	public List<MarginProductType1Choice> getMarginProduct() {
+		return marginProduct;
+	}
+
+	public void setMarginProduct(List<MarginProductType1Choice> marginProduct) {
+		this.marginProduct = marginProduct;
+	}
+
+	public List<Margin2> getMarginDetails() {
+		return marginDetails;
+	}
+
+	public void setMarginDetails(List<com.tools20022.repository.msg.Margin2> marginDetails) {
+		this.marginDetails = marginDetails;
 	}
 }

@@ -33,47 +33,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#AffirmationStatus
- * Status22Choice.AffirmationStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmAffirmationStatus
+ * Status22Choice.mmAffirmationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#AllocationStatus
- * Status22Choice.AllocationStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmAllocationStatus
+ * Status22Choice.mmAllocationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#RepoCallRequestStatus
- * Status22Choice.RepoCallRequestStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmRepoCallRequestStatus
+ * Status22Choice.mmRepoCallRequestStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#CorporateActionEventProcessingStatus
- * Status22Choice.CorporateActionEventProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmCorporateActionEventProcessingStatus
+ * Status22Choice.mmCorporateActionEventProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#CorporateActionEventStage
- * Status22Choice.CorporateActionEventStage}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmCorporateActionEventStage
+ * Status22Choice.mmCorporateActionEventStage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#InferredMatchingStatus
- * Status22Choice.InferredMatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmInferredMatchingStatus
+ * Status22Choice.mmInferredMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#InstructionProcessingStatus
- * Status22Choice.InstructionProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmInstructionProcessingStatus
+ * Status22Choice.mmInstructionProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#MatchingStatus
- * Status22Choice.MatchingStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmMatchingStatus
+ * Status22Choice.mmMatchingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#RegistrationProcessingStatus
- * Status22Choice.RegistrationProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmRegistrationProcessingStatus
+ * Status22Choice.mmRegistrationProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#ResponseStatus
- * Status22Choice.ResponseStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmResponseStatus
+ * Status22Choice.mmResponseStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#ReplacementProcessingStatus
- * Status22Choice.ReplacementProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmReplacementProcessingStatus
+ * Status22Choice.mmReplacementProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#CancellationProcessingStatus
- * Status22Choice.CancellationProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmCancellationProcessingStatus
+ * Status22Choice.mmCancellationProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#SettlementStatus
- * Status22Choice.SettlementStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmSettlementStatus
+ * Status22Choice.mmSettlementStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.Status22Choice#SettlementConditionModificationStatus
- * Status22Choice.SettlementConditionModificationStatus}</li>
+ * {@linkplain com.tools20022.repository.choice.Status22Choice#mmSettlementConditionModificationStatus
+ * Status22Choice.mmSettlementConditionModificationStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -81,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Status22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AffirmationStatus9Choice affirmationStatus;
 	/**
 	 * Status of affirmation of a trade.
 	 * <p>
@@ -108,8 +109,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#AffirmationStatus
-	 * SecuritiesTradeStatus.AffirmationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmAffirmationStatus
+	 * SecuritiesTradeStatus.mmAffirmationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -128,21 +129,22 @@ public class Status22Choice {
 	 * definition} = "Status of affirmation of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AffirmationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAffirmationStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.AffirmationStatus;
 			isDerived = false;
 			xmlTag = "AffirmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmationStatus";
 			definition = "Status of affirmation of a trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AffirmationStatus9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.AffirmationStatus9Choice.mmObject();
 		}
 	};
+	protected AllocationSatus4Choice allocationStatus;
 	/**
 	 * Provides the status of allocation of collateral to cover the instruction.
 	 * <p>
@@ -155,8 +157,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#CollateralAllocationStatus
-	 * SecuritiesTradeStatus.CollateralAllocationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmCollateralAllocationStatus
+	 * SecuritiesTradeStatus.mmCollateralAllocationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -177,21 +179,22 @@ public class Status22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AllocationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAllocationStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmCollateralAllocationStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.CollateralAllocationStatus;
 			isDerived = false;
 			xmlTag = "AllcnSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationStatus";
 			definition = "Provides the status of allocation of collateral to cover the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AllocationSatus4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.AllocationSatus4Choice.mmObject();
 		}
 	};
+	protected RepoCallRequestStatus10Choice repoCallRequestStatus;
 	/**
 	 * Provides the status of the repurchase agreement call request.
 	 * <p>
@@ -204,8 +207,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#RepoCallRequestStatus
-	 * SecuritiesTradeStatus.RepoCallRequestStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmRepoCallRequestStatus
+	 * SecuritiesTradeStatus.mmRepoCallRequestStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -225,21 +228,22 @@ public class Status22Choice {
 	 * "Provides the status of the repurchase agreement call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RepoCallRequestStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRepoCallRequestStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmRepoCallRequestStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.RepoCallRequestStatus;
 			isDerived = false;
 			xmlTag = "RepoCallReqSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoCallRequestStatus";
 			definition = "Provides the status of the repurchase agreement call request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RepoCallRequestStatus10Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus10Choice.mmObject();
 		}
 	};
+	protected CorporateActionEventProcessingStatus4Choice corporateActionEventProcessingStatus;
 	/**
 	 * Provides the status of a corporate action or the status of a payment.
 	 * <p>
@@ -252,8 +256,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#EventProcessingStatus
-	 * CorporateActionStatus.EventProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmEventProcessingStatus
+	 * CorporateActionStatus.mmEventProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -273,21 +277,22 @@ public class Status22Choice {
 	 * "Provides the status of a corporate action or the status of a payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CorporateActionEventProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCorporateActionEventProcessingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmEventProcessingStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.EventProcessingStatus;
 			isDerived = false;
 			xmlTag = "CorpActnEvtPrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventProcessingStatus";
 			definition = "Provides the status of a corporate action or the status of a payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionEventProcessingStatus4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice.mmObject();
 		}
 	};
+	protected CorporateActionEventStage4Choice corporateActionEventStage;
 	/**
 	 * Stage in the corporate action event life cycle.
 	 * <p>
@@ -300,8 +305,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#EventStage
-	 * CorporateActionEvent.EventStage}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventStage
+	 * CorporateActionEvent.mmEventStage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -320,21 +325,22 @@ public class Status22Choice {
 	 * definition} = "Stage in the corporate action event life cycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CorporateActionEventStage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCorporateActionEventStage = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.EventStage;
 			isDerived = false;
 			xmlTag = "CorpActnEvtStag";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventStage";
 			definition = "Stage in the corporate action event life cycle.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionEventStage4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CorporateActionEventStage4Choice.mmObject();
 		}
 	};
+	protected MatchingStatus28Choice inferredMatchingStatus;
 	/**
 	 * Provides the matching status of an instruction as known by the account
 	 * servicer based on an allegement. At this time no matching took place on
@@ -349,8 +355,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
-	 * SecuritiesTradeStatus.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+	 * SecuritiesTradeStatus.mmMatchingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -371,21 +377,22 @@ public class Status22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus;
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MatchingStatus28Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.MatchingStatus28Choice.mmObject();
 		}
 	};
+	protected InstructionProcessingStatus26Choice instructionProcessingStatus;
 	/**
 	 * Provides the status of an instruction.
 	 * <p>
@@ -398,8 +405,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -418,21 +425,22 @@ public class Status22Choice {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstructionProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstructionProcessingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "InstrPrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingStatus";
 			definition = "Provides the status of an instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InstructionProcessingStatus26Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus26Choice.mmObject();
 		}
 	};
+	protected MatchingStatus28Choice matchingStatus;
 	/**
 	 * Provides the matching status of the instruction.
 	 * <p>
@@ -445,8 +453,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#MatchingStatus
-	 * SecuritiesTradeStatus.MatchingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmMatchingStatus
+	 * SecuritiesTradeStatus.mmMatchingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -465,21 +473,22 @@ public class Status22Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.MatchingStatus;
 			isDerived = false;
 			xmlTag = "MtchgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MatchingStatus28Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.MatchingStatus28Choice.mmObject();
 		}
 	};
+	protected RegistrationProcessingStatus4Choice registrationProcessingStatus;
 	/**
 	 * Provides the status of the registration processing.
 	 * <p>
@@ -492,8 +501,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -512,21 +521,22 @@ public class Status22Choice {
 	 * definition} = "Provides the status of the registration processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RegistrationProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRegistrationProcessingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "RegnPrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationProcessingStatus";
 			definition = "Provides the status of the registration processing.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> RegistrationProcessingStatus4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.RegistrationProcessingStatus4Choice.mmObject();
 		}
 	};
+	protected ResponseStatus7Choice responseStatus;
 	/**
 	 * Provides the status of the received collateral message (collateral claim,
 	 * a collateral proposal or a proposal/request for collateral substitution)
@@ -541,8 +551,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#ResponseStatus
-	 * CollateralStatus.ResponseStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralStatus#mmResponseStatus
+	 * CollateralStatus.mmResponseStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -563,21 +573,22 @@ public class Status22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ResponseStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmResponseStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmResponseStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.ResponseStatus;
 			isDerived = false;
 			xmlTag = "RspnSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseStatus";
 			definition = "Provides the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ResponseStatus7Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.ResponseStatus7Choice.mmObject();
 		}
 	};
+	protected ReplacementProcessingStatus9Choice replacementProcessingStatus;
 	/**
 	 * Provides the processing status of the replacement request.
 	 * <p>
@@ -590,8 +601,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#TransactionProcessingStatus
-	 * Status.TransactionProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmTransactionProcessingStatus
+	 * Status.mmTransactionProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -611,21 +622,22 @@ public class Status22Choice {
 	 * "Provides the processing status of the replacement request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReplacementProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReplacementProcessingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.TransactionProcessingStatus;
 			isDerived = false;
 			xmlTag = "RplcmntPrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacementProcessingStatus";
 			definition = "Provides the processing status of the replacement request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReplacementProcessingStatus9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus9Choice.mmObject();
 		}
 	};
+	protected CancellationProcessingStatus8Choice cancellationProcessingStatus;
 	/**
 	 * Provides the status of a cancellation request.
 	 * <p>
@@ -638,8 +650,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#CancellationProcessingStatus
-	 * Status.CancellationProcessingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmCancellationProcessingStatus
+	 * Status.mmCancellationProcessingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -658,21 +670,22 @@ public class Status22Choice {
 	 * definition} = "Provides the status of a cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationProcessingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmCancellationProcessingStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.CancellationProcessingStatus;
 			isDerived = false;
 			xmlTag = "CxlPrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationProcessingStatus";
 			definition = "Provides the status of a cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CancellationProcessingStatus8Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CancellationProcessingStatus8Choice.mmObject();
 		}
 	};
+	protected SettlementStatus25Choice settlementStatus;
 	/**
 	 * Provides the status of settlement of a transaction.
 	 * <p>
@@ -685,8 +698,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#SettlementStatus
-	 * Status.SettlementStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmSettlementStatus
+	 * Status.mmSettlementStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -705,21 +718,22 @@ public class Status22Choice {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.SettlementStatus;
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementStatus25Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.SettlementStatus25Choice.mmObject();
 		}
 	};
+	protected SettlementConditionModificationStatus4Choice settlementConditionModificationStatus;
 	/**
 	 * Provides the status of a securities settlement condition modification
 	 * request.
@@ -733,8 +747,8 @@ public class Status22Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#SettlementConditionModificationStatus
-	 * SecuritiesTradeStatus.SettlementConditionModificationStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmSettlementConditionModificationStatus
+	 * SecuritiesTradeStatus.mmSettlementConditionModificationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -755,39 +769,151 @@ public class Status22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementConditionModificationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementConditionModificationStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmSettlementConditionModificationStatus;
 			componentContext_lazy = () -> Status22Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.SettlementConditionModificationStatus;
 			isDerived = false;
 			xmlTag = "SttlmCondModSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationStatus";
 			definition = "Provides the status of a securities settlement condition modification request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementConditionModificationStatus4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.SettlementConditionModificationStatus4Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status22Choice.AffirmationStatus, com.tools20022.repository.choice.Status22Choice.AllocationStatus,
-						com.tools20022.repository.choice.Status22Choice.RepoCallRequestStatus, com.tools20022.repository.choice.Status22Choice.CorporateActionEventProcessingStatus,
-						com.tools20022.repository.choice.Status22Choice.CorporateActionEventStage, com.tools20022.repository.choice.Status22Choice.InferredMatchingStatus,
-						com.tools20022.repository.choice.Status22Choice.InstructionProcessingStatus, com.tools20022.repository.choice.Status22Choice.MatchingStatus,
-						com.tools20022.repository.choice.Status22Choice.RegistrationProcessingStatus, com.tools20022.repository.choice.Status22Choice.ResponseStatus,
-						com.tools20022.repository.choice.Status22Choice.ReplacementProcessingStatus, com.tools20022.repository.choice.Status22Choice.CancellationProcessingStatus,
-						com.tools20022.repository.choice.Status22Choice.SettlementStatus, com.tools20022.repository.choice.Status22Choice.SettlementConditionModificationStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status22Choice.mmAffirmationStatus, com.tools20022.repository.choice.Status22Choice.mmAllocationStatus,
+						com.tools20022.repository.choice.Status22Choice.mmRepoCallRequestStatus, com.tools20022.repository.choice.Status22Choice.mmCorporateActionEventProcessingStatus,
+						com.tools20022.repository.choice.Status22Choice.mmCorporateActionEventStage, com.tools20022.repository.choice.Status22Choice.mmInferredMatchingStatus,
+						com.tools20022.repository.choice.Status22Choice.mmInstructionProcessingStatus, com.tools20022.repository.choice.Status22Choice.mmMatchingStatus,
+						com.tools20022.repository.choice.Status22Choice.mmRegistrationProcessingStatus, com.tools20022.repository.choice.Status22Choice.mmResponseStatus,
+						com.tools20022.repository.choice.Status22Choice.mmReplacementProcessingStatus, com.tools20022.repository.choice.Status22Choice.mmCancellationProcessingStatus,
+						com.tools20022.repository.choice.Status22Choice.mmSettlementStatus, com.tools20022.repository.choice.Status22Choice.mmSettlementConditionModificationStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Status22Choice";
 				definition = "Choice of status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AffirmationStatus9Choice getAffirmationStatus() {
+		return affirmationStatus;
+	}
+
+	public void setAffirmationStatus(com.tools20022.repository.choice.AffirmationStatus9Choice affirmationStatus) {
+		this.affirmationStatus = affirmationStatus;
+	}
+
+	public AllocationSatus4Choice getAllocationStatus() {
+		return allocationStatus;
+	}
+
+	public void setAllocationStatus(com.tools20022.repository.choice.AllocationSatus4Choice allocationStatus) {
+		this.allocationStatus = allocationStatus;
+	}
+
+	public RepoCallRequestStatus10Choice getRepoCallRequestStatus() {
+		return repoCallRequestStatus;
+	}
+
+	public void setRepoCallRequestStatus(com.tools20022.repository.choice.RepoCallRequestStatus10Choice repoCallRequestStatus) {
+		this.repoCallRequestStatus = repoCallRequestStatus;
+	}
+
+	public CorporateActionEventProcessingStatus4Choice getCorporateActionEventProcessingStatus() {
+		return corporateActionEventProcessingStatus;
+	}
+
+	public void setCorporateActionEventProcessingStatus(com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice corporateActionEventProcessingStatus) {
+		this.corporateActionEventProcessingStatus = corporateActionEventProcessingStatus;
+	}
+
+	public CorporateActionEventStage4Choice getCorporateActionEventStage() {
+		return corporateActionEventStage;
+	}
+
+	public void setCorporateActionEventStage(com.tools20022.repository.choice.CorporateActionEventStage4Choice corporateActionEventStage) {
+		this.corporateActionEventStage = corporateActionEventStage;
+	}
+
+	public MatchingStatus28Choice getInferredMatchingStatus() {
+		return inferredMatchingStatus;
+	}
+
+	public void setInferredMatchingStatus(com.tools20022.repository.choice.MatchingStatus28Choice inferredMatchingStatus) {
+		this.inferredMatchingStatus = inferredMatchingStatus;
+	}
+
+	public InstructionProcessingStatus26Choice getInstructionProcessingStatus() {
+		return instructionProcessingStatus;
+	}
+
+	public void setInstructionProcessingStatus(com.tools20022.repository.choice.InstructionProcessingStatus26Choice instructionProcessingStatus) {
+		this.instructionProcessingStatus = instructionProcessingStatus;
+	}
+
+	public MatchingStatus28Choice getMatchingStatus() {
+		return matchingStatus;
+	}
+
+	public void setMatchingStatus(com.tools20022.repository.choice.MatchingStatus28Choice matchingStatus) {
+		this.matchingStatus = matchingStatus;
+	}
+
+	public RegistrationProcessingStatus4Choice getRegistrationProcessingStatus() {
+		return registrationProcessingStatus;
+	}
+
+	public void setRegistrationProcessingStatus(com.tools20022.repository.choice.RegistrationProcessingStatus4Choice registrationProcessingStatus) {
+		this.registrationProcessingStatus = registrationProcessingStatus;
+	}
+
+	public ResponseStatus7Choice getResponseStatus() {
+		return responseStatus;
+	}
+
+	public void setResponseStatus(com.tools20022.repository.choice.ResponseStatus7Choice responseStatus) {
+		this.responseStatus = responseStatus;
+	}
+
+	public ReplacementProcessingStatus9Choice getReplacementProcessingStatus() {
+		return replacementProcessingStatus;
+	}
+
+	public void setReplacementProcessingStatus(com.tools20022.repository.choice.ReplacementProcessingStatus9Choice replacementProcessingStatus) {
+		this.replacementProcessingStatus = replacementProcessingStatus;
+	}
+
+	public CancellationProcessingStatus8Choice getCancellationProcessingStatus() {
+		return cancellationProcessingStatus;
+	}
+
+	public void setCancellationProcessingStatus(com.tools20022.repository.choice.CancellationProcessingStatus8Choice cancellationProcessingStatus) {
+		this.cancellationProcessingStatus = cancellationProcessingStatus;
+	}
+
+	public SettlementStatus25Choice getSettlementStatus() {
+		return settlementStatus;
+	}
+
+	public void setSettlementStatus(com.tools20022.repository.choice.SettlementStatus25Choice settlementStatus) {
+		this.settlementStatus = settlementStatus;
+	}
+
+	public SettlementConditionModificationStatus4Choice getSettlementConditionModificationStatus() {
+		return settlementConditionModificationStatus;
+	}
+
+	public void setSettlementConditionModificationStatus(com.tools20022.repository.choice.SettlementConditionModificationStatus4Choice settlementConditionModificationStatus) {
+		this.settlementConditionModificationStatus = settlementConditionModificationStatus;
 	}
 }

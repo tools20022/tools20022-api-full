@@ -30,241 +30,253 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CashTransaction
- * PaymentTypeCode.CashTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCashTransaction
+ * PaymentTypeCode.mmCashTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#DomesticPayment
- * PaymentTypeCode.DomesticPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmDomesticPayment
+ * PaymentTypeCode.mmDomesticPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#DomesticHighValuePayment
- * PaymentTypeCode.DomesticHighValuePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmDomesticHighValuePayment
+ * PaymentTypeCode.mmDomesticHighValuePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#DomesticPriorityPayment
- * PaymentTypeCode.DomesticPriorityPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmDomesticPriorityPayment
+ * PaymentTypeCode.mmDomesticPriorityPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CrossBorderPayment
- * PaymentTypeCode.CrossBorderPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCrossBorderPayment
+ * PaymentTypeCode.mmCrossBorderPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CrossBorderPriorityPayment
- * PaymentTypeCode.CrossBorderPriorityPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCrossBorderPriorityPayment
+ * PaymentTypeCode.mmCrossBorderPriorityPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CrossBorderHighValuePayment
- * PaymentTypeCode.CrossBorderHighValuePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCrossBorderHighValuePayment
+ * PaymentTypeCode.mmCrossBorderHighValuePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#ThirdCurrencyPayment
- * PaymentTypeCode.ThirdCurrencyPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmThirdCurrencyPayment
+ * PaymentTypeCode.mmThirdCurrencyPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#ThirdCurrencyHighValuePayment
- * PaymentTypeCode.ThirdCurrencyHighValuePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmThirdCurrencyHighValuePayment
+ * PaymentTypeCode.mmThirdCurrencyHighValuePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#ThirdCurrencyPriorityPayment
- * PaymentTypeCode.ThirdCurrencyPriorityPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmThirdCurrencyPriorityPayment
+ * PaymentTypeCode.mmThirdCurrencyPriorityPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#TradeSettlementPayment
- * PaymentTypeCode.TradeSettlementPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmTradeSettlementPayment
+ * PaymentTypeCode.mmTradeSettlementPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#ForeignExchange
- * PaymentTypeCode.ForeignExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmForeignExchange
+ * PaymentTypeCode.mmForeignExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#EquivalentAmount
- * PaymentTypeCode.EquivalentAmount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Loan
- * PaymentTypeCode.Loan}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmEquivalentAmount
+ * PaymentTypeCode.mmEquivalentAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmLoan
+ * PaymentTypeCode.mmLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#LoanRepayment
- * PaymentTypeCode.LoanRepayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Securities
- * PaymentTypeCode.Securities}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#LockBox
- * PaymentTypeCode.LockBox}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Dividend
- * PaymentTypeCode.Dividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmLoanRepayment
+ * PaymentTypeCode.mmLoanRepayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CrossedCheque
- * PaymentTypeCode.CrossedCheque}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#OpenCheque
- * PaymentTypeCode.OpenCheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmSecurities
+ * PaymentTypeCode.mmSecurities}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmLockBox
+ * PaymentTypeCode.mmLockBox}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmDividend
+ * PaymentTypeCode.mmDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#OrderCheque
- * PaymentTypeCode.OrderCheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCrossedCheque
+ * PaymentTypeCode.mmCrossedCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CircularCheque
- * PaymentTypeCode.CircularCheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmOpenCheque
+ * PaymentTypeCode.mmOpenCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#TravellersCheques
- * PaymentTypeCode.TravellersCheques}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#BankDraft
- * PaymentTypeCode.BankDraft}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CashLetter
- * PaymentTypeCode.CashLetter}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmOrderCheque
+ * PaymentTypeCode.mmOrderCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#DocumentaryCredit
- * PaymentTypeCode.DocumentaryCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCircularCheque
+ * PaymentTypeCode.mmCircularCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#BillOfExchange
- * PaymentTypeCode.BillOfExchange}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Collection
- * PaymentTypeCode.Collection}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmTravellersCheques
+ * PaymentTypeCode.mmTravellersCheques}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CashManagementTransfer
- * PaymentTypeCode.CashManagementTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmBankDraft
+ * PaymentTypeCode.mmBankDraft}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#SweepAccount
- * PaymentTypeCode.SweepAccount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#TopAccount
- * PaymentTypeCode.TopAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCashLetter
+ * PaymentTypeCode.mmCashLetter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#ZeroBalanceAccount
- * PaymentTypeCode.ZeroBalanceAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmDocumentaryCredit
+ * PaymentTypeCode.mmDocumentaryCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#StandingFacilities
- * PaymentTypeCode.StandingFacilities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmBillOfExchange
+ * PaymentTypeCode.mmBillOfExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#SwiftPayServiceLevelCredit
- * PaymentTypeCode.SwiftPayServiceLevelCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCollection
+ * PaymentTypeCode.mmCollection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#PriorityServiceLevelCredit
- * PaymentTypeCode.PriorityServiceLevelCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCashManagementTransfer
+ * PaymentTypeCode.mmCashManagementTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#StandardServiceLevelCredit
- * PaymentTypeCode.StandardServiceLevelCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmSweepAccount
+ * PaymentTypeCode.mmSweepAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#LiquidityTransfer
- * PaymentTypeCode.LiquidityTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmTopAccount
+ * PaymentTypeCode.mmTopAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#AdvancePayment
- * PaymentTypeCode.AdvancePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmZeroBalanceAccount
+ * PaymentTypeCode.mmZeroBalanceAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#ValueDateAdjustment
- * PaymentTypeCode.ValueDateAdjustment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#DVPGross
- * PaymentTypeCode.DVPGross}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#DVPNet
- * PaymentTypeCode.DVPNet}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Netting
- * PaymentTypeCode.Netting}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmStandingFacilities
+ * PaymentTypeCode.mmStandingFacilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#LimitPayment
- * PaymentTypeCode.LimitPayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#BackUp
- * PaymentTypeCode.BackUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmSwiftPayServiceLevelCredit
+ * PaymentTypeCode.mmSwiftPayServiceLevelCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#ExpressPayment
- * PaymentTypeCode.ExpressPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmPriorityServiceLevelCredit
+ * PaymentTypeCode.mmPriorityServiceLevelCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CentralBankOperation
- * PaymentTypeCode.CentralBankOperation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CLSPayment
- * PaymentTypeCode.CLSPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmStandardServiceLevelCredit
+ * PaymentTypeCode.mmStandardServiceLevelCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#EuroDomesticPayment
- * PaymentTypeCode.EuroDomesticPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmLiquidityTransfer
+ * PaymentTypeCode.mmLiquidityTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#AgriculturalTransfer
- * PaymentTypeCode.AgriculturalTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmAdvancePayment
+ * PaymentTypeCode.mmAdvancePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#AlimonyPayment
- * PaymentTypeCode.AlimonyPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmValueDateAdjustment
+ * PaymentTypeCode.mmValueDateAdjustment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmDVPGross
+ * PaymentTypeCode.mmDVPGross}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmDVPNet
+ * PaymentTypeCode.mmDVPNet}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmNetting
+ * PaymentTypeCode.mmNetting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#BalanceRetail
- * PaymentTypeCode.BalanceRetail}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmLimitPayment
+ * PaymentTypeCode.mmLimitPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmBackUp
+ * PaymentTypeCode.mmBackUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#BonusPayment
- * PaymentTypeCode.BonusPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmExpressPayment
+ * PaymentTypeCode.mmExpressPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#BrokerageFee
- * PaymentTypeCode.BrokerageFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCentralBankOperation
+ * PaymentTypeCode.mmCentralBankOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CapitalBuilding
- * PaymentTypeCode.CapitalBuilding}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCLSPayment
+ * PaymentTypeCode.mmCLSPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CharityPayment
- * PaymentTypeCode.CharityPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmEuroDomesticPayment
+ * PaymentTypeCode.mmEuroDomesticPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#ChildBenefit
- * PaymentTypeCode.ChildBenefit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmAgriculturalTransfer
+ * PaymentTypeCode.mmAgriculturalTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CommercialCredit
- * PaymentTypeCode.CommercialCredit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Commission
- * PaymentTypeCode.Commission}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmAlimonyPayment
+ * PaymentTypeCode.mmAlimonyPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#CommodityTransfer
- * PaymentTypeCode.CommodityTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Costs
- * PaymentTypeCode.Costs}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Copyright
- * PaymentTypeCode.Copyright}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmBalanceRetail
+ * PaymentTypeCode.mmBalanceRetail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#GovernmentPayment
- * PaymentTypeCode.GovernmentPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmBonusPayment
+ * PaymentTypeCode.mmBonusPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#InstalmentHirePurchaseAgreement
- * PaymentTypeCode.InstalmentHirePurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmBrokerageFee
+ * PaymentTypeCode.mmBrokerageFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#InsurancePremium
- * PaymentTypeCode.InsurancePremium}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCapitalBuilding
+ * PaymentTypeCode.mmCapitalBuilding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#IntraCompanyPayment
- * PaymentTypeCode.IntraCompanyPayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Interest
- * PaymentTypeCode.Interest}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#LicenseFee
- * PaymentTypeCode.LicenseFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Metals
- * PaymentTypeCode.Metals}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCharityPayment
+ * PaymentTypeCode.mmCharityPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#PensionPayment
- * PaymentTypeCode.PensionPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmChildBenefit
+ * PaymentTypeCode.mmChildBenefit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#PurchaseSaleOfGoods
- * PaymentTypeCode.PurchaseSaleOfGoods}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Refund
- * PaymentTypeCode.Refund}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Rent
- * PaymentTypeCode.Rent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Royalties
- * PaymentTypeCode.Royalties}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCommercialCredit
+ * PaymentTypeCode.mmCommercialCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#PurchaseSaleOfServices
- * PaymentTypeCode.PurchaseSaleOfServices}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCommission
+ * PaymentTypeCode.mmCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#SalaryPayment
- * PaymentTypeCode.SalaryPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCommodityTransfer
+ * PaymentTypeCode.mmCommodityTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCosts
+ * PaymentTypeCode.mmCosts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#SocialSecurityBenefit
- * PaymentTypeCode.SocialSecurityBenefit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmCopyright
+ * PaymentTypeCode.mmCopyright}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#StandingOrder
- * PaymentTypeCode.StandingOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmGovernmentPayment
+ * PaymentTypeCode.mmGovernmentPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Subscription
- * PaymentTypeCode.Subscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmInstalmentHirePurchaseAgreement
+ * PaymentTypeCode.mmInstalmentHirePurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#TreasuryStatePayment
- * PaymentTypeCode.TreasuryStatePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmInsurancePremium
+ * PaymentTypeCode.mmInsurancePremium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#UnemploymentDisabilityBenefit
- * PaymentTypeCode.UnemploymentDisabilityBenefit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmIntraCompanyPayment
+ * PaymentTypeCode.mmIntraCompanyPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmInterest
+ * PaymentTypeCode.mmInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#ValueAddedTaxPayment
- * PaymentTypeCode.ValueAddedTaxPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmLicenseFee
+ * PaymentTypeCode.mmLicenseFee}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmMetals
+ * PaymentTypeCode.mmMetals}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#WithHoldingTax
- * PaymentTypeCode.WithHoldingTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#TaxPayment
- * PaymentTypeCode.TaxPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmPensionPayment
+ * PaymentTypeCode.mmPensionPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Miscellaneous
- * PaymentTypeCode.Miscellaneous}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmPurchaseSaleOfGoods
+ * PaymentTypeCode.mmPurchaseSaleOfGoods}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmRefund
+ * PaymentTypeCode.mmRefund}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmRent
+ * PaymentTypeCode.mmRent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#OvernightDeposit
- * PaymentTypeCode.OvernightDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmRoyalties
+ * PaymentTypeCode.mmRoyalties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#MarginalLending
- * PaymentTypeCode.MarginalLending}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#Other
- * PaymentTypeCode.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmPurchaseSaleOfServices
+ * PaymentTypeCode.mmPurchaseSaleOfServices}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmSalaryPayment
+ * PaymentTypeCode.mmSalaryPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmSocialSecurityBenefit
+ * PaymentTypeCode.mmSocialSecurityBenefit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmStandingOrder
+ * PaymentTypeCode.mmStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmSubscription
+ * PaymentTypeCode.mmSubscription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmTreasuryStatePayment
+ * PaymentTypeCode.mmTreasuryStatePayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmUnemploymentDisabilityBenefit
+ * PaymentTypeCode.mmUnemploymentDisabilityBenefit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmValueAddedTaxPayment
+ * PaymentTypeCode.mmValueAddedTaxPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmWithHoldingTax
+ * PaymentTypeCode.mmWithHoldingTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmTaxPayment
+ * PaymentTypeCode.mmTaxPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmMiscellaneous
+ * PaymentTypeCode.mmMiscellaneous}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmOvernightDeposit
+ * PaymentTypeCode.mmOvernightDeposit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmMarginalLending
+ * PaymentTypeCode.mmMarginalLending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentTypeCode#mmOther
+ * PaymentTypeCode.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -279,8 +291,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -321,7 +333,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a withdrawal/deposit of cash."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashTransaction = new MMCode() {
+	public static final MMCode mmCashTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashTransaction";
@@ -354,7 +366,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DomesticPayment = new MMCode() {
+	public static final MMCode mmDomesticPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DomesticPayment";
@@ -387,7 +399,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DomesticHighValuePayment = new MMCode() {
+	public static final MMCode mmDomesticHighValuePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DomesticHighValuePayment";
@@ -420,7 +432,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DomesticPriorityPayment = new MMCode() {
+	public static final MMCode mmDomesticPriorityPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DomesticPriorityPayment";
@@ -453,7 +465,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CrossBorderPayment = new MMCode() {
+	public static final MMCode mmCrossBorderPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CrossBorderPayment";
@@ -487,7 +499,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CrossBorderPriorityPayment = new MMCode() {
+	public static final MMCode mmCrossBorderPriorityPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CrossBorderPriorityPayment";
@@ -521,7 +533,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CrossBorderHighValuePayment = new MMCode() {
+	public static final MMCode mmCrossBorderHighValuePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CrossBorderHighValuePayment";
@@ -555,7 +567,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ThirdCurrencyPayment = new MMCode() {
+	public static final MMCode mmThirdCurrencyPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ThirdCurrencyPayment";
@@ -589,7 +601,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ThirdCurrencyHighValuePayment = new MMCode() {
+	public static final MMCode mmThirdCurrencyHighValuePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ThirdCurrencyHighValuePayment";
@@ -622,7 +634,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ThirdCurrencyPriorityPayment = new MMCode() {
+	public static final MMCode mmThirdCurrencyPriorityPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ThirdCurrencyPriorityPayment";
@@ -654,7 +666,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TradeSettlementPayment = new MMCode() {
+	public static final MMCode mmTradeSettlementPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradeSettlementPayment";
@@ -684,7 +696,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction isthe settlement of a foreign exchange deal."</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignExchange = new MMCode() {
+	public static final MMCode mmForeignExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ForeignExchange";
@@ -715,7 +727,7 @@ public class PaymentTypeCode {
 	 * "Transaction is an equivalent amount relative to a currency conversion."</li>
 	 * </ul>
 	 */
-	public static final MMCode EquivalentAmount = new MMCode() {
+	public static final MMCode mmEquivalentAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EquivalentAmount";
@@ -748,7 +760,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Loan = new MMCode() {
+	public static final MMCode mmLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Loan";
@@ -779,7 +791,7 @@ public class PaymentTypeCode {
 	 * "Transaction is an amount of money transferred in repayment of loan."</li>
 	 * </ul>
 	 */
-	public static final MMCode LoanRepayment = new MMCode() {
+	public static final MMCode mmLoanRepayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LoanRepayment";
@@ -809,7 +821,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode Securities = new MMCode() {
+	public static final MMCode mmSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Securities";
@@ -840,7 +852,7 @@ public class PaymentTypeCode {
 	 * "Transaction is a payment(s) resulting from a lock box service."</li>
 	 * </ul>
 	 */
-	public static final MMCode LockBox = new MMCode() {
+	public static final MMCode mmLockBox = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LockBox";
@@ -870,7 +882,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of dividends."</li>
 	 * </ul>
 	 */
-	public static final MMCode Dividend = new MMCode() {
+	public static final MMCode mmDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Dividend";
@@ -904,7 +916,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CrossedCheque = new MMCode() {
+	public static final MMCode mmCrossedCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CrossedCheque";
@@ -937,7 +949,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OpenCheque = new MMCode() {
+	public static final MMCode mmOpenCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OpenCheque";
@@ -972,7 +984,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OrderCheque = new MMCode() {
+	public static final MMCode mmOrderCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OrderCheque";
@@ -1006,7 +1018,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CircularCheque = new MMCode() {
+	public static final MMCode mmCircularCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CircularCheque";
@@ -1037,7 +1049,7 @@ public class PaymentTypeCode {
 	 * "Transaction is a payment resulting from travellers cheques."</li>
 	 * </ul>
 	 */
-	public static final MMCode TravellersCheques = new MMCode() {
+	public static final MMCode mmTravellersCheques = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TravellersCheques";
@@ -1071,7 +1083,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BankDraft = new MMCode() {
+	public static final MMCode mmBankDraft = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BankDraft";
@@ -1106,7 +1118,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CashLetter = new MMCode() {
+	public static final MMCode mmCashLetter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashLetter";
@@ -1140,7 +1152,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DocumentaryCredit = new MMCode() {
+	public static final MMCode mmDocumentaryCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DocumentaryCredit";
@@ -1175,7 +1187,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BillOfExchange = new MMCode() {
+	public static final MMCode mmBillOfExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BillOfExchange";
@@ -1209,7 +1221,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Collection = new MMCode() {
+	public static final MMCode mmCollection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Collection";
@@ -1239,7 +1251,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a general cash management instruction."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashManagementTransfer = new MMCode() {
+	public static final MMCode mmCashManagementTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CashManagementTransfer";
@@ -1272,7 +1284,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SweepAccount = new MMCode() {
+	public static final MMCode mmSweepAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SweepAccount";
@@ -1306,7 +1318,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TopAccount = new MMCode() {
+	public static final MMCode mmTopAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TopAccount";
@@ -1339,7 +1351,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ZeroBalanceAccount = new MMCode() {
+	public static final MMCode mmZeroBalanceAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ZeroBalanceAccount";
@@ -1372,7 +1384,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode StandingFacilities = new MMCode() {
+	public static final MMCode mmStandingFacilities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StandingFacilities";
@@ -1405,7 +1417,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SwiftPayServiceLevelCredit = new MMCode() {
+	public static final MMCode mmSwiftPayServiceLevelCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SwiftPayServiceLevelCredit";
@@ -1438,7 +1450,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PriorityServiceLevelCredit = new MMCode() {
+	public static final MMCode mmPriorityServiceLevelCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PriorityServiceLevelCredit";
@@ -1471,7 +1483,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode StandardServiceLevelCredit = new MMCode() {
+	public static final MMCode mmStandardServiceLevelCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StandardServiceLevelCredit";
@@ -1505,7 +1517,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LiquidityTransfer = new MMCode() {
+	public static final MMCode mmLiquidityTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LiquidityTransfer";
@@ -1536,7 +1548,7 @@ public class PaymentTypeCode {
 	 * "Transaction is a payment made in advance or as an advance."</li>
 	 * </ul>
 	 */
-	public static final MMCode AdvancePayment = new MMCode() {
+	public static final MMCode mmAdvancePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AdvancePayment";
@@ -1567,7 +1579,7 @@ public class PaymentTypeCode {
 	 * "Transaction reverses a previously incorrectly value dated entry."</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueDateAdjustment = new MMCode() {
+	public static final MMCode mmValueDateAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValueDateAdjustment";
@@ -1600,7 +1612,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DVPGross = new MMCode() {
+	public static final MMCode mmDVPGross = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DVPGross";
@@ -1633,7 +1645,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DVPNet = new MMCode() {
+	public static final MMCode mmDVPNet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DVPNet";
@@ -1663,7 +1675,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a netting operation."</li>
 	 * </ul>
 	 */
-	public static final MMCode Netting = new MMCode() {
+	public static final MMCode mmNetting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Netting";
@@ -1697,7 +1709,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LimitPayment = new MMCode() {
+	public static final MMCode mmLimitPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LimitPayment";
@@ -1731,7 +1743,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BackUp = new MMCode() {
+	public static final MMCode mmBackUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BackUp";
@@ -1764,7 +1776,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ExpressPayment = new MMCode() {
+	public static final MMCode mmExpressPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ExpressPayment";
@@ -1795,7 +1807,7 @@ public class PaymentTypeCode {
 	 * "Payment is made to settle an operation made with the central bank."</li>
 	 * </ul>
 	 */
-	public static final MMCode CentralBankOperation = new MMCode() {
+	public static final MMCode mmCentralBankOperation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CentralBankOperation";
@@ -1825,7 +1837,7 @@ public class PaymentTypeCode {
 	 * definition} = "Payment is linked to CLS activities."</li>
 	 * </ul>
 	 */
-	public static final MMCode CLSPayment = new MMCode() {
+	public static final MMCode mmCLSPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CLSPayment";
@@ -1859,7 +1871,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode EuroDomesticPayment = new MMCode() {
+	public static final MMCode mmEuroDomesticPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "EuroDomesticPayment";
@@ -1889,7 +1901,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is related to the agricultural domain."</li>
 	 * </ul>
 	 */
-	public static final MMCode AgriculturalTransfer = new MMCode() {
+	public static final MMCode mmAgriculturalTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AgriculturalTransfer";
@@ -1923,7 +1935,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AlimonyPayment = new MMCode() {
+	public static final MMCode mmAlimonyPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AlimonyPayment";
@@ -1956,7 +1968,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BalanceRetail = new MMCode() {
+	public static final MMCode mmBalanceRetail = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BalanceRetail";
@@ -1989,7 +2001,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BonusPayment = new MMCode() {
+	public static final MMCode mmBonusPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BonusPayment";
@@ -2019,7 +2031,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is charges levied by a broker."</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokerageFee = new MMCode() {
+	public static final MMCode mmBrokerageFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BrokerageFee";
@@ -2050,7 +2062,7 @@ public class PaymentTypeCode {
 	 * "Transaction is payment into a personal pension scheme for retirement."</li>
 	 * </ul>
 	 */
-	public static final MMCode CapitalBuilding = new MMCode() {
+	public static final MMCode mmCapitalBuilding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CapitalBuilding";
@@ -2080,7 +2092,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment for charity reasons."</li>
 	 * </ul>
 	 */
-	public static final MMCode CharityPayment = new MMCode() {
+	public static final MMCode mmCharityPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CharityPayment";
@@ -2113,7 +2125,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ChildBenefit = new MMCode() {
+	public static final MMCode mmChildBenefit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ChildBenefit";
@@ -2143,7 +2155,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is settlement of a commercial credit."</li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialCredit = new MMCode() {
+	public static final MMCode mmCommercialCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CommercialCredit";
@@ -2174,7 +2186,7 @@ public class PaymentTypeCode {
 	 * "Transaction is payment of a fee for executing a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode Commission = new MMCode() {
+	public static final MMCode mmCommission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Commission";
@@ -2205,7 +2217,7 @@ public class PaymentTypeCode {
 	 * "Transaction is a payment of products traded on a commodity exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode CommodityTransfer = new MMCode() {
+	public static final MMCode mmCommodityTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CommodityTransfer";
@@ -2235,7 +2247,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is apayment of costs."</li>
 	 * </ul>
 	 */
-	public static final MMCode Costs = new MMCode() {
+	public static final MMCode mmCosts = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Costs";
@@ -2265,7 +2277,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of copyright."</li>
 	 * </ul>
 	 */
-	public static final MMCode Copyright = new MMCode() {
+	public static final MMCode mmCopyright = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Copyright";
@@ -2296,7 +2308,7 @@ public class PaymentTypeCode {
 	 * "Transaction is apayment to or from a government department."</li>
 	 * </ul>
 	 */
-	public static final MMCode GovernmentPayment = new MMCode() {
+	public static final MMCode mmGovernmentPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "GovernmentPayment";
@@ -2329,7 +2341,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InstalmentHirePurchaseAgreement = new MMCode() {
+	public static final MMCode mmInstalmentHirePurchaseAgreement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InstalmentHirePurchaseAgreement";
@@ -2359,7 +2371,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of an insurance premium."</li>
 	 * </ul>
 	 */
-	public static final MMCode InsurancePremium = new MMCode() {
+	public static final MMCode mmInsurancePremium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InsurancePremium";
@@ -2392,7 +2404,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IntraCompanyPayment = new MMCode() {
+	public static final MMCode mmIntraCompanyPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IntraCompanyPayment";
@@ -2422,7 +2434,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of interest."</li>
 	 * </ul>
 	 */
-	public static final MMCode Interest = new MMCode() {
+	public static final MMCode mmInterest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Interest";
@@ -2452,7 +2464,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of a license fee."</li>
 	 * </ul>
 	 */
-	public static final MMCode LicenseFee = new MMCode() {
+	public static final MMCode mmLicenseFee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LicenseFee";
@@ -2482,7 +2494,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a purchase or sale of metals."</li>
 	 * </ul>
 	 */
-	public static final MMCode Metals = new MMCode() {
+	public static final MMCode mmMetals = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Metals";
@@ -2512,7 +2524,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of a pension allowance."</li>
 	 * </ul>
 	 */
-	public static final MMCode PensionPayment = new MMCode() {
+	public static final MMCode mmPensionPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PensionPayment";
@@ -2543,7 +2555,7 @@ public class PaymentTypeCode {
 	 * "Transaction is a payment for the purchase and sale of goods."</li>
 	 * </ul>
 	 */
-	public static final MMCode PurchaseSaleOfGoods = new MMCode() {
+	public static final MMCode mmPurchaseSaleOfGoods = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PurchaseSaleOfGoods";
@@ -2573,7 +2585,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a repayment of funds."</li>
 	 * </ul>
 	 */
-	public static final MMCode Refund = new MMCode() {
+	public static final MMCode mmRefund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Refund";
@@ -2603,7 +2615,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of rent."</li>
 	 * </ul>
 	 */
-	public static final MMCode Rent = new MMCode() {
+	public static final MMCode mmRent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Rent";
@@ -2633,7 +2645,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of royalties."</li>
 	 * </ul>
 	 */
-	public static final MMCode Royalties = new MMCode() {
+	public static final MMCode mmRoyalties = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Royalties";
@@ -2664,7 +2676,7 @@ public class PaymentTypeCode {
 	 * "Transaction is a payment for the purchase and sale of services."</li>
 	 * </ul>
 	 */
-	public static final MMCode PurchaseSaleOfServices = new MMCode() {
+	public static final MMCode mmPurchaseSaleOfServices = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PurchaseSaleOfServices";
@@ -2694,7 +2706,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of salaries."</li>
 	 * </ul>
 	 */
-	public static final MMCode SalaryPayment = new MMCode() {
+	public static final MMCode mmSalaryPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SalaryPayment";
@@ -2727,7 +2739,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SocialSecurityBenefit = new MMCode() {
+	public static final MMCode mmSocialSecurityBenefit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SocialSecurityBenefit";
@@ -2764,7 +2776,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode StandingOrder = new MMCode() {
+	public static final MMCode mmStandingOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StandingOrder";
@@ -2794,7 +2806,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of a subscription."</li>
 	 * </ul>
 	 */
-	public static final MMCode Subscription = new MMCode() {
+	public static final MMCode mmSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Subscription";
@@ -2824,7 +2836,7 @@ public class PaymentTypeCode {
 	 * definition} = "Payment is linked to the Treasury State."</li>
 	 * </ul>
 	 */
-	public static final MMCode TreasuryStatePayment = new MMCode() {
+	public static final MMCode mmTreasuryStatePayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TreasuryStatePayment";
@@ -2855,7 +2867,7 @@ public class PaymentTypeCode {
 	 * "Transaction is a payment made to an unemployed/disabled person."</li>
 	 * </ul>
 	 */
-	public static final MMCode UnemploymentDisabilityBenefit = new MMCode() {
+	public static final MMCode mmUnemploymentDisabilityBenefit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnemploymentDisabilityBenefit";
@@ -2885,7 +2897,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is apayment of value added tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTaxPayment = new MMCode() {
+	public static final MMCode mmValueAddedTaxPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValueAddedTaxPayment";
@@ -2915,7 +2927,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of withholding tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode WithHoldingTax = new MMCode() {
+	public static final MMCode mmWithHoldingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "WithHoldingTax";
@@ -2945,7 +2957,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is a payment of taxes."</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxPayment = new MMCode() {
+	public static final MMCode mmTaxPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxPayment";
@@ -2978,7 +2990,7 @@ public class PaymentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Miscellaneous = new MMCode() {
+	public static final MMCode mmMiscellaneous = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Miscellaneous";
@@ -3008,7 +3020,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is linked to an overnight deposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode OvernightDeposit = new MMCode() {
+	public static final MMCode mmOvernightDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OvernightDeposit";
@@ -3038,7 +3050,7 @@ public class PaymentTypeCode {
 	 * definition} = "Transaction is linked to the marginal lending facility."</li>
 	 * </ul>
 	 */
-	public static final MMCode MarginalLending = new MMCode() {
+	public static final MMCode mmMarginalLending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MarginalLending";
@@ -3068,7 +3080,7 @@ public class PaymentTypeCode {
 	 * definition} = "Specifies that a proprietary code must be indicated."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Other";
@@ -3081,43 +3093,44 @@ public class PaymentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CSH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTypeCode";
 				definition = "Specifies the type, or nature, of the payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentTypeCode.CashTransaction, com.tools20022.repository.codeset.PaymentTypeCode.DomesticPayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.DomesticHighValuePayment, com.tools20022.repository.codeset.PaymentTypeCode.DomesticPriorityPayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.CrossBorderPayment, com.tools20022.repository.codeset.PaymentTypeCode.CrossBorderPriorityPayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.CrossBorderHighValuePayment, com.tools20022.repository.codeset.PaymentTypeCode.ThirdCurrencyPayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.ThirdCurrencyHighValuePayment, com.tools20022.repository.codeset.PaymentTypeCode.ThirdCurrencyPriorityPayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.TradeSettlementPayment, com.tools20022.repository.codeset.PaymentTypeCode.ForeignExchange, com.tools20022.repository.codeset.PaymentTypeCode.EquivalentAmount,
-						com.tools20022.repository.codeset.PaymentTypeCode.Loan, com.tools20022.repository.codeset.PaymentTypeCode.LoanRepayment, com.tools20022.repository.codeset.PaymentTypeCode.Securities,
-						com.tools20022.repository.codeset.PaymentTypeCode.LockBox, com.tools20022.repository.codeset.PaymentTypeCode.Dividend, com.tools20022.repository.codeset.PaymentTypeCode.CrossedCheque,
-						com.tools20022.repository.codeset.PaymentTypeCode.OpenCheque, com.tools20022.repository.codeset.PaymentTypeCode.OrderCheque, com.tools20022.repository.codeset.PaymentTypeCode.CircularCheque,
-						com.tools20022.repository.codeset.PaymentTypeCode.TravellersCheques, com.tools20022.repository.codeset.PaymentTypeCode.BankDraft, com.tools20022.repository.codeset.PaymentTypeCode.CashLetter,
-						com.tools20022.repository.codeset.PaymentTypeCode.DocumentaryCredit, com.tools20022.repository.codeset.PaymentTypeCode.BillOfExchange, com.tools20022.repository.codeset.PaymentTypeCode.Collection,
-						com.tools20022.repository.codeset.PaymentTypeCode.CashManagementTransfer, com.tools20022.repository.codeset.PaymentTypeCode.SweepAccount, com.tools20022.repository.codeset.PaymentTypeCode.TopAccount,
-						com.tools20022.repository.codeset.PaymentTypeCode.ZeroBalanceAccount, com.tools20022.repository.codeset.PaymentTypeCode.StandingFacilities,
-						com.tools20022.repository.codeset.PaymentTypeCode.SwiftPayServiceLevelCredit, com.tools20022.repository.codeset.PaymentTypeCode.PriorityServiceLevelCredit,
-						com.tools20022.repository.codeset.PaymentTypeCode.StandardServiceLevelCredit, com.tools20022.repository.codeset.PaymentTypeCode.LiquidityTransfer, com.tools20022.repository.codeset.PaymentTypeCode.AdvancePayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.ValueDateAdjustment, com.tools20022.repository.codeset.PaymentTypeCode.DVPGross, com.tools20022.repository.codeset.PaymentTypeCode.DVPNet,
-						com.tools20022.repository.codeset.PaymentTypeCode.Netting, com.tools20022.repository.codeset.PaymentTypeCode.LimitPayment, com.tools20022.repository.codeset.PaymentTypeCode.BackUp,
-						com.tools20022.repository.codeset.PaymentTypeCode.ExpressPayment, com.tools20022.repository.codeset.PaymentTypeCode.CentralBankOperation, com.tools20022.repository.codeset.PaymentTypeCode.CLSPayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.EuroDomesticPayment, com.tools20022.repository.codeset.PaymentTypeCode.AgriculturalTransfer, com.tools20022.repository.codeset.PaymentTypeCode.AlimonyPayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.BalanceRetail, com.tools20022.repository.codeset.PaymentTypeCode.BonusPayment, com.tools20022.repository.codeset.PaymentTypeCode.BrokerageFee,
-						com.tools20022.repository.codeset.PaymentTypeCode.CapitalBuilding, com.tools20022.repository.codeset.PaymentTypeCode.CharityPayment, com.tools20022.repository.codeset.PaymentTypeCode.ChildBenefit,
-						com.tools20022.repository.codeset.PaymentTypeCode.CommercialCredit, com.tools20022.repository.codeset.PaymentTypeCode.Commission, com.tools20022.repository.codeset.PaymentTypeCode.CommodityTransfer,
-						com.tools20022.repository.codeset.PaymentTypeCode.Costs, com.tools20022.repository.codeset.PaymentTypeCode.Copyright, com.tools20022.repository.codeset.PaymentTypeCode.GovernmentPayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.InstalmentHirePurchaseAgreement, com.tools20022.repository.codeset.PaymentTypeCode.InsurancePremium,
-						com.tools20022.repository.codeset.PaymentTypeCode.IntraCompanyPayment, com.tools20022.repository.codeset.PaymentTypeCode.Interest, com.tools20022.repository.codeset.PaymentTypeCode.LicenseFee,
-						com.tools20022.repository.codeset.PaymentTypeCode.Metals, com.tools20022.repository.codeset.PaymentTypeCode.PensionPayment, com.tools20022.repository.codeset.PaymentTypeCode.PurchaseSaleOfGoods,
-						com.tools20022.repository.codeset.PaymentTypeCode.Refund, com.tools20022.repository.codeset.PaymentTypeCode.Rent, com.tools20022.repository.codeset.PaymentTypeCode.Royalties,
-						com.tools20022.repository.codeset.PaymentTypeCode.PurchaseSaleOfServices, com.tools20022.repository.codeset.PaymentTypeCode.SalaryPayment, com.tools20022.repository.codeset.PaymentTypeCode.SocialSecurityBenefit,
-						com.tools20022.repository.codeset.PaymentTypeCode.StandingOrder, com.tools20022.repository.codeset.PaymentTypeCode.Subscription, com.tools20022.repository.codeset.PaymentTypeCode.TreasuryStatePayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.UnemploymentDisabilityBenefit, com.tools20022.repository.codeset.PaymentTypeCode.ValueAddedTaxPayment,
-						com.tools20022.repository.codeset.PaymentTypeCode.WithHoldingTax, com.tools20022.repository.codeset.PaymentTypeCode.TaxPayment, com.tools20022.repository.codeset.PaymentTypeCode.Miscellaneous,
-						com.tools20022.repository.codeset.PaymentTypeCode.OvernightDeposit, com.tools20022.repository.codeset.PaymentTypeCode.MarginalLending, com.tools20022.repository.codeset.PaymentTypeCode.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentTypeCode.mmCashTransaction, com.tools20022.repository.codeset.PaymentTypeCode.mmDomesticPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmDomesticHighValuePayment, com.tools20022.repository.codeset.PaymentTypeCode.mmDomesticPriorityPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmCrossBorderPayment, com.tools20022.repository.codeset.PaymentTypeCode.mmCrossBorderPriorityPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmCrossBorderHighValuePayment, com.tools20022.repository.codeset.PaymentTypeCode.mmThirdCurrencyPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmThirdCurrencyHighValuePayment, com.tools20022.repository.codeset.PaymentTypeCode.mmThirdCurrencyPriorityPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmTradeSettlementPayment, com.tools20022.repository.codeset.PaymentTypeCode.mmForeignExchange, com.tools20022.repository.codeset.PaymentTypeCode.mmEquivalentAmount,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmLoan, com.tools20022.repository.codeset.PaymentTypeCode.mmLoanRepayment, com.tools20022.repository.codeset.PaymentTypeCode.mmSecurities,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmLockBox, com.tools20022.repository.codeset.PaymentTypeCode.mmDividend, com.tools20022.repository.codeset.PaymentTypeCode.mmCrossedCheque,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmOpenCheque, com.tools20022.repository.codeset.PaymentTypeCode.mmOrderCheque, com.tools20022.repository.codeset.PaymentTypeCode.mmCircularCheque,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmTravellersCheques, com.tools20022.repository.codeset.PaymentTypeCode.mmBankDraft, com.tools20022.repository.codeset.PaymentTypeCode.mmCashLetter,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmDocumentaryCredit, com.tools20022.repository.codeset.PaymentTypeCode.mmBillOfExchange, com.tools20022.repository.codeset.PaymentTypeCode.mmCollection,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmCashManagementTransfer, com.tools20022.repository.codeset.PaymentTypeCode.mmSweepAccount, com.tools20022.repository.codeset.PaymentTypeCode.mmTopAccount,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmZeroBalanceAccount, com.tools20022.repository.codeset.PaymentTypeCode.mmStandingFacilities,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmSwiftPayServiceLevelCredit, com.tools20022.repository.codeset.PaymentTypeCode.mmPriorityServiceLevelCredit,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmStandardServiceLevelCredit, com.tools20022.repository.codeset.PaymentTypeCode.mmLiquidityTransfer,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmAdvancePayment, com.tools20022.repository.codeset.PaymentTypeCode.mmValueDateAdjustment, com.tools20022.repository.codeset.PaymentTypeCode.mmDVPGross,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmDVPNet, com.tools20022.repository.codeset.PaymentTypeCode.mmNetting, com.tools20022.repository.codeset.PaymentTypeCode.mmLimitPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmBackUp, com.tools20022.repository.codeset.PaymentTypeCode.mmExpressPayment, com.tools20022.repository.codeset.PaymentTypeCode.mmCentralBankOperation,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmCLSPayment, com.tools20022.repository.codeset.PaymentTypeCode.mmEuroDomesticPayment, com.tools20022.repository.codeset.PaymentTypeCode.mmAgriculturalTransfer,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmAlimonyPayment, com.tools20022.repository.codeset.PaymentTypeCode.mmBalanceRetail, com.tools20022.repository.codeset.PaymentTypeCode.mmBonusPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmBrokerageFee, com.tools20022.repository.codeset.PaymentTypeCode.mmCapitalBuilding, com.tools20022.repository.codeset.PaymentTypeCode.mmCharityPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmChildBenefit, com.tools20022.repository.codeset.PaymentTypeCode.mmCommercialCredit, com.tools20022.repository.codeset.PaymentTypeCode.mmCommission,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmCommodityTransfer, com.tools20022.repository.codeset.PaymentTypeCode.mmCosts, com.tools20022.repository.codeset.PaymentTypeCode.mmCopyright,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmGovernmentPayment, com.tools20022.repository.codeset.PaymentTypeCode.mmInstalmentHirePurchaseAgreement,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmInsurancePremium, com.tools20022.repository.codeset.PaymentTypeCode.mmIntraCompanyPayment, com.tools20022.repository.codeset.PaymentTypeCode.mmInterest,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmLicenseFee, com.tools20022.repository.codeset.PaymentTypeCode.mmMetals, com.tools20022.repository.codeset.PaymentTypeCode.mmPensionPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmPurchaseSaleOfGoods, com.tools20022.repository.codeset.PaymentTypeCode.mmRefund, com.tools20022.repository.codeset.PaymentTypeCode.mmRent,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmRoyalties, com.tools20022.repository.codeset.PaymentTypeCode.mmPurchaseSaleOfServices, com.tools20022.repository.codeset.PaymentTypeCode.mmSalaryPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmSocialSecurityBenefit, com.tools20022.repository.codeset.PaymentTypeCode.mmStandingOrder, com.tools20022.repository.codeset.PaymentTypeCode.mmSubscription,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmTreasuryStatePayment, com.tools20022.repository.codeset.PaymentTypeCode.mmUnemploymentDisabilityBenefit,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmValueAddedTaxPayment, com.tools20022.repository.codeset.PaymentTypeCode.mmWithHoldingTax, com.tools20022.repository.codeset.PaymentTypeCode.mmTaxPayment,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmMiscellaneous, com.tools20022.repository.codeset.PaymentTypeCode.mmOvernightDeposit, com.tools20022.repository.codeset.PaymentTypeCode.mmMarginalLending,
+						com.tools20022.repository.codeset.PaymentTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(PaymentType3Code.mmObject(), PaymentType1Code.mmObject());
 			}
 		});

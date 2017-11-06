@@ -32,72 +32,72 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.TradeTypeCode TradeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#Basket
- * TradeType3Code.Basket}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#Index
- * TradeType3Code.Index}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#IPO
- * TradeType3Code.IPO}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#List
- * TradeType3Code.List}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmBasket
+ * TradeType3Code.mmBasket}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmIndex
+ * TradeType3Code.mmIndex}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmIPO
+ * TradeType3Code.mmIPO}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmList
+ * TradeType3Code.mmList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#PreAllocation
- * TradeType3Code.PreAllocation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#Program
- * TradeType3Code.Program}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#Trade
- * TradeType3Code.Trade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmPreAllocation
+ * TradeType3Code.mmPreAllocation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmProgram
+ * TradeType3Code.mmProgram}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmTrade
+ * TradeType3Code.mmTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#BrokerToBroker
- * TradeType3Code.BrokerToBroker}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#RiskTrade
- * TradeType3Code.RiskTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmBrokerToBroker
+ * TradeType3Code.mmBrokerToBroker}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmRiskTrade
+ * TradeType3Code.mmRiskTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#VWAPGuarantee
- * TradeType3Code.VWAPGuarantee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#Agency
- * TradeType3Code.Agency}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmVWAPGuarantee
+ * TradeType3Code.mmVWAPGuarantee}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmAgency
+ * TradeType3Code.mmAgency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#GuaranteedClose
- * TradeType3Code.GuaranteedClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmGuaranteedClose
+ * TradeType3Code.mmGuaranteedClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#EmployeeTradeReporting
- * TradeType3Code.EmployeeTradeReporting}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#Issuance
- * TradeType3Code.Issuance}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#BondStart
- * TradeType3Code.BondStart}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#BondEnd
- * TradeType3Code.BondEnd}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmEmployeeTradeReporting
+ * TradeType3Code.mmEmployeeTradeReporting}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmIssuance
+ * TradeType3Code.mmIssuance}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmBondStart
+ * TradeType3Code.mmBondStart}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmBondEnd
+ * TradeType3Code.mmBondEnd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#LendingAndBorrowing
- * TradeType3Code.LendingAndBorrowing}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmLendingAndBorrowing
+ * TradeType3Code.mmLendingAndBorrowing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#BondRepricing
- * TradeType3Code.BondRepricing}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmBondRepricing
+ * TradeType3Code.mmBondRepricing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#OfferingIssuingTrade
- * TradeType3Code.OfferingIssuingTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmOfferingIssuingTrade
+ * TradeType3Code.mmOfferingIssuingTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#BondSubstitution
- * TradeType3Code.BondSubstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmBondSubstitution
+ * TradeType3Code.mmBondSubstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#FutureBuyBackTrade
- * TradeType3Code.FutureBuyBackTrade}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#Options
- * TradeType3Code.Options}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmFutureBuyBackTrade
+ * TradeType3Code.mmFutureBuyBackTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmOptions
+ * TradeType3Code.mmOptions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType3Code#FuturesOption
- * TradeType3Code.FuturesOption}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#Futures
- * TradeType3Code.Futures}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType3Code#mmFuturesOption
+ * TradeType3Code.mmFuturesOption}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType3Code#mmFutures
+ * TradeType3Code.mmFutures}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -133,7 +133,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "Basket"</li>
 	 * </ul>
 	 */
-	public static final MMCode Basket = new MMCode() {
+	public static final MMCode mmBasket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basket";
@@ -156,7 +156,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "Index"</li>
 	 * </ul>
 	 */
-	public static final MMCode Index = new MMCode() {
+	public static final MMCode mmIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
@@ -179,7 +179,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "IPO"</li>
 	 * </ul>
 	 */
-	public static final MMCode IPO = new MMCode() {
+	public static final MMCode mmIPO = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IPO";
@@ -202,7 +202,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "List"</li>
 	 * </ul>
 	 */
-	public static final MMCode List = new MMCode() {
+	public static final MMCode mmList = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "List";
@@ -225,7 +225,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "PreAllocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreAllocation = new MMCode() {
+	public static final MMCode mmPreAllocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAllocation";
@@ -248,7 +248,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "Program"</li>
 	 * </ul>
 	 */
-	public static final MMCode Program = new MMCode() {
+	public static final MMCode mmProgram = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Program";
@@ -271,7 +271,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "Trade"</li>
 	 * </ul>
 	 */
-	public static final MMCode Trade = new MMCode() {
+	public static final MMCode mmTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
@@ -294,7 +294,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "BrokerToBroker"</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokerToBroker = new MMCode() {
+	public static final MMCode mmBrokerToBroker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerToBroker";
@@ -317,7 +317,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "RiskTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode RiskTrade = new MMCode() {
+	public static final MMCode mmRiskTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskTrade";
@@ -340,7 +340,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "VWAPGuarantee"</li>
 	 * </ul>
 	 */
-	public static final MMCode VWAPGuarantee = new MMCode() {
+	public static final MMCode mmVWAPGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VWAPGuarantee";
@@ -363,7 +363,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "Agency"</li>
 	 * </ul>
 	 */
-	public static final MMCode Agency = new MMCode() {
+	public static final MMCode mmAgency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agency";
@@ -386,7 +386,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "GuaranteedClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode GuaranteedClose = new MMCode() {
+	public static final MMCode mmGuaranteedClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedClose";
@@ -409,7 +409,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "EmployeeTradeReporting"</li>
 	 * </ul>
 	 */
-	public static final MMCode EmployeeTradeReporting = new MMCode() {
+	public static final MMCode mmEmployeeTradeReporting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeTradeReporting";
@@ -432,7 +432,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "Issuance"</li>
 	 * </ul>
 	 */
-	public static final MMCode Issuance = new MMCode() {
+	public static final MMCode mmIssuance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuance";
@@ -455,7 +455,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "BondStart"</li>
 	 * </ul>
 	 */
-	public static final MMCode BondStart = new MMCode() {
+	public static final MMCode mmBondStart = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondStart";
@@ -478,7 +478,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "BondEnd"</li>
 	 * </ul>
 	 */
-	public static final MMCode BondEnd = new MMCode() {
+	public static final MMCode mmBondEnd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondEnd";
@@ -501,7 +501,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "LendingAndBorrowing"</li>
 	 * </ul>
 	 */
-	public static final MMCode LendingAndBorrowing = new MMCode() {
+	public static final MMCode mmLendingAndBorrowing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LendingAndBorrowing";
@@ -524,7 +524,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "BondRepricing"</li>
 	 * </ul>
 	 */
-	public static final MMCode BondRepricing = new MMCode() {
+	public static final MMCode mmBondRepricing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondRepricing";
@@ -547,7 +547,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "OfferingIssuingTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode OfferingIssuingTrade = new MMCode() {
+	public static final MMCode mmOfferingIssuingTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferingIssuingTrade";
@@ -570,7 +570,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "BondSubstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode BondSubstitution = new MMCode() {
+	public static final MMCode mmBondSubstitution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondSubstitution";
@@ -593,7 +593,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "FutureBuyBackTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode FutureBuyBackTrade = new MMCode() {
+	public static final MMCode mmFutureBuyBackTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureBuyBackTrade";
@@ -616,7 +616,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "Options"</li>
 	 * </ul>
 	 */
-	public static final MMCode Options = new MMCode() {
+	public static final MMCode mmOptions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Options";
@@ -639,7 +639,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "FuturesOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode FuturesOption = new MMCode() {
+	public static final MMCode mmFuturesOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FuturesOption";
@@ -662,7 +662,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 * name} = "Futures"</li>
 	 * </ul>
 	 */
-	public static final MMCode Futures = new MMCode() {
+	public static final MMCode mmFutures = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Futures";
@@ -673,19 +673,19 @@ public class TradeType3Code extends TradeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BSKT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradeType3Code";
 				definition = "Specifies the type of executed order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeType3Code.Basket, com.tools20022.repository.codeset.TradeType3Code.Index, com.tools20022.repository.codeset.TradeType3Code.IPO,
-						com.tools20022.repository.codeset.TradeType3Code.List, com.tools20022.repository.codeset.TradeType3Code.PreAllocation, com.tools20022.repository.codeset.TradeType3Code.Program,
-						com.tools20022.repository.codeset.TradeType3Code.Trade, com.tools20022.repository.codeset.TradeType3Code.BrokerToBroker, com.tools20022.repository.codeset.TradeType3Code.RiskTrade,
-						com.tools20022.repository.codeset.TradeType3Code.VWAPGuarantee, com.tools20022.repository.codeset.TradeType3Code.Agency, com.tools20022.repository.codeset.TradeType3Code.GuaranteedClose,
-						com.tools20022.repository.codeset.TradeType3Code.EmployeeTradeReporting, com.tools20022.repository.codeset.TradeType3Code.Issuance, com.tools20022.repository.codeset.TradeType3Code.BondStart,
-						com.tools20022.repository.codeset.TradeType3Code.BondEnd, com.tools20022.repository.codeset.TradeType3Code.LendingAndBorrowing, com.tools20022.repository.codeset.TradeType3Code.BondRepricing,
-						com.tools20022.repository.codeset.TradeType3Code.OfferingIssuingTrade, com.tools20022.repository.codeset.TradeType3Code.BondSubstitution, com.tools20022.repository.codeset.TradeType3Code.FutureBuyBackTrade,
-						com.tools20022.repository.codeset.TradeType3Code.Options, com.tools20022.repository.codeset.TradeType3Code.FuturesOption, com.tools20022.repository.codeset.TradeType3Code.Futures);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeType3Code.mmBasket, com.tools20022.repository.codeset.TradeType3Code.mmIndex, com.tools20022.repository.codeset.TradeType3Code.mmIPO,
+						com.tools20022.repository.codeset.TradeType3Code.mmList, com.tools20022.repository.codeset.TradeType3Code.mmPreAllocation, com.tools20022.repository.codeset.TradeType3Code.mmProgram,
+						com.tools20022.repository.codeset.TradeType3Code.mmTrade, com.tools20022.repository.codeset.TradeType3Code.mmBrokerToBroker, com.tools20022.repository.codeset.TradeType3Code.mmRiskTrade,
+						com.tools20022.repository.codeset.TradeType3Code.mmVWAPGuarantee, com.tools20022.repository.codeset.TradeType3Code.mmAgency, com.tools20022.repository.codeset.TradeType3Code.mmGuaranteedClose,
+						com.tools20022.repository.codeset.TradeType3Code.mmEmployeeTradeReporting, com.tools20022.repository.codeset.TradeType3Code.mmIssuance, com.tools20022.repository.codeset.TradeType3Code.mmBondStart,
+						com.tools20022.repository.codeset.TradeType3Code.mmBondEnd, com.tools20022.repository.codeset.TradeType3Code.mmLendingAndBorrowing, com.tools20022.repository.codeset.TradeType3Code.mmBondRepricing,
+						com.tools20022.repository.codeset.TradeType3Code.mmOfferingIssuingTrade, com.tools20022.repository.codeset.TradeType3Code.mmBondSubstitution, com.tools20022.repository.codeset.TradeType3Code.mmFutureBuyBackTrade,
+						com.tools20022.repository.codeset.TradeType3Code.mmOptions, com.tools20022.repository.codeset.TradeType3Code.mmFuturesOption, com.tools20022.repository.codeset.TradeType3Code.mmFutures);
 				trace_lazy = () -> TradeTypeCode.mmObject();
 			}
 		});

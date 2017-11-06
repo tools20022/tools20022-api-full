@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IssuerAndSerialNumber1#Issuer
- * IssuerAndSerialNumber1.Issuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IssuerAndSerialNumber1#SerialNumber
- * IssuerAndSerialNumber1.SerialNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.IssuerAndSerialNumber1#mmIssuer
+ * IssuerAndSerialNumber1.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IssuerAndSerialNumber1#mmSerialNumber
+ * IssuerAndSerialNumber1.mmSerialNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IssuerAndSerialNumber1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CertificateIssuer1 issuer;
 	/**
 	 * Certificate issuer name (see X.509).
 	 * <p>
@@ -84,7 +86,7 @@ public class IssuerAndSerialNumber1 {
 	 * definition} = "Certificate issuer name (see X.509)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Issuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> IssuerAndSerialNumber1.mmObject();
 			isDerived = false;
@@ -92,12 +94,13 @@ public class IssuerAndSerialNumber1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Certificate issuer name (see X.509).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CertificateIssuer1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CertificateIssuer1.mmObject();
 		}
 	};
+	protected Max35Binary serialNumber;
 	/**
 	 * Certificate serial number (see X.509).
 	 * <p>
@@ -125,7 +128,7 @@ public class IssuerAndSerialNumber1 {
 	 * definition} = "Certificate serial number (see X.509)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IssuerAndSerialNumber1.mmObject();
 			isDerived = false;
@@ -133,8 +136,8 @@ public class IssuerAndSerialNumber1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerialNumber";
 			definition = "Certificate serial number (see X.509).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Binary.mmObject();
 		}
 	};
@@ -142,13 +145,29 @@ public class IssuerAndSerialNumber1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAndSerialNumber1.Issuer, com.tools20022.repository.msg.IssuerAndSerialNumber1.SerialNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAndSerialNumber1.mmIssuer, com.tools20022.repository.msg.IssuerAndSerialNumber1.mmSerialNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IssuerAndSerialNumber1";
 				definition = "Certificate issuer name and serial number  (see X.509).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CertificateIssuer1 getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(com.tools20022.repository.msg.CertificateIssuer1 issuer) {
+		this.issuer = issuer;
+	}
+
+	public Max35Binary getSerialNumber() {
+		return serialNumber;
+	}
+
+	public void setSerialNumber(Max35Binary serialNumber) {
+		this.serialNumber = serialNumber;
 	}
 }

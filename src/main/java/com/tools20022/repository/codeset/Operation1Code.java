@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.OperationCode OperationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Operation1Code#Till
- * Operation1Code.Till}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Operation1Code#Or
- * Operation1Code.Or}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Operation1Code#And
- * Operation1Code.And}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Operation1Code#mmTill
+ * Operation1Code.mmTill}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Operation1Code#mmOr
+ * Operation1Code.mmOr}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Operation1Code#mmAnd
+ * Operation1Code.mmAnd}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class Operation1Code extends OperationCode {
 	 * name} = "Till"</li>
 	 * </ul>
 	 */
-	public static final MMCode Till = new MMCode() {
+	public static final MMCode mmTill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Till";
@@ -103,7 +103,7 @@ public class Operation1Code extends OperationCode {
 	 * name} = "Or"</li>
 	 * </ul>
 	 */
-	public static final MMCode Or = new MMCode() {
+	public static final MMCode mmOr = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Or";
@@ -126,7 +126,7 @@ public class Operation1Code extends OperationCode {
 	 * name} = "And"</li>
 	 * </ul>
 	 */
-	public static final MMCode And = new MMCode() {
+	public static final MMCode mmAnd = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "And";
@@ -137,12 +137,12 @@ public class Operation1Code extends OperationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TILL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Operation1Code";
 				definition = "Indicates the relationship between two variables.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Operation1Code.Till, com.tools20022.repository.codeset.Operation1Code.Or, com.tools20022.repository.codeset.Operation1Code.And);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Operation1Code.mmTill, com.tools20022.repository.codeset.Operation1Code.mmOr, com.tools20022.repository.codeset.Operation1Code.mmAnd);
 				trace_lazy = () -> OperationCode.mmObject();
 			}
 		});

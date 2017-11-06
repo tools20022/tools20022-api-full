@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirection2Code#RoundUp
- * RoundingDirection2Code.RoundUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirection2Code#mmRoundUp
+ * RoundingDirection2Code.mmRoundUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirection2Code#RoundDown
- * RoundingDirection2Code.RoundDown}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirection2Code#mmRoundDown
+ * RoundingDirection2Code.mmRoundDown}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class RoundingDirection2Code extends RoundingDirectionCode {
 	 * name} = "RoundUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundUp = new MMCode() {
+	public static final MMCode mmRoundUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUp";
@@ -104,7 +104,7 @@ public class RoundingDirection2Code extends RoundingDirectionCode {
 	 * name} = "RoundDown"</li>
 	 * </ul>
 	 */
-	public static final MMCode RoundDown = new MMCode() {
+	public static final MMCode mmRoundDown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDown";
@@ -115,12 +115,12 @@ public class RoundingDirection2Code extends RoundingDirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RDUP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RoundingDirection2Code";
 				definition = "Specifies the rounding direction applied to nearest unit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoundingDirection2Code.RoundUp, com.tools20022.repository.codeset.RoundingDirection2Code.RoundDown);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoundingDirection2Code.mmRoundUp, com.tools20022.repository.codeset.RoundingDirection2Code.mmRoundDown);
 				trace_lazy = () -> RoundingDirectionCode.mmObject();
 			}
 		});

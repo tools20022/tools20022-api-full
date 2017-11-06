@@ -34,63 +34,63 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#SettlementSystemMethodRejection
- * RejectionReason40Code.SettlementSystemMethodRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmSettlementSystemMethodRejection
+ * RejectionReason40Code.mmSettlementSystemMethodRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#SettlementDateRejection
- * RejectionReason40Code.SettlementDateRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmSettlementDateRejection
+ * RejectionReason40Code.mmSettlementDateRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#ImpossibleCashSettlementSystem
- * RejectionReason40Code.ImpossibleCashSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmImpossibleCashSettlementSystem
+ * RejectionReason40Code.mmImpossibleCashSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#DealPrice
- * RejectionReason40Code.DealPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmDealPrice
+ * RejectionReason40Code.mmDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#ReceivingDeliveringDepository
- * RejectionReason40Code.ReceivingDeliveringDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmReceivingDeliveringDepository
+ * RejectionReason40Code.mmReceivingDeliveringDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#SettlementAmountRejection
- * RejectionReason40Code.SettlementAmountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmSettlementAmountRejection
+ * RejectionReason40Code.mmSettlementAmountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#QuantityRejection
- * RejectionReason40Code.QuantityRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmQuantityRejection
+ * RejectionReason40Code.mmQuantityRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#InvalidSecurity
- * RejectionReason40Code.InvalidSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmInvalidSecurity
+ * RejectionReason40Code.mmInvalidSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#TradeDate
- * RejectionReason40Code.TradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmTradeDate
+ * RejectionReason40Code.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#ReceivingDeliveringParty1
- * RejectionReason40Code.ReceivingDeliveringParty1}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmReceivingDeliveringParty1
+ * RejectionReason40Code.mmReceivingDeliveringParty1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#ReceivingDeliveringParty2
- * RejectionReason40Code.ReceivingDeliveringParty2}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmReceivingDeliveringParty2
+ * RejectionReason40Code.mmReceivingDeliveringParty2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#ReceivingDeliveringParty3
- * RejectionReason40Code.ReceivingDeliveringParty3}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmReceivingDeliveringParty3
+ * RejectionReason40Code.mmReceivingDeliveringParty3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#NarrativeReason
- * RejectionReason40Code.NarrativeReason}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmNarrativeReason
+ * RejectionReason40Code.mmNarrativeReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#SettlementAmountCurrencyRejection
- * RejectionReason40Code.SettlementAmountCurrencyRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmSettlementAmountCurrencyRejection
+ * RejectionReason40Code.mmSettlementAmountCurrencyRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#PlaceOfTrade
- * RejectionReason40Code.PlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmPlaceOfTrade
+ * RejectionReason40Code.mmPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#ImpossibleToUseTheRTGSSystemInstructed
- * RejectionReason40Code.ImpossibleToUseTheRTGSSystemInstructed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmImpossibleToUseTheRTGSSystemInstructed
+ * RejectionReason40Code.mmImpossibleToUseTheRTGSSystemInstructed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#SettlementTransactionRejection
- * RejectionReason40Code.SettlementTransactionRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason40Code#mmSettlementTransactionRejection
+ * RejectionReason40Code.mmSettlementTransactionRejection}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,7 +121,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "SettlementSystemMethodRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementSystemMethodRejection = new MMCode() {
+	public static final MMCode mmSettlementSystemMethodRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethodRejection";
@@ -144,7 +144,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "SettlementDateRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementDateRejection = new MMCode() {
+	public static final MMCode mmSettlementDateRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDateRejection";
@@ -167,7 +167,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "ImpossibleCashSettlementSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode ImpossibleCashSettlementSystem = new MMCode() {
+	public static final MMCode mmImpossibleCashSettlementSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleCashSettlementSystem";
@@ -190,7 +190,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "DealPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode DealPrice = new MMCode() {
+	public static final MMCode mmDealPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
@@ -213,7 +213,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingDeliveringDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringDepository = new MMCode() {
+	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
@@ -236,7 +236,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "SettlementAmountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementAmountRejection = new MMCode() {
+	public static final MMCode mmSettlementAmountRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountRejection";
@@ -259,7 +259,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "QuantityRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode QuantityRejection = new MMCode() {
+	public static final MMCode mmQuantityRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
@@ -282,7 +282,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "InvalidSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvalidSecurity = new MMCode() {
+	public static final MMCode mmInvalidSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurity";
@@ -305,7 +305,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "TradeDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode TradeDate = new MMCode() {
+	public static final MMCode mmTradeDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
@@ -328,7 +328,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingDeliveringParty1"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty1 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty1";
@@ -351,7 +351,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingDeliveringParty2"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty2 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty2";
@@ -374,7 +374,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingDeliveringParty3"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceivingDeliveringParty3 = new MMCode() {
+	public static final MMCode mmReceivingDeliveringParty3 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty3";
@@ -397,7 +397,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "NarrativeReason"</li>
 	 * </ul>
 	 */
-	public static final MMCode NarrativeReason = new MMCode() {
+	public static final MMCode mmNarrativeReason = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeReason";
@@ -420,7 +420,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "SettlementAmountCurrencyRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementAmountCurrencyRejection = new MMCode() {
+	public static final MMCode mmSettlementAmountCurrencyRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrencyRejection";
@@ -443,7 +443,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "PlaceOfTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfTrade = new MMCode() {
+	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
@@ -466,7 +466,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "ImpossibleToUseTheRTGSSystemInstructed"</li>
 	 * </ul>
 	 */
-	public static final MMCode ImpossibleToUseTheRTGSSystemInstructed = new MMCode() {
+	public static final MMCode mmImpossibleToUseTheRTGSSystemInstructed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleToUseTheRTGSSystemInstructed";
@@ -489,7 +489,7 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	 * name} = "SettlementTransactionRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementTransactionRejection = new MMCode() {
+	public static final MMCode mmSettlementTransactionRejection = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionRejection";
@@ -500,18 +500,19 @@ public class RejectionReason40Code extends RejectionReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason40Code";
 				definition = "Specifies the reason why the settlement instruction has a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason40Code.SettlementSystemMethodRejection, com.tools20022.repository.codeset.RejectionReason40Code.SettlementDateRejection,
-						com.tools20022.repository.codeset.RejectionReason40Code.ImpossibleCashSettlementSystem, com.tools20022.repository.codeset.RejectionReason40Code.DealPrice,
-						com.tools20022.repository.codeset.RejectionReason40Code.ReceivingDeliveringDepository, com.tools20022.repository.codeset.RejectionReason40Code.SettlementAmountRejection,
-						com.tools20022.repository.codeset.RejectionReason40Code.QuantityRejection, com.tools20022.repository.codeset.RejectionReason40Code.InvalidSecurity, com.tools20022.repository.codeset.RejectionReason40Code.TradeDate,
-						com.tools20022.repository.codeset.RejectionReason40Code.ReceivingDeliveringParty1, com.tools20022.repository.codeset.RejectionReason40Code.ReceivingDeliveringParty2,
-						com.tools20022.repository.codeset.RejectionReason40Code.ReceivingDeliveringParty3, com.tools20022.repository.codeset.RejectionReason40Code.NarrativeReason,
-						com.tools20022.repository.codeset.RejectionReason40Code.SettlementAmountCurrencyRejection, com.tools20022.repository.codeset.RejectionReason40Code.PlaceOfTrade,
-						com.tools20022.repository.codeset.RejectionReason40Code.ImpossibleToUseTheRTGSSystemInstructed, com.tools20022.repository.codeset.RejectionReason40Code.SettlementTransactionRejection);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason40Code.mmSettlementSystemMethodRejection, com.tools20022.repository.codeset.RejectionReason40Code.mmSettlementDateRejection,
+						com.tools20022.repository.codeset.RejectionReason40Code.mmImpossibleCashSettlementSystem, com.tools20022.repository.codeset.RejectionReason40Code.mmDealPrice,
+						com.tools20022.repository.codeset.RejectionReason40Code.mmReceivingDeliveringDepository, com.tools20022.repository.codeset.RejectionReason40Code.mmSettlementAmountRejection,
+						com.tools20022.repository.codeset.RejectionReason40Code.mmQuantityRejection, com.tools20022.repository.codeset.RejectionReason40Code.mmInvalidSecurity,
+						com.tools20022.repository.codeset.RejectionReason40Code.mmTradeDate, com.tools20022.repository.codeset.RejectionReason40Code.mmReceivingDeliveringParty1,
+						com.tools20022.repository.codeset.RejectionReason40Code.mmReceivingDeliveringParty2, com.tools20022.repository.codeset.RejectionReason40Code.mmReceivingDeliveringParty3,
+						com.tools20022.repository.codeset.RejectionReason40Code.mmNarrativeReason, com.tools20022.repository.codeset.RejectionReason40Code.mmSettlementAmountCurrencyRejection,
+						com.tools20022.repository.codeset.RejectionReason40Code.mmPlaceOfTrade, com.tools20022.repository.codeset.RejectionReason40Code.mmImpossibleToUseTheRTGSSystemInstructed,
+						com.tools20022.repository.codeset.RejectionReason40Code.mmSettlementTransactionRejection);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
 			}
 		});

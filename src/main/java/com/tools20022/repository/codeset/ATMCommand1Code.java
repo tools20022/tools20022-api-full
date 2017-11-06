@@ -32,29 +32,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.ATMCommandCode ATMCommandCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand1Code#ATMBalance
- * ATMCommand1Code.ATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#ATMStatusUpdate
- * ATMCommand1Code.ATMStatusUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmATMBalance
+ * ATMCommand1Code.mmATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#ConfigurationUpdate
- * ATMCommand1Code.ConfigurationUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmATMStatusUpdate
+ * ATMCommand1Code.mmATMStatusUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#CountersInquiry
- * ATMCommand1Code.CountersInquiry}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand1Code#Disconnect
- * ATMCommand1Code.Disconnect}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmConfigurationUpdate
+ * ATMCommand1Code.mmConfigurationUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#SendMessage
- * ATMCommand1Code.SendMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmCountersInquiry
+ * ATMCommand1Code.mmCountersInquiry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmDisconnect
+ * ATMCommand1Code.mmDisconnect}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmSendMessage
+ * ATMCommand1Code.mmSendMessage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,7 +86,7 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "ATMBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMBalance = new MMCode() {
+	public static final MMCode mmATMBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
@@ -107,7 +109,7 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "ATMStatusUpdate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ATMStatusUpdate = new MMCode() {
+	public static final MMCode mmATMStatusUpdate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMStatusUpdate";
@@ -130,7 +132,7 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "ConfigurationUpdate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfigurationUpdate = new MMCode() {
+	public static final MMCode mmConfigurationUpdate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfigurationUpdate";
@@ -153,7 +155,7 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "CountersInquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode CountersInquiry = new MMCode() {
+	public static final MMCode mmCountersInquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
@@ -176,7 +178,7 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "Disconnect"</li>
 	 * </ul>
 	 */
-	public static final MMCode Disconnect = new MMCode() {
+	public static final MMCode mmDisconnect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disconnect";
@@ -199,7 +201,7 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "SendMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode SendMessage = new MMCode() {
+	public static final MMCode mmSendMessage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendMessage";
@@ -210,13 +212,13 @@ public class ATMCommand1Code extends ATMCommandCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand1Code";
 				definition = "Type of command to be performed by an ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand1Code.ATMBalance, com.tools20022.repository.codeset.ATMCommand1Code.ATMStatusUpdate,
-						com.tools20022.repository.codeset.ATMCommand1Code.ConfigurationUpdate, com.tools20022.repository.codeset.ATMCommand1Code.CountersInquiry, com.tools20022.repository.codeset.ATMCommand1Code.Disconnect,
-						com.tools20022.repository.codeset.ATMCommand1Code.SendMessage);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand1Code.mmATMBalance, com.tools20022.repository.codeset.ATMCommand1Code.mmATMStatusUpdate,
+						com.tools20022.repository.codeset.ATMCommand1Code.mmConfigurationUpdate, com.tools20022.repository.codeset.ATMCommand1Code.mmCountersInquiry, com.tools20022.repository.codeset.ATMCommand1Code.mmDisconnect,
+						com.tools20022.repository.codeset.ATMCommand1Code.mmSendMessage);
 				trace_lazy = () -> ATMCommandCode.mmObject();
 			}
 		});

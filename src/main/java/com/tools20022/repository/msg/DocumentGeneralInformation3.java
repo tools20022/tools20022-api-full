@@ -41,26 +41,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#DocumentType
- * DocumentGeneralInformation3.DocumentType}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#mmDocumentType
+ * DocumentGeneralInformation3.mmDocumentType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#DocumentNumber
- * DocumentGeneralInformation3.DocumentNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#mmDocumentNumber
+ * DocumentGeneralInformation3.mmDocumentNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#SenderReceiverSequenceIdentification
- * DocumentGeneralInformation3.SenderReceiverSequenceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#mmSenderReceiverSequenceIdentification
+ * DocumentGeneralInformation3.mmSenderReceiverSequenceIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#IssueDate
- * DocumentGeneralInformation3.IssueDate}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#mmIssueDate
+ * DocumentGeneralInformation3.mmIssueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#URL
- * DocumentGeneralInformation3.URL}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#mmURL
+ * DocumentGeneralInformation3.mmURL}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#LinkFileHash
- * DocumentGeneralInformation3.LinkFileHash}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#mmLinkFileHash
+ * DocumentGeneralInformation3.mmLinkFileHash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#AttachedBinaryFile
- * DocumentGeneralInformation3.AttachedBinaryFile}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation3#mmAttachedBinaryFile
+ * DocumentGeneralInformation3.mmAttachedBinaryFile}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -68,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +89,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentGeneralInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ExternalDocumentType1Code documentType;
 	/**
 	 * Specifies the type of the document, for example commercial invoice.
 	 * <p>
@@ -102,8 +103,8 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#Type Document.Type}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmType
+	 * Document.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -124,25 +125,26 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#DocumentType
-	 * DocumentGeneralInformation2.DocumentType}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#mmDocumentType
+	 * DocumentGeneralInformation2.mmDocumentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
 			componentContext_lazy = () -> DocumentGeneralInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.Type;
 			isDerived = false;
 			xmlTag = "DocTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentType";
 			definition = "Specifies the type of the document, for example commercial invoice.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.DocumentType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmDocumentType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
 		}
 	};
+	protected Max35Text documentNumber;
 	/**
 	 * Unique identifier of the document.
 	 * <p>
@@ -155,8 +157,8 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,25 +178,26 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#DocumentNumber
-	 * DocumentGeneralInformation2.DocumentNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#mmDocumentNumber
+	 * DocumentGeneralInformation2.mmDocumentNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentGeneralInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "DocNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Unique identifier of the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.DocumentNumber;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmDocumentNumber;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max140Text senderReceiverSequenceIdentification;
 	/**
 	 * Specifies the identification sequence number for a specific couple
 	 * sender/receiver.
@@ -226,11 +229,11 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#SenderReceiverSequenceIdentification
-	 * DocumentGeneralInformation2.SenderReceiverSequenceIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#mmSenderReceiverSequenceIdentification
+	 * DocumentGeneralInformation2.mmSenderReceiverSequenceIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SenderReceiverSequenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSenderReceiverSequenceIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DocumentGeneralInformation3.mmObject();
 			isDerived = false;
@@ -238,12 +241,13 @@ public class DocumentGeneralInformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderReceiverSequenceIdentification";
 			definition = "Specifies the identification sequence number for a specific couple sender/receiver.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.SenderReceiverSequenceIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmSenderReceiverSequenceIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected ISODate issueDate;
 	/**
 	 * Issue date of the document.
 	 * <p>
@@ -256,8 +260,8 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#IssueDate
-	 * Document.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmIssueDate
+	 * Document.mmIssueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -277,25 +281,26 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#IssueDate
-	 * DocumentGeneralInformation2.IssueDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#mmIssueDate
+	 * DocumentGeneralInformation2.mmIssueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
 			componentContext_lazy = () -> DocumentGeneralInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.IssueDate;
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Issue date of the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.IssueDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmIssueDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max256Text uRL;
 	/**
 	 * URL (Uniform Resource Locator) where the document can be found
 	 * <p>
@@ -308,8 +313,8 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#URLAddress
-	 * ElectronicAddress.URLAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmURLAddress
+	 * ElectronicAddress.mmURLAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -330,25 +335,26 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#URL
-	 * DocumentGeneralInformation2.URL}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#mmURL
+	 * DocumentGeneralInformation2.mmURL}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute URL = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmURL = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> DocumentGeneralInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.URLAddress;
 			isDerived = false;
 			xmlTag = "URL";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URL";
 			definition = "URL (Uniform Resource Locator) where the document can be found";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.URL;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmURL;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected SignatureEnvelopeReference linkFileHash;
 	/**
 	 * Full Signature Structure without Signature itself:<br>
 	 * Hash + Certificate.
@@ -362,8 +368,8 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecurityCertificate#ElectronicSignature
-	 * SecurityCertificate.ElectronicSignature}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecurityCertificate#mmElectronicSignature
+	 * SecurityCertificate.mmElectronicSignature}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -384,21 +390,22 @@ public class DocumentGeneralInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LinkFileHash = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLinkFileHash = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecurityCertificate.mmElectronicSignature;
 			componentContext_lazy = () -> DocumentGeneralInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecurityCertificate.ElectronicSignature;
 			isDerived = false;
 			xmlTag = "LkFileHash";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkFileHash";
 			definition = "Full Signature Structure without Signature itself:\r\nHash  + Certificate.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SignatureEnvelopeReference.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SignatureEnvelopeReference.mmObject();
 		}
 	};
+	protected BinaryFile1 attachedBinaryFile;
 	/**
 	 * Attached binary file for this document.
 	 * <p>
@@ -426,11 +433,11 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#AttachedBinaryFile
-	 * DocumentGeneralInformation2.AttachedBinaryFile}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentGeneralInformation2#mmAttachedBinaryFile
+	 * DocumentGeneralInformation2.mmAttachedBinaryFile}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AttachedBinaryFile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAttachedBinaryFile = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DocumentGeneralInformation3.mmObject();
 			isDerived = false;
@@ -438,22 +445,23 @@ public class DocumentGeneralInformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedBinaryFile";
 			definition = "Attached binary file for this document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.AttachedBinaryFile;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmAttachedBinaryFile;
 			maxOccurs = 1;
-			type_lazy = () -> BinaryFile1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BinaryFile1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation3.DocumentType, com.tools20022.repository.msg.DocumentGeneralInformation3.DocumentNumber,
-						com.tools20022.repository.msg.DocumentGeneralInformation3.SenderReceiverSequenceIdentification, com.tools20022.repository.msg.DocumentGeneralInformation3.IssueDate,
-						com.tools20022.repository.msg.DocumentGeneralInformation3.URL, com.tools20022.repository.msg.DocumentGeneralInformation3.LinkFileHash, com.tools20022.repository.msg.DocumentGeneralInformation3.AttachedBinaryFile);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation3.mmDocumentType, com.tools20022.repository.msg.DocumentGeneralInformation3.mmDocumentNumber,
+						com.tools20022.repository.msg.DocumentGeneralInformation3.mmSenderReceiverSequenceIdentification, com.tools20022.repository.msg.DocumentGeneralInformation3.mmIssueDate,
+						com.tools20022.repository.msg.DocumentGeneralInformation3.mmURL, com.tools20022.repository.msg.DocumentGeneralInformation3.mmLinkFileHash,
+						com.tools20022.repository.msg.DocumentGeneralInformation3.mmAttachedBinaryFile);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentGeneralInformation3";
 				definition = "General information that unambiguously identifies a document, such as identification number and issue date time.";
@@ -461,5 +469,61 @@ public class DocumentGeneralInformation3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ExternalDocumentType1Code getDocumentType() {
+		return documentType;
+	}
+
+	public void setDocumentType(ExternalDocumentType1Code documentType) {
+		this.documentType = documentType;
+	}
+
+	public Max35Text getDocumentNumber() {
+		return documentNumber;
+	}
+
+	public void setDocumentNumber(Max35Text documentNumber) {
+		this.documentNumber = documentNumber;
+	}
+
+	public Max140Text getSenderReceiverSequenceIdentification() {
+		return senderReceiverSequenceIdentification;
+	}
+
+	public void setSenderReceiverSequenceIdentification(Max140Text senderReceiverSequenceIdentification) {
+		this.senderReceiverSequenceIdentification = senderReceiverSequenceIdentification;
+	}
+
+	public ISODate getIssueDate() {
+		return issueDate;
+	}
+
+	public void setIssueDate(ISODate issueDate) {
+		this.issueDate = issueDate;
+	}
+
+	public Max256Text getURL() {
+		return uRL;
+	}
+
+	public void setURL(Max256Text uRL) {
+		this.uRL = uRL;
+	}
+
+	public SignatureEnvelopeReference getLinkFileHash() {
+		return linkFileHash;
+	}
+
+	public void setLinkFileHash(SignatureEnvelopeReference linkFileHash) {
+		this.linkFileHash = linkFileHash;
+	}
+
+	public BinaryFile1 getAttachedBinaryFile() {
+		return attachedBinaryFile;
+	}
+
+	public void setAttachedBinaryFile(com.tools20022.repository.msg.BinaryFile1 attachedBinaryFile) {
+		this.attachedBinaryFile = attachedBinaryFile;
 	}
 }

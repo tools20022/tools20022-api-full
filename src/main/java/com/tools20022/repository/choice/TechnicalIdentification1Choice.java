@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TechnicalIdentification1Choice#BICFI
- * TechnicalIdentification1Choice.BICFI}</li>
+ * {@linkplain com.tools20022.repository.choice.TechnicalIdentification1Choice#mmBICFI
+ * TechnicalIdentification1Choice.mmBICFI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TechnicalIdentification1Choice#TechnicalAddress
- * TechnicalIdentification1Choice.TechnicalAddress}</li>
+ * {@linkplain com.tools20022.repository.choice.TechnicalIdentification1Choice#mmTechnicalAddress
+ * TechnicalIdentification1Choice.mmTechnicalAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TechnicalIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected BICFIIdentifier bICFI;
 	/**
 	 * Technical address of the party is defined as a financial institution
 	 * business idenfier code.
@@ -82,8 +83,8 @@ public class TechnicalIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#BICFI
-	 * OrganisationIdentification.BICFI}</li>
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmBICFI
+	 * OrganisationIdentification.mmBICFI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +105,21 @@ public class TechnicalIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BICFI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> TechnicalIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.BICFI;
 			isDerived = false;
 			xmlTag = "BICFI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICFI";
 			definition = "Technical address of the party is defined as a financial institution business idenfier code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	protected Max256Text technicalAddress;
 	/**
 	 * Technical address of the party is defined in a free text format.
 	 * <p>
@@ -151,17 +153,17 @@ public class TechnicalIdentification1Choice {
 	 * "Technical address of the party is defined in a free text format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TechnicalAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTechnicalAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TechnicalIdentification1Choice.mmObject();
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
+			componentContext_lazy = () -> TechnicalIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TechAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAddress";
 			definition = "Technical address of the party is defined in a free text format.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
@@ -169,14 +171,30 @@ public class TechnicalIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TechnicalIdentification1Choice.BICFI, com.tools20022.repository.choice.TechnicalIdentification1Choice.TechnicalAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TechnicalIdentification1Choice.mmBICFI, com.tools20022.repository.choice.TechnicalIdentification1Choice.mmTechnicalAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TechnicalIdentification1Choice";
 				definition = "Selection between a generic technical address or a BIC identifier when setting up or modifying the technical address for a party.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BICFIIdentifier getBICFI() {
+		return bICFI;
+	}
+
+	public void setBICFI(BICFIIdentifier bICFI) {
+		this.bICFI = bICFI;
+	}
+
+	public Max256Text getTechnicalAddress() {
+		return technicalAddress;
+	}
+
+	public void setTechnicalAddress(Max256Text technicalAddress) {
+		this.technicalAddress = technicalAddress;
 	}
 }

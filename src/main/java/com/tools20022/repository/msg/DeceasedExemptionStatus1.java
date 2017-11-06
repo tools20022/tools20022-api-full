@@ -36,24 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeceasedExemptionStatus1#BeneficialOwnerDeathDate
- * DeceasedExemptionStatus1.BeneficialOwnerDeathDate}</li>
+ * {@linkplain com.tools20022.repository.msg.DeceasedExemptionStatus1#mmBeneficialOwnerDeathDate
+ * DeceasedExemptionStatus1.mmBeneficialOwnerDeathDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeceasedExemptionStatus1#DeathCertificateSerialNumber
- * DeceasedExemptionStatus1.DeathCertificateSerialNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DeceasedExemptionStatus1#mmDeathCertificateSerialNumber
+ * DeceasedExemptionStatus1.mmDeathCertificateSerialNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeceasedExemptionStatus1#IssuingJurisdiction
- * DeceasedExemptionStatus1.IssuingJurisdiction}</li>
+ * {@linkplain com.tools20022.repository.msg.DeceasedExemptionStatus1#mmIssuingJurisdiction
+ * DeceasedExemptionStatus1.mmIssuingJurisdiction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeceasedExemptionStatus1#DocumentationAcknowledgementOfExemption
- * DeceasedExemptionStatus1.DocumentationAcknowledgementOfExemption}</li>
+ * {@linkplain com.tools20022.repository.msg.DeceasedExemptionStatus1#mmDocumentationAcknowledgementOfExemption
+ * DeceasedExemptionStatus1.mmDocumentationAcknowledgementOfExemption}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DeceasedExemptionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate beneficialOwnerDeathDate;
 	/**
 	 * Date of death of the beneficial owner.
 	 * <p>
@@ -94,7 +95,7 @@ public class DeceasedExemptionStatus1 {
 	 * definition} = "Date of death of the beneficial owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficialOwnerDeathDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficialOwnerDeathDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
@@ -102,11 +103,12 @@ public class DeceasedExemptionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerDeathDate";
 			definition = "Date of death of the beneficial owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text deathCertificateSerialNumber;
 	/**
 	 * Serial number of the death certificate.
 	 * <p>
@@ -134,7 +136,7 @@ public class DeceasedExemptionStatus1 {
 	 * definition} = "Serial number of the death certificate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeathCertificateSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeathCertificateSerialNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class DeceasedExemptionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeathCertificateSerialNumber";
 			definition = "Serial number of the death certificate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text issuingJurisdiction;
 	/**
 	 * Identification of the jurisdiction issuing the death certificate.
 	 * <p>
@@ -175,7 +178,7 @@ public class DeceasedExemptionStatus1 {
 	 * "Identification of the jurisdiction issuing the death certificate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuingJurisdiction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuingJurisdiction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
@@ -183,11 +186,12 @@ public class DeceasedExemptionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuingJurisdiction";
 			definition = "Identification of the jurisdiction issuing the death certificate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AcknowledgementOfExemption1Choice documentationAcknowledgementOfExemption;
 	/**
 	 * Acknowledgement of exempt instruction specifying whether the
 	 * documentation will be sent to DTC (The Depository Trust Corporation) or
@@ -219,7 +223,7 @@ public class DeceasedExemptionStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DocumentationAcknowledgementOfExemption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDocumentationAcknowledgementOfExemption = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
@@ -227,24 +231,56 @@ public class DeceasedExemptionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentationAcknowledgementOfExemption";
 			definition = "Acknowledgement of exempt instruction specifying whether the documentation will be sent to DTC (The Depository Trust Corporation) or not (not maintained by DTCC).";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AcknowledgementOfExemption1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AcknowledgementOfExemption1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeceasedExemptionStatus1.BeneficialOwnerDeathDate, com.tools20022.repository.msg.DeceasedExemptionStatus1.DeathCertificateSerialNumber,
-						com.tools20022.repository.msg.DeceasedExemptionStatus1.IssuingJurisdiction, com.tools20022.repository.msg.DeceasedExemptionStatus1.DocumentationAcknowledgementOfExemption);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeceasedExemptionStatus1.mmBeneficialOwnerDeathDate, com.tools20022.repository.msg.DeceasedExemptionStatus1.mmDeathCertificateSerialNumber,
+						com.tools20022.repository.msg.DeceasedExemptionStatus1.mmIssuingJurisdiction, com.tools20022.repository.msg.DeceasedExemptionStatus1.mmDocumentationAcknowledgementOfExemption);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeceasedExemptionStatus1";
 				definition = "Deceased beneficial owner exemption information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getBeneficialOwnerDeathDate() {
+		return beneficialOwnerDeathDate;
+	}
+
+	public void setBeneficialOwnerDeathDate(ISODate beneficialOwnerDeathDate) {
+		this.beneficialOwnerDeathDate = beneficialOwnerDeathDate;
+	}
+
+	public Max35Text getDeathCertificateSerialNumber() {
+		return deathCertificateSerialNumber;
+	}
+
+	public void setDeathCertificateSerialNumber(Max35Text deathCertificateSerialNumber) {
+		this.deathCertificateSerialNumber = deathCertificateSerialNumber;
+	}
+
+	public Max35Text getIssuingJurisdiction() {
+		return issuingJurisdiction;
+	}
+
+	public void setIssuingJurisdiction(Max35Text issuingJurisdiction) {
+		this.issuingJurisdiction = issuingJurisdiction;
+	}
+
+	public AcknowledgementOfExemption1Choice getDocumentationAcknowledgementOfExemption() {
+		return documentationAcknowledgementOfExemption;
+	}
+
+	public void setDocumentationAcknowledgementOfExemption(AcknowledgementOfExemption1Choice documentationAcknowledgementOfExemption) {
+		this.documentationAcknowledgementOfExemption = documentationAcknowledgementOfExemption;
 	}
 }

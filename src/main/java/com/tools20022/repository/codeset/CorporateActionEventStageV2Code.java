@@ -30,35 +30,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#Approved
- * CorporateActionEventStageV2Code.Approved}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#mmApproved
+ * CorporateActionEventStageV2Code.mmApproved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#Deactivated
- * CorporateActionEventStageV2Code.Deactivated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#mmDeactivated
+ * CorporateActionEventStageV2Code.mmDeactivated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#CancellationAndReRun
- * CorporateActionEventStageV2Code.CancellationAndReRun}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#mmCancellationAndReRun
+ * CorporateActionEventStageV2Code.mmCancellationAndReRun}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#Lapsed
- * CorporateActionEventStageV2Code.Lapsed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#mmLapsed
+ * CorporateActionEventStageV2Code.mmLapsed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#SupplementalCancellationAndReRun
- * CorporateActionEventStageV2Code.SupplementalCancellationAndReRun}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#mmSupplementalCancellationAndReRun
+ * CorporateActionEventStageV2Code.mmSupplementalCancellationAndReRun}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#ActionPeriod
- * CorporateActionEventStageV2Code.ActionPeriod}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#mmActionPeriod
+ * CorporateActionEventStageV2Code.mmActionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#SupplementalCancellation
- * CorporateActionEventStageV2Code.SupplementalCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#mmSupplementalCancellation
+ * CorporateActionEventStageV2Code.mmSupplementalCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#SubjectToApproval
- * CorporateActionEventStageV2Code.SubjectToApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#mmSubjectToApproval
+ * CorporateActionEventStageV2Code.mmSubjectToApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#UnconditionalAsToAcceptance
- * CorporateActionEventStageV2Code.UnconditionalAsToAcceptance}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#mmUnconditionalAsToAcceptance
+ * CorporateActionEventStageV2Code.mmUnconditionalAsToAcceptance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#WhollyUnconditional
- * CorporateActionEventStageV2Code.WhollyUnconditional}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStageV2Code#mmWhollyUnconditional
+ * CorporateActionEventStageV2Code.mmWhollyUnconditional}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -75,8 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -117,7 +117,7 @@ public class CorporateActionEventStageV2Code {
 	 * definition} = "Approved at the relevant meeting, for example, dividend."</li>
 	 * </ul>
 	 */
-	public static final MMCode Approved = new MMCode() {
+	public static final MMCode mmApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
@@ -147,7 +147,7 @@ public class CorporateActionEventStageV2Code {
 	 * definition} = "Offer is closed for acceptance."</li>
 	 * </ul>
 	 */
-	public static final MMCode Deactivated = new MMCode() {
+	public static final MMCode mmDeactivated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deactivated";
@@ -181,7 +181,7 @@ public class CorporateActionEventStageV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CancellationAndReRun = new MMCode() {
+	public static final MMCode mmCancellationAndReRun = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAndReRun";
@@ -214,7 +214,7 @@ public class CorporateActionEventStageV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Lapsed = new MMCode() {
+	public static final MMCode mmLapsed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lapsed";
@@ -247,7 +247,7 @@ public class CorporateActionEventStageV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementalCancellationAndReRun = new MMCode() {
+	public static final MMCode mmSupplementalCancellationAndReRun = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalCancellationAndReRun";
@@ -280,7 +280,7 @@ public class CorporateActionEventStageV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ActionPeriod = new MMCode() {
+	public static final MMCode mmActionPeriod = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionPeriod";
@@ -313,7 +313,7 @@ public class CorporateActionEventStageV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementalCancellation = new MMCode() {
+	public static final MMCode mmSupplementalCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalCancellation";
@@ -344,7 +344,7 @@ public class CorporateActionEventStageV2Code {
 	 * "Subject to approval at the relevant meeting, for example, dividend."</li>
 	 * </ul>
 	 */
-	public static final MMCode SubjectToApproval = new MMCode() {
+	public static final MMCode mmSubjectToApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectToApproval";
@@ -377,7 +377,7 @@ public class CorporateActionEventStageV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UnconditionalAsToAcceptance = new MMCode() {
+	public static final MMCode mmUnconditionalAsToAcceptance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnconditionalAsToAcceptance";
@@ -410,7 +410,7 @@ public class CorporateActionEventStageV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode WhollyUnconditional = new MMCode() {
+	public static final MMCode mmWhollyUnconditional = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhollyUnconditional";
@@ -423,16 +423,16 @@ public class CorporateActionEventStageV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("APPD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStageV2Code";
 				definition = "Specifies the stage of the corporate action event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStageV2Code.Approved, com.tools20022.repository.codeset.CorporateActionEventStageV2Code.Deactivated,
-						com.tools20022.repository.codeset.CorporateActionEventStageV2Code.CancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStageV2Code.Lapsed,
-						com.tools20022.repository.codeset.CorporateActionEventStageV2Code.SupplementalCancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStageV2Code.ActionPeriod,
-						com.tools20022.repository.codeset.CorporateActionEventStageV2Code.SupplementalCancellation, com.tools20022.repository.codeset.CorporateActionEventStageV2Code.SubjectToApproval,
-						com.tools20022.repository.codeset.CorporateActionEventStageV2Code.UnconditionalAsToAcceptance, com.tools20022.repository.codeset.CorporateActionEventStageV2Code.WhollyUnconditional);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmApproved, com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmDeactivated,
+						com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmCancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmLapsed,
+						com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmSupplementalCancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmActionPeriod,
+						com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmSupplementalCancellation, com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmSubjectToApproval,
+						com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmUnconditionalAsToAcceptance, com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmWhollyUnconditional);
 				derivation_lazy = () -> Arrays.asList(CorporateActionEventStage3Code.mmObject(), CorporateActionEventStage4Code.mmObject());
 			}
 		});

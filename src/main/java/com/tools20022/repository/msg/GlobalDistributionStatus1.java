@@ -34,8 +34,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#ProcessedStatusOrRejectedStatusRule
- * GlobalDistributionStatus1.ProcessedStatusOrRejectedStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#mmProcessedStatusOrRejectedStatusRule
+ * GlobalDistributionStatus1.mmProcessedStatusOrRejectedStatusRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -43,11 +43,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#ProcessedStatus
- * GlobalDistributionStatus1.ProcessedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#mmProcessedStatus
+ * GlobalDistributionStatus1.mmProcessedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#RejectedStatus
- * GlobalDistributionStatus1.RejectedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#mmRejectedStatus
+ * GlobalDistributionStatus1.mmRejectedStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -55,15 +55,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01#GlobalMovementStatus
- * AgentCAGlobalDistributionStatusAdviceV01.GlobalMovementStatus}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01#mmGlobalMovementStatus
+ * AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -79,6 +79,7 @@ import java.util.function.Supplier;
 public class GlobalDistributionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DistributionProcessingStatus1 processedStatus;
 	/**
 	 * Provides information about the processing status of the global movement
 	 * <p>
@@ -108,7 +109,7 @@ public class GlobalDistributionStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GlobalDistributionStatus1.mmObject();
 			isDerived = false;
@@ -116,12 +117,13 @@ public class GlobalDistributionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of the global movement";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DistributionProcessingStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DistributionProcessingStatus1.mmObject();
 		}
 	};
+	protected DistributionRejectionStatus1 rejectedStatus;
 	/**
 	 * Provides information about the rejection status.
 	 * <p>
@@ -149,7 +151,7 @@ public class GlobalDistributionStatus1 {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GlobalDistributionStatus1.mmObject();
 			isDerived = false;
@@ -157,10 +159,10 @@ public class GlobalDistributionStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DistributionRejectionStatus1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DistributionRejectionStatus1.mmObject();
 		}
 	};
 	/**
@@ -172,11 +174,11 @@ public class GlobalDistributionStatus1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#ProcessedStatus
-	 * GlobalDistributionStatus1.ProcessedStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#mmProcessedStatus
+	 * GlobalDistributionStatus1.mmProcessedStatus}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#RejectedStatus
-	 * GlobalDistributionStatus1.RejectedStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#mmRejectedStatus
+	 * GlobalDistributionStatus1.mmRejectedStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -194,22 +196,22 @@ public class GlobalDistributionStatus1 {
 	 * definition} = "Either ProcessedStatus or RejectedStatus."</li>
 	 * </ul>
 	 */
-	public static final MMXor ProcessedStatusOrRejectedStatusRule = new MMXor() {
+	public static final MMXor mmProcessedStatusOrRejectedStatusRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatusOrRejectedStatusRule";
 			definition = "Either ProcessedStatus or RejectedStatus.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionStatus1.ProcessedStatus, com.tools20022.repository.msg.GlobalDistributionStatus1.RejectedStatus);
 			messageComponent_lazy = () -> GlobalDistributionStatus1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionStatus1.mmProcessedStatus, com.tools20022.repository.msg.GlobalDistributionStatus1.mmRejectedStatus);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionStatus1.ProcessedStatus, com.tools20022.repository.msg.GlobalDistributionStatus1.RejectedStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.GlobalMovementStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionStatus1.mmProcessedStatus, com.tools20022.repository.msg.GlobalDistributionStatus1.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -220,9 +222,25 @@ public class GlobalDistributionStatus1 {
 				})).get();
 				name = "GlobalDistributionStatus1";
 				definition = "Provides information about the status of the global movement.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionStatus1.ProcessedStatusOrRejectedStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionStatus1.mmProcessedStatusOrRejectedStatusRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DistributionProcessingStatus1 getProcessedStatus() {
+		return processedStatus;
+	}
+
+	public void setProcessedStatus(com.tools20022.repository.msg.DistributionProcessingStatus1 processedStatus) {
+		this.processedStatus = processedStatus;
+	}
+
+	public DistributionRejectionStatus1 getRejectedStatus() {
+		return rejectedStatus;
+	}
+
+	public void setRejectedStatus(com.tools20022.repository.msg.DistributionRejectionStatus1 rejectedStatus) {
+		this.rejectedStatus = rejectedStatus;
 	}
 }

@@ -36,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OtherTypeOfCollateral1#Description
- * OtherTypeOfCollateral1.Description}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherTypeOfCollateral1#Amount
- * OtherTypeOfCollateral1.Amount}</li>
+ * {@linkplain com.tools20022.repository.msg.OtherTypeOfCollateral1#mmDescription
+ * OtherTypeOfCollateral1.mmDescription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherTypeOfCollateral1#mmAmount
+ * OtherTypeOfCollateral1.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherTypeOfCollateral1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text description;
 	/**
 	 * Provides details about the collateral.
 	 * <p>
@@ -100,13 +102,13 @@ public class OtherTypeOfCollateral1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OtherTypeOfCollateral2#Description
-	 * OtherTypeOfCollateral2.Description}</li>
+	 * {@linkplain com.tools20022.repository.msg.OtherTypeOfCollateral2#mmDescription
+	 * OtherTypeOfCollateral2.mmDescription}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OtherTypeOfCollateral1.mmObject();
 			isDerived = false;
@@ -114,12 +116,13 @@ public class OtherTypeOfCollateral1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Provides details about the collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherTypeOfCollateral2.Description);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherTypeOfCollateral2.mmDescription);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount of the other collateral.
 	 * <p>
@@ -133,8 +136,8 @@ public class OtherTypeOfCollateral1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#HoldingValue
-	 * AssetHolding.HoldingValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmHoldingValue
+	 * AssetHolding.mmHoldingValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,17 +156,17 @@ public class OtherTypeOfCollateral1 {
 	 * definition} = "Amount of the other collateral."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> OtherTypeOfCollateral1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.HoldingValue;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of the other collateral.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -171,9 +174,9 @@ public class OtherTypeOfCollateral1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherTypeOfCollateral1.Description, com.tools20022.repository.msg.OtherTypeOfCollateral1.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherTypeOfCollateral1.mmDescription, com.tools20022.repository.msg.OtherTypeOfCollateral1.mmAmount);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OtherTypeOfCollateral1";
 				definition = "Allows to specify other collateral type by providing a description and the amount.";
@@ -181,5 +184,21 @@ public class OtherTypeOfCollateral1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

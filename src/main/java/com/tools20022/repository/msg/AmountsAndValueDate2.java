@@ -36,13 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate2#CallAmount
- * AmountsAndValueDate2.CallAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountsAndValueDate2#PutAmount
- * AmountsAndValueDate2.PutAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate2#mmCallAmount
+ * AmountsAndValueDate2.mmCallAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate2#FinalSettlementDate
- * AmountsAndValueDate2.FinalSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate2#mmPutAmount
+ * AmountsAndValueDate2.mmPutAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate2#mmFinalSettlementDate
+ * AmountsAndValueDate2.mmFinalSettlementDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountsAndValueDate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount callAmount;
 	/**
 	 * Call amount and currency of a foreign exchange option trade.
 	 * <p>
@@ -81,8 +83,8 @@ public class AmountsAndValueDate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyOption#CallAmount
-	 * CurrencyOption.CallAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmCallAmount
+	 * CurrencyOption.mmCallAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +104,21 @@ public class AmountsAndValueDate2 {
 	 * "Call amount and currency of a foreign exchange option trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CallAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCallAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmCallAmount;
 			componentContext_lazy = () -> AmountsAndValueDate2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyOption.CallAmount;
 			isDerived = false;
 			xmlTag = "CallAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallAmount";
 			definition = "Call amount and currency of a foreign exchange option trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount putAmount;
 	/**
 	 * Put amount and currency of a foreign exchange option trade.
 	 * <p>
@@ -129,8 +132,8 @@ public class AmountsAndValueDate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyOption#PutAmount
-	 * CurrencyOption.PutAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmPutAmount
+	 * CurrencyOption.mmPutAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +153,21 @@ public class AmountsAndValueDate2 {
 	 * "Put amount and currency of a foreign exchange option trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PutAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPutAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmPutAmount;
 			componentContext_lazy = () -> AmountsAndValueDate2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyOption.PutAmount;
 			isDerived = false;
 			xmlTag = "PutAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutAmount";
 			definition = "Put amount and currency of a foreign exchange option trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate finalSettlementDate;
 	/**
 	 * Date on which the trade is settled, ie, the amounts are due.
 	 * <p>
@@ -176,8 +180,8 @@ public class AmountsAndValueDate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#FinalSettlementDate
-	 * Option.FinalSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmFinalSettlementDate
+	 * Option.mmFinalSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,17 +201,17 @@ public class AmountsAndValueDate2 {
 	 * "Date on which the trade is settled, ie, the amounts are due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinalSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinalSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmFinalSettlementDate;
 			componentContext_lazy = () -> AmountsAndValueDate2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.FinalSettlementDate;
 			isDerived = false;
 			xmlTag = "FnlSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalSettlementDate";
 			definition = "Date on which the trade is settled, ie, the amounts are due.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -215,15 +219,39 @@ public class AmountsAndValueDate2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate2.CallAmount, com.tools20022.repository.msg.AmountsAndValueDate2.PutAmount,
-						com.tools20022.repository.msg.AmountsAndValueDate2.FinalSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate2.mmCallAmount, com.tools20022.repository.msg.AmountsAndValueDate2.mmPutAmount,
+						com.tools20022.repository.msg.AmountsAndValueDate2.mmFinalSettlementDate);
 				trace_lazy = () -> CurrencyOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountsAndValueDate2";
 				definition = "Specifies the value date and the amounts traded in a foreign exchange option trade.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getCallAmount() {
+		return callAmount;
+	}
+
+	public void setCallAmount(ActiveOrHistoricCurrencyAndAmount callAmount) {
+		this.callAmount = callAmount;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getPutAmount() {
+		return putAmount;
+	}
+
+	public void setPutAmount(ActiveOrHistoricCurrencyAndAmount putAmount) {
+		this.putAmount = putAmount;
+	}
+
+	public ISODate getFinalSettlementDate() {
+		return finalSettlementDate;
+	}
+
+	public void setFinalSettlementDate(ISODate finalSettlementDate) {
+		this.finalSettlementDate = finalSettlementDate;
 	}
 }

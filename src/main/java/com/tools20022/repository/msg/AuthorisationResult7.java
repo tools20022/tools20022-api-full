@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Min6Max8Text;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Outcome of the authorisation.
@@ -35,17 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AuthorisationResult7#AuthorisationEntity
- * AuthorisationResult7.AuthorisationEntity}</li>
+ * {@linkplain com.tools20022.repository.msg.AuthorisationResult7#mmAuthorisationEntity
+ * AuthorisationResult7.mmAuthorisationEntity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AuthorisationResult7#TransactionResponse
- * AuthorisationResult7.TransactionResponse}</li>
+ * {@linkplain com.tools20022.repository.msg.AuthorisationResult7#mmTransactionResponse
+ * AuthorisationResult7.mmTransactionResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AuthorisationResult7#AuthorisationCode
- * AuthorisationResult7.AuthorisationCode}</li>
+ * {@linkplain com.tools20022.repository.msg.AuthorisationResult7#mmAuthorisationCode
+ * AuthorisationResult7.mmAuthorisationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AuthorisationResult7#AdditionalInformation
- * AuthorisationResult7.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.AuthorisationResult7#mmAdditionalInformation
+ * AuthorisationResult7.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AuthorisationResult7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification75 authorisationEntity;
 	/**
 	 * Type of party that has delivered or declined the card payment
 	 * authorisation (the party is not identified).
@@ -93,8 +95,8 @@ public class AuthorisationResult7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,34 +119,35 @@ public class AuthorisationResult7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult8#AuthorisationEntity
-	 * AuthorisationResult8.AuthorisationEntity}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult8#mmAuthorisationEntity
+	 * AuthorisationResult8.mmAuthorisationEntity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult6#AuthorisationEntity
-	 * AuthorisationResult6.AuthorisationEntity}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult6#mmAuthorisationEntity
+	 * AuthorisationResult6.mmAuthorisationEntity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthorisationEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthorisationEntity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> AuthorisationResult7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "AuthstnNtty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationEntity";
 			definition = "Type of party that has delivered or declined the card payment authorisation (the party is not identified).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult6.AuthorisationEntity;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult8.AuthorisationEntity);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult8.mmAuthorisationEntity);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult6.mmAuthorisationEntity;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification75.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification75.mmObject();
 		}
 	};
+	protected ResponseType2 transactionResponse;
 	/**
 	 * Response to an authorisation request.
 	 * <p>
@@ -156,8 +159,8 @@ public class AuthorisationResult7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#Response
-	 * CardPaymentValidation.Response}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#mmResponse
+	 * CardPaymentValidation.mmResponse}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -178,34 +181,35 @@ public class AuthorisationResult7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult8#TransactionResponse
-	 * AuthorisationResult8.TransactionResponse}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult8#mmTransactionResponse
+	 * AuthorisationResult8.mmTransactionResponse}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult6#ResponseToAuthorisation
-	 * AuthorisationResult6.ResponseToAuthorisation}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult6#mmResponseToAuthorisation
+	 * AuthorisationResult6.mmResponseToAuthorisation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> AuthorisationResult7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.Response;
 			isDerived = false;
 			xmlTag = "TxRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to an authorisation request.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult6.ResponseToAuthorisation;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult8.TransactionResponse);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult8.mmTransactionResponse);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult6.mmResponseToAuthorisation;
 			maxOccurs = 1;
-			type_lazy = () -> ResponseType2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ResponseType2.mmObject();
 		}
 	};
+	protected Min6Max8Text authorisationCode;
 	/**
 	 * Value assigned by the authorising party.
 	 * <p>
@@ -219,8 +223,8 @@ public class AuthorisationResult7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#AuthorisationCode
-	 * CardPaymentValidation.AuthorisationCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentValidation#mmAuthorisationCode
+	 * CardPaymentValidation.mmAuthorisationCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,33 +245,34 @@ public class AuthorisationResult7 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult8#AuthorisationCode
-	 * AuthorisationResult8.AuthorisationCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult8#mmAuthorisationCode
+	 * AuthorisationResult8.mmAuthorisationCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult6#AuthorisationCode
-	 * AuthorisationResult6.AuthorisationCode}</li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult6#mmAuthorisationCode
+	 * AuthorisationResult6.mmAuthorisationCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AuthorisationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAuthorisationCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmAuthorisationCode;
 			componentContext_lazy = () -> AuthorisationResult7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.AuthorisationCode;
 			isDerived = false;
 			xmlTag = "AuthstnCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationCode";
 			definition = "Value assigned by the authorising party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult6.AuthorisationCode;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult8.AuthorisationCode);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult8.mmAuthorisationCode);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult6.mmAuthorisationCode;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Min6Max8Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ActionMessage3> additionalInformation;
 	/**
 	 * Additional information relevant for the destination.
 	 * <p>
@@ -294,7 +299,7 @@ public class AuthorisationResult7 {
 	 * definition} = "Additional information relevant for the destination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AuthorisationResult7.mmObject();
 			isDerived = false;
@@ -303,25 +308,57 @@ public class AuthorisationResult7 {
 			name = "AdditionalInformation";
 			definition = "Additional information relevant for the destination.";
 			minOccurs = 0;
-			type_lazy = () -> ActionMessage3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ActionMessage3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult7.AuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult7.TransactionResponse,
-						com.tools20022.repository.msg.AuthorisationResult7.AuthorisationCode, com.tools20022.repository.msg.AuthorisationResult7.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult7.mmAuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult7.mmTransactionResponse,
+						com.tools20022.repository.msg.AuthorisationResult7.mmAuthorisationCode, com.tools20022.repository.msg.AuthorisationResult7.mmAdditionalInformation);
 				trace_lazy = () -> CardPaymentValidation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AuthorisationResult7";
 				definition = "Outcome of the authorisation.";
-				previousVersion_lazy = () -> AuthorisationResult6.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AuthorisationResult8.mmObject());
+				previousVersion_lazy = () -> AuthorisationResult6.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification75 getAuthorisationEntity() {
+		return authorisationEntity;
+	}
+
+	public void setAuthorisationEntity(com.tools20022.repository.msg.GenericIdentification75 authorisationEntity) {
+		this.authorisationEntity = authorisationEntity;
+	}
+
+	public ResponseType2 getTransactionResponse() {
+		return transactionResponse;
+	}
+
+	public void setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
+		this.transactionResponse = transactionResponse;
+	}
+
+	public Min6Max8Text getAuthorisationCode() {
+		return authorisationCode;
+	}
+
+	public void setAuthorisationCode(Min6Max8Text authorisationCode) {
+		this.authorisationCode = authorisationCode;
+	}
+
+	public List<ActionMessage3> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<com.tools20022.repository.msg.ActionMessage3> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

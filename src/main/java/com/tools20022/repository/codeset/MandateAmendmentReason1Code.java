@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#IncorrectAgent
- * MandateAmendmentReason1Code.IncorrectAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#mmIncorrectAgent
+ * MandateAmendmentReason1Code.mmIncorrectAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#IncorrectCurrency
- * MandateAmendmentReason1Code.IncorrectCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#mmIncorrectCurrency
+ * MandateAmendmentReason1Code.mmIncorrectCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#RequestedByCustomer
- * MandateAmendmentReason1Code.RequestedByCustomer}</li>
+ * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#mmRequestedByCustomer
+ * MandateAmendmentReason1Code.mmRequestedByCustomer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#IncorrectAccount
- * MandateAmendmentReason1Code.IncorrectAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#mmIncorrectAccount
+ * MandateAmendmentReason1Code.mmIncorrectAccount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 * name} = "IncorrectAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectAgent = new MMCode() {
+	public static final MMCode mmIncorrectAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAgent";
@@ -111,7 +111,7 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 * name} = "IncorrectCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectCurrency = new MMCode() {
+	public static final MMCode mmIncorrectCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCurrency";
@@ -134,7 +134,7 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 * name} = "RequestedByCustomer"</li>
 	 * </ul>
 	 */
-	public static final MMCode RequestedByCustomer = new MMCode() {
+	public static final MMCode mmRequestedByCustomer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedByCustomer";
@@ -157,7 +157,7 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 * name} = "IncorrectAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectAccount = new MMCode() {
+	public static final MMCode mmIncorrectAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccount";
@@ -168,13 +168,13 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGNT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateAmendmentReason1Code";
 				definition = "Specifies the reason for requesting the amendment of a mandate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MandateAmendmentReason1Code.IncorrectAgent, com.tools20022.repository.codeset.MandateAmendmentReason1Code.IncorrectCurrency,
-						com.tools20022.repository.codeset.MandateAmendmentReason1Code.RequestedByCustomer, com.tools20022.repository.codeset.MandateAmendmentReason1Code.IncorrectAccount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmIncorrectAgent, com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmIncorrectCurrency,
+						com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmRequestedByCustomer, com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmIncorrectAccount);
 				trace_lazy = () -> MandateReasonCode.mmObject();
 			}
 		});

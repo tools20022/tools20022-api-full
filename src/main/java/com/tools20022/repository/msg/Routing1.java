@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Organisation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Firms or vendor maintained list of identifiers for the purpose of message
@@ -35,17 +36,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Routing1#List Routing1.List}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Routing1#Firm Routing1.Firm}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Routing1#RoutingType
- * Routing1.RoutingType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Routing1#mmList
+ * Routing1.mmList}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Routing1#mmFirm
+ * Routing1.mmFirm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Routing1#mmRoutingType
+ * Routing1.mmRoutingType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Routing1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max35Text> list;
 	/**
 	 * Identifies a list of firms or a vendor maintained list.
 	 * <p>
@@ -87,7 +91,7 @@ public class Routing1 {
 	 * definition} = "Identifies a list of firms or a vendor maintained list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute List = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmList = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Routing1.mmObject();
 			isDerived = false;
@@ -99,6 +103,7 @@ public class Routing1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PartyIdentification23> firm;
 	/**
 	 * Organised structure that is set up for a particular purpose, eg, a
 	 * business, government body, department, charity, or financial institution.
@@ -133,19 +138,20 @@ public class Routing1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Firm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFirm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Routing1.mmObject();
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
+			componentContext_lazy = () -> Routing1.mmObject();
 			isDerived = false;
 			xmlTag = "Firm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Firm";
 			definition = "Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.";
 			minOccurs = 0;
-			complexType_lazy = () -> PartyIdentification23.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
 		}
 	};
+	protected RoutingType1Code routingType;
 	/**
 	 * Indicates if the type of routing is allowed or blocked.
 	 * <p>
@@ -173,7 +179,7 @@ public class Routing1 {
 	 * definition} = "Indicates if the type of routing is allowed or blocked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoutingType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoutingType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Routing1.mmObject();
 			isDerived = false;
@@ -181,8 +187,8 @@ public class Routing1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoutingType";
 			definition = "Indicates if the type of routing is allowed or blocked.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RoutingType1Code.mmObject();
 		}
 	};
@@ -190,13 +196,37 @@ public class Routing1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Routing1.List, com.tools20022.repository.msg.Routing1.Firm, com.tools20022.repository.msg.Routing1.RoutingType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Routing1.mmList, com.tools20022.repository.msg.Routing1.mmFirm, com.tools20022.repository.msg.Routing1.mmRoutingType);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Routing1";
 				definition = "Firms or vendor maintained list of identifiers for the purpose of message routing.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max35Text> getList() {
+		return list;
+	}
+
+	public void setList(List<Max35Text> list) {
+		this.list = list;
+	}
+
+	public List<PartyIdentification23> getFirm() {
+		return firm;
+	}
+
+	public void setFirm(List<com.tools20022.repository.msg.PartyIdentification23> firm) {
+		this.firm = firm;
+	}
+
+	public RoutingType1Code getRoutingType() {
+		return routingType;
+	}
+
+	public void setRoutingType(RoutingType1Code routingType) {
+		this.routingType = routingType;
 	}
 }

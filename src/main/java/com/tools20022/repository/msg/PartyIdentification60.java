@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification60#FundIdentification
- * PartyIdentification60.FundIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification60#mmFundIdentification
+ * PartyIdentification60.mmFundIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification60#NameAndAddress
- * PartyIdentification60.NameAndAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification60#mmNameAndAddress
+ * PartyIdentification60.mmNameAndAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification60#LegalEntityIdentifier
- * PartyIdentification60.LegalEntityIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification60#mmLegalEntityIdentifier
+ * PartyIdentification60.mmLegalEntityIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentification60 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text fundIdentification;
 	/**
 	 * Identification of a fund.
 	 * <p>
@@ -82,8 +83,8 @@ public class PartyIdentification60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#InvestmentFund
-	 * TreasuryTradingParty.InvestmentFund}</li>
+	 * {@linkplain com.tools20022.repository.entity.TreasuryTradingParty#mmInvestmentFund
+	 * TreasuryTradingParty.mmInvestmentFund}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -102,20 +103,21 @@ public class PartyIdentification60 {
 	 * definition} = "Identification of a fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FundIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFundIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> PartyIdentification60.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.InvestmentFund;
 			isDerived = false;
 			xmlTag = "FndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundIdentification";
 			definition = "Identification of a fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected NameAndAddress8 nameAndAddress;
 	/**
 	 * Identification of the party expressed as name and an optional address and
 	 * an optional alternative identifier.
@@ -150,21 +152,22 @@ public class PartyIdentification60 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification60.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> PartyIdentification60.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Identification of the party expressed as name and an optional address and an optional alternative identifier.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> NameAndAddress8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress8.mmObject();
 		}
 	};
+	protected LEIIdentifier legalEntityIdentifier;
 	/**
 	 * Identification of the Legal Entity Identifier. This is a code allocated
 	 * to a party as described in ISO 17442
@@ -202,17 +205,17 @@ public class PartyIdentification60 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LegalEntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification60.mmObject();
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
+			componentContext_lazy = () -> PartyIdentification60.mmObject();
 			isDerived = false;
 			xmlTag = "LglNttyIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalEntityIdentifier";
 			definition = "Identification of the Legal Entity Identifier. This is a code allocated to a party as described in ISO 17442 \"Financial Services - Legal Entity Identifier (LEI)\".";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -220,15 +223,39 @@ public class PartyIdentification60 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification60.FundIdentification, com.tools20022.repository.msg.PartyIdentification60.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentification60.LegalEntityIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification60.mmFundIdentification, com.tools20022.repository.msg.PartyIdentification60.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification60.mmLegalEntityIdentifier);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification60";
 				definition = "Identification of a party by fund name, name and address or an LEI.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getFundIdentification() {
+		return fundIdentification;
+	}
+
+	public void setFundIdentification(Max35Text fundIdentification) {
+		this.fundIdentification = fundIdentification;
+	}
+
+	public NameAndAddress8 getNameAndAddress() {
+		return nameAndAddress;
+	}
+
+	public void setNameAndAddress(com.tools20022.repository.msg.NameAndAddress8 nameAndAddress) {
+		this.nameAndAddress = nameAndAddress;
+	}
+
+	public LEIIdentifier getLegalEntityIdentifier() {
+		return legalEntityIdentifier;
+	}
+
+	public void setLegalEntityIdentifier(LEIIdentifier legalEntityIdentifier) {
+		this.legalEntityIdentifier = legalEntityIdentifier;
 	}
 }

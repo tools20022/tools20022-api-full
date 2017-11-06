@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.CashManagementArchive;
+import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.ReportHeader;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
@@ -76,18 +77,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequest#RequestHeader
- * CaseStatusReportRequest.RequestHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequest#mmRequestHeader
+ * CaseStatusReportRequest.mmRequestHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequest#Case
- * CaseStatusReportRequest.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequest#mmCase
+ * CaseStatusReportRequest.mmCase}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequest#identifier
- * CaseStatusReportRequest.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.038.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,6 +110,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CaseStatusReportRequest {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected ReportHeader requestHeader;
 	/**
 	 * Identifies the party requesting the status, the requested party, the
 	 * identification and the date of the status.
@@ -136,17 +136,18 @@ public class CaseStatusReportRequest {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestHeader";
 			definition = "Identifies the party requesting the status, the requested party, the identification and the date of the status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ReportHeader.mmObject();
 		}
 	};
+	protected Case case_;
 	/**
 	 * Identifies the case.
 	 * <p>
@@ -168,42 +169,15 @@ public class CaseStatusReportRequest {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the case.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "038"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "038";
-			version = "01";
-			flavour = "001";
+			minOccurs = 1;
+			complexType_lazy = () -> Case.mmObject();
 		}
 	};
 
@@ -219,10 +193,33 @@ public class CaseStatusReportRequest {
 				xmlTag = "camt.038.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.038.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CaseStatusReportRequest.RequestHeader, com.tools20022.repository.area.camt.CaseStatusReportRequest.Case);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.CaseStatusReportRequest.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CaseStatusReportRequest.mmRequestHeader, com.tools20022.repository.area.camt.CaseStatusReportRequest.mmCase);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "038";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportHeader getRequestHeader() {
+		return requestHeader;
+	}
+
+	public void setRequestHeader(ReportHeader requestHeader) {
+		this.requestHeader = requestHeader;
+	}
+
+	public Case getCase() {
+		return case_;
+	}
+
+	public void setCase(Case case_) {
+		this.case_ = case_;
 	}
 }

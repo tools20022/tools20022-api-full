@@ -30,26 +30,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#Mandatory
- * MessageItemConditionCode.Mandatory}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmMandatory
+ * MessageItemConditionCode.mmMandatory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#ConfiguredValue
- * MessageItemConditionCode.ConfiguredValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmConfiguredValue
+ * MessageItemConditionCode.mmConfiguredValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#DefaultValue
- * MessageItemConditionCode.DefaultValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmDefaultValue
+ * MessageItemConditionCode.mmDefaultValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#AllowedValues
- * MessageItemConditionCode.AllowedValues}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmAllowedValues
+ * MessageItemConditionCode.mmAllowedValues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#IfAvailable
- * MessageItemConditionCode.IfAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmIfAvailable
+ * MessageItemConditionCode.mmIfAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#Copy
- * MessageItemConditionCode.Copy}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmCopy
+ * MessageItemConditionCode.mmCopy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#NotSupported
- * MessageItemConditionCode.NotSupported}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmNotSupported
+ * MessageItemConditionCode.mmNotSupported}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -62,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class MessageItemConditionCode {
 	 * definition} = "Message item must be present."</li>
 	 * </ul>
 	 */
-	public static final MMCode Mandatory = new MMCode() {
+	public static final MMCode mmMandatory = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Mandatory";
@@ -135,7 +135,7 @@ public class MessageItemConditionCode {
 	 * definition} = "Message item must be present with the configured value."</li>
 	 * </ul>
 	 */
-	public static final MMCode ConfiguredValue = new MMCode() {
+	public static final MMCode mmConfiguredValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ConfiguredValue";
@@ -166,7 +166,7 @@ public class MessageItemConditionCode {
 	 * "Message item has the configured value if the item is absent."</li>
 	 * </ul>
 	 */
-	public static final MMCode DefaultValue = new MMCode() {
+	public static final MMCode mmDefaultValue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DefaultValue";
@@ -196,7 +196,7 @@ public class MessageItemConditionCode {
 	 * definition} = "Message item must have one of the configured values."</li>
 	 * </ul>
 	 */
-	public static final MMCode AllowedValues = new MMCode() {
+	public static final MMCode mmAllowedValues = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "AllowedValues";
@@ -226,7 +226,7 @@ public class MessageItemConditionCode {
 	 * definition} = "Message item has to be present if available."</li>
 	 * </ul>
 	 */
-	public static final MMCode IfAvailable = new MMCode() {
+	public static final MMCode mmIfAvailable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IfAvailable";
@@ -259,7 +259,7 @@ public class MessageItemConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Copy = new MMCode() {
+	public static final MMCode mmCopy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Copy";
@@ -289,7 +289,7 @@ public class MessageItemConditionCode {
 	 * definition} = "Message item is not supported and has to be absent."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotSupported = new MMCode() {
+	public static final MMCode mmNotSupported = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NotSupported";
@@ -302,14 +302,14 @@ public class MessageItemConditionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MNDT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageItemConditionCode";
 				definition = "Rule to apply for the presence and the value of a message item.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageItemConditionCode.Mandatory, com.tools20022.repository.codeset.MessageItemConditionCode.ConfiguredValue,
-						com.tools20022.repository.codeset.MessageItemConditionCode.DefaultValue, com.tools20022.repository.codeset.MessageItemConditionCode.AllowedValues,
-						com.tools20022.repository.codeset.MessageItemConditionCode.IfAvailable, com.tools20022.repository.codeset.MessageItemConditionCode.Copy, com.tools20022.repository.codeset.MessageItemConditionCode.NotSupported);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageItemConditionCode.mmMandatory, com.tools20022.repository.codeset.MessageItemConditionCode.mmConfiguredValue,
+						com.tools20022.repository.codeset.MessageItemConditionCode.mmDefaultValue, com.tools20022.repository.codeset.MessageItemConditionCode.mmAllowedValues,
+						com.tools20022.repository.codeset.MessageItemConditionCode.mmIfAvailable, com.tools20022.repository.codeset.MessageItemConditionCode.mmCopy, com.tools20022.repository.codeset.MessageItemConditionCode.mmNotSupported);
 				derivation_lazy = () -> Arrays.asList(MessageItemCondition1Code.mmObject());
 			}
 		});

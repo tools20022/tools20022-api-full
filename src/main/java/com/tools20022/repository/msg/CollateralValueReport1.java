@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.CollateralValueReportOrError2Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports either on the collateral value report or on a business error.
@@ -33,24 +34,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralValueReport1#Account
- * CollateralValueReport1.Account}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueReport1#SecuritiesAccountOwner
- * CollateralValueReport1.SecuritiesAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueReport1#mmAccount
+ * CollateralValueReport1.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueReport1#SecuritiesAccountServicer
- * CollateralValueReport1.SecuritiesAccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueReport1#mmSecuritiesAccountOwner
+ * CollateralValueReport1.mmSecuritiesAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueReport1#CollateralValueReport
- * CollateralValueReport1.CollateralValueReport}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueReport1#mmSecuritiesAccountServicer
+ * CollateralValueReport1.mmSecuritiesAccountServicer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueReport1#mmCollateralValueReport
+ * CollateralValueReport1.mmCollateralValueReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralValueReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccount25 account;
 	/**
 	 * Unique identification, as assigned by the account servicer, to
 	 * unambiguously identify the account on which information is requested.
@@ -94,7 +97,7 @@ public class CollateralValueReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CollateralValueReport1.mmObject();
 			isDerived = false;
@@ -102,12 +105,13 @@ public class CollateralValueReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the account on which information is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount25.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice securitiesAccountOwner;
 	/**
 	 * Unique and unambiguous identification of the securities account owner.
 	 * <p>
@@ -136,7 +140,7 @@ public class CollateralValueReport1 {
 	 * "Unique and unambiguous identification of the securities account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CollateralValueReport1.mmObject();
 			isDerived = false;
@@ -144,12 +148,13 @@ public class CollateralValueReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountOwner";
 			definition = "Unique and unambiguous identification of the securities account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification71Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice securitiesAccountServicer;
 	/**
 	 * Party that manages the securities account on behalf of the account owner.
 	 * <p>
@@ -179,7 +184,7 @@ public class CollateralValueReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesAccountServicer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CollateralValueReport1.mmObject();
 			isDerived = false;
@@ -187,12 +192,13 @@ public class CollateralValueReport1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountServicer";
 			definition = "Party that manages the securities account on behalf of the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification71Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected List<CollateralValueReportOrError2Choice> collateralValueReport;
 	/**
 	 * Provides information specific to the report on collateral value
 	 * positions.
@@ -223,7 +229,7 @@ public class CollateralValueReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CollateralValueReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCollateralValueReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CollateralValueReport1.mmObject();
 			isDerived = false;
@@ -232,22 +238,54 @@ public class CollateralValueReport1 {
 			name = "CollateralValueReport";
 			definition = "Provides information specific to the report on collateral value positions.";
 			minOccurs = 0;
-			type_lazy = () -> CollateralValueReportOrError2Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> CollateralValueReportOrError2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValueReport1.Account, com.tools20022.repository.msg.CollateralValueReport1.SecuritiesAccountOwner,
-						com.tools20022.repository.msg.CollateralValueReport1.SecuritiesAccountServicer, com.tools20022.repository.msg.CollateralValueReport1.CollateralValueReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValueReport1.mmAccount, com.tools20022.repository.msg.CollateralValueReport1.mmSecuritiesAccountOwner,
+						com.tools20022.repository.msg.CollateralValueReport1.mmSecuritiesAccountServicer, com.tools20022.repository.msg.CollateralValueReport1.mmCollateralValueReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueReport1";
 				definition = "Reports either on the collateral value report or on a business error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccount25 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = account;
+	}
+
+	public PartyIdentification71Choice getSecuritiesAccountOwner() {
+		return securitiesAccountOwner;
+	}
+
+	public void setSecuritiesAccountOwner(PartyIdentification71Choice securitiesAccountOwner) {
+		this.securitiesAccountOwner = securitiesAccountOwner;
+	}
+
+	public PartyIdentification71Choice getSecuritiesAccountServicer() {
+		return securitiesAccountServicer;
+	}
+
+	public void setSecuritiesAccountServicer(PartyIdentification71Choice securitiesAccountServicer) {
+		this.securitiesAccountServicer = securitiesAccountServicer;
+	}
+
+	public List<CollateralValueReportOrError2Choice> getCollateralValueReport() {
+		return collateralValueReport;
+	}
+
+	public void setCollateralValueReport(List<CollateralValueReportOrError2Choice> collateralValueReport) {
+		this.collateralValueReport = collateralValueReport;
 	}
 }

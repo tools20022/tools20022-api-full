@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NCBOrPaymentBank1Choice#NCBIdentification
- * NCBOrPaymentBank1Choice.NCBIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.NCBOrPaymentBank1Choice#mmNCBIdentification
+ * NCBOrPaymentBank1Choice.mmNCBIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.NCBOrPaymentBank1Choice#PaymentBankIdentification
- * NCBOrPaymentBank1Choice.PaymentBankIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.NCBOrPaymentBank1Choice#mmPaymentBankIdentification
+ * NCBOrPaymentBank1Choice.mmPaymentBankIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NCBOrPaymentBank1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected BICFIIdentifier nCBIdentification;
 	/**
 	 * Unique business identifier code used to identify the national central
 	 * bank providing the information.
@@ -91,7 +92,7 @@ public class NCBOrPaymentBank1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NCBIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNCBIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NCBOrPaymentBank1Choice.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class NCBOrPaymentBank1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NCBIdentification";
 			definition = "Unique business identifier code used to identify the national central bank providing the information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	protected SystemPartyIdentification3 paymentBankIdentification;
 	/**
 	 * Unique business identifier code used to identify the payment bank
 	 * providing the information.
@@ -134,7 +136,7 @@ public class NCBOrPaymentBank1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentBankIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentBankIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> NCBOrPaymentBank1Choice.mmObject();
 			isDerived = false;
@@ -142,23 +144,39 @@ public class NCBOrPaymentBank1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentBankIdentification";
 			definition = "Unique business identifier code used to identify the payment bank providing the information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SystemPartyIdentification3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NCBOrPaymentBank1Choice.NCBIdentification, com.tools20022.repository.choice.NCBOrPaymentBank1Choice.PaymentBankIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NCBOrPaymentBank1Choice.mmNCBIdentification, com.tools20022.repository.choice.NCBOrPaymentBank1Choice.mmPaymentBankIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NCBOrPaymentBank1Choice";
 				definition = "Choice between a national central bank or a payment bank.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BICFIIdentifier getNCBIdentification() {
+		return nCBIdentification;
+	}
+
+	public void setNCBIdentification(BICFIIdentifier nCBIdentification) {
+		this.nCBIdentification = nCBIdentification;
+	}
+
+	public SystemPartyIdentification3 getPaymentBankIdentification() {
+		return paymentBankIdentification;
+	}
+
+	public void setPaymentBankIdentification(SystemPartyIdentification3 paymentBankIdentification) {
+		this.paymentBankIdentification = paymentBankIdentification;
 	}
 }

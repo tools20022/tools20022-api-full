@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.FinancialDocument;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * General information about an invoice, such as number, issue date date and
@@ -44,50 +45,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#CreditDebitNoteAmount
- * Invoice.CreditDebitNoteAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#TotalTaxAmount
- * Invoice.TotalTaxAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#TotalInvoiceAmount
- * Invoice.TotalInvoiceAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#InvoiceCurrency
- * Invoice.InvoiceCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#PeriodCovered
- * Invoice.PeriodCovered}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#TradeSettlement
- * Invoice.TradeSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#TotalCharge
- * Invoice.TotalCharge}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#TotalPrepaidAmount
- * Invoice.TotalPrepaidAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#LineItem
- * Invoice.LineItem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#TotalNetAmount
- * Invoice.TotalNetAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#CurrencyExchange
- * Invoice.CurrencyExchange}</li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmCreditDebitNoteAmount
+ * Invoice.mmCreditDebitNoteAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTotalTaxAmount
+ * Invoice.mmTotalTaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#BillingCompensationType
- * Invoice.BillingCompensationType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#InvoicePartyRole
- * Invoice.InvoicePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#OriginalInvoice
- * Invoice.OriginalInvoice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#RelatedInvoice
- * Invoice.RelatedInvoice}</li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalInvoiceAmount
+ * Invoice.mmTotalInvoiceAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceCurrency
+ * Invoice.mmInvoiceCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmPeriodCovered
+ * Invoice.mmPeriodCovered}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTradeSettlement
+ * Invoice.mmTradeSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTotalCharge
+ * Invoice.mmTotalCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#InvoiceFinancingTransaction
- * Invoice.InvoiceFinancingTransaction}</li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmTotalPrepaidAmount
+ * Invoice.mmTotalPrepaidAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmLineItem
+ * Invoice.mmLineItem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmTotalNetAmount
+ * Invoice.mmTotalNetAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmCurrencyExchange
+ * Invoice.mmCurrencyExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#BillingCompensationAmount
- * Invoice.BillingCompensationAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#InvoiceStatus
- * Invoice.InvoiceStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#Payment
- * Invoice.Payment}</li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmBillingCompensationType
+ * Invoice.mmBillingCompensationType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoicePartyRole
+ * Invoice.mmInvoicePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmOriginalInvoice
+ * Invoice.mmOriginalInvoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmRelatedInvoice
+ * Invoice.mmRelatedInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Invoice#CreditDebitIndicator
- * Invoice.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceFinancingTransaction
+ * Invoice.mmInvoiceFinancingTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmBillingCompensationAmount
+ * Invoice.mmBillingCompensationAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmInvoiceStatus
+ * Invoice.mmInvoiceStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmPayment
+ * Invoice.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Invoice#mmCreditDebitIndicator
+ * Invoice.mmCreditDebitIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,30 +98,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#RelatedInvoice
- * DateTimePeriod.RelatedInvoice}</li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedInvoice
+ * DateTimePeriod.mmRelatedInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#InvoiceReconciliation
- * Payment.InvoiceReconciliation}</li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmInvoiceReconciliation
+ * Payment.mmInvoiceReconciliation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyExchange#RelatedInvoice
- * CurrencyExchange.RelatedInvoice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#OriginalInvoice
- * Invoice.OriginalInvoice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#RelatedInvoice
- * Invoice.RelatedInvoice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvoicePartyRole#Invoice
- * InvoicePartyRole.Invoice}</li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmRelatedInvoice
+ * CurrencyExchange.mmRelatedInvoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmOriginalInvoice
+ * Invoice.mmOriginalInvoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmRelatedInvoice
+ * Invoice.mmRelatedInvoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvoicePartyRole#mmInvoice
+ * InvoicePartyRole.mmInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#Invoice
- * InvoiceFinancingAgreement.Invoice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LineItem#Invoice
- * LineItem.Invoice}</li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoice
+ * InvoiceFinancingAgreement.mmInvoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmInvoice
+ * LineItem.mmInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#Invoice
- * CommercialTradeSettlement.Invoice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvoiceStatus#Invoice
- * InvoiceStatus.Invoice}</li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmInvoice
+ * CommercialTradeSettlement.mmInvoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvoiceStatus#mmInvoice
+ * InvoiceStatus.mmInvoice}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,30 +129,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1#InvoiceLegalStatement
- * InvoiceLegalIssue1.InvoiceLegalStatement}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#RegulatoryData
- * BillingReport1.RegulatoryData}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#InvoiceTotals
- * BillingReport1.InvoiceTotals}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1#mmInvoiceLegalStatement
+ * InvoiceLegalIssue1.mmInvoiceLegalStatement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingReport1#ServiceCategoryTotals
- * BillingReport1.ServiceCategoryTotals}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingReport1#mmRegulatoryData
+ * BillingReport1.mmRegulatoryData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingReport1#mmInvoiceTotals
+ * BillingReport1.mmInvoiceTotals}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BillingCancellationReport1#RegulatoryData
- * BillingCancellationReport1.RegulatoryData}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#Parameters
- * ReconciliationList1.Parameters}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#Item
- * ReconciliationList1.Item}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialItem1#ItemContext
- * FinancialItem1.ItemContext}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingReport1#mmServiceCategoryTotals
+ * BillingReport1.mmServiceCategoryTotals}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialItem1#FinancialDocumentReference
- * FinancialItem1.FinancialDocumentReference}</li>
+ * {@linkplain com.tools20022.repository.msg.BillingCancellationReport1#mmRegulatoryData
+ * BillingCancellationReport1.mmRegulatoryData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialItemParameters1#RelatedItem
- * FinancialItemParameters1.RelatedItem}</li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmParameters
+ * ReconciliationList1.mmParameters}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReconciliationList1#mmItem
+ * ReconciliationList1.mmItem}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialItem1#mmItemContext
+ * FinancialItem1.mmItemContext}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialItem1#mmFinancialDocumentReference
+ * FinancialItem1.mmFinancialDocumentReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialItemParameters1#mmRelatedItem
+ * FinancialItemParameters1.mmRelatedItem}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -194,8 +199,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -211,6 +216,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Invoice extends FinancialDocument {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount creditDebitNoteAmount;
 	/**
 	 * Amount of credit/debit note related to the invoice.
 	 * <p>
@@ -221,24 +227,24 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount1#CreditNoteAmount
-	 * RemittanceAmount1.CreditNoteAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#CreditNoteAmount
-	 * RemittanceAmount2.CreditNoteAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#CreditDebitNoteAmount
-	 * InvoiceRequestInformation1.CreditDebitNoteAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount1#mmCreditNoteAmount
+	 * RemittanceAmount1.mmCreditNoteAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#mmCreditNoteAmount
+	 * RemittanceAmount2.mmCreditNoteAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmCreditDebitNoteAmount
+	 * InvoiceRequestInformation1.mmCreditDebitNoteAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -250,20 +256,21 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Amount of credit/debit note related to the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CreditDebitNoteAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCreditDebitNoteAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount1.CreditNoteAmount, com.tools20022.repository.msg.RemittanceAmount2.CreditNoteAmount,
-					com.tools20022.repository.msg.InvoiceRequestInformation1.CreditDebitNoteAmount);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount1.mmCreditNoteAmount, com.tools20022.repository.msg.RemittanceAmount2.mmCreditNoteAmount,
+					com.tools20022.repository.msg.InvoiceRequestInformation1.mmCreditDebitNoteAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitNoteAmount";
 			definition = "Amount of credit/debit note related to the invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount totalTaxAmount;
 	/**
 	 * Sum of all tax amounts related to the invoice. It is derived from the
 	 * association between line item and tax.
@@ -275,24 +282,24 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount1#TaxAmount
-	 * RemittanceAmount1.TaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#TaxAmount
-	 * RemittanceAmount2.TaxAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1#TaxTotalAmount
-	 * SettlementMonetarySummation1.TaxTotalAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount1#mmTaxAmount
+	 * RemittanceAmount1.mmTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceAmount2#mmTaxAmount
+	 * RemittanceAmount2.mmTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1#mmTaxTotalAmount
+	 * SettlementMonetarySummation1.mmTaxTotalAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -306,20 +313,21 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TotalTaxAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTotalTaxAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount1.TaxAmount, com.tools20022.repository.msg.RemittanceAmount2.TaxAmount,
-					com.tools20022.repository.msg.SettlementMonetarySummation1.TaxTotalAmount);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount1.mmTaxAmount, com.tools20022.repository.msg.RemittanceAmount2.mmTaxAmount,
+					com.tools20022.repository.msg.SettlementMonetarySummation1.mmTaxTotalAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalTaxAmount";
 			definition = "Sum of all tax amounts related to the invoice. It is derived from the association between line item and tax.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount totalInvoiceAmount;
 	/**
 	 * Total amount of the invoice, being the sum of total invoice lines
 	 * amounts, total invoice additional amounts (allowances and charges) and
@@ -332,72 +340,77 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OriginalInvoiceInformation1#TotalInvoiceAmount
-	 * OriginalInvoiceInformation1.TotalInvoiceAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1#GrandTotalAmount
-	 * SettlementMonetarySummation1.GrandTotalAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem5#LineItemsTotalAmount
-	 * LineItem5.LineItemsTotalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#TotalNetAmount
-	 * LineItem5.TotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem7#LineItemsTotalAmount
-	 * LineItem7.LineItemsTotalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#TotalNetAmount
-	 * LineItem7.TotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem6#AcceptedTotalNetAmount
-	 * LineItem6.AcceptedTotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#AcceptedTotalNetAmount
-	 * LineItem8.AcceptedTotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem4#LineItemsTotalAmount
-	 * LineItem4.LineItemsTotalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem4#TotalNetAmount
-	 * LineItem4.TotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem9#LineItemsTotalAmount
-	 * LineItem9.LineItemsTotalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem9#TotalNetAmount
-	 * LineItem9.TotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem11#LineItemsTotalAmount
-	 * LineItem11.LineItemsTotalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem11#TotalNetAmount
-	 * LineItem11.TotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem12#LineItemsTotalAmount
-	 * LineItem12.LineItemsTotalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem12#TotalNetAmount
-	 * LineItem12.TotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem14#AcceptedTotalNetAmount
-	 * LineItem14.AcceptedTotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem13#LineItemsTotalAmount
-	 * LineItem13.LineItemsTotalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem13#TotalNetAmount
-	 * LineItem13.TotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem15#LineItemsTotalAmount
-	 * LineItem15.LineItemsTotalAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem15#TotalNetAmount
-	 * LineItem15.TotalNetAmount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialItem1#TotalAmount
-	 * FinancialItem1.TotalAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalInvoiceInformation1#mmTotalInvoiceAmount
+	 * OriginalInvoiceInformation1.mmTotalInvoiceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1#mmGrandTotalAmount
+	 * SettlementMonetarySummation1.mmGrandTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem5#mmLineItemsTotalAmount
+	 * LineItem5.mmLineItemsTotalAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#mmTotalNetAmount
+	 * LineItem5.mmTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem7#mmLineItemsTotalAmount
+	 * LineItem7.mmLineItemsTotalAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#mmTotalNetAmount
+	 * LineItem7.mmTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem6#mmAcceptedTotalNetAmount
+	 * LineItem6.mmAcceptedTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmAcceptedTotalNetAmount
+	 * LineItem8.mmAcceptedTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem4#mmLineItemsTotalAmount
+	 * LineItem4.mmLineItemsTotalAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem4#mmTotalNetAmount
+	 * LineItem4.mmTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem9#mmLineItemsTotalAmount
+	 * LineItem9.mmLineItemsTotalAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem9#mmTotalNetAmount
+	 * LineItem9.mmTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem11#mmLineItemsTotalAmount
+	 * LineItem11.mmLineItemsTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem11#mmTotalNetAmount
+	 * LineItem11.mmTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem12#mmLineItemsTotalAmount
+	 * LineItem12.mmLineItemsTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem12#mmTotalNetAmount
+	 * LineItem12.mmTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem14#mmAcceptedTotalNetAmount
+	 * LineItem14.mmAcceptedTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem13#mmLineItemsTotalAmount
+	 * LineItem13.mmLineItemsTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem13#mmTotalNetAmount
+	 * LineItem13.mmTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem15#mmLineItemsTotalAmount
+	 * LineItem15.mmLineItemsTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem15#mmTotalNetAmount
+	 * LineItem15.mmTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialItem1#mmTotalAmount
+	 * FinancialItem1.mmTotalAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -411,26 +424,27 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TotalInvoiceAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTotalInvoiceAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalInvoiceInformation1.TotalInvoiceAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.GrandTotalAmount,
-					com.tools20022.repository.msg.LineItem5.LineItemsTotalAmount, com.tools20022.repository.msg.LineItem5.TotalNetAmount, com.tools20022.repository.msg.LineItem7.LineItemsTotalAmount,
-					com.tools20022.repository.msg.LineItem7.TotalNetAmount, com.tools20022.repository.msg.LineItem6.AcceptedTotalNetAmount, com.tools20022.repository.msg.LineItem8.AcceptedTotalNetAmount,
-					com.tools20022.repository.msg.LineItem4.LineItemsTotalAmount, com.tools20022.repository.msg.LineItem4.TotalNetAmount, com.tools20022.repository.msg.LineItem9.LineItemsTotalAmount,
-					com.tools20022.repository.msg.LineItem9.TotalNetAmount, com.tools20022.repository.msg.LineItem11.LineItemsTotalAmount, com.tools20022.repository.msg.LineItem11.TotalNetAmount,
-					com.tools20022.repository.msg.LineItem12.LineItemsTotalAmount, com.tools20022.repository.msg.LineItem12.TotalNetAmount, com.tools20022.repository.msg.LineItem14.AcceptedTotalNetAmount,
-					com.tools20022.repository.msg.LineItem13.LineItemsTotalAmount, com.tools20022.repository.msg.LineItem13.TotalNetAmount, com.tools20022.repository.msg.LineItem15.LineItemsTotalAmount,
-					com.tools20022.repository.msg.LineItem15.TotalNetAmount, com.tools20022.repository.msg.FinancialItem1.TotalAmount);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalInvoiceInformation1.mmTotalInvoiceAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmGrandTotalAmount,
+					com.tools20022.repository.msg.LineItem5.mmLineItemsTotalAmount, com.tools20022.repository.msg.LineItem5.mmTotalNetAmount, com.tools20022.repository.msg.LineItem7.mmLineItemsTotalAmount,
+					com.tools20022.repository.msg.LineItem7.mmTotalNetAmount, com.tools20022.repository.msg.LineItem6.mmAcceptedTotalNetAmount, com.tools20022.repository.msg.LineItem8.mmAcceptedTotalNetAmount,
+					com.tools20022.repository.msg.LineItem4.mmLineItemsTotalAmount, com.tools20022.repository.msg.LineItem4.mmTotalNetAmount, com.tools20022.repository.msg.LineItem9.mmLineItemsTotalAmount,
+					com.tools20022.repository.msg.LineItem9.mmTotalNetAmount, com.tools20022.repository.msg.LineItem11.mmLineItemsTotalAmount, com.tools20022.repository.msg.LineItem11.mmTotalNetAmount,
+					com.tools20022.repository.msg.LineItem12.mmLineItemsTotalAmount, com.tools20022.repository.msg.LineItem12.mmTotalNetAmount, com.tools20022.repository.msg.LineItem14.mmAcceptedTotalNetAmount,
+					com.tools20022.repository.msg.LineItem13.mmLineItemsTotalAmount, com.tools20022.repository.msg.LineItem13.mmTotalNetAmount, com.tools20022.repository.msg.LineItem15.mmLineItemsTotalAmount,
+					com.tools20022.repository.msg.LineItem15.mmTotalNetAmount, com.tools20022.repository.msg.FinancialItem1.mmTotalAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalInvoiceAmount";
 			definition = "Total amount of the invoice, being the sum of total invoice lines amounts, total invoice additional amounts (allowances and charges) and total tax amounts.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyCode invoiceCurrency;
 	/**
 	 * Code specifying the currency of the invoice.
 	 * <p>
@@ -440,21 +454,21 @@ public class Invoice extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.codeset.CurrencyCode
 	 * CurrencyCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#InvoiceCurrencyCode
-	 * TradeSettlement1.InvoiceCurrencyCode}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialItemParameters1#Currency
-	 * FinancialItemParameters1.Currency}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#mmInvoiceCurrencyCode
+	 * TradeSettlement1.mmInvoiceCurrencyCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialItemParameters1#mmCurrency
+	 * FinancialItemParameters1.mmCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -466,19 +480,20 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Code specifying the currency of the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InvoiceCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInvoiceCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.InvoiceCurrencyCode, com.tools20022.repository.msg.FinancialItemParameters1.Currency);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmInvoiceCurrencyCode, com.tools20022.repository.msg.FinancialItemParameters1.mmCurrency);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvoiceCurrency";
 			definition = "Code specifying the currency of the invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.DateTimePeriod> periodCovered;
 	/**
 	 * Specifies the period covered by an invoice for instance for recurring
 	 * services.
@@ -488,8 +503,8 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#RelatedInvoice
-	 * DateTimePeriod.RelatedInvoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedInvoice
+	 * DateTimePeriod.mmRelatedInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -497,33 +512,33 @@ public class Invoice extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#BillingPeriod
-	 * TradeSettlement1.BillingPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingStatement1#FromToDate
-	 * BillingStatement1.FromToDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingReport1#BillingPeriod
-	 * BillingReport1.BillingPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingCancellationReport1#BillingPeriod
-	 * BillingCancellationReport1.BillingPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#BillingPeriod
-	 * BillingSearchCriteria1.BillingPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingStatement2#FromToDate
-	 * BillingStatement2.FromToDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#mmBillingPeriod
+	 * TradeSettlement1.mmBillingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingStatement1#mmFromToDate
+	 * BillingStatement1.mmFromToDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingReport1#mmBillingPeriod
+	 * BillingReport1.mmBillingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingCancellationReport1#mmBillingPeriod
+	 * BillingCancellationReport1.mmBillingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#mmBillingPeriod
+	 * BillingSearchCriteria1.mmBillingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingStatement2#mmFromToDate
+	 * BillingStatement2.mmFromToDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -537,21 +552,22 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PeriodCovered = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPeriodCovered = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.BillingPeriod, com.tools20022.repository.msg.BillingStatement1.FromToDate, com.tools20022.repository.msg.BillingReport1.BillingPeriod,
-					com.tools20022.repository.msg.BillingCancellationReport1.BillingPeriod, com.tools20022.repository.msg.BillingSearchCriteria1.BillingPeriod, com.tools20022.repository.msg.BillingStatement2.FromToDate);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmBillingPeriod, com.tools20022.repository.msg.BillingStatement1.mmFromToDate, com.tools20022.repository.msg.BillingReport1.mmBillingPeriod,
+					com.tools20022.repository.msg.BillingCancellationReport1.mmBillingPeriod, com.tools20022.repository.msg.BillingSearchCriteria1.mmBillingPeriod, com.tools20022.repository.msg.BillingStatement2.mmFromToDate);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PeriodCovered";
 			definition = "Specifies the period covered by an invoice for instance for recurring services.";
 			minOccurs = 0;
-			type_lazy = () -> DateTimePeriod.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.RelatedInvoice;
+			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedInvoice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement;
 	/**
 	 * Specifies the process which takes place to settle an invoice.
 	 * <p>
@@ -560,8 +576,8 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#Invoice
-	 * CommercialTradeSettlement.Invoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmInvoice
+	 * CommercialTradeSettlement.mmInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -586,19 +602,20 @@ public class Invoice extends FinancialDocument {
 	 * "Specifies the process which takes place to settle an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TradeSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTradeSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Invoice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TradeSettlement";
 			definition = "Specifies the process which takes place to settle an invoice.";
 			minOccurs = 0;
-			type_lazy = () -> CommercialTradeSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.Invoice;
+			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmInvoice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
 		}
 	};
+	protected CurrencyAndAmount totalCharge;
 	/**
 	 * Algebraical sum of charges related to the invoice.
 	 * <p>
@@ -609,18 +626,18 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1#ChargeTotalAmount
-	 * SettlementMonetarySummation1.ChargeTotalAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1#mmChargeTotalAmount
+	 * SettlementMonetarySummation1.mmChargeTotalAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -632,19 +649,20 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Algebraical sum of charges related to the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TotalCharge = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTotalCharge = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementMonetarySummation1.ChargeTotalAmount);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementMonetarySummation1.mmChargeTotalAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalCharge";
 			definition = "Algebraical sum of charges related to the invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount totalPrepaidAmount;
 	/**
 	 * Monetary value of the total prepaid amount being reported for this
 	 * settlement.
@@ -656,18 +674,18 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1#TotalPrepaidAmount
-	 * SettlementMonetarySummation1.TotalPrepaidAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1#mmTotalPrepaidAmount
+	 * SettlementMonetarySummation1.mmTotalPrepaidAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -681,19 +699,20 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TotalPrepaidAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTotalPrepaidAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementMonetarySummation1.TotalPrepaidAmount);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementMonetarySummation1.mmTotalPrepaidAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalPrepaidAmount";
 			definition = "Monetary value of the total prepaid amount being reported for this settlement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.LineItem> lineItem;
 	/**
 	 * Unit of information showing the related provision of products and/or
 	 * services and monetary summations reported as a discrete line item.
@@ -703,61 +722,68 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.LineItem#Invoice
-	 * LineItem.Invoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.LineItem#mmInvoice
+	 * LineItem.mmInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.LineItem LineItem}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem5#LineItemDetails
-	 * LineItem5.LineItemDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem7#LineItemDetails
-	 * LineItem7.LineItemDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem6#LineItemDetails
-	 * LineItem6.LineItemDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem8#LineItemDetails
-	 * LineItem8.LineItemDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem4#CommercialLineItems
-	 * LineItem4.CommercialLineItems}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem9#CommercialLineItems
-	 * LineItem9.CommercialLineItems}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CertificateDataSet1#LineItem
-	 * CertificateDataSet1.LineItem}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem11#LineItemDetails
-	 * LineItem11.LineItemDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CertificateDataSet2#LineItem
-	 * CertificateDataSet2.LineItem}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem12#CommercialLineItems
-	 * LineItem12.CommercialLineItems}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice1#LineItem
-	 * CardPaymentInvoice1.LineItem}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem14#LineItemDetails
-	 * LineItem14.LineItemDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.LineItem13#LineItemDetails
-	 * LineItem13.LineItemDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem15#CommercialLineItems
-	 * LineItem15.CommercialLineItems}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#LineItem
-	 * CardPaymentInvoice2.LineItem}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem5#mmLineItemDetails
+	 * LineItem5.mmLineItemDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem7#mmLineItemDetails
+	 * LineItem7.mmLineItemDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem6#mmLineItemDetails
+	 * LineItem6.mmLineItemDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmLineItemDetails
+	 * LineItem8.mmLineItemDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem4#mmCommercialLineItems
+	 * LineItem4.mmCommercialLineItems}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem9#mmCommercialLineItems
+	 * LineItem9.mmCommercialLineItems}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CertificateDataSet1#mmLineItem
+	 * CertificateDataSet1.mmLineItem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem11#mmLineItemDetails
+	 * LineItem11.mmLineItemDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CertificateDataSet2#mmLineItem
+	 * CertificateDataSet2.mmLineItem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem12#mmCommercialLineItems
+	 * LineItem12.mmCommercialLineItems}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice1#mmLineItem
+	 * CardPaymentInvoice1.mmLineItem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem14#mmLineItemDetails
+	 * LineItem14.mmLineItemDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem13#mmLineItemDetails
+	 * LineItem13.mmLineItemDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem15#mmCommercialLineItems
+	 * LineItem15.mmCommercialLineItems}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#mmLineItem
+	 * CardPaymentInvoice2.mmLineItem}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -771,24 +797,25 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd LineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmLineItem = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem5.LineItemDetails, com.tools20022.repository.msg.LineItem7.LineItemDetails, com.tools20022.repository.msg.LineItem6.LineItemDetails,
-					com.tools20022.repository.msg.LineItem8.LineItemDetails, com.tools20022.repository.msg.LineItem4.CommercialLineItems, com.tools20022.repository.msg.LineItem9.CommercialLineItems,
-					com.tools20022.repository.msg.CertificateDataSet1.LineItem, com.tools20022.repository.msg.LineItem11.LineItemDetails, com.tools20022.repository.msg.CertificateDataSet2.LineItem,
-					com.tools20022.repository.msg.LineItem12.CommercialLineItems, com.tools20022.repository.msg.CardPaymentInvoice1.LineItem, com.tools20022.repository.msg.LineItem14.LineItemDetails,
-					com.tools20022.repository.msg.LineItem13.LineItemDetails, com.tools20022.repository.msg.LineItem15.CommercialLineItems, com.tools20022.repository.msg.CardPaymentInvoice2.LineItem);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem5.mmLineItemDetails, com.tools20022.repository.msg.LineItem7.mmLineItemDetails, com.tools20022.repository.msg.LineItem6.mmLineItemDetails,
+					com.tools20022.repository.msg.LineItem8.mmLineItemDetails, com.tools20022.repository.msg.LineItem4.mmCommercialLineItems, com.tools20022.repository.msg.LineItem9.mmCommercialLineItems,
+					com.tools20022.repository.msg.CertificateDataSet1.mmLineItem, com.tools20022.repository.msg.LineItem11.mmLineItemDetails, com.tools20022.repository.msg.CertificateDataSet2.mmLineItem,
+					com.tools20022.repository.msg.LineItem12.mmCommercialLineItems, com.tools20022.repository.msg.CardPaymentInvoice1.mmLineItem, com.tools20022.repository.msg.LineItem14.mmLineItemDetails,
+					com.tools20022.repository.msg.LineItem13.mmLineItemDetails, com.tools20022.repository.msg.LineItem15.mmCommercialLineItems, com.tools20022.repository.msg.CardPaymentInvoice2.mmLineItem);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LineItem";
 			definition = "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line item.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.Invoice;
+			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmInvoice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
 		}
 	};
+	protected CurrencyAndAmount totalNetAmount;
 	/**
 	 * Total amount after taxes, adjustments and charges.
 	 * <p>
@@ -799,24 +826,24 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem6#OrderedTotalNetAmount
-	 * LineItem6.OrderedTotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem8#OrderedTotalNetAmount
-	 * LineItem8.OrderedTotalNetAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.LineItem14#OrderedTotalNetAmount
-	 * LineItem14.OrderedTotalNetAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem6#mmOrderedTotalNetAmount
+	 * LineItem6.mmOrderedTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem8#mmOrderedTotalNetAmount
+	 * LineItem8.mmOrderedTotalNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem14#mmOrderedTotalNetAmount
+	 * LineItem14.mmOrderedTotalNetAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -828,19 +855,21 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Total amount after taxes, adjustments and charges."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TotalNetAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTotalNetAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem6.OrderedTotalNetAmount, com.tools20022.repository.msg.LineItem8.OrderedTotalNetAmount, com.tools20022.repository.msg.LineItem14.OrderedTotalNetAmount);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem6.mmOrderedTotalNetAmount, com.tools20022.repository.msg.LineItem8.mmOrderedTotalNetAmount,
+					com.tools20022.repository.msg.LineItem14.mmOrderedTotalNetAmount);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TotalNetAmount";
 			definition = "Total amount after taxes, adjustments and charges.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange;
 	/**
 	 * Specifies currency exchange information which is used when currency
 	 * conversion is necessary.
@@ -850,8 +879,8 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#RelatedInvoice
-	 * CurrencyExchange.RelatedInvoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmRelatedInvoice
+	 * CurrencyExchange.mmRelatedInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -859,27 +888,27 @@ public class Invoice extends FinancialDocument {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#InvoiceCurrencyExchange
-	 * TradeSettlement1.InvoiceCurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingStatement1#CurrencyExchange
-	 * BillingStatement1.CurrencyExchange}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancingItemList1#AgreedRate
-	 * FinancingItemList1.AgreedRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingStatement2#CurrencyExchange
-	 * BillingStatement2.CurrencyExchange}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeSettlement1#mmInvoiceCurrencyExchange
+	 * TradeSettlement1.mmInvoiceCurrencyExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingStatement1#mmCurrencyExchange
+	 * BillingStatement1.mmCurrencyExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmAgreedRate
+	 * FinancingItemList1.mmAgreedRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingStatement2#mmCurrencyExchange
+	 * BillingStatement2.mmCurrencyExchange}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -893,21 +922,22 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CurrencyExchange = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.InvoiceCurrencyExchange, com.tools20022.repository.msg.BillingStatement1.CurrencyExchange,
-					com.tools20022.repository.msg.FinancingItemList1.AgreedRate, com.tools20022.repository.msg.BillingStatement2.CurrencyExchange);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmInvoiceCurrencyExchange, com.tools20022.repository.msg.BillingStatement1.mmCurrencyExchange,
+					com.tools20022.repository.msg.FinancingItemList1.mmAgreedRate, com.tools20022.repository.msg.BillingStatement2.mmCurrencyExchange);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Specifies currency exchange information which is used when currency conversion is necessary.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.RelatedInvoice;
+			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmRelatedInvoice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
+	protected ExternalBillingCompensationTypeCode billingCompensationType;
 	/**
 	 * Defines the type of billing compensation.
 	 * <p>
@@ -918,23 +948,24 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExternalBillingCompensationTypeCode
 	 * ExternalBillingCompensationTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.BillingCompensationType1Choice#Code
-	 * BillingCompensationType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.BillingCompensationType1Choice#Proprietary
-	 * BillingCompensationType1Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BillingCompensation1#Type
-	 * BillingCompensation1.Type}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BillingCompensationType1Choice#mmCode
+	 * BillingCompensationType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BillingCompensationType1Choice#mmProprietary
+	 * BillingCompensationType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingCompensation1#mmType
+	 * BillingCompensation1.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -946,20 +977,21 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Defines the type of billing compensation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BillingCompensationType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBillingCompensationType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BillingCompensationType1Choice.Code, com.tools20022.repository.choice.BillingCompensationType1Choice.Proprietary,
-					com.tools20022.repository.msg.BillingCompensation1.Type);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BillingCompensationType1Choice.mmCode, com.tools20022.repository.choice.BillingCompensationType1Choice.mmProprietary,
+					com.tools20022.repository.msg.BillingCompensation1.mmType);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BillingCompensationType";
 			definition = "Defines the type of billing compensation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalBillingCompensationTypeCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.InvoicePartyRole> invoicePartyRole;
 	/**
 	 * Role played by a party in the context of invoices.
 	 * <p>
@@ -968,8 +1000,8 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvoicePartyRole#Invoice
-	 * InvoicePartyRole.Invoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoicePartyRole#mmInvoice
+	 * InvoicePartyRole.mmInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -992,19 +1024,20 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Role played by a party in the context of invoices."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvoicePartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvoicePartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Invoice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvoicePartyRole";
 			definition = "Role played by a party in the context of invoices.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.InvoicePartyRole.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvoicePartyRole.Invoice;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvoicePartyRole.mmInvoice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvoicePartyRole.mmObject();
 		}
 	};
+	protected Invoice originalInvoice;
 	/**
 	 * Invoice to which another invoice is associated.
 	 * <p>
@@ -1013,26 +1046,26 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#RelatedInvoice
-	 * Invoice.RelatedInvoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmRelatedInvoice
+	 * Invoice.mmRelatedInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Invoice Invoice}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvoiceFinancingDetails1#OriginalInvoiceInformation
-	 * InvoiceFinancingDetails1.OriginalInvoiceInformation}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceFinancingDetails1#mmOriginalInvoiceInformation
+	 * InvoiceFinancingDetails1.mmOriginalInvoiceInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1044,21 +1077,22 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Invoice to which another invoice is associated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OriginalInvoice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOriginalInvoice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceFinancingDetails1.OriginalInvoiceInformation);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceFinancingDetails1.mmOriginalInvoiceInformation);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OriginalInvoice";
 			definition = "Invoice to which another invoice is associated.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Invoice.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.RelatedInvoice;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmRelatedInvoice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Invoice> relatedInvoice;
 	/**
 	 * Specifies another invoice linked to the current one, for instance a
 	 * previous invoice for which a credit note is available.
@@ -1068,8 +1102,8 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#OriginalInvoice
-	 * Invoice.OriginalInvoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmOriginalInvoice
+	 * Invoice.mmOriginalInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1093,19 +1127,20 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedInvoice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedInvoice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Invoice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvoice";
 			definition = "Specifies another invoice linked to the current one, for instance a previous invoice for which a credit note is available.";
 			minOccurs = 0;
-			type_lazy = () -> Invoice.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.OriginalInvoice;
+			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmOriginalInvoice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 		}
 	};
+	protected InvoiceFinancingAgreement invoiceFinancingTransaction;
 	/**
 	 * Financing transaction related to an invoice.
 	 * <p>
@@ -1114,8 +1149,8 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#Invoice
-	 * InvoiceFinancingAgreement.Invoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoice
+	 * InvoiceFinancingAgreement.mmInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1124,21 +1159,21 @@ public class Invoice extends FinancialDocument {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement
 	 * InvoiceFinancingAgreement}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancingItemList1#TotalRequestFinancing
-	 * FinancingItemList1.TotalRequestFinancing}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialItem1#FinancingStatus
-	 * FinancialItem1.FinancingStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmTotalRequestFinancing
+	 * FinancingItemList1.mmTotalRequestFinancing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialItem1#mmFinancingStatus
+	 * FinancialItem1.mmFinancingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1150,21 +1185,22 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Financing transaction related to an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvoiceFinancingTransaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvoiceFinancingTransaction = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingItemList1.TotalRequestFinancing, com.tools20022.repository.msg.FinancialItem1.FinancingStatus);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingItemList1.mmTotalRequestFinancing, com.tools20022.repository.msg.FinancialItem1.mmFinancingStatus);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvoiceFinancingTransaction";
 			definition = "Financing transaction related to an invoice.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvoiceFinancingAgreement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.Invoice;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmObject();
 		}
 	};
+	protected CurrencyAndAmount billingCompensationAmount;
 	/**
 	 * Specifies the compensation amount of an incorrect billing.
 	 * <p>
@@ -1191,18 +1227,19 @@ public class Invoice extends FinancialDocument {
 	 * "Specifies the compensation amount of an incorrect billing."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute BillingCompensationAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmBillingCompensationAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> Invoice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BillingCompensationAmount";
 			definition = "Specifies the compensation amount of an incorrect billing.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected InvoiceStatus invoiceStatus;
 	/**
 	 * Status of the invoice or of the billing process.
 	 * <p>
@@ -1211,8 +1248,8 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceStatus#Invoice
-	 * InvoiceStatus.Invoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceStatus#mmInvoice
+	 * InvoiceStatus.mmInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1235,20 +1272,21 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Status of the invoice or of the billing process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvoiceStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvoiceStatus = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> Invoice.mmObject();
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InvoiceStatus";
 			definition = "Status of the invoice or of the billing process.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.InvoiceStatus.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceStatus.Invoice;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceStatus.mmInvoice;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvoiceStatus.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Payment> payment;
 	/**
 	 * Payment related to an invoice.
 	 * <p>
@@ -1257,26 +1295,26 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#InvoiceReconciliation
-	 * Payment.InvoiceReconciliation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmInvoiceReconciliation
+	 * Payment.mmInvoiceReconciliation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReconciliationList1#PaymentMeans
-	 * ReconciliationList1.PaymentMeans}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmPaymentMeans
+	 * ReconciliationList1.mmPaymentMeans}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1288,20 +1326,21 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Payment related to an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Payment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReconciliationList1.PaymentMeans);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReconciliationList1.mmPaymentMeans);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Payment related to an invoice.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Payment.InvoiceReconciliation;
+			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmInvoiceReconciliation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
+	protected DebitCreditCode creditDebitIndicator;
 	/**
 	 * Indicates the direction of the invoice amount.
 	 * <p>
@@ -1312,18 +1351,18 @@ public class Invoice extends FinancialDocument {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DebitCreditCode
 	 * DebitCreditCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialItem1#CreditDebitIndicator
-	 * FinancialItem1.CreditDebitIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Invoice
 	 * Invoice}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialItem1#mmCreditDebitIndicator
+	 * FinancialItem1.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1335,16 +1374,16 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Indicates the direction of the invoice amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CreditDebitIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialItem1.CreditDebitIndicator);
-			elementContext_lazy = () -> Invoice.mmObject();
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialItem1.mmCreditDebitIndicator);
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates the direction of the invoice amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
 		}
 	};
@@ -1352,31 +1391,191 @@ public class Invoice extends FinancialDocument {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Invoice";
 				definition = "General information about an invoice, such as number, issue date date and monetary amounts.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.RelatedInvoice, com.tools20022.repository.entity.Payment.InvoiceReconciliation,
-						com.tools20022.repository.entity.CurrencyExchange.RelatedInvoice, com.tools20022.repository.entity.Invoice.OriginalInvoice, com.tools20022.repository.entity.Invoice.RelatedInvoice,
-						com.tools20022.repository.entity.InvoicePartyRole.Invoice, com.tools20022.repository.entity.InvoiceFinancingAgreement.Invoice, com.tools20022.repository.entity.LineItem.Invoice,
-						com.tools20022.repository.entity.CommercialTradeSettlement.Invoice, com.tools20022.repository.entity.InvoiceStatus.Invoice);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceLegalIssue1.InvoiceLegalStatement, com.tools20022.repository.msg.BillingReport1.RegulatoryData,
-						com.tools20022.repository.msg.BillingReport1.InvoiceTotals, com.tools20022.repository.msg.BillingReport1.ServiceCategoryTotals, com.tools20022.repository.msg.BillingCancellationReport1.RegulatoryData,
-						com.tools20022.repository.msg.ReconciliationList1.Parameters, com.tools20022.repository.msg.ReconciliationList1.Item, com.tools20022.repository.msg.FinancialItem1.ItemContext,
-						com.tools20022.repository.msg.FinancialItem1.FinancialDocumentReference, com.tools20022.repository.msg.FinancialItemParameters1.RelatedItem);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmRelatedInvoice, com.tools20022.repository.entity.Payment.mmInvoiceReconciliation,
+						com.tools20022.repository.entity.CurrencyExchange.mmRelatedInvoice, com.tools20022.repository.entity.Invoice.mmOriginalInvoice, com.tools20022.repository.entity.Invoice.mmRelatedInvoice,
+						com.tools20022.repository.entity.InvoicePartyRole.mmInvoice, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoice, com.tools20022.repository.entity.LineItem.mmInvoice,
+						com.tools20022.repository.entity.CommercialTradeSettlement.mmInvoice, com.tools20022.repository.entity.InvoiceStatus.mmInvoice);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceLegalIssue1.mmInvoiceLegalStatement, com.tools20022.repository.msg.BillingReport1.mmRegulatoryData,
+						com.tools20022.repository.msg.BillingReport1.mmInvoiceTotals, com.tools20022.repository.msg.BillingReport1.mmServiceCategoryTotals, com.tools20022.repository.msg.BillingCancellationReport1.mmRegulatoryData,
+						com.tools20022.repository.msg.ReconciliationList1.mmParameters, com.tools20022.repository.msg.ReconciliationList1.mmItem, com.tools20022.repository.msg.FinancialItem1.mmItemContext,
+						com.tools20022.repository.msg.FinancialItem1.mmFinancialDocumentReference, com.tools20022.repository.msg.FinancialItemParameters1.mmRelatedItem);
 				superType_lazy = () -> FinancialDocument.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Invoice.CreditDebitNoteAmount, com.tools20022.repository.entity.Invoice.TotalTaxAmount, com.tools20022.repository.entity.Invoice.TotalInvoiceAmount,
-						com.tools20022.repository.entity.Invoice.InvoiceCurrency, com.tools20022.repository.entity.Invoice.PeriodCovered, com.tools20022.repository.entity.Invoice.TradeSettlement,
-						com.tools20022.repository.entity.Invoice.TotalCharge, com.tools20022.repository.entity.Invoice.TotalPrepaidAmount, com.tools20022.repository.entity.Invoice.LineItem,
-						com.tools20022.repository.entity.Invoice.TotalNetAmount, com.tools20022.repository.entity.Invoice.CurrencyExchange, com.tools20022.repository.entity.Invoice.BillingCompensationType,
-						com.tools20022.repository.entity.Invoice.InvoicePartyRole, com.tools20022.repository.entity.Invoice.OriginalInvoice, com.tools20022.repository.entity.Invoice.RelatedInvoice,
-						com.tools20022.repository.entity.Invoice.InvoiceFinancingTransaction, com.tools20022.repository.entity.Invoice.BillingCompensationAmount, com.tools20022.repository.entity.Invoice.InvoiceStatus,
-						com.tools20022.repository.entity.Invoice.Payment, com.tools20022.repository.entity.Invoice.CreditDebitIndicator);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Invoice.mmCreditDebitNoteAmount, com.tools20022.repository.entity.Invoice.mmTotalTaxAmount, com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount,
+						com.tools20022.repository.entity.Invoice.mmInvoiceCurrency, com.tools20022.repository.entity.Invoice.mmPeriodCovered, com.tools20022.repository.entity.Invoice.mmTradeSettlement,
+						com.tools20022.repository.entity.Invoice.mmTotalCharge, com.tools20022.repository.entity.Invoice.mmTotalPrepaidAmount, com.tools20022.repository.entity.Invoice.mmLineItem,
+						com.tools20022.repository.entity.Invoice.mmTotalNetAmount, com.tools20022.repository.entity.Invoice.mmCurrencyExchange, com.tools20022.repository.entity.Invoice.mmBillingCompensationType,
+						com.tools20022.repository.entity.Invoice.mmInvoicePartyRole, com.tools20022.repository.entity.Invoice.mmOriginalInvoice, com.tools20022.repository.entity.Invoice.mmRelatedInvoice,
+						com.tools20022.repository.entity.Invoice.mmInvoiceFinancingTransaction, com.tools20022.repository.entity.Invoice.mmBillingCompensationAmount, com.tools20022.repository.entity.Invoice.mmInvoiceStatus,
+						com.tools20022.repository.entity.Invoice.mmPayment, com.tools20022.repository.entity.Invoice.mmCreditDebitIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(InvoiceTotals1.mmObject(), OriginalInvoiceInformation1.mmObject(), InvoiceFinancingDetails1.mmObject(), SettlementMonetarySummation1.mmObject(),
 						InvoiceIdentification1.mmObject(), BillingCompensationType1Choice.mmObject(), BillingStatement1.mmObject(), InvoiceLegalIssue1.mmObject(), InvoiceTotals2.mmObject(), ServiceCategoryTotals1.mmObject(),
 						BillingReport1.mmObject(), BillingCancellationReport1.mmObject(), BillingSearchCriteria1.mmObject(), FinancingItemList1.mmObject(), FinancialItemParameters1.mmObject(), BillingStatement2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getCreditDebitNoteAmount() {
+		return creditDebitNoteAmount;
+	}
+
+	public void setCreditDebitNoteAmount(CurrencyAndAmount creditDebitNoteAmount) {
+		this.creditDebitNoteAmount = creditDebitNoteAmount;
+	}
+
+	public CurrencyAndAmount getTotalTaxAmount() {
+		return totalTaxAmount;
+	}
+
+	public void setTotalTaxAmount(CurrencyAndAmount totalTaxAmount) {
+		this.totalTaxAmount = totalTaxAmount;
+	}
+
+	public CurrencyAndAmount getTotalInvoiceAmount() {
+		return totalInvoiceAmount;
+	}
+
+	public void setTotalInvoiceAmount(CurrencyAndAmount totalInvoiceAmount) {
+		this.totalInvoiceAmount = totalInvoiceAmount;
+	}
+
+	public CurrencyCode getInvoiceCurrency() {
+		return invoiceCurrency;
+	}
+
+	public void setInvoiceCurrency(CurrencyCode invoiceCurrency) {
+		this.invoiceCurrency = invoiceCurrency;
+	}
+
+	public List<DateTimePeriod> getPeriodCovered() {
+		return periodCovered;
+	}
+
+	public void setPeriodCovered(List<com.tools20022.repository.entity.DateTimePeriod> periodCovered) {
+		this.periodCovered = periodCovered;
+	}
+
+	public List<CommercialTradeSettlement> getTradeSettlement() {
+		return tradeSettlement;
+	}
+
+	public void setTradeSettlement(List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement) {
+		this.tradeSettlement = tradeSettlement;
+	}
+
+	public CurrencyAndAmount getTotalCharge() {
+		return totalCharge;
+	}
+
+	public void setTotalCharge(CurrencyAndAmount totalCharge) {
+		this.totalCharge = totalCharge;
+	}
+
+	public CurrencyAndAmount getTotalPrepaidAmount() {
+		return totalPrepaidAmount;
+	}
+
+	public void setTotalPrepaidAmount(CurrencyAndAmount totalPrepaidAmount) {
+		this.totalPrepaidAmount = totalPrepaidAmount;
+	}
+
+	public List<LineItem> getLineItem() {
+		return lineItem;
+	}
+
+	public void setLineItem(List<com.tools20022.repository.entity.LineItem> lineItem) {
+		this.lineItem = lineItem;
+	}
+
+	public CurrencyAndAmount getTotalNetAmount() {
+		return totalNetAmount;
+	}
+
+	public void setTotalNetAmount(CurrencyAndAmount totalNetAmount) {
+		this.totalNetAmount = totalNetAmount;
+	}
+
+	public List<CurrencyExchange> getCurrencyExchange() {
+		return currencyExchange;
+	}
+
+	public void setCurrencyExchange(List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange) {
+		this.currencyExchange = currencyExchange;
+	}
+
+	public ExternalBillingCompensationTypeCode getBillingCompensationType() {
+		return billingCompensationType;
+	}
+
+	public void setBillingCompensationType(ExternalBillingCompensationTypeCode billingCompensationType) {
+		this.billingCompensationType = billingCompensationType;
+	}
+
+	public List<InvoicePartyRole> getInvoicePartyRole() {
+		return invoicePartyRole;
+	}
+
+	public void setInvoicePartyRole(List<com.tools20022.repository.entity.InvoicePartyRole> invoicePartyRole) {
+		this.invoicePartyRole = invoicePartyRole;
+	}
+
+	public Invoice getOriginalInvoice() {
+		return originalInvoice;
+	}
+
+	public void setOriginalInvoice(com.tools20022.repository.entity.Invoice originalInvoice) {
+		this.originalInvoice = originalInvoice;
+	}
+
+	public List<Invoice> getRelatedInvoice() {
+		return relatedInvoice;
+	}
+
+	public void setRelatedInvoice(List<com.tools20022.repository.entity.Invoice> relatedInvoice) {
+		this.relatedInvoice = relatedInvoice;
+	}
+
+	public InvoiceFinancingAgreement getInvoiceFinancingTransaction() {
+		return invoiceFinancingTransaction;
+	}
+
+	public void setInvoiceFinancingTransaction(com.tools20022.repository.entity.InvoiceFinancingAgreement invoiceFinancingTransaction) {
+		this.invoiceFinancingTransaction = invoiceFinancingTransaction;
+	}
+
+	public CurrencyAndAmount getBillingCompensationAmount() {
+		return billingCompensationAmount;
+	}
+
+	public void setBillingCompensationAmount(CurrencyAndAmount billingCompensationAmount) {
+		this.billingCompensationAmount = billingCompensationAmount;
+	}
+
+	public InvoiceStatus getInvoiceStatus() {
+		return invoiceStatus;
+	}
+
+	public void setInvoiceStatus(com.tools20022.repository.entity.InvoiceStatus invoiceStatus) {
+		this.invoiceStatus = invoiceStatus;
+	}
+
+	public List<Payment> getPayment() {
+		return payment;
+	}
+
+	public void setPayment(List<com.tools20022.repository.entity.Payment> payment) {
+		this.payment = payment;
+	}
+
+	public DebitCreditCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(DebitCreditCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
 	}
 }

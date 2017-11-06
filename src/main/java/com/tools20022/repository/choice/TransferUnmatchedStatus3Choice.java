@@ -39,17 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#NoSpecifiedReason
- * TransferUnmatchedStatus3Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#mmNoSpecifiedReason
+ * TransferUnmatchedStatus3Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#Reason
- * TransferUnmatchedStatus3Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#mmReason
+ * TransferUnmatchedStatus3Choice.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#ExtendedReason
- * TransferUnmatchedStatus3Choice.ExtendedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#mmExtendedReason
+ * TransferUnmatchedStatus3Choice.mmExtendedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#DataSourceScheme
- * TransferUnmatchedStatus3Choice.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#mmDataSourceScheme
+ * TransferUnmatchedStatus3Choice.mmDataSourceScheme}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransferUnmatchedStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -89,8 +90,8 @@ public class TransferUnmatchedStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,25 +112,26 @@ public class TransferUnmatchedStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#NoSpecifiedReason
-	 * TransferUnmatchedStatus2.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#mmNoSpecifiedReason
+	 * TransferUnmatchedStatus2.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatus2.NoSpecifiedReason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatus2.mmNoSpecifiedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected TransferUnmatchedReason2Code reason;
 	/**
 	 * Reason for the unmatched status.
 	 * <p>
@@ -163,25 +165,26 @@ public class TransferUnmatchedStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#Reason
-	 * TransferUnmatchedStatus2.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#mmReason
+	 * TransferUnmatchedStatus2.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the unmatched status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatus2.Reason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatus2.mmReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedReason;
 	/**
 	 * Reason for the unmatched status.
 	 * <p>
@@ -215,25 +218,26 @@ public class TransferUnmatchedStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#ExtendedReason
-	 * TransferUnmatchedStatus2.ExtendedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#mmExtendedReason
+	 * TransferUnmatchedStatus2.mmExtendedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
+			componentContext_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the unmatched status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatus2.ExtendedReason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatus2.mmExtendedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the unmatched status.
 	 * <p>
@@ -245,8 +249,8 @@ public class TransferUnmatchedStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#DataSourceScheme
-	 * StatusReason.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+	 * StatusReason.mmDataSourceScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -267,34 +271,34 @@ public class TransferUnmatchedStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#DataSourceScheme
-	 * TransferUnmatchedStatus2.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#mmDataSourceScheme
+	 * TransferUnmatchedStatus2.mmDataSourceScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.DataSourceScheme;
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the unmatched status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatus2.DataSourceScheme;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatus2.mmDataSourceScheme;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.NoSpecifiedReason, com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.Reason,
-						com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.ExtendedReason, com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.DataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmReason,
+						com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmExtendedReason, com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmDataSourceScheme);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferUnmatchedStatus3Choice";
 				definition = "Reason for the unmatched status.";
@@ -302,5 +306,37 @@ public class TransferUnmatchedStatus3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public TransferUnmatchedReason2Code getReason() {
+		return reason;
+	}
+
+	public void setReason(TransferUnmatchedReason2Code reason) {
+		this.reason = reason;
+	}
+
+	public Extended350Code getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
 	}
 }

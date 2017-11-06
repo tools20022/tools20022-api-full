@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Scope The BankToCustomerDebitCreditNotification message is sent by the
@@ -67,21 +68,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06#GroupHeader
- * BankToCustomerDebitCreditNotificationV06.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06#mmGroupHeader
+ * BankToCustomerDebitCreditNotificationV06.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06#Notification
- * BankToCustomerDebitCreditNotificationV06.Notification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06#mmNotification
+ * BankToCustomerDebitCreditNotificationV06.mmNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06#SupplementaryData
- * BankToCustomerDebitCreditNotificationV06.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06#mmSupplementaryData
+ * BankToCustomerDebitCreditNotificationV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06#identifier
- * BankToCustomerDebitCreditNotificationV06.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.054.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BankToCustomerDebitCreditNotificationV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader58 groupHeader;
 	/**
 	 * Common information for the message.
 	 * <p>
@@ -124,22 +124,23 @@ public class BankToCustomerDebitCreditNotificationV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05#GroupHeader
-	 * BankToCustomerDebitCreditNotificationV05.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05#mmGroupHeader
+	 * BankToCustomerDebitCreditNotificationV05.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common information for the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05.GroupHeader;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader58.mmObject();
 		}
 	};
+	protected List<AccountNotification12> notification;
 	/**
 	 * Notifies debit and credit entries for the account.
 	 * <p>
@@ -164,21 +165,22 @@ public class BankToCustomerDebitCreditNotificationV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05#Notification
-	 * BankToCustomerDebitCreditNotificationV05.Notification}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05#mmNotification
+	 * BankToCustomerDebitCreditNotificationV05.mmNotification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Notification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNotification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Ntfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notification";
 			definition = "Notifies debit and credit entries for the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05.Notification;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05.mmNotification;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountNotification12.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -206,46 +208,19 @@ public class BankToCustomerDebitCreditNotificationV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05#SupplementaryData
-	 * BankToCustomerDebitCreditNotificationV05.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05#mmSupplementaryData
+	 * BankToCustomerDebitCreditNotificationV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "06"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "054"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "054";
-			version = "06";
-			flavour = "001";
 		}
 	};
 
@@ -260,11 +235,42 @@ public class BankToCustomerDebitCreditNotificationV06 {
 				rootElement = "Document";
 				xmlTag = "BkToCstmrDbtCdtNtfctn";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06.GroupHeader,
-						com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06.Notification, com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06.mmGroupHeader,
+						com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06.mmNotification, com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "054";
+						version = "06";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader58 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader58 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<AccountNotification12> getNotification() {
+		return notification;
+	}
+
+	public void setNotification(List<AccountNotification12> notification) {
+		this.notification = notification;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reason for the rejection or repair status.
@@ -35,11 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RejectionOrRepairReason14#Code
- * RejectionOrRepairReason14.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason14#AdditionalReasonInformation
- * RejectionOrRepairReason14.AdditionalReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason14#mmCode
+ * RejectionOrRepairReason14.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason14#mmAdditionalReasonInformation
+ * RejectionOrRepairReason14.mmAdditionalReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectionOrRepairReason14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<RejectionAndRepairReason14Choice> code;
 	/**
 	 * Specifies the reason why the instruction/request has a rejected or repair
 	 * status.
@@ -112,27 +115,28 @@ public class RejectionOrRepairReason14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason23#Code
-	 * RejectionOrRepairReason23.Code}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason23#mmCode
+	 * RejectionOrRepairReason23.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Code = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RejectionOrRepairReason14.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
+			componentContext_lazy = () -> RejectionOrRepairReason14.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction/request has a rejected or repair status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionOrRepairReason23.Code);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionOrRepairReason23.mmCode);
 			minOccurs = 0;
-			type_lazy = () -> RejectionAndRepairReason14Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> RejectionAndRepairReason14Choice.mmObject();
 		}
 	};
+	protected Max210Text additionalReasonInformation;
 	/**
 	 * Provides additional reason information that cannot be provided in a
 	 * structured field.
@@ -146,8 +150,8 @@ public class RejectionOrRepairReason14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,24 +174,24 @@ public class RejectionOrRepairReason14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason23#AdditionalReasonInformation
-	 * RejectionOrRepairReason23.AdditionalReasonInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason23#mmAdditionalReasonInformation
+	 * RejectionOrRepairReason23.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> RejectionOrRepairReason14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional reason information that cannot be provided in a structured field.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionOrRepairReason23.AdditionalReasonInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionOrRepairReason23.mmAdditionalReasonInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
@@ -195,16 +199,32 @@ public class RejectionOrRepairReason14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionOrRepairReason14.Code, com.tools20022.repository.msg.RejectionOrRepairReason14.AdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionOrRepairReason14.mmCode, com.tools20022.repository.msg.RejectionOrRepairReason14.mmAdditionalReasonInformation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionOrRepairReason14";
 				definition = "Reason for the rejection or repair status.";
-				previousVersion_lazy = () -> RejectionOrRepairReason4.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RejectionOrRepairReason23.mmObject());
+				previousVersion_lazy = () -> RejectionOrRepairReason4.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<RejectionAndRepairReason14Choice> getCode() {
+		return code;
+	}
+
+	public void setCode(List<RejectionAndRepairReason14Choice> code) {
+		this.code = code;
+	}
+
+	public Max210Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
 	}
 }

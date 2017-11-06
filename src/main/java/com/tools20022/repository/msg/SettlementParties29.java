@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementParties29#DeliveryAgent
- * SettlementParties29.DeliveryAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementParties29#mmDeliveryAgent
+ * SettlementParties29.mmDeliveryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementParties29#Intermediary
- * SettlementParties29.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementParties29#mmIntermediary
+ * SettlementParties29.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementParties29#ReceivingAgent
- * SettlementParties29.ReceivingAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementParties29#mmReceivingAgent
+ * SettlementParties29.mmReceivingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementParties29#BeneficiaryInstitution
- * SettlementParties29.BeneficiaryInstitution}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementParties29#mmBeneficiaryInstitution
+ * SettlementParties29.mmBeneficiaryInstitution}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,72 +56,72 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02#TradingSideSettlementInstructions
- * ForeignExchangeTradeInstructionAmendmentV02.TradingSideSettlementInstructions
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02#CounterpartySideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02#mmTradingSideSettlementInstructions
  * ForeignExchangeTradeInstructionAmendmentV02.
- * CounterpartySideSettlementInstructions}</li>
+ * mmTradingSideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02#TradingSideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02#mmCounterpartySideSettlementInstructions
+ * ForeignExchangeTradeInstructionAmendmentV02.
+ * mmCounterpartySideSettlementInstructions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02#mmTradingSideSettlementInstructions
  * ForeignExchangeTradeInstructionCancellationV02.
- * TradingSideSettlementInstructions}</li>
+ * mmTradingSideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02#CounterpartySideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02#mmCounterpartySideSettlementInstructions
  * ForeignExchangeTradeInstructionCancellationV02.
- * CounterpartySideSettlementInstructions}</li>
+ * mmCounterpartySideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02#TradingSideSettlementInstructions
- * ForeignExchangeTradeInstructionV02.TradingSideSettlementInstructions}</li>
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02#mmTradingSideSettlementInstructions
+ * ForeignExchangeTradeInstructionV02.mmTradingSideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02#CounterpartySideSettlementInstructions
- * ForeignExchangeTradeInstructionV02.CounterpartySideSettlementInstructions}</li>
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02#mmCounterpartySideSettlementInstructions
+ * ForeignExchangeTradeInstructionV02.mmCounterpartySideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02#TradingSideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02#mmTradingSideSettlementInstructions
  * ForeignExchangeTradeStatusAndDetailsNotificationV02.
- * TradingSideSettlementInstructions}</li>
+ * mmTradingSideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02#CounterpartySideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02#mmCounterpartySideSettlementInstructions
  * ForeignExchangeTradeStatusAndDetailsNotificationV02.
- * CounterpartySideSettlementInstructions}</li>
+ * mmCounterpartySideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04#TradingSideSettlementInstructions
- * ForeignExchangeTradeInstructionV04.TradingSideSettlementInstructions}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04#mmTradingSideSettlementInstructions
+ * ForeignExchangeTradeInstructionV04.mmTradingSideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04#CounterpartySideSettlementInstructions
- * ForeignExchangeTradeInstructionV04.CounterpartySideSettlementInstructions}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04#mmCounterpartySideSettlementInstructions
+ * ForeignExchangeTradeInstructionV04.mmCounterpartySideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04#TradingSideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04#mmTradingSideSettlementInstructions
  * ForeignExchangeTradeInstructionCancellationV04.
- * TradingSideSettlementInstructions}</li>
+ * mmTradingSideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04#CounterpartySideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04#mmCounterpartySideSettlementInstructions
  * ForeignExchangeTradeInstructionCancellationV04.
- * CounterpartySideSettlementInstructions}</li>
+ * mmCounterpartySideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04#TradingSideSettlementInstructions
- * ForeignExchangeTradeInstructionAmendmentV04.TradingSideSettlementInstructions
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04#CounterpartySideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04#mmTradingSideSettlementInstructions
  * ForeignExchangeTradeInstructionAmendmentV04.
- * CounterpartySideSettlementInstructions}</li>
+ * mmTradingSideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#TradingSideSettlementInstructions
- * ForeignExchangeTradeStatusAndDetailsNotificationV04.
- * TradingSideSettlementInstructions}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04#mmCounterpartySideSettlementInstructions
+ * ForeignExchangeTradeInstructionAmendmentV04.
+ * mmCounterpartySideSettlementInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#CounterpartySideSettlementInstructions
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmTradingSideSettlementInstructions
  * ForeignExchangeTradeStatusAndDetailsNotificationV04.
- * CounterpartySideSettlementInstructions}</li>
+ * mmTradingSideSettlementInstructions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04#mmCounterpartySideSettlementInstructions
+ * ForeignExchangeTradeStatusAndDetailsNotificationV04.
+ * mmCounterpartySideSettlementInstructions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -141,6 +141,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementParties29 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification73Choice deliveryAgent;
 	/**
 	 * Financial institution from which cash will be transferred.
 	 * <p>
@@ -153,8 +154,8 @@ public class SettlementParties29 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -174,21 +175,22 @@ public class SettlementParties29 {
 	 * "Financial institution from which cash will be transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveryAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveryAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties29.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "DlvryAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryAgent";
 			definition = "Financial institution from which cash will be transferred.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice intermediary;
 	/**
 	 * Party, within the settlement chain, between the delivery and receiving
 	 * agents.
@@ -202,8 +204,8 @@ public class SettlementParties29 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -224,21 +226,22 @@ public class SettlementParties29 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Intermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties29.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Intrmy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			definition = "Party, within the settlement chain, between the delivery and receiving agents.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice receivingAgent;
 	/**
 	 * Financial institution where the payee will receive the funds.
 	 * <p>
@@ -251,8 +254,8 @@ public class SettlementParties29 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -272,21 +275,22 @@ public class SettlementParties29 {
 	 * "Financial institution where the payee will receive the funds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingAgent = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties29.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcvgAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgent";
 			definition = "Financial institution where the payee will receive the funds.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice beneficiaryInstitution;
 	/**
 	 * Ultimate institution that will receive the funds when different from the
 	 * trading or counterparty side.
@@ -300,8 +304,8 @@ public class SettlementParties29 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -322,45 +326,45 @@ public class SettlementParties29 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BeneficiaryInstitution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBeneficiaryInstitution = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties29.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "BnfcryInstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitution";
 			definition = "Ultimate institution that will receive the funds when different from the trading or counterparty side.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification73Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties29.DeliveryAgent, com.tools20022.repository.msg.SettlementParties29.Intermediary,
-						com.tools20022.repository.msg.SettlementParties29.ReceivingAgent, com.tools20022.repository.msg.SettlementParties29.BeneficiaryInstitution);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties29.mmDeliveryAgent, com.tools20022.repository.msg.SettlementParties29.mmIntermediary,
+						com.tools20022.repository.msg.SettlementParties29.mmReceivingAgent, com.tools20022.repository.msg.SettlementParties29.mmBeneficiaryInstitution);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.mmTradingSideSettlementInstructions,
+						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.mmCounterpartySideSettlementInstructions,
+						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.mmTradingSideSettlementInstructions,
+						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.mmCounterpartySideSettlementInstructions,
+						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmTradingSideSettlementInstructions,
+						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmCounterpartySideSettlementInstructions,
+						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.mmTradingSideSettlementInstructions,
+						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.mmCounterpartySideSettlementInstructions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmTradingSideSettlementInstructions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmCounterpartySideSettlementInstructions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.mmTradingSideSettlementInstructions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.mmCounterpartySideSettlementInstructions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.mmTradingSideSettlementInstructions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.mmCounterpartySideSettlementInstructions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradingSideSettlementInstructions,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmCounterpartySideSettlementInstructions);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.TradingSideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.CounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.TradingSideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.CounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.TradingSideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.CounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.TradingSideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.CounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.TradingSideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.CounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.TradingSideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.CounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.TradingSideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.CounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.TradingSideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.CounterpartySideSettlementInstructions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties29";
 				definition = "Identification of a settlement party by a choice between a BIC or a name and address or a party identification.";
@@ -368,5 +372,37 @@ public class SettlementParties29 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification73Choice getDeliveryAgent() {
+		return deliveryAgent;
+	}
+
+	public void setDeliveryAgent(PartyIdentification73Choice deliveryAgent) {
+		this.deliveryAgent = deliveryAgent;
+	}
+
+	public PartyIdentification73Choice getIntermediary() {
+		return intermediary;
+	}
+
+	public void setIntermediary(PartyIdentification73Choice intermediary) {
+		this.intermediary = intermediary;
+	}
+
+	public PartyIdentification73Choice getReceivingAgent() {
+		return receivingAgent;
+	}
+
+	public void setReceivingAgent(PartyIdentification73Choice receivingAgent) {
+		this.receivingAgent = receivingAgent;
+	}
+
+	public PartyIdentification73Choice getBeneficiaryInstitution() {
+		return beneficiaryInstitution;
+	}
+
+	public void setBeneficiaryInstitution(PartyIdentification73Choice beneficiaryInstitution) {
+		this.beneficiaryInstitution = beneficiaryInstitution;
 	}
 }

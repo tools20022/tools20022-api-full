@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext1Code#Attended
- * AttendanceContext1Code.Attended}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext1Code#mmAttended
+ * AttendanceContext1Code.mmAttended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext1Code#SemiAttended
- * AttendanceContext1Code.SemiAttended}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext1Code#mmSemiAttended
+ * AttendanceContext1Code.mmSemiAttended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext1Code#Unattended
- * AttendanceContext1Code.Unattended}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext1Code#mmUnattended
+ * AttendanceContext1Code.mmUnattended}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class AttendanceContext1Code extends AttendanceContextCode {
 	 * name} = "Attended"</li>
 	 * </ul>
 	 */
-	public static final MMCode Attended = new MMCode() {
+	public static final MMCode mmAttended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attended";
@@ -107,7 +107,7 @@ public class AttendanceContext1Code extends AttendanceContextCode {
 	 * name} = "SemiAttended"</li>
 	 * </ul>
 	 */
-	public static final MMCode SemiAttended = new MMCode() {
+	public static final MMCode mmSemiAttended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAttended";
@@ -130,7 +130,7 @@ public class AttendanceContext1Code extends AttendanceContextCode {
 	 * name} = "Unattended"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unattended = new MMCode() {
+	public static final MMCode mmUnattended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unattended";
@@ -141,13 +141,13 @@ public class AttendanceContext1Code extends AttendanceContextCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ATTD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AttendanceContext1Code";
 				definition = "Human attendance at the POI location during the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttendanceContext1Code.Attended, com.tools20022.repository.codeset.AttendanceContext1Code.SemiAttended,
-						com.tools20022.repository.codeset.AttendanceContext1Code.Unattended);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttendanceContext1Code.mmAttended, com.tools20022.repository.codeset.AttendanceContext1Code.mmSemiAttended,
+						com.tools20022.repository.codeset.AttendanceContext1Code.mmUnattended);
 				trace_lazy = () -> AttendanceContextCode.mmObject();
 			}
 		});

@@ -35,25 +35,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OpeningData1#TradeDate
- * OpeningData1.TradeDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OpeningData1#mmTradeDate
+ * OpeningData1.mmTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OpeningData1#NotificationIdentification
- * OpeningData1.NotificationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OpeningData1#CommonReference
- * OpeningData1.CommonReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OpeningData1#RelatedReference
- * OpeningData1.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.msg.OpeningData1#mmNotificationIdentification
+ * OpeningData1.mmNotificationIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OpeningData1#mmCommonReference
+ * OpeningData1.mmCommonReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OpeningData1#AmendOrCancelReason
- * OpeningData1.AmendOrCancelReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OpeningData1#TradeAmounts
- * OpeningData1.TradeAmounts}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OpeningData1#AgreedRate
- * OpeningData1.AgreedRate}</li>
+ * {@linkplain com.tools20022.repository.msg.OpeningData1#mmRelatedReference
+ * OpeningData1.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OpeningData1#ValuationConditions
- * OpeningData1.ValuationConditions}</li>
+ * {@linkplain com.tools20022.repository.msg.OpeningData1#mmAmendOrCancelReason
+ * OpeningData1.mmAmendOrCancelReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OpeningData1#mmTradeAmounts
+ * OpeningData1.mmTradeAmounts}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OpeningData1#mmAgreedRate
+ * OpeningData1.mmAgreedRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OpeningData1#mmValuationConditions
+ * OpeningData1.mmValuationConditions}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OpeningData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate tradeDate;
 	/**
 	 * Date at which the trading parties execute a treasury trade.
 	 * <p>
@@ -90,8 +92,8 @@ public class OpeningData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +112,21 @@ public class OpeningData1 {
 	 * "Date at which the trading parties execute a treasury trade. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> OpeningData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date at which the trading parties execute a treasury trade. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Max35Text notificationIdentification;
 	/**
 	 * Refers to the identification of a notification assigned by the trading
 	 * side.
@@ -153,7 +156,7 @@ public class OpeningData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OpeningData1.mmObject();
 			isDerived = false;
@@ -161,11 +164,12 @@ public class OpeningData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Refers to the identification of a notification assigned by the trading side.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text commonReference;
 	/**
 	 * Reference common to the parties of a trade.
 	 * <p>
@@ -178,8 +182,8 @@ public class OpeningData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CommonIdentification
-	 * TradeIdentification.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
+	 * TradeIdentification.mmCommonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,20 +201,21 @@ public class OpeningData1 {
 	 * definition} = "Reference common to the parties of a trade. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommonReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> OpeningData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CommonIdentification;
 			isDerived = false;
 			xmlTag = "CmonRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
 			definition = "Reference common to the parties of a trade. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text relatedReference;
 	/**
 	 * Refers to the identification of a previous event in the life of a non
 	 * deliverable forward trade.
@@ -240,7 +245,7 @@ public class OpeningData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OpeningData1.mmObject();
 			isDerived = false;
@@ -248,11 +253,12 @@ public class OpeningData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Refers to the identification of a previous event in the life of a  non deliverable forward trade. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text amendOrCancelReason;
 	/**
 	 * Describes the reason for the cancellation or the amendment.
 	 * <p>
@@ -280,7 +286,7 @@ public class OpeningData1 {
 	 * "Describes the reason for the cancellation or the amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmendOrCancelReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmendOrCancelReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OpeningData1.mmObject();
 			isDerived = false;
@@ -288,11 +294,12 @@ public class OpeningData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendOrCancelReason";
 			definition = "Describes the reason for the cancellation or the amendment.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AmountsAndValueDate1 tradeAmounts;
 	/**
 	 * Specifies the amounts of the non deliverable trade which is reported.
 	 * <p>
@@ -324,21 +331,22 @@ public class OpeningData1 {
 	 * "Specifies the amounts of the non deliverable trade which is reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TradeAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTradeAmounts = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OpeningData1.mmObject();
 			businessComponentTrace_lazy = () -> ForeignExchangeTrade.mmObject();
+			componentContext_lazy = () -> OpeningData1.mmObject();
 			isDerived = false;
 			xmlTag = "TradAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
 			definition = "Specifies the amounts of the non deliverable trade which is reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountsAndValueDate1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
 		}
 	};
+	protected AgreedRate1 agreedRate;
 	/**
 	 * Exchange rate between two currencies. The rate is agreed by the trading
 	 * parties during the negotiation process.
@@ -351,8 +359,8 @@ public class OpeningData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#AgreedRate
-	 * ForeignExchangeTrade.AgreedRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+	 * ForeignExchangeTrade.mmAgreedRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -372,21 +380,22 @@ public class OpeningData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AgreedRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAgreedRate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> OpeningData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.AgreedRate;
 			isDerived = false;
 			xmlTag = "AgrdRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedRate";
 			definition = "Exchange rate between two currencies. The rate is agreed by the trading parties during the negotiation process.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AgreedRate1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AgreedRate1.mmObject();
 		}
 	};
+	protected NonDeliverableForwardValuationConditions1 valuationConditions;
 	/**
 	 * Set of parameters used to calculate the valuation rate to be applied to a
 	 * non-deliverable agreement.
@@ -400,8 +409,8 @@ public class OpeningData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#FixingConditions
-	 * NonDeliverableTrade.FixingConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.NonDeliverableTrade#mmFixingConditions
+	 * NonDeliverableTrade.mmFixingConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -421,35 +430,99 @@ public class OpeningData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValuationConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValuationConditions = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmFixingConditions;
 			componentContext_lazy = () -> OpeningData1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.FixingConditions;
 			isDerived = false;
 			xmlTag = "ValtnConds";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationConditions";
 			definition = "Set of parameters used to calculate the valuation rate to be applied to a non-deliverable agreement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NonDeliverableForwardValuationConditions1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningData1.TradeDate, com.tools20022.repository.msg.OpeningData1.NotificationIdentification,
-						com.tools20022.repository.msg.OpeningData1.CommonReference, com.tools20022.repository.msg.OpeningData1.RelatedReference, com.tools20022.repository.msg.OpeningData1.AmendOrCancelReason,
-						com.tools20022.repository.msg.OpeningData1.TradeAmounts, com.tools20022.repository.msg.OpeningData1.AgreedRate, com.tools20022.repository.msg.OpeningData1.ValuationConditions);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningData1.mmTradeDate, com.tools20022.repository.msg.OpeningData1.mmNotificationIdentification,
+						com.tools20022.repository.msg.OpeningData1.mmCommonReference, com.tools20022.repository.msg.OpeningData1.mmRelatedReference, com.tools20022.repository.msg.OpeningData1.mmAmendOrCancelReason,
+						com.tools20022.repository.msg.OpeningData1.mmTradeAmounts, com.tools20022.repository.msg.OpeningData1.mmAgreedRate, com.tools20022.repository.msg.OpeningData1.mmValuationConditions);
 				trace_lazy = () -> ForeignExchangeTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OpeningData1";
 				definition = "List of elements which specify the opening of a non deliverable trade.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getTradeDate() {
+		return tradeDate;
+	}
+
+	public void setTradeDate(ISODate tradeDate) {
+		this.tradeDate = tradeDate;
+	}
+
+	public Max35Text getNotificationIdentification() {
+		return notificationIdentification;
+	}
+
+	public void setNotificationIdentification(Max35Text notificationIdentification) {
+		this.notificationIdentification = notificationIdentification;
+	}
+
+	public Max35Text getCommonReference() {
+		return commonReference;
+	}
+
+	public void setCommonReference(Max35Text commonReference) {
+		this.commonReference = commonReference;
+	}
+
+	public Max35Text getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(Max35Text relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Max35Text getAmendOrCancelReason() {
+		return amendOrCancelReason;
+	}
+
+	public void setAmendOrCancelReason(Max35Text amendOrCancelReason) {
+		this.amendOrCancelReason = amendOrCancelReason;
+	}
+
+	public AmountsAndValueDate1 getTradeAmounts() {
+		return tradeAmounts;
+	}
+
+	public void setTradeAmounts(com.tools20022.repository.msg.AmountsAndValueDate1 tradeAmounts) {
+		this.tradeAmounts = tradeAmounts;
+	}
+
+	public AgreedRate1 getAgreedRate() {
+		return agreedRate;
+	}
+
+	public void setAgreedRate(com.tools20022.repository.msg.AgreedRate1 agreedRate) {
+		this.agreedRate = agreedRate;
+	}
+
+	public NonDeliverableForwardValuationConditions1 getValuationConditions() {
+		return valuationConditions;
+	}
+
+	public void setValuationConditions(com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1 valuationConditions) {
+		this.valuationConditions = valuationConditions;
 	}
 }

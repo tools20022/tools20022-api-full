@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.ConfirmationType1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information about the type of request or instruction.
@@ -35,20 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation4#ConfirmationType
- * AccountManagementConfirmation4.ConfirmationType}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation4#mmConfirmationType
+ * AccountManagementConfirmation4.mmConfirmationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation4#AccountApplicationIdentification
- * AccountManagementConfirmation4.AccountApplicationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation4#mmAccountApplicationIdentification
+ * AccountManagementConfirmation4.mmAccountApplicationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation4#ClientReference
- * AccountManagementConfirmation4.ClientReference}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation4#mmClientReference
+ * AccountManagementConfirmation4.mmClientReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation4#CounterpartyReference
- * AccountManagementConfirmation4.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation4#mmCounterpartyReference
+ * AccountManagementConfirmation4.mmCounterpartyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation4#ExistingAccountIdentification
- * AccountManagementConfirmation4.ExistingAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation4#mmExistingAccountIdentification
+ * AccountManagementConfirmation4.mmExistingAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -56,15 +57,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07#ConfirmationDetails
- * AccountDetailsConfirmationV07.ConfirmationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07#mmConfirmationDetails
+ * AccountDetailsConfirmationV07.mmConfirmationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountManagementConfirmation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ConfirmationType1Choice confirmationType;
 	/**
 	 * Specifies the confirmation type.
 	 * <p>
@@ -111,11 +113,11 @@ public class AccountManagementConfirmation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation3#ConfirmationType
-	 * AccountManagementConfirmation3.ConfirmationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation3#mmConfirmationType
+	 * AccountManagementConfirmation3.mmConfirmationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountManagementConfirmation4.mmObject();
 			isDerived = false;
@@ -123,12 +125,13 @@ public class AccountManagementConfirmation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationType";
 			definition = "Specifies the confirmation type. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.ConfirmationType;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.mmConfirmationType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ConfirmationType1Choice.mmObject();
 		}
 	};
+	protected Max35Text accountApplicationIdentification;
 	/**
 	 * Unique and unambiguous identifier of the account opening or modification
 	 * instruction at application level.
@@ -160,11 +163,11 @@ public class AccountManagementConfirmation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation3#AccountApplicationIdentification
-	 * AccountManagementConfirmation3.AccountApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation3#mmAccountApplicationIdentification
+	 * AccountManagementConfirmation3.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountManagementConfirmation4.mmObject();
 			isDerived = false;
@@ -172,12 +175,13 @@ public class AccountManagementConfirmation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or modification instruction at application level.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.AccountApplicationIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.mmAccountApplicationIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text clientReference;
 	/**
 	 * Unique and unambiguous identification of a transaction, for example, a
 	 * transfer, as assigned by the investor or account owner.
@@ -191,8 +195,8 @@ public class AccountManagementConfirmation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#ClientReference
-	 * InvestmentFundTransaction.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmClientReference
+	 * InvestmentFundTransaction.mmClientReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -214,25 +218,26 @@ public class AccountManagementConfirmation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation3#ClientReference
-	 * AccountManagementConfirmation3.ClientReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation3#mmClientReference
+	 * AccountManagementConfirmation3.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> AccountManagementConfirmation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.ClientReference;
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous identification of a transaction, for example, a transfer, as assigned by the investor or account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.ClientReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.mmClientReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AdditionalReference6 counterpartyReference;
 	/**
 	 * Unambiguous identification of the transaction, for example, a transfer,
 	 * as allocated by the counterparty.
@@ -247,8 +252,8 @@ public class AccountManagementConfirmation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CounterpartyReference
-	 * TradeIdentification.CounterpartyReference}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCounterpartyReference
+	 * TradeIdentification.mmCounterpartyReference}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -270,25 +275,26 @@ public class AccountManagementConfirmation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation3#CounterpartyReference
-	 * AccountManagementConfirmation3.CounterpartyReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation3#mmCounterpartyReference
+	 * AccountManagementConfirmation3.mmCounterpartyReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> AccountManagementConfirmation4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CounterpartyReference;
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transaction, for example, a transfer, as allocated by the counterparty.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.CounterpartyReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.mmCounterpartyReference;
 			maxOccurs = 1;
-			complexType_lazy = () -> AdditionalReference6.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Account23> existingAccountIdentification;
 	/**
 	 * Account to which the account opening is related.
 	 * <p>
@@ -315,11 +321,11 @@ public class AccountManagementConfirmation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation3#ExistingAccountIdentification
-	 * AccountManagementConfirmation3.ExistingAccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementConfirmation3#mmExistingAccountIdentification
+	 * AccountManagementConfirmation3.mmExistingAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExistingAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExistingAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountManagementConfirmation4.mmObject();
 			isDerived = false;
@@ -327,21 +333,21 @@ public class AccountManagementConfirmation4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExistingAccountIdentification";
 			definition = "Account to which the account opening is related.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.ExistingAccountIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.mmExistingAccountIdentification;
 			minOccurs = 0;
-			type_lazy = () -> Account23.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Account23.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation4.ConfirmationType, com.tools20022.repository.msg.AccountManagementConfirmation4.AccountApplicationIdentification,
-						com.tools20022.repository.msg.AccountManagementConfirmation4.ClientReference, com.tools20022.repository.msg.AccountManagementConfirmation4.CounterpartyReference,
-						com.tools20022.repository.msg.AccountManagementConfirmation4.ExistingAccountIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.ConfirmationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation4.mmConfirmationType, com.tools20022.repository.msg.AccountManagementConfirmation4.mmAccountApplicationIdentification,
+						com.tools20022.repository.msg.AccountManagementConfirmation4.mmClientReference, com.tools20022.repository.msg.AccountManagementConfirmation4.mmCounterpartyReference,
+						com.tools20022.repository.msg.AccountManagementConfirmation4.mmExistingAccountIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmConfirmationDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementConfirmation4";
 				definition = "Information about the type of request or instruction.";
@@ -349,5 +355,45 @@ public class AccountManagementConfirmation4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ConfirmationType1Choice getConfirmationType() {
+		return confirmationType;
+	}
+
+	public void setConfirmationType(ConfirmationType1Choice confirmationType) {
+		this.confirmationType = confirmationType;
+	}
+
+	public Max35Text getAccountApplicationIdentification() {
+		return accountApplicationIdentification;
+	}
+
+	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+		this.accountApplicationIdentification = accountApplicationIdentification;
+	}
+
+	public Max35Text getClientReference() {
+		return clientReference;
+	}
+
+	public void setClientReference(Max35Text clientReference) {
+		this.clientReference = clientReference;
+	}
+
+	public AdditionalReference6 getCounterpartyReference() {
+		return counterpartyReference;
+	}
+
+	public void setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference6 counterpartyReference) {
+		this.counterpartyReference = counterpartyReference;
+	}
+
+	public List<Account23> getExistingAccountIdentification() {
+		return existingAccountIdentification;
+	}
+
+	public void setExistingAccountIdentification(List<com.tools20022.repository.msg.Account23> existingAccountIdentification) {
+		this.existingAccountIdentification = existingAccountIdentification;
 	}
 }

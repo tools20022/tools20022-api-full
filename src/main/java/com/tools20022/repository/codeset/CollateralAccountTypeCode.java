@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#House
- * CollateralAccountTypeCode.House}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#mmHouse
+ * CollateralAccountTypeCode.mmHouse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#Client
- * CollateralAccountTypeCode.Client}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#mmClient
+ * CollateralAccountTypeCode.mmClient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#LiquidityProvider
- * CollateralAccountTypeCode.LiquidityProvider}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#mmLiquidityProvider
+ * CollateralAccountTypeCode.mmLiquidityProvider}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#Margin
- * CollateralAccountTypeCode.Margin}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#mmMargin
+ * CollateralAccountTypeCode.mmMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#DefaultFund
- * CollateralAccountTypeCode.DefaultFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#mmDefaultFund
+ * CollateralAccountTypeCode.mmDefaultFund}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +102,7 @@ public class CollateralAccountTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode House = new MMCode() {
+	public static final MMCode mmHouse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "House";
@@ -136,7 +136,7 @@ public class CollateralAccountTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Client = new MMCode() {
+	public static final MMCode mmClient = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Client";
@@ -170,7 +170,7 @@ public class CollateralAccountTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LiquidityProvider = new MMCode() {
+	public static final MMCode mmLiquidityProvider = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityProvider";
@@ -204,7 +204,7 @@ public class CollateralAccountTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Margin = new MMCode() {
+	public static final MMCode mmMargin = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Margin";
@@ -237,7 +237,7 @@ public class CollateralAccountTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DefaultFund = new MMCode() {
+	public static final MMCode mmDefaultFund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultFund";
@@ -250,14 +250,14 @@ public class CollateralAccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HOUS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralAccountTypeCode";
 				definition = "Specifies the collateral account type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralAccountTypeCode.House, com.tools20022.repository.codeset.CollateralAccountTypeCode.Client,
-						com.tools20022.repository.codeset.CollateralAccountTypeCode.LiquidityProvider, com.tools20022.repository.codeset.CollateralAccountTypeCode.Margin,
-						com.tools20022.repository.codeset.CollateralAccountTypeCode.DefaultFund);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralAccountTypeCode.mmHouse, com.tools20022.repository.codeset.CollateralAccountTypeCode.mmClient,
+						com.tools20022.repository.codeset.CollateralAccountTypeCode.mmLiquidityProvider, com.tools20022.repository.codeset.CollateralAccountTypeCode.mmMargin,
+						com.tools20022.repository.codeset.CollateralAccountTypeCode.mmDefaultFund);
 				derivation_lazy = () -> Arrays.asList(CollateralAccountType1Code.mmObject());
 			}
 		});

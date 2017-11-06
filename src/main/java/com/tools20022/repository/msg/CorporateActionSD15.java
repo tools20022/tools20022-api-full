@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSD15#CertificateNumber
- * CorporateActionSD15.CertificateNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD15#mmCertificateNumber
+ * CorporateActionSD15.mmCertificateNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSD15#CertificateCalledAmount
- * CorporateActionSD15.CertificateCalledAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD15#mmCertificateCalledAmount
+ * CorporateActionSD15.mmCertificateCalledAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionSD15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max15AlphaNumericText certificateNumber;
 	/**
 	 * Unique identification or serial number that is assigned and affixed by an
 	 * issuer or transfer agent to each securities certificate.
@@ -95,11 +96,11 @@ public class CorporateActionSD15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionSD5#CertificateNumber
-	 * CorporateActionSD5.CertificateNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionSD5#mmCertificateNumber
+	 * CorporateActionSD5.mmCertificateNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificateNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificateNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSD15.mmObject();
 			isDerived = false;
@@ -107,12 +108,13 @@ public class CorporateActionSD15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique identification or serial number that is assigned and affixed by an issuer or transfer agent to each securities certificate.  ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionSD5.CertificateNumber;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionSD5.mmCertificateNumber;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15AlphaNumericText.mmObject();
 		}
 	};
+	protected DecimalNumber certificateCalledAmount;
 	/**
 	 * Principal amount (for debt issues) or number of shares (for equity
 	 * issues) that has been called for redemption for a particular certificate
@@ -146,11 +148,11 @@ public class CorporateActionSD15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionSD5#CertificateCalledAmount
-	 * CorporateActionSD5.CertificateCalledAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionSD5#mmCertificateCalledAmount
+	 * CorporateActionSD5.mmCertificateCalledAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CertificateCalledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificateCalledAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSD15.mmObject();
 			isDerived = false;
@@ -158,9 +160,9 @@ public class CorporateActionSD15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateCalledAmount";
 			definition = "Principal amount (for debt issues) or number of shares (for equity issues) that has been called for redemption for a particular certificate number.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionSD5.CertificateCalledAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionSD5.mmCertificateCalledAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -168,8 +170,8 @@ public class CorporateActionSD15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD15.CertificateNumber, com.tools20022.repository.msg.CorporateActionSD15.CertificateCalledAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD15.mmCertificateNumber, com.tools20022.repository.msg.CorporateActionSD15.mmCertificateCalledAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD15";
 				definition = "Contains details about called certificates.";
@@ -177,5 +179,21 @@ public class CorporateActionSD15 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max15AlphaNumericText getCertificateNumber() {
+		return certificateNumber;
+	}
+
+	public void setCertificateNumber(Max15AlphaNumericText certificateNumber) {
+		this.certificateNumber = certificateNumber;
+	}
+
+	public DecimalNumber getCertificateCalledAmount() {
+		return certificateCalledAmount;
+	}
+
+	public void setCertificateCalledAmount(DecimalNumber certificateCalledAmount) {
+		this.certificateCalledAmount = certificateCalledAmount;
 	}
 }

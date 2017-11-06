@@ -34,12 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AssetClass2#Commodity
- * AssetClass2.Commodity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AssetClass2#Interest
- * AssetClass2.Interest}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AssetClass2#ForeignExchange
- * AssetClass2.ForeignExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AssetClass2#mmCommodity
+ * AssetClass2.mmCommodity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AssetClass2#mmInterest
+ * AssetClass2.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AssetClass2#mmForeignExchange
+ * AssetClass2.mmForeignExchange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AssetClass2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DerivativeCommodity2 commodity;
 	/**
 	 * The fields in this section should only be populated for instruments that
 	 * have non-financial instrument of type commodity as underlying.
@@ -97,21 +98,22 @@ public class AssetClass2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Commodity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommodity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AssetClass2.mmObject();
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
+			componentContext_lazy = () -> AssetClass2.mmObject();
 			isDerived = false;
 			xmlTag = "Cmmdty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
 			definition = "The fields in this section should only be populated for instruments that have non-financial instrument of type commodity as underlying.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DerivativeCommodity2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DerivativeCommodity2.mmObject();
 		}
 	};
+	protected DerivativeInterest3 interest;
 	/**
 	 * The fields in this section should only be populated for instruments that
 	 * have non-financial instrument of type interest rates as underlying.
@@ -144,21 +146,22 @@ public class AssetClass2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Interest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AssetClass2.mmObject();
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
+			componentContext_lazy = () -> AssetClass2.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "The fields in this section should only be populated for instruments that have non-financial instrument of type interest rates as underlying.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DerivativeInterest3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DerivativeInterest3.mmObject();
 		}
 	};
+	protected DerivativeForeignExchange3 foreignExchange;
 	/**
 	 * The fields in this section should only be populated for instruments that
 	 * have non-financial instrument of type foreign exchange as underlying.
@@ -192,33 +195,57 @@ public class AssetClass2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ForeignExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmForeignExchange = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AssetClass2.mmObject();
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
+			componentContext_lazy = () -> AssetClass2.mmObject();
 			isDerived = false;
 			xmlTag = "FX";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchange";
 			definition = "The fields in this section should only be populated for instruments that have non-financial instrument of type foreign exchange as underlying.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DerivativeForeignExchange3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DerivativeForeignExchange3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AssetClass2.Commodity, com.tools20022.repository.msg.AssetClass2.Interest, com.tools20022.repository.msg.AssetClass2.ForeignExchange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AssetClass2.mmCommodity, com.tools20022.repository.msg.AssetClass2.mmInterest, com.tools20022.repository.msg.AssetClass2.mmForeignExchange);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClass2";
 				definition = "Structure for defining asset class specific details of a derivative to be declared.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DerivativeCommodity2 getCommodity() {
+		return commodity;
+	}
+
+	public void setCommodity(com.tools20022.repository.msg.DerivativeCommodity2 commodity) {
+		this.commodity = commodity;
+	}
+
+	public DerivativeInterest3 getInterest() {
+		return interest;
+	}
+
+	public void setInterest(com.tools20022.repository.msg.DerivativeInterest3 interest) {
+		this.interest = interest;
+	}
+
+	public DerivativeForeignExchange3 getForeignExchange() {
+		return foreignExchange;
+	}
+
+	public void setForeignExchange(com.tools20022.repository.msg.DerivativeForeignExchange3 foreignExchange) {
+		this.foreignExchange = foreignExchange;
 	}
 }

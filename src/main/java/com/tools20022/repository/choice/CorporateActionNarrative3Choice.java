@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionNarrative3Choice#Code
- * CorporateActionNarrative3Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionNarrative3Choice#mmCode
+ * CorporateActionNarrative3Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CorporateActionNarrative3Choice#Proprietary
- * CorporateActionNarrative3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionNarrative3Choice#mmProprietary
+ * CorporateActionNarrative3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrative3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionNarrative1Code code;
 	/**
 	 * Standard code to specify the narrative type of the message.
 	 * <p>
@@ -97,11 +98,11 @@ public class CorporateActionNarrative3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionNarrative1Choice#Code
-	 * CorporateActionNarrative1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionNarrative1Choice#mmCode
+	 * CorporateActionNarrative1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative3Choice.mmObject();
 			isDerived = false;
@@ -109,12 +110,13 @@ public class CorporateActionNarrative3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the narrative type of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative1Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNarrative1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Proprietary identification of the narrative type of the message.
 	 * <p>
@@ -144,11 +146,11 @@ public class CorporateActionNarrative3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CorporateActionNarrative1Choice#Proprietary
-	 * CorporateActionNarrative1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionNarrative1Choice#mmProprietary
+	 * CorporateActionNarrative1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative3Choice.mmObject();
 			isDerived = false;
@@ -156,19 +158,19 @@ public class CorporateActionNarrative3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the narrative type of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative1Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification30.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionNarrative3Choice.Code, com.tools20022.repository.choice.CorporateActionNarrative3Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionNarrative3Choice.mmCode, com.tools20022.repository.choice.CorporateActionNarrative3Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative3Choice";
 				definition = "Choice between a standard code or a proprietary code to specify the narrative type of corporate action.";
@@ -176,5 +178,21 @@ public class CorporateActionNarrative3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionNarrative1Code getCode() {
+		return code;
+	}
+
+	public void setCode(CorporateActionNarrative1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

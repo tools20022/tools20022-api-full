@@ -34,109 +34,111 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#AfterTax
- * CalculationType1Code.AfterTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmAfterTax
+ * CalculationType1Code.mmAfterTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#Annual
- * CalculationType1Code.Annual}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmAnnual
+ * CalculationType1Code.mmAnnual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#AtIssue
- * CalculationType1Code.AtIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmAtIssue
+ * CalculationType1Code.mmAtIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ToAverageMaturity
- * CalculationType1Code.ToAverageMaturity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CalculationType1Code#Book
- * CalculationType1Code.Book}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmToAverageMaturity
+ * CalculationType1Code.mmToAverageMaturity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#YieldToNextCall
- * CalculationType1Code.YieldToNextCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmBook
+ * CalculationType1Code.mmBook}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ChangeSinceClose
- * CalculationType1Code.ChangeSinceClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmYieldToNextCall
+ * CalculationType1Code.mmYieldToNextCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#Closing
- * CalculationType1Code.Closing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmChangeSinceClose
+ * CalculationType1Code.mmChangeSinceClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#Compound
- * CalculationType1Code.Compound}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmClosing
+ * CalculationType1Code.mmClosing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#CurrentYield
- * CalculationType1Code.CurrentYield}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmCompound
+ * CalculationType1Code.mmCompound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#TrueGross
- * CalculationType1Code.TrueGross}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmCurrentYield
+ * CalculationType1Code.mmCurrentYield}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#GovernmentEquivalent
- * CalculationType1Code.GovernmentEquivalent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmTrueGross
+ * CalculationType1Code.mmTrueGross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#InflationAssumption
- * CalculationType1Code.InflationAssumption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmGovernmentEquivalent
+ * CalculationType1Code.mmGovernmentEquivalent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#InverseFloater
- * CalculationType1Code.InverseFloater}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmInflationAssumption
+ * CalculationType1Code.mmInflationAssumption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#LastClose
- * CalculationType1Code.LastClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmInverseFloater
+ * CalculationType1Code.mmInverseFloater}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#LastMonth
- * CalculationType1Code.LastMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmLastClose
+ * CalculationType1Code.mmLastClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#LastQuarter
- * CalculationType1Code.LastQuarter}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmLastMonth
+ * CalculationType1Code.mmLastMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#LastYear
- * CalculationType1Code.LastYear}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmLastQuarter
+ * CalculationType1Code.mmLastQuarter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#LongestAverageLife
- * CalculationType1Code.LongestAverageLife}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmLastYear
+ * CalculationType1Code.mmLastYear}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#MarkToMarket
- * CalculationType1Code.MarkToMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmLongestAverageLife
+ * CalculationType1Code.mmLongestAverageLife}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#YieldToMaturity
- * CalculationType1Code.YieldToMaturity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmMarkToMarket
+ * CalculationType1Code.mmMarkToMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ToNextRefund
- * CalculationType1Code.ToNextRefund}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmYieldToMaturity
+ * CalculationType1Code.mmYieldToMaturity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#OpenAverage
- * CalculationType1Code.OpenAverage}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmToNextRefund
+ * CalculationType1Code.mmToNextRefund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ToNextPut
- * CalculationType1Code.ToNextPut}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmOpenAverage
+ * CalculationType1Code.mmOpenAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#PreviousClose
- * CalculationType1Code.PreviousClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmToNextPut
+ * CalculationType1Code.mmToNextPut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#Proceeds
- * CalculationType1Code.Proceeds}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmPreviousClose
+ * CalculationType1Code.mmPreviousClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#SemiAnnual
- * CalculationType1Code.SemiAnnual}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmProceeds
+ * CalculationType1Code.mmProceeds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ShortestAverageLife
- * CalculationType1Code.ShortestAverageLife}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmSemiAnnual
+ * CalculationType1Code.mmSemiAnnual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#Simple
- * CalculationType1Code.Simple}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmShortestAverageLife
+ * CalculationType1Code.mmShortestAverageLife}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#TaxEquivalent
- * CalculationType1Code.TaxEquivalent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmSimple
+ * CalculationType1Code.mmSimple}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ToTenderDate
- * CalculationType1Code.ToTenderDate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CalculationType1Code#True
- * CalculationType1Code.True}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmTaxEquivalent
+ * CalculationType1Code.mmTaxEquivalent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ToWorstConvention
- * CalculationType1Code.ToWorstConvention}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmToTenderDate
+ * CalculationType1Code.mmToTenderDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmTrue
+ * CalculationType1Code.mmTrue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmToWorstConvention
+ * CalculationType1Code.mmToWorstConvention}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -172,7 +174,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "AfterTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode AfterTax = new MMCode() {
+	public static final MMCode mmAfterTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AfterTax";
@@ -195,7 +197,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Annual"</li>
 	 * </ul>
 	 */
-	public static final MMCode Annual = new MMCode() {
+	public static final MMCode mmAnnual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
@@ -218,7 +220,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "AtIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode AtIssue = new MMCode() {
+	public static final MMCode mmAtIssue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtIssue";
@@ -241,7 +243,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ToAverageMaturity"</li>
 	 * </ul>
 	 */
-	public static final MMCode ToAverageMaturity = new MMCode() {
+	public static final MMCode mmToAverageMaturity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAverageMaturity";
@@ -264,7 +266,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Book"</li>
 	 * </ul>
 	 */
-	public static final MMCode Book = new MMCode() {
+	public static final MMCode mmBook = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Book";
@@ -287,7 +289,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "YieldToNextCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode YieldToNextCall = new MMCode() {
+	public static final MMCode mmYieldToNextCall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldToNextCall";
@@ -310,7 +312,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ChangeSinceClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode ChangeSinceClose = new MMCode() {
+	public static final MMCode mmChangeSinceClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeSinceClose";
@@ -333,7 +335,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Closing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Closing = new MMCode() {
+	public static final MMCode mmClosing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
@@ -356,7 +358,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Compound"</li>
 	 * </ul>
 	 */
-	public static final MMCode Compound = new MMCode() {
+	public static final MMCode mmCompound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compound";
@@ -379,7 +381,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "CurrentYield"</li>
 	 * </ul>
 	 */
-	public static final MMCode CurrentYield = new MMCode() {
+	public static final MMCode mmCurrentYield = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYield";
@@ -402,7 +404,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "TrueGross"</li>
 	 * </ul>
 	 */
-	public static final MMCode TrueGross = new MMCode() {
+	public static final MMCode mmTrueGross = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrueGross";
@@ -425,7 +427,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "GovernmentEquivalent"</li>
 	 * </ul>
 	 */
-	public static final MMCode GovernmentEquivalent = new MMCode() {
+	public static final MMCode mmGovernmentEquivalent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentEquivalent";
@@ -448,7 +450,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "InflationAssumption"</li>
 	 * </ul>
 	 */
-	public static final MMCode InflationAssumption = new MMCode() {
+	public static final MMCode mmInflationAssumption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InflationAssumption";
@@ -471,7 +473,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "InverseFloater"</li>
 	 * </ul>
 	 */
-	public static final MMCode InverseFloater = new MMCode() {
+	public static final MMCode mmInverseFloater = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InverseFloater";
@@ -494,7 +496,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "LastClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode LastClose = new MMCode() {
+	public static final MMCode mmLastClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastClose";
@@ -517,7 +519,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "LastMonth"</li>
 	 * </ul>
 	 */
-	public static final MMCode LastMonth = new MMCode() {
+	public static final MMCode mmLastMonth = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastMonth";
@@ -540,7 +542,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "LastQuarter"</li>
 	 * </ul>
 	 */
-	public static final MMCode LastQuarter = new MMCode() {
+	public static final MMCode mmLastQuarter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastQuarter";
@@ -563,7 +565,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "LastYear"</li>
 	 * </ul>
 	 */
-	public static final MMCode LastYear = new MMCode() {
+	public static final MMCode mmLastYear = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastYear";
@@ -586,7 +588,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "LongestAverageLife"</li>
 	 * </ul>
 	 */
-	public static final MMCode LongestAverageLife = new MMCode() {
+	public static final MMCode mmLongestAverageLife = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongestAverageLife";
@@ -609,7 +611,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "MarkToMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode MarkToMarket = new MMCode() {
+	public static final MMCode mmMarkToMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarket";
@@ -632,7 +634,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "YieldToMaturity"</li>
 	 * </ul>
 	 */
-	public static final MMCode YieldToMaturity = new MMCode() {
+	public static final MMCode mmYieldToMaturity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldToMaturity";
@@ -655,7 +657,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ToNextRefund"</li>
 	 * </ul>
 	 */
-	public static final MMCode ToNextRefund = new MMCode() {
+	public static final MMCode mmToNextRefund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextRefund";
@@ -678,7 +680,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "OpenAverage"</li>
 	 * </ul>
 	 */
-	public static final MMCode OpenAverage = new MMCode() {
+	public static final MMCode mmOpenAverage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenAverage";
@@ -701,7 +703,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ToNextPut"</li>
 	 * </ul>
 	 */
-	public static final MMCode ToNextPut = new MMCode() {
+	public static final MMCode mmToNextPut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextPut";
@@ -724,7 +726,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "PreviousClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreviousClose = new MMCode() {
+	public static final MMCode mmPreviousClose = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousClose";
@@ -747,7 +749,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Proceeds"</li>
 	 * </ul>
 	 */
-	public static final MMCode Proceeds = new MMCode() {
+	public static final MMCode mmProceeds = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proceeds";
@@ -770,7 +772,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "SemiAnnual"</li>
 	 * </ul>
 	 */
-	public static final MMCode SemiAnnual = new MMCode() {
+	public static final MMCode mmSemiAnnual = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
@@ -793,7 +795,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ShortestAverageLife"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShortestAverageLife = new MMCode() {
+	public static final MMCode mmShortestAverageLife = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortestAverageLife";
@@ -816,7 +818,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Simple"</li>
 	 * </ul>
 	 */
-	public static final MMCode Simple = new MMCode() {
+	public static final MMCode mmSimple = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
@@ -839,7 +841,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "TaxEquivalent"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxEquivalent = new MMCode() {
+	public static final MMCode mmTaxEquivalent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxEquivalent";
@@ -862,7 +864,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ToTenderDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ToTenderDate = new MMCode() {
+	public static final MMCode mmToTenderDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToTenderDate";
@@ -885,7 +887,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "True"</li>
 	 * </ul>
 	 */
-	public static final MMCode True = new MMCode() {
+	public static final MMCode mmTrue = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "True";
@@ -908,7 +910,7 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ToWorstConvention"</li>
 	 * </ul>
 	 */
-	public static final MMCode ToWorstConvention = new MMCode() {
+	public static final MMCode mmToWorstConvention = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToWorstConvention";
@@ -919,22 +921,23 @@ public class CalculationType1Code extends CalculationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AFTX");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CalculationType1Code";
 				definition = "Specifies the yield computation method.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationType1Code.AfterTax, com.tools20022.repository.codeset.CalculationType1Code.Annual, com.tools20022.repository.codeset.CalculationType1Code.AtIssue,
-						com.tools20022.repository.codeset.CalculationType1Code.ToAverageMaturity, com.tools20022.repository.codeset.CalculationType1Code.Book, com.tools20022.repository.codeset.CalculationType1Code.YieldToNextCall,
-						com.tools20022.repository.codeset.CalculationType1Code.ChangeSinceClose, com.tools20022.repository.codeset.CalculationType1Code.Closing, com.tools20022.repository.codeset.CalculationType1Code.Compound,
-						com.tools20022.repository.codeset.CalculationType1Code.CurrentYield, com.tools20022.repository.codeset.CalculationType1Code.TrueGross, com.tools20022.repository.codeset.CalculationType1Code.GovernmentEquivalent,
-						com.tools20022.repository.codeset.CalculationType1Code.InflationAssumption, com.tools20022.repository.codeset.CalculationType1Code.InverseFloater, com.tools20022.repository.codeset.CalculationType1Code.LastClose,
-						com.tools20022.repository.codeset.CalculationType1Code.LastMonth, com.tools20022.repository.codeset.CalculationType1Code.LastQuarter, com.tools20022.repository.codeset.CalculationType1Code.LastYear,
-						com.tools20022.repository.codeset.CalculationType1Code.LongestAverageLife, com.tools20022.repository.codeset.CalculationType1Code.MarkToMarket, com.tools20022.repository.codeset.CalculationType1Code.YieldToMaturity,
-						com.tools20022.repository.codeset.CalculationType1Code.ToNextRefund, com.tools20022.repository.codeset.CalculationType1Code.OpenAverage, com.tools20022.repository.codeset.CalculationType1Code.ToNextPut,
-						com.tools20022.repository.codeset.CalculationType1Code.PreviousClose, com.tools20022.repository.codeset.CalculationType1Code.Proceeds, com.tools20022.repository.codeset.CalculationType1Code.SemiAnnual,
-						com.tools20022.repository.codeset.CalculationType1Code.ShortestAverageLife, com.tools20022.repository.codeset.CalculationType1Code.Simple, com.tools20022.repository.codeset.CalculationType1Code.TaxEquivalent,
-						com.tools20022.repository.codeset.CalculationType1Code.ToTenderDate, com.tools20022.repository.codeset.CalculationType1Code.True, com.tools20022.repository.codeset.CalculationType1Code.ToWorstConvention);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationType1Code.mmAfterTax, com.tools20022.repository.codeset.CalculationType1Code.mmAnnual,
+						com.tools20022.repository.codeset.CalculationType1Code.mmAtIssue, com.tools20022.repository.codeset.CalculationType1Code.mmToAverageMaturity, com.tools20022.repository.codeset.CalculationType1Code.mmBook,
+						com.tools20022.repository.codeset.CalculationType1Code.mmYieldToNextCall, com.tools20022.repository.codeset.CalculationType1Code.mmChangeSinceClose, com.tools20022.repository.codeset.CalculationType1Code.mmClosing,
+						com.tools20022.repository.codeset.CalculationType1Code.mmCompound, com.tools20022.repository.codeset.CalculationType1Code.mmCurrentYield, com.tools20022.repository.codeset.CalculationType1Code.mmTrueGross,
+						com.tools20022.repository.codeset.CalculationType1Code.mmGovernmentEquivalent, com.tools20022.repository.codeset.CalculationType1Code.mmInflationAssumption,
+						com.tools20022.repository.codeset.CalculationType1Code.mmInverseFloater, com.tools20022.repository.codeset.CalculationType1Code.mmLastClose, com.tools20022.repository.codeset.CalculationType1Code.mmLastMonth,
+						com.tools20022.repository.codeset.CalculationType1Code.mmLastQuarter, com.tools20022.repository.codeset.CalculationType1Code.mmLastYear, com.tools20022.repository.codeset.CalculationType1Code.mmLongestAverageLife,
+						com.tools20022.repository.codeset.CalculationType1Code.mmMarkToMarket, com.tools20022.repository.codeset.CalculationType1Code.mmYieldToMaturity, com.tools20022.repository.codeset.CalculationType1Code.mmToNextRefund,
+						com.tools20022.repository.codeset.CalculationType1Code.mmOpenAverage, com.tools20022.repository.codeset.CalculationType1Code.mmToNextPut, com.tools20022.repository.codeset.CalculationType1Code.mmPreviousClose,
+						com.tools20022.repository.codeset.CalculationType1Code.mmProceeds, com.tools20022.repository.codeset.CalculationType1Code.mmSemiAnnual, com.tools20022.repository.codeset.CalculationType1Code.mmShortestAverageLife,
+						com.tools20022.repository.codeset.CalculationType1Code.mmSimple, com.tools20022.repository.codeset.CalculationType1Code.mmTaxEquivalent, com.tools20022.repository.codeset.CalculationType1Code.mmToTenderDate,
+						com.tools20022.repository.codeset.CalculationType1Code.mmTrue, com.tools20022.repository.codeset.CalculationType1Code.mmToWorstConvention);
 				trace_lazy = () -> CalculationTypeCode.mmObject();
 			}
 		});

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Content of the management plan.
@@ -32,8 +33,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ManagementPlanContent1#Action
- * ManagementPlanContent1.Action}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ManagementPlanContent1#mmAction
+ * ManagementPlanContent1.mmAction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ManagementPlanContent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.TMSAction1> action;
 	/**
 	 * Terminal management action to be performed by the point of interaction
 	 * (POI).
@@ -93,7 +96,7 @@ public class ManagementPlanContent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Action = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ManagementPlanContent1.mmObject();
 			isDerived = false;
@@ -102,17 +105,17 @@ public class ManagementPlanContent1 {
 			name = "Action";
 			definition = "Terminal management action to be performed by the point of interaction (POI).";
 			minOccurs = 1;
-			type_lazy = () -> TMSAction1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TMSAction1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent1.Action);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent1.mmAction);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlanContent1";
 				definition = "Content of the management plan.";
@@ -120,5 +123,13 @@ public class ManagementPlanContent1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<TMSAction1> getAction() {
+		return action;
+	}
+
+	public void setAction(List<com.tools20022.repository.msg.TMSAction1> action) {
+		this.action = action;
 	}
 }

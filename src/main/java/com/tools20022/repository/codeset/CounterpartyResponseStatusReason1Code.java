@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#CounterpartyTransaction
- * CounterpartyResponseStatusReason1Code.CounterpartyTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#mmCounterpartyTransaction
+ * CounterpartyResponseStatusReason1Code.mmCounterpartyTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#CounterpartyCancellation
- * CounterpartyResponseStatusReason1Code.CounterpartyCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#mmCounterpartyCancellation
+ * CounterpartyResponseStatusReason1Code.mmCounterpartyCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#CounterpartyModification
- * CounterpartyResponseStatusReason1Code.CounterpartyModification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#mmCounterpartyModification
+ * CounterpartyResponseStatusReason1Code.mmCounterpartyModification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class CounterpartyResponseStatusReason1Code extends CounterpartyResponseS
 	 * name} = "CounterpartyTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyTransaction = new MMCode() {
+	public static final MMCode mmCounterpartyTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTransaction";
@@ -108,7 +108,7 @@ public class CounterpartyResponseStatusReason1Code extends CounterpartyResponseS
 	 * name} = "CounterpartyCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyCancellation = new MMCode() {
+	public static final MMCode mmCounterpartyCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyCancellation";
@@ -131,7 +131,7 @@ public class CounterpartyResponseStatusReason1Code extends CounterpartyResponseS
 	 * name} = "CounterpartyModification"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyModification = new MMCode() {
+	public static final MMCode mmCounterpartyModification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyModification";
@@ -142,13 +142,13 @@ public class CounterpartyResponseStatusReason1Code extends CounterpartyResponseS
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CPTR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CounterpartyResponseStatusReason1Code";
 				definition = "Specifies the type of counterparty's action the response is related to.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.CounterpartyTransaction,
-						com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.CounterpartyCancellation, com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.CounterpartyModification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.mmCounterpartyTransaction,
+						com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.mmCounterpartyCancellation, com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.mmCounterpartyModification);
 				trace_lazy = () -> CounterpartyResponseStatusReasonCode.mmObject();
 			}
 		});

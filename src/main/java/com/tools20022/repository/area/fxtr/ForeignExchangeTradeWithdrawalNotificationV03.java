@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -65,27 +66,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#MessageIdentification
- * ForeignExchangeTradeWithdrawalNotificationV03.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#mmMessageIdentification
+ * ForeignExchangeTradeWithdrawalNotificationV03.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#MatchingSystemUniqueReference
- * ForeignExchangeTradeWithdrawalNotificationV03.MatchingSystemUniqueReference}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#mmMatchingSystemUniqueReference
+ * ForeignExchangeTradeWithdrawalNotificationV03.mmMatchingSystemUniqueReference
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#WithdrawalReason
- * ForeignExchangeTradeWithdrawalNotificationV03.WithdrawalReason}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#mmWithdrawalReason
+ * ForeignExchangeTradeWithdrawalNotificationV03.mmWithdrawalReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#SettlementSessionIdentifier
- * ForeignExchangeTradeWithdrawalNotificationV03.SettlementSessionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#mmSettlementSessionIdentifier
+ * ForeignExchangeTradeWithdrawalNotificationV03.mmSettlementSessionIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#SupplementaryData
- * ForeignExchangeTradeWithdrawalNotificationV03.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#mmSupplementaryData
+ * ForeignExchangeTradeWithdrawalNotificationV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03#identifier
- * ForeignExchangeTradeWithdrawalNotificationV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code fxtr.013.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForeignExchangeTradeWithdrawalNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Identification of the present message assigned by the party issuing the
 	 * message. This identification must be unique amongst all messages of same
@@ -127,17 +128,18 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identification of the present message assigned by the party issuing the message. This identification must be unique amongst all messages of same type sent by the same party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text matchingSystemUniqueReference;
 	/**
 	 * Reference to the unique system identification assigned to the trade by
 	 * the central matching system.
@@ -163,17 +165,18 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MatchingSystemUniqueReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMatchingSystemUniqueReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtchgSysUnqRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
 			definition = "Reference to the unique system identification assigned to the trade  by the central matching system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected WithdrawalReason1 withdrawalReason;
 	/**
 	 * Reason for the withdrawal notification.
 	 * <p>
@@ -197,17 +200,18 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 	 * definition} = "Reason for the withdrawal notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock WithdrawalReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmWithdrawalReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "WdrwlRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalReason";
 			definition = "Reason for the withdrawal notification.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> WithdrawalReason1.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
 	 * To indicate the requested CLS Settlement Session that the related trade
 	 * is part of.
@@ -234,17 +238,18 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "To indicate the requested CLS Settlement Session that the related trade is part of.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -271,7 +276,7 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,33 +284,6 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "fxtr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "013"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "fxtr";
-			messageFunctionality = "013";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -319,12 +297,60 @@ public class ForeignExchangeTradeWithdrawalNotificationV03 {
 				rootElement = "Document";
 				xmlTag = "FXTradWdrwlNtfctn";
 				businessArea_lazy = () -> ForeignExchangeTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.MessageIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.MatchingSystemUniqueReference, com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.WithdrawalReason,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.SettlementSessionIdentifier, com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.mmMessageIdentification,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.mmMatchingSystemUniqueReference,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.mmWithdrawalReason, com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.mmSettlementSessionIdentifier,
+						com.tools20022.repository.area.fxtr.ForeignExchangeTradeWithdrawalNotificationV03.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "fxtr";
+						messageFunctionality = "013";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Max35Text getMatchingSystemUniqueReference() {
+		return matchingSystemUniqueReference;
+	}
+
+	public void setMatchingSystemUniqueReference(Max35Text matchingSystemUniqueReference) {
+		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
+	}
+
+	public WithdrawalReason1 getWithdrawalReason() {
+		return withdrawalReason;
+	}
+
+	public void setWithdrawalReason(WithdrawalReason1 withdrawalReason) {
+		this.withdrawalReason = withdrawalReason;
+	}
+
+	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier;
+	}
+
+	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+		this.settlementSessionIdentifier = settlementSessionIdentifier;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

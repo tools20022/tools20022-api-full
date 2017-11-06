@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#RTGS
- * CashClearingSystem2Code.RTGS}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#mmRTGS
+ * CashClearingSystem2Code.mmRTGS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#ACH
- * CashClearingSystem2Code.ACH}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#mmACH
+ * CashClearingSystem2Code.mmACH}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#USChips
- * CashClearingSystem2Code.USChips}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#mmUSChips
+ * CashClearingSystem2Code.mmUSChips}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#FedNet
- * CashClearingSystem2Code.FedNet}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#mmFedNet
+ * CashClearingSystem2Code.mmFedNet}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 * name} = "RTGS"</li>
 	 * </ul>
 	 */
-	public static final MMCode RTGS = new MMCode() {
+	public static final MMCode mmRTGS = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RTGS";
@@ -110,7 +110,7 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 * name} = "ACH"</li>
 	 * </ul>
 	 */
-	public static final MMCode ACH = new MMCode() {
+	public static final MMCode mmACH = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ACH";
@@ -133,7 +133,7 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 * name} = "USChips"</li>
 	 * </ul>
 	 */
-	public static final MMCode USChips = new MMCode() {
+	public static final MMCode mmUSChips = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USChips";
@@ -156,7 +156,7 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 * name} = "FedNet"</li>
 	 * </ul>
 	 */
-	public static final MMCode FedNet = new MMCode() {
+	public static final MMCode mmFedNet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FedNet";
@@ -167,13 +167,13 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RTG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashClearingSystem2Code";
 				definition = "Specifies a type of payment system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashClearingSystem2Code.RTGS, com.tools20022.repository.codeset.CashClearingSystem2Code.ACH,
-						com.tools20022.repository.codeset.CashClearingSystem2Code.USChips, com.tools20022.repository.codeset.CashClearingSystem2Code.FedNet);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashClearingSystem2Code.mmRTGS, com.tools20022.repository.codeset.CashClearingSystem2Code.mmACH,
+						com.tools20022.repository.codeset.CashClearingSystem2Code.mmUSChips, com.tools20022.repository.codeset.CashClearingSystem2Code.mmFedNet);
 				trace_lazy = () -> CashClearingSystemCode.mmObject();
 			}
 		});

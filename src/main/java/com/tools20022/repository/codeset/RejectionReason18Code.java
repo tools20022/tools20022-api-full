@@ -34,20 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason18Code#FailedValidation
- * RejectionReason18Code.FailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason18Code#mmFailedValidation
+ * RejectionReason18Code.mmFailedValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason18Code#InsufficientBalance
- * RejectionReason18Code.InsufficientBalance}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason18Code#Late
- * RejectionReason18Code.Late}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason18Code#mmInsufficientBalance
+ * RejectionReason18Code.mmInsufficientBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason18Code#mmLate
+ * RejectionReason18Code.mmLate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +84,7 @@ public class RejectionReason18Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode FailedValidation = new MMCode() {
+	public static final MMCode mmFailedValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
@@ -106,7 +107,7 @@ public class RejectionReason18Code extends RejectionReasonCode {
 	 * name} = "InsufficientBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientBalance = new MMCode() {
+	public static final MMCode mmInsufficientBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientBalance";
@@ -129,7 +130,7 @@ public class RejectionReason18Code extends RejectionReasonCode {
 	 * name} = "Late"</li>
 	 * </ul>
 	 */
-	public static final MMCode Late = new MMCode() {
+	public static final MMCode mmLate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
@@ -140,13 +141,13 @@ public class RejectionReason18Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason18Code";
 				definition = "Specifies the reason of a rejection of an election advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason18Code.FailedValidation, com.tools20022.repository.codeset.RejectionReason18Code.InsufficientBalance,
-						com.tools20022.repository.codeset.RejectionReason18Code.Late);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason18Code.mmFailedValidation, com.tools20022.repository.codeset.RejectionReason18Code.mmInsufficientBalance,
+						com.tools20022.repository.codeset.RejectionReason18Code.mmLate);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

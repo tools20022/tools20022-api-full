@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Describes the type of product and the assets to be transferred.
@@ -35,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ISATransfer17#CancellationReference
- * ISATransfer17.CancellationReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ISATransfer17#ProductTransfer
- * ISATransfer17.ProductTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer17#mmCancellationReference
+ * ISATransfer17.mmCancellationReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer17#mmProductTransfer
+ * ISATransfer17.mmProductTransfer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ISATransfer17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text cancellationReference;
 	/**
 	 * Unique and unambiguous identifier for a transfer cancellation, as
 	 * assigned by the instructing party.
@@ -100,13 +103,13 @@ public class ISATransfer17 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer20#CancellationReference
-	 * ISATransfer20.CancellationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer20#mmCancellationReference
+	 * ISATransfer20.mmCancellationReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ISATransfer17.mmObject();
 			isDerived = false;
@@ -114,12 +117,13 @@ public class ISATransfer17 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer20.CancellationReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer20.mmCancellationReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ISATransfer16> productTransfer;
 	/**
 	 * Provides information related to the asset(s) transferred.
 	 * <p>
@@ -153,34 +157,34 @@ public class ISATransfer17 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ISATransfer20#ProductTransfer
-	 * ISATransfer20.ProductTransfer}</li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer20#mmProductTransfer
+	 * ISATransfer20.mmProductTransfer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProductTransfer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProductTransfer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISATransfer17.mmObject();
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
+			componentContext_lazy = () -> ISATransfer17.mmObject();
 			isDerived = false;
 			xmlTag = "PdctTrf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer20.ProductTransfer);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer20.mmProductTransfer);
 			minOccurs = 1;
-			type_lazy = () -> ISATransfer16.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ISATransfer16.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer17.CancellationReference, com.tools20022.repository.msg.ISATransfer17.ProductTransfer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer17.mmCancellationReference, com.tools20022.repository.msg.ISATransfer17.mmProductTransfer);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ISATransfer17";
 				definition = "Describes the type of product and the assets to be transferred.";
@@ -188,5 +192,21 @@ public class ISATransfer17 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCancellationReference() {
+		return cancellationReference;
+	}
+
+	public void setCancellationReference(Max35Text cancellationReference) {
+		this.cancellationReference = cancellationReference;
+	}
+
+	public List<ISATransfer16> getProductTransfer() {
+		return productTransfer;
+	}
+
+	public void setProductTransfer(List<com.tools20022.repository.msg.ISATransfer16> productTransfer) {
+		this.productTransfer = productTransfer;
 	}
 }

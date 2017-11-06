@@ -38,26 +38,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification2#SubmittingParty
- * TradePartyIdentification2.SubmittingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification2#mmSubmittingParty
+ * TradePartyIdentification2.mmSubmittingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#SubmittingParty
- * TradePartyIdentification3.SubmittingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification3#mmSubmittingParty
+ * TradePartyIdentification3.mmSubmittingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification5#SubmittingParty
- * TradePartyIdentification5.SubmittingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification5#mmSubmittingParty
+ * TradePartyIdentification5.mmSubmittingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification1#SubmittingParty
- * TradePartyIdentification1.SubmittingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification1#mmSubmittingParty
+ * TradePartyIdentification1.mmSubmittingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TradePartyIdentification4#SubmittingParty
- * TradePartyIdentification4.SubmittingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.TradePartyIdentification4#mmSubmittingParty
+ * TradePartyIdentification4.mmSubmittingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#SubmittingParty
- * SecuritiesTransactionReport2.SubmittingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2#mmSubmittingParty
+ * SecuritiesTransactionReport2.mmSubmittingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#SubmittingParty
- * SecuritiesTransactionReport4.SubmittingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmSubmittingParty
+ * SecuritiesTransactionReport4.mmSubmittingParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -74,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,14 +95,14 @@ public class SubmittingPartyRole extends SystemPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SubmittingPartyRole";
 				definition = "Specifies the party which submits trade data sets to a system or to a counterparty.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification2.SubmittingParty, com.tools20022.repository.msg.TradePartyIdentification3.SubmittingParty,
-						com.tools20022.repository.msg.TradePartyIdentification5.SubmittingParty, com.tools20022.repository.msg.TradePartyIdentification1.SubmittingParty,
-						com.tools20022.repository.msg.TradePartyIdentification4.SubmittingParty, com.tools20022.repository.msg.SecuritiesTransactionReport2.SubmittingParty,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.SubmittingParty);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification2.mmSubmittingParty, com.tools20022.repository.msg.TradePartyIdentification3.mmSubmittingParty,
+						com.tools20022.repository.msg.TradePartyIdentification5.mmSubmittingParty, com.tools20022.repository.msg.TradePartyIdentification1.mmSubmittingParty,
+						com.tools20022.repository.msg.TradePartyIdentification4.mmSubmittingParty, com.tools20022.repository.msg.SecuritiesTransactionReport2.mmSubmittingParty,
+						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmSubmittingParty);
 				superType_lazy = () -> SystemPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(RequiredSubmission2.mmObject());
 			}

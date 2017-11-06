@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.GeneralBusinessInformation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports either on the business information or on a business error.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError2Choice#BusinessError
- * GeneralBusinessOrError2Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError2Choice#mmBusinessError
+ * GeneralBusinessOrError2Choice.mmBusinessError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError2Choice#GeneralBusiness
- * GeneralBusinessOrError2Choice.GeneralBusiness}</li>
+ * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError2Choice#mmGeneralBusiness
+ * GeneralBusinessOrError2Choice.mmGeneralBusiness}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeneralBusinessOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ErrorHandling3> businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -101,13 +103,13 @@ public class GeneralBusinessOrError2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError4Choice#BusinessError
-	 * GeneralBusinessOrError4Choice.BusinessError}</li>
+	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError4Choice#mmBusinessError
+	 * GeneralBusinessOrError4Choice.mmBusinessError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GeneralBusinessOrError2Choice.mmObject();
 			isDerived = false;
@@ -115,12 +117,13 @@ public class GeneralBusinessOrError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError4Choice.BusinessError);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError4Choice.mmBusinessError);
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
+	protected GeneralBusinessInformation generalBusiness;
 	/**
 	 * Requested business information.
 	 * <p>
@@ -150,13 +153,13 @@ public class GeneralBusinessOrError2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError4Choice#GeneralBusiness
-	 * GeneralBusinessOrError4Choice.GeneralBusiness}</li>
+	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError4Choice#mmGeneralBusiness
+	 * GeneralBusinessOrError4Choice.mmGeneralBusiness}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GeneralBusiness = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGeneralBusiness = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> GeneralBusinessOrError2Choice.mmObject();
 			isDerived = false;
@@ -164,20 +167,20 @@ public class GeneralBusinessOrError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralBusiness";
 			definition = "Requested business information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError4Choice.GeneralBusiness);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError4Choice.mmGeneralBusiness);
 			maxOccurs = 1;
-			type_lazy = () -> GeneralBusinessInformation.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GeneralBusinessInformation.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError2Choice.BusinessError, com.tools20022.repository.choice.GeneralBusinessOrError2Choice.GeneralBusiness);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError2Choice.mmBusinessError, com.tools20022.repository.choice.GeneralBusinessOrError2Choice.mmGeneralBusiness);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralBusinessOrError2Choice";
 				definition = "Reports either on the business information or on a business error.";
@@ -185,5 +188,21 @@ public class GeneralBusinessOrError2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ErrorHandling3> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = businessError;
+	}
+
+	public GeneralBusinessInformation getGeneralBusiness() {
+		return generalBusiness;
+	}
+
+	public void setGeneralBusiness(GeneralBusinessInformation generalBusiness) {
+		this.generalBusiness = generalBusiness;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.TransactionDetails41;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -77,19 +78,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01#ModifiedTransactionDetails
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01#mmModifiedTransactionDetails
  * SecuritiesSettlementTransactionModificationRequestV01.
- * ModifiedTransactionDetails}</li>
+ * mmModifiedTransactionDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01#UpdateType
- * SecuritiesSettlementTransactionModificationRequestV01.UpdateType}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01#mmUpdateType
+ * SecuritiesSettlementTransactionModificationRequestV01.mmUpdateType}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01#identifier
- * SecuritiesSettlementTransactionModificationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.038.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,6 +112,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementTransactionModificationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected TransactionDetails41 modifiedTransactionDetails;
 	/**
 	 * Identifies the details of the transaction that is being modified.
 	 * <p>
@@ -137,17 +137,18 @@ public class SecuritiesSettlementTransactionModificationRequestV01 {
 	 * "Identifies the details of the transaction that is being modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ModifiedTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmModifiedTransactionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdTxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedTransactionDetails";
 			definition = "Identifies the details of the transaction that is being modified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TransactionDetails41.mmObject();
 		}
 	};
+	protected List<UpdateType5Choice> updateType;
 	/**
 	 * Specifies the type of update requested.
 	 * <p>
@@ -171,42 +172,15 @@ public class SecuritiesSettlementTransactionModificationRequestV01 {
 	 * definition} = "Specifies the type of update requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UpdateType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUpdateType = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UpdTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Specifies the type of update requested.";
-			minOccurs = 1;
 			maxOccurs = 3;
+			minOccurs = 1;
 			complexType_lazy = () -> UpdateType5Choice.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "038"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "038";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -221,11 +195,34 @@ public class SecuritiesSettlementTransactionModificationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxModReq";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01.ModifiedTransactionDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01.UpdateType);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01.mmModifiedTransactionDetails,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01.mmUpdateType);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "038";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionDetails41 getModifiedTransactionDetails() {
+		return modifiedTransactionDetails;
+	}
+
+	public void setModifiedTransactionDetails(TransactionDetails41 modifiedTransactionDetails) {
+		this.modifiedTransactionDetails = modifiedTransactionDetails;
+	}
+
+	public List<UpdateType5Choice> getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(List<UpdateType5Choice> updateType) {
+		this.updateType = updateType;
 	}
 }

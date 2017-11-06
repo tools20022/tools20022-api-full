@@ -29,26 +29,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AppearanceCode#Deliverable
- * AppearanceCode.Deliverable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AppearanceCode#NotDeliverable
- * AppearanceCode.NotDeliverable}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AppearanceCode#Limited
- * AppearanceCode.Limited}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AppearanceCode#BookEntry
- * AppearanceCode.BookEntry}</li>
+ * {@linkplain com.tools20022.repository.codeset.AppearanceCode#mmDeliverable
+ * AppearanceCode.mmDeliverable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AppearanceCode#DeferredBookEntry
- * AppearanceCode.DeferredBookEntry}</li>
+ * {@linkplain com.tools20022.repository.codeset.AppearanceCode#mmNotDeliverable
+ * AppearanceCode.mmNotDeliverable}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AppearanceCode#mmLimited
+ * AppearanceCode.mmLimited}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AppearanceCode#mmBookEntry
+ * AppearanceCode.mmBookEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AppearanceCode#DeliverableBookEntry
- * AppearanceCode.DeliverableBookEntry}</li>
+ * {@linkplain com.tools20022.repository.codeset.AppearanceCode#mmDeferredBookEntry
+ * AppearanceCode.mmDeferredBookEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AppearanceCode#TemporaryGlobal
- * AppearanceCode.TemporaryGlobal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AppearanceCode#Global
- * AppearanceCode.Global}</li>
+ * {@linkplain com.tools20022.repository.codeset.AppearanceCode#mmDeliverableBookEntry
+ * AppearanceCode.mmDeliverableBookEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AppearanceCode#mmTemporaryGlobal
+ * AppearanceCode.mmTemporaryGlobal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AppearanceCode#mmGlobal
+ * AppearanceCode.mmGlobal}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -61,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -103,7 +104,7 @@ public class AppearanceCode {
 	 * definition} = "Physical certificates exist."</li>
 	 * </ul>
 	 */
-	public static final MMCode Deliverable = new MMCode() {
+	public static final MMCode mmDeliverable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Deliverable";
@@ -133,7 +134,7 @@ public class AppearanceCode {
 	 * definition} = "Not yet deliverable contract."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotDeliverable = new MMCode() {
+	public static final MMCode mmNotDeliverable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NotDeliverable";
@@ -163,7 +164,7 @@ public class AppearanceCode {
 	 * definition} = "Limited or partial deliverability."</li>
 	 * </ul>
 	 */
-	public static final MMCode Limited = new MMCode() {
+	public static final MMCode mmLimited = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Limited";
@@ -196,7 +197,7 @@ public class AppearanceCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode BookEntry = new MMCode() {
+	public static final MMCode mmBookEntry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BookEntry";
@@ -226,7 +227,7 @@ public class AppearanceCode {
 	 * definition} = "Deferred printing, book entry."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeferredBookEntry = new MMCode() {
+	public static final MMCode mmDeferredBookEntry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeferredBookEntry";
@@ -256,7 +257,7 @@ public class AppearanceCode {
 	 * definition} = "Deliverable, book entry."</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliverableBookEntry = new MMCode() {
+	public static final MMCode mmDeliverableBookEntry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DeliverableBookEntry";
@@ -286,7 +287,7 @@ public class AppearanceCode {
 	 * definition} = "Deferred printing, global certificate."</li>
 	 * </ul>
 	 */
-	public static final MMCode TemporaryGlobal = new MMCode() {
+	public static final MMCode mmTemporaryGlobal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TemporaryGlobal";
@@ -316,7 +317,7 @@ public class AppearanceCode {
 	 * definition} = "Not deliverable, global certificate."</li>
 	 * </ul>
 	 */
-	public static final MMCode Global = new MMCode() {
+	public static final MMCode mmGlobal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Global";
@@ -329,14 +330,14 @@ public class AppearanceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DELI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AppearanceCode";
 				definition = "Specifies the deliverability of a security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AppearanceCode.Deliverable, com.tools20022.repository.codeset.AppearanceCode.NotDeliverable, com.tools20022.repository.codeset.AppearanceCode.Limited,
-						com.tools20022.repository.codeset.AppearanceCode.BookEntry, com.tools20022.repository.codeset.AppearanceCode.DeferredBookEntry, com.tools20022.repository.codeset.AppearanceCode.DeliverableBookEntry,
-						com.tools20022.repository.codeset.AppearanceCode.TemporaryGlobal, com.tools20022.repository.codeset.AppearanceCode.Global);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AppearanceCode.mmDeliverable, com.tools20022.repository.codeset.AppearanceCode.mmNotDeliverable, com.tools20022.repository.codeset.AppearanceCode.mmLimited,
+						com.tools20022.repository.codeset.AppearanceCode.mmBookEntry, com.tools20022.repository.codeset.AppearanceCode.mmDeferredBookEntry, com.tools20022.repository.codeset.AppearanceCode.mmDeliverableBookEntry,
+						com.tools20022.repository.codeset.AppearanceCode.mmTemporaryGlobal, com.tools20022.repository.codeset.AppearanceCode.mmGlobal);
 				derivation_lazy = () -> Arrays.asList(Appearance1Code.mmObject());
 			}
 		});

@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code#Offered
- * ForeignCurrencyPaymentElection1Code.Offered}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code#mmOffered
+ * ForeignCurrencyPaymentElection1Code.mmOffered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code#NotOffered
- * ForeignCurrencyPaymentElection1Code.NotOffered}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code#mmNotOffered
+ * ForeignCurrencyPaymentElection1Code.mmNotOffered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code#Mandatory
- * ForeignCurrencyPaymentElection1Code.Mandatory}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code#mmMandatory
+ * ForeignCurrencyPaymentElection1Code.mmMandatory}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class ForeignCurrencyPaymentElection1Code extends ForeignCurrencyPaymentE
 	 * name} = "Offered"</li>
 	 * </ul>
 	 */
-	public static final MMCode Offered = new MMCode() {
+	public static final MMCode mmOffered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offered";
@@ -107,7 +107,7 @@ public class ForeignCurrencyPaymentElection1Code extends ForeignCurrencyPaymentE
 	 * name} = "NotOffered"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotOffered = new MMCode() {
+	public static final MMCode mmNotOffered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotOffered";
@@ -130,7 +130,7 @@ public class ForeignCurrencyPaymentElection1Code extends ForeignCurrencyPaymentE
 	 * name} = "Mandatory"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mandatory = new MMCode() {
+	public static final MMCode mmMandatory = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
@@ -141,13 +141,13 @@ public class ForeignCurrencyPaymentElection1Code extends ForeignCurrencyPaymentE
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFFD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ForeignCurrencyPaymentElection1Code";
 				definition = "Specifies whether the foreign currency payment is offered.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code.Offered, com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code.NotOffered,
-						com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code.Mandatory);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code.mmOffered, com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code.mmNotOffered,
+						com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code.mmMandatory);
 				trace_lazy = () -> ForeignCurrencyPaymentElectionCode.mmObject();
 			}
 		});

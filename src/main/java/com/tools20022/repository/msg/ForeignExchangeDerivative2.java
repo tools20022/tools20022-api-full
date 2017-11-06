@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchangeDerivative2#ContractSubType
- * ForeignExchangeDerivative2.ContractSubType}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchangeDerivative2#mmContractSubType
+ * ForeignExchangeDerivative2.mmContractSubType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForeignExchangeDerivative2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AssetClassSubProductType19Code contractSubType;
 	/**
 	 * Type of deliverable and non-deliverable forwards, options and swaps
 	 * contract.
@@ -74,8 +75,8 @@ public class ForeignExchangeDerivative2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commodity#SubProduct
-	 * Commodity.SubProduct}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+	 * Commodity.mmSubProduct}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,17 +97,17 @@ public class ForeignExchangeDerivative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ContractSubType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmContractSubType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
 			componentContext_lazy = () -> ForeignExchangeDerivative2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.SubProduct;
 			isDerived = false;
 			xmlTag = "CtrctSubTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSubType";
 			definition = "Type of deliverable and non-deliverable forwards, options and swaps contract.\t";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType19Code.mmObject();
 		}
 	};
@@ -114,14 +115,22 @@ public class ForeignExchangeDerivative2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeDerivative2.ContractSubType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeDerivative2.mmContractSubType);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeDerivative2";
 				definition = "Foreign Exchange Derivative which is either deliverable or non-deliverable.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AssetClassSubProductType19Code getContractSubType() {
+		return contractSubType;
+	}
+
+	public void setContractSubType(AssetClassSubProductType19Code contractSubType) {
+		this.contractSubType = contractSubType;
 	}
 }

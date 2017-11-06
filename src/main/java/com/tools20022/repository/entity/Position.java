@@ -39,20 +39,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Position#NetQuantity
- * Position.NetQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Position#NetPositionAmount
- * Position.NetPositionAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Position#System
- * Position.System}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Position#Price
- * Position.Price}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Position#mmNetQuantity
+ * Position.mmNetQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Position#SecuritiesSettlement
- * Position.SecuritiesSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.Position#mmNetPositionAmount
+ * Position.mmNetPositionAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Position#mmSystem
+ * Position.mmSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Position#mmPrice
+ * Position.mmPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Position#InitialPositionAmount
- * Position.InitialPositionAmount}</li>
+ * {@linkplain com.tools20022.repository.entity.Position#mmSecuritiesSettlement
+ * Position.mmSecuritiesSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Position#mmInitialPositionAmount
+ * Position.mmInitialPositionAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,15 +61,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#RelatedPosition
- * SecuritiesPricing.RelatedPosition}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Position
- * SecuritiesQuantity.Position}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#TradesPosition
- * System.TradesPosition}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedPosition
+ * SecuritiesPricing.mmRelatedPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#Position
- * SecuritiesSettlement.Position}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmPosition
+ * SecuritiesQuantity.mmPosition}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmTradesPosition
+ * System.mmTradesPosition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPosition
+ * SecuritiesSettlement.mmPosition}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Position {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesQuantity netQuantity;
 	/**
 	 * Specifies the net quantity position of the trade legs of one member
 	 * within the system.
@@ -108,8 +111,8 @@ public class Position {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Position
-	 * SecuritiesQuantity.Position}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmPosition
+	 * SecuritiesQuantity.mmPosition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -117,21 +120,21 @@ public class Position {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.NetPosition1#NetQuantity
-	 * NetPosition1.NetQuantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NetPosition2#NetQuantity
-	 * NetPosition2.NetQuantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.NetPosition3#NetQuantity
-	 * NetPosition3.NetQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
 	 * Position}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.NetPosition1#mmNetQuantity
+	 * NetPosition1.mmNetQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.NetPosition2#mmNetQuantity
+	 * NetPosition2.mmNetQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.NetPosition3#mmNetQuantity
+	 * NetPosition3.mmNetQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -145,21 +148,22 @@ public class Position {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd NetQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmNetQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetPosition1.NetQuantity, com.tools20022.repository.msg.NetPosition2.NetQuantity, com.tools20022.repository.msg.NetPosition3.NetQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetPosition1.mmNetQuantity, com.tools20022.repository.msg.NetPosition2.mmNetQuantity, com.tools20022.repository.msg.NetPosition3.mmNetQuantity);
 			elementContext_lazy = () -> Position.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NetQuantity";
 			definition = "Specifies the net quantity position of the trade legs of one member within the system.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Position;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmPosition;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected CurrencyAndAmount netPositionAmount;
 	/**
 	 * Specifies the net position amount of the trade legs of one member within
 	 * the system.
@@ -171,24 +175,24 @@ public class Position {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetPosition1#NetPositionAmount
-	 * NetPosition1.NetPositionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetPosition2#NetPositionAmount
-	 * NetPosition2.NetPositionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetPosition3#NetPositionAmount
-	 * NetPosition3.NetPositionAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
 	 * Position}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetPosition1#mmNetPositionAmount
+	 * NetPosition1.mmNetPositionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetPosition2#mmNetPositionAmount
+	 * NetPosition2.mmNetPositionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetPosition3#mmNetPositionAmount
+	 * NetPosition3.mmNetPositionAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -202,19 +206,21 @@ public class Position {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NetPositionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNetPositionAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetPosition1.NetPositionAmount, com.tools20022.repository.msg.NetPosition2.NetPositionAmount, com.tools20022.repository.msg.NetPosition3.NetPositionAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetPosition1.mmNetPositionAmount, com.tools20022.repository.msg.NetPosition2.mmNetPositionAmount,
+					com.tools20022.repository.msg.NetPosition3.mmNetPositionAmount);
 			elementContext_lazy = () -> Position.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NetPositionAmount";
 			definition = "Specifies the net position amount of the trade legs of one member within the system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected System system;
 	/**
 	 * System for which trades position is specified.
 	 * <p>
@@ -223,8 +229,8 @@ public class Position {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.System#TradesPosition
-	 * System.TradesPosition}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmTradesPosition
+	 * System.mmTradesPosition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -246,20 +252,21 @@ public class Position {
 	 * definition} = "System for which trades position is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd System = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Position.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "System for which trades position is specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.System.TradesPosition;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.System.mmTradesPosition;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 		}
 	};
+	protected SecuritiesPricing price;
 	/**
 	 * Price applied to the position.
 	 * <p>
@@ -268,8 +275,8 @@ public class Position {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#RelatedPosition
-	 * SecuritiesPricing.RelatedPosition}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedPosition
+	 * SecuritiesPricing.mmRelatedPosition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -277,21 +284,21 @@ public class Position {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesPricing
 	 * SecuritiesPricing}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation3#NetPositionPrice
-	 * SettlementObligation3.NetPositionPrice}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation5#NetPositionPrice
-	 * SettlementObligation5.NetPositionPrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
 	 * Position}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation3#mmNetPositionPrice
+	 * SettlementObligation3.mmNetPositionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation5#mmNetPositionPrice
+	 * SettlementObligation5.mmNetPositionPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -303,21 +310,22 @@ public class Position {
 	 * definition} = "Price applied to the position."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Price = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementObligation3.NetPositionPrice, com.tools20022.repository.msg.SettlementObligation5.NetPositionPrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementObligation3.mmNetPositionPrice, com.tools20022.repository.msg.SettlementObligation5.mmNetPositionPrice);
 			elementContext_lazy = () -> Position.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Price";
 			definition = "Price applied to the position.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesPricing.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.RelatedPosition;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedPosition;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
+	protected SecuritiesSettlement securitiesSettlement;
 	/**
 	 * Information related to the settlement of the position.
 	 * <p>
@@ -326,8 +334,8 @@ public class Position {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#Position
-	 * SecuritiesSettlement.Position}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPosition
+	 * SecuritiesSettlement.mmPosition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -351,20 +359,21 @@ public class Position {
 	 * definition} = "Information related to the settlement of the position."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> Position.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesSettlement";
 			definition = "Information related to the settlement of the position.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.Position;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPosition;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
+	protected CurrencyAndAmount initialPositionAmount;
 	/**
 	 * Specifies the position at the beginning of a reporting period.
 	 * <p>
@@ -375,24 +384,24 @@ public class Position {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
 	 * CurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetPosition1#InitialPositionAmount
-	 * NetPosition1.InitialPositionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetPosition2#InitialPositionAmount
-	 * NetPosition2.InitialPositionAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NetPosition3#InitialPositionAmount
-	 * NetPosition3.InitialPositionAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Position
 	 * Position}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetPosition1#mmInitialPositionAmount
+	 * NetPosition1.mmInitialPositionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetPosition2#mmInitialPositionAmount
+	 * NetPosition2.mmInitialPositionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NetPosition3#mmInitialPositionAmount
+	 * NetPosition3.mmInitialPositionAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -405,17 +414,17 @@ public class Position {
 	 * "Specifies the position at the beginning of a reporting period."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute InitialPositionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmInitialPositionAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetPosition1.InitialPositionAmount, com.tools20022.repository.msg.NetPosition2.InitialPositionAmount,
-					com.tools20022.repository.msg.NetPosition3.InitialPositionAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetPosition1.mmInitialPositionAmount, com.tools20022.repository.msg.NetPosition2.mmInitialPositionAmount,
+					com.tools20022.repository.msg.NetPosition3.mmInitialPositionAmount);
 			elementContext_lazy = () -> Position.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "InitialPositionAmount";
 			definition = "Specifies the position at the beginning of a reporting period.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -423,17 +432,65 @@ public class Position {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Position";
 				definition = "Specifies the status of trades and their value inside a system.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.RelatedPosition, com.tools20022.repository.entity.SecuritiesQuantity.Position,
-						com.tools20022.repository.entity.System.TradesPosition, com.tools20022.repository.entity.SecuritiesSettlement.Position);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Position.NetQuantity, com.tools20022.repository.entity.Position.NetPositionAmount, com.tools20022.repository.entity.Position.System,
-						com.tools20022.repository.entity.Position.Price, com.tools20022.repository.entity.Position.SecuritiesSettlement, com.tools20022.repository.entity.Position.InitialPositionAmount);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedPosition, com.tools20022.repository.entity.SecuritiesQuantity.mmPosition,
+						com.tools20022.repository.entity.System.mmTradesPosition, com.tools20022.repository.entity.SecuritiesSettlement.mmPosition);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Position.mmNetQuantity, com.tools20022.repository.entity.Position.mmNetPositionAmount, com.tools20022.repository.entity.Position.mmSystem,
+						com.tools20022.repository.entity.Position.mmPrice, com.tools20022.repository.entity.Position.mmSecuritiesSettlement, com.tools20022.repository.entity.Position.mmInitialPositionAmount);
 				derivationComponent_lazy = () -> Arrays.asList(NetPosition1.mmObject(), NetPosition2.mmObject(), NetPosition3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesQuantity getNetQuantity() {
+		return netQuantity;
+	}
+
+	public void setNetQuantity(com.tools20022.repository.entity.SecuritiesQuantity netQuantity) {
+		this.netQuantity = netQuantity;
+	}
+
+	public CurrencyAndAmount getNetPositionAmount() {
+		return netPositionAmount;
+	}
+
+	public void setNetPositionAmount(CurrencyAndAmount netPositionAmount) {
+		this.netPositionAmount = netPositionAmount;
+	}
+
+	public System getSystem() {
+		return system;
+	}
+
+	public void setSystem(com.tools20022.repository.entity.System system) {
+		this.system = system;
+	}
+
+	public SecuritiesPricing getPrice() {
+		return price;
+	}
+
+	public void setPrice(com.tools20022.repository.entity.SecuritiesPricing price) {
+		this.price = price;
+	}
+
+	public SecuritiesSettlement getSecuritiesSettlement() {
+		return securitiesSettlement;
+	}
+
+	public void setSecuritiesSettlement(com.tools20022.repository.entity.SecuritiesSettlement securitiesSettlement) {
+		this.securitiesSettlement = securitiesSettlement;
+	}
+
+	public CurrencyAndAmount getInitialPositionAmount() {
+		return initialPositionAmount;
+	}
+
+	public void setInitialPositionAmount(CurrencyAndAmount initialPositionAmount) {
+		this.initialPositionAmount = initialPositionAmount;
 	}
 }

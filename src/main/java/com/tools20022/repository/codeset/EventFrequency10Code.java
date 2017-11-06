@@ -33,17 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * EventFrequencyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency10Code#Daily
- * EventFrequency10Code.Daily}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency10Code#Adhoc
- * EventFrequency10Code.Adhoc}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency10Code#mmDaily
+ * EventFrequency10Code.mmDaily}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency10Code#mmAdhoc
+ * EventFrequency10Code.mmAdhoc}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +75,7 @@ public class EventFrequency10Code extends EventFrequencyCode {
 	 * name} = "Daily"</li>
 	 * </ul>
 	 */
-	public static final MMCode Daily = new MMCode() {
+	public static final MMCode mmDaily = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
@@ -96,7 +98,7 @@ public class EventFrequency10Code extends EventFrequencyCode {
 	 * name} = "Adhoc"</li>
 	 * </ul>
 	 */
-	public static final MMCode Adhoc = new MMCode() {
+	public static final MMCode mmAdhoc = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adhoc";
@@ -107,11 +109,11 @@ public class EventFrequency10Code extends EventFrequencyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EventFrequency10Code";
 				definition = "Specifies the regularity of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency10Code.Daily, com.tools20022.repository.codeset.EventFrequency10Code.Adhoc);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency10Code.mmDaily, com.tools20022.repository.codeset.EventFrequency10Code.mmAdhoc);
 				trace_lazy = () -> EventFrequencyCode.mmObject();
 			}
 		});

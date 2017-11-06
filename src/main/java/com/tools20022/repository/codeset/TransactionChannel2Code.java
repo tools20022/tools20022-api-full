@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionChannel2Code#FinancialAdvisor
- * TransactionChannel2Code.FinancialAdvisor}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionChannel2Code#mmFinancialAdvisor
+ * TransactionChannel2Code.mmFinancialAdvisor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionChannel2Code#HomeBanking
- * TransactionChannel2Code.HomeBanking}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionChannel2Code#mmHomeBanking
+ * TransactionChannel2Code.mmHomeBanking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionChannel2Code#OfficeOrBranch
- * TransactionChannel2Code.OfficeOrBranch}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionChannel2Code#mmOfficeOrBranch
+ * TransactionChannel2Code.mmOfficeOrBranch}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class TransactionChannel2Code extends TransactionChannelCode {
 	 * name} = "FinancialAdvisor"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinancialAdvisor = new MMCode() {
+	public static final MMCode mmFinancialAdvisor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdvisor";
@@ -101,7 +101,7 @@ public class TransactionChannel2Code extends TransactionChannelCode {
 	 * name} = "HomeBanking"</li>
 	 * </ul>
 	 */
-	public static final MMCode HomeBanking = new MMCode() {
+	public static final MMCode mmHomeBanking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HomeBanking";
@@ -124,7 +124,7 @@ public class TransactionChannel2Code extends TransactionChannelCode {
 	 * name} = "OfficeOrBranch"</li>
 	 * </ul>
 	 */
-	public static final MMCode OfficeOrBranch = new MMCode() {
+	public static final MMCode mmOfficeOrBranch = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficeOrBranch";
@@ -135,12 +135,12 @@ public class TransactionChannel2Code extends TransactionChannelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionChannel2Code";
 				definition = "Specifies the type of communication channel.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionChannel2Code.FinancialAdvisor, com.tools20022.repository.codeset.TransactionChannel2Code.HomeBanking,
-						com.tools20022.repository.codeset.TransactionChannel2Code.OfficeOrBranch);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionChannel2Code.mmFinancialAdvisor, com.tools20022.repository.codeset.TransactionChannel2Code.mmHomeBanking,
+						com.tools20022.repository.codeset.TransactionChannel2Code.mmOfficeOrBranch);
 				trace_lazy = () -> TransactionChannelCode.mmObject();
 			}
 		});

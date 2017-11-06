@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#PlaceAndName
- * CorporateActionDateSD4.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#mmPlaceAndName
+ * CorporateActionDateSD4.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#InterimAccountingStartDate
- * CorporateActionDateSD4.InterimAccountingStartDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#mmInterimAccountingStartDate
+ * CorporateActionDateSD4.mmInterimAccountingStartDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#DelistingDate
- * CorporateActionDateSD4.DelistingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#mmDelistingDate
+ * CorporateActionDateSD4.mmDelistingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#ExercisePeriodBeginDate
- * CorporateActionDateSD4.ExercisePeriodBeginDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#mmExercisePeriodBeginDate
+ * CorporateActionDateSD4.mmExercisePeriodBeginDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#ObjectionDate
- * CorporateActionDateSD4.ObjectionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#mmObjectionDate
+ * CorporateActionDateSD4.mmObjectionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#ExclusionDate
- * CorporateActionDateSD4.ExclusionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#mmExclusionDate
+ * CorporateActionDateSD4.mmExclusionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#ProofOfClaimFilingDate
- * CorporateActionDateSD4.ProofOfClaimFilingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD4#mmProofOfClaimFilingDate
+ * CorporateActionDateSD4.mmProofOfClaimFilingDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDateSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -102,7 +103,7 @@ public class CorporateActionDateSD4 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
@@ -110,11 +111,12 @@ public class CorporateActionDateSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODate interimAccountingStartDate;
 	/**
 	 * Date on which accounting for due bills starts and associated tracking
 	 * begins.
@@ -145,7 +147,7 @@ public class CorporateActionDateSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterimAccountingStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterimAccountingStartDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class CorporateActionDateSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimAccountingStartDate";
 			definition = "Date on which accounting for due bills starts and associated tracking begins.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate delistingDate;
 	/**
 	 * Date on which the event security is no longer listed on the exchange.
 	 * <p>
@@ -186,7 +189,7 @@ public class CorporateActionDateSD4 {
 	 * "Date on which the event security is no longer listed on the exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DelistingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDelistingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
@@ -194,11 +197,12 @@ public class CorporateActionDateSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelistingDate";
 			definition = "Date on which the event security is no longer listed on the exchange.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate exercisePeriodBeginDate;
 	/**
 	 * Date by which a holder can exercise warrants.
 	 * <p>
@@ -226,7 +230,7 @@ public class CorporateActionDateSD4 {
 	 * definition} = "Date by which a holder can exercise warrants."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExercisePeriodBeginDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExercisePeriodBeginDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
@@ -234,11 +238,12 @@ public class CorporateActionDateSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePeriodBeginDate";
 			definition = "Date by which a holder can exercise warrants.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate objectionDate;
 	/**
 	 * Date by which a holder listed as a member of the claimant group in a
 	 * lawsuit may object to the proposed solution.
@@ -269,7 +274,7 @@ public class CorporateActionDateSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ObjectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmObjectionDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
@@ -277,11 +282,12 @@ public class CorporateActionDateSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObjectionDate";
 			definition = "Date by which a holder listed as a member of the claimant group in a lawsuit may object to the proposed solution.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate exclusionDate;
 	/**
 	 * Date by which claimants may exclude themselves from an ongoing class
 	 * action lawsuit.
@@ -312,7 +318,7 @@ public class CorporateActionDateSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExclusionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExclusionDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
@@ -320,11 +326,12 @@ public class CorporateActionDateSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusionDate";
 			definition = "Date by which claimants may exclude themselves from an ongoing class action lawsuit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate proofOfClaimFilingDate;
 	/**
 	 * Date by which a holder must file claim forms to become a member of the
 	 * claimant group in a lawsuit.
@@ -355,7 +362,7 @@ public class CorporateActionDateSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProofOfClaimFilingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProofOfClaimFilingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
@@ -363,8 +370,8 @@ public class CorporateActionDateSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProofOfClaimFilingDate";
 			definition = "Date by which a holder must file claim forms to become a member of the claimant group in a lawsuit.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -372,15 +379,72 @@ public class CorporateActionDateSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD4.PlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD4.InterimAccountingStartDate,
-						com.tools20022.repository.msg.CorporateActionDateSD4.DelistingDate, com.tools20022.repository.msg.CorporateActionDateSD4.ExercisePeriodBeginDate, com.tools20022.repository.msg.CorporateActionDateSD4.ObjectionDate,
-						com.tools20022.repository.msg.CorporateActionDateSD4.ExclusionDate, com.tools20022.repository.msg.CorporateActionDateSD4.ProofOfClaimFilingDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD4.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD4.mmInterimAccountingStartDate,
+						com.tools20022.repository.msg.CorporateActionDateSD4.mmDelistingDate, com.tools20022.repository.msg.CorporateActionDateSD4.mmExercisePeriodBeginDate,
+						com.tools20022.repository.msg.CorporateActionDateSD4.mmObjectionDate, com.tools20022.repository.msg.CorporateActionDateSD4.mmExclusionDate,
+						com.tools20022.repository.msg.CorporateActionDateSD4.mmProofOfClaimFilingDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionDateSD4";
 				definition = "Provides additional information regarding corporate action date details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ISODate getInterimAccountingStartDate() {
+		return interimAccountingStartDate;
+	}
+
+	public void setInterimAccountingStartDate(ISODate interimAccountingStartDate) {
+		this.interimAccountingStartDate = interimAccountingStartDate;
+	}
+
+	public ISODate getDelistingDate() {
+		return delistingDate;
+	}
+
+	public void setDelistingDate(ISODate delistingDate) {
+		this.delistingDate = delistingDate;
+	}
+
+	public ISODate getExercisePeriodBeginDate() {
+		return exercisePeriodBeginDate;
+	}
+
+	public void setExercisePeriodBeginDate(ISODate exercisePeriodBeginDate) {
+		this.exercisePeriodBeginDate = exercisePeriodBeginDate;
+	}
+
+	public ISODate getObjectionDate() {
+		return objectionDate;
+	}
+
+	public void setObjectionDate(ISODate objectionDate) {
+		this.objectionDate = objectionDate;
+	}
+
+	public ISODate getExclusionDate() {
+		return exclusionDate;
+	}
+
+	public void setExclusionDate(ISODate exclusionDate) {
+		this.exclusionDate = exclusionDate;
+	}
+
+	public ISODate getProofOfClaimFilingDate() {
+		return proofOfClaimFilingDate;
+	}
+
+	public void setProofOfClaimFilingDate(ISODate proofOfClaimFilingDate) {
+		this.proofOfClaimFilingDate = proofOfClaimFilingDate;
 	}
 }

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.datatype.ISODate;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Processes by which an obligation is extinguished fully or partially.
@@ -36,25 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ObligationFulfilment#Date
- * ObligationFulfilment.Date}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
+ * ObligationFulfilment.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#ObligationOffset
- * ObligationFulfilment.ObligationOffset}</li>
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmObligationOffset
+ * ObligationFulfilment.mmObligationOffset}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#ResultingObligation
- * ObligationFulfilment.ResultingObligation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#Offset
- * Obligation.Offset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#OriginalObligationProcess
- * Obligation.OriginalObligationProcess}</li>
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmResultingObligation
+ * ObligationFulfilment.mmResultingObligation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -74,10 +64,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmOffset
+ * Obligation.mmOffset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmOriginalObligationProcess
+ * Obligation.mmOriginalObligationProcess}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ObligationFulfilment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate date;
 	/**
 	 * Date and time on which assets become available.
 	 * <p>
@@ -101,126 +103,130 @@ public class ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer4#EffectiveTransferDate
-	 * Transfer4.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer7#EffectiveTransferDate
-	 * Transfer7.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer17#EffectiveTransferDate
-	 * Transfer17.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer2#EffectiveTransferDate
-	 * Transfer2.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer10#EffectiveTransferDate
-	 * Transfer10.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer14#EffectiveTransferDate
-	 * Transfer14.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer24#EffectiveTransferDate
-	 * Transfer24.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer25#EffectiveTransferDate
-	 * Transfer25.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer18#EffectiveTransferDate
-	 * Transfer18.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer26#EffectiveTransferDate
-	 * Transfer26.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer13#EffectiveTransferDate
-	 * Transfer13.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer23#EffectiveTransferDate
-	 * Transfer23.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeDelivery1#DeliveryDateTime
-	 * TradeDelivery1.DeliveryDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntentToPay1#ExpectedPaymentDate
-	 * IntentToPay1.ExpectedPaymentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#PrepaymentDate
-	 * ExpectedExecutionDetails3.PrepaymentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther1Choice#PaymentDueDate
-	 * PaymentCodeOrOther1Choice.PaymentDueDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer28#EffectiveTransferDate
-	 * Transfer28.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer29#EffectiveTransferDate
-	 * Transfer29.EffectiveTransferDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntentToPay2#ExpectedPaymentDate
-	 * IntentToPay2.ExpectedPaymentDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount6#DateTime
-	 * DetailedAmount6.DateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReconciliationList1#PaymentDate
-	 * ReconciliationList1.PaymentDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ATMAccountStatement2#TransactionDate
-	 * ATMAccountStatement2.TransactionDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#InitiatorTransactionDateTime
-	 * CardTransaction10.InitiatorTransactionDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransaction9#InitiatorTransactionDateTime
-	 * CardTransaction9.InitiatorTransactionDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail2#ValidityDate
-	 * CardTransactionDetail2.ValidityDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail1#ValidityDate
-	 * CardTransactionDetail1.ValidityDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail4#ValidityDate
-	 * CardTransactionDetail4.ValidityDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#ValidityDate
-	 * CardTransactionDetail3.ValidityDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#TransactionDate
-	 * TransactionCertificate2.TransactionDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.CertificateReference1#Date
-	 * CertificateReference1.Date}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer31#EffectiveTransferDate
-	 * Transfer31.EffectiveTransferDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer31#AverageDate
-	 * Transfer31.AverageDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer31#NewAverageDate
-	 * Transfer31.NewAverageDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer33#EffectiveTransferDate
-	 * Transfer33.EffectiveTransferDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer33#AverageDate
-	 * Transfer33.AverageDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer33#NewAverageDate
-	 * Transfer33.NewAverageDate}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14#DateTime
-	 * DetailedAmount14.DateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TradeDelivery2#DeliveryDateTime
-	 * TradeDelivery2.DeliveryDateTime}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateAuthentication1#Date
-	 * MandateAuthentication1.Date}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
 	 * ObligationFulfilment}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer4#mmEffectiveTransferDate
+	 * Transfer4.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer7#mmEffectiveTransferDate
+	 * Transfer7.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer17#mmEffectiveTransferDate
+	 * Transfer17.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer2#mmEffectiveTransferDate
+	 * Transfer2.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer10#mmEffectiveTransferDate
+	 * Transfer10.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer14#mmEffectiveTransferDate
+	 * Transfer14.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer24#mmEffectiveTransferDate
+	 * Transfer24.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer25#mmEffectiveTransferDate
+	 * Transfer25.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer18#mmEffectiveTransferDate
+	 * Transfer18.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer26#mmEffectiveTransferDate
+	 * Transfer26.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer13#mmEffectiveTransferDate
+	 * Transfer13.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer23#mmEffectiveTransferDate
+	 * Transfer23.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeDelivery1#mmDeliveryDateTime
+	 * TradeDelivery1.mmDeliveryDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntentToPay1#mmExpectedPaymentDate
+	 * IntentToPay1.mmExpectedPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3#mmPrepaymentDate
+	 * ExpectedExecutionDetails3.mmPrepaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentCodeOrOther1Choice#mmPaymentDueDate
+	 * PaymentCodeOrOther1Choice.mmPaymentDueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer28#mmEffectiveTransferDate
+	 * Transfer28.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer29#mmEffectiveTransferDate
+	 * Transfer29.mmEffectiveTransferDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntentToPay2#mmExpectedPaymentDate
+	 * IntentToPay2.mmExpectedPaymentDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount6#mmDateTime
+	 * DetailedAmount6.mmDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmPaymentDate
+	 * ReconciliationList1.mmPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMAccountStatement2#mmTransactionDate
+	 * ATMAccountStatement2.mmTransactionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction10#mmInitiatorTransactionDateTime
+	 * CardTransaction10.mmInitiatorTransactionDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction9#mmInitiatorTransactionDateTime
+	 * CardTransaction9.mmInitiatorTransactionDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail2#mmValidityDate
+	 * CardTransactionDetail2.mmValidityDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail1#mmValidityDate
+	 * CardTransactionDetail1.mmValidityDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail4#mmValidityDate
+	 * CardTransactionDetail4.mmValidityDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransactionDetail3#mmValidityDate
+	 * CardTransactionDetail3.mmValidityDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionCertificate2#mmTransactionDate
+	 * TransactionCertificate2.mmTransactionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CertificateReference1#mmDate
+	 * CertificateReference1.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmEffectiveTransferDate
+	 * Transfer31.mmEffectiveTransferDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer31#mmAverageDate
+	 * Transfer31.mmAverageDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmNewAverageDate
+	 * Transfer31.mmNewAverageDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmEffectiveTransferDate
+	 * Transfer33.mmEffectiveTransferDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer33#mmAverageDate
+	 * Transfer33.mmAverageDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmNewAverageDate
+	 * Transfer33.mmNewAverageDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount14#mmDateTime
+	 * DetailedAmount14.mmDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeDelivery2#mmDeliveryDateTime
+	 * TradeDelivery2.mmDeliveryDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateAuthentication1#mmDate
+	 * MandateAuthentication1.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -232,32 +238,33 @@ public class ObligationFulfilment {
 	 * definition} = "Date and time on which assets become available."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Date = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer4.EffectiveTransferDate, com.tools20022.repository.msg.Transfer7.EffectiveTransferDate, com.tools20022.repository.msg.Transfer17.EffectiveTransferDate,
-					com.tools20022.repository.msg.Transfer2.EffectiveTransferDate, com.tools20022.repository.msg.Transfer10.EffectiveTransferDate, com.tools20022.repository.msg.Transfer14.EffectiveTransferDate,
-					com.tools20022.repository.msg.Transfer24.EffectiveTransferDate, com.tools20022.repository.msg.Transfer25.EffectiveTransferDate, com.tools20022.repository.msg.Transfer18.EffectiveTransferDate,
-					com.tools20022.repository.msg.Transfer26.EffectiveTransferDate, com.tools20022.repository.msg.Transfer13.EffectiveTransferDate, com.tools20022.repository.msg.Transfer23.EffectiveTransferDate,
-					com.tools20022.repository.msg.TradeDelivery1.DeliveryDateTime, com.tools20022.repository.msg.IntentToPay1.ExpectedPaymentDate, com.tools20022.repository.msg.ExpectedExecutionDetails3.PrepaymentDate,
-					com.tools20022.repository.choice.PaymentCodeOrOther1Choice.PaymentDueDate, com.tools20022.repository.msg.Transfer28.EffectiveTransferDate, com.tools20022.repository.msg.Transfer29.EffectiveTransferDate,
-					com.tools20022.repository.msg.IntentToPay2.ExpectedPaymentDate, com.tools20022.repository.msg.DetailedAmount6.DateTime, com.tools20022.repository.msg.ReconciliationList1.PaymentDate,
-					com.tools20022.repository.msg.ATMAccountStatement2.TransactionDate, com.tools20022.repository.msg.CardTransaction10.InitiatorTransactionDateTime,
-					com.tools20022.repository.msg.CardTransaction9.InitiatorTransactionDateTime, com.tools20022.repository.msg.CardTransactionDetail2.ValidityDate, com.tools20022.repository.msg.CardTransactionDetail1.ValidityDate,
-					com.tools20022.repository.msg.CardTransactionDetail4.ValidityDate, com.tools20022.repository.msg.CardTransactionDetail3.ValidityDate, com.tools20022.repository.msg.TransactionCertificate2.TransactionDate,
-					com.tools20022.repository.msg.CertificateReference1.Date, com.tools20022.repository.msg.Transfer31.EffectiveTransferDate, com.tools20022.repository.msg.Transfer31.AverageDate,
-					com.tools20022.repository.msg.Transfer31.NewAverageDate, com.tools20022.repository.msg.Transfer33.EffectiveTransferDate, com.tools20022.repository.msg.Transfer33.AverageDate,
-					com.tools20022.repository.msg.Transfer33.NewAverageDate, com.tools20022.repository.msg.DetailedAmount14.DateTime, com.tools20022.repository.msg.TradeDelivery2.DeliveryDateTime,
-					com.tools20022.repository.msg.MandateAuthentication1.Date);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer4.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer7.mmEffectiveTransferDate,
+					com.tools20022.repository.msg.Transfer17.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer2.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer10.mmEffectiveTransferDate,
+					com.tools20022.repository.msg.Transfer14.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer24.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer25.mmEffectiveTransferDate,
+					com.tools20022.repository.msg.Transfer18.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer26.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer13.mmEffectiveTransferDate,
+					com.tools20022.repository.msg.Transfer23.mmEffectiveTransferDate, com.tools20022.repository.msg.TradeDelivery1.mmDeliveryDateTime, com.tools20022.repository.msg.IntentToPay1.mmExpectedPaymentDate,
+					com.tools20022.repository.msg.ExpectedExecutionDetails3.mmPrepaymentDate, com.tools20022.repository.choice.PaymentCodeOrOther1Choice.mmPaymentDueDate, com.tools20022.repository.msg.Transfer28.mmEffectiveTransferDate,
+					com.tools20022.repository.msg.Transfer29.mmEffectiveTransferDate, com.tools20022.repository.msg.IntentToPay2.mmExpectedPaymentDate, com.tools20022.repository.msg.DetailedAmount6.mmDateTime,
+					com.tools20022.repository.msg.ReconciliationList1.mmPaymentDate, com.tools20022.repository.msg.ATMAccountStatement2.mmTransactionDate, com.tools20022.repository.msg.CardTransaction10.mmInitiatorTransactionDateTime,
+					com.tools20022.repository.msg.CardTransaction9.mmInitiatorTransactionDateTime, com.tools20022.repository.msg.CardTransactionDetail2.mmValidityDate, com.tools20022.repository.msg.CardTransactionDetail1.mmValidityDate,
+					com.tools20022.repository.msg.CardTransactionDetail4.mmValidityDate, com.tools20022.repository.msg.CardTransactionDetail3.mmValidityDate, com.tools20022.repository.msg.TransactionCertificate2.mmTransactionDate,
+					com.tools20022.repository.msg.CertificateReference1.mmDate, com.tools20022.repository.msg.Transfer31.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer31.mmAverageDate,
+					com.tools20022.repository.msg.Transfer31.mmNewAverageDate, com.tools20022.repository.msg.Transfer33.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer33.mmAverageDate,
+					com.tools20022.repository.msg.Transfer33.mmNewAverageDate, com.tools20022.repository.msg.DetailedAmount14.mmDateTime, com.tools20022.repository.msg.TradeDelivery2.mmDeliveryDateTime,
+					com.tools20022.repository.msg.MandateAuthentication1.mmDate);
 			elementContext_lazy = () -> ObligationFulfilment.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Date";
 			definition = "Date and time on which assets become available.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Obligation> obligationOffset;
 	/**
 	 * Specifies the obligation which has been offset for instance a payment
 	 * obligation or a securities delivery.
@@ -267,8 +274,8 @@ public class ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#Offset
-	 * Obligation.Offset}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmOffset
+	 * Obligation.mmOffset}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -294,7 +301,7 @@ public class ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ObligationOffset = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmObligationOffset = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ObligationFulfilment.mmObject();
 			isDerived = false;
@@ -302,11 +309,12 @@ public class ObligationFulfilment {
 			name = "ObligationOffset";
 			definition = "Specifies the obligation which has been offset for instance a payment obligation or a securities delivery.";
 			minOccurs = 0;
-			type_lazy = () -> Obligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.Offset;
+			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.mmOffset;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Obligation> resultingObligation;
 	/**
 	 * Specifies the obligation which result from a settlement process, for
 	 * instance the remaining obligation when the obligations are netted.
@@ -316,8 +324,8 @@ public class ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#OriginalObligationProcess
-	 * Obligation.OriginalObligationProcess}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmOriginalObligationProcess
+	 * Obligation.mmOriginalObligationProcess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -343,7 +351,7 @@ public class ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ResultingObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmResultingObligation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ObligationFulfilment.mmObject();
 			isDerived = false;
@@ -351,26 +359,50 @@ public class ObligationFulfilment {
 			name = "ResultingObligation";
 			definition = "Specifies the obligation which result from a settlement process, for instance the remaining obligation when the obligations are netted.";
 			minOccurs = 0;
-			type_lazy = () -> Obligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.OriginalObligationProcess;
+			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.mmOriginalObligationProcess;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ObligationFulfilment";
 				definition = "Processes by which an obligation is extinguished fully or partially.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Obligation.Offset, com.tools20022.repository.entity.Obligation.OriginalObligationProcess);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Obligation.mmOffset, com.tools20022.repository.entity.Obligation.mmOriginalObligationProcess);
 				subType_lazy = () -> Arrays.asList(Payment.mmObject(), SecuritiesTransfer.mmObject(), Clearing.mmObject(), ProductDelivery.mmObject(), BuyIn.mmObject(), PairOff.mmObject(), Netting.mmObject(), Rollover.mmObject(),
 						Novation.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ObligationFulfilment.Date, com.tools20022.repository.entity.ObligationFulfilment.ObligationOffset,
-						com.tools20022.repository.entity.ObligationFulfilment.ResultingObligation);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ObligationFulfilment.mmDate, com.tools20022.repository.entity.ObligationFulfilment.mmObligationOffset,
+						com.tools20022.repository.entity.ObligationFulfilment.mmResultingObligation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public List<Obligation> getObligationOffset() {
+		return obligationOffset;
+	}
+
+	public void setObligationOffset(List<com.tools20022.repository.entity.Obligation> obligationOffset) {
+		this.obligationOffset = obligationOffset;
+	}
+
+	public List<Obligation> getResultingObligation() {
+		return resultingObligation;
+	}
+
+	public void setResultingObligation(List<com.tools20022.repository.entity.Obligation> resultingObligation) {
+		this.resultingObligation = resultingObligation;
 	}
 }

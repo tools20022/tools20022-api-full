@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Valuation dealing processing characteristics linked to the instrument, ie,
@@ -43,46 +44,46 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#ValuationFrequency
- * ValuationDealingProcessingCharacteristics.ValuationFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmValuationFrequency
+ * ValuationDealingProcessingCharacteristics.mmValuationFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#ValuationFrequencyDescription
- * ValuationDealingProcessingCharacteristics.ValuationFrequencyDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmValuationFrequencyDescription
+ * ValuationDealingProcessingCharacteristics.mmValuationFrequencyDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#SubscriptionDealingFrequency
- * ValuationDealingProcessingCharacteristics.SubscriptionDealingFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmSubscriptionDealingFrequency
+ * ValuationDealingProcessingCharacteristics.mmSubscriptionDealingFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#SubscriptionDealFrequencyDescription
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmSubscriptionDealFrequencyDescription
  * ValuationDealingProcessingCharacteristics.
- * SubscriptionDealFrequencyDescription}</li>
+ * mmSubscriptionDealFrequencyDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#LimitedSubscriptionPeriod
- * ValuationDealingProcessingCharacteristics.LimitedSubscriptionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmLimitedSubscriptionPeriod
+ * ValuationDealingProcessingCharacteristics.mmLimitedSubscriptionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#RedemptionDealingFrequency
- * ValuationDealingProcessingCharacteristics.RedemptionDealingFrequency}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmRedemptionDealingFrequency
+ * ValuationDealingProcessingCharacteristics.mmRedemptionDealingFrequency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#RedemptionDealFrequencyDescription
- * ValuationDealingProcessingCharacteristics.RedemptionDealFrequencyDescription}
- * </li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmRedemptionDealFrequencyDescription
+ * ValuationDealingProcessingCharacteristics.
+ * mmRedemptionDealFrequencyDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#LimitedRedemptionPeriod
- * ValuationDealingProcessingCharacteristics.LimitedRedemptionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmLimitedRedemptionPeriod
+ * ValuationDealingProcessingCharacteristics.mmLimitedRedemptionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#DecimalisationPrice
- * ValuationDealingProcessingCharacteristics.DecimalisationPrice}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmDecimalisationPrice
+ * ValuationDealingProcessingCharacteristics.mmDecimalisationPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#DecimalisationUnits
- * ValuationDealingProcessingCharacteristics.DecimalisationUnits}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmDecimalisationUnits
+ * ValuationDealingProcessingCharacteristics.mmDecimalisationUnits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#DualFundIndicator
- * ValuationDealingProcessingCharacteristics.DualFundIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmDualFundIndicator
+ * ValuationDealingProcessingCharacteristics.mmDualFundIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#PriceMethod
- * ValuationDealingProcessingCharacteristics.PriceMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmPriceMethod
+ * ValuationDealingProcessingCharacteristics.mmPriceMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#PriceCurrency
- * ValuationDealingProcessingCharacteristics.PriceCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics#mmPriceCurrency
+ * ValuationDealingProcessingCharacteristics.mmPriceCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -92,8 +93,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -110,6 +111,7 @@ import java.util.function.Supplier;
 public class ValuationDealingProcessingCharacteristics {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EventFrequency2Code valuationFrequency;
 	/**
 	 * Frequency of the valuation.
 	 * <p>
@@ -123,8 +125,8 @@ public class ValuationDealingProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#ValuationFrequency
-	 * NetAssetValueCalculation.ValuationFrequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmValuationFrequency
+	 * NetAssetValueCalculation.mmValuationFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,20 +145,21 @@ public class ValuationDealingProcessingCharacteristics {
 	 * definition} = "Frequency of the valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuationFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuationFrequency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationFrequency;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.ValuationFrequency;
 			isDerived = false;
 			xmlTag = "ValtnFrqcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationFrequency";
 			definition = "Frequency of the valuation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency2Code.mmObject();
 		}
 	};
+	protected Max350Text valuationFrequencyDescription;
 	/**
 	 * Further details regarding the dealing frequency, eg, Tuesday (for weekly
 	 * dealing) or last business day of the month.
@@ -187,7 +190,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValuationFrequencyDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValuationFrequencyDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class ValuationDealingProcessingCharacteristics {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationFrequencyDescription";
 			definition = "Further details regarding the dealing frequency, eg, Tuesday (for weekly dealing) or last business day of the month.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected EventFrequency2Code subscriptionDealingFrequency;
 	/**
 	 * Frequency at which the subscriptions are done.
 	 * <p>
@@ -228,7 +232,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * definition} = "Frequency at which the subscriptions are done."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubscriptionDealingFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubscriptionDealingFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
@@ -236,11 +240,12 @@ public class ValuationDealingProcessingCharacteristics {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionDealingFrequency";
 			definition = "Frequency at which the subscriptions are done.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency2Code.mmObject();
 		}
 	};
+	protected Max350Text subscriptionDealFrequencyDescription;
 	/**
 	 * Description of frequency at which the subscription is done.
 	 * <p>
@@ -269,7 +274,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * "Description of frequency at which the subscription is done."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubscriptionDealFrequencyDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubscriptionDealFrequencyDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
@@ -277,11 +282,12 @@ public class ValuationDealingProcessingCharacteristics {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionDealFrequencyDescription";
 			definition = "Description of frequency at which the subscription is done.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text limitedSubscriptionPeriod;
 	/**
 	 * Specific period, eg, for some guaranteed funds, during which the
 	 * units/shares may be subscribed to.
@@ -295,8 +301,9 @@ public class ValuationDealingProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#LimitedSubscriptionPeriod
-	 * InvestmentFundClassProcessingCharacteristics.LimitedSubscriptionPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmLimitedSubscriptionPeriod
+	 * InvestmentFundClassProcessingCharacteristics.mmLimitedSubscriptionPeriod}
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -317,20 +324,21 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LimitedSubscriptionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitedSubscriptionPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmLimitedSubscriptionPeriod;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.LimitedSubscriptionPeriod;
 			isDerived = false;
 			xmlTag = "LtdSbcptPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedSubscriptionPeriod";
 			definition = "Specific period, eg, for some guaranteed funds, during which the units/shares may be subscribed to.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected EventFrequency2Code redemptionDealingFrequency;
 	/**
 	 * Frequency at which the redemptions are done.
 	 * <p>
@@ -359,7 +367,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * definition} = "Frequency at which the redemptions are done."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RedemptionDealingFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRedemptionDealingFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
@@ -367,11 +375,12 @@ public class ValuationDealingProcessingCharacteristics {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionDealingFrequency";
 			definition = "Frequency at which the redemptions are done.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency2Code.mmObject();
 		}
 	};
+	protected Max350Text redemptionDealFrequencyDescription;
 	/**
 	 * Description of frequency at which the redemption is done.
 	 * <p>
@@ -400,7 +409,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RedemptionDealFrequencyDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRedemptionDealFrequencyDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
@@ -408,11 +417,12 @@ public class ValuationDealingProcessingCharacteristics {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionDealFrequencyDescription";
 			definition = "Description of frequency at which the redemption is done.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text limitedRedemptionPeriod;
 	/**
 	 * Specific period, eg, for some guaranteed funds, during which the
 	 * units/shares may be redeemed.
@@ -426,8 +436,8 @@ public class ValuationDealingProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#LimitedRedemptionPeriod
-	 * InvestmentFundClassProcessingCharacteristics.LimitedRedemptionPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmLimitedRedemptionPeriod
+	 * InvestmentFundClassProcessingCharacteristics.mmLimitedRedemptionPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -448,20 +458,21 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LimitedRedemptionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLimitedRedemptionPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmLimitedRedemptionPeriod;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.LimitedRedemptionPeriod;
 			isDerived = false;
 			xmlTag = "LtdRedPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedRedemptionPeriod";
 			definition = "Specific period, eg, for some guaranteed funds, during which the units/shares may be redeemed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Number decimalisationPrice;
 	/**
 	 * Number of decimal places to which quantities of units/shares are rounded.
 	 * <p>
@@ -474,8 +485,8 @@ public class ValuationDealingProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#Decimalisation
-	 * InvestmentFundClassProcessingCharacteristics.Decimalisation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmDecimalisation
+	 * InvestmentFundClassProcessingCharacteristics.mmDecimalisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -496,20 +507,21 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DecimalisationPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDecimalisationPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.Decimalisation;
 			isDerived = false;
 			xmlTag = "DcmlstnPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecimalisationPrice";
 			definition = "Number of decimal places to which quantities of units/shares are rounded.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number decimalisationUnits;
 	/**
 	 * Number of decimal places to which quantities of units/shares are rounded.
 	 * <p>
@@ -522,8 +534,8 @@ public class ValuationDealingProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#Decimalisation
-	 * InvestmentFundClassProcessingCharacteristics.Decimalisation}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics#mmDecimalisation
+	 * InvestmentFundClassProcessingCharacteristics.mmDecimalisation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -544,20 +556,21 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DecimalisationUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDecimalisationUnits = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.Decimalisation;
 			isDerived = false;
 			xmlTag = "DcmlstnUnits";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecimalisationUnits";
 			definition = "Number of decimal places to which quantities of units/shares are rounded.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected YesNoIndicator dualFundIndicator;
 	/**
 	 * Indicates whether the fund has two prices.
 	 * <p>
@@ -571,8 +584,8 @@ public class ValuationDealingProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#DualFundIndicator
-	 * InvestmentFundClass.DualFundIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmDualFundIndicator
+	 * InvestmentFundClass.mmDualFundIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -591,20 +604,21 @@ public class ValuationDealingProcessingCharacteristics {
 	 * definition} = "Indicates whether the fund has two prices."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DualFundIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDualFundIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDualFundIndicator;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.DualFundIndicator;
 			isDerived = false;
 			xmlTag = "DualFndInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DualFundIndicator";
 			definition = "Indicates whether the fund has two prices.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected PriceMethod1Code priceMethod;
 	/**
 	 * Type of pricing calculation method.
 	 * <p>
@@ -618,8 +632,8 @@ public class ValuationDealingProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceMethod
-	 * SecuritiesPricing.PriceMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceMethod
+	 * SecuritiesPricing.mmPriceMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -638,20 +652,21 @@ public class ValuationDealingProcessingCharacteristics {
 	 * definition} = "Type of pricing calculation method."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceMethod;
 			isDerived = false;
 			xmlTag = "PricMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMethod";
 			definition = "Type of pricing calculation method.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
 		}
 	};
+	protected List<ActiveCurrencyCode> priceCurrency;
 	/**
 	 * Currencies in which the prices for the investment fund class are
 	 * published by the fund management company.
@@ -666,8 +681,8 @@ public class ValuationDealingProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#RequestedNAVCurrency
-	 * InvestmentFundClass.RequestedNAVCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmRequestedNAVCurrency
+	 * InvestmentFundClass.mmRequestedNAVCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -688,10 +703,10 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.RequestedNAVCurrency;
 			isDerived = false;
 			xmlTag = "PricCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -705,15 +720,15 @@ public class ValuationDealingProcessingCharacteristics {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.ValuationFrequency,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.ValuationFrequencyDescription, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.SubscriptionDealingFrequency,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.SubscriptionDealFrequencyDescription, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.LimitedSubscriptionPeriod,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.RedemptionDealingFrequency, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.RedemptionDealFrequencyDescription,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.LimitedRedemptionPeriod, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.DecimalisationPrice,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.DecimalisationUnits, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.DualFundIndicator,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.PriceMethod, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.PriceCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmValuationFrequency,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmValuationFrequencyDescription, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmSubscriptionDealingFrequency,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmSubscriptionDealFrequencyDescription, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmLimitedSubscriptionPeriod,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmRedemptionDealingFrequency, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmRedemptionDealFrequencyDescription,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmLimitedRedemptionPeriod, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmDecimalisationPrice,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmDecimalisationUnits, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmDualFundIndicator,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmPriceMethod, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmPriceCurrency);
 				trace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -727,5 +742,109 @@ public class ValuationDealingProcessingCharacteristics {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EventFrequency2Code getValuationFrequency() {
+		return valuationFrequency;
+	}
+
+	public void setValuationFrequency(EventFrequency2Code valuationFrequency) {
+		this.valuationFrequency = valuationFrequency;
+	}
+
+	public Max350Text getValuationFrequencyDescription() {
+		return valuationFrequencyDescription;
+	}
+
+	public void setValuationFrequencyDescription(Max350Text valuationFrequencyDescription) {
+		this.valuationFrequencyDescription = valuationFrequencyDescription;
+	}
+
+	public EventFrequency2Code getSubscriptionDealingFrequency() {
+		return subscriptionDealingFrequency;
+	}
+
+	public void setSubscriptionDealingFrequency(EventFrequency2Code subscriptionDealingFrequency) {
+		this.subscriptionDealingFrequency = subscriptionDealingFrequency;
+	}
+
+	public Max350Text getSubscriptionDealFrequencyDescription() {
+		return subscriptionDealFrequencyDescription;
+	}
+
+	public void setSubscriptionDealFrequencyDescription(Max350Text subscriptionDealFrequencyDescription) {
+		this.subscriptionDealFrequencyDescription = subscriptionDealFrequencyDescription;
+	}
+
+	public Max350Text getLimitedSubscriptionPeriod() {
+		return limitedSubscriptionPeriod;
+	}
+
+	public void setLimitedSubscriptionPeriod(Max350Text limitedSubscriptionPeriod) {
+		this.limitedSubscriptionPeriod = limitedSubscriptionPeriod;
+	}
+
+	public EventFrequency2Code getRedemptionDealingFrequency() {
+		return redemptionDealingFrequency;
+	}
+
+	public void setRedemptionDealingFrequency(EventFrequency2Code redemptionDealingFrequency) {
+		this.redemptionDealingFrequency = redemptionDealingFrequency;
+	}
+
+	public Max350Text getRedemptionDealFrequencyDescription() {
+		return redemptionDealFrequencyDescription;
+	}
+
+	public void setRedemptionDealFrequencyDescription(Max350Text redemptionDealFrequencyDescription) {
+		this.redemptionDealFrequencyDescription = redemptionDealFrequencyDescription;
+	}
+
+	public Max350Text getLimitedRedemptionPeriod() {
+		return limitedRedemptionPeriod;
+	}
+
+	public void setLimitedRedemptionPeriod(Max350Text limitedRedemptionPeriod) {
+		this.limitedRedemptionPeriod = limitedRedemptionPeriod;
+	}
+
+	public Number getDecimalisationPrice() {
+		return decimalisationPrice;
+	}
+
+	public void setDecimalisationPrice(Number decimalisationPrice) {
+		this.decimalisationPrice = decimalisationPrice;
+	}
+
+	public Number getDecimalisationUnits() {
+		return decimalisationUnits;
+	}
+
+	public void setDecimalisationUnits(Number decimalisationUnits) {
+		this.decimalisationUnits = decimalisationUnits;
+	}
+
+	public YesNoIndicator getDualFundIndicator() {
+		return dualFundIndicator;
+	}
+
+	public void setDualFundIndicator(YesNoIndicator dualFundIndicator) {
+		this.dualFundIndicator = dualFundIndicator;
+	}
+
+	public PriceMethod1Code getPriceMethod() {
+		return priceMethod;
+	}
+
+	public void setPriceMethod(PriceMethod1Code priceMethod) {
+		this.priceMethod = priceMethod;
+	}
+
+	public List<ActiveCurrencyCode> getPriceCurrency() {
+		return priceCurrency;
+	}
+
+	public void setPriceCurrency(List<ActiveCurrencyCode> priceCurrency) {
+		this.priceCurrency = priceCurrency;
 	}
 }

@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code#AcknowledgedAccepted
- * SettlementConditionModificationProcessingStatus1Code.AcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code#mmAcknowledgedAccepted
+ * SettlementConditionModificationProcessingStatus1Code.mmAcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code#Rejected
- * SettlementConditionModificationProcessingStatus1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code#mmRejected
+ * SettlementConditionModificationProcessingStatus1Code.mmRejected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class SettlementConditionModificationProcessingStatus1Code extends Instru
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgedAccepted = new MMCode() {
+	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
@@ -107,7 +107,7 @@ public class SettlementConditionModificationProcessingStatus1Code extends Instru
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -118,13 +118,13 @@ public class SettlementConditionModificationProcessingStatus1Code extends Instru
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementConditionModificationProcessingStatus1Code";
 				definition = "Specifies the status of a securities settlement condition modification request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code.AcknowledgedAccepted,
-						com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code.Rejected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code.mmAcknowledgedAccepted,
+						com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code.mmRejected);
 				trace_lazy = () -> InstructionProcessingStatusCode.mmObject();
 			}
 		});

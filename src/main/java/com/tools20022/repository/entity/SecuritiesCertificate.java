@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#Number
- * SecuritiesCertificate.Number}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmNumber
+ * SecuritiesCertificate.mmNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#BasicRegistration
- * SecuritiesCertificate.BasicRegistration}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmBasicRegistration
+ * SecuritiesCertificate.mmBasicRegistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#RelatedDelivery
- * SecuritiesCertificate.RelatedDelivery}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmRelatedDelivery
+ * SecuritiesCertificate.mmRelatedDelivery}</li>
  * </ul>
  * </li>
  * <li>
@@ -52,14 +52,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#IdentificationForSecuritiesCertificate
- * GenericIdentification.IdentificationForSecuritiesCertificate}</li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForSecuritiesCertificate
+ * GenericIdentification.mmIdentificationForSecuritiesCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#IssuedCertificateNumber
- * PhysicalDelivery.IssuedCertificateNumber}</li>
+ * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmIssuedCertificateNumber
+ * PhysicalDelivery.mmIssuedCertificateNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#SecuritiesCertificate
- * BasicSecuritiesRegistration.SecuritiesCertificate}</li>
+ * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmSecuritiesCertificate
+ * BasicSecuritiesRegistration.mmSecuritiesCertificate}</li>
  * </ul>
  * </li>
  * <li>
@@ -81,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +96,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesCertificate {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification number;
 	/**
 	 * Identifier of a certificate assigned by the issuer.
 	 * <p>
@@ -104,8 +105,8 @@ public class SecuritiesCertificate {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#IdentificationForSecuritiesCertificate
-	 * GenericIdentification.IdentificationForSecuritiesCertificate}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForSecuritiesCertificate
+	 * GenericIdentification.mmIdentificationForSecuritiesCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -114,67 +115,67 @@ public class SecuritiesCertificate {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Unit1#CertificateNumber
-	 * Unit1.CertificateNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Unit3#CertificateNumber
-	 * Unit3.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters1#CertificateNumber
-	 * RegistrationParameters1.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters2#CertificateNumber
-	 * RegistrationParameters2.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#CertificateNumber
-	 * FinancialInstrumentAttributes1.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate3#Number
-	 * SecuritiesCertificate3.Number}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes31#CertificateNumber
-	 * FinancialInstrumentAttributes31.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes44#CertificateNumber
-	 * FinancialInstrumentAttributes44.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quantity5#CertificateNumber
-	 * Quantity5.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quantity6#CertificateNumber
-	 * Quantity6.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quantity7#CertificateNumber
-	 * Quantity7.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quantity8#CertificateNumber
-	 * Quantity8.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#CertificateNumber
-	 * CommonFinancialInstrumentAttributes1.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters4#CertificateNumber
-	 * RegistrationParameters4.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quantity11#CertificateNumber
-	 * Quantity11.CertificateNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Unit6#CertificateNumber
-	 * Unit6.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#CertificateNumber
-	 * RegistrationParameters5.CertificateNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Quantity12#CertificateNumber
-	 * Quantity12.CertificateNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate
 	 * SecuritiesCertificate}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit1#mmCertificateNumber
+	 * Unit1.mmCertificateNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit3#mmCertificateNumber
+	 * Unit3.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters1#mmCertificateNumber
+	 * RegistrationParameters1.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters2#mmCertificateNumber
+	 * RegistrationParameters2.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmCertificateNumber
+	 * FinancialInstrumentAttributes1.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesCertificate3#mmNumber
+	 * SecuritiesCertificate3.mmNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes31#mmCertificateNumber
+	 * FinancialInstrumentAttributes31.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes44#mmCertificateNumber
+	 * FinancialInstrumentAttributes44.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity5#mmCertificateNumber
+	 * Quantity5.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity6#mmCertificateNumber
+	 * Quantity6.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity7#mmCertificateNumber
+	 * Quantity7.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity8#mmCertificateNumber
+	 * Quantity8.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmCertificateNumber
+	 * CommonFinancialInstrumentAttributes1.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters4#mmCertificateNumber
+	 * RegistrationParameters4.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity11#mmCertificateNumber
+	 * Quantity11.mmCertificateNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit6#mmCertificateNumber
+	 * Unit6.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#mmCertificateNumber
+	 * RegistrationParameters5.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity12#mmCertificateNumber
+	 * Quantity12.mmCertificateNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -186,27 +187,28 @@ public class SecuritiesCertificate {
 	 * definition} = "Identifier of a certificate assigned by the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Number = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmNumber = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit1.CertificateNumber, com.tools20022.repository.msg.Unit3.CertificateNumber, com.tools20022.repository.msg.RegistrationParameters1.CertificateNumber,
-					com.tools20022.repository.msg.RegistrationParameters2.CertificateNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes1.CertificateNumber, com.tools20022.repository.msg.SecuritiesCertificate3.Number,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.CertificateNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes44.CertificateNumber,
-					com.tools20022.repository.msg.Quantity5.CertificateNumber, com.tools20022.repository.msg.Quantity6.CertificateNumber, com.tools20022.repository.msg.Quantity7.CertificateNumber,
-					com.tools20022.repository.msg.Quantity8.CertificateNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.CertificateNumber, com.tools20022.repository.msg.RegistrationParameters4.CertificateNumber,
-					com.tools20022.repository.msg.Quantity11.CertificateNumber, com.tools20022.repository.msg.Unit6.CertificateNumber, com.tools20022.repository.msg.RegistrationParameters5.CertificateNumber,
-					com.tools20022.repository.msg.Quantity12.CertificateNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit1.mmCertificateNumber, com.tools20022.repository.msg.Unit3.mmCertificateNumber, com.tools20022.repository.msg.RegistrationParameters1.mmCertificateNumber,
+					com.tools20022.repository.msg.RegistrationParameters2.mmCertificateNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmCertificateNumber, com.tools20022.repository.msg.SecuritiesCertificate3.mmNumber,
+					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmCertificateNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmCertificateNumber,
+					com.tools20022.repository.msg.Quantity5.mmCertificateNumber, com.tools20022.repository.msg.Quantity6.mmCertificateNumber, com.tools20022.repository.msg.Quantity7.mmCertificateNumber,
+					com.tools20022.repository.msg.Quantity8.mmCertificateNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCertificateNumber,
+					com.tools20022.repository.msg.RegistrationParameters4.mmCertificateNumber, com.tools20022.repository.msg.Quantity11.mmCertificateNumber, com.tools20022.repository.msg.Unit6.mmCertificateNumber,
+					com.tools20022.repository.msg.RegistrationParameters5.mmCertificateNumber, com.tools20022.repository.msg.Quantity12.mmCertificateNumber);
 			elementContext_lazy = () -> SecuritiesCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Number";
 			definition = "Identifier of a certificate assigned by the issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.IdentificationForSecuritiesCertificate;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentificationForSecuritiesCertificate;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
+	protected BasicSecuritiesRegistration basicRegistration;
 	/**
 	 * Registration process which requires a securities certificate.
 	 * <p>
@@ -215,8 +217,8 @@ public class SecuritiesCertificate {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#SecuritiesCertificate
-	 * BasicSecuritiesRegistration.SecuritiesCertificate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmSecuritiesCertificate
+	 * BasicSecuritiesRegistration.mmSecuritiesCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -242,20 +244,21 @@ public class SecuritiesCertificate {
 	 * "Registration process which requires a securities certificate."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd BasicRegistration = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmBasicRegistration = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "BasicRegistration";
 			definition = "Registration process which requires a securities certificate.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BasicSecuritiesRegistration.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.SecuritiesCertificate;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmSecuritiesCertificate;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmObject();
 		}
 	};
+	protected PhysicalDelivery relatedDelivery;
 	/**
 	 * Delivery parameters which specify the certificate parameters.
 	 * <p>
@@ -264,8 +267,8 @@ public class SecuritiesCertificate {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#IssuedCertificateNumber
-	 * PhysicalDelivery.IssuedCertificateNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmIssuedCertificateNumber
+	 * PhysicalDelivery.mmIssuedCertificateNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -290,35 +293,59 @@ public class SecuritiesCertificate {
 	 * "Delivery parameters which specify the certificate parameters."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedDelivery = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedDelivery = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesCertificate.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedDelivery";
 			definition = "Delivery parameters which specify the certificate parameters.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PhysicalDelivery.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.IssuedCertificateNumber;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmIssuedCertificateNumber;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCertificate";
 				definition = "Physical representation of a security.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.IdentificationForSecuritiesCertificate, com.tools20022.repository.entity.PhysicalDelivery.IssuedCertificateNumber,
-						com.tools20022.repository.entity.BasicSecuritiesRegistration.SecuritiesCertificate);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesCertificate.Number, com.tools20022.repository.entity.SecuritiesCertificate.BasicRegistration,
-						com.tools20022.repository.entity.SecuritiesCertificate.RelatedDelivery);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmIdentificationForSecuritiesCertificate, com.tools20022.repository.entity.PhysicalDelivery.mmIssuedCertificateNumber,
+						com.tools20022.repository.entity.BasicSecuritiesRegistration.mmSecuritiesCertificate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesCertificate.mmNumber, com.tools20022.repository.entity.SecuritiesCertificate.mmBasicRegistration,
+						com.tools20022.repository.entity.SecuritiesCertificate.mmRelatedDelivery);
 				derivationComponent_lazy = () -> Arrays.asList(SecuritiesCertificate1.mmObject(), SecuritiesCertificate2.mmObject(), SecuritiesCertificate3.mmObject(), SecuritiesCertificate4.mmObject(), SecuritiesCertificate5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification getNumber() {
+		return number;
+	}
+
+	public void setNumber(com.tools20022.repository.entity.GenericIdentification number) {
+		this.number = number;
+	}
+
+	public BasicSecuritiesRegistration getBasicRegistration() {
+		return basicRegistration;
+	}
+
+	public void setBasicRegistration(com.tools20022.repository.entity.BasicSecuritiesRegistration basicRegistration) {
+		this.basicRegistration = basicRegistration;
+	}
+
+	public PhysicalDelivery getRelatedDelivery() {
+		return relatedDelivery;
+	}
+
+	public void setRelatedDelivery(com.tools20022.repository.entity.PhysicalDelivery relatedDelivery) {
+		this.relatedDelivery = relatedDelivery;
 	}
 }

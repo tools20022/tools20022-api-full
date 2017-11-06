@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.Charges;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides further details on the charges related to the payment transaction.
@@ -35,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Charges4#TotalChargesAndTaxAmount
- * Charges4.TotalChargesAndTaxAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges4#Record
- * Charges4.Record}</li>
+ * {@linkplain com.tools20022.repository.msg.Charges4#mmTotalChargesAndTaxAmount
+ * Charges4.mmTotalChargesAndTaxAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges4#mmRecord
+ * Charges4.mmRecord}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Charges4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount totalChargesAndTaxAmount;
 	/**
 	 * Total of all charges and taxes applied to the entry.
 	 * <p>
@@ -79,8 +81,8 @@ public class Charges4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Charges4
@@ -98,20 +100,21 @@ public class Charges4 {
 	 * definition} = "Total of all charges and taxes applied to the entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalChargesAndTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalChargesAndTaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> Charges4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "TtlChrgsAndTaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalChargesAndTaxAmount";
 			definition = "Total of all charges and taxes applied to the entry.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ChargesRecord2> record;
 	/**
 	 * Provides details of the individual charges record.
 	 * <p>
@@ -141,27 +144,27 @@ public class Charges4 {
 	 * definition} = "Provides details of the individual charges record."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Record = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecord = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Charges4.mmObject();
 			businessComponentTrace_lazy = () -> Charges.mmObject();
+			componentContext_lazy = () -> Charges4.mmObject();
 			isDerived = false;
 			xmlTag = "Rcrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Record";
 			definition = "Provides details of the individual charges record.";
 			minOccurs = 0;
-			type_lazy = () -> ChargesRecord2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ChargesRecord2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charges4.TotalChargesAndTaxAmount, com.tools20022.repository.msg.Charges4.Record);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charges4.mmTotalChargesAndTaxAmount, com.tools20022.repository.msg.Charges4.mmRecord);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Charges4";
 				definition = "Provides further details on the charges related to the payment transaction.";
@@ -169,5 +172,21 @@ public class Charges4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getTotalChargesAndTaxAmount() {
+		return totalChargesAndTaxAmount;
+	}
+
+	public void setTotalChargesAndTaxAmount(ActiveOrHistoricCurrencyAndAmount totalChargesAndTaxAmount) {
+		this.totalChargesAndTaxAmount = totalChargesAndTaxAmount;
+	}
+
+	public List<ChargesRecord2> getRecord() {
+		return record;
+	}
+
+	public void setRecord(List<com.tools20022.repository.msg.ChargesRecord2> record) {
+		this.record = record;
 	}
 }

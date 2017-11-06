@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PaymentsInitiationISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsInitiationMaintenance20162017;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -88,21 +89,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07#GroupHeader
- * CustomerDirectDebitInitiationV07.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07#mmGroupHeader
+ * CustomerDirectDebitInitiationV07.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07#PaymentInformation
- * CustomerDirectDebitInitiationV07.PaymentInformation}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07#mmPaymentInformation
+ * CustomerDirectDebitInitiationV07.mmPaymentInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07#SupplementaryData
- * CustomerDirectDebitInitiationV07.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07#mmSupplementaryData
+ * CustomerDirectDebitInitiationV07.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07#identifier
- * CustomerDirectDebitInitiationV07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.008.001.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -122,6 +121,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CustomerDirectDebitInitiationV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader55 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the message.
@@ -148,22 +148,23 @@ public class CustomerDirectDebitInitiationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06#GroupHeader
-	 * CustomerDirectDebitInitiationV06.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06#mmGroupHeader
+	 * CustomerDirectDebitInitiationV06.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06.GroupHeader;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader55.mmObject();
 		}
 	};
+	protected List<PaymentInstruction21> paymentInformation;
 	/**
 	 * Set of characteristics that apply to the credit side of the payment
 	 * transactions included in the direct debit transaction initiation.
@@ -191,21 +192,22 @@ public class CustomerDirectDebitInitiationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06#PaymentInformation
-	 * CustomerDirectDebitInitiationV06.PaymentInformation}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06#mmPaymentInformation
+	 * CustomerDirectDebitInitiationV06.mmPaymentInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PaymentInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPaymentInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformation";
 			definition = "Set of characteristics that apply to the credit side of the payment transactions included in the direct debit transaction initiation.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06.PaymentInformation;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06.mmPaymentInformation;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstruction21.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -233,46 +235,19 @@ public class CustomerDirectDebitInitiationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06#SupplementaryData
-	 * CustomerDirectDebitInitiationV06.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06#mmSupplementaryData
+	 * CustomerDirectDebitInitiationV06.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06.SupplementaryData;
+			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "008"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "008";
-			version = "07";
-			flavour = "001";
 		}
 	};
 
@@ -287,11 +262,42 @@ public class CustomerDirectDebitInitiationV07 {
 				rootElement = "Document";
 				xmlTag = "CstmrDrctDbtInitn";
 				businessArea_lazy = () -> PaymentsInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07.GroupHeader, com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07.PaymentInformation,
-						com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07.mmGroupHeader, com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07.mmPaymentInformation,
+						com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "008";
+						version = "07";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader55 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader55 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<PaymentInstruction21> getPaymentInformation() {
+		return paymentInformation;
+	}
+
+	public void setPaymentInformation(List<PaymentInstruction21> paymentInformation) {
+		this.paymentInformation = paymentInformation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

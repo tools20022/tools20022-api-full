@@ -36,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InvestmentAccountSelection1Choice#AccountIdentification
- * InvestmentAccountSelection1Choice.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.InvestmentAccountSelection1Choice#mmAccountIdentification
+ * InvestmentAccountSelection1Choice.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InvestmentAccountSelection1Choice#OtherAccountSelectionData
- * InvestmentAccountSelection1Choice.OtherAccountSelectionData}</li>
+ * {@linkplain com.tools20022.repository.choice.InvestmentAccountSelection1Choice#mmOtherAccountSelectionData
+ * InvestmentAccountSelection1Choice.mmOtherAccountSelectionData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentAccountSelection1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification1 accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -75,8 +76,8 @@ public class InvestmentAccountSelection1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +98,21 @@ public class InvestmentAccountSelection1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccountSelection1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1.mmObject();
 		}
 	};
+	protected InvestmentAccount44 otherAccountSelectionData;
 	/**
 	 * Various investment account information used to select a specific account.
 	 * <p>
@@ -144,33 +146,49 @@ public class InvestmentAccountSelection1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherAccountSelectionData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherAccountSelectionData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvestmentAccountSelection1Choice.mmObject();
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
+			componentContext_lazy = () -> InvestmentAccountSelection1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAcctSelctnData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAccountSelectionData";
 			definition = "Various investment account information used to select a specific account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvestmentAccount44.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> InvestmentAccount44.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestmentAccountSelection1Choice.AccountIdentification,
-						com.tools20022.repository.choice.InvestmentAccountSelection1Choice.OtherAccountSelectionData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestmentAccountSelection1Choice.mmAccountIdentification,
+						com.tools20022.repository.choice.InvestmentAccountSelection1Choice.mmOtherAccountSelectionData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccountSelection1Choice";
 				definition = "Choice of account or other account-related data.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification1 getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification1 accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public InvestmentAccount44 getOtherAccountSelectionData() {
+		return otherAccountSelectionData;
+	}
+
+	public void setOtherAccountSelectionData(InvestmentAccount44 otherAccountSelectionData) {
+		this.otherAccountSelectionData = otherAccountSelectionData;
 	}
 }

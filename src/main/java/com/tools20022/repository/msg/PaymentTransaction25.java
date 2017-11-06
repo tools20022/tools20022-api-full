@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransaction25#CashInOrOut
- * PaymentTransaction25.CashInOrOut}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction25#mmCashInOrOut
+ * PaymentTransaction25.mmCashInOrOut}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTransaction25 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashInOrOut5Choice cashInOrOut;
 	/**
 	 * Choice between cash-in or cash-out.
 	 * <p>
@@ -99,35 +100,35 @@ public class PaymentTransaction25 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction71#CashInOrOut
-	 * PaymentTransaction71.CashInOrOut}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction71#mmCashInOrOut
+	 * PaymentTransaction71.mmCashInOrOut}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashInOrOut = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashInOrOut = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentTransaction25.mmObject();
 			businessComponentTrace_lazy = () -> Payment.mmObject();
+			componentContext_lazy = () -> PaymentTransaction25.mmObject();
 			isDerived = false;
 			xmlTag = "CshInOrOut";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInOrOut";
 			definition = "Choice between cash-in or cash-out.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction71.CashInOrOut);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction71.mmCashInOrOut);
 			maxOccurs = 1;
-			type_lazy = () -> CashInOrOut5Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> CashInOrOut5Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction25.CashInOrOut);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction25.mmCashInOrOut);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransaction25";
 				definition = "Payment processes required to transfer cash from the debtor to the creditor.";
@@ -135,5 +136,13 @@ public class PaymentTransaction25 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashInOrOut5Choice getCashInOrOut() {
+		return cashInOrOut;
+	}
+
+	public void setCashInOrOut(CashInOrOut5Choice cashInOrOut) {
+		this.cashInOrOut = cashInOrOut;
 	}
 }

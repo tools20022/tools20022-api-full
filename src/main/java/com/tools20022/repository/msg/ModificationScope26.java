@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope26#ModificationScopeIndication
- * ModificationScope26.ModificationScopeIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope26#mmModificationScopeIndication
+ * ModificationScope26.mmModificationScopeIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ModificationScope26#Intermediary
- * ModificationScope26.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.msg.ModificationScope26#mmIntermediary
+ * ModificationScope26.mmIntermediary}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +46,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#ModifiedIntermediaries
- * AccountModificationInstructionV06.ModifiedIntermediaries}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV06#mmModifiedIntermediaries
+ * AccountModificationInstructionV06.mmModifiedIntermediaries}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ModificationScope26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DataModification1Code modificationScopeIndication;
 	/**
 	 * Specifies the type of modification to be applied.
 	 * <p>
@@ -117,27 +118,27 @@ public class ModificationScope26 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope33#ModificationScopeIndication
-	 * ModificationScope33.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope33#mmModificationScopeIndication
+	 * ModificationScope33.mmModificationScopeIndication}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope30#ModificationScopeIndication
-	 * ModificationScope30.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope30#mmModificationScopeIndication
+	 * ModificationScope30.mmModificationScopeIndication}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope32#ModificationScopeIndication
-	 * ModificationScope32.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope32#mmModificationScopeIndication
+	 * ModificationScope32.mmModificationScopeIndication}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope38#ModificationScopeIndication
-	 * ModificationScope38.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope38#mmModificationScopeIndication
+	 * ModificationScope38.mmModificationScopeIndication}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope20#ModificationScopeIndication
-	 * ModificationScope20.ModificationScopeIndication}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope20#mmModificationScopeIndication
+	 * ModificationScope20.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ModificationScope26.mmObject();
 			isDerived = false;
@@ -145,14 +146,15 @@ public class ModificationScope26 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope20.ModificationScopeIndication;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope33.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope30.ModificationScopeIndication,
-					com.tools20022.repository.msg.ModificationScope32.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope38.ModificationScopeIndication);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope33.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope30.mmModificationScopeIndication,
+					com.tools20022.repository.msg.ModificationScope32.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope38.mmModificationScopeIndication);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope20.mmModificationScopeIndication;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	protected Intermediary36 intermediary;
 	/**
 	 * Intermediary or other party related to the management of the account. In
 	 * some markets, when this intermediary is a party acting on behalf of the
@@ -187,18 +189,18 @@ public class ModificationScope26 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope38#Intermediary
-	 * ModificationScope38.Intermediary}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope38#mmIntermediary
+	 * ModificationScope38.mmIntermediary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ModificationScope20#Intermediary
-	 * ModificationScope20.Intermediary}</li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationScope20#mmIntermediary
+	 * ModificationScope20.mmIntermediary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Intermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ModificationScope26.mmObject();
 			isDerived = false;
@@ -206,28 +208,44 @@ public class ModificationScope26 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			definition = "Intermediary or other party related to the management of the account. In some markets, when this intermediary is a party acting on behalf of the investor for which it has opened an account at, for example, a central securities depository or international central securities depository, this party is known by the investor as the 'account controller'.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope20.Intermediary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope38.Intermediary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope38.mmIntermediary);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope20.mmIntermediary;
 			maxOccurs = 1;
-			type_lazy = () -> Intermediary36.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Intermediary36.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope26.ModificationScopeIndication, com.tools20022.repository.msg.ModificationScope26.Intermediary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.ModifiedIntermediaries);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope26.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope26.mmIntermediary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedIntermediaries);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope26";
 				definition = "Scope of the modification to be applied on an identified set of information.";
-				previousVersion_lazy = () -> ModificationScope20.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ModificationScope33.mmObject(), ModificationScope30.mmObject(), ModificationScope32.mmObject(), ModificationScope38.mmObject());
+				previousVersion_lazy = () -> ModificationScope20.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DataModification1Code getModificationScopeIndication() {
+		return modificationScopeIndication;
+	}
+
+	public void setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
+		this.modificationScopeIndication = modificationScopeIndication;
+	}
+
+	public Intermediary36 getIntermediary() {
+		return intermediary;
+	}
+
+	public void setIntermediary(com.tools20022.repository.msg.Intermediary36 intermediary) {
+		this.intermediary = intermediary;
 	}
 }

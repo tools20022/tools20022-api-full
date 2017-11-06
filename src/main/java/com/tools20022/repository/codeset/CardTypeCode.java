@@ -29,10 +29,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CardTypeCode#CreditCard
- * CardTypeCode.CreditCard}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardTypeCode#DebitCard
- * CardTypeCode.DebitCard}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardTypeCode#mmCreditCard
+ * CardTypeCode.mmCreditCard}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardTypeCode#mmDebitCard
+ * CardTypeCode.mmDebitCard}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +90,7 @@ public class CardTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CreditCard = new MMCode() {
+	public static final MMCode mmCreditCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CreditCard";
@@ -123,7 +123,7 @@ public class CardTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DebitCard = new MMCode() {
+	public static final MMCode mmDebitCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DebitCard";
@@ -136,12 +136,12 @@ public class CardTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRDT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardTypeCode";
 				definition = "Specifies the type of payment card.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardTypeCode.CreditCard, com.tools20022.repository.codeset.CardTypeCode.DebitCard);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardTypeCode.mmCreditCard, com.tools20022.repository.codeset.CardTypeCode.mmDebitCard);
 				derivation_lazy = () -> Arrays.asList(CardType1Code.mmObject());
 			}
 		});

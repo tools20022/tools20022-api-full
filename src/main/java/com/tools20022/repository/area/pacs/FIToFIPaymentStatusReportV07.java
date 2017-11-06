@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -73,24 +74,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07#GroupHeader
- * FIToFIPaymentStatusReportV07.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07#mmGroupHeader
+ * FIToFIPaymentStatusReportV07.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07#OriginalGroupInformationAndStatus
- * FIToFIPaymentStatusReportV07.OriginalGroupInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07#mmOriginalGroupInformationAndStatus
+ * FIToFIPaymentStatusReportV07.mmOriginalGroupInformationAndStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07#TransactionInformationAndStatus
- * FIToFIPaymentStatusReportV07.TransactionInformationAndStatus}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07#mmTransactionInformationAndStatus
+ * FIToFIPaymentStatusReportV07.mmTransactionInformationAndStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07#SupplementaryData
- * FIToFIPaymentStatusReportV07.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07#mmSupplementaryData
+ * FIToFIPaymentStatusReportV07.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07#identifier
- * FIToFIPaymentStatusReportV07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pacs.002.001.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,6 +117,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FIToFIPaymentStatusReportV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader53 groupHeader;
 	/**
 	 * Set of characteristics shared by all individual transactions included in
 	 * the status report message.
@@ -145,30 +145,31 @@ public class FIToFIPaymentStatusReportV07 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#GroupHeader
-	 * FIToFIPaymentStatusReportV08.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#mmGroupHeader
+	 * FIToFIPaymentStatusReportV08.mmGroupHeader}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06#GroupHeader
-	 * FIToFIPaymentStatusReportV06.GroupHeader}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06#mmGroupHeader
+	 * FIToFIPaymentStatusReportV06.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the status report message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06.GroupHeader;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08.GroupHeader);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08.mmGroupHeader);
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06.mmGroupHeader;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader53.mmObject();
 		}
 	};
+	protected List<OriginalGroupHeader1> originalGroupInformationAndStatus;
 	/**
 	 * Original group information concerning the group of transactions, to which
 	 * the status report message refers to.
@@ -197,29 +198,30 @@ public class FIToFIPaymentStatusReportV07 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#OriginalGroupInformationAndStatus
-	 * FIToFIPaymentStatusReportV08.OriginalGroupInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#mmOriginalGroupInformationAndStatus
+	 * FIToFIPaymentStatusReportV08.mmOriginalGroupInformationAndStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06#OriginalGroupInformationAndStatus
-	 * FIToFIPaymentStatusReportV06.OriginalGroupInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06#mmOriginalGroupInformationAndStatus
+	 * FIToFIPaymentStatusReportV06.mmOriginalGroupInformationAndStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndStatus";
 			definition = "Original group information concerning the group of transactions, to which the status report message refers to.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06.OriginalGroupInformationAndStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08.OriginalGroupInformationAndStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08.mmOriginalGroupInformationAndStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06.mmOriginalGroupInformationAndStatus;
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalGroupHeader1.mmObject();
 		}
 	};
+	protected List<PaymentTransaction63> transactionInformationAndStatus;
 	/**
 	 * Information concerning the original transactions, to which the status
 	 * report message refers.
@@ -248,29 +250,30 @@ public class FIToFIPaymentStatusReportV07 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#TransactionInformationAndStatus
-	 * FIToFIPaymentStatusReportV08.TransactionInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#mmTransactionInformationAndStatus
+	 * FIToFIPaymentStatusReportV08.mmTransactionInformationAndStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06#TransactionInformationAndStatus
-	 * FIToFIPaymentStatusReportV06.TransactionInformationAndStatus}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06#mmTransactionInformationAndStatus
+	 * FIToFIPaymentStatusReportV06.mmTransactionInformationAndStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxInfAndSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformationAndStatus";
 			definition = "Information concerning the original transactions, to which the status report message refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06.TransactionInformationAndStatus;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08.TransactionInformationAndStatus);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08.mmTransactionInformationAndStatus);
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06.mmTransactionInformationAndStatus;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransaction63.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -299,54 +302,27 @@ public class FIToFIPaymentStatusReportV07 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#SupplementaryData
-	 * FIToFIPaymentStatusReportV08.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#mmSupplementaryData
+	 * FIToFIPaymentStatusReportV08.mmSupplementaryData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06#SupplementaryData
-	 * FIToFIPaymentStatusReportV06.SupplementaryData}</li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06#mmSupplementaryData
+	 * FIToFIPaymentStatusReportV06.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06.SupplementaryData;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08.SupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08.mmSupplementaryData);
+			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pacs"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "002"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pacs";
-			messageFunctionality = "002";
-			version = "07";
-			flavour = "001";
 		}
 	};
 
@@ -356,18 +332,57 @@ public class FIToFIPaymentStatusReportV07 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FIToFIPaymentStatusReportV07";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe FIToFIPaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.\r\nThe FIToFIPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).\r\nThe FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios.";
-				previousVersion_lazy = () -> FIToFIPaymentStatusReportV06.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(FIToFIPaymentStatusReportV08.mmObject());
+				previousVersion_lazy = () -> FIToFIPaymentStatusReportV06.mmObject();
 				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "FIToFIPmtStsRpt";
 				businessArea_lazy = () -> PaymentsClearingandSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07.GroupHeader,
-						com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07.OriginalGroupInformationAndStatus, com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07.TransactionInformationAndStatus,
-						com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07.mmGroupHeader,
+						com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07.mmOriginalGroupInformationAndStatus, com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07.mmTransactionInformationAndStatus,
+						com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pacs";
+						messageFunctionality = "002";
+						version = "07";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader53 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader53 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public List<OriginalGroupHeader1> getOriginalGroupInformationAndStatus() {
+		return originalGroupInformationAndStatus;
+	}
+
+	public void setOriginalGroupInformationAndStatus(List<OriginalGroupHeader1> originalGroupInformationAndStatus) {
+		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
+	}
+
+	public List<PaymentTransaction63> getTransactionInformationAndStatus() {
+		return transactionInformationAndStatus;
+	}
+
+	public void setTransactionInformationAndStatus(List<PaymentTransaction63> transactionInformationAndStatus) {
+		this.transactionInformationAndStatus = transactionInformationAndStatus;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -61,60 +62,58 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#MessageReference
- * AccountHoldingInformationRequestV02.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmMessageReference
+ * AccountHoldingInformationRequestV02.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#PoolReference
- * AccountHoldingInformationRequestV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmPoolReference
+ * AccountHoldingInformationRequestV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#PreviousReference
- * AccountHoldingInformationRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmPreviousReference
+ * AccountHoldingInformationRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#RelatedReference
- * AccountHoldingInformationRequestV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmRelatedReference
+ * AccountHoldingInformationRequestV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#BusinessFlowDirectionType
- * AccountHoldingInformationRequestV02.BusinessFlowDirectionType}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmBusinessFlowDirectionType
+ * AccountHoldingInformationRequestV02.mmBusinessFlowDirectionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#PrimaryIndividualInvestor
- * AccountHoldingInformationRequestV02.PrimaryIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmPrimaryIndividualInvestor
+ * AccountHoldingInformationRequestV02.mmPrimaryIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#SecondaryIndividualInvestor
- * AccountHoldingInformationRequestV02.SecondaryIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmSecondaryIndividualInvestor
+ * AccountHoldingInformationRequestV02.mmSecondaryIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#OtherIndividualInvestor
- * AccountHoldingInformationRequestV02.OtherIndividualInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmOtherIndividualInvestor
+ * AccountHoldingInformationRequestV02.mmOtherIndividualInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#PrimaryCorporateInvestor
- * AccountHoldingInformationRequestV02.PrimaryCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmPrimaryCorporateInvestor
+ * AccountHoldingInformationRequestV02.mmPrimaryCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#SecondaryCorporateInvestor
- * AccountHoldingInformationRequestV02.SecondaryCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmSecondaryCorporateInvestor
+ * AccountHoldingInformationRequestV02.mmSecondaryCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#OtherCorporateInvestor
- * AccountHoldingInformationRequestV02.OtherCorporateInvestor}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmOtherCorporateInvestor
+ * AccountHoldingInformationRequestV02.mmOtherCorporateInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#TransferorAccount
- * AccountHoldingInformationRequestV02.TransferorAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmTransferorAccount
+ * AccountHoldingInformationRequestV02.mmTransferorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#NomineeAccount
- * AccountHoldingInformationRequestV02.NomineeAccount}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmNomineeAccount
+ * AccountHoldingInformationRequestV02.mmNomineeAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#Transferee
- * AccountHoldingInformationRequestV02.Transferee}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmTransferee
+ * AccountHoldingInformationRequestV02.mmTransferee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#ProductTransfer
- * AccountHoldingInformationRequestV02.ProductTransfer}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmProductTransfer
+ * AccountHoldingInformationRequestV02.mmProductTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#Extension
- * AccountHoldingInformationRequestV02.Extension}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmExtension
+ * AccountHoldingInformationRequestV02.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#identifier
- * AccountHoldingInformationRequestV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.019.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,6 +141,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountHoldingInformationRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageReference;
 	/**
 	 * Identifies the message.
 	 * <p>
@@ -167,24 +167,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#MessageReference
-	 * AccountHoldingInformationRequestV03.MessageReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmMessageReference
+	 * AccountHoldingInformationRequestV03.mmMessageReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
 			definition = "Identifies the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.MessageReference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmMessageReference);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference3 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -210,24 +211,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#PoolReference
-	 * AccountHoldingInformationRequestV03.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmPoolReference
+	 * AccountHoldingInformationRequestV03.mmPoolReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.PoolReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmPoolReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -253,24 +255,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#PreviousReference
-	 * AccountHoldingInformationRequestV03.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmPreviousReference
+	 * AccountHoldingInformationRequestV03.mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.PreviousReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmPreviousReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -297,24 +300,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#RelatedReference
-	 * AccountHoldingInformationRequestV03.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmRelatedReference
+	 * AccountHoldingInformationRequestV03.mmRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.RelatedReference);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmRelatedReference);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 	};
+	protected BusinessFlowDirectionType1Code businessFlowDirectionType;
 	/**
 	 * Identifies the business flow type (assets to be delivered or received).
 	 * <p>
@@ -342,24 +346,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#BusinessFlowDirectionType
-	 * AccountHoldingInformationRequestV03.BusinessFlowDirectionType}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmBusinessFlowDirectionType
+	 * AccountHoldingInformationRequestV03.mmBusinessFlowDirectionType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BusinessFlowDirectionType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBusinessFlowDirectionType = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BizFlowDrctnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessFlowDirectionType";
 			definition = "Identifies the business flow type (assets to be delivered or received).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.BusinessFlowDirectionType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmBusinessFlowDirectionType);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BusinessFlowDirectionType1Code.mmObject();
 		}
 	};
+	protected IndividualPerson8 primaryIndividualInvestor;
 	/**
 	 * Information identifying the primary individual investor, eg, name,
 	 * address, social security number and date of birth.
@@ -388,24 +393,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#PrimaryIndividualInvestor
-	 * AccountHoldingInformationRequestV03.PrimaryIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmPrimaryIndividualInvestor
+	 * AccountHoldingInformationRequestV03.mmPrimaryIndividualInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PrimaryIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPrimaryIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmryIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryIndividualInvestor";
 			definition = "Information identifying the primary individual investor, eg, name, address, social security number and date of birth.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.PrimaryIndividualInvestor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmPrimaryIndividualInvestor);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 	};
+	protected IndividualPerson8 secondaryIndividualInvestor;
 	/**
 	 * Information identifying the secondary individual investor, eg, name,
 	 * address, social security number and date of birth.
@@ -434,24 +440,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#SecondaryIndividualInvestor
-	 * AccountHoldingInformationRequestV03.SecondaryIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmSecondaryIndividualInvestor
+	 * AccountHoldingInformationRequestV03.mmSecondaryIndividualInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecondaryIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecondaryIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScndryIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryIndividualInvestor";
 			definition = "Information identifying the secondary individual investor, eg, name, address, social security number and date of birth.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.SecondaryIndividualInvestor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmSecondaryIndividualInvestor);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 	};
+	protected List<IndividualPerson8> otherIndividualInvestor;
 	/**
 	 * Information identifying other individual investors, eg, name, address,
 	 * social security number and date of birth.
@@ -480,23 +487,24 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#OtherIndividualInvestor
-	 * AccountHoldingInformationRequestV03.OtherIndividualInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmOtherIndividualInvestor
+	 * AccountHoldingInformationRequestV03.mmOtherIndividualInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrIndvInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIndividualInvestor";
 			definition = "Information identifying other individual investors, eg, name, address, social security number and date of birth.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.OtherIndividualInvestor);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmOtherIndividualInvestor);
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 	};
+	protected Organisation4 primaryCorporateInvestor;
 	/**
 	 * Information identifying the primary corporate investor, eg, name and
 	 * address.
@@ -524,24 +532,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#PrimaryCorporateInvestor
-	 * AccountHoldingInformationRequestV03.PrimaryCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmPrimaryCorporateInvestor
+	 * AccountHoldingInformationRequestV03.mmPrimaryCorporateInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PrimaryCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPrimaryCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmryCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCorporateInvestor";
 			definition = "Information identifying the primary corporate investor, eg, name and address.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.PrimaryCorporateInvestor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmPrimaryCorporateInvestor);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
 	};
+	protected Organisation4 secondaryCorporateInvestor;
 	/**
 	 * Information identifying the secondary corporate investor, eg, name and
 	 * address.
@@ -569,24 +578,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#SecondaryCorporateInvestor
-	 * AccountHoldingInformationRequestV03.SecondaryCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmSecondaryCorporateInvestor
+	 * AccountHoldingInformationRequestV03.mmSecondaryCorporateInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecondaryCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecondaryCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScndryCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCorporateInvestor";
 			definition = "Information identifying the secondary corporate investor, eg, name and address.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.SecondaryCorporateInvestor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmSecondaryCorporateInvestor);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
 	};
+	protected List<Organisation4> otherCorporateInvestor;
 	/**
 	 * Information identifying the other corporate investors, eg, name and
 	 * address.
@@ -614,23 +624,24 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#OtherCorporateInvestor
-	 * AccountHoldingInformationRequestV03.OtherCorporateInvestor}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmOtherCorporateInvestor
+	 * AccountHoldingInformationRequestV03.mmOtherCorporateInvestor}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock OtherCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmOtherCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrCorpInvstr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCorporateInvestor";
 			definition = "Information identifying the other corporate investors, eg, name and address.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.OtherCorporateInvestor);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmOtherCorporateInvestor);
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
 	};
+	protected Account5 transferorAccount;
 	/**
 	 * Identification of an account owned by the investor at the old plan
 	 * manager (account servicer).
@@ -658,24 +669,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#TransferorAccount
-	 * AccountHoldingInformationRequestV03.TransferorAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmTransferorAccount
+	 * AccountHoldingInformationRequestV03.mmTransferorAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransferorAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferorAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfrAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferorAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.TransferorAccount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmTransferorAccount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Account5.mmObject();
 		}
 	};
+	protected Account6 nomineeAccount;
 	/**
 	 * Account held in the name of a party that is not the name of the
 	 * beneficial owner of the shares.
@@ -703,24 +715,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#NomineeAccount
-	 * AccountHoldingInformationRequestV03.NomineeAccount}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmNomineeAccount
+	 * AccountHoldingInformationRequestV03.mmNomineeAccount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock NomineeAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmNomineeAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NmneeAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.NomineeAccount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmNomineeAccount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Account6.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice transferee;
 	/**
 	 * Information related to the institution to which the financial instrument
 	 * is to be transferred.
@@ -749,24 +762,25 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#Transferee
-	 * AccountHoldingInformationRequestV03.Transferee}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmTransferee
+	 * AccountHoldingInformationRequestV03.mmTransferee}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Transferee = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransferee = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Trfee";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transferee";
 			definition = "Information related to the institution to which the financial instrument is to be transferred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.Transferee);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmTransferee);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected List<ISATransfer5> productTransfer;
 	/**
 	 * Provides information related to the asset(s) transferred.
 	 * <p>
@@ -792,23 +806,24 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#ProductTransfer
-	 * AccountHoldingInformationRequestV03.ProductTransfer}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmProductTransfer
+	 * AccountHoldingInformationRequestV03.mmProductTransfer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProductTransfer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProductTransfer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PdctTrf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.ProductTransfer);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmProductTransfer);
 			minOccurs = 1;
 			complexType_lazy = () -> ISATransfer5.mmObject();
 		}
 	};
+	protected List<Extension1> extension;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -836,48 +851,21 @@ public class AccountHoldingInformationRequestV02 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#Extension
-	 * AccountHoldingInformationRequestV03.Extension}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmExtension
+	 * AccountHoldingInformationRequestV03.mmExtension}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Extension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.Extension);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmExtension);
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "019"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "019";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -887,24 +875,159 @@ public class AccountHoldingInformationRequestV02 {
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountHoldingInformationRequestV02";
 				definition = "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee) sends the AccountHoldingInformationRequest message to the executing party, for example, a (old) plan manager (Transferor), on behalf of the initiating party, for example, an investor (client), to request information about financial instruments held on behalf of the client.\r\nUsage\r\nThe AccountHoldingInformationRequest message is used to request information about one or more ISA or portfolio products held in a client's account for which it intends to instruct a transfer at a later time.";
-				previousVersion_lazy = () -> RequestForPEPOrISAOrPortfolioInformationV01.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV03.mmObject());
+				previousVersion_lazy = () -> RequestForPEPOrISAOrPortfolioInformationV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctHldgInfReq";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.MessageReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.PoolReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.PreviousReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.RelatedReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.BusinessFlowDirectionType,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.PrimaryIndividualInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.SecondaryIndividualInvestor,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.OtherIndividualInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.PrimaryCorporateInvestor,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.SecondaryCorporateInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.OtherCorporateInvestor,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.TransferorAccount, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.NomineeAccount,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.Transferee, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.ProductTransfer,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.Extension);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmMessageReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmPoolReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmRelatedReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmBusinessFlowDirectionType,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmPrimaryIndividualInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmSecondaryIndividualInvestor,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmOtherIndividualInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmPrimaryCorporateInvestor,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmSecondaryCorporateInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmOtherCorporateInvestor,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmTransferorAccount, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmNomineeAccount,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmTransferee, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmProductTransfer,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmExtension);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "019";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageReference() {
+		return messageReference;
+	}
+
+	public void setMessageReference(MessageIdentification1 messageReference) {
+		this.messageReference = messageReference;
+	}
+
+	public AdditionalReference3 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference3 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference3 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference3 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference3 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference3 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public BusinessFlowDirectionType1Code getBusinessFlowDirectionType() {
+		return businessFlowDirectionType;
+	}
+
+	public void setBusinessFlowDirectionType(BusinessFlowDirectionType1Code businessFlowDirectionType) {
+		this.businessFlowDirectionType = businessFlowDirectionType;
+	}
+
+	public IndividualPerson8 getPrimaryIndividualInvestor() {
+		return primaryIndividualInvestor;
+	}
+
+	public void setPrimaryIndividualInvestor(IndividualPerson8 primaryIndividualInvestor) {
+		this.primaryIndividualInvestor = primaryIndividualInvestor;
+	}
+
+	public IndividualPerson8 getSecondaryIndividualInvestor() {
+		return secondaryIndividualInvestor;
+	}
+
+	public void setSecondaryIndividualInvestor(IndividualPerson8 secondaryIndividualInvestor) {
+		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
+	}
+
+	public List<IndividualPerson8> getOtherIndividualInvestor() {
+		return otherIndividualInvestor;
+	}
+
+	public void setOtherIndividualInvestor(List<IndividualPerson8> otherIndividualInvestor) {
+		this.otherIndividualInvestor = otherIndividualInvestor;
+	}
+
+	public Organisation4 getPrimaryCorporateInvestor() {
+		return primaryCorporateInvestor;
+	}
+
+	public void setPrimaryCorporateInvestor(Organisation4 primaryCorporateInvestor) {
+		this.primaryCorporateInvestor = primaryCorporateInvestor;
+	}
+
+	public Organisation4 getSecondaryCorporateInvestor() {
+		return secondaryCorporateInvestor;
+	}
+
+	public void setSecondaryCorporateInvestor(Organisation4 secondaryCorporateInvestor) {
+		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
+	}
+
+	public List<Organisation4> getOtherCorporateInvestor() {
+		return otherCorporateInvestor;
+	}
+
+	public void setOtherCorporateInvestor(List<Organisation4> otherCorporateInvestor) {
+		this.otherCorporateInvestor = otherCorporateInvestor;
+	}
+
+	public Account5 getTransferorAccount() {
+		return transferorAccount;
+	}
+
+	public void setTransferorAccount(Account5 transferorAccount) {
+		this.transferorAccount = transferorAccount;
+	}
+
+	public Account6 getNomineeAccount() {
+		return nomineeAccount;
+	}
+
+	public void setNomineeAccount(Account6 nomineeAccount) {
+		this.nomineeAccount = nomineeAccount;
+	}
+
+	public PartyIdentification2Choice getTransferee() {
+		return transferee;
+	}
+
+	public void setTransferee(PartyIdentification2Choice transferee) {
+		this.transferee = transferee;
+	}
+
+	public List<ISATransfer5> getProductTransfer() {
+		return productTransfer;
+	}
+
+	public void setProductTransfer(List<ISATransfer5> productTransfer) {
+		this.productTransfer = productTransfer;
+	}
+
+	public List<Extension1> getExtension() {
+		return extension;
+	}
+
+	public void setExtension(List<Extension1> extension) {
+		this.extension = extension;
 	}
 }

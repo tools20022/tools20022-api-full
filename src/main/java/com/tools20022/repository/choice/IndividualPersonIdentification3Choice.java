@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification3Choice#IdentificationNumber
- * IndividualPersonIdentification3Choice.IdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification3Choice#mmIdentificationNumber
+ * IndividualPersonIdentification3Choice.mmIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification3Choice#PersonName
- * IndividualPersonIdentification3Choice.PersonName}</li>
+ * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification3Choice#mmPersonName
+ * IndividualPersonIdentification3Choice.mmPersonName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IndividualPersonIdentification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification81 identificationNumber;
 	/**
 	 * Identification of the person that owns the account.
 	 * <p>
@@ -80,8 +81,8 @@ public class IndividualPersonIdentification3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,26 +102,27 @@ public class IndividualPersonIdentification3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification1Choice#IdentificationNumber
-	 * IndividualPersonIdentification1Choice.IdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification1Choice#mmIdentificationNumber
+	 * IndividualPersonIdentification1Choice.mmIdentificationNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IdentificationNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentificationNumber = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> IndividualPersonIdentification3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "IdNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationNumber";
 			definition = "Identification of the person that owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentification1Choice.IdentificationNumber;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentification1Choice.mmIdentificationNumber;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification81.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification81.mmObject();
 		}
 	};
+	protected IndividualPerson35 personName;
 	/**
 	 * Name of the person that owns the account.
 	 * <p>
@@ -132,8 +134,8 @@ public class IndividualPersonIdentification3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#PersonName
-	 * PersonIdentification.PersonName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmPersonName
+	 * PersonIdentification.mmPersonName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,33 +155,33 @@ public class IndividualPersonIdentification3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification1Choice#PersonName
-	 * IndividualPersonIdentification1Choice.PersonName}</li>
+	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification1Choice#mmPersonName
+	 * IndividualPersonIdentification1Choice.mmPersonName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PersonName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPersonName = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPersonName;
 			componentContext_lazy = () -> IndividualPersonIdentification3Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.PersonName;
 			isDerived = false;
 			xmlTag = "PrsnNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonName";
 			definition = "Name of the person that owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentification1Choice.PersonName;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentification1Choice.mmPersonName;
 			maxOccurs = 1;
-			type_lazy = () -> IndividualPerson35.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> IndividualPerson35.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndividualPersonIdentification3Choice.IdentificationNumber, com.tools20022.repository.choice.IndividualPersonIdentification3Choice.PersonName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndividualPersonIdentification3Choice.mmIdentificationNumber, com.tools20022.repository.choice.IndividualPersonIdentification3Choice.mmPersonName);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IndividualPersonIdentification3Choice";
 				definition = "Choice of formats for the identification of an individual person.";
@@ -187,5 +189,21 @@ public class IndividualPersonIdentification3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification81 getIdentificationNumber() {
+		return identificationNumber;
+	}
+
+	public void setIdentificationNumber(GenericIdentification81 identificationNumber) {
+		this.identificationNumber = identificationNumber;
+	}
+
+	public IndividualPerson35 getPersonName() {
+		return personName;
+	}
+
+	public void setPersonName(IndividualPerson35 personName) {
+		this.personName = personName;
 	}
 }

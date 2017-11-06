@@ -36,30 +36,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#TechnicalRecordIdentification
- * TransparencyDataReport13.TechnicalRecordIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#mmTechnicalRecordIdentification
+ * TransparencyDataReport13.mmTechnicalRecordIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#Identification
- * TransparencyDataReport13.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#mmIdentification
+ * TransparencyDataReport13.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#ReportingDate
- * TransparencyDataReport13.ReportingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#mmReportingDate
+ * TransparencyDataReport13.mmReportingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#TradingVenue
- * TransparencyDataReport13.TradingVenue}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#mmTradingVenue
+ * TransparencyDataReport13.mmTradingVenue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#Suspension
- * TransparencyDataReport13.Suspension}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#mmSuspension
+ * TransparencyDataReport13.mmSuspension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#TransactionsExecuted
- * TransparencyDataReport13.TransactionsExecuted}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#mmTransactionsExecuted
+ * TransparencyDataReport13.mmTransactionsExecuted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#TransactionsExecutedExcludingPreTradeWaiver
- * TransparencyDataReport13.TransactionsExecutedExcludingPreTradeWaiver}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#mmTransactionsExecutedExcludingPreTradeWaiver
+ * TransparencyDataReport13.mmTransactionsExecutedExcludingPreTradeWaiver}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#TransactionsExecutedExcludingPostTradeLargeInScaleWaiver
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport13#mmTransactionsExecutedExcludingPostTradeLargeInScaleWaiver
  * TransparencyDataReport13.
- * TransactionsExecutedExcludingPostTradeLargeInScaleWaiver}</li>
+ * mmTransactionsExecutedExcludingPostTradeLargeInScaleWaiver}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -69,16 +69,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01#EquityTransparencyData
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01#mmEquityTransparencyData
  * FinancialInstrumentReportingEquityTradingActivityReportV01.
- * EquityTransparencyData}</li>
+ * mmEquityTransparencyData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransparencyDataReport13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text technicalRecordIdentification;
 	/**
 	 * Unique identifier of a record in a message used as part of error
 	 * management and status advice messages.<br>
@@ -127,7 +128,7 @@ public class TransparencyDataReport13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
@@ -135,11 +136,12 @@ public class TransparencyDataReport13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and status advice messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice report sent back.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISINOct2015Identifier identification;
 	/**
 	 * Identifies the financial instrument using an ISIN.
 	 * <p>
@@ -153,8 +155,8 @@ public class TransparencyDataReport13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -173,20 +175,21 @@ public class TransparencyDataReport13 {
 	 * definition} = "Identifies the financial instrument using an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the financial instrument using an ISIN.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected ISODate reportingDate;
 	/**
 	 * Date to which the quantitative data fields below relate.
 	 * <p>
@@ -199,8 +202,8 @@ public class TransparencyDataReport13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -219,20 +222,21 @@ public class TransparencyDataReport13 {
 	 * definition} = "Date to which the quantitative data fields below relate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "RptgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingDate";
 			definition = "Date to which the quantitative data fields below relate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected MICIdentifier tradingVenue;
 	/**
 	 * Segment MIC for the trading venue where applicable, otherwise the
 	 * operational MIC.
@@ -247,8 +251,8 @@ public class TransparencyDataReport13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#PlaceOfListing
-	 * Security.PlaceOfListing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPlaceOfListing
+	 * Security.mmPlaceOfListing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -269,20 +273,21 @@ public class TransparencyDataReport13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingVenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.PlaceOfListing;
 			isDerived = false;
 			xmlTag = "TradgVn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingVenue";
 			definition = "Segment MIC for the trading venue where applicable, otherwise the operational MIC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected TrueFalseIndicator suspension;
 	/**
 	 * Indicates whether the instrument was suspended for trading on that
 	 * Trading Venue for the whole day on the given reporting day.
@@ -314,7 +319,7 @@ public class TransparencyDataReport13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Suspension = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSuspension = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
@@ -322,11 +327,12 @@ public class TransparencyDataReport13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspension";
 			definition = "Indicates whether the instrument was suspended for trading on that Trading Venue for the whole day on the given reporting day.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected NumberAndVolume2 transactionsExecuted;
 	/**
 	 * Total number of transactions executed on the reporting day.<br>
 	 * <br>
@@ -355,7 +361,7 @@ public class TransparencyDataReport13 {
 	 * "Total number of transactions executed on the reporting day.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionsExecuted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionsExecuted = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
@@ -363,12 +369,13 @@ public class TransparencyDataReport13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsExecuted";
 			definition = "Total number of transactions executed on the reporting day.\r\n\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NumberAndVolume2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NumberAndVolume2.mmObject();
 		}
 	};
+	protected NumberAndVolume2 transactionsExecutedExcludingPreTradeWaiver;
 	/**
 	 * Details all transactions that have been performed under a pre-trade
 	 * Waiver.
@@ -398,7 +405,7 @@ public class TransparencyDataReport13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionsExecutedExcludingPreTradeWaiver = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionsExecutedExcludingPreTradeWaiver = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
@@ -406,12 +413,13 @@ public class TransparencyDataReport13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsExecutedExcludingPreTradeWaiver";
 			definition = "Details all transactions that have been performed under a pre-trade Waiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NumberAndVolume2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NumberAndVolume2.mmObject();
 		}
 	};
+	protected NumberAndVolume2 transactionsExecutedExcludingPostTradeLargeInScaleWaiver;
 	/**
 	 * Details all transactions that have been performed under a post-trade
 	 * large in scale waivers.
@@ -441,7 +449,7 @@ public class TransparencyDataReport13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionsExecutedExcludingPostTradeLargeInScaleWaiver = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionsExecutedExcludingPostTradeLargeInScaleWaiver = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
@@ -449,28 +457,92 @@ public class TransparencyDataReport13 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsExecutedExcludingPostTradeLargeInScaleWaiver";
 			definition = "Details all transactions that have been performed under a post-trade large in scale waivers.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> NumberAndVolume2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NumberAndVolume2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport13.TechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport13.Identification,
-						com.tools20022.repository.msg.TransparencyDataReport13.ReportingDate, com.tools20022.repository.msg.TransparencyDataReport13.TradingVenue, com.tools20022.repository.msg.TransparencyDataReport13.Suspension,
-						com.tools20022.repository.msg.TransparencyDataReport13.TransactionsExecuted, com.tools20022.repository.msg.TransparencyDataReport13.TransactionsExecutedExcludingPreTradeWaiver,
-						com.tools20022.repository.msg.TransparencyDataReport13.TransactionsExecutedExcludingPostTradeLargeInScaleWaiver);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport13.mmTechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport13.mmIdentification,
+						com.tools20022.repository.msg.TransparencyDataReport13.mmReportingDate, com.tools20022.repository.msg.TransparencyDataReport13.mmTradingVenue, com.tools20022.repository.msg.TransparencyDataReport13.mmSuspension,
+						com.tools20022.repository.msg.TransparencyDataReport13.mmTransactionsExecuted, com.tools20022.repository.msg.TransparencyDataReport13.mmTransactionsExecutedExcludingPreTradeWaiver,
+						com.tools20022.repository.msg.TransparencyDataReport13.mmTransactionsExecutedExcludingPostTradeLargeInScaleWaiver);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01.mmEquityTransparencyData);
 				trace_lazy = () -> Security.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01.EquityTransparencyData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransparencyDataReport13";
 				definition = "Provides for reporting quantitative details of equity instruments as part of transparency calculations.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTechnicalRecordIdentification() {
+		return technicalRecordIdentification;
+	}
+
+	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+		this.technicalRecordIdentification = technicalRecordIdentification;
+	}
+
+	public ISINOct2015Identifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(ISINOct2015Identifier identification) {
+		this.identification = identification;
+	}
+
+	public ISODate getReportingDate() {
+		return reportingDate;
+	}
+
+	public void setReportingDate(ISODate reportingDate) {
+		this.reportingDate = reportingDate;
+	}
+
+	public MICIdentifier getTradingVenue() {
+		return tradingVenue;
+	}
+
+	public void setTradingVenue(MICIdentifier tradingVenue) {
+		this.tradingVenue = tradingVenue;
+	}
+
+	public TrueFalseIndicator getSuspension() {
+		return suspension;
+	}
+
+	public void setSuspension(TrueFalseIndicator suspension) {
+		this.suspension = suspension;
+	}
+
+	public NumberAndVolume2 getTransactionsExecuted() {
+		return transactionsExecuted;
+	}
+
+	public void setTransactionsExecuted(com.tools20022.repository.msg.NumberAndVolume2 transactionsExecuted) {
+		this.transactionsExecuted = transactionsExecuted;
+	}
+
+	public NumberAndVolume2 getTransactionsExecutedExcludingPreTradeWaiver() {
+		return transactionsExecutedExcludingPreTradeWaiver;
+	}
+
+	public void setTransactionsExecutedExcludingPreTradeWaiver(com.tools20022.repository.msg.NumberAndVolume2 transactionsExecutedExcludingPreTradeWaiver) {
+		this.transactionsExecutedExcludingPreTradeWaiver = transactionsExecutedExcludingPreTradeWaiver;
+	}
+
+	public NumberAndVolume2 getTransactionsExecutedExcludingPostTradeLargeInScaleWaiver() {
+		return transactionsExecutedExcludingPostTradeLargeInScaleWaiver;
+	}
+
+	public void setTransactionsExecutedExcludingPostTradeLargeInScaleWaiver(com.tools20022.repository.msg.NumberAndVolume2 transactionsExecutedExcludingPostTradeLargeInScaleWaiver) {
+		this.transactionsExecutedExcludingPostTradeLargeInScaleWaiver = transactionsExecutedExcludingPostTradeLargeInScaleWaiver;
 	}
 }

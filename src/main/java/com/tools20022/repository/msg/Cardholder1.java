@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.CardholderRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Data related to the cardholder.
@@ -36,19 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#Identification
- * Cardholder1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#Name
- * Cardholder1.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#Language
- * Cardholder1.Language}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#Authentication
- * Cardholder1.Authentication}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#mmIdentification
+ * Cardholder1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#mmName
+ * Cardholder1.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#mmLanguage
+ * Cardholder1.mmLanguage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#mmAuthentication
+ * Cardholder1.mmAuthentication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Cardholder1#AddressVerification
- * Cardholder1.AddressVerification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#PersonalData
- * Cardholder1.PersonalData}</li>
+ * {@linkplain com.tools20022.repository.msg.Cardholder1#mmAddressVerification
+ * Cardholder1.mmAddressVerification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder1#mmPersonalData
+ * Cardholder1.mmPersonalData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Cardholder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.CardholderIdentification1> identification;
 	/**
 	 * Identification of the cardholder involved in a transaction.
 	 * <p>
@@ -90,8 +92,8 @@ public class Cardholder1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +112,21 @@ public class Cardholder1 {
 	 * "Identification of the cardholder involved in a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Cardholder1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the cardholder involved in a transaction.";
 			minOccurs = 0;
-			type_lazy = () -> CardholderIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardholderIdentification1.mmObject();
 		}
 	};
+	protected Max45Text name;
 	/**
 	 * Cardholder name associated with the card.
 	 * <p>
@@ -136,8 +139,8 @@ public class Cardholder1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#GivenName
-	 * PersonName.GivenName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmGivenName
+	 * PersonName.mmGivenName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,20 +158,21 @@ public class Cardholder1 {
 	 * definition} = "Cardholder name associated with the card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmGivenName;
 			componentContext_lazy = () -> Cardholder1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.GivenName;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Cardholder name associated with the card.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max45Text.mmObject();
 		}
 	};
+	protected ISO2ALanguageCode language;
 	/**
 	 * Language selected for the cardholder interface during the transaction.
 	 * <p>
@@ -182,8 +186,8 @@ public class Cardholder1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#Language
-	 * Person.Language}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmLanguage
+	 * Person.mmLanguage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,20 +206,21 @@ public class Cardholder1 {
 	 * "Language selected for the cardholder interface during the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Language = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLanguage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmLanguage;
 			componentContext_lazy = () -> Cardholder1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.Language;
 			isDerived = false;
 			xmlTag = "Lang";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Language";
 			definition = "Language selected for the cardholder interface during the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISO2ALanguageCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CardholderAuthentication1> authentication;
 	/**
 	 * Data related to the authentication of the cardholder.
 	 * <p>
@@ -228,8 +233,8 @@ public class Cardholder1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardholderRole#Authentication
-	 * CardholderRole.Authentication}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardholderRole#mmAuthentication
+	 * CardholderRole.mmAuthentication}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,20 +252,21 @@ public class Cardholder1 {
 	 * definition} = "Data related to the authentication of the cardholder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Authentication = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthentication = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardholderRole.mmAuthentication;
 			componentContext_lazy = () -> Cardholder1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardholderRole.Authentication;
 			isDerived = false;
 			xmlTag = "Authntcn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authentication";
 			definition = "Data related to the authentication of the cardholder.";
 			minOccurs = 0;
-			type_lazy = () -> CardholderAuthentication1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication1.mmObject();
 		}
 	};
+	protected AddressVerification1 addressVerification;
 	/**
 	 * Numeric characters of the cardholder's address for verification.
 	 * <p>
@@ -287,7 +293,7 @@ public class Cardholder1 {
 	 * "Numeric characters of the cardholder's address for verification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AddressVerification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAddressVerification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Cardholder1.mmObject();
 			isDerived = false;
@@ -295,12 +301,13 @@ public class Cardholder1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressVerification";
 			definition = "Numeric characters of the cardholder's address for verification.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AddressVerification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AddressVerification1.mmObject();
 		}
 	};
+	protected Max70Text personalData;
 	/**
 	 * Identifies personal data related to the cardholder.
 	 * <p>
@@ -327,7 +334,7 @@ public class Cardholder1 {
 	 * definition} = "Identifies personal data related to the cardholder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PersonalData = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPersonalData = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Cardholder1.mmObject();
 			isDerived = false;
@@ -335,8 +342,8 @@ public class Cardholder1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonalData";
 			definition = "Identifies personal data related to the cardholder.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
@@ -344,10 +351,10 @@ public class Cardholder1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cardholder1.Identification, com.tools20022.repository.msg.Cardholder1.Name, com.tools20022.repository.msg.Cardholder1.Language,
-						com.tools20022.repository.msg.Cardholder1.Authentication, com.tools20022.repository.msg.Cardholder1.AddressVerification, com.tools20022.repository.msg.Cardholder1.PersonalData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cardholder1.mmIdentification, com.tools20022.repository.msg.Cardholder1.mmName, com.tools20022.repository.msg.Cardholder1.mmLanguage,
+						com.tools20022.repository.msg.Cardholder1.mmAuthentication, com.tools20022.repository.msg.Cardholder1.mmAddressVerification, com.tools20022.repository.msg.Cardholder1.mmPersonalData);
 				trace_lazy = () -> CardholderRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Cardholder1";
 				definition = "Data related to the cardholder.";
@@ -355,5 +362,53 @@ public class Cardholder1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CardholderIdentification1> getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(List<com.tools20022.repository.msg.CardholderIdentification1> identification) {
+		this.identification = identification;
+	}
+
+	public Max45Text getName() {
+		return name;
+	}
+
+	public void setName(Max45Text name) {
+		this.name = name;
+	}
+
+	public ISO2ALanguageCode getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(ISO2ALanguageCode language) {
+		this.language = language;
+	}
+
+	public List<CardholderAuthentication1> getAuthentication() {
+		return authentication;
+	}
+
+	public void setAuthentication(List<com.tools20022.repository.msg.CardholderAuthentication1> authentication) {
+		this.authentication = authentication;
+	}
+
+	public AddressVerification1 getAddressVerification() {
+		return addressVerification;
+	}
+
+	public void setAddressVerification(com.tools20022.repository.msg.AddressVerification1 addressVerification) {
+		this.addressVerification = addressVerification;
+	}
+
+	public Max70Text getPersonalData() {
+		return personalData;
+	}
+
+	public void setPersonalData(Max70Text personalData) {
+		this.personalData = personalData;
 	}
 }

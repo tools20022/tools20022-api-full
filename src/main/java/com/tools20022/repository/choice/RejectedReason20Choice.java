@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.RejectedReason20Choice#Code
- * RejectedReason20Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#Proprietary
- * RejectedReason20Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#mmCode
+ * RejectedReason20Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RejectedReason20Choice#mmProprietary
+ * RejectedReason20Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RejectedReason20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected RejectedStatusReason11Code code;
 	/**
 	 * Rejected reason expressed as a code.
 	 * <p>
@@ -99,21 +101,21 @@ public class RejectedReason20Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RejectedReason21Choice#Code
-	 * RejectedReason21Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectedReason21Choice#mmCode
+	 * RejectedReason21Choice.mmCode}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartiallySettled21Choice#Code
-	 * PartiallySettled21Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.PartiallySettled21Choice#mmCode
+	 * PartiallySettled21Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CancelledReason12Choice#Code
-	 * CancelledReason12Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.CancelledReason12Choice#mmCode
+	 * CancelledReason12Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RejectedReason20Choice.mmObject();
 			isDerived = false;
@@ -121,13 +123,14 @@ public class RejectedReason20Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Rejected reason expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CancelledReason12Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason21Choice.Code, com.tools20022.repository.choice.PartiallySettled21Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason21Choice.mmCode, com.tools20022.repository.choice.PartiallySettled21Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CancelledReason12Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RejectedStatusReason11Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 proprietary;
 	/**
 	 * Rejected reason expressed as a proprietary code.
 	 * <p>
@@ -158,21 +161,21 @@ public class RejectedReason20Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RejectedReason21Choice#Proprietary
-	 * RejectedReason21Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.RejectedReason21Choice#mmProprietary
+	 * RejectedReason21Choice.mmProprietary}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartiallySettled21Choice#Proprietary
-	 * PartiallySettled21Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.PartiallySettled21Choice#mmProprietary
+	 * PartiallySettled21Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.CancelledReason12Choice#Proprietary
-	 * CancelledReason12Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.CancelledReason12Choice#mmProprietary
+	 * CancelledReason12Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RejectedReason20Choice.mmObject();
 			isDerived = false;
@@ -180,10 +183,10 @@ public class RejectedReason20Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Rejected reason expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CancelledReason12Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason21Choice.Proprietary, com.tools20022.repository.choice.PartiallySettled21Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason21Choice.mmProprietary, com.tools20022.repository.choice.PartiallySettled21Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.CancelledReason12Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
@@ -191,15 +194,31 @@ public class RejectedReason20Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason20Choice.Code, com.tools20022.repository.choice.RejectedReason20Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason20Choice.mmCode, com.tools20022.repository.choice.RejectedReason20Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectedReason20Choice";
 				definition = "Choice between formats for a rejected reason.";
-				previousVersion_lazy = () -> CancelledReason12Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RejectedReason21Choice.mmObject());
+				previousVersion_lazy = () -> CancelledReason12Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RejectedStatusReason11Code getCode() {
+		return code;
+	}
+
+	public void setCode(RejectedStatusReason11Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification1 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification1 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

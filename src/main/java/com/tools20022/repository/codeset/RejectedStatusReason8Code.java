@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason8Code#CutOffTime
- * RejectedStatusReason8Code.CutOffTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason8Code#mmCutOffTime
+ * RejectedStatusReason8Code.mmCutOffTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason8Code#NotAllowedToCancel
- * RejectedStatusReason8Code.NotAllowedToCancel}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason8Code#mmNotAllowedToCancel
+ * RejectedStatusReason8Code.mmNotAllowedToCancel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason8Code#NotCompliantWithSLA
- * RejectedStatusReason8Code.NotCompliantWithSLA}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason8Code#mmNotCompliantWithSLA
+ * RejectedStatusReason8Code.mmNotCompliantWithSLA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason8Code#LegallyImpossible
- * RejectedStatusReason8Code.LegallyImpossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason8Code#mmLegallyImpossible
+ * RejectedStatusReason8Code.mmLegallyImpossible}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class RejectedStatusReason8Code extends RejectedStatusReasonCode {
 	 * name} = "CutOffTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode CutOffTime = new MMCode() {
+	public static final MMCode mmCutOffTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffTime";
@@ -110,7 +110,7 @@ public class RejectedStatusReason8Code extends RejectedStatusReasonCode {
 	 * name} = "NotAllowedToCancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotAllowedToCancel = new MMCode() {
+	public static final MMCode mmNotAllowedToCancel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAllowedToCancel";
@@ -133,7 +133,7 @@ public class RejectedStatusReason8Code extends RejectedStatusReasonCode {
 	 * name} = "NotCompliantWithSLA"</li>
 	 * </ul>
 	 */
-	public static final MMCode NotCompliantWithSLA = new MMCode() {
+	public static final MMCode mmNotCompliantWithSLA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCompliantWithSLA";
@@ -156,7 +156,7 @@ public class RejectedStatusReason8Code extends RejectedStatusReasonCode {
 	 * name} = "LegallyImpossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode LegallyImpossible = new MMCode() {
+	public static final MMCode mmLegallyImpossible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegallyImpossible";
@@ -167,13 +167,13 @@ public class RejectedStatusReason8Code extends RejectedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUTO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatusReason8Code";
 				definition = "Specifies the reason for a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedStatusReason8Code.CutOffTime, com.tools20022.repository.codeset.RejectedStatusReason8Code.NotAllowedToCancel,
-						com.tools20022.repository.codeset.RejectedStatusReason8Code.NotCompliantWithSLA, com.tools20022.repository.codeset.RejectedStatusReason8Code.LegallyImpossible);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedStatusReason8Code.mmCutOffTime, com.tools20022.repository.codeset.RejectedStatusReason8Code.mmNotAllowedToCancel,
+						com.tools20022.repository.codeset.RejectedStatusReason8Code.mmNotCompliantWithSLA, com.tools20022.repository.codeset.RejectedStatusReason8Code.mmLegallyImpossible);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

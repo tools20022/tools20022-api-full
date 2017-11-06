@@ -38,15 +38,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportItem1#AccountIdentification
- * ReportItem1.AccountIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportItem1#AccountLevel
- * ReportItem1.AccountLevel}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportItem1#mmAccountIdentification
+ * ReportItem1.mmAccountIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportItem1#mmAccountLevel
+ * ReportItem1.mmAccountLevel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportItem1#FinancialInstrumentIdentification
- * ReportItem1.FinancialInstrumentIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportItem1#ItemDate
- * ReportItem1.ItemDate}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportItem1#mmFinancialInstrumentIdentification
+ * ReportItem1.mmFinancialInstrumentIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportItem1#mmItemDate
+ * ReportItem1.mmItemDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportItem1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesAccount19 accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -103,21 +104,22 @@ public class ReportItem1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportItem1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> ReportItem1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesAccount19.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
 		}
 	};
+	protected HoldingAccountLevel1Code accountLevel;
 	/**
 	 * Level of the safekeeping account or sub-account of the report item.
 	 * <p>
@@ -146,7 +148,7 @@ public class ReportItem1 {
 	 * "Level of the safekeeping account or sub-account of the report item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountLevel = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportItem1.mmObject();
 			isDerived = false;
@@ -154,11 +156,12 @@ public class ReportItem1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountLevel";
 			definition = "Level of the safekeeping account or sub-account of the report item.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> HoldingAccountLevel1Code.mmObject();
 		}
 	};
+	protected SecurityIdentification19 financialInstrumentIdentification;
 	/**
 	 * Financial instrument identification of the report item.
 	 * <p>
@@ -190,21 +193,22 @@ public class ReportItem1 {
 	 * definition} = "Financial instrument identification of the report item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportItem1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> ReportItem1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instrument identification of the report item.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification19.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
 		}
 	};
+	protected ISODate itemDate;
 	/**
 	 * Date of the report item.
 	 * <p>
@@ -217,8 +221,8 @@ public class ReportItem1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#EntryDate
-	 * Entry.EntryDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmEntryDate
+	 * Entry.mmEntryDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -236,17 +240,17 @@ public class ReportItem1 {
 	 * definition} = "Date of the report item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ItemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmItemDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
 			componentContext_lazy = () -> ReportItem1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.EntryDate;
 			isDerived = false;
 			xmlTag = "ItmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemDate";
 			definition = "Date of the report item.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -254,15 +258,47 @@ public class ReportItem1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportItem1.AccountIdentification, com.tools20022.repository.msg.ReportItem1.AccountLevel,
-						com.tools20022.repository.msg.ReportItem1.FinancialInstrumentIdentification, com.tools20022.repository.msg.ReportItem1.ItemDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportItem1.mmAccountIdentification, com.tools20022.repository.msg.ReportItem1.mmAccountLevel,
+						com.tools20022.repository.msg.ReportItem1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.ReportItem1.mmItemDate);
 				trace_lazy = () -> SecuritiesEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportItem1";
 				definition = "Account details of the report item.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesAccount19 getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public HoldingAccountLevel1Code getAccountLevel() {
+		return accountLevel;
+	}
+
+	public void setAccountLevel(HoldingAccountLevel1Code accountLevel) {
+		this.accountLevel = accountLevel;
+	}
+
+	public SecurityIdentification19 getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public ISODate getItemDate() {
+		return itemDate;
+	}
+
+	public void setItemDate(ISODate itemDate) {
+		this.itemDate = itemDate;
 	}
 }

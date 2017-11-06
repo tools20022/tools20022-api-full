@@ -30,17 +30,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#First
- * SequenceTypeCode.First}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#Recurring
- * SequenceTypeCode.Recurring}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#Final
- * SequenceTypeCode.Final}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#OneOff
- * SequenceTypeCode.OneOff}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmFirst
+ * SequenceTypeCode.mmFirst}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SequenceTypeCode#Represented
- * SequenceTypeCode.Represented}</li>
+ * {@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmRecurring
+ * SequenceTypeCode.mmRecurring}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmFinal
+ * SequenceTypeCode.mmFinal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmOneOff
+ * SequenceTypeCode.mmOneOff}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmRepresented
+ * SequenceTypeCode.mmRepresented}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +103,7 @@ public class SequenceTypeCode {
 	 * "First collection of a series of direct debit instructions."</li>
 	 * </ul>
 	 */
-	public static final MMCode First = new MMCode() {
+	public static final MMCode mmFirst = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "First";
@@ -135,7 +136,7 @@ public class SequenceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Recurring = new MMCode() {
+	public static final MMCode mmRecurring = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Recurring";
@@ -166,7 +167,7 @@ public class SequenceTypeCode {
 	 * "Final collection of a series of direct debit instructions."</li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Final";
@@ -199,7 +200,7 @@ public class SequenceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OneOff = new MMCode() {
+	public static final MMCode mmOneOff = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OneOff";
@@ -232,7 +233,7 @@ public class SequenceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Represented = new MMCode() {
+	public static final MMCode mmRepresented = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Represented";
@@ -245,13 +246,13 @@ public class SequenceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FRST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SequenceTypeCode";
 				definition = "Specifies the type of the current transaction that belongs to a sequence of transactions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SequenceTypeCode.First, com.tools20022.repository.codeset.SequenceTypeCode.Recurring, com.tools20022.repository.codeset.SequenceTypeCode.Final,
-						com.tools20022.repository.codeset.SequenceTypeCode.OneOff, com.tools20022.repository.codeset.SequenceTypeCode.Represented);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SequenceTypeCode.mmFirst, com.tools20022.repository.codeset.SequenceTypeCode.mmRecurring, com.tools20022.repository.codeset.SequenceTypeCode.mmFinal,
+						com.tools20022.repository.codeset.SequenceTypeCode.mmOneOff, com.tools20022.repository.codeset.SequenceTypeCode.mmRepresented);
 				derivation_lazy = () -> Arrays.asList(SequenceType1Code.mmObject(), SequenceType3Code.mmObject(), SequenceType2Code.mmObject());
 			}
 		});

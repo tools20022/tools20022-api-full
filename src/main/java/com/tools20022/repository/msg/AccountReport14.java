@@ -23,6 +23,7 @@ import com.tools20022.repository.entity.AccountServicerRole;
 import com.tools20022.repository.entity.CashAccountContract;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports on the actual set up up of the account, related services and
@@ -34,28 +35,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountReport14#Account
- * AccountReport14.Account}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport14#mmAccount
+ * AccountReport14.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountReport14#UnderlyingMasterAgreement
- * AccountReport14.UnderlyingMasterAgreement}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountReport14#ContractDates
- * AccountReport14.ContractDates}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountReport14#Mandate
- * AccountReport14.Mandate}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport14#mmUnderlyingMasterAgreement
+ * AccountReport14.mmUnderlyingMasterAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountReport14#ReferenceAccount
- * AccountReport14.ReferenceAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport14#mmContractDates
+ * AccountReport14.mmContractDates}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport14#mmMandate
+ * AccountReport14.mmMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountReport14#BalanceTransferAccount
- * AccountReport14.BalanceTransferAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport14#mmReferenceAccount
+ * AccountReport14.mmReferenceAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountReport14#TransferAccountServicerIdentification
- * AccountReport14.TransferAccountServicerIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountReport14#AccountOwner
- * AccountReport14.AccountOwner}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountReport14#Proprietary
- * AccountReport14.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport14#mmBalanceTransferAccount
+ * AccountReport14.mmBalanceTransferAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport14#mmTransferAccountServicerIdentification
+ * AccountReport14.mmTransferAccountServicerIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport14#mmAccountOwner
+ * AccountReport14.mmAccountOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport14#mmProprietary
+ * AccountReport14.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountReport14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CustomerAccount3 account;
 	/**
 	 * Characteristics of the account.
 	 * <p>
@@ -92,8 +95,8 @@ public class AccountReport14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccountContract#CashAccount
-	 * CashAccountContract.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmCashAccount
+	 * CashAccountContract.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -112,21 +115,22 @@ public class AccountReport14 {
 	 * definition} = "Characteristics of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> AccountReport14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.CashAccount;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Characteristics of the account.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CustomerAccount3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CustomerAccount3.mmObject();
 		}
 	};
+	protected ContractDocument1 underlyingMasterAgreement;
 	/**
 	 * Account contract established between the organisation or the group to
 	 * which the organisation belongs, and the account servicer. This contract
@@ -162,21 +166,22 @@ public class AccountReport14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnderlyingMasterAgreement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnderlyingMasterAgreement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountReport14.mmObject();
 			businessComponentTrace_lazy = () -> CashAccountContract.mmObject();
+			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygMstrAgrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingMasterAgreement";
 			definition = "Account contract established between the organisation or the group to which the organisation belongs, and the account servicer. This contract has to be applied for the new account to be opened and maintained.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ContractDocument1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContractDocument1.mmObject();
 		}
 	};
+	protected AccountContract3 contractDates;
 	/**
 	 * Specifies target and actual dates.
 	 * <p>
@@ -208,21 +213,22 @@ public class AccountReport14 {
 	 * definition} = "Specifies target and actual dates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContractDates = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContractDates = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountReport14.mmObject();
 			businessComponentTrace_lazy = () -> CashAccountContract.mmObject();
+			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctDts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates";
 			definition = "Specifies target and actual dates.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountContract3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountContract3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.OperationMandate1> mandate;
 	/**
 	 * Information specifying the account mandate.
 	 * <p>
@@ -234,8 +240,8 @@ public class AccountReport14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccountService#CashAccountMandate
-	 * CashAccountService.CashAccountMandate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccountService#mmCashAccountMandate
+	 * CashAccountService.mmCashAccountMandate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -254,20 +260,21 @@ public class AccountReport14 {
 	 * definition} = "Information specifying the account mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Mandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMandate = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmCashAccountMandate;
 			componentContext_lazy = () -> AccountReport14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountService.CashAccountMandate;
 			isDerived = false;
 			xmlTag = "Mndt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandate";
 			definition = "Information specifying the account mandate.";
 			minOccurs = 0;
-			type_lazy = () -> OperationMandate1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OperationMandate1.mmObject();
 		}
 	};
+	protected CashAccount16 referenceAccount;
 	/**
 	 * Unique and unambiguous identification of the account used as a reference
 	 * for the opening of another account.
@@ -280,8 +287,8 @@ public class AccountReport14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAccountContract#CashAccount
-	 * CashAccountContract.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAccountContract#mmCashAccount
+	 * CashAccountContract.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -302,21 +309,22 @@ public class AccountReport14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReferenceAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReferenceAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> AccountReport14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.CashAccount;
 			isDerived = false;
 			xmlTag = "RefAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceAccount";
 			definition = "Unique and unambiguous identification of the account used as a reference for the opening of another account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount16.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	protected AccountForAction1 balanceTransferAccount;
 	/**
 	 * Unique and unambiguous identification of the account where to transfer
 	 * the balance.
@@ -329,8 +337,8 @@ public class AccountReport14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#CashAccount
-	 * PaymentPartyRole.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+	 * PaymentPartyRole.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -351,21 +359,22 @@ public class AccountReport14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BalanceTransferAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBalanceTransferAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> AccountReport14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.CashAccount;
 			isDerived = false;
 			xmlTag = "BalTrfAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTransferAccount";
 			definition = "Unique and unambiguous identification of the account where to transfer the balance.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountForAction1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountForAction1.mmObject();
 		}
 	};
+	protected BranchAndFinancialInstitutionIdentification4 transferAccountServicerIdentification;
 	/**
 	 * Identification of the transfer account servicer.
 	 * <p>
@@ -398,21 +407,22 @@ public class AccountReport14 {
 	 * definition} = "Identification of  the transfer account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransferAccountServicerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransferAccountServicerIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountReport14.mmObject();
 			businessComponentTrace_lazy = () -> AccountServicerRole.mmObject();
+			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "TrfAcctSvcrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAccountServicerIdentification";
 			definition = "Identification of  the transfer account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 	};
+	protected OrganisationIdentification6 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -425,8 +435,8 @@ public class AccountReport14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -445,21 +455,22 @@ public class AccountReport14 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> AccountReport14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> OrganisationIdentification6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification6.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification1> proprietary;
 	/**
 	 * Proprietary characteristics of the account.
 	 * <p>
@@ -486,7 +497,7 @@ public class AccountReport14 {
 	 * definition} = "Proprietary characteristics of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
@@ -495,25 +506,97 @@ public class AccountReport14 {
 			name = "Proprietary";
 			definition = "Proprietary characteristics of the account.";
 			minOccurs = 0;
-			type_lazy = () -> GenericIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport14.Account, com.tools20022.repository.msg.AccountReport14.UnderlyingMasterAgreement,
-						com.tools20022.repository.msg.AccountReport14.ContractDates, com.tools20022.repository.msg.AccountReport14.Mandate, com.tools20022.repository.msg.AccountReport14.ReferenceAccount,
-						com.tools20022.repository.msg.AccountReport14.BalanceTransferAccount, com.tools20022.repository.msg.AccountReport14.TransferAccountServicerIdentification, com.tools20022.repository.msg.AccountReport14.AccountOwner,
-						com.tools20022.repository.msg.AccountReport14.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport14.mmAccount, com.tools20022.repository.msg.AccountReport14.mmUnderlyingMasterAgreement,
+						com.tools20022.repository.msg.AccountReport14.mmContractDates, com.tools20022.repository.msg.AccountReport14.mmMandate, com.tools20022.repository.msg.AccountReport14.mmReferenceAccount,
+						com.tools20022.repository.msg.AccountReport14.mmBalanceTransferAccount, com.tools20022.repository.msg.AccountReport14.mmTransferAccountServicerIdentification,
+						com.tools20022.repository.msg.AccountReport14.mmAccountOwner, com.tools20022.repository.msg.AccountReport14.mmProprietary);
 				trace_lazy = () -> CashAccountContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountReport14";
 				definition = "Reports on the actual set up up of the account, related services and mandates.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CustomerAccount3 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CustomerAccount3 account) {
+		this.account = account;
+	}
+
+	public ContractDocument1 getUnderlyingMasterAgreement() {
+		return underlyingMasterAgreement;
+	}
+
+	public void setUnderlyingMasterAgreement(com.tools20022.repository.msg.ContractDocument1 underlyingMasterAgreement) {
+		this.underlyingMasterAgreement = underlyingMasterAgreement;
+	}
+
+	public AccountContract3 getContractDates() {
+		return contractDates;
+	}
+
+	public void setContractDates(com.tools20022.repository.msg.AccountContract3 contractDates) {
+		this.contractDates = contractDates;
+	}
+
+	public List<OperationMandate1> getMandate() {
+		return mandate;
+	}
+
+	public void setMandate(List<com.tools20022.repository.msg.OperationMandate1> mandate) {
+		this.mandate = mandate;
+	}
+
+	public CashAccount16 getReferenceAccount() {
+		return referenceAccount;
+	}
+
+	public void setReferenceAccount(com.tools20022.repository.msg.CashAccount16 referenceAccount) {
+		this.referenceAccount = referenceAccount;
+	}
+
+	public AccountForAction1 getBalanceTransferAccount() {
+		return balanceTransferAccount;
+	}
+
+	public void setBalanceTransferAccount(com.tools20022.repository.msg.AccountForAction1 balanceTransferAccount) {
+		this.balanceTransferAccount = balanceTransferAccount;
+	}
+
+	public BranchAndFinancialInstitutionIdentification4 getTransferAccountServicerIdentification() {
+		return transferAccountServicerIdentification;
+	}
+
+	public void setTransferAccountServicerIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 transferAccountServicerIdentification) {
+		this.transferAccountServicerIdentification = transferAccountServicerIdentification;
+	}
+
+	public OrganisationIdentification6 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.OrganisationIdentification6 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public List<GenericIdentification1> getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(List<com.tools20022.repository.msg.GenericIdentification1> proprietary) {
+		this.proprietary = proprietary;
 	}
 }

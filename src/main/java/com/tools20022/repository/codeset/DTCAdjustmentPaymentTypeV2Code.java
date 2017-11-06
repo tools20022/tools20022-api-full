@@ -30,116 +30,117 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#AdjustedForRightsSubscription
- * DTCAdjustmentPaymentTypeV2Code.AdjustedForRightsSubscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmAdjustedForRightsSubscription
+ * DTCAdjustmentPaymentTypeV2Code.mmAdjustedForRightsSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#ADRIssueFeeCharge
- * DTCAdjustmentPaymentTypeV2Code.ADRIssueFeeCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmADRIssueFeeCharge
+ * DTCAdjustmentPaymentTypeV2Code.mmADRIssueFeeCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#ADRIssueFeeReversal
- * DTCAdjustmentPaymentTypeV2Code.ADRIssueFeeReversal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmADRIssueFeeReversal
+ * DTCAdjustmentPaymentTypeV2Code.mmADRIssueFeeReversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#CashInLieu
- * DTCAdjustmentPaymentTypeV2Code.CashInLieu}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmCashInLieu
+ * DTCAdjustmentPaymentTypeV2Code.mmCashInLieu}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#ClaimSettlement
- * DTCAdjustmentPaymentTypeV2Code.ClaimSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmClaimSettlement
+ * DTCAdjustmentPaymentTypeV2Code.mmClaimSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#CustodyDividendPayment
- * DTCAdjustmentPaymentTypeV2Code.CustodyDividendPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmCustodyDividendPayment
+ * DTCAdjustmentPaymentTypeV2Code.mmCustodyDividendPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#CustodyReorganizationDeposit
- * DTCAdjustmentPaymentTypeV2Code.CustodyReorganizationDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmCustodyReorganizationDeposit
+ * DTCAdjustmentPaymentTypeV2Code.mmCustodyReorganizationDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#DynamicRateChange
- * DTCAdjustmentPaymentTypeV2Code.DynamicRateChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmDynamicRateChange
+ * DTCAdjustmentPaymentTypeV2Code.mmDynamicRateChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#FailSettlement
- * DTCAdjustmentPaymentTypeV2Code.FailSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmFailSettlement
+ * DTCAdjustmentPaymentTypeV2Code.mmFailSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#FailTrackingTaxWithholding
- * DTCAdjustmentPaymentTypeV2Code.FailTrackingTaxWithholding}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmFailTrackingTaxWithholding
+ * DTCAdjustmentPaymentTypeV2Code.mmFailTrackingTaxWithholding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#IntraDayReversalOfOriginalTaxWithholding
- * DTCAdjustmentPaymentTypeV2Code.IntraDayReversalOfOriginalTaxWithholding}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmIntraDayReversalOfOriginalTaxWithholding
+ * DTCAdjustmentPaymentTypeV2Code.mmIntraDayReversalOfOriginalTaxWithholding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#LastDayProtect
- * DTCAdjustmentPaymentTypeV2Code.LastDayProtect}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmLastDayProtect
+ * DTCAdjustmentPaymentTypeV2Code.mmLastDayProtect}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#LegalReorganizationDeposits
- * DTCAdjustmentPaymentTypeV2Code.LegalReorganizationDeposits}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmLegalReorganizationDeposits
+ * DTCAdjustmentPaymentTypeV2Code.mmLegalReorganizationDeposits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#MandatoryLegalReorgDeposit
- * DTCAdjustmentPaymentTypeV2Code.MandatoryLegalReorgDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmMandatoryLegalReorgDeposit
+ * DTCAdjustmentPaymentTypeV2Code.mmMandatoryLegalReorgDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#MandatoryOverThreeYearReorganizationDeposit
- * DTCAdjustmentPaymentTypeV2Code.MandatoryOverThreeYearReorganizationDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmMandatoryOverThreeYearReorganizationDeposit
+ * DTCAdjustmentPaymentTypeV2Code.mmMandatoryOverThreeYearReorganizationDeposit}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#MandatoryReorganizationDeposit
- * DTCAdjustmentPaymentTypeV2Code.MandatoryReorganizationDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmMandatoryReorganizationDeposit
+ * DTCAdjustmentPaymentTypeV2Code.mmMandatoryReorganizationDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#ManualUserTax
- * DTCAdjustmentPaymentTypeV2Code.ManualUserTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmManualUserTax
+ * DTCAdjustmentPaymentTypeV2Code.mmManualUserTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#MiscellaneousSettlement
- * DTCAdjustmentPaymentTypeV2Code.MiscellaneousSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmMiscellaneousSettlement
+ * DTCAdjustmentPaymentTypeV2Code.mmMiscellaneousSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#OriginalInitialTaxWithholding
- * DTCAdjustmentPaymentTypeV2Code.OriginalInitialTaxWithholding}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmOriginalInitialTaxWithholding
+ * DTCAdjustmentPaymentTypeV2Code.mmOriginalInitialTaxWithholding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#OriginalLateTaxWithholding
- * DTCAdjustmentPaymentTypeV2Code.OriginalLateTaxWithholding}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmOriginalLateTaxWithholding
+ * DTCAdjustmentPaymentTypeV2Code.mmOriginalLateTaxWithholding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#Other
- * DTCAdjustmentPaymentTypeV2Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmOther
+ * DTCAdjustmentPaymentTypeV2Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#RateChangeTaxWithholding
- * DTCAdjustmentPaymentTypeV2Code.RateChangeTaxWithholding}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmRateChangeTaxWithholding
+ * DTCAdjustmentPaymentTypeV2Code.mmRateChangeTaxWithholding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#ReclassificationTaxWithholding
- * DTCAdjustmentPaymentTypeV2Code.ReclassificationTaxWithholding}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmReclassificationTaxWithholding
+ * DTCAdjustmentPaymentTypeV2Code.mmReclassificationTaxWithholding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#ReorganisationDepositPhaseOne
- * DTCAdjustmentPaymentTypeV2Code.ReorganisationDepositPhaseOne}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmReorganisationDepositPhaseOne
+ * DTCAdjustmentPaymentTypeV2Code.mmReorganisationDepositPhaseOne}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#ReorgDepositPhaseTwo
- * DTCAdjustmentPaymentTypeV2Code.ReorgDepositPhaseTwo}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmReorgDepositPhaseTwo
+ * DTCAdjustmentPaymentTypeV2Code.mmReorgDepositPhaseTwo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#RepoSettlement
- * DTCAdjustmentPaymentTypeV2Code.RepoSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmRepoSettlement
+ * DTCAdjustmentPaymentTypeV2Code.mmRepoSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#Reversal
- * DTCAdjustmentPaymentTypeV2Code.Reversal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmReversal
+ * DTCAdjustmentPaymentTypeV2Code.mmReversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#ReversalOfTaxWithholding
- * DTCAdjustmentPaymentTypeV2Code.ReversalOfTaxWithholding}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmReversalOfTaxWithholding
+ * DTCAdjustmentPaymentTypeV2Code.mmReversalOfTaxWithholding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#RightsProtect
- * DTCAdjustmentPaymentTypeV2Code.RightsProtect}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmRightsProtect
+ * DTCAdjustmentPaymentTypeV2Code.mmRightsProtect}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#RightsSales
- * DTCAdjustmentPaymentTypeV2Code.RightsSales}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmRightsSales
+ * DTCAdjustmentPaymentTypeV2Code.mmRightsSales}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#RightsStepUp
- * DTCAdjustmentPaymentTypeV2Code.RightsStepUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmRightsStepUp
+ * DTCAdjustmentPaymentTypeV2Code.mmRightsStepUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#RightsSubscription
- * DTCAdjustmentPaymentTypeV2Code.RightsSubscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmRightsSubscription
+ * DTCAdjustmentPaymentTypeV2Code.mmRightsSubscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#StockLoanSettlement
- * DTCAdjustmentPaymentTypeV2Code.StockLoanSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmStockLoanSettlement
+ * DTCAdjustmentPaymentTypeV2Code.mmStockLoanSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#TaxInstructionChange
- * DTCAdjustmentPaymentTypeV2Code.TaxInstructionChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmTaxInstructionChange
+ * DTCAdjustmentPaymentTypeV2Code.mmTaxInstructionChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#TenderOfferFraction
- * DTCAdjustmentPaymentTypeV2Code.TenderOfferFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmTenderOfferFraction
+ * DTCAdjustmentPaymentTypeV2Code.mmTenderOfferFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#WarrantParticipantDelete
- * DTCAdjustmentPaymentTypeV2Code.WarrantParticipantDelete}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmWarrantParticipantDelete
+ * DTCAdjustmentPaymentTypeV2Code.mmWarrantParticipantDelete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#WarrantRateChange
- * DTCAdjustmentPaymentTypeV2Code.WarrantRateChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code#mmWarrantRateChange
+ * DTCAdjustmentPaymentTypeV2Code.mmWarrantRateChange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -156,8 +157,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -192,7 +193,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Adjusted for rights subscription related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode AdjustedForRightsSubscription = new MMCode() {
+	public static final MMCode mmAdjustedForRightsSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedForRightsSubscription";
@@ -222,7 +223,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "American Depository R issue fee charge adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode ADRIssueFeeCharge = new MMCode() {
+	public static final MMCode mmADRIssueFeeCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ADRIssueFeeCharge";
@@ -252,7 +253,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "ADR issue fee reversal adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode ADRIssueFeeReversal = new MMCode() {
+	public static final MMCode mmADRIssueFeeReversal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ADRIssueFeeReversal";
@@ -282,7 +283,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Cash in lieu related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashInLieu = new MMCode() {
+	public static final MMCode mmCashInLieu = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieu";
@@ -312,7 +313,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Claim settlement  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode ClaimSettlement = new MMCode() {
+	public static final MMCode mmClaimSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimSettlement";
@@ -343,7 +344,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * "Dividend payment on a DTC custody held security related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode CustodyDividendPayment = new MMCode() {
+	public static final MMCode mmCustodyDividendPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyDividendPayment";
@@ -373,7 +374,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Custody reorganization deposit  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode CustodyReorganizationDeposit = new MMCode() {
+	public static final MMCode mmCustodyReorganizationDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyReorganizationDeposit";
@@ -403,7 +404,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Dynamic rate change  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode DynamicRateChange = new MMCode() {
+	public static final MMCode mmDynamicRateChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DynamicRateChange";
@@ -433,7 +434,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "FAIL (undelivered securities) transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode FailSettlement = new MMCode() {
+	public static final MMCode mmFailSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailSettlement";
@@ -463,7 +464,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Fail tracking tax withholding  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode FailTrackingTaxWithholding = new MMCode() {
+	public static final MMCode mmFailTrackingTaxWithholding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailTrackingTaxWithholding";
@@ -494,7 +495,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * "Intra-day reversal of original tax withholding  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode IntraDayReversalOfOriginalTaxWithholding = new MMCode() {
+	public static final MMCode mmIntraDayReversalOfOriginalTaxWithholding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraDayReversalOfOriginalTaxWithholding";
@@ -524,7 +525,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Last day protect related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode LastDayProtect = new MMCode() {
+	public static final MMCode mmLastDayProtect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastDayProtect";
@@ -554,7 +555,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Legal reorganization deposit related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode LegalReorganizationDeposits = new MMCode() {
+	public static final MMCode mmLegalReorganizationDeposits = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalReorganizationDeposits";
@@ -585,7 +586,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * "Mandatory legal reorganization deposit related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode MandatoryLegalReorgDeposit = new MMCode() {
+	public static final MMCode mmMandatoryLegalReorgDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryLegalReorgDeposit";
@@ -616,7 +617,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * "Mandatory over three year reorganization deposit related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode MandatoryOverThreeYearReorganizationDeposit = new MMCode() {
+	public static final MMCode mmMandatoryOverThreeYearReorganizationDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryOverThreeYearReorganizationDeposit";
@@ -646,7 +647,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Mandatory reorganization deposit  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode MandatoryReorganizationDeposit = new MMCode() {
+	public static final MMCode mmMandatoryReorganizationDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryReorganizationDeposit";
@@ -676,7 +677,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Manual user tax adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode ManualUserTax = new MMCode() {
+	public static final MMCode mmManualUserTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualUserTax";
@@ -706,7 +707,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Miscellaneous (adjustment) transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode MiscellaneousSettlement = new MMCode() {
+	public static final MMCode mmMiscellaneousSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousSettlement";
@@ -736,7 +737,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Original (initial) tax withholding  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode OriginalInitialTaxWithholding = new MMCode() {
+	public static final MMCode mmOriginalInitialTaxWithholding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInitialTaxWithholding";
@@ -766,7 +767,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Original late tax withholding  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode OriginalLateTaxWithholding = new MMCode() {
+	public static final MMCode mmOriginalLateTaxWithholding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalLateTaxWithholding";
@@ -796,7 +797,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Reserved for new user defined reason codes."</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -826,7 +827,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Rate change tax withholding  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode RateChangeTaxWithholding = new MMCode() {
+	public static final MMCode mmRateChangeTaxWithholding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateChangeTaxWithholding";
@@ -856,7 +857,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Reclassification tax withholding  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReclassificationTaxWithholding = new MMCode() {
+	public static final MMCode mmReclassificationTaxWithholding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReclassificationTaxWithholding";
@@ -889,7 +890,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReorganisationDepositPhaseOne = new MMCode() {
+	public static final MMCode mmReorganisationDepositPhaseOne = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorganisationDepositPhaseOne";
@@ -922,7 +923,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ReorgDepositPhaseTwo = new MMCode() {
+	public static final MMCode mmReorgDepositPhaseTwo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorgDepositPhaseTwo";
@@ -952,7 +953,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "REPO (repurchase agreement) transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode RepoSettlement = new MMCode() {
+	public static final MMCode mmRepoSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoSettlement";
@@ -982,7 +983,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Reversal  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode Reversal = new MMCode() {
+	public static final MMCode mmReversal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversal";
@@ -1012,7 +1013,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Reversal of tax withholding  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode ReversalOfTaxWithholding = new MMCode() {
+	public static final MMCode mmReversalOfTaxWithholding = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfTaxWithholding";
@@ -1042,7 +1043,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Rights protect related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode RightsProtect = new MMCode() {
+	public static final MMCode mmRightsProtect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsProtect";
@@ -1072,7 +1073,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Rights sales  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode RightsSales = new MMCode() {
+	public static final MMCode mmRightsSales = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsSales";
@@ -1102,7 +1103,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Rights step up  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode RightsStepUp = new MMCode() {
+	public static final MMCode mmRightsStepUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsStepUp";
@@ -1132,7 +1133,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Rights subscription related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode RightsSubscription = new MMCode() {
+	public static final MMCode mmRightsSubscription = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsSubscription";
@@ -1162,7 +1163,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Stock loan transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode StockLoanSettlement = new MMCode() {
+	public static final MMCode mmStockLoanSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanSettlement";
@@ -1192,7 +1193,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Tax instruction change  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxInstructionChange = new MMCode() {
+	public static final MMCode mmTaxInstructionChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxInstructionChange";
@@ -1222,7 +1223,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Tender offer fraction  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode TenderOfferFraction = new MMCode() {
+	public static final MMCode mmTenderOfferFraction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderOfferFraction";
@@ -1252,7 +1253,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Warrant Participant delete related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode WarrantParticipantDelete = new MMCode() {
+	public static final MMCode mmWarrantParticipantDelete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantParticipantDelete";
@@ -1282,7 +1283,7 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	 * definition} = "Warrant rate change  related adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMCode WarrantRateChange = new MMCode() {
+	public static final MMCode mmWarrantRateChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantRateChange";
@@ -1295,29 +1296,29 @@ public class DTCAdjustmentPaymentTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCAdjustmentPaymentTypeV2Code";
 				definition = "Specifies the type of the payment adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.AdjustedForRightsSubscription, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.ADRIssueFeeCharge,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.ADRIssueFeeReversal, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.CashInLieu,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.ClaimSettlement, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.CustodyDividendPayment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.CustodyReorganizationDeposit, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.DynamicRateChange,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.FailSettlement, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.FailTrackingTaxWithholding,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.IntraDayReversalOfOriginalTaxWithholding, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.LastDayProtect,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.LegalReorganizationDeposits, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.MandatoryLegalReorgDeposit,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.MandatoryOverThreeYearReorganizationDeposit, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.MandatoryReorganizationDeposit,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.ManualUserTax, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.MiscellaneousSettlement,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.OriginalInitialTaxWithholding, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.OriginalLateTaxWithholding,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.Other, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.RateChangeTaxWithholding,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.ReclassificationTaxWithholding, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.ReorganisationDepositPhaseOne,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.ReorgDepositPhaseTwo, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.RepoSettlement,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.Reversal, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.ReversalOfTaxWithholding,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.RightsProtect, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.RightsSales,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.RightsStepUp, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.RightsSubscription,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.StockLoanSettlement, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.TaxInstructionChange,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.TenderOfferFraction, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.WarrantParticipantDelete,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.WarrantRateChange);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmAdjustedForRightsSubscription, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmADRIssueFeeCharge,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmADRIssueFeeReversal, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmCashInLieu,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmClaimSettlement, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmCustodyDividendPayment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmCustodyReorganizationDeposit, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmDynamicRateChange,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmFailSettlement, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmFailTrackingTaxWithholding,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmIntraDayReversalOfOriginalTaxWithholding, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmLastDayProtect,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmLegalReorganizationDeposits, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmMandatoryLegalReorgDeposit,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmMandatoryOverThreeYearReorganizationDeposit, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmMandatoryReorganizationDeposit,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmManualUserTax, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmMiscellaneousSettlement,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmOriginalInitialTaxWithholding, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmOriginalLateTaxWithholding,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmOther, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmRateChangeTaxWithholding,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmReclassificationTaxWithholding, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmReorganisationDepositPhaseOne,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmReorgDepositPhaseTwo, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmRepoSettlement,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmReversal, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmReversalOfTaxWithholding,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmRightsProtect, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmRightsSales,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmRightsStepUp, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmRightsSubscription,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmStockLoanSettlement, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmTaxInstructionChange,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmTenderOfferFraction, com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmWarrantParticipantDelete,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmWarrantRateChange);
 				derivation_lazy = () -> Arrays.asList(DTCAdjustmentPaymentType2Code.mmObject(), DTCAdjustmentPaymentType3Code.mmObject());
 			}
 		});

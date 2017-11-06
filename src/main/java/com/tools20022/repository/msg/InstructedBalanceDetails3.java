@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.BalanceFormat1Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about total instructed balance.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails3#TotalInstructedBalance
- * InstructedBalanceDetails3.TotalInstructedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails3#mmTotalInstructedBalance
+ * InstructedBalanceDetails3.mmTotalInstructedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails3#OptionDetails
- * InstructedBalanceDetails3.OptionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails3#mmOptionDetails
+ * InstructedBalanceDetails3.mmOptionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InstructedBalanceDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BalanceFormat1Choice totalInstructedBalance;
 	/**
 	 * Provides information about the total instructed balance.
 	 * <p>
@@ -87,8 +89,8 @@ public class InstructedBalanceDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#InstructedBalance
-	 * CorporateActionEntitlement.InstructedBalance}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement#mmInstructedBalance
+	 * CorporateActionEntitlement.mmInstructedBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,27 +111,28 @@ public class InstructedBalanceDetails3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails5#TotalInstructedBalance
-	 * InstructedBalanceDetails5.TotalInstructedBalance}</li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails5#mmTotalInstructedBalance
+	 * InstructedBalanceDetails5.mmTotalInstructedBalance}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalInstructedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalInstructedBalance = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> InstructedBalanceDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.InstructedBalance;
 			isDerived = false;
 			xmlTag = "TtlInstdBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInstructedBalance";
 			definition = "Provides information about the total instructed balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails5.TotalInstructedBalance);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails5.mmTotalInstructedBalance);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BalanceFormat1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.InstructedCorporateActionOption4> optionDetails;
 	/**
 	 * Provide instructed balance breakdown information per option.
 	 * <p>
@@ -142,8 +145,8 @@ public class InstructedBalanceDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#CorporateActionOptionDefinition
-	 * ChoiceCorporateAction.CorporateActionOptionDefinition}</li>
+	 * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
+	 * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,41 +168,57 @@ public class InstructedBalanceDetails3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails5#OptionDetails
-	 * InstructedBalanceDetails5.OptionDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails5#mmOptionDetails
+	 * InstructedBalanceDetails5.mmOptionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOptionDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition;
 			componentContext_lazy = () -> InstructedBalanceDetails3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.CorporateActionOptionDefinition;
 			isDerived = false;
 			xmlTag = "OptnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionDetails";
 			definition = "Provide instructed balance breakdown information per option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails5.OptionDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails5.mmOptionDetails);
 			minOccurs = 0;
-			type_lazy = () -> InstructedCorporateActionOption4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InstructedCorporateActionOption4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails3.TotalInstructedBalance, com.tools20022.repository.msg.InstructedBalanceDetails3.OptionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails3.mmTotalInstructedBalance, com.tools20022.repository.msg.InstructedBalanceDetails3.mmOptionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructedBalanceDetails3";
 				definition = "Provides information about total instructed balance.";
-				previousVersion_lazy = () -> InstructedBalanceDetails1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(InstructedBalanceDetails5.mmObject());
+				previousVersion_lazy = () -> InstructedBalanceDetails1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BalanceFormat1Choice getTotalInstructedBalance() {
+		return totalInstructedBalance;
+	}
+
+	public void setTotalInstructedBalance(BalanceFormat1Choice totalInstructedBalance) {
+		this.totalInstructedBalance = totalInstructedBalance;
+	}
+
+	public List<InstructedCorporateActionOption4> getOptionDetails() {
+		return optionDetails;
+	}
+
+	public void setOptionDetails(List<com.tools20022.repository.msg.InstructedCorporateActionOption4> optionDetails) {
+		this.optionDetails = optionDetails;
 	}
 }

@@ -34,72 +34,72 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Accepted
- * PaymentInstructionStatus1Code.Accepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmAccepted
+ * PaymentInstructionStatus1Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Validated
- * PaymentInstructionStatus1Code.Validated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmValidated
+ * PaymentInstructionStatus1Code.mmValidated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Authorised
- * PaymentInstructionStatus1Code.Authorised}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmAuthorised
+ * PaymentInstructionStatus1Code.mmAuthorised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Invalid
- * PaymentInstructionStatus1Code.Invalid}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmInvalid
+ * PaymentInstructionStatus1Code.mmInvalid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Matched
- * PaymentInstructionStatus1Code.Matched}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmMatched
+ * PaymentInstructionStatus1Code.mmMatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Unmatched
- * PaymentInstructionStatus1Code.Unmatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmUnmatched
+ * PaymentInstructionStatus1Code.mmUnmatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Mismatched
- * PaymentInstructionStatus1Code.Mismatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmMismatched
+ * PaymentInstructionStatus1Code.mmMismatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#SettlementEligible
- * PaymentInstructionStatus1Code.SettlementEligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmSettlementEligible
+ * PaymentInstructionStatus1Code.mmSettlementEligible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#SettlementMature
- * PaymentInstructionStatus1Code.SettlementMature}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmSettlementMature
+ * PaymentInstructionStatus1Code.mmSettlementMature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Suspended
- * PaymentInstructionStatus1Code.Suspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmSuspended
+ * PaymentInstructionStatus1Code.mmSuspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#PendingCancellation
- * PaymentInstructionStatus1Code.PendingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmPendingCancellation
+ * PaymentInstructionStatus1Code.mmPendingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#PendingSettlement
- * PaymentInstructionStatus1Code.PendingSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmPendingSettlement
+ * PaymentInstructionStatus1Code.mmPendingSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#PendingFailingSettlement
- * PaymentInstructionStatus1Code.PendingFailingSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmPendingFailingSettlement
+ * PaymentInstructionStatus1Code.mmPendingFailingSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#SenderMultilateralLimitRelated
- * PaymentInstructionStatus1Code.SenderMultilateralLimitRelated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmSenderMultilateralLimitRelated
+ * PaymentInstructionStatus1Code.mmSenderMultilateralLimitRelated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#ReceiverMultilateralLimitRelated
- * PaymentInstructionStatus1Code.ReceiverMultilateralLimitRelated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmReceiverMultilateralLimitRelated
+ * PaymentInstructionStatus1Code.mmReceiverMultilateralLimitRelated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#SenderReceiverBilateralLimitRelated
- * PaymentInstructionStatus1Code.SenderReceiverBilateralLimitRelated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmSenderReceiverBilateralLimitRelated
+ * PaymentInstructionStatus1Code.mmSenderReceiverBilateralLimitRelated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Settled
- * PaymentInstructionStatus1Code.Settled}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmSettled
+ * PaymentInstructionStatus1Code.mmSettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Rejected
- * PaymentInstructionStatus1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmRejected
+ * PaymentInstructionStatus1Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Cancelled
- * PaymentInstructionStatus1Code.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmCancelled
+ * PaymentInstructionStatus1Code.mmCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#Finalised
- * PaymentInstructionStatus1Code.Finalised}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatus1Code#mmFinalised
+ * PaymentInstructionStatus1Code.mmFinalised}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -135,7 +135,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -158,7 +158,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Validated"</li>
 	 * </ul>
 	 */
-	public static final MMCode Validated = new MMCode() {
+	public static final MMCode mmValidated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Validated";
@@ -181,7 +181,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Authorised"</li>
 	 * </ul>
 	 */
-	public static final MMCode Authorised = new MMCode() {
+	public static final MMCode mmAuthorised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorised";
@@ -204,7 +204,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Invalid"</li>
 	 * </ul>
 	 */
-	public static final MMCode Invalid = new MMCode() {
+	public static final MMCode mmInvalid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
@@ -227,7 +227,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Matched"</li>
 	 * </ul>
 	 */
-	public static final MMCode Matched = new MMCode() {
+	public static final MMCode mmMatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
@@ -250,7 +250,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Unmatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unmatched = new MMCode() {
+	public static final MMCode mmUnmatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
@@ -273,7 +273,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Mismatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode Mismatched = new MMCode() {
+	public static final MMCode mmMismatched = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mismatched";
@@ -296,7 +296,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "SettlementEligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementEligible = new MMCode() {
+	public static final MMCode mmSettlementEligible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementEligible";
@@ -319,7 +319,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "SettlementMature"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementMature = new MMCode() {
+	public static final MMCode mmSettlementMature = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMature";
@@ -342,7 +342,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspended = new MMCode() {
+	public static final MMCode mmSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
@@ -365,7 +365,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "PendingCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingCancellation = new MMCode() {
+	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
@@ -388,7 +388,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "PendingSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingSettlement = new MMCode() {
+	public static final MMCode mmPendingSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSettlement";
@@ -411,7 +411,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "PendingFailingSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingFailingSettlement = new MMCode() {
+	public static final MMCode mmPendingFailingSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingFailingSettlement";
@@ -434,7 +434,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "SenderMultilateralLimitRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode SenderMultilateralLimitRelated = new MMCode() {
+	public static final MMCode mmSenderMultilateralLimitRelated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderMultilateralLimitRelated";
@@ -457,7 +457,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "ReceiverMultilateralLimitRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReceiverMultilateralLimitRelated = new MMCode() {
+	public static final MMCode mmReceiverMultilateralLimitRelated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverMultilateralLimitRelated";
@@ -480,7 +480,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "SenderReceiverBilateralLimitRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode SenderReceiverBilateralLimitRelated = new MMCode() {
+	public static final MMCode mmSenderReceiverBilateralLimitRelated = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderReceiverBilateralLimitRelated";
@@ -503,7 +503,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settled = new MMCode() {
+	public static final MMCode mmSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
@@ -526,7 +526,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -549,7 +549,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -572,7 +572,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 * name} = "Finalised"</li>
 	 * </ul>
 	 */
-	public static final MMCode Finalised = new MMCode() {
+	public static final MMCode mmFinalised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Finalised";
@@ -583,21 +583,21 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACPD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstructionStatus1Code";
 				definition = "Specifies the state of a payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Accepted, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Validated,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Authorised, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Invalid,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Matched, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Unmatched,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Mismatched, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.SettlementEligible,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.SettlementMature, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Suspended,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.PendingCancellation, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.PendingSettlement,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.PendingFailingSettlement, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.SenderMultilateralLimitRelated,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.ReceiverMultilateralLimitRelated, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.SenderReceiverBilateralLimitRelated,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Settled, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Rejected,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Cancelled, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.Finalised);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmAccepted, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmValidated,
+						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmAuthorised, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmInvalid,
+						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmMatched, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmUnmatched,
+						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmMismatched, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSettlementEligible,
+						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSettlementMature, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSuspended,
+						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmPendingCancellation, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmPendingSettlement,
+						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmPendingFailingSettlement, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSenderMultilateralLimitRelated,
+						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmReceiverMultilateralLimitRelated, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSenderReceiverBilateralLimitRelated,
+						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSettled, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmRejected,
+						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmCancelled, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmFinalised);
 				trace_lazy = () -> PaymentInstructionStatusCode.mmObject();
 			}
 		});

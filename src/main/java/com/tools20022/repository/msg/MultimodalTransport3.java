@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultimodalTransport3#TakingInCharge
- * MultimodalTransport3.TakingInCharge}</li>
+ * {@linkplain com.tools20022.repository.msg.MultimodalTransport3#mmTakingInCharge
+ * MultimodalTransport3.mmTakingInCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MultimodalTransport3#PlaceOfFinalDestination
- * MultimodalTransport3.PlaceOfFinalDestination}</li>
+ * {@linkplain com.tools20022.repository.msg.MultimodalTransport3#mmPlaceOfFinalDestination
+ * MultimodalTransport3.mmPlaceOfFinalDestination}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MultimodalTransport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text takingInCharge;
 	/**
 	 * Identifies the location where the goods are take in charge for
 	 * transportation.
@@ -74,8 +75,8 @@ public class MultimodalTransport3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
-	 * Transport.PlaceOfDeparture}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+	 * Transport.mmPlaceOfDeparture}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class MultimodalTransport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TakingInCharge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTakingInCharge = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> MultimodalTransport3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDeparture;
 			isDerived = false;
 			xmlTag = "TakngInChrg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TakingInCharge";
 			definition = "Identifies the location where the goods are take in charge for transportation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text placeOfFinalDestination;
 	/**
 	 * Identifies the location of the final destination of the goods.
 	 * <p>
@@ -122,8 +124,8 @@ public class MultimodalTransport3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
-	 * Transport.PlaceOfDestination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+	 * Transport.mmPlaceOfDestination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class MultimodalTransport3 {
 	 * "Identifies the location of the final destination of the goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfFinalDestination = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfFinalDestination = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> MultimodalTransport3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDestination;
 			isDerived = false;
 			xmlTag = "PlcOfFnlDstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfFinalDestination";
 			definition = "Identifies the location of the final destination of the goods.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class MultimodalTransport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultimodalTransport3.TakingInCharge, com.tools20022.repository.msg.MultimodalTransport3.PlaceOfFinalDestination);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultimodalTransport3.mmTakingInCharge, com.tools20022.repository.msg.MultimodalTransport3.mmPlaceOfFinalDestination);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MultimodalTransport3";
 				definition = "Information related to multimodal transportation of goods.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTakingInCharge() {
+		return takingInCharge;
+	}
+
+	public void setTakingInCharge(Max35Text takingInCharge) {
+		this.takingInCharge = takingInCharge;
+	}
+
+	public Max35Text getPlaceOfFinalDestination() {
+		return placeOfFinalDestination;
+	}
+
+	public void setPlaceOfFinalDestination(Max35Text placeOfFinalDestination) {
+		this.placeOfFinalDestination = placeOfFinalDestination;
 	}
 }

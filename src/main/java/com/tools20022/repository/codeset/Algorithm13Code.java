@@ -32,28 +32,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm13Code#AES128CBC
- * Algorithm13Code.AES128CBC}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm13Code#DES112CBC
- * Algorithm13Code.DES112CBC}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm13Code#DUKPT2009
- * Algorithm13Code.DUKPT2009}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm13Code#UKPT
- * Algorithm13Code.UKPT}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm13Code#UKPTwithAES128
- * Algorithm13Code.UKPTwithAES128}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm13Code#AES192CBC
- * Algorithm13Code.AES192CBC}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm13Code#AES256CBC
- * Algorithm13Code.AES256CBC}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm13Code#mmAES128CBC
+ * Algorithm13Code.mmAES128CBC}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm13Code#mmDES112CBC
+ * Algorithm13Code.mmDES112CBC}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm13Code#mmDUKPT2009
+ * Algorithm13Code.mmDUKPT2009}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm13Code#mmUKPT
+ * Algorithm13Code.mmUKPT}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm13Code#mmUKPTwithAES128
+ * Algorithm13Code.mmUKPTwithAES128}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm13Code#mmAES192CBC
+ * Algorithm13Code.mmAES192CBC}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm13Code#mmAES256CBC
+ * Algorithm13Code.mmAES256CBC}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,15 +99,15 @@ public class Algorithm13Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm9Code#AES128CBC
-	 * Algorithm9Code.AES128CBC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm9Code#mmAES128CBC
+	 * Algorithm9Code.mmAES128CBC}</li>
 	 * </ul>
 	 */
-	public static final MMCode AES128CBC = new MMCode() {
+	public static final MMCode mmAES128CBC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES128CBC";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm9Code.AES128CBC;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm9Code.mmAES128CBC;
 			owner_lazy = () -> Algorithm13Code.mmObject();
 		}
 	};
@@ -123,15 +128,15 @@ public class Algorithm13Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm9Code#DES112CBC
-	 * Algorithm9Code.DES112CBC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm9Code#mmDES112CBC
+	 * Algorithm9Code.mmDES112CBC}</li>
 	 * </ul>
 	 */
-	public static final MMCode DES112CBC = new MMCode() {
+	public static final MMCode mmDES112CBC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112CBC";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm9Code.DES112CBC;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm9Code.mmDES112CBC;
 			owner_lazy = () -> Algorithm13Code.mmObject();
 		}
 	};
@@ -152,15 +157,15 @@ public class Algorithm13Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm9Code#DUKPT2009
-	 * Algorithm9Code.DUKPT2009}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm9Code#mmDUKPT2009
+	 * Algorithm9Code.mmDUKPT2009}</li>
 	 * </ul>
 	 */
-	public static final MMCode DUKPT2009 = new MMCode() {
+	public static final MMCode mmDUKPT2009 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUKPT2009";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm9Code.DUKPT2009;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm9Code.mmDUKPT2009;
 			owner_lazy = () -> Algorithm13Code.mmObject();
 		}
 	};
@@ -181,15 +186,15 @@ public class Algorithm13Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm9Code#UKPT
-	 * Algorithm9Code.UKPT}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm9Code#mmUKPT
+	 * Algorithm9Code.mmUKPT}</li>
 	 * </ul>
 	 */
-	public static final MMCode UKPT = new MMCode() {
+	public static final MMCode mmUKPT = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKPT";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm9Code.UKPT;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm9Code.mmUKPT;
 			owner_lazy = () -> Algorithm13Code.mmObject();
 		}
 	};
@@ -210,15 +215,15 @@ public class Algorithm13Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm9Code#UKPTwithAES128
-	 * Algorithm9Code.UKPTwithAES128}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm9Code#mmUKPTwithAES128
+	 * Algorithm9Code.mmUKPTwithAES128}</li>
 	 * </ul>
 	 */
-	public static final MMCode UKPTwithAES128 = new MMCode() {
+	public static final MMCode mmUKPTwithAES128 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKPTwithAES128";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm9Code.UKPTwithAES128;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm9Code.mmUKPTwithAES128;
 			owner_lazy = () -> Algorithm13Code.mmObject();
 		}
 	};
@@ -238,7 +243,7 @@ public class Algorithm13Code extends AlgorithmCode {
 	 * name} = "AES192CBC"</li>
 	 * </ul>
 	 */
-	public static final MMCode AES192CBC = new MMCode() {
+	public static final MMCode mmAES192CBC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES192CBC";
@@ -261,7 +266,7 @@ public class Algorithm13Code extends AlgorithmCode {
 	 * name} = "AES256CBC"</li>
 	 * </ul>
 	 */
-	public static final MMCode AES256CBC = new MMCode() {
+	public static final MMCode mmAES256CBC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES256CBC";
@@ -272,15 +277,15 @@ public class Algorithm13Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EA2C");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Algorithm13Code";
 				definition = "Cryptographic algorithms for the protection of transported keys.";
 				previousVersion_lazy = () -> Algorithm9Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm13Code.AES128CBC, com.tools20022.repository.codeset.Algorithm13Code.DES112CBC, com.tools20022.repository.codeset.Algorithm13Code.DUKPT2009,
-						com.tools20022.repository.codeset.Algorithm13Code.UKPT, com.tools20022.repository.codeset.Algorithm13Code.UKPTwithAES128, com.tools20022.repository.codeset.Algorithm13Code.AES192CBC,
-						com.tools20022.repository.codeset.Algorithm13Code.AES256CBC);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm13Code.mmAES128CBC, com.tools20022.repository.codeset.Algorithm13Code.mmDES112CBC, com.tools20022.repository.codeset.Algorithm13Code.mmDUKPT2009,
+						com.tools20022.repository.codeset.Algorithm13Code.mmUKPT, com.tools20022.repository.codeset.Algorithm13Code.mmUKPTwithAES128, com.tools20022.repository.codeset.Algorithm13Code.mmAES192CBC,
+						com.tools20022.repository.codeset.Algorithm13Code.mmAES256CBC);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

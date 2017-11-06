@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.MessageAndBusinessReference2;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -71,15 +72,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV02#RequestDetails
- * RequestForOrderStatusReportV02.RequestDetails}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV02#mmRequestDetails
+ * RequestForOrderStatusReportV02.mmRequestDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.setr.RequestForOrderStatusReportV02#identifier
- * RequestForOrderStatusReportV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code setr.018.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestForOrderStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected List<MessageAndBusinessReference2> requestDetails;
 	/**
 	 * Information to identify the order(s) for which the status is requested.
 	 * <p>
@@ -128,7 +128,7 @@ public class RequestForOrderStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,33 +136,6 @@ public class RequestForOrderStatusReportV02 {
 			definition = "Information to identify the order(s) for which the status is requested.";
 			minOccurs = 1;
 			complexType_lazy = () -> MessageAndBusinessReference2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "setr"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "018"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "setr";
-			messageFunctionality = "018";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -178,10 +151,25 @@ public class RequestForOrderStatusReportV02 {
 				xmlTag = "setr.018.001.02";
 				businessArea_lazy = () -> SecuritiesTradeArchive.mmObject();
 				xmlName = "setr.018.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RequestForOrderStatusReportV02.RequestDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.setr.RequestForOrderStatusReportV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RequestForOrderStatusReportV02.mmRequestDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "setr";
+						messageFunctionality = "018";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<MessageAndBusinessReference2> getRequestDetails() {
+		return requestDetails;
+	}
+
+	public void setRequestDetails(List<MessageAndBusinessReference2> requestDetails) {
+		this.requestDetails = requestDetails;
 	}
 }

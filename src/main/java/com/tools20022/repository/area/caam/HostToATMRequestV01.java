@@ -60,24 +60,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#Header
- * HostToATMRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#mmHeader
+ * HostToATMRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#ProtectedHostToATMRequest
- * HostToATMRequestV01.ProtectedHostToATMRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#mmProtectedHostToATMRequest
+ * HostToATMRequestV01.mmProtectedHostToATMRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#HostToATMRequest
- * HostToATMRequestV01.HostToATMRequest}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#mmHostToATMRequest
+ * HostToATMRequestV01.mmHostToATMRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#SecurityTrailer
- * HostToATMRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#mmSecurityTrailer
+ * HostToATMRequestV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01#identifier
- * HostToATMRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code caam.007.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HostToATMRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header20 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -118,17 +117,18 @@ public class HostToATMRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header20.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedHostToATMRequest;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -152,17 +152,18 @@ public class HostToATMRequestV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedHostToATMRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedHostToATMRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdHstToATMReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedHostToATMRequest";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected HostToATMRequest1 hostToATMRequest;
 	/**
 	 * Information related to the request to an ATM to contact the ATM manager.
 	 * <p>
@@ -188,17 +189,18 @@ public class HostToATMRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock HostToATMRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHostToATMRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "HstToATMReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostToATMRequest";
 			definition = "Information related to the request to an ATM to contact the ATM manager.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> HostToATMRequest1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -222,42 +224,15 @@ public class HostToATMRequestV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "caam"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "007"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "caam";
-			messageFunctionality = "007";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -271,11 +246,50 @@ public class HostToATMRequestV01 {
 				rootElement = "Document";
 				xmlTag = "HstToATMReq";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.HostToATMRequestV01.Header, com.tools20022.repository.area.caam.HostToATMRequestV01.ProtectedHostToATMRequest,
-						com.tools20022.repository.area.caam.HostToATMRequestV01.HostToATMRequest, com.tools20022.repository.area.caam.HostToATMRequestV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.caam.HostToATMRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.HostToATMRequestV01.mmHeader, com.tools20022.repository.area.caam.HostToATMRequestV01.mmProtectedHostToATMRequest,
+						com.tools20022.repository.area.caam.HostToATMRequestV01.mmHostToATMRequest, com.tools20022.repository.area.caam.HostToATMRequestV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "caam";
+						messageFunctionality = "007";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header20 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header20 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedHostToATMRequest() {
+		return protectedHostToATMRequest;
+	}
+
+	public void setProtectedHostToATMRequest(ContentInformationType10 protectedHostToATMRequest) {
+		this.protectedHostToATMRequest = protectedHostToATMRequest;
+	}
+
+	public HostToATMRequest1 getHostToATMRequest() {
+		return hostToATMRequest;
+	}
+
+	public void setHostToATMRequest(HostToATMRequest1 hostToATMRequest) {
+		this.hostToATMRequest = hostToATMRequest;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

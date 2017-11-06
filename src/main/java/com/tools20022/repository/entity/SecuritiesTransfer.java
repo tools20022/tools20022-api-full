@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Completion of a securities settlement instruction, wherein securities are
@@ -47,157 +48,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Identification
- * SecuritiesTransfer.Identification}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmIdentification
+ * SecuritiesTransfer.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferredQuantity
- * SecuritiesTransfer.TransferredQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Account
- * SecuritiesTransfer.Account}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
+ * SecuritiesTransfer.mmTransferredQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferType
- * SecuritiesTransfer.TransferType}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmAccount
+ * SecuritiesTransfer.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#RelatedSettlement
- * SecuritiesTransfer.RelatedSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferType
+ * SecuritiesTransfer.mmTransferType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#OwnAccountTransferIndicator
- * SecuritiesTransfer.OwnAccountTransferIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmRelatedSettlement
+ * SecuritiesTransfer.mmRelatedSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PhysicalDelivery
- * SecuritiesTransfer.PhysicalDelivery}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmOwnAccountTransferIndicator
+ * SecuritiesTransfer.mmOwnAccountTransferIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#LateDeliveryDate
- * SecuritiesTransfer.LateDeliveryDate}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
+ * SecuritiesTransfer.mmPhysicalDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferTax
- * SecuritiesTransfer.TransferTax}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmLateDeliveryDate
+ * SecuritiesTransfer.mmLateDeliveryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransferReason
- * SecuritiesTransfer.TransferReason}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferTax
+ * SecuritiesTransfer.mmTransferTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PartialSettlementType
- * SecuritiesTransfer.PartialSettlementType}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferReason
+ * SecuritiesTransfer.mmTransferReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#SecuritiesDeliveryObligation
- * SecuritiesTransfer.SecuritiesDeliveryObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPartialSettlementType
+ * SecuritiesTransfer.mmPartialSettlementType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#BookEntry
- * SecuritiesTransfer.BookEntry}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmSecuritiesDeliveryObligation
+ * SecuritiesTransfer.mmSecuritiesDeliveryObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#TransactionIdentification
- * SecuritiesTransfer.TransactionIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Security
- * SecuritiesTransfer.Security}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTransfer#Status
- * SecuritiesTransfer.Status}</li>
- * </ul>
- * </li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmBookEntry
+ * SecuritiesTransfer.mmBookEntry}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#SecuritiesTransfer
- * Security.SecuritiesTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransactionIdentification
+ * SecuritiesTransfer.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#RelatedTransfer
- * SecuritiesAccount.RelatedTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#SecuritiesTransfer
- * Tax.SecuritiesTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#SecuritiesTransfer
- * SecuritiesQuantity.SecuritiesTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#TransferOperation
- * SecuritiesSettlement.TransferOperation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#TriggeringSecuritiesTransfer
- * SecuritiesEntry.TriggeringSecuritiesTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#RelatedTransfer
- * PhysicalDelivery.RelatedTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#RelatedSecuritiesTransfer
- * SecuritiesTradeStatus.RelatedSecuritiesTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#SecuritiesTransfer
- * SecuritiesDeliveryObligation.SecuritiesTransfer}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn1#TransferDetails
- * TransferIn1.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn4#TransferDetails
- * TransferIn4.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn6#TransferDetails
- * TransferIn6.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut1#TransferDetails
- * TransferOut1.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut6#TransferDetails
- * TransferOut6.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut8#TransferDetails
- * TransferOut8.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut10#TransferDetails
- * TransferOut10.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn8#TransferDetails
- * TransferIn8.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn2#TransferDetails
- * TransferIn2.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn3#TransferDetails
- * TransferIn3.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn5#TransferDetails
- * TransferIn5.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut2#TransferDetails
- * TransferOut2.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut5#TransferDetails
- * TransferOut5.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut7#TransferDetails
- * TransferOut7.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut9#TransferDetails
- * TransferOut9.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn7#TransferDetails
- * TransferIn7.TransferDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransferIn10#TransferAndReferences
- * TransferIn10.TransferAndReferences}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn9#TransferDetails
- * TransferIn9.TransferDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransferOut11#TransferAndReferences
- * TransferOut11.TransferAndReferences}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut12#TransferDetails
- * TransferOut12.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut13#TransferDetails
- * TransferOut13.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn11#TransferDetails
- * TransferIn11.TransferDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransferIn13#TransferAndReferences
- * TransferIn13.TransferAndReferences}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut14#TransferDetails
- * TransferOut14.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn12#TransferDetails
- * TransferIn12.TransferDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransferOut15#TransferAndReferences
- * TransferOut15.TransferAndReferences}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransferOut17#TransferAndReferences
- * TransferOut17.TransferAndReferences}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn14#TransferDetails
- * TransferIn14.TransferDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransferIn15#TransferAndReferences
- * TransferIn15.TransferAndReferences}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut16#TransferDetails
- * TransferOut16.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn16#TransferDetails
- * TransferIn16.TransferDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut18#TransferDetails
- * TransferOut18.TransferDetails}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmSecurity
+ * SecuritiesTransfer.mmSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmStatus
+ * SecuritiesTransfer.mmStatus}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -205,6 +101,120 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.IntraPositionTransfer
  * IntraPositionTransfer}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesTransfer
+ * Security.mmSecuritiesTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedTransfer
+ * SecuritiesAccount.mmRelatedTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmSecuritiesTransfer
+ * Tax.mmSecuritiesTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesTransfer
+ * SecuritiesQuantity.mmSecuritiesTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTransferOperation
+ * SecuritiesSettlement.mmTransferOperation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmTriggeringSecuritiesTransfer
+ * SecuritiesEntry.mmTriggeringSecuritiesTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmRelatedTransfer
+ * PhysicalDelivery.mmRelatedTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmRelatedSecuritiesTransfer
+ * SecuritiesTradeStatus.mmRelatedSecuritiesTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesTransfer
+ * SecuritiesDeliveryObligation.mmSecuritiesTransfer}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn1#mmTransferDetails
+ * TransferIn1.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn4#mmTransferDetails
+ * TransferIn4.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn6#mmTransferDetails
+ * TransferIn6.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut1#mmTransferDetails
+ * TransferOut1.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut6#mmTransferDetails
+ * TransferOut6.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut8#mmTransferDetails
+ * TransferOut8.mmTransferDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut10#mmTransferDetails
+ * TransferOut10.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn8#mmTransferDetails
+ * TransferIn8.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn2#mmTransferDetails
+ * TransferIn2.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn3#mmTransferDetails
+ * TransferIn3.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn5#mmTransferDetails
+ * TransferIn5.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut2#mmTransferDetails
+ * TransferOut2.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut5#mmTransferDetails
+ * TransferOut5.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut7#mmTransferDetails
+ * TransferOut7.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut9#mmTransferDetails
+ * TransferOut9.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn7#mmTransferDetails
+ * TransferIn7.mmTransferDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferIn10#mmTransferAndReferences
+ * TransferIn10.mmTransferAndReferences}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn9#mmTransferDetails
+ * TransferIn9.mmTransferDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut11#mmTransferAndReferences
+ * TransferOut11.mmTransferAndReferences}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut12#mmTransferDetails
+ * TransferOut12.mmTransferDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut13#mmTransferDetails
+ * TransferOut13.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn11#mmTransferDetails
+ * TransferIn11.mmTransferDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferIn13#mmTransferAndReferences
+ * TransferIn13.mmTransferAndReferences}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut14#mmTransferDetails
+ * TransferOut14.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn12#mmTransferDetails
+ * TransferIn12.mmTransferDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut15#mmTransferAndReferences
+ * TransferOut15.mmTransferAndReferences}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut17#mmTransferAndReferences
+ * TransferOut17.mmTransferAndReferences}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn14#mmTransferDetails
+ * TransferIn14.mmTransferDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferIn15#mmTransferAndReferences
+ * TransferIn15.mmTransferAndReferences}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut16#mmTransferDetails
+ * TransferOut16.mmTransferDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn16#mmTransferDetails
+ * TransferIn16.mmTransferDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferOut18#mmTransferDetails
+ * TransferOut18.mmTransferDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -311,8 +321,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -328,6 +338,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesTransfer extends ObligationFulfilment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identification of a transfer, as assigned by the
 	 * instructing party.
@@ -338,142 +349,142 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer4#TransferReference
-	 * Transfer4.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference2#TransferReference
-	 * TransferReference2.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer7#TransferReference
-	 * Transfer7.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer2#TransferReference
-	 * Transfer2.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer10#TransferReference
-	 * Transfer10.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer3#TransferReference
-	 * Transfer3.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference1#TransferReference
-	 * TransferReference1.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer6#TransferReference
-	 * Transfer6.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer1#TransferReference
-	 * Transfer1.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer9#TransferReference
-	 * Transfer9.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer18#TransferReference
-	 * Transfer18.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer26#TransferReference
-	 * Transfer26.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer5#TransferReference
-	 * Transfer5.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer15#TransferReference
-	 * Transfer15.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer21#TransferReference
-	 * Transfer21.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer13#TransferReference
-	 * Transfer13.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer23#TransferReference
-	 * Transfer23.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer8#TransferReference
-	 * Transfer8.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer11#TransferReference
-	 * Transfer11.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer19#TransferReference
-	 * Transfer19.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference1#TransferReference
-	 * MessageAndBusinessReference1.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference6#TransferReference
-	 * MessageAndBusinessReference6.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#TransferReference
-	 * CancellationStatusAndReason2.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#TransferReference
-	 * TransferStatusAndReason.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#TransferReference
-	 * TransferStatusAndReason2.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#TransferReference
-	 * Transfer27.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer28#TransferReference
-	 * Transfer28.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer29#TransferReference
-	 * Transfer29.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7#TransferReference
-	 * MessageAndBusinessReference7.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason3#TransferReference
-	 * TransferStatusAndReason3.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference5#TransferReference
-	 * TransferReference5.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference6#TransferReference
-	 * TransferReference6.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference8#TransferReference
-	 * TransferReference8.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer31#TransferReference
-	 * Transfer31.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer30#TransferReference
-	 * Transfer30.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer32#TransferReference
-	 * Transfer32.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#TransferReference
-	 * CancellationStatusAndReason3.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference8#TransferReference
-	 * MessageAndBusinessReference8.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer33#TransferReference
-	 * Transfer33.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason4#TransferReference
-	 * TransferStatusAndReason4.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference9#TransferReference
-	 * TransferReference9.TransferReference}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferReference10#TransferReference
-	 * TransferReference10.TransferReference}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer4#mmTransferReference
+	 * Transfer4.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference2#mmTransferReference
+	 * TransferReference2.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer7#mmTransferReference
+	 * Transfer7.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer2#mmTransferReference
+	 * Transfer2.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer10#mmTransferReference
+	 * Transfer10.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer3#mmTransferReference
+	 * Transfer3.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference1#mmTransferReference
+	 * TransferReference1.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer6#mmTransferReference
+	 * Transfer6.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer1#mmTransferReference
+	 * Transfer1.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer9#mmTransferReference
+	 * Transfer9.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer18#mmTransferReference
+	 * Transfer18.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer26#mmTransferReference
+	 * Transfer26.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer5#mmTransferReference
+	 * Transfer5.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer15#mmTransferReference
+	 * Transfer15.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer21#mmTransferReference
+	 * Transfer21.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer13#mmTransferReference
+	 * Transfer13.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer23#mmTransferReference
+	 * Transfer23.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer8#mmTransferReference
+	 * Transfer8.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer11#mmTransferReference
+	 * Transfer11.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer19#mmTransferReference
+	 * Transfer19.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference1#mmTransferReference
+	 * MessageAndBusinessReference1.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference6#mmTransferReference
+	 * MessageAndBusinessReference6.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2#mmTransferReference
+	 * CancellationStatusAndReason2.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason#mmTransferReference
+	 * TransferStatusAndReason.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmTransferReference
+	 * TransferStatusAndReason2.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmTransferReference
+	 * Transfer27.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer28#mmTransferReference
+	 * Transfer28.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer29#mmTransferReference
+	 * Transfer29.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7#mmTransferReference
+	 * MessageAndBusinessReference7.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason3#mmTransferReference
+	 * TransferStatusAndReason3.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference5#mmTransferReference
+	 * TransferReference5.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference6#mmTransferReference
+	 * TransferReference6.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference8#mmTransferReference
+	 * TransferReference8.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmTransferReference
+	 * Transfer31.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer30#mmTransferReference
+	 * Transfer30.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer32#mmTransferReference
+	 * Transfer32.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#mmTransferReference
+	 * CancellationStatusAndReason3.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference8#mmTransferReference
+	 * MessageAndBusinessReference8.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmTransferReference
+	 * Transfer33.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason4#mmTransferReference
+	 * TransferStatusAndReason4.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference9#mmTransferReference
+	 * TransferReference9.mmTransferReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference10#mmTransferReference
+	 * TransferReference10.mmTransferReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -487,33 +498,35 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Identification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer4.TransferReference, com.tools20022.repository.msg.TransferReference2.TransferReference, com.tools20022.repository.msg.Transfer7.TransferReference,
-					com.tools20022.repository.msg.Transfer2.TransferReference, com.tools20022.repository.msg.Transfer10.TransferReference, com.tools20022.repository.msg.Transfer3.TransferReference,
-					com.tools20022.repository.msg.TransferReference1.TransferReference, com.tools20022.repository.msg.Transfer6.TransferReference, com.tools20022.repository.msg.Transfer1.TransferReference,
-					com.tools20022.repository.msg.Transfer9.TransferReference, com.tools20022.repository.msg.Transfer18.TransferReference, com.tools20022.repository.msg.Transfer26.TransferReference,
-					com.tools20022.repository.msg.Transfer5.TransferReference, com.tools20022.repository.msg.Transfer15.TransferReference, com.tools20022.repository.msg.Transfer21.TransferReference,
-					com.tools20022.repository.msg.Transfer13.TransferReference, com.tools20022.repository.msg.Transfer23.TransferReference, com.tools20022.repository.msg.Transfer8.TransferReference,
-					com.tools20022.repository.msg.Transfer11.TransferReference, com.tools20022.repository.msg.Transfer19.TransferReference, com.tools20022.repository.msg.MessageAndBusinessReference1.TransferReference,
-					com.tools20022.repository.msg.MessageAndBusinessReference6.TransferReference, com.tools20022.repository.msg.CancellationStatusAndReason2.TransferReference,
-					com.tools20022.repository.msg.TransferStatusAndReason.TransferReference, com.tools20022.repository.msg.TransferStatusAndReason2.TransferReference, com.tools20022.repository.msg.Transfer27.TransferReference,
-					com.tools20022.repository.msg.Transfer28.TransferReference, com.tools20022.repository.msg.Transfer29.TransferReference, com.tools20022.repository.msg.MessageAndBusinessReference7.TransferReference,
-					com.tools20022.repository.msg.TransferStatusAndReason3.TransferReference, com.tools20022.repository.msg.TransferReference5.TransferReference, com.tools20022.repository.msg.TransferReference6.TransferReference,
-					com.tools20022.repository.msg.TransferReference8.TransferReference, com.tools20022.repository.msg.Transfer31.TransferReference, com.tools20022.repository.msg.Transfer30.TransferReference,
-					com.tools20022.repository.msg.Transfer32.TransferReference, com.tools20022.repository.msg.CancellationStatusAndReason3.TransferReference, com.tools20022.repository.msg.MessageAndBusinessReference8.TransferReference,
-					com.tools20022.repository.msg.Transfer33.TransferReference, com.tools20022.repository.msg.TransferStatusAndReason4.TransferReference, com.tools20022.repository.msg.TransferReference9.TransferReference,
-					com.tools20022.repository.msg.TransferReference10.TransferReference);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer4.mmTransferReference, com.tools20022.repository.msg.TransferReference2.mmTransferReference,
+					com.tools20022.repository.msg.Transfer7.mmTransferReference, com.tools20022.repository.msg.Transfer2.mmTransferReference, com.tools20022.repository.msg.Transfer10.mmTransferReference,
+					com.tools20022.repository.msg.Transfer3.mmTransferReference, com.tools20022.repository.msg.TransferReference1.mmTransferReference, com.tools20022.repository.msg.Transfer6.mmTransferReference,
+					com.tools20022.repository.msg.Transfer1.mmTransferReference, com.tools20022.repository.msg.Transfer9.mmTransferReference, com.tools20022.repository.msg.Transfer18.mmTransferReference,
+					com.tools20022.repository.msg.Transfer26.mmTransferReference, com.tools20022.repository.msg.Transfer5.mmTransferReference, com.tools20022.repository.msg.Transfer15.mmTransferReference,
+					com.tools20022.repository.msg.Transfer21.mmTransferReference, com.tools20022.repository.msg.Transfer13.mmTransferReference, com.tools20022.repository.msg.Transfer23.mmTransferReference,
+					com.tools20022.repository.msg.Transfer8.mmTransferReference, com.tools20022.repository.msg.Transfer11.mmTransferReference, com.tools20022.repository.msg.Transfer19.mmTransferReference,
+					com.tools20022.repository.msg.MessageAndBusinessReference1.mmTransferReference, com.tools20022.repository.msg.MessageAndBusinessReference6.mmTransferReference,
+					com.tools20022.repository.msg.CancellationStatusAndReason2.mmTransferReference, com.tools20022.repository.msg.TransferStatusAndReason.mmTransferReference,
+					com.tools20022.repository.msg.TransferStatusAndReason2.mmTransferReference, com.tools20022.repository.msg.Transfer27.mmTransferReference, com.tools20022.repository.msg.Transfer28.mmTransferReference,
+					com.tools20022.repository.msg.Transfer29.mmTransferReference, com.tools20022.repository.msg.MessageAndBusinessReference7.mmTransferReference, com.tools20022.repository.msg.TransferStatusAndReason3.mmTransferReference,
+					com.tools20022.repository.msg.TransferReference5.mmTransferReference, com.tools20022.repository.msg.TransferReference6.mmTransferReference, com.tools20022.repository.msg.TransferReference8.mmTransferReference,
+					com.tools20022.repository.msg.Transfer31.mmTransferReference, com.tools20022.repository.msg.Transfer30.mmTransferReference, com.tools20022.repository.msg.Transfer32.mmTransferReference,
+					com.tools20022.repository.msg.CancellationStatusAndReason3.mmTransferReference, com.tools20022.repository.msg.MessageAndBusinessReference8.mmTransferReference,
+					com.tools20022.repository.msg.Transfer33.mmTransferReference, com.tools20022.repository.msg.TransferStatusAndReason4.mmTransferReference, com.tools20022.repository.msg.TransferReference9.mmTransferReference,
+					com.tools20022.repository.msg.TransferReference10.mmTransferReference);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a transfer, as assigned by the instructing party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SecuritiesQuantity transferredQuantity;
 	/**
 	 * Total quantity of securities settled.
 	 * <p>
@@ -522,8 +535,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#SecuritiesTransfer
-	 * SecuritiesQuantity.SecuritiesTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesTransfer
+	 * SecuritiesQuantity.mmSecuritiesTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -531,438 +544,447 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesQuantity
 	 * SecuritiesQuantity}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut3#ProductTransfer
-	 * TransferOut3.ProductTransfer}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Unit2#TotalNumber
-	 * Unit2.TotalNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer2#Assets
-	 * PEPISATransfer2.Assets}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer4#TotalUnitsNumber
-	 * Transfer4.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer4#UnitsDetails
-	 * Transfer4.UnitsDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer7#TotalUnitsNumber
-	 * Transfer7.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer7#UnitsDetails
-	 * Transfer7.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer17#TotalUnitsNumber
-	 * Transfer17.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer17#UnitsDetails
-	 * Transfer17.UnitsDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer2#TotalUnitsNumber
-	 * Transfer2.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer2#UnitsDetails
-	 * Transfer2.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer10#TotalUnitsNumber
-	 * Transfer10.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer10#UnitsDetails
-	 * Transfer10.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer14#TotalUnitsNumber
-	 * Transfer14.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer14#UnitsDetails
-	 * Transfer14.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer24#TotalUnitsNumber
-	 * Transfer24.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer24#UnitsDetails
-	 * Transfer24.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer25#TotalUnitsNumber
-	 * Transfer25.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer25#UnitsDetails
-	 * Transfer25.UnitsDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer3#TotalUnitsNumber
-	 * Transfer3.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer6#TotalUnitsNumber
-	 * Transfer6.TotalUnitsNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer16#TotalUnitsNumber
-	 * Transfer16.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer1#TotalUnitsNumber
-	 * Transfer1.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer1#UnitsDetails
-	 * Transfer1.UnitsDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer9#TotalUnitsNumber
-	 * Transfer9.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer9#UnitsDetails
-	 * Transfer9.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Quantity13Choice#TotalUnitsNumber
-	 * Quantity13Choice.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer12#Quantity
-	 * Transfer12.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer12#UnitsDetails
-	 * Transfer12.UnitsDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer20#Quantity
-	 * Transfer20.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer20#UnitsDetails
-	 * Transfer20.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer22#TotalUnitsNumber
-	 * Transfer22.TotalUnitsNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer18#TotalUnitsNumber
-	 * Transfer18.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer18#UnitsDetails
-	 * Transfer18.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer26#TotalUnitsNumber
-	 * Transfer26.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer26#UnitsDetails
-	 * Transfer26.UnitsDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer5#TotalUnitsNumber
-	 * Transfer5.TotalUnitsNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer15#TotalUnitsNumber
-	 * Transfer15.TotalUnitsNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer21#TotalUnitsNumber
-	 * Transfer21.TotalUnitsNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer13#TotalUnitsNumber
-	 * Transfer13.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer13#UnitsDetails
-	 * Transfer13.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer23#TotalUnitsNumber
-	 * Transfer23.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer23#UnitsDetails
-	 * Transfer23.UnitsDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer8#TotalUnitsNumber
-	 * Transfer8.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer8#UnitsDetails
-	 * Transfer8.UnitsDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer11#Quantity
-	 * Transfer11.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer11#UnitsDetails
-	 * Transfer11.UnitsDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer19#Quantity
-	 * Transfer19.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer19#UnitsDetails
-	 * Transfer19.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails2#SettledQuantity
-	 * IntraPositionDetails2.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails2#PreviouslySettledQuantity
-	 * IntraPositionDetails2.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails8#SettledQuantity
-	 * IntraPositionDetails8.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails8#PreviouslySettledQuantity
-	 * IntraPositionDetails8.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails12#SettledQuantity
-	 * IntraPositionDetails12.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails12#PreviouslySettledQuantity
-	 * IntraPositionDetails12.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails13#SettledQuantity
-	 * IntraPositionDetails13.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails13#PreviouslySettledQuantity
-	 * IntraPositionDetails13.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails22#SettledQuantity
-	 * IntraPositionDetails22.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails22#PreviouslySettledQuantity
-	 * IntraPositionDetails22.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails26#SettledQuantity
-	 * IntraPositionDetails26.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails26#PreviouslySettledQuantity
-	 * IntraPositionDetails26.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails27#SettledQuantity
-	 * IntraPositionDetails27.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails27#PreviouslySettledQuantity
-	 * IntraPositionDetails27.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails29#SettledQuantity
-	 * IntraPositionDetails29.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails29#PreviouslySettledQuantity
-	 * IntraPositionDetails29.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails1#SettledQuantity
-	 * IntraPositionMovementDetails1.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails1#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails1.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails2#SettledQuantity
-	 * IntraPositionMovementDetails2.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails2#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails2.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails5#SettledQuantity
-	 * IntraPositionMovementDetails5.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails5#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails5.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails6#SettledQuantity
-	 * IntraPositionMovementDetails6.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails6#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails6.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails7#SettledQuantity
-	 * IntraPositionMovementDetails7.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails7#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails7.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails8#SettledQuantity
-	 * IntraPositionMovementDetails8.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails8#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails8.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails9#SettledQuantity
-	 * IntraPositionMovementDetails9.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails9#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails9.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails10#SettledQuantity
-	 * IntraPositionMovementDetails10.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails10#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails10.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecurityMovement1#SecuritiesQuantity
-	 * SecurityMovement1.SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FailedMovement1#SecuritiesQuantity
-	 * FailedMovement1.SecuritiesQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails1#SettlementQuantity
-	 * IntraPositionDetails1.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails11#SettlementQuantity
-	 * IntraPositionDetails11.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails4#SettledQuantity
-	 * IntraPositionDetails4.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails9#SettledQuantity
-	 * IntraPositionDetails9.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails7#QuantityDetails
-	 * SecuritiesTradeDetails7.QuantityDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails19#QuantityDetails
-	 * SecuritiesTradeDetails19.QuantityDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails7#SettlementQuantity
-	 * IntraPositionDetails7.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails16#SettlementQuantity
-	 * IntraPositionDetails16.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails21#SettlementQuantity
-	 * IntraPositionDetails21.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails25#SettlementQuantity
-	 * IntraPositionDetails25.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails5#SettledQuantity
-	 * IntraPositionDetails5.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails15#SettledQuantity
-	 * IntraPositionDetails15.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails19#SettlementQuantity
-	 * IntraPositionDetails19.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails23#SettlementQuantity
-	 * IntraPositionDetails23.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails14#QuantityDetails
-	 * SecuritiesTradeDetails14.QuantityDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails20#QuantityDetails
-	 * SecuritiesTradeDetails20.QuantityDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails24#QuantityDetails
-	 * SecuritiesTradeDetails24.QuantityDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails30#QuantityDetails
-	 * SecuritiesTradeDetails30.QuantityDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.BuyIn3#CoveredQuantity
-	 * BuyIn3.CoveredQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation1#Quantity
-	 * SettlementObligation1.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation6#Quantity
-	 * SettlementObligation6.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation3#Quantity
-	 * SettlementObligation3.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation2#Quantity
-	 * SettlementObligation2.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation5#Quantity
-	 * SettlementObligation5.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation4#Quantity
-	 * SettlementObligation4.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails3#SettledQuantity
-	 * IntraPositionMovementDetails3.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails3#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails3.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails4#SettledQuantity
-	 * IntraPositionMovementDetails4.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails4#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails4.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut4#ProductTransfer
-	 * TransferOut4.ProductTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#SettlementQuantity
-	 * IntraPositionQueryCriteria1.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#SettledQuantity
-	 * IntraPositionQueryCriteria1.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPosition4#SettlementQuantity
-	 * IntraPosition4.SettlementQuantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#Quantity
-	 * Transfer27.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#UnitsDetails
-	 * Transfer27.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer28#TotalUnitsNumber
-	 * Transfer28.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer28#UnitsDetails
-	 * Transfer28.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer29#TotalUnitsNumber
-	 * Transfer29.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer29#UnitsDetails
-	 * Transfer29.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation7#Quantity
-	 * SettlementObligation7.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SettlementObligation8#Quantity
-	 * SettlementObligation8.Quantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails31#SettlementQuantity
-	 * IntraPositionDetails31.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails48#QuantityDetails
-	 * SecuritiesTradeDetails48.QuantityDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails33#SettlementQuantity
-	 * IntraPositionDetails33.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails34#SettledQuantity
-	 * IntraPositionDetails34.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails34#PreviouslySettledQuantity
-	 * IntraPositionDetails34.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails11#SettledQuantity
-	 * IntraPositionMovementDetails11.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails11#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails11.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer31#TotalUnitsNumber
-	 * Transfer31.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer31#UnitsDetails
-	 * Transfer31.UnitsDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer30#Quantity
-	 * Transfer30.Quantity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer30#UnitsDetails
-	 * Transfer30.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer32#TotalUnitsNumber
-	 * Transfer32.TotalUnitsNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer33#TotalUnitsNumber
-	 * Transfer33.TotalUnitsNumber}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer33#UnitsDetails
-	 * Transfer33.UnitsDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails57#QuantityDetails
-	 * SecuritiesTradeDetails57.QuantityDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails35#SettledQuantity
-	 * IntraPositionDetails35.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails35#PreviouslySettledQuantity
-	 * IntraPositionDetails35.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails36#SettlementQuantity
-	 * IntraPositionDetails36.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails38#SettlementQuantity
-	 * IntraPositionDetails38.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails12#SettledQuantity
-	 * IntraPositionMovementDetails12.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails12#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails12.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails41#SettledQuantity
-	 * IntraPositionDetails41.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails41#PreviouslySettledQuantity
-	 * IntraPositionDetails41.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails39#SettlementQuantity
-	 * IntraPositionDetails39.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails13#SettledQuantity
-	 * IntraPositionMovementDetails13.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails13#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails13.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails43#SettledQuantity
-	 * IntraPositionDetails43.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails43#PreviouslySettledQuantity
-	 * IntraPositionDetails43.PreviouslySettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails42#SettlementQuantity
-	 * IntraPositionDetails42.SettlementQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#SettledQuantity
-	 * IntraPositionMovementDetails14.SettledQuantity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#PreviouslySettledQuantity
-	 * IntraPositionMovementDetails14.PreviouslySettledQuantity}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut3#mmProductTransfer
+	 * TransferOut3.mmProductTransfer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit2#mmTotalNumber
+	 * Unit2.mmTotalNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer2#mmAssets
+	 * PEPISATransfer2.mmAssets}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer4#mmTotalUnitsNumber
+	 * Transfer4.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer4#mmUnitsDetails
+	 * Transfer4.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer7#mmTotalUnitsNumber
+	 * Transfer7.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer7#mmUnitsDetails
+	 * Transfer7.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer17#mmTotalUnitsNumber
+	 * Transfer17.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer17#mmUnitsDetails
+	 * Transfer17.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer2#mmTotalUnitsNumber
+	 * Transfer2.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer2#mmUnitsDetails
+	 * Transfer2.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer10#mmTotalUnitsNumber
+	 * Transfer10.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer10#mmUnitsDetails
+	 * Transfer10.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer14#mmTotalUnitsNumber
+	 * Transfer14.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer14#mmUnitsDetails
+	 * Transfer14.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer24#mmTotalUnitsNumber
+	 * Transfer24.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer24#mmUnitsDetails
+	 * Transfer24.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer25#mmTotalUnitsNumber
+	 * Transfer25.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer25#mmUnitsDetails
+	 * Transfer25.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer3#mmTotalUnitsNumber
+	 * Transfer3.mmTotalUnitsNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer6#mmTotalUnitsNumber
+	 * Transfer6.mmTotalUnitsNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer16#mmTotalUnitsNumber
+	 * Transfer16.mmTotalUnitsNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer1#mmTotalUnitsNumber
+	 * Transfer1.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer1#mmUnitsDetails
+	 * Transfer1.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer9#mmTotalUnitsNumber
+	 * Transfer9.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer9#mmUnitsDetails
+	 * Transfer9.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity13Choice#mmTotalUnitsNumber
+	 * Quantity13Choice.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer12#mmQuantity
+	 * Transfer12.mmQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer12#mmUnitsDetails
+	 * Transfer12.mmUnitsDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer20#mmQuantity
+	 * Transfer20.mmQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer20#mmUnitsDetails
+	 * Transfer20.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer22#mmTotalUnitsNumber
+	 * Transfer22.mmTotalUnitsNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer18#mmTotalUnitsNumber
+	 * Transfer18.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer18#mmUnitsDetails
+	 * Transfer18.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer26#mmTotalUnitsNumber
+	 * Transfer26.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer26#mmUnitsDetails
+	 * Transfer26.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer5#mmTotalUnitsNumber
+	 * Transfer5.mmTotalUnitsNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer15#mmTotalUnitsNumber
+	 * Transfer15.mmTotalUnitsNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer21#mmTotalUnitsNumber
+	 * Transfer21.mmTotalUnitsNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer13#mmTotalUnitsNumber
+	 * Transfer13.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer13#mmUnitsDetails
+	 * Transfer13.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer23#mmTotalUnitsNumber
+	 * Transfer23.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer23#mmUnitsDetails
+	 * Transfer23.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer8#mmTotalUnitsNumber
+	 * Transfer8.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer8#mmUnitsDetails
+	 * Transfer8.mmUnitsDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer11#mmQuantity
+	 * Transfer11.mmQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer11#mmUnitsDetails
+	 * Transfer11.mmUnitsDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmQuantity
+	 * Transfer19.mmQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer19#mmUnitsDetails
+	 * Transfer19.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails2#mmSettledQuantity
+	 * IntraPositionDetails2.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails2#mmPreviouslySettledQuantity
+	 * IntraPositionDetails2.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails8#mmSettledQuantity
+	 * IntraPositionDetails8.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails8#mmPreviouslySettledQuantity
+	 * IntraPositionDetails8.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails12#mmSettledQuantity
+	 * IntraPositionDetails12.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails12#mmPreviouslySettledQuantity
+	 * IntraPositionDetails12.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails13#mmSettledQuantity
+	 * IntraPositionDetails13.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails13#mmPreviouslySettledQuantity
+	 * IntraPositionDetails13.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails22#mmSettledQuantity
+	 * IntraPositionDetails22.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails22#mmPreviouslySettledQuantity
+	 * IntraPositionDetails22.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails26#mmSettledQuantity
+	 * IntraPositionDetails26.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails26#mmPreviouslySettledQuantity
+	 * IntraPositionDetails26.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails27#mmSettledQuantity
+	 * IntraPositionDetails27.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails27#mmPreviouslySettledQuantity
+	 * IntraPositionDetails27.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails29#mmSettledQuantity
+	 * IntraPositionDetails29.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails29#mmPreviouslySettledQuantity
+	 * IntraPositionDetails29.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails1#mmSettledQuantity
+	 * IntraPositionMovementDetails1.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails1#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails1.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails2#mmSettledQuantity
+	 * IntraPositionMovementDetails2.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails2#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails2.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails5#mmSettledQuantity
+	 * IntraPositionMovementDetails5.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails5#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails5.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails6#mmSettledQuantity
+	 * IntraPositionMovementDetails6.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails6#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails6.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails7#mmSettledQuantity
+	 * IntraPositionMovementDetails7.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails7#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails7.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails8#mmSettledQuantity
+	 * IntraPositionMovementDetails8.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails8#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails8.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails9#mmSettledQuantity
+	 * IntraPositionMovementDetails9.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails9#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails9.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails10#mmSettledQuantity
+	 * IntraPositionMovementDetails10.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails10#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails10.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityMovement1#mmSecuritiesQuantity
+	 * SecurityMovement1.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FailedMovement1#mmSecuritiesQuantity
+	 * FailedMovement1.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails1#mmSettlementQuantity
+	 * IntraPositionDetails1.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails11#mmSettlementQuantity
+	 * IntraPositionDetails11.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails4#mmSettledQuantity
+	 * IntraPositionDetails4.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails9#mmSettledQuantity
+	 * IntraPositionDetails9.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails7#mmQuantityDetails
+	 * SecuritiesTradeDetails7.mmQuantityDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails19#mmQuantityDetails
+	 * SecuritiesTradeDetails19.mmQuantityDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails7#mmSettlementQuantity
+	 * IntraPositionDetails7.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails16#mmSettlementQuantity
+	 * IntraPositionDetails16.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails21#mmSettlementQuantity
+	 * IntraPositionDetails21.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails25#mmSettlementQuantity
+	 * IntraPositionDetails25.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails5#mmSettledQuantity
+	 * IntraPositionDetails5.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails15#mmSettledQuantity
+	 * IntraPositionDetails15.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails19#mmSettlementQuantity
+	 * IntraPositionDetails19.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails23#mmSettlementQuantity
+	 * IntraPositionDetails23.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails14#mmQuantityDetails
+	 * SecuritiesTradeDetails14.mmQuantityDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails20#mmQuantityDetails
+	 * SecuritiesTradeDetails20.mmQuantityDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails24#mmQuantityDetails
+	 * SecuritiesTradeDetails24.mmQuantityDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails30#mmQuantityDetails
+	 * SecuritiesTradeDetails30.mmQuantityDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BuyIn3#mmCoveredQuantity
+	 * BuyIn3.mmCoveredQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation1#mmQuantity
+	 * SettlementObligation1.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation6#mmQuantity
+	 * SettlementObligation6.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation3#mmQuantity
+	 * SettlementObligation3.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation2#mmQuantity
+	 * SettlementObligation2.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation5#mmQuantity
+	 * SettlementObligation5.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation4#mmQuantity
+	 * SettlementObligation4.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails3#mmSettledQuantity
+	 * IntraPositionMovementDetails3.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails3#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails3.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails4#mmSettledQuantity
+	 * IntraPositionMovementDetails4.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails4#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails4.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut4#mmProductTransfer
+	 * TransferOut4.mmProductTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#mmSettlementQuantity
+	 * IntraPositionQueryCriteria1.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#mmSettledQuantity
+	 * IntraPositionQueryCriteria1.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPosition4#mmSettlementQuantity
+	 * IntraPosition4.mmSettlementQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#mmQuantity
+	 * Transfer27.mmQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#mmUnitsDetails
+	 * Transfer27.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer28#mmTotalUnitsNumber
+	 * Transfer28.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer28#mmUnitsDetails
+	 * Transfer28.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer29#mmTotalUnitsNumber
+	 * Transfer29.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer29#mmUnitsDetails
+	 * Transfer29.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation7#mmQuantity
+	 * SettlementObligation7.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementObligation8#mmQuantity
+	 * SettlementObligation8.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails31#mmSettlementQuantity
+	 * IntraPositionDetails31.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails48#mmQuantityDetails
+	 * SecuritiesTradeDetails48.mmQuantityDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails33#mmSettlementQuantity
+	 * IntraPositionDetails33.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails34#mmSettledQuantity
+	 * IntraPositionDetails34.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails34#mmPreviouslySettledQuantity
+	 * IntraPositionDetails34.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails11#mmSettledQuantity
+	 * IntraPositionMovementDetails11.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails11#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails11.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmTotalUnitsNumber
+	 * Transfer31.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer31#mmUnitsDetails
+	 * Transfer31.mmUnitsDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer30#mmQuantity
+	 * Transfer30.mmQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer30#mmUnitsDetails
+	 * Transfer30.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer32#mmTotalUnitsNumber
+	 * Transfer32.mmTotalUnitsNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmTotalUnitsNumber
+	 * Transfer33.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer33#mmUnitsDetails
+	 * Transfer33.mmUnitsDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails57#mmQuantityDetails
+	 * SecuritiesTradeDetails57.mmQuantityDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails35#mmSettledQuantity
+	 * IntraPositionDetails35.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails35#mmPreviouslySettledQuantity
+	 * IntraPositionDetails35.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails36#mmSettlementQuantity
+	 * IntraPositionDetails36.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails38#mmSettlementQuantity
+	 * IntraPositionDetails38.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails12#mmSettledQuantity
+	 * IntraPositionMovementDetails12.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails12#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails12.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails41#mmSettledQuantity
+	 * IntraPositionDetails41.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails41#mmPreviouslySettledQuantity
+	 * IntraPositionDetails41.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails39#mmSettlementQuantity
+	 * IntraPositionDetails39.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails13#mmSettledQuantity
+	 * IntraPositionMovementDetails13.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails13#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails13.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails43#mmSettledQuantity
+	 * IntraPositionDetails43.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails43#mmPreviouslySettledQuantity
+	 * IntraPositionDetails43.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails42#mmSettlementQuantity
+	 * IntraPositionDetails42.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#mmSettledQuantity
+	 * IntraPositionMovementDetails14.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails14.mmPreviouslySettledQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -974,80 +996,84 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} = "Total quantity of securities settled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TransferredQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransferredQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut3.ProductTransfer, com.tools20022.repository.msg.Unit2.TotalNumber, com.tools20022.repository.msg.PEPISATransfer2.Assets,
-					com.tools20022.repository.msg.Transfer4.TotalUnitsNumber, com.tools20022.repository.msg.Transfer4.UnitsDetails, com.tools20022.repository.msg.Transfer7.TotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer7.UnitsDetails, com.tools20022.repository.msg.Transfer17.TotalUnitsNumber, com.tools20022.repository.msg.Transfer17.UnitsDetails,
-					com.tools20022.repository.msg.Transfer2.TotalUnitsNumber, com.tools20022.repository.msg.Transfer2.UnitsDetails, com.tools20022.repository.msg.Transfer10.TotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer10.UnitsDetails, com.tools20022.repository.msg.Transfer14.TotalUnitsNumber, com.tools20022.repository.msg.Transfer14.UnitsDetails,
-					com.tools20022.repository.msg.Transfer24.TotalUnitsNumber, com.tools20022.repository.msg.Transfer24.UnitsDetails, com.tools20022.repository.msg.Transfer25.TotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer25.UnitsDetails, com.tools20022.repository.msg.Transfer3.TotalUnitsNumber, com.tools20022.repository.msg.Transfer6.TotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer16.TotalUnitsNumber, com.tools20022.repository.msg.Transfer1.TotalUnitsNumber, com.tools20022.repository.msg.Transfer1.UnitsDetails,
-					com.tools20022.repository.msg.Transfer9.TotalUnitsNumber, com.tools20022.repository.msg.Transfer9.UnitsDetails, com.tools20022.repository.choice.Quantity13Choice.TotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer12.Quantity, com.tools20022.repository.msg.Transfer12.UnitsDetails, com.tools20022.repository.msg.Transfer20.Quantity, com.tools20022.repository.msg.Transfer20.UnitsDetails,
-					com.tools20022.repository.msg.Transfer22.TotalUnitsNumber, com.tools20022.repository.msg.Transfer18.TotalUnitsNumber, com.tools20022.repository.msg.Transfer18.UnitsDetails,
-					com.tools20022.repository.msg.Transfer26.TotalUnitsNumber, com.tools20022.repository.msg.Transfer26.UnitsDetails, com.tools20022.repository.msg.Transfer5.TotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer15.TotalUnitsNumber, com.tools20022.repository.msg.Transfer21.TotalUnitsNumber, com.tools20022.repository.msg.Transfer13.TotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer13.UnitsDetails, com.tools20022.repository.msg.Transfer23.TotalUnitsNumber, com.tools20022.repository.msg.Transfer23.UnitsDetails,
-					com.tools20022.repository.msg.Transfer8.TotalUnitsNumber, com.tools20022.repository.msg.Transfer8.UnitsDetails, com.tools20022.repository.msg.Transfer11.Quantity, com.tools20022.repository.msg.Transfer11.UnitsDetails,
-					com.tools20022.repository.msg.Transfer19.Quantity, com.tools20022.repository.msg.Transfer19.UnitsDetails, com.tools20022.repository.msg.IntraPositionDetails2.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails2.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails8.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails8.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails12.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails12.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails13.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails13.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails22.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails22.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails26.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails26.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails27.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails27.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails29.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails29.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails1.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails1.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails2.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails2.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails5.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails5.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails6.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails6.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails7.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails7.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails8.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails8.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails9.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails9.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails10.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails10.PreviouslySettledQuantity, com.tools20022.repository.msg.SecurityMovement1.SecuritiesQuantity,
-					com.tools20022.repository.msg.FailedMovement1.SecuritiesQuantity, com.tools20022.repository.msg.IntraPositionDetails1.SettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails11.SettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails4.SettledQuantity, com.tools20022.repository.msg.IntraPositionDetails9.SettledQuantity, com.tools20022.repository.msg.SecuritiesTradeDetails7.QuantityDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails19.QuantityDetails, com.tools20022.repository.msg.IntraPositionDetails7.SettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails16.SettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails21.SettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails25.SettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails5.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails15.SettledQuantity, com.tools20022.repository.msg.IntraPositionDetails19.SettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails23.SettlementQuantity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails14.QuantityDetails, com.tools20022.repository.msg.SecuritiesTradeDetails20.QuantityDetails, com.tools20022.repository.msg.SecuritiesTradeDetails24.QuantityDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails30.QuantityDetails, com.tools20022.repository.msg.BuyIn3.CoveredQuantity, com.tools20022.repository.msg.SettlementObligation1.Quantity,
-					com.tools20022.repository.msg.SettlementObligation6.Quantity, com.tools20022.repository.msg.SettlementObligation3.Quantity, com.tools20022.repository.msg.SettlementObligation2.Quantity,
-					com.tools20022.repository.msg.SettlementObligation5.Quantity, com.tools20022.repository.msg.SettlementObligation4.Quantity, com.tools20022.repository.msg.IntraPositionMovementDetails3.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails3.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails4.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails4.PreviouslySettledQuantity, com.tools20022.repository.msg.TransferOut4.ProductTransfer,
-					com.tools20022.repository.msg.IntraPositionQueryCriteria1.SettlementQuantity, com.tools20022.repository.msg.IntraPositionQueryCriteria1.SettledQuantity, com.tools20022.repository.msg.IntraPosition4.SettlementQuantity,
-					com.tools20022.repository.msg.Transfer27.Quantity, com.tools20022.repository.msg.Transfer27.UnitsDetails, com.tools20022.repository.msg.Transfer28.TotalUnitsNumber, com.tools20022.repository.msg.Transfer28.UnitsDetails,
-					com.tools20022.repository.msg.Transfer29.TotalUnitsNumber, com.tools20022.repository.msg.Transfer29.UnitsDetails, com.tools20022.repository.msg.SettlementObligation7.Quantity,
-					com.tools20022.repository.msg.SettlementObligation8.Quantity, com.tools20022.repository.msg.IntraPositionDetails31.SettlementQuantity, com.tools20022.repository.msg.SecuritiesTradeDetails48.QuantityDetails,
-					com.tools20022.repository.msg.IntraPositionDetails33.SettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails34.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails34.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails11.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails11.PreviouslySettledQuantity, com.tools20022.repository.msg.Transfer31.TotalUnitsNumber, com.tools20022.repository.msg.Transfer31.UnitsDetails,
-					com.tools20022.repository.msg.Transfer30.Quantity, com.tools20022.repository.msg.Transfer30.UnitsDetails, com.tools20022.repository.msg.Transfer32.TotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer33.TotalUnitsNumber, com.tools20022.repository.msg.Transfer33.UnitsDetails, com.tools20022.repository.msg.SecuritiesTradeDetails57.QuantityDetails,
-					com.tools20022.repository.msg.IntraPositionDetails35.SettledQuantity, com.tools20022.repository.msg.IntraPositionDetails35.PreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails36.SettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails38.SettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails12.SettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails12.PreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails41.SettledQuantity, com.tools20022.repository.msg.IntraPositionDetails41.PreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails39.SettlementQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails13.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails13.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails43.SettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails43.PreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails42.SettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails14.SettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails14.PreviouslySettledQuantity);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut3.mmProductTransfer, com.tools20022.repository.msg.Unit2.mmTotalNumber, com.tools20022.repository.msg.PEPISATransfer2.mmAssets,
+					com.tools20022.repository.msg.Transfer4.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer4.mmUnitsDetails, com.tools20022.repository.msg.Transfer7.mmTotalUnitsNumber,
+					com.tools20022.repository.msg.Transfer7.mmUnitsDetails, com.tools20022.repository.msg.Transfer17.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer17.mmUnitsDetails,
+					com.tools20022.repository.msg.Transfer2.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer2.mmUnitsDetails, com.tools20022.repository.msg.Transfer10.mmTotalUnitsNumber,
+					com.tools20022.repository.msg.Transfer10.mmUnitsDetails, com.tools20022.repository.msg.Transfer14.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer14.mmUnitsDetails,
+					com.tools20022.repository.msg.Transfer24.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer24.mmUnitsDetails, com.tools20022.repository.msg.Transfer25.mmTotalUnitsNumber,
+					com.tools20022.repository.msg.Transfer25.mmUnitsDetails, com.tools20022.repository.msg.Transfer3.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer6.mmTotalUnitsNumber,
+					com.tools20022.repository.msg.Transfer16.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer1.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer1.mmUnitsDetails,
+					com.tools20022.repository.msg.Transfer9.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer9.mmUnitsDetails, com.tools20022.repository.choice.Quantity13Choice.mmTotalUnitsNumber,
+					com.tools20022.repository.msg.Transfer12.mmQuantity, com.tools20022.repository.msg.Transfer12.mmUnitsDetails, com.tools20022.repository.msg.Transfer20.mmQuantity, com.tools20022.repository.msg.Transfer20.mmUnitsDetails,
+					com.tools20022.repository.msg.Transfer22.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer18.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer18.mmUnitsDetails,
+					com.tools20022.repository.msg.Transfer26.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer26.mmUnitsDetails, com.tools20022.repository.msg.Transfer5.mmTotalUnitsNumber,
+					com.tools20022.repository.msg.Transfer15.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer21.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer13.mmTotalUnitsNumber,
+					com.tools20022.repository.msg.Transfer13.mmUnitsDetails, com.tools20022.repository.msg.Transfer23.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer23.mmUnitsDetails,
+					com.tools20022.repository.msg.Transfer8.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer8.mmUnitsDetails, com.tools20022.repository.msg.Transfer11.mmQuantity,
+					com.tools20022.repository.msg.Transfer11.mmUnitsDetails, com.tools20022.repository.msg.Transfer19.mmQuantity, com.tools20022.repository.msg.Transfer19.mmUnitsDetails,
+					com.tools20022.repository.msg.IntraPositionDetails2.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails2.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails8.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails8.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails12.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails12.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails13.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails13.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails22.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails22.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails26.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails26.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails27.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails27.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails29.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails29.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails1.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails1.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails2.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails2.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails5.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails5.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails6.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails6.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails7.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails7.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails8.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails8.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails9.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails9.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails10.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails10.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.SecurityMovement1.mmSecuritiesQuantity, com.tools20022.repository.msg.FailedMovement1.mmSecuritiesQuantity, com.tools20022.repository.msg.IntraPositionDetails1.mmSettlementQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails11.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails4.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails9.mmSettledQuantity,
+					com.tools20022.repository.msg.SecuritiesTradeDetails7.mmQuantityDetails, com.tools20022.repository.msg.SecuritiesTradeDetails19.mmQuantityDetails,
+					com.tools20022.repository.msg.IntraPositionDetails7.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails16.mmSettlementQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails21.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails25.mmSettlementQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails5.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails15.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails19.mmSettlementQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails23.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesTradeDetails14.mmQuantityDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails20.mmQuantityDetails, com.tools20022.repository.msg.SecuritiesTradeDetails24.mmQuantityDetails,
+					com.tools20022.repository.msg.SecuritiesTradeDetails30.mmQuantityDetails, com.tools20022.repository.msg.BuyIn3.mmCoveredQuantity, com.tools20022.repository.msg.SettlementObligation1.mmQuantity,
+					com.tools20022.repository.msg.SettlementObligation6.mmQuantity, com.tools20022.repository.msg.SettlementObligation3.mmQuantity, com.tools20022.repository.msg.SettlementObligation2.mmQuantity,
+					com.tools20022.repository.msg.SettlementObligation5.mmQuantity, com.tools20022.repository.msg.SettlementObligation4.mmQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails3.mmSettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails3.mmPreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails4.mmSettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails4.mmPreviouslySettledQuantity, com.tools20022.repository.msg.TransferOut4.mmProductTransfer,
+					com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmSettledQuantity,
+					com.tools20022.repository.msg.IntraPosition4.mmSettlementQuantity, com.tools20022.repository.msg.Transfer27.mmQuantity, com.tools20022.repository.msg.Transfer27.mmUnitsDetails,
+					com.tools20022.repository.msg.Transfer28.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer28.mmUnitsDetails, com.tools20022.repository.msg.Transfer29.mmTotalUnitsNumber,
+					com.tools20022.repository.msg.Transfer29.mmUnitsDetails, com.tools20022.repository.msg.SettlementObligation7.mmQuantity, com.tools20022.repository.msg.SettlementObligation8.mmQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails31.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesTradeDetails48.mmQuantityDetails,
+					com.tools20022.repository.msg.IntraPositionDetails33.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails34.mmSettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails34.mmPreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmSettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails11.mmPreviouslySettledQuantity, com.tools20022.repository.msg.Transfer31.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer31.mmUnitsDetails,
+					com.tools20022.repository.msg.Transfer30.mmQuantity, com.tools20022.repository.msg.Transfer30.mmUnitsDetails, com.tools20022.repository.msg.Transfer32.mmTotalUnitsNumber,
+					com.tools20022.repository.msg.Transfer33.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer33.mmUnitsDetails, com.tools20022.repository.msg.SecuritiesTradeDetails57.mmQuantityDetails,
+					com.tools20022.repository.msg.IntraPositionDetails35.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails35.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails36.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails38.mmSettlementQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails12.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails12.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails41.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails41.mmPreviouslySettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails39.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails13.mmSettledQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails13.mmPreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails43.mmSettledQuantity,
+					com.tools20022.repository.msg.IntraPositionDetails43.mmPreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails42.mmSettlementQuantity,
+					com.tools20022.repository.msg.IntraPositionMovementDetails14.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails14.mmPreviouslySettledQuantity);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferredQuantity";
 			definition = "Total quantity of securities settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesQuantity.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.SecuritiesTransfer;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesAccount> account;
 	/**
 	 * Specifies the account from/to which the securities are transferred.
 	 * <p>
@@ -1056,8 +1082,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#RelatedTransfer
-	 * SecuritiesAccount.RelatedTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedTransfer
+	 * SecuritiesAccount.mmRelatedTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1065,71 +1091,73 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.SecuritiesAccount
 	 * SecuritiesAccount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransferOut3#ClientAccount
-	 * TransferOut3.ClientAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#AccountDetails
-	 * CorporateActionSecuritiesMovement2.AccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement1#AccountDetails
-	 * CorporateActionSecuritiesMovement1.AccountDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails4#SafekeepingAccount
-	 * IntraPositionDetails4.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails9#SafekeepingAccount
-	 * IntraPositionDetails9.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails5#SafekeepingAccount
-	 * IntraPositionDetails5.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails15#SafekeepingAccount
-	 * IntraPositionDetails15.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails19#SafekeepingAccount
-	 * IntraPositionDetails19.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails23#SafekeepingAccount
-	 * IntraPositionDetails23.SafekeepingAccount}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.TransferOut4#ClientAccount
-	 * TransferOut4.ClientAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovements1#SafekeepingAccount
-	 * IntraPositionMovements1.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#SafekeepingAccount
-	 * IntraPositionQueryCriteria1.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification2#SafekeepingAccount
-	 * IntraPositionModification2.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification1#SafekeepingAccount
-	 * IntraPositionModification1.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation1#SafekeepingAccount
-	 * IntraPositionCancellation1.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails31#SafekeepingAccount
-	 * IntraPositionDetails31.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails38#SafekeepingAccount
-	 * IntraPositionDetails38.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails39#SafekeepingAccount
-	 * IntraPositionDetails39.SafekeepingAccount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails42#SafekeepingAccount
-	 * IntraPositionDetails42.SafekeepingAccount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut3#mmClientAccount
+	 * TransferOut3.mmClientAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2#mmAccountDetails
+	 * CorporateActionSecuritiesMovement2.mmAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement1#mmAccountDetails
+	 * CorporateActionSecuritiesMovement1.mmAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails4#mmSafekeepingAccount
+	 * IntraPositionDetails4.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails9#mmSafekeepingAccount
+	 * IntraPositionDetails9.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails5#mmSafekeepingAccount
+	 * IntraPositionDetails5.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails15#mmSafekeepingAccount
+	 * IntraPositionDetails15.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails19#mmSafekeepingAccount
+	 * IntraPositionDetails19.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails23#mmSafekeepingAccount
+	 * IntraPositionDetails23.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut4#mmClientAccount
+	 * TransferOut4.mmClientAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovements1#mmSafekeepingAccount
+	 * IntraPositionMovements1.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#mmSafekeepingAccount
+	 * IntraPositionQueryCriteria1.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification2#mmSafekeepingAccount
+	 * IntraPositionModification2.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification1#mmSafekeepingAccount
+	 * IntraPositionModification1.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation1#mmSafekeepingAccount
+	 * IntraPositionCancellation1.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails31#mmSafekeepingAccount
+	 * IntraPositionDetails31.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails38#mmSafekeepingAccount
+	 * IntraPositionDetails38.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails39#mmSafekeepingAccount
+	 * IntraPositionDetails39.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails42#mmSafekeepingAccount
+	 * IntraPositionDetails42.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1142,27 +1170,29 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * "Specifies the account from/to which the securities are transferred."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Account = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut3.ClientAccount, com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.AccountDetails,
-					com.tools20022.repository.msg.CorporateActionSecuritiesMovement1.AccountDetails, com.tools20022.repository.msg.IntraPositionDetails4.SafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionDetails9.SafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails5.SafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails15.SafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionDetails19.SafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails23.SafekeepingAccount, com.tools20022.repository.msg.TransferOut4.ClientAccount,
-					com.tools20022.repository.msg.IntraPositionMovements1.SafekeepingAccount, com.tools20022.repository.msg.IntraPositionQueryCriteria1.SafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionModification2.SafekeepingAccount, com.tools20022.repository.msg.IntraPositionModification1.SafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionCancellation1.SafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails31.SafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionDetails38.SafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails39.SafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails42.SafekeepingAccount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut3.mmClientAccount, com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmAccountDetails,
+					com.tools20022.repository.msg.CorporateActionSecuritiesMovement1.mmAccountDetails, com.tools20022.repository.msg.IntraPositionDetails4.mmSafekeepingAccount,
+					com.tools20022.repository.msg.IntraPositionDetails9.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails5.mmSafekeepingAccount,
+					com.tools20022.repository.msg.IntraPositionDetails15.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails19.mmSafekeepingAccount,
+					com.tools20022.repository.msg.IntraPositionDetails23.mmSafekeepingAccount, com.tools20022.repository.msg.TransferOut4.mmClientAccount, com.tools20022.repository.msg.IntraPositionMovements1.mmSafekeepingAccount,
+					com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionModification2.mmSafekeepingAccount,
+					com.tools20022.repository.msg.IntraPositionModification1.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionCancellation1.mmSafekeepingAccount,
+					com.tools20022.repository.msg.IntraPositionDetails31.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails38.mmSafekeepingAccount,
+					com.tools20022.repository.msg.IntraPositionDetails39.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails42.mmSafekeepingAccount);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Specifies the account from/to which the securities are transferred.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesAccount.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.RelatedTransfer;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmRelatedTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 		}
 	};
+	protected TransferTypeCode transferType;
 	/**
 	 * Specifies whether the financial instrument is transferred as an asset or
 	 * as cash.
@@ -1174,55 +1204,55 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferTypeCode
 	 * TransferTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument11#TransferType
-	 * FinancialInstrument11.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument25#TransferType
-	 * FinancialInstrument25.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument32#TransferType
-	 * FinancialInstrument32.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument24#TransferType
-	 * FinancialInstrument24.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument33#TransferType
-	 * FinancialInstrument33.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument23#TransferType
-	 * FinancialInstrument23.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument31#TransferType
-	 * FinancialInstrument31.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument35#TransferType
-	 * FinancialInstrument35.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument34#TransferType
-	 * FinancialInstrument34.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument40#TransferType
-	 * FinancialInstrument40.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#TransferType
-	 * FinancialInstrument39.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#TransferType
-	 * FinancialInstrument48.TransferType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#TransferType
-	 * FinancialInstrument46.TransferType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument11#mmTransferType
+	 * FinancialInstrument11.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument25#mmTransferType
+	 * FinancialInstrument25.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument32#mmTransferType
+	 * FinancialInstrument32.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument24#mmTransferType
+	 * FinancialInstrument24.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument33#mmTransferType
+	 * FinancialInstrument33.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument23#mmTransferType
+	 * FinancialInstrument23.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument31#mmTransferType
+	 * FinancialInstrument31.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument35#mmTransferType
+	 * FinancialInstrument35.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument34#mmTransferType
+	 * FinancialInstrument34.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument40#mmTransferType
+	 * FinancialInstrument40.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument39#mmTransferType
+	 * FinancialInstrument39.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument48#mmTransferType
+	 * FinancialInstrument48.mmTransferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmTransferType
+	 * FinancialInstrument46.mmTransferType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1236,23 +1266,24 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransferType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransferType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument11.TransferType, com.tools20022.repository.msg.FinancialInstrument25.TransferType,
-					com.tools20022.repository.msg.FinancialInstrument32.TransferType, com.tools20022.repository.msg.FinancialInstrument24.TransferType, com.tools20022.repository.msg.FinancialInstrument33.TransferType,
-					com.tools20022.repository.msg.FinancialInstrument23.TransferType, com.tools20022.repository.msg.FinancialInstrument31.TransferType, com.tools20022.repository.msg.FinancialInstrument35.TransferType,
-					com.tools20022.repository.msg.FinancialInstrument34.TransferType, com.tools20022.repository.msg.FinancialInstrument40.TransferType, com.tools20022.repository.msg.FinancialInstrument39.TransferType,
-					com.tools20022.repository.msg.FinancialInstrument48.TransferType, com.tools20022.repository.msg.FinancialInstrument46.TransferType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument11.mmTransferType, com.tools20022.repository.msg.FinancialInstrument25.mmTransferType,
+					com.tools20022.repository.msg.FinancialInstrument32.mmTransferType, com.tools20022.repository.msg.FinancialInstrument24.mmTransferType, com.tools20022.repository.msg.FinancialInstrument33.mmTransferType,
+					com.tools20022.repository.msg.FinancialInstrument23.mmTransferType, com.tools20022.repository.msg.FinancialInstrument31.mmTransferType, com.tools20022.repository.msg.FinancialInstrument35.mmTransferType,
+					com.tools20022.repository.msg.FinancialInstrument34.mmTransferType, com.tools20022.repository.msg.FinancialInstrument40.mmTransferType, com.tools20022.repository.msg.FinancialInstrument39.mmTransferType,
+					com.tools20022.repository.msg.FinancialInstrument48.mmTransferType, com.tools20022.repository.msg.FinancialInstrument46.mmTransferType);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferType";
 			definition = "Specifies whether the financial instrument is transferred as an asset or as cash.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransferTypeCode.mmObject();
 		}
 	};
+	protected SecuritiesSettlement relatedSettlement;
 	/**
 	 * Settlement process which is the source of the transfer operation.
 	 * <p>
@@ -1261,8 +1292,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#TransferOperation
-	 * SecuritiesSettlement.TransferOperation}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTransferOperation
+	 * SecuritiesSettlement.mmTransferOperation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1271,154 +1302,154 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
 	 * SecuritiesSettlement}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn1#SettlementDetails
-	 * TransferIn1.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn4#SettlementDetails
-	 * TransferIn4.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn6#SettlementDetails
-	 * TransferIn6.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut1#SettlementDetails
-	 * TransferOut1.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut6#SettlementDetails
-	 * TransferOut6.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut8#SettlementDetails
-	 * TransferOut8.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut10#SettlementDetails
-	 * TransferOut10.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reversal1Choice#TransferOutConfirmationDetails
-	 * Reversal1Choice.TransferOutConfirmationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn8#SettlementDetails
-	 * TransferIn8.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reversal2Choice#TransferInConfirmationDetails
-	 * Reversal2Choice.TransferInConfirmationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn2#SettlementDetails
-	 * TransferIn2.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn3#SettlementDetails
-	 * TransferIn3.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn5#SettlementDetails
-	 * TransferIn5.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut2#SettlementDetails
-	 * TransferOut2.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut5#SettlementDetails
-	 * TransferOut5.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut7#SettlementDetails
-	 * TransferOut7.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut9#SettlementDetails
-	 * TransferOut9.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn7#SettlementDetails
-	 * TransferIn7.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder2#SettlementAndCustodyDetails
-	 * SwitchRedemptionLegOrder2.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder2#SettlementAndCustodyDetails
-	 * SwitchSubscriptionLegOrder2.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder3#SettlementAndCustodyDetails
-	 * SwitchRedemptionLegOrder3.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder3#SettlementAndCustodyDetails
-	 * SwitchSubscriptionLegOrder3.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution2#SettlementAndCustodyDetails
-	 * SwitchSubscriptionLegExecution2.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution3#SettlementAndCustodyDetails
-	 * SwitchSubscriptionLegExecution3.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification2#RequestDetails
-	 * IntraPositionModification2.RequestDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reversal3Choice#TransferOutConfirmationDetails
-	 * Reversal3Choice.TransferOutConfirmationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reversal4Choice#TransferInConfirmationDetails
-	 * Reversal4Choice.TransferInConfirmationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn10#SettlementDetails
-	 * TransferIn10.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn9#SettlementDetails
-	 * TransferIn9.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut11#SettlementDetails
-	 * TransferOut11.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut12#SettlementDetails
-	 * TransferOut12.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reversal6Choice#TransferInConfirmationDetails
-	 * Reversal6Choice.TransferInConfirmationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reversal5Choice#TransferOutConfirmationDetails
-	 * Reversal5Choice.TransferOutConfirmationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn13#SettlementDetails
-	 * TransferIn13.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut14#SettlementDetails
-	 * TransferOut14.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn12#SettlementDetails
-	 * TransferIn12.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut15#SettlementDetails
-	 * TransferOut15.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reversal7Choice#TransferInConfirmationDetails
-	 * Reversal7Choice.TransferInConfirmationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.Reversal8Choice#TransferOutConfirmationDetails
-	 * Reversal8Choice.TransferOutConfirmationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut17#SettlementDetails
-	 * TransferOut17.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn14#SettlementDetails
-	 * TransferIn14.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferIn15#SettlementDetails
-	 * TransferIn15.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferOut16#SettlementDetails
-	 * TransferOut16.SettlementDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder6#SettlementAndCustodyDetails
-	 * SwitchSubscriptionLegOrder6.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder6#SettlementAndCustodyDetails
-	 * SwitchRedemptionLegOrder6.SettlementAndCustodyDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution4#SettlementAndCustodyDetails
-	 * SwitchSubscriptionLegExecution4.SettlementAndCustodyDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn1#mmSettlementDetails
+	 * TransferIn1.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn4#mmSettlementDetails
+	 * TransferIn4.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn6#mmSettlementDetails
+	 * TransferIn6.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut1#mmSettlementDetails
+	 * TransferOut1.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut6#mmSettlementDetails
+	 * TransferOut6.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut8#mmSettlementDetails
+	 * TransferOut8.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut10#mmSettlementDetails
+	 * TransferOut10.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reversal1Choice#mmTransferOutConfirmationDetails
+	 * Reversal1Choice.mmTransferOutConfirmationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn8#mmSettlementDetails
+	 * TransferIn8.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reversal2Choice#mmTransferInConfirmationDetails
+	 * Reversal2Choice.mmTransferInConfirmationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn2#mmSettlementDetails
+	 * TransferIn2.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn3#mmSettlementDetails
+	 * TransferIn3.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn5#mmSettlementDetails
+	 * TransferIn5.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut2#mmSettlementDetails
+	 * TransferOut2.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut5#mmSettlementDetails
+	 * TransferOut5.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut7#mmSettlementDetails
+	 * TransferOut7.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut9#mmSettlementDetails
+	 * TransferOut9.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn7#mmSettlementDetails
+	 * TransferIn7.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder2#mmSettlementAndCustodyDetails
+	 * SwitchRedemptionLegOrder2.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder2#mmSettlementAndCustodyDetails
+	 * SwitchSubscriptionLegOrder2.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder3#mmSettlementAndCustodyDetails
+	 * SwitchRedemptionLegOrder3.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder3#mmSettlementAndCustodyDetails
+	 * SwitchSubscriptionLegOrder3.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution2#mmSettlementAndCustodyDetails
+	 * SwitchSubscriptionLegExecution2.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution3#mmSettlementAndCustodyDetails
+	 * SwitchSubscriptionLegExecution3.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification2#mmRequestDetails
+	 * IntraPositionModification2.mmRequestDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reversal3Choice#mmTransferOutConfirmationDetails
+	 * Reversal3Choice.mmTransferOutConfirmationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reversal4Choice#mmTransferInConfirmationDetails
+	 * Reversal4Choice.mmTransferInConfirmationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn10#mmSettlementDetails
+	 * TransferIn10.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn9#mmSettlementDetails
+	 * TransferIn9.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut11#mmSettlementDetails
+	 * TransferOut11.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut12#mmSettlementDetails
+	 * TransferOut12.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reversal6Choice#mmTransferInConfirmationDetails
+	 * Reversal6Choice.mmTransferInConfirmationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reversal5Choice#mmTransferOutConfirmationDetails
+	 * Reversal5Choice.mmTransferOutConfirmationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn13#mmSettlementDetails
+	 * TransferIn13.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut14#mmSettlementDetails
+	 * TransferOut14.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn12#mmSettlementDetails
+	 * TransferIn12.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut15#mmSettlementDetails
+	 * TransferOut15.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reversal7Choice#mmTransferInConfirmationDetails
+	 * Reversal7Choice.mmTransferInConfirmationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reversal8Choice#mmTransferOutConfirmationDetails
+	 * Reversal8Choice.mmTransferOutConfirmationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut17#mmSettlementDetails
+	 * TransferOut17.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn14#mmSettlementDetails
+	 * TransferIn14.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferIn15#mmSettlementDetails
+	 * TransferIn15.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferOut16#mmSettlementDetails
+	 * TransferOut16.mmSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder6#mmSettlementAndCustodyDetails
+	 * SwitchSubscriptionLegOrder6.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder6#mmSettlementAndCustodyDetails
+	 * SwitchRedemptionLegOrder6.mmSettlementAndCustodyDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution4#mmSettlementAndCustodyDetails
+	 * SwitchSubscriptionLegExecution4.mmSettlementAndCustodyDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1431,37 +1462,38 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * "Settlement process which is the source of the transfer operation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedSettlement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn1.SettlementDetails, com.tools20022.repository.msg.TransferIn4.SettlementDetails, com.tools20022.repository.msg.TransferIn6.SettlementDetails,
-					com.tools20022.repository.msg.TransferOut1.SettlementDetails, com.tools20022.repository.msg.TransferOut6.SettlementDetails, com.tools20022.repository.msg.TransferOut8.SettlementDetails,
-					com.tools20022.repository.msg.TransferOut10.SettlementDetails, com.tools20022.repository.choice.Reversal1Choice.TransferOutConfirmationDetails, com.tools20022.repository.msg.TransferIn8.SettlementDetails,
-					com.tools20022.repository.choice.Reversal2Choice.TransferInConfirmationDetails, com.tools20022.repository.msg.TransferIn2.SettlementDetails, com.tools20022.repository.msg.TransferIn3.SettlementDetails,
-					com.tools20022.repository.msg.TransferIn5.SettlementDetails, com.tools20022.repository.msg.TransferOut2.SettlementDetails, com.tools20022.repository.msg.TransferOut5.SettlementDetails,
-					com.tools20022.repository.msg.TransferOut7.SettlementDetails, com.tools20022.repository.msg.TransferOut9.SettlementDetails, com.tools20022.repository.msg.TransferIn7.SettlementDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder2.SettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder3.SettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder3.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.SettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.IntraPositionModification2.RequestDetails, com.tools20022.repository.choice.Reversal3Choice.TransferOutConfirmationDetails,
-					com.tools20022.repository.choice.Reversal4Choice.TransferInConfirmationDetails, com.tools20022.repository.msg.TransferIn10.SettlementDetails, com.tools20022.repository.msg.TransferIn9.SettlementDetails,
-					com.tools20022.repository.msg.TransferOut11.SettlementDetails, com.tools20022.repository.msg.TransferOut12.SettlementDetails, com.tools20022.repository.choice.Reversal6Choice.TransferInConfirmationDetails,
-					com.tools20022.repository.choice.Reversal5Choice.TransferOutConfirmationDetails, com.tools20022.repository.msg.TransferIn13.SettlementDetails, com.tools20022.repository.msg.TransferOut14.SettlementDetails,
-					com.tools20022.repository.msg.TransferIn12.SettlementDetails, com.tools20022.repository.msg.TransferOut15.SettlementDetails, com.tools20022.repository.choice.Reversal7Choice.TransferInConfirmationDetails,
-					com.tools20022.repository.choice.Reversal8Choice.TransferOutConfirmationDetails, com.tools20022.repository.msg.TransferOut17.SettlementDetails, com.tools20022.repository.msg.TransferIn14.SettlementDetails,
-					com.tools20022.repository.msg.TransferIn15.SettlementDetails, com.tools20022.repository.msg.TransferOut16.SettlementDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.SettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder6.SettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.SettlementAndCustodyDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn1.mmSettlementDetails, com.tools20022.repository.msg.TransferIn4.mmSettlementDetails, com.tools20022.repository.msg.TransferIn6.mmSettlementDetails,
+					com.tools20022.repository.msg.TransferOut1.mmSettlementDetails, com.tools20022.repository.msg.TransferOut6.mmSettlementDetails, com.tools20022.repository.msg.TransferOut8.mmSettlementDetails,
+					com.tools20022.repository.msg.TransferOut10.mmSettlementDetails, com.tools20022.repository.choice.Reversal1Choice.mmTransferOutConfirmationDetails, com.tools20022.repository.msg.TransferIn8.mmSettlementDetails,
+					com.tools20022.repository.choice.Reversal2Choice.mmTransferInConfirmationDetails, com.tools20022.repository.msg.TransferIn2.mmSettlementDetails, com.tools20022.repository.msg.TransferIn3.mmSettlementDetails,
+					com.tools20022.repository.msg.TransferIn5.mmSettlementDetails, com.tools20022.repository.msg.TransferOut2.mmSettlementDetails, com.tools20022.repository.msg.TransferOut5.mmSettlementDetails,
+					com.tools20022.repository.msg.TransferOut7.mmSettlementDetails, com.tools20022.repository.msg.TransferOut9.mmSettlementDetails, com.tools20022.repository.msg.TransferIn7.mmSettlementDetails,
+					com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SwitchRedemptionLegOrder3.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder3.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.IntraPositionModification2.mmRequestDetails, com.tools20022.repository.choice.Reversal3Choice.mmTransferOutConfirmationDetails,
+					com.tools20022.repository.choice.Reversal4Choice.mmTransferInConfirmationDetails, com.tools20022.repository.msg.TransferIn10.mmSettlementDetails, com.tools20022.repository.msg.TransferIn9.mmSettlementDetails,
+					com.tools20022.repository.msg.TransferOut11.mmSettlementDetails, com.tools20022.repository.msg.TransferOut12.mmSettlementDetails, com.tools20022.repository.choice.Reversal6Choice.mmTransferInConfirmationDetails,
+					com.tools20022.repository.choice.Reversal5Choice.mmTransferOutConfirmationDetails, com.tools20022.repository.msg.TransferIn13.mmSettlementDetails, com.tools20022.repository.msg.TransferOut14.mmSettlementDetails,
+					com.tools20022.repository.msg.TransferIn12.mmSettlementDetails, com.tools20022.repository.msg.TransferOut15.mmSettlementDetails, com.tools20022.repository.choice.Reversal7Choice.mmTransferInConfirmationDetails,
+					com.tools20022.repository.choice.Reversal8Choice.mmTransferOutConfirmationDetails, com.tools20022.repository.msg.TransferOut17.mmSettlementDetails, com.tools20022.repository.msg.TransferIn14.mmSettlementDetails,
+					com.tools20022.repository.msg.TransferIn15.mmSettlementDetails, com.tools20022.repository.msg.TransferOut16.mmSettlementDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.mmSettlementAndCustodyDetails,
+					com.tools20022.repository.msg.SwitchRedemptionLegOrder6.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmSettlementAndCustodyDetails);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedSettlement";
 			definition = "Settlement process which is the source of the transfer operation.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesSettlement.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.TransferOperation;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmTransferOperation;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
+	protected YesNoIndicator ownAccountTransferIndicator;
 	/**
 	 * Indicates whether the transfer results in a change of beneficial owner.
 	 * <p>
@@ -1472,115 +1504,115 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer4#OwnAccountTransferIndicator
-	 * Transfer4.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer7#OwnAccountTransferIndicator
-	 * Transfer7.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer17#OwnAccountTransferIndicator
-	 * Transfer17.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer2#OwnAccountTransferIndicator
-	 * Transfer2.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer10#OwnAccountTransferIndicator
-	 * Transfer10.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer14#OwnAccountTransferIndicator
-	 * Transfer14.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer24#OwnAccountTransferIndicator
-	 * Transfer24.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer25#OwnAccountTransferIndicator
-	 * Transfer25.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer3#OwnAccountTransferIndicator
-	 * Transfer3.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer6#OwnAccountTransferIndicator
-	 * Transfer6.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer16#OwnAccountTransferIndicator
-	 * Transfer16.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer1#OwnAccountTransferIndicator
-	 * Transfer1.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer9#OwnAccountTransferIndicator
-	 * Transfer9.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer12#OwnAccountTransferIndicator
-	 * Transfer12.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer20#OwnAccountTransferIndicator
-	 * Transfer20.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer22#OwnAccountTransferIndicator
-	 * Transfer22.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer18#OwnAccountTransferIndicator
-	 * Transfer18.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer26#OwnAccountTransferIndicator
-	 * Transfer26.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer5#OwnAccountTransferIndicator
-	 * Transfer5.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer15#OwnAccountTransferIndicator
-	 * Transfer15.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer21#OwnAccountTransferIndicator
-	 * Transfer21.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer13#OwnAccountTransferIndicator
-	 * Transfer13.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer23#OwnAccountTransferIndicator
-	 * Transfer23.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer8#OwnAccountTransferIndicator
-	 * Transfer8.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer11#OwnAccountTransferIndicator
-	 * Transfer11.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer19#OwnAccountTransferIndicator
-	 * Transfer19.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer27#OwnAccountTransferIndicator
-	 * Transfer27.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer28#OwnAccountTransferIndicator
-	 * Transfer28.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer29#OwnAccountTransferIndicator
-	 * Transfer29.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer31#OwnAccountTransferIndicator
-	 * Transfer31.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer30#OwnAccountTransferIndicator
-	 * Transfer30.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer32#OwnAccountTransferIndicator
-	 * Transfer32.OwnAccountTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Transfer33#OwnAccountTransferIndicator
-	 * Transfer33.OwnAccountTransferIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer4#mmOwnAccountTransferIndicator
+	 * Transfer4.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer7#mmOwnAccountTransferIndicator
+	 * Transfer7.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer17#mmOwnAccountTransferIndicator
+	 * Transfer17.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer2#mmOwnAccountTransferIndicator
+	 * Transfer2.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer10#mmOwnAccountTransferIndicator
+	 * Transfer10.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer14#mmOwnAccountTransferIndicator
+	 * Transfer14.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer24#mmOwnAccountTransferIndicator
+	 * Transfer24.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer25#mmOwnAccountTransferIndicator
+	 * Transfer25.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer3#mmOwnAccountTransferIndicator
+	 * Transfer3.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer6#mmOwnAccountTransferIndicator
+	 * Transfer6.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer16#mmOwnAccountTransferIndicator
+	 * Transfer16.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer1#mmOwnAccountTransferIndicator
+	 * Transfer1.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer9#mmOwnAccountTransferIndicator
+	 * Transfer9.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer12#mmOwnAccountTransferIndicator
+	 * Transfer12.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer20#mmOwnAccountTransferIndicator
+	 * Transfer20.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer22#mmOwnAccountTransferIndicator
+	 * Transfer22.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer18#mmOwnAccountTransferIndicator
+	 * Transfer18.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer26#mmOwnAccountTransferIndicator
+	 * Transfer26.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer5#mmOwnAccountTransferIndicator
+	 * Transfer5.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer15#mmOwnAccountTransferIndicator
+	 * Transfer15.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer21#mmOwnAccountTransferIndicator
+	 * Transfer21.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer13#mmOwnAccountTransferIndicator
+	 * Transfer13.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer23#mmOwnAccountTransferIndicator
+	 * Transfer23.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer8#mmOwnAccountTransferIndicator
+	 * Transfer8.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer11#mmOwnAccountTransferIndicator
+	 * Transfer11.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer19#mmOwnAccountTransferIndicator
+	 * Transfer19.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmOwnAccountTransferIndicator
+	 * Transfer27.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer28#mmOwnAccountTransferIndicator
+	 * Transfer28.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer29#mmOwnAccountTransferIndicator
+	 * Transfer29.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmOwnAccountTransferIndicator
+	 * Transfer31.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer30#mmOwnAccountTransferIndicator
+	 * Transfer30.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer32#mmOwnAccountTransferIndicator
+	 * Transfer32.mmOwnAccountTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmOwnAccountTransferIndicator
+	 * Transfer33.mmOwnAccountTransferIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1594,30 +1626,31 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OwnAccountTransferIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOwnAccountTransferIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer4.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer7.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer17.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer2.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer10.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer14.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer24.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer25.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer3.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer6.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer16.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer1.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer9.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer12.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer20.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer22.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer18.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer26.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer5.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer15.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer21.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer13.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer23.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer8.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer11.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer19.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer27.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer28.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer29.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer31.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer30.OwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer32.OwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer33.OwnAccountTransferIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer4.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer7.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer17.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer2.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer10.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer14.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer24.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer25.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer3.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer6.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer16.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer1.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer9.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer12.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer20.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer22.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer18.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer26.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer5.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer15.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer21.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer13.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer23.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer8.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer11.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer19.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer27.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer28.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer29.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer31.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer30.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer32.mmOwnAccountTransferIndicator,
+					com.tools20022.repository.msg.Transfer33.mmOwnAccountTransferIndicator);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OwnAccountTransferIndicator";
 			definition = "Indicates whether the transfer results in a change of beneficial owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected PhysicalDelivery physicalDelivery;
 	/**
 	 * Information related to physical delivery of the securities.
 	 * <p>
@@ -1626,8 +1659,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#RelatedTransfer
-	 * PhysicalDelivery.RelatedTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmRelatedTransfer
+	 * PhysicalDelivery.mmRelatedTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -1635,229 +1668,229 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PhysicalDelivery
 	 * PhysicalDelivery}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation2#PhysicalTransferIndicator
-	 * DeliverInformation2.PhysicalTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation2#PhysicalTransferDetails
-	 * DeliverInformation2.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation4#PhysicalTransferIndicator
-	 * DeliverInformation4.PhysicalTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation4#PhysicalTransferDetails
-	 * DeliverInformation4.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation7#PhysicalTransferDetails
-	 * DeliverInformation7.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation2#PhysicalTransferIndicator
-	 * ReceiveInformation2.PhysicalTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation2#PhysicalTransferDetails
-	 * ReceiveInformation2.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation4#PhysicalTransferIndicator
-	 * ReceiveInformation4.PhysicalTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation4#PhysicalTransferDetails
-	 * ReceiveInformation4.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation8#PhysicalTransferDetails
-	 * ReceiveInformation8.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation6#PhysicalTransferDetails
-	 * ReceiveInformation6.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation11#PhysicalTransferDetails
-	 * ReceiveInformation11.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation11#PhysicalTransferDetails
-	 * DeliverInformation11.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation1#PhysicalTransferIndicator
-	 * DeliverInformation1.PhysicalTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation1#PhysicalTransferDetails
-	 * DeliverInformation1.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation3#PhysicalTransferIndicator
-	 * DeliverInformation3.PhysicalTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation3#PhysicalTransferDetails
-	 * DeliverInformation3.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation8#PhysicalTransferDetails
-	 * DeliverInformation8.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation1#PhysicalTransferIndicator
-	 * ReceiveInformation1.PhysicalTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation1#PhysicalTransferDetails
-	 * ReceiveInformation1.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation3#PhysicalTransferIndicator
-	 * ReceiveInformation3.PhysicalTransferIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation3#PhysicalTransferDetails
-	 * ReceiveInformation3.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation7#PhysicalTransferDetails
-	 * ReceiveInformation7.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation5#PhysicalTransferDetails
-	 * ReceiveInformation5.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation9#PhysicalTransferDetails
-	 * ReceiveInformation9.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation5#PhysicalTransferDetails
-	 * DeliverInformation5.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation9#PhysicalTransferDetails
-	 * DeliverInformation9.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation6#PhysicalTransferDetails
-	 * DeliverInformation6.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder3#PhysicalDeliveryDetails
-	 * RedemptionOrder3.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder5#PhysicalDeliveryDetails
-	 * RedemptionOrder5.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution3#PhysicalDeliveryDetails
-	 * RedemptionExecution3.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#PhysicalDeliveryDetails
-	 * RedemptionExecution5.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#PhysicalDeliveryDetails
-	 * RedemptionOrder7.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder4#PhysicalDeliveryDetails
-	 * RedemptionOrder4.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder6#PhysicalDeliveryDetails
-	 * RedemptionOrder6.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution4#PhysicalDeliveryDetails
-	 * RedemptionExecution4.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#PhysicalDeliveryDetails
-	 * RedemptionExecution6.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8#PhysicalDeliveryDetails
-	 * RedemptionOrder8.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution3#PhysicalDeliveryDetails
-	 * SubscriptionExecution3.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution5#PhysicalDeliveryDetails
-	 * SubscriptionExecution5.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution4#PhysicalDeliveryDetails
-	 * SubscriptionExecution4.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#PhysicalDeliveryDetails
-	 * SubscriptionExecution6.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder2#PhysicalDeliveryDetails
-	 * SwitchRedemptionLegOrder2.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder3#PhysicalDeliveryDetails
-	 * SwitchRedemptionLegOrder3.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution2#PhysicalDeliveryDetails
-	 * SwitchRedemptionLegExecution2.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution2#PhysicalDeliveryDetails
-	 * SwitchSubscriptionLegExecution2.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution3#PhysicalDeliveryDetails
-	 * SwitchRedemptionLegExecution3.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution3#PhysicalDeliveryDetails
-	 * SwitchSubscriptionLegExecution3.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#PhysicalTransferDetails
-	 * ReceiveInformation13.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation12#PhysicalTransferDetails
-	 * ReceiveInformation12.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation12#PhysicalTransferDetails
-	 * DeliverInformation12.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation13#PhysicalTransferDetails
-	 * DeliverInformation13.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation15#PhysicalTransferDetails
-	 * DeliverInformation15.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation14#PhysicalTransferDetails
-	 * DeliverInformation14.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#PhysicalTransferDetails
-	 * ReceiveInformation15.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation14#PhysicalTransferDetails
-	 * ReceiveInformation14.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation17#PhysicalTransferDetails
-	 * ReceiveInformation17.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#PhysicalTransferDetails
-	 * ReceiveInformation16.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation16#PhysicalTransferDetails
-	 * DeliverInformation16.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17#PhysicalTransferDetails
-	 * DeliverInformation17.PhysicalTransferDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#PhysicalDeliveryDetails
-	 * RedemptionOrder14.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#PhysicalDeliveryDetails
-	 * SubscriptionExecution13.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#PhysicalDeliveryDetails
-	 * SubscriptionExecution12.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder6#PhysicalDeliveryDetails
-	 * SwitchRedemptionLegOrder6.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#PhysicalDeliveryDetails
-	 * RedemptionOrder15.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#PhysicalDeliveryDetails
-	 * RedemptionExecution16.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution4#PhysicalDeliveryDetails
-	 * SwitchSubscriptionLegExecution4.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#PhysicalDeliveryDetails
-	 * RedemptionExecution15.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#PhysicalDeliveryDetails
-	 * SwitchRedemptionLegExecution4.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#DeliveryType
-	 * DerivativeInstrument5.DeliveryType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument6#DeliveryType
-	 * DerivativeInstrument6.DeliveryType}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation2#mmPhysicalTransferIndicator
+	 * DeliverInformation2.mmPhysicalTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation2#mmPhysicalTransferDetails
+	 * DeliverInformation2.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation4#mmPhysicalTransferIndicator
+	 * DeliverInformation4.mmPhysicalTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation4#mmPhysicalTransferDetails
+	 * DeliverInformation4.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation7#mmPhysicalTransferDetails
+	 * DeliverInformation7.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation2#mmPhysicalTransferIndicator
+	 * ReceiveInformation2.mmPhysicalTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation2#mmPhysicalTransferDetails
+	 * ReceiveInformation2.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation4#mmPhysicalTransferIndicator
+	 * ReceiveInformation4.mmPhysicalTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation4#mmPhysicalTransferDetails
+	 * ReceiveInformation4.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation8#mmPhysicalTransferDetails
+	 * ReceiveInformation8.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation6#mmPhysicalTransferDetails
+	 * ReceiveInformation6.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation11#mmPhysicalTransferDetails
+	 * ReceiveInformation11.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation11#mmPhysicalTransferDetails
+	 * DeliverInformation11.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation1#mmPhysicalTransferIndicator
+	 * DeliverInformation1.mmPhysicalTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation1#mmPhysicalTransferDetails
+	 * DeliverInformation1.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation3#mmPhysicalTransferIndicator
+	 * DeliverInformation3.mmPhysicalTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation3#mmPhysicalTransferDetails
+	 * DeliverInformation3.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation8#mmPhysicalTransferDetails
+	 * DeliverInformation8.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation1#mmPhysicalTransferIndicator
+	 * ReceiveInformation1.mmPhysicalTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation1#mmPhysicalTransferDetails
+	 * ReceiveInformation1.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation3#mmPhysicalTransferIndicator
+	 * ReceiveInformation3.mmPhysicalTransferIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation3#mmPhysicalTransferDetails
+	 * ReceiveInformation3.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation7#mmPhysicalTransferDetails
+	 * ReceiveInformation7.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation5#mmPhysicalTransferDetails
+	 * ReceiveInformation5.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation9#mmPhysicalTransferDetails
+	 * ReceiveInformation9.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation5#mmPhysicalTransferDetails
+	 * DeliverInformation5.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation9#mmPhysicalTransferDetails
+	 * DeliverInformation9.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation6#mmPhysicalTransferDetails
+	 * DeliverInformation6.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder3#mmPhysicalDeliveryDetails
+	 * RedemptionOrder3.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder5#mmPhysicalDeliveryDetails
+	 * RedemptionOrder5.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution3#mmPhysicalDeliveryDetails
+	 * RedemptionExecution3.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#mmPhysicalDeliveryDetails
+	 * RedemptionExecution5.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmPhysicalDeliveryDetails
+	 * RedemptionOrder7.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder4#mmPhysicalDeliveryDetails
+	 * RedemptionOrder4.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder6#mmPhysicalDeliveryDetails
+	 * RedemptionOrder6.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution4#mmPhysicalDeliveryDetails
+	 * RedemptionExecution4.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#mmPhysicalDeliveryDetails
+	 * RedemptionExecution6.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8#mmPhysicalDeliveryDetails
+	 * RedemptionOrder8.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution3#mmPhysicalDeliveryDetails
+	 * SubscriptionExecution3.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution5#mmPhysicalDeliveryDetails
+	 * SubscriptionExecution5.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution4#mmPhysicalDeliveryDetails
+	 * SubscriptionExecution4.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution6#mmPhysicalDeliveryDetails
+	 * SubscriptionExecution6.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder2#mmPhysicalDeliveryDetails
+	 * SwitchRedemptionLegOrder2.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder3#mmPhysicalDeliveryDetails
+	 * SwitchRedemptionLegOrder3.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution2#mmPhysicalDeliveryDetails
+	 * SwitchRedemptionLegExecution2.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution2#mmPhysicalDeliveryDetails
+	 * SwitchSubscriptionLegExecution2.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution3#mmPhysicalDeliveryDetails
+	 * SwitchRedemptionLegExecution3.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution3#mmPhysicalDeliveryDetails
+	 * SwitchSubscriptionLegExecution3.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmPhysicalTransferDetails
+	 * ReceiveInformation13.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation12#mmPhysicalTransferDetails
+	 * ReceiveInformation12.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation12#mmPhysicalTransferDetails
+	 * DeliverInformation12.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation13#mmPhysicalTransferDetails
+	 * DeliverInformation13.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation15#mmPhysicalTransferDetails
+	 * DeliverInformation15.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation14#mmPhysicalTransferDetails
+	 * DeliverInformation14.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmPhysicalTransferDetails
+	 * ReceiveInformation15.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation14#mmPhysicalTransferDetails
+	 * ReceiveInformation14.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation17#mmPhysicalTransferDetails
+	 * ReceiveInformation17.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmPhysicalTransferDetails
+	 * ReceiveInformation16.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation16#mmPhysicalTransferDetails
+	 * DeliverInformation16.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17#mmPhysicalTransferDetails
+	 * DeliverInformation17.mmPhysicalTransferDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#mmPhysicalDeliveryDetails
+	 * RedemptionOrder14.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmPhysicalDeliveryDetails
+	 * SubscriptionExecution13.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#mmPhysicalDeliveryDetails
+	 * SubscriptionExecution12.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder6#mmPhysicalDeliveryDetails
+	 * SwitchRedemptionLegOrder6.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmPhysicalDeliveryDetails
+	 * RedemptionOrder15.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#mmPhysicalDeliveryDetails
+	 * RedemptionExecution16.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution4#mmPhysicalDeliveryDetails
+	 * SwitchSubscriptionLegExecution4.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmPhysicalDeliveryDetails
+	 * RedemptionExecution15.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#mmPhysicalDeliveryDetails
+	 * SwitchRedemptionLegExecution4.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmDeliveryType
+	 * DerivativeInstrument5.mmDeliveryType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument6#mmDeliveryType
+	 * DerivativeInstrument6.mmDeliveryType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1870,54 +1903,57 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * "Information related to physical delivery of the securities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PhysicalDelivery = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPhysicalDelivery = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation2.PhysicalTransferIndicator, com.tools20022.repository.msg.DeliverInformation2.PhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation4.PhysicalTransferIndicator, com.tools20022.repository.msg.DeliverInformation4.PhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation7.PhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation2.PhysicalTransferIndicator,
-					com.tools20022.repository.msg.ReceiveInformation2.PhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation4.PhysicalTransferIndicator,
-					com.tools20022.repository.msg.ReceiveInformation4.PhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation8.PhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation6.PhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation11.PhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation11.PhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation1.PhysicalTransferIndicator,
-					com.tools20022.repository.msg.DeliverInformation1.PhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation3.PhysicalTransferIndicator,
-					com.tools20022.repository.msg.DeliverInformation3.PhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation8.PhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation1.PhysicalTransferIndicator, com.tools20022.repository.msg.ReceiveInformation1.PhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation3.PhysicalTransferIndicator, com.tools20022.repository.msg.ReceiveInformation3.PhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation7.PhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation5.PhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation9.PhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation5.PhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation9.PhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation6.PhysicalTransferDetails,
-					com.tools20022.repository.msg.RedemptionOrder3.PhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder5.PhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution3.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.RedemptionExecution5.PhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder7.PhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder4.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.RedemptionOrder6.PhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution4.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.RedemptionExecution6.PhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder8.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SubscriptionExecution3.PhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionExecution5.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SubscriptionExecution4.PhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionExecution6.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder2.PhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchRedemptionLegOrder3.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution2.PhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.PhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.ReceiveInformation13.PhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation12.PhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation12.PhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation13.PhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation15.PhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation14.PhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation15.PhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation14.PhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation17.PhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation16.PhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation16.PhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation17.PhysicalTransferDetails,
-					com.tools20022.repository.msg.RedemptionOrder14.PhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionExecution13.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SubscriptionExecution12.PhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchRedemptionLegOrder6.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.RedemptionOrder15.PhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution16.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.PhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution15.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.PhysicalDeliveryDetails, com.tools20022.repository.msg.DerivativeInstrument5.DeliveryType, com.tools20022.repository.msg.DerivativeInstrument6.DeliveryType);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation2.mmPhysicalTransferIndicator, com.tools20022.repository.msg.DeliverInformation2.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.DeliverInformation4.mmPhysicalTransferIndicator, com.tools20022.repository.msg.DeliverInformation4.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.DeliverInformation7.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation2.mmPhysicalTransferIndicator,
+					com.tools20022.repository.msg.ReceiveInformation2.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation4.mmPhysicalTransferIndicator,
+					com.tools20022.repository.msg.ReceiveInformation4.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation8.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.ReceiveInformation6.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation11.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.DeliverInformation11.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation1.mmPhysicalTransferIndicator,
+					com.tools20022.repository.msg.DeliverInformation1.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation3.mmPhysicalTransferIndicator,
+					com.tools20022.repository.msg.DeliverInformation3.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation8.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.ReceiveInformation1.mmPhysicalTransferIndicator, com.tools20022.repository.msg.ReceiveInformation1.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.ReceiveInformation3.mmPhysicalTransferIndicator, com.tools20022.repository.msg.ReceiveInformation3.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.ReceiveInformation7.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation5.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.ReceiveInformation9.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation5.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.DeliverInformation9.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation6.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.RedemptionOrder3.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder5.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.RedemptionExecution3.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution5.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.RedemptionOrder7.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder4.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.RedemptionOrder6.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution4.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.RedemptionExecution6.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder8.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SubscriptionExecution3.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionExecution5.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SubscriptionExecution4.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchRedemptionLegOrder3.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.ReceiveInformation13.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation12.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.DeliverInformation12.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation13.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.DeliverInformation15.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation14.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.ReceiveInformation15.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation14.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.ReceiveInformation17.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation16.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.DeliverInformation16.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation17.mmPhysicalTransferDetails,
+					com.tools20022.repository.msg.RedemptionOrder14.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionExecution13.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SubscriptionExecution12.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchRedemptionLegOrder6.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.RedemptionOrder15.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution16.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution15.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.DerivativeInstrument5.mmDeliveryType,
+					com.tools20022.repository.msg.DerivativeInstrument6.mmDeliveryType);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PhysicalDelivery";
 			definition = "Information related to physical delivery of the securities.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.RelatedTransfer;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmRelatedTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 		}
 	};
+	protected ISODateTime lateDeliveryDate;
 	/**
 	 * Date and time after the settlement date specified in the trade, used for
 	 * pool trades resulting from the original To Be Assigned (TBA) securities.
@@ -1928,238 +1964,238 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#LateDeliveryDate
-	 * SecuritiesTradeDetails25.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#LateDeliveryDate
-	 * SecuritiesTradeDetails26.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#LateDeliveryDate
-	 * SecuritiesTradeDetails27.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#LateDeliveryDate
-	 * SecuritiesTradeDetails28.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#LateDeliveryDate
-	 * SecuritiesTradeDetails1.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#LateDeliveryDate
-	 * SecuritiesTradeDetails15.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#LateDeliveryDate
-	 * TransactionDetails5.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#LateDeliveryDate
-	 * TransactionDetails9.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#LateDeliveryDate
-	 * TransactionDetails22.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#LateDeliveryDate
-	 * TransactionDetails23.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#LateDeliveryDate
-	 * TransactionDetails36.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#LateDeliveryDate
-	 * TransactionDetails47.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#LateDeliveryDate
-	 * TransactionDetails53.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#LateDeliveryDate
-	 * TransactionDetails58.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#LateDeliveryDate
-	 * TransactionDetails7.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8#LateDeliveryDate
-	 * TransactionDetails8.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#LateDeliveryDate
-	 * TransactionDetails16.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17#LateDeliveryDate
-	 * TransactionDetails17.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#LateDeliveryDate
-	 * TransactionDetails26.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25#LateDeliveryDate
-	 * TransactionDetails25.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#LateDeliveryDate
-	 * TransactionDetails27.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33#LateDeliveryDate
-	 * TransactionDetails33.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#LateDeliveryDate
-	 * TransactionDetails39.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#LateDeliveryDate
-	 * TransactionDetails50.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#LateDeliveryDate
-	 * TransactionDetails56.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#LateDeliveryDate
-	 * TransactionDetails59.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails2.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails8.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails8#LateDeliveryDate
-	 * SecuritiesTradeDetails8.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#LateDeliveryDate
-	 * SecuritiesTradeDetails4.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails6.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails10.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails17.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails18.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails9#LateDeliveryDate
-	 * SecuritiesTradeDetails9.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#LateDeliveryDate
-	 * SecuritiesTradeDetails10.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#LateDeliveryDate
-	 * TransactionDetails61.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails21.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#LateDeliveryDate
-	 * TransactionDetails62.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#LateDeliveryDate
-	 * SecuritiesTradeDetails33.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#LateDeliveryDate
-	 * SecuritiesTradeDetails34.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#LateDeliveryDate
-	 * SecuritiesTradeDetails32.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#LateDeliveryDate
-	 * SecuritiesTradeDetails44.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails22.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#LateDeliveryDate
-	 * TransactionDetails66.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#LateDeliveryDate
-	 * TransactionDetails67.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#LateDeliveryDate
-	 * SecuritiesTradeDetails46.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#LateDeliveryDate
-	 * SecuritiesTradeDetails47.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails24.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#LateDeliveryDate
-	 * TransactionDetails70.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#LateDeliveryDate
-	 * TransactionDetails69.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#LateDeliveryDate
-	 * TransactionDetails71.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails25.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#LateDeliveryDate
-	 * TransactionDetails72.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails26.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#LateDeliveryDate
-	 * TransactionDetails79.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#LateDeliveryDate
-	 * TransactionDetails75.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#LateDeliveryDate
-	 * SecuritiesTradeDetails51.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#LateDeliveryDate
-	 * SecuritiesTradeDetails52.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#LateDeliveryDate
-	 * SecuritiesTradeDetails50.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails33.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#LateDeliveryDate
-	 * SecuritiesTradeDetails63.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#LateDeliveryDate
-	 * TransactionDetails87.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#LateDeliveryDate
-	 * TransactionDetails90.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#LateDeliveryDate
-	 * SecuritiesTradeDetails65.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#LateDeliveryDate
-	 * SecuritiesTradeDetails66.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#LateDeliveryDate
-	 * SecuritiesTradeDetails67.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#LateDeliveryDate
-	 * TransactionDetails97.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails35.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#LateDeliveryDate
-	 * TransactionDetails96.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#LateDeliveryDate
-	 * SecuritiesTradeDetails70.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#LateDeliveryDate
-	 * SecuritiesFinancingTransactionDetails36.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#LateDeliveryDate
-	 * TransactionDetails100.LateDeliveryDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#LateDeliveryDate
-	 * TransactionDetails99.LateDeliveryDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails25#mmLateDeliveryDate
+	 * SecuritiesTradeDetails25.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails26#mmLateDeliveryDate
+	 * SecuritiesTradeDetails26.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails27#mmLateDeliveryDate
+	 * SecuritiesTradeDetails27.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails28#mmLateDeliveryDate
+	 * SecuritiesTradeDetails28.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails1#mmLateDeliveryDate
+	 * SecuritiesTradeDetails1.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails15#mmLateDeliveryDate
+	 * SecuritiesTradeDetails15.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails5#mmLateDeliveryDate
+	 * TransactionDetails5.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails9#mmLateDeliveryDate
+	 * TransactionDetails9.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails22#mmLateDeliveryDate
+	 * TransactionDetails22.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails23#mmLateDeliveryDate
+	 * TransactionDetails23.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails36#mmLateDeliveryDate
+	 * TransactionDetails36.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails47#mmLateDeliveryDate
+	 * TransactionDetails47.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails53#mmLateDeliveryDate
+	 * TransactionDetails53.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails58#mmLateDeliveryDate
+	 * TransactionDetails58.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails7#mmLateDeliveryDate
+	 * TransactionDetails7.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails8#mmLateDeliveryDate
+	 * TransactionDetails8.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails16#mmLateDeliveryDate
+	 * TransactionDetails16.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails17#mmLateDeliveryDate
+	 * TransactionDetails17.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails26#mmLateDeliveryDate
+	 * TransactionDetails26.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails25#mmLateDeliveryDate
+	 * TransactionDetails25.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails27#mmLateDeliveryDate
+	 * TransactionDetails27.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails33#mmLateDeliveryDate
+	 * TransactionDetails33.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails39#mmLateDeliveryDate
+	 * TransactionDetails39.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails50#mmLateDeliveryDate
+	 * TransactionDetails50.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails56#mmLateDeliveryDate
+	 * TransactionDetails56.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails59#mmLateDeliveryDate
+	 * TransactionDetails59.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails2.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails8.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails8#mmLateDeliveryDate
+	 * SecuritiesTradeDetails8.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#mmLateDeliveryDate
+	 * SecuritiesTradeDetails4.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails6.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails10.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails17.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails18.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails9#mmLateDeliveryDate
+	 * SecuritiesTradeDetails9.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#mmLateDeliveryDate
+	 * SecuritiesTradeDetails10.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails61#mmLateDeliveryDate
+	 * TransactionDetails61.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails21.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails62#mmLateDeliveryDate
+	 * TransactionDetails62.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails33#mmLateDeliveryDate
+	 * SecuritiesTradeDetails33.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails34#mmLateDeliveryDate
+	 * SecuritiesTradeDetails34.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails32#mmLateDeliveryDate
+	 * SecuritiesTradeDetails32.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails44#mmLateDeliveryDate
+	 * SecuritiesTradeDetails44.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails22.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails66#mmLateDeliveryDate
+	 * TransactionDetails66.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails67#mmLateDeliveryDate
+	 * TransactionDetails67.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails46#mmLateDeliveryDate
+	 * SecuritiesTradeDetails46.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails47#mmLateDeliveryDate
+	 * SecuritiesTradeDetails47.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails24.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails70#mmLateDeliveryDate
+	 * TransactionDetails70.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails69#mmLateDeliveryDate
+	 * TransactionDetails69.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails71#mmLateDeliveryDate
+	 * TransactionDetails71.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails25.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails72#mmLateDeliveryDate
+	 * TransactionDetails72.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails26.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails79#mmLateDeliveryDate
+	 * TransactionDetails79.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails75#mmLateDeliveryDate
+	 * TransactionDetails75.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails51#mmLateDeliveryDate
+	 * SecuritiesTradeDetails51.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails52#mmLateDeliveryDate
+	 * SecuritiesTradeDetails52.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails50#mmLateDeliveryDate
+	 * SecuritiesTradeDetails50.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails33.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails63#mmLateDeliveryDate
+	 * SecuritiesTradeDetails63.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails87#mmLateDeliveryDate
+	 * TransactionDetails87.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#mmLateDeliveryDate
+	 * TransactionDetails90.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails65#mmLateDeliveryDate
+	 * SecuritiesTradeDetails65.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#mmLateDeliveryDate
+	 * SecuritiesTradeDetails66.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails67#mmLateDeliveryDate
+	 * SecuritiesTradeDetails67.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#mmLateDeliveryDate
+	 * TransactionDetails97.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails35.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#mmLateDeliveryDate
+	 * TransactionDetails96.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmLateDeliveryDate
+	 * SecuritiesTradeDetails70.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmLateDeliveryDate
+	 * SecuritiesFinancingTransactionDetails36.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails100#mmLateDeliveryDate
+	 * TransactionDetails100.mmLateDeliveryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#mmLateDeliveryDate
+	 * TransactionDetails99.mmLateDeliveryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2173,48 +2209,52 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute LateDeliveryDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmLateDeliveryDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails25.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails26.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails27.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails28.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails1.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails15.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails5.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails9.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails22.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails23.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails36.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails47.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails53.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails58.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails7.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails8.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails16.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails17.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails26.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails25.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails27.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails33.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails39.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails50.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails56.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails59.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails8.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails4.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails9.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails10.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails61.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails62.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails33.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails34.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails32.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails44.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails66.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails67.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails46.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails47.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails70.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails69.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails71.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails72.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails79.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails75.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails51.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails52.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails50.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails63.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails87.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails90.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails65.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails66.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails67.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails97.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails96.LateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails70.LateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.LateDeliveryDate, com.tools20022.repository.msg.TransactionDetails100.LateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails99.LateDeliveryDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails25.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails27.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails28.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails1.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails15.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails5.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails9.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails22.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails23.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails36.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails47.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails53.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails58.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails7.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails8.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails16.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails17.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails26.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails25.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails27.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails33.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails39.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails50.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails56.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails59.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails8.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails4.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails9.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails10.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails61.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails62.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails33.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails34.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails32.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails44.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails66.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails67.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails46.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails47.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails70.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails69.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails71.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails72.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails79.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails75.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails51.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails52.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails50.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails63.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails87.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails90.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails65.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesTradeDetails66.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails67.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails97.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails96.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails70.mmLateDeliveryDate,
+					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails100.mmLateDeliveryDate,
+					com.tools20022.repository.msg.TransactionDetails99.mmLateDeliveryDate);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LateDeliveryDate";
 			definition = "Date and time after the settlement date specified in the trade, used for pool trades resulting from the original To Be Assigned (TBA) securities.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Tax transferTax;
 	/**
 	 * Tax related to the transfer of a financial instrument.
 	 * <p>
@@ -2223,83 +2263,111 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#SecuritiesTransfer
-	 * Tax.SecuritiesTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmSecuritiesTransfer
+	 * Tax.mmSecuritiesTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts12#TransferTax
-	 * OtherAmounts12.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts14#TransferTax
-	 * OtherAmounts14.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts20#TransferTax
-	 * OtherAmounts20.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts4#TransferTax
-	 * OtherAmounts4.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts5#TransferTax
-	 * OtherAmounts5.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts17#TransferTax
-	 * OtherAmounts17.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts23#TransferTax
-	 * OtherAmounts23.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts3#TransferTax
-	 * OtherAmounts3.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts7#TransferTax
-	 * OtherAmounts7.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts9#TransferTax
-	 * OtherAmounts9.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts10#TransferTax
-	 * OtherAmounts10.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts18#TransferTax
-	 * OtherAmounts18.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts24#TransferTax
-	 * OtherAmounts24.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts13#TransferTax
-	 * OtherAmounts13.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts1#TransferTax
-	 * OtherAmounts1.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts16#TransferTax
-	 * OtherAmounts16.TransferTax}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ProceedsMovement1#TaxDetails
-	 * ProceedsMovement1.TaxDetails}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts2#TransferTax
-	 * OtherAmounts2.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts6#TransferTax
-	 * OtherAmounts6.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts15#TransferTax
-	 * OtherAmounts15.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts22#TransferTax
-	 * OtherAmounts22.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts28#TransferTax
-	 * OtherAmounts28.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts30#TransferTax
-	 * OtherAmounts30.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts31#TransferTax
-	 * OtherAmounts31.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts29#TransferTax
-	 * OtherAmounts29.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts35#TransferTax
-	 * OtherAmounts35.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts34#TransferTax
-	 * OtherAmounts34.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts38#TransferTax
-	 * OtherAmounts38.TransferTax}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts33#TransferTax
-	 * OtherAmounts33.TransferTax}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts12#mmTransferTax
+	 * OtherAmounts12.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts14#mmTransferTax
+	 * OtherAmounts14.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts20#mmTransferTax
+	 * OtherAmounts20.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts4#mmTransferTax
+	 * OtherAmounts4.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts5#mmTransferTax
+	 * OtherAmounts5.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts17#mmTransferTax
+	 * OtherAmounts17.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts23#mmTransferTax
+	 * OtherAmounts23.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts3#mmTransferTax
+	 * OtherAmounts3.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts7#mmTransferTax
+	 * OtherAmounts7.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts9#mmTransferTax
+	 * OtherAmounts9.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts10#mmTransferTax
+	 * OtherAmounts10.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts18#mmTransferTax
+	 * OtherAmounts18.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts24#mmTransferTax
+	 * OtherAmounts24.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts13#mmTransferTax
+	 * OtherAmounts13.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts1#mmTransferTax
+	 * OtherAmounts1.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts16#mmTransferTax
+	 * OtherAmounts16.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProceedsMovement1#mmTaxDetails
+	 * ProceedsMovement1.mmTaxDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts2#mmTransferTax
+	 * OtherAmounts2.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts6#mmTransferTax
+	 * OtherAmounts6.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts15#mmTransferTax
+	 * OtherAmounts15.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts22#mmTransferTax
+	 * OtherAmounts22.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts28#mmTransferTax
+	 * OtherAmounts28.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts30#mmTransferTax
+	 * OtherAmounts30.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts31#mmTransferTax
+	 * OtherAmounts31.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts29#mmTransferTax
+	 * OtherAmounts29.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts35#mmTransferTax
+	 * OtherAmounts35.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts34#mmTransferTax
+	 * OtherAmounts34.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts38#mmTransferTax
+	 * OtherAmounts38.mmTransferTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts33#mmTransferTax
+	 * OtherAmounts33.mmTransferTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2311,30 +2379,31 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} = "Tax related to the transfer of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd TransferTax = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmTransferTax = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts12.TransferTax, com.tools20022.repository.msg.OtherAmounts14.TransferTax, com.tools20022.repository.msg.OtherAmounts20.TransferTax,
-					com.tools20022.repository.msg.OtherAmounts4.TransferTax, com.tools20022.repository.msg.OtherAmounts5.TransferTax, com.tools20022.repository.msg.OtherAmounts17.TransferTax,
-					com.tools20022.repository.msg.OtherAmounts23.TransferTax, com.tools20022.repository.msg.OtherAmounts3.TransferTax, com.tools20022.repository.msg.OtherAmounts7.TransferTax,
-					com.tools20022.repository.msg.OtherAmounts9.TransferTax, com.tools20022.repository.msg.OtherAmounts10.TransferTax, com.tools20022.repository.msg.OtherAmounts18.TransferTax,
-					com.tools20022.repository.msg.OtherAmounts24.TransferTax, com.tools20022.repository.msg.OtherAmounts13.TransferTax, com.tools20022.repository.msg.OtherAmounts1.TransferTax,
-					com.tools20022.repository.msg.OtherAmounts16.TransferTax, com.tools20022.repository.msg.ProceedsMovement1.TaxDetails, com.tools20022.repository.msg.OtherAmounts2.TransferTax,
-					com.tools20022.repository.msg.OtherAmounts6.TransferTax, com.tools20022.repository.msg.OtherAmounts15.TransferTax, com.tools20022.repository.msg.OtherAmounts22.TransferTax,
-					com.tools20022.repository.msg.OtherAmounts28.TransferTax, com.tools20022.repository.msg.OtherAmounts30.TransferTax, com.tools20022.repository.msg.OtherAmounts31.TransferTax,
-					com.tools20022.repository.msg.OtherAmounts29.TransferTax, com.tools20022.repository.msg.OtherAmounts35.TransferTax, com.tools20022.repository.msg.OtherAmounts34.TransferTax,
-					com.tools20022.repository.msg.OtherAmounts38.TransferTax, com.tools20022.repository.msg.OtherAmounts33.TransferTax);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts12.mmTransferTax, com.tools20022.repository.msg.OtherAmounts14.mmTransferTax, com.tools20022.repository.msg.OtherAmounts20.mmTransferTax,
+					com.tools20022.repository.msg.OtherAmounts4.mmTransferTax, com.tools20022.repository.msg.OtherAmounts5.mmTransferTax, com.tools20022.repository.msg.OtherAmounts17.mmTransferTax,
+					com.tools20022.repository.msg.OtherAmounts23.mmTransferTax, com.tools20022.repository.msg.OtherAmounts3.mmTransferTax, com.tools20022.repository.msg.OtherAmounts7.mmTransferTax,
+					com.tools20022.repository.msg.OtherAmounts9.mmTransferTax, com.tools20022.repository.msg.OtherAmounts10.mmTransferTax, com.tools20022.repository.msg.OtherAmounts18.mmTransferTax,
+					com.tools20022.repository.msg.OtherAmounts24.mmTransferTax, com.tools20022.repository.msg.OtherAmounts13.mmTransferTax, com.tools20022.repository.msg.OtherAmounts1.mmTransferTax,
+					com.tools20022.repository.msg.OtherAmounts16.mmTransferTax, com.tools20022.repository.msg.ProceedsMovement1.mmTaxDetails, com.tools20022.repository.msg.OtherAmounts2.mmTransferTax,
+					com.tools20022.repository.msg.OtherAmounts6.mmTransferTax, com.tools20022.repository.msg.OtherAmounts15.mmTransferTax, com.tools20022.repository.msg.OtherAmounts22.mmTransferTax,
+					com.tools20022.repository.msg.OtherAmounts28.mmTransferTax, com.tools20022.repository.msg.OtherAmounts30.mmTransferTax, com.tools20022.repository.msg.OtherAmounts31.mmTransferTax,
+					com.tools20022.repository.msg.OtherAmounts29.mmTransferTax, com.tools20022.repository.msg.OtherAmounts35.mmTransferTax, com.tools20022.repository.msg.OtherAmounts34.mmTransferTax,
+					com.tools20022.repository.msg.OtherAmounts38.mmTransferTax, com.tools20022.repository.msg.OtherAmounts33.mmTransferTax);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferTax";
 			definition = "Tax related to the transfer of a financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Tax.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Tax.SecuritiesTransfer;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmSecuritiesTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
+	protected TransferReasonCode transferReason;
 	/**
 	 * Identifies the transfer reason.
 	 * <p>
@@ -2345,51 +2414,66 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TransferReasonCode
 	 * TransferReasonCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.TransferReason1#Code
-	 * TransferReason1.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.TransferReason1#Proprietary
-	 * TransferReason1.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer18#TransferReason
-	 * Transfer18.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer26#TransferReason
-	 * Transfer26.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer15#TransferReason
-	 * Transfer15.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer21#TransferReason
-	 * Transfer21.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer13#TransferReason
-	 * Transfer13.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer23#TransferReason
-	 * Transfer23.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer11#TransferReason
-	 * Transfer11.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer19#TransferReason
-	 * Transfer19.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer27#TransferReason
-	 * Transfer27.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer28#TransferReason
-	 * Transfer28.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer29#TransferReason
-	 * Transfer29.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer31#TransferReason
-	 * Transfer31.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer30#TransferReason
-	 * Transfer30.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer32#TransferReason
-	 * Transfer32.TransferReason}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Transfer33#TransferReason
-	 * Transfer33.TransferReason}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.choice.TransferReason1#mmCode
+	 * TransferReason1.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransferReason1#mmProprietary
+	 * TransferReason1.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer18#mmTransferReason
+	 * Transfer18.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer26#mmTransferReason
+	 * Transfer26.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer15#mmTransferReason
+	 * Transfer15.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer21#mmTransferReason
+	 * Transfer21.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer13#mmTransferReason
+	 * Transfer13.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer23#mmTransferReason
+	 * Transfer23.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer11#mmTransferReason
+	 * Transfer11.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer19#mmTransferReason
+	 * Transfer19.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer27#mmTransferReason
+	 * Transfer27.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer28#mmTransferReason
+	 * Transfer28.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer29#mmTransferReason
+	 * Transfer29.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmTransferReason
+	 * Transfer31.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer30#mmTransferReason
+	 * Transfer30.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer32#mmTransferReason
+	 * Transfer32.mmTransferReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmTransferReason
+	 * Transfer33.mmTransferReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2401,24 +2485,25 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} = "Identifies the transfer reason."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransferReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransferReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferReason1.Code, com.tools20022.repository.choice.TransferReason1.Proprietary, com.tools20022.repository.msg.Transfer18.TransferReason,
-					com.tools20022.repository.msg.Transfer26.TransferReason, com.tools20022.repository.msg.Transfer15.TransferReason, com.tools20022.repository.msg.Transfer21.TransferReason,
-					com.tools20022.repository.msg.Transfer13.TransferReason, com.tools20022.repository.msg.Transfer23.TransferReason, com.tools20022.repository.msg.Transfer11.TransferReason,
-					com.tools20022.repository.msg.Transfer19.TransferReason, com.tools20022.repository.msg.Transfer27.TransferReason, com.tools20022.repository.msg.Transfer28.TransferReason,
-					com.tools20022.repository.msg.Transfer29.TransferReason, com.tools20022.repository.msg.Transfer31.TransferReason, com.tools20022.repository.msg.Transfer30.TransferReason,
-					com.tools20022.repository.msg.Transfer32.TransferReason, com.tools20022.repository.msg.Transfer33.TransferReason);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferReason1.mmCode, com.tools20022.repository.choice.TransferReason1.mmProprietary, com.tools20022.repository.msg.Transfer18.mmTransferReason,
+					com.tools20022.repository.msg.Transfer26.mmTransferReason, com.tools20022.repository.msg.Transfer15.mmTransferReason, com.tools20022.repository.msg.Transfer21.mmTransferReason,
+					com.tools20022.repository.msg.Transfer13.mmTransferReason, com.tools20022.repository.msg.Transfer23.mmTransferReason, com.tools20022.repository.msg.Transfer11.mmTransferReason,
+					com.tools20022.repository.msg.Transfer19.mmTransferReason, com.tools20022.repository.msg.Transfer27.mmTransferReason, com.tools20022.repository.msg.Transfer28.mmTransferReason,
+					com.tools20022.repository.msg.Transfer29.mmTransferReason, com.tools20022.repository.msg.Transfer31.mmTransferReason, com.tools20022.repository.msg.Transfer30.mmTransferReason,
+					com.tools20022.repository.msg.Transfer32.mmTransferReason, com.tools20022.repository.msg.Transfer33.mmTransferReason);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransferReason";
 			definition = "Identifies the transfer reason.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TransferReasonCode.mmObject();
 		}
 	};
+	protected PartialSettlementCode partialSettlementType;
 	/**
 	 * Information about partial settlement.
 	 * <p>
@@ -2429,109 +2514,109 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PartialSettlementCode
 	 * PartialSettlementCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters3#PartialSettlement
-	 * AdditionalParameters3.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters7#PartialSettlement
-	 * AdditionalParameters7.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters8#PartialSettlement
-	 * AdditionalParameters8.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters9#PartialSettlement
-	 * AdditionalParameters9.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters10#PartialSettlement
-	 * AdditionalParameters10.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters11#PartialSettlement
-	 * AdditionalParameters11.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters2#PartialSettlement
-	 * AdditionalParameters2.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters6#PartialSettlement
-	 * AdditionalParameters6.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters12#PartialSettlement
-	 * AdditionalParameters12.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters13#PartialSettlement
-	 * AdditionalParameters13.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters18#PartialSettlement
-	 * AdditionalParameters18.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters19#PartialSettlement
-	 * AdditionalParameters19.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters17#PartialSettlement
-	 * AdditionalParameters17.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters20#PartialSettlement
-	 * AdditionalParameters20.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters4#PartialSettlement
-	 * AdditionalParameters4.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters5#PartialSettlement
-	 * AdditionalParameters5.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters14#PartialSettlement
-	 * AdditionalParameters14.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters15#PartialSettlement
-	 * AdditionalParameters15.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters16#PartialSettlement
-	 * AdditionalParameters16.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters23#PartialSettlement
-	 * AdditionalParameters23.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters24#PartialSettlement
-	 * AdditionalParameters24.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters22#PartialSettlement
-	 * AdditionalParameters22.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters21#PartialSettlement
-	 * AdditionalParameters21.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters26#PartialSettlement
-	 * AdditionalParameters26.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters25#PartialSettlement
-	 * AdditionalParameters25.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters28#PartialSettlement
-	 * AdditionalParameters28.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters27#PartialSettlement
-	 * AdditionalParameters27.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters29#PartialSettlement
-	 * AdditionalParameters29.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters30#PartialSettlement
-	 * AdditionalParameters30.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters31#PartialSettlement
-	 * AdditionalParameters31.PartialSettlement}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters32#PartialSettlement
-	 * AdditionalParameters32.PartialSettlement}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters3#mmPartialSettlement
+	 * AdditionalParameters3.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters7#mmPartialSettlement
+	 * AdditionalParameters7.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters8#mmPartialSettlement
+	 * AdditionalParameters8.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters9#mmPartialSettlement
+	 * AdditionalParameters9.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters10#mmPartialSettlement
+	 * AdditionalParameters10.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters11#mmPartialSettlement
+	 * AdditionalParameters11.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters2#mmPartialSettlement
+	 * AdditionalParameters2.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters6#mmPartialSettlement
+	 * AdditionalParameters6.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters12#mmPartialSettlement
+	 * AdditionalParameters12.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters13#mmPartialSettlement
+	 * AdditionalParameters13.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters18#mmPartialSettlement
+	 * AdditionalParameters18.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters19#mmPartialSettlement
+	 * AdditionalParameters19.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters17#mmPartialSettlement
+	 * AdditionalParameters17.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters20#mmPartialSettlement
+	 * AdditionalParameters20.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters4#mmPartialSettlement
+	 * AdditionalParameters4.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters5#mmPartialSettlement
+	 * AdditionalParameters5.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters14#mmPartialSettlement
+	 * AdditionalParameters14.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters15#mmPartialSettlement
+	 * AdditionalParameters15.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters16#mmPartialSettlement
+	 * AdditionalParameters16.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters23#mmPartialSettlement
+	 * AdditionalParameters23.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters24#mmPartialSettlement
+	 * AdditionalParameters24.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters22#mmPartialSettlement
+	 * AdditionalParameters22.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters21#mmPartialSettlement
+	 * AdditionalParameters21.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters26#mmPartialSettlement
+	 * AdditionalParameters26.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters25#mmPartialSettlement
+	 * AdditionalParameters25.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters28#mmPartialSettlement
+	 * AdditionalParameters28.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters27#mmPartialSettlement
+	 * AdditionalParameters27.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters29#mmPartialSettlement
+	 * AdditionalParameters29.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters30#mmPartialSettlement
+	 * AdditionalParameters30.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters31#mmPartialSettlement
+	 * AdditionalParameters31.mmPartialSettlement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters32#mmPartialSettlement
+	 * AdditionalParameters32.mmPartialSettlement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2543,29 +2628,33 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} = "Information about partial settlement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PartialSettlementType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPartialSettlementType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters3.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters7.PartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters8.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters9.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters10.PartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters11.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters2.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters6.PartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters12.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters13.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters18.PartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters19.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters17.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters20.PartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters4.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters5.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters14.PartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters15.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters16.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters23.PartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters24.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters22.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters21.PartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters26.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters25.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters28.PartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters27.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters29.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters30.PartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters31.PartialSettlement, com.tools20022.repository.msg.AdditionalParameters32.PartialSettlement);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters3.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters7.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters8.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters9.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters10.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters11.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters2.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters6.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters12.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters13.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters18.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters19.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters17.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters20.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters4.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters5.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters14.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters15.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters16.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters23.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters24.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters22.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters21.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters26.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters25.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters28.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters27.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters29.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters30.mmPartialSettlement,
+					com.tools20022.repository.msg.AdditionalParameters31.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters32.mmPartialSettlement);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlementType";
 			definition = "Information about partial settlement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PartialSettlementCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesDeliveryObligation;
 	/**
 	 * Obligation for one party to deliver securities to another party.
 	 * <p>
@@ -2574,8 +2663,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#SecuritiesTransfer
-	 * SecuritiesDeliveryObligation.SecuritiesTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesTransfer
+	 * SecuritiesDeliveryObligation.mmSecuritiesTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2601,7 +2690,7 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * "Obligation for one party to deliver securities to another party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd SecuritiesDeliveryObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecuritiesDeliveryObligation = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
@@ -2609,11 +2698,12 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 			name = "SecuritiesDeliveryObligation";
 			definition = "Obligation for one party to deliver securities to another party.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.SecuritiesTransfer;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.SecuritiesEntry> bookEntry;
 	/**
 	 * Record in a securities account resulting from the transfer of a security.
 	 * <p>
@@ -2622,8 +2712,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#TriggeringSecuritiesTransfer
-	 * SecuritiesEntry.TriggeringSecuritiesTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesEntry#mmTriggeringSecuritiesTransfer
+	 * SecuritiesEntry.mmTriggeringSecuritiesTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2649,7 +2739,7 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd BookEntry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmBookEntry = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
@@ -2657,11 +2747,12 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 			name = "BookEntry";
 			definition = "Record in a securities account resulting from the transfer of a security.";
 			minOccurs = 0;
-			type_lazy = () -> SecuritiesEntry.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.TriggeringSecuritiesTransfer;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmTriggeringSecuritiesTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 		}
 	};
+	protected Max35Text transactionIdentification;
 	/**
 	 * Unambiguous identification of a securities transfer.
 	 * <p>
@@ -2687,18 +2778,19 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} = "Unambiguous identification of a securities transfer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TransactionIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTransactionIdentification = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of a securities transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Security> security;
 	/**
 	 * Security which is transferred.
 	 * <p>
@@ -2707,8 +2799,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Security#SecuritiesTransfer
-	 * Security.SecuritiesTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesTransfer
+	 * Security.mmSecuritiesTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2731,7 +2823,7 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} = "Security which is transferred."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Security = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
@@ -2739,11 +2831,12 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 			name = "Security";
 			definition = "Security which is transferred.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Security.SecuritiesTransfer;
+			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
+	protected SecuritiesTradeStatus status;
 	/**
 	 * Status of a securities transfer.
 	 * <p>
@@ -2752,8 +2845,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#RelatedSecuritiesTransfer
-	 * SecuritiesTradeStatus.RelatedSecuritiesTransfer}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus#mmRelatedSecuritiesTransfer
+	 * SecuritiesTradeStatus.mmRelatedSecuritiesTransfer}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2762,22 +2855,22 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeStatus
 	 * SecuritiesTradeStatus}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#Status
-	 * IntraPositionQueryCriteria1.Status}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation1#ProcessingStatus
-	 * IntraPositionCancellation1.ProcessingStatus}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria1#mmStatus
+	 * IntraPositionQueryCriteria1.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation1#mmProcessingStatus
+	 * IntraPositionCancellation1.mmProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2789,53 +2882,53 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * definition} = "Status of a securities transfer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Status = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryCriteria1.Status, com.tools20022.repository.msg.IntraPositionCancellation1.ProcessingStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmStatus, com.tools20022.repository.msg.IntraPositionCancellation1.mmProcessingStatus);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Status of a securities transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTradeStatus.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.RelatedSecuritiesTransfer;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmRelatedSecuritiesTransfer;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransfer";
 				definition = "Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.SecuritiesTransfer, com.tools20022.repository.entity.SecuritiesAccount.RelatedTransfer,
-						com.tools20022.repository.entity.Tax.SecuritiesTransfer, com.tools20022.repository.entity.SecuritiesQuantity.SecuritiesTransfer, com.tools20022.repository.entity.SecuritiesSettlement.TransferOperation,
-						com.tools20022.repository.entity.SecuritiesEntry.TriggeringSecuritiesTransfer, com.tools20022.repository.entity.PhysicalDelivery.RelatedTransfer,
-						com.tools20022.repository.entity.SecuritiesTradeStatus.RelatedSecuritiesTransfer, com.tools20022.repository.entity.SecuritiesDeliveryObligation.SecuritiesTransfer);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn1.TransferDetails, com.tools20022.repository.msg.TransferIn4.TransferDetails, com.tools20022.repository.msg.TransferIn6.TransferDetails,
-						com.tools20022.repository.msg.TransferOut1.TransferDetails, com.tools20022.repository.msg.TransferOut6.TransferDetails, com.tools20022.repository.msg.TransferOut8.TransferDetails,
-						com.tools20022.repository.msg.TransferOut10.TransferDetails, com.tools20022.repository.msg.TransferIn8.TransferDetails, com.tools20022.repository.msg.TransferIn2.TransferDetails,
-						com.tools20022.repository.msg.TransferIn3.TransferDetails, com.tools20022.repository.msg.TransferIn5.TransferDetails, com.tools20022.repository.msg.TransferOut2.TransferDetails,
-						com.tools20022.repository.msg.TransferOut5.TransferDetails, com.tools20022.repository.msg.TransferOut7.TransferDetails, com.tools20022.repository.msg.TransferOut9.TransferDetails,
-						com.tools20022.repository.msg.TransferIn7.TransferDetails, com.tools20022.repository.msg.TransferIn10.TransferAndReferences, com.tools20022.repository.msg.TransferIn9.TransferDetails,
-						com.tools20022.repository.msg.TransferOut11.TransferAndReferences, com.tools20022.repository.msg.TransferOut12.TransferDetails, com.tools20022.repository.msg.TransferOut13.TransferDetails,
-						com.tools20022.repository.msg.TransferIn11.TransferDetails, com.tools20022.repository.msg.TransferIn13.TransferAndReferences, com.tools20022.repository.msg.TransferOut14.TransferDetails,
-						com.tools20022.repository.msg.TransferIn12.TransferDetails, com.tools20022.repository.msg.TransferOut15.TransferAndReferences, com.tools20022.repository.msg.TransferOut17.TransferAndReferences,
-						com.tools20022.repository.msg.TransferIn14.TransferDetails, com.tools20022.repository.msg.TransferIn15.TransferAndReferences, com.tools20022.repository.msg.TransferOut16.TransferDetails,
-						com.tools20022.repository.msg.TransferIn16.TransferDetails, com.tools20022.repository.msg.TransferOut18.TransferDetails);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSecuritiesTransfer, com.tools20022.repository.entity.SecuritiesAccount.mmRelatedTransfer,
+						com.tools20022.repository.entity.Tax.mmSecuritiesTransfer, com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesTransfer, com.tools20022.repository.entity.SecuritiesSettlement.mmTransferOperation,
+						com.tools20022.repository.entity.SecuritiesEntry.mmTriggeringSecuritiesTransfer, com.tools20022.repository.entity.PhysicalDelivery.mmRelatedTransfer,
+						com.tools20022.repository.entity.SecuritiesTradeStatus.mmRelatedSecuritiesTransfer, com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesTransfer);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn1.mmTransferDetails, com.tools20022.repository.msg.TransferIn4.mmTransferDetails,
+						com.tools20022.repository.msg.TransferIn6.mmTransferDetails, com.tools20022.repository.msg.TransferOut1.mmTransferDetails, com.tools20022.repository.msg.TransferOut6.mmTransferDetails,
+						com.tools20022.repository.msg.TransferOut8.mmTransferDetails, com.tools20022.repository.msg.TransferOut10.mmTransferDetails, com.tools20022.repository.msg.TransferIn8.mmTransferDetails,
+						com.tools20022.repository.msg.TransferIn2.mmTransferDetails, com.tools20022.repository.msg.TransferIn3.mmTransferDetails, com.tools20022.repository.msg.TransferIn5.mmTransferDetails,
+						com.tools20022.repository.msg.TransferOut2.mmTransferDetails, com.tools20022.repository.msg.TransferOut5.mmTransferDetails, com.tools20022.repository.msg.TransferOut7.mmTransferDetails,
+						com.tools20022.repository.msg.TransferOut9.mmTransferDetails, com.tools20022.repository.msg.TransferIn7.mmTransferDetails, com.tools20022.repository.msg.TransferIn10.mmTransferAndReferences,
+						com.tools20022.repository.msg.TransferIn9.mmTransferDetails, com.tools20022.repository.msg.TransferOut11.mmTransferAndReferences, com.tools20022.repository.msg.TransferOut12.mmTransferDetails,
+						com.tools20022.repository.msg.TransferOut13.mmTransferDetails, com.tools20022.repository.msg.TransferIn11.mmTransferDetails, com.tools20022.repository.msg.TransferIn13.mmTransferAndReferences,
+						com.tools20022.repository.msg.TransferOut14.mmTransferDetails, com.tools20022.repository.msg.TransferIn12.mmTransferDetails, com.tools20022.repository.msg.TransferOut15.mmTransferAndReferences,
+						com.tools20022.repository.msg.TransferOut17.mmTransferAndReferences, com.tools20022.repository.msg.TransferIn14.mmTransferDetails, com.tools20022.repository.msg.TransferIn15.mmTransferAndReferences,
+						com.tools20022.repository.msg.TransferOut16.mmTransferDetails, com.tools20022.repository.msg.TransferIn16.mmTransferDetails, com.tools20022.repository.msg.TransferOut18.mmTransferDetails);
 				subType_lazy = () -> Arrays.asList(IntraPositionTransfer.mmObject());
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTransfer.Identification, com.tools20022.repository.entity.SecuritiesTransfer.TransferredQuantity,
-						com.tools20022.repository.entity.SecuritiesTransfer.Account, com.tools20022.repository.entity.SecuritiesTransfer.TransferType, com.tools20022.repository.entity.SecuritiesTransfer.RelatedSettlement,
-						com.tools20022.repository.entity.SecuritiesTransfer.OwnAccountTransferIndicator, com.tools20022.repository.entity.SecuritiesTransfer.PhysicalDelivery,
-						com.tools20022.repository.entity.SecuritiesTransfer.LateDeliveryDate, com.tools20022.repository.entity.SecuritiesTransfer.TransferTax, com.tools20022.repository.entity.SecuritiesTransfer.TransferReason,
-						com.tools20022.repository.entity.SecuritiesTransfer.PartialSettlementType, com.tools20022.repository.entity.SecuritiesTransfer.SecuritiesDeliveryObligation,
-						com.tools20022.repository.entity.SecuritiesTransfer.BookEntry, com.tools20022.repository.entity.SecuritiesTransfer.TransactionIdentification, com.tools20022.repository.entity.SecuritiesTransfer.Security,
-						com.tools20022.repository.entity.SecuritiesTransfer.Status);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTransfer.mmIdentification, com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity,
+						com.tools20022.repository.entity.SecuritiesTransfer.mmAccount, com.tools20022.repository.entity.SecuritiesTransfer.mmTransferType, com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement,
+						com.tools20022.repository.entity.SecuritiesTransfer.mmOwnAccountTransferIndicator, com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery,
+						com.tools20022.repository.entity.SecuritiesTransfer.mmLateDeliveryDate, com.tools20022.repository.entity.SecuritiesTransfer.mmTransferTax, com.tools20022.repository.entity.SecuritiesTransfer.mmTransferReason,
+						com.tools20022.repository.entity.SecuritiesTransfer.mmPartialSettlementType, com.tools20022.repository.entity.SecuritiesTransfer.mmSecuritiesDeliveryObligation,
+						com.tools20022.repository.entity.SecuritiesTransfer.mmBookEntry, com.tools20022.repository.entity.SecuritiesTransfer.mmTransactionIdentification, com.tools20022.repository.entity.SecuritiesTransfer.mmSecurity,
+						com.tools20022.repository.entity.SecuritiesTransfer.mmStatus);
 				derivationComponent_lazy = () -> Arrays.asList(TransferOut3.mmObject(), Transfer4.mmObject(), TransferIn1.mmObject(), Transfer7.mmObject(), TransferIn4.mmObject(), Transfer17.mmObject(), TransferIn6.mmObject(),
 						Transfer2.mmObject(), TransferOut1.mmObject(), Transfer10.mmObject(), TransferOut6.mmObject(), Transfer14.mmObject(), TransferOut8.mmObject(), Transfer24.mmObject(), TransferOut10.mmObject(),
 						Reversal1Choice.mmObject(), Transfer25.mmObject(), TransferIn8.mmObject(), Reversal2Choice.mmObject(), Transfer3.mmObject(), TransferIn2.mmObject(), Transfer6.mmObject(), TransferIn3.mmObject(),
@@ -2849,5 +2942,133 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public SecuritiesQuantity getTransferredQuantity() {
+		return transferredQuantity;
+	}
+
+	public void setTransferredQuantity(com.tools20022.repository.entity.SecuritiesQuantity transferredQuantity) {
+		this.transferredQuantity = transferredQuantity;
+	}
+
+	public List<SecuritiesAccount> getAccount() {
+		return account;
+	}
+
+	public void setAccount(List<com.tools20022.repository.entity.SecuritiesAccount> account) {
+		this.account = account;
+	}
+
+	public TransferTypeCode getTransferType() {
+		return transferType;
+	}
+
+	public void setTransferType(TransferTypeCode transferType) {
+		this.transferType = transferType;
+	}
+
+	public SecuritiesSettlement getRelatedSettlement() {
+		return relatedSettlement;
+	}
+
+	public void setRelatedSettlement(com.tools20022.repository.entity.SecuritiesSettlement relatedSettlement) {
+		this.relatedSettlement = relatedSettlement;
+	}
+
+	public YesNoIndicator getOwnAccountTransferIndicator() {
+		return ownAccountTransferIndicator;
+	}
+
+	public void setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
+		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
+	}
+
+	public PhysicalDelivery getPhysicalDelivery() {
+		return physicalDelivery;
+	}
+
+	public void setPhysicalDelivery(com.tools20022.repository.entity.PhysicalDelivery physicalDelivery) {
+		this.physicalDelivery = physicalDelivery;
+	}
+
+	public ISODateTime getLateDeliveryDate() {
+		return lateDeliveryDate;
+	}
+
+	public void setLateDeliveryDate(ISODateTime lateDeliveryDate) {
+		this.lateDeliveryDate = lateDeliveryDate;
+	}
+
+	public Tax getTransferTax() {
+		return transferTax;
+	}
+
+	public void setTransferTax(com.tools20022.repository.entity.Tax transferTax) {
+		this.transferTax = transferTax;
+	}
+
+	public TransferReasonCode getTransferReason() {
+		return transferReason;
+	}
+
+	public void setTransferReason(TransferReasonCode transferReason) {
+		this.transferReason = transferReason;
+	}
+
+	public PartialSettlementCode getPartialSettlementType() {
+		return partialSettlementType;
+	}
+
+	public void setPartialSettlementType(PartialSettlementCode partialSettlementType) {
+		this.partialSettlementType = partialSettlementType;
+	}
+
+	public List<SecuritiesDeliveryObligation> getSecuritiesDeliveryObligation() {
+		return securitiesDeliveryObligation;
+	}
+
+	public void setSecuritiesDeliveryObligation(List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesDeliveryObligation) {
+		this.securitiesDeliveryObligation = securitiesDeliveryObligation;
+	}
+
+	public List<SecuritiesEntry> getBookEntry() {
+		return bookEntry;
+	}
+
+	public void setBookEntry(List<com.tools20022.repository.entity.SecuritiesEntry> bookEntry) {
+		this.bookEntry = bookEntry;
+	}
+
+	public Max35Text getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public List<Security> getSecurity() {
+		return security;
+	}
+
+	public void setSecurity(List<com.tools20022.repository.entity.Security> security) {
+		this.security = security;
+	}
+
+	public SecuritiesTradeStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(com.tools20022.repository.entity.SecuritiesTradeStatus status) {
+		this.status = status;
 	}
 }

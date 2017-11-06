@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SafekeepingAccountIdentification1Code#General
- * SafekeepingAccountIdentification1Code.General}</li>
+ * {@linkplain com.tools20022.repository.codeset.SafekeepingAccountIdentification1Code#mmGeneral
+ * SafekeepingAccountIdentification1Code.mmGeneral}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +78,7 @@ public class SafekeepingAccountIdentification1Code extends SafekeepingAccountIde
 	 * name} = "General"</li>
 	 * </ul>
 	 */
-	public static final MMCode General = new MMCode() {
+	public static final MMCode mmGeneral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "General";
@@ -89,12 +89,12 @@ public class SafekeepingAccountIdentification1Code extends SafekeepingAccountIde
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GENR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingAccountIdentification1Code";
 				definition = "Specifies the account identification via a code.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SafekeepingAccountIdentification1Code.General);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SafekeepingAccountIdentification1Code.mmGeneral);
 				trace_lazy = () -> SafekeepingAccountIdentificationCode.mmObject();
 			}
 		});

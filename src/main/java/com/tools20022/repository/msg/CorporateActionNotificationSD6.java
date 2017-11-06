@@ -37,33 +37,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#PlaceAndName
- * CorporateActionNotificationSD6.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#mmPlaceAndName
+ * CorporateActionNotificationSD6.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#EventStatus
- * CorporateActionNotificationSD6.EventStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#mmEventStatus
+ * CorporateActionNotificationSD6.mmEventStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#ApprovedDate
- * CorporateActionNotificationSD6.ApprovedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#mmApprovedDate
+ * CorporateActionNotificationSD6.mmApprovedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#MatchDate
- * CorporateActionNotificationSD6.MatchDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#mmMatchDate
+ * CorporateActionNotificationSD6.mmMatchDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#ActiveUntilDate
- * CorporateActionNotificationSD6.ActiveUntilDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#mmActiveUntilDate
+ * CorporateActionNotificationSD6.mmActiveUntilDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#ServiceLevelAgreementPeriod
- * CorporateActionNotificationSD6.ServiceLevelAgreementPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#mmServiceLevelAgreementPeriod
+ * CorporateActionNotificationSD6.mmServiceLevelAgreementPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#ValidationNotSupportedReason
- * CorporateActionNotificationSD6.ValidationNotSupportedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD6#mmValidationNotSupportedReason
+ * CorporateActionNotificationSD6.mmValidationNotSupportedReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNotificationSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -106,7 +107,7 @@ public class CorporateActionNotificationSD6 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -114,11 +115,12 @@ public class CorporateActionNotificationSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected EventWorkflowStatus1Code eventStatus;
 	/**
 	 * Workflow status of the event.
 	 * <p>
@@ -147,7 +149,7 @@ public class CorporateActionNotificationSD6 {
 	 * definition} = "Workflow status of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -155,11 +157,12 @@ public class CorporateActionNotificationSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStatus";
 			definition = "Workflow status of the event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
 	};
+	protected ISODate approvedDate;
 	/**
 	 * Date by which the announcement is set to approve event status.
 	 * <p>
@@ -188,7 +191,7 @@ public class CorporateActionNotificationSD6 {
 	 * "Date by which the announcement is set to approve event status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApprovedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApprovedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -196,11 +199,12 @@ public class CorporateActionNotificationSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedDate";
 			definition = "Date by which the announcement is set to approve event status.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate matchDate;
 	/**
 	 * Date used to match records from multiple vendors to the same event. It is
 	 * typically the first key date on the event.
@@ -231,7 +235,7 @@ public class CorporateActionNotificationSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MatchDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMatchDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -239,11 +243,12 @@ public class CorporateActionNotificationSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchDate";
 			definition = "Date used to match records from multiple vendors to the same event. It is typically the first key date on the event.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate activeUntilDate;
 	/**
 	 * Date until which the event will remain in an active status on DTCC (The
 	 * Depository Trust and Clearing Corporation) system.
@@ -274,7 +279,7 @@ public class CorporateActionNotificationSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActiveUntilDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActiveUntilDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -282,11 +287,12 @@ public class CorporateActionNotificationSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveUntilDate";
 			definition = "Date until which the event will remain in an active status on DTCC  (The Depository Trust and Clearing Corporation) system.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected Period3 serviceLevelAgreementPeriod;
 	/**
 	 * Start date and end date of the service level agreement.
 	 * <p>
@@ -314,7 +320,7 @@ public class CorporateActionNotificationSD6 {
 	 * definition} = "Start date and end date of the service level agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ServiceLevelAgreementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmServiceLevelAgreementPeriod = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -322,11 +328,12 @@ public class CorporateActionNotificationSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevelAgreementPeriod";
 			definition = "Start date and end date of the service level agreement.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> Period3.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText validationNotSupportedReason;
 	/**
 	 * Specifies a reason why a corporate action will not be supported by the
 	 * validation service. This is usually due to the event type or the product
@@ -360,7 +367,7 @@ public class CorporateActionNotificationSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValidationNotSupportedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValidationNotSupportedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -368,8 +375,8 @@ public class CorporateActionNotificationSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationNotSupportedReason";
 			definition = "Specifies a reason why a corporate action will not be supported by the validation service. This is usually due to the event type or the product (security) type. The list of values will be provided externally to the schema.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
@@ -377,16 +384,72 @@ public class CorporateActionNotificationSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD6.PlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD6.EventStatus,
-						com.tools20022.repository.msg.CorporateActionNotificationSD6.ApprovedDate, com.tools20022.repository.msg.CorporateActionNotificationSD6.MatchDate,
-						com.tools20022.repository.msg.CorporateActionNotificationSD6.ActiveUntilDate, com.tools20022.repository.msg.CorporateActionNotificationSD6.ServiceLevelAgreementPeriod,
-						com.tools20022.repository.msg.CorporateActionNotificationSD6.ValidationNotSupportedReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD6.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD6.mmEventStatus,
+						com.tools20022.repository.msg.CorporateActionNotificationSD6.mmApprovedDate, com.tools20022.repository.msg.CorporateActionNotificationSD6.mmMatchDate,
+						com.tools20022.repository.msg.CorporateActionNotificationSD6.mmActiveUntilDate, com.tools20022.repository.msg.CorporateActionNotificationSD6.mmServiceLevelAgreementPeriod,
+						com.tools20022.repository.msg.CorporateActionNotificationSD6.mmValidationNotSupportedReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionNotificationSD6";
 				definition = "Provides additional information regarding notification general information details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public EventWorkflowStatus1Code getEventStatus() {
+		return eventStatus;
+	}
+
+	public void setEventStatus(EventWorkflowStatus1Code eventStatus) {
+		this.eventStatus = eventStatus;
+	}
+
+	public ISODate getApprovedDate() {
+		return approvedDate;
+	}
+
+	public void setApprovedDate(ISODate approvedDate) {
+		this.approvedDate = approvedDate;
+	}
+
+	public ISODate getMatchDate() {
+		return matchDate;
+	}
+
+	public void setMatchDate(ISODate matchDate) {
+		this.matchDate = matchDate;
+	}
+
+	public ISODate getActiveUntilDate() {
+		return activeUntilDate;
+	}
+
+	public void setActiveUntilDate(ISODate activeUntilDate) {
+		this.activeUntilDate = activeUntilDate;
+	}
+
+	public Period3 getServiceLevelAgreementPeriod() {
+		return serviceLevelAgreementPeriod;
+	}
+
+	public void setServiceLevelAgreementPeriod(com.tools20022.repository.msg.Period3 serviceLevelAgreementPeriod) {
+		this.serviceLevelAgreementPeriod = serviceLevelAgreementPeriod;
+	}
+
+	public Max4AlphaNumericText getValidationNotSupportedReason() {
+		return validationNotSupportedReason;
+	}
+
+	public void setValidationNotSupportedReason(Max4AlphaNumericText validationNotSupportedReason) {
+		this.validationNotSupportedReason = validationNotSupportedReason;
 	}
 }

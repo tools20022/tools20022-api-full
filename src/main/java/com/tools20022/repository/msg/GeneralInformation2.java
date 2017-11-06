@@ -39,42 +39,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation2#BlockIndicator
- * GeneralInformation2.BlockIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmBlockIndicator
+ * GeneralInformation2.mmBlockIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation2#RelatedTradeReference
- * GeneralInformation2.RelatedTradeReference}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmRelatedTradeReference
+ * GeneralInformation2.mmRelatedTradeReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation2#DealingMethod
- * GeneralInformation2.DealingMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmDealingMethod
+ * GeneralInformation2.mmDealingMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation2#BrokerIdentification
- * GeneralInformation2.BrokerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmBrokerIdentification
+ * GeneralInformation2.mmBrokerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation2#CounterpartyReference
- * GeneralInformation2.CounterpartyReference}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmCounterpartyReference
+ * GeneralInformation2.mmCounterpartyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation2#BrokersCommission
- * GeneralInformation2.BrokersCommission}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmBrokersCommission
+ * GeneralInformation2.mmBrokersCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation2#SenderToReceiverInformation
- * GeneralInformation2.SenderToReceiverInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmSenderToReceiverInformation
+ * GeneralInformation2.mmSenderToReceiverInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation2#DealingBranchTradingSide
- * GeneralInformation2.DealingBranchTradingSide}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmDealingBranchTradingSide
+ * GeneralInformation2.mmDealingBranchTradingSide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation2#DealingBranchCounterpartySide
- * GeneralInformation2.DealingBranchCounterpartySide}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmDealingBranchCounterpartySide
+ * GeneralInformation2.mmDealingBranchCounterpartySide}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralInformation2#ContactInformation
- * GeneralInformation2.ContactInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralInformation2#mmContactInformation
+ * GeneralInformation2.mmContactInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeneralInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator blockIndicator;
 	/**
 	 * Indicates whether the trade is a block or single trade.
 	 * <p>
@@ -103,8 +104,8 @@ public class GeneralInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#BlockIndicator
-	 * Trade.BlockIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmBlockIndicator
+	 * Trade.mmBlockIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -123,20 +124,21 @@ public class GeneralInformation2 {
 	 * definition} = "Indicates whether the trade is a block or single trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BlockIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBlockIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmBlockIndicator;
 			componentContext_lazy = () -> GeneralInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.BlockIndicator;
 			isDerived = false;
 			xmlTag = "BlckInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockIndicator";
 			definition = "Indicates whether the trade is a block or single trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max35Text relatedTradeReference;
 	/**
 	 * Reference to a preceeding transaction, for example, an option or swap.
 	 * <p>
@@ -165,7 +167,7 @@ public class GeneralInformation2 {
 	 * "Reference to a preceeding transaction, for example, an option or swap."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelatedTradeReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelatedTradeReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeneralInformation2.mmObject();
 			isDerived = false;
@@ -173,11 +175,12 @@ public class GeneralInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedTradeReference";
 			definition = "Reference to a preceeding transaction, for example, an option or swap.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Trading1MethodCode dealingMethod;
 	/**
 	 * Method used by the trading parties to negotiate and/or execute a deal.
 	 * <p>
@@ -191,8 +194,8 @@ public class GeneralInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Negotiation#TradingMethod
-	 * Negotiation.TradingMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Negotiation#mmTradingMethod
+	 * Negotiation.mmTradingMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -212,20 +215,21 @@ public class GeneralInformation2 {
 	 * "Method used by the trading parties to negotiate and/or execute a deal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DealingMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDealingMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Negotiation.mmTradingMethod;
 			componentContext_lazy = () -> GeneralInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Negotiation.TradingMethod;
 			isDerived = false;
 			xmlTag = "DealgMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingMethod";
 			definition = "Method used by the trading parties to negotiate and/or execute a deal.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Trading1MethodCode.mmObject();
 		}
 	};
+	protected PartyIdentification19Choice brokerIdentification;
 	/**
 	 * Broker that arranged the deal between the trading side and the
 	 * counterparty side or, when two money brokers are involved, between the
@@ -240,8 +244,8 @@ public class GeneralInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -262,21 +266,22 @@ public class GeneralInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BrokerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBrokerIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> GeneralInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "BrkrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerIdentification";
 			definition = "Broker that arranged the deal between the trading side and the counterparty side or, when two money brokers are involved, between the trading side and the other money broker.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification19Choice.mmObject();
 		}
 	};
+	protected Max35Text counterpartyReference;
 	/**
 	 * Counterparty's reference for the trade.
 	 * <p>
@@ -304,7 +309,7 @@ public class GeneralInformation2 {
 	 * definition} = "Counterparty's reference for the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeneralInformation2.mmObject();
 			isDerived = false;
@@ -312,11 +317,12 @@ public class GeneralInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Counterparty's reference for the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount brokersCommission;
 	/**
 	 * Brokerage fee for a broker confirmation.
 	 * <p>
@@ -330,8 +336,8 @@ public class GeneralInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommissionAmount
-	 * Commission.CommissionAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionAmount
+	 * Commission.mmCommissionAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -350,20 +356,21 @@ public class GeneralInformation2 {
 	 * definition} = "Brokerage fee for a broker confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BrokersCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBrokersCommission = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionAmount;
 			componentContext_lazy = () -> GeneralInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommissionAmount;
 			isDerived = false;
 			xmlTag = "BrkrsComssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokersCommission";
 			definition = "Brokerage fee for a broker confirmation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected Max140Text senderToReceiverInformation;
 	/**
 	 * Specifies additional information for the receiver.
 	 * <p>
@@ -391,7 +398,7 @@ public class GeneralInformation2 {
 	 * definition} = "Specifies additional information for the receiver."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SenderToReceiverInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSenderToReceiverInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GeneralInformation2.mmObject();
 			isDerived = false;
@@ -399,11 +406,12 @@ public class GeneralInformation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderToReceiverInformation";
 			definition = "Specifies additional information for the receiver.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PartyIdentification19Choice dealingBranchTradingSide;
 	/**
 	 * Branch at the counterparty side with which the deal was done.
 	 * <p>
@@ -416,8 +424,8 @@ public class GeneralInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -437,21 +445,22 @@ public class GeneralInformation2 {
 	 * "Branch at the counterparty side with which the deal was done."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DealingBranchTradingSide = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDealingBranchTradingSide = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> GeneralInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "DealgBrnchTradgSd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingBranchTradingSide";
 			definition = "Branch at the counterparty side with which the deal was done.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification19Choice.mmObject();
 		}
 	};
+	protected PartyIdentification19Choice dealingBranchCounterpartySide;
 	/**
 	 * Branch at the counterparty side with which the deal was done.
 	 * <p>
@@ -464,8 +473,8 @@ public class GeneralInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -485,21 +494,22 @@ public class GeneralInformation2 {
 	 * "Branch at the counterparty side with which the deal was done."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DealingBranchCounterpartySide = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDealingBranchCounterpartySide = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> GeneralInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "DealgBrnchCtrPtySd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingBranchCounterpartySide";
 			definition = "Branch at the counterparty side with which the deal was done.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification19Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification19Choice.mmObject();
 		}
 	};
+	protected ContactInformation1 contactInformation;
 	/**
 	 * Specifies the name and/or electronic address of the the receiver of the
 	 * message who may be contacted for any queries concerning this trade.
@@ -512,8 +522,8 @@ public class GeneralInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#ContactPoint
-	 * Party.ContactPoint}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmContactPoint
+	 * Party.mmContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -534,36 +544,116 @@ public class GeneralInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
 			componentContext_lazy = () -> GeneralInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.ContactPoint;
 			isDerived = false;
 			xmlTag = "CtctInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactInformation";
 			definition = "Specifies the name and/or electronic address of the the receiver of the message who may be contacted for any queries concerning this trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ContactInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactInformation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralInformation2.BlockIndicator, com.tools20022.repository.msg.GeneralInformation2.RelatedTradeReference,
-						com.tools20022.repository.msg.GeneralInformation2.DealingMethod, com.tools20022.repository.msg.GeneralInformation2.BrokerIdentification, com.tools20022.repository.msg.GeneralInformation2.CounterpartyReference,
-						com.tools20022.repository.msg.GeneralInformation2.BrokersCommission, com.tools20022.repository.msg.GeneralInformation2.SenderToReceiverInformation,
-						com.tools20022.repository.msg.GeneralInformation2.DealingBranchTradingSide, com.tools20022.repository.msg.GeneralInformation2.DealingBranchCounterpartySide,
-						com.tools20022.repository.msg.GeneralInformation2.ContactInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralInformation2.mmBlockIndicator, com.tools20022.repository.msg.GeneralInformation2.mmRelatedTradeReference,
+						com.tools20022.repository.msg.GeneralInformation2.mmDealingMethod, com.tools20022.repository.msg.GeneralInformation2.mmBrokerIdentification, com.tools20022.repository.msg.GeneralInformation2.mmCounterpartyReference,
+						com.tools20022.repository.msg.GeneralInformation2.mmBrokersCommission, com.tools20022.repository.msg.GeneralInformation2.mmSenderToReceiverInformation,
+						com.tools20022.repository.msg.GeneralInformation2.mmDealingBranchTradingSide, com.tools20022.repository.msg.GeneralInformation2.mmDealingBranchCounterpartySide,
+						com.tools20022.repository.msg.GeneralInformation2.mmContactInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GeneralInformation2";
 				definition = "Information concerning the negotiation process leading to a treasury trade.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getBlockIndicator() {
+		return blockIndicator;
+	}
+
+	public void setBlockIndicator(YesNoIndicator blockIndicator) {
+		this.blockIndicator = blockIndicator;
+	}
+
+	public Max35Text getRelatedTradeReference() {
+		return relatedTradeReference;
+	}
+
+	public void setRelatedTradeReference(Max35Text relatedTradeReference) {
+		this.relatedTradeReference = relatedTradeReference;
+	}
+
+	public Trading1MethodCode getDealingMethod() {
+		return dealingMethod;
+	}
+
+	public void setDealingMethod(Trading1MethodCode dealingMethod) {
+		this.dealingMethod = dealingMethod;
+	}
+
+	public PartyIdentification19Choice getBrokerIdentification() {
+		return brokerIdentification;
+	}
+
+	public void setBrokerIdentification(PartyIdentification19Choice brokerIdentification) {
+		this.brokerIdentification = brokerIdentification;
+	}
+
+	public Max35Text getCounterpartyReference() {
+		return counterpartyReference;
+	}
+
+	public void setCounterpartyReference(Max35Text counterpartyReference) {
+		this.counterpartyReference = counterpartyReference;
+	}
+
+	public ActiveCurrencyAndAmount getBrokersCommission() {
+		return brokersCommission;
+	}
+
+	public void setBrokersCommission(ActiveCurrencyAndAmount brokersCommission) {
+		this.brokersCommission = brokersCommission;
+	}
+
+	public Max140Text getSenderToReceiverInformation() {
+		return senderToReceiverInformation;
+	}
+
+	public void setSenderToReceiverInformation(Max140Text senderToReceiverInformation) {
+		this.senderToReceiverInformation = senderToReceiverInformation;
+	}
+
+	public PartyIdentification19Choice getDealingBranchTradingSide() {
+		return dealingBranchTradingSide;
+	}
+
+	public void setDealingBranchTradingSide(PartyIdentification19Choice dealingBranchTradingSide) {
+		this.dealingBranchTradingSide = dealingBranchTradingSide;
+	}
+
+	public PartyIdentification19Choice getDealingBranchCounterpartySide() {
+		return dealingBranchCounterpartySide;
+	}
+
+	public void setDealingBranchCounterpartySide(PartyIdentification19Choice dealingBranchCounterpartySide) {
+		this.dealingBranchCounterpartySide = dealingBranchCounterpartySide;
+	}
+
+	public ContactInformation1 getContactInformation() {
+		return contactInformation;
+	}
+
+	public void setContactInformation(com.tools20022.repository.msg.ContactInformation1 contactInformation) {
+		this.contactInformation = contactInformation;
 	}
 }

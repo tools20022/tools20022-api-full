@@ -34,19 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code#PartiallyExecutedCancellationRequest
- * InvestigationExecutionConfirmation4Code.PartiallyExecutedCancellationRequest}
- * </li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code#mmPartiallyExecutedCancellationRequest
+ * InvestigationExecutionConfirmation4Code.
+ * mmPartiallyExecutedCancellationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code#RejectedCancellationRequest
- * InvestigationExecutionConfirmation4Code.RejectedCancellationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code#mmRejectedCancellationRequest
+ * InvestigationExecutionConfirmation4Code.mmRejectedCancellationRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class InvestigationExecutionConfirmation4Code extends InvestigationExecut
 	 * name} = "PartiallyExecutedCancellationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallyExecutedCancellationRequest = new MMCode() {
+	public static final MMCode mmPartiallyExecutedCancellationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyExecutedCancellationRequest";
@@ -105,7 +105,7 @@ public class InvestigationExecutionConfirmation4Code extends InvestigationExecut
 	 * name} = "RejectedCancellationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode RejectedCancellationRequest = new MMCode() {
+	public static final MMCode mmRejectedCancellationRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedCancellationRequest";
@@ -116,13 +116,13 @@ public class InvestigationExecutionConfirmation4Code extends InvestigationExecut
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PECR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestigationExecutionConfirmation4Code";
 				definition = "Indicates the result of an investigation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.PartiallyExecutedCancellationRequest,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.RejectedCancellationRequest);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.mmPartiallyExecutedCancellationRequest,
+						com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.mmRejectedCancellationRequest);
 				trace_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
 			}
 		});

@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.entity.CardholderRole;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Customer involved in a withdrawal transaction.
@@ -34,13 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer3#Profile
- * ATMCustomer3.Profile}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer3#SelectedLanguage
- * ATMCustomer3.SelectedLanguage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer3#mmProfile
+ * ATMCustomer3.mmProfile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCustomer3#AuthenticationResult
- * ATMCustomer3.AuthenticationResult}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomer3#mmSelectedLanguage
+ * ATMCustomer3.mmSelectedLanguage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMCustomer3#mmAuthenticationResult
+ * ATMCustomer3.mmAuthenticationResult}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCustomer3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMCustomerProfile1 profile;
 	/**
 	 * Profile of the customer selected to perform the withdrawal.
 	 * <p>
@@ -94,11 +97,11 @@ public class ATMCustomer3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomer2#Profile
-	 * ATMCustomer2.Profile}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomer2#mmProfile
+	 * ATMCustomer2.mmProfile}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Profile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProfile = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCustomer3.mmObject();
 			isDerived = false;
@@ -106,13 +109,14 @@ public class ATMCustomer3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Profile";
 			definition = "Profile of the customer selected to perform the withdrawal.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomer2.Profile;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomer2.mmProfile;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCustomerProfile1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmObject();
 		}
 	};
+	protected LanguageCode selectedLanguage;
 	/**
 	 * Language selected by the customer at the ATM for the customer session.
 	 * Reference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).
@@ -142,7 +146,7 @@ public class ATMCustomer3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SelectedLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSelectedLanguage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCustomer3.mmObject();
 			isDerived = false;
@@ -150,11 +154,12 @@ public class ATMCustomer3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectedLanguage";
 			definition = "Language selected by the customer at the ATM for the customer session. Reference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult;
 	/**
 	 * Result of the customer authentication for this transaction.
 	 * <p>
@@ -183,11 +188,11 @@ public class ATMCustomer3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCustomer2#AuthenticationResult
-	 * ATMCustomer2.AuthenticationResult}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCustomer2#mmAuthenticationResult
+	 * ATMCustomer2.mmAuthenticationResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthenticationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthenticationResult = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCustomer3.mmObject();
 			isDerived = false;
@@ -195,19 +200,20 @@ public class ATMCustomer3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationResult";
 			definition = "Result of the customer authentication for this transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomer2.AuthenticationResult;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomer2.mmAuthenticationResult;
 			minOccurs = 1;
-			type_lazy = () -> TransactionVerificationResult5.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer3.Profile, com.tools20022.repository.msg.ATMCustomer3.SelectedLanguage, com.tools20022.repository.msg.ATMCustomer3.AuthenticationResult);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer3.mmProfile, com.tools20022.repository.msg.ATMCustomer3.mmSelectedLanguage,
+						com.tools20022.repository.msg.ATMCustomer3.mmAuthenticationResult);
 				trace_lazy = () -> CardholderRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomer3";
 				definition = "Customer involved in a withdrawal transaction.";
@@ -215,5 +221,29 @@ public class ATMCustomer3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMCustomerProfile1 getProfile() {
+		return profile;
+	}
+
+	public void setProfile(com.tools20022.repository.msg.ATMCustomerProfile1 profile) {
+		this.profile = profile;
+	}
+
+	public LanguageCode getSelectedLanguage() {
+		return selectedLanguage;
+	}
+
+	public void setSelectedLanguage(LanguageCode selectedLanguage) {
+		this.selectedLanguage = selectedLanguage;
+	}
+
+	public List<TransactionVerificationResult5> getAuthenticationResult() {
+		return authenticationResult;
+	}
+
+	public void setAuthenticationResult(List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult) {
+		this.authenticationResult = authenticationResult;
 	}
 }

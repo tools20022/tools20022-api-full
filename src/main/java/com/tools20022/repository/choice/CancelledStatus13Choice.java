@@ -39,17 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancelledStatus13Choice#NoSpecifiedReason
- * CancelledStatus13Choice.NoSpecifiedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.CancelledStatus13Choice#mmNoSpecifiedReason
+ * CancelledStatus13Choice.mmNoSpecifiedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancelledStatus13Choice#Reason
- * CancelledStatus13Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.CancelledStatus13Choice#mmReason
+ * CancelledStatus13Choice.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancelledStatus13Choice#ExtendedReason
- * CancelledStatus13Choice.ExtendedReason}</li>
+ * {@linkplain com.tools20022.repository.choice.CancelledStatus13Choice#mmExtendedReason
+ * CancelledStatus13Choice.mmExtendedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.CancelledStatus13Choice#DataSourceScheme
- * CancelledStatus13Choice.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.choice.CancelledStatus13Choice#mmDataSourceScheme
+ * CancelledStatus13Choice.mmDataSourceScheme}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CancelledStatus13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected NoReasonCode noSpecifiedReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -89,8 +90,8 @@ public class CancelledStatus13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#NoSpecifiedReason
-	 * StatusReason.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmNoSpecifiedReason
+	 * StatusReason.mmNoSpecifiedReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,25 +112,26 @@ public class CancelledStatus13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancelledStatus3#NoSpecifiedReason
-	 * CancelledStatus3.NoSpecifiedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancelledStatus3#mmNoSpecifiedReason
+	 * CancelledStatus3.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> CancelledStatus13Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.NoSpecifiedReason;
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancelledStatus3.NoSpecifiedReason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancelledStatus3.mmNoSpecifiedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	protected CancelledStatusReason3Code reason;
 	/**
 	 * Reason for the cancelled status.
 	 * <p>
@@ -143,8 +145,8 @@ public class CancelledStatus13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#CancellationReason
-	 * StatusReason.CancellationReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmCancellationReason
+	 * StatusReason.mmCancellationReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,25 +166,26 @@ public class CancelledStatus13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancelledStatus3#Reason
-	 * CancelledStatus3.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancelledStatus3#mmReason
+	 * CancelledStatus3.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> CancelledStatus13Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.CancellationReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the cancelled status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancelledStatus3.Reason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancelledStatus3.mmReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason3Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedReason;
 	/**
 	 * Reason for the cancelled status.
 	 * <p>
@@ -212,11 +215,11 @@ public class CancelledStatus13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancelledStatus3#ExtendedReason
-	 * CancelledStatus3.ExtendedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancelledStatus3#mmExtendedReason
+	 * CancelledStatus3.mmExtendedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CancelledStatus13Choice.mmObject();
 			isDerived = false;
@@ -224,12 +227,13 @@ public class CancelledStatus13Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the cancelled status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancelledStatus3.ExtendedReason;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancelledStatus3.mmExtendedReason;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the cancelled status.
 	 * <p>
@@ -241,8 +245,8 @@ public class CancelledStatus13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#DataSourceScheme
-	 * StatusReason.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+	 * StatusReason.mmDataSourceScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -263,34 +267,34 @@ public class CancelledStatus13Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CancelledStatus3#DataSourceScheme
-	 * CancelledStatus3.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.CancelledStatus3#mmDataSourceScheme
+	 * CancelledStatus3.mmDataSourceScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> CancelledStatus13Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.DataSourceScheme;
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the cancelled status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CancelledStatus3.DataSourceScheme;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CancelledStatus3.mmDataSourceScheme;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancelledStatus13Choice.NoSpecifiedReason, com.tools20022.repository.choice.CancelledStatus13Choice.Reason,
-						com.tools20022.repository.choice.CancelledStatus13Choice.ExtendedReason, com.tools20022.repository.choice.CancelledStatus13Choice.DataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancelledStatus13Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.CancelledStatus13Choice.mmReason,
+						com.tools20022.repository.choice.CancelledStatus13Choice.mmExtendedReason, com.tools20022.repository.choice.CancelledStatus13Choice.mmDataSourceScheme);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatus13Choice";
 				definition = "Reason for the cancelled status.";
@@ -298,5 +302,37 @@ public class CancelledStatus13Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NoReasonCode getNoSpecifiedReason() {
+		return noSpecifiedReason;
+	}
+
+	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = noSpecifiedReason;
+	}
+
+	public CancelledStatusReason3Code getReason() {
+		return reason;
+	}
+
+	public void setReason(CancelledStatusReason3Code reason) {
+		this.reason = reason;
+	}
+
+	public Extended350Code getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
 	}
 }

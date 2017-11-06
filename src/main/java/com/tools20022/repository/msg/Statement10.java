@@ -39,27 +39,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Statement10#Identifier
- * Statement10.Identifier}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement10#StatementDateTime
- * Statement10.StatementDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement10#Frequency
- * Statement10.Frequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement10#UpdateType
- * Statement10.UpdateType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement10#ActivityIndicator
- * Statement10.ActivityIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement10#StatementBasis
- * Statement10.StatementBasis}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Statement10#ReportNumber
- * Statement10.ReportNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement10#mmIdentifier
+ * Statement10.mmIdentifier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Statement10#mmStatementDateTime
+ * Statement10.mmStatementDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement10#mmFrequency
+ * Statement10.mmFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement10#mmUpdateType
+ * Statement10.mmUpdateType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Statement10#mmActivityIndicator
+ * Statement10.mmActivityIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement10#mmStatementBasis
+ * Statement10.mmStatementBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement10#mmReportNumber
+ * Statement10.mmReportNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Statement10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identifier;
 	/**
 	 * Reference of the statement.
 	 * <p>
@@ -101,7 +104,7 @@ public class Statement10 {
 	 * definition} = "Reference of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement10.mmObject();
 			isDerived = false;
@@ -109,11 +112,12 @@ public class Statement10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identifier";
 			definition = "Reference of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice statementDateTime;
 	/**
 	 * Date of the statement.
 	 * <p>
@@ -141,7 +145,7 @@ public class Statement10 {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement10.mmObject();
 			isDerived = false;
@@ -149,11 +153,12 @@ public class Statement10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateTime";
 			definition = "Date of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected FrequencyCodeAndDSSCode1Choice frequency;
 	/**
 	 * Frequency of the statement.
 	 * <p>
@@ -181,7 +186,7 @@ public class Statement10 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement10.mmObject();
 			isDerived = false;
@@ -189,11 +194,12 @@ public class Statement10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> FrequencyCodeAndDSSCode1Choice.mmObject();
 		}
 	};
+	protected StatementUpdateTypeCodeAndDSSCodeChoice updateType;
 	/**
 	 * Indicates whether the report is complete or contains changes only.
 	 * <p>
@@ -222,7 +228,7 @@ public class Statement10 {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement10.mmObject();
 			isDerived = false;
@@ -230,11 +236,12 @@ public class Statement10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the report is complete or contains changes only.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 		}
 	};
+	protected YesNoIndicator activityIndicator;
 	/**
 	 * Indicates whether there is activity or information update reported in the
 	 * statement.
@@ -265,7 +272,7 @@ public class Statement10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement10.mmObject();
 			isDerived = false;
@@ -273,11 +280,12 @@ public class Statement10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected StatementBasisCodeAndDSSCodeChoice statementBasis;
 	/**
 	 * Type of balance on which the statement is prepared.
 	 * <p>
@@ -305,7 +313,7 @@ public class Statement10 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement10.mmObject();
 			isDerived = false;
@@ -313,11 +321,12 @@ public class Statement10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasis";
 			definition = "Type of balance on which the statement is prepared.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> StatementBasisCodeAndDSSCodeChoice.mmObject();
 		}
 	};
+	protected Max5NumericText reportNumber;
 	/**
 	 * Sequential number of the statement.
 	 * <p>
@@ -345,7 +354,7 @@ public class Statement10 {
 	 * definition} = "Sequential number of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Statement10.mmObject();
 			isDerived = false;
@@ -353,8 +362,8 @@ public class Statement10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the statement.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
 		}
 	};
@@ -362,15 +371,71 @@ public class Statement10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement10.Identifier, com.tools20022.repository.msg.Statement10.StatementDateTime, com.tools20022.repository.msg.Statement10.Frequency,
-						com.tools20022.repository.msg.Statement10.UpdateType, com.tools20022.repository.msg.Statement10.ActivityIndicator, com.tools20022.repository.msg.Statement10.StatementBasis,
-						com.tools20022.repository.msg.Statement10.ReportNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement10.mmIdentifier, com.tools20022.repository.msg.Statement10.mmStatementDateTime, com.tools20022.repository.msg.Statement10.mmFrequency,
+						com.tools20022.repository.msg.Statement10.mmUpdateType, com.tools20022.repository.msg.Statement10.mmActivityIndicator, com.tools20022.repository.msg.Statement10.mmStatementBasis,
+						com.tools20022.repository.msg.Statement10.mmReportNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Statement10";
 				definition = "General characteristics related to a statement which reports information for a precise date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentifier() {
+		return identifier;
+	}
+
+	public void setIdentifier(Max35Text identifier) {
+		this.identifier = identifier;
+	}
+
+	public DateAndDateTimeChoice getStatementDateTime() {
+		return statementDateTime;
+	}
+
+	public void setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
+		this.statementDateTime = statementDateTime;
+	}
+
+	public FrequencyCodeAndDSSCode1Choice getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(FrequencyCodeAndDSSCode1Choice frequency) {
+		this.frequency = frequency;
+	}
+
+	public StatementUpdateTypeCodeAndDSSCodeChoice getUpdateType() {
+		return updateType;
+	}
+
+	public void setUpdateType(StatementUpdateTypeCodeAndDSSCodeChoice updateType) {
+		this.updateType = updateType;
+	}
+
+	public YesNoIndicator getActivityIndicator() {
+		return activityIndicator;
+	}
+
+	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = activityIndicator;
+	}
+
+	public StatementBasisCodeAndDSSCodeChoice getStatementBasis() {
+		return statementBasis;
+	}
+
+	public void setStatementBasis(StatementBasisCodeAndDSSCodeChoice statementBasis) {
+		this.statementBasis = statementBasis;
+	}
+
+	public Max5NumericText getReportNumber() {
+		return reportNumber;
+	}
+
+	public void setReportNumber(Max5NumericText reportNumber) {
+		this.reportNumber = reportNumber;
 	}
 }

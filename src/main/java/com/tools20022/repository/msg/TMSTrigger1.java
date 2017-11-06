@@ -37,12 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TMSTrigger1#TMSContactLevel
- * TMSTrigger1.TMSContactLevel}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSTrigger1#TMSIdentification
- * TMSTrigger1.TMSIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TMSTrigger1#TMSContactDateTime
- * TMSTrigger1.TMSContactDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSTrigger1#mmTMSContactLevel
+ * TMSTrigger1.mmTMSContactLevel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TMSTrigger1#mmTMSIdentification
+ * TMSTrigger1.mmTMSIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TMSTrigger1#mmTMSContactDateTime
+ * TMSTrigger1.mmTMSContactDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TMSTrigger1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TMSContactLevel1Code tMSContactLevel;
 	/**
 	 * Level of urgency in contacting the maintenance.
 	 * <p>
@@ -82,8 +85,8 @@ public class TMSTrigger1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#ContactLevel
-	 * TerminalManagementSystem.ContactLevel}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmContactLevel
+	 * TerminalManagementSystem.mmContactLevel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -101,20 +104,21 @@ public class TMSTrigger1 {
 	 * definition} = "Level of urgency in contacting the maintenance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TMSContactLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTMSContactLevel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmContactLevel;
 			componentContext_lazy = () -> TMSTrigger1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.ContactLevel;
 			isDerived = false;
 			xmlTag = "TMSCtctLvl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSContactLevel";
 			definition = "Level of urgency in contacting the maintenance.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TMSContactLevel1Code.mmObject();
 		}
 	};
+	protected Max35Text tMSIdentification;
 	/**
 	 * Identification of the host to contact for the maintenance.
 	 * <p>
@@ -142,7 +146,7 @@ public class TMSTrigger1 {
 	 * "Identification of the host to contact for the maintenance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TMSIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTMSIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TMSTrigger1.mmObject();
 			isDerived = false;
@@ -150,11 +154,12 @@ public class TMSTrigger1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSIdentification";
 			definition = "Identification of the host to contact for the maintenance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime tMSContactDateTime;
 	/**
 	 * Date and time for calling the maintenance.
 	 * <p>
@@ -167,8 +172,8 @@ public class TMSTrigger1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#ContactDateTime
-	 * TerminalManagementSystem.ContactDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmContactDateTime
+	 * TerminalManagementSystem.mmContactDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -186,17 +191,17 @@ public class TMSTrigger1 {
 	 * definition} = "Date and time for calling the maintenance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TMSContactDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTMSContactDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmContactDateTime;
 			componentContext_lazy = () -> TMSTrigger1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.ContactDateTime;
 			isDerived = false;
 			xmlTag = "TMSCtctDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSContactDateTime";
 			definition = "Date and time for calling the maintenance.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
@@ -204,14 +209,39 @@ public class TMSTrigger1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSTrigger1.TMSContactLevel, com.tools20022.repository.msg.TMSTrigger1.TMSIdentification, com.tools20022.repository.msg.TMSTrigger1.TMSContactDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSTrigger1.mmTMSContactLevel, com.tools20022.repository.msg.TMSTrigger1.mmTMSIdentification,
+						com.tools20022.repository.msg.TMSTrigger1.mmTMSContactDateTime);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TMSTrigger1";
 				definition = "Instructs the POI (Point Of Interaction) how to contact the host of the terminal management system (TMS), to initiate the maintenance of the terminal.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TMSContactLevel1Code getTMSContactLevel() {
+		return tMSContactLevel;
+	}
+
+	public void setTMSContactLevel(TMSContactLevel1Code tMSContactLevel) {
+		this.tMSContactLevel = tMSContactLevel;
+	}
+
+	public Max35Text getTMSIdentification() {
+		return tMSIdentification;
+	}
+
+	public void setTMSIdentification(Max35Text tMSIdentification) {
+		this.tMSIdentification = tMSIdentification;
+	}
+
+	public ISODateTime getTMSContactDateTime() {
+		return tMSContactDateTime;
+	}
+
+	public void setTMSContactDateTime(ISODateTime tMSContactDateTime) {
+		this.tMSContactDateTime = tMSContactDateTime;
 	}
 }

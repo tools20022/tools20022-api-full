@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines the criteria used to search for an account.
@@ -36,33 +37,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#AccountIdentification
- * CollateralValueSearchCriteria1.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#mmAccountIdentification
+ * CollateralValueSearchCriteria1.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#Currency
- * CollateralValueSearchCriteria1.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#mmCurrency
+ * CollateralValueSearchCriteria1.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#AccountOwner
- * CollateralValueSearchCriteria1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#mmAccountOwner
+ * CollateralValueSearchCriteria1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#AccountServicer
- * CollateralValueSearchCriteria1.AccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#mmAccountServicer
+ * CollateralValueSearchCriteria1.mmAccountServicer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#FinancialInstrumentIdentification
- * CollateralValueSearchCriteria1.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#mmFinancialInstrumentIdentification
+ * CollateralValueSearchCriteria1.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#SecuritiesAccountOwner
- * CollateralValueSearchCriteria1.SecuritiesAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#mmSecuritiesAccountOwner
+ * CollateralValueSearchCriteria1.mmSecuritiesAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#SecuritiesAccountServicer
- * CollateralValueSearchCriteria1.SecuritiesAccountServicer}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria1#mmSecuritiesAccountServicer
+ * CollateralValueSearchCriteria1.mmSecuritiesAccountServicer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralValueSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AccountIdentification4Choice accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -106,7 +108,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -114,12 +116,13 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountIdentification4Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	protected List<ActiveOrHistoricCurrencyCode> currency;
 	/**
 	 * Medium of exchange of value.
 	 * <p>
@@ -148,7 +151,7 @@ public class CollateralValueSearchCriteria1 {
 	 * definition} = "Medium of exchange of value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -160,6 +163,7 @@ public class CollateralValueSearchCriteria1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice accountOwner;
 	/**
 	 * Party that legally owns the account being queried.
 	 * <p>
@@ -188,7 +192,7 @@ public class CollateralValueSearchCriteria1 {
 	 * definition} = "Party that legally owns the account being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -196,11 +200,12 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice accountServicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, which is
 	 * being queried.
@@ -232,7 +237,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -240,11 +245,12 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, which is being queried.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification;
 	/**
 	 * ISIN identification of the related financial instrument into which this
 	 * security can be converted.
@@ -275,7 +281,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -284,10 +290,11 @@ public class CollateralValueSearchCriteria1 {
 			name = "FinancialInstrumentIdentification";
 			definition = "ISIN identification of the related financial instrument into which this security can be converted.";
 			minOccurs = 0;
-			type_lazy = () -> SecurityIdentification14.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice securitiesAccountOwner;
 	/**
 	 * Unique and unambiguous identification of the securities account owner.
 	 * <p>
@@ -317,7 +324,7 @@ public class CollateralValueSearchCriteria1 {
 	 * "Unique and unambiguous identification of the securities account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesAccountOwner = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -325,11 +332,12 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountOwner";
 			definition = "Unique and unambiguous identification of the securities account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected PartyIdentification71Choice securitiesAccountServicer;
 	/**
 	 * Party that manages the securities account on behalf of the account owner.
 	 * <p>
@@ -360,7 +368,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesAccountServicer = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -368,8 +376,8 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountServicer";
 			definition = "Party that manages the securities account on behalf of the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
@@ -377,16 +385,72 @@ public class CollateralValueSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValueSearchCriteria1.AccountIdentification, com.tools20022.repository.msg.CollateralValueSearchCriteria1.Currency,
-						com.tools20022.repository.msg.CollateralValueSearchCriteria1.AccountOwner, com.tools20022.repository.msg.CollateralValueSearchCriteria1.AccountServicer,
-						com.tools20022.repository.msg.CollateralValueSearchCriteria1.FinancialInstrumentIdentification, com.tools20022.repository.msg.CollateralValueSearchCriteria1.SecuritiesAccountOwner,
-						com.tools20022.repository.msg.CollateralValueSearchCriteria1.SecuritiesAccountServicer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmAccountIdentification, com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmCurrency,
+						com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmAccountOwner, com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmAccountServicer,
+						com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmSecuritiesAccountOwner,
+						com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmSecuritiesAccountServicer);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueSearchCriteria1";
 				definition = "Defines the criteria used to search for an account.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AccountIdentification4Choice getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(AccountIdentification4Choice accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public List<ActiveOrHistoricCurrencyCode> getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(List<ActiveOrHistoricCurrencyCode> currency) {
+		this.currency = currency;
+	}
+
+	public PartyIdentification71Choice getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification71Choice accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public PartyIdentification71Choice getAccountServicer() {
+		return accountServicer;
+	}
+
+	public void setAccountServicer(PartyIdentification71Choice accountServicer) {
+		this.accountServicer = accountServicer;
+	}
+
+	public List<SecurityIdentification14> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public PartyIdentification71Choice getSecuritiesAccountOwner() {
+		return securitiesAccountOwner;
+	}
+
+	public void setSecuritiesAccountOwner(PartyIdentification71Choice securitiesAccountOwner) {
+		this.securitiesAccountOwner = securitiesAccountOwner;
+	}
+
+	public PartyIdentification71Choice getSecuritiesAccountServicer() {
+		return securitiesAccountServicer;
+	}
+
+	public void setSecuritiesAccountServicer(PartyIdentification71Choice securitiesAccountServicer) {
+		this.securitiesAccountServicer = securitiesAccountServicer;
 	}
 }

@@ -34,8 +34,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#CurrencyExchangeInformationOrBusinessErrorRule
- * CurrencyExchangeReport.CurrencyExchangeInformationOrBusinessErrorRule}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#mmCurrencyExchangeInformationOrBusinessErrorRule
+ * CurrencyExchangeReport.mmCurrencyExchangeInformationOrBusinessErrorRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -43,21 +43,21 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#CurrencyReference
- * CurrencyExchangeReport.CurrencyReference}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#mmCurrencyReference
+ * CurrencyExchangeReport.mmCurrencyReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#BusinessError
- * CurrencyExchangeReport.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#mmBusinessError
+ * CurrencyExchangeReport.mmBusinessError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#CurrencyExchangeInformation
- * CurrencyExchangeReport.CurrencyExchangeInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#mmCurrencyExchangeInformation
+ * CurrencyExchangeReport.mmCurrencyExchangeInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -73,6 +73,7 @@ import java.util.function.Supplier;
 public class CurrencyExchangeReport {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyReferenceDetails currencyReference;
 	/**
 	 * Source and target currencies for which information is request.
 	 * <p>
@@ -101,7 +102,7 @@ public class CurrencyExchangeReport {
 	 * "Source and target currencies for which information is request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CurrencyExchangeReport.mmObject();
 			isDerived = false;
@@ -109,12 +110,13 @@ public class CurrencyExchangeReport {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyReference";
 			definition = "Source and target currencies for which information is request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyReferenceDetails.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencyReferenceDetails.mmObject();
 		}
 	};
+	protected ErrorHandling2 businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -141,7 +143,7 @@ public class CurrencyExchangeReport {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CurrencyExchangeReport.mmObject();
 			isDerived = false;
@@ -149,12 +151,13 @@ public class CurrencyExchangeReport {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ErrorHandling2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
 		}
 	};
+	protected CurrencyExchangeDetails currencyExchangeInformation;
 	/**
 	 * Requested business information.
 	 * <p>
@@ -182,7 +185,7 @@ public class CurrencyExchangeReport {
 	 * definition} = "Requested business information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyExchangeInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyExchangeInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CurrencyExchangeReport.mmObject();
 			isDerived = false;
@@ -190,10 +193,10 @@ public class CurrencyExchangeReport {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchangeInformation";
 			definition = "Requested business information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyExchangeDetails.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeDetails.mmObject();
 		}
 	};
 	/**
@@ -206,11 +209,11 @@ public class CurrencyExchangeReport {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#BusinessError
-	 * CurrencyExchangeReport.BusinessError}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#mmBusinessError
+	 * CurrencyExchangeReport.mmBusinessError}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#CurrencyExchangeInformation
-	 * CurrencyExchangeReport.CurrencyExchangeInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyExchangeReport#mmCurrencyExchangeInformation
+	 * CurrencyExchangeReport.mmCurrencyExchangeInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -230,22 +233,22 @@ public class CurrencyExchangeReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor CurrencyExchangeInformationOrBusinessErrorRule = new MMXor() {
+	public static final MMXor mmCurrencyExchangeInformationOrBusinessErrorRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchangeInformationOrBusinessErrorRule";
 			definition = "Either CurrencyExchangeInformation or BusinessError must be present, but not both.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeReport.BusinessError, com.tools20022.repository.msg.CurrencyExchangeReport.CurrencyExchangeInformation);
 			messageComponent_lazy = () -> CurrencyExchangeReport.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeReport.mmBusinessError, com.tools20022.repository.msg.CurrencyExchangeReport.mmCurrencyExchangeInformation);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeReport.CurrencyReference, com.tools20022.repository.msg.CurrencyExchangeReport.BusinessError,
-						com.tools20022.repository.msg.CurrencyExchangeReport.CurrencyExchangeInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeReport.mmCurrencyReference, com.tools20022.repository.msg.CurrencyExchangeReport.mmBusinessError,
+						com.tools20022.repository.msg.CurrencyExchangeReport.mmCurrencyExchangeInformation);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -256,9 +259,33 @@ public class CurrencyExchangeReport {
 				})).get();
 				name = "CurrencyExchangeReport";
 				definition = "Reports either on currency exchange information or on a business error.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeReport.CurrencyExchangeInformationOrBusinessErrorRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeReport.mmCurrencyExchangeInformationOrBusinessErrorRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyReferenceDetails getCurrencyReference() {
+		return currencyReference;
+	}
+
+	public void setCurrencyReference(com.tools20022.repository.msg.CurrencyReferenceDetails currencyReference) {
+		this.currencyReference = currencyReference;
+	}
+
+	public ErrorHandling2 getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
+		this.businessError = businessError;
+	}
+
+	public CurrencyExchangeDetails getCurrencyExchangeInformation() {
+		return currencyExchangeInformation;
+	}
+
+	public void setCurrencyExchangeInformation(com.tools20022.repository.msg.CurrencyExchangeDetails currencyExchangeInformation) {
+		this.currencyExchangeInformation = currencyExchangeInformation;
 	}
 }

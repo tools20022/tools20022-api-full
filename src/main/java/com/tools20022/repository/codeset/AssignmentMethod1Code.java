@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssignmentMethod1Code#Random
- * AssignmentMethod1Code.Random}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssignmentMethod1Code#mmRandom
+ * AssignmentMethod1Code.mmRandom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssignmentMethod1Code#Prorata
- * AssignmentMethod1Code.Prorata}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssignmentMethod1Code#mmProrata
+ * AssignmentMethod1Code.mmProrata}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class AssignmentMethod1Code extends AssignmentMethodCode {
 	 * name} = "Random"</li>
 	 * </ul>
 	 */
-	public static final MMCode Random = new MMCode() {
+	public static final MMCode mmRandom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Random";
@@ -104,7 +104,7 @@ public class AssignmentMethod1Code extends AssignmentMethodCode {
 	 * name} = "Prorata"</li>
 	 * </ul>
 	 */
-	public static final MMCode Prorata = new MMCode() {
+	public static final MMCode mmProrata = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prorata";
@@ -115,12 +115,12 @@ public class AssignmentMethod1Code extends AssignmentMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RAND");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssignmentMethod1Code";
 				definition = "Method under which assignment was conducted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssignmentMethod1Code.Random, com.tools20022.repository.codeset.AssignmentMethod1Code.Prorata);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssignmentMethod1Code.mmRandom, com.tools20022.repository.codeset.AssignmentMethod1Code.mmProrata);
 				trace_lazy = () -> AssignmentMethodCode.mmObject();
 			}
 		});

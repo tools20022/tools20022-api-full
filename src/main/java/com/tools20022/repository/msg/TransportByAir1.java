@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.AirportName1Choice;
 import com.tools20022.repository.entity.TransportByAir;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to the transportation of goods by air.
@@ -34,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByAir1#DepartureAirport
- * TransportByAir1.DepartureAirport}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByAir1#mmDepartureAirport
+ * TransportByAir1.mmDepartureAirport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByAir1#DestinationAirport
- * TransportByAir1.DestinationAirport}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByAir1#mmDestinationAirport
+ * TransportByAir1.mmDestinationAirport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportByAir1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AirportName1Choice> departureAirport;
 	/**
 	 * Place from where the goods must leave.
 	 * <p>
@@ -73,8 +75,8 @@ public class TransportByAir1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
-	 * Transport.PlaceOfDeparture}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+	 * Transport.mmPlaceOfDeparture}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +95,21 @@ public class TransportByAir1 {
 	 * definition} = "Place from where the goods must leave."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DepartureAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> TransportByAir1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDeparture;
 			isDerived = false;
 			xmlTag = "DprtureAirprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepartureAirport";
 			definition = "Place from where the goods must leave.";
 			minOccurs = 0;
-			type_lazy = () -> AirportName1Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> AirportName1Choice.mmObject();
 		}
 	};
+	protected List<AirportName1Choice> destinationAirport;
 	/**
 	 * Place where the goods must arrive.
 	 * <p>
@@ -118,8 +121,8 @@ public class TransportByAir1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
-	 * Transport.PlaceOfDestination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+	 * Transport.mmPlaceOfDestination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,32 +141,48 @@ public class TransportByAir1 {
 	 * definition} = "Place where the goods must arrive."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DestinationAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> TransportByAir1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDestination;
 			isDerived = false;
 			xmlTag = "DstnAirprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DestinationAirport";
 			definition = "Place where the goods must arrive.";
 			minOccurs = 1;
-			type_lazy = () -> AirportName1Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> AirportName1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir1.DepartureAirport, com.tools20022.repository.msg.TransportByAir1.DestinationAirport);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir1.mmDepartureAirport, com.tools20022.repository.msg.TransportByAir1.mmDestinationAirport);
 				trace_lazy = () -> TransportByAir.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransportByAir1";
 				definition = "Information related to the transportation of goods by air.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AirportName1Choice> getDepartureAirport() {
+		return departureAirport;
+	}
+
+	public void setDepartureAirport(List<AirportName1Choice> departureAirport) {
+		this.departureAirport = departureAirport;
+	}
+
+	public List<AirportName1Choice> getDestinationAirport() {
+		return destinationAirport;
+	}
+
+	public void setDestinationAirport(List<AirportName1Choice> destinationAirport) {
+		this.destinationAirport = destinationAirport;
 	}
 }

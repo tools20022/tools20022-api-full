@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EligibilityIdentification1Choice#Country
- * EligibilityIdentification1Choice.Country}</li>
+ * {@linkplain com.tools20022.repository.choice.EligibilityIdentification1Choice#mmCountry
+ * EligibilityIdentification1Choice.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EligibilityIdentification1Choice#FinancialInstrumentIdentification
- * EligibilityIdentification1Choice.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.EligibilityIdentification1Choice#mmFinancialInstrumentIdentification
+ * EligibilityIdentification1Choice.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.EligibilityIdentification1Choice#IssuerCSDIdentification
- * EligibilityIdentification1Choice.IssuerCSDIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.EligibilityIdentification1Choice#mmIssuerCSDIdentification
+ * EligibilityIdentification1Choice.mmIssuerCSDIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EligibilityIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected CountryCode country;
 	/**
 	 * Country code used to identify the issuance country to be defined as
 	 * eligible.
@@ -92,7 +93,7 @@ public class EligibilityIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EligibilityIdentification1Choice.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class EligibilityIdentification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country code used to identify the issuance country to be defined as eligible.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected ISINIdentifier financialInstrumentIdentification;
 	/**
 	 * ISIN used to identify the security to be defined as eligible.
 	 * <p>
@@ -134,7 +136,7 @@ public class EligibilityIdentification1Choice {
 	 * "ISIN  used to identify the security to be defined as eligible."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EligibilityIdentification1Choice.mmObject();
 			isDerived = false;
@@ -142,11 +144,12 @@ public class EligibilityIdentification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "ISIN  used to identify the security to be defined as eligible.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	protected SystemPartyIdentification1Choice issuerCSDIdentification;
 	/**
 	 * Issuer CSD identification used to identify the securities to be defined
 	 * as eligible.
@@ -178,7 +181,7 @@ public class EligibilityIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerCSDIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerCSDIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EligibilityIdentification1Choice.mmObject();
 			isDerived = false;
@@ -186,23 +189,47 @@ public class EligibilityIdentification1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSDIdentification";
 			definition = "Issuer CSD identification used to identify the securities to be defined as eligible.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EligibilityIdentification1Choice.Country, com.tools20022.repository.choice.EligibilityIdentification1Choice.FinancialInstrumentIdentification,
-						com.tools20022.repository.choice.EligibilityIdentification1Choice.IssuerCSDIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EligibilityIdentification1Choice.mmCountry, com.tools20022.repository.choice.EligibilityIdentification1Choice.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.choice.EligibilityIdentification1Choice.mmIssuerCSDIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EligibilityIdentification1Choice";
 				definition = "Specifies the eligibility details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public ISINIdentifier getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification;
+	}
+
+	public void setFinancialInstrumentIdentification(ISINIdentifier financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	}
+
+	public SystemPartyIdentification1Choice getIssuerCSDIdentification() {
+		return issuerCSDIdentification;
+	}
+
+	public void setIssuerCSDIdentification(com.tools20022.repository.choice.SystemPartyIdentification1Choice issuerCSDIdentification) {
+		this.issuerCSDIdentification = issuerCSDIdentification;
 	}
 }

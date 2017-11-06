@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.AdditionalRightCode1Choice;
 import com.tools20022.repository.choice.AdditionalRightThreshold1Choice;
 import com.tools20022.repository.choice.DateFormat2Choice;
 import com.tools20022.repository.datatype.Max256Text;
+import com.tools20022.repository.entity.AdditionalRight;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,20 +39,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalRights1#AdditionalRight
- * AdditionalRights1.AdditionalRight}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalRights1#mmAdditionalRight
+ * AdditionalRights1.mmAdditionalRight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalRights1#AdditionalRightInformationURLAddress
- * AdditionalRights1.AdditionalRightInformationURLAddress}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalRights1#mmAdditionalRightInformationURLAddress
+ * AdditionalRights1.mmAdditionalRightInformationURLAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalRights1#AdditionalRightDeadline
- * AdditionalRights1.AdditionalRightDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalRights1#mmAdditionalRightDeadline
+ * AdditionalRights1.mmAdditionalRightDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalRights1#AdditionalRightMarketDeadline
- * AdditionalRights1.AdditionalRightMarketDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalRights1#mmAdditionalRightMarketDeadline
+ * AdditionalRights1.mmAdditionalRightMarketDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalRights1#AdditionalRightThreshold
- * AdditionalRights1.AdditionalRightThreshold}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalRights1#mmAdditionalRightThreshold
+ * AdditionalRights1.mmAdditionalRightThreshold}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalRights1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AdditionalRightCode1Choice additionalRight;
 	/**
 	 * Specific rights granted to the shareholders that can be exercised at
 	 * shareholders meetings (for example, the right to ask questions, the right
@@ -99,8 +101,8 @@ public class AdditionalRights1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AdditionalRight#Type
-	 * AdditionalRight.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.AdditionalRight#mmType
+	 * AdditionalRight.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -123,27 +125,28 @@ public class AdditionalRights1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalRights2#AdditionalRight
-	 * AdditionalRights2.AdditionalRight}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalRights2#mmAdditionalRight
+	 * AdditionalRights2.mmAdditionalRight}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalRight = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalRight = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmType;
 			componentContext_lazy = () -> AdditionalRights1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.Type;
 			isDerived = false;
 			xmlTag = "AddtlRght";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRight";
 			definition = "Specific rights granted to the shareholders that can be exercised at shareholders meetings (for example, the right to ask questions, the right to add items to the agenda or table draft resolutions).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.AdditionalRight);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRight);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AdditionalRightCode1Choice.mmObject();
 		}
 	};
+	protected Max256Text additionalRightInformationURLAddress;
 	/**
 	 * Address to use over the www (HTTP) service where addtional information on
 	 * specific rights granted to the shareholders can be found.
@@ -157,8 +160,8 @@ public class AdditionalRights1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#URLAddress
-	 * ElectronicAddress.URLAddress}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmURLAddress
+	 * ElectronicAddress.mmURLAddress}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -181,27 +184,28 @@ public class AdditionalRights1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalRights2#AdditionalRightInformationURLAddress
-	 * AdditionalRights2.AdditionalRightInformationURLAddress}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalRights2#mmAdditionalRightInformationURLAddress
+	 * AdditionalRights2.mmAdditionalRightInformationURLAddress}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalRightInformationURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalRightInformationURLAddress = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> AdditionalRights1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.URLAddress;
 			isDerived = false;
 			xmlTag = "AddtlRghtInfURLAdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightInformationURLAddress";
 			definition = "Address to use over the www (HTTP) service where addtional information on specific rights granted to the shareholders can be found.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.AdditionalRightInformationURLAddress);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightInformationURLAddress);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	protected DateFormat2Choice additionalRightDeadline;
 	/**
 	 * Additional right granted to determine the date and time by which security
 	 * holders can propose amendments or new resolutions. This deadline is set
@@ -217,8 +221,8 @@ public class AdditionalRights1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Meeting#Deadline
-	 * Meeting.Deadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Meeting#mmDeadline
+	 * Meeting.mmDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -241,27 +245,28 @@ public class AdditionalRights1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalRights2#AdditionalRightDeadline
-	 * AdditionalRights2.AdditionalRightDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalRights2#mmAdditionalRightDeadline
+	 * AdditionalRights2.mmAdditionalRightDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalRightDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalRightDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmDeadline;
 			componentContext_lazy = () -> AdditionalRights1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.Deadline;
 			isDerived = false;
 			xmlTag = "AddtlRghtDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightDeadline";
 			definition = "Additional right granted to determine the date and time by which security holders can propose amendments or new resolutions. This deadline is set by an intermediary.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.AdditionalRightDeadline);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightDeadline);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected DateFormat2Choice additionalRightMarketDeadline;
 	/**
 	 * Additional right granted to determine the date and time by which security
 	 * holders can propose amendments or new resolutions. This deadline is set
@@ -277,8 +282,8 @@ public class AdditionalRights1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#MarketDeadline
-	 * Deadline.MarketDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmMarketDeadline
+	 * Deadline.mmMarketDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -301,27 +306,28 @@ public class AdditionalRights1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalRights2#AdditionalRightMarketDeadline
-	 * AdditionalRights2.AdditionalRightMarketDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalRights2#mmAdditionalRightMarketDeadline
+	 * AdditionalRights2.mmAdditionalRightMarketDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalRightMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalRightMarketDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> AdditionalRights1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.MarketDeadline;
 			isDerived = false;
 			xmlTag = "AddtlRghtMktDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightMarketDeadline";
 			definition = "Additional right granted to determine the date and time by which security holders can propose amendments or new resolutions. This deadline is set by the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.AdditionalRightMarketDeadline);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightMarketDeadline);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	protected AdditionalRightThreshold1Choice additionalRightThreshold;
 	/**
 	 * Additional right granted to specify the minimum stake in share capital or
 	 * cash value or number of security holders required to table resolutions.
@@ -336,8 +342,8 @@ public class AdditionalRights1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AdditionalRight#AdditionalRightThreshold
-	 * AdditionalRight.AdditionalRightThreshold}</li>
+	 * {@linkplain com.tools20022.repository.entity.AdditionalRight#mmAdditionalRightThreshold
+	 * AdditionalRight.mmAdditionalRightThreshold}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -360,24 +366,24 @@ public class AdditionalRights1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalRights2#AdditionalRightThreshold
-	 * AdditionalRights2.AdditionalRightThreshold}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalRights2#mmAdditionalRightThreshold
+	 * AdditionalRights2.mmAdditionalRightThreshold}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalRightThreshold = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalRightThreshold = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmAdditionalRightThreshold;
 			componentContext_lazy = () -> AdditionalRights1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.AdditionalRightThreshold;
 			isDerived = false;
 			xmlTag = "AddtlRghtThrshld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightThreshold";
 			definition = "Additional right granted to specify the minimum stake in share capital or cash value or number of security holders required to table resolutions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.AdditionalRightThreshold);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightThreshold);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalRightThreshold1Choice.mmObject();
 		}
 	};
@@ -385,11 +391,11 @@ public class AdditionalRights1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights1.AdditionalRight, com.tools20022.repository.msg.AdditionalRights1.AdditionalRightInformationURLAddress,
-						com.tools20022.repository.msg.AdditionalRights1.AdditionalRightDeadline, com.tools20022.repository.msg.AdditionalRights1.AdditionalRightMarketDeadline,
-						com.tools20022.repository.msg.AdditionalRights1.AdditionalRightThreshold);
-				trace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRight, com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRightInformationURLAddress,
+						com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRightDeadline, com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRightMarketDeadline,
+						com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRightThreshold);
+				trace_lazy = () -> AdditionalRight.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalRights1";
 				definition = "Information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, it may indicate where such information may be obtained.";
@@ -397,5 +403,45 @@ public class AdditionalRights1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AdditionalRightCode1Choice getAdditionalRight() {
+		return additionalRight;
+	}
+
+	public void setAdditionalRight(AdditionalRightCode1Choice additionalRight) {
+		this.additionalRight = additionalRight;
+	}
+
+	public Max256Text getAdditionalRightInformationURLAddress() {
+		return additionalRightInformationURLAddress;
+	}
+
+	public void setAdditionalRightInformationURLAddress(Max256Text additionalRightInformationURLAddress) {
+		this.additionalRightInformationURLAddress = additionalRightInformationURLAddress;
+	}
+
+	public DateFormat2Choice getAdditionalRightDeadline() {
+		return additionalRightDeadline;
+	}
+
+	public void setAdditionalRightDeadline(DateFormat2Choice additionalRightDeadline) {
+		this.additionalRightDeadline = additionalRightDeadline;
+	}
+
+	public DateFormat2Choice getAdditionalRightMarketDeadline() {
+		return additionalRightMarketDeadline;
+	}
+
+	public void setAdditionalRightMarketDeadline(DateFormat2Choice additionalRightMarketDeadline) {
+		this.additionalRightMarketDeadline = additionalRightMarketDeadline;
+	}
+
+	public AdditionalRightThreshold1Choice getAdditionalRightThreshold() {
+		return additionalRightThreshold;
+	}
+
+	public void setAdditionalRightThreshold(AdditionalRightThreshold1Choice additionalRightThreshold) {
+		this.additionalRightThreshold = additionalRightThreshold;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PreviousYear2#PreviousYears
- * PreviousYear2.PreviousYears}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PreviousYear2#mmPreviousYears
+ * PreviousYear2.mmPreviousYears}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PreviousYear2#CashComponentIndicator
- * PreviousYear2.CashComponentIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.PreviousYear2#mmCashComponentIndicator
+ * PreviousYear2.mmCashComponentIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PreviousYear2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PreviousYear1Choice previousYears;
 	/**
 	 * Selection of investment plans issued during previous years.
 	 * <p>
@@ -78,8 +79,8 @@ public class PreviousYear2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#TransferredYear
-	 * PortfolioTransfer.TransferredYear}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmTransferredYear
+	 * PortfolioTransfer.mmTransferredYear}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +99,21 @@ public class PreviousYear2 {
 	 * "Selection of investment plans issued during previous years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousYears = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmTransferredYear;
 			componentContext_lazy = () -> PreviousYear2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.TransferredYear;
 			isDerived = false;
 			xmlTag = "PrvsYrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousYears";
 			definition = "Selection of investment plans issued during previous years.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PreviousYear1Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator cashComponentIndicator;
 	/**
 	 * Indicates whether the ISA contains a cash component asset for transfer.
 	 * <p>
@@ -125,8 +127,8 @@ public class PreviousYear2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#CashComponentIndicator
-	 * PortfolioTransfer.CashComponentIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmCashComponentIndicator
+	 * PortfolioTransfer.mmCashComponentIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -146,17 +148,17 @@ public class PreviousYear2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashComponentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashComponentIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmCashComponentIndicator;
 			componentContext_lazy = () -> PreviousYear2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.CashComponentIndicator;
 			isDerived = false;
 			xmlTag = "CshCmpntInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashComponentIndicator";
 			definition = "Indicates whether the ISA contains a cash component asset for transfer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -164,14 +166,30 @@ public class PreviousYear2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear2.PreviousYears, com.tools20022.repository.msg.PreviousYear2.CashComponentIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear2.mmPreviousYears, com.tools20022.repository.msg.PreviousYear2.mmCashComponentIndicator);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PreviousYear2";
 				definition = "Choice between selected investment plans issued during previous years or the entirety of the investment plans.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PreviousYear1Choice getPreviousYears() {
+		return previousYears;
+	}
+
+	public void setPreviousYears(PreviousYear1Choice previousYears) {
+		this.previousYears = previousYears;
+	}
+
+	public YesNoIndicator getCashComponentIndicator() {
+		return cashComponentIndicator;
+	}
+
+	public void setCashComponentIndicator(YesNoIndicator cashComponentIndicator) {
+		this.cashComponentIndicator = cashComponentIndicator;
 	}
 }

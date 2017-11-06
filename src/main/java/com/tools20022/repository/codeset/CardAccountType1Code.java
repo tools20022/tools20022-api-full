@@ -34,33 +34,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#Default
- * CardAccountType1Code.Default}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#mmDefault
+ * CardAccountType1Code.mmDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#Savings
- * CardAccountType1Code.Savings}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#mmSavings
+ * CardAccountType1Code.mmSavings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#Checking
- * CardAccountType1Code.Checking}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#mmChecking
+ * CardAccountType1Code.mmChecking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#CreditCard
- * CardAccountType1Code.CreditCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#mmCreditCard
+ * CardAccountType1Code.mmCreditCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#Universal
- * CardAccountType1Code.Universal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#mmUniversal
+ * CardAccountType1Code.mmUniversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#Investment
- * CardAccountType1Code.Investment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#mmInvestment
+ * CardAccountType1Code.mmInvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#EpurseCard
- * CardAccountType1Code.EpurseCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType1Code#mmEpurseCard
+ * CardAccountType1Code.mmEpurseCard}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class CardAccountType1Code extends CardAccountTypeCode {
 	 * name} = "Default"</li>
 	 * </ul>
 	 */
-	public static final MMCode Default = new MMCode() {
+	public static final MMCode mmDefault = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Default";
@@ -119,7 +119,7 @@ public class CardAccountType1Code extends CardAccountTypeCode {
 	 * name} = "Savings"</li>
 	 * </ul>
 	 */
-	public static final MMCode Savings = new MMCode() {
+	public static final MMCode mmSavings = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
@@ -142,7 +142,7 @@ public class CardAccountType1Code extends CardAccountTypeCode {
 	 * name} = "Checking"</li>
 	 * </ul>
 	 */
-	public static final MMCode Checking = new MMCode() {
+	public static final MMCode mmChecking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Checking";
@@ -165,7 +165,7 @@ public class CardAccountType1Code extends CardAccountTypeCode {
 	 * name} = "CreditCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode CreditCard = new MMCode() {
+	public static final MMCode mmCreditCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditCard";
@@ -188,7 +188,7 @@ public class CardAccountType1Code extends CardAccountTypeCode {
 	 * name} = "Universal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Universal = new MMCode() {
+	public static final MMCode mmUniversal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Universal";
@@ -211,7 +211,7 @@ public class CardAccountType1Code extends CardAccountTypeCode {
 	 * name} = "Investment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Investment = new MMCode() {
+	public static final MMCode mmInvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investment";
@@ -234,7 +234,7 @@ public class CardAccountType1Code extends CardAccountTypeCode {
 	 * name} = "EpurseCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode EpurseCard = new MMCode() {
+	public static final MMCode mmEpurseCard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EpurseCard";
@@ -245,14 +245,14 @@ public class CardAccountType1Code extends CardAccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DFLT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardAccountType1Code";
 				definition = "Type of cardholder account used for the transaction";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardAccountType1Code.Default, com.tools20022.repository.codeset.CardAccountType1Code.Savings,
-						com.tools20022.repository.codeset.CardAccountType1Code.Checking, com.tools20022.repository.codeset.CardAccountType1Code.CreditCard, com.tools20022.repository.codeset.CardAccountType1Code.Universal,
-						com.tools20022.repository.codeset.CardAccountType1Code.Investment, com.tools20022.repository.codeset.CardAccountType1Code.EpurseCard);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardAccountType1Code.mmDefault, com.tools20022.repository.codeset.CardAccountType1Code.mmSavings,
+						com.tools20022.repository.codeset.CardAccountType1Code.mmChecking, com.tools20022.repository.codeset.CardAccountType1Code.mmCreditCard, com.tools20022.repository.codeset.CardAccountType1Code.mmUniversal,
+						com.tools20022.repository.codeset.CardAccountType1Code.mmInvestment, com.tools20022.repository.codeset.CardAccountType1Code.mmEpurseCard);
 				trace_lazy = () -> CardAccountTypeCode.mmObject();
 			}
 		});

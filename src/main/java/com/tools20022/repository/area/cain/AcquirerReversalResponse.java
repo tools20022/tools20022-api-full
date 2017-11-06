@@ -55,21 +55,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalResponse#Header
- * AcquirerReversalResponse.Header}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalResponse#mmHeader
+ * AcquirerReversalResponse.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalResponse#ReversalResponse
- * AcquirerReversalResponse.ReversalResponse}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalResponse#mmReversalResponse
+ * AcquirerReversalResponse.mmReversalResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalResponse#SecurityTrailer
- * AcquirerReversalResponse.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalResponse#mmSecurityTrailer
+ * AcquirerReversalResponse.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.cain.AcquirerReversalResponse#identifier
- * AcquirerReversalResponse.identifier}</li>
+ * messageDefinitionIdentifier} = {@code cain.006.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AcquirerReversalResponse {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header18 header;
 	/**
 	 * Information related to the protocol management.
 	 * <p>
@@ -107,17 +106,18 @@ public class AcquirerReversalResponse {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header18.mmObject();
 		}
 	};
+	protected AcquirerReversalResponse1 reversalResponse;
 	/**
 	 * Information related to the response of a reversal.
 	 * <p>
@@ -141,17 +141,18 @@ public class AcquirerReversalResponse {
 	 * definition} = "Information related to the response of a reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReversalResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReversalResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RvslRspn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalResponse";
 			definition = "Information related to the response of a reversal.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcquirerReversalResponse1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -175,42 +176,15 @@ public class AcquirerReversalResponse {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "cain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "006"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "cain";
-			messageFunctionality = "006";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -224,11 +198,42 @@ public class AcquirerReversalResponse {
 				rootElement = "Document";
 				xmlTag = "AcqrrRvslRspn";
 				businessArea_lazy = () -> AcquirertoIssuerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerReversalResponse.Header, com.tools20022.repository.area.cain.AcquirerReversalResponse.ReversalResponse,
-						com.tools20022.repository.area.cain.AcquirerReversalResponse.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.cain.AcquirerReversalResponse.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerReversalResponse.mmHeader, com.tools20022.repository.area.cain.AcquirerReversalResponse.mmReversalResponse,
+						com.tools20022.repository.area.cain.AcquirerReversalResponse.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "cain";
+						messageFunctionality = "006";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header18 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header18 header) {
+		this.header = header;
+	}
+
+	public AcquirerReversalResponse1 getReversalResponse() {
+		return reversalResponse;
+	}
+
+	public void setReversalResponse(AcquirerReversalResponse1 reversalResponse) {
+		this.reversalResponse = reversalResponse;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

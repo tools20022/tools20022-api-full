@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSD6#LotteryRecordStatus
- * CorporateActionSD6.LotteryRecordStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSD6#mmLotteryRecordStatus
+ * CorporateActionSD6.mmLotteryRecordStatus}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected WorkflowStatus1Code lotteryRecordStatus;
 	/**
 	 * Status of the fields of lottery record.
 	 * <p>
@@ -83,7 +84,7 @@ public class CorporateActionSD6 {
 	 * definition} = "Status of the fields of lottery record."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LotteryRecordStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLotteryRecordStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionSD6.mmObject();
 			isDerived = false;
@@ -91,8 +92,8 @@ public class CorporateActionSD6 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryRecordStatus";
 			definition = "Status of the fields of lottery record.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> WorkflowStatus1Code.mmObject();
 		}
 	};
@@ -100,13 +101,21 @@ public class CorporateActionSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD6.LotteryRecordStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD6.mmLotteryRecordStatus);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionSD6";
 				definition = "Details about the lottery.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public WorkflowStatus1Code getLotteryRecordStatus() {
+		return lotteryRecordStatus;
+	}
+
+	public void setLotteryRecordStatus(WorkflowStatus1Code lotteryRecordStatus) {
+		this.lotteryRecordStatus = lotteryRecordStatus;
 	}
 }

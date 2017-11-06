@@ -34,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument1#Identification
- * FinancialInstrument1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument1#mmIdentification
+ * FinancialInstrument1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument1#Attributes
- * FinancialInstrument1.Attributes}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument1#mmAttributes
+ * FinancialInstrument1.mmAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrument1#ValuationHaircutDetails
- * FinancialInstrument1.ValuationHaircutDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument1#mmValuationHaircutDetails
+ * FinancialInstrument1.mmValuationHaircutDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrument1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification11 identification;
 	/**
 	 * Identification of the instrument.
 	 * <p>
@@ -78,8 +79,8 @@ public class FinancialInstrument1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +99,22 @@ public class FinancialInstrument1 {
 	 * definition} = "Identification of the instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecurityIdentification11.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
 		}
 	};
+	protected FinancialInstrumentAttributes2 attributes;
 	/**
 	 * Elements characterising a financial instrument.
 	 * <p>
@@ -144,21 +146,22 @@ public class FinancialInstrument1 {
 	 * definition} = "Elements characterising a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Attributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAttributes = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrument1.mmObject();
 			businessComponentTrace_lazy = () -> Security.mmObject();
+			componentContext_lazy = () -> FinancialInstrument1.mmObject();
 			isDerived = false;
 			xmlTag = "Attrbts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attributes";
 			definition = "Elements characterising a financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentAttributes2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmObject();
 		}
 	};
+	protected BasicCollateralValuation1Details valuationHaircutDetails;
 	/**
 	 * Elements used to calculate the valuation haircut.
 	 * <p>
@@ -171,8 +174,8 @@ public class FinancialInstrument1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#Haircut
-	 * AssetHolding.Haircut}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmHaircut
+	 * AssetHolding.mmHaircut}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,34 +194,58 @@ public class FinancialInstrument1 {
 	 * definition} = "Elements used to calculate the valuation haircut."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValuationHaircutDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValuationHaircutDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHaircut;
 			componentContext_lazy = () -> FinancialInstrument1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.Haircut;
 			isDerived = false;
 			xmlTag = "ValtnHrcutDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationHaircutDetails";
 			definition = "Elements used to calculate the valuation haircut.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BasicCollateralValuation1Details.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BasicCollateralValuation1Details.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument1.Identification, com.tools20022.repository.msg.FinancialInstrument1.Attributes,
-						com.tools20022.repository.msg.FinancialInstrument1.ValuationHaircutDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument1.mmIdentification, com.tools20022.repository.msg.FinancialInstrument1.mmAttributes,
+						com.tools20022.repository.msg.FinancialInstrument1.mmValuationHaircutDetails);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument1";
 				definition = "Identification and attributes of a financial instrument for a custody process.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification11 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.SecurityIdentification11 identification) {
+		this.identification = identification;
+	}
+
+	public FinancialInstrumentAttributes2 getAttributes() {
+		return attributes;
+	}
+
+	public void setAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes2 attributes) {
+		this.attributes = attributes;
+	}
+
+	public BasicCollateralValuation1Details getValuationHaircutDetails() {
+		return valuationHaircutDetails;
+	}
+
+	public void setValuationHaircutDetails(com.tools20022.repository.msg.BasicCollateralValuation1Details valuationHaircutDetails) {
+		this.valuationHaircutDetails = valuationHaircutDetails;
 	}
 }

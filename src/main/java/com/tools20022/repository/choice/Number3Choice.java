@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Number3Choice#Short
- * Number3Choice.Short}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Number3Choice#Long
- * Number3Choice.Long}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Number3Choice#mmShort
+ * Number3Choice.mmShort}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Number3Choice#mmLong
+ * Number3Choice.mmLong}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Number3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText short_;
 	/**
 	 * Number of maximum 3 numeric text.
 	 * <p>
@@ -85,7 +86,7 @@ public class Number3Choice {
 	 * definition} = "Number of maximum 3 numeric text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Short = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShort = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Number3Choice.mmObject();
 			isDerived = false;
@@ -93,11 +94,12 @@ public class Number3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Short";
 			definition = "Number of maximum 3 numeric text.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected Exact5NumericText long_;
 	/**
 	 * Number of maximum 5 numeric text. Is only to be used in a delta
 	 * statement.
@@ -129,7 +131,7 @@ public class Number3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Long = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLong = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Number3Choice.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class Number3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Long";
 			definition = "Number of maximum 5 numeric text. Is only to be used in a delta statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact5NumericText.mmObject();
 		}
 	};
@@ -146,13 +148,29 @@ public class Number3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number3Choice.Short, com.tools20022.repository.choice.Number3Choice.Long);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number3Choice.mmShort, com.tools20022.repository.choice.Number3Choice.mmLong);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Number3Choice";
 				definition = "Choice of 3 and 5 exact numeric number.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getShort() {
+		return short_;
+	}
+
+	public void setShort(Exact3NumericText short_) {
+		this.short_ = short_;
+	}
+
+	public Exact5NumericText getLong() {
+		return long_;
+	}
+
+	public void setLong(Exact5NumericText long_) {
+		this.long_ = long_;
 	}
 }

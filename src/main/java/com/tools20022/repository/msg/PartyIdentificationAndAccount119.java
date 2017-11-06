@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Party and account information.
@@ -32,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount119#PartyIdentification
- * PartyIdentificationAndAccount119.PartyIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount119#mmPartyIdentification
+ * PartyIdentificationAndAccount119.mmPartyIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount119#AccountIdentification
- * PartyIdentificationAndAccount119.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount119#mmAccountIdentification
+ * PartyIdentificationAndAccount119.mmAccountIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentificationAndAccount119 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.PartyIdentification90> partyIdentification;
 	/**
 	 * Identification of the party that legally owns the account.
 	 * <p>
@@ -84,7 +86,7 @@ public class PartyIdentificationAndAccount119 {
 	 * "Identification of the party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentificationAndAccount119.mmObject();
 			isDerived = false;
@@ -93,10 +95,11 @@ public class PartyIdentificationAndAccount119 {
 			name = "PartyIdentification";
 			definition = "Identification of the party that legally owns the account.";
 			minOccurs = 1;
-			type_lazy = () -> PartyIdentification90.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification90.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AccountIdentification30> accountIdentification;
 	/**
 	 * Identification of the account owned by the party.
 	 * <p>
@@ -124,7 +127,7 @@ public class PartyIdentificationAndAccount119 {
 	 * definition} = "Identification of the account owned by the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentificationAndAccount119.mmObject();
 			isDerived = false;
@@ -133,21 +136,37 @@ public class PartyIdentificationAndAccount119 {
 			name = "AccountIdentification";
 			definition = "Identification of the account owned by the party.";
 			minOccurs = 1;
-			type_lazy = () -> AccountIdentification30.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountIdentification30.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount119.PartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount119.AccountIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount119.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount119.mmAccountIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount119";
 				definition = "Party and account information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PartyIdentification90> getPartyIdentification() {
+		return partyIdentification;
+	}
+
+	public void setPartyIdentification(List<com.tools20022.repository.msg.PartyIdentification90> partyIdentification) {
+		this.partyIdentification = partyIdentification;
+	}
+
+	public List<AccountIdentification30> getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(List<com.tools20022.repository.msg.AccountIdentification30> accountIdentification) {
+		this.accountIdentification = accountIdentification;
 	}
 }

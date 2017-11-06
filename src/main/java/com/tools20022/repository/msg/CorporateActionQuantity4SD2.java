@@ -37,33 +37,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#PlaceAndName
- * CorporateActionQuantity4SD2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#mmPlaceAndName
+ * CorporateActionQuantity4SD2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#PlannedQuantity
- * CorporateActionQuantity4SD2.PlannedQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#mmPlannedQuantity
+ * CorporateActionQuantity4SD2.mmPlannedQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#PlannedExcessPurchaseQuantity
- * CorporateActionQuantity4SD2.PlannedExcessPurchaseQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#mmPlannedExcessPurchaseQuantity
+ * CorporateActionQuantity4SD2.mmPlannedExcessPurchaseQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#MinimumQuantityCode
- * CorporateActionQuantity4SD2.MinimumQuantityCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#mmMinimumQuantityCode
+ * CorporateActionQuantity4SD2.mmMinimumQuantityCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#MaximumQuantityCode
- * CorporateActionQuantity4SD2.MaximumQuantityCode}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#mmMaximumQuantityCode
+ * CorporateActionQuantity4SD2.mmMaximumQuantityCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#OldShareUnitQuantity
- * CorporateActionQuantity4SD2.OldShareUnitQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#mmOldShareUnitQuantity
+ * CorporateActionQuantity4SD2.mmOldShareUnitQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#NewShareUnitQuantity
- * CorporateActionQuantity4SD2.NewShareUnitQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity4SD2#mmNewShareUnitQuantity
+ * CorporateActionQuantity4SD2.mmNewShareUnitQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionQuantity4SD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -109,7 +110,7 @@ public class CorporateActionQuantity4SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -117,11 +118,12 @@ public class CorporateActionQuantity4SD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected PlannedQuantity1Choice plannedQuantity;
 	/**
 	 * Planned number of shares to be purchased.<br>
 	 * 買付予定株式数
@@ -151,7 +153,7 @@ public class CorporateActionQuantity4SD2 {
 	 * definition} = "Planned number of shares to be purchased.\r\n 買付予定株式数"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlannedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlannedQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -159,11 +161,12 @@ public class CorporateActionQuantity4SD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlannedQuantity";
 			definition = "Planned number of shares to be purchased.\r\n 買付予定株式数";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PlannedQuantity1Choice.mmObject();
 		}
 	};
+	protected PlannedQuantity1Choice plannedExcessPurchaseQuantity;
 	/**
 	 * Planned excess quantity of share purchase.<br>
 	 * 買付超過予定数<br>
@@ -193,7 +196,7 @@ public class CorporateActionQuantity4SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PlannedExcessPurchaseQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlannedExcessPurchaseQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -201,12 +204,13 @@ public class CorporateActionQuantity4SD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlannedExcessPurchaseQuantity";
 			definition = "Planned excess quantity of share purchase.\r\n買付超過予定数\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PlannedQuantity1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PlannedQuantity1Choice.mmObject();
 		}
 	};
+	protected SecuritiesQuantity1Code minimumQuantityCode;
 	/**
 	 * TSE/JASDEC code for the minimum number of shares to be purchased when the
 	 * corporate action event type code is TEND or BIDS.<br>
@@ -239,7 +243,7 @@ public class CorporateActionQuantity4SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumQuantityCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumQuantityCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -247,11 +251,12 @@ public class CorporateActionQuantity4SD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumQuantityCode";
 			definition = "TSE/JASDEC code for the minimum number of shares to be purchased when the corporate action event type code  is TEND or BIDS.\r\n買付株数に係る下限設定が「下限設定あり」「未定」";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesQuantity1Code.mmObject();
 		}
 	};
+	protected SecuritiesQuantity1Code maximumQuantityCode;
 	/**
 	 * TSE/JASDEC code for the maximum number of shares to be purchased when the
 	 * corporate action event type code is TEND or BIDS.<br>
@@ -284,7 +289,7 @@ public class CorporateActionQuantity4SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MaximumQuantityCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMaximumQuantityCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -292,11 +297,12 @@ public class CorporateActionQuantity4SD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumQuantityCode";
 			definition = "TSE/JASDEC code for the maximum number of shares to be purchased when the corporate action event type code is TEND or BIDS.\r\n 買付株数に係る上限設定が「上限設定あり」「未定」";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesQuantity1Code.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice oldShareUnitQuantity;
 	/**
 	 * Old share unit quantity.
 	 * <p>
@@ -325,7 +331,7 @@ public class CorporateActionQuantity4SD2 {
 	 * definition} = "Old share unit quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OldShareUnitQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOldShareUnitQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -333,11 +339,12 @@ public class CorporateActionQuantity4SD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OldShareUnitQuantity";
 			definition = "Old share unit quantity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity15Choice newShareUnitQuantity;
 	/**
 	 * New share unit quantity.<br>
 	 * <p>
@@ -365,7 +372,7 @@ public class CorporateActionQuantity4SD2 {
 	 * definition} = "New share unit quantity.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewShareUnitQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewShareUnitQuantity = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -373,26 +380,82 @@ public class CorporateActionQuantity4SD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewShareUnitQuantity";
 			definition = "New share unit quantity.\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity4SD2.PlaceAndName, com.tools20022.repository.msg.CorporateActionQuantity4SD2.PlannedQuantity,
-						com.tools20022.repository.msg.CorporateActionQuantity4SD2.PlannedExcessPurchaseQuantity, com.tools20022.repository.msg.CorporateActionQuantity4SD2.MinimumQuantityCode,
-						com.tools20022.repository.msg.CorporateActionQuantity4SD2.MaximumQuantityCode, com.tools20022.repository.msg.CorporateActionQuantity4SD2.OldShareUnitQuantity,
-						com.tools20022.repository.msg.CorporateActionQuantity4SD2.NewShareUnitQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmPlannedQuantity,
+						com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmPlannedExcessPurchaseQuantity, com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmMinimumQuantityCode,
+						com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmMaximumQuantityCode, com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmOldShareUnitQuantity,
+						com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmNewShareUnitQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionQuantity4SD2";
 				definition = "Extension to specify corporate action quantities.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public PlannedQuantity1Choice getPlannedQuantity() {
+		return plannedQuantity;
+	}
+
+	public void setPlannedQuantity(PlannedQuantity1Choice plannedQuantity) {
+		this.plannedQuantity = plannedQuantity;
+	}
+
+	public PlannedQuantity1Choice getPlannedExcessPurchaseQuantity() {
+		return plannedExcessPurchaseQuantity;
+	}
+
+	public void setPlannedExcessPurchaseQuantity(PlannedQuantity1Choice plannedExcessPurchaseQuantity) {
+		this.plannedExcessPurchaseQuantity = plannedExcessPurchaseQuantity;
+	}
+
+	public SecuritiesQuantity1Code getMinimumQuantityCode() {
+		return minimumQuantityCode;
+	}
+
+	public void setMinimumQuantityCode(SecuritiesQuantity1Code minimumQuantityCode) {
+		this.minimumQuantityCode = minimumQuantityCode;
+	}
+
+	public SecuritiesQuantity1Code getMaximumQuantityCode() {
+		return maximumQuantityCode;
+	}
+
+	public void setMaximumQuantityCode(SecuritiesQuantity1Code maximumQuantityCode) {
+		this.maximumQuantityCode = maximumQuantityCode;
+	}
+
+	public FinancialInstrumentQuantity15Choice getOldShareUnitQuantity() {
+		return oldShareUnitQuantity;
+	}
+
+	public void setOldShareUnitQuantity(FinancialInstrumentQuantity15Choice oldShareUnitQuantity) {
+		this.oldShareUnitQuantity = oldShareUnitQuantity;
+	}
+
+	public FinancialInstrumentQuantity15Choice getNewShareUnitQuantity() {
+		return newShareUnitQuantity;
+	}
+
+	public void setNewShareUnitQuantity(FinancialInstrumentQuantity15Choice newShareUnitQuantity) {
+		this.newShareUnitQuantity = newShareUnitQuantity;
 	}
 }

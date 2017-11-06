@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides information about the corporate action event.
@@ -38,29 +39,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#AgentIdentification
- * CorporateActionInformation2.AgentIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#mmAgentIdentification
+ * CorporateActionInformation2.mmAgentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#IssuerCorporateActionIdentification
- * CorporateActionInformation2.IssuerCorporateActionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#mmIssuerCorporateActionIdentification
+ * CorporateActionInformation2.mmIssuerCorporateActionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#CorporateActionProcessingIdentification
- * CorporateActionInformation2.CorporateActionProcessingIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#mmCorporateActionProcessingIdentification
+ * CorporateActionInformation2.mmCorporateActionProcessingIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#EventType
- * CorporateActionInformation2.EventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#mmEventType
+ * CorporateActionInformation2.mmEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#EventProcessingType
- * CorporateActionInformation2.EventProcessingType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#mmEventProcessingType
+ * CorporateActionInformation2.mmEventProcessingType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#MandatoryVoluntaryEventType
- * CorporateActionInformation2.MandatoryVoluntaryEventType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#mmMandatoryVoluntaryEventType
+ * CorporateActionInformation2.mmMandatoryVoluntaryEventType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#UnderlyingSecurity
- * CorporateActionInformation2.UnderlyingSecurity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#mmUnderlyingSecurity
+ * CorporateActionInformation2.mmUnderlyingSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#OtherUnderlyingSecurity
- * CorporateActionInformation2.OtherUnderlyingSecurity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInformation2#mmOtherUnderlyingSecurity
+ * CorporateActionInformation2.mmOtherUnderlyingSecurity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -71,21 +72,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#CorporateActionGeneralInformation
- * AgentCANotificationAdviceV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationAdviceV01#mmCorporateActionGeneralInformation
+ * AgentCANotificationAdviceV01.mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01#CorporateActionGeneralInformation
- * AgentCANotificationCancellationRequestV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01#mmCorporateActionGeneralInformation
+ * AgentCANotificationCancellationRequestV01.mmCorporateActionGeneralInformation
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#CorporateActionGeneralInformation
- * AgentCANotificationStatusAdviceV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01#mmCorporateActionGeneralInformation
+ * AgentCANotificationStatusAdviceV01.mmCorporateActionGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,6 +101,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification2Choice agentIdentification;
 	/**
 	 * Identification of the issuer's agent or the issuer.
 	 * <p>
@@ -112,8 +115,8 @@ public class CorporateActionInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -132,20 +135,21 @@ public class CorporateActionInformation2 {
 	 * definition} = "Identification of the issuer's agent or the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AgtId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentIdentification";
 			definition = "Identification of the issuer's agent or the issuer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected Max35Text issuerCorporateActionIdentification;
 	/**
 	 * Reference given to the event by the CA event issuer (agent).
 	 * <p>
@@ -158,8 +162,8 @@ public class CorporateActionInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#CorporateActionEventIdentification
-	 * CorporateActionEventRegistration.CorporateActionEventIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmCorporateActionEventIdentification
+	 * CorporateActionEventRegistration.mmCorporateActionEventIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -179,20 +183,21 @@ public class CorporateActionInformation2 {
 	 * "Reference given to the event by the CA event issuer (agent)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IssuerCorporateActionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIssuerCorporateActionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> CorporateActionInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.CorporateActionEventIdentification;
 			isDerived = false;
 			xmlTag = "IssrCorpActnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCorporateActionIdentification";
 			definition = "Reference given to the event by the CA event issuer (agent).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text corporateActionProcessingIdentification;
 	/**
 	 * Reference assigned by the (I)CSD to unambiguously identify a corporate
 	 * avent.
@@ -206,8 +211,8 @@ public class CorporateActionInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#CorporateActionEventIdentification
-	 * CorporateActionEventRegistration.CorporateActionEventIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEventRegistration#mmCorporateActionEventIdentification
+	 * CorporateActionEventRegistration.mmCorporateActionEventIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -228,20 +233,21 @@ public class CorporateActionInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorporateActionProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorporateActionProcessingIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> CorporateActionInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.CorporateActionEventIdentification;
 			isDerived = false;
 			xmlTag = "CorpActnPrcgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionProcessingIdentification";
 			definition = "Reference assigned by the (I)CSD to unambiguously identify a corporate avent.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CorporateActionEventType2FormatChoice eventType;
 	/**
 	 * Speficies the type of corporate event.
 	 * <p>
@@ -255,8 +261,8 @@ public class CorporateActionInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#Type
-	 * CorporateActionEvent.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmType
+	 * CorporateActionEvent.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -275,20 +281,21 @@ public class CorporateActionInformation2 {
 	 * definition} = "Speficies the type of corporate event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmType;
 			componentContext_lazy = () -> CorporateActionInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.Type;
 			isDerived = false;
 			xmlTag = "EvtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "Speficies the type of corporate event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionEventType2FormatChoice.mmObject();
 		}
 	};
+	protected CorporateActionEventProcessingType1FormatChoice eventProcessingType;
 	/**
 	 * Type of processing involved by a Corporate Action.
 	 * <p>
@@ -302,8 +309,8 @@ public class CorporateActionInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#EventProcessingType
-	 * CorporateActionEvent.EventProcessingType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventProcessingType
+	 * CorporateActionEvent.mmEventProcessingType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -322,20 +329,21 @@ public class CorporateActionInformation2 {
 	 * definition} = "Type of processing involved by a Corporate Action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EventProcessingType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEventProcessingType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventProcessingType;
 			componentContext_lazy = () -> CorporateActionInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.EventProcessingType;
 			isDerived = false;
 			xmlTag = "EvtPrcgTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventProcessingType";
 			definition = "Type of processing involved by a Corporate Action.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionEventProcessingType1FormatChoice.mmObject();
 		}
 	};
+	protected CorporateActionMandatoryVoluntary1FormatChoice mandatoryVoluntaryEventType;
 	/**
 	 * Specifies whether the event is mandatory, mandatory with options or
 	 * voluntary.
@@ -350,8 +358,8 @@ public class CorporateActionInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#MandatoryVoluntaryEventType
-	 * CorporateActionEvent.MandatoryVoluntaryEventType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMandatoryVoluntaryEventType
+	 * CorporateActionEvent.mmMandatoryVoluntaryEventType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -372,20 +380,21 @@ public class CorporateActionInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MandatoryVoluntaryEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMandatoryVoluntaryEventType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> CorporateActionInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.MandatoryVoluntaryEventType;
 			isDerived = false;
 			xmlTag = "MndtryVlntryEvtTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryVoluntaryEventType";
 			definition = "Specifies whether the event is mandatory, mandatory with options or voluntary.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionMandatoryVoluntary1FormatChoice.mmObject();
 		}
 	};
+	protected FinancialInstrumentDescription3 underlyingSecurity;
 	/**
 	 * Identification of the underlying financial instrument, ie, the financial
 	 * instrument affected by the corporate action event.
@@ -400,8 +409,8 @@ public class CorporateActionInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#UnderlyingSecurity
-	 * CorporateActionEvent.UnderlyingSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmUnderlyingSecurity
+	 * CorporateActionEvent.mmUnderlyingSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -422,20 +431,21 @@ public class CorporateActionInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnderlyingSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnderlyingSecurity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> CorporateActionInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.UnderlyingSecurity;
 			isDerived = false;
 			xmlTag = "UndrlygScty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Identification of the underlying financial instrument, ie, the financial instrument affected by the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentDescription3.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDescription3.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FinancialInstrumentDescription3> otherUnderlyingSecurity;
 	/**
 	 * Identification of the secondary underlying financial instrument, ie, the
 	 * non-principal financial instrument affected by the corporate action
@@ -451,8 +461,8 @@ public class CorporateActionInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#UnderlyingSecurity
-	 * CorporateActionEvent.UnderlyingSecurity}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmUnderlyingSecurity
+	 * CorporateActionEvent.mmUnderlyingSecurity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -473,37 +483,101 @@ public class CorporateActionInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherUnderlyingSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherUnderlyingSecurity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> CorporateActionInformation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.UnderlyingSecurity;
 			isDerived = false;
 			xmlTag = "OthrUndrlygScty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherUnderlyingSecurity";
 			definition = "Identification of the secondary underlying financial instrument, ie, the non-principal financial instrument affected by the corporate action event.";
 			minOccurs = 0;
-			complexType_lazy = () -> FinancialInstrumentDescription3.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDescription3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInformation2.AgentIdentification, com.tools20022.repository.msg.CorporateActionInformation2.IssuerCorporateActionIdentification,
-						com.tools20022.repository.msg.CorporateActionInformation2.CorporateActionProcessingIdentification, com.tools20022.repository.msg.CorporateActionInformation2.EventType,
-						com.tools20022.repository.msg.CorporateActionInformation2.EventProcessingType, com.tools20022.repository.msg.CorporateActionInformation2.MandatoryVoluntaryEventType,
-						com.tools20022.repository.msg.CorporateActionInformation2.UnderlyingSecurity, com.tools20022.repository.msg.CorporateActionInformation2.OtherUnderlyingSecurity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInformation2.mmAgentIdentification, com.tools20022.repository.msg.CorporateActionInformation2.mmIssuerCorporateActionIdentification,
+						com.tools20022.repository.msg.CorporateActionInformation2.mmCorporateActionProcessingIdentification, com.tools20022.repository.msg.CorporateActionInformation2.mmEventType,
+						com.tools20022.repository.msg.CorporateActionInformation2.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionInformation2.mmMandatoryVoluntaryEventType,
+						com.tools20022.repository.msg.CorporateActionInformation2.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionInformation2.mmOtherUnderlyingSecurity);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmCorporateActionGeneralInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.CorporateActionGeneralInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInformation2";
 				definition = "Provides information about the corporate action event.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification2Choice getAgentIdentification() {
+		return agentIdentification;
+	}
+
+	public void setAgentIdentification(PartyIdentification2Choice agentIdentification) {
+		this.agentIdentification = agentIdentification;
+	}
+
+	public Max35Text getIssuerCorporateActionIdentification() {
+		return issuerCorporateActionIdentification;
+	}
+
+	public void setIssuerCorporateActionIdentification(Max35Text issuerCorporateActionIdentification) {
+		this.issuerCorporateActionIdentification = issuerCorporateActionIdentification;
+	}
+
+	public Max35Text getCorporateActionProcessingIdentification() {
+		return corporateActionProcessingIdentification;
+	}
+
+	public void setCorporateActionProcessingIdentification(Max35Text corporateActionProcessingIdentification) {
+		this.corporateActionProcessingIdentification = corporateActionProcessingIdentification;
+	}
+
+	public CorporateActionEventType2FormatChoice getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(CorporateActionEventType2FormatChoice eventType) {
+		this.eventType = eventType;
+	}
+
+	public CorporateActionEventProcessingType1FormatChoice getEventProcessingType() {
+		return eventProcessingType;
+	}
+
+	public void setEventProcessingType(CorporateActionEventProcessingType1FormatChoice eventProcessingType) {
+		this.eventProcessingType = eventProcessingType;
+	}
+
+	public CorporateActionMandatoryVoluntary1FormatChoice getMandatoryVoluntaryEventType() {
+		return mandatoryVoluntaryEventType;
+	}
+
+	public void setMandatoryVoluntaryEventType(CorporateActionMandatoryVoluntary1FormatChoice mandatoryVoluntaryEventType) {
+		this.mandatoryVoluntaryEventType = mandatoryVoluntaryEventType;
+	}
+
+	public FinancialInstrumentDescription3 getUnderlyingSecurity() {
+		return underlyingSecurity;
+	}
+
+	public void setUnderlyingSecurity(com.tools20022.repository.msg.FinancialInstrumentDescription3 underlyingSecurity) {
+		this.underlyingSecurity = underlyingSecurity;
+	}
+
+	public List<FinancialInstrumentDescription3> getOtherUnderlyingSecurity() {
+		return otherUnderlyingSecurity;
+	}
+
+	public void setOtherUnderlyingSecurity(List<com.tools20022.repository.msg.FinancialInstrumentDescription3> otherUnderlyingSecurity) {
+		this.otherUnderlyingSecurity = otherUnderlyingSecurity;
 	}
 }

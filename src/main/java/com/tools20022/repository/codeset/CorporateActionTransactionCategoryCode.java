@@ -31,56 +31,56 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#CashDividend
- * CorporateActionTransactionCategoryCode.CashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmCashDividend
+ * CorporateActionTransactionCategoryCode.mmCashDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#UnitInvestmentTrustSecurity
- * CorporateActionTransactionCategoryCode.UnitInvestmentTrustSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmUnitInvestmentTrustSecurity
+ * CorporateActionTransactionCategoryCode.mmUnitInvestmentTrustSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#PassThrough
- * CorporateActionTransactionCategoryCode.PassThrough}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmPassThrough
+ * CorporateActionTransactionCategoryCode.mmPassThrough}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#CorporateBond
- * CorporateActionTransactionCategoryCode.CorporateBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmCorporateBond
+ * CorporateActionTransactionCategoryCode.mmCorporateBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#MunicipalBond
- * CorporateActionTransactionCategoryCode.MunicipalBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmMunicipalBond
+ * CorporateActionTransactionCategoryCode.mmMunicipalBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#StockDistribution
- * CorporateActionTransactionCategoryCode.StockDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmStockDistribution
+ * CorporateActionTransactionCategoryCode.mmStockDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#OptionalDividend
- * CorporateActionTransactionCategoryCode.OptionalDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmOptionalDividend
+ * CorporateActionTransactionCategoryCode.mmOptionalDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#ForeignRecordDateNotice
- * CorporateActionTransactionCategoryCode.ForeignRecordDateNotice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmForeignRecordDateNotice
+ * CorporateActionTransactionCategoryCode.mmForeignRecordDateNotice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#DividendReinvestment
- * CorporateActionTransactionCategoryCode.DividendReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmDividendReinvestment
+ * CorporateActionTransactionCategoryCode.mmDividendReinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#TaxExemptDividendService
- * CorporateActionTransactionCategoryCode.TaxExemptDividendService}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmTaxExemptDividendService
+ * CorporateActionTransactionCategoryCode.mmTaxExemptDividendService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#DirectRegistrationService
- * CorporateActionTransactionCategoryCode.DirectRegistrationService}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmDirectRegistrationService
+ * CorporateActionTransactionCategoryCode.mmDirectRegistrationService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#SpecialDistribution
- * CorporateActionTransactionCategoryCode.SpecialDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmSpecialDistribution
+ * CorporateActionTransactionCategoryCode.mmSpecialDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#Reorganisation
- * CorporateActionTransactionCategoryCode.Reorganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmReorganisation
+ * CorporateActionTransactionCategoryCode.mmReorganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#RecapitalizationRecordDateNotice
- * CorporateActionTransactionCategoryCode.RecapitalizationRecordDateNotice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmRecapitalizationRecordDateNotice
+ * CorporateActionTransactionCategoryCode.mmRecapitalizationRecordDateNotice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#LiquidationRecordDateNotice
- * CorporateActionTransactionCategoryCode.LiquidationRecordDateNotice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmLiquidationRecordDateNotice
+ * CorporateActionTransactionCategoryCode.mmLiquidationRecordDateNotice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#SalesOfAssetsRecordDateNotice
- * CorporateActionTransactionCategoryCode.SalesOfAssetsRecordDateNotice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmSalesOfAssetsRecordDateNotice
+ * CorporateActionTransactionCategoryCode.mmSalesOfAssetsRecordDateNotice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#RedemptionsRecordDateNotice
- * CorporateActionTransactionCategoryCode.RedemptionsRecordDateNotice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode#mmRedemptionsRecordDateNotice
+ * CorporateActionTransactionCategoryCode.mmRedemptionsRecordDateNotice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -94,8 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -139,7 +139,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * "Reported event types belong to the cash dividend category."</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDividend = new MMCode() {
+	public static final MMCode mmCashDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
@@ -172,7 +172,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode UnitInvestmentTrustSecurity = new MMCode() {
+	public static final MMCode mmUnitInvestmentTrustSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitInvestmentTrustSecurity";
@@ -204,7 +204,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PassThrough = new MMCode() {
+	public static final MMCode mmPassThrough = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassThrough";
@@ -235,7 +235,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * "Reported event types belong to the corporate bond category."</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateBond = new MMCode() {
+	public static final MMCode mmCorporateBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateBond";
@@ -266,7 +266,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * "Reported event types belong to the municipal bond category."</li>
 	 * </ul>
 	 */
-	public static final MMCode MunicipalBond = new MMCode() {
+	public static final MMCode mmMunicipalBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalBond";
@@ -297,7 +297,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * "Reported event types belong to the stock distribution category."</li>
 	 * </ul>
 	 */
-	public static final MMCode StockDistribution = new MMCode() {
+	public static final MMCode mmStockDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDistribution";
@@ -328,7 +328,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * "Reported event types belong to the optional dividend category."</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionalDividend = new MMCode() {
+	public static final MMCode mmOptionalDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionalDividend";
@@ -360,7 +360,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignRecordDateNotice = new MMCode() {
+	public static final MMCode mmForeignRecordDateNotice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignRecordDateNotice";
@@ -391,7 +391,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * "Reported event types belong to the dividend reinvestment category."</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendReinvestment = new MMCode() {
+	public static final MMCode mmDividendReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
@@ -423,7 +423,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TaxExemptDividendService = new MMCode() {
+	public static final MMCode mmTaxExemptDividendService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemptDividendService";
@@ -455,7 +455,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DirectRegistrationService = new MMCode() {
+	public static final MMCode mmDirectRegistrationService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectRegistrationService";
@@ -486,7 +486,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * "Reported event types belong to the special distribution category."</li>
 	 * </ul>
 	 */
-	public static final MMCode SpecialDistribution = new MMCode() {
+	public static final MMCode mmSpecialDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDistribution";
@@ -517,7 +517,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * "Reported event types belong to the reorganisation category."</li>
 	 * </ul>
 	 */
-	public static final MMCode Reorganisation = new MMCode() {
+	public static final MMCode mmReorganisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reorganisation";
@@ -550,7 +550,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RecapitalizationRecordDateNotice = new MMCode() {
+	public static final MMCode mmRecapitalizationRecordDateNotice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecapitalizationRecordDateNotice";
@@ -583,7 +583,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode LiquidationRecordDateNotice = new MMCode() {
+	public static final MMCode mmLiquidationRecordDateNotice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidationRecordDateNotice";
@@ -616,7 +616,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SalesOfAssetsRecordDateNotice = new MMCode() {
+	public static final MMCode mmSalesOfAssetsRecordDateNotice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SalesOfAssetsRecordDateNotice";
@@ -649,7 +649,7 @@ public class CorporateActionTransactionCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RedemptionsRecordDateNotice = new MMCode() {
+	public static final MMCode mmRedemptionsRecordDateNotice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionsRecordDateNotice";
@@ -662,20 +662,20 @@ public class CorporateActionTransactionCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TC05");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionTransactionCategoryCode";
 				definition = "Specifies the transaction category to which the corporate action event type belongs to for reporting purposes.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.CashDividend, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.UnitInvestmentTrustSecurity,
-						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.PassThrough, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.CorporateBond,
-						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.MunicipalBond, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.StockDistribution,
-						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.OptionalDividend, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.ForeignRecordDateNotice,
-						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.DividendReinvestment, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.TaxExemptDividendService,
-						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.DirectRegistrationService, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.SpecialDistribution,
-						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.Reorganisation, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.RecapitalizationRecordDateNotice,
-						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.LiquidationRecordDateNotice, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.SalesOfAssetsRecordDateNotice,
-						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.RedemptionsRecordDateNotice);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmCashDividend,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmUnitInvestmentTrustSecurity, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmPassThrough,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmCorporateBond, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmMunicipalBond,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmStockDistribution, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmOptionalDividend,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmForeignRecordDateNotice, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmDividendReinvestment,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmTaxExemptDividendService, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmDirectRegistrationService,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmSpecialDistribution, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmReorganisation,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmRecapitalizationRecordDateNotice, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmLiquidationRecordDateNotice,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmSalesOfAssetsRecordDateNotice, com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode.mmRedemptionsRecordDateNotice);
 				derivation_lazy = () -> Arrays.asList(CorporateActionTransactionCategory1Code.mmObject());
 			}
 		});

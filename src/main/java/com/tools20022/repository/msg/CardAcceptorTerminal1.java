@@ -33,13 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardAcceptorTerminal1#Identification
- * CardAcceptorTerminal1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAcceptorTerminal1#Location
- * CardAcceptorTerminal1.Location}</li>
+ * {@linkplain com.tools20022.repository.msg.CardAcceptorTerminal1#mmIdentification
+ * CardAcceptorTerminal1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardAcceptorTerminal1#Capabilities
- * CardAcceptorTerminal1.Capabilities}</li>
+ * {@linkplain com.tools20022.repository.msg.CardAcceptorTerminal1#mmLocation
+ * CardAcceptorTerminal1.mmLocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardAcceptorTerminal1#mmCapabilities
+ * CardAcceptorTerminal1.mmCapabilities}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardAcceptorTerminal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification32 identification;
 	/**
 	 * Identification of the terminal. <br>
 	 * It correspond to the ISO 8583 field number 41.
@@ -76,8 +78,8 @@ public class CardAcceptorTerminal1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#SystemIdentification
-	 * System.SystemIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+	 * System.mmSystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,21 +100,22 @@ public class CardAcceptorTerminal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
 			componentContext_lazy = () -> CardAcceptorTerminal1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.SystemIdentification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the terminal. \r\nIt correspond to the ISO 8583 field number 41.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected PostalAddress18 location;
 	/**
 	 * Location of the terminal.
 	 * <p>
@@ -124,8 +127,8 @@ public class CardAcceptorTerminal1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#Location
-	 * System.Location}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmLocation
+	 * System.mmLocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,21 +147,22 @@ public class CardAcceptorTerminal1 {
 	 * definition} = "Location of the terminal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Location = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmLocation;
 			componentContext_lazy = () -> CardAcceptorTerminal1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.Location;
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location of the terminal.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress18.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PostalAddress18.mmObject();
 		}
 	};
+	protected PointOfInteractionCapabilities4 capabilities;
 	/**
 	 * Capabilities of the terminal performing the transaction.
 	 * <p>
@@ -171,8 +175,8 @@ public class CardAcceptorTerminal1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#CardReadingCapabilities
-	 * PointOfInteraction.CardReadingCapabilities}</li>
+	 * {@linkplain com.tools20022.repository.entity.PointOfInteraction#mmCardReadingCapabilities
+	 * PointOfInteraction.mmCardReadingCapabilities}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,34 +195,58 @@ public class CardAcceptorTerminal1 {
 	 * definition} = "Capabilities of the terminal performing the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Capabilities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> CardAcceptorTerminal1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.CardReadingCapabilities;
 			isDerived = false;
 			xmlTag = "Cpblties";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capabilities";
 			definition = "Capabilities of the terminal performing the transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PointOfInteractionCapabilities4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAcceptorTerminal1.Identification, com.tools20022.repository.msg.CardAcceptorTerminal1.Location,
-						com.tools20022.repository.msg.CardAcceptorTerminal1.Capabilities);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAcceptorTerminal1.mmIdentification, com.tools20022.repository.msg.CardAcceptorTerminal1.mmLocation,
+						com.tools20022.repository.msg.CardAcceptorTerminal1.mmCapabilities);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardAcceptorTerminal1";
 				definition = "Payment terminal or ATM performing the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification32 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+		this.identification = identification;
+	}
+
+	public PostalAddress18 getLocation() {
+		return location;
+	}
+
+	public void setLocation(com.tools20022.repository.msg.PostalAddress18 location) {
+		this.location = location;
+	}
+
+	public PointOfInteractionCapabilities4 getCapabilities() {
+		return capabilities;
+	}
+
+	public void setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities4 capabilities) {
+		this.capabilities = capabilities;
 	}
 }

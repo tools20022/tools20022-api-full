@@ -33,39 +33,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#Type
- * ATMCassetteCounters4.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#mmType
+ * ATMCassetteCounters4.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#AddedNumber
- * ATMCassetteCounters4.AddedNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#mmAddedNumber
+ * ATMCassetteCounters4.mmAddedNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#RemovedNumber
- * ATMCassetteCounters4.RemovedNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#mmRemovedNumber
+ * ATMCassetteCounters4.mmRemovedNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#DispensedNumber
- * ATMCassetteCounters4.DispensedNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#mmDispensedNumber
+ * ATMCassetteCounters4.mmDispensedNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#DepositedNumber
- * ATMCassetteCounters4.DepositedNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#mmDepositedNumber
+ * ATMCassetteCounters4.mmDepositedNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#RecycledNumber
- * ATMCassetteCounters4.RecycledNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#mmRecycledNumber
+ * ATMCassetteCounters4.mmRecycledNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#RetractedNumber
- * ATMCassetteCounters4.RetractedNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#mmRetractedNumber
+ * ATMCassetteCounters4.mmRetractedNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#RejectedNumber
- * ATMCassetteCounters4.RejectedNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#mmRejectedNumber
+ * ATMCassetteCounters4.mmRejectedNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#PresentedNumber
- * ATMCassetteCounters4.PresentedNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters4#mmPresentedNumber
+ * ATMCassetteCounters4.mmPresentedNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCassetteCounters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMCounterType1Code type;
 	/**
 	 * Type of counters.
 	 * <p>
@@ -107,7 +108,7 @@ public class ATMCassetteCounters4 {
 	 * definition} = "Type of counters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
@@ -115,11 +116,12 @@ public class ATMCassetteCounters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of counters.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMCounterType1Code.mmObject();
 		}
 	};
+	protected Number addedNumber;
 	/**
 	 * Number of added media during servicing operations.
 	 * <p>
@@ -147,7 +149,7 @@ public class ATMCassetteCounters4 {
 	 * definition} = "Number of added media during servicing operations."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AddedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAddedNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
@@ -155,11 +157,12 @@ public class ATMCassetteCounters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddedNumber";
 			definition = "Number of added media during servicing operations.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number removedNumber;
 	/**
 	 * Number of removed media during servicing operations.
 	 * <p>
@@ -187,7 +190,7 @@ public class ATMCassetteCounters4 {
 	 * definition} = "Number of removed media during servicing operations."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RemovedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRemovedNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
@@ -195,11 +198,12 @@ public class ATMCassetteCounters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemovedNumber";
 			definition = "Number of removed media during servicing operations.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number dispensedNumber;
 	/**
 	 * Total number of media out of the cassette.
 	 * <p>
@@ -227,7 +231,7 @@ public class ATMCassetteCounters4 {
 	 * definition} = "Total number of media out of the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DispensedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDispensedNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
@@ -235,11 +239,12 @@ public class ATMCassetteCounters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DispensedNumber";
 			definition = "Total number of media out of the cassette.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number depositedNumber;
 	/**
 	 * Total number of media deposited in the cassette.
 	 * <p>
@@ -267,7 +272,7 @@ public class ATMCassetteCounters4 {
 	 * definition} = "Total number of media deposited in the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DepositedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDepositedNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
@@ -275,11 +280,12 @@ public class ATMCassetteCounters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositedNumber";
 			definition = "Total number of media deposited in the cassette.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number recycledNumber;
 	/**
 	 * Total number of recycled media from the cassette.
 	 * <p>
@@ -307,7 +313,7 @@ public class ATMCassetteCounters4 {
 	 * definition} = "Total number of recycled media from the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RecycledNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRecycledNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
@@ -315,11 +321,12 @@ public class ATMCassetteCounters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecycledNumber";
 			definition = "Total number of recycled media from the cassette.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number retractedNumber;
 	/**
 	 * Total number of retracted media originating from the cassette.
 	 * <p>
@@ -348,7 +355,7 @@ public class ATMCassetteCounters4 {
 	 * "Total number of retracted media originating from the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RetractedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRetractedNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
@@ -356,11 +363,12 @@ public class ATMCassetteCounters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetractedNumber";
 			definition = "Total number of retracted media originating from the cassette.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number rejectedNumber;
 	/**
 	 * Total number of media from this cassette which are on the reject bin.
 	 * <p>
@@ -389,7 +397,7 @@ public class ATMCassetteCounters4 {
 	 * "Total number of media from this cassette which are on the reject bin."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RejectedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRejectedNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
@@ -397,11 +405,12 @@ public class ATMCassetteCounters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedNumber";
 			definition = "Total number of media from this cassette which are on the reject bin.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number presentedNumber;
 	/**
 	 * Total number of media presented to the customer.
 	 * <p>
@@ -429,7 +438,7 @@ public class ATMCassetteCounters4 {
 	 * definition} = "Total number of media presented to the customer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PresentedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPresentedNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
@@ -437,8 +446,8 @@ public class ATMCassetteCounters4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentedNumber";
 			definition = "Total number of media presented to the customer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -446,16 +455,88 @@ public class ATMCassetteCounters4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassetteCounters4.Type, com.tools20022.repository.msg.ATMCassetteCounters4.AddedNumber,
-						com.tools20022.repository.msg.ATMCassetteCounters4.RemovedNumber, com.tools20022.repository.msg.ATMCassetteCounters4.DispensedNumber, com.tools20022.repository.msg.ATMCassetteCounters4.DepositedNumber,
-						com.tools20022.repository.msg.ATMCassetteCounters4.RecycledNumber, com.tools20022.repository.msg.ATMCassetteCounters4.RetractedNumber, com.tools20022.repository.msg.ATMCassetteCounters4.RejectedNumber,
-						com.tools20022.repository.msg.ATMCassetteCounters4.PresentedNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassetteCounters4.mmType, com.tools20022.repository.msg.ATMCassetteCounters4.mmAddedNumber,
+						com.tools20022.repository.msg.ATMCassetteCounters4.mmRemovedNumber, com.tools20022.repository.msg.ATMCassetteCounters4.mmDispensedNumber, com.tools20022.repository.msg.ATMCassetteCounters4.mmDepositedNumber,
+						com.tools20022.repository.msg.ATMCassetteCounters4.mmRecycledNumber, com.tools20022.repository.msg.ATMCassetteCounters4.mmRetractedNumber, com.tools20022.repository.msg.ATMCassetteCounters4.mmRejectedNumber,
+						com.tools20022.repository.msg.ATMCassetteCounters4.mmPresentedNumber);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCassetteCounters4";
 				definition = "Counters of media inside an ATM cassette.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMCounterType1Code getType() {
+		return type;
+	}
+
+	public void setType(ATMCounterType1Code type) {
+		this.type = type;
+	}
+
+	public Number getAddedNumber() {
+		return addedNumber;
+	}
+
+	public void setAddedNumber(Number addedNumber) {
+		this.addedNumber = addedNumber;
+	}
+
+	public Number getRemovedNumber() {
+		return removedNumber;
+	}
+
+	public void setRemovedNumber(Number removedNumber) {
+		this.removedNumber = removedNumber;
+	}
+
+	public Number getDispensedNumber() {
+		return dispensedNumber;
+	}
+
+	public void setDispensedNumber(Number dispensedNumber) {
+		this.dispensedNumber = dispensedNumber;
+	}
+
+	public Number getDepositedNumber() {
+		return depositedNumber;
+	}
+
+	public void setDepositedNumber(Number depositedNumber) {
+		this.depositedNumber = depositedNumber;
+	}
+
+	public Number getRecycledNumber() {
+		return recycledNumber;
+	}
+
+	public void setRecycledNumber(Number recycledNumber) {
+		this.recycledNumber = recycledNumber;
+	}
+
+	public Number getRetractedNumber() {
+		return retractedNumber;
+	}
+
+	public void setRetractedNumber(Number retractedNumber) {
+		this.retractedNumber = retractedNumber;
+	}
+
+	public Number getRejectedNumber() {
+		return rejectedNumber;
+	}
+
+	public void setRejectedNumber(Number rejectedNumber) {
+		this.rejectedNumber = rejectedNumber;
+	}
+
+	public Number getPresentedNumber() {
+		return presentedNumber;
+	}
+
+	public void setPresentedNumber(Number presentedNumber) {
+		this.presentedNumber = presentedNumber;
 	}
 }

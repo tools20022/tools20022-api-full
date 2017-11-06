@@ -37,139 +37,140 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary5#Role
- * Intermediary5.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary5#ExtendedRole
- * Intermediary5.ExtendedRole}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary12#Role
- * Intermediary12.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary12#ExtendedRole
- * Intermediary12.ExtendedRole}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary1#Role
- * Intermediary1.Role}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary5#mmRole
+ * Intermediary5.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary5#mmExtendedRole
+ * Intermediary5.mmExtendedRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary12#mmRole
+ * Intermediary12.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary12#mmExtendedRole
+ * Intermediary12.mmExtendedRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary1#mmRole
+ * Intermediary1.mmRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount19#Intermediary
- * InvestmentAccount19.Intermediary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary6#Role
- * Intermediary6.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary6#ExtendedRole
- * Intermediary6.ExtendedRole}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount19#mmIntermediary
+ * InvestmentAccount19.mmIntermediary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary6#mmRole
+ * Intermediary6.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary6#mmExtendedRole
+ * Intermediary6.mmExtendedRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount29#Intermediary
- * InvestmentAccount29.Intermediary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary13#Role
- * Intermediary13.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary13#ExtendedRole
- * Intermediary13.ExtendedRole}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount29#mmIntermediary
+ * InvestmentAccount29.mmIntermediary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary13#mmRole
+ * Intermediary13.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary13#mmExtendedRole
+ * Intermediary13.mmExtendedRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount10#IntermediaryInformation
- * InvestmentAccount10.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount10#mmIntermediaryInformation
+ * InvestmentAccount10.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount11#IntermediaryInformation
- * InvestmentAccount11.IntermediaryInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary11#Role
- * Intermediary11.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary11#ExtendedRole
- * Intermediary11.ExtendedRole}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount11#mmIntermediaryInformation
+ * InvestmentAccount11.mmIntermediaryInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary11#mmRole
+ * Intermediary11.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary11#mmExtendedRole
+ * Intermediary11.mmExtendedRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount22#IntermediaryInformation
- * InvestmentAccount22.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount22#mmIntermediaryInformation
+ * InvestmentAccount22.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount24#IntermediaryInformation
- * InvestmentAccount24.IntermediaryInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary2#Role
- * Intermediary2.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary3#Role
- * Intermediary3.Role}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount24#mmIntermediaryInformation
+ * InvestmentAccount24.mmIntermediaryInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary2#mmRole
+ * Intermediary2.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary3#mmRole
+ * Intermediary3.mmRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingAccount1#IntermediaryInformation
- * SafekeepingAccount1.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingAccount1#mmIntermediaryInformation
+ * SafekeepingAccount1.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingAccount2#IntermediaryInformation
- * SafekeepingAccount2.IntermediaryInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary21#Role
- * Intermediary21.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary23#Role
- * Intermediary23.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary22#Role
- * Intermediary22.Role}</li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingAccount2#mmIntermediaryInformation
+ * SafekeepingAccount2.mmIntermediaryInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary21#mmRole
+ * Intermediary21.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary23#mmRole
+ * Intermediary23.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary22#mmRole
+ * Intermediary22.mmRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount12#IntermediaryInformation
- * InvestmentAccount12.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount12#mmIntermediaryInformation
+ * InvestmentAccount12.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount25#IntermediaryInformation
- * InvestmentAccount25.IntermediaryInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary17#RoleType
- * Intermediary17.RoleType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary18#Role
- * Intermediary18.Role}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount25#mmIntermediaryInformation
+ * InvestmentAccount25.mmIntermediaryInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary17#mmRoleType
+ * Intermediary17.mmRoleType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary18#mmRole
+ * Intermediary18.mmRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount40#IntermediaryInformation
- * InvestmentAccount40.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount40#mmIntermediaryInformation
+ * InvestmentAccount40.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount41#IntermediaryInformation
- * InvestmentAccount41.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount41#mmIntermediaryInformation
+ * InvestmentAccount41.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount43#IntermediaryInformation
- * InvestmentAccount43.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount43#mmIntermediaryInformation
+ * InvestmentAccount43.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount44#Intermediary
- * InvestmentAccount44.Intermediary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount5#Agent
- * SafekeepingAccount5.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel1#Agent
- * AccountSubLevel1.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary28#Role
- * Intermediary28.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel4#Agent
- * AccountSubLevel4.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel5#AgentCode
- * AccountSubLevel5.AgentCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel2#Agent
- * AccountSubLevel2.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel3#Agent
- * AccountSubLevel3.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel6#Agent
- * AccountSubLevel6.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel7#Agent
- * AccountSubLevel7.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel8#Agent
- * AccountSubLevel8.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel9#Agent
- * AccountSubLevel9.Agent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary32#Role
- * Intermediary32.Role}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount44#mmIntermediary
+ * InvestmentAccount44.mmIntermediary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount5#mmAgent
+ * SafekeepingAccount5.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel1#mmAgent
+ * AccountSubLevel1.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary28#mmRole
+ * Intermediary28.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel4#mmAgent
+ * AccountSubLevel4.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel5#mmAgentCode
+ * AccountSubLevel5.mmAgentCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel2#mmAgent
+ * AccountSubLevel2.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel3#mmAgent
+ * AccountSubLevel3.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel6#mmAgent
+ * AccountSubLevel6.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel7#mmAgent
+ * AccountSubLevel7.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel8#mmAgent
+ * AccountSubLevel8.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel9#mmAgent
+ * AccountSubLevel9.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary32#mmRole
+ * Intermediary32.mmRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount54#IntermediaryInformation
- * InvestmentAccount54.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount54#mmIntermediaryInformation
+ * InvestmentAccount54.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation17#IntermediaryInformation
- * ReceiveInformation17.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation17#mmIntermediaryInformation
+ * ReceiveInformation17.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#IntermediaryInformation
- * ReceiveInformation16.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmIntermediaryInformation
+ * ReceiveInformation16.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount56#IntermediaryInformation
- * InvestmentAccount56.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount56#mmIntermediaryInformation
+ * InvestmentAccount56.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliverInformation16#IntermediaryInformation
- * DeliverInformation16.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation16#mmIntermediaryInformation
+ * DeliverInformation16.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DeliverInformation17#IntermediaryInformation
- * DeliverInformation17.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation17#mmIntermediaryInformation
+ * DeliverInformation17.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount52#Intermediary
- * InvestmentAccount52.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount52#mmIntermediary
+ * InvestmentAccount52.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount57#IntermediaryInformation
- * InvestmentAccount57.IntermediaryInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary37#Role
- * Intermediary37.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AggregateHoldingBalance3#Agent
- * AggregateHoldingBalance3.Agent}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount57#mmIntermediaryInformation
+ * InvestmentAccount57.mmIntermediaryInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary37#mmRole
+ * Intermediary37.mmRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount64#Intermediary
- * InvestmentAccount64.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance3#mmAgent
+ * AggregateHoldingBalance3.mmAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount64#mmIntermediary
+ * InvestmentAccount64.mmIntermediary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -209,8 +210,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -230,29 +231,30 @@ public class IntermediaryRole extends AccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IntermediaryRole";
 				definition = "Party that provides services relating to financial products to investors, for example, advice on products and placement of orders.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary5.Role, com.tools20022.repository.msg.Intermediary5.ExtendedRole, com.tools20022.repository.msg.Intermediary12.Role,
-						com.tools20022.repository.msg.Intermediary12.ExtendedRole, com.tools20022.repository.msg.Intermediary1.Role, com.tools20022.repository.msg.InvestmentAccount19.Intermediary,
-						com.tools20022.repository.msg.Intermediary6.Role, com.tools20022.repository.msg.Intermediary6.ExtendedRole, com.tools20022.repository.msg.InvestmentAccount29.Intermediary,
-						com.tools20022.repository.msg.Intermediary13.Role, com.tools20022.repository.msg.Intermediary13.ExtendedRole, com.tools20022.repository.msg.InvestmentAccount10.IntermediaryInformation,
-						com.tools20022.repository.msg.InvestmentAccount11.IntermediaryInformation, com.tools20022.repository.msg.Intermediary11.Role, com.tools20022.repository.msg.Intermediary11.ExtendedRole,
-						com.tools20022.repository.msg.InvestmentAccount22.IntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount24.IntermediaryInformation, com.tools20022.repository.msg.Intermediary2.Role,
-						com.tools20022.repository.msg.Intermediary3.Role, com.tools20022.repository.msg.SafekeepingAccount1.IntermediaryInformation, com.tools20022.repository.msg.SafekeepingAccount2.IntermediaryInformation,
-						com.tools20022.repository.msg.Intermediary21.Role, com.tools20022.repository.msg.Intermediary23.Role, com.tools20022.repository.msg.Intermediary22.Role,
-						com.tools20022.repository.msg.InvestmentAccount12.IntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount25.IntermediaryInformation, com.tools20022.repository.msg.Intermediary17.RoleType,
-						com.tools20022.repository.msg.Intermediary18.Role, com.tools20022.repository.msg.InvestmentAccount40.IntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount41.IntermediaryInformation,
-						com.tools20022.repository.msg.InvestmentAccount43.IntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount44.Intermediary, com.tools20022.repository.msg.SafekeepingAccount5.Agent,
-						com.tools20022.repository.msg.AccountSubLevel1.Agent, com.tools20022.repository.msg.Intermediary28.Role, com.tools20022.repository.msg.AccountSubLevel4.Agent,
-						com.tools20022.repository.msg.AccountSubLevel5.AgentCode, com.tools20022.repository.msg.AccountSubLevel2.Agent, com.tools20022.repository.msg.AccountSubLevel3.Agent,
-						com.tools20022.repository.msg.AccountSubLevel6.Agent, com.tools20022.repository.msg.AccountSubLevel7.Agent, com.tools20022.repository.msg.AccountSubLevel8.Agent, com.tools20022.repository.msg.AccountSubLevel9.Agent,
-						com.tools20022.repository.msg.Intermediary32.Role, com.tools20022.repository.msg.InvestmentAccount54.IntermediaryInformation, com.tools20022.repository.msg.ReceiveInformation17.IntermediaryInformation,
-						com.tools20022.repository.msg.ReceiveInformation16.IntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount56.IntermediaryInformation,
-						com.tools20022.repository.msg.DeliverInformation16.IntermediaryInformation, com.tools20022.repository.msg.DeliverInformation17.IntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount52.Intermediary,
-						com.tools20022.repository.msg.InvestmentAccount57.IntermediaryInformation, com.tools20022.repository.msg.Intermediary37.Role, com.tools20022.repository.msg.AggregateHoldingBalance3.Agent,
-						com.tools20022.repository.msg.InvestmentAccount64.Intermediary);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary5.mmRole, com.tools20022.repository.msg.Intermediary5.mmExtendedRole, com.tools20022.repository.msg.Intermediary12.mmRole,
+						com.tools20022.repository.msg.Intermediary12.mmExtendedRole, com.tools20022.repository.msg.Intermediary1.mmRole, com.tools20022.repository.msg.InvestmentAccount19.mmIntermediary,
+						com.tools20022.repository.msg.Intermediary6.mmRole, com.tools20022.repository.msg.Intermediary6.mmExtendedRole, com.tools20022.repository.msg.InvestmentAccount29.mmIntermediary,
+						com.tools20022.repository.msg.Intermediary13.mmRole, com.tools20022.repository.msg.Intermediary13.mmExtendedRole, com.tools20022.repository.msg.InvestmentAccount10.mmIntermediaryInformation,
+						com.tools20022.repository.msg.InvestmentAccount11.mmIntermediaryInformation, com.tools20022.repository.msg.Intermediary11.mmRole, com.tools20022.repository.msg.Intermediary11.mmExtendedRole,
+						com.tools20022.repository.msg.InvestmentAccount22.mmIntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount24.mmIntermediaryInformation, com.tools20022.repository.msg.Intermediary2.mmRole,
+						com.tools20022.repository.msg.Intermediary3.mmRole, com.tools20022.repository.msg.SafekeepingAccount1.mmIntermediaryInformation, com.tools20022.repository.msg.SafekeepingAccount2.mmIntermediaryInformation,
+						com.tools20022.repository.msg.Intermediary21.mmRole, com.tools20022.repository.msg.Intermediary23.mmRole, com.tools20022.repository.msg.Intermediary22.mmRole,
+						com.tools20022.repository.msg.InvestmentAccount12.mmIntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount25.mmIntermediaryInformation, com.tools20022.repository.msg.Intermediary17.mmRoleType,
+						com.tools20022.repository.msg.Intermediary18.mmRole, com.tools20022.repository.msg.InvestmentAccount40.mmIntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount41.mmIntermediaryInformation,
+						com.tools20022.repository.msg.InvestmentAccount43.mmIntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount44.mmIntermediary, com.tools20022.repository.msg.SafekeepingAccount5.mmAgent,
+						com.tools20022.repository.msg.AccountSubLevel1.mmAgent, com.tools20022.repository.msg.Intermediary28.mmRole, com.tools20022.repository.msg.AccountSubLevel4.mmAgent,
+						com.tools20022.repository.msg.AccountSubLevel5.mmAgentCode, com.tools20022.repository.msg.AccountSubLevel2.mmAgent, com.tools20022.repository.msg.AccountSubLevel3.mmAgent,
+						com.tools20022.repository.msg.AccountSubLevel6.mmAgent, com.tools20022.repository.msg.AccountSubLevel7.mmAgent, com.tools20022.repository.msg.AccountSubLevel8.mmAgent,
+						com.tools20022.repository.msg.AccountSubLevel9.mmAgent, com.tools20022.repository.msg.Intermediary32.mmRole, com.tools20022.repository.msg.InvestmentAccount54.mmIntermediaryInformation,
+						com.tools20022.repository.msg.ReceiveInformation17.mmIntermediaryInformation, com.tools20022.repository.msg.ReceiveInformation16.mmIntermediaryInformation,
+						com.tools20022.repository.msg.InvestmentAccount56.mmIntermediaryInformation, com.tools20022.repository.msg.DeliverInformation16.mmIntermediaryInformation,
+						com.tools20022.repository.msg.DeliverInformation17.mmIntermediaryInformation, com.tools20022.repository.msg.InvestmentAccount52.mmIntermediary,
+						com.tools20022.repository.msg.InvestmentAccount57.mmIntermediaryInformation, com.tools20022.repository.msg.Intermediary37.mmRole, com.tools20022.repository.msg.AggregateHoldingBalance3.mmAgent,
+						com.tools20022.repository.msg.InvestmentAccount64.mmIntermediary);
 				superType_lazy = () -> AccountPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(Intermediary5.mmObject(), Intermediary12.mmObject(), Intermediary1.mmObject(), Intermediary7.mmObject(), Intermediary6.mmObject(), Intermediary13.mmObject(),
 						Intermediary11.mmObject(), Intermediary2.mmObject(), Intermediary3.mmObject(), Intermediary21.mmObject(), Intermediary23.mmObject(), Intermediary22.mmObject(), Intermediary17.mmObject(), Intermediary18.mmObject(),

@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.MoveTypeCode MoveTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MoveType1Code#Static
- * MoveType1Code.Static}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MoveType1Code#Float
- * MoveType1Code.Float}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MoveType1Code#mmStatic
+ * MoveType1Code.mmStatic}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MoveType1Code#mmFloat
+ * MoveType1Code.mmFloat}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class MoveType1Code extends MoveTypeCode {
 	 * name} = "Static"</li>
 	 * </ul>
 	 */
-	public static final MMCode Static = new MMCode() {
+	public static final MMCode mmStatic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Static";
@@ -102,7 +102,7 @@ public class MoveType1Code extends MoveTypeCode {
 	 * name} = "Float"</li>
 	 * </ul>
 	 */
-	public static final MMCode Float = new MMCode() {
+	public static final MMCode mmFloat = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Float";
@@ -113,12 +113,12 @@ public class MoveType1Code extends MoveTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STAT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MoveType1Code";
 				definition = "Describes whether peg or discretion price is static/fixed or floats.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MoveType1Code.Static, com.tools20022.repository.codeset.MoveType1Code.Float);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MoveType1Code.mmStatic, com.tools20022.repository.codeset.MoveType1Code.mmFloat);
 				trace_lazy = () -> MoveTypeCode.mmObject();
 			}
 		});

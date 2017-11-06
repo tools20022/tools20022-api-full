@@ -31,22 +31,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment5#ATM
- * ATMEnvironment5.ATM}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment5#Customer
- * ATMEnvironment5.Customer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment5#mmATM
+ * ATMEnvironment5.mmATM}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment5#mmCustomer
+ * ATMEnvironment5.mmCustomer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMEnvironment5#ProtectedCardData
- * ATMEnvironment5.ProtectedCardData}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMEnvironment5#PlainCardData
- * ATMEnvironment5.PlainCardData}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMEnvironment5#mmProtectedCardData
+ * ATMEnvironment5.mmProtectedCardData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMEnvironment5#mmPlainCardData
+ * ATMEnvironment5.mmPlainCardData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMEnvironment5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AutomatedTellerMachine2 aTM;
 	/**
 	 * ATM information.
 	 * <p>
@@ -91,11 +93,11 @@ public class ATMEnvironment5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMEnvironment2#ATM
-	 * ATMEnvironment2.ATM}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMEnvironment2#mmATM
+	 * ATMEnvironment2.mmATM}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ATM = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMEnvironment5.mmObject();
 			isDerived = false;
@@ -103,13 +105,14 @@ public class ATMEnvironment5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATM";
 			definition = "ATM information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment2.ATM;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment2.mmATM;
 			maxOccurs = 1;
-			type_lazy = () -> AutomatedTellerMachine2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine2.mmObject();
 		}
 	};
+	protected ATMCustomer2 customer;
 	/**
 	 * Customer involved in the withdrawal transaction.
 	 * <p>
@@ -137,11 +140,11 @@ public class ATMEnvironment5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMEnvironment2#Customer
-	 * ATMEnvironment2.Customer}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMEnvironment2#mmCustomer
+	 * ATMEnvironment2.mmCustomer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Customer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCustomer = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMEnvironment5.mmObject();
 			isDerived = false;
@@ -149,13 +152,14 @@ public class ATMEnvironment5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Customer";
 			definition = "Customer involved in the withdrawal transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment2.Customer;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment2.mmCustomer;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCustomer2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCustomer2.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedCardData;
 	/**
 	 * Encryption of the sensitive card data.
 	 * <p>
@@ -184,11 +188,11 @@ public class ATMEnvironment5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMEnvironment2#ProtectedCardData
-	 * ATMEnvironment2.ProtectedCardData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMEnvironment2#mmProtectedCardData
+	 * ATMEnvironment2.mmProtectedCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProtectedCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProtectedCardData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMEnvironment5.mmObject();
 			isDerived = false;
@@ -196,13 +200,14 @@ public class ATMEnvironment5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedCardData";
 			definition = "Encryption of the sensitive card data.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment2.ProtectedCardData;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment2.mmProtectedCardData;
 			maxOccurs = 1;
-			type_lazy = () -> ContentInformationType10.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 		}
 	};
+	protected PlainCardData14 plainCardData;
 	/**
 	 * Sensitive data associated with the card performing the transaction.
 	 * <p>
@@ -231,11 +236,11 @@ public class ATMEnvironment5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMEnvironment2#PlainCardData
-	 * ATMEnvironment2.PlainCardData}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMEnvironment2#mmPlainCardData
+	 * ATMEnvironment2.mmPlainCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PlainCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlainCardData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMEnvironment5.mmObject();
 			isDerived = false;
@@ -243,20 +248,20 @@ public class ATMEnvironment5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlainCardData";
 			definition = "Sensitive data associated with the card performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment2.PlainCardData;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment2.mmPlainCardData;
 			maxOccurs = 1;
-			type_lazy = () -> PlainCardData14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PlainCardData14.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEnvironment5.ATM, com.tools20022.repository.msg.ATMEnvironment5.Customer, com.tools20022.repository.msg.ATMEnvironment5.ProtectedCardData,
-						com.tools20022.repository.msg.ATMEnvironment5.PlainCardData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEnvironment5.mmATM, com.tools20022.repository.msg.ATMEnvironment5.mmCustomer, com.tools20022.repository.msg.ATMEnvironment5.mmProtectedCardData,
+						com.tools20022.repository.msg.ATMEnvironment5.mmPlainCardData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMEnvironment5";
 				definition = "Environment of the transaction.";
@@ -264,5 +269,37 @@ public class ATMEnvironment5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AutomatedTellerMachine2 getATM() {
+		return aTM;
+	}
+
+	public void setATM(com.tools20022.repository.msg.AutomatedTellerMachine2 aTM) {
+		this.aTM = aTM;
+	}
+
+	public ATMCustomer2 getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(com.tools20022.repository.msg.ATMCustomer2 customer) {
+		this.customer = customer;
+	}
+
+	public ContentInformationType10 getProtectedCardData() {
+		return protectedCardData;
+	}
+
+	public void setProtectedCardData(com.tools20022.repository.msg.ContentInformationType10 protectedCardData) {
+		this.protectedCardData = protectedCardData;
+	}
+
+	public PlainCardData14 getPlainCardData() {
+		return plainCardData;
+	}
+
+	public void setPlainCardData(com.tools20022.repository.msg.PlainCardData14 plainCardData) {
+		this.plainCardData = plainCardData;
 	}
 }

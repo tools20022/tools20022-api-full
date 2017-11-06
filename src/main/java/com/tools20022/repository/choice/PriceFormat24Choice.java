@@ -44,20 +44,20 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice#PercentagePrice
- * PriceFormat24Choice.PercentagePrice}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice#mmPercentagePrice
+ * PriceFormat24Choice.mmPercentagePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice#AmountPrice
- * PriceFormat24Choice.AmountPrice}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice#mmAmountPrice
+ * PriceFormat24Choice.mmAmountPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice#NotSpecifiedPrice
- * PriceFormat24Choice.NotSpecifiedPrice}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice#mmNotSpecifiedPrice
+ * PriceFormat24Choice.mmNotSpecifiedPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice#AmountPricePerFinancialInstrumentQuantity
- * PriceFormat24Choice.AmountPricePerFinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice#mmAmountPricePerFinancialInstrumentQuantity
+ * PriceFormat24Choice.mmAmountPricePerFinancialInstrumentQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice#AmountPricePerAmount
- * PriceFormat24Choice.AmountPricePerAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.PriceFormat24Choice#mmAmountPricePerAmount
+ * PriceFormat24Choice.mmAmountPricePerAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +66,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -84,6 +84,7 @@ import java.util.function.Supplier;
 public class PriceFormat24Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentagePrice1 percentagePrice;
 	/**
 	 * Price expressed as a percentage.
 	 * <p>
@@ -95,8 +96,8 @@ public class PriceFormat24Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Rate
-	 * SecuritiesPricing.Rate}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRate
+	 * SecuritiesPricing.mmRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -115,21 +116,22 @@ public class PriceFormat24Choice {
 	 * definition} = "Price expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PercentagePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PriceFormat24Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Rate;
 			isDerived = false;
 			xmlTag = "PctgPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentagePrice";
 			definition = "Price expressed as a percentage.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PercentagePrice1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PercentagePrice1.mmObject();
 		}
 	};
+	protected AmountPrice5 amountPrice;
 	/**
 	 * Price expressed as a currency and amount.
 	 * <p>
@@ -141,7 +143,8 @@ public class PriceFormat24Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Price#Amount Price.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Price#mmAmount
+	 * Price.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -160,21 +163,22 @@ public class PriceFormat24Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
 			componentContext_lazy = () -> PriceFormat24Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.Amount;
 			isDerived = false;
 			xmlTag = "AmtPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPrice";
 			definition = "Price expressed as a currency and amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountPrice5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountPrice5.mmObject();
 		}
 	};
+	protected PriceValueType9Code notSpecifiedPrice;
 	/**
 	 * Value of the price not specified.
 	 * <p>
@@ -203,7 +207,7 @@ public class PriceFormat24Choice {
 	 * definition} = "Value of the price not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriceFormat24Choice.mmObject();
 			isDerived = false;
@@ -211,11 +215,12 @@ public class PriceFormat24Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedPrice";
 			definition = "Value of the price not specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType9Code.mmObject();
 		}
 	};
+	protected AmountPricePerFinancialInstrumentQuantity4 amountPricePerFinancialInstrumentQuantity;
 	/**
 	 * Price expressed as a ratio: amount price per financial instrument
 	 * quantity.
@@ -229,8 +234,8 @@ public class PriceFormat24Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#AmountPricePerFinancialInstrumentQuantity
-	 * SecuritiesPricing.AmountPricePerFinancialInstrumentQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAmountPricePerFinancialInstrumentQuantity
+	 * SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -251,21 +256,22 @@ public class PriceFormat24Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity;
 			componentContext_lazy = () -> PriceFormat24Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.AmountPricePerFinancialInstrumentQuantity;
 			isDerived = false;
 			xmlTag = "AmtPricPerFinInstrmQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPricePerFinancialInstrumentQuantity";
 			definition = "Price expressed as a ratio: amount price per financial instrument quantity.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity4.mmObject();
 		}
 	};
+	protected AmountPricePerAmount3 amountPricePerAmount;
 	/**
 	 * Price expressed as a ratio: amount price per amount
 	 * <p>
@@ -277,8 +283,8 @@ public class PriceFormat24Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#AmountPricePerAmount
-	 * SecuritiesPricing.AmountPricePerAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAmountPricePerAmount
+	 * SecuritiesPricing.mmAmountPricePerAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -297,30 +303,30 @@ public class PriceFormat24Choice {
 	 * definition} = "Price expressed as a ratio: amount price per amount"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountPricePerAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountPricePerAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerAmount;
 			componentContext_lazy = () -> PriceFormat24Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.AmountPricePerAmount;
 			isDerived = false;
 			xmlTag = "AmtPricPerAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPricePerAmount";
 			definition = "Price expressed as a ratio: amount price per amount";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountPricePerAmount3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountPricePerAmount3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat24Choice.PercentagePrice, com.tools20022.repository.choice.PriceFormat24Choice.AmountPrice,
-						com.tools20022.repository.choice.PriceFormat24Choice.NotSpecifiedPrice, com.tools20022.repository.choice.PriceFormat24Choice.AmountPricePerFinancialInstrumentQuantity,
-						com.tools20022.repository.choice.PriceFormat24Choice.AmountPricePerAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat24Choice.mmPercentagePrice, com.tools20022.repository.choice.PriceFormat24Choice.mmAmountPrice,
+						com.tools20022.repository.choice.PriceFormat24Choice.mmNotSpecifiedPrice, com.tools20022.repository.choice.PriceFormat24Choice.mmAmountPricePerFinancialInstrumentQuantity,
+						com.tools20022.repository.choice.PriceFormat24Choice.mmAmountPricePerAmount);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -334,5 +340,45 @@ public class PriceFormat24Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentagePrice1 getPercentagePrice() {
+		return percentagePrice;
+	}
+
+	public void setPercentagePrice(PercentagePrice1 percentagePrice) {
+		this.percentagePrice = percentagePrice;
+	}
+
+	public AmountPrice5 getAmountPrice() {
+		return amountPrice;
+	}
+
+	public void setAmountPrice(AmountPrice5 amountPrice) {
+		this.amountPrice = amountPrice;
+	}
+
+	public PriceValueType9Code getNotSpecifiedPrice() {
+		return notSpecifiedPrice;
+	}
+
+	public void setNotSpecifiedPrice(PriceValueType9Code notSpecifiedPrice) {
+		this.notSpecifiedPrice = notSpecifiedPrice;
+	}
+
+	public AmountPricePerFinancialInstrumentQuantity4 getAmountPricePerFinancialInstrumentQuantity() {
+		return amountPricePerFinancialInstrumentQuantity;
+	}
+
+	public void setAmountPricePerFinancialInstrumentQuantity(AmountPricePerFinancialInstrumentQuantity4 amountPricePerFinancialInstrumentQuantity) {
+		this.amountPricePerFinancialInstrumentQuantity = amountPricePerFinancialInstrumentQuantity;
+	}
+
+	public AmountPricePerAmount3 getAmountPricePerAmount() {
+		return amountPricePerAmount;
+	}
+
+	public void setAmountPricePerAmount(AmountPricePerAmount3 amountPricePerAmount) {
+		this.amountPricePerAmount = amountPricePerAmount;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.CashAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Indicates which fields must be present in the response.
@@ -35,62 +36,62 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#Identification
- * CustomerAccountReturnCriteria1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmIdentification
+ * CustomerAccountReturnCriteria1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#Name
- * CustomerAccountReturnCriteria1.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmName
+ * CustomerAccountReturnCriteria1.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#Status
- * CustomerAccountReturnCriteria1.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmStatus
+ * CustomerAccountReturnCriteria1.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#Type
- * CustomerAccountReturnCriteria1.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmType
+ * CustomerAccountReturnCriteria1.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#Currency
- * CustomerAccountReturnCriteria1.Currency}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmCurrency
+ * CustomerAccountReturnCriteria1.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#MonthlyPaymentValue
- * CustomerAccountReturnCriteria1.MonthlyPaymentValue}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmMonthlyPaymentValue
+ * CustomerAccountReturnCriteria1.mmMonthlyPaymentValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#MonthlyReceivedValue
- * CustomerAccountReturnCriteria1.MonthlyReceivedValue}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmMonthlyReceivedValue
+ * CustomerAccountReturnCriteria1.mmMonthlyReceivedValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#MonthlyTransactionNumber
- * CustomerAccountReturnCriteria1.MonthlyTransactionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmMonthlyTransactionNumber
+ * CustomerAccountReturnCriteria1.mmMonthlyTransactionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#AverageBalance
- * CustomerAccountReturnCriteria1.AverageBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmAverageBalance
+ * CustomerAccountReturnCriteria1.mmAverageBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#AccountPurpose
- * CustomerAccountReturnCriteria1.AccountPurpose}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmAccountPurpose
+ * CustomerAccountReturnCriteria1.mmAccountPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#FloorNotificationAmount
- * CustomerAccountReturnCriteria1.FloorNotificationAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmFloorNotificationAmount
+ * CustomerAccountReturnCriteria1.mmFloorNotificationAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#CeilingNotificationAmount
- * CustomerAccountReturnCriteria1.CeilingNotificationAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmCeilingNotificationAmount
+ * CustomerAccountReturnCriteria1.mmCeilingNotificationAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#StatementCycle
- * CustomerAccountReturnCriteria1.StatementCycle}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmStatementCycle
+ * CustomerAccountReturnCriteria1.mmStatementCycle}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#ClosingDate
- * CustomerAccountReturnCriteria1.ClosingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmClosingDate
+ * CustomerAccountReturnCriteria1.mmClosingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#Restriction
- * CustomerAccountReturnCriteria1.Restriction}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmRestriction
+ * CustomerAccountReturnCriteria1.mmRestriction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#OpeningDate
- * CustomerAccountReturnCriteria1.OpeningDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmOpeningDate
+ * CustomerAccountReturnCriteria1.mmOpeningDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#AccountOwner
- * CustomerAccountReturnCriteria1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmAccountOwner
+ * CustomerAccountReturnCriteria1.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#ReferenceAccount
- * CustomerAccountReturnCriteria1.ReferenceAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmReferenceAccount
+ * CustomerAccountReturnCriteria1.mmReferenceAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#Proprietary
- * CustomerAccountReturnCriteria1.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.msg.CustomerAccountReturnCriteria1#mmProprietary
+ * CustomerAccountReturnCriteria1.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -99,8 +100,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,6 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CustomerAccountReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator identification;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -142,7 +144,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -150,11 +152,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator name;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -183,7 +186,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -191,11 +194,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator status;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -224,7 +228,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -232,11 +236,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator type;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -265,7 +270,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -273,11 +278,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator currency;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -306,7 +312,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Currency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -314,11 +320,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator monthlyPaymentValue;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -347,7 +354,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MonthlyPaymentValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMonthlyPaymentValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -355,11 +362,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonthlyPaymentValue";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator monthlyReceivedValue;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -388,7 +396,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MonthlyReceivedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMonthlyReceivedValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -396,11 +404,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonthlyReceivedValue";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator monthlyTransactionNumber;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -429,7 +438,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MonthlyTransactionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMonthlyTransactionNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -437,11 +446,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonthlyTransactionNumber";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator averageBalance;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -470,7 +480,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AverageBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAverageBalance = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -478,11 +488,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageBalance";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator accountPurpose;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -511,7 +522,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountPurpose = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -519,11 +530,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountPurpose";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator floorNotificationAmount;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -552,7 +564,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FloorNotificationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFloorNotificationAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -560,11 +572,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloorNotificationAmount";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator ceilingNotificationAmount;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -593,7 +606,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CeilingNotificationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCeilingNotificationAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -601,11 +614,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CeilingNotificationAmount";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator statementCycle;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -634,7 +648,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementCycle = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementCycle = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -642,11 +656,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementCycle";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator closingDate;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -675,7 +690,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -683,11 +698,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator restriction;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -716,7 +732,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Restriction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRestriction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -724,11 +740,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restriction";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator openingDate;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -757,7 +774,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -765,11 +782,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator accountOwner;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -798,7 +816,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -806,11 +824,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator referenceAccount;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -839,7 +858,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceAccount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -847,11 +866,12 @@ public class CustomerAccountReturnCriteria1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceAccount";
 			definition = "Indicates if this field must be present in the response.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification42> proprietary;
 	/**
 	 * Indicates if this field must be present in the response.
 	 * <p>
@@ -879,7 +899,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -888,30 +908,182 @@ public class CustomerAccountReturnCriteria1 {
 			name = "Proprietary";
 			definition = "Indicates if this field must be present in the response.";
 			minOccurs = 0;
-			type_lazy = () -> GenericIdentification42.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification42.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccountReturnCriteria1.Identification, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.Name,
-						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.Status, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.Type, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.Currency,
-						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.MonthlyPaymentValue, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.MonthlyReceivedValue,
-						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.MonthlyTransactionNumber, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.AverageBalance,
-						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.AccountPurpose, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.FloorNotificationAmount,
-						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.CeilingNotificationAmount, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.StatementCycle,
-						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.ClosingDate, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.Restriction,
-						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.OpeningDate, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.AccountOwner,
-						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.ReferenceAccount, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmIdentification, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmName,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmStatus, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmType, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmCurrency,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmMonthlyPaymentValue, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmMonthlyReceivedValue,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmMonthlyTransactionNumber, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmAverageBalance,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmAccountPurpose, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmFloorNotificationAmount,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmCeilingNotificationAmount, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmStatementCycle,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmClosingDate, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmRestriction,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmOpeningDate, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmAccountOwner,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmReferenceAccount, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmProprietary);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CustomerAccountReturnCriteria1";
 				definition = "Indicates which fields must be present in the response.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(YesNoIndicator identification) {
+		this.identification = identification;
+	}
+
+	public YesNoIndicator getName() {
+		return name;
+	}
+
+	public void setName(YesNoIndicator name) {
+		this.name = name;
+	}
+
+	public YesNoIndicator getStatus() {
+		return status;
+	}
+
+	public void setStatus(YesNoIndicator status) {
+		this.status = status;
+	}
+
+	public YesNoIndicator getType() {
+		return type;
+	}
+
+	public void setType(YesNoIndicator type) {
+		this.type = type;
+	}
+
+	public YesNoIndicator getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(YesNoIndicator currency) {
+		this.currency = currency;
+	}
+
+	public YesNoIndicator getMonthlyPaymentValue() {
+		return monthlyPaymentValue;
+	}
+
+	public void setMonthlyPaymentValue(YesNoIndicator monthlyPaymentValue) {
+		this.monthlyPaymentValue = monthlyPaymentValue;
+	}
+
+	public YesNoIndicator getMonthlyReceivedValue() {
+		return monthlyReceivedValue;
+	}
+
+	public void setMonthlyReceivedValue(YesNoIndicator monthlyReceivedValue) {
+		this.monthlyReceivedValue = monthlyReceivedValue;
+	}
+
+	public YesNoIndicator getMonthlyTransactionNumber() {
+		return monthlyTransactionNumber;
+	}
+
+	public void setMonthlyTransactionNumber(YesNoIndicator monthlyTransactionNumber) {
+		this.monthlyTransactionNumber = monthlyTransactionNumber;
+	}
+
+	public YesNoIndicator getAverageBalance() {
+		return averageBalance;
+	}
+
+	public void setAverageBalance(YesNoIndicator averageBalance) {
+		this.averageBalance = averageBalance;
+	}
+
+	public YesNoIndicator getAccountPurpose() {
+		return accountPurpose;
+	}
+
+	public void setAccountPurpose(YesNoIndicator accountPurpose) {
+		this.accountPurpose = accountPurpose;
+	}
+
+	public YesNoIndicator getFloorNotificationAmount() {
+		return floorNotificationAmount;
+	}
+
+	public void setFloorNotificationAmount(YesNoIndicator floorNotificationAmount) {
+		this.floorNotificationAmount = floorNotificationAmount;
+	}
+
+	public YesNoIndicator getCeilingNotificationAmount() {
+		return ceilingNotificationAmount;
+	}
+
+	public void setCeilingNotificationAmount(YesNoIndicator ceilingNotificationAmount) {
+		this.ceilingNotificationAmount = ceilingNotificationAmount;
+	}
+
+	public YesNoIndicator getStatementCycle() {
+		return statementCycle;
+	}
+
+	public void setStatementCycle(YesNoIndicator statementCycle) {
+		this.statementCycle = statementCycle;
+	}
+
+	public YesNoIndicator getClosingDate() {
+		return closingDate;
+	}
+
+	public void setClosingDate(YesNoIndicator closingDate) {
+		this.closingDate = closingDate;
+	}
+
+	public YesNoIndicator getRestriction() {
+		return restriction;
+	}
+
+	public void setRestriction(YesNoIndicator restriction) {
+		this.restriction = restriction;
+	}
+
+	public YesNoIndicator getOpeningDate() {
+		return openingDate;
+	}
+
+	public void setOpeningDate(YesNoIndicator openingDate) {
+		this.openingDate = openingDate;
+	}
+
+	public YesNoIndicator getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(YesNoIndicator accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public YesNoIndicator getReferenceAccount() {
+		return referenceAccount;
+	}
+
+	public void setReferenceAccount(YesNoIndicator referenceAccount) {
+		this.referenceAccount = referenceAccount;
+	}
+
+	public List<GenericIdentification42> getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(List<com.tools20022.repository.msg.GenericIdentification42> proprietary) {
+		this.proprietary = proprietary;
 	}
 }

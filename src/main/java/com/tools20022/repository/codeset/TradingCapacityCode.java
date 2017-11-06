@@ -30,49 +30,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#Principal
- * TradingCapacityCode.Principal}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmPrincipal
+ * TradingCapacityCode.mmPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#CrossingPrincipal
- * TradingCapacityCode.CrossingPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmCrossingPrincipal
+ * TradingCapacityCode.mmCrossingPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#RisklessPrincipal
- * TradingCapacityCode.RisklessPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmRisklessPrincipal
+ * TradingCapacityCode.mmRisklessPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#Proprietary
- * TradingCapacityCode.Proprietary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacityCode#Agent
- * TradingCapacityCode.Agent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmProprietary
+ * TradingCapacityCode.mmProprietary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#CrossingAgent
- * TradingCapacityCode.CrossingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmAgent
+ * TradingCapacityCode.mmAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#OtherAgent
- * TradingCapacityCode.OtherAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmCrossingAgent
+ * TradingCapacityCode.mmCrossingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#PrincipalAgent
- * TradingCapacityCode.PrincipalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmOtherAgent
+ * TradingCapacityCode.mmOtherAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#ActingAgent
- * TradingCapacityCode.ActingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmPrincipalAgent
+ * TradingCapacityCode.mmPrincipalAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#InvestmentFirm
- * TradingCapacityCode.InvestmentFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmActingAgent
+ * TradingCapacityCode.mmActingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#MarketMaker
- * TradingCapacityCode.MarketMaker}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmInvestmentFirm
+ * TradingCapacityCode.mmInvestmentFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#MultilateralTradingFacility
- * TradingCapacityCode.MultilateralTradingFacility}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmMarketMaker
+ * TradingCapacityCode.mmMarketMaker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#RegulatedMarket
- * TradingCapacityCode.RegulatedMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmMultilateralTradingFacility
+ * TradingCapacityCode.mmMultilateralTradingFacility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#SystematicInternaliser
- * TradingCapacityCode.SystematicInternaliser}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmRegulatedMarket
+ * TradingCapacityCode.mmRegulatedMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#TransferAgent
- * TradingCapacityCode.TransferAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmSystematicInternaliser
+ * TradingCapacityCode.mmSystematicInternaliser}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode#mmTransferAgent
+ * TradingCapacityCode.mmTransferAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -93,8 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -135,7 +136,7 @@ public class TradingCapacityCode {
 	 * definition} = "Trading as Principal."</li>
 	 * </ul>
 	 */
-	public static final MMCode Principal = new MMCode() {
+	public static final MMCode mmPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Principal";
@@ -165,7 +166,7 @@ public class TradingCapacityCode {
 	 * definition} = "Crossing as a principal."</li>
 	 * </ul>
 	 */
-	public static final MMCode CrossingPrincipal = new MMCode() {
+	public static final MMCode mmCrossingPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CrossingPrincipal";
@@ -198,7 +199,7 @@ public class TradingCapacityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RisklessPrincipal = new MMCode() {
+	public static final MMCode mmRisklessPrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RisklessPrincipal";
@@ -231,7 +232,7 @@ public class TradingCapacityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Proprietary = new MMCode() {
+	public static final MMCode mmProprietary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Proprietary";
@@ -261,7 +262,7 @@ public class TradingCapacityCode {
 	 * definition} = "Trading as Agent on behalf of a customer."</li>
 	 * </ul>
 	 */
-	public static final MMCode Agent = new MMCode() {
+	public static final MMCode mmAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Agent";
@@ -291,7 +292,7 @@ public class TradingCapacityCode {
 	 * definition} = "Crossing as an agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode CrossingAgent = new MMCode() {
+	public static final MMCode mmCrossingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CrossingAgent";
@@ -321,7 +322,7 @@ public class TradingCapacityCode {
 	 * definition} = "Acting as an agent for a party other than a customer."</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherAgent = new MMCode() {
+	public static final MMCode mmOtherAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OtherAgent";
@@ -354,7 +355,7 @@ public class TradingCapacityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PrincipalAgent = new MMCode() {
+	public static final MMCode mmPrincipalAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PrincipalAgent";
@@ -385,7 +386,7 @@ public class TradingCapacityCode {
 	 * "Party acting as an agent for both customer and another person."</li>
 	 * </ul>
 	 */
-	public static final MMCode ActingAgent = new MMCode() {
+	public static final MMCode mmActingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActingAgent";
@@ -419,7 +420,7 @@ public class TradingCapacityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentFirm = new MMCode() {
+	public static final MMCode mmInvestmentFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFirm";
@@ -453,7 +454,7 @@ public class TradingCapacityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MarketMaker = new MMCode() {
+	public static final MMCode mmMarketMaker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
@@ -487,7 +488,7 @@ public class TradingCapacityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode MultilateralTradingFacility = new MMCode() {
+	public static final MMCode mmMultilateralTradingFacility = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralTradingFacility";
@@ -520,7 +521,7 @@ public class TradingCapacityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode RegulatedMarket = new MMCode() {
+	public static final MMCode mmRegulatedMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatedMarket";
@@ -555,7 +556,7 @@ public class TradingCapacityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SystematicInternaliser = new MMCode() {
+	public static final MMCode mmSystematicInternaliser = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
@@ -595,7 +596,7 @@ public class TradingCapacityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TransferAgent = new MMCode() {
+	public static final MMCode mmTransferAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAgent";
@@ -608,17 +609,17 @@ public class TradingCapacityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingCapacityCode";
 				definition = "Specifies the role of a trading party in a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacityCode.Principal, com.tools20022.repository.codeset.TradingCapacityCode.CrossingPrincipal,
-						com.tools20022.repository.codeset.TradingCapacityCode.RisklessPrincipal, com.tools20022.repository.codeset.TradingCapacityCode.Proprietary, com.tools20022.repository.codeset.TradingCapacityCode.Agent,
-						com.tools20022.repository.codeset.TradingCapacityCode.CrossingAgent, com.tools20022.repository.codeset.TradingCapacityCode.OtherAgent, com.tools20022.repository.codeset.TradingCapacityCode.PrincipalAgent,
-						com.tools20022.repository.codeset.TradingCapacityCode.ActingAgent, com.tools20022.repository.codeset.TradingCapacityCode.InvestmentFirm, com.tools20022.repository.codeset.TradingCapacityCode.MarketMaker,
-						com.tools20022.repository.codeset.TradingCapacityCode.MultilateralTradingFacility, com.tools20022.repository.codeset.TradingCapacityCode.RegulatedMarket,
-						com.tools20022.repository.codeset.TradingCapacityCode.SystematicInternaliser, com.tools20022.repository.codeset.TradingCapacityCode.TransferAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacityCode.mmPrincipal, com.tools20022.repository.codeset.TradingCapacityCode.mmCrossingPrincipal,
+						com.tools20022.repository.codeset.TradingCapacityCode.mmRisklessPrincipal, com.tools20022.repository.codeset.TradingCapacityCode.mmProprietary, com.tools20022.repository.codeset.TradingCapacityCode.mmAgent,
+						com.tools20022.repository.codeset.TradingCapacityCode.mmCrossingAgent, com.tools20022.repository.codeset.TradingCapacityCode.mmOtherAgent, com.tools20022.repository.codeset.TradingCapacityCode.mmPrincipalAgent,
+						com.tools20022.repository.codeset.TradingCapacityCode.mmActingAgent, com.tools20022.repository.codeset.TradingCapacityCode.mmInvestmentFirm, com.tools20022.repository.codeset.TradingCapacityCode.mmMarketMaker,
+						com.tools20022.repository.codeset.TradingCapacityCode.mmMultilateralTradingFacility, com.tools20022.repository.codeset.TradingCapacityCode.mmRegulatedMarket,
+						com.tools20022.repository.codeset.TradingCapacityCode.mmSystematicInternaliser, com.tools20022.repository.codeset.TradingCapacityCode.mmTransferAgent);
 				derivation_lazy = () -> Arrays.asList(TradingCapacity4Code.mmObject(), TradingCapacity6Code.mmObject(), TradingCapacity3Code.mmObject(), TradingCapacity5Code.mmObject(), TradingCapacity8Code.mmObject());
 			}
 		});

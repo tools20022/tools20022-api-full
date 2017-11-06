@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#StepOutFirm
- * ConfirmationParties4.StepOutFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmStepOutFirm
+ * ConfirmationParties4.mmStepOutFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationParties2#StepOutFirm
- * ConfirmationParties2.StepOutFirm}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationParties2#mmStepOutFirm
+ * ConfirmationParties2.mmStepOutFirm}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,11 +70,11 @@ public class StepOutBroker extends Broker {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StepOutBroker";
 				definition = "Brokerage firm that executes an order, but gives other firms credit and some of the commission for the trade.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.StepOutFirm, com.tools20022.repository.msg.ConfirmationParties2.StepOutFirm);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.mmStepOutFirm, com.tools20022.repository.msg.ConfirmationParties2.mmStepOutFirm);
 				superType_lazy = () -> Broker.mmObject();
 			}
 		});

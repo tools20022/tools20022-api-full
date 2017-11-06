@@ -57,24 +57,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#Header
- * ATMDepositRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#mmHeader
+ * ATMDepositRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#ProtectedATMDepositRequest
- * ATMDepositRequestV01.ProtectedATMDepositRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#mmProtectedATMDepositRequest
+ * ATMDepositRequestV01.mmProtectedATMDepositRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#ATMDepositRequest
- * ATMDepositRequestV01.ATMDepositRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#mmATMDepositRequest
+ * ATMDepositRequestV01.mmATMDepositRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#SecurityTrailer
- * ATMDepositRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#mmSecurityTrailer
+ * ATMDepositRequestV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositRequestV01#identifier
- * ATMDepositRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catp.012.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,6 +88,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDepositRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header31 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -115,17 +114,18 @@ public class ATMDepositRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header31.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedATMDepositRequest;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -149,17 +149,18 @@ public class ATMDepositRequestV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedATMDepositRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedATMDepositRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMDpstReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMDepositRequest";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected ATMDepositRequest1 aTMDepositRequest;
 	/**
 	 * Information related to the request of a deposit transaction from an ATM.
 	 * <p>
@@ -185,17 +186,18 @@ public class ATMDepositRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMDepositRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMDepositRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMDpstReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositRequest";
 			definition = "Information related to the request of a deposit transaction from an ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ATMDepositRequest1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -219,42 +221,15 @@ public class ATMDepositRequestV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "012"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catp";
-			messageFunctionality = "012";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -268,11 +243,50 @@ public class ATMDepositRequestV01 {
 				rootElement = "Document";
 				xmlTag = "ATMDpstReq";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMDepositRequestV01.Header, com.tools20022.repository.area.catp.ATMDepositRequestV01.ProtectedATMDepositRequest,
-						com.tools20022.repository.area.catp.ATMDepositRequestV01.ATMDepositRequest, com.tools20022.repository.area.catp.ATMDepositRequestV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catp.ATMDepositRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMDepositRequestV01.mmHeader, com.tools20022.repository.area.catp.ATMDepositRequestV01.mmProtectedATMDepositRequest,
+						com.tools20022.repository.area.catp.ATMDepositRequestV01.mmATMDepositRequest, com.tools20022.repository.area.catp.ATMDepositRequestV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catp";
+						messageFunctionality = "012";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header31 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header31 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedATMDepositRequest() {
+		return protectedATMDepositRequest;
+	}
+
+	public void setProtectedATMDepositRequest(ContentInformationType10 protectedATMDepositRequest) {
+		this.protectedATMDepositRequest = protectedATMDepositRequest;
+	}
+
+	public ATMDepositRequest1 getATMDepositRequest() {
+		return aTMDepositRequest;
+	}
+
+	public void setATMDepositRequest(ATMDepositRequest1 aTMDepositRequest) {
+		this.aTMDepositRequest = aTMDepositRequest;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Right to buy (call) or sell (put) an underlying amount in one currency
@@ -42,27 +43,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#CallAmount
- * CurrencyOption.CallAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#PutAmount
- * CurrencyOption.PutAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#mmCallAmount
+ * CurrencyOption.mmCallAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#mmPutAmount
+ * CurrencyOption.mmPutAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyOption#PremiumCalculation
- * CurrencyOption.PremiumCalculation}</li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmPremiumCalculation
+ * CurrencyOption.mmPremiumCalculation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyOption#OptionDefinition
- * CurrencyOption.OptionDefinition}</li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmOptionDefinition
+ * CurrencyOption.mmOptionDefinition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyOption#PremiumSettlement
- * CurrencyOption.PremiumSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmPremiumSettlement
+ * CurrencyOption.mmPremiumSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyOption#ExercisedOption
- * CurrencyOption.ExercisedOption}</li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmExercisedOption
+ * CurrencyOption.mmExercisedOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyOption#OptionSettlementCurrency
- * CurrencyOption.OptionSettlementCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#StrikeRate
- * CurrencyOption.StrikeRate}</li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmOptionSettlementCurrency
+ * CurrencyOption.mmOptionSettlementCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CurrencyOption#mmStrikeRate
+ * CurrencyOption.mmStrikeRate}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,39 +71,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentSourceCurrencyOption
- * PaymentObligation.PaymentSourceCurrencyOption}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentSourceCurrencyOption
+ * PaymentObligation.mmPaymentSourceCurrencyOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#RelatedOption
- * ForeignExchangeTrade.RelatedOption}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Option#CurrencyOption
- * Option.CurrencyOption}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PremiumCalculation#Option
- * PremiumCalculation.Option}</li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedOption
+ * ForeignExchangeTrade.mmRelatedOption}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Option#mmCurrencyOption
+ * Option.mmCurrencyOption}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PremiumCalculation#mmOption
+ * PremiumCalculation.mmOption}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Option2#OptionAmounts
- * Option2.OptionAmounts}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option3#OptionAmounts
- * Option3.OptionAmounts}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OptionData1#Option
- * OptionData1.Option}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OptionData2#Option
- * OptionData2.Option}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option4#OptionAmounts
- * Option4.OptionAmounts}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option5#OptionAmounts
- * Option5.OptionAmounts}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option6#OptionAmounts
- * Option6.OptionAmounts}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OptionData3#Option
- * OptionData3.Option}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OptionData4#Option
- * OptionData4.Option}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option2#mmOptionAmounts
+ * Option2.mmOptionAmounts}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option3#mmOptionAmounts
+ * Option3.mmOptionAmounts}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OptionData1#mmOption
+ * OptionData1.mmOption}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OptionData2#mmOption
+ * OptionData2.mmOption}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option4#mmOptionAmounts
+ * Option4.mmOptionAmounts}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option5#mmOptionAmounts
+ * Option5.mmOptionAmounts}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option6#mmOptionAmounts
+ * Option6.mmOptionAmounts}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OptionData3#mmOption
+ * OptionData3.mmOption}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OptionData4#mmOption
+ * OptionData4.mmOption}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -135,8 +136,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -152,6 +153,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyOption extends TreasuryTrade {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyAndAmount callAmount;
 	/**
 	 * Call amount and currency of a foreign exchange option trade.
 	 * <p>
@@ -162,28 +164,28 @@ public class CurrencyOption extends TreasuryTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount
 	 * ActiveOrHistoricCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate2#CallAmount
-	 * AmountsAndValueDate2.CallAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate3#CallAmount
-	 * AmountsAndValueDate3.CallAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate4#CallAmount
-	 * AmountsAndValueDate4.CallAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate5#CallAmount
-	 * AmountsAndValueDate5.CallAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
 	 * CurrencyOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate2#mmCallAmount
+	 * AmountsAndValueDate2.mmCallAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate3#mmCallAmount
+	 * AmountsAndValueDate3.mmCallAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate4#mmCallAmount
+	 * AmountsAndValueDate4.mmCallAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate5#mmCallAmount
+	 * AmountsAndValueDate5.mmCallAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -196,20 +198,21 @@ public class CurrencyOption extends TreasuryTrade {
 	 * "Call amount and currency of a foreign exchange option trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CallAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCallAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate2.CallAmount, com.tools20022.repository.msg.AmountsAndValueDate3.CallAmount, com.tools20022.repository.msg.AmountsAndValueDate4.CallAmount,
-					com.tools20022.repository.msg.AmountsAndValueDate5.CallAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate2.mmCallAmount, com.tools20022.repository.msg.AmountsAndValueDate3.mmCallAmount,
+					com.tools20022.repository.msg.AmountsAndValueDate4.mmCallAmount, com.tools20022.repository.msg.AmountsAndValueDate5.mmCallAmount);
 			elementContext_lazy = () -> CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CallAmount";
 			definition = "Call amount and currency of a foreign exchange option trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount putAmount;
 	/**
 	 * Put amount and currency of a foreign exchange option trade.
 	 * <p>
@@ -220,28 +223,28 @@ public class CurrencyOption extends TreasuryTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount
 	 * ActiveOrHistoricCurrencyAndAmount}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate2#PutAmount
-	 * AmountsAndValueDate2.PutAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate3#PutAmount
-	 * AmountsAndValueDate3.PutAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate4#PutAmount
-	 * AmountsAndValueDate4.PutAmount}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate5#PutAmount
-	 * AmountsAndValueDate5.PutAmount}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
 	 * CurrencyOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate2#mmPutAmount
+	 * AmountsAndValueDate2.mmPutAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate3#mmPutAmount
+	 * AmountsAndValueDate3.mmPutAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate4#mmPutAmount
+	 * AmountsAndValueDate4.mmPutAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate5#mmPutAmount
+	 * AmountsAndValueDate5.mmPutAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -254,20 +257,21 @@ public class CurrencyOption extends TreasuryTrade {
 	 * "Put amount and currency of a foreign exchange option trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PutAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPutAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate2.PutAmount, com.tools20022.repository.msg.AmountsAndValueDate3.PutAmount, com.tools20022.repository.msg.AmountsAndValueDate4.PutAmount,
-					com.tools20022.repository.msg.AmountsAndValueDate5.PutAmount);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate2.mmPutAmount, com.tools20022.repository.msg.AmountsAndValueDate3.mmPutAmount,
+					com.tools20022.repository.msg.AmountsAndValueDate4.mmPutAmount, com.tools20022.repository.msg.AmountsAndValueDate5.mmPutAmount);
 			elementContext_lazy = () -> CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PutAmount";
 			definition = "Put amount and currency of a foreign exchange option trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected PremiumCalculation premiumCalculation;
 	/**
 	 * Specifies the way the premium is calculated.
 	 * <p>
@@ -276,8 +280,8 @@ public class CurrencyOption extends TreasuryTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation#Option
-	 * PremiumCalculation.Option}</li>
+	 * {@linkplain com.tools20022.repository.entity.PremiumCalculation#mmOption
+	 * PremiumCalculation.mmOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -285,24 +289,24 @@ public class CurrencyOption extends TreasuryTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PremiumCalculation
 	 * PremiumCalculation}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option2#Premium
-	 * Option2.Premium}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option4#Premium
-	 * Option4.Premium}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option5#Premium
-	 * Option5.Premium}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option6#Premium
-	 * Option6.Premium}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
 	 * CurrencyOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option2#mmPremium
+	 * Option2.mmPremium}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option4#mmPremium
+	 * Option4.mmPremium}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option5#mmPremium
+	 * Option5.mmPremium}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option6#mmPremium
+	 * Option6.mmPremium}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -314,21 +318,23 @@ public class CurrencyOption extends TreasuryTrade {
 	 * definition} = "Specifies the way the premium is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PremiumCalculation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPremiumCalculation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option2.Premium, com.tools20022.repository.msg.Option4.Premium, com.tools20022.repository.msg.Option5.Premium, com.tools20022.repository.msg.Option6.Premium);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option2.mmPremium, com.tools20022.repository.msg.Option4.mmPremium, com.tools20022.repository.msg.Option5.mmPremium,
+					com.tools20022.repository.msg.Option6.mmPremium);
 			elementContext_lazy = () -> CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PremiumCalculation";
 			definition = "Specifies the way the premium is calculated.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.Option;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmOption;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Option> optionDefinition;
 	/**
 	 * Specifies the different parameters used to define an option.
 	 * <p>
@@ -337,8 +343,8 @@ public class CurrencyOption extends TreasuryTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Option#CurrencyOption
-	 * Option.CurrencyOption}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmCurrencyOption
+	 * Option.mmCurrencyOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -362,7 +368,7 @@ public class CurrencyOption extends TreasuryTrade {
 	 * "Specifies the different parameters used to define an option."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OptionDefinition = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOptionDefinition = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CurrencyOption.mmObject();
 			isDerived = false;
@@ -370,11 +376,12 @@ public class CurrencyOption extends TreasuryTrade {
 			name = "OptionDefinition";
 			definition = "Specifies the different parameters used to define an option.";
 			minOccurs = 0;
-			type_lazy = () -> Option.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Option.CurrencyOption;
+			opposite_lazy = () -> com.tools20022.repository.entity.Option.mmCurrencyOption;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PaymentObligation> premiumSettlement;
 	/**
 	 * Specifies the amount of the premium paid by the buyer of the option and
 	 * its settlement place.
@@ -384,8 +391,8 @@ public class CurrencyOption extends TreasuryTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentSourceCurrencyOption
-	 * PaymentObligation.PaymentSourceCurrencyOption}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentSourceCurrencyOption
+	 * PaymentObligation.mmPaymentSourceCurrencyOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -393,18 +400,18 @@ public class CurrencyOption extends TreasuryTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
 	 * PaymentObligation}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option3#Premium
-	 * Option3.Premium}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
 	 * CurrencyOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option3#mmPremium
+	 * Option3.mmPremium}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -418,20 +425,21 @@ public class CurrencyOption extends TreasuryTrade {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PremiumSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPremiumSettlement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option3.Premium);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option3.mmPremium);
 			elementContext_lazy = () -> CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PremiumSettlement";
 			definition = "Specifies the amount of the premium paid by the buyer of the option and its settlement place.";
 			minOccurs = 0;
-			type_lazy = () -> PaymentObligation.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentSourceCurrencyOption;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentSourceCurrencyOption;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.ForeignExchangeTrade> exercisedOption;
 	/**
 	 * Specifies the trade that may take place to exercise the option.
 	 * <p>
@@ -440,8 +448,8 @@ public class CurrencyOption extends TreasuryTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#RelatedOption
-	 * ForeignExchangeTrade.RelatedOption}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedOption
+	 * ForeignExchangeTrade.mmRelatedOption}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -467,7 +475,7 @@ public class CurrencyOption extends TreasuryTrade {
 	 * "Specifies the trade that may take place to exercise the option."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ExercisedOption = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmExercisedOption = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CurrencyOption.mmObject();
 			isDerived = false;
@@ -475,11 +483,12 @@ public class CurrencyOption extends TreasuryTrade {
 			name = "ExercisedOption";
 			definition = "Specifies the trade that may take place to exercise the option.";
 			minOccurs = 0;
-			type_lazy = () -> ForeignExchangeTrade.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.RelatedOption;
+			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmRelatedOption;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyCode optionSettlementCurrency;
 	/**
 	 * Currency that must be used to settle the option when it is netted off.
 	 * <p>
@@ -490,22 +499,22 @@ public class CurrencyOption extends TreasuryTrade {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode
 	 * ActiveOrHistoricCurrencyCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate4#OptionSettlementCurrency
-	 * AmountsAndValueDate4.OptionSettlementCurrency}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate5#OptionSettlementCurrency
-	 * AmountsAndValueDate5.OptionSettlementCurrency}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
 	 * CurrencyOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate4#mmOptionSettlementCurrency
+	 * AmountsAndValueDate4.mmOptionSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountsAndValueDate5#mmOptionSettlementCurrency
+	 * AmountsAndValueDate5.mmOptionSettlementCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -518,19 +527,20 @@ public class CurrencyOption extends TreasuryTrade {
 	 * "Currency that must be used to settle the option when it is netted off."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute OptionSettlementCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmOptionSettlementCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate4.OptionSettlementCurrency, com.tools20022.repository.msg.AmountsAndValueDate5.OptionSettlementCurrency);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate4.mmOptionSettlementCurrency, com.tools20022.repository.msg.AmountsAndValueDate5.mmOptionSettlementCurrency);
 			elementContext_lazy = () -> CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OptionSettlementCurrency";
 			definition = "Currency that must be used to settle the option when it is netted off.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected BaseOneRate strikeRate;
 	/**
 	 * Fixed exchange rate at which the option contract can be exercised.
 	 * <p>
@@ -540,26 +550,26 @@ public class CurrencyOption extends TreasuryTrade {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option2#StrikePrice
-	 * Option2.StrikePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option3#StrikePrice
-	 * Option3.StrikePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option4#StrikePrice
-	 * Option4.StrikePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option5#StrikePrice
-	 * Option5.StrikePrice}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option6#StrikePrice
-	 * Option6.StrikePrice}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.CurrencyOption
 	 * CurrencyOption}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option2#mmStrikePrice
+	 * Option2.mmStrikePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option3#mmStrikePrice
+	 * Option3.mmStrikePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option4#mmStrikePrice
+	 * Option4.mmStrikePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option5#mmStrikePrice
+	 * Option5.mmStrikePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option6#mmStrikePrice
+	 * Option6.mmStrikePrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -572,17 +582,17 @@ public class CurrencyOption extends TreasuryTrade {
 	 * "Fixed exchange rate at which the option contract can be exercised."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute StrikeRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmStrikeRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option2.StrikePrice, com.tools20022.repository.msg.Option3.StrikePrice, com.tools20022.repository.msg.Option4.StrikePrice,
-					com.tools20022.repository.msg.Option5.StrikePrice, com.tools20022.repository.msg.Option6.StrikePrice);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option2.mmStrikePrice, com.tools20022.repository.msg.Option3.mmStrikePrice, com.tools20022.repository.msg.Option4.mmStrikePrice,
+					com.tools20022.repository.msg.Option5.mmStrikePrice, com.tools20022.repository.msg.Option6.mmStrikePrice);
 			elementContext_lazy = () -> CurrencyOption.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "StrikeRate";
 			definition = "Fixed exchange rate at which the option contract can be exercised.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
@@ -590,23 +600,87 @@ public class CurrencyOption extends TreasuryTrade {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CurrencyOption";
 				definition = "Right to buy (call) or sell (put) an underlying amount in one currency against another amount in another currency at a predetermined exchange rate, within a specified period of time or at a specified date and time.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.PaymentSourceCurrencyOption, com.tools20022.repository.entity.ForeignExchangeTrade.RelatedOption,
-						com.tools20022.repository.entity.Option.CurrencyOption, com.tools20022.repository.entity.PremiumCalculation.Option);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option2.OptionAmounts, com.tools20022.repository.msg.Option3.OptionAmounts, com.tools20022.repository.msg.OptionData1.Option,
-						com.tools20022.repository.msg.OptionData2.Option, com.tools20022.repository.msg.Option4.OptionAmounts, com.tools20022.repository.msg.Option5.OptionAmounts, com.tools20022.repository.msg.Option6.OptionAmounts,
-						com.tools20022.repository.msg.OptionData3.Option, com.tools20022.repository.msg.OptionData4.Option);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmPaymentSourceCurrencyOption, com.tools20022.repository.entity.ForeignExchangeTrade.mmRelatedOption,
+						com.tools20022.repository.entity.Option.mmCurrencyOption, com.tools20022.repository.entity.PremiumCalculation.mmOption);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option2.mmOptionAmounts, com.tools20022.repository.msg.Option3.mmOptionAmounts, com.tools20022.repository.msg.OptionData1.mmOption,
+						com.tools20022.repository.msg.OptionData2.mmOption, com.tools20022.repository.msg.Option4.mmOptionAmounts, com.tools20022.repository.msg.Option5.mmOptionAmounts,
+						com.tools20022.repository.msg.Option6.mmOptionAmounts, com.tools20022.repository.msg.OptionData3.mmOption, com.tools20022.repository.msg.OptionData4.mmOption);
 				superType_lazy = () -> TreasuryTrade.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CurrencyOption.CallAmount, com.tools20022.repository.entity.CurrencyOption.PutAmount, com.tools20022.repository.entity.CurrencyOption.PremiumCalculation,
-						com.tools20022.repository.entity.CurrencyOption.OptionDefinition, com.tools20022.repository.entity.CurrencyOption.PremiumSettlement, com.tools20022.repository.entity.CurrencyOption.ExercisedOption,
-						com.tools20022.repository.entity.CurrencyOption.OptionSettlementCurrency, com.tools20022.repository.entity.CurrencyOption.StrikeRate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CurrencyOption.mmCallAmount, com.tools20022.repository.entity.CurrencyOption.mmPutAmount,
+						com.tools20022.repository.entity.CurrencyOption.mmPremiumCalculation, com.tools20022.repository.entity.CurrencyOption.mmOptionDefinition, com.tools20022.repository.entity.CurrencyOption.mmPremiumSettlement,
+						com.tools20022.repository.entity.CurrencyOption.mmExercisedOption, com.tools20022.repository.entity.CurrencyOption.mmOptionSettlementCurrency, com.tools20022.repository.entity.CurrencyOption.mmStrikeRate);
 				derivationComponent_lazy = () -> Arrays.asList(AmountsAndValueDate2.mmObject(), Option2.mmObject(), Option3.mmObject(), OptionData1.mmObject(), OptionData2.mmObject(), AmountsAndValueDate3.mmObject(), Option4.mmObject(),
 						AmountsAndValueDate4.mmObject(), Option5.mmObject(), AmountsAndValueDate5.mmObject(), Option6.mmObject(), OptionData3.mmObject(), OptionData4.mmObject(), Option10.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getCallAmount() {
+		return callAmount;
+	}
+
+	public void setCallAmount(ActiveOrHistoricCurrencyAndAmount callAmount) {
+		this.callAmount = callAmount;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getPutAmount() {
+		return putAmount;
+	}
+
+	public void setPutAmount(ActiveOrHistoricCurrencyAndAmount putAmount) {
+		this.putAmount = putAmount;
+	}
+
+	public PremiumCalculation getPremiumCalculation() {
+		return premiumCalculation;
+	}
+
+	public void setPremiumCalculation(com.tools20022.repository.entity.PremiumCalculation premiumCalculation) {
+		this.premiumCalculation = premiumCalculation;
+	}
+
+	public List<Option> getOptionDefinition() {
+		return optionDefinition;
+	}
+
+	public void setOptionDefinition(List<com.tools20022.repository.entity.Option> optionDefinition) {
+		this.optionDefinition = optionDefinition;
+	}
+
+	public List<PaymentObligation> getPremiumSettlement() {
+		return premiumSettlement;
+	}
+
+	public void setPremiumSettlement(List<com.tools20022.repository.entity.PaymentObligation> premiumSettlement) {
+		this.premiumSettlement = premiumSettlement;
+	}
+
+	public List<ForeignExchangeTrade> getExercisedOption() {
+		return exercisedOption;
+	}
+
+	public void setExercisedOption(List<com.tools20022.repository.entity.ForeignExchangeTrade> exercisedOption) {
+		this.exercisedOption = exercisedOption;
+	}
+
+	public ActiveOrHistoricCurrencyCode getOptionSettlementCurrency() {
+		return optionSettlementCurrency;
+	}
+
+	public void setOptionSettlementCurrency(ActiveOrHistoricCurrencyCode optionSettlementCurrency) {
+		this.optionSettlementCurrency = optionSettlementCurrency;
+	}
+
+	public BaseOneRate getStrikeRate() {
+		return strikeRate;
+	}
+
+	public void setStrikeRate(BaseOneRate strikeRate) {
+		this.strikeRate = strikeRate;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.Undertaking3;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The UndertakingIssuance message is sent (and is thus issued) by the party
@@ -65,24 +66,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#UndertakingIssuanceDetails
- * UndertakingIssuanceV01.UndertakingIssuanceDetails}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#mmUndertakingIssuanceDetails
+ * UndertakingIssuanceV01.mmUndertakingIssuanceDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#BankToBeneficiaryInformation
- * UndertakingIssuanceV01.BankToBeneficiaryInformation}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#mmBankToBeneficiaryInformation
+ * UndertakingIssuanceV01.mmBankToBeneficiaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#BankToBankInformation
- * UndertakingIssuanceV01.BankToBankInformation}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#mmBankToBankInformation
+ * UndertakingIssuanceV01.mmBankToBankInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#DigitalSignature
- * UndertakingIssuanceV01.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#mmDigitalSignature
+ * UndertakingIssuanceV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.tsrv.UndertakingIssuanceV01#identifier
- * UndertakingIssuanceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code tsrv.001.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingIssuanceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Undertaking3 undertakingIssuanceDetails;
 	/**
 	 * Independent undertaking, such as a demand guarantee or standby letter of
 	 * credit, that provides financial assurance, to be collected on the
@@ -124,17 +124,18 @@ public class UndertakingIssuanceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UndertakingIssuanceDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUndertakingIssuanceDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UdrtkgIssncDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuanceDetails";
 			definition = "Independent undertaking, such as a demand guarantee or standby letter of credit, that provides financial assurance, to be collected on the presentation of documents that comply with its terms and conditions.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Undertaking3.mmObject();
 		}
 	};
+	protected List<Max2000Text> bankToBeneficiaryInformation;
 	/**
 	 * Additional information specific to the bank-to-beneficiary communication.
 	 * <p>
@@ -159,17 +160,18 @@ public class UndertakingIssuanceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BankToBeneficiaryInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBankToBeneficiaryInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BkToBnfcryInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankToBeneficiaryInformation";
 			definition = "Additional information specific to the bank-to-beneficiary communication.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected List<Max2000Text> bankToBankInformation;
 	/**
 	 * Additional information specific to the bank-to-bank communication.
 	 * <p>
@@ -193,17 +195,18 @@ public class UndertakingIssuanceV01 {
 	 * "Additional information specific to the bank-to-bank communication."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock BankToBankInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBankToBankInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BkToBkInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankToBankInformation";
 			definition = "Additional information specific to the bank-to-bank communication.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected List<PartyAndSignature2> digitalSignature;
 	/**
 	 * Digital signature of the undertaking.
 	 * <p>
@@ -227,7 +230,7 @@ public class UndertakingIssuanceV01 {
 	 * definition} = "Digital signature of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,33 +238,6 @@ public class UndertakingIssuanceV01 {
 			definition = "Digital signature of the undertaking.";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "tsrv"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "001"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "tsrv";
-			messageFunctionality = "001";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -275,11 +251,51 @@ public class UndertakingIssuanceV01 {
 				rootElement = "Document";
 				xmlTag = "UdrtkgIssnc";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.UndertakingIssuanceDetails, com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.BankToBeneficiaryInformation,
-						com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.BankToBankInformation, com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.DigitalSignature);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.mmUndertakingIssuanceDetails,
+						com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.mmBankToBeneficiaryInformation, com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.mmBankToBankInformation,
+						com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.mmDigitalSignature);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "tsrv";
+						messageFunctionality = "001";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Undertaking3 getUndertakingIssuanceDetails() {
+		return undertakingIssuanceDetails;
+	}
+
+	public void setUndertakingIssuanceDetails(Undertaking3 undertakingIssuanceDetails) {
+		this.undertakingIssuanceDetails = undertakingIssuanceDetails;
+	}
+
+	public List<Max2000Text> getBankToBeneficiaryInformation() {
+		return bankToBeneficiaryInformation;
+	}
+
+	public void setBankToBeneficiaryInformation(List<Max2000Text> bankToBeneficiaryInformation) {
+		this.bankToBeneficiaryInformation = bankToBeneficiaryInformation;
+	}
+
+	public List<Max2000Text> getBankToBankInformation() {
+		return bankToBankInformation;
+	}
+
+	public void setBankToBankInformation(List<Max2000Text> bankToBankInformation) {
+		this.bankToBankInformation = bankToBankInformation;
+	}
+
+	public List<PartyAndSignature2> getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(List<PartyAndSignature2> digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

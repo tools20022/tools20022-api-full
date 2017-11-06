@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriorityNumeric1Choice#Numeric
- * PriorityNumeric1Choice.Numeric}</li>
+ * {@linkplain com.tools20022.repository.choice.PriorityNumeric1Choice#mmNumeric
+ * PriorityNumeric1Choice.mmNumeric}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PriorityNumeric1Choice#Proprietary
- * PriorityNumeric1Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.PriorityNumeric1Choice#mmProprietary
+ * PriorityNumeric1Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PriorityNumeric1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact4NumericText numeric;
 	/**
 	 * Specifies the execution priority of the instruction with a number between
 	 * 0001 and 9999.
@@ -99,13 +100,13 @@ public class PriorityNumeric1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriorityNumeric4Choice#Numeric
-	 * PriorityNumeric4Choice.Numeric}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityNumeric4Choice#mmNumeric
+	 * PriorityNumeric4Choice.mmNumeric}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Numeric = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumeric = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriorityNumeric1Choice.mmObject();
 			isDerived = false;
@@ -113,12 +114,13 @@ public class PriorityNumeric1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Numeric";
 			definition = "Specifies the execution priority of the instruction with a number between 0001 and 9999.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityNumeric4Choice.Numeric);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityNumeric4Choice.mmNumeric);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact4NumericText.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Specifies the execution priority of the instruction with a proprietary
 	 * scheme.
@@ -152,13 +154,13 @@ public class PriorityNumeric1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PriorityNumeric4Choice#Proprietary
-	 * PriorityNumeric4Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.PriorityNumeric4Choice#mmProprietary
+	 * PriorityNumeric4Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PriorityNumeric1Choice.mmObject();
 			isDerived = false;
@@ -166,9 +168,9 @@ public class PriorityNumeric1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the execution priority of the instruction with a proprietary scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityNumeric4Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityNumeric4Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -176,8 +178,8 @@ public class PriorityNumeric1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityNumeric1Choice.Numeric, com.tools20022.repository.choice.PriorityNumeric1Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityNumeric1Choice.mmNumeric, com.tools20022.repository.choice.PriorityNumeric1Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PriorityNumeric1Choice";
 				definition = "Choice of format for the priority.";
@@ -185,5 +187,21 @@ public class PriorityNumeric1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact4NumericText getNumeric() {
+		return numeric;
+	}
+
+	public void setNumeric(Exact4NumericText numeric) {
+		this.numeric = numeric;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

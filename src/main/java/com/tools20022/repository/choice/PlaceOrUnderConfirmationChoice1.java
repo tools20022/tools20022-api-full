@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1#PlaceOfPresentation
- * PlaceOrUnderConfirmationChoice1.PlaceOfPresentation}</li>
+ * {@linkplain com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1#mmPlaceOfPresentation
+ * PlaceOrUnderConfirmationChoice1.mmPlaceOfPresentation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1#PresentationUnderConfirmation
- * PlaceOrUnderConfirmationChoice1.PresentationUnderConfirmation}</li>
+ * {@linkplain com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1#mmPresentationUnderConfirmation
+ * PlaceOrUnderConfirmationChoice1.mmPresentationUnderConfirmation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PlaceOrUnderConfirmationChoice1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PlaceOfPresentation1 placeOfPresentation;
 	/**
 	 * Party to which the presentation is to be made.
 	 * <p>
@@ -96,21 +97,22 @@ public class PlaceOrUnderConfirmationChoice1 {
 	 * definition} = "Party to which the presentation is to be made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PlaceOfPresentation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPlaceOfPresentation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PlaceOrUnderConfirmationChoice1.mmObject();
 			businessComponentTrace_lazy = () -> UndertakingPlaceOfPresentation.mmObject();
+			componentContext_lazy = () -> PlaceOrUnderConfirmationChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfPresntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfPresentation";
 			definition = "Party to which the presentation is to be made.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PlaceOfPresentation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> PlaceOfPresentation1.mmObject();
 		}
 	};
+	protected PresentationParty1Code presentationUnderConfirmation;
 	/**
 	 * Place of presentation when there is a confirmation.
 	 * <p>
@@ -139,7 +141,7 @@ public class PlaceOrUnderConfirmationChoice1 {
 	 * definition} = "Place of presentation when there is a confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PresentationUnderConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPresentationUnderConfirmation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PlaceOrUnderConfirmationChoice1.mmObject();
 			isDerived = false;
@@ -147,8 +149,8 @@ public class PlaceOrUnderConfirmationChoice1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationUnderConfirmation";
 			definition = "Place of presentation when there is a confirmation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PresentationParty1Code.mmObject();
 		}
 	};
@@ -156,14 +158,31 @@ public class PlaceOrUnderConfirmationChoice1 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.PlaceOfPresentation, com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.PresentationUnderConfirmation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmPlaceOfPresentation,
+						com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmPresentationUnderConfirmation);
 				trace_lazy = () -> UndertakingPlaceOfPresentation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PlaceOrUnderConfirmationChoice1";
 				definition = "Choice between a location and codified form.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PlaceOfPresentation1 getPlaceOfPresentation() {
+		return placeOfPresentation;
+	}
+
+	public void setPlaceOfPresentation(PlaceOfPresentation1 placeOfPresentation) {
+		this.placeOfPresentation = placeOfPresentation;
+	}
+
+	public PresentationParty1Code getPresentationUnderConfirmation() {
+		return presentationUnderConfirmation;
+	}
+
+	public void setPresentationUnderConfirmation(PresentationParty1Code presentationUnderConfirmation) {
+		this.presentationUnderConfirmation = presentationUnderConfirmation;
 	}
 }

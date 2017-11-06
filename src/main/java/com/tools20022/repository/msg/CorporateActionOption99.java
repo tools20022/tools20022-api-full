@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.entity.CorporateActionOption;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Corporate action event option and related payout details.
@@ -35,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption99#OptionNumber
- * CorporateActionOption99.OptionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption99#mmOptionNumber
+ * CorporateActionOption99.mmOptionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption99#PayoutDetails
- * CorporateActionOption99.PayoutDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption99#mmPayoutDetails
+ * CorporateActionOption99.mmPayoutDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOption99 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Exact3NumericText optionNumber;
 	/**
 	 * Number identifying the available corporate action options.
 	 * <p>
@@ -76,8 +78,8 @@ public class CorporateActionOption99 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionNumber
-	 * CorporateActionOption.OptionNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
+	 * CorporateActionOption.mmOptionNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +99,21 @@ public class CorporateActionOption99 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionOption99.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionNumber;
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CorporateActionPayout1> payoutDetails;
 	/**
 	 * Additional information about the securities or cash payout.
 	 * <p>
@@ -138,7 +141,7 @@ public class CorporateActionOption99 {
 	 * "Additional information about the securities or cash payout."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PayoutDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPayoutDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionOption99.mmObject();
 			isDerived = false;
@@ -147,22 +150,38 @@ public class CorporateActionOption99 {
 			name = "PayoutDetails";
 			definition = "Additional information about the securities or cash payout.";
 			minOccurs = 0;
-			type_lazy = () -> CorporateActionPayout1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption99.OptionNumber, com.tools20022.repository.msg.CorporateActionOption99.PayoutDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption99.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption99.mmPayoutDetails);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOption99";
 				definition = "Corporate action event option and related payout details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Exact3NumericText getOptionNumber() {
+		return optionNumber;
+	}
+
+	public void setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = optionNumber;
+	}
+
+	public List<CorporateActionPayout1> getPayoutDetails() {
+		return payoutDetails;
+	}
+
+	public void setPayoutDetails(List<com.tools20022.repository.msg.CorporateActionPayout1> payoutDetails) {
+		this.payoutDetails = payoutDetails;
 	}
 }

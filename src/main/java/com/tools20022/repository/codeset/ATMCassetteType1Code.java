@@ -33,29 +33,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMCassetteTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#In
- * ATMCassetteType1Code.In}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#Out
- * ATMCassetteType1Code.Out}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmIn
+ * ATMCassetteType1Code.mmIn}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmOut
+ * ATMCassetteType1Code.mmOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#Recycling
- * ATMCassetteType1Code.Recycling}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmRecycling
+ * ATMCassetteType1Code.mmRecycling}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#Reject
- * ATMCassetteType1Code.Reject}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmReject
+ * ATMCassetteType1Code.mmReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#Replenishment
- * ATMCassetteType1Code.Replenishment}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmReplenishment
+ * ATMCassetteType1Code.mmReplenishment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#Retract
- * ATMCassetteType1Code.Retract}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmRetract
+ * ATMCassetteType1Code.mmRetract}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +85,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "In"</li>
 	 * </ul>
 	 */
-	public static final MMCode In = new MMCode() {
+	public static final MMCode mmIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "In";
@@ -108,7 +108,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "Out"</li>
 	 * </ul>
 	 */
-	public static final MMCode Out = new MMCode() {
+	public static final MMCode mmOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Out";
@@ -131,7 +131,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "Recycling"</li>
 	 * </ul>
 	 */
-	public static final MMCode Recycling = new MMCode() {
+	public static final MMCode mmRecycling = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recycling";
@@ -154,7 +154,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "Reject"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reject = new MMCode() {
+	public static final MMCode mmReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
@@ -177,7 +177,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "Replenishment"</li>
 	 * </ul>
 	 */
-	public static final MMCode Replenishment = new MMCode() {
+	public static final MMCode mmReplenishment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replenishment";
@@ -200,7 +200,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "Retract"</li>
 	 * </ul>
 	 */
-	public static final MMCode Retract = new MMCode() {
+	public static final MMCode mmRetract = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retract";
@@ -211,12 +211,12 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCassetteType1Code";
 				definition = "Type of cassette.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCassetteType1Code.In, com.tools20022.repository.codeset.ATMCassetteType1Code.Out, com.tools20022.repository.codeset.ATMCassetteType1Code.Recycling,
-						com.tools20022.repository.codeset.ATMCassetteType1Code.Reject, com.tools20022.repository.codeset.ATMCassetteType1Code.Replenishment, com.tools20022.repository.codeset.ATMCassetteType1Code.Retract);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCassetteType1Code.mmIn, com.tools20022.repository.codeset.ATMCassetteType1Code.mmOut, com.tools20022.repository.codeset.ATMCassetteType1Code.mmRecycling,
+						com.tools20022.repository.codeset.ATMCassetteType1Code.mmReject, com.tools20022.repository.codeset.ATMCassetteType1Code.mmReplenishment, com.tools20022.repository.codeset.ATMCassetteType1Code.mmRetract);
 				trace_lazy = () -> ATMCassetteTypeCode.mmObject();
 			}
 		});

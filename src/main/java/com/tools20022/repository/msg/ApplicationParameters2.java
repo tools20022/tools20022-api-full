@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Acceptor parameters dedicated to a payment application of the point of
@@ -38,16 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ApplicationParameters2#ApplicationIdentification
- * ApplicationParameters2.ApplicationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ApplicationParameters2#Version
- * ApplicationParameters2.Version}</li>
+ * {@linkplain com.tools20022.repository.msg.ApplicationParameters2#mmApplicationIdentification
+ * ApplicationParameters2.mmApplicationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ApplicationParameters2#Parameters
- * ApplicationParameters2.Parameters}</li>
+ * {@linkplain com.tools20022.repository.msg.ApplicationParameters2#mmVersion
+ * ApplicationParameters2.mmVersion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ApplicationParameters2#EncryptedParameters
- * ApplicationParameters2.EncryptedParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.ApplicationParameters2#mmParameters
+ * ApplicationParameters2.mmParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ApplicationParameters2#mmEncryptedParameters
+ * ApplicationParameters2.mmEncryptedParameters}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ApplicationParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text applicationIdentification;
 	/**
 	 * Identification of the payment application.
 	 * <p>
@@ -96,8 +99,8 @@ public class ApplicationParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#ApplicationIdentification
-	 * AcceptorConfiguration.ApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationIdentification
+	 * AcceptorConfiguration.mmApplicationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,27 +121,28 @@ public class ApplicationParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters3#ApplicationIdentification
-	 * ApplicationParameters3.ApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters3#mmApplicationIdentification
+	 * ApplicationParameters3.mmApplicationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationIdentification;
 			componentContext_lazy = () -> ApplicationParameters2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.ApplicationIdentification;
 			isDerived = false;
 			xmlTag = "ApplId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationIdentification";
 			definition = "Identification of the payment application.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters3.ApplicationIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters3.mmApplicationIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max16Text version;
 	/**
 	 * Version of the payment application configuration parameters.
 	 * <p>
@@ -169,13 +173,13 @@ public class ApplicationParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters3#Version
-	 * ApplicationParameters3.Version}</li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters3#mmVersion
+	 * ApplicationParameters3.mmVersion}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ApplicationParameters2.mmObject();
 			isDerived = false;
@@ -183,12 +187,13 @@ public class ApplicationParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the payment application configuration parameters.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters3.Version);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters3.mmVersion);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	protected List<Max10000Binary> parameters;
 	/**
 	 * Configuration parameters used by the related payment application.
 	 * <p>
@@ -220,13 +225,13 @@ public class ApplicationParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters3#Parameters
-	 * ApplicationParameters3.Parameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters3#mmParameters
+	 * ApplicationParameters3.mmParameters}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Parameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParameters = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ApplicationParameters2.mmObject();
 			isDerived = false;
@@ -234,11 +239,12 @@ public class ApplicationParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameters";
 			definition = "Configuration parameters used by the related payment application.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters3.Parameters);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters3.mmParameters);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
+	protected ContentInformationType5 encryptedParameters;
 	/**
 	 * Sensitive parameters (sequence of Parameters including the enveloppes)
 	 * encrypted with a cryptographic key.
@@ -271,13 +277,13 @@ public class ApplicationParameters2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters3#EncryptedParameters
-	 * ApplicationParameters3.EncryptedParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters3#mmEncryptedParameters
+	 * ApplicationParameters3.mmEncryptedParameters}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EncryptedParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEncryptedParameters = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ApplicationParameters2.mmObject();
 			isDerived = false;
@@ -285,28 +291,60 @@ public class ApplicationParameters2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedParameters";
 			definition = "Sensitive parameters (sequence of Parameters including the enveloppes) encrypted with a cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters3.EncryptedParameters);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters3.mmEncryptedParameters);
 			maxOccurs = 1;
-			type_lazy = () -> ContentInformationType5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters2.ApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters2.Version,
-						com.tools20022.repository.msg.ApplicationParameters2.Parameters, com.tools20022.repository.msg.ApplicationParameters2.EncryptedParameters);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters2.mmApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters2.mmVersion,
+						com.tools20022.repository.msg.ApplicationParameters2.mmParameters, com.tools20022.repository.msg.ApplicationParameters2.mmEncryptedParameters);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ApplicationParameters2";
 				definition = "Acceptor parameters dedicated to a payment application of the point of interaction.";
-				previousVersion_lazy = () -> ApplicationParameters1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(ApplicationParameters3.mmObject());
+				previousVersion_lazy = () -> ApplicationParameters1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getApplicationIdentification() {
+		return applicationIdentification;
+	}
+
+	public void setApplicationIdentification(Max35Text applicationIdentification) {
+		this.applicationIdentification = applicationIdentification;
+	}
+
+	public Max16Text getVersion() {
+		return version;
+	}
+
+	public void setVersion(Max16Text version) {
+		this.version = version;
+	}
+
+	public List<Max10000Binary> getParameters() {
+		return parameters;
+	}
+
+	public void setParameters(List<Max10000Binary> parameters) {
+		this.parameters = parameters;
+	}
+
+	public ContentInformationType5 getEncryptedParameters() {
+		return encryptedParameters;
+	}
+
+	public void setEncryptedParameters(com.tools20022.repository.msg.ContentInformationType5 encryptedParameters) {
+		this.encryptedParameters = encryptedParameters;
 	}
 }

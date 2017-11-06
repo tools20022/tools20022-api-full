@@ -36,36 +36,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#AverageDailyTurnover
- * StatisticsTransparency3.AverageDailyTurnover}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#mmAverageDailyTurnover
+ * StatisticsTransparency3.mmAverageDailyTurnover}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#AverageTransactionValue
- * StatisticsTransparency3.AverageTransactionValue}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#mmAverageTransactionValue
+ * StatisticsTransparency3.mmAverageTransactionValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#LargeInScale
- * StatisticsTransparency3.LargeInScale}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#mmLargeInScale
+ * StatisticsTransparency3.mmLargeInScale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#StandardMarketSize
- * StatisticsTransparency3.StandardMarketSize}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#mmStandardMarketSize
+ * StatisticsTransparency3.mmStandardMarketSize}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#AverageDailyNumberOfTransactions
- * StatisticsTransparency3.AverageDailyNumberOfTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#mmAverageDailyNumberOfTransactions
+ * StatisticsTransparency3.mmAverageDailyNumberOfTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#TotalNumberOfTransactionsExecuted
- * StatisticsTransparency3.TotalNumberOfTransactionsExecuted}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#mmTotalNumberOfTransactionsExecuted
+ * StatisticsTransparency3.mmTotalNumberOfTransactionsExecuted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#TotalVolumeOfTransactionsExecuted
- * StatisticsTransparency3.TotalVolumeOfTransactionsExecuted}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#mmTotalVolumeOfTransactionsExecuted
+ * StatisticsTransparency3.mmTotalVolumeOfTransactionsExecuted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#TotalNumberOfTradingDays
- * StatisticsTransparency3.TotalNumberOfTradingDays}</li>
+ * {@linkplain com.tools20022.repository.msg.StatisticsTransparency3#mmTotalNumberOfTradingDays
+ * StatisticsTransparency3.mmTotalNumberOfTradingDays}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatisticsTransparency3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount averageDailyTurnover;
 	/**
 	 * Average Daily Turnover for the instrument in Euros.
 	 * <p>
@@ -109,7 +110,7 @@ public class StatisticsTransparency3 {
 	 * definition} = "Average Daily Turnover for the instrument in Euros."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AverageDailyTurnover = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAverageDailyTurnover = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -117,11 +118,12 @@ public class StatisticsTransparency3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageDailyTurnover";
 			definition = "Average Daily Turnover for the instrument in Euros.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount averageTransactionValue;
 	/**
 	 * Average value of the transactions for the instrument in Euro.
 	 * <p>
@@ -151,7 +153,7 @@ public class StatisticsTransparency3 {
 	 * "Average value of the transactions for the instrument in Euro."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AverageTransactionValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAverageTransactionValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -159,11 +161,12 @@ public class StatisticsTransparency3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageTransactionValue";
 			definition = "Average value of the transactions for the instrument in Euro.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected DecimalNumber largeInScale;
 	/**
 	 * Large in scale order in respect of a share, depositary receipt,
 	 * certificate or other similar financial instrument shall be considered
@@ -199,7 +202,7 @@ public class StatisticsTransparency3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LargeInScale = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLargeInScale = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -207,11 +210,12 @@ public class StatisticsTransparency3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LargeInScale";
 			definition = "Large in scale order in respect of a share, depositary receipt, certificate or other similar financial instrument shall be considered large in scale compared with normal market size if, on the basis of the average daily turnover for that financial instrument, the order is equal to or larger than the minimum size of orders set out in the local regulation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber standardMarketSize;
 	/**
 	 * Standard market size for shares, depositary receipts, ETFs, certificates
 	 * and other similar financial instruments for which there is a liquid
@@ -246,7 +250,7 @@ public class StatisticsTransparency3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StandardMarketSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStandardMarketSize = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -254,11 +258,12 @@ public class StatisticsTransparency3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardMarketSize";
 			definition = "Standard market size for shares, depositary receipts, ETFs, certificates and other similar financial instruments for which there is a liquid market shall be determined on the basis of the average value of transactions for each financial instrument and in accordance with the local regulation.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber averageDailyNumberOfTransactions;
 	/**
 	 * Average daily number of transactions that have been performed on this
 	 * market.
@@ -290,7 +295,7 @@ public class StatisticsTransparency3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AverageDailyNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAverageDailyNumberOfTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -298,11 +303,12 @@ public class StatisticsTransparency3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageDailyNumberOfTransactions";
 			definition = "Average daily number of transactions that have been performed on this market.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber totalNumberOfTransactionsExecuted;
 	/**
 	 * Total number of transactions that have been performed on this market.
 	 * <p>
@@ -332,7 +338,7 @@ public class StatisticsTransparency3 {
 	 * "Total number of transactions that have been performed on this market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfTransactionsExecuted = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfTransactionsExecuted = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -340,11 +346,12 @@ public class StatisticsTransparency3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfTransactionsExecuted";
 			definition = "Total number of transactions that have been performed on this market.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber totalVolumeOfTransactionsExecuted;
 	/**
 	 * Total volume of transactions that have been performed on this market.
 	 * <p>
@@ -374,7 +381,7 @@ public class StatisticsTransparency3 {
 	 * "Total volume of transactions that have been performed on this market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalVolumeOfTransactionsExecuted = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalVolumeOfTransactionsExecuted = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -382,11 +389,12 @@ public class StatisticsTransparency3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalVolumeOfTransactionsExecuted";
 			definition = "Total volume of transactions that have been performed on this market.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected Number totalNumberOfTradingDays;
 	/**
 	 * The total number of trading days for which the data is provided.
 	 * <p>
@@ -415,7 +423,7 @@ public class StatisticsTransparency3 {
 	 * "The total number of trading days for which the data is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfTradingDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfTradingDays = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -423,8 +431,8 @@ public class StatisticsTransparency3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfTradingDays";
 			definition = "The total number of trading days for which the data is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -432,16 +440,80 @@ public class StatisticsTransparency3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatisticsTransparency3.AverageDailyTurnover, com.tools20022.repository.msg.StatisticsTransparency3.AverageTransactionValue,
-						com.tools20022.repository.msg.StatisticsTransparency3.LargeInScale, com.tools20022.repository.msg.StatisticsTransparency3.StandardMarketSize,
-						com.tools20022.repository.msg.StatisticsTransparency3.AverageDailyNumberOfTransactions, com.tools20022.repository.msg.StatisticsTransparency3.TotalNumberOfTransactionsExecuted,
-						com.tools20022.repository.msg.StatisticsTransparency3.TotalVolumeOfTransactionsExecuted, com.tools20022.repository.msg.StatisticsTransparency3.TotalNumberOfTradingDays);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatisticsTransparency3.mmAverageDailyTurnover, com.tools20022.repository.msg.StatisticsTransparency3.mmAverageTransactionValue,
+						com.tools20022.repository.msg.StatisticsTransparency3.mmLargeInScale, com.tools20022.repository.msg.StatisticsTransparency3.mmStandardMarketSize,
+						com.tools20022.repository.msg.StatisticsTransparency3.mmAverageDailyNumberOfTransactions, com.tools20022.repository.msg.StatisticsTransparency3.mmTotalNumberOfTransactionsExecuted,
+						com.tools20022.repository.msg.StatisticsTransparency3.mmTotalVolumeOfTransactionsExecuted, com.tools20022.repository.msg.StatisticsTransparency3.mmTotalNumberOfTradingDays);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatisticsTransparency3";
 				definition = "Statistics for a financial instrument generated as part of transparency calculations.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getAverageDailyTurnover() {
+		return averageDailyTurnover;
+	}
+
+	public void setAverageDailyTurnover(ActiveCurrencyAndAmount averageDailyTurnover) {
+		this.averageDailyTurnover = averageDailyTurnover;
+	}
+
+	public ActiveCurrencyAndAmount getAverageTransactionValue() {
+		return averageTransactionValue;
+	}
+
+	public void setAverageTransactionValue(ActiveCurrencyAndAmount averageTransactionValue) {
+		this.averageTransactionValue = averageTransactionValue;
+	}
+
+	public DecimalNumber getLargeInScale() {
+		return largeInScale;
+	}
+
+	public void setLargeInScale(DecimalNumber largeInScale) {
+		this.largeInScale = largeInScale;
+	}
+
+	public DecimalNumber getStandardMarketSize() {
+		return standardMarketSize;
+	}
+
+	public void setStandardMarketSize(DecimalNumber standardMarketSize) {
+		this.standardMarketSize = standardMarketSize;
+	}
+
+	public DecimalNumber getAverageDailyNumberOfTransactions() {
+		return averageDailyNumberOfTransactions;
+	}
+
+	public void setAverageDailyNumberOfTransactions(DecimalNumber averageDailyNumberOfTransactions) {
+		this.averageDailyNumberOfTransactions = averageDailyNumberOfTransactions;
+	}
+
+	public DecimalNumber getTotalNumberOfTransactionsExecuted() {
+		return totalNumberOfTransactionsExecuted;
+	}
+
+	public void setTotalNumberOfTransactionsExecuted(DecimalNumber totalNumberOfTransactionsExecuted) {
+		this.totalNumberOfTransactionsExecuted = totalNumberOfTransactionsExecuted;
+	}
+
+	public DecimalNumber getTotalVolumeOfTransactionsExecuted() {
+		return totalVolumeOfTransactionsExecuted;
+	}
+
+	public void setTotalVolumeOfTransactionsExecuted(DecimalNumber totalVolumeOfTransactionsExecuted) {
+		this.totalVolumeOfTransactionsExecuted = totalVolumeOfTransactionsExecuted;
+	}
+
+	public Number getTotalNumberOfTradingDays() {
+		return totalNumberOfTradingDays;
+	}
+
+	public void setTotalNumberOfTradingDays(Number totalNumberOfTradingDays) {
+		this.totalNumberOfTradingDays = totalNumberOfTradingDays;
 	}
 }

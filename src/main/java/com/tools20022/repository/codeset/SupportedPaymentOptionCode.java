@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOptionCode#PartialApproval
- * SupportedPaymentOptionCode.PartialApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOptionCode#mmPartialApproval
+ * SupportedPaymentOptionCode.mmPartialApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOptionCode#PaymentApprovalOnly
- * SupportedPaymentOptionCode.PaymentApprovalOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOptionCode#mmPaymentApprovalOnly
+ * SupportedPaymentOptionCode.mmPaymentApprovalOnly}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +85,7 @@ public class SupportedPaymentOptionCode {
 	 * "The entity supports a partial approval of the payment transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialApproval = new MMCode() {
+	public static final MMCode mmPartialApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialApproval";
@@ -118,7 +118,7 @@ public class SupportedPaymentOptionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentApprovalOnly = new MMCode() {
+	public static final MMCode mmPaymentApprovalOnly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentApprovalOnly";
@@ -131,11 +131,11 @@ public class SupportedPaymentOptionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SupportedPaymentOptionCode";
 				definition = "Specifies the options supported for a payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SupportedPaymentOptionCode.PartialApproval, com.tools20022.repository.codeset.SupportedPaymentOptionCode.PaymentApprovalOnly);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SupportedPaymentOptionCode.mmPartialApproval, com.tools20022.repository.codeset.SupportedPaymentOptionCode.mmPaymentApprovalOnly);
 				derivation_lazy = () -> Arrays.asList(SupportedPaymentOption1Code.mmObject());
 			}
 		});

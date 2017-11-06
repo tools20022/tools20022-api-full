@@ -33,63 +33,64 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#ExecutingFirm
- * PartyType1Code.ExecutingFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmExecutingFirm
+ * PartyType1Code.mmExecutingFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#BrokerOfCredit
- * PartyType1Code.BrokerOfCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmBrokerOfCredit
+ * PartyType1Code.mmBrokerOfCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#CorrespondentClearingFirm
- * PartyType1Code.CorrespondentClearingFirm}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType1Code#ContraFirm
- * PartyType1Code.ContraFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmCorrespondentClearingFirm
+ * PartyType1Code.mmCorrespondentClearingFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#ContraClearingFirm
- * PartyType1Code.ContraClearingFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmContraFirm
+ * PartyType1Code.mmContraFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#UnderlyingContraFirm
- * PartyType1Code.UnderlyingContraFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmContraClearingFirm
+ * PartyType1Code.mmContraClearingFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#GiveUpClearingFirm
- * PartyType1Code.GiveUpClearingFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmUnderlyingContraFirm
+ * PartyType1Code.mmUnderlyingContraFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#OrderOriginationFirm
- * PartyType1Code.OrderOriginationFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmGiveUpClearingFirm
+ * PartyType1Code.mmGiveUpClearingFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#SponsoringFirm
- * PartyType1Code.SponsoringFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmOrderOriginationFirm
+ * PartyType1Code.mmOrderOriginationFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#Clearingfirm
- * PartyType1Code.Clearingfirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmSponsoringFirm
+ * PartyType1Code.mmSponsoringFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#IntroducingFirm
- * PartyType1Code.IntroducingFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmClearingfirm
+ * PartyType1Code.mmClearingfirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#EnteringFirm
- * PartyType1Code.EnteringFirm}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType1Code#Client
- * PartyType1Code.Client}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmIntroducingFirm
+ * PartyType1Code.mmIntroducingFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#StepInBroker
- * PartyType1Code.StepInBroker}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmEnteringFirm
+ * PartyType1Code.mmEnteringFirm}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType1Code#mmClient
+ * PartyType1Code.mmClient}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#AffirmingParty
- * PartyType1Code.AffirmingParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmStepInBroker
+ * PartyType1Code.mmStepInBroker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#ETCServiceProvider1
- * PartyType1Code.ETCServiceProvider1}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmAffirmingParty
+ * PartyType1Code.mmAffirmingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType1Code#ETCServiceProvider2
- * PartyType1Code.ETCServiceProvider2}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType1Code#Investor
- * PartyType1Code.Investor}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmETCServiceProvider1
+ * PartyType1Code.mmETCServiceProvider1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType1Code#mmETCServiceProvider2
+ * PartyType1Code.mmETCServiceProvider2}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType1Code#mmInvestor
+ * PartyType1Code.mmInvestor}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -125,7 +126,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "ExecutingFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExecutingFirm = new MMCode() {
+	public static final MMCode mmExecutingFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingFirm";
@@ -148,7 +149,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "BrokerOfCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokerOfCredit = new MMCode() {
+	public static final MMCode mmBrokerOfCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerOfCredit";
@@ -171,7 +172,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "CorrespondentClearingFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorrespondentClearingFirm = new MMCode() {
+	public static final MMCode mmCorrespondentClearingFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentClearingFirm";
@@ -194,7 +195,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "ContraFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode ContraFirm = new MMCode() {
+	public static final MMCode mmContraFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraFirm";
@@ -217,7 +218,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "ContraClearingFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode ContraClearingFirm = new MMCode() {
+	public static final MMCode mmContraClearingFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraClearingFirm";
@@ -240,7 +241,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "UnderlyingContraFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnderlyingContraFirm = new MMCode() {
+	public static final MMCode mmUnderlyingContraFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingContraFirm";
@@ -263,7 +264,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "GiveUpClearingFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode GiveUpClearingFirm = new MMCode() {
+	public static final MMCode mmGiveUpClearingFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GiveUpClearingFirm";
@@ -286,7 +287,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "OrderOriginationFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode OrderOriginationFirm = new MMCode() {
+	public static final MMCode mmOrderOriginationFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginationFirm";
@@ -309,7 +310,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "SponsoringFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode SponsoringFirm = new MMCode() {
+	public static final MMCode mmSponsoringFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SponsoringFirm";
@@ -332,7 +333,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "Clearingfirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode Clearingfirm = new MMCode() {
+	public static final MMCode mmClearingfirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Clearingfirm";
@@ -355,7 +356,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "IntroducingFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode IntroducingFirm = new MMCode() {
+	public static final MMCode mmIntroducingFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntroducingFirm";
@@ -378,7 +379,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "EnteringFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode EnteringFirm = new MMCode() {
+	public static final MMCode mmEnteringFirm = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnteringFirm";
@@ -401,7 +402,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "Client"</li>
 	 * </ul>
 	 */
-	public static final MMCode Client = new MMCode() {
+	public static final MMCode mmClient = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Client";
@@ -424,7 +425,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "StepInBroker"</li>
 	 * </ul>
 	 */
-	public static final MMCode StepInBroker = new MMCode() {
+	public static final MMCode mmStepInBroker = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StepInBroker";
@@ -447,7 +448,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "AffirmingParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode AffirmingParty = new MMCode() {
+	public static final MMCode mmAffirmingParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmingParty";
@@ -470,7 +471,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "ETCServiceProvider1"</li>
 	 * </ul>
 	 */
-	public static final MMCode ETCServiceProvider1 = new MMCode() {
+	public static final MMCode mmETCServiceProvider1 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ETCServiceProvider1";
@@ -493,7 +494,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "ETCServiceProvider2"</li>
 	 * </ul>
 	 */
-	public static final MMCode ETCServiceProvider2 = new MMCode() {
+	public static final MMCode mmETCServiceProvider2 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ETCServiceProvider2";
@@ -516,7 +517,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 * name} = "Investor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Investor = new MMCode() {
+	public static final MMCode mmInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
@@ -527,18 +528,18 @@ public class PartyType1Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXEC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyType1Code";
 				definition = "Specifies the type of party involved in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType1Code.ExecutingFirm, com.tools20022.repository.codeset.PartyType1Code.BrokerOfCredit,
-						com.tools20022.repository.codeset.PartyType1Code.CorrespondentClearingFirm, com.tools20022.repository.codeset.PartyType1Code.ContraFirm, com.tools20022.repository.codeset.PartyType1Code.ContraClearingFirm,
-						com.tools20022.repository.codeset.PartyType1Code.UnderlyingContraFirm, com.tools20022.repository.codeset.PartyType1Code.GiveUpClearingFirm, com.tools20022.repository.codeset.PartyType1Code.OrderOriginationFirm,
-						com.tools20022.repository.codeset.PartyType1Code.SponsoringFirm, com.tools20022.repository.codeset.PartyType1Code.Clearingfirm, com.tools20022.repository.codeset.PartyType1Code.IntroducingFirm,
-						com.tools20022.repository.codeset.PartyType1Code.EnteringFirm, com.tools20022.repository.codeset.PartyType1Code.Client, com.tools20022.repository.codeset.PartyType1Code.StepInBroker,
-						com.tools20022.repository.codeset.PartyType1Code.AffirmingParty, com.tools20022.repository.codeset.PartyType1Code.ETCServiceProvider1, com.tools20022.repository.codeset.PartyType1Code.ETCServiceProvider2,
-						com.tools20022.repository.codeset.PartyType1Code.Investor);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType1Code.mmExecutingFirm, com.tools20022.repository.codeset.PartyType1Code.mmBrokerOfCredit,
+						com.tools20022.repository.codeset.PartyType1Code.mmCorrespondentClearingFirm, com.tools20022.repository.codeset.PartyType1Code.mmContraFirm, com.tools20022.repository.codeset.PartyType1Code.mmContraClearingFirm,
+						com.tools20022.repository.codeset.PartyType1Code.mmUnderlyingContraFirm, com.tools20022.repository.codeset.PartyType1Code.mmGiveUpClearingFirm,
+						com.tools20022.repository.codeset.PartyType1Code.mmOrderOriginationFirm, com.tools20022.repository.codeset.PartyType1Code.mmSponsoringFirm, com.tools20022.repository.codeset.PartyType1Code.mmClearingfirm,
+						com.tools20022.repository.codeset.PartyType1Code.mmIntroducingFirm, com.tools20022.repository.codeset.PartyType1Code.mmEnteringFirm, com.tools20022.repository.codeset.PartyType1Code.mmClient,
+						com.tools20022.repository.codeset.PartyType1Code.mmStepInBroker, com.tools20022.repository.codeset.PartyType1Code.mmAffirmingParty, com.tools20022.repository.codeset.PartyType1Code.mmETCServiceProvider1,
+						com.tools20022.repository.codeset.PartyType1Code.mmETCServiceProvider2, com.tools20022.repository.codeset.PartyType1Code.mmInvestor);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

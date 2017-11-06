@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#Termination
- * ExtendedEventType4Code.Termination}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#mmTermination
+ * ExtendedEventType4Code.mmTermination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#FinalPaydown
- * ExtendedEventType4Code.FinalPaydown}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#mmFinalPaydown
+ * ExtendedEventType4Code.mmFinalPaydown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#CertificateOfDepositEarlyRedemption
- * ExtendedEventType4Code.CertificateOfDepositEarlyRedemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#mmCertificateOfDepositEarlyRedemption
+ * ExtendedEventType4Code.mmCertificateOfDepositEarlyRedemption}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +86,15 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ExtendedEventType3Code#Termination
-	 * ExtendedEventType3Code.Termination}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ExtendedEventType3Code#mmTermination
+	 * ExtendedEventType3Code.mmTermination}</li>
 	 * </ul>
 	 */
-	public static final MMCode Termination = new MMCode() {
+	public static final MMCode mmTermination = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType3Code.Termination;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType3Code.mmTermination;
 			owner_lazy = () -> ExtendedEventType4Code.mmObject();
 		}
 	};
@@ -114,7 +114,7 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	 * name} = "FinalPaydown"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinalPaydown = new MMCode() {
+	public static final MMCode mmFinalPaydown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalPaydown";
@@ -137,7 +137,7 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	 * name} = "CertificateOfDepositEarlyRedemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode CertificateOfDepositEarlyRedemption = new MMCode() {
+	public static final MMCode mmCertificateOfDepositEarlyRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDepositEarlyRedemption";
@@ -148,13 +148,13 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExtendedEventType4Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
 				previousVersion_lazy = () -> ExtendedEventType3Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventType4Code.Termination, com.tools20022.repository.codeset.ExtendedEventType4Code.FinalPaydown,
-						com.tools20022.repository.codeset.ExtendedEventType4Code.CertificateOfDepositEarlyRedemption);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventType4Code.mmTermination, com.tools20022.repository.codeset.ExtendedEventType4Code.mmFinalPaydown,
+						com.tools20022.repository.codeset.ExtendedEventType4Code.mmCertificateOfDepositEarlyRedemption);
 				trace_lazy = () -> ExtendedEventTypeV2Code.mmObject();
 			}
 		});

@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Rating1#RatingScheme
- * Rating1.RatingScheme}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Rating1#ValueDate
- * Rating1.ValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Rating1#ValueIdentification
- * Rating1.ValueIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Rating1#mmRatingScheme
+ * Rating1.mmRatingScheme}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Rating1#mmValueDate
+ * Rating1.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Rating1#mmValueIdentification
+ * Rating1.mmValueIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Rating1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text ratingScheme;
 	/**
 	 * Information regarding the entity that assigns the rating.
 	 * <p>
@@ -75,8 +76,8 @@ public class Rating1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Rating#RatingScheme
-	 * Rating.RatingScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.Rating#mmRatingScheme
+	 * Rating.mmRatingScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Rating1
@@ -95,20 +96,21 @@ public class Rating1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RatingScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRatingScheme = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Rating.mmRatingScheme;
 			componentContext_lazy = () -> Rating1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Rating.RatingScheme;
 			isDerived = false;
 			xmlTag = "RatgSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RatingScheme";
 			definition = "Information regarding the entity that assigns the rating.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime valueDate;
 	/**
 	 * Date/time as from which the rating is valid.
 	 * <p>
@@ -121,8 +123,8 @@ public class Rating1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Rating#ValueDate
-	 * Rating.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Rating#mmValueDate
+	 * Rating.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Rating1
@@ -140,20 +142,21 @@ public class Rating1 {
 	 * definition} = "Date/time as from which the rating is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Rating.mmValueDate;
 			componentContext_lazy = () -> Rating1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Rating.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time as from which the rating is valid.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected RatingValueIdentifier valueIdentification;
 	/**
 	 * Specifies the rating, which has been assigned to a security by a rating
 	 * agency.
@@ -168,7 +171,8 @@ public class Rating1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Rating#Value Rating.Value}</li>
+	 * {@linkplain com.tools20022.repository.entity.Rating#mmValue
+	 * Rating.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Rating1
@@ -188,17 +192,17 @@ public class Rating1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Rating.mmValue;
 			componentContext_lazy = () -> Rating1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Rating.Value;
 			isDerived = false;
 			xmlTag = "ValId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueIdentification";
 			definition = "Specifies the rating, which has been assigned to a security by a rating agency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RatingValueIdentifier.mmObject();
 		}
 	};
@@ -206,14 +210,38 @@ public class Rating1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rating1.RatingScheme, com.tools20022.repository.msg.Rating1.ValueDate, com.tools20022.repository.msg.Rating1.ValueIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rating1.mmRatingScheme, com.tools20022.repository.msg.Rating1.mmValueDate, com.tools20022.repository.msg.Rating1.mmValueIdentification);
 				trace_lazy = () -> Rating.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Rating1";
 				definition = "Assessment of securities credit and investment risk.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getRatingScheme() {
+		return ratingScheme;
+	}
+
+	public void setRatingScheme(Max35Text ratingScheme) {
+		this.ratingScheme = ratingScheme;
+	}
+
+	public ISODateTime getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODateTime valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public RatingValueIdentifier getValueIdentification() {
+		return valueIdentification;
+	}
+
+	public void setValueIdentification(RatingValueIdentifier valueIdentification) {
+		this.valueIdentification = valueIdentification;
 	}
 }

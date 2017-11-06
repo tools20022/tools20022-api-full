@@ -40,25 +40,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakDown2#LotNumber
- * QuantityBreakDown2.LotNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakDown2#LotQuantity
- * QuantityBreakDown2.LotQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakDown2#LotDateTime
- * QuantityBreakDown2.LotDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakDown2#LotPrice
- * QuantityBreakDown2.LotPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakDown2#TypeOfPrice
- * QuantityBreakDown2.TypeOfPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakDown2#mmLotNumber
+ * QuantityBreakDown2.mmLotNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityBreakDown2#AccountBaseCurrencyAmounts
- * QuantityBreakDown2.AccountBaseCurrencyAmounts}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityBreakDown2#mmLotQuantity
+ * QuantityBreakDown2.mmLotQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityBreakDown2#InstrumentCurrencyAmounts
- * QuantityBreakDown2.InstrumentCurrencyAmounts}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityBreakDown2#mmLotDateTime
+ * QuantityBreakDown2.mmLotDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakDown2#mmLotPrice
+ * QuantityBreakDown2.mmLotPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.QuantityBreakDown2#AlternateReportingCurrencyAmounts
- * QuantityBreakDown2.AlternateReportingCurrencyAmounts}</li>
+ * {@linkplain com.tools20022.repository.msg.QuantityBreakDown2#mmTypeOfPrice
+ * QuantityBreakDown2.mmTypeOfPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityBreakDown2#mmAccountBaseCurrencyAmounts
+ * QuantityBreakDown2.mmAccountBaseCurrencyAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityBreakDown2#mmInstrumentCurrencyAmounts
+ * QuantityBreakDown2.mmInstrumentCurrencyAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityBreakDown2#mmAlternateReportingCurrencyAmounts
+ * QuantityBreakDown2.mmAlternateReportingCurrencyAmounts}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -67,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class QuantityBreakDown2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number1Choice lotNumber;
 	/**
 	 * Number identifying a lot constituting the financial instrument
 	 * <p>
@@ -97,8 +101,8 @@ public class QuantityBreakDown2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#LotNumber
-	 * LotBreakdown.LotNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotNumber
+	 * LotBreakdown.mmLotNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,20 +122,21 @@ public class QuantityBreakDown2 {
 	 * "Number identifying a lot constituting the financial instrument"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LotNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLotNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotNumber;
 			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.LotNumber;
 			isDerived = false;
 			xmlTag = "LotNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotNumber";
 			definition = "Number identifying a lot constituting the financial instrument";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Number1Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1Choice lotQuantity;
 	/**
 	 * Quantity of financial instruments that is part of the lot described.
 	 * <p>
@@ -144,8 +149,8 @@ public class QuantityBreakDown2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#SecuritiesQuantity
-	 * LotBreakdown.SecuritiesQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmSecuritiesQuantity
+	 * LotBreakdown.mmSecuritiesQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,21 +170,22 @@ public class QuantityBreakDown2 {
 	 * "Quantity of financial instruments that is part of the lot described."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LotQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmSecuritiesQuantity;
 			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.SecuritiesQuantity;
 			isDerived = false;
 			xmlTag = "LotQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantity";
 			definition = "Quantity of financial instruments that is part of the lot described.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice lotDateTime;
 	/**
 	 * Date/time at which the lot was purchased.
 	 * <p>
@@ -193,8 +199,8 @@ public class QuantityBreakDown2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#LotDateTime
-	 * LotBreakdown.LotDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotDateTime
+	 * LotBreakdown.mmLotDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -213,20 +219,21 @@ public class QuantityBreakDown2 {
 	 * definition} = "Date/time at which the lot was purchased."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LotDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLotDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotDateTime;
 			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.LotDateTime;
 			isDerived = false;
 			xmlTag = "LotDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotDateTime";
 			definition = "Date/time at which the lot was purchased.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected Price2 lotPrice;
 	/**
 	 * Price at which the lot was purchased.
 	 * <p>
@@ -237,8 +244,8 @@ public class QuantityBreakDown2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#LotPrice
-	 * LotBreakdown.LotPrice}</li>
+	 * {@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotPrice
+	 * LotBreakdown.mmLotPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -257,21 +264,22 @@ public class QuantityBreakDown2 {
 	 * definition} = "Price at which the lot was purchased."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LotPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLotPrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotPrice;
 			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.LotPrice;
 			isDerived = false;
 			xmlTag = "LotPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotPrice";
 			definition = "Price at which the lot was purchased.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Price2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Price2.mmObject();
 		}
 	};
+	protected TypeOfPrice1Choice typeOfPrice;
 	/**
 	 * Specifies the type of price and information about the price.
 	 * <p>
@@ -285,8 +293,8 @@ public class QuantityBreakDown2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceType
-	 * SecuritiesPricing.PriceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceType
+	 * SecuritiesPricing.mmPriceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -306,20 +314,21 @@ public class QuantityBreakDown2 {
 	 * "Specifies the type of price and information about the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TypeOfPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTypeOfPrice = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceType;
 			isDerived = false;
 			xmlTag = "TpOfPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfPrice";
 			definition = "Specifies the type of price and information about the price.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TypeOfPrice1Choice.mmObject();
 		}
 	};
+	protected BalanceAmounts2 accountBaseCurrencyAmounts;
 	/**
 	 * Valuation amounts for the lot provided in the base currency of the
 	 * account.
@@ -332,8 +341,8 @@ public class QuantityBreakDown2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#AssetValue
-	 * Asset.AssetValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmAssetValue
+	 * Asset.mmAssetValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -354,21 +363,22 @@ public class QuantityBreakDown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountBaseCurrencyAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountBaseCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmAssetValue;
 			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.AssetValue;
 			isDerived = false;
 			xmlTag = "AcctBaseCcyAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBaseCurrencyAmounts";
 			definition = "Valuation amounts for the lot provided in the base currency of the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceAmounts2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BalanceAmounts2.mmObject();
 		}
 	};
+	protected BalanceAmounts2 instrumentCurrencyAmounts;
 	/**
 	 * Valuation amounts for the lot provided in the currency of the financial
 	 * instrument.
@@ -381,8 +391,8 @@ public class QuantityBreakDown2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#AssetValue
-	 * Asset.AssetValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmAssetValue
+	 * Asset.mmAssetValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -403,21 +413,22 @@ public class QuantityBreakDown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstrumentCurrencyAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstrumentCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmAssetValue;
 			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.AssetValue;
 			isDerived = false;
 			xmlTag = "InstrmCcyAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentCurrencyAmounts";
 			definition = "Valuation amounts for the lot provided in the currency of the financial instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceAmounts2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BalanceAmounts2.mmObject();
 		}
 	};
+	protected BalanceAmounts2 alternateReportingCurrencyAmounts;
 	/**
 	 * Valuation amounts for the lot provided in another currency than the base
 	 * currency of the account.
@@ -430,8 +441,8 @@ public class QuantityBreakDown2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Asset#AssetValue
-	 * Asset.AssetValue}</li>
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmAssetValue
+	 * Asset.mmAssetValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -452,36 +463,100 @@ public class QuantityBreakDown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AlternateReportingCurrencyAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAlternateReportingCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmAssetValue;
 			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.AssetValue;
 			isDerived = false;
 			xmlTag = "AltrnRptgCcyAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateReportingCurrencyAmounts";
 			definition = "Valuation amounts for the lot provided in another currency than the base currency of the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BalanceAmounts2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BalanceAmounts2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakDown2.LotNumber, com.tools20022.repository.msg.QuantityBreakDown2.LotQuantity,
-						com.tools20022.repository.msg.QuantityBreakDown2.LotDateTime, com.tools20022.repository.msg.QuantityBreakDown2.LotPrice, com.tools20022.repository.msg.QuantityBreakDown2.TypeOfPrice,
-						com.tools20022.repository.msg.QuantityBreakDown2.AccountBaseCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakDown2.InstrumentCurrencyAmounts,
-						com.tools20022.repository.msg.QuantityBreakDown2.AlternateReportingCurrencyAmounts);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakDown2.mmLotNumber, com.tools20022.repository.msg.QuantityBreakDown2.mmLotQuantity,
+						com.tools20022.repository.msg.QuantityBreakDown2.mmLotDateTime, com.tools20022.repository.msg.QuantityBreakDown2.mmLotPrice, com.tools20022.repository.msg.QuantityBreakDown2.mmTypeOfPrice,
+						com.tools20022.repository.msg.QuantityBreakDown2.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakDown2.mmInstrumentCurrencyAmounts,
+						com.tools20022.repository.msg.QuantityBreakDown2.mmAlternateReportingCurrencyAmounts);
 				trace_lazy = () -> LotBreakdown.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuantityBreakDown2";
 				definition = "Transaction between two counterparties in which they agree to buy and sell a financial instrument. A trade transaction occurs with the matching of the two counterparties orders. There could be several trade transactions necessary to execute the trade.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number1Choice getLotNumber() {
+		return lotNumber;
+	}
+
+	public void setLotNumber(Number1Choice lotNumber) {
+		this.lotNumber = lotNumber;
+	}
+
+	public FinancialInstrumentQuantity1Choice getLotQuantity() {
+		return lotQuantity;
+	}
+
+	public void setLotQuantity(FinancialInstrumentQuantity1Choice lotQuantity) {
+		this.lotQuantity = lotQuantity;
+	}
+
+	public DateAndDateTimeChoice getLotDateTime() {
+		return lotDateTime;
+	}
+
+	public void setLotDateTime(DateAndDateTimeChoice lotDateTime) {
+		this.lotDateTime = lotDateTime;
+	}
+
+	public Price2 getLotPrice() {
+		return lotPrice;
+	}
+
+	public void setLotPrice(com.tools20022.repository.msg.Price2 lotPrice) {
+		this.lotPrice = lotPrice;
+	}
+
+	public TypeOfPrice1Choice getTypeOfPrice() {
+		return typeOfPrice;
+	}
+
+	public void setTypeOfPrice(TypeOfPrice1Choice typeOfPrice) {
+		this.typeOfPrice = typeOfPrice;
+	}
+
+	public BalanceAmounts2 getAccountBaseCurrencyAmounts() {
+		return accountBaseCurrencyAmounts;
+	}
+
+	public void setAccountBaseCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts2 accountBaseCurrencyAmounts) {
+		this.accountBaseCurrencyAmounts = accountBaseCurrencyAmounts;
+	}
+
+	public BalanceAmounts2 getInstrumentCurrencyAmounts() {
+		return instrumentCurrencyAmounts;
+	}
+
+	public void setInstrumentCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts2 instrumentCurrencyAmounts) {
+		this.instrumentCurrencyAmounts = instrumentCurrencyAmounts;
+	}
+
+	public BalanceAmounts2 getAlternateReportingCurrencyAmounts() {
+		return alternateReportingCurrencyAmounts;
+	}
+
+	public void setAlternateReportingCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts2 alternateReportingCurrencyAmounts) {
+		this.alternateReportingCurrencyAmounts = alternateReportingCurrencyAmounts;
 	}
 }

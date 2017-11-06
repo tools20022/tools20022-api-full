@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reinvestment2#FinancialInstrumentDetails
- * Reinvestment2.FinancialInstrumentDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.Reinvestment2#mmFinancialInstrumentDetails
+ * Reinvestment2.mmFinancialInstrumentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reinvestment2#RequestedNAVCurrency
- * Reinvestment2.RequestedNAVCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.Reinvestment2#mmRequestedNAVCurrency
+ * Reinvestment2.mmRequestedNAVCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reinvestment2#ReinvestmentPercentage
- * Reinvestment2.ReinvestmentPercentage}</li>
+ * {@linkplain com.tools20022.repository.msg.Reinvestment2#mmReinvestmentPercentage
+ * Reinvestment2.mmReinvestmentPercentage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reinvestment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrument51 financialInstrumentDetails;
 	/**
 	 * Investment fund for the reinvestment.
 	 * <p>
@@ -87,8 +88,8 @@ public class Reinvestment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Reinvestment#InvestmentFundClass
-	 * Reinvestment.InvestmentFundClass}</li>
+	 * {@linkplain com.tools20022.repository.entity.Reinvestment#mmInvestmentFundClass
+	 * Reinvestment.mmInvestmentFundClass}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -108,34 +109,35 @@ public class Reinvestment2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Reinvestment3#FinancialInstrumentDetails
-	 * Reinvestment3.FinancialInstrumentDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Reinvestment3#mmFinancialInstrumentDetails
+	 * Reinvestment3.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Reinvestment1#FundDetails
-	 * Reinvestment1.FundDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.Reinvestment1#mmFundDetails
+	 * Reinvestment1.mmFundDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd FinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmInvestmentFundClass;
 			componentContext_lazy = () -> Reinvestment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reinvestment.InvestmentFundClass;
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Investment fund for the reinvestment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Reinvestment1.FundDetails;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment3.FinancialInstrumentDetails);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment3.mmFinancialInstrumentDetails);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Reinvestment1.mmFundDetails;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrument51.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmObject();
 		}
 	};
+	protected ActiveCurrencyCode requestedNAVCurrency;
 	/**
 	 * Currency to be used for pricing the fund. This currency must be among the
 	 * set of currencies in which the price may be expressed, as stated in the
@@ -151,8 +153,8 @@ public class Reinvestment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#RequestedNAVCurrency
-	 * InvestmentFundClass.RequestedNAVCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmRequestedNAVCurrency
+	 * InvestmentFundClass.mmRequestedNAVCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -174,33 +176,34 @@ public class Reinvestment2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Reinvestment3#RequestedNAVCurrency
-	 * Reinvestment3.RequestedNAVCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.Reinvestment3#mmRequestedNAVCurrency
+	 * Reinvestment3.mmRequestedNAVCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Reinvestment1#RequestedNAVCurrency
-	 * Reinvestment1.RequestedNAVCurrency}</li>
+	 * {@linkplain com.tools20022.repository.msg.Reinvestment1#mmRequestedNAVCurrency
+	 * Reinvestment1.mmRequestedNAVCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedNAVCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> Reinvestment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.RequestedNAVCurrency;
 			isDerived = false;
 			xmlTag = "ReqdNAVCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedNAVCurrency";
 			definition = "Currency to be used for pricing the fund. This currency must be among the set of currencies in which the price may be expressed, as stated in the prospectus.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Reinvestment1.RequestedNAVCurrency;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment3.RequestedNAVCurrency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment3.mmRequestedNAVCurrency);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Reinvestment1.mmRequestedNAVCurrency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	protected PercentageRate reinvestmentPercentage;
 	/**
 	 * Percentage of the reinvestment.
 	 * <p>
@@ -214,8 +217,8 @@ public class Reinvestment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Reinvestment#Percentage
-	 * Reinvestment.Percentage}</li>
+	 * {@linkplain com.tools20022.repository.entity.Reinvestment#mmPercentage
+	 * Reinvestment.mmPercentage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -235,30 +238,30 @@ public class Reinvestment2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Reinvestment3#ReinvestmentPercentage
-	 * Reinvestment3.ReinvestmentPercentage}</li>
+	 * {@linkplain com.tools20022.repository.msg.Reinvestment3#mmReinvestmentPercentage
+	 * Reinvestment3.mmReinvestmentPercentage}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Reinvestment1#ReinvestmentPercentage
-	 * Reinvestment1.ReinvestmentPercentage}</li>
+	 * {@linkplain com.tools20022.repository.msg.Reinvestment1#mmReinvestmentPercentage
+	 * Reinvestment1.mmReinvestmentPercentage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReinvestmentPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReinvestmentPercentage = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmPercentage;
 			componentContext_lazy = () -> Reinvestment2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reinvestment.Percentage;
 			isDerived = false;
 			xmlTag = "RinvstmtPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentPercentage";
 			definition = "Percentage of the reinvestment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Reinvestment1.ReinvestmentPercentage;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment3.ReinvestmentPercentage);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment3.mmReinvestmentPercentage);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Reinvestment1.mmReinvestmentPercentage;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -266,17 +269,41 @@ public class Reinvestment2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment2.FinancialInstrumentDetails, com.tools20022.repository.msg.Reinvestment2.RequestedNAVCurrency,
-						com.tools20022.repository.msg.Reinvestment2.ReinvestmentPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment2.mmFinancialInstrumentDetails, com.tools20022.repository.msg.Reinvestment2.mmRequestedNAVCurrency,
+						com.tools20022.repository.msg.Reinvestment2.mmReinvestmentPercentage);
 				trace_lazy = () -> Reinvestment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reinvestment2";
 				definition = "Reinvestment information.";
-				previousVersion_lazy = () -> Reinvestment1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Reinvestment3.mmObject());
+				previousVersion_lazy = () -> Reinvestment1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrument51 getFinancialInstrumentDetails() {
+		return financialInstrumentDetails;
+	}
+
+	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument51 financialInstrumentDetails) {
+		this.financialInstrumentDetails = financialInstrumentDetails;
+	}
+
+	public ActiveCurrencyCode getRequestedNAVCurrency() {
+		return requestedNAVCurrency;
+	}
+
+	public void setRequestedNAVCurrency(ActiveCurrencyCode requestedNAVCurrency) {
+		this.requestedNAVCurrency = requestedNAVCurrency;
+	}
+
+	public PercentageRate getReinvestmentPercentage() {
+		return reinvestmentPercentage;
+	}
+
+	public void setReinvestmentPercentage(PercentageRate reinvestmentPercentage) {
+		this.reinvestmentPercentage = reinvestmentPercentage;
 	}
 }

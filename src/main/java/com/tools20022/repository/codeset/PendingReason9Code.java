@@ -35,35 +35,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#AccountServicerDeadlineMissed
- * PendingReason9Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#mmAccountServicerDeadlineMissed
+ * PendingReason9Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#AwaitingConfirmation
- * PendingReason9Code.AwaitingConfirmation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason9Code#Other
- * PendingReason9Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#mmAwaitingConfirmation
+ * PendingReason9Code.mmAwaitingConfirmation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason9Code#mmOther
+ * PendingReason9Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#ConditionalRegistrar
- * PendingReason9Code.ConditionalRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#mmConditionalRegistrar
+ * PendingReason9Code.mmConditionalRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#ConditionalCurrency
- * PendingReason9Code.ConditionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#mmConditionalCurrency
+ * PendingReason9Code.mmConditionalCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#ConditionalRealignement
- * PendingReason9Code.ConditionalRealignement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#mmConditionalRealignement
+ * PendingReason9Code.mmConditionalRealignement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#ConditionalDeliveryAwaitingCancellation
- * PendingReason9Code.ConditionalDeliveryAwaitingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#mmConditionalDeliveryAwaitingCancellation
+ * PendingReason9Code.mmConditionalDeliveryAwaitingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#IncompleteNumberCount
- * PendingReason9Code.IncompleteNumberCount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason9Code#mmIncompleteNumberCount
+ * PendingReason9Code.mmIncompleteNumberCount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +105,7 @@ public class PendingReason9Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -128,7 +128,7 @@ public class PendingReason9Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingConfirmation = new MMCode() {
+	public static final MMCode mmAwaitingConfirmation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingConfirmation";
@@ -151,7 +151,7 @@ public class PendingReason9Code extends PendingFailingReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -174,7 +174,7 @@ public class PendingReason9Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalRegistrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalRegistrar = new MMCode() {
+	public static final MMCode mmConditionalRegistrar = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRegistrar";
@@ -197,7 +197,7 @@ public class PendingReason9Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalCurrency = new MMCode() {
+	public static final MMCode mmConditionalCurrency = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalCurrency";
@@ -220,7 +220,7 @@ public class PendingReason9Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalRealignement"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalRealignement = new MMCode() {
+	public static final MMCode mmConditionalRealignement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRealignement";
@@ -243,7 +243,7 @@ public class PendingReason9Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalDeliveryAwaitingCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalDeliveryAwaitingCancellation = new MMCode() {
+	public static final MMCode mmConditionalDeliveryAwaitingCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalDeliveryAwaitingCancellation";
@@ -266,7 +266,7 @@ public class PendingReason9Code extends PendingFailingReasonCode {
 	 * name} = "IncompleteNumberCount"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncompleteNumberCount = new MMCode() {
+	public static final MMCode mmIncompleteNumberCount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncompleteNumberCount";
@@ -277,16 +277,16 @@ public class PendingReason9Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingReason9Code";
 				definition = "Specifies the reason why a cancellation request sent for the related instruction is pending.";
 				previousVersion_lazy = () -> PendingReason6Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason9Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingReason9Code.AwaitingConfirmation,
-						com.tools20022.repository.codeset.PendingReason9Code.Other, com.tools20022.repository.codeset.PendingReason9Code.ConditionalRegistrar, com.tools20022.repository.codeset.PendingReason9Code.ConditionalCurrency,
-						com.tools20022.repository.codeset.PendingReason9Code.ConditionalRealignement, com.tools20022.repository.codeset.PendingReason9Code.ConditionalDeliveryAwaitingCancellation,
-						com.tools20022.repository.codeset.PendingReason9Code.IncompleteNumberCount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason9Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingReason9Code.mmAwaitingConfirmation,
+						com.tools20022.repository.codeset.PendingReason9Code.mmOther, com.tools20022.repository.codeset.PendingReason9Code.mmConditionalRegistrar, com.tools20022.repository.codeset.PendingReason9Code.mmConditionalCurrency,
+						com.tools20022.repository.codeset.PendingReason9Code.mmConditionalRealignement, com.tools20022.repository.codeset.PendingReason9Code.mmConditionalDeliveryAwaitingCancellation,
+						com.tools20022.repository.codeset.PendingReason9Code.mmIncompleteNumberCount);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

@@ -35,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#Deactivate
- * AgreementItemAction1Code.Deactivate}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#mmDeactivate
+ * AgreementItemAction1Code.mmDeactivate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#Hold
- * AgreementItemAction1Code.Hold}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#mmHold
+ * AgreementItemAction1Code.mmHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#Modify
- * AgreementItemAction1Code.Modify}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#mmModify
+ * AgreementItemAction1Code.mmModify}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#Reactivate
- * AgreementItemAction1Code.Reactivate}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#mmReactivate
+ * AgreementItemAction1Code.mmReactivate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#Register
- * AgreementItemAction1Code.Register}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#mmRegister
+ * AgreementItemAction1Code.mmRegister}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#Synchronize
- * AgreementItemAction1Code.Synchronize}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#mmSynchronize
+ * AgreementItemAction1Code.mmSynchronize}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#Verify
- * AgreementItemAction1Code.Verify}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementItemAction1Code#mmVerify
+ * AgreementItemAction1Code.mmVerify}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,7 +98,7 @@ public class AgreementItemAction1Code extends AgreementItemActionCode {
 	 * definition} = "Deactivate agreement item."</li>
 	 * </ul>
 	 */
-	public static final MMCode Deactivate = new MMCode() {
+	public static final MMCode mmDeactivate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deactivate";
@@ -128,7 +128,7 @@ public class AgreementItemAction1Code extends AgreementItemActionCode {
 	 * definition} = "Hold the agreement item."</li>
 	 * </ul>
 	 */
-	public static final MMCode Hold = new MMCode() {
+	public static final MMCode mmHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hold";
@@ -158,7 +158,7 @@ public class AgreementItemAction1Code extends AgreementItemActionCode {
 	 * definition} = "Modify agreement item information."</li>
 	 * </ul>
 	 */
-	public static final MMCode Modify = new MMCode() {
+	public static final MMCode mmModify = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modify";
@@ -188,7 +188,7 @@ public class AgreementItemAction1Code extends AgreementItemActionCode {
 	 * definition} = "Reactivate agreement item."</li>
 	 * </ul>
 	 */
-	public static final MMCode Reactivate = new MMCode() {
+	public static final MMCode mmReactivate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reactivate";
@@ -218,7 +218,7 @@ public class AgreementItemAction1Code extends AgreementItemActionCode {
 	 * definition} = "Register item as new agreement."</li>
 	 * </ul>
 	 */
-	public static final MMCode Register = new MMCode() {
+	public static final MMCode mmRegister = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Register";
@@ -248,7 +248,7 @@ public class AgreementItemAction1Code extends AgreementItemActionCode {
 	 * definition} = "Send status with full agreement information details."</li>
 	 * </ul>
 	 */
-	public static final MMCode Synchronize = new MMCode() {
+	public static final MMCode mmSynchronize = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Synchronize";
@@ -278,7 +278,7 @@ public class AgreementItemAction1Code extends AgreementItemActionCode {
 	 * definition} = "Verify agreement item information."</li>
 	 * </ul>
 	 */
-	public static final MMCode Verify = new MMCode() {
+	public static final MMCode mmVerify = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Verify";
@@ -291,13 +291,13 @@ public class AgreementItemAction1Code extends AgreementItemActionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AgreementItemAction1Code";
 				definition = "Specifies the type of action concerning registration information.\r\nThe default value is OPEN.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgreementItemAction1Code.Deactivate, com.tools20022.repository.codeset.AgreementItemAction1Code.Hold,
-						com.tools20022.repository.codeset.AgreementItemAction1Code.Modify, com.tools20022.repository.codeset.AgreementItemAction1Code.Reactivate, com.tools20022.repository.codeset.AgreementItemAction1Code.Register,
-						com.tools20022.repository.codeset.AgreementItemAction1Code.Synchronize, com.tools20022.repository.codeset.AgreementItemAction1Code.Verify);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgreementItemAction1Code.mmDeactivate, com.tools20022.repository.codeset.AgreementItemAction1Code.mmHold,
+						com.tools20022.repository.codeset.AgreementItemAction1Code.mmModify, com.tools20022.repository.codeset.AgreementItemAction1Code.mmReactivate, com.tools20022.repository.codeset.AgreementItemAction1Code.mmRegister,
+						com.tools20022.repository.codeset.AgreementItemAction1Code.mmSynchronize, com.tools20022.repository.codeset.AgreementItemAction1Code.mmVerify);
 				trace_lazy = () -> AgreementItemActionCode.mmObject();
 			}
 		});

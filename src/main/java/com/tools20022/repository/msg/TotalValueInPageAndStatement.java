@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement#TotalHoldingsValueOfPage
- * TotalValueInPageAndStatement.TotalHoldingsValueOfPage}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement#mmTotalHoldingsValueOfPage
+ * TotalValueInPageAndStatement.mmTotalHoldingsValueOfPage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement#TotalHoldingsValueOfStatement
- * TotalValueInPageAndStatement.TotalHoldingsValueOfStatement}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalValueInPageAndStatement#mmTotalHoldingsValueOfStatement
+ * TotalValueInPageAndStatement.mmTotalHoldingsValueOfStatement}</li>
  * </ul>
  * </li>
  * <li>
@@ -45,24 +45,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#TotalValues
- * AccountingStatementOfHoldings.TotalValues}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldings#mmTotalValues
+ * AccountingStatementOfHoldings.mmTotalValues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02#TotalValues
- * AccountingStatementOfHoldingsV02.TotalValues}</li>
+ * {@linkplain com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02#mmTotalValues
+ * AccountingStatementOfHoldingsV02.mmTotalValues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldings#TotalValues
- * CustodyStatementOfHoldings.TotalValues}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldings#mmTotalValues
+ * CustodyStatementOfHoldings.mmTotalValues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02#TotalValues
- * CustodyStatementOfHoldingsV02.TotalValues}</li>
+ * {@linkplain com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02#mmTotalValues
+ * CustodyStatementOfHoldingsV02.mmTotalValues}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalValueInPageAndStatement {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount totalHoldingsValueOfPage;
 	/**
 	 * Total value of positions reported in this message.
 	 * <p>
@@ -104,7 +105,7 @@ public class TotalValueInPageAndStatement {
 	 * definition} = "Total value of positions reported in this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalHoldingsValueOfPage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalHoldingsValueOfPage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalValueInPageAndStatement.mmObject();
 			isDerived = false;
@@ -112,11 +113,12 @@ public class TotalValueInPageAndStatement {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalHoldingsValueOfPage";
 			definition = "Total value of positions reported in this message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount totalHoldingsValueOfStatement;
 	/**
 	 * Total value of positions reported in this statement (a statement may
 	 * comprise one or more messages).
@@ -148,7 +150,7 @@ public class TotalValueInPageAndStatement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalHoldingsValueOfStatement = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalHoldingsValueOfStatement = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalValueInPageAndStatement.mmObject();
 			isDerived = false;
@@ -156,8 +158,8 @@ public class TotalValueInPageAndStatement {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalHoldingsValueOfStatement";
 			definition = "Total value of positions reported in this statement (a statement may comprise one or more messages).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -165,15 +167,31 @@ public class TotalValueInPageAndStatement {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalValueInPageAndStatement.TotalHoldingsValueOfPage, com.tools20022.repository.msg.TotalValueInPageAndStatement.TotalHoldingsValueOfStatement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.AccountingStatementOfHoldings.TotalValues, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.TotalValues,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldings.TotalValues, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.TotalValues);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalValueInPageAndStatement.mmTotalHoldingsValueOfPage, com.tools20022.repository.msg.TotalValueInPageAndStatement.mmTotalHoldingsValueOfStatement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmTotalValues, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.mmTotalValues,
+						com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmTotalValues, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.mmTotalValues);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalValueInPageAndStatement";
 				definition = "Value of total holdings reported.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getTotalHoldingsValueOfPage() {
+		return totalHoldingsValueOfPage;
+	}
+
+	public void setTotalHoldingsValueOfPage(ActiveCurrencyAndAmount totalHoldingsValueOfPage) {
+		this.totalHoldingsValueOfPage = totalHoldingsValueOfPage;
+	}
+
+	public ActiveCurrencyAndAmount getTotalHoldingsValueOfStatement() {
+		return totalHoldingsValueOfStatement;
+	}
+
+	public void setTotalHoldingsValueOfStatement(ActiveCurrencyAndAmount totalHoldingsValueOfStatement) {
+		this.totalHoldingsValueOfStatement = totalHoldingsValueOfStatement;
 	}
 }

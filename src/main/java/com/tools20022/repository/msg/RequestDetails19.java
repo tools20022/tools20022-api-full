@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the processing request.
@@ -33,14 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails19#Type
- * RequestDetails19.Type}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails19#mmType
+ * RequestDetails19.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails19#RequestorIdentification
- * RequestDetails19.RequestorIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails19#mmRequestorIdentification
+ * RequestDetails19.mmRequestorIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails19#AdditionalRequestInformation
- * RequestDetails19.AdditionalRequestInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails19#mmAdditionalRequestInformation
+ * RequestDetails19.mmAdditionalRequestInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.admi.ProcessingRequestV01#Request
- * ProcessingRequestV01.Request}</li>
+ * {@linkplain com.tools20022.repository.area.admi.ProcessingRequestV01#mmRequest
+ * ProcessingRequestV01.mmRequest}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestDetails19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text type;
 	/**
 	 * Type of data being requested, for example, a sub-member BIC.
 	 * <p>
@@ -102,11 +104,11 @@ public class RequestDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails3#Type
-	 * RequestDetails3.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails3#mmType
+	 * RequestDetails3.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails19.mmObject();
 			isDerived = false;
@@ -114,12 +116,13 @@ public class RequestDetails19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of data being requested, for example, a sub-member BIC.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RequestDetails3.Type;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RequestDetails3.mmType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification73Choice requestorIdentification;
 	/**
 	 * Identificates the requestor.
 	 * <p>
@@ -149,11 +152,11 @@ public class RequestDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.RequestDetails3#Key
-	 * RequestDetails3.Key}</li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails3#mmKey
+	 * RequestDetails3.mmKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestorIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestorIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails19.mmObject();
 			isDerived = false;
@@ -161,12 +164,13 @@ public class RequestDetails19 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestorIdentification";
 			definition = "Identificates the requestor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RequestDetails3.Key;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.RequestDetails3.mmKey;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	protected List<Max35Text> additionalRequestInformation;
 	/**
 	 * Additional information to support the processing request.
 	 * <p>
@@ -195,7 +199,7 @@ public class RequestDetails19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalRequestInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalRequestInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails19.mmObject();
 			isDerived = false;
@@ -211,10 +215,10 @@ public class RequestDetails19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails19.Type, com.tools20022.repository.msg.RequestDetails19.RequestorIdentification,
-						com.tools20022.repository.msg.RequestDetails19.AdditionalRequestInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.ProcessingRequestV01.Request);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails19.mmType, com.tools20022.repository.msg.RequestDetails19.mmRequestorIdentification,
+						com.tools20022.repository.msg.RequestDetails19.mmAdditionalRequestInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.ProcessingRequestV01.mmRequest);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails19";
 				definition = "Details of the processing request.";
@@ -222,5 +226,29 @@ public class RequestDetails19 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getType() {
+		return type;
+	}
+
+	public void setType(Max35Text type) {
+		this.type = type;
+	}
+
+	public PartyIdentification73Choice getRequestorIdentification() {
+		return requestorIdentification;
+	}
+
+	public void setRequestorIdentification(PartyIdentification73Choice requestorIdentification) {
+		this.requestorIdentification = requestorIdentification;
+	}
+
+	public List<Max35Text> getAdditionalRequestInformation() {
+		return additionalRequestInformation;
+	}
+
+	public void setAdditionalRequestInformation(List<Max35Text> additionalRequestInformation) {
+		this.additionalRequestInformation = additionalRequestInformation;
 	}
 }

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification3#Identification
- * DocumentIdentification3.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification3#mmIdentification
+ * DocumentIdentification3.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification3#Version
- * DocumentIdentification3.Version}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification3#mmVersion
+ * DocumentIdentification3.mmVersion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,88 +49,89 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#EstablishedBaselineIdentification
- * AcknowledgementV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmEstablishedBaselineIdentification
+ * AcknowledgementV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#EstablishedBaselineIdentification
- * AmendmentAcceptanceNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#mmEstablishedBaselineIdentification
+ * AmendmentAcceptanceNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#EstablishedBaselineIdentification
- * AmendmentRejectionNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#mmEstablishedBaselineIdentification
+ * AmendmentRejectionNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#EstablishedBaselineIdentification
- * BaselineMatchReportV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmEstablishedBaselineIdentification
+ * BaselineMatchReportV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#EstablishedBaselineIdentification
- * DataSetMatchReportV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmEstablishedBaselineIdentification
+ * DataSetMatchReportV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#EstablishedBaselineIdentification
- * DeltaReportV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmEstablishedBaselineIdentification
+ * DeltaReportV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#EstablishedBaselineIdentification
- * ErrorReportV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmEstablishedBaselineIdentification
+ * ErrorReportV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#EstablishedBaselineIdentification
- * FullPushThroughReportV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#mmEstablishedBaselineIdentification
+ * FullPushThroughReportV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#EstablishedBaselineIdentification
- * MisMatchAcceptanceNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#mmEstablishedBaselineIdentification
+ * MisMatchAcceptanceNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#EstablishedBaselineIdentification
- * MisMatchRejectionNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#mmEstablishedBaselineIdentification
+ * MisMatchRejectionNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#EstablishedBaselineIdentification
- * ActionReminderV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmEstablishedBaselineIdentification
+ * ActionReminderV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeNotificationV03#EstablishedBaselineIdentification
- * StatusChangeNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeNotificationV03#mmEstablishedBaselineIdentification
+ * StatusChangeNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#EstablishedBaselineIdentification
- * StatusChangeRequestNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmEstablishedBaselineIdentification
+ * StatusChangeRequestNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#EstablishedBaselineIdentification
- * StatusChangeRequestRejectionNotificationV03.EstablishedBaselineIdentification
- * }</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#mmEstablishedBaselineIdentification
+ * StatusChangeRequestRejectionNotificationV03.
+ * mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03#EstablishedBaselineIdentification
- * StatusExtensionNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03#mmEstablishedBaselineIdentification
+ * StatusExtensionNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#EstablishedBaselineIdentification
- * StatusExtensionRejectionNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#mmEstablishedBaselineIdentification
+ * StatusExtensionRejectionNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03#EstablishedBaselineIdentification
- * StatusExtensionRequestNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03#mmEstablishedBaselineIdentification
+ * StatusExtensionRequestNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#EstablishedBaselineIdentification
- * TimeOutNotificationV03.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#mmEstablishedBaselineIdentification
+ * TimeOutNotificationV03.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#EstablishedBaselineIdentification
- * ForwardIntentToPayNotificationV01.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#mmEstablishedBaselineIdentification
+ * ForwardIntentToPayNotificationV01.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#EstablishedBaselineIdentification
- * SpecialNotificationV01.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#mmEstablishedBaselineIdentification
+ * SpecialNotificationV01.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#EstablishedBaselineIdentification
- * RoleAndBaselineAcceptanceNotificationV01.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#mmEstablishedBaselineIdentification
+ * RoleAndBaselineAcceptanceNotificationV01.mmEstablishedBaselineIdentification}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#EstablishedBaselineIdentification
- * RoleAndBaselineRejectionNotificationV01.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#mmEstablishedBaselineIdentification
+ * RoleAndBaselineRejectionNotificationV01.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#EstablishedBaselineIdentification
- * FullPushThroughReportV04.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#mmEstablishedBaselineIdentification
+ * FullPushThroughReportV04.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#EstablishedBaselineIdentification
- * ForwardIntentToPayNotificationV02.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#mmEstablishedBaselineIdentification
+ * ForwardIntentToPayNotificationV02.mmEstablishedBaselineIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#EstablishedBaselineIdentification
- * FullPushThroughReportV05.EstablishedBaselineIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#mmEstablishedBaselineIdentification
+ * FullPushThroughReportV05.mmEstablishedBaselineIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -145,6 +146,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of a set of data.
 	 * <p>
@@ -157,8 +159,8 @@ public class DocumentIdentification3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -177,20 +179,21 @@ public class DocumentIdentification3 {
 	 * definition} = "Identification of a set of data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a set of data.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number version;
 	/**
 	 * Unambiguous identification of the version of a set of data. Example:
 	 * Version 1.
@@ -204,8 +207,8 @@ public class DocumentIdentification3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Document#DocumentVersion
-	 * Document.DocumentVersion}</li>
+	 * {@linkplain com.tools20022.repository.entity.Document#mmDocumentVersion
+	 * Document.mmDocumentVersion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,17 +229,17 @@ public class DocumentIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentVersion;
 			componentContext_lazy = () -> DocumentIdentification3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.DocumentVersion;
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Unambiguous identification of the version of a set of data. Example: Version 1.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -244,28 +247,45 @@ public class DocumentIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification3.Identification, com.tools20022.repository.msg.DocumentIdentification3.Version);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification3.mmIdentification, com.tools20022.repository.msg.DocumentIdentification3.mmVersion);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.DeltaReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmEstablishedBaselineIdentification);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.SpecialNotificationV01.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.EstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.EstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV05.EstablishedBaselineIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification3";
 				definition = "Identifies a document by a unique identification and a version.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
 	}
 }

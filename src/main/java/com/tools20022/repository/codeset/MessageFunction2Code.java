@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction2Code#Request
- * MessageFunction2Code.Request}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction2Code#mmRequest
+ * MessageFunction2Code.mmRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction2Code#Response
- * MessageFunction2Code.Response}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction2Code#mmResponse
+ * MessageFunction2Code.mmResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class MessageFunction2Code extends MessageFunctionCode {
 	 * name} = "Request"</li>
 	 * </ul>
 	 */
-	public static final MMCode Request = new MMCode() {
+	public static final MMCode mmRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Request";
@@ -104,7 +104,7 @@ public class MessageFunction2Code extends MessageFunctionCode {
 	 * name} = "Response"</li>
 	 * </ul>
 	 */
-	public static final MMCode Response = new MMCode() {
+	public static final MMCode mmResponse = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
@@ -115,12 +115,12 @@ public class MessageFunction2Code extends MessageFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REQU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction2Code";
 				definition = "Specifies the function of the message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction2Code.Request, com.tools20022.repository.codeset.MessageFunction2Code.Response);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction2Code.mmRequest, com.tools20022.repository.codeset.MessageFunction2Code.mmResponse);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
 			}
 		});

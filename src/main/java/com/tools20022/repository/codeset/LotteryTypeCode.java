@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LotteryTypeCode#OriginalLotteryNotification
- * LotteryTypeCode.OriginalLotteryNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.LotteryTypeCode#mmOriginalLotteryNotification
+ * LotteryTypeCode.mmOriginalLotteryNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LotteryTypeCode#SupplementalLotteryNotification
- * LotteryTypeCode.SupplementalLotteryNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.LotteryTypeCode#mmSupplementalLotteryNotification
+ * LotteryTypeCode.mmSupplementalLotteryNotification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class LotteryTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode OriginalLotteryNotification = new MMCode() {
+	public static final MMCode mmOriginalLotteryNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OriginalLotteryNotification";
@@ -124,7 +124,7 @@ public class LotteryTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementalLotteryNotification = new MMCode() {
+	public static final MMCode mmSupplementalLotteryNotification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "SupplementalLotteryNotification";
@@ -137,12 +137,12 @@ public class LotteryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORIG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LotteryTypeCode";
 				definition = "Specifies the type of lottery.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LotteryTypeCode.OriginalLotteryNotification, com.tools20022.repository.codeset.LotteryTypeCode.SupplementalLotteryNotification);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LotteryTypeCode.mmOriginalLotteryNotification, com.tools20022.repository.codeset.LotteryTypeCode.mmSupplementalLotteryNotification);
 				derivation_lazy = () -> Arrays.asList(LotteryType1Code.mmObject());
 			}
 		});

@@ -34,34 +34,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#OnDemand
- * ExchangePolicy1Code.OnDemand}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmOnDemand
+ * ExchangePolicy1Code.mmOnDemand}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#Immediately
- * ExchangePolicy1Code.Immediately}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmImmediately
+ * ExchangePolicy1Code.mmImmediately}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#AsSoonAsPossible
- * ExchangePolicy1Code.AsSoonAsPossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmAsSoonAsPossible
+ * ExchangePolicy1Code.mmAsSoonAsPossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#AsGroup
- * ExchangePolicy1Code.AsGroup}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmAsGroup
+ * ExchangePolicy1Code.mmAsGroup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#NumberLimit
- * ExchangePolicy1Code.NumberLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmNumberLimit
+ * ExchangePolicy1Code.mmNumberLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#TotalLimit
- * ExchangePolicy1Code.TotalLimit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#Cyclic
- * ExchangePolicy1Code.Cyclic}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#None
- * ExchangePolicy1Code.None}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmTotalLimit
+ * ExchangePolicy1Code.mmTotalLimit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmCyclic
+ * ExchangePolicy1Code.mmCyclic}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmNone
+ * ExchangePolicy1Code.mmNone}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +98,7 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "OnDemand"</li>
 	 * </ul>
 	 */
-	public static final MMCode OnDemand = new MMCode() {
+	public static final MMCode mmOnDemand = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemand";
@@ -120,7 +121,7 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "Immediately"</li>
 	 * </ul>
 	 */
-	public static final MMCode Immediately = new MMCode() {
+	public static final MMCode mmImmediately = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Immediately";
@@ -143,7 +144,7 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "AsSoonAsPossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode AsSoonAsPossible = new MMCode() {
+	public static final MMCode mmAsSoonAsPossible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsSoonAsPossible";
@@ -166,7 +167,7 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "AsGroup"</li>
 	 * </ul>
 	 */
-	public static final MMCode AsGroup = new MMCode() {
+	public static final MMCode mmAsGroup = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsGroup";
@@ -189,7 +190,7 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "NumberLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode NumberLimit = new MMCode() {
+	public static final MMCode mmNumberLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberLimit";
@@ -212,7 +213,7 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "TotalLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalLimit = new MMCode() {
+	public static final MMCode mmTotalLimit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalLimit";
@@ -235,7 +236,7 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "Cyclic"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cyclic = new MMCode() {
+	public static final MMCode mmCyclic = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cyclic";
@@ -258,7 +259,7 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode None = new MMCode() {
+	public static final MMCode mmNone = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
@@ -269,14 +270,14 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ONDM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ExchangePolicy1Code";
 				definition = "Exchange policy between parties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExchangePolicy1Code.OnDemand, com.tools20022.repository.codeset.ExchangePolicy1Code.Immediately,
-						com.tools20022.repository.codeset.ExchangePolicy1Code.AsSoonAsPossible, com.tools20022.repository.codeset.ExchangePolicy1Code.AsGroup, com.tools20022.repository.codeset.ExchangePolicy1Code.NumberLimit,
-						com.tools20022.repository.codeset.ExchangePolicy1Code.TotalLimit, com.tools20022.repository.codeset.ExchangePolicy1Code.Cyclic, com.tools20022.repository.codeset.ExchangePolicy1Code.None);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExchangePolicy1Code.mmOnDemand, com.tools20022.repository.codeset.ExchangePolicy1Code.mmImmediately,
+						com.tools20022.repository.codeset.ExchangePolicy1Code.mmAsSoonAsPossible, com.tools20022.repository.codeset.ExchangePolicy1Code.mmAsGroup, com.tools20022.repository.codeset.ExchangePolicy1Code.mmNumberLimit,
+						com.tools20022.repository.codeset.ExchangePolicy1Code.mmTotalLimit, com.tools20022.repository.codeset.ExchangePolicy1Code.mmCyclic, com.tools20022.repository.codeset.ExchangePolicy1Code.mmNone);
 				trace_lazy = () -> ExchangePolicyCode.mmObject();
 			}
 		});

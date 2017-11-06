@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code#MultipleAccounts
- * CorporateActionStatementReportingType1Code.MultipleAccounts}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code#mmMultipleAccounts
+ * CorporateActionStatementReportingType1Code.mmMultipleAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code#MultipleEvents
- * CorporateActionStatementReportingType1Code.MultipleEvents}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code#mmMultipleEvents
+ * CorporateActionStatementReportingType1Code.mmMultipleEvents}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class CorporateActionStatementReportingType1Code extends CorporateActionS
 	 * name} = "MultipleAccounts"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultipleAccounts = new MMCode() {
+	public static final MMCode mmMultipleAccounts = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleAccounts";
@@ -107,7 +107,7 @@ public class CorporateActionStatementReportingType1Code extends CorporateActionS
 	 * name} = "MultipleEvents"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultipleEvents = new MMCode() {
+	public static final MMCode mmMultipleEvents = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleEvents";
@@ -118,12 +118,12 @@ public class CorporateActionStatementReportingType1Code extends CorporateActionS
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MASE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionStatementReportingType1Code";
 				definition = "Type of statement reporting on account holdings  for corporate action events eg. reporting on multiple accounts or multiple events.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code.MultipleAccounts, com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code.MultipleEvents);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code.mmMultipleAccounts, com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code.mmMultipleEvents);
 				trace_lazy = () -> CorporateActionStatementReportingTypeCode.mmObject();
 			}
 		});

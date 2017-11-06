@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#Reversal
- * TransactionStatus1Code.Reversal}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#mmReversal
+ * TransactionStatus1Code.mmReversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#Rebooked
- * TransactionStatus1Code.Rebooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#mmRebooked
+ * TransactionStatus1Code.mmRebooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#Cancelled
- * TransactionStatus1Code.Cancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#mmCancelled
+ * TransactionStatus1Code.mmCancelled}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +85,7 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	 * name} = "Reversal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reversal = new MMCode() {
+	public static final MMCode mmReversal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversal";
@@ -108,7 +108,7 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	 * name} = "Rebooked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rebooked = new MMCode() {
+	public static final MMCode mmRebooked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rebooked";
@@ -131,7 +131,7 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancelled = new MMCode() {
+	public static final MMCode mmCancelled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
@@ -142,13 +142,13 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RVSL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionStatus1Code";
 				definition = "Specifies the processing status of an investment fund transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionStatus1Code.Reversal, com.tools20022.repository.codeset.TransactionStatus1Code.Rebooked,
-						com.tools20022.repository.codeset.TransactionStatus1Code.Cancelled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionStatus1Code.mmReversal, com.tools20022.repository.codeset.TransactionStatus1Code.mmRebooked,
+						com.tools20022.repository.codeset.TransactionStatus1Code.mmCancelled);
 				trace_lazy = () -> TransactionStatusCode.mmObject();
 			}
 		});

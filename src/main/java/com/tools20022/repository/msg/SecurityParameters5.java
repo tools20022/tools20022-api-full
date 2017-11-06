@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.datatype.Max140Binary;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Security parameters of the host downloading the key.
@@ -34,20 +35,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityParameters5#HostChallenge
- * SecurityParameters5.HostChallenge}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityParameters5#Key
- * SecurityParameters5.Key}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityParameters5#mmHostChallenge
+ * SecurityParameters5.mmHostChallenge}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityParameters5#mmKey
+ * SecurityParameters5.mmKey}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityParameters5#DigitalSignature
- * SecurityParameters5.DigitalSignature}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityParameters5#mmDigitalSignature
+ * SecurityParameters5.mmDigitalSignature}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityParameters5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Binary hostChallenge;
 	/**
 	 * Random value from the host.
 	 * <p>
@@ -94,11 +96,11 @@ public class SecurityParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityParameters4#ATMChallenge
-	 * SecurityParameters4.ATMChallenge}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters4#mmATMChallenge
+	 * SecurityParameters4.mmATMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostChallenge = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityParameters5.mmObject();
 			isDerived = false;
@@ -106,12 +108,13 @@ public class SecurityParameters5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostChallenge";
 			definition = "Random value from the host.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.ATMChallenge;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmATMChallenge;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CryptographicKey8> key;
 	/**
 	 * Cryptographic key used to store in the ATM.
 	 * <p>
@@ -141,11 +144,11 @@ public class SecurityParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityParameters4#Key
-	 * SecurityParameters4.Key}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters4#mmKey
+	 * SecurityParameters4.mmKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Key = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecurityParameters5.mmObject();
 			isDerived = false;
@@ -153,11 +156,12 @@ public class SecurityParameters5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Cryptographic key used to store in the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.Key;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmKey;
 			minOccurs = 0;
-			complexType_lazy = () -> CryptographicKey8.mmObject();
+			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey8.mmObject();
 		}
 	};
+	protected ContentInformationType14 digitalSignature;
 	/**
 	 * Digital signature of implicit data depending on the security scheme
 	 * download procedure.
@@ -189,11 +193,11 @@ public class SecurityParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityParameters4#DigitalSignature
-	 * SecurityParameters4.DigitalSignature}</li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters4#mmDigitalSignature
+	 * SecurityParameters4.mmDigitalSignature}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SecurityParameters5.mmObject();
 			isDerived = false;
@@ -201,20 +205,20 @@ public class SecurityParameters5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of implicit data depending on the security scheme download procedure.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.DigitalSignature;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmDigitalSignature;
 			maxOccurs = 1;
-			type_lazy = () -> ContentInformationType14.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType14.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters5.HostChallenge, com.tools20022.repository.msg.SecurityParameters5.Key,
-						com.tools20022.repository.msg.SecurityParameters5.DigitalSignature);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters5.mmHostChallenge, com.tools20022.repository.msg.SecurityParameters5.mmKey,
+						com.tools20022.repository.msg.SecurityParameters5.mmDigitalSignature);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityParameters5";
 				definition = "Security parameters of the host downloading the key.";
@@ -222,5 +226,29 @@ public class SecurityParameters5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Binary getHostChallenge() {
+		return hostChallenge;
+	}
+
+	public void setHostChallenge(Max140Binary hostChallenge) {
+		this.hostChallenge = hostChallenge;
+	}
+
+	public List<CryptographicKey8> getKey() {
+		return key;
+	}
+
+	public void setKey(List<com.tools20022.repository.msg.CryptographicKey8> key) {
+		this.key = key;
+	}
+
+	public ContentInformationType14 getDigitalSignature() {
+		return digitalSignature;
+	}
+
+	public void setDigitalSignature(com.tools20022.repository.msg.ContentInformationType14 digitalSignature) {
+		this.digitalSignature = digitalSignature;
 	}
 }

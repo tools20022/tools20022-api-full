@@ -35,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyAndCertificate1#Party
- * PartyAndCertificate1.Party}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyAndCertificate1#mmParty
+ * PartyAndCertificate1.mmParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyAndCertificate1#Certificate
- * PartyAndCertificate1.Certificate}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyAndCertificate1#mmCertificate
+ * PartyAndCertificate1.mmCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyAndCertificate1#SignatureOrder
- * PartyAndCertificate1.SignatureOrder}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyAndCertificate1#mmSignatureOrder
+ * PartyAndCertificate1.mmSignatureOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyAndCertificate1#Authorisation
- * PartyAndCertificate1.Authorisation}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyAndCertificate1#mmAuthorisation
+ * PartyAndCertificate1.mmAuthorisation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +76,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyAndCertificate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification41 party;
 	/**
 	 * Entity involved in an activity.
 	 * <p>
@@ -87,8 +88,8 @@ public class PartyAndCertificate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,21 +108,22 @@ public class PartyAndCertificate1 {
 	 * definition} = "Entity involved in an activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Party = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> PartyAndCertificate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Entity involved in an activity.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification41.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification41.mmObject();
 		}
 	};
+	protected Max10KBinary certificate;
 	/**
 	 * Security certificate used to sign electronically.
 	 * <p>
@@ -135,8 +137,8 @@ public class PartyAndCertificate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ElectronicSignature#RelatedSecurityCertificate
-	 * ElectronicSignature.RelatedSecurityCertificate}</li>
+	 * {@linkplain com.tools20022.repository.entity.ElectronicSignature#mmRelatedSecurityCertificate
+	 * ElectronicSignature.mmRelatedSecurityCertificate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,20 +157,21 @@ public class PartyAndCertificate1 {
 	 * definition} = "Security certificate used to sign electronically."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Certificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicSignature.mmRelatedSecurityCertificate;
 			componentContext_lazy = () -> PartyAndCertificate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicSignature.RelatedSecurityCertificate;
 			isDerived = false;
 			xmlTag = "Cert";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Security certificate used to sign electronically.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
 		}
 	};
+	protected Max15PlusSignedNumericText signatureOrder;
 	/**
 	 * Order in which the mandate holder has to sign.
 	 * <p>
@@ -182,8 +185,8 @@ public class PartyAndCertificate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SignatureCondition#SignatureOrder
-	 * SignatureCondition.SignatureOrder}</li>
+	 * {@linkplain com.tools20022.repository.entity.SignatureCondition#mmSignatureOrder
+	 * SignatureCondition.mmSignatureOrder}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -202,20 +205,21 @@ public class PartyAndCertificate1 {
 	 * definition} = "Order in which the mandate holder has to sign."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SignatureOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignatureOrder = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmSignatureOrder;
 			componentContext_lazy = () -> PartyAndCertificate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.SignatureOrder;
 			isDerived = false;
 			xmlTag = "SgntrOrdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureOrder";
 			definition = "Order in which the mandate holder has to sign.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15PlusSignedNumericText.mmObject();
 		}
 	};
+	protected Authorisation1 authorisation;
 	/**
 	 * Authorisation granted to a mandate holder.
 	 * <p>
@@ -227,8 +231,8 @@ public class PartyAndCertificate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BankOperation#OperationThreshold
-	 * BankOperation.OperationThreshold}</li>
+	 * {@linkplain com.tools20022.repository.entity.BankOperation#mmOperationThreshold
+	 * BankOperation.mmOperationThreshold}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,29 +251,29 @@ public class PartyAndCertificate1 {
 	 * definition} = "Authorisation granted to a mandate holder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Authorisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthorisation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankOperation.mmOperationThreshold;
 			componentContext_lazy = () -> PartyAndCertificate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankOperation.OperationThreshold;
 			isDerived = false;
 			xmlTag = "Authstn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
 			definition = "Authorisation granted to a mandate holder.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Authorisation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Authorisation1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndCertificate1.Party, com.tools20022.repository.msg.PartyAndCertificate1.Certificate,
-						com.tools20022.repository.msg.PartyAndCertificate1.SignatureOrder, com.tools20022.repository.msg.PartyAndCertificate1.Authorisation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndCertificate1.mmParty, com.tools20022.repository.msg.PartyAndCertificate1.mmCertificate,
+						com.tools20022.repository.msg.PartyAndCertificate1.mmSignatureOrder, com.tools20022.repository.msg.PartyAndCertificate1.mmAuthorisation);
 				trace_lazy = () -> MandateHolder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyAndCertificate1";
 				definition = "Entity involved in an activity.";
@@ -277,5 +281,37 @@ public class PartyAndCertificate1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification41 getParty() {
+		return party;
+	}
+
+	public void setParty(com.tools20022.repository.msg.PartyIdentification41 party) {
+		this.party = party;
+	}
+
+	public Max10KBinary getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(Max10KBinary certificate) {
+		this.certificate = certificate;
+	}
+
+	public Max15PlusSignedNumericText getSignatureOrder() {
+		return signatureOrder;
+	}
+
+	public void setSignatureOrder(Max15PlusSignedNumericText signatureOrder) {
+		this.signatureOrder = signatureOrder;
+	}
+
+	public Authorisation1 getAuthorisation() {
+		return authorisation;
+	}
+
+	public void setAuthorisation(com.tools20022.repository.msg.Authorisation1 authorisation) {
+		this.authorisation = authorisation;
 	}
 }

@@ -37,50 +37,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties2#SuccessorOnDeath
- * AccountParties2.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties2#mmSuccessorOnDeath
+ * AccountParties2.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties5#SuccessorOnDeath
- * AccountParties5.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties5#mmSuccessorOnDeath
+ * AccountParties5.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties6#SuccessorOnDeath
- * AccountParties6.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties6#mmSuccessorOnDeath
+ * AccountParties6.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties3#SuccessorOnDeath
- * AccountParties3.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties3#mmSuccessorOnDeath
+ * AccountParties3.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties4#SuccessorOnDeath
- * AccountParties4.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties4#mmSuccessorOnDeath
+ * AccountParties4.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties7#SuccessorOnDeath
- * AccountParties7.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties7#mmSuccessorOnDeath
+ * AccountParties7.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties9#SuccessorOnDeath
- * AccountParties9.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties9#mmSuccessorOnDeath
+ * AccountParties9.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties8#SuccessorOnDeath
- * AccountParties8.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties8#mmSuccessorOnDeath
+ * AccountParties8.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties11#SuccessorOnDeath
- * AccountParties11.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties11#mmSuccessorOnDeath
+ * AccountParties11.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties10#SuccessorOnDeath
- * AccountParties10.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties10#mmSuccessorOnDeath
+ * AccountParties10.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties12#SuccessorOnDeath
- * AccountParties12.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties12#mmSuccessorOnDeath
+ * AccountParties12.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties13#SuccessorOnDeath
- * AccountParties13.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties13#mmSuccessorOnDeath
+ * AccountParties13.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties14#SuccessorOnDeath
- * AccountParties14.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties14#mmSuccessorOnDeath
+ * AccountParties14.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties15#SuccessorOnDeath
- * AccountParties15.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties15#mmSuccessorOnDeath
+ * AccountParties15.mmSuccessorOnDeath}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountParties16#SuccessorOnDeath
- * AccountParties16.SuccessorOnDeath}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountParties16#mmSuccessorOnDeath
+ * AccountParties16.mmSuccessorOnDeath}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -90,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,16 +111,16 @@ public class SuccessorOnDeath extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SuccessorOnDeath";
 				definition = "Deceased's estate, or successor, to whom the respective percentage of ownership will be transferred upon the death of one of the owners.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.SuccessorOnDeath, com.tools20022.repository.msg.AccountParties5.SuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties6.SuccessorOnDeath, com.tools20022.repository.msg.AccountParties3.SuccessorOnDeath, com.tools20022.repository.msg.AccountParties4.SuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties7.SuccessorOnDeath, com.tools20022.repository.msg.AccountParties9.SuccessorOnDeath, com.tools20022.repository.msg.AccountParties8.SuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties11.SuccessorOnDeath, com.tools20022.repository.msg.AccountParties10.SuccessorOnDeath, com.tools20022.repository.msg.AccountParties12.SuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties13.SuccessorOnDeath, com.tools20022.repository.msg.AccountParties14.SuccessorOnDeath, com.tools20022.repository.msg.AccountParties15.SuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties16.SuccessorOnDeath);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties5.mmSuccessorOnDeath,
+						com.tools20022.repository.msg.AccountParties6.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties3.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties4.mmSuccessorOnDeath,
+						com.tools20022.repository.msg.AccountParties7.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties9.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties8.mmSuccessorOnDeath,
+						com.tools20022.repository.msg.AccountParties11.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties10.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties12.mmSuccessorOnDeath,
+						com.tools20022.repository.msg.AccountParties13.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties14.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties15.mmSuccessorOnDeath,
+						com.tools20022.repository.msg.AccountParties16.mmSuccessorOnDeath);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

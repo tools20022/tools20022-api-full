@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus1Code#AcceptedTechnicalValidation
- * UndertakingStatus1Code.AcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus1Code#mmAcceptedTechnicalValidation
+ * UndertakingStatus1Code.mmAcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus1Code#Pending
- * UndertakingStatus1Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus1Code#mmPending
+ * UndertakingStatus1Code.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus1Code#Received
- * UndertakingStatus1Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus1Code#mmReceived
+ * UndertakingStatus1Code.mmReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus1Code#Rejected
- * UndertakingStatus1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus1Code#mmRejected
+ * UndertakingStatus1Code.mmRejected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class UndertakingStatus1Code extends UndertakingStatusCode {
 	 * name} = "AcceptedTechnicalValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptedTechnicalValidation = new MMCode() {
+	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
@@ -110,7 +110,7 @@ public class UndertakingStatus1Code extends UndertakingStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -133,7 +133,7 @@ public class UndertakingStatus1Code extends UndertakingStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -156,7 +156,7 @@ public class UndertakingStatus1Code extends UndertakingStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -167,13 +167,13 @@ public class UndertakingStatus1Code extends UndertakingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingStatus1Code";
 				definition = "Specifies the undertaking transaction status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingStatus1Code.AcceptedTechnicalValidation, com.tools20022.repository.codeset.UndertakingStatus1Code.Pending,
-						com.tools20022.repository.codeset.UndertakingStatus1Code.Received, com.tools20022.repository.codeset.UndertakingStatus1Code.Rejected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingStatus1Code.mmAcceptedTechnicalValidation, com.tools20022.repository.codeset.UndertakingStatus1Code.mmPending,
+						com.tools20022.repository.codeset.UndertakingStatus1Code.mmReceived, com.tools20022.repository.codeset.UndertakingStatus1Code.mmRejected);
 				trace_lazy = () -> UndertakingStatusCode.mmObject();
 			}
 		});

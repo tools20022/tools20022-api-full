@@ -31,11 +31,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionPolicyCode#Distribution
- * DistributionPolicyCode.Distribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionPolicyCode#mmDistribution
+ * DistributionPolicyCode.mmDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionPolicyCode#Accumulation
- * DistributionPolicyCode.Accumulation}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionPolicyCode#mmAccumulation
+ * DistributionPolicyCode.mmAccumulation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class DistributionPolicyCode {
 	 * definition} = "Income is distributed to the investors in the fund."</li>
 	 * </ul>
 	 */
-	public static final MMCode Distribution = new MMCode() {
+	public static final MMCode mmDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Distribution";
@@ -122,7 +122,7 @@ public class DistributionPolicyCode {
 	 * definition} = "Income is added to the capital of the fund."</li>
 	 * </ul>
 	 */
-	public static final MMCode Accumulation = new MMCode() {
+	public static final MMCode mmAccumulation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Accumulation";
@@ -135,12 +135,12 @@ public class DistributionPolicyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DIST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DistributionPolicyCode";
 				definition = "Specifies if income is to be paid out (distributed) or retained (accumulated).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionPolicyCode.Distribution, com.tools20022.repository.codeset.DistributionPolicyCode.Accumulation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionPolicyCode.mmDistribution, com.tools20022.repository.codeset.DistributionPolicyCode.mmAccumulation);
 				derivation_lazy = () -> Arrays.asList(DistributionPolicy1Code.mmObject());
 			}
 		});

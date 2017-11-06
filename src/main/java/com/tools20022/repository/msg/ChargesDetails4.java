@@ -35,10 +35,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails4#ChargesType
- * ChargesDetails4.ChargesType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails4#Amount
- * ChargesDetails4.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails4#mmChargesType
+ * ChargesDetails4.mmChargesType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails4#mmAmount
+ * ChargesDetails4.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ChargesDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ChargesType1Choice chargesType;
 	/**
 	 * Specifies the type of charges as a code or free text.
 	 * <p>
@@ -75,8 +76,8 @@ public class ChargesDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Charges#ChargeType
-	 * Charges.ChargeType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Charges#mmChargeType
+	 * Charges.mmChargeType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,21 +96,22 @@ public class ChargesDetails4 {
 	 * definition} = "Specifies the type of charges as a code or free text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChargesType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChargesType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
 			componentContext_lazy = () -> ChargesDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.ChargeType;
 			isDerived = false;
 			xmlTag = "ChrgsTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesType";
 			definition = "Specifies the type of charges as a code or free text.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ChargesType1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ChargesType1Choice.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount of money asked or paid for the charge.
 	 * <p>
@@ -123,8 +125,8 @@ public class ChargesDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,22 +146,22 @@ public class ChargesDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ChargesDetails2#Amount
-	 * ChargesDetails2.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.ChargesDetails2#mmAmount
+	 * ChargesDetails2.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> ChargesDetails4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money asked or paid for the charge.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ChargesDetails2.Amount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ChargesDetails2.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -167,9 +169,9 @@ public class ChargesDetails4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesDetails4.ChargesType, com.tools20022.repository.msg.ChargesDetails4.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesDetails4.mmChargesType, com.tools20022.repository.msg.ChargesDetails4.mmAmount);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ChargesDetails4";
 				definition = "Amount of money associated with a service.";
@@ -177,5 +179,21 @@ public class ChargesDetails4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ChargesType1Choice getChargesType() {
+		return chargesType;
+	}
+
+	public void setChargesType(ChargesType1Choice chargesType) {
+		this.chargesType = chargesType;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

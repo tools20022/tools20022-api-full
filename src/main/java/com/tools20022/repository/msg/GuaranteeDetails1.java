@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.Guarantee;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Indicates the details of a guarantee.
@@ -36,26 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.GuaranteeDetails1#Issuer
- * GuaranteeDetails1.Issuer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GuaranteeDetails1#Position
- * GuaranteeDetails1.Position}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GuaranteeDetails1#Description
- * GuaranteeDetails1.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmIssuer
+ * GuaranteeDetails1.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmPosition
+ * GuaranteeDetails1.mmPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#GuaranteedAmount
- * GuaranteeDetails1.GuaranteedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GuaranteeDetails1#Excess
- * GuaranteeDetails1.Excess}</li>
+ * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmDescription
+ * GuaranteeDetails1.mmDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#CoveredPercentage
- * GuaranteeDetails1.CoveredPercentage}</li>
+ * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmGuaranteedAmount
+ * GuaranteeDetails1.mmGuaranteedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmExcess
+ * GuaranteeDetails1.mmExcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#AssociatedDocument
- * GuaranteeDetails1.AssociatedDocument}</li>
+ * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmCoveredPercentage
+ * GuaranteeDetails1.mmCoveredPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#AdditionalInformation
- * GuaranteeDetails1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmAssociatedDocument
+ * GuaranteeDetails1.mmAssociatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmAdditionalInformation
+ * GuaranteeDetails1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -63,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GuaranteeDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QualifiedPartyIdentification1 issuer;
 	/**
 	 * Party issuing the guarantee.
 	 * <p>
@@ -90,8 +93,8 @@ public class GuaranteeDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,21 +113,22 @@ public class GuaranteeDetails1 {
 	 * definition} = "Party issuing the guarantee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Issuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> GuaranteeDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party issuing the guarantee.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	protected positiveInteger position;
 	/**
 	 * Rank of the guarantee provider. A value of 1 means highest rank.
 	 * Providers may have the same position.
@@ -139,8 +143,8 @@ public class GuaranteeDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GuarantorRole#Position
-	 * GuarantorRole.Position}</li>
+	 * {@linkplain com.tools20022.repository.entity.GuarantorRole#mmPosition
+	 * GuarantorRole.mmPosition}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -161,20 +165,21 @@ public class GuaranteeDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Position = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPosition = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GuarantorRole.mmPosition;
 			componentContext_lazy = () -> GuaranteeDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GuarantorRole.Position;
 			isDerived = false;
 			xmlTag = "Pos";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Rank of the guarantee provider. A value of 1 means highest rank. Providers may have the same position.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> positiveInteger.mmObject();
 		}
 	};
+	protected Max2000Text description;
 	/**
 	 * Textual description of guarantee details.
 	 * <p>
@@ -202,7 +207,7 @@ public class GuaranteeDetails1 {
 	 * definition} = "Textual description of guarantee details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GuaranteeDetails1.mmObject();
 			isDerived = false;
@@ -210,11 +215,12 @@ public class GuaranteeDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Textual description of guarantee details.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AmountAndPeriod1> guaranteedAmount;
 	/**
 	 * Amount by time periods, maximum value applies at any given date.
 	 * <p>
@@ -226,8 +232,8 @@ public class GuaranteeDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Guarantee#CoveredAmount
-	 * Guarantee.CoveredAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Guarantee#mmCoveredAmount
+	 * Guarantee.mmCoveredAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,20 +253,21 @@ public class GuaranteeDetails1 {
 	 * "Amount by time periods, maximum value applies at any given date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GuaranteedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGuaranteedAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Guarantee.mmCoveredAmount;
 			componentContext_lazy = () -> GuaranteeDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Guarantee.CoveredAmount;
 			isDerived = false;
 			xmlTag = "GrntedAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedAmount";
 			definition = "Amount by time periods, maximum value applies at any given date.";
 			minOccurs = 0;
-			type_lazy = () -> AmountAndPeriod1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndPeriod1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AmountAndPeriod1> excess;
 	/**
 	 * Amount not covered by the guarantee. Maximum value applies at any given
 	 * date.
@@ -273,8 +280,8 @@ public class GuaranteeDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Guarantee#ExcessAmount
-	 * Guarantee.ExcessAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Guarantee#mmExcessAmount
+	 * Guarantee.mmExcessAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -295,20 +302,21 @@ public class GuaranteeDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Excess = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExcess = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Guarantee.mmExcessAmount;
 			componentContext_lazy = () -> GuaranteeDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Guarantee.ExcessAmount;
 			isDerived = false;
 			xmlTag = "Xcss";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Excess";
 			definition = "Amount not covered by the guarantee. Maximum value applies at any given date.";
 			minOccurs = 0;
-			type_lazy = () -> AmountAndPeriod1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountAndPeriod1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PercentageAndPeriod1> coveredPercentage;
 	/**
 	 * Covered percentage, the maximum value applies at any given date.
 	 * <p>
@@ -320,8 +328,8 @@ public class GuaranteeDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Guarantee#CoveredPercentage
-	 * Guarantee.CoveredPercentage}</li>
+	 * {@linkplain com.tools20022.repository.entity.Guarantee#mmCoveredPercentage
+	 * Guarantee.mmCoveredPercentage}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -341,20 +349,21 @@ public class GuaranteeDetails1 {
 	 * "Covered percentage, the maximum value applies at any given date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CoveredPercentage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCoveredPercentage = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Guarantee.mmCoveredPercentage;
 			componentContext_lazy = () -> GuaranteeDetails1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Guarantee.CoveredPercentage;
 			isDerived = false;
 			xmlTag = "CvrdPctg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoveredPercentage";
 			definition = "Covered percentage, the maximum value applies at any given date.";
 			minOccurs = 0;
-			type_lazy = () -> PercentageAndPeriod1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PercentageAndPeriod1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument;
 	/**
 	 * Associated free form document.
 	 * <p>
@@ -386,20 +395,21 @@ public class GuaranteeDetails1 {
 	 * definition} = "Associated free form document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AssociatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssociatedDocument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GuaranteeDetails1.mmObject();
 			businessComponentTrace_lazy = () -> Document.mmObject();
+			componentContext_lazy = () -> GuaranteeDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdDoc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedDocument";
 			definition = "Associated free form document.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Additional information related to the demand.
 	 * <p>
@@ -427,7 +437,7 @@ public class GuaranteeDetails1 {
 	 * definition} = "Additional information related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> GuaranteeDetails1.mmObject();
 			isDerived = false;
@@ -435,8 +445,8 @@ public class GuaranteeDetails1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the demand.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -444,16 +454,80 @@ public class GuaranteeDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GuaranteeDetails1.Issuer, com.tools20022.repository.msg.GuaranteeDetails1.Position, com.tools20022.repository.msg.GuaranteeDetails1.Description,
-						com.tools20022.repository.msg.GuaranteeDetails1.GuaranteedAmount, com.tools20022.repository.msg.GuaranteeDetails1.Excess, com.tools20022.repository.msg.GuaranteeDetails1.CoveredPercentage,
-						com.tools20022.repository.msg.GuaranteeDetails1.AssociatedDocument, com.tools20022.repository.msg.GuaranteeDetails1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GuaranteeDetails1.mmIssuer, com.tools20022.repository.msg.GuaranteeDetails1.mmPosition, com.tools20022.repository.msg.GuaranteeDetails1.mmDescription,
+						com.tools20022.repository.msg.GuaranteeDetails1.mmGuaranteedAmount, com.tools20022.repository.msg.GuaranteeDetails1.mmExcess, com.tools20022.repository.msg.GuaranteeDetails1.mmCoveredPercentage,
+						com.tools20022.repository.msg.GuaranteeDetails1.mmAssociatedDocument, com.tools20022.repository.msg.GuaranteeDetails1.mmAdditionalInformation);
 				trace_lazy = () -> Guarantee.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GuaranteeDetails1";
 				definition = "Indicates the details of a guarantee.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QualifiedPartyIdentification1 getIssuer() {
+		return issuer;
+	}
+
+	public void setIssuer(com.tools20022.repository.msg.QualifiedPartyIdentification1 issuer) {
+		this.issuer = issuer;
+	}
+
+	public positiveInteger getPosition() {
+		return position;
+	}
+
+	public void setPosition(positiveInteger position) {
+		this.position = position;
+	}
+
+	public Max2000Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max2000Text description) {
+		this.description = description;
+	}
+
+	public List<AmountAndPeriod1> getGuaranteedAmount() {
+		return guaranteedAmount;
+	}
+
+	public void setGuaranteedAmount(List<com.tools20022.repository.msg.AmountAndPeriod1> guaranteedAmount) {
+		this.guaranteedAmount = guaranteedAmount;
+	}
+
+	public List<AmountAndPeriod1> getExcess() {
+		return excess;
+	}
+
+	public void setExcess(List<com.tools20022.repository.msg.AmountAndPeriod1> excess) {
+		this.excess = excess;
+	}
+
+	public List<PercentageAndPeriod1> getCoveredPercentage() {
+		return coveredPercentage;
+	}
+
+	public void setCoveredPercentage(List<com.tools20022.repository.msg.PercentageAndPeriod1> coveredPercentage) {
+		this.coveredPercentage = coveredPercentage;
+	}
+
+	public List<QualifiedDocumentInformation1> getAssociatedDocument() {
+		return associatedDocument;
+	}
+
+	public void setAssociatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument) {
+		this.associatedDocument = associatedDocument;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

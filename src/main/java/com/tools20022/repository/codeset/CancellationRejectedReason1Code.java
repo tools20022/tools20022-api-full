@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRejectedReason1Code#CutOffTime
- * CancellationRejectedReason1Code.CutOffTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRejectedReason1Code#mmCutOffTime
+ * CancellationRejectedReason1Code.mmCutOffTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRejectedReason1Code#AlreadyExecuted
- * CancellationRejectedReason1Code.AlreadyExecuted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRejectedReason1Code#mmAlreadyExecuted
+ * CancellationRejectedReason1Code.mmAlreadyExecuted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class CancellationRejectedReason1Code extends RejectedStatusReasonCode {
 	 * name} = "CutOffTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode CutOffTime = new MMCode() {
+	public static final MMCode mmCutOffTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffTime";
@@ -104,7 +104,7 @@ public class CancellationRejectedReason1Code extends RejectedStatusReasonCode {
 	 * name} = "AlreadyExecuted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AlreadyExecuted = new MMCode() {
+	public static final MMCode mmAlreadyExecuted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyExecuted";
@@ -115,12 +115,12 @@ public class CancellationRejectedReason1Code extends RejectedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUTO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CancellationRejectedReason1Code";
 				definition = "Specifies the reason for a cancellation rejected status";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationRejectedReason1Code.CutOffTime, com.tools20022.repository.codeset.CancellationRejectedReason1Code.AlreadyExecuted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationRejectedReason1Code.mmCutOffTime, com.tools20022.repository.codeset.CancellationRejectedReason1Code.mmAlreadyExecuted);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.List;
 
 /**
  * Status of the transfer cancellation is rejected.
@@ -38,9 +39,9 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#ReasonOrExtendedReasonOrDataSourceSchemeRule
+ * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#mmReasonOrExtendedReasonOrDataSourceSchemeRule
  * TransferCancellationRejectedStatus1.
- * ReasonOrExtendedReasonOrDataSourceSchemeRule}</li>
+ * mmReasonOrExtendedReasonOrDataSourceSchemeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,14 +49,14 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#Reason
- * TransferCancellationRejectedStatus1.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#mmReason
+ * TransferCancellationRejectedStatus1.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#ExtendedReason
- * TransferCancellationRejectedStatus1.ExtendedReason}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#mmExtendedReason
+ * TransferCancellationRejectedStatus1.mmExtendedReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#DataSourceScheme
- * TransferCancellationRejectedStatus1.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#mmDataSourceScheme
+ * TransferCancellationRejectedStatus1.mmDataSourceScheme}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -65,8 +66,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,6 +82,7 @@ import java.util.function.Supplier;
 public class TransferCancellationRejectedStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CancellationRejectedReason1Code reason;
 	/**
 	 * Reason for the rejected status.
 	 * <p>
@@ -94,8 +96,8 @@ public class TransferCancellationRejectedStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectedStatusReason
-	 * StatusReason.RejectedStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectedStatusReason
+	 * StatusReason.mmRejectedStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,20 +116,21 @@ public class TransferCancellationRejectedStatus1 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> TransferCancellationRejectedStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectedStatusReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the rejected status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancellationRejectedReason1Code.mmObject();
 		}
 	};
+	protected Extended350Code extendedReason;
 	/**
 	 * Reason for the rejected status.
 	 * <p>
@@ -156,7 +159,7 @@ public class TransferCancellationRejectedStatus1 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransferCancellationRejectedStatus1.mmObject();
 			isDerived = false;
@@ -164,11 +167,12 @@ public class TransferCancellationRejectedStatus1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the rejected status.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification1> dataSourceScheme;
 	/**
 	 * Proprietary identification of the reason for the rejected status.
 	 * <p>
@@ -180,8 +184,8 @@ public class TransferCancellationRejectedStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#DataSourceScheme
-	 * StatusReason.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+	 * StatusReason.mmDataSourceScheme}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,19 +205,19 @@ public class TransferCancellationRejectedStatus1 {
 	 * "Proprietary identification of the reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> TransferCancellationRejectedStatus1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.DataSourceScheme;
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the rejected status.";
-			minOccurs = 1;
 			maxOccurs = 10;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
 	/**
@@ -226,14 +230,14 @@ public class TransferCancellationRejectedStatus1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#Reason
-	 * TransferCancellationRejectedStatus1.Reason}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#mmReason
+	 * TransferCancellationRejectedStatus1.mmReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#ExtendedReason
-	 * TransferCancellationRejectedStatus1.ExtendedReason}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#mmExtendedReason
+	 * TransferCancellationRejectedStatus1.mmExtendedReason}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#DataSourceScheme
-	 * TransferCancellationRejectedStatus1.DataSourceScheme}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransferCancellationRejectedStatus1#mmDataSourceScheme
+	 * TransferCancellationRejectedStatus1.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -253,24 +257,24 @@ public class TransferCancellationRejectedStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor ReasonOrExtendedReasonOrDataSourceSchemeRule = new MMXor() {
+	public static final MMXor mmReasonOrExtendedReasonOrDataSourceSchemeRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrExtendedReasonOrDataSourceSchemeRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme,) must be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationRejectedStatus1.Reason, com.tools20022.repository.msg.TransferCancellationRejectedStatus1.ExtendedReason,
-					com.tools20022.repository.msg.TransferCancellationRejectedStatus1.DataSourceScheme);
 			messageComponent_lazy = () -> TransferCancellationRejectedStatus1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationRejectedStatus1.mmReason, com.tools20022.repository.msg.TransferCancellationRejectedStatus1.mmExtendedReason,
+					com.tools20022.repository.msg.TransferCancellationRejectedStatus1.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationRejectedStatus1.Reason, com.tools20022.repository.msg.TransferCancellationRejectedStatus1.ExtendedReason,
-						com.tools20022.repository.msg.TransferCancellationRejectedStatus1.DataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationRejectedStatus1.mmReason, com.tools20022.repository.msg.TransferCancellationRejectedStatus1.mmExtendedReason,
+						com.tools20022.repository.msg.TransferCancellationRejectedStatus1.mmDataSourceScheme);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -281,9 +285,33 @@ public class TransferCancellationRejectedStatus1 {
 				})).get();
 				name = "TransferCancellationRejectedStatus1";
 				definition = "Status of the transfer cancellation is rejected.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationRejectedStatus1.ReasonOrExtendedReasonOrDataSourceSchemeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationRejectedStatus1.mmReasonOrExtendedReasonOrDataSourceSchemeRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CancellationRejectedReason1Code getReason() {
+		return reason;
+	}
+
+	public void setReason(CancellationRejectedReason1Code reason) {
+		this.reason = reason;
+	}
+
+	public Extended350Code getExtendedReason() {
+		return extendedReason;
+	}
+
+	public void setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = extendedReason;
+	}
+
+	public List<GenericIdentification1> getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(List<com.tools20022.repository.msg.GenericIdentification1> dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
 	}
 }

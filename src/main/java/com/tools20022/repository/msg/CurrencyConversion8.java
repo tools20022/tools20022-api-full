@@ -36,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyConversion8#AcceptedByCardholder
- * CurrencyConversion8.AcceptedByCardholder}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyConversion8#Conversion
- * CurrencyConversion8.Conversion}</li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyConversion8#mmAcceptedByCardholder
+ * CurrencyConversion8.mmAcceptedByCardholder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyConversion8#mmConversion
+ * CurrencyConversion8.mmConversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CurrencyConversion8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TrueFalseIndicator acceptedByCardholder;
 	/**
 	 * True if the cardholder has accepted the currency conversion that the
 	 * acquirer has proposed.
@@ -109,13 +111,13 @@ public class CurrencyConversion8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion13#AcceptedByCardholder
-	 * CurrencyConversion13.AcceptedByCardholder}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion13#mmAcceptedByCardholder
+	 * CurrencyConversion13.mmAcceptedByCardholder}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AcceptedByCardholder = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAcceptedByCardholder = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CurrencyConversion8.mmObject();
 			isDerived = false;
@@ -123,12 +125,13 @@ public class CurrencyConversion8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedByCardholder";
 			definition = "True if the cardholder has accepted the currency conversion that the acquirer has proposed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion13.AcceptedByCardholder);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion13.mmAcceptedByCardholder);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected CurrencyConversion6 conversion;
 	/**
 	 * Conversion between the currency of a card acceptor and the currency of a
 	 * cardholder, provided by a dedicated service provider.
@@ -160,18 +163,18 @@ public class CurrencyConversion8 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion13#Conversion
-	 * CurrencyConversion13.Conversion}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion13#mmConversion
+	 * CurrencyConversion13.mmConversion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion3#Conversion
-	 * CurrencyConversion3.Conversion}</li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion3#mmConversion
+	 * CurrencyConversion3.mmConversion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Conversion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConversion = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CurrencyConversion8.mmObject();
 			isDerived = false;
@@ -179,28 +182,44 @@ public class CurrencyConversion8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conversion";
 			definition = "Conversion between the currency of a card acceptor and the currency of a cardholder, provided by a dedicated service provider.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion3.Conversion;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion13.Conversion);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion13.mmConversion);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion3.mmConversion;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyConversion6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion8.AcceptedByCardholder, com.tools20022.repository.msg.CurrencyConversion8.Conversion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion8.mmAcceptedByCardholder, com.tools20022.repository.msg.CurrencyConversion8.mmConversion);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversion8";
 				definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider.";
-				previousVersion_lazy = () -> CurrencyConversion3.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CurrencyConversion13.mmObject());
+				previousVersion_lazy = () -> CurrencyConversion3.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TrueFalseIndicator getAcceptedByCardholder() {
+		return acceptedByCardholder;
+	}
+
+	public void setAcceptedByCardholder(TrueFalseIndicator acceptedByCardholder) {
+		this.acceptedByCardholder = acceptedByCardholder;
+	}
+
+	public CurrencyConversion6 getConversion() {
+		return conversion;
+	}
+
+	public void setConversion(com.tools20022.repository.msg.CurrencyConversion6 conversion) {
+		this.conversion = conversion;
 	}
 }

@@ -38,86 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RedemptionOrder#HoldingsRedemptionRate
- * RedemptionOrder.HoldingsRedemptionRate}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder2#IndividualOrderDetails
- * RedemptionBulkOrder2.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrderInstruction1#BulkOrderDetails
- * RedemptionBulkOrderInstruction1.BulkOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder5#StaffClientBreakdown
- * RedemptionOrder5.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3#IndividualOrderDetails
- * RedemptionBulkOrder3.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrderInstruction2#BulkOrderDetails
- * RedemptionBulkOrderInstruction2.BulkOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#StaffClientBreakdown
- * RedemptionExecution5.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#StaffClientBreakdown
- * RedemptionOrder7.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4#IndividualOrderDetails
- * RedemptionBulkOrder4.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder2#IndividualOrderDetails
- * RedemptionMultipleOrder2.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1#MultipleOrderDetails
- * RedemptionMultipleOrderInstruction1.MultipleOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder6#StaffClientBreakdown
- * RedemptionOrder6.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#IndividualOrderDetails
- * RedemptionMultipleOrder3.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrderInstruction2#MultipleOrderDetails
- * RedemptionMultipleOrderInstruction2.MultipleOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#StaffClientBreakdown
- * RedemptionExecution6.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder8#StaffClientBreakdown
- * RedemptionOrder8.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4#IndividualOrderDetails
- * RedemptionMultipleOrder4.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice#RedemptionDetails
- * SubscriptionOrRedemptionOrSwitchOrderDataChoice.RedemptionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder5#IndividualOrderDetails
- * RedemptionMultipleOrder5.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6#IndividualOrderDetails
- * RedemptionMultipleOrder6.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder6#IndividualOrderDetails
- * RedemptionBulkOrder6.IndividualOrderDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#StaffClientBreakdown
- * RedemptionOrder14.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#StaffClientBreakdown
- * RedemptionOrder15.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#StaffClientBreakdown
- * RedemptionExecution16.StaffClientBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#StaffClientBreakdown
- * RedemptionExecution15.StaffClientBreakdown}</li>
+ * {@linkplain com.tools20022.repository.entity.RedemptionOrder#mmHoldingsRedemptionRate
+ * RedemptionOrder.mmHoldingsRedemptionRate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -125,6 +47,84 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg
  * SwitchRedemptionLeg}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder2#mmIndividualOrderDetails
+ * RedemptionBulkOrder2.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrderInstruction1#mmBulkOrderDetails
+ * RedemptionBulkOrderInstruction1.mmBulkOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder5#mmStaffClientBreakdown
+ * RedemptionOrder5.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3#mmIndividualOrderDetails
+ * RedemptionBulkOrder3.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrderInstruction2#mmBulkOrderDetails
+ * RedemptionBulkOrderInstruction2.mmBulkOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#mmStaffClientBreakdown
+ * RedemptionExecution5.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmStaffClientBreakdown
+ * RedemptionOrder7.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4#mmIndividualOrderDetails
+ * RedemptionBulkOrder4.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder2#mmIndividualOrderDetails
+ * RedemptionMultipleOrder2.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1#mmMultipleOrderDetails
+ * RedemptionMultipleOrderInstruction1.mmMultipleOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder6#mmStaffClientBreakdown
+ * RedemptionOrder6.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#mmIndividualOrderDetails
+ * RedemptionMultipleOrder3.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrderInstruction2#mmMultipleOrderDetails
+ * RedemptionMultipleOrderInstruction2.mmMultipleOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#mmStaffClientBreakdown
+ * RedemptionExecution6.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder8#mmStaffClientBreakdown
+ * RedemptionOrder8.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4#mmIndividualOrderDetails
+ * RedemptionMultipleOrder4.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice#mmRedemptionDetails
+ * SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmRedemptionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder5#mmIndividualOrderDetails
+ * RedemptionMultipleOrder5.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6#mmIndividualOrderDetails
+ * RedemptionMultipleOrder6.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrder6#mmIndividualOrderDetails
+ * RedemptionBulkOrder6.mmIndividualOrderDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder14#mmStaffClientBreakdown
+ * RedemptionOrder14.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrder15#mmStaffClientBreakdown
+ * RedemptionOrder15.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#mmStaffClientBreakdown
+ * RedemptionExecution16.mmStaffClientBreakdown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmStaffClientBreakdown
+ * RedemptionExecution15.mmStaffClientBreakdown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -192,8 +192,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -209,6 +209,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RedemptionOrder extends InvestmentFundOrder {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate holdingsRedemptionRate;
 	/**
 	 * Portion of the investor's holdings, in a specific investment fund/ fund
 	 * class, that is redeemed.
@@ -220,82 +221,82 @@ public class RedemptionOrder extends InvestmentFundOrder {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
 	 * PercentageRate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData1#HoldingsRedemptionRate
-	 * FundOrderData1.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder3#HoldingsRedemptionRate
-	 * RedemptionOrder3.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder5#HoldingsRedemptionRate
-	 * RedemptionOrder5.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution3#HoldingsRedemptionRate
-	 * RedemptionExecution3.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#HoldingsRedemptionRate
-	 * RedemptionExecution5.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#HoldingsRedemptionRate
-	 * RedemptionOrder7.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder4#HoldingsRedemptionRate
-	 * RedemptionOrder4.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder6#HoldingsRedemptionRate
-	 * RedemptionOrder6.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution4#HoldingsRedemptionRate
-	 * RedemptionExecution4.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#HoldingsRedemptionRate
-	 * RedemptionExecution6.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8#HoldingsRedemptionRate
-	 * RedemptionOrder8.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#HoldingsRedemptionRate
-	 * FinancialInstrumentQuantity3Choice.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice#HoldingsRedemptionRate
-	 * FinancialInstrumentQuantity5Choice.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution2#HoldingsRedemptionRate
-	 * SwitchRedemptionLegExecution2.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution3#HoldingsRedemptionRate
-	 * SwitchRedemptionLegExecution3.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantity3#HoldingsRedemptionRate
-	 * FinancialInstrumentQuantity3.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData5#HoldingsRedemptionRate
-	 * FundOrderData5.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity29Choice#HoldingsRedemptionRate
-	 * FinancialInstrumentQuantity29Choice.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice#HoldingsRedemptionRate
-	 * FinancialInstrumentQuantity28Choice.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#HoldingsRedemptionRate
-	 * RedemptionExecution16.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#HoldingsRedemptionRate
-	 * RedemptionExecution15.HoldingsRedemptionRate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#HoldingsRedemptionRate
-	 * SwitchRedemptionLegExecution4.HoldingsRedemptionRate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RedemptionOrder
 	 * RedemptionOrder}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData1#mmHoldingsRedemptionRate
+	 * FundOrderData1.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder3#mmHoldingsRedemptionRate
+	 * RedemptionOrder3.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder5#mmHoldingsRedemptionRate
+	 * RedemptionOrder5.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution3#mmHoldingsRedemptionRate
+	 * RedemptionExecution3.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution5#mmHoldingsRedemptionRate
+	 * RedemptionExecution5.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder7#mmHoldingsRedemptionRate
+	 * RedemptionOrder7.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder4#mmHoldingsRedemptionRate
+	 * RedemptionOrder4.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder6#mmHoldingsRedemptionRate
+	 * RedemptionOrder6.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution4#mmHoldingsRedemptionRate
+	 * RedemptionExecution4.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution6#mmHoldingsRedemptionRate
+	 * RedemptionExecution6.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8#mmHoldingsRedemptionRate
+	 * RedemptionOrder8.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice#mmHoldingsRedemptionRate
+	 * FinancialInstrumentQuantity3Choice.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice#mmHoldingsRedemptionRate
+	 * FinancialInstrumentQuantity5Choice.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution2#mmHoldingsRedemptionRate
+	 * SwitchRedemptionLegExecution2.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution3#mmHoldingsRedemptionRate
+	 * SwitchRedemptionLegExecution3.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantity3#mmHoldingsRedemptionRate
+	 * FinancialInstrumentQuantity3.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData5#mmHoldingsRedemptionRate
+	 * FundOrderData5.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity29Choice#mmHoldingsRedemptionRate
+	 * FinancialInstrumentQuantity29Choice.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice#mmHoldingsRedemptionRate
+	 * FinancialInstrumentQuantity28Choice.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#mmHoldingsRedemptionRate
+	 * RedemptionExecution16.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmHoldingsRedemptionRate
+	 * RedemptionExecution15.mmHoldingsRedemptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#mmHoldingsRedemptionRate
+	 * SwitchRedemptionLegExecution4.mmHoldingsRedemptionRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -309,26 +310,26 @@ public class RedemptionOrder extends InvestmentFundOrder {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute HoldingsRedemptionRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmHoldingsRedemptionRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData1.HoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionOrder3.HoldingsRedemptionRate,
-					com.tools20022.repository.msg.RedemptionOrder5.HoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionExecution3.HoldingsRedemptionRate,
-					com.tools20022.repository.msg.RedemptionExecution5.HoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionOrder7.HoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionOrder4.HoldingsRedemptionRate,
-					com.tools20022.repository.msg.RedemptionOrder6.HoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionExecution4.HoldingsRedemptionRate,
-					com.tools20022.repository.msg.RedemptionExecution6.HoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionOrder8.HoldingsRedemptionRate,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.HoldingsRedemptionRate, com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.HoldingsRedemptionRate,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution2.HoldingsRedemptionRate, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.HoldingsRedemptionRate,
-					com.tools20022.repository.msg.FinancialInstrumentQuantity3.HoldingsRedemptionRate, com.tools20022.repository.msg.FundOrderData5.HoldingsRedemptionRate,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity29Choice.HoldingsRedemptionRate, com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.HoldingsRedemptionRate,
-					com.tools20022.repository.msg.RedemptionExecution16.HoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionExecution15.HoldingsRedemptionRate,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.HoldingsRedemptionRate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData1.mmHoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionOrder3.mmHoldingsRedemptionRate,
+					com.tools20022.repository.msg.RedemptionOrder5.mmHoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionExecution3.mmHoldingsRedemptionRate,
+					com.tools20022.repository.msg.RedemptionExecution5.mmHoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionOrder7.mmHoldingsRedemptionRate,
+					com.tools20022.repository.msg.RedemptionOrder4.mmHoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionOrder6.mmHoldingsRedemptionRate,
+					com.tools20022.repository.msg.RedemptionExecution4.mmHoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionExecution6.mmHoldingsRedemptionRate,
+					com.tools20022.repository.msg.RedemptionOrder8.mmHoldingsRedemptionRate, com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.mmHoldingsRedemptionRate,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.mmHoldingsRedemptionRate, com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmHoldingsRedemptionRate,
+					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmHoldingsRedemptionRate, com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmHoldingsRedemptionRate,
+					com.tools20022.repository.msg.FundOrderData5.mmHoldingsRedemptionRate, com.tools20022.repository.choice.FinancialInstrumentQuantity29Choice.mmHoldingsRedemptionRate,
+					com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmHoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionExecution16.mmHoldingsRedemptionRate,
+					com.tools20022.repository.msg.RedemptionExecution15.mmHoldingsRedemptionRate, com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmHoldingsRedemptionRate);
 			elementContext_lazy = () -> RedemptionOrder.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HoldingsRedemptionRate";
 			definition = "Portion of the investor's holdings, in a specific investment fund/ fund class, that is redeemed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
@@ -336,25 +337,25 @@ public class RedemptionOrder extends InvestmentFundOrder {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RedemptionOrder";
 				definition = "Instruction from an investor to sell investment fund units back to the fund.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder2.IndividualOrderDetails, com.tools20022.repository.msg.RedemptionBulkOrderInstruction1.BulkOrderDetails,
-						com.tools20022.repository.msg.RedemptionOrder5.StaffClientBreakdown, com.tools20022.repository.msg.RedemptionBulkOrder3.IndividualOrderDetails,
-						com.tools20022.repository.msg.RedemptionBulkOrderInstruction2.BulkOrderDetails, com.tools20022.repository.msg.RedemptionExecution5.StaffClientBreakdown,
-						com.tools20022.repository.msg.RedemptionOrder7.StaffClientBreakdown, com.tools20022.repository.msg.RedemptionBulkOrder4.IndividualOrderDetails,
-						com.tools20022.repository.msg.RedemptionMultipleOrder2.IndividualOrderDetails, com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.MultipleOrderDetails,
-						com.tools20022.repository.msg.RedemptionOrder6.StaffClientBreakdown, com.tools20022.repository.msg.RedemptionMultipleOrder3.IndividualOrderDetails,
-						com.tools20022.repository.msg.RedemptionMultipleOrderInstruction2.MultipleOrderDetails, com.tools20022.repository.msg.RedemptionExecution6.StaffClientBreakdown,
-						com.tools20022.repository.msg.RedemptionOrder8.StaffClientBreakdown, com.tools20022.repository.msg.RedemptionMultipleOrder4.IndividualOrderDetails,
-						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice.RedemptionDetails, com.tools20022.repository.msg.RedemptionMultipleOrder5.IndividualOrderDetails,
-						com.tools20022.repository.msg.RedemptionMultipleOrder6.IndividualOrderDetails, com.tools20022.repository.msg.RedemptionBulkOrder6.IndividualOrderDetails,
-						com.tools20022.repository.msg.RedemptionOrder14.StaffClientBreakdown, com.tools20022.repository.msg.RedemptionOrder15.StaffClientBreakdown, com.tools20022.repository.msg.RedemptionExecution16.StaffClientBreakdown,
-						com.tools20022.repository.msg.RedemptionExecution15.StaffClientBreakdown);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder2.mmIndividualOrderDetails, com.tools20022.repository.msg.RedemptionBulkOrderInstruction1.mmBulkOrderDetails,
+						com.tools20022.repository.msg.RedemptionOrder5.mmStaffClientBreakdown, com.tools20022.repository.msg.RedemptionBulkOrder3.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.RedemptionBulkOrderInstruction2.mmBulkOrderDetails, com.tools20022.repository.msg.RedemptionExecution5.mmStaffClientBreakdown,
+						com.tools20022.repository.msg.RedemptionOrder7.mmStaffClientBreakdown, com.tools20022.repository.msg.RedemptionBulkOrder4.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.RedemptionMultipleOrder2.mmIndividualOrderDetails, com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmMultipleOrderDetails,
+						com.tools20022.repository.msg.RedemptionOrder6.mmStaffClientBreakdown, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.RedemptionMultipleOrderInstruction2.mmMultipleOrderDetails, com.tools20022.repository.msg.RedemptionExecution6.mmStaffClientBreakdown,
+						com.tools20022.repository.msg.RedemptionOrder8.mmStaffClientBreakdown, com.tools20022.repository.msg.RedemptionMultipleOrder4.mmIndividualOrderDetails,
+						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmRedemptionDetails, com.tools20022.repository.msg.RedemptionMultipleOrder5.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.RedemptionMultipleOrder6.mmIndividualOrderDetails, com.tools20022.repository.msg.RedemptionBulkOrder6.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.RedemptionOrder14.mmStaffClientBreakdown, com.tools20022.repository.msg.RedemptionOrder15.mmStaffClientBreakdown,
+						com.tools20022.repository.msg.RedemptionExecution16.mmStaffClientBreakdown, com.tools20022.repository.msg.RedemptionExecution15.mmStaffClientBreakdown);
 				subType_lazy = () -> Arrays.asList(SwitchRedemptionLeg.mmObject());
 				superType_lazy = () -> InvestmentFundOrder.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RedemptionOrder.HoldingsRedemptionRate);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RedemptionOrder.mmHoldingsRedemptionRate);
 				derivationComponent_lazy = () -> Arrays.asList(RedemptionOrder3.mmObject(), RedemptionBulkOrder2.mmObject(), RedemptionBulkOrderInstruction1.mmObject(), RedemptionOrder5.mmObject(), RedemptionBulkOrder3.mmObject(),
 						RedemptionBulkOrderInstruction2.mmObject(), RedemptionOrder7.mmObject(), RedemptionBulkOrder4.mmObject(), RedemptionOrder4.mmObject(), RedemptionMultipleOrder2.mmObject(),
 						RedemptionMultipleOrderInstruction1.mmObject(), RedemptionOrder6.mmObject(), RedemptionMultipleOrder3.mmObject(), RedemptionMultipleOrderInstruction2.mmObject(), RedemptionOrder8.mmObject(),
@@ -363,5 +364,13 @@ public class RedemptionOrder extends InvestmentFundOrder {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getHoldingsRedemptionRate() {
+		return holdingsRedemptionRate;
+	}
+
+	public void setHoldingsRedemptionRate(PercentageRate holdingsRedemptionRate) {
+		this.holdingsRedemptionRate = holdingsRedemptionRate;
 	}
 }

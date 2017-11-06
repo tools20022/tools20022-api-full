@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FromToQuantityRange1#FromQuantity
- * FromToQuantityRange1.FromQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.FromToQuantityRange1#mmFromQuantity
+ * FromToQuantityRange1.mmFromQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FromToQuantityRange1#ToQuantity
- * FromToQuantityRange1.ToQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.FromToQuantityRange1#mmToQuantity
+ * FromToQuantityRange1.mmToQuantity}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FromToQuantityRange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected QuantityRangeBoundary1 fromQuantity;
 	/**
 	 * Lower boundary of a range of quantity values.
 	 * <p>
@@ -94,13 +95,13 @@ public class FromToQuantityRange1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FromToQuantityRange2#FromQuantity
-	 * FromToQuantityRange2.FromQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.FromToQuantityRange2#mmFromQuantity
+	 * FromToQuantityRange2.mmFromQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FromQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFromQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FromToQuantityRange1.mmObject();
 			isDerived = false;
@@ -108,12 +109,13 @@ public class FromToQuantityRange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromQuantity";
 			definition = "Lower boundary of a range of quantity values.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToQuantityRange2.FromQuantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToQuantityRange2.mmFromQuantity);
 			maxOccurs = 1;
-			complexType_lazy = () -> QuantityRangeBoundary1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.QuantityRangeBoundary1.mmObject();
 		}
 	};
+	protected QuantityRangeBoundary1 toQuantity;
 	/**
 	 * Upper boundary of a range of quantity values.
 	 * <p>
@@ -144,13 +146,13 @@ public class FromToQuantityRange1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FromToQuantityRange2#ToQuantity
-	 * FromToQuantityRange2.ToQuantity}</li>
+	 * {@linkplain com.tools20022.repository.msg.FromToQuantityRange2#mmToQuantity
+	 * FromToQuantityRange2.mmToQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ToQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmToQuantity = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FromToQuantityRange1.mmObject();
 			isDerived = false;
@@ -158,18 +160,18 @@ public class FromToQuantityRange1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToQuantity";
 			definition = "Upper boundary of a range of quantity values.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToQuantityRange2.ToQuantity);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToQuantityRange2.mmToQuantity);
 			maxOccurs = 1;
-			complexType_lazy = () -> QuantityRangeBoundary1.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.QuantityRangeBoundary1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToQuantityRange1.FromQuantity, com.tools20022.repository.msg.FromToQuantityRange1.ToQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToQuantityRange1.mmFromQuantity, com.tools20022.repository.msg.FromToQuantityRange1.mmToQuantity);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FromToQuantityRange1";
 				definition = "Range of quantities.";
@@ -177,5 +179,21 @@ public class FromToQuantityRange1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public QuantityRangeBoundary1 getFromQuantity() {
+		return fromQuantity;
+	}
+
+	public void setFromQuantity(com.tools20022.repository.msg.QuantityRangeBoundary1 fromQuantity) {
+		this.fromQuantity = fromQuantity;
+	}
+
+	public QuantityRangeBoundary1 getToQuantity() {
+		return toQuantity;
+	}
+
+	public void setToQuantity(com.tools20022.repository.msg.QuantityRangeBoundary1 toQuantity) {
+		this.toQuantity = toQuantity;
 	}
 }

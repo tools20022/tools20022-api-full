@@ -34,26 +34,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#PriceCalculationPeriod
- * CorporateActionPeriod7.PriceCalculationPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmPriceCalculationPeriod
+ * CorporateActionPeriod7.mmPriceCalculationPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#ParallelTradingPeriod
- * CorporateActionPeriod7.ParallelTradingPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmParallelTradingPeriod
+ * CorporateActionPeriod7.mmParallelTradingPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#ActionPeriod
- * CorporateActionPeriod7.ActionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmActionPeriod
+ * CorporateActionPeriod7.mmActionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#RevocabilityPeriod
- * CorporateActionPeriod7.RevocabilityPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmRevocabilityPeriod
+ * CorporateActionPeriod7.mmRevocabilityPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#PrivilegeSuspensionPeriod
- * CorporateActionPeriod7.PrivilegeSuspensionPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmPrivilegeSuspensionPeriod
+ * CorporateActionPeriod7.mmPrivilegeSuspensionPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#AccountServicerRevocabilityPeriod
- * CorporateActionPeriod7.AccountServicerRevocabilityPeriod}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmAccountServicerRevocabilityPeriod
+ * CorporateActionPeriod7.mmAccountServicerRevocabilityPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#DepositorySuspensionPeriodForWithdrawal
- * CorporateActionPeriod7.DepositorySuspensionPeriodForWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmDepositorySuspensionPeriodForWithdrawal
+ * CorporateActionPeriod7.mmDepositorySuspensionPeriodForWithdrawal}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -62,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionPeriod7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Period3Choice priceCalculationPeriod;
 	/**
 	 * Period during which the price of a security is determined.
 	 * <p>
@@ -88,8 +89,8 @@ public class CorporateActionPeriod7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#PriceCalculationPeriod
-	 * SecuritiesPricing.PriceCalculationPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceCalculationPeriod
+	 * SecuritiesPricing.mmPriceCalculationPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,21 +110,22 @@ public class CorporateActionPeriod7 {
 	 * "Period during which the price of a security is determined."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PriceCalculationPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPriceCalculationPeriod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceCalculationPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.PriceCalculationPeriod;
 			isDerived = false;
 			xmlTag = "PricClctnPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
 			definition = "Period during which the price of a security is determined.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	protected Period3Choice parallelTradingPeriod;
 	/**
 	 * Period during which both old and new equity may be traded simultaneously,
 	 * for example, consolidation of equity or splitting of equity.
@@ -136,8 +138,8 @@ public class CorporateActionPeriod7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#ParallelTradingPeriod
-	 * SecuritiesProceedsDefinition.ParallelTradingPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmParallelTradingPeriod
+	 * SecuritiesProceedsDefinition.mmParallelTradingPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -158,21 +160,22 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ParallelTradingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmParallelTradingPeriod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmParallelTradingPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.ParallelTradingPeriod;
 			isDerived = false;
 			xmlTag = "ParllTradgPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParallelTradingPeriod";
 			definition = "Period during which both old and new equity may be traded simultaneously, for example, consolidation of equity or splitting of equity.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	protected Period3Choice actionPeriod;
 	/**
 	 * Period during which the specified option, or all options of the event,
 	 * remains valid, for example, offer period.
@@ -185,8 +188,8 @@ public class CorporateActionPeriod7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#ActionPeriod
-	 * CorporateActionOption.ActionPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmActionPeriod
+	 * CorporateActionOption.mmActionPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,21 +210,22 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ActionPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmActionPeriod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmActionPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.ActionPeriod;
 			isDerived = false;
 			xmlTag = "ActnPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionPeriod";
 			definition = "Period during which the specified option, or all options of the event, remains valid, for example, offer period.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	protected Period3Choice revocabilityPeriod;
 	/**
 	 * Period during which the shareholder can revoke, change or withdraw its
 	 * instruction.
@@ -234,8 +238,8 @@ public class CorporateActionPeriod7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RevocabilityPeriod
-	 * CorporateActionDeadline.RevocabilityPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRevocabilityPeriod
+	 * CorporateActionDeadline.mmRevocabilityPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -256,21 +260,22 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RevocabilityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRevocabilityPeriod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRevocabilityPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.RevocabilityPeriod;
 			isDerived = false;
 			xmlTag = "RvcbltyPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevocabilityPeriod";
 			definition = "Period during which the shareholder can revoke, change or withdraw its instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	protected Period3Choice privilegeSuspensionPeriod;
 	/**
 	 * Period during which the privilege is not available, for example, this can
 	 * happen whenever a meeting takes place or whenever a coupon payment is
@@ -284,8 +289,8 @@ public class CorporateActionPeriod7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#PrivilegeSuspensionPeriod
-	 * SuspensionPeriod.PrivilegeSuspensionPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmPrivilegeSuspensionPeriod
+	 * SuspensionPeriod.mmPrivilegeSuspensionPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -306,21 +311,22 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PrivilegeSuspensionPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPrivilegeSuspensionPeriod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmPrivilegeSuspensionPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.PrivilegeSuspensionPeriod;
 			isDerived = false;
 			xmlTag = "PrvlgSspnsnPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivilegeSuspensionPeriod";
 			definition = "Period during which the privilege is not available, for example, this can happen whenever a meeting takes place or whenever a coupon payment is due.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	protected Period3Choice accountServicerRevocabilityPeriod;
 	/**
 	 * Period during which the participant of the account servicer can revoke
 	 * change or withdraw its instructions.
@@ -333,8 +339,8 @@ public class CorporateActionPeriod7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#RevocabilityPeriod
-	 * CorporateActionDeadline.RevocabilityPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDeadline#mmRevocabilityPeriod
+	 * CorporateActionDeadline.mmRevocabilityPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -355,21 +361,22 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountServicerRevocabilityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountServicerRevocabilityPeriod = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRevocabilityPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.RevocabilityPeriod;
 			isDerived = false;
 			xmlTag = "AcctSvcrRvcbltyPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerRevocabilityPeriod";
 			definition = "Period during which the participant of the account servicer can revoke change or withdraw its instructions.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	protected Period3Choice depositorySuspensionPeriodForWithdrawal;
 	/**
 	 * Period defining the last date on which withdrawal in street name requests
 	 * on the outturn security will be accepted and the date on which the
@@ -384,8 +391,8 @@ public class CorporateActionPeriod7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#DepositorySuspensionPeriodForWithdrawal
-	 * SuspensionPeriod.DepositorySuspensionPeriodForWithdrawal}</li>
+	 * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForWithdrawal
+	 * SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawal}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -406,36 +413,92 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DepositorySuspensionPeriodForWithdrawal = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForWithdrawal = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawal;
 			componentContext_lazy = () -> CorporateActionPeriod7.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.DepositorySuspensionPeriodForWithdrawal;
 			isDerived = false;
 			xmlTag = "DpstrySspnsnPrdForWdrwl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawal";
 			definition = "Period defining the last date on which withdrawal in street name requests on the outturn security will be accepted and the date on which the suspension will be released and withdrawal by transfer processing on the outturn security will resume.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Period3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod7.PriceCalculationPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.ParallelTradingPeriod,
-						com.tools20022.repository.msg.CorporateActionPeriod7.ActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.RevocabilityPeriod,
-						com.tools20022.repository.msg.CorporateActionPeriod7.PrivilegeSuspensionPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.AccountServicerRevocabilityPeriod,
-						com.tools20022.repository.msg.CorporateActionPeriod7.DepositorySuspensionPeriodForWithdrawal);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod7.mmPriceCalculationPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.mmParallelTradingPeriod,
+						com.tools20022.repository.msg.CorporateActionPeriod7.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.mmRevocabilityPeriod,
+						com.tools20022.repository.msg.CorporateActionPeriod7.mmPrivilegeSuspensionPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.mmAccountServicerRevocabilityPeriod,
+						com.tools20022.repository.msg.CorporateActionPeriod7.mmDepositorySuspensionPeriodForWithdrawal);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPeriod7";
 				definition = "Specifies periods related to a corporate action option.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Period3Choice getPriceCalculationPeriod() {
+		return priceCalculationPeriod;
+	}
+
+	public void setPriceCalculationPeriod(Period3Choice priceCalculationPeriod) {
+		this.priceCalculationPeriod = priceCalculationPeriod;
+	}
+
+	public Period3Choice getParallelTradingPeriod() {
+		return parallelTradingPeriod;
+	}
+
+	public void setParallelTradingPeriod(Period3Choice parallelTradingPeriod) {
+		this.parallelTradingPeriod = parallelTradingPeriod;
+	}
+
+	public Period3Choice getActionPeriod() {
+		return actionPeriod;
+	}
+
+	public void setActionPeriod(Period3Choice actionPeriod) {
+		this.actionPeriod = actionPeriod;
+	}
+
+	public Period3Choice getRevocabilityPeriod() {
+		return revocabilityPeriod;
+	}
+
+	public void setRevocabilityPeriod(Period3Choice revocabilityPeriod) {
+		this.revocabilityPeriod = revocabilityPeriod;
+	}
+
+	public Period3Choice getPrivilegeSuspensionPeriod() {
+		return privilegeSuspensionPeriod;
+	}
+
+	public void setPrivilegeSuspensionPeriod(Period3Choice privilegeSuspensionPeriod) {
+		this.privilegeSuspensionPeriod = privilegeSuspensionPeriod;
+	}
+
+	public Period3Choice getAccountServicerRevocabilityPeriod() {
+		return accountServicerRevocabilityPeriod;
+	}
+
+	public void setAccountServicerRevocabilityPeriod(Period3Choice accountServicerRevocabilityPeriod) {
+		this.accountServicerRevocabilityPeriod = accountServicerRevocabilityPeriod;
+	}
+
+	public Period3Choice getDepositorySuspensionPeriodForWithdrawal() {
+		return depositorySuspensionPeriodForWithdrawal;
+	}
+
+	public void setDepositorySuspensionPeriodForWithdrawal(Period3Choice depositorySuspensionPeriodForWithdrawal) {
+		this.depositorySuspensionPeriodForWithdrawal = depositorySuspensionPeriodForWithdrawal;
 	}
 }

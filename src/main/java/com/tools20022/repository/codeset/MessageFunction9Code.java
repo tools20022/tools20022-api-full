@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction9Code#AcceptorRequestReject
- * MessageFunction9Code.AcceptorRequestReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction9Code#mmAcceptorRequestReject
+ * MessageFunction9Code.mmAcceptorRequestReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction9Code#AcceptorResponseReject
- * MessageFunction9Code.AcceptorResponseReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction9Code#mmAcceptorResponseReject
+ * MessageFunction9Code.mmAcceptorResponseReject}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +86,7 @@ public class MessageFunction9Code extends MessageFunctionCode {
 	 * name} = "AcceptorRequestReject"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptorRequestReject = new MMCode() {
+	public static final MMCode mmAcceptorRequestReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorRequestReject";
@@ -109,7 +109,7 @@ public class MessageFunction9Code extends MessageFunctionCode {
 	 * name} = "AcceptorResponseReject"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcceptorResponseReject = new MMCode() {
+	public static final MMCode mmAcceptorResponseReject = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorResponseReject";
@@ -120,13 +120,13 @@ public class MessageFunction9Code extends MessageFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RJCQ");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction9Code";
 				definition = "Identifies the message function within a card payment exchange.";
 				previousVersion_lazy = () -> MessageFunction4Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction9Code.AcceptorRequestReject, com.tools20022.repository.codeset.MessageFunction9Code.AcceptorResponseReject);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction9Code.mmAcceptorRequestReject, com.tools20022.repository.codeset.MessageFunction9Code.mmAcceptorResponseReject);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
 			}
 		});

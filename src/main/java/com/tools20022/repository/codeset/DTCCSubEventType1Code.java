@@ -35,98 +35,99 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#OptOut
- * DTCCSubEventType1Code.OptOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmOptOut
+ * DTCCSubEventType1Code.mmOptOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#DividendReinvestmentByDTC
- * DTCCSubEventType1Code.DividendReinvestmentByDTC}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmDividendReinvestmentByDTC
+ * DTCCSubEventType1Code.mmDividendReinvestmentByDTC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#PlaceOfListing
- * DTCCSubEventType1Code.PlaceOfListing}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmPlaceOfListing
+ * DTCCSubEventType1Code.mmPlaceOfListing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#BoardLot
- * DTCCSubEventType1Code.BoardLot}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmBoardLot
+ * DTCCSubEventType1Code.mmBoardLot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#InterimPayment
- * DTCCSubEventType1Code.InterimPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmInterimPayment
+ * DTCCSubEventType1Code.mmInterimPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#FinalPayment
- * DTCCSubEventType1Code.FinalPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmFinalPayment
+ * DTCCSubEventType1Code.mmFinalPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#Remarketing
- * DTCCSubEventType1Code.Remarketing}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmRemarketing
+ * DTCCSubEventType1Code.mmRemarketing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#Unwind
- * DTCCSubEventType1Code.Unwind}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmUnwind
+ * DTCCSubEventType1Code.mmUnwind}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#AnnualGeneral
- * DTCCSubEventType1Code.AnnualGeneral}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmAnnualGeneral
+ * DTCCSubEventType1Code.mmAnnualGeneral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#Extraordinary
- * DTCCSubEventType1Code.Extraordinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmExtraordinary
+ * DTCCSubEventType1Code.mmExtraordinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#Ordinary
- * DTCCSubEventType1Code.Ordinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmOrdinary
+ * DTCCSubEventType1Code.mmOrdinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#Special
- * DTCCSubEventType1Code.Special}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmSpecial
+ * DTCCSubEventType1Code.mmSpecial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#ShareExchange
- * DTCCSubEventType1Code.ShareExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmShareExchange
+ * DTCCSubEventType1Code.mmShareExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#Standard
- * DTCCSubEventType1Code.Standard}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmStandard
+ * DTCCSubEventType1Code.mmStandard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#Transfer
- * DTCCSubEventType1Code.Transfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmTransfer
+ * DTCCSubEventType1Code.mmTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#SurvivorOptions
- * DTCCSubEventType1Code.SurvivorOptions}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmSurvivorOptions
+ * DTCCSubEventType1Code.mmSurvivorOptions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#MortgageBacked
- * DTCCSubEventType1Code.MortgageBacked}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmMortgageBacked
+ * DTCCSubEventType1Code.mmMortgageBacked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#SaleOfAssets
- * DTCCSubEventType1Code.SaleOfAssets}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmSaleOfAssets
+ * DTCCSubEventType1Code.mmSaleOfAssets}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#PhysicalRightsNotIssued
- * DTCCSubEventType1Code.PhysicalRightsNotIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmPhysicalRightsNotIssued
+ * DTCCSubEventType1Code.mmPhysicalRightsNotIssued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#PoisonPill
- * DTCCSubEventType1Code.PoisonPill}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmPoisonPill
+ * DTCCSubEventType1Code.mmPoisonPill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#DividendReinvestmentByIssuer
- * DTCCSubEventType1Code.DividendReinvestmentByIssuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmDividendReinvestmentByIssuer
+ * DTCCSubEventType1Code.mmDividendReinvestmentByIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#MandatoryRedemptionOfShares
- * DTCCSubEventType1Code.MandatoryRedemptionOfShares}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmMandatoryRedemptionOfShares
+ * DTCCSubEventType1Code.mmMandatoryRedemptionOfShares}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#SharePurchasePlan
- * DTCCSubEventType1Code.SharePurchasePlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmSharePurchasePlan
+ * DTCCSubEventType1Code.mmSharePurchasePlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#OpenOffer
- * DTCCSubEventType1Code.OpenOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmOpenOffer
+ * DTCCSubEventType1Code.mmOpenOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#TenderWithRights
- * DTCCSubEventType1Code.TenderWithRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmTenderWithRights
+ * DTCCSubEventType1Code.mmTenderWithRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#CashinLieu
- * DTCCSubEventType1Code.CashinLieu}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmCashinLieu
+ * DTCCSubEventType1Code.mmCashinLieu}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#BidTenderSealedTender
- * DTCCSubEventType1Code.BidTenderSealedTender}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmBidTenderSealedTender
+ * DTCCSubEventType1Code.mmBidTenderSealedTender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#OfferToPurchase
- * DTCCSubEventType1Code.OfferToPurchase}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#ADR
- * DTCCSubEventType1Code.ADR}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmOfferToPurchase
+ * DTCCSubEventType1Code.mmOfferToPurchase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType1Code#mmADR
+ * DTCCSubEventType1Code.mmADR}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -164,7 +165,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "OptOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode OptOut = new MMCode() {
+	public static final MMCode mmOptOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptOut";
@@ -187,7 +188,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "DividendReinvestmentByDTC"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendReinvestmentByDTC = new MMCode() {
+	public static final MMCode mmDividendReinvestmentByDTC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentByDTC";
@@ -210,7 +211,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "PlaceOfListing"</li>
 	 * </ul>
 	 */
-	public static final MMCode PlaceOfListing = new MMCode() {
+	public static final MMCode mmPlaceOfListing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
@@ -233,7 +234,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "BoardLot"</li>
 	 * </ul>
 	 */
-	public static final MMCode BoardLot = new MMCode() {
+	public static final MMCode mmBoardLot = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoardLot";
@@ -256,7 +257,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "InterimPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterimPayment = new MMCode() {
+	public static final MMCode mmInterimPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimPayment";
@@ -279,7 +280,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "FinalPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode FinalPayment = new MMCode() {
+	public static final MMCode mmFinalPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalPayment";
@@ -302,7 +303,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "Remarketing"</li>
 	 * </ul>
 	 */
-	public static final MMCode Remarketing = new MMCode() {
+	public static final MMCode mmRemarketing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Remarketing";
@@ -325,7 +326,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "Unwind"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unwind = new MMCode() {
+	public static final MMCode mmUnwind = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unwind";
@@ -348,7 +349,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "AnnualGeneral"</li>
 	 * </ul>
 	 */
-	public static final MMCode AnnualGeneral = new MMCode() {
+	public static final MMCode mmAnnualGeneral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnualGeneral";
@@ -371,7 +372,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "Extraordinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Extraordinary = new MMCode() {
+	public static final MMCode mmExtraordinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extraordinary";
@@ -394,7 +395,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "Ordinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Ordinary = new MMCode() {
+	public static final MMCode mmOrdinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ordinary";
@@ -417,7 +418,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "Special"</li>
 	 * </ul>
 	 */
-	public static final MMCode Special = new MMCode() {
+	public static final MMCode mmSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
@@ -440,7 +441,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "ShareExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShareExchange = new MMCode() {
+	public static final MMCode mmShareExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareExchange";
@@ -463,7 +464,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "Standard"</li>
 	 * </ul>
 	 */
-	public static final MMCode Standard = new MMCode() {
+	public static final MMCode mmStandard = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standard";
@@ -486,7 +487,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "Transfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode Transfer = new MMCode() {
+	public static final MMCode mmTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transfer";
@@ -509,7 +510,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "SurvivorOptions"</li>
 	 * </ul>
 	 */
-	public static final MMCode SurvivorOptions = new MMCode() {
+	public static final MMCode mmSurvivorOptions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurvivorOptions";
@@ -532,7 +533,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "MortgageBacked"</li>
 	 * </ul>
 	 */
-	public static final MMCode MortgageBacked = new MMCode() {
+	public static final MMCode mmMortgageBacked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortgageBacked";
@@ -555,7 +556,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "SaleOfAssets"</li>
 	 * </ul>
 	 */
-	public static final MMCode SaleOfAssets = new MMCode() {
+	public static final MMCode mmSaleOfAssets = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleOfAssets";
@@ -578,7 +579,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "PhysicalRightsNotIssued"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalRightsNotIssued = new MMCode() {
+	public static final MMCode mmPhysicalRightsNotIssued = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalRightsNotIssued";
@@ -601,7 +602,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "PoisonPill"</li>
 	 * </ul>
 	 */
-	public static final MMCode PoisonPill = new MMCode() {
+	public static final MMCode mmPoisonPill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoisonPill";
@@ -624,7 +625,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "DividendReinvestmentByIssuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendReinvestmentByIssuer = new MMCode() {
+	public static final MMCode mmDividendReinvestmentByIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentByIssuer";
@@ -647,7 +648,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "MandatoryRedemptionOfShares"</li>
 	 * </ul>
 	 */
-	public static final MMCode MandatoryRedemptionOfShares = new MMCode() {
+	public static final MMCode mmMandatoryRedemptionOfShares = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryRedemptionOfShares";
@@ -670,7 +671,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "SharePurchasePlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode SharePurchasePlan = new MMCode() {
+	public static final MMCode mmSharePurchasePlan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharePurchasePlan";
@@ -693,7 +694,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "OpenOffer"</li>
 	 * </ul>
 	 */
-	public static final MMCode OpenOffer = new MMCode() {
+	public static final MMCode mmOpenOffer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenOffer";
@@ -716,7 +717,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "TenderWithRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode TenderWithRights = new MMCode() {
+	public static final MMCode mmTenderWithRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderWithRights";
@@ -739,7 +740,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "CashinLieu"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashinLieu = new MMCode() {
+	public static final MMCode mmCashinLieu = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashinLieu";
@@ -762,7 +763,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "BidTenderSealedTender"</li>
 	 * </ul>
 	 */
-	public static final MMCode BidTenderSealedTender = new MMCode() {
+	public static final MMCode mmBidTenderSealedTender = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidTenderSealedTender";
@@ -785,7 +786,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "OfferToPurchase"</li>
 	 * </ul>
 	 */
-	public static final MMCode OfferToPurchase = new MMCode() {
+	public static final MMCode mmOfferToPurchase = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferToPurchase";
@@ -808,7 +809,7 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	 * name} = "ADR"</li>
 	 * </ul>
 	 */
-	public static final MMCode ADR = new MMCode() {
+	public static final MMCode mmADR = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ADR";
@@ -819,22 +820,24 @@ public class DTCCSubEventType1Code extends DTCCSubEventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPTO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCCSubEventType1Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined sub event types.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType1Code.OptOut, com.tools20022.repository.codeset.DTCCSubEventType1Code.DividendReinvestmentByDTC,
-						com.tools20022.repository.codeset.DTCCSubEventType1Code.PlaceOfListing, com.tools20022.repository.codeset.DTCCSubEventType1Code.BoardLot, com.tools20022.repository.codeset.DTCCSubEventType1Code.InterimPayment,
-						com.tools20022.repository.codeset.DTCCSubEventType1Code.FinalPayment, com.tools20022.repository.codeset.DTCCSubEventType1Code.Remarketing, com.tools20022.repository.codeset.DTCCSubEventType1Code.Unwind,
-						com.tools20022.repository.codeset.DTCCSubEventType1Code.AnnualGeneral, com.tools20022.repository.codeset.DTCCSubEventType1Code.Extraordinary, com.tools20022.repository.codeset.DTCCSubEventType1Code.Ordinary,
-						com.tools20022.repository.codeset.DTCCSubEventType1Code.Special, com.tools20022.repository.codeset.DTCCSubEventType1Code.ShareExchange, com.tools20022.repository.codeset.DTCCSubEventType1Code.Standard,
-						com.tools20022.repository.codeset.DTCCSubEventType1Code.Transfer, com.tools20022.repository.codeset.DTCCSubEventType1Code.SurvivorOptions, com.tools20022.repository.codeset.DTCCSubEventType1Code.MortgageBacked,
-						com.tools20022.repository.codeset.DTCCSubEventType1Code.SaleOfAssets, com.tools20022.repository.codeset.DTCCSubEventType1Code.PhysicalRightsNotIssued,
-						com.tools20022.repository.codeset.DTCCSubEventType1Code.PoisonPill, com.tools20022.repository.codeset.DTCCSubEventType1Code.DividendReinvestmentByIssuer,
-						com.tools20022.repository.codeset.DTCCSubEventType1Code.MandatoryRedemptionOfShares, com.tools20022.repository.codeset.DTCCSubEventType1Code.SharePurchasePlan,
-						com.tools20022.repository.codeset.DTCCSubEventType1Code.OpenOffer, com.tools20022.repository.codeset.DTCCSubEventType1Code.TenderWithRights, com.tools20022.repository.codeset.DTCCSubEventType1Code.CashinLieu,
-						com.tools20022.repository.codeset.DTCCSubEventType1Code.BidTenderSealedTender, com.tools20022.repository.codeset.DTCCSubEventType1Code.OfferToPurchase, com.tools20022.repository.codeset.DTCCSubEventType1Code.ADR);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType1Code.mmOptOut, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmDividendReinvestmentByDTC,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmPlaceOfListing, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmBoardLot, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmInterimPayment,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmFinalPayment, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmRemarketing, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmUnwind,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmAnnualGeneral, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmExtraordinary, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmOrdinary,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmSpecial, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmShareExchange, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmStandard,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmTransfer, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmSurvivorOptions,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmMortgageBacked, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmSaleOfAssets,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmPhysicalRightsNotIssued, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmPoisonPill,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmDividendReinvestmentByIssuer, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmMandatoryRedemptionOfShares,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmSharePurchasePlan, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmOpenOffer,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmTenderWithRights, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmCashinLieu,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmBidTenderSealedTender, com.tools20022.repository.codeset.DTCCSubEventType1Code.mmOfferToPurchase,
+						com.tools20022.repository.codeset.DTCCSubEventType1Code.mmADR);
 				trace_lazy = () -> DTCCSubEventTypeCode.mmObject();
 			}
 		});

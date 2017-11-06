@@ -34,19 +34,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection43#Amount
- * AmountAndDirection43.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection43#Sign
- * AmountAndDirection43.Sign}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection43#Date
- * AmountAndDirection43.Date}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection43#mmAmount
+ * AmountAndDirection43.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection43#mmSign
+ * AmountAndDirection43.mmSign}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection43#mmDate
+ * AmountAndDirection43.mmDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountAndDirection43 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount value.
 	 * <p>
@@ -93,11 +94,11 @@ public class AmountAndDirection43 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection41#Amount
-	 * AmountAndDirection41.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection41#mmAmount
+	 * AmountAndDirection41.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountAndDirection43.mmObject();
 			isDerived = false;
@@ -105,12 +106,13 @@ public class AmountAndDirection43 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.Amount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected PlusOrMinusIndicator sign;
 	/**
 	 * Indicates that the amount value is positive or negative.
 	 * <p>
@@ -140,11 +142,11 @@ public class AmountAndDirection43 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection41#Sign
-	 * AmountAndDirection41.Sign}</li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection41#mmSign
+	 * AmountAndDirection41.mmSign}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sign = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountAndDirection43.mmObject();
 			isDerived = false;
@@ -152,12 +154,13 @@ public class AmountAndDirection43 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sign";
 			definition = "Indicates that the amount value is positive or negative.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.Sign;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmSign;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Date of the amount.
 	 * <p>
@@ -185,7 +188,7 @@ public class AmountAndDirection43 {
 	 * definition} = "Date of the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountAndDirection43.mmObject();
 			isDerived = false;
@@ -193,8 +196,8 @@ public class AmountAndDirection43 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date of the amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -202,8 +205,8 @@ public class AmountAndDirection43 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection43.Amount, com.tools20022.repository.msg.AmountAndDirection43.Sign, com.tools20022.repository.msg.AmountAndDirection43.Date);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection43.mmAmount, com.tools20022.repository.msg.AmountAndDirection43.mmSign, com.tools20022.repository.msg.AmountAndDirection43.mmDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection43";
 				definition = "Signed amount.";
@@ -211,5 +214,29 @@ public class AmountAndDirection43 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public PlusOrMinusIndicator getSign() {
+		return sign;
+	}
+
+	public void setSign(PlusOrMinusIndicator sign) {
+		this.sign = sign;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
 	}
 }

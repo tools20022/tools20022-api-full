@@ -38,18 +38,18 @@ import java.util.function.Supplier;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Tax12#TypeOrOtherTaxTypeRule
- * Tax12.TypeOrOtherTaxTypeRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax12#mmTypeOrOtherTaxTypeRule
+ * Tax12.mmTypeOrOtherTaxTypeRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Tax12#Type Tax12.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax12#OtherTaxType
- * Tax12.OtherTaxType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax12#Amount Tax12.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax12#mmType Tax12.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax12#mmOtherTaxType
+ * Tax12.mmOtherTaxType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax12#mmAmount Tax12.mmAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +57,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -75,6 +75,7 @@ import java.util.function.Supplier;
 public class Tax12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TaxType9Code type;
 	/**
 	 * Type of tax applied.
 	 * <p>
@@ -87,7 +88,7 @@ public class Tax12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Type Tax.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax12
@@ -105,20 +106,21 @@ public class Tax12 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
 			componentContext_lazy = () -> Tax12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of tax applied.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TaxType9Code.mmObject();
 		}
 	};
+	protected Max35Text otherTaxType;
 	/**
 	 * Specifies types of tax not present in a code list.
 	 * <p>
@@ -131,7 +133,7 @@ public class Tax12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Type Tax.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax12
@@ -149,20 +151,21 @@ public class Tax12 {
 	 * definition} = "Specifies types of tax not present in a code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OtherTaxType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOtherTaxType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
 			componentContext_lazy = () -> Tax12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Type;
 			isDerived = false;
 			xmlTag = "OthrTaxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTaxType";
 			definition = "Specifies types of tax not present in a code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected CurrencyAndAmount amount;
 	/**
 	 * Amount of money resulting from the calculation of the tax.
 	 * <p>
@@ -176,7 +179,7 @@ public class Tax12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Tax12
@@ -195,17 +198,17 @@ public class Tax12 {
 	 * "Amount of money resulting from the calculation of the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> Tax12.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money resulting from the calculation of the tax.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -218,9 +221,9 @@ public class Tax12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax12#Type Tax12.Type}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Tax12#OtherTaxType
-	 * Tax12.OtherTaxType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax12#mmType Tax12.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax12#mmOtherTaxType
+	 * Tax12.mmOtherTaxType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -239,22 +242,22 @@ public class Tax12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor TypeOrOtherTaxTypeRule = new MMXor() {
+	public static final MMXor mmTypeOrOtherTaxTypeRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrOtherTaxTypeRule";
 			definition = "If Type is present, then OtherTaxType is not allowed. If Type is not present, then OtherTaxType is mandatory.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax12.Type, com.tools20022.repository.msg.Tax12.OtherTaxType);
 			messageComponent_lazy = () -> Tax12.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax12.mmType, com.tools20022.repository.msg.Tax12.mmOtherTaxType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax12.Type, com.tools20022.repository.msg.Tax12.OtherTaxType, com.tools20022.repository.msg.Tax12.Amount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax12.mmType, com.tools20022.repository.msg.Tax12.mmOtherTaxType, com.tools20022.repository.msg.Tax12.mmAmount);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -265,9 +268,33 @@ public class Tax12 {
 				})).get();
 				name = "Tax12";
 				definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax12.TypeOrOtherTaxTypeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax12.mmTypeOrOtherTaxTypeRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TaxType9Code getType() {
+		return type;
+	}
+
+	public void setType(TaxType9Code type) {
+		this.type = type;
+	}
+
+	public Max35Text getOtherTaxType() {
+		return otherTaxType;
+	}
+
+	public void setOtherTaxType(Max35Text otherTaxType) {
+		this.otherTaxType = otherTaxType;
+	}
+
+	public CurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(CurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

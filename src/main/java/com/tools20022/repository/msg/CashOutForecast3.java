@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.FundsCashFlow;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Cash movements out of a fund as a result of investment funds transactions,
@@ -38,20 +39,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOutForecast3#CashSettlementDate
- * CashOutForecast3.CashSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOutForecast3#mmCashSettlementDate
+ * CashOutForecast3.mmCashSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOutForecast3#SubTotalAmount
- * CashOutForecast3.SubTotalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOutForecast3#mmSubTotalAmount
+ * CashOutForecast3.mmSubTotalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOutForecast3#SubTotalUnitsNumber
- * CashOutForecast3.SubTotalUnitsNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOutForecast3#mmSubTotalUnitsNumber
+ * CashOutForecast3.mmSubTotalUnitsNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOutForecast3#ExceptionalCashFlowIndicator
- * CashOutForecast3.ExceptionalCashFlowIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOutForecast3#mmExceptionalCashFlowIndicator
+ * CashOutForecast3.mmExceptionalCashFlowIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashOutForecast3#CashOutBreakdownDetails
- * CashOutForecast3.CashOutBreakdownDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.CashOutForecast3#mmCashOutBreakdownDetails
+ * CashOutForecast3.mmCashOutBreakdownDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +85,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashOutForecast3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate cashSettlementDate;
 	/**
 	 * Date on which cash is available.
 	 * <p>
@@ -96,8 +98,8 @@ public class CashOutForecast3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashSettlement#InterbankSettlementDate
-	 * CashSettlement.InterbankSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+	 * CashSettlement.mmInterbankSettlementDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -118,27 +120,28 @@ public class CashOutForecast3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOutForecast5#CashSettlementDate
-	 * CashOutForecast5.CashSettlementDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOutForecast5#mmCashSettlementDate
+	 * CashOutForecast5.mmCashSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> CashOutForecast3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.InterbankSettlementDate;
 			isDerived = false;
 			xmlTag = "CshSttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDate";
 			definition = "Date on which cash is available.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast5.CashSettlementDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast5.mmCashSettlementDate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount subTotalAmount;
 	/**
 	 * Sub-total amount of the cash flow out, expressed as an amount of money.
 	 * <p>
@@ -152,8 +155,8 @@ public class CashOutForecast3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Amount
-	 * SecuritiesQuantity.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
+	 * SecuritiesQuantity.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -176,27 +179,28 @@ public class CashOutForecast3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOutForecast5#SubTotalAmount
-	 * CashOutForecast5.SubTotalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOutForecast5#mmSubTotalAmount
+	 * CashOutForecast5.mmSubTotalAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubTotalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> CashOutForecast3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Amount;
 			isDerived = false;
 			xmlTag = "SubTtlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubTotalAmount";
 			definition = "Sub-total amount of the cash flow out, expressed as an amount of money.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast5.SubTotalAmount);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast5.mmSubTotalAmount);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected FinancialInstrumentQuantity1 subTotalUnitsNumber;
 	/**
 	 * Sub-total amount of the cash flow out, expressed as a number of units.
 	 * <p>
@@ -210,8 +214,8 @@ public class CashOutForecast3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#Unit
-	 * SecuritiesQuantity.Unit}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+	 * SecuritiesQuantity.mmUnit}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -233,27 +237,28 @@ public class CashOutForecast3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOutForecast5#SubTotalUnitsNumber
-	 * CashOutForecast5.SubTotalUnitsNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOutForecast5#mmSubTotalUnitsNumber
+	 * CashOutForecast5.mmSubTotalUnitsNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubTotalUnitsNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> CashOutForecast3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.Unit;
 			isDerived = false;
 			xmlTag = "SubTtlUnitsNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubTotalUnitsNumber";
 			definition = "Sub-total amount of the cash flow out, expressed as a number of units.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast5.SubTotalUnitsNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast5.mmSubTotalUnitsNumber);
 			maxOccurs = 1;
-			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	protected YesNoIndicator exceptionalCashFlowIndicator;
 	/**
 	 * Indicates whether the estimated cash flow out is exceptional.
 	 * <p>
@@ -267,8 +272,8 @@ public class CashOutForecast3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#ExceptionalCashFlowIndicator
-	 * FundsCashFlow.ExceptionalCashFlowIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmExceptionalCashFlowIndicator
+	 * FundsCashFlow.mmExceptionalCashFlowIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -290,27 +295,28 @@ public class CashOutForecast3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOutForecast5#ExceptionalCashFlowIndicator
-	 * CashOutForecast5.ExceptionalCashFlowIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOutForecast5#mmExceptionalCashFlowIndicator
+	 * CashOutForecast5.mmExceptionalCashFlowIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExceptionalCashFlowIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExceptionalCashFlowIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmExceptionalCashFlowIndicator;
 			componentContext_lazy = () -> CashOutForecast3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.ExceptionalCashFlowIndicator;
 			isDerived = false;
 			xmlTag = "XcptnlCshFlowInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicator";
 			definition = "Indicates whether the estimated cash flow out is exceptional.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast5.ExceptionalCashFlowIndicator);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast5.mmExceptionalCashFlowIndicator);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.FundCashOutBreakdown2> cashOutBreakdownDetails;
 	/**
 	 * Breakdown of cash out amounts, eg, by transaction or order type.
 	 * <p>
@@ -345,36 +351,36 @@ public class CashOutForecast3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashOutForecast5#CashOutBreakdownDetails
-	 * CashOutForecast5.CashOutBreakdownDetails}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashOutForecast5#mmCashOutBreakdownDetails
+	 * CashOutForecast5.mmCashOutBreakdownDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashOutBreakdownDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashOutBreakdownDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashOutForecast3.mmObject();
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
+			componentContext_lazy = () -> CashOutForecast3.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutBrkdwnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutBreakdownDetails";
 			definition = "Breakdown of cash out amounts, eg,  by transaction or order type.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast5.CashOutBreakdownDetails);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast5.mmCashOutBreakdownDetails);
 			minOccurs = 0;
-			type_lazy = () -> FundCashOutBreakdown2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.CashOutForecast3.CashSettlementDate, com.tools20022.repository.msg.CashOutForecast3.SubTotalAmount, com.tools20022.repository.msg.CashOutForecast3.SubTotalUnitsNumber,
-								com.tools20022.repository.msg.CashOutForecast3.ExceptionalCashFlowIndicator, com.tools20022.repository.msg.CashOutForecast3.CashOutBreakdownDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOutForecast3.mmCashSettlementDate, com.tools20022.repository.msg.CashOutForecast3.mmSubTotalAmount,
+						com.tools20022.repository.msg.CashOutForecast3.mmSubTotalUnitsNumber, com.tools20022.repository.msg.CashOutForecast3.mmExceptionalCashFlowIndicator,
+						com.tools20022.repository.msg.CashOutForecast3.mmCashOutBreakdownDetails);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashOutForecast3";
 				definition = "Cash movements out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.";
@@ -382,5 +388,45 @@ public class CashOutForecast3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getCashSettlementDate() {
+		return cashSettlementDate;
+	}
+
+	public void setCashSettlementDate(ISODate cashSettlementDate) {
+		this.cashSettlementDate = cashSettlementDate;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getSubTotalAmount() {
+		return subTotalAmount;
+	}
+
+	public void setSubTotalAmount(ActiveOrHistoricCurrencyAndAmount subTotalAmount) {
+		this.subTotalAmount = subTotalAmount;
+	}
+
+	public FinancialInstrumentQuantity1 getSubTotalUnitsNumber() {
+		return subTotalUnitsNumber;
+	}
+
+	public void setSubTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 subTotalUnitsNumber) {
+		this.subTotalUnitsNumber = subTotalUnitsNumber;
+	}
+
+	public YesNoIndicator getExceptionalCashFlowIndicator() {
+		return exceptionalCashFlowIndicator;
+	}
+
+	public void setExceptionalCashFlowIndicator(YesNoIndicator exceptionalCashFlowIndicator) {
+		this.exceptionalCashFlowIndicator = exceptionalCashFlowIndicator;
+	}
+
+	public List<FundCashOutBreakdown2> getCashOutBreakdownDetails() {
+		return cashOutBreakdownDetails;
+	}
+
+	public void setCashOutBreakdownDetails(List<com.tools20022.repository.msg.FundCashOutBreakdown2> cashOutBreakdownDetails) {
+		this.cashOutBreakdownDetails = cashOutBreakdownDetails;
 	}
 }

@@ -40,24 +40,24 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat19Choice#Rate
- * RateAndAmountFormat19Choice.Rate}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat19Choice#mmRate
+ * RateAndAmountFormat19Choice.mmRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat19Choice#NotSpecifiedRate
- * RateAndAmountFormat19Choice.NotSpecifiedRate}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat19Choice#mmNotSpecifiedRate
+ * RateAndAmountFormat19Choice.mmNotSpecifiedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat19Choice#Amount
- * RateAndAmountFormat19Choice.Amount}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat19Choice#mmAmount
+ * RateAndAmountFormat19Choice.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat19Choice#IndexPoints
- * RateAndAmountFormat19Choice.IndexPoints}</li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat19Choice#mmIndexPoints
+ * RateAndAmountFormat19Choice.mmIndexPoints}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -85,6 +85,7 @@ import java.util.function.Supplier;
 public class RateAndAmountFormat19Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PercentageRate rate;
 	/**
 	 * Value expressed as a rate.
 	 * <p>
@@ -115,18 +116,18 @@ public class RateAndAmountFormat19Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat38Choice#Rate
-	 * RateAndAmountFormat38Choice.Rate}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat38Choice#mmRate
+	 * RateAndAmountFormat38Choice.mmRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat14Choice#Rate
-	 * RateAndAmountFormat14Choice.Rate}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat14Choice#mmRate
+	 * RateAndAmountFormat14Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateAndAmountFormat19Choice.mmObject();
 			isDerived = false;
@@ -134,13 +135,14 @@ public class RateAndAmountFormat19Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value expressed as a rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat14Choice.Rate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat38Choice.Rate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat38Choice.mmRate);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat14Choice.mmRate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected RateValueType7Code notSpecifiedRate;
 	/**
 	 * Value of the rate not specified.
 	 * <p>
@@ -171,18 +173,18 @@ public class RateAndAmountFormat19Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat38Choice#NotSpecifiedRate
-	 * RateAndAmountFormat38Choice.NotSpecifiedRate}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat38Choice#mmNotSpecifiedRate
+	 * RateAndAmountFormat38Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat14Choice#NotSpecifiedRate
-	 * RateAndAmountFormat14Choice.NotSpecifiedRate}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat14Choice#mmNotSpecifiedRate
+	 * RateAndAmountFormat14Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateAndAmountFormat19Choice.mmObject();
 			isDerived = false;
@@ -190,13 +192,14 @@ public class RateAndAmountFormat19Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat14Choice.NotSpecifiedRate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat38Choice.NotSpecifiedRate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat38Choice.mmNotSpecifiedRate);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat14Choice.mmNotSpecifiedRate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
 	 * Value is expressed as a currency and amount.
 	 * <p>
@@ -227,18 +230,18 @@ public class RateAndAmountFormat19Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat38Choice#Amount
-	 * RateAndAmountFormat38Choice.Amount}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat38Choice#mmAmount
+	 * RateAndAmountFormat38Choice.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat14Choice#Amount
-	 * RateAndAmountFormat14Choice.Amount}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat14Choice#mmAmount
+	 * RateAndAmountFormat14Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RateAndAmountFormat19Choice.mmObject();
 			isDerived = false;
@@ -246,13 +249,14 @@ public class RateAndAmountFormat19Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value is expressed as a currency and amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat14Choice.Amount;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat38Choice.Amount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat38Choice.mmAmount);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat14Choice.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected DecimalNumber indexPoints;
 	/**
 	 * Price expressed in index points.<br>
 	 * <p>
@@ -266,8 +270,8 @@ public class RateAndAmountFormat19Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Index#IndexPoints
-	 * Index.IndexPoints}</li>
+	 * {@linkplain com.tools20022.repository.entity.Index#mmIndexPoints
+	 * Index.mmIndexPoints}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -288,24 +292,24 @@ public class RateAndAmountFormat19Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat38Choice#IndexPoints
-	 * RateAndAmountFormat38Choice.IndexPoints}</li>
+	 * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat38Choice#mmIndexPoints
+	 * RateAndAmountFormat38Choice.mmIndexPoints}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IndexPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndexPoints = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexPoints;
 			componentContext_lazy = () -> RateAndAmountFormat19Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.IndexPoints;
 			isDerived = false;
 			xmlTag = "IndxPts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexPoints";
 			definition = "Price expressed in index points.\r\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat38Choice.IndexPoints);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat38Choice.mmIndexPoints);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -313,9 +317,9 @@ public class RateAndAmountFormat19Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat19Choice.Rate, com.tools20022.repository.choice.RateAndAmountFormat19Choice.NotSpecifiedRate,
-						com.tools20022.repository.choice.RateAndAmountFormat19Choice.Amount, com.tools20022.repository.choice.RateAndAmountFormat19Choice.IndexPoints);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat19Choice.mmRate, com.tools20022.repository.choice.RateAndAmountFormat19Choice.mmNotSpecifiedRate,
+						com.tools20022.repository.choice.RateAndAmountFormat19Choice.mmAmount, com.tools20022.repository.choice.RateAndAmountFormat19Choice.mmIndexPoints);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -326,10 +330,42 @@ public class RateAndAmountFormat19Choice {
 				})).get();
 				name = "RateAndAmountFormat19Choice";
 				definition = "Choice of format between a rate, an amount, index points or a unspecified rate.";
-				previousVersion_lazy = () -> RateAndAmountFormat14Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(RateAndAmountFormat38Choice.mmObject());
+				previousVersion_lazy = () -> RateAndAmountFormat14Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PercentageRate getRate() {
+		return rate;
+	}
+
+	public void setRate(PercentageRate rate) {
+		this.rate = rate;
+	}
+
+	public RateValueType7Code getNotSpecifiedRate() {
+		return notSpecifiedRate;
+	}
+
+	public void setNotSpecifiedRate(RateValueType7Code notSpecifiedRate) {
+		this.notSpecifiedRate = notSpecifiedRate;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = amount;
+	}
+
+	public DecimalNumber getIndexPoints() {
+		return indexPoints;
+	}
+
+	public void setIndexPoints(DecimalNumber indexPoints) {
+		this.indexPoints = indexPoints;
 	}
 }

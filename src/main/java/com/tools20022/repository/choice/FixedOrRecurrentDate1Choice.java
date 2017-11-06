@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FixedOrRecurrentDate1Choice#FixedDate
- * FixedOrRecurrentDate1Choice.FixedDate}</li>
+ * {@linkplain com.tools20022.repository.choice.FixedOrRecurrentDate1Choice#mmFixedDate
+ * FixedOrRecurrentDate1Choice.mmFixedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FixedOrRecurrentDate1Choice#RecurrentDate
- * FixedOrRecurrentDate1Choice.RecurrentDate}</li>
+ * {@linkplain com.tools20022.repository.choice.FixedOrRecurrentDate1Choice#mmRecurrentDate
+ * FixedOrRecurrentDate1Choice.mmRecurrentDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FixedOrRecurrentDate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate fixedDate;
 	/**
 	 * Date on which the variation is triggered.
 	 * <p>
@@ -87,7 +88,7 @@ public class FixedOrRecurrentDate1Choice {
 	 * definition} = "Date on which the variation is triggered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FixedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFixedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FixedOrRecurrentDate1Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class FixedOrRecurrentDate1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedDate";
 			definition = "Date on which the variation is triggered.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DateInformation1 recurrentDate;
 	/**
 	 * Details related to recurrent dates on which the variation is triggered.
 	 * <p>
@@ -128,7 +130,7 @@ public class FixedOrRecurrentDate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RecurrentDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecurrentDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> FixedOrRecurrentDate1Choice.mmObject();
 			isDerived = false;
@@ -136,23 +138,39 @@ public class FixedOrRecurrentDate1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecurrentDate";
 			definition = "Details related to recurrent dates on which the variation is triggered.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DateInformation1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FixedOrRecurrentDate1Choice.FixedDate, com.tools20022.repository.choice.FixedOrRecurrentDate1Choice.RecurrentDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FixedOrRecurrentDate1Choice.mmFixedDate, com.tools20022.repository.choice.FixedOrRecurrentDate1Choice.mmRecurrentDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FixedOrRecurrentDate1Choice";
 				definition = "Choice between a fixed date and a recurring date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getFixedDate() {
+		return fixedDate;
+	}
+
+	public void setFixedDate(ISODate fixedDate) {
+		this.fixedDate = fixedDate;
+	}
+
+	public DateInformation1 getRecurrentDate() {
+		return recurrentDate;
+	}
+
+	public void setRecurrentDate(DateInformation1 recurrentDate) {
+		this.recurrentDate = recurrentDate;
 	}
 }

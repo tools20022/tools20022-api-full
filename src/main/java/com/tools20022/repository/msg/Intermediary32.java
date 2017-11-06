@@ -34,12 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary32#Identification
- * Intermediary32.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary32#Role
- * Intermediary32.Role}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary32#Account
- * Intermediary32.Account}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Intermediary32#mmIdentification
+ * Intermediary32.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary32#mmRole
+ * Intermediary32.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary32#mmAccount
+ * Intermediary32.mmAccount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,18 +51,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#IntermediaryInformation
- * SecuritiesBalanceCustodyReportV09.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09#mmIntermediaryInformation
+ * SecuritiesBalanceCustodyReportV09.mmIntermediaryInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#IntermediaryInformation
- * SecuritiesBalanceAccountingReportV09.IntermediaryInformation}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09#mmIntermediaryInformation
+ * SecuritiesBalanceAccountingReportV09.mmIntermediaryInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Intermediary32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification100 identification;
 	/**
 	 * Unique and unambiguous identifier of the intermediary.
 	 * <p>
@@ -91,8 +93,8 @@ public class Intermediary32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,26 +113,27 @@ public class Intermediary32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Intermediary23#Identification
-	 * Intermediary23.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary23#mmIdentification
+	 * Intermediary23.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Intermediary32.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the intermediary.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary23.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary23.mmIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification100.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
 		}
 	};
+	protected Role6Choice role;
 	/**
 	 * Function performed by the intermediary (investment funds).
 	 * <p>
@@ -163,26 +166,27 @@ public class Intermediary32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Intermediary23#Role
-	 * Intermediary23.Role}</li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary23#mmRole
+	 * Intermediary23.mmRole}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Role = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRole = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Intermediary32.mmObject();
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
+			componentContext_lazy = () -> Intermediary32.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Function performed by the intermediary (investment funds).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary23.Role;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary23.mmRole;
 			maxOccurs = 1;
-			type_lazy = () -> Role6Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> Role6Choice.mmObject();
 		}
 	};
+	protected Account18 account;
 	/**
 	 * Business relationship between two entities; one entity is the account
 	 * owner, the other entity is the account servicer.
@@ -194,8 +198,8 @@ public class Intermediary32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AccountPartyRole#Account
-	 * AccountPartyRole.Account}</li>
+	 * {@linkplain com.tools20022.repository.entity.AccountPartyRole#mmAccount
+	 * AccountPartyRole.mmAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -216,35 +220,35 @@ public class Intermediary32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.Intermediary23#Account
-	 * Intermediary23.Account}</li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary23#mmAccount
+	 * Intermediary23.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> Intermediary32.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountPartyRole.Account;
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary23.Account;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary23.mmAccount;
 			maxOccurs = 1;
-			type_lazy = () -> Account18.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Account18.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary32.Identification, com.tools20022.repository.msg.Intermediary32.Role, com.tools20022.repository.msg.Intermediary32.Account);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary32.mmIdentification, com.tools20022.repository.msg.Intermediary32.mmRole, com.tools20022.repository.msg.Intermediary32.mmAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmIntermediaryInformation,
+						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmIntermediaryInformation);
 				trace_lazy = () -> IntermediaryRole.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.IntermediaryInformation,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.IntermediaryInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Intermediary32";
 				definition = "Party that provides services to investors relating to financial products (Investment Funds).";
@@ -252,5 +256,29 @@ public class Intermediary32 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification100 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.PartyIdentification100 identification) {
+		this.identification = identification;
+	}
+
+	public Role6Choice getRole() {
+		return role;
+	}
+
+	public void setRole(Role6Choice role) {
+		this.role = role;
+	}
+
+	public Account18 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.Account18 account) {
+		this.account = account;
 	}
 }

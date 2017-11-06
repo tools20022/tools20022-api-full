@@ -34,19 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReportedAmount1#Identification
- * ReportedAmount1.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportedAmount1#Type
- * ReportedAmount1.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportedAmount1#Amount
- * ReportedAmount1.Amount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReportedAmount1#mmIdentification
+ * ReportedAmount1.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportedAmount1#mmType
+ * ReportedAmount1.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportedAmount1#mmAmount
+ * ReportedAmount1.mmAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportedAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of the reported amount.
 	 * <p>
@@ -87,7 +89,7 @@ public class ReportedAmount1 {
 	 * definition} = "Identification of the reported amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportedAmount1.mmObject();
 			isDerived = false;
@@ -95,11 +97,12 @@ public class ReportedAmount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the reported amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ExternalUndertakingAmountType1Code type;
 	/**
 	 * Type of reported amount.
 	 * <p>
@@ -128,7 +131,7 @@ public class ReportedAmount1 {
 	 * definition} = "Type of reported amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportedAmount1.mmObject();
 			isDerived = false;
@@ -136,11 +139,12 @@ public class ReportedAmount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of reported amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUndertakingAmountType1Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount amount;
 	/**
 	 * Amount reported.
 	 * <p>
@@ -169,7 +173,7 @@ public class ReportedAmount1 {
 	 * definition} = "Amount reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportedAmount1.mmObject();
 			isDerived = false;
@@ -177,8 +181,8 @@ public class ReportedAmount1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount reported.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -186,13 +190,37 @@ public class ReportedAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportedAmount1.Identification, com.tools20022.repository.msg.ReportedAmount1.Type, com.tools20022.repository.msg.ReportedAmount1.Amount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportedAmount1.mmIdentification, com.tools20022.repository.msg.ReportedAmount1.mmType, com.tools20022.repository.msg.ReportedAmount1.mmAmount);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportedAmount1";
 				definition = "Amount reported.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public ExternalUndertakingAmountType1Code getType() {
+		return type;
+	}
+
+	public void setType(ExternalUndertakingAmountType1Code type) {
+		this.type = type;
+	}
+
+	public ActiveCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = amount;
 	}
 }

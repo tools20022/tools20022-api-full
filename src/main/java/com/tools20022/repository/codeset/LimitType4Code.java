@@ -33,21 +33,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType4Code#ExternalGuarantee
- * LimitType4Code.ExternalGuarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType4Code#mmExternalGuarantee
+ * LimitType4Code.mmExternalGuarantee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType4Code#UnsecuredCredit
- * LimitType4Code.UnsecuredCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType4Code#mmUnsecuredCredit
+ * LimitType4Code.mmUnsecuredCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType4Code#AutoCollateralisation
- * LimitType4Code.AutoCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType4Code#mmAutoCollateralisation
+ * LimitType4Code.mmAutoCollateralisation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class LimitType4Code extends LimitTypeCode {
 	 * name} = "ExternalGuarantee"</li>
 	 * </ul>
 	 */
-	public static final MMCode ExternalGuarantee = new MMCode() {
+	public static final MMCode mmExternalGuarantee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalGuarantee";
@@ -106,7 +106,7 @@ public class LimitType4Code extends LimitTypeCode {
 	 * name} = "UnsecuredCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnsecuredCredit = new MMCode() {
+	public static final MMCode mmUnsecuredCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnsecuredCredit";
@@ -129,7 +129,7 @@ public class LimitType4Code extends LimitTypeCode {
 	 * name} = "AutoCollateralisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode AutoCollateralisation = new MMCode() {
+	public static final MMCode mmAutoCollateralisation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoCollateralisation";
@@ -140,13 +140,13 @@ public class LimitType4Code extends LimitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXGT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LimitType4Code";
 				definition = "Specifies the type of risk management limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitType4Code.ExternalGuarantee, com.tools20022.repository.codeset.LimitType4Code.UnsecuredCredit,
-						com.tools20022.repository.codeset.LimitType4Code.AutoCollateralisation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitType4Code.mmExternalGuarantee, com.tools20022.repository.codeset.LimitType4Code.mmUnsecuredCredit,
+						com.tools20022.repository.codeset.LimitType4Code.mmAutoCollateralisation);
 				trace_lazy = () -> LimitTypeCode.mmObject();
 			}
 		});

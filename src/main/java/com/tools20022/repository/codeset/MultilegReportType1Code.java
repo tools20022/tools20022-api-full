@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#BySecurity
- * MultilegReportType1Code.BySecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#mmBySecurity
+ * MultilegReportType1Code.mmBySecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#BySecurityAndLeg
- * MultilegReportType1Code.BySecurityAndLeg}</li>
+ * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#mmBySecurityAndLeg
+ * MultilegReportType1Code.mmBySecurityAndLeg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#ByInstrumentLeg
- * MultilegReportType1Code.ByInstrumentLeg}</li>
+ * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#mmByInstrumentLeg
+ * MultilegReportType1Code.mmByInstrumentLeg}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +86,7 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	 * name} = "BySecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode BySecurity = new MMCode() {
+	public static final MMCode mmBySecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BySecurity";
@@ -109,7 +109,7 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	 * name} = "BySecurityAndLeg"</li>
 	 * </ul>
 	 */
-	public static final MMCode BySecurityAndLeg = new MMCode() {
+	public static final MMCode mmBySecurityAndLeg = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BySecurityAndLeg";
@@ -132,7 +132,7 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	 * name} = "ByInstrumentLeg"</li>
 	 * </ul>
 	 */
-	public static final MMCode ByInstrumentLeg = new MMCode() {
+	public static final MMCode mmByInstrumentLeg = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByInstrumentLeg";
@@ -143,13 +143,13 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BYSE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MultilegReportType1Code";
 				definition = "Indicates the method of execution reporting requested by issuer of the order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MultilegReportType1Code.BySecurity, com.tools20022.repository.codeset.MultilegReportType1Code.BySecurityAndLeg,
-						com.tools20022.repository.codeset.MultilegReportType1Code.ByInstrumentLeg);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MultilegReportType1Code.mmBySecurity, com.tools20022.repository.codeset.MultilegReportType1Code.mmBySecurityAndLeg,
+						com.tools20022.repository.codeset.MultilegReportType1Code.mmByInstrumentLeg);
 				trace_lazy = () -> MultilegReportTypeCode.mmObject();
 			}
 		});

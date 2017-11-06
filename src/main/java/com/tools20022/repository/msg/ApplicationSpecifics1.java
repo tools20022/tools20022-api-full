@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ApplicationSpecifics1#SystemUser
- * ApplicationSpecifics1.SystemUser}</li>
+ * {@linkplain com.tools20022.repository.msg.ApplicationSpecifics1#mmSystemUser
+ * ApplicationSpecifics1.mmSystemUser}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ApplicationSpecifics1#Signature
- * ApplicationSpecifics1.Signature}</li>
+ * {@linkplain com.tools20022.repository.msg.ApplicationSpecifics1#mmSignature
+ * ApplicationSpecifics1.mmSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ApplicationSpecifics1#TotalNumberOfDocuments
- * ApplicationSpecifics1.TotalNumberOfDocuments}</li>
+ * {@linkplain com.tools20022.repository.msg.ApplicationSpecifics1#mmTotalNumberOfDocuments
+ * ApplicationSpecifics1.mmTotalNumberOfDocuments}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ApplicationSpecifics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text systemUser;
 	/**
 	 * A system user is a user account defined in the static data. It represents
 	 * an individual or an application that interacts with the system
@@ -99,7 +100,7 @@ public class ApplicationSpecifics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SystemUser = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSystemUser = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ApplicationSpecifics1.mmObject();
 			isDerived = false;
@@ -107,11 +108,12 @@ public class ApplicationSpecifics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemUser";
 			definition = "A system user is a user account defined in the static data. It represents an individual or an application that interacts with the system administrator (e. g. T2S), triggering the available functions. The set of functions available to each system user stems from the set of privileges for which the system user is grantee. System administrator does not provide any attribute for distinguishing between individuals and applications. \r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected SignatureEnvelope signature;
 	/**
 	 * Contains the digital signature of the Business Entity authorised to sign
 	 * this Business File.
@@ -143,7 +145,7 @@ public class ApplicationSpecifics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Signature = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignature = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ApplicationSpecifics1.mmObject();
 			isDerived = false;
@@ -151,11 +153,12 @@ public class ApplicationSpecifics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Contains the digital signature of the Business Entity authorised to sign this Business File.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SignatureEnvelope.mmObject();
 		}
 	};
+	protected Number totalNumberOfDocuments;
 	/**
 	 * Gives the total number of instances (messages) within the file.
 	 * <p>
@@ -184,7 +187,7 @@ public class ApplicationSpecifics1 {
 	 * "Gives the total number of instances (messages) within the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfDocuments = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfDocuments = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ApplicationSpecifics1.mmObject();
 			isDerived = false;
@@ -192,8 +195,8 @@ public class ApplicationSpecifics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfDocuments";
 			definition = "Gives the total number of instances (messages) within the file.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -201,14 +204,38 @@ public class ApplicationSpecifics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationSpecifics1.SystemUser, com.tools20022.repository.msg.ApplicationSpecifics1.Signature,
-						com.tools20022.repository.msg.ApplicationSpecifics1.TotalNumberOfDocuments);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationSpecifics1.mmSystemUser, com.tools20022.repository.msg.ApplicationSpecifics1.mmSignature,
+						com.tools20022.repository.msg.ApplicationSpecifics1.mmTotalNumberOfDocuments);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ApplicationSpecifics1";
 				definition = "Application specific information defined by the service provider.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getSystemUser() {
+		return systemUser;
+	}
+
+	public void setSystemUser(Max140Text systemUser) {
+		this.systemUser = systemUser;
+	}
+
+	public SignatureEnvelope getSignature() {
+		return signature;
+	}
+
+	public void setSignature(SignatureEnvelope signature) {
+		this.signature = signature;
+	}
+
+	public Number getTotalNumberOfDocuments() {
+		return totalNumberOfDocuments;
+	}
+
+	public void setTotalNumberOfDocuments(Number totalNumberOfDocuments) {
+		this.totalNumberOfDocuments = totalNumberOfDocuments;
 	}
 }

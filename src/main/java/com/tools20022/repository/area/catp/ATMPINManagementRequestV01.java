@@ -56,24 +56,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#Header
- * ATMPINManagementRequestV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#mmHeader
+ * ATMPINManagementRequestV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#ProtectedATMPINManagementRequest
- * ATMPINManagementRequestV01.ProtectedATMPINManagementRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#mmProtectedATMPINManagementRequest
+ * ATMPINManagementRequestV01.mmProtectedATMPINManagementRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#ATMPINManagementRequest
- * ATMPINManagementRequestV01.ATMPINManagementRequest}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#mmATMPINManagementRequest
+ * ATMPINManagementRequestV01.mmATMPINManagementRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#SecurityTrailer
- * ATMPINManagementRequestV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#mmSecurityTrailer
+ * ATMPINManagementRequestV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01#identifier
- * ATMPINManagementRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catp.010.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMPINManagementRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header20 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -122,17 +121,18 @@ public class ATMPINManagementRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header20.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedATMPINManagementRequest;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -156,17 +156,18 @@ public class ATMPINManagementRequestV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedATMPINManagementRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedATMPINManagementRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMPINMgmtReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMPINManagementRequest";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected ATMPINManagementRequest1 aTMPINManagementRequest;
 	/**
 	 * Information related to the request of a PIN management from an ATM.
 	 * <p>
@@ -191,17 +192,18 @@ public class ATMPINManagementRequestV01 {
 	 * "Information related to the request of a PIN management from an ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMPINManagementRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMPINManagementRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMPINMgmtReq";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMPINManagementRequest";
 			definition = "Information related to the request of a PIN management from an ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ATMPINManagementRequest1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -225,42 +227,15 @@ public class ATMPINManagementRequestV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "010"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catp";
-			messageFunctionality = "010";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -275,11 +250,50 @@ public class ATMPINManagementRequestV01 {
 				rootElement = "Document";
 				xmlTag = "ATMPINMgmtReq";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMPINManagementRequestV01.Header, com.tools20022.repository.area.catp.ATMPINManagementRequestV01.ProtectedATMPINManagementRequest,
-						com.tools20022.repository.area.catp.ATMPINManagementRequestV01.ATMPINManagementRequest, com.tools20022.repository.area.catp.ATMPINManagementRequestV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catp.ATMPINManagementRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmHeader, com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmProtectedATMPINManagementRequest,
+						com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmATMPINManagementRequest, com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catp";
+						messageFunctionality = "010";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header20 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header20 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedATMPINManagementRequest() {
+		return protectedATMPINManagementRequest;
+	}
+
+	public void setProtectedATMPINManagementRequest(ContentInformationType10 protectedATMPINManagementRequest) {
+		this.protectedATMPINManagementRequest = protectedATMPINManagementRequest;
+	}
+
+	public ATMPINManagementRequest1 getATMPINManagementRequest() {
+		return aTMPINManagementRequest;
+	}
+
+	public void setATMPINManagementRequest(ATMPINManagementRequest1 aTMPINManagementRequest) {
+		this.aTMPINManagementRequest = aTMPINManagementRequest;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

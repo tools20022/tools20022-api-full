@@ -37,18 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateOccurrences3#SequenceType
- * MandateOccurrences3.SequenceType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateOccurrences3#Frequency
- * MandateOccurrences3.Frequency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateOccurrences3#Duration
- * MandateOccurrences3.Duration}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateOccurrences3#mmSequenceType
+ * MandateOccurrences3.mmSequenceType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateOccurrences3#FirstCollectionDate
- * MandateOccurrences3.FirstCollectionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateOccurrences3#mmFrequency
+ * MandateOccurrences3.mmFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateOccurrences3#mmDuration
+ * MandateOccurrences3.mmDuration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateOccurrences3#FinalCollectionDate
- * MandateOccurrences3.FinalCollectionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateOccurrences3#mmFirstCollectionDate
+ * MandateOccurrences3.mmFirstCollectionDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MandateOccurrences3#mmFinalCollectionDate
+ * MandateOccurrences3.mmFinalCollectionDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateOccurrences3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SequenceType2Code sequenceType;
 	/**
 	 * Identifies the underlying transaction sequence as either recurring or
 	 * one-off.
@@ -99,8 +101,8 @@ public class MandateOccurrences3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#SequenceType
-	 * PaymentProcessing.SequenceType}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmSequenceType
+	 * PaymentProcessing.mmSequenceType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -123,33 +125,34 @@ public class MandateOccurrences3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#SequenceType
-	 * MandateOccurrences4.SequenceType}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#mmSequenceType
+	 * MandateOccurrences4.mmSequenceType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#SequenceType
-	 * MandateOccurrences2.SequenceType}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#mmSequenceType
+	 * MandateOccurrences2.mmSequenceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SequenceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSequenceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmSequenceType;
 			componentContext_lazy = () -> MandateOccurrences3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.SequenceType;
 			isDerived = false;
 			xmlTag = "SeqTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceType";
 			definition = "Identifies the underlying transaction sequence as either recurring or one-off.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateOccurrences2.SequenceType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences4.SequenceType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences4.mmSequenceType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateOccurrences2.mmSequenceType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SequenceType2Code.mmObject();
 		}
 	};
+	protected Frequency21Choice frequency;
 	/**
 	 * Regularity with which instructions are to be created and processed.
 	 * <p>
@@ -163,8 +166,8 @@ public class MandateOccurrences3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#Frequency
-	 * DirectDebitMandate.Frequency}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmFrequency
+	 * DirectDebitMandate.mmFrequency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -186,33 +189,34 @@ public class MandateOccurrences3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#Frequency
-	 * MandateOccurrences4.Frequency}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#mmFrequency
+	 * MandateOccurrences4.mmFrequency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#Frequency
-	 * MandateOccurrences2.Frequency}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#mmFrequency
+	 * MandateOccurrences2.mmFrequency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Frequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmFrequency;
 			componentContext_lazy = () -> MandateOccurrences3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.Frequency;
 			isDerived = false;
 			xmlTag = "Frqcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Regularity with which instructions are to be created and processed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateOccurrences2.Frequency;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences4.Frequency);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences4.mmFrequency);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateOccurrences2.mmFrequency;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Frequency21Choice.mmObject();
 		}
 	};
+	protected DatePeriodDetails1 duration;
 	/**
 	 * Length of time for which the mandate remains valid.
 	 * <p>
@@ -226,8 +230,8 @@ public class MandateOccurrences3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#ValidityPeriod
-	 * Agreement.ValidityPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmValidityPeriod
+	 * Agreement.mmValidityPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -248,33 +252,34 @@ public class MandateOccurrences3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#Duration
-	 * MandateOccurrences4.Duration}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#mmDuration
+	 * MandateOccurrences4.mmDuration}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#Duration
-	 * MandateOccurrences2.Duration}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#mmDuration
+	 * MandateOccurrences2.mmDuration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Duration = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDuration = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmValidityPeriod;
 			componentContext_lazy = () -> MandateOccurrences3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.ValidityPeriod;
 			isDerived = false;
 			xmlTag = "Drtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duration";
 			definition = "Length of time for which the mandate remains valid.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateOccurrences2.Duration;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences4.Duration);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences4.mmDuration);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateOccurrences2.mmDuration;
 			maxOccurs = 1;
-			complexType_lazy = () -> DatePeriodDetails1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails1.mmObject();
 		}
 	};
+	protected ISODate firstCollectionDate;
 	/**
 	 * Date of the first collection of a direct debit as per the mandate.
 	 * <p>
@@ -287,8 +292,8 @@ public class MandateOccurrences3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#FirstCollectionDate
-	 * DirectDebitMandate.FirstCollectionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmFirstCollectionDate
+	 * DirectDebitMandate.mmFirstCollectionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -310,33 +315,34 @@ public class MandateOccurrences3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#FirstCollectionDate
-	 * MandateOccurrences4.FirstCollectionDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#mmFirstCollectionDate
+	 * MandateOccurrences4.mmFirstCollectionDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#FirstCollectionDate
-	 * MandateOccurrences2.FirstCollectionDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#mmFirstCollectionDate
+	 * MandateOccurrences2.mmFirstCollectionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FirstCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFirstCollectionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmFirstCollectionDate;
 			componentContext_lazy = () -> MandateOccurrences3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.FirstCollectionDate;
 			isDerived = false;
 			xmlTag = "FrstColltnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstCollectionDate";
 			definition = "Date of the first collection of a direct debit as per the mandate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateOccurrences2.FirstCollectionDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences4.FirstCollectionDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences4.mmFirstCollectionDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateOccurrences2.mmFirstCollectionDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate finalCollectionDate;
 	/**
 	 * Date of the final collection of a direct debit as per the mandate.
 	 * <p>
@@ -349,8 +355,8 @@ public class MandateOccurrences3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#FinalCollectionDate
-	 * DirectDebitMandate.FinalCollectionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmFinalCollectionDate
+	 * DirectDebitMandate.mmFinalCollectionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -372,30 +378,30 @@ public class MandateOccurrences3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#FinalCollectionDate
-	 * MandateOccurrences4.FinalCollectionDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#mmFinalCollectionDate
+	 * MandateOccurrences4.mmFinalCollectionDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#FinalCollectionDate
-	 * MandateOccurrences2.FinalCollectionDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences2#mmFinalCollectionDate
+	 * MandateOccurrences2.mmFinalCollectionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinalCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinalCollectionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmFinalCollectionDate;
 			componentContext_lazy = () -> MandateOccurrences3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.FinalCollectionDate;
 			isDerived = false;
 			xmlTag = "FnlColltnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalCollectionDate";
 			definition = "Date of the final collection of a direct debit as per the mandate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateOccurrences2.FinalCollectionDate;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences4.FinalCollectionDate);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences4.mmFinalCollectionDate);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateOccurrences2.mmFinalCollectionDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -403,17 +409,57 @@ public class MandateOccurrences3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences3.SequenceType, com.tools20022.repository.msg.MandateOccurrences3.Frequency,
-						com.tools20022.repository.msg.MandateOccurrences3.Duration, com.tools20022.repository.msg.MandateOccurrences3.FirstCollectionDate, com.tools20022.repository.msg.MandateOccurrences3.FinalCollectionDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences3.mmSequenceType, com.tools20022.repository.msg.MandateOccurrences3.mmFrequency,
+						com.tools20022.repository.msg.MandateOccurrences3.mmDuration, com.tools20022.repository.msg.MandateOccurrences3.mmFirstCollectionDate, com.tools20022.repository.msg.MandateOccurrences3.mmFinalCollectionDate);
 				trace_lazy = () -> DirectDebitMandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateOccurrences3";
 				definition = "Provides further details related to the duration of the mandate and the occurrence of the underlying transactions.";
-				previousVersion_lazy = () -> MandateOccurrences2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(MandateOccurrences4.mmObject());
+				previousVersion_lazy = () -> MandateOccurrences2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SequenceType2Code getSequenceType() {
+		return sequenceType;
+	}
+
+	public void setSequenceType(SequenceType2Code sequenceType) {
+		this.sequenceType = sequenceType;
+	}
+
+	public Frequency21Choice getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(Frequency21Choice frequency) {
+		this.frequency = frequency;
+	}
+
+	public DatePeriodDetails1 getDuration() {
+		return duration;
+	}
+
+	public void setDuration(com.tools20022.repository.msg.DatePeriodDetails1 duration) {
+		this.duration = duration;
+	}
+
+	public ISODate getFirstCollectionDate() {
+		return firstCollectionDate;
+	}
+
+	public void setFirstCollectionDate(ISODate firstCollectionDate) {
+		this.firstCollectionDate = firstCollectionDate;
+	}
+
+	public ISODate getFinalCollectionDate() {
+		return finalCollectionDate;
+	}
+
+	public void setFinalCollectionDate(ISODate finalCollectionDate) {
+		this.finalCollectionDate = finalCollectionDate;
 	}
 }

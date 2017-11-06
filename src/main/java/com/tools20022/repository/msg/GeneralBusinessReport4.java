@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#BusinessInformationReference
- * GeneralBusinessReport4.BusinessInformationReference}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#mmBusinessInformationReference
+ * GeneralBusinessReport4.mmBusinessInformationReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#GeneralBusinessOrError
- * GeneralBusinessReport4.GeneralBusinessOrError}</li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#mmGeneralBusinessOrError
+ * GeneralBusinessReport4.mmGeneralBusinessOrError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GeneralBusinessReport4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text businessInformationReference;
 	/**
 	 * Unique and unambiguous identification of a general business information
 	 * system, as assigned by the system transaction administrator.
@@ -83,8 +84,8 @@ public class GeneralBusinessReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#Identification
-	 * SystemBusinessInformation.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation#mmIdentification
+	 * SystemBusinessInformation.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,25 +107,26 @@ public class GeneralBusinessReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3#BusinessInformationReference
-	 * GeneralBusinessReport3.BusinessInformationReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3#mmBusinessInformationReference
+	 * GeneralBusinessReport3.mmBusinessInformationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BusinessInformationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBusinessInformationReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmIdentification;
 			componentContext_lazy = () -> GeneralBusinessReport4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.Identification;
 			isDerived = false;
 			xmlTag = "BizInfRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessInformationReference";
 			definition = "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport3.BusinessInformationReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport3.mmBusinessInformationReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected GeneralBusinessOrError4Choice generalBusinessOrError;
 	/**
 	 * Requested business information.
 	 * <p>
@@ -158,33 +160,33 @@ public class GeneralBusinessReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3#GeneralBusinessOrError
-	 * GeneralBusinessReport3.GeneralBusinessOrError}</li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3#mmGeneralBusinessOrError
+	 * GeneralBusinessReport3.mmGeneralBusinessOrError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GeneralBusinessOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGeneralBusinessOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GeneralBusinessReport4.mmObject();
 			businessComponentTrace_lazy = () -> SystemBusinessInformation.mmObject();
+			componentContext_lazy = () -> GeneralBusinessReport4.mmObject();
 			isDerived = false;
 			xmlTag = "GnlBizOrErr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralBusinessOrError";
 			definition = "Requested business information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport3.GeneralBusinessOrError;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport3.mmGeneralBusinessOrError;
 			maxOccurs = 1;
-			type_lazy = () -> GeneralBusinessOrError4Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GeneralBusinessOrError4Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessReport4.BusinessInformationReference, com.tools20022.repository.msg.GeneralBusinessReport4.GeneralBusinessOrError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessReport4.mmBusinessInformationReference, com.tools20022.repository.msg.GeneralBusinessReport4.mmGeneralBusinessOrError);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GeneralBusinessReport4";
 				definition = "Reports either on the business information or on a business error.";
@@ -192,5 +194,21 @@ public class GeneralBusinessReport4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getBusinessInformationReference() {
+		return businessInformationReference;
+	}
+
+	public void setBusinessInformationReference(Max35Text businessInformationReference) {
+		this.businessInformationReference = businessInformationReference;
+	}
+
+	public GeneralBusinessOrError4Choice getGeneralBusinessOrError() {
+		return generalBusinessOrError;
+	}
+
+	public void setGeneralBusinessOrError(GeneralBusinessOrError4Choice generalBusinessOrError) {
+		this.generalBusinessOrError = generalBusinessOrError;
 	}
 }

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.entity.Role;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Organisation represented by a person, or for which a person works.
@@ -35,16 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.EmployingPartyRole#Employee
- * EmployingPartyRole.Employee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.EmployingPartyRole#mmEmployee
+ * EmployingPartyRole.mmEmployee}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Person#EmployingParty
- * Person.EmployingParty}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Person#mmEmployingParty
+ * Person.mmEmployingParty}</li>
  * </ul>
  * </li>
  * <li>
@@ -52,59 +54,59 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson10#EmployingCompany
- * IndividualPerson10.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson10#mmEmployingCompany
+ * IndividualPerson10.mmEmployingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson20#EmployingCompany
- * IndividualPerson20.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson20#mmEmployingCompany
+ * IndividualPerson20.mmEmployingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson11#EmployingCompany
- * IndividualPerson11.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson11#mmEmployingCompany
+ * IndividualPerson11.mmEmployingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson7#EmployingParty
- * IndividualPerson7.EmployingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson7#mmEmployingParty
+ * IndividualPerson7.mmEmployingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson14#EmployingParty
- * IndividualPerson14.EmployingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson14#mmEmployingParty
+ * IndividualPerson14.mmEmployingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson16#EmployingParty
- * IndividualPerson16.EmployingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson16#mmEmployingParty
+ * IndividualPerson16.mmEmployingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson13#EmployingParty
- * IndividualPerson13.EmployingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson13#mmEmployingParty
+ * IndividualPerson13.mmEmployingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson17#EmployingParty
- * IndividualPerson17.EmployingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson17#mmEmployingParty
+ * IndividualPerson17.mmEmployingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson21#EmployingCompany
- * IndividualPerson21.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson21#mmEmployingCompany
+ * IndividualPerson21.mmEmployingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson22#EmployingCompany
- * IndividualPerson22.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson22#mmEmployingCompany
+ * IndividualPerson22.mmEmployingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson23#EmployingCompany
- * IndividualPerson23.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson23#mmEmployingCompany
+ * IndividualPerson23.mmEmployingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson24#EmployingCompany
- * IndividualPerson24.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmEmployingCompany
+ * IndividualPerson24.mmEmployingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson25#EmployingParty
- * IndividualPerson25.EmployingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson25#mmEmployingParty
+ * IndividualPerson25.mmEmployingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson26#EmployingParty
- * IndividualPerson26.EmployingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson26#mmEmployingParty
+ * IndividualPerson26.mmEmployingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson28#EmployingCompany
- * IndividualPerson28.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson28#mmEmployingCompany
+ * IndividualPerson28.mmEmployingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson27#EmployingCompany
- * IndividualPerson27.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson27#mmEmployingCompany
+ * IndividualPerson27.mmEmployingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson33#EmployingCompany
- * IndividualPerson33.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson33#mmEmployingCompany
+ * IndividualPerson33.mmEmployingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson34#EmployingCompany
- * IndividualPerson34.EmployingCompany}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson34#mmEmployingCompany
+ * IndividualPerson34.mmEmployingCompany}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -112,8 +114,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -128,6 +130,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EmployingPartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.Person> employee;
 	/**
 	 * Identifies the employee of a party.
 	 * <p>
@@ -136,8 +139,8 @@ public class EmployingPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Person#EmployingParty
-	 * Person.EmployingParty}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmEmployingParty
+	 * Person.mmEmployingParty}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -160,7 +163,7 @@ public class EmployingPartyRole extends Role {
 	 * definition} = "Identifies the employee of a party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Employee = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmEmployee = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> EmployingPartyRole.mmObject();
 			isDerived = false;
@@ -168,31 +171,39 @@ public class EmployingPartyRole extends Role {
 			name = "Employee";
 			definition = "Identifies the employee of a party.";
 			minOccurs = 0;
-			type_lazy = () -> Person.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Person.EmployingParty;
+			opposite_lazy = () -> com.tools20022.repository.entity.Person.mmEmployingParty;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EmployingPartyRole";
 				definition = "Organisation represented by a person, or for which a person works.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.EmployingParty);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson10.EmployingCompany, com.tools20022.repository.msg.IndividualPerson20.EmployingCompany,
-						com.tools20022.repository.msg.IndividualPerson11.EmployingCompany, com.tools20022.repository.msg.IndividualPerson7.EmployingParty, com.tools20022.repository.msg.IndividualPerson14.EmployingParty,
-						com.tools20022.repository.msg.IndividualPerson16.EmployingParty, com.tools20022.repository.msg.IndividualPerson13.EmployingParty, com.tools20022.repository.msg.IndividualPerson17.EmployingParty,
-						com.tools20022.repository.msg.IndividualPerson21.EmployingCompany, com.tools20022.repository.msg.IndividualPerson22.EmployingCompany, com.tools20022.repository.msg.IndividualPerson23.EmployingCompany,
-						com.tools20022.repository.msg.IndividualPerson24.EmployingCompany, com.tools20022.repository.msg.IndividualPerson25.EmployingParty, com.tools20022.repository.msg.IndividualPerson26.EmployingParty,
-						com.tools20022.repository.msg.IndividualPerson28.EmployingCompany, com.tools20022.repository.msg.IndividualPerson27.EmployingCompany, com.tools20022.repository.msg.IndividualPerson33.EmployingCompany,
-						com.tools20022.repository.msg.IndividualPerson34.EmployingCompany);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmEmployingParty);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson10.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson20.mmEmployingCompany,
+						com.tools20022.repository.msg.IndividualPerson11.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson7.mmEmployingParty, com.tools20022.repository.msg.IndividualPerson14.mmEmployingParty,
+						com.tools20022.repository.msg.IndividualPerson16.mmEmployingParty, com.tools20022.repository.msg.IndividualPerson13.mmEmployingParty, com.tools20022.repository.msg.IndividualPerson17.mmEmployingParty,
+						com.tools20022.repository.msg.IndividualPerson21.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson22.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson23.mmEmployingCompany,
+						com.tools20022.repository.msg.IndividualPerson24.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson25.mmEmployingParty, com.tools20022.repository.msg.IndividualPerson26.mmEmployingParty,
+						com.tools20022.repository.msg.IndividualPerson28.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson27.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson33.mmEmployingCompany,
+						com.tools20022.repository.msg.IndividualPerson34.mmEmployingCompany);
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.EmployingPartyRole.Employee);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.EmployingPartyRole.mmEmployee);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Person> getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(List<com.tools20022.repository.entity.Person> employee) {
+		this.employee = employee;
 	}
 }

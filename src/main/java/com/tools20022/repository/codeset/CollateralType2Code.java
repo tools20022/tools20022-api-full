@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * CollateralTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralType2Code#Cash
- * CollateralType2Code.Cash}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralType2Code#mmCash
+ * CollateralType2Code.mmCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralType2Code#Securities
- * CollateralType2Code.Securities}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralType2Code#mmSecurities
+ * CollateralType2Code.mmSecurities}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +80,7 @@ public class CollateralType2Code extends CollateralTypeCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cash = new MMCode() {
+	public static final MMCode mmCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
@@ -103,7 +103,7 @@ public class CollateralType2Code extends CollateralTypeCode {
 	 * name} = "Securities"</li>
 	 * </ul>
 	 */
-	public static final MMCode Securities = new MMCode() {
+	public static final MMCode mmSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
@@ -114,12 +114,12 @@ public class CollateralType2Code extends CollateralTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralType2Code";
 				definition = "Specifies the type of collateral.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralType2Code.Cash, com.tools20022.repository.codeset.CollateralType2Code.Securities);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralType2Code.mmCash, com.tools20022.repository.codeset.CollateralType2Code.mmSecurities);
 				trace_lazy = () -> CollateralTypeCode.mmObject();
 			}
 		});

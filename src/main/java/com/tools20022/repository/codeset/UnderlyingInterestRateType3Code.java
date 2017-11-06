@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#Bond
- * UnderlyingInterestRateType3Code.Bond}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#mmBond
+ * UnderlyingInterestRateType3Code.mmBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#BondFuture
- * UnderlyingInterestRateType3Code.BondFuture}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#mmBondFuture
+ * UnderlyingInterestRateType3Code.mmBondFuture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#InterestRate
- * UnderlyingInterestRateType3Code.InterestRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#mmInterestRate
+ * UnderlyingInterestRateType3Code.mmInterestRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#InterestRateFutureFRA
- * UnderlyingInterestRateType3Code.InterestRateFutureFRA}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#mmInterestRateFutureFRA
+ * UnderlyingInterestRateType3Code.mmInterestRateFutureFRA}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,7 +83,7 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 * name} = "Bond"</li>
 	 * </ul>
 	 */
-	public static final MMCode Bond = new MMCode() {
+	public static final MMCode mmBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
@@ -106,7 +106,7 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 * name} = "BondFuture"</li>
 	 * </ul>
 	 */
-	public static final MMCode BondFuture = new MMCode() {
+	public static final MMCode mmBondFuture = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondFuture";
@@ -129,7 +129,7 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 * name} = "InterestRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestRate = new MMCode() {
+	public static final MMCode mmInterestRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
@@ -152,7 +152,7 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 * name} = "InterestRateFutureFRA"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestRateFutureFRA = new MMCode() {
+	public static final MMCode mmInterestRateFutureFRA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRateFutureFRA";
@@ -163,12 +163,12 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingInterestRateType3Code";
 				definition = "Specifies the type of an underlying contract for interest rate derivatives.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.Bond, com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.BondFuture,
-						com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.InterestRate, com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.InterestRateFutureFRA);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmBond, com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmBondFuture,
+						com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmInterestRate, com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmInterestRateFutureFRA);
 				trace_lazy = () -> UnderlyingTypeV3Code.mmObject();
 			}
 		});

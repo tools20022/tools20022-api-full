@@ -35,55 +35,55 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#AwaitingSharesFromCounterparty
- * PendingSettlementStatusReason1Code.AwaitingSharesFromCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmAwaitingSharesFromCounterparty
+ * PendingSettlementStatusReason1Code.mmAwaitingSharesFromCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#AccountBlocked
- * PendingSettlementStatusReason1Code.AccountBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmAccountBlocked
+ * PendingSettlementStatusReason1Code.mmAccountBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#AwaitingSecurities
- * PendingSettlementStatusReason1Code.AwaitingSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmAwaitingSecurities
+ * PendingSettlementStatusReason1Code.mmAwaitingSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#CounterpartyInsufficientSecurities
- * PendingSettlementStatusReason1Code.CounterpartyInsufficientSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmCounterpartyInsufficientSecurities
+ * PendingSettlementStatusReason1Code.mmCounterpartyInsufficientSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#AwaitingDocumentsOrEndorsementsFromCounterparty
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmAwaitingDocumentsOrEndorsementsFromCounterparty
  * PendingSettlementStatusReason1Code.
- * AwaitingDocumentsOrEndorsementsFromCounterparty}</li>
+ * mmAwaitingDocumentsOrEndorsementsFromCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#AwaitingDocumentsOrEndorsementsFromYou
- * PendingSettlementStatusReason1Code.AwaitingDocumentsOrEndorsementsFromYou}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmAwaitingDocumentsOrEndorsementsFromYou
+ * PendingSettlementStatusReason1Code.mmAwaitingDocumentsOrEndorsementsFromYou}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#StatusReasonInvestigation
- * PendingSettlementStatusReason1Code.StatusReasonInvestigation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmStatusReasonInvestigation
+ * PendingSettlementStatusReason1Code.mmStatusReasonInvestigation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#LackOfSecurities
- * PendingSettlementStatusReason1Code.LackOfSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmLackOfSecurities
+ * PendingSettlementStatusReason1Code.mmLackOfSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#PendingLinkedInstruction
- * PendingSettlementStatusReason1Code.PendingLinkedInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmPendingLinkedInstruction
+ * PendingSettlementStatusReason1Code.mmPendingLinkedInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#Other
- * PendingSettlementStatusReason1Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmOther
+ * PendingSettlementStatusReason1Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#PhysicalSecuritiesVerification
- * PendingSettlementStatusReason1Code.PhysicalSecuritiesVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmPhysicalSecuritiesVerification
+ * PendingSettlementStatusReason1Code.mmPhysicalSecuritiesVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#PhysicalDeliveryDelay
- * PendingSettlementStatusReason1Code.PhysicalDeliveryDelay}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmPhysicalDeliveryDelay
+ * PendingSettlementStatusReason1Code.mmPhysicalDeliveryDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#SecuritiesBlocked
- * PendingSettlementStatusReason1Code.SecuritiesBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmSecuritiesBlocked
+ * PendingSettlementStatusReason1Code.mmSecuritiesBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#MissingInformation
- * PendingSettlementStatusReason1Code.MissingInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingSettlementStatusReason1Code#mmMissingInformation
+ * PendingSettlementStatusReason1Code.mmMissingInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -121,7 +121,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "AwaitingSharesFromCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingSharesFromCounterparty = new MMCode() {
+	public static final MMCode mmAwaitingSharesFromCounterparty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSharesFromCounterparty";
@@ -144,7 +144,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "AccountBlocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountBlocked = new MMCode() {
+	public static final MMCode mmAccountBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlocked";
@@ -167,7 +167,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "AwaitingSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingSecurities = new MMCode() {
+	public static final MMCode mmAwaitingSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSecurities";
@@ -190,7 +190,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "CounterpartyInsufficientSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyInsufficientSecurities = new MMCode() {
+	public static final MMCode mmCounterpartyInsufficientSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInsufficientSecurities";
@@ -213,7 +213,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "AwaitingDocumentsOrEndorsementsFromCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingDocumentsOrEndorsementsFromCounterparty = new MMCode() {
+	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromCounterparty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromCounterparty";
@@ -236,7 +236,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "AwaitingDocumentsOrEndorsementsFromYou"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
+	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromYou";
@@ -259,7 +259,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "StatusReasonInvestigation"</li>
 	 * </ul>
 	 */
-	public static final MMCode StatusReasonInvestigation = new MMCode() {
+	public static final MMCode mmStatusReasonInvestigation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInvestigation";
@@ -282,7 +282,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "LackOfSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode LackOfSecurities = new MMCode() {
+	public static final MMCode mmLackOfSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfSecurities";
@@ -305,7 +305,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "PendingLinkedInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingLinkedInstruction = new MMCode() {
+	public static final MMCode mmPendingLinkedInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingLinkedInstruction";
@@ -328,7 +328,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -351,7 +351,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "PhysicalSecuritiesVerification"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalSecuritiesVerification = new MMCode() {
+	public static final MMCode mmPhysicalSecuritiesVerification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSecuritiesVerification";
@@ -374,7 +374,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "PhysicalDeliveryDelay"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhysicalDeliveryDelay = new MMCode() {
+	public static final MMCode mmPhysicalDeliveryDelay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDelay";
@@ -397,7 +397,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "SecuritiesBlocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesBlocked = new MMCode() {
+	public static final MMCode mmSecuritiesBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBlocked";
@@ -420,7 +420,7 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	 * name} = "MissingInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode MissingInformation = new MMCode() {
+	public static final MMCode mmMissingInformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInformation";
@@ -431,19 +431,19 @@ public class PendingSettlementStatusReason1Code extends PendingSettlementStatusR
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AWSH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingSettlementStatusReason1Code";
 				definition = "Specifies the reason for a transfer or settlement instruction settlement pending status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.AwaitingSharesFromCounterparty, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.AccountBlocked,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.AwaitingSecurities, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.CounterpartyInsufficientSecurities,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.AwaitingDocumentsOrEndorsementsFromCounterparty,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.AwaitingDocumentsOrEndorsementsFromYou, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.StatusReasonInvestigation,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.LackOfSecurities, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.PendingLinkedInstruction,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.Other, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.PhysicalSecuritiesVerification,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.PhysicalDeliveryDelay, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.SecuritiesBlocked,
-						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.MissingInformation);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmAwaitingSharesFromCounterparty, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmAccountBlocked,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmAwaitingSecurities, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmCounterpartyInsufficientSecurities,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmAwaitingDocumentsOrEndorsementsFromCounterparty,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmAwaitingDocumentsOrEndorsementsFromYou, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmStatusReasonInvestigation,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmLackOfSecurities, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmPendingLinkedInstruction,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmOther, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmPhysicalSecuritiesVerification,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmPhysicalDeliveryDelay, com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmSecuritiesBlocked,
+						com.tools20022.repository.codeset.PendingSettlementStatusReason1Code.mmMissingInformation);
 				trace_lazy = () -> PendingSettlementStatusReasonCode.mmObject();
 			}
 		});

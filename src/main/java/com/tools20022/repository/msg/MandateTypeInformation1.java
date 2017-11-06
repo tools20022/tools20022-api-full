@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateTypeInformation1#ServiceLevel
- * MandateTypeInformation1.ServiceLevel}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateTypeInformation1#mmServiceLevel
+ * MandateTypeInformation1.mmServiceLevel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MandateTypeInformation1#LocalInstrument
- * MandateTypeInformation1.LocalInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.MandateTypeInformation1#mmLocalInstrument
+ * MandateTypeInformation1.mmLocalInstrument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateTypeInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ServiceLevel8Choice serviceLevel;
 	/**
 	 * Agreement under which or rules under which the mandate resides.
 	 * <p>
@@ -83,8 +84,8 @@ public class MandateTypeInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#ServiceLevel
-	 * PaymentProcessing.ServiceLevel}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmServiceLevel
+	 * PaymentProcessing.mmServiceLevel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,28 +107,29 @@ public class MandateTypeInformation1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateTypeInformation2#ServiceLevel
-	 * MandateTypeInformation2.ServiceLevel}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateTypeInformation2#mmServiceLevel
+	 * MandateTypeInformation2.mmServiceLevel}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> MandateTypeInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.ServiceLevel;
 			isDerived = false;
 			xmlTag = "SvcLvl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevel";
 			definition = "Agreement under which or rules under which the mandate resides.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateTypeInformation2.ServiceLevel);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateTypeInformation2.mmServiceLevel);
 			maxOccurs = 1;
-			type_lazy = () -> ServiceLevel8Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ServiceLevel8Choice.mmObject();
 		}
 	};
+	protected LocalInstrument2Choice localInstrument;
 	/**
 	 * User community specific instrument. Usage: This element is used to
 	 * specify a local instrument, local clearing option and/or further qualify
@@ -142,8 +144,8 @@ public class MandateTypeInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#MandatePaymentType
-	 * DirectDebitMandate.MandatePaymentType}</li>
+	 * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmMandatePaymentType
+	 * DirectDebitMandate.mmMandatePaymentType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,35 +168,35 @@ public class MandateTypeInformation1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MandateTypeInformation2#LocalInstrument
-	 * MandateTypeInformation2.LocalInstrument}</li>
+	 * {@linkplain com.tools20022.repository.msg.MandateTypeInformation2#mmLocalInstrument
+	 * MandateTypeInformation2.mmLocalInstrument}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LocalInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmMandatePaymentType;
 			componentContext_lazy = () -> MandateTypeInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.MandatePaymentType;
 			isDerived = false;
 			xmlTag = "LclInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalInstrument";
 			definition = "User community specific instrument.\nUsage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateTypeInformation2.LocalInstrument);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateTypeInformation2.mmLocalInstrument);
 			maxOccurs = 1;
-			type_lazy = () -> LocalInstrument2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> LocalInstrument2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateTypeInformation1.ServiceLevel, com.tools20022.repository.msg.MandateTypeInformation1.LocalInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateTypeInformation1.mmServiceLevel, com.tools20022.repository.msg.MandateTypeInformation1.mmLocalInstrument);
 				trace_lazy = () -> Mandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MandateTypeInformation1";
 				definition = "Set of elements used to further detail the information related to the type of payment.";
@@ -202,5 +204,21 @@ public class MandateTypeInformation1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ServiceLevel8Choice getServiceLevel() {
+		return serviceLevel;
+	}
+
+	public void setServiceLevel(ServiceLevel8Choice serviceLevel) {
+		this.serviceLevel = serviceLevel;
+	}
+
+	public LocalInstrument2Choice getLocalInstrument() {
+		return localInstrument;
+	}
+
+	public void setLocalInstrument(LocalInstrument2Choice localInstrument) {
+		this.localInstrument = localInstrument;
 	}
 }

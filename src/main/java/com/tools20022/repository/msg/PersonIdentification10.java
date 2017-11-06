@@ -36,15 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification10#FirstName
- * PersonIdentification10.FirstName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification10#Name
- * PersonIdentification10.Name}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification10#mmFirstName
+ * PersonIdentification10.mmFirstName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification10#mmName
+ * PersonIdentification10.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification10#BirthDate
- * PersonIdentification10.BirthDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification10#Other
- * PersonIdentification10.Other}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification10#mmBirthDate
+ * PersonIdentification10.mmBirthDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification10#mmOther
+ * PersonIdentification10.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PersonIdentification10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text firstName;
 	/**
 	 * First name of a person (also known as given name).
 	 * <p>
@@ -84,8 +85,8 @@ public class PersonIdentification10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#GivenName
-	 * PersonName.GivenName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmGivenName
+	 * PersonName.mmGivenName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +105,21 @@ public class PersonIdentification10 {
 	 * definition} = "First name of a person (also known as given name)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FirstName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFirstName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmGivenName;
 			componentContext_lazy = () -> PersonIdentification10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.GivenName;
 			isDerived = false;
 			xmlTag = "FrstNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstName";
 			definition = "First name of a person (also known as given name).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max140Text name;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -131,8 +133,8 @@ public class PersonIdentification10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#Name
-	 * PartyName.Name}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmName
+	 * PartyName.mmName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,20 +155,21 @@ public class PersonIdentification10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
 			componentContext_lazy = () -> PersonIdentification10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.Name;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected ISODate birthDate;
 	/**
 	 * Date on which a person is born.
 	 * <p>
@@ -179,8 +182,8 @@ public class PersonIdentification10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#BirthDate
-	 * Person.BirthDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmBirthDate
+	 * Person.mmBirthDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -199,20 +202,21 @@ public class PersonIdentification10 {
 	 * definition} = "Date on which a person is born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BirthDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmBirthDate;
 			componentContext_lazy = () -> PersonIdentification10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.BirthDate;
 			isDerived = false;
 			xmlTag = "BirthDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BirthDate";
 			definition = "Date on which a person is born.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected GenericPersonIdentification1 other;
 	/**
 	 * Unique identification of a person, as assigned by an institution, using
 	 * an identification scheme.
@@ -226,8 +230,8 @@ public class PersonIdentification10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -249,34 +253,34 @@ public class PersonIdentification10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification5#Other
-	 * PersonIdentification5.Other}</li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification5#mmOther
+	 * PersonIdentification5.mmOther}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Other = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PersonIdentification10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Unique identification of a person, as assigned by an institution, using an identification scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PersonIdentification5.Other;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PersonIdentification5.mmOther;
 			maxOccurs = 1;
-			type_lazy = () -> GenericPersonIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericPersonIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification10.FirstName, com.tools20022.repository.msg.PersonIdentification10.Name,
-						com.tools20022.repository.msg.PersonIdentification10.BirthDate, com.tools20022.repository.msg.PersonIdentification10.Other);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification10.mmFirstName, com.tools20022.repository.msg.PersonIdentification10.mmName,
+						com.tools20022.repository.msg.PersonIdentification10.mmBirthDate, com.tools20022.repository.msg.PersonIdentification10.mmOther);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentification10";
 				definition = "Unique and unambiguous way to identify a person.";
@@ -284,5 +288,37 @@ public class PersonIdentification10 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(Max140Text firstName) {
+		this.firstName = firstName;
+	}
+
+	public Max140Text getName() {
+		return name;
+	}
+
+	public void setName(Max140Text name) {
+		this.name = name;
+	}
+
+	public ISODate getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(ISODate birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public GenericPersonIdentification1 getOther() {
+		return other;
+	}
+
+	public void setOther(com.tools20022.repository.msg.GenericPersonIdentification1 other) {
+		this.other = other;
 	}
 }

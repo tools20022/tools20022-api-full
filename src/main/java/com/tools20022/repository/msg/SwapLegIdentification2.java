@@ -34,10 +34,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SwapLegIdentification2#SwapIn
- * SwapLegIdentification2.SwapIn}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwapLegIdentification2#SwapOut
- * SwapLegIdentification2.SwapOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwapLegIdentification2#mmSwapIn
+ * SwapLegIdentification2.mmSwapIn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwapLegIdentification2#mmSwapOut
+ * SwapLegIdentification2.mmSwapOut}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SwapLegIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialInstrumentIdentification7Choice swapIn;
 	/**
 	 * Instrument received by the buyer.
 	 * <p>
@@ -92,21 +95,22 @@ public class SwapLegIdentification2 {
 	 * definition} = "Instrument received by the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SwapIn = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSwapIn = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SwapLegIdentification2.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> SwapLegIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "SwpIn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwapIn";
 			definition = "Instrument received by the buyer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentIdentification7Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentIdentification7Choice.mmObject();
 		}
 	};
+	protected FinancialInstrumentIdentification7Choice swapOut;
 	/**
 	 * Instrument paid by the buyer.
 	 * <p>
@@ -139,33 +143,49 @@ public class SwapLegIdentification2 {
 	 * definition} = "Instrument paid by the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SwapOut = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSwapOut = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SwapLegIdentification2.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> SwapLegIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "SwpOut";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwapOut";
 			definition = "Instrument paid by the buyer.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstrumentIdentification7Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancialInstrumentIdentification7Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwapLegIdentification2.SwapIn, com.tools20022.repository.msg.SwapLegIdentification2.SwapOut);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwapLegIdentification2.mmSwapIn, com.tools20022.repository.msg.SwapLegIdentification2.mmSwapOut);
 				trace_lazy = () -> Swaps.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SwapLegIdentification2";
 				definition = "Details of the legs of swap transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialInstrumentIdentification7Choice getSwapIn() {
+		return swapIn;
+	}
+
+	public void setSwapIn(FinancialInstrumentIdentification7Choice swapIn) {
+		this.swapIn = swapIn;
+	}
+
+	public FinancialInstrumentIdentification7Choice getSwapOut() {
+		return swapOut;
+	}
+
+	public void setSwapOut(FinancialInstrumentIdentification7Choice swapOut) {
+		this.swapOut = swapOut;
 	}
 }

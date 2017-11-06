@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.Unrealised1Code;
 import com.tools20022.repository.entity.Balance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Balance related details for a portfolio.
@@ -35,15 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails5#Type
- * BalanceDetails5.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails5#Unrealised
- * BalanceDetails5.Unrealised}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails5#Amount
- * BalanceDetails5.Amount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails5#mmType
+ * BalanceDetails5.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails5#mmUnrealised
+ * BalanceDetails5.mmUnrealised}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails5#mmAmount
+ * BalanceDetails5.mmAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BalanceDetails5#DetailedBalance
- * BalanceDetails5.DetailedBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.BalanceDetails5#mmDetailedBalance
+ * BalanceDetails5.mmDetailedBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BalanceDetails5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BalanceType6Choice type;
 	/**
 	 * Balance type.
 	 * <p>
@@ -79,7 +81,8 @@ public class BalanceDetails5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,20 +101,21 @@ public class BalanceDetails5 {
 	 * definition} = "Balance type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> BalanceDetails5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Balance type.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> BalanceType6Choice.mmObject();
 		}
 	};
+	protected Unrealised1Code unrealised;
 	/**
 	 * Unrealised gain or loss.
 	 * <p>
@@ -125,8 +129,8 @@ public class BalanceDetails5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AssetHolding#UnrealisedType
-	 * AssetHolding.UnrealisedType}</li>
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmUnrealisedType
+	 * AssetHolding.mmUnrealisedType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,20 +149,21 @@ public class BalanceDetails5 {
 	 * definition} = "Unrealised gain or loss."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unrealised = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnrealised = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmUnrealisedType;
 			componentContext_lazy = () -> BalanceDetails5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.UnrealisedType;
 			isDerived = false;
 			xmlTag = "Urlsd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unrealised";
 			definition = "Unrealised gain or loss.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Unrealised1Code.mmObject();
 		}
 	};
+	protected AmountAndDirection31 amount;
 	/**
 	 * Balance amount.
 	 * <p>
@@ -172,8 +177,8 @@ public class BalanceDetails5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashBalance#Amount
-	 * CashBalance.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmAmount
+	 * CashBalance.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -192,20 +197,21 @@ public class BalanceDetails5 {
 	 * definition} = "Balance amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAmount;
 			componentContext_lazy = () -> BalanceDetails5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Balance amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> AmountAndDirection31.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection31.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.BalanceDetails6> detailedBalance;
 	/**
 	 * Detailed balance information.
 	 * <p>
@@ -236,33 +242,65 @@ public class BalanceDetails5 {
 	 * definition} = "Detailed balance information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DetailedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDetailedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BalanceDetails5.mmObject();
 			businessComponentTrace_lazy = () -> Balance.mmObject();
+			componentContext_lazy = () -> BalanceDetails5.mmObject();
 			isDerived = false;
 			xmlTag = "DtldBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedBalance";
 			definition = "Detailed balance information.";
 			minOccurs = 0;
-			type_lazy = () -> BalanceDetails6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BalanceDetails6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails5.Type, com.tools20022.repository.msg.BalanceDetails5.Unrealised, com.tools20022.repository.msg.BalanceDetails5.Amount,
-						com.tools20022.repository.msg.BalanceDetails5.DetailedBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails5.mmType, com.tools20022.repository.msg.BalanceDetails5.mmUnrealised, com.tools20022.repository.msg.BalanceDetails5.mmAmount,
+						com.tools20022.repository.msg.BalanceDetails5.mmDetailedBalance);
 				trace_lazy = () -> Balance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BalanceDetails5";
 				definition = "Balance related details for a portfolio.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BalanceType6Choice getType() {
+		return type;
+	}
+
+	public void setType(BalanceType6Choice type) {
+		this.type = type;
+	}
+
+	public Unrealised1Code getUnrealised() {
+		return unrealised;
+	}
+
+	public void setUnrealised(Unrealised1Code unrealised) {
+		this.unrealised = unrealised;
+	}
+
+	public AmountAndDirection31 getAmount() {
+		return amount;
+	}
+
+	public void setAmount(com.tools20022.repository.msg.AmountAndDirection31 amount) {
+		this.amount = amount;
+	}
+
+	public List<BalanceDetails6> getDetailedBalance() {
+		return detailedBalance;
+	}
+
+	public void setDetailedBalance(List<com.tools20022.repository.msg.BalanceDetails6> detailedBalance) {
+		this.detailedBalance = detailedBalance;
 	}
 }

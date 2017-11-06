@@ -34,28 +34,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestType3Code#ZeroCoupon
- * InterestType3Code.ZeroCoupon}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InterestType3Code#Fixed
- * InterestType3Code.Fixed}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestType3Code#mmZeroCoupon
+ * InterestType3Code.mmZeroCoupon}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InterestType3Code#mmFixed
+ * InterestType3Code.mmFixed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestType3Code#FloatingRateNote
- * InterestType3Code.FloatingRateNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestType3Code#mmFloatingRateNote
+ * InterestType3Code.mmFloatingRateNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestType3Code#DualBasis
- * InterestType3Code.DualBasis}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InterestType3Code#Index
- * InterestType3Code.Index}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestType3Code#mmDualBasis
+ * InterestType3Code.mmDualBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InterestType3Code#mmIndex
+ * InterestType3Code.mmIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestType3Code#Discounted
- * InterestType3Code.Discounted}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestType3Code#mmDiscounted
+ * InterestType3Code.mmDiscounted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +91,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 * name} = "ZeroCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode ZeroCoupon = new MMCode() {
+	public static final MMCode mmZeroCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZeroCoupon";
@@ -114,7 +114,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 * name} = "Fixed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Fixed = new MMCode() {
+	public static final MMCode mmFixed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
@@ -137,7 +137,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 * name} = "FloatingRateNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode FloatingRateNote = new MMCode() {
+	public static final MMCode mmFloatingRateNote = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNote";
@@ -160,7 +160,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 * name} = "DualBasis"</li>
 	 * </ul>
 	 */
-	public static final MMCode DualBasis = new MMCode() {
+	public static final MMCode mmDualBasis = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DualBasis";
@@ -183,7 +183,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 * name} = "Index"</li>
 	 * </ul>
 	 */
-	public static final MMCode Index = new MMCode() {
+	public static final MMCode mmIndex = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
@@ -206,7 +206,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 * name} = "Discounted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Discounted = new MMCode() {
+	public static final MMCode mmDiscounted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discounted";
@@ -217,14 +217,14 @@ public class InterestType3Code extends InterestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ZCPN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestType3Code";
 				definition = "Indicates whether interest rate is fixed, variable or other.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestType3Code.ZeroCoupon, com.tools20022.repository.codeset.InterestType3Code.Fixed,
-						com.tools20022.repository.codeset.InterestType3Code.FloatingRateNote, com.tools20022.repository.codeset.InterestType3Code.DualBasis, com.tools20022.repository.codeset.InterestType3Code.Index,
-						com.tools20022.repository.codeset.InterestType3Code.Discounted);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestType3Code.mmZeroCoupon, com.tools20022.repository.codeset.InterestType3Code.mmFixed,
+						com.tools20022.repository.codeset.InterestType3Code.mmFloatingRateNote, com.tools20022.repository.codeset.InterestType3Code.mmDualBasis, com.tools20022.repository.codeset.InterestType3Code.mmIndex,
+						com.tools20022.repository.codeset.InterestType3Code.mmDiscounted);
 				trace_lazy = () -> InterestTypeCode.mmObject();
 			}
 		});

@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Describes a financing relation between two parties, for example invoice,
@@ -39,37 +40,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#ItemContext
- * FinancingAgreementItem1.ItemContext}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmItemContext
+ * FinancingAgreementItem1.mmItemContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#ItemAction
- * FinancingAgreementItem1.ItemAction}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmItemAction
+ * FinancingAgreementItem1.mmItemAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#PaymentInstrument
- * FinancingAgreementItem1.PaymentInstrument}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmPaymentInstrument
+ * FinancingAgreementItem1.mmPaymentInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#ValidationStatusInformation
- * FinancingAgreementItem1.ValidationStatusInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#Rating
- * FinancingAgreementItem1.Rating}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmValidationStatusInformation
+ * FinancingAgreementItem1.mmValidationStatusInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#ReopenIndication
- * FinancingAgreementItem1.ReopenIndication}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmRating
+ * FinancingAgreementItem1.mmRating}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#Guarantee
- * FinancingAgreementItem1.Guarantee}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmReopenIndication
+ * FinancingAgreementItem1.mmReopenIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#GuaranteeStatus
- * FinancingAgreementItem1.GuaranteeStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmGuarantee
+ * FinancingAgreementItem1.mmGuarantee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#RelatedGuaranteeLetter
- * FinancingAgreementItem1.RelatedGuaranteeLetter}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmGuaranteeStatus
+ * FinancingAgreementItem1.mmGuaranteeStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#AssociatedDocument
- * FinancingAgreementItem1.AssociatedDocument}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmRelatedGuaranteeLetter
+ * FinancingAgreementItem1.mmRelatedGuaranteeLetter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#AdditionalInformation
- * FinancingAgreementItem1.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmAssociatedDocument
+ * FinancingAgreementItem1.mmAssociatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmAdditionalInformation
+ * FinancingAgreementItem1.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -79,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,6 +98,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancingAgreementItem1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected FinancialItemParameters1 itemContext;
 	/**
 	 * Parameters related to the context of the item.
 	 * <p>
@@ -108,8 +111,8 @@ public class FinancingAgreementItem1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#Invoice
-	 * InvoiceFinancingAgreement.Invoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoice
+	 * InvoiceFinancingAgreement.mmInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -128,21 +131,22 @@ public class FinancingAgreementItem1 {
 	 * definition} = "Parameters related to the context of the item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ItemContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmItemContext = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoice;
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.Invoice;
 			isDerived = false;
 			xmlTag = "ItmCntxt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemContext";
 			definition = "Parameters related to the context of the item.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialItemParameters1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialItemParameters1.mmObject();
 		}
 	};
+	protected AgreementItemAction1Code itemAction;
 	/**
 	 * Code to indicate the action concerning the item.
 	 * <p>
@@ -171,7 +175,7 @@ public class FinancingAgreementItem1 {
 	 * definition} = "Code to indicate the action concerning the item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ItemAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmItemAction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
 			isDerived = false;
@@ -179,11 +183,12 @@ public class FinancingAgreementItem1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemAction";
 			definition = "Code to indicate the action concerning the item.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> AgreementItemAction1Code.mmObject();
 		}
 	};
+	protected PaymentInstrumentCode paymentInstrument;
 	/**
 	 * Desired payment instruction to be used by buyer.
 	 * <p>
@@ -197,7 +202,8 @@ public class FinancingAgreementItem1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Type Payment.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmType
+	 * Payment.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -216,20 +222,21 @@ public class FinancingAgreementItem1 {
 	 * definition} = "Desired payment instruction to be used by buyer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInstrument = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmType;
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Type;
 			isDerived = false;
 			xmlTag = "PmtInstrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Desired payment instruction to be used by buyer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> PaymentInstrumentCode.mmObject();
 		}
 	};
+	protected ValidationStatusInformation1 validationStatusInformation;
 	/**
 	 * Validation status of the item.
 	 * <p>
@@ -242,8 +249,8 @@ public class FinancingAgreementItem1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#InvoiceFinancingStatus
-	 * InvoiceFinancingAgreement.InvoiceFinancingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
+	 * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -262,21 +269,22 @@ public class FinancingAgreementItem1 {
 	 * definition} = "Validation status of the item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ValidationStatusInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.InvoiceFinancingStatus;
 			isDerived = false;
 			xmlTag = "VldtnStsInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationStatusInformation";
 			definition = "Validation status of the item.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ValidationStatusInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
 		}
 	};
+	protected YesNoIndicator rating;
 	/**
 	 * Guarantee is (to be) provided according current rating.
 	 * <p>
@@ -305,7 +313,7 @@ public class FinancingAgreementItem1 {
 	 * definition} = "Guarantee is (to be) provided according current rating."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Rating = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRating = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
 			isDerived = false;
@@ -313,11 +321,12 @@ public class FinancingAgreementItem1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rating";
 			definition = "Guarantee is (to be) provided according current rating.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator reopenIndication;
 	/**
 	 * Set to yes if the agreement was rejected and needs to be re-opened for
 	 * arbitrage.
@@ -349,7 +358,7 @@ public class FinancingAgreementItem1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReopenIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReopenIndication = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
 			isDerived = false;
@@ -357,11 +366,12 @@ public class FinancingAgreementItem1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReopenIndication";
 			definition = "Set to yes if the agreement was rejected and needs to be re-opened for arbitrage.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GuaranteeDetails1> guarantee;
 	/**
 	 * Issuers, amounts and periods to be guaranteed. At a given date, the sum
 	 * of all issuers is guaranteed, covered as specified by rank/position and
@@ -375,8 +385,8 @@ public class FinancingAgreementItem1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#Guarantee
-	 * Trade.Guarantee}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmGuarantee
+	 * Trade.mmGuarantee}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -397,20 +407,21 @@ public class FinancingAgreementItem1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Guarantee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGuarantee = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmGuarantee;
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.Guarantee;
 			isDerived = false;
 			xmlTag = "Grnt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Guarantee";
 			definition = "Issuers, amounts and periods to be guaranteed. At a given date, the sum of all issuers is guaranteed, covered as specified by rank/position and excess. For each period, the maximum value at a given date is used.";
 			minOccurs = 0;
-			type_lazy = () -> GuaranteeDetails1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GuaranteeDetails1.mmObject();
 		}
 	};
+	protected ValidationStatusInformation1 guaranteeStatus;
 	/**
 	 * Status of guarantee if applicable.
 	 * <p>
@@ -423,8 +434,8 @@ public class FinancingAgreementItem1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#InvoiceFinancingStatus
-	 * InvoiceFinancingAgreement.InvoiceFinancingStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
+	 * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -443,21 +454,22 @@ public class FinancingAgreementItem1 {
 	 * definition} = "Status of guarantee if applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GuaranteeStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGuaranteeStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.InvoiceFinancingStatus;
 			isDerived = false;
 			xmlTag = "GrntSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeStatus";
 			definition = "Status of guarantee if applicable.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ValidationStatusInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
 		}
 	};
+	protected QualifiedDocumentInformation1 relatedGuaranteeLetter;
 	/**
 	 * Reference to the guarantee letter issued by a guarantee provider.
 	 * <p>
@@ -470,8 +482,8 @@ public class FinancingAgreementItem1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#Document
-	 * Agreement.Document}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDocument
+	 * Agreement.mmDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -491,21 +503,22 @@ public class FinancingAgreementItem1 {
 	 * "Reference to the guarantee letter issued by a guarantee provider."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RelatedGuaranteeLetter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRelatedGuaranteeLetter = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDocument;
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.Document;
 			isDerived = false;
 			xmlTag = "RltdGrntLttr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedGuaranteeLetter";
 			definition = "Reference to the guarantee letter issued by a guarantee provider.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+			minOccurs = 0;
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument;
 	/**
 	 * Associated free form document.
 	 * <p>
@@ -518,8 +531,8 @@ public class FinancingAgreementItem1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#Document
-	 * Agreement.Document}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDocument
+	 * Agreement.mmDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -538,20 +551,21 @@ public class FinancingAgreementItem1 {
 	 * definition} = "Associated free form document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AssociatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAssociatedDocument = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDocument;
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.Document;
 			isDerived = false;
 			xmlTag = "AssoctdDoc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedDocument";
 			definition = "Associated free form document.";
 			minOccurs = 0;
-			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isComposite = false;
+			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 		}
 	};
+	protected List<Max2000Text> additionalInformation;
 	/**
 	 * Free form textual information related to the agreement.
 	 * <p>
@@ -579,7 +593,7 @@ public class FinancingAgreementItem1 {
 	 * definition} = "Free form textual information related to the agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancingAgreementItem1.mmObject();
 			isDerived = false;
@@ -587,8 +601,8 @@ public class FinancingAgreementItem1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Free form textual information related to the agreement.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
@@ -596,18 +610,106 @@ public class FinancingAgreementItem1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingAgreementItem1.ItemContext, com.tools20022.repository.msg.FinancingAgreementItem1.ItemAction,
-						com.tools20022.repository.msg.FinancingAgreementItem1.PaymentInstrument, com.tools20022.repository.msg.FinancingAgreementItem1.ValidationStatusInformation,
-						com.tools20022.repository.msg.FinancingAgreementItem1.Rating, com.tools20022.repository.msg.FinancingAgreementItem1.ReopenIndication, com.tools20022.repository.msg.FinancingAgreementItem1.Guarantee,
-						com.tools20022.repository.msg.FinancingAgreementItem1.GuaranteeStatus, com.tools20022.repository.msg.FinancingAgreementItem1.RelatedGuaranteeLetter,
-						com.tools20022.repository.msg.FinancingAgreementItem1.AssociatedDocument, com.tools20022.repository.msg.FinancingAgreementItem1.AdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingAgreementItem1.mmItemContext, com.tools20022.repository.msg.FinancingAgreementItem1.mmItemAction,
+						com.tools20022.repository.msg.FinancingAgreementItem1.mmPaymentInstrument, com.tools20022.repository.msg.FinancingAgreementItem1.mmValidationStatusInformation,
+						com.tools20022.repository.msg.FinancingAgreementItem1.mmRating, com.tools20022.repository.msg.FinancingAgreementItem1.mmReopenIndication, com.tools20022.repository.msg.FinancingAgreementItem1.mmGuarantee,
+						com.tools20022.repository.msg.FinancingAgreementItem1.mmGuaranteeStatus, com.tools20022.repository.msg.FinancingAgreementItem1.mmRelatedGuaranteeLetter,
+						com.tools20022.repository.msg.FinancingAgreementItem1.mmAssociatedDocument, com.tools20022.repository.msg.FinancingAgreementItem1.mmAdditionalInformation);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancingAgreementItem1";
 				definition = "Describes a financing relation between two parties, for example invoice, credit, financing request, cash accounts.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public FinancialItemParameters1 getItemContext() {
+		return itemContext;
+	}
+
+	public void setItemContext(com.tools20022.repository.msg.FinancialItemParameters1 itemContext) {
+		this.itemContext = itemContext;
+	}
+
+	public AgreementItemAction1Code getItemAction() {
+		return itemAction;
+	}
+
+	public void setItemAction(AgreementItemAction1Code itemAction) {
+		this.itemAction = itemAction;
+	}
+
+	public PaymentInstrumentCode getPaymentInstrument() {
+		return paymentInstrument;
+	}
+
+	public void setPaymentInstrument(PaymentInstrumentCode paymentInstrument) {
+		this.paymentInstrument = paymentInstrument;
+	}
+
+	public ValidationStatusInformation1 getValidationStatusInformation() {
+		return validationStatusInformation;
+	}
+
+	public void setValidationStatusInformation(com.tools20022.repository.msg.ValidationStatusInformation1 validationStatusInformation) {
+		this.validationStatusInformation = validationStatusInformation;
+	}
+
+	public YesNoIndicator getRating() {
+		return rating;
+	}
+
+	public void setRating(YesNoIndicator rating) {
+		this.rating = rating;
+	}
+
+	public YesNoIndicator getReopenIndication() {
+		return reopenIndication;
+	}
+
+	public void setReopenIndication(YesNoIndicator reopenIndication) {
+		this.reopenIndication = reopenIndication;
+	}
+
+	public List<GuaranteeDetails1> getGuarantee() {
+		return guarantee;
+	}
+
+	public void setGuarantee(List<com.tools20022.repository.msg.GuaranteeDetails1> guarantee) {
+		this.guarantee = guarantee;
+	}
+
+	public ValidationStatusInformation1 getGuaranteeStatus() {
+		return guaranteeStatus;
+	}
+
+	public void setGuaranteeStatus(com.tools20022.repository.msg.ValidationStatusInformation1 guaranteeStatus) {
+		this.guaranteeStatus = guaranteeStatus;
+	}
+
+	public QualifiedDocumentInformation1 getRelatedGuaranteeLetter() {
+		return relatedGuaranteeLetter;
+	}
+
+	public void setRelatedGuaranteeLetter(com.tools20022.repository.msg.QualifiedDocumentInformation1 relatedGuaranteeLetter) {
+		this.relatedGuaranteeLetter = relatedGuaranteeLetter;
+	}
+
+	public List<QualifiedDocumentInformation1> getAssociatedDocument() {
+		return associatedDocument;
+	}
+
+	public void setAssociatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument) {
+		this.associatedDocument = associatedDocument;
+	}
+
+	public List<Max2000Text> getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = additionalInformation;
 	}
 }

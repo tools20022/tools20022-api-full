@@ -36,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InRepairStatus2Choice#Reason
- * InRepairStatus2Choice.Reason}</li>
+ * {@linkplain com.tools20022.repository.choice.InRepairStatus2Choice#mmReason
+ * InRepairStatus2Choice.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InRepairStatus2Choice#DataSourceScheme
- * InRepairStatus2Choice.DataSourceScheme}</li>
+ * {@linkplain com.tools20022.repository.choice.InRepairStatus2Choice#mmDataSourceScheme
+ * InRepairStatus2Choice.mmDataSourceScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.InRepairStatus2Choice#NoReason
- * InRepairStatus2Choice.NoReason}</li>
+ * {@linkplain com.tools20022.repository.choice.InRepairStatus2Choice#mmNoReason
+ * InRepairStatus2Choice.mmNoReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InRepairStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected InRepairStatusReason2 reason;
 	/**
 	 * Reason for an in repair status in the report.
 	 * <p>
@@ -90,7 +91,7 @@ public class InRepairStatus2Choice {
 	 * definition} = "Reason for an in repair status in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InRepairStatus2Choice.mmObject();
 			isDerived = false;
@@ -98,12 +99,13 @@ public class InRepairStatus2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for an in repair status in the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InRepairStatusReason2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> InRepairStatusReason2.mmObject();
 		}
 	};
+	protected GenericIdentification1 dataSourceScheme;
 	/**
 	 * Proprietary identification for a reason of a specific status in the
 	 * report.
@@ -133,7 +135,7 @@ public class InRepairStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InRepairStatus2Choice.mmObject();
 			isDerived = false;
@@ -141,12 +143,13 @@ public class InRepairStatus2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification for a reason of a specific status in the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
+	protected NoReasonCode noReason;
 	/**
 	 * Indicates that there is no reason available or to report.
 	 * <p>
@@ -175,7 +178,7 @@ public class InRepairStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NoReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNoReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> InRepairStatus2Choice.mmObject();
 			isDerived = false;
@@ -183,8 +186,8 @@ public class InRepairStatus2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReason";
 			definition = "Indicates that there is no reason available or to report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
@@ -192,14 +195,38 @@ public class InRepairStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InRepairStatus2Choice.Reason, com.tools20022.repository.choice.InRepairStatus2Choice.DataSourceScheme,
-						com.tools20022.repository.choice.InRepairStatus2Choice.NoReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InRepairStatus2Choice.mmReason, com.tools20022.repository.choice.InRepairStatus2Choice.mmDataSourceScheme,
+						com.tools20022.repository.choice.InRepairStatus2Choice.mmNoReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InRepairStatus2Choice";
 				definition = "Status is in repair status.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InRepairStatusReason2 getReason() {
+		return reason;
+	}
+
+	public void setReason(InRepairStatusReason2 reason) {
+		this.reason = reason;
+	}
+
+	public GenericIdentification1 getDataSourceScheme() {
+		return dataSourceScheme;
+	}
+
+	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = dataSourceScheme;
+	}
+
+	public NoReasonCode getNoReason() {
+		return noReason;
+	}
+
+	public void setNoReason(NoReasonCode noReason) {
+		this.noReason = noReason;
 	}
 }

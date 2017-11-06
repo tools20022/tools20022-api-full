@@ -33,8 +33,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Cheque4#PayeeIdentification
- * Cheque4.PayeeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cheque4#mmPayeeIdentification
+ * Cheque4.mmPayeeIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -43,8 +43,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Cheque4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected NameAndAddress5 payeeIdentification;
 	/**
 	 * Party to which a cheque is made payable.
 	 * <p>
@@ -72,8 +73,8 @@ public class Cheque4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Cheque4
@@ -91,32 +92,40 @@ public class Cheque4 {
 	 * definition} = "Party to which a cheque is made payable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayeeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayeeIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Cheque4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "PyeeId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayeeIdentification";
 			definition = "Party to which a cheque is made payable.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> NameAndAddress5.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque4.PayeeIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque4.mmPayeeIdentification);
 				trace_lazy = () -> ChequeIssue.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Cheque4";
 				definition = "Set of characteristics related to a cheque instruction, such as cheque type or cheque number.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public NameAndAddress5 getPayeeIdentification() {
+		return payeeIdentification;
+	}
+
+	public void setPayeeIdentification(com.tools20022.repository.msg.NameAndAddress5 payeeIdentification) {
+		this.payeeIdentification = payeeIdentification;
 	}
 }

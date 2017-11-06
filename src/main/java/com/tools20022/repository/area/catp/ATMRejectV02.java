@@ -52,17 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.area.catp.ATMRejectV02#Header
- * ATMRejectV02.Header}</li>
- * <li>{@linkplain com.tools20022.repository.area.catp.ATMRejectV02#ATMReject
- * ATMRejectV02.ATMReject}</li>
+ * <li>{@linkplain com.tools20022.repository.area.catp.ATMRejectV02#mmHeader
+ * ATMRejectV02.mmHeader}</li>
+ * <li>{@linkplain com.tools20022.repository.area.catp.ATMRejectV02#mmATMReject
+ * ATMRejectV02.mmATMReject}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catp.ATMRejectV02#identifier
- * ATMRejectV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catp.005.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMRejectV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header33 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -105,17 +104,18 @@ public class ATMRejectV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header33.mmObject();
 		}
 	};
+	protected ATMReject2 aTMReject;
 	/**
 	 * Information related to the reject of a message from an ATM or an ATM
 	 * manager.
@@ -141,42 +141,15 @@ public class ATMRejectV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMReject = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMReject = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMRjct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMReject";
 			definition = "Information related to the reject of a message from an ATM or an ATM manager.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> ATMReject2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "005"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catp";
-			messageFunctionality = "005";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -191,10 +164,33 @@ public class ATMRejectV02 {
 				rootElement = "Document";
 				xmlTag = "ATMRjct";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMRejectV02.Header, com.tools20022.repository.area.catp.ATMRejectV02.ATMReject);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catp.ATMRejectV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMRejectV02.mmHeader, com.tools20022.repository.area.catp.ATMRejectV02.mmATMReject);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catp";
+						messageFunctionality = "005";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header33 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header33 header) {
+		this.header = header;
+	}
+
+	public ATMReject2 getATMReject() {
+		return aTMReject;
+	}
+
+	public void setATMReject(ATMReject2 aTMReject) {
+		this.aTMReject = aTMReject;
 	}
 }

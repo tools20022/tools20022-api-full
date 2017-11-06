@@ -30,16 +30,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CSCManagementCode#CSCPresent
- * CSCManagementCode.CSCPresent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CSCManagementCode#mmCSCPresent
+ * CSCManagementCode.mmCSCPresent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CSCManagementCode#CSCByPass
- * CSCManagementCode.CSCByPass}</li>
+ * {@linkplain com.tools20022.repository.codeset.CSCManagementCode#mmCSCByPass
+ * CSCManagementCode.mmCSCByPass}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CSCManagementCode#CSCUnread
- * CSCManagementCode.CSCUnread}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CSCManagementCode#NoCSC
- * CSCManagementCode.NoCSC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CSCManagementCode#mmCSCUnread
+ * CSCManagementCode.mmCSCUnread}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CSCManagementCode#mmNoCSC
+ * CSCManagementCode.mmNoCSC}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +95,7 @@ public class CSCManagementCode {
 	 * definition} = "Card security code present."</li>
 	 * </ul>
 	 */
-	public static final MMCode CSCPresent = new MMCode() {
+	public static final MMCode mmCSCPresent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CSCPresent";
@@ -126,7 +126,7 @@ public class CSCManagementCode {
 	 * "Card security code by-passed or not provided by the merchant."</li>
 	 * </ul>
 	 */
-	public static final MMCode CSCByPass = new MMCode() {
+	public static final MMCode mmCSCByPass = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CSCByPass";
@@ -156,7 +156,7 @@ public class CSCManagementCode {
 	 * definition} = "Card security code unreadable."</li>
 	 * </ul>
 	 */
-	public static final MMCode CSCUnread = new MMCode() {
+	public static final MMCode mmCSCUnread = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CSCUnread";
@@ -186,7 +186,7 @@ public class CSCManagementCode {
 	 * definition} = "No card security code imprint."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoCSC = new MMCode() {
+	public static final MMCode mmNoCSC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NoCSC";
@@ -199,13 +199,13 @@ public class CSCManagementCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CSCManagementCode";
 				definition = "CSC (Card Security Code) management associated with the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CSCManagementCode.CSCPresent, com.tools20022.repository.codeset.CSCManagementCode.CSCByPass, com.tools20022.repository.codeset.CSCManagementCode.CSCUnread,
-						com.tools20022.repository.codeset.CSCManagementCode.NoCSC);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CSCManagementCode.mmCSCPresent, com.tools20022.repository.codeset.CSCManagementCode.mmCSCByPass,
+						com.tools20022.repository.codeset.CSCManagementCode.mmCSCUnread, com.tools20022.repository.codeset.CSCManagementCode.mmNoCSC);
 				derivation_lazy = () -> Arrays.asList(CSCManagement1Code.mmObject());
 			}
 		});

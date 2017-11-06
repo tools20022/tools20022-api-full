@@ -35,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#Redemption
- * InvestmentFundTransactionOutType4Code.Redemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#mmRedemption
+ * InvestmentFundTransactionOutType4Code.mmRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#SwitchOut
- * InvestmentFundTransactionOutType4Code.SwitchOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#mmSwitchOut
+ * InvestmentFundTransactionOutType4Code.mmSwitchOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#InSpecie
- * InvestmentFundTransactionOutType4Code.InSpecie}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#mmInSpecie
+ * InvestmentFundTransactionOutType4Code.mmInSpecie}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#CrossOut
- * InvestmentFundTransactionOutType4Code.CrossOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#mmCrossOut
+ * InvestmentFundTransactionOutType4Code.mmCrossOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#Dividend
- * InvestmentFundTransactionOutType4Code.Dividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#mmDividend
+ * InvestmentFundTransactionOutType4Code.mmDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#Other
- * InvestmentFundTransactionOutType4Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code#mmOther
+ * InvestmentFundTransactionOutType4Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class InvestmentFundTransactionOutType4Code extends InvestmentFundTransac
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode Redemption = new MMCode() {
+	public static final MMCode mmRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
@@ -119,7 +119,7 @@ public class InvestmentFundTransactionOutType4Code extends InvestmentFundTransac
 	 * name} = "SwitchOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode SwitchOut = new MMCode() {
+	public static final MMCode mmSwitchOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOut";
@@ -142,7 +142,7 @@ public class InvestmentFundTransactionOutType4Code extends InvestmentFundTransac
 	 * name} = "InSpecie"</li>
 	 * </ul>
 	 */
-	public static final MMCode InSpecie = new MMCode() {
+	public static final MMCode mmInSpecie = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InSpecie";
@@ -165,7 +165,7 @@ public class InvestmentFundTransactionOutType4Code extends InvestmentFundTransac
 	 * name} = "CrossOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode CrossOut = new MMCode() {
+	public static final MMCode mmCrossOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossOut";
@@ -188,7 +188,7 @@ public class InvestmentFundTransactionOutType4Code extends InvestmentFundTransac
 	 * name} = "Dividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode Dividend = new MMCode() {
+	public static final MMCode mmDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
@@ -211,7 +211,7 @@ public class InvestmentFundTransactionOutType4Code extends InvestmentFundTransac
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -222,14 +222,14 @@ public class InvestmentFundTransactionOutType4Code extends InvestmentFundTransac
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REDM");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionOutType4Code";
 				definition = "Specifies the type of investment fund transaction that results in a cash movement out of a fund.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.Redemption, com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.SwitchOut,
-						com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.InSpecie, com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.CrossOut,
-						com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.Dividend, com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.mmRedemption, com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.mmSwitchOut,
+						com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.mmInSpecie, com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.mmCrossOut,
+						com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.mmDividend, com.tools20022.repository.codeset.InvestmentFundTransactionOutType4Code.mmOther);
 				trace_lazy = () -> InvestmentFundTransactionTypeCode.mmObject();
 			}
 		});

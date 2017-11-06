@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Security;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides for reporting quantitative data of non-equity instruments for
@@ -37,26 +38,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#TechnicalRecordIdentification
- * TransparencyDataReport15.TechnicalRecordIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#mmTechnicalRecordIdentification
+ * TransparencyDataReport15.mmTechnicalRecordIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#Identification
- * TransparencyDataReport15.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#mmIdentification
+ * TransparencyDataReport15.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#ReportingDate
- * TransparencyDataReport15.ReportingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#mmReportingDate
+ * TransparencyDataReport15.mmReportingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#TradingVenue
- * TransparencyDataReport15.TradingVenue}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#mmTradingVenue
+ * TransparencyDataReport15.mmTradingVenue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#Suspension
- * TransparencyDataReport15.Suspension}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#mmSuspension
+ * TransparencyDataReport15.mmSuspension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#NumberTransactions
- * TransparencyDataReport15.NumberTransactions}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#mmNumberTransactions
+ * TransparencyDataReport15.mmNumberTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#AggregatedQuantitativeData
- * TransparencyDataReport15.AggregatedQuantitativeData}</li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport15#mmAggregatedQuantitativeData
+ * TransparencyDataReport15.mmAggregatedQuantitativeData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,16 +67,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01#NonEquityTransparencyData
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01#mmNonEquityTransparencyData
  * FinancialInstrumentReportingNonEquityTradingActivityReportV01.
- * NonEquityTransparencyData}</li>
+ * mmNonEquityTransparencyData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,6 +92,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransparencyDataReport15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text technicalRecordIdentification;
 	/**
 	 * Unique identifier of a record in a message used as part of error
 	 * management and status advice messages.<br>
@@ -124,7 +126,7 @@ public class TransparencyDataReport15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
 			isDerived = false;
@@ -132,11 +134,12 @@ public class TransparencyDataReport15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and status advice messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice report sent back.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISINOct2015Identifier identification;
 	/**
 	 * Identifies the financial instrument using an ISIN.
 	 * <p>
@@ -150,8 +153,8 @@ public class TransparencyDataReport15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,20 +173,21 @@ public class TransparencyDataReport15 {
 	 * definition} = "Identifies the financial instrument using an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the financial instrument using an ISIN.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected ISODate reportingDate;
 	/**
 	 * Date to which the quantitative data fields below relate.
 	 * <p>
@@ -196,8 +200,8 @@ public class TransparencyDataReport15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeDateTime
-	 * Trade.TradeDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeDateTime
+	 * Trade.mmTradeDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -216,20 +220,21 @@ public class TransparencyDataReport15 {
 	 * definition} = "Date to which the quantitative data fields below relate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReportingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeDateTime;
 			isDerived = false;
 			xmlTag = "RptgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingDate";
 			definition = "Date to which the quantitative data fields below relate.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected MICIdentifier tradingVenue;
 	/**
 	 * Segment MIC for the trading venue where applicable, otherwise the
 	 * operational MIC.<br>
@@ -244,8 +249,8 @@ public class TransparencyDataReport15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#PlaceOfListing
-	 * Security.PlaceOfListing}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPlaceOfListing
+	 * Security.mmPlaceOfListing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -266,20 +271,21 @@ public class TransparencyDataReport15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradingVenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
 			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.PlaceOfListing;
 			isDerived = false;
 			xmlTag = "TradgVn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingVenue";
 			definition = "Segment MIC for the trading venue where applicable, otherwise the operational MIC.\r\n";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	protected TrueFalseIndicator suspension;
 	/**
 	 * Indicates whether the instrument was suspended for trading on that
 	 * trading venue on the reporting day.
@@ -311,7 +317,7 @@ public class TransparencyDataReport15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Suspension = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSuspension = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
 			isDerived = false;
@@ -319,11 +325,12 @@ public class TransparencyDataReport15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspension";
 			definition = "Indicates whether the instrument was suspended for trading on that trading venue on the reporting day.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected Number numberTransactions;
 	/**
 	 * Total number of transactions executed on the reporting day for the
 	 * instrument.
@@ -354,7 +361,7 @@ public class TransparencyDataReport15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberTransactions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
 			isDerived = false;
@@ -362,11 +369,12 @@ public class TransparencyDataReport15 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberTransactions";
 			definition = "Total number of transactions executed on the reporting day for the instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransactionsBin2> aggregatedQuantitativeData;
 	/**
 	 * Aggregated quantitative data on the non-equity instrument being reported.
 	 * Details aggregated against the specific range that is defined.
@@ -398,7 +406,7 @@ public class TransparencyDataReport15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AggregatedQuantitativeData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAggregatedQuantitativeData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
 			isDerived = false;
@@ -407,25 +415,81 @@ public class TransparencyDataReport15 {
 			name = "AggregatedQuantitativeData";
 			definition = "Aggregated quantitative data on the non-equity instrument being reported.  Details aggregated against the specific range that is defined. Transactions that have been cancelled should be excluded from the reported figure.";
 			minOccurs = 0;
-			type_lazy = () -> TransactionsBin2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransactionsBin2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport15.TechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport15.Identification,
-						com.tools20022.repository.msg.TransparencyDataReport15.ReportingDate, com.tools20022.repository.msg.TransparencyDataReport15.TradingVenue, com.tools20022.repository.msg.TransparencyDataReport15.Suspension,
-						com.tools20022.repository.msg.TransparencyDataReport15.NumberTransactions, com.tools20022.repository.msg.TransparencyDataReport15.AggregatedQuantitativeData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport15.mmTechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport15.mmIdentification,
+						com.tools20022.repository.msg.TransparencyDataReport15.mmReportingDate, com.tools20022.repository.msg.TransparencyDataReport15.mmTradingVenue, com.tools20022.repository.msg.TransparencyDataReport15.mmSuspension,
+						com.tools20022.repository.msg.TransparencyDataReport15.mmNumberTransactions, com.tools20022.repository.msg.TransparencyDataReport15.mmAggregatedQuantitativeData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01.mmNonEquityTransparencyData);
 				trace_lazy = () -> Security.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01.NonEquityTransparencyData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransparencyDataReport15";
 				definition = "Provides for reporting quantitative data of non-equity instruments for transparency calculations.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTechnicalRecordIdentification() {
+		return technicalRecordIdentification;
+	}
+
+	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+		this.technicalRecordIdentification = technicalRecordIdentification;
+	}
+
+	public ISINOct2015Identifier getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(ISINOct2015Identifier identification) {
+		this.identification = identification;
+	}
+
+	public ISODate getReportingDate() {
+		return reportingDate;
+	}
+
+	public void setReportingDate(ISODate reportingDate) {
+		this.reportingDate = reportingDate;
+	}
+
+	public MICIdentifier getTradingVenue() {
+		return tradingVenue;
+	}
+
+	public void setTradingVenue(MICIdentifier tradingVenue) {
+		this.tradingVenue = tradingVenue;
+	}
+
+	public TrueFalseIndicator getSuspension() {
+		return suspension;
+	}
+
+	public void setSuspension(TrueFalseIndicator suspension) {
+		this.suspension = suspension;
+	}
+
+	public Number getNumberTransactions() {
+		return numberTransactions;
+	}
+
+	public void setNumberTransactions(Number numberTransactions) {
+		this.numberTransactions = numberTransactions;
+	}
+
+	public List<TransactionsBin2> getAggregatedQuantitativeData() {
+		return aggregatedQuantitativeData;
+	}
+
+	public void setAggregatedQuantitativeData(List<com.tools20022.repository.msg.TransactionsBin2> aggregatedQuantitativeData) {
+		this.aggregatedQuantitativeData = aggregatedQuantitativeData;
 	}
 }

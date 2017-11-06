@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ElectionMovementType1Code#Restricted
- * ElectionMovementType1Code.Restricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ElectionMovementType1Code#mmRestricted
+ * ElectionMovementType1Code.mmRestricted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ElectionMovementType1Code#Direct
- * ElectionMovementType1Code.Direct}</li>
+ * {@linkplain com.tools20022.repository.codeset.ElectionMovementType1Code#mmDirect
+ * ElectionMovementType1Code.mmDirect}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class ElectionMovementType1Code extends ElectionMovementTypeCode {
 	 * name} = "Restricted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Restricted = new MMCode() {
+	public static final MMCode mmRestricted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
@@ -106,7 +106,7 @@ public class ElectionMovementType1Code extends ElectionMovementTypeCode {
 	 * name} = "Direct"</li>
 	 * </ul>
 	 */
-	public static final MMCode Direct = new MMCode() {
+	public static final MMCode mmDirect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direct";
@@ -117,12 +117,12 @@ public class ElectionMovementType1Code extends ElectionMovementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REST");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ElectionMovementType1Code";
 				definition = "Specifies the effect on the holdings of electing a Corporate Action option.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionMovementType1Code.Restricted, com.tools20022.repository.codeset.ElectionMovementType1Code.Direct);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionMovementType1Code.mmRestricted, com.tools20022.repository.codeset.ElectionMovementType1Code.mmDirect);
 				trace_lazy = () -> ElectionMovementTypeCode.mmObject();
 			}
 		});

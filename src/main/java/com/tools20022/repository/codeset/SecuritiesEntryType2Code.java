@@ -34,57 +34,57 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#Blocked
- * SecuritiesEntryType2Code.Blocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmBlocked
+ * SecuritiesEntryType2Code.mmBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#Eligible
- * SecuritiesEntryType2Code.Eligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmEligible
+ * SecuritiesEntryType2Code.mmEligible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#PendingDelivery
- * SecuritiesEntryType2Code.PendingDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmPendingDelivery
+ * SecuritiesEntryType2Code.mmPendingDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#PendingReceipt
- * SecuritiesEntryType2Code.PendingReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmPendingReceipt
+ * SecuritiesEntryType2Code.mmPendingReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#Registered
- * SecuritiesEntryType2Code.Registered}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmRegistered
+ * SecuritiesEntryType2Code.mmRegistered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#Settled
- * SecuritiesEntryType2Code.Settled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmSettled
+ * SecuritiesEntryType2Code.mmSettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#Borrowed
- * SecuritiesEntryType2Code.Borrowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmBorrowed
+ * SecuritiesEntryType2Code.mmBorrowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#OnLoan
- * SecuritiesEntryType2Code.OnLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmOnLoan
+ * SecuritiesEntryType2Code.mmOnLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#StreetPosition
- * SecuritiesEntryType2Code.StreetPosition}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmStreetPosition
+ * SecuritiesEntryType2Code.mmStreetPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#Traded
- * SecuritiesEntryType2Code.Traded}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmTraded
+ * SecuritiesEntryType2Code.mmTraded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#CollateralIn
- * SecuritiesEntryType2Code.CollateralIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmCollateralIn
+ * SecuritiesEntryType2Code.mmCollateralIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#CollateralOut
- * SecuritiesEntryType2Code.CollateralOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmCollateralOut
+ * SecuritiesEntryType2Code.mmCollateralOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#UninstructedBalance
- * SecuritiesEntryType2Code.UninstructedBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmUninstructedBalance
+ * SecuritiesEntryType2Code.mmUninstructedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#InstructedBalance
- * SecuritiesEntryType2Code.InstructedBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmInstructedBalance
+ * SecuritiesEntryType2Code.mmInstructedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#OutForRegistration
- * SecuritiesEntryType2Code.OutForRegistration}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesEntryType2Code#mmOutForRegistration
+ * SecuritiesEntryType2Code.mmOutForRegistration}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -120,7 +120,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "Blocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode Blocked = new MMCode() {
+	public static final MMCode mmBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
@@ -143,7 +143,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "Eligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode Eligible = new MMCode() {
+	public static final MMCode mmEligible = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Eligible";
@@ -166,7 +166,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "PendingDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingDelivery = new MMCode() {
+	public static final MMCode mmPendingDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDelivery";
@@ -189,7 +189,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "PendingReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingReceipt = new MMCode() {
+	public static final MMCode mmPendingReceipt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceipt";
@@ -212,7 +212,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "Registered"</li>
 	 * </ul>
 	 */
-	public static final MMCode Registered = new MMCode() {
+	public static final MMCode mmRegistered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registered";
@@ -235,7 +235,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Settled = new MMCode() {
+	public static final MMCode mmSettled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
@@ -258,7 +258,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "Borrowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Borrowed = new MMCode() {
+	public static final MMCode mmBorrowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrowed";
@@ -281,7 +281,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "OnLoan"</li>
 	 * </ul>
 	 */
-	public static final MMCode OnLoan = new MMCode() {
+	public static final MMCode mmOnLoan = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoan";
@@ -304,7 +304,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "StreetPosition"</li>
 	 * </ul>
 	 */
-	public static final MMCode StreetPosition = new MMCode() {
+	public static final MMCode mmStreetPosition = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetPosition";
@@ -327,7 +327,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "Traded"</li>
 	 * </ul>
 	 */
-	public static final MMCode Traded = new MMCode() {
+	public static final MMCode mmTraded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traded";
@@ -350,7 +350,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "CollateralIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralIn = new MMCode() {
+	public static final MMCode mmCollateralIn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIn";
@@ -373,7 +373,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "CollateralOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralOut = new MMCode() {
+	public static final MMCode mmCollateralOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOut";
@@ -396,7 +396,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "UninstructedBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode UninstructedBalance = new MMCode() {
+	public static final MMCode mmUninstructedBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninstructedBalance";
@@ -419,7 +419,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "InstructedBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode InstructedBalance = new MMCode() {
+	public static final MMCode mmInstructedBalance = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedBalance";
@@ -442,7 +442,7 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	 * name} = "OutForRegistration"</li>
 	 * </ul>
 	 */
-	public static final MMCode OutForRegistration = new MMCode() {
+	public static final MMCode mmOutForRegistration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutForRegistration";
@@ -453,18 +453,18 @@ public class SecuritiesEntryType2Code extends SecuritiesEntryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BLOK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesEntryType2Code";
 				definition = "Specifies the type of securities entry on an account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesEntryType2Code.Blocked, com.tools20022.repository.codeset.SecuritiesEntryType2Code.Eligible,
-						com.tools20022.repository.codeset.SecuritiesEntryType2Code.PendingDelivery, com.tools20022.repository.codeset.SecuritiesEntryType2Code.PendingReceipt,
-						com.tools20022.repository.codeset.SecuritiesEntryType2Code.Registered, com.tools20022.repository.codeset.SecuritiesEntryType2Code.Settled, com.tools20022.repository.codeset.SecuritiesEntryType2Code.Borrowed,
-						com.tools20022.repository.codeset.SecuritiesEntryType2Code.OnLoan, com.tools20022.repository.codeset.SecuritiesEntryType2Code.StreetPosition, com.tools20022.repository.codeset.SecuritiesEntryType2Code.Traded,
-						com.tools20022.repository.codeset.SecuritiesEntryType2Code.CollateralIn, com.tools20022.repository.codeset.SecuritiesEntryType2Code.CollateralOut,
-						com.tools20022.repository.codeset.SecuritiesEntryType2Code.UninstructedBalance, com.tools20022.repository.codeset.SecuritiesEntryType2Code.InstructedBalance,
-						com.tools20022.repository.codeset.SecuritiesEntryType2Code.OutForRegistration);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmBlocked, com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmEligible,
+						com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmPendingDelivery, com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmPendingReceipt,
+						com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmRegistered, com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmSettled, com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmBorrowed,
+						com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmOnLoan, com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmStreetPosition, com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmTraded,
+						com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmCollateralIn, com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmCollateralOut,
+						com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmUninstructedBalance, com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmInstructedBalance,
+						com.tools20022.repository.codeset.SecuritiesEntryType2Code.mmOutForRegistration);
 				trace_lazy = () -> SecuritiesEntryTypeCode.mmObject();
 			}
 		});

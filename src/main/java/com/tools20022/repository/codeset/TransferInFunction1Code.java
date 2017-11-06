@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferInFunction1Code#AdviceAndRequest
- * TransferInFunction1Code.AdviceAndRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferInFunction1Code#mmAdviceAndRequest
+ * TransferInFunction1Code.mmAdviceAndRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferInFunction1Code#Instruction
- * TransferInFunction1Code.Instruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferInFunction1Code#mmInstruction
+ * TransferInFunction1Code.mmInstruction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class TransferInFunction1Code extends TransferInFunctionCode {
 	 * name} = "AdviceAndRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdviceAndRequest = new MMCode() {
+	public static final MMCode mmAdviceAndRequest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdviceAndRequest";
@@ -98,7 +98,7 @@ public class TransferInFunction1Code extends TransferInFunctionCode {
 	 * name} = "Instruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode Instruction = new MMCode() {
+	public static final MMCode mmInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
@@ -109,11 +109,11 @@ public class TransferInFunction1Code extends TransferInFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransferInFunction1Code";
 				definition = "Specifies the function of the transfer in.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferInFunction1Code.AdviceAndRequest, com.tools20022.repository.codeset.TransferInFunction1Code.Instruction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferInFunction1Code.mmAdviceAndRequest, com.tools20022.repository.codeset.TransferInFunction1Code.mmInstruction);
 				trace_lazy = () -> TransferInFunctionCode.mmObject();
 			}
 		});

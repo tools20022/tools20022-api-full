@@ -41,18 +41,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#RelatedTransfer
- * PhysicalDelivery.RelatedTransfer}</li>
+ * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmRelatedTransfer
+ * PhysicalDelivery.mmRelatedTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#RegisteredAddressIndicator
- * PhysicalDelivery.RegisteredAddressIndicator}</li>
+ * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmRegisteredAddressIndicator
+ * PhysicalDelivery.mmRegisteredAddressIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#IssuedCertificateNumber
- * PhysicalDelivery.IssuedCertificateNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PhysicalDelivery#Address
- * PhysicalDelivery.Address}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PhysicalDelivery#Type
- * PhysicalDelivery.Type}</li>
+ * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmIssuedCertificateNumber
+ * PhysicalDelivery.mmIssuedCertificateNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmAddress
+ * PhysicalDelivery.mmAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmType
+ * PhysicalDelivery.mmType}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,14 +60,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#PhysicalDelivery
- * PostalAddress.PhysicalDelivery}</li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPhysicalDelivery
+ * PostalAddress.mmPhysicalDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PhysicalDelivery
- * SecuritiesTransfer.PhysicalDelivery}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
+ * SecuritiesTransfer.mmPhysicalDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#RelatedDelivery
- * SecuritiesCertificate.RelatedDelivery}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmRelatedDelivery
+ * SecuritiesCertificate.mmRelatedDelivery}</li>
  * </ul>
  * </li>
  * <li>
@@ -85,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PhysicalDelivery {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesTransfer relatedTransfer;
 	/**
 	 * Transfer process which requires physical delivery of the securities.
 	 * <p>
@@ -108,8 +109,8 @@ public class PhysicalDelivery {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#PhysicalDelivery
-	 * SecuritiesTransfer.PhysicalDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
+	 * SecuritiesTransfer.mmPhysicalDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -134,20 +135,21 @@ public class PhysicalDelivery {
 	 * "Transfer process which requires physical delivery of the securities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd RelatedTransfer = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmRelatedTransfer = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PhysicalDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransfer";
 			definition = "Transfer process which requires physical delivery of the securities.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTransfer.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.PhysicalDelivery;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 		}
 	};
+	protected YesNoIndicator registeredAddressIndicator;
 	/**
 	 * Indicates whether the address for the physical delivery is the registered
 	 * address.
@@ -159,22 +161,22 @@ public class PhysicalDelivery {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters2#RegisteredAddressIndicator
-	 * DeliveryParameters2.RegisteredAddressIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters4#RegisteredAddressIndicator
-	 * DeliveryParameters4.RegisteredAddressIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
 	 * PhysicalDelivery}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters2#mmRegisteredAddressIndicator
+	 * DeliveryParameters2.mmRegisteredAddressIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters4#mmRegisteredAddressIndicator
+	 * DeliveryParameters4.mmRegisteredAddressIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -188,19 +190,20 @@ public class PhysicalDelivery {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute RegisteredAddressIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmRegisteredAddressIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters2.RegisteredAddressIndicator, com.tools20022.repository.msg.DeliveryParameters4.RegisteredAddressIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters2.mmRegisteredAddressIndicator, com.tools20022.repository.msg.DeliveryParameters4.mmRegisteredAddressIndicator);
 			elementContext_lazy = () -> PhysicalDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "RegisteredAddressIndicator";
 			definition = "Indicates whether the address for the physical delivery is the registered address.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected SecuritiesCertificate issuedCertificateNumber;
 	/**
 	 * Certificate representing a security that is delivered.
 	 * <p>
@@ -209,8 +212,8 @@ public class PhysicalDelivery {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#RelatedDelivery
-	 * SecuritiesCertificate.RelatedDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmRelatedDelivery
+	 * SecuritiesCertificate.mmRelatedDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -219,19 +222,19 @@ public class PhysicalDelivery {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate
 	 * SecuritiesCertificate}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters3#IssuedCertificateNumber
-	 * DeliveryParameters3.IssuedCertificateNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
 	 * PhysicalDelivery}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters3#mmIssuedCertificateNumber
+	 * DeliveryParameters3.mmIssuedCertificateNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -243,21 +246,22 @@ public class PhysicalDelivery {
 	 * definition} = "Certificate representing a security that is delivered."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd IssuedCertificateNumber = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmIssuedCertificateNumber = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters3.IssuedCertificateNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters3.mmIssuedCertificateNumber);
 			elementContext_lazy = () -> PhysicalDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IssuedCertificateNumber";
 			definition = "Certificate representing a security that is delivered.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesCertificate.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.RelatedDelivery;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmRelatedDelivery;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmObject();
 		}
 	};
+	protected PostalAddress address;
 	/**
 	 * Address for physical delivery.
 	 * <p>
@@ -266,8 +270,8 @@ public class PhysicalDelivery {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PostalAddress#PhysicalDelivery
-	 * PostalAddress.PhysicalDelivery}</li>
+	 * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPhysicalDelivery
+	 * PostalAddress.mmPhysicalDelivery}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -275,52 +279,52 @@ public class PhysicalDelivery {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PostalAddress
 	 * PostalAddress}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters3#Address
-	 * DeliveryParameters3.Address}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder3#PhysicalDeliveryDetails
-	 * SubscriptionOrder3.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder5#PhysicalDeliveryDetails
-	 * SubscriptionOrder5.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder7#PhysicalDeliveryDetails
-	 * SubscriptionOrder7.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder4#PhysicalDeliveryDetails
-	 * SubscriptionOrder4.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder6#PhysicalDeliveryDetails
-	 * SubscriptionOrder6.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder8#PhysicalDeliveryDetails
-	 * SubscriptionOrder8.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder2#PhysicalDeliveryDetails
-	 * SwitchSubscriptionLegOrder2.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder3#PhysicalDeliveryDetails
-	 * SwitchSubscriptionLegOrder3.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder6#PhysicalDeliveryDetails
-	 * SwitchSubscriptionLegOrder6.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#PhysicalDeliveryDetails
-	 * SubscriptionOrder15.PhysicalDeliveryDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#PhysicalDeliveryDetails
-	 * SubscriptionOrder14.PhysicalDeliveryDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
 	 * PhysicalDelivery}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveryParameters3#mmAddress
+	 * DeliveryParameters3.mmAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder3#mmPhysicalDeliveryDetails
+	 * SubscriptionOrder3.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder5#mmPhysicalDeliveryDetails
+	 * SubscriptionOrder5.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder7#mmPhysicalDeliveryDetails
+	 * SubscriptionOrder7.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder4#mmPhysicalDeliveryDetails
+	 * SubscriptionOrder4.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder6#mmPhysicalDeliveryDetails
+	 * SubscriptionOrder6.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder8#mmPhysicalDeliveryDetails
+	 * SubscriptionOrder8.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder2#mmPhysicalDeliveryDetails
+	 * SwitchSubscriptionLegOrder2.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder3#mmPhysicalDeliveryDetails
+	 * SwitchSubscriptionLegOrder3.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegOrder6#mmPhysicalDeliveryDetails
+	 * SwitchSubscriptionLegOrder6.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder15#mmPhysicalDeliveryDetails
+	 * SubscriptionOrder15.mmPhysicalDeliveryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubscriptionOrder14#mmPhysicalDeliveryDetails
+	 * SubscriptionOrder14.mmPhysicalDeliveryDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -332,26 +336,27 @@ public class PhysicalDelivery {
 	 * definition} = "Address for physical delivery."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd Address = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmAddress = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters3.Address, com.tools20022.repository.msg.SubscriptionOrder3.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SubscriptionOrder5.PhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionOrder7.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SubscriptionOrder4.PhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionOrder6.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SubscriptionOrder8.PhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchSubscriptionLegOrder3.PhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.PhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SubscriptionOrder15.PhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionOrder14.PhysicalDeliveryDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters3.mmAddress, com.tools20022.repository.msg.SubscriptionOrder3.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SubscriptionOrder5.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionOrder7.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SubscriptionOrder4.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionOrder6.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SubscriptionOrder8.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SwitchSubscriptionLegOrder3.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.mmPhysicalDeliveryDetails,
+					com.tools20022.repository.msg.SubscriptionOrder15.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionOrder14.mmPhysicalDeliveryDetails);
 			elementContext_lazy = () -> PhysicalDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Address";
 			definition = "Address for physical delivery.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PostalAddress.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PostalAddress.PhysicalDelivery;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmPhysicalDelivery;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 		}
 	};
+	protected PhysicalTransferTypeCode type;
 	/**
 	 * Specifies the type of delivery.
 	 * <p>
@@ -362,91 +367,91 @@ public class PhysicalDelivery {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeCode
 	 * PhysicalTransferTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation7#PhysicalTransfer
-	 * DeliverInformation7.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation8#PhysicalTransfer
-	 * ReceiveInformation8.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation6#PhysicalTransfer
-	 * ReceiveInformation6.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation11#PhysicalTransfer
-	 * ReceiveInformation11.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation11#PhysicalTransfer
-	 * DeliverInformation11.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation8#PhysicalTransfer
-	 * DeliverInformation8.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation7#PhysicalTransfer
-	 * ReceiveInformation7.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation5#PhysicalTransfer
-	 * ReceiveInformation5.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation9#PhysicalTransfer
-	 * ReceiveInformation9.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation5#PhysicalTransfer
-	 * DeliverInformation5.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation9#PhysicalTransfer
-	 * DeliverInformation9.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation6#PhysicalTransfer
-	 * DeliverInformation6.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#PhysicalTransfer
-	 * ReceiveInformation13.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation12#PhysicalTransfer
-	 * ReceiveInformation12.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation12#PhysicalTransfer
-	 * DeliverInformation12.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation13#PhysicalTransfer
-	 * DeliverInformation13.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation15#PhysicalTransfer
-	 * DeliverInformation15.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation14#PhysicalTransfer
-	 * DeliverInformation14.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#PhysicalTransfer
-	 * ReceiveInformation15.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation14#PhysicalTransfer
-	 * ReceiveInformation14.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance1#HoldingPhysicalType
-	 * AggregateHoldingBalance1.HoldingPhysicalType}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation17#PhysicalTransfer
-	 * ReceiveInformation17.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#PhysicalTransfer
-	 * ReceiveInformation16.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation16#PhysicalTransfer
-	 * DeliverInformation16.PhysicalTransfer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17#PhysicalTransfer
-	 * DeliverInformation17.PhysicalTransfer}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery
 	 * PhysicalDelivery}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation7#mmPhysicalTransfer
+	 * DeliverInformation7.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation8#mmPhysicalTransfer
+	 * ReceiveInformation8.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation6#mmPhysicalTransfer
+	 * ReceiveInformation6.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation11#mmPhysicalTransfer
+	 * ReceiveInformation11.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation11#mmPhysicalTransfer
+	 * DeliverInformation11.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation8#mmPhysicalTransfer
+	 * DeliverInformation8.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation7#mmPhysicalTransfer
+	 * ReceiveInformation7.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation5#mmPhysicalTransfer
+	 * ReceiveInformation5.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation9#mmPhysicalTransfer
+	 * ReceiveInformation9.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation5#mmPhysicalTransfer
+	 * DeliverInformation5.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation9#mmPhysicalTransfer
+	 * DeliverInformation9.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation6#mmPhysicalTransfer
+	 * DeliverInformation6.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation13#mmPhysicalTransfer
+	 * ReceiveInformation13.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation12#mmPhysicalTransfer
+	 * ReceiveInformation12.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation12#mmPhysicalTransfer
+	 * DeliverInformation12.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation13#mmPhysicalTransfer
+	 * DeliverInformation13.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation15#mmPhysicalTransfer
+	 * DeliverInformation15.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation14#mmPhysicalTransfer
+	 * DeliverInformation14.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation15#mmPhysicalTransfer
+	 * ReceiveInformation15.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation14#mmPhysicalTransfer
+	 * ReceiveInformation14.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance1#mmHoldingPhysicalType
+	 * AggregateHoldingBalance1.mmHoldingPhysicalType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation17#mmPhysicalTransfer
+	 * ReceiveInformation17.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation16#mmPhysicalTransfer
+	 * ReceiveInformation16.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation16#mmPhysicalTransfer
+	 * DeliverInformation16.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17#mmPhysicalTransfer
+	 * DeliverInformation17.mmPhysicalTransfer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -458,24 +463,24 @@ public class PhysicalDelivery {
 	 * definition} = "Specifies the type of delivery."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Type = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation7.PhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation8.PhysicalTransfer,
-					com.tools20022.repository.msg.ReceiveInformation6.PhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation11.PhysicalTransfer, com.tools20022.repository.msg.DeliverInformation11.PhysicalTransfer,
-					com.tools20022.repository.msg.DeliverInformation8.PhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation7.PhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation5.PhysicalTransfer,
-					com.tools20022.repository.msg.ReceiveInformation9.PhysicalTransfer, com.tools20022.repository.msg.DeliverInformation5.PhysicalTransfer, com.tools20022.repository.msg.DeliverInformation9.PhysicalTransfer,
-					com.tools20022.repository.msg.DeliverInformation6.PhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation13.PhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation12.PhysicalTransfer,
-					com.tools20022.repository.msg.DeliverInformation12.PhysicalTransfer, com.tools20022.repository.msg.DeliverInformation13.PhysicalTransfer, com.tools20022.repository.msg.DeliverInformation15.PhysicalTransfer,
-					com.tools20022.repository.msg.DeliverInformation14.PhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation15.PhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation14.PhysicalTransfer,
-					com.tools20022.repository.msg.AggregateHoldingBalance1.HoldingPhysicalType, com.tools20022.repository.msg.ReceiveInformation17.PhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation16.PhysicalTransfer,
-					com.tools20022.repository.msg.DeliverInformation16.PhysicalTransfer, com.tools20022.repository.msg.DeliverInformation17.PhysicalTransfer);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation7.mmPhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation8.mmPhysicalTransfer,
+					com.tools20022.repository.msg.ReceiveInformation6.mmPhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation11.mmPhysicalTransfer, com.tools20022.repository.msg.DeliverInformation11.mmPhysicalTransfer,
+					com.tools20022.repository.msg.DeliverInformation8.mmPhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation7.mmPhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation5.mmPhysicalTransfer,
+					com.tools20022.repository.msg.ReceiveInformation9.mmPhysicalTransfer, com.tools20022.repository.msg.DeliverInformation5.mmPhysicalTransfer, com.tools20022.repository.msg.DeliverInformation9.mmPhysicalTransfer,
+					com.tools20022.repository.msg.DeliverInformation6.mmPhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation13.mmPhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation12.mmPhysicalTransfer,
+					com.tools20022.repository.msg.DeliverInformation12.mmPhysicalTransfer, com.tools20022.repository.msg.DeliverInformation13.mmPhysicalTransfer, com.tools20022.repository.msg.DeliverInformation15.mmPhysicalTransfer,
+					com.tools20022.repository.msg.DeliverInformation14.mmPhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation15.mmPhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation14.mmPhysicalTransfer,
+					com.tools20022.repository.msg.AggregateHoldingBalance1.mmHoldingPhysicalType, com.tools20022.repository.msg.ReceiveInformation17.mmPhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation16.mmPhysicalTransfer,
+					com.tools20022.repository.msg.DeliverInformation16.mmPhysicalTransfer, com.tools20022.repository.msg.DeliverInformation17.mmPhysicalTransfer);
 			elementContext_lazy = () -> PhysicalDelivery.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of delivery.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PhysicalTransferTypeCode.mmObject();
 		}
 	};
@@ -483,17 +488,57 @@ public class PhysicalDelivery {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PhysicalDelivery";
 				definition = "Parameters of a physical delivery.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.PhysicalDelivery, com.tools20022.repository.entity.SecuritiesTransfer.PhysicalDelivery,
-						com.tools20022.repository.entity.SecuritiesCertificate.RelatedDelivery);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PhysicalDelivery.RelatedTransfer, com.tools20022.repository.entity.PhysicalDelivery.RegisteredAddressIndicator,
-						com.tools20022.repository.entity.PhysicalDelivery.IssuedCertificateNumber, com.tools20022.repository.entity.PhysicalDelivery.Address, com.tools20022.repository.entity.PhysicalDelivery.Type);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.mmPhysicalDelivery, com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery,
+						com.tools20022.repository.entity.SecuritiesCertificate.mmRelatedDelivery);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PhysicalDelivery.mmRelatedTransfer, com.tools20022.repository.entity.PhysicalDelivery.mmRegisteredAddressIndicator,
+						com.tools20022.repository.entity.PhysicalDelivery.mmIssuedCertificateNumber, com.tools20022.repository.entity.PhysicalDelivery.mmAddress, com.tools20022.repository.entity.PhysicalDelivery.mmType);
 				derivationComponent_lazy = () -> Arrays.asList(DeliveryParameters2.mmObject(), DeliveryParameters4.mmObject(), DeliveryParameters3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesTransfer getRelatedTransfer() {
+		return relatedTransfer;
+	}
+
+	public void setRelatedTransfer(com.tools20022.repository.entity.SecuritiesTransfer relatedTransfer) {
+		this.relatedTransfer = relatedTransfer;
+	}
+
+	public YesNoIndicator getRegisteredAddressIndicator() {
+		return registeredAddressIndicator;
+	}
+
+	public void setRegisteredAddressIndicator(YesNoIndicator registeredAddressIndicator) {
+		this.registeredAddressIndicator = registeredAddressIndicator;
+	}
+
+	public SecuritiesCertificate getIssuedCertificateNumber() {
+		return issuedCertificateNumber;
+	}
+
+	public void setIssuedCertificateNumber(com.tools20022.repository.entity.SecuritiesCertificate issuedCertificateNumber) {
+		this.issuedCertificateNumber = issuedCertificateNumber;
+	}
+
+	public PostalAddress getAddress() {
+		return address;
+	}
+
+	public void setAddress(com.tools20022.repository.entity.PostalAddress address) {
+		this.address = address;
+	}
+
+	public PhysicalTransferTypeCode getType() {
+		return type;
+	}
+
+	public void setType(PhysicalTransferTypeCode type) {
+		this.type = type;
 	}
 }

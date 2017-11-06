@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DataFormat2Choice#Structured
- * DataFormat2Choice.Structured}</li>
+ * {@linkplain com.tools20022.repository.choice.DataFormat2Choice#mmStructured
+ * DataFormat2Choice.mmStructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DataFormat2Choice#Unstructured
- * DataFormat2Choice.Unstructured}</li>
+ * {@linkplain com.tools20022.repository.choice.DataFormat2Choice#mmUnstructured
+ * DataFormat2Choice.mmUnstructured}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DataFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification1 structured;
 	/**
 	 * Specification of data in a structured form.
 	 * <p>
@@ -90,7 +91,7 @@ public class DataFormat2Choice {
 	 * definition} = "Specification of data in a structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Structured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataFormat2Choice.mmObject();
 			isDerived = false;
@@ -98,11 +99,12 @@ public class DataFormat2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Specification of data in a structured form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
+	protected Max140Text unstructured;
 	/**
 	 * Specification of data for which there isn't a structured form.
 	 * <p>
@@ -131,7 +133,7 @@ public class DataFormat2Choice {
 	 * "Specification of data for which there isn't a structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataFormat2Choice.mmObject();
 			isDerived = false;
@@ -139,8 +141,8 @@ public class DataFormat2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unstructured";
 			definition = "Specification of data for which there isn't a structured form.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -148,13 +150,29 @@ public class DataFormat2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DataFormat2Choice.Structured, com.tools20022.repository.choice.DataFormat2Choice.Unstructured);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DataFormat2Choice.mmStructured, com.tools20022.repository.choice.DataFormat2Choice.mmUnstructured);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataFormat2Choice";
 				definition = "Choice between the specification of the data in a structured or unstructured form.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification1 getStructured() {
+		return structured;
+	}
+
+	public void setStructured(GenericIdentification1 structured) {
+		this.structured = structured;
+	}
+
+	public Max140Text getUnstructured() {
+		return unstructured;
+	}
+
+	public void setUnstructured(Max140Text unstructured) {
+		this.unstructured = unstructured;
 	}
 }

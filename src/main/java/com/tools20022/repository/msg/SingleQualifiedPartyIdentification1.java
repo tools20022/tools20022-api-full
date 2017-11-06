@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Party;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Defines an identifier for a party relative to another party using an
@@ -45,11 +46,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleQualifiedPartyIdentification1#BaseParty
- * SingleQualifiedPartyIdentification1.BaseParty}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleQualifiedPartyIdentification1#mmBaseParty
+ * SingleQualifiedPartyIdentification1.mmBaseParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleQualifiedPartyIdentification1#RelativeIdentifier
- * SingleQualifiedPartyIdentification1.RelativeIdentifier}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleQualifiedPartyIdentification1#mmRelativeIdentifier
+ * SingleQualifiedPartyIdentification1.mmRelativeIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SingleQualifiedPartyIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradeParty1 baseParty;
 	/**
 	 * Party identification recognisable by parties in the trade.
 	 * <p>
@@ -85,8 +87,8 @@ public class SingleQualifiedPartyIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RolePlayer#Role
-	 * RolePlayer.Role}</li>
+	 * {@linkplain com.tools20022.repository.entity.RolePlayer#mmRole
+	 * RolePlayer.mmRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,21 +108,22 @@ public class SingleQualifiedPartyIdentification1 {
 	 * "Party identification recognisable by parties in the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BaseParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBaseParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmRole;
 			componentContext_lazy = () -> SingleQualifiedPartyIdentification1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RolePlayer.Role;
 			isDerived = false;
 			xmlTag = "BasePty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseParty";
 			definition = "Party identification recognisable by parties in the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TradeParty1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
 		}
 	};
+	protected List<Max35Text> relativeIdentifier;
 	/**
 	 * Identifies a party, each identifier is recursively defined relative to
 	 * the party identified by the base party and the preceding part of the
@@ -152,7 +155,7 @@ public class SingleQualifiedPartyIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RelativeIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRelativeIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SingleQualifiedPartyIdentification1.mmObject();
 			isDerived = false;
@@ -160,8 +163,8 @@ public class SingleQualifiedPartyIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelativeIdentifier";
 			definition = "Identifies a party, each identifier is recursively defined relative to the party identified by the base party and the preceding part of the list.";
-			minOccurs = 0;
 			maxOccurs = 5;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -169,14 +172,30 @@ public class SingleQualifiedPartyIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleQualifiedPartyIdentification1.BaseParty, com.tools20022.repository.msg.SingleQualifiedPartyIdentification1.RelativeIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleQualifiedPartyIdentification1.mmBaseParty, com.tools20022.repository.msg.SingleQualifiedPartyIdentification1.mmRelativeIdentifier);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SingleQualifiedPartyIdentification1";
 				definition = "Defines an identifier for a party relative to another party using an identifier of another party followed by a local identifier issued by the other party.\r\nIt is assumed that customers of an identifiable party can be referenced by an identifier relative to that party. The identification of the party together with the relative identifier identifies the customer.\r\nSuch references can occur in sequence. The last occurrence of RelativeIdentifier is the local identifier at the party recursively defined by the PrefixParty and all preceding occurrences of RelativeIdentifier.\r\nTechnical note: The sequence of relative identifiers is used to avoid a recursive definition in the catalogue.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeParty1 getBaseParty() {
+		return baseParty;
+	}
+
+	public void setBaseParty(com.tools20022.repository.msg.TradeParty1 baseParty) {
+		this.baseParty = baseParty;
+	}
+
+	public List<Max35Text> getRelativeIdentifier() {
+		return relativeIdentifier;
+	}
+
+	public void setRelativeIdentifier(List<Max35Text> relativeIdentifier) {
+		this.relativeIdentifier = relativeIdentifier;
 	}
 }

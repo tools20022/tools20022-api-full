@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#NoTransaction
- * ReportPeriodActivityCode.NoTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#mmNoTransaction
+ * ReportPeriodActivityCode.mmNoTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#NoReportFromAgent
- * ReportPeriodActivityCode.NoReportFromAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#mmNoReportFromAgent
+ * ReportPeriodActivityCode.mmNoReportFromAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#CorruptedReport
- * ReportPeriodActivityCode.CorruptedReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#mmCorruptedReport
+ * ReportPeriodActivityCode.mmCorruptedReport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,7 +88,7 @@ public class ReportPeriodActivityCode {
 	 * definition} = "No transaction has been identified during the period."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoTransaction = new MMCode() {
+	public static final MMCode mmNoTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTransaction";
@@ -118,7 +118,7 @@ public class ReportPeriodActivityCode {
 	 * definition} = "No report has been received from reporting agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoReportFromAgent = new MMCode() {
+	public static final MMCode mmNoReportFromAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReportFromAgent";
@@ -148,7 +148,7 @@ public class ReportPeriodActivityCode {
 	 * definition} = "Report has been received but was corrupted."</li>
 	 * </ul>
 	 */
-	public static final MMCode CorruptedReport = new MMCode() {
+	public static final MMCode mmCorruptedReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorruptedReport";
@@ -161,12 +161,12 @@ public class ReportPeriodActivityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportPeriodActivityCode";
 				definition = "Specifies the type of report activity for a specific period.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivityCode.NoTransaction, com.tools20022.repository.codeset.ReportPeriodActivityCode.NoReportFromAgent,
-						com.tools20022.repository.codeset.ReportPeriodActivityCode.CorruptedReport);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivityCode.mmNoTransaction, com.tools20022.repository.codeset.ReportPeriodActivityCode.mmNoReportFromAgent,
+						com.tools20022.repository.codeset.ReportPeriodActivityCode.mmCorruptedReport);
 				derivation_lazy = () -> Arrays.asList(ReportPeriodActivity1Code.mmObject(), ReportPeriodActivity3Code.mmObject());
 			}
 		});

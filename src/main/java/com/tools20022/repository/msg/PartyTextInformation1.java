@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyTextInformation1#DeclarationDetails
- * PartyTextInformation1.DeclarationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyTextInformation1#mmDeclarationDetails
+ * PartyTextInformation1.mmDeclarationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyTextInformation1#PartyContactDetails
- * PartyTextInformation1.PartyContactDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyTextInformation1#mmPartyContactDetails
+ * PartyTextInformation1.mmPartyContactDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyTextInformation1#RegistrationDetails
- * PartyTextInformation1.RegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyTextInformation1#mmRegistrationDetails
+ * PartyTextInformation1.mmRegistrationDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyTextInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text declarationDetails;
 	/**
 	 * Provides declaration details narrative relative to the party.
 	 * <p>
@@ -82,8 +83,8 @@ public class PartyTextInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#Declaration
-	 * PartyIdentificationInformation.Declaration}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmDeclaration
+	 * PartyIdentificationInformation.mmDeclaration}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class PartyTextInformation1 {
 	 * "Provides declaration details narrative relative to the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DeclarationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmDeclaration;
 			componentContext_lazy = () -> PartyTextInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.Declaration;
 			isDerived = false;
 			xmlTag = "DclrtnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetails";
 			definition = "Provides declaration details narrative relative to the party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max140Text partyContactDetails;
 	/**
 	 * Provides additional information regarding the party, for example, the
 	 * contact unit or person responsible for the transaction identified in the
@@ -131,8 +133,8 @@ public class PartyTextInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#ContactPoint
-	 * Party.ContactPoint}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmContactPoint
+	 * Party.mmContactPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,20 +155,21 @@ public class PartyTextInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyContactDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyContactDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
 			componentContext_lazy = () -> PartyTextInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.ContactPoint;
 			isDerived = false;
 			xmlTag = "PtyCtctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyContactDetails";
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected Max350Text registrationDetails;
 	/**
 	 * Provides information required for the registration.
 	 * <p>
@@ -179,8 +182,8 @@ public class PartyTextInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Registration
-	 * Security.Registration}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRegistration
+	 * Security.mmRegistration}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -199,17 +202,17 @@ public class PartyTextInformation1 {
 	 * definition} = "Provides information required for the registration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistration;
 			componentContext_lazy = () -> PartyTextInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Registration;
 			isDerived = false;
 			xmlTag = "RegnDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Provides information required for the registration.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -217,15 +220,39 @@ public class PartyTextInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyTextInformation1.DeclarationDetails, com.tools20022.repository.msg.PartyTextInformation1.PartyContactDetails,
-						com.tools20022.repository.msg.PartyTextInformation1.RegistrationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyTextInformation1.mmDeclarationDetails, com.tools20022.repository.msg.PartyTextInformation1.mmPartyContactDetails,
+						com.tools20022.repository.msg.PartyTextInformation1.mmRegistrationDetails);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyTextInformation1";
 				definition = "Provides additional information regarding the party, eg, the contact unit or person responsible for the transaction identified in the message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getDeclarationDetails() {
+		return declarationDetails;
+	}
+
+	public void setDeclarationDetails(Max350Text declarationDetails) {
+		this.declarationDetails = declarationDetails;
+	}
+
+	public Max140Text getPartyContactDetails() {
+		return partyContactDetails;
+	}
+
+	public void setPartyContactDetails(Max140Text partyContactDetails) {
+		this.partyContactDetails = partyContactDetails;
+	}
+
+	public Max350Text getRegistrationDetails() {
+		return registrationDetails;
+	}
+
+	public void setRegistrationDetails(Max350Text registrationDetails) {
+		this.registrationDetails = registrationDetails;
 	}
 }

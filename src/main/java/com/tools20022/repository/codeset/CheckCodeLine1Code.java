@@ -33,24 +33,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * CheckCodeLineCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code#CMC7
- * CheckCodeLine1Code.CMC7}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code#E13B
- * CheckCodeLine1Code.E13B}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code#OCRA
- * CheckCodeLine1Code.OCRA}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code#OCRB
- * CheckCodeLine1Code.OCRB}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code#mmCMC7
+ * CheckCodeLine1Code.mmCMC7}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code#mmE13B
+ * CheckCodeLine1Code.mmE13B}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code#mmOCRA
+ * CheckCodeLine1Code.mmOCRA}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code#mmOCRB
+ * CheckCodeLine1Code.mmOCRB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code#OCRDefault
- * CheckCodeLine1Code.OCRDefault}</li>
+ * {@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code#mmOCRDefault
+ * CheckCodeLine1Code.mmOCRDefault}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,7 +80,7 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	 * name} = "CMC7"</li>
 	 * </ul>
 	 */
-	public static final MMCode CMC7 = new MMCode() {
+	public static final MMCode mmCMC7 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CMC7";
@@ -103,7 +103,7 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	 * name} = "E13B"</li>
 	 * </ul>
 	 */
-	public static final MMCode E13B = new MMCode() {
+	public static final MMCode mmE13B = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "E13B";
@@ -126,7 +126,7 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	 * name} = "OCRA"</li>
 	 * </ul>
 	 */
-	public static final MMCode OCRA = new MMCode() {
+	public static final MMCode mmOCRA = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRA";
@@ -149,7 +149,7 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	 * name} = "OCRB"</li>
 	 * </ul>
 	 */
-	public static final MMCode OCRB = new MMCode() {
+	public static final MMCode mmOCRB = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRB";
@@ -172,7 +172,7 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	 * name} = "OCRDefault"</li>
 	 * </ul>
 	 */
-	public static final MMCode OCRDefault = new MMCode() {
+	public static final MMCode mmOCRDefault = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRDefault";
@@ -183,12 +183,12 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CheckCodeLine1Code";
 				definition = "Format of the check code line.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CheckCodeLine1Code.CMC7, com.tools20022.repository.codeset.CheckCodeLine1Code.E13B, com.tools20022.repository.codeset.CheckCodeLine1Code.OCRA,
-						com.tools20022.repository.codeset.CheckCodeLine1Code.OCRB, com.tools20022.repository.codeset.CheckCodeLine1Code.OCRDefault);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CheckCodeLine1Code.mmCMC7, com.tools20022.repository.codeset.CheckCodeLine1Code.mmE13B, com.tools20022.repository.codeset.CheckCodeLine1Code.mmOCRA,
+						com.tools20022.repository.codeset.CheckCodeLine1Code.mmOCRB, com.tools20022.repository.codeset.CheckCodeLine1Code.mmOCRDefault);
 				trace_lazy = () -> CheckCodeLineCode.mmObject();
 			}
 		});

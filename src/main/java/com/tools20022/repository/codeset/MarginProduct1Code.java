@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginProduct1Code#Equities
- * MarginProduct1Code.Equities}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginProduct1Code#mmEquities
+ * MarginProduct1Code.mmEquities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginProduct1Code#FixedIncome
- * MarginProduct1Code.FixedIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginProduct1Code#mmFixedIncome
+ * MarginProduct1Code.mmFixedIncome}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class MarginProduct1Code extends MarginProductCode {
 	 * name} = "Equities"</li>
 	 * </ul>
 	 */
-	public static final MMCode Equities = new MMCode() {
+	public static final MMCode mmEquities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equities";
@@ -104,7 +104,7 @@ public class MarginProduct1Code extends MarginProductCode {
 	 * name} = "FixedIncome"</li>
 	 * </ul>
 	 */
-	public static final MMCode FixedIncome = new MMCode() {
+	public static final MMCode mmFixedIncome = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedIncome";
@@ -115,12 +115,12 @@ public class MarginProduct1Code extends MarginProductCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EQUI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarginProduct1Code";
 				definition = "Specifies the underlying product of the margin.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginProduct1Code.Equities, com.tools20022.repository.codeset.MarginProduct1Code.FixedIncome);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginProduct1Code.mmEquities, com.tools20022.repository.codeset.MarginProduct1Code.mmFixedIncome);
 				trace_lazy = () -> MarginProductCode.mmObject();
 			}
 		});

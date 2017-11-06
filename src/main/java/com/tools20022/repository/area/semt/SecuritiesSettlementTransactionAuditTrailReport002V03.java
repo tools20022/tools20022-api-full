@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022Varia
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * <b>Scope</b><br>
@@ -74,31 +75,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#Pagination
- * SecuritiesSettlementTransactionAuditTrailReport002V03.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#mmPagination
+ * SecuritiesSettlementTransactionAuditTrailReport002V03.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#QueryReference
- * SecuritiesSettlementTransactionAuditTrailReport002V03.QueryReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#mmQueryReference
+ * SecuritiesSettlementTransactionAuditTrailReport002V03.mmQueryReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#TransactionIdentification
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#mmTransactionIdentification
  * SecuritiesSettlementTransactionAuditTrailReport002V03.
- * TransactionIdentification}</li>
+ * mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#SafekeepingAccount
- * SecuritiesSettlementTransactionAuditTrailReport002V03.SafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAuditTrailReport002V03.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#AccountOwner
- * SecuritiesSettlementTransactionAuditTrailReport002V03.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#mmAccountOwner
+ * SecuritiesSettlementTransactionAuditTrailReport002V03.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#StatusTrail
- * SecuritiesSettlementTransactionAuditTrailReport002V03.StatusTrail}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#mmStatusTrail
+ * SecuritiesSettlementTransactionAuditTrailReport002V03.mmStatusTrail}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03#identifier
- * SecuritiesSettlementTransactionAuditTrailReport002V03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.022.002.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,6 +113,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within a statement) and continuation
 	 * indicator to indicate that the statement is to continue or that the
@@ -140,17 +140,18 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Identification16 queryReference;
 	/**
 	 * Identification of the SecuritiesStatusQuery message sent to request this
 	 * report.
@@ -177,17 +178,18 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock QueryReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmQueryReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "QryRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the SecuritiesStatusQuery message sent to request this report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Identification16.mmObject();
 		}
 	};
+	protected TransactionIdentifications34 transactionIdentification;
 	/**
 	 * Provides unambiguous transaction identification information.
 	 * <p>
@@ -212,17 +214,18 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * "Provides unambiguous transaction identification information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Provides unambiguous transaction identification information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> TransactionIdentifications34.mmObject();
 		}
 	};
+	protected SecuritiesAccount27 safekeepingAccount;
 	/**
 	 * Account to or from which a securities entry is made.
 	 * <p>
@@ -246,17 +249,18 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount27.mmObject();
 		}
 	};
+	protected PartyIdentification109 accountOwner;
 	/**
 	 * Party that legally owns the account.
 	 * <p>
@@ -280,17 +284,18 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification109.mmObject();
 		}
 	};
+	protected List<StatusTrail7> statusTrail;
 	/**
 	 * Provides the history of status and reasons for a pending, posted or
 	 * cancelled transaction.
@@ -316,7 +321,7 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock StatusTrail = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmStatusTrail = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsTrl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,33 +329,6 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 			definition = " Provides the history of status and reasons for a pending, posted or cancelled transaction.";
 			minOccurs = 0;
 			complexType_lazy = () -> StatusTrail7.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "022"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "002"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "022";
-			version = "03";
-			flavour = "002";
 		}
 	};
 
@@ -365,14 +343,69 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxAudtTrlRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestversionsubsetvariant.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.Pagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.QueryReference,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.TransactionIdentification,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.SafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.AccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.StatusTrail);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmPagination,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmQueryReference,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmTransactionIdentification,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmSafekeepingAccount,
+						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmStatusTrail);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "022";
+						version = "03";
+						flavour = "002";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public Identification16 getQueryReference() {
+		return queryReference;
+	}
+
+	public void setQueryReference(Identification16 queryReference) {
+		this.queryReference = queryReference;
+	}
+
+	public TransactionIdentifications34 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(TransactionIdentifications34 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public SecuritiesAccount27 getSafekeepingAccount() {
+		return safekeepingAccount;
+	}
+
+	public void setSafekeepingAccount(SecuritiesAccount27 safekeepingAccount) {
+		this.safekeepingAccount = safekeepingAccount;
+	}
+
+	public PartyIdentification109 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(PartyIdentification109 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public List<StatusTrail7> getStatusTrail() {
+		return statusTrail;
+	}
+
+	public void setStatusTrail(List<StatusTrail7> statusTrail) {
+		this.statusTrail = statusTrail;
 	}
 }

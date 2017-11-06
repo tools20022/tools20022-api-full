@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports on business day information.
@@ -32,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessDayInformation1#BusinessDayInformationReport
- * BusinessDayInformation1.BusinessDayInformationReport}</li>
+ * {@linkplain com.tools20022.repository.msg.BusinessDayInformation1#mmBusinessDayInformationReport
+ * BusinessDayInformation1.mmBusinessDayInformationReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,6 +55,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BusinessDayInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.msg.BusinessDayInformationReport1> businessDayInformationReport;
 	/**
 	 * Reports either business day information or a business error.
 	 * <p>
@@ -82,7 +84,7 @@ public class BusinessDayInformation1 {
 	 * "Reports either business day information or a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessDayInformationReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessDayInformationReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BusinessDayInformation1.mmObject();
 			isDerived = false;
@@ -91,21 +93,29 @@ public class BusinessDayInformation1 {
 			name = "BusinessDayInformationReport";
 			definition = "Reports either business day information or a business error.";
 			minOccurs = 1;
-			type_lazy = () -> BusinessDayInformationReport1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReport1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayInformation1.BusinessDayInformationReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayInformation1.mmBusinessDayInformationReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayInformation1";
 				definition = "Reports on business day information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<BusinessDayInformationReport1> getBusinessDayInformationReport() {
+		return businessDayInformationReport;
+	}
+
+	public void setBusinessDayInformationReport(List<com.tools20022.repository.msg.BusinessDayInformationReport1> businessDayInformationReport) {
+		this.businessDayInformationReport = businessDayInformationReport;
 	}
 }

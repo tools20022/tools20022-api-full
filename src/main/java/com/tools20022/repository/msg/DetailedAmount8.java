@@ -36,14 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8#Amount
- * DetailedAmount8.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8#ExchangeRate
- * DetailedAmount8.ExchangeRate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8#QuotationDate
- * DetailedAmount8.QuotationDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8#Label
- * DetailedAmount8.Label}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8#mmAmount
+ * DetailedAmount8.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8#mmExchangeRate
+ * DetailedAmount8.mmExchangeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DetailedAmount8#mmQuotationDate
+ * DetailedAmount8.mmQuotationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8#mmLabel
+ * DetailedAmount8.mmLabel}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DetailedAmount8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ImpliedCurrencyAndAmount amount;
 	/**
 	 * Amount after the currency exchange.<br>
 	 * It corresponds to ISO 8583 field number 6, completed by the field number
@@ -86,8 +88,8 @@ public class DetailedAmount8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#Amount
-	 * Payment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmAmount
+	 * Payment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,25 +111,26 @@ public class DetailedAmount8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount4#Amount
-	 * DetailedAmount4.Amount}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount4#mmAmount
+	 * DetailedAmount4.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
 			componentContext_lazy = () -> DetailedAmount8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount after the currency exchange.\r\nIt corresponds to ISO 8583 field number 6, completed by the field number 51 for the versions 87 and 93.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.Amount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	protected BaseOneRate exchangeRate;
 	/**
 	 * Exchange rate to the currency of the amount.<br>
 	 * It corresponds to ISO 8583 field number 10.
@@ -141,8 +144,8 @@ public class DetailedAmount8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ExchangeRate
-	 * CurrencyExchange.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmExchangeRate
+	 * CurrencyExchange.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,20 +166,21 @@ public class DetailedAmount8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> DetailedAmount8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ExchangeRate;
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Exchange rate to the currency of the amount.\r\nIt corresponds to ISO 8583 field number 10.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected ISODateTime quotationDate;
 	/**
 	 * Date and time at which the exchange rate has been quoted.
 	 * <p>
@@ -189,8 +193,8 @@ public class DetailedAmount8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#QuotationDate
-	 * CurrencyExchange.QuotationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmQuotationDate
+	 * CurrencyExchange.mmQuotationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,20 +214,21 @@ public class DetailedAmount8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QuotationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotationDate;
 			componentContext_lazy = () -> DetailedAmount8.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.QuotationDate;
 			isDerived = false;
 			xmlTag = "QtnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date and time at which the exchange rate has been quoted.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max140Text label;
 	/**
 	 * Text to display on the cardholder or to print on the cardholder bank
 	 * statement.
@@ -255,11 +260,11 @@ public class DetailedAmount8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.DetailedAmount4#Label
-	 * DetailedAmount4.Label}</li>
+	 * {@linkplain com.tools20022.repository.msg.DetailedAmount4#mmLabel
+	 * DetailedAmount4.mmLabel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Label = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DetailedAmount8.mmObject();
 			isDerived = false;
@@ -267,9 +272,9 @@ public class DetailedAmount8 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Label";
 			definition = "Text to display on the cardholder or to print on the cardholder bank statement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.Label;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmLabel;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -277,10 +282,10 @@ public class DetailedAmount8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount8.Amount, com.tools20022.repository.msg.DetailedAmount8.ExchangeRate, com.tools20022.repository.msg.DetailedAmount8.QuotationDate,
-						com.tools20022.repository.msg.DetailedAmount8.Label);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount8.mmAmount, com.tools20022.repository.msg.DetailedAmount8.mmExchangeRate, com.tools20022.repository.msg.DetailedAmount8.mmQuotationDate,
+						com.tools20022.repository.msg.DetailedAmount8.mmLabel);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount8";
 				definition = "Detailed amounts associated with the total amount of transaction.";
@@ -288,5 +293,37 @@ public class DetailedAmount8 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ImpliedCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public BaseOneRate getExchangeRate() {
+		return exchangeRate;
+	}
+
+	public void setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = exchangeRate;
+	}
+
+	public ISODateTime getQuotationDate() {
+		return quotationDate;
+	}
+
+	public void setQuotationDate(ISODateTime quotationDate) {
+		this.quotationDate = quotationDate;
+	}
+
+	public Max140Text getLabel() {
+		return label;
+	}
+
+	public void setLabel(Max140Text label) {
+		this.label = label;
 	}
 }

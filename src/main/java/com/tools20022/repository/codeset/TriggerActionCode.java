@@ -29,12 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TriggerActionCode#Activate
- * TriggerActionCode.Activate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TriggerActionCode#Modify
- * TriggerActionCode.Modify}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TriggerActionCode#Cancel
- * TriggerActionCode.Cancel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerActionCode#mmActivate
+ * TriggerActionCode.mmActivate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TriggerActionCode#mmModify
+ * TriggerActionCode.mmModify}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TriggerActionCode#mmCancel
+ * TriggerActionCode.mmCancel}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +90,7 @@ public class TriggerActionCode {
 	 * definition} = "Trigger action is activate."</li>
 	 * </ul>
 	 */
-	public static final MMCode Activate = new MMCode() {
+	public static final MMCode mmActivate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Activate";
@@ -119,7 +120,7 @@ public class TriggerActionCode {
 	 * definition} = "Trigger action is modify."</li>
 	 * </ul>
 	 */
-	public static final MMCode Modify = new MMCode() {
+	public static final MMCode mmModify = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modify";
@@ -149,7 +150,7 @@ public class TriggerActionCode {
 	 * definition} = "Trigger action is cancel."</li>
 	 * </ul>
 	 */
-	public static final MMCode Cancel = new MMCode() {
+	public static final MMCode mmCancel = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancel";
@@ -162,12 +163,12 @@ public class TriggerActionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TriggerActionCode";
 				definition = "Defines the type of action to take when the trigger hits.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TriggerActionCode.Activate, com.tools20022.repository.codeset.TriggerActionCode.Modify, com.tools20022.repository.codeset.TriggerActionCode.Cancel);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TriggerActionCode.mmActivate, com.tools20022.repository.codeset.TriggerActionCode.mmModify, com.tools20022.repository.codeset.TriggerActionCode.mmCancel);
 				derivation_lazy = () -> Arrays.asList(TriggerAction1Code.mmObject());
 			}
 		});

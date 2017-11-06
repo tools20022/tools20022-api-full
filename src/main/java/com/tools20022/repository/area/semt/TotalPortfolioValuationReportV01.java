@@ -22,10 +22,7 @@ import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.choice.PortfolioBalance1;
-import com.tools20022.repository.msg.Report4;
-import com.tools20022.repository.msg.SecuritiesAccount21;
-import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msg.TotalPortfolioValuation1;
+import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TotalPortfolioValuationReportISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -71,30 +68,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#Pagination
- * TotalPortfolioValuationReportV01.Pagination}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmPagination
+ * TotalPortfolioValuationReportV01.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#ReportGeneralDetails
- * TotalPortfolioValuationReportV01.ReportGeneralDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmReportGeneralDetails
+ * TotalPortfolioValuationReportV01.mmReportGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#AccountDetails
- * TotalPortfolioValuationReportV01.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmAccountDetails
+ * TotalPortfolioValuationReportV01.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#TotalPortfolioValuation
- * TotalPortfolioValuationReportV01.TotalPortfolioValuation}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmTotalPortfolioValuation
+ * TotalPortfolioValuationReportV01.mmTotalPortfolioValuation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#Balance
- * TotalPortfolioValuationReportV01.Balance}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmBalance
+ * TotalPortfolioValuationReportV01.mmBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#SupplementaryData
- * TotalPortfolioValuationReportV01.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#mmSupplementaryData
+ * TotalPortfolioValuationReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01#identifier
- * TotalPortfolioValuationReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code semt.024.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,6 +105,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalPortfolioValuationReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Pagination pagination;
 	/**
 	 * Page number of the message (within the report) and continuation indicator
 	 * to indicate that the report is to continue or that the message is the
@@ -136,17 +132,18 @@ public class TotalPortfolioValuationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Pagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within the report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> Pagination.mmObject();
 		}
 	};
+	protected Report4 reportGeneralDetails;
 	/**
 	 * General information related to the total portfolio valuation report.
 	 * <p>
@@ -170,17 +167,18 @@ public class TotalPortfolioValuationReportV01 {
 	 * "General information related to the total portfolio valuation report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ReportGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmReportGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptGnlDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportGeneralDetails";
 			definition = "General information related to the total portfolio valuation report.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Report4.mmObject();
 		}
 	};
+	protected SecuritiesAccount21 accountDetails;
 	/**
 	 * Details of the account. The account may represent an investment portfolio
 	 * or a fund.
@@ -207,17 +205,18 @@ public class TotalPortfolioValuationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Details of the account. The account may represent an investment portfolio or a fund.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount21.mmObject();
 		}
 	};
+	protected TotalPortfolioValuation1 totalPortfolioValuation;
 	/**
 	 * Valuation information of the portfolio. In some markets a fund of funds
 	 * or an investment fund is regarded as a portfolio.
@@ -244,17 +243,18 @@ public class TotalPortfolioValuationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock TotalPortfolioValuation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmTotalPortfolioValuation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TtlPrtflValtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalPortfolioValuation";
 			definition = "Valuation information of the portfolio. In some markets a fund of funds or an investment fund is regarded as a portfolio.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> TotalPortfolioValuation1.mmObject();
 		}
 	};
+	protected PortfolioBalance1 balance;
 	/**
 	 * Balance breakdown information.
 	 * <p>
@@ -278,17 +278,18 @@ public class TotalPortfolioValuationReportV01 {
 	 * definition} = "Balance breakdown information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Balance = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmBalance = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Bal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Balance breakdown information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PortfolioBalance1.mmObject();
 		}
 	};
+	protected SupplementaryData1 supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -315,42 +316,15 @@ public class TotalPortfolioValuationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "semt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "024"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "semt";
-			messageFunctionality = "024";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -364,12 +338,67 @@ public class TotalPortfolioValuationReportV01 {
 				rootElement = "Document";
 				xmlTag = "TtlPrtflValtnRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.Pagination, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.ReportGeneralDetails,
-						com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.AccountDetails, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.TotalPortfolioValuation,
-						com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.Balance, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmPagination, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmReportGeneralDetails,
+						com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmAccountDetails, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmTotalPortfolioValuation,
+						com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmBalance, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "semt";
+						messageFunctionality = "024";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Pagination getPagination() {
+		return pagination;
+	}
+
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
+	}
+
+	public Report4 getReportGeneralDetails() {
+		return reportGeneralDetails;
+	}
+
+	public void setReportGeneralDetails(Report4 reportGeneralDetails) {
+		this.reportGeneralDetails = reportGeneralDetails;
+	}
+
+	public SecuritiesAccount21 getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(SecuritiesAccount21 accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public TotalPortfolioValuation1 getTotalPortfolioValuation() {
+		return totalPortfolioValuation;
+	}
+
+	public void setTotalPortfolioValuation(TotalPortfolioValuation1 totalPortfolioValuation) {
+		this.totalPortfolioValuation = totalPortfolioValuation;
+	}
+
+	public PortfolioBalance1 getBalance() {
+		return balance;
+	}
+
+	public void setBalance(PortfolioBalance1 balance) {
+		this.balance = balance;
+	}
+
+	public SupplementaryData1 getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(SupplementaryData1 supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

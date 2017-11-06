@@ -34,149 +34,149 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#PostingAmount
- * CorporateActionAmounts37.PostingAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmPostingAmount
+ * CorporateActionAmounts37.mmPostingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#GrossCashAmount
- * CorporateActionAmounts37.GrossCashAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmGrossCashAmount
+ * CorporateActionAmounts37.mmGrossCashAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#NetCashAmount
- * CorporateActionAmounts37.NetCashAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmNetCashAmount
+ * CorporateActionAmounts37.mmNetCashAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#SolicitationFees
- * CorporateActionAmounts37.SolicitationFees}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmSolicitationFees
+ * CorporateActionAmounts37.mmSolicitationFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#CashInLieuOfShare
- * CorporateActionAmounts37.CashInLieuOfShare}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmCashInLieuOfShare
+ * CorporateActionAmounts37.mmCashInLieuOfShare}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#CapitalGain
- * CorporateActionAmounts37.CapitalGain}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmCapitalGain
+ * CorporateActionAmounts37.mmCapitalGain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#InterestAmount
- * CorporateActionAmounts37.InterestAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmInterestAmount
+ * CorporateActionAmounts37.mmInterestAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#MarketClaimAmount
- * CorporateActionAmounts37.MarketClaimAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmMarketClaimAmount
+ * CorporateActionAmounts37.mmMarketClaimAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#IndemnityAmount
- * CorporateActionAmounts37.IndemnityAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmIndemnityAmount
+ * CorporateActionAmounts37.mmIndemnityAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#ManufacturedDividendPaymentAmount
- * CorporateActionAmounts37.ManufacturedDividendPaymentAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmManufacturedDividendPaymentAmount
+ * CorporateActionAmounts37.mmManufacturedDividendPaymentAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#ReinvestmentAmount
- * CorporateActionAmounts37.ReinvestmentAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmReinvestmentAmount
+ * CorporateActionAmounts37.mmReinvestmentAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#FullyFrankedAmount
- * CorporateActionAmounts37.FullyFrankedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmFullyFrankedAmount
+ * CorporateActionAmounts37.mmFullyFrankedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#UnfrankedAmount
- * CorporateActionAmounts37.UnfrankedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmUnfrankedAmount
+ * CorporateActionAmounts37.mmUnfrankedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#SundryOrOtherAmount
- * CorporateActionAmounts37.SundryOrOtherAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmSundryOrOtherAmount
+ * CorporateActionAmounts37.mmSundryOrOtherAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#TaxFreeAmount
- * CorporateActionAmounts37.TaxFreeAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmTaxFreeAmount
+ * CorporateActionAmounts37.mmTaxFreeAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#TaxDeferredAmount
- * CorporateActionAmounts37.TaxDeferredAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmTaxDeferredAmount
+ * CorporateActionAmounts37.mmTaxDeferredAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#ValueAddedTaxAmount
- * CorporateActionAmounts37.ValueAddedTaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmValueAddedTaxAmount
+ * CorporateActionAmounts37.mmValueAddedTaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#StampDutyAmount
- * CorporateActionAmounts37.StampDutyAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmStampDutyAmount
+ * CorporateActionAmounts37.mmStampDutyAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#TaxReclaimAmount
- * CorporateActionAmounts37.TaxReclaimAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmTaxReclaimAmount
+ * CorporateActionAmounts37.mmTaxReclaimAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#TaxCreditAmount
- * CorporateActionAmounts37.TaxCreditAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmTaxCreditAmount
+ * CorporateActionAmounts37.mmTaxCreditAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#AdditionalTaxAmount
- * CorporateActionAmounts37.AdditionalTaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmAdditionalTaxAmount
+ * CorporateActionAmounts37.mmAdditionalTaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#WithholdingTaxAmount
- * CorporateActionAmounts37.WithholdingTaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmWithholdingTaxAmount
+ * CorporateActionAmounts37.mmWithholdingTaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#SecondLevelTaxAmount
- * CorporateActionAmounts37.SecondLevelTaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmSecondLevelTaxAmount
+ * CorporateActionAmounts37.mmSecondLevelTaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#FiscalStampAmount
- * CorporateActionAmounts37.FiscalStampAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmFiscalStampAmount
+ * CorporateActionAmounts37.mmFiscalStampAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#ExecutingBrokerAmount
- * CorporateActionAmounts37.ExecutingBrokerAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmExecutingBrokerAmount
+ * CorporateActionAmounts37.mmExecutingBrokerAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#PayingAgentCommissionAmount
- * CorporateActionAmounts37.PayingAgentCommissionAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmPayingAgentCommissionAmount
+ * CorporateActionAmounts37.mmPayingAgentCommissionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#LocalBrokerCommissionAmount
- * CorporateActionAmounts37.LocalBrokerCommissionAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmLocalBrokerCommissionAmount
+ * CorporateActionAmounts37.mmLocalBrokerCommissionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#RegulatoryFeesAmount
- * CorporateActionAmounts37.RegulatoryFeesAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmRegulatoryFeesAmount
+ * CorporateActionAmounts37.mmRegulatoryFeesAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#ShippingFeesAmount
- * CorporateActionAmounts37.ShippingFeesAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmShippingFeesAmount
+ * CorporateActionAmounts37.mmShippingFeesAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#ChargesAmount
- * CorporateActionAmounts37.ChargesAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmChargesAmount
+ * CorporateActionAmounts37.mmChargesAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#CashAmountBroughtForward
- * CorporateActionAmounts37.CashAmountBroughtForward}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmCashAmountBroughtForward
+ * CorporateActionAmounts37.mmCashAmountBroughtForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#CashAmountCarriedForward
- * CorporateActionAmounts37.CashAmountCarriedForward}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmCashAmountCarriedForward
+ * CorporateActionAmounts37.mmCashAmountCarriedForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#NotionalDividendPayableAmount
- * CorporateActionAmounts37.NotionalDividendPayableAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmNotionalDividendPayableAmount
+ * CorporateActionAmounts37.mmNotionalDividendPayableAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#NotionalTaxAmount
- * CorporateActionAmounts37.NotionalTaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmNotionalTaxAmount
+ * CorporateActionAmounts37.mmNotionalTaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#TaxArrearsAmount
- * CorporateActionAmounts37.TaxArrearsAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmTaxArrearsAmount
+ * CorporateActionAmounts37.mmTaxArrearsAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#OriginalAmount
- * CorporateActionAmounts37.OriginalAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmOriginalAmount
+ * CorporateActionAmounts37.mmOriginalAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#PrincipalOrCorpus
- * CorporateActionAmounts37.PrincipalOrCorpus}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmPrincipalOrCorpus
+ * CorporateActionAmounts37.mmPrincipalOrCorpus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#RedemptionPremiumAmount
- * CorporateActionAmounts37.RedemptionPremiumAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmRedemptionPremiumAmount
+ * CorporateActionAmounts37.mmRedemptionPremiumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#IncomePortion
- * CorporateActionAmounts37.IncomePortion}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmIncomePortion
+ * CorporateActionAmounts37.mmIncomePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#StockExchangeTax
- * CorporateActionAmounts37.StockExchangeTax}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmStockExchangeTax
+ * CorporateActionAmounts37.mmStockExchangeTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#EUTaxRetentionAmount
- * CorporateActionAmounts37.EUTaxRetentionAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmEUTaxRetentionAmount
+ * CorporateActionAmounts37.mmEUTaxRetentionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#AccruedInterestAmount
- * CorporateActionAmounts37.AccruedInterestAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmAccruedInterestAmount
+ * CorporateActionAmounts37.mmAccruedInterestAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#EqualisationAmount
- * CorporateActionAmounts37.EqualisationAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmEqualisationAmount
+ * CorporateActionAmounts37.mmEqualisationAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#FATCATaxAmount
- * CorporateActionAmounts37.FATCATaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmFATCATaxAmount
+ * CorporateActionAmounts37.mmFATCATaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#NRATaxAmount
- * CorporateActionAmounts37.NRATaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmNRATaxAmount
+ * CorporateActionAmounts37.mmNRATaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#BackUpWithholdingTaxAmount
- * CorporateActionAmounts37.BackUpWithholdingTaxAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmBackUpWithholdingTaxAmount
+ * CorporateActionAmounts37.mmBackUpWithholdingTaxAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#TaxOnIncomeAmount
- * CorporateActionAmounts37.TaxOnIncomeAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmTaxOnIncomeAmount
+ * CorporateActionAmounts37.mmTaxOnIncomeAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#TransactionTax
- * CorporateActionAmounts37.TransactionTax}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts37#mmTransactionTax
+ * CorporateActionAmounts37.mmTransactionTax}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -185,8 +185,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -205,6 +205,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionAmounts37 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount postingAmount;
 	/**
 	 * Amount of money that is to be/was posted to the account.
 	 * <p>
@@ -218,8 +219,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingAmount
-	 * CorporateActionDistribution.PostingAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingAmount
+	 * CorporateActionDistribution.mmPostingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -239,25 +240,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#PostingAmount
-	 * CorporateActionAmounts29.PostingAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmPostingAmount
+	 * CorporateActionAmounts29.mmPostingAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingAmount;
 			isDerived = false;
 			xmlTag = "PstngAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingAmount";
 			definition = "Amount of money that is to be/was posted to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.PostingAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmPostingAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount grossCashAmount;
 	/**
 	 * Amount of money before any deductions and allowances have been made.
 	 * <p>
@@ -271,8 +273,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#GrossCashAmount
-	 * CorporateActionCashEntitlement.GrossCashAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmGrossCashAmount
+	 * CorporateActionCashEntitlement.mmGrossCashAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -293,25 +295,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#GrossCashAmount
-	 * CorporateActionAmounts29.GrossCashAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmGrossCashAmount
+	 * CorporateActionAmounts29.mmGrossCashAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GrossCashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGrossCashAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmGrossCashAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.GrossCashAmount;
 			isDerived = false;
 			xmlTag = "GrssCshAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossCashAmount";
 			definition = "Amount of money before any deductions and allowances have been made.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.GrossCashAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmGrossCashAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount netCashAmount;
 	/**
 	 * Amount of money after deductions and allowances have been made, if any,
 	 * that is, the total amount +/- charges/fees.
@@ -326,8 +329,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#NetCashAmount
-	 * CorporateActionCashEntitlement.NetCashAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmNetCashAmount
+	 * CorporateActionCashEntitlement.mmNetCashAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -349,25 +352,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#NetCashAmount
-	 * CorporateActionAmounts29.NetCashAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmNetCashAmount
+	 * CorporateActionAmounts29.mmNetCashAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NetCashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNetCashAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmNetCashAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.NetCashAmount;
 			isDerived = false;
 			xmlTag = "NetCshAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashAmount";
 			definition = "Amount of money after deductions and allowances have been made, if any, that is, the total amount +/- charges/fees.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.NetCashAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmNetCashAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount solicitationFees;
 	/**
 	 * Cash premium made available if the securities holder consents or
 	 * participates to an event, for example consent fees or solicitation fees.
@@ -382,8 +386,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#SolicitationFee
-	 * CorporateActionFeesAndCharges.SolicitationFee}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmSolicitationFee
+	 * CorporateActionFeesAndCharges.mmSolicitationFee}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -405,25 +409,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#SolicitationFees
-	 * CorporateActionAmounts29.SolicitationFees}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmSolicitationFees
+	 * CorporateActionAmounts29.mmSolicitationFees}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SolicitationFees = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSolicitationFees = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmSolicitationFee;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.SolicitationFee;
 			isDerived = false;
 			xmlTag = "SlctnFees";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitationFees";
 			definition = "Cash premium made available if the securities holder consents or participates to an event, for example consent fees or solicitation fees.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.SolicitationFees;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmSolicitationFees;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount cashInLieuOfShare;
 	/**
 	 * Cash disbursement in lieu of a fractional quantity of, for example,
 	 * equity.
@@ -438,8 +443,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#CashInLieuOfShare
-	 * CorporateActionCashEntitlement.CashInLieuOfShare}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmCashInLieuOfShare
+	 * CorporateActionCashEntitlement.mmCashInLieuOfShare}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -461,25 +466,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#CashInLieuOfShare
-	 * CorporateActionAmounts29.CashInLieuOfShare}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmCashInLieuOfShare
+	 * CorporateActionAmounts29.mmCashInLieuOfShare}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashInLieuOfShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashInLieuOfShare = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmCashInLieuOfShare;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.CashInLieuOfShare;
 			isDerived = false;
 			xmlTag = "CshInLieuOfShr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfShare";
 			definition = "Cash disbursement in lieu of a fractional quantity of, for example, equity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.CashInLieuOfShare;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmCashInLieuOfShare;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount capitalGain;
 	/**
 	 * Amount of money distributed as the result of a capital gain.
 	 * <p>
@@ -493,8 +499,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#CapitalGain
-	 * CorporateActionCashEntitlement.CapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmCapitalGain
+	 * CorporateActionCashEntitlement.mmCapitalGain}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -515,25 +521,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#CapitalGain
-	 * CorporateActionAmounts29.CapitalGain}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmCapitalGain
+	 * CorporateActionAmounts29.mmCapitalGain}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCapitalGain = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmCapitalGain;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.CapitalGain;
 			isDerived = false;
 			xmlTag = "CptlGn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGain";
 			definition = "Amount of money distributed as the result of a capital gain.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.CapitalGain;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmCapitalGain;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount interestAmount;
 	/**
 	 * Amount of money representing a coupon payment.
 	 * <p>
@@ -547,8 +554,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#Amount
-	 * Interest.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAmount
+	 * Interest.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -568,25 +575,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#InterestAmount
-	 * CorporateActionAmounts29.InterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmInterestAmount
+	 * CorporateActionAmounts29.mmInterestAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInterestAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.Amount;
 			isDerived = false;
 			xmlTag = "IntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestAmount";
 			definition = "Amount of money representing a coupon payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.InterestAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmInterestAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount marketClaimAmount;
 	/**
 	 * Amount of money resulting from a market claim.
 	 * <p>
@@ -600,8 +608,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarketClaim#MarketClaimAmount
-	 * MarketClaim.MarketClaimAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarketClaim#mmMarketClaimAmount
+	 * MarketClaim.mmMarketClaimAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -621,25 +629,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#MarketClaimAmount
-	 * CorporateActionAmounts29.MarketClaimAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmMarketClaimAmount
+	 * CorporateActionAmounts29.mmMarketClaimAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketClaimAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketClaimAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmMarketClaimAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarketClaim.MarketClaimAmount;
 			isDerived = false;
 			xmlTag = "MktClmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClaimAmount";
 			definition = "Amount of money resulting from a market claim.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.MarketClaimAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmMarketClaimAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount indemnityAmount;
 	/**
 	 * (Unique to France) Amount due to a buyer of securities dealt prior to ex
 	 * date which may be subject to different rate of taxation.
@@ -654,8 +663,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#IndemnityAmount
-	 * CashProceedsDefinition.IndemnityAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIndemnityAmount
+	 * CashProceedsDefinition.mmIndemnityAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -677,25 +686,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#IndemnityAmount
-	 * CorporateActionAmounts29.IndemnityAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmIndemnityAmount
+	 * CorporateActionAmounts29.mmIndemnityAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IndemnityAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndemnityAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmIndemnityAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.IndemnityAmount;
 			isDerived = false;
 			xmlTag = "IndmntyAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndemnityAmount";
 			definition = "(Unique to France) Amount due to a buyer of securities dealt prior to ex date which may be subject to different rate of taxation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.IndemnityAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmIndemnityAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount manufacturedDividendPaymentAmount;
 	/**
 	 * Amount of money that the borrower pays to the lender as a compensation.
 	 * It does not entitle the lender to reclaim any tax credit and is sometimes
@@ -713,8 +723,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#ManufacturedDividendAmount
-	 * Dividend.ManufacturedDividendAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmManufacturedDividendAmount
+	 * Dividend.mmManufacturedDividendAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -736,25 +746,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#ManufacturedDividendPaymentAmount
-	 * CorporateActionAmounts29.ManufacturedDividendPaymentAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmManufacturedDividendPaymentAmount
+	 * CorporateActionAmounts29.mmManufacturedDividendPaymentAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ManufacturedDividendPaymentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmManufacturedDividendPaymentAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmManufacturedDividendAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.ManufacturedDividendAmount;
 			isDerived = false;
 			xmlTag = "ManfctrdDvddPmtAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManufacturedDividendPaymentAmount";
 			definition = "Amount of money that the borrower pays to the lender as a compensation. It does not entitle the lender to reclaim any tax credit and is sometimes treated differently by the local tax authorities of the lender. Also covers compensation/indemnity of missed dividend concerning early/late settlements if applicable to a market.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.ManufacturedDividendPaymentAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmManufacturedDividendPaymentAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount reinvestmentAmount;
 	/**
 	 * Amount of money reinvested in additional securities.
 	 * <p>
@@ -768,8 +779,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#ReinvestmentAmount
-	 * SecuritiesProceedsDefinition.ReinvestmentAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesProceedsDefinition#mmReinvestmentAmount
+	 * SecuritiesProceedsDefinition.mmReinvestmentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -789,25 +800,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#ReinvestmentAmount
-	 * CorporateActionAmounts29.ReinvestmentAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmReinvestmentAmount
+	 * CorporateActionAmounts29.mmReinvestmentAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReinvestmentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReinvestmentAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmReinvestmentAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.ReinvestmentAmount;
 			isDerived = false;
 			xmlTag = "RinvstmtAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentAmount";
 			definition = "Amount of money reinvested in additional securities.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.ReinvestmentAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmReinvestmentAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount fullyFrankedAmount;
 	/**
 	 * Amount resulting from a fully franked dividend paid by a company; amount
 	 * includes tax credit for companies that have made sufficient tax payments
@@ -823,8 +835,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#Amount
-	 * RateAndAmount.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmAmount
+	 * RateAndAmount.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -846,25 +858,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#FullyFrankedAmount
-	 * CorporateActionAmounts29.FullyFrankedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmFullyFrankedAmount
+	 * CorporateActionAmounts29.mmFullyFrankedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FullyFrankedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFullyFrankedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.Amount;
 			isDerived = false;
 			xmlTag = "FullyFrnkdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyFrankedAmount";
 			definition = "Amount resulting from a fully franked dividend paid by a company; amount includes tax credit for companies that have made sufficient tax payments during the fiscal period.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.FullyFrankedAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmFullyFrankedAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount unfrankedAmount;
 	/**
 	 * Amount resulting from an unfranked dividend paid by a company; the amount
 	 * does not include tax credit and is subject to withholding tax.
@@ -879,8 +892,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#UnfrankedAmount
-	 * Dividend.UnfrankedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmUnfrankedAmount
+	 * Dividend.mmUnfrankedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -902,25 +915,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#UnfrankedAmount
-	 * CorporateActionAmounts29.UnfrankedAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmUnfrankedAmount
+	 * CorporateActionAmounts29.mmUnfrankedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnfrankedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnfrankedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmUnfrankedAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.UnfrankedAmount;
 			isDerived = false;
 			xmlTag = "UfrnkdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnfrankedAmount";
 			definition = "Amount resulting from an unfranked dividend paid by a company; the amount does not include tax credit and is subject to withholding tax.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.UnfrankedAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmUnfrankedAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount sundryOrOtherAmount;
 	/**
 	 * Amount of money related to taxable income that cannot be categorised.
 	 * <p>
@@ -934,8 +948,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#SundryOrOtherAmount
-	 * TaxVoucher.SundryOrOtherAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmSundryOrOtherAmount
+	 * TaxVoucher.mmSundryOrOtherAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -956,25 +970,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#SundryOrOtherAmount
-	 * CorporateActionAmounts29.SundryOrOtherAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmSundryOrOtherAmount
+	 * CorporateActionAmounts29.mmSundryOrOtherAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SundryOrOtherAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSundryOrOtherAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmSundryOrOtherAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.SundryOrOtherAmount;
 			isDerived = false;
 			xmlTag = "SndryOrOthrAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SundryOrOtherAmount";
 			definition = "Amount of money related to taxable income that cannot be categorised.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.SundryOrOtherAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmSundryOrOtherAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount taxFreeAmount;
 	/**
 	 * Amount of money that has not been subject to taxation.
 	 * <p>
@@ -988,7 +1003,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1008,25 +1023,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#TaxFreeAmount
-	 * CorporateActionAmounts29.TaxFreeAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmTaxFreeAmount
+	 * CorporateActionAmounts29.mmTaxFreeAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxFreeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxFreeAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TaxFreeAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxFreeAmount";
 			definition = "Amount of money that has not been subject to taxation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.TaxFreeAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmTaxFreeAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount taxDeferredAmount;
 	/**
 	 * Amount of income eligible for deferred taxation.
 	 * <p>
@@ -1040,7 +1056,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1060,25 +1076,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#TaxDeferredAmount
-	 * CorporateActionAmounts29.TaxDeferredAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmTaxDeferredAmount
+	 * CorporateActionAmounts29.mmTaxDeferredAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxDeferredAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxDeferredAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TaxDfrrdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDeferredAmount";
 			definition = "Amount of income eligible for deferred taxation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.TaxDeferredAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmTaxDeferredAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount valueAddedTaxAmount;
 	/**
 	 * Tax on value added.
 	 * <p>
@@ -1092,7 +1109,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1112,25 +1129,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#ValueAddedTaxAmount
-	 * CorporateActionAmounts29.ValueAddedTaxAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmValueAddedTaxAmount
+	 * CorporateActionAmounts29.mmValueAddedTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueAddedTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueAddedTaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "ValAddedTaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTaxAmount";
 			definition = "Tax on value added.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.ValueAddedTaxAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmValueAddedTaxAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount stampDutyAmount;
 	/**
 	 * Amount of stamp duty.
 	 * <p>
@@ -1144,7 +1162,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1164,25 +1182,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#StampDutyAmount
-	 * CorporateActionAmounts29.StampDutyAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmStampDutyAmount
+	 * CorporateActionAmounts29.mmStampDutyAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StampDutyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStampDutyAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "StmpDtyAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDutyAmount";
 			definition = "Amount of stamp duty.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.StampDutyAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmStampDutyAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount taxReclaimAmount;
 	/**
 	 * Amount that was paid in excess of actual tax obligation and was
 	 * reclaimed.
@@ -1197,7 +1216,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1219,25 +1238,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#TaxReclaimAmount
-	 * CorporateActionAmounts29.TaxReclaimAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmTaxReclaimAmount
+	 * CorporateActionAmounts29.mmTaxReclaimAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxReclaimAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxReclaimAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TaxRclmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReclaimAmount";
 			definition = "Amount that was paid in excess of actual tax obligation and was reclaimed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.TaxReclaimAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmTaxReclaimAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount taxCreditAmount;
 	/**
 	 * Amount of taxes that have been previously paid in relation to the taxable
 	 * event.
@@ -1252,8 +1272,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#CreditAmount
-	 * TaxVoucher.CreditAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmCreditAmount
+	 * TaxVoucher.mmCreditAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1275,25 +1295,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#TaxCreditAmount
-	 * CorporateActionAmounts29.TaxCreditAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmTaxCreditAmount
+	 * CorporateActionAmounts29.mmTaxCreditAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxCreditAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxCreditAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmCreditAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.CreditAmount;
 			isDerived = false;
 			xmlTag = "TaxCdtAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditAmount";
 			definition = "Amount of taxes that have been previously paid in relation to the taxable event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.TaxCreditAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmTaxCreditAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount additionalTaxAmount;
 	/**
 	 * Amount of additional taxes that cannot be categorised.
 	 * <p>
@@ -1307,7 +1328,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1327,25 +1348,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#AdditionalTaxAmount
-	 * CorporateActionAmounts29.AdditionalTaxAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmAdditionalTaxAmount
+	 * CorporateActionAmounts29.mmAdditionalTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalTaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "AddtlTaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTaxAmount";
 			definition = "Amount of additional taxes that cannot be categorised.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.AdditionalTaxAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmAdditionalTaxAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount withholdingTaxAmount;
 	/**
 	 * Amount of a cash distribution that will be withheld by the tax
 	 * authorities of the jurisdiction of the issuer, for which a relief at
@@ -1361,7 +1383,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1383,25 +1405,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#WithholdingTaxAmount
-	 * CorporateActionAmounts29.WithholdingTaxAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmWithholdingTaxAmount
+	 * CorporateActionAmounts29.mmWithholdingTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WithholdingTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWithholdingTaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "WhldgTaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxAmount";
 			definition = "Amount of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.WithholdingTaxAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmWithholdingTaxAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount secondLevelTaxAmount;
 	/**
 	 * Amount of money withheld by the jurisdiction other than the jurisdiction
 	 * of the issuer’s country of tax incorporation, for which a relief at
@@ -1419,7 +1442,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1440,20 +1463,21 @@ public class CorporateActionAmounts37 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecondLevelTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecondLevelTaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "ScndLvlTaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTaxAmount";
 			definition = "Amount of money withheld by the jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate levied by the jurisdiction of the issuer’s tax domicile.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount fiscalStampAmount;
 	/**
 	 * Amount of fiscal tax to apply.
 	 * <p>
@@ -1467,7 +1491,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1487,25 +1511,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#FiscalStampAmount
-	 * CorporateActionAmounts29.FiscalStampAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmFiscalStampAmount
+	 * CorporateActionAmounts29.mmFiscalStampAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FiscalStampAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFiscalStampAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "FsclStmpAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalStampAmount";
 			definition = "Amount of fiscal tax to apply.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.FiscalStampAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmFiscalStampAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount executingBrokerAmount;
 	/**
 	 * Amount of money paid to an executing broker as a commission.
 	 * <p>
@@ -1519,8 +1544,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1541,25 +1566,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#ExecutingBrokerAmount
-	 * CorporateActionAmounts29.ExecutingBrokerAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmExecutingBrokerAmount
+	 * CorporateActionAmounts29.mmExecutingBrokerAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExecutingBrokerAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExecutingBrokerAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "ExctgBrkrAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingBrokerAmount";
 			definition = "Amount of money paid to an executing broker as a commission.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.ExecutingBrokerAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmExecutingBrokerAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount payingAgentCommissionAmount;
 	/**
 	 * Amount of paying/sub-paying agent commission.
 	 * <p>
@@ -1573,8 +1599,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1594,25 +1620,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#PayingAgentCommissionAmount
-	 * CorporateActionAmounts29.PayingAgentCommissionAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmPayingAgentCommissionAmount
+	 * CorporateActionAmounts29.mmPayingAgentCommissionAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PayingAgentCommissionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayingAgentCommissionAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "PngAgtComssnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgentCommissionAmount";
 			definition = "Amount of paying/sub-paying agent commission.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.PayingAgentCommissionAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmPayingAgentCommissionAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount localBrokerCommissionAmount;
 	/**
 	 * Local broker's commission.
 	 * <p>
@@ -1626,8 +1653,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1647,25 +1674,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#LocalBrokerCommissionAmount
-	 * CorporateActionAmounts29.LocalBrokerCommissionAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmLocalBrokerCommissionAmount
+	 * CorporateActionAmounts29.mmLocalBrokerCommissionAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LocalBrokerCommissionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLocalBrokerCommissionAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "LclBrkrComssnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalBrokerCommissionAmount";
 			definition = "Local broker's commission.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.LocalBrokerCommissionAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmLocalBrokerCommissionAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount regulatoryFeesAmount;
 	/**
 	 * Amount of money charged by a regulatory authority, for example,
 	 * Securities and Exchange fees.
@@ -1680,8 +1708,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#RegulatoryFeesAmount
-	 * SecuritiesRelatedFees.RegulatoryFeesAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#mmRegulatoryFeesAmount
+	 * SecuritiesRelatedFees.mmRegulatoryFeesAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1703,25 +1731,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#RegulatoryFeesAmount
-	 * CorporateActionAmounts29.RegulatoryFeesAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmRegulatoryFeesAmount
+	 * CorporateActionAmounts29.mmRegulatoryFeesAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegulatoryFeesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegulatoryFeesAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmRegulatoryFeesAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.RegulatoryFeesAmount;
 			isDerived = false;
 			xmlTag = "RgltryFeesAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryFeesAmount";
 			definition = "Amount of money charged by a regulatory authority, for example, Securities and Exchange fees.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.RegulatoryFeesAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmRegulatoryFeesAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount shippingFeesAmount;
 	/**
 	 * All costs related to the physical delivery of documents such as stamps,
 	 * postage, carrier fees, insurances or messenger services.
@@ -1736,8 +1765,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#ShippingFeesAmount
-	 * SecuritiesRelatedFees.ShippingFeesAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#mmShippingFeesAmount
+	 * SecuritiesRelatedFees.mmShippingFeesAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1759,25 +1788,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#ShippingFeesAmount
-	 * CorporateActionAmounts29.ShippingFeesAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmShippingFeesAmount
+	 * CorporateActionAmounts29.mmShippingFeesAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShippingFeesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShippingFeesAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmShippingFeesAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.ShippingFeesAmount;
 			isDerived = false;
 			xmlTag = "ShppgFeesAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingFeesAmount";
 			definition = "All costs related to the physical delivery of documents such as stamps, postage, carrier fees, insurances or messenger services.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.ShippingFeesAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmShippingFeesAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount chargesAmount;
 	/**
 	 * Amount of money paid for the provision of financial services that cannot
 	 * be categorised by another qualifier.
@@ -1792,8 +1822,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1815,25 +1845,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#ChargesAmount
-	 * CorporateActionAmounts29.ChargesAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmChargesAmount
+	 * CorporateActionAmounts29.mmChargesAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ChargesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmChargesAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "ChrgsAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmount";
 			definition = "Amount of money paid for the provision of financial services that cannot be categorised by another qualifier.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.ChargesAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmChargesAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount cashAmountBroughtForward;
 	/**
 	 * Indicates cash retained from previous dividend.
 	 * <p>
@@ -1847,8 +1878,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#CashAmountBroughtForward
-	 * TaxVoucher.CashAmountBroughtForward}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmCashAmountBroughtForward
+	 * TaxVoucher.mmCashAmountBroughtForward}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1868,25 +1899,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#CashAmountBroughtForward
-	 * CorporateActionAmounts29.CashAmountBroughtForward}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmCashAmountBroughtForward
+	 * CorporateActionAmounts29.mmCashAmountBroughtForward}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAmountBroughtForward = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAmountBroughtForward = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmCashAmountBroughtForward;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.CashAmountBroughtForward;
 			isDerived = false;
 			xmlTag = "CshAmtBrghtFwd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmountBroughtForward";
 			definition = "Indicates cash retained from previous dividend.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.CashAmountBroughtForward;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmCashAmountBroughtForward;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount cashAmountCarriedForward;
 	/**
 	 * Indicates the balance carried forward to next dividend.
 	 * <p>
@@ -1900,8 +1932,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#CashAmountCarriedForward
-	 * TaxVoucher.CashAmountCarriedForward}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmCashAmountCarriedForward
+	 * TaxVoucher.mmCashAmountCarriedForward}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1921,25 +1953,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#CashAmountCarriedForward
-	 * CorporateActionAmounts29.CashAmountCarriedForward}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmCashAmountCarriedForward
+	 * CorporateActionAmounts29.mmCashAmountCarriedForward}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CashAmountCarriedForward = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCashAmountCarriedForward = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmCashAmountCarriedForward;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.CashAmountCarriedForward;
 			isDerived = false;
 			xmlTag = "CshAmtCrrdFwd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmountCarriedForward";
 			definition = "Indicates the balance carried forward to next dividend.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.CashAmountCarriedForward;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmCashAmountCarriedForward;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount notionalDividendPayableAmount;
 	/**
 	 * Amount of cash that would have been payable if the dividend had been
 	 * taken in the form of cash rather than shares.
@@ -1954,8 +1987,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Dividend#NotionalDividendPayableAmount
-	 * Dividend.NotionalDividendPayableAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Dividend#mmNotionalDividendPayableAmount
+	 * Dividend.mmNotionalDividendPayableAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1977,25 +2010,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#NotionalDividendPayableAmount
-	 * CorporateActionAmounts29.NotionalDividendPayableAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmNotionalDividendPayableAmount
+	 * CorporateActionAmounts29.mmNotionalDividendPayableAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotionalDividendPayableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotionalDividendPayableAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmNotionalDividendPayableAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.NotionalDividendPayableAmount;
 			isDerived = false;
 			xmlTag = "NtnlDvddPyblAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalDividendPayableAmount";
 			definition = "Amount of cash that would have been payable if the dividend had been taken in the form of cash rather than shares.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.NotionalDividendPayableAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmNotionalDividendPayableAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount notionalTaxAmount;
 	/**
 	 * Where new securities are issued in lieu of a cash dividend, the notional
 	 * tax is the tax on the amount of cash that would have been paid.
@@ -2010,8 +2044,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#NotionalTaxAmount
-	 * TaxVoucher.NotionalTaxAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmNotionalTaxAmount
+	 * TaxVoucher.mmNotionalTaxAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2033,25 +2067,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#NotionalTaxAmount
-	 * CorporateActionAmounts29.NotionalTaxAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmNotionalTaxAmount
+	 * CorporateActionAmounts29.mmNotionalTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotionalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotionalTaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmNotionalTaxAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.NotionalTaxAmount;
 			isDerived = false;
 			xmlTag = "NtnlTaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalTaxAmount";
 			definition = "Where new securities are issued in lieu of a cash dividend, the notional tax is the tax on the amount of cash that would have been paid.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.NotionalTaxAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmNotionalTaxAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount taxArrearsAmount;
 	/**
 	 * Amount of money paid by the Tax Authorities in addition to the payment of
 	 * the tax refund itself.
@@ -2066,7 +2101,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2088,25 +2123,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#TaxArrearsAmount
-	 * CorporateActionAmounts29.TaxArrearsAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmTaxArrearsAmount
+	 * CorporateActionAmounts29.mmTaxArrearsAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxArrearsAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxArrearsAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TaxArrearsAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxArrearsAmount";
 			definition = "Amount of money paid by the Tax Authorities in addition to the payment of the tax refund itself.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.TaxArrearsAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmTaxArrearsAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount originalAmount;
 	/**
 	 * Posting/settlement Amount in its original currency when conversion
 	 * from/into another currency has occurred.
@@ -2121,8 +2157,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#OriginalAmount
-	 * CurrencyExchange.OriginalAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmOriginalAmount
+	 * CurrencyExchange.mmOriginalAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2144,25 +2180,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#OriginalAmount
-	 * CorporateActionAmounts29.OriginalAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmOriginalAmount
+	 * CorporateActionAmounts29.mmOriginalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OriginalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOriginalAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.OriginalAmount;
 			isDerived = false;
 			xmlTag = "OrgnlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAmount";
 			definition = "Posting/settlement Amount in its original currency when conversion from/into another currency has occurred.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.OriginalAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmOriginalAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount principalOrCorpus;
 	/**
 	 * Amount of money representing a distribution of a bond's principal, for
 	 * example, repayment of outstanding debt.
@@ -2177,8 +2214,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#PrincipalOrCorpus
-	 * CashProceedsDefinition.PrincipalOrCorpus}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmPrincipalOrCorpus
+	 * CashProceedsDefinition.mmPrincipalOrCorpus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2200,25 +2237,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#PrincipalOrCorpus
-	 * CorporateActionAmounts29.PrincipalOrCorpus}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmPrincipalOrCorpus
+	 * CorporateActionAmounts29.mmPrincipalOrCorpus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PrincipalOrCorpus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPrincipalOrCorpus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmPrincipalOrCorpus;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.PrincipalOrCorpus;
 			isDerived = false;
 			xmlTag = "PrncplOrCrps";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalOrCorpus";
 			definition = "Amount of money representing a distribution of a bond's principal, for example, repayment of outstanding debt.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.PrincipalOrCorpus;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmPrincipalOrCorpus;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount redemptionPremiumAmount;
 	/**
 	 * Amount of money (not interest) in addition to the principal at the
 	 * redemption of a bond.
@@ -2233,8 +2271,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#RedemptionPremiumAmount
-	 * CashProceedsDefinition.RedemptionPremiumAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmRedemptionPremiumAmount
+	 * CashProceedsDefinition.mmRedemptionPremiumAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2256,25 +2294,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#RedemptionPremiumAmount
-	 * CorporateActionAmounts29.RedemptionPremiumAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmRedemptionPremiumAmount
+	 * CorporateActionAmounts29.mmRedemptionPremiumAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RedemptionPremiumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRedemptionPremiumAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmRedemptionPremiumAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.RedemptionPremiumAmount;
 			isDerived = false;
 			xmlTag = "RedPrmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPremiumAmount";
 			definition = "Amount of money (not interest) in addition to the principal at the redemption of a bond.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.RedemptionPremiumAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmRedemptionPremiumAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount incomePortion;
 	/**
 	 * Amount relating to the underlying security for which income is
 	 * distributed.
@@ -2289,8 +2328,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#IncomePortion
-	 * CashProceedsDefinition.IncomePortion}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomePortion
+	 * CashProceedsDefinition.mmIncomePortion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2312,25 +2351,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#IncomePortion
-	 * CorporateActionAmounts29.IncomePortion}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmIncomePortion
+	 * CorporateActionAmounts29.mmIncomePortion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IncomePortion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIncomePortion = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmIncomePortion;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.IncomePortion;
 			isDerived = false;
 			xmlTag = "IncmPrtn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePortion";
 			definition = "Amount relating to the underlying security for which income is distributed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.IncomePortion;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmIncomePortion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount stockExchangeTax;
 	/**
 	 * Amount of stock exchange tax.
 	 * <p>
@@ -2344,7 +2384,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2364,25 +2404,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#StockExchangeTax
-	 * CorporateActionAmounts29.StockExchangeTax}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmStockExchangeTax
+	 * CorporateActionAmounts29.mmStockExchangeTax}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StockExchangeTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStockExchangeTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "StockXchgTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
 			definition = "Amount of stock exchange tax.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.StockExchangeTax;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmStockExchangeTax;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount eUTaxRetentionAmount;
 	/**
 	 * Total amount of tax withheld at source in conformance with the EU Savings
 	 * Directive.
@@ -2397,7 +2438,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2419,25 +2460,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#EUTaxRetentionAmount
-	 * CorporateActionAmounts29.EUTaxRetentionAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmEUTaxRetentionAmount
+	 * CorporateActionAmounts29.mmEUTaxRetentionAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EUTaxRetentionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEUTaxRetentionAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "EUTaxRtntnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetentionAmount";
 			definition = "Total amount of tax withheld at source in conformance with the EU Savings Directive.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.EUTaxRetentionAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmEUTaxRetentionAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount accruedInterestAmount;
 	/**
 	 * Amount of interest that has been accrued in between coupon payment
 	 * periods
@@ -2452,8 +2494,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Interest#AccruedInterestAmount
-	 * Interest.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+	 * Interest.mmAccruedInterestAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2475,25 +2517,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#AccruedInterestAmount
-	 * CorporateActionAmounts29.AccruedInterestAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmAccruedInterestAmount
+	 * CorporateActionAmounts29.mmAccruedInterestAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.AccruedInterestAmount;
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Amount of interest that has been accrued in between coupon payment periods";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.AccruedInterestAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmAccruedInterestAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount equalisationAmount;
 	/**
 	 * Portion of the fund distribution amount which represents the average
 	 * accrued income included in the purchase price for units bought during the
@@ -2509,8 +2552,8 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Equalisation#Amount
-	 * Equalisation.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Equalisation#mmAmount
+	 * Equalisation.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2532,25 +2575,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#EqualisationAmount
-	 * CorporateActionAmounts29.EqualisationAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmEqualisationAmount
+	 * CorporateActionAmounts29.mmEqualisationAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EqualisationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEqualisationAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equalisation.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equalisation.Amount;
 			isDerived = false;
 			xmlTag = "EqulstnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualisationAmount";
 			definition = "Portion of the fund distribution amount which represents the average accrued income included in the purchase price for units bought during the account period.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.EqualisationAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmEqualisationAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount fATCATaxAmount;
 	/**
 	 * FATCA (Foreign Account Tax Compliance Act) related tax amount.
 	 * <p>
@@ -2564,7 +2608,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2585,25 +2629,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#FATCATaxAmount
-	 * CorporateActionAmounts29.FATCATaxAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmFATCATaxAmount
+	 * CorporateActionAmounts29.mmFATCATaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FATCATaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFATCATaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "FATCATaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCATaxAmount";
 			definition = "FATCA (Foreign Account Tax Compliance Act) related tax amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.FATCATaxAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmFATCATaxAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount nRATaxAmount;
 	/**
 	 * Amount of tax related income subject to NRA (Non Resident Alien).
 	 * <p>
@@ -2617,7 +2662,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2638,25 +2683,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#NRATaxAmount
-	 * CorporateActionAmounts29.NRATaxAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmNRATaxAmount
+	 * CorporateActionAmounts29.mmNRATaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NRATaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNRATaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "NRATaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NRATaxAmount";
 			definition = "Amount of tax related income subject to NRA (Non Resident Alien).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.NRATaxAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmNRATaxAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount backUpWithholdingTaxAmount;
 	/**
 	 * Amount of tax related to back up withholding.
 	 * <p>
@@ -2670,7 +2716,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2690,25 +2736,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#BackUpWithholdingTaxAmount
-	 * CorporateActionAmounts29.BackUpWithholdingTaxAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmBackUpWithholdingTaxAmount
+	 * CorporateActionAmounts29.mmBackUpWithholdingTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BackUpWithholdingTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBackUpWithholdingTaxAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "BckUpWhldgTaxAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackUpWithholdingTaxAmount";
 			definition = "Amount of tax related to back up withholding.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.BackUpWithholdingTaxAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmBackUpWithholdingTaxAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount taxOnIncomeAmount;
 	/**
 	 * Amount of overall tax withheld at source by fund managers prior to
 	 * considering the tax obligation of each unit holder.
@@ -2723,7 +2770,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2745,25 +2792,26 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#TaxOnIncomeAmount
-	 * CorporateActionAmounts29.TaxOnIncomeAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmTaxOnIncomeAmount
+	 * CorporateActionAmounts29.mmTaxOnIncomeAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TaxOnIncomeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTaxOnIncomeAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TaxOnIncmAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxOnIncomeAmount";
 			definition = "Amount of overall tax withheld at source by fund managers prior to considering the tax obligation of each unit holder.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.TaxOnIncomeAmount;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmTaxOnIncomeAmount;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount transactionTax;
 	/**
 	 * Amount of Transaction tax.
 	 * <p>
@@ -2777,7 +2825,7 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Tax#Amount Tax.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -2797,22 +2845,22 @@ public class CorporateActionAmounts37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#TransactionTax
-	 * CorporateActionAmounts29.TransactionTax}</li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts29#mmTransactionTax
+	 * CorporateActionAmounts29.mmTransactionTax}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionTax = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionAmounts37.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.Amount;
 			isDerived = false;
 			xmlTag = "TxTax";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
 			definition = "Amount of Transaction tax.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.TransactionTax;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts29.mmTransactionTax;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -2820,32 +2868,32 @@ public class CorporateActionAmounts37 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts37.PostingAmount, com.tools20022.repository.msg.CorporateActionAmounts37.GrossCashAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.NetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts37.SolicitationFees,
-						com.tools20022.repository.msg.CorporateActionAmounts37.CashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts37.CapitalGain, com.tools20022.repository.msg.CorporateActionAmounts37.InterestAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.MarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts37.IndemnityAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.ManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts37.ReinvestmentAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.FullyFrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts37.UnfrankedAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.SundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts37.TaxFreeAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.TaxDeferredAmount, com.tools20022.repository.msg.CorporateActionAmounts37.ValueAddedTaxAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.StampDutyAmount, com.tools20022.repository.msg.CorporateActionAmounts37.TaxReclaimAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.TaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts37.AdditionalTaxAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.WithholdingTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts37.SecondLevelTaxAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.FiscalStampAmount, com.tools20022.repository.msg.CorporateActionAmounts37.ExecutingBrokerAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.PayingAgentCommissionAmount, com.tools20022.repository.msg.CorporateActionAmounts37.LocalBrokerCommissionAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.RegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts37.ShippingFeesAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.ChargesAmount, com.tools20022.repository.msg.CorporateActionAmounts37.CashAmountBroughtForward,
-						com.tools20022.repository.msg.CorporateActionAmounts37.CashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts37.NotionalDividendPayableAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.NotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts37.TaxArrearsAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.OriginalAmount, com.tools20022.repository.msg.CorporateActionAmounts37.PrincipalOrCorpus,
-						com.tools20022.repository.msg.CorporateActionAmounts37.RedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts37.IncomePortion,
-						com.tools20022.repository.msg.CorporateActionAmounts37.StockExchangeTax, com.tools20022.repository.msg.CorporateActionAmounts37.EUTaxRetentionAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.AccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts37.EqualisationAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.FATCATaxAmount, com.tools20022.repository.msg.CorporateActionAmounts37.NRATaxAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.BackUpWithholdingTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts37.TaxOnIncomeAmount,
-						com.tools20022.repository.msg.CorporateActionAmounts37.TransactionTax);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts37.mmPostingAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmGrossCashAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmSolicitationFees,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts37.mmCapitalGain,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmMarketClaimAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmManufacturedDividendPaymentAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmReinvestmentAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmFullyFrankedAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmSundryOrOtherAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmTaxFreeAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmTaxDeferredAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmValueAddedTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmStampDutyAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmTaxReclaimAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmTaxCreditAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmAdditionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmWithholdingTaxAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmSecondLevelTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmFiscalStampAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmExecutingBrokerAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmPayingAgentCommissionAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmLocalBrokerCommissionAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmRegulatoryFeesAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmChargesAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts37.mmCashAmountCarriedForward,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmNotionalDividendPayableAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmNotionalTaxAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmTaxArrearsAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmOriginalAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts37.mmRedemptionPremiumAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts37.mmStockExchangeTax,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmEUTaxRetentionAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmAccruedInterestAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmEqualisationAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmFATCATaxAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmNRATaxAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmBackUpWithholdingTaxAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts37.mmTaxOnIncomeAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmTransactionTax);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAmounts37";
 				definition = "Specifies amounts in the framework of a corporate action event.";
@@ -2853,5 +2901,389 @@ public class CorporateActionAmounts37 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getPostingAmount() {
+		return postingAmount;
+	}
+
+	public void setPostingAmount(ActiveCurrencyAndAmount postingAmount) {
+		this.postingAmount = postingAmount;
+	}
+
+	public ActiveCurrencyAndAmount getGrossCashAmount() {
+		return grossCashAmount;
+	}
+
+	public void setGrossCashAmount(ActiveCurrencyAndAmount grossCashAmount) {
+		this.grossCashAmount = grossCashAmount;
+	}
+
+	public ActiveCurrencyAndAmount getNetCashAmount() {
+		return netCashAmount;
+	}
+
+	public void setNetCashAmount(ActiveCurrencyAndAmount netCashAmount) {
+		this.netCashAmount = netCashAmount;
+	}
+
+	public ActiveCurrencyAndAmount getSolicitationFees() {
+		return solicitationFees;
+	}
+
+	public void setSolicitationFees(ActiveCurrencyAndAmount solicitationFees) {
+		this.solicitationFees = solicitationFees;
+	}
+
+	public ActiveCurrencyAndAmount getCashInLieuOfShare() {
+		return cashInLieuOfShare;
+	}
+
+	public void setCashInLieuOfShare(ActiveCurrencyAndAmount cashInLieuOfShare) {
+		this.cashInLieuOfShare = cashInLieuOfShare;
+	}
+
+	public ActiveCurrencyAndAmount getCapitalGain() {
+		return capitalGain;
+	}
+
+	public void setCapitalGain(ActiveCurrencyAndAmount capitalGain) {
+		this.capitalGain = capitalGain;
+	}
+
+	public ActiveCurrencyAndAmount getInterestAmount() {
+		return interestAmount;
+	}
+
+	public void setInterestAmount(ActiveCurrencyAndAmount interestAmount) {
+		this.interestAmount = interestAmount;
+	}
+
+	public ActiveCurrencyAndAmount getMarketClaimAmount() {
+		return marketClaimAmount;
+	}
+
+	public void setMarketClaimAmount(ActiveCurrencyAndAmount marketClaimAmount) {
+		this.marketClaimAmount = marketClaimAmount;
+	}
+
+	public ActiveCurrencyAndAmount getIndemnityAmount() {
+		return indemnityAmount;
+	}
+
+	public void setIndemnityAmount(ActiveCurrencyAndAmount indemnityAmount) {
+		this.indemnityAmount = indemnityAmount;
+	}
+
+	public ActiveCurrencyAndAmount getManufacturedDividendPaymentAmount() {
+		return manufacturedDividendPaymentAmount;
+	}
+
+	public void setManufacturedDividendPaymentAmount(ActiveCurrencyAndAmount manufacturedDividendPaymentAmount) {
+		this.manufacturedDividendPaymentAmount = manufacturedDividendPaymentAmount;
+	}
+
+	public ActiveCurrencyAndAmount getReinvestmentAmount() {
+		return reinvestmentAmount;
+	}
+
+	public void setReinvestmentAmount(ActiveCurrencyAndAmount reinvestmentAmount) {
+		this.reinvestmentAmount = reinvestmentAmount;
+	}
+
+	public ActiveCurrencyAndAmount getFullyFrankedAmount() {
+		return fullyFrankedAmount;
+	}
+
+	public void setFullyFrankedAmount(ActiveCurrencyAndAmount fullyFrankedAmount) {
+		this.fullyFrankedAmount = fullyFrankedAmount;
+	}
+
+	public ActiveCurrencyAndAmount getUnfrankedAmount() {
+		return unfrankedAmount;
+	}
+
+	public void setUnfrankedAmount(ActiveCurrencyAndAmount unfrankedAmount) {
+		this.unfrankedAmount = unfrankedAmount;
+	}
+
+	public ActiveCurrencyAndAmount getSundryOrOtherAmount() {
+		return sundryOrOtherAmount;
+	}
+
+	public void setSundryOrOtherAmount(ActiveCurrencyAndAmount sundryOrOtherAmount) {
+		this.sundryOrOtherAmount = sundryOrOtherAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTaxFreeAmount() {
+		return taxFreeAmount;
+	}
+
+	public void setTaxFreeAmount(ActiveCurrencyAndAmount taxFreeAmount) {
+		this.taxFreeAmount = taxFreeAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTaxDeferredAmount() {
+		return taxDeferredAmount;
+	}
+
+	public void setTaxDeferredAmount(ActiveCurrencyAndAmount taxDeferredAmount) {
+		this.taxDeferredAmount = taxDeferredAmount;
+	}
+
+	public ActiveCurrencyAndAmount getValueAddedTaxAmount() {
+		return valueAddedTaxAmount;
+	}
+
+	public void setValueAddedTaxAmount(ActiveCurrencyAndAmount valueAddedTaxAmount) {
+		this.valueAddedTaxAmount = valueAddedTaxAmount;
+	}
+
+	public ActiveCurrencyAndAmount getStampDutyAmount() {
+		return stampDutyAmount;
+	}
+
+	public void setStampDutyAmount(ActiveCurrencyAndAmount stampDutyAmount) {
+		this.stampDutyAmount = stampDutyAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTaxReclaimAmount() {
+		return taxReclaimAmount;
+	}
+
+	public void setTaxReclaimAmount(ActiveCurrencyAndAmount taxReclaimAmount) {
+		this.taxReclaimAmount = taxReclaimAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTaxCreditAmount() {
+		return taxCreditAmount;
+	}
+
+	public void setTaxCreditAmount(ActiveCurrencyAndAmount taxCreditAmount) {
+		this.taxCreditAmount = taxCreditAmount;
+	}
+
+	public ActiveCurrencyAndAmount getAdditionalTaxAmount() {
+		return additionalTaxAmount;
+	}
+
+	public void setAdditionalTaxAmount(ActiveCurrencyAndAmount additionalTaxAmount) {
+		this.additionalTaxAmount = additionalTaxAmount;
+	}
+
+	public ActiveCurrencyAndAmount getWithholdingTaxAmount() {
+		return withholdingTaxAmount;
+	}
+
+	public void setWithholdingTaxAmount(ActiveCurrencyAndAmount withholdingTaxAmount) {
+		this.withholdingTaxAmount = withholdingTaxAmount;
+	}
+
+	public ActiveCurrencyAndAmount getSecondLevelTaxAmount() {
+		return secondLevelTaxAmount;
+	}
+
+	public void setSecondLevelTaxAmount(ActiveCurrencyAndAmount secondLevelTaxAmount) {
+		this.secondLevelTaxAmount = secondLevelTaxAmount;
+	}
+
+	public ActiveCurrencyAndAmount getFiscalStampAmount() {
+		return fiscalStampAmount;
+	}
+
+	public void setFiscalStampAmount(ActiveCurrencyAndAmount fiscalStampAmount) {
+		this.fiscalStampAmount = fiscalStampAmount;
+	}
+
+	public ActiveCurrencyAndAmount getExecutingBrokerAmount() {
+		return executingBrokerAmount;
+	}
+
+	public void setExecutingBrokerAmount(ActiveCurrencyAndAmount executingBrokerAmount) {
+		this.executingBrokerAmount = executingBrokerAmount;
+	}
+
+	public ActiveCurrencyAndAmount getPayingAgentCommissionAmount() {
+		return payingAgentCommissionAmount;
+	}
+
+	public void setPayingAgentCommissionAmount(ActiveCurrencyAndAmount payingAgentCommissionAmount) {
+		this.payingAgentCommissionAmount = payingAgentCommissionAmount;
+	}
+
+	public ActiveCurrencyAndAmount getLocalBrokerCommissionAmount() {
+		return localBrokerCommissionAmount;
+	}
+
+	public void setLocalBrokerCommissionAmount(ActiveCurrencyAndAmount localBrokerCommissionAmount) {
+		this.localBrokerCommissionAmount = localBrokerCommissionAmount;
+	}
+
+	public ActiveCurrencyAndAmount getRegulatoryFeesAmount() {
+		return regulatoryFeesAmount;
+	}
+
+	public void setRegulatoryFeesAmount(ActiveCurrencyAndAmount regulatoryFeesAmount) {
+		this.regulatoryFeesAmount = regulatoryFeesAmount;
+	}
+
+	public ActiveCurrencyAndAmount getShippingFeesAmount() {
+		return shippingFeesAmount;
+	}
+
+	public void setShippingFeesAmount(ActiveCurrencyAndAmount shippingFeesAmount) {
+		this.shippingFeesAmount = shippingFeesAmount;
+	}
+
+	public ActiveCurrencyAndAmount getChargesAmount() {
+		return chargesAmount;
+	}
+
+	public void setChargesAmount(ActiveCurrencyAndAmount chargesAmount) {
+		this.chargesAmount = chargesAmount;
+	}
+
+	public ActiveCurrencyAndAmount getCashAmountBroughtForward() {
+		return cashAmountBroughtForward;
+	}
+
+	public void setCashAmountBroughtForward(ActiveCurrencyAndAmount cashAmountBroughtForward) {
+		this.cashAmountBroughtForward = cashAmountBroughtForward;
+	}
+
+	public ActiveCurrencyAndAmount getCashAmountCarriedForward() {
+		return cashAmountCarriedForward;
+	}
+
+	public void setCashAmountCarriedForward(ActiveCurrencyAndAmount cashAmountCarriedForward) {
+		this.cashAmountCarriedForward = cashAmountCarriedForward;
+	}
+
+	public ActiveCurrencyAndAmount getNotionalDividendPayableAmount() {
+		return notionalDividendPayableAmount;
+	}
+
+	public void setNotionalDividendPayableAmount(ActiveCurrencyAndAmount notionalDividendPayableAmount) {
+		this.notionalDividendPayableAmount = notionalDividendPayableAmount;
+	}
+
+	public ActiveCurrencyAndAmount getNotionalTaxAmount() {
+		return notionalTaxAmount;
+	}
+
+	public void setNotionalTaxAmount(ActiveCurrencyAndAmount notionalTaxAmount) {
+		this.notionalTaxAmount = notionalTaxAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTaxArrearsAmount() {
+		return taxArrearsAmount;
+	}
+
+	public void setTaxArrearsAmount(ActiveCurrencyAndAmount taxArrearsAmount) {
+		this.taxArrearsAmount = taxArrearsAmount;
+	}
+
+	public ActiveCurrencyAndAmount getOriginalAmount() {
+		return originalAmount;
+	}
+
+	public void setOriginalAmount(ActiveCurrencyAndAmount originalAmount) {
+		this.originalAmount = originalAmount;
+	}
+
+	public ActiveCurrencyAndAmount getPrincipalOrCorpus() {
+		return principalOrCorpus;
+	}
+
+	public void setPrincipalOrCorpus(ActiveCurrencyAndAmount principalOrCorpus) {
+		this.principalOrCorpus = principalOrCorpus;
+	}
+
+	public ActiveCurrencyAndAmount getRedemptionPremiumAmount() {
+		return redemptionPremiumAmount;
+	}
+
+	public void setRedemptionPremiumAmount(ActiveCurrencyAndAmount redemptionPremiumAmount) {
+		this.redemptionPremiumAmount = redemptionPremiumAmount;
+	}
+
+	public ActiveCurrencyAndAmount getIncomePortion() {
+		return incomePortion;
+	}
+
+	public void setIncomePortion(ActiveCurrencyAndAmount incomePortion) {
+		this.incomePortion = incomePortion;
+	}
+
+	public ActiveCurrencyAndAmount getStockExchangeTax() {
+		return stockExchangeTax;
+	}
+
+	public void setStockExchangeTax(ActiveCurrencyAndAmount stockExchangeTax) {
+		this.stockExchangeTax = stockExchangeTax;
+	}
+
+	public ActiveCurrencyAndAmount getEUTaxRetentionAmount() {
+		return eUTaxRetentionAmount;
+	}
+
+	public void setEUTaxRetentionAmount(ActiveCurrencyAndAmount eUTaxRetentionAmount) {
+		this.eUTaxRetentionAmount = eUTaxRetentionAmount;
+	}
+
+	public ActiveCurrencyAndAmount getAccruedInterestAmount() {
+		return accruedInterestAmount;
+	}
+
+	public void setAccruedInterestAmount(ActiveCurrencyAndAmount accruedInterestAmount) {
+		this.accruedInterestAmount = accruedInterestAmount;
+	}
+
+	public ActiveCurrencyAndAmount getEqualisationAmount() {
+		return equalisationAmount;
+	}
+
+	public void setEqualisationAmount(ActiveCurrencyAndAmount equalisationAmount) {
+		this.equalisationAmount = equalisationAmount;
+	}
+
+	public ActiveCurrencyAndAmount getFATCATaxAmount() {
+		return fATCATaxAmount;
+	}
+
+	public void setFATCATaxAmount(ActiveCurrencyAndAmount fATCATaxAmount) {
+		this.fATCATaxAmount = fATCATaxAmount;
+	}
+
+	public ActiveCurrencyAndAmount getNRATaxAmount() {
+		return nRATaxAmount;
+	}
+
+	public void setNRATaxAmount(ActiveCurrencyAndAmount nRATaxAmount) {
+		this.nRATaxAmount = nRATaxAmount;
+	}
+
+	public ActiveCurrencyAndAmount getBackUpWithholdingTaxAmount() {
+		return backUpWithholdingTaxAmount;
+	}
+
+	public void setBackUpWithholdingTaxAmount(ActiveCurrencyAndAmount backUpWithholdingTaxAmount) {
+		this.backUpWithholdingTaxAmount = backUpWithholdingTaxAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTaxOnIncomeAmount() {
+		return taxOnIncomeAmount;
+	}
+
+	public void setTaxOnIncomeAmount(ActiveCurrencyAndAmount taxOnIncomeAmount) {
+		this.taxOnIncomeAmount = taxOnIncomeAmount;
+	}
+
+	public ActiveCurrencyAndAmount getTransactionTax() {
+		return transactionTax;
+	}
+
+	public void setTransactionTax(ActiveCurrencyAndAmount transactionTax) {
+		this.transactionTax = transactionTax;
 	}
 }

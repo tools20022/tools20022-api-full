@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlingCapacity8Choice#Code
- * SettlingCapacity8Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlingCapacity8Choice#mmCode
+ * SettlingCapacity8Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlingCapacity8Choice#Proprietary
- * SettlingCapacity8Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlingCapacity8Choice#mmProprietary
+ * SettlingCapacity8Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlingCapacity8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SettlingCapacity2Code code;
 	/**
 	 * Settlement capacity expressed as an ISO 20022 code.
 	 * <p>
@@ -87,7 +88,7 @@ public class SettlingCapacity8Choice {
 	 * definition} = "Settlement capacity expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlingCapacity8Choice.mmObject();
 			isDerived = false;
@@ -95,11 +96,12 @@ public class SettlingCapacity8Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Settlement capacity expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlingCapacity2Code.mmObject();
 		}
 	};
+	protected GenericIdentification47 proprietary;
 	/**
 	 * Settlement capacity expressed as a proprietary code.
 	 * <p>
@@ -128,7 +130,7 @@ public class SettlingCapacity8Choice {
 	 * definition} = "Settlement capacity expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SettlingCapacity8Choice.mmObject();
 			isDerived = false;
@@ -136,8 +138,8 @@ public class SettlingCapacity8Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Settlement capacity expressed as a proprietary code.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
 		}
 	};
@@ -145,13 +147,29 @@ public class SettlingCapacity8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlingCapacity8Choice.Code, com.tools20022.repository.choice.SettlingCapacity8Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlingCapacity8Choice.mmCode, com.tools20022.repository.choice.SettlingCapacity8Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlingCapacity8Choice";
 				definition = "Choice of format for the settlement capacity information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SettlingCapacity2Code getCode() {
+		return code;
+	}
+
+	public void setCode(SettlingCapacity2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification47 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

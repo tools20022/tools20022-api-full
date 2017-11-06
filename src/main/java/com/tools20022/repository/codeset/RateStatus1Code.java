@@ -32,18 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.RateStatusCode RateStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateStatus1Code#ActualRate
- * RateStatus1Code.ActualRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateStatus1Code#IndicativeRate
- * RateStatus1Code.IndicativeRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateStatus1Code#mmActualRate
+ * RateStatus1Code.mmActualRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RateStatus1Code#mmIndicativeRate
+ * RateStatus1Code.mmIndicativeRate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +80,7 @@ public class RateStatus1Code extends RateStatusCode {
 	 * name} = "ActualRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ActualRate = new MMCode() {
+	public static final MMCode mmActualRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualRate";
@@ -102,7 +103,7 @@ public class RateStatus1Code extends RateStatusCode {
 	 * name} = "IndicativeRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode IndicativeRate = new MMCode() {
+	public static final MMCode mmIndicativeRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativeRate";
@@ -113,12 +114,12 @@ public class RateStatus1Code extends RateStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RateStatus1Code";
 				definition = "Specifies the type of rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateStatus1Code.ActualRate, com.tools20022.repository.codeset.RateStatus1Code.IndicativeRate);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateStatus1Code.mmActualRate, com.tools20022.repository.codeset.RateStatus1Code.mmIndicativeRate);
 				trace_lazy = () -> RateStatusCode.mmObject();
 			}
 		});

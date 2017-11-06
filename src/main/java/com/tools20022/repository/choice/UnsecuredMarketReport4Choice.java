@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.ReportPeriodActivity3Code;
 import com.tools20022.repository.msg.UnsecuredMarketTransaction4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between a reason for no activity and the unsecured market segment
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnsecuredMarketReport4Choice#DataSetAction
- * UnsecuredMarketReport4Choice.DataSetAction}</li>
+ * {@linkplain com.tools20022.repository.choice.UnsecuredMarketReport4Choice#mmDataSetAction
+ * UnsecuredMarketReport4Choice.mmDataSetAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnsecuredMarketReport4Choice#Transaction
- * UnsecuredMarketReport4Choice.Transaction}</li>
+ * {@linkplain com.tools20022.repository.choice.UnsecuredMarketReport4Choice#mmTransaction
+ * UnsecuredMarketReport4Choice.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,15 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketUnsecuredMarketStatisticalReportV02#UnsecuredMarketReport
- * MoneyMarketUnsecuredMarketStatisticalReportV02.UnsecuredMarketReport}</li>
+ * {@linkplain com.tools20022.repository.area.auth.MoneyMarketUnsecuredMarketStatisticalReportV02#mmUnsecuredMarketReport
+ * MoneyMarketUnsecuredMarketStatisticalReportV02.mmUnsecuredMarketReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UnsecuredMarketReport4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportPeriodActivity3Code dataSetAction;
 	/**
 	 * Provides the reason why no transactions are being reported for a money
 	 * market reporting period.
@@ -108,11 +110,11 @@ public class UnsecuredMarketReport4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.UnsecuredMarketReport3Choice#DataSetAction
-	 * UnsecuredMarketReport3Choice.DataSetAction}</li>
+	 * {@linkplain com.tools20022.repository.choice.UnsecuredMarketReport3Choice#mmDataSetAction
+	 * UnsecuredMarketReport3Choice.mmDataSetAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DataSetAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> UnsecuredMarketReport4Choice.mmObject();
 			isDerived = false;
@@ -120,12 +122,13 @@ public class UnsecuredMarketReport4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetAction";
 			definition = "Provides the reason why no transactions are being reported for a money market reporting period.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.UnsecuredMarketReport3Choice.DataSetAction;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.UnsecuredMarketReport3Choice.mmDataSetAction;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity3Code.mmObject();
 		}
 	};
+	protected List<UnsecuredMarketTransaction4> transaction;
 	/**
 	 * Provides the details of the unsecured market transaction as reported by
 	 * the reporting agent.
@@ -157,11 +160,11 @@ public class UnsecuredMarketReport4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.UnsecuredMarketReport3Choice#Transaction
-	 * UnsecuredMarketReport3Choice.Transaction}</li>
+	 * {@linkplain com.tools20022.repository.choice.UnsecuredMarketReport3Choice#mmTransaction
+	 * UnsecuredMarketReport3Choice.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> UnsecuredMarketReport4Choice.mmObject();
 			isDerived = false;
@@ -169,19 +172,19 @@ public class UnsecuredMarketReport4Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Provides the details of the unsecured market transaction as reported by the reporting agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.UnsecuredMarketReport3Choice.Transaction;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.UnsecuredMarketReport3Choice.mmTransaction;
 			minOccurs = 1;
-			type_lazy = () -> UnsecuredMarketTransaction4.mmObject();
 			isComposite = true;
+			type_lazy = () -> UnsecuredMarketTransaction4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnsecuredMarketReport4Choice.DataSetAction, com.tools20022.repository.choice.UnsecuredMarketReport4Choice.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketUnsecuredMarketStatisticalReportV02.UnsecuredMarketReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnsecuredMarketReport4Choice.mmDataSetAction, com.tools20022.repository.choice.UnsecuredMarketReport4Choice.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketUnsecuredMarketStatisticalReportV02.mmUnsecuredMarketReport);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnsecuredMarketReport4Choice";
 				definition = "Choice between a reason for no activity and the unsecured market segment transaction details.";
@@ -189,5 +192,21 @@ public class UnsecuredMarketReport4Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportPeriodActivity3Code getDataSetAction() {
+		return dataSetAction;
+	}
+
+	public void setDataSetAction(ReportPeriodActivity3Code dataSetAction) {
+		this.dataSetAction = dataSetAction;
+	}
+
+	public List<UnsecuredMarketTransaction4> getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(List<UnsecuredMarketTransaction4> transaction) {
+		this.transaction = transaction;
 	}
 }

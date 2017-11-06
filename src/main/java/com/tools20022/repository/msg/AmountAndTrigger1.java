@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AutomaticVariation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Amount and trigger information.
@@ -36,13 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndTrigger1#Identification
- * AmountAndTrigger1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndTrigger1#mmIdentification
+ * AmountAndTrigger1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndTrigger1#AmountDetailsChoice
- * AmountAndTrigger1.AmountDetailsChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndTrigger1#Trigger
- * AmountAndTrigger1.Trigger}</li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndTrigger1#mmAmountDetailsChoice
+ * AmountAndTrigger1.mmAmountDetailsChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndTrigger1#mmTrigger
+ * AmountAndTrigger1.mmTrigger}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountAndTrigger1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of the amount and trigger details.
 	 * <p>
@@ -93,7 +95,7 @@ public class AmountAndTrigger1 {
 	 * definition} = "Identification of the amount and trigger details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmountAndTrigger1.mmObject();
 			isDerived = false;
@@ -101,11 +103,12 @@ public class AmountAndTrigger1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the amount and trigger details.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AmountOrPercentage1Choice amountDetailsChoice;
 	/**
 	 * Choice between an amount and a percentage.
 	 * <p>
@@ -118,8 +121,8 @@ public class AmountAndTrigger1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation#VariationAmount
-	 * AutomaticVariation.VariationAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation#mmVariationAmount
+	 * AutomaticVariation.mmVariationAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -138,21 +141,22 @@ public class AmountAndTrigger1 {
 	 * definition} = "Choice between an amount and a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AmountDetailsChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAmountDetailsChoice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.mmVariationAmount;
 			componentContext_lazy = () -> AmountAndTrigger1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.VariationAmount;
 			isDerived = false;
 			xmlTag = "AmtDtlsChc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDetailsChoice";
 			definition = "Choice between an amount and a percentage.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AmountOrPercentage1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AmountOrPercentage1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Trigger1> trigger;
 	/**
 	 * Trigger that causes the variation to come into effect.
 	 * <p>
@@ -163,8 +167,8 @@ public class AmountAndTrigger1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation#Trigger
-	 * AutomaticVariation.Trigger}</li>
+	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation#mmTrigger
+	 * AutomaticVariation.mmTrigger}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,33 +187,57 @@ public class AmountAndTrigger1 {
 	 * definition} = "Trigger that causes the variation to come into effect."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Trigger = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTrigger = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.mmTrigger;
 			componentContext_lazy = () -> AmountAndTrigger1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.Trigger;
 			isDerived = false;
 			xmlTag = "Trggr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trigger";
 			definition = "Trigger that causes the variation to come into effect.";
 			minOccurs = 1;
-			type_lazy = () -> Trigger1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Trigger1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndTrigger1.Identification, com.tools20022.repository.msg.AmountAndTrigger1.AmountDetailsChoice,
-						com.tools20022.repository.msg.AmountAndTrigger1.Trigger);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndTrigger1.mmIdentification, com.tools20022.repository.msg.AmountAndTrigger1.mmAmountDetailsChoice,
+						com.tools20022.repository.msg.AmountAndTrigger1.mmTrigger);
 				trace_lazy = () -> AutomaticVariation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountAndTrigger1";
 				definition = "Amount and trigger information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public AmountOrPercentage1Choice getAmountDetailsChoice() {
+		return amountDetailsChoice;
+	}
+
+	public void setAmountDetailsChoice(AmountOrPercentage1Choice amountDetailsChoice) {
+		this.amountDetailsChoice = amountDetailsChoice;
+	}
+
+	public List<Trigger1> getTrigger() {
+		return trigger;
+	}
+
+	public void setTrigger(List<com.tools20022.repository.msg.Trigger1> trigger) {
+		this.trigger = trigger;
 	}
 }

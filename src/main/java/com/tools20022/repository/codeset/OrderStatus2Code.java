@@ -33,23 +33,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrderStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus2Code#Accepted
- * OrderStatus2Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus2Code#AlreadyExecuted
- * OrderStatus2Code.AlreadyExecuted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus2Code#mmAccepted
+ * OrderStatus2Code.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus2Code#SentToNextParty
- * OrderStatus2Code.SentToNextParty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus2Code#Received
- * OrderStatus2Code.Received}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus2Code#mmAlreadyExecuted
+ * OrderStatus2Code.mmAlreadyExecuted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus2Code#mmSentToNextParty
+ * OrderStatus2Code.mmSentToNextParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus2Code#mmReceived
+ * OrderStatus2Code.mmReceived}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +87,7 @@ public class OrderStatus2Code extends OrderStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accepted = new MMCode() {
+	public static final MMCode mmAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
@@ -108,7 +110,7 @@ public class OrderStatus2Code extends OrderStatusCode {
 	 * name} = "AlreadyExecuted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AlreadyExecuted = new MMCode() {
+	public static final MMCode mmAlreadyExecuted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyExecuted";
@@ -131,7 +133,7 @@ public class OrderStatus2Code extends OrderStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode SentToNextParty = new MMCode() {
+	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
@@ -154,7 +156,7 @@ public class OrderStatus2Code extends OrderStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode Received = new MMCode() {
+	public static final MMCode mmReceived = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
@@ -165,13 +167,13 @@ public class OrderStatus2Code extends OrderStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus2Code";
 				definition = "Specifies the current status of the order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus2Code.Accepted, com.tools20022.repository.codeset.OrderStatus2Code.AlreadyExecuted,
-						com.tools20022.repository.codeset.OrderStatus2Code.SentToNextParty, com.tools20022.repository.codeset.OrderStatus2Code.Received);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus2Code.mmAccepted, com.tools20022.repository.codeset.OrderStatus2Code.mmAlreadyExecuted,
+						com.tools20022.repository.codeset.OrderStatus2Code.mmSentToNextParty, com.tools20022.repository.codeset.OrderStatus2Code.mmReceived);
 				trace_lazy = () -> OrderStatusCode.mmObject();
 			}
 		});

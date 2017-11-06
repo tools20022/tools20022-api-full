@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification5#Identification
- * DocumentIdentification5.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification5#mmIdentification
+ * DocumentIdentification5.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification5#IdentificationIssuer
- * DocumentIdentification5.IdentificationIssuer}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification5#mmIdentificationIssuer
+ * DocumentIdentification5.mmIdentificationIssuer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,93 +50,93 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#UserTransactionReference
- * AcknowledgementV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AcknowledgementV03#mmUserTransactionReference
+ * AcknowledgementV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#UserTransactionReference
- * AmendmentAcceptanceNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03#mmUserTransactionReference
+ * AmendmentAcceptanceNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#UserTransactionReference
- * AmendmentRejectionNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03#mmUserTransactionReference
+ * AmendmentRejectionNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#UserTransactionReference
- * BaselineMatchReportV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineMatchReportV03#mmUserTransactionReference
+ * BaselineMatchReportV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#UserTransactionReference
- * BaselineReportV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV03#mmUserTransactionReference
+ * BaselineReportV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#UserTransactionReference
- * DataSetMatchReportV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DataSetMatchReportV03#mmUserTransactionReference
+ * DataSetMatchReportV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#UserTransactionReference
- * DeltaReportV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.DeltaReportV03#mmUserTransactionReference
+ * DeltaReportV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#UserTransactionReference
- * ErrorReportV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ErrorReportV03#mmUserTransactionReference
+ * ErrorReportV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#UserTransactionReference
- * FullPushThroughReportV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV03#mmUserTransactionReference
+ * FullPushThroughReportV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#UserTransactionReference
- * MisMatchAcceptanceNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03#mmUserTransactionReference
+ * MisMatchAcceptanceNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#UserTransactionReference
- * MisMatchRejectionNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03#mmUserTransactionReference
+ * MisMatchRejectionNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#UserTransactionReference
- * ActionReminderV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ActionReminderV03#mmUserTransactionReference
+ * ActionReminderV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeNotificationV03#UserTransactionReference
- * StatusChangeNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeNotificationV03#mmUserTransactionReference
+ * StatusChangeNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#UserTransactionReference
- * StatusChangeRequestNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03#mmUserTransactionReference
+ * StatusChangeRequestNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#UserTransactionReference
- * StatusChangeRequestRejectionNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03#mmUserTransactionReference
+ * StatusChangeRequestRejectionNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03#UserTransactionReference
- * StatusExtensionNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03#mmUserTransactionReference
+ * StatusExtensionNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#UserTransactionReference
- * StatusExtensionRejectionNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03#mmUserTransactionReference
+ * StatusExtensionRejectionNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03#UserTransactionReference
- * StatusExtensionRequestNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03#mmUserTransactionReference
+ * StatusExtensionRequestNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#UserTransactionReference
- * TimeOutNotificationV03.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.TimeOutNotificationV03#mmUserTransactionReference
+ * TimeOutNotificationV03.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#UserTransactionReference
- * ForwardIntentToPayNotificationV01.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01#mmUserTransactionReference
+ * ForwardIntentToPayNotificationV01.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#UserTransactionReference
- * SpecialNotificationV01.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.SpecialNotificationV01#mmUserTransactionReference
+ * SpecialNotificationV01.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#UserTransactionReference
- * RoleAndBaselineAcceptanceNotificationV01.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01#mmUserTransactionReference
+ * RoleAndBaselineAcceptanceNotificationV01.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#UserTransactionReference
- * RoleAndBaselineRejectionNotificationV01.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01#mmUserTransactionReference
+ * RoleAndBaselineRejectionNotificationV01.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#UserTransactionReference
- * FullPushThroughReportV04.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV04#mmUserTransactionReference
+ * FullPushThroughReportV04.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#UserTransactionReference
- * ForwardIntentToPayNotificationV02.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02#mmUserTransactionReference
+ * ForwardIntentToPayNotificationV02.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#UserTransactionReference
- * BaselineReportV04.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.BaselineReportV04#mmUserTransactionReference
+ * BaselineReportV04.mmUserTransactionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#UserTransactionReference
- * FullPushThroughReportV05.UserTransactionReference}</li>
+ * {@linkplain com.tools20022.repository.area.tsmt.FullPushThroughReportV05#mmUserTransactionReference
+ * FullPushThroughReportV05.mmUserTransactionReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -151,6 +151,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of a set of data.
 	 * <p>
@@ -163,8 +164,8 @@ public class DocumentIdentification5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -183,20 +184,21 @@ public class DocumentIdentification5 {
 	 * definition} = "Identification of a set of data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a set of data.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected BICIdentification1 identificationIssuer;
 	/**
 	 * Uniquely identifies the financial institution which has issued the
 	 * identification of the set of data by using a BIC.
@@ -231,47 +233,63 @@ public class DocumentIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IdentificationIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentificationIssuer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentIdentification5.mmObject();
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
+			componentContext_lazy = () -> DocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "IdIssr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationIssuer";
 			definition = "Uniquely identifies the financial institution which has issued the identification of the set of data by using a BIC.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BICIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification5.Identification, com.tools20022.repository.msg.DocumentIdentification5.IdentificationIssuer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification5.mmIdentification, com.tools20022.repository.msg.DocumentIdentification5.mmIdentificationIssuer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.BaselineReportV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.DeltaReportV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.ErrorReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.ActionReminderV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmUserTransactionReference, com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmUserTransactionReference, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmUserTransactionReference, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmUserTransactionReference,
+						com.tools20022.repository.area.tsmt.BaselineReportV04.mmUserTransactionReference, com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmUserTransactionReference);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.UserTransactionReference, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.UserTransactionReference, com.tools20022.repository.area.tsmt.BaselineReportV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.DataSetMatchReportV03.UserTransactionReference, com.tools20022.repository.area.tsmt.DeltaReportV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.ErrorReportV03.UserTransactionReference, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.UserTransactionReference, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.UserTransactionReference, com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.UserTransactionReference, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.UserTransactionReference, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.UserTransactionReference, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.UserTransactionReference, com.tools20022.repository.area.tsmt.SpecialNotificationV01.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.UserTransactionReference, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.UserTransactionReference, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.UserTransactionReference,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.UserTransactionReference, com.tools20022.repository.area.tsmt.FullPushThroughReportV05.UserTransactionReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification5";
 				definition = "Identifies a document by a unique identification and its issuer.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public BICIdentification1 getIdentificationIssuer() {
+		return identificationIssuer;
+	}
+
+	public void setIdentificationIssuer(com.tools20022.repository.msg.BICIdentification1 identificationIssuer) {
+		this.identificationIssuer = identificationIssuer;
 	}
 }

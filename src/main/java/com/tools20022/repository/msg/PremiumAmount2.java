@@ -39,14 +39,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount2#PremiumQuote
- * PremiumAmount2.PremiumQuote}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount2#Amount
- * PremiumAmount2.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount2#SettlementDate
- * PremiumAmount2.SettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount2#SettlementParty
- * PremiumAmount2.SettlementParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount2#mmPremiumQuote
+ * PremiumAmount2.mmPremiumQuote}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount2#mmAmount
+ * PremiumAmount2.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PremiumAmount2#mmSettlementDate
+ * PremiumAmount2.mmSettlementDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PremiumAmount2#mmSettlementParty
+ * PremiumAmount2.mmSettlementParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PremiumAmount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PremiumQuote1Choice premiumQuote;
 	/**
 	 * Specifies the calculation method of the premium amount.
 	 * <p>
@@ -110,28 +113,29 @@ public class PremiumAmount2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PremiumAmount3#PremiumQuote
-	 * PremiumAmount3.PremiumQuote}</li>
+	 * {@linkplain com.tools20022.repository.msg.PremiumAmount3#mmPremiumQuote
+	 * PremiumAmount3.mmPremiumQuote}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PremiumQuote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPremiumQuote = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PremiumAmount2.mmObject();
 			businessComponentTrace_lazy = () -> PremiumCalculation.mmObject();
+			componentContext_lazy = () -> PremiumAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "PrmQt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumQuote";
 			definition = "Specifies the calculation method of the premium amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount3.PremiumQuote);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount3.mmPremiumQuote);
 			maxOccurs = 1;
-			type_lazy = () -> PremiumQuote1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PremiumQuote1Choice.mmObject();
 		}
 	};
+	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
 	 * Result of the calculation of the premium amount on the basis of the
 	 * premium quote and one of the amounts of the underlying foreign exchange
@@ -147,8 +151,8 @@ public class PremiumAmount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#Amount
-	 * PaymentObligation.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAmount
+	 * PaymentObligation.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,27 +173,28 @@ public class PremiumAmount2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3#Amount
-	 * PremiumAmount3.Amount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3#mmAmount
+	 * PremiumAmount3.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
 			componentContext_lazy = () -> PremiumAmount2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Result of the calculation of the premium amount on the basis of the premium quote and one of the amounts of the underlying foreign exchange trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount3.Amount);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount3.mmAmount);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate settlementDate;
 	/**
 	 * Date on which the premium must be settled.
 	 * <p>
@@ -202,8 +207,8 @@ public class PremiumAmount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#PaymentDueDate
-	 * PaymentObligation.PaymentDueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmPaymentDueDate
+	 * PaymentObligation.mmPaymentDueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -221,20 +226,21 @@ public class PremiumAmount2 {
 	 * definition} = "Date on which the premium must be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> PremiumAmount2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.PaymentDueDate;
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date on which the premium must be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PartyIdentification8Choice settlementParty;
 	/**
 	 * Party that settles the premium amount on behalf of the paying party. It
 	 * may contain the BIC of a central settlement system, eg. CLSBUS33.
@@ -248,8 +254,8 @@ public class PremiumAmount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -269,29 +275,29 @@ public class PremiumAmount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementParty = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> PremiumAmount2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "SttlmPty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParty";
 			definition = "Party that settles the premium amount on behalf of the paying party.  It may contain the BIC of a central settlement system, eg. CLSBUS33.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification8Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification8Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount2.PremiumQuote, com.tools20022.repository.msg.PremiumAmount2.Amount, com.tools20022.repository.msg.PremiumAmount2.SettlementDate,
-						com.tools20022.repository.msg.PremiumAmount2.SettlementParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount2.mmPremiumQuote, com.tools20022.repository.msg.PremiumAmount2.mmAmount, com.tools20022.repository.msg.PremiumAmount2.mmSettlementDate,
+						com.tools20022.repository.msg.PremiumAmount2.mmSettlementParty);
 				trace_lazy = () -> PremiumCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PremiumAmount2";
 				definition = "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, eg, the method of the payment";
@@ -299,5 +305,37 @@ public class PremiumAmount2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PremiumQuote1Choice getPremiumQuote() {
+		return premiumQuote;
+	}
+
+	public void setPremiumQuote(PremiumQuote1Choice premiumQuote) {
+		this.premiumQuote = premiumQuote;
+	}
+
+	public ActiveOrHistoricCurrencyAndAmount getAmount() {
+		return amount;
+	}
+
+	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = amount;
+	}
+
+	public ISODate getSettlementDate() {
+		return settlementDate;
+	}
+
+	public void setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = settlementDate;
+	}
+
+	public PartyIdentification8Choice getSettlementParty() {
+		return settlementParty;
+	}
+
+	public void setSettlementParty(PartyIdentification8Choice settlementParty) {
+		this.settlementParty = settlementParty;
 	}
 }

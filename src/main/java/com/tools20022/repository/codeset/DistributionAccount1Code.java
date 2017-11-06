@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionAccount1Code#GeneralFree
- * DistributionAccount1Code.GeneralFree}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionAccount1Code#mmGeneralFree
+ * DistributionAccount1Code.mmGeneralFree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionAccount1Code#RRGAccount
- * DistributionAccount1Code.RRGAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionAccount1Code#mmRRGAccount
+ * DistributionAccount1Code.mmRRGAccount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class DistributionAccount1Code extends DistributionAccountCode {
 	 * name} = "GeneralFree"</li>
 	 * </ul>
 	 */
-	public static final MMCode GeneralFree = new MMCode() {
+	public static final MMCode mmGeneralFree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralFree";
@@ -107,7 +107,7 @@ public class DistributionAccount1Code extends DistributionAccountCode {
 	 * name} = "RRGAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode RRGAccount = new MMCode() {
+	public static final MMCode mmRRGAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RRGAccount";
@@ -118,12 +118,12 @@ public class DistributionAccount1Code extends DistributionAccountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GENF");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DistributionAccount1Code";
 				definition = "Code specifying the type of account where the disbursed CUSIP will be allocated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionAccount1Code.GeneralFree, com.tools20022.repository.codeset.DistributionAccount1Code.RRGAccount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionAccount1Code.mmGeneralFree, com.tools20022.repository.codeset.DistributionAccount1Code.mmRRGAccount);
 				trace_lazy = () -> DistributionAccountCode.mmObject();
 			}
 		});

@@ -33,31 +33,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.MarketTypeCode MarketTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code#Counter
- * MarketType8Code.Counter}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code#InterBank
- * MarketType8Code.InterBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code#mmCounter
+ * MarketType8Code.mmCounter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType8Code#OverTheCounter
- * MarketType8Code.OverTheCounter}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType8Code#mmInterBank
+ * MarketType8Code.mmInterBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType8Code#PrimaryMarket
- * MarketType8Code.PrimaryMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType8Code#mmOverTheCounter
+ * MarketType8Code.mmOverTheCounter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType8Code#SecondaryMarket
- * MarketType8Code.SecondaryMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType8Code#mmPrimaryMarket
+ * MarketType8Code.mmPrimaryMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType8Code#StockExchange
- * MarketType8Code.StockExchange}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code#Various
- * MarketType8Code.Various}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType8Code#mmSecondaryMarket
+ * MarketType8Code.mmSecondaryMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType8Code#mmStockExchange
+ * MarketType8Code.mmStockExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code#mmVarious
+ * MarketType8Code.mmVarious}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,7 +90,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "Counter"</li>
 	 * </ul>
 	 */
-	public static final MMCode Counter = new MMCode() {
+	public static final MMCode mmCounter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counter";
@@ -112,7 +113,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "InterBank"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterBank = new MMCode() {
+	public static final MMCode mmInterBank = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterBank";
@@ -135,7 +136,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "OverTheCounter"</li>
 	 * </ul>
 	 */
-	public static final MMCode OverTheCounter = new MMCode() {
+	public static final MMCode mmOverTheCounter = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverTheCounter";
@@ -158,7 +159,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "PrimaryMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode PrimaryMarket = new MMCode() {
+	public static final MMCode mmPrimaryMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryMarket";
@@ -181,7 +182,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "SecondaryMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecondaryMarket = new MMCode() {
+	public static final MMCode mmSecondaryMarket = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryMarket";
@@ -204,7 +205,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockExchange = new MMCode() {
+	public static final MMCode mmStockExchange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
@@ -227,7 +228,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "Various"</li>
 	 * </ul>
 	 */
-	public static final MMCode Various = new MMCode() {
+	public static final MMCode mmVarious = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Various";
@@ -238,13 +239,13 @@ public class MarketType8Code extends MarketTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MarketType8Code";
 				definition = "Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType8Code.Counter, com.tools20022.repository.codeset.MarketType8Code.InterBank, com.tools20022.repository.codeset.MarketType8Code.OverTheCounter,
-						com.tools20022.repository.codeset.MarketType8Code.PrimaryMarket, com.tools20022.repository.codeset.MarketType8Code.SecondaryMarket, com.tools20022.repository.codeset.MarketType8Code.StockExchange,
-						com.tools20022.repository.codeset.MarketType8Code.Various);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType8Code.mmCounter, com.tools20022.repository.codeset.MarketType8Code.mmInterBank, com.tools20022.repository.codeset.MarketType8Code.mmOverTheCounter,
+						com.tools20022.repository.codeset.MarketType8Code.mmPrimaryMarket, com.tools20022.repository.codeset.MarketType8Code.mmSecondaryMarket, com.tools20022.repository.codeset.MarketType8Code.mmStockExchange,
+						com.tools20022.repository.codeset.MarketType8Code.mmVarious);
 				trace_lazy = () -> MarketTypeCode.mmObject();
 			}
 		});

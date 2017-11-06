@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmount4#VariationAmount
- * UndertakingAmount4.VariationAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmount4#mmVariationAmount
+ * UndertakingAmount4.mmVariationAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UndertakingAmount4#BalanceAmount
- * UndertakingAmount4.BalanceAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.UndertakingAmount4#mmBalanceAmount
+ * UndertakingAmount4.mmBalanceAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class UndertakingAmount4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount variationAmount;
 	/**
 	 * Variation amount and currency.
 	 * <p>
@@ -75,8 +76,8 @@ public class UndertakingAmount4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation#VariationAmount
-	 * AutomaticVariation.VariationAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.AutomaticVariation#mmVariationAmount
+	 * AutomaticVariation.mmVariationAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -95,20 +96,21 @@ public class UndertakingAmount4 {
 	 * definition} = "Variation amount and currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VariationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVariationAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.mmVariationAmount;
 			componentContext_lazy = () -> UndertakingAmount4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.VariationAmount;
 			isDerived = false;
 			xmlTag = "VartnAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationAmount";
 			definition = "Variation amount and currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount balanceAmount;
 	/**
 	 * Calculated undertaking available balance amount resulting from the
 	 * application of the variation amount.
@@ -123,8 +125,8 @@ public class UndertakingAmount4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount#BalanceAmount
-	 * UndertakingAmount.BalanceAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmBalanceAmount
+	 * UndertakingAmount.mmBalanceAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,17 +147,17 @@ public class UndertakingAmount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BalanceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBalanceAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmBalanceAmount;
 			componentContext_lazy = () -> UndertakingAmount4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.BalanceAmount;
 			isDerived = false;
 			xmlTag = "BalAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceAmount";
 			definition = "Calculated undertaking available balance amount resulting from the application of the variation amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -163,14 +165,30 @@ public class UndertakingAmount4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmount4.VariationAmount, com.tools20022.repository.msg.UndertakingAmount4.BalanceAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmount4.mmVariationAmount, com.tools20022.repository.msg.UndertakingAmount4.mmBalanceAmount);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmount4";
 				definition = "Defined variation amount and balance.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getVariationAmount() {
+		return variationAmount;
+	}
+
+	public void setVariationAmount(ActiveCurrencyAndAmount variationAmount) {
+		this.variationAmount = variationAmount;
+	}
+
+	public ActiveCurrencyAndAmount getBalanceAmount() {
+		return balanceAmount;
+	}
+
+	public void setBalanceAmount(ActiveCurrencyAndAmount balanceAmount) {
+		this.balanceAmount = balanceAmount;
 	}
 }

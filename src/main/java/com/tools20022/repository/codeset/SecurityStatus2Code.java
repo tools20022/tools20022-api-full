@@ -33,21 +33,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecurityStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#Active
- * SecurityStatus2Code.Active}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#Inactive
- * SecurityStatus2Code.Inactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#mmActive
+ * SecurityStatus2Code.mmActive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#Suspended
- * SecurityStatus2Code.Suspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#mmInactive
+ * SecurityStatus2Code.mmInactive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#mmSuspended
+ * SecurityStatus2Code.mmSuspended}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +84,7 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode Active = new MMCode() {
+	public static final MMCode mmActive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
@@ -106,7 +107,7 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	 * name} = "Inactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode Inactive = new MMCode() {
+	public static final MMCode mmInactive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
@@ -129,7 +130,7 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspended = new MMCode() {
+	public static final MMCode mmSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
@@ -140,12 +141,13 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityStatus2Code";
 				definition = "Specifies the status of the security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecurityStatus2Code.Active, com.tools20022.repository.codeset.SecurityStatus2Code.Inactive, com.tools20022.repository.codeset.SecurityStatus2Code.Suspended);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecurityStatus2Code.mmActive, com.tools20022.repository.codeset.SecurityStatus2Code.mmInactive,
+						com.tools20022.repository.codeset.SecurityStatus2Code.mmSuspended);
 				trace_lazy = () -> SecurityStatusCode.mmObject();
 			}
 		});

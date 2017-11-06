@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification81#Identification
- * GenericIdentification81.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification81#mmIdentification
+ * GenericIdentification81.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification81#IdentificationType
- * GenericIdentification81.IdentificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification81#mmIdentificationType
+ * GenericIdentification81.mmIdentificationType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class GenericIdentification81 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification of a party, such as a tax or social security identifier.
 	 * <p>
@@ -80,8 +81,8 @@ public class GenericIdentification81 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,25 +104,26 @@ public class GenericIdentification81 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.GenericIdentification10#Identification
-	 * GenericIdentification10.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification10#mmIdentification
+	 * GenericIdentification10.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentification81.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a party, such as a tax or social security identifier.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification10.Identification;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification10.mmIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected OtherIdentification3Choice identificationType;
 	/**
 	 * Type of identification.
 	 * <p>
@@ -154,28 +156,28 @@ public class GenericIdentification81 {
 	 * definition} = "Type of identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IdentificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentificationType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GenericIdentification81.mmObject();
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
+			componentContext_lazy = () -> GenericIdentification81.mmObject();
 			isDerived = false;
 			xmlTag = "IdTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationType";
 			definition = "Type of identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OtherIdentification3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OtherIdentification3Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification81.Identification, com.tools20022.repository.msg.GenericIdentification81.IdentificationType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification81.mmIdentification, com.tools20022.repository.msg.GenericIdentification81.mmIdentificationType);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification81";
 				definition = "Information related to the identification of a party.";
@@ -183,5 +185,21 @@ public class GenericIdentification81 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public OtherIdentification3Choice getIdentificationType() {
+		return identificationType;
+	}
+
+	public void setIdentificationType(OtherIdentification3Choice identificationType) {
+		this.identificationType = identificationType;
 	}
 }

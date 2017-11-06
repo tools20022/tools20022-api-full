@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.repository.entity.Consignee;
+import com.tools20022.repository.entity.Consignor;
 import com.tools20022.repository.entity.Transport;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the arrangement of the transport of goods and services and the
@@ -33,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Consignment2#Consignor
- * Consignment2.Consignor}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Consignment2#Consignee
- * Consignment2.Consignee}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Consignment2#TransportMeans
- * Consignment2.TransportMeans}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment2#mmConsignor
+ * Consignment2.mmConsignor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment2#mmConsignee
+ * Consignment2.mmConsignee}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment2#mmTransportMeans
+ * Consignment2.mmTransportMeans}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Consignment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradeParty1 consignor;
 	/**
 	 * Party consigning goods as stipulated in the transport contract by the
 	 * party ordering transport.
@@ -102,28 +106,29 @@ public class Consignment2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Consignment4#Consignor
-	 * Consignment4.Consignor}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Consignment4#mmConsignor
+	 * Consignment4.mmConsignor}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Consignor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConsignor = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Consignor.mmObject();
 			componentContext_lazy = () -> Consignment2.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Consignor.mmObject();
 			isDerived = false;
 			xmlTag = "Consgnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignor";
 			definition = "Party consigning goods as stipulated in the transport contract by the party ordering transport.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment4.Consignor);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment4.mmConsignor);
 			maxOccurs = 1;
-			type_lazy = () -> TradeParty1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
 		}
 	};
+	protected TradeParty1 consignee;
 	/**
 	 * Party to which goods are consigned.
 	 * <p>
@@ -154,28 +159,29 @@ public class Consignment2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Consignment4#Consignee
-	 * Consignment4.Consignee}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Consignment4#mmConsignee
+	 * Consignment4.mmConsignee}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Consignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmConsignee = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Consignee.mmObject();
 			componentContext_lazy = () -> Consignment2.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Consignee.mmObject();
 			isDerived = false;
 			xmlTag = "Consgn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignee";
 			definition = "Party to which goods are consigned.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment4.Consignee);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment4.mmConsignee);
 			maxOccurs = 1;
-			type_lazy = () -> TradeParty1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.TransportMeans3> transportMeans;
 	/**
 	 * Particular aircraft, vehicle, vessel or other device used for the
 	 * transport of a consignment.
@@ -210,34 +216,34 @@ public class Consignment2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Consignment4#TransportMeans
-	 * Consignment4.TransportMeans}</li>
+	 * {@linkplain com.tools20022.repository.msg.Consignment4#mmTransportMeans
+	 * Consignment4.mmTransportMeans}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransportMeans = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransportMeans = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Consignment2.mmObject();
 			businessComponentTrace_lazy = () -> Transport.mmObject();
+			componentContext_lazy = () -> Consignment2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtMeans";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportMeans";
 			definition = "Particular aircraft, vehicle, vessel or other device used for the transport of a consignment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment4.TransportMeans);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment4.mmTransportMeans);
 			minOccurs = 0;
-			type_lazy = () -> TransportMeans3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.TransportMeans3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment2.Consignor, com.tools20022.repository.msg.Consignment2.Consignee, com.tools20022.repository.msg.Consignment2.TransportMeans);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment2.mmConsignor, com.tools20022.repository.msg.Consignment2.mmConsignee, com.tools20022.repository.msg.Consignment2.mmTransportMeans);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Consignment2";
 				definition = "Specifies the arrangement of the transport of goods and services and the parties involved in this process.";
@@ -245,5 +251,29 @@ public class Consignment2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeParty1 getConsignor() {
+		return consignor;
+	}
+
+	public void setConsignor(com.tools20022.repository.msg.TradeParty1 consignor) {
+		this.consignor = consignor;
+	}
+
+	public TradeParty1 getConsignee() {
+		return consignee;
+	}
+
+	public void setConsignee(com.tools20022.repository.msg.TradeParty1 consignee) {
+		this.consignee = consignee;
+	}
+
+	public List<TransportMeans3> getTransportMeans() {
+		return transportMeans;
+	}
+
+	public void setTransportMeans(List<com.tools20022.repository.msg.TransportMeans3> transportMeans) {
+		this.transportMeans = transportMeans;
 	}
 }

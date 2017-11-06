@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryStatus1Code#Failure
- * DeliveryStatus1Code.Failure}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryStatus1Code#mmFailure
+ * DeliveryStatus1Code.mmFailure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryStatus1Code#Success
- * DeliveryStatus1Code.Success}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryStatus1Code#mmSuccess
+ * DeliveryStatus1Code.mmSuccess}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +78,7 @@ public class DeliveryStatus1Code extends DeliveryStatusCode {
 	 * name} = "Failure"</li>
 	 * </ul>
 	 */
-	public static final MMCode Failure = new MMCode() {
+	public static final MMCode mmFailure = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failure";
@@ -101,7 +101,7 @@ public class DeliveryStatus1Code extends DeliveryStatusCode {
 	 * name} = "Success"</li>
 	 * </ul>
 	 */
-	public static final MMCode Success = new MMCode() {
+	public static final MMCode mmSuccess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
@@ -112,11 +112,11 @@ public class DeliveryStatus1Code extends DeliveryStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeliveryStatus1Code";
 				definition = "Provides an explicit indication whether the delivery attempt resulted in success or failure. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryStatus1Code.Failure, com.tools20022.repository.codeset.DeliveryStatus1Code.Success);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryStatus1Code.mmFailure, com.tools20022.repository.codeset.DeliveryStatus1Code.mmSuccess);
 				trace_lazy = () -> DeliveryStatusCode.mmObject();
 			}
 		});

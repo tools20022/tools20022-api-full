@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OtherIdentification2Choice#Code
- * OtherIdentification2Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.OtherIdentification2Choice#mmCode
+ * OtherIdentification2Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.OtherIdentification2Choice#Proprietary
- * OtherIdentification2Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.OtherIdentification2Choice#mmProprietary
+ * OtherIdentification2Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OtherIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PersonIdentificationType6Code code;
 	/**
 	 * Type of identification expressed as a code.
 	 * <p>
@@ -113,36 +114,37 @@ public class OtherIdentification2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OtherIdentification4Choice#Code
-	 * OtherIdentification4Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.OtherIdentification4Choice#mmCode
+	 * OtherIdentification4Choice.mmCode}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OtherIdentification3Choice#Code
-	 * OtherIdentification3Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.OtherIdentification3Choice#mmCode
+	 * OtherIdentification3Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.OtherIdentification1Choice#Code
-	 * OtherIdentification1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.OtherIdentification1Choice#mmCode
+	 * OtherIdentification1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherIdentification2Choice.mmObject();
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
+			componentContext_lazy = () -> OtherIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of identification expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OtherIdentification1Choice.Code;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OtherIdentification4Choice.Code, com.tools20022.repository.choice.OtherIdentification3Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OtherIdentification4Choice.mmCode, com.tools20022.repository.choice.OtherIdentification3Choice.mmCode);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.OtherIdentification1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType6Code.mmObject();
 		}
 	};
+	protected GenericIdentification29 proprietary;
 	/**
 	 * Type of identification expressed as a proprietary code.
 	 * <p>
@@ -178,33 +180,33 @@ public class OtherIdentification2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OtherIdentification4Choice#Proprietary
-	 * OtherIdentification4Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.OtherIdentification4Choice#mmProprietary
+	 * OtherIdentification4Choice.mmProprietary}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.OtherIdentification3Choice#Proprietary
-	 * OtherIdentification3Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.OtherIdentification3Choice#mmProprietary
+	 * OtherIdentification3Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.OtherIdentification1Choice#Proprietary
-	 * OtherIdentification1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.OtherIdentification1Choice#mmProprietary
+	 * OtherIdentification1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherIdentification2Choice.mmObject();
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
+			componentContext_lazy = () -> OtherIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of identification expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OtherIdentification1Choice.Proprietary;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OtherIdentification4Choice.Proprietary, com.tools20022.repository.choice.OtherIdentification3Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OtherIdentification4Choice.mmProprietary, com.tools20022.repository.choice.OtherIdentification3Choice.mmProprietary);
+			previousVersion_lazy = () -> com.tools20022.repository.choice.OtherIdentification1Choice.mmProprietary;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification29.mmObject();
 		}
 	};
@@ -212,16 +214,32 @@ public class OtherIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OtherIdentification2Choice.Code, com.tools20022.repository.choice.OtherIdentification2Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OtherIdentification2Choice.mmCode, com.tools20022.repository.choice.OtherIdentification2Choice.mmProprietary);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OtherIdentification2Choice";
 				definition = "Choice of formats for the specification of other identification.";
-				previousVersion_lazy = () -> OtherIdentification1Choice.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(OtherIdentification4Choice.mmObject(), OtherIdentification3Choice.mmObject());
+				previousVersion_lazy = () -> OtherIdentification1Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PersonIdentificationType6Code getCode() {
+		return code;
+	}
+
+	public void setCode(PersonIdentificationType6Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification29 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification29 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

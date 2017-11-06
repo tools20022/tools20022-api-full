@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReferToFundOrderDesk1Code#ReferToFundOrderDesk
- * ReferToFundOrderDesk1Code.ReferToFundOrderDesk}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReferToFundOrderDesk1Code#mmReferToFundOrderDesk
+ * ReferToFundOrderDesk1Code.mmReferToFundOrderDesk}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class ReferToFundOrderDesk1Code extends HoldingTransferableCode {
 	 * name} = "ReferToFundOrderDesk"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReferToFundOrderDesk = new MMCode() {
+	public static final MMCode mmReferToFundOrderDesk = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferToFundOrderDesk";
@@ -90,12 +90,12 @@ public class ReferToFundOrderDesk1Code extends HoldingTransferableCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RFOD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReferToFundOrderDesk1Code";
 				definition = "Indicates that the operation is only possible in restricted circumstances.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReferToFundOrderDesk1Code.ReferToFundOrderDesk);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReferToFundOrderDesk1Code.mmReferToFundOrderDesk);
 				trace_lazy = () -> HoldingTransferableCode.mmObject();
 			}
 		});

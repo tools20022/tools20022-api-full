@@ -31,11 +31,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementTypeCode#Missing
- * CorporateActionStatementTypeCode.Missing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementTypeCode#mmMissing
+ * CorporateActionStatementTypeCode.mmMissing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementTypeCode#All
- * CorporateActionStatementTypeCode.All}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementTypeCode#mmAll
+ * CorporateActionStatementTypeCode.mmAll}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class CorporateActionStatementTypeCode {
 	 * definition} = "Statement contains missing instructions."</li>
 	 * </ul>
 	 */
-	public static final MMCode Missing = new MMCode() {
+	public static final MMCode mmMissing = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Missing";
@@ -123,7 +123,7 @@ public class CorporateActionStatementTypeCode {
 	 * definition} = "Statement contains all instructions."</li>
 	 * </ul>
 	 */
-	public static final MMCode All = new MMCode() {
+	public static final MMCode mmAll = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "All";
@@ -136,12 +136,12 @@ public class CorporateActionStatementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MISS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionStatementTypeCode";
 				definition = "Indicates whether the statement contains missing instructions only or all instructions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionStatementTypeCode.Missing, com.tools20022.repository.codeset.CorporateActionStatementTypeCode.All);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionStatementTypeCode.mmMissing, com.tools20022.repository.codeset.CorporateActionStatementTypeCode.mmAll);
 				derivation_lazy = () -> Arrays.asList(CorporateActionStatementType1Code.mmObject());
 			}
 		});

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.VariableInterest1Rate#Index
- * VariableInterest1Rate.Index}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VariableInterest1Rate#mmIndex
+ * VariableInterest1Rate.mmIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VariableInterest1Rate#BasisPointSpread
- * VariableInterest1Rate.BasisPointSpread}</li>
+ * {@linkplain com.tools20022.repository.msg.VariableInterest1Rate#mmBasisPointSpread
+ * VariableInterest1Rate.mmBasisPointSpread}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class VariableInterest1Rate {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text index;
 	/**
 	 * Specifies the index taken into account to calculate the variable interest
 	 * rate.
@@ -85,8 +86,8 @@ public class VariableInterest1Rate {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Index#Identification
-	 * Index.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Index#mmIdentification
+	 * Index.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -109,27 +110,28 @@ public class VariableInterest1Rate {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FloatingInterestRate4#ReferenceRate
-	 * FloatingInterestRate4.ReferenceRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.FloatingInterestRate4#mmReferenceRate
+	 * FloatingInterestRate4.mmReferenceRate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Index = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIndex = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIdentification;
 			componentContext_lazy = () -> VariableInterest1Rate.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.Identification;
 			isDerived = false;
 			xmlTag = "Indx";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
 			definition = "Specifies the index taken into account to calculate the variable interest rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingInterestRate4.ReferenceRate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingInterestRate4.mmReferenceRate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Number basisPointSpread;
 	/**
 	 * Used to express differences in interest rates, for example, a difference
 	 * of 0.10% is equivalent to a change of 10 basis points.
@@ -143,8 +145,8 @@ public class VariableInterest1Rate {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Spread#BasisPointSpread
-	 * Spread.BasisPointSpread}</li>
+	 * {@linkplain com.tools20022.repository.entity.Spread#mmBasisPointSpread
+	 * Spread.mmBasisPointSpread}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,17 +167,17 @@ public class VariableInterest1Rate {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BasisPointSpread = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBasisPointSpread = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmBasisPointSpread;
 			componentContext_lazy = () -> VariableInterest1Rate.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.BasisPointSpread;
 			isDerived = false;
 			xmlTag = "BsisPtSprd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisPointSpread";
 			definition = "Used to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
@@ -183,9 +185,9 @@ public class VariableInterest1Rate {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariableInterest1Rate.Index, com.tools20022.repository.msg.VariableInterest1Rate.BasisPointSpread);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariableInterest1Rate.mmIndex, com.tools20022.repository.msg.VariableInterest1Rate.mmBasisPointSpread);
 				trace_lazy = () -> VariableInterest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "VariableInterest1Rate";
 				definition = "Provides the index used to define the rate and optionaly the basis point spread.";
@@ -193,5 +195,21 @@ public class VariableInterest1Rate {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIndex() {
+		return index;
+	}
+
+	public void setIndex(Max35Text index) {
+		this.index = index;
+	}
+
+	public Number getBasisPointSpread() {
+		return basisPointSpread;
+	}
+
+	public void setBasisPointSpread(Number basisPointSpread) {
+		this.basisPointSpread = basisPointSpread;
 	}
 }

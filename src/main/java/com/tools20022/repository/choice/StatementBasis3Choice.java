@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.StatementBasis3Choice#Code
- * StatementBasis3Choice.Code}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatementBasis3Choice#Proprietary
- * StatementBasis3Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.StatementBasis3Choice#mmCode
+ * StatementBasis3Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.StatementBasis3Choice#mmProprietary
+ * StatementBasis3Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementBasis3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected StatementBasis1Code code;
 	/**
 	 * Statement basis expressed as an ISO 20022 code.
 	 * <p>
@@ -95,13 +97,13 @@ public class StatementBasis3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.StatementBasis7Choice#Code
-	 * StatementBasis7Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.StatementBasis7Choice#mmCode
+	 * StatementBasis7Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementBasis3Choice.mmObject();
 			isDerived = false;
@@ -109,12 +111,13 @@ public class StatementBasis3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Statement basis expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementBasis7Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementBasis7Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> StatementBasis1Code.mmObject();
 		}
 	};
+	protected GenericIdentification20 proprietary;
 	/**
 	 * Statement basis expressed as a proprietary code.
 	 * <p>
@@ -145,13 +148,13 @@ public class StatementBasis3Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.StatementBasis7Choice#Proprietary
-	 * StatementBasis7Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.StatementBasis7Choice#mmProprietary
+	 * StatementBasis7Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Proprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementBasis3Choice.mmObject();
 			isDerived = false;
@@ -159,9 +162,9 @@ public class StatementBasis3Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Statement basis expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementBasis7Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementBasis7Choice.mmProprietary);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
 		}
 	};
@@ -169,8 +172,8 @@ public class StatementBasis3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementBasis3Choice.Code, com.tools20022.repository.choice.StatementBasis3Choice.Proprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementBasis3Choice.mmCode, com.tools20022.repository.choice.StatementBasis3Choice.mmProprietary);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementBasis3Choice";
 				definition = "Choice of format for the statement basis.";
@@ -178,5 +181,21 @@ public class StatementBasis3Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StatementBasis1Code getCode() {
+		return code;
+	}
+
+	public void setCode(StatementBasis1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification20 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

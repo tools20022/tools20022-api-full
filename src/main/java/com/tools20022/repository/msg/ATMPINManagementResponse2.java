@@ -33,14 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMPINManagementResponse2#Environment
- * ATMPINManagementResponse2.Environment}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMPINManagementResponse2#mmEnvironment
+ * ATMPINManagementResponse2.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMPINManagementResponse2#Context
- * ATMPINManagementResponse2.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMPINManagementResponse2#mmContext
+ * ATMPINManagementResponse2.mmContext}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMPINManagementResponse2#Transaction
- * ATMPINManagementResponse2.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMPINManagementResponse2#mmTransaction
+ * ATMPINManagementResponse2.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -48,15 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV02#ATMPINManagementResponse
- * ATMPINManagementResponseV02.ATMPINManagementResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV02#mmATMPINManagementResponse
+ * ATMPINManagementResponseV02.mmATMPINManagementResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMPINManagementResponse2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment12 environment;
 	/**
 	 * Environment of the PIN management transaction.
 	 * <p>
@@ -98,7 +99,7 @@ public class ATMPINManagementResponse2 {
 	 * definition} = "Environment of the PIN management transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMPINManagementResponse2.mmObject();
 			isDerived = false;
@@ -106,12 +107,13 @@ public class ATMPINManagementResponse2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the PIN management transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment12.mmObject();
 		}
 	};
+	protected ATMContext17 context;
 	/**
 	 * Context in which the transaction is performed.
 	 * <p>
@@ -138,7 +140,7 @@ public class ATMPINManagementResponse2 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMPINManagementResponse2.mmObject();
 			isDerived = false;
@@ -146,12 +148,13 @@ public class ATMPINManagementResponse2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMContext17.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMContext17.mmObject();
 		}
 	};
+	protected ATMTransaction22 transaction;
 	/**
 	 * Response to the PIN management transaction.
 	 * <p>
@@ -178,7 +181,7 @@ public class ATMPINManagementResponse2 {
 	 * definition} = "Response to the PIN management transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMPINManagementResponse2.mmObject();
 			isDerived = false;
@@ -186,25 +189,49 @@ public class ATMPINManagementResponse2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Response to the PIN management transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction22.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction22.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMPINManagementResponse2.Environment, com.tools20022.repository.msg.ATMPINManagementResponse2.Context,
-						com.tools20022.repository.msg.ATMPINManagementResponse2.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMPINManagementResponseV02.ATMPINManagementResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMPINManagementResponse2.mmEnvironment, com.tools20022.repository.msg.ATMPINManagementResponse2.mmContext,
+						com.tools20022.repository.msg.ATMPINManagementResponse2.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMPINManagementResponseV02.mmATMPINManagementResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMPINManagementResponse2";
 				definition = "Information related to the response of an ATM PIN Management from an ATM manager.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment12 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment12 environment) {
+		this.environment = environment;
+	}
+
+	public ATMContext17 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.ATMContext17 context) {
+		this.context = context;
+	}
+
+	public ATMTransaction22 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction22 transaction) {
+		this.transaction = transaction;
 	}
 }

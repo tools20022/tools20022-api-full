@@ -33,19 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * LinkageTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LinkageType1Code#Link
- * LinkageType1Code.Link}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LinkageType1Code#Unlink
- * LinkageType1Code.Unlink}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LinkageType1Code#Soft
- * LinkageType1Code.Soft}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LinkageType1Code#mmLink
+ * LinkageType1Code.mmLink}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LinkageType1Code#mmUnlink
+ * LinkageType1Code.mmUnlink}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LinkageType1Code#mmSoft
+ * LinkageType1Code.mmSoft}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class LinkageType1Code extends LinkageTypeCode {
 	 * name} = "Link"</li>
 	 * </ul>
 	 */
-	public static final MMCode Link = new MMCode() {
+	public static final MMCode mmLink = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Link";
@@ -104,7 +104,7 @@ public class LinkageType1Code extends LinkageTypeCode {
 	 * name} = "Unlink"</li>
 	 * </ul>
 	 */
-	public static final MMCode Unlink = new MMCode() {
+	public static final MMCode mmUnlink = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unlink";
@@ -127,7 +127,7 @@ public class LinkageType1Code extends LinkageTypeCode {
 	 * name} = "Soft"</li>
 	 * </ul>
 	 */
-	public static final MMCode Soft = new MMCode() {
+	public static final MMCode mmSoft = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Soft";
@@ -138,12 +138,12 @@ public class LinkageType1Code extends LinkageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LINK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LinkageType1Code";
 				definition = "Type of linkage requested.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LinkageType1Code.Link, com.tools20022.repository.codeset.LinkageType1Code.Unlink, com.tools20022.repository.codeset.LinkageType1Code.Soft);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LinkageType1Code.mmLink, com.tools20022.repository.codeset.LinkageType1Code.mmUnlink, com.tools20022.repository.codeset.LinkageType1Code.mmSoft);
 				trace_lazy = () -> LinkageTypeCode.mmObject();
 			}
 		});

@@ -32,21 +32,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.SideCode SideCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#SellShort
- * Side5Code.SellShort}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#Sell
- * Side5Code.Sell}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#SellShortExempt
- * Side5Code.SellShortExempt}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#Undisclosed
- * Side5Code.Undisclosed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#mmSellShort
+ * Side5Code.mmSellShort}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#mmSell
+ * Side5Code.mmSell}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Side5Code#mmSellShortExempt
+ * Side5Code.mmSellShortExempt}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#mmUndisclosed
+ * Side5Code.mmUndisclosed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +76,7 @@ public class Side5Code extends SideCode {
 	 * name} = "SellShort"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellShort = new MMCode() {
+	public static final MMCode mmSellShort = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShort";
@@ -97,7 +98,7 @@ public class Side5Code extends SideCode {
 	 * name} = "Sell"</li>
 	 * </ul>
 	 */
-	public static final MMCode Sell = new MMCode() {
+	public static final MMCode mmSell = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
@@ -119,7 +120,7 @@ public class Side5Code extends SideCode {
 	 * name} = "SellShortExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellShortExempt = new MMCode() {
+	public static final MMCode mmSellShortExempt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShortExempt";
@@ -141,7 +142,7 @@ public class Side5Code extends SideCode {
 	 * name} = "Undisclosed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Undisclosed = new MMCode() {
+	public static final MMCode mmUndisclosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undisclosed";
@@ -152,12 +153,12 @@ public class Side5Code extends SideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Side5Code";
 				definition = "Side taken by a party on an order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Side5Code.SellShort, com.tools20022.repository.codeset.Side5Code.Sell, com.tools20022.repository.codeset.Side5Code.SellShortExempt,
-						com.tools20022.repository.codeset.Side5Code.Undisclosed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Side5Code.mmSellShort, com.tools20022.repository.codeset.Side5Code.mmSell, com.tools20022.repository.codeset.Side5Code.mmSellShortExempt,
+						com.tools20022.repository.codeset.Side5Code.mmUndisclosed);
 				trace_lazy = () -> SideCode.mmObject();
 			}
 		});

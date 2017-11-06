@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRejectionReason1Code#ValueDate
- * InterestRejectionReason1Code.ValueDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRejectionReason1Code#mmValueDate
+ * InterestRejectionReason1Code.mmValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRejectionReason1Code#DisputeAmount
- * InterestRejectionReason1Code.DisputeAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRejectionReason1Code#mmDisputeAmount
+ * InterestRejectionReason1Code.mmDisputeAmount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class InterestRejectionReason1Code extends InterestRejectionReasonCode {
 	 * name} = "ValueDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueDate = new MMCode() {
+	public static final MMCode mmValueDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
@@ -107,7 +107,7 @@ public class InterestRejectionReason1Code extends InterestRejectionReasonCode {
 	 * name} = "DisputeAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode DisputeAmount = new MMCode() {
+	public static final MMCode mmDisputeAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeAmount";
@@ -118,12 +118,12 @@ public class InterestRejectionReason1Code extends InterestRejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VADA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InterestRejectionReason1Code";
 				definition = "Indicates whether the interest request is rejected due a value date or an interest amount difference.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRejectionReason1Code.ValueDate, com.tools20022.repository.codeset.InterestRejectionReason1Code.DisputeAmount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRejectionReason1Code.mmValueDate, com.tools20022.repository.codeset.InterestRejectionReason1Code.mmDisputeAmount);
 				trace_lazy = () -> InterestRejectionReasonCode.mmObject();
 			}
 		});

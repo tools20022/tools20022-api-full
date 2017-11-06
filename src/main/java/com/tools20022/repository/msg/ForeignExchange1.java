@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchange1#ForeignCurrency
- * ForeignExchange1.ForeignCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchange1#mmForeignCurrency
+ * ForeignExchange1.mmForeignCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchange1#ExchangeSpotRate
- * ForeignExchange1.ExchangeSpotRate}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchange1#mmExchangeSpotRate
+ * ForeignExchange1.mmExchangeSpotRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ForeignExchange1#ExchangeForwardPoint
- * ForeignExchange1.ExchangeForwardPoint}</li>
+ * {@linkplain com.tools20022.repository.msg.ForeignExchange1#mmExchangeForwardPoint
+ * ForeignExchange1.mmExchangeForwardPoint}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ForeignExchange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveOrHistoricCurrencyCode foreignCurrency;
 	/**
 	 * Currency into which an amount is to be converted in a currency
 	 * conversion.
@@ -81,8 +82,8 @@ public class ForeignExchange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#TargetCurrency
-	 * CurrencyExchange.TargetCurrency}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmTargetCurrency
+	 * CurrencyExchange.mmTargetCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +104,21 @@ public class ForeignExchange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForeignCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForeignCurrency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> ForeignExchange1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.TargetCurrency;
 			isDerived = false;
 			xmlTag = "FrgnCcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCurrency";
 			definition = "Currency into which an amount is to be converted in a currency conversion.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	protected BaseOneRate exchangeSpotRate;
 	/**
 	 * Foreign exchange rate between the source and the foreign currency
 	 * applicable to the first leg of the FX swap transaction. The foreign
@@ -132,8 +134,8 @@ public class ForeignExchange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#ExchangeRate
-	 * CurrencyExchange.ExchangeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmExchangeRate
+	 * CurrencyExchange.mmExchangeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,20 +156,21 @@ public class ForeignExchange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeSpotRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeSpotRate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> ForeignExchange1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.ExchangeRate;
 			isDerived = false;
 			xmlTag = "XchgSpotRate";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeSpotRate";
 			definition = "Foreign exchange rate between the source and the foreign currency applicable to the first leg of the FX swap transaction. The foreign exchange spot rate will be reported as the number of foreign currency units per one unit of the source currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	protected DecimalNumber exchangeForwardPoint;
 	/**
 	 * Difference between the foreign exchange spot rate and the foreign
 	 * exchange forward rate expressed in basis points quoted in accordance with
@@ -185,8 +188,8 @@ public class ForeignExchange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#ExchangeForwardPoint
-	 * ForeignExchangeTrade.ExchangeForwardPoint}</li>
+	 * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmExchangeForwardPoint
+	 * ForeignExchangeTrade.mmExchangeForwardPoint}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,17 +210,17 @@ public class ForeignExchange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExchangeForwardPoint = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExchangeForwardPoint = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmExchangeForwardPoint;
 			componentContext_lazy = () -> ForeignExchange1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.ExchangeForwardPoint;
 			isDerived = false;
 			xmlTag = "XchgFwdPt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeForwardPoint";
 			definition = "Difference between the foreign exchange spot rate and the foreign exchange forward rate expressed in basis points quoted in accordance with the prevailing market conventions for the currency pair. \r\nUsage:\r\nThis value can be either positive or negative.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
@@ -225,15 +228,39 @@ public class ForeignExchange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchange1.ForeignCurrency, com.tools20022.repository.msg.ForeignExchange1.ExchangeSpotRate,
-						com.tools20022.repository.msg.ForeignExchange1.ExchangeForwardPoint);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchange1.mmForeignCurrency, com.tools20022.repository.msg.ForeignExchange1.mmExchangeSpotRate,
+						com.tools20022.repository.msg.ForeignExchange1.mmExchangeForwardPoint);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchange1";
 				definition = "Provides the details of the foreign exchange.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveOrHistoricCurrencyCode getForeignCurrency() {
+		return foreignCurrency;
+	}
+
+	public void setForeignCurrency(ActiveOrHistoricCurrencyCode foreignCurrency) {
+		this.foreignCurrency = foreignCurrency;
+	}
+
+	public BaseOneRate getExchangeSpotRate() {
+		return exchangeSpotRate;
+	}
+
+	public void setExchangeSpotRate(BaseOneRate exchangeSpotRate) {
+		this.exchangeSpotRate = exchangeSpotRate;
+	}
+
+	public DecimalNumber getExchangeForwardPoint() {
+		return exchangeForwardPoint;
+	}
+
+	public void setExchangeForwardPoint(DecimalNumber exchangeForwardPoint) {
+		this.exchangeForwardPoint = exchangeForwardPoint;
 	}
 }

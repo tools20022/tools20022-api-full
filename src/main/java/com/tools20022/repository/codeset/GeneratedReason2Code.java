@@ -34,29 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#CollateralManagement
- * GeneratedReason2Code.CollateralManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#mmCollateralManagement
+ * GeneratedReason2Code.mmCollateralManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#ReturnRefusedDumps
- * GeneratedReason2Code.ReturnRefusedDumps}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#mmReturnRefusedDumps
+ * GeneratedReason2Code.mmReturnRefusedDumps}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#SplitShaping
- * GeneratedReason2Code.SplitShaping}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#mmSplitShaping
+ * GeneratedReason2Code.mmSplitShaping}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#ThirdParty
- * GeneratedReason2Code.ThirdParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#mmThirdParty
+ * GeneratedReason2Code.mmThirdParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#Transformation
- * GeneratedReason2Code.Transformation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#Other
- * GeneratedReason2Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#mmTransformation
+ * GeneratedReason2Code.mmTransformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.GeneratedReason2Code#mmOther
+ * GeneratedReason2Code.mmOther}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +93,7 @@ public class GeneratedReason2Code extends GeneratedReasonCode {
 	 * name} = "CollateralManagement"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralManagement = new MMCode() {
+	public static final MMCode mmCollateralManagement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagement";
@@ -115,7 +116,7 @@ public class GeneratedReason2Code extends GeneratedReasonCode {
 	 * name} = "ReturnRefusedDumps"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReturnRefusedDumps = new MMCode() {
+	public static final MMCode mmReturnRefusedDumps = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnRefusedDumps";
@@ -138,7 +139,7 @@ public class GeneratedReason2Code extends GeneratedReasonCode {
 	 * name} = "SplitShaping"</li>
 	 * </ul>
 	 */
-	public static final MMCode SplitShaping = new MMCode() {
+	public static final MMCode mmSplitShaping = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitShaping";
@@ -161,7 +162,7 @@ public class GeneratedReason2Code extends GeneratedReasonCode {
 	 * name} = "ThirdParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode ThirdParty = new MMCode() {
+	public static final MMCode mmThirdParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdParty";
@@ -184,7 +185,7 @@ public class GeneratedReason2Code extends GeneratedReasonCode {
 	 * name} = "Transformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode Transformation = new MMCode() {
+	public static final MMCode mmTransformation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transformation";
@@ -207,7 +208,7 @@ public class GeneratedReason2Code extends GeneratedReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -218,14 +219,14 @@ public class GeneratedReason2Code extends GeneratedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COLL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "GeneratedReason2Code";
 				definition = "Specifies the reason why the transaction was generated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GeneratedReason2Code.CollateralManagement, com.tools20022.repository.codeset.GeneratedReason2Code.ReturnRefusedDumps,
-						com.tools20022.repository.codeset.GeneratedReason2Code.SplitShaping, com.tools20022.repository.codeset.GeneratedReason2Code.ThirdParty, com.tools20022.repository.codeset.GeneratedReason2Code.Transformation,
-						com.tools20022.repository.codeset.GeneratedReason2Code.Other);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GeneratedReason2Code.mmCollateralManagement, com.tools20022.repository.codeset.GeneratedReason2Code.mmReturnRefusedDumps,
+						com.tools20022.repository.codeset.GeneratedReason2Code.mmSplitShaping, com.tools20022.repository.codeset.GeneratedReason2Code.mmThirdParty, com.tools20022.repository.codeset.GeneratedReason2Code.mmTransformation,
+						com.tools20022.repository.codeset.GeneratedReason2Code.mmOther);
 				trace_lazy = () -> GeneratedReasonCode.mmObject();
 			}
 		});

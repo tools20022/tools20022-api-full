@@ -35,14 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundSettlementParameters6#SettlementPlace
- * FundSettlementParameters6.SettlementPlace}</li>
+ * {@linkplain com.tools20022.repository.msg.FundSettlementParameters6#mmSettlementPlace
+ * FundSettlementParameters6.mmSettlementPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundSettlementParameters6#ReceivingSideDetails
- * FundSettlementParameters6.ReceivingSideDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundSettlementParameters6#mmReceivingSideDetails
+ * FundSettlementParameters6.mmReceivingSideDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundSettlementParameters6#DeliveringSideDetails
- * FundSettlementParameters6.DeliveringSideDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.FundSettlementParameters6#mmDeliveringSideDetails
+ * FundSettlementParameters6.mmDeliveringSideDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FundSettlementParameters6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification26Choice settlementPlace;
 	/**
 	 * Place where the settlement of transaction will take place. In the context
 	 * of the investment funds, the place of settlement is the transfer agent, a
@@ -82,8 +83,8 @@ public class FundSettlementParameters6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +105,21 @@ public class FundSettlementParameters6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementPlace = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> FundSettlementParameters6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "SttlmPlc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlace";
 			definition = "Place where the settlement of transaction will take place. In the context of the investment funds,  the place of settlement is the transfer agent, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26Choice.mmObject();
 		}
 	};
+	protected ReceivingPartiesAndAccount5 receivingSideDetails;
 	/**
 	 * Chain of parties involved in the settlement of a transaction resulting in
 	 * the movement of a security from one account to another.
@@ -131,8 +133,8 @@ public class FundSettlementParameters6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartyRole
-	 * SecuritiesSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+	 * SecuritiesSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,21 +155,22 @@ public class FundSettlementParameters6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReceivingSideDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReceivingSideDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> FundSettlementParameters6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartyRole;
 			isDerived = false;
 			xmlTag = "RcvgSdDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSideDetails";
 			definition = "Chain of parties involved in the settlement of a transaction resulting in the movement of a security from one account to another.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ReceivingPartiesAndAccount5.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount5.mmObject();
 		}
 	};
+	protected DeliveringPartiesAndAccount6 deliveringSideDetails;
 	/**
 	 * Chain of parties involved in the settlement of a transaction resulting in
 	 * the movement of a security from one account to another.
@@ -181,8 +184,8 @@ public class FundSettlementParameters6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartyRole
-	 * SecuritiesSettlement.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+	 * SecuritiesSettlement.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,34 +206,58 @@ public class FundSettlementParameters6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DeliveringSideDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDeliveringSideDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> FundSettlementParameters6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartyRole;
 			isDerived = false;
 			xmlTag = "DlvrgSdDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSideDetails";
 			definition = "Chain of parties involved in the settlement of a transaction resulting in the movement of a security from one account to another.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DeliveringPartiesAndAccount6.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundSettlementParameters6.SettlementPlace, com.tools20022.repository.msg.FundSettlementParameters6.ReceivingSideDetails,
-						com.tools20022.repository.msg.FundSettlementParameters6.DeliveringSideDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundSettlementParameters6.mmSettlementPlace, com.tools20022.repository.msg.FundSettlementParameters6.mmReceivingSideDetails,
+						com.tools20022.repository.msg.FundSettlementParameters6.mmDeliveringSideDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FundSettlementParameters6";
 				definition = "Parameters applied to the settlement of a security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification26Choice getSettlementPlace() {
+		return settlementPlace;
+	}
+
+	public void setSettlementPlace(PartyIdentification26Choice settlementPlace) {
+		this.settlementPlace = settlementPlace;
+	}
+
+	public ReceivingPartiesAndAccount5 getReceivingSideDetails() {
+		return receivingSideDetails;
+	}
+
+	public void setReceivingSideDetails(com.tools20022.repository.msg.ReceivingPartiesAndAccount5 receivingSideDetails) {
+		this.receivingSideDetails = receivingSideDetails;
+	}
+
+	public DeliveringPartiesAndAccount6 getDeliveringSideDetails() {
+		return deliveringSideDetails;
+	}
+
+	public void setDeliveringSideDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount6 deliveringSideDetails) {
+		this.deliveringSideDetails = deliveringSideDetails;
 	}
 }

@@ -39,17 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentIdentificationChoice#PaymentInstructionReference
- * PaymentIdentificationChoice.PaymentInstructionReference}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentIdentificationChoice#mmPaymentInstructionReference
+ * PaymentIdentificationChoice.mmPaymentInstructionReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentIdentificationChoice#QueueIdentification
- * PaymentIdentificationChoice.QueueIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentIdentificationChoice#mmQueueIdentification
+ * PaymentIdentificationChoice.mmQueueIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentIdentificationChoice#ShortBusinessIdentification
- * PaymentIdentificationChoice.ShortBusinessIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentIdentificationChoice#mmShortBusinessIdentification
+ * PaymentIdentificationChoice.mmShortBusinessIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentIdentificationChoice#LongBusinessIdentification
- * PaymentIdentificationChoice.LongBusinessIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentIdentificationChoice#mmLongBusinessIdentification
+ * PaymentIdentificationChoice.mmLongBusinessIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentIdentificationChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text paymentInstructionReference;
 	/**
 	 * Unique and unambiguous identifier for a payment instruction, as assigned
 	 * by the clearing agent or the initiating party.
@@ -88,8 +89,8 @@ public class PaymentIdentificationChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#ExecutionIdentification
-	 * PaymentIdentification.ExecutionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,20 +111,21 @@ public class PaymentIdentificationChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PaymentInstructionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPaymentInstructionReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> PaymentIdentificationChoice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.ExecutionIdentification;
 			isDerived = false;
 			xmlTag = "PmtInstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionReference";
 			definition = "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.\n";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected QueueTransactionIdentificationDetails queueIdentification;
 	/**
 	 * Identification of the payment instruction by its position in a queue
 	 * managed by the clearing agent.
@@ -155,7 +157,7 @@ public class PaymentIdentificationChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueueIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueueIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PaymentIdentificationChoice.mmObject();
 			isDerived = false;
@@ -163,11 +165,12 @@ public class PaymentIdentificationChoice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueIdentification";
 			definition = "Identification of the payment instruction by its position in a queue managed by the clearing agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
 		}
 	};
+	protected PaymentInstructionReference1Details shortBusinessIdentification;
 	/**
 	 * Business identification of the payment instruction given by the clearing
 	 * agent.
@@ -204,20 +207,21 @@ public class PaymentIdentificationChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ShortBusinessIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmShortBusinessIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentIdentificationChoice.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> PaymentIdentificationChoice.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtBizId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortBusinessIdentification";
 			definition = "Business identification of the payment instruction given by the clearing agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionReference1Details.mmObject();
 		}
 	};
+	protected PaymentInstructionReference2Details longBusinessIdentification;
 	/**
 	 * Business identification of the payment instruction given by the clearing
 	 * agent.
@@ -254,17 +258,17 @@ public class PaymentIdentificationChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LongBusinessIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLongBusinessIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentIdentificationChoice.mmObject();
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
+			componentContext_lazy = () -> PaymentIdentificationChoice.mmObject();
 			isDerived = false;
 			xmlTag = "LngBizId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongBusinessIdentification";
 			definition = "Business identification of the payment instruction given by the clearing agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstructionReference2Details.mmObject();
 		}
 	};
@@ -272,15 +276,47 @@ public class PaymentIdentificationChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentIdentificationChoice.PaymentInstructionReference, com.tools20022.repository.choice.PaymentIdentificationChoice.QueueIdentification,
-						com.tools20022.repository.choice.PaymentIdentificationChoice.ShortBusinessIdentification, com.tools20022.repository.choice.PaymentIdentificationChoice.LongBusinessIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentIdentificationChoice.mmPaymentInstructionReference, com.tools20022.repository.choice.PaymentIdentificationChoice.mmQueueIdentification,
+						com.tools20022.repository.choice.PaymentIdentificationChoice.mmShortBusinessIdentification, com.tools20022.repository.choice.PaymentIdentificationChoice.mmLongBusinessIdentification);
 				trace_lazy = () -> PaymentIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentIdentificationChoice";
 				definition = "Choice between ways of identifying a payment instruction by its references and business identification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getPaymentInstructionReference() {
+		return paymentInstructionReference;
+	}
+
+	public void setPaymentInstructionReference(Max35Text paymentInstructionReference) {
+		this.paymentInstructionReference = paymentInstructionReference;
+	}
+
+	public QueueTransactionIdentificationDetails getQueueIdentification() {
+		return queueIdentification;
+	}
+
+	public void setQueueIdentification(QueueTransactionIdentificationDetails queueIdentification) {
+		this.queueIdentification = queueIdentification;
+	}
+
+	public PaymentInstructionReference1Details getShortBusinessIdentification() {
+		return shortBusinessIdentification;
+	}
+
+	public void setShortBusinessIdentification(PaymentInstructionReference1Details shortBusinessIdentification) {
+		this.shortBusinessIdentification = shortBusinessIdentification;
+	}
+
+	public PaymentInstructionReference2Details getLongBusinessIdentification() {
+		return longBusinessIdentification;
+	}
+
+	public void setLongBusinessIdentification(PaymentInstructionReference2Details longBusinessIdentification) {
+		this.longBusinessIdentification = longBusinessIdentification;
 	}
 }

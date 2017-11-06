@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.PartyTypeCode;
 import com.tools20022.repository.entity.Role;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Role played by a party in the context of a payment by card.
@@ -38,20 +39,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole#CardPayment
- * CardPaymentPartyRole.CardPayment}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole#mmCardPayment
+ * CardPaymentPartyRole.mmCardPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole#PartyType
- * CardPaymentPartyRole.PartyType}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#PaymentCardPartyRole
- * CardPayment.PaymentCardPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole#mmPartyType
+ * CardPaymentPartyRole.mmPartyType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -72,13 +64,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.entity.AcceptorRole AcceptorRole}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCardPartyRole
+ * CardPayment.mmPaymentCardPartyRole}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentPartyRole extends Role {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.CardPayment> cardPayment;
 	/**
 	 * Identifies the payment by card for which a party plays a role.
 	 * <p>
@@ -100,8 +102,8 @@ public class CardPaymentPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#PaymentCardPartyRole
-	 * CardPayment.PaymentCardPartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCardPartyRole
+	 * CardPayment.mmPaymentCardPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -126,7 +128,7 @@ public class CardPaymentPartyRole extends Role {
 	 * "Identifies the payment by card for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CardPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCardPayment = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> CardPaymentPartyRole.mmObject();
 			isDerived = false;
@@ -134,11 +136,12 @@ public class CardPaymentPartyRole extends Role {
 			name = "CardPayment";
 			definition = "Identifies the payment by card for which a party plays a role.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CardPayment.PaymentCardPartyRole;
+			opposite_lazy = () -> com.tools20022.repository.entity.CardPayment.mmPaymentCardPartyRole;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 		}
 	};
+	protected PartyTypeCode partyType;
 	/**
 	 * Specifies the type of party which plays a role in the context od a card
 	 * payment process.
@@ -168,15 +171,15 @@ public class CardPaymentPartyRole extends Role {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PartyType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPartyType = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> CardPaymentPartyRole.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartyType";
 			definition = "Specifies the type of party which plays a role in the context od a card payment process.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PartyTypeCode.mmObject();
 		}
 	};
@@ -184,17 +187,33 @@ public class CardPaymentPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentPartyRole";
 				definition = "Role played by a party in the context of a payment by card.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPayment.PaymentCardPartyRole);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPayment.mmPaymentCardPartyRole);
 				subType_lazy = () -> Arrays.asList(CardholderRole.mmObject(), MerchantRole.mmObject(), AcquirerRole.mmObject(), AuthorisationEntity.mmObject(), Cashier.mmObject(), CardIssuer.mmObject(), DataSetInitiator.mmObject(),
 						POIManufacturer.mmObject(), AcceptorRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPaymentPartyRole.CardPayment, com.tools20022.repository.entity.CardPaymentPartyRole.PartyType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPaymentPartyRole.mmCardPayment, com.tools20022.repository.entity.CardPaymentPartyRole.mmPartyType);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<CardPayment> getCardPayment() {
+		return cardPayment;
+	}
+
+	public void setCardPayment(List<com.tools20022.repository.entity.CardPayment> cardPayment) {
+		this.cardPayment = cardPayment;
+	}
+
+	public PartyTypeCode getPartyType() {
+		return partyType;
+	}
+
+	public void setPartyType(PartyTypeCode partyType) {
+		this.partyType = partyType;
 	}
 }

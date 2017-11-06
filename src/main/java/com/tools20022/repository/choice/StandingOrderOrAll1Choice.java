@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.StandingOrderIdentification2;
 import com.tools20022.repository.msg.StandingOrderIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Characteristics of one or all standing orders set by the member and managed
@@ -36,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingOrderOrAll1Choice#StandingOrder
- * StandingOrderOrAll1Choice.StandingOrder}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingOrderOrAll1Choice#mmStandingOrder
+ * StandingOrderOrAll1Choice.mmStandingOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingOrderOrAll1Choice#AllStandingOrders
- * StandingOrderOrAll1Choice.AllStandingOrders}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingOrderOrAll1Choice#mmAllStandingOrders
+ * StandingOrderOrAll1Choice.mmAllStandingOrders}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StandingOrderOrAll1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<StandingOrderIdentification2> standingOrder;
 	/**
 	 * Identification of single standing orders defined with specific
 	 * characteristics.
@@ -101,20 +103,21 @@ public class StandingOrderOrAll1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StandingOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStandingOrder = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingOrderOrAll1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CashStandingOrder.mmObject();
+			componentContext_lazy = () -> StandingOrderOrAll1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrder";
 			definition = "Identification of single standing orders defined with specific characteristics.";
 			minOccurs = 1;
-			type_lazy = () -> StandingOrderIdentification2.mmObject();
 			isComposite = true;
+			type_lazy = () -> StandingOrderIdentification2.mmObject();
 		}
 	};
+	protected List<StandingOrderIdentification3> allStandingOrders;
 	/**
 	 * Identification of all standing orders defined with specific
 	 * characteristics.
@@ -150,32 +153,48 @@ public class StandingOrderOrAll1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AllStandingOrders = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAllStandingOrders = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingOrderOrAll1Choice.mmObject();
 			businessComponentTrace_lazy = () -> CashStandingOrder.mmObject();
+			componentContext_lazy = () -> StandingOrderOrAll1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllStgOrdrs";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllStandingOrders";
 			definition = "Identification of all standing orders defined with specific characteristics.";
 			minOccurs = 1;
-			type_lazy = () -> StandingOrderIdentification3.mmObject();
 			isComposite = true;
+			type_lazy = () -> StandingOrderIdentification3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrAll1Choice.StandingOrder, com.tools20022.repository.choice.StandingOrderOrAll1Choice.AllStandingOrders);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrAll1Choice.mmStandingOrder, com.tools20022.repository.choice.StandingOrderOrAll1Choice.mmAllStandingOrders);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderOrAll1Choice";
 				definition = "Characteristics of one or all standing orders set by the member and managed by the transaction administrator.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<StandingOrderIdentification2> getStandingOrder() {
+		return standingOrder;
+	}
+
+	public void setStandingOrder(List<StandingOrderIdentification2> standingOrder) {
+		this.standingOrder = standingOrder;
+	}
+
+	public List<StandingOrderIdentification3> getAllStandingOrders() {
+		return allStandingOrders;
+	}
+
+	public void setAllStandingOrders(List<StandingOrderIdentification3> allStandingOrders) {
+		this.allStandingOrders = allStandingOrders;
 	}
 }

@@ -34,22 +34,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD4#CSDDisbursedSecurityIdentification
- * FinancialInstrumentAttributesSD4.CSDDisbursedSecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD4#mmCSDDisbursedSecurityIdentification
+ * FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD4#CSDDisbursedSecurityDescription
- * FinancialInstrumentAttributesSD4.CSDDisbursedSecurityDescription}</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD4#mmCSDDisbursedSecurityDescription
+ * FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD4#CSDDisbursedFractionalSecurityIdentification
- * FinancialInstrumentAttributesSD4.CSDDisbursedFractionalSecurityIdentification
- * }</li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD4#mmCSDDisbursedFractionalSecurityIdentification
+ * FinancialInstrumentAttributesSD4.
+ * mmCSDDisbursedFractionalSecurityIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class FinancialInstrumentAttributesSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification15 cSDDisbursedSecurityIdentification;
 	/**
 	 * Security identification that a CSD (for example in the US - DTC, The
 	 * Depository Trust Corporation) will distribute as part of the entitlement.
@@ -98,7 +99,7 @@ public class FinancialInstrumentAttributesSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CSDDisbursedSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCSDDisbursedSecurityIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
@@ -106,11 +107,12 @@ public class FinancialInstrumentAttributesSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDDisbursedSecurityIdentification";
 			definition = "Security identification that a CSD (for example in the US -  DTC, The Depository Trust Corporation) will distribute as part of the entitlement. This can be the DTC contra CUSIP in cases where the payout security is a contra CUSIP.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification15.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	protected Max140Text cSDDisbursedSecurityDescription;
 	/**
 	 * DTC (The Depository Trust Corporation) disbursed security description.
 	 * <p>
@@ -139,7 +141,7 @@ public class FinancialInstrumentAttributesSD4 {
 	 * "DTC (The Depository Trust Corporation) disbursed security description."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CSDDisbursedSecurityDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCSDDisbursedSecurityDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
@@ -147,11 +149,12 @@ public class FinancialInstrumentAttributesSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDDisbursedSecurityDescription";
 			definition = "DTC (The Depository Trust Corporation) disbursed security description.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected SecurityIdentification15 cSDDisbursedFractionalSecurityIdentification;
 	/**
 	 * Security identification of the security that will be distributed in
 	 * fractions by the CSD (for example in the US - DTC, The Depository Trust
@@ -185,7 +188,7 @@ public class FinancialInstrumentAttributesSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CSDDisbursedFractionalSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCSDDisbursedFractionalSecurityIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
@@ -193,23 +196,47 @@ public class FinancialInstrumentAttributesSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDDisbursedFractionalSecurityIdentification";
 			definition = "Security identification of the security that will be distributed in fractions by the CSD (for example in the US -  DTC, The Depository Trust Corporation) DTC (The Depository Trust Corporation) as a result of a corporate action.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification15.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.CSDDisbursedSecurityIdentification,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.CSDDisbursedSecurityDescription, com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.CSDDisbursedFractionalSecurityIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityIdentification,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityDescription, com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmCSDDisbursedFractionalSecurityIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributesSD4";
 				definition = "Provides additional information regarding security that will being distributed as part of entitlement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification15 getCSDDisbursedSecurityIdentification() {
+		return cSDDisbursedSecurityIdentification;
+	}
+
+	public void setCSDDisbursedSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 cSDDisbursedSecurityIdentification) {
+		this.cSDDisbursedSecurityIdentification = cSDDisbursedSecurityIdentification;
+	}
+
+	public Max140Text getCSDDisbursedSecurityDescription() {
+		return cSDDisbursedSecurityDescription;
+	}
+
+	public void setCSDDisbursedSecurityDescription(Max140Text cSDDisbursedSecurityDescription) {
+		this.cSDDisbursedSecurityDescription = cSDDisbursedSecurityDescription;
+	}
+
+	public SecurityIdentification15 getCSDDisbursedFractionalSecurityIdentification() {
+		return cSDDisbursedFractionalSecurityIdentification;
+	}
+
+	public void setCSDDisbursedFractionalSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 cSDDisbursedFractionalSecurityIdentification) {
+		this.cSDDisbursedFractionalSecurityIdentification = cSDDisbursedFractionalSecurityIdentification;
 	}
 }

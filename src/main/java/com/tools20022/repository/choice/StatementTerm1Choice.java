@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatementTerm1Choice#StatementDate
- * StatementTerm1Choice.StatementDate}</li>
+ * {@linkplain com.tools20022.repository.choice.StatementTerm1Choice#mmStatementDate
+ * StatementTerm1Choice.mmStatementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatementTerm1Choice#StatementPeriod
- * StatementTerm1Choice.StatementPeriod}</li>
+ * {@linkplain com.tools20022.repository.choice.StatementTerm1Choice#mmStatementPeriod
+ * StatementTerm1Choice.mmStatementPeriod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatementTerm1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate statementDate;
 	/**
 	 * Date of the statement.
 	 * <p>
@@ -89,7 +90,7 @@ public class StatementTerm1Choice {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> StatementTerm1Choice.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class StatementTerm1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDate";
 			definition = "Date of the statement.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected DatePeriodDetails statementPeriod;
 	/**
 	 * Period on which the statement is reporting.
 	 * <p>
@@ -115,8 +117,8 @@ public class StatementTerm1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#ReportedPeriod
-	 * Account.ReportedPeriod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmReportedPeriod
+	 * Account.mmReportedPeriod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,17 +137,17 @@ public class StatementTerm1Choice {
 	 * definition} = "Period on which the statement is reporting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmReportedPeriod;
 			componentContext_lazy = () -> StatementTerm1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.ReportedPeriod;
 			isDerived = false;
 			xmlTag = "StmtPrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementPeriod";
 			definition = "Period on which the statement is reporting.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DatePeriodDetails.mmObject();
 		}
 	};
@@ -153,14 +155,30 @@ public class StatementTerm1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementTerm1Choice.StatementDate, com.tools20022.repository.choice.StatementTerm1Choice.StatementPeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementTerm1Choice.mmStatementDate, com.tools20022.repository.choice.StatementTerm1Choice.mmStatementPeriod);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatementTerm1Choice";
 				definition = "Date or period that the statement is requested for.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getStatementDate() {
+		return statementDate;
+	}
+
+	public void setStatementDate(ISODate statementDate) {
+		this.statementDate = statementDate;
+	}
+
+	public DatePeriodDetails getStatementPeriod() {
+		return statementPeriod;
+	}
+
+	public void setStatementPeriod(DatePeriodDetails statementPeriod) {
+		this.statementPeriod = statementPeriod;
 	}
 }

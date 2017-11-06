@@ -32,19 +32,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.EntryCode EntryCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Entry2Code#Trial
- * Entry2Code.Trial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Entry2Code#Official
- * Entry2Code.Official}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Entry2Code#Requested
- * Entry2Code.Requested}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Entry2Code#mmTrial
+ * Entry2Code.mmTrial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Entry2Code#mmOfficial
+ * Entry2Code.mmOfficial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Entry2Code#mmRequested
+ * Entry2Code.mmRequested}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +79,7 @@ public class Entry2Code extends EntryCode {
 	 * name} = "Trial"</li>
 	 * </ul>
 	 */
-	public static final MMCode Trial = new MMCode() {
+	public static final MMCode mmTrial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trial";
@@ -101,7 +101,7 @@ public class Entry2Code extends EntryCode {
 	 * name} = "Official"</li>
 	 * </ul>
 	 */
-	public static final MMCode Official = new MMCode() {
+	public static final MMCode mmOfficial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Official";
@@ -123,7 +123,7 @@ public class Entry2Code extends EntryCode {
 	 * name} = "Requested"</li>
 	 * </ul>
 	 */
-	public static final MMCode Requested = new MMCode() {
+	public static final MMCode mmRequested = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requested";
@@ -134,12 +134,12 @@ public class Entry2Code extends EntryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRIA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Entry2Code";
 				definition = "Specifies the type of an entry in a report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Entry2Code.Trial, com.tools20022.repository.codeset.Entry2Code.Official, com.tools20022.repository.codeset.Entry2Code.Requested);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Entry2Code.mmTrial, com.tools20022.repository.codeset.Entry2Code.mmOfficial, com.tools20022.repository.codeset.Entry2Code.mmRequested);
 				trace_lazy = () -> EntryCode.mmObject();
 			}
 		});

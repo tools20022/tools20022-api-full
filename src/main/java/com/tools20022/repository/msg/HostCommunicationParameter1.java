@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TerminalManagementSystem;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Configuration parameters to communicate with a host.
@@ -35,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter1#HostIdentification
- * HostCommunicationParameter1.HostIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter1#mmHostIdentification
+ * HostCommunicationParameter1.mmHostIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter1#Address
- * HostCommunicationParameter1.Address}</li>
+ * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter1#mmAddress
+ * HostCommunicationParameter1.mmAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter1#Key
- * HostCommunicationParameter1.Key}</li>
+ * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter1#mmKey
+ * HostCommunicationParameter1.mmKey}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class HostCommunicationParameter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text hostIdentification;
 	/**
 	 * Identification of the host.
 	 * <p>
@@ -86,8 +88,8 @@ public class HostCommunicationParameter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#SystemIdentification
-	 * System.SystemIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+	 * System.mmSystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +108,21 @@ public class HostCommunicationParameter1 {
 	 * definition} = "Identification of the host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
 			componentContext_lazy = () -> HostCommunicationParameter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.SystemIdentification;
 			isDerived = false;
 			xmlTag = "HstId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostIdentification";
 			definition = "Identification of the host.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected NetworkParameters1 address;
 	/**
 	 * Network parameters of the host.
 	 * <p>
@@ -131,8 +134,8 @@ public class HostCommunicationParameter1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#NetworkAccess
-	 * TerminalManagementSystem.NetworkAccess}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmNetworkAccess
+	 * TerminalManagementSystem.mmNetworkAccess}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,21 +154,22 @@ public class HostCommunicationParameter1 {
 	 * definition} = "Network parameters of the host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Address = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmNetworkAccess;
 			componentContext_lazy = () -> HostCommunicationParameter1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.NetworkAccess;
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Network parameters of the host.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> NetworkParameters1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CryptographicKey1> key;
 	/**
 	 * Cryptographic key used to communicate with the host.
 	 * <p>
@@ -192,7 +196,7 @@ public class HostCommunicationParameter1 {
 	 * definition} = "Cryptographic key used to communicate with the host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Key = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> HostCommunicationParameter1.mmObject();
 			isDerived = false;
@@ -201,18 +205,18 @@ public class HostCommunicationParameter1 {
 			name = "Key";
 			definition = "Cryptographic key used to communicate with the host.";
 			minOccurs = 0;
-			type_lazy = () -> CryptographicKey1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CryptographicKey1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HostCommunicationParameter1.HostIdentification, com.tools20022.repository.msg.HostCommunicationParameter1.Address,
-						com.tools20022.repository.msg.HostCommunicationParameter1.Key);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HostCommunicationParameter1.mmHostIdentification, com.tools20022.repository.msg.HostCommunicationParameter1.mmAddress,
+						com.tools20022.repository.msg.HostCommunicationParameter1.mmKey);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "HostCommunicationParameter1";
 				definition = "Configuration parameters to communicate with a host.";
@@ -220,5 +224,29 @@ public class HostCommunicationParameter1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getHostIdentification() {
+		return hostIdentification;
+	}
+
+	public void setHostIdentification(Max35Text hostIdentification) {
+		this.hostIdentification = hostIdentification;
+	}
+
+	public NetworkParameters1 getAddress() {
+		return address;
+	}
+
+	public void setAddress(com.tools20022.repository.msg.NetworkParameters1 address) {
+		this.address = address;
+	}
+
+	public List<CryptographicKey1> getKey() {
+		return key;
+	}
+
+	public void setKey(List<com.tools20022.repository.msg.CryptographicKey1> key) {
+		this.key = key;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Number;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Digital signature of data, with an asymmetric key.
@@ -34,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SignedData1#Version
- * SignedData1.Version}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SignedData1#DigestAlgorithm
- * SignedData1.DigestAlgorithm}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SignedData1#mmVersion
+ * SignedData1.mmVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SignedData1#mmDigestAlgorithm
+ * SignedData1.mmDigestAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SignedData1#EncapsulatedContent
- * SignedData1.EncapsulatedContent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SignedData1#Certificate
- * SignedData1.Certificate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SignedData1#Signer
- * SignedData1.Signer}</li>
+ * {@linkplain com.tools20022.repository.msg.SignedData1#mmEncapsulatedContent
+ * SignedData1.mmEncapsulatedContent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SignedData1#mmCertificate
+ * SignedData1.mmCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SignedData1#mmSigner
+ * SignedData1.mmSigner}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SignedData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Number version;
 	/**
 	 * Version of the data structure.
 	 * <p>
@@ -97,7 +99,7 @@ public class SignedData1 {
 	 * definition} = "Version of the data structure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Version = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SignedData1.mmObject();
 			isDerived = false;
@@ -105,11 +107,12 @@ public class SignedData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm;
 	/**
 	 * Identification of a digest algorithm to apply before signature.
 	 * <p>
@@ -137,7 +140,7 @@ public class SignedData1 {
 	 * "Identification of a digest algorithm to apply before signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DigestAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDigestAlgorithm = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SignedData1.mmObject();
 			isDerived = false;
@@ -146,10 +149,11 @@ public class SignedData1 {
 			name = "DigestAlgorithm";
 			definition = "Identification of a digest algorithm to apply before signature.";
 			minOccurs = 1;
-			type_lazy = () -> AlgorithmIdentification1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification1.mmObject();
 		}
 	};
+	protected EncapsulatedContent1 encapsulatedContent;
 	/**
 	 * Data to sign.
 	 * <p>
@@ -175,7 +179,7 @@ public class SignedData1 {
 	 * definition} = "Data to sign."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EncapsulatedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SignedData1.mmObject();
 			isDerived = false;
@@ -183,12 +187,13 @@ public class SignedData1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncapsulatedContent";
 			definition = "Data to sign.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> EncapsulatedContent1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent1.mmObject();
 		}
 	};
+	protected List<Max3000Binary> certificate;
 	/**
 	 * Chain of X.509 certificates.
 	 * <p>
@@ -216,7 +221,7 @@ public class SignedData1 {
 	 * definition} = "Chain of X.509 certificates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Certificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SignedData1.mmObject();
 			isDerived = false;
@@ -228,6 +233,7 @@ public class SignedData1 {
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Signer1> signer;
 	/**
 	 * Entity who has signed the data.
 	 * <p>
@@ -252,7 +258,7 @@ public class SignedData1 {
 	 * definition} = "Entity who has signed the data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Signer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSigner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SignedData1.mmObject();
 			isDerived = false;
@@ -261,17 +267,17 @@ public class SignedData1 {
 			name = "Signer";
 			definition = "Entity who has signed the data.";
 			minOccurs = 1;
-			type_lazy = () -> Signer1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Signer1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData1.Version, com.tools20022.repository.msg.SignedData1.DigestAlgorithm, com.tools20022.repository.msg.SignedData1.EncapsulatedContent,
-						com.tools20022.repository.msg.SignedData1.Certificate, com.tools20022.repository.msg.SignedData1.Signer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData1.mmVersion, com.tools20022.repository.msg.SignedData1.mmDigestAlgorithm, com.tools20022.repository.msg.SignedData1.mmEncapsulatedContent,
+						com.tools20022.repository.msg.SignedData1.mmCertificate, com.tools20022.repository.msg.SignedData1.mmSigner);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SignedData1";
 				definition = "Digital signature of data, with an asymmetric key.";
@@ -279,5 +285,45 @@ public class SignedData1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Number getVersion() {
+		return version;
+	}
+
+	public void setVersion(Number version) {
+		this.version = version;
+	}
+
+	public List<AlgorithmIdentification1> getDigestAlgorithm() {
+		return digestAlgorithm;
+	}
+
+	public void setDigestAlgorithm(List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm) {
+		this.digestAlgorithm = digestAlgorithm;
+	}
+
+	public EncapsulatedContent1 getEncapsulatedContent() {
+		return encapsulatedContent;
+	}
+
+	public void setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent1 encapsulatedContent) {
+		this.encapsulatedContent = encapsulatedContent;
+	}
+
+	public List<Max3000Binary> getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(List<Max3000Binary> certificate) {
+		this.certificate = certificate;
+	}
+
+	public List<Signer1> getSigner() {
+		return signer;
+	}
+
+	public void setSigner(List<com.tools20022.repository.msg.Signer1> signer) {
+		this.signer = signer;
 	}
 }

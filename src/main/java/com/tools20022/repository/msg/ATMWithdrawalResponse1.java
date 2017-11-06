@@ -32,13 +32,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMWithdrawalResponse1#Environment
- * ATMWithdrawalResponse1.Environment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMWithdrawalResponse1#Context
- * ATMWithdrawalResponse1.Context}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMWithdrawalResponse1#mmEnvironment
+ * ATMWithdrawalResponse1.mmEnvironment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMWithdrawalResponse1#Transaction
- * ATMWithdrawalResponse1.Transaction}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMWithdrawalResponse1#mmContext
+ * ATMWithdrawalResponse1.mmContext}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMWithdrawalResponse1#mmTransaction
+ * ATMWithdrawalResponse1.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,15 +47,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV01#ATMWithdrawalResponse
- * ATMWithdrawalResponseV01.ATMWithdrawalResponse}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV01#mmATMWithdrawalResponse
+ * ATMWithdrawalResponseV01.mmATMWithdrawalResponse}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMWithdrawalResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMEnvironment2 environment;
 	/**
 	 * Environment of the withdrawal transaction.
 	 * <p>
@@ -96,7 +98,7 @@ public class ATMWithdrawalResponse1 {
 	 * definition} = "Environment of the withdrawal transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Environment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMWithdrawalResponse1.mmObject();
 			isDerived = false;
@@ -104,12 +106,13 @@ public class ATMWithdrawalResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the withdrawal transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMEnvironment2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment2.mmObject();
 		}
 	};
+	protected ATMContext2 context;
 	/**
 	 * Context in which the transaction is performed.
 	 * <p>
@@ -136,7 +139,7 @@ public class ATMWithdrawalResponse1 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Context = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMWithdrawalResponse1.mmObject();
 			isDerived = false;
@@ -144,12 +147,13 @@ public class ATMWithdrawalResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMContext2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMContext2.mmObject();
 		}
 	};
+	protected ATMTransaction2 transaction;
 	/**
 	 * Response to the withdrawal transaction request.
 	 * <p>
@@ -176,7 +180,7 @@ public class ATMWithdrawalResponse1 {
 	 * definition} = "Response to the withdrawal transaction request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Transaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMWithdrawalResponse1.mmObject();
 			isDerived = false;
@@ -184,25 +188,49 @@ public class ATMWithdrawalResponse1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Response to the withdrawal transaction request.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ATMTransaction2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMWithdrawalResponse1.Environment, com.tools20022.repository.msg.ATMWithdrawalResponse1.Context,
-						com.tools20022.repository.msg.ATMWithdrawalResponse1.Transaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalResponseV01.ATMWithdrawalResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMWithdrawalResponse1.mmEnvironment, com.tools20022.repository.msg.ATMWithdrawalResponse1.mmContext,
+						com.tools20022.repository.msg.ATMWithdrawalResponse1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalResponseV01.mmATMWithdrawalResponse);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMWithdrawalResponse1";
 				definition = "Information related to the response of an ATM withdrawal from an ATM manager.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMEnvironment2 getEnvironment() {
+		return environment;
+	}
+
+	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment2 environment) {
+		this.environment = environment;
+	}
+
+	public ATMContext2 getContext() {
+		return context;
+	}
+
+	public void setContext(com.tools20022.repository.msg.ATMContext2 context) {
+		this.context = context;
+	}
+
+	public ATMTransaction2 getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(com.tools20022.repository.msg.ATMTransaction2 transaction) {
+		this.transaction = transaction;
 	}
 }

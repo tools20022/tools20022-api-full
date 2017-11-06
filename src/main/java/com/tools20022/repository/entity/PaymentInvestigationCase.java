@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.MissingCover2;
 import com.tools20022.repository.msg.MissingCover3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of activities performed to handle an exception to a normal payment
@@ -49,32 +50,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#PaymentStatus
- * PaymentInvestigationCase.PaymentStatus}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmPaymentStatus
+ * PaymentInvestigationCase.mmPaymentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#CancellationReason
- * PaymentInvestigationCase.CancellationReason}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmCancellationReason
+ * PaymentInvestigationCase.mmCancellationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#UnderlyingPayment
- * PaymentInvestigationCase.UnderlyingPayment}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmUnderlyingPayment
+ * PaymentInvestigationCase.mmUnderlyingPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#MissingCoverIndication
- * PaymentInvestigationCase.MissingCoverIndication}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmMissingCoverIndication
+ * PaymentInvestigationCase.mmMissingCoverIndication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#UnderlyingInstruction
- * PaymentInvestigationCase.UnderlyingInstruction}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmUnderlyingInstruction
+ * PaymentInvestigationCase.mmUnderlyingInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#UnderlyingCashEntry
- * PaymentInvestigationCase.UnderlyingCashEntry}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmUnderlyingCashEntry
+ * PaymentInvestigationCase.mmUnderlyingCashEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#IncorrectInformationReason
- * PaymentInvestigationCase.IncorrectInformationReason}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmIncorrectInformationReason
+ * PaymentInvestigationCase.mmIncorrectInformationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#MissingInformationReason
- * PaymentInvestigationCase.MissingInformationReason}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmMissingInformationReason
+ * PaymentInvestigationCase.mmMissingInformationReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#CaseType
- * PaymentInvestigationCase.CaseType}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmCaseType
+ * PaymentInvestigationCase.mmCaseType}</li>
  * </ul>
  * </li>
  * <li>
@@ -82,17 +83,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#RelatedInvestigationCase
- * Payment.RelatedInvestigationCase}</li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedInvestigationCase
+ * Payment.mmRelatedInvestigationCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashEntry#RelatedInvestigationCase
- * CashEntry.RelatedInvestigationCase}</li>
+ * {@linkplain com.tools20022.repository.entity.CashEntry#mmRelatedInvestigationCase
+ * CashEntry.mmRelatedInvestigationCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentExecution#RelatedInvestigationCase
- * PaymentExecution.RelatedInvestigationCase}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmRelatedInvestigationCase
+ * PaymentExecution.mmRelatedInvestigationCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#RelatedInvestigationCase
- * PaymentStatus.RelatedInvestigationCase}</li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmRelatedInvestigationCase
+ * PaymentStatus.mmRelatedInvestigationCase}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -110,8 +111,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -127,6 +128,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentInvestigationCase extends InvestigationCase {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<com.tools20022.repository.entity.PaymentStatus> paymentStatus;
 	/**
 	 * Status of a payment which is the reason or the result of an investigation
 	 * case.
@@ -136,8 +138,8 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#RelatedInvestigationCase
-	 * PaymentStatus.RelatedInvestigationCase}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmRelatedInvestigationCase
+	 * PaymentStatus.mmRelatedInvestigationCase}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -163,7 +165,7 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PaymentStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPaymentStatus = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PaymentInvestigationCase.mmObject();
 			isDerived = false;
@@ -171,11 +173,12 @@ public class PaymentInvestigationCase extends InvestigationCase {
 			name = "PaymentStatus";
 			definition = "Status of a payment which is the reason or the result of an investigation case.";
 			minOccurs = 0;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentStatus.RelatedInvestigationCase;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmRelatedInvestigationCase;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmObject();
 		}
 	};
+	protected CancellationReasonCode cancellationReason;
 	/**
 	 * Indicates the reason for cancellation.
 	 * <p>
@@ -202,18 +205,19 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * definition} = "Indicates the reason for cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CancellationReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCancellationReason = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PaymentInvestigationCase.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CancellationReason";
 			definition = "Indicates the reason for cancellation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CancellationReasonCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.Payment> underlyingPayment;
 	/**
 	 * Identifies the end to end payment which is the subject of the
 	 * investigation
@@ -223,8 +227,8 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#RelatedInvestigationCase
-	 * Payment.RelatedInvestigationCase}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmRelatedInvestigationCase
+	 * Payment.mmRelatedInvestigationCase}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -249,7 +253,7 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd UnderlyingPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmUnderlyingPayment = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PaymentInvestigationCase.mmObject();
 			isDerived = false;
@@ -257,11 +261,12 @@ public class PaymentInvestigationCase extends InvestigationCase {
 			name = "UnderlyingPayment";
 			definition = "Identifies the end to end payment which is the subject of the investigation";
 			minOccurs = 0;
-			type_lazy = () -> Payment.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Payment.RelatedInvestigationCase;
+			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmRelatedInvestigationCase;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
+	protected YesNoIndicator missingCoverIndication;
 	/**
 	 * Indicates whether or not the claim is related to a missing cover.
 	 * <p>
@@ -272,25 +277,25 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.YesNoIndicator
 	 * YesNoIndicator}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MissingCover#MissingCoverIndication
-	 * MissingCover.MissingCoverIndication}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MissingCover2#MissingCoverIndicator
-	 * MissingCover2.MissingCoverIndicator}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MissingCover3#MissingCoverIndicator
-	 * MissingCover3.MissingCoverIndicator}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase
 	 * PaymentInvestigationCase}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MissingCover#mmMissingCoverIndication
+	 * MissingCover.mmMissingCoverIndication}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MissingCover2#mmMissingCoverIndicator
+	 * MissingCover2.mmMissingCoverIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MissingCover3#mmMissingCoverIndicator
+	 * MissingCover3.mmMissingCoverIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -303,20 +308,21 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * "Indicates whether or not the claim is related to a missing cover."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MissingCoverIndication = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMissingCoverIndication = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingCover.MissingCoverIndication, com.tools20022.repository.msg.MissingCover2.MissingCoverIndicator,
-					com.tools20022.repository.msg.MissingCover3.MissingCoverIndicator);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingCover.mmMissingCoverIndication, com.tools20022.repository.msg.MissingCover2.mmMissingCoverIndicator,
+					com.tools20022.repository.msg.MissingCover3.mmMissingCoverIndicator);
 			elementContext_lazy = () -> PaymentInvestigationCase.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MissingCoverIndication";
 			definition = "Indicates whether or not the claim is related to a missing cover.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected PaymentExecution underlyingInstruction;
 	/**
 	 * Identifies the payment instruction under investigation.
 	 * <p>
@@ -325,8 +331,8 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#RelatedInvestigationCase
-	 * PaymentExecution.RelatedInvestigationCase}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmRelatedInvestigationCase
+	 * PaymentExecution.mmRelatedInvestigationCase}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -350,20 +356,21 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * definition} = "Identifies the payment instruction under investigation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd UnderlyingInstruction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmUnderlyingInstruction = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PaymentInvestigationCase.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingInstruction";
 			definition = "Identifies the payment instruction under investigation.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentExecution.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentExecution.RelatedInvestigationCase;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmRelatedInvestigationCase;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.CashEntry> underlyingCashEntry;
 	/**
 	 * Identifies the cash entry under investigation.
 	 * <p>
@@ -372,8 +379,8 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#RelatedInvestigationCase
-	 * CashEntry.RelatedInvestigationCase}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmRelatedInvestigationCase
+	 * CashEntry.mmRelatedInvestigationCase}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -397,7 +404,7 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * definition} = "Identifies the cash entry under investigation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd UnderlyingCashEntry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmUnderlyingCashEntry = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PaymentInvestigationCase.mmObject();
 			isDerived = false;
@@ -405,11 +412,12 @@ public class PaymentInvestigationCase extends InvestigationCase {
 			name = "UnderlyingCashEntry";
 			definition = "Identifies the cash entry under investigation.";
 			minOccurs = 0;
-			type_lazy = () -> CashEntry.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CashEntry.RelatedInvestigationCase;
+			opposite_lazy = () -> com.tools20022.repository.entity.CashEntry.mmRelatedInvestigationCase;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CashEntry.mmObject();
 		}
 	};
+	protected UnableToApplyIncorrectInfoCode incorrectInformationReason;
 	/**
 	 * Indicates, in a coded form, the incorrect information.
 	 * <p>
@@ -436,18 +444,19 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * definition} = "Indicates, in a coded form, the incorrect information."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute IncorrectInformationReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmIncorrectInformationReason = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PaymentInvestigationCase.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IncorrectInformationReason";
 			definition = "Indicates, in a coded form, the incorrect information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UnableToApplyIncorrectInfoCode.mmObject();
 		}
 	};
+	protected UnableToApplyMissingInformationV2Code missingInformationReason;
 	/**
 	 * Indicates the missing information.
 	 * <p>
@@ -474,18 +483,19 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * definition} = "Indicates the missing information."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute MissingInformationReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmMissingInformationReason = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PaymentInvestigationCase.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MissingInformationReason";
 			definition = "Indicates the missing information.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UnableToApplyMissingInformationV2Code.mmObject();
 		}
 	};
+	protected Max35Text caseType;
 	/**
 	 * Specifies the type of investigation case.
 	 * <p>
@@ -511,15 +521,15 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * definition} = "Specifies the type of investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CaseType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCaseType = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> PaymentInvestigationCase.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CaseType";
 			definition = "Specifies the type of investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -527,21 +537,93 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentInvestigationCase";
 				definition = "Set of activities performed to handle an exception to a normal payment transaction flow, such as: - a payment has not been received. - a payment has been received but is incorrect. - a payment must be corrected or cancelled (requested by the party which ordered the payment).";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.RelatedInvestigationCase, com.tools20022.repository.entity.CashEntry.RelatedInvestigationCase,
-						com.tools20022.repository.entity.PaymentExecution.RelatedInvestigationCase, com.tools20022.repository.entity.PaymentStatus.RelatedInvestigationCase);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmRelatedInvestigationCase, com.tools20022.repository.entity.CashEntry.mmRelatedInvestigationCase,
+						com.tools20022.repository.entity.PaymentExecution.mmRelatedInvestigationCase, com.tools20022.repository.entity.PaymentStatus.mmRelatedInvestigationCase);
 				superType_lazy = () -> InvestigationCase.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentInvestigationCase.PaymentStatus, com.tools20022.repository.entity.PaymentInvestigationCase.CancellationReason,
-						com.tools20022.repository.entity.PaymentInvestigationCase.UnderlyingPayment, com.tools20022.repository.entity.PaymentInvestigationCase.MissingCoverIndication,
-						com.tools20022.repository.entity.PaymentInvestigationCase.UnderlyingInstruction, com.tools20022.repository.entity.PaymentInvestigationCase.UnderlyingCashEntry,
-						com.tools20022.repository.entity.PaymentInvestigationCase.IncorrectInformationReason, com.tools20022.repository.entity.PaymentInvestigationCase.MissingInformationReason,
-						com.tools20022.repository.entity.PaymentInvestigationCase.CaseType);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentInvestigationCase.mmPaymentStatus, com.tools20022.repository.entity.PaymentInvestigationCase.mmCancellationReason,
+						com.tools20022.repository.entity.PaymentInvestigationCase.mmUnderlyingPayment, com.tools20022.repository.entity.PaymentInvestigationCase.mmMissingCoverIndication,
+						com.tools20022.repository.entity.PaymentInvestigationCase.mmUnderlyingInstruction, com.tools20022.repository.entity.PaymentInvestigationCase.mmUnderlyingCashEntry,
+						com.tools20022.repository.entity.PaymentInvestigationCase.mmIncorrectInformationReason, com.tools20022.repository.entity.PaymentInvestigationCase.mmMissingInformationReason,
+						com.tools20022.repository.entity.PaymentInvestigationCase.mmCaseType);
 				derivationComponent_lazy = () -> Arrays.asList(MissingCover.mmObject(), MissingCover2.mmObject(), MissingCover3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<PaymentStatus> getPaymentStatus() {
+		return paymentStatus;
+	}
+
+	public void setPaymentStatus(List<com.tools20022.repository.entity.PaymentStatus> paymentStatus) {
+		this.paymentStatus = paymentStatus;
+	}
+
+	public CancellationReasonCode getCancellationReason() {
+		return cancellationReason;
+	}
+
+	public void setCancellationReason(CancellationReasonCode cancellationReason) {
+		this.cancellationReason = cancellationReason;
+	}
+
+	public List<Payment> getUnderlyingPayment() {
+		return underlyingPayment;
+	}
+
+	public void setUnderlyingPayment(List<com.tools20022.repository.entity.Payment> underlyingPayment) {
+		this.underlyingPayment = underlyingPayment;
+	}
+
+	public YesNoIndicator getMissingCoverIndication() {
+		return missingCoverIndication;
+	}
+
+	public void setMissingCoverIndication(YesNoIndicator missingCoverIndication) {
+		this.missingCoverIndication = missingCoverIndication;
+	}
+
+	public PaymentExecution getUnderlyingInstruction() {
+		return underlyingInstruction;
+	}
+
+	public void setUnderlyingInstruction(com.tools20022.repository.entity.PaymentExecution underlyingInstruction) {
+		this.underlyingInstruction = underlyingInstruction;
+	}
+
+	public List<CashEntry> getUnderlyingCashEntry() {
+		return underlyingCashEntry;
+	}
+
+	public void setUnderlyingCashEntry(List<com.tools20022.repository.entity.CashEntry> underlyingCashEntry) {
+		this.underlyingCashEntry = underlyingCashEntry;
+	}
+
+	public UnableToApplyIncorrectInfoCode getIncorrectInformationReason() {
+		return incorrectInformationReason;
+	}
+
+	public void setIncorrectInformationReason(UnableToApplyIncorrectInfoCode incorrectInformationReason) {
+		this.incorrectInformationReason = incorrectInformationReason;
+	}
+
+	public UnableToApplyMissingInformationV2Code getMissingInformationReason() {
+		return missingInformationReason;
+	}
+
+	public void setMissingInformationReason(UnableToApplyMissingInformationV2Code missingInformationReason) {
+		this.missingInformationReason = missingInformationReason;
+	}
+
+	public Max35Text getCaseType() {
+		return caseType;
+	}
+
+	public void setCaseType(Max35Text caseType) {
+		this.caseType = caseType;
 	}
 }

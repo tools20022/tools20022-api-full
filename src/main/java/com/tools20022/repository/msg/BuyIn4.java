@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#WarningIndicator
- * BuyIn4.WarningIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#ExpectedBuyInDate
- * BuyIn4.ExpectedBuyInDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#CancellationLimitDate
- * BuyIn4.CancellationLimitDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#BuyInReversionDate
- * BuyIn4.BuyInReversionDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#mmWarningIndicator
+ * BuyIn4.mmWarningIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#mmExpectedBuyInDate
+ * BuyIn4.mmExpectedBuyInDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#mmCancellationLimitDate
+ * BuyIn4.mmCancellationLimitDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn4#mmBuyInReversionDate
+ * BuyIn4.mmBuyInReversionDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,15 +53,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#NotificationDetails
- * BuyInNotificationV03.NotificationDetails}</li>
+ * {@linkplain com.tools20022.repository.area.secl.BuyInNotificationV03#mmNotificationDetails
+ * BuyInNotificationV03.mmNotificationDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BuyIn4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator warningIndicator;
 	/**
 	 * Indicates whether the message is a warning only or a notification.
 	 * <p>
@@ -108,11 +109,11 @@ public class BuyIn4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BuyIn1#WarningIndicator
-	 * BuyIn1.WarningIndicator}</li>
+	 * {@linkplain com.tools20022.repository.msg.BuyIn1#mmWarningIndicator
+	 * BuyIn1.mmWarningIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WarningIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWarningIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BuyIn4.mmObject();
 			isDerived = false;
@@ -120,12 +121,13 @@ public class BuyIn4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarningIndicator";
 			definition = "Indicates whether the message is a warning only or a notification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BuyIn1.WarningIndicator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BuyIn1.mmWarningIndicator;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected DateFormat15Choice expectedBuyInDate;
 	/**
 	 * Provides the date at which the buy-in will occur.
 	 * <p>
@@ -139,8 +141,8 @@ public class BuyIn4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BuyIn#BuyinDate
-	 * BuyIn.BuyinDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.BuyIn#mmBuyinDate
+	 * BuyIn.mmBuyinDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.BuyIn4
@@ -159,25 +161,26 @@ public class BuyIn4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.BuyIn1#ExpectedBuyInDate
-	 * BuyIn1.ExpectedBuyInDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.BuyIn1#mmExpectedBuyInDate
+	 * BuyIn1.mmExpectedBuyInDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpectedBuyInDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpectedBuyInDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmBuyinDate;
 			componentContext_lazy = () -> BuyIn4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.BuyinDate;
 			isDerived = false;
 			xmlTag = "XpctdBuyInDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedBuyInDate";
 			definition = "Provides the date at which the buy-in will occur.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BuyIn1.ExpectedBuyInDate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.BuyIn1.mmExpectedBuyInDate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DateFormat15Choice.mmObject();
 		}
 	};
+	protected ISODate cancellationLimitDate;
 	/**
 	 * Identifies the latest date by which the buy-in operation can be
 	 * cancelled.
@@ -207,7 +210,7 @@ public class BuyIn4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CancellationLimitDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCancellationLimitDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BuyIn4.mmObject();
 			isDerived = false;
@@ -215,11 +218,12 @@ public class BuyIn4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationLimitDate";
 			definition = "Identifies the latest date by which the buy-in operation can be cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate buyInReversionDate;
 	/**
 	 * Identifies the date by which the buy-in operation is reversed by the CCP.
 	 * <p>
@@ -248,7 +252,7 @@ public class BuyIn4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BuyInReversionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBuyInReversionDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> BuyIn4.mmObject();
 			isDerived = false;
@@ -256,8 +260,8 @@ public class BuyIn4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyInReversionDate";
 			definition = "Identifies the date by which the buy-in operation is reversed by the CCP.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -265,11 +269,11 @@ public class BuyIn4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn4.WarningIndicator, com.tools20022.repository.msg.BuyIn4.ExpectedBuyInDate, com.tools20022.repository.msg.BuyIn4.CancellationLimitDate,
-						com.tools20022.repository.msg.BuyIn4.BuyInReversionDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn4.mmWarningIndicator, com.tools20022.repository.msg.BuyIn4.mmExpectedBuyInDate, com.tools20022.repository.msg.BuyIn4.mmCancellationLimitDate,
+						com.tools20022.repository.msg.BuyIn4.mmBuyInReversionDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInNotificationV03.mmNotificationDetails);
 				trace_lazy = () -> BuyIn.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInNotificationV03.NotificationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BuyIn4";
 				definition = "Specifies elements related to the notification (or warn) sent by the central counterparty to the clearing member in the context of the buy in process.";
@@ -277,5 +281,37 @@ public class BuyIn4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getWarningIndicator() {
+		return warningIndicator;
+	}
+
+	public void setWarningIndicator(YesNoIndicator warningIndicator) {
+		this.warningIndicator = warningIndicator;
+	}
+
+	public DateFormat15Choice getExpectedBuyInDate() {
+		return expectedBuyInDate;
+	}
+
+	public void setExpectedBuyInDate(DateFormat15Choice expectedBuyInDate) {
+		this.expectedBuyInDate = expectedBuyInDate;
+	}
+
+	public ISODate getCancellationLimitDate() {
+		return cancellationLimitDate;
+	}
+
+	public void setCancellationLimitDate(ISODate cancellationLimitDate) {
+		this.cancellationLimitDate = cancellationLimitDate;
+	}
+
+	public ISODate getBuyInReversionDate() {
+		return buyInReversionDate;
+	}
+
+	public void setBuyInReversionDate(ISODate buyInReversionDate) {
+		this.buyInReversionDate = buyInReversionDate;
 	}
 }

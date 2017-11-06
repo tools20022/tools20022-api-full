@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.repository.datatype.Max350Text;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Group of investment funds under the same fund management company.
@@ -37,26 +38,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#FundFamilyName
- * InvestmentFundFamily.FundFamilyName}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#mmFundFamilyName
+ * InvestmentFundFamily.mmFundFamilyName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#InvestmentFund
- * InvestmentFundFamily.InvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#mmInvestmentFund
+ * InvestmentFundFamily.mmInvestmentFund}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#Family
- * InvestmentFund.Family}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmFamily
+ * InvestmentFund.mmFamily}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvestmentFundFamily {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text fundFamilyName;
 	/**
 	 * Name of the investment fund family.
 	 * <p>
@@ -80,91 +82,91 @@ public class InvestmentFundFamily {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount17#FundFamilyName
-	 * InvestmentAccount17.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount27#FundFamilyName
-	 * InvestmentAccount27.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount35#FundFamilyName
-	 * InvestmentAccount35.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount19#FundFamilyName
-	 * InvestmentAccount19.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount18#FundFamilyName
-	 * InvestmentAccount18.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount29#FundFamilyName
-	 * InvestmentAccount29.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount28#FundFamilyName
-	 * InvestmentAccount28.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount36#FundFamilyName
-	 * InvestmentAccount36.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#FundFamilyName
-	 * InvestmentAccount16.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount26#FundFamilyName
-	 * InvestmentAccount26.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount34#FundFamilyName
-	 * InvestmentAccount34.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount38#FundFamilyName
-	 * InvestmentAccount38.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount37#FundFamilyName
-	 * InvestmentAccount37.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#FundFamilyName
-	 * InvestmentAccount39.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount44#FundFamilyName
-	 * InvestmentAccount44.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount46#FundFamilyName
-	 * InvestmentAccount46.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#FundFamilyName
-	 * InvestmentAccount47.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount49#FundFamilyName
-	 * InvestmentAccount49.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#FundFamilyName
-	 * InvestmentAccount51.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount50#FundFamilyName
-	 * InvestmentAccount50.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount52#FundFamilyName
-	 * InvestmentAccount52.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount61#FundFamilyName
-	 * InvestmentAccount61.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63#FundFamilyName
-	 * InvestmentAccount63.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount62#FundFamilyName
-	 * InvestmentAccount62.FundFamilyName}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount64#FundFamilyName
-	 * InvestmentAccount64.FundFamilyName}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily
 	 * InvestmentFundFamily}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount17#mmFundFamilyName
+	 * InvestmentAccount17.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount27#mmFundFamilyName
+	 * InvestmentAccount27.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount35#mmFundFamilyName
+	 * InvestmentAccount35.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount19#mmFundFamilyName
+	 * InvestmentAccount19.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount18#mmFundFamilyName
+	 * InvestmentAccount18.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount29#mmFundFamilyName
+	 * InvestmentAccount29.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount28#mmFundFamilyName
+	 * InvestmentAccount28.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount36#mmFundFamilyName
+	 * InvestmentAccount36.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#mmFundFamilyName
+	 * InvestmentAccount16.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount26#mmFundFamilyName
+	 * InvestmentAccount26.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount34#mmFundFamilyName
+	 * InvestmentAccount34.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount38#mmFundFamilyName
+	 * InvestmentAccount38.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount37#mmFundFamilyName
+	 * InvestmentAccount37.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount39#mmFundFamilyName
+	 * InvestmentAccount39.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount44#mmFundFamilyName
+	 * InvestmentAccount44.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount46#mmFundFamilyName
+	 * InvestmentAccount46.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount47#mmFundFamilyName
+	 * InvestmentAccount47.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount49#mmFundFamilyName
+	 * InvestmentAccount49.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount51#mmFundFamilyName
+	 * InvestmentAccount51.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount50#mmFundFamilyName
+	 * InvestmentAccount50.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount52#mmFundFamilyName
+	 * InvestmentAccount52.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount61#mmFundFamilyName
+	 * InvestmentAccount61.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount63#mmFundFamilyName
+	 * InvestmentAccount63.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount62#mmFundFamilyName
+	 * InvestmentAccount62.mmFundFamilyName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount64#mmFundFamilyName
+	 * InvestmentAccount64.mmFundFamilyName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -176,27 +178,28 @@ public class InvestmentFundFamily {
 	 * definition} = "Name of the investment fund family."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FundFamilyName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFundFamilyName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount17.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount27.FundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount35.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount19.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount18.FundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount29.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount28.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount36.FundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount16.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount26.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount34.FundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount38.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount37.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount39.FundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount44.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount46.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount47.FundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount49.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount51.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount50.FundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount52.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount61.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount63.FundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount62.FundFamilyName, com.tools20022.repository.msg.InvestmentAccount64.FundFamilyName);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount17.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount27.mmFundFamilyName,
+					com.tools20022.repository.msg.InvestmentAccount35.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount19.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount18.mmFundFamilyName,
+					com.tools20022.repository.msg.InvestmentAccount29.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount28.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount36.mmFundFamilyName,
+					com.tools20022.repository.msg.InvestmentAccount16.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount26.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount34.mmFundFamilyName,
+					com.tools20022.repository.msg.InvestmentAccount38.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount37.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount39.mmFundFamilyName,
+					com.tools20022.repository.msg.InvestmentAccount44.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount46.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount47.mmFundFamilyName,
+					com.tools20022.repository.msg.InvestmentAccount49.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount51.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount50.mmFundFamilyName,
+					com.tools20022.repository.msg.InvestmentAccount52.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount61.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount63.mmFundFamilyName,
+					com.tools20022.repository.msg.InvestmentAccount62.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount64.mmFundFamilyName);
 			elementContext_lazy = () -> InvestmentFundFamily.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FundFamilyName";
 			definition = "Name of the investment fund family.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.InvestmentFund> investmentFund;
 	/**
 	 * Pool of financial instruments managed by a professional asset manager and
 	 * belonging to one or several investment fund families that are part of the
@@ -207,8 +210,8 @@ public class InvestmentFundFamily {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#Family
-	 * InvestmentFund.Family}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmFamily
+	 * InvestmentFund.mmFamily}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -234,7 +237,7 @@ public class InvestmentFundFamily {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd InvestmentFund = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmInvestmentFund = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> InvestmentFundFamily.mmObject();
 			isDerived = false;
@@ -242,23 +245,39 @@ public class InvestmentFundFamily {
 			name = "InvestmentFund";
 			definition = "Pool of financial instruments managed by a professional asset manager and belonging to one or several investment fund families that are part of the same investment fund network.";
 			minOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFund.Family;
+			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmFamily;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundFamily";
 				definition = "Group of investment funds under the same fund management company.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.Family);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundFamily.FundFamilyName, com.tools20022.repository.entity.InvestmentFundFamily.InvestmentFund);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.mmFamily);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundFamily.mmFundFamilyName, com.tools20022.repository.entity.InvestmentFundFamily.mmInvestmentFund);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getFundFamilyName() {
+		return fundFamilyName;
+	}
+
+	public void setFundFamilyName(Max350Text fundFamilyName) {
+		this.fundFamilyName = fundFamilyName;
+	}
+
+	public List<InvestmentFund> getInvestmentFund() {
+		return investmentFund;
+	}
+
+	public void setInvestmentFund(List<com.tools20022.repository.entity.InvestmentFund> investmentFund) {
+		this.investmentFund = investmentFund;
 	}
 }

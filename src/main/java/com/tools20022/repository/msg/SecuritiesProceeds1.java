@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstructi
 import com.tools20022.repository.entity.SecuritiesAccount;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides securities proceeds information.
@@ -37,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesProceeds1#SecurityIdentification
- * SecuritiesProceeds1.SecurityIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesProceeds1#mmSecurityIdentification
+ * SecuritiesProceeds1.mmSecurityIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesProceeds1#PostingQuantity
- * SecuritiesProceeds1.PostingQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesProceeds1#mmPostingQuantity
+ * SecuritiesProceeds1.mmPostingQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesProceeds1#AccountDetails
- * SecuritiesProceeds1.AccountDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesProceeds1#mmAccountDetails
+ * SecuritiesProceeds1.mmAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesProceeds1#ReconciliationDetails
- * SecuritiesProceeds1.ReconciliationDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesProceeds1#mmReconciliationDetails
+ * SecuritiesProceeds1.mmReconciliationDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +73,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesProceeds1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecurityIdentification7 securityIdentification;
 	/**
 	 * Identification of the financial instrument.
 	 * <p>
@@ -85,8 +87,8 @@ public class SecuritiesProceeds1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Security#Identification
-	 * Security.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,20 +107,21 @@ public class SecuritiesProceeds1 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesProceeds1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.Identification;
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> SecurityIdentification7.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice postingQuantity;
 	/**
 	 * The quantity of financial instruments that is posted.
 	 * <p>
@@ -132,8 +135,8 @@ public class SecuritiesProceeds1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingQuantity
-	 * CorporateActionDistribution.PostingQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingQuantity
+	 * CorporateActionDistribution.mmPostingQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -152,20 +155,21 @@ public class SecuritiesProceeds1 {
 	 * definition} = "The quantity of financial instruments that is posted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PostingQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPostingQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> SecuritiesProceeds1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingQuantity;
 			isDerived = false;
 			xmlTag = "PstngQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "The quantity of financial instruments that is posted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.SecuritiesAccount10> accountDetails;
 	/**
 	 * Provides information about the account that is debited/credited.
 	 * <p>
@@ -198,21 +202,22 @@ public class SecuritiesProceeds1 {
 	 * "Provides information about the account that is debited/credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesProceeds1.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
+			componentContext_lazy = () -> SecuritiesProceeds1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the account that is debited/credited.";
-			minOccurs = 1;
 			maxOccurs = 2;
-			type_lazy = () -> SecuritiesAccount10.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount10.mmObject();
 		}
 	};
+	protected Max350Text reconciliationDetails;
 	/**
 	 * Provides reconciliation information.
 	 * <p>
@@ -240,7 +245,7 @@ public class SecuritiesProceeds1 {
 	 * definition} = "Provides reconciliation information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconciliationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconciliationDetails = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesProceeds1.mmObject();
 			isDerived = false;
@@ -248,8 +253,8 @@ public class SecuritiesProceeds1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationDetails";
 			definition = "Provides reconciliation information.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -257,15 +262,47 @@ public class SecuritiesProceeds1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesProceeds1.SecurityIdentification, com.tools20022.repository.msg.SecuritiesProceeds1.PostingQuantity,
-						com.tools20022.repository.msg.SecuritiesProceeds1.AccountDetails, com.tools20022.repository.msg.SecuritiesProceeds1.ReconciliationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesProceeds1.mmSecurityIdentification, com.tools20022.repository.msg.SecuritiesProceeds1.mmPostingQuantity,
+						com.tools20022.repository.msg.SecuritiesProceeds1.mmAccountDetails, com.tools20022.repository.msg.SecuritiesProceeds1.mmReconciliationDetails);
 				trace_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesProceeds1";
 				definition = "Provides securities proceeds information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecurityIdentification7 getSecurityIdentification() {
+		return securityIdentification;
+	}
+
+	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+		this.securityIdentification = securityIdentification;
+	}
+
+	public UnitOrFaceAmount1Choice getPostingQuantity() {
+		return postingQuantity;
+	}
+
+	public void setPostingQuantity(UnitOrFaceAmount1Choice postingQuantity) {
+		this.postingQuantity = postingQuantity;
+	}
+
+	public List<SecuritiesAccount10> getAccountDetails() {
+		return accountDetails;
+	}
+
+	public void setAccountDetails(List<com.tools20022.repository.msg.SecuritiesAccount10> accountDetails) {
+		this.accountDetails = accountDetails;
+	}
+
+	public Max350Text getReconciliationDetails() {
+		return reconciliationDetails;
+	}
+
+	public void setReconciliationDetails(Max350Text reconciliationDetails) {
+		this.reconciliationDetails = reconciliationDetails;
 	}
 }

@@ -35,87 +35,87 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#AccountServicerDeadlineMissed
- * PendingProcessingReason2Code.AccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmAccountServicerDeadlineMissed
+ * PendingProcessingReason2Code.mmAccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#AwaitingSecurities
- * PendingProcessingReason2Code.AwaitingSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmAwaitingSecurities
+ * PendingProcessingReason2Code.mmAwaitingSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#AwaitingDocumentsOrEndorsementsFromYou
- * PendingProcessingReason2Code.AwaitingDocumentsOrEndorsementsFromYou}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmAwaitingDocumentsOrEndorsementsFromYou
+ * PendingProcessingReason2Code.mmAwaitingDocumentsOrEndorsementsFromYou}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#NoForeignExchangeInstruction
- * PendingProcessingReason2Code.NoForeignExchangeInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmNoForeignExchangeInstruction
+ * PendingProcessingReason2Code.mmNoForeignExchangeInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#AccountBlocked
- * PendingProcessingReason2Code.AccountBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmAccountBlocked
+ * PendingProcessingReason2Code.mmAccountBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#MultipleSettlementAmount
- * PendingProcessingReason2Code.MultipleSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmMultipleSettlementAmount
+ * PendingProcessingReason2Code.mmMultipleSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#GlobalFormSecurities
- * PendingProcessingReason2Code.GlobalFormSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmGlobalFormSecurities
+ * PendingProcessingReason2Code.mmGlobalFormSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#CollateralShortage
- * PendingProcessingReason2Code.CollateralShortage}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmCollateralShortage
+ * PendingProcessingReason2Code.mmCollateralShortage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#SecuritiesPledgedAsCollateral
- * PendingProcessingReason2Code.SecuritiesPledgedAsCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmSecuritiesPledgedAsCollateral
+ * PendingProcessingReason2Code.mmSecuritiesPledgedAsCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#MaximumForeignLimitReached
- * PendingProcessingReason2Code.MaximumForeignLimitReached}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmMaximumForeignLimitReached
+ * PendingProcessingReason2Code.mmMaximumForeignLimitReached}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#NextProcess
- * PendingProcessingReason2Code.NextProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmNextProcess
+ * PendingProcessingReason2Code.mmNextProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#LackOfSecurities
- * PendingProcessingReason2Code.LackOfSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmLackOfSecurities
+ * PendingProcessingReason2Code.mmLackOfSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#SecuritiesLoanedOut
- * PendingProcessingReason2Code.SecuritiesLoanedOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmSecuritiesLoanedOut
+ * PendingProcessingReason2Code.mmSecuritiesLoanedOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#InsufficientMoney
- * PendingProcessingReason2Code.InsufficientMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmInsufficientMoney
+ * PendingProcessingReason2Code.mmInsufficientMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#MinimumSettlementAmount
- * PendingProcessingReason2Code.MinimumSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmMinimumSettlementAmount
+ * PendingProcessingReason2Code.mmMinimumSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#Other
- * PendingProcessingReason2Code.Other}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmOther
+ * PendingProcessingReason2Code.mmOther}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#UnavailableDeliverableDenominatedQuantity
- * PendingProcessingReason2Code.UnavailableDeliverableDenominatedQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmUnavailableDeliverableDenominatedQuantity
+ * PendingProcessingReason2Code.mmUnavailableDeliverableDenominatedQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#InsufficientCentralBankLiquidity
- * PendingProcessingReason2Code.InsufficientCentralBankLiquidity}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmInsufficientCentralBankLiquidity
+ * PendingProcessingReason2Code.mmInsufficientCentralBankLiquidity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#WrongCertificatesNumbers
- * PendingProcessingReason2Code.WrongCertificatesNumbers}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmWrongCertificatesNumbers
+ * PendingProcessingReason2Code.mmWrongCertificatesNumbers}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#CSDHold
- * PendingProcessingReason2Code.CSDHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmCSDHold
+ * PendingProcessingReason2Code.mmCSDHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#CSDValidation
- * PendingProcessingReason2Code.CSDValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmCSDValidation
+ * PendingProcessingReason2Code.mmCSDValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#ConditionalDelivery
- * PendingProcessingReason2Code.ConditionalDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmConditionalDelivery
+ * PendingProcessingReason2Code.mmConditionalDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#ConditionalDeliveryAwaitingRelease
- * PendingProcessingReason2Code.ConditionalDeliveryAwaitingRelease}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmConditionalDeliveryAwaitingRelease
+ * PendingProcessingReason2Code.mmConditionalDeliveryAwaitingRelease}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#ConditionalDeliveryAwaitingCancellation
- * PendingProcessingReason2Code.ConditionalDeliveryAwaitingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmConditionalDeliveryAwaitingCancellation
+ * PendingProcessingReason2Code.mmConditionalDeliveryAwaitingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#IncompleteNumberCount
- * PendingProcessingReason2Code.IncompleteNumberCount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code#mmIncompleteNumberCount
+ * PendingProcessingReason2Code.mmIncompleteNumberCount}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -157,7 +157,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountServicerDeadlineMissed = new MMCode() {
+	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
@@ -180,7 +180,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingSecurities = new MMCode() {
+	public static final MMCode mmAwaitingSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSecurities";
@@ -203,7 +203,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingDocumentsOrEndorsementsFromYou"</li>
 	 * </ul>
 	 */
-	public static final MMCode AwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
+	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromYou";
@@ -226,7 +226,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "NoForeignExchangeInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoForeignExchangeInstruction = new MMCode() {
+	public static final MMCode mmNoForeignExchangeInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoForeignExchangeInstruction";
@@ -249,7 +249,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "AccountBlocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccountBlocked = new MMCode() {
+	public static final MMCode mmAccountBlocked = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlocked";
@@ -272,7 +272,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "MultipleSettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MultipleSettlementAmount = new MMCode() {
+	public static final MMCode mmMultipleSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementAmount";
@@ -295,7 +295,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "GlobalFormSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode GlobalFormSecurities = new MMCode() {
+	public static final MMCode mmGlobalFormSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalFormSecurities";
@@ -318,7 +318,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "CollateralShortage"</li>
 	 * </ul>
 	 */
-	public static final MMCode CollateralShortage = new MMCode() {
+	public static final MMCode mmCollateralShortage = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralShortage";
@@ -341,7 +341,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "SecuritiesPledgedAsCollateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesPledgedAsCollateral = new MMCode() {
+	public static final MMCode mmSecuritiesPledgedAsCollateral = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPledgedAsCollateral";
@@ -364,7 +364,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "MaximumForeignLimitReached"</li>
 	 * </ul>
 	 */
-	public static final MMCode MaximumForeignLimitReached = new MMCode() {
+	public static final MMCode mmMaximumForeignLimitReached = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumForeignLimitReached";
@@ -387,7 +387,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "NextProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode NextProcess = new MMCode() {
+	public static final MMCode mmNextProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextProcess";
@@ -410,7 +410,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "LackOfSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode LackOfSecurities = new MMCode() {
+	public static final MMCode mmLackOfSecurities = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfSecurities";
@@ -433,7 +433,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "SecuritiesLoanedOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode SecuritiesLoanedOut = new MMCode() {
+	public static final MMCode mmSecuritiesLoanedOut = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesLoanedOut";
@@ -456,7 +456,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "InsufficientMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientMoney = new MMCode() {
+	public static final MMCode mmInsufficientMoney = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientMoney";
@@ -479,7 +479,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "MinimumSettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode MinimumSettlementAmount = new MMCode() {
+	public static final MMCode mmMinimumSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementAmount";
@@ -502,7 +502,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -525,7 +525,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "UnavailableDeliverableDenominatedQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnavailableDeliverableDenominatedQuantity = new MMCode() {
+	public static final MMCode mmUnavailableDeliverableDenominatedQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnavailableDeliverableDenominatedQuantity";
@@ -548,7 +548,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "InsufficientCentralBankLiquidity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsufficientCentralBankLiquidity = new MMCode() {
+	public static final MMCode mmInsufficientCentralBankLiquidity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCentralBankLiquidity";
@@ -571,7 +571,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "WrongCertificatesNumbers"</li>
 	 * </ul>
 	 */
-	public static final MMCode WrongCertificatesNumbers = new MMCode() {
+	public static final MMCode mmWrongCertificatesNumbers = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCertificatesNumbers";
@@ -594,7 +594,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "CSDHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode CSDHold = new MMCode() {
+	public static final MMCode mmCSDHold = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDHold";
@@ -617,7 +617,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "CSDValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CSDValidation = new MMCode() {
+	public static final MMCode mmCSDValidation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDValidation";
@@ -640,7 +640,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalDelivery = new MMCode() {
+	public static final MMCode mmConditionalDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalDelivery";
@@ -663,7 +663,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalDeliveryAwaitingRelease"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalDeliveryAwaitingRelease = new MMCode() {
+	public static final MMCode mmConditionalDeliveryAwaitingRelease = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalDeliveryAwaitingRelease";
@@ -686,7 +686,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalDeliveryAwaitingCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConditionalDeliveryAwaitingCancellation = new MMCode() {
+	public static final MMCode mmConditionalDeliveryAwaitingCancellation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalDeliveryAwaitingCancellation";
@@ -709,7 +709,7 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	 * name} = "IncompleteNumberCount"</li>
 	 * </ul>
 	 */
-	public static final MMCode IncompleteNumberCount = new MMCode() {
+	public static final MMCode mmIncompleteNumberCount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncompleteNumberCount";
@@ -720,25 +720,25 @@ public class PendingProcessingReason2Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PendingProcessingReason2Code";
 				definition = "Specifies the reason the transaction/instruction is failing settlement. Settlement on the instructed settlement date is no longer possible.";
 				previousVersion_lazy = () -> PendingProcessingReason1Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingProcessingReason2Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingProcessingReason2Code.AwaitingSecurities,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.AwaitingDocumentsOrEndorsementsFromYou, com.tools20022.repository.codeset.PendingProcessingReason2Code.NoForeignExchangeInstruction,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.AccountBlocked, com.tools20022.repository.codeset.PendingProcessingReason2Code.MultipleSettlementAmount,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.GlobalFormSecurities, com.tools20022.repository.codeset.PendingProcessingReason2Code.CollateralShortage,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.SecuritiesPledgedAsCollateral, com.tools20022.repository.codeset.PendingProcessingReason2Code.MaximumForeignLimitReached,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.NextProcess, com.tools20022.repository.codeset.PendingProcessingReason2Code.LackOfSecurities,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.SecuritiesLoanedOut, com.tools20022.repository.codeset.PendingProcessingReason2Code.InsufficientMoney,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.MinimumSettlementAmount, com.tools20022.repository.codeset.PendingProcessingReason2Code.Other,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.UnavailableDeliverableDenominatedQuantity, com.tools20022.repository.codeset.PendingProcessingReason2Code.InsufficientCentralBankLiquidity,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.WrongCertificatesNumbers, com.tools20022.repository.codeset.PendingProcessingReason2Code.CSDHold,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.CSDValidation, com.tools20022.repository.codeset.PendingProcessingReason2Code.ConditionalDelivery,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.ConditionalDeliveryAwaitingRelease, com.tools20022.repository.codeset.PendingProcessingReason2Code.ConditionalDeliveryAwaitingCancellation,
-						com.tools20022.repository.codeset.PendingProcessingReason2Code.IncompleteNumberCount);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingProcessingReason2Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmAwaitingSecurities,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmAwaitingDocumentsOrEndorsementsFromYou, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmNoForeignExchangeInstruction,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmAccountBlocked, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmMultipleSettlementAmount,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmGlobalFormSecurities, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmCollateralShortage,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmSecuritiesPledgedAsCollateral, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmMaximumForeignLimitReached,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmNextProcess, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmLackOfSecurities,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmSecuritiesLoanedOut, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmInsufficientMoney,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmMinimumSettlementAmount, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmOther,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmUnavailableDeliverableDenominatedQuantity, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmInsufficientCentralBankLiquidity,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmWrongCertificatesNumbers, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmCSDHold,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmCSDValidation, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmConditionalDelivery,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmConditionalDeliveryAwaitingRelease, com.tools20022.repository.codeset.PendingProcessingReason2Code.mmConditionalDeliveryAwaitingCancellation,
+						com.tools20022.repository.codeset.PendingProcessingReason2Code.mmIncompleteNumberCount);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference18#TradeLegIdentification
- * Reference18.TradeLegIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference18#mmTradeLegIdentification
+ * Reference18.mmTradeLegIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Reference18#PreviousMessageIdentification
- * Reference18.PreviousMessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.Reference18#mmPreviousMessageIdentification
+ * Reference18.mmPreviousMessageIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reference18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text tradeLegIdentification;
 	/**
 	 * Allocated by the central counterparty - central counterparty trade leg
 	 * reference identification that uniquely identifies the trade.
@@ -88,7 +89,7 @@ public class Reference18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradeLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradeLegIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference18.mmObject();
 			isDerived = false;
@@ -96,11 +97,12 @@ public class Reference18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeLegIdentification";
 			definition = "Allocated by the central counterparty - central counterparty trade leg reference identification that uniquely identifies the trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text previousMessageIdentification;
 	/**
 	 * Identification of the message previously sent by the central
 	 * counterparty.
@@ -130,7 +132,7 @@ public class Reference18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Reference18.mmObject();
 			isDerived = false;
@@ -138,8 +140,8 @@ public class Reference18 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousMessageIdentification";
 			definition = "Identification of the message previously sent by the central counterparty.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -147,13 +149,29 @@ public class Reference18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference18.TradeLegIdentification, com.tools20022.repository.msg.Reference18.PreviousMessageIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference18.mmTradeLegIdentification, com.tools20022.repository.msg.Reference18.mmPreviousMessageIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference18";
 				definition = "References linked to the trade leg notification cancellation message.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTradeLegIdentification() {
+		return tradeLegIdentification;
+	}
+
+	public void setTradeLegIdentification(Max35Text tradeLegIdentification) {
+		this.tradeLegIdentification = tradeLegIdentification;
+	}
+
+	public Max35Text getPreviousMessageIdentification() {
+		return previousMessageIdentification;
+	}
+
+	public void setPreviousMessageIdentification(Max35Text previousMessageIdentification) {
+		this.previousMessageIdentification = previousMessageIdentification;
 	}
 }

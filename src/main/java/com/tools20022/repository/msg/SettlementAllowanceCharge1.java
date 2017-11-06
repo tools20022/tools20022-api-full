@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Allowance;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies a pricing component, such as a service, promotion, allowance or
@@ -37,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementAllowanceCharge1#AllowanceChargeIndicator
- * SettlementAllowanceCharge1.AllowanceChargeIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementAllowanceCharge1#mmAllowanceChargeIndicator
+ * SettlementAllowanceCharge1.mmAllowanceChargeIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementAllowanceCharge1#ActualAmount
- * SettlementAllowanceCharge1.ActualAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementAllowanceCharge1#mmActualAmount
+ * SettlementAllowanceCharge1.mmActualAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementAllowanceCharge1#Reason
- * SettlementAllowanceCharge1.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementAllowanceCharge1#mmReason
+ * SettlementAllowanceCharge1.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SettlementAllowanceCharge1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator allowanceChargeIndicator;
 	/**
 	 * Indication of whether or not this allowance charge is a charge.
 	 * <p>
@@ -82,8 +84,8 @@ public class SettlementAllowanceCharge1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#AllowanceChargeIndicator
-	 * Adjustment.AllowanceChargeIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAllowanceChargeIndicator
+	 * Adjustment.mmAllowanceChargeIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,20 +105,21 @@ public class SettlementAllowanceCharge1 {
 	 * "Indication of whether or not this allowance charge is a charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllowanceChargeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllowanceChargeIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAllowanceChargeIndicator;
 			componentContext_lazy = () -> SettlementAllowanceCharge1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.AllowanceChargeIndicator;
 			isDerived = false;
 			xmlTag = "AllwncChrgInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowanceChargeIndicator";
 			definition = "Indication of whether or not this allowance charge is a charge.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected List<CurrencyAndAmount> actualAmount;
 	/**
 	 * Actual monetary amount specified for the allowance or charge.
 	 * <p>
@@ -130,8 +133,8 @@ public class SettlementAllowanceCharge1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Amount
-	 * Adjustment.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmAmount
+	 * Adjustment.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,10 +154,10 @@ public class SettlementAllowanceCharge1 {
 	 * "Actual monetary amount specified for the allowance or charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActualAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
 			componentContext_lazy = () -> SettlementAllowanceCharge1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Amount;
 			isDerived = false;
 			xmlTag = "ActlAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,6 +167,7 @@ public class SettlementAllowanceCharge1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected DiscountOrChargeType1Choice reason;
 	/**
 	 * Reason, expressed as text, for this allowance or charge.
 	 * <p>
@@ -177,8 +181,8 @@ public class SettlementAllowanceCharge1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#Reason
-	 * Adjustment.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmReason
+	 * Adjustment.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -197,17 +201,17 @@ public class SettlementAllowanceCharge1 {
 	 * definition} = "Reason, expressed as text, for this allowance or charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmReason;
 			componentContext_lazy = () -> SettlementAllowanceCharge1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.Reason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason, expressed as text, for this allowance or charge.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DiscountOrChargeType1Choice.mmObject();
 		}
 	};
@@ -215,15 +219,39 @@ public class SettlementAllowanceCharge1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementAllowanceCharge1.AllowanceChargeIndicator, com.tools20022.repository.msg.SettlementAllowanceCharge1.ActualAmount,
-						com.tools20022.repository.msg.SettlementAllowanceCharge1.Reason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementAllowanceCharge1.mmAllowanceChargeIndicator, com.tools20022.repository.msg.SettlementAllowanceCharge1.mmActualAmount,
+						com.tools20022.repository.msg.SettlementAllowanceCharge1.mmReason);
 				trace_lazy = () -> Allowance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementAllowanceCharge1";
 				definition = "Specifies a pricing component, such as a service, promotion, allowance or charge, for this trade settlement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getAllowanceChargeIndicator() {
+		return allowanceChargeIndicator;
+	}
+
+	public void setAllowanceChargeIndicator(YesNoIndicator allowanceChargeIndicator) {
+		this.allowanceChargeIndicator = allowanceChargeIndicator;
+	}
+
+	public List<CurrencyAndAmount> getActualAmount() {
+		return actualAmount;
+	}
+
+	public void setActualAmount(List<CurrencyAndAmount> actualAmount) {
+		this.actualAmount = actualAmount;
+	}
+
+	public DiscountOrChargeType1Choice getReason() {
+		return reason;
+	}
+
+	public void setReason(DiscountOrChargeType1Choice reason) {
+		this.reason = reason;
 	}
 }

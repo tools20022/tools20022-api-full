@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * RefreshTimeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RefreshTime1Code#Immediate
- * RefreshTime1Code.Immediate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RefreshTime1Code#Exhaust
- * RefreshTime1Code.Exhaust}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RefreshTime1Code#mmImmediate
+ * RefreshTime1Code.mmImmediate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RefreshTime1Code#mmExhaust
+ * RefreshTime1Code.mmExhaust}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +80,7 @@ public class RefreshTime1Code extends RefreshTimeCode {
 	 * name} = "Immediate"</li>
 	 * </ul>
 	 */
-	public static final MMCode Immediate = new MMCode() {
+	public static final MMCode mmImmediate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Immediate";
@@ -102,7 +103,7 @@ public class RefreshTime1Code extends RefreshTimeCode {
 	 * name} = "Exhaust"</li>
 	 * </ul>
 	 */
-	public static final MMCode Exhaust = new MMCode() {
+	public static final MMCode mmExhaust = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exhaust";
@@ -113,12 +114,12 @@ public class RefreshTime1Code extends RefreshTimeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IMME");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RefreshTime1Code";
 				definition = "Defines when to refresh.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RefreshTime1Code.Immediate, com.tools20022.repository.codeset.RefreshTime1Code.Exhaust);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RefreshTime1Code.mmImmediate, com.tools20022.repository.codeset.RefreshTime1Code.mmExhaust);
 				trace_lazy = () -> RefreshTimeCode.mmObject();
 			}
 		});

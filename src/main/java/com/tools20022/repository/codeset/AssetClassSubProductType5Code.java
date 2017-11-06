@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType5Code#Grain
- * AssetClassSubProductType5Code.Grain}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType5Code#mmGrain
+ * AssetClassSubProductType5Code.mmGrain}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,7 +80,7 @@ public class AssetClassSubProductType5Code extends AssetClassSubProductTypeCode 
 	 * name} = "Grain"</li>
 	 * </ul>
 	 */
-	public static final MMCode Grain = new MMCode() {
+	public static final MMCode mmGrain = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Grain";
@@ -91,12 +91,12 @@ public class AssetClassSubProductType5Code extends AssetClassSubProductTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType5Code";
 				definition = "Defines the sub-product of type Grain.";
 				nextVersions_lazy = () -> Arrays.asList(AssetClassSubProductType20Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType5Code.Grain);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType5Code.mmGrain);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

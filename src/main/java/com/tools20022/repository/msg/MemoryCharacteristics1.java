@@ -35,23 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemoryCharacteristics1#Identification
- * MemoryCharacteristics1.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.MemoryCharacteristics1#mmIdentification
+ * MemoryCharacteristics1.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemoryCharacteristics1#TotalSize
- * MemoryCharacteristics1.TotalSize}</li>
+ * {@linkplain com.tools20022.repository.msg.MemoryCharacteristics1#mmTotalSize
+ * MemoryCharacteristics1.mmTotalSize}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MemoryCharacteristics1#FreeSize
- * MemoryCharacteristics1.FreeSize}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MemoryCharacteristics1#Unit
- * MemoryCharacteristics1.Unit}</li>
+ * {@linkplain com.tools20022.repository.msg.MemoryCharacteristics1#mmFreeSize
+ * MemoryCharacteristics1.mmFreeSize}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MemoryCharacteristics1#mmUnit
+ * MemoryCharacteristics1.mmUnit}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MemoryCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Identification or name of the memory.
 	 * <p>
@@ -92,7 +93,7 @@ public class MemoryCharacteristics1 {
 	 * definition} = "Identification or name of the memory."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemoryCharacteristics1.mmObject();
 			isDerived = false;
@@ -100,11 +101,12 @@ public class MemoryCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification or name of the memory.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DecimalNumber totalSize;
 	/**
 	 * Total size of the memory unit.
 	 * <p>
@@ -133,7 +135,7 @@ public class MemoryCharacteristics1 {
 	 * definition} = "Total size of the memory unit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalSize = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemoryCharacteristics1.mmObject();
 			isDerived = false;
@@ -141,11 +143,12 @@ public class MemoryCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalSize";
 			definition = "Total size of the memory unit.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber freeSize;
 	/**
 	 * Total size of the available memory.
 	 * <p>
@@ -174,7 +177,7 @@ public class MemoryCharacteristics1 {
 	 * definition} = "Total size of the available memory."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FreeSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFreeSize = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemoryCharacteristics1.mmObject();
 			isDerived = false;
@@ -182,11 +185,12 @@ public class MemoryCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreeSize";
 			definition = "Total size of the available memory.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected MemoryUnit1Code unit;
 	/**
 	 * Memory unit of the sizes.
 	 * <p>
@@ -215,7 +219,7 @@ public class MemoryCharacteristics1 {
 	 * definition} = "Memory unit of the sizes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MemoryCharacteristics1.mmObject();
 			isDerived = false;
@@ -223,8 +227,8 @@ public class MemoryCharacteristics1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Memory unit of the sizes.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MemoryUnit1Code.mmObject();
 		}
 	};
@@ -232,14 +236,46 @@ public class MemoryCharacteristics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemoryCharacteristics1.Identification, com.tools20022.repository.msg.MemoryCharacteristics1.TotalSize,
-						com.tools20022.repository.msg.MemoryCharacteristics1.FreeSize, com.tools20022.repository.msg.MemoryCharacteristics1.Unit);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemoryCharacteristics1.mmIdentification, com.tools20022.repository.msg.MemoryCharacteristics1.mmTotalSize,
+						com.tools20022.repository.msg.MemoryCharacteristics1.mmFreeSize, com.tools20022.repository.msg.MemoryCharacteristics1.mmUnit);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MemoryCharacteristics1";
 				definition = "Characteristics of a hardware memory module.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public DecimalNumber getTotalSize() {
+		return totalSize;
+	}
+
+	public void setTotalSize(DecimalNumber totalSize) {
+		this.totalSize = totalSize;
+	}
+
+	public DecimalNumber getFreeSize() {
+		return freeSize;
+	}
+
+	public void setFreeSize(DecimalNumber freeSize) {
+		this.freeSize = freeSize;
+	}
+
+	public MemoryUnit1Code getUnit() {
+		return unit;
+	}
+
+	public void setUnit(MemoryUnit1Code unit) {
+		this.unit = unit;
 	}
 }

@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD4#ContactPerson
- * PartyIdentificationSD4.ContactPerson}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD4#mmContactPerson
+ * PartyIdentificationSD4.mmContactPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD4#EmployingParty
- * PartyIdentificationSD4.EmployingParty}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD4#mmEmployingParty
+ * PartyIdentificationSD4.mmEmployingParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentificationSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ContactIdentification1 contactPerson;
 	/**
 	 * Identifies a contact person by a name, a given name and an address.
 	 * <p>
@@ -90,7 +91,7 @@ public class PartyIdentificationSD4 {
 	 * "Identifies a contact person by a name, a given name and an address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD4.mmObject();
 			isDerived = false;
@@ -98,12 +99,13 @@ public class PartyIdentificationSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPerson";
 			definition = "Identifies a contact person by a name, a given name and an address.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ContactIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
 		}
 	};
+	protected PartyIdentificationSD3 employingParty;
 	/**
 	 * Identifies the organisation which is represented by a person or for which
 	 * a person works.
@@ -133,7 +135,7 @@ public class PartyIdentificationSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EmployingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> PartyIdentificationSD4.mmObject();
 			isDerived = false;
@@ -141,24 +143,40 @@ public class PartyIdentificationSD4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployingParty";
 			definition = "Identifies the organisation which is represented by a person or for which a person works.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationSD3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationSD4.ContactPerson, com.tools20022.repository.msg.PartyIdentificationSD4.EmployingParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationSD4.mmContactPerson, com.tools20022.repository.msg.PartyIdentificationSD4.mmEmployingParty);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationSD4";
 				definition = "Contact person at the party organising the meeting, at the issuer or at an intermediary.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ContactIdentification1 getContactPerson() {
+		return contactPerson;
+	}
+
+	public void setContactPerson(com.tools20022.repository.msg.ContactIdentification1 contactPerson) {
+		this.contactPerson = contactPerson;
+	}
+
+	public PartyIdentificationSD3 getEmployingParty() {
+		return employingParty;
+	}
+
+	public void setEmployingParty(com.tools20022.repository.msg.PartyIdentificationSD3 employingParty) {
+		this.employingParty = employingParty;
 	}
 }

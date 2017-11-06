@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * The PayInEventAcknowledgement message is sent by a participant of a central
@@ -61,24 +62,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInEventAcknowledgementV02#MessageIdentification
- * PayInEventAcknowledgementV02.MessageIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInEventAcknowledgementV02#mmMessageIdentification
+ * PayInEventAcknowledgementV02.mmMessageIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInEventAcknowledgementV02#SettlementSessionIdentifier
- * PayInEventAcknowledgementV02.SettlementSessionIdentifier}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInEventAcknowledgementV02#mmSettlementSessionIdentifier
+ * PayInEventAcknowledgementV02.mmSettlementSessionIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInEventAcknowledgementV02#AcknowledgementDetails
- * PayInEventAcknowledgementV02.AcknowledgementDetails}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInEventAcknowledgementV02#mmAcknowledgementDetails
+ * PayInEventAcknowledgementV02.mmAcknowledgementDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.PayInEventAcknowledgementV02#SupplementaryData
- * PayInEventAcknowledgementV02.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.area.camt.PayInEventAcknowledgementV02#mmSupplementaryData
+ * PayInEventAcknowledgementV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.PayInEventAcknowledgementV02#identifier
- * PayInEventAcknowledgementV02.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.063.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PayInEventAcknowledgementV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Unique and unambiguous identifier for the message, as assigned by the
 	 * sender.
@@ -119,17 +119,18 @@ public class PayInEventAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for the message, as assigned by the sender.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
 	 * To indicate the requested CLS Settlement Session that the related trade
 	 * is part of.
@@ -156,17 +157,18 @@ public class PayInEventAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "To indicate the requested CLS Settlement Session that the related trade is part of.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	protected AcknowledgementDetails1Choice acknowledgementDetails;
 	/**
 	 * Details of the pay in schedule or pay in call being acknowledged .
 	 * <p>
@@ -191,17 +193,18 @@ public class PayInEventAcknowledgementV02 {
 	 * "Details of the pay in schedule or pay in call being acknowledged ."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AcknowledgementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAcknowledgementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AckDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementDetails";
 			definition = "Details of the pay in schedule or pay in call being acknowledged .";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AcknowledgementDetails1Choice.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that cannot be captured in the structured elements
 	 * and/or any other specific block.
@@ -228,7 +231,7 @@ public class PayInEventAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,33 +239,6 @@ public class PayInEventAcknowledgementV02 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "02"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "063"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "063";
-			version = "02";
-			flavour = "001";
 		}
 	};
 
@@ -276,12 +252,51 @@ public class PayInEventAcknowledgementV02 {
 				rootElement = "Document";
 				xmlTag = "PayInEvtAck";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.MessageIdentification,
-						com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.SettlementSessionIdentifier, com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.AcknowledgementDetails,
-						com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.SupplementaryData);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.mmMessageIdentification,
+						com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.mmSettlementSessionIdentifier, com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.mmAcknowledgementDetails,
+						com.tools20022.repository.area.camt.PayInEventAcknowledgementV02.mmSupplementaryData);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "063";
+						version = "02";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier;
+	}
+
+	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+		this.settlementSessionIdentifier = settlementSessionIdentifier;
+	}
+
+	public AcknowledgementDetails1Choice getAcknowledgementDetails() {
+		return acknowledgementDetails;
+	}
+
+	public void setAcknowledgementDetails(AcknowledgementDetails1Choice acknowledgementDetails) {
+		this.acknowledgementDetails = acknowledgementDetails;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

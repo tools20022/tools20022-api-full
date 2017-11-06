@@ -38,28 +38,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#AccountOwnerTransactionIdentification
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#mmAccountOwnerTransactionIdentification
  * TransactionTypeAndAdditionalParameters11.
- * AccountOwnerTransactionIdentification}</li>
+ * mmAccountOwnerTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#AccountServicerTransactionIdentification
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#mmAccountServicerTransactionIdentification
  * TransactionTypeAndAdditionalParameters11.
- * AccountServicerTransactionIdentification}</li>
+ * mmAccountServicerTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#SecuritiesFinancingTransactionType
- * TransactionTypeAndAdditionalParameters11.SecuritiesFinancingTransactionType}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#mmSecuritiesFinancingTransactionType
+ * TransactionTypeAndAdditionalParameters11.mmSecuritiesFinancingTransactionType
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#Payment
- * TransactionTypeAndAdditionalParameters11.Payment}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#mmPayment
+ * TransactionTypeAndAdditionalParameters11.mmPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#ModificationType
- * TransactionTypeAndAdditionalParameters11.ModificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#mmModificationType
+ * TransactionTypeAndAdditionalParameters11.mmModificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#CommonIdentification
- * TransactionTypeAndAdditionalParameters11.CommonIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#mmCommonIdentification
+ * TransactionTypeAndAdditionalParameters11.mmCommonIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#PoolIdentification
- * TransactionTypeAndAdditionalParameters11.PoolIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11#mmPoolIdentification
+ * TransactionTypeAndAdditionalParameters11.mmPoolIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -70,16 +71,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV05#TransactionTypeAndModificationAdditionalParameters
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV05#mmTransactionTypeAndModificationAdditionalParameters
  * SecuritiesFinancingModificationInstructionV05.
- * TransactionTypeAndModificationAdditionalParameters}</li>
+ * mmTransactionTypeAndModificationAdditionalParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,6 +107,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionTypeAndAdditionalParameters11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text accountOwnerTransactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction (unique per piece of
 	 * collateral) as known by the account owner (or the instructing party
@@ -120,8 +122,8 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#AccountOwnerTransactionIdentification
-	 * Entry.AccountOwnerTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmAccountOwnerTransactionIdentification
+	 * Entry.mmAccountOwnerTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -144,35 +146,36 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#AccountOwnerTransactionIdentification
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#mmAccountOwnerTransactionIdentification
 	 * TransactionTypeAndAdditionalParameters17.
-	 * AccountOwnerTransactionIdentification}</li>
+	 * mmAccountOwnerTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#AccountOwnerTransactionIdentification
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#mmAccountOwnerTransactionIdentification
 	 * TransactionTypeAndAdditionalParameters7.
-	 * AccountOwnerTransactionIdentification}</li>
+	 * mmAccountOwnerTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.AccountOwnerTransactionIdentification;
 			isDerived = false;
 			xmlTag = "AcctOwnrTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction (unique per piece of collateral) as known by the account owner (or the instructing party managing the account).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.AccountOwnerTransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.AccountOwnerTransactionIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.mmAccountOwnerTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.mmAccountOwnerTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text accountServicerTransactionIdentification;
 	/**
 	 * Unambiguous identification of the transaction (unique per piece of
 	 * collateral) as known by the account servicer.
@@ -186,8 +189,8 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#AccountServicerTransactionIdentification
-	 * Entry.AccountServicerTransactionIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmAccountServicerTransactionIdentification
+	 * Entry.mmAccountServicerTransactionIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,35 +213,36 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#AccountServicerTransactionIdentification
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#mmAccountServicerTransactionIdentification
 	 * TransactionTypeAndAdditionalParameters17.
-	 * AccountServicerTransactionIdentification}</li>
+	 * mmAccountServicerTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#AccountServicerTransactionIdentification
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#mmAccountServicerTransactionIdentification
 	 * TransactionTypeAndAdditionalParameters7.
-	 * AccountServicerTransactionIdentification}</li>
+	 * mmAccountServicerTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.AccountServicerTransactionIdentification;
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction (unique per piece of collateral) as known by the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.AccountServicerTransactionIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.AccountServicerTransactionIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.mmAccountServicerTransactionIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.mmAccountServicerTransactionIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SecuritiesFinancingTransactionType1Code securitiesFinancingTransactionType;
 	/**
 	 * Specifies the type of securities financing transaction, that is,
 	 * repurchase agreement, reverse repurchase agreement, securities lending or
@@ -254,8 +258,8 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesTransactionType
-	 * SecuritiesTrade.SecuritiesTransactionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTransactionType
+	 * SecuritiesTrade.mmSecuritiesTransactionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -278,35 +282,36 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#SecuritiesFinancingTransactionType
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#mmSecuritiesFinancingTransactionType
 	 * TransactionTypeAndAdditionalParameters17.
-	 * SecuritiesFinancingTransactionType}</li>
+	 * mmSecuritiesFinancingTransactionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#SecuritiesFinancingTransactionType
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#mmSecuritiesFinancingTransactionType
 	 * TransactionTypeAndAdditionalParameters7.
-	 * SecuritiesFinancingTransactionType}</li>
+	 * mmSecuritiesFinancingTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SecuritiesFinancingTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSecuritiesFinancingTransactionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesTransactionType;
 			isDerived = false;
 			xmlTag = "SctiesFincgTxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTransactionType";
 			definition = "Specifies the type of securities financing transaction, that is, repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.SecuritiesFinancingTransactionType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.SecuritiesFinancingTransactionType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.mmSecuritiesFinancingTransactionType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.mmSecuritiesFinancingTransactionType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesFinancingTransactionType1Code.mmObject();
 		}
 	};
+	protected DeliveryReceiptType2Code payment;
 	/**
 	 * Specifies how the transaction is to be settled, for example, against
 	 * payment.
@@ -321,8 +326,8 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SettlementType
-	 * SecuritiesSettlement.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+	 * SecuritiesSettlement.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -345,33 +350,34 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#Payment
-	 * TransactionTypeAndAdditionalParameters17.Payment}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#mmPayment
+	 * TransactionTypeAndAdditionalParameters17.mmPayment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#Payment
-	 * TransactionTypeAndAdditionalParameters7.Payment}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#mmPayment
+	 * TransactionTypeAndAdditionalParameters7.mmPayment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Payment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SettlementType;
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.Payment;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.Payment);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.mmPayment);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.mmPayment;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	protected RepurchaseType15Choice modificationType;
 	/**
 	 * Identifies the type of securities financing modification requested.
 	 * <p>
@@ -402,18 +408,18 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#ModificationType
-	 * TransactionTypeAndAdditionalParameters17.ModificationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#mmModificationType
+	 * TransactionTypeAndAdditionalParameters17.mmModificationType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#ModificationType
-	 * TransactionTypeAndAdditionalParameters7.ModificationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#mmModificationType
+	 * TransactionTypeAndAdditionalParameters7.mmModificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ModificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmModificationType = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters11.mmObject();
 			isDerived = false;
@@ -421,14 +427,15 @@ public class TransactionTypeAndAdditionalParameters11 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationType";
 			definition = "Identifies the type of securities financing modification requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.ModificationType;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.ModificationType);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.mmModificationType);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.mmModificationType;
 			maxOccurs = 1;
-			type_lazy = () -> RepurchaseType15Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> RepurchaseType15Choice.mmObject();
 		}
 	};
+	protected Max35Text commonIdentification;
 	/**
 	 * Unique reference agreed upon by the two trade counterparties to identify
 	 * the trade.
@@ -442,8 +449,8 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#CommonIdentification
-	 * TradeIdentification.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmCommonIdentification
+	 * TradeIdentification.mmCommonIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -466,33 +473,34 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#CommonIdentification
-	 * TransactionTypeAndAdditionalParameters17.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#mmCommonIdentification
+	 * TransactionTypeAndAdditionalParameters17.mmCommonIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#CommonIdentification
-	 * TransactionTypeAndAdditionalParameters7.CommonIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#mmCommonIdentification
+	 * TransactionTypeAndAdditionalParameters7.mmCommonIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.CommonIdentification;
 			isDerived = false;
 			xmlTag = "CmonId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.CommonIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.CommonIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.mmCommonIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.mmCommonIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text poolIdentification;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -505,8 +513,8 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#PoolIdentification
-	 * SecuritiesTradeIdentification.PoolIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmPoolIdentification
+	 * SecuritiesTradeIdentification.mmPoolIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -527,30 +535,30 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#PoolIdentification
-	 * TransactionTypeAndAdditionalParameters17.PoolIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17#mmPoolIdentification
+	 * TransactionTypeAndAdditionalParameters17.mmPoolIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#PoolIdentification
-	 * TransactionTypeAndAdditionalParameters7.PoolIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7#mmPoolIdentification
+	 * TransactionTypeAndAdditionalParameters7.mmPoolIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> TransactionTypeAndAdditionalParameters11.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.PoolIdentification;
 			isDerived = false;
 			xmlTag = "PoolId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.PoolIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.PoolIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.mmPoolIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.mmPoolIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -558,21 +566,77 @@ public class TransactionTypeAndAdditionalParameters11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.AccountOwnerTransactionIdentification,
-						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.AccountServicerTransactionIdentification,
-						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.SecuritiesFinancingTransactionType, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.Payment,
-						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.ModificationType, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.CommonIdentification,
-						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.PoolIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmAccountOwnerTransactionIdentification,
+						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmAccountServicerTransactionIdentification,
+						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmSecuritiesFinancingTransactionType, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmPayment,
+						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmModificationType, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmCommonIdentification,
+						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmPoolIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV05.mmTransactionTypeAndModificationAdditionalParameters);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV05.TransactionTypeAndModificationAdditionalParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionTypeAndAdditionalParameters11";
 				definition = "Specifies the conditions under which the order/trade is to be settled.";
-				previousVersion_lazy = () -> TransactionTypeAndAdditionalParameters7.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(TransactionTypeAndAdditionalParameters17.mmObject());
+				previousVersion_lazy = () -> TransactionTypeAndAdditionalParameters7.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getAccountOwnerTransactionIdentification() {
+		return accountOwnerTransactionIdentification;
+	}
+
+	public void setAccountOwnerTransactionIdentification(Max35Text accountOwnerTransactionIdentification) {
+		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
+	}
+
+	public Max35Text getAccountServicerTransactionIdentification() {
+		return accountServicerTransactionIdentification;
+	}
+
+	public void setAccountServicerTransactionIdentification(Max35Text accountServicerTransactionIdentification) {
+		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
+	}
+
+	public SecuritiesFinancingTransactionType1Code getSecuritiesFinancingTransactionType() {
+		return securitiesFinancingTransactionType;
+	}
+
+	public void setSecuritiesFinancingTransactionType(SecuritiesFinancingTransactionType1Code securitiesFinancingTransactionType) {
+		this.securitiesFinancingTransactionType = securitiesFinancingTransactionType;
+	}
+
+	public DeliveryReceiptType2Code getPayment() {
+		return payment;
+	}
+
+	public void setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = payment;
+	}
+
+	public RepurchaseType15Choice getModificationType() {
+		return modificationType;
+	}
+
+	public void setModificationType(RepurchaseType15Choice modificationType) {
+		this.modificationType = modificationType;
+	}
+
+	public Max35Text getCommonIdentification() {
+		return commonIdentification;
+	}
+
+	public void setCommonIdentification(Max35Text commonIdentification) {
+		this.commonIdentification = commonIdentification;
+	}
+
+	public Max35Text getPoolIdentification() {
+		return poolIdentification;
+	}
+
+	public void setPoolIdentification(Max35Text poolIdentification) {
+		this.poolIdentification = poolIdentification;
 	}
 }

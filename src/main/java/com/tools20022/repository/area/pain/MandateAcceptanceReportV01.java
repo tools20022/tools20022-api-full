@@ -67,18 +67,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV01#GroupHeader
- * MandateAcceptanceReportV01.GroupHeader}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV01#mmGroupHeader
+ * MandateAcceptanceReportV01.mmGroupHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV01#UnderlyingAcceptanceDetails
- * MandateAcceptanceReportV01.UnderlyingAcceptanceDetails}</li>
+ * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV01#mmUnderlyingAcceptanceDetails
+ * MandateAcceptanceReportV01.mmUnderlyingAcceptanceDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.pain.MandateAcceptanceReportV01#identifier
- * MandateAcceptanceReportV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code pain.012.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,6 +100,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MandateAcceptanceReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected GroupHeader31 groupHeader;
 	/**
 	 * Set of characteristics to identify the message and parties playing a role
 	 * in the mandate acceptance, but which are not part of the mandate.
@@ -127,17 +126,18 @@ public class MandateAcceptanceReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock GroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics to identify the message and parties playing a role in the mandate acceptance, but which are not part of the mandate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader31.mmObject();
 		}
 	};
+	protected MandateAcceptance1 underlyingAcceptanceDetails;
 	/**
 	 * Set of elements used to provide information on the acception or rejection
 	 * of the mandate request.
@@ -164,42 +164,15 @@ public class MandateAcceptanceReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock UnderlyingAcceptanceDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlyingAcceptanceDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygAccptncDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingAcceptanceDetails";
 			definition = "Set of elements used to provide information on the acception or rejection of the mandate request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MandateAcceptance1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "pain"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "012"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "pain";
-			messageFunctionality = "012";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -214,10 +187,33 @@ public class MandateAcceptanceReportV01 {
 				rootElement = "Document";
 				xmlTag = "MndtAccptncRpt";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV01.GroupHeader, com.tools20022.repository.area.pain.MandateAcceptanceReportV01.UnderlyingAcceptanceDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.pain.MandateAcceptanceReportV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV01.mmGroupHeader, com.tools20022.repository.area.pain.MandateAcceptanceReportV01.mmUnderlyingAcceptanceDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "pain";
+						messageFunctionality = "012";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GroupHeader31 getGroupHeader() {
+		return groupHeader;
+	}
+
+	public void setGroupHeader(GroupHeader31 groupHeader) {
+		this.groupHeader = groupHeader;
+	}
+
+	public MandateAcceptance1 getUnderlyingAcceptanceDetails() {
+		return underlyingAcceptanceDetails;
+	}
+
+	public void setUnderlyingAcceptanceDetails(MandateAcceptance1 underlyingAcceptanceDetails) {
+		this.underlyingAcceptanceDetails = underlyingAcceptanceDetails;
 	}
 }

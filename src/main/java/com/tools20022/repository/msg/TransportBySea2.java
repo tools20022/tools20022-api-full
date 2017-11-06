@@ -33,13 +33,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransportBySea2#PortOfLoading
- * TransportBySea2.PortOfLoading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportBySea2#PortOfDischarge
- * TransportBySea2.PortOfDischarge}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportBySea2#VesselName
- * TransportBySea2.VesselName}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportBySea2#mmPortOfLoading
+ * TransportBySea2.mmPortOfLoading}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransportBySea2#mmPortOfDischarge
+ * TransportBySea2.mmPortOfDischarge}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportBySea2#mmVesselName
+ * TransportBySea2.mmVesselName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportBySea2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text portOfLoading;
 	/**
 	 * Identifies the port where the goods are loaded on board the ship.
 	 * <p>
@@ -75,8 +77,8 @@ public class TransportBySea2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
-	 * Transport.PlaceOfDeparture}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+	 * Transport.mmPlaceOfDeparture}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +98,21 @@ public class TransportBySea2 {
 	 * "Identifies the port where the goods are loaded on board the ship."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PortOfLoading = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> TransportBySea2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDeparture;
 			isDerived = false;
 			xmlTag = "PortOfLoadng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortOfLoading";
 			definition = "Identifies the port where the goods are loaded on board the ship.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text portOfDischarge;
 	/**
 	 * Identifies the port where the goods are discharged.
 	 * <p>
@@ -122,8 +125,8 @@ public class TransportBySea2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
-	 * Transport.PlaceOfDestination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+	 * Transport.mmPlaceOfDestination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,20 +145,21 @@ public class TransportBySea2 {
 	 * definition} = "Identifies the port where the goods are discharged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PortOfDischarge = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> TransportBySea2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDestination;
 			isDerived = false;
 			xmlTag = "PortOfDschrge";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortOfDischarge";
 			definition = "Identifies the port where the goods are discharged.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text vesselName;
 	/**
 	 * Name of a vessel.
 	 * <p>
@@ -168,8 +172,8 @@ public class TransportBySea2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TransportBySea#VesselName
-	 * TransportBySea.VesselName}</li>
+	 * {@linkplain com.tools20022.repository.entity.TransportBySea#mmVesselName
+	 * TransportBySea.mmVesselName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,17 +192,17 @@ public class TransportBySea2 {
 	 * definition} = "Name of a vessel."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute VesselName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmVesselName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportBySea.mmVesselName;
 			componentContext_lazy = () -> TransportBySea2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportBySea.VesselName;
 			isDerived = false;
 			xmlTag = "VsslNm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VesselName";
 			definition = "Name of a vessel.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -206,14 +210,39 @@ public class TransportBySea2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea2.PortOfLoading, com.tools20022.repository.msg.TransportBySea2.PortOfDischarge, com.tools20022.repository.msg.TransportBySea2.VesselName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea2.mmPortOfLoading, com.tools20022.repository.msg.TransportBySea2.mmPortOfDischarge,
+						com.tools20022.repository.msg.TransportBySea2.mmVesselName);
 				trace_lazy = () -> TransportBySea.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransportBySea2";
 				definition = "Information related for the transportation of goods by sea.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getPortOfLoading() {
+		return portOfLoading;
+	}
+
+	public void setPortOfLoading(Max35Text portOfLoading) {
+		this.portOfLoading = portOfLoading;
+	}
+
+	public Max35Text getPortOfDischarge() {
+		return portOfDischarge;
+	}
+
+	public void setPortOfDischarge(Max35Text portOfDischarge) {
+		this.portOfDischarge = portOfDischarge;
+	}
+
+	public Max35Text getVesselName() {
+		return vesselName;
+	}
+
+	public void setVesselName(Max35Text vesselName) {
+		this.vesselName = vesselName;
 	}
 }

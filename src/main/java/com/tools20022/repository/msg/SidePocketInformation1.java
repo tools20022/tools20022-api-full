@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SidePocketInformation1#SidePocketInclusionIndicator
- * SidePocketInformation1.SidePocketInclusionIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.SidePocketInformation1#mmSidePocketInclusionIndicator
+ * SidePocketInformation1.mmSidePocketInclusionIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SidePocketInformation1#SidePocketIdentification
- * SidePocketInformation1.SidePocketIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SidePocketInformation1#mmSidePocketIdentification
+ * SidePocketInformation1.mmSidePocketIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SidePocketInformation1#SidePocketQuantity
- * SidePocketInformation1.SidePocketQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.SidePocketInformation1#mmSidePocketQuantity
+ * SidePocketInformation1.mmSidePocketQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,6 +68,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SidePocketInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator sidePocketInclusionIndicator;
 	/**
 	 * Indicates whether the investor wants to participate in the optional side
 	 * pocket.
@@ -82,8 +83,8 @@ public class SidePocketInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SidePocket#SidePocketInclusionIndicator
-	 * SidePocket.SidePocketInclusionIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SidePocket#mmSidePocketInclusionIndicator
+	 * SidePocket.mmSidePocketInclusionIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +105,21 @@ public class SidePocketInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SidePocketInclusionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSidePocketInclusionIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SidePocket.mmSidePocketInclusionIndicator;
 			componentContext_lazy = () -> SidePocketInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SidePocket.SidePocketInclusionIndicator;
 			isDerived = false;
 			xmlTag = "SdPcktInclsnInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketInclusionIndicator";
 			definition = "Indicates whether the investor wants to participate in the optional side pocket.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max35Text sidePocketIdentification;
 	/**
 	 * Identification of the side pocket.
 	 * <p>
@@ -130,8 +132,8 @@ public class SidePocketInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SidePocket#SidePocketIdentification
-	 * SidePocket.SidePocketIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SidePocket#mmSidePocketIdentification
+	 * SidePocket.mmSidePocketIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,20 +152,21 @@ public class SidePocketInformation1 {
 	 * definition} = "Identification of the side pocket."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SidePocketIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSidePocketIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SidePocket.mmSidePocketIdentification;
 			componentContext_lazy = () -> SidePocketInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SidePocket.SidePocketIdentification;
 			isDerived = false;
 			xmlTag = "SdPcktId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketIdentification";
 			definition = "Identification of the side pocket.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected SidePocketUnitsOrAmountOrRate1Choice sidePocketQuantity;
 	/**
 	 * Quantity of the side pocket.
 	 * <p>
@@ -176,8 +179,8 @@ public class SidePocketInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SidePocket#SidePocketQuantity
-	 * SidePocket.SidePocketQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.SidePocket#mmSidePocketQuantity
+	 * SidePocket.mmSidePocketQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,34 +199,58 @@ public class SidePocketInformation1 {
 	 * definition} = "Quantity of the side pocket."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SidePocketQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSidePocketQuantity = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SidePocket.mmSidePocketQuantity;
 			componentContext_lazy = () -> SidePocketInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SidePocket.SidePocketQuantity;
 			isDerived = false;
 			xmlTag = "SdPcktQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketQuantity";
 			definition = "Quantity of the side pocket.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SidePocketInformation1.SidePocketInclusionIndicator, com.tools20022.repository.msg.SidePocketInformation1.SidePocketIdentification,
-						com.tools20022.repository.msg.SidePocketInformation1.SidePocketQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SidePocketInformation1.mmSidePocketInclusionIndicator, com.tools20022.repository.msg.SidePocketInformation1.mmSidePocketIdentification,
+						com.tools20022.repository.msg.SidePocketInformation1.mmSidePocketQuantity);
 				trace_lazy = () -> SidePocket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SidePocketInformation1";
 				definition = "Information that identifies a side pocket in investment fund orders.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getSidePocketInclusionIndicator() {
+		return sidePocketInclusionIndicator;
+	}
+
+	public void setSidePocketInclusionIndicator(YesNoIndicator sidePocketInclusionIndicator) {
+		this.sidePocketInclusionIndicator = sidePocketInclusionIndicator;
+	}
+
+	public Max35Text getSidePocketIdentification() {
+		return sidePocketIdentification;
+	}
+
+	public void setSidePocketIdentification(Max35Text sidePocketIdentification) {
+		this.sidePocketIdentification = sidePocketIdentification;
+	}
+
+	public SidePocketUnitsOrAmountOrRate1Choice getSidePocketQuantity() {
+		return sidePocketQuantity;
+	}
+
+	public void setSidePocketQuantity(SidePocketUnitsOrAmountOrRate1Choice sidePocketQuantity) {
+		this.sidePocketQuantity = sidePocketQuantity;
 	}
 }

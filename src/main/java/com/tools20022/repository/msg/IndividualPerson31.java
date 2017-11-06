@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Person;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Human entity, as distinguished from a corporate entity (which is sometimes
@@ -37,19 +38,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson31#Name
- * IndividualPerson31.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson31#BirthDate
- * IndividualPerson31.BirthDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson31#mmName
+ * IndividualPerson31.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson31#mmBirthDate
+ * IndividualPerson31.mmBirthDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson31#CountryAndResidentialStatus
- * IndividualPerson31.CountryAndResidentialStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson31#mmCountryAndResidentialStatus
+ * IndividualPerson31.mmCountryAndResidentialStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson31#BeneficiaryCertificationCompletion
- * IndividualPerson31.BeneficiaryCertificationCompletion}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson31#mmBeneficiaryCertificationCompletion
+ * IndividualPerson31.mmBeneficiaryCertificationCompletion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualPerson31#OtherIdentification
- * IndividualPerson31.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson31#mmOtherIdentification
+ * IndividualPerson31.mmOtherIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IndividualPerson31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text name;
 	/**
 	 * Name by which the party is known and which is usually used to identify
 	 * that party.
@@ -91,8 +93,8 @@ public class IndividualPerson31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PersonName#BirthName
-	 * PersonName.BirthName}</li>
+	 * {@linkplain com.tools20022.repository.entity.PersonName#mmBirthName
+	 * PersonName.mmBirthName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -114,25 +116,26 @@ public class IndividualPerson31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#Name
-	 * IndividualPerson9.Name}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#mmName
+	 * IndividualPerson9.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmBirthName;
 			componentContext_lazy = () -> IndividualPerson31.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.BirthName;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which the party is known and which is usually used to identify that party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson9.Name;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson9.mmName;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODate birthDate;
 	/**
 	 * Date on which the person is born.
 	 * <p>
@@ -145,8 +148,8 @@ public class IndividualPerson31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#BirthDate
-	 * Person.BirthDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmBirthDate
+	 * Person.mmBirthDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,25 +169,26 @@ public class IndividualPerson31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#BirthDate
-	 * IndividualPerson9.BirthDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#mmBirthDate
+	 * IndividualPerson9.mmBirthDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BirthDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmBirthDate;
 			componentContext_lazy = () -> IndividualPerson31.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.BirthDate;
 			isDerived = false;
 			xmlTag = "BirthDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BirthDate";
 			definition = "Date on which the person is born.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson9.BirthDate;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson9.mmBirthDate;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected CountryAndResidentialStatusType2 countryAndResidentialStatus;
 	/**
 	 * Country and residential status of the individual, for example,
 	 * non-permanent resident.
@@ -199,8 +203,8 @@ public class IndividualPerson31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Person#ResidentialStatus
-	 * Person.ResidentialStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Person#mmResidentialStatus
+	 * Person.mmResidentialStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -222,25 +226,26 @@ public class IndividualPerson31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#CountryAndResidentialStatus
-	 * IndividualPerson9.CountryAndResidentialStatus}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#mmCountryAndResidentialStatus
+	 * IndividualPerson9.mmCountryAndResidentialStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CountryAndResidentialStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountryAndResidentialStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmResidentialStatus;
 			componentContext_lazy = () -> IndividualPerson31.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.ResidentialStatus;
 			isDerived = false;
 			xmlTag = "CtryAndResdtlSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryAndResidentialStatus";
 			definition = "Country and residential status of the individual, for example, non-permanent resident.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson9.CountryAndResidentialStatus;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson9.mmCountryAndResidentialStatus;
 			maxOccurs = 1;
-			complexType_lazy = () -> CountryAndResidentialStatusType2.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType2.mmObject();
 		}
 	};
+	protected BeneficiaryCertificationCompletion1Code beneficiaryCertificationCompletion;
 	/**
 	 * Beneficial owner or its designated agent certifies that it complies with
 	 * any holding or investment restrictions or requirements of the fund.
@@ -255,8 +260,8 @@ public class IndividualPerson31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#BeneficiaryCertificationCompletion
-	 * InvestmentAccountService.BeneficiaryCertificationCompletion}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmBeneficiaryCertificationCompletion
+	 * InvestmentAccountService.mmBeneficiaryCertificationCompletion}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -278,25 +283,26 @@ public class IndividualPerson31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#BeneficiaryCertificationCompletion
-	 * IndividualPerson9.BeneficiaryCertificationCompletion}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#mmBeneficiaryCertificationCompletion
+	 * IndividualPerson9.mmBeneficiaryCertificationCompletion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BeneficiaryCertificationCompletion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBeneficiaryCertificationCompletion = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmBeneficiaryCertificationCompletion;
 			componentContext_lazy = () -> IndividualPerson31.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.BeneficiaryCertificationCompletion;
 			isDerived = false;
 			xmlTag = "BnfcryCertfctnCmpltn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryCertificationCompletion";
 			definition = "Beneficial owner or its designated agent certifies that it complies with any holding or investment restrictions or requirements of the fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson9.BeneficiaryCertificationCompletion;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson9.mmBeneficiaryCertificationCompletion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BeneficiaryCertificationCompletion1Code.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification164> otherIdentification;
 	/**
 	 * Alternative identification, for example, national registration
 	 * identification number, passport number, or an account number used to
@@ -312,8 +318,8 @@ public class IndividualPerson31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -335,34 +341,34 @@ public class IndividualPerson31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#OtherIdentification
-	 * IndividualPerson9.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#mmOtherIdentification
+	 * IndividualPerson9.mmOtherIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> IndividualPerson31.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Alternative identification, for example, national registration identification number, passport number, or an account number used to further identify the beneficial owner, for example, a Central Provident Fund (CFP) account as required for Singapore.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson9.OtherIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson9.mmOtherIdentification;
 			minOccurs = 0;
-			type_lazy = () -> GenericIdentification164.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification164.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson31.Name, com.tools20022.repository.msg.IndividualPerson31.BirthDate,
-						com.tools20022.repository.msg.IndividualPerson31.CountryAndResidentialStatus, com.tools20022.repository.msg.IndividualPerson31.BeneficiaryCertificationCompletion,
-						com.tools20022.repository.msg.IndividualPerson31.OtherIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson31.mmName, com.tools20022.repository.msg.IndividualPerson31.mmBirthDate,
+						com.tools20022.repository.msg.IndividualPerson31.mmCountryAndResidentialStatus, com.tools20022.repository.msg.IndividualPerson31.mmBeneficiaryCertificationCompletion,
+						com.tools20022.repository.msg.IndividualPerson31.mmOtherIdentification);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IndividualPerson31";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
@@ -370,5 +376,45 @@ public class IndividualPerson31 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getName() {
+		return name;
+	}
+
+	public void setName(Max350Text name) {
+		this.name = name;
+	}
+
+	public ISODate getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(ISODate birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public CountryAndResidentialStatusType2 getCountryAndResidentialStatus() {
+		return countryAndResidentialStatus;
+	}
+
+	public void setCountryAndResidentialStatus(com.tools20022.repository.msg.CountryAndResidentialStatusType2 countryAndResidentialStatus) {
+		this.countryAndResidentialStatus = countryAndResidentialStatus;
+	}
+
+	public BeneficiaryCertificationCompletion1Code getBeneficiaryCertificationCompletion() {
+		return beneficiaryCertificationCompletion;
+	}
+
+	public void setBeneficiaryCertificationCompletion(BeneficiaryCertificationCompletion1Code beneficiaryCertificationCompletion) {
+		this.beneficiaryCertificationCompletion = beneficiaryCertificationCompletion;
+	}
+
+	public List<GenericIdentification164> getOtherIdentification() {
+		return otherIdentification;
+	}
+
+	public void setOtherIdentification(List<com.tools20022.repository.msg.GenericIdentification164> otherIdentification) {
+		this.otherIdentification = otherIdentification;
 	}
 }

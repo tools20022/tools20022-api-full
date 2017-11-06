@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceAdjustmentType1Code#Ledger
- * BalanceAdjustmentType1Code.Ledger}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceAdjustmentType1Code#mmLedger
+ * BalanceAdjustmentType1Code.mmLedger}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceAdjustmentType1Code#Float
- * BalanceAdjustmentType1Code.Float}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceAdjustmentType1Code#mmFloat
+ * BalanceAdjustmentType1Code.mmFloat}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceAdjustmentType1Code#Collected
- * BalanceAdjustmentType1Code.Collected}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceAdjustmentType1Code#mmCollected
+ * BalanceAdjustmentType1Code.mmCollected}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class BalanceAdjustmentType1Code extends BalanceAdjustmentTypeCode {
 	 * name} = "Ledger"</li>
 	 * </ul>
 	 */
-	public static final MMCode Ledger = new MMCode() {
+	public static final MMCode mmLedger = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ledger";
@@ -107,7 +107,7 @@ public class BalanceAdjustmentType1Code extends BalanceAdjustmentTypeCode {
 	 * name} = "Float"</li>
 	 * </ul>
 	 */
-	public static final MMCode Float = new MMCode() {
+	public static final MMCode mmFloat = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Float";
@@ -130,7 +130,7 @@ public class BalanceAdjustmentType1Code extends BalanceAdjustmentTypeCode {
 	 * name} = "Collected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Collected = new MMCode() {
+	public static final MMCode mmCollected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collected";
@@ -141,13 +141,13 @@ public class BalanceAdjustmentType1Code extends BalanceAdjustmentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LDGR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BalanceAdjustmentType1Code";
 				definition = "Defines the type of allowed balance adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceAdjustmentType1Code.Ledger, com.tools20022.repository.codeset.BalanceAdjustmentType1Code.Float,
-						com.tools20022.repository.codeset.BalanceAdjustmentType1Code.Collected);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceAdjustmentType1Code.mmLedger, com.tools20022.repository.codeset.BalanceAdjustmentType1Code.mmFloat,
+						com.tools20022.repository.codeset.BalanceAdjustmentType1Code.mmCollected);
 				trace_lazy = () -> BalanceAdjustmentTypeCode.mmObject();
 			}
 		});

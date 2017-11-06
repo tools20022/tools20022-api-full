@@ -38,8 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransportByRail#CarriageIdentification
- * TransportByRail.CarriageIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.TransportByRail#mmCarriageIdentification
+ * TransportByRail.mmCarriageIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,29 +47,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport1#TransportByRail
- * SingleTransport1.TransportByRail}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport1#mmTransportByRail
+ * SingleTransport1.mmTransportByRail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport4#TransportByRail
- * SingleTransport4.TransportByRail}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport4#mmTransportByRail
+ * SingleTransport4.mmTransportByRail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport2#TransportByRail
- * SingleTransport2.TransportByRail}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport2#mmTransportByRail
+ * SingleTransport2.mmTransportByRail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport5#TransportByRail
- * SingleTransport5.TransportByRail}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport5#mmTransportByRail
+ * SingleTransport5.mmTransportByRail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport3#TransportByRail
- * SingleTransport3.TransportByRail}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport3#mmTransportByRail
+ * SingleTransport3.mmTransportByRail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport6#TransportByRail
- * SingleTransport6.TransportByRail}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport6#mmTransportByRail
+ * SingleTransport6.mmTransportByRail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport7#TransportByRail
- * SingleTransport7.TransportByRail}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport7#mmTransportByRail
+ * SingleTransport7.mmTransportByRail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SingleTransport8#TransportByRail
- * SingleTransport8.TransportByRail}</li>
+ * {@linkplain com.tools20022.repository.msg.SingleTransport8#mmTransportByRail
+ * SingleTransport8.mmTransportByRail}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -94,8 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,6 +109,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportByRail extends Transport {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text carriageIdentification;
 	/**
 	 * Identifies the carriage.
 	 * <p>
@@ -134,15 +135,15 @@ public class TransportByRail extends Transport {
 	 * definition} = "Identifies the carriage."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CarriageIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCarriageIdentification = new MMBusinessAttribute() {
 		{
 			elementContext_lazy = () -> TransportByRail.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CarriageIdentification";
 			definition = "Identifies the carriage.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -150,18 +151,26 @@ public class TransportByRail extends Transport {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransportByRail";
 				definition = "Information related to the transportation of goods by rail.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.TransportByRail, com.tools20022.repository.msg.SingleTransport4.TransportByRail,
-						com.tools20022.repository.msg.SingleTransport2.TransportByRail, com.tools20022.repository.msg.SingleTransport5.TransportByRail, com.tools20022.repository.msg.SingleTransport3.TransportByRail,
-						com.tools20022.repository.msg.SingleTransport6.TransportByRail, com.tools20022.repository.msg.SingleTransport7.TransportByRail, com.tools20022.repository.msg.SingleTransport8.TransportByRail);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.mmTransportByRail, com.tools20022.repository.msg.SingleTransport4.mmTransportByRail,
+						com.tools20022.repository.msg.SingleTransport2.mmTransportByRail, com.tools20022.repository.msg.SingleTransport5.mmTransportByRail, com.tools20022.repository.msg.SingleTransport3.mmTransportByRail,
+						com.tools20022.repository.msg.SingleTransport6.mmTransportByRail, com.tools20022.repository.msg.SingleTransport7.mmTransportByRail, com.tools20022.repository.msg.SingleTransport8.mmTransportByRail);
 				superType_lazy = () -> Transport.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransportByRail.CarriageIdentification);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransportByRail.mmCarriageIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(TransportByRail1.mmObject(), TransportByRail3.mmObject(), TransportByRail2.mmObject(), TransportByRail4.mmObject(), TransportByRail5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getCarriageIdentification() {
+		return carriageIdentification;
+	}
+
+	public void setCarriageIdentification(Max35Text carriageIdentification) {
+		this.carriageIdentification = carriageIdentification;
 	}
 }

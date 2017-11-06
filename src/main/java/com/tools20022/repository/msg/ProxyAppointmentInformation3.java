@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.ProxyAppointmentCondition;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Indicates how a proxy is registered.
@@ -36,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation3#RegistrationMethod
- * ProxyAppointmentInformation3.RegistrationMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation3#mmRegistrationMethod
+ * ProxyAppointmentInformation3.mmRegistrationMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation3#Deadline
- * ProxyAppointmentInformation3.Deadline}</li>
+ * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation3#mmDeadline
+ * ProxyAppointmentInformation3.mmDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation3#STPDeadline
- * ProxyAppointmentInformation3.STPDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation3#mmSTPDeadline
+ * ProxyAppointmentInformation3.mmSTPDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation3#MarketDeadline
- * ProxyAppointmentInformation3.MarketDeadline}</li>
+ * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation3#mmMarketDeadline
+ * ProxyAppointmentInformation3.mmMarketDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation3#AuthorisedProxy
- * ProxyAppointmentInformation3.AuthorisedProxy}</li>
+ * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation3#mmAuthorisedProxy
+ * ProxyAppointmentInformation3.mmAuthorisedProxy}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProxyAppointmentInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text registrationMethod;
 	/**
 	 * Specifies how to register the proxy.
 	 * <p>
@@ -90,8 +92,8 @@ public class ProxyAppointmentInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ProxyAppointmentCondition#RegistrationMethod
-	 * ProxyAppointmentCondition.RegistrationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.ProxyAppointmentCondition#mmRegistrationMethod
+	 * ProxyAppointmentCondition.mmRegistrationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,25 +113,26 @@ public class ProxyAppointmentInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation2#RegistrationMethod
-	 * ProxyAppointmentInformation2.RegistrationMethod}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation2#mmRegistrationMethod
+	 * ProxyAppointmentInformation2.mmRegistrationMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RegistrationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRegistrationMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProxyAppointmentCondition.mmRegistrationMethod;
 			componentContext_lazy = () -> ProxyAppointmentInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProxyAppointmentCondition.RegistrationMethod;
 			isDerived = false;
 			xmlTag = "RegnMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationMethod";
 			definition = "Specifies how to register the proxy.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.RegistrationMethod;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.mmRegistrationMethod;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DateFormat29Choice deadline;
 	/**
 	 * Date by which the information on the proxy assignment must be received by
 	 * the intermediary.
@@ -162,11 +165,11 @@ public class ProxyAppointmentInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation2#Deadline
-	 * ProxyAppointmentInformation2.Deadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation2#mmDeadline
+	 * ProxyAppointmentInformation2.mmDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Deadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDeadline = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProxyAppointmentInformation3.mmObject();
 			isDerived = false;
@@ -174,12 +177,13 @@ public class ProxyAppointmentInformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deadline";
 			definition = "Date by which the information on the proxy assignment must be received by the intermediary.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.Deadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.mmDeadline;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	protected DateFormat29Choice sTPDeadline;
 	/**
 	 * Date by which the information on the proxy assignment must be received by
 	 * the intermediary (STP mode).
@@ -212,11 +216,11 @@ public class ProxyAppointmentInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation2#STPDeadline
-	 * ProxyAppointmentInformation2.STPDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation2#mmSTPDeadline
+	 * ProxyAppointmentInformation2.mmSTPDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute STPDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSTPDeadline = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ProxyAppointmentInformation3.mmObject();
 			isDerived = false;
@@ -224,12 +228,13 @@ public class ProxyAppointmentInformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "STPDeadline";
 			definition = "Date by which the information on the proxy assignment must be received by the intermediary (STP mode).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.STPDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.mmSTPDeadline;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	protected DateFormat29Choice marketDeadline;
 	/**
 	 * Date by which the information on the proxy assignment must be received by
 	 * the issuer.
@@ -244,8 +249,8 @@ public class ProxyAppointmentInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Deadline#MarketDeadline
-	 * Deadline.MarketDeadline}</li>
+	 * {@linkplain com.tools20022.repository.entity.Deadline#mmMarketDeadline
+	 * Deadline.mmMarketDeadline}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -267,25 +272,26 @@ public class ProxyAppointmentInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation2#MarketDeadline
-	 * ProxyAppointmentInformation2.MarketDeadline}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation2#mmMarketDeadline
+	 * ProxyAppointmentInformation2.mmMarketDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarketDeadline = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> ProxyAppointmentInformation3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.MarketDeadline;
 			isDerived = false;
 			xmlTag = "MktDdln";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadline";
 			definition = "Date by which the information on the proxy assignment must be received by the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.MarketDeadline;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.mmMarketDeadline;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Proxy5> authorisedProxy;
 	/**
 	 * Specifies the proxy person that is authorised by the issuer.
 	 * <p>
@@ -313,11 +319,11 @@ public class ProxyAppointmentInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation2#AuthorisedProxy
-	 * ProxyAppointmentInformation2.AuthorisedProxy}</li>
+	 * {@linkplain com.tools20022.repository.msg.ProxyAppointmentInformation2#mmAuthorisedProxy
+	 * ProxyAppointmentInformation2.mmAuthorisedProxy}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AuthorisedProxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAuthorisedProxy = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ProxyAppointmentInformation3.mmObject();
 			isDerived = false;
@@ -325,22 +331,22 @@ public class ProxyAppointmentInformation3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedProxy";
 			definition = "Specifies the proxy person that is authorised by the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.AuthorisedProxy;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.mmAuthorisedProxy;
 			maxOccurs = 10;
-			type_lazy = () -> Proxy5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Proxy5.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProxyAppointmentInformation3.RegistrationMethod, com.tools20022.repository.msg.ProxyAppointmentInformation3.Deadline,
-						com.tools20022.repository.msg.ProxyAppointmentInformation3.STPDeadline, com.tools20022.repository.msg.ProxyAppointmentInformation3.MarketDeadline,
-						com.tools20022.repository.msg.ProxyAppointmentInformation3.AuthorisedProxy);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProxyAppointmentInformation3.mmRegistrationMethod, com.tools20022.repository.msg.ProxyAppointmentInformation3.mmDeadline,
+						com.tools20022.repository.msg.ProxyAppointmentInformation3.mmSTPDeadline, com.tools20022.repository.msg.ProxyAppointmentInformation3.mmMarketDeadline,
+						com.tools20022.repository.msg.ProxyAppointmentInformation3.mmAuthorisedProxy);
 				trace_lazy = () -> ProxyAppointmentCondition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProxyAppointmentInformation3";
 				definition = "Indicates how a proxy is registered.";
@@ -348,5 +354,45 @@ public class ProxyAppointmentInformation3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getRegistrationMethod() {
+		return registrationMethod;
+	}
+
+	public void setRegistrationMethod(Max350Text registrationMethod) {
+		this.registrationMethod = registrationMethod;
+	}
+
+	public DateFormat29Choice getDeadline() {
+		return deadline;
+	}
+
+	public void setDeadline(DateFormat29Choice deadline) {
+		this.deadline = deadline;
+	}
+
+	public DateFormat29Choice getSTPDeadline() {
+		return sTPDeadline;
+	}
+
+	public void setSTPDeadline(DateFormat29Choice sTPDeadline) {
+		this.sTPDeadline = sTPDeadline;
+	}
+
+	public DateFormat29Choice getMarketDeadline() {
+		return marketDeadline;
+	}
+
+	public void setMarketDeadline(DateFormat29Choice marketDeadline) {
+		this.marketDeadline = marketDeadline;
+	}
+
+	public List<Proxy5> getAuthorisedProxy() {
+		return authorisedProxy;
+	}
+
+	public void setAuthorisedProxy(List<com.tools20022.repository.msg.Proxy5> authorisedProxy) {
+		this.authorisedProxy = authorisedProxy;
 	}
 }

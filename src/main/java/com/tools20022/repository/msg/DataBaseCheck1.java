@@ -33,17 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DataBaseCheck1#DatabaseCheck
- * DataBaseCheck1.DatabaseCheck}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DataBaseCheck1#Identification
- * DataBaseCheck1.Identification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DataBaseCheck1#mmDatabaseCheck
+ * DataBaseCheck1.mmDatabaseCheck}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DataBaseCheck1#mmIdentification
+ * DataBaseCheck1.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DataBaseCheck1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected YesNoIndicator databaseCheck;
 	/**
 	 * Indicates whether the individual or organisation is listed in an on-line
 	 * global Know Your Customer (KYC) database.
@@ -87,7 +89,7 @@ public class DataBaseCheck1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DatabaseCheck = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDatabaseCheck = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataBaseCheck1.mmObject();
 			isDerived = false;
@@ -95,11 +97,12 @@ public class DataBaseCheck1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatabaseCheck";
 			definition = "Indicates whether the individual or organisation is listed in an on-line global Know Your Customer (KYC) database.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max35Text identification;
 	/**
 	 * Identification of the database.
 	 * <p>
@@ -126,7 +129,7 @@ public class DataBaseCheck1 {
 	 * definition} = "Identification of the database."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> DataBaseCheck1.mmObject();
 			isDerived = false;
@@ -134,8 +137,8 @@ public class DataBaseCheck1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the database.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -143,13 +146,29 @@ public class DataBaseCheck1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataBaseCheck1.DatabaseCheck, com.tools20022.repository.msg.DataBaseCheck1.Identification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataBaseCheck1.mmDatabaseCheck, com.tools20022.repository.msg.DataBaseCheck1.mmIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataBaseCheck1";
 				definition = "Information about a database.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public YesNoIndicator getDatabaseCheck() {
+		return databaseCheck;
+	}
+
+	public void setDatabaseCheck(YesNoIndicator databaseCheck) {
+		this.databaseCheck = databaseCheck;
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
 	}
 }

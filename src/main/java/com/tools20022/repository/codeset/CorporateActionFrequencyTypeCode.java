@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode#Final
- * CorporateActionFrequencyTypeCode.Final}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode#mmFinal
+ * CorporateActionFrequencyTypeCode.mmFinal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode#Interim
- * CorporateActionFrequencyTypeCode.Interim}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode#mmInterim
+ * CorporateActionFrequencyTypeCode.mmInterim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode#Regular
- * CorporateActionFrequencyTypeCode.Regular}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode#mmRegular
+ * CorporateActionFrequencyTypeCode.mmRegular}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode#Special
- * CorporateActionFrequencyTypeCode.Special}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode#mmSpecial
+ * CorporateActionFrequencyTypeCode.mmSpecial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode#FundCashDistributionReinvestment
- * CorporateActionFrequencyTypeCode.FundCashDistributionReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode#mmFundCashDistributionReinvestment
+ * CorporateActionFrequencyTypeCode.mmFundCashDistributionReinvestment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -60,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -106,7 +106,7 @@ public class CorporateActionFrequencyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Final";
@@ -138,7 +138,7 @@ public class CorporateActionFrequencyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Interim = new MMCode() {
+	public static final MMCode mmInterim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Interim";
@@ -169,7 +169,7 @@ public class CorporateActionFrequencyTypeCode {
 	 * "Dividend paid at regular interval, for example, quarterly."</li>
 	 * </ul>
 	 */
-	public static final MMCode Regular = new MMCode() {
+	public static final MMCode mmRegular = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Regular";
@@ -201,7 +201,7 @@ public class CorporateActionFrequencyTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Special = new MMCode() {
+	public static final MMCode mmSpecial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Special";
@@ -232,7 +232,7 @@ public class CorporateActionFrequencyTypeCode {
 	 * "Automatic Reinvestment of Cash distributed by accumulating funds."</li>
 	 * </ul>
 	 */
-	public static final MMCode FundCashDistributionReinvestment = new MMCode() {
+	public static final MMCode mmFundCashDistributionReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCashDistributionReinvestment";
@@ -245,14 +245,14 @@ public class CorporateActionFrequencyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FINL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionFrequencyTypeCode";
 				definition = "Automatic Reinvestment of Cash distributed by accumulating funds.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode.Final, com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode.Interim,
-						com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode.Regular, com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode.Special,
-						com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode.FundCashDistributionReinvestment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode.mmFinal, com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode.mmInterim,
+						com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode.mmRegular, com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode.mmSpecial,
+						com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode.mmFundCashDistributionReinvestment);
 				derivation_lazy = () -> Arrays.asList(CorporateActionFrequencyType1Code.mmObject(), CorporateActionFrequencyType2Code.mmObject());
 			}
 		});

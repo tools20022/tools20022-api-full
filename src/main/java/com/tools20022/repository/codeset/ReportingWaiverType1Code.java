@@ -34,30 +34,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#NegotiatedTransactionInIlliquidFinancialInstrument
- * ReportingWaiverType1Code.NegotiatedTransactionInIlliquidFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#mmNegotiatedTransactionInIlliquidFinancialInstrument
+ * ReportingWaiverType1Code.mmNegotiatedTransactionInIlliquidFinancialInstrument
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#NegotiatedTransactionInLiquidFinancialInstrument
- * ReportingWaiverType1Code.NegotiatedTransactionInLiquidFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#mmNegotiatedTransactionInLiquidFinancialInstrument
+ * ReportingWaiverType1Code.mmNegotiatedTransactionInLiquidFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#NegotiatedTransactionWithConditions
- * ReportingWaiverType1Code.NegotiatedTransactionWithConditions}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#mmNegotiatedTransactionWithConditions
+ * ReportingWaiverType1Code.mmNegotiatedTransactionWithConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#IlliquidInstrumentTransaction
- * ReportingWaiverType1Code.IlliquidInstrumentTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#mmIlliquidInstrumentTransaction
+ * ReportingWaiverType1Code.mmIlliquidInstrumentTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#ReferencePriceTransaction
- * ReportingWaiverType1Code.ReferencePriceTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#mmReferencePriceTransaction
+ * ReportingWaiverType1Code.mmReferencePriceTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#AboveSpecificSizeTransaction
- * ReportingWaiverType1Code.AboveSpecificSizeTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType1Code#mmAboveSpecificSizeTransaction
+ * ReportingWaiverType1Code.mmAboveSpecificSizeTransaction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +88,7 @@ public class ReportingWaiverType1Code extends ReportingWaiverTypeCode {
 	 * name} = "NegotiatedTransactionInIlliquidFinancialInstrument"</li>
 	 * </ul>
 	 */
-	public static final MMCode NegotiatedTransactionInIlliquidFinancialInstrument = new MMCode() {
+	public static final MMCode mmNegotiatedTransactionInIlliquidFinancialInstrument = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiatedTransactionInIlliquidFinancialInstrument";
@@ -110,7 +111,7 @@ public class ReportingWaiverType1Code extends ReportingWaiverTypeCode {
 	 * name} = "NegotiatedTransactionInLiquidFinancialInstrument"</li>
 	 * </ul>
 	 */
-	public static final MMCode NegotiatedTransactionInLiquidFinancialInstrument = new MMCode() {
+	public static final MMCode mmNegotiatedTransactionInLiquidFinancialInstrument = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiatedTransactionInLiquidFinancialInstrument";
@@ -133,7 +134,7 @@ public class ReportingWaiverType1Code extends ReportingWaiverTypeCode {
 	 * name} = "NegotiatedTransactionWithConditions"</li>
 	 * </ul>
 	 */
-	public static final MMCode NegotiatedTransactionWithConditions = new MMCode() {
+	public static final MMCode mmNegotiatedTransactionWithConditions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiatedTransactionWithConditions";
@@ -156,7 +157,7 @@ public class ReportingWaiverType1Code extends ReportingWaiverTypeCode {
 	 * name} = "IlliquidInstrumentTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode IlliquidInstrumentTransaction = new MMCode() {
+	public static final MMCode mmIlliquidInstrumentTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IlliquidInstrumentTransaction";
@@ -179,7 +180,7 @@ public class ReportingWaiverType1Code extends ReportingWaiverTypeCode {
 	 * name} = "ReferencePriceTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReferencePriceTransaction = new MMCode() {
+	public static final MMCode mmReferencePriceTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferencePriceTransaction";
@@ -202,7 +203,7 @@ public class ReportingWaiverType1Code extends ReportingWaiverTypeCode {
 	 * name} = "AboveSpecificSizeTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode AboveSpecificSizeTransaction = new MMCode() {
+	public static final MMCode mmAboveSpecificSizeTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AboveSpecificSizeTransaction";
@@ -213,14 +214,14 @@ public class ReportingWaiverType1Code extends ReportingWaiverTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportingWaiverType1Code";
 				definition = "Specifies the type of regulatory reporting pre-trade waiver.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportingWaiverType1Code.NegotiatedTransactionInIlliquidFinancialInstrument,
-						com.tools20022.repository.codeset.ReportingWaiverType1Code.NegotiatedTransactionInLiquidFinancialInstrument, com.tools20022.repository.codeset.ReportingWaiverType1Code.NegotiatedTransactionWithConditions,
-						com.tools20022.repository.codeset.ReportingWaiverType1Code.IlliquidInstrumentTransaction, com.tools20022.repository.codeset.ReportingWaiverType1Code.ReferencePriceTransaction,
-						com.tools20022.repository.codeset.ReportingWaiverType1Code.AboveSpecificSizeTransaction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportingWaiverType1Code.mmNegotiatedTransactionInIlliquidFinancialInstrument,
+						com.tools20022.repository.codeset.ReportingWaiverType1Code.mmNegotiatedTransactionInLiquidFinancialInstrument, com.tools20022.repository.codeset.ReportingWaiverType1Code.mmNegotiatedTransactionWithConditions,
+						com.tools20022.repository.codeset.ReportingWaiverType1Code.mmIlliquidInstrumentTransaction, com.tools20022.repository.codeset.ReportingWaiverType1Code.mmReferencePriceTransaction,
+						com.tools20022.repository.codeset.ReportingWaiverType1Code.mmAboveSpecificSizeTransaction);
 				trace_lazy = () -> ReportingWaiverTypeCode.mmObject();
 			}
 		});

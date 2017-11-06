@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProductIdentifier2Choice#StructuredProductIdentifier
- * ProductIdentifier2Choice.StructuredProductIdentifier}</li>
+ * {@linkplain com.tools20022.repository.choice.ProductIdentifier2Choice#mmStructuredProductIdentifier
+ * ProductIdentifier2Choice.mmStructuredProductIdentifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ProductIdentifier2Choice#OtherProductIdentifier
- * ProductIdentifier2Choice.OtherProductIdentifier}</li>
+ * {@linkplain com.tools20022.repository.choice.ProductIdentifier2Choice#mmOtherProductIdentifier
+ * ProductIdentifier2Choice.mmOtherProductIdentifier}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProductIdentifier2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ProductIdentifier2 structuredProductIdentifier;
 	/**
 	 * Specifies the type of product identifier.
 	 * <p>
@@ -94,21 +95,22 @@ public class ProductIdentifier2Choice {
 	 * definition} = "Specifies the type of product identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StructuredProductIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStructuredProductIdentifier = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ProductIdentifier2Choice.mmObject();
 			businessComponentTrace_lazy = () -> ProductIdentification.mmObject();
+			componentContext_lazy = () -> ProductIdentifier2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StrdPdctIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredProductIdentifier";
 			definition = "Specifies the type of product identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProductIdentifier2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ProductIdentifier2.mmObject();
 		}
 	};
+	protected GenericIdentification4 otherProductIdentifier;
 	/**
 	 * Specifies the type of product identifier not present in the code list.
 	 * <p>
@@ -141,33 +143,49 @@ public class ProductIdentifier2Choice {
 	 * "Specifies the type of product identifier not present in the code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherProductIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherProductIdentifier = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ProductIdentifier2Choice.mmObject();
 			businessComponentTrace_lazy = () -> ProductIdentification.mmObject();
+			componentContext_lazy = () -> ProductIdentifier2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPdctIdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProductIdentifier";
 			definition = "Specifies the type of product identifier not present in the code list.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductIdentifier2Choice.StructuredProductIdentifier, com.tools20022.repository.choice.ProductIdentifier2Choice.OtherProductIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductIdentifier2Choice.mmStructuredProductIdentifier, com.tools20022.repository.choice.ProductIdentifier2Choice.mmOtherProductIdentifier);
 				trace_lazy = () -> ProductIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProductIdentifier2Choice";
 				definition = "Identifies a product in coded form or free text.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ProductIdentifier2 getStructuredProductIdentifier() {
+		return structuredProductIdentifier;
+	}
+
+	public void setStructuredProductIdentifier(ProductIdentifier2 structuredProductIdentifier) {
+		this.structuredProductIdentifier = structuredProductIdentifier;
+	}
+
+	public GenericIdentification4 getOtherProductIdentifier() {
+		return otherProductIdentifier;
+	}
+
+	public void setOtherProductIdentifier(GenericIdentification4 otherProductIdentifier) {
+		this.otherProductIdentifier = otherProductIdentifier;
 	}
 }

@@ -33,15 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradingDateCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingDate1Code#Various
- * TradingDate1Code.Various}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingDate1Code#mmVarious
+ * TradingDate1Code.mmVarious}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +77,7 @@ public class TradingDate1Code extends TradingDateCode {
 	 * name} = "Various"</li>
 	 * </ul>
 	 */
-	public static final MMCode Various = new MMCode() {
+	public static final MMCode mmVarious = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Various";
@@ -88,12 +88,12 @@ public class TradingDate1Code extends TradingDateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VARI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingDate1Code";
 				definition = "Trading Date Code";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingDate1Code.Various);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingDate1Code.mmVarious);
 				trace_lazy = () -> TradingDateCode.mmObject();
 			}
 		});

@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralBalance1#HeldByPartyA
- * CollateralBalance1.HeldByPartyA}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralBalance1#mmHeldByPartyA
+ * CollateralBalance1.mmHeldByPartyA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralBalance1#HeldByPartyB
- * CollateralBalance1.HeldByPartyB}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralBalance1#mmHeldByPartyB
+ * CollateralBalance1.mmHeldByPartyB}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CollateralBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount heldByPartyA;
 	/**
 	 * Collateral currently held by party A.
 	 * <p>
@@ -76,8 +77,8 @@ public class CollateralBalance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#HeldAmount
-	 * CollateralBalance.HeldAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmHeldAmount
+	 * CollateralBalance.mmHeldAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,20 +97,21 @@ public class CollateralBalance1 {
 	 * definition} = "Collateral currently held by party A."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HeldByPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHeldByPartyA = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> CollateralBalance1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.HeldAmount;
 			isDerived = false;
 			xmlTag = "HeldByPtyA";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeldByPartyA";
 			definition = "Collateral currently held by party A.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount heldByPartyB;
 	/**
 	 * Collateral currently held by party B.
 	 * <p>
@@ -123,8 +125,8 @@ public class CollateralBalance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#HeldAmount
-	 * CollateralBalance.HeldAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CollateralBalance#mmHeldAmount
+	 * CollateralBalance.mmHeldAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,17 +145,17 @@ public class CollateralBalance1 {
 	 * definition} = "Collateral currently held by party B."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HeldByPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHeldByPartyB = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> CollateralBalance1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.HeldAmount;
 			isDerived = false;
 			xmlTag = "HeldByPtyB";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeldByPartyB";
 			definition = "Collateral currently held by party B.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
@@ -161,14 +163,30 @@ public class CollateralBalance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralBalance1.HeldByPartyA, com.tools20022.repository.msg.CollateralBalance1.HeldByPartyB);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralBalance1.mmHeldByPartyA, com.tools20022.repository.msg.CollateralBalance1.mmHeldByPartyB);
 				trace_lazy = () -> CollateralBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CollateralBalance1";
 				definition = "Provides details about the collateral held by party A and/or B.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getHeldByPartyA() {
+		return heldByPartyA;
+	}
+
+	public void setHeldByPartyA(ActiveCurrencyAndAmount heldByPartyA) {
+		this.heldByPartyA = heldByPartyA;
+	}
+
+	public ActiveCurrencyAndAmount getHeldByPartyB() {
+		return heldByPartyB;
+	}
+
+	public void setHeldByPartyB(ActiveCurrencyAndAmount heldByPartyB) {
+		this.heldByPartyB = heldByPartyB;
 	}
 }

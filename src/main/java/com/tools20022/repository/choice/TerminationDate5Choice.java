@@ -31,17 +31,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.TerminationDate5Choice#Date
- * TerminationDate5Choice.Date}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TerminationDate5Choice#Code
- * TerminationDate5Choice.Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TerminationDate5Choice#mmDate
+ * TerminationDate5Choice.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TerminationDate5Choice#mmCode
+ * TerminationDate5Choice.mmCode}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TerminationDate5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DateAndDateTimeChoice date;
 	/**
 	 * Date in ISO format.
 	 * <p>
@@ -83,7 +86,7 @@ public class TerminationDate5Choice {
 	 * definition} = "Date in ISO format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminationDate5Choice.mmObject();
 			isDerived = false;
@@ -91,11 +94,12 @@ public class TerminationDate5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	protected DateCode32Choice code;
 	/**
 	 * Closing date/time or maturity date/time of the transaction expressed as
 	 * an ISO 20022 code.
@@ -127,7 +131,7 @@ public class TerminationDate5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TerminationDate5Choice.mmObject();
 			isDerived = false;
@@ -135,22 +139,38 @@ public class TerminationDate5Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Closing date/time or maturity date/time of the transaction expressed as an ISO 20022 code.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DateCode32Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.DateCode32Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TerminationDate5Choice.Date, com.tools20022.repository.choice.TerminationDate5Choice.Code);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TerminationDate5Choice.mmDate, com.tools20022.repository.choice.TerminationDate5Choice.mmCode);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminationDate5Choice";
 				definition = "Choice of format for the termination date.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateAndDateTimeChoice getDate() {
+		return date;
+	}
+
+	public void setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+		this.date = date;
+	}
+
+	public DateCode32Choice getCode() {
+		return code;
+	}
+
+	public void setCode(com.tools20022.repository.choice.DateCode32Choice code) {
+		this.code = code;
 	}
 }

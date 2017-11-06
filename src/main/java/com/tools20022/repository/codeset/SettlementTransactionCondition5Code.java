@@ -34,25 +34,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition5Code#PartialAllowed
- * SettlementTransactionCondition5Code.PartialAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition5Code#mmPartialAllowed
+ * SettlementTransactionCondition5Code.mmPartialAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition5Code#PartialNotAllowed
- * SettlementTransactionCondition5Code.PartialNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition5Code#mmPartialNotAllowed
+ * SettlementTransactionCondition5Code.mmPartialNotAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition5Code#PartialSettlementCashThresholdAllowed
- * SettlementTransactionCondition5Code.PartialSettlementCashThresholdAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition5Code#mmPartialSettlementCashThresholdAllowed
+ * SettlementTransactionCondition5Code.mmPartialSettlementCashThresholdAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition5Code#PartialSettlementQuantityThresholdAllowed
- * SettlementTransactionCondition5Code.PartialSettlementQuantityThresholdAllowed
- * }</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition5Code#mmPartialSettlementQuantityThresholdAllowed
+ * SettlementTransactionCondition5Code.
+ * mmPartialSettlementQuantityThresholdAllowed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +89,7 @@ public class SettlementTransactionCondition5Code extends SettlementTransactionCo
 	 * name} = "PartialAllowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialAllowed = new MMCode() {
+	public static final MMCode mmPartialAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialAllowed";
@@ -112,7 +112,7 @@ public class SettlementTransactionCondition5Code extends SettlementTransactionCo
 	 * name} = "PartialNotAllowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialNotAllowed = new MMCode() {
+	public static final MMCode mmPartialNotAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialNotAllowed";
@@ -135,7 +135,7 @@ public class SettlementTransactionCondition5Code extends SettlementTransactionCo
 	 * name} = "PartialSettlementCashThresholdAllowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialSettlementCashThresholdAllowed = new MMCode() {
+	public static final MMCode mmPartialSettlementCashThresholdAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementCashThresholdAllowed";
@@ -158,7 +158,7 @@ public class SettlementTransactionCondition5Code extends SettlementTransactionCo
 	 * name} = "PartialSettlementQuantityThresholdAllowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartialSettlementQuantityThresholdAllowed = new MMCode() {
+	public static final MMCode mmPartialSettlementQuantityThresholdAllowed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementQuantityThresholdAllowed";
@@ -169,14 +169,14 @@ public class SettlementTransactionCondition5Code extends SettlementTransactionCo
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PART");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementTransactionCondition5Code";
 				definition = "Specifies the conditions under which the order/trade is to be settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementTransactionCondition5Code.PartialAllowed, com.tools20022.repository.codeset.SettlementTransactionCondition5Code.PartialNotAllowed,
-						com.tools20022.repository.codeset.SettlementTransactionCondition5Code.PartialSettlementCashThresholdAllowed,
-						com.tools20022.repository.codeset.SettlementTransactionCondition5Code.PartialSettlementQuantityThresholdAllowed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementTransactionCondition5Code.mmPartialAllowed, com.tools20022.repository.codeset.SettlementTransactionCondition5Code.mmPartialNotAllowed,
+						com.tools20022.repository.codeset.SettlementTransactionCondition5Code.mmPartialSettlementCashThresholdAllowed,
+						com.tools20022.repository.codeset.SettlementTransactionCondition5Code.mmPartialSettlementQuantityThresholdAllowed);
 				trace_lazy = () -> SettlementTransactionConditionCode.mmObject();
 			}
 		});

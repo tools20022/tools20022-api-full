@@ -96,24 +96,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#Assignment
- * AdditionalPaymentInformationV03.Assignment}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#mmAssignment
+ * AdditionalPaymentInformationV03.mmAssignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#Case
- * AdditionalPaymentInformationV03.Case}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#mmCase
+ * AdditionalPaymentInformationV03.mmCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#Underlying
- * AdditionalPaymentInformationV03.Underlying}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#mmUnderlying
+ * AdditionalPaymentInformationV03.mmUnderlying}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#Information
- * AdditionalPaymentInformationV03.Information}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#mmInformation
+ * AdditionalPaymentInformationV03.mmInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV03#identifier
- * AdditionalPaymentInformationV03.identifier}</li>
+ * messageDefinitionIdentifier} = {@code camt.028.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -137,6 +135,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalPaymentInformationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected CaseAssignment2 assignment;
 	/**
 	 * Identifies the assignment of an investigation case from an assigner to an
 	 * assignee. Usage: The Assigner must be the sender of this confirmation and
@@ -163,17 +162,18 @@ public class AdditionalPaymentInformationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Assignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 	};
+	protected Case2 case_;
 	/**
 	 * Identifies the investigation case.
 	 * <p>
@@ -195,17 +195,18 @@ public class AdditionalPaymentInformationV03 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Case = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Case2.mmObject();
 		}
 	};
+	protected UnderlyingTransaction1Choice underlying;
 	/**
 	 * Identifies the underlying payment instruction.
 	 * <p>
@@ -229,17 +230,18 @@ public class AdditionalPaymentInformationV03 {
 	 * definition} = "Identifies the underlying payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Underlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the underlying payment instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction1Choice.mmObject();
 		}
 	};
+	protected PaymentComplementaryInformation2 information;
 	/**
 	 * Additional information to the underlying payment instruction.
 	 * <p>
@@ -264,42 +266,15 @@ public class AdditionalPaymentInformationV03 {
 	 * "Additional information to the underlying payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Information = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Inf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
 			definition = "Additional information to the underlying payment instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PaymentComplementaryInformation2.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "03"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "camt"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "028"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "camt";
-			messageFunctionality = "028";
-			version = "03";
-			flavour = "001";
 		}
 	};
 
@@ -314,11 +289,50 @@ public class AdditionalPaymentInformationV03 {
 				rootElement = "Document";
 				xmlTag = "AddtlPmtInf";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.Assignment, com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.Case,
-						com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.Underlying, com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.Information);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.mmAssignment, com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.mmCase,
+						com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.mmUnderlying, com.tools20022.repository.area.camt.AdditionalPaymentInformationV03.mmInformation);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "camt";
+						messageFunctionality = "028";
+						version = "03";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CaseAssignment2 getAssignment() {
+		return assignment;
+	}
+
+	public void setAssignment(CaseAssignment2 assignment) {
+		this.assignment = assignment;
+	}
+
+	public Case2 getCase() {
+		return case_;
+	}
+
+	public void setCase(Case2 case_) {
+		this.case_ = case_;
+	}
+
+	public UnderlyingTransaction1Choice getUnderlying() {
+		return underlying;
+	}
+
+	public void setUnderlying(UnderlyingTransaction1Choice underlying) {
+		this.underlying = underlying;
+	}
+
+	public PaymentComplementaryInformation2 getInformation() {
+		return information;
+	}
+
+	public void setInformation(PaymentComplementaryInformation2 information) {
+		this.information = information;
 	}
 }

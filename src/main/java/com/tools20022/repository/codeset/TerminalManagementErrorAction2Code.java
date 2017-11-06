@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction2Code#SendStatusReport
- * TerminalManagementErrorAction2Code.SendStatusReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction2Code#mmSendStatusReport
+ * TerminalManagementErrorAction2Code.mmSendStatusReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction2Code#StopSequence
- * TerminalManagementErrorAction2Code.StopSequence}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction2Code#mmStopSequence
+ * TerminalManagementErrorAction2Code.mmStopSequence}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class TerminalManagementErrorAction2Code extends TerminalManagementErrorA
 	 * name} = "SendStatusReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode SendStatusReport = new MMCode() {
+	public static final MMCode mmSendStatusReport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendStatusReport";
@@ -106,7 +106,7 @@ public class TerminalManagementErrorAction2Code extends TerminalManagementErrorA
 	 * name} = "StopSequence"</li>
 	 * </ul>
 	 */
-	public static final MMCode StopSequence = new MMCode() {
+	public static final MMCode mmStopSequence = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopSequence";
@@ -117,12 +117,12 @@ public class TerminalManagementErrorAction2Code extends TerminalManagementErrorA
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SDSR");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementErrorAction2Code";
 				definition = "Action to perform in case of error during the maintenance action in progress.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.SendStatusReport, com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.StopSequence);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.mmSendStatusReport, com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.mmStopSequence);
 				trace_lazy = () -> TerminalManagementErrorActionCode.mmObject();
 			}
 		});

@@ -36,18 +36,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#AcquirerIdentification
- * CardPaymentEnvironment44.AcquirerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#mmAcquirerIdentification
+ * CardPaymentEnvironment44.mmAcquirerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#MerchantIdentification
- * CardPaymentEnvironment44.MerchantIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#POI
- * CardPaymentEnvironment44.POI}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#Card
- * CardPaymentEnvironment44.Card}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#mmMerchantIdentification
+ * CardPaymentEnvironment44.mmMerchantIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#mmPOI
+ * CardPaymentEnvironment44.mmPOI}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#CardholderLanguage
- * CardPaymentEnvironment44.CardholderLanguage}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#mmCard
+ * CardPaymentEnvironment44.mmCard}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#mmCardholderLanguage
+ * CardPaymentEnvironment44.mmCardholderLanguage}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CardPaymentEnvironment44 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification53 acquirerIdentification;
 	/**
 	 * Acquirer involved in the card payment transaction.
 	 * <p>
@@ -115,34 +117,35 @@ public class CardPaymentEnvironment44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#AcquirerIdentification
-	 * CardPaymentEnvironment56.AcquirerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#mmAcquirerIdentification
+	 * CardPaymentEnvironment56.mmAcquirerIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#AcquirerIdentification
-	 * CardPaymentEnvironment30.AcquirerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#mmAcquirerIdentification
+	 * CardPaymentEnvironment30.mmAcquirerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AcquirerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAcquirerIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentEnvironment44.mmObject();
 			businessComponentTrace_lazy = () -> AcquirerRole.mmObject();
+			componentContext_lazy = () -> CardPaymentEnvironment44.mmObject();
 			isDerived = false;
 			xmlTag = "AcqrrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerIdentification";
 			definition = "Acquirer involved in the card payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment30.AcquirerIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment56.AcquirerIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment56.mmAcquirerIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment30.mmAcquirerIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification53.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification53.mmObject();
 		}
 	};
+	protected GenericIdentification53 merchantIdentification;
 	/**
 	 * Merchant involved in the card payment transaction.
 	 * <p>
@@ -155,8 +158,8 @@ public class CardPaymentEnvironment44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -177,34 +180,35 @@ public class CardPaymentEnvironment44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#MerchantIdentification
-	 * CardPaymentEnvironment56.MerchantIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#mmMerchantIdentification
+	 * CardPaymentEnvironment56.mmMerchantIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#MerchantIdentification
-	 * CardPaymentEnvironment30.MerchantIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#mmMerchantIdentification
+	 * CardPaymentEnvironment30.mmMerchantIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MerchantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMerchantIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> CardPaymentEnvironment44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "MrchntId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantIdentification";
 			definition = "Merchant involved in the card payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment30.MerchantIdentification;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment56.MerchantIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment56.mmMerchantIdentification);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment30.mmMerchantIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification53.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification53.mmObject();
 		}
 	};
+	protected PointOfInteraction4 pOI;
 	/**
 	 * Point of interaction (POI) performing the transaction.
 	 * <p>
@@ -218,8 +222,8 @@ public class CardPaymentEnvironment44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#PointOfInteraction
-	 * CardPaymentAcquiring.PointOfInteraction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmPointOfInteraction
+	 * CardPaymentAcquiring.mmPointOfInteraction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -240,33 +244,34 @@ public class CardPaymentEnvironment44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#POI
-	 * CardPaymentEnvironment56.POI}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#mmPOI
+	 * CardPaymentEnvironment56.mmPOI}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#POI
-	 * CardPaymentEnvironment30.POI}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#mmPOI
+	 * CardPaymentEnvironment30.mmPOI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute POI = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPOI = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> CardPaymentEnvironment44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.PointOfInteraction;
 			isDerived = false;
 			xmlTag = "POI";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POI";
 			definition = "Point of interaction (POI) performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment30.POI;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment56.POI);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment56.mmPOI);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment30.mmPOI;
 			maxOccurs = 1;
-			complexType_lazy = () -> PointOfInteraction4.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteraction4.mmObject();
 		}
 	};
+	protected PaymentCard9 card;
 	/**
 	 * Payment card performing the transaction.
 	 * <p>
@@ -279,8 +284,8 @@ public class CardPaymentEnvironment44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CardPayment#PaymentCard
-	 * CardPayment.PaymentCard}</li>
+	 * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCard
+	 * CardPayment.mmPaymentCard}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -301,33 +306,34 @@ public class CardPaymentEnvironment44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#Card
-	 * CardPaymentEnvironment56.Card}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#mmCard
+	 * CardPaymentEnvironment56.mmCard}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#Card
-	 * CardPaymentEnvironment30.Card}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#mmCard
+	 * CardPaymentEnvironment30.mmCard}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Card = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCard = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> CardPaymentEnvironment44.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.PaymentCard;
 			isDerived = false;
 			xmlTag = "Card";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "Payment card performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment30.Card;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment56.Card);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment56.mmCard);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment30.mmCard;
 			maxOccurs = 1;
-			complexType_lazy = () -> PaymentCard9.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.PaymentCard9.mmObject();
 		}
 	};
+	protected LanguageCode cardholderLanguage;
 	/**
 	 * Language selected for the cardholder interface during the transaction.<br>
 	 * Reference: ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).
@@ -360,18 +366,18 @@ public class CardPaymentEnvironment44 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#CardholderLanguage
-	 * CardPaymentEnvironment56.CardholderLanguage}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#mmCardholderLanguage
+	 * CardPaymentEnvironment56.mmCardholderLanguage}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#CardholderLanguage
-	 * CardPaymentEnvironment30.CardholderLanguage}</li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#mmCardholderLanguage
+	 * CardPaymentEnvironment30.mmCardholderLanguage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CardholderLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCardholderLanguage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CardPaymentEnvironment44.mmObject();
 			isDerived = false;
@@ -379,10 +385,10 @@ public class CardPaymentEnvironment44 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderLanguage";
 			definition = "Language selected for the cardholder interface during the transaction.\r\nReference: ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment30.CardholderLanguage;
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment56.CardholderLanguage);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment56.mmCardholderLanguage);
+			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment30.mmCardholderLanguage;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
@@ -390,17 +396,57 @@ public class CardPaymentEnvironment44 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment44.AcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment44.MerchantIdentification,
-						com.tools20022.repository.msg.CardPaymentEnvironment44.POI, com.tools20022.repository.msg.CardPaymentEnvironment44.Card, com.tools20022.repository.msg.CardPaymentEnvironment44.CardholderLanguage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment44.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment44.mmMerchantIdentification,
+						com.tools20022.repository.msg.CardPaymentEnvironment44.mmPOI, com.tools20022.repository.msg.CardPaymentEnvironment44.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment44.mmCardholderLanguage);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentEnvironment44";
 				definition = "Environment of the transaction.";
-				previousVersion_lazy = () -> CardPaymentEnvironment30.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment56.mmObject());
+				previousVersion_lazy = () -> CardPaymentEnvironment30.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification53 getAcquirerIdentification() {
+		return acquirerIdentification;
+	}
+
+	public void setAcquirerIdentification(com.tools20022.repository.msg.GenericIdentification53 acquirerIdentification) {
+		this.acquirerIdentification = acquirerIdentification;
+	}
+
+	public GenericIdentification53 getMerchantIdentification() {
+		return merchantIdentification;
+	}
+
+	public void setMerchantIdentification(com.tools20022.repository.msg.GenericIdentification53 merchantIdentification) {
+		this.merchantIdentification = merchantIdentification;
+	}
+
+	public PointOfInteraction4 getPOI() {
+		return pOI;
+	}
+
+	public void setPOI(com.tools20022.repository.msg.PointOfInteraction4 pOI) {
+		this.pOI = pOI;
+	}
+
+	public PaymentCard9 getCard() {
+		return card;
+	}
+
+	public void setCard(com.tools20022.repository.msg.PaymentCard9 card) {
+		this.card = card;
+	}
+
+	public LanguageCode getCardholderLanguage() {
+		return cardholderLanguage;
+	}
+
+	public void setCardholderLanguage(LanguageCode cardholderLanguage) {
+		this.cardholderLanguage = cardholderLanguage;
 	}
 }

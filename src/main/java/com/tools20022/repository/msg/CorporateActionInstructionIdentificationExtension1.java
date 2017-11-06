@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInstructionIdentificationExtension1#PlaceAndName
- * CorporateActionInstructionIdentificationExtension1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInstructionIdentificationExtension1#mmPlaceAndName
+ * CorporateActionInstructionIdentificationExtension1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInstructionIdentificationExtension1#EntryDate
- * CorporateActionInstructionIdentificationExtension1.EntryDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInstructionIdentificationExtension1#mmEntryDate
+ * CorporateActionInstructionIdentificationExtension1.mmEntryDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionInstructionIdentificationExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -89,7 +90,7 @@ public class CorporateActionInstructionIdentificationExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionInstructionIdentificationExtension1.mmObject();
 			isDerived = false;
@@ -97,11 +98,12 @@ public class CorporateActionInstructionIdentificationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ISODate entryDate;
 	/**
 	 * Date at which the transaction was submitted.
 	 * <p>
@@ -129,7 +131,7 @@ public class CorporateActionInstructionIdentificationExtension1 {
 	 * definition} = "Date at which the transaction was submitted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EntryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionInstructionIdentificationExtension1.mmObject();
 			isDerived = false;
@@ -137,8 +139,8 @@ public class CorporateActionInstructionIdentificationExtension1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDate";
 			definition = "Date at which the transaction was submitted.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -146,14 +148,30 @@ public class CorporateActionInstructionIdentificationExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructionIdentificationExtension1.PlaceAndName,
-						com.tools20022.repository.msg.CorporateActionInstructionIdentificationExtension1.EntryDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructionIdentificationExtension1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionInstructionIdentificationExtension1.mmEntryDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructionIdentificationExtension1";
 				definition = "Provides additional information regarding corporate action instruction identification.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ISODate getEntryDate() {
+		return entryDate;
+	}
+
+	public void setEntryDate(ISODate entryDate) {
+		this.entryDate = entryDate;
 	}
 }

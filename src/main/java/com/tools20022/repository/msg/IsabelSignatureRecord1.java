@@ -34,30 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#SignatureType
- * IsabelSignatureRecord1.SignatureType}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#mmSignatureType
+ * IsabelSignatureRecord1.mmSignatureType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#SerialNumber
- * IsabelSignatureRecord1.SerialNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#mmSerialNumber
+ * IsabelSignatureRecord1.mmSerialNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#Certificate
- * IsabelSignatureRecord1.Certificate}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#mmCertificate
+ * IsabelSignatureRecord1.mmCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#Signature
- * IsabelSignatureRecord1.Signature}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#mmSignature
+ * IsabelSignatureRecord1.mmSignature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#Algorithm
- * IsabelSignatureRecord1.Algorithm}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#mmAlgorithm
+ * IsabelSignatureRecord1.mmAlgorithm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#SignerIdentification
- * IsabelSignatureRecord1.SignerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord1#mmSignerIdentification
+ * IsabelSignatureRecord1.mmSignerIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IsabelSignatureRecord1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SignatureOriginType1Code signatureType;
 	/**
 	 * Type of the signature.
 	 * <p>
@@ -108,13 +109,13 @@ public class IsabelSignatureRecord1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#SignatureType
-	 * IsabelSignatureRecord2.SignatureType}</li>
+	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#mmSignatureType
+	 * IsabelSignatureRecord2.mmSignatureType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SignatureType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignatureType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
@@ -122,12 +123,13 @@ public class IsabelSignatureRecord1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureType";
 			definition = "Type of the signature.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.SignatureType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmSignatureType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SignatureOriginType1Code.mmObject();
 		}
 	};
+	protected Max20AlphaNumericText serialNumber;
 	/**
 	 * Serial number of the certificate.
 	 * <p>
@@ -158,13 +160,13 @@ public class IsabelSignatureRecord1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#SerialNumber
-	 * IsabelSignatureRecord2.SerialNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#mmSerialNumber
+	 * IsabelSignatureRecord2.mmSerialNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
@@ -172,12 +174,13 @@ public class IsabelSignatureRecord1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerialNumber";
 			definition = "Serial number of the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.SerialNumber);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmSerialNumber);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max20AlphaNumericText.mmObject();
 		}
 	};
+	protected Max4kBinary certificate;
 	/**
 	 * Electronic document which uses a digital signature to bind together a
 	 * public key with an identity.
@@ -210,13 +213,13 @@ public class IsabelSignatureRecord1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#Certificate
-	 * IsabelSignatureRecord2.Certificate}</li>
+	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#mmCertificate
+	 * IsabelSignatureRecord2.mmCertificate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Certificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
@@ -224,12 +227,13 @@ public class IsabelSignatureRecord1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Electronic document which uses a digital signature to bind together a public key with an identity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.Certificate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmCertificate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4kBinary.mmObject();
 		}
 	};
+	protected Max1kBinary signature;
 	/**
 	 * Mathematical scheme for demonstrating the authenticity of a digital
 	 * message or document.
@@ -262,13 +266,13 @@ public class IsabelSignatureRecord1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#Signature
-	 * IsabelSignatureRecord2.Signature}</li>
+	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#mmSignature
+	 * IsabelSignatureRecord2.mmSignature}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Signature = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignature = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
@@ -276,12 +280,13 @@ public class IsabelSignatureRecord1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Mathematical scheme for demonstrating the authenticity of a digital message or document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.Signature);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmSignature);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max1kBinary.mmObject();
 		}
 	};
+	protected Max105Text algorithm;
 	/**
 	 * Effective method for calculating the signature using a finite sequence of
 	 * instructions.
@@ -314,13 +319,13 @@ public class IsabelSignatureRecord1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#Algorithm
-	 * IsabelSignatureRecord2.Algorithm}</li>
+	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#mmAlgorithm
+	 * IsabelSignatureRecord2.mmAlgorithm}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Algorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
@@ -328,12 +333,13 @@ public class IsabelSignatureRecord1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Effective method for calculating the signature using a finite sequence of instructions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.Algorithm);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmAlgorithm);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	protected Max13AlphaNumericText signerIdentification;
 	/**
 	 * Unique identification of the signer that issued the signature.
 	 * <p>
@@ -365,13 +371,13 @@ public class IsabelSignatureRecord1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#SignerIdentification
-	 * IsabelSignatureRecord2.SignerIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.IsabelSignatureRecord2#mmSignerIdentification
+	 * IsabelSignatureRecord2.mmSignerIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SignerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignerIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
@@ -379,9 +385,9 @@ public class IsabelSignatureRecord1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignerIdentification";
 			definition = "Unique identification of the signer that issued the signature.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.SignerIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmSignerIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
@@ -389,10 +395,10 @@ public class IsabelSignatureRecord1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord1.SignatureType, com.tools20022.repository.msg.IsabelSignatureRecord1.SerialNumber,
-						com.tools20022.repository.msg.IsabelSignatureRecord1.Certificate, com.tools20022.repository.msg.IsabelSignatureRecord1.Signature, com.tools20022.repository.msg.IsabelSignatureRecord1.Algorithm,
-						com.tools20022.repository.msg.IsabelSignatureRecord1.SignerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord1.mmSignatureType, com.tools20022.repository.msg.IsabelSignatureRecord1.mmSerialNumber,
+						com.tools20022.repository.msg.IsabelSignatureRecord1.mmCertificate, com.tools20022.repository.msg.IsabelSignatureRecord1.mmSignature, com.tools20022.repository.msg.IsabelSignatureRecord1.mmAlgorithm,
+						com.tools20022.repository.msg.IsabelSignatureRecord1.mmSignerIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelSignatureRecord1";
 				definition = "Specifies the individual record of the file signature.";
@@ -400,5 +406,53 @@ public class IsabelSignatureRecord1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SignatureOriginType1Code getSignatureType() {
+		return signatureType;
+	}
+
+	public void setSignatureType(SignatureOriginType1Code signatureType) {
+		this.signatureType = signatureType;
+	}
+
+	public Max20AlphaNumericText getSerialNumber() {
+		return serialNumber;
+	}
+
+	public void setSerialNumber(Max20AlphaNumericText serialNumber) {
+		this.serialNumber = serialNumber;
+	}
+
+	public Max4kBinary getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(Max4kBinary certificate) {
+		this.certificate = certificate;
+	}
+
+	public Max1kBinary getSignature() {
+		return signature;
+	}
+
+	public void setSignature(Max1kBinary signature) {
+		this.signature = signature;
+	}
+
+	public Max105Text getAlgorithm() {
+		return algorithm;
+	}
+
+	public void setAlgorithm(Max105Text algorithm) {
+		this.algorithm = algorithm;
+	}
+
+	public Max13AlphaNumericText getSignerIdentification() {
+		return signerIdentification;
+	}
+
+	public void setSignerIdentification(Max13AlphaNumericText signerIdentification) {
+		this.signerIdentification = signerIdentification;
 	}
 }

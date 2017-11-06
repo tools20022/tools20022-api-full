@@ -32,17 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ProfitAndLoss1Choice#Profit
- * ProfitAndLoss1Choice.Profit}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ProfitAndLoss1Choice#Loss
- * ProfitAndLoss1Choice.Loss}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ProfitAndLoss1Choice#mmProfit
+ * ProfitAndLoss1Choice.mmProfit}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ProfitAndLoss1Choice#mmLoss
+ * ProfitAndLoss1Choice.mmLoss}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ProfitAndLoss1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAnd13DecimalAmount profit;
 	/**
 	 * Value of the positive amount.
 	 * <p>
@@ -76,8 +78,8 @@ public class ProfitAndLoss1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#InterimProfitAmount
-	 * InvestmentFundOrderExecution.InterimProfitAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmInterimProfitAmount
+	 * InvestmentFundOrderExecution.mmInterimProfitAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -98,27 +100,28 @@ public class ProfitAndLoss1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProfitAndLoss2Choice#Profit
-	 * ProfitAndLoss2Choice.Profit}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProfitAndLoss2Choice#mmProfit
+	 * ProfitAndLoss2Choice.mmProfit}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Profit = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProfit = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInterimProfitAmount;
 			componentContext_lazy = () -> ProfitAndLoss1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.InterimProfitAmount;
 			isDerived = false;
 			xmlTag = "Prft";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Profit";
 			definition = "Value of the positive amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProfitAndLoss2Choice.Profit);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProfitAndLoss2Choice.mmProfit);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount loss;
 	/**
 	 * Value of the negative amount.
 	 * <p>
@@ -132,8 +135,8 @@ public class ProfitAndLoss1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#InterimProfitAmount
-	 * InvestmentFundOrderExecution.InterimProfitAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmInterimProfitAmount
+	 * InvestmentFundOrderExecution.mmInterimProfitAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,24 +157,24 @@ public class ProfitAndLoss1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.ProfitAndLoss2Choice#Loss
-	 * ProfitAndLoss2Choice.Loss}</li>
+	 * {@linkplain com.tools20022.repository.choice.ProfitAndLoss2Choice#mmLoss
+	 * ProfitAndLoss2Choice.mmLoss}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Loss = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLoss = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInterimProfitAmount;
 			componentContext_lazy = () -> ProfitAndLoss1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.InterimProfitAmount;
 			isDerived = false;
 			xmlTag = "Loss";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loss";
 			definition = "Value of the negative amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProfitAndLoss2Choice.Loss);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProfitAndLoss2Choice.mmLoss);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
@@ -179,8 +182,8 @@ public class ProfitAndLoss1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProfitAndLoss1Choice.Profit, com.tools20022.repository.choice.ProfitAndLoss1Choice.Loss);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProfitAndLoss1Choice.mmProfit, com.tools20022.repository.choice.ProfitAndLoss1Choice.mmLoss);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProfitAndLoss1Choice";
 				definition = "Choice between profit and loss.";
@@ -188,5 +191,21 @@ public class ProfitAndLoss1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getProfit() {
+		return profit;
+	}
+
+	public void setProfit(ActiveCurrencyAnd13DecimalAmount profit) {
+		this.profit = profit;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getLoss() {
+		return loss;
+	}
+
+	public void setLoss(ActiveCurrencyAnd13DecimalAmount loss) {
+		this.loss = loss;
 	}
 }

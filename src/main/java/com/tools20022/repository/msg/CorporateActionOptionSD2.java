@@ -35,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD2#PlaceAndName
- * CorporateActionOptionSD2.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD2#mmPlaceAndName
+ * CorporateActionOptionSD2.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD2#ExtendedOptionFeatures
- * CorporateActionOptionSD2.ExtendedOptionFeatures}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD2#mmExtendedOptionFeatures
+ * CorporateActionOptionSD2.mmExtendedOptionFeatures}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD2#DefaultOptionFlag
- * CorporateActionOptionSD2.DefaultOptionFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD2#mmDefaultOptionFlag
+ * CorporateActionOptionSD2.mmDefaultOptionFlag}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD2#DTCTaxControlNumberRequiredFlag
- * CorporateActionOptionSD2.DTCTaxControlNumberRequiredFlag}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOptionSD2#mmDTCTaxControlNumberRequiredFlag
+ * CorporateActionOptionSD2.mmDTCTaxControlNumberRequiredFlag}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionOptionSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -101,7 +102,7 @@ public class CorporateActionOptionSD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD2.mmObject();
 			isDerived = false;
@@ -109,11 +110,12 @@ public class CorporateActionOptionSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected ExtendedOptionFeature1Code extendedOptionFeatures;
 	/**
 	 * Used for options that have particular proprietary feature that cannot be
 	 * represented in standard ISO message.
@@ -145,7 +147,7 @@ public class CorporateActionOptionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExtendedOptionFeatures = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExtendedOptionFeatures = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD2.mmObject();
 			isDerived = false;
@@ -153,11 +155,12 @@ public class CorporateActionOptionSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedOptionFeatures";
 			definition = "Used for options that have particular proprietary feature that cannot be represented in standard ISO message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedOptionFeature1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator defaultOptionFlag;
 	/**
 	 * Identifies whether the option is declared as default by the issuer /
 	 * offeror, and will be treated as default by the issuer / offeror if no
@@ -190,7 +193,7 @@ public class CorporateActionOptionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DefaultOptionFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDefaultOptionFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD2.mmObject();
 			isDerived = false;
@@ -198,11 +201,12 @@ public class CorporateActionOptionSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionFlag";
 			definition = "Identifies whether the option is declared as default by the issuer / offeror,  and will be treated as default by the issuer / offeror if no elections is made.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator dTCTaxControlNumberRequiredFlag;
 	/**
 	 * Certain tax authorities provide control numbers to investors to instruct
 	 * on Foreign Tax Relief service at DTC (The Depository Trust Corporation).
@@ -236,7 +240,7 @@ public class CorporateActionOptionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DTCTaxControlNumberRequiredFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDTCTaxControlNumberRequiredFlag = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionOptionSD2.mmObject();
 			isDerived = false;
@@ -244,8 +248,8 @@ public class CorporateActionOptionSD2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCTaxControlNumberRequiredFlag";
 			definition = "Certain tax authorities provide control numbers to investors to instruct on Foreign Tax Relief service at DTC (The Depository Trust Corporation). This flag notes which events have these requirements and requires the DTC participant to input the control numbers.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -253,9 +257,9 @@ public class CorporateActionOptionSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD2.PlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD2.ExtendedOptionFeatures,
-						com.tools20022.repository.msg.CorporateActionOptionSD2.DefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD2.DTCTaxControlNumberRequiredFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD2.mmExtendedOptionFeatures,
+						com.tools20022.repository.msg.CorporateActionOptionSD2.mmDefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD2.mmDTCTaxControlNumberRequiredFlag);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSD2";
 				definition = "Provides additional information regarding corporate action option details.";
@@ -263,5 +267,37 @@ public class CorporateActionOptionSD2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public ExtendedOptionFeature1Code getExtendedOptionFeatures() {
+		return extendedOptionFeatures;
+	}
+
+	public void setExtendedOptionFeatures(ExtendedOptionFeature1Code extendedOptionFeatures) {
+		this.extendedOptionFeatures = extendedOptionFeatures;
+	}
+
+	public YesNoIndicator getDefaultOptionFlag() {
+		return defaultOptionFlag;
+	}
+
+	public void setDefaultOptionFlag(YesNoIndicator defaultOptionFlag) {
+		this.defaultOptionFlag = defaultOptionFlag;
+	}
+
+	public YesNoIndicator getDTCTaxControlNumberRequiredFlag() {
+		return dTCTaxControlNumberRequiredFlag;
+	}
+
+	public void setDTCTaxControlNumberRequiredFlag(YesNoIndicator dTCTaxControlNumberRequiredFlag) {
+		this.dTCTaxControlNumberRequiredFlag = dTCTaxControlNumberRequiredFlag;
 	}
 }

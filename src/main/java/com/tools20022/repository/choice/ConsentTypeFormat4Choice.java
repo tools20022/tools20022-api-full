@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ConsentTypeFormat4Choice#Code
- * ConsentTypeFormat4Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.ConsentTypeFormat4Choice#mmCode
+ * ConsentTypeFormat4Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ConsentTypeFormat4Choice#Proprietary
- * ConsentTypeFormat4Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.ConsentTypeFormat4Choice#mmProprietary
+ * ConsentTypeFormat4Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ConsentTypeFormat4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected ConsentType1Code code;
 	/**
 	 * Standard code to specify the consent type required.
 	 * <p>
@@ -84,8 +85,8 @@ public class ConsentTypeFormat4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#ConsentType
-	 * CorporateActionEvent.ConsentType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmConsentType
+	 * CorporateActionEvent.mmConsentType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,25 +106,26 @@ public class ConsentTypeFormat4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ConsentTypeFormat1Choice#Code
-	 * ConsentTypeFormat1Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.ConsentTypeFormat1Choice#mmCode
+	 * ConsentTypeFormat1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmConsentType;
 			componentContext_lazy = () -> ConsentTypeFormat4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.ConsentType;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the consent type required.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ConsentTypeFormat1Choice.Code;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ConsentTypeFormat1Choice.mmCode;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ConsentType1Code.mmObject();
 		}
 	};
+	protected GenericIdentification30 proprietary;
 	/**
 	 * Proprietary identification of the consent type.
 	 * <p>
@@ -136,8 +138,8 @@ public class ConsentTypeFormat4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#ConsentType
-	 * CorporateActionEvent.ConsentType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmConsentType
+	 * CorporateActionEvent.mmConsentType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,33 +159,33 @@ public class ConsentTypeFormat4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.ConsentTypeFormat1Choice#Proprietary
-	 * ConsentTypeFormat1Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.ConsentTypeFormat1Choice#mmProprietary
+	 * ConsentTypeFormat1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmConsentType;
 			componentContext_lazy = () -> ConsentTypeFormat4Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.ConsentType;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the consent type.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ConsentTypeFormat1Choice.Proprietary;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.ConsentTypeFormat1Choice.mmProprietary;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification30.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification30.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConsentTypeFormat4Choice.Code, com.tools20022.repository.choice.ConsentTypeFormat4Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConsentTypeFormat4Choice.mmCode, com.tools20022.repository.choice.ConsentTypeFormat4Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ConsentTypeFormat4Choice";
 				definition = "Choice between a standard code or proprietary code to specify the consent type format required.";
@@ -191,5 +193,21 @@ public class ConsentTypeFormat4Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ConsentType1Code getCode() {
+		return code;
+	}
+
+	public void setCode(ConsentType1Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification30 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

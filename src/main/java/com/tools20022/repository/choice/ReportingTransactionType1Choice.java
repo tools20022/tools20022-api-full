@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.SecuritiesTransactionReport4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between a new or a cancellation transaction.
@@ -36,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportingTransactionType1Choice#New
- * ReportingTransactionType1Choice.New}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportingTransactionType1Choice#mmNew
+ * ReportingTransactionType1Choice.mmNew}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportingTransactionType1Choice#Cancellation
- * ReportingTransactionType1Choice.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportingTransactionType1Choice#mmCancellation
+ * ReportingTransactionType1Choice.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ReportingTransactionType1Choice#SupplementaryData
- * ReportingTransactionType1Choice.SupplementaryData}</li>
+ * {@linkplain com.tools20022.repository.choice.ReportingTransactionType1Choice#mmSupplementaryData
+ * ReportingTransactionType1Choice.mmSupplementaryData}</li>
  * </ul>
  * </li>
  * <li>
@@ -51,15 +52,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01#Transaction
- * FinancialInstrumentReportingTransactionReportV01.Transaction}</li>
+ * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01#mmTransaction
+ * FinancialInstrumentReportingTransactionReportV01.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportingTransactionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SecuritiesTransactionReport4 new_;
 	/**
 	 * Transaction is a newly reported transaction.
 	 * <p>
@@ -105,21 +107,22 @@ public class ReportingTransactionType1Choice {
 	 * definition} = "Transaction is a newly reported transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd New = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNew = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportingTransactionType1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTransaction.mmObject();
+			componentContext_lazy = () -> ReportingTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "New";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
 			definition = "Transaction is a newly reported transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTransactionReport4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesTransactionReport4.mmObject();
 		}
 	};
+	protected SecuritiesTransactionReport2 cancellation;
 	/**
 	 * Transaction is a cancellation transaction.
 	 * <p>
@@ -152,21 +155,22 @@ public class ReportingTransactionType1Choice {
 	 * definition} = "Transaction is a cancellation transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Cancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportingTransactionType1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesTransaction.mmObject();
+			componentContext_lazy = () -> ReportingTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cxl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			definition = "Transaction is a cancellation transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesTransactionReport2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SecuritiesTransactionReport2.mmObject();
 		}
 	};
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * Additional information that can not be captured in the structured fields
 	 * and/or any other specific block.
@@ -196,7 +200,7 @@ public class ReportingTransactionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ReportingTransactionType1Choice.mmObject();
 			isDerived = false;
@@ -205,23 +209,47 @@ public class ReportingTransactionType1Choice {
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
-			type_lazy = () -> SupplementaryData1.mmObject();
 			isComposite = true;
+			type_lazy = () -> SupplementaryData1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportingTransactionType1Choice.New, com.tools20022.repository.choice.ReportingTransactionType1Choice.Cancellation,
-						com.tools20022.repository.choice.ReportingTransactionType1Choice.SupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01.Transaction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportingTransactionType1Choice.mmNew, com.tools20022.repository.choice.ReportingTransactionType1Choice.mmCancellation,
+						com.tools20022.repository.choice.ReportingTransactionType1Choice.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01.mmTransaction);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportingTransactionType1Choice";
 				definition = "Choice between a new or a cancellation transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SecuritiesTransactionReport4 getNew() {
+		return new_;
+	}
+
+	public void setNew(SecuritiesTransactionReport4 new_) {
+		this.new_ = new_;
+	}
+
+	public SecuritiesTransactionReport2 getCancellation() {
+		return cancellation;
+	}
+
+	public void setCancellation(SecuritiesTransactionReport2 cancellation) {
+		this.cancellation = cancellation;
+	}
+
+	public List<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData;
+	}
+
+	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = supplementaryData;
 	}
 }

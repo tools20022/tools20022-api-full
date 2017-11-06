@@ -113,8 +113,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
- * GeneratedRepository.catalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
+ * GeneratedRepository.mmcatalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -135,7 +135,7 @@ public class ATMInterfaceforTransactionProcessingandATMManagementISOLatestversio
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.catalogue;
+				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATM Interface for Transaction Processing and ATM Management - ISO - Latest version";
 				definition = "Messages that support any card related Automated Teller Machine (ATM) transactions, card related terminal management services and services between an ATM equipment and an ATM acquirer. These services include cash withdrawals, kiosk functions and card account management transactions. It includes the new candidate versions of the MessageDefinitions that have been impacted by the unscheduled maintenance (CR #0533) and were approved by the Cards Standards Evaluation Group as ISO 20022 MessageDefinitions on 6 April 2016.";

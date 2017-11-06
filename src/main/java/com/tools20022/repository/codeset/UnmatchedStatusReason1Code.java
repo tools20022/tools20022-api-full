@@ -30,123 +30,123 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#MatchingInstructionNotFound
- * UnmatchedStatusReason1Code.MatchingInstructionNotFound}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmMatchingInstructionNotFound
+ * UnmatchedStatusReason1Code.mmMatchingInstructionNotFound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementSettlementDate
- * UnmatchedStatusReason1Code.DisagreementSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementSettlementDate
+ * UnmatchedStatusReason1Code.mmDisagreementSettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementDirectionOfTrade
- * UnmatchedStatusReason1Code.DisagreementDirectionOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementDirectionOfTrade
+ * UnmatchedStatusReason1Code.mmDisagreementDirectionOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementPlaceOfSettlement
- * UnmatchedStatusReason1Code.DisagreementPlaceOfSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementPlaceOfSettlement
+ * UnmatchedStatusReason1Code.mmDisagreementPlaceOfSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementSettlementAmount
- * UnmatchedStatusReason1Code.DisagreementSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementSettlementAmount
+ * UnmatchedStatusReason1Code.mmDisagreementSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementDealPrice
- * UnmatchedStatusReason1Code.DisagreementDealPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementDealPrice
+ * UnmatchedStatusReason1Code.mmDisagreementDealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementQuantity
- * UnmatchedStatusReason1Code.DisagreementQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementQuantity
+ * UnmatchedStatusReason1Code.mmDisagreementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementRepurchaseCallDelay
- * UnmatchedStatusReason1Code.DisagreementRepurchaseCallDelay}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementRepurchaseCallDelay
+ * UnmatchedStatusReason1Code.mmDisagreementRepurchaseCallDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementSettlementTransaction
- * UnmatchedStatusReason1Code.DisagreementSettlementTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementSettlementTransaction
+ * UnmatchedStatusReason1Code.mmDisagreementSettlementTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementSecurity
- * UnmatchedStatusReason1Code.DisagreementSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementSecurity
+ * UnmatchedStatusReason1Code.mmDisagreementSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementVariableRateSupport
- * UnmatchedStatusReason1Code.DisagreementVariableRateSupport}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementVariableRateSupport
+ * UnmatchedStatusReason1Code.mmDisagreementVariableRateSupport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#NotRecognised
- * UnmatchedStatusReason1Code.NotRecognised}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmNotRecognised
+ * UnmatchedStatusReason1Code.mmNotRecognised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementRepurchaseSpreadRate
- * UnmatchedStatusReason1Code.DisagreementRepurchaseSpreadRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementRepurchaseSpreadRate
+ * UnmatchedStatusReason1Code.mmDisagreementRepurchaseSpreadRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementRepurchaseRate
- * UnmatchedStatusReason1Code.DisagreementRepurchaseRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementRepurchaseRate
+ * UnmatchedStatusReason1Code.mmDisagreementRepurchaseRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#CounterpartyTooLateForMatching
- * UnmatchedStatusReason1Code.CounterpartyTooLateForMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmCounterpartyTooLateForMatching
+ * UnmatchedStatusReason1Code.mmCounterpartyTooLateForMatching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementRepurchaseRateType
- * UnmatchedStatusReason1Code.DisagreementRepurchaseRateType}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementRepurchaseRateType
+ * UnmatchedStatusReason1Code.mmDisagreementRepurchaseRateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementRepurchaseAmount
- * UnmatchedStatusReason1Code.DisagreementRepurchaseAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementRepurchaseAmount
+ * UnmatchedStatusReason1Code.mmDisagreementRepurchaseAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementRepurchasePremiumAmount
- * UnmatchedStatusReason1Code.DisagreementRepurchasePremiumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementRepurchasePremiumAmount
+ * UnmatchedStatusReason1Code.mmDisagreementRepurchasePremiumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementPhysicalSettlement
- * UnmatchedStatusReason1Code.DisagreementPhysicalSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementPhysicalSettlement
+ * UnmatchedStatusReason1Code.mmDisagreementPhysicalSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementCommonReference
- * UnmatchedStatusReason1Code.DisagreementCommonReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementCommonReference
+ * UnmatchedStatusReason1Code.mmDisagreementCommonReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementPaymentCode
- * UnmatchedStatusReason1Code.DisagreementPaymentCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementPaymentCode
+ * UnmatchedStatusReason1Code.mmDisagreementPaymentCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementPlaceOfTrade
- * UnmatchedStatusReason1Code.DisagreementPlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementPlaceOfTrade
+ * UnmatchedStatusReason1Code.mmDisagreementPlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#PossibleDuplicateInstruction
- * UnmatchedStatusReason1Code.PossibleDuplicateInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmPossibleDuplicateInstruction
+ * UnmatchedStatusReason1Code.mmPossibleDuplicateInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementForfeitRepurchaseamount
- * UnmatchedStatusReason1Code.DisagreementForfeitRepurchaseamount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementForfeitRepurchaseamount
+ * UnmatchedStatusReason1Code.mmDisagreementForfeitRepurchaseamount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementRegistrationDetails
- * UnmatchedStatusReason1Code.DisagreementRegistrationDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementRegistrationDetails
+ * UnmatchedStatusReason1Code.mmDisagreementRegistrationDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementRTGSSystem
- * UnmatchedStatusReason1Code.DisagreementRTGSSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementRTGSSystem
+ * UnmatchedStatusReason1Code.mmDisagreementRTGSSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#IncorrectAgent
- * UnmatchedStatusReason1Code.IncorrectAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmIncorrectAgent
+ * UnmatchedStatusReason1Code.mmIncorrectAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#CounterpartyCancelledInstruction
- * UnmatchedStatusReason1Code.CounterpartyCancelledInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmCounterpartyCancelledInstruction
+ * UnmatchedStatusReason1Code.mmCounterpartyCancelledInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementChargesAmount
- * UnmatchedStatusReason1Code.DisagreementChargesAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementChargesAmount
+ * UnmatchedStatusReason1Code.mmDisagreementChargesAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#IncorrectBuyerOrSeller
- * UnmatchedStatusReason1Code.IncorrectBuyerOrSeller}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmIncorrectBuyerOrSeller
+ * UnmatchedStatusReason1Code.mmIncorrectBuyerOrSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementCurrencySettlementAmount
- * UnmatchedStatusReason1Code.DisagreementCurrencySettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementCurrencySettlementAmount
+ * UnmatchedStatusReason1Code.mmDisagreementCurrencySettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#NoMatchingStarted
- * UnmatchedStatusReason1Code.NoMatchingStarted}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmNoMatchingStarted
+ * UnmatchedStatusReason1Code.mmNoMatchingStarted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementSafekeepingAccount
- * UnmatchedStatusReason1Code.DisagreementSafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementSafekeepingAccount
+ * UnmatchedStatusReason1Code.mmDisagreementSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementTradeDate
- * UnmatchedStatusReason1Code.DisagreementTradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementTradeDate
+ * UnmatchedStatusReason1Code.mmDisagreementTradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#YourInstructionTooLateForMatching
- * UnmatchedStatusReason1Code.YourInstructionTooLateForMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmYourInstructionTooLateForMatching
+ * UnmatchedStatusReason1Code.mmYourInstructionTooLateForMatching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementClosingDateTime
- * UnmatchedStatusReason1Code.DisagreementClosingDateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementClosingDateTime
+ * UnmatchedStatusReason1Code.mmDisagreementClosingDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#DisagreementReceivingOrDeliveringCustodian
- * UnmatchedStatusReason1Code.DisagreementReceivingOrDeliveringCustodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReason1Code#mmDisagreementReceivingOrDeliveringCustodian
+ * UnmatchedStatusReason1Code.mmDisagreementReceivingOrDeliveringCustodian}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -189,7 +189,7 @@ public class UnmatchedStatusReason1Code {
 	 * "Matching instruction from the counterparty could not be found."</li>
 	 * </ul>
 	 */
-	public static final MMCode MatchingInstructionNotFound = new MMCode() {
+	public static final MMCode mmMatchingInstructionNotFound = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "MatchingInstructionNotFound";
@@ -219,7 +219,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Counterparty disagrees with the settlement date/time."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementSettlementDate = new MMCode() {
+	public static final MMCode mmDisagreementSettlementDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementSettlementDate";
@@ -252,7 +252,7 @@ public class UnmatchedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementDirectionOfTrade = new MMCode() {
+	public static final MMCode mmDisagreementDirectionOfTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementDirectionOfTrade";
@@ -282,7 +282,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Counterparty disagrees with the place of settlement."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementPlaceOfSettlement = new MMCode() {
+	public static final MMCode mmDisagreementPlaceOfSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementPlaceOfSettlement";
@@ -312,7 +312,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Counterparty disagrees with the settlement amount."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementSettlementAmount = new MMCode() {
+	public static final MMCode mmDisagreementSettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementSettlementAmount";
@@ -342,7 +342,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Counterparty disagrees with the deal price."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementDealPrice = new MMCode() {
+	public static final MMCode mmDisagreementDealPrice = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementDealPrice";
@@ -373,7 +373,7 @@ public class UnmatchedStatusReason1Code {
 	 * "Counterparty disagrees with the quantity of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementQuantity = new MMCode() {
+	public static final MMCode mmDisagreementQuantity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementQuantity";
@@ -403,7 +403,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Repurchase call delay does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementRepurchaseCallDelay = new MMCode() {
+	public static final MMCode mmDisagreementRepurchaseCallDelay = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementRepurchaseCallDelay";
@@ -433,7 +433,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Settlement transaction type does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementSettlementTransaction = new MMCode() {
+	public static final MMCode mmDisagreementSettlementTransaction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementSettlementTransaction";
@@ -466,7 +466,7 @@ public class UnmatchedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementSecurity = new MMCode() {
+	public static final MMCode mmDisagreementSecurity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementSecurity";
@@ -496,7 +496,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Variable rate support does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementVariableRateSupport = new MMCode() {
+	public static final MMCode mmDisagreementVariableRateSupport = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementVariableRateSupport";
@@ -526,7 +526,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Counterparty does not recognise the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotRecognised = new MMCode() {
+	public static final MMCode mmNotRecognised = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NotRecognised";
@@ -556,7 +556,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Repurchase spread rate does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementRepurchaseSpreadRate = new MMCode() {
+	public static final MMCode mmDisagreementRepurchaseSpreadRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementRepurchaseSpreadRate";
@@ -586,7 +586,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Repurchase rate does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementRepurchaseRate = new MMCode() {
+	public static final MMCode mmDisagreementRepurchaseRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementRepurchaseRate";
@@ -616,7 +616,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Counterparty's instruction was too late."</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyTooLateForMatching = new MMCode() {
+	public static final MMCode mmCounterpartyTooLateForMatching = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CounterpartyTooLateForMatching";
@@ -646,7 +646,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Repurchase rate type does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementRepurchaseRateType = new MMCode() {
+	public static final MMCode mmDisagreementRepurchaseRateType = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementRepurchaseRateType";
@@ -676,7 +676,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Repurchase amount does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementRepurchaseAmount = new MMCode() {
+	public static final MMCode mmDisagreementRepurchaseAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementRepurchaseAmount";
@@ -706,7 +706,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Repurchase premium amount does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementRepurchasePremiumAmount = new MMCode() {
+	public static final MMCode mmDisagreementRepurchasePremiumAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementRepurchasePremiumAmount";
@@ -739,7 +739,7 @@ public class UnmatchedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementPhysicalSettlement = new MMCode() {
+	public static final MMCode mmDisagreementPhysicalSettlement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementPhysicalSettlement";
@@ -769,7 +769,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Counterparty disagrees with the common reference."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementCommonReference = new MMCode() {
+	public static final MMCode mmDisagreementCommonReference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementCommonReference";
@@ -802,7 +802,7 @@ public class UnmatchedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementPaymentCode = new MMCode() {
+	public static final MMCode mmDisagreementPaymentCode = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementPaymentCode";
@@ -832,7 +832,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Place of trade does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementPlaceOfTrade = new MMCode() {
+	public static final MMCode mmDisagreementPlaceOfTrade = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementPlaceOfTrade";
@@ -862,7 +862,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Instruction is a possible duplicate."</li>
 	 * </ul>
 	 */
-	public static final MMCode PossibleDuplicateInstruction = new MMCode() {
+	public static final MMCode mmPossibleDuplicateInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PossibleDuplicateInstruction";
@@ -892,7 +892,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Repurchase forfeit amount does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementForfeitRepurchaseamount = new MMCode() {
+	public static final MMCode mmDisagreementForfeitRepurchaseamount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementForfeitRepurchaseamount";
@@ -925,7 +925,7 @@ public class UnmatchedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementRegistrationDetails = new MMCode() {
+	public static final MMCode mmDisagreementRegistrationDetails = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementRegistrationDetails";
@@ -958,7 +958,7 @@ public class UnmatchedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementRTGSSystem = new MMCode() {
+	public static final MMCode mmDisagreementRTGSSystem = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementRTGSSystem";
@@ -989,7 +989,7 @@ public class UnmatchedStatusReason1Code {
 	 * "Counterparty indicated an incorrect delivery or receiving agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectAgent = new MMCode() {
+	public static final MMCode mmIncorrectAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IncorrectAgent";
@@ -1019,7 +1019,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Counterparty has cancelled the transaction/instruction."</li>
 	 * </ul>
 	 */
-	public static final MMCode CounterpartyCancelledInstruction = new MMCode() {
+	public static final MMCode mmCounterpartyCancelledInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CounterpartyCancelledInstruction";
@@ -1049,7 +1049,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Counterparty disagrees on the amount of charges."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementChargesAmount = new MMCode() {
+	public static final MMCode mmDisagreementChargesAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementChargesAmount";
@@ -1082,7 +1082,7 @@ public class UnmatchedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode IncorrectBuyerOrSeller = new MMCode() {
+	public static final MMCode mmIncorrectBuyerOrSeller = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IncorrectBuyerOrSeller";
@@ -1113,7 +1113,7 @@ public class UnmatchedStatusReason1Code {
 	 * "Counterparty disagrees with the currency of the settlement amount."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementCurrencySettlementAmount = new MMCode() {
+	public static final MMCode mmDisagreementCurrencySettlementAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementCurrencySettlementAmount";
@@ -1143,7 +1143,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Matching process has not yet started."</li>
 	 * </ul>
 	 */
-	public static final MMCode NoMatchingStarted = new MMCode() {
+	public static final MMCode mmNoMatchingStarted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NoMatchingStarted";
@@ -1176,7 +1176,7 @@ public class UnmatchedStatusReason1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementSafekeepingAccount = new MMCode() {
+	public static final MMCode mmDisagreementSafekeepingAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementSafekeepingAccount";
@@ -1206,7 +1206,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Counterparty disagrees with the trade date."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementTradeDate = new MMCode() {
+	public static final MMCode mmDisagreementTradeDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementTradeDate";
@@ -1236,7 +1236,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Instruction received too late for matching."</li>
 	 * </ul>
 	 */
-	public static final MMCode YourInstructionTooLateForMatching = new MMCode() {
+	public static final MMCode mmYourInstructionTooLateForMatching = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "YourInstructionTooLateForMatching";
@@ -1266,7 +1266,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Closing date/time does not match."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementClosingDateTime = new MMCode() {
+	public static final MMCode mmDisagreementClosingDateTime = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementClosingDateTime";
@@ -1296,7 +1296,7 @@ public class UnmatchedStatusReason1Code {
 	 * definition} = "Incorrect delivering or receiving custodian."</li>
 	 * </ul>
 	 */
-	public static final MMCode DisagreementReceivingOrDeliveringCustodian = new MMCode() {
+	public static final MMCode mmDisagreementReceivingOrDeliveringCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "DisagreementReceivingOrDeliveringCustodian";
@@ -1309,30 +1309,30 @@ public class UnmatchedStatusReason1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CMIS");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedStatusReason1Code";
 				definition = "Specifies the reason the transaction/instruction is unmatched.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedStatusReason1Code.MatchingInstructionNotFound, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementSettlementDate,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementDirectionOfTrade, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementPlaceOfSettlement,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementSettlementAmount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementDealPrice,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementQuantity, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementRepurchaseCallDelay,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementSettlementTransaction, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementSecurity,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementVariableRateSupport, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.NotRecognised,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementRepurchaseSpreadRate, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementRepurchaseRate,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.CounterpartyTooLateForMatching, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementRepurchaseRateType,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementRepurchaseAmount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementRepurchasePremiumAmount,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementPhysicalSettlement, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementCommonReference,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementPaymentCode, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementPlaceOfTrade,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.PossibleDuplicateInstruction, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementForfeitRepurchaseamount,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementRegistrationDetails, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementRTGSSystem,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.IncorrectAgent, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.CounterpartyCancelledInstruction,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementChargesAmount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.IncorrectBuyerOrSeller,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementCurrencySettlementAmount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.NoMatchingStarted,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementSafekeepingAccount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementTradeDate,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.YourInstructionTooLateForMatching, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementClosingDateTime,
-						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementReceivingOrDeliveringCustodian);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmMatchingInstructionNotFound, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementSettlementDate,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementDirectionOfTrade, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementPlaceOfSettlement,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementSettlementAmount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementDealPrice,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementQuantity, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementRepurchaseCallDelay,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementSettlementTransaction, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementSecurity,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementVariableRateSupport, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmNotRecognised,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementRepurchaseSpreadRate, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementRepurchaseRate,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmCounterpartyTooLateForMatching, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementRepurchaseRateType,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementRepurchaseAmount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementRepurchasePremiumAmount,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementPhysicalSettlement, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementCommonReference,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementPaymentCode, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementPlaceOfTrade,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmPossibleDuplicateInstruction, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementForfeitRepurchaseamount,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementRegistrationDetails, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementRTGSSystem,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmIncorrectAgent, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmCounterpartyCancelledInstruction,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementChargesAmount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmIncorrectBuyerOrSeller,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementCurrencySettlementAmount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmNoMatchingStarted,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementSafekeepingAccount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementTradeDate,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmYourInstructionTooLateForMatching, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementClosingDateTime,
+						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmDisagreementReceivingOrDeliveringCustodian);
 			}
 		});
 		return mmObject_lazy.get();

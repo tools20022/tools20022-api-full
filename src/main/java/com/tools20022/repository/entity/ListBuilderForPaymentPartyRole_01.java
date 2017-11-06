@@ -23,9 +23,9 @@ class ListBuilderForPaymentPartyRole_01 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
-		list.add((T) com.tools20022.repository.msg.PaymentComplementaryInformation6.CreditorAgentAccount);
-		list.add((T) com.tools20022.repository.msg.PaymentComplementaryInformation6.CreditorAccount);
-		list.add((T) com.tools20022.repository.msg.PaymentComplementaryInformation6.PreviousInstructingAgentAccount);
+		list.add((T) com.tools20022.repository.msg.PaymentComplementaryInformation6.mmCreditorAgentAccount);
+		list.add((T) com.tools20022.repository.msg.PaymentComplementaryInformation6.mmCreditorAccount);
+		list.add((T) com.tools20022.repository.msg.PaymentComplementaryInformation6.mmPreviousInstructingAgentAccount);
 		return list;
 	}
 }

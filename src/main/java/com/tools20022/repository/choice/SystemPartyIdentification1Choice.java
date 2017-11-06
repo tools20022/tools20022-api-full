@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SystemPartyIdentification1Choice#OrganisationIdentification
- * SystemPartyIdentification1Choice.OrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SystemPartyIdentification1Choice#mmOrganisationIdentification
+ * SystemPartyIdentification1Choice.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SystemPartyIdentification1Choice#CombinedIdentification
- * SystemPartyIdentification1Choice.CombinedIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SystemPartyIdentification1Choice#mmCombinedIdentification
+ * SystemPartyIdentification1Choice.mmCombinedIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SystemPartyIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected PartyIdentification71Choice organisationIdentification;
 	/**
 	 * Provides the identification of a party.
 	 * <p>
@@ -79,8 +80,8 @@ public class SystemPartyIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class SystemPartyIdentification1Choice {
 	 * definition} = "Provides the identification of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrganisationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrganisationIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> SystemPartyIdentification1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "OrgId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Provides the identification of a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.choice.PartyIdentification71Choice.mmObject();
 		}
 	};
+	protected SystemPartyIdentification3 combinedIdentification;
 	/**
 	 * Identifies the party with the combined identification of both the
 	 * responsible entity and the party itself.
@@ -148,34 +150,50 @@ public class SystemPartyIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CombinedIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCombinedIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SystemPartyRole.mmObject();
+			componentContext_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CmbndId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CombinedIdentification";
 			definition = "Identifies the party with the combined identification of both the responsible entity and the party itself.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification3.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SystemPartyIdentification3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemPartyIdentification1Choice.OrganisationIdentification,
-						com.tools20022.repository.choice.SystemPartyIdentification1Choice.CombinedIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmOrganisationIdentification,
+						com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmCombinedIdentification);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyIdentification1Choice";
 				definition = "Choice between an identification of a party or a combination of the responsible party identification and the business identifier.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public PartyIdentification71Choice getOrganisationIdentification() {
+		return organisationIdentification;
+	}
+
+	public void setOrganisationIdentification(com.tools20022.repository.choice.PartyIdentification71Choice organisationIdentification) {
+		this.organisationIdentification = organisationIdentification;
+	}
+
+	public SystemPartyIdentification3 getCombinedIdentification() {
+		return combinedIdentification;
+	}
+
+	public void setCombinedIdentification(SystemPartyIdentification3 combinedIdentification) {
+		this.combinedIdentification = combinedIdentification;
 	}
 }

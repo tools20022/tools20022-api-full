@@ -34,24 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType10Code#BuyUp
- * FractionDispositionType10Code.BuyUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType10Code#mmBuyUp
+ * FractionDispositionType10Code.mmBuyUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType10Code#CashInLieuOfFraction
- * FractionDispositionType10Code.CashInLieuOfFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType10Code#mmCashInLieuOfFraction
+ * FractionDispositionType10Code.mmCashInLieuOfFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType10Code#Expire
- * FractionDispositionType10Code.Expire}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType10Code#mmExpire
+ * FractionDispositionType10Code.mmExpire}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType10Code#IssueFraction
- * FractionDispositionType10Code.IssueFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType10Code#mmIssueFraction
+ * FractionDispositionType10Code.mmIssueFraction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,7 @@ public class FractionDispositionType10Code extends FractionDispositionTypeV2Code
 	 * name} = "BuyUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyUp = new MMCode() {
+	public static final MMCode mmBuyUp = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyUp";
@@ -111,7 +111,7 @@ public class FractionDispositionType10Code extends FractionDispositionTypeV2Code
 	 * name} = "CashInLieuOfFraction"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashInLieuOfFraction = new MMCode() {
+	public static final MMCode mmCashInLieuOfFraction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfFraction";
@@ -134,7 +134,7 @@ public class FractionDispositionType10Code extends FractionDispositionTypeV2Code
 	 * name} = "Expire"</li>
 	 * </ul>
 	 */
-	public static final MMCode Expire = new MMCode() {
+	public static final MMCode mmExpire = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expire";
@@ -157,7 +157,7 @@ public class FractionDispositionType10Code extends FractionDispositionTypeV2Code
 	 * name} = "IssueFraction"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssueFraction = new MMCode() {
+	public static final MMCode mmIssueFraction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueFraction";
@@ -168,13 +168,13 @@ public class FractionDispositionType10Code extends FractionDispositionTypeV2Code
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionType10Code";
 				definition = "Indicates that fractional value should be retained; no rounding.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType10Code.BuyUp, com.tools20022.repository.codeset.FractionDispositionType10Code.CashInLieuOfFraction,
-						com.tools20022.repository.codeset.FractionDispositionType10Code.Expire, com.tools20022.repository.codeset.FractionDispositionType10Code.IssueFraction);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType10Code.mmBuyUp, com.tools20022.repository.codeset.FractionDispositionType10Code.mmCashInLieuOfFraction,
+						com.tools20022.repository.codeset.FractionDispositionType10Code.mmExpire, com.tools20022.repository.codeset.FractionDispositionType10Code.mmIssueFraction);
 				trace_lazy = () -> FractionDispositionTypeV2Code.mmObject();
 			}
 		});

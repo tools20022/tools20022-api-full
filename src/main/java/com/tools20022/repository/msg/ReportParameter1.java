@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReportParameter1#Name
- * ReportParameter1.Name}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportParameter1#Value
- * ReportParameter1.Value}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportParameter1#mmName
+ * ReportParameter1.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportParameter1#mmValue
+ * ReportParameter1.mmValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportParameter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text name;
 	/**
 	 * Name or type of the parameter being returned.
 	 * <p>
@@ -84,7 +85,7 @@ public class ReportParameter1 {
 	 * definition} = "Name or type of the parameter being returned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameter1.mmObject();
 			isDerived = false;
@@ -92,11 +93,12 @@ public class ReportParameter1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name or type of the parameter being returned.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max350Text value;
 	/**
 	 * Value of the parameter being returned.
 	 * <p>
@@ -124,7 +126,7 @@ public class ReportParameter1 {
 	 * definition} = "Value of the parameter being returned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Value = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportParameter1.mmObject();
 			isDerived = false;
@@ -132,8 +134,8 @@ public class ReportParameter1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the parameter being returned.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -141,13 +143,29 @@ public class ReportParameter1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameter1.Name, com.tools20022.repository.msg.ReportParameter1.Value);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameter1.mmName, com.tools20022.repository.msg.ReportParameter1.mmValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReportParameter1";
 				definition = "Name and value of a parameter being returned.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
+	}
+
+	public Max350Text getValue() {
+		return value;
+	}
+
+	public void setValue(Max350Text value) {
+		this.value = value;
 	}
 }

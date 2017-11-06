@@ -34,539 +34,541 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ReorganizationRelatedAdjustment
- * DTCAdjustmentPaymentSubReason1Code.ReorganizationRelatedAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmReorganizationRelatedAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmReorganizationRelatedAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RepPaymentCharge
- * DTCAdjustmentPaymentSubReason1Code.RepPaymentCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRepPaymentCharge
+ * DTCAdjustmentPaymentSubReason1Code.mmRepPaymentCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ReversalOfACODWithdrawal
- * DTCAdjustmentPaymentSubReason1Code.ReversalOfACODWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmReversalOfACODWithdrawal
+ * DTCAdjustmentPaymentSubReason1Code.mmReversalOfACODWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ReversalOfADeposit
- * DTCAdjustmentPaymentSubReason1Code.ReversalOfADeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmReversalOfADeposit
+ * DTCAdjustmentPaymentSubReason1Code.mmReversalOfADeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ReversalOfAnAccrualClaimPayment
- * DTCAdjustmentPaymentSubReason1Code.ReversalOfAnAccrualClaimPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmReversalOfAnAccrualClaimPayment
+ * DTCAdjustmentPaymentSubReason1Code.mmReversalOfAnAccrualClaimPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ReversalOfaWithdrawalByTransfer
- * DTCAdjustmentPaymentSubReason1Code.ReversalOfaWithdrawalByTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmReversalOfaWithdrawalByTransfer
+ * DTCAdjustmentPaymentSubReason1Code.mmReversalOfaWithdrawalByTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ReverseOfEscheatedAmountOfClaim
- * DTCAdjustmentPaymentSubReason1Code.ReverseOfEscheatedAmountOfClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmReverseOfEscheatedAmountOfClaim
+ * DTCAdjustmentPaymentSubReason1Code.mmReverseOfEscheatedAmountOfClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ReverseOfTheSharesEscheatedToNYStateInError
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmReverseOfTheSharesEscheatedToNYStateInError
  * DTCAdjustmentPaymentSubReason1Code.
- * ReverseOfTheSharesEscheatedToNYStateInError}</li>
+ * mmReverseOfTheSharesEscheatedToNYStateInError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RevisionOfChargeForWithholdingTax
- * DTCAdjustmentPaymentSubReason1Code.RevisionOfChargeForWithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRevisionOfChargeForWithholdingTax
+ * DTCAdjustmentPaymentSubReason1Code.mmRevisionOfChargeForWithholdingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ScriptSharesExited
- * DTCAdjustmentPaymentSubReason1Code.ScriptSharesExited}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmScriptSharesExited
+ * DTCAdjustmentPaymentSubReason1Code.mmScriptSharesExited}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount
  * DTCAdjustmentPaymentSubReason1Code.
- * ShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount}</li>
+ * mmShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount
  * DTCAdjustmentPaymentSubReason1Code.
- * ShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount
+ * mmShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#SpinOffAllocation
- * DTCAdjustmentPaymentSubReason1Code.SpinOffAllocation}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmSpinOffAllocation
+ * DTCAdjustmentPaymentSubReason1Code.mmSpinOffAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#StockLoanAdjustment
- * DTCAdjustmentPaymentSubReason1Code.StockLoanAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmStockLoanAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmStockLoanAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#StockLoanOrRepoPaymentOrder
- * DTCAdjustmentPaymentSubReason1Code.StockLoanOrRepoPaymentOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmStockLoanOrRepoPaymentOrder
+ * DTCAdjustmentPaymentSubReason1Code.mmStockLoanOrRepoPaymentOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#SupplementalInterimActivity
- * DTCAdjustmentPaymentSubReason1Code.SupplementalInterimActivity}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmSupplementalInterimActivity
+ * DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#SupplementalInterimActivityFromMidwest
- * DTCAdjustmentPaymentSubReason1Code.SupplementalInterimActivityFromMidwest}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmSupplementalInterimActivityFromMidwest
+ * DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivityFromMidwest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#SupplementalInterimActivityFromPhiladelphia
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmSupplementalInterimActivityFromPhiladelphia
  * DTCAdjustmentPaymentSubReason1Code.
- * SupplementalInterimActivityFromPhiladelphia}</li>
+ * mmSupplementalInterimActivityFromPhiladelphia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#SupplementaryInterimOn
- * DTCAdjustmentPaymentSubReason1Code.SupplementaryInterimOn}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmSupplementaryInterimOn
+ * DTCAdjustmentPaymentSubReason1Code.mmSupplementaryInterimOn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AccrualClaimPayment
- * DTCAdjustmentPaymentSubReason1Code.AccrualClaimPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAccrualClaimPayment
+ * DTCAdjustmentPaymentSubReason1Code.mmAccrualClaimPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AccruedInterestNotPaid
- * DTCAdjustmentPaymentSubReason1Code.AccruedInterestNotPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAccruedInterestNotPaid
+ * DTCAdjustmentPaymentSubReason1Code.mmAccruedInterestNotPaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AccruedInterestWrongRate
- * DTCAdjustmentPaymentSubReason1Code.AccruedInterestWrongRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAccruedInterestWrongRate
+ * DTCAdjustmentPaymentSubReason1Code.mmAccruedInterestWrongRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AdditionalRightsForBeneficialOwner
- * DTCAdjustmentPaymentSubReason1Code.AdditionalRightsForBeneficialOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAdditionalRightsForBeneficialOwner
+ * DTCAdjustmentPaymentSubReason1Code.mmAdditionalRightsForBeneficialOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName
  * DTCAdjustmentPaymentSubReason1Code.
- * AdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName}</li>
+ * mmAdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AdjustmentForCashInLieuOfFractionalShares
- * DTCAdjustmentPaymentSubReason1Code.AdjustmentForCashInLieuOfFractionalShares}
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAdjustmentForCashInLieuOfFractionalShares
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmAdjustmentForCashInLieuOfFractionalShares}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAdjustmentForCashOnIncreasedShares
+ * DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForCashOnIncreasedShares}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAdjustmentForWrittenInquiry
+ * DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForWrittenInquiry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAdjustmentIsInResponseToYourInquiry
+ * DTCAdjustmentPaymentSubReason1Code.mmAdjustmentIsInResponseToYourInquiry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmAdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAdjustmentToAvoidFiscalPayment
+ * DTCAdjustmentPaymentSubReason1Code.mmAdjustmentToAvoidFiscalPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAdjustmentToYourDividendReinvestmentPosition
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmAdjustmentToYourDividendReinvestmentPosition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAgentPaidBasedOnCombinedFractions
+ * DTCAdjustmentPaymentSubReason1Code.mmAgentPaidBasedOnCombinedFractions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAllocationAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmAllocationAdjustment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAllocationAdjustmentDueToFractionsRoundedUpByTheAgent
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmAllocationAdjustmentDueToFractionsRoundedUpByTheAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAllocationOfBabyBondsAmountToBeExited
+ * DTCAdjustmentPaymentSubReason1Code.mmAllocationOfBabyBondsAmountToBeExited}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAllocationOfDRPTEDSInstruction
+ * DTCAdjustmentPaymentSubReason1Code.mmAllocationOfDRPTEDSInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAnnouncementDeletedOrFailTracking
+ * DTCAdjustmentPaymentSubReason1Code.mmAnnouncementDeletedOrFailTracking}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmAssumedByYourGoodselves
+ * DTCAdjustmentPaymentSubReason1Code.mmAssumedByYourGoodselves}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmBabyBondPayment
+ * DTCAdjustmentPaymentSubReason1Code.mmBabyBondPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCalledCertificatesAccruedErroneousInterestChargeBack
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmCalledCertificatesAccruedErroneousInterestChargeBack}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCalledCertificatesCheckInParticipantsNameChargeBack
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmCalledCertificatesCheckInParticipantsNameChargeBack}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCashDueOnAnAccruedStockPayment
+ * DTCAdjustmentPaymentSubReason1Code.mmCashDueOnAnAccruedStockPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmChargeForFrenchAvoidFiscalTaxCredit
+ * DTCAdjustmentPaymentSubReason1Code.mmChargeForFrenchAvoidFiscalTaxCredit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmChargeInLieuOfReceiptOfDividendReinvestment
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmChargeInLieuOfReceiptOfDividendReinvestment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCODWithdrawal
+ * DTCAdjustmentPaymentSubReason1Code.mmCODWithdrawal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCompanyInDefault
+ * DTCAdjustmentPaymentSubReason1Code.mmCompanyInDefault}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCompanyDidNotDeclareDividend
+ * DTCAdjustmentPaymentSubReason1Code.mmCompanyDidNotDeclareDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmCODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCODBuyBackWithdrawal
+ * DTCAdjustmentPaymentSubReason1Code.mmCODBuyBackWithdrawal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmChargeAtWithholdingRate
+ * DTCAdjustmentPaymentSubReason1Code.mmChargeAtWithholdingRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCashDueOnDRPShareAllocation
+ * DTCAdjustmentPaymentSubReason1Code.mmCashDueOnDRPShareAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCashDueOnStockDividend
+ * DTCAdjustmentPaymentSubReason1Code.mmCashDueOnStockDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmChangeInTheRecordDate
+ * DTCAdjustmentPaymentSubReason1Code.mmChangeInTheRecordDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmCODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCouponCollectionService
+ * DTCAdjustmentPaymentSubReason1Code.mmCouponCollectionService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmCTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmCustodyPayment
+ * DTCAdjustmentPaymentSubReason1Code.mmCustodyPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDateRevision
+ * DTCAdjustmentPaymentSubReason1Code.mmDateRevision}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDelete
+ * DTCAdjustmentPaymentSubReason1Code.mmDelete}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDeliverOrder
+ * DTCAdjustmentPaymentSubReason1Code.mmDeliverOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDeliverOrderActivity
+ * DTCAdjustmentPaymentSubReason1Code.mmDeliverOrderActivity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDepositAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmDepositAdjustment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDepositTransferredIntoTheNameOfTheCEDEAndCo
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDepositTransferredIntoTheNameOfTheCEDEAndCo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDividendReinvestmentAllocation
+ * DTCAdjustmentPaymentSubReason1Code.mmDividendReinvestmentAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDividendReinvestmentAllocationOfCashInLieuOfFractions
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDividendReinvestmentAllocationOfCashInLieuOfFractions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDTCCClaimOnRegisteredHolderInTheNameOfYourCustomer
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDTCCClaimOnRegisteredHolderInTheNameOfYourCustomer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmDTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDueBill
+ * DTCAdjustmentPaymentSubReason1Code.mmDueBill}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDueBillFailTracking
+ * DTCAdjustmentPaymentSubReason1Code.mmDueBillFailTracking}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDueBillReversal
+ * DTCAdjustmentPaymentSubReason1Code.mmDueBillReversal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDWACAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmDWACAdjustment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmDWACBuyBackWithdrawal
+ * DTCAdjustmentPaymentSubReason1Code.mmDWACBuyBackWithdrawal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmForeignCashDividendsOrBondInterestAllocationAtExemptRate
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmForeignCashDividendsOrBondInterestAllocationAtExemptRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmForeignCashDividendsOrBondsInterestAllocationAtFavorableRate
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmForeignCashDividendsOrBondsInterestAllocationAtFavorableRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmForeignCashDividendUnfavorableRate
+ * DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendUnfavorableRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmFractionalRights
+ * DTCAdjustmentPaymentSubReason1Code.mmFractionalRights}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmFrenchWithholdingTax10Percent
+ * DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax10Percent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmFrenchWithholdingTax15Percent
+ * DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax15Percent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmFrenchWithholdingTax25Percent
+ * DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax25Percent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmFrozenLetterMovement
+ * DTCAdjustmentPaymentSubReason1Code.mmFrozenLetterMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmGracePeriod
+ * DTCAdjustmentPaymentSubReason1Code.mmGracePeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInLieuOfReorgDepositActivity
+ * DTCAdjustmentPaymentSubReason1Code.mmInLieuOfReorgDepositActivity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInSettlementOfATradeDTCCReorgAccount
+ * DTCAdjustmentPaymentSubReason1Code.mmInSettlementOfATradeDTCCReorgAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInterestAdjustedDueToEarlyWithdrawal
+ * DTCAdjustmentPaymentSubReason1Code.mmInterestAdjustedDueToEarlyWithdrawal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInterestAllocatedInError
+ * DTCAdjustmentPaymentSubReason1Code.mmInterestAllocatedInError}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInterestDueWasErroneouslyPaidToYouByTheIssuer
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmInterestDueWasErroneouslyPaidToYouByTheIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInterestorDividendDueOnConversion
+ * DTCAdjustmentPaymentSubReason1Code.mmInterestorDividendDueOnConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInterestOrDividendDueOnMerger
+ * DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnMerger}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInterestOrDividendDueOnRedemption
+ * DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnRedemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInterestOrDividendDueOnRepaymentOption
+ * DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnRepaymentOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInterestOrDividendDueOnTender
+ * DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnTender}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInterestPaysAtMaturity
+ * DTCAdjustmentPaymentSubReason1Code.mmInterestPaysAtMaturity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInterimPositionAdjustedForDeliverOrderActivity
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmInterimPositionAdjustedForDeliverOrderActivity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmInvestmentIdAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmInvestmentIdAdjustment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmIssueInDefault
+ * DTCAdjustmentPaymentSubReason1Code.mmIssueInDefault}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmLateAnnouncement
+ * DTCAdjustmentPaymentSubReason1Code.mmLateAnnouncement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmLateAnnouncementActivityDueBillActivity
+ * DTCAdjustmentPaymentSubReason1Code.mmLateAnnouncementActivityDueBillActivity}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AdjustmentForCashOnIncreasedShares
- * DTCAdjustmentPaymentSubReason1Code.AdjustmentForCashOnIncreasedShares}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AdjustmentForWrittenInquiry
- * DTCAdjustmentPaymentSubReason1Code.AdjustmentForWrittenInquiry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AdjustmentIsInResponseToYourInquiry
- * DTCAdjustmentPaymentSubReason1Code.AdjustmentIsInResponseToYourInquiry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmLostCertificateRegisteredInTheNameOfYourGoodselves
  * DTCAdjustmentPaymentSubReason1Code.
- * AdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName
- * }</li>
+ * mmLostCertificateRegisteredInTheNameOfYourGoodselves}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AdjustmentToAvoidFiscalPayment
- * DTCAdjustmentPaymentSubReason1Code.AdjustmentToAvoidFiscalPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AdjustmentToYourDividendReinvestmentPosition
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmLostCertificateWasRegisteredInTheNameOfYourCustomer
  * DTCAdjustmentPaymentSubReason1Code.
- * AdjustmentToYourDividendReinvestmentPosition}</li>
+ * mmLostCertificateWasRegisteredInTheNameOfYourCustomer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AgentPaidBasedOnCombinedFractions
- * DTCAdjustmentPaymentSubReason1Code.AgentPaidBasedOnCombinedFractions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AllocationAdjustment
- * DTCAdjustmentPaymentSubReason1Code.AllocationAdjustment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AllocationAdjustmentDueToFractionsRoundedUpByTheAgent
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmLostCertificateWasRegisteredInTheNameOfYourNominee
  * DTCAdjustmentPaymentSubReason1Code.
- * AllocationAdjustmentDueToFractionsRoundedUpByTheAgent}</li>
+ * mmLostCertificateWasRegisteredInTheNameOfYourNominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AllocationOfBabyBondsAmountToBeExited
- * DTCAdjustmentPaymentSubReason1Code.AllocationOfBabyBondsAmountToBeExited}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmMidwestDepository
+ * DTCAdjustmentPaymentSubReason1Code.mmMidwestDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AllocationOfDRPTEDSInstruction
- * DTCAdjustmentPaymentSubReason1Code.AllocationOfDRPTEDSInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmMuniBearerBond
+ * DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AnnouncementDeletedOrFailTracking
- * DTCAdjustmentPaymentSubReason1Code.AnnouncementDeletedOrFailTracking}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmMuniBearerBondCoupon
+ * DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#AssumedByYourGoodselves
- * DTCAdjustmentPaymentSubReason1Code.AssumedByYourGoodselves}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#BabyBondPayment
- * DTCAdjustmentPaymentSubReason1Code.BabyBondPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CalledCertificatesAccruedErroneousInterestChargeBack
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmMuniBearerBondCouponAdjustmentExcessCouponsDepositedOn
  * DTCAdjustmentPaymentSubReason1Code.
- * CalledCertificatesAccruedErroneousInterestChargeBack}</li>
+ * mmMuniBearerBondCouponAdjustmentExcessCouponsDepositedOn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CalledCertificatesCheckInParticipantsNameChargeBack
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmMuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn
  * DTCAdjustmentPaymentSubReason1Code.
- * CalledCertificatesCheckInParticipantsNameChargeBack}</li>
+ * mmMuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CashDueOnAnAccruedStockPayment
- * DTCAdjustmentPaymentSubReason1Code.CashDueOnAnAccruedStockPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ChargeForFrenchAvoidFiscalTaxCredit
- * DTCAdjustmentPaymentSubReason1Code.ChargeForFrenchAvoidFiscalTaxCredit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ChargeInLieuOfReceiptOfDividendReinvestment
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit
  * DTCAdjustmentPaymentSubReason1Code.
- * ChargeInLieuOfReceiptOfDividendReinvestment}</li>
+ * mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CODWithdrawal
- * DTCAdjustmentPaymentSubReason1Code.CODWithdrawal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CompanyInDefault
- * DTCAdjustmentPaymentSubReason1Code.CompanyInDefault}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CompanyDidNotDeclareDividend
- * DTCAdjustmentPaymentSubReason1Code.CompanyDidNotDeclareDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal
  * DTCAdjustmentPaymentSubReason1Code.
- * CODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee}</li>
+ * mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CODBuyBackWithdrawal
- * DTCAdjustmentPaymentSubReason1Code.CODBuyBackWithdrawal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ChargeAtWithholdingRate
- * DTCAdjustmentPaymentSubReason1Code.ChargeAtWithholdingRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CashDueOnDRPShareAllocation
- * DTCAdjustmentPaymentSubReason1Code.CashDueOnDRPShareAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CashDueOnStockDividend
- * DTCAdjustmentPaymentSubReason1Code.CashDueOnStockDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ChangeInTheRecordDate
- * DTCAdjustmentPaymentSubReason1Code.ChangeInTheRecordDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmMuniBearerBondCouponPositionAdjustedForDepositActivity
  * DTCAdjustmentPaymentSubReason1Code.
- * CODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves}</li>
+ * mmMuniBearerBondCouponPositionAdjustedForDepositActivity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CouponCollectionService
- * DTCAdjustmentPaymentSubReason1Code.CouponCollectionService}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmNonAllocation
+ * DTCAdjustmentPaymentSubReason1Code.mmNonAllocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmOptionalDividendAllocationAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmOptionalDividendAllocationAdjustment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmOther
+ * DTCAdjustmentPaymentSubReason1Code.mmOther}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPacificDepository
+ * DTCAdjustmentPaymentSubReason1Code.mmPacificDepository}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPartClaimPayment
+ * DTCAdjustmentPaymentSubReason1Code.mmPartClaimPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPartClaimReversal
+ * DTCAdjustmentPaymentSubReason1Code.mmPartClaimReversal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPaymentOfFullAvoidFiscalTaxRefund
+ * DTCAdjustmentPaymentSubReason1Code.mmPaymentOfFullAvoidFiscalTaxRefund}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPaymentOfPartialAvoidFiscalTaxRefund
+ * DTCAdjustmentPaymentSubReason1Code.mmPaymentOfPartialAvoidFiscalTaxRefund}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPaynInKindDistribution
+ * DTCAdjustmentPaymentSubReason1Code.mmPaynInKindDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPhiladelphiaDepository
+ * DTCAdjustmentPaymentSubReason1Code.mmPhiladelphiaDepository}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPledgeAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmPledgeAdjustment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPledgeReleaseAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmPledgeReleaseAdjustment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPositionAdjustedForDepositActivity
+ * DTCAdjustmentPaymentSubReason1Code.mmPositionAdjustedForDepositActivity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers
  * DTCAdjustmentPaymentSubReason1Code.
- * CTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#CustodyPayment
- * DTCAdjustmentPaymentSubReason1Code.CustodyPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DateRevision
- * DTCAdjustmentPaymentSubReason1Code.DateRevision}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#Delete
- * DTCAdjustmentPaymentSubReason1Code.Delete}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DeliverOrder
- * DTCAdjustmentPaymentSubReason1Code.DeliverOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DeliverOrderActivity
- * DTCAdjustmentPaymentSubReason1Code.DeliverOrderActivity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DepositAdjustment
- * DTCAdjustmentPaymentSubReason1Code.DepositAdjustment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour
- * DTCAdjustmentPaymentSubReason1Code.
- * DepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DepositTransferredIntoTheNameOfTheCEDEAndCo
- * DTCAdjustmentPaymentSubReason1Code.
- * DepositTransferredIntoTheNameOfTheCEDEAndCo}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DividendReinvestmentAllocation
- * DTCAdjustmentPaymentSubReason1Code.DividendReinvestmentAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent
- * DTCAdjustmentPaymentSubReason1Code.
- * DividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DividendReinvestmentAllocationOfCashInLieuOfFractions
- * DTCAdjustmentPaymentSubReason1Code.
- * DividendReinvestmentAllocationOfCashInLieuOfFractions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer
- * DTCAdjustmentPaymentSubReason1Code.
- * DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer
- * DTCAdjustmentPaymentSubReason1Code.
- * DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves
- * DTCAdjustmentPaymentSubReason1Code.
- * DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer
- * DTCAdjustmentPaymentSubReason1Code.
- * DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee
- * DTCAdjustmentPaymentSubReason1Code.
- * DTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer
- * DTCAdjustmentPaymentSubReason1Code.
- * DTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DTCCClaimOnRegisteredHolderInTheNameOfYourCustomer
- * DTCAdjustmentPaymentSubReason1Code.
- * DTCCClaimOnRegisteredHolderInTheNameOfYourCustomer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves
- * DTCAdjustmentPaymentSubReason1Code.
- * DTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DueBill
- * DTCAdjustmentPaymentSubReason1Code.DueBill}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DueBillFailTracking
- * DTCAdjustmentPaymentSubReason1Code.DueBillFailTracking}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DueBillReversal
- * DTCAdjustmentPaymentSubReason1Code.DueBillReversal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DWACAdjustment
- * DTCAdjustmentPaymentSubReason1Code.DWACAdjustment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#DWACBuyBackWithdrawal
- * DTCAdjustmentPaymentSubReason1Code.DWACBuyBackWithdrawal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ForeignCashDividendsOrBondInterestAllocationAtExemptRate
- * DTCAdjustmentPaymentSubReason1Code.
- * ForeignCashDividendsOrBondInterestAllocationAtExemptRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate
- * DTCAdjustmentPaymentSubReason1Code.
- * ForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ForeignCashDividendsOrBondsInterestAllocationAtFavorableRate
- * DTCAdjustmentPaymentSubReason1Code.
- * ForeignCashDividendsOrBondsInterestAllocationAtFavorableRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ForeignCashDividendUnfavorableRate
- * DTCAdjustmentPaymentSubReason1Code.ForeignCashDividendUnfavorableRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#FractionalRights
- * DTCAdjustmentPaymentSubReason1Code.FractionalRights}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#FrenchWithholdingTax10Percent
- * DTCAdjustmentPaymentSubReason1Code.FrenchWithholdingTax10Percent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#FrenchWithholdingTax15Percent
- * DTCAdjustmentPaymentSubReason1Code.FrenchWithholdingTax15Percent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#FrenchWithholdingTax25Percent
- * DTCAdjustmentPaymentSubReason1Code.FrenchWithholdingTax25Percent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#FrozenLetterMovement
- * DTCAdjustmentPaymentSubReason1Code.FrozenLetterMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#GracePeriod
- * DTCAdjustmentPaymentSubReason1Code.GracePeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InLieuOfReorgDepositActivity
- * DTCAdjustmentPaymentSubReason1Code.InLieuOfReorgDepositActivity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InSettlementOfATradeDTCCReorgAccount
- * DTCAdjustmentPaymentSubReason1Code.InSettlementOfATradeDTCCReorgAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InterestAdjustedDueToEarlyWithdrawal
- * DTCAdjustmentPaymentSubReason1Code.InterestAdjustedDueToEarlyWithdrawal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InterestAllocatedInError
- * DTCAdjustmentPaymentSubReason1Code.InterestAllocatedInError}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InterestDueWasErroneouslyPaidToYouByTheIssuer
- * DTCAdjustmentPaymentSubReason1Code.
- * InterestDueWasErroneouslyPaidToYouByTheIssuer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InterestorDividendDueOnConversion
- * DTCAdjustmentPaymentSubReason1Code.InterestorDividendDueOnConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InterestOrDividendDueOnMerger
- * DTCAdjustmentPaymentSubReason1Code.InterestOrDividendDueOnMerger}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InterestOrDividendDueOnRedemption
- * DTCAdjustmentPaymentSubReason1Code.InterestOrDividendDueOnRedemption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InterestOrDividendDueOnRepaymentOption
- * DTCAdjustmentPaymentSubReason1Code.InterestOrDividendDueOnRepaymentOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InterestOrDividendDueOnTender
- * DTCAdjustmentPaymentSubReason1Code.InterestOrDividendDueOnTender}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InterestPaysAtMaturity
- * DTCAdjustmentPaymentSubReason1Code.InterestPaysAtMaturity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InterimPositionAdjustedForDeliverOrderActivity
- * DTCAdjustmentPaymentSubReason1Code.
- * InterimPositionAdjustedForDeliverOrderActivity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#InvestmentIdAdjustment
- * DTCAdjustmentPaymentSubReason1Code.InvestmentIdAdjustment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#IssueInDefault
- * DTCAdjustmentPaymentSubReason1Code.IssueInDefault}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#LateAnnouncement
- * DTCAdjustmentPaymentSubReason1Code.LateAnnouncement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#LateAnnouncementActivityDueBillActivity
- * DTCAdjustmentPaymentSubReason1Code.LateAnnouncementActivityDueBillActivity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#LostCertificateRegisteredInTheNameOfYourGoodselves
- * DTCAdjustmentPaymentSubReason1Code.
- * LostCertificateRegisteredInTheNameOfYourGoodselves}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#LostCertificateWasRegisteredInTheNameOfYourCustomer
- * DTCAdjustmentPaymentSubReason1Code.
- * LostCertificateWasRegisteredInTheNameOfYourCustomer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#LostCertificateWasRegisteredInTheNameOfYourNominee
- * DTCAdjustmentPaymentSubReason1Code.
- * LostCertificateWasRegisteredInTheNameOfYourNominee}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#MidwestDepository
- * DTCAdjustmentPaymentSubReason1Code.MidwestDepository}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#MuniBearerBond
- * DTCAdjustmentPaymentSubReason1Code.MuniBearerBond}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#MuniBearerBondCoupon
- * DTCAdjustmentPaymentSubReason1Code.MuniBearerBondCoupon}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#MuniBearerBondCouponAdjustmentExcessCouponsDepositedOn
- * DTCAdjustmentPaymentSubReason1Code.
- * MuniBearerBondCouponAdjustmentExcessCouponsDepositedOn}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#MuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn
- * DTCAdjustmentPaymentSubReason1Code.
- * MuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#MuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit
- * DTCAdjustmentPaymentSubReason1Code.
- * MuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#MuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal
- * DTCAdjustmentPaymentSubReason1Code.
- * MuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#MuniBearerBondCouponPositionAdjustedForDepositActivity
- * DTCAdjustmentPaymentSubReason1Code.
- * MuniBearerBondCouponPositionAdjustedForDepositActivity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#NonAllocation
- * DTCAdjustmentPaymentSubReason1Code.NonAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#OptionalDividendAllocationAdjustment
- * DTCAdjustmentPaymentSubReason1Code.OptionalDividendAllocationAdjustment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#Other
- * DTCAdjustmentPaymentSubReason1Code.Other}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PacificDepository
- * DTCAdjustmentPaymentSubReason1Code.PacificDepository}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PartClaimPayment
- * DTCAdjustmentPaymentSubReason1Code.PartClaimPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PartClaimReversal
- * DTCAdjustmentPaymentSubReason1Code.PartClaimReversal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PaymentOfFullAvoidFiscalTaxRefund
- * DTCAdjustmentPaymentSubReason1Code.PaymentOfFullAvoidFiscalTaxRefund}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PaymentOfPartialAvoidFiscalTaxRefund
- * DTCAdjustmentPaymentSubReason1Code.PaymentOfPartialAvoidFiscalTaxRefund}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PaynInKindDistribution
- * DTCAdjustmentPaymentSubReason1Code.PaynInKindDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PhiladelphiaDepository
- * DTCAdjustmentPaymentSubReason1Code.PhiladelphiaDepository}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PledgeAdjustment
- * DTCAdjustmentPaymentSubReason1Code.PledgeAdjustment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PledgeReleaseAdjustment
- * DTCAdjustmentPaymentSubReason1Code.PledgeReleaseAdjustment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PositionAdjustedForDepositActivity
- * DTCAdjustmentPaymentSubReason1Code.PositionAdjustedForDepositActivity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers
- * DTCAdjustmentPaymentSubReason1Code.
- * PositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PostDateChangeForFailTracking
- * DTCAdjustmentPaymentSubReason1Code.PostDateChangeForFailTracking}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PreviouslyCalledCertificatesFundsDelivery
- * DTCAdjustmentPaymentSubReason1Code.PreviouslyCalledCertificatesFundsDelivery}
+ * mmPositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#PriceCorrectionDividendReinvestment
- * DTCAdjustmentPaymentSubReason1Code.PriceCorrectionDividendReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPostDateChangeForFailTracking
+ * DTCAdjustmentPaymentSubReason1Code.mmPostDateChangeForFailTracking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ProceedsFromBuyTransactionInOurDTCCDividendTradingAccount
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPreviouslyCalledCertificatesFundsDelivery
  * DTCAdjustmentPaymentSubReason1Code.
- * ProceedsFromBuyTransactionInOurDTCCDividendTradingAccount}</li>
+ * mmPreviouslyCalledCertificatesFundsDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ProceedsFromSaleOf
- * DTCAdjustmentPaymentSubReason1Code.ProceedsFromSaleOf}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmPriceCorrectionDividendReinvestment
+ * DTCAdjustmentPaymentSubReason1Code.mmPriceCorrectionDividendReinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmProceedsFromBuyTransactionInOurDTCCDividendTradingAccount
  * DTCAdjustmentPaymentSubReason1Code.
- * ProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount
+ * mmProceedsFromBuyTransactionInOurDTCCDividendTradingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmProceedsFromSaleOf
+ * DTCAdjustmentPaymentSubReason1Code.mmProceedsFromSaleOf}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount
+ * DTCAdjustmentPaymentSubReason1Code.
+ * mmProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RateChange
- * DTCAdjustmentPaymentSubReason1Code.RateChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRateChange
+ * DTCAdjustmentPaymentSubReason1Code.mmRateChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RateRevision
- * DTCAdjustmentPaymentSubReason1Code.RateRevision}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRateRevision
+ * DTCAdjustmentPaymentSubReason1Code.mmRateRevision}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RateUnknown
- * DTCAdjustmentPaymentSubReason1Code.RateUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRateUnknown
+ * DTCAdjustmentPaymentSubReason1Code.mmRateUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RecordDatePositionAdjustedForaWithdrawalByTransfer
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRecordDatePositionAdjustedForaWithdrawalByTransfer
  * DTCAdjustmentPaymentSubReason1Code.
- * RecordDatePositionAdjustedForaWithdrawalByTransfer}</li>
+ * mmRecordDatePositionAdjustedForaWithdrawalByTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RedemptionAdjustment
- * DTCAdjustmentPaymentSubReason1Code.RedemptionAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRedemptionAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmRedemptionAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RedemptionCash
- * DTCAdjustmentPaymentSubReason1Code.RedemptionCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRedemptionCash
+ * DTCAdjustmentPaymentSubReason1Code.mmRedemptionCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RedemptionPaymentDueToPledgeRelease
- * DTCAdjustmentPaymentSubReason1Code.RedemptionPaymentDueToPledgeRelease}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRedemptionPaymentDueToPledgeRelease
+ * DTCAdjustmentPaymentSubReason1Code.mmRedemptionPaymentDueToPledgeRelease}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RefundedTaxRate
- * DTCAdjustmentPaymentSubReason1Code.RefundedTaxRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRefundedTaxRate
+ * DTCAdjustmentPaymentSubReason1Code.mmRefundedTaxRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RefundOfFrenchTaxJuly
- * DTCAdjustmentPaymentSubReason1Code.RefundOfFrenchTaxJuly}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRefundOfFrenchTaxJuly
+ * DTCAdjustmentPaymentSubReason1Code.mmRefundOfFrenchTaxJuly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#RefundOfFrenchTaxJune
- * DTCAdjustmentPaymentSubReason1Code.RefundOfFrenchTaxJune}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmRefundOfFrenchTaxJune
+ * DTCAdjustmentPaymentSubReason1Code.mmRefundOfFrenchTaxJune}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#Reinstate
- * DTCAdjustmentPaymentSubReason1Code.Reinstate}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmReinstate
+ * DTCAdjustmentPaymentSubReason1Code.mmReinstate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#ReorganizationAdjustment
- * DTCAdjustmentPaymentSubReason1Code.ReorganizationAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmReorganizationAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmReorganizationAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#TaxExemptInstructions
- * DTCAdjustmentPaymentSubReason1Code.TaxExemptInstructions}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmTaxExemptInstructions
+ * DTCAdjustmentPaymentSubReason1Code.mmTaxExemptInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#TenderFeeDeduction
- * DTCAdjustmentPaymentSubReason1Code.TenderFeeDeduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmTenderFeeDeduction
+ * DTCAdjustmentPaymentSubReason1Code.mmTenderFeeDeduction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#UnfavorableRateMerger
- * DTCAdjustmentPaymentSubReason1Code.UnfavorableRateMerger}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmUnfavorableRateMerger
+ * DTCAdjustmentPaymentSubReason1Code.mmUnfavorableRateMerger}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#UninsuredInterestWithheld
- * DTCAdjustmentPaymentSubReason1Code.UninsuredInterestWithheld}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmUninsuredInterestWithheld
+ * DTCAdjustmentPaymentSubReason1Code.mmUninsuredInterestWithheld}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#VodaphoneADR
- * DTCAdjustmentPaymentSubReason1Code.VodaphoneADR}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmVodaphoneADR
+ * DTCAdjustmentPaymentSubReason1Code.mmVodaphoneADR}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#WithdrawalTransferAdjustment
- * DTCAdjustmentPaymentSubReason1Code.WithdrawalTransferAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmWithdrawalTransferAdjustment
+ * DTCAdjustmentPaymentSubReason1Code.mmWithdrawalTransferAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#WithdrawalTransferBuyBackWithdrawal
- * DTCAdjustmentPaymentSubReason1Code.WithdrawalTransferBuyBackWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmWithdrawalTransferBuyBackWithdrawal
+ * DTCAdjustmentPaymentSubReason1Code.mmWithdrawalTransferBuyBackWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#WithholdingTaxAdjustmentInUserDefinedCountry
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmWithholdingTaxAdjustmentInUserDefinedCountry
  * DTCAdjustmentPaymentSubReason1Code.
- * WithholdingTaxAdjustmentInUserDefinedCountry}</li>
+ * mmWithholdingTaxAdjustmentInUserDefinedCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#WriteOffReorganization
- * DTCAdjustmentPaymentSubReason1Code.WriteOffReorganization}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmWriteOffReorganization
+ * DTCAdjustmentPaymentSubReason1Code.mmWriteOffReorganization}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#WrongRatePrincipal
- * DTCAdjustmentPaymentSubReason1Code.WrongRatePrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code#mmWrongRatePrincipal
+ * DTCAdjustmentPaymentSubReason1Code.mmWrongRatePrincipal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -596,7 +598,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ReorganizationRelatedAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReorganizationRelatedAdjustment = new MMCode() {
+	public static final MMCode mmReorganizationRelatedAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorganizationRelatedAdjustment";
@@ -619,7 +621,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RepPaymentCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode RepPaymentCharge = new MMCode() {
+	public static final MMCode mmRepPaymentCharge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepPaymentCharge";
@@ -642,7 +644,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ReversalOfACODWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReversalOfACODWithdrawal = new MMCode() {
+	public static final MMCode mmReversalOfACODWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfACODWithdrawal";
@@ -665,7 +667,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ReversalOfADeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReversalOfADeposit = new MMCode() {
+	public static final MMCode mmReversalOfADeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfADeposit";
@@ -688,7 +690,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ReversalOfAnAccrualClaimPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReversalOfAnAccrualClaimPayment = new MMCode() {
+	public static final MMCode mmReversalOfAnAccrualClaimPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfAnAccrualClaimPayment";
@@ -711,7 +713,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ReversalOfaWithdrawalByTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReversalOfaWithdrawalByTransfer = new MMCode() {
+	public static final MMCode mmReversalOfaWithdrawalByTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfaWithdrawalByTransfer";
@@ -734,7 +736,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ReverseOfEscheatedAmountOfClaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReverseOfEscheatedAmountOfClaim = new MMCode() {
+	public static final MMCode mmReverseOfEscheatedAmountOfClaim = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseOfEscheatedAmountOfClaim";
@@ -757,7 +759,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ReverseOfTheSharesEscheatedToNYStateInError"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReverseOfTheSharesEscheatedToNYStateInError = new MMCode() {
+	public static final MMCode mmReverseOfTheSharesEscheatedToNYStateInError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseOfTheSharesEscheatedToNYStateInError";
@@ -780,7 +782,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RevisionOfChargeForWithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode RevisionOfChargeForWithholdingTax = new MMCode() {
+	public static final MMCode mmRevisionOfChargeForWithholdingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevisionOfChargeForWithholdingTax";
@@ -803,7 +805,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ScriptSharesExited"</li>
 	 * </ul>
 	 */
-	public static final MMCode ScriptSharesExited = new MMCode() {
+	public static final MMCode mmScriptSharesExited = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScriptSharesExited";
@@ -827,7 +829,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * "ShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode ShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount = new MMCode() {
+	public static final MMCode mmShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount";
@@ -852,7 +854,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount = new MMCode() {
+	public static final MMCode mmShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount";
@@ -875,7 +877,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "SpinOffAllocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpinOffAllocation = new MMCode() {
+	public static final MMCode mmSpinOffAllocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpinOffAllocation";
@@ -898,7 +900,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "StockLoanAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockLoanAdjustment = new MMCode() {
+	public static final MMCode mmStockLoanAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanAdjustment";
@@ -921,7 +923,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "StockLoanOrRepoPaymentOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode StockLoanOrRepoPaymentOrder = new MMCode() {
+	public static final MMCode mmStockLoanOrRepoPaymentOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanOrRepoPaymentOrder";
@@ -944,7 +946,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "SupplementalInterimActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementalInterimActivity = new MMCode() {
+	public static final MMCode mmSupplementalInterimActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalInterimActivity";
@@ -967,7 +969,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "SupplementalInterimActivityFromMidwest"</li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementalInterimActivityFromMidwest = new MMCode() {
+	public static final MMCode mmSupplementalInterimActivityFromMidwest = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalInterimActivityFromMidwest";
@@ -990,7 +992,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "SupplementalInterimActivityFromPhiladelphia"</li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementalInterimActivityFromPhiladelphia = new MMCode() {
+	public static final MMCode mmSupplementalInterimActivityFromPhiladelphia = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalInterimActivityFromPhiladelphia";
@@ -1013,7 +1015,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "SupplementaryInterimOn"</li>
 	 * </ul>
 	 */
-	public static final MMCode SupplementaryInterimOn = new MMCode() {
+	public static final MMCode mmSupplementaryInterimOn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryInterimOn";
@@ -1036,7 +1038,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AccrualClaimPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccrualClaimPayment = new MMCode() {
+	public static final MMCode mmAccrualClaimPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccrualClaimPayment";
@@ -1059,7 +1061,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AccruedInterestNotPaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccruedInterestNotPaid = new MMCode() {
+	public static final MMCode mmAccruedInterestNotPaid = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestNotPaid";
@@ -1082,7 +1084,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AccruedInterestWrongRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode AccruedInterestWrongRate = new MMCode() {
+	public static final MMCode mmAccruedInterestWrongRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestWrongRate";
@@ -1105,7 +1107,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AdditionalRightsForBeneficialOwner"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdditionalRightsForBeneficialOwner = new MMCode() {
+	public static final MMCode mmAdditionalRightsForBeneficialOwner = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightsForBeneficialOwner";
@@ -1129,7 +1131,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * "AdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName = new MMCode() {
+	public static final MMCode mmAdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName";
@@ -1152,7 +1154,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AdjustmentForCashInLieuOfFractionalShares"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdjustmentForCashInLieuOfFractionalShares = new MMCode() {
+	public static final MMCode mmAdjustmentForCashInLieuOfFractionalShares = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentForCashInLieuOfFractionalShares";
@@ -1175,7 +1177,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AdjustmentForCashOnIncreasedShares"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdjustmentForCashOnIncreasedShares = new MMCode() {
+	public static final MMCode mmAdjustmentForCashOnIncreasedShares = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentForCashOnIncreasedShares";
@@ -1198,7 +1200,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AdjustmentForWrittenInquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdjustmentForWrittenInquiry = new MMCode() {
+	public static final MMCode mmAdjustmentForWrittenInquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentForWrittenInquiry";
@@ -1221,7 +1223,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AdjustmentIsInResponseToYourInquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdjustmentIsInResponseToYourInquiry = new MMCode() {
+	public static final MMCode mmAdjustmentIsInResponseToYourInquiry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentIsInResponseToYourInquiry";
@@ -1246,7 +1248,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode AdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName = new MMCode() {
+	public static final MMCode mmAdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName";
@@ -1269,7 +1271,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AdjustmentToAvoidFiscalPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdjustmentToAvoidFiscalPayment = new MMCode() {
+	public static final MMCode mmAdjustmentToAvoidFiscalPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentToAvoidFiscalPayment";
@@ -1292,7 +1294,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AdjustmentToYourDividendReinvestmentPosition"</li>
 	 * </ul>
 	 */
-	public static final MMCode AdjustmentToYourDividendReinvestmentPosition = new MMCode() {
+	public static final MMCode mmAdjustmentToYourDividendReinvestmentPosition = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentToYourDividendReinvestmentPosition";
@@ -1315,7 +1317,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AgentPaidBasedOnCombinedFractions"</li>
 	 * </ul>
 	 */
-	public static final MMCode AgentPaidBasedOnCombinedFractions = new MMCode() {
+	public static final MMCode mmAgentPaidBasedOnCombinedFractions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentPaidBasedOnCombinedFractions";
@@ -1338,7 +1340,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AllocationAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllocationAdjustment = new MMCode() {
+	public static final MMCode mmAllocationAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationAdjustment";
@@ -1361,7 +1363,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AllocationAdjustmentDueToFractionsRoundedUpByTheAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllocationAdjustmentDueToFractionsRoundedUpByTheAgent = new MMCode() {
+	public static final MMCode mmAllocationAdjustmentDueToFractionsRoundedUpByTheAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationAdjustmentDueToFractionsRoundedUpByTheAgent";
@@ -1384,7 +1386,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AllocationOfBabyBondsAmountToBeExited"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllocationOfBabyBondsAmountToBeExited = new MMCode() {
+	public static final MMCode mmAllocationOfBabyBondsAmountToBeExited = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationOfBabyBondsAmountToBeExited";
@@ -1407,7 +1409,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AllocationOfDRPTEDSInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode AllocationOfDRPTEDSInstruction = new MMCode() {
+	public static final MMCode mmAllocationOfDRPTEDSInstruction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationOfDRPTEDSInstruction";
@@ -1430,7 +1432,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AnnouncementDeletedOrFailTracking"</li>
 	 * </ul>
 	 */
-	public static final MMCode AnnouncementDeletedOrFailTracking = new MMCode() {
+	public static final MMCode mmAnnouncementDeletedOrFailTracking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncementDeletedOrFailTracking";
@@ -1453,7 +1455,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "AssumedByYourGoodselves"</li>
 	 * </ul>
 	 */
-	public static final MMCode AssumedByYourGoodselves = new MMCode() {
+	public static final MMCode mmAssumedByYourGoodselves = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssumedByYourGoodselves";
@@ -1476,7 +1478,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "BabyBondPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode BabyBondPayment = new MMCode() {
+	public static final MMCode mmBabyBondPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BabyBondPayment";
@@ -1499,7 +1501,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CalledCertificatesAccruedErroneousInterestChargeBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode CalledCertificatesAccruedErroneousInterestChargeBack = new MMCode() {
+	public static final MMCode mmCalledCertificatesAccruedErroneousInterestChargeBack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalledCertificatesAccruedErroneousInterestChargeBack";
@@ -1522,7 +1524,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CalledCertificatesCheckInParticipantsNameChargeBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode CalledCertificatesCheckInParticipantsNameChargeBack = new MMCode() {
+	public static final MMCode mmCalledCertificatesCheckInParticipantsNameChargeBack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalledCertificatesCheckInParticipantsNameChargeBack";
@@ -1545,7 +1547,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CashDueOnAnAccruedStockPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDueOnAnAccruedStockPayment = new MMCode() {
+	public static final MMCode mmCashDueOnAnAccruedStockPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDueOnAnAccruedStockPayment";
@@ -1568,7 +1570,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ChargeForFrenchAvoidFiscalTaxCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode ChargeForFrenchAvoidFiscalTaxCredit = new MMCode() {
+	public static final MMCode mmChargeForFrenchAvoidFiscalTaxCredit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeForFrenchAvoidFiscalTaxCredit";
@@ -1591,7 +1593,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ChargeInLieuOfReceiptOfDividendReinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode ChargeInLieuOfReceiptOfDividendReinvestment = new MMCode() {
+	public static final MMCode mmChargeInLieuOfReceiptOfDividendReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeInLieuOfReceiptOfDividendReinvestment";
@@ -1614,7 +1616,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CODWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode CODWithdrawal = new MMCode() {
+	public static final MMCode mmCODWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CODWithdrawal";
@@ -1637,7 +1639,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CompanyInDefault"</li>
 	 * </ul>
 	 */
-	public static final MMCode CompanyInDefault = new MMCode() {
+	public static final MMCode mmCompanyInDefault = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompanyInDefault";
@@ -1660,7 +1662,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CompanyDidNotDeclareDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode CompanyDidNotDeclareDividend = new MMCode() {
+	public static final MMCode mmCompanyDidNotDeclareDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompanyDidNotDeclareDividend";
@@ -1684,7 +1686,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * "CODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee"</li>
 	 * </ul>
 	 */
-	public static final MMCode CODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee = new MMCode() {
+	public static final MMCode mmCODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee";
@@ -1707,7 +1709,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CODBuyBackWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode CODBuyBackWithdrawal = new MMCode() {
+	public static final MMCode mmCODBuyBackWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CODBuyBackWithdrawal";
@@ -1730,7 +1732,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ChargeAtWithholdingRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ChargeAtWithholdingRate = new MMCode() {
+	public static final MMCode mmChargeAtWithholdingRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeAtWithholdingRate";
@@ -1753,7 +1755,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CashDueOnDRPShareAllocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDueOnDRPShareAllocation = new MMCode() {
+	public static final MMCode mmCashDueOnDRPShareAllocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDueOnDRPShareAllocation";
@@ -1776,7 +1778,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CashDueOnStockDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashDueOnStockDividend = new MMCode() {
+	public static final MMCode mmCashDueOnStockDividend = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDueOnStockDividend";
@@ -1799,7 +1801,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ChangeInTheRecordDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ChangeInTheRecordDate = new MMCode() {
+	public static final MMCode mmChangeInTheRecordDate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInTheRecordDate";
@@ -1823,7 +1825,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * "CODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves"</li>
 	 * </ul>
 	 */
-	public static final MMCode CODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves = new MMCode() {
+	public static final MMCode mmCODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves";
@@ -1846,7 +1848,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CouponCollectionService"</li>
 	 * </ul>
 	 */
-	public static final MMCode CouponCollectionService = new MMCode() {
+	public static final MMCode mmCouponCollectionService = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponCollectionService";
@@ -1870,7 +1872,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * "CTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless"</li>
 	 * </ul>
 	 */
-	public static final MMCode CTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless = new MMCode() {
+	public static final MMCode mmCTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless";
@@ -1893,7 +1895,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "CustodyPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustodyPayment = new MMCode() {
+	public static final MMCode mmCustodyPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyPayment";
@@ -1916,7 +1918,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DateRevision"</li>
 	 * </ul>
 	 */
-	public static final MMCode DateRevision = new MMCode() {
+	public static final MMCode mmDateRevision = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateRevision";
@@ -1939,7 +1941,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "Delete"</li>
 	 * </ul>
 	 */
-	public static final MMCode Delete = new MMCode() {
+	public static final MMCode mmDelete = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delete";
@@ -1962,7 +1964,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DeliverOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliverOrder = new MMCode() {
+	public static final MMCode mmDeliverOrder = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverOrder";
@@ -1985,7 +1987,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DeliverOrderActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode DeliverOrderActivity = new MMCode() {
+	public static final MMCode mmDeliverOrderActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverOrderActivity";
@@ -2008,7 +2010,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DepositAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DepositAdjustment = new MMCode() {
+	public static final MMCode mmDepositAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositAdjustment";
@@ -2032,7 +2034,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * "DepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour"</li>
 	 * </ul>
 	 */
-	public static final MMCode DepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour = new MMCode() {
+	public static final MMCode mmDepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour";
@@ -2055,7 +2057,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DepositTransferredIntoTheNameOfTheCEDEAndCo"</li>
 	 * </ul>
 	 */
-	public static final MMCode DepositTransferredIntoTheNameOfTheCEDEAndCo = new MMCode() {
+	public static final MMCode mmDepositTransferredIntoTheNameOfTheCEDEAndCo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositTransferredIntoTheNameOfTheCEDEAndCo";
@@ -2078,7 +2080,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DividendReinvestmentAllocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendReinvestmentAllocation = new MMCode() {
+	public static final MMCode mmDividendReinvestmentAllocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentAllocation";
@@ -2103,7 +2105,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode DividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent = new MMCode() {
+	public static final MMCode mmDividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent";
@@ -2126,7 +2128,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DividendReinvestmentAllocationOfCashInLieuOfFractions"</li>
 	 * </ul>
 	 */
-	public static final MMCode DividendReinvestmentAllocationOfCashInLieuOfFractions = new MMCode() {
+	public static final MMCode mmDividendReinvestmentAllocationOfCashInLieuOfFractions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentAllocationOfCashInLieuOfFractions";
@@ -2149,7 +2151,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer"</li>
 	 * </ul>
 	 */
-	public static final MMCode DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer = new MMCode() {
+	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer";
@@ -2173,7 +2175,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * "DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer = new MMCode() {
+	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer";
@@ -2196,7 +2198,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves"</li>
 	 * </ul>
 	 */
-	public static final MMCode DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves = new MMCode() {
+	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves";
@@ -2220,7 +2222,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * "DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer = new MMCode() {
+	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer";
@@ -2243,7 +2245,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee"</li>
 	 * </ul>
 	 */
-	public static final MMCode DTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee = new MMCode() {
+	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee";
@@ -2267,7 +2269,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * "DTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode DTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer = new MMCode() {
+	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer";
@@ -2290,7 +2292,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DTCCClaimOnRegisteredHolderInTheNameOfYourCustomer"</li>
 	 * </ul>
 	 */
-	public static final MMCode DTCCClaimOnRegisteredHolderInTheNameOfYourCustomer = new MMCode() {
+	public static final MMCode mmDTCCClaimOnRegisteredHolderInTheNameOfYourCustomer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimOnRegisteredHolderInTheNameOfYourCustomer";
@@ -2313,7 +2315,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves"</li>
 	 * </ul>
 	 */
-	public static final MMCode DTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves = new MMCode() {
+	public static final MMCode mmDTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves";
@@ -2336,7 +2338,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DueBill"</li>
 	 * </ul>
 	 */
-	public static final MMCode DueBill = new MMCode() {
+	public static final MMCode mmDueBill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueBill";
@@ -2359,7 +2361,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DueBillFailTracking"</li>
 	 * </ul>
 	 */
-	public static final MMCode DueBillFailTracking = new MMCode() {
+	public static final MMCode mmDueBillFailTracking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueBillFailTracking";
@@ -2382,7 +2384,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DueBillReversal"</li>
 	 * </ul>
 	 */
-	public static final MMCode DueBillReversal = new MMCode() {
+	public static final MMCode mmDueBillReversal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueBillReversal";
@@ -2405,7 +2407,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DWACAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode DWACAdjustment = new MMCode() {
+	public static final MMCode mmDWACAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DWACAdjustment";
@@ -2428,7 +2430,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "DWACBuyBackWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode DWACBuyBackWithdrawal = new MMCode() {
+	public static final MMCode mmDWACBuyBackWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DWACBuyBackWithdrawal";
@@ -2451,7 +2453,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ForeignCashDividendsOrBondInterestAllocationAtExemptRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignCashDividendsOrBondInterestAllocationAtExemptRate = new MMCode() {
+	public static final MMCode mmForeignCashDividendsOrBondInterestAllocationAtExemptRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCashDividendsOrBondInterestAllocationAtExemptRate";
@@ -2474,7 +2476,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate = new MMCode() {
+	public static final MMCode mmForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate";
@@ -2497,7 +2499,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ForeignCashDividendsOrBondsInterestAllocationAtFavorableRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignCashDividendsOrBondsInterestAllocationAtFavorableRate = new MMCode() {
+	public static final MMCode mmForeignCashDividendsOrBondsInterestAllocationAtFavorableRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCashDividendsOrBondsInterestAllocationAtFavorableRate";
@@ -2520,7 +2522,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ForeignCashDividendUnfavorableRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignCashDividendUnfavorableRate = new MMCode() {
+	public static final MMCode mmForeignCashDividendUnfavorableRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCashDividendUnfavorableRate";
@@ -2543,7 +2545,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "FractionalRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode FractionalRights = new MMCode() {
+	public static final MMCode mmFractionalRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionalRights";
@@ -2566,7 +2568,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "FrenchWithholdingTax10Percent"</li>
 	 * </ul>
 	 */
-	public static final MMCode FrenchWithholdingTax10Percent = new MMCode() {
+	public static final MMCode mmFrenchWithholdingTax10Percent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrenchWithholdingTax10Percent";
@@ -2589,7 +2591,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "FrenchWithholdingTax15Percent"</li>
 	 * </ul>
 	 */
-	public static final MMCode FrenchWithholdingTax15Percent = new MMCode() {
+	public static final MMCode mmFrenchWithholdingTax15Percent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrenchWithholdingTax15Percent";
@@ -2612,7 +2614,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "FrenchWithholdingTax25Percent"</li>
 	 * </ul>
 	 */
-	public static final MMCode FrenchWithholdingTax25Percent = new MMCode() {
+	public static final MMCode mmFrenchWithholdingTax25Percent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrenchWithholdingTax25Percent";
@@ -2635,7 +2637,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "FrozenLetterMovement"</li>
 	 * </ul>
 	 */
-	public static final MMCode FrozenLetterMovement = new MMCode() {
+	public static final MMCode mmFrozenLetterMovement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrozenLetterMovement";
@@ -2658,7 +2660,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "GracePeriod"</li>
 	 * </ul>
 	 */
-	public static final MMCode GracePeriod = new MMCode() {
+	public static final MMCode mmGracePeriod = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GracePeriod";
@@ -2681,7 +2683,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InLieuOfReorgDepositActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InLieuOfReorgDepositActivity = new MMCode() {
+	public static final MMCode mmInLieuOfReorgDepositActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InLieuOfReorgDepositActivity";
@@ -2704,7 +2706,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InSettlementOfATradeDTCCReorgAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode InSettlementOfATradeDTCCReorgAccount = new MMCode() {
+	public static final MMCode mmInSettlementOfATradeDTCCReorgAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InSettlementOfATradeDTCCReorgAccount";
@@ -2727,7 +2729,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InterestAdjustedDueToEarlyWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestAdjustedDueToEarlyWithdrawal = new MMCode() {
+	public static final MMCode mmInterestAdjustedDueToEarlyWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestAdjustedDueToEarlyWithdrawal";
@@ -2750,7 +2752,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InterestAllocatedInError"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestAllocatedInError = new MMCode() {
+	public static final MMCode mmInterestAllocatedInError = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestAllocatedInError";
@@ -2773,7 +2775,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InterestDueWasErroneouslyPaidToYouByTheIssuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestDueWasErroneouslyPaidToYouByTheIssuer = new MMCode() {
+	public static final MMCode mmInterestDueWasErroneouslyPaidToYouByTheIssuer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestDueWasErroneouslyPaidToYouByTheIssuer";
@@ -2796,7 +2798,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InterestorDividendDueOnConversion"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestorDividendDueOnConversion = new MMCode() {
+	public static final MMCode mmInterestorDividendDueOnConversion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestorDividendDueOnConversion";
@@ -2819,7 +2821,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InterestOrDividendDueOnMerger"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestOrDividendDueOnMerger = new MMCode() {
+	public static final MMCode mmInterestOrDividendDueOnMerger = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOrDividendDueOnMerger";
@@ -2842,7 +2844,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InterestOrDividendDueOnRedemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestOrDividendDueOnRedemption = new MMCode() {
+	public static final MMCode mmInterestOrDividendDueOnRedemption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOrDividendDueOnRedemption";
@@ -2865,7 +2867,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InterestOrDividendDueOnRepaymentOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestOrDividendDueOnRepaymentOption = new MMCode() {
+	public static final MMCode mmInterestOrDividendDueOnRepaymentOption = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOrDividendDueOnRepaymentOption";
@@ -2888,7 +2890,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InterestOrDividendDueOnTender"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestOrDividendDueOnTender = new MMCode() {
+	public static final MMCode mmInterestOrDividendDueOnTender = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOrDividendDueOnTender";
@@ -2911,7 +2913,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InterestPaysAtMaturity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterestPaysAtMaturity = new MMCode() {
+	public static final MMCode mmInterestPaysAtMaturity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaysAtMaturity";
@@ -2934,7 +2936,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InterimPositionAdjustedForDeliverOrderActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode InterimPositionAdjustedForDeliverOrderActivity = new MMCode() {
+	public static final MMCode mmInterimPositionAdjustedForDeliverOrderActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimPositionAdjustedForDeliverOrderActivity";
@@ -2957,7 +2959,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "InvestmentIdAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentIdAdjustment = new MMCode() {
+	public static final MMCode mmInvestmentIdAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentIdAdjustment";
@@ -2980,7 +2982,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "IssueInDefault"</li>
 	 * </ul>
 	 */
-	public static final MMCode IssueInDefault = new MMCode() {
+	public static final MMCode mmIssueInDefault = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueInDefault";
@@ -3003,7 +3005,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "LateAnnouncement"</li>
 	 * </ul>
 	 */
-	public static final MMCode LateAnnouncement = new MMCode() {
+	public static final MMCode mmLateAnnouncement = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncement";
@@ -3026,7 +3028,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "LateAnnouncementActivityDueBillActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode LateAnnouncementActivityDueBillActivity = new MMCode() {
+	public static final MMCode mmLateAnnouncementActivityDueBillActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncementActivityDueBillActivity";
@@ -3049,7 +3051,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "LostCertificateRegisteredInTheNameOfYourGoodselves"</li>
 	 * </ul>
 	 */
-	public static final MMCode LostCertificateRegisteredInTheNameOfYourGoodselves = new MMCode() {
+	public static final MMCode mmLostCertificateRegisteredInTheNameOfYourGoodselves = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LostCertificateRegisteredInTheNameOfYourGoodselves";
@@ -3072,7 +3074,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "LostCertificateWasRegisteredInTheNameOfYourCustomer"</li>
 	 * </ul>
 	 */
-	public static final MMCode LostCertificateWasRegisteredInTheNameOfYourCustomer = new MMCode() {
+	public static final MMCode mmLostCertificateWasRegisteredInTheNameOfYourCustomer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LostCertificateWasRegisteredInTheNameOfYourCustomer";
@@ -3095,7 +3097,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "LostCertificateWasRegisteredInTheNameOfYourNominee"</li>
 	 * </ul>
 	 */
-	public static final MMCode LostCertificateWasRegisteredInTheNameOfYourNominee = new MMCode() {
+	public static final MMCode mmLostCertificateWasRegisteredInTheNameOfYourNominee = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LostCertificateWasRegisteredInTheNameOfYourNominee";
@@ -3118,7 +3120,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "MidwestDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode MidwestDepository = new MMCode() {
+	public static final MMCode mmMidwestDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidwestDepository";
@@ -3141,7 +3143,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "MuniBearerBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode MuniBearerBond = new MMCode() {
+	public static final MMCode mmMuniBearerBond = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBond";
@@ -3164,7 +3166,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "MuniBearerBondCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode MuniBearerBondCoupon = new MMCode() {
+	public static final MMCode mmMuniBearerBondCoupon = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCoupon";
@@ -3187,7 +3189,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "MuniBearerBondCouponAdjustmentExcessCouponsDepositedOn"</li>
 	 * </ul>
 	 */
-	public static final MMCode MuniBearerBondCouponAdjustmentExcessCouponsDepositedOn = new MMCode() {
+	public static final MMCode mmMuniBearerBondCouponAdjustmentExcessCouponsDepositedOn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponAdjustmentExcessCouponsDepositedOn";
@@ -3210,7 +3212,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "MuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn"</li>
 	 * </ul>
 	 */
-	public static final MMCode MuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn = new MMCode() {
+	public static final MMCode mmMuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn";
@@ -3233,7 +3235,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "MuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode MuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit = new MMCode() {
+	public static final MMCode mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit";
@@ -3256,7 +3258,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "MuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode MuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal = new MMCode() {
+	public static final MMCode mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal";
@@ -3279,7 +3281,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "MuniBearerBondCouponPositionAdjustedForDepositActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode MuniBearerBondCouponPositionAdjustedForDepositActivity = new MMCode() {
+	public static final MMCode mmMuniBearerBondCouponPositionAdjustedForDepositActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponPositionAdjustedForDepositActivity";
@@ -3302,7 +3304,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "NonAllocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode NonAllocation = new MMCode() {
+	public static final MMCode mmNonAllocation = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonAllocation";
@@ -3325,7 +3327,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "OptionalDividendAllocationAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode OptionalDividendAllocationAdjustment = new MMCode() {
+	public static final MMCode mmOptionalDividendAllocationAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionalDividendAllocationAdjustment";
@@ -3348,7 +3350,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode Other = new MMCode() {
+	public static final MMCode mmOther = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
@@ -3371,7 +3373,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PacificDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode PacificDepository = new MMCode() {
+	public static final MMCode mmPacificDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PacificDepository";
@@ -3394,7 +3396,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PartClaimPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartClaimPayment = new MMCode() {
+	public static final MMCode mmPartClaimPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartClaimPayment";
@@ -3417,7 +3419,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PartClaimReversal"</li>
 	 * </ul>
 	 */
-	public static final MMCode PartClaimReversal = new MMCode() {
+	public static final MMCode mmPartClaimReversal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartClaimReversal";
@@ -3440,7 +3442,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PaymentOfFullAvoidFiscalTaxRefund"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentOfFullAvoidFiscalTaxRefund = new MMCode() {
+	public static final MMCode mmPaymentOfFullAvoidFiscalTaxRefund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOfFullAvoidFiscalTaxRefund";
@@ -3463,7 +3465,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PaymentOfPartialAvoidFiscalTaxRefund"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaymentOfPartialAvoidFiscalTaxRefund = new MMCode() {
+	public static final MMCode mmPaymentOfPartialAvoidFiscalTaxRefund = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOfPartialAvoidFiscalTaxRefund";
@@ -3486,7 +3488,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PaynInKindDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode PaynInKindDistribution = new MMCode() {
+	public static final MMCode mmPaynInKindDistribution = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaynInKindDistribution";
@@ -3509,7 +3511,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PhiladelphiaDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhiladelphiaDepository = new MMCode() {
+	public static final MMCode mmPhiladelphiaDepository = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhiladelphiaDepository";
@@ -3532,7 +3534,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PledgeAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode PledgeAdjustment = new MMCode() {
+	public static final MMCode mmPledgeAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgeAdjustment";
@@ -3555,7 +3557,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PledgeReleaseAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode PledgeReleaseAdjustment = new MMCode() {
+	public static final MMCode mmPledgeReleaseAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgeReleaseAdjustment";
@@ -3578,7 +3580,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PositionAdjustedForDepositActivity"</li>
 	 * </ul>
 	 */
-	public static final MMCode PositionAdjustedForDepositActivity = new MMCode() {
+	public static final MMCode mmPositionAdjustedForDepositActivity = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionAdjustedForDepositActivity";
@@ -3603,7 +3605,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode PositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers = new MMCode() {
+	public static final MMCode mmPositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers";
@@ -3626,7 +3628,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PostDateChangeForFailTracking"</li>
 	 * </ul>
 	 */
-	public static final MMCode PostDateChangeForFailTracking = new MMCode() {
+	public static final MMCode mmPostDateChangeForFailTracking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostDateChangeForFailTracking";
@@ -3649,7 +3651,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PreviouslyCalledCertificatesFundsDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode PreviouslyCalledCertificatesFundsDelivery = new MMCode() {
+	public static final MMCode mmPreviouslyCalledCertificatesFundsDelivery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyCalledCertificatesFundsDelivery";
@@ -3672,7 +3674,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "PriceCorrectionDividendReinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode PriceCorrectionDividendReinvestment = new MMCode() {
+	public static final MMCode mmPriceCorrectionDividendReinvestment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCorrectionDividendReinvestment";
@@ -3695,7 +3697,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ProceedsFromBuyTransactionInOurDTCCDividendTradingAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProceedsFromBuyTransactionInOurDTCCDividendTradingAccount = new MMCode() {
+	public static final MMCode mmProceedsFromBuyTransactionInOurDTCCDividendTradingAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProceedsFromBuyTransactionInOurDTCCDividendTradingAccount";
@@ -3718,7 +3720,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ProceedsFromSaleOf"</li>
 	 * </ul>
 	 */
-	public static final MMCode ProceedsFromSaleOf = new MMCode() {
+	public static final MMCode mmProceedsFromSaleOf = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProceedsFromSaleOf";
@@ -3743,7 +3745,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode ProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount = new MMCode() {
+	public static final MMCode mmProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount";
@@ -3766,7 +3768,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RateChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode RateChange = new MMCode() {
+	public static final MMCode mmRateChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateChange";
@@ -3789,7 +3791,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RateRevision"</li>
 	 * </ul>
 	 */
-	public static final MMCode RateRevision = new MMCode() {
+	public static final MMCode mmRateRevision = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateRevision";
@@ -3812,7 +3814,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RateUnknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode RateUnknown = new MMCode() {
+	public static final MMCode mmRateUnknown = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateUnknown";
@@ -3835,7 +3837,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RecordDatePositionAdjustedForaWithdrawalByTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode RecordDatePositionAdjustedForaWithdrawalByTransfer = new MMCode() {
+	public static final MMCode mmRecordDatePositionAdjustedForaWithdrawalByTransfer = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDatePositionAdjustedForaWithdrawalByTransfer";
@@ -3858,7 +3860,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RedemptionAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode RedemptionAdjustment = new MMCode() {
+	public static final MMCode mmRedemptionAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionAdjustment";
@@ -3881,7 +3883,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RedemptionCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode RedemptionCash = new MMCode() {
+	public static final MMCode mmRedemptionCash = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionCash";
@@ -3904,7 +3906,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RedemptionPaymentDueToPledgeRelease"</li>
 	 * </ul>
 	 */
-	public static final MMCode RedemptionPaymentDueToPledgeRelease = new MMCode() {
+	public static final MMCode mmRedemptionPaymentDueToPledgeRelease = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPaymentDueToPledgeRelease";
@@ -3927,7 +3929,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RefundedTaxRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode RefundedTaxRate = new MMCode() {
+	public static final MMCode mmRefundedTaxRate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundedTaxRate";
@@ -3950,7 +3952,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RefundOfFrenchTaxJuly"</li>
 	 * </ul>
 	 */
-	public static final MMCode RefundOfFrenchTaxJuly = new MMCode() {
+	public static final MMCode mmRefundOfFrenchTaxJuly = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundOfFrenchTaxJuly";
@@ -3973,7 +3975,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "RefundOfFrenchTaxJune"</li>
 	 * </ul>
 	 */
-	public static final MMCode RefundOfFrenchTaxJune = new MMCode() {
+	public static final MMCode mmRefundOfFrenchTaxJune = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundOfFrenchTaxJune";
@@ -3996,7 +3998,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "Reinstate"</li>
 	 * </ul>
 	 */
-	public static final MMCode Reinstate = new MMCode() {
+	public static final MMCode mmReinstate = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinstate";
@@ -4019,7 +4021,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "ReorganizationAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode ReorganizationAdjustment = new MMCode() {
+	public static final MMCode mmReorganizationAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorganizationAdjustment";
@@ -4042,7 +4044,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "TaxExemptInstructions"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxExemptInstructions = new MMCode() {
+	public static final MMCode mmTaxExemptInstructions = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemptInstructions";
@@ -4065,7 +4067,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "TenderFeeDeduction"</li>
 	 * </ul>
 	 */
-	public static final MMCode TenderFeeDeduction = new MMCode() {
+	public static final MMCode mmTenderFeeDeduction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderFeeDeduction";
@@ -4088,7 +4090,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "UnfavorableRateMerger"</li>
 	 * </ul>
 	 */
-	public static final MMCode UnfavorableRateMerger = new MMCode() {
+	public static final MMCode mmUnfavorableRateMerger = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnfavorableRateMerger";
@@ -4111,7 +4113,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "UninsuredInterestWithheld"</li>
 	 * </ul>
 	 */
-	public static final MMCode UninsuredInterestWithheld = new MMCode() {
+	public static final MMCode mmUninsuredInterestWithheld = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninsuredInterestWithheld";
@@ -4134,7 +4136,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "VodaphoneADR"</li>
 	 * </ul>
 	 */
-	public static final MMCode VodaphoneADR = new MMCode() {
+	public static final MMCode mmVodaphoneADR = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VodaphoneADR";
@@ -4157,7 +4159,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "WithdrawalTransferAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithdrawalTransferAdjustment = new MMCode() {
+	public static final MMCode mmWithdrawalTransferAdjustment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalTransferAdjustment";
@@ -4180,7 +4182,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "WithdrawalTransferBuyBackWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithdrawalTransferBuyBackWithdrawal = new MMCode() {
+	public static final MMCode mmWithdrawalTransferBuyBackWithdrawal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalTransferBuyBackWithdrawal";
@@ -4203,7 +4205,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "WithholdingTaxAdjustmentInUserDefinedCountry"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingTaxAdjustmentInUserDefinedCountry = new MMCode() {
+	public static final MMCode mmWithholdingTaxAdjustmentInUserDefinedCountry = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxAdjustmentInUserDefinedCountry";
@@ -4226,7 +4228,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "WriteOffReorganization"</li>
 	 * </ul>
 	 */
-	public static final MMCode WriteOffReorganization = new MMCode() {
+	public static final MMCode mmWriteOffReorganization = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WriteOffReorganization";
@@ -4249,7 +4251,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 * name} = "WrongRatePrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode WrongRatePrincipal = new MMCode() {
+	public static final MMCode mmWrongRatePrincipal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongRatePrincipal";
@@ -4260,110 +4262,114 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DTCAdjustmentPaymentSubReason1Code";
 				definition = "Specifies the subtype of the payment adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ReorganizationRelatedAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RepPaymentCharge,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ReversalOfACODWithdrawal, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ReversalOfADeposit,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ReversalOfAnAccrualClaimPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ReversalOfaWithdrawalByTransfer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ReverseOfEscheatedAmountOfClaim, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ReverseOfTheSharesEscheatedToNYStateInError,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RevisionOfChargeForWithholdingTax, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ScriptSharesExited,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.SpinOffAllocation, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.StockLoanAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.StockLoanOrRepoPaymentOrder, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.SupplementalInterimActivity,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.SupplementalInterimActivityFromMidwest,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.SupplementalInterimActivityFromPhiladelphia, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.SupplementaryInterimOn,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AccrualClaimPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AccruedInterestNotPaid,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AccruedInterestWrongRate, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AdditionalRightsForBeneficialOwner,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AdjustmentForCashInLieuOfFractionalShares,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AdjustmentForCashOnIncreasedShares, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AdjustmentForWrittenInquiry,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AdjustmentIsInResponseToYourInquiry,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AdjustmentToAvoidFiscalPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AdjustmentToYourDividendReinvestmentPosition,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AgentPaidBasedOnCombinedFractions, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AllocationAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AllocationAdjustmentDueToFractionsRoundedUpByTheAgent,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AllocationOfBabyBondsAmountToBeExited, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AllocationOfDRPTEDSInstruction,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AnnouncementDeletedOrFailTracking, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.AssumedByYourGoodselves,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.BabyBondPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CalledCertificatesAccruedErroneousInterestChargeBack,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CalledCertificatesCheckInParticipantsNameChargeBack,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CashDueOnAnAccruedStockPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ChargeForFrenchAvoidFiscalTaxCredit,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ChargeInLieuOfReceiptOfDividendReinvestment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CODWithdrawal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CompanyInDefault, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CompanyDidNotDeclareDividend,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CODBuyBackWithdrawal, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ChargeAtWithholdingRate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CashDueOnDRPShareAllocation, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CashDueOnStockDividend,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ChangeInTheRecordDate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CouponCollectionService,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.CustodyPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DateRevision,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.Delete, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DeliverOrder,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DeliverOrderActivity, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DepositAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DepositTransferredIntoTheNameOfTheCEDEAndCo, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DividendReinvestmentAllocation,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DividendReinvestmentAllocationOfCashInLieuOfFractions,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DTCCClaimOnRegisteredHolderInTheNameOfYourCustomer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DueBill,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DueBillFailTracking, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DueBillReversal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DWACAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.DWACBuyBackWithdrawal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ForeignCashDividendsOrBondInterestAllocationAtExemptRate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ForeignCashDividendsOrBondsInterestAllocationAtFavorableRate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ForeignCashDividendUnfavorableRate, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.FractionalRights,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.FrenchWithholdingTax10Percent, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.FrenchWithholdingTax15Percent,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.FrenchWithholdingTax25Percent, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.FrozenLetterMovement,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.GracePeriod, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InLieuOfReorgDepositActivity,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InSettlementOfATradeDTCCReorgAccount, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InterestAdjustedDueToEarlyWithdrawal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InterestAllocatedInError, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InterestDueWasErroneouslyPaidToYouByTheIssuer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InterestorDividendDueOnConversion, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InterestOrDividendDueOnMerger,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InterestOrDividendDueOnRedemption, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InterestOrDividendDueOnRepaymentOption,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InterestOrDividendDueOnTender, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InterestPaysAtMaturity,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InterimPositionAdjustedForDeliverOrderActivity, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.InvestmentIdAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.IssueInDefault, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.LateAnnouncement,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.LateAnnouncementActivityDueBillActivity,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.LostCertificateRegisteredInTheNameOfYourGoodselves,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.LostCertificateWasRegisteredInTheNameOfYourCustomer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.LostCertificateWasRegisteredInTheNameOfYourNominee, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.MidwestDepository,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.MuniBearerBond, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.MuniBearerBondCoupon,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.MuniBearerBondCouponAdjustmentExcessCouponsDepositedOn,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.MuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.MuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.MuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.MuniBearerBondCouponPositionAdjustedForDepositActivity, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.NonAllocation,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.OptionalDividendAllocationAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.Other,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PacificDepository, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PartClaimPayment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PartClaimReversal, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PaymentOfFullAvoidFiscalTaxRefund,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PaymentOfPartialAvoidFiscalTaxRefund, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PaynInKindDistribution,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PhiladelphiaDepository, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PledgeAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PledgeReleaseAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PositionAdjustedForDepositActivity,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PostDateChangeForFailTracking, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PreviouslyCalledCertificatesFundsDelivery,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.PriceCorrectionDividendReinvestment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ProceedsFromBuyTransactionInOurDTCCDividendTradingAccount,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ProceedsFromSaleOf,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RateChange, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RateRevision,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RateUnknown, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RecordDatePositionAdjustedForaWithdrawalByTransfer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RedemptionAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RedemptionCash,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RedemptionPaymentDueToPledgeRelease, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RefundedTaxRate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RefundOfFrenchTaxJuly, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.RefundOfFrenchTaxJune,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.Reinstate, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.ReorganizationAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.TaxExemptInstructions, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.TenderFeeDeduction,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.UnfavorableRateMerger, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.UninsuredInterestWithheld,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.VodaphoneADR, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.WithdrawalTransferAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.WithdrawalTransferBuyBackWithdrawal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.WithholdingTaxAdjustmentInUserDefinedCountry, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.WriteOffReorganization,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.WrongRatePrincipal);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReorganizationRelatedAdjustment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRepPaymentCharge, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReversalOfACODWithdrawal,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReversalOfADeposit, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReversalOfAnAccrualClaimPayment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReversalOfaWithdrawalByTransfer, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReverseOfEscheatedAmountOfClaim,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReverseOfTheSharesEscheatedToNYStateInError,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRevisionOfChargeForWithholdingTax, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmScriptSharesExited,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmSpinOffAllocation, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmStockLoanAdjustment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmStockLoanOrRepoPaymentOrder, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivity,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivityFromMidwest,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivityFromPhiladelphia, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmSupplementaryInterimOn,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAccrualClaimPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAccruedInterestNotPaid,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAccruedInterestWrongRate, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdditionalRightsForBeneficialOwner,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForCashInLieuOfFractionalShares,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForCashOnIncreasedShares, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForWrittenInquiry,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentIsInResponseToYourInquiry,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentToAvoidFiscalPayment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentToYourDividendReinvestmentPosition,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAgentPaidBasedOnCombinedFractions, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAllocationAdjustment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAllocationAdjustmentDueToFractionsRoundedUpByTheAgent,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAllocationOfBabyBondsAmountToBeExited, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAllocationOfDRPTEDSInstruction,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAnnouncementDeletedOrFailTracking, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAssumedByYourGoodselves,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmBabyBondPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCalledCertificatesAccruedErroneousInterestChargeBack,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCalledCertificatesCheckInParticipantsNameChargeBack,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCashDueOnAnAccruedStockPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmChargeForFrenchAvoidFiscalTaxCredit,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmChargeInLieuOfReceiptOfDividendReinvestment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCODWithdrawal,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCompanyInDefault, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCompanyDidNotDeclareDividend,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCODBuyBackWithdrawal, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmChargeAtWithholdingRate,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCashDueOnDRPShareAllocation, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCashDueOnStockDividend,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmChangeInTheRecordDate,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCouponCollectionService,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCustodyPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDateRevision,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDelete, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDeliverOrder,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDeliverOrderActivity, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDepositAdjustment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDepositTransferredIntoTheNameOfTheCEDEAndCo,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDividendReinvestmentAllocation,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDividendReinvestmentAllocationOfCashInLieuOfFractions,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimOnRegisteredHolderInTheNameOfYourCustomer,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDueBill,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDueBillFailTracking, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDueBillReversal,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDWACAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDWACBuyBackWithdrawal,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendsOrBondInterestAllocationAtExemptRate,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendsOrBondsInterestAllocationAtFavorableRate,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendUnfavorableRate, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmFractionalRights,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax10Percent, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax15Percent,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax25Percent, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmFrozenLetterMovement,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmGracePeriod, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInLieuOfReorgDepositActivity,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInSettlementOfATradeDTCCReorgAccount,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestAdjustedDueToEarlyWithdrawal, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestAllocatedInError,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestDueWasErroneouslyPaidToYouByTheIssuer,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestorDividendDueOnConversion, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnMerger,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnRedemption,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnRepaymentOption, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnTender,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestPaysAtMaturity, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterimPositionAdjustedForDeliverOrderActivity,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInvestmentIdAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmIssueInDefault,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmLateAnnouncement, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmLateAnnouncementActivityDueBillActivity,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmLostCertificateRegisteredInTheNameOfYourGoodselves,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmLostCertificateWasRegisteredInTheNameOfYourCustomer,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmLostCertificateWasRegisteredInTheNameOfYourNominee, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMidwestDepository,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBond, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCoupon,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentExcessCouponsDepositedOn,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponPositionAdjustedForDepositActivity, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmNonAllocation,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmOptionalDividendAllocationAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmOther,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPacificDepository, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPartClaimPayment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPartClaimReversal, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPaymentOfFullAvoidFiscalTaxRefund,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPaymentOfPartialAvoidFiscalTaxRefund, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPaynInKindDistribution,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPhiladelphiaDepository, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPledgeAdjustment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPledgeReleaseAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPositionAdjustedForDepositActivity,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPostDateChangeForFailTracking, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPreviouslyCalledCertificatesFundsDelivery,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPriceCorrectionDividendReinvestment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmProceedsFromBuyTransactionInOurDTCCDividendTradingAccount,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmProceedsFromSaleOf,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRateChange, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRateRevision,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRateUnknown, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRecordDatePositionAdjustedForaWithdrawalByTransfer,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRedemptionAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRedemptionCash,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRedemptionPaymentDueToPledgeRelease, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRefundedTaxRate,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRefundOfFrenchTaxJuly, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRefundOfFrenchTaxJune,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReinstate, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReorganizationAdjustment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmTaxExemptInstructions, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmTenderFeeDeduction,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmUnfavorableRateMerger, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmUninsuredInterestWithheld,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmVodaphoneADR, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmWithdrawalTransferAdjustment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmWithdrawalTransferBuyBackWithdrawal,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmWithholdingTaxAdjustmentInUserDefinedCountry, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmWriteOffReorganization,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmWrongRatePrincipal);
 				trace_lazy = () -> DTCAdjustmentPaymentSubReasonCode.mmObject();
 			}
 		});

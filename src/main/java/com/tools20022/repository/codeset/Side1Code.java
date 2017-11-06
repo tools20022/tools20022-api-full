@@ -32,39 +32,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.SideCode SideCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#Buy
- * Side1Code.Buy}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#Sell
- * Side1Code.Sell}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#TwoSided
- * Side1Code.TwoSided}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#BuyMinus
- * Side1Code.BuyMinus}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#SellPlus
- * Side1Code.SellPlus}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#SellShort
- * Side1Code.SellShort}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#SellShortExempt
- * Side1Code.SellShortExempt}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#Cross
- * Side1Code.Cross}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#CrossShort
- * Side1Code.CrossShort}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#CrossShortExempt
- * Side1Code.CrossShortExempt}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#AsDefined
- * Side1Code.AsDefined}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#Opposite
- * Side1Code.Opposite}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#Undisclosed
- * Side1Code.Undisclosed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmBuy
+ * Side1Code.mmBuy}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmSell
+ * Side1Code.mmSell}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmTwoSided
+ * Side1Code.mmTwoSided}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmBuyMinus
+ * Side1Code.mmBuyMinus}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmSellPlus
+ * Side1Code.mmSellPlus}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmSellShort
+ * Side1Code.mmSellShort}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Side1Code#mmSellShortExempt
+ * Side1Code.mmSellShortExempt}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmCross
+ * Side1Code.mmCross}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmCrossShort
+ * Side1Code.mmCrossShort}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Side1Code#mmCrossShortExempt
+ * Side1Code.mmCrossShortExempt}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmAsDefined
+ * Side1Code.mmAsDefined}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmOpposite
+ * Side1Code.mmOpposite}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code#mmUndisclosed
+ * Side1Code.mmUndisclosed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -100,7 +102,7 @@ public class Side1Code extends SideCode {
 	 * name} = "Buy"</li>
 	 * </ul>
 	 */
-	public static final MMCode Buy = new MMCode() {
+	public static final MMCode mmBuy = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buy";
@@ -122,7 +124,7 @@ public class Side1Code extends SideCode {
 	 * name} = "Sell"</li>
 	 * </ul>
 	 */
-	public static final MMCode Sell = new MMCode() {
+	public static final MMCode mmSell = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
@@ -144,7 +146,7 @@ public class Side1Code extends SideCode {
 	 * name} = "TwoSided"</li>
 	 * </ul>
 	 */
-	public static final MMCode TwoSided = new MMCode() {
+	public static final MMCode mmTwoSided = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoSided";
@@ -166,7 +168,7 @@ public class Side1Code extends SideCode {
 	 * name} = "BuyMinus"</li>
 	 * </ul>
 	 */
-	public static final MMCode BuyMinus = new MMCode() {
+	public static final MMCode mmBuyMinus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyMinus";
@@ -188,7 +190,7 @@ public class Side1Code extends SideCode {
 	 * name} = "SellPlus"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellPlus = new MMCode() {
+	public static final MMCode mmSellPlus = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellPlus";
@@ -210,7 +212,7 @@ public class Side1Code extends SideCode {
 	 * name} = "SellShort"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellShort = new MMCode() {
+	public static final MMCode mmSellShort = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShort";
@@ -232,7 +234,7 @@ public class Side1Code extends SideCode {
 	 * name} = "SellShortExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode SellShortExempt = new MMCode() {
+	public static final MMCode mmSellShortExempt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShortExempt";
@@ -254,7 +256,7 @@ public class Side1Code extends SideCode {
 	 * name} = "Cross"</li>
 	 * </ul>
 	 */
-	public static final MMCode Cross = new MMCode() {
+	public static final MMCode mmCross = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cross";
@@ -276,7 +278,7 @@ public class Side1Code extends SideCode {
 	 * name} = "CrossShort"</li>
 	 * </ul>
 	 */
-	public static final MMCode CrossShort = new MMCode() {
+	public static final MMCode mmCrossShort = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossShort";
@@ -298,7 +300,7 @@ public class Side1Code extends SideCode {
 	 * name} = "CrossShortExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode CrossShortExempt = new MMCode() {
+	public static final MMCode mmCrossShortExempt = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossShortExempt";
@@ -320,7 +322,7 @@ public class Side1Code extends SideCode {
 	 * name} = "AsDefined"</li>
 	 * </ul>
 	 */
-	public static final MMCode AsDefined = new MMCode() {
+	public static final MMCode mmAsDefined = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsDefined";
@@ -342,7 +344,7 @@ public class Side1Code extends SideCode {
 	 * name} = "Opposite"</li>
 	 * </ul>
 	 */
-	public static final MMCode Opposite = new MMCode() {
+	public static final MMCode mmOpposite = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opposite";
@@ -364,7 +366,7 @@ public class Side1Code extends SideCode {
 	 * name} = "Undisclosed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Undisclosed = new MMCode() {
+	public static final MMCode mmUndisclosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undisclosed";
@@ -375,16 +377,16 @@ public class Side1Code extends SideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYI");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Side1Code";
 				definition = "Indicates the side of the quote request, from the buy-side perspective.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Side1Code.Buy, com.tools20022.repository.codeset.Side1Code.Sell, com.tools20022.repository.codeset.Side1Code.TwoSided,
-						com.tools20022.repository.codeset.Side1Code.BuyMinus, com.tools20022.repository.codeset.Side1Code.SellPlus, com.tools20022.repository.codeset.Side1Code.SellShort,
-						com.tools20022.repository.codeset.Side1Code.SellShortExempt, com.tools20022.repository.codeset.Side1Code.Cross, com.tools20022.repository.codeset.Side1Code.CrossShort,
-						com.tools20022.repository.codeset.Side1Code.CrossShortExempt, com.tools20022.repository.codeset.Side1Code.AsDefined, com.tools20022.repository.codeset.Side1Code.Opposite,
-						com.tools20022.repository.codeset.Side1Code.Undisclosed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Side1Code.mmBuy, com.tools20022.repository.codeset.Side1Code.mmSell, com.tools20022.repository.codeset.Side1Code.mmTwoSided,
+						com.tools20022.repository.codeset.Side1Code.mmBuyMinus, com.tools20022.repository.codeset.Side1Code.mmSellPlus, com.tools20022.repository.codeset.Side1Code.mmSellShort,
+						com.tools20022.repository.codeset.Side1Code.mmSellShortExempt, com.tools20022.repository.codeset.Side1Code.mmCross, com.tools20022.repository.codeset.Side1Code.mmCrossShort,
+						com.tools20022.repository.codeset.Side1Code.mmCrossShortExempt, com.tools20022.repository.codeset.Side1Code.mmAsDefined, com.tools20022.repository.codeset.Side1Code.mmOpposite,
+						com.tools20022.repository.codeset.Side1Code.mmUndisclosed);
 				trace_lazy = () -> SideCode.mmObject();
 			}
 		});

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatusOrStatement7Choice#StatusAdvice
- * StatusOrStatement7Choice.StatusAdvice}</li>
+ * {@linkplain com.tools20022.repository.choice.StatusOrStatement7Choice#mmStatusAdvice
+ * StatusOrStatement7Choice.mmStatusAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StatusOrStatement7Choice#Statement
- * StatusOrStatement7Choice.Statement}</li>
+ * {@linkplain com.tools20022.repository.choice.StatusOrStatement7Choice#mmStatement
+ * StatusOrStatement7Choice.mmStatement}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,15 +47,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#StatusOrStatementRequested
- * SecuritiesStatusOrStatementQueryStatusAdviceV04.StatusOrStatementRequested}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04#mmStatusOrStatementRequested
+ * SecuritiesStatusOrStatementQueryStatusAdviceV04.mmStatusOrStatementRequested}
+ * </li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StatusOrStatement7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentNumber12 statusAdvice;
 	/**
 	 * Identify the status advice and the transaction for which the status
 	 * advice was requested.
@@ -107,26 +109,27 @@ public class StatusOrStatement7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.StatusOrStatement5Choice#StatusAdvice
-	 * StatusOrStatement5Choice.StatusAdvice}</li>
+	 * {@linkplain com.tools20022.repository.choice.StatusOrStatement5Choice#mmStatusAdvice
+	 * StatusOrStatement5Choice.mmStatusAdvice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusAdvice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusAdvice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusOrStatement7Choice.mmObject();
 			businessComponentTrace_lazy = () -> Status.mmObject();
+			componentContext_lazy = () -> StatusOrStatement7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StsAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAdvice";
 			definition = "Identify the status advice and the transaction for which the status advice was requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.StatusOrStatement5Choice.StatusAdvice;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.StatusOrStatement5Choice.mmStatusAdvice;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber12.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber12.mmObject();
 		}
 	};
+	protected DocumentNumber13 statement;
 	/**
 	 * Identify the statement/report that was requested.
 	 * <p>
@@ -154,11 +157,11 @@ public class StatusOrStatement7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.StatusOrStatement5Choice#Statement
-	 * StatusOrStatement5Choice.Statement}</li>
+	 * {@linkplain com.tools20022.repository.choice.StatusOrStatement5Choice#mmStatement
+	 * StatusOrStatement5Choice.mmStatement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Statement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatement = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StatusOrStatement7Choice.mmObject();
 			isDerived = false;
@@ -166,20 +169,20 @@ public class StatusOrStatement7Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statement";
 			definition = "Identify the statement/report that was requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.StatusOrStatement5Choice.Statement;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.StatusOrStatement5Choice.mmStatement;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber13.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber13.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement7Choice.StatusAdvice, com.tools20022.repository.choice.StatusOrStatement7Choice.Statement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.StatusOrStatementRequested);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement7Choice.mmStatusAdvice, com.tools20022.repository.choice.StatusOrStatement7Choice.mmStatement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.mmStatusOrStatementRequested);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatusOrStatement7Choice";
 				definition = "Specifies the status or statement that is requested.";
@@ -187,5 +190,21 @@ public class StatusOrStatement7Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentNumber12 getStatusAdvice() {
+		return statusAdvice;
+	}
+
+	public void setStatusAdvice(DocumentNumber12 statusAdvice) {
+		this.statusAdvice = statusAdvice;
+	}
+
+	public DocumentNumber13 getStatement() {
+		return statement;
+	}
+
+	public void setStatement(DocumentNumber13 statement) {
+		this.statement = statement;
 	}
 }

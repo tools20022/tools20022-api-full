@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Payment;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Specifies the payment terms of the underlying transaction.
@@ -36,21 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EarlyPayment1#EarlyPaymentDate
- * EarlyPayment1.EarlyPaymentDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EarlyPayment1#DiscountPercent
- * EarlyPayment1.DiscountPercent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EarlyPayment1#DiscountAmount
- * EarlyPayment1.DiscountAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EarlyPayment1#EarlyPaymentTaxSpecification
- * EarlyPayment1.EarlyPaymentTaxSpecification}</li>
+ * {@linkplain com.tools20022.repository.msg.EarlyPayment1#mmEarlyPaymentDate
+ * EarlyPayment1.mmEarlyPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EarlyPayment1#EarlyPaymentTaxTotal
- * EarlyPayment1.EarlyPaymentTaxTotal}</li>
+ * {@linkplain com.tools20022.repository.msg.EarlyPayment1#mmDiscountPercent
+ * EarlyPayment1.mmDiscountPercent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EarlyPayment1#mmDiscountAmount
+ * EarlyPayment1.mmDiscountAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EarlyPayment1#DuePayableAmountWithEarlyPayment
- * EarlyPayment1.DuePayableAmountWithEarlyPayment}</li>
+ * {@linkplain com.tools20022.repository.msg.EarlyPayment1#mmEarlyPaymentTaxSpecification
+ * EarlyPayment1.mmEarlyPaymentTaxSpecification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EarlyPayment1#mmEarlyPaymentTaxTotal
+ * EarlyPayment1.mmEarlyPaymentTaxTotal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EarlyPayment1#mmDuePayableAmountWithEarlyPayment
+ * EarlyPayment1.mmDuePayableAmountWithEarlyPayment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -58,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EarlyPayment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISODate earlyPaymentDate;
 	/**
 	 * Date before which the early payment discount is valid for payment.
 	 * <p>
@@ -103,7 +107,7 @@ public class EarlyPayment1 {
 	 * "Date before which the early payment discount is valid for payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarlyPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarlyPaymentDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EarlyPayment1.mmObject();
 			isDerived = false;
@@ -111,11 +115,12 @@ public class EarlyPayment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyPaymentDate";
 			definition = "Date before which the early payment discount is valid for payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PercentageRate discountPercent;
 	/**
 	 * Discount percent for early payment.
 	 * <p>
@@ -129,8 +134,8 @@ public class EarlyPayment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Adjustment#ChargeRate
-	 * Adjustment.ChargeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Adjustment#mmChargeRate
+	 * Adjustment.mmChargeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,25 +154,26 @@ public class EarlyPayment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerms3#DiscountPercentRate
-	 * PaymentTerms3.DiscountPercentRate}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerms3#mmDiscountPercentRate
+	 * PaymentTerms3.mmDiscountPercentRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DiscountPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDiscountPercent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
 			componentContext_lazy = () -> EarlyPayment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.ChargeRate;
 			isDerived = false;
 			xmlTag = "DscntPct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountPercent";
 			definition = "Discount percent for early payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.DiscountPercentRate;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmDiscountPercentRate;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	protected CurrencyAndAmount discountAmount;
 	/**
 	 * Early payment discount with tax, with currency.
 	 * <p>
@@ -181,8 +187,8 @@ public class EarlyPayment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Discount#DiscountAppliedAmount
-	 * Discount.DiscountAppliedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Discount#mmDiscountAppliedAmount
+	 * Discount.mmDiscountAppliedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -201,25 +207,26 @@ public class EarlyPayment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentTerms3#DiscountAmount
-	 * PaymentTerms3.DiscountAmount}</li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerms3#mmDiscountAmount
+	 * PaymentTerms3.mmDiscountAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DiscountAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDiscountAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> EarlyPayment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.DiscountAppliedAmount;
 			isDerived = false;
 			xmlTag = "DscntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountAmount";
 			definition = "Early payment discount with tax, with currency. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.DiscountAmount;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmDiscountAmount;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.EarlyPaymentsVAT1> earlyPaymentTaxSpecification;
 	/**
 	 * In tax specification for early payment discount one defined the applied
 	 * tax rates for specific early payment. VAT stands for value added tax.
@@ -232,8 +239,8 @@ public class EarlyPayment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#TradeSettlement
-	 * Payment.TradeSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmTradeSettlement
+	 * Payment.mmTradeSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -253,20 +260,21 @@ public class EarlyPayment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd EarlyPaymentTaxSpecification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEarlyPaymentTaxSpecification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmTradeSettlement;
 			componentContext_lazy = () -> EarlyPayment1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.TradeSettlement;
 			isDerived = false;
 			xmlTag = "EarlyPmtTaxSpcfctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyPaymentTaxSpecification";
 			definition = "In tax specification for early payment discount one defined the applied tax rates for specific early payment. VAT stands for value added tax.";
 			minOccurs = 0;
-			type_lazy = () -> EarlyPaymentsVAT1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EarlyPaymentsVAT1.mmObject();
 		}
 	};
+	protected CurrencyAndAmount earlyPaymentTaxTotal;
 	/**
 	 * Tax total in early payment, with currency.
 	 * <p>
@@ -294,7 +302,7 @@ public class EarlyPayment1 {
 	 * definition} = "Tax total in early payment, with currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarlyPaymentTaxTotal = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarlyPaymentTaxTotal = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EarlyPayment1.mmObject();
 			isDerived = false;
@@ -302,11 +310,12 @@ public class EarlyPayment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyPaymentTaxTotal";
 			definition = "Tax total in early payment, with currency.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	protected CurrencyAndAmount duePayableAmountWithEarlyPayment;
 	/**
 	 * Payable amount with discount of early payment, with currency.
 	 * <p>
@@ -335,7 +344,7 @@ public class EarlyPayment1 {
 	 * "Payable amount with discount of early payment, with currency. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DuePayableAmountWithEarlyPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDuePayableAmountWithEarlyPayment = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> EarlyPayment1.mmObject();
 			isDerived = false;
@@ -343,8 +352,8 @@ public class EarlyPayment1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuePayableAmountWithEarlyPayment";
 			definition = "Payable amount with discount of early payment, with currency. ";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
@@ -352,11 +361,11 @@ public class EarlyPayment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EarlyPayment1.EarlyPaymentDate, com.tools20022.repository.msg.EarlyPayment1.DiscountPercent,
-						com.tools20022.repository.msg.EarlyPayment1.DiscountAmount, com.tools20022.repository.msg.EarlyPayment1.EarlyPaymentTaxSpecification, com.tools20022.repository.msg.EarlyPayment1.EarlyPaymentTaxTotal,
-						com.tools20022.repository.msg.EarlyPayment1.DuePayableAmountWithEarlyPayment);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EarlyPayment1.mmEarlyPaymentDate, com.tools20022.repository.msg.EarlyPayment1.mmDiscountPercent,
+						com.tools20022.repository.msg.EarlyPayment1.mmDiscountAmount, com.tools20022.repository.msg.EarlyPayment1.mmEarlyPaymentTaxSpecification, com.tools20022.repository.msg.EarlyPayment1.mmEarlyPaymentTaxTotal,
+						com.tools20022.repository.msg.EarlyPayment1.mmDuePayableAmountWithEarlyPayment);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EarlyPayment1";
 				definition = "Specifies the payment terms of the underlying transaction.";
@@ -364,5 +373,53 @@ public class EarlyPayment1 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISODate getEarlyPaymentDate() {
+		return earlyPaymentDate;
+	}
+
+	public void setEarlyPaymentDate(ISODate earlyPaymentDate) {
+		this.earlyPaymentDate = earlyPaymentDate;
+	}
+
+	public PercentageRate getDiscountPercent() {
+		return discountPercent;
+	}
+
+	public void setDiscountPercent(PercentageRate discountPercent) {
+		this.discountPercent = discountPercent;
+	}
+
+	public CurrencyAndAmount getDiscountAmount() {
+		return discountAmount;
+	}
+
+	public void setDiscountAmount(CurrencyAndAmount discountAmount) {
+		this.discountAmount = discountAmount;
+	}
+
+	public List<EarlyPaymentsVAT1> getEarlyPaymentTaxSpecification() {
+		return earlyPaymentTaxSpecification;
+	}
+
+	public void setEarlyPaymentTaxSpecification(List<com.tools20022.repository.msg.EarlyPaymentsVAT1> earlyPaymentTaxSpecification) {
+		this.earlyPaymentTaxSpecification = earlyPaymentTaxSpecification;
+	}
+
+	public CurrencyAndAmount getEarlyPaymentTaxTotal() {
+		return earlyPaymentTaxTotal;
+	}
+
+	public void setEarlyPaymentTaxTotal(CurrencyAndAmount earlyPaymentTaxTotal) {
+		this.earlyPaymentTaxTotal = earlyPaymentTaxTotal;
+	}
+
+	public CurrencyAndAmount getDuePayableAmountWithEarlyPayment() {
+		return duePayableAmountWithEarlyPayment;
+	}
+
+	public void setDuePayableAmountWithEarlyPayment(CurrencyAndAmount duePayableAmountWithEarlyPayment) {
+		this.duePayableAmountWithEarlyPayment = duePayableAmountWithEarlyPayment;
 	}
 }

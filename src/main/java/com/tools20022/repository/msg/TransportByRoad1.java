@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TransportByRoad;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Information related to the transportation of goods by road.
@@ -34,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByRoad1#PlaceOfReceipt
- * TransportByRoad1.PlaceOfReceipt}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByRoad1#mmPlaceOfReceipt
+ * TransportByRoad1.mmPlaceOfReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportByRoad1#PlaceOfDelivery
- * TransportByRoad1.PlaceOfDelivery}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportByRoad1#mmPlaceOfDelivery
+ * TransportByRoad1.mmPlaceOfDelivery}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +48,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportByRoad1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max35Text> placeOfReceipt;
 	/**
 	 * Identifies the location where the goods are received for transportation.
 	 * <p>
@@ -74,8 +76,8 @@ public class TransportByRoad1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDeparture
-	 * Transport.PlaceOfDeparture}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDeparture
+	 * Transport.mmPlaceOfDeparture}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -96,10 +98,10 @@ public class TransportByRoad1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfReceipt = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> TransportByRoad1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDeparture;
 			isDerived = false;
 			xmlTag = "PlcOfRct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,6 +111,7 @@ public class TransportByRoad1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<Max35Text> placeOfDelivery;
 	/**
 	 * Identifies the location of delivery of the goods.
 	 * <p>
@@ -121,8 +124,8 @@ public class TransportByRoad1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Transport#PlaceOfDestination
-	 * Transport.PlaceOfDestination}</li>
+	 * {@linkplain com.tools20022.repository.entity.Transport#mmPlaceOfDestination
+	 * Transport.mmPlaceOfDestination}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,10 +144,10 @@ public class TransportByRoad1 {
 	 * definition} = "Identifies the location of delivery of the goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceOfDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> TransportByRoad1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.PlaceOfDestination;
 			isDerived = false;
 			xmlTag = "PlcOfDlvry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,14 +161,30 @@ public class TransportByRoad1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByRoad1.PlaceOfReceipt, com.tools20022.repository.msg.TransportByRoad1.PlaceOfDelivery);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByRoad1.mmPlaceOfReceipt, com.tools20022.repository.msg.TransportByRoad1.mmPlaceOfDelivery);
 				trace_lazy = () -> TransportByRoad.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransportByRoad1";
 				definition = "Information related to the transportation of goods by road.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max35Text> getPlaceOfReceipt() {
+		return placeOfReceipt;
+	}
+
+	public void setPlaceOfReceipt(List<Max35Text> placeOfReceipt) {
+		this.placeOfReceipt = placeOfReceipt;
+	}
+
+	public List<Max35Text> getPlaceOfDelivery() {
+		return placeOfDelivery;
+	}
+
+	public void setPlaceOfDelivery(List<Max35Text> placeOfDelivery) {
+		this.placeOfDelivery = placeOfDelivery;
 	}
 }

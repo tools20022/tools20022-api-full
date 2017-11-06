@@ -33,17 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.NoticeTypeCode NoticeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.NoticeType1Code#Universal
- * NoticeType1Code.Universal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NoticeType1Code#CedeAndCo
- * NoticeType1Code.CedeAndCo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NoticeType1Code#mmUniversal
+ * NoticeType1Code.mmUniversal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NoticeType1Code#mmCedeAndCo
+ * NoticeType1Code.mmCedeAndCo}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +83,7 @@ public class NoticeType1Code extends NoticeTypeCode {
 	 * name} = "Universal"</li>
 	 * </ul>
 	 */
-	public static final MMCode Universal = new MMCode() {
+	public static final MMCode mmUniversal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Universal";
@@ -104,7 +106,7 @@ public class NoticeType1Code extends NoticeTypeCode {
 	 * name} = "CedeAndCo"</li>
 	 * </ul>
 	 */
-	public static final MMCode CedeAndCo = new MMCode() {
+	public static final MMCode mmCedeAndCo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CedeAndCo";
@@ -115,12 +117,12 @@ public class NoticeType1Code extends NoticeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNVL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NoticeType1Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined notice type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NoticeType1Code.Universal, com.tools20022.repository.codeset.NoticeType1Code.CedeAndCo);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NoticeType1Code.mmUniversal, com.tools20022.repository.codeset.NoticeType1Code.mmCedeAndCo);
 				trace_lazy = () -> NoticeTypeCode.mmObject();
 			}
 		});

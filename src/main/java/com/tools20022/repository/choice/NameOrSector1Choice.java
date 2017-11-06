@@ -36,10 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.NameOrSector1Choice#Name
- * NameOrSector1Choice.Name}</li>
- * <li>{@linkplain com.tools20022.repository.choice.NameOrSector1Choice#Sector
- * NameOrSector1Choice.Sector}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.NameOrSector1Choice#mmName
+ * NameOrSector1Choice.mmName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NameOrSector1Choice#mmSector
+ * NameOrSector1Choice.mmSector}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NameOrSector1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text name;
 	/**
 	 * Internal name of the counterparty of the reporting agent used by the
 	 * reporting agent.
@@ -82,8 +84,8 @@ public class NameOrSector1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Sector#Identification
-	 * Sector.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Sector#mmIdentification
+	 * Sector.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,20 +106,21 @@ public class NameOrSector1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Name = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.mmIdentification;
 			componentContext_lazy = () -> NameOrSector1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.Identification;
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Internal name of the counterparty of the reporting agent used by the reporting agent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected SNA2008SectorIdentifier sector;
 	/**
 	 * Represents the counterparty institutional section (such as non-financial
 	 * corporation, central bank, ...).
@@ -132,8 +135,8 @@ public class NameOrSector1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Sector#Identification
-	 * Sector.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Sector#mmIdentification
+	 * Sector.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -155,22 +158,22 @@ public class NameOrSector1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.SectorAndLocation1#Sector
-	 * SectorAndLocation1.Sector}</li>
+	 * {@linkplain com.tools20022.repository.msg.SectorAndLocation1#mmSector
+	 * SectorAndLocation1.mmSector}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sector = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.mmIdentification;
 			componentContext_lazy = () -> NameOrSector1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.Identification;
 			isDerived = false;
 			xmlTag = "Sctr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
 			definition = "Represents the counterparty institutional section (such as non-financial corporation, central bank, ...).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SectorAndLocation1.Sector;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.SectorAndLocation1.mmSector;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
 		}
 	};
@@ -178,9 +181,9 @@ public class NameOrSector1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NameOrSector1Choice.Name, com.tools20022.repository.choice.NameOrSector1Choice.Sector);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NameOrSector1Choice.mmName, com.tools20022.repository.choice.NameOrSector1Choice.mmSector);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NameOrSector1Choice";
 				definition = "Provides the identification of the reported party through the name or the sector.";
@@ -188,5 +191,21 @@ public class NameOrSector1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getName() {
+		return name;
+	}
+
+	public void setName(Max70Text name) {
+		this.name = name;
+	}
+
+	public SNA2008SectorIdentifier getSector() {
+		return sector;
+	}
+
+	public void setSector(SNA2008SectorIdentifier sector) {
+		this.sector = sector;
 	}
 }

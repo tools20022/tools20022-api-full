@@ -36,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Dispute1#MarginCallRequestIdentification
- * Dispute1.MarginCallRequestIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Dispute1#DisputedAmount
- * Dispute1.DisputedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Dispute1#DisputeDate
- * Dispute1.DisputeDate}</li>
+ * {@linkplain com.tools20022.repository.msg.Dispute1#mmMarginCallRequestIdentification
+ * Dispute1.mmMarginCallRequestIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Dispute1#mmDisputedAmount
+ * Dispute1.mmDisputedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Dispute1#mmDisputeDate
+ * Dispute1.mmDisputeDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Dispute1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text marginCallRequestIdentification;
 	/**
 	 * Unique identification for the margin call request.
 	 * <p>
@@ -91,7 +92,7 @@ public class Dispute1 {
 	 * definition} = "Unique identification for the margin call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MarginCallRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Dispute1.mmObject();
 			isDerived = false;
@@ -99,11 +100,12 @@ public class Dispute1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallRequestIdentification";
 			definition = "Unique identification for the margin call request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount disputedAmount;
 	/**
 	 * Disputed amount.
 	 * <p>
@@ -117,8 +119,8 @@ public class Dispute1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DisputeManagement#DisputedAmount
-	 * DisputeManagement.DisputedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmDisputedAmount
+	 * DisputeManagement.mmDisputedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Dispute1
@@ -136,20 +138,21 @@ public class Dispute1 {
 	 * definition} = "Disputed amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DisputedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDisputedAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DisputeManagement.mmDisputedAmount;
 			componentContext_lazy = () -> Dispute1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DisputeManagement.DisputedAmount;
 			isDerived = false;
 			xmlTag = "DsptdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputedAmount";
 			definition = "Disputed amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ISODate disputeDate;
 	/**
 	 * Date of dispute.
 	 * <p>
@@ -162,8 +165,8 @@ public class Dispute1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DisputeManagement#DisputeDate
-	 * DisputeManagement.DisputeDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.DisputeManagement#mmDisputeDate
+	 * DisputeManagement.mmDisputeDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Dispute1
@@ -181,17 +184,17 @@ public class Dispute1 {
 	 * definition} = "Date of dispute."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DisputeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDisputeDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DisputeManagement.mmDisputeDate;
 			componentContext_lazy = () -> Dispute1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DisputeManagement.DisputeDate;
 			isDerived = false;
 			xmlTag = "DsptDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeDate";
 			definition = "Date of dispute.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -199,14 +202,39 @@ public class Dispute1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Dispute1.MarginCallRequestIdentification, com.tools20022.repository.msg.Dispute1.DisputedAmount, com.tools20022.repository.msg.Dispute1.DisputeDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Dispute1.mmMarginCallRequestIdentification, com.tools20022.repository.msg.Dispute1.mmDisputedAmount,
+						com.tools20022.repository.msg.Dispute1.mmDisputeDate);
 				trace_lazy = () -> DisputeManagement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Dispute1";
 				definition = "Provides the dispute details.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMarginCallRequestIdentification() {
+		return marginCallRequestIdentification;
+	}
+
+	public void setMarginCallRequestIdentification(Max35Text marginCallRequestIdentification) {
+		this.marginCallRequestIdentification = marginCallRequestIdentification;
+	}
+
+	public ActiveCurrencyAndAmount getDisputedAmount() {
+		return disputedAmount;
+	}
+
+	public void setDisputedAmount(ActiveCurrencyAndAmount disputedAmount) {
+		this.disputedAmount = disputedAmount;
+	}
+
+	public ISODate getDisputeDate() {
+		return disputeDate;
+	}
+
+	public void setDisputeDate(ISODate disputeDate) {
+		this.disputeDate = disputeDate;
 	}
 }

@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification5#IdentificationType
- * AlternatePartyIdentification5.IdentificationType}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification5#mmIdentificationType
+ * AlternatePartyIdentification5.mmIdentificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification5#Country
- * AlternatePartyIdentification5.Country}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification5#mmCountry
+ * AlternatePartyIdentification5.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification5#AlternateIdentification
- * AlternatePartyIdentification5.AlternateIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification5#mmAlternateIdentification
+ * AlternatePartyIdentification5.mmAlternateIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AlternatePartyIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected IdentificationType40Choice identificationType;
 	/**
 	 * Specifies the type of alternate identification of the party identified.
 	 * <p>
@@ -115,27 +116,28 @@ public class AlternatePartyIdentification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification8#IdentificationType
-	 * AlternatePartyIdentification8.IdentificationType}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification8#mmIdentificationType
+	 * AlternatePartyIdentification8.mmIdentificationType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute IdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AlternatePartyIdentification5.mmObject();
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
+			componentContext_lazy = () -> AlternatePartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "IdTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationType";
 			definition = "Specifies the type of alternate identification of the party identified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification8.IdentificationType);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification8.mmIdentificationType);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> IdentificationType40Choice.mmObject();
 		}
 	};
+	protected CountryCode country;
 	/**
 	 * Nation with its own government, occupying a particular territory.
 	 * <p>
@@ -148,7 +150,8 @@ public class AlternatePartyIdentification5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Country#Code Country.Code}</li>
+	 * {@linkplain com.tools20022.repository.entity.Country#mmCode
+	 * Country.mmCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -170,27 +173,28 @@ public class AlternatePartyIdentification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification8#Country
-	 * AlternatePartyIdentification8.Country}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification8#mmCountry
+	 * AlternatePartyIdentification8.mmCountry}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Country = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
 			componentContext_lazy = () -> AlternatePartyIdentification5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.Code;
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Nation with its own government, occupying a particular territory.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification8.Country);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification8.mmCountry);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	protected Max35Text alternateIdentification;
 	/**
 	 * Alternate identification for a party.
 	 * <p>
@@ -203,8 +207,8 @@ public class AlternatePartyIdentification5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -225,24 +229,24 @@ public class AlternatePartyIdentification5 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification8#AlternateIdentification
-	 * AlternatePartyIdentification8.AlternateIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification8#mmAlternateIdentification
+	 * AlternatePartyIdentification8.mmAlternateIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AlternateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AlternatePartyIdentification5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AltrnId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification8.AlternateIdentification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification8.mmAlternateIdentification);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -250,10 +254,10 @@ public class AlternatePartyIdentification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification5.IdentificationType, com.tools20022.repository.msg.AlternatePartyIdentification5.Country,
-						com.tools20022.repository.msg.AlternatePartyIdentification5.AlternateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification5.mmIdentificationType, com.tools20022.repository.msg.AlternatePartyIdentification5.mmCountry,
+						com.tools20022.repository.msg.AlternatePartyIdentification5.mmAlternateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AlternatePartyIdentification5";
 				definition = "Alternate identification for a party using an identification type, a country code and a text field.";
@@ -261,5 +265,29 @@ public class AlternatePartyIdentification5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public IdentificationType40Choice getIdentificationType() {
+		return identificationType;
+	}
+
+	public void setIdentificationType(IdentificationType40Choice identificationType) {
+		this.identificationType = identificationType;
+	}
+
+	public CountryCode getCountry() {
+		return country;
+	}
+
+	public void setCountry(CountryCode country) {
+		this.country = country;
+	}
+
+	public Max35Text getAlternateIdentification() {
+		return alternateIdentification;
+	}
+
+	public void setAlternateIdentification(Max35Text alternateIdentification) {
+		this.alternateIdentification = alternateIdentification;
 	}
 }

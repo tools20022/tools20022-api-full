@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#Rejected
- * WithdrawalReason1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#mmRejected
+ * WithdrawalReason1Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#Rescinded
- * WithdrawalReason1Code.Rescinded}</li>
+ * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#mmRescinded
+ * WithdrawalReason1Code.mmRescinded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#Withdrawn
- * WithdrawalReason1Code.Withdrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#mmWithdrawn
+ * WithdrawalReason1Code.mmWithdrawn}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class WithdrawalReason1Code extends WithdrawalReasonCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -107,7 +107,7 @@ public class WithdrawalReason1Code extends WithdrawalReasonCode {
 	 * name} = "Rescinded"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rescinded = new MMCode() {
+	public static final MMCode mmRescinded = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rescinded";
@@ -130,7 +130,7 @@ public class WithdrawalReason1Code extends WithdrawalReasonCode {
 	 * name} = "Withdrawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode Withdrawn = new MMCode() {
+	public static final MMCode mmWithdrawn = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawn";
@@ -141,13 +141,13 @@ public class WithdrawalReason1Code extends WithdrawalReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RJCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "WithdrawalReason1Code";
 				definition = "Specifies the reason that an alleged trade is withdrawn.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WithdrawalReason1Code.Rejected, com.tools20022.repository.codeset.WithdrawalReason1Code.Rescinded,
-						com.tools20022.repository.codeset.WithdrawalReason1Code.Withdrawn);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WithdrawalReason1Code.mmRejected, com.tools20022.repository.codeset.WithdrawalReason1Code.mmRescinded,
+						com.tools20022.repository.codeset.WithdrawalReason1Code.mmWithdrawn);
 				trace_lazy = () -> WithdrawalReasonCode.mmObject();
 			}
 		});

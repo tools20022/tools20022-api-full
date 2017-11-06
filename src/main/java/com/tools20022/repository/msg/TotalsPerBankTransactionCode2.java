@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.BankTransaction;
 import com.tools20022.repository.entity.CashAvailability;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of elements used to provide the total sum of entries per bank transaction
@@ -40,33 +41,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#NumberOfEntries
- * TotalsPerBankTransactionCode2.NumberOfEntries}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#mmNumberOfEntries
+ * TotalsPerBankTransactionCode2.mmNumberOfEntries}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#Sum
- * TotalsPerBankTransactionCode2.Sum}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#mmSum
+ * TotalsPerBankTransactionCode2.mmSum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#TotalNetEntryAmount
- * TotalsPerBankTransactionCode2.TotalNetEntryAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#mmTotalNetEntryAmount
+ * TotalsPerBankTransactionCode2.mmTotalNetEntryAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#CreditDebitIndicator
- * TotalsPerBankTransactionCode2.CreditDebitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#mmCreditDebitIndicator
+ * TotalsPerBankTransactionCode2.mmCreditDebitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#ForecastIndicator
- * TotalsPerBankTransactionCode2.ForecastIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#mmForecastIndicator
+ * TotalsPerBankTransactionCode2.mmForecastIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#BankTransactionCode
- * TotalsPerBankTransactionCode2.BankTransactionCode}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#mmBankTransactionCode
+ * TotalsPerBankTransactionCode2.mmBankTransactionCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#Availability
- * TotalsPerBankTransactionCode2.Availability}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode2#mmAvailability
+ * TotalsPerBankTransactionCode2.mmAvailability}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +90,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TotalsPerBankTransactionCode2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max15NumericText numberOfEntries;
 	/**
 	 * Number of individual entries for the bank transaction code.
 	 * <p>
@@ -118,7 +120,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * "Number of individual entries for the bank transaction code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfEntries = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfEntries = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
@@ -126,11 +128,12 @@ public class TotalsPerBankTransactionCode2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfEntries";
 			definition = "Number of individual entries for the bank transaction code.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	protected DecimalNumber sum;
 	/**
 	 * Total of all individual entries included in the report.
 	 * <p>
@@ -159,7 +162,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * definition} = "Total of all individual entries included in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Sum = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSum = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
@@ -167,11 +170,12 @@ public class TotalsPerBankTransactionCode2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sum";
 			definition = "Total of all individual entries included in the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected DecimalNumber totalNetEntryAmount;
 	/**
 	 * Total amount that is the result of the netted amounts for all debit and
 	 * credit entries per bank transaction code.
@@ -203,7 +207,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNetEntryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNetEntryAmount = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
@@ -211,11 +215,12 @@ public class TotalsPerBankTransactionCode2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNetEntryAmount";
 			definition = "Total amount that is the result of the netted amounts for all debit and credit entries per bank transaction code.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	protected CreditDebitCode creditDebitIndicator;
 	/**
 	 * Indicates whether the total net entry amount is a credit or a debit
 	 * amount.
@@ -247,7 +252,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
@@ -255,11 +260,12 @@ public class TotalsPerBankTransactionCode2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the total net entry amount is a credit or a debit amount.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	protected TrueFalseIndicator forecastIndicator;
 	/**
 	 * Indicates whether the bank transaction code is related to booked or
 	 * forecast items.
@@ -291,7 +297,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ForecastIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmForecastIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
@@ -299,11 +305,12 @@ public class TotalsPerBankTransactionCode2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForecastIndicator";
 			definition = "Indicates whether the bank transaction code is related to booked or forecast items.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	protected BankTransactionCodeStructure4 bankTransactionCode;
 	/**
 	 * Set of elements used to fully identify the type of underlying transaction
 	 * resulting in an entry.
@@ -339,21 +346,22 @@ public class TotalsPerBankTransactionCode2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BankTransactionCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBankTransactionCode = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			businessComponentTrace_lazy = () -> BankTransaction.mmObject();
+			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
 			xmlTag = "BkTxCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankTransactionCode";
 			definition = "Set of elements used to fully identify the type of underlying transaction resulting in an entry.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BankTransactionCodeStructure4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.CashBalanceAvailability2> availability;
 	/**
 	 * Set of elements used to indicate when the booked amount of money will
 	 * become available, that is can be accessed and starts generating interest.
@@ -389,29 +397,29 @@ public class TotalsPerBankTransactionCode2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Availability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			businessComponentTrace_lazy = () -> CashAvailability.mmObject();
+			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
 			xmlTag = "Avlbty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
 			definition = "Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest.";
 			minOccurs = 0;
-			type_lazy = () -> CashBalanceAvailability2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalsPerBankTransactionCode2.NumberOfEntries, com.tools20022.repository.msg.TotalsPerBankTransactionCode2.Sum,
-						com.tools20022.repository.msg.TotalsPerBankTransactionCode2.TotalNetEntryAmount, com.tools20022.repository.msg.TotalsPerBankTransactionCode2.CreditDebitIndicator,
-						com.tools20022.repository.msg.TotalsPerBankTransactionCode2.ForecastIndicator, com.tools20022.repository.msg.TotalsPerBankTransactionCode2.BankTransactionCode,
-						com.tools20022.repository.msg.TotalsPerBankTransactionCode2.Availability);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmNumberOfEntries, com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmSum,
+						com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmTotalNetEntryAmount, com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmForecastIndicator, com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmBankTransactionCode,
+						com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmAvailability);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TotalsPerBankTransactionCode2";
 				definition = "Set of elements used to provide the total sum of entries per bank transaction code.";
@@ -419,5 +427,61 @@ public class TotalsPerBankTransactionCode2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max15NumericText getNumberOfEntries() {
+		return numberOfEntries;
+	}
+
+	public void setNumberOfEntries(Max15NumericText numberOfEntries) {
+		this.numberOfEntries = numberOfEntries;
+	}
+
+	public DecimalNumber getSum() {
+		return sum;
+	}
+
+	public void setSum(DecimalNumber sum) {
+		this.sum = sum;
+	}
+
+	public DecimalNumber getTotalNetEntryAmount() {
+		return totalNetEntryAmount;
+	}
+
+	public void setTotalNetEntryAmount(DecimalNumber totalNetEntryAmount) {
+		this.totalNetEntryAmount = totalNetEntryAmount;
+	}
+
+	public CreditDebitCode getCreditDebitIndicator() {
+		return creditDebitIndicator;
+	}
+
+	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = creditDebitIndicator;
+	}
+
+	public TrueFalseIndicator getForecastIndicator() {
+		return forecastIndicator;
+	}
+
+	public void setForecastIndicator(TrueFalseIndicator forecastIndicator) {
+		this.forecastIndicator = forecastIndicator;
+	}
+
+	public BankTransactionCodeStructure4 getBankTransactionCode() {
+		return bankTransactionCode;
+	}
+
+	public void setBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure4 bankTransactionCode) {
+		this.bankTransactionCode = bankTransactionCode;
+	}
+
+	public List<CashBalanceAvailability2> getAvailability() {
+		return availability;
+	}
+
+	public void setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability2> availability) {
+		this.availability = availability;
 	}
 }

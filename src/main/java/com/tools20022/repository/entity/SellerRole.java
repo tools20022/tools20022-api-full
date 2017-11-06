@@ -36,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties3#Seller
- * ConfirmationParties3.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#Seller
- * ConfirmationParties4.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties2#Seller
- * ConfirmationParties2.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement6#Seller
- * TradeAgreement6.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeSettlement1#Payer
- * TradeSettlement1.Payer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportSpecification4#Seller
- * ReportSpecification4.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeContract1#Seller
- * TradeContract1.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LoanContract1#Seller
- * LoanContract1.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement13#Seller
- * TradeAgreement13.Seller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties3#mmSeller
+ * ConfirmationParties3.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4#mmSeller
+ * ConfirmationParties4.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties2#mmSeller
+ * ConfirmationParties2.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement6#mmSeller
+ * TradeAgreement6.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeSettlement1#mmPayer
+ * TradeSettlement1.mmPayer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportSpecification4#mmSeller
+ * ReportSpecification4.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeContract1#mmSeller
+ * TradeContract1.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LoanContract1#mmSeller
+ * LoanContract1.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement13#mmSeller
+ * TradeAgreement13.mmSeller}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#Seller
- * SecuritiesTransactionReport4.Seller}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmSeller
+ * SecuritiesTransactionReport4.mmSeller}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -73,8 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,14 +92,14 @@ public class SellerRole extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SellerRole";
 				definition = "Party that sells assets, goods or services.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties3.Seller, com.tools20022.repository.msg.ConfirmationParties4.Seller, com.tools20022.repository.msg.ConfirmationParties2.Seller,
-						com.tools20022.repository.msg.TradeAgreement6.Seller, com.tools20022.repository.msg.TradeSettlement1.Payer, com.tools20022.repository.msg.ReportSpecification4.Seller,
-						com.tools20022.repository.msg.TradeContract1.Seller, com.tools20022.repository.msg.LoanContract1.Seller, com.tools20022.repository.msg.TradeAgreement13.Seller,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.Seller);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties3.mmSeller, com.tools20022.repository.msg.ConfirmationParties4.mmSeller,
+						com.tools20022.repository.msg.ConfirmationParties2.mmSeller, com.tools20022.repository.msg.TradeAgreement6.mmSeller, com.tools20022.repository.msg.TradeSettlement1.mmPayer,
+						com.tools20022.repository.msg.ReportSpecification4.mmSeller, com.tools20022.repository.msg.TradeContract1.mmSeller, com.tools20022.repository.msg.LoanContract1.mmSeller,
+						com.tools20022.repository.msg.TradeAgreement13.mmSeller, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmSeller);
 				superType_lazy = () -> TradePartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(PartyIdentification116.mmObject());
 			}

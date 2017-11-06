@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.PaymentStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Further information on the return reason of the transaction.
@@ -36,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5#OriginalBankTransactionCode
- * ReturnReasonInformation5.OriginalBankTransactionCode}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5#mmOriginalBankTransactionCode
+ * ReturnReasonInformation5.mmOriginalBankTransactionCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5#ReturnOriginator
- * ReturnReasonInformation5.ReturnOriginator}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5#mmReturnOriginator
+ * ReturnReasonInformation5.mmReturnOriginator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5#ReturnReason
- * ReturnReasonInformation5.ReturnReason}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5#mmReturnReason
+ * ReturnReasonInformation5.mmReturnReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5#AdditionalReturnReasonInformation
- * ReturnReasonInformation5.AdditionalReturnReasonInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation5#mmAdditionalReturnReasonInformation
+ * ReturnReasonInformation5.mmAdditionalReturnReasonInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReturnReasonInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BankTransactionCodeStructure1 originalBankTransactionCode;
 	/**
 	 * Bank transaction code included in the original entry for the transaction.
 	 * <p>
@@ -82,8 +84,8 @@ public class ReturnReasonInformation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Entry#BankTransactionCode
-	 * Entry.BankTransactionCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.Entry#mmBankTransactionCode
+	 * Entry.mmBankTransactionCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -104,21 +106,22 @@ public class ReturnReasonInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OriginalBankTransactionCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOriginalBankTransactionCode = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmBankTransactionCode;
 			componentContext_lazy = () -> ReturnReasonInformation5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.BankTransactionCode;
 			isDerived = false;
 			xmlTag = "OrgnlBkTxCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBankTransactionCode";
 			definition = "Bank transaction code included in the original entry for the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BankTransactionCodeStructure1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure1.mmObject();
 		}
 	};
+	protected PartyIdentification8 returnOriginator;
 	/**
 	 * Party issuing the return.
 	 * <p>
@@ -130,8 +133,8 @@ public class ReturnReasonInformation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,21 +153,22 @@ public class ReturnReasonInformation5 {
 	 * definition} = "Party issuing the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReturnOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReturnOriginator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> ReturnReasonInformation5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RtrOrgtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnOriginator";
 			definition = "Party issuing the return.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification8.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	protected ReturnReason1Choice returnReason;
 	/**
 	 * Specifies the reason for the return.
 	 * <p>
@@ -176,8 +180,8 @@ public class ReturnReasonInformation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Payment#PaymentStatus
-	 * Payment.PaymentStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentStatus
+	 * Payment.mmPaymentStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,21 +200,22 @@ public class ReturnReasonInformation5 {
 	 * definition} = "Specifies the reason for the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReturnReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReturnReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
 			componentContext_lazy = () -> ReturnReasonInformation5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.PaymentStatus;
 			isDerived = false;
 			xmlTag = "RtrRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnReason";
 			definition = "Specifies the reason for the return.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReturnReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ReturnReason1Choice.mmObject();
 		}
 	};
+	protected List<Max105Text> additionalReturnReasonInformation;
 	/**
 	 * Further details on the return reason.
 	 * <p>
@@ -238,7 +243,7 @@ public class ReturnReasonInformation5 {
 	 * definition} = "Further details on the return reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReturnReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReturnReasonInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReturnReasonInformation5.mmObject();
 			isDerived = false;
@@ -254,15 +259,47 @@ public class ReturnReasonInformation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnReasonInformation5.OriginalBankTransactionCode, com.tools20022.repository.msg.ReturnReasonInformation5.ReturnOriginator,
-						com.tools20022.repository.msg.ReturnReasonInformation5.ReturnReason, com.tools20022.repository.msg.ReturnReasonInformation5.AdditionalReturnReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnReasonInformation5.mmOriginalBankTransactionCode, com.tools20022.repository.msg.ReturnReasonInformation5.mmReturnOriginator,
+						com.tools20022.repository.msg.ReturnReasonInformation5.mmReturnReason, com.tools20022.repository.msg.ReturnReasonInformation5.mmAdditionalReturnReasonInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ReturnReasonInformation5";
 				definition = "Further information on the return reason of the transaction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BankTransactionCodeStructure1 getOriginalBankTransactionCode() {
+		return originalBankTransactionCode;
+	}
+
+	public void setOriginalBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure1 originalBankTransactionCode) {
+		this.originalBankTransactionCode = originalBankTransactionCode;
+	}
+
+	public PartyIdentification8 getReturnOriginator() {
+		return returnOriginator;
+	}
+
+	public void setReturnOriginator(com.tools20022.repository.msg.PartyIdentification8 returnOriginator) {
+		this.returnOriginator = returnOriginator;
+	}
+
+	public ReturnReason1Choice getReturnReason() {
+		return returnReason;
+	}
+
+	public void setReturnReason(ReturnReason1Choice returnReason) {
+		this.returnReason = returnReason;
+	}
+
+	public List<Max105Text> getAdditionalReturnReasonInformation() {
+		return additionalReturnReasonInformation;
+	}
+
+	public void setAdditionalReturnReasonInformation(List<Max105Text> additionalReturnReasonInformation) {
+		this.additionalReturnReasonInformation = additionalReturnReasonInformation;
 	}
 }

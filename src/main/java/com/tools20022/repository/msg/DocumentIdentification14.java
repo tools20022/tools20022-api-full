@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification14#Identification
- * DocumentIdentification14.Identification}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification14#mmIdentification
+ * DocumentIdentification14.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentIdentification14#DocumentNumber
- * DocumentIdentification14.DocumentNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentIdentification14#mmDocumentNumber
+ * DocumentIdentification14.mmDocumentNumber}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,62 +49,62 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01#OtherDocumentIdentification
- * CorporateActionEventProcessingStatusAdviceV01.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01#mmOtherDocumentIdentification
+ * CorporateActionEventProcessingStatusAdviceV01.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV02#OtherDocumentIdentification
- * CorporateActionEventProcessingStatusAdviceV02.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV02#mmOtherDocumentIdentification
+ * CorporateActionEventProcessingStatusAdviceV02.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV03#OtherDocumentIdentification
- * CorporateActionEventProcessingStatusAdviceV03.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV03#mmOtherDocumentIdentification
+ * CorporateActionEventProcessingStatusAdviceV03.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#OtherDocumentIdentification
- * CorporateActionEventProcessingStatusAdviceV04.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04#mmOtherDocumentIdentification
+ * CorporateActionEventProcessingStatusAdviceV04.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#OtherDocumentIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01#mmOtherDocumentIdentification
  * CorporateActionInstructionCancellationRequestStatusAdviceV01.
- * OtherDocumentIdentification}</li>
+ * mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV02#OtherDocumentIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV02#mmOtherDocumentIdentification
  * CorporateActionInstructionCancellationRequestStatusAdviceV02.
- * OtherDocumentIdentification}</li>
+ * mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03#OtherDocumentIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03#mmOtherDocumentIdentification
  * CorporateActionInstructionCancellationRequestStatusAdviceV03.
- * OtherDocumentIdentification}</li>
+ * mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04#OtherDocumentIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04#mmOtherDocumentIdentification
  * CorporateActionInstructionCancellationRequestStatusAdviceV04.
- * OtherDocumentIdentification}</li>
+ * mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01#OtherDocumentIdentification
- * CorporateActionInstructionStatusAdviceV01.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01#mmOtherDocumentIdentification
+ * CorporateActionInstructionStatusAdviceV01.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV02#OtherDocumentIdentification
- * CorporateActionInstructionStatusAdviceV02.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV02#mmOtherDocumentIdentification
+ * CorporateActionInstructionStatusAdviceV02.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV03#OtherDocumentIdentification
- * CorporateActionInstructionStatusAdviceV03.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV03#mmOtherDocumentIdentification
+ * CorporateActionInstructionStatusAdviceV03.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV04#OtherDocumentIdentification
- * CorporateActionInstructionStatusAdviceV04.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV04#mmOtherDocumentIdentification
+ * CorporateActionInstructionStatusAdviceV04.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV05#OtherDocumentIdentification
- * CorporateActionInstructionStatusAdviceV05.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV05#mmOtherDocumentIdentification
+ * CorporateActionInstructionStatusAdviceV05.mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV05#OtherDocumentIdentification
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV05#mmOtherDocumentIdentification
  * CorporateActionInstructionCancellationRequestStatusAdviceV05.
- * OtherDocumentIdentification}</li>
+ * mmOtherDocumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV06#OtherDocumentIdentification
- * CorporateActionInstructionStatusAdviceV06.OtherDocumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV06#mmOtherDocumentIdentification
+ * CorporateActionInstructionStatusAdviceV06.mmOtherDocumentIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -125,6 +125,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class DocumentIdentification14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification1Choice identification;
 	/**
 	 * Unique identifier of the document (message) assigned either by the
 	 * account servicer or the account owner.
@@ -138,8 +139,8 @@ public class DocumentIdentification14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -162,28 +163,29 @@ public class DocumentIdentification14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification33#Identification
-	 * DocumentIdentification33.Identification}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification33#mmIdentification
+	 * DocumentIdentification33.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification14.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the document (message) assigned either by the account servicer or the account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification33.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification33.mmIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> DocumentIdentification1Choice.mmObject();
 		}
 	};
+	protected DocumentNumber1Choice documentNumber;
 	/**
 	 * Identification of the type of document.
 	 * <p>
@@ -213,13 +215,13 @@ public class DocumentIdentification14 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification33#DocumentNumber
-	 * DocumentIdentification33.DocumentNumber}</li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification33#mmDocumentNumber
+	 * DocumentIdentification33.mmDocumentNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DocumentNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDocumentNumber = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> DocumentIdentification14.mmObject();
 			isDerived = false;
@@ -227,33 +229,35 @@ public class DocumentIdentification14 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Identification of the type of document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification33.DocumentNumber);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification33.mmDocumentNumber);
 			maxOccurs = 1;
-			type_lazy = () -> DocumentNumber1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DocumentNumber1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification14.Identification, com.tools20022.repository.msg.DocumentIdentification14.DocumentNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification14.mmIdentification, com.tools20022.repository.msg.DocumentIdentification14.mmDocumentNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV02.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV03.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV02.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV02.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV03.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV04.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV05.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV05.mmOtherDocumentIdentification,
+						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV06.mmOtherDocumentIdentification);
 				trace_lazy = () -> Document.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV02.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV03.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV02.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.OtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV02.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV03.OtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV04.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV05.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV05.OtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV06.OtherDocumentIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification14";
 				definition = "Identification of a document as well as the document number.";
@@ -261,5 +265,21 @@ public class DocumentIdentification14 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification1Choice getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification1Choice identification) {
+		this.identification = identification;
+	}
+
+	public DocumentNumber1Choice getDocumentNumber() {
+		return documentNumber;
+	}
+
+	public void setDocumentNumber(DocumentNumber1Choice documentNumber) {
+		this.documentNumber = documentNumber;
 	}
 }

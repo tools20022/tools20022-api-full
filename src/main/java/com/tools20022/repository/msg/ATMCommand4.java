@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.TerminalManagementSystem;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Maintenance command the ATM must perform.
@@ -39,24 +40,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#Type
- * ATMCommand4.Type}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#Urgency
- * ATMCommand4.Urgency}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#DateTime
- * ATMCommand4.DateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#mmType
+ * ATMCommand4.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#mmUrgency
+ * ATMCommand4.mmUrgency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#mmDateTime
+ * ATMCommand4.mmDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCommand4#CommandIdentification
- * ATMCommand4.CommandIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#Reason
- * ATMCommand4.Reason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#TraceReason
- * ATMCommand4.TraceReason}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommand4#mmCommandIdentification
+ * ATMCommand4.mmCommandIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#mmReason
+ * ATMCommand4.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#mmTraceReason
+ * ATMCommand4.mmTraceReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ATMCommand4#AdditionalReasonInformation
- * ATMCommand4.AdditionalReasonInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCommand4#CommandParameters
- * ATMCommand4.CommandParameters}</li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommand4#mmAdditionalReasonInformation
+ * ATMCommand4.mmAdditionalReasonInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ATMCommand4#mmCommandParameters
+ * ATMCommand4.mmCommandParameters}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -66,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,6 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMCommand4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ATMCommand2Code type;
 	/**
 	 * Type of command to be performed by the ATM.
 	 * <p>
@@ -112,11 +115,11 @@ public class ATMCommand4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#Type
-	 * ATMCommand1.Type}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#mmType
+	 * ATMCommand1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
@@ -124,12 +127,13 @@ public class ATMCommand4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of command to be performed by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.Type;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmType;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ATMCommand2Code.mmObject();
 		}
 	};
+	protected TMSContactLevel2Code urgency;
 	/**
 	 * Urgency of the command.
 	 * <p>
@@ -143,8 +147,8 @@ public class ATMCommand4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#ContactLevel
-	 * TerminalManagementSystem.ContactLevel}</li>
+	 * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmContactLevel
+	 * TerminalManagementSystem.mmContactLevel}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,25 +167,26 @@ public class ATMCommand4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#Urgency
-	 * ATMCommand1.Urgency}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#mmUrgency
+	 * ATMCommand1.mmUrgency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Urgency = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUrgency = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmContactLevel;
 			componentContext_lazy = () -> ATMCommand4.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.ContactLevel;
 			isDerived = false;
 			xmlTag = "Urgcy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Urgency";
 			definition = "Urgency of the command.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.Urgency;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmUrgency;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TMSContactLevel2Code.mmObject();
 		}
 	};
+	protected ISODateTime dateTime;
 	/**
 	 * Date time on which the command must be performed.
 	 * <p>
@@ -209,11 +214,11 @@ public class ATMCommand4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#DateTime
-	 * ATMCommand1.DateTime}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#mmDateTime
+	 * ATMCommand1.mmDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
@@ -221,12 +226,13 @@ public class ATMCommand4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date time on which the command must be performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.DateTime;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmDateTime;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ATMCommandIdentification1 commandIdentification;
 	/**
 	 * Identification of the entity issuing the command.
 	 * <p>
@@ -254,11 +260,11 @@ public class ATMCommand4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#CommandIdentification
-	 * ATMCommand1.CommandIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#mmCommandIdentification
+	 * ATMCommand1.mmCommandIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommandIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
@@ -266,13 +272,14 @@ public class ATMCommand4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.CommandIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmCommandIdentification;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCommandIdentification1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
 		}
 	};
+	protected ATMCommandReason1Code reason;
 	/**
 	 * Reason for sending the command.
 	 * <p>
@@ -300,7 +307,7 @@ public class ATMCommand4 {
 	 * definition} = "Reason for sending the command."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
@@ -308,11 +315,12 @@ public class ATMCommand4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for sending the command.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ATMCommandReason1Code.mmObject();
 		}
 	};
+	protected List<ATMCommandReason1Code> traceReason;
 	/**
 	 * Trace of reasons by the entities in the path from the origin of the
 	 * command to the ATM.
@@ -343,7 +351,7 @@ public class ATMCommand4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TraceReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTraceReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
@@ -355,6 +363,7 @@ public class ATMCommand4 {
 			simpleType_lazy = () -> ATMCommandReason1Code.mmObject();
 		}
 	};
+	protected Max70Text additionalReasonInformation;
 	/**
 	 * Additional information about the reason to request this command.
 	 * <p>
@@ -382,7 +391,7 @@ public class ATMCommand4 {
 	 * "Additional information about the reason to request this command."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
@@ -390,11 +399,12 @@ public class ATMCommand4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional information about the reason to request this command.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected ATMCommandParameters2Choice commandParameters;
 	/**
 	 * Specific parameters attached to the command.
 	 * <p>
@@ -422,11 +432,11 @@ public class ATMCommand4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#CommandParameters
-	 * ATMCommand1.CommandParameters}</li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand1#mmCommandParameters
+	 * ATMCommand1.mmCommandParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommandParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommandParameters = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
@@ -434,22 +444,22 @@ public class ATMCommand4 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandParameters";
 			definition = "Specific parameters attached to the command.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.CommandParameters;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmCommandParameters;
 			maxOccurs = 1;
-			type_lazy = () -> ATMCommandParameters2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ATMCommandParameters2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand4.Type, com.tools20022.repository.msg.ATMCommand4.Urgency, com.tools20022.repository.msg.ATMCommand4.DateTime,
-						com.tools20022.repository.msg.ATMCommand4.CommandIdentification, com.tools20022.repository.msg.ATMCommand4.Reason, com.tools20022.repository.msg.ATMCommand4.TraceReason,
-						com.tools20022.repository.msg.ATMCommand4.AdditionalReasonInformation, com.tools20022.repository.msg.ATMCommand4.CommandParameters);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand4.mmType, com.tools20022.repository.msg.ATMCommand4.mmUrgency, com.tools20022.repository.msg.ATMCommand4.mmDateTime,
+						com.tools20022.repository.msg.ATMCommand4.mmCommandIdentification, com.tools20022.repository.msg.ATMCommand4.mmReason, com.tools20022.repository.msg.ATMCommand4.mmTraceReason,
+						com.tools20022.repository.msg.ATMCommand4.mmAdditionalReasonInformation, com.tools20022.repository.msg.ATMCommand4.mmCommandParameters);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand4";
 				definition = "Maintenance command the ATM must perform.";
@@ -457,5 +467,69 @@ public class ATMCommand4 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ATMCommand2Code getType() {
+		return type;
+	}
+
+	public void setType(ATMCommand2Code type) {
+		this.type = type;
+	}
+
+	public TMSContactLevel2Code getUrgency() {
+		return urgency;
+	}
+
+	public void setUrgency(TMSContactLevel2Code urgency) {
+		this.urgency = urgency;
+	}
+
+	public ISODateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(ISODateTime dateTime) {
+		this.dateTime = dateTime;
+	}
+
+	public ATMCommandIdentification1 getCommandIdentification() {
+		return commandIdentification;
+	}
+
+	public void setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+		this.commandIdentification = commandIdentification;
+	}
+
+	public ATMCommandReason1Code getReason() {
+		return reason;
+	}
+
+	public void setReason(ATMCommandReason1Code reason) {
+		this.reason = reason;
+	}
+
+	public List<ATMCommandReason1Code> getTraceReason() {
+		return traceReason;
+	}
+
+	public void setTraceReason(List<ATMCommandReason1Code> traceReason) {
+		this.traceReason = traceReason;
+	}
+
+	public Max70Text getAdditionalReasonInformation() {
+		return additionalReasonInformation;
+	}
+
+	public void setAdditionalReasonInformation(Max70Text additionalReasonInformation) {
+		this.additionalReasonInformation = additionalReasonInformation;
+	}
+
+	public ATMCommandParameters2Choice getCommandParameters() {
+		return commandParameters;
+	}
+
+	public void setCommandParameters(ATMCommandParameters2Choice commandParameters) {
+		this.commandParameters = commandParameters;
 	}
 }

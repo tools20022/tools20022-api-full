@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Validation2Code#ValidationSuccessful
- * Validation2Code.ValidationSuccessful}</li>
+ * {@linkplain com.tools20022.repository.codeset.Validation2Code#mmValidationSuccessful
+ * Validation2Code.mmValidationSuccessful}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Validation2Code#ValidationFailed
- * Validation2Code.ValidationFailed}</li>
+ * {@linkplain com.tools20022.repository.codeset.Validation2Code#mmValidationFailed
+ * Validation2Code.mmValidationFailed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class Validation2Code extends ValidationCode {
 	 * name} = "ValidationSuccessful"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValidationSuccessful = new MMCode() {
+	public static final MMCode mmValidationSuccessful = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationSuccessful";
@@ -98,7 +98,7 @@ public class Validation2Code extends ValidationCode {
 	 * name} = "ValidationFailed"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValidationFailed = new MMCode() {
+	public static final MMCode mmValidationFailed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationFailed";
@@ -109,11 +109,11 @@ public class Validation2Code extends ValidationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Validation2Code";
 				definition = "Specifies the validation of a signature used to sign the file.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Validation2Code.ValidationSuccessful, com.tools20022.repository.codeset.Validation2Code.ValidationFailed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Validation2Code.mmValidationSuccessful, com.tools20022.repository.codeset.Validation2Code.mmValidationFailed);
 				trace_lazy = () -> ValidationCode.mmObject();
 			}
 		});

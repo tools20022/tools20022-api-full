@@ -38,28 +38,28 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectionReason3#PreviousOrOtherOrRelatedReferenceRule
- * RejectionReason3.PreviousOrOtherOrRelatedReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectionReason3#mmPreviousOrOtherOrRelatedReferenceRule
+ * RejectionReason3.mmPreviousOrOtherOrRelatedReferenceRule}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RejectionReason3#Reason
- * RejectionReason3.Reason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RejectionReason3#mmReason
+ * RejectionReason3.mmReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectionReason3#AdditionalInformation
- * RejectionReason3.AdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectionReason3#mmAdditionalInformation
+ * RejectionReason3.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectionReason3#LinkedMessagePreviousReference
- * RejectionReason3.LinkedMessagePreviousReference}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectionReason3#mmLinkedMessagePreviousReference
+ * RejectionReason3.mmLinkedMessagePreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectionReason3#LinkedMessageOtherReference
- * RejectionReason3.LinkedMessageOtherReference}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectionReason3#mmLinkedMessageOtherReference
+ * RejectionReason3.mmLinkedMessageOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RejectionReason3#LinkedMessageRelatedReference
- * RejectionReason3.LinkedMessageRelatedReference}</li>
+ * {@linkplain com.tools20022.repository.msg.RejectionReason3#mmLinkedMessageRelatedReference
+ * RejectionReason3.mmLinkedMessageRelatedReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -71,15 +71,15 @@ import java.util.function.Supplier;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#Reason
- * SecuritiesMessageRejectionV02.Reason}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#mmReason
+ * SecuritiesMessageRejectionV02.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -101,6 +101,7 @@ import java.util.function.Supplier;
 public class RejectionReason3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected MessageRejectedReason1Code reason;
 	/**
 	 * Reason to reject the message.
 	 * <p>
@@ -114,8 +115,8 @@ public class RejectionReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#RejectedStatusReason
-	 * StatusReason.RejectedStatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmRejectedStatusReason
+	 * StatusReason.mmRejectedStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -135,27 +136,28 @@ public class RejectionReason3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.RejectionReason23#Reason
-	 * RejectionReason23.Reason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.RejectionReason23#mmReason
+	 * RejectionReason23.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> RejectionReason3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.RejectedStatusReason;
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason to reject the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason23.Reason);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason23.mmReason);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> MessageRejectedReason1Code.mmObject();
 		}
 	};
+	protected Max140Text additionalInformation;
 	/**
 	 * Additional information about the rejection reason.
 	 * <p>
@@ -168,8 +170,8 @@ public class RejectionReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.StatusReason#Reason
-	 * StatusReason.Reason}</li>
+	 * {@linkplain com.tools20022.repository.entity.StatusReason#mmReason
+	 * StatusReason.mmReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -190,27 +192,28 @@ public class RejectionReason3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RejectionReason23#AdditionalInformation
-	 * RejectionReason23.AdditionalInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionReason23#mmAdditionalInformation
+	 * RejectionReason23.mmAdditionalInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
 			componentContext_lazy = () -> RejectionReason3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.Reason;
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the rejection reason.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason23.AdditionalInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason23.mmAdditionalInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected AdditionalReference3 linkedMessagePreviousReference;
 	/**
 	 * Linked previous reference that is invalid or unrecognised, of the message
 	 * being rejected.
@@ -240,7 +243,7 @@ public class RejectionReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LinkedMessagePreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLinkedMessagePreviousReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RejectionReason3.mmObject();
 			isDerived = false;
@@ -248,12 +251,13 @@ public class RejectionReason3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedMessagePreviousReference";
 			definition = "Linked previous reference that is invalid or unrecognised, of the message being rejected.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalReference3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 linkedMessageOtherReference;
 	/**
 	 * Linked other reference that is invalid or unrecognised, of the message
 	 * being rejected.
@@ -283,7 +287,7 @@ public class RejectionReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LinkedMessageOtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLinkedMessageOtherReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RejectionReason3.mmObject();
 			isDerived = false;
@@ -291,12 +295,13 @@ public class RejectionReason3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedMessageOtherReference";
 			definition = "Linked other reference that is invalid or unrecognised, of the message being rejected.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalReference3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
 		}
 	};
+	protected AdditionalReference3 linkedMessageRelatedReference;
 	/**
 	 * Linked related reference that is invalid or unrecognised, of the message
 	 * being rejected.
@@ -326,7 +331,7 @@ public class RejectionReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd LinkedMessageRelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLinkedMessageRelatedReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RejectionReason3.mmObject();
 			isDerived = false;
@@ -334,10 +339,10 @@ public class RejectionReason3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedMessageRelatedReference";
 			definition = "Linked related reference that is invalid or unrecognised, of the message being rejected.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AdditionalReference3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
 		}
 	};
 	/**
@@ -351,14 +356,14 @@ public class RejectionReason3 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RejectionReason3#LinkedMessagePreviousReference
-	 * RejectionReason3.LinkedMessagePreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionReason3#mmLinkedMessagePreviousReference
+	 * RejectionReason3.mmLinkedMessagePreviousReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RejectionReason3#LinkedMessageOtherReference
-	 * RejectionReason3.LinkedMessageOtherReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionReason3#mmLinkedMessageOtherReference
+	 * RejectionReason3.mmLinkedMessageOtherReference}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.RejectionReason3#LinkedMessageRelatedReference
-	 * RejectionReason3.LinkedMessageRelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionReason3#mmLinkedMessageRelatedReference
+	 * RejectionReason3.mmLinkedMessageRelatedReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -378,26 +383,26 @@ public class RejectionReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor PreviousOrOtherOrRelatedReferenceRule = new MMXor() {
+	public static final MMXor mmPreviousOrOtherOrRelatedReferenceRule = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousOrOtherOrRelatedReferenceRule";
 			definition = "One and only one message element in the list (LinkedMessagePreviousReference, LinkedMessageOtherReference, LinkedMessageRelatedReference) may be present.";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason3.LinkedMessagePreviousReference, com.tools20022.repository.msg.RejectionReason3.LinkedMessageOtherReference,
-					com.tools20022.repository.msg.RejectionReason3.LinkedMessageRelatedReference);
 			messageComponent_lazy = () -> RejectionReason3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason3.mmLinkedMessagePreviousReference, com.tools20022.repository.msg.RejectionReason3.mmLinkedMessageOtherReference,
+					com.tools20022.repository.msg.RejectionReason3.mmLinkedMessageRelatedReference);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason3.Reason, com.tools20022.repository.msg.RejectionReason3.AdditionalInformation,
-						com.tools20022.repository.msg.RejectionReason3.LinkedMessagePreviousReference, com.tools20022.repository.msg.RejectionReason3.LinkedMessageOtherReference,
-						com.tools20022.repository.msg.RejectionReason3.LinkedMessageRelatedReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason3.mmReason, com.tools20022.repository.msg.RejectionReason3.mmAdditionalInformation,
+						com.tools20022.repository.msg.RejectionReason3.mmLinkedMessagePreviousReference, com.tools20022.repository.msg.RejectionReason3.mmLinkedMessageOtherReference,
+						com.tools20022.repository.msg.RejectionReason3.mmLinkedMessageRelatedReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.Reason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -409,9 +414,49 @@ public class RejectionReason3 {
 				name = "RejectionReason3";
 				definition = "Reason to reject the message.";
 				nextVersions_lazy = () -> Arrays.asList(RejectionReason23.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason3.PreviousOrOtherOrRelatedReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason3.mmPreviousOrOtherOrRelatedReferenceRule);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageRejectedReason1Code getReason() {
+		return reason;
+	}
+
+	public void setReason(MessageRejectedReason1Code reason) {
+		this.reason = reason;
+	}
+
+	public Max140Text getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	public void setAdditionalInformation(Max140Text additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	public AdditionalReference3 getLinkedMessagePreviousReference() {
+		return linkedMessagePreviousReference;
+	}
+
+	public void setLinkedMessagePreviousReference(com.tools20022.repository.msg.AdditionalReference3 linkedMessagePreviousReference) {
+		this.linkedMessagePreviousReference = linkedMessagePreviousReference;
+	}
+
+	public AdditionalReference3 getLinkedMessageOtherReference() {
+		return linkedMessageOtherReference;
+	}
+
+	public void setLinkedMessageOtherReference(com.tools20022.repository.msg.AdditionalReference3 linkedMessageOtherReference) {
+		this.linkedMessageOtherReference = linkedMessageOtherReference;
+	}
+
+	public AdditionalReference3 getLinkedMessageRelatedReference() {
+		return linkedMessageRelatedReference;
+	}
+
+	public void setLinkedMessageRelatedReference(com.tools20022.repository.msg.AdditionalReference3 linkedMessageRelatedReference) {
+		this.linkedMessageRelatedReference = linkedMessageRelatedReference;
 	}
 }

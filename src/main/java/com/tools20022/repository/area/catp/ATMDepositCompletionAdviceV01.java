@@ -60,24 +60,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#Header
- * ATMDepositCompletionAdviceV01.Header}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#mmHeader
+ * ATMDepositCompletionAdviceV01.mmHeader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#ProtectedATMDepositCompletionAdvice
- * ATMDepositCompletionAdviceV01.ProtectedATMDepositCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#mmProtectedATMDepositCompletionAdvice
+ * ATMDepositCompletionAdviceV01.mmProtectedATMDepositCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#ATMDepositCompletionAdvice
- * ATMDepositCompletionAdviceV01.ATMDepositCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#mmATMDepositCompletionAdvice
+ * ATMDepositCompletionAdviceV01.mmATMDepositCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#SecurityTrailer
- * ATMDepositCompletionAdviceV01.SecurityTrailer}</li>
+ * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#mmSecurityTrailer
+ * ATMDepositCompletionAdviceV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01#identifier
- * ATMDepositCompletionAdviceV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code catp.014.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ATMDepositCompletionAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected Header32 header;
 	/**
 	 * Information related to the protocol management on a segment of the path
 	 * from the ATM to the acquirer.
@@ -118,17 +117,18 @@ public class ATMDepositCompletionAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Header = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Header32.mmObject();
 		}
 	};
+	protected ContentInformationType10 protectedATMDepositCompletionAdvice;
 	/**
 	 * Encrypted body of the message.
 	 * <p>
@@ -152,17 +152,18 @@ public class ATMDepositCompletionAdviceV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ProtectedATMDepositCompletionAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmProtectedATMDepositCompletionAdvice = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMDpstCmpltnAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMDepositCompletionAdvice";
 			definition = "Encrypted body of the message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 	};
+	protected ATMDepositCompletionAdvice1 aTMDepositCompletionAdvice;
 	/**
 	 * Information related to the completion of a deposit transaction on the
 	 * ATM.
@@ -189,17 +190,18 @@ public class ATMDepositCompletionAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock ATMDepositCompletionAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmATMDepositCompletionAdvice = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMDpstCmpltnAdvc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositCompletionAdvice";
 			definition = "Information related to the completion of a deposit transaction on the ATM.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ATMDepositCompletionAdvice1.mmObject();
 		}
 	};
+	protected ContentInformationType15 securityTrailer;
 	/**
 	 * Trailer of the message containing a MAC.
 	 * <p>
@@ -223,42 +225,15 @@ public class ATMDepositCompletionAdviceV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock SecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "catp"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "014"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "catp";
-			messageFunctionality = "014";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -272,12 +247,51 @@ public class ATMDepositCompletionAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "ATMDpstCmpltnAdvc";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.Header,
-						com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.ProtectedATMDepositCompletionAdvice, com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.ATMDepositCompletionAdvice,
-						com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.SecurityTrailer);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.mmHeader,
+						com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.mmProtectedATMDepositCompletionAdvice, com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.mmATMDepositCompletionAdvice,
+						com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.mmSecurityTrailer);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "catp";
+						messageFunctionality = "014";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Header32 getHeader() {
+		return header;
+	}
+
+	public void setHeader(Header32 header) {
+		this.header = header;
+	}
+
+	public ContentInformationType10 getProtectedATMDepositCompletionAdvice() {
+		return protectedATMDepositCompletionAdvice;
+	}
+
+	public void setProtectedATMDepositCompletionAdvice(ContentInformationType10 protectedATMDepositCompletionAdvice) {
+		this.protectedATMDepositCompletionAdvice = protectedATMDepositCompletionAdvice;
+	}
+
+	public ATMDepositCompletionAdvice1 getATMDepositCompletionAdvice() {
+		return aTMDepositCompletionAdvice;
+	}
+
+	public void setATMDepositCompletionAdvice(ATMDepositCompletionAdvice1 aTMDepositCompletionAdvice) {
+		this.aTMDepositCompletionAdvice = aTMDepositCompletionAdvice;
+	}
+
+	public ContentInformationType15 getSecurityTrailer() {
+		return securityTrailer;
+	}
+
+	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = securityTrailer;
 	}
 }

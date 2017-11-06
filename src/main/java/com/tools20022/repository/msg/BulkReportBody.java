@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BulkReportBody#ReportHeader
- * BulkReportBody.ReportHeader}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BulkReportBody#ReportData
- * BulkReportBody.ReportData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BulkReportBody#mmReportHeader
+ * BulkReportBody.mmReportHeader}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BulkReportBody#mmReportData
+ * BulkReportBody.mmReportData}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BulkReportBody {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ReportHeader1 reportHeader;
 	/**
 	 * General properties of the report.
 	 * <p>
@@ -83,7 +84,7 @@ public class BulkReportBody {
 	 * definition} = "General properties of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportHeader = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BulkReportBody.mmObject();
 			isDerived = false;
@@ -91,12 +92,13 @@ public class BulkReportBody {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportHeader";
 			definition = "General properties of the report.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ReportHeader1.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReportHeader1.mmObject();
 		}
 	};
+	protected ProprietaryReportData reportData;
 	/**
 	 * Full report data or reporting data of a single tranche of the full
 	 * report.
@@ -125,7 +127,7 @@ public class BulkReportBody {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReportData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReportData = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BulkReportBody.mmObject();
 			isDerived = false;
@@ -133,23 +135,39 @@ public class BulkReportBody {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportData";
 			definition = "Full report data or reporting data of a single tranche of the full report.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ProprietaryReportData.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReportData.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BulkReportBody.ReportHeader, com.tools20022.repository.msg.BulkReportBody.ReportData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BulkReportBody.mmReportHeader, com.tools20022.repository.msg.BulkReportBody.mmReportData);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BulkReportBody";
 				definition = "Contains general properties of the report and the reporting data (either one tranche or the full report).";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ReportHeader1 getReportHeader() {
+		return reportHeader;
+	}
+
+	public void setReportHeader(com.tools20022.repository.msg.ReportHeader1 reportHeader) {
+		this.reportHeader = reportHeader;
+	}
+
+	public ProprietaryReportData getReportData() {
+		return reportData;
+	}
+
+	public void setReportData(com.tools20022.repository.msg.ProprietaryReportData reportData) {
+		this.reportData = reportData;
 	}
 }

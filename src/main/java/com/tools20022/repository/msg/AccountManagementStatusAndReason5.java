@@ -25,8 +25,10 @@ import com.tools20022.repository.choice.BlockedStatusReason2Choice;
 import com.tools20022.repository.choice.Status25Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.AccountStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status information.
@@ -38,32 +40,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#Status
- * AccountManagementStatusAndReason5.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmStatus
+ * AccountManagementStatusAndReason5.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#StatusReason
- * AccountManagementStatusAndReason5.StatusReason}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmStatusReason
+ * AccountManagementStatusAndReason5.mmStatusReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#AccountApplicationIdentification
- * AccountManagementStatusAndReason5.AccountApplicationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmAccountApplicationIdentification
+ * AccountManagementStatusAndReason5.mmAccountApplicationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#ExistingAccountIdentification
- * AccountManagementStatusAndReason5.ExistingAccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmExistingAccountIdentification
+ * AccountManagementStatusAndReason5.mmExistingAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#AccountIdentification
- * AccountManagementStatusAndReason5.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmAccountIdentification
+ * AccountManagementStatusAndReason5.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#AccountStatus
- * AccountManagementStatusAndReason5.AccountStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmAccountStatus
+ * AccountManagementStatusAndReason5.mmAccountStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#BlockedStatus
- * AccountManagementStatusAndReason5.BlockedStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmBlockedStatus
+ * AccountManagementStatusAndReason5.mmBlockedStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#FATCAReportingDate
- * AccountManagementStatusAndReason5.FATCAReportingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmFATCAReportingDate
+ * AccountManagementStatusAndReason5.mmFATCAReportingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#CRSReportingDate
- * AccountManagementStatusAndReason5.CRSReportingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmCRSReportingDate
+ * AccountManagementStatusAndReason5.mmCRSReportingDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -74,15 +76,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV06#StatusReport
- * AccountManagementStatusReportV06.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV06#mmStatusReport
+ * AccountManagementStatusReportV06.mmStatusReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountManagementStatusAndReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status25Choice status;
 	/**
 	 * Status of the account management instruction that was previously
 	 * received.
@@ -137,25 +140,26 @@ public class AccountManagementStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason4#Status
-	 * AccountManagementStatusAndReason4.Status}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason4#mmStatus
+	 * AccountManagementStatusAndReason4.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> AccountStatus.mmObject();
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the account management instruction that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.Status;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmStatus;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Status25Choice.mmObject();
 		}
 	};
+	protected List<AcceptedStatusReason1Choice> statusReason;
 	/**
 	 * Reason for the status of the account management instruction.
 	 * <p>
@@ -168,8 +172,8 @@ public class AccountManagementStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -189,20 +193,21 @@ public class AccountManagementStatusAndReason5 {
 	 * "Reason for the status of the account management instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Reason for the status of the account management instruction.";
 			minOccurs = 0;
-			type_lazy = () -> AcceptedStatusReason1Choice.mmObject();
 			isComposite = true;
+			type_lazy = () -> AcceptedStatusReason1Choice.mmObject();
 		}
 	};
+	protected Max35Text accountApplicationIdentification;
 	/**
 	 * Unique and unambiguous identifier of the account opening or modification
 	 * instruction at application level.
@@ -234,11 +239,11 @@ public class AccountManagementStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason4#AccountApplicationIdentification
-	 * AccountManagementStatusAndReason4.AccountApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason4#mmAccountApplicationIdentification
+	 * AccountManagementStatusAndReason4.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
@@ -246,12 +251,13 @@ public class AccountManagementStatusAndReason5 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or modification instruction at application level.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.AccountApplicationIdentification;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmAccountApplicationIdentification;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Account23> existingAccountIdentification;
 	/**
 	 * Account to which the account opening is related.
 	 * <p>
@@ -262,8 +268,8 @@ public class AccountManagementStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -283,25 +289,26 @@ public class AccountManagementStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason4#ExistingAccountIdentification
-	 * AccountManagementStatusAndReason4.ExistingAccountIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason4#mmExistingAccountIdentification
+	 * AccountManagementStatusAndReason4.mmExistingAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ExistingAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmExistingAccountIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "ExstgAcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExistingAccountIdentification";
 			definition = "Account to which the account opening is related.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.ExistingAccountIdentification;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmExistingAccountIdentification;
 			minOccurs = 0;
-			type_lazy = () -> Account23.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Account23.mmObject();
 		}
 	};
+	protected Max35Text accountIdentification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -315,8 +322,8 @@ public class AccountManagementStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -337,20 +344,21 @@ public class AccountManagementStatusAndReason5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected AccountStatus2 accountStatus;
 	/**
 	 * Status of the account.
 	 * <p>
@@ -362,8 +370,8 @@ public class AccountManagementStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Status
-	 * Account.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmStatus
+	 * Account.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -382,21 +390,22 @@ public class AccountManagementStatusAndReason5 {
 	 * definition} = "Status of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmStatus;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Status;
 			isDerived = false;
 			xmlTag = "AcctSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatus";
 			definition = "Status of the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AccountStatus2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
 		}
 	};
+	protected BlockedStatusReason2Choice blockedStatus;
 	/**
 	 * Specifies the account is blocked and other factors for the blocked
 	 * account.
@@ -411,8 +420,8 @@ public class AccountManagementStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Status
-	 * Account.Status}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmStatus
+	 * Account.mmStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -433,20 +442,21 @@ public class AccountManagementStatusAndReason5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BlockedStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBlockedStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmStatus;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Status;
 			isDerived = false;
 			xmlTag = "BlckdSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedStatus";
 			definition = "Specifies the account is blocked and other factors for the blocked account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> BlockedStatusReason2Choice.mmObject();
 		}
 	};
+	protected ISODate fATCAReportingDate;
 	/**
 	 * Date provided by the account owner to inform the account servicer of the
 	 * date on which the holdings must be reported before the account is
@@ -461,8 +471,8 @@ public class AccountManagementStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.FATCAStatus#FATCAReportingDate
-	 * FATCAStatus.FATCAReportingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.FATCAStatus#mmFATCAReportingDate
+	 * FATCAStatus.mmFATCAReportingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -483,20 +493,21 @@ public class AccountManagementStatusAndReason5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FATCAReportingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFATCAReportingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmFATCAReportingDate;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FATCAStatus.FATCAReportingDate;
 			isDerived = false;
 			xmlTag = "FATCARptgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCAReportingDate";
 			definition = "Date provided by the account owner to inform the account servicer of the date on which the holdings must be reported before the account is subsequently closed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate cRSReportingDate;
 	/**
 	 * Date provided by the account owner to inform the account servicer of the
 	 * date on which the holdings must be reported before the account is
@@ -511,8 +522,8 @@ public class AccountManagementStatusAndReason5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CRSStatus#CRSReportingDate
-	 * CRSStatus.CRSReportingDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CRSStatus#mmCRSReportingDate
+	 * CRSStatus.mmCRSReportingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -533,17 +544,17 @@ public class AccountManagementStatusAndReason5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CRSReportingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCRSReportingDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmCRSReportingDate;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CRSStatus.CRSReportingDate;
 			isDerived = false;
 			xmlTag = "CRSRptgDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRSReportingDate";
 			definition = "Date provided by the account owner to inform the account servicer of the date on which the holdings must be reported before the account is subsequently closed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -551,14 +562,14 @@ public class AccountManagementStatusAndReason5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason5.Status, com.tools20022.repository.msg.AccountManagementStatusAndReason5.StatusReason,
-						com.tools20022.repository.msg.AccountManagementStatusAndReason5.AccountApplicationIdentification, com.tools20022.repository.msg.AccountManagementStatusAndReason5.ExistingAccountIdentification,
-						com.tools20022.repository.msg.AccountManagementStatusAndReason5.AccountIdentification, com.tools20022.repository.msg.AccountManagementStatusAndReason5.AccountStatus,
-						com.tools20022.repository.msg.AccountManagementStatusAndReason5.BlockedStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason5.FATCAReportingDate,
-						com.tools20022.repository.msg.AccountManagementStatusAndReason5.CRSReportingDate);
-				trace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV06.StatusReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmStatusReason,
+						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmAccountApplicationIdentification, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmExistingAccountIdentification,
+						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmAccountIdentification, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmAccountStatus,
+						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmBlockedStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmFATCAReportingDate,
+						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmCRSReportingDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV06.mmStatusReport);
+				trace_lazy = () -> AccountStatus.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementStatusAndReason5";
 				definition = "Status information.";
@@ -566,5 +577,77 @@ public class AccountManagementStatusAndReason5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status25Choice getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status25Choice status) {
+		this.status = status;
+	}
+
+	public List<AcceptedStatusReason1Choice> getStatusReason() {
+		return statusReason;
+	}
+
+	public void setStatusReason(List<AcceptedStatusReason1Choice> statusReason) {
+		this.statusReason = statusReason;
+	}
+
+	public Max35Text getAccountApplicationIdentification() {
+		return accountApplicationIdentification;
+	}
+
+	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+		this.accountApplicationIdentification = accountApplicationIdentification;
+	}
+
+	public List<Account23> getExistingAccountIdentification() {
+		return existingAccountIdentification;
+	}
+
+	public void setExistingAccountIdentification(List<com.tools20022.repository.msg.Account23> existingAccountIdentification) {
+		this.existingAccountIdentification = existingAccountIdentification;
+	}
+
+	public Max35Text getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public AccountStatus2 getAccountStatus() {
+		return accountStatus;
+	}
+
+	public void setAccountStatus(com.tools20022.repository.msg.AccountStatus2 accountStatus) {
+		this.accountStatus = accountStatus;
+	}
+
+	public BlockedStatusReason2Choice getBlockedStatus() {
+		return blockedStatus;
+	}
+
+	public void setBlockedStatus(BlockedStatusReason2Choice blockedStatus) {
+		this.blockedStatus = blockedStatus;
+	}
+
+	public ISODate getFATCAReportingDate() {
+		return fATCAReportingDate;
+	}
+
+	public void setFATCAReportingDate(ISODate fATCAReportingDate) {
+		this.fATCAReportingDate = fATCAReportingDate;
+	}
+
+	public ISODate getCRSReportingDate() {
+		return cRSReportingDate;
+	}
+
+	public void setCRSReportingDate(ISODate cRSReportingDate) {
+		this.cRSReportingDate = cRSReportingDate;
 	}
 }

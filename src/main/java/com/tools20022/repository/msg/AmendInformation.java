@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmendInformation#PreviousReference
- * AmendInformation.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.msg.AmendInformation#mmPreviousReference
+ * AmendInformation.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AmendInformation#ReconfirmInstructions
- * AmendInformation.ReconfirmInstructions}</li>
+ * {@linkplain com.tools20022.repository.msg.AmendInformation#mmReconfirmInstructions
+ * AmendInformation.mmReconfirmInstructions}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmendInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected InstructionIdentification previousReference;
 	/**
 	 * Identifies the meeting notification to be modified.
 	 * <p>
@@ -86,7 +87,7 @@ public class AmendInformation {
 	 * definition} = "Identifies the meeting notification to be modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AmendInformation.mmObject();
 			isDerived = false;
@@ -94,12 +95,13 @@ public class AmendInformation {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Identifies the meeting notification to be modified.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InstructionIdentification.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InstructionIdentification.mmObject();
 		}
 	};
+	protected YesNoIndicator reconfirmInstructions;
 	/**
 	 * Indicates whether instructions must be resent (in case of modification of
 	 * the parameters of a meeting for which instructions have already been
@@ -132,7 +134,7 @@ public class AmendInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReconfirmInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReconfirmInstructions = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AmendInformation.mmObject();
 			isDerived = false;
@@ -140,8 +142,8 @@ public class AmendInformation {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconfirmInstructions";
 			definition = "Indicates whether instructions must be resent (in case of modification of the parameters of a meeting for which instructions have already been sent).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -149,13 +151,29 @@ public class AmendInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendInformation.PreviousReference, com.tools20022.repository.msg.AmendInformation.ReconfirmInstructions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendInformation.mmPreviousReference, com.tools20022.repository.msg.AmendInformation.mmReconfirmInstructions);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmendInformation";
 				definition = "Information specific to an amendment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public InstructionIdentification getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(com.tools20022.repository.msg.InstructionIdentification previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public YesNoIndicator getReconfirmInstructions() {
+		return reconfirmInstructions;
+	}
+
+	public void setReconfirmInstructions(YesNoIndicator reconfirmInstructions) {
+		this.reconfirmInstructions = reconfirmInstructions;
 	}
 }

@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code#InternalDatabase
- * SettlementStandingInstructionDatabase1Code.InternalDatabase}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code#mmInternalDatabase
+ * SettlementStandingInstructionDatabase1Code.mmInternalDatabase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code#BrokerDatabase
- * SettlementStandingInstructionDatabase1Code.BrokerDatabase}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code#mmBrokerDatabase
+ * SettlementStandingInstructionDatabase1Code.mmBrokerDatabase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code#VendorDatabase
- * SettlementStandingInstructionDatabase1Code.VendorDatabase}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code#mmVendorDatabase
+ * SettlementStandingInstructionDatabase1Code.mmVendorDatabase}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class SettlementStandingInstructionDatabase1Code extends SettlementStandi
 	 * name} = "InternalDatabase"</li>
 	 * </ul>
 	 */
-	public static final MMCode InternalDatabase = new MMCode() {
+	public static final MMCode mmInternalDatabase = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternalDatabase";
@@ -110,7 +110,7 @@ public class SettlementStandingInstructionDatabase1Code extends SettlementStandi
 	 * name} = "BrokerDatabase"</li>
 	 * </ul>
 	 */
-	public static final MMCode BrokerDatabase = new MMCode() {
+	public static final MMCode mmBrokerDatabase = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerDatabase";
@@ -133,7 +133,7 @@ public class SettlementStandingInstructionDatabase1Code extends SettlementStandi
 	 * name} = "VendorDatabase"</li>
 	 * </ul>
 	 */
-	public static final MMCode VendorDatabase = new MMCode() {
+	public static final MMCode mmVendorDatabase = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorDatabase";
@@ -144,13 +144,13 @@ public class SettlementStandingInstructionDatabase1Code extends SettlementStandi
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INTE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementStandingInstructionDatabase1Code";
 				definition = "Indicates what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code.InternalDatabase, com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code.BrokerDatabase,
-						com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code.VendorDatabase);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code.mmInternalDatabase, com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code.mmBrokerDatabase,
+						com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code.mmVendorDatabase);
 				trace_lazy = () -> SettlementStandingInstructionDatabaseCode.mmObject();
 			}
 		});

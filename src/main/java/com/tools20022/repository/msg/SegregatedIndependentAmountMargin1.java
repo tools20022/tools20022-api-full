@@ -36,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#MinimumTransferAmount
- * SegregatedIndependentAmountMargin1.MinimumTransferAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#mmMinimumTransferAmount
+ * SegregatedIndependentAmountMargin1.mmMinimumTransferAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#RoundingAmount
- * SegregatedIndependentAmountMargin1.RoundingAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#mmRoundingAmount
+ * SegregatedIndependentAmountMargin1.mmRoundingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#RoundingMethod
- * SegregatedIndependentAmountMargin1.RoundingMethod}</li>
+ * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1#mmRoundingMethod
+ * SegregatedIndependentAmountMargin1.mmRoundingMethod}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SegregatedIndependentAmountMargin1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ActiveCurrencyAndAmount minimumTransferAmount;
 	/**
 	 * Minimum amount to pay/receive as specified in the agreement in the base
 	 * currency (to avoid the need to transfer an inconveniently small amount of
@@ -84,8 +85,8 @@ public class SegregatedIndependentAmountMargin1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#MinimumTransferAmount
-	 * ExposureTerm.MinimumTransferAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmMinimumTransferAmount
+	 * ExposureTerm.mmMinimumTransferAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -106,20 +107,21 @@ public class SegregatedIndependentAmountMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MinimumTransferAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMinimumTransferAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmMinimumTransferAmount;
 			componentContext_lazy = () -> SegregatedIndependentAmountMargin1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.MinimumTransferAmount;
 			isDerived = false;
 			xmlTag = "MinTrfAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTransferAmount";
 			definition = "Minimum amount to pay/receive as specified in the agreement in the base currency (to avoid the need to transfer an inconveniently small amount of segregated independent amount).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount roundingAmount;
 	/**
 	 * Amount specified to avoid the need to transfer uneven amounts of
 	 * independent amount collateral.
@@ -134,8 +136,8 @@ public class SegregatedIndependentAmountMargin1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#RoundingAmount
-	 * ExposureTerm.RoundingAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingAmount
+	 * ExposureTerm.mmRoundingAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -156,20 +158,21 @@ public class SegregatedIndependentAmountMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoundingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmRoundingAmount;
 			componentContext_lazy = () -> SegregatedIndependentAmountMargin1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.RoundingAmount;
 			isDerived = false;
 			xmlTag = "RndgAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingAmount";
 			definition = "Amount specified to avoid the need to transfer uneven amounts of independent amount collateral.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected RoundingMethod1Code roundingMethod;
 	/**
 	 * Defines how the rounding amount was applied in the calculation. For
 	 * example, should the amount of collateral required be rounded up, down, to
@@ -185,8 +188,8 @@ public class SegregatedIndependentAmountMargin1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#RoundingMethod
-	 * ExposureTerm.RoundingMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.ExposureTerm#mmRoundingMethod
+	 * ExposureTerm.mmRoundingMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -207,17 +210,17 @@ public class SegregatedIndependentAmountMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RoundingMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRoundingMethod = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmRoundingMethod;
 			componentContext_lazy = () -> SegregatedIndependentAmountMargin1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.RoundingMethod;
 			isDerived = false;
 			xmlTag = "RndgMtd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingMethod";
 			definition = "Defines how the rounding amount was applied in the calculation. For example, should the amount of collateral required be rounded up, down, to the closer integral multiple specified or not rounded.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RoundingMethod1Code.mmObject();
 		}
 	};
@@ -225,15 +228,39 @@ public class SegregatedIndependentAmountMargin1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.MinimumTransferAmount, com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.RoundingAmount,
-						com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.RoundingMethod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.mmMinimumTransferAmount, com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.mmRoundingAmount,
+						com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.mmRoundingMethod);
 				trace_lazy = () -> IndependentAmountTerm.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SegregatedIndependentAmountMargin1";
 				definition = "Elements used to calculate the collateral margin call for the segregated independent amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ActiveCurrencyAndAmount getMinimumTransferAmount() {
+		return minimumTransferAmount;
+	}
+
+	public void setMinimumTransferAmount(ActiveCurrencyAndAmount minimumTransferAmount) {
+		this.minimumTransferAmount = minimumTransferAmount;
+	}
+
+	public ActiveCurrencyAndAmount getRoundingAmount() {
+		return roundingAmount;
+	}
+
+	public void setRoundingAmount(ActiveCurrencyAndAmount roundingAmount) {
+		this.roundingAmount = roundingAmount;
+	}
+
+	public RoundingMethod1Code getRoundingMethod() {
+		return roundingMethod;
+	}
+
+	public void setRoundingMethod(RoundingMethod1Code roundingMethod) {
+		this.roundingMethod = roundingMethod;
 	}
 }

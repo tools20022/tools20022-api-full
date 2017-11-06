@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.BillingReport1;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between report on billing data, billing cancellation request details
@@ -36,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BillingReportOrError1Choice#BillingReport
- * BillingReportOrError1Choice.BillingReport}</li>
+ * {@linkplain com.tools20022.repository.choice.BillingReportOrError1Choice#mmBillingReport
+ * BillingReportOrError1Choice.mmBillingReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BillingReportOrError1Choice#CancellationReport
- * BillingReportOrError1Choice.CancellationReport}</li>
+ * {@linkplain com.tools20022.repository.choice.BillingReportOrError1Choice#mmCancellationReport
+ * BillingReportOrError1Choice.mmCancellationReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BillingReportOrError1Choice#OperationalError
- * BillingReportOrError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.BillingReportOrError1Choice#mmOperationalError
+ * BillingReportOrError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class BillingReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected BillingReport1 billingReport;
 	/**
 	 * Report on billing data.
 	 * <p>
@@ -92,7 +94,7 @@ public class BillingReportOrError1Choice {
 	 * definition} = "Report on billing data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BillingReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBillingReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BillingReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -100,12 +102,13 @@ public class BillingReportOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingReport";
 			definition = "Report on billing data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BillingReport1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> BillingReport1.mmObject();
 		}
 	};
+	protected BillingCancellationReport1 cancellationReport;
 	/**
 	 * Report on cancelled billing data.
 	 * <p>
@@ -133,7 +136,7 @@ public class BillingReportOrError1Choice {
 	 * definition} = "Report on cancelled billing data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CancellationReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCancellationReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BillingReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -141,12 +144,13 @@ public class BillingReportOrError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReport";
 			definition = "Report on cancelled billing data.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> BillingCancellationReport1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> BillingCancellationReport1.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Indicates that an operational error has been issued during the processing
 	 * of the related request.
@@ -176,7 +180,7 @@ public class BillingReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> BillingReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -185,22 +189,46 @@ public class BillingReportOrError1Choice {
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BillingReportOrError1Choice.BillingReport, com.tools20022.repository.choice.BillingReportOrError1Choice.CancellationReport,
-						com.tools20022.repository.choice.BillingReportOrError1Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BillingReportOrError1Choice.mmBillingReport, com.tools20022.repository.choice.BillingReportOrError1Choice.mmCancellationReport,
+						com.tools20022.repository.choice.BillingReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BillingReportOrError1Choice";
 				definition = "Choice between report on billing data, billing cancellation request details or operational error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BillingReport1 getBillingReport() {
+		return billingReport;
+	}
+
+	public void setBillingReport(BillingReport1 billingReport) {
+		this.billingReport = billingReport;
+	}
+
+	public BillingCancellationReport1 getCancellationReport() {
+		return cancellationReport;
+	}
+
+	public void setCancellationReport(BillingCancellationReport1 cancellationReport) {
+		this.cancellationReport = cancellationReport;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

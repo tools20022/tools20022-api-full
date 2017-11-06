@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer3#Identification
- * Acquirer3.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer3#ParametersVersion
- * Acquirer3.ParametersVersion}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer3#mmIdentification
+ * Acquirer3.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer3#mmParametersVersion
+ * Acquirer3.mmParametersVersion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Acquirer3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification32 identification;
 	/**
 	 * Identification of the acquirer (for example the bank identification
 	 * number BIN).
@@ -83,8 +84,8 @@ public class Acquirer3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
-	 * PartyIdentificationInformation.OtherIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+	 * PartyIdentificationInformation.mmOtherIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Acquirer3
@@ -105,28 +106,29 @@ public class Acquirer3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer5#Identification
-	 * Acquirer5.Identification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer5#mmIdentification
+	 * Acquirer5.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Identification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> Acquirer3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the acquirer (for example the bank identification number BIN).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer5.Identification);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer5.mmIdentification);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification32.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	protected Max35Text parametersVersion;
 	/**
 	 * Version of the payment acquirer parameters of the POI.
 	 * <p>
@@ -155,13 +157,13 @@ public class Acquirer3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Acquirer5#ParametersVersion
-	 * Acquirer5.ParametersVersion}</li>
+	 * {@linkplain com.tools20022.repository.msg.Acquirer5#mmParametersVersion
+	 * Acquirer5.mmParametersVersion}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ParametersVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParametersVersion = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Acquirer3.mmObject();
 			isDerived = false;
@@ -169,9 +171,9 @@ public class Acquirer3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParametersVersion";
 			definition = "Version of the payment acquirer parameters of the POI.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer5.ParametersVersion);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer5.mmParametersVersion);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -179,16 +181,32 @@ public class Acquirer3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer3.Identification, com.tools20022.repository.msg.Acquirer3.ParametersVersion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer3.mmIdentification, com.tools20022.repository.msg.Acquirer3.mmParametersVersion);
 				trace_lazy = () -> AcquirerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Acquirer3";
 				definition = "Acquirer involved in the card payment.";
-				previousVersion_lazy = () -> Acquirer2.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(Acquirer5.mmObject());
+				previousVersion_lazy = () -> Acquirer2.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification32 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+		this.identification = identification;
+	}
+
+	public Max35Text getParametersVersion() {
+		return parametersVersion;
+	}
+
+	public void setParametersVersion(Max35Text parametersVersion) {
+		this.parametersVersion = parametersVersion;
 	}
 }

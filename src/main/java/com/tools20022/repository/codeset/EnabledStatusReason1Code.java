@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EnabledStatusReason1Code#Modified
- * EnabledStatusReason1Code.Modified}</li>
+ * {@linkplain com.tools20022.repository.codeset.EnabledStatusReason1Code#mmModified
+ * EnabledStatusReason1Code.mmModified}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,7 +72,7 @@ public class EnabledStatusReason1Code extends EnabledStatusReasonCode {
 	 * name} = "Modified"</li>
 	 * </ul>
 	 */
-	public static final MMCode Modified = new MMCode() {
+	public static final MMCode mmModified = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modified";
@@ -83,11 +83,11 @@ public class EnabledStatusReason1Code extends EnabledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EnabledStatusReason1Code";
 				definition = "Specifies the reason for an enabled status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EnabledStatusReason1Code.Modified);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EnabledStatusReason1Code.mmModified);
 				trace_lazy = () -> EnabledStatusReasonCode.mmObject();
 			}
 		});

@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code#Enhanced
- * KnowYourCustomerCheckType1Code.Enhanced}</li>
+ * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code#mmEnhanced
+ * KnowYourCustomerCheckType1Code.mmEnhanced}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code#Ordinary
- * KnowYourCustomerCheckType1Code.Ordinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code#mmOrdinary
+ * KnowYourCustomerCheckType1Code.mmOrdinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code#Simple
- * KnowYourCustomerCheckType1Code.Simple}</li>
+ * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code#mmSimple
+ * KnowYourCustomerCheckType1Code.mmSimple}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +81,7 @@ public class KnowYourCustomerCheckType1Code extends KnowYourCustomerCheckTypeCod
 	 * name} = "Enhanced"</li>
 	 * </ul>
 	 */
-	public static final MMCode Enhanced = new MMCode() {
+	public static final MMCode mmEnhanced = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enhanced";
@@ -104,7 +104,7 @@ public class KnowYourCustomerCheckType1Code extends KnowYourCustomerCheckTypeCod
 	 * name} = "Ordinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Ordinary = new MMCode() {
+	public static final MMCode mmOrdinary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ordinary";
@@ -127,7 +127,7 @@ public class KnowYourCustomerCheckType1Code extends KnowYourCustomerCheckTypeCod
 	 * name} = "Simple"</li>
 	 * </ul>
 	 */
-	public static final MMCode Simple = new MMCode() {
+	public static final MMCode mmSimple = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
@@ -138,12 +138,12 @@ public class KnowYourCustomerCheckType1Code extends KnowYourCustomerCheckTypeCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "KnowYourCustomerCheckType1Code";
 				definition = "Specifies the type of Know Your Customer (KYC) or anti-money laundering due diligence to which the investor has been subjected.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code.Enhanced, com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code.Ordinary,
-						com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code.Simple);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code.mmEnhanced, com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code.mmOrdinary,
+						com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code.mmSimple);
 				trace_lazy = () -> KnowYourCustomerCheckTypeCode.mmObject();
 			}
 		});

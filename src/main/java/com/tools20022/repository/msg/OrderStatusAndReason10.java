@@ -37,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason10#MasterReference
- * OrderStatusAndReason10.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason10#mmMasterReference
+ * OrderStatusAndReason10.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason10#OrderStatus
- * OrderStatusAndReason10.OrderStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason10#mmOrderStatus
+ * OrderStatusAndReason10.mmOrderStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason10#StatusInitiator
- * OrderStatusAndReason10.StatusInitiator}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason10#mmStatusInitiator
+ * OrderStatusAndReason10.mmStatusInitiator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,6 +74,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OrderStatusAndReason10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text masterReference;
 	/**
 	 * Reference assigned to a set of orders or trades in order to link them
 	 * together.
@@ -87,8 +88,8 @@ public class OrderStatusAndReason10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Order#MasterIdentification
-	 * Order.MasterIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Order#mmMasterIdentification
+	 * Order.mmMasterIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,25 +111,26 @@ public class OrderStatusAndReason10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#MasterReference
-	 * OrderStatusAndReason7.MasterReference}</li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#mmMasterReference
+	 * OrderStatusAndReason7.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
 			componentContext_lazy = () -> OrderStatusAndReason10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.MasterIdentification;
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.MasterReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmMasterReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected OrderStatus3Choice orderStatus;
 	/**
 	 * Status of a 'bulk' of orders. Can be used if all the individual orders
 	 * conveyed in a bulk or multiple order message have the same status.
@@ -141,8 +143,8 @@ public class OrderStatusAndReason10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#OrderStatus
-	 * SecuritiesOrderStatus.OrderStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmOrderStatus
+	 * SecuritiesOrderStatus.mmOrderStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,21 +165,22 @@ public class OrderStatusAndReason10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OrderStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOrderStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> OrderStatusAndReason10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.OrderStatus;
 			isDerived = false;
 			xmlTag = "OrdrSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderStatus";
 			definition = "Status of a 'bulk' of orders. Can be used if all the individual orders conveyed in a bulk or multiple order message have the same status.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> OrderStatus3Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> OrderStatus3Choice.mmObject();
 		}
 	};
+	protected PartyIdentification113 statusInitiator;
 	/**
 	 * Party that initiates the status of the order.
 	 * <p>
@@ -189,8 +192,8 @@ public class OrderStatusAndReason10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -210,34 +213,34 @@ public class OrderStatusAndReason10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#StatusInitiator
-	 * OrderStatusAndReason7.StatusInitiator}</li>
+	 * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#mmStatusInitiator
+	 * OrderStatusAndReason7.mmStatusInitiator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> OrderStatusAndReason10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status of the order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.StatusInitiator;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmStatusInitiator;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification113.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason10.MasterReference, com.tools20022.repository.msg.OrderStatusAndReason10.OrderStatus,
-						com.tools20022.repository.msg.OrderStatusAndReason10.StatusInitiator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason10.mmMasterReference, com.tools20022.repository.msg.OrderStatusAndReason10.mmOrderStatus,
+						com.tools20022.repository.msg.OrderStatusAndReason10.mmStatusInitiator);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OrderStatusAndReason10";
 				definition = "Status report of a bulk or multiple or switch order that was previously received.";
@@ -245,5 +248,29 @@ public class OrderStatusAndReason10 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMasterReference() {
+		return masterReference;
+	}
+
+	public void setMasterReference(Max35Text masterReference) {
+		this.masterReference = masterReference;
+	}
+
+	public OrderStatus3Choice getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(OrderStatus3Choice orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+	public PartyIdentification113 getStatusInitiator() {
+		return statusInitiator;
+	}
+
+	public void setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+		this.statusInitiator = statusInitiator;
 	}
 }

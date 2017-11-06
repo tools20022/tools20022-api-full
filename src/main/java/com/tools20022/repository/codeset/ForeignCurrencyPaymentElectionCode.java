@@ -30,14 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#Offered
- * ForeignCurrencyPaymentElectionCode.Offered}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#mmOffered
+ * ForeignCurrencyPaymentElectionCode.mmOffered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#NotOffered
- * ForeignCurrencyPaymentElectionCode.NotOffered}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#mmNotOffered
+ * ForeignCurrencyPaymentElectionCode.mmNotOffered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#Mandatory
- * ForeignCurrencyPaymentElectionCode.Mandatory}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#mmMandatory
+ * ForeignCurrencyPaymentElectionCode.mmMandatory}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class ForeignCurrencyPaymentElectionCode {
 	 * definition} = "Foreign currency payment is offered."</li>
 	 * </ul>
 	 */
-	public static final MMCode Offered = new MMCode() {
+	public static final MMCode mmOffered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offered";
@@ -123,7 +123,7 @@ public class ForeignCurrencyPaymentElectionCode {
 	 * definition} = "Foreign currency payment is not offered."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotOffered = new MMCode() {
+	public static final MMCode mmNotOffered = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotOffered";
@@ -153,7 +153,7 @@ public class ForeignCurrencyPaymentElectionCode {
 	 * definition} = "Foreign currency payment is mandatory."</li>
 	 * </ul>
 	 */
-	public static final MMCode Mandatory = new MMCode() {
+	public static final MMCode mmMandatory = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
@@ -166,13 +166,13 @@ public class ForeignCurrencyPaymentElectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFFD");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ForeignCurrencyPaymentElectionCode";
 				definition = "Specifies whether the foreign currency payment is offered.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.Offered, com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.NotOffered,
-						com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.Mandatory);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.mmOffered, com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.mmNotOffered,
+						com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.mmMandatory);
 				derivation_lazy = () -> Arrays.asList(ForeignCurrencyPaymentElection1Code.mmObject());
 			}
 		});

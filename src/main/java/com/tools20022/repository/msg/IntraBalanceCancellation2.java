@@ -37,26 +37,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#AccountOwner
- * IntraBalanceCancellation2.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#mmAccountOwner
+ * IntraBalanceCancellation2.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#CashAccount
- * IntraBalanceCancellation2.CashAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#mmCashAccount
+ * IntraBalanceCancellation2.mmCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#ProcessingStatus
- * IntraBalanceCancellation2.ProcessingStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#mmProcessingStatus
+ * IntraBalanceCancellation2.mmProcessingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#RequestReference
- * IntraBalanceCancellation2.RequestReference}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#mmRequestReference
+ * IntraBalanceCancellation2.mmRequestReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#StatusDate
- * IntraBalanceCancellation2.StatusDate}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#mmStatusDate
+ * IntraBalanceCancellation2.mmStatusDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#TransactionIdentification
- * IntraBalanceCancellation2.TransactionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#mmTransactionIdentification
+ * IntraBalanceCancellation2.mmTransactionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#UnderlyingIntraBalance
- * IntraBalanceCancellation2.UnderlyingIntraBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation2#mmUnderlyingIntraBalance
+ * IntraBalanceCancellation2.mmUnderlyingIntraBalance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -64,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IntraBalanceCancellation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SystemPartyIdentification5 accountOwner;
 	/**
 	 * Party that owns the account.
 	 * <p>
@@ -91,8 +92,8 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.System#PartyRole
-	 * System.PartyRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.System#mmPartyRole
+	 * System.mmPartyRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -111,21 +112,22 @@ public class IntraBalanceCancellation2 {
 	 * definition} = "Party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmPartyRole;
 			componentContext_lazy = () -> IntraBalanceCancellation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.PartyRole;
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SystemPartyIdentification5.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	protected CashAccount24 cashAccount;
 	/**
 	 * Account to or from which a cash entry is made.
 	 * <p>
@@ -137,8 +139,8 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashEntry#CashAccount
-	 * CashEntry.CashAccount}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmCashAccount
+	 * CashEntry.mmCashAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -157,21 +159,22 @@ public class IntraBalanceCancellation2 {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
 			componentContext_lazy = () -> IntraBalanceCancellation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.CashAccount;
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected ProcessingStatus32Choice processingStatus;
 	/**
 	 * Status and status reason of the transaction.
 	 * <p>
@@ -184,8 +187,8 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesTradeStatus
-	 * SecuritiesTrade.SecuritiesTradeStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeStatus
+	 * SecuritiesTrade.mmSecuritiesTradeStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,21 +207,22 @@ public class IntraBalanceCancellation2 {
 	 * definition} = "Status and status reason of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeStatus;
 			componentContext_lazy = () -> IntraBalanceCancellation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesTradeStatus;
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Status and status reason of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProcessingStatus32Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProcessingStatus32Choice.mmObject();
 		}
 	};
+	protected Max35Text requestReference;
 	/**
 	 * Unambiguous identification of the cancellation request.
 	 * <p>
@@ -246,7 +250,7 @@ public class IntraBalanceCancellation2 {
 	 * definition} = "Unambiguous identification of the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestReference = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> IntraBalanceCancellation2.mmObject();
 			isDerived = false;
@@ -254,11 +258,12 @@ public class IntraBalanceCancellation2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestReference";
 			definition = "Unambiguous identification of the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime statusDate;
 	/**
 	 * Date and time at which the status was assigned.
 	 * <p>
@@ -271,8 +276,8 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusDateTime
-	 * Status.StatusDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusDateTime
+	 * Status.mmStatusDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -291,20 +296,21 @@ public class IntraBalanceCancellation2 {
 	 * definition} = "Date and time at which the status was assigned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StatusDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
 			componentContext_lazy = () -> IntraBalanceCancellation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusDateTime;
 			isDerived = false;
 			xmlTag = "StsDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date and time at which the status was assigned.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected References14 transactionIdentification;
 	/**
 	 * References of the transaction for which the intra-balance modification is
 	 * requested.
@@ -318,8 +324,8 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Trade#TradeRelatedIdentifications
-	 * Trade.TradeRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.Trade#mmTradeRelatedIdentifications
+	 * Trade.mmTradeRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -340,20 +346,21 @@ public class IntraBalanceCancellation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> IntraBalanceCancellation2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.TradeRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "References of the transaction for which the intra-balance modification is requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> References14.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.References14.mmObject();
 		}
 	};
+	protected IntraBalance1 underlyingIntraBalance;
 	/**
 	 * Identifies additional details of the transaction.
 	 * <p>
@@ -385,34 +392,91 @@ public class IntraBalanceCancellation2 {
 	 * definition} = "Identifies additional details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute UnderlyingIntraBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnderlyingIntraBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceCancellation2.mmObject();
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
+			componentContext_lazy = () -> IntraBalanceCancellation2.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygIntraBal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingIntraBalance";
 			definition = "Identifies additional details of the transaction.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			complexType_lazy = () -> IntraBalance1.mmObject();
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.IntraBalance1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceCancellation2.AccountOwner, com.tools20022.repository.msg.IntraBalanceCancellation2.CashAccount,
-						com.tools20022.repository.msg.IntraBalanceCancellation2.ProcessingStatus, com.tools20022.repository.msg.IntraBalanceCancellation2.RequestReference, com.tools20022.repository.msg.IntraBalanceCancellation2.StatusDate,
-						com.tools20022.repository.msg.IntraBalanceCancellation2.TransactionIdentification, com.tools20022.repository.msg.IntraBalanceCancellation2.UnderlyingIntraBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceCancellation2.mmAccountOwner, com.tools20022.repository.msg.IntraBalanceCancellation2.mmCashAccount,
+						com.tools20022.repository.msg.IntraBalanceCancellation2.mmProcessingStatus, com.tools20022.repository.msg.IntraBalanceCancellation2.mmRequestReference,
+						com.tools20022.repository.msg.IntraBalanceCancellation2.mmStatusDate, com.tools20022.repository.msg.IntraBalanceCancellation2.mmTransactionIdentification,
+						com.tools20022.repository.msg.IntraBalanceCancellation2.mmUnderlyingIntraBalance);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceCancellation2";
 				definition = "Provides the details of the cancellation requests.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SystemPartyIdentification5 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+		this.accountOwner = accountOwner;
+	}
+
+	public CashAccount24 getCashAccount() {
+		return cashAccount;
+	}
+
+	public void setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+		this.cashAccount = cashAccount;
+	}
+
+	public ProcessingStatus32Choice getProcessingStatus() {
+		return processingStatus;
+	}
+
+	public void setProcessingStatus(ProcessingStatus32Choice processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	public Max35Text getRequestReference() {
+		return requestReference;
+	}
+
+	public void setRequestReference(Max35Text requestReference) {
+		this.requestReference = requestReference;
+	}
+
+	public ISODateTime getStatusDate() {
+		return statusDate;
+	}
+
+	public void setStatusDate(ISODateTime statusDate) {
+		this.statusDate = statusDate;
+	}
+
+	public References14 getTransactionIdentification() {
+		return transactionIdentification;
+	}
+
+	public void setTransactionIdentification(com.tools20022.repository.msg.References14 transactionIdentification) {
+		this.transactionIdentification = transactionIdentification;
+	}
+
+	public IntraBalance1 getUnderlyingIntraBalance() {
+		return underlyingIntraBalance;
+	}
+
+	public void setUnderlyingIntraBalance(com.tools20022.repository.msg.IntraBalance1 underlyingIntraBalance) {
+		this.underlyingIntraBalance = underlyingIntraBalance;
 	}
 }

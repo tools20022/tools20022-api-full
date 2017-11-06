@@ -39,14 +39,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReportData2#MessageIdentification
- * ReportData2.MessageIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportData2#ValueDate
- * ReportData2.ValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportData2#DateAndTimeStamp
- * ReportData2.DateAndTimeStamp}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportData2#Type
- * ReportData2.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.ReportData2#mmMessageIdentification
+ * ReportData2.mmMessageIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportData2#mmValueDate
+ * ReportData2.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportData2#mmDateAndTimeStamp
+ * ReportData2.mmDateAndTimeStamp}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportData2#mmType
+ * ReportData2.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ReportData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageIdentification;
 	/**
 	 * Identification of the report assigned by the central system.
 	 * <p>
@@ -99,7 +100,7 @@ public class ReportData2 {
 	 * "Identification of the report assigned by the central system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ReportData2.mmObject();
 			isDerived = false;
@@ -107,11 +108,12 @@ public class ReportData2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identification of the report assigned by the central system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate valueDate;
 	/**
 	 * Value date for which the pay-in schedule is generated.
 	 * <p>
@@ -124,8 +126,8 @@ public class ReportData2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#ValueDate
-	 * Balance.ValueDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmValueDate
+	 * Balance.mmValueDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,20 +145,21 @@ public class ReportData2 {
 	 * definition} = "Value date for which the pay-in schedule is generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmValueDate;
 			componentContext_lazy = () -> ReportData2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.ValueDate;
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Value date for which the pay-in schedule is generated.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODateTime dateAndTimeStamp;
 	/**
 	 * Date and time on which the report is generated. The offset with UTC may
 	 * also be specified.
@@ -170,8 +173,8 @@ public class ReportData2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#CalculationDate
-	 * Balance.CalculationDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmCalculationDate
+	 * Balance.mmCalculationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,20 +194,21 @@ public class ReportData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateAndTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateAndTimeStamp = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCalculationDate;
 			componentContext_lazy = () -> ReportData2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.CalculationDate;
 			isDerived = false;
 			xmlTag = "DtAndTmStmp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndTimeStamp";
 			definition = "Date and time on which the report is generated. The offset with UTC may also be specified.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Entry2Code type;
 	/**
 	 * Type of pay-in schedule.
 	 * <p>
@@ -217,7 +221,8 @@ public class ReportData2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Balance#Type Balance.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.Balance#mmType
+	 * Balance.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -235,17 +240,17 @@ public class ReportData2 {
 	 * definition} = "Type of pay-in schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Type = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
 			componentContext_lazy = () -> ReportData2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.Type;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of pay-in schedule.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Entry2Code.mmObject();
 		}
 	};
@@ -253,15 +258,47 @@ public class ReportData2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportData2.MessageIdentification, com.tools20022.repository.msg.ReportData2.ValueDate, com.tools20022.repository.msg.ReportData2.DateAndTimeStamp,
-						com.tools20022.repository.msg.ReportData2.Type);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportData2.mmMessageIdentification, com.tools20022.repository.msg.ReportData2.mmValueDate,
+						com.tools20022.repository.msg.ReportData2.mmDateAndTimeStamp, com.tools20022.repository.msg.ReportData2.mmType);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportData2";
 				definition = "Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public void setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = messageIdentification;
+	}
+
+	public ISODate getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(ISODate valueDate) {
+		this.valueDate = valueDate;
+	}
+
+	public ISODateTime getDateAndTimeStamp() {
+		return dateAndTimeStamp;
+	}
+
+	public void setDateAndTimeStamp(ISODateTime dateAndTimeStamp) {
+		this.dateAndTimeStamp = dateAndTimeStamp;
+	}
+
+	public Entry2Code getType() {
+		return type;
+	}
+
+	public void setType(Entry2Code type) {
+		this.type = type;
 	}
 }

@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#AlienRegistrationNumber
- * TypeOfIdentification2Code.AlienRegistrationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#mmAlienRegistrationNumber
+ * TypeOfIdentification2Code.mmAlienRegistrationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#TaxExemptIdentificationNumber
- * TypeOfIdentification2Code.TaxExemptIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#mmTaxExemptIdentificationNumber
+ * TypeOfIdentification2Code.mmTaxExemptIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#CorporateIdentification
- * TypeOfIdentification2Code.CorporateIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#mmCorporateIdentification
+ * TypeOfIdentification2Code.mmCorporateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#ForeignInvestmentIdentityNumber
- * TypeOfIdentification2Code.ForeignInvestmentIdentityNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#mmForeignInvestmentIdentityNumber
+ * TypeOfIdentification2Code.mmForeignInvestmentIdentityNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#TaxIdentificationNumber
- * TypeOfIdentification2Code.TaxIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#mmTaxIdentificationNumber
+ * TypeOfIdentification2Code.mmTaxIdentificationNumber}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	 * name} = "AlienRegistrationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode AlienRegistrationNumber = new MMCode() {
+	public static final MMCode mmAlienRegistrationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
@@ -116,7 +116,7 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	 * name} = "TaxExemptIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxExemptIdentificationNumber = new MMCode() {
+	public static final MMCode mmTaxExemptIdentificationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemptIdentificationNumber";
@@ -139,7 +139,7 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	 * name} = "CorporateIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode CorporateIdentification = new MMCode() {
+	public static final MMCode mmCorporateIdentification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateIdentification";
@@ -162,7 +162,7 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	 * name} = "ForeignInvestmentIdentityNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode ForeignInvestmentIdentityNumber = new MMCode() {
+	public static final MMCode mmForeignInvestmentIdentityNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignInvestmentIdentityNumber";
@@ -185,7 +185,7 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	 * name} = "TaxIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode TaxIdentificationNumber = new MMCode() {
+	public static final MMCode mmTaxIdentificationNumber = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
@@ -196,14 +196,14 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ARNU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TypeOfIdentification2Code";
 				definition = "Specifies the type of alternate identification which can be used to give an alternate identification of the party identified.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfIdentification2Code.AlienRegistrationNumber, com.tools20022.repository.codeset.TypeOfIdentification2Code.TaxExemptIdentificationNumber,
-						com.tools20022.repository.codeset.TypeOfIdentification2Code.CorporateIdentification, com.tools20022.repository.codeset.TypeOfIdentification2Code.ForeignInvestmentIdentityNumber,
-						com.tools20022.repository.codeset.TypeOfIdentification2Code.TaxIdentificationNumber);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfIdentification2Code.mmAlienRegistrationNumber, com.tools20022.repository.codeset.TypeOfIdentification2Code.mmTaxExemptIdentificationNumber,
+						com.tools20022.repository.codeset.TypeOfIdentification2Code.mmCorporateIdentification, com.tools20022.repository.codeset.TypeOfIdentification2Code.mmForeignInvestmentIdentityNumber,
+						com.tools20022.repository.codeset.TypeOfIdentification2Code.mmTaxIdentificationNumber);
 				trace_lazy = () -> TypeOfIdentificationCode.mmObject();
 			}
 		});

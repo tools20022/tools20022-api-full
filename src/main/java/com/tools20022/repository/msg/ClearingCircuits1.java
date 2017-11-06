@@ -37,36 +37,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#ClearingCircuit
- * ClearingCircuits1.ClearingCircuit}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#mmClearingCircuit
+ * ClearingCircuits1.mmClearingCircuit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#ClaimLimitIndicator
- * ClearingCircuits1.ClaimLimitIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#mmClaimLimitIndicator
+ * ClearingCircuits1.mmClaimLimitIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#ClearingSchemeShortName
- * ClearingCircuits1.ClearingSchemeShortName}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#mmClearingSchemeShortName
+ * ClearingCircuits1.mmClearingSchemeShortName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#ClearingSchemeLongName
- * ClearingCircuits1.ClearingSchemeLongName}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#mmClearingSchemeLongName
+ * ClearingCircuits1.mmClearingSchemeLongName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#AllOrNothingIndicator
- * ClearingCircuits1.AllOrNothingIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#mmAllOrNothingIndicator
+ * ClearingCircuits1.mmAllOrNothingIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#GuaranteeFunds
- * ClearingCircuits1.GuaranteeFunds}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#mmGuaranteeFunds
+ * ClearingCircuits1.mmGuaranteeFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#ClearingAccount
- * ClearingCircuits1.ClearingAccount}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#mmClearingAccount
+ * ClearingCircuits1.mmClearingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#ClearingAccountOwner
- * ClearingCircuits1.ClearingAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.ClearingCircuits1#mmClearingAccountOwner
+ * ClearingCircuits1.mmClearingAccountOwner}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,6 +80,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClearingCircuits1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ClearingScheme1Choice clearingCircuit;
 	/**
 	 * Clearing scheme used.
 	 * <p>
@@ -107,7 +108,7 @@ public class ClearingCircuits1 {
 	 * definition} = "Clearing scheme used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClearingCircuit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClearingCircuit = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ClearingCircuits1.mmObject();
 			isDerived = false;
@@ -115,12 +116,13 @@ public class ClearingCircuits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingCircuit";
 			definition = "Clearing scheme used.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> ClearingScheme1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> ClearingScheme1Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator claimLimitIndicator;
 	/**
 	 * Indicates whether the limits can be set for the external payment system.
 	 * <p>
@@ -151,7 +153,7 @@ public class ClearingCircuits1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClaimLimitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClaimLimitIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClearingCircuits1.mmObject();
 			isDerived = false;
@@ -159,11 +161,12 @@ public class ClearingCircuits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimLimitIndicator";
 			definition = "Indicates whether the limits can be set for the external payment system.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Max40Text clearingSchemeShortName;
 	/**
 	 * Short name of the clearing scheme.
 	 * <p>
@@ -191,7 +194,7 @@ public class ClearingCircuits1 {
 	 * definition} = "Short name of the clearing scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingSchemeShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingSchemeShortName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClearingCircuits1.mmObject();
 			isDerived = false;
@@ -199,11 +202,12 @@ public class ClearingCircuits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSchemeShortName";
 			definition = "Short name of the clearing scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max40Text.mmObject();
 		}
 	};
+	protected Max140Text clearingSchemeLongName;
 	/**
 	 * Long name of the clearing scheme.
 	 * <p>
@@ -231,7 +235,7 @@ public class ClearingCircuits1 {
 	 * definition} = "Long name of the clearing scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ClearingSchemeLongName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmClearingSchemeLongName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClearingCircuits1.mmObject();
 			isDerived = false;
@@ -239,11 +243,12 @@ public class ClearingCircuits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSchemeLongName";
 			definition = "Long name of the clearing scheme.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected YesNoIndicator allOrNothingIndicator;
 	/**
 	 * Indicates whether all or nothing rule is in effect.
 	 * <p>
@@ -272,7 +277,7 @@ public class ClearingCircuits1 {
 	 * definition} = "Indicates whether all or nothing rule is in effect."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AllOrNothingIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAllOrNothingIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ClearingCircuits1.mmObject();
 			isDerived = false;
@@ -280,11 +285,12 @@ public class ClearingCircuits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrNothingIndicator";
 			definition = "Indicates whether all or nothing rule is in effect.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected GuaranteeFunds1 guaranteeFunds;
 	/**
 	 * Guarantee funds details.
 	 * <p>
@@ -311,7 +317,7 @@ public class ClearingCircuits1 {
 	 * definition} = "Guarantee funds details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd GuaranteeFunds = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGuaranteeFunds = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ClearingCircuits1.mmObject();
 			isDerived = false;
@@ -319,12 +325,13 @@ public class ClearingCircuits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeFunds";
 			definition = "Guarantee funds details.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GuaranteeFunds1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GuaranteeFunds1.mmObject();
 		}
 	};
+	protected CashAccount24 clearingAccount;
 	/**
 	 * Clearing account identifier.
 	 * <p>
@@ -351,7 +358,7 @@ public class ClearingCircuits1 {
 	 * definition} = "Clearing account identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClearingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClearingAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ClearingCircuits1.mmObject();
 			isDerived = false;
@@ -359,12 +366,13 @@ public class ClearingCircuits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccount";
 			definition = "Clearing account identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification9 clearingAccountOwner;
 	/**
 	 * Identification of the clearing account owner.
 	 * <p>
@@ -392,7 +400,7 @@ public class ClearingCircuits1 {
 	 * definition} = "Identification of the clearing account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClearingAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClearingAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ClearingCircuits1.mmObject();
 			isDerived = false;
@@ -400,25 +408,90 @@ public class ClearingCircuits1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccountOwner";
 			definition = "Identification of the clearing account owner.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingCircuits1.ClearingCircuit, com.tools20022.repository.msg.ClearingCircuits1.ClaimLimitIndicator,
-						com.tools20022.repository.msg.ClearingCircuits1.ClearingSchemeShortName, com.tools20022.repository.msg.ClearingCircuits1.ClearingSchemeLongName, com.tools20022.repository.msg.ClearingCircuits1.AllOrNothingIndicator,
-						com.tools20022.repository.msg.ClearingCircuits1.GuaranteeFunds, com.tools20022.repository.msg.ClearingCircuits1.ClearingAccount, com.tools20022.repository.msg.ClearingCircuits1.ClearingAccountOwner);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingCircuits1.mmClearingCircuit, com.tools20022.repository.msg.ClearingCircuits1.mmClaimLimitIndicator,
+						com.tools20022.repository.msg.ClearingCircuits1.mmClearingSchemeShortName, com.tools20022.repository.msg.ClearingCircuits1.mmClearingSchemeLongName,
+						com.tools20022.repository.msg.ClearingCircuits1.mmAllOrNothingIndicator, com.tools20022.repository.msg.ClearingCircuits1.mmGuaranteeFunds, com.tools20022.repository.msg.ClearingCircuits1.mmClearingAccount,
+						com.tools20022.repository.msg.ClearingCircuits1.mmClearingAccountOwner);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClearingCircuits1";
 				definition = "Clearing circuits information.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ClearingScheme1Choice getClearingCircuit() {
+		return clearingCircuit;
+	}
+
+	public void setClearingCircuit(ClearingScheme1Choice clearingCircuit) {
+		this.clearingCircuit = clearingCircuit;
+	}
+
+	public YesNoIndicator getClaimLimitIndicator() {
+		return claimLimitIndicator;
+	}
+
+	public void setClaimLimitIndicator(YesNoIndicator claimLimitIndicator) {
+		this.claimLimitIndicator = claimLimitIndicator;
+	}
+
+	public Max40Text getClearingSchemeShortName() {
+		return clearingSchemeShortName;
+	}
+
+	public void setClearingSchemeShortName(Max40Text clearingSchemeShortName) {
+		this.clearingSchemeShortName = clearingSchemeShortName;
+	}
+
+	public Max140Text getClearingSchemeLongName() {
+		return clearingSchemeLongName;
+	}
+
+	public void setClearingSchemeLongName(Max140Text clearingSchemeLongName) {
+		this.clearingSchemeLongName = clearingSchemeLongName;
+	}
+
+	public YesNoIndicator getAllOrNothingIndicator() {
+		return allOrNothingIndicator;
+	}
+
+	public void setAllOrNothingIndicator(YesNoIndicator allOrNothingIndicator) {
+		this.allOrNothingIndicator = allOrNothingIndicator;
+	}
+
+	public GuaranteeFunds1 getGuaranteeFunds() {
+		return guaranteeFunds;
+	}
+
+	public void setGuaranteeFunds(com.tools20022.repository.msg.GuaranteeFunds1 guaranteeFunds) {
+		this.guaranteeFunds = guaranteeFunds;
+	}
+
+	public CashAccount24 getClearingAccount() {
+		return clearingAccount;
+	}
+
+	public void setClearingAccount(com.tools20022.repository.msg.CashAccount24 clearingAccount) {
+		this.clearingAccount = clearingAccount;
+	}
+
+	public FinancialInstitutionIdentification9 getClearingAccountOwner() {
+		return clearingAccountOwner;
+	}
+
+	public void setClearingAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 clearingAccountOwner) {
+		this.clearingAccountOwner = clearingAccountOwner;
 	}
 }

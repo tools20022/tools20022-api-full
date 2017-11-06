@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DayBookingInstruction1Code#Auto
- * DayBookingInstruction1Code.Auto}</li>
+ * {@linkplain com.tools20022.repository.codeset.DayBookingInstruction1Code#mmAuto
+ * DayBookingInstruction1Code.mmAuto}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DayBookingInstruction1Code#SpeakFirst
- * DayBookingInstruction1Code.SpeakFirst}</li>
+ * {@linkplain com.tools20022.repository.codeset.DayBookingInstruction1Code#mmSpeakFirst
+ * DayBookingInstruction1Code.mmSpeakFirst}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class DayBookingInstruction1Code extends DayBookingInstructionCode {
 	 * name} = "Auto"</li>
 	 * </ul>
 	 */
-	public static final MMCode Auto = new MMCode() {
+	public static final MMCode mmAuto = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Auto";
@@ -104,7 +104,7 @@ public class DayBookingInstruction1Code extends DayBookingInstructionCode {
 	 * name} = "SpeakFirst"</li>
 	 * </ul>
 	 */
-	public static final MMCode SpeakFirst = new MMCode() {
+	public static final MMCode mmSpeakFirst = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpeakFirst";
@@ -115,12 +115,12 @@ public class DayBookingInstruction1Code extends DayBookingInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUTO");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DayBookingInstruction1Code";
 				definition = "Describes of the nature of execution booking process.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DayBookingInstruction1Code.Auto, com.tools20022.repository.codeset.DayBookingInstruction1Code.SpeakFirst);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DayBookingInstruction1Code.mmAuto, com.tools20022.repository.codeset.DayBookingInstruction1Code.mmSpeakFirst);
 				trace_lazy = () -> DayBookingInstructionCode.mmObject();
 			}
 		});

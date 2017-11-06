@@ -31,29 +31,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCode#PayTheBeneficiary
- * InstructionCode.PayTheBeneficiary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InstructionCode#TimeTill
- * InstructionCode.TimeTill}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InstructionCode#TimeFrom
- * InstructionCode.TimeFrom}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCode#mmPayTheBeneficiary
+ * InstructionCode.mmPayTheBeneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InstructionCode#mmTimeTill
+ * InstructionCode.mmTimeTill}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InstructionCode#mmTimeFrom
+ * InstructionCode.mmTimeFrom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCode#PayCreditorByCheque
- * InstructionCode.PayCreditorByCheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCode#mmPayCreditorByCheque
+ * InstructionCode.mmPayCreditorByCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCode#HoldCashForCreditor
- * InstructionCode.HoldCashForCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCode#mmHoldCashForCreditor
+ * InstructionCode.mmHoldCashForCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCode#PhoneBeneficiary
- * InstructionCode.PhoneBeneficiary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.InstructionCode#Telecom
- * InstructionCode.Telecom}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCode#mmPhoneBeneficiary
+ * InstructionCode.mmPhoneBeneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InstructionCode#mmTelecom
+ * InstructionCode.mmTelecom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCode#PhoneNextAgent
- * InstructionCode.PhoneNextAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCode#mmPhoneNextAgent
+ * InstructionCode.mmPhoneNextAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCode#TelecomNextAgent
- * InstructionCode.TelecomNextAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCode#mmTelecomNextAgent
+ * InstructionCode.mmTelecomNextAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -76,8 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -121,7 +121,7 @@ public class InstructionCode {
 	 * "(Ultimate) creditor to be paid only after verification of identity."</li>
 	 * </ul>
 	 */
-	public static final MMCode PayTheBeneficiary = new MMCode() {
+	public static final MMCode mmPayTheBeneficiary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PayTheBeneficiary";
@@ -154,7 +154,7 @@ public class InstructionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TimeTill = new MMCode() {
+	public static final MMCode mmTimeTill = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TimeTill";
@@ -187,7 +187,7 @@ public class InstructionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TimeFrom = new MMCode() {
+	public static final MMCode mmTimeFrom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TimeFrom";
@@ -217,7 +217,7 @@ public class InstructionCode {
 	 * definition} = "(Ultimate) creditor must be paid by cheque."</li>
 	 * </ul>
 	 */
-	public static final MMCode PayCreditorByCheque = new MMCode() {
+	public static final MMCode mmPayCreditorByCheque = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PayCreditorByCheque";
@@ -250,7 +250,7 @@ public class InstructionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HoldCashForCreditor = new MMCode() {
+	public static final MMCode mmHoldCashForCreditor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HoldCashForCreditor";
@@ -281,7 +281,7 @@ public class InstructionCode {
 	 * "Please advise/contact (ultimate) creditor/claimant by phone"</li>
 	 * </ul>
 	 */
-	public static final MMCode PhoneBeneficiary = new MMCode() {
+	public static final MMCode mmPhoneBeneficiary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PhoneBeneficiary";
@@ -314,7 +314,7 @@ public class InstructionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Telecom = new MMCode() {
+	public static final MMCode mmTelecom = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Telecom";
@@ -344,7 +344,7 @@ public class InstructionCode {
 	 * definition} = "Please advise/contact next agent by phone."</li>
 	 * </ul>
 	 */
-	public static final MMCode PhoneNextAgent = new MMCode() {
+	public static final MMCode mmPhoneNextAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PhoneNextAgent";
@@ -377,7 +377,7 @@ public class InstructionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode TelecomNextAgent = new MMCode() {
+	public static final MMCode mmTelecomNextAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TelecomNextAgent";
@@ -390,14 +390,15 @@ public class InstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PBEN");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InstructionCode";
 				definition = "Specifies further instructions concerning the processing of a payment instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionCode.PayTheBeneficiary, com.tools20022.repository.codeset.InstructionCode.TimeTill, com.tools20022.repository.codeset.InstructionCode.TimeFrom,
-						com.tools20022.repository.codeset.InstructionCode.PayCreditorByCheque, com.tools20022.repository.codeset.InstructionCode.HoldCashForCreditor, com.tools20022.repository.codeset.InstructionCode.PhoneBeneficiary,
-						com.tools20022.repository.codeset.InstructionCode.Telecom, com.tools20022.repository.codeset.InstructionCode.PhoneNextAgent, com.tools20022.repository.codeset.InstructionCode.TelecomNextAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionCode.mmPayTheBeneficiary, com.tools20022.repository.codeset.InstructionCode.mmTimeTill,
+						com.tools20022.repository.codeset.InstructionCode.mmTimeFrom, com.tools20022.repository.codeset.InstructionCode.mmPayCreditorByCheque, com.tools20022.repository.codeset.InstructionCode.mmHoldCashForCreditor,
+						com.tools20022.repository.codeset.InstructionCode.mmPhoneBeneficiary, com.tools20022.repository.codeset.InstructionCode.mmTelecom, com.tools20022.repository.codeset.InstructionCode.mmPhoneNextAgent,
+						com.tools20022.repository.codeset.InstructionCode.mmTelecomNextAgent);
 				derivation_lazy = () -> Arrays.asList(Instruction1Code.mmObject(), Instruction3Code.mmObject(), Instruction4Code.mmObject(), Instruction5Code.mmObject(), PartialInstruction3Code.mmObject(), Instruction6Code.mmObject());
 			}
 		});

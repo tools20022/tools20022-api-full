@@ -34,17 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PartyOrGroup1Choice#GroupIdentification
- * PartyOrGroup1Choice.GroupIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PartyOrGroup1Choice#Party
- * PartyOrGroup1Choice.Party}</li>
+ * {@linkplain com.tools20022.repository.choice.PartyOrGroup1Choice#mmGroupIdentification
+ * PartyOrGroup1Choice.mmGroupIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PartyOrGroup1Choice#mmParty
+ * PartyOrGroup1Choice.mmParty}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyOrGroup1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max4AlphaNumericText groupIdentification;
 	/**
 	 * Specifies the identification of a group of parties.
 	 * <p>
@@ -86,7 +87,7 @@ public class PartyOrGroup1Choice {
 	 * definition} = "Specifies the identification of a group of parties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGroupIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyOrGroup1Choice.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class PartyOrGroup1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Specifies the identification of a group of parties.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected PartyAndCertificate2 party;
 	/**
 	 * Specifies a party.
 	 * <p>
@@ -127,7 +129,7 @@ public class PartyOrGroup1Choice {
 	 * definition} = "Specifies a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Party = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> PartyOrGroup1Choice.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class PartyOrGroup1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Specifies a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> PartyAndCertificate2.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class PartyOrGroup1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrGroup1Choice.GroupIdentification, com.tools20022.repository.choice.PartyOrGroup1Choice.Party);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrGroup1Choice.mmGroupIdentification, com.tools20022.repository.choice.PartyOrGroup1Choice.mmParty);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyOrGroup1Choice";
 				definition = "Specifies a choice between one party or a group of parties.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max4AlphaNumericText getGroupIdentification() {
+		return groupIdentification;
+	}
+
+	public void setGroupIdentification(Max4AlphaNumericText groupIdentification) {
+		this.groupIdentification = groupIdentification;
+	}
+
+	public PartyAndCertificate2 getParty() {
+		return party;
+	}
+
+	public void setParty(PartyAndCertificate2 party) {
+		this.party = party;
 	}
 }

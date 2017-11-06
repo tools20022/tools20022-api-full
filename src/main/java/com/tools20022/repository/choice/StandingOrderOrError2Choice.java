@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.StandingOrder2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between the standing order details or a business error when the
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingOrderOrError2Choice#StandingOrder
- * StandingOrderOrError2Choice.StandingOrder}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingOrderOrError2Choice#mmStandingOrder
+ * StandingOrderOrError2Choice.mmStandingOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.StandingOrderOrError2Choice#BusinessError
- * StandingOrderOrError2Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.StandingOrderOrError2Choice#mmBusinessError
+ * StandingOrderOrError2Choice.mmBusinessError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class StandingOrderOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected StandingOrder2 standingOrder;
 	/**
 	 * Requested information on the account.
 	 * <p>
@@ -97,13 +99,13 @@ public class StandingOrderOrError2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.StandingOrderOrError4Choice#StandingOrder
-	 * StandingOrderOrError4Choice.StandingOrder}</li>
+	 * {@linkplain com.tools20022.repository.choice.StandingOrderOrError4Choice#mmStandingOrder
+	 * StandingOrderOrError4Choice.mmStandingOrder}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StandingOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStandingOrder = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StandingOrderOrError2Choice.mmObject();
 			isDerived = false;
@@ -111,13 +113,14 @@ public class StandingOrderOrError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrder";
 			definition = "Requested information on the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError4Choice.StandingOrder);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError4Choice.mmStandingOrder);
 			maxOccurs = 1;
-			type_lazy = () -> StandingOrder2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> StandingOrder2.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -146,13 +149,13 @@ public class StandingOrderOrError2Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.StandingOrderOrError4Choice#BusinessError
-	 * StandingOrderOrError4Choice.BusinessError}</li>
+	 * {@linkplain com.tools20022.repository.choice.StandingOrderOrError4Choice#mmBusinessError
+	 * StandingOrderOrError4Choice.mmBusinessError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> StandingOrderOrError2Choice.mmObject();
 			isDerived = false;
@@ -160,18 +163,18 @@ public class StandingOrderOrError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError4Choice.BusinessError);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError4Choice.mmBusinessError);
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError2Choice.StandingOrder, com.tools20022.repository.choice.StandingOrderOrError2Choice.BusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError2Choice.mmStandingOrder, com.tools20022.repository.choice.StandingOrderOrError2Choice.mmBusinessError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderOrError2Choice";
 				definition = "Choice between the standing order details or a business error when the requested data cannot be retrieved.";
@@ -179,5 +182,21 @@ public class StandingOrderOrError2Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public StandingOrder2 getStandingOrder() {
+		return standingOrder;
+	}
+
+	public void setStandingOrder(StandingOrder2 standingOrder) {
+		this.standingOrder = standingOrder;
+	}
+
+	public List<ErrorHandling3> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = businessError;
 	}
 }

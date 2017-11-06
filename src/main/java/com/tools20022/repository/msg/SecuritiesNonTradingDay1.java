@@ -35,20 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesNonTradingDay1#TechnicalRecordIdentification
- * SecuritiesNonTradingDay1.TechnicalRecordIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesNonTradingDay1#Date
- * SecuritiesNonTradingDay1.Date}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesNonTradingDay1#mmTechnicalRecordIdentification
+ * SecuritiesNonTradingDay1.mmTechnicalRecordIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesNonTradingDay1#Reason
- * SecuritiesNonTradingDay1.Reason}</li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesNonTradingDay1#mmDate
+ * SecuritiesNonTradingDay1.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesNonTradingDay1#mmReason
+ * SecuritiesNonTradingDay1.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecuritiesNonTradingDay1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text technicalRecordIdentification;
 	/**
 	 * Unique identifier of a record in a message used as part of error
 	 * management and status advice messages.<br>
@@ -95,7 +97,7 @@ public class SecuritiesNonTradingDay1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
@@ -103,11 +105,12 @@ public class SecuritiesNonTradingDay1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and status advice messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice report sent back.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODate date;
 	/**
 	 * Non-working date.
 	 * <p>
@@ -135,7 +138,7 @@ public class SecuritiesNonTradingDay1 {
 	 * definition} = "Non-working date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Date = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
@@ -143,11 +146,12 @@ public class SecuritiesNonTradingDay1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Non-working date.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected NonTradingDayReason1Code reason;
 	/**
 	 * Reason code for the non-working day.
 	 * <p>
@@ -176,7 +180,7 @@ public class SecuritiesNonTradingDay1 {
 	 * definition} = "Reason code for the non-working day."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
@@ -184,8 +188,8 @@ public class SecuritiesNonTradingDay1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason code for the non-working day.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> NonTradingDayReason1Code.mmObject();
 		}
 	};
@@ -193,14 +197,38 @@ public class SecuritiesNonTradingDay1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesNonTradingDay1.TechnicalRecordIdentification, com.tools20022.repository.msg.SecuritiesNonTradingDay1.Date,
-						com.tools20022.repository.msg.SecuritiesNonTradingDay1.Reason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmTechnicalRecordIdentification, com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmDate,
+						com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmReason);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesNonTradingDay1";
 				definition = "Details the date and reason for a non working day.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getTechnicalRecordIdentification() {
+		return technicalRecordIdentification;
+	}
+
+	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+		this.technicalRecordIdentification = technicalRecordIdentification;
+	}
+
+	public ISODate getDate() {
+		return date;
+	}
+
+	public void setDate(ISODate date) {
+		this.date = date;
+	}
+
+	public NonTradingDayReason1Code getReason() {
+		return reason;
+	}
+
+	public void setReason(NonTradingDayReason1Code reason) {
+		this.reason = reason;
 	}
 }

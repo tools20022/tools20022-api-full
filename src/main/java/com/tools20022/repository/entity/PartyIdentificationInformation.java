@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Unique and unambiguous way to identify a party
@@ -44,1244 +45,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#OtherIdentification
- * PartyIdentificationInformation.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+ * PartyIdentificationInformation.mmOtherIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#IdentifiedParty
- * PartyIdentificationInformation.IdentifiedParty}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmIdentifiedParty
+ * PartyIdentificationInformation.mmIdentifiedParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TaxIdentificationNumber
- * PartyIdentificationInformation.TaxIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTaxIdentificationNumber
+ * PartyIdentificationInformation.mmTaxIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#NationalRegistrationNumber
- * PartyIdentificationInformation.NationalRegistrationNumber}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmNationalRegistrationNumber
+ * PartyIdentificationInformation.mmNationalRegistrationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TypeOfIdentification
- * PartyIdentificationInformation.TypeOfIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTypeOfIdentification
+ * PartyIdentificationInformation.mmTypeOfIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#Declaration
- * PartyIdentificationInformation.Declaration}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmDeclaration
+ * PartyIdentificationInformation.mmDeclaration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#PartyType
- * PartyIdentificationInformation.PartyType}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyType
+ * PartyIdentificationInformation.mmPartyType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#PartyName
- * PartyIdentificationInformation.PartyName}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyName
+ * PartyIdentificationInformation.mmPartyName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#ValidityPeriod
- * PartyIdentificationInformation.ValidityPeriod}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmValidityPeriod
+ * PartyIdentificationInformation.mmValidityPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#IdentifiedMarket
- * PartyIdentificationInformation.IdentifiedMarket}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmIdentifiedMarket
+ * PartyIdentificationInformation.mmIdentifiedMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#LEI
- * PartyIdentificationInformation.LEI}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#RelatedPartyIdentification
- * GenericIdentification.RelatedPartyIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Party#Identification
- * Party.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PartyName#PartyIdentification
- * PartyName.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#RelatedIdentification
- * DateTimePeriod.RelatedIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Market#Identification
- * Market.Identification}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification1Choice#NameAndAddress
- * PartyIdentification1Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#NameAndAddress
- * PartyIdentification2Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification5Choice#NameAndAddress
- * PartyIdentification5Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification8#Identification
- * PartyIdentification8.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification32#Identification
- * PartyIdentification32.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification43#Identification
- * PartyIdentification43.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount2#PartyIdentification
- * PartyIdentificationAndAccount2.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount5#PartyIdentification
- * PartyIdentificationAndAccount5.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount4#PartyIdentification
- * PartyIdentificationAndAccount4.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification21#PartyIdentification
- * PartyIdentification21.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification12Choice#NameAndAddress
- * PartyIdentification12Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification36#Identification
- * PartyIdentification36.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#NameAndAddress
- * PartyIdentification10Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount16#Identification
- * PartyIdentificationAndAccount16.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification14Choice#NameAndAddress
- * PartyIdentification14Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification44Choice#NameAndAddress
- * PartyIdentification44Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification46#Identification
- * PartyIdentification46.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification45Choice#NameAndAddress
- * PartyIdentification45Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount44#Identification
- * PartyIdentificationAndAccount44.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification37Choice#NameAndAddress
- * PartyIdentification37Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification1#TypeOfIdentification
- * AlternatePartyIdentification1.TypeOfIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification2#IdentificationType
- * AlternatePartyIdentification2.IdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount1#Identification
- * PartyIdentificationAndAccount1.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount1#AlternateIdentification
- * PartyIdentificationAndAccount1.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification29#PartyIdentification
- * PartyIdentification29.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification29#AlternateIdentification
- * PartyIdentification29.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification2#Identification
- * PartyIdentification2.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification2#AlternateIdentification
- * PartyIdentification2.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification43Choice#NameAndAddress
- * PartyIdentification43Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount42#Identification
- * PartyIdentificationAndAccount42.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount42#AlternateIdentification
- * PartyIdentificationAndAccount42.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification48#Identification
- * PartyIdentification48.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification48#AlternateIdentification
- * PartyIdentification48.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount11#Identification
- * PartyIdentificationAndAccount11.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount11#AlternateIdentification
- * PartyIdentificationAndAccount11.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification3Choice#NameAndAddress
- * PartyIdentification3Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount12#Identification
- * PartyIdentificationAndAccount12.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount12#AlternateIdentification
- * PartyIdentificationAndAccount12.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount20#Identification
- * PartyIdentificationAndAccount20.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount20#AlternateIdentification
- * PartyIdentificationAndAccount20.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification30Choice#NameAndAddress
- * PartyIdentification30Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount15#Identification
- * PartyIdentificationAndAccount15.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount15#AlternateIdentification
- * PartyIdentificationAndAccount15.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount39#Identification
- * PartyIdentificationAndAccount39.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount39#AlternateIdentification
- * PartyIdentificationAndAccount39.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification38Choice#NameAndAddress
- * PartyIdentification38Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount50#Identification
- * PartyIdentificationAndAccount50.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount50#AlternateIdentification
- * PartyIdentificationAndAccount50.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount19#Identification
- * PartyIdentificationAndAccount19.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount19#AlternateIdentification
- * PartyIdentificationAndAccount19.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount21#Identification
- * PartyIdentificationAndAccount21.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount21#AlternateIdentification
- * PartyIdentificationAndAccount21.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount40#Identification
- * PartyIdentificationAndAccount40.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount40#AlternateIdentification
- * PartyIdentificationAndAccount40.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount41#Identification
- * PartyIdentificationAndAccount41.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount41#AlternateIdentification
- * PartyIdentificationAndAccount41.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount43#Identification
- * PartyIdentificationAndAccount43.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification58Choice#NameAndAddress
- * PartyIdentification58Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification53#Identification
- * PartyIdentification53.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification62Choice#NameAndAddress
- * PartyIdentification62Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount68#Identification
- * PartyIdentificationAndAccount68.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification60Choice#NameAndAddress
- * PartyIdentification60Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification65Choice#NameAndAddress
- * PartyIdentification65Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount75#Identification
- * PartyIdentificationAndAccount75.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification3#IdentificationType
- * AlternatePartyIdentification3.IdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount63#Identification
- * PartyIdentificationAndAccount63.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount63#AlternateIdentification
- * PartyIdentificationAndAccount63.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification52#Identification
- * PartyIdentification52.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification52#AlternateIdentification
- * PartyIdentification52.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount64#Identification
- * PartyIdentificationAndAccount64.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount64#AlternateIdentification
- * PartyIdentificationAndAccount64.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification61Choice#NameAndAddress
- * PartyIdentification61Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount60#Identification
- * PartyIdentificationAndAccount60.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount60#AlternateIdentification
- * PartyIdentificationAndAccount60.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount66#Identification
- * PartyIdentificationAndAccount66.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount66#AlternateIdentification
- * PartyIdentificationAndAccount66.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification16Choice#NameAndAddress
- * PartyIdentification16Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification46Choice#NameAndAddress
- * PartyIdentification46Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification56Choice#NameAndAddress
- * PartyIdentification56Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification33#AlternateIdentification
- * PartyIdentification33.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification34#AlternateIdentification
- * PartyIdentification34.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification48Choice#NameAndAddress
- * PartyIdentification48Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification50#AlternateIdentification
- * PartyIdentification50.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification52Choice#NameAndAddress
- * PartyIdentification52Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification51#AlternateIdentification
- * PartyIdentification51.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification56#AlternateIdentification
- * PartyIdentification56.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification57#AlternateIdentification
- * PartyIdentification57.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification35#Identification
- * PartyIdentification35.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification35#AlternateIdentification
- * PartyIdentification35.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount14#Identification
- * PartyIdentificationAndAccount14.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount14#AlternateIdentification
- * PartyIdentificationAndAccount14.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount17#Identification
- * PartyIdentificationAndAccount17.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount17#AlternateIdentification
- * PartyIdentificationAndAccount17.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount18#Identification
- * PartyIdentificationAndAccount18.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount18#AlternateIdentification
- * PartyIdentificationAndAccount18.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification17Choice#NameAndAddress
- * PartyIdentification17Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification37#Identification
- * PartyIdentification37.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification37#AlternateIdentification
- * PartyIdentification37.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount22#Identification
- * PartyIdentificationAndAccount22.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount22#AlternateIdentification
- * PartyIdentificationAndAccount22.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount23#Identification
- * PartyIdentificationAndAccount23.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount23#AlternateIdentification
- * PartyIdentificationAndAccount23.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification31Choice#NameAndAddress
- * PartyIdentification31Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount24#Identification
- * PartyIdentificationAndAccount24.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount24#AlternateIdentification
- * PartyIdentificationAndAccount24.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification39Choice#NameAndAddress
- * PartyIdentification39Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification47#Identification
- * PartyIdentification47.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification47#AlternateIdentification
- * PartyIdentification47.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification40Choice#NameAndAddress
- * PartyIdentification40Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount51#Identification
- * PartyIdentificationAndAccount51.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount51#AlternateIdentification
- * PartyIdentificationAndAccount51.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount52#Identification
- * PartyIdentificationAndAccount52.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount52#AlternateIdentification
- * PartyIdentificationAndAccount52.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification42Choice#NameAndAddress
- * PartyIdentification42Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount54#Identification
- * PartyIdentificationAndAccount54.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount54#AlternateIdentification
- * PartyIdentificationAndAccount54.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification53Choice#NameAndAddress
- * PartyIdentification53Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification49#Identification
- * PartyIdentification49.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification49#AlternateIdentification
- * PartyIdentification49.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification54Choice#NameAndAddress
- * PartyIdentification54Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount56#Identification
- * PartyIdentificationAndAccount56.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount56#AlternateIdentification
- * PartyIdentificationAndAccount56.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount57#Identification
- * PartyIdentificationAndAccount57.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount57#AlternateIdentification
- * PartyIdentificationAndAccount57.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification55Choice#NameAndAddress
- * PartyIdentification55Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount58#Identification
- * PartyIdentificationAndAccount58.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount58#AlternateIdentification
- * PartyIdentificationAndAccount58.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification47Choice#NameAndAddress
- * PartyIdentification47Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification57Choice#NameAndAddress
- * PartyIdentification57Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification49Choice#NameAndAddress
- * PartyIdentification49Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification59Choice#NameAndAddress
- * PartyIdentification59Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification15#Identification
- * PartyIdentification15.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount26#Identification
- * PartyIdentificationAndAccount26.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount26#AlternateIdentification
- * PartyIdentificationAndAccount26.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification4#Identification
- * PartyIdentification4.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification4#AlternateIdentification
- * PartyIdentification4.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount29#Identification
- * PartyIdentificationAndAccount29.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount29#AlternateIdentification
- * PartyIdentificationAndAccount29.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount27#Identification
- * PartyIdentificationAndAccount27.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount27#AlternateIdentification
- * PartyIdentificationAndAccount27.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount28#Identification
- * PartyIdentificationAndAccount28.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount28#AlternateIdentification
- * PartyIdentificationAndAccount28.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount30#Identification
- * PartyIdentificationAndAccount30.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount30#AlternateIdentification
- * PartyIdentificationAndAccount30.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount35#Identification
- * PartyIdentificationAndAccount35.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount35#AlternateIdentification
- * PartyIdentificationAndAccount35.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount38#Identification
- * PartyIdentificationAndAccount38.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount38#AlternateIdentification
- * PartyIdentificationAndAccount38.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount36#Identification
- * PartyIdentificationAndAccount36.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount36#AlternateIdentification
- * PartyIdentificationAndAccount36.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount37#Identification
- * PartyIdentificationAndAccount37.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount37#AlternateIdentification
- * PartyIdentificationAndAccount37.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount49#Identification
- * PartyIdentificationAndAccount49.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount49#AlternateIdentification
- * PartyIdentificationAndAccount49.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount59#Identification
- * PartyIdentificationAndAccount59.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount59#AlternateIdentification
- * PartyIdentificationAndAccount59.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount61#Identification
- * PartyIdentificationAndAccount61.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount61#AlternateIdentification
- * PartyIdentificationAndAccount61.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount62#Identification
- * PartyIdentificationAndAccount62.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount62#AlternateIdentification
- * PartyIdentificationAndAccount62.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount25#Identification
- * PartyIdentificationAndAccount25.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount65#Identification
- * PartyIdentificationAndAccount65.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount65#AlternateIdentification
- * PartyIdentificationAndAccount65.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification63Choice#NameAndAddress
- * PartyIdentification63Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount67#Identification
- * PartyIdentificationAndAccount67.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount67#AlternateIdentification
- * PartyIdentificationAndAccount67.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification38#Identification
- * PartyIdentification38.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification15Choice#NameAndAddress
- * PartyIdentification15Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount9#Identification
- * PartyIdentificationAndAccount9.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount9#AlternateIdentification
- * PartyIdentificationAndAccount9.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification32Choice#NameAndAddress
- * PartyIdentification32Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification5#IdentificationType
- * AlternatePartyIdentification5.IdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount79#Identification
- * PartyIdentificationAndAccount79.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount79#AdditionalInformation
- * PartyIdentificationAndAccount79.AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount79#AlternateIdentification
- * PartyIdentificationAndAccount79.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification70Choice#NameAndAddress
- * PartyIdentification70Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification6#TypeOfIdentification
- * AlternatePartyIdentification6.TypeOfIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount87#Identification
- * PartyIdentificationAndAccount87.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount87#AdditionalInformation
- * PartyIdentificationAndAccount87.AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount87#AlternateIdentification
- * PartyIdentificationAndAccount87.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount83#Identification
- * PartyIdentificationAndAccount83.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount83#AdditionalInformation
- * PartyIdentificationAndAccount83.AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount83#AlternateIdentification
- * PartyIdentificationAndAccount83.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount77#Identification
- * PartyIdentificationAndAccount77.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount77#AlternateIdentification
- * PartyIdentificationAndAccount77.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount77#AdditionalInformation
- * PartyIdentificationAndAccount77.AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount78#Identification
- * PartyIdentificationAndAccount78.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount78#AlternateIdentification
- * PartyIdentificationAndAccount78.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount78#AdditionalInformation
- * PartyIdentificationAndAccount78.AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification23#NameAndAddress
- * PartyIdentification23.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification6Choice#NameAndAddress
- * PartyIdentification6Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount10#Identification
- * PartyIdentificationAndAccount10.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount10#AlternateIdentification
- * PartyIdentificationAndAccount10.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount8#Identification
- * PartyIdentificationAndAccount8.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount8#AlternateIdentification
- * PartyIdentificationAndAccount8.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification54#NameAndAddress
- * PartyIdentification54.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification68Choice#NameAndAddress
- * PartyIdentification68Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification55#Identification
- * PartyIdentification55.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification55#AlternateIdentification
- * PartyIdentification55.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification55#AdditionalInformation
- * PartyIdentification55.AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount34#Identification
- * PartyIdentificationAndAccount34.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount34#AdditionalInformation
- * PartyIdentificationAndAccount34.AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount34#AlternateIdentification
- * PartyIdentificationAndAccount34.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount80#Identification
- * PartyIdentificationAndAccount80.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount80#AlternateIdentification
- * PartyIdentificationAndAccount80.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount80#AdditionalInformation
- * PartyIdentificationAndAccount80.AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification41#Identification
- * PartyIdentification41.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification40#Identification
- * PartyIdentification40.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyModification1#PartyIdentification
- * PartyModification1.PartyIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty1#Party
- * ProprietaryParty1.Party}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty2#Party
- * ProprietaryParty2.Party}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty3#Party
- * ProprietaryParty3.Party}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Party7Choice#Party
- * Party7Choice.Party}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Party12Choice#Party
- * Party12Choice.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification42#Identification
- * PartyIdentification42.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification7Choice#NameAndAddress
- * PartyIdentification7Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification8Choice#NameAndAddress
- * PartyIdentification8Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification19Choice#NameAndAddress
- * PartyIdentification19Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#NameAndAddress
- * PartyIdentification73Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#PartyIdentification
- * PartyIdentification73Choice.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification60#NameAndAddress
- * PartyIdentification60.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount3#PartyIdentification
- * PartyIdentificationAndAccount3.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification1#Identification
- * PartyIdentification1.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#NameAndAddress
- * PartyIdentification9Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IssuerInformation1#Identification
- * IssuerInformation1.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification39#Identification
- * PartyIdentification39.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount53#Identification
- * PartyIdentificationAndAccount53.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount53#AlternateIdentification
- * PartyIdentificationAndAccount53.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount55#Identification
- * PartyIdentificationAndAccount55.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount55#AlternateIdentification
- * PartyIdentificationAndAccount55.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount45#Identification
- * PartyIdentificationAndAccount45.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount45#AlternateIdentification
- * PartyIdentificationAndAccount45.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount48#Identification
- * PartyIdentificationAndAccount48.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount48#AlternateIdentification
- * PartyIdentificationAndAccount48.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount46#Identification
- * PartyIdentificationAndAccount46.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount46#AlternateIdentification
- * PartyIdentificationAndAccount46.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount47#Identification
- * PartyIdentificationAndAccount47.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount47#AlternateIdentification
- * PartyIdentificationAndAccount47.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount6#PartyIdentification
- * PartyIdentificationAndAccount6.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndContactInformation1#PartyIdentification
- * PartyIdentificationAndContactInformation1.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification45#Identification
- * PartyIdentification45.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification29Choice#NameAndAddress
- * PartyIdentification29Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification33Choice#NameAndAddress
- * PartyIdentification33Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount69#Identification
- * PartyIdentificationAndAccount69.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount69#AlternateIdentification
- * PartyIdentificationAndAccount69.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount70#Identification
- * PartyIdentificationAndAccount70.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount70#AlternateIdentification
- * PartyIdentificationAndAccount70.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount71#Identification
- * PartyIdentificationAndAccount71.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount71#AlternateIdentification
- * PartyIdentificationAndAccount71.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount72#Identification
- * PartyIdentificationAndAccount72.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount72#AlternateIdentification
- * PartyIdentificationAndAccount72.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount73#Identification
- * PartyIdentificationAndAccount73.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount73#AlternateIdentification
- * PartyIdentificationAndAccount73.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount74#Identification
- * PartyIdentificationAndAccount74.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount74#AlternateIdentification
- * PartyIdentificationAndAccount74.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification66Choice#NameAndAddress
- * PartyIdentification66Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount76#Identification
- * PartyIdentificationAndAccount76.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification67Choice#NameAndAddress
- * PartyIdentification67Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification4#IdentificationType
- * AlternatePartyIdentification4.IdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#Identification
- * PartyIdentificationAndAccount31.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#AlternateIdentification
- * PartyIdentificationAndAccount31.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification34Choice#NameAndAddress
- * PartyIdentification34Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount32#PartyIdentification
- * PartyIdentificationAndAccount32.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification58#Identification
- * PartyIdentification58.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification14#Identification
- * PartyIdentification14.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification11#Identification
- * PartyIdentification11.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification17#Identification
- * PartyIdentification17.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification19#Identification
- * PartyIdentification19.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification30#Identification
- * PartyIdentification30.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification18#Identification
- * PartyIdentification18.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification20#Identification
- * PartyIdentification20.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification31#Identification
- * PartyIdentification31.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification16#Identification
- * PartyIdentification16.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification26Choice#NameAndAddress
- * PartyIdentification26Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount13#PartyIdentification
- * PartyIdentificationAndAccount13.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount7#PartyIdentification
- * PartyIdentificationAndAccount7.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#NameAndAddress
- * PartyIdentification71Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification25Choice#Identification
- * PartyIdentification25Choice.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification25Choice#NameAndAddress
- * PartyIdentification25Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount95#PartyIdentification
- * PartyIdentificationAndAccount95.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount97#PartyIdentification
- * PartyIdentificationAndAccount97.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification62#NameAndAddress
- * PartyIdentification62.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount96#PartyIdentification
- * PartyIdentificationAndAccount96.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification63#PartyIdentification
- * PartyIdentification63.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification64#NameAndAddress
- * PartyIdentification64.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification75Choice#NameAndAddress
- * PartyIdentification75Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingAccount5#AccountServicer
- * SafekeepingAccount5.AccountServicer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification83Choice#NameAndAddress
- * PartyIdentification83Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount100#Identification
- * PartyIdentificationAndAccount100.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount100#AlternateIdentification
- * PartyIdentificationAndAccount100.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount100#AdditionalInformation
- * PartyIdentificationAndAccount100.AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount101#Identification
- * PartyIdentificationAndAccount101.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount101#AlternateIdentification
- * PartyIdentificationAndAccount101.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IssuerInformation2#Identification
- * IssuerInformation2.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification71#Identification
- * PartyIdentification71.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount102#PartyIdentification
- * PartyIdentificationAndAccount102.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification89Choice#NameAndAddress
- * PartyIdentification89Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification87Choice#NameAndAddress
- * PartyIdentification87Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification88Choice#NameAndAddress
- * PartyIdentification88Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount104#Identification
- * PartyIdentificationAndAccount104.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount104#AlternateIdentification
- * PartyIdentificationAndAccount104.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#ShortIdentification
- * QualifiedPartyIdentification1.ShortIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionEnvironment5#SendingInstitution
- * CardTransactionEnvironment5.SendingInstitution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionEnvironment5#ReceivingInstitution
- * CardTransactionEnvironment5.ReceivingInstitution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardTransactionEnvironment5#SettlementInstitution
- * CardTransactionEnvironment5.SettlementInstitution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification90Choice#NameAndAddress
- * PartyIdentification90Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount106#Identification
- * PartyIdentificationAndAccount106.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount106#AlternateIdentification
- * PartyIdentificationAndAccount106.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification75#Identification
- * PartyIdentification75.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification75#AlternateIdentification
- * PartyIdentification75.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount112#Identification
- * PartyIdentificationAndAccount112.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount112#AlternateIdentification
- * PartyIdentificationAndAccount112.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification7#IdentificationType
- * AlternatePartyIdentification7.IdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount111#Identification
- * PartyIdentificationAndAccount111.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount111#AlternateIdentification
- * PartyIdentificationAndAccount111.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount117#Identification
- * PartyIdentificationAndAccount117.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount107#Identification
- * PartyIdentificationAndAccount107.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount107#AlternateIdentification
- * PartyIdentificationAndAccount107.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification76#Identification
- * PartyIdentification76.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification77#Identification
- * PartyIdentification77.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#Party
- * Party28Choice.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification93Choice#NameAndAddress
- * PartyIdentification93Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification91#Identification
- * PartyIdentification91.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification93#AlternateIdentification
- * PartyIdentification93.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount122#Identification
- * PartyIdentificationAndAccount122.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount122#AlternateIdentification
- * PartyIdentificationAndAccount122.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification92#Identification
- * PartyIdentification92.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification92#AlternateIdentification
- * PartyIdentification92.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification94Choice#NameAndAddress
- * PartyIdentification94Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount120#Identification
- * PartyIdentificationAndAccount120.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount120#AlternateIdentification
- * PartyIdentificationAndAccount120.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount121#Identification
- * PartyIdentificationAndAccount121.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount121#AlternateIdentification
- * PartyIdentificationAndAccount121.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification94#Identification
- * PartyIdentification94.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification97Choice#NameAndAddress
- * PartyIdentification97Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification97#PartyIdentification
- * PartyIdentification97.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount124#PartyIdentification
- * PartyIdentificationAndAccount124.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification95#Identification
- * PartyIdentification95.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount123#PartyIdentification
- * PartyIdentificationAndAccount123.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#NameAndAddress
- * PartyIdentification96Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification96#Identification
- * PartyIdentification96.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification99Choice#NameAndAddress
- * PartyIdentification99Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification98#Identification
- * PartyIdentification98.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification100#Identification
- * PartyIdentification100.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PlaceOfClearingIdentification1#Identification
- * PlaceOfClearingIdentification1.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification1#MarketTypeAndIdentification
- * PlaceOfTradeIdentification1.MarketTypeAndIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace1#SafekeepingPlaceFormat
- * SafeKeepingPlace1.SafekeepingPlaceFormat}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification99#Identification
- * PartyIdentification99.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Pledgee1#PledgeeTypeAndIdentification
- * Pledgee1.PledgeeTypeAndIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification100Choice#NameAndAddress
- * PartyIdentification100Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount127#Identification
- * PartyIdentificationAndAccount127.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount127#AlternateIdentification
- * PartyIdentificationAndAccount127.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount127#AdditionalInformation
- * PartyIdentificationAndAccount127.AdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification102Choice#NameAndAddress
- * PartyIdentification102Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount126#PartyIdentification
- * PartyIdentificationAndAccount126.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification101Choice#NameAndAddress
- * PartyIdentification101Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification8#IdentificationType
- * AlternatePartyIdentification8.IdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification104Choice#NameAndAddress
- * PartyIdentification104Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification101#AlternateIdentification
- * PartyIdentification101.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification111Choice#NameAndAddress
- * PartyIdentification111Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification102#Identification
- * PartyIdentification102.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification102#AlternateIdentification
- * PartyIdentification102.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount129#Identification
- * PartyIdentificationAndAccount129.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount129#AlternateIdentification
- * PartyIdentificationAndAccount129.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount130#Identification
- * PartyIdentificationAndAccount130.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount130#AlternateIdentification
- * PartyIdentificationAndAccount130.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification9#IdentificationType
- * AlternatePartyIdentification9.IdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification113Choice#NameAndAddress
- * PartyIdentification113Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount128#Identification
- * PartyIdentificationAndAccount128.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount128#AlternateIdentification
- * PartyIdentificationAndAccount128.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification108#Identification
- * PartyIdentification108.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount133#Identification
- * PartyIdentificationAndAccount133.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount133#AlternateIdentification
- * PartyIdentificationAndAccount133.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification103#Identification
- * PartyIdentification103.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification103#AlternateIdentification
- * PartyIdentification103.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount131#Identification
- * PartyIdentificationAndAccount131.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount131#AlternateIdentification
- * PartyIdentificationAndAccount131.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount146#Identification
- * PartyIdentificationAndAccount146.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount136#Identification
- * PartyIdentificationAndAccount136.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount136#AlternateIdentification
- * PartyIdentificationAndAccount136.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount134#Identification
- * PartyIdentificationAndAccount134.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount134#AlternateIdentification
- * PartyIdentificationAndAccount134.AlternateIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification109#Identification
- * PartyIdentification109.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification111#Identification
- * PartyIdentification111.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification110#Identification
- * PartyIdentification110.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PartyIdentification115Choice#NameAndAddress
- * PartyIdentification115Choice.NameAndAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace2#SafekeepingPlaceFormat
- * SafeKeepingPlace2.SafekeepingPlaceFormat}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification2#MarketTypeAndIdentification
- * PlaceOfTradeIdentification2.MarketTypeAndIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Pledgee2#PledgeeTypeAndIdentification
- * Pledgee2.PledgeeTypeAndIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification112#Identification
- * PartyIdentification112.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SafekeepingAccount7#AccountServicer
- * SafekeepingAccount7.AccountServicer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification113#Party
- * PartyIdentification113.Party}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount147#PartyIdentification
- * PartyIdentificationAndAccount147.PartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification119#Identification
- * PartyIdentification119.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification120#Identification
- * PartyIdentification120.Identification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification120#AlternateIdentification
- * PartyIdentification120.AlternateIdentification}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+ * PartyIdentificationInformation.mmLEI}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -1291,6 +86,1212 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrganisationIdentification}</li>
  * <li>{@linkplain com.tools20022.repository.entity.PersonIdentification
  * PersonIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedPartyIdentification
+ * GenericIdentification.mmRelatedPartyIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmIdentification
+ * Party.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PartyName#mmPartyIdentification
+ * PartyName.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedIdentification
+ * DateTimePeriod.mmRelatedIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Market#mmIdentification
+ * Market.mmIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification1Choice#mmNameAndAddress
+ * PartyIdentification1Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#mmNameAndAddress
+ * PartyIdentification2Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification5Choice#mmNameAndAddress
+ * PartyIdentification5Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification8#mmIdentification
+ * PartyIdentification8.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification32#mmIdentification
+ * PartyIdentification32.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification43#mmIdentification
+ * PartyIdentification43.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount2#mmPartyIdentification
+ * PartyIdentificationAndAccount2.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount5#mmPartyIdentification
+ * PartyIdentificationAndAccount5.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount4#mmPartyIdentification
+ * PartyIdentificationAndAccount4.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification21#mmPartyIdentification
+ * PartyIdentification21.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification12Choice#mmNameAndAddress
+ * PartyIdentification12Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification36#mmIdentification
+ * PartyIdentification36.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#mmNameAndAddress
+ * PartyIdentification10Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount16#mmIdentification
+ * PartyIdentificationAndAccount16.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification14Choice#mmNameAndAddress
+ * PartyIdentification14Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification44Choice#mmNameAndAddress
+ * PartyIdentification44Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification46#mmIdentification
+ * PartyIdentification46.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification45Choice#mmNameAndAddress
+ * PartyIdentification45Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount44#mmIdentification
+ * PartyIdentificationAndAccount44.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification37Choice#mmNameAndAddress
+ * PartyIdentification37Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification1#mmTypeOfIdentification
+ * AlternatePartyIdentification1.mmTypeOfIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification2#mmIdentificationType
+ * AlternatePartyIdentification2.mmIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount1#mmIdentification
+ * PartyIdentificationAndAccount1.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount1#mmAlternateIdentification
+ * PartyIdentificationAndAccount1.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification29#mmPartyIdentification
+ * PartyIdentification29.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification29#mmAlternateIdentification
+ * PartyIdentification29.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification2#mmIdentification
+ * PartyIdentification2.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification2#mmAlternateIdentification
+ * PartyIdentification2.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification43Choice#mmNameAndAddress
+ * PartyIdentification43Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount42#mmIdentification
+ * PartyIdentificationAndAccount42.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount42#mmAlternateIdentification
+ * PartyIdentificationAndAccount42.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification48#mmIdentification
+ * PartyIdentification48.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification48#mmAlternateIdentification
+ * PartyIdentification48.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount11#mmIdentification
+ * PartyIdentificationAndAccount11.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount11#mmAlternateIdentification
+ * PartyIdentificationAndAccount11.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification3Choice#mmNameAndAddress
+ * PartyIdentification3Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount12#mmIdentification
+ * PartyIdentificationAndAccount12.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount12#mmAlternateIdentification
+ * PartyIdentificationAndAccount12.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount20#mmIdentification
+ * PartyIdentificationAndAccount20.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount20#mmAlternateIdentification
+ * PartyIdentificationAndAccount20.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification30Choice#mmNameAndAddress
+ * PartyIdentification30Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount15#mmIdentification
+ * PartyIdentificationAndAccount15.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount15#mmAlternateIdentification
+ * PartyIdentificationAndAccount15.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount39#mmIdentification
+ * PartyIdentificationAndAccount39.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount39#mmAlternateIdentification
+ * PartyIdentificationAndAccount39.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification38Choice#mmNameAndAddress
+ * PartyIdentification38Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount50#mmIdentification
+ * PartyIdentificationAndAccount50.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount50#mmAlternateIdentification
+ * PartyIdentificationAndAccount50.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount19#mmIdentification
+ * PartyIdentificationAndAccount19.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount19#mmAlternateIdentification
+ * PartyIdentificationAndAccount19.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount21#mmIdentification
+ * PartyIdentificationAndAccount21.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount21#mmAlternateIdentification
+ * PartyIdentificationAndAccount21.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount40#mmIdentification
+ * PartyIdentificationAndAccount40.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount40#mmAlternateIdentification
+ * PartyIdentificationAndAccount40.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount41#mmIdentification
+ * PartyIdentificationAndAccount41.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount41#mmAlternateIdentification
+ * PartyIdentificationAndAccount41.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount43#mmIdentification
+ * PartyIdentificationAndAccount43.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification58Choice#mmNameAndAddress
+ * PartyIdentification58Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification53#mmIdentification
+ * PartyIdentification53.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification62Choice#mmNameAndAddress
+ * PartyIdentification62Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount68#mmIdentification
+ * PartyIdentificationAndAccount68.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification60Choice#mmNameAndAddress
+ * PartyIdentification60Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification65Choice#mmNameAndAddress
+ * PartyIdentification65Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount75#mmIdentification
+ * PartyIdentificationAndAccount75.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification3#mmIdentificationType
+ * AlternatePartyIdentification3.mmIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount63#mmIdentification
+ * PartyIdentificationAndAccount63.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount63#mmAlternateIdentification
+ * PartyIdentificationAndAccount63.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification52#mmIdentification
+ * PartyIdentification52.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification52#mmAlternateIdentification
+ * PartyIdentification52.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount64#mmIdentification
+ * PartyIdentificationAndAccount64.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount64#mmAlternateIdentification
+ * PartyIdentificationAndAccount64.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification61Choice#mmNameAndAddress
+ * PartyIdentification61Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount60#mmIdentification
+ * PartyIdentificationAndAccount60.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount60#mmAlternateIdentification
+ * PartyIdentificationAndAccount60.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount66#mmIdentification
+ * PartyIdentificationAndAccount66.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount66#mmAlternateIdentification
+ * PartyIdentificationAndAccount66.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification16Choice#mmNameAndAddress
+ * PartyIdentification16Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification46Choice#mmNameAndAddress
+ * PartyIdentification46Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification56Choice#mmNameAndAddress
+ * PartyIdentification56Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification33#mmAlternateIdentification
+ * PartyIdentification33.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification34#mmAlternateIdentification
+ * PartyIdentification34.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification48Choice#mmNameAndAddress
+ * PartyIdentification48Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification50#mmAlternateIdentification
+ * PartyIdentification50.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification52Choice#mmNameAndAddress
+ * PartyIdentification52Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification51#mmAlternateIdentification
+ * PartyIdentification51.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification56#mmAlternateIdentification
+ * PartyIdentification56.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification57#mmAlternateIdentification
+ * PartyIdentification57.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification35#mmIdentification
+ * PartyIdentification35.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification35#mmAlternateIdentification
+ * PartyIdentification35.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount14#mmIdentification
+ * PartyIdentificationAndAccount14.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount14#mmAlternateIdentification
+ * PartyIdentificationAndAccount14.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount17#mmIdentification
+ * PartyIdentificationAndAccount17.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount17#mmAlternateIdentification
+ * PartyIdentificationAndAccount17.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount18#mmIdentification
+ * PartyIdentificationAndAccount18.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount18#mmAlternateIdentification
+ * PartyIdentificationAndAccount18.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification17Choice#mmNameAndAddress
+ * PartyIdentification17Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification37#mmIdentification
+ * PartyIdentification37.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification37#mmAlternateIdentification
+ * PartyIdentification37.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount22#mmIdentification
+ * PartyIdentificationAndAccount22.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount22#mmAlternateIdentification
+ * PartyIdentificationAndAccount22.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount23#mmIdentification
+ * PartyIdentificationAndAccount23.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount23#mmAlternateIdentification
+ * PartyIdentificationAndAccount23.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification31Choice#mmNameAndAddress
+ * PartyIdentification31Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount24#mmIdentification
+ * PartyIdentificationAndAccount24.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount24#mmAlternateIdentification
+ * PartyIdentificationAndAccount24.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification39Choice#mmNameAndAddress
+ * PartyIdentification39Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification47#mmIdentification
+ * PartyIdentification47.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification47#mmAlternateIdentification
+ * PartyIdentification47.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification40Choice#mmNameAndAddress
+ * PartyIdentification40Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount51#mmIdentification
+ * PartyIdentificationAndAccount51.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount51#mmAlternateIdentification
+ * PartyIdentificationAndAccount51.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount52#mmIdentification
+ * PartyIdentificationAndAccount52.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount52#mmAlternateIdentification
+ * PartyIdentificationAndAccount52.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification42Choice#mmNameAndAddress
+ * PartyIdentification42Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount54#mmIdentification
+ * PartyIdentificationAndAccount54.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount54#mmAlternateIdentification
+ * PartyIdentificationAndAccount54.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification53Choice#mmNameAndAddress
+ * PartyIdentification53Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification49#mmIdentification
+ * PartyIdentification49.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification49#mmAlternateIdentification
+ * PartyIdentification49.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification54Choice#mmNameAndAddress
+ * PartyIdentification54Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount56#mmIdentification
+ * PartyIdentificationAndAccount56.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount56#mmAlternateIdentification
+ * PartyIdentificationAndAccount56.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount57#mmIdentification
+ * PartyIdentificationAndAccount57.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount57#mmAlternateIdentification
+ * PartyIdentificationAndAccount57.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification55Choice#mmNameAndAddress
+ * PartyIdentification55Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount58#mmIdentification
+ * PartyIdentificationAndAccount58.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount58#mmAlternateIdentification
+ * PartyIdentificationAndAccount58.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification47Choice#mmNameAndAddress
+ * PartyIdentification47Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification57Choice#mmNameAndAddress
+ * PartyIdentification57Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification49Choice#mmNameAndAddress
+ * PartyIdentification49Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification59Choice#mmNameAndAddress
+ * PartyIdentification59Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification15#mmIdentification
+ * PartyIdentification15.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount26#mmIdentification
+ * PartyIdentificationAndAccount26.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount26#mmAlternateIdentification
+ * PartyIdentificationAndAccount26.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification4#mmIdentification
+ * PartyIdentification4.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification4#mmAlternateIdentification
+ * PartyIdentification4.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount29#mmIdentification
+ * PartyIdentificationAndAccount29.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount29#mmAlternateIdentification
+ * PartyIdentificationAndAccount29.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount27#mmIdentification
+ * PartyIdentificationAndAccount27.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount27#mmAlternateIdentification
+ * PartyIdentificationAndAccount27.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount28#mmIdentification
+ * PartyIdentificationAndAccount28.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount28#mmAlternateIdentification
+ * PartyIdentificationAndAccount28.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount30#mmIdentification
+ * PartyIdentificationAndAccount30.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount30#mmAlternateIdentification
+ * PartyIdentificationAndAccount30.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount35#mmIdentification
+ * PartyIdentificationAndAccount35.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount35#mmAlternateIdentification
+ * PartyIdentificationAndAccount35.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount38#mmIdentification
+ * PartyIdentificationAndAccount38.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount38#mmAlternateIdentification
+ * PartyIdentificationAndAccount38.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount36#mmIdentification
+ * PartyIdentificationAndAccount36.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount36#mmAlternateIdentification
+ * PartyIdentificationAndAccount36.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount37#mmIdentification
+ * PartyIdentificationAndAccount37.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount37#mmAlternateIdentification
+ * PartyIdentificationAndAccount37.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount49#mmIdentification
+ * PartyIdentificationAndAccount49.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount49#mmAlternateIdentification
+ * PartyIdentificationAndAccount49.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount59#mmIdentification
+ * PartyIdentificationAndAccount59.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount59#mmAlternateIdentification
+ * PartyIdentificationAndAccount59.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount61#mmIdentification
+ * PartyIdentificationAndAccount61.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount61#mmAlternateIdentification
+ * PartyIdentificationAndAccount61.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount62#mmIdentification
+ * PartyIdentificationAndAccount62.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount62#mmAlternateIdentification
+ * PartyIdentificationAndAccount62.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount25#mmIdentification
+ * PartyIdentificationAndAccount25.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount65#mmIdentification
+ * PartyIdentificationAndAccount65.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount65#mmAlternateIdentification
+ * PartyIdentificationAndAccount65.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification63Choice#mmNameAndAddress
+ * PartyIdentification63Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount67#mmIdentification
+ * PartyIdentificationAndAccount67.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount67#mmAlternateIdentification
+ * PartyIdentificationAndAccount67.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification38#mmIdentification
+ * PartyIdentification38.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification15Choice#mmNameAndAddress
+ * PartyIdentification15Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount9#mmIdentification
+ * PartyIdentificationAndAccount9.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount9#mmAlternateIdentification
+ * PartyIdentificationAndAccount9.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification32Choice#mmNameAndAddress
+ * PartyIdentification32Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification5#mmIdentificationType
+ * AlternatePartyIdentification5.mmIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount79#mmIdentification
+ * PartyIdentificationAndAccount79.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount79#mmAdditionalInformation
+ * PartyIdentificationAndAccount79.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount79#mmAlternateIdentification
+ * PartyIdentificationAndAccount79.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification70Choice#mmNameAndAddress
+ * PartyIdentification70Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification6#mmTypeOfIdentification
+ * AlternatePartyIdentification6.mmTypeOfIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount87#mmIdentification
+ * PartyIdentificationAndAccount87.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount87#mmAdditionalInformation
+ * PartyIdentificationAndAccount87.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount87#mmAlternateIdentification
+ * PartyIdentificationAndAccount87.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount83#mmIdentification
+ * PartyIdentificationAndAccount83.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount83#mmAdditionalInformation
+ * PartyIdentificationAndAccount83.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount83#mmAlternateIdentification
+ * PartyIdentificationAndAccount83.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount77#mmIdentification
+ * PartyIdentificationAndAccount77.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount77#mmAlternateIdentification
+ * PartyIdentificationAndAccount77.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount77#mmAdditionalInformation
+ * PartyIdentificationAndAccount77.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount78#mmIdentification
+ * PartyIdentificationAndAccount78.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount78#mmAlternateIdentification
+ * PartyIdentificationAndAccount78.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount78#mmAdditionalInformation
+ * PartyIdentificationAndAccount78.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification23#mmNameAndAddress
+ * PartyIdentification23.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification6Choice#mmNameAndAddress
+ * PartyIdentification6Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount10#mmIdentification
+ * PartyIdentificationAndAccount10.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount10#mmAlternateIdentification
+ * PartyIdentificationAndAccount10.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount8#mmIdentification
+ * PartyIdentificationAndAccount8.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount8#mmAlternateIdentification
+ * PartyIdentificationAndAccount8.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification54#mmNameAndAddress
+ * PartyIdentification54.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification68Choice#mmNameAndAddress
+ * PartyIdentification68Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification55#mmIdentification
+ * PartyIdentification55.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification55#mmAlternateIdentification
+ * PartyIdentification55.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification55#mmAdditionalInformation
+ * PartyIdentification55.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount34#mmIdentification
+ * PartyIdentificationAndAccount34.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount34#mmAdditionalInformation
+ * PartyIdentificationAndAccount34.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount34#mmAlternateIdentification
+ * PartyIdentificationAndAccount34.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount80#mmIdentification
+ * PartyIdentificationAndAccount80.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount80#mmAlternateIdentification
+ * PartyIdentificationAndAccount80.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount80#mmAdditionalInformation
+ * PartyIdentificationAndAccount80.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification41#mmIdentification
+ * PartyIdentification41.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification40#mmIdentification
+ * PartyIdentification40.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyModification1#mmPartyIdentification
+ * PartyModification1.mmPartyIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty1#mmParty
+ * ProprietaryParty1.mmParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty2#mmParty
+ * ProprietaryParty2.mmParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty3#mmParty
+ * ProprietaryParty3.mmParty}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party7Choice#mmParty
+ * Party7Choice.mmParty}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party12Choice#mmParty
+ * Party12Choice.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification42#mmIdentification
+ * PartyIdentification42.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification7Choice#mmNameAndAddress
+ * PartyIdentification7Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification8Choice#mmNameAndAddress
+ * PartyIdentification8Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification19Choice#mmNameAndAddress
+ * PartyIdentification19Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#mmNameAndAddress
+ * PartyIdentification73Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification73Choice#mmPartyIdentification
+ * PartyIdentification73Choice.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification60#mmNameAndAddress
+ * PartyIdentification60.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount3#mmPartyIdentification
+ * PartyIdentificationAndAccount3.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification1#mmIdentification
+ * PartyIdentification1.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#mmNameAndAddress
+ * PartyIdentification9Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IssuerInformation1#mmIdentification
+ * IssuerInformation1.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification39#mmIdentification
+ * PartyIdentification39.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount53#mmIdentification
+ * PartyIdentificationAndAccount53.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount53#mmAlternateIdentification
+ * PartyIdentificationAndAccount53.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount55#mmIdentification
+ * PartyIdentificationAndAccount55.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount55#mmAlternateIdentification
+ * PartyIdentificationAndAccount55.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount45#mmIdentification
+ * PartyIdentificationAndAccount45.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount45#mmAlternateIdentification
+ * PartyIdentificationAndAccount45.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount48#mmIdentification
+ * PartyIdentificationAndAccount48.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount48#mmAlternateIdentification
+ * PartyIdentificationAndAccount48.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount46#mmIdentification
+ * PartyIdentificationAndAccount46.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount46#mmAlternateIdentification
+ * PartyIdentificationAndAccount46.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount47#mmIdentification
+ * PartyIdentificationAndAccount47.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount47#mmAlternateIdentification
+ * PartyIdentificationAndAccount47.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount6#mmPartyIdentification
+ * PartyIdentificationAndAccount6.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndContactInformation1#mmPartyIdentification
+ * PartyIdentificationAndContactInformation1.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification45#mmIdentification
+ * PartyIdentification45.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification29Choice#mmNameAndAddress
+ * PartyIdentification29Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification33Choice#mmNameAndAddress
+ * PartyIdentification33Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount69#mmIdentification
+ * PartyIdentificationAndAccount69.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount69#mmAlternateIdentification
+ * PartyIdentificationAndAccount69.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount70#mmIdentification
+ * PartyIdentificationAndAccount70.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount70#mmAlternateIdentification
+ * PartyIdentificationAndAccount70.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount71#mmIdentification
+ * PartyIdentificationAndAccount71.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount71#mmAlternateIdentification
+ * PartyIdentificationAndAccount71.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount72#mmIdentification
+ * PartyIdentificationAndAccount72.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount72#mmAlternateIdentification
+ * PartyIdentificationAndAccount72.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount73#mmIdentification
+ * PartyIdentificationAndAccount73.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount73#mmAlternateIdentification
+ * PartyIdentificationAndAccount73.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount74#mmIdentification
+ * PartyIdentificationAndAccount74.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount74#mmAlternateIdentification
+ * PartyIdentificationAndAccount74.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification66Choice#mmNameAndAddress
+ * PartyIdentification66Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount76#mmIdentification
+ * PartyIdentificationAndAccount76.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification67Choice#mmNameAndAddress
+ * PartyIdentification67Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification4#mmIdentificationType
+ * AlternatePartyIdentification4.mmIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#mmIdentification
+ * PartyIdentificationAndAccount31.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount31#mmAlternateIdentification
+ * PartyIdentificationAndAccount31.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification34Choice#mmNameAndAddress
+ * PartyIdentification34Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount32#mmPartyIdentification
+ * PartyIdentificationAndAccount32.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification58#mmIdentification
+ * PartyIdentification58.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification14#mmIdentification
+ * PartyIdentification14.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification11#mmIdentification
+ * PartyIdentification11.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification17#mmIdentification
+ * PartyIdentification17.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification19#mmIdentification
+ * PartyIdentification19.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification30#mmIdentification
+ * PartyIdentification30.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification18#mmIdentification
+ * PartyIdentification18.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification20#mmIdentification
+ * PartyIdentification20.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification31#mmIdentification
+ * PartyIdentification31.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification16#mmIdentification
+ * PartyIdentification16.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification26Choice#mmNameAndAddress
+ * PartyIdentification26Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount13#mmPartyIdentification
+ * PartyIdentificationAndAccount13.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount7#mmPartyIdentification
+ * PartyIdentificationAndAccount7.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#mmNameAndAddress
+ * PartyIdentification71Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification25Choice#mmIdentification
+ * PartyIdentification25Choice.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification25Choice#mmNameAndAddress
+ * PartyIdentification25Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount95#mmPartyIdentification
+ * PartyIdentificationAndAccount95.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount97#mmPartyIdentification
+ * PartyIdentificationAndAccount97.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification62#mmNameAndAddress
+ * PartyIdentification62.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount96#mmPartyIdentification
+ * PartyIdentificationAndAccount96.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification63#mmPartyIdentification
+ * PartyIdentification63.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification64#mmNameAndAddress
+ * PartyIdentification64.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification75Choice#mmNameAndAddress
+ * PartyIdentification75Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingAccount5#mmAccountServicer
+ * SafekeepingAccount5.mmAccountServicer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification83Choice#mmNameAndAddress
+ * PartyIdentification83Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount100#mmIdentification
+ * PartyIdentificationAndAccount100.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount100#mmAlternateIdentification
+ * PartyIdentificationAndAccount100.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount100#mmAdditionalInformation
+ * PartyIdentificationAndAccount100.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount101#mmIdentification
+ * PartyIdentificationAndAccount101.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount101#mmAlternateIdentification
+ * PartyIdentificationAndAccount101.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IssuerInformation2#mmIdentification
+ * IssuerInformation2.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification71#mmIdentification
+ * PartyIdentification71.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount102#mmPartyIdentification
+ * PartyIdentificationAndAccount102.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification89Choice#mmNameAndAddress
+ * PartyIdentification89Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification87Choice#mmNameAndAddress
+ * PartyIdentification87Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification88Choice#mmNameAndAddress
+ * PartyIdentification88Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount104#mmIdentification
+ * PartyIdentificationAndAccount104.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount104#mmAlternateIdentification
+ * PartyIdentificationAndAccount104.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#mmShortIdentification
+ * QualifiedPartyIdentification1.mmShortIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionEnvironment5#mmSendingInstitution
+ * CardTransactionEnvironment5.mmSendingInstitution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionEnvironment5#mmReceivingInstitution
+ * CardTransactionEnvironment5.mmReceivingInstitution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardTransactionEnvironment5#mmSettlementInstitution
+ * CardTransactionEnvironment5.mmSettlementInstitution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification90Choice#mmNameAndAddress
+ * PartyIdentification90Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount106#mmIdentification
+ * PartyIdentificationAndAccount106.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount106#mmAlternateIdentification
+ * PartyIdentificationAndAccount106.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification75#mmIdentification
+ * PartyIdentification75.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification75#mmAlternateIdentification
+ * PartyIdentification75.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount112#mmIdentification
+ * PartyIdentificationAndAccount112.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount112#mmAlternateIdentification
+ * PartyIdentificationAndAccount112.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification7#mmIdentificationType
+ * AlternatePartyIdentification7.mmIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount111#mmIdentification
+ * PartyIdentificationAndAccount111.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount111#mmAlternateIdentification
+ * PartyIdentificationAndAccount111.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount117#mmIdentification
+ * PartyIdentificationAndAccount117.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount107#mmIdentification
+ * PartyIdentificationAndAccount107.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount107#mmAlternateIdentification
+ * PartyIdentificationAndAccount107.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification76#mmIdentification
+ * PartyIdentification76.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification77#mmIdentification
+ * PartyIdentification77.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#mmParty
+ * Party28Choice.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification93Choice#mmNameAndAddress
+ * PartyIdentification93Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification91#mmIdentification
+ * PartyIdentification91.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification93#mmAlternateIdentification
+ * PartyIdentification93.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount122#mmIdentification
+ * PartyIdentificationAndAccount122.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount122#mmAlternateIdentification
+ * PartyIdentificationAndAccount122.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification92#mmIdentification
+ * PartyIdentification92.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification92#mmAlternateIdentification
+ * PartyIdentification92.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification94Choice#mmNameAndAddress
+ * PartyIdentification94Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount120#mmIdentification
+ * PartyIdentificationAndAccount120.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount120#mmAlternateIdentification
+ * PartyIdentificationAndAccount120.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount121#mmIdentification
+ * PartyIdentificationAndAccount121.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount121#mmAlternateIdentification
+ * PartyIdentificationAndAccount121.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification94#mmIdentification
+ * PartyIdentification94.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification97Choice#mmNameAndAddress
+ * PartyIdentification97Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification97#mmPartyIdentification
+ * PartyIdentification97.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount124#mmPartyIdentification
+ * PartyIdentificationAndAccount124.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification95#mmIdentification
+ * PartyIdentification95.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount123#mmPartyIdentification
+ * PartyIdentificationAndAccount123.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#mmNameAndAddress
+ * PartyIdentification96Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification96#mmIdentification
+ * PartyIdentification96.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification99Choice#mmNameAndAddress
+ * PartyIdentification99Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification98#mmIdentification
+ * PartyIdentification98.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification100#mmIdentification
+ * PartyIdentification100.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PlaceOfClearingIdentification1#mmIdentification
+ * PlaceOfClearingIdentification1.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification1#mmMarketTypeAndIdentification
+ * PlaceOfTradeIdentification1.mmMarketTypeAndIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace1#mmSafekeepingPlaceFormat
+ * SafeKeepingPlace1.mmSafekeepingPlaceFormat}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification99#mmIdentification
+ * PartyIdentification99.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Pledgee1#mmPledgeeTypeAndIdentification
+ * Pledgee1.mmPledgeeTypeAndIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification100Choice#mmNameAndAddress
+ * PartyIdentification100Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount127#mmIdentification
+ * PartyIdentificationAndAccount127.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount127#mmAlternateIdentification
+ * PartyIdentificationAndAccount127.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount127#mmAdditionalInformation
+ * PartyIdentificationAndAccount127.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification102Choice#mmNameAndAddress
+ * PartyIdentification102Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount126#mmPartyIdentification
+ * PartyIdentificationAndAccount126.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification101Choice#mmNameAndAddress
+ * PartyIdentification101Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification8#mmIdentificationType
+ * AlternatePartyIdentification8.mmIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification104Choice#mmNameAndAddress
+ * PartyIdentification104Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification101#mmAlternateIdentification
+ * PartyIdentification101.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification111Choice#mmNameAndAddress
+ * PartyIdentification111Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification102#mmIdentification
+ * PartyIdentification102.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification102#mmAlternateIdentification
+ * PartyIdentification102.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount129#mmIdentification
+ * PartyIdentificationAndAccount129.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount129#mmAlternateIdentification
+ * PartyIdentificationAndAccount129.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount130#mmIdentification
+ * PartyIdentificationAndAccount130.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount130#mmAlternateIdentification
+ * PartyIdentificationAndAccount130.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification9#mmIdentificationType
+ * AlternatePartyIdentification9.mmIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification113Choice#mmNameAndAddress
+ * PartyIdentification113Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount128#mmIdentification
+ * PartyIdentificationAndAccount128.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount128#mmAlternateIdentification
+ * PartyIdentificationAndAccount128.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification108#mmIdentification
+ * PartyIdentification108.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount133#mmIdentification
+ * PartyIdentificationAndAccount133.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount133#mmAlternateIdentification
+ * PartyIdentificationAndAccount133.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification103#mmIdentification
+ * PartyIdentification103.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification103#mmAlternateIdentification
+ * PartyIdentification103.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount131#mmIdentification
+ * PartyIdentificationAndAccount131.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount131#mmAlternateIdentification
+ * PartyIdentificationAndAccount131.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount146#mmIdentification
+ * PartyIdentificationAndAccount146.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount136#mmIdentification
+ * PartyIdentificationAndAccount136.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount136#mmAlternateIdentification
+ * PartyIdentificationAndAccount136.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount134#mmIdentification
+ * PartyIdentificationAndAccount134.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount134#mmAlternateIdentification
+ * PartyIdentificationAndAccount134.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification109#mmIdentification
+ * PartyIdentification109.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification111#mmIdentification
+ * PartyIdentification111.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification110#mmIdentification
+ * PartyIdentification110.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification115Choice#mmNameAndAddress
+ * PartyIdentification115Choice.mmNameAndAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SafeKeepingPlace2#mmSafekeepingPlaceFormat
+ * SafeKeepingPlace2.mmSafekeepingPlaceFormat}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PlaceOfTradeIdentification2#mmMarketTypeAndIdentification
+ * PlaceOfTradeIdentification2.mmMarketTypeAndIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Pledgee2#mmPledgeeTypeAndIdentification
+ * Pledgee2.mmPledgeeTypeAndIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification112#mmIdentification
+ * PartyIdentification112.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SafekeepingAccount7#mmAccountServicer
+ * SafekeepingAccount7.mmAccountServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification113#mmParty
+ * PartyIdentification113.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount147#mmPartyIdentification
+ * PartyIdentificationAndAccount147.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification119#mmIdentification
+ * PartyIdentification119.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification120#mmIdentification
+ * PartyIdentification120.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification120#mmAlternateIdentification
+ * PartyIdentification120.mmAlternateIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -2135,8 +2136,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -2150,6 +2151,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PartyIdentificationInformation {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected GenericIdentification otherIdentification;
 	/**
 	 * Identifier issued to a party for which no specific identifier has been
 	 * defined.
@@ -2159,8 +2161,8 @@ public class PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#RelatedPartyIdentification
-	 * GenericIdentification.RelatedPartyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedPartyIdentification
+	 * GenericIdentification.mmRelatedPartyIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -2169,656 +2171,656 @@ public class PartyIdentificationInformation {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
 	 * GenericIdentification}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification1Choice#ProprietaryIdentification
-	 * PartyIdentification1Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#ProprietaryIdentification
-	 * PartyIdentification2Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification4Choice#ProprietaryIdentification
-	 * PartyIdentification4Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#OtherIdentification
-	 * IndividualPerson5.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#OtherIdentification
-	 * IndividualPerson10.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice#ProprietaryIdentification
-	 * FinancialInstitutionIdentification3Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson20#OtherIdentification
-	 * IndividualPerson20.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccount26#AccountOwnerOtherIdentification
-	 * CashAccount26.AccountOwnerOtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentificationChoice#IdentificationNumber
-	 * IndividualPersonIdentificationChoice.IdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification5Choice#ProprietaryIdentification
-	 * PartyIdentification5Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#ModifiedOtherIdentification
-	 * IndividualPerson6.ModifiedOtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#ModifiedOtherIdentification
-	 * IndividualPerson11.ModifiedOtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.MemberIdentification2Choice#Other
-	 * MemberIdentification2Choice.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#ProprietaryIdentification
-	 * OrganisationIdentification2.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification3#OtherIdentification
-	 * PersonIdentification3.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification4#Other
-	 * OrganisationIdentification4.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification5#Other
-	 * PersonIdentification5.Other}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ContactDetails2#Other
-	 * ContactDetails2.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification8#Other
-	 * OrganisationIdentification8.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification3#ProprietaryIdentification
-	 * FinancialInstitutionIdentification3.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice#ProprietaryIdentification
-	 * FinancialInstitutionIdentification5Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification13Choice#ProprietaryIdentification
-	 * PartyIdentification13Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification36Choice#ProprietaryIdentification
-	 * PartyIdentification36Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification7#Other
-	 * OrganisationIdentification7.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification51Choice#ProprietaryIdentification
-	 * PartyIdentification51Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification9#Other
-	 * OrganisationIdentification9.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#ProprietaryIdentification
-	 * PartyIdentification10Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification14Choice#ProprietaryIdentification
-	 * PartyIdentification14Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification45Choice#ProprietaryIdentification
-	 * PartyIdentification45Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification37Choice#ProprietaryIdentification
-	 * PartyIdentification37Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice#Proprietary
-	 * SafekeepingPlaceFormat3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification43Choice#ProprietaryIdentification
-	 * PartyIdentification43Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification3Choice#ProprietaryIdentification
-	 * PartyIdentification3Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification30Choice#ProprietaryIdentification
-	 * PartyIdentification30Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification38Choice#ProprietaryIdentification
-	 * PartyIdentification38Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification62Choice#ProprietaryIdentification
-	 * PartyIdentification62Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification60Choice#ProprietaryIdentification
-	 * PartyIdentification60Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification65Choice#ProprietaryIdentification
-	 * PartyIdentification65Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice#Proprietary
-	 * SafekeepingPlaceFormat4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification61Choice#ProprietaryIdentification
-	 * PartyIdentification61Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice#Proprietary
-	 * SafekeepingPlaceFormat2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification18Choice#ProprietaryIdentification
-	 * PartyIdentification18Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice#Proprietary
-	 * SafekeepingPlaceFormat5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification16Choice#ProprietaryIdentification
-	 * PartyIdentification16Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification46Choice#ProprietaryIdentification
-	 * PartyIdentification46Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification56Choice#ProprietaryIdentification
-	 * PartyIdentification56Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification48Choice#ProprietaryIdentification
-	 * PartyIdentification48Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification52Choice#ProprietaryIdentification
-	 * PartyIdentification52Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification41Choice#ProprietaryIdentification
-	 * PartyIdentification41Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification50Choice#ProprietaryIdentification
-	 * PartyIdentification50Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification31Choice#ProprietaryIdentification
-	 * PartyIdentification31Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification40Choice#ProprietaryIdentification
-	 * PartyIdentification40Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification42Choice#ProprietaryIdentification
-	 * PartyIdentification42Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification54Choice#ProprietaryIdentification
-	 * PartyIdentification54Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification55Choice#ProprietaryIdentification
-	 * PartyIdentification55Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification47Choice#ProprietaryIdentification
-	 * PartyIdentification47Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification57Choice#ProprietaryIdentification
-	 * PartyIdentification57Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormatChoice#IdentificationAsDSS
-	 * SafekeepingPlaceFormatChoice.IdentificationAsDSS}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification49Choice#ProprietaryIdentification
-	 * PartyIdentification49Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification59Choice#ProprietaryIdentification
-	 * PartyIdentification59Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification64Choice#ProprietaryIdentification
-	 * PartyIdentification64Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification63Choice#ProprietaryIdentification
-	 * PartyIdentification63Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification15Choice#ProprietaryIdentification
-	 * PartyIdentification15Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification32Choice#ProprietaryIdentification
-	 * PartyIdentification32Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification70Choice#ProprietaryIdentification
-	 * PartyIdentification70Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification23Choice#ProprietaryIdentification
-	 * PartyIdentification23Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification35Choice#ProprietaryIdentification
-	 * PartyIdentification35Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification23#ProprietaryIdentification
-	 * PartyIdentification23.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification6Choice#ProprietaryIdentification
-	 * PartyIdentification6Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification54#ProprietaryIdentification
-	 * PartyIdentification54.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification6#Other
-	 * OrganisationIdentification6.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification22#AlternativeIdentifier
-	 * PartyIdentification22.AlternativeIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification44#AlternativeIdentifier
-	 * PartyIdentification44.AlternativeIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#AcquirerIdentification
-	 * AcquirerProtocolParameters1.AcquirerIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#AcquirerIdentification
-	 * AcquirerProtocolParameters3.AcquirerIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment8#MerchantIdentification
-	 * CardPaymentEnvironment8.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment17#MerchantIdentification
-	 * CardPaymentEnvironment17.MerchantIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer1#Identification
-	 * Acquirer1.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult1#AuthorisationEntity
-	 * AuthorisationResult1.AuthorisationEntity}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer2#Identification
-	 * Acquirer2.Identification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer3#Identification
-	 * Acquirer3.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation8#Identification
-	 * Organisation8.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation9#Identification
-	 * Organisation9.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult2#AuthorisationEntity
-	 * AuthorisationResult2.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult3#AuthorisationEntity
-	 * AuthorisationResult3.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment3#MerchantIdentification
-	 * CardPaymentEnvironment3.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment11#MerchantIdentification
-	 * CardPaymentEnvironment11.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment16#MerchantIdentification
-	 * CardPaymentEnvironment16.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment7#MerchantIdentification
-	 * CardPaymentEnvironment7.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment15#MerchantIdentification
-	 * CardPaymentEnvironment15.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment19#MerchantIdentification
-	 * CardPaymentEnvironment19.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson2#OtherIdentification
-	 * IndividualPerson2.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson12#OtherIdentification
-	 * IndividualPerson12.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#OtherIdentification
-	 * IndividualPerson9.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#ProprietaryIdentification
-	 * NonFinancialInstitutionIdentification1.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification2#OtherIdentification
-	 * PersonIdentification2.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification1#ProprietaryIdentification
-	 * FinancialInstitutionIdentification1.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#ProprietaryIdentification
-	 * PartyIdentification9Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PersonIdentificationType1Choice#OtherIdentification
-	 * PersonIdentificationType1Choice.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#AdditionalIdentification
-	 * BeneficialOwner1.AdditionalIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification11Choice#ProprietaryIdentification
-	 * PartyIdentification11Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification25#ProprietaryIdentification
-	 * PartyIdentification25.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification6#ProprietaryIdentification
-	 * FinancialInstitutionIdentification6.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification26#ProprietaryIdentification
-	 * PartyIdentification26.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification27#ProprietaryIdentification
-	 * PartyIdentification27.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification28#ProprietaryIdentification
-	 * PartyIdentification28.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification33Choice#ProprietaryIdentification
-	 * PartyIdentification33Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification66Choice#ProprietaryIdentification
-	 * PartyIdentification66Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification67Choice#ProprietaryIdentification
-	 * PartyIdentification67Choice.ProprietaryIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.ContactDetails3#Other
-	 * ContactDetails3.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType1Choice#Proprietary
-	 * IdentificationType1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson15#OtherIdentification
-	 * IndividualPerson15.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification4#OtherIdentification
-	 * PersonIdentification4.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification5#ProprietaryIdentification
-	 * FinancialInstitutionIdentification5.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification26Choice#ProprietaryIdentification
-	 * PartyIdentification26Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice#ProprietaryIdentification
-	 * FinancialInstitutionIdentification6Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification24#ProprietaryIdentification
-	 * PartyIdentification24.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification72Choice#ProprietaryIdentification
-	 * PartyIdentification72Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#ProprietaryIdentification
-	 * PartyIdentification71Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#Proprietary
-	 * SafekeepingPlaceFormat1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson21#ModifiedOtherIdentification
-	 * IndividualPerson21.ModifiedOtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson22#OtherIdentification
-	 * IndividualPerson22.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification62#ProprietaryIdentification
-	 * PartyIdentification62.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification64#ProprietaryIdentification
-	 * PartyIdentification64.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment31#MerchantIdentification
-	 * CardPaymentEnvironment31.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment29#MerchantIdentification
-	 * CardPaymentEnvironment29.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#AcquirerIdentification
-	 * AcquirerProtocolParameters6.AcquirerIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment25#MerchantIdentification
-	 * CardPaymentEnvironment25.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification7#Other
-	 * PersonIdentification7.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#MerchantIdentification
-	 * CardPaymentEnvironment30.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment28#MerchantIdentification
-	 * CardPaymentEnvironment28.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment21#MerchantIdentification
-	 * CardPaymentEnvironment21.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson23#OtherIdentification
-	 * IndividualPerson23.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#ModifiedOtherIdentification
-	 * IndividualPerson24.ModifiedOtherIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.OwnerType1#Proprietary
-	 * OwnerType1.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#AdditionalIdentification
-	 * BeneficialOwner2.AdditionalIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PledgeeFormat1Choice#Proprietary
-	 * PledgeeFormat1Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification83Choice#ProprietaryIdentification
-	 * PartyIdentification83Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice#Proprietary
-	 * SafekeepingPlaceFormat7Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification89Choice#ProprietaryIdentification
-	 * PartyIdentification89Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification87Choice#ProprietaryIdentification
-	 * PartyIdentification87Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification88Choice#ProprietaryIdentification
-	 * PartyIdentification88Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#Proprietary
-	 * PledgeeFormat2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment37#MerchantIdentification
-	 * CardPaymentEnvironment37.MerchantIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer4#Identification
-	 * Acquirer4.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment33#MerchantIdentification
-	 * CardPaymentEnvironment33.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#AcquirerIdentification
-	 * AcquirerProtocolParameters7.AcquirerIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer5#Identification
-	 * Acquirer5.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment43#MerchantIdentification
-	 * CardPaymentEnvironment43.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult4#AuthorisationEntity
-	 * AuthorisationResult4.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment41#MerchantIdentification
-	 * CardPaymentEnvironment41.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment42#MerchantIdentification
-	 * CardPaymentEnvironment42.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult5#AuthorisationEntity
-	 * AuthorisationResult5.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#MerchantIdentification
-	 * CardPaymentEnvironment44.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult6#AuthorisationEntity
-	 * AuthorisationResult6.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment38#MerchantIdentification
-	 * CardPaymentEnvironment38.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult8#AuthorisationEntity
-	 * AuthorisationResult8.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult7#AuthorisationEntity
-	 * AuthorisationResult7.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification1Choice#Other
-	 * CounterpartyIdentification1Choice.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult9#AuthorisationEntity
-	 * AuthorisationResult9.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification90Choice#ProprietaryIdentification
-	 * PartyIdentification90Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification92Choice#ProprietaryIdentification
-	 * PartyIdentification92Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice#Proprietary
-	 * SafekeepingPlaceFormat8Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification10#Other
-	 * PersonIdentification10.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation1Choice#Internal
-	 * PersonOrOrganisation1Choice.Internal}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice#Proprietary
-	 * SafekeepingPlaceFormat10Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification93Choice#ProprietaryIdentification
-	 * PartyIdentification93Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PledgeeFormat3Choice#Proprietary
-	 * PledgeeFormat3Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification94Choice#ProprietaryIdentification
-	 * PartyIdentification94Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification97Choice#ProprietaryIdentification
-	 * PartyIdentification97Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification1Choice#IdentificationNumber
-	 * IndividualPersonIdentification1Choice.IdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice#ProprietaryIdentification
-	 * FinancialInstitutionIdentification7Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#OtherIdentification
-	 * InvestmentAccountOwnershipInformation12.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#OtherIdentification
-	 * InvestmentAccountOwnershipInformation13.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashAccount33#AccountOwnerOtherIdentification
-	 * CashAccount33.AccountOwnerOtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification2Choice#IdentificationNumber
-	 * IndividualPersonIdentification2Choice.IdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#ProprietaryIdentification
-	 * PartyIdentification96Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification100Choice#ProprietaryIdentification
-	 * PartyIdentification100Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification101Choice#ProprietaryIdentification
-	 * PartyIdentification101Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification104Choice#ProprietaryIdentification
-	 * PartyIdentification104Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice#Proprietary
-	 * SafekeepingPlaceFormat11Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification103Choice#ProprietaryIdentification
-	 * PartyIdentification103Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification113Choice#ProprietaryIdentification
-	 * PartyIdentification113Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice#Proprietary
-	 * SafekeepingPlaceFormat17Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification115Choice#ProprietaryIdentification
-	 * PartyIdentification115Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification114Choice#ProprietaryIdentification
-	 * PartyIdentification114Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PledgeeFormat4Choice#Proprietary
-	 * PledgeeFormat4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice#Proprietary
-	 * SafekeepingPlaceFormat26Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification95Choice#ProprietaryIdentification
-	 * PartyIdentification95Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification2Choice#Other
-	 * CounterpartyIdentification2Choice.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment46#MerchantIdentification
-	 * CardPaymentEnvironment46.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment50#MerchantIdentification
-	 * CardPaymentEnvironment50.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult12#AuthorisationEntity
-	 * AuthorisationResult12.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult11#AuthorisationEntity
-	 * AuthorisationResult11.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult10#AuthorisationEntity
-	 * AuthorisationResult10.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#MerchantIdentification
-	 * CardPaymentEnvironment56.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment55#MerchantIdentification
-	 * CardPaymentEnvironment55.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#AcquirerIdentification
-	 * AcquirerProtocolParameters9.AcquirerIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#Other
-	 * PersonIdentification11.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation25#Identification
-	 * Organisation25.Identification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult13#AuthorisationEntity
-	 * AuthorisationResult13.AuthorisationEntity}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification12#Other
-	 * PersonIdentification12.Other}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson32#OtherIdentification
-	 * IndividualPerson32.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice#ProprietaryIdentification
-	 * FinancialInstitutionIdentification8Choice.ProprietaryIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.IndividualPerson31#OtherIdentification
-	 * IndividualPerson31.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#OtherIdentification
-	 * InvestmentAccountOwnershipInformation15.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#OtherIdentification
-	 * InvestmentAccountOwnershipInformation14.OtherIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification3Choice#IdentificationNumber
-	 * IndividualPersonIdentification3Choice.IdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice#Proprietary
-	 * SafekeepingPlaceFormat27Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice#SectorAndLocation
-	 * CounterpartyIdentification3Choice.SectorAndLocation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice#NameAndLocation
-	 * CounterpartyIdentification3Choice.NameAndLocation}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment64#MerchantIdentification
-	 * CardPaymentEnvironment64.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment65#MerchantIdentification
-	 * CardPaymentEnvironment65.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment67#MerchantIdentification
-	 * CardPaymentEnvironment67.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment63#MerchantIdentification
-	 * CardPaymentEnvironment63.MerchantIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#AcquirerIdentification
-	 * AcquirerProtocolParameters10.AcquirerIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification1Choice#mmProprietaryIdentification
+	 * PartyIdentification1Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice#mmProprietaryIdentification
+	 * PartyIdentification2Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification4Choice#mmProprietaryIdentification
+	 * PartyIdentification4Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson5#mmOtherIdentification
+	 * IndividualPerson5.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson10#mmOtherIdentification
+	 * IndividualPerson10.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification3Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson20#mmOtherIdentification
+	 * IndividualPerson20.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount26#mmAccountOwnerOtherIdentification
+	 * CashAccount26.mmAccountOwnerOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentificationChoice#mmIdentificationNumber
+	 * IndividualPersonIdentificationChoice.mmIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification5Choice#mmProprietaryIdentification
+	 * PartyIdentification5Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson6#mmModifiedOtherIdentification
+	 * IndividualPerson6.mmModifiedOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson11#mmModifiedOtherIdentification
+	 * IndividualPerson11.mmModifiedOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MemberIdentification2Choice#mmOther
+	 * MemberIdentification2Choice.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmProprietaryIdentification
+	 * OrganisationIdentification2.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification3#mmOtherIdentification
+	 * PersonIdentification3.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification4#mmOther
+	 * OrganisationIdentification4.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification5#mmOther
+	 * PersonIdentification5.mmOther}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ContactDetails2#mmOther
+	 * ContactDetails2.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification8#mmOther
+	 * OrganisationIdentification8.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification3#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification3.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification5Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification13Choice#mmProprietaryIdentification
+	 * PartyIdentification13Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification36Choice#mmProprietaryIdentification
+	 * PartyIdentification36Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification7#mmOther
+	 * OrganisationIdentification7.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification51Choice#mmProprietaryIdentification
+	 * PartyIdentification51Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification9#mmOther
+	 * OrganisationIdentification9.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification10Choice#mmProprietaryIdentification
+	 * PartyIdentification10Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification14Choice#mmProprietaryIdentification
+	 * PartyIdentification14Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification45Choice#mmProprietaryIdentification
+	 * PartyIdentification45Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification37Choice#mmProprietaryIdentification
+	 * PartyIdentification37Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice#mmProprietary
+	 * SafekeepingPlaceFormat3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification43Choice#mmProprietaryIdentification
+	 * PartyIdentification43Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification3Choice#mmProprietaryIdentification
+	 * PartyIdentification3Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification30Choice#mmProprietaryIdentification
+	 * PartyIdentification30Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification38Choice#mmProprietaryIdentification
+	 * PartyIdentification38Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification62Choice#mmProprietaryIdentification
+	 * PartyIdentification62Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification60Choice#mmProprietaryIdentification
+	 * PartyIdentification60Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification65Choice#mmProprietaryIdentification
+	 * PartyIdentification65Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice#mmProprietary
+	 * SafekeepingPlaceFormat4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification61Choice#mmProprietaryIdentification
+	 * PartyIdentification61Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice#mmProprietary
+	 * SafekeepingPlaceFormat2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification18Choice#mmProprietaryIdentification
+	 * PartyIdentification18Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice#mmProprietary
+	 * SafekeepingPlaceFormat5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification16Choice#mmProprietaryIdentification
+	 * PartyIdentification16Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification46Choice#mmProprietaryIdentification
+	 * PartyIdentification46Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification56Choice#mmProprietaryIdentification
+	 * PartyIdentification56Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification48Choice#mmProprietaryIdentification
+	 * PartyIdentification48Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification52Choice#mmProprietaryIdentification
+	 * PartyIdentification52Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification41Choice#mmProprietaryIdentification
+	 * PartyIdentification41Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification50Choice#mmProprietaryIdentification
+	 * PartyIdentification50Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification31Choice#mmProprietaryIdentification
+	 * PartyIdentification31Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification40Choice#mmProprietaryIdentification
+	 * PartyIdentification40Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification42Choice#mmProprietaryIdentification
+	 * PartyIdentification42Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification54Choice#mmProprietaryIdentification
+	 * PartyIdentification54Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification55Choice#mmProprietaryIdentification
+	 * PartyIdentification55Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification47Choice#mmProprietaryIdentification
+	 * PartyIdentification47Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification57Choice#mmProprietaryIdentification
+	 * PartyIdentification57Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormatChoice#mmIdentificationAsDSS
+	 * SafekeepingPlaceFormatChoice.mmIdentificationAsDSS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification49Choice#mmProprietaryIdentification
+	 * PartyIdentification49Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification59Choice#mmProprietaryIdentification
+	 * PartyIdentification59Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification64Choice#mmProprietaryIdentification
+	 * PartyIdentification64Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification63Choice#mmProprietaryIdentification
+	 * PartyIdentification63Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification15Choice#mmProprietaryIdentification
+	 * PartyIdentification15Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification32Choice#mmProprietaryIdentification
+	 * PartyIdentification32Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification70Choice#mmProprietaryIdentification
+	 * PartyIdentification70Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification23Choice#mmProprietaryIdentification
+	 * PartyIdentification23Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification35Choice#mmProprietaryIdentification
+	 * PartyIdentification35Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification23#mmProprietaryIdentification
+	 * PartyIdentification23.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification6Choice#mmProprietaryIdentification
+	 * PartyIdentification6Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification54#mmProprietaryIdentification
+	 * PartyIdentification54.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification6#mmOther
+	 * OrganisationIdentification6.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification22#mmAlternativeIdentifier
+	 * PartyIdentification22.mmAlternativeIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification44#mmAlternativeIdentifier
+	 * PartyIdentification44.mmAlternativeIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmAcquirerIdentification
+	 * AcquirerProtocolParameters1.mmAcquirerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmAcquirerIdentification
+	 * AcquirerProtocolParameters3.mmAcquirerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment8#mmMerchantIdentification
+	 * CardPaymentEnvironment8.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment17#mmMerchantIdentification
+	 * CardPaymentEnvironment17.mmMerchantIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer1#mmIdentification
+	 * Acquirer1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult1#mmAuthorisationEntity
+	 * AuthorisationResult1.mmAuthorisationEntity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer2#mmIdentification
+	 * Acquirer2.mmIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer3#mmIdentification
+	 * Acquirer3.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation8#mmIdentification
+	 * Organisation8.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation9#mmIdentification
+	 * Organisation9.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult2#mmAuthorisationEntity
+	 * AuthorisationResult2.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult3#mmAuthorisationEntity
+	 * AuthorisationResult3.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment3#mmMerchantIdentification
+	 * CardPaymentEnvironment3.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment11#mmMerchantIdentification
+	 * CardPaymentEnvironment11.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment16#mmMerchantIdentification
+	 * CardPaymentEnvironment16.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment7#mmMerchantIdentification
+	 * CardPaymentEnvironment7.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment15#mmMerchantIdentification
+	 * CardPaymentEnvironment15.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment19#mmMerchantIdentification
+	 * CardPaymentEnvironment19.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson2#mmOtherIdentification
+	 * IndividualPerson2.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson12#mmOtherIdentification
+	 * IndividualPerson12.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson9#mmOtherIdentification
+	 * IndividualPerson9.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmProprietaryIdentification
+	 * NonFinancialInstitutionIdentification1.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification2#mmOtherIdentification
+	 * PersonIdentification2.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification1#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification1.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification9Choice#mmProprietaryIdentification
+	 * PartyIdentification9Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PersonIdentificationType1Choice#mmOtherIdentification
+	 * PersonIdentificationType1Choice.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner1#mmAdditionalIdentification
+	 * BeneficialOwner1.mmAdditionalIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification11Choice#mmProprietaryIdentification
+	 * PartyIdentification11Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification25#mmProprietaryIdentification
+	 * PartyIdentification25.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification6#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification6.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification26#mmProprietaryIdentification
+	 * PartyIdentification26.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification27#mmProprietaryIdentification
+	 * PartyIdentification27.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification28#mmProprietaryIdentification
+	 * PartyIdentification28.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification33Choice#mmProprietaryIdentification
+	 * PartyIdentification33Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification66Choice#mmProprietaryIdentification
+	 * PartyIdentification66Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification67Choice#mmProprietaryIdentification
+	 * PartyIdentification67Choice.mmProprietaryIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ContactDetails3#mmOther
+	 * ContactDetails3.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType1Choice#mmProprietary
+	 * IdentificationType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson15#mmOtherIdentification
+	 * IndividualPerson15.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification4#mmOtherIdentification
+	 * PersonIdentification4.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification5#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification5.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification26Choice#mmProprietaryIdentification
+	 * PartyIdentification26Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification6Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification24#mmProprietaryIdentification
+	 * PartyIdentification24.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification72Choice#mmProprietaryIdentification
+	 * PartyIdentification72Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification71Choice#mmProprietaryIdentification
+	 * PartyIdentification71Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice#mmProprietary
+	 * SafekeepingPlaceFormat1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson21#mmModifiedOtherIdentification
+	 * IndividualPerson21.mmModifiedOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson22#mmOtherIdentification
+	 * IndividualPerson22.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification62#mmProprietaryIdentification
+	 * PartyIdentification62.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification64#mmProprietaryIdentification
+	 * PartyIdentification64.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment31#mmMerchantIdentification
+	 * CardPaymentEnvironment31.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment29#mmMerchantIdentification
+	 * CardPaymentEnvironment29.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmAcquirerIdentification
+	 * AcquirerProtocolParameters6.mmAcquirerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment25#mmMerchantIdentification
+	 * CardPaymentEnvironment25.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmOther
+	 * PersonIdentification7.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30#mmMerchantIdentification
+	 * CardPaymentEnvironment30.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment28#mmMerchantIdentification
+	 * CardPaymentEnvironment28.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment21#mmMerchantIdentification
+	 * CardPaymentEnvironment21.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson23#mmOtherIdentification
+	 * IndividualPerson23.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmModifiedOtherIdentification
+	 * IndividualPerson24.mmModifiedOtherIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OwnerType1#mmProprietary
+	 * OwnerType1.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmAdditionalIdentification
+	 * BeneficialOwner2.mmAdditionalIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PledgeeFormat1Choice#mmProprietary
+	 * PledgeeFormat1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification83Choice#mmProprietaryIdentification
+	 * PartyIdentification83Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice#mmProprietary
+	 * SafekeepingPlaceFormat7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification89Choice#mmProprietaryIdentification
+	 * PartyIdentification89Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification87Choice#mmProprietaryIdentification
+	 * PartyIdentification87Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification88Choice#mmProprietaryIdentification
+	 * PartyIdentification88Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice#mmProprietary
+	 * PledgeeFormat2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment37#mmMerchantIdentification
+	 * CardPaymentEnvironment37.mmMerchantIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer4#mmIdentification
+	 * Acquirer4.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment33#mmMerchantIdentification
+	 * CardPaymentEnvironment33.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#mmAcquirerIdentification
+	 * AcquirerProtocolParameters7.mmAcquirerIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Acquirer5#mmIdentification
+	 * Acquirer5.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment43#mmMerchantIdentification
+	 * CardPaymentEnvironment43.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult4#mmAuthorisationEntity
+	 * AuthorisationResult4.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment41#mmMerchantIdentification
+	 * CardPaymentEnvironment41.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment42#mmMerchantIdentification
+	 * CardPaymentEnvironment42.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult5#mmAuthorisationEntity
+	 * AuthorisationResult5.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44#mmMerchantIdentification
+	 * CardPaymentEnvironment44.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult6#mmAuthorisationEntity
+	 * AuthorisationResult6.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment38#mmMerchantIdentification
+	 * CardPaymentEnvironment38.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult8#mmAuthorisationEntity
+	 * AuthorisationResult8.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult7#mmAuthorisationEntity
+	 * AuthorisationResult7.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification1Choice#mmOther
+	 * CounterpartyIdentification1Choice.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult9#mmAuthorisationEntity
+	 * AuthorisationResult9.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification90Choice#mmProprietaryIdentification
+	 * PartyIdentification90Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification92Choice#mmProprietaryIdentification
+	 * PartyIdentification92Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice#mmProprietary
+	 * SafekeepingPlaceFormat8Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification10#mmOther
+	 * PersonIdentification10.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation1Choice#mmInternal
+	 * PersonOrOrganisation1Choice.mmInternal}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice#mmProprietary
+	 * SafekeepingPlaceFormat10Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification93Choice#mmProprietaryIdentification
+	 * PartyIdentification93Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PledgeeFormat3Choice#mmProprietary
+	 * PledgeeFormat3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification94Choice#mmProprietaryIdentification
+	 * PartyIdentification94Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification97Choice#mmProprietaryIdentification
+	 * PartyIdentification97Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification1Choice#mmIdentificationNumber
+	 * IndividualPersonIdentification1Choice.mmIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification7Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12#mmOtherIdentification
+	 * InvestmentAccountOwnershipInformation12.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13#mmOtherIdentification
+	 * InvestmentAccountOwnershipInformation13.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount33#mmAccountOwnerOtherIdentification
+	 * CashAccount33.mmAccountOwnerOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification2Choice#mmIdentificationNumber
+	 * IndividualPersonIdentification2Choice.mmIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#mmProprietaryIdentification
+	 * PartyIdentification96Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification100Choice#mmProprietaryIdentification
+	 * PartyIdentification100Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification101Choice#mmProprietaryIdentification
+	 * PartyIdentification101Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification104Choice#mmProprietaryIdentification
+	 * PartyIdentification104Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice#mmProprietary
+	 * SafekeepingPlaceFormat11Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification103Choice#mmProprietaryIdentification
+	 * PartyIdentification103Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification113Choice#mmProprietaryIdentification
+	 * PartyIdentification113Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice#mmProprietary
+	 * SafekeepingPlaceFormat17Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification115Choice#mmProprietaryIdentification
+	 * PartyIdentification115Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification114Choice#mmProprietaryIdentification
+	 * PartyIdentification114Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PledgeeFormat4Choice#mmProprietary
+	 * PledgeeFormat4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice#mmProprietary
+	 * SafekeepingPlaceFormat26Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification95Choice#mmProprietaryIdentification
+	 * PartyIdentification95Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification2Choice#mmOther
+	 * CounterpartyIdentification2Choice.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment46#mmMerchantIdentification
+	 * CardPaymentEnvironment46.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment50#mmMerchantIdentification
+	 * CardPaymentEnvironment50.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult12#mmAuthorisationEntity
+	 * AuthorisationResult12.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult11#mmAuthorisationEntity
+	 * AuthorisationResult11.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult10#mmAuthorisationEntity
+	 * AuthorisationResult10.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56#mmMerchantIdentification
+	 * CardPaymentEnvironment56.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment55#mmMerchantIdentification
+	 * CardPaymentEnvironment55.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#mmAcquirerIdentification
+	 * AcquirerProtocolParameters9.mmAcquirerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmOther
+	 * PersonIdentification11.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation25#mmIdentification
+	 * Organisation25.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthorisationResult13#mmAuthorisationEntity
+	 * AuthorisationResult13.mmAuthorisationEntity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification12#mmOther
+	 * PersonIdentification12.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson32#mmOtherIdentification
+	 * IndividualPerson32.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification8Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson31#mmOtherIdentification
+	 * IndividualPerson31.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15#mmOtherIdentification
+	 * InvestmentAccountOwnershipInformation15.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#mmOtherIdentification
+	 * InvestmentAccountOwnershipInformation14.mmOtherIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification3Choice#mmIdentificationNumber
+	 * IndividualPersonIdentification3Choice.mmIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice#mmProprietary
+	 * SafekeepingPlaceFormat27Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice#mmSectorAndLocation
+	 * CounterpartyIdentification3Choice.mmSectorAndLocation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice#mmNameAndLocation
+	 * CounterpartyIdentification3Choice.mmNameAndLocation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment64#mmMerchantIdentification
+	 * CardPaymentEnvironment64.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment65#mmMerchantIdentification
+	 * CardPaymentEnvironment65.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment67#mmMerchantIdentification
+	 * CardPaymentEnvironment67.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment63#mmMerchantIdentification
+	 * CardPaymentEnvironment63.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmAcquirerIdentification
+	 * AcquirerProtocolParameters10.mmAcquirerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2832,120 +2834,123 @@ public class PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd OtherIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmOtherIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification1Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification2Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification4Choice.ProprietaryIdentification, com.tools20022.repository.msg.IndividualPerson5.OtherIdentification,
-					com.tools20022.repository.msg.IndividualPerson10.OtherIdentification, com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice.ProprietaryIdentification,
-					com.tools20022.repository.msg.IndividualPerson20.OtherIdentification, com.tools20022.repository.msg.CashAccount26.AccountOwnerOtherIdentification,
-					com.tools20022.repository.choice.IndividualPersonIdentificationChoice.IdentificationNumber, com.tools20022.repository.choice.PartyIdentification5Choice.ProprietaryIdentification,
-					com.tools20022.repository.msg.IndividualPerson6.ModifiedOtherIdentification, com.tools20022.repository.msg.IndividualPerson11.ModifiedOtherIdentification,
-					com.tools20022.repository.choice.MemberIdentification2Choice.Other, com.tools20022.repository.msg.OrganisationIdentification2.ProprietaryIdentification,
-					com.tools20022.repository.msg.PersonIdentification3.OtherIdentification, com.tools20022.repository.msg.OrganisationIdentification4.Other, com.tools20022.repository.msg.PersonIdentification5.Other,
-					com.tools20022.repository.msg.ContactDetails2.Other, com.tools20022.repository.msg.OrganisationIdentification8.Other, com.tools20022.repository.msg.FinancialInstitutionIdentification3.ProprietaryIdentification,
-					com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification13Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification36Choice.ProprietaryIdentification, com.tools20022.repository.msg.OrganisationIdentification7.Other,
-					com.tools20022.repository.choice.PartyIdentification51Choice.ProprietaryIdentification, com.tools20022.repository.msg.OrganisationIdentification9.Other,
-					com.tools20022.repository.choice.PartyIdentification10Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification14Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification45Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification37Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice.Proprietary, com.tools20022.repository.choice.PartyIdentification43Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification3Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification30Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification38Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification62Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification60Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification65Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice.Proprietary, com.tools20022.repository.choice.PartyIdentification61Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice.Proprietary, com.tools20022.repository.choice.PartyIdentification18Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice.Proprietary, com.tools20022.repository.choice.PartyIdentification16Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification46Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification56Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification48Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification52Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification41Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification50Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification31Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification40Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification42Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification54Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification55Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification47Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification57Choice.ProprietaryIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.IdentificationAsDSS,
-					com.tools20022.repository.choice.PartyIdentification49Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification59Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification64Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification63Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification15Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification32Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification70Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification23Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification35Choice.ProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification23.ProprietaryIdentification,
-					com.tools20022.repository.msg.PartyIdentification6Choice.ProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification54.ProprietaryIdentification,
-					com.tools20022.repository.msg.OrganisationIdentification6.Other, com.tools20022.repository.msg.PartyIdentification22.AlternativeIdentifier, com.tools20022.repository.msg.PartyIdentification44.AlternativeIdentifier,
-					com.tools20022.repository.msg.AcquirerProtocolParameters1.AcquirerIdentification, com.tools20022.repository.msg.AcquirerProtocolParameters3.AcquirerIdentification,
-					com.tools20022.repository.msg.CardPaymentEnvironment8.MerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment17.MerchantIdentification, com.tools20022.repository.msg.Acquirer1.Identification,
-					com.tools20022.repository.msg.AuthorisationResult1.AuthorisationEntity, com.tools20022.repository.msg.Acquirer2.Identification, com.tools20022.repository.msg.Acquirer3.Identification,
-					com.tools20022.repository.msg.Organisation8.Identification, com.tools20022.repository.msg.Organisation9.Identification, com.tools20022.repository.msg.AuthorisationResult2.AuthorisationEntity,
-					com.tools20022.repository.msg.AuthorisationResult3.AuthorisationEntity, com.tools20022.repository.msg.CardPaymentEnvironment3.MerchantIdentification,
-					com.tools20022.repository.msg.CardPaymentEnvironment11.MerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment16.MerchantIdentification,
-					com.tools20022.repository.msg.CardPaymentEnvironment7.MerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment15.MerchantIdentification,
-					com.tools20022.repository.msg.CardPaymentEnvironment19.MerchantIdentification, com.tools20022.repository.msg.IndividualPerson2.OtherIdentification, com.tools20022.repository.msg.IndividualPerson12.OtherIdentification,
-					com.tools20022.repository.msg.IndividualPerson9.OtherIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.ProprietaryIdentification,
-					com.tools20022.repository.msg.PersonIdentification2.OtherIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification1.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification9Choice.ProprietaryIdentification, com.tools20022.repository.choice.PersonIdentificationType1Choice.OtherIdentification,
-					com.tools20022.repository.msg.BeneficialOwner1.AdditionalIdentification, com.tools20022.repository.choice.PartyIdentification11Choice.ProprietaryIdentification,
-					com.tools20022.repository.msg.PartyIdentification25.ProprietaryIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification6.ProprietaryIdentification,
-					com.tools20022.repository.msg.PartyIdentification26.ProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification27.ProprietaryIdentification,
-					com.tools20022.repository.msg.PartyIdentification28.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification33Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification66Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification67Choice.ProprietaryIdentification,
-					com.tools20022.repository.msg.ContactDetails3.Other, com.tools20022.repository.choice.IdentificationType1Choice.Proprietary, com.tools20022.repository.msg.IndividualPerson15.OtherIdentification,
-					com.tools20022.repository.msg.PersonIdentification4.OtherIdentification, com.tools20022.repository.msg.FinancialInstitutionIdentification5.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification26Choice.ProprietaryIdentification, com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice.ProprietaryIdentification,
-					com.tools20022.repository.msg.PartyIdentification24.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification72Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification71Choice.ProprietaryIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.Proprietary,
-					com.tools20022.repository.msg.IndividualPerson21.ModifiedOtherIdentification, com.tools20022.repository.msg.IndividualPerson22.OtherIdentification,
-					com.tools20022.repository.msg.PartyIdentification62.ProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification64.ProprietaryIdentification,
-					com.tools20022.repository.msg.CardPaymentEnvironment31.MerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment29.MerchantIdentification,
-					com.tools20022.repository.msg.AcquirerProtocolParameters6.AcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment25.MerchantIdentification, com.tools20022.repository.msg.PersonIdentification7.Other,
-					com.tools20022.repository.msg.CardPaymentEnvironment30.MerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment28.MerchantIdentification,
-					com.tools20022.repository.msg.CardPaymentEnvironment21.MerchantIdentification, com.tools20022.repository.msg.IndividualPerson23.OtherIdentification,
-					com.tools20022.repository.msg.IndividualPerson24.ModifiedOtherIdentification, com.tools20022.repository.msg.OwnerType1.Proprietary, com.tools20022.repository.msg.BeneficialOwner2.AdditionalIdentification,
-					com.tools20022.repository.choice.PledgeeFormat1Choice.Proprietary, com.tools20022.repository.choice.PartyIdentification83Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice.Proprietary, com.tools20022.repository.choice.PartyIdentification89Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification87Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification88Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PledgeeFormat2Choice.Proprietary, com.tools20022.repository.msg.CardPaymentEnvironment37.MerchantIdentification, com.tools20022.repository.msg.Acquirer4.Identification,
-					com.tools20022.repository.msg.CardPaymentEnvironment33.MerchantIdentification, com.tools20022.repository.msg.AcquirerProtocolParameters7.AcquirerIdentification, com.tools20022.repository.msg.Acquirer5.Identification,
-					com.tools20022.repository.msg.CardPaymentEnvironment43.MerchantIdentification, com.tools20022.repository.msg.AuthorisationResult4.AuthorisationEntity,
-					com.tools20022.repository.msg.CardPaymentEnvironment41.MerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment42.MerchantIdentification,
-					com.tools20022.repository.msg.AuthorisationResult5.AuthorisationEntity, com.tools20022.repository.msg.CardPaymentEnvironment44.MerchantIdentification,
-					com.tools20022.repository.msg.AuthorisationResult6.AuthorisationEntity, com.tools20022.repository.msg.CardPaymentEnvironment38.MerchantIdentification,
-					com.tools20022.repository.msg.AuthorisationResult8.AuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult7.AuthorisationEntity, com.tools20022.repository.choice.CounterpartyIdentification1Choice.Other,
-					com.tools20022.repository.msg.AuthorisationResult9.AuthorisationEntity, com.tools20022.repository.choice.PartyIdentification90Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification92Choice.ProprietaryIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.Proprietary,
-					com.tools20022.repository.msg.PersonIdentification10.Other, com.tools20022.repository.choice.PersonOrOrganisation1Choice.Internal, com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.Proprietary,
-					com.tools20022.repository.choice.PartyIdentification93Choice.ProprietaryIdentification, com.tools20022.repository.choice.PledgeeFormat3Choice.Proprietary,
-					com.tools20022.repository.choice.PartyIdentification94Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification97Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.IndividualPersonIdentification1Choice.IdentificationNumber, com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.ProprietaryIdentification,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.OtherIdentification, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.OtherIdentification,
-					com.tools20022.repository.msg.CashAccount33.AccountOwnerOtherIdentification, com.tools20022.repository.choice.IndividualPersonIdentification2Choice.IdentificationNumber,
-					com.tools20022.repository.choice.PartyIdentification96Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification100Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification101Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification104Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice.Proprietary, com.tools20022.repository.choice.PartyIdentification103Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PartyIdentification113Choice.ProprietaryIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.Proprietary,
-					com.tools20022.repository.choice.PartyIdentification115Choice.ProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification114Choice.ProprietaryIdentification,
-					com.tools20022.repository.choice.PledgeeFormat4Choice.Proprietary, com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice.Proprietary,
-					com.tools20022.repository.choice.PartyIdentification95Choice.ProprietaryIdentification, com.tools20022.repository.choice.CounterpartyIdentification2Choice.Other,
-					com.tools20022.repository.msg.CardPaymentEnvironment46.MerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment50.MerchantIdentification,
-					com.tools20022.repository.msg.AuthorisationResult12.AuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult11.AuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult10.AuthorisationEntity,
-					com.tools20022.repository.msg.CardPaymentEnvironment56.MerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment55.MerchantIdentification,
-					com.tools20022.repository.msg.AcquirerProtocolParameters9.AcquirerIdentification, com.tools20022.repository.msg.PersonIdentification11.Other, com.tools20022.repository.msg.Organisation25.Identification,
-					com.tools20022.repository.msg.AuthorisationResult13.AuthorisationEntity, com.tools20022.repository.msg.PersonIdentification12.Other, com.tools20022.repository.msg.IndividualPerson32.OtherIdentification,
-					com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice.ProprietaryIdentification, com.tools20022.repository.msg.IndividualPerson31.OtherIdentification,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.OtherIdentification, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.OtherIdentification,
-					com.tools20022.repository.choice.IndividualPersonIdentification3Choice.IdentificationNumber, com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice.Proprietary,
-					com.tools20022.repository.choice.CounterpartyIdentification3Choice.SectorAndLocation, com.tools20022.repository.choice.CounterpartyIdentification3Choice.NameAndLocation,
-					com.tools20022.repository.msg.CardPaymentEnvironment64.MerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment65.MerchantIdentification,
-					com.tools20022.repository.msg.CardPaymentEnvironment67.MerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment63.MerchantIdentification,
-					com.tools20022.repository.msg.AcquirerProtocolParameters10.AcquirerIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification1Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification2Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification4Choice.mmProprietaryIdentification, com.tools20022.repository.msg.IndividualPerson5.mmOtherIdentification,
+					com.tools20022.repository.msg.IndividualPerson10.mmOtherIdentification, com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice.mmProprietaryIdentification,
+					com.tools20022.repository.msg.IndividualPerson20.mmOtherIdentification, com.tools20022.repository.msg.CashAccount26.mmAccountOwnerOtherIdentification,
+					com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmIdentificationNumber, com.tools20022.repository.choice.PartyIdentification5Choice.mmProprietaryIdentification,
+					com.tools20022.repository.msg.IndividualPerson6.mmModifiedOtherIdentification, com.tools20022.repository.msg.IndividualPerson11.mmModifiedOtherIdentification,
+					com.tools20022.repository.choice.MemberIdentification2Choice.mmOther, com.tools20022.repository.msg.OrganisationIdentification2.mmProprietaryIdentification,
+					com.tools20022.repository.msg.PersonIdentification3.mmOtherIdentification, com.tools20022.repository.msg.OrganisationIdentification4.mmOther, com.tools20022.repository.msg.PersonIdentification5.mmOther,
+					com.tools20022.repository.msg.ContactDetails2.mmOther, com.tools20022.repository.msg.OrganisationIdentification8.mmOther, com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmProprietaryIdentification,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification13Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification36Choice.mmProprietaryIdentification, com.tools20022.repository.msg.OrganisationIdentification7.mmOther,
+					com.tools20022.repository.choice.PartyIdentification51Choice.mmProprietaryIdentification, com.tools20022.repository.msg.OrganisationIdentification9.mmOther,
+					com.tools20022.repository.choice.PartyIdentification10Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification14Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification45Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification37Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice.mmProprietary, com.tools20022.repository.choice.PartyIdentification43Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification3Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification30Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification38Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification62Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification60Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification65Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat4Choice.mmProprietary, com.tools20022.repository.choice.PartyIdentification61Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat2Choice.mmProprietary, com.tools20022.repository.choice.PartyIdentification18Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat5Choice.mmProprietary, com.tools20022.repository.choice.PartyIdentification16Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification46Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification56Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification48Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification52Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification41Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification50Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification31Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification40Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification42Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification54Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification55Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification47Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification57Choice.mmProprietaryIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmIdentificationAsDSS,
+					com.tools20022.repository.choice.PartyIdentification49Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification59Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification64Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification63Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification15Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification32Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification70Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification23Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification35Choice.mmProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification23.mmProprietaryIdentification,
+					com.tools20022.repository.msg.PartyIdentification6Choice.mmProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification54.mmProprietaryIdentification,
+					com.tools20022.repository.msg.OrganisationIdentification6.mmOther, com.tools20022.repository.msg.PartyIdentification22.mmAlternativeIdentifier,
+					com.tools20022.repository.msg.PartyIdentification44.mmAlternativeIdentifier, com.tools20022.repository.msg.AcquirerProtocolParameters1.mmAcquirerIdentification,
+					com.tools20022.repository.msg.AcquirerProtocolParameters3.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment8.mmMerchantIdentification,
+					com.tools20022.repository.msg.CardPaymentEnvironment17.mmMerchantIdentification, com.tools20022.repository.msg.Acquirer1.mmIdentification, com.tools20022.repository.msg.AuthorisationResult1.mmAuthorisationEntity,
+					com.tools20022.repository.msg.Acquirer2.mmIdentification, com.tools20022.repository.msg.Acquirer3.mmIdentification, com.tools20022.repository.msg.Organisation8.mmIdentification,
+					com.tools20022.repository.msg.Organisation9.mmIdentification, com.tools20022.repository.msg.AuthorisationResult2.mmAuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult3.mmAuthorisationEntity,
+					com.tools20022.repository.msg.CardPaymentEnvironment3.mmMerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment11.mmMerchantIdentification,
+					com.tools20022.repository.msg.CardPaymentEnvironment16.mmMerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment7.mmMerchantIdentification,
+					com.tools20022.repository.msg.CardPaymentEnvironment15.mmMerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment19.mmMerchantIdentification,
+					com.tools20022.repository.msg.IndividualPerson2.mmOtherIdentification, com.tools20022.repository.msg.IndividualPerson12.mmOtherIdentification, com.tools20022.repository.msg.IndividualPerson9.mmOtherIdentification,
+					com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmProprietaryIdentification, com.tools20022.repository.msg.PersonIdentification2.mmOtherIdentification,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification9Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PersonIdentificationType1Choice.mmOtherIdentification, com.tools20022.repository.msg.BeneficialOwner1.mmAdditionalIdentification,
+					com.tools20022.repository.choice.PartyIdentification11Choice.mmProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification25.mmProprietaryIdentification,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification26.mmProprietaryIdentification,
+					com.tools20022.repository.msg.PartyIdentification27.mmProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification28.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification33Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification66Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification67Choice.mmProprietaryIdentification, com.tools20022.repository.msg.ContactDetails3.mmOther, com.tools20022.repository.choice.IdentificationType1Choice.mmProprietary,
+					com.tools20022.repository.msg.IndividualPerson15.mmOtherIdentification, com.tools20022.repository.msg.PersonIdentification4.mmOtherIdentification,
+					com.tools20022.repository.msg.FinancialInstitutionIdentification5.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification26Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice.mmProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification24.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification72Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification71Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat1Choice.mmProprietary, com.tools20022.repository.msg.IndividualPerson21.mmModifiedOtherIdentification,
+					com.tools20022.repository.msg.IndividualPerson22.mmOtherIdentification, com.tools20022.repository.msg.PartyIdentification62.mmProprietaryIdentification,
+					com.tools20022.repository.msg.PartyIdentification64.mmProprietaryIdentification, com.tools20022.repository.msg.CardPaymentEnvironment31.mmMerchantIdentification,
+					com.tools20022.repository.msg.CardPaymentEnvironment29.mmMerchantIdentification, com.tools20022.repository.msg.AcquirerProtocolParameters6.mmAcquirerIdentification,
+					com.tools20022.repository.msg.CardPaymentEnvironment25.mmMerchantIdentification, com.tools20022.repository.msg.PersonIdentification7.mmOther,
+					com.tools20022.repository.msg.CardPaymentEnvironment30.mmMerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment28.mmMerchantIdentification,
+					com.tools20022.repository.msg.CardPaymentEnvironment21.mmMerchantIdentification, com.tools20022.repository.msg.IndividualPerson23.mmOtherIdentification,
+					com.tools20022.repository.msg.IndividualPerson24.mmModifiedOtherIdentification, com.tools20022.repository.msg.OwnerType1.mmProprietary, com.tools20022.repository.msg.BeneficialOwner2.mmAdditionalIdentification,
+					com.tools20022.repository.choice.PledgeeFormat1Choice.mmProprietary, com.tools20022.repository.choice.PartyIdentification83Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice.mmProprietary, com.tools20022.repository.choice.PartyIdentification89Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification87Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification88Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PledgeeFormat2Choice.mmProprietary, com.tools20022.repository.msg.CardPaymentEnvironment37.mmMerchantIdentification, com.tools20022.repository.msg.Acquirer4.mmIdentification,
+					com.tools20022.repository.msg.CardPaymentEnvironment33.mmMerchantIdentification, com.tools20022.repository.msg.AcquirerProtocolParameters7.mmAcquirerIdentification,
+					com.tools20022.repository.msg.Acquirer5.mmIdentification, com.tools20022.repository.msg.CardPaymentEnvironment43.mmMerchantIdentification, com.tools20022.repository.msg.AuthorisationResult4.mmAuthorisationEntity,
+					com.tools20022.repository.msg.CardPaymentEnvironment41.mmMerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment42.mmMerchantIdentification,
+					com.tools20022.repository.msg.AuthorisationResult5.mmAuthorisationEntity, com.tools20022.repository.msg.CardPaymentEnvironment44.mmMerchantIdentification,
+					com.tools20022.repository.msg.AuthorisationResult6.mmAuthorisationEntity, com.tools20022.repository.msg.CardPaymentEnvironment38.mmMerchantIdentification,
+					com.tools20022.repository.msg.AuthorisationResult8.mmAuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult7.mmAuthorisationEntity,
+					com.tools20022.repository.choice.CounterpartyIdentification1Choice.mmOther, com.tools20022.repository.msg.AuthorisationResult9.mmAuthorisationEntity,
+					com.tools20022.repository.choice.PartyIdentification90Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification92Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.mmProprietary, com.tools20022.repository.msg.PersonIdentification10.mmOther, com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmInternal,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmProprietary, com.tools20022.repository.choice.PartyIdentification93Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PledgeeFormat3Choice.mmProprietary, com.tools20022.repository.choice.PartyIdentification94Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification97Choice.mmProprietaryIdentification, com.tools20022.repository.choice.IndividualPersonIdentification1Choice.mmIdentificationNumber,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.mmProprietaryIdentification, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmOtherIdentification,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmOtherIdentification, com.tools20022.repository.msg.CashAccount33.mmAccountOwnerOtherIdentification,
+					com.tools20022.repository.choice.IndividualPersonIdentification2Choice.mmIdentificationNumber, com.tools20022.repository.choice.PartyIdentification96Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification100Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification101Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification104Choice.mmProprietaryIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice.mmProprietary,
+					com.tools20022.repository.choice.PartyIdentification103Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PartyIdentification113Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.mmProprietary, com.tools20022.repository.choice.PartyIdentification115Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.PartyIdentification114Choice.mmProprietaryIdentification, com.tools20022.repository.choice.PledgeeFormat4Choice.mmProprietary,
+					com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice.mmProprietary, com.tools20022.repository.choice.PartyIdentification95Choice.mmProprietaryIdentification,
+					com.tools20022.repository.choice.CounterpartyIdentification2Choice.mmOther, com.tools20022.repository.msg.CardPaymentEnvironment46.mmMerchantIdentification,
+					com.tools20022.repository.msg.CardPaymentEnvironment50.mmMerchantIdentification, com.tools20022.repository.msg.AuthorisationResult12.mmAuthorisationEntity,
+					com.tools20022.repository.msg.AuthorisationResult11.mmAuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult10.mmAuthorisationEntity,
+					com.tools20022.repository.msg.CardPaymentEnvironment56.mmMerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment55.mmMerchantIdentification,
+					com.tools20022.repository.msg.AcquirerProtocolParameters9.mmAcquirerIdentification, com.tools20022.repository.msg.PersonIdentification11.mmOther, com.tools20022.repository.msg.Organisation25.mmIdentification,
+					com.tools20022.repository.msg.AuthorisationResult13.mmAuthorisationEntity, com.tools20022.repository.msg.PersonIdentification12.mmOther, com.tools20022.repository.msg.IndividualPerson32.mmOtherIdentification,
+					com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice.mmProprietaryIdentification, com.tools20022.repository.msg.IndividualPerson31.mmOtherIdentification,
+					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmOtherIdentification, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmOtherIdentification,
+					com.tools20022.repository.choice.IndividualPersonIdentification3Choice.mmIdentificationNumber, com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice.mmProprietary,
+					com.tools20022.repository.choice.CounterpartyIdentification3Choice.mmSectorAndLocation, com.tools20022.repository.choice.CounterpartyIdentification3Choice.mmNameAndLocation,
+					com.tools20022.repository.msg.CardPaymentEnvironment64.mmMerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment65.mmMerchantIdentification,
+					com.tools20022.repository.msg.CardPaymentEnvironment67.mmMerchantIdentification, com.tools20022.repository.msg.CardPaymentEnvironment63.mmMerchantIdentification,
+					com.tools20022.repository.msg.AcquirerProtocolParameters10.mmAcquirerIdentification);
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "OtherIdentification";
 			definition = "Identifier issued to a party for which no specific identifier has been defined.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.RelatedPartyIdentification;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmRelatedPartyIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
+	protected Party identifiedParty;
 	/**
 	 * Party for which an identification is provided.
 	 * <p>
@@ -2954,27 +2959,27 @@ public class PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Party Party}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#Party
-	 * QualifiedPartyIdentification1.Party}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QualifiedPartyIdentification1#mmParty
+	 * QualifiedPartyIdentification1.mmParty}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2986,21 +2991,22 @@ public class PartyIdentificationInformation {
 	 * definition} = "Party for which an identification is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd IdentifiedParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmIdentifiedParty = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QualifiedPartyIdentification1.Party);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QualifiedPartyIdentification1.mmParty);
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "IdentifiedParty";
 			definition = "Party for which an identification is provided.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> Party.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Party.Identification;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
 		}
 	};
+	protected Max35Text taxIdentificationNumber;
 	/**
 	 * Number assigned by a tax authority to an entity.
 	 * <p>
@@ -3010,109 +3016,109 @@ public class PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation2#TaxIdentificationNumber
-	 * Organisation2.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate3#DebtorTaxIdentificationNumber
-	 * DirectDebitMandate3.DebtorTaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#DebtorTaxIdentificationNumber
-	 * DirectDebitMandate4.DebtorTaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation13#TaxIdentificationNumber
-	 * Organisation13.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation4#TaxIdentificationNumber
-	 * Organisation4.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification5Choice#TaxIdentificationNumber
-	 * PartyIdentification5Choice.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation3#TaxIdentificationNumber
-	 * Organisation3.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#TaxIdentificationNumber
-	 * OrganisationIdentification2.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification3#TaxIdentificationNumber
-	 * PersonIdentification3.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxInformation2#CreditorTaxIdentification
-	 * TaxInformation2.CreditorTaxIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxInformation2#DebtorTaxIdentification
-	 * TaxInformation2.DebtorTaxIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxParty1#TaxIdentification
-	 * TaxParty1.TaxIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxParty1#RegistrationIdentification
-	 * TaxParty1.RegistrationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxParty2#TaxIdentification
-	 * TaxParty2.TaxIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxParty2#RegistrationIdentification
-	 * TaxParty2.RegistrationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#TaxIdentificationNumber
-	 * NonFinancialInstitutionIdentification1.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification2#TaxIdentificationNumber
-	 * PersonIdentification2.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PersonIdentificationType1Choice#TaxIdentificationNumber
-	 * PersonIdentificationType1Choice.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxParty3#TaxIdentification
-	 * TaxParty3.TaxIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxParty3#RegistrationIdentification
-	 * TaxParty3.RegistrationIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#CustomerTaxIdentification
-	 * BillingTaxRegion1.CustomerTaxIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification24#TaxIdentification
-	 * PartyIdentification24.TaxIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation15#TaxIdentificationNumber
-	 * Organisation15.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification7#TaxIdentificationNumber
-	 * PersonIdentification7.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation16#TaxIdentification
-	 * Organisation16.TaxIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation17#TaxIdentification
-	 * Organisation17.TaxIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation21#TaxIdentificationNumber
-	 * Organisation21.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#DebtorTaxIdentificationNumber
-	 * DirectDebitMandate5.DebtorTaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#TaxIdentificationNumber
-	 * PartyIdentification96Choice.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#TaxIdentificationNumber
-	 * PersonIdentification11.TaxIdentificationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#DebtorTaxIdentificationNumber
-	 * DirectDebitMandate6.DebtorTaxIdentificationNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation2#mmTaxIdentificationNumber
+	 * Organisation2.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate3#mmDebtorTaxIdentificationNumber
+	 * DirectDebitMandate3.mmDebtorTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmDebtorTaxIdentificationNumber
+	 * DirectDebitMandate4.mmDebtorTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation13#mmTaxIdentificationNumber
+	 * Organisation13.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation4#mmTaxIdentificationNumber
+	 * Organisation4.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification5Choice#mmTaxIdentificationNumber
+	 * PartyIdentification5Choice.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation3#mmTaxIdentificationNumber
+	 * Organisation3.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification2#mmTaxIdentificationNumber
+	 * OrganisationIdentification2.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification3#mmTaxIdentificationNumber
+	 * PersonIdentification3.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxInformation2#mmCreditorTaxIdentification
+	 * TaxInformation2.mmCreditorTaxIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxInformation2#mmDebtorTaxIdentification
+	 * TaxInformation2.mmDebtorTaxIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxParty1#mmTaxIdentification
+	 * TaxParty1.mmTaxIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxParty1#mmRegistrationIdentification
+	 * TaxParty1.mmRegistrationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxParty2#mmTaxIdentification
+	 * TaxParty2.mmTaxIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxParty2#mmRegistrationIdentification
+	 * TaxParty2.mmRegistrationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionIdentification1#mmTaxIdentificationNumber
+	 * NonFinancialInstitutionIdentification1.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification2#mmTaxIdentificationNumber
+	 * PersonIdentification2.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PersonIdentificationType1Choice#mmTaxIdentificationNumber
+	 * PersonIdentificationType1Choice.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxParty3#mmTaxIdentification
+	 * TaxParty3.mmTaxIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxParty3#mmRegistrationIdentification
+	 * TaxParty3.mmRegistrationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingTaxRegion1#mmCustomerTaxIdentification
+	 * BillingTaxRegion1.mmCustomerTaxIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification24#mmTaxIdentification
+	 * PartyIdentification24.mmTaxIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation15#mmTaxIdentificationNumber
+	 * Organisation15.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmTaxIdentificationNumber
+	 * PersonIdentification7.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation16#mmTaxIdentification
+	 * Organisation16.mmTaxIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation17#mmTaxIdentification
+	 * Organisation17.mmTaxIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation21#mmTaxIdentificationNumber
+	 * Organisation21.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmDebtorTaxIdentificationNumber
+	 * DirectDebitMandate5.mmDebtorTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#mmTaxIdentificationNumber
+	 * PartyIdentification96Choice.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmTaxIdentificationNumber
+	 * PersonIdentification11.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmDebtorTaxIdentificationNumber
+	 * DirectDebitMandate6.mmDebtorTaxIdentificationNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3124,31 +3130,33 @@ public class PartyIdentificationInformation {
 	 * definition} = "Number assigned by a tax authority to an entity."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TaxIdentificationNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTaxIdentificationNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation2.TaxIdentificationNumber, com.tools20022.repository.msg.DirectDebitMandate3.DebtorTaxIdentificationNumber,
-					com.tools20022.repository.msg.DirectDebitMandate4.DebtorTaxIdentificationNumber, com.tools20022.repository.msg.Organisation13.TaxIdentificationNumber, com.tools20022.repository.msg.Organisation4.TaxIdentificationNumber,
-					com.tools20022.repository.choice.PartyIdentification5Choice.TaxIdentificationNumber, com.tools20022.repository.msg.Organisation3.TaxIdentificationNumber,
-					com.tools20022.repository.msg.OrganisationIdentification2.TaxIdentificationNumber, com.tools20022.repository.msg.PersonIdentification3.TaxIdentificationNumber,
-					com.tools20022.repository.msg.TaxInformation2.CreditorTaxIdentification, com.tools20022.repository.msg.TaxInformation2.DebtorTaxIdentification, com.tools20022.repository.msg.TaxParty1.TaxIdentification,
-					com.tools20022.repository.msg.TaxParty1.RegistrationIdentification, com.tools20022.repository.msg.TaxParty2.TaxIdentification, com.tools20022.repository.msg.TaxParty2.RegistrationIdentification,
-					com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.TaxIdentificationNumber, com.tools20022.repository.msg.PersonIdentification2.TaxIdentificationNumber,
-					com.tools20022.repository.choice.PersonIdentificationType1Choice.TaxIdentificationNumber, com.tools20022.repository.msg.TaxParty3.TaxIdentification, com.tools20022.repository.msg.TaxParty3.RegistrationIdentification,
-					com.tools20022.repository.msg.BillingTaxRegion1.CustomerTaxIdentification, com.tools20022.repository.msg.PartyIdentification24.TaxIdentification, com.tools20022.repository.msg.Organisation15.TaxIdentificationNumber,
-					com.tools20022.repository.msg.PersonIdentification7.TaxIdentificationNumber, com.tools20022.repository.msg.Organisation16.TaxIdentification, com.tools20022.repository.msg.Organisation17.TaxIdentification,
-					com.tools20022.repository.msg.Organisation21.TaxIdentificationNumber, com.tools20022.repository.msg.DirectDebitMandate5.DebtorTaxIdentificationNumber,
-					com.tools20022.repository.choice.PartyIdentification96Choice.TaxIdentificationNumber, com.tools20022.repository.msg.PersonIdentification11.TaxIdentificationNumber,
-					com.tools20022.repository.msg.DirectDebitMandate6.DebtorTaxIdentificationNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation2.mmTaxIdentificationNumber, com.tools20022.repository.msg.DirectDebitMandate3.mmDebtorTaxIdentificationNumber,
+					com.tools20022.repository.msg.DirectDebitMandate4.mmDebtorTaxIdentificationNumber, com.tools20022.repository.msg.Organisation13.mmTaxIdentificationNumber,
+					com.tools20022.repository.msg.Organisation4.mmTaxIdentificationNumber, com.tools20022.repository.choice.PartyIdentification5Choice.mmTaxIdentificationNumber,
+					com.tools20022.repository.msg.Organisation3.mmTaxIdentificationNumber, com.tools20022.repository.msg.OrganisationIdentification2.mmTaxIdentificationNumber,
+					com.tools20022.repository.msg.PersonIdentification3.mmTaxIdentificationNumber, com.tools20022.repository.msg.TaxInformation2.mmCreditorTaxIdentification,
+					com.tools20022.repository.msg.TaxInformation2.mmDebtorTaxIdentification, com.tools20022.repository.msg.TaxParty1.mmTaxIdentification, com.tools20022.repository.msg.TaxParty1.mmRegistrationIdentification,
+					com.tools20022.repository.msg.TaxParty2.mmTaxIdentification, com.tools20022.repository.msg.TaxParty2.mmRegistrationIdentification,
+					com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmTaxIdentificationNumber, com.tools20022.repository.msg.PersonIdentification2.mmTaxIdentificationNumber,
+					com.tools20022.repository.choice.PersonIdentificationType1Choice.mmTaxIdentificationNumber, com.tools20022.repository.msg.TaxParty3.mmTaxIdentification,
+					com.tools20022.repository.msg.TaxParty3.mmRegistrationIdentification, com.tools20022.repository.msg.BillingTaxRegion1.mmCustomerTaxIdentification, com.tools20022.repository.msg.PartyIdentification24.mmTaxIdentification,
+					com.tools20022.repository.msg.Organisation15.mmTaxIdentificationNumber, com.tools20022.repository.msg.PersonIdentification7.mmTaxIdentificationNumber, com.tools20022.repository.msg.Organisation16.mmTaxIdentification,
+					com.tools20022.repository.msg.Organisation17.mmTaxIdentification, com.tools20022.repository.msg.Organisation21.mmTaxIdentificationNumber,
+					com.tools20022.repository.msg.DirectDebitMandate5.mmDebtorTaxIdentificationNumber, com.tools20022.repository.choice.PartyIdentification96Choice.mmTaxIdentificationNumber,
+					com.tools20022.repository.msg.PersonIdentification11.mmTaxIdentificationNumber, com.tools20022.repository.msg.DirectDebitMandate6.mmDebtorTaxIdentificationNumber);
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text nationalRegistrationNumber;
 	/**
 	 * Number assigned by a national registration authority to an entity. In
 	 * Singapore this is known as the NRIC.
@@ -3159,58 +3167,58 @@ public class PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation2#NationalRegistrationNumber
-	 * Organisation2.NationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate3#DebtorNationalRegistrationNumber
-	 * DirectDebitMandate3.DebtorNationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#DebtorNationalRegistrationNumber
-	 * DirectDebitMandate4.DebtorNationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation13#NationalRegistrationNumber
-	 * Organisation13.NationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation4#NationalRegistrationNumber
-	 * Organisation4.NationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification5Choice#NationalRegistrationNumber
-	 * PartyIdentification5Choice.NationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation3#NationalRegistrationNumber
-	 * Organisation3.NationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation15#NationalRegistrationNumber
-	 * Organisation15.NationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation16#NationalRegistrationNumber
-	 * Organisation16.NationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation17#NationalRegistrationNumber
-	 * Organisation17.NationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation21#NationalRegistrationNumber
-	 * Organisation21.NationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#DebtorNationalRegistrationNumber
-	 * DirectDebitMandate5.DebtorNationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#NationalRegistrationNumber
-	 * PartyIdentification96Choice.NationalRegistrationNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#DebtorNationalRegistrationNumber
-	 * DirectDebitMandate6.DebtorNationalRegistrationNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation2#mmNationalRegistrationNumber
+	 * Organisation2.mmNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate3#mmDebtorNationalRegistrationNumber
+	 * DirectDebitMandate3.mmDebtorNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate4#mmDebtorNationalRegistrationNumber
+	 * DirectDebitMandate4.mmDebtorNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation13#mmNationalRegistrationNumber
+	 * Organisation13.mmNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation4#mmNationalRegistrationNumber
+	 * Organisation4.mmNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification5Choice#mmNationalRegistrationNumber
+	 * PartyIdentification5Choice.mmNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation3#mmNationalRegistrationNumber
+	 * Organisation3.mmNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation15#mmNationalRegistrationNumber
+	 * Organisation15.mmNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation16#mmNationalRegistrationNumber
+	 * Organisation16.mmNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation17#mmNationalRegistrationNumber
+	 * Organisation17.mmNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation21#mmNationalRegistrationNumber
+	 * Organisation21.mmNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate5#mmDebtorNationalRegistrationNumber
+	 * DirectDebitMandate5.mmDebtorNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#mmNationalRegistrationNumber
+	 * PartyIdentification96Choice.mmNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmDebtorNationalRegistrationNumber
+	 * DirectDebitMandate6.mmDebtorNationalRegistrationNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3224,25 +3232,26 @@ public class PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute NationalRegistrationNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmNationalRegistrationNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation2.NationalRegistrationNumber, com.tools20022.repository.msg.DirectDebitMandate3.DebtorNationalRegistrationNumber,
-					com.tools20022.repository.msg.DirectDebitMandate4.DebtorNationalRegistrationNumber, com.tools20022.repository.msg.Organisation13.NationalRegistrationNumber,
-					com.tools20022.repository.msg.Organisation4.NationalRegistrationNumber, com.tools20022.repository.choice.PartyIdentification5Choice.NationalRegistrationNumber,
-					com.tools20022.repository.msg.Organisation3.NationalRegistrationNumber, com.tools20022.repository.msg.Organisation15.NationalRegistrationNumber, com.tools20022.repository.msg.Organisation16.NationalRegistrationNumber,
-					com.tools20022.repository.msg.Organisation17.NationalRegistrationNumber, com.tools20022.repository.msg.Organisation21.NationalRegistrationNumber,
-					com.tools20022.repository.msg.DirectDebitMandate5.DebtorNationalRegistrationNumber, com.tools20022.repository.choice.PartyIdentification96Choice.NationalRegistrationNumber,
-					com.tools20022.repository.msg.DirectDebitMandate6.DebtorNationalRegistrationNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation2.mmNationalRegistrationNumber, com.tools20022.repository.msg.DirectDebitMandate3.mmDebtorNationalRegistrationNumber,
+					com.tools20022.repository.msg.DirectDebitMandate4.mmDebtorNationalRegistrationNumber, com.tools20022.repository.msg.Organisation13.mmNationalRegistrationNumber,
+					com.tools20022.repository.msg.Organisation4.mmNationalRegistrationNumber, com.tools20022.repository.choice.PartyIdentification5Choice.mmNationalRegistrationNumber,
+					com.tools20022.repository.msg.Organisation3.mmNationalRegistrationNumber, com.tools20022.repository.msg.Organisation15.mmNationalRegistrationNumber,
+					com.tools20022.repository.msg.Organisation16.mmNationalRegistrationNumber, com.tools20022.repository.msg.Organisation17.mmNationalRegistrationNumber,
+					com.tools20022.repository.msg.Organisation21.mmNationalRegistrationNumber, com.tools20022.repository.msg.DirectDebitMandate5.mmDebtorNationalRegistrationNumber,
+					com.tools20022.repository.choice.PartyIdentification96Choice.mmNationalRegistrationNumber, com.tools20022.repository.msg.DirectDebitMandate6.mmDebtorNationalRegistrationNumber);
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "NationalRegistrationNumber";
 			definition = "Number assigned by a national registration authority to an entity. In Singapore this is known as the NRIC.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected TypeOfIdentificationCode typeOfIdentification;
 	/**
 	 * Specifies the type of alternate identification which can be used to
 	 * identify a party.
@@ -3254,70 +3263,70 @@ public class PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.TypeOfIdentificationCode
 	 * TypeOfIdentificationCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType2Choice#Code
-	 * IdentificationType2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType2Choice#Proprietary
-	 * IdentificationType2Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType4Choice#Code
-	 * IdentificationType4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType4Choice#Proprietary
-	 * IdentificationType4Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType5Choice#Code
-	 * IdentificationType5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType5Choice#Proprietary
-	 * IdentificationType5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType40Choice#Code
-	 * IdentificationType40Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType40Choice#Proprietary
-	 * IdentificationType40Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType41Choice#Code
-	 * IdentificationType41Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType41Choice#Proprietary
-	 * IdentificationType41Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType6Choice#Code
-	 * IdentificationType6Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType6Choice#Proprietary
-	 * IdentificationType6Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType42Choice#Code
-	 * IdentificationType42Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType42Choice#Proprietary
-	 * IdentificationType42Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType43Choice#Code
-	 * IdentificationType43Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType43Choice#Proprietary
-	 * IdentificationType43Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType44Choice#Code
-	 * IdentificationType44Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType44Choice#Proprietary
-	 * IdentificationType44Choice.Proprietary}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType2Choice#mmCode
+	 * IdentificationType2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType2Choice#mmProprietary
+	 * IdentificationType2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType4Choice#mmCode
+	 * IdentificationType4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType4Choice#mmProprietary
+	 * IdentificationType4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType5Choice#mmCode
+	 * IdentificationType5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType5Choice#mmProprietary
+	 * IdentificationType5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType40Choice#mmCode
+	 * IdentificationType40Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType40Choice#mmProprietary
+	 * IdentificationType40Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType41Choice#mmCode
+	 * IdentificationType41Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType41Choice#mmProprietary
+	 * IdentificationType41Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType6Choice#mmCode
+	 * IdentificationType6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType6Choice#mmProprietary
+	 * IdentificationType6Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType42Choice#mmCode
+	 * IdentificationType42Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType42Choice#mmProprietary
+	 * IdentificationType42Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType43Choice#mmCode
+	 * IdentificationType43Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType43Choice#mmProprietary
+	 * IdentificationType43Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType44Choice#mmCode
+	 * IdentificationType44Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType44Choice#mmProprietary
+	 * IdentificationType44Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3331,25 +3340,26 @@ public class PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute TypeOfIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmTypeOfIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType2Choice.Code, com.tools20022.repository.choice.IdentificationType2Choice.Proprietary,
-					com.tools20022.repository.choice.IdentificationType4Choice.Code, com.tools20022.repository.choice.IdentificationType4Choice.Proprietary, com.tools20022.repository.choice.IdentificationType5Choice.Code,
-					com.tools20022.repository.choice.IdentificationType5Choice.Proprietary, com.tools20022.repository.choice.IdentificationType40Choice.Code, com.tools20022.repository.choice.IdentificationType40Choice.Proprietary,
-					com.tools20022.repository.choice.IdentificationType41Choice.Code, com.tools20022.repository.choice.IdentificationType41Choice.Proprietary, com.tools20022.repository.choice.IdentificationType6Choice.Code,
-					com.tools20022.repository.choice.IdentificationType6Choice.Proprietary, com.tools20022.repository.choice.IdentificationType42Choice.Code, com.tools20022.repository.choice.IdentificationType42Choice.Proprietary,
-					com.tools20022.repository.choice.IdentificationType43Choice.Code, com.tools20022.repository.choice.IdentificationType43Choice.Proprietary, com.tools20022.repository.choice.IdentificationType44Choice.Code,
-					com.tools20022.repository.choice.IdentificationType44Choice.Proprietary);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType2Choice.mmCode, com.tools20022.repository.choice.IdentificationType2Choice.mmProprietary,
+					com.tools20022.repository.choice.IdentificationType4Choice.mmCode, com.tools20022.repository.choice.IdentificationType4Choice.mmProprietary, com.tools20022.repository.choice.IdentificationType5Choice.mmCode,
+					com.tools20022.repository.choice.IdentificationType5Choice.mmProprietary, com.tools20022.repository.choice.IdentificationType40Choice.mmCode, com.tools20022.repository.choice.IdentificationType40Choice.mmProprietary,
+					com.tools20022.repository.choice.IdentificationType41Choice.mmCode, com.tools20022.repository.choice.IdentificationType41Choice.mmProprietary, com.tools20022.repository.choice.IdentificationType6Choice.mmCode,
+					com.tools20022.repository.choice.IdentificationType6Choice.mmProprietary, com.tools20022.repository.choice.IdentificationType42Choice.mmCode, com.tools20022.repository.choice.IdentificationType42Choice.mmProprietary,
+					com.tools20022.repository.choice.IdentificationType43Choice.mmCode, com.tools20022.repository.choice.IdentificationType43Choice.mmProprietary, com.tools20022.repository.choice.IdentificationType44Choice.mmCode,
+					com.tools20022.repository.choice.IdentificationType44Choice.mmProprietary);
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "TypeOfIdentification";
 			definition = "Specifies the type of alternate identification which can be used to identify a party.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfIdentificationCode.mmObject();
 		}
 	};
+	protected Max350Text declaration;
 	/**
 	 * Provides declaration details relative to the party.
 	 * <p>
@@ -3359,49 +3369,49 @@ public class PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max350Text
 	 * Max350Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation1#DeclarationDetails
-	 * PartyTextInformation1.DeclarationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation2#DeclarationDetails
-	 * PartyTextInformation2.DeclarationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation3#DeclarationDetails
-	 * PartyTextInformation3.DeclarationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation4#DeclarationDetails
-	 * PartyTextInformation4.DeclarationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification33#DeclarationDetails
-	 * PartyIdentification33.DeclarationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification34#DeclarationDetails
-	 * PartyIdentification34.DeclarationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification50#DeclarationDetails
-	 * PartyIdentification50.DeclarationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification51#DeclarationDetails
-	 * PartyIdentification51.DeclarationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification56#DeclarationDetails
-	 * PartyIdentification56.DeclarationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification57#DeclarationDetails
-	 * PartyIdentification57.DeclarationDetails}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation5#DeclarationDetails
-	 * PartyTextInformation5.DeclarationDetails}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation1#mmDeclarationDetails
+	 * PartyTextInformation1.mmDeclarationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation2#mmDeclarationDetails
+	 * PartyTextInformation2.mmDeclarationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation3#mmDeclarationDetails
+	 * PartyTextInformation3.mmDeclarationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation4#mmDeclarationDetails
+	 * PartyTextInformation4.mmDeclarationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification33#mmDeclarationDetails
+	 * PartyIdentification33.mmDeclarationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification34#mmDeclarationDetails
+	 * PartyIdentification34.mmDeclarationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification50#mmDeclarationDetails
+	 * PartyIdentification50.mmDeclarationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification51#mmDeclarationDetails
+	 * PartyIdentification51.mmDeclarationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification56#mmDeclarationDetails
+	 * PartyIdentification56.mmDeclarationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification57#mmDeclarationDetails
+	 * PartyIdentification57.mmDeclarationDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyTextInformation5#mmDeclarationDetails
+	 * PartyTextInformation5.mmDeclarationDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3413,22 +3423,25 @@ public class PartyIdentificationInformation {
 	 * definition} = "Provides declaration details relative to the party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute Declaration = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmDeclaration = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyTextInformation1.DeclarationDetails, com.tools20022.repository.msg.PartyTextInformation2.DeclarationDetails,
-					com.tools20022.repository.msg.PartyTextInformation3.DeclarationDetails, com.tools20022.repository.msg.PartyTextInformation4.DeclarationDetails, com.tools20022.repository.msg.PartyIdentification33.DeclarationDetails,
-					com.tools20022.repository.msg.PartyIdentification34.DeclarationDetails, com.tools20022.repository.msg.PartyIdentification50.DeclarationDetails, com.tools20022.repository.msg.PartyIdentification51.DeclarationDetails,
-					com.tools20022.repository.msg.PartyIdentification56.DeclarationDetails, com.tools20022.repository.msg.PartyIdentification57.DeclarationDetails, com.tools20022.repository.msg.PartyTextInformation5.DeclarationDetails);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyTextInformation1.mmDeclarationDetails, com.tools20022.repository.msg.PartyTextInformation2.mmDeclarationDetails,
+					com.tools20022.repository.msg.PartyTextInformation3.mmDeclarationDetails, com.tools20022.repository.msg.PartyTextInformation4.mmDeclarationDetails,
+					com.tools20022.repository.msg.PartyIdentification33.mmDeclarationDetails, com.tools20022.repository.msg.PartyIdentification34.mmDeclarationDetails,
+					com.tools20022.repository.msg.PartyIdentification50.mmDeclarationDetails, com.tools20022.repository.msg.PartyIdentification51.mmDeclarationDetails,
+					com.tools20022.repository.msg.PartyIdentification56.mmDeclarationDetails, com.tools20022.repository.msg.PartyIdentification57.mmDeclarationDetails,
+					com.tools20022.repository.msg.PartyTextInformation5.mmDeclarationDetails);
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "Declaration";
 			definition = "Provides declaration details relative to the party.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected PartyTypeCode partyType;
 	/**
 	 * Specifies the type of party in different business contexts.
 	 * <p>
@@ -3439,46 +3452,47 @@ public class PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyTypeCode
 	 * PartyTypeCode}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole1Choice#Code
-	 * PartyRole1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyRole1Choice#Proprietary
-	 * PartyRole1Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.PartyType1Choice#Code
-	 * PartyType1Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyType1Choice#Proprietary
-	 * PartyType1Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PlaceOfPresentation1#Place
-	 * PlaceOfPresentation1.Place}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole2Choice#Code
-	 * PartyRole2Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyRole2Choice#Proprietary
-	 * PartyRole2Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole4Choice#Code
-	 * PartyRole4Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyRole4Choice#Proprietary
-	 * PartyRole4Choice.Proprietary}</li>
-	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole5Choice#Code
-	 * PartyRole5Choice.Code}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyRole5Choice#Proprietary
-	 * PartyRole5Choice.Proprietary}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MarketIdentification92#Type
-	 * MarketIdentification92.Type}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole1Choice#mmCode
+	 * PartyRole1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyRole1Choice#mmProprietary
+	 * PartyRole1Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.PartyType1Choice#mmCode
+	 * PartyType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyType1Choice#mmProprietary
+	 * PartyType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PlaceOfPresentation1#mmPlace
+	 * PlaceOfPresentation1.mmPlace}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole2Choice#mmCode
+	 * PartyRole2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyRole2Choice#mmProprietary
+	 * PartyRole2Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole4Choice#mmCode
+	 * PartyRole4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyRole4Choice#mmProprietary
+	 * PartyRole4Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.PartyRole5Choice#mmCode
+	 * PartyRole5Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyRole5Choice#mmProprietary
+	 * PartyRole5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmType
+	 * MarketIdentification92.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3491,22 +3505,23 @@ public class PartyIdentificationInformation {
 	 * "Specifies the type of party in different business contexts."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute PartyType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmPartyType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyRole1Choice.Code, com.tools20022.repository.choice.PartyRole1Choice.Proprietary, com.tools20022.repository.choice.PartyType1Choice.Code,
-					com.tools20022.repository.choice.PartyType1Choice.Proprietary, com.tools20022.repository.msg.PlaceOfPresentation1.Place, com.tools20022.repository.choice.PartyRole2Choice.Code,
-					com.tools20022.repository.choice.PartyRole2Choice.Proprietary, com.tools20022.repository.choice.PartyRole4Choice.Code, com.tools20022.repository.choice.PartyRole4Choice.Proprietary,
-					com.tools20022.repository.choice.PartyRole5Choice.Code, com.tools20022.repository.choice.PartyRole5Choice.Proprietary, com.tools20022.repository.msg.MarketIdentification92.Type);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyRole1Choice.mmCode, com.tools20022.repository.choice.PartyRole1Choice.mmProprietary, com.tools20022.repository.choice.PartyType1Choice.mmCode,
+					com.tools20022.repository.choice.PartyType1Choice.mmProprietary, com.tools20022.repository.msg.PlaceOfPresentation1.mmPlace, com.tools20022.repository.choice.PartyRole2Choice.mmCode,
+					com.tools20022.repository.choice.PartyRole2Choice.mmProprietary, com.tools20022.repository.choice.PartyRole4Choice.mmCode, com.tools20022.repository.choice.PartyRole4Choice.mmProprietary,
+					com.tools20022.repository.choice.PartyRole5Choice.mmCode, com.tools20022.repository.choice.PartyRole5Choice.mmProprietary, com.tools20022.repository.msg.MarketIdentification92.mmType);
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartyType";
 			definition = "Specifies the type of party in different business contexts.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> PartyTypeCode.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.entity.PartyName> partyName;
 	/**
 	 * Name by which a party is known and which is usually used to identify that
 	 * party.
@@ -3516,8 +3531,8 @@ public class PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.PartyName#PartyIdentification
-	 * PartyName.PartyIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyName#mmPartyIdentification
+	 * PartyName.mmPartyIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3525,19 +3540,19 @@ public class PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PartyName PartyName}
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.TaxOrganisationIdentification1#Name
-	 * TaxOrganisationIdentification1.Name}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxOrganisationIdentification1#mmName
+	 * TaxOrganisationIdentification1.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3551,20 +3566,21 @@ public class PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd PartyName = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmPartyName = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxOrganisationIdentification1.Name);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxOrganisationIdentification1.mmName);
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "PartyName";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			minOccurs = 1;
-			type_lazy = () -> com.tools20022.repository.entity.PartyName.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.PartyName.PartyIdentification;
+			opposite_lazy = () -> com.tools20022.repository.entity.PartyName.mmPartyIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.PartyName.mmObject();
 		}
 	};
+	protected DateTimePeriod validityPeriod;
 	/**
 	 * Specifies the period during which an identification is valid
 	 * <p>
@@ -3573,8 +3589,8 @@ public class PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#RelatedIdentification
-	 * DateTimePeriod.RelatedIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedIdentification
+	 * DateTimePeriod.mmRelatedIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3599,20 +3615,21 @@ public class PartyIdentificationInformation {
 	 * "Specifies the period during which an identification is valid"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ValidityPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Specifies the period during which an identification is valid";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriod.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.RelatedIdentification;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected Market identifiedMarket;
 	/**
 	 * Market for which an identification is provided.
 	 * <p>
@@ -3621,8 +3638,8 @@ public class PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.Market#Identification
-	 * Market.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Market#mmIdentification
+	 * Market.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -3645,20 +3662,21 @@ public class PartyIdentificationInformation {
 	 * definition} = "Market for which an identification is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd IdentifiedMarket = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmIdentifiedMarket = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentifiedMarket";
 			definition = "Market for which an identification is provided.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Market.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.Market.Identification;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.Market.mmIdentification;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.Market.mmObject();
 		}
 	};
+	protected LEIIdentifier lEI;
 	/**
 	 * Legal Entity Identifier is a code allocated to a party as described in
 	 * ISO 17442 "Financial Services - Legal Entity Identifier (LEI)".
@@ -3670,176 +3688,181 @@ public class PartyIdentificationInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.LEIIdentifier
 	 * LEIIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Fund2#LegalEntityIdentifier
-	 * Fund2.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Fund1#LegalEntityIdentifier
-	 * Fund1.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Fund3#LegalEntityIdentifier
-	 * Fund3.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Fund4#LegalEntityIdentifier
-	 * Fund4.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification1Choice#LEI
-	 * CounterpartyIdentification1Choice.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount106#LEI
-	 * PartyIdentificationAndAccount106.LEI}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification75#LEI
-	 * PartyIdentification75.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount112#LEI
-	 * PartyIdentificationAndAccount112.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount111#LEI
-	 * PartyIdentificationAndAccount111.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount117#LEI
-	 * PartyIdentificationAndAccount117.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount108#LEI
-	 * PartyIdentificationAndAccount108.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount107#LEI
-	 * PartyIdentificationAndAccount107.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount109#LEI
-	 * PartyIdentificationAndAccount109.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation1Choice#LEI
-	 * PersonOrOrganisation1Choice.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation2Choice#LEI
-	 * PersonOrOrganisation2Choice.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionTransmission2#TransmittingBuyer
-	 * SecuritiesTransactionTransmission2.TransmittingBuyer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionTransmission2#TransmittingSeller
-	 * SecuritiesTransactionTransmission2.TransmittingSeller}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification91#LEI
-	 * PartyIdentification91.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#LEI
-	 * DerivativePartyIdentification1Choice.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Intermediary36#LegalEntityIdentifier
-	 * Intermediary36.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.PartyIdentification97Choice#LegalEntityIdentifier
-	 * PartyIdentification97Choice.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ThirdPartyRights1#LegalEntityIdentifier
-	 * ThirdPartyRights1.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation22#LegalEntityIdentifier
-	 * Organisation22.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation24#LegalEntityIdentifier
-	 * Organisation24.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Intermediary33#LegalEntityIdentifier
-	 * Intermediary33.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification95#LegalEntityIdentifier
-	 * PartyIdentification95.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification96#LegalEntityIdentifier
-	 * PartyIdentification96.LegalEntityIdentifier}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification108#LEI
-	 * PartyIdentification108.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount133#LEI
-	 * PartyIdentificationAndAccount133.LEI}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification103#LEI
-	 * PartyIdentification103.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount131#LEI
-	 * PartyIdentificationAndAccount131.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount146#LEI
-	 * PartyIdentificationAndAccount146.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount135#LEI
-	 * PartyIdentificationAndAccount135.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount137#LEI
-	 * PartyIdentificationAndAccount137.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount136#LEI
-	 * PartyIdentificationAndAccount136.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount134#LEI
-	 * PartyIdentificationAndAccount134.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification2Choice#LEI
-	 * CounterpartyIdentification2Choice.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#BranchIdentification
-	 * UnsecuredMarketTransaction2.BranchIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction2#BranchIdentification
-	 * ForeignExchangeSwapTransaction2.BranchIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction2#BranchIdentification
-	 * SecuredMarketTransaction2.BranchIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#BranchIdentification
-	 * MoneyMarketTransactionStatus2.BranchIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#BranchIdentification
-	 * UnsecuredMarketTransaction3.BranchIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction3#BranchIdentification
-	 * OvernightIndexSwapTransaction3.BranchIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3#BranchIdentification
-	 * SecuredMarketTransaction3.BranchIdentification}</li>
-	 * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument53#LEI
-	 * FinancialInstrument53.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification10#LEI
-	 * FinancialInstitutionIdentification10.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation30#LegalEntityIdentifier
-	 * Organisation30.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Organisation29#LegalEntityIdentifier
-	 * Organisation29.LegalEntityIdentifier}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataReport5#Issuer
-	 * SecuritiesReferenceDataReport5.Issuer}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice#LEI
-	 * FinancialInstrument48Choice.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction4#BranchIdentification
-	 * SecuredMarketTransaction4.BranchIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice#LEI
-	 * CounterpartyIdentification3Choice.LEI}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction3#BranchIdentification
-	 * ForeignExchangeSwapTransaction3.BranchIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction4#BranchIdentification
-	 * OvernightIndexSwapTransaction4.BranchIdentification}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#BranchIdentification
-	 * UnsecuredMarketTransaction4.BranchIdentification}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Fund2#mmLegalEntityIdentifier
+	 * Fund2.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Fund1#mmLegalEntityIdentifier
+	 * Fund1.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Fund3#mmLegalEntityIdentifier
+	 * Fund3.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Fund4#mmLegalEntityIdentifier
+	 * Fund4.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification1Choice#mmLEI
+	 * CounterpartyIdentification1Choice.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount106#mmLEI
+	 * PartyIdentificationAndAccount106.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification75#mmLEI
+	 * PartyIdentification75.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount112#mmLEI
+	 * PartyIdentificationAndAccount112.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount111#mmLEI
+	 * PartyIdentificationAndAccount111.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount117#mmLEI
+	 * PartyIdentificationAndAccount117.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount108#mmLEI
+	 * PartyIdentificationAndAccount108.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount107#mmLEI
+	 * PartyIdentificationAndAccount107.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount109#mmLEI
+	 * PartyIdentificationAndAccount109.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation1Choice#mmLEI
+	 * PersonOrOrganisation1Choice.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PersonOrOrganisation2Choice#mmLEI
+	 * PersonOrOrganisation2Choice.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionTransmission2#mmTransmittingBuyer
+	 * SecuritiesTransactionTransmission2.mmTransmittingBuyer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionTransmission2#mmTransmittingSeller
+	 * SecuritiesTransactionTransmission2.mmTransmittingSeller}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification91#mmLEI
+	 * PartyIdentification91.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice#mmLEI
+	 * DerivativePartyIdentification1Choice.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary36#mmLegalEntityIdentifier
+	 * Intermediary36.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification97Choice#mmLegalEntityIdentifier
+	 * PartyIdentification97Choice.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ThirdPartyRights1#mmLegalEntityIdentifier
+	 * ThirdPartyRights1.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation22#mmLegalEntityIdentifier
+	 * Organisation22.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation24#mmLegalEntityIdentifier
+	 * Organisation24.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary33#mmLegalEntityIdentifier
+	 * Intermediary33.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification95#mmLegalEntityIdentifier
+	 * PartyIdentification95.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification96#mmLegalEntityIdentifier
+	 * PartyIdentification96.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification108#mmLEI
+	 * PartyIdentification108.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount133#mmLEI
+	 * PartyIdentificationAndAccount133.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification103#mmLEI
+	 * PartyIdentification103.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount131#mmLEI
+	 * PartyIdentificationAndAccount131.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount146#mmLEI
+	 * PartyIdentificationAndAccount146.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount135#mmLEI
+	 * PartyIdentificationAndAccount135.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount137#mmLEI
+	 * PartyIdentificationAndAccount137.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount136#mmLEI
+	 * PartyIdentificationAndAccount136.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount134#mmLEI
+	 * PartyIdentificationAndAccount134.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification2Choice#mmLEI
+	 * CounterpartyIdentification2Choice.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction2#mmBranchIdentification
+	 * UnsecuredMarketTransaction2.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction2#mmBranchIdentification
+	 * ForeignExchangeSwapTransaction2.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction2#mmBranchIdentification
+	 * SecuredMarketTransaction2.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MoneyMarketTransactionStatus2#mmBranchIdentification
+	 * MoneyMarketTransactionStatus2.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmBranchIdentification
+	 * UnsecuredMarketTransaction3.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction3#mmBranchIdentification
+	 * OvernightIndexSwapTransaction3.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3#mmBranchIdentification
+	 * SecuredMarketTransaction3.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument53#mmLEI
+	 * FinancialInstrument53.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification10#mmLEI
+	 * FinancialInstitutionIdentification10.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation30#mmLegalEntityIdentifier
+	 * Organisation30.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation29#mmLegalEntityIdentifier
+	 * Organisation29.mmLegalEntityIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataReport5#mmIssuer
+	 * SecuritiesReferenceDataReport5.mmIssuer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice#mmLEI
+	 * FinancialInstrument48Choice.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction4#mmBranchIdentification
+	 * SecuredMarketTransaction4.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice#mmLEI
+	 * CounterpartyIdentification3Choice.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction3#mmBranchIdentification
+	 * ForeignExchangeSwapTransaction3.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction4#mmBranchIdentification
+	 * OvernightIndexSwapTransaction4.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmBranchIdentification
+	 * UnsecuredMarketTransaction4.mmBranchIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3853,36 +3876,36 @@ public class PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute LEI = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmLEI = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fund2.LegalEntityIdentifier, com.tools20022.repository.msg.Fund1.LegalEntityIdentifier, com.tools20022.repository.msg.Fund3.LegalEntityIdentifier,
-					com.tools20022.repository.msg.Fund4.LegalEntityIdentifier, com.tools20022.repository.choice.CounterpartyIdentification1Choice.LEI, com.tools20022.repository.msg.PartyIdentificationAndAccount106.LEI,
-					com.tools20022.repository.msg.PartyIdentification75.LEI, com.tools20022.repository.msg.PartyIdentificationAndAccount112.LEI, com.tools20022.repository.msg.PartyIdentificationAndAccount111.LEI,
-					com.tools20022.repository.msg.PartyIdentificationAndAccount117.LEI, com.tools20022.repository.msg.PartyIdentificationAndAccount108.LEI, com.tools20022.repository.msg.PartyIdentificationAndAccount107.LEI,
-					com.tools20022.repository.msg.PartyIdentificationAndAccount109.LEI, com.tools20022.repository.choice.PersonOrOrganisation1Choice.LEI, com.tools20022.repository.choice.PersonOrOrganisation2Choice.LEI,
-					com.tools20022.repository.msg.SecuritiesTransactionTransmission2.TransmittingBuyer, com.tools20022.repository.msg.SecuritiesTransactionTransmission2.TransmittingSeller,
-					com.tools20022.repository.msg.PartyIdentification91.LEI, com.tools20022.repository.choice.DerivativePartyIdentification1Choice.LEI, com.tools20022.repository.msg.Intermediary36.LegalEntityIdentifier,
-					com.tools20022.repository.choice.PartyIdentification97Choice.LegalEntityIdentifier, com.tools20022.repository.msg.ThirdPartyRights1.LegalEntityIdentifier,
-					com.tools20022.repository.msg.Organisation22.LegalEntityIdentifier, com.tools20022.repository.msg.Organisation24.LegalEntityIdentifier, com.tools20022.repository.msg.Intermediary33.LegalEntityIdentifier,
-					com.tools20022.repository.msg.PartyIdentification95.LegalEntityIdentifier, com.tools20022.repository.msg.PartyIdentification96.LegalEntityIdentifier, com.tools20022.repository.msg.PartyIdentification108.LEI,
-					com.tools20022.repository.msg.PartyIdentificationAndAccount133.LEI, com.tools20022.repository.msg.PartyIdentification103.LEI, com.tools20022.repository.msg.PartyIdentificationAndAccount131.LEI,
-					com.tools20022.repository.msg.PartyIdentificationAndAccount146.LEI, com.tools20022.repository.msg.PartyIdentificationAndAccount135.LEI, com.tools20022.repository.msg.PartyIdentificationAndAccount137.LEI,
-					com.tools20022.repository.msg.PartyIdentificationAndAccount136.LEI, com.tools20022.repository.msg.PartyIdentificationAndAccount134.LEI, com.tools20022.repository.choice.CounterpartyIdentification2Choice.LEI,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction2.BranchIdentification, com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.BranchIdentification,
-					com.tools20022.repository.msg.SecuredMarketTransaction2.BranchIdentification, com.tools20022.repository.msg.MoneyMarketTransactionStatus2.BranchIdentification,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction3.BranchIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction3.BranchIdentification,
-					com.tools20022.repository.msg.SecuredMarketTransaction3.BranchIdentification, com.tools20022.repository.msg.FinancialInstrument53.LEI, com.tools20022.repository.msg.FinancialInstitutionIdentification10.LEI,
-					com.tools20022.repository.msg.Organisation30.LegalEntityIdentifier, com.tools20022.repository.msg.Organisation29.LegalEntityIdentifier, com.tools20022.repository.msg.SecuritiesReferenceDataReport5.Issuer,
-					com.tools20022.repository.choice.FinancialInstrument48Choice.LEI, com.tools20022.repository.msg.SecuredMarketTransaction4.BranchIdentification, com.tools20022.repository.choice.CounterpartyIdentification3Choice.LEI,
-					com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.BranchIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction4.BranchIdentification,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction4.BranchIdentification);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fund2.mmLegalEntityIdentifier, com.tools20022.repository.msg.Fund1.mmLegalEntityIdentifier, com.tools20022.repository.msg.Fund3.mmLegalEntityIdentifier,
+					com.tools20022.repository.msg.Fund4.mmLegalEntityIdentifier, com.tools20022.repository.choice.CounterpartyIdentification1Choice.mmLEI, com.tools20022.repository.msg.PartyIdentificationAndAccount106.mmLEI,
+					com.tools20022.repository.msg.PartyIdentification75.mmLEI, com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmLEI, com.tools20022.repository.msg.PartyIdentificationAndAccount111.mmLEI,
+					com.tools20022.repository.msg.PartyIdentificationAndAccount117.mmLEI, com.tools20022.repository.msg.PartyIdentificationAndAccount108.mmLEI, com.tools20022.repository.msg.PartyIdentificationAndAccount107.mmLEI,
+					com.tools20022.repository.msg.PartyIdentificationAndAccount109.mmLEI, com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmLEI, com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmLEI,
+					com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmTransmittingBuyer, com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmTransmittingSeller,
+					com.tools20022.repository.msg.PartyIdentification91.mmLEI, com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmLEI, com.tools20022.repository.msg.Intermediary36.mmLegalEntityIdentifier,
+					com.tools20022.repository.choice.PartyIdentification97Choice.mmLegalEntityIdentifier, com.tools20022.repository.msg.ThirdPartyRights1.mmLegalEntityIdentifier,
+					com.tools20022.repository.msg.Organisation22.mmLegalEntityIdentifier, com.tools20022.repository.msg.Organisation24.mmLegalEntityIdentifier, com.tools20022.repository.msg.Intermediary33.mmLegalEntityIdentifier,
+					com.tools20022.repository.msg.PartyIdentification95.mmLegalEntityIdentifier, com.tools20022.repository.msg.PartyIdentification96.mmLegalEntityIdentifier, com.tools20022.repository.msg.PartyIdentification108.mmLEI,
+					com.tools20022.repository.msg.PartyIdentificationAndAccount133.mmLEI, com.tools20022.repository.msg.PartyIdentification103.mmLEI, com.tools20022.repository.msg.PartyIdentificationAndAccount131.mmLEI,
+					com.tools20022.repository.msg.PartyIdentificationAndAccount146.mmLEI, com.tools20022.repository.msg.PartyIdentificationAndAccount135.mmLEI, com.tools20022.repository.msg.PartyIdentificationAndAccount137.mmLEI,
+					com.tools20022.repository.msg.PartyIdentificationAndAccount136.mmLEI, com.tools20022.repository.msg.PartyIdentificationAndAccount134.mmLEI, com.tools20022.repository.choice.CounterpartyIdentification2Choice.mmLEI,
+					com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmBranchIdentification, com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmBranchIdentification,
+					com.tools20022.repository.msg.SecuredMarketTransaction2.mmBranchIdentification, com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmBranchIdentification,
+					com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmBranchIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmBranchIdentification,
+					com.tools20022.repository.msg.SecuredMarketTransaction3.mmBranchIdentification, com.tools20022.repository.msg.FinancialInstrument53.mmLEI, com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmLEI,
+					com.tools20022.repository.msg.Organisation30.mmLegalEntityIdentifier, com.tools20022.repository.msg.Organisation29.mmLegalEntityIdentifier, com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmIssuer,
+					com.tools20022.repository.choice.FinancialInstrument48Choice.mmLEI, com.tools20022.repository.msg.SecuredMarketTransaction4.mmBranchIdentification,
+					com.tools20022.repository.choice.CounterpartyIdentification3Choice.mmLEI, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmBranchIdentification,
+					com.tools20022.repository.msg.OvernightIndexSwapTransaction4.mmBranchIdentification, com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmBranchIdentification);
 			elementContext_lazy = () -> PartyIdentificationInformation.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LEI";
 			definition = "Legal Entity Identifier is a code allocated to a party as described in ISO 17442 \"Financial Services - Legal Entity Identifier (LEI)\".";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
@@ -3890,210 +3913,212 @@ public class PartyIdentificationInformation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationInformation";
 				definition = "Unique and unambiguous way to identify a party";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.RelatedPartyIdentification, com.tools20022.repository.entity.Party.Identification,
-						com.tools20022.repository.entity.PartyName.PartyIdentification, com.tools20022.repository.entity.DateTimePeriod.RelatedIdentification, com.tools20022.repository.entity.Market.Identification);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification1Choice.NameAndAddress, com.tools20022.repository.choice.PartyIdentification2Choice.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification5Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentification8.Identification, com.tools20022.repository.msg.PartyIdentification32.Identification,
-						com.tools20022.repository.msg.PartyIdentification43.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount2.PartyIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount5.PartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount4.PartyIdentification,
-						com.tools20022.repository.msg.PartyIdentification21.PartyIdentification, com.tools20022.repository.choice.PartyIdentification12Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentification36.Identification, com.tools20022.repository.choice.PartyIdentification10Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount16.Identification, com.tools20022.repository.choice.PartyIdentification14Choice.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification44Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentification46.Identification,
-						com.tools20022.repository.choice.PartyIdentification45Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount44.Identification,
-						com.tools20022.repository.choice.PartyIdentification37Choice.NameAndAddress, com.tools20022.repository.msg.AlternatePartyIdentification1.TypeOfIdentification,
-						com.tools20022.repository.msg.AlternatePartyIdentification2.IdentificationType, com.tools20022.repository.msg.PartyIdentificationAndAccount1.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount1.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification29.PartyIdentification,
-						com.tools20022.repository.msg.PartyIdentification29.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification2.Identification,
-						com.tools20022.repository.msg.PartyIdentification2.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification43Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount42.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount42.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentification48.Identification, com.tools20022.repository.msg.PartyIdentification48.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount11.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount11.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification3Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount12.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount12.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount20.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount20.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification30Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount15.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount15.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount39.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount39.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification38Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount50.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount50.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount19.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount19.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount21.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount21.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount40.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount40.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount41.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount41.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount43.Identification,
-						com.tools20022.repository.choice.PartyIdentification58Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentification53.Identification,
-						com.tools20022.repository.choice.PartyIdentification62Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount68.Identification,
-						com.tools20022.repository.choice.PartyIdentification60Choice.NameAndAddress, com.tools20022.repository.choice.PartyIdentification65Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount75.Identification, com.tools20022.repository.msg.AlternatePartyIdentification3.IdentificationType,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount63.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount63.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentification52.Identification, com.tools20022.repository.msg.PartyIdentification52.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount64.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount64.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification61Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount60.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount60.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount66.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount66.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification16Choice.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification46Choice.NameAndAddress, com.tools20022.repository.choice.PartyIdentification56Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentification33.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification34.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification48Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentification50.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification52Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentification51.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentification56.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification57.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentification35.Identification, com.tools20022.repository.msg.PartyIdentification35.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount14.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount14.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount17.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount17.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount18.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount18.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification17Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentification37.Identification,
-						com.tools20022.repository.msg.PartyIdentification37.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount22.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount22.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount23.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount23.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification31Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount24.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount24.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification39Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentification47.Identification,
-						com.tools20022.repository.msg.PartyIdentification47.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification40Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount51.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount51.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount52.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount52.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification42Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount54.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount54.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification53Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentification49.Identification, com.tools20022.repository.msg.PartyIdentification49.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification54Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount56.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount56.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount57.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount57.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification55Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount58.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount58.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification47Choice.NameAndAddress, com.tools20022.repository.choice.PartyIdentification57Choice.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification49Choice.NameAndAddress, com.tools20022.repository.choice.PartyIdentification59Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentification15.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount26.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount26.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification4.Identification,
-						com.tools20022.repository.msg.PartyIdentification4.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount29.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount29.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount27.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount27.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount28.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount28.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount30.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount30.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount35.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount35.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount38.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount38.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount36.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount36.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount37.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount37.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount49.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount49.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount59.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount59.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount61.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount61.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount62.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount62.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount25.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount65.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount65.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification63Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount67.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount67.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification38.Identification,
-						com.tools20022.repository.choice.PartyIdentification15Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount9.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount9.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification32Choice.NameAndAddress,
-						com.tools20022.repository.msg.AlternatePartyIdentification5.IdentificationType, com.tools20022.repository.msg.PartyIdentificationAndAccount79.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount79.AdditionalInformation, com.tools20022.repository.msg.PartyIdentificationAndAccount79.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification70Choice.NameAndAddress, com.tools20022.repository.msg.AlternatePartyIdentification6.TypeOfIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount87.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount87.AdditionalInformation,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount87.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount83.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount83.AdditionalInformation, com.tools20022.repository.msg.PartyIdentificationAndAccount83.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount77.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount77.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount77.AdditionalInformation, com.tools20022.repository.msg.PartyIdentificationAndAccount78.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount78.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount78.AdditionalInformation,
-						com.tools20022.repository.msg.PartyIdentification23.NameAndAddress, com.tools20022.repository.msg.PartyIdentification6Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount10.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount10.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount8.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount8.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentification54.NameAndAddress, com.tools20022.repository.choice.PartyIdentification68Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentification55.Identification,
-						com.tools20022.repository.msg.PartyIdentification55.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification55.AdditionalInformation,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount34.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount34.AdditionalInformation,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount34.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount80.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount80.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount80.AdditionalInformation,
-						com.tools20022.repository.msg.PartyIdentification41.Identification, com.tools20022.repository.msg.PartyIdentification40.Identification, com.tools20022.repository.msg.PartyModification1.PartyIdentification,
-						com.tools20022.repository.msg.ProprietaryParty1.Party, com.tools20022.repository.msg.ProprietaryParty2.Party, com.tools20022.repository.msg.ProprietaryParty3.Party,
-						com.tools20022.repository.choice.Party7Choice.Party, com.tools20022.repository.choice.Party12Choice.Party, com.tools20022.repository.msg.PartyIdentification42.Identification,
-						com.tools20022.repository.choice.PartyIdentification7Choice.NameAndAddress, com.tools20022.repository.choice.PartyIdentification8Choice.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification19Choice.NameAndAddress, com.tools20022.repository.choice.PartyIdentification73Choice.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification73Choice.PartyIdentification, com.tools20022.repository.msg.PartyIdentification60.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount3.PartyIdentification, com.tools20022.repository.msg.PartyIdentification1.Identification,
-						com.tools20022.repository.choice.PartyIdentification9Choice.NameAndAddress, com.tools20022.repository.msg.IssuerInformation1.Identification, com.tools20022.repository.msg.PartyIdentification39.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount53.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount53.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount55.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount55.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount45.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount45.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount48.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount48.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount46.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount46.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount47.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount47.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount6.PartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.PartyIdentification,
-						com.tools20022.repository.msg.PartyIdentification45.Identification, com.tools20022.repository.choice.PartyIdentification29Choice.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification33Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount69.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount69.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount70.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount70.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount71.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount71.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount72.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount72.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount73.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount73.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount74.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount74.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification66Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount76.Identification, com.tools20022.repository.choice.PartyIdentification67Choice.NameAndAddress,
-						com.tools20022.repository.msg.AlternatePartyIdentification4.IdentificationType, com.tools20022.repository.msg.PartyIdentificationAndAccount31.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount31.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification34Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount32.PartyIdentification, com.tools20022.repository.msg.PartyIdentification58.Identification,
-						com.tools20022.repository.msg.PartyIdentification14.Identification, com.tools20022.repository.msg.PartyIdentification11.Identification, com.tools20022.repository.msg.PartyIdentification17.Identification,
-						com.tools20022.repository.msg.PartyIdentification19.Identification, com.tools20022.repository.msg.PartyIdentification30.Identification, com.tools20022.repository.msg.PartyIdentification18.Identification,
-						com.tools20022.repository.msg.PartyIdentification20.Identification, com.tools20022.repository.msg.PartyIdentification31.Identification, com.tools20022.repository.msg.PartyIdentification16.Identification,
-						com.tools20022.repository.choice.PartyIdentification26Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount13.PartyIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount7.PartyIdentification, com.tools20022.repository.choice.PartyIdentification71Choice.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification25Choice.Identification, com.tools20022.repository.choice.PartyIdentification25Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount95.PartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount97.PartyIdentification,
-						com.tools20022.repository.msg.PartyIdentification62.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount96.PartyIdentification,
-						com.tools20022.repository.msg.PartyIdentification63.PartyIdentification, com.tools20022.repository.msg.PartyIdentification64.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification75Choice.NameAndAddress, com.tools20022.repository.msg.SafekeepingAccount5.AccountServicer,
-						com.tools20022.repository.choice.PartyIdentification83Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount100.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount100.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount100.AdditionalInformation,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount101.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount101.AlternateIdentification,
-						com.tools20022.repository.msg.IssuerInformation2.Identification, com.tools20022.repository.msg.PartyIdentification71.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount102.PartyIdentification, com.tools20022.repository.choice.PartyIdentification89Choice.NameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification87Choice.NameAndAddress, com.tools20022.repository.choice.PartyIdentification88Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount104.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount104.AlternateIdentification,
-						com.tools20022.repository.msg.QualifiedPartyIdentification1.ShortIdentification, com.tools20022.repository.msg.CardTransactionEnvironment5.SendingInstitution,
-						com.tools20022.repository.msg.CardTransactionEnvironment5.ReceivingInstitution, com.tools20022.repository.msg.CardTransactionEnvironment5.SettlementInstitution,
-						com.tools20022.repository.choice.PartyIdentification90Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount106.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount106.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification75.Identification,
-						com.tools20022.repository.msg.PartyIdentification75.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount112.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount112.AlternateIdentification, com.tools20022.repository.msg.AlternatePartyIdentification7.IdentificationType,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount111.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount111.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount117.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount107.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount107.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification76.Identification,
-						com.tools20022.repository.msg.PartyIdentification77.Identification, com.tools20022.repository.choice.Party28Choice.Party, com.tools20022.repository.choice.PartyIdentification93Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentification91.Identification, com.tools20022.repository.msg.PartyIdentification93.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount122.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount122.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentification92.Identification, com.tools20022.repository.msg.PartyIdentification92.AlternateIdentification,
-						com.tools20022.repository.choice.PartyIdentification94Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount120.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount120.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount121.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount121.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification94.Identification,
-						com.tools20022.repository.choice.PartyIdentification97Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentification97.PartyIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount124.PartyIdentification, com.tools20022.repository.msg.PartyIdentification95.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount123.PartyIdentification, com.tools20022.repository.choice.PartyIdentification96Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentification96.Identification, com.tools20022.repository.choice.PartyIdentification99Choice.NameAndAddress, com.tools20022.repository.msg.PartyIdentification98.Identification,
-						com.tools20022.repository.msg.PartyIdentification100.Identification, com.tools20022.repository.msg.PlaceOfClearingIdentification1.Identification,
-						com.tools20022.repository.msg.PlaceOfTradeIdentification1.MarketTypeAndIdentification, com.tools20022.repository.msg.SafeKeepingPlace1.SafekeepingPlaceFormat,
-						com.tools20022.repository.msg.PartyIdentification99.Identification, com.tools20022.repository.msg.Pledgee1.PledgeeTypeAndIdentification, com.tools20022.repository.choice.PartyIdentification100Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount127.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount127.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount127.AdditionalInformation, com.tools20022.repository.choice.PartyIdentification102Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount126.PartyIdentification, com.tools20022.repository.choice.PartyIdentification101Choice.NameAndAddress,
-						com.tools20022.repository.msg.AlternatePartyIdentification8.IdentificationType, com.tools20022.repository.choice.PartyIdentification104Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentification101.AlternateIdentification, com.tools20022.repository.choice.PartyIdentification111Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentification102.Identification, com.tools20022.repository.msg.PartyIdentification102.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount129.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount129.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount130.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount130.AlternateIdentification,
-						com.tools20022.repository.msg.AlternatePartyIdentification9.IdentificationType, com.tools20022.repository.choice.PartyIdentification113Choice.NameAndAddress,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount128.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount128.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentification108.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount133.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount133.AlternateIdentification, com.tools20022.repository.msg.PartyIdentification103.Identification,
-						com.tools20022.repository.msg.PartyIdentification103.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount131.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount131.AlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount146.Identification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount136.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount136.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount134.Identification, com.tools20022.repository.msg.PartyIdentificationAndAccount134.AlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentification109.Identification, com.tools20022.repository.msg.PartyIdentification111.Identification, com.tools20022.repository.msg.PartyIdentification110.Identification,
-						com.tools20022.repository.choice.PartyIdentification115Choice.NameAndAddress, com.tools20022.repository.msg.SafeKeepingPlace2.SafekeepingPlaceFormat,
-						com.tools20022.repository.msg.PlaceOfTradeIdentification2.MarketTypeAndIdentification, com.tools20022.repository.msg.Pledgee2.PledgeeTypeAndIdentification,
-						com.tools20022.repository.msg.PartyIdentification112.Identification, com.tools20022.repository.msg.SafekeepingAccount7.AccountServicer, com.tools20022.repository.msg.PartyIdentification113.Party,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount147.PartyIdentification, com.tools20022.repository.msg.PartyIdentification119.Identification,
-						com.tools20022.repository.msg.PartyIdentification120.Identification, com.tools20022.repository.msg.PartyIdentification120.AlternateIdentification);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmRelatedPartyIdentification, com.tools20022.repository.entity.Party.mmIdentification,
+						com.tools20022.repository.entity.PartyName.mmPartyIdentification, com.tools20022.repository.entity.DateTimePeriod.mmRelatedIdentification, com.tools20022.repository.entity.Market.mmIdentification);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification1Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification2Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification5Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentification8.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification32.mmIdentification, com.tools20022.repository.msg.PartyIdentification43.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount2.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount5.mmPartyIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount4.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification21.mmPartyIdentification,
+						com.tools20022.repository.choice.PartyIdentification12Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentification36.mmIdentification,
+						com.tools20022.repository.choice.PartyIdentification10Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount16.mmIdentification,
+						com.tools20022.repository.choice.PartyIdentification14Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification44Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification46.mmIdentification, com.tools20022.repository.choice.PartyIdentification45Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount44.mmIdentification, com.tools20022.repository.choice.PartyIdentification37Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.AlternatePartyIdentification1.mmTypeOfIdentification, com.tools20022.repository.msg.AlternatePartyIdentification2.mmIdentificationType,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount1.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount1.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentification29.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification29.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentification2.mmIdentification, com.tools20022.repository.msg.PartyIdentification2.mmAlternateIdentification,
+						com.tools20022.repository.choice.PartyIdentification43Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount42.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount42.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification48.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification48.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount11.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount11.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification3Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount12.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount12.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount20.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount20.mmAlternateIdentification,
+						com.tools20022.repository.choice.PartyIdentification30Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount15.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount15.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount39.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount39.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification38Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount19.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount19.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount21.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount21.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount40.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount40.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount41.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount41.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount43.mmIdentification, com.tools20022.repository.choice.PartyIdentification58Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification53.mmIdentification, com.tools20022.repository.choice.PartyIdentification62Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount68.mmIdentification, com.tools20022.repository.choice.PartyIdentification60Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification65Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount75.mmIdentification,
+						com.tools20022.repository.msg.AlternatePartyIdentification3.mmIdentificationType, com.tools20022.repository.msg.PartyIdentificationAndAccount63.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount63.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification52.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification52.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount64.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount64.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification61Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount60.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount60.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount66.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount66.mmAlternateIdentification,
+						com.tools20022.repository.choice.PartyIdentification16Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification46Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification56Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentification33.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentification34.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification48Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification50.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification52Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification51.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification56.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentification57.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification35.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification35.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount14.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount14.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount17.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount17.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount18.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount18.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification17Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification37.mmIdentification, com.tools20022.repository.msg.PartyIdentification37.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount22.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount22.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount23.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount23.mmAlternateIdentification,
+						com.tools20022.repository.choice.PartyIdentification31Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount24.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount24.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification39Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification47.mmIdentification, com.tools20022.repository.msg.PartyIdentification47.mmAlternateIdentification,
+						com.tools20022.repository.choice.PartyIdentification40Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount51.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount51.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount52.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount52.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification42Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount54.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount54.mmAlternateIdentification,
+						com.tools20022.repository.choice.PartyIdentification53Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentification49.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification49.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification54Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount56.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount56.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount57.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount57.mmAlternateIdentification,
+						com.tools20022.repository.choice.PartyIdentification55Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount58.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount58.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification47Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification57Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification49Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification59Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentification15.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount26.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount26.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentification4.mmIdentification, com.tools20022.repository.msg.PartyIdentification4.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount29.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount29.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount27.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount27.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount28.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount28.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount30.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount30.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount35.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount35.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount38.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount38.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount37.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount37.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount49.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount49.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount59.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount59.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount61.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount61.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount62.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount62.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount25.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount65.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount65.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification63Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount67.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount67.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentification38.mmIdentification, com.tools20022.repository.choice.PartyIdentification15Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount9.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount9.mmAlternateIdentification,
+						com.tools20022.repository.choice.PartyIdentification32Choice.mmNameAndAddress, com.tools20022.repository.msg.AlternatePartyIdentification5.mmIdentificationType,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount79.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount79.mmAdditionalInformation,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount79.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification70Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.AlternatePartyIdentification6.mmTypeOfIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmAdditionalInformation, com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount83.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount83.mmAdditionalInformation,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount83.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount77.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount77.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount77.mmAdditionalInformation,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmAdditionalInformation, com.tools20022.repository.msg.PartyIdentification23.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification6Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount10.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount10.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount8.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount8.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification54.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification68Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentification55.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification55.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification55.mmAdditionalInformation,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount34.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount34.mmAdditionalInformation,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount34.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount80.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount80.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount80.mmAdditionalInformation,
+						com.tools20022.repository.msg.PartyIdentification41.mmIdentification, com.tools20022.repository.msg.PartyIdentification40.mmIdentification, com.tools20022.repository.msg.PartyModification1.mmPartyIdentification,
+						com.tools20022.repository.msg.ProprietaryParty1.mmParty, com.tools20022.repository.msg.ProprietaryParty2.mmParty, com.tools20022.repository.msg.ProprietaryParty3.mmParty,
+						com.tools20022.repository.choice.Party7Choice.mmParty, com.tools20022.repository.choice.Party12Choice.mmParty, com.tools20022.repository.msg.PartyIdentification42.mmIdentification,
+						com.tools20022.repository.choice.PartyIdentification7Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification8Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification19Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification73Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification73Choice.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification60.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount3.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification1.mmIdentification,
+						com.tools20022.repository.choice.PartyIdentification9Choice.mmNameAndAddress, com.tools20022.repository.msg.IssuerInformation1.mmIdentification, com.tools20022.repository.msg.PartyIdentification39.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount53.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount53.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount55.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount55.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount45.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount45.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount48.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount48.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount46.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount46.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount47.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount47.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmPartyIdentification,
+						com.tools20022.repository.msg.PartyIdentification45.mmIdentification, com.tools20022.repository.choice.PartyIdentification29Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification33Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount69.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount69.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount70.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount70.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount71.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount71.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount72.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount72.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount73.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount73.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount74.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount74.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification66Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount76.mmIdentification, com.tools20022.repository.choice.PartyIdentification67Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.AlternatePartyIdentification4.mmIdentificationType, com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmAlternateIdentification, com.tools20022.repository.choice.PartyIdentification34Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount32.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification58.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification14.mmIdentification, com.tools20022.repository.msg.PartyIdentification11.mmIdentification, com.tools20022.repository.msg.PartyIdentification17.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification19.mmIdentification, com.tools20022.repository.msg.PartyIdentification30.mmIdentification, com.tools20022.repository.msg.PartyIdentification18.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification20.mmIdentification, com.tools20022.repository.msg.PartyIdentification31.mmIdentification, com.tools20022.repository.msg.PartyIdentification16.mmIdentification,
+						com.tools20022.repository.choice.PartyIdentification26Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount13.mmPartyIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount7.mmPartyIdentification, com.tools20022.repository.choice.PartyIdentification71Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification25Choice.mmIdentification, com.tools20022.repository.choice.PartyIdentification25Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount95.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount97.mmPartyIdentification,
+						com.tools20022.repository.msg.PartyIdentification62.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount96.mmPartyIdentification,
+						com.tools20022.repository.msg.PartyIdentification63.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification64.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification75Choice.mmNameAndAddress, com.tools20022.repository.msg.SafekeepingAccount5.mmAccountServicer,
+						com.tools20022.repository.choice.PartyIdentification83Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount100.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount100.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount100.mmAdditionalInformation,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount101.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount101.mmAlternateIdentification,
+						com.tools20022.repository.msg.IssuerInformation2.mmIdentification, com.tools20022.repository.msg.PartyIdentification71.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount102.mmPartyIdentification, com.tools20022.repository.choice.PartyIdentification89Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification87Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification88Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount104.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount104.mmAlternateIdentification,
+						com.tools20022.repository.msg.QualifiedPartyIdentification1.mmShortIdentification, com.tools20022.repository.msg.CardTransactionEnvironment5.mmSendingInstitution,
+						com.tools20022.repository.msg.CardTransactionEnvironment5.mmReceivingInstitution, com.tools20022.repository.msg.CardTransactionEnvironment5.mmSettlementInstitution,
+						com.tools20022.repository.choice.PartyIdentification90Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount106.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount106.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification75.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification75.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmAlternateIdentification, com.tools20022.repository.msg.AlternatePartyIdentification7.mmIdentificationType,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount111.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount111.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount117.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount107.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount107.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification76.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification77.mmIdentification, com.tools20022.repository.choice.Party28Choice.mmParty, com.tools20022.repository.choice.PartyIdentification93Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification91.mmIdentification, com.tools20022.repository.msg.PartyIdentification93.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount122.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount122.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentification92.mmIdentification, com.tools20022.repository.msg.PartyIdentification92.mmAlternateIdentification,
+						com.tools20022.repository.choice.PartyIdentification94Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount120.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount120.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount121.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount121.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification94.mmIdentification,
+						com.tools20022.repository.choice.PartyIdentification97Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentification97.mmPartyIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount124.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification95.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount123.mmPartyIdentification, com.tools20022.repository.choice.PartyIdentification96Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification96.mmIdentification, com.tools20022.repository.choice.PartyIdentification99Choice.mmNameAndAddress,
+						com.tools20022.repository.msg.PartyIdentification98.mmIdentification, com.tools20022.repository.msg.PartyIdentification100.mmIdentification,
+						com.tools20022.repository.msg.PlaceOfClearingIdentification1.mmIdentification, com.tools20022.repository.msg.PlaceOfTradeIdentification1.mmMarketTypeAndIdentification,
+						com.tools20022.repository.msg.SafeKeepingPlace1.mmSafekeepingPlaceFormat, com.tools20022.repository.msg.PartyIdentification99.mmIdentification, com.tools20022.repository.msg.Pledgee1.mmPledgeeTypeAndIdentification,
+						com.tools20022.repository.choice.PartyIdentification100Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount127.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount127.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount127.mmAdditionalInformation,
+						com.tools20022.repository.choice.PartyIdentification102Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount126.mmPartyIdentification,
+						com.tools20022.repository.choice.PartyIdentification101Choice.mmNameAndAddress, com.tools20022.repository.msg.AlternatePartyIdentification8.mmIdentificationType,
+						com.tools20022.repository.choice.PartyIdentification104Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentification101.mmAlternateIdentification,
+						com.tools20022.repository.choice.PartyIdentification111Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentification102.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification102.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount129.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount129.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount130.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount130.mmAlternateIdentification, com.tools20022.repository.msg.AlternatePartyIdentification9.mmIdentificationType,
+						com.tools20022.repository.choice.PartyIdentification113Choice.mmNameAndAddress, com.tools20022.repository.msg.PartyIdentificationAndAccount128.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount128.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification108.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount133.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount133.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentification103.mmIdentification, com.tools20022.repository.msg.PartyIdentification103.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount131.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount131.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount146.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount136.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount136.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount134.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount134.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification109.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification111.mmIdentification, com.tools20022.repository.msg.PartyIdentification110.mmIdentification,
+						com.tools20022.repository.choice.PartyIdentification115Choice.mmNameAndAddress, com.tools20022.repository.msg.SafeKeepingPlace2.mmSafekeepingPlaceFormat,
+						com.tools20022.repository.msg.PlaceOfTradeIdentification2.mmMarketTypeAndIdentification, com.tools20022.repository.msg.Pledgee2.mmPledgeeTypeAndIdentification,
+						com.tools20022.repository.msg.PartyIdentification112.mmIdentification, com.tools20022.repository.msg.SafekeepingAccount7.mmAccountServicer, com.tools20022.repository.msg.PartyIdentification113.mmParty,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount147.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification119.mmIdentification,
+						com.tools20022.repository.msg.PartyIdentification120.mmIdentification, com.tools20022.repository.msg.PartyIdentification120.mmAlternateIdentification);
 				subType_lazy = () -> Arrays.asList(OrganisationIdentification.mmObject(), PersonIdentification.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PartyIdentificationInformation.OtherIdentification, com.tools20022.repository.entity.PartyIdentificationInformation.IdentifiedParty,
-						com.tools20022.repository.entity.PartyIdentificationInformation.TaxIdentificationNumber, com.tools20022.repository.entity.PartyIdentificationInformation.NationalRegistrationNumber,
-						com.tools20022.repository.entity.PartyIdentificationInformation.TypeOfIdentification, com.tools20022.repository.entity.PartyIdentificationInformation.Declaration,
-						com.tools20022.repository.entity.PartyIdentificationInformation.PartyType, com.tools20022.repository.entity.PartyIdentificationInformation.PartyName,
-						com.tools20022.repository.entity.PartyIdentificationInformation.ValidityPeriod, com.tools20022.repository.entity.PartyIdentificationInformation.IdentifiedMarket,
-						com.tools20022.repository.entity.PartyIdentificationInformation.LEI);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification, com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedParty,
+						com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber, com.tools20022.repository.entity.PartyIdentificationInformation.mmNationalRegistrationNumber,
+						com.tools20022.repository.entity.PartyIdentificationInformation.mmTypeOfIdentification, com.tools20022.repository.entity.PartyIdentificationInformation.mmDeclaration,
+						com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyType, com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyName,
+						com.tools20022.repository.entity.PartyIdentificationInformation.mmValidityPeriod, com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedMarket,
+						com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI);
 				derivationComponent_lazy = () -> Arrays.asList(NameAndAddress2.mmObject(), PartyIdentification1Choice.mmObject(), NameAndAddress5.mmObject(), PartyIdentification2Choice.mmObject(), PartyIdentification4Choice.mmObject(),
 						NameAndAddress1.mmObject(), NameAndAddress4.mmObject(), PartyIdentification5Choice.mmObject(), Party2Choice.mmObject(), PartyIdentification8.mmObject(), Party6Choice.mmObject(), PartyIdentification32.mmObject(),
 						Party11Choice.mmObject(), PartyIdentification43.mmObject(), PartyIdentification.mmObject(), NameAndAddress7.mmObject(), PartyIdentificationAndAccount2.mmObject(), PartyIdentificationAndAccount5.mmObject(),
@@ -4167,5 +4192,93 @@ public class PartyIdentificationInformation {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public GenericIdentification getOtherIdentification() {
+		return otherIdentification;
+	}
+
+	public void setOtherIdentification(com.tools20022.repository.entity.GenericIdentification otherIdentification) {
+		this.otherIdentification = otherIdentification;
+	}
+
+	public Party getIdentifiedParty() {
+		return identifiedParty;
+	}
+
+	public void setIdentifiedParty(com.tools20022.repository.entity.Party identifiedParty) {
+		this.identifiedParty = identifiedParty;
+	}
+
+	public Max35Text getTaxIdentificationNumber() {
+		return taxIdentificationNumber;
+	}
+
+	public void setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
+		this.taxIdentificationNumber = taxIdentificationNumber;
+	}
+
+	public Max35Text getNationalRegistrationNumber() {
+		return nationalRegistrationNumber;
+	}
+
+	public void setNationalRegistrationNumber(Max35Text nationalRegistrationNumber) {
+		this.nationalRegistrationNumber = nationalRegistrationNumber;
+	}
+
+	public TypeOfIdentificationCode getTypeOfIdentification() {
+		return typeOfIdentification;
+	}
+
+	public void setTypeOfIdentification(TypeOfIdentificationCode typeOfIdentification) {
+		this.typeOfIdentification = typeOfIdentification;
+	}
+
+	public Max350Text getDeclaration() {
+		return declaration;
+	}
+
+	public void setDeclaration(Max350Text declaration) {
+		this.declaration = declaration;
+	}
+
+	public PartyTypeCode getPartyType() {
+		return partyType;
+	}
+
+	public void setPartyType(PartyTypeCode partyType) {
+		this.partyType = partyType;
+	}
+
+	public List<PartyName> getPartyName() {
+		return partyName;
+	}
+
+	public void setPartyName(List<com.tools20022.repository.entity.PartyName> partyName) {
+		this.partyName = partyName;
+	}
+
+	public DateTimePeriod getValidityPeriod() {
+		return validityPeriod;
+	}
+
+	public void setValidityPeriod(com.tools20022.repository.entity.DateTimePeriod validityPeriod) {
+		this.validityPeriod = validityPeriod;
+	}
+
+	public Market getIdentifiedMarket() {
+		return identifiedMarket;
+	}
+
+	public void setIdentifiedMarket(com.tools20022.repository.entity.Market identifiedMarket) {
+		this.identifiedMarket = identifiedMarket;
+	}
+
+	public LEIIdentifier getLEI() {
+		return lEI;
+	}
+
+	public void setLEI(LEIIdentifier lEI) {
+		this.lEI = lEI;
 	}
 }

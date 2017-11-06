@@ -37,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationType40Choice#Code
- * IdentificationType40Choice.Code}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationType40Choice#mmCode
+ * IdentificationType40Choice.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.IdentificationType40Choice#Proprietary
- * IdentificationType40Choice.Proprietary}</li>
+ * {@linkplain com.tools20022.repository.choice.IdentificationType40Choice#mmProprietary
+ * IdentificationType40Choice.mmProprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,6 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class IdentificationType40Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TypeOfIdentification2Code code;
 	/**
 	 * Type of identification is defined using a code.
 	 * <p>
@@ -88,8 +89,8 @@ public class IdentificationType40Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TypeOfIdentification
-	 * PartyIdentificationInformation.TypeOfIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTypeOfIdentification
+	 * PartyIdentificationInformation.mmTypeOfIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -110,27 +111,28 @@ public class IdentificationType40Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType43Choice#Code
-	 * IdentificationType43Choice.Code}</li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType43Choice#mmCode
+	 * IdentificationType43Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Code = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTypeOfIdentification;
 			componentContext_lazy = () -> IdentificationType40Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.TypeOfIdentification;
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of identification is defined using a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType43Choice.Code);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType43Choice.mmCode);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfIdentification2Code.mmObject();
 		}
 	};
+	protected GenericIdentification29 proprietary;
 	/**
 	 * Type of identification is defined using a data source scheme.
 	 * <p>
@@ -143,8 +145,8 @@ public class IdentificationType40Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#TypeOfIdentification
-	 * PartyIdentificationInformation.TypeOfIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmTypeOfIdentification
+	 * PartyIdentificationInformation.mmTypeOfIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -166,35 +168,35 @@ public class IdentificationType40Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.IdentificationType43Choice#Proprietary
-	 * IdentificationType43Choice.Proprietary}</li>
+	 * {@linkplain com.tools20022.repository.choice.IdentificationType43Choice#mmProprietary
+	 * IdentificationType43Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTypeOfIdentification;
 			componentContext_lazy = () -> IdentificationType40Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.TypeOfIdentification;
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of identification is defined using a data source scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType43Choice.Proprietary);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType43Choice.mmProprietary);
 			maxOccurs = 1;
-			type_lazy = () -> GenericIdentification29.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> GenericIdentification29.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType40Choice.Code, com.tools20022.repository.choice.IdentificationType40Choice.Proprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType40Choice.mmCode, com.tools20022.repository.choice.IdentificationType40Choice.mmProprietary);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IdentificationType40Choice";
 				definition = "Choice between a code and a data source scheme to specify the type of alternate identification.";
@@ -202,5 +204,21 @@ public class IdentificationType40Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TypeOfIdentification2Code getCode() {
+		return code;
+	}
+
+	public void setCode(TypeOfIdentification2Code code) {
+		this.code = code;
+	}
+
+	public GenericIdentification29 getProprietary() {
+		return proprietary;
+	}
+
+	public void setProprietary(GenericIdentification29 proprietary) {
+		this.proprietary = proprietary;
 	}
 }

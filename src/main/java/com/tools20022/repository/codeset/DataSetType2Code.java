@@ -33,30 +33,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * DataSetTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DataSetType2Code#Baseline
- * DataSetType2Code.Baseline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#TransportDataSet
- * DataSetType2Code.TransportDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#mmBaseline
+ * DataSetType2Code.mmBaseline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#CommercialDataSet
- * DataSetType2Code.CommercialDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#mmTransportDataSet
+ * DataSetType2Code.mmTransportDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#InsuranceDataSet
- * DataSetType2Code.InsuranceDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#mmCommercialDataSet
+ * DataSetType2Code.mmCommercialDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#CertificateDataSet
- * DataSetType2Code.CertificateDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#mmInsuranceDataSet
+ * DataSetType2Code.mmInsuranceDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#OtherCertificateDataSet
- * DataSetType2Code.OtherCertificateDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#mmCertificateDataSet
+ * DataSetType2Code.mmCertificateDataSet}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetType2Code#mmOtherCertificateDataSet
+ * DataSetType2Code.mmOtherCertificateDataSet}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +93,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 * name} = "Baseline"</li>
 	 * </ul>
 	 */
-	public static final MMCode Baseline = new MMCode() {
+	public static final MMCode mmBaseline = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Baseline";
@@ -115,7 +116,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 * name} = "TransportDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransportDataSet = new MMCode() {
+	public static final MMCode mmTransportDataSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportDataSet";
@@ -138,7 +139,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 * name} = "CommercialDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode CommercialDataSet = new MMCode() {
+	public static final MMCode mmCommercialDataSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDataSet";
@@ -161,7 +162,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 * name} = "InsuranceDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode InsuranceDataSet = new MMCode() {
+	public static final MMCode mmInsuranceDataSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuranceDataSet";
@@ -184,7 +185,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 * name} = "CertificateDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode CertificateDataSet = new MMCode() {
+	public static final MMCode mmCertificateDataSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateDataSet";
@@ -207,7 +208,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 * name} = "OtherCertificateDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode OtherCertificateDataSet = new MMCode() {
+	public static final MMCode mmOtherCertificateDataSet = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCertificateDataSet";
@@ -218,14 +219,14 @@ public class DataSetType2Code extends DataSetTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BASE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DataSetType2Code";
 				definition = "Specifies the type of data set that is matched.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetType2Code.Baseline, com.tools20022.repository.codeset.DataSetType2Code.TransportDataSet,
-						com.tools20022.repository.codeset.DataSetType2Code.CommercialDataSet, com.tools20022.repository.codeset.DataSetType2Code.InsuranceDataSet, com.tools20022.repository.codeset.DataSetType2Code.CertificateDataSet,
-						com.tools20022.repository.codeset.DataSetType2Code.OtherCertificateDataSet);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetType2Code.mmBaseline, com.tools20022.repository.codeset.DataSetType2Code.mmTransportDataSet,
+						com.tools20022.repository.codeset.DataSetType2Code.mmCommercialDataSet, com.tools20022.repository.codeset.DataSetType2Code.mmInsuranceDataSet, com.tools20022.repository.codeset.DataSetType2Code.mmCertificateDataSet,
+						com.tools20022.repository.codeset.DataSetType2Code.mmOtherCertificateDataSet);
 				trace_lazy = () -> DataSetTypeCode.mmObject();
 			}
 		});

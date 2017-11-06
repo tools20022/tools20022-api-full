@@ -35,12 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Reservation1#Amount
- * Reservation1.Amount}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Reservation1#Status
- * Reservation1.Status}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Reservation1#StartDateTime
- * Reservation1.StartDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reservation1#mmAmount
+ * Reservation1.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reservation1#mmStatus
+ * Reservation1.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reservation1#mmStartDateTime
+ * Reservation1.mmStartDateTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Reservation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Amount2Choice amount;
 	/**
 	 * Amount of money of the limit, expressed in an eligible currency.
 	 * <p>
@@ -78,7 +79,8 @@ public class Reservation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#Amount Limit.Amount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmAmount
+	 * Limit.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -97,20 +99,21 @@ public class Reservation1 {
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Amount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
 			componentContext_lazy = () -> Reservation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.Amount;
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	protected ReservationStatus1Choice status;
 	/**
 	 * Status of the limit, such as enabled or disabled.
 	 * <p>
@@ -124,8 +127,8 @@ public class Reservation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Limit#LimitStatus
-	 * Limit.LimitStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.Limit#mmLimitStatus
+	 * Limit.mmLimitStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,20 +146,21 @@ public class Reservation1 {
 	 * definition} = "Status of the limit, such as enabled or disabled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmLimitStatus;
 			componentContext_lazy = () -> Reservation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.LimitStatus;
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the limit, such as enabled or disabled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> ReservationStatus1Choice.mmObject();
 		}
 	};
+	protected DateAndDateTimeChoice startDateTime;
 	/**
 	 * Date and time at which the reservation becomes effective.
 	 * <p>
@@ -170,8 +174,8 @@ public class Reservation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#FromDateTime
-	 * DateTimePeriod.FromDateTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -190,17 +194,17 @@ public class Reservation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute StartDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> Reservation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.FromDateTime;
 			isDerived = false;
 			xmlTag = "StartDtTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDateTime";
 			definition = "Date and time at which the reservation becomes effective.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
@@ -208,14 +212,38 @@ public class Reservation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reservation1.Amount, com.tools20022.repository.msg.Reservation1.Status, com.tools20022.repository.msg.Reservation1.StartDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reservation1.mmAmount, com.tools20022.repository.msg.Reservation1.mmStatus, com.tools20022.repository.msg.Reservation1.mmStartDateTime);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Reservation1";
 				definition = "Liquidity set aside by the account owner for specific purposes.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Amount2Choice getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Amount2Choice amount) {
+		this.amount = amount;
+	}
+
+	public ReservationStatus1Choice getStatus() {
+		return status;
+	}
+
+	public void setStatus(ReservationStatus1Choice status) {
+		this.status = status;
+	}
+
+	public DateAndDateTimeChoice getStartDateTime() {
+		return startDateTime;
+	}
+
+	public void setStartDateTime(DateAndDateTimeChoice startDateTime) {
+		this.startDateTime = startDateTime;
 	}
 }

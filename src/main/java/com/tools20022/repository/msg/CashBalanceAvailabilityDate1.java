@@ -38,8 +38,8 @@ import java.util.function.Supplier;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#NumberOfDaysOrActualDate
- * CashBalanceAvailabilityDate1.NumberOfDaysOrActualDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#mmNumberOfDaysOrActualDate
+ * CashBalanceAvailabilityDate1.mmNumberOfDaysOrActualDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -47,11 +47,11 @@ import java.util.function.Supplier;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#NumberOfDays
- * CashBalanceAvailabilityDate1.NumberOfDays}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#mmNumberOfDays
+ * CashBalanceAvailabilityDate1.mmNumberOfDays}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#ActualDate
- * CashBalanceAvailabilityDate1.ActualDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#mmActualDate
+ * CashBalanceAvailabilityDate1.mmActualDate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +60,8 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,6 +83,7 @@ import java.util.function.Supplier;
 public class CashBalanceAvailabilityDate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max15PlusSignedNumericText numberOfDays;
 	/**
 	 * Indicates the number of float days attached to the balance.
 	 * <p>
@@ -96,8 +97,8 @@ public class CashBalanceAvailabilityDate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAvailability#NumberOfDays
-	 * CashAvailability.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAvailability#mmNumberOfDays
+	 * CashAvailability.mmNumberOfDays}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,27 +120,28 @@ public class CashBalanceAvailabilityDate1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAvailabilityDate1Choice#NumberOfDays
-	 * CashAvailabilityDate1Choice.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.choice.CashAvailabilityDate1Choice#mmNumberOfDays
+	 * CashAvailabilityDate1Choice.mmNumberOfDays}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NumberOfDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmNumberOfDays;
 			componentContext_lazy = () -> CashBalanceAvailabilityDate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.NumberOfDays;
 			isDerived = false;
 			xmlTag = "NbOfDays";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDays";
 			definition = "Indicates the number of float days attached to the balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAvailabilityDate1Choice.NumberOfDays);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAvailabilityDate1Choice.mmNumberOfDays);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max15PlusSignedNumericText.mmObject();
 		}
 	};
+	protected ISODate actualDate;
 	/**
 	 * Identifies the actual availability date.
 	 * <p>
@@ -152,8 +154,8 @@ public class CashBalanceAvailabilityDate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashAvailability#Date
-	 * CashAvailability.Date}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashAvailability#mmDate
+	 * CashAvailability.mmDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -174,24 +176,24 @@ public class CashBalanceAvailabilityDate1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.CashAvailabilityDate1Choice#ActualDate
-	 * CashAvailabilityDate1Choice.ActualDate}</li>
+	 * {@linkplain com.tools20022.repository.choice.CashAvailabilityDate1Choice#mmActualDate
+	 * CashAvailabilityDate1Choice.mmActualDate}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActualDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActualDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmDate;
 			componentContext_lazy = () -> CashBalanceAvailabilityDate1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.Date;
 			isDerived = false;
 			xmlTag = "ActlDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualDate";
 			definition = "Identifies the actual availability date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAvailabilityDate1Choice.ActualDate);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAvailabilityDate1Choice.mmActualDate);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -204,11 +206,11 @@ public class CashBalanceAvailabilityDate1 {
 	 * impactedElements} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#NumberOfDays
-	 * CashBalanceAvailabilityDate1.NumberOfDays}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#mmNumberOfDays
+	 * CashBalanceAvailabilityDate1.mmNumberOfDays}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#ActualDate
-	 * CashBalanceAvailabilityDate1.ActualDate}</li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#mmActualDate
+	 * CashBalanceAvailabilityDate1.mmActualDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
@@ -223,21 +225,21 @@ public class CashBalanceAvailabilityDate1 {
 	 * name} = "NumberOfDaysOrActualDate"</li>
 	 * </ul>
 	 */
-	public static final MMXor NumberOfDaysOrActualDate = new MMXor() {
+	public static final MMXor mmNumberOfDaysOrActualDate = new MMXor() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysOrActualDate";
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.NumberOfDays, com.tools20022.repository.msg.CashBalanceAvailabilityDate1.ActualDate);
 			messageComponent_lazy = () -> CashBalanceAvailabilityDate1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmNumberOfDays, com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmActualDate);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.NumberOfDays, com.tools20022.repository.msg.CashBalanceAvailabilityDate1.ActualDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmNumberOfDays, com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmActualDate);
 				trace_lazy = () -> CashAvailability.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -249,9 +251,25 @@ public class CashBalanceAvailabilityDate1 {
 				name = "CashBalanceAvailabilityDate1";
 				definition = "Indicates when the amount of money will become available.";
 				nextVersions_lazy = () -> Arrays.asList(CashAvailabilityDate1Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.NumberOfDaysOrActualDate);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmNumberOfDaysOrActualDate);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max15PlusSignedNumericText getNumberOfDays() {
+		return numberOfDays;
+	}
+
+	public void setNumberOfDays(Max15PlusSignedNumericText numberOfDays) {
+		this.numberOfDays = numberOfDays;
+	}
+
+	public ISODate getActualDate() {
+		return actualDate;
+	}
+
+	public void setActualDate(ISODate actualDate) {
+		this.actualDate = actualDate;
 	}
 }

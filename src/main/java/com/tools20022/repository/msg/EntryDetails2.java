@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.CashEntry;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identifies the underlying transaction(s) and/or batched entries.
@@ -32,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EntryDetails2#Batch
- * EntryDetails2.Batch}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntryDetails2#mmBatch
+ * EntryDetails2.mmBatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntryDetails2#TransactionDetails
- * EntryDetails2.TransactionDetails}</li>
+ * {@linkplain com.tools20022.repository.msg.EntryDetails2#mmTransactionDetails
+ * EntryDetails2.mmTransactionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -44,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +67,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class EntryDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BatchInformation2 batch;
 	/**
 	 * Provides details on batched transactions.
 	 * <p>
@@ -91,7 +93,7 @@ public class EntryDetails2 {
 	 * definition} = "Provides details on batched transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Batch = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBatch = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> EntryDetails2.mmObject();
 			isDerived = false;
@@ -99,12 +101,13 @@ public class EntryDetails2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Batch";
 			definition = "Provides details on batched transactions.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> BatchInformation2.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BatchInformation2.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.EntryTransaction3> transactionDetails;
 	/**
 	 * Provides information on the underlying transaction(s).
 	 * <p>
@@ -134,27 +137,27 @@ public class EntryDetails2 {
 	 * definition} = "Provides information on the underlying transaction(s)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EntryDetails2.mmObject();
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
+			componentContext_lazy = () -> EntryDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Provides information on the underlying transaction(s).";
 			minOccurs = 0;
-			type_lazy = () -> EntryTransaction3.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryDetails2.Batch, com.tools20022.repository.msg.EntryDetails2.TransactionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryDetails2.mmBatch, com.tools20022.repository.msg.EntryDetails2.mmTransactionDetails);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "EntryDetails2";
 				definition = "Identifies the underlying transaction(s) and/or batched entries.";
@@ -162,5 +165,21 @@ public class EntryDetails2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BatchInformation2 getBatch() {
+		return batch;
+	}
+
+	public void setBatch(com.tools20022.repository.msg.BatchInformation2 batch) {
+		this.batch = batch;
+	}
+
+	public List<EntryTransaction3> getTransactionDetails() {
+		return transactionDetails;
+	}
+
+	public void setTransactionDetails(List<com.tools20022.repository.msg.EntryTransaction3> transactionDetails) {
+		this.transactionDetails = transactionDetails;
 	}
 }

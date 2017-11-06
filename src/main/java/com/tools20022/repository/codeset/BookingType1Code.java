@@ -35,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * BookingTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BookingType1Code#Regular
- * BookingType1Code.Regular}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BookingType1Code#mmRegular
+ * BookingType1Code.mmRegular}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingType1Code#ContractForDifference
- * BookingType1Code.ContractForDifference}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingType1Code#mmContractForDifference
+ * BookingType1Code.mmContractForDifference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingType1Code#TotalReturnSwap
- * BookingType1Code.TotalReturnSwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingType1Code#mmTotalReturnSwap
+ * BookingType1Code.mmTotalReturnSwap}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +87,7 @@ public class BookingType1Code extends BookingTypeCode {
 	 * name} = "Regular"</li>
 	 * </ul>
 	 */
-	public static final MMCode Regular = new MMCode() {
+	public static final MMCode mmRegular = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
@@ -110,7 +110,7 @@ public class BookingType1Code extends BookingTypeCode {
 	 * name} = "ContractForDifference"</li>
 	 * </ul>
 	 */
-	public static final MMCode ContractForDifference = new MMCode() {
+	public static final MMCode mmContractForDifference = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractForDifference";
@@ -133,7 +133,7 @@ public class BookingType1Code extends BookingTypeCode {
 	 * name} = "TotalReturnSwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode TotalReturnSwap = new MMCode() {
+	public static final MMCode mmTotalReturnSwap = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnSwap";
@@ -144,13 +144,13 @@ public class BookingType1Code extends BookingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REGU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "BookingType1Code";
 				definition = "Method for booking out an order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an Over The Counter derivative (for example, Contract For Difference - CFD or similar).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BookingType1Code.Regular, com.tools20022.repository.codeset.BookingType1Code.ContractForDifference,
-						com.tools20022.repository.codeset.BookingType1Code.TotalReturnSwap);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BookingType1Code.mmRegular, com.tools20022.repository.codeset.BookingType1Code.mmContractForDifference,
+						com.tools20022.repository.codeset.BookingType1Code.mmTotalReturnSwap);
 				trace_lazy = () -> BookingTypeCode.mmObject();
 			}
 		});

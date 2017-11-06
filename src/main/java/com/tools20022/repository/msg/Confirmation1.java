@@ -39,48 +39,53 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Confirmation1#ConfirmationStatus
- * Confirmation1.ConfirmationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Confirmation1#ConfirmationTime
- * Confirmation1.ConfirmationTime}</li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmConfirmationStatus
+ * Confirmation1.mmConfirmationStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Confirmation1#TradePartyConfirmationTime
- * Confirmation1.TradePartyConfirmationTime}</li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmConfirmationTime
+ * Confirmation1.mmConfirmationTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Confirmation1#InitiatingPartyConfirmationTime
- * Confirmation1.InitiatingPartyConfirmationTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Confirmation1#ConfirmationType
- * Confirmation1.ConfirmationType}</li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmTradePartyConfirmationTime
+ * Confirmation1.mmTradePartyConfirmationTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Confirmation1#RequestIdentification
- * Confirmation1.RequestIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Confirmation1#QueryStartNumber
- * Confirmation1.QueryStartNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmInitiatingPartyConfirmationTime
+ * Confirmation1.mmInitiatingPartyConfirmationTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Confirmation1#TotalNumberOfReports
- * Confirmation1.TotalNumberOfReports}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Confirmation1#PageNumber
- * Confirmation1.PageNumber}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Confirmation1#QueryPageNumber
- * Confirmation1.QueryPageNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmConfirmationType
+ * Confirmation1.mmConfirmationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Confirmation1#MessageNumberOfCurrentPage
- * Confirmation1.MessageNumberOfCurrentPage}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Confirmation1#ListOrderNumber
- * Confirmation1.ListOrderNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmRequestIdentification
+ * Confirmation1.mmRequestIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Confirmation1#LastPageIndicator
- * Confirmation1.LastPageIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmQueryStartNumber
+ * Confirmation1.mmQueryStartNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Confirmation1#LastReportRequested
- * Confirmation1.LastReportRequested}</li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmTotalNumberOfReports
+ * Confirmation1.mmTotalNumberOfReports}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Confirmation1#mmPageNumber
+ * Confirmation1.mmPageNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmQueryPageNumber
+ * Confirmation1.mmQueryPageNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmMessageNumberOfCurrentPage
+ * Confirmation1.mmMessageNumberOfCurrentPage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmListOrderNumber
+ * Confirmation1.mmListOrderNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmLastPageIndicator
+ * Confirmation1.mmLastPageIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Confirmation1#mmLastReportRequested
+ * Confirmation1.mmLastReportRequested}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Confirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected TradeConfirmationStatus1Code confirmationStatus;
 	/**
 	 * Identifies the status of the confirmation.
 	 * <p>
@@ -121,7 +127,7 @@ public class Confirmation1 {
 	 * definition} = "Identifies the status of the confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmationStatus = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -129,11 +135,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationStatus";
 			definition = "Identifies the status of the confirmation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
 	};
+	protected ISODateTime confirmationTime;
 	/**
 	 * Time that both of parties confirm the trade.
 	 * <p>
@@ -160,7 +167,7 @@ public class Confirmation1 {
 	 * definition} = "Time that both of parties confirm the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmationTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmationTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -168,11 +175,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationTime";
 			definition = "Time that both of parties confirm the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime tradePartyConfirmationTime;
 	/**
 	 * Time that the trade party confirms the trade.
 	 * <p>
@@ -199,7 +207,7 @@ public class Confirmation1 {
 	 * definition} = "Time that the trade party confirms the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TradePartyConfirmationTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTradePartyConfirmationTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -207,11 +215,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradePartyConfirmationTime";
 			definition = "Time that the trade party confirms the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime initiatingPartyConfirmationTime;
 	/**
 	 * Time that the initiating party confirms the trade.
 	 * <p>
@@ -238,7 +247,7 @@ public class Confirmation1 {
 	 * definition} = "Time that the initiating party confirms the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InitiatingPartyConfirmationTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInitiatingPartyConfirmationTime = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -246,11 +255,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyConfirmationTime";
 			definition = "Time that the initiating party confirms the trade.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ConfirmationRequest1Code confirmationType;
 	/**
 	 * Identifies the type of confirmation message being sent.
 	 * <p>
@@ -278,7 +288,7 @@ public class Confirmation1 {
 	 * definition} = "Identifies the type of confirmation message being sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -286,11 +296,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationType";
 			definition = "Identifies the type of confirmation message being sent.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ConfirmationRequest1Code.mmObject();
 		}
 	};
+	protected MessageIdentification1 requestIdentification;
 	/**
 	 * Identifies the confirm request messge.
 	 * <p>
@@ -316,7 +327,7 @@ public class Confirmation1 {
 	 * definition} = "Identifies the confirm request messge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -324,12 +335,13 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestIdentification";
 			definition = "Identifies the confirm request messge.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MessageIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification1.mmObject();
 		}
 	};
+	protected Max35NumericText queryStartNumber;
 	/**
 	 * Start number in request result.
 	 * <p>
@@ -357,7 +369,7 @@ public class Confirmation1 {
 	 * definition} = "Start number in request result."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryStartNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryStartNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -365,11 +377,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryStartNumber";
 			definition = "Start number in request result.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	protected Number totalNumberOfReports;
 	/**
 	 * Total number of reports returned in response to a request.
 	 * <p>
@@ -397,7 +410,7 @@ public class Confirmation1 {
 	 * "Total number of reports returned in response to a request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TotalNumberOfReports = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTotalNumberOfReports = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -405,11 +418,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfReports";
 			definition = "Total number of reports returned in response to a request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Max35NumericText pageNumber;
 	/**
 	 * Query results will be grouped with fixed number. The field indicates that
 	 * the total number of groups.
@@ -440,7 +454,7 @@ public class Confirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPageNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -448,11 +462,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PageNumber";
 			definition = "Query results will be grouped with fixed number. The field indicates that the total number of groups. ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	protected Max35NumericText queryPageNumber;
 	/**
 	 * Page number in request result.
 	 * <p>
@@ -480,7 +495,7 @@ public class Confirmation1 {
 	 * definition} = "Page number in request result."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute QueryPageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmQueryPageNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -488,11 +503,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryPageNumber";
 			definition = "Page number in request result.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	protected Number messageNumberOfCurrentPage;
 	/**
 	 * Number of messages in current page.
 	 * <p>
@@ -519,7 +535,7 @@ public class Confirmation1 {
 	 * definition} = "Number of messages in current page."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageNumberOfCurrentPage = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageNumberOfCurrentPage = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -527,11 +543,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumberOfCurrentPage";
 			definition = "Number of messages in current page.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected Number listOrderNumber;
 	/**
 	 * Number of reports at current page.
 	 * <p>
@@ -558,7 +575,7 @@ public class Confirmation1 {
 	 * definition} = "Number of reports at current page."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ListOrderNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmListOrderNumber = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -566,11 +583,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListOrderNumber";
 			definition = "Number of reports at current page.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	protected YesNoIndicator lastPageIndicator;
 	/**
 	 * Indicate whether the current message is the last one of the current page
 	 * or not.
@@ -601,7 +619,7 @@ public class Confirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastPageIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastPageIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -609,11 +627,12 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastPageIndicator";
 			definition = "Indicate whether the current message is the last one of the current page or not.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator lastReportRequested;
 	/**
 	 * Indicates whether this message is that last report message in response to
 	 * a request.
@@ -644,7 +663,7 @@ public class Confirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LastReportRequested = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLastReportRequested = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
@@ -652,8 +671,8 @@ public class Confirmation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastReportRequested";
 			definition = "Indicates whether this message is that last report message in response to a request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -661,17 +680,130 @@ public class Confirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Confirmation1.ConfirmationStatus, com.tools20022.repository.msg.Confirmation1.ConfirmationTime,
-						com.tools20022.repository.msg.Confirmation1.TradePartyConfirmationTime, com.tools20022.repository.msg.Confirmation1.InitiatingPartyConfirmationTime, com.tools20022.repository.msg.Confirmation1.ConfirmationType,
-						com.tools20022.repository.msg.Confirmation1.RequestIdentification, com.tools20022.repository.msg.Confirmation1.QueryStartNumber, com.tools20022.repository.msg.Confirmation1.TotalNumberOfReports,
-						com.tools20022.repository.msg.Confirmation1.PageNumber, com.tools20022.repository.msg.Confirmation1.QueryPageNumber, com.tools20022.repository.msg.Confirmation1.MessageNumberOfCurrentPage,
-						com.tools20022.repository.msg.Confirmation1.ListOrderNumber, com.tools20022.repository.msg.Confirmation1.LastPageIndicator, com.tools20022.repository.msg.Confirmation1.LastReportRequested);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Confirmation1.mmConfirmationStatus, com.tools20022.repository.msg.Confirmation1.mmConfirmationTime,
+						com.tools20022.repository.msg.Confirmation1.mmTradePartyConfirmationTime, com.tools20022.repository.msg.Confirmation1.mmInitiatingPartyConfirmationTime,
+						com.tools20022.repository.msg.Confirmation1.mmConfirmationType, com.tools20022.repository.msg.Confirmation1.mmRequestIdentification, com.tools20022.repository.msg.Confirmation1.mmQueryStartNumber,
+						com.tools20022.repository.msg.Confirmation1.mmTotalNumberOfReports, com.tools20022.repository.msg.Confirmation1.mmPageNumber, com.tools20022.repository.msg.Confirmation1.mmQueryPageNumber,
+						com.tools20022.repository.msg.Confirmation1.mmMessageNumberOfCurrentPage, com.tools20022.repository.msg.Confirmation1.mmListOrderNumber, com.tools20022.repository.msg.Confirmation1.mmLastPageIndicator,
+						com.tools20022.repository.msg.Confirmation1.mmLastReportRequested);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Confirmation1";
 				definition = "Details of confirmation in the CMU.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TradeConfirmationStatus1Code getConfirmationStatus() {
+		return confirmationStatus;
+	}
+
+	public void setConfirmationStatus(TradeConfirmationStatus1Code confirmationStatus) {
+		this.confirmationStatus = confirmationStatus;
+	}
+
+	public ISODateTime getConfirmationTime() {
+		return confirmationTime;
+	}
+
+	public void setConfirmationTime(ISODateTime confirmationTime) {
+		this.confirmationTime = confirmationTime;
+	}
+
+	public ISODateTime getTradePartyConfirmationTime() {
+		return tradePartyConfirmationTime;
+	}
+
+	public void setTradePartyConfirmationTime(ISODateTime tradePartyConfirmationTime) {
+		this.tradePartyConfirmationTime = tradePartyConfirmationTime;
+	}
+
+	public ISODateTime getInitiatingPartyConfirmationTime() {
+		return initiatingPartyConfirmationTime;
+	}
+
+	public void setInitiatingPartyConfirmationTime(ISODateTime initiatingPartyConfirmationTime) {
+		this.initiatingPartyConfirmationTime = initiatingPartyConfirmationTime;
+	}
+
+	public ConfirmationRequest1Code getConfirmationType() {
+		return confirmationType;
+	}
+
+	public void setConfirmationType(ConfirmationRequest1Code confirmationType) {
+		this.confirmationType = confirmationType;
+	}
+
+	public MessageIdentification1 getRequestIdentification() {
+		return requestIdentification;
+	}
+
+	public void setRequestIdentification(com.tools20022.repository.msg.MessageIdentification1 requestIdentification) {
+		this.requestIdentification = requestIdentification;
+	}
+
+	public Max35NumericText getQueryStartNumber() {
+		return queryStartNumber;
+	}
+
+	public void setQueryStartNumber(Max35NumericText queryStartNumber) {
+		this.queryStartNumber = queryStartNumber;
+	}
+
+	public Number getTotalNumberOfReports() {
+		return totalNumberOfReports;
+	}
+
+	public void setTotalNumberOfReports(Number totalNumberOfReports) {
+		this.totalNumberOfReports = totalNumberOfReports;
+	}
+
+	public Max35NumericText getPageNumber() {
+		return pageNumber;
+	}
+
+	public void setPageNumber(Max35NumericText pageNumber) {
+		this.pageNumber = pageNumber;
+	}
+
+	public Max35NumericText getQueryPageNumber() {
+		return queryPageNumber;
+	}
+
+	public void setQueryPageNumber(Max35NumericText queryPageNumber) {
+		this.queryPageNumber = queryPageNumber;
+	}
+
+	public Number getMessageNumberOfCurrentPage() {
+		return messageNumberOfCurrentPage;
+	}
+
+	public void setMessageNumberOfCurrentPage(Number messageNumberOfCurrentPage) {
+		this.messageNumberOfCurrentPage = messageNumberOfCurrentPage;
+	}
+
+	public Number getListOrderNumber() {
+		return listOrderNumber;
+	}
+
+	public void setListOrderNumber(Number listOrderNumber) {
+		this.listOrderNumber = listOrderNumber;
+	}
+
+	public YesNoIndicator getLastPageIndicator() {
+		return lastPageIndicator;
+	}
+
+	public void setLastPageIndicator(YesNoIndicator lastPageIndicator) {
+		this.lastPageIndicator = lastPageIndicator;
+	}
+
+	public YesNoIndicator getLastReportRequested() {
+		return lastReportRequested;
+	}
+
+	public void setLastReportRequested(YesNoIndicator lastReportRequested) {
+		this.lastReportRequested = lastReportRequested;
 	}
 }

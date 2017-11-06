@@ -33,17 +33,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Activity1#MessageName
- * Activity1.MessageName}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Activity1#Description
- * Activity1.Description}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Activity1#mmMessageName
+ * Activity1.mmMessageName}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Activity1#mmDescription
+ * Activity1.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,6 +58,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Activity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max70Text messageName;
 	/**
 	 * Name of the message associated with the activity.
 	 * <p>
@@ -84,7 +85,7 @@ public class Activity1 {
 	 * definition} = "Name of the message associated with the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Activity1.mmObject();
 			isDerived = false;
@@ -92,11 +93,12 @@ public class Activity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of the message associated with the activity.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	protected Max140Text description;
 	/**
 	 * Further information on a message associated with the activity.
 	 * <p>
@@ -124,7 +126,7 @@ public class Activity1 {
 	 * "Further information on a message associated with the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Activity1.mmObject();
 			isDerived = false;
@@ -132,8 +134,8 @@ public class Activity1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Further information on a message associated with the activity.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -141,13 +143,29 @@ public class Activity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Activity1.MessageName, com.tools20022.repository.msg.Activity1.Description);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Activity1.mmMessageName, com.tools20022.repository.msg.Activity1.mmDescription);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Activity1";
 				definition = "Information about the message that is associated with the activity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max70Text getMessageName() {
+		return messageName;
+	}
+
+	public void setMessageName(Max70Text messageName) {
+		this.messageName = messageName;
+	}
+
+	public Max140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(Max140Text description) {
+		this.description = description;
 	}
 }

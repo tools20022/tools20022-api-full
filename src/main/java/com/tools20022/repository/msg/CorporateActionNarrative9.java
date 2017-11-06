@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Provides additional information such as the information conditions.
@@ -34,17 +35,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative9#AdditionalText
- * CorporateActionNarrative9.AdditionalText}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative9#mmAdditionalText
+ * CorporateActionNarrative9.mmAdditionalText}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative9#InformationConditions
- * CorporateActionNarrative9.InformationConditions}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative9#mmInformationConditions
+ * CorporateActionNarrative9.mmInformationConditions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative9#InformationToComplyWith
- * CorporateActionNarrative9.InformationToComplyWith}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative9#mmInformationToComplyWith
+ * CorporateActionNarrative9.mmInformationToComplyWith}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative9#PartyContactNarrative
- * CorporateActionNarrative9.PartyContactNarrative}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNarrative9#mmPartyContactNarrative
+ * CorporateActionNarrative9.mmPartyContactNarrative}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -53,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionNarrative9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<Max350Text> additionalText;
 	/**
 	 * Provides additional information or specifies in more detail the content
 	 * of a message. This field may only be used when the information to be
@@ -100,7 +102,7 @@ public class CorporateActionNarrative9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionNarrative9.mmObject();
 			isDerived = false;
@@ -112,6 +114,7 @@ public class CorporateActionNarrative9 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> informationConditions;
 	/**
 	 * Provides conditional information related to the event, for example, an
 	 * offer is subject to 50 percent acceptance, the offeror allows the
@@ -126,8 +129,8 @@ public class CorporateActionNarrative9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#InformationConditions
-	 * CorporateActionEvent.InformationConditions}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmInformationConditions
+	 * CorporateActionEvent.mmInformationConditions}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,10 +151,10 @@ public class CorporateActionNarrative9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InformationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInformationConditions = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmInformationConditions;
 			componentContext_lazy = () -> CorporateActionNarrative9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.InformationConditions;
 			isDerived = false;
 			xmlTag = "InfConds";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,6 +164,7 @@ public class CorporateActionNarrative9 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> informationToComplyWith;
 	/**
 	 * Provides information conditions to the account owner that are to be
 	 * complied with, for example, not open to US/Canadian residents, Qualified
@@ -176,8 +180,8 @@ public class CorporateActionNarrative9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#InformationToComplyWith
-	 * BiddingConditions.InformationToComplyWith}</li>
+	 * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmInformationToComplyWith
+	 * BiddingConditions.mmInformationToComplyWith}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,10 +202,10 @@ public class CorporateActionNarrative9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InformationToComplyWith = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> CorporateActionNarrative9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.InformationToComplyWith;
 			isDerived = false;
 			xmlTag = "InfToCmplyWth";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,6 +215,7 @@ public class CorporateActionNarrative9 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected List<Max350Text> partyContactNarrative;
 	/**
 	 * Provides additional information regarding the party, for example, the
 	 * contact unit or person responsible for the transaction identified in the
@@ -225,8 +230,8 @@ public class CorporateActionNarrative9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Role#ContactPersonRole
-	 * Role.ContactPersonRole}</li>
+	 * {@linkplain com.tools20022.repository.entity.Role#mmContactPersonRole
+	 * Role.mmContactPersonRole}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -247,10 +252,10 @@ public class CorporateActionNarrative9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
 			componentContext_lazy = () -> CorporateActionNarrative9.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.ContactPersonRole;
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,15 +269,47 @@ public class CorporateActionNarrative9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative9.AdditionalText, com.tools20022.repository.msg.CorporateActionNarrative9.InformationConditions,
-						com.tools20022.repository.msg.CorporateActionNarrative9.InformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative9.PartyContactNarrative);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative9.mmAdditionalText, com.tools20022.repository.msg.CorporateActionNarrative9.mmInformationConditions,
+						com.tools20022.repository.msg.CorporateActionNarrative9.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative9.mmPartyContactNarrative);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionNarrative9";
 				definition = "Provides additional information such as the information conditions.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<Max350Text> getAdditionalText() {
+		return additionalText;
+	}
+
+	public void setAdditionalText(List<Max350Text> additionalText) {
+		this.additionalText = additionalText;
+	}
+
+	public List<Max350Text> getInformationConditions() {
+		return informationConditions;
+	}
+
+	public void setInformationConditions(List<Max350Text> informationConditions) {
+		this.informationConditions = informationConditions;
+	}
+
+	public List<Max350Text> getInformationToComplyWith() {
+		return informationToComplyWith;
+	}
+
+	public void setInformationToComplyWith(List<Max350Text> informationToComplyWith) {
+		this.informationToComplyWith = informationToComplyWith;
+	}
+
+	public List<Max350Text> getPartyContactNarrative() {
+		return partyContactNarrative;
+	}
+
+	public void setPartyContactNarrative(List<Max350Text> partyContactNarrative) {
+		this.partyContactNarrative = partyContactNarrative;
 	}
 }

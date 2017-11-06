@@ -33,22 +33,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * ModificationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Modification1Code#NoChange
- * Modification1Code.NoChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Modification1Code#Modification
- * Modification1Code.Modification}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Modification1Code#Deletion
- * Modification1Code.Deletion}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Modification1Code#Addition
- * Modification1Code.Addition}</li>
+ * {@linkplain com.tools20022.repository.codeset.Modification1Code#mmNoChange
+ * Modification1Code.mmNoChange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Modification1Code#mmModification
+ * Modification1Code.mmModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Modification1Code#mmDeletion
+ * Modification1Code.mmDeletion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Modification1Code#mmAddition
+ * Modification1Code.mmAddition}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +88,7 @@ public class Modification1Code extends ModificationCode {
 	 * name} = "NoChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode NoChange = new MMCode() {
+	public static final MMCode mmNoChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoChange";
@@ -108,7 +111,7 @@ public class Modification1Code extends ModificationCode {
 	 * name} = "Modification"</li>
 	 * </ul>
 	 */
-	public static final MMCode Modification = new MMCode() {
+	public static final MMCode mmModification = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
@@ -131,7 +134,7 @@ public class Modification1Code extends ModificationCode {
 	 * name} = "Deletion"</li>
 	 * </ul>
 	 */
-	public static final MMCode Deletion = new MMCode() {
+	public static final MMCode mmDeletion = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deletion";
@@ -154,7 +157,7 @@ public class Modification1Code extends ModificationCode {
 	 * name} = "Addition"</li>
 	 * </ul>
 	 */
-	public static final MMCode Addition = new MMCode() {
+	public static final MMCode mmAddition = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Addition";
@@ -165,13 +168,13 @@ public class Modification1Code extends ModificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NOCH");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Modification1Code";
 				definition = "Specifies if an item is added, modified, deleted or unchanged.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Modification1Code.NoChange, com.tools20022.repository.codeset.Modification1Code.Modification, com.tools20022.repository.codeset.Modification1Code.Deletion,
-						com.tools20022.repository.codeset.Modification1Code.Addition);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Modification1Code.mmNoChange, com.tools20022.repository.codeset.Modification1Code.mmModification,
+						com.tools20022.repository.codeset.Modification1Code.mmDeletion, com.tools20022.repository.codeset.Modification1Code.mmAddition);
 				trace_lazy = () -> ModificationCode.mmObject();
 			}
 		});

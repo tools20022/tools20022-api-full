@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceAdjustmentTypeCode#Compensable
- * ServiceAdjustmentTypeCode.Compensable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceAdjustmentTypeCode#mmCompensable
+ * ServiceAdjustmentTypeCode.mmCompensable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceAdjustmentTypeCode#NonCompensable
- * ServiceAdjustmentTypeCode.NonCompensable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceAdjustmentTypeCode#mmNonCompensable
+ * ServiceAdjustmentTypeCode.mmNonCompensable}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class ServiceAdjustmentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Compensable = new MMCode() {
+	public static final MMCode mmCompensable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compensable";
@@ -126,7 +126,7 @@ public class ServiceAdjustmentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode NonCompensable = new MMCode() {
+	public static final MMCode mmNonCompensable = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCompensable";
@@ -139,12 +139,12 @@ public class ServiceAdjustmentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ServiceAdjustmentTypeCode";
 				definition = "Defines the type of allowed service adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.Compensable, com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.NonCompensable);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.mmCompensable, com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.mmNonCompensable);
 				derivation_lazy = () -> Arrays.asList(ServiceAdjustmentType1Code.mmObject());
 			}
 		});

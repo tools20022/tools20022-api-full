@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans5#IndividualTransport
- * TransportMeans5.IndividualTransport}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans5#mmIndividualTransport
+ * TransportMeans5.mmIndividualTransport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransportMeans5#MultimodalTransport
- * TransportMeans5.MultimodalTransport}</li>
+ * {@linkplain com.tools20022.repository.msg.TransportMeans5#mmMultimodalTransport
+ * TransportMeans5.mmMultimodalTransport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -45,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransportMeans5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected SingleTransport7 individualTransport;
 	/**
 	 * Moving of goods or people from one place to another by vehicle.
 	 * <p>
@@ -96,26 +97,27 @@ public class TransportMeans5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportMeans1#IndividualTransport
-	 * TransportMeans1.IndividualTransport}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportMeans1#mmIndividualTransport
+	 * TransportMeans1.mmIndividualTransport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd IndividualTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmIndividualTransport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransportMeans5.mmObject();
 			businessComponentTrace_lazy = () -> Transport.mmObject();
+			componentContext_lazy = () -> TransportMeans5.mmObject();
 			isDerived = false;
 			xmlTag = "IndvTrnsprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualTransport";
 			definition = "Moving of goods or people from one place to another by vehicle.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportMeans1.IndividualTransport;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportMeans1.mmIndividualTransport;
 			maxOccurs = 1;
-			type_lazy = () -> SingleTransport7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SingleTransport7.mmObject();
 		}
 	};
+	protected MultimodalTransport3 multimodalTransport;
 	/**
 	 * Specifies the different movements and places and their role in a
 	 * multimodal conveyance of goods.
@@ -150,33 +152,33 @@ public class TransportMeans5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.msg.TransportMeans1#MultimodalTransport
-	 * TransportMeans1.MultimodalTransport}</li>
+	 * {@linkplain com.tools20022.repository.msg.TransportMeans1#mmMultimodalTransport
+	 * TransportMeans1.mmMultimodalTransport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MultimodalTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMultimodalTransport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransportMeans5.mmObject();
 			businessComponentTrace_lazy = () -> Transport.mmObject();
+			componentContext_lazy = () -> TransportMeans5.mmObject();
 			isDerived = false;
 			xmlTag = "MltmdlTrnsprt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultimodalTransport";
 			definition = "Specifies the different movements and places and their role in a multimodal conveyance of goods.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportMeans1.MultimodalTransport;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportMeans1.mmMultimodalTransport;
 			maxOccurs = 1;
-			type_lazy = () -> MultimodalTransport3.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.MultimodalTransport3.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans5.IndividualTransport, com.tools20022.repository.msg.TransportMeans5.MultimodalTransport);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans5.mmIndividualTransport, com.tools20022.repository.msg.TransportMeans5.mmMultimodalTransport);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransportMeans5";
 				definition = "Describes the multimodal or the individual transport of goods.";
@@ -184,5 +186,21 @@ public class TransportMeans5 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SingleTransport7 getIndividualTransport() {
+		return individualTransport;
+	}
+
+	public void setIndividualTransport(com.tools20022.repository.msg.SingleTransport7 individualTransport) {
+		this.individualTransport = individualTransport;
+	}
+
+	public MultimodalTransport3 getMultimodalTransport() {
+		return multimodalTransport;
+	}
+
+	public void setMultimodalTransport(com.tools20022.repository.msg.MultimodalTransport3 multimodalTransport) {
+		this.multimodalTransport = multimodalTransport;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.RestrictedFINXMax140Text;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Identification of a security.
@@ -35,14 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityIdentification20#ISIN
- * SecurityIdentification20.ISIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#OtherIdentification
- * SecurityIdentification20.OtherIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#mmISIN
+ * SecurityIdentification20.mmISIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#Description
- * SecurityIdentification20.Description}</li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#mmOtherIdentification
+ * SecurityIdentification20.mmOtherIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentification20#mmDescription
+ * SecurityIdentification20.mmDescription}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,84 +56,84 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrative002V04#UnderlyingSecurity
- * CorporateActionNarrative002V04.UnderlyingSecurity}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrative002V04#mmUnderlyingSecurity
+ * CorporateActionNarrative002V04.mmUnderlyingSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionAllegementNotification002V05.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionReversalAdvice002V05.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionConfirmation002V06.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05#mmFinancialInstrumentIdentification
  * SecuritiesFinancingModificationInstruction002V05.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04#FinancialInstrumentIdentification
- * IntraPositionMovementInstruction002V04.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04#mmFinancialInstrumentIdentification
+ * IntraPositionMovementInstruction002V04.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionGenerationNotification002V06.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionInstruction002V06.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V06#FinancialInstrumentIdentification
- * SecuritiesFinancingInstruction002V06.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V06#mmFinancialInstrumentIdentification
+ * SecuritiesFinancingInstruction002V06.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V06#FinancialInstrumentIdentification
- * SecuritiesFinancingConfirmation002V06.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V06#mmFinancialInstrumentIdentification
+ * SecuritiesFinancingConfirmation002V06.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05#FinancialInstrumentIdentification
- * IntraPositionMovementConfirmation002V05.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05#mmFinancialInstrumentIdentification
+ * IntraPositionMovementConfirmation002V05.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06#FinancialInstrumentIdentification
- * IntraPositionMovementConfirmation002V06.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06#mmFinancialInstrumentIdentification
+ * IntraPositionMovementConfirmation002V06.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionAllegementNotification002V06.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionInstruction002V07.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07#FinancialInstrumentIdentification
- * SecuritiesFinancingConfirmation002V07.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07#mmFinancialInstrumentIdentification
+ * SecuritiesFinancingConfirmation002V07.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07#FinancialInstrumentIdentification
- * SecuritiesFinancingInstruction002V07.FinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07#mmFinancialInstrumentIdentification
+ * SecuritiesFinancingInstruction002V07.mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionGenerationNotification002V07.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06#mmFinancialInstrumentIdentification
  * SecuritiesFinancingModificationInstruction002V06.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionConfirmation002V07.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06#FinancialInstrumentIdentification
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionReversalAdvice002V06.
- * FinancialInstrumentIdentification}</li>
+ * mmFinancialInstrumentIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -145,6 +147,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SecurityIdentification20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected ISINOct2015Identifier iSIN;
 	/**
 	 * International Securities Identification Number (ISIN). A numbering system
 	 * designed by the United Nation's International Organisation for
@@ -164,8 +167,8 @@ public class SecurityIdentification20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#SecurityIdentification
-	 * SecuritiesIdentification.SecurityIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmSecurityIdentification
+	 * SecuritiesIdentification.mmSecurityIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -186,20 +189,21 @@ public class SecurityIdentification20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> SecurityIdentification20.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.SecurityIdentification;
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.OtherIdentification2> otherIdentification;
 	/**
 	 * Identification of a security by proprietary or domestic identification
 	 * scheme.
@@ -234,20 +238,21 @@ public class SecurityIdentification20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityIdentification20.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> SecurityIdentification20.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Identification of a security by proprietary or domestic identification scheme.";
 			minOccurs = 0;
-			type_lazy = () -> OtherIdentification2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
 		}
 	};
+	protected RestrictedFINXMax140Text description;
 	/**
 	 * Textual description of a security instrument.
 	 * <p>
@@ -281,17 +286,17 @@ public class SecurityIdentification20 {
 	 * definition} = "Textual description of a security instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Description = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityIdentification20.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
+			componentContext_lazy = () -> SecurityIdentification20.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Textual description of a security instrument.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
 		}
 	};
@@ -299,35 +304,59 @@ public class SecurityIdentification20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification20.ISIN, com.tools20022.repository.msg.SecurityIdentification20.OtherIdentification,
-						com.tools20022.repository.msg.SecurityIdentification20.Description);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification20.mmISIN, com.tools20022.repository.msg.SecurityIdentification20.mmOtherIdentification,
+						com.tools20022.repository.msg.SecurityIdentification20.mmDescription);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrative002V04.mmUnderlyingSecurity,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V06.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V06.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06.mmFinancialInstrumentIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrative002V04.UnderlyingSecurity,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V06.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V06.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07.FinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06.FinancialInstrumentIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification20";
 				definition = "Identification of a security.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISINOct2015Identifier getISIN() {
+		return iSIN;
+	}
+
+	public void setISIN(ISINOct2015Identifier iSIN) {
+		this.iSIN = iSIN;
+	}
+
+	public List<OtherIdentification2> getOtherIdentification() {
+		return otherIdentification;
+	}
+
+	public void setOtherIdentification(List<com.tools20022.repository.msg.OtherIdentification2> otherIdentification) {
+		this.otherIdentification = otherIdentification;
+	}
+
+	public RestrictedFINXMax140Text getDescription() {
+		return description;
+	}
+
+	public void setDescription(RestrictedFINXMax140Text description) {
+		this.description = description;
 	}
 }

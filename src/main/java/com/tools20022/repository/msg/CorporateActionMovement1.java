@@ -41,29 +41,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#OrderType
- * CorporateActionMovement1.OrderType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#mmOrderType
+ * CorporateActionMovement1.mmOrderType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#HighPriorityIndicator
- * CorporateActionMovement1.HighPriorityIndicator}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#mmHighPriorityIndicator
+ * CorporateActionMovement1.mmHighPriorityIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#OptionNumber
- * CorporateActionMovement1.OptionNumber}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#mmOptionNumber
+ * CorporateActionMovement1.mmOptionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#OptionType
- * CorporateActionMovement1.OptionType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#mmOptionType
+ * CorporateActionMovement1.mmOptionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#RequestedExecutionDate
- * CorporateActionMovement1.RequestedExecutionDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#mmRequestedExecutionDate
+ * CorporateActionMovement1.mmRequestedExecutionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#AccountOwnerIdentification
- * CorporateActionMovement1.AccountOwnerIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#mmAccountOwnerIdentification
+ * CorporateActionMovement1.mmAccountOwnerIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#AccountIdentification
- * CorporateActionMovement1.AccountIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#mmAccountIdentification
+ * CorporateActionMovement1.mmAccountIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#ConfirmedBalanceSecuritiesQuantity
- * CorporateActionMovement1.ConfirmedBalanceSecuritiesQuantity}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionMovement1#mmConfirmedBalanceSecuritiesQuantity
+ * CorporateActionMovement1.mmConfirmedBalanceSecuritiesQuantity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -75,15 +75,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#MovementGeneralInformation
- * AgentCAMovementInstructionV01.MovementGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementInstructionV01#mmMovementGeneralInformation
+ * AgentCAMovementInstructionV01.mmMovementGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,6 +97,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DistributionInstructionType1Code orderType;
 	/**
 	 * Type of movement instruction.
 	 * <p>
@@ -110,8 +111,8 @@ public class CorporateActionMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#MovementType
-	 * CorporateActionDistribution.MovementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmMovementType
+	 * CorporateActionDistribution.mmMovementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -130,20 +131,21 @@ public class CorporateActionMovement1 {
 	 * definition} = "Type of movement instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmMovementType;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.MovementType;
 			isDerived = false;
 			xmlTag = "OrdrTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderType";
 			definition = "Type of movement instruction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DistributionInstructionType1Code.mmObject();
 		}
 	};
+	protected YesNoIndicator highPriorityIndicator;
 	/**
 	 * Indicates whether the movement is a high priority or not. Meaning when
 	 * true: High priority Meaning when false: Standard
@@ -158,8 +160,8 @@ public class CorporateActionMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#HighPriorityIndicator
-	 * CorporateActionDistribution.HighPriorityIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmHighPriorityIndicator
+	 * CorporateActionDistribution.mmHighPriorityIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -180,20 +182,21 @@ public class CorporateActionMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HighPriorityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHighPriorityIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmHighPriorityIndicator;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.HighPriorityIndicator;
 			isDerived = false;
 			xmlTag = "HghPrtyInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighPriorityIndicator";
 			definition = "Indicates whether the movement is a high priority or not.\nMeaning when true: High priority\nMeaning when false: Standard";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected Exact3NumericText optionNumber;
 	/**
 	 * Number identifying the available corporate action options.
 	 * <p>
@@ -207,8 +210,8 @@ public class CorporateActionMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionNumber
-	 * CorporateActionOption.OptionNumber}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
+	 * CorporateActionOption.mmOptionNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -228,20 +231,21 @@ public class CorporateActionMovement1 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionNumber;
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	protected CorporateActionOption1FormatChoice optionType;
 	/**
 	 * Specifies the corporate action options available to the account owner.
 	 * <p>
@@ -255,8 +259,8 @@ public class CorporateActionMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#OptionType
-	 * CorporateActionOption.OptionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionType
+	 * CorporateActionOption.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -276,20 +280,21 @@ public class CorporateActionMovement1 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute OptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.OptionType;
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
 		}
 	};
+	protected ISODate requestedExecutionDate;
 	/**
 	 * Date at which the distribution movement must be executed.
 	 * <p>
@@ -302,8 +307,8 @@ public class CorporateActionMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#RequestedExecutionDate
-	 * CorporateActionDistribution.RequestedExecutionDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmRequestedExecutionDate
+	 * CorporateActionDistribution.mmRequestedExecutionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -323,20 +328,21 @@ public class CorporateActionMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.RequestedExecutionDate;
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the distribution movement must be executed.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice accountOwnerIdentification;
 	/**
 	 * Identification of the party that owns the account.
 	 * <p>
@@ -350,8 +356,8 @@ public class CorporateActionMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -370,20 +376,21 @@ public class CorporateActionMovement1 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the party that owns the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected Max35Text accountIdentification;
 	/**
 	 * Identification of the account.
 	 * <p>
@@ -396,8 +403,8 @@ public class CorporateActionMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -416,20 +423,21 @@ public class CorporateActionMovement1 {
 	 * definition} = "Identification of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identification of the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected UnitOrFaceAmount1Choice confirmedBalanceSecuritiesQuantity;
 	/**
 	 * Quantity of securities in the confirmed balance, ie, the balance to which
 	 * the credit of the outturned resources applies.
@@ -444,8 +452,8 @@ public class CorporateActionMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#PostingQuantity
-	 * CorporateActionDistribution.PostingQuantity}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmPostingQuantity
+	 * CorporateActionDistribution.mmPostingQuantity}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -466,17 +474,17 @@ public class CorporateActionMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ConfirmedBalanceSecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmConfirmedBalanceSecuritiesQuantity = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.PostingQuantity;
 			isDerived = false;
 			xmlTag = "ConfdBalSctiesQty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmedBalanceSecuritiesQuantity";
 			definition = "Quantity of securities in the confirmed balance, ie, the balance to which the credit of the outturned resources applies.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
@@ -484,18 +492,82 @@ public class CorporateActionMovement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovement1.OrderType, com.tools20022.repository.msg.CorporateActionMovement1.HighPriorityIndicator,
-						com.tools20022.repository.msg.CorporateActionMovement1.OptionNumber, com.tools20022.repository.msg.CorporateActionMovement1.OptionType, com.tools20022.repository.msg.CorporateActionMovement1.RequestedExecutionDate,
-						com.tools20022.repository.msg.CorporateActionMovement1.AccountOwnerIdentification, com.tools20022.repository.msg.CorporateActionMovement1.AccountIdentification,
-						com.tools20022.repository.msg.CorporateActionMovement1.ConfirmedBalanceSecuritiesQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovement1.mmOrderType, com.tools20022.repository.msg.CorporateActionMovement1.mmHighPriorityIndicator,
+						com.tools20022.repository.msg.CorporateActionMovement1.mmOptionNumber, com.tools20022.repository.msg.CorporateActionMovement1.mmOptionType,
+						com.tools20022.repository.msg.CorporateActionMovement1.mmRequestedExecutionDate, com.tools20022.repository.msg.CorporateActionMovement1.mmAccountOwnerIdentification,
+						com.tools20022.repository.msg.CorporateActionMovement1.mmAccountIdentification, com.tools20022.repository.msg.CorporateActionMovement1.mmConfirmedBalanceSecuritiesQuantity);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmMovementGeneralInformation);
 				trace_lazy = () -> CorporateActionDistribution.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.MovementGeneralInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovement1";
 				definition = "Provides information about the movement instruction.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DistributionInstructionType1Code getOrderType() {
+		return orderType;
+	}
+
+	public void setOrderType(DistributionInstructionType1Code orderType) {
+		this.orderType = orderType;
+	}
+
+	public YesNoIndicator getHighPriorityIndicator() {
+		return highPriorityIndicator;
+	}
+
+	public void setHighPriorityIndicator(YesNoIndicator highPriorityIndicator) {
+		this.highPriorityIndicator = highPriorityIndicator;
+	}
+
+	public Exact3NumericText getOptionNumber() {
+		return optionNumber;
+	}
+
+	public void setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = optionNumber;
+	}
+
+	public CorporateActionOption1FormatChoice getOptionType() {
+		return optionType;
+	}
+
+	public void setOptionType(CorporateActionOption1FormatChoice optionType) {
+		this.optionType = optionType;
+	}
+
+	public ISODate getRequestedExecutionDate() {
+		return requestedExecutionDate;
+	}
+
+	public void setRequestedExecutionDate(ISODate requestedExecutionDate) {
+		this.requestedExecutionDate = requestedExecutionDate;
+	}
+
+	public PartyIdentification2Choice getAccountOwnerIdentification() {
+		return accountOwnerIdentification;
+	}
+
+	public void setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
+		this.accountOwnerIdentification = accountOwnerIdentification;
+	}
+
+	public Max35Text getAccountIdentification() {
+		return accountIdentification;
+	}
+
+	public void setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = accountIdentification;
+	}
+
+	public UnitOrFaceAmount1Choice getConfirmedBalanceSecuritiesQuantity() {
+		return confirmedBalanceSecuritiesQuantity;
+	}
+
+	public void setConfirmedBalanceSecuritiesQuantity(UnitOrFaceAmount1Choice confirmedBalanceSecuritiesQuantity) {
+		this.confirmedBalanceSecuritiesQuantity = confirmedBalanceSecuritiesQuantity;
 	}
 }

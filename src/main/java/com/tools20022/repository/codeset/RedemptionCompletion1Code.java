@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionCompletion1Code#RedemptionNo
- * RedemptionCompletion1Code.RedemptionNo}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionCompletion1Code#mmRedemptionNo
+ * RedemptionCompletion1Code.mmRedemptionNo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionCompletion1Code#RedemptionYes
- * RedemptionCompletion1Code.RedemptionYes}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionCompletion1Code#mmRedemptionYes
+ * RedemptionCompletion1Code.mmRedemptionYes}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class RedemptionCompletion1Code extends RedemptionCompletionCode {
 	 * name} = "RedemptionNo"</li>
 	 * </ul>
 	 */
-	public static final MMCode RedemptionNo = new MMCode() {
+	public static final MMCode mmRedemptionNo = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionNo";
@@ -98,7 +98,7 @@ public class RedemptionCompletion1Code extends RedemptionCompletionCode {
 	 * name} = "RedemptionYes"</li>
 	 * </ul>
 	 */
-	public static final MMCode RedemptionYes = new MMCode() {
+	public static final MMCode mmRedemptionYes = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionYes";
@@ -109,11 +109,11 @@ public class RedemptionCompletion1Code extends RedemptionCompletionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RedemptionCompletion1Code";
 				definition = "Specifies the redemption status of the redemption order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RedemptionCompletion1Code.RedemptionNo, com.tools20022.repository.codeset.RedemptionCompletion1Code.RedemptionYes);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RedemptionCompletion1Code.mmRedemptionNo, com.tools20022.repository.codeset.RedemptionCompletion1Code.mmRedemptionYes);
 				trace_lazy = () -> RedemptionCompletionCode.mmObject();
 			}
 		});

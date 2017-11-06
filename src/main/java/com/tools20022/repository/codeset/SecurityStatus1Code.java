@@ -33,18 +33,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecurityStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SecurityStatus1Code#Active
- * SecurityStatus1Code.Active}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatus1Code#Inactive
- * SecurityStatus1Code.Inactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatus1Code#mmActive
+ * SecurityStatus1Code.mmActive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatus1Code#mmInactive
+ * SecurityStatus1Code.mmInactive}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +82,7 @@ public class SecurityStatus1Code extends SecurityStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode Active = new MMCode() {
+	public static final MMCode mmActive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
@@ -104,7 +105,7 @@ public class SecurityStatus1Code extends SecurityStatusCode {
 	 * name} = "Inactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode Inactive = new MMCode() {
+	public static final MMCode mmInactive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
@@ -115,12 +116,12 @@ public class SecurityStatus1Code extends SecurityStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecurityStatus1Code";
 				definition = "Denotes the current state of the Instrument (Used for derivatives).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecurityStatus1Code.Active, com.tools20022.repository.codeset.SecurityStatus1Code.Inactive);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecurityStatus1Code.mmActive, com.tools20022.repository.codeset.SecurityStatus1Code.mmInactive);
 				trace_lazy = () -> SecurityStatusCode.mmObject();
 			}
 		});

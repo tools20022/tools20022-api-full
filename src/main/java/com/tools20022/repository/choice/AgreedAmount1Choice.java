@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AgreedAmount1Choice#AgreedAmountDetails
- * AgreedAmount1Choice.AgreedAmountDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.AgreedAmount1Choice#mmAgreedAmountDetails
+ * AgreedAmount1Choice.mmAgreedAmountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AgreedAmount1Choice#SegregatedIndependentAmount
- * AgreedAmount1Choice.SegregatedIndependentAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.AgreedAmount1Choice#mmSegregatedIndependentAmount
+ * AgreedAmount1Choice.mmSegregatedIndependentAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,24 +50,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV03#AgreedAmountDueToA
- * MarginCallResponseV03.AgreedAmountDueToA}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV03#mmAgreedAmountDueToA
+ * MarginCallResponseV03.mmAgreedAmountDueToA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV03#AgreedAmountDueToB
- * MarginCallResponseV03.AgreedAmountDueToB}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV03#mmAgreedAmountDueToB
+ * MarginCallResponseV03.mmAgreedAmountDueToB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV04#AgreedAmountDueToA
- * MarginCallResponseV04.AgreedAmountDueToA}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV04#mmAgreedAmountDueToA
+ * MarginCallResponseV04.mmAgreedAmountDueToA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV04#AgreedAmountDueToB
- * MarginCallResponseV04.AgreedAmountDueToB}</li>
+ * {@linkplain com.tools20022.repository.area.colr.MarginCallResponseV04#mmAgreedAmountDueToB
+ * MarginCallResponseV04.mmAgreedAmountDueToB}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,6 +83,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgreedAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected AgreedAmount1 agreedAmountDetails;
 	/**
 	 * Provides details about the agreed amount for the variation margin and
 	 * optionaly the segregated independent amount.
@@ -95,8 +96,8 @@ public class AgreedAmount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#AgreedAmount
-	 * MarginCall.AgreedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmAgreedAmount
+	 * MarginCall.mmAgreedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -117,21 +118,22 @@ public class AgreedAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AgreedAmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAgreedAmountDetails = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> AgreedAmount1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.AgreedAmount;
 			isDerived = false;
 			xmlTag = "AgrdAmtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedAmountDetails";
 			definition = "Provides details about the agreed amount for the variation margin and optionaly the segregated independent amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> AgreedAmount1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> AgreedAmount1.mmObject();
 		}
 	};
+	protected Amount1 segregatedIndependentAmount;
 	/**
 	 * Provides details about the agreed amount for the segregated independent
 	 * amount.
@@ -143,8 +145,8 @@ public class AgreedAmount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.MarginCall#SegregatedIndependentAmount
-	 * MarginCall.SegregatedIndependentAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmSegregatedIndependentAmount
+	 * MarginCall.mmSegregatedIndependentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,35 +167,51 @@ public class AgreedAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> AgreedAmount1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.SegregatedIndependentAmount;
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides details about the agreed amount for the segregated independent amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Amount1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Amount1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AgreedAmount1Choice.AgreedAmountDetails, com.tools20022.repository.choice.AgreedAmount1Choice.SegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AgreedAmount1Choice.mmAgreedAmountDetails, com.tools20022.repository.choice.AgreedAmount1Choice.mmSegregatedIndependentAmount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV03.mmAgreedAmountDueToA, com.tools20022.repository.area.colr.MarginCallResponseV03.mmAgreedAmountDueToB,
+						com.tools20022.repository.area.colr.MarginCallResponseV04.mmAgreedAmountDueToA, com.tools20022.repository.area.colr.MarginCallResponseV04.mmAgreedAmountDueToB);
 				trace_lazy = () -> MarginCall.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV03.AgreedAmountDueToA, com.tools20022.repository.area.colr.MarginCallResponseV03.AgreedAmountDueToB,
-						com.tools20022.repository.area.colr.MarginCallResponseV04.AgreedAmountDueToA, com.tools20022.repository.area.colr.MarginCallResponseV04.AgreedAmountDueToB);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AgreedAmount1Choice";
 				definition = "Provides details about the agreed amount for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AgreedAmount1 getAgreedAmountDetails() {
+		return agreedAmountDetails;
+	}
+
+	public void setAgreedAmountDetails(AgreedAmount1 agreedAmountDetails) {
+		this.agreedAmountDetails = agreedAmountDetails;
+	}
+
+	public Amount1 getSegregatedIndependentAmount() {
+		return segregatedIndependentAmount;
+	}
+
+	public void setSegregatedIndependentAmount(Amount1 segregatedIndependentAmount) {
+		this.segregatedIndependentAmount = segregatedIndependentAmount;
 	}
 }

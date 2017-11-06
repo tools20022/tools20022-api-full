@@ -32,31 +32,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#Provincial
- * TaxType9Code.Provincial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#NationalTax
- * TaxType9Code.NationalTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#StateTax
- * TaxType9Code.StateTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#mmProvincial
+ * TaxType9Code.mmProvincial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#mmNationalTax
+ * TaxType9Code.mmNationalTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#mmStateTax
+ * TaxType9Code.mmStateTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType9Code#WithholdingTax
- * TaxType9Code.WithholdingTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#StampDuty
- * TaxType9Code.StampDuty}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType9Code#mmWithholdingTax
+ * TaxType9Code.mmWithholdingTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#mmStampDuty
+ * TaxType9Code.mmStampDuty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType9Code#ConsumptionTax
- * TaxType9Code.ConsumptionTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#ValueAddedTax
- * TaxType9Code.ValueAddedTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#CustomsTax
- * TaxType9Code.CustomsTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType9Code#mmConsumptionTax
+ * TaxType9Code.mmConsumptionTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType9Code#mmValueAddedTax
+ * TaxType9Code.mmValueAddedTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType9Code#mmCustomsTax
+ * TaxType9Code.mmCustomsTax}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +92,7 @@ public class TaxType9Code extends TaxTypeCode {
 	 * name} = "Provincial"</li>
 	 * </ul>
 	 */
-	public static final MMCode Provincial = new MMCode() {
+	public static final MMCode mmProvincial = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provincial";
@@ -113,7 +114,7 @@ public class TaxType9Code extends TaxTypeCode {
 	 * name} = "NationalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode NationalTax = new MMCode() {
+	public static final MMCode mmNationalTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalTax";
@@ -135,7 +136,7 @@ public class TaxType9Code extends TaxTypeCode {
 	 * name} = "StateTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode StateTax = new MMCode() {
+	public static final MMCode mmStateTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StateTax";
@@ -157,7 +158,7 @@ public class TaxType9Code extends TaxTypeCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode WithholdingTax = new MMCode() {
+	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
@@ -179,7 +180,7 @@ public class TaxType9Code extends TaxTypeCode {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode StampDuty = new MMCode() {
+	public static final MMCode mmStampDuty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
@@ -201,7 +202,7 @@ public class TaxType9Code extends TaxTypeCode {
 	 * name} = "ConsumptionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ConsumptionTax = new MMCode() {
+	public static final MMCode mmConsumptionTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
@@ -223,7 +224,7 @@ public class TaxType9Code extends TaxTypeCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode ValueAddedTax = new MMCode() {
+	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
@@ -245,7 +246,7 @@ public class TaxType9Code extends TaxTypeCode {
 	 * name} = "CustomsTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode CustomsTax = new MMCode() {
+	public static final MMCode mmCustomsTax = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomsTax";
@@ -256,14 +257,14 @@ public class TaxType9Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROV");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TaxType9Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType9Code.Provincial, com.tools20022.repository.codeset.TaxType9Code.NationalTax, com.tools20022.repository.codeset.TaxType9Code.StateTax,
-						com.tools20022.repository.codeset.TaxType9Code.WithholdingTax, com.tools20022.repository.codeset.TaxType9Code.StampDuty, com.tools20022.repository.codeset.TaxType9Code.ConsumptionTax,
-						com.tools20022.repository.codeset.TaxType9Code.ValueAddedTax, com.tools20022.repository.codeset.TaxType9Code.CustomsTax);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType9Code.mmProvincial, com.tools20022.repository.codeset.TaxType9Code.mmNationalTax, com.tools20022.repository.codeset.TaxType9Code.mmStateTax,
+						com.tools20022.repository.codeset.TaxType9Code.mmWithholdingTax, com.tools20022.repository.codeset.TaxType9Code.mmStampDuty, com.tools20022.repository.codeset.TaxType9Code.mmConsumptionTax,
+						com.tools20022.repository.codeset.TaxType9Code.mmValueAddedTax, com.tools20022.repository.codeset.TaxType9Code.mmCustomsTax);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

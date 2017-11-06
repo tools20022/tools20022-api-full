@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingType1Code#NewRegistration
- * SecuritiesLendingType1Code.NewRegistration}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingType1Code#mmNewRegistration
+ * SecuritiesLendingType1Code.mmNewRegistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingType1Code#RollOverRenewal
- * SecuritiesLendingType1Code.RollOverRenewal}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingType1Code#mmRollOverRenewal
+ * SecuritiesLendingType1Code.mmRollOverRenewal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingType1Code#CallBack
- * SecuritiesLendingType1Code.CallBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingType1Code#mmCallBack
+ * SecuritiesLendingType1Code.mmCallBack}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +84,7 @@ public class SecuritiesLendingType1Code extends SecuritiesLendingTypeCode {
 	 * name} = "NewRegistration"</li>
 	 * </ul>
 	 */
-	public static final MMCode NewRegistration = new MMCode() {
+	public static final MMCode mmNewRegistration = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewRegistration";
@@ -107,7 +107,7 @@ public class SecuritiesLendingType1Code extends SecuritiesLendingTypeCode {
 	 * name} = "RollOverRenewal"</li>
 	 * </ul>
 	 */
-	public static final MMCode RollOverRenewal = new MMCode() {
+	public static final MMCode mmRollOverRenewal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollOverRenewal";
@@ -130,7 +130,7 @@ public class SecuritiesLendingType1Code extends SecuritiesLendingTypeCode {
 	 * name} = "CallBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode CallBack = new MMCode() {
+	public static final MMCode mmCallBack = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallBack";
@@ -141,13 +141,13 @@ public class SecuritiesLendingType1Code extends SecuritiesLendingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NWRG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesLendingType1Code";
 				definition = "Type of securities lending contract.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesLendingType1Code.NewRegistration, com.tools20022.repository.codeset.SecuritiesLendingType1Code.RollOverRenewal,
-						com.tools20022.repository.codeset.SecuritiesLendingType1Code.CallBack);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesLendingType1Code.mmNewRegistration, com.tools20022.repository.codeset.SecuritiesLendingType1Code.mmRollOverRenewal,
+						com.tools20022.repository.codeset.SecuritiesLendingType1Code.mmCallBack);
 				trace_lazy = () -> SecuritiesLendingTypeCode.mmObject();
 			}
 		});

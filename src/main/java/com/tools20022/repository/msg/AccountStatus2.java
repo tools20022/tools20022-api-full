@@ -23,6 +23,7 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.AccountStatus;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Status of an account.
@@ -33,22 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#Enabled
- * AccountStatus2.Enabled}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#Disabled
- * AccountStatus2.Disabled}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#Pending
- * AccountStatus2.Pending}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#PendingOpening
- * AccountStatus2.PendingOpening}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#Proforma
- * AccountStatus2.Proforma}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#Closed
- * AccountStatus2.Closed}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#ClosurePending
- * AccountStatus2.ClosurePending}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#Other
- * AccountStatus2.Other}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#mmEnabled
+ * AccountStatus2.mmEnabled}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#mmDisabled
+ * AccountStatus2.mmDisabled}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#mmPending
+ * AccountStatus2.mmPending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatus2#mmPendingOpening
+ * AccountStatus2.mmPendingOpening}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#mmProforma
+ * AccountStatus2.mmProforma}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#mmClosed
+ * AccountStatus2.mmClosed}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatus2#mmClosurePending
+ * AccountStatus2.mmClosurePending}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatus2#mmOther
+ * AccountStatus2.mmOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -57,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +79,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected EnabledStatusReason1Choice enabled;
 	/**
 	 * Account can be used for its intended purpose.
 	 * <p>
@@ -88,8 +92,8 @@ public class AccountStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -107,21 +111,22 @@ public class AccountStatus2 {
 	 * definition} = "Account can be used for its intended purpose. "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Enabled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmEnabled = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "Nbld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
 			definition = "Account can be used for its intended purpose. ";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> EnabledStatusReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> EnabledStatusReason1Choice.mmObject();
 		}
 	};
+	protected DisabledStatusReason1Choice disabled;
 	/**
 	 * Account cannot temporarily be used for its intended purpose.
 	 * <p>
@@ -134,8 +139,8 @@ public class AccountStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -154,21 +159,22 @@ public class AccountStatus2 {
 	 * "Account cannot temporarily be used for its intended purpose."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Disabled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDisabled = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "Dsbld";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
 			definition = "Account cannot temporarily be used for its intended purpose.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DisabledStatusReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DisabledStatusReason1Choice.mmObject();
 		}
 	};
+	protected PendingStatusReason1Choice pending;
 	/**
 	 * Account change is pending approval.
 	 * <p>
@@ -181,8 +187,8 @@ public class AccountStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -200,21 +206,22 @@ public class AccountStatus2 {
 	 * definition} = "Account change is pending approval."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Pending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Account change is pending approval.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PendingStatusReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PendingStatusReason1Choice.mmObject();
 		}
 	};
+	protected PendingOpeningStatusReason1Choice pendingOpening;
 	/**
 	 * Account opening is pending.
 	 * <p>
@@ -227,8 +234,8 @@ public class AccountStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -246,21 +253,22 @@ public class AccountStatus2 {
 	 * definition} = "Account opening is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PendingOpening = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPendingOpening = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "PdgOpng";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingOpening";
 			definition = "Account opening is pending.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PendingOpeningStatusReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PendingOpeningStatusReason1Choice.mmObject();
 		}
 	};
+	protected ProformaStatusReason1Choice proforma;
 	/**
 	 * Account is temporary and can be partially used for its intended purpose.
 	 * The account will be fully available for use when the account servicer has
@@ -275,8 +283,8 @@ public class AccountStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -296,21 +304,22 @@ public class AccountStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Proforma = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmProforma = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "Profrm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proforma";
 			definition = "Account is temporary and can be partially used for its intended purpose. The account will be fully available for use when the account servicer has received all relevant documents.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ProformaStatusReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ProformaStatusReason1Choice.mmObject();
 		}
 	};
+	protected ClosedStatusReason1Choice closed;
 	/**
 	 * Account is closed.
 	 * <p>
@@ -323,8 +332,8 @@ public class AccountStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -342,21 +351,22 @@ public class AccountStatus2 {
 	 * definition} = "Account is closed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Closed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClosed = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "Clsd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
 			definition = "Account is closed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ClosedStatusReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ClosedStatusReason1Choice.mmObject();
 		}
 	};
+	protected ClosurePendingStatusReason1Choice closurePending;
 	/**
 	 * Account closure is pending.
 	 * <p>
@@ -369,8 +379,8 @@ public class AccountStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Status#StatusReason
-	 * Status.StatusReason}</li>
+	 * {@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+	 * Status.mmStatusReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -388,21 +398,22 @@ public class AccountStatus2 {
 	 * definition} = "Account closure is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ClosurePending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmClosurePending = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.StatusReason;
 			isDerived = false;
 			xmlTag = "ClsrPdg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosurePending";
 			definition = "Account closure is pending.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> ClosurePendingStatusReason1Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> ClosurePendingStatusReason1Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.OtherAccountStatus1> other;
 	/**
 	 * Status is a bilaterally agreed status.
 	 * <p>
@@ -433,29 +444,29 @@ public class AccountStatus2 {
 	 * definition} = "Status is a bilaterally agreed status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Other = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountStatus2.mmObject();
 			businessComponentTrace_lazy = () -> AccountStatus.mmObject();
+			componentContext_lazy = () -> AccountStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Status is a bilaterally agreed status.";
 			minOccurs = 0;
-			type_lazy = () -> OtherAccountStatus1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.OtherAccountStatus1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatus2.Enabled, com.tools20022.repository.msg.AccountStatus2.Disabled, com.tools20022.repository.msg.AccountStatus2.Pending,
-						com.tools20022.repository.msg.AccountStatus2.PendingOpening, com.tools20022.repository.msg.AccountStatus2.Proforma, com.tools20022.repository.msg.AccountStatus2.Closed,
-						com.tools20022.repository.msg.AccountStatus2.ClosurePending, com.tools20022.repository.msg.AccountStatus2.Other);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatus2.mmEnabled, com.tools20022.repository.msg.AccountStatus2.mmDisabled, com.tools20022.repository.msg.AccountStatus2.mmPending,
+						com.tools20022.repository.msg.AccountStatus2.mmPendingOpening, com.tools20022.repository.msg.AccountStatus2.mmProforma, com.tools20022.repository.msg.AccountStatus2.mmClosed,
+						com.tools20022.repository.msg.AccountStatus2.mmClosurePending, com.tools20022.repository.msg.AccountStatus2.mmOther);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountStatus2";
 				definition = "Status of an account.";
@@ -463,5 +474,69 @@ public class AccountStatus2 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public EnabledStatusReason1Choice getEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(EnabledStatusReason1Choice enabled) {
+		this.enabled = enabled;
+	}
+
+	public DisabledStatusReason1Choice getDisabled() {
+		return disabled;
+	}
+
+	public void setDisabled(DisabledStatusReason1Choice disabled) {
+		this.disabled = disabled;
+	}
+
+	public PendingStatusReason1Choice getPending() {
+		return pending;
+	}
+
+	public void setPending(PendingStatusReason1Choice pending) {
+		this.pending = pending;
+	}
+
+	public PendingOpeningStatusReason1Choice getPendingOpening() {
+		return pendingOpening;
+	}
+
+	public void setPendingOpening(PendingOpeningStatusReason1Choice pendingOpening) {
+		this.pendingOpening = pendingOpening;
+	}
+
+	public ProformaStatusReason1Choice getProforma() {
+		return proforma;
+	}
+
+	public void setProforma(ProformaStatusReason1Choice proforma) {
+		this.proforma = proforma;
+	}
+
+	public ClosedStatusReason1Choice getClosed() {
+		return closed;
+	}
+
+	public void setClosed(ClosedStatusReason1Choice closed) {
+		this.closed = closed;
+	}
+
+	public ClosurePendingStatusReason1Choice getClosurePending() {
+		return closurePending;
+	}
+
+	public void setClosurePending(ClosurePendingStatusReason1Choice closurePending) {
+		this.closurePending = closurePending;
+	}
+
+	public List<OtherAccountStatus1> getOther() {
+		return other;
+	}
+
+	public void setOther(List<com.tools20022.repository.msg.OtherAccountStatus1> other) {
+		this.other = other;
 	}
 }

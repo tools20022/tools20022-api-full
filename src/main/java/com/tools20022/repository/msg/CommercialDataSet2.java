@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.entity.CommercialTrade;
+import com.tools20022.repository.entity.Goods;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Goods or services that are part of a commercial trade agreement.
@@ -33,25 +35,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommercialDataSet2#DataSetIdentification
- * CommercialDataSet2.DataSetIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CommercialDataSet2#mmDataSetIdentification
+ * CommercialDataSet2.mmDataSetIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommercialDataSet2#CommercialDocumentReference
- * CommercialDataSet2.CommercialDocumentReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet2#Buyer
- * CommercialDataSet2.Buyer}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet2#Seller
- * CommercialDataSet2.Seller}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet2#BillTo
- * CommercialDataSet2.BillTo}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet2#Goods
- * CommercialDataSet2.Goods}</li>
+ * {@linkplain com.tools20022.repository.msg.CommercialDataSet2#mmCommercialDocumentReference
+ * CommercialDataSet2.mmCommercialDocumentReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet2#mmBuyer
+ * CommercialDataSet2.mmBuyer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet2#mmSeller
+ * CommercialDataSet2.mmSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet2#mmBillTo
+ * CommercialDataSet2.mmBillTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet2#mmGoods
+ * CommercialDataSet2.mmGoods}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommercialDataSet2#PaymentTerms
- * CommercialDataSet2.PaymentTerms}</li>
+ * {@linkplain com.tools20022.repository.msg.CommercialDataSet2#mmPaymentTerms
+ * CommercialDataSet2.mmPaymentTerms}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommercialDataSet2#SettlementTerms
- * CommercialDataSet2.SettlementTerms}</li>
+ * {@linkplain com.tools20022.repository.msg.CommercialDataSet2#mmSettlementTerms
+ * CommercialDataSet2.mmSettlementTerms}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -60,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +78,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CommercialDataSet2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification1 dataSetIdentification;
 	/**
 	 * Identifies the commercial data set
 	 * <p>
@@ -103,7 +106,7 @@ public class CommercialDataSet2 {
 	 * definition} = "Identifies the commercial data set"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd DataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommercialDataSet2.mmObject();
 			isDerived = false;
@@ -111,12 +114,13 @@ public class CommercialDataSet2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Identifies the commercial data set";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentIdentification1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.DocumentIdentification7> commercialDocumentReference;
 	/**
 	 * Reference to the identification of the underlying commercial document.
 	 * <p>
@@ -146,7 +150,7 @@ public class CommercialDataSet2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CommercialDocumentReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCommercialDocumentReference = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CommercialDataSet2.mmObject();
 			isDerived = false;
@@ -155,10 +159,11 @@ public class CommercialDataSet2 {
 			name = "CommercialDocumentReference";
 			definition = "Reference to the identification of  the underlying commercial document.";
 			minOccurs = 1;
-			type_lazy = () -> DocumentIdentification7.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
 		}
 	};
+	protected PartyIdentification9 buyer;
 	/**
 	 * Party that buys goods or services, or a financial instrument.
 	 * <p>
@@ -170,8 +175,8 @@ public class CommercialDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -191,21 +196,22 @@ public class CommercialDataSet2 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Buyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CommercialDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected PartyIdentification9 seller;
 	/**
 	 * Party that sells goods or services, or a financial instrument.
 	 * <p>
@@ -217,8 +223,8 @@ public class CommercialDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -238,21 +244,22 @@ public class CommercialDataSet2 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Seller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CommercialDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Sellr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected PartyIdentification9 billTo;
 	/**
 	 * Party to be invoiced for the purchase.
 	 * <p>
@@ -264,8 +271,8 @@ public class CommercialDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -284,21 +291,22 @@ public class CommercialDataSet2 {
 	 * definition} = "Party to be invoiced for the purchase."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BillTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBillTo = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CommercialDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "BllTo";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillTo";
 			definition = "Party to be invoiced for the purchase.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification9.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.LineItem4> goods;
 	/**
 	 * Information about the goods and/or services of the underlying
 	 * transaction.
@@ -331,20 +339,21 @@ public class CommercialDataSet2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Goods = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmGoods = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> Goods.mmObject();
 			componentContext_lazy = () -> CommercialDataSet2.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
 			xmlTag = "Goods";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Goods";
 			definition = "Information about the goods and/or services of the underlying transaction.";
 			minOccurs = 1;
-			type_lazy = () -> LineItem4.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.LineItem4.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.PaymentTerms1> paymentTerms;
 	/**
 	 * Specifies the payment terms by means of a code and a limit in time.
 	 * <p>
@@ -356,8 +365,8 @@ public class CommercialDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#PaymentObligation
-	 * CommercialTrade.PaymentObligation}</li>
+	 * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmPaymentObligation
+	 * CommercialTrade.mmPaymentObligation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -377,20 +386,21 @@ public class CommercialDataSet2 {
 	 * "Specifies the payment terms by means of a code and a limit in time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd PaymentTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmPaymentObligation;
 			componentContext_lazy = () -> CommercialDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.PaymentObligation;
 			isDerived = false;
 			xmlTag = "PmtTerms";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTerms";
 			definition = "Specifies the payment terms by means of a code and a limit in time.";
 			minOccurs = 1;
-			type_lazy = () -> PaymentTerms1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentTerms1.mmObject();
 		}
 	};
+	protected SettlementTerms1 settlementTerms;
 	/**
 	 * Specifies how the transaction should be settled.
 	 * <p>
@@ -402,8 +412,8 @@ public class CommercialDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#SettlementInstruction
-	 * PaymentInstruction.SettlementInstruction}</li>
+	 * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmSettlementInstruction
+	 * PaymentInstruction.mmSettlementInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -422,35 +432,99 @@ public class CommercialDataSet2 {
 	 * definition} = "Specifies how the transaction should be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SettlementTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> CommercialDataSet2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.SettlementInstruction;
 			isDerived = false;
 			xmlTag = "SttlmTerms";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTerms";
 			definition = "Specifies how the transaction should be settled.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SettlementTerms1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.SettlementTerms1.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet2.DataSetIdentification, com.tools20022.repository.msg.CommercialDataSet2.CommercialDocumentReference,
-						com.tools20022.repository.msg.CommercialDataSet2.Buyer, com.tools20022.repository.msg.CommercialDataSet2.Seller, com.tools20022.repository.msg.CommercialDataSet2.BillTo,
-						com.tools20022.repository.msg.CommercialDataSet2.Goods, com.tools20022.repository.msg.CommercialDataSet2.PaymentTerms, com.tools20022.repository.msg.CommercialDataSet2.SettlementTerms);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet2.mmDataSetIdentification, com.tools20022.repository.msg.CommercialDataSet2.mmCommercialDocumentReference,
+						com.tools20022.repository.msg.CommercialDataSet2.mmBuyer, com.tools20022.repository.msg.CommercialDataSet2.mmSeller, com.tools20022.repository.msg.CommercialDataSet2.mmBillTo,
+						com.tools20022.repository.msg.CommercialDataSet2.mmGoods, com.tools20022.repository.msg.CommercialDataSet2.mmPaymentTerms, com.tools20022.repository.msg.CommercialDataSet2.mmSettlementTerms);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CommercialDataSet2";
 				definition = "Goods or services that are part of a commercial trade agreement.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification1 getDataSetIdentification() {
+		return dataSetIdentification;
+	}
+
+	public void setDataSetIdentification(com.tools20022.repository.msg.DocumentIdentification1 dataSetIdentification) {
+		this.dataSetIdentification = dataSetIdentification;
+	}
+
+	public List<DocumentIdentification7> getCommercialDocumentReference() {
+		return commercialDocumentReference;
+	}
+
+	public void setCommercialDocumentReference(List<com.tools20022.repository.msg.DocumentIdentification7> commercialDocumentReference) {
+		this.commercialDocumentReference = commercialDocumentReference;
+	}
+
+	public PartyIdentification9 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(com.tools20022.repository.msg.PartyIdentification9 buyer) {
+		this.buyer = buyer;
+	}
+
+	public PartyIdentification9 getSeller() {
+		return seller;
+	}
+
+	public void setSeller(com.tools20022.repository.msg.PartyIdentification9 seller) {
+		this.seller = seller;
+	}
+
+	public PartyIdentification9 getBillTo() {
+		return billTo;
+	}
+
+	public void setBillTo(com.tools20022.repository.msg.PartyIdentification9 billTo) {
+		this.billTo = billTo;
+	}
+
+	public List<LineItem4> getGoods() {
+		return goods;
+	}
+
+	public void setGoods(List<com.tools20022.repository.msg.LineItem4> goods) {
+		this.goods = goods;
+	}
+
+	public List<PaymentTerms1> getPaymentTerms() {
+		return paymentTerms;
+	}
+
+	public void setPaymentTerms(List<com.tools20022.repository.msg.PaymentTerms1> paymentTerms) {
+		this.paymentTerms = paymentTerms;
+	}
+
+	public SettlementTerms1 getSettlementTerms() {
+		return settlementTerms;
+	}
+
+	public void setSettlementTerms(com.tools20022.repository.msg.SettlementTerms1 settlementTerms) {
+		this.settlementTerms = settlementTerms;
 	}
 }

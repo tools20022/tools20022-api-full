@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason2#Status
- * AccountManagementStatusAndReason2.Status}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason2#mmStatus
+ * AccountManagementStatusAndReason2.mmStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason2#AccountApplicationIdentification
- * AccountManagementStatusAndReason2.AccountApplicationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason2#mmAccountApplicationIdentification
+ * AccountManagementStatusAndReason2.mmAccountApplicationIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -51,15 +51,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#StatusReport
- * AccountManagementStatusReportV03.StatusReport}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#mmStatusReport
+ * AccountManagementStatusReportV03.mmStatusReport}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountManagementStatusAndReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Status12Choice status;
 	/**
 	 * Status of the account opening instruction or account modification
 	 * instruction.
@@ -125,27 +126,28 @@ public class AccountManagementStatusAndReason2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason3#Status
-	 * AccountManagementStatusAndReason3.Status}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason3#mmStatus
+	 * AccountManagementStatusAndReason3.mmStatus}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Status = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountManagementStatusAndReason2.mmObject();
 			businessComponentTrace_lazy = () -> AccountStatus.mmObject();
+			componentContext_lazy = () -> AccountManagementStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the account opening instruction or account modification instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason3.Status);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason3.mmStatus);
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Status12Choice.mmObject();
 		}
 	};
+	protected Max35Text accountApplicationIdentification;
 	/**
 	 * Unique and unambiguous identifier of the account opening or modification
 	 * instruction at application level.
@@ -178,13 +180,13 @@ public class AccountManagementStatusAndReason2 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason3#AccountApplicationIdentification
-	 * AccountManagementStatusAndReason3.AccountApplicationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason3#mmAccountApplicationIdentification
+	 * AccountManagementStatusAndReason3.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AccountManagementStatusAndReason2.mmObject();
 			isDerived = false;
@@ -192,9 +194,9 @@ public class AccountManagementStatusAndReason2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or modification instruction at application level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason3.AccountApplicationIdentification);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason3.mmAccountApplicationIdentification);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -202,17 +204,33 @@ public class AccountManagementStatusAndReason2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason2.Status, com.tools20022.repository.msg.AccountManagementStatusAndReason2.AccountApplicationIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason2.mmStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason2.mmAccountApplicationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.mmStatusReport);
 				trace_lazy = () -> AccountStatus.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.StatusReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementStatusAndReason2";
 				definition = "Status report of an account opening instruction or account modification instruction that was previously received.";
-				previousVersion_lazy = () -> AccountManagementStatusAndReason1.mmObject();
 				nextVersions_lazy = () -> Arrays.asList(AccountManagementStatusAndReason3.mmObject());
+				previousVersion_lazy = () -> AccountManagementStatusAndReason1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Status12Choice getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status12Choice status) {
+		this.status = status;
+	}
+
+	public Max35Text getAccountApplicationIdentification() {
+		return accountApplicationIdentification;
+	}
+
+	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+		this.accountApplicationIdentification = accountApplicationIdentification;
 	}
 }

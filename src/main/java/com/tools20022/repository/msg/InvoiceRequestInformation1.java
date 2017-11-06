@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Instalment;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Set of characteristics that unambiguously identify the single invoice
@@ -40,32 +41,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#InvoiceGeneralInformation
- * InvoiceRequestInformation1.InvoiceGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmInvoiceGeneralInformation
+ * InvoiceRequestInformation1.mmInvoiceGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#InvoiceTotalsInformation
- * InvoiceRequestInformation1.InvoiceTotalsInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmInvoiceTotalsInformation
+ * InvoiceRequestInformation1.mmInvoiceTotalsInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#CreditDebitNoteAmount
- * InvoiceRequestInformation1.CreditDebitNoteAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmCreditDebitNoteAmount
+ * InvoiceRequestInformation1.mmCreditDebitNoteAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#InstalmentInformation
- * InvoiceRequestInformation1.InstalmentInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmInstalmentInformation
+ * InvoiceRequestInformation1.mmInstalmentInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#RequestedAmount
- * InvoiceRequestInformation1.RequestedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmRequestedAmount
+ * InvoiceRequestInformation1.mmRequestedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#Supplier
- * InvoiceRequestInformation1.Supplier}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmSupplier
+ * InvoiceRequestInformation1.mmSupplier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#Buyer
- * InvoiceRequestInformation1.Buyer}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmBuyer
+ * InvoiceRequestInformation1.mmBuyer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#InvoicePaymentInformation
- * InvoiceRequestInformation1.InvoicePaymentInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmInvoicePaymentInformation
+ * InvoiceRequestInformation1.mmInvoicePaymentInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#ReferredDocument
- * InvoiceRequestInformation1.ReferredDocument}</li>
+ * {@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1#mmReferredDocument
+ * InvoiceRequestInformation1.mmReferredDocument}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -77,15 +78,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01#InvoiceRequestInformation
- * InvoiceFinancingRequestV01.InvoiceRequestInformation}</li>
+ * {@linkplain com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01#mmInvoiceRequestInformation
+ * InvoiceFinancingRequestV01.mmInvoiceRequestInformation}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,6 +102,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class InvoiceRequestInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected DocumentGeneralInformation1 invoiceGeneralInformation;
 	/**
 	 * General information that unambiguously identify the invoice to be
 	 * financed, such as invoice type, invoice number and issue date.
@@ -114,8 +116,8 @@ public class InvoiceRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Agreement#Document
-	 * Agreement.Document}</li>
+	 * {@linkplain com.tools20022.repository.entity.Agreement#mmDocument
+	 * Agreement.mmDocument}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -136,21 +138,22 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvoiceGeneralInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvoiceGeneralInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDocument;
 			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.Document;
 			isDerived = false;
 			xmlTag = "InvcGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceGeneralInformation";
 			definition = "General information that unambiguously identify the invoice to be financed, such as invoice type, invoice number and issue date.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DocumentGeneralInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation1.mmObject();
 		}
 	};
+	protected InvoiceTotals1 invoiceTotalsInformation;
 	/**
 	 * Specifies totals related to the invoice, such as total invoice amount and
 	 * total tax amount.
@@ -163,8 +166,8 @@ public class InvoiceRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#Invoice
-	 * InvoiceFinancingAgreement.Invoice}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoice
+	 * InvoiceFinancingAgreement.mmInvoice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -185,21 +188,22 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvoiceTotalsInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvoiceTotalsInformation = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoice;
 			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.Invoice;
 			isDerived = false;
 			xmlTag = "InvcTtlsInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceTotalsInformation";
 			definition = "Specifies totals related to the invoice, such as total invoice amount and total tax amount.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> InvoiceTotals1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.InvoiceTotals1.mmObject();
 		}
 	};
+	protected ActiveCurrencyAndAmount creditDebitNoteAmount;
 	/**
 	 * Amount of credit/debit note related to the invoice to be financed.
 	 * <p>
@@ -213,8 +217,8 @@ public class InvoiceRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Invoice#CreditDebitNoteAmount
-	 * Invoice.CreditDebitNoteAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.Invoice#mmCreditDebitNoteAmount
+	 * Invoice.mmCreditDebitNoteAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -234,20 +238,21 @@ public class InvoiceRequestInformation1 {
 	 * "Amount of credit/debit note related to the invoice to be financed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreditDebitNoteAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditDebitNoteAmount = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmCreditDebitNoteAmount;
 			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.CreditDebitNoteAmount;
 			isDerived = false;
 			xmlTag = "CdtDbtNoteAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitNoteAmount";
 			definition = "Amount of credit/debit note related to the invoice to be financed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Instalment1> instalmentInformation;
 	/**
 	 * Details of a single instalment to be financed, related to an invoice
 	 * settlement (amount, payment due date).
@@ -281,20 +286,21 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InstalmentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInstalmentInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
 			businessComponentTrace_lazy = () -> Instalment.mmObject();
+			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentInformation";
 			definition = "Details of a single instalment to be financed, related to an invoice settlement (amount, payment due date).";
 			minOccurs = 0;
-			type_lazy = () -> Instalment1.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Instalment1.mmObject();
 		}
 	};
+	protected FinancingRateOrAmountChoice requestedAmount;
 	/**
 	 * Amount requested by the requestor party, related to a single invoice to
 	 * be financed.
@@ -308,8 +314,8 @@ public class InvoiceRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#RequestedAmount
-	 * InvoiceFinancingAgreement.RequestedAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmRequestedAmount
+	 * InvoiceFinancingAgreement.mmRequestedAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -330,21 +336,22 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RequestedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRequestedAmount = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmRequestedAmount;
 			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.RequestedAmount;
 			isDerived = false;
 			xmlTag = "ReqdAmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedAmount";
 			definition = "Amount requested by the requestor party, related to a single invoice to be financed.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> FinancingRateOrAmountChoice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> FinancingRateOrAmountChoice.mmObject();
 		}
 	};
+	protected PartyAndAccountIdentificationAndContactInformation1 supplier;
 	/**
 	 * Person or organization that represents the creditor for the invoice to be
 	 * financed.
@@ -380,21 +387,22 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Supplier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSupplier = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
 			businessComponentTrace_lazy = () -> FinancingRequestorRole.mmObject();
+			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Spplr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Supplier";
 			definition = "Person or organization that represents the creditor for the invoice to be financed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyAndAccountIdentificationAndContactInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1.mmObject();
 		}
 	};
+	protected PartyIdentificationAndContactInformation1 buyer;
 	/**
 	 * Person or organization that represents the debtor for the invoice to be
 	 * financed.
@@ -408,8 +416,8 @@ public class InvoiceRequestInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -430,21 +438,22 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Buyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Person or organization that represents the debtor for the invoice to be financed.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentificationAndContactInformation1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmObject();
 		}
 	};
+	protected PaymentInformation15 invoicePaymentInformation;
 	/**
 	 * Specifies payment terms and conditions related to a single invoice to be
 	 * financed, including identifier of possible account used for payment.
@@ -474,7 +483,7 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd InvoicePaymentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmInvoicePaymentInformation = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
 			isDerived = false;
@@ -482,12 +491,13 @@ public class InvoiceRequestInformation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoicePaymentInformation";
 			definition = "Specifies payment terms and conditions related to a single invoice to be financed, including identifier of possible account used for payment.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> PaymentInformation15.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PaymentInformation15.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.ReferredDocumentInformation2> referredDocument;
 	/**
 	 * Information about a document related to the invoice to be financed, in
 	 * structured form.
@@ -523,36 +533,108 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ReferredDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReferredDocument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
 			businessComponentTrace_lazy = () -> FinancialDocument.mmObject();
+			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDoc";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocument";
 			definition = "Information about a document related to the invoice to be financed, in structured form.";
 			minOccurs = 0;
-			type_lazy = () -> ReferredDocumentInformation2.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceRequestInformation1.InvoiceGeneralInformation, com.tools20022.repository.msg.InvoiceRequestInformation1.InvoiceTotalsInformation,
-						com.tools20022.repository.msg.InvoiceRequestInformation1.CreditDebitNoteAmount, com.tools20022.repository.msg.InvoiceRequestInformation1.InstalmentInformation,
-						com.tools20022.repository.msg.InvoiceRequestInformation1.RequestedAmount, com.tools20022.repository.msg.InvoiceRequestInformation1.Supplier, com.tools20022.repository.msg.InvoiceRequestInformation1.Buyer,
-						com.tools20022.repository.msg.InvoiceRequestInformation1.InvoicePaymentInformation, com.tools20022.repository.msg.InvoiceRequestInformation1.ReferredDocument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceRequestInformation1.mmInvoiceGeneralInformation, com.tools20022.repository.msg.InvoiceRequestInformation1.mmInvoiceTotalsInformation,
+						com.tools20022.repository.msg.InvoiceRequestInformation1.mmCreditDebitNoteAmount, com.tools20022.repository.msg.InvoiceRequestInformation1.mmInstalmentInformation,
+						com.tools20022.repository.msg.InvoiceRequestInformation1.mmRequestedAmount, com.tools20022.repository.msg.InvoiceRequestInformation1.mmSupplier, com.tools20022.repository.msg.InvoiceRequestInformation1.mmBuyer,
+						com.tools20022.repository.msg.InvoiceRequestInformation1.mmInvoicePaymentInformation, com.tools20022.repository.msg.InvoiceRequestInformation1.mmReferredDocument);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.mmInvoiceRequestInformation);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.InvoiceRequestInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvoiceRequestInformation1";
 				definition = "Set of characteristics that unambiguously identify the single invoice financing request.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentGeneralInformation1 getInvoiceGeneralInformation() {
+		return invoiceGeneralInformation;
+	}
+
+	public void setInvoiceGeneralInformation(com.tools20022.repository.msg.DocumentGeneralInformation1 invoiceGeneralInformation) {
+		this.invoiceGeneralInformation = invoiceGeneralInformation;
+	}
+
+	public InvoiceTotals1 getInvoiceTotalsInformation() {
+		return invoiceTotalsInformation;
+	}
+
+	public void setInvoiceTotalsInformation(com.tools20022.repository.msg.InvoiceTotals1 invoiceTotalsInformation) {
+		this.invoiceTotalsInformation = invoiceTotalsInformation;
+	}
+
+	public ActiveCurrencyAndAmount getCreditDebitNoteAmount() {
+		return creditDebitNoteAmount;
+	}
+
+	public void setCreditDebitNoteAmount(ActiveCurrencyAndAmount creditDebitNoteAmount) {
+		this.creditDebitNoteAmount = creditDebitNoteAmount;
+	}
+
+	public List<Instalment1> getInstalmentInformation() {
+		return instalmentInformation;
+	}
+
+	public void setInstalmentInformation(List<com.tools20022.repository.msg.Instalment1> instalmentInformation) {
+		this.instalmentInformation = instalmentInformation;
+	}
+
+	public FinancingRateOrAmountChoice getRequestedAmount() {
+		return requestedAmount;
+	}
+
+	public void setRequestedAmount(FinancingRateOrAmountChoice requestedAmount) {
+		this.requestedAmount = requestedAmount;
+	}
+
+	public PartyAndAccountIdentificationAndContactInformation1 getSupplier() {
+		return supplier;
+	}
+
+	public void setSupplier(com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1 supplier) {
+		this.supplier = supplier;
+	}
+
+	public PartyIdentificationAndContactInformation1 getBuyer() {
+		return buyer;
+	}
+
+	public void setBuyer(com.tools20022.repository.msg.PartyIdentificationAndContactInformation1 buyer) {
+		this.buyer = buyer;
+	}
+
+	public PaymentInformation15 getInvoicePaymentInformation() {
+		return invoicePaymentInformation;
+	}
+
+	public void setInvoicePaymentInformation(com.tools20022.repository.msg.PaymentInformation15 invoicePaymentInformation) {
+		this.invoicePaymentInformation = invoicePaymentInformation;
+	}
+
+	public List<ReferredDocumentInformation2> getReferredDocument() {
+		return referredDocument;
+	}
+
+	public void setReferredDocument(List<com.tools20022.repository.msg.ReferredDocumentInformation2> referredDocument) {
+		this.referredDocument = referredDocument;
 	}
 }

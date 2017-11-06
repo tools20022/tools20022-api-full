@@ -34,11 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationCancellation1#NotificationCancellationType
- * NotificationCancellation1.NotificationCancellationType}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationCancellation1#mmNotificationCancellationType
+ * NotificationCancellation1.mmNotificationCancellationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NotificationCancellation1#LinkedAgentCANotificationAdviceIdentification
- * NotificationCancellation1.LinkedAgentCANotificationAdviceIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.NotificationCancellation1#mmLinkedAgentCANotificationAdviceIdentification
+ * NotificationCancellation1.mmLinkedAgentCANotificationAdviceIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -46,16 +46,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01#NotificationCancellationTypeAndLinkage
+ * {@linkplain com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01#mmNotificationCancellationTypeAndLinkage
  * AgentCANotificationCancellationRequestV01.
- * NotificationCancellationTypeAndLinkage}</li>
+ * mmNotificationCancellationTypeAndLinkage}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NotificationCancellation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CorporateActionNotificationType2Code notificationCancellationType;
 	/**
 	 * The function of the notification e.g. new notification.
 	 * <p>
@@ -99,7 +100,7 @@ public class NotificationCancellation1 {
 	 * definition} = "The function of the notification e.g. new notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute NotificationCancellationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmNotificationCancellationType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationCancellation1.mmObject();
 			isDerived = false;
@@ -107,11 +108,12 @@ public class NotificationCancellation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellationType";
 			definition = "The function of the notification e.g. new notification.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNotificationType2Code.mmObject();
 		}
 	};
+	protected DocumentIdentification8 linkedAgentCANotificationAdviceIdentification;
 	/**
 	 * The identification of the linked notification advice.
 	 * <p>
@@ -140,7 +142,7 @@ public class NotificationCancellation1 {
 	 * definition} = "The identification of the linked notification advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkedAgentCANotificationAdviceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkedAgentCANotificationAdviceIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> NotificationCancellation1.mmObject();
 			isDerived = false;
@@ -148,24 +150,40 @@ public class NotificationCancellation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedAgentCANotificationAdviceIdentification";
 			definition = "The identification of the linked notification advice.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			complexType_lazy = () -> DocumentIdentification8.mmObject();
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationCancellation1.NotificationCancellationType,
-						com.tools20022.repository.msg.NotificationCancellation1.LinkedAgentCANotificationAdviceIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.NotificationCancellationTypeAndLinkage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationCancellation1.mmNotificationCancellationType,
+						com.tools20022.repository.msg.NotificationCancellation1.mmLinkedAgentCANotificationAdviceIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmNotificationCancellationTypeAndLinkage);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "NotificationCancellation1";
 				definition = "Information about the cancellation of a notification advice or the withdrawal of a CA event.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CorporateActionNotificationType2Code getNotificationCancellationType() {
+		return notificationCancellationType;
+	}
+
+	public void setNotificationCancellationType(CorporateActionNotificationType2Code notificationCancellationType) {
+		this.notificationCancellationType = notificationCancellationType;
+	}
+
+	public DocumentIdentification8 getLinkedAgentCANotificationAdviceIdentification() {
+		return linkedAgentCANotificationAdviceIdentification;
+	}
+
+	public void setLinkedAgentCANotificationAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 linkedAgentCANotificationAdviceIdentification) {
+		this.linkedAgentCANotificationAdviceIdentification = linkedAgentCANotificationAdviceIdentification;
 	}
 }

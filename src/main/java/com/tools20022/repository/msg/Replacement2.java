@@ -32,17 +32,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Replacement2#CurrentValue
- * Replacement2.CurrentValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Replacement2#ProposedValue
- * Replacement2.ProposedValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Replacement2#mmCurrentValue
+ * Replacement2.mmCurrentValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Replacement2#mmProposedValue
+ * Replacement2.mmProposedValue}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,6 +56,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Replacement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text currentValue;
 	/**
 	 * Content of the current element.
 	 * <p>
@@ -82,7 +83,7 @@ public class Replacement2 {
 	 * definition} = "Content of the current element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CurrentValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCurrentValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Replacement2.mmObject();
 			isDerived = false;
@@ -90,11 +91,12 @@ public class Replacement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentValue";
 			definition = "Content of the current element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max350Text proposedValue;
 	/**
 	 * Content of the new element.
 	 * <p>
@@ -121,7 +123,7 @@ public class Replacement2 {
 	 * definition} = "Content of the new element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ProposedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmProposedValue = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Replacement2.mmObject();
 			isDerived = false;
@@ -129,8 +131,8 @@ public class Replacement2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedValue";
 			definition = "Content of the new element.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
@@ -138,13 +140,29 @@ public class Replacement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Replacement2.CurrentValue, com.tools20022.repository.msg.Replacement2.ProposedValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Replacement2.mmCurrentValue, com.tools20022.repository.msg.Replacement2.mmProposedValue);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Replacement2";
 				definition = "Replacement of an existing content by a different one.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getCurrentValue() {
+		return currentValue;
+	}
+
+	public void setCurrentValue(Max350Text currentValue) {
+		this.currentValue = currentValue;
+	}
+
+	public Max350Text getProposedValue() {
+		return proposedValue;
+	}
+
+	public void setProposedValue(Max350Text proposedValue) {
+		this.proposedValue = proposedValue;
 	}
 }

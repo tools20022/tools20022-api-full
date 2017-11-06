@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashPaymentStatus2Code#Pending
- * CashPaymentStatus2Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashPaymentStatus2Code#mmPending
+ * CashPaymentStatus2Code.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashPaymentStatus2Code#Final
- * CashPaymentStatus2Code.Final}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashPaymentStatus2Code#mmFinal
+ * CashPaymentStatus2Code.mmFinal}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +82,7 @@ public class CashPaymentStatus2Code extends CashPaymentStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -105,7 +105,7 @@ public class CashPaymentStatus2Code extends CashPaymentStatusCode {
 	 * name} = "Final"</li>
 	 * </ul>
 	 */
-	public static final MMCode Final = new MMCode() {
+	public static final MMCode mmFinal = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
@@ -116,12 +116,12 @@ public class CashPaymentStatus2Code extends CashPaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PDNG");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CashPaymentStatus2Code";
 				definition = "Specifies the state of a payment instruction at a specified time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashPaymentStatus2Code.Pending, com.tools20022.repository.codeset.CashPaymentStatus2Code.Final);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashPaymentStatus2Code.mmPending, com.tools20022.repository.codeset.CashPaymentStatus2Code.mmFinal);
 				trace_lazy = () -> CashPaymentStatusCode.mmObject();
 			}
 		});

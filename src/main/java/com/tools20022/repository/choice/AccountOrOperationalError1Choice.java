@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.AccountReport13;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Choice between account details or an operational error when the requested
@@ -35,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError1Choice#AccountReport
- * AccountOrOperationalError1Choice.AccountReport}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError1Choice#mmAccountReport
+ * AccountOrOperationalError1Choice.mmAccountReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError1Choice#OperationalError
- * AccountOrOperationalError1Choice.OperationalError}</li>
+ * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError1Choice#mmOperationalError
+ * AccountOrOperationalError1Choice.mmOperationalError}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +71,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<AccountReport13> accountReport;
 	/**
 	 * Reports either on the account information or on a business error.
 	 * <p>
@@ -99,13 +101,13 @@ public class AccountOrOperationalError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError2Choice#AccountReport
-	 * AccountOrOperationalError2Choice.AccountReport}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError2Choice#mmAccountReport
+	 * AccountOrOperationalError2Choice.mmAccountReport}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -113,12 +115,13 @@ public class AccountOrOperationalError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountReport";
 			definition = "Reports either on the account information or on a business error.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrOperationalError2Choice.AccountReport);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrOperationalError2Choice.mmAccountReport);
 			minOccurs = 1;
-			type_lazy = () -> AccountReport13.mmObject();
 			isComposite = true;
+			type_lazy = () -> AccountReport13.mmObject();
 		}
 	};
+	protected List<ErrorHandling3> operationalError;
 	/**
 	 * Indicates that an operational error has been issued during the processing
 	 * of the related request.
@@ -150,13 +153,13 @@ public class AccountOrOperationalError1Choice {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError2Choice#OperationalError
-	 * AccountOrOperationalError2Choice.OperationalError}</li>
+	 * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError2Choice#mmOperationalError
+	 * AccountOrOperationalError2Choice.mmOperationalError}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -164,18 +167,18 @@ public class AccountOrOperationalError1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrOperationalError2Choice.OperationalError);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrOperationalError2Choice.mmOperationalError);
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrOperationalError1Choice.AccountReport, com.tools20022.repository.choice.AccountOrOperationalError1Choice.OperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrOperationalError1Choice.mmAccountReport, com.tools20022.repository.choice.AccountOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountOrOperationalError1Choice";
 				definition = "Choice between account details or an operational error when the requested data cannot be retrieved.";
@@ -183,5 +186,21 @@ public class AccountOrOperationalError1Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<AccountReport13> getAccountReport() {
+		return accountReport;
+	}
+
+	public void setAccountReport(List<AccountReport13> accountReport) {
+		this.accountReport = accountReport;
+	}
+
+	public List<ErrorHandling3> getOperationalError() {
+		return operationalError;
+	}
+
+	public void setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = operationalError;
 	}
 }

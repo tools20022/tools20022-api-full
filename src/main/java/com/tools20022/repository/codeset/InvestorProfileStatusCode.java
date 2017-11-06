@@ -30,35 +30,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#InAnalysis
- * InvestorProfileStatusCode.InAnalysis}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#mmInAnalysis
+ * InvestorProfileStatusCode.mmInAnalysis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#PendingApproval
- * InvestorProfileStatusCode.PendingApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#mmPendingApproval
+ * InvestorProfileStatusCode.mmPendingApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#NotApproved
- * InvestorProfileStatusCode.NotApproved}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#mmNotApproved
+ * InvestorProfileStatusCode.mmNotApproved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#InAdmission
- * InvestorProfileStatusCode.InAdmission}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#mmInAdmission
+ * InvestorProfileStatusCode.mmInAdmission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#Enabling
- * InvestorProfileStatusCode.Enabling}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#mmEnabling
+ * InvestorProfileStatusCode.mmEnabling}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#Enabled
- * InvestorProfileStatusCode.Enabled}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#mmEnabled
+ * InvestorProfileStatusCode.mmEnabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#PartiallySuspended
- * InvestorProfileStatusCode.PartiallySuspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#mmPartiallySuspended
+ * InvestorProfileStatusCode.mmPartiallySuspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#Suspended
- * InvestorProfileStatusCode.Suspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#mmSuspended
+ * InvestorProfileStatusCode.mmSuspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#Disabling
- * InvestorProfileStatusCode.Disabling}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#mmDisabling
+ * InvestorProfileStatusCode.mmDisabling}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#Disabled
- * InvestorProfileStatusCode.Disabled}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode#mmDisabled
+ * InvestorProfileStatusCode.mmDisabled}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -71,8 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,7 +107,7 @@ public class InvestorProfileStatusCode {
 	 * definition} = "Status of the investor profile is in analysis."</li>
 	 * </ul>
 	 */
-	public static final MMCode InAnalysis = new MMCode() {
+	public static final MMCode mmInAnalysis = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InAnalysis";
@@ -137,7 +137,7 @@ public class InvestorProfileStatusCode {
 	 * definition} = "Status of the investor profile is pending approval."</li>
 	 * </ul>
 	 */
-	public static final MMCode PendingApproval = new MMCode() {
+	public static final MMCode mmPendingApproval = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingApproval";
@@ -167,7 +167,7 @@ public class InvestorProfileStatusCode {
 	 * definition} = "Status of the investor profile is not approved."</li>
 	 * </ul>
 	 */
-	public static final MMCode NotApproved = new MMCode() {
+	public static final MMCode mmNotApproved = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApproved";
@@ -197,7 +197,7 @@ public class InvestorProfileStatusCode {
 	 * definition} = "Status of the investor profile is in admission."</li>
 	 * </ul>
 	 */
-	public static final MMCode InAdmission = new MMCode() {
+	public static final MMCode mmInAdmission = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InAdmission";
@@ -228,7 +228,7 @@ public class InvestorProfileStatusCode {
 	 * "Status of the investor profile is in the process of being enabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode Enabling = new MMCode() {
+	public static final MMCode mmEnabling = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabling";
@@ -258,7 +258,7 @@ public class InvestorProfileStatusCode {
 	 * definition} = "Status of the investor profile is enabled."</li>
 	 * </ul>
 	 */
-	public static final MMCode Enabled = new MMCode() {
+	public static final MMCode mmEnabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
@@ -288,7 +288,7 @@ public class InvestorProfileStatusCode {
 	 * definition} = "Status of the investor profile is partially suspended ."</li>
 	 * </ul>
 	 */
-	public static final MMCode PartiallySuspended = new MMCode() {
+	public static final MMCode mmPartiallySuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySuspended";
@@ -318,7 +318,7 @@ public class InvestorProfileStatusCode {
 	 * definition} = "Status of the investor profile is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMCode Suspended = new MMCode() {
+	public static final MMCode mmSuspended = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
@@ -349,7 +349,7 @@ public class InvestorProfileStatusCode {
 	 * "Status of the investor profile is in the process of being disabled."</li>
 	 * </ul>
 	 */
-	public static final MMCode Disabling = new MMCode() {
+	public static final MMCode mmDisabling = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabling";
@@ -379,7 +379,7 @@ public class InvestorProfileStatusCode {
 	 * definition} = "Status of the investor profile is disabled."</li>
 	 * </ul>
 	 */
-	public static final MMCode Disabled = new MMCode() {
+	public static final MMCode mmDisabled = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
@@ -392,14 +392,15 @@ public class InvestorProfileStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestorProfileStatusCode";
 				definition = "Specifies the status of the investor profile.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorProfileStatusCode.InAnalysis, com.tools20022.repository.codeset.InvestorProfileStatusCode.PendingApproval,
-						com.tools20022.repository.codeset.InvestorProfileStatusCode.NotApproved, com.tools20022.repository.codeset.InvestorProfileStatusCode.InAdmission, com.tools20022.repository.codeset.InvestorProfileStatusCode.Enabling,
-						com.tools20022.repository.codeset.InvestorProfileStatusCode.Enabled, com.tools20022.repository.codeset.InvestorProfileStatusCode.PartiallySuspended,
-						com.tools20022.repository.codeset.InvestorProfileStatusCode.Suspended, com.tools20022.repository.codeset.InvestorProfileStatusCode.Disabling, com.tools20022.repository.codeset.InvestorProfileStatusCode.Disabled);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorProfileStatusCode.mmInAnalysis, com.tools20022.repository.codeset.InvestorProfileStatusCode.mmPendingApproval,
+						com.tools20022.repository.codeset.InvestorProfileStatusCode.mmNotApproved, com.tools20022.repository.codeset.InvestorProfileStatusCode.mmInAdmission,
+						com.tools20022.repository.codeset.InvestorProfileStatusCode.mmEnabling, com.tools20022.repository.codeset.InvestorProfileStatusCode.mmEnabled,
+						com.tools20022.repository.codeset.InvestorProfileStatusCode.mmPartiallySuspended, com.tools20022.repository.codeset.InvestorProfileStatusCode.mmSuspended,
+						com.tools20022.repository.codeset.InvestorProfileStatusCode.mmDisabling, com.tools20022.repository.codeset.InvestorProfileStatusCode.mmDisabled);
 				derivation_lazy = () -> Arrays.asList(InvestorProfileStatus1Code.mmObject());
 			}
 		});

@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProformaStatusReason1Code#ModificationInProcess
- * ProformaStatusReason1Code.ModificationInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProformaStatusReason1Code#mmModificationInProcess
+ * ProformaStatusReason1Code.mmModificationInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProformaStatusReason1Code#Rights
- * ProformaStatusReason1Code.Rights}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProformaStatusReason1Code#mmRights
+ * ProformaStatusReason1Code.mmRights}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class ProformaStatusReason1Code extends ProformaStatusReasonCode {
 	 * name} = "ModificationInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode ModificationInProcess = new MMCode() {
+	public static final MMCode mmModificationInProcess = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationInProcess";
@@ -98,7 +98,7 @@ public class ProformaStatusReason1Code extends ProformaStatusReasonCode {
 	 * name} = "Rights"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rights = new MMCode() {
+	public static final MMCode mmRights = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rights";
@@ -109,11 +109,11 @@ public class ProformaStatusReason1Code extends ProformaStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ProformaStatusReason1Code";
 				definition = "Specifies the reason for proforma status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProformaStatusReason1Code.ModificationInProcess, com.tools20022.repository.codeset.ProformaStatusReason1Code.Rights);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProformaStatusReason1Code.mmModificationInProcess, com.tools20022.repository.codeset.ProformaStatusReason1Code.mmRights);
 				trace_lazy = () -> ProformaStatusReasonCode.mmObject();
 			}
 		});

@@ -35,11 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument19Choice#ChequeDetails
- * PaymentInstrument19Choice.ChequeDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument19Choice#mmChequeDetails
+ * PaymentInstrument19Choice.mmChequeDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.PaymentInstrument19Choice#BankersDraftDetails
- * PaymentInstrument19Choice.BankersDraftDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.PaymentInstrument19Choice#mmBankersDraftDetails
+ * PaymentInstrument19Choice.mmBankersDraftDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentInstrument19Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Cheque4 chequeDetails;
 	/**
 	 * Settlement instructions for a payment by cheque.
 	 * <p>
@@ -96,26 +97,27 @@ public class PaymentInstrument19Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PaymentInstrument16Choice#ChequeDetails
-	 * PaymentInstrument16Choice.ChequeDetails}</li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentInstrument16Choice#mmChequeDetails
+	 * PaymentInstrument16Choice.mmChequeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd ChequeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentInstrument19Choice.mmObject();
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
+			componentContext_lazy = () -> PaymentInstrument19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChqDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeDetails";
 			definition = "Settlement instructions for a payment by cheque.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentInstrument16Choice.ChequeDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentInstrument16Choice.mmChequeDetails;
 			maxOccurs = 1;
-			type_lazy = () -> Cheque4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Cheque4.mmObject();
 		}
 	};
+	protected Cheque4 bankersDraftDetails;
 	/**
 	 * Settlement instructions for a payment by draft.
 	 * <p>
@@ -146,33 +148,33 @@ public class PaymentInstrument19Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.choice.PaymentInstrument16Choice#BankersDraftDetails
-	 * PaymentInstrument16Choice.BankersDraftDetails}</li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentInstrument16Choice#mmBankersDraftDetails
+	 * PaymentInstrument16Choice.mmBankersDraftDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BankersDraftDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBankersDraftDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentInstrument19Choice.mmObject();
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
+			componentContext_lazy = () -> PaymentInstrument19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BkrsDrftDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankersDraftDetails";
 			definition = "Settlement instructions for a payment by draft.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentInstrument16Choice.BankersDraftDetails;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentInstrument16Choice.mmBankersDraftDetails;
 			maxOccurs = 1;
-			type_lazy = () -> Cheque4.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Cheque4.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument19Choice.ChequeDetails, com.tools20022.repository.choice.PaymentInstrument19Choice.BankersDraftDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument19Choice.mmChequeDetails, com.tools20022.repository.choice.PaymentInstrument19Choice.mmBankersDraftDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument19Choice";
 				definition = "Choice of payment instruments.";
@@ -180,5 +182,21 @@ public class PaymentInstrument19Choice {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Cheque4 getChequeDetails() {
+		return chequeDetails;
+	}
+
+	public void setChequeDetails(Cheque4 chequeDetails) {
+		this.chequeDetails = chequeDetails;
+	}
+
+	public Cheque4 getBankersDraftDetails() {
+		return bankersDraftDetails;
+	}
+
+	public void setBankersDraftDetails(Cheque4 bankersDraftDetails) {
+		this.bankersDraftDetails = bankersDraftDetails;
 	}
 }

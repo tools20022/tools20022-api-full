@@ -30,11 +30,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementUnitTypeCode#FaceAmount
- * SettlementUnitTypeCode.FaceAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementUnitTypeCode#mmFaceAmount
+ * SettlementUnitTypeCode.mmFaceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementUnitTypeCode#Unit
- * SettlementUnitTypeCode.Unit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementUnitTypeCode#mmUnit
+ * SettlementUnitTypeCode.mmUnit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +92,7 @@ public class SettlementUnitTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode FaceAmount = new MMCode() {
+	public static final MMCode mmFaceAmount = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
@@ -123,7 +123,7 @@ public class SettlementUnitTypeCode {
 	 * "Represent the unit as a number, for example a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMCode Unit = new MMCode() {
+	public static final MMCode mmUnit = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
@@ -136,12 +136,12 @@ public class SettlementUnitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAMT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementUnitTypeCode";
 				definition = "Type of settlement foreseen for the security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementUnitTypeCode.FaceAmount, com.tools20022.repository.codeset.SettlementUnitTypeCode.Unit);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementUnitTypeCode.mmFaceAmount, com.tools20022.repository.codeset.SettlementUnitTypeCode.mmUnit);
 				derivation_lazy = () -> Arrays.asList(SettlementUnitType1Code.mmObject());
 			}
 		});

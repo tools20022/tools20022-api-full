@@ -34,21 +34,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType5Code#PINChange
- * ATMServiceType5Code.PINChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType5Code#mmPINChange
+ * ATMServiceType5Code.mmPINChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType5Code#PINRecovery
- * ATMServiceType5Code.PINRecovery}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType5Code#mmPINRecovery
+ * ATMServiceType5Code.mmPINRecovery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType5Code#PINUnblock
- * ATMServiceType5Code.PINUnblock}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType5Code#mmPINUnblock
+ * ATMServiceType5Code.mmPINUnblock}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +83,15 @@ public class ATMServiceType5Code extends ATMServiceTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType2Code#PINChange
-	 * ATMServiceType2Code.PINChange}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType2Code#mmPINChange
+	 * ATMServiceType2Code.mmPINChange}</li>
 	 * </ul>
 	 */
-	public static final MMCode PINChange = new MMCode() {
+	public static final MMCode mmPINChange = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINChange";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ATMServiceType2Code.PINChange;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ATMServiceType2Code.mmPINChange;
 			owner_lazy = () -> ATMServiceType5Code.mmObject();
 		}
 	};
@@ -112,15 +112,15 @@ public class ATMServiceType5Code extends ATMServiceTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType2Code#PINRecovery
-	 * ATMServiceType2Code.PINRecovery}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType2Code#mmPINRecovery
+	 * ATMServiceType2Code.mmPINRecovery}</li>
 	 * </ul>
 	 */
-	public static final MMCode PINRecovery = new MMCode() {
+	public static final MMCode mmPINRecovery = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRecovery";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ATMServiceType2Code.PINRecovery;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ATMServiceType2Code.mmPINRecovery;
 			owner_lazy = () -> ATMServiceType5Code.mmObject();
 		}
 	};
@@ -141,15 +141,15 @@ public class ATMServiceType5Code extends ATMServiceTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType2Code#PINUnblock
-	 * ATMServiceType2Code.PINUnblock}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType2Code#mmPINUnblock
+	 * ATMServiceType2Code.mmPINUnblock}</li>
 	 * </ul>
 	 */
-	public static final MMCode PINUnblock = new MMCode() {
+	public static final MMCode mmPINUnblock = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINUnblock";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ATMServiceType2Code.PINUnblock;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.ATMServiceType2Code.mmPINUnblock;
 			owner_lazy = () -> ATMServiceType5Code.mmObject();
 		}
 	};
@@ -157,13 +157,13 @@ public class ATMServiceType5Code extends ATMServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ATMServiceType5Code";
 				definition = "Describes the type of service selected by the customer.";
 				previousVersion_lazy = () -> ATMServiceType2Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType5Code.PINChange, com.tools20022.repository.codeset.ATMServiceType5Code.PINRecovery,
-						com.tools20022.repository.codeset.ATMServiceType5Code.PINUnblock);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType5Code.mmPINChange, com.tools20022.repository.codeset.ATMServiceType5Code.mmPINRecovery,
+						com.tools20022.repository.codeset.ATMServiceType5Code.mmPINUnblock);
 				trace_lazy = () -> ATMServiceTypeCode.mmObject();
 			}
 		});

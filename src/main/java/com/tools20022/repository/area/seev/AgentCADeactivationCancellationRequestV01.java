@@ -66,25 +66,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#Identification
- * AgentCADeactivationCancellationRequestV01.Identification}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#mmIdentification
+ * AgentCADeactivationCancellationRequestV01.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#AgentCADeactivationInstructionIdentification
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#mmAgentCADeactivationInstructionIdentification
  * AgentCADeactivationCancellationRequestV01.
- * AgentCADeactivationInstructionIdentification}</li>
+ * mmAgentCADeactivationInstructionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#CorporateActionGeneralInformation
- * AgentCADeactivationCancellationRequestV01.CorporateActionGeneralInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#mmCorporateActionGeneralInformation
+ * AgentCADeactivationCancellationRequestV01.mmCorporateActionGeneralInformation
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#DeactivationInstructionDetails
- * AgentCADeactivationCancellationRequestV01.DeactivationInstructionDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#mmDeactivationInstructionDetails
+ * AgentCADeactivationCancellationRequestV01.mmDeactivationInstructionDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01#identifier
- * AgentCADeactivationCancellationRequestV01.identifier}</li>
+ * messageDefinitionIdentifier} = {@code seev.029.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,6 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AgentCADeactivationCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected DocumentIdentification8 identification;
 	/**
 	 * Identification assigned by the Sender to unambiguously identify the
 	 * cancellation request.
@@ -126,17 +126,18 @@ public class AgentCADeactivationCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Identification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the cancellation request.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected DocumentIdentification8 agentCADeactivationInstructionIdentification;
 	/**
 	 * Identification of the Agent CA Deactivation Instruction to be cancelled.
 	 * <p>
@@ -162,17 +163,18 @@ public class AgentCADeactivationCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock AgentCADeactivationInstructionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmAgentCADeactivationInstructionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCADeactvtnInstrId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCADeactivationInstructionIdentification";
 			definition = "Identification of the Agent CA Deactivation Instruction to be cancelled.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 	};
+	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
 	 * General information about the corporate action event.
 	 * <p>
@@ -196,17 +198,18 @@ public class AgentCADeactivationCancellationRequestV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock CorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 	};
+	protected CorporateActionDeactivationInstruction1 deactivationInstructionDetails;
 	/**
 	 * Details of the deactivation instruction to be cancelled.
 	 * <p>
@@ -230,42 +233,15 @@ public class AgentCADeactivationCancellationRequestV01 {
 	 * definition} = "Details of the deactivation instruction to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock DeactivationInstructionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmDeactivationInstructionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DeactvtnInstrDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationInstructionDetails";
 			definition = "Details of the deactivation instruction to be cancelled.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionDeactivationInstruction1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "01"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "seev"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "029"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "seev";
-			messageFunctionality = "029";
-			version = "01";
-			flavour = "001";
 		}
 	};
 
@@ -279,13 +255,52 @@ public class AgentCADeactivationCancellationRequestV01 {
 				rootElement = "Document";
 				xmlTag = "AgtCADeactvtnCxlReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.Identification,
-						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.AgentCADeactivationInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.CorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.DeactivationInstructionDetails);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.mmIdentification,
+						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.mmAgentCADeactivationInstructionIdentification,
+						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.mmCorporateActionGeneralInformation,
+						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.mmDeactivationInstructionDetails);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "seev";
+						messageFunctionality = "029";
+						version = "01";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DocumentIdentification8 getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(DocumentIdentification8 identification) {
+		this.identification = identification;
+	}
+
+	public DocumentIdentification8 getAgentCADeactivationInstructionIdentification() {
+		return agentCADeactivationInstructionIdentification;
+	}
+
+	public void setAgentCADeactivationInstructionIdentification(DocumentIdentification8 agentCADeactivationInstructionIdentification) {
+		this.agentCADeactivationInstructionIdentification = agentCADeactivationInstructionIdentification;
+	}
+
+	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
+		return corporateActionGeneralInformation;
+	}
+
+	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	}
+
+	public CorporateActionDeactivationInstruction1 getDeactivationInstructionDetails() {
+		return deactivationInstructionDetails;
+	}
+
+	public void setDeactivationInstructionDetails(CorporateActionDeactivationInstruction1 deactivationInstructionDetails) {
+		this.deactivationInstructionDetails = deactivationInstructionDetails;
 	}
 }

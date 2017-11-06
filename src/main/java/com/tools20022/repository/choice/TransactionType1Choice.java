@@ -33,11 +33,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionType1Choice#TransactionType
- * TransactionType1Choice.TransactionType}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionType1Choice#mmTransactionType
+ * TransactionType1Choice.mmTransactionType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionType1Choice#CorporateActionType
- * TransactionType1Choice.CorporateActionType}</li>
+ * {@linkplain com.tools20022.repository.choice.TransactionType1Choice#mmCorporateActionType
+ * TransactionType1Choice.mmCorporateActionType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -47,8 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class TransactionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected TransactionType2Choice transactionType;
 	/**
 	 * Type of investment fund transaction.
 	 * <p>
@@ -74,8 +75,8 @@ public class TransactionType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#Type
-	 * InvestmentFundTransaction.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmType
+	 * InvestmentFundTransaction.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -94,21 +95,22 @@ public class TransactionType1Choice {
 	 * definition} = "Type of investment fund transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd TransactionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTransactionType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> TransactionType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.Type;
 			isDerived = false;
 			xmlTag = "TxTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Type of investment fund transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> TransactionType2Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.TransactionType2Choice.mmObject();
 		}
 	};
+	protected CorporateAction1Choice corporateActionType;
 	/**
 	 * Type of corporate action event.
 	 * <p>
@@ -121,8 +123,8 @@ public class TransactionType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#Type
-	 * CorporateActionEvent.Type}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmType
+	 * CorporateActionEvent.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,33 +143,49 @@ public class TransactionType1Choice {
 	 * definition} = "Type of corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CorporateActionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCorporateActionType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmType;
 			componentContext_lazy = () -> TransactionType1Choice.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.Type;
 			isDerived = false;
 			xmlTag = "CorpActnTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionType";
 			definition = "Type of corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateAction1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.choice.CorporateAction1Choice.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionType1Choice.TransactionType, com.tools20022.repository.choice.TransactionType1Choice.CorporateActionType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionType1Choice.mmTransactionType, com.tools20022.repository.choice.TransactionType1Choice.mmCorporateActionType);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TransactionType1Choice";
 				definition = "Choice of transaction type or corporation action event type.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public TransactionType2Choice getTransactionType() {
+		return transactionType;
+	}
+
+	public void setTransactionType(com.tools20022.repository.choice.TransactionType2Choice transactionType) {
+		this.transactionType = transactionType;
+	}
+
+	public CorporateAction1Choice getCorporateActionType() {
+		return corporateActionType;
+	}
+
+	public void setCorporateActionType(com.tools20022.repository.choice.CorporateAction1Choice corporateActionType) {
+		this.corporateActionType = corporateActionType;
 	}
 }

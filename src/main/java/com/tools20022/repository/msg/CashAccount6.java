@@ -36,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount6#Identification
- * CashAccount6.Identification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount6#GBBankSortCode
- * CashAccount6.GBBankSortCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAccount6#Servicer
- * CashAccount6.Servicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount6#mmIdentification
+ * CashAccount6.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount6#mmGBBankSortCode
+ * CashAccount6.mmGBBankSortCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount6#mmServicer
+ * CashAccount6.mmServicer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CashAccount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text identification;
 	/**
 	 * Unique and unambiguous identification for the account between the account
 	 * owner and the account servicer.
@@ -78,8 +79,8 @@ public class CashAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Account#Identification
-	 * Account.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -99,20 +100,21 @@ public class CashAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
 			componentContext_lazy = () -> CashAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.Identification;
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected UKDomesticSortCodeIdentifier gBBankSortCode;
 	/**
 	 * United Kingdom (UK) Sort Code - identifies British financial institutions
 	 * on the British national clearing systems. The sort code is assigned by
@@ -128,8 +130,8 @@ public class CashAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#UKSortCode
-	 * CashClearingSystemMember.UKSortCode}</li>
+	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#mmUKSortCode
+	 * CashClearingSystemMember.mmUKSortCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -149,20 +151,21 @@ public class CashAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute GBBankSortCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmGBBankSortCode = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmUKSortCode;
 			componentContext_lazy = () -> CashAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.UKSortCode;
 			isDerived = false;
 			xmlTag = "GBBkSortCd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBBankSortCode";
 			definition = "United Kingdom (UK) Sort Code - identifies British financial institutions on the British national clearing systems. The sort code is assigned by the Association for Payments and Clearing Services (APACS).";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> UKDomesticSortCodeIdentifier.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice servicer;
 	/**
 	 * Party that manages the account on behalf of the account owner, that is
 	 * manages the registration and booking of entries on the account,
@@ -178,8 +181,8 @@ public class CashAccount6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -199,33 +202,57 @@ public class CashAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Servicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> CashAccount6.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "Svcr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount6.Identification, com.tools20022.repository.msg.CashAccount6.GBBankSortCode, com.tools20022.repository.msg.CashAccount6.Servicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount6.mmIdentification, com.tools20022.repository.msg.CashAccount6.mmGBBankSortCode, com.tools20022.repository.msg.CashAccount6.mmServicer);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccount6";
 				definition = "Account to or from which a cash entry is made.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getIdentification() {
+		return identification;
+	}
+
+	public void setIdentification(Max35Text identification) {
+		this.identification = identification;
+	}
+
+	public UKDomesticSortCodeIdentifier getGBBankSortCode() {
+		return gBBankSortCode;
+	}
+
+	public void setGBBankSortCode(UKDomesticSortCodeIdentifier gBBankSortCode) {
+		this.gBBankSortCode = gBBankSortCode;
+	}
+
+	public PartyIdentification2Choice getServicer() {
+		return servicer;
+	}
+
+	public void setServicer(PartyIdentification2Choice servicer) {
+		this.servicer = servicer;
 	}
 }

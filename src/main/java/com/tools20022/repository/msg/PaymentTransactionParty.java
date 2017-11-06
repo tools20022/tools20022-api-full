@@ -33,26 +33,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentTransactionParty#Debtor
- * PaymentTransactionParty.Debtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#FirstAgent
- * PaymentTransactionParty.FirstAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#mmDebtor
+ * PaymentTransactionParty.mmDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#InstructingAgentCorrespondent
- * PaymentTransactionParty.InstructingAgentCorrespondent}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#mmFirstAgent
+ * PaymentTransactionParty.mmFirstAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#InstructedAgentCorrespondent
- * PaymentTransactionParty.InstructedAgentCorrespondent}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#mmInstructingAgentCorrespondent
+ * PaymentTransactionParty.mmInstructingAgentCorrespondent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#Intermediary
- * PaymentTransactionParty.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#mmInstructedAgentCorrespondent
+ * PaymentTransactionParty.mmInstructedAgentCorrespondent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#FinalAgent
- * PaymentTransactionParty.FinalAgent}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#mmIntermediary
+ * PaymentTransactionParty.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#Creditor
- * PaymentTransactionParty.Creditor}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#mmFinalAgent
+ * PaymentTransactionParty.mmFinalAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransactionParty#mmCreditor
+ * PaymentTransactionParty.mmCreditor}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -61,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,6 +77,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PaymentTransactionParty {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected BICIdentifier debtor;
 	/**
 	 * Party that owes assets to the creditor, eg, as a result of receipt of
 	 * goods or services, gifts, or charity payments. The debtor may also be the
@@ -91,8 +93,8 @@ public class PaymentTransactionParty {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -113,20 +115,21 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Debtor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes assets to the creditor, eg, as a result of receipt of goods or services, gifts, or charity payments. The debtor may also be the debit account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected BICIdentifier firstAgent;
 	/**
 	 * Financial institution that receives the payment transaction from the
 	 * account owner, or other authorised party, and processes the instruction.
@@ -141,8 +144,8 @@ public class PaymentTransactionParty {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -163,20 +166,21 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FirstAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFirstAgent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "FrstAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAgent";
 			definition = "Financial institution that receives the payment transaction from the account owner, or other authorised party, and processes the instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected BICIdentifier instructingAgentCorrespondent;
 	/**
 	 * Correspondent of the Instructing Agent that sends the payment
 	 * instruction.
@@ -191,8 +195,8 @@ public class PaymentTransactionParty {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -213,20 +217,21 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructingAgentCorrespondent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructingAgentCorrespondent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "InstgAgtCrspdt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentCorrespondent";
 			definition = "Correspondent of the Instructing Agent that sends the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected BICIdentifier instructedAgentCorrespondent;
 	/**
 	 * Correspondent of the Instructed Agent that receives the payment
 	 * instruction.
@@ -241,8 +246,8 @@ public class PaymentTransactionParty {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -263,20 +268,21 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute InstructedAgentCorrespondent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmInstructedAgentCorrespondent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "InstdAgtCrspdt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgentCorrespondent";
 			definition = "Correspondent of the Instructed Agent that receives the payment instruction.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected BICIdentifier intermediary;
 	/**
 	 * Party within the settlement chain between the first and final agents.
 	 * <p>
@@ -290,8 +296,8 @@ public class PaymentTransactionParty {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -311,20 +317,21 @@ public class PaymentTransactionParty {
 	 * "Party within the settlement chain between the first and final agents."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Intermediary = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "Intrmy";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			definition = "Party within the settlement chain between the first and final agents.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected BICIdentifier finalAgent;
 	/**
 	 * Financial institution that receives the payment transaction on behalf of
 	 * an account owner, or other nominated party, and credits the account.
@@ -339,8 +346,8 @@ public class PaymentTransactionParty {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -361,20 +368,21 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute FinalAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmFinalAgent = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "FnlAgt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalAgent";
 			definition = "Financial institution that receives the payment transaction on behalf of an account owner, or other nominated party, and credits the account.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	protected BICIdentifier creditor;
 	/**
 	 * Party that receives an amount of money from the debtor. In the context of
 	 * the payment model, the creditor is also the credit account owner.
@@ -389,8 +397,8 @@ public class PaymentTransactionParty {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Organisation#OrganisationIdentification
-	 * Organisation.OrganisationIdentification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -411,17 +419,17 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Creditor = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.OrganisationIdentification;
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
@@ -429,16 +437,72 @@ public class PaymentTransactionParty {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionParty.Debtor, com.tools20022.repository.msg.PaymentTransactionParty.FirstAgent,
-						com.tools20022.repository.msg.PaymentTransactionParty.InstructingAgentCorrespondent, com.tools20022.repository.msg.PaymentTransactionParty.InstructedAgentCorrespondent,
-						com.tools20022.repository.msg.PaymentTransactionParty.Intermediary, com.tools20022.repository.msg.PaymentTransactionParty.FinalAgent, com.tools20022.repository.msg.PaymentTransactionParty.Creditor);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionParty.mmDebtor, com.tools20022.repository.msg.PaymentTransactionParty.mmFirstAgent,
+						com.tools20022.repository.msg.PaymentTransactionParty.mmInstructingAgentCorrespondent, com.tools20022.repository.msg.PaymentTransactionParty.mmInstructedAgentCorrespondent,
+						com.tools20022.repository.msg.PaymentTransactionParty.mmIntermediary, com.tools20022.repository.msg.PaymentTransactionParty.mmFinalAgent, com.tools20022.repository.msg.PaymentTransactionParty.mmCreditor);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentTransactionParty";
 				definition = "Defines the party fields used to search for a payment.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BICIdentifier getDebtor() {
+		return debtor;
+	}
+
+	public void setDebtor(BICIdentifier debtor) {
+		this.debtor = debtor;
+	}
+
+	public BICIdentifier getFirstAgent() {
+		return firstAgent;
+	}
+
+	public void setFirstAgent(BICIdentifier firstAgent) {
+		this.firstAgent = firstAgent;
+	}
+
+	public BICIdentifier getInstructingAgentCorrespondent() {
+		return instructingAgentCorrespondent;
+	}
+
+	public void setInstructingAgentCorrespondent(BICIdentifier instructingAgentCorrespondent) {
+		this.instructingAgentCorrespondent = instructingAgentCorrespondent;
+	}
+
+	public BICIdentifier getInstructedAgentCorrespondent() {
+		return instructedAgentCorrespondent;
+	}
+
+	public void setInstructedAgentCorrespondent(BICIdentifier instructedAgentCorrespondent) {
+		this.instructedAgentCorrespondent = instructedAgentCorrespondent;
+	}
+
+	public BICIdentifier getIntermediary() {
+		return intermediary;
+	}
+
+	public void setIntermediary(BICIdentifier intermediary) {
+		this.intermediary = intermediary;
+	}
+
+	public BICIdentifier getFinalAgent() {
+		return finalAgent;
+	}
+
+	public void setFinalAgent(BICIdentifier finalAgent) {
+		this.finalAgent = finalAgent;
+	}
+
+	public BICIdentifier getCreditor() {
+		return creditor;
+	}
+
+	public void setCreditor(BICIdentifier creditor) {
+		this.creditor = creditor;
 	}
 }

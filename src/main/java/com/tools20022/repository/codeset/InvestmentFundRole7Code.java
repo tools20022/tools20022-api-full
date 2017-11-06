@@ -33,45 +33,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#Concentrator
- * InvestmentFundRole7Code.Concentrator}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmConcentrator
+ * InvestmentFundRole7Code.mmConcentrator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#Distributor
- * InvestmentFundRole7Code.Distributor}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmDistributor
+ * InvestmentFundRole7Code.mmDistributor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#FundManagementCompany
- * InvestmentFundRole7Code.FundManagementCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmFundManagementCompany
+ * InvestmentFundRole7Code.mmFundManagementCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#Intermediary
- * InvestmentFundRole7Code.Intermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmIntermediary
+ * InvestmentFundRole7Code.mmIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#PayingAgent
- * InvestmentFundRole7Code.PayingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmPayingAgent
+ * InvestmentFundRole7Code.mmPayingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#TransferAgent
- * InvestmentFundRole7Code.TransferAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmTransferAgent
+ * InvestmentFundRole7Code.mmTransferAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#Custodian
- * InvestmentFundRole7Code.Custodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmCustodian
+ * InvestmentFundRole7Code.mmCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#CashCorrespondent
- * InvestmentFundRole7Code.CashCorrespondent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmCashCorrespondent
+ * InvestmentFundRole7Code.mmCashCorrespondent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#FundAccountant
- * InvestmentFundRole7Code.FundAccountant}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmFundAccountant
+ * InvestmentFundRole7Code.mmFundAccountant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#InvestmentManager
- * InvestmentFundRole7Code.InvestmentManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmInvestmentManager
+ * InvestmentFundRole7Code.mmInvestmentManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#Investor
- * InvestmentFundRole7Code.Investor}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundRole7Code#mmInvestor
+ * InvestmentFundRole7Code.mmInvestor}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,7 +101,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "Concentrator"</li>
 	 * </ul>
 	 */
-	public static final MMCode Concentrator = new MMCode() {
+	public static final MMCode mmConcentrator = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Concentrator";
@@ -124,7 +124,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "Distributor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Distributor = new MMCode() {
+	public static final MMCode mmDistributor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distributor";
@@ -147,7 +147,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "FundManagementCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundManagementCompany = new MMCode() {
+	public static final MMCode mmFundManagementCompany = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundManagementCompany";
@@ -170,7 +170,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "Intermediary"</li>
 	 * </ul>
 	 */
-	public static final MMCode Intermediary = new MMCode() {
+	public static final MMCode mmIntermediary = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
@@ -193,7 +193,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "PayingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode PayingAgent = new MMCode() {
+	public static final MMCode mmPayingAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
@@ -216,7 +216,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "TransferAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode TransferAgent = new MMCode() {
+	public static final MMCode mmTransferAgent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAgent";
@@ -239,7 +239,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "Custodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode Custodian = new MMCode() {
+	public static final MMCode mmCustodian = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custodian";
@@ -262,7 +262,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "CashCorrespondent"</li>
 	 * </ul>
 	 */
-	public static final MMCode CashCorrespondent = new MMCode() {
+	public static final MMCode mmCashCorrespondent = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashCorrespondent";
@@ -285,7 +285,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "FundAccountant"</li>
 	 * </ul>
 	 */
-	public static final MMCode FundAccountant = new MMCode() {
+	public static final MMCode mmFundAccountant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundAccountant";
@@ -308,7 +308,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "InvestmentManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode InvestmentManager = new MMCode() {
+	public static final MMCode mmInvestmentManager = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentManager";
@@ -331,7 +331,7 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	 * name} = "Investor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Investor = new MMCode() {
+	public static final MMCode mmInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
@@ -342,15 +342,16 @@ public class InvestmentFundRole7Code extends PartyRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundRole7Code";
 				definition = "Specifies the role of the party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundRole7Code.Concentrator, com.tools20022.repository.codeset.InvestmentFundRole7Code.Distributor,
-						com.tools20022.repository.codeset.InvestmentFundRole7Code.FundManagementCompany, com.tools20022.repository.codeset.InvestmentFundRole7Code.Intermediary,
-						com.tools20022.repository.codeset.InvestmentFundRole7Code.PayingAgent, com.tools20022.repository.codeset.InvestmentFundRole7Code.TransferAgent, com.tools20022.repository.codeset.InvestmentFundRole7Code.Custodian,
-						com.tools20022.repository.codeset.InvestmentFundRole7Code.CashCorrespondent, com.tools20022.repository.codeset.InvestmentFundRole7Code.FundAccountant,
-						com.tools20022.repository.codeset.InvestmentFundRole7Code.InvestmentManager, com.tools20022.repository.codeset.InvestmentFundRole7Code.Investor);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundRole7Code.mmConcentrator, com.tools20022.repository.codeset.InvestmentFundRole7Code.mmDistributor,
+						com.tools20022.repository.codeset.InvestmentFundRole7Code.mmFundManagementCompany, com.tools20022.repository.codeset.InvestmentFundRole7Code.mmIntermediary,
+						com.tools20022.repository.codeset.InvestmentFundRole7Code.mmPayingAgent, com.tools20022.repository.codeset.InvestmentFundRole7Code.mmTransferAgent,
+						com.tools20022.repository.codeset.InvestmentFundRole7Code.mmCustodian, com.tools20022.repository.codeset.InvestmentFundRole7Code.mmCashCorrespondent,
+						com.tools20022.repository.codeset.InvestmentFundRole7Code.mmFundAccountant, com.tools20022.repository.codeset.InvestmentFundRole7Code.mmInvestmentManager,
+						com.tools20022.repository.codeset.InvestmentFundRole7Code.mmInvestor);
 				trace_lazy = () -> PartyRoleCode.mmObject();
 			}
 		});

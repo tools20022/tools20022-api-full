@@ -35,51 +35,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#PlaceAndName
- * CorporateActionDate21SD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmPlaceAndName
+ * CorporateActionDate21SD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#WebServiceNotificationDate
- * CorporateActionDate21SD1.WebServiceNotificationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmWebServiceNotificationDate
+ * CorporateActionDate21SD1.mmWebServiceNotificationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#PreviousWebServiceNotificationDate
- * CorporateActionDate21SD1.PreviousWebServiceNotificationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmPreviousWebServiceNotificationDate
+ * CorporateActionDate21SD1.mmPreviousWebServiceNotificationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#ActualRecordDate
- * CorporateActionDate21SD1.ActualRecordDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmActualRecordDate
+ * CorporateActionDate21SD1.mmActualRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#BoardMeetingDate
- * CorporateActionDate21SD1.BoardMeetingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmBoardMeetingDate
+ * CorporateActionDate21SD1.mmBoardMeetingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#CorporateRegistrationDate
- * CorporateActionDate21SD1.CorporateRegistrationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmCorporateRegistrationDate
+ * CorporateActionDate21SD1.mmCorporateRegistrationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#EarliestPlannedDateOfIssuePrice
- * CorporateActionDate21SD1.EarliestPlannedDateOfIssuePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmEarliestPlannedDateOfIssuePrice
+ * CorporateActionDate21SD1.mmEarliestPlannedDateOfIssuePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#LatestPlannedDateOfIssuePrice
- * CorporateActionDate21SD1.LatestPlannedDateOfIssuePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmLatestPlannedDateOfIssuePrice
+ * CorporateActionDate21SD1.mmLatestPlannedDateOfIssuePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#DateOfIssuePrice
- * CorporateActionDate21SD1.DateOfIssuePrice}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmDateOfIssuePrice
+ * CorporateActionDate21SD1.mmDateOfIssuePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#EarliestPlannedSubscriptionCostPaymentDate
- * CorporateActionDate21SD1.EarliestPlannedSubscriptionCostPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmEarliestPlannedSubscriptionCostPaymentDate
+ * CorporateActionDate21SD1.mmEarliestPlannedSubscriptionCostPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#LatestPlannedSubscriptionCostPaymentDate
- * CorporateActionDate21SD1.LatestPlannedSubscriptionCostPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmLatestPlannedSubscriptionCostPaymentDate
+ * CorporateActionDate21SD1.mmLatestPlannedSubscriptionCostPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#SubsequentListingDate
- * CorporateActionDate21SD1.SubsequentListingDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmSubsequentListingDate
+ * CorporateActionDate21SD1.mmSubsequentListingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#NewShareUnitQuantityEffectiveDate
- * CorporateActionDate21SD1.NewShareUnitQuantityEffectiveDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate21SD1#mmNewShareUnitQuantityEffectiveDate
+ * CorporateActionDate21SD1.mmNewShareUnitQuantityEffectiveDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,6 +93,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionDate21SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * Unambiguous reference to the location where the supplementary data must
 	 * be inserted in the message instance. <br>
@@ -125,7 +126,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -133,11 +134,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected DateFormat22Choice webServiceNotificationDate;
 	/**
 	 * Date and time of notification via web service as reference information.<br>
 	 * 通知日時 Notification date and time.
@@ -169,7 +171,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute WebServiceNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmWebServiceNotificationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -177,11 +179,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WebServiceNotificationDate";
 			definition = "Date and time of notification via web service as reference information.\r\n通知日時  Notification date and time.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice previousWebServiceNotificationDate;
 	/**
 	 * Date and time of previous notification via web service as a reference
 	 * information (in case of replacement). <br>
@@ -214,7 +217,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PreviousWebServiceNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPreviousWebServiceNotificationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -222,11 +225,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousWebServiceNotificationDate";
 			definition = "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice actualRecordDate;
 	/**
 	 * Actual record date - the previous business day of the record date if the
 	 * record date falls to Saturday, Sunday or national holiday.<br>
@@ -259,7 +263,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ActualRecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmActualRecordDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -267,11 +271,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualRecordDate";
 			definition = "Actual record date - the previous business day of the record date if the record date falls to Saturday, Sunday or national holiday.\r\n権利確定日";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice boardMeetingDate;
 	/**
 	 * Date of the board meeting.<br>
 	 * 取締役会決議日
@@ -301,7 +306,7 @@ public class CorporateActionDate21SD1 {
 	 * definition} = "Date of the board meeting.\r\n取締役会決議日"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BoardMeetingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBoardMeetingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -309,11 +314,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoardMeetingDate";
 			definition = "Date of the board meeting.\r\n取締役会決議日";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice corporateRegistrationDate;
 	/**
 	 * Date on which the new company will be registered.<br>
 	 * 新設会社登記日
@@ -344,7 +350,7 @@ public class CorporateActionDate21SD1 {
 	 * "Date on which the new company will be registered.\r\n新設会社登記日"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CorporateRegistrationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCorporateRegistrationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -352,11 +358,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateRegistrationDate";
 			definition = "Date on which the new company will be registered.\r\n新設会社登記日";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice earliestPlannedDateOfIssuePrice;
 	/**
 	 * Earliest planned date on which the issue price will be set.<br>
 	 * 発行価格決定予定日（最短）
@@ -388,7 +395,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarliestPlannedDateOfIssuePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarliestPlannedDateOfIssuePrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -396,11 +403,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPlannedDateOfIssuePrice";
 			definition = "Earliest planned date on which the issue price will be set.\r\n発行価格決定予定日（最短）";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice latestPlannedDateOfIssuePrice;
 	/**
 	 * Latest planned date on which the issue price will be set.<br>
 	 * 発行価格決定予定日（最長）
@@ -432,7 +440,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LatestPlannedDateOfIssuePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLatestPlannedDateOfIssuePrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -440,11 +448,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestPlannedDateOfIssuePrice";
 			definition = "Latest planned date on which the issue price will be set.\r\n発行価格決定予定日（最長）";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice dateOfIssuePrice;
 	/**
 	 * Date on which the issue price will be set.<br>
 	 * 発行価格決定日
@@ -474,7 +483,7 @@ public class CorporateActionDate21SD1 {
 	 * definition} = "Date on which the issue price will be set.\r\n発行価格決定日"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DateOfIssuePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDateOfIssuePrice = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -482,11 +491,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfIssuePrice";
 			definition = "Date on which the issue price will be set.\r\n発行価格決定日";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice earliestPlannedSubscriptionCostPaymentDate;
 	/**
 	 * Earliest planned date on which the cash payment (for the subscription
 	 * cost) will be made.<br>
@@ -519,7 +529,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarliestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarliestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -527,11 +537,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPlannedSubscriptionCostPaymentDate";
 			definition = "Earliest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最短）";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice latestPlannedSubscriptionCostPaymentDate;
 	/**
 	 * Latest planned date on which the cash payment (for the subscription cost)
 	 * will be made.<br>
@@ -564,7 +575,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LatestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLatestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -572,11 +583,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestPlannedSubscriptionCostPaymentDate";
 			definition = "Latest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最長）";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice subsequentListingDate;
 	/**
 	 * Listing date of the new shares announced by Stock Exchange.<br>
 	 * 変更上場日
@@ -607,7 +619,7 @@ public class CorporateActionDate21SD1 {
 	 * "Listing date of the new shares announced by Stock Exchange.\r\n変更上場日"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SubsequentListingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSubsequentListingDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -615,11 +627,12 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubsequentListingDate";
 			definition = "Listing date of the new shares announced by Stock Exchange.\r\n変更上場日";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	protected DateFormat22Choice newShareUnitQuantityEffectiveDate;
 	/**
 	 * Date at which the new share unit quantity becomes effective.
 	 * <p>
@@ -647,7 +660,7 @@ public class CorporateActionDate21SD1 {
 	 * "Date at which the new share unit quantity becomes effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd NewShareUnitQuantityEffectiveDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmNewShareUnitQuantityEffectiveDate = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -655,29 +668,133 @@ public class CorporateActionDate21SD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewShareUnitQuantityEffectiveDate";
 			definition = "Date at which the new share unit quantity becomes effective.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> DateFormat22Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate21SD1.PlaceAndName, com.tools20022.repository.msg.CorporateActionDate21SD1.WebServiceNotificationDate,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.PreviousWebServiceNotificationDate, com.tools20022.repository.msg.CorporateActionDate21SD1.ActualRecordDate,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.BoardMeetingDate, com.tools20022.repository.msg.CorporateActionDate21SD1.CorporateRegistrationDate,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.EarliestPlannedDateOfIssuePrice, com.tools20022.repository.msg.CorporateActionDate21SD1.LatestPlannedDateOfIssuePrice,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.DateOfIssuePrice, com.tools20022.repository.msg.CorporateActionDate21SD1.EarliestPlannedSubscriptionCostPaymentDate,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.LatestPlannedSubscriptionCostPaymentDate, com.tools20022.repository.msg.CorporateActionDate21SD1.SubsequentListingDate,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.NewShareUnitQuantityEffectiveDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate21SD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDate21SD1.mmWebServiceNotificationDate,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmPreviousWebServiceNotificationDate, com.tools20022.repository.msg.CorporateActionDate21SD1.mmActualRecordDate,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmBoardMeetingDate, com.tools20022.repository.msg.CorporateActionDate21SD1.mmCorporateRegistrationDate,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmEarliestPlannedDateOfIssuePrice, com.tools20022.repository.msg.CorporateActionDate21SD1.mmLatestPlannedDateOfIssuePrice,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmDateOfIssuePrice, com.tools20022.repository.msg.CorporateActionDate21SD1.mmEarliestPlannedSubscriptionCostPaymentDate,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmLatestPlannedSubscriptionCostPaymentDate, com.tools20022.repository.msg.CorporateActionDate21SD1.mmSubsequentListingDate,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmNewShareUnitQuantityEffectiveDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate21SD1";
 				definition = "Extension to cater for specific corporate action dates.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public DateFormat22Choice getWebServiceNotificationDate() {
+		return webServiceNotificationDate;
+	}
+
+	public void setWebServiceNotificationDate(DateFormat22Choice webServiceNotificationDate) {
+		this.webServiceNotificationDate = webServiceNotificationDate;
+	}
+
+	public DateFormat22Choice getPreviousWebServiceNotificationDate() {
+		return previousWebServiceNotificationDate;
+	}
+
+	public void setPreviousWebServiceNotificationDate(DateFormat22Choice previousWebServiceNotificationDate) {
+		this.previousWebServiceNotificationDate = previousWebServiceNotificationDate;
+	}
+
+	public DateFormat22Choice getActualRecordDate() {
+		return actualRecordDate;
+	}
+
+	public void setActualRecordDate(DateFormat22Choice actualRecordDate) {
+		this.actualRecordDate = actualRecordDate;
+	}
+
+	public DateFormat22Choice getBoardMeetingDate() {
+		return boardMeetingDate;
+	}
+
+	public void setBoardMeetingDate(DateFormat22Choice boardMeetingDate) {
+		this.boardMeetingDate = boardMeetingDate;
+	}
+
+	public DateFormat22Choice getCorporateRegistrationDate() {
+		return corporateRegistrationDate;
+	}
+
+	public void setCorporateRegistrationDate(DateFormat22Choice corporateRegistrationDate) {
+		this.corporateRegistrationDate = corporateRegistrationDate;
+	}
+
+	public DateFormat22Choice getEarliestPlannedDateOfIssuePrice() {
+		return earliestPlannedDateOfIssuePrice;
+	}
+
+	public void setEarliestPlannedDateOfIssuePrice(DateFormat22Choice earliestPlannedDateOfIssuePrice) {
+		this.earliestPlannedDateOfIssuePrice = earliestPlannedDateOfIssuePrice;
+	}
+
+	public DateFormat22Choice getLatestPlannedDateOfIssuePrice() {
+		return latestPlannedDateOfIssuePrice;
+	}
+
+	public void setLatestPlannedDateOfIssuePrice(DateFormat22Choice latestPlannedDateOfIssuePrice) {
+		this.latestPlannedDateOfIssuePrice = latestPlannedDateOfIssuePrice;
+	}
+
+	public DateFormat22Choice getDateOfIssuePrice() {
+		return dateOfIssuePrice;
+	}
+
+	public void setDateOfIssuePrice(DateFormat22Choice dateOfIssuePrice) {
+		this.dateOfIssuePrice = dateOfIssuePrice;
+	}
+
+	public DateFormat22Choice getEarliestPlannedSubscriptionCostPaymentDate() {
+		return earliestPlannedSubscriptionCostPaymentDate;
+	}
+
+	public void setEarliestPlannedSubscriptionCostPaymentDate(DateFormat22Choice earliestPlannedSubscriptionCostPaymentDate) {
+		this.earliestPlannedSubscriptionCostPaymentDate = earliestPlannedSubscriptionCostPaymentDate;
+	}
+
+	public DateFormat22Choice getLatestPlannedSubscriptionCostPaymentDate() {
+		return latestPlannedSubscriptionCostPaymentDate;
+	}
+
+	public void setLatestPlannedSubscriptionCostPaymentDate(DateFormat22Choice latestPlannedSubscriptionCostPaymentDate) {
+		this.latestPlannedSubscriptionCostPaymentDate = latestPlannedSubscriptionCostPaymentDate;
+	}
+
+	public DateFormat22Choice getSubsequentListingDate() {
+		return subsequentListingDate;
+	}
+
+	public void setSubsequentListingDate(DateFormat22Choice subsequentListingDate) {
+		this.subsequentListingDate = subsequentListingDate;
+	}
+
+	public DateFormat22Choice getNewShareUnitQuantityEffectiveDate() {
+		return newShareUnitQuantityEffectiveDate;
+	}
+
+	public void setNewShareUnitQuantityEffectiveDate(DateFormat22Choice newShareUnitQuantityEffectiveDate) {
+		this.newShareUnitQuantityEffectiveDate = newShareUnitQuantityEffectiveDate;
 	}
 }

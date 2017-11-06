@@ -34,10 +34,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AmountPrice3#AmountPriceType
- * AmountPrice3.AmountPriceType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountPrice3#PriceValue
- * AmountPrice3.PriceValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountPrice3#mmAmountPriceType
+ * AmountPrice3.mmAmountPriceType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountPrice3#mmPriceValue
+ * AmountPrice3.mmPriceValue}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AmountPrice3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountPriceType1Code amountPriceType;
 	/**
 	 * Type of amount price.
 	 * <p>
@@ -74,8 +75,8 @@ public class AmountPrice3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#TypeOfAmount
-	 * SecuritiesPricing.TypeOfAmount}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTypeOfAmount
+	 * SecuritiesPricing.mmTypeOfAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -93,20 +94,21 @@ public class AmountPrice3 {
 	 * definition} = "Type of amount price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AmountPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfAmount;
 			componentContext_lazy = () -> AmountPrice3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.TypeOfAmount;
 			isDerived = false;
 			xmlTag = "AmtPricTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPriceType";
 			definition = "Type of amount price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> AmountPriceType1Code.mmObject();
 		}
 	};
+	protected ActiveCurrencyAnd13DecimalAmount priceValue;
 	/**
 	 * Value of the price.
 	 * <p>
@@ -120,8 +122,8 @@ public class AmountPrice3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#Price
-	 * SecuritiesPricing.Price}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPrice
+	 * SecuritiesPricing.mmPrice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -139,17 +141,17 @@ public class AmountPrice3 {
 	 * definition} = "Value of the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> AmountPrice3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.Price;
 			isDerived = false;
 			xmlTag = "PricVal";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValue";
 			definition = "Value of the price.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
@@ -157,14 +159,30 @@ public class AmountPrice3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountPrice3.AmountPriceType, com.tools20022.repository.msg.AmountPrice3.PriceValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountPrice3.mmAmountPriceType, com.tools20022.repository.msg.AmountPrice3.mmPriceValue);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AmountPrice3";
 				definition = "Price expressed as an amount.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountPriceType1Code getAmountPriceType() {
+		return amountPriceType;
+	}
+
+	public void setAmountPriceType(AmountPriceType1Code amountPriceType) {
+		this.amountPriceType = amountPriceType;
+	}
+
+	public ActiveCurrencyAnd13DecimalAmount getPriceValue() {
+		return priceValue;
+	}
+
+	public void setPriceValue(ActiveCurrencyAnd13DecimalAmount priceValue) {
+		this.priceValue = priceValue;
 	}
 }

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.choice.AmountOrRate1Choice;
 import com.tools20022.repository.choice.CommissionType1Choice;
+import com.tools20022.repository.entity.Commission;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,13 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Commission2#Commission
- * Commission2.Commission}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission2#mmCommission
+ * Commission2.mmCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Commission2#RecipientIdentification
- * Commission2.RecipientIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Commission2#Type
- * Commission2.Type}</li>
+ * {@linkplain com.tools20022.repository.msg.Commission2#mmRecipientIdentification
+ * Commission2.mmRecipientIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission2#mmType
+ * Commission2.mmType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,6 +65,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Commission2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountOrRate1Choice commission;
 	/**
 	 * Commission expressed as an amount of money or a rate.
 	 * <p>
@@ -95,20 +97,21 @@ public class Commission2 {
 	 * definition} = "Commission expressed as an amount of money or a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Commission = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
 		{
+			businessComponentTrace_lazy = () -> Commission.mmObject();
 			componentContext_lazy = () -> Commission2.mmObject();
-			businessComponentTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			isDerived = false;
 			xmlTag = "Comssn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Commission expressed as an amount of money or a rate.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> AmountOrRate1Choice.mmObject();
 		}
 	};
+	protected PartyIdentification23 recipientIdentification;
 	/**
 	 * Information related to an identification, eg, party identification or
 	 * account identification.
@@ -121,8 +124,8 @@ public class Commission2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -142,21 +145,22 @@ public class Commission2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd RecipientIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmRecipientIdentification = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> Commission2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RcptId";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Information related to an identification, eg, party identification or account identification.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PartyIdentification23.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
 		}
 	};
+	protected CommissionType1Choice type;
 	/**
 	 * Specification of the commission type.
 	 * <p>
@@ -169,8 +173,8 @@ public class Commission2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Commission#CommissionType
-	 * Commission.CommissionType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Commission#mmCommissionType
+	 * Commission.mmCommissionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -188,33 +192,57 @@ public class Commission2 {
 	 * definition} = "Specification of the commission type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Type = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionType;
 			componentContext_lazy = () -> Commission2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.CommissionType;
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specification of the commission type.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CommissionType1Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CommissionType1Choice.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission2.Commission, com.tools20022.repository.msg.Commission2.RecipientIdentification, com.tools20022.repository.msg.Commission2.Type);
-				trace_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission2.mmCommission, com.tools20022.repository.msg.Commission2.mmRecipientIdentification, com.tools20022.repository.msg.Commission2.mmType);
+				trace_lazy = () -> Commission.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Commission2";
 				definition = "Amount of money due to a party as compensation for a service.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountOrRate1Choice getCommission() {
+		return commission;
+	}
+
+	public void setCommission(AmountOrRate1Choice commission) {
+		this.commission = commission;
+	}
+
+	public PartyIdentification23 getRecipientIdentification() {
+		return recipientIdentification;
+	}
+
+	public void setRecipientIdentification(com.tools20022.repository.msg.PartyIdentification23 recipientIdentification) {
+		this.recipientIdentification = recipientIdentification;
+	}
+
+	public CommissionType1Choice getType() {
+		return type;
+	}
+
+	public void setType(CommissionType1Choice type) {
+		this.type = type;
 	}
 }

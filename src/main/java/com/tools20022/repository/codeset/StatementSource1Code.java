@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementSource1Code#Accounting
- * StatementSource1Code.Accounting}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementSource1Code#mmAccounting
+ * StatementSource1Code.mmAccounting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementSource1Code#Custody
- * StatementSource1Code.Custody}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementSource1Code#mmCustody
+ * StatementSource1Code.mmCustody}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class StatementSource1Code extends StatementSourceCode {
 	 * name} = "Accounting"</li>
 	 * </ul>
 	 */
-	public static final MMCode Accounting = new MMCode() {
+	public static final MMCode mmAccounting = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accounting";
@@ -104,7 +104,7 @@ public class StatementSource1Code extends StatementSourceCode {
 	 * name} = "Custody"</li>
 	 * </ul>
 	 */
-	public static final MMCode Custody = new MMCode() {
+	public static final MMCode mmCustody = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custody";
@@ -115,12 +115,12 @@ public class StatementSource1Code extends StatementSourceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "StatementSource1Code";
 				definition = "Specifies the source of the report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementSource1Code.Accounting, com.tools20022.repository.codeset.StatementSource1Code.Custody);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementSource1Code.mmAccounting, com.tools20022.repository.codeset.StatementSource1Code.mmCustody);
 				trace_lazy = () -> StatementSourceCode.mmObject();
 			}
 		});

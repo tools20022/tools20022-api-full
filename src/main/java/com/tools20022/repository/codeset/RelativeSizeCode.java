@@ -29,15 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#Small
- * RelativeSizeCode.Small}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#Medium
- * RelativeSizeCode.Medium}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#Large
- * RelativeSizeCode.Large}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#mmSmall
+ * RelativeSizeCode.mmSmall}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#mmMedium
+ * RelativeSizeCode.mmMedium}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#mmLarge
+ * RelativeSizeCode.mmLarge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RelativeSizeCode#Undisclosed
- * RelativeSizeCode.Undisclosed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RelativeSizeCode#mmUndisclosed
+ * RelativeSizeCode.mmUndisclosed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class RelativeSizeCode {
 	 * definition} = "Indicates that the relative size is small."</li>
 	 * </ul>
 	 */
-	public static final MMCode Small = new MMCode() {
+	public static final MMCode mmSmall = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Small";
@@ -123,7 +123,7 @@ public class RelativeSizeCode {
 	 * definition} = "Indicates that the relative size is medium."</li>
 	 * </ul>
 	 */
-	public static final MMCode Medium = new MMCode() {
+	public static final MMCode mmMedium = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
@@ -153,7 +153,7 @@ public class RelativeSizeCode {
 	 * definition} = "Indicates that the relative size is large."</li>
 	 * </ul>
 	 */
-	public static final MMCode Large = new MMCode() {
+	public static final MMCode mmLarge = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Large";
@@ -183,7 +183,7 @@ public class RelativeSizeCode {
 	 * definition} = "Indicates that the quantity is undisclosed."</li>
 	 * </ul>
 	 */
-	public static final MMCode Undisclosed = new MMCode() {
+	public static final MMCode mmUndisclosed = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undisclosed";
@@ -196,13 +196,13 @@ public class RelativeSizeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SMAL");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RelativeSizeCode";
 				definition = "A type of quantity of financial instrument expressed in a relative size.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RelativeSizeCode.Small, com.tools20022.repository.codeset.RelativeSizeCode.Medium, com.tools20022.repository.codeset.RelativeSizeCode.Large,
-						com.tools20022.repository.codeset.RelativeSizeCode.Undisclosed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RelativeSizeCode.mmSmall, com.tools20022.repository.codeset.RelativeSizeCode.mmMedium, com.tools20022.repository.codeset.RelativeSizeCode.mmLarge,
+						com.tools20022.repository.codeset.RelativeSizeCode.mmUndisclosed);
 				derivation_lazy = () -> Arrays.asList(RelativeSize1Code.mmObject());
 			}
 		});

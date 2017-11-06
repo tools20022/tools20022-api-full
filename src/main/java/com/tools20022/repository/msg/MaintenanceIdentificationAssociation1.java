@@ -33,18 +33,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceIdentificationAssociation1#MasterTMIdentification
- * MaintenanceIdentificationAssociation1.MasterTMIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceIdentificationAssociation1#mmMasterTMIdentification
+ * MaintenanceIdentificationAssociation1.mmMasterTMIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MaintenanceIdentificationAssociation1#TMIdentification
- * MaintenanceIdentificationAssociation1.TMIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.MaintenanceIdentificationAssociation1#mmTMIdentification
+ * MaintenanceIdentificationAssociation1.mmTMIdentification}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,6 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MaintenanceIdentificationAssociation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text masterTMIdentification;
 	/**
 	 * Identifier for the master terminal manager.
 	 * <p>
@@ -86,7 +87,7 @@ public class MaintenanceIdentificationAssociation1 {
 	 * definition} = "Identifier for the master terminal manager."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MasterTMIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMasterTMIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceIdentificationAssociation1.mmObject();
 			isDerived = false;
@@ -94,11 +95,12 @@ public class MaintenanceIdentificationAssociation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterTMIdentification";
 			definition = "Identifier for the master terminal manager.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Max35Text tMIdentification;
 	/**
 	 * Identifier for the terminal manager requesting the delegation.
 	 * <p>
@@ -127,7 +129,7 @@ public class MaintenanceIdentificationAssociation1 {
 	 * "Identifier for the terminal manager requesting the delegation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute TMIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmTMIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> MaintenanceIdentificationAssociation1.mmObject();
 			isDerived = false;
@@ -135,8 +137,8 @@ public class MaintenanceIdentificationAssociation1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMIdentification";
 			definition = "Identifier for the terminal manager requesting the delegation.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -144,13 +146,29 @@ public class MaintenanceIdentificationAssociation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.MasterTMIdentification, com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.TMIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmMasterTMIdentification, com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmTMIdentification);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceIdentificationAssociation1";
 				definition = "Association of the TM identifier and the MTM identifier of an entity.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMasterTMIdentification() {
+		return masterTMIdentification;
+	}
+
+	public void setMasterTMIdentification(Max35Text masterTMIdentification) {
+		this.masterTMIdentification = masterTMIdentification;
+	}
+
+	public Max35Text getTMIdentification() {
+		return tMIdentification;
+	}
+
+	public void setTMIdentification(Max35Text tMIdentification) {
+		this.tMIdentification = tMIdentification;
 	}
 }

@@ -36,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LongPostalAddress1Choice#Unstructured
- * LongPostalAddress1Choice.Unstructured}</li>
+ * {@linkplain com.tools20022.repository.choice.LongPostalAddress1Choice#mmUnstructured
+ * LongPostalAddress1Choice.mmUnstructured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.LongPostalAddress1Choice#Structured
- * LongPostalAddress1Choice.Structured}</li>
+ * {@linkplain com.tools20022.repository.choice.LongPostalAddress1Choice#mmStructured
+ * LongPostalAddress1Choice.mmStructured}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -49,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,6 +66,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class LongPostalAddress1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max140Text unstructured;
 	/**
 	 * Information that locates and identifies a specific address, as defined by
 	 * postal services, that is presented in free format text.
@@ -101,20 +102,21 @@ public class LongPostalAddress1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Unstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LongPostalAddress1Choice.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> LongPostalAddress1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ustrd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unstructured";
 			definition = "Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected StructuredLongPostalAddress1 structured;
 	/**
 	 * Information that locates and identifies a specific address, as defined by
 	 * postal services, that is presented in a formal structure.
@@ -151,17 +153,17 @@ public class LongPostalAddress1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Structured = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LongPostalAddress1Choice.mmObject();
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
+			componentContext_lazy = () -> LongPostalAddress1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Information that locates and identifies a specific address, as defined by postal services, that is presented in a formal structure.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> StructuredLongPostalAddress1.mmObject();
 		}
 	};
@@ -169,14 +171,30 @@ public class LongPostalAddress1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LongPostalAddress1Choice.Unstructured, com.tools20022.repository.choice.LongPostalAddress1Choice.Structured);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LongPostalAddress1Choice.mmUnstructured, com.tools20022.repository.choice.LongPostalAddress1Choice.mmStructured);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "LongPostalAddress1Choice";
 				definition = "Information that locates and identifies a specific address, as defined by postal services.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max140Text getUnstructured() {
+		return unstructured;
+	}
+
+	public void setUnstructured(Max140Text unstructured) {
+		this.unstructured = unstructured;
+	}
+
+	public StructuredLongPostalAddress1 getStructured() {
+		return structured;
+	}
+
+	public void setStructured(StructuredLongPostalAddress1 structured) {
+		this.structured = structured;
 	}
 }

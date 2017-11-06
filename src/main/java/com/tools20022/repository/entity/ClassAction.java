@@ -40,40 +40,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ClassAction#ClassActionNumber
- * ClassAction.ClassActionNumber}</li>
+ * {@linkplain com.tools20022.repository.entity.ClassAction#mmClassActionNumber
+ * ClassAction.mmClassActionNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ClassAction#LeadPlaintiffDeadline
- * ClassAction.LeadPlaintiffDeadline}</li>
+ * {@linkplain com.tools20022.repository.entity.ClassAction#mmLeadPlaintiffDeadline
+ * ClassAction.mmLeadPlaintiffDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ClassAction#CourtApprovalDate
- * ClassAction.CourtApprovalDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ClassAction#ClaimPeriod
- * ClassAction.ClaimPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ClassAction#FilingDate
- * ClassAction.FilingDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ClassAction#HearingDate
- * ClassAction.HearingDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ClassAction#CorporateEvent
- * ClassAction.CorporateEvent}</li>
+ * {@linkplain com.tools20022.repository.entity.ClassAction#mmCourtApprovalDate
+ * ClassAction.mmCourtApprovalDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ClassAction#mmClaimPeriod
+ * ClassAction.mmClaimPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ClassAction#mmFilingDate
+ * ClassAction.mmFilingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ClassAction#mmHearingDate
+ * ClassAction.mmHearingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ClassAction#mmCorporateEvent
+ * ClassAction.mmCorporateEvent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#ClassAction
- * DateTimePeriod.ClassAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#RelatedClassAction
- * CorporateActionEvent.RelatedClassAction}</li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmClassAction
+ * DateTimePeriod.mmClassAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRelatedClassAction
+ * CorporateActionEvent.mmRelatedClassAction}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ClassAction {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text classActionNumber;
 	/**
 	 * Reference assigned by a court to a class action.
 	 * <p>
@@ -98,231 +101,231 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation8#ClassActionNumber
-	 * CorporateActionGeneralInformation8.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation20#ClassActionNumber
-	 * CorporateActionGeneralInformation20.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation25#ClassActionNumber
-	 * CorporateActionGeneralInformation25.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation32#ClassActionNumber
-	 * CorporateActionGeneralInformation32.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation35#ClassActionNumber
-	 * CorporateActionGeneralInformation35.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation43#ClassActionNumber
-	 * CorporateActionGeneralInformation43.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation53#ClassActionNumber
-	 * CorporateActionGeneralInformation53.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation56#ClassActionNumber
-	 * CorporateActionGeneralInformation56.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation57#ClassActionNumber
-	 * CorporateActionGeneralInformation57.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation9#ClassActionNumber
-	 * CorporateActionGeneralInformation9.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation13#ClassActionNumber
-	 * CorporateActionGeneralInformation13.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation34#ClassActionNumber
-	 * CorporateActionGeneralInformation34.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation42#ClassActionNumber
-	 * CorporateActionGeneralInformation42.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation52#ClassActionNumber
-	 * CorporateActionGeneralInformation52.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation58#ClassActionNumber
-	 * CorporateActionGeneralInformation58.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation4#ClassActionNumber
-	 * CorporateActionGeneralInformation4.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation16#ClassActionNumber
-	 * CorporateActionGeneralInformation16.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation24#ClassActionNumber
-	 * CorporateActionGeneralInformation24.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation29#ClassActionNumber
-	 * CorporateActionGeneralInformation29.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation39#ClassActionNumber
-	 * CorporateActionGeneralInformation39.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation47#ClassActionNumber
-	 * CorporateActionGeneralInformation47.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation50#ClassActionNumber
-	 * CorporateActionGeneralInformation50.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation62#ClassActionNumber
-	 * CorporateActionGeneralInformation62.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation3#ClassActionNumber
-	 * CorporateActionGeneralInformation3.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation17#ClassActionNumber
-	 * CorporateActionGeneralInformation17.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation23#ClassActionNumber
-	 * CorporateActionGeneralInformation23.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation30#ClassActionNumber
-	 * CorporateActionGeneralInformation30.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation38#ClassActionNumber
-	 * CorporateActionGeneralInformation38.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation46#ClassActionNumber
-	 * CorporateActionGeneralInformation46.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation54#ClassActionNumber
-	 * CorporateActionGeneralInformation54.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation64#ClassActionNumber
-	 * CorporateActionGeneralInformation64.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation63#ClassActionNumber
-	 * CorporateActionGeneralInformation63.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation11#ClassActionNumber
-	 * CorporateActionGeneralInformation11.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation19#ClassActionNumber
-	 * CorporateActionGeneralInformation19.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation22#ClassActionNumber
-	 * CorporateActionGeneralInformation22.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation31#ClassActionNumber
-	 * CorporateActionGeneralInformation31.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation37#ClassActionNumber
-	 * CorporateActionGeneralInformation37.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation45#ClassActionNumber
-	 * CorporateActionGeneralInformation45.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation51#ClassActionNumber
-	 * CorporateActionGeneralInformation51.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation67#ClassActionNumber
-	 * CorporateActionGeneralInformation67.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation12#ClassActionNumber
-	 * CorporateActionGeneralInformation12.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation69#ClassActionNumber
-	 * CorporateActionGeneralInformation69.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation70#ClassActionNumber
-	 * CorporateActionGeneralInformation70.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation78#ClassActionNumber
-	 * CorporateActionGeneralInformation78.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation76#ClassActionNumber
-	 * CorporateActionGeneralInformation76.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation79#ClassActionNumber
-	 * CorporateActionGeneralInformation79.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#ClassActionNumber
-	 * CorporateActionGeneralInformation83.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation82#ClassActionNumber
-	 * CorporateActionGeneralInformation82.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation89#ClassActionNumber
-	 * CorporateActionGeneralInformation89.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation86#ClassActionNumber
-	 * CorporateActionGeneralInformation86.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation91#ClassActionNumber
-	 * CorporateActionGeneralInformation91.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation87#ClassActionNumber
-	 * CorporateActionGeneralInformation87.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation84#ClassActionNumber
-	 * CorporateActionGeneralInformation84.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation85#ClassActionNumber
-	 * CorporateActionGeneralInformation85.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation93#ClassActionNumber
-	 * CorporateActionGeneralInformation93.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation98#ClassActionNumber
-	 * CorporateActionGeneralInformation98.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation100#ClassActionNumber
-	 * CorporateActionGeneralInformation100.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation99#ClassActionNumber
-	 * CorporateActionGeneralInformation99.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation94#ClassActionNumber
-	 * CorporateActionGeneralInformation94.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation103#ClassActionNumber
-	 * CorporateActionGeneralInformation103.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation109#ClassActionNumber
-	 * CorporateActionGeneralInformation109.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation111#ClassActionNumber
-	 * CorporateActionGeneralInformation111.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation112#ClassActionNumber
-	 * CorporateActionGeneralInformation112.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation105#ClassActionNumber
-	 * CorporateActionGeneralInformation105.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation106#ClassActionNumber
-	 * CorporateActionGeneralInformation106.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation108#ClassActionNumber
-	 * CorporateActionGeneralInformation108.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation114#ClassActionNumber
-	 * CorporateActionGeneralInformation114.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation120#ClassActionNumber
-	 * CorporateActionGeneralInformation120.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation118#ClassActionNumber
-	 * CorporateActionGeneralInformation118.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation123#ClassActionNumber
-	 * CorporateActionGeneralInformation123.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation117#ClassActionNumber
-	 * CorporateActionGeneralInformation117.ClassActionNumber}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation113#ClassActionNumber
-	 * CorporateActionGeneralInformation113.ClassActionNumber}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation8#mmClassActionNumber
+	 * CorporateActionGeneralInformation8.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation20#mmClassActionNumber
+	 * CorporateActionGeneralInformation20.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation25#mmClassActionNumber
+	 * CorporateActionGeneralInformation25.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation32#mmClassActionNumber
+	 * CorporateActionGeneralInformation32.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation35#mmClassActionNumber
+	 * CorporateActionGeneralInformation35.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation43#mmClassActionNumber
+	 * CorporateActionGeneralInformation43.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation53#mmClassActionNumber
+	 * CorporateActionGeneralInformation53.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation56#mmClassActionNumber
+	 * CorporateActionGeneralInformation56.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation57#mmClassActionNumber
+	 * CorporateActionGeneralInformation57.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation9#mmClassActionNumber
+	 * CorporateActionGeneralInformation9.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation13#mmClassActionNumber
+	 * CorporateActionGeneralInformation13.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation34#mmClassActionNumber
+	 * CorporateActionGeneralInformation34.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation42#mmClassActionNumber
+	 * CorporateActionGeneralInformation42.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation52#mmClassActionNumber
+	 * CorporateActionGeneralInformation52.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation58#mmClassActionNumber
+	 * CorporateActionGeneralInformation58.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation4#mmClassActionNumber
+	 * CorporateActionGeneralInformation4.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation16#mmClassActionNumber
+	 * CorporateActionGeneralInformation16.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation24#mmClassActionNumber
+	 * CorporateActionGeneralInformation24.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation29#mmClassActionNumber
+	 * CorporateActionGeneralInformation29.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation39#mmClassActionNumber
+	 * CorporateActionGeneralInformation39.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation47#mmClassActionNumber
+	 * CorporateActionGeneralInformation47.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation50#mmClassActionNumber
+	 * CorporateActionGeneralInformation50.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation62#mmClassActionNumber
+	 * CorporateActionGeneralInformation62.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation3#mmClassActionNumber
+	 * CorporateActionGeneralInformation3.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation17#mmClassActionNumber
+	 * CorporateActionGeneralInformation17.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation23#mmClassActionNumber
+	 * CorporateActionGeneralInformation23.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation30#mmClassActionNumber
+	 * CorporateActionGeneralInformation30.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation38#mmClassActionNumber
+	 * CorporateActionGeneralInformation38.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation46#mmClassActionNumber
+	 * CorporateActionGeneralInformation46.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation54#mmClassActionNumber
+	 * CorporateActionGeneralInformation54.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation64#mmClassActionNumber
+	 * CorporateActionGeneralInformation64.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation63#mmClassActionNumber
+	 * CorporateActionGeneralInformation63.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation11#mmClassActionNumber
+	 * CorporateActionGeneralInformation11.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation19#mmClassActionNumber
+	 * CorporateActionGeneralInformation19.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation22#mmClassActionNumber
+	 * CorporateActionGeneralInformation22.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation31#mmClassActionNumber
+	 * CorporateActionGeneralInformation31.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation37#mmClassActionNumber
+	 * CorporateActionGeneralInformation37.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation45#mmClassActionNumber
+	 * CorporateActionGeneralInformation45.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation51#mmClassActionNumber
+	 * CorporateActionGeneralInformation51.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation67#mmClassActionNumber
+	 * CorporateActionGeneralInformation67.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation12#mmClassActionNumber
+	 * CorporateActionGeneralInformation12.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation69#mmClassActionNumber
+	 * CorporateActionGeneralInformation69.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation70#mmClassActionNumber
+	 * CorporateActionGeneralInformation70.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation78#mmClassActionNumber
+	 * CorporateActionGeneralInformation78.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation76#mmClassActionNumber
+	 * CorporateActionGeneralInformation76.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation79#mmClassActionNumber
+	 * CorporateActionGeneralInformation79.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation83#mmClassActionNumber
+	 * CorporateActionGeneralInformation83.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation82#mmClassActionNumber
+	 * CorporateActionGeneralInformation82.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation89#mmClassActionNumber
+	 * CorporateActionGeneralInformation89.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation86#mmClassActionNumber
+	 * CorporateActionGeneralInformation86.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation91#mmClassActionNumber
+	 * CorporateActionGeneralInformation91.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation87#mmClassActionNumber
+	 * CorporateActionGeneralInformation87.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation84#mmClassActionNumber
+	 * CorporateActionGeneralInformation84.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation85#mmClassActionNumber
+	 * CorporateActionGeneralInformation85.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation93#mmClassActionNumber
+	 * CorporateActionGeneralInformation93.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation98#mmClassActionNumber
+	 * CorporateActionGeneralInformation98.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation100#mmClassActionNumber
+	 * CorporateActionGeneralInformation100.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation99#mmClassActionNumber
+	 * CorporateActionGeneralInformation99.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation94#mmClassActionNumber
+	 * CorporateActionGeneralInformation94.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation103#mmClassActionNumber
+	 * CorporateActionGeneralInformation103.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation109#mmClassActionNumber
+	 * CorporateActionGeneralInformation109.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation111#mmClassActionNumber
+	 * CorporateActionGeneralInformation111.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation112#mmClassActionNumber
+	 * CorporateActionGeneralInformation112.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation105#mmClassActionNumber
+	 * CorporateActionGeneralInformation105.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation106#mmClassActionNumber
+	 * CorporateActionGeneralInformation106.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation108#mmClassActionNumber
+	 * CorporateActionGeneralInformation108.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation114#mmClassActionNumber
+	 * CorporateActionGeneralInformation114.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation120#mmClassActionNumber
+	 * CorporateActionGeneralInformation120.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation118#mmClassActionNumber
+	 * CorporateActionGeneralInformation118.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation123#mmClassActionNumber
+	 * CorporateActionGeneralInformation123.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation117#mmClassActionNumber
+	 * CorporateActionGeneralInformation117.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation113#mmClassActionNumber
+	 * CorporateActionGeneralInformation113.mmClassActionNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -334,54 +337,55 @@ public class ClassAction {
 	 * definition} = "Reference assigned by a court to a class action."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute ClassActionNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmClassActionNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation8.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation20.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation25.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation32.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation35.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation43.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation53.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation56.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation57.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation9.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation13.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation34.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation42.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation52.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation58.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation4.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation16.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation24.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation29.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation39.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation47.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation50.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation62.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation3.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation17.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation23.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation30.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation38.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation46.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation54.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation64.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation63.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation11.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation19.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation22.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation31.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation37.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation45.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation51.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation67.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation12.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation69.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation70.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation78.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation76.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation79.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation83.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation82.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation89.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation86.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation91.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation87.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation84.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation85.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation93.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation98.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation100.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation99.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation94.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation103.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation109.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation111.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation112.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation105.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation106.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation108.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation114.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation120.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation118.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation123.ClassActionNumber,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation117.ClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation113.ClassActionNumber);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation8.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation20.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation25.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation32.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation35.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation43.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation53.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation56.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation57.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation9.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation13.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation34.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation42.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation52.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation58.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation4.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation16.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation24.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation29.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation39.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation47.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation50.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation62.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation3.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation17.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation23.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation30.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation38.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation46.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation54.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation64.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation63.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation11.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation19.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation22.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation31.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation37.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation45.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation51.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation67.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation69.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation70.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation78.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation76.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation79.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation82.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation89.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation86.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation91.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation87.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation84.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation85.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation93.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation98.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation100.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation99.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation94.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation103.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation109.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation111.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation112.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation105.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation106.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation108.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation114.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation120.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation118.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation123.mmClassActionNumber,
+					com.tools20022.repository.msg.CorporateActionGeneralInformation117.mmClassActionNumber, com.tools20022.repository.msg.CorporateActionGeneralInformation113.mmClassActionNumber);
 			elementContext_lazy = () -> ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ClassActionNumber";
 			definition = "Reference assigned by a court to a class action.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISODateTime leadPlaintiffDeadline;
 	/**
 	 * Last day an investor can become a lead plaintiff.
 	 * <p>
@@ -391,45 +395,45 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#LeadPlaintiffDeadline
-	 * CorporateActionDate8.LeadPlaintiffDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#LeadPlaintiffDeadline
-	 * CorporateActionDate11.LeadPlaintiffDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#LeadPlaintiffDeadline
-	 * CorporateActionDate14.LeadPlaintiffDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#LeadPlaintiffDeadline
-	 * CorporateActionDate21.LeadPlaintiffDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#LeadPlaintiffDeadline
-	 * CorporateActionDate22.LeadPlaintiffDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#LeadPlaintiffDeadline
-	 * CorporateActionDate25.LeadPlaintiffDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#LeadPlaintiffDeadline
-	 * CorporateActionDate27.LeadPlaintiffDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#LeadPlaintiffDeadline
-	 * CorporateActionDate28.LeadPlaintiffDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#LeadPlaintiffDeadline
-	 * CorporateActionDate44.LeadPlaintiffDeadline}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#LeadPlaintiffDeadline
-	 * CorporateActionDate58.LeadPlaintiffDeadline}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate8#mmLeadPlaintiffDeadline
+	 * CorporateActionDate8.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate11#mmLeadPlaintiffDeadline
+	 * CorporateActionDate11.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmLeadPlaintiffDeadline
+	 * CorporateActionDate14.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmLeadPlaintiffDeadline
+	 * CorporateActionDate21.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmLeadPlaintiffDeadline
+	 * CorporateActionDate22.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmLeadPlaintiffDeadline
+	 * CorporateActionDate25.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmLeadPlaintiffDeadline
+	 * CorporateActionDate27.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmLeadPlaintiffDeadline
+	 * CorporateActionDate28.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmLeadPlaintiffDeadline
+	 * CorporateActionDate44.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmLeadPlaintiffDeadline
+	 * CorporateActionDate58.mmLeadPlaintiffDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -441,23 +445,24 @@ public class ClassAction {
 	 * definition} = "Last day an investor can become a lead plaintiff."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute LeadPlaintiffDeadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmLeadPlaintiffDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate8.LeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate11.LeadPlaintiffDeadline,
-					com.tools20022.repository.msg.CorporateActionDate14.LeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate21.LeadPlaintiffDeadline,
-					com.tools20022.repository.msg.CorporateActionDate22.LeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate25.LeadPlaintiffDeadline,
-					com.tools20022.repository.msg.CorporateActionDate27.LeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate28.LeadPlaintiffDeadline,
-					com.tools20022.repository.msg.CorporateActionDate44.LeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate58.LeadPlaintiffDeadline);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate8.mmLeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate11.mmLeadPlaintiffDeadline,
+					com.tools20022.repository.msg.CorporateActionDate14.mmLeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate21.mmLeadPlaintiffDeadline,
+					com.tools20022.repository.msg.CorporateActionDate22.mmLeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate25.mmLeadPlaintiffDeadline,
+					com.tools20022.repository.msg.CorporateActionDate27.mmLeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate28.mmLeadPlaintiffDeadline,
+					com.tools20022.repository.msg.CorporateActionDate44.mmLeadPlaintiffDeadline, com.tools20022.repository.msg.CorporateActionDate58.mmLeadPlaintiffDeadline);
 			elementContext_lazy = () -> ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "LeadPlaintiffDeadline";
 			definition = "Last day an investor can become a lead plaintiff.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime courtApprovalDate;
 	/**
 	 * Date upon which the High Court provided approval.
 	 * <p>
@@ -467,48 +472,48 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#CourtApprovalDate
-	 * CorporateActionDate1.CourtApprovalDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#CourtApprovalDate
-	 * CorporateActionDate13.CourtApprovalDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#CourtApprovalDate
-	 * CorporateActionDate14.CourtApprovalDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#CourtApprovalDate
-	 * CorporateActionDate21.CourtApprovalDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#CourtApprovalDate
-	 * CorporateActionDate22.CourtApprovalDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#CourtApprovalDate
-	 * CorporateActionDate25.CourtApprovalDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#CourtApprovalDate
-	 * CorporateActionDate27.CourtApprovalDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#CourtApprovalDate
-	 * CorporateActionDate28.CourtApprovalDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#CourtApprovalDate
-	 * CorporateActionDate2.CourtApprovalDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#CourtApprovalDate
-	 * CorporateActionDate44.CourtApprovalDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#CourtApprovalDate
-	 * CorporateActionDate58.CourtApprovalDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate1#mmCourtApprovalDate
+	 * CorporateActionDate1.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate13#mmCourtApprovalDate
+	 * CorporateActionDate13.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate14#mmCourtApprovalDate
+	 * CorporateActionDate14.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate21#mmCourtApprovalDate
+	 * CorporateActionDate21.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmCourtApprovalDate
+	 * CorporateActionDate22.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmCourtApprovalDate
+	 * CorporateActionDate25.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmCourtApprovalDate
+	 * CorporateActionDate27.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmCourtApprovalDate
+	 * CorporateActionDate28.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate2#mmCourtApprovalDate
+	 * CorporateActionDate2.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmCourtApprovalDate
+	 * CorporateActionDate44.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmCourtApprovalDate
+	 * CorporateActionDate58.mmCourtApprovalDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -520,22 +525,23 @@ public class ClassAction {
 	 * definition} = "Date upon which the High Court provided approval."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute CourtApprovalDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmCourtApprovalDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.CourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate13.CourtApprovalDate,
-					com.tools20022.repository.msg.CorporateActionDate14.CourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate21.CourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate22.CourtApprovalDate,
-					com.tools20022.repository.msg.CorporateActionDate25.CourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate27.CourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate28.CourtApprovalDate,
-					com.tools20022.repository.msg.CorporateActionDate2.CourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate44.CourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate58.CourtApprovalDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmCourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate13.mmCourtApprovalDate,
+					com.tools20022.repository.msg.CorporateActionDate14.mmCourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate21.mmCourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate22.mmCourtApprovalDate,
+					com.tools20022.repository.msg.CorporateActionDate25.mmCourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate27.mmCourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate28.mmCourtApprovalDate,
+					com.tools20022.repository.msg.CorporateActionDate2.mmCourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate44.mmCourtApprovalDate, com.tools20022.repository.msg.CorporateActionDate58.mmCourtApprovalDate);
 			elementContext_lazy = () -> ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CourtApprovalDate";
 			definition = "Date upon which the High Court provided approval.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected DateTimePeriod claimPeriod;
 	/**
 	 * Period assigned by the court in a class action. It determines the
 	 * client's eligible transactions that will be included in the class action
@@ -546,8 +552,8 @@ public class ClassAction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#ClassAction
-	 * DateTimePeriod.ClassAction}</li>
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmClassAction
+	 * DateTimePeriod.mmClassAction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -555,27 +561,27 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
 	 * DateTimePeriod}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod3#ClaimPeriod
-	 * CorporateActionPeriod3.ClaimPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod6#ClaimPeriod
-	 * CorporateActionPeriod6.ClaimPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod8#ClaimPeriod
-	 * CorporateActionPeriod8.ClaimPeriod}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#ClaimPeriod
-	 * CorporateActionPeriod10.ClaimPeriod}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod3#mmClaimPeriod
+	 * CorporateActionPeriod3.mmClaimPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod6#mmClaimPeriod
+	 * CorporateActionPeriod6.mmClaimPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod8#mmClaimPeriod
+	 * CorporateActionPeriod8.mmClaimPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmClaimPeriod
+	 * CorporateActionPeriod10.mmClaimPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -589,22 +595,23 @@ public class ClassAction {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd ClaimPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmClaimPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.ClaimPeriod, com.tools20022.repository.msg.CorporateActionPeriod6.ClaimPeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod8.ClaimPeriod, com.tools20022.repository.msg.CorporateActionPeriod10.ClaimPeriod);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmClaimPeriod, com.tools20022.repository.msg.CorporateActionPeriod6.mmClaimPeriod,
+					com.tools20022.repository.msg.CorporateActionPeriod8.mmClaimPeriod, com.tools20022.repository.msg.CorporateActionPeriod10.mmClaimPeriod);
 			elementContext_lazy = () -> ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "ClaimPeriod";
 			definition = "Period assigned by the court in a class action. It determines the client's eligible transactions that will be included in the class action and used to determine the resulting entitlement.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> DateTimePeriod.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.ClassAction;
+			minOccurs = 1;
+			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmClassAction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
+	protected ISODateTime filingDate;
 	/**
 	 * Date on which the action was filed at the applicable court.
 	 * <p>
@@ -614,33 +621,33 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#FilingDate
-	 * CorporateActionDate22.FilingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#FilingDate
-	 * CorporateActionDate25.FilingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#FilingDate
-	 * CorporateActionDate27.FilingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#FilingDate
-	 * CorporateActionDate28.FilingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#FilingDate
-	 * CorporateActionDate44.FilingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#FilingDate
-	 * CorporateActionDate58.FilingDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmFilingDate
+	 * CorporateActionDate22.mmFilingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmFilingDate
+	 * CorporateActionDate25.mmFilingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmFilingDate
+	 * CorporateActionDate27.mmFilingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmFilingDate
+	 * CorporateActionDate28.mmFilingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmFilingDate
+	 * CorporateActionDate44.mmFilingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmFilingDate
+	 * CorporateActionDate58.mmFilingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -653,21 +660,22 @@ public class ClassAction {
 	 * "Date on which the action was filed at the applicable court."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute FilingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmFilingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate22.FilingDate, com.tools20022.repository.msg.CorporateActionDate25.FilingDate,
-					com.tools20022.repository.msg.CorporateActionDate27.FilingDate, com.tools20022.repository.msg.CorporateActionDate28.FilingDate, com.tools20022.repository.msg.CorporateActionDate44.FilingDate,
-					com.tools20022.repository.msg.CorporateActionDate58.FilingDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate22.mmFilingDate, com.tools20022.repository.msg.CorporateActionDate25.mmFilingDate,
+					com.tools20022.repository.msg.CorporateActionDate27.mmFilingDate, com.tools20022.repository.msg.CorporateActionDate28.mmFilingDate, com.tools20022.repository.msg.CorporateActionDate44.mmFilingDate,
+					com.tools20022.repository.msg.CorporateActionDate58.mmFilingDate);
 			elementContext_lazy = () -> ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "FilingDate";
 			definition = "Date on which the action was filed at the applicable court.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected ISODateTime hearingDate;
 	/**
 	 * Date for the hearing between the plaintiff and defendant, as set by the
 	 * court.
@@ -678,33 +686,33 @@ public class ClassAction {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
 	 * ISODateTime}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#HearingDate
-	 * CorporateActionDate22.HearingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#HearingDate
-	 * CorporateActionDate25.HearingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#HearingDate
-	 * CorporateActionDate27.HearingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#HearingDate
-	 * CorporateActionDate28.HearingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#HearingDate
-	 * CorporateActionDate44.HearingDate}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#HearingDate
-	 * CorporateActionDate58.HearingDate}</li>
-	 * </ul>
-	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.ClassAction ClassAction}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate22#mmHearingDate
+	 * CorporateActionDate22.mmHearingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate25#mmHearingDate
+	 * CorporateActionDate25.mmHearingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate27#mmHearingDate
+	 * CorporateActionDate27.mmHearingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate28#mmHearingDate
+	 * CorporateActionDate28.mmHearingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate44#mmHearingDate
+	 * CorporateActionDate44.mmHearingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmHearingDate
+	 * CorporateActionDate58.mmHearingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -718,21 +726,22 @@ public class ClassAction {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute HearingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute mmHearingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate22.HearingDate, com.tools20022.repository.msg.CorporateActionDate25.HearingDate,
-					com.tools20022.repository.msg.CorporateActionDate27.HearingDate, com.tools20022.repository.msg.CorporateActionDate28.HearingDate, com.tools20022.repository.msg.CorporateActionDate44.HearingDate,
-					com.tools20022.repository.msg.CorporateActionDate58.HearingDate);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate22.mmHearingDate, com.tools20022.repository.msg.CorporateActionDate25.mmHearingDate,
+					com.tools20022.repository.msg.CorporateActionDate27.mmHearingDate, com.tools20022.repository.msg.CorporateActionDate28.mmHearingDate, com.tools20022.repository.msg.CorporateActionDate44.mmHearingDate,
+					com.tools20022.repository.msg.CorporateActionDate58.mmHearingDate);
 			elementContext_lazy = () -> ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "HearingDate";
 			definition = "Date for the hearing between the plaintiff and defendant, as set by the court.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected CorporateActionEvent corporateEvent;
 	/**
 	 * Corporate event for which class action is specified.
 	 * <p>
@@ -741,8 +750,8 @@ public class ClassAction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#RelatedClassAction
-	 * CorporateActionEvent.RelatedClassAction}</li>
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRelatedClassAction
+	 * CorporateActionEvent.mmRelatedClassAction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -766,34 +775,90 @@ public class ClassAction {
 	 * definition} = "Corporate event for which class action is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd CorporateEvent = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmCorporateEvent = new MMBusinessAssociationEnd() {
 		{
 			elementContext_lazy = () -> ClassAction.mmObject();
 			isDerived = false;
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 			name = "CorporateEvent";
 			definition = "Corporate event for which class action is specified.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> CorporateActionEvent.mmObject();
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.RelatedClassAction;
+			minOccurs = 0;
+			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmRelatedClassAction;
 			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ClassAction";
 				definition = "Form of lawsuit in which a group of shareholders collectively bring a claim to court, mainly because it would be too expensive for each individual shareholder to launch their own lawsuit.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.ClassAction, com.tools20022.repository.entity.CorporateActionEvent.RelatedClassAction);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClassAction.ClassActionNumber, com.tools20022.repository.entity.ClassAction.LeadPlaintiffDeadline,
-						com.tools20022.repository.entity.ClassAction.CourtApprovalDate, com.tools20022.repository.entity.ClassAction.ClaimPeriod, com.tools20022.repository.entity.ClassAction.FilingDate,
-						com.tools20022.repository.entity.ClassAction.HearingDate, com.tools20022.repository.entity.ClassAction.CorporateEvent);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmClassAction, com.tools20022.repository.entity.CorporateActionEvent.mmRelatedClassAction);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClassAction.mmClassActionNumber, com.tools20022.repository.entity.ClassAction.mmLeadPlaintiffDeadline,
+						com.tools20022.repository.entity.ClassAction.mmCourtApprovalDate, com.tools20022.repository.entity.ClassAction.mmClaimPeriod, com.tools20022.repository.entity.ClassAction.mmFilingDate,
+						com.tools20022.repository.entity.ClassAction.mmHearingDate, com.tools20022.repository.entity.ClassAction.mmCorporateEvent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getClassActionNumber() {
+		return classActionNumber;
+	}
+
+	public void setClassActionNumber(Max35Text classActionNumber) {
+		this.classActionNumber = classActionNumber;
+	}
+
+	public ISODateTime getLeadPlaintiffDeadline() {
+		return leadPlaintiffDeadline;
+	}
+
+	public void setLeadPlaintiffDeadline(ISODateTime leadPlaintiffDeadline) {
+		this.leadPlaintiffDeadline = leadPlaintiffDeadline;
+	}
+
+	public ISODateTime getCourtApprovalDate() {
+		return courtApprovalDate;
+	}
+
+	public void setCourtApprovalDate(ISODateTime courtApprovalDate) {
+		this.courtApprovalDate = courtApprovalDate;
+	}
+
+	public DateTimePeriod getClaimPeriod() {
+		return claimPeriod;
+	}
+
+	public void setClaimPeriod(com.tools20022.repository.entity.DateTimePeriod claimPeriod) {
+		this.claimPeriod = claimPeriod;
+	}
+
+	public ISODateTime getFilingDate() {
+		return filingDate;
+	}
+
+	public void setFilingDate(ISODateTime filingDate) {
+		this.filingDate = filingDate;
+	}
+
+	public ISODateTime getHearingDate() {
+		return hearingDate;
+	}
+
+	public void setHearingDate(ISODateTime hearingDate) {
+		this.hearingDate = hearingDate;
+	}
+
+	public CorporateActionEvent getCorporateEvent() {
+		return corporateEvent;
+	}
+
+	public void setCorporateEvent(com.tools20022.repository.entity.CorporateActionEvent corporateEvent) {
+		this.corporateEvent = corporateEvent;
 	}
 }

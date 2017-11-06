@@ -39,25 +39,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Option3#OptionAmounts
- * Option3.OptionAmounts}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option3#StrikePrice
- * Option3.StrikePrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option3#ExerciseStyle
- * Option3.ExerciseStyle}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option3#EarliestExerciseDate
- * Option3.EarliestExerciseDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option3#ExpiryDateAndTime
- * Option3.ExpiryDateAndTime}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option3#ExpiryLocation
- * Option3.ExpiryLocation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option3#SettlementType
- * Option3.SettlementType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option3#mmOptionAmounts
+ * Option3.mmOptionAmounts}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option3#mmStrikePrice
+ * Option3.mmStrikePrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option3#mmExerciseStyle
+ * Option3.mmExerciseStyle}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option3#mmEarliestExerciseDate
+ * Option3.mmEarliestExerciseDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option3#mmExpiryDateAndTime
+ * Option3.mmExpiryDateAndTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option3#mmExpiryLocation
+ * Option3.mmExpiryLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option3#mmSettlementType
+ * Option3.mmSettlementType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Option3#AdditionalOptionInformation
- * Option3.AdditionalOptionInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Option3#Premium
- * Option3.Premium}</li>
+ * {@linkplain com.tools20022.repository.msg.Option3#mmAdditionalOptionInformation
+ * Option3.mmAdditionalOptionInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option3#mmPremium
+ * Option3.mmPremium}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -68,21 +68,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CreateForeignExchangeOptionV02#Option
- * CreateForeignExchangeOptionV02.Option}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CreateForeignExchangeOptionV02#mmOption
+ * CreateForeignExchangeOptionV02.mmOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.AmendForeignExchangeOptionV02#Option
- * AmendForeignExchangeOptionV02.Option}</li>
+ * {@linkplain com.tools20022.repository.area.trea.AmendForeignExchangeOptionV02#mmOption
+ * AmendForeignExchangeOptionV02.mmOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#Option
- * CancelForeignExchangeOptionV02.Option}</li>
+ * {@linkplain com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02#mmOption
+ * CancelForeignExchangeOptionV02.mmOption}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,6 +103,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Option3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected AmountsAndValueDate2 optionAmounts;
 	/**
 	 * Specifies the call and the put amount of the underlying foreign exchange
 	 * trade.
@@ -137,28 +138,29 @@ public class Option3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option10#OptionAmounts
-	 * Option10.OptionAmounts}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option10#mmOptionAmounts
+	 * Option10.mmOptionAmounts}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OptionAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOptionAmounts = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Option3.mmObject();
 			businessComponentTrace_lazy = () -> CurrencyOption.mmObject();
+			componentContext_lazy = () -> Option3.mmObject();
 			isDerived = false;
 			xmlTag = "OptnAmts";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionAmounts";
 			definition = "Specifies the call and the put amount of the underlying foreign exchange trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.OptionAmounts);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.mmOptionAmounts);
 			maxOccurs = 1;
-			type_lazy = () -> AmountsAndValueDate2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate2.mmObject();
 		}
 	};
+	protected AgreedRate1 strikePrice;
 	/**
 	 * Specifies the rate of exchange at which the foreign exchange option has
 	 * been struck.
@@ -171,8 +173,8 @@ public class Option3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyOption#StrikeRate
-	 * CurrencyOption.StrikeRate}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmStrikeRate
+	 * CurrencyOption.mmStrikeRate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option3
@@ -193,28 +195,29 @@ public class Option3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option10#StrikePrice
-	 * Option10.StrikePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option10#mmStrikePrice
+	 * Option10.mmStrikePrice}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd StrikePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmStrikePrice = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmStrikeRate;
 			componentContext_lazy = () -> Option3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyOption.StrikeRate;
 			isDerived = false;
 			xmlTag = "StrkPric";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Specifies the rate of exchange at which the foreign exchange option has been struck.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.StrikePrice);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.mmStrikePrice);
 			maxOccurs = 1;
-			type_lazy = () -> AgreedRate1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.AgreedRate1.mmObject();
 		}
 	};
+	protected OptionStyle2Code exerciseStyle;
 	/**
 	 * Defines how an option can be exercised.
 	 * <p>
@@ -228,8 +231,8 @@ public class Option3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#OptionStyle
-	 * Option.OptionStyle}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionStyle
+	 * Option.mmOptionStyle}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option3
@@ -248,27 +251,28 @@ public class Option3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option10#ExerciseStyle
-	 * Option10.ExerciseStyle}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option10#mmExerciseStyle
+	 * Option10.mmExerciseStyle}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExerciseStyle = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExerciseStyle = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionStyle;
 			componentContext_lazy = () -> Option3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.OptionStyle;
 			isDerived = false;
 			xmlTag = "ExrcStyle";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExerciseStyle";
 			definition = "Defines how an option can be exercised.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.ExerciseStyle);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.mmExerciseStyle);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> OptionStyle2Code.mmObject();
 		}
 	};
+	protected ISODate earliestExerciseDate;
 	/**
 	 * First date on which an american option can be exercised.
 	 * <p>
@@ -281,8 +285,8 @@ public class Option3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#EarliestExerciseDate
-	 * Option.EarliestExerciseDate}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmEarliestExerciseDate
+	 * Option.mmEarliestExerciseDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option3
@@ -300,20 +304,21 @@ public class Option3 {
 	 * definition} = "First date on which an american option can be exercised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute EarliestExerciseDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmEarliestExerciseDate = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmEarliestExerciseDate;
 			componentContext_lazy = () -> Option3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.EarliestExerciseDate;
 			isDerived = false;
 			xmlTag = "EarlstExrcDt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDate";
 			definition = "First date on which an american option can be exercised.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODateTime expiryDateAndTime;
 	/**
 	 * Date on which a privilege (eg, option, right, warrant,...) expires. If it
 	 * is an European option, the option holder can only exercise the right or
@@ -329,8 +334,8 @@ public class Option3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#ExpiryDateAndTime
-	 * Option.ExpiryDateAndTime}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmExpiryDateAndTime
+	 * Option.mmExpiryDateAndTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option3
@@ -351,27 +356,29 @@ public class Option3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option10#ExpiryDateAndTime
-	 * Option10.ExpiryDateAndTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Option10#mmExpiryDateAndTime
+	 * Option10.mmExpiryDateAndTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryDateAndTime = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmExpiryDateAndTime;
 			componentContext_lazy = () -> Option3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.ExpiryDateAndTime;
 			isDerived = false;
 			xmlTag = "XpryDtAndTm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDateAndTime";
 			definition = "Date on which a privilege (eg, option, right, warrant,...) expires. If it is an European option, the option holder can only exercise the right or let it lapse on expiry date. If it is an American option, the option holder can exercise the right up to the expiry date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.ExpiryDateAndTime);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.mmExpiryDateAndTime);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	protected Max4AlphaNumericText expiryLocation;
 	/**
 	 * Financial center where option expires.
 	 * <p>
@@ -385,8 +392,8 @@ public class Option3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#ExpiryLocation
-	 * Option.ExpiryLocation}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmExpiryLocation
+	 * Option.mmExpiryLocation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option3
@@ -405,27 +412,28 @@ public class Option3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option10#ExpiryLocation
-	 * Option10.ExpiryLocation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option10#mmExpiryLocation
+	 * Option10.mmExpiryLocation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ExpiryLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmExpiryLocation = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmExpiryLocation;
 			componentContext_lazy = () -> Option3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.ExpiryLocation;
 			isDerived = false;
 			xmlTag = "XpryLctn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryLocation";
 			definition = "Financial center where option expires.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.ExpiryLocation);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.mmExpiryLocation);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	protected SettlementType1Code settlementType;
 	/**
 	 * Indicates whether the trade is to be settled as principal or netted off
 	 * against another trade.
@@ -440,8 +448,8 @@ public class Option3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Option#SettlementType
-	 * Option.SettlementType}</li>
+	 * {@linkplain com.tools20022.repository.entity.Option#mmSettlementType
+	 * Option.mmSettlementType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option3
@@ -461,20 +469,21 @@ public class Option3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SettlementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSettlementType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmSettlementType;
 			componentContext_lazy = () -> Option3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.SettlementType;
 			isDerived = false;
 			xmlTag = "SttlmTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementType";
 			definition = "Indicates whether the trade is to be settled as principal or netted off against another trade.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> SettlementType1Code.mmObject();
 		}
 	};
+	protected Max140Text additionalOptionInformation;
 	/**
 	 * Free format text that may contain information on the option.
 	 * <p>
@@ -504,13 +513,13 @@ public class Option3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.Option10#AdditionalOptionInformation
-	 * Option10.AdditionalOptionInformation}</li>
+	 * {@linkplain com.tools20022.repository.msg.Option10#mmAdditionalOptionInformation
+	 * Option10.mmAdditionalOptionInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalOptionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalOptionInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Option3.mmObject();
 			isDerived = false;
@@ -518,12 +527,13 @@ public class Option3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalOptionInformation";
 			definition = "Free format text that may contain information on the option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.AdditionalOptionInformation);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.mmAdditionalOptionInformation);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	protected PremiumAmount2 premium;
 	/**
 	 * Specifies the amount of the premium of a foreign exchange option trade
 	 * and its settlement place.
@@ -536,8 +546,8 @@ public class Option3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.CurrencyOption#PremiumSettlement
-	 * CurrencyOption.PremiumSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.CurrencyOption#mmPremiumSettlement
+	 * CurrencyOption.mmPremiumSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option3
@@ -558,39 +568,39 @@ public class Option3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
-	 * <li>{@linkplain com.tools20022.repository.msg.Option10#Premium
-	 * Option10.Premium}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option10#mmPremium
+	 * Option10.mmPremium}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Premium = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPremium = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmPremiumSettlement;
 			componentContext_lazy = () -> Option3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyOption.PremiumSettlement;
 			isDerived = false;
 			xmlTag = "Prm";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
 			definition = "Specifies the amount of the premium of a foreign exchange option trade and its settlement place.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.Premium);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.mmPremium);
 			maxOccurs = 1;
-			type_lazy = () -> PremiumAmount2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option3.OptionAmounts, com.tools20022.repository.msg.Option3.StrikePrice, com.tools20022.repository.msg.Option3.ExerciseStyle,
-						com.tools20022.repository.msg.Option3.EarliestExerciseDate, com.tools20022.repository.msg.Option3.ExpiryDateAndTime, com.tools20022.repository.msg.Option3.ExpiryLocation,
-						com.tools20022.repository.msg.Option3.SettlementType, com.tools20022.repository.msg.Option3.AdditionalOptionInformation, com.tools20022.repository.msg.Option3.Premium);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option3.mmOptionAmounts, com.tools20022.repository.msg.Option3.mmStrikePrice, com.tools20022.repository.msg.Option3.mmExerciseStyle,
+						com.tools20022.repository.msg.Option3.mmEarliestExerciseDate, com.tools20022.repository.msg.Option3.mmExpiryDateAndTime, com.tools20022.repository.msg.Option3.mmExpiryLocation,
+						com.tools20022.repository.msg.Option3.mmSettlementType, com.tools20022.repository.msg.Option3.mmAdditionalOptionInformation, com.tools20022.repository.msg.Option3.mmPremium);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CreateForeignExchangeOptionV02.mmOption, com.tools20022.repository.area.trea.AmendForeignExchangeOptionV02.mmOption,
+						com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.mmOption);
 				trace_lazy = () -> CurrencyOption.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CreateForeignExchangeOptionV02.Option, com.tools20022.repository.area.trea.AmendForeignExchangeOptionV02.Option,
-						com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.Option);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Option3";
 				definition = "List of elements which provide the parameters of an option trade.";
@@ -598,5 +608,77 @@ public class Option3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AmountsAndValueDate2 getOptionAmounts() {
+		return optionAmounts;
+	}
+
+	public void setOptionAmounts(com.tools20022.repository.msg.AmountsAndValueDate2 optionAmounts) {
+		this.optionAmounts = optionAmounts;
+	}
+
+	public AgreedRate1 getStrikePrice() {
+		return strikePrice;
+	}
+
+	public void setStrikePrice(com.tools20022.repository.msg.AgreedRate1 strikePrice) {
+		this.strikePrice = strikePrice;
+	}
+
+	public OptionStyle2Code getExerciseStyle() {
+		return exerciseStyle;
+	}
+
+	public void setExerciseStyle(OptionStyle2Code exerciseStyle) {
+		this.exerciseStyle = exerciseStyle;
+	}
+
+	public ISODate getEarliestExerciseDate() {
+		return earliestExerciseDate;
+	}
+
+	public void setEarliestExerciseDate(ISODate earliestExerciseDate) {
+		this.earliestExerciseDate = earliestExerciseDate;
+	}
+
+	public ISODateTime getExpiryDateAndTime() {
+		return expiryDateAndTime;
+	}
+
+	public void setExpiryDateAndTime(ISODateTime expiryDateAndTime) {
+		this.expiryDateAndTime = expiryDateAndTime;
+	}
+
+	public Max4AlphaNumericText getExpiryLocation() {
+		return expiryLocation;
+	}
+
+	public void setExpiryLocation(Max4AlphaNumericText expiryLocation) {
+		this.expiryLocation = expiryLocation;
+	}
+
+	public SettlementType1Code getSettlementType() {
+		return settlementType;
+	}
+
+	public void setSettlementType(SettlementType1Code settlementType) {
+		this.settlementType = settlementType;
+	}
+
+	public Max140Text getAdditionalOptionInformation() {
+		return additionalOptionInformation;
+	}
+
+	public void setAdditionalOptionInformation(Max140Text additionalOptionInformation) {
+		this.additionalOptionInformation = additionalOptionInformation;
+	}
+
+	public PremiumAmount2 getPremium() {
+		return premium;
+	}
+
+	public void setPremium(com.tools20022.repository.msg.PremiumAmount2 premium) {
+		this.premium = premium;
 	}
 }

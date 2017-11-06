@@ -72,30 +72,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#MessageReference
- * PortfolioTransferCancellationRequestV07.MessageReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#mmMessageReference
+ * PortfolioTransferCancellationRequestV07.mmMessageReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#PoolReference
- * PortfolioTransferCancellationRequestV07.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#mmPoolReference
+ * PortfolioTransferCancellationRequestV07.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#PreviousReference
- * PortfolioTransferCancellationRequestV07.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#mmPreviousReference
+ * PortfolioTransferCancellationRequestV07.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#RelatedReference
- * PortfolioTransferCancellationRequestV07.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#mmRelatedReference
+ * PortfolioTransferCancellationRequestV07.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#Cancellation
- * PortfolioTransferCancellationRequestV07.Cancellation}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#mmCancellation
+ * PortfolioTransferCancellationRequestV07.mmCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#MarketPracticeVersion
- * PortfolioTransferCancellationRequestV07.MarketPracticeVersion}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#mmMarketPracticeVersion
+ * PortfolioTransferCancellationRequestV07.mmMarketPracticeVersion}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} =
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07#identifier
- * PortfolioTransferCancellationRequestV07.identifier}</li>
+ * messageDefinitionIdentifier} = {@code sese.014.001.07}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,6 +113,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class PortfolioTransferCancellationRequestV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	protected MessageIdentification1 messageReference;
 	/**
 	 * Identifies the message.
 	 * <p>
@@ -139,22 +138,23 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#MessageReference
-	 * PortfolioTransferCancellationRequestV06.MessageReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#mmMessageReference
+	 * PortfolioTransferCancellationRequestV06.mmMessageReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
 			definition = "Identifies the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.MessageReference;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmMessageReference;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 	};
+	protected AdditionalReference6 poolReference;
 	/**
 	 * Collective reference identifying a set of messages.
 	 * <p>
@@ -179,22 +179,23 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#PoolReference
-	 * PortfolioTransferCancellationRequestV06.PoolReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#mmPoolReference
+	 * PortfolioTransferCancellationRequestV06.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.PoolReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmPoolReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected AdditionalReference6 previousReference;
 	/**
 	 * Reference to a linked message that was previously sent.
 	 * <p>
@@ -219,22 +220,23 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#PreviousReference
-	 * PortfolioTransferCancellationRequestV06.PreviousReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#mmPreviousReference
+	 * PortfolioTransferCancellationRequestV06.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock PreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.PreviousReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmPreviousReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected AdditionalReference6 relatedReference;
 	/**
 	 * Reference to a linked message that was previously received.
 	 * <p>
@@ -260,22 +262,23 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#RelatedReference
-	 * PortfolioTransferCancellationRequestV06.RelatedReference}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#mmRelatedReference
+	 * PortfolioTransferCancellationRequestV06.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock RelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.RelatedReference;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmRelatedReference;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	protected Cancellation11Choice cancellation;
 	/**
 	 * Choice between cancellation by transfer details or reference.
 	 * <p>
@@ -301,22 +304,23 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#Cancellation
-	 * PortfolioTransferCancellationRequestV06.Cancellation}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#mmCancellation
+	 * PortfolioTransferCancellationRequestV06.mmCancellation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock Cancellation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmCancellation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Cxl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			definition = "Choice between cancellation by transfer details or reference.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.Cancellation;
-			minOccurs = 1;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmCancellation;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> Cancellation11Choice.mmObject();
 		}
 	};
+	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
 	 * Identifies the market practice to which the message conforms.
 	 * <p>
@@ -342,47 +346,20 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#MarketPracticeVersion
-	 * PortfolioTransferCancellationRequestV06.MarketPracticeVersion}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#mmMarketPracticeVersion
+	 * PortfolioTransferCancellationRequestV06.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock MarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.MarketPracticeVersion;
-			minOccurs = 0;
+			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmMarketPracticeVersion;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
-		}
-	};
-	/**
-	 * An instance of MessageDefinitionIdentifier.
-	 * <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getVersion
-	 * version} = "07"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getBusinessArea
-	 * businessArea} = "sese"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getMessageFunctionality
-	 * messageFunctionality} = "014"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMMessageDefinitionIdentifier#getFlavour
-	 * flavour} = "001"</li>
-	 * </ul>
-	 */
-	public static final MMMessageDefinitionIdentifier identifier = new MMMessageDefinitionIdentifier() {
-		{
-			businessArea = "sese";
-			messageFunctionality = "014";
-			version = "07";
-			flavour = "001";
 		}
 	};
 
@@ -397,13 +374,68 @@ public class PortfolioTransferCancellationRequestV07 {
 				rootElement = "Document";
 				xmlTag = "PrtflTrfCxlReq";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.MessageReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.PoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.PreviousReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.RelatedReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.Cancellation,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.MarketPracticeVersion);
-				messageDefinitionIdentifier_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.identifier;
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmMessageReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmPreviousReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmRelatedReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmCancellation,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmMarketPracticeVersion);
+				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
+					{
+						businessArea = "sese";
+						messageFunctionality = "014";
+						version = "07";
+						flavour = "001";
+					}
+				};
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public MessageIdentification1 getMessageReference() {
+		return messageReference;
+	}
+
+	public void setMessageReference(MessageIdentification1 messageReference) {
+		this.messageReference = messageReference;
+	}
+
+	public AdditionalReference6 getPoolReference() {
+		return poolReference;
+	}
+
+	public void setPoolReference(AdditionalReference6 poolReference) {
+		this.poolReference = poolReference;
+	}
+
+	public AdditionalReference6 getPreviousReference() {
+		return previousReference;
+	}
+
+	public void setPreviousReference(AdditionalReference6 previousReference) {
+		this.previousReference = previousReference;
+	}
+
+	public AdditionalReference6 getRelatedReference() {
+		return relatedReference;
+	}
+
+	public void setRelatedReference(AdditionalReference6 relatedReference) {
+		this.relatedReference = relatedReference;
+	}
+
+	public Cancellation11Choice getCancellation() {
+		return cancellation;
+	}
+
+	public void setCancellation(Cancellation11Choice cancellation) {
+		this.cancellation = cancellation;
+	}
+
+	public MarketPracticeVersion1 getMarketPracticeVersion() {
+		return marketPracticeVersion;
+	}
+
+	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+		this.marketPracticeVersion = marketPracticeVersion;
 	}
 }

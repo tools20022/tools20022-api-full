@@ -37,14 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AdditionalReference3#Reference
- * AdditionalReference3.Reference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalReference3#ReferenceIssuer
- * AdditionalReference3.ReferenceIssuer}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference3#mmReference
+ * AdditionalReference3.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AdditionalReference3#MessageName
- * AdditionalReference3.MessageName}</li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference3#mmReferenceIssuer
+ * AdditionalReference3.mmReferenceIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AdditionalReference3#mmMessageName
+ * AdditionalReference3.mmMessageName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -55,890 +56,892 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#PreviousReference
- * InvestmentFundReportRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#mmPreviousReference
+ * InvestmentFundReportRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#RelatedReference
- * InvestmentFundReportRequestV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.InvestmentFundReportRequestV02#mmRelatedReference
+ * InvestmentFundReportRequestV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#RelatedReference
- * AccountDetailsConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02#mmRelatedReference
+ * AccountDetailsConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03#RelatedReference
- * AccountDetailsConfirmationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03#mmRelatedReference
+ * AccountDetailsConfirmationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#PoolReference
- * PEPOrISAOrPortfolioInformationV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#mmPoolReference
+ * PEPOrISAOrPortfolioInformationV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#PreviousReference
- * PEPOrISAOrPortfolioInformationV01.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#mmPreviousReference
+ * PEPOrISAOrPortfolioInformationV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#RelatedReference
- * PEPOrISAOrPortfolioInformationV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01#mmRelatedReference
+ * PEPOrISAOrPortfolioInformationV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#PoolReference
- * AccountHoldingInformationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#mmPoolReference
+ * AccountHoldingInformationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#PreviousReference
- * AccountHoldingInformationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#mmPreviousReference
+ * AccountHoldingInformationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#RelatedReference
- * AccountHoldingInformationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV02#mmRelatedReference
+ * AccountHoldingInformationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#PoolReference
- * AccountHoldingInformationV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#mmPoolReference
+ * AccountHoldingInformationV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#PreviousReference
- * AccountHoldingInformationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#mmPreviousReference
+ * AccountHoldingInformationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#RelatedReference
- * AccountHoldingInformationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV03#mmRelatedReference
+ * AccountHoldingInformationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV02#RelatedReference
- * AccountManagementStatusReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV02#mmRelatedReference
+ * AccountManagementStatusReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#RelatedReference
- * AccountManagementStatusReportV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV03#mmRelatedReference
+ * AccountManagementStatusReportV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#PreviousReference
- * AccountModificationInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV02#mmPreviousReference
+ * AccountModificationInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#PreviousReference
- * AccountModificationInstructionV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV03#mmPreviousReference
+ * AccountModificationInstructionV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#PreviousReference
- * AccountOpeningInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV02#mmPreviousReference
+ * AccountOpeningInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#PreviousReference
- * AccountOpeningInstructionV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV03#mmPreviousReference
+ * AccountOpeningInstructionV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#PoolReference
- * PEPOrISAOrPortfolioTransferCancellationRequestV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#mmPoolReference
+ * PEPOrISAOrPortfolioTransferCancellationRequestV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#PreviousReference
- * PEPOrISAOrPortfolioTransferCancellationRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#mmPreviousReference
+ * PEPOrISAOrPortfolioTransferCancellationRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#RelatedReference
- * PEPOrISAOrPortfolioTransferCancellationRequestV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#mmRelatedReference
+ * PEPOrISAOrPortfolioTransferCancellationRequestV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#PoolReference
- * PortfolioTransferCancellationRequestV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#mmPoolReference
+ * PortfolioTransferCancellationRequestV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#PreviousReference
- * PortfolioTransferCancellationRequestV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#mmPreviousReference
+ * PortfolioTransferCancellationRequestV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#RelatedReference
- * PortfolioTransferCancellationRequestV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#mmRelatedReference
+ * PortfolioTransferCancellationRequestV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04#PoolReference
- * PortfolioTransferCancellationRequestV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04#mmPoolReference
+ * PortfolioTransferCancellationRequestV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04#PreviousReference
- * PortfolioTransferCancellationRequestV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04#mmPreviousReference
+ * PortfolioTransferCancellationRequestV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04#RelatedReference
- * PortfolioTransferCancellationRequestV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04#mmRelatedReference
+ * PortfolioTransferCancellationRequestV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#PoolReference
- * PEPOrISAOrPortfolioTransferConfirmationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#mmPoolReference
+ * PEPOrISAOrPortfolioTransferConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#PreviousReference
- * PEPOrISAOrPortfolioTransferConfirmationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#mmPreviousReference
+ * PEPOrISAOrPortfolioTransferConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#RelatedReference
- * PEPOrISAOrPortfolioTransferConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02#mmRelatedReference
+ * PEPOrISAOrPortfolioTransferConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#PoolReference
- * PortfolioTransferConfirmationV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#mmPoolReference
+ * PortfolioTransferConfirmationV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#PreviousReference
- * PortfolioTransferConfirmationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#mmPreviousReference
+ * PortfolioTransferConfirmationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#RelatedReference
- * PortfolioTransferConfirmationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03#mmRelatedReference
+ * PortfolioTransferConfirmationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#PoolReference
- * PortfolioTransferConfirmationV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#mmPoolReference
+ * PortfolioTransferConfirmationV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#PreviousReference
- * PortfolioTransferConfirmationV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#mmPreviousReference
+ * PortfolioTransferConfirmationV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#RelatedReference
- * PortfolioTransferConfirmationV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04#mmRelatedReference
+ * PortfolioTransferConfirmationV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#PoolReference
- * PEPOrISAOrPortfolioTransferInstructionV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#mmPoolReference
+ * PEPOrISAOrPortfolioTransferInstructionV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#PreviousReference
- * PEPOrISAOrPortfolioTransferInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#mmPreviousReference
+ * PEPOrISAOrPortfolioTransferInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#RelatedReference
- * PEPOrISAOrPortfolioTransferInstructionV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02#mmRelatedReference
+ * PEPOrISAOrPortfolioTransferInstructionV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#PoolReference
- * PortfolioTransferInstructionV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#mmPoolReference
+ * PortfolioTransferInstructionV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#PreviousReference
- * PortfolioTransferInstructionV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#mmPreviousReference
+ * PortfolioTransferInstructionV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#RelatedReference
- * PortfolioTransferInstructionV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV03#mmRelatedReference
+ * PortfolioTransferInstructionV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#PoolReference
- * PortfolioTransferInstructionV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#mmPoolReference
+ * PortfolioTransferInstructionV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#PreviousReference
- * PortfolioTransferInstructionV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#mmPreviousReference
+ * PortfolioTransferInstructionV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#RelatedReference
- * PortfolioTransferInstructionV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV04#mmRelatedReference
+ * PortfolioTransferInstructionV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV02#PoolReference
- * PriceReportCancellationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV02#mmPoolReference
+ * PriceReportCancellationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV02#PreviousReference
- * PriceReportCancellationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV02#mmPreviousReference
+ * PriceReportCancellationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV03#PoolReference
- * PriceReportCancellationV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV03#mmPoolReference
+ * PriceReportCancellationV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV03#PreviousReference
- * PriceReportCancellationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV03#mmPreviousReference
+ * PriceReportCancellationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#PoolReference
- * PriceReportCancellationV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmPoolReference
+ * PriceReportCancellationV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#PreviousReference
- * PriceReportCancellationV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCancellationV04#mmPreviousReference
+ * PriceReportCancellationV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV02#PoolReference
- * PriceReportV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV02#mmPoolReference
+ * PriceReportV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV02#PreviousReference
- * PriceReportV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV02#mmPreviousReference
+ * PriceReportV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV02#RelatedReference
- * PriceReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV02#mmRelatedReference
+ * PriceReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV03#PoolReference
- * PriceReportV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV03#mmPoolReference
+ * PriceReportV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV03#PreviousReference
- * PriceReportV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV03#mmPreviousReference
+ * PriceReportV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV03#RelatedReference
- * PriceReportV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV03#mmRelatedReference
+ * PriceReportV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV04#PoolReference
- * PriceReportV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV04#mmPoolReference
+ * PriceReportV04.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV04#PreviousReference
- * PriceReportV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV04#mmPreviousReference
+ * PriceReportV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportV04#RelatedReference
- * PriceReportV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportV04#mmRelatedReference
+ * PriceReportV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#PoolReference
- * FundConfirmedCashForecastReportCancellationV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#mmPoolReference
+ * FundConfirmedCashForecastReportCancellationV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#PreviousReference
- * FundConfirmedCashForecastReportCancellationV01.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#mmPreviousReference
+ * FundConfirmedCashForecastReportCancellationV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#RelatedReference
- * FundConfirmedCashForecastReportCancellationV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01#mmRelatedReference
+ * FundConfirmedCashForecastReportCancellationV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02#PoolReference
- * FundConfirmedCashForecastReportCancellationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02#mmPoolReference
+ * FundConfirmedCashForecastReportCancellationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02#PreviousReference
- * FundConfirmedCashForecastReportCancellationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02#mmPreviousReference
+ * FundConfirmedCashForecastReportCancellationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02#RelatedReference
- * FundConfirmedCashForecastReportCancellationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02#mmRelatedReference
+ * FundConfirmedCashForecastReportCancellationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02#PoolReference
- * FundConfirmedCashForecastReportV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02#mmPoolReference
+ * FundConfirmedCashForecastReportV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02#PreviousReference
- * FundConfirmedCashForecastReportV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02#mmPreviousReference
+ * FundConfirmedCashForecastReportV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02#RelatedReference
- * FundConfirmedCashForecastReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02#mmRelatedReference
+ * FundConfirmedCashForecastReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#PoolReference
- * FundConfirmedCashForecastReportV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#mmPoolReference
+ * FundConfirmedCashForecastReportV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#PreviousReference
- * FundConfirmedCashForecastReportV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#mmPreviousReference
+ * FundConfirmedCashForecastReportV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#RelatedReference
- * FundConfirmedCashForecastReportV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03#mmRelatedReference
+ * FundConfirmedCashForecastReportV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01#PoolReference
- * FundDetailedConfirmedCashForecastReportCancellationV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01#mmPoolReference
+ * FundDetailedConfirmedCashForecastReportCancellationV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01#PreviousReference
- * FundDetailedConfirmedCashForecastReportCancellationV01.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01#mmPreviousReference
+ * FundDetailedConfirmedCashForecastReportCancellationV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01#RelatedReference
- * FundDetailedConfirmedCashForecastReportCancellationV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01#mmRelatedReference
+ * FundDetailedConfirmedCashForecastReportCancellationV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02#PoolReference
- * FundDetailedConfirmedCashForecastReportCancellationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02#mmPoolReference
+ * FundDetailedConfirmedCashForecastReportCancellationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02#PreviousReference
- * FundDetailedConfirmedCashForecastReportCancellationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02#mmPreviousReference
+ * FundDetailedConfirmedCashForecastReportCancellationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02#RelatedReference
- * FundDetailedConfirmedCashForecastReportCancellationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02#mmRelatedReference
+ * FundDetailedConfirmedCashForecastReportCancellationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02#PoolReference
- * FundDetailedConfirmedCashForecastReportV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02#mmPoolReference
+ * FundDetailedConfirmedCashForecastReportV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02#PreviousReference
- * FundDetailedConfirmedCashForecastReportV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02#mmPreviousReference
+ * FundDetailedConfirmedCashForecastReportV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02#RelatedReference
- * FundDetailedConfirmedCashForecastReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02#mmRelatedReference
+ * FundDetailedConfirmedCashForecastReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#PoolReference
- * FundDetailedConfirmedCashForecastReportV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#mmPoolReference
+ * FundDetailedConfirmedCashForecastReportV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#PreviousReference
- * FundDetailedConfirmedCashForecastReportV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#mmPreviousReference
+ * FundDetailedConfirmedCashForecastReportV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#RelatedReference
- * FundDetailedConfirmedCashForecastReportV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03#mmRelatedReference
+ * FundDetailedConfirmedCashForecastReportV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02#PoolReference
- * FundDetailedEstimatedCashForecastReportV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02#mmPoolReference
+ * FundDetailedEstimatedCashForecastReportV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02#PreviousReference
- * FundDetailedEstimatedCashForecastReportV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02#mmPreviousReference
+ * FundDetailedEstimatedCashForecastReportV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02#RelatedReference
- * FundDetailedEstimatedCashForecastReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02#mmRelatedReference
+ * FundDetailedEstimatedCashForecastReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#PoolReference
- * FundDetailedEstimatedCashForecastReportV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#mmPoolReference
+ * FundDetailedEstimatedCashForecastReportV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#PreviousReference
- * FundDetailedEstimatedCashForecastReportV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#mmPreviousReference
+ * FundDetailedEstimatedCashForecastReportV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#RelatedReference
- * FundDetailedEstimatedCashForecastReportV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03#mmRelatedReference
+ * FundDetailedEstimatedCashForecastReportV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02#PoolReference
- * FundEstimatedCashForecastReportV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02#mmPoolReference
+ * FundEstimatedCashForecastReportV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02#PreviousReference
- * FundEstimatedCashForecastReportV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02#mmPreviousReference
+ * FundEstimatedCashForecastReportV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02#RelatedReference
- * FundEstimatedCashForecastReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02#mmRelatedReference
+ * FundEstimatedCashForecastReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#PoolReference
- * FundEstimatedCashForecastReportV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmPoolReference
+ * FundEstimatedCashForecastReportV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#PreviousReference
- * FundEstimatedCashForecastReportV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmPreviousReference
+ * FundEstimatedCashForecastReportV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#RelatedReference
- * FundEstimatedCashForecastReportV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03#mmRelatedReference
+ * FundEstimatedCashForecastReportV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#RelatedReference
- * OrderCancellationStatusReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#mmRelatedReference
+ * OrderCancellationStatusReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#OtherReference
- * OrderCancellationStatusReportV02.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#mmOtherReference
+ * OrderCancellationStatusReportV02.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV03#RelatedReference
- * OrderCancellationStatusReportV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV03#mmRelatedReference
+ * OrderCancellationStatusReportV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV03#OtherReference
- * OrderCancellationStatusReportV03.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV03#mmOtherReference
+ * OrderCancellationStatusReportV03.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#OtherReference
- * OrderConfirmationStatusReportV01.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmOtherReference
+ * OrderConfirmationStatusReportV01.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#RelatedReference
- * OrderConfirmationStatusReportV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01#mmRelatedReference
+ * OrderConfirmationStatusReportV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#OtherReference
- * OrderInstructionStatusReportV02.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmOtherReference
+ * OrderInstructionStatusReportV02.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#RelatedReference
- * OrderInstructionStatusReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmRelatedReference
+ * OrderInstructionStatusReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#MasterReference
- * OrderInstructionStatusReportV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmMasterReference
+ * OrderInstructionStatusReportV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03#OtherReference
- * OrderInstructionStatusReportV03.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03#mmOtherReference
+ * OrderInstructionStatusReportV03.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03#RelatedReference
- * OrderInstructionStatusReportV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV03#mmRelatedReference
+ * OrderInstructionStatusReportV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02#MasterReference
- * RedemptionBulkOrderCancellationInstructionV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02#mmMasterReference
+ * RedemptionBulkOrderCancellationInstructionV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02#PoolReference
- * RedemptionBulkOrderCancellationInstructionV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02#mmPoolReference
+ * RedemptionBulkOrderCancellationInstructionV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02#PreviousReference
- * RedemptionBulkOrderCancellationInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02#mmPreviousReference
+ * RedemptionBulkOrderCancellationInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#PoolReference
- * RedemptionBulkOrderCancellationRequestV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmPoolReference
+ * RedemptionBulkOrderCancellationRequestV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#PreviousReference
- * RedemptionBulkOrderCancellationRequestV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmPreviousReference
+ * RedemptionBulkOrderCancellationRequestV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01#PoolReference
- * RedemptionBulkOrderConfirmationAmendmentV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01#mmPoolReference
+ * RedemptionBulkOrderConfirmationAmendmentV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01#PreviousReference
- * RedemptionBulkOrderConfirmationAmendmentV01.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01#mmPreviousReference
+ * RedemptionBulkOrderConfirmationAmendmentV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01#RelatedReference
- * RedemptionBulkOrderConfirmationAmendmentV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01#mmRelatedReference
+ * RedemptionBulkOrderConfirmationAmendmentV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01#PoolReference
- * RedemptionBulkOrderConfirmationCancellationInstructionV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01#mmPoolReference
+ * RedemptionBulkOrderConfirmationCancellationInstructionV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01#PreviousReference
- * RedemptionBulkOrderConfirmationCancellationInstructionV01.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01#RelatedReference
- * RedemptionBulkOrderConfirmationCancellationInstructionV01.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#MasterReference
- * RedemptionBulkOrderConfirmationV02.MasterReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#PoolReference
- * RedemptionBulkOrderConfirmationV02.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#PreviousReference
- * RedemptionBulkOrderConfirmationV02.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#RelatedReference
- * RedemptionBulkOrderConfirmationV02.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03#PoolReference
- * RedemptionBulkOrderConfirmationV03.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03#PreviousReference
- * RedemptionBulkOrderConfirmationV03.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03#RelatedReference
- * RedemptionBulkOrderConfirmationV03.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02#MasterReference
- * RedemptionBulkOrderV02.MasterReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02#PoolReference
- * RedemptionBulkOrderV02.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02#PreviousReference
- * RedemptionBulkOrderV02.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV03#PoolReference
- * RedemptionBulkOrderV03.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV03#PreviousReference
- * RedemptionBulkOrderV03.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02#MasterReference
- * RedemptionMultipleOrderCancellationInstructionV02.MasterReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02#PoolReference
- * RedemptionMultipleOrderCancellationInstructionV02.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02#PreviousReference
- * RedemptionMultipleOrderCancellationInstructionV02.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03#PoolReference
- * RedemptionOrderCancellationRequestV03.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03#PreviousReference
- * RedemptionOrderCancellationRequestV03.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01#PoolReference
- * RedemptionOrderConfirmationAmendmentV01.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01#PreviousReference
- * RedemptionOrderConfirmationAmendmentV01.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01#RelatedReference
- * RedemptionOrderConfirmationAmendmentV01.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01#PoolReference
- * RedemptionOrderConfirmationCancellationInstructionV01.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01#PreviousReference
- * RedemptionOrderConfirmationCancellationInstructionV01.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01#RelatedReference
- * RedemptionOrderConfirmationCancellationInstructionV01.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#MasterReference
- * RedemptionMultipleOrderConfirmationV02.MasterReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#PoolReference
- * RedemptionMultipleOrderConfirmationV02.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#PreviousReference
- * RedemptionMultipleOrderConfirmationV02.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#RelatedReference
- * RedemptionMultipleOrderConfirmationV02.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03#PoolReference
- * RedemptionOrderConfirmationV03.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03#PreviousReference
- * RedemptionOrderConfirmationV03.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03#RelatedReference
- * RedemptionOrderConfirmationV03.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02#MasterReference
- * RedemptionMultipleOrderV02.MasterReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02#PoolReference
- * RedemptionMultipleOrderV02.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02#PreviousReference
- * RedemptionMultipleOrderV02.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV03#PoolReference
- * RedemptionOrderV03.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV03#PreviousReference
- * RedemptionOrderV03.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#RelatedReference
- * SecuritiesMessageRejectionV02.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02#MasterReference
- * SubscriptionBulkOrderCancellationInstructionV02.MasterReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02#PoolReference
- * SubscriptionBulkOrderCancellationInstructionV02.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02#PreviousReference
- * SubscriptionBulkOrderCancellationInstructionV02.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03#PoolReference
- * SubscriptionBulkOrderCancellationRequestV03.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03#PreviousReference
- * SubscriptionBulkOrderCancellationRequestV03.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01#PoolReference
- * SubscriptionBulkOrderConfirmationAmendmentV01.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01#PreviousReference
- * SubscriptionBulkOrderConfirmationAmendmentV01.PreviousReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01#RelatedReference
- * SubscriptionBulkOrderConfirmationAmendmentV01.RelatedReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01#PoolReference
- * SubscriptionBulkOrderConfirmationCancellationInstructionV01.PoolReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01#PreviousReference
- * SubscriptionBulkOrderConfirmationCancellationInstructionV01.PreviousReference
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01#mmPreviousReference
+ * RedemptionBulkOrderConfirmationCancellationInstructionV01.mmPreviousReference
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01#RelatedReference
- * SubscriptionBulkOrderConfirmationCancellationInstructionV01.RelatedReference}
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01#mmRelatedReference
+ * RedemptionBulkOrderConfirmationCancellationInstructionV01.mmRelatedReference}
  * </li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#MasterReference
- * SubscriptionBulkOrderConfirmationV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#mmMasterReference
+ * RedemptionBulkOrderConfirmationV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#PoolReference
- * SubscriptionBulkOrderConfirmationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#mmPoolReference
+ * RedemptionBulkOrderConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#PreviousReference
- * SubscriptionBulkOrderConfirmationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#mmPreviousReference
+ * RedemptionBulkOrderConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#RelatedReference
- * SubscriptionBulkOrderConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02#mmRelatedReference
+ * RedemptionBulkOrderConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03#PoolReference
- * SubscriptionBulkOrderConfirmationV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03#mmPoolReference
+ * RedemptionBulkOrderConfirmationV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03#PreviousReference
- * SubscriptionBulkOrderConfirmationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03#mmPreviousReference
+ * RedemptionBulkOrderConfirmationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03#RelatedReference
- * SubscriptionBulkOrderConfirmationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03#mmRelatedReference
+ * RedemptionBulkOrderConfirmationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02#MasterReference
- * SubscriptionBulkOrderV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02#mmMasterReference
+ * RedemptionBulkOrderV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02#PoolReference
- * SubscriptionBulkOrderV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02#mmPoolReference
+ * RedemptionBulkOrderV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02#PreviousReference
- * SubscriptionBulkOrderV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV02#mmPreviousReference
+ * RedemptionBulkOrderV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV03#PoolReference
- * SubscriptionBulkOrderV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV03#mmPoolReference
+ * RedemptionBulkOrderV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV03#PreviousReference
- * SubscriptionBulkOrderV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV03#mmPreviousReference
+ * RedemptionBulkOrderV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02#MasterReference
- * SubscriptionMultipleOrderCancellationInstructionV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02#mmMasterReference
+ * RedemptionMultipleOrderCancellationInstructionV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02#PoolReference
- * SubscriptionMultipleOrderCancellationInstructionV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02#mmPoolReference
+ * RedemptionMultipleOrderCancellationInstructionV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02#PreviousReference
- * SubscriptionMultipleOrderCancellationInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02#mmPreviousReference
+ * RedemptionMultipleOrderCancellationInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03#PoolReference
- * SubscriptionOrderCancellationRequestV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03#mmPoolReference
+ * RedemptionOrderCancellationRequestV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03#PreviousReference
- * SubscriptionOrderCancellationRequestV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03#mmPreviousReference
+ * RedemptionOrderCancellationRequestV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01#PoolReference
- * SubscriptionOrderConfirmationAmendmentV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01#mmPoolReference
+ * RedemptionOrderConfirmationAmendmentV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01#PreviousReference
- * SubscriptionOrderConfirmationAmendmentV01.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01#mmPreviousReference
+ * RedemptionOrderConfirmationAmendmentV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01#RelatedReference
- * SubscriptionOrderConfirmationAmendmentV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01#mmRelatedReference
+ * RedemptionOrderConfirmationAmendmentV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#PoolReference
- * SubscriptionOrderConfirmationCancellationInstructionV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01#mmPoolReference
+ * RedemptionOrderConfirmationCancellationInstructionV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#PreviousReference
- * SubscriptionOrderConfirmationCancellationInstructionV01.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01#mmPreviousReference
+ * RedemptionOrderConfirmationCancellationInstructionV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#RelatedReference
- * SubscriptionOrderConfirmationCancellationInstructionV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01#mmRelatedReference
+ * RedemptionOrderConfirmationCancellationInstructionV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#MasterReference
- * SubscriptionMultipleOrderConfirmationV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#mmMasterReference
+ * RedemptionMultipleOrderConfirmationV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#PoolReference
- * SubscriptionMultipleOrderConfirmationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#mmPoolReference
+ * RedemptionMultipleOrderConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#PreviousReference
- * SubscriptionMultipleOrderConfirmationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#mmPreviousReference
+ * RedemptionMultipleOrderConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#RelatedReference
- * SubscriptionMultipleOrderConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02#mmRelatedReference
+ * RedemptionMultipleOrderConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03#PoolReference
- * SubscriptionOrderConfirmationV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03#mmPoolReference
+ * RedemptionOrderConfirmationV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03#PreviousReference
- * SubscriptionOrderConfirmationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03#mmPreviousReference
+ * RedemptionOrderConfirmationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03#RelatedReference
- * SubscriptionOrderConfirmationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03#mmRelatedReference
+ * RedemptionOrderConfirmationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02#MasterReference
- * SubscriptionMultipleOrderV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02#mmMasterReference
+ * RedemptionMultipleOrderV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02#PoolReference
- * SubscriptionMultipleOrderV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02#mmPoolReference
+ * RedemptionMultipleOrderV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02#PreviousReference
- * SubscriptionMultipleOrderV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionMultipleOrderV02#mmPreviousReference
+ * RedemptionMultipleOrderV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV03#PoolReference
- * SubscriptionOrderV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV03#mmPoolReference
+ * RedemptionOrderV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV03#PreviousReference
- * SubscriptionOrderV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionOrderV03#mmPreviousReference
+ * RedemptionOrderV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02#MasterReference
- * SwitchOrderCancellationInstructionV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02#mmRelatedReference
+ * SecuritiesMessageRejectionV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02#PoolReference
- * SwitchOrderCancellationInstructionV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02#mmMasterReference
+ * SubscriptionBulkOrderCancellationInstructionV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02#PreviousReference
- * SwitchOrderCancellationInstructionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02#mmPoolReference
+ * SubscriptionBulkOrderCancellationInstructionV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03#PoolReference
- * SwitchOrderCancellationRequestV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02#mmPreviousReference
+ * SubscriptionBulkOrderCancellationInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03#PreviousReference
- * SwitchOrderCancellationRequestV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03#mmPoolReference
+ * SubscriptionBulkOrderCancellationRequestV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01#PoolReference
- * SwitchOrderConfirmationAmendmentV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03#mmPreviousReference
+ * SubscriptionBulkOrderCancellationRequestV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01#PreviousReference
- * SwitchOrderConfirmationAmendmentV01.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01#mmPoolReference
+ * SubscriptionBulkOrderConfirmationAmendmentV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01#RelatedReference
- * SwitchOrderConfirmationAmendmentV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01#mmPreviousReference
+ * SubscriptionBulkOrderConfirmationAmendmentV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#PoolReference
- * SwitchOrderConfirmationCancellationInstructionV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01#mmRelatedReference
+ * SubscriptionBulkOrderConfirmationAmendmentV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#PreviousReference
- * SwitchOrderConfirmationCancellationInstructionV01.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01#mmPoolReference
+ * SubscriptionBulkOrderConfirmationCancellationInstructionV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#RelatedReference
- * SwitchOrderConfirmationCancellationInstructionV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01#mmPreviousReference
+ * SubscriptionBulkOrderConfirmationCancellationInstructionV01.
+ * mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#MasterReference
- * SwitchOrderConfirmationV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01#mmRelatedReference
+ * SubscriptionBulkOrderConfirmationCancellationInstructionV01.
+ * mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#PoolReference
- * SwitchOrderConfirmationV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmMasterReference
+ * SubscriptionBulkOrderConfirmationV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#PreviousReference
- * SwitchOrderConfirmationV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmPoolReference
+ * SubscriptionBulkOrderConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#RelatedReference
- * SwitchOrderConfirmationV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmPreviousReference
+ * SubscriptionBulkOrderConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03#PoolReference
- * SwitchOrderConfirmationV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02#mmRelatedReference
+ * SubscriptionBulkOrderConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03#PreviousReference
- * SwitchOrderConfirmationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03#mmPoolReference
+ * SubscriptionBulkOrderConfirmationV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03#RelatedReference
- * SwitchOrderConfirmationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03#mmPreviousReference
+ * SubscriptionBulkOrderConfirmationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02#MasterReference
- * SwitchOrderV02.MasterReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03#mmRelatedReference
+ * SubscriptionBulkOrderConfirmationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02#PoolReference
- * SwitchOrderV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02#mmMasterReference
+ * SubscriptionBulkOrderV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02#PreviousReference
- * SwitchOrderV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02#mmPoolReference
+ * SubscriptionBulkOrderV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#PoolReference
- * SwitchOrderV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV02#mmPreviousReference
+ * SubscriptionBulkOrderV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#PreviousReference
- * SwitchOrderV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV03#mmPoolReference
+ * SubscriptionBulkOrderV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV02#RelatedReference
- * TransferCancellationStatusReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderV03#mmPreviousReference
+ * SubscriptionBulkOrderV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV02#OtherReference
- * TransferCancellationStatusReportV02.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02#mmMasterReference
+ * SubscriptionMultipleOrderCancellationInstructionV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03#RelatedReference
- * TransferCancellationStatusReportV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02#mmPoolReference
+ * SubscriptionMultipleOrderCancellationInstructionV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03#OtherReference
- * TransferCancellationStatusReportV03.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02#mmPreviousReference
+ * SubscriptionMultipleOrderCancellationInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV02#RelatedReference
- * TransferInstructionStatusReportV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03#mmPoolReference
+ * SubscriptionOrderCancellationRequestV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV02#OtherReference
- * TransferInstructionStatusReportV02.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03#mmPreviousReference
+ * SubscriptionOrderCancellationRequestV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV03#RelatedReference
- * TransferInstructionStatusReportV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01#mmPoolReference
+ * SubscriptionOrderConfirmationAmendmentV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV03#OtherReference
- * TransferInstructionStatusReportV03.OtherReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01#mmPreviousReference
+ * SubscriptionOrderConfirmationAmendmentV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#PoolReference
- * RequestForPEPOrISAOrPortfolioInformationV01.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01#mmRelatedReference
+ * SubscriptionOrderConfirmationAmendmentV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#PreviousReference
- * RequestForPEPOrISAOrPortfolioInformationV01.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmPoolReference
+ * SubscriptionOrderConfirmationCancellationInstructionV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#RelatedReference
- * RequestForPEPOrISAOrPortfolioInformationV01.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmPreviousReference
+ * SubscriptionOrderConfirmationCancellationInstructionV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#PoolReference
- * AccountHoldingInformationRequestV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01#mmRelatedReference
+ * SubscriptionOrderConfirmationCancellationInstructionV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#PreviousReference
- * AccountHoldingInformationRequestV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#mmMasterReference
+ * SubscriptionMultipleOrderConfirmationV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#RelatedReference
- * AccountHoldingInformationRequestV02.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#mmPoolReference
+ * SubscriptionMultipleOrderConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV02#PoolReference
- * PriceReportCorrectionV02.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#mmPreviousReference
+ * SubscriptionMultipleOrderConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV02#PreviousReference
- * PriceReportCorrectionV02.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02#mmRelatedReference
+ * SubscriptionMultipleOrderConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#PoolReference
- * PriceReportCorrectionV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03#mmPoolReference
+ * SubscriptionOrderConfirmationV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#PreviousReference
- * PriceReportCorrectionV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03#mmPreviousReference
+ * SubscriptionOrderConfirmationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04#RelatedReference
- * AccountDetailsConfirmationV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03#mmRelatedReference
+ * SubscriptionOrderConfirmationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV04#PreviousReference
- * AccountModificationInstructionV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02#mmMasterReference
+ * SubscriptionMultipleOrderV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#PreviousReference
- * AccountOpeningInstructionV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02#mmPoolReference
+ * SubscriptionMultipleOrderV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#PoolReference
- * AccountHoldingInformationRequestV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02#mmPreviousReference
+ * SubscriptionMultipleOrderV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#PreviousReference
- * AccountHoldingInformationRequestV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV03#mmPoolReference
+ * SubscriptionOrderV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#RelatedReference
- * AccountHoldingInformationRequestV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV03#mmPreviousReference
+ * SubscriptionOrderV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04#PoolReference
- * AccountHoldingInformationV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02#mmMasterReference
+ * SwitchOrderCancellationInstructionV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04#PreviousReference
- * AccountHoldingInformationV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02#mmPoolReference
+ * SwitchOrderCancellationInstructionV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04#RelatedReference
- * AccountHoldingInformationV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02#mmPreviousReference
+ * SwitchOrderCancellationInstructionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05#PoolReference
- * PortfolioTransferCancellationRequestV05.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03#mmPoolReference
+ * SwitchOrderCancellationRequestV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05#PreviousReference
- * PortfolioTransferCancellationRequestV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03#mmPreviousReference
+ * SwitchOrderCancellationRequestV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05#RelatedReference
- * PortfolioTransferCancellationRequestV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01#mmPoolReference
+ * SwitchOrderConfirmationAmendmentV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05#PoolReference
- * PortfolioTransferInstructionV05.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01#mmPreviousReference
+ * SwitchOrderConfirmationAmendmentV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05#PreviousReference
- * PortfolioTransferInstructionV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01#mmRelatedReference
+ * SwitchOrderConfirmationAmendmentV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05#RelatedReference
- * PortfolioTransferInstructionV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#mmPoolReference
+ * SwitchOrderConfirmationCancellationInstructionV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05#PoolReference
- * PortfolioTransferConfirmationV05.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#mmPreviousReference
+ * SwitchOrderConfirmationCancellationInstructionV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05#PreviousReference
- * PortfolioTransferConfirmationV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01#mmRelatedReference
+ * SwitchOrderConfirmationCancellationInstructionV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05#RelatedReference
- * PortfolioTransferConfirmationV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#mmMasterReference
+ * SwitchOrderConfirmationV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#RelatedReference
- * AccountManagementStatusReportV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#mmPoolReference
+ * SwitchOrderConfirmationV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#PoolReference
- * FundDetailedEstimatedCashForecastReportV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#mmPreviousReference
+ * SwitchOrderConfirmationV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#PreviousReference
- * FundDetailedEstimatedCashForecastReportV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV02#mmRelatedReference
+ * SwitchOrderConfirmationV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#RelatedReference
- * FundDetailedEstimatedCashForecastReportV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03#mmPoolReference
+ * SwitchOrderConfirmationV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#PreviousReference
- * AccountOpeningInstructionV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03#mmPreviousReference
+ * SwitchOrderConfirmationV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#PoolReference
- * FundConfirmedCashForecastReportV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderConfirmationV03#mmRelatedReference
+ * SwitchOrderConfirmationV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#PreviousReference
- * FundConfirmedCashForecastReportV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02#mmMasterReference
+ * SwitchOrderV02.mmMasterReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#RelatedReference
- * FundConfirmedCashForecastReportV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02#mmPoolReference
+ * SwitchOrderV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03#PoolReference
- * FundDetailedConfirmedCashForecastReportCancellationV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV02#mmPreviousReference
+ * SwitchOrderV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03#PreviousReference
- * FundDetailedConfirmedCashForecastReportCancellationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmPoolReference
+ * SwitchOrderV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03#RelatedReference
- * FundDetailedConfirmedCashForecastReportCancellationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.setr.SwitchOrderV03#mmPreviousReference
+ * SwitchOrderV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#PoolReference
- * FundEstimatedCashForecastReportV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV02#mmRelatedReference
+ * TransferCancellationStatusReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#PreviousReference
- * FundEstimatedCashForecastReportV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV02#mmOtherReference
+ * TransferCancellationStatusReportV02.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#RelatedReference
- * FundEstimatedCashForecastReportV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03#mmRelatedReference
+ * TransferCancellationStatusReportV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#PreviousReference
- * AccountModificationInstructionV05.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV03#mmOtherReference
+ * TransferCancellationStatusReportV03.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#RelatedReference
- * SecuritiesMessageRejectionV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV02#mmRelatedReference
+ * TransferInstructionStatusReportV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03#PoolReference
- * FundConfirmedCashForecastReportCancellationV03.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV02#mmOtherReference
+ * TransferInstructionStatusReportV02.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03#PreviousReference
- * FundConfirmedCashForecastReportCancellationV03.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV03#mmRelatedReference
+ * TransferInstructionStatusReportV03.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03#RelatedReference
- * FundConfirmedCashForecastReportCancellationV03.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV03#mmOtherReference
+ * TransferInstructionStatusReportV03.mmOtherReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05#RelatedReference
- * AccountDetailsConfirmationV05.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#mmPoolReference
+ * RequestForPEPOrISAOrPortfolioInformationV01.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#PoolReference
- * PortfolioTransferCancellationRequestV06.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#mmPreviousReference
+ * RequestForPEPOrISAOrPortfolioInformationV01.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#PreviousReference
- * PortfolioTransferCancellationRequestV06.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01#mmRelatedReference
+ * RequestForPEPOrISAOrPortfolioInformationV01.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#RelatedReference
- * PortfolioTransferCancellationRequestV06.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmPoolReference
+ * AccountHoldingInformationRequestV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#PoolReference
- * FundDetailedConfirmedCashForecastReportV04.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmPreviousReference
+ * AccountHoldingInformationRequestV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#PreviousReference
- * FundDetailedConfirmedCashForecastReportV04.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02#mmRelatedReference
+ * AccountHoldingInformationRequestV02.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#RelatedReference
- * FundDetailedConfirmedCashForecastReportV04.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV02#mmPoolReference
+ * PriceReportCorrectionV02.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06#PoolReference
- * PortfolioTransferConfirmationV06.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV02#mmPreviousReference
+ * PriceReportCorrectionV02.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06#PreviousReference
- * PortfolioTransferConfirmationV06.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#mmPoolReference
+ * PriceReportCorrectionV03.mmPoolReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06#RelatedReference
- * PortfolioTransferConfirmationV06.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.reda.PriceReportCorrectionV03#mmPreviousReference
+ * PriceReportCorrectionV03.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#PoolReference
- * PortfolioTransferInstructionV06.PoolReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04#mmRelatedReference
+ * AccountDetailsConfirmationV04.mmRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#PreviousReference
- * PortfolioTransferInstructionV06.PreviousReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV04#mmPreviousReference
+ * AccountModificationInstructionV04.mmPreviousReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#RelatedReference
- * PortfolioTransferInstructionV06.RelatedReference}</li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV04#mmPreviousReference
+ * AccountOpeningInstructionV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmPoolReference
+ * AccountHoldingInformationRequestV03.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmPreviousReference
+ * AccountHoldingInformationRequestV03.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03#mmRelatedReference
+ * AccountHoldingInformationRequestV03.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04#mmPoolReference
+ * AccountHoldingInformationV04.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04#mmPreviousReference
+ * AccountHoldingInformationV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04#mmRelatedReference
+ * AccountHoldingInformationV04.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05#mmPoolReference
+ * PortfolioTransferCancellationRequestV05.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05#mmPreviousReference
+ * PortfolioTransferCancellationRequestV05.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05#mmRelatedReference
+ * PortfolioTransferCancellationRequestV05.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05#mmPoolReference
+ * PortfolioTransferInstructionV05.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05#mmPreviousReference
+ * PortfolioTransferInstructionV05.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05#mmRelatedReference
+ * PortfolioTransferInstructionV05.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05#mmPoolReference
+ * PortfolioTransferConfirmationV05.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05#mmPreviousReference
+ * PortfolioTransferConfirmationV05.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05#mmRelatedReference
+ * PortfolioTransferConfirmationV05.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV04#mmRelatedReference
+ * AccountManagementStatusReportV04.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#mmPoolReference
+ * FundDetailedEstimatedCashForecastReportV04.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#mmPreviousReference
+ * FundDetailedEstimatedCashForecastReportV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04#mmRelatedReference
+ * FundDetailedEstimatedCashForecastReportV04.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningInstructionV05#mmPreviousReference
+ * AccountOpeningInstructionV05.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#mmPoolReference
+ * FundConfirmedCashForecastReportV04.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#mmPreviousReference
+ * FundConfirmedCashForecastReportV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04#mmRelatedReference
+ * FundConfirmedCashForecastReportV04.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03#mmPoolReference
+ * FundDetailedConfirmedCashForecastReportCancellationV03.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03#mmPreviousReference
+ * FundDetailedConfirmedCashForecastReportCancellationV03.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03#mmRelatedReference
+ * FundDetailedConfirmedCashForecastReportCancellationV03.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmPoolReference
+ * FundEstimatedCashForecastReportV04.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmPreviousReference
+ * FundEstimatedCashForecastReportV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04#mmRelatedReference
+ * FundEstimatedCashForecastReportV04.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountModificationInstructionV05#mmPreviousReference
+ * AccountModificationInstructionV05.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03#mmRelatedReference
+ * SecuritiesMessageRejectionV03.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03#mmPoolReference
+ * FundConfirmedCashForecastReportCancellationV03.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03#mmPreviousReference
+ * FundConfirmedCashForecastReportCancellationV03.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03#mmRelatedReference
+ * FundConfirmedCashForecastReportCancellationV03.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05#mmRelatedReference
+ * AccountDetailsConfirmationV05.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#mmPoolReference
+ * PortfolioTransferCancellationRequestV06.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#mmPreviousReference
+ * PortfolioTransferCancellationRequestV06.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06#mmRelatedReference
+ * PortfolioTransferCancellationRequestV06.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#mmPoolReference
+ * FundDetailedConfirmedCashForecastReportV04.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#mmPreviousReference
+ * FundDetailedConfirmedCashForecastReportV04.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04#mmRelatedReference
+ * FundDetailedConfirmedCashForecastReportV04.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06#mmPoolReference
+ * PortfolioTransferConfirmationV06.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06#mmPreviousReference
+ * PortfolioTransferConfirmationV06.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06#mmRelatedReference
+ * PortfolioTransferConfirmationV06.mmRelatedReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmPoolReference
+ * PortfolioTransferInstructionV06.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmPreviousReference
+ * PortfolioTransferInstructionV06.mmPreviousReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06#mmRelatedReference
+ * PortfolioTransferInstructionV06.mmRelatedReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -961,6 +964,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AdditionalReference3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text reference;
 	/**
 	 * Business reference of a message assigned by the party issuing the
 	 * message. This reference must be unique amongst all messages of the same
@@ -975,8 +979,8 @@ public class AdditionalReference3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#Identification
-	 * GenericIdentification.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+	 * GenericIdentification.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -999,27 +1003,28 @@ public class AdditionalReference3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference8#Reference
-	 * AdditionalReference8.Reference}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference8#mmReference
+	 * AdditionalReference8.mmReference}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Reference = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.Identification;
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Business reference of a message assigned by the party issuing the message. This reference must be unique amongst all messages of the same name sent by the same party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference8.Reference);
-			minOccurs = 1;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference8.mmReference);
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected PartyIdentification2Choice referenceIssuer;
 	/**
 	 * Issuer of the reference.
 	 * <p>
@@ -1033,8 +1038,8 @@ public class AdditionalReference3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Party#Identification
-	 * Party.Identification}</li>
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -1055,27 +1060,28 @@ public class AdditionalReference3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference8#ReferenceIssuer
-	 * AdditionalReference8.ReferenceIssuer}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference8#mmReferenceIssuer
+	 * AdditionalReference8.mmReferenceIssuer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ReferenceIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference3.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.Identification;
 			isDerived = false;
 			xmlTag = "RefIssr";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceIssuer";
 			definition = "Issuer of the reference.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference8.ReferenceIssuer);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference8.mmReferenceIssuer);
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	protected Max35Text messageName;
 	/**
 	 * Name of a message.
 	 * <p>
@@ -1105,13 +1111,13 @@ public class AdditionalReference3 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.AdditionalReference8#MessageName
-	 * AdditionalReference8.MessageName}</li>
+	 * {@linkplain com.tools20022.repository.msg.AdditionalReference8#mmMessageName
+	 * AdditionalReference8.mmMessageName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> AdditionalReference3.mmObject();
 			isDerived = false;
@@ -1119,9 +1125,9 @@ public class AdditionalReference3 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of a message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference8.MessageName);
-			minOccurs = 0;
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference8.mmMessageName);
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
@@ -1129,157 +1135,160 @@ public class AdditionalReference3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference3.Reference, com.tools20022.repository.msg.AdditionalReference3.ReferenceIssuer,
-						com.tools20022.repository.msg.AdditionalReference3.MessageName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference3.mmReference, com.tools20022.repository.msg.AdditionalReference3.mmReferenceIssuer,
+						com.tools20022.repository.msg.AdditionalReference3.mmMessageName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmPreviousReference, com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmRelatedReference,
+						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmRelatedReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmRelatedReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmPoolReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmPreviousReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmRelatedReference, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmPoolReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmPreviousReference, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV03.mmPoolReference, com.tools20022.repository.area.sese.AccountHoldingInformationV03.mmPreviousReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV03.mmRelatedReference, com.tools20022.repository.area.acmt.AccountManagementStatusReportV02.mmRelatedReference,
+						com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.mmRelatedReference, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmPreviousReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.mmPreviousReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmPoolReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmPreviousReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmPreviousReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmRelatedReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.mmPoolReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.mmPreviousReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.mmRelatedReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.mmPoolReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.mmRelatedReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.mmPoolReference,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.mmPreviousReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.mmRelatedReference,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.mmPreviousReference,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.mmRelatedReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.mmPoolReference,
+						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.mmPreviousReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.mmPreviousReference,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.mmRelatedReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.mmPoolReference,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.mmPreviousReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.mmRelatedReference,
+						com.tools20022.repository.area.reda.PriceReportCancellationV02.mmPoolReference, com.tools20022.repository.area.reda.PriceReportCancellationV02.mmPreviousReference,
+						com.tools20022.repository.area.reda.PriceReportCancellationV03.mmPoolReference, com.tools20022.repository.area.reda.PriceReportCancellationV03.mmPreviousReference,
+						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPoolReference, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPreviousReference,
+						com.tools20022.repository.area.reda.PriceReportV02.mmPoolReference, com.tools20022.repository.area.reda.PriceReportV02.mmPreviousReference, com.tools20022.repository.area.reda.PriceReportV02.mmRelatedReference,
+						com.tools20022.repository.area.reda.PriceReportV03.mmPoolReference, com.tools20022.repository.area.reda.PriceReportV03.mmPreviousReference, com.tools20022.repository.area.reda.PriceReportV03.mmRelatedReference,
+						com.tools20022.repository.area.reda.PriceReportV04.mmPoolReference, com.tools20022.repository.area.reda.PriceReportV04.mmPreviousReference, com.tools20022.repository.area.reda.PriceReportV04.mmRelatedReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.mmPoolReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.mmRelatedReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.mmPoolReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.mmPreviousReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.mmRelatedReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02.mmPoolReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02.mmRelatedReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.mmPoolReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.mmPreviousReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.mmRelatedReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01.mmPoolReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01.mmRelatedReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.mmPoolReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.mmRelatedReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02.mmPoolReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02.mmPreviousReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02.mmRelatedReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmPoolReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmRelatedReference, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02.mmPoolReference,
+						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02.mmPreviousReference, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02.mmRelatedReference,
+						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.mmPoolReference, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.mmRelatedReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02.mmPoolReference,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02.mmPreviousReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02.mmRelatedReference,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmPoolReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmRelatedReference, com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmRelatedReference,
+						com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmOtherReference, com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmRelatedReference,
+						com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmOtherReference, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmOtherReference,
+						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmRelatedReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmOtherReference,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmRelatedReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmMasterReference,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmOtherReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmRelatedReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02.mmMasterReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmRelatedReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.mmMasterReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.mmPoolReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03.mmRelatedReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmMasterReference, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderV03.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionBulkOrderV03.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02.mmMasterReference,
+						com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02.mmPoolReference, com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03.mmPoolReference, com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01.mmPoolReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.mmMasterReference,
+						com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.mmPoolReference, com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmRelatedReference,
+						com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.mmMasterReference, com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.mmPreviousReference, com.tools20022.repository.area.setr.RedemptionOrderV03.mmPoolReference,
+						com.tools20022.repository.area.setr.RedemptionOrderV03.mmPreviousReference, com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.mmRelatedReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02.mmMasterReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01.mmRelatedReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01.mmRelatedReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmMasterReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmRelatedReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmRelatedReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.mmMasterReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02.mmMasterReference,
+						com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01.mmRelatedReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmRelatedReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.mmMasterReference,
+						com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.mmRelatedReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03.mmRelatedReference,
+						com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmMasterReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionOrderV03.mmPoolReference,
+						com.tools20022.repository.area.setr.SubscriptionOrderV03.mmPreviousReference, com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02.mmMasterReference,
+						com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01.mmRelatedReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmPoolReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmPreviousReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmRelatedReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmMasterReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmPoolReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmPreviousReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmRelatedReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV03.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationV03.mmPreviousReference,
+						com.tools20022.repository.area.setr.SwitchOrderConfirmationV03.mmRelatedReference, com.tools20022.repository.area.setr.SwitchOrderV02.mmMasterReference,
+						com.tools20022.repository.area.setr.SwitchOrderV02.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderV02.mmPreviousReference, com.tools20022.repository.area.setr.SwitchOrderV03.mmPoolReference,
+						com.tools20022.repository.area.setr.SwitchOrderV03.mmPreviousReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.mmOtherReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmOtherReference, com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmOtherReference, com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.mmRelatedReference,
+						com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.mmOtherReference, com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.mmPoolReference,
+						com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.mmPreviousReference, com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.mmRelatedReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmPoolReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmPreviousReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmRelatedReference, com.tools20022.repository.area.reda.PriceReportCorrectionV02.mmPoolReference,
+						com.tools20022.repository.area.reda.PriceReportCorrectionV02.mmPreviousReference, com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmPoolReference,
+						com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmPreviousReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmRelatedReference,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV04.mmPreviousReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmPreviousReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmPoolReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmPreviousReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmRelatedReference, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmPoolReference,
+						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmPreviousReference, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmRelatedReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05.mmPreviousReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05.mmRelatedReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.mmPoolReference,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.mmPreviousReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.mmRelatedReference,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.mmPreviousReference,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.mmRelatedReference, com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.mmRelatedReference,
+						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.mmPoolReference, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.mmRelatedReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.mmPoolReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.mmRelatedReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.mmPoolReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.mmRelatedReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmPoolReference,
+						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmPreviousReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmRelatedReference,
+						com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmPreviousReference, com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.mmRelatedReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.mmPoolReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.mmPreviousReference,
+						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.mmRelatedReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmRelatedReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmPreviousReference,
+						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmRelatedReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmPoolReference,
+						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmPreviousReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmRelatedReference,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmPreviousReference,
+						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmRelatedReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmPoolReference,
+						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmPreviousReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmRelatedReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.PreviousReference, com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.RelatedReference,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.RelatedReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.RelatedReference,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.PoolReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.PreviousReference,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.RelatedReference, com.tools20022.repository.area.sese.AccountHoldingInformationV02.PoolReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV02.PreviousReference, com.tools20022.repository.area.sese.AccountHoldingInformationV02.RelatedReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV03.PoolReference, com.tools20022.repository.area.sese.AccountHoldingInformationV03.PreviousReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV03.RelatedReference, com.tools20022.repository.area.acmt.AccountManagementStatusReportV02.RelatedReference,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV03.RelatedReference, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.PreviousReference,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.PreviousReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.PreviousReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.PreviousReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.PoolReference,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.PreviousReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.RelatedReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.PoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.PreviousReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.RelatedReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.PoolReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.PreviousReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV04.RelatedReference,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.PoolReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.RelatedReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.PoolReference,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.PreviousReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.RelatedReference,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.PoolReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.PreviousReference,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.RelatedReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.PoolReference,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.PreviousReference, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.RelatedReference,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.PoolReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.PreviousReference,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.RelatedReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.PoolReference,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.PreviousReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.RelatedReference,
-						com.tools20022.repository.area.reda.PriceReportCancellationV02.PoolReference, com.tools20022.repository.area.reda.PriceReportCancellationV02.PreviousReference,
-						com.tools20022.repository.area.reda.PriceReportCancellationV03.PoolReference, com.tools20022.repository.area.reda.PriceReportCancellationV03.PreviousReference,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.PoolReference, com.tools20022.repository.area.reda.PriceReportCancellationV04.PreviousReference,
-						com.tools20022.repository.area.reda.PriceReportV02.PoolReference, com.tools20022.repository.area.reda.PriceReportV02.PreviousReference, com.tools20022.repository.area.reda.PriceReportV02.RelatedReference,
-						com.tools20022.repository.area.reda.PriceReportV03.PoolReference, com.tools20022.repository.area.reda.PriceReportV03.PreviousReference, com.tools20022.repository.area.reda.PriceReportV03.RelatedReference,
-						com.tools20022.repository.area.reda.PriceReportV04.PoolReference, com.tools20022.repository.area.reda.PriceReportV04.PreviousReference, com.tools20022.repository.area.reda.PriceReportV04.RelatedReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.PoolReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.PreviousReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV01.RelatedReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.PoolReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.PreviousReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.RelatedReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02.PoolReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02.PreviousReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02.RelatedReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.PoolReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.PreviousReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.RelatedReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01.PoolReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01.PreviousReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01.RelatedReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.PoolReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.PreviousReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.RelatedReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02.PoolReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02.PreviousReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02.RelatedReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.PoolReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.PreviousReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.RelatedReference, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02.PoolReference,
-						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02.PreviousReference, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02.RelatedReference,
-						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.PoolReference, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.PreviousReference,
-						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.RelatedReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02.PoolReference,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02.PreviousReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02.RelatedReference,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.PoolReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.PreviousReference,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.RelatedReference, com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.RelatedReference,
-						com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.OtherReference, com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.RelatedReference,
-						com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.OtherReference, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.OtherReference,
-						com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.RelatedReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.OtherReference,
-						com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.RelatedReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.MasterReference,
-						com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.OtherReference, com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.RelatedReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02.MasterReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02.PreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.PreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.PreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.RelatedReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV01.RelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.MasterReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.PoolReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.RelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03.PreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03.RelatedReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderV02.MasterReference, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderV02.PreviousReference, com.tools20022.repository.area.setr.RedemptionBulkOrderV03.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderV03.PreviousReference, com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02.MasterReference,
-						com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02.PoolReference, com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationInstructionV02.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03.PoolReference, com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01.PoolReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01.RelatedReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV01.RelatedReference, com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.MasterReference,
-						com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.PoolReference, com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.RelatedReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.PreviousReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.RelatedReference,
-						com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.MasterReference, com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.PreviousReference, com.tools20022.repository.area.setr.RedemptionOrderV03.PoolReference,
-						com.tools20022.repository.area.setr.RedemptionOrderV03.PreviousReference, com.tools20022.repository.area.semt.SecuritiesMessageRejectionV02.RelatedReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02.MasterReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationInstructionV02.PreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV03.PreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01.PreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01.RelatedReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01.RelatedReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.MasterReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.PoolReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.RelatedReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.PreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.RelatedReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.MasterReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.PreviousReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.PreviousReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02.MasterReference,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02.PoolReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderCancellationInstructionV02.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03.PoolReference, com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01.PoolReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01.RelatedReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.RelatedReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.MasterReference,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.PoolReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.PreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.RelatedReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03.PreviousReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03.RelatedReference,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.MasterReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.PreviousReference, com.tools20022.repository.area.setr.SubscriptionOrderV03.PoolReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderV03.PreviousReference, com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02.MasterReference,
-						com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02.PoolReference, com.tools20022.repository.area.setr.SwitchOrderCancellationInstructionV02.PreviousReference,
-						com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.PoolReference, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.PreviousReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01.PoolReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01.PreviousReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01.RelatedReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.PoolReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.PreviousReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.RelatedReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.MasterReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.PoolReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.PreviousReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.RelatedReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV03.PoolReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationV03.PreviousReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV03.RelatedReference, com.tools20022.repository.area.setr.SwitchOrderV02.MasterReference, com.tools20022.repository.area.setr.SwitchOrderV02.PoolReference,
-						com.tools20022.repository.area.setr.SwitchOrderV02.PreviousReference, com.tools20022.repository.area.setr.SwitchOrderV03.PoolReference, com.tools20022.repository.area.setr.SwitchOrderV03.PreviousReference,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.RelatedReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.OtherReference,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.RelatedReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.OtherReference,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.RelatedReference, com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.OtherReference,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.RelatedReference, com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.OtherReference,
-						com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.PoolReference, com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.PreviousReference,
-						com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.RelatedReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.PoolReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.PreviousReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.RelatedReference,
-						com.tools20022.repository.area.reda.PriceReportCorrectionV02.PoolReference, com.tools20022.repository.area.reda.PriceReportCorrectionV02.PreviousReference,
-						com.tools20022.repository.area.reda.PriceReportCorrectionV03.PoolReference, com.tools20022.repository.area.reda.PriceReportCorrectionV03.PreviousReference,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.RelatedReference, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.PreviousReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.PreviousReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.PoolReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.PreviousReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.RelatedReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV04.PoolReference, com.tools20022.repository.area.sese.AccountHoldingInformationV04.PreviousReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV04.RelatedReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05.PoolReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05.PreviousReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05.RelatedReference,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.PoolReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.PreviousReference,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.RelatedReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.PoolReference,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.PreviousReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.RelatedReference,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.RelatedReference, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.PoolReference,
-						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.PreviousReference, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.RelatedReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.PreviousReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.PoolReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.PreviousReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.RelatedReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.PoolReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.PreviousReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.RelatedReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.PoolReference,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.PreviousReference, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.RelatedReference,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV05.PreviousReference, com.tools20022.repository.area.semt.SecuritiesMessageRejectionV03.RelatedReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.PoolReference, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.PreviousReference,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.RelatedReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.RelatedReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.PoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.PreviousReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.RelatedReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.PoolReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.PreviousReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.RelatedReference,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.PoolReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.PreviousReference,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.RelatedReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.PoolReference,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.PreviousReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.RelatedReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReference3";
 				definition = "References a related message or provides another reference, such as a pool reference, linking a set of messages. The party which issued the related reference may be the Sender of the referenced message or a party other than the Sender.";
@@ -1287,5 +1296,29 @@ public class AdditionalReference3 {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getReference() {
+		return reference;
+	}
+
+	public void setReference(Max35Text reference) {
+		this.reference = reference;
+	}
+
+	public PartyIdentification2Choice getReferenceIssuer() {
+		return referenceIssuer;
+	}
+
+	public void setReferenceIssuer(PartyIdentification2Choice referenceIssuer) {
+		this.referenceIssuer = referenceIssuer;
+	}
+
+	public Max35Text getMessageName() {
+		return messageName;
+	}
+
+	public void setMessageName(Max35Text messageName) {
+		this.messageName = messageName;
 	}
 }

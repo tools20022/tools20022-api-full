@@ -35,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SingleOrMassQuote1Choice#SingleQuoteDetails
- * SingleOrMassQuote1Choice.SingleQuoteDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.SingleOrMassQuote1Choice#mmSingleQuoteDetails
+ * SingleOrMassQuote1Choice.mmSingleQuoteDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SingleOrMassQuote1Choice#MassQuoteDetails
- * SingleOrMassQuote1Choice.MassQuoteDetails}</li>
+ * {@linkplain com.tools20022.repository.choice.SingleOrMassQuote1Choice#mmMassQuoteDetails
+ * SingleOrMassQuote1Choice.mmMassQuoteDetails}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +60,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class SingleOrMassQuote1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected SingleQuote1 singleQuoteDetails;
 	/**
 	 * Details related to a single quote.
 	 * <p>
@@ -91,21 +92,22 @@ public class SingleOrMassQuote1Choice {
 	 * definition} = "Details related to a single quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SingleQuoteDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSingleQuoteDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SingleOrMassQuote1Choice.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesQuoteVariable.mmObject();
+			componentContext_lazy = () -> SingleOrMassQuote1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglQtDtls";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleQuoteDetails";
 			definition = "Details related to a single quote.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> SingleQuote1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> SingleQuote1.mmObject();
 		}
 	};
+	protected MassQuote1 massQuoteDetails;
 	/**
 	 * Details related to a mass quote.
 	 * <p>
@@ -131,7 +133,7 @@ public class SingleOrMassQuote1Choice {
 	 * definition} = "Details related to a mass quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MassQuoteDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMassQuoteDetails = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> SingleOrMassQuote1Choice.mmObject();
 			isDerived = false;
@@ -139,23 +141,39 @@ public class SingleOrMassQuote1Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MassQuoteDetails";
 			definition = "Details related to a mass quote.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> MassQuote1.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> MassQuote1.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SingleOrMassQuote1Choice.SingleQuoteDetails, com.tools20022.repository.choice.SingleOrMassQuote1Choice.MassQuoteDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SingleOrMassQuote1Choice.mmSingleQuoteDetails, com.tools20022.repository.choice.SingleOrMassQuote1Choice.mmMassQuoteDetails);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SingleOrMassQuote1Choice";
 				definition = "Choice between a single or a mass quote.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SingleQuote1 getSingleQuoteDetails() {
+		return singleQuoteDetails;
+	}
+
+	public void setSingleQuoteDetails(SingleQuote1 singleQuoteDetails) {
+		this.singleQuoteDetails = singleQuoteDetails;
+	}
+
+	public MassQuote1 getMassQuoteDetails() {
+		return massQuoteDetails;
+	}
+
+	public void setMassQuoteDetails(MassQuote1 massQuoteDetails) {
+		this.massQuoteDetails = massQuoteDetails;
 	}
 }

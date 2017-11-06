@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InitialPhysicalForm2Code#GP
- * InitialPhysicalForm2Code.GP}</li>
+ * {@linkplain com.tools20022.repository.codeset.InitialPhysicalForm2Code#mmGP
+ * InitialPhysicalForm2Code.mmGP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InitialPhysicalForm2Code#Definitive
- * InitialPhysicalForm2Code.Definitive}</li>
+ * {@linkplain com.tools20022.repository.codeset.InitialPhysicalForm2Code#mmDefinitive
+ * InitialPhysicalForm2Code.mmDefinitive}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class InitialPhysicalForm2Code extends InitialPhysicalFormCode {
 	 * name} = "GP"</li>
 	 * </ul>
 	 */
-	public static final MMCode GP = new MMCode() {
+	public static final MMCode mmGP = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GP";
@@ -104,7 +104,7 @@ public class InitialPhysicalForm2Code extends InitialPhysicalFormCode {
 	 * name} = "Definitive"</li>
 	 * </ul>
 	 */
-	public static final MMCode Definitive = new MMCode() {
+	public static final MMCode mmDefinitive = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Definitive";
@@ -115,12 +115,12 @@ public class InitialPhysicalForm2Code extends InitialPhysicalFormCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GPGP");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "InitialPhysicalForm2Code";
 				definition = "Indicates the physical form of the securities.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InitialPhysicalForm2Code.GP, com.tools20022.repository.codeset.InitialPhysicalForm2Code.Definitive);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InitialPhysicalForm2Code.mmGP, com.tools20022.repository.codeset.InitialPhysicalForm2Code.mmDefinitive);
 				trace_lazy = () -> InitialPhysicalFormCode.mmObject();
 			}
 		});

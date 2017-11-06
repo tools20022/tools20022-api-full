@@ -32,18 +32,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountOwnerAndIdentification1#Account
- * AccountOwnerAndIdentification1.Account}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountOwnerAndIdentification1#mmAccount
+ * AccountOwnerAndIdentification1.mmAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountOwnerAndIdentification1#AccountOwner
- * AccountOwnerAndIdentification1.AccountOwner}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountOwnerAndIdentification1#mmAccountOwner
+ * AccountOwnerAndIdentification1.mmAccountOwner}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,6 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class AccountOwnerAndIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected CashAccount24 account;
 	/**
 	 * Account identifier.
 	 * <p>
@@ -83,7 +84,7 @@ public class AccountOwnerAndIdentification1 {
 	 * definition} = "Account identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountOwnerAndIdentification1.mmObject();
 			isDerived = false;
@@ -91,12 +92,13 @@ public class AccountOwnerAndIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account identifier.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CashAccount24.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	protected FinancialInstitutionIdentification9 accountOwner;
 	/**
 	 * Account owner identification.
 	 * <p>
@@ -124,7 +126,7 @@ public class AccountOwnerAndIdentification1 {
 	 * definition} = "Account owner identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> AccountOwnerAndIdentification1.mmObject();
 			isDerived = false;
@@ -132,23 +134,39 @@ public class AccountOwnerAndIdentification1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Account owner identification.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountOwnerAndIdentification1.Account, com.tools20022.repository.msg.AccountOwnerAndIdentification1.AccountOwner);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountOwnerAndIdentification1.mmAccount, com.tools20022.repository.msg.AccountOwnerAndIdentification1.mmAccountOwner);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountOwnerAndIdentification1";
 				definition = "Identifiers of account and account owner.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public CashAccount24 getAccount() {
+		return account;
+	}
+
+	public void setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+		this.account = account;
+	}
+
+	public FinancialInstitutionIdentification9 getAccountOwner() {
+		return accountOwner;
+	}
+
+	public void setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 accountOwner) {
+		this.accountOwner = accountOwner;
 	}
 }

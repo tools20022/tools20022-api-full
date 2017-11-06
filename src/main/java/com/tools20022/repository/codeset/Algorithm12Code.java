@@ -33,30 +33,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#RetailCBCMAC
- * Algorithm12Code.RetailCBCMAC}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#mmRetailCBCMAC
+ * Algorithm12Code.mmRetailCBCMAC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#RetailSHA256MAC
- * Algorithm12Code.RetailSHA256MAC}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#mmRetailSHA256MAC
+ * Algorithm12Code.mmRetailSHA256MAC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#SHA256CMACwithAES128
- * Algorithm12Code.SHA256CMACwithAES128}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#mmSHA256CMACwithAES128
+ * Algorithm12Code.mmSHA256CMACwithAES128}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#RetailSHA1MAC
- * Algorithm12Code.RetailSHA1MAC}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#mmRetailSHA1MAC
+ * Algorithm12Code.mmRetailSHA1MAC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#SHA384CMACwithAES192
- * Algorithm12Code.SHA384CMACwithAES192}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#mmSHA384CMACwithAES192
+ * Algorithm12Code.mmSHA384CMACwithAES192}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#SHA512CMACwithAES256
- * Algorithm12Code.SHA512CMACwithAES256}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm12Code#mmSHA512CMACwithAES256
+ * Algorithm12Code.mmSHA512CMACwithAES256}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,15 +98,15 @@ public class Algorithm12Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm10Code#RetailCBCMAC
-	 * Algorithm10Code.RetailCBCMAC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm10Code#mmRetailCBCMAC
+	 * Algorithm10Code.mmRetailCBCMAC}</li>
 	 * </ul>
 	 */
-	public static final MMCode RetailCBCMAC = new MMCode() {
+	public static final MMCode mmRetailCBCMAC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailCBCMAC";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm10Code.RetailCBCMAC;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm10Code.mmRetailCBCMAC;
 			owner_lazy = () -> Algorithm12Code.mmObject();
 		}
 	};
@@ -127,15 +127,15 @@ public class Algorithm12Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm10Code#RetailSHA256MAC
-	 * Algorithm10Code.RetailSHA256MAC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm10Code#mmRetailSHA256MAC
+	 * Algorithm10Code.mmRetailSHA256MAC}</li>
 	 * </ul>
 	 */
-	public static final MMCode RetailSHA256MAC = new MMCode() {
+	public static final MMCode mmRetailSHA256MAC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailSHA256MAC";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm10Code.RetailSHA256MAC;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm10Code.mmRetailSHA256MAC;
 			owner_lazy = () -> Algorithm12Code.mmObject();
 		}
 	};
@@ -156,15 +156,15 @@ public class Algorithm12Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm10Code#SHA256CMACwithAES128
-	 * Algorithm10Code.SHA256CMACwithAES128}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm10Code#mmSHA256CMACwithAES128
+	 * Algorithm10Code.mmSHA256CMACwithAES128}</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA256CMACwithAES128 = new MMCode() {
+	public static final MMCode mmSHA256CMACwithAES128 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256CMACwithAES128";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm10Code.SHA256CMACwithAES128;
+			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm10Code.mmSHA256CMACwithAES128;
 			owner_lazy = () -> Algorithm12Code.mmObject();
 		}
 	};
@@ -184,7 +184,7 @@ public class Algorithm12Code extends AlgorithmCode {
 	 * name} = "RetailSHA1MAC"</li>
 	 * </ul>
 	 */
-	public static final MMCode RetailSHA1MAC = new MMCode() {
+	public static final MMCode mmRetailSHA1MAC = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailSHA1MAC";
@@ -207,7 +207,7 @@ public class Algorithm12Code extends AlgorithmCode {
 	 * name} = "SHA384CMACwithAES192"</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA384CMACwithAES192 = new MMCode() {
+	public static final MMCode mmSHA384CMACwithAES192 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA384CMACwithAES192";
@@ -230,7 +230,7 @@ public class Algorithm12Code extends AlgorithmCode {
 	 * name} = "SHA512CMACwithAES256"</li>
 	 * </ul>
 	 */
-	public static final MMCode SHA512CMACwithAES256 = new MMCode() {
+	public static final MMCode mmSHA512CMACwithAES256 = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA512CMACwithAES256";
@@ -241,15 +241,15 @@ public class Algorithm12Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MACC");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Algorithm12Code";
 				definition = "Cryptographic algorithms for the MAC (Message Authentication Code).";
 				previousVersion_lazy = () -> Algorithm10Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm12Code.RetailCBCMAC, com.tools20022.repository.codeset.Algorithm12Code.RetailSHA256MAC,
-						com.tools20022.repository.codeset.Algorithm12Code.SHA256CMACwithAES128, com.tools20022.repository.codeset.Algorithm12Code.RetailSHA1MAC, com.tools20022.repository.codeset.Algorithm12Code.SHA384CMACwithAES192,
-						com.tools20022.repository.codeset.Algorithm12Code.SHA512CMACwithAES256);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm12Code.mmRetailCBCMAC, com.tools20022.repository.codeset.Algorithm12Code.mmRetailSHA256MAC,
+						com.tools20022.repository.codeset.Algorithm12Code.mmSHA256CMACwithAES128, com.tools20022.repository.codeset.Algorithm12Code.mmRetailSHA1MAC, com.tools20022.repository.codeset.Algorithm12Code.mmSHA384CMACwithAES192,
+						com.tools20022.repository.codeset.Algorithm12Code.mmSHA512CMACwithAES256);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

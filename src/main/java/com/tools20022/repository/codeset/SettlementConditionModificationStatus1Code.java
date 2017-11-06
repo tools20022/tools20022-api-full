@@ -35,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#AcknowledgedAccepted
- * SettlementConditionModificationStatus1Code.AcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#mmAcknowledgedAccepted
+ * SettlementConditionModificationStatus1Code.mmAcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#Rejected
- * SettlementConditionModificationStatus1Code.Rejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#mmRejected
+ * SettlementConditionModificationStatus1Code.mmRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#Pending
- * SettlementConditionModificationStatus1Code.Pending}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#mmPending
+ * SettlementConditionModificationStatus1Code.mmPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#Denied
- * SettlementConditionModificationStatus1Code.Denied}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#mmDenied
+ * SettlementConditionModificationStatus1Code.mmDenied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#Completed
- * SettlementConditionModificationStatus1Code.Completed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#mmCompleted
+ * SettlementConditionModificationStatus1Code.mmCompleted}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +93,7 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode AcknowledgedAccepted = new MMCode() {
+	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
@@ -116,7 +116,7 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode Rejected = new MMCode() {
+	public static final MMCode mmRejected = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
@@ -139,7 +139,7 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode Pending = new MMCode() {
+	public static final MMCode mmPending = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
@@ -162,7 +162,7 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 * name} = "Denied"</li>
 	 * </ul>
 	 */
-	public static final MMCode Denied = new MMCode() {
+	public static final MMCode mmDenied = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
@@ -185,7 +185,7 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode Completed = new MMCode() {
+	public static final MMCode mmCompleted = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
@@ -196,14 +196,14 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "SettlementConditionModificationStatus1Code";
 				definition = "Specifies the status of a securities settlement condition modification request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.AcknowledgedAccepted, com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.Rejected,
-						com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.Pending, com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.Denied,
-						com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.Completed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmAcknowledgedAccepted, com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmRejected,
+						com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmPending, com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmDenied,
+						com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmCompleted);
 				trace_lazy = () -> SettlementConditionModificationStatusStatusCode.mmObject();
 			}
 		});

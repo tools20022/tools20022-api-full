@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Details of the settlement condition modification request
@@ -35,35 +36,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#Reference
- * RequestDetails2.Reference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#mmReference
+ * RequestDetails2.mmReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails2#AutomaticBorrowing
- * RequestDetails2.AutomaticBorrowing}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails2#mmAutomaticBorrowing
+ * RequestDetails2.mmAutomaticBorrowing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails2#RetainIndicator
- * RequestDetails2.RetainIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#Linkage
- * RequestDetails2.Linkage}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#Priority
- * RequestDetails2.Priority}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails2#mmRetainIndicator
+ * RequestDetails2.mmRetainIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#mmLinkage
+ * RequestDetails2.mmLinkage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#mmPriority
+ * RequestDetails2.mmPriority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails2#OtherProcessing
- * RequestDetails2.OtherProcessing}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails2#mmOtherProcessing
+ * RequestDetails2.mmOtherProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails2#PartialSettlementIndicator
- * RequestDetails2.PartialSettlementIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#SecuritiesRTGS
- * RequestDetails2.SecuritiesRTGS}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#HoldIndicator
- * RequestDetails2.HoldIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#MatchingDenial
- * RequestDetails2.MatchingDenial}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails2#mmPartialSettlementIndicator
+ * RequestDetails2.mmPartialSettlementIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RequestDetails2#UnilateralSplit
- * RequestDetails2.UnilateralSplit}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#Linkages
- * RequestDetails2.Linkages}</li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails2#mmSecuritiesRTGS
+ * RequestDetails2.mmSecuritiesRTGS}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails2#mmHoldIndicator
+ * RequestDetails2.mmHoldIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails2#mmMatchingDenial
+ * RequestDetails2.mmMatchingDenial}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails2#mmUnilateralSplit
+ * RequestDetails2.mmUnilateralSplit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails2#mmLinkages
+ * RequestDetails2.mmLinkages}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -72,8 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,6 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class RequestDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected References2 reference;
 	/**
 	 * References of the transaction for which the securities settlement
 	 * condition modification is requested.
@@ -99,8 +104,8 @@ public class RequestDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesTradeRelatedIdentifications
-	 * SecuritiesTrade.SecuritiesTradeRelatedIdentifications}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeRelatedIdentifications
+	 * SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -121,21 +126,22 @@ public class RequestDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Reference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> RequestDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesTradeRelatedIdentifications;
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "References of the transaction for which the securities settlement condition modification is requested.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> References2.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.References2.mmObject();
 		}
 	};
+	protected AutomaticBorrowing3Choice automaticBorrowing;
 	/**
 	 * Condition for automatic borrowing.
 	 * <p>
@@ -148,8 +154,8 @@ public class RequestDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#AutomaticBorrowing
-	 * SecuritiesSettlement.AutomaticBorrowing}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAutomaticBorrowing
+	 * SecuritiesSettlement.mmAutomaticBorrowing}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -168,21 +174,22 @@ public class RequestDetails2 {
 	 * definition} = "Condition for automatic borrowing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd AutomaticBorrowing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmAutomaticBorrowing = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> RequestDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.AutomaticBorrowing;
 			isDerived = false;
 			xmlTag = "AutomtcBrrwg";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticBorrowing";
 			definition = "Condition for automatic borrowing.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> AutomaticBorrowing3Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> AutomaticBorrowing3Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator retainIndicator;
 	/**
 	 * Specifies whether the instruction due to expire is confirmed for
 	 * settlement
@@ -214,7 +221,7 @@ public class RequestDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute RetainIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmRetainIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> RequestDetails2.mmObject();
 			isDerived = false;
@@ -222,11 +229,12 @@ public class RequestDetails2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetainIndicator";
 			definition = "Specifies whether the instruction due to expire is confirmed for settlement";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected LinkageType2Choice linkage;
 	/**
 	 * Specifies the type of linkage requested.
 	 * <p>
@@ -253,7 +261,7 @@ public class RequestDetails2 {
 	 * definition} = "Specifies the type of linkage requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Linkage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLinkage = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestDetails2.mmObject();
 			isDerived = false;
@@ -261,12 +269,13 @@ public class RequestDetails2 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkage";
 			definition = "Specifies the type of linkage requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> LinkageType2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> LinkageType2Choice.mmObject();
 		}
 	};
+	protected PriorityNumeric2Choice priority;
 	/**
 	 * Specifies whether the transaction is to be executed with a high priority.
 	 * <p>
@@ -279,8 +288,8 @@ public class RequestDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Obligation#Priority
-	 * Obligation.Priority}</li>
+	 * {@linkplain com.tools20022.repository.entity.Obligation#mmPriority
+	 * Obligation.mmPriority}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -301,21 +310,22 @@ public class RequestDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Priority = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmPriority = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmPriority;
 			componentContext_lazy = () -> RequestDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.Priority;
 			isDerived = false;
 			xmlTag = "Prty";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> PriorityNumeric2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> PriorityNumeric2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.GenericIdentification25> otherProcessing;
 	/**
 	 * Specifies another type of processing change request
 	 * <p>
@@ -343,7 +353,7 @@ public class RequestDetails2 {
 	 * definition} = "Specifies another type of processing change request"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd OtherProcessing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmOtherProcessing = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestDetails2.mmObject();
 			isDerived = false;
@@ -352,10 +362,11 @@ public class RequestDetails2 {
 			name = "OtherProcessing";
 			definition = "Specifies another type of processing change request";
 			minOccurs = 0;
-			type_lazy = () -> GenericIdentification25.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification25.mmObject();
 		}
 	};
+	protected YesNoIndicator partialSettlementIndicator;
 	/**
 	 * Specifies whether partial settlement is allowed.
 	 * <p>
@@ -369,8 +380,8 @@ public class RequestDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#PartialSettlementIndicator
-	 * SecuritiesSettlement.PartialSettlementIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartialSettlementIndicator
+	 * SecuritiesSettlement.mmPartialSettlementIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -389,20 +400,21 @@ public class RequestDetails2 {
 	 * definition} = "Specifies whether partial settlement is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PartialSettlementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartialSettlementIndicator;
 			componentContext_lazy = () -> RequestDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.PartialSettlementIndicator;
 			isDerived = false;
 			xmlTag = "PrtlSttlmInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected SecuritiesRTGS2Choice securitiesRTGS;
 	/**
 	 * Specifies whether the settlement transaction is to be settled through an
 	 * RTGS or a non RTGS system.
@@ -416,8 +428,8 @@ public class RequestDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#SecuritiesRealTimeGrossSettlement
-	 * SecuritiesSettlement.SecuritiesRealTimeGrossSettlement}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesRealTimeGrossSettlement
+	 * SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -438,21 +450,22 @@ public class RequestDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd SecuritiesRTGS = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmSecuritiesRTGS = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
 			componentContext_lazy = () -> RequestDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.SecuritiesRealTimeGrossSettlement;
 			isDerived = false;
 			xmlTag = "SctiesRTGS";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesRTGS";
 			definition = "Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> SecuritiesRTGS2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> SecuritiesRTGS2Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator holdIndicator;
 	/**
 	 * Specifies whether the transaction is on hold/blocked/frozen.
 	 * <p>
@@ -466,8 +479,8 @@ public class RequestDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#HoldIndicator
-	 * SecuritiesSettlement.HoldIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldIndicator
+	 * SecuritiesSettlement.mmHoldIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -487,20 +500,21 @@ public class RequestDetails2 {
 	 * "Specifies whether the transaction is on hold/blocked/frozen."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute HoldIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmHoldIndicator;
 			componentContext_lazy = () -> RequestDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.HoldIndicator;
 			isDerived = false;
 			xmlTag = "HldInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
 			definition = "Specifies whether the transaction is on hold/blocked/frozen.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected MatchingDenied2Choice matchingDenial;
 	/**
 	 * Specifies the matching processing change requested.
 	 * <p>
@@ -513,8 +527,8 @@ public class RequestDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#SecuritiesTradeStatus
-	 * SecuritiesTrade.SecuritiesTradeStatus}</li>
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeStatus
+	 * SecuritiesTrade.mmSecuritiesTradeStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -533,21 +547,22 @@ public class RequestDetails2 {
 	 * definition} = "Specifies the matching processing change requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd MatchingDenial = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmMatchingDenial = new MMMessageAssociationEnd() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeStatus;
 			componentContext_lazy = () -> RequestDetails2.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.SecuritiesTradeStatus;
 			isDerived = false;
 			xmlTag = "MtchgDnl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingDenial";
 			definition = "Specifies the matching processing change requested.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> MatchingDenied2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> MatchingDenied2Choice.mmObject();
 		}
 	};
+	protected UnilateralSplit2Choice unilateralSplit;
 	/**
 	 * Specifies that the transaction is requested to be unilaterally split.
 	 * <p>
@@ -581,21 +596,22 @@ public class RequestDetails2 {
 	 * "Specifies that the transaction is requested to be unilaterally split."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd UnilateralSplit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmUnilateralSplit = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestDetails2.mmObject();
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
+			componentContext_lazy = () -> RequestDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "UnltrlSplt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnilateralSplit";
 			definition = "Specifies that the transaction is requested to be unilaterally split.";
-			minOccurs = 0;
 			maxOccurs = 1;
-			type_lazy = () -> UnilateralSplit2Choice.mmObject();
+			minOccurs = 0;
 			isComposite = true;
+			type_lazy = () -> UnilateralSplit2Choice.mmObject();
 		}
 	};
+	protected List<com.tools20022.repository.msg.Linkages6> linkages;
 	/**
 	 * Information regarding the linkage requested.
 	 * <p>
@@ -621,7 +637,7 @@ public class RequestDetails2 {
 	 * definition} = "Information regarding the linkage requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd Linkages = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmLinkages = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> RequestDetails2.mmObject();
 			isDerived = false;
@@ -630,26 +646,122 @@ public class RequestDetails2 {
 			name = "Linkages";
 			definition = "Information regarding the linkage requested.";
 			minOccurs = 0;
-			type_lazy = () -> Linkages6.mmObject();
 			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.Linkages6.mmObject();
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails2.Reference, com.tools20022.repository.msg.RequestDetails2.AutomaticBorrowing,
-						com.tools20022.repository.msg.RequestDetails2.RetainIndicator, com.tools20022.repository.msg.RequestDetails2.Linkage, com.tools20022.repository.msg.RequestDetails2.Priority,
-						com.tools20022.repository.msg.RequestDetails2.OtherProcessing, com.tools20022.repository.msg.RequestDetails2.PartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails2.SecuritiesRTGS,
-						com.tools20022.repository.msg.RequestDetails2.HoldIndicator, com.tools20022.repository.msg.RequestDetails2.MatchingDenial, com.tools20022.repository.msg.RequestDetails2.UnilateralSplit,
-						com.tools20022.repository.msg.RequestDetails2.Linkages);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails2.mmReference, com.tools20022.repository.msg.RequestDetails2.mmAutomaticBorrowing,
+						com.tools20022.repository.msg.RequestDetails2.mmRetainIndicator, com.tools20022.repository.msg.RequestDetails2.mmLinkage, com.tools20022.repository.msg.RequestDetails2.mmPriority,
+						com.tools20022.repository.msg.RequestDetails2.mmOtherProcessing, com.tools20022.repository.msg.RequestDetails2.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails2.mmSecuritiesRTGS,
+						com.tools20022.repository.msg.RequestDetails2.mmHoldIndicator, com.tools20022.repository.msg.RequestDetails2.mmMatchingDenial, com.tools20022.repository.msg.RequestDetails2.mmUnilateralSplit,
+						com.tools20022.repository.msg.RequestDetails2.mmLinkages);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails2";
 				definition = "Details of the settlement condition modification request";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public References2 getReference() {
+		return reference;
+	}
+
+	public void setReference(com.tools20022.repository.msg.References2 reference) {
+		this.reference = reference;
+	}
+
+	public AutomaticBorrowing3Choice getAutomaticBorrowing() {
+		return automaticBorrowing;
+	}
+
+	public void setAutomaticBorrowing(AutomaticBorrowing3Choice automaticBorrowing) {
+		this.automaticBorrowing = automaticBorrowing;
+	}
+
+	public YesNoIndicator getRetainIndicator() {
+		return retainIndicator;
+	}
+
+	public void setRetainIndicator(YesNoIndicator retainIndicator) {
+		this.retainIndicator = retainIndicator;
+	}
+
+	public LinkageType2Choice getLinkage() {
+		return linkage;
+	}
+
+	public void setLinkage(LinkageType2Choice linkage) {
+		this.linkage = linkage;
+	}
+
+	public PriorityNumeric2Choice getPriority() {
+		return priority;
+	}
+
+	public void setPriority(PriorityNumeric2Choice priority) {
+		this.priority = priority;
+	}
+
+	public List<GenericIdentification25> getOtherProcessing() {
+		return otherProcessing;
+	}
+
+	public void setOtherProcessing(List<com.tools20022.repository.msg.GenericIdentification25> otherProcessing) {
+		this.otherProcessing = otherProcessing;
+	}
+
+	public YesNoIndicator getPartialSettlementIndicator() {
+		return partialSettlementIndicator;
+	}
+
+	public void setPartialSettlementIndicator(YesNoIndicator partialSettlementIndicator) {
+		this.partialSettlementIndicator = partialSettlementIndicator;
+	}
+
+	public SecuritiesRTGS2Choice getSecuritiesRTGS() {
+		return securitiesRTGS;
+	}
+
+	public void setSecuritiesRTGS(SecuritiesRTGS2Choice securitiesRTGS) {
+		this.securitiesRTGS = securitiesRTGS;
+	}
+
+	public YesNoIndicator getHoldIndicator() {
+		return holdIndicator;
+	}
+
+	public void setHoldIndicator(YesNoIndicator holdIndicator) {
+		this.holdIndicator = holdIndicator;
+	}
+
+	public MatchingDenied2Choice getMatchingDenial() {
+		return matchingDenial;
+	}
+
+	public void setMatchingDenial(MatchingDenied2Choice matchingDenial) {
+		this.matchingDenial = matchingDenial;
+	}
+
+	public UnilateralSplit2Choice getUnilateralSplit() {
+		return unilateralSplit;
+	}
+
+	public void setUnilateralSplit(UnilateralSplit2Choice unilateralSplit) {
+		this.unilateralSplit = unilateralSplit;
+	}
+
+	public List<Linkages6> getLinkages() {
+		return linkages;
+	}
+
+	public void setLinkages(List<com.tools20022.repository.msg.Linkages6> linkages) {
+		this.linkages = linkages;
 	}
 }

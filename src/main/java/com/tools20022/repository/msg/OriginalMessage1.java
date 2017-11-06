@@ -37,26 +37,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessage1#MessageDefinitionIdentifier
- * OriginalMessage1.MessageDefinitionIdentifier}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalMessage1#From
- * OriginalMessage1.From}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalMessage1#To
- * OriginalMessage1.To}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage1#mmMessageDefinitionIdentifier
+ * OriginalMessage1.mmMessageDefinitionIdentifier}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalMessage1#mmFrom
+ * OriginalMessage1.mmFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalMessage1#mmTo
+ * OriginalMessage1.mmTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalMessage1#BusinessMessageIdentifier
- * OriginalMessage1.BusinessMessageIdentifier}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalMessage1#CreationDate
- * OriginalMessage1.CreationDate}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalMessage1#CopyDuplicate
- * OriginalMessage1.CopyDuplicate}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage1#mmBusinessMessageIdentifier
+ * OriginalMessage1.mmBusinessMessageIdentifier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage1#mmCreationDate
+ * OriginalMessage1.mmCreationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalMessage1#mmCopyDuplicate
+ * OriginalMessage1.mmCopyDuplicate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +72,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class OriginalMessage1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max35Text messageDefinitionIdentifier;
 	/**
 	 * XML schema-instance namespace, for example "tsin.008.001.01"
 	 * <p>
@@ -98,7 +101,7 @@ public class OriginalMessage1 {
 	 * "XML schema-instance namespace, for example \"tsin.008.001.01\" "</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute MessageDefinitionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmMessageDefinitionIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalMessage1.mmObject();
 			isDerived = false;
@@ -106,11 +109,12 @@ public class OriginalMessage1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageDefinitionIdentifier";
 			definition = "XML schema-instance namespace, for example \"tsin.008.001.01\" ";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected Party9Choice from;
 	/**
 	 * Message sender specified in the original message. <br>
 	 * <p>
@@ -137,7 +141,7 @@ public class OriginalMessage1 {
 	 * definition} = "Message sender specified in the original message.\r\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd From = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> OriginalMessage1.mmObject();
 			isDerived = false;
@@ -145,12 +149,13 @@ public class OriginalMessage1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "Message sender specified in the original message.\r\r\n";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Party9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Party9Choice.mmObject();
 		}
 	};
+	protected Party9Choice to;
 	/**
 	 * Message recipient specified in the original message.
 	 * <p>
@@ -177,7 +182,7 @@ public class OriginalMessage1 {
 	 * definition} = "Message recipient specified in the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd To = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> OriginalMessage1.mmObject();
 			isDerived = false;
@@ -185,12 +190,13 @@ public class OriginalMessage1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "Message recipient specified in the original message.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> Party9Choice.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> Party9Choice.mmObject();
 		}
 	};
+	protected Max35Text businessMessageIdentifier;
 	/**
 	 * Message identification specified in the original message.
 	 * <p>
@@ -219,7 +225,7 @@ public class OriginalMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute BusinessMessageIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmBusinessMessageIdentifier = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalMessage1.mmObject();
 			isDerived = false;
@@ -227,11 +233,12 @@ public class OriginalMessage1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessMessageIdentifier";
 			definition = "Message identification specified in the original message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected ISONormalisedDateTime creationDate;
 	/**
 	 * Message creation date and time specified in the original message.
 	 * <p>
@@ -261,7 +268,7 @@ public class OriginalMessage1 {
 	 * "Message creation date and time specified in the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CreationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCreationDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalMessage1.mmObject();
 			isDerived = false;
@@ -269,11 +276,12 @@ public class OriginalMessage1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDate";
 			definition = "Message creation date and time specified in the original message.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISONormalisedDateTime.mmObject();
 		}
 	};
+	protected CopyDuplicate1Code copyDuplicate;
 	/**
 	 * Indicates whether the message is a copy, a duplicate or a copy of a
 	 * duplicate of a previously sent ISO 20022 message.
@@ -305,7 +313,7 @@ public class OriginalMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CopyDuplicate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> OriginalMessage1.mmObject();
 			isDerived = false;
@@ -313,8 +321,8 @@ public class OriginalMessage1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Indicates whether the message is a copy, a duplicate or a copy of a duplicate of a previously sent ISO 20022 message.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 	};
@@ -322,14 +330,63 @@ public class OriginalMessage1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage1.MessageDefinitionIdentifier, com.tools20022.repository.msg.OriginalMessage1.From, com.tools20022.repository.msg.OriginalMessage1.To,
-						com.tools20022.repository.msg.OriginalMessage1.BusinessMessageIdentifier, com.tools20022.repository.msg.OriginalMessage1.CreationDate, com.tools20022.repository.msg.OriginalMessage1.CopyDuplicate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage1.mmMessageDefinitionIdentifier, com.tools20022.repository.msg.OriginalMessage1.mmFrom,
+						com.tools20022.repository.msg.OriginalMessage1.mmTo, com.tools20022.repository.msg.OriginalMessage1.mmBusinessMessageIdentifier, com.tools20022.repository.msg.OriginalMessage1.mmCreationDate,
+						com.tools20022.repository.msg.OriginalMessage1.mmCopyDuplicate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "OriginalMessage1";
 				definition = "Identification of a message previously sent.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageDefinitionIdentifier() {
+		return messageDefinitionIdentifier;
+	}
+
+	public void setMessageDefinitionIdentifier(Max35Text messageDefinitionIdentifier) {
+		this.messageDefinitionIdentifier = messageDefinitionIdentifier;
+	}
+
+	public Party9Choice getFrom() {
+		return from;
+	}
+
+	public void setFrom(Party9Choice from) {
+		this.from = from;
+	}
+
+	public Party9Choice getTo() {
+		return to;
+	}
+
+	public void setTo(Party9Choice to) {
+		this.to = to;
+	}
+
+	public Max35Text getBusinessMessageIdentifier() {
+		return businessMessageIdentifier;
+	}
+
+	public void setBusinessMessageIdentifier(Max35Text businessMessageIdentifier) {
+		this.businessMessageIdentifier = businessMessageIdentifier;
+	}
+
+	public ISONormalisedDateTime getCreationDate() {
+		return creationDate;
+	}
+
+	public void setCreationDate(ISONormalisedDateTime creationDate) {
+		this.creationDate = creationDate;
+	}
+
+	public CopyDuplicate1Code getCopyDuplicate() {
+		return copyDuplicate;
+	}
+
+	public void setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
+		this.copyDuplicate = copyDuplicate;
 	}
 }

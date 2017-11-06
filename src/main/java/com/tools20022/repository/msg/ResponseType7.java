@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.repository.codeset.Response4Code;
 import com.tools20022.repository.codeset.ResultDetail4Code;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.entity.Response;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,13 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ResponseType7#Response
- * ResponseType7.Response}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ResponseType7#ResponseReason
- * ResponseType7.ResponseReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ResponseType7#mmResponse
+ * ResponseType7.mmResponse}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ResponseType7#mmResponseReason
+ * ResponseType7.mmResponseReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ResponseType7#AdditionalResponseInformation
- * ResponseType7.AdditionalResponseInformation}</li>
+ * {@linkplain com.tools20022.repository.msg.ResponseType7#mmAdditionalResponseInformation
+ * ResponseType7.mmAdditionalResponseInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -48,8 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,6 +64,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ResponseType7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Response4Code response;
 	/**
 	 * Result of the requested transaction.
 	 * <p>
@@ -90,7 +92,7 @@ public class ResponseType7 {
 	 * definition} = "Result of the requested transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute Response = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ResponseType7.mmObject();
 			isDerived = false;
@@ -98,11 +100,12 @@ public class ResponseType7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Result of the requested transaction.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Response4Code.mmObject();
 		}
 	};
+	protected ResultDetail4Code responseReason;
 	/**
 	 * Detail of the response.
 	 * <p>
@@ -130,7 +133,7 @@ public class ResponseType7 {
 	 * definition} = "Detail of the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute ResponseReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ResponseType7.mmObject();
 			isDerived = false;
@@ -138,11 +141,12 @@ public class ResponseType7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseReason";
 			definition = "Detail of the response.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ResultDetail4Code.mmObject();
 		}
 	};
+	protected Max140Text additionalResponseInformation;
 	/**
 	 * Additional information to be logged for further examination.
 	 * <p>
@@ -170,7 +174,7 @@ public class ResponseType7 {
 	 * "Additional information to be logged for further examination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute AdditionalResponseInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmAdditionalResponseInformation = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> ResponseType7.mmObject();
 			isDerived = false;
@@ -178,8 +182,8 @@ public class ResponseType7 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalResponseInformation";
 			definition = "Additional information to be logged for further examination.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
@@ -187,15 +191,39 @@ public class ResponseType7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType7.Response, com.tools20022.repository.msg.ResponseType7.ResponseReason,
-						com.tools20022.repository.msg.ResponseType7.AdditionalResponseInformation);
-				trace_lazy = () -> com.tools20022.repository.entity.Response.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType7.mmResponse, com.tools20022.repository.msg.ResponseType7.mmResponseReason,
+						com.tools20022.repository.msg.ResponseType7.mmAdditionalResponseInformation);
+				trace_lazy = () -> Response.mmObject();
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "ResponseType7";
 				definition = "Response of a requested service.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Response4Code getResponse() {
+		return response;
+	}
+
+	public void setResponse(Response4Code response) {
+		this.response = response;
+	}
+
+	public ResultDetail4Code getResponseReason() {
+		return responseReason;
+	}
+
+	public void setResponseReason(ResultDetail4Code responseReason) {
+		this.responseReason = responseReason;
+	}
+
+	public Max140Text getAdditionalResponseInformation() {
+		return additionalResponseInformation;
+	}
+
+	public void setAdditionalResponseInformation(Max140Text additionalResponseInformation) {
+		this.additionalResponseInformation = additionalResponseInformation;
 	}
 }

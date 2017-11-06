@@ -36,16 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
  * messageElement} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Document10#DocumentType
- * Document10.DocumentType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Document10#PresentationChannel
- * Document10.PresentationChannel}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Document10#DocumentFormat
- * Document10.DocumentFormat}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Document10#CopyIndicator
- * Document10.CopyIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Document10#SignedIndicator
- * Document10.SignedIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document10#mmDocumentType
+ * Document10.mmDocumentType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Document10#mmPresentationChannel
+ * Document10.mmPresentationChannel}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document10#mmDocumentFormat
+ * Document10.mmDocumentFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document10#mmCopyIndicator
+ * Document10.mmCopyIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document10#mmSignedIndicator
+ * Document10.mmSignedIndicator}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
@@ -54,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Document10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected UndertakingDocumentType2Choice documentType;
 	/**
 	 * Type of document.
 	 * <p>
@@ -82,8 +84,8 @@ public class Document10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#DocumentType
-	 * UndertakingDocument.DocumentType}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#mmDocumentType
+	 * UndertakingDocument.mmDocumentType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Document10
@@ -101,20 +103,21 @@ public class Document10 {
 	 * definition} = "Type of document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmDocumentType;
 			componentContext_lazy = () -> Document10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.DocumentType;
 			isDerived = false;
 			xmlTag = "DocTp";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentType";
 			definition = "Type of document.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			complexType_lazy = () -> UndertakingDocumentType2Choice.mmObject();
 		}
 	};
+	protected Channel1Choice presentationChannel;
 	/**
 	 * Channel through which the document should be presented.
 	 * <p>
@@ -128,8 +131,8 @@ public class Document10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.Presentation#CommunicationMethod
-	 * Presentation.CommunicationMethod}</li>
+	 * {@linkplain com.tools20022.repository.entity.Presentation#mmCommunicationMethod
+	 * Presentation.mmCommunicationMethod}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Document10
@@ -147,20 +150,21 @@ public class Document10 {
 	 * definition} = "Channel through which the document should be presented."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PresentationChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPresentationChannel = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> Document10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.CommunicationMethod;
 			isDerived = false;
 			xmlTag = "PresntnChanl";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationChannel";
 			definition = "Channel through which the document should be presented.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> Channel1Choice.mmObject();
 		}
 	};
+	protected DocumentFormat1Choice documentFormat;
 	/**
 	 * Format of the document.
 	 * <p>
@@ -174,8 +178,8 @@ public class Document10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#Format
-	 * UndertakingDocument.Format}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#mmFormat
+	 * UndertakingDocument.mmFormat}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Document10
@@ -193,20 +197,21 @@ public class Document10 {
 	 * definition} = "Format of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute DocumentFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmDocumentFormat = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> Document10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.Format;
 			isDerived = false;
 			xmlTag = "DocFrmt";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentFormat";
 			definition = "Format of the document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			complexType_lazy = () -> DocumentFormat1Choice.mmObject();
 		}
 	};
+	protected YesNoIndicator copyIndicator;
 	/**
 	 * Indication whether the document may be a copy of the original document.
 	 * <p>
@@ -220,8 +225,8 @@ public class Document10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
-	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#CopyIndicator
-	 * UndertakingDocument.CopyIndicator}</li>
+	 * {@linkplain com.tools20022.repository.entity.UndertakingDocument#mmCopyIndicator
+	 * UndertakingDocument.mmCopyIndicator}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Document10
@@ -241,20 +246,21 @@ public class Document10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute CopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmCopyIndicator;
 			componentContext_lazy = () -> Document10.mmObject();
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.CopyIndicator;
 			isDerived = false;
 			xmlTag = "CpyInd";
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyIndicator";
 			definition = "Indication whether the document may be a copy of the original document.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	protected YesNoIndicator signedIndicator;
 	/**
 	 * Indication whether the document must be signed.
 	 * <p>
@@ -282,7 +288,7 @@ public class Document10 {
 	 * definition} = "Indication whether the document must be signed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute SignedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmSignedIndicator = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> Document10.mmObject();
 			isDerived = false;
@@ -290,8 +296,8 @@ public class Document10 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedIndicator";
 			definition = "Indication whether the document must be signed.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
@@ -299,15 +305,55 @@ public class Document10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Document10.DocumentType, com.tools20022.repository.msg.Document10.PresentationChannel, com.tools20022.repository.msg.Document10.DocumentFormat,
-						com.tools20022.repository.msg.Document10.CopyIndicator, com.tools20022.repository.msg.Document10.SignedIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Document10.mmDocumentType, com.tools20022.repository.msg.Document10.mmPresentationChannel, com.tools20022.repository.msg.Document10.mmDocumentFormat,
+						com.tools20022.repository.msg.Document10.mmCopyIndicator, com.tools20022.repository.msg.Document10.mmSignedIndicator);
 				trace_lazy = () -> UndertakingDocument.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "Document10";
 				definition = "Information about a document.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public UndertakingDocumentType2Choice getDocumentType() {
+		return documentType;
+	}
+
+	public void setDocumentType(UndertakingDocumentType2Choice documentType) {
+		this.documentType = documentType;
+	}
+
+	public Channel1Choice getPresentationChannel() {
+		return presentationChannel;
+	}
+
+	public void setPresentationChannel(Channel1Choice presentationChannel) {
+		this.presentationChannel = presentationChannel;
+	}
+
+	public DocumentFormat1Choice getDocumentFormat() {
+		return documentFormat;
+	}
+
+	public void setDocumentFormat(DocumentFormat1Choice documentFormat) {
+		this.documentFormat = documentFormat;
+	}
+
+	public YesNoIndicator getCopyIndicator() {
+		return copyIndicator;
+	}
+
+	public void setCopyIndicator(YesNoIndicator copyIndicator) {
+		this.copyIndicator = copyIndicator;
+	}
+
+	public YesNoIndicator getSignedIndicator() {
+		return signedIndicator;
+	}
+
+	public void setSignedIndicator(YesNoIndicator signedIndicator) {
+		this.signedIndicator = signedIndicator;
 	}
 }

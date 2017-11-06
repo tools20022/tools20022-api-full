@@ -36,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD1#PlaceAndName
- * CorporateActionCancellationSD1.PlaceAndName}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD1#mmPlaceAndName
+ * CorporateActionCancellationSD1.mmPlaceAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD1#LinkedCorporateActionIdentification
- * CorporateActionCancellationSD1.LinkedCorporateActionIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD1#mmLinkedCorporateActionIdentification
+ * CorporateActionCancellationSD1.mmLinkedCorporateActionIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD1#LinkageType
- * CorporateActionCancellationSD1.LinkageType}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD1#mmLinkageType
+ * CorporateActionCancellationSD1.mmLinkageType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD1#LinkAddedDate
- * CorporateActionCancellationSD1.LinkAddedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD1#mmLinkAddedDate
+ * CorporateActionCancellationSD1.mmLinkAddedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD1#LinkModifiedDate
- * CorporateActionCancellationSD1.LinkModifiedDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD1#mmLinkModifiedDate
+ * CorporateActionCancellationSD1.mmLinkModifiedDate}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,6 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class CorporateActionCancellationSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	protected Max350Text placeAndName;
 	/**
 	 * xPath to the element that is being extended.
 	 * <p>
@@ -97,7 +98,7 @@ public class CorporateActionCancellationSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute PlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionCancellationSD1.mmObject();
 			isDerived = false;
@@ -105,11 +106,12 @@ public class CorporateActionCancellationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	protected Max35Text linkedCorporateActionIdentification;
 	/**
 	 * Reference assigned by the account servicer to unambiguously identify a
 	 * related corporate action event.
@@ -140,7 +142,7 @@ public class CorporateActionCancellationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkedCorporateActionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkedCorporateActionIdentification = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionCancellationSD1.mmObject();
 			isDerived = false;
@@ -148,11 +150,12 @@ public class CorporateActionCancellationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedCorporateActionIdentification";
 			definition = "Reference assigned by the account servicer to unambiguously identify a related corporate action event.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	protected DTCCLinkType1Code linkageType;
 	/**
 	 * Indicates the reason why two or more events are related.
 	 * <p>
@@ -181,7 +184,7 @@ public class CorporateActionCancellationSD1 {
 	 * definition} = "Indicates the reason why two or more events are related."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkageType = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionCancellationSD1.mmObject();
 			isDerived = false;
@@ -189,11 +192,12 @@ public class CorporateActionCancellationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Indicates the reason why two or more events are related.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> DTCCLinkType1Code.mmObject();
 		}
 	};
+	protected ISODate linkAddedDate;
 	/**
 	 * Events can be linked together. This date represents the date on which the
 	 * link was established.
@@ -224,7 +228,7 @@ public class CorporateActionCancellationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkAddedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkAddedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionCancellationSD1.mmObject();
 			isDerived = false;
@@ -232,11 +236,12 @@ public class CorporateActionCancellationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkAddedDate";
 			definition = "Events can be linked together. This date represents the date on which the link was established.";
-			minOccurs = 1;
 			maxOccurs = 1;
+			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	protected ISODate linkModifiedDate;
 	/**
 	 * Events can be linked together. This date represents the date on which the
 	 * link was modified.
@@ -267,7 +272,7 @@ public class CorporateActionCancellationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute LinkModifiedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute mmLinkModifiedDate = new MMMessageAttribute() {
 		{
 			componentContext_lazy = () -> CorporateActionCancellationSD1.mmObject();
 			isDerived = false;
@@ -275,8 +280,8 @@ public class CorporateActionCancellationSD1 {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkModifiedDate";
 			definition = "Events can be linked together. This date represents the date on which the link was modified.";
-			minOccurs = 0;
 			maxOccurs = 1;
+			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
@@ -284,15 +289,55 @@ public class CorporateActionCancellationSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellationSD1.PlaceAndName, com.tools20022.repository.msg.CorporateActionCancellationSD1.LinkedCorporateActionIdentification,
-						com.tools20022.repository.msg.CorporateActionCancellationSD1.LinkageType, com.tools20022.repository.msg.CorporateActionCancellationSD1.LinkAddedDate,
-						com.tools20022.repository.msg.CorporateActionCancellationSD1.LinkModifiedDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellationSD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionCancellationSD1.mmLinkedCorporateActionIdentification,
+						com.tools20022.repository.msg.CorporateActionCancellationSD1.mmLinkageType, com.tools20022.repository.msg.CorporateActionCancellationSD1.mmLinkAddedDate,
+						com.tools20022.repository.msg.CorporateActionCancellationSD1.mmLinkModifiedDate);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCancellationSD1";
 				definition = "Provides additional information regarding linkage details. ";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max350Text getPlaceAndName() {
+		return placeAndName;
+	}
+
+	public void setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = placeAndName;
+	}
+
+	public Max35Text getLinkedCorporateActionIdentification() {
+		return linkedCorporateActionIdentification;
+	}
+
+	public void setLinkedCorporateActionIdentification(Max35Text linkedCorporateActionIdentification) {
+		this.linkedCorporateActionIdentification = linkedCorporateActionIdentification;
+	}
+
+	public DTCCLinkType1Code getLinkageType() {
+		return linkageType;
+	}
+
+	public void setLinkageType(DTCCLinkType1Code linkageType) {
+		this.linkageType = linkageType;
+	}
+
+	public ISODate getLinkAddedDate() {
+		return linkAddedDate;
+	}
+
+	public void setLinkAddedDate(ISODate linkAddedDate) {
+		this.linkAddedDate = linkAddedDate;
+	}
+
+	public ISODate getLinkModifiedDate() {
+		return linkModifiedDate;
+	}
+
+	public void setLinkModifiedDate(ISODate linkModifiedDate) {
+		this.linkModifiedDate = linkModifiedDate;
 	}
 }

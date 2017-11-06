@@ -39,8 +39,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * derivationElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommunicationChannel1#DeliverToPartyType
- * CommunicationChannel1.DeliverToPartyType}</li>
+ * {@linkplain com.tools20022.repository.msg.CommunicationChannel1#mmDeliverToPartyType
+ * CommunicationChannel1.mmDeliverToPartyType}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
@@ -58,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,11 +79,11 @@ public class UndertakingDeliveryToParty extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "UndertakingDeliveryToParty";
 				definition = "Party to which the original undertaking or amendment is intended to be delivered.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationChannel1.DeliverToPartyType);
+				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToPartyType);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(PlaceOfPresentation1.mmObject());
 			}

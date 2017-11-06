@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingSession1Code#Auction
- * TradingSession1Code.Auction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingSession1Code#mmAuction
+ * TradingSession1Code.mmAuction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingSession1Code#Continuous
- * TradingSession1Code.Continuous}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingSession1Code#mmContinuous
+ * TradingSession1Code.mmContinuous}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +83,7 @@ public class TradingSession1Code extends TradingSessionCode {
 	 * name} = "Auction"</li>
 	 * </ul>
 	 */
-	public static final MMCode Auction = new MMCode() {
+	public static final MMCode mmAuction = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Auction";
@@ -106,7 +106,7 @@ public class TradingSession1Code extends TradingSessionCode {
 	 * name} = "Continuous"</li>
 	 * </ul>
 	 */
-	public static final MMCode Continuous = new MMCode() {
+	public static final MMCode mmContinuous = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Continuous";
@@ -117,12 +117,12 @@ public class TradingSession1Code extends TradingSessionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUCT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "TradingSession1Code";
 				definition = "Indicates the factors that are/were applied in the event of pre-allocation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingSession1Code.Auction, com.tools20022.repository.codeset.TradingSession1Code.Continuous);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingSession1Code.mmAuction, com.tools20022.repository.codeset.TradingSession1Code.mmContinuous);
 				trace_lazy = () -> TradingSessionCode.mmObject();
 			}
 		});

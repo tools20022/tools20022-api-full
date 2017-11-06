@@ -23,6 +23,7 @@ import com.tools20022.repository.msg.CurrencyExchange7;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 /**
  * Reports either on currency exchange information or on a business error.
@@ -34,18 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageElement} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExchangeRateReportOrError2Choice#BusinessError
- * ExchangeRateReportOrError2Choice.BusinessError}</li>
+ * {@linkplain com.tools20022.repository.choice.ExchangeRateReportOrError2Choice#mmBusinessError
+ * ExchangeRateReportOrError2Choice.mmBusinessError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ExchangeRateReportOrError2Choice#CurrencyExchange
- * ExchangeRateReportOrError2Choice.CurrencyExchange}</li>
+ * {@linkplain com.tools20022.repository.choice.ExchangeRateReportOrError2Choice#mmCurrencyExchange
+ * ExchangeRateReportOrError2Choice.mmCurrencyExchange}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,6 +61,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class ExchangeRateReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	protected List<ErrorHandling3> businessError;
 	/**
 	 * Reason the requested business information is not given.
 	 * <p>
@@ -86,7 +88,7 @@ public class ExchangeRateReportOrError2Choice {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd BusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ExchangeRateReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -95,10 +97,11 @@ public class ExchangeRateReportOrError2Choice {
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
 			minOccurs = 1;
-			type_lazy = () -> ErrorHandling3.mmObject();
 			isComposite = true;
+			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
+	protected CurrencyExchange7 currencyExchange;
 	/**
 	 * Requested business information.
 	 * <p>
@@ -125,7 +128,7 @@ public class ExchangeRateReportOrError2Choice {
 	 * definition} = "Requested business information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd CurrencyExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
 		{
 			componentContext_lazy = () -> ExchangeRateReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -133,23 +136,39 @@ public class ExchangeRateReportOrError2Choice {
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Requested business information.";
-			minOccurs = 1;
 			maxOccurs = 1;
-			type_lazy = () -> CurrencyExchange7.mmObject();
+			minOccurs = 1;
 			isComposite = true;
+			type_lazy = () -> CurrencyExchange7.mmObject();
 		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExchangeRateReportOrError2Choice.BusinessError, com.tools20022.repository.choice.ExchangeRateReportOrError2Choice.CurrencyExchange);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExchangeRateReportOrError2Choice.mmBusinessError, com.tools20022.repository.choice.ExchangeRateReportOrError2Choice.mmCurrencyExchange);
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExchangeRateReportOrError2Choice";
 				definition = "Reports either on currency exchange information or on a business error.";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public List<ErrorHandling3> getBusinessError() {
+		return businessError;
+	}
+
+	public void setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = businessError;
+	}
+
+	public CurrencyExchange7 getCurrencyExchange() {
+		return currencyExchange;
+	}
+
+	public void setCurrencyExchange(CurrencyExchange7 currencyExchange) {
+		this.currencyExchange = currencyExchange;
 	}
 }

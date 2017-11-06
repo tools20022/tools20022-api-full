@@ -30,20 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuanceTypeCode#UndertakingIssuedDirect
- * IssuanceTypeCode.UndertakingIssuedDirect}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuanceTypeCode#mmUndertakingIssuedDirect
+ * IssuanceTypeCode.mmUndertakingIssuedDirect}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuanceTypeCode#UndertakingViaAdvisingParty
- * IssuanceTypeCode.UndertakingViaAdvisingParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuanceTypeCode#mmUndertakingViaAdvisingParty
+ * IssuanceTypeCode.mmUndertakingViaAdvisingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuanceTypeCode#UndertakingIssuedViaConfirmingParty
- * IssuanceTypeCode.UndertakingIssuedViaConfirmingParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuanceTypeCode#mmUndertakingIssuedViaConfirmingParty
+ * IssuanceTypeCode.mmUndertakingIssuedViaConfirmingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuanceTypeCode#CounterUndertakingRequestForLocalUndertaking
- * IssuanceTypeCode.CounterUndertakingRequestForLocalUndertaking}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuanceTypeCode#mmCounterUndertakingRequestForLocalUndertaking
+ * IssuanceTypeCode.mmCounterUndertakingRequestForLocalUndertaking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuanceTypeCode#CounterUndertakingRequestForCounterUndertaking
- * IssuanceTypeCode.CounterUndertakingRequestForCounterUndertaking}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuanceTypeCode#mmCounterUndertakingRequestForCounterUndertaking
+ * IssuanceTypeCode.mmCounterUndertakingRequestForCounterUndertaking}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +98,7 @@ public class IssuanceTypeCode {
 	 * definition} = "Undertaking issued direct to the beneficiary. "</li>
 	 * </ul>
 	 */
-	public static final MMCode UndertakingIssuedDirect = new MMCode() {
+	public static final MMCode mmUndertakingIssuedDirect = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuedDirect";
@@ -129,7 +129,7 @@ public class IssuanceTypeCode {
 	 * "Undertaking issued to the beneficiary via an advising party."</li>
 	 * </ul>
 	 */
-	public static final MMCode UndertakingViaAdvisingParty = new MMCode() {
+	public static final MMCode mmUndertakingViaAdvisingParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingViaAdvisingParty";
@@ -160,7 +160,7 @@ public class IssuanceTypeCode {
 	 * "Undertaking issued to the beneficiary via a confirming party."</li>
 	 * </ul>
 	 */
-	public static final MMCode UndertakingIssuedViaConfirmingParty = new MMCode() {
+	public static final MMCode mmUndertakingIssuedViaConfirmingParty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuedViaConfirmingParty";
@@ -193,7 +193,7 @@ public class IssuanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CounterUndertakingRequestForLocalUndertaking = new MMCode() {
+	public static final MMCode mmCounterUndertakingRequestForLocalUndertaking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterUndertakingRequestForLocalUndertaking";
@@ -226,7 +226,7 @@ public class IssuanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode CounterUndertakingRequestForCounterUndertaking = new MMCode() {
+	public static final MMCode mmCounterUndertakingRequestForCounterUndertaking = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterUndertakingRequestForCounterUndertaking";
@@ -239,14 +239,14 @@ public class IssuanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ISSU");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "IssuanceTypeCode";
 				definition = "Specifies the undertaking issuance type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuanceTypeCode.UndertakingIssuedDirect, com.tools20022.repository.codeset.IssuanceTypeCode.UndertakingViaAdvisingParty,
-						com.tools20022.repository.codeset.IssuanceTypeCode.UndertakingIssuedViaConfirmingParty, com.tools20022.repository.codeset.IssuanceTypeCode.CounterUndertakingRequestForLocalUndertaking,
-						com.tools20022.repository.codeset.IssuanceTypeCode.CounterUndertakingRequestForCounterUndertaking);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuanceTypeCode.mmUndertakingIssuedDirect, com.tools20022.repository.codeset.IssuanceTypeCode.mmUndertakingViaAdvisingParty,
+						com.tools20022.repository.codeset.IssuanceTypeCode.mmUndertakingIssuedViaConfirmingParty, com.tools20022.repository.codeset.IssuanceTypeCode.mmCounterUndertakingRequestForLocalUndertaking,
+						com.tools20022.repository.codeset.IssuanceTypeCode.mmCounterUndertakingRequestForCounterUndertaking);
 				derivation_lazy = () -> Arrays.asList(IssuanceType1Code.mmObject());
 			}
 		});

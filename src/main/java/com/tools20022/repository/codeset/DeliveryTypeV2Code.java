@@ -30,16 +30,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code#AgainstPayment
- * DeliveryTypeV2Code.AgainstPayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code#Free
- * DeliveryTypeV2Code.Free}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code#mmAgainstPayment
+ * DeliveryTypeV2Code.mmAgainstPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code#mmFree
+ * DeliveryTypeV2Code.mmFree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code#Triparty
- * DeliveryTypeV2Code.Triparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code#mmTriparty
+ * DeliveryTypeV2Code.mmTriparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code#HoldInCustody
- * DeliveryTypeV2Code.HoldInCustody}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code#mmHoldInCustody
+ * DeliveryTypeV2Code.mmHoldInCustody}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +96,7 @@ public class DeliveryTypeV2Code {
 	 * definition} = "Indicates that the delivery is against payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode AgainstPayment = new MMCode() {
+	public static final MMCode mmAgainstPayment = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstPayment";
@@ -126,7 +126,7 @@ public class DeliveryTypeV2Code {
 	 * definition} = "Indicates the delivery is free of payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode Free = new MMCode() {
+	public static final MMCode mmFree = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Free";
@@ -159,7 +159,7 @@ public class DeliveryTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode Triparty = new MMCode() {
+	public static final MMCode mmTriparty = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Triparty";
@@ -194,7 +194,7 @@ public class DeliveryTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode HoldInCustody = new MMCode() {
+	public static final MMCode mmHoldInCustody = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldInCustody";
@@ -207,13 +207,13 @@ public class DeliveryTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("APMT");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "DeliveryTypeV2Code";
 				definition = "Describes the delivery or custody arrangement for the underlying securities.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryTypeV2Code.AgainstPayment, com.tools20022.repository.codeset.DeliveryTypeV2Code.Free, com.tools20022.repository.codeset.DeliveryTypeV2Code.Triparty,
-						com.tools20022.repository.codeset.DeliveryTypeV2Code.HoldInCustody);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryTypeV2Code.mmAgainstPayment, com.tools20022.repository.codeset.DeliveryTypeV2Code.mmFree,
+						com.tools20022.repository.codeset.DeliveryTypeV2Code.mmTriparty, com.tools20022.repository.codeset.DeliveryTypeV2Code.mmHoldInCustody);
 				derivation_lazy = () -> Arrays.asList(DeliveryType2Code.mmObject());
 			}
 		});

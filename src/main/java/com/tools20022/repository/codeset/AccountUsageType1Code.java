@@ -34,18 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountUsageType1Code#Investor
- * AccountUsageType1Code.Investor}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountUsageType1Code#mmInvestor
+ * AccountUsageType1Code.mmInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountUsageType1Code#SettlementParticipant
- * AccountUsageType1Code.SettlementParticipant}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountUsageType1Code#mmSettlementParticipant
+ * AccountUsageType1Code.mmSettlementParticipant}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
- * GeneratedRepository.dataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +81,7 @@ public class AccountUsageType1Code extends AccountUsageTypeCode {
 	 * name} = "Investor"</li>
 	 * </ul>
 	 */
-	public static final MMCode Investor = new MMCode() {
+	public static final MMCode mmInvestor = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
@@ -104,7 +104,7 @@ public class AccountUsageType1Code extends AccountUsageTypeCode {
 	 * name} = "SettlementParticipant"</li>
 	 * </ul>
 	 */
-	public static final MMCode SettlementParticipant = new MMCode() {
+	public static final MMCode mmSettlementParticipant = new MMCode() {
 		{
 			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParticipant";
@@ -115,12 +115,12 @@ public class AccountUsageType1Code extends AccountUsageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.dataDict;
+				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INVE");
 				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
 				name = "AccountUsageType1Code";
 				definition = "Specifies the type of usage of the account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountUsageType1Code.Investor, com.tools20022.repository.codeset.AccountUsageType1Code.SettlementParticipant);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountUsageType1Code.mmInvestor, com.tools20022.repository.codeset.AccountUsageType1Code.mmSettlementParticipant);
 				trace_lazy = () -> AccountUsageTypeCode.mmObject();
 			}
 		});
